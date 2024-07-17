@@ -1,7 +1,7 @@
 ---
 title: Governance and compliance for Red Hat Enterprise Linux on Azure
 description: Learn about key design considerations and recommendations for governance and compliance in Red Hat Enterprise Linux on Azure infrastructure.
-author: terrymandin
+author: terrymandin, Paul Armstrong, and Mike Savage
 ms.author: temandin 
 ms.date: 7/20/2024
 ms.topic: conceptual
@@ -102,7 +102,7 @@ Use Microsoft Cost Management to manage and [track costs](/azure/cloud-adoption-
 
 Govern your Azure resource organization to help manage and secure cloud resources efficiently, especially as the complexity of your enterprise environment grows. Azure has several tools and services that support effective governance and ensure that resources are consistently managed, compliant with policies, and optimized for both performance and cost.
 
-Use [Azure Policy](/azure/governance/policy/overview) as a guardrail to keep your environment compliant. Use [template specs](/azure-resource-manager/templates/template-specs) to ensure that deployments meet your identity, security, cost, and other requirements by default. Ensure that you have a [naming standard](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) for your Azure resources. A naming standard makes it easier for you to manage and configure your environment over time. Use management groups and policies to organize your resources within landing zones before you deploy workloads into your Azure tenant. 
+Use [Azure Policy](/azure/governance/policy/overview) as a guardrail to keep your environment compliant. Use [template specs](/azure/azure-resource-manager/templates/template-specs) to ensure that deployments meet your identity, security, cost, and other requirements by default. Ensure that you have a [naming standard](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) for your Azure resources. A naming standard makes it easier for you to manage and configure your environment over time. Use management groups and policies to organize your resources within landing zones before you deploy workloads into your Azure tenant. 
 
 For comprehensive recommendations about subscription design, see [Cloud Adoption Framework subscription guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions#organization-and-governance-design-considerations).
 

@@ -1,9 +1,9 @@
 ---
-title: Resource organization for a Red Hat deployment on Azure
-description: Learn about key design considerations and recommendations for resource organization in Red Hat Enterprise Linux on Azure infrastructure.
-author: terrymandin
-ms.author: temandin 
-ms.date: 7/20/2024
+title: Resource organization for Red Hat Enterprise Linux on Azure
+description: Learn about key design considerations and recommendations for resource organization in RHEL on Azure infrastructure.
+author: moisesjgomez, Paul Armstrong, and Mike Savage
+ms.author: mgomezcortez
+ms.date: 04/03/2024
 ms.topic: conceptual
 ---
 

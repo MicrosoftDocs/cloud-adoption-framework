@@ -1,14 +1,14 @@
 ---
 title: Network topology and connectivity considerations for Red Hat Enterprise Linux
 description: Redhat Enterprise Linux Azure Landing Zone Accelerator - Guidance and considerations on Network Topology & Connectivity
-author: humblejay
+author: humblejay, Paul Armstrong, and Mike Savage
 ms.author: kupole
 ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: e2e-alz
 ---
 
-## Overview
+# Overview
 
 The Red Hat Enterprise Linux (RHEL) network considerations and recommendations are based on the guidance found in the Azure landing zone article [Azure landing zone design area for network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
 
@@ -16,7 +16,7 @@ The Red Hat Enterprise Linux (RHEL) network considerations and recommendations a
 
 The RHEL reference architecture is a starting point and should be further adapted to meet your specific business and technical requirements. The various RHEL platform components and roles can be deployed on virtual machines with specific sizing and redundancy as needed. The network layout in these examples is simplified to demonstrate architectural principles and not intended to describe an entire enterprise network.
 
-![Diagram of RHEL reference architecture](images/rhel-landing-zone-architecture.png)
+![Diagram of RHEL reference architecture.](images/rhel-landing-zone-architecture.png)
 [Download the Visio file](azure-landing-zone-rhel-full-view.vsdx)
 
 |               |                                 |
@@ -68,7 +68,7 @@ Consider the following recommendations for the landing zone networking design:
   
 - Adopt a zero-trust-based approach for your perimeter networking, and traffic security. For more information about this approach, see [Network security strategies on Azure](/azure/well-architected/security/networking)
 
-- Use Network Security Groups (NSGs) to help protect traffic across subnets and east/west traffic across the platform (traffic between landing zones). [Azure Policy](azure/networking/policy-reference) can make it default for all subnets.
+- Use Network Security Groups (NSGs) to help protect traffic across subnets and east/west traffic across the platform (traffic between landing zones). [Azure Policy](/azure/networking/policy-reference) can make it default for all subnets.
 
 - Use NSGs and [application security groups](/azure/virtual-network/application-security-groups) to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 

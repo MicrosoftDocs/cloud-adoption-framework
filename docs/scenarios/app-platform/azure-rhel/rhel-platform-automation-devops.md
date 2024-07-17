@@ -1,10 +1,10 @@
 ---
-Title: Red Hat Linux Platform Automation
-Description: Learn about the tools, features, and services that are available to automate various tasks and manage Red Hat Enterprise Linux lifecycle within your Azure environment.
-Authors: Paul Armstrong, Mike Savage, Michael Finkelstein, Robert Erenberg-Andersen, Alexander Bokovoy, and Joel Sisko
-Contributor: Anthony de Lagarde
-Date: 04/03/2024
-Topic: Azure automation and management for Red Hat Enterprise Linux
+title: Red Hat Linux Platform Automation
+description: Learn about the tools, features, and services that are available to automate various tasks and manage Red Hat Enterprise Linux lifecycle within your Azure environment.
+author: Paul Armstrong, Mike Savage, Michael Finkelstein, Robert Erenberg-Andersen, Alexander Bokovoy, and Joel Sisko
+ms.author: AnthonyDelagarde
+ms.date: 04/03/2024
+ms.topic: conceptual
 ---
 
 # Platform automation for Red Hat Enterprise Linux systems on Azure
@@ -201,42 +201,43 @@ Subsequent stages in the  lifecycle pipeline are slightly different from the Dev
     - Promote CVs/CCVs to Production 
     - Destroy RHEL QA test systems
 
-# Other design considerations leveraging native Azure tooling           
+## Other design considerations leveraging native Azure tooling           
 
-## Azure Automation
+### Azure Automation
 
-Process Automation in Azure Automation allows you to automate frequent, time-consuming, and error-prone management tasks. This service helps you focus on work that adds business value. By reducing errors and boosting efficiency, it also helps to lower your operational costs. A detailed overview can be found [here](https://learn.microsoft.com/en-us/azure/automation/overview). 
+Process Automation in Azure Automation allows you to automate frequent, time-consuming, and error-prone management tasks. This service helps you focus on work that adds business value. By reducing errors and boosting efficiency, it also helps to lower your operational costs. A detailed overview can be found [here](/azure/automation/overview). 
 
-Process automation supports the integration of Azure services and other third-party systems such as Red Hat required in deploying, configuring, and managing your end-to-end processes. The service allows you to author graphical PowerShell and Python [runbooks](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10).  
+Process automation supports the integration of Azure services and other third-party systems such as Red Hat required in deploying, configuring, and managing your end-to-end processes. The service allows you to author graphical PowerShell and Python [runbooks](/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10).  
 
-Runbooks can be used for a wide range of automation tasks like managing resources, starting and stopping VMs, and handling maintenance tasks both within in Azure and targets outside Azure. It is recommended to ensure that you review the authentication scenarios which can be found [here](https://learn.microsoft.com/en-us/azure/automation/automation-security-overview). You can find an overview of Runbooks execution and recommendations [here](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-execution). 
+Runbooks can be used for a wide range of automation tasks like managing resources, starting and stopping VMs, and handling maintenance tasks both within in Azure and targets outside Azure. It is recommended to ensure that you review the authentication scenarios which can be found [here](/azure/automation/automation-security-overview). You can find an overview of Runbooks execution and recommendations [here](/azure/automation/automation-runbook-execution). 
 
 Supported Runbook types are detailed in the table below: 
-[PowerShell](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types?|tabs=lps72%2Cpy10#powershell-runbooks)  Textual runbook based on Windows PowerShell scripting. The currently supported versions are: PowerShell 7.2 (GA) and PowerShell 5.1 (GA). Since PowerShell 7.1 is no longer supported by parent product PowerShell, we recommend you create runbooks in long-term supported version PowerShell 7.2.
+[PowerShell](/azure/automation/automation-runbook-types?|tabs=lps72%2Cpy10#powershell-runbooks)  Textual runbook based on Windows PowerShell scripting. The currently supported versions are: PowerShell 7.2 (GA) and PowerShell 5.1 (GA). Since PowerShell 7.1 is no longer supported by parent product PowerShell, we recommend you create runbooks in long-term supported version PowerShell 7.2.
 
-[Powershell Workflow](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10#powershell-workflow-runbooks) Textual runbook based on Windows PowerShell Workflow scripting. 
+[Powershell Workflow](/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10#powershell-workflow-runbooks) Textual runbook based on Windows PowerShell Workflow scripting. 
 
-[Python](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10#python-runbooks) Textual runbook based on Python scripting. The currently supported versions are: Python 3.8 (GA) and Python 3.10 (preview). Since Python 2.7 is no longer supported by parent product Python, we recommend you to create runbooks in long term supported versions.
+[Python](/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10#python-runbooks) Textual runbook based on Python scripting. The currently supported versions are: Python 3.8 (GA) and Python 3.10 (preview). Since Python 2.7 is no longer supported by parent product Python, we recommend you to create runbooks in long term supported versions.
 
-[Graphical](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10#graphical-runbooks) Graphical runbook based on Windows PowerShell and created and edited completely in the graphical editor in Azure portal. 
+[Graphical](/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10#graphical-runbooks) Graphical runbook based on Windows PowerShell and created and edited completely in the graphical editor in Azure portal. 
 
-[Graphical PowerShell Workflow](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10#graphical-runbooks) Graphical runbook based on Windows PowerShell Workflow and created and edited completely in the graphical editor in Azure portal. 
+[Graphical PowerShell Workflow](/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10#graphical-runbooks) Graphical runbook based on Windows PowerShell Workflow and created and edited completely in the graphical editor in Azure portal. 
 
-[Webhooks](https://learn.microsoft.com/en-us/azure/automation/automation-webhooks?tabs=portal)  let you fulfill requests and ensure continuous delivery and operations by triggering automation from Azure Logic Apps, Azure Function, ITSM product or service, DevOps, and monitoring systems. 
+[Webhooks](/azure/automation/automation-webhooks?tabs=portal)  let you fulfill requests and ensure continuous delivery and operations by triggering automation from Azure Logic Apps, Azure Function, ITSM product or service, DevOps, and monitoring systems. 
 
 Azure Arc represents a significant advancement in cloud computing, offering a unified management platform that extends Azure's capabilities to on-premises, multi-cloud, and edge environments. Azure Arc-enabled enables integration with the Azure Automation service using the VM extension framework to deploy the Hybrid Runbook Worker role and simplify onboarding to Update Management and Change Tracking and Inventory.
 
 ![Image of Azure Arc Ecosystem](images/arcecosystem.png)
 
-You can find the prerequisites and steps to onboard a Linux machine in this article: [Connect an existing Linux server to Azure Arc.](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
+You can find the prerequisites and steps to onboard a Linux machine in this article: [Connect an existing Linux server to Azure Arc.](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
 
-## Azure Resource Manager (ARM) Templates
+### Azure Resource Manager (ARM) Templates
 
 Infrastructure as Code (IaC) using Azure Resource Manager (ARM) templates provides a consistent declarative method to deploy and manage Azure resources. This feature allows you to define the infrastructure required for your applications in a JSON format. ARM templates are idempotent, meaning you can deploy the same template many times and get the same resource types in the same state. 
 
-A complete overview of Azure Resource Manager (ARM) Templates can be found here, in addition best practices using ARM are detailed [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/).
+A complete overview of Azure Resource Manager (ARM) Templates can be found here, in addition best practices using ARM are detailed [here](/azure/azure-resource-manager/templates/).
 
-#### JSON example:
+#### JSON example
+
 ```json
 { 
 
@@ -300,7 +301,8 @@ To help reduce the complexity of the JSON syntax, Bicep domain specific language
 
 The following examples show the difference between a Bicep file and the equivalent JSON template. Both examples deploy a storage account. 
 
-#### Bicep example:
+#### Bicep example
+
 ```bicep
 param location string = resourceGroup().location 
 
@@ -330,13 +332,14 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
 
 } 
 ```
+
 ### Azure DevOps
 
 Azure DevOps is a comprehensive set of development tools to provide project management, CI/CD (Continuous Integration/Continuous Delivery) services, and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps, and Azure Functions facilitate seamless collaboration, development, and delivery of modern software projects.
 
-#### Azure Boards
+### Azure Boards
 
-Agile software development for Cloud software development and project management. Current documentation on Azure Boards can be found [here](https://learn.microsoft.com/en-us/azure/devops/boards/?view=azure-devops). Initial guidance on options and that can be configured and optimized are detailed [here](https://learn.microsoft.com/en-us/azure/devops/boards/configure-customize?view=azure-devops&tabs=agile-process).
+Agile software development for Cloud software development and project management. Current documentation on Azure Boards can be found [here](/azure/devops/boards/?view=azure-devops). Initial guidance on options and that can be configured and optimized are detailed [here](/azure/devops/boards/configure-customize?view=azure-devops&tabs=agile-process).
 
 To make the most of Azure Boards, understand how your teams use their tools and functions (for example, Scrum, Kanban, and Scrumban), and their dependencies on configurations and customizations. The following table summarizes the primary items you should consider as you structure your project. 
 
@@ -349,7 +352,7 @@ To make the most of Azure Boards, understand how your teams use their tools and 
 | Portfolio backlog customizations     | How you use portfolio backlog levels                              |
 | Workflow customization               | How you inform upper management of progress, status, and risks    |   
 
-#### Azure Pipelines
+### Azure Pipelines
 
 Azure Pipelines provides a quick, easy, and safe way to automate building your projects with consistent and quality code that's readily available to users. 
 
@@ -366,26 +369,26 @@ Azure Pipelines has extensive documentation, the best place to find complete doc
 
 Depending on your organizational needs there are four core architectures for Azure Pipelines. 
 
-[Azure Pipelines baseline architecture](https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops)
-[Azure Pipelines architecture for Azure Web Apps](https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-azure-web-apps-architecture?view=azure-devops)
-[Azure Pipelines architecture with DevTest Labs](https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-devtest-iaas-architecture?view=azure-devops)
-[Azure Pipelines architecture for IaaS](https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-iaas-vms-architecture?view=azure-devops)
+[Azure Pipelines baseline architecture](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops)
+[Azure Pipelines architecture for Azure Web Apps](/azure/devops/pipelines/architectures/devops-pipelines-azure-web-apps-architecture?view=azure-devops)
+[Azure Pipelines architecture with DevTest Labs](/azure/devops/pipelines/architectures/devops-pipelines-devtest-iaas-architecture?view=azure-devops)
+[Azure Pipelines architecture for IaaS](/azure/devops/pipelines/architectures/devops-pipelines-iaas-vms-architecture?view=azure-devops)
 
-#### Azure Repos
+### Azure Repos
 
 Azure Repos provides two types of version control: 
-- [Git](https://learn.microsoft.com/en-us/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git)
-- [Centralized version control](https://learn.microsoft.com/en-us/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc)
+- [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git)
+- [Centralized version control](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc)
 
 Connect your favorite development environment to Azure Repos to access your code. Share your code using: 
-- [Command-line](https://learn.microsoft.com/en-us/azure/devops/repos/git/share-your-code-in-git-cmdline?view=azure-devops)
-- [Visual Studio Code](https://learn.microsoft.com/en-us/azure/devops/repos/git/share-your-code-in-git-cmdline?view=azure-devops)
-- [Xcode](https://learn.microsoft.com/en-us/azure/devops/repos/git/share-your-code-in-git-xcode?view=azure-devops)
-- [Eclipse](https://learn.microsoft.com/en-us/previous-versions/azure/devops/all/java/download-eclipse-plug-in)
-- [IntelliJ](https://learn.microsoft.com/en-us/previous-versions/azure/devops/all/java/download-intellij-plug-in?view=tfs-2018)
+- [Command-line](/azure/devops/repos/git/share-your-code-in-git-cmdline?view=azure-devops)
+- [Visual Studio Code](/azure/devops/repos/git/share-your-code-in-git-cmdline?view=azure-devops)
+- [Xcode](/azure/devops/repos/git/share-your-code-in-git-xcode?view=azure-devops)
+- [Eclipse](/previous-versions/azure/devops/all/java/download-eclipse-plug-in)
+- [IntelliJ](/previous-versions/azure/devops/all/java/download-intellij-plug-in?view=tfs-2018)
 
-[Full documentation for Azure Repos Git](https://learn.microsoft.com/en-us/azure/devops/repos/git/?view=azure-devops)
-[Team Foundation Version Control (TFVC) Documentation](https://learn.microsoft.com/en-us/azure/devops/repos/tfvc/?view=azure-devops)
+[Full documentation for Azure Repos Git](/azure/devops/repos/git/?view=azure-devops)
+[Team Foundation Version Control (TFVC) Documentation](/azure/devops/repos/tfvc/?view=azure-devops)
 
 ### Release pipelines and Artifact sources 
 
@@ -393,11 +396,11 @@ Azure Artifacts allow developers to publish and consume various types of package
 
 See current documentation: 
 
-[Artifacts in Azure Pipelines - overview](https://learn.microsoft.com/en-us/azure/devops/pipelines/artifacts/artifacts-overview?view=azure-devops&tabs=nuget%2Cnugetserver)
-[Release pipelines and Artifact sources](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/artifacts?view=azure-devops)
+[Artifacts in Azure Pipelines - overview](/azure/devops/pipelines/artifacts/artifacts-overview?view=azure-devops&tabs=nuget%2Cnugetserver)
+[Release pipelines and Artifact sources](/azure/devops/pipelines/release/artifacts?view=azure-devops)
 
 Additional recommended reading:
-[Get started with permissions and access](https://learn.microsoft.com/en-us/azure/devops/organizations/security/about-permissions?view=azure-devops&tabs=preview-page)
+[Get started with permissions and access](/azure/devops/organizations/security/about-permissions?view=azure-devops&tabs=preview-page)
 
 ### Integration of Azure Policy with Azure DevOps
 
@@ -415,13 +418,13 @@ This integration ensures that resources deployed and managed through Azure DevOp
 
 #### Azure PowerShell
 
-[Install Azure PowerShell on Linux](https://learn.microsoft.com/en-us/powershell/azure/install-azps-linux?view=azps-11.3.0)
-[Using Azure PowerShell in a Docker container](https://learn.microsoft.com/en-us/powershell/azure/azureps-in-docker?view=azps-11.3.0&tabs=amd64)
-[Azure PowerShell documentation](https://learn.microsoft.com/en-us/powershell/azure)
+[Install Azure PowerShell on Linux](/powershell/azure/install-azps-linux?view=azps-11.3.0)
+[Using Azure PowerShell in a Docker container](/powershell/azure/azureps-in-docker?view=azps-11.3.0&tabs=amd64)
+[Azure PowerShell documentation](/powershell/azure)
 
 #### Azure CLI
 
-[Install Azure CLI on Linux](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=dnf)
-[How to run the Azure CLI in a Docker container](https://learn.microsoft.com/en-us/cli/azure/run-azure-cli-docker)
-[Azure CLI documentation](https://learn.microsoft.com/en-us/cli/azure)
+[Install Azure CLI on Linux](/cli/azure/install-azure-cli-linux?pivots=dnf)
+[How to run the Azure CLI in a Docker container](/cli/azure/run-azure-cli-docker)
+[Azure CLI documentation](/cli/azure)
 
