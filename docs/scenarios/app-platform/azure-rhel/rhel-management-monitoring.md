@@ -4,6 +4,7 @@ description: Learn about key design considerations and recommendations for manag
 author: heisthesisko, Paul Armstrong, and Mike Savage
 ms.author: joel.sisko
 ms.topic: conceptual
+md.date: 07/24/2024
 ---
 
 # Azure Linux Virtual Machine Management

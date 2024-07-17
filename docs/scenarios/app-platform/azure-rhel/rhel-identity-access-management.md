@@ -3,7 +3,7 @@ title: Identity and access management for Red Hat Enterprise Linux on Azure
 author: terrymandin, Paul Armstrong, and Mike Savage
 description: Learn about key design considerations and recommendations for identity and access in Red Hat Enterprise Linux on Azure infrastructure.
 ms.author: temandin
-ms.date: 7/20/2024
+ms.date: 7/24/2024
 ms.topic: conceptual
 ---
 
@@ -65,7 +65,7 @@ Red Hat IdM provides a centralized way to manage identity stores, authentication
 
 :::image type="content" source="images/rhel-identity-access-management/management-subscription.svg" alt-text="Diagram that shows a high-level depiction of a RHEL management subscription deployment." border="false":::
 
-The IAM components for your Red Hat deployment in Azure use the [subscription scaling model](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) to provide extra control and isolation to the management tooling. The Red Hat IdM primary and replica systems and Red Hat SSO instances reside in a Red Hat Management subscription with other tools. The subscription provides resource groups that you can use throughout your implementation to provide localized services and high availability.
+The IAM components for your Red Hat deployment in Azure use the [subscription scaling model](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) to provide extra control and isolation to the management tooling. The Red Hat IdM primary systems and replica systems and Red Hat SSO instances reside in a Red Hat Management subscription with other tools. The subscription provides resource groups that you can use throughout your implementation to provide localized services and high availability.
 
 The following diagram shows a Red Hat IdM zonal deployment architecture.
 
@@ -89,7 +89,7 @@ Consider the following critical design recommendations for your Red Hat IdM depl
 
 - Determine the initial integration path for Azure-native identity providers, such as Windows Server Active Directory and Microsoft Entra ID. Red Hat IdM supports several integration options. You can add and remove integrations within IdM, but you should evaluate existing requirements, migration effects, and the cost of change over time.  
 
-- Configure Red Hat IdM primary and replica deployments to reduce latencies and ensure that there's no single point of failure in replication. Geographical deployments of RHEL instances affect your Red Hat IdM infrastructure. You can use Red Hat IdM to deploy multiple Red Hat IdM replicas, which provides improved performance, load balancing, failover, and high availability. Deployments can consist of up to 60 replicas. Replica deployments should ensure that systems span fault domains. Manage Red Hat IdM replica updates via automation to ensure replication consistency. Use Red Hat-recommended replication topologies.  
+- Configure Red Hat IdM primary deployments and replica deployments to reduce latencies and ensure that there's no single point of failure in replication. Geographical deployments of RHEL instances affect your Red Hat IdM infrastructure. You can use Red Hat IdM to deploy multiple Red Hat IdM replicas, which provides improved performance, load balancing, failover, and high availability. Deployments can consist of up to 60 replicas. Replica deployments should ensure that systems span fault domains. Manage Red Hat IdM replica updates via automation to ensure replication consistency. Use Red Hat-recommended replication topologies.  
 
 - Ensure that you properly set up the Windows Server Active Directory trust configuration and Domain Name System (DNS) configuration. When you configure Red Hat IdM and Windows Server Active Directory, both on-premises Active Directory servers and Red Hat IdM servers need to reside in their own DNS domains or subdomains. This requirement is because of Kerberos service records and Kerberos service discovery. The Cloud Adoption Framework recommends [private IP DNS resolution](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources) for Azure-based instances.
 

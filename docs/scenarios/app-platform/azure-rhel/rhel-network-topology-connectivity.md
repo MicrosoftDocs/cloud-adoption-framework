@@ -3,7 +3,7 @@ title: Network topology and connectivity considerations for Red Hat Enterprise L
 description: Redhat Enterprise Linux Azure Landing Zone Accelerator - Guidance and considerations on Network Topology & Connectivity
 author: humblejay, Paul Armstrong, and Mike Savage
 ms.author: kupole
-ms.date: 04/05/2024
+ms.date: 07/24/2024
 ms.topic: conceptual
 ms.custom: e2e-alz
 ---

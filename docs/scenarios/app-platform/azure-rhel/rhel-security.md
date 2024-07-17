@@ -1,13 +1,13 @@
 ---
-title: Security for RHEL on Azure
-description: Learn about key design considerations and recommendations for security in RHEL on Azure infrastructure.
+title: Security for Red Hat Enterprise Linux on Azure
+description: Learn about key design considerations and recommendations for security in Red Hat Enterprise Linux on Azure infrastructure.
 author: Paul Armstrong and Mike Savage
 ms.author: jhajduk-microsoft
-ms.date: 7/20/2024
+ms.date: 7/24/2024
 ms.topic: conceptual
 ---
 
-# Overview
+# Security for Red Hat Enterprise Linux on Azure
 
 ## Design Considerations
 
