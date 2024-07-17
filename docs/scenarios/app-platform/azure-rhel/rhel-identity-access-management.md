@@ -1,8 +1,8 @@
 ---
-title: Identity and access management for Red Hat Enterprise Linux on Azure
+title: Identity and access management for Red Hat Enterprise Linux on Azure 
+author: terrymandin, Paul Armstrong, and Mike Savage
 description: Learn about key design considerations and recommendations for identity and access in Red Hat Enterprise Linux on Azure infrastructure.
-author: terrymandin
-ms.author: temandin 
+ms.author: temandin
 ms.date: 7/20/2024
 ms.topic: conceptual
 ---
