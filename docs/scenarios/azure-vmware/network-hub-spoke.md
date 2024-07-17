@@ -58,7 +58,7 @@ This document assumes and recommends default route advertisement from either on-
 
 |  Traffic inspection coverage  | Recommended solution design | Considerations | Internet Breakout |
 |----|---|---|---|
-| - Internet ingress    <br> - Internet egress <br> - Traffic to and on-premises datacenter <br> - Traffic to Azure Virtual Network <br> - Traffic within Azure VMware Solution <br>| Use NSX-T or a third-party NVA firewall in Azure VMware Solution. </br></br>Use NSX-T Advanced Load Balancer for HTTPs, or NSX-T Firewall for non-HTTPs traffic. </br></br> Public IP for Internet breakout from Azure VMware Solution, SNAT, and DNAT. | Choose this option to advertise the `0.0.0.0/0` route from the Azure VMware Solution Private Cloud </br></br>Enable Public IP down to the NSX Edge in Azure portal. This option allows for low-latency connections to Azure, and the ability to scale the number of outbound connections. | Azure VMware Solution
+| - Internet ingress    <br> - Internet egress <br> - Traffic to on-premises datacenter <br> - Traffic to Azure Virtual Network <br> - Traffic within Azure VMware Solution <br>| Use NSX-T or a third-party NVA firewall in Azure VMware Solution. </br></br>Use NSX-T Advanced Load Balancer for HTTPs, or NSX-T Firewall for non-HTTP/S traffic. </br></br> Public IP for Internet breakout from Azure VMware Solution, SNAT, and DNAT. | Choose this option to advertise the `0.0.0.0/0` route from the Azure VMware Solution Private Cloud. </br></br>Enable Public IP down to the NSX Edge in Azure portal. This option allows for low-latency connections to Azure, and the ability to scale the number of outbound connections. | Azure VMware Solution
 
 ### Egress from Azure VMware Solution through 0.0.0.0/0 advertisement from on-premises
 
@@ -86,7 +86,7 @@ This section references best practices for integrating AVS with your Azure Landi
 
 ### Azure Route Server
 
-Azure route server (ARS) is used to dynamically propagate learned routes from AVS and supply Branch-to-Branch connectivity to VPN Gateways. VNETs that are peered to the VNET where ARS lives also dynamically learn the routes, making it possible to learn routes from AVS to Hub and Spoke environments in Azure. Use cases for Azure route server include:
+Azure Route Server (ARS) is used to dynamically propagate learned routes from AVS and supply Branch-to-Branch connectivity to VPN Gateways. VNETs that are peered to the VNET where ARS lives also dynamically learn the routes, making it possible to learn routes from AVS to Hub and Spoke environments in Azure. Use cases for Azure Route Server include:
 
 Dynamic route propagation:
 
@@ -136,7 +136,7 @@ As seen earlier, default route advertisement is happening from AVS with the Publ
 
 [![Azure VMware Solution with traffic inspection in Azure with Third party network virtual appliance](./media/hub-and-spoke-with-nva.png)](./network-hub-spoke.md)
 
-Default route advertisement from Azure is possible with Third party NVA in either a Hub VNET or when using Azure vWAN. In a Hub & Spoke deployment, Azure Firewall isn't possible because it doesn't speak BGP, however you can use a third party BGP capable device. This scenario works for inspecting traffic from:
+Default route advertisement from Azure is possible with a third-party NVA in either a Hub VNET or when using Azure vWAN. In a Hub and Spoke deployment, Azure Firewall isn't possible because it doesn't speak BGP, however you can use a third-party BGP capable device. This scenario works for inspecting traffic from:
 -	On premises to Azure
 -	Azure to the internet
 -	AVS to the internet
