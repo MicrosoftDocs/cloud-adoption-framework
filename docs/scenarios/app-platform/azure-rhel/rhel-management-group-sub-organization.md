@@ -1,18 +1,16 @@
 ---
-title: 
-description: 
-author: 
-ms.author: 
-ms.date: 
-ms.topic: 
-ms.custom: 
+title: Resource organization for Red Hat Enterprise Linux on Azure
+description: Learn about key design considerations and recommendations for resource organization in RHEL on Azure infrastructure.
+author: moisesjgomez
+ms.author: mgomezcortez
+ms.topic: conceptual
 ---
 
-# Resource Organization for Red Hat Deployment on Azure
+# Resource organization for Red Hat Deployment on Azure
 
 In organizing a Red Hat deployment on Azure, careful consideration of management groups and subscriptions is crucial for effective governance and resource management.
 
-## Subscription Structure
+## Subscription structure
 
 The components for a Red Hat deployment follow the subscription scaling model outlined in the Azure Cloud Adoption Framework [documentation](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions#organization-and-governance-design-considerations). This model provides extra control and isolation to the management tooling. Specifically, various subscriptions are employed to cater to different aspects of the deployment:
 
@@ -39,7 +37,7 @@ Implementing a multi-subscription architecture for your Red Hat deployment offer
 
 Apply the recommended subscription structure to maximize manageability, governance, and scalability for your Red Hat deployment on Azure. This approach ensures efficient resource utilization, enhanced security, and streamlined operations across your organization.
 
-## Next Steps
+## Next steps
 
 - Define subscription boundaries and resource allocation based on organizational requirements and workload characteristics.
 - Establish IAM policies, access controls, and Azure Policy enforcement mechanisms at the subscription level.
