@@ -160,7 +160,7 @@ For more information, review the best practices for [designing your Azure Monito
   - Using Azure Arc-enabled Kubernetes extension to onboard Arc-enabled Kubernetes resources in Microsoft Defender for Cloud.
   - Enabling the Microsoft Defender for Containers plan for all subscriptions. By default, the plan is configured to automatically deploy the Defender extension on any Arc-enabled Kubernetes cluster that is onboarded to the same subscription. You can optionally modify this configuration.
   - Verifying that the Defender extension is deployed on your clusters.
-  - Using security information and event management (SIEM) integration with Microsoft Defender for Cloud and Azure Sentinel.
+  - Using security information and event management (SIEM) integration with Microsoft Defender for Cloud and Microsoft Sentinel.
 
 The following diagram illustrates a conceptual reference architecture for Microsoft Defender for Cloud on an Azure Arc-enabled Kubernetes cluster resource.
 
