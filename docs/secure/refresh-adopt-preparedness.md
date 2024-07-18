@@ -36,7 +36,7 @@ The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidl
 
 - **Security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines help you ensure that you're existing deployments are secured properly and new deployments are configured properly at the outset, while reducing the risk of misconfigurations.
 
-### Threat readiness and mitigation
+#### Threat readiness and mitigation
 
 - **Incident response:** Develop and maintain an incident response plan that includes detection, analysis, and remediation steps to quickly address and recover from security incidents. Refer to the Well-Architected Framework [incident response](/azure/well-architected/security/incident-response) guide for workload-focused guidance on this topic.
 
@@ -44,7 +44,7 @@ The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidl
 
 - **Vulnerability management:** Regularly identify and mitigate vulnerabilities through patch management and security updates to ensure that systems and applications are protected against known threats.
 
-### Security policies and compliance
+#### Security policies and compliance
 
 - **Governance and compliance:** Ensure the cloud environment adheres to regulatory requirements and internal security policies. Implement governance frameworks that provide guidelines for data handling, privacy, and security controls. Refer to the [security governance](/refresh-security-governance.md) article for detailed guidance on this topic.
 
@@ -52,22 +52,13 @@ The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidl
 
 - **Data protection:** Enforce data encryption, both at rest and in transit, along with data loss prevention (DLP) strategies to protect sensitive information and ensure data integrity. Refer to the [Zero trust data technology pillar](/security/zero-trust/deploy/data) guide for detailed guidance on this topic.
 
-### Infrastructure and application security
+#### Infrastructure and application security
 
 - **Secure deployment pipelines:** Build CI/CD pipelines with integrated security checks to ensure that applications are securely developed, tested, and deployed. This includes static code analysis, vulnerability scanning, and compliance checks. For detailed guidance, refer to the [Zero trust developer guidance](/security/zero-trust/develop/overview) for detailed articles on this topic.
 
 - **Infrastructure as Code (IaC):** Use Infrastructure as Code (IaC) to manage and automate the deployment of cloud infrastructure. Incorporate security best practices into IaC templates to maintain consistent and secure configurations. Refer to the Well-Architected Framework [IaC guide](/security/zero-trust/develop/overview) for workload-focused guidance that can be broadly applied.
 
-- **Container security:** Implement robust security measures for containerized applications including:
-    - Image scanning for vulnerabilities
-    - Using a private registry
-    - Enforcing runtime security policies
-    - Managing container orchestration security
-    - Enforce network security
-
-Refer to the [Security for Azure Container Instances](/container-instances/container-instances-image-security) for more details on these recommendations.
-
-### Operational readiness
+#### Operational readiness
 
 - **Continuous monitoring and auditing:** Establish continuous monitoring for security events and regular auditing to ensure compliance and maintain an up-to-date security posture. Use tools that provide visibility into cloud resources and help detect potential security issues. Refer to the [Zero trust visibility, automation, and orchestration guide](/security/zero-trust/deploy/visibility-automation-orchestration) for detailed guidance on this topic.
 
