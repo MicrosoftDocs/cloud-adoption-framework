@@ -30,11 +30,11 @@ The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidl
 
 ### Establishing a secure cloud estate
 
+#### Platform segmentation
+
 - **Landing zones:** Develop secure, scalable landing zones that provide controlled environments for deploying cloud resources. These zones ensure that security policies are consistently applied and that resources are segregated according to their security requirements. Refer to the [security design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) for detailed guidance on this topic.
 
 - **Network segmentation:** Design a network architecture with proper segmentation and isolation to minimize attack surfaces and contain potential breaches. Use techniques such as virtual private clouds (VPCs), subnets, and security groups to manage and control traffic. Refer to the [Plan for network segmentation](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-landing-zone-network-segmentation) article for detailed guidance on this topic.
-
-- **Security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines help you ensure that you're existing deployments are secured properly and new deployments are configured properly at the outset, while reducing the risk of misconfigurations.
 
 #### Threat readiness and mitigation
 
@@ -51,6 +51,8 @@ The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidl
 - **Identity, authorization, and access management:** Apply role-based access control (RBAC), identity and access management (IAM), and least privilege principles to secure access to cloud resources. Regularly review and update access policies to ensure they meet the evolving security landscape. Refer to the [Zero trust identity technology pillar](/security/zero-trust/deploy/identity) guide for detailed guidance on this topic.
 
 - **Data protection:** Enforce data encryption, both at rest and in transit, along with data loss prevention (DLP) strategies to protect sensitive information and ensure data integrity. Refer to the [Zero trust data technology pillar](/security/zero-trust/deploy/data) guide for detailed guidance on this topic.
+
+- **Security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines help you ensure that you're existing deployments are secured properly and new deployments are configured properly at the outset, while reducing the risk of misconfigurations.
 
 #### Infrastructure and application security
 
