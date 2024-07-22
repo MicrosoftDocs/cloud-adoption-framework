@@ -1,8 +1,8 @@
 ---
 title: Security for Red Hat Enterprise Linux on Azure
 description: Learn about key design considerations and recommendations for security in Red Hat Enterprise Linux on Azure infrastructure.
-author: Paul Armstrong and Mike Savage
-ms.author: jhajduk-microsoft
+author: jhajduk-microsoft
+ms.author: jhajduk
 ms.date: 7/24/2024
 ms.topic: conceptual
 ---
@@ -68,7 +68,7 @@ Understanding roles and responsibilities on your team will define the RBAC roles
 
 ### Antivirus
 
-Ensure that you are equipped with appropriate anti-virus software on your RHEL machine. Consider onboarding [Microsoft Defender for Cloud Endpoint Protection](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux?view=o365-worldwide) on Linux for protection against the latest vulnerabilities. Keep in mind that Microsoft Defender for Cloud Standard should not be enabled on RHEL machines used to host SAP databases. Ensure that each RHEL machine and workload is compatible with running any endpoint protection software.
+Ensure that you are equipped with appropriate anti-virus software on your RHEL machine. Consider onboarding [Microsoft Defender for Cloud Endpoint Protection](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux) on Linux for protection against the latest vulnerabilities. Keep in mind that Microsoft Defender for Cloud Standard should not be enabled on RHEL machines used to host SAP databases. Ensure that each RHEL machine and workload is compatible with running any endpoint protection software.
 
 ### Managing Secrets
 

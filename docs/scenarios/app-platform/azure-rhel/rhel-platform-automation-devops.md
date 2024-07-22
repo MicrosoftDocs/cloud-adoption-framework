@@ -1,8 +1,8 @@
 ---
 title: Platform automation considerations for Red Hat Enterprise Linux on Azure
 description: Learn about the tools, features, and services to automate various tasks and manage the Red Hat Enterprise Linux lifecycle within your Azure environment.
-author: Paul Armstrong, Mike Savage, Michael Finkelstein, Robert Erenberg-Andersen, Alexander Bokovoy, and Joel Sisko
-ms.author: AnthonyDelagarde
+author: AnthonyDelagarde
+ms.author: joelsisk
 ms.date: 07/24/2024
 ms.topic: conceptual
 ---
@@ -390,7 +390,7 @@ Depending on your organizational needs there are four core architectures for Azu
 ### Azure Repos
 
 Azure Repos provides two types of version control: 
-- [Git](/azure/devops/repos/get-started/what-is-reposs#git)
+- [Git](/azure/devops/repos/get-started/what-is-repos#git)
 - [Centralized version control](/azure/devops/repos/get-started/what-is-repos#tfvc)
 
 Connect your favorite development environment to Azure Repos to access your code. Share your code using: 
@@ -438,7 +438,7 @@ This integration ensures that resources deployed and managed through Azure DevOp
 
 #### Azure CLI
 
-[Install Azure CLI on Linux](/cli/azure/install-azure-cli-linuxs)
+[Install Azure CLI on Linux](/cli/azure/install-azure-cli-linux)
 [How to run the Azure CLI in a Docker container](/cli/azure/run-azure-cli-docker)
 [Azure CLI documentation](/cli/azure)
 

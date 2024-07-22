@@ -1,7 +1,7 @@
 ---
 title: Governance and compliance for Red Hat Enterprise Linux on Azure
 description: Learn about key design considerations and recommendations for governance and compliance in Red Hat Enterprise Linux on Azure infrastructure.
-author: terrymandin, Paul Armstrong, and Mike Savage
+author: terrymandin
 ms.author: temandin 
 ms.date: 7/24/2024
 ms.topic: conceptual
