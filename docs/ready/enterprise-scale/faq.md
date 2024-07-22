@@ -110,7 +110,7 @@ In general, we recommend that customers adopt the [Subscription Democratization 
 You should consider subscription reuse if you meet one of the following circumstances:
 
 - You have an Enterprise Agreement (EA) and plan to create more than 5,000 subscriptions on a single EA Account Owner Account (billing account), including deleted subscriptions.
-- You have a Microsoft Customer Agreement (MCA) or Microsoft Partner Agreement MPA and plan to have more than 5,000 active subscriptions. To learn more about subscription limits, see [Billing accounts and scopes in the Azure portal](/azure/cost-management-billing/manage/view-all-accounts)
+- You have a Microsoft Customer Agreement (MCA) or Microsoft Partner Agreement MPA and plan to have more than 5,000 active subscriptions. To learn more about subscription limits, see [Billing accounts and scopes in the Azure portal](/azure/cost-management-billing/manage/view-all-accounts).
 - You're a pay-as-you-go customer.
 - You use a Microsoft Azure Sponsorship.
 - You commonly create:
