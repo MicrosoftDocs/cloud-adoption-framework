@@ -12,7 +12,7 @@ ms.custom: internal
 
 A DevOps toolchain is a collection of tools that enables DevOps teams to collaborate across the entire product lifecycle and to tackle key DevOps fundamentals.
 
-The tools a DevOps toolchain includes operate as an integrated unit for planning, continuous integration, continuous delivery, operations, collaboration, and feedback. You can review some examples of DevOps technologies across different DevOps stages in [Define your DevOps technology ecosystem](../considerations/devops-principles-and-practices.md#define-your-devops-technology-ecosystem).
+The tools a DevOps toolchain include operate as an integrated unit for planning, continuous integration, continuous delivery, operations, collaboration, and feedback. You can review some examples of DevOps technologies across different DevOps stages in [Define your DevOps technology ecosystem](../considerations/devops-principles-and-practices.md#define-your-devops-technology-ecosystem).
 
 ## DevOps toolchain considerations
 
@@ -43,7 +43,7 @@ The tools a DevOps toolchain includes operate as an integrated unit for planning
   - Version Control Systems. Everything in your project must be checked in to a single version control repository like Git: code, tests, database scripts, build and deployment scripts, and anything else needed to create, install, run, and test your application.
   - [Branching strategy](../considerations/development-strategy-development-lifecycle.md#branch-strategy).
   - [Automated builds](../considerations/development-strategy-development-lifecycle.md#automated-builds).
-- Your choice of repository is also influenced by data sovereignty/residency requirements. If you need your data to be hosted locally in country/region other than US, you'll need Azure DevOps repositories when GitHub Repos can't be used.
+- Your choice of repository is also influenced by data sovereignty/residency requirements. If you need your data to be hosted locally in a country/region other than US, you'll need Azure DevOps repositories when GitHub Repos can't be used.
 - To minimize the amount of manual configuration required to provision resources, consider adopting [Infrastructure as Code (IaC)](/azure/architecture/checklist/dev-ops#management). [IaC](/dotnet/architecture/cloud-native/infrastructure-as-code) lets you apply software engineering practices like testing and versioning, which make infrastructure and deployments automated, consistent, and repeatable. Keep scripts and templates under source control like any other code you maintain.
 - Adopt [code scanning tools](/devops/devsecops/enable-devsecops-azure-github#secure-your-code-with-github) to help you detect code defects as soon as possible. Include pre-deployment checks to validate and confirm changes before any deployment (Example: ["what-if"](../considerations/development-strategy-development-lifecycle.md#deployment-strategy)) function.
 - CI/CD tools speed up the time to market for your product. Tools that allow you to parallelize tasks and take advantage of elastic scalability on cloud-hosted infrastructure enhance the performance of your CI/CD process.
@@ -54,7 +54,7 @@ The tools a DevOps toolchain includes operate as an integrated unit for planning
 Continuous Operations is a focus that helps organizations maintain continuity of output between internal systems and customers through the uninterrupted delivery of critical services or functions. The goals of Continuous Operations are:
 
 - To reduce or eliminate the need for planned downtimes or interruptions such as scheduled maintenance, capacity optimization and deployment.
-- To increase overall reliability and resiliency of systems in three aspects: with people, process, and tools.
+- To increase overall reliability and resiliency of systems in three aspects: with people, processes, and tools.
 
 Use cloud-native tools to:
 
