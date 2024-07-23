@@ -243,7 +243,7 @@ For more information, see [Connect an existing Linux server to Azure Arc](/azure
 
 IaC via ARM templates provides a consistent declarative method to deploy and manage Azure resources. Use this feature to define the required infrastructure for your applications in a JSON format. ARM templates are idempotent, meaning you can deploy the same template many times and get the same resource types in the same state. 
 
-A complete overview of Azure Resource Manager (ARM) Templates can be found here, in addition best practices using ARM are detailed [here](/azure/azure-resource-manager/templates/).
+For more information, see [ARM template documentation](/azure/azure-resource-manager/templates/).
 
 #### JSON example
 
@@ -251,62 +251,35 @@ A complete overview of Azure Resource Manager (ARM) Templates can be found here,
 { 
 
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#", 
-
   "contentVersion": "1.0.0.0", 
-
   "parameters": { 
-
     "location": { 
-
       "type": "string", 
-
       "defaultValue": "[resourceGroup().location]" 
-
     }, 
-
     "storageAccountName": { 
-
       "type": "string", 
-
       "defaultValue": "[format('toylaunch{0}', uniqueString(resourceGroup().id))]" 
-
     } 
-
   }, 
-
   "resources": [ 
-
     { 
-
       "type": "Microsoft.Storage/storageAccounts", 
-
       "apiVersion": "2021-06-01", 
-
       "name": "[parameters('storageAccountName')]", 
-
       "location": "[parameters('location')]", 
-
       "sku": { 
-
         "name": "Standard_LRS" 
-
       }, 
-
       "kind": "StorageV2", 
-
       "properties": { 
-
         "accessTier": "Hot" 
-
       } 
-
     } 
-
   ] 
-
 }  
 ```
-To help reduce the complexity of the JSON syntax, Bicep domain specific language can be used to reduce the learning curve for those new to Azure. Bicep is a transparent abstraction over ARM template JSON and doesn't lose any of the JSON template capabilities. During deployment, the Bicep CLI converts a Bicep file into ARM template JSON. 
+You can use Bicep domain-specific language to reduce the complexity of the JSON syntax and minimize the learning curve for those new to Azure. Bicep is a transparent abstraction compared to an ARM template that uses JSON, and Bicep preserves the JSON template capabilities. During deployment, the Bicep command-line interface converts a Bicep file into an ARM template that uses JSON. 
 
 The following examples show the difference between a Bicep file and the equivalent JSON template. Both examples deploy a storage account. 
 
@@ -314,106 +287,93 @@ The following examples show the difference between a Bicep file and the equivale
 
 ```bicep
 param location string = resourceGroup().location 
-
 param storageAccountName string = 'toylaunch${uniqueString(resourceGroup().id)}' 
-
  
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = { 
-
   name: storageAccountName 
-
   location: location 
-
   sku: { 
-
     name: 'Standard_LRS' 
-
   } 
-
   kind: 'StorageV2' 
-
   properties: { 
-
     accessTier: 'Hot' 
-
   } 
-
 } 
 ```
 
 ### Azure DevOps
 
-Azure DevOps is a comprehensive set of development tools to provide project management, continuous integration and continuous delivery (CI/CD) services, and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Logic Apps, and Azure Functions facilitate seamless collaboration, development, and delivery of modern software projects.
+Azure DevOps is a comprehensive set of development tools that provide project management, continuous integration and continuous delivery (CI/CD) services, and source code repositories for both cloud and on-premises environments. You can combine these features with Azure Test Plans, Azure Artifacts, Logic Apps, and Azure Functions to facilitate seamless collaboration, development, and delivery of modern software projects.
 
 ### Azure Boards
 
-Agile software development for Cloud software development and project management. Current documentation on Azure Boards can be found [here](/azure/devops/boards/). Initial guidance on options and that can be configured and optimized are detailed [here](/azure/devops/boards/configure-customize).
+Agile software development for cloud software development and project management. For more information, see [Azure Boards documentation](/azure/devops/boards/) and [Configure and customize Azure Boards](/azure/devops/boards/configure-customize).
 
-To make the most of Azure Boards, understand how your teams use their tools and functions (for example, Scrum, Kanban, and Scrumban), and their dependencies on configurations and customizations. The following table summarizes the primary items you should consider as you structure your project. 
+To make the most of Azure Boards, understand how your teams use their tools and functions, for example Scrum, Kanban, and Scrumban, and their dependencies on configurations and customizations.
+
+The following table summarizes the primary items that you should consider when you structure your project. 
 
 | Project level                        |    Team level                                                     |
 |---|---|
-| How many teams do you want to define | How you use your product backlog to plan and prioritize your work |   
-| How to structure area paths to support portfolio management views <br> | Whether you track bugs as requirements or as tasks, or not use bugs at all                                                                            |
+| The number of teams that you want to define | How to use your product backlog to plan and prioritize your work |   
+| How to structure area paths to support portfolio management views  | Whether you track bugs as requirements, track bugs as tasks, or don't use bugs at all         |
 | Field customization                  | Whether or not you use tasks to track time and capacity           |
-| Custom work item types (WITs)        | How you use portfolio backlog levels                              |   
-| Portfolio backlog customizations     | How you use portfolio backlog levels                              |
-| Workflow customization               | How you inform upper management of progress, status, and risks    |   
+| Custom work item types        | How to use portfolio backlog levels                              |   
+| Portfolio backlog customizations     | How to use portfolio backlog levels                              |
+| Workflow customization               | How to inform upper management of progress, status, and risks    |   
 
 ### Azure Pipelines
 
-Azure Pipelines provides a quick, easy, and safe way to automate building your projects with consistent and quality code that's readily available to users. 
+Azure Pipelines provides a quick, easy, and safe way to automate building your projects with consistent and quality code that's readily available. 
 
-Use Azure Pipelines to support the following scenarios: 
+Azure Pipelines:
 
-- Works with any language or platform 
-- Deploys to different types of targets at the same time 
-- Integrates with Azure deployments 
-- Builds on Windows, Linux, or Mac machines 
-- Integrates with GitHub 
-- Works with open-source projects 
+- Works with any language or platform.
+- Deploys to different types of targets at the same time.
+- Integrates with Azure deployments.
+- Builds on Windows, Linux, or Mac machines.
+- Integrates with GitHub.
+- Works with open-source projects.
 
-Azure Pipelines has extensive documentation, the best place to find complete documentation can be found here.  
+For more information, see [Azure Pipelines documentation](/azure/devops/pipelines/).
 
-Depending on your organizational needs there are four core architectures for Azure Pipelines. 
+Depending on your organizational needs, there are four core architectures for Azure Pipelines. 
 
 - [Azure Pipelines baseline architecture](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture)
-- [Azure Pipelines architecture for Azure Web Apps](/azure/devops/pipelines/architectures/devops-pipelines-azure-web-apps-architecture)
-- [Azure Pipelines architecture with DevTest Labs](/azure/devops/pipelines/architectures/devops-pipelines-devtest-iaas-architecture)
-- [Azure Pipelines architecture for IaaS](/azure/devops/pipelines/architectures/devops-pipelines-iaas-vms-architecture)
+- [Azure Pipelines architecture for the Web Apps feature of Azure App Service](/azure/devops/pipelines/architectures/devops-pipelines-azure-web-apps-architecture)
+- [Azure Pipelines architecture with Azure DevTest Labs](/azure/devops/pipelines/architectures/devops-pipelines-devtest-iaas-architecture)
+- [Azure Pipelines architecture for infrastructure as a service](/azure/devops/pipelines/architectures/devops-pipelines-iaas-vms-architecture)
 
 ### Azure Repos
 
 Azure Repos provides two types of version control: 
-- [Git](/azure/devops/repos/get-started/what-is-repos#git)
+- [Git version control](/azure/devops/repos/get-started/what-is-reposs#git)
 - [Centralized version control](/azure/devops/repos/get-started/what-is-repos#tfvc)
 
-Connect your favorite development environment to Azure Repos to access your code. Share your code using: 
-- [Command-line](/azure/devops/repos/git/share-your-code-in-git-cmdline)
+Connect your favorite development environment to Azure Repos to access your code. Share your code via: 
+- The [command line](/azure/devops/repos/git/share-your-code-in-git-cmdline)
 - [Visual Studio Code](/azure/devops/repos/git/share-your-code-in-git-cmdline)
 - [Xcode](/azure/devops/repos/git/share-your-code-in-git-xcode)
 - [Eclipse](/previous-versions/azure/devops/all/java/download-eclipse-plug-in)
 - [IntelliJ](/previous-versions/azure/devops/all/java/download-intellij-plug-in)
 
-[Full documentation for Azure Repos Git](/azure/devops/repos/git/)
-[Team Foundation Version Control (TFVC) Documentation](/azure/devops/repos/tfvc/)
+For more information, see [Azure Repos Git documentation](/azure/devops/repos/git/) and [Team Foundation Version Control documentation](/azure/devops/repos/tfvc/)
 
-### Release pipelines and Artifact sources 
+### Release pipelines and Azure Artifacts sources 
 
-Azure Artifacts allow developers to publish and consume various types of packages from feeds and public registries like PyPI, Maven Central, and NuGet.org. You can combine Azure Artifacts with Azure Pipelines to publish build and pipeline artifacts, deploy packages, or integrate files across different stages of your pipeline for building, testing, or deploying your application. 
+Developers can use Azure Artifacts to publish and consume various types of packages from feeds and public registries, like PyPI, Maven Central, and NuGet.org. You can combine Azure Artifacts with Azure Pipelines to publish build and pipeline artifacts, deploy packages, or integrate files across various stages of your pipeline to build, test, or deploy your application. 
 
-See current documentation: 
+For more information, see: 
 
-- [Artifacts in Azure Pipelines - overview](/azure/devops/pipelines/artifacts/artifacts-overview)
-- [Release pipelines and Artifact sources](/azure/devops/pipelines/release/artifacts)
-
-Additional recommended reading:
+- [Azure Artifacts in Azure Pipelines](/azure/devops/pipelines/artifacts/artifacts-overview)
+- [Release pipelines and Azure Artifact sources](/azure/devops/pipelines/release/artifacts)
 - [Get started with permissions and access](/azure/devops/organizations/security/about-permissions)
 
-### Integration of Azure Policy with Azure DevOps
+### Integrate Azure Policy with Azure DevOps
 
-While Azure Policy directly applies to resources within Azure environments, its principles and governance can indirectly influence Azure DevOps practices. Here's how: 
+Azure Policy directly applies to resources within Azure environments, but its principles and governance can indirectly influence Azure DevOps practices. For example: 
 
 - Compliance in CI/CD pipelines: You can integrate compliance checks into your Azure Pipelines. For example, ensuring that any infrastructure deployed through Azure DevOps complies with the policies defined in Azure Policy.
 
@@ -434,7 +394,7 @@ This integration ensures that resources deployed and managed through Azure DevOp
 
 #### Azure CLI
 
-[Install Azure CLI on Linux](/cli/azure/install-azure-cli-linux)
+[Install Azure CLI on Linux](/cli/azure/install-azure-cli-linuxs)
 [How to run the Azure CLI in a Docker container](/cli/azure/run-azure-cli-docker)
 [Azure CLI documentation](/cli/azure)
 
