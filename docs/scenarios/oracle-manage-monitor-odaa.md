@@ -25,8 +25,8 @@ The following are key topics to consider before deploying Oracle Database@Azure,
 - Network planning has to be taken into consideration before you deploy your resources. Please note that Oracle Exadata database resources are deployed to a private subnet that isn't accessible from the internet. If your current enterprise monitoring solution is on-premises, you'll need to account for the connectivity.
 - The subnets that the Oracle Exadata database clusters are deployed within a virtual network and are delegated subnets, which have constraints. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints).
 - As part of your networking planning, you need to take into consideration the topology that best supports your migration method of choice. Your choice should also monitor the process while moving your critical data.
-- Once a monitoring alert is received for your Oracle workload decide how to integrate it into your current triage process.
-- Identify if there are other key stakeholders that need to be included once an alert is triggered.
+- Determine how to integrate monitor alerts into your current triage process.
+- Make a list of key stakeholders that you need to notify when an alert is triggered.
 - Review with the database administrators the monitoring metrics selected of your chosen solution to align expectations.
 
 For additional design considerations, see [Plan for Oracle on Azure adoption - Cloud Adoption Framework | Microsoft Learn](/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-landing-zone-plan).
@@ -41,13 +41,13 @@ An Azure administrator can create a custom dashboard in the Azure portal with an
 
 As part of your preparation please review the following article to understand the required roles [Roles, permissions, and security in Azure Monitor - Azure Monitor | Microsoft Learn](/azure/azure-monitor/roles-permissions-security). 
 
-Note at the time of writing of this article the telemetry provided by Azure Monitor can provide adequate monitoring, but if you require granular database monitoring we recommend that you review Oracle documentaion [Enterprise Manager Database Management](https://www.oracle.com/database/technologies/manageability.html). Oracle has a comprehensive monitoring guide for review in this article [Oracle Cloud Database Metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html). This article focuses on monitoring and management with Azure based tooling.
+Azure Monitor can adequately monitor your solution, but if you require granular database monitoring, see [Enterprise Manager Database Management](https://www.oracle.com/database/technologies/manageability.html). Oracle has a comprehensive monitoring guide for review in this article [Oracle Cloud Database Metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html). 
 
 #### Key Metric Monitoring
 
-Below here are the initial recommended settings and other counters can be added based on your enterprise needs.  Ensure you to set the following monitoring settings against all the available nodes in the cluster. Azure Monitor doesn't allow at the time of writing of this article to select multiple objects at the same time when adding metrics. You will have to select each Exadata cluster node with the specified settings. 
+The following table has the initial recommended settings. Add other counters based on your enterprise needs.  Ensure you to set the following monitoring settings against all the available nodes in the cluster. Azure Monitor doesn't allow you to select multiple objects at the same time when adding metrics. You will have to select each Exadata cluster node with the specified settings. 
 
-The recommendation is to have alerts with your monitoring solution of choice for critical workloads. If you leverage Azure Monitor see [Azure Monitor action groups - Azure Monitor | Microsoft Learn](/azure/azure-monitor/alerts/action-groups).
+Set alerts in your monitoring solution for critical workloads. If you use Azure Monitor, see [Azure Monitor action groups(/azure/azure-monitor/alerts/action-groups) to set alerts.
 
 
 
