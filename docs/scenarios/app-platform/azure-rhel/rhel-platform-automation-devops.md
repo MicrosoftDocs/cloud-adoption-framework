@@ -349,7 +349,7 @@ Depending on your organizational needs, there are four core architectures for Az
 ### Azure Repos
 
 Azure Repos provides two types of version control: 
-- [Git version control](/azure/devops/repos/get-started/what-is-reposs#git)
+- [Git version control](/azure/devops/repos/get-started/what-is-repos#git)
 - [Centralized version control](/azure/devops/repos/get-started/what-is-repos#tfvc)
 
 Connect your favorite development environment to Azure Repos to access your code. Share your code via: 
@@ -394,7 +394,7 @@ This integration ensures that resources deployed and managed through Azure DevOp
 
 #### Azure CLI
 
-[Install Azure CLI on Linux](/cli/azure/install-azure-cli-linuxs)
+[Install Azure CLI on Linux](/cli/azure/install-azure-cli-linux)
 [How to run the Azure CLI in a Docker container](/cli/azure/run-azure-cli-docker)
 [Azure CLI documentation](/cli/azure)
 

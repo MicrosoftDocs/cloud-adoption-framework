@@ -123,7 +123,7 @@ Unlike the Automation update management feature, Update Manager doesn't depend o
 
 The following diagram shows an Update Manager hybrid connectivity configuration.
 
-:::image type="content" source="images/rhelmanmon003.png" alt-text="Diagram that shows Update Manager hybrid connectivity." border="false" lightbox="images/rhelmanmon003.png":::
+:::image type="content" source="images/rhel-management-monitoring/update-manager-hybrid-connectivity.png" alt-text="Diagram that shows Update Manager hybrid connectivity." border="false" lightbox="images/rhel-management-monitoring/update-manager-hybrid-connectivity.png":::
 
 For more information, see:
 
@@ -140,11 +140,11 @@ RHEL provides a robust set of [command line tools](https://access.redhat.com/doc
 
 You can use [Azure Monitor](/azure/azure-monitor/overview) to collect data, analyze data, and create reports for both your cloud and on-premises environments. The following diagram shows the tools that you can use.
 
-:::image type="content" source="images/rhelmanmon001.png" alt-text="Diagram that shows Azure Monitor tools." border="false" lightbox="images/rhelmanmon001.png":::
+:::image type="content" source="images/rhel-management-monitoring/azure-monitor-tools.png" alt-text="Diagram that shows Azure Monitor tools." border="false" lightbox="images/rhel-management-monitoring/azure-monitor-tools.png":::
 
 Azure monitoring has the capabilities to incorporate customer data sources as demonstrated in the following diagram.
 
-:::image type="content" source="images/rhelmanmon002.png" alt-text="Diagram that shows Azure Monitor data sources." border="false" lightbox="images/rhelmanmon002.png":::
+:::image type="content" source="images/rhel-management-monitoring/azure-monitor-data-sources.png" alt-text="Diagram that shows Azure Monitor data sources." border="false" lightbox="images/rhel-management-monitoring/azure-monitor-data-sources.png":::
 
 ### Azure Linux VM monitoring
 
@@ -168,7 +168,7 @@ A Linux VM has a dedicated host in Azure that it interacts with. Metrics are aut
 
 1. To see how the host VM performs, select **Metrics** in the **Monitoring** section, and then choose any of the *[Host]* metrics under **Available metrics**.
 
-   :::image type="content" source="images/rhelmanmon004.png" alt-text="Screenshot that shows the Metrics page in the Azure portal." lightbox="images/rhelmanmon004.png":::
+   :::image type="content" source="images/rhel-management-monitoring/host-metrics.png" alt-text="Screenshot that shows the Metrics page in the Azure portal." lightbox="images/rhel-management-monitoring/host-metrics.png":::
   
 ### Enable advanced monitoring
   
@@ -179,7 +179,7 @@ To enable advanced monitoring in Azure Monitor for VMs:
 1. In the **Monitoring** section, select **Insights**.
 1. Select **Enable**.
 
-   :::image type="content" source="images/rhelmanmon005.png" alt-text="Screenshot that shows the Insights page." lightbox="images/rhelmanmon005.png":::
+   :::image type="content" source="images/rhel-management-monitoring/enable-insights.png" alt-text="Screenshot that shows the Insights page." lightbox="images/rhel-management-monitoring/enable-insights.png":::
 
 1. On the **Azure Monitor Insights onboarding** page, if you have an existing Log Analytics workspace in the same subscription, select it in the drop-down list.
 
@@ -191,7 +191,7 @@ To enable advanced monitoring in Azure Monitor for VMs:
   
    After you enable monitoring, you might need to wait several minutes before you can view the performance metrics for the VM.
 
-   :::image type="content" source="images/rhelmanmon006.png" alt-text="Screenshot that shows the wait page." lightbox="images/rhelmanmon006.png":::
+   :::image type="content" source="images/rhel-management-monitoring/wait-page.png" alt-text="Screenshot that shows the wait page." lightbox="images/rhel-management-monitoring/wait-page.png":::
   
 ### View VM performance metrics
   
