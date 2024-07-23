@@ -15,7 +15,7 @@ This article describes teams and roles involved in cloud security, and the funct
 
 ## Overview of roles and teams
 
-The following section provides examples of typical teams and individual roles and the functions that they typically perform. Your particular team may be organized differently, with different nomenclature, but in order to oeprate securely in the cloud, ensure that you map out your existing teams to the functions listed below and look for gaps in your operational coverage.
+The following section provides examples of typical teams and individual roles and the functions that they typically perform. Your particular team may be organized differently, with different nomenclature, but in order to operate securely in the cloud, ensure that you map out your existing teams to the functions listed below and look for gaps in your operational coverage.
 
 **Chief Information Security Officer (CISO):**
 
@@ -87,7 +87,7 @@ Risk management is a specialized role requiring training on security risks and m
 **Network security:**
 
 - Securing network infrastructure.
-- Implementing firewalls, VPNs, and IDS/IPS.
+- Implementing firewalls, VPNs, and intrusion detection systems (IDS) and intrusion prevention systems (IPS).
 - Managing network segmentation and traffic monitoring.
 
 **Application security:**
@@ -135,16 +135,16 @@ When an organization deploys and operationalizes a Web Application Firewall (WAF
     1. The *CISO* identifies the need for enhanced web application security and allocates budget for a WAF.
     1. The *Cloud Security Architect* designs the WAF deployment strategy, ensuring it integrates seamlessly with existing security controls and aligns with the organization's security architecture.
 1. **Implementation**
-    1. The *Cloud Security Engineer* deploys the WAF according to the architect’s design, configuring it to protect the specific web applications.
+    1. The *Cloud Security Engineer* deploys the WAF according to the architect’s design, configuring it to protect the specific web applications, and enables monitoring.
     1. The *IAM Specialist* sets up access controls, ensuring only authorized personnel can manage the WAF.
 1. **Monitoring and management**
     1. The *SOC Analyst* configures monitoring tools to receive alerts from the WAF and sets up dashboards to track WAF activity.
     1. The *Incident Response Team* develops response plans for incidents involving the WAF and conducts simulations to test these plans.
 1. **Compliance and risk management**
     1. The *Compliance and Risk Management Officer* reviews the WAF deployment to ensure it meets regulatory requirements and conducts periodic audits.
-    1. The *DPO* ensures that the WAF's logging and data protection measures comply with data privacy regulations.
+    1. The *Data Protection Officer* ensures that the WAF's logging and data protection measures comply with data privacy regulations.
 1. **Continuous improvement and training**
-    1. The *DevSecOps Engineer* integrates WAF management into the CI/CD pipeline, ensuring that updates and configurations are automated and consistent.
+    1. The *DevSecOps Engineer* integrates WAF management into the continuous integration and continuous deployment (CI/CD) pipeline, ensuring that updates and configurations are automated and consistent.
     1. The *Security Awareness and Training Specialist* develops and delivers training programs to ensure that all relevant personnel understand how to use and manage the WAF effectively.
     1. The *Cloud Governance team member* reviews the WAF deployment and management processes to ensure they align with organizational policies and standards
     
