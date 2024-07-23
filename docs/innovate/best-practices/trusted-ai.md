@@ -23,7 +23,7 @@ From an ethical perspective, AI should:
 - Be accountable for its decisions.
 - Not discriminate or hinder different races, disabilities, or backgrounds.
 
-In 2017, Microsoft established an advisory committee for AI, ethics, and effects in engineering and research [Aether](https://www.microsoft.com/ai/our-approach?activetab=pivot1%3aprimaryr5). The core responsibility of the committee is to advise on issues, technologies, processes, and best practices for responsible AI. To learn more, see [Understanding the Microsoft governance model - Aether + Office of Responsible AI](/training/modules/microsoft-responsible-ai-practices/3-microsoft-governance-model).
+In 2017, Microsoft established an advisory committee for AI, ethics, and effects in engineering and research [Aether](https://www.microsoft.com/ai/principles-and-approach). The core responsibility of the committee is to advise on issues, technologies, processes, and best practices for responsible AI. To learn more, see [Understanding the Microsoft governance model - Aether + Office of Responsible AI](/training/modules/microsoft-responsible-ai-practices/3-microsoft-governance-model).
 
 ### Accountability
 
