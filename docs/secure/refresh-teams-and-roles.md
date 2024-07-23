@@ -102,12 +102,12 @@ Risk management is a specialized role requiring training on security risks and m
 - Implements multi-factor authentication (MFA) and single sign-on (SSO) solutions.
 - Ensures adherence to least privilege access principles.
 - Reviews and audits access logs and permissions.
-- May sometimes be part of the larger cloud security team if resources are limited
+- May sometimes be part of the larger cloud security team if resources are limited.
 
 **Compliance and governance:**
 
-- Ensures compliance with regulatory requirements and internal policies
-- Conducts audits
+- Ensures compliance with regulatory requirements and internal policies.
+- Conducts audits.
 - May work closely with Risk Management team or be integrated into a broader IT governance team.
 
 **Training and awareness:**
