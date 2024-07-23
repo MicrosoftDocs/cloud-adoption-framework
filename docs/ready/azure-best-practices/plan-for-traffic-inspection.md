@@ -18,15 +18,23 @@ This section explores key considerations and recommended approaches for capturin
 
 *Azure VPN Gateway -* VPN Gateway lets you run a packet capture on a VPN gateway, a specific connection, multiple tunnels, one-way traffic, or bi-directional traffic. A maximum of five packet captures can run in parallel per gateway. They can be gateway-wide and per-connection packet captures. For more information, see [VPN packet capture](/azure/vpn-gateway/packet-capture).
 
+* Azure Express Route* - ExpressRoute [Traffic Collector](/azure/expressroute/traffic-collector) enables sampling of network flows sent over your ExpressRoute circuits. Flow logs get sent to a Log Analytics workspace where you can create your own log queries for further analysis. ExpressRoute Traffic Collector supports both Provider-managed circuits and ExpressRoute Direct circuits with bandwidth 1 Gbps or greater and Private or Microsoft peering configured.
+
 *Azure Network Watcher* has multiple tools you should consider if you're using infrastructure-as-a-service (IaaS) solutions:
 
 - *Packet capture -* Network Watcher lets you create temporary capture packet sessions on traffic headed to and from a virtual machine. Each packet capture session has a time limit. When the session ends, packet capture creates a `pcap` file that you can download and analyze. Network Watcher packet capture can't give you continuous port mirroring with these time constraints. For more information, see [packet capture overview](/azure/network-watcher/network-watcher-packet-capture-overview).
   
 - *Network Security Group (NSG) flow logs -* NSG flow logs capture information about IP traffic flowing through your NSGs. Network Watcher stores NSG flow logs as JSON files in Azure Storage account. You can export the NSG flow logs to an external tool for analysis. For more information, see NSG flow logs [overview](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) and [data analysis options](/azure/network-watcher/network-watcher-visualize-nsg-flow-logs-power-bi).
-  
+
+- *Virtual network flow logs* - Virtual network flow logs provide similar capabilities compared to NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). You can use them to log information about IP traffic flowing through a virtual network. Flow data from virtual network flow logs is sent to Azure Storage. From there, you can access the data and export it to any visualization tool, security information and event management (SIEM) solution, or intrusion detection system (IDS). For more information, see Virtual network [flow logs](/azure/network-watcher/vnet-flow-logs-overview) overview.
+
+Flow data from virtual network flow logs is sent to Azure Storage. From there, you can access the data and export it to any visualization tool, security information and event management (SIEM) solution, or intrusion detection system (IDS). Virtual network flow logs overcome some of the limitations of Network security group flow logs.
+
 - *Traffic Analytics -* Traffic Analytics ingests and analyzes NSG flow logs. It creates a dashboard of insights on the NSG flow logs and generates a geo-map view of your resources for easy analysis. For more information, see [Traffic Analytics overview](/azure/network-watcher/traffic-analytics).
 
 ## Design recommendations
+
+- Prefer Virtual network [flow logs](/azure/network-watcher/vnet-flow-logs-overview) over NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) since overcomes some of the limitations. For a comparison, see [this article](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).
 
 - Enable Traffic Analytics. The tool lets you easily capture and analyze network traffic with out-of-the-box dashboard visualization and security analysis.
 

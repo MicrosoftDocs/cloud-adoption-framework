@@ -65,7 +65,7 @@ _Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.git
 
 - Azure Firewall Manager supports deployment of Azure Firewall in the Virtual WAN hub, known as secured virtual hub. For more information, see the [Azure Firewall Manager overview](/azure/firewall-manager/overview) for secured virtual hubs and the latest [constraints](/azure/firewall-manager/overview#known-issues).
 
-- Virtual WAN hub-to-hub traffic, by way of Azure Firewall, isn't currently supported when the Azure Firewall deploys inside of the Virtual WAN hub itself (secured virtual hub). Depending on your requirements, you have workarounds. You can place the [Azure Firewall in a spoke virtual network](/azure/virtual-wan/scenario-route-through-nva), or use NSGs for traffic filtering.
+- Virtual WAN hub-to-hub traffic, by way of Azure Firewall in both source and target hubs (secured virtual hubs), is supported with [routing intent and policies](/azure/virtual-wan/how-to-routing-policies) enabled. More details on covered scenarios are contained in this [article section](/azure/virtual-wan/how-to-routing-policies#use-cases).
 
 - The Virtual WAN portal experience requires that all Virtual WAN resources deploy together into the same resource group.
 
@@ -114,6 +114,8 @@ We recommend Virtual WAN for new large or global network deployments in Azure wh
 - For brownfield scenarios where you're migrating from a hub-and-spoke network topology not based on Virtual WAN, see [Migrate to Azure Virtual WAN](/azure/virtual-wan/migrate-from-hub-spoke-topology).
 
 - Create Azure Virtual WAN and Azure Firewall resources within the connectivity subscription.
+
+- If hub-to-hub traffic is required, by way of Azure Firewall, Network Virtual Appliances or software-as-a-service (SaaS) solutions deployed within the Virtual WAN hub, in both source and targets (secured virtual hubs), [routing intent and policies](/azure/virtual-wan/how-to-routing-policies) must be enabled.
 
 - Don't create more than 500 virtual network connections per Virtual WAN virtual hub.
 

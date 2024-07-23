@@ -24,6 +24,8 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) are now supported through Azure Resource Manager templates.
 
+- Virtual network [flow logs](/azure/network-watcher/vnet-flow-logs-overview) provides similar capabilities compared to NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) but cover a wider ranges of use cases and simplifies the scope of traffic monitoring because you can enable logging at VNet level.
+
 **Design recommendations:**
 
 - Delegate subnet creation to the landing zone owner. This will enable them to define how to segment workloads across subnets (for example, a single large subnet, multitier application, or network-injected application). The platform team can use Azure Policy to ensure that an NSG with specific rules (such as deny inbound SSH or RDP from internet, or allow/block traffic across landing zones) is always associated with subnets that have deny-only policies.
@@ -36,7 +38,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 
-- Enable NSG flow logs and feed them into [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gain insights into internal and external traffic flows. Flow logs should be enabled on all critical VNets/subnets in your subscription as an audit-ability and security best practice.
+- Enable Virtual network [flow logs](/azure/network-watcher/vnet-flow-logs-overview) and feed them into [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gain insights into internal and external traffic flows. Flow logs should be enabled on all critical VNets/subnets in your subscription as an audit-ability and security best practice.
 
 - Use NSGs to selectively allow connectivity between landing zones.
 
