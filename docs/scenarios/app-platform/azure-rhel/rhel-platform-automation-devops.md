@@ -40,212 +40,208 @@ Benefits of RHEL as a Platform automation strategy include:
 
 You can implement: 
 
-- A self-managed Ansible Automation Platform instance, either via on-premises infrastructure, cloud infrastructure, or both
+- A self-managed AAP instance either via on-premises infrastructure, cloud infrastructure, or both.
   - Via a RHEL deployment
   - Via a Red Hat OpenShift Container Platform deployment
-- A self-managed Ansible Automation Platform instance in a public cloud
-- A managed Ansible Automation Platform instance in a public cloud 
 
-### Red Hat Ansible Automation Platform, self-managed, on-premises/cloud
+- A self-managed AAP instance in a public cloud.
+- A managed AAP instance in a public cloud.
 
-[Red Hat Ansible Automation Platform on Microsoft Azure ](https://www.redhat.com/en/technologies/management/ansible/azure) when deployed in self-managed mode in an on-premises and/or cloud infrastructure, provides the following benefits: 
+### Red Hat AAP, self-managed, on-premises/cloud
 
-- Architecture and scale - determine what is the most ideal architecture to support the automation platform, whether based on RHEL infrastructure or OpenShift operator deployment. Based on fleet size and 
-  requirements, choose the number, as well as instance sizing, of controllers, execution nodes, and private automation hub instances. For more on architecture, design, configuration and scale, visit the 
-  Ansible Platform [Red Hat Ansible Automation Platform Planning Guide](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
+Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/management/ansible/azure) in self-managed mode in an on-premises and/or cloud infrastructure to get the following benefits: 
 
-- Azure configuration -  automation architecture can be optimized for the organization’s Azure design and configuration.
-- Automation mesh support - is an Ansible Automation Platform feature that allows organizations to distribute automation workloads across hybrid cloud peer-to-peer connections with each other using existing networks. Placement of hop nodes can be made based on security design criteria and network topologies.
-- Automation Hub architecture - an Automation Hub architecture can be optimized for scale and placement of private automation hub instances to enhance secure automation content delivery and access to execution environment sources in close proximity to automation execution resources. Provide access to and manage all types of Ansible content and choose which Ansible content collections and versions are made available to automation consumers.
+- **Architecture and scale**: Determine your ideal architecture to support the automation platform, whether based on RHEL infrastructure or OpenShift operator deployment. Based on your fleet size and requirements, choose the number and the instance sizing of controllers, execution nodes, and private automation hub instances. For more information about architecture, design, configuration, and scale, see [Red Hat AAP planning guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
 
-### Red Hat Ansible Automation Platform on Azure, managed or self-managed application 
+- **Azure configuration**:  Optimize the automation architecture for your organization's Azure design and configuration.
+- **Automation mesh support**: Use this AAP feature to distribute automation workloads across hybrid cloud peer-to-peer connections by using existing networks. Place hop nodes in a location based on your security design criteria and network topology.
+- **Automation hub architecture**: Optimize an automation hub architecture for scale and placement of private automation hub instances. Optimized configurations enhance secure automation content delivery and access to execution environment sources in close proximity to automation execution resources. Provide access to and manage Ansible content. Choose which Ansible content collections and versions are available to automation consumers.
 
-[Red Hat Ansible Automation Platform on Microsoft Azure](https://www.redhat.com/en/technologies/management/ansible/azure) is available via managed application or self-managed application and provides the following:
+### Red Hat AAP on Azure, managed or self-managed application 
 
-- Ease-of-use leads to rapid ROI - Ansible Automation Platform on Azure can be deployed directly from the Azure Marketplace. This managed solution is active immediately after deployment, and enterprises can start automating the management of their Azure resources in minutes. Red Hat manages the infrastructure, leaving you free to think only about the systems that are critical to your enterprise.
+[Red Hat AAP on Microsoft Azure](https://www.redhat.com/technologies/management/ansible/azure) is available via a managed application or self-managed application. AAP provides the following benefits:
 
-- Streamlined integration - Ansible Automation Platform on Azure is already integrated with Azure services. The Ansible collection for Azure was developed and security tested by Microsoft and Red Hat for minimal setup and maximum support. Use Ansible Automation Platform on Azure as part of your hybrid cloud automation strategy to unify management and automation across hybrid cloud, Internet of Things (IoT), and edge deployments.
-- Existing committed Azure spend - Enterprises can use existing committed spending with Microsoft to purchase Red Hat Ansible Automation Platform on Azure. Using committed spending lets teams across an entire organization deploy, configure, and automate seamlessly. Integrated billing means you get one bill—and full visibility into the cost. 
-- Automation beyond the cloud - Ansible Automation Platform on Azure allows you to deploy in your Microsoft Azure cloud—and then extend across your infrastructure. Organizations can deploy, run, and scale applications across Azure and hybrid cloud environments.
-- Support - Red Hat and Microsoft partnered to build Ansible Automation Platform on Azure to ensure consistent and security-focused operations. Red Hat manages, services, and supports the application so your IT team can focus on delivering automation strategies. 
+- **Ease-of-use leads to rapid return on investment (ROI)**: You can deploy AAP on Azure directly from Azure Marketplace. This managed solution is active immediately after deployment, and you can start automating the management of your Azure resources in minutes. Red Hat manages the infrastructure, so you're free to think only about the systems that are critical to your enterprise.
 
-### Other considerations, managed mode
+- **Streamlined integration**: AAP on Azure is integrated with Azure services. The Ansible collection for Azure was developed and security tested by Microsoft and Red Hat for minimal setup and maximum support. Use AAP on Azure as part of your hybrid cloud automation strategy to unify management and automation across hybrid cloud, Internet of Things, and edge deployments.
+- **Existing committed Azure spend**: You can use existing committed spending with Microsoft to purchase Red Hat AAP on Azure. Use committed spending so that teams across your entire organization can deploy, configure, and automate seamlessly. Integrated billing means you get one bill and full visibility into the cost. 
+- **Automation beyond the cloud**: With AAP on Azure, you can deploy in your Microsoft Azure cloud and then extend across your infrastructure. Deploy, run, and scale applications across Azure and hybrid cloud environments.
+- **Support**: Red Hat and Microsoft partnered to build AAP on Azure to ensure consistent and security-focused operations. Red Hat manages, services, and supports the application so that your IT team can focus on delivering automation strategies. 
 
-Red Hat Ansible Automation Platform on Microsoft Azure in managed mode is installed as a managed application. Red Hat manages both the underlying Azure resources and the software running on it while that infrastructure runs in your Azure tenant.
+### Other considerations for managed mode
+
+AAP on Microsoft Azure in managed mode is installed as a managed application. Red Hat manages both the underlying Azure resources and the software that runs on it. That infrastructure runs in your Azure tenant.
 
 The managed application resource group is separate from other resource groups in your tenant. Red Hat only has access to the managed application resource group, with no visibility into other tenant resources.
 
-For information about how this works and how resources and access are isolated from the rest of your Azure resources, see [Azure managed applications overview](/azure/azure-resource-manager/managed-applications/overview). 	
+For information about this implementation, see [Azure managed applications overview](/azure/azure-resource-manager/managed-applications/overview). 	
 
-Ansible Automation Platform on Microsoft Azure in managed mode uses the following resource groups:
+AAP on Microsoft Azure in managed mode uses the following resource groups:
 
-- A new or existing resource group (RG) in your tenant. This resource group includes a single resource referring to the Ansible Automation Platform on Microsoft Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades, but the resource group is outside of Red Hat’s management.
+- *A new or existing resource group in your tenant*. This resource group includes a single resource that refers to the AAP on Microsoft Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades. But the resource group is outside of Red Hat's management.
 	
-- A multitenant managed resource group (MRG) that contains most of the infrastructure needed to operate Ansible Automation Platform on Microsoft Azure. This multitenant resource group is shared between the Red Hat tenant and your tenant. Red Hat has full administrative control and you have read-only access to the resource group. 
-- An AKS node pool resource group (NPRG). Microsoft requires the NPRG for AKS deployments. It contains resources that AKS uses to function. It's created on deployment, and it's outside of Red Hat’s management. For more information, see [Microsoft AKS documentation](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
+- *A multitenant managed resource group (MRG)* that contains most of the required infrastructure to operate AAP on Microsoft Azure. The Red Hat tenant and your tenant shares this multitenant resource group. Red Hat has full administrative control. You have read-only access to the resource group. 
+- *An AKS node pool resource group (NPRG)*. Microsoft requires an NPRG for AKS deployments. An NPRG contains resources that AKS uses to function. This resource group is created on deployment, and it's outside of Red Hat's management. For more information, see [Microsoft AKS documentation](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
 
-For Ansible Automation Platform on Microsoft Azure in managed mode, additionally consider: 
+For AAP on Microsoft Azure in managed mode, also consider: 
 
-- When you install Ansible Automation Platform on Microsoft Azure, you choose whether the deployment is public or private. This affects how users can access the Ansible Automation Platform user interfaces.
+- When you install AAP on Microsoft Azure, you choose whether the deployment is public or private. This affects how users can access the AAP user interfaces.
  
-- Regardless of whether you choose a public or private deployment, you must configure network peering for outbound communication from Ansible Automation Platform to the private networks that contain resources that you want to automate against. You can configure network peering from Ansible Automation Platform on Microsoft Azure to your private Azure virtual network and to on-premises or multicloud networks where transit routing with Azure exists. 
+- Regardless of whether you choose a public or private deployment, you must configure network peering for outbound communication from AAP to the private networks that contain resources that you want to automate against. You can configure network peering from AAP on Microsoft Azure to your private Azure virtual network and to on-premises or multicloud networks where transit routing with Azure exists. 
 
-### Other considerations, self-managed mode 
+### Other considerations for self-managed mode 
 
-Ansible Automation Platform on Microsoft Azure in self-managed mode, provides many of the same benefits of self-managed Ansible Automation platform, however, whereas managed mode runs within an AKS cluster, for self-managed mode, automation platform resources are VM-based.
+AAP on Microsoft Azure in self-managed mode provides many of the same benefits of self-managed AAP. But where managed mode runs within an AKS cluster, self-managed mode automation platform resources are VM-based.
 
-For Ansible Automation Platform on Microsoft Azure in self-managed mode, additionally consider: 
+For AAP on Microsoft Azure in self-managed mode, also consider: 
 
-- Event-Driven Ansible is included in the self-managed offering on Azure - Event driven automation helps you reduce manual tasks and deliver a more efficient IT environment focused on innovation. Event-Driven Ansible processes events, and determines the appropriate responses, and then executes automated actions to remediate the event.
+- Event-Driven Ansible is included in the self-managed offering on Azure. Event-driven automation helps you reduce manual tasks and deliver an efficient IT environment that focuses on innovation. Event-Driven Ansible processes events, determines the appropriate responses, and then runs automated actions to remediate the event.
 
 - Offers - Available in 100 active managed node increments, and this is available in both public offers, or private offers. 
-- VM resources that underpin Ansible Automation Platform on Microsoft Azure in self-managed mode can consist entirely of running from marketplace images or via a mix of marketplace images and customer-managed images. 
+- VM resources that underpin AAP on Microsoft Azure in self-managed mode can consist entirely of Azure Marketplace images or a mix of Azure Marketplace images and customer-managed images. 
 
 ## Design recommendations
 
-Red Hat Certified Content and Validated Content Collections from Red Hat Automation Hub should be utilized in operating the RHEL Platform for Azure Landing Zones. The following are a listing of the collections that hold prominent roles in the automation framework:
+When you operate the RHEL Platform for Azure landing zones, use Red Hat-certified content and validated content collections from Red Hat Automation Hub. The following collections have prominent roles in the automation framework:
 
-redhat.rhel_idm
-- IdM primary configuration
-- IdM replicas configuration 
-- Integration and configuration of RHEL clients with IdM
+- redhat.rhel_idm
+  - IdM primary configuration
+  - IdM replicas configuration 
+  - Integration and configuration of RHEL clients with IdM
 
-redhat.satellite  |  redhat.satellite_operations  |  redhat.rhel_system_roles 
+- redhat.satellite  |  redhat.satellite_operations  |  redhat.rhel_system_roles 
+  - Deploy Satellite and Capsule
+  - Create and configure Satellite objects and settings 
+  - Provision and configure RHEL systems 
 
-- Deploy Satellite and Capsule
-- Create and configure Satellite objects and settings 
-- Provision and configure RHEL systems 
+- ansible.*  |  ansible.controller  |  infra.controller_configuration 
+  - Configure AAP 
+  - Create and configure AAP job templates and settings 
 
-ansible.*  |  ansible.controller  |  infra.controller_configuration 
-
-- Configure Ansible Automation Platform 
-- Create and configure AAP job templates, and settings 
-
-[The Ansible collection for Azure](https://catalog.redhat.com/software/collection/azure/azcollection?tab=documentation) includes over 250 modules to interrogate, manage, and automate numerous Azure resource types included, but not limited to:
+[The Ansible collection for Azure](https://catalog.redhat.com/software/collection/azure/azcollection?tab=documentation) includes over 250 modules to interrogate, manage, and automate Azure resource types, such as:
 
 - Microsoft Entra ID
 - Networking
 - Azure SQL Database
-- Azure Kubernetes Service (AKS)
+- AKS
 - Storage
 - Application security groups
 - Azure Virtual Machines
-- Azure Database Services
+- Azure database services
 - Azure Container Registry
 - Azure Key Vault
 
 ### Core platform infrastructure deployment
 
-Refer to [Azure landing zone design guidance for platform automation considerations](/azure/cloud-adoption-framework/ready/considerations/automation) and establish the concepts and processes described in order to effectively deploy core platform infrastructure to support an RHEL Platform on Azure landing zones model.
+Establish concepts and processes to effectively deploy core platform infrastructure and support an RHEL Platform on Azure landing zones model.
 
-- [Development lifecycle](/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle) explores key design considerations and recommendations for the creation of a landing zone using automation. This guidance discusses the repository, branch, automated builds, deployment, and rollback strategy.
+For more information, see:
 
-- [IaC](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) explains the benefits of implementing Azure landing zones using IaC. Learn about considerations around code structure, tools, and technology. 
-- [Environments](/azure/cloud-adoption-framework/ready/considerations/environments) explains the purpose of using multiple environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
-- [Test-driven development](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development) addresses how to use unit testing to improve the quality of new features and improvements in the Azure landing zone codebase. 
+- [Azure landing zone design guidance for platform automation considerations](/azure/cloud-adoption-framework/ready/considerations/automation).
 
-With requisite source code management tooling in place, along with source code management processes established from the previous sections, Ansible automation code with accompanying IaC or configuration as code should be developed to deploy core infrastructure to support the RHEL Platform for Azure landing zones model. For greenfield deployments, the following tasks can be automated for a full environment implementation. Brownfield deployments would only need a subset of these tasks, as required by your use case.
+- [Development lifecycle](/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle). Explore key design considerations and recommendations about using automation to create a landing zone. This guidance discusses the repository, branch, automated builds, deployment, and rollback strategy.
 
-- Create Azure resource groups
+- [IaC](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code). Explore the benefits of implementing Azure landing zones via IaC. Learn about considerations related to code structure, tools, and technology. 
+- [Environments](/azure/cloud-adoption-framework/ready/considerations/environments). Explore the purpose of using multiple environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
+- [Test-driven development](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development). Learn how to use unit testing to improve the quality of new features and improvements in the Azure landing zone codebase. 
 
-- Create virtual networks
-- Create subnets 
-- Create network security groups 
-- Create RHEL 8.x & 9.x golden images for Azure via automated Red Hat Image Builder
-- Create IdM primary VM (pre-Satellite provisioning) 
-    - Configure IdM primary via Configuration as Code
-- Create Satellite VM (pre-Satellite provisioning)
-    - Configure Satellite via Configuration as Code
-- Create Capsule VMs (Satellite provisioning)
-    - Configure Capsules via Configuration as Code
-- Create IdM replica VMs (Satellite provisioning)
-    - Configure IdM replicas via Configuration as Code
-- Create Ansible Automation Platform infrastructure (Satellite provisioning) 
-       - Automation Controller VMs
-       - Execution node VMs 
-       - Hop node VMs (optional) 
-       - Automation hub VMs 
-       - Event-Driven Ansible VMs (if enabled) 
-       - PostgreSQL Server and necessary databases for Controller, Hub, and Event-Driven Ansible components (HA and/or DR PostgreSQL requires additional automation, either via replication/log shipping or [Crunchy Postgres](https://www.crunchydata.com/solutions/ansible))
-- Create load balancers (Application Gateways)
-       - Frontend for Capsule VMs 
-       - Frontend for AAP Controller VMs 
-       - Frontend for Automation Hub VMs 
-- Create application security groups
-       - IdM infrastructure
-       - AAP Infrastructure
-       - Satellite/Capsule infrastructure 
+If you have the requisite source code management tooling in place and the source code management processes established from the previous sections, you can implement automation. Develop Ansible automation code with accompanying IaC or configuration as code to deploy core infrastructure and support the RHEL Platform for Azure landing zones model. For greenfield deployments, you can automate the following tasks for a full environment implementation. Brownfield deployments only need the tasks that your use case requires.
+
+- Create Azure resource groups.
+
+- Create virtual networks.
+- Create subnets. 
+- Create network security groups.
+- Create RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder.
+- Create an IdM primary VM (pre-Satellite provisioning). Configure the IdM primary VM via configuration as code.
+- Create a Satellite VM (pre-Satellite provisioning). Configure Satellite via configuration as code.
+- Create Capsule VMs (Satellite provisioning). Configure Capsules via configuration as code.
+- Create IdM replica VMs (Satellite provisioning). Configure IdM replicas via configuration as code.
+- Create AAP infrastructure (Satellite provisioning), including:
+    - Automation controller VMs.
+    - Execution node VMs.
+    - Hop node VMs (optional).
+    - Automation Hub VMs.
+    - Event-Driven Ansible VMs (if enabled).
+    - Azure Database for PostgreSQL Server and necessary databases for the controller, Hub, and Event-Driven Ansible components. High availability or disaster recovery Azure Database for PostgreSQL configurations require additional automation, either via replication shipping, log shipping, or [Crunchy Postgres](https://www.crunchydata.com/solutions/ansible).
+- Create load balancers (application gateways).
+    - Front end for Capsule VMs 
+    - Front end for AAP controller VMs 
+    - Front end for Automation Hub VMs 
+- Create application security groups.
+    - IdM infrastructure
+    - AAP infrastructure
+    - Satellite or Capsule infrastructure 
 
 ### RHEL system lifecycle management  
 
-Once core platform infrastructure is in place, automation for RHEL applications and workload lifecycles can be implemented. Refer to 'Deployment, management, and patching considerations' and 'Governance and compliance' sections for in-depth coverage of considerations to be made when forming automation pipelines. The following encapsulates an example automation workflow for a development lifecycle pipeline:
+After core platform infrastructure is in place, you can implement automation for RHEL applications and workload lifecycles. Refer to 'Deployment, management, and patching considerations' and 'Governance and compliance' sections for in-depth coverage of considerations to be made when forming automation pipelines. The following encapsulates an example automation workflow for a development lifecycle pipeline:
 
-   - Update the Errata Filter end date and publish content in Satellite
-   - Promote Content Views (CV)/Composite Content Views (CCV) to Development
-   
-   - Deploy RHEL Development test systems from Satellite Host Groups
-        - RHEL 8.x & 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite 
-    - Update/create Azure network security group based on application communication paths
-    - For multi-tier application stacks, update or create Azure application security group for additional layered security 
-    - Update RHEL Development systems, deploy, and configure desired application from Satellite Development CV/CCV
-        - Deploy to single RHEL instance for simple application stack
-        - Deploy to several RHEL instances for multi-tier application stacks
-        - Configure application stack 
-    - Execute application testing framework 
-        - On failure, notify OnCall automation administration to assist in troubleshooting/analysis, exit automation workflow, RHEL test systems remain deployed for post-mortem failure analysis
-        - On test success, continue 
-    - Promote CVs/CCVs to QA 
-    - Destroy RHEL Development test systems
+- Update the errata filter end date, and publish content in Satellite.
 
-Subsequent stages in the  lifecycle pipeline are slightly different from the Development lifecycle stage, as only the Development stage uses the initial content publishing and initial CV/CCV promotion to Development. The following encapsulates an example automation workflow for non-Development lifecycle pipelines, i.e. QA, pre-Production, Production, etc. In this case, QA will be considered: 
+- Promote content views (CV) and composite content views (CCV) to development.
+- Deploy RHEL development test systems from Satellite host groups.
+    - RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite. 
+- Update or create Azure network security groups based on application communication paths.
+- For multi-tier application stacks, update or create Azure application security groups for extra layered security.
+- Update RHEL development systems, and deploy and configure desired applications from Satellite development CV or CCV.
+  - Deploy to single RHEL instance for a simple application stack.
+  - Deploy to several RHEL instances for multi-tier application stacks.
+  - Configure an application stack.
+- Run an application testing framework.
+  - On failure, notify OnCall automation administration to assist in troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
+  - On test success, continue.
+- Promote CVs and CCVs to quality assurance (QA).
+- Destroy RHEL development test systems.
 
-- Deploy RHEL QA test systems from Satellite host groups
-       - RHEL 8.x & 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite
+Subsequent stages in the lifecycle pipeline are slightly different from the development lifecycle stage. Only the development stage uses the initial content publishing and initial CV and CCV promotion to development. The following example describes an automation workflow for non-development lifecycle pipelines, for example QA, pre-production, and  production pipelines.
+
+- Deploy RHEL QA test systems from Satellite host groups.
+  - RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite.
        
-- Update/create Azure network security group based on application communication paths 
-   - For multi-tier application stacks, update or create Azure application security group for additional, layered security 
-- Update RHEL QA systems, deploy, and configure desired application from Satellite QA CV/CCV 
-    - Deploy to single RHEL instance for simple application stack
-    - Deploy to several RHEL instances for multi-tier application stacks 
-    - Configure application stack
-    - Run application testing framework 
-    - On failure, notify OnCall automation administration to assist in troubleshooting/analysis, exit automation workflow, RHEL test systems remain deployed for post-mortem failure analysis 
-    - On test success, continue 
-    - Promote CVs/CCVs to production 
-    - Destroy RHEL QA test systems
+- Update or create Azure network security groups based on application communication paths.
+  - For multi-tier application stacks, update or create Azure application security groups for extra layered security. 
+- Update RHEL QA systems, and deploy and configure desired applications from Satellite QA CV or CCV.
+  - Deploy to a single RHEL instance for a simple application stack.
+  - Deploy to several RHEL instances for multi-tier application stacks. 
+  - Configure an application stack.
+  - Run an application testing framework.
+    - On failure, notify OnCall automation administration to assist in troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
+    - On test success, continue.
+  - Promote CVs and CCVs to production.
+  - Destroy RHEL QA test systems.
 
-## Other design considerations leveraging native Azure tooling           
+## Other design considerations for Azure-native tooling           
 
 ### Azure Automation
 
-Process Automation in Azure Automation allows you to automate frequent, time-consuming, and error-prone management tasks. This service helps you focus on work that adds business value. By reducing errors and boosting efficiency, it also helps to lower your operational costs. For more information, see [here](/azure/automation/overview). 
+To automate frequent, time-consuming, and error-prone management tasks, you can use the process automation feature in Azure Automation. This feature helps you focus on work that adds business value. Process automation reduces errors and boosts efficiency, which helps lower your operational costs. For more information, see [Automation overview](/azure/automation/overview). 
 
-Process automation supports the integration of Azure services and other third-party systems such as Red Hat required in deploying, configuring, and managing your end-to-end processes. The service allows you to author graphical PowerShell and Python [runbooks](/azure/automation/automation-runbook-types).  
+Process automation supports the integration of Azure services and other partner systems, such as Red Hat, that you need to deploy, configure, and manage your end-to-end processes. You can also use this feature to author graphical PowerShell and Python [runbooks](/azure/automation/automation-runbook-types).  
 
-Runbooks can be used for a wide range of automation tasks like managing resources, starting and stopping VMs, and handling maintenance tasks both within in Azure and targets outside Azure. It is recommended to ensure that you review the authentication scenarios which can be found [here](/azure/automation/automation-security-overview). You can find an overview of runbooks execution and recommendations [here](/azure/automation/automation-runbook-execution). 
+You can use runbooks for a wide range of automation tasks, like managing resources, starting and stopping VMs, and handling maintenance tasks both within Azure and outside Azure. To review the authentication scenarios,  [Azure Automation account authentication overview](/azure/automation/automation-security-overview). For more information, see [Runbook execution in Azure Automation](/azure/automation/automation-runbook-execution). 
 
-Supported runbook types are detailed in the table below: 
-[PowerShell](/azure/automation/automation-runbook-types#powershell-runbooks)  Textual runbook based on Windows PowerShell scripting. The currently supported versions are: PowerShell 7.2 (GA) and PowerShell 5.1 (GA). Since PowerShell 7.1 is no longer supported by parent product PowerShell, we recommend you create runbooks in long-term supported version PowerShell 7.2.
+The following table describes the supported runbook types. 
 
-[Powershell Workflow](/azure/automation/automation-runbook-types#powershell-workflow-runbooks) Textual runbook based on Windows PowerShell Workflow scripting. 
+| Runbook type | Description |
+|---|---|
+| [PowerShell](/azure/automation/automation-runbook-types#powershell-runbooks) | A textual runbook that's based on Windows PowerShell scripting. The currently supported versions are: PowerShell 7.2 (GA) and PowerShell 5.1 (GA). PowerShell 7.1 is no longer supported by parent product PowerShell, so we recommend that you create runbooks in the long-term supported version PowerShell 7.2. |
+[PowerShell Workflow](/azure/automation/automation-runbook-types#powershell-workflow-runbooks) | A textual runbook that's based on Windows PowerShell Workflow scripting. |
+[Python](/azure/automation/automation-runbook-types#python-runbooks) | A textual runbook that's based on Python scripting. The currently supported versions are: Python 3.8 (GA) and Python 3.10 (preview). Python 2.7 is no longer supported by parent product Python, so we recommend that you create runbooks in long-term supported versions. |
+[Graphical](/azure/automation/automation-runbook-types#graphical-runbooks) | A graphical runbook that's based on Windows PowerShell and created and edited completely in the graphical editor in the Azure portal. |
+[Graphical PowerShell Workflow](/azure/automation/automation-runbook-types#graphical-runbooks) | A graphical runbook that's based on Windows PowerShell Workflow and created and edited completely in the graphical editor in the Azure portal. |
 
-[Python](/azure/automation/automation-runbook-types#python-runbooks) Textual runbook based on Python scripting. The currently supported versions are: Python 3.8 (GA) and Python 3.10 (preview). Since Python 2.7 is no longer supported by parent product Python, we recommend you to create runbooks in long term supported versions.
+Use [webhooks](/azure/automation/automation-webhooks) to fulfill requests and ensure continuous delivery and operations by triggering automation via Azure Logic Apps, Azure Functions, IT service management products or services, DevOps, or monitoring systems.
 
-[Graphical](/azure/automation/automation-runbook-types#graphical-runbooks) Graphical runbook based on Windows PowerShell and created and edited completely in the graphical editor in Azure portal. 
+Azure Arc represents a significant advancement in cloud computing and offers a unified management platform that extends Azure capabilities to on-premises, multi-cloud, and edge environments. Azure Arc integrates with the Azure Automation service via the VM extension framework to deploy the hybrid runbook worker role and simplify onboarding to the update management, change tracking, and inventory features.
 
-[Graphical PowerShell Workflow](/azure/automation/automation-runbook-types#graphical-runbooks) Graphical runbook based on Windows PowerShell Workflow and created and edited completely in the graphical editor in Azure portal. 
+:::image type="content" source="images/rhel-platform-automation-devops/arc-ecosystem.png" alt-text="Diagram that shows the Azure Arc ecosystem." border="false" lightbox="images/rhel-platform-automation-devops/arc-ecosystem.png":::
 
-[Webhooks](/azure/automation/automation-webhooks?tabs=portal) let you fulfill requests and ensure continuous delivery and operations by triggering automation from Azure Logic Apps, Azure Function, ITSM product or service, DevOps, and monitoring systems. 
-
-Azure Arc represents a significant advancement in cloud computing, offering a unified management platform that extends Azure's capabilities to on-premises, multi-cloud, and edge environments. Azure Arc-enabled enables integration with the Azure Automation service using the VM extension framework to deploy the Hybrid Runbook Worker role and simplify onboarding to Update Management and Change Tracking and Inventory.
-
-:::image type="content" source="images/arcecosystem.png" alt-text="Diagram that shows the Azure Arc ecosystem." border="false" lightbox="images/arcecosystem.png":::
-
-You can find the prerequisites and steps to onboard a Linux machine in this article: [Connect an existing Linux server to Azure Arc.](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
+For more information, see [Connect an existing Linux server to Azure Arc](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux).
 
 ### ARM templates
 
-IaC using ARM templates provides a consistent declarative method to deploy and manage Azure resources. This feature allows you to define the infrastructure required for your applications in a JSON format. ARM templates are idempotent, meaning you can deploy the same template many times and get the same resource types in the same state. 
+IaC via ARM templates provides a consistent declarative method to deploy and manage Azure resources. Use this feature to define the required infrastructure for your applications in a JSON format. ARM templates are idempotent, meaning you can deploy the same template many times and get the same resource types in the same state. 
 
 A complete overview of Azure Resource Manager (ARM) Templates can be found here, in addition best practices using ARM are detailed [here](/azure/azure-resource-manager/templates/).
 
@@ -348,7 +344,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
 
 ### Azure DevOps
 
-Azure DevOps is a comprehensive set of development tools to provide project management, continuous integration and continuous delivery (CI/CD) services, and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps, and Azure Functions facilitate seamless collaboration, development, and delivery of modern software projects.
+Azure DevOps is a comprehensive set of development tools to provide project management, continuous integration and continuous delivery (CI/CD) services, and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Logic Apps, and Azure Functions facilitate seamless collaboration, development, and delivery of modern software projects.
 
 ### Azure Boards
 
@@ -417,7 +413,7 @@ Additional recommended reading:
 
 ### Integration of Azure Policy with Azure DevOps
 
-While Azure Policy directly applies to resources within Azure environments, its principles and governance can indirectly influence Azure DevOps practices. Here’s how: 
+While Azure Policy directly applies to resources within Azure environments, its principles and governance can indirectly influence Azure DevOps practices. Here's how: 
 
 - Compliance in CI/CD pipelines: You can integrate compliance checks into your Azure Pipelines. For example, ensuring that any infrastructure deployed through Azure DevOps complies with the policies defined in Azure Policy.
 
