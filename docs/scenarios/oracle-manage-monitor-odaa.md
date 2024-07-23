@@ -12,7 +12,7 @@ ms.subservice: scenario
 
 # Manage and Monitor Oracle Database@Azure, Exadata Database services
 
-This article provides recommended business practices to manage and monitor Oracle Database@Azure, Exadata Database services. The recommendations outlined provide important recommendations and considerations for the overall design and onboarding of this service within your Azure Enterprise Landing Zone. 
+This article provides recommended business practices to manage and monitor Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure. The recommendations outlined provide important recommendations and considerations for the overall design and onboarding of this service within your Azure Enterprise Landing Zone. 
 
 Other guidance that should also be reviewed is covered within the [Azure Well-Architected Framework - Microsoft Azure Well-Architected Framework | Microsoft Learn](/azure/well-architected/) and [Assessments | Azure Well-Architected Review (microsoft.com)](/assessments/azure-architecture-review/) which are recommended for review when establishing your Azure Enterprise Landing Zone.
 
@@ -22,9 +22,9 @@ Other guidance that should also be reviewed is covered within the [Azure Well-Ar
 The following are key topics to consider before deploying Oracle Database@Azure, Exadata Database services:
 
 - Identify the Azure region where you will deploy your Oracle Database@Azure and Exadata Database services. Ensure this region aligns with your current or planned Azure landing zone. If the chosen region differs from your current deployment, assess whether your existing monitoring tools can extend their capabilities to this new region. Ensure seamless integration and functionality across regions.
-- Network planning has to be taken into consideration before you deploy your resources. Please note that Oracle Exadata database resources are deployed to a private subnet that isn't accessible from the internet. If your current enterprise monitoring solution is on-premises, you'll need to account for the connectivity.
-- The subnets that the Oracle Exadata database clusters are deployed within a virtual network and are delegated subnets, which have constraints. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints).
-- As part of your networking planning, you need to take into consideration the topology that best supports your migration method of choice. Your choice should also monitor the process while moving your critical data.
+- Network planning has to be taken into consideration before you deploy your resources. Please note that Oracle Exadata database resources are deployed to a private subnet that isn't accessible from either on-premises or other spoke virtual networks without deploying a Network Virtual Appliance (NVA). The NVA is not a traditional firewall. The NVA is a Linux virtual machine with a user defined route (UDR) providing the next hop IP address and custom Iptables that you must deploy if your current enterprise monitoring solution is on-premises.
+- The subnets that the Oracle Exadata database clusters are deployed within a virtual network and are delegated subnets which are private. The delegated subnet currently has network constraints which do not allow network communication outside of the virtual network without deploying an NVA. For more information, see [Network planning for Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints).
+- As part of your networking planning, you need to take into consideration the topology that best supports your migration method of choice from on-premises. Your choice should also monitor the process while moving your critical data. Current options in migration are Oracle's RMAN, a Linux virtual machine with the NFS role installed, Oracle Dataguard, and Oracle's Data Pump. Please consult with your Oracle and Microsoft representative for detailed guidance. 
 - Determine how to integrate monitor alerts into your current triage process.
 - Make a list of key stakeholders that you need to notify when an alert is triggered.
 - Review with the database administrators the monitoring metrics selected of your chosen solution to align expectations.
@@ -35,11 +35,11 @@ For additional design considerations, see [Plan for Oracle on Azure adoption - C
 
 #### Health Monitoring Metric Enablement
 
-The metrics for Oracle Exadata database help measure useful quantitative data, such as CPU, memory utilization, storage utilization, database operations, SQL queries, and transactions. You can use the Azure Monitor metrics to diagnose and proactively troubleshoot issues. The database metrics are for operational readiness and long-term sustainment. 
+You should collect quantitative metrics for Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure  such as CPU, memory utilization, storage utilization, database operations, SQL queries, and overall transactions. You could use the Azure Monitor metrics to diagnose and proactively troubleshoot issues or your monitoring tool of choice. The database metrics are for operational readiness and long-term sustainment. 
 
-An Azure administrator can create a custom dashboard in the Azure portal with an aggregated view of the various metrics collected. Details on how to create a custom dashboard can be found in this article [Create a dashboard in the Azure portal - Azure portal | Microsoft Learn](/azure/azure-portal/azure-portal-dashboards).
+Create a custom dashboard in the Azure portal with an aggregated view of the various metrics collected. Details on how to create a custom dashboard can be found in this article [Create a dashboard in the Azure portal - Azure portal | Microsoft Learn](/azure/azure-portal/azure-portal-dashboards).
 
-As part of your preparation please review the following article to understand the required roles [Roles, permissions, and security in Azure Monitor - Azure Monitor | Microsoft Learn](/azure/azure-monitor/roles-permissions-security). 
+Review the required roles [Roles, permissions, and security in Azure Monitor](/azure/azure-monitor/roles-permissions-security). 
 
 Azure Monitor can adequately monitor your solution, but if you require granular database monitoring, see [Enterprise Manager Database Management](https://www.oracle.com/database/technologies/manageability.html). Oracle has a comprehensive monitoring guide for review in this article [Oracle Cloud Database Metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html). 
 
