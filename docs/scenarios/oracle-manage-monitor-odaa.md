@@ -18,11 +18,10 @@ Other guidance that should also be reviewed is covered within the [Azure Well-Ar
 
 ## Design considerations
 
-To manage and monitor your Azure landing zone, Microsoft Azure provides various tools and services including Azure Monitor, Azure Advisor, and Azure Service Health. These tools can alert system owners of potential irregularities and bottlenecks within an Azure Landing Zone. The focus of this article is on using Azure Monitor to achieve a stable Oracle Database@Azure, Exadata Database services implementation. Review the following documentation to learn more about Azure Monitor [Azure Monitor documentation - Azure Monitor | Microsoft Learn](/azure/azure-monitor/).
 
 The following are key topics to consider before deploying Oracle Database@Azure, Exadata Database services:
 
-- In which Azure region will you deploy your Oracle Database@Azure, Exadata Database services in relation to your current or planned Azure enterprise landing zone. If the region is different from what you are current leveraging, can your current monitor tooling of choice extend into this region?
+- Identify the Azure region where you will deploy your Oracle Database@Azure and Exadata Database services. Ensure this region aligns with your current or planned Azure landing zone. If the chosen region differs from your current deployment, assess whether your existing monitoring tools can extend their capabilities to this new region. Ensure seamless integration and functionality across regions.
 - Network planning has to be taken into consideration before you deploy your resources. Please note that Oracle Exadata database resources are deployed to a private subnet that isn't accessible from the internet. If your current enterprise monitoring solution is on-premises, you'll need to account for the connectivity.
 - The subnets that the Oracle Exadata database clusters are deployed within a virtual network and are delegated subnets, which have constraints. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints).
 - As part of your networking planning, you need to take into consideration the topology that best supports your migration method of choice. Your choice should also monitor the process while moving your critical data.
