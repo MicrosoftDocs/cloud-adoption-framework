@@ -29,7 +29,7 @@ Content in Satellite flows from external content sources to Satellite Server. Ca
 
 1. **Assign a host system**. When you assign a host system to a Capsule Server or directly to your Satellite Server, you ensure that the host receives the content that they provide. You can have physical or virtual hosts.
 
-:::image type="content" source="images/rhel-management-monitoring/system-architecture-satellite.png " alt-text="Diagram that shows the Red Hat Satellite architecture." border="false":::
+:::image type="content" source="images/management-monitoring/system-architecture-satellite.png " alt-text="Diagram that shows the Red Hat Satellite architecture." border="false":::
 
 ## Deployment strategy
 
@@ -74,7 +74,6 @@ Use Azure Policy to ensure that your environment meets your organization's secur
 You can use Azure Policy to:
 
 - Enforce compliance and governance standards, such as audit and compliance reporting.
-
 - Provide resource management and cost control, such as resource consistency and cost management.
 - Provide security and access control, such as security baselines and role-based access control (RBAC).
   
@@ -111,7 +110,7 @@ Red Hat Ansible Automation Platform simplifies the development and operation of 
 
 You can use the Automation update management feature and Azure Update Manager to track and implement change management within your Azure environment. The Automation update management feature retires on August 31, 2024. We recommend that you use Update Manager going forward.
 
-For more information, see
+For more information, see:
 
 - [What's included in Ansible Automation Platform](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_release_notes/platform-introduction#whats-included).
 - [Red Hat Ansible Automation Platform upgrade and migration guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_upgrade_and_migration_guide/index).
@@ -123,7 +122,7 @@ Unlike the Automation update management feature, Update Manager doesn't depend o
 
 The following diagram shows an Update Manager hybrid connectivity configuration.
 
-:::image type="content" source="images/rhel-management-monitoring/update-manager-hybrid-connectivity.png" alt-text="Diagram that shows Update Manager hybrid connectivity." border="false" lightbox="images/rhel-management-monitoring/update-manager-hybrid-connectivity.png":::
+:::image type="content" source="images/management-monitoring/update-manager-hybrid-connectivity.png" alt-text="Diagram that shows Update Manager hybrid connectivity." border="false" lightbox="images/management-monitoring/update-manager-hybrid-connectivity.png":::
 
 For more information, see:
 
@@ -140,11 +139,11 @@ RHEL provides a robust set of [command line tools](https://access.redhat.com/doc
 
 You can use [Azure Monitor](/azure/azure-monitor/overview) to collect data, analyze data, and create reports for both your cloud and on-premises environments. The following diagram shows the tools that you can use.
 
-:::image type="content" source="images/rhel-management-monitoring/azure-monitor-tools.png" alt-text="Diagram that shows Azure Monitor tools." border="false" lightbox="images/rhel-management-monitoring/azure-monitor-tools.png":::
+:::image type="content" source="images/management-monitoring/azure-monitor-tools.png" alt-text="Diagram that shows Azure Monitor tools." border="false" lightbox="images/management-monitoring/azure-monitor-tools.png":::
 
 Azure monitoring has the capabilities to incorporate customer data sources as demonstrated in the following diagram.
 
-:::image type="content" source="images/rhel-management-monitoring/azure-monitor-data-sources.png" alt-text="Diagram that shows Azure Monitor data sources." border="false" lightbox="images/rhel-management-monitoring/azure-monitor-data-sources.png":::
+:::image type="content" source="images/management-monitoring/azure-monitor-data-sources.png" alt-text="Diagram that shows Azure Monitor data sources." border="false" lightbox="images/management-monitoring/azure-monitor-data-sources.png":::
 
 ### Azure Linux VM monitoring
 
@@ -165,21 +164,19 @@ After you enable boot diagnostics, every time you stop and start the VM, informa
 A Linux VM has a dedicated host in Azure that it interacts with. Metrics are automatically collected for the host, and you can view the metrics in the Azure portal.
 
 1. In the Azure portal, select **Resource groups**, choose **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-
 1. To see how the host VM performs, select **Metrics** in the **Monitoring** section, and then choose any of the *[Host]* metrics under **Available metrics**.
 
-   :::image type="content" source="images/rhel-management-monitoring/host-metrics.png" alt-text="Screenshot that shows the Metrics page in the Azure portal." lightbox="images/rhel-management-monitoring/host-metrics.png":::
+   :::image type="content" source="images/management-monitoring/host-metrics.png" alt-text="Screenshot that shows the Metrics page in the Azure portal." lightbox="images/management-monitoring/host-metrics.png":::
   
 ### Enable advanced monitoring
   
 To enable advanced monitoring in Azure Monitor for VMs:
 
 1. In the Azure portal, select **Resource groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-
 1. In the **Monitoring** section, select **Insights**.
 1. Select **Enable**.
 
-   :::image type="content" source="images/rhel-management-monitoring/enable-insights.png" alt-text="Screenshot that shows the Insights page." lightbox="images/rhel-management-monitoring/enable-insights.png":::
+   :::image type="content" source="images/management-monitoring/enable-insights.png" alt-text="Screenshot that shows the Insights page." lightbox="images/management-monitoring/enable-insights.png":::
 
 1. On the **Azure Monitor Insights onboarding** page, if you have an existing Log Analytics workspace in the same subscription, select it in the drop-down list.
 
@@ -191,14 +188,13 @@ To enable advanced monitoring in Azure Monitor for VMs:
   
    After you enable monitoring, you might need to wait several minutes before you can view the performance metrics for the VM.
 
-   :::image type="content" source="images/rhel-management-monitoring/wait-page.png" alt-text="Screenshot that shows the wait page." lightbox="images/rhel-management-monitoring/wait-page.png":::
+   :::image type="content" source="images/management-monitoring/wait-page.png" alt-text="Screenshot that shows the wait page." lightbox="images/management-monitoring/wait-page.png":::
   
 ### View VM performance metrics
   
 Azure Monitor for VMs includes a set of performance charts that target several key performance indicators to help you determine how well a VM performs. To access the charts from your VM, do the following steps.
 
 1. In the Azure portal, select **Resource groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-
 1. In the **Monitoring** section, select **Insights**.
 1. Select the **Performance** tab. This page includes performance usage charts and also provides a table for each discovered logical disk, its capacity, usage, and the total average of each measurement.
   
@@ -209,7 +205,6 @@ You can create alerts based on specific performance metrics. Use alerts to get n
 The following example creates an alert for average CPU usage.
 
 1. In the Azure portal, select **Resource groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-
 1. Select **Alert rules** on the VM pane. Then select **Add metric alert** at the top of the Alerts pane.
 1. Provide a **Name** for your alert, such as *myAlertRule*.
 1. To trigger an alert when the CPU percentage exceeds 1.0 for 5 minutes, leave all the other defaults selected.
@@ -218,5 +213,5 @@ The following example creates an alert for average CPU usage.
 
 ## Next step
 
-[Creating a customer dashboard in Azure](/azure/azure-portal/azure-portal-dashboards)
+- [Governance and compliance for Red Hat Enterprise Linux on Azure](./governance-compliance.md)
 

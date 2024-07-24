@@ -54,17 +54,17 @@ This section describes design recommendations for IAM in Azure landing zones for
 
 Red Hat IdM provides a centralized way to manage identity stores, authentication, policies, and authorization in a Linux-based domain. Red Hat IdM natively integrates with Windows Server Active Directory and Microsoft Entra ID and is included with RHEL. If you extend your on-premises Active Directory to Azure, you can benefit from the Red Hat IdM-native Windows Server Active Directory trust capability. Similarly, if you adopt Microsoft Entra ID or use an alternate identity provider, you can use Red Hat IdM and Red Hat SSO for seamless integration. Red Hat SSO is a supported enterprise implementation of the Keycloak open-source project. It's provided at no extra cost with various Red Hat subscriptions, including Red Hat Ansible Automation Platform. Red Hat recommends that you implement Red Hat IdM within your RHEL deployment in Azure. The following diagram shows a RHEL management subscription deployment.
 
-:::image type="content" source="images/rhel-identity-access-management/management-subscription.svg" alt-text="Diagram that shows a high-level depiction of a RHEL management subscription deployment." border="false":::
+:::image type="content" source="images/identity-access-management/management-subscription.svg" alt-text="Diagram that shows a high-level depiction of a RHEL management subscription deployment." border="false":::
 
 The IAM components for your Red Hat deployment in Azure use the [subscription scaling model](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) to provide extra control and isolation to the management tooling. The Red Hat IdM primary systems and replica systems and Red Hat SSO instances reside in a Red Hat Management subscription with other tools. The subscription provides resource groups that you can use throughout your implementation to provide localized services and high availability.
 
 The following diagram shows a Red Hat IdM zonal deployment architecture.
 
-:::image type="content" source="images/rhel-identity-access-management/rhel-landing-zone-idm-zone-high-availability.png" alt-text="Diagram that shows the Red Hat IdM zonal deployment architecture." border="false":::
+:::image type="content" source="images/identity-access-management/landing-zone-high-availability.png" alt-text="Diagram that shows the Red Hat IdM zonal deployment architecture." border="false":::
 
 The following diagram shows a high-availability deployment of Red Hat IdM across regions and availability zones.
 
-:::image type="content" source="images/rhel-identity-access-management/rhel-landing-zone-idm-deploy-detail.png" alt-text="Diagram that shows the Red Hat IdM multi-region deployment architecture." border="false":::
+:::image type="content" source="images/identity-access-management/landing-zone-deploy-detail.png" alt-text="Diagram that shows the Red Hat IdM multi-region deployment architecture." border="false":::
 
 This architecture has IdM servers within each region that replicate to one another and to a hidden replica. There are at least two replication links across regions. The hidden replicas serve as the backup points because you can take them offline as full backups without affecting availability.
 

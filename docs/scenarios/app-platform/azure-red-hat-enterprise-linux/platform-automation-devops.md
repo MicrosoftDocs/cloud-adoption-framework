@@ -9,94 +9,105 @@ ms.topic: conceptual
 
 # Platform automation considerations for Red Hat Enterprise Linux on Azure
 
-This article describes how to manage automation for Red Hat Enterprise Linux (RHEL) on Azure. Review design considerations, design recommendations, and options for various tooling within the Azure ecosystem to achieve a consistent and stable environment. This article provides guidance that aligns with varying customer scenarios, business requirements, operational practices, and technical maturity.     
+This article describes how to manage automation for Red Hat Enterprise Linux (RHEL) on Azure. It describes design considerations, design recommendations, and options for various tooling within the Azure ecosystem that you can use to achieve a consistent and stable environment. This article provides guidance that aligns with various customer scenarios, business requirements, operational practices, and technical maturity.     
 
 ## Overview
 
-When you automate RHEL for Azure landing zones, the goal is to align the Azure landing zone lifecycle management via the Red Hat Infrastructure Standard (RH-IS) and the associated Red Hat Infrastructure Standard Adoption Model (RH-ISAM). When you standardize systems, you provide a reliable foundation for the solution. The RH-IS defines the standard operating environment that comprises the default set of software components and configurations. You can apply these components and configurations to systems via the RH-ISAM, a set of DevOps or Git operation principles, Azure Resource Manager templates (ARM templates), Terraform, Azure CLI, and Azure PowerShell.
+When you automate RHEL for Azure landing zones, you use the Red Hat Infrastructure Standard (RH-IS) and the associated Red Hat Infrastructure Standard Adoption Model (RH-ISAM) to align Azure landing zone lifecycle management. Standardize systems to provide a reliable foundation for the solution. The RH-IS defines the standard operating environment that comprises the default set of software components and configurations. You can apply these components and configurations to systems via the RH-ISAM, a set of DevOps or Git operation principles, Azure Resource Manager templates (ARM templates), Terraform, Azure CLI, and Azure PowerShell.
 
-This practice includes provisioning, systems management, platform evolution, infrastructure operations, and application and workload lifecycles. You implement these operations through automation, like infrastructure as code (IaC) and configuration as code. To reduce errors and increase reliability, define and test configurations. To speed up mass migration, automate provisioning. Automated configurations reduce configuration drifts and ensure that systems function correctly. 
+You can automate various operations. For example, you can use automation to:
+- Provision components. 
+- Manage systems.
+- Perform platform evolution.
+- Incorporate infrastructure operations.
+- Configure application and workload lifecycles.
+
+You can implement these operations through infrastructure as code (IaC) and configuration as code. To reduce errors and increase reliability, define and test configurations. To speed up mass migrations, automate provisioning. Automated configurations reduce configuration drifts and ensure that systems function correctly. 
 
 ## Design considerations
 
-Red Hat Identity Management (IdM) provides a centralized and unified platform that you can use to manage identity stores, authentication policies, and authorization policies for RHEL systems. In a hybrid scenario, you can extend your existing Red Hat IdM infrastructure across a virtual private network or Azure ExpressRoute. This configuration connects on-premises with the RHEL landing zone within Azure. To support hybrid cloud identity scenarios, extend your on-premises environment into Azure so that you can integrate your workloads with Microsoft Entra. For more information, see [Microsoft Entra authentication](/entra/identity/authentication/).
+Red Hat Identity Management (IdM) provides a centralized and unified platform that you can use to manage identity stores, authentication policies, and authorization policies for RHEL systems. In a hybrid scenario, you can extend your existing Red Hat IdM infrastructure across a virtual private network or Azure ExpressRoute. This configuration connects on-premises environment with the RHEL landing zone within Azure. To support hybrid cloud identity scenarios, extend your on-premises environment into Azure so that you can integrate your workloads with Microsoft Entra. For more information, see [Microsoft Entra authentication](/entra/identity/authentication/).
 
-As an alternative identity management solution, you can join RHEL to create an external trust with Windows Active Directory or join directly into an existing Windows Server Active Directory forest. For more information, see [Integrate RHEL systems directly with Windows Server Active Directory](https://access.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index).   
+As an alternative identity management solution, you can join RHEL to create an external trust with Windows Server Active Directory or join directly into an existing Windows Server Active Directory forest. For more information, see [Integrate RHEL systems directly with Windows Server Active Directory](https://access.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index).   
 
-[Red Hat Satellite](https://www.redhat.com/en/technologies/management/satellite) provides content that's delivered to managed RHEL systems. Satellite includes Red Hat packages and patches and includes non-Microsoft packages and custom packages that application development teams develop. Satellite also acts as the gateway to Red Hat Insights, which offers predictive analysis of configurations to recognize security or performance risks. If you deploy preconfigured RHEL pay-as-you-go images, you can take advantage of the [Red Hat Update Infrastructure for Azure](/azure/virtual-machines/workloads/redhat/redhat-rhui), which is an update tool that's built into the pay-as-you-go images.
+[Red Hat Satellite](https://www.redhat.com/technologies/management/satellite) is the single source of content that's delivered to managed RHEL systems. Satellite includes Red Hat packages and patches and also non-Microsoft packages and custom packages that application development teams develop. Satellite acts as the gateway to Red Hat Insights, which offers predictive analysis of configurations to recognize security or performance risks. If you deploy preconfigured RHEL pay-as-you-go images, you can take advantage of [Red Hat Update Infrastructure for Azure](/azure/virtual-machines/workloads/redhat/redhat-rhui), which is an update tool that's built into the pay-as-you-go images.
 
 
 ### Red Hat Ansible Automation Platform design considerations
 
-Red Hat Ansible Automation Platform (AAP) helps to standardize technical workflows and recurring tasks. You can use AAP to orchestrate workflows, provision processes for new systems, and create recurring operational tasks. To reduce complexity, use one common automation platform and language. Fully automated workflows accelerate application innovation and simplify mass workload migrations across on-premises and cloud environments.
+Red Hat Ansible Automation Platform (AAP) helps to standardize technical workflows and recurring tasks. You can use AAP to orchestrate workflows, provision processes for new systems, and create recurring operational tasks. To reduce complexity, use one common automation platform and language. Fully automated workflows accelerate application innovation and simplify mass workload migrations across on-premises environments and cloud environments.
 
-Benefits of RHEL as a Platform automation strategy include:
+Benefits of RHEL as a platform automation strategy include:
 
 - New systems have fully automated provisioning at scale, which improves mass migration speed. 
+
 - Increased uniformity of tested systems' configuration and application installations across physical systems and virtual systems. 
 - Continuous updates because patch management is immediately available.
 - A standardized and simplified platform to deliver new applications and workloads. Staff has extra time to deliver increased innovation. 
 
 You can implement: 
 
-- A self-managed AAP instance either via on-premises infrastructure, cloud infrastructure, or both.
-  - Via a RHEL deployment
-  - Via a Red Hat OpenShift Container Platform deployment
+- A self-managed AAP instance either via on-premises infrastructure, cloud infrastructure, or both. You can use a RHEL deployment or a Red Hat OpenShift Container Platform deployment.
+
 - A self-managed AAP instance in a public cloud.
 - A managed AAP instance in a public cloud.
 
-### Red Hat AAP, self-managed, on-premises/cloud
+### Self-managed Red Hat AAP on-premises or in the cloud
 
-Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/management/ansible/azure) in self-managed mode in an on-premises and/or cloud infrastructure to get the following benefits: 
+Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/management/ansible/azure) in self-managed mode in an on-premises, cloud, or hybrid infrastructure to get the following benefits: 
 
-- **Architecture and scale**: Determine your ideal architecture to support the automation platform, whether based on RHEL infrastructure or OpenShift operator deployment. Based on your fleet size and requirements, choose the number and the instance sizing of controllers, execution nodes, and private automation hub instances. For more information about architecture, design, configuration, and scale, see [Red Hat AAP planning guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
+- **Architecture and scale**: Determine your ideal architecture to support the automation platform. You can base the architecture on RHEL infrastructure or an OpenShift operator deployment. Based on your fleet size and requirements, choose the number and the instance sizing of controllers, execution nodes, and private automation hub instances. For more information about architecture, design, configuration, and scale, see [Red Hat AAP planning guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
+
 - **Azure configuration**:  Optimize the automation architecture for your organization's Azure design and configuration.
-- **Automation mesh support**: Use this AAP feature to distribute automation workloads across hybrid cloud peer-to-peer connections by using existing networks. Place hop nodes in a location based on your security design criteria and network topology.
-- **Automation hub architecture**: Optimize an automation hub architecture for scale and placement of private automation hub instances. Optimized configurations enhance secure automation content delivery and access to execution environment sources in close proximity to automation execution resources. Provide access to and manage Ansible content. Choose which Ansible content collections and versions are available to automation consumers.
+- **Automation mesh support**: Use the AAP automation mesh feature to distribute automation workloads across hybrid cloud nodes that establish peer-to-peer connections by using existing networks. Place hop nodes in a location based on your security design criteria and network topology.
+- **Automation hub architecture**: Optimize an automation hub architecture for scale and placement of private automation hub instances. Optimize configurations to enhance secure automation content delivery and access to execution environment sources that are in close proximity to automation execution resources. You can choose which Ansible content collections and versions that automation consumers can access.
 
-### Red Hat AAP on Azure, managed or self-managed application 
+### Managed or self-managed Red Hat AAP on Azure 
 
-[Red Hat AAP on Microsoft Azure](https://www.redhat.com/technologies/management/ansible/azure) is available via a managed application or self-managed application. AAP provides the following benefits:
+[Red Hat AAP on Microsoft Azure](https://www.redhat.com/technologies/management/ansible/azure) is available via a managed application or self-managed application, which provides the following benefits:
 
-- **Ease-of-use leads to rapid return on investment (ROI)**: You can deploy AAP on Azure directly from Azure Marketplace. This managed solution is active immediately after deployment, and you can start automating the management of your Azure resources in minutes. Red Hat manages the infrastructure, so you're free to think only about the systems that are critical to your enterprise.
-- **Streamlined integration**: AAP on Azure is integrated with Azure services. The Ansible collection for Azure was developed and security tested by Microsoft and Red Hat for minimal setup and maximum support. Use AAP on Azure as part of your hybrid cloud automation strategy to unify management and automation across hybrid cloud, Internet of Things, and edge deployments.
-- **Existing committed Azure spend**: You can use existing committed spending with Microsoft to purchase Red Hat AAP on Azure. Use committed spending so that teams across your entire organization can deploy, configure, and automate seamlessly. Integrated billing means you get one bill and full visibility into the cost. 
-- **Automation beyond the cloud**: With AAP on Azure, you can deploy in your Microsoft Azure cloud and then extend across your infrastructure. Deploy, run, and scale applications across Azure and hybrid cloud environments.
-- **Support**: Red Hat and Microsoft partnered to build AAP on Azure to ensure consistent and security-focused operations. Red Hat manages, services, and supports the application so that your IT team can focus on delivering automation strategies. 
+- **A rapid return on investment (ROI) due to ease of use**: You can deploy AAP on Azure directly from Azure Marketplace. This managed solution is active immediately after deployment, and you can start automating the management of your Azure resources in minutes. Red Hat manages the infrastructure, so you're free to think about other systems that are critical to your enterprise.
 
-### Other considerations for managed mode
+- **Streamlined integration**: AAP on Azure is integrated with Azure services. Microsoft and Red Hat developed and security tested the Ansible collection for Azure, so you need minimal setup, and you get maximum support. Use AAP on Azure as part of your hybrid cloud automation strategy to unify management and automation across hybrid cloud, Internet of Things, and edge deployments.
+- **Existing committed Azure spend**: You can use existing committed spending with Microsoft to purchase Red Hat AAP on Azure. Use committed spending so that teams across your entire organization can deploy, configure, and automate components seamlessly. Integrated billing means you get one bill and full visibility into the cost. 
+- **Automation beyond the cloud**: With AAP on Azure, you can deploy applications in your Microsoft Azure cloud and then extend across your infrastructure. Deploy, run, and scale applications across Azure and hybrid cloud environments.
+- **Support**: Red Hat and Microsoft partnered to build AAP on Azure to ensure consistent, security-focused operations. Red Hat manages, services, and supports the application so that your IT team can focus on delivering automation strategies. 
 
-AAP on Microsoft Azure in managed mode is installed as a managed application. Red Hat manages both the underlying Azure resources and the software that runs on it. That infrastructure runs in your Azure tenant.
+#### Other considerations for managed mode
 
-The managed application resource group is separate from other resource groups in your tenant. Red Hat only has access to the managed application resource group, with no visibility into other tenant resources.
+You can install AAP on Azure in managed mode so that it's a managed application. Red Hat manages both the underlying Azure resources and the software that runs on it. That infrastructure runs in your Azure tenant.
 
-For information about this implementation, see [Azure managed applications overview](/azure/azure-resource-manager/managed-applications/overview). 	
+The managed application resource group is separate from other resource groups in your tenant. Red Hat has access to the managed application resource group only, with no visibility into other tenant resources.
 
-AAP on Microsoft Azure in managed mode uses the following resource groups:
+For more information, see [Azure managed applications overview](/azure/azure-resource-manager/managed-applications/overview). 	
 
-- *A new or existing resource group in your tenant*. This resource group includes a single resource that refers to the AAP on Microsoft Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades. But the resource group is outside of Red Hat's management.	
-- *A multitenant managed resource group (MRG)* that contains most of the required infrastructure to operate AAP on Microsoft Azure. The Red Hat tenant and your tenant shares this multitenant resource group. Red Hat has full administrative control. You have read-only access to the resource group. 
-- *An AKS node pool resource group (NPRG)*. Microsoft requires an NPRG for AKS deployments. An NPRG contains resources that AKS uses to function. This resource group is created on deployment, and it's outside of Red Hat's management. For more information, see [Microsoft AKS documentation](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
+AAP on Azure in managed mode uses the following resource groups:
 
-For AAP on Microsoft Azure in managed mode, also consider: 
+- **A new or existing resource group in your tenant**. This resource group includes a single resource that refers to the AAP on Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades. But Red Hat doesn't manage the resource group.
+	
+- **A multitenant managed resource group (MRG)** that contains most of the required infrastructure to operate AAP on Azure. The Red Hat tenant and your tenant shares this multitenant resource group. Red Hat has full administrative control. You have read-only access to the resource group. 
+- **An AKS node pool resource group (NPRG)**. Microsoft requires an NPRG for AKS deployments. An NPRG contains resources that AKS uses to function. This resource group is created on deployment. Red Hat doesn't manage this resource group. For more information, see [Microsoft AKS documentation](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
 
-- When you install AAP on Microsoft Azure, you choose whether the deployment is public or private. This affects how users can access the AAP user interfaces.
+For AAP on Azure in managed mode, also consider the following factors: 
+
+- When you install AAP on Azure, you choose whether the deployment is public or private, which affects how users can access the AAP user interfaces.
  
-- Regardless of whether you choose a public or private deployment, you must configure network peering for outbound communication from AAP to the private networks that contain resources that you want to automate against. You can configure network peering from AAP on Microsoft Azure to your private Azure virtual network and to on-premises or multicloud networks where transit routing with Azure exists. 
+- Regardless of whether you choose a public or private deployment, you must configure network peering for outbound communication from AAP to the private networks that contain resources that you want to automate against. You can configure network peering from AAP on Azure to your private Azure virtual network and to on-premises networks or multicloud networks where transit routing with Azure exists. 
 
-### Other considerations for self-managed mode 
+#### Other considerations for self-managed mode 
 
-AAP on Microsoft Azure in self-managed mode provides many of the same benefits of self-managed AAP. But where managed mode runs within an AKS cluster, self-managed mode automation platform resources are VM-based.
+AAP on Azure in self-managed mode provides many of the same benefits of managed AAP. But where managed mode runs within an AKS cluster, self-managed mode automation platform resources are VM-based.
 
-For AAP on Microsoft Azure in self-managed mode, also consider: 
+For AAP on Azure in self-managed mode, consider the following factors: 
 
 - Event-Driven Ansible is included in the self-managed offering on Azure. Event-driven automation helps you reduce manual tasks and deliver an efficient IT environment that focuses on innovation. Event-Driven Ansible processes events, determines the appropriate responses, and then runs automated actions to remediate the event.
-- Offers - Available in 100 active managed node increments, and this is available in both public offers, or private offers. 
-- VM resources that underpin AAP on Microsoft Azure in self-managed mode can consist entirely of Azure Marketplace images or a mix of Azure Marketplace images and customer-managed images. 
+
+- Subscriptions are available in 100 active managed node increments. They're available in public offers or private offers. 
+- VM resources that underpin AAP on Azure in self-managed mode can consist entirely of Azure Marketplace images or a mix of Azure Marketplace images and customer-managed images. 
 
 ## Design recommendations
 
-When you operate the RHEL Platform for Azure landing zones, use Red Hat-certified content and validated content collections from Red Hat Automation Hub. The following collections have prominent roles in the automation framework:
+When you operate the RHEL platform for Azure landing zones, use Red Hat-certified content and validated content collections from Red Hat Automation Hub. The following collections have prominent roles in the automation framework:
 
 - redhat.rhel_idm
   - IdM primary configuration
@@ -134,6 +145,7 @@ For more information, see:
 - [Azure landing zone design guidance for platform automation considerations](/azure/cloud-adoption-framework/ready/considerations/automation).
 
 - [Development lifecycle](/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle). Explore key design considerations and recommendations about using automation to create a landing zone. This guidance discusses the repository, branch, automated builds, deployment, and rollback strategy.
+
 - [IaC](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code). Explore the benefits of implementing Azure landing zones via IaC. Learn about considerations related to code structure, tools, and technology. 
 - [Environments](/azure/cloud-adoption-framework/ready/considerations/environments). Explore the purpose of using multiple environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
 - [Test-driven development](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development). Learn how to use unit testing to improve the quality of new features and improvements in the Azure landing zone codebase. 
@@ -141,6 +153,7 @@ For more information, see:
 If you have the requisite source code management tooling in place and the source code management processes established from the previous sections, you can implement automation. Develop Ansible automation code with accompanying IaC or configuration as code to deploy core infrastructure and support the RHEL Platform for Azure landing zones model. For greenfield deployments, you can automate the following tasks for a full environment implementation. Brownfield deployments only need the tasks that your use case requires.
 
 - Create Azure resource groups.
+
 - Create virtual networks.
 - Create subnets. 
 - Create network security groups.
@@ -190,6 +203,7 @@ Subsequent stages in the lifecycle pipeline are slightly different from the deve
 
 - Deploy RHEL QA test systems from Satellite host groups.
   - RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite.
+       
 - Update or create Azure network security groups based on application communication paths.
   - For multi-tier application stacks, update or create Azure application security groups for extra layered security. 
 - Update RHEL QA systems, and deploy and configure desired applications from Satellite QA CV or CCV.
@@ -226,7 +240,7 @@ Use [webhooks](/azure/automation/automation-webhooks) to fulfill requests and 
 
 Azure Arc represents a significant advancement in cloud computing and offers a unified management platform that extends Azure capabilities to on-premises, multi-cloud, and edge environments. Azure Arc integrates with the Azure Automation service via the VM extension framework to deploy the hybrid runbook worker role and simplify onboarding to the update management, change tracking, and inventory features.
 
-:::image type="content" source="images/rhel-platform-automation-devops/arc-ecosystem.png" alt-text="Diagram that shows the Azure Arc ecosystem." border="false" lightbox="images/rhel-platform-automation-devops/arc-ecosystem.png":::
+:::image type="content" source="images/platform-automation-devops/arc-ecosystem.png" alt-text="Diagram that shows the Azure Arc ecosystem." border="false" lightbox="images/platform-automation-devops/arc-ecosystem.png":::
 
 For more information, see [Connect an existing Linux server to Azure Arc](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux).
 
@@ -383,4 +397,5 @@ This integration ensures that resources that you deploy and manage through Azure
 - [Install Azure CLI on Linux](/cli/azure/install-azure-cli-linux)
 - [Run Azure CLI in a Docker container](/cli/azure/run-azure-cli-docker)
 - [Azure CLI documentation](/cli/azure)
+
 
