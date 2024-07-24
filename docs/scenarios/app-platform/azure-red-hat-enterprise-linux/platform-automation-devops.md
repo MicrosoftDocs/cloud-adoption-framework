@@ -109,36 +109,36 @@ For AAP on Azure in self-managed mode, consider the following factors:
 
 When you operate the RHEL platform for Azure landing zones, use Red Hat-certified content and validated content collections from Red Hat Automation Hub. The following collections have prominent roles in the automation framework:
 
-- redhat.rhel_idm
-  - IdM primary configuration
-  - IdM replicas configuration 
-  - Integration and configuration of RHEL clients with IdM
+- **redhat.rhel_idm**
+  - Configure IdM primary VMs.
+  - Configure IdM replicas.
+  - Integrate and configure RHEL clients with IdM.
 
-- redhat.satellite  |  redhat.satellite_operations  |  redhat.rhel_system_roles 
-  - Deploy Satellite and Capsule
-  - Create and configure Satellite objects and settings 
-  - Provision and configure RHEL systems 
+- **redhat.satellite**, **redhat.satellite_operations**, and **redhat.rhel_system_roles** 
+  - Deploy Satellite and Capsule.
+  - Create and configure Satellite objects and settings.
+  - Provision and configure RHEL systems.
 
-- ansible.*  |  ansible.controller  |  infra.controller_configuration 
-  - Configure AAP 
-  - Create and configure AAP job templates and settings 
+- **ansible.\***, **ansible.controller**, and **infra.controller_configuration** 
+  - Configure AAP.
+  - Create and configure AAP job templates and settings.
 
-[The Ansible collection for Azure](https://catalog.redhat.com/software/collection/azure/azcollection?tab=documentation) includes over 250 modules to interrogate, manage, and automate Azure resource types, such as:
+[The Ansible collection for Azure](https://catalog.redhat.com/software/collection/azure/azcollection?tab=documentation) includes over 250 modules that you can use to interrogate, manage, and automate Azure resource types, such as:
 
-- Microsoft Entra ID
-- Networking
-- Azure SQL Database
-- AKS
-- Storage
-- Application security groups
-- Azure Virtual Machines
-- Azure database services
-- Azure Container Registry
-- Azure Key Vault
+- AKS.
+- Application security groups.
+- Azure Container Registry.
+- Azure database services.
+- Azure Key Vault.
+- Azure SQL Database.
+- Azure Virtual Machines.
+- Microsoft Entra ID.
+- Networking.
+- Storage.
 
 ### Core platform infrastructure deployment
 
-Establish concepts and processes to effectively deploy core platform infrastructure and support an RHEL Platform on Azure landing zones model.
+Establish concepts and processes to effectively deploy core platform infrastructure and support an RHEL platform on Azure landing zones model.
 
 For more information, see:
 
@@ -147,10 +147,10 @@ For more information, see:
 - [Development lifecycle](/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle). Explore key design considerations and recommendations about using automation to create a landing zone. This guidance discusses the repository, branch, automated builds, deployment, and rollback strategy.
 
 - [IaC](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code). Explore the benefits of implementing Azure landing zones via IaC. Learn about considerations related to code structure, tools, and technology. 
-- [Environments](/azure/cloud-adoption-framework/ready/considerations/environments). Explore the purpose of using multiple environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
+- [Environments](/azure/cloud-adoption-framework/ready/considerations/environments). Learn how to use multiple environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
 - [Test-driven development](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development). Learn how to use unit testing to improve the quality of new features and improvements in the Azure landing zone codebase. 
 
-If you have the requisite source code management tooling in place and the source code management processes established from the previous sections, you can implement automation. Develop Ansible automation code with accompanying IaC or configuration as code to deploy core infrastructure and support the RHEL Platform for Azure landing zones model. For greenfield deployments, you can automate the following tasks for a full environment implementation. Brownfield deployments only need the tasks that your use case requires.
+When you have the requisite source code management tooling in place and the source code management processes established from the previous sections, you can implement automation. Develop Ansible automation code with accompanying IaC or configuration as code to deploy core infrastructure and support the RHEL platform for Azure landing zones model. For greenfield deployments, you can automate the following tasks for a full environmental implementation. For brownfield deployments, you can automate only the tasks that your use case requires.
 
 - Create Azure resource groups.
 
@@ -160,7 +160,7 @@ If you have the requisite source code management tooling in place and the source
 - Create RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder.
 - Create an IdM primary VM (pre-Satellite provisioning). Configure the IdM primary VM via configuration as code.
 - Create a Satellite VM (pre-Satellite provisioning). Configure Satellite via configuration as code.
-- Create Capsule VMs (Satellite provisioning). Configure Capsules via configuration as code.
+- Create Capsule VMs (Satellite provisioning). Configure Capsule via configuration as code.
 - Create IdM replica VMs (Satellite provisioning). Configure IdM replicas via configuration as code.
 - Create AAP infrastructure (Satellite provisioning), including:
     - Automation controller VMs.
@@ -180,41 +180,39 @@ If you have the requisite source code management tooling in place and the source
 
 ### RHEL system lifecycle management  
 
-After core platform infrastructure is in place, you can implement automation for RHEL applications and workload lifecycles. Refer to 'Deployment, management, and patching considerations' and 'Governance and compliance' sections for in-depth coverage of considerations to be made when forming automation pipelines. The following encapsulates an example automation workflow for a development lifecycle pipeline:
+After core platform infrastructure is in place, you can implement automation for RHEL applications and workload lifecycles. The following workflow describes an example automation implementation for a development lifecycle pipeline:
 
-- Update the errata filter end date, and publish content in Satellite.
+1. Update the errata filter end date, and publish content in Satellite.
 
-- Promote content views (CV) and composite content views (CCV) to development.
-- Deploy RHEL development test systems from Satellite host groups.
-    - RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite. 
-- Update or create Azure network security groups based on application communication paths.
-- For multi-tier application stacks, update or create Azure application security groups for extra layered security.
-- Update RHEL development systems, and deploy and configure desired applications from Satellite development CV or CCV.
-  - Deploy to single RHEL instance for a simple application stack.
-  - Deploy to several RHEL instances for multi-tier application stacks.
-  - Configure an application stack.
-- Run an application testing framework.
-  - On failure, notify OnCall automation administration to assist in troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
-  - On test success, continue.
-- Promote CVs and CCVs to quality assurance (QA).
-- Destroy RHEL development test systems.
+1. Promote content views (CV) and composite content views (CCV) to development.
+1. Deploy RHEL development test systems from Satellite host groups. RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite. 
+1. Update or create Azure network security groups based on application communication paths.
+1. Update or create Azure application security groups to provide extra layered security for multi-tier application stacks.
+1. Update RHEL development systems, and deploy and configure desired applications from Satellite development CV or CCV.
+   - Deploy to a single RHEL instance for a simple application stack.
+   - Deploy to several RHEL instances for multi-tier application stacks.
+   - Configure an application stack.
+1. Run an application testing framework.
+   - If the test fails, notify OnCall automation administration to assist in troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
+   - If the test succeeds, continue the steps.
+1. Promote CVs and CCVs to quality assurance (QA).
+1. Destroy RHEL development test systems.
 
 Subsequent stages in the lifecycle pipeline are slightly different from the development lifecycle stage. Only the development stage uses the initial content publishing and initial CV and CCV promotion to development. The following example describes an automation workflow for non-development lifecycle pipelines, for example QA, pre-production, and  production pipelines.
 
-- Deploy RHEL QA test systems from Satellite host groups.
-  - RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite.
+1. Deploy RHEL QA test systems from Satellite host groups. RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite.
        
-- Update or create Azure network security groups based on application communication paths.
-  - For multi-tier application stacks, update or create Azure application security groups for extra layered security. 
-- Update RHEL QA systems, and deploy and configure desired applications from Satellite QA CV or CCV.
-  - Deploy to a single RHEL instance for a simple application stack.
-  - Deploy to several RHEL instances for multi-tier application stacks. 
-  - Configure an application stack.
-  - Run an application testing framework.
-    - On failure, notify OnCall automation administration to assist in troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
-    - On test success, continue.
-  - Promote CVs and CCVs to production.
-  - Destroy RHEL QA test systems.
+1. Update or create Azure network security groups based on application communication paths.
+1. Update or create Azure application security groups to provide extra layered security for multi-tier application stacks. 
+1. Update RHEL QA systems, and deploy and configure desired applications from CV or CCV in Satellite QA.
+   - Deploy to a single RHEL instance for a simple application stack.
+   - Deploy to several RHEL instances for multi-tier application stacks. 
+   - Configure an application stack.
+1. Run an application testing framework.
+   - If the test fails, notify OnCall automation administration to assist in troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
+   - If the test succeeds, continue the steps.
+1. Promote CVs and CCVs to production.
+1. Destroy RHEL QA test systems.
 
 ## Other design considerations for Azure-native tooling           
 
@@ -224,19 +222,19 @@ To automate frequent, time-consuming, and error-prone management tasks, you can 
 
 Process automation supports the integration of Azure services and other partner systems, such as Red Hat, that you need to deploy, configure, and manage your end-to-end processes. You can also use this feature to author graphical PowerShell and Python [runbooks](/azure/automation/automation-runbook-types).  
 
-You can use runbooks for a wide range of automation tasks, like managing resources, starting and stopping VMs, and handling maintenance tasks both within Azure and outside Azure. To review the authentication scenarios,  [Azure Automation account authentication overview](/azure/automation/automation-security-overview). For more information, see [Runbook execution in Azure Automation](/azure/automation/automation-runbook-execution). 
+You can use runbooks for a wide range of automation tasks, like managing resources, starting and stopping VMs, and handling maintenance tasks both within Azure and outside Azure. For more information, see [Azure Automation account authentication overview](/azure/automation/automation-security-overview) and [Runbooks in Azure Automation](/azure/automation/automation-runbook-execution). 
 
 The following table describes the supported runbook types. 
 
 | Runbook type | Description |
 |---|---|
-| [PowerShell](/azure/automation/automation-runbook-types#powershell-runbooks) | A textual runbook that's based on Windows PowerShell scripting. The currently supported versions are: PowerShell 7.2 (GA) and PowerShell 5.1 (GA). PowerShell 7.1 is no longer supported by parent product PowerShell, so we recommend that you create runbooks in the long-term supported version PowerShell 7.2. |
+| [PowerShell](/azure/automation/automation-runbook-types#powershell-runbooks) | A textual runbook that's based on Windows PowerShell scripting. The versions that are supported are PowerShell 7.2 (GA) and PowerShell 5.1 (GA). The PowerShell parent product no longer supports PowerShell 7.1. We recommend that you create runbooks in the long-term supported version PowerShell 7.2. |
 [PowerShell Workflow](/azure/automation/automation-runbook-types#powershell-workflow-runbooks) | A textual runbook that's based on Windows PowerShell Workflow scripting. |
-[Python](/azure/automation/automation-runbook-types#python-runbooks) | A textual runbook that's based on Python scripting. The currently supported versions are: Python 3.8 (GA) and Python 3.10 (preview). Python 2.7 is no longer supported by parent product Python, so we recommend that you create runbooks in long-term supported versions. |
+[Python](/azure/automation/automation-runbook-types#python-runbooks) | A textual runbook that's based on Python scripting. The versions that are supported are Python 3.8 (GA) and Python 3.10 (preview). The Python parent product no longer supports Python 2.7. We recommend that you create runbooks in long-term supported versions. |
 [Graphical](/azure/automation/automation-runbook-types#graphical-runbooks) | A graphical runbook that's based on Windows PowerShell and created and edited completely in the graphical editor in the Azure portal. |
 [Graphical PowerShell Workflow](/azure/automation/automation-runbook-types#graphical-runbooks) | A graphical runbook that's based on Windows PowerShell Workflow and created and edited completely in the graphical editor in the Azure portal. |
 
-Use [webhooks](/azure/automation/automation-webhooks) to fulfill requests and ensure continuous delivery and operations by triggering automation via Azure Logic Apps, Azure Functions, IT service management products or services, DevOps, or monitoring systems.
+Use [webhooks](/azure/automation/automation-webhooks) to fulfill requests and to ensure continuous delivery and operations by triggering automation via Azure Logic Apps, Azure Functions, IT service management products or services, DevOps, or monitoring systems.
 
 Azure Arc represents a significant advancement in cloud computing and offers a unified management platform that extends Azure capabilities to on-premises, multi-cloud, and edge environments. Azure Arc integrates with the Azure Automation service via the VM extension framework to deploy the hybrid runbook worker role and simplify onboarding to the update management, change tracking, and inventory features.
 
@@ -246,7 +244,7 @@ For more information, see [Connect an existing Linux server to Azure Arc](/azure
 
 ### ARM templates
 
-IaC via ARM templates provides a consistent declarative method to deploy and manage Azure resources. Use this feature to define the required infrastructure for your applications in a JSON format. ARM templates are idempotent, meaning you can deploy the same template many times and get the same resource types in the same state. 
+IaC via ARM templates provides a consistent declarative method to deploy and manage Azure resources. Use ARM templates to define the required infrastructure for your applications in a JSON format. ARM templates are idempotent, which means that you can deploy the same template many times and get the same resource types in the same state. 
 
 For more information, see [ARM template documentation](/azure/azure-resource-manager/templates/).
 
@@ -284,9 +282,9 @@ For more information, see [ARM template documentation](/azure/azure-resource-man
   ] 
 }  
 ```
-You can use Bicep domain-specific language to reduce the complexity of the JSON syntax and minimize the learning curve for those new to Azure. Bicep is a transparent abstraction compared to an ARM template that uses JSON, and Bicep preserves the JSON template capabilities. During deployment, the Bicep command-line interface converts a Bicep file into an ARM template that uses JSON. 
+You can use Bicep domain-specific language to reduce the complexity of the JSON syntax and minimize the learning curve for people that are new to Azure. Bicep is a transparent abstraction compared to an ARM template that uses JSON, and Bicep preserves the JSON template capabilities. During deployment, the Bicep command-line interface converts a Bicep file into an ARM template that uses JSON. 
 
-The following examples show the difference between a Bicep file and the equivalent JSON template. Both examples deploy a storage account. 
+The examples in this section show the difference between a Bicep file and the equivalent JSON template. Both examples deploy a storage account. 
 
 #### Bicep example
 
@@ -314,7 +312,7 @@ Azure DevOps is a comprehensive set of development tools that provide project ma
 
 ### Azure Boards
 
-Agile software development for cloud software development and project management. For more information, see [Azure Boards documentation](/azure/devops/boards/) and [Configure and customize Azure Boards](/azure/devops/boards/configure-customize).
+Azure Boards supports Agile methodologies for cloud software development and project management. For more information, see [Azure Boards documentation](/azure/devops/boards/) and [Configure and customize Azure Boards](/azure/devops/boards/configure-customize).
 
 To make the most of Azure Boards, understand how your teams use their tools and functions, for example Scrum, Kanban, and Scrumban, and their dependencies on configurations and customizations.
 
@@ -331,7 +329,7 @@ The following table summarizes the primary items that you should consider when y
 
 ### Azure Pipelines
 
-Azure Pipelines provides a quick, easy, and safe way to automate building your projects with consistent and quality code that's readily available. 
+Azure Pipelines provides a quick, easy, and safe way to automate your project builds with consistent and quality code that's readily available. 
 
 Azure Pipelines:
 
@@ -344,7 +342,7 @@ Azure Pipelines:
 
 For more information, see [Azure Pipelines documentation](/azure/devops/pipelines/).
 
-Depending on your organizational needs, there are four core architectures for Azure Pipelines. 
+Depending on your organizational needs, you can choose one of the four core architectures for Azure Pipelines:
 
 - [Azure Pipelines baseline architecture](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture)
 - [Azure Pipelines architecture for the Web Apps feature of Azure App Service](/azure/devops/pipelines/architectures/devops-pipelines-azure-web-apps-architecture)
@@ -353,39 +351,37 @@ Depending on your organizational needs, there are four core architectures for Az
 
 ### Azure Repos
 
-Azure Repos provides two types of version control: 
-- [Git version control](/azure/devops/repos/get-started/what-is-repos#git)
-- [Centralized version control](/azure/devops/repos/get-started/what-is-repos#tfvc)
+Azure Repos provides two types of version control, [Git version control](/azure/devops/repos/get-started/what-is-repos#git) and [centralized version control](/azure/devops/repos/get-started/what-is-repos#tfvc).
 
-Connect your favorite development environment to Azure Repos to access your code. Share your code via: 
-- The [command line](/azure/devops/repos/git/share-your-code-in-git-cmdline)
-- [Visual Studio Code](/azure/devops/repos/git/share-your-code-in-git-cmdline)
-- [Xcode](/azure/devops/repos/git/share-your-code-in-git-xcode)
-- [Eclipse](/previous-versions/azure/devops/all/java/download-eclipse-plug-in)
-- [IntelliJ](/previous-versions/azure/devops/all/java/download-intellij-plug-in)
+Connect your development environment to Azure Repos to access your code. Share your code via: 
+- The [command line](/azure/devops/repos/git/share-your-code-in-git-cmdline).
+- [Visual Studio Code](/azure/devops/repos/git/share-your-code-in-git-cmdline).
+- [Xcode](/azure/devops/repos/git/share-your-code-in-git-xcode).
+- [Eclipse](/previous-versions/azure/devops/all/java/download-eclipse-plug-in).
+- [IntelliJ](/previous-versions/azure/devops/all/java/download-intellij-plug-in).
 
-For more information, see [Azure Repos Git documentation](/azure/devops/repos/git/) and [Team Foundation Version Control documentation](/azure/devops/repos/tfvc/)
+For more information, see [Azure Repos Git documentation](/azure/devops/repos/git/) and [Team Foundation Version Control documentation](/azure/devops/repos/tfvc/).
 
-### Release pipelines and Azure Artifacts sources 
+### Use release pipelines and Azure Artifacts sources 
 
-Developers can use Azure Artifacts to publish and consume various types of packages from feeds and public registries, like PyPI, Maven Central, and NuGet.org. You can combine Azure Artifacts with Azure Pipelines to publish build and pipeline artifacts, deploy packages, or integrate files across various stages of your pipeline to build, test, or deploy your application. 
+Developers can use Azure Artifacts to publish and consume various types of packages from feeds and public registries, like PyPI, Maven Central, and NuGet.org. You can use Azure Artifacts with Azure Pipelines to publish build and pipeline artifacts, deploy packages, or integrate files across various stages of your pipeline to build, test, or deploy your application. 
 
 For more information, see: 
 
-- [Azure Artifacts in Azure Pipelines](/azure/devops/pipelines/artifacts/artifacts-overview)
-- [Release pipelines and Azure Artifact sources](/azure/devops/pipelines/release/artifacts)
-- [Get started with permissions and access](/azure/devops/organizations/security/about-permissions)
+- [Azure Artifacts in Azure Pipelines](/azure/devops/pipelines/artifacts/artifacts-overview).
+- [Release pipelines and Azure Artifact sources](/azure/devops/pipelines/release/artifacts).
+- [Get started with permissions and access](/azure/devops/organizations/security/about-permissions).
 
 ### Integrate Azure Policy with Azure DevOps
 
 Azure Policy directly applies to resources within Azure environments, but its principles and governance can indirectly influence Azure DevOps practices. For example, Azure Policy can affect: 
 
-- **Compliance in CI/CD pipelines**: You can integrate compliance checks into your Azure pipelines. For example, ensuring that any infrastructure that you deploy through Azure DevOps complies with the policies defined in Azure Policy.
+- **Compliance in CI/CD pipelines**: You can integrate compliance checks into your Azure pipelines. For example, ensure that any infrastructure that you deploy through Azure DevOps complies with the policies that you define in Azure Policy.
 
 - **Environment consistency**: Use Azure Policy to enforce specific configurations or resource types to ensure that the environments that you deploy to through Azure DevOps are consistent and compliant. 
-- **Security and governance**: Policies can enforce security standards and governance practices on the resources that are managed by Azure DevOps Projects. This practice ensures that the development lifecycle includes compliance with organizational and regulatory standards. 
+- **Security and governance**: Policies can enforce security standards and governance practices on the resources that Azure DevOps Projects manages. This regulation ensures that the development lifecycle includes compliance with organizational and regulatory standards. 
 
-To effectively integrate Azure Policy with Azure DevOps, you can use Azure Policy compliance data and audit capabilities to inform your DevOps practices. Make adjustments to your pipelines or IaC definitions to align with your organizational policies that are enforced through Azure Policy. 
+To effectively integrate Azure Policy with Azure DevOps, you can use Azure Policy compliance data and audit capabilities to inform your DevOps practices. Make adjustments to your pipelines or IaC definitions to align with organizational policies that you enforce through Azure Policy. 
 
 This integration ensures that resources that you deploy and manage through Azure DevOps are always compliant with your company's governance standards. Use this approach to enhance security, consistency, and cost management across Azure environments. 
 
