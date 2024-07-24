@@ -69,11 +69,11 @@ The IAM components for your Red Hat deployment in Azure use the [subscription sc
 
 The following diagram shows a Red Hat IdM zonal deployment architecture.
 
-:::image type="content" source="images/rhel-lz-idm-zoneHA.png" alt-text="Diagram that shows the Red Hat IdM zonal deployment architecture." border="false":::
+:::image type="content" source="images/rhel-identity-access-management/rhel-landing-zone-idm-zone-high-availability.png" alt-text="Diagram that shows the Red Hat IdM zonal deployment architecture." border="false":::
 
 The following diagram shows a high-availability deployment of Red Hat IdM across regions and availability zones.
 
-:::image type="content" source="images/rhel-lz-idm-deploy-detail.png" alt-text="Diagram that shows the Red Hat IdM multi-region deployment architecture." border="false":::
+:::image type="content" source="images/rhel-identity-access-management/rhel-landing-zone-idm-deploy-detail.png" alt-text="Diagram that shows the Red Hat IdM multi-region deployment architecture." border="false":::
 
 This architecture has IdM servers within each region that replicate to one another and to a hidden replica. There are at least two replication links across regions. The hidden replicas serve as the backup points because you can take them offline as full backups without affecting availability.
 

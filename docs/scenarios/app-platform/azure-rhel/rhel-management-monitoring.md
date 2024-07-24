@@ -29,7 +29,7 @@ Content in Satellite flows from external content sources to Satellite Server. Ca
 
 1. **Assign a host system**. When you assign a host system to a Capsule Server or directly to your Satellite Server, you ensure that the host receives the content that they provide. You can have physical or virtual hosts.
 
-:::image type="content" source="images/system-architecture-satellite.png " alt-text="Diagram that shows the Red Hat Satellite architecture." border="false":::
+:::image type="content" source="images/rhel-management-monitoring/system-architecture-satellite.png " alt-text="Diagram that shows the Red Hat Satellite architecture." border="false":::
 
 ## Deployment strategy
 

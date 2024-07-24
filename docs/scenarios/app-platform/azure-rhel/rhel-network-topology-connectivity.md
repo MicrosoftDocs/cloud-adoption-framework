@@ -16,7 +16,7 @@ This article describes Red Hat Enterprise Linux (RHEL) network considerations an
 
 The following RHEL architecture is a starting point that you can further adapt to meet your specific business and technical requirements. You can deploy the various RHEL platform components and roles on virtual machines (VMs) with specific sizing and redundancy as needed. The simplified network layout in these examples demonstrates architectural principles and doesn't describe an entire enterprise network.
 
-:::image type="content" source="images/rhel-landing-zone-architecture.png" alt-text="Diagram that shows a RHEL reference architecture." border="false" lightbox="images/rhel-landing-zone-architecture.png":::
+:::image type="content" source="images/rhel-network-topology-connectivity/rhel-landing-zone-architecture.png" alt-text="Diagram that shows a RHEL reference architecture." border="false" lightbox="images/rhel-network-topology-connectivity/rhel-landing-zone-architecture.png":::
 
 *Download a [Visio file](azure-landing-zone-rhel-full-view.vsdx) of this architecture.*
 
@@ -46,7 +46,7 @@ Consider the following recommendations for the landing zone networking design:
 
 The following diagram shows a hybrid Azure region RHEL landing zone architecture.
 
-:::image type="content" source="images/hybrid-regional-rhel-platform-landing-zone-network.png" alt-text="Diagram that shows a hybrid Azure region RHEL landing zone architecture." border="false" lightbox="images/hybrid-regional-rhel-platform-landing-zone-network.png":::
+:::image type="content" source="images/rhel-network-topology-connectivity/hybrid-regional-rhel-platform-landing-zone-network.png" alt-text="Diagram that shows a hybrid Azure region RHEL landing zone architecture." border="false" lightbox="images/rhel-network-topology-connectivity/hybrid-regional-rhel-platform-landing-zone-network.png":::
 
 |     Element          |             Description                    |
 |:-------------:|:--------------------------------|
@@ -65,7 +65,7 @@ The following diagram shows a hybrid Azure region RHEL landing zone architecture
 
 The following diagram shows Management and Workload subnets in a zone-resilient configuration.
 
-:::image type="content" source="images/simplified-rhel-networking.png" alt-text="Diagram that shows Management and Workload subnets in a zone-resilient configuration." border="false":::
+:::image type="content" source="images/rhel-network-topology-connectivity/simplified-rhel-networking.png" alt-text="Diagram that shows Management and Workload subnets in a zone-resilient configuration." border="false":::
 
 - When you plan for IP address scopes and virtual network size for the RHEL landing zone, consider dedicated subnets for application, database, and storage resources.
   
@@ -73,7 +73,7 @@ The following diagram shows Management and Workload subnets in a zone-resilient 
 
 #### Network security group considerations
 
-:::image type="content" source="images/nsg-segmentation.png" alt-text="Diagram that shows an NSG configuration for traffic security." border="false" lightbox="images/nsg-segmentation.png":::
+:::image type="content" source="images/rhel-network-topology-connectivity/nsg-segmentation.png" alt-text="Diagram that shows an NSG configuration for traffic security." border="false" lightbox="images/rhel-network-topology-connectivity/nsg-segmentation.png":::
 
 - Use network security groups (NSGs) to help protect traffic across subnets and east and west traffic across the platform (traffic between landing zones). [Azure Policy](/azure/networking/policy-reference) can make this configuration default for all subnets.
 
