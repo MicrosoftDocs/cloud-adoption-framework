@@ -22,7 +22,6 @@ This evaluation determines whether the software meets each control or whether yo
 Red Hat works with many standards bodies to ensure that the configuration points, measurements, and remediations are known, verified, and referenceable for Azure software. The standards bodies can create benchmarks or checklists of the evaluations that describe the SRG for their industry. Examples of these benchmarks include:
 
 - Payment Card Industry Data Security Standard (PCI DSS) for the payment card industry.
-
 - Health Insurance Portability and Accountability Act (HIPPA) for the healthcare industry.
 - Defense Information Systems Agency (DISA) and Security Technical Implementation Guide (STIG) for government and related industries.
 
@@ -43,14 +42,12 @@ When you manage governance for RHEL instances in an Azure landing zone, consider
 Compliance standards contain factorable lists of security requirements that you can use to integrate content and image management with automation tooling so that you can:
 
 - Define operating system, application, and security configuration content together in a composable pipeline.
-
 - Continually measure, maintain, and deliver images that meet requirements from the deployment time.
 - Continually measure, maintain, and remediate persistent instances.
 
 Content lifecycle and image build pipelines are ideal points of enforcement. Consider the following pipelines:
 
 - **Analysis and reporting**: Cloud platforms provide comprehensive services that you can use to aggregate metadata and log data from deployed systems. You can also deliver and store the captured data for regulatory reporting requirements and audits.
-
 - **Automation first**: Modern automation systems can simplify regulatory compliance and reporting and increase accuracy and visibility. Implement compliance management via infrastructure as code automation as part of your deployment process. Consider combining scanning and maintenance activity workflows to ensure timely reporting and a *fail-fast* methodology, which keeps your compliance backlog to a minimum. To ensure consistency, unify implementation automation code and remediation code .
 - **Compliance maintenance**: Compliance standards are updated regularly and have well-known delivery mechanisms and content types. Ensure that you use open standards when you implement compliance management. Design your compliance content streaming and review into your lifecycle for application and image development.
 
@@ -65,7 +62,6 @@ Red Hat provides validated content to meet governance needs. When you determine 
 For example, the SSG for RHEL 9 contains:
 
 - ANSSI-BP-028 - Enhanced, High, Intermediate, Minimal
-
 - CCN RHEL 9 - Advanced, Intermediate, Basic
 - Center for Internet Security (CIS) RHEL 9 Benchmark for Level 2 - Server
 - CIS RHEL 9 Benchmark for Level 1 - Server
@@ -84,8 +80,8 @@ For example, the SSG for RHEL 9 contains:
 The Red Hat Product Security Incident Response Team provides a published stream of known Common Vulnerabilities and Exposures (CVE) information for Red Hat products in OVAL format. Red Hat recommends that you use these resources as part of your compliance implementation in Azure.
 
 Red Hat Satellite and RHEL image builder includes integrated SCAP features that you can use to:
-- Define an image that's hardened to a selected standard.
 
+- Define an image that's hardened to a selected standard.
 - Define a SCAP policy profile and tailor it to each workload.
 - Scan scheduling for managed systems.
 - Test content pipelines, and deliver versioned content to meet standards.
@@ -115,3 +111,5 @@ You can use Red Hat Satellite with Ansible Automation Platform to develop pipeli
 To get a comprehensive compliance analysis, use Red Hat Satellite-certified Ansible collections to automate data collection for integration into Azure monitoring.
 
 ## Next steps
+
+- [Platform automation considerations for Red Hat Enterprise Linux on Azure](./platform-automation-devops.md)

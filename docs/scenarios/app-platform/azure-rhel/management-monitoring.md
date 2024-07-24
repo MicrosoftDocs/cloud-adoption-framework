@@ -165,7 +165,6 @@ After you enable boot diagnostics, every time you stop and start the VM, informa
 A Linux VM has a dedicated host in Azure that it interacts with. Metrics are automatically collected for the host, and you can view the metrics in the Azure portal.
 
 1. In the Azure portal, select **Resource groups**, choose **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-
 1. To see how the host VM performs, select **Metrics** in the **Monitoring** section, and then choose any of the *[Host]* metrics under **Available metrics**.
 
    :::image type="content" source="images/rhel-management-monitoring/host-metrics.png" alt-text="Screenshot that shows the Metrics page in the Azure portal." lightbox="images/rhel-management-monitoring/host-metrics.png":::
@@ -175,7 +174,6 @@ A Linux VM has a dedicated host in Azure that it interacts with. Metrics are aut
 To enable advanced monitoring in Azure Monitor for VMs:
 
 1. In the Azure portal, select **Resource groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-
 1. In the **Monitoring** section, select **Insights**.
 1. Select **Enable**.
 
@@ -198,7 +196,6 @@ To enable advanced monitoring in Azure Monitor for VMs:
 Azure Monitor for VMs includes a set of performance charts that target several key performance indicators to help you determine how well a VM performs. To access the charts from your VM, do the following steps.
 
 1. In the Azure portal, select **Resource groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-
 1. In the **Monitoring** section, select **Insights**.
 1. Select the **Performance** tab. This page includes performance usage charts and also provides a table for each discovered logical disk, its capacity, usage, and the total average of each measurement.
   
@@ -209,7 +206,6 @@ You can create alerts based on specific performance metrics. Use alerts to get n
 The following example creates an alert for average CPU usage.
 
 1. In the Azure portal, select **Resource groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-
 1. Select **Alert rules** on the VM pane. Then select **Add metric alert** at the top of the Alerts pane.
 1. Provide a **Name** for your alert, such as *myAlertRule*.
 1. To trigger an alert when the CPU percentage exceeds 1.0 for 5 minutes, leave all the other defaults selected.
@@ -218,5 +214,5 @@ The following example creates an alert for average CPU usage.
 
 ## Next step
 
-[Creating a customer dashboard in Azure](/azure/azure-portal/azure-portal-dashboards)
+- [Governance and compliance for Red Hat Enterprise Linux on Azure](./governance-compliance.md)
 

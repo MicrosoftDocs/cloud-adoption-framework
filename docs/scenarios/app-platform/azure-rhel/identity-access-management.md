@@ -19,7 +19,6 @@ In general, a RHEL deployment in a hybrid-cloud environment should:
 
 - Use a centralized Linux identity authority that integrates with the operating system security subsystem where possible to increase operational efficiency and access control visibility. Use a centralized Linux identity authority so that you can:
   - Manage host-specific authorization for the Linux operating system.
-
   - Achieve consistency across hybrid deployments.
   - Delegate authentication to external sources.
   - Streamline the access control review process.
@@ -121,4 +120,4 @@ Use the [Planning Identity Management guide](https://docs.redhat.com/documentati
 
 ## Next steps
 
-Learn about network topology and connectivity considerations for RHEL.
+-[Business continuity and disaster recovery for Red Hat Enterprise Linux on Azure](./business-continuity-disaster-recover.md)

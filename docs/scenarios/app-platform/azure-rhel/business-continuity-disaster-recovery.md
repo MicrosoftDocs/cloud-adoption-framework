@@ -111,3 +111,7 @@ You can use Compute Gallery to store golden images for deployments. Use these im
 
 To reduce RTOs and increase resilience, you can use active or standby remote [recovery cluster](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes. You must configure disaster recovery cluster items manually. For example, you must apply configurations to set up resources and copy data.
 
+## Next steps
+
+- [Network topology and connectivity considerations for Red Hat Enterprise Linux](./network-topology-connectivity.md)
+

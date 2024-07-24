@@ -33,7 +33,6 @@ Red Hat Ansible Automation Platform (AAP) helps to standardize technical workflo
 Benefits of RHEL as a Platform automation strategy include:
 
 - New systems have fully automated provisioning at scale, which improves mass migration speed. 
-
 - Increased uniformity of tested systems' configuration and application installations across physical systems and virtual systems. 
 - Continuous updates because patch management is immediately available.
 - A standardized and simplified platform to deliver new applications and workloads. Staff has extra time to deliver increased innovation. 
@@ -43,7 +42,6 @@ You can implement:
 - A self-managed AAP instance either via on-premises infrastructure, cloud infrastructure, or both.
   - Via a RHEL deployment
   - Via a Red Hat OpenShift Container Platform deployment
-
 - A self-managed AAP instance in a public cloud.
 - A managed AAP instance in a public cloud.
 
@@ -52,7 +50,6 @@ You can implement:
 Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/management/ansible/azure) in self-managed mode in an on-premises and/or cloud infrastructure to get the following benefits: 
 
 - **Architecture and scale**: Determine your ideal architecture to support the automation platform, whether based on RHEL infrastructure or OpenShift operator deployment. Based on your fleet size and requirements, choose the number and the instance sizing of controllers, execution nodes, and private automation hub instances. For more information about architecture, design, configuration, and scale, see [Red Hat AAP planning guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
-
 - **Azure configuration**:  Optimize the automation architecture for your organization's Azure design and configuration.
 - **Automation mesh support**: Use this AAP feature to distribute automation workloads across hybrid cloud peer-to-peer connections by using existing networks. Place hop nodes in a location based on your security design criteria and network topology.
 - **Automation hub architecture**: Optimize an automation hub architecture for scale and placement of private automation hub instances. Optimized configurations enhance secure automation content delivery and access to execution environment sources in close proximity to automation execution resources. Provide access to and manage Ansible content. Choose which Ansible content collections and versions are available to automation consumers.
@@ -62,7 +59,6 @@ Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/m
 [Red Hat AAP on Microsoft Azure](https://www.redhat.com/technologies/management/ansible/azure) is available via a managed application or self-managed application. AAP provides the following benefits:
 
 - **Ease-of-use leads to rapid return on investment (ROI)**: You can deploy AAP on Azure directly from Azure Marketplace. This managed solution is active immediately after deployment, and you can start automating the management of your Azure resources in minutes. Red Hat manages the infrastructure, so you're free to think only about the systems that are critical to your enterprise.
-
 - **Streamlined integration**: AAP on Azure is integrated with Azure services. The Ansible collection for Azure was developed and security tested by Microsoft and Red Hat for minimal setup and maximum support. Use AAP on Azure as part of your hybrid cloud automation strategy to unify management and automation across hybrid cloud, Internet of Things, and edge deployments.
 - **Existing committed Azure spend**: You can use existing committed spending with Microsoft to purchase Red Hat AAP on Azure. Use committed spending so that teams across your entire organization can deploy, configure, and automate seamlessly. Integrated billing means you get one bill and full visibility into the cost. 
 - **Automation beyond the cloud**: With AAP on Azure, you can deploy in your Microsoft Azure cloud and then extend across your infrastructure. Deploy, run, and scale applications across Azure and hybrid cloud environments.
@@ -78,8 +74,7 @@ For information about this implementation, see [Azure managed applications overv
 
 AAP on Microsoft Azure in managed mode uses the following resource groups:
 
-- *A new or existing resource group in your tenant*. This resource group includes a single resource that refers to the AAP on Microsoft Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades. But the resource group is outside of Red Hat's management.
-	
+- *A new or existing resource group in your tenant*. This resource group includes a single resource that refers to the AAP on Microsoft Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades. But the resource group is outside of Red Hat's management.	
 - *A multitenant managed resource group (MRG)* that contains most of the required infrastructure to operate AAP on Microsoft Azure. The Red Hat tenant and your tenant shares this multitenant resource group. Red Hat has full administrative control. You have read-only access to the resource group. 
 - *An AKS node pool resource group (NPRG)*. Microsoft requires an NPRG for AKS deployments. An NPRG contains resources that AKS uses to function. This resource group is created on deployment, and it's outside of Red Hat's management. For more information, see [Microsoft AKS documentation](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
 
@@ -96,7 +91,6 @@ AAP on Microsoft Azure in self-managed mode provides many of the same benefits o
 For AAP on Microsoft Azure in self-managed mode, also consider: 
 
 - Event-Driven Ansible is included in the self-managed offering on Azure. Event-driven automation helps you reduce manual tasks and deliver an efficient IT environment that focuses on innovation. Event-Driven Ansible processes events, determines the appropriate responses, and then runs automated actions to remediate the event.
-
 - Offers - Available in 100 active managed node increments, and this is available in both public offers, or private offers. 
 - VM resources that underpin AAP on Microsoft Azure in self-managed mode can consist entirely of Azure Marketplace images or a mix of Azure Marketplace images and customer-managed images. 
 
@@ -140,7 +134,6 @@ For more information, see:
 - [Azure landing zone design guidance for platform automation considerations](/azure/cloud-adoption-framework/ready/considerations/automation).
 
 - [Development lifecycle](/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle). Explore key design considerations and recommendations about using automation to create a landing zone. This guidance discusses the repository, branch, automated builds, deployment, and rollback strategy.
-
 - [IaC](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code). Explore the benefits of implementing Azure landing zones via IaC. Learn about considerations related to code structure, tools, and technology. 
 - [Environments](/azure/cloud-adoption-framework/ready/considerations/environments). Explore the purpose of using multiple environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
 - [Test-driven development](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development). Learn how to use unit testing to improve the quality of new features and improvements in the Azure landing zone codebase. 
@@ -148,7 +141,6 @@ For more information, see:
 If you have the requisite source code management tooling in place and the source code management processes established from the previous sections, you can implement automation. Develop Ansible automation code with accompanying IaC or configuration as code to deploy core infrastructure and support the RHEL Platform for Azure landing zones model. For greenfield deployments, you can automate the following tasks for a full environment implementation. Brownfield deployments only need the tasks that your use case requires.
 
 - Create Azure resource groups.
-
 - Create virtual networks.
 - Create subnets. 
 - Create network security groups.
@@ -198,7 +190,6 @@ Subsequent stages in the lifecycle pipeline are slightly different from the deve
 
 - Deploy RHEL QA test systems from Satellite host groups.
   - RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite.
-       
 - Update or create Azure network security groups based on application communication paths.
   - For multi-tier application stacks, update or create Azure application security groups for extra layered security. 
 - Update RHEL QA systems, and deploy and configure desired applications from Satellite QA CV or CCV.

@@ -1,5 +1,5 @@
 ---
-title: Azure Red Hat Enterprise Linux landing zone
+title: Azure Red Hat Enterprise Linux landing zone accelerator
 description: Learn how to use the Red Hat Enterprise Linux (RHEL) landing zone accelerator to create a consistent, repeatable, and secure environment deployment.
 author: terrymandin
 ms.author: temandin
@@ -32,14 +32,14 @@ The landing zone accelerator method for Azure RHEL provides:
 
 There are many considerations to keep in mind when you create Azure landing zones. Think about considerations for:
 
-- [Resource organization](./rhel-management-group-sub-organization.md)
-- [Identity and access management](./rhel-identity-access-management.md)
-- [Network topology and connectivity](./rhel-network-topology-connectivity.md)
-- [Business continuity and disaster recovery](./rhel-business-continuity-disaster-recovery.md)
-- [Security](./rhel-security.md)
-- [Governance and compliance](./rhel-governance-compliance.md)
-- [Management and monitoring](./rhel-management-monitoring.md)
-- [Deployment options](./rhel-management-monitoring.md)
+- [Identity and access management](./identity-access-management.md)
+- [Business continuity and disaster recovery](./business-continuity-disaster-recovery.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Resource organization](./resource-organization.md)
+- [Security](./security.md)
+- [Management and monitoring](./management-monitoring.md)
+- [Governance and compliance](./governance-compliance.md)
+- [Deployment options](./platform-automation-devops.md)
 
 ## Reference architecture
 
@@ -49,4 +49,4 @@ The following diagram shows the landing zone accelerator architecture.
 
 ## Next step
 
-[Identity and access management for your Azure RHEL landing zone](./rhel-identity-access-management.md)
+[Identity and access management for your Azure RHEL landing zone](./identity-access-management.md)

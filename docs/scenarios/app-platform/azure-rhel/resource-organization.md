@@ -39,7 +39,4 @@ Apply the recommended subscription structure to maximize manageability, governan
 
 ## Next steps
 
-- Define subscription boundaries and resource allocation based on organizational requirements and workload characteristics.
-
-- Establish IAM policies, access controls, and Azure Policy enforcement mechanisms at the subscription level.
-- Implement budget alerts and cost tracking mechanisms to monitor spending and optimize resource usage.
+- [Security for Red Hat Enterprise Linux on Azure](./security.md)

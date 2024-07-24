@@ -18,7 +18,7 @@ The following RHEL architecture is a starting point that you can further adapt t
 
 :::image type="content" source="images/rhel-network-topology-connectivity/rhel-landing-zone-architecture.png" alt-text="Diagram that shows a RHEL reference architecture." border="false" lightbox="images/rhel-network-topology-connectivity/rhel-landing-zone-architecture.png":::
 
-*Download a [Visio file](azure-landing-zone-rhel-full-view.vsdx) of this architecture.*
+*Download a [Visio file](https://github.com/Microsoft/CloudAdoptionFramework/tree/main/scenarios/app-platform/azure-rhel/azure-landing-zone-rhel-full-view.vsdx) of this architecture.*
 
 |      Element         |                Description                 |
 |:-------------:|:--------------------------------|
@@ -91,13 +91,11 @@ The following diagram shows Management and Workload subnets in a zone-resilient 
 
 - **Enable internet and filtering and inspecting traffic**. Outbound options to enable internet and filtering and inspecting traffic include:
   - Outbound access to Red Hat Cloud via the hub network.
-  
   - On-premises default route that uses on-premises internet access.
   - Virtual WAN or traditional virtual network hub that's secured with Azure Firewall or an NVA.
 
 - **Deliver content and applications**. Inbound options to deliver content and applications include:
   - Azure Application Gateway with L7, Transport Layer Security (TLS) termination, and Web Application Firewall.
-  
   - Dynamic Network Translation (DNAT) and a load balancer from on-premises.
   - Azure Virtual Network with Azure Firewall or an NVA, and Azure Route Server in various scenarios.
   - Virtual WAN hub with Azure Firewall, with L4 and DNAT.
@@ -105,9 +103,8 @@ The following diagram shows Management and Workload subnets in a zone-resilient 
 
 - **Configure domain name resolution for on-premises and Azure resources**. The RHEL environment often uses both on-premises and Azure resources, which requires effective name resolution of resources. Consider the following recommendations:
   - Azure provides a default internal name resolution within a virtual network. This scenario doesn't require any configuration. You can't modify the domain name resolution suffix or perform manual registration. For more information, see [Name resolution that Azure provides](/azure/virtual-machines/linux/azure-dns#name-resolution-that-azure-provides).
-
   - For name resolution across virtual networks, RHEL deployments often use Domain Name System (DNS) services from Redhat Identity Management Server (IdM) or [Azure DNS](/azure/dns/dns-overview). To provide rule-based forwarding, combine [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) and existing DNS infrastructure.
 
 ## Next step
 
-Learn about deployment, management, and patching considerations for RHEL systems.
+- [Resource organization for Red Hat Enterprise Linux on Azure](./resource-organization.md)

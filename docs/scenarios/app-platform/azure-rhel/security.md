@@ -102,3 +102,7 @@ Consider [Microsoft Sentinel](/azure/sentinel/overview) for SIEM/SOAR tooling fo
 ### Confidential Computing
 
 RedHat Enterprise Linux features a confidential image for [certain RHEL OS options](/azure/confidential-computing/confidential-vm-overview#os-support). Consider confidential computing [use cases](/azure/confidential-computing/use-cases-scenarios).
+
+## Next steps
+
+- [Management and monitoring for Red Hat Enterprise Linux on Azure](./management-monitoring.md)
