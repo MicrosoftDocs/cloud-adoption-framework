@@ -97,7 +97,7 @@ To get started with the data management and data management landing zones you ne
 
 - [Enterprise enrollment and Microsoft Entra tenants for cloud-scale analytics](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
 
-- [Resource organization for cloud-scale analytics](eslz-resource-organization.md)
+- [Identity and access management for cloud-scale analytics](eslz-identity-and-access-management.md)
 
 - [Network topology and connectivity for cloud-scale analytics landing zones](eslz-network-topology-and-connectivity.md)
 

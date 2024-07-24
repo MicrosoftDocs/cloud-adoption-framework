@@ -79,13 +79,11 @@ To apply a policy to a resource group:
 
 ::: zone-end
 
-Azure Policy is used throughout governance processes. It's also highly valuable within cloud management processes. Azure Policy can audit and remediate Azure resources and can also audit settings inside a machine. The validation is performed by the guest configuration extension and client. The extension, through the client, validates settings like:
+Azure Policy is used throughout governance processes. It's also highly valuable within cloud management processes. Azure Policy can audit and remediate Azure resources and can also audit and configure settings inside a machine. The validation is performed by the machine configuration extension and client. The extension, through the client, validates settings like:
 
 - Operating system configuration.
 - Application configuration or presence.
 - Environment settings.
-
-Azure Policy guest configuration currently only audits settings inside the machine. It doesn't apply configurations.
 
 An important part of this process is maintaining and updating Azure Policy assignments as your governance process requires. Using IaC can help you update and maintain your policy infrastructure. For more information, see [Use IaC to update Azure landing zones](../infrastructure-as-code-updates.md).
 
@@ -111,8 +109,7 @@ To apply a policy to a resource group:
 To learn more, see:
 
 - [Azure Policy](/azure/governance/policy/)
-- [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration)
+- [Azure Policy machine configuration](/azure/governance/machine-configuration/overview)
 - [Cloud Adoption Framework: Define corporate policy](../../govern/policy-compliance/policy-definition.md)
 
 ::: zone-end
-

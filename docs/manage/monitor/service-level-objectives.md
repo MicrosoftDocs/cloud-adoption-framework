@@ -59,7 +59,7 @@ By using SLOs to drive your engineering process, DevOps and IT can get an early 
 
 The objective of an SLO is to obtain clear signals that accurately measure quality from the customer's perspective. Each service team creates a small set of Service Level Objectives (SLOs) that define the allowable range for the most important measurable metrics of the service, as experienced by the service consumer. An SLO is a defined numeric goal for a metric emitted by a service. Metrics associated with this goal can be monitored to determine whether the service is healthy.
 
-For example, here is a simplified example of an SLO for an internal time-tracking web-based application - _Requests in the last 5 minutes are served in under 1000 milliseconds at the 99th percentile._
+For example, here is a simplified example of an SLO for an internal time-tracking web-based application - *Requests in the last 5 minutes are served in under 1000 milliseconds at the 99th percentile.*
 
 The metrics are aggregations of time series data called Service Level Indicators (SLIs). Where the SLIs are gathered matters a lot. In the above example, if the customer interacts with the service using an API, measuring system latency and time to process requests are accurate SLIs. However, if the customer interacts with the service using a web portal, then the total time to service the request should also include the JavaScript performance of the web page.
 
@@ -137,7 +137,7 @@ Typical high-level measures of a service or system are usually codified in servi
 
 ### Reliability
 
-Reliability, the classic SLO, implies the degree of the dependability, durability, and quality over time, of systems, services, resources, or components to failure and failovers, with management effort applied to address failure (such as building in more redundancy or adding a content delivery network) to increase operating time or availability. It could also mean the accuracy, fidelity, integrity, and trustworthiness of data used to measure SLOs. It can mean the classic _probability_ that a system will perform its intended function under specified conditions, such as temperature stress. Resilience also includes built-in design factors or features that provide adaptability such as scaling, cool down, load-balancing, recovery, unpredictable demand, degraded performance under severe stress, and design for continuity in larger disasters (usually a separate SLO).
+Reliability, the classic SLO, implies the degree of the dependability, durability, and quality over time, of systems, services, resources, or components to failure and failovers, with management effort applied to address failure (such as building in more redundancy or adding a content delivery network) to increase operating time or availability. It could also mean the accuracy, fidelity, integrity, and trustworthiness of data used to measure SLOs. It can mean the classic *probability* that a system will perform its intended function under specified conditions, such as temperature stress. Resilience also includes built-in design factors or features that provide adaptability such as scaling, cool down, load-balancing, recovery, unpredictable demand, degraded performance under severe stress, and design for continuity in larger disasters (usually a separate SLO).
 
 |Category|Description|Example|
 |-|-|-|
@@ -177,17 +177,17 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 - **Ensure access.** Ensure managers and other personas in the organization are granted access to the visualizations available in [Azure Monitor](/azure/azure-monitor/overview#visualizing-monitoring-data) or from other Azure services, especially Azure SaaS and PaaS, to avoid duplicating them.
 
-- **Ensure monitoring coverage or _total asset visibility_.** Ensure agents, emitted logs, tables, and queries for all assets that need to be managed and secured, and identify "blind spots" or gaps in coverage to ensure realism in SLOs.
+- **Ensure monitoring coverage or *total asset visibility*.** Ensure agents, emitted logs, tables, and queries for all assets that need to be managed and secured, and identify "blind spots" or gaps in coverage to ensure realism in SLOs.
 
 - **Get the correct data in front of the right consumers.** Ensure consumers of SLOs and SLIs can interpret the underlying data to build trust and guide decisions using the information gained from data.
 
-- **Make reasonable promises.** When setting SLOs as _targets_ especially when cost management is essential, ensure actual system performance is not overly performing nor under-delivering, or adjust the target to manage customer expectations.
+- **Make reasonable promises.** When setting SLOs as *targets* especially when cost management is essential, ensure actual system performance is not overly performing nor under-delivering, or adjust the target to manage customer expectations.
 
 - **Account for unforeseen external events.** Develop continuity plans and risk assessments to account for events not under your control, such as weather, power outages, or disasters.
 
 - **Account for Change.** Ensure SLOs account for alterations to service or changes to technical reliability, throughput, quality, and maintainability - such as reductions in support staff.
 
-- **Provide a balanced set of SLOs.** Ensure a range of SLOs that provide a balanced or _360-degree_ perspective on the service or system and a focus on reliability.
+- **Provide a balanced set of SLOs.** Ensure a range of SLOs that provide a balanced or *360-degree* perspective on the service or system and a focus on reliability.
 
 ## Next steps
 

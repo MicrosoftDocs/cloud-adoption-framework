@@ -23,7 +23,7 @@ From an ethical perspective, AI should:
 - Be accountable for its decisions.
 - Not discriminate or hinder different races, disabilities, or backgrounds.
 
-In 2017, Microsoft established an advisory committee for AI, ethics, and effects in engineering and research ([Aether](https://www.microsoft.com/ai/our-approach?activetab=pivot1%3aprimaryr5)). The core responsibility of the committee is to advise on issues, technologies, processes, and best practices for responsible AI. To learn more, see [Understanding the Microsoft governance model - Aether + Office of Responsible AI](/training/modules/microsoft-responsible-ai-practices/3-microsoft-governance-model).
+In 2017, Microsoft established an advisory committee for AI, ethics, and effects in engineering and research [Aether](https://www.microsoft.com/ai/principles-and-approach). The core responsibility of the committee is to advise on issues, technologies, processes, and best practices for responsible AI.
 
 ### Accountability
 
@@ -34,6 +34,16 @@ Organizations should consider establishing an internal review body that provides
 ### Inclusiveness
 
 Inclusiveness mandates that AI should consider all human races and experiences. Inclusive design practices can help developers understand and address potential barriers that could unintentionally exclude people. Where possible, organizations should use speech-to-text, text-to-speech, and visual recognition technology to empower people who have hearing, visual, and other impairments.
+
+### Fairness
+
+Fairness is a core ethical principle that all humans aim to understand and apply. This principle is even more important when AI systems are being developed. Key checks and balances need to make sure that the system's decisions don't discriminate against, or express a bias toward, a group or individual based on gender, race, sexual orientation, or religion.
+
+Microsoft provides an [AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA) that offers guidance and solutions for AI systems. These solutions are loosely categorized into five stages: envision, prototype, build, launch, and evolve. Each stage lists recommended due-diligence activities that help minimize the impact of unfairness in the system.
+
+Fairlearn integrates with Azure Machine Learning and supports data scientists and developers to assess and improve the fairness of their AI systems. It provides unfairness-mitigation algorithms and an interactive dashboard that visualizes the fairness of the model. An organization should use the toolkit and closely assess the fairness of the model while it's being built. This activity should be an integral part of the data science process.
+
+Learn how to [mitigate unfairness in machine learning models](/azure/machine-learning/concept-fairness-ml).
 
 ### Reliability and safety
 
@@ -60,16 +70,6 @@ Microsoft has developed [InterpretML](https://interpret.ml/), an open-source too
 [Fairlearn](https://fairlearn.org/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. It uses explainers to understand what mainly influences the model, and it uses domain experts to validate these influences.
 
 To learn more about explainability, explore [model interpretability in Azure Machine Learning](/azure/machine-learning/how-to-machine-learning-interpretability).
-
-### Fairness
-
-Fairness is a core ethical principle that all humans aim to understand and apply. This principle is even more important when AI systems are being developed. Key checks and balances need to make sure that the system's decisions don't discriminate against, or express a bias toward, a group or individual based on gender, race, sexual orientation, or religion.
-
-Microsoft provides an [AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA) that offers guidance and solutions for AI systems. These solutions are loosely categorized into five stages: envision, prototype, build, launch, and evolve. Each stage lists recommended due-diligence activities that help minimize the impact of unfairness in the system.
-
-Fairlearn integrates with Azure Machine Learning and supports data scientists and developers to assess and improve the fairness of their AI systems. It provides unfairness-mitigation algorithms and an interactive dashboard that visualizes the fairness of the model. An organization should use the toolkit and closely assess the fairness of the model while it's being built. This activity should be an integral part of the data science process.
-
-Learn how to [mitigate unfairness in machine learning models](/azure/machine-learning/concept-fairness-ml).
 
 ### Transparency
 

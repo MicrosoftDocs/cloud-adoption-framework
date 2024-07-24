@@ -205,7 +205,7 @@ If you use Citrix Application Delivery Management (ADM), see [System Requirement
 
 ## Antivirus
 
-Antivirus software is a crucial element for end user environment protection. Configuring antivirus appropriately in a Citrix DaaS environment is key to a smooth operation. Incorrect antivirus configuration can result in performance issues, degraded user experiences, or timeouts and failures of various components. For more information about how to configure antivirus in your Citrix DaaS environment, see [Tech Paper: Endpoint Security, Antivirus, and Antimalware Best Practices](https://docs.citrix.com/en-us/tech-zone/build/tech-papers/antivirus-best-practices.html).
+Antivirus software is a crucial element for end user environment protection. Configuring antivirus appropriately in a Citrix DaaS environment is key to a smooth operation. Incorrect antivirus configuration can result in performance issues, degraded user experiences, or timeouts and failures of various components. For more information about how to configure antivirus in your Citrix DaaS environment, see [Tech Paper: Endpoint Security, Antivirus, and Antimalware Best Practices](https://community.citrix.com/tech-zone/build/tech-papers/antivirus-best-practices#_=_).
 
 ## Next step
 

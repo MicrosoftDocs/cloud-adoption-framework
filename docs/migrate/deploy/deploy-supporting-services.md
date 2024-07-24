@@ -13,7 +13,7 @@ Every workload you migrate to the cloud requires several supporting services.
 
 You must place replicated or staged servers into virtual networks, and many workloads require load balancers and an application delivery solution. Also, there are considerations for how to [prepare to manage](./prepare-for-management.md) workloads.
 
-When you designed your [workload architecture](../assess/architect.md), you identified these services. Before you begin to migrate resources, _deploy_ the services to ensure that you have everything ready for your workload to operate successfully.
+When you designed your [workload architecture](../assess/architect.md), you identified these services. Before you begin to migrate resources, *deploy* the services to ensure that you have everything ready for your workload to operate successfully.
 
 This article assumes that you prepared your shared platform solutions by [readying your landing zones for migrations](../prepare/ready-azure-landing-zone.md) and completed your workload architecture.
 

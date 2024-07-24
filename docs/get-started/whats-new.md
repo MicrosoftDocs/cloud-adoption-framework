@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/02/2024
+ms.date: 07/02/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -14,6 +14,99 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## June 2024
+
+### New articles
+
+- [Establish common subscription vending product lines](../ready/landing-zone/design-area/subscription-vending-product-lines.md): Give application teams the flexibility to deliver their workloads and services effectively by offering different subscription vending product lines. Implement subscription vending in your Azure landing zones to establish consistent scaling, security, and governance of Azure environments.
+
+### Updated articles
+
+- [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md): We updated this article to include Azure Arc-enabled VMware vSphere and Azure Arc-enabled System Center Virtual Machine Manager.
+- [How to select a strategy for relocating cloud workloads](../relocate/select.md): We updated the guidance on service and data-relocation automation methods.
+- [Security, governance, and compliance disciplines for Azure VMware Solution](../scenarios/azure-vmware/eslz-security-governance-and-compliance.md): We updated this article to replace references to MMA, which is planned for deprecation. New guidance points to the Azure Monitor Agent.
+
+We updated these articles to provide the latest guidance on Azure carbon optimization:
+
+- [Sustainability considerations in cloud management](../manage/considerations/sustainability.md)
+- [Sustainability outcomes and benefits for business](../strategy/business-outcomes/sustainability.md)
+
+#### Hybrid/Azure Arc retirement
+
+We retired several articles in the Hybrid/Azure Arc scenario in the best practices area. The content was outdated and no longer relevant to the Cloud Adoption Framework.
+
+## May 2024
+
+### New articles
+
+This month, we introduced a new article related to Azure Virtual Network Manager that has recommendations for networking topologies in Azure landing zones. We also added new articles that have guidance on Oracle Database@Azure. Take a look at the new content to see how you can apply these recommendations in your organization.
+
+#### Azure Virtual Network Manager
+
+- [Azure Virtual Network Manager in Azure landing zones](../ready/azure-best-practices/azure-virtual-network-manager.md): Use Azure's Virtual Network Manager to implement landing zone design principles for application migrations, modernization, and innovation at scale. Learn more about two recommended networking topologies: Azure Virtual WAN and traditional hub-and-spoke. The Virtual Network Manager allows for the expansion and implementation of networking changes as business requirements evolve. See how these changes can be made without disrupting deployed Azure resources.
+
+#### Oracle Database@Azure
+
+Explore new articles on Oracle Database@Azure.
+
+- [Introduction to the Oracle on Azure adoption scenario](../scenarios/oracle-iaas/index.md): Learn how to set up and manage Oracle workloads within your Azure landing zone. Learn about specific architectural strategies and implementations for Oracle database systems on Azure.
+- [Identity and access management for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-iam-odaa.md): Learn key tactics for proper identity and access management for Oracle Database@Azure. Deploy your initial Oracle Database@Azure instance to create specific groups within Microsoft Entra ID and in the corresponding tenant. Learn how to use Microsoft Entra administrator groups and how to establish other groups and roles to enhance the granularity of access permissions.
+- [Network topology and connectivity for Oracle on Azure Virtual Machines](../scenarios/oracle-iaas/oracle-network-topology-iaas.md): Learn about network topology and connectivity considerations for running Oracle on Azure Virtual Machines. Explore the importance of security for Oracle workloads, and receive a high-level network design with various recommendations.
+- [Network topology and connectivity for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-network-topology-odaa.md): Learn how to set up network topologies and connectivity for Oracle Database@Azure. Explore options for physical placement, learn about the use of virtual machine clusters, and learn the importance of private subnets. See how to configure network security groups and why you should use Azure Firewall to protect your Oracle Database@Azure instance.
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Receive design considerations and recommendations for implementing security measures for Oracle Database@Azure. See the importance of a defense-in-depth strategy, which layers multiple defense mechanisms for comprehensive security. This strategy includes strong authentication and authorization frameworks, network security, and encryption of data.
+
+### Updated articles
+
+#### Azure Blueprint deprecation
+
+We made updates to reflect the deprecation of Azure Blueprint.
+
+- [Govern antipatterns](../antipatterns/govern-antipatterns.md)
+- [Resource consistency decision guide](../decision-guides/resource-consistency/index.md)
+- [Get started: Document foundational alignment decisions](../get-started/cloud-concepts.md)
+- [Get started: Secure the enterprise environment](../get-started/security.md)
+- [Innovate methodology and maturity modeling](../innovate/best-practices/ci-cd.md)
+- [Operational compliance in Azure](../manage/azure-management-guide/operational-compliance.md)
+- [Understand the functions of a central IT team](../organize/central-it.md)
+- [Function of cloud infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md)
+- [Function of cloud security posture management](../organize/cloud-security-posture-management.md)  
+- [Track costs across business units, environments, or projects](../ready/azure-best-practices/track-costs.md)
+- [Azure governance design area](../ready/landing-zone/design-area/governance.md)
+- [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md)  
+- [Azure enterprise scaffold](../resources/migration-with-enterprise-scaffold.md)
+- [Tools and templates](../resources/tools-templates.md)
+- [Data domains](../scenarios/cloud-scale-analytics/architectures/data-domains.md)
+- [Self-serve data platforms](../scenarios/cloud-scale-analytics/architectures/self-serve-data-platforms.md)
+- [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md)
+- [Balance competing priorities](../strategy/balance-competing-priorities.md)
+
+#### Oracle Database@Azure updates
+
+We updated articles to include guidance on Oracle Database@Azure.
+
+- [Capacity planning for Oracle on Azure](../scenarios/oracle-iaas/oracle-capacity-planning.md)  
+- [Plan for Oracle on Azure adoption](../scenarios/oracle-iaas/oracle-landing-zone-plan.md)  
+- [Strategic impact of Oracle on Azure](../scenarios/oracle-iaas/oracle-landing-zone-strategy.md)  
+- [Migration planning for Oracle on Azure](../scenarios/oracle-iaas/oracle-migration-planning.md)
+
+#### Azure landing zone multiregion updates
+
+We updated articles to provide recommendations for multiregion deployments in Azure landing zones.
+
+- [Define an Azure network topology](../ready/azure-best-practices/define-an-azure-network-topology.md)
+- [Resource naming and tagging decision guide](../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+- [Define your tagging strategy](../ready/azure-best-practices/resource-tagging.md)
+- [Traditional Azure networking topology](../ready/azure-best-practices/traditional-azure-networking-topology.md)
+- [Landing zone regions](../ready/considerations/regions.md)
+- [Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones](../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md)
+- [Management groups](../ready/landing-zone/design-area/resource-org-management-groups.md)  
+- [Subscription considerations and recommendations](../ready/landing-zone/design-area/resource-org-subscriptions.md)
+- [Resource organization design area overview](../ready/landing-zone/design-area/resource-org.md)  
+
+#### DevOps updates
+
+- [DevOps considerations](../ready/considerations/devops-principles-and-practices.md): The DevOps technologies list was updated to include bootstrapping and infrastructure as code (IaC) tools.
+
 ## April 2024
 
 ### New articles
@@ -22,7 +115,7 @@ This month, we completely refreshed articles related to the Migrate and Govern m
 
 #### Migrate methodology refresh
 
-Explore dozens of new and updated articles to guide you through the migration process. 
+Explore dozens of new and updated articles to guide you through the migration process.
 
 - **Prepare to migrate your workload**
     - [Migrate overview](../migrate/index.md): Learn about the Migrate methodology and how to apply it as you move your workloads to Azure.
@@ -227,17 +320,17 @@ To support the imminent general availability of Azure Monitor baseline alerts fo
 
 These guides describe the Microsoft-recommended approach to help you design network connectivity for Azure VMware Solution private clouds. They explore four design areas: connectivity with on-premises sites, connectivity with Azure virtual networks, inbound internet connectivity, and outbound internet connectivity. Each design area is covered in a dedicated article, which presents architectural options, including their pros and cons. There are also two articles that cover the basics of Azure VMware Solution networking and guidance on how to prioritize requirements and related design areas.
 
--   [Azure VMware Solution network design guide](../scenarios/azure-vmware/network-design-guide-intro.md)
+- [Azure VMware Solution network design guide](../scenarios/azure-vmware/network-design-guide-intro.md)
 
--   [Azure VMware Solution network design guide: Inbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity.md)
+- [Azure VMware Solution network design guide: Inbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity.md)
 
--   [Azure VMware Solution network design guide: Networking basics](../scenarios/azure-vmware/azure-vmware-solution-network-basics.md)
+- [Azure VMware Solution network design guide: Networking basics](../scenarios/azure-vmware/azure-vmware-solution-network-basics.md)
 
--   [Azure VMware Solution network design guide: Outbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-outbound-connectivity.md)
+- [Azure VMware Solution network design guide: Outbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-outbound-connectivity.md)
 
--   [Azure VMware Solution network design guide: Connectivity with on-premises sites](../scenarios/azure-vmware/on-premises-connectivity.md)
+- [Azure VMware Solution network design guide: Connectivity with on-premises sites](../scenarios/azure-vmware/on-premises-connectivity.md)
 
--   [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](../scenarios/azure-vmware/virtual-network-connectivity.md)
+- [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](../scenarios/azure-vmware/virtual-network-connectivity.md)
 
 ## July 2023
 
@@ -266,17 +359,5 @@ This series provides guidance for your SAP environment in Azure. You can find be
 - [Security operations for SAP on Azure](../scenarios/sap/sap-lza-security-operations.md)
 
 - [Microsoft Sentinel for SAP on Azure](../scenarios/sap/sap-lza-sentinel-for-sap.md)
-
-## June 2023
-
-### Updated machine learning inference during deployment
-
-Learn about the [best practices for deploying machine learning models in production environments](../innovate/best-practices/ml-deployment-inference.md) by using Azure Machine Learning. Explore architectural considerations and deployment methods (real time and batch inference). Learn how to ensure consistency, monitor performance, implement security measures, and create a plan for updates.
-
-### New landing zone sandbox environments
-
-This article describes how to use a sandbox environment, including configuring networking, enabling audit logging, assigning a budget, and setting an expiration date.
-
-- [Landing zone sandbox environments](../ready/considerations/sandbox-environments.md)
 
 <!-- docutune:ignoreNextStep -->

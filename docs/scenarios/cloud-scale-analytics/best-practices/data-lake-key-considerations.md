@@ -21,17 +21,20 @@ Azure Storage offers different access tiers, which allows you to store blob obje
 - **Cold tier:** Optimized for storing data that is infrequently accessed or modified. Data is stored for at least 90 days. The cold tier has lower storage costs and higher access costs compared to the cool tier.
 - **Archive:** Optimized for storing data that's rarely accessed. The data is stored for at least 180 days with flexible latency requirements, on the order of hours.
 
+> [!IMPORTANT]
+> There are no reliability, security, operational excellence, or performance efficiency tradeoffs between the various online access tiers, which leaves the choice of an online tier to be a financial decision, per blob, based on workload access data size, operational interactions, and time before the blob is deleted. Select the correct tier, per blob, based on [a calculation of the preceding factors](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob). For more information, see [Plan and manage costs for Azure Blob Storage ](/azure/storage/common/storage-plan-manage-costs).
+
 Consider the following information when using access tiers:
 
 - Only the Hot and Cool access tiers can be set at the account level. The Archive access tier isn't available at the account level.
 
 - Hot, Cool, and Archive tiers can all be set at the blob level during upload or after upload.
 
-- Data in the Cool tier has slightly lower availability, but offers the same high durability, retrieval latency, and throughput characteristics as Hot tier data. For data in the Cool tier, slightly lower availability and higher access costs can be acceptable trade-offs for lower overall storage costs compared to the Hot tier.
+- Data in the Cool and Cold tiers have slightly lower availability, but offer the same high durability, retrieval latency, and throughput characteristics as the Hot tier data. For data in the Cool or Cold tiers, slightly lower availability and higher access costs can be acceptable trade-offs for lower overall storage costs compared to the Hot tier.
 
 - Archive storage stores data offline and offers the lowest storage costs. However, it also carries the highest data rehydration and access costs.
 
-For more information, see [Hot, Cool and Archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
+For more information, see [Access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
 > [!CAUTION]
 > For cloud-scale analytics, we recommend that you implement [lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md) using a custom microservice and carefully consider the impact of moving user discoverable data to cool storage.

@@ -36,8 +36,8 @@ SAP systems contain data from across the organization that's used to derive insi
 
 Customers might also deploy the following cloud-based analytics and planning solutions in their landscape:
 
-- [SAP Analytics Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-analytics-cloud?region=all&tab=service_plan&provider=azure&commercialModel=subscription)
-- [SAP Data Warehouse Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-data-warehouse-cloud?region=all&tab=service_plan&provider=azure&service_plan=standard&commercialModel=subscription)
+- [SAP Analytics Cloud](https://www.sap.com/products/technology-platform/cloud-analytics.html)
+- [SAP Datasphere](https://www.sap.com/products/technology-platform/datasphere.html)
 
 SAP SaaS solutions:
 

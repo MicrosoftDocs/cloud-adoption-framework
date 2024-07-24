@@ -38,7 +38,7 @@ You can also find third-party IaC tools, such as HashiCorp's [Terraform](https:/
 
 ### Pooled vs. personal
 
-As your organization scales out its environment, most of the workload falls under a _pooled_ configuration rather than a _personal_ configuration.
+As your organization scales out its environment, most of the workload falls under a *pooled* configuration rather than a *personal* configuration.
 
 Personal configurations are often more expensive to run than pooled configurations. They're suitable for specific workload users like developers who usually require elevated permissions. If you run host pools in personal mode, try to maintain the machines like you maintain your physical desktops so you reduce the amount of tooling required in your environment.
 

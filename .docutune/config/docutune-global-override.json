@@ -1,6 +1,10 @@
 {
   "RemoveTermSets": [
     "casing-quotations",
+    "*oxford-comma*",
+    "*cloudsimple*",
     "*-llm-*"
-  ]
+  ],
+  "Grammar": {
+  }
 }

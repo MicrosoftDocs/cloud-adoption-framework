@@ -33,7 +33,7 @@ To learn how to tailor your Azure landing zones deployment to meet your needs, s
 
 ## What is the Azure landing zone conceptual architecture?
 
-The Azure landing zone conceptual architecture represents scale and maturity decisions. It's based on lessons learned and feedback from customers who have adopted Azure as part of their digital estate. This conceptual architecture can help your organization set a direction for designing and implementing a landing zone.
+The Azure landing zone conceptual architecture represents scale and maturity decisions. It's based on lessons learned and feedback from customers who adopted Azure as part of their digital estate. This conceptual architecture can help your organization set a direction for designing and implementing a landing zone.
 
 ## What does a landing zone map to in Azure in the context of Azure landing zone architecture?
 
@@ -65,7 +65,7 @@ In short, **no**. Use Azure Policy to control, govern, and keep your workloads a
 
 ## What is Cloud Adoption Framework Landing zones for Terraform (aztfmod)?
 
-The Cloud Adoption Framework landing zones [open source project (OSS)](https://aztfmod.github.io/documentation/docs/intro/) (also known as _aztfmod_) is a community driven project owned and maintained outside of the Azure landing zone core team and the Azure GitHub organization. If your organization chooses to use this OSS project, consideration should be given to the support available as this is driven by the community effort through GitHub.
+The Cloud Adoption Framework landing zones [open source project (OSS)](https://aztfmod.github.io/documentation/docs/intro/) (also known as *aztfmod*) is a community driven project owned and maintained outside of the Azure landing zone core team and the Azure GitHub organization. If your organization chooses to use this OSS project, consideration should be given to the support available as this is driven by the community effort through GitHub.
 
 ## What if we already have resources in our landing zones and later assign an Azure Policy definition that includes them in its scope?
 
@@ -110,9 +110,9 @@ In general, we recommend that customers adopt the [Subscription Democratization 
 You should consider subscription reuse if you meet one of the following circumstances:
 
 - You have an Enterprise Agreement (EA) and plan to create more than 5,000 subscriptions on a single EA Account Owner Account (billing account), including deleted subscriptions.
-- You have a Microsoft Customer Agreement (MCA) or Microsoft Partner Agreement MPA and plan to have more than 5,000 active subscriptions
-- You're a pay-as-you-go customer
-- You use a Microsoft Azure Sponsorship
+- You have a Microsoft Customer Agreement (MCA) or Microsoft Partner Agreement MPA and plan to have more than 5,000 active subscriptions. To learn more about subscription limits, see [Billing accounts and scopes in the Azure portal](/azure/cost-management-billing/manage/view-all-accounts).
+- You're a pay-as-you-go customer.
+- You use a Microsoft Azure Sponsorship.
 - You commonly create:
     1. Ephemeral lab or sandbox environments
     1. Demo environments for proofs-of-concept (POCs) or minimum viable products (MVP), including independent software vendors (ISV) for customer demo/trial access
@@ -129,7 +129,7 @@ You first need to clean up the old subscription for reuse. You need to perform t
 - Remove Resource Groups and contained resources.
 - Remove Role Assignments, including Privileged Identity Management (PIM) Role Assignments, at the subscription scope.
 - Remove Custom Role-based Access Control (RBAC) Definitions, at the subscription scope.
-- Remove Policy Definitions, Initiatives, Assignments and Exemptions at the subscription scope.
+- Remove Policy Definitions, Initiatives, Assignments, and Exemptions at the subscription scope.
 - Remove deployments at the subscription scope.
 - Remove tags at the subscription scope.
 - Remove any Resource Locks at the subscription scope.
