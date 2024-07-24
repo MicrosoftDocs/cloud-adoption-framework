@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Security for Red Hat Enterprise Linux on Azure
 
-## Design Considerations
+## Design considerations
 
 Providing security for your Red Hat Enterprise Linux (RHEL) systems requires a multi-pronged approach. Security requires that all teams work together to secure your workloads. Security for an environment can't be ensured solely by deployed products or platforms. It requires the implementation of and adherence to a rigorous process that encompasses behavioral, administrative, and engineering components. When you are deploying Red Hat Enterprise Linux in an Azure landing zone, many security factors need to be evaluated. Deploying Red Hat Enterprise Linux (RHEL) on Azure requires a strategic approach that applies both Azure and Red Hat security mechanisms to create a secure and resilient cloud environment. A list of the considerations to be evaluated are listed here, however, it isn't an exhaustive list. What follows are considerations and recommendations for implementing security in your RHEL environment.
 

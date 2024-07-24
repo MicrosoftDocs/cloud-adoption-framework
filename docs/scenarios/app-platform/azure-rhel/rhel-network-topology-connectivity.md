@@ -14,7 +14,7 @@ This article describes Red Hat Enterprise Linux (RHEL) network considerations an
 
 ## Architecture
 
-The following RHEL architecture is a starting point that you can further adapt to meet your specific business and technical requirements. You can deploy the various RHEL platform components and roles on virtual machines (VMs) with specific sizing and redundancy as needed. The simplified network layout in these examples demonstrates architectural principles and isn't intended to describe an entire enterprise network.
+The following RHEL architecture is a starting point that you can further adapt to meet your specific business and technical requirements. You can deploy the various RHEL platform components and roles on virtual machines (VMs) with specific sizing and redundancy as needed. The simplified network layout in these examples demonstrates architectural principles and doesn't describe an entire enterprise network.
 
 :::image type="content" source="images/rhel-landing-zone-architecture.png" alt-text="Diagram that shows a RHEL reference architecture." border="false" lightbox="images/rhel-landing-zone-architecture.png":::
 
@@ -25,8 +25,8 @@ The following RHEL architecture is a starting point that you can further adapt t
 |  A | Components in the Microsoft Customer Agreement and billing |
 |  B | Components in Microsoft Entra identity and access management |
 |  C | Components in Azure management groups |
-|  D | Components in Windows Server Active Directory identity management subscription |  
-|  E | Components in network hub subscription |
+|  D | Components in the Windows Server Active Directory identity management subscription |  
+|  E | Components in the network hub subscription |
 |  F | Components in the RHEL Management and Identity subscription |
 |  G | Components in the Azure Management Group subscription |
 |  H | Components in the RHEL Production Workload subscription |  
@@ -37,21 +37,23 @@ The following RHEL architecture is a starting point that you can further adapt t
 
 Consider the following recommendations for the landing zone networking design:
 
-- We recommend that you use a hub-and-spoke network topology for single or multiregion deployments. [Azure Virtual WAN Hub](/azure/virtual-wan/virtual-wan-about) provides extra features. You can also use a traditional virtual network hub. For more information, see [Azure landing zone networking](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
+- Use a hub-and-spoke network topology for single region or multiregion deployments. [Azure Virtual WAN Hub](/azure/virtual-wan/virtual-wan-about) provides extra features, or you can use a traditional virtual network hub. For more information, see [Azure landing zone networking](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
 
-- Automate your deployments, configuration management, and day-2 operations for all landing zone network-related components through [infrastructure as code](/azure/well-architected/operational-excellence/infrastructure-as-code-design).
+- Use [infrastructure as code](/azure/well-architected/operational-excellence/infrastructure-as-code-design) to automate your deployments, configuration management, and day-2 operations for all landing zone network-related components.
 - Use [private endpoints](/azure/private-link/private-endpoint-overview) for all supported Azure services to improve security. Private endpoints ensure that all traffic routes through your private networking rather than over public IP addresses.
 
 #### Firewall considerations
+
+The following diagram shows a hybrid Azure region RHEL landing zone architecture.
 
 :::image type="content" source="images/hybrid-regional-rhel-platform-landing-zone-network.png" alt-text="Diagram that shows a hybrid Azure region RHEL landing zone architecture." border="false" lightbox="images/hybrid-regional-rhel-platform-landing-zone-network.png":::
 
 |     Element          |             Description                    |
 |:-------------:|:--------------------------------|
-|  A | Components in the Red Hat Management virtual network contained via the Red Hat Management subscription. |
-|  B | Components in the RHEL Workloads virtual network contained via the RHEL Production Workloads subscription. |
-|  C | Components in the Identity Management virtual network contained via the Red Hat Identity Management subscription. |
-|  D | Components in the RHEL Workloads virtual network contained via the RHEL Production Workloads subscription. |
+|  A | Components in the Red Hat Management virtual network contained via the Red Hat Management subscription |
+|  B | Components in the RHEL Workloads virtual network contained via the RHEL Production Workloads subscription |
+|  C | Components in the Identity Management virtual network contained via the Red Hat Identity Management subscription |
+|  D | Components in the RHEL Workloads virtual network contained via the RHEL Production Workloads subscription |
 
 - For Virtual WAN topologies, consider using Azure Firewall to route traffic across landing zones. Azure Firewall provides traffic filtering and logging capabilities.
 
@@ -65,20 +67,13 @@ The following diagram shows Management and Workload subnets in a zone-resilient 
 
 :::image type="content" source="images/simplified-rhel-networking.png" alt-text="Diagram that shows Management and Workload subnets in a zone-resilient configuration." border="false":::
 
-|       Element        |               Description                  |
-|:-------------:|:--------------------------------|
-|  A | Components in the Red Hat Management virtual network contained via the Red Hat Management subscription |
-|  B | Components in the RHEL Workloads virtual network contained via the RHEL Production Workloads subscription |
-|  C | Components in the Identity Management virtual network contained via the Red Hat Identity Management subscription |
-|  D | Components in the RHEL Workloads virtual network contained via the RHEL Production Workloads subscription |
-
 - When you plan for IP address scopes and virtual network size for the RHEL landing zone, consider dedicated subnets for application, database, and storage resources.
   
 - Adopt a Zero Trust-based approach for your perimeter networking and traffic security. For more information, see [Network security strategies on Azure](/azure/well-architected/security/networking).
 
 #### Network security group considerations
 
-:::image type="content" source="images/nsg-segmentation.png" alt-text="Diagram that shows an NSG for traffic security." border="false" lightbox="images/nsg-segmentation.png":::
+:::image type="content" source="images/nsg-segmentation.png" alt-text="Diagram that shows an NSG configuration for traffic security." border="false" lightbox="images/nsg-segmentation.png":::
 
 - Use network security groups (NSGs) to help protect traffic across subnets and east and west traffic across the platform (traffic between landing zones). [Azure Policy](/azure/networking/policy-reference) can make this configuration default for all subnets.
 
@@ -90,33 +85,28 @@ The following diagram shows Management and Workload subnets in a zone-resilient 
 
 - The application team should use application security groups at the subnet-level NSGs to help protect multi-tier VMs within the landing zone.
 
-- If your organization implements forced tunneling, or an advertised default route, to on-premises, consider incorporating outbound NSG rules to deny egress traffic from the virtual network directly to the internet. This configuration provides resiliency if the Border Gateway Protocol (BGP) session drops. For more information, see [Plan for landing zone network segmentation](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-landing-zone-network-segmentation).
+- If your organization implements forced tunneling, or an advertised default route, to on-premises locations, consider incorporating outbound NSG rules to deny egress traffic from the virtual network directly to the internet. This configuration provides resiliency if the Border Gateway Protocol (BGP) session drops. For more information, see [Plan for landing zone network segmentation](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-landing-zone-network-segmentation).
 
-#### Enable internet and filtering and inspecting traffic
+#### Other considerations
 
-Outbound options to enable internet and filtering and inspecting traffic include:
+- **Enable internet and filtering and inspecting traffic**. Outbound options to enable internet and filtering and inspecting traffic include:
+  - Outbound access to Red Hat Cloud via the hub network.
+  
+  - On-premises default route that uses on-premises internet access.
+  - Virtual WAN or traditional virtual network hub that's secured with Azure Firewall or an NVA.
 
-- Outbound access to Red Hat Cloud via the hub network.
-- On-premises default route that uses on-premises internet access.
-- Virtual WAN or traditional virtual network hub that's secured with Azure Firewall or an NVA.
+- **Deliver content and applications**. Inbound options to deliver content and applications include:
+  - Azure Application Gateway with L7, Transport Layer Security (TLS) termination, and Web Application Firewall.
+  
+  - Dynamic Network Translation (DNAT) and a load balancer from on-premises.
+  - Azure Virtual Network with Azure Firewall or an NVA, and Azure Route Server in various scenarios.
+  - Virtual WAN hub with Azure Firewall, with L4 and DNAT.
+  - Virtual WAN hub with NVA in various scenarios.
 
-#### Deliver content and applications
+- **Configure domain name resolution for on-premises and Azure resources**. The RHEL environment often uses both on-premises and Azure resources, which requires effective name resolution of resources. Consider the following recommendations:
+  - Azure provides a default internal name resolution within a virtual network. This scenario doesn't require any configuration. You can't modify the domain name resolution suffix or perform manual registration. For more information, see [Name resolution that Azure provides](/azure/virtual-machines/linux/azure-dns#name-resolution-that-azure-provides).
 
-Inbound options to deliver content and applications include:
-
-- Azure Application Gateway with L7, Transport Layer Security (TLS) termination, and Web Application Firewall.
-- Dynamic Network Translation (DNAT) and a load balancer from on-premises.
-- Azure Virtual Network with Azure Firewall or an NVA, and Azure Route Server in various scenarios.
-- Virtual WAN hub with Azure Firewall, with L4 and DNAT.
-- Virtual WAN hub with NVA in various scenarios.
-
-#### Domain name resolution for on-premises and Azure resources
-
-The RHEL environment often uses both on-premises and Azure resources, which requires effective name resolution of resources. Consider the following recommendations:
-
-- Azure provides a default internal name resolution within a virtual network. There's no configuration required for this scenario. You can't modify the domain name resolution (DNS) suffix or perform manual registration. For more information, see [Name resolution that Azure provides](/azure/virtual-machines/linux/azure-dns#name-resolution-that-azure-provides).
-
-- For name resolution across virtual networks, RHEL deployments often use DNS services from Redhat Identity Management Server (IdM) or [Azure DNS](/azure/dns/dns-overview). To provide rule-based forwarding if needed, combine [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) and existing DNS infrastructure.
+  - For name resolution across virtual networks, RHEL deployments often use Domain Name System (DNS) services from Redhat Identity Management Server (IdM) or [Azure DNS](/azure/dns/dns-overview). To provide rule-based forwarding, combine [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) and existing DNS infrastructure.
 
 ## Next step
 

@@ -373,28 +373,23 @@ For more information, see:
 
 ### Integrate Azure Policy with Azure DevOps
 
-Azure Policy directly applies to resources within Azure environments, but its principles and governance can indirectly influence Azure DevOps practices. For example: 
+Azure Policy directly applies to resources within Azure environments, but its principles and governance can indirectly influence Azure DevOps practices. For example, Azure Policy can affect: 
 
-- Compliance in CI/CD pipelines: You can integrate compliance checks into your Azure Pipelines. For example, ensuring that any infrastructure deployed through Azure DevOps complies with the policies defined in Azure Policy.
+- **Compliance in CI/CD pipelines**: You can integrate compliance checks into your Azure pipelines. For example, ensuring that any infrastructure that you deploy through Azure DevOps complies with the policies defined in Azure Policy.
 
-- Environment consistency: By using Azure Policy to enforce specific configurations or resource types, teams can ensure that the environments they deploy to through Azure DevOps are consistent and compliant. 
-- Security and governance: Policies can enforce security standards and governance practices on the resources managed by Azure DevOps Projects, ensuring that the development lifecycle includes compliance with organizational and regulatory standards. 
+- **Environment consistency**: Use Azure Policy to enforce specific configurations or resource types to ensure that the environments that you deploy to through Azure DevOps are consistent and compliant. 
+- **Security and governance**: Policies can enforce security standards and governance practices on the resources that are managed by Azure DevOps Projects. This practice ensures that the development lifecycle includes compliance with organizational and regulatory standards. 
 
-To effectively integrate Azure Policy with Azure DevOps, teams often use Azure Policy's compliance data and audit capabilities to inform their DevOps practices, making adjustments to their pipelines or IaC definitions to align with the organizational policies enforced through Azure Policy. 
+To effectively integrate Azure Policy with Azure DevOps, you can use Azure Policy compliance data and audit capabilities to inform your DevOps practices. Make adjustments to your pipelines or IaC definitions to align with your organizational policies that are enforced through Azure Policy. 
 
-This integration ensures that resources deployed and managed through Azure DevOps are always in compliance with the company's governance standards, enhancing security, consistency, and cost management across Azure environments. 
+This integration ensures that resources that you deploy and manage through Azure DevOps are always compliant with your company's governance standards. Use this approach to enhance security, consistency, and cost management across Azure environments. 
 
-### Azure PowerShell and Azure CLI
+## Next steps
 
-#### Azure PowerShell
-
-[Install Azure PowerShell on Linux](/powershell/azure/install-azps-linux)
-[Using Azure PowerShell in a Docker container](/powershell/azure/azureps-in-docker)
-[Azure PowerShell documentation](/powershell/azure)
-
-#### Azure CLI
-
-[Install Azure CLI on Linux](/cli/azure/install-azure-cli-linux)
-[How to run the Azure CLI in a Docker container](/cli/azure/run-azure-cli-docker)
-[Azure CLI documentation](/cli/azure)
+- [Install Azure PowerShell on Linux](/powershell/azure/install-azps-linux)
+- [Use Azure PowerShell in a Docker container](/powershell/azure/azureps-in-docker)
+- [Azure PowerShell documentation](/powershell/azure)
+- [Install Azure CLI on Linux](/cli/azure/install-azure-cli-linux)
+- [Run Azure CLI in a Docker container](/cli/azure/run-azure-cli-docker)
+- [Azure CLI documentation](/cli/azure)
 
