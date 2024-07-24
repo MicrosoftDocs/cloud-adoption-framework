@@ -74,7 +74,6 @@ Use Azure Policy to ensure that your environment meets your organization's secur
 You can use Azure Policy to:
 
 - Enforce compliance and governance standards, such as audit and compliance reporting.
-
 - Provide resource management and cost control, such as resource consistency and cost management.
 - Provide security and access control, such as security baselines and role-based access control (RBAC).
   
@@ -111,7 +110,7 @@ Red Hat Ansible Automation Platform simplifies the development and operation of 
 
 You can use the Automation update management feature and Azure Update Manager to track and implement change management within your Azure environment. The Automation update management feature retires on August 31, 2024. We recommend that you use Update Manager going forward.
 
-For more information, see
+For more information, see:
 
 - [What's included in Ansible Automation Platform](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_release_notes/platform-introduction#whats-included).
 - [Red Hat Ansible Automation Platform upgrade and migration guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_upgrade_and_migration_guide/index).

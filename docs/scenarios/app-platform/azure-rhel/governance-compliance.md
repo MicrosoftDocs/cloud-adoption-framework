@@ -17,7 +17,7 @@ Compliance for RHEL deployments in Azure refers to the methods that you use to d
 
 Organizations, especially in regulated industries, often need an authority to operate (ATO) to install and use software in their environments. This process includes evaluating the software against a security requirements guide (SRG), which is a set of technical controls. An example of such controls is the National Institute of Standards and Technology (NIST) [security and privacy controls for information systems and organizations](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final).
 
-This evaluation determines whether the software meets each control or whether you can configure the software to meet each control. The evaluation also determines whether the control applies to a particular software. Your organization's governance framework determines which regulations apply within the Azure deployment and to which systems the regulations apply. Adherence to the security requirements determines the level of compliance.
+This security evaluation determines whether the software meets each control or whether you can configure the software to meet each control. The evaluation also determines whether the control applies to a particular software. Your organization's governance framework determines which regulations apply within the Azure deployment and to which systems the regulations apply. Adherence to the security requirements determines the level of compliance.
 
 Red Hat works with many standards bodies to ensure that the configuration points, measurements, and remediations are known, verified, and referenceable for Azure software. The standards bodies can create benchmarks or checklists of the evaluations that describe the SRG for their industry. Examples of these benchmarks include:
 
@@ -37,7 +37,7 @@ Microsoft Azure has several compliance offerings to help ensure that your worklo
 
 ## Design considerations
 
-When you manage governance for RHEL instances in an Azure landing zone, consider the compliance standards that your organization must adhere to. Configure your governance based on internally mandated and regulatory framework-defined controls as they apply to your RHEL systems. Choose your tooling and services based on how you enforce standards and remediate deviations. Consider how you measure compliance, and consider your reporting and remediation capabilities. From an implementation perspective, these choices impact many of the compliance areas that are described in the preceding section.
+When you manage governance for RHEL instances in an Azure landing zone, consider the compliance standards that your organization must adhere to. Configure your governance based on internally mandated and regulatory framework-defined controls as they apply to your RHEL systems. Choose your tooling and services based on how you enforce standards and remediate deviations. Consider how you measure compliance, and consider your reporting and remediation capabilities. From an implementation perspective, these choices affect many of the compliance areas that are described in the preceding section.
 
 Compliance standards contain factorable lists of security requirements that you can use to integrate content and image management with automation tooling so that you can:
 
@@ -48,7 +48,7 @@ Compliance standards contain factorable lists of security requirements that you 
 Content lifecycle and image build pipelines are ideal points of enforcement. Consider the following pipelines:
 
 - **Analysis and reporting**: Cloud platforms provide comprehensive services that you can use to aggregate metadata and log data from deployed systems. You can also deliver and store the captured data for regulatory reporting requirements and audits.
-- **Automation first**: Modern automation systems can simplify regulatory compliance and reporting and increase accuracy and visibility. Implement compliance management via infrastructure as code automation as part of your deployment process. Consider combining scanning and maintenance activity workflows to ensure timely reporting and a *fail-fast* methodology, which keeps your compliance backlog to a minimum. To ensure consistency, unify implementation automation code and remediation code .
+- **Automation first**: Modern automation systems can simplify regulatory compliance and reporting and increase accuracy and visibility. Implement compliance management via infrastructure as code (IaC) automation as part of your deployment process. Consider combining scanning and maintenance activity workflows to ensure timely reporting and a *fail-fast* methodology, which keeps your compliance backlog to a minimum. To ensure consistency, unify implementation automation code and remediation code.
 - **Compliance maintenance**: Compliance standards are updated regularly and have well-known delivery mechanisms and content types. Ensure that you use open standards when you implement compliance management. Design your compliance content streaming and review into your lifecycle for application and image development.
 
 ## Design recommendations

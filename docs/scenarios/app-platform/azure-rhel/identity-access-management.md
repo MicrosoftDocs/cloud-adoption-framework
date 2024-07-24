@@ -7,7 +7,7 @@ ms.date: 7/24/2024
 ms.topic: conceptual
 ---
 
-# Identity and access considerations for Red Hat Enterprise Linux on Azure
+# Identity and access management considerations for Red Hat Enterprise Linux on Azure
 
 This article describes identity and access management (IAM) considerations for your Azure Red Hat Enterprise Linux (RHEL) landing zone accelerator deployment. IAM is a key part of your organization's security settings. The RHEL operating system and the applications that run on it need to consume external identities to scale operations. Carefully design your hybrid cloud IAM implementation to ensure smooth integration and management of your instance landscape in the Azure cloud. Red Hat and Microsoft work together to ensure native integration between RHEL, Windows Server Active Directory, and Microsoft Entra Privileged Identity Management (PIM).
 
@@ -25,15 +25,10 @@ In general, a RHEL deployment in a hybrid-cloud environment should:
   - Ensure uniformity.
   - Accelerate the implementation process.
   - Enhance the security framework of a hybrid cloud Linux infrastructure.
-
 - Apply policies uniformly to multiple instances simultaneously. Use this approach so that you don't have to use automation to modify each instance in the infrastructure when a change occurs.  
-
 - Support centralized, secure, differentiated instance-level access control by using host-based access control, delegation, and other rules.
-
-- Centrally manage system-level privilege escalation rules across the identity authority. And apply this policy consistently across individual instances and groups of instances within the environment.
-
+- Centrally manage system-level privilege escalation rules across the identity authority. Apply this policy consistently across individual instances and groups of instances within the environment.
 - Support or provide modern automation tooling capabilities to test and consistently implement security configurations across fleets of systems. You should design security automation into a hybrid-cloud deployment from the beginning.  
-
 - Support the integration of existing legacy enterprise single sign-on (SSO) capabilities to ease migration burdens, maintain consistency of security operations, and support modern integrations for cloud-based deployments.
 
 ### Implement authentication
@@ -41,11 +36,8 @@ In general, a RHEL deployment in a hybrid-cloud environment should:
 Linux deployments tend to implement local user authentication environments at the operating system level. System-level authentication and authorization, object ownership, object permissions, and application integrations are based on this model. Operating system applications use these identities in many ways. For example:
 
 - Application processes run under some user identities.
-
 - Application processes create or access files that are attributed to specific users and groups.
-
-- A set of groups that a user belongs to is fixed when they sign in. mMembership changes are only applied to new sessions.
-
+- A set of groups that a user belongs to is fixed when they sign in. Membership changes are only applied to new sessions.
 - The authentication and authorization flow of a user is directly tied to the sign-in session that's active as a result of authentication.
 
 Previously, user-initiated shell sessions that were based on these identities were the primary means of interaction with applications on Linux. With the move to web, mobile, and cloud-oriented user interfaces, applications that use this pattern of identity consumption are less common.  
@@ -56,11 +48,11 @@ For small cloud deployments or pilot deployments, these traditional IAM methodol
 
 You can use various tools that provide centralized security within a Linux environment. Ensure that the tool meets your business and technical requirements. RHEL has a broad software compatibility list for security. You can integrate application-level security by using Azure-native Microsoft Entra ID, commercial open-source software solutions like Okta, SailPoint, or JumpCloud, or open-source project solutions such as Keycloak. There are also various security solutions at the operating system level. You can deploy several commercial solutions and open-source software projects in the cloud.
 
-## Design recommendations for Red Hat Identity Management
+## Design recommendations for Red Hat identity Management
 
 This section describes design recommendations for IAM in Azure landing zones for RHEL when you use Red Hat Identity Management (IdM) and Red Hat SSO. These services align with the Cloud Adoption Framework for Azure and Red Hat Infrastructure Standard Adoption Model. The recommendations extend the principles that you use to implement a hybrid-cloud deployment.  
 
-Red Hat IdM provides a centralized way to manage identity stores, authentication, policies, and authorization in a Linux-based domain. Red Hat IdM natively integrates with Windows Server Active Directory and Microsoft Entra ID and is included with RHEL. If you extend your on-premises Active Directory to Azure, you can benefit from the Red Hat IdM-native Windows Server Active Directory trust capability. Similarly, if you adopt Microsoft Entra ID or use an alternate identity provider, you can use Red Hat IdM and Red Hat SSO for seamless integration. Red Hat SSO is a supported enterprise implementation of the Keycloak open-source project. It's provided at no extra cost with various Red Hat subscriptions, including Red Hat Ansible Automation Platform. Red Hat recommends that you implement Red Hat IdM within your RHEL deployment in Azure. The following diagram shows
+Red Hat IdM provides a centralized way to manage identity stores, authentication, policies, and authorization in a Linux-based domain. Red Hat IdM natively integrates with Windows Server Active Directory and Microsoft Entra ID and is included with RHEL. If you extend your on-premises Active Directory to Azure, you can benefit from the Red Hat IdM-native Windows Server Active Directory trust capability. Similarly, if you adopt Microsoft Entra ID or use an alternate identity provider, you can use Red Hat IdM and Red Hat SSO for seamless integration. Red Hat SSO is a supported enterprise implementation of the Keycloak open-source project. It's provided at no extra cost with various Red Hat subscriptions, including Red Hat Ansible Automation Platform. Red Hat recommends that you implement Red Hat IdM within your RHEL deployment in Azure. The following diagram shows a RHEL management subscription deployment.
 
 :::image type="content" source="images/rhel-identity-access-management/management-subscription.svg" alt-text="Diagram that shows a high-level depiction of a RHEL management subscription deployment." border="false":::
 
@@ -120,4 +112,4 @@ Use the [Planning Identity Management guide](https://docs.redhat.com/documentati
 
 ## Next steps
 
--[Business continuity and disaster recovery for Red Hat Enterprise Linux on Azure](./business-continuity-disaster-recover.md)
+- [Business continuity and disaster recovery for Red Hat Enterprise Linux on Azure](./business-continuity-disaster-recovery.md)

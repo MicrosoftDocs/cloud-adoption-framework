@@ -56,9 +56,9 @@ Database solutions and other stateful applications might need operating system-c
 ### RHEL platform BCDR considerations
 
 For more information about BCDR capabilities for an RHEL platform infrastructure, see: 
-- [Satellite high availability architecture](./rhel-management-monitoring.md).
+- [Satellite high availability architecture](./management-monitoring.md).
 - [Ansible Automation platform high availability architecture](https://docs.redhat.com/documentation/red_hat_ansible_automation_platform/2.1/html-single/deploying_ansible_automation_platform_2.1/index).
-- [Identity management high availability architecture](./rhel-identity-access-management.md#design-recommendations-for-red-hat-identity-management).
+- [Identity management high availability architecture](./identity-access-management.md#design-recommendations-for-red-hat-identity-management).
 
 ## Design recommendations
 
