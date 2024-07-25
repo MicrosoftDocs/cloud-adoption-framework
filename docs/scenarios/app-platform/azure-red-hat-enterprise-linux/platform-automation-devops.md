@@ -168,7 +168,7 @@ When you have the requisite source code management tooling in place and the sour
     - Hop node VMs (optional).
     - Automation Hub VMs.
     - Event-Driven Ansible VMs (if enabled).
-    - Azure Database for PostgreSQL Server and necessary databases for the controller, Hub, and Event-Driven Ansible components. High availability or disaster recovery Azure Database for PostgreSQL configurations require additional automation, either via replication shipping, log shipping, or [Crunchy Postgres](https://www.crunchydata.com/solutions/ansible).
+    - Azure Database for PostgreSQL Server and necessary databases for the controller, Hub, and Event-Driven Ansible components. High availability or disaster recovery Azure Database for PostgreSQL configurations require extra automation, either via replication shipping, log shipping, or [Crunchy Postgres](https://www.crunchydata.com/solutions/ansible).
 - Create load balancers (application gateways).
     - Front end for Capsule VMs 
     - Front end for AAP controller VMs 
@@ -193,12 +193,12 @@ After core platform infrastructure is in place, you can implement automation for
    - Deploy to several RHEL instances for multi-tier application stacks.
    - Configure an application stack.
 1. Run an application testing framework.
-   - If the test fails, notify OnCall automation administration to assist in troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
+   - If the test fails, notify OnCall automation administration to help with troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
    - If the test succeeds, continue the steps.
 1. Promote CVs and CCVs to quality assurance (QA).
 1. Destroy RHEL development test systems.
 
-Subsequent stages in the lifecycle pipeline are slightly different from the development lifecycle stage. Only the development stage uses the initial content publishing and initial CV and CCV promotion to development. The following example describes an automation workflow for non-development lifecycle pipelines, for example QA, pre-production, and  production pipelines.
+Subsequent stages in the lifecycle pipeline are slightly different from the development lifecycle stage. Only the development stage uses the initial content publishing and initial CV and CCV promotion to development. The following example describes an automation workflow for nondevelopment lifecycle pipelines, for example QA, preproduction, and  production pipelines.
 
 1. Deploy RHEL QA test systems from Satellite host groups. RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite.
        
@@ -209,7 +209,7 @@ Subsequent stages in the lifecycle pipeline are slightly different from the deve
    - Deploy to several RHEL instances for multi-tier application stacks. 
    - Configure an application stack.
 1. Run an application testing framework.
-   - If the test fails, notify OnCall automation administration to assist in troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
+   - If the test fails, notify OnCall automation administration to help with troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
    - If the test succeeds, continue the steps.
 1. Promote CVs and CCVs to production.
 1. Destroy RHEL QA test systems.
@@ -236,7 +236,7 @@ The following table describes the supported runbook types.
 
 Use [webhooks](/azure/automation/automation-webhooks) to fulfill requests and to ensure continuous delivery and operations by triggering automation via Azure Logic Apps, Azure Functions, IT service management products or services, DevOps, or monitoring systems.
 
-Azure Arc represents a significant advancement in cloud computing and offers a unified management platform that extends Azure capabilities to on-premises, multi-cloud, and edge environments. Azure Arc integrates with the Azure Automation service via the VM extension framework to deploy the hybrid runbook worker role and simplify onboarding to the update management, change tracking, and inventory features.
+Azure Arc represents a significant advancement in cloud computing and offers a unified management platform that extends Azure capabilities to on-premises, multicloud, and edge environments. Azure Arc integrates with the Azure Automation service via the VM extension framework to deploy the hybrid runbook worker role and simplify onboarding to the update management, change tracking, and inventory features.
 
 :::image type="content" source="images/platform-automation-devops/arc-ecosystem.png" alt-text="Diagram that shows the Azure Arc ecosystem." border="false" lightbox="images/platform-automation-devops/arc-ecosystem.png":::
 
@@ -353,7 +353,7 @@ Depending on your organizational needs, you can choose one of the four core arch
 
 Azure Repos provides two types of version control, [Git version control](/azure/devops/repos/get-started/what-is-repos#git) and [centralized version control](/azure/devops/repos/get-started/what-is-repos#tfvc).
 
-Connect your development environment to Azure Repos to access your code. Share your code via: 
+To access your code, connect your development environment to Azure Repos. Share your code via: 
 - The [command line](/azure/devops/repos/git/share-your-code-in-git-cmdline).
 - [Visual Studio Code](/azure/devops/repos/git/share-your-code-in-git-cmdline).
 - [Xcode](/azure/devops/repos/git/share-your-code-in-git-xcode).
