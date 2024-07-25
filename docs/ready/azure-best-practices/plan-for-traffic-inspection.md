@@ -30,11 +30,13 @@ This section explores key considerations and recommended approaches for capturin
 
 ## Design recommendations
 
-- Prefer Virtual network [flow logs](/azure/network-watcher/vnet-flow-logs-overview) over NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) since overcomes some of the limitations. For a comparison, see [this article](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).
+- Prefer [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) over [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). For a comparison, see [Virtual network flow logs compared to network security group flow logs](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).
+
+- Do not enable  [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) simultaneously on the same target scope. If you enable network security group flow logs on the network security group of a subnet, then you enable virtual network flow logs on the same subnet or parent virtual network, you might get duplicate logging and additional costs.
 
 - Enable Traffic Analytics. The tool lets you easily capture and analyze network traffic with out-of-the-box dashboard visualization and security analysis.
 
-- Prefer [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) over [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). For a comparison, see [Virtual network flow logs compared to network security group flow logs](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).
+- If you need more capabilities than Traffic Analytics offers, you can supplement Traffic Analytics with one of our partner solutions. You can find available partner solutions in the [Azure Marketplace](https://azuremarketplace.microsoft.com/home).
 
 - Use Network Watcher packet capture regularly to get a more detailed understanding of your network traffic. Run packet capture sessions at various times throughout the week to get a good understanding of the types of traffic traversing your network.
 
