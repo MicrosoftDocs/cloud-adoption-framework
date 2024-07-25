@@ -65,7 +65,7 @@ _Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.git
 
 - Azure Firewall Manager supports deployment of Azure Firewall in the Virtual WAN hub, known as secured virtual hub. For more information, see the [Azure Firewall Manager overview](/azure/firewall-manager/overview) for secured virtual hubs and the latest [constraints](/azure/firewall-manager/overview#known-issues).
 
-- Virtual WAN hub-to-hub traffic, by way of Azure Firewall in both source and target hubs (secured virtual hubs), is supported with [routing intent and policies](/azure/virtual-wan/how-to-routing-policies) enabled. More details on covered scenarios are contained in this [article section](/azure/virtual-wan/how-to-routing-policies#use-cases).
+- Virtual WAN hub-to-hub traffic, by way of Azure Firewall in both source and target hubs (secured virtual hubs), is supported with routing intent and policies enabled. More details on covered scenarios are contained in [Use cases for Virtual WAN Hub routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies#use-cases).
 
 - The Virtual WAN portal experience requires that all Virtual WAN resources deploy together into the same resource group.
 
@@ -115,7 +115,7 @@ We recommend Virtual WAN for new large or global network deployments in Azure wh
 
 - Create Azure Virtual WAN and Azure Firewall resources within the connectivity subscription.
 
-- If hub-to-hub traffic is required, by way of Azure Firewall, Network Virtual Appliances or software-as-a-service (SaaS) solutions deployed within the Virtual WAN hub, in both source and targets (secured virtual hubs), [routing intent and policies](/azure/virtual-wan/how-to-routing-policies) must be enabled.
+- Use [Virtual WAN Hub routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies) to support secured-hub to secured-hub traffic.
 
 - Don't create more than 500 virtual network connections per Virtual WAN virtual hub.
 
