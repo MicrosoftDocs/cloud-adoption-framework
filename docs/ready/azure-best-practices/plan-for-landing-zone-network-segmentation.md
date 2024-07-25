@@ -38,7 +38,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 
-- Enable [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and use [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gain insights into ingress and egress traffic flows. Flow logs should be enabled on all critical virtual networks and subnets in your subscriptions, for example those containing Active Directory Domain Controllers or sensible data stores. Additionally, flow logs can be used to detect and investigate potential security incidents, compliance and monitoring, usage optimization.
+- Enable [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and use [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gain insights into ingress and egress traffic flows. Flow logs should be enabled on all critical virtual networks and subnets in your subscriptions, for example those containing Active Directory Domain Controllers or critical data stores. Additionally, flow logs can be used to detect and investigate potential security incidents, compliance and monitoring, and for usage optimization.
 
 - Use NSGs to selectively allow connectivity between landing zones.
 
