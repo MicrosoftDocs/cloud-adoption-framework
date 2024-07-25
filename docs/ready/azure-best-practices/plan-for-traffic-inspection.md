@@ -30,7 +30,13 @@ This section explores key considerations and recommended approaches for capturin
 
 ## Design recommendations
 
-- Prefer [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) over [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). Virtual network flow logs simplify the scope of traffic monitoring because you can enable logging at virtual network level, avoiding the need to enable multiple-level flow logging as in NSG ([subnet and NIC level](/azure/virtual-network/network-security-group-how-it-works)). It can be applied in scenarios where NSG flow logs cannot be used because usage of NSG is not supported. Finally, it can provide additional details about [Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) status and presence of [Azure Virtual Network Manager security admin rules](/azure/virtual-network-manager/concept-virtual-network-flow-logs). For a comparison, see [Virtual network flow logs compared to network security group flow logs](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).
+- Prefer [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) over [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). Virtual network flow logs:
+
+  - Simplify the scope of traffic monitoring because you can enable logging at virtual network level, avoiding the need to enable multiple-level flow logging to cover both subnet and NIC levels. 
+  - Add visibility for scenarios where NSG flow logs cannot be used due to platform restrictions on NSG deployments.
+  - Provide additional details about [Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) status and presence of [Azure Virtual Network Manager security admin rules](/azure/virtual-network-manager/concept-virtual-network-flow-logs).
+
+  For a comparison, see [Virtual network flow logs compared to network security group flow logs](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).
 
 - Do not enable Virtual network flow logs and NSG flow logs simultaneously on the same target scope. If you enable network security group flow logs on the network security group of a subnet, then you enable virtual network flow logs on the same subnet or parent virtual network, you will get duplicate logging and additional costs.
 
