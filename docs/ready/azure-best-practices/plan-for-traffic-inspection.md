@@ -26,13 +26,13 @@ This section explores key considerations and recommended approaches for capturin
   
 - *Network Security Group (NSG) flow logs -* NSG flow logs capture information about IP traffic flowing through your NSGs. Network Watcher stores NSG flow logs as JSON files in Azure Storage account. You can export the NSG flow logs to an external tool for analysis. For more information, see NSG flow logs [overview](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) and [data analysis options](/azure/network-watcher/network-watcher-visualize-nsg-flow-logs-power-bi).
 
-- *Virtual network flow logs* - Virtual network flow logs provide similar capabilities compared to NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). You can use them to log information about IP traffic flowing through a virtual network. Flow data from virtual network flow logs is sent to Azure Storage. From there, you can access the data and export it to any visualization tool, security information and event management (SIEM) solution, or intrusion detection system (IDS). For more information, see Virtual network [flow logs](/azure/network-watcher/vnet-flow-logs-overview) overview.
+- *Virtual network flow logs -* Virtual network [flow logs](/azure/network-watcher/vnet-flow-logs-overview) provide similar capabilities compared to NSG flow logs. You can use this feature to log information about layer 3 traffic flowing through a virtual network. Flow data from virtual network flow logs is sent to Azure Storage. From there, you can access the data and export it to any visualization tool, security information and event management (SIEM) solution, or intrusion detection system (IDS).
 
 ## Design recommendations
 
 - Prefer [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) over [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). For a comparison, see [Virtual network flow logs compared to network security group flow logs](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).
 
-- Do not enable  [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) simultaneously on the same target scope. If you enable network security group flow logs on the network security group of a subnet, then you enable virtual network flow logs on the same subnet or parent virtual network, you might get duplicate logging and additional costs.
+  Do not enable Virtual network flow logs and NSG flow logs simultaneously on the same target scope. If you enable network security group flow logs on the network security group of a subnet, then you enable virtual network flow logs on the same subnet or parent virtual network, you will get duplicate logging and additional costs.
 
 - Enable Traffic Analytics. The tool lets you easily capture and analyze network traffic with out-of-the-box dashboard visualization and security analysis.
 
