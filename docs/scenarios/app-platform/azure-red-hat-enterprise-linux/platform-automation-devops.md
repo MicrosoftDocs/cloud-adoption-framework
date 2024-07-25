@@ -1,7 +1,7 @@
 ---
 title: Platform automation considerations for Red Hat Enterprise Linux on Azure
 description: Learn about the tools, features, and services to automate various tasks and manage the Red Hat Enterprise Linux lifecycle within your Azure environment.
-author: AnthonyDelagarde
+author: AnthonyDelagarde, parmstro, heatmiser
 ms.author: joelsisk
 ms.date: 07/24/2024
 ms.topic: conceptual
@@ -26,7 +26,7 @@ You can implement these operations through infrastructure as code (IaC) and conf
 
 ## Design considerations
 
-Red Hat Identity Management (IdM) provides a centralized and unified platform that you can use to manage identity stores, authentication policies, and authorization policies for RHEL systems. In a hybrid scenario, you can extend your existing Red Hat IdM infrastructure across a virtual private network or Azure ExpressRoute. This configuration connects on-premises environment with the RHEL landing zone within Azure. To support hybrid cloud identity scenarios, extend your on-premises environment into Azure so that you can integrate your workloads with Microsoft Entra. For more information, see [Microsoft Entra authentication](/entra/identity/authentication/).
+Red Hat Identity Management (IdM) provides a centralized and unified platform that you can use to manage identity stores, authentication policies, and authorization policies for RHEL systems. In a hybrid scenario, you can extend your existing Red Hat IdM infrastructure across a virtual private network or Azure ExpressRoute. This configuration connects on-premises environments with the RHEL landing zone within Azure. To support hybrid cloud identity scenarios, extend your on-premises environment into Azure so that you can integrate your workloads with Microsoft Entra. For more information, see [Microsoft Entra authentication](/entra/identity/authentication/).
 
 As an alternative identity management solution, you can join RHEL to create an external trust with Windows Server Active Directory or join directly into an existing Windows Server Active Directory forest. For more information, see [Integrate RHEL systems directly with Windows Server Active Directory](https://access.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index).   
 
@@ -56,7 +56,7 @@ You can implement:
 
 Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/management/ansible/azure) in self-managed mode in an on-premises, cloud, or hybrid infrastructure to get the following benefits: 
 
-- **Architecture and scale**: Determine your ideal architecture to support the automation platform. You can base the architecture on RHEL infrastructure or an OpenShift operator deployment. Based on your fleet size and requirements, choose the number and the instance sizing of controllers, execution nodes, and private automation hub instances. For more information about architecture, design, configuration, and scale, see [Red Hat AAP planning guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
+- **Architecture and scale**: Determine your ideal architecture to support the automation platform. You can base the architecture on RHEL infrastructure or an OpenShift operator deployment. Based on your fleet size and requirements, choose the number and the instance sizing of controllers, execution nodes, and private automation hub instances. For more information about architecture, design, configuration, and scale, see the [Red Hat AAP planning guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
 
 - **Azure configuration**:  Optimize the automation architecture for your organization's Azure design and configuration.
 - **Automation mesh support**: Use the AAP automation mesh feature to distribute automation workloads across hybrid cloud nodes that establish peer-to-peer connections by using existing networks. Place hop nodes in a location based on your security design criteria and network topology.
@@ -85,7 +85,7 @@ AAP on Azure in managed mode uses the following resource groups:
 
 - **A new or existing resource group in your tenant**. This resource group includes a single resource that refers to the AAP on Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades. But Red Hat doesn't manage the resource group.
 	
-- **A multitenant managed resource group (MRG)** that contains most of the required infrastructure to operate AAP on Azure. The Red Hat tenant and your tenant shares this multitenant resource group. Red Hat has full administrative control. You have read-only access to the resource group. 
+- **A multitenant managed resource group (MRG)** that contains most of the required infrastructure to operate AAP on Azure. The Red Hat tenant and your tenant share this multitenant resource group. Red Hat has full administrative control. You have read-only access to the resource group. 
 - **An AKS node pool resource group (NPRG)**. Microsoft requires an NPRG for AKS deployments. An NPRG contains resources that AKS uses to function. This resource group is created on deployment. Red Hat doesn't manage this resource group. For more information, see [Microsoft AKS documentation](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
 
 For AAP on Azure in managed mode, also consider the following factors: 

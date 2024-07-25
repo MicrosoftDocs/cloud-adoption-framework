@@ -1,7 +1,7 @@
 ---
 title: Security considerations for Red Hat Enterprise Linux on Azure
 description: Learn about key design considerations and recommendations for security in Red Hat Enterprise Linux on Azure infrastructure.
-author: jhajduk-microsoft
+author: jhajduk-microsoft, parmstro, heatmiser
 ms.author: jhajduk
 ms.date: 7/24/2024
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Security considerations for Red Hat Enterprise Linux on Azure
 
-This article describes considerations and recommendations to implement security in your Red Hat Enterprise Linux (RHEL) environment. To provide security for your RHEL systems, you an approach that targets multiple areas. Security requires that all teams work together to secure your workloads. Products or platforms that you deploy can't solely ensure security for your environment.
+This article describes considerations and recommendations to implement security in your Red Hat Enterprise Linux (RHEL) environment. To provide security for your RHEL systems, use an approach that targets multiple areas. Security requires that all teams work together to secure your workloads. Products or platforms that you deploy can't solely ensure security for your environment.
 
 Implement and adhere to a rigorous process that encompasses behavioral, administrative, and engineering components. When you deploy RHEL in an Azure landing zone, you need to evaluate several security factors. To create a secure and resilient cloud environment, implement a strategic approach that applies both Azure and Red Hat security mechanisms. 
 
@@ -58,12 +58,11 @@ When you use Azure and Red Hat management tools to develop automated workflows, 
 Ensure that your workflows:
 
 - Generate, maintain, and test baseline and workload images.
-
 - Test and deploy ephemeral instances.
 - Patch cycle test and deliver persistent VM instances.
 - Use automation pipelines. Automation pipelines significantly reduce management effort, ensure consistent policy enforcement, improve anomaly detection, and accelerate remediation throughout RHEL landing zones.
 
-Also consider using [Azure Compute Gallery](/azure/virtual-machines/azure-compute-gallery). You can build your Red Hat image with all of the required security mechanisms that you use in your organization and create an image of that VM. Then you can share security-compliant images across subscriptions and regions in your Azure environment. You can also do versioning for greater granular control over VM images. This approach helps you unify compute instance security patches and tooling that you use in your environment.
+Also consider using [Azure Compute Gallery](/azure/virtual-machines/azure-compute-gallery). You can build your Red Hat image with all of the required security mechanisms that you use in your organization and create an image of that VM. Then you can share security-compliant images across subscriptions and regions in your Azure environment. You can also use versioning for greater granular control over VM images. This approach helps you unify compute instance security patches and tooling that you use in your environment.
 
 Consider implementing [Azure Update Manager](/azure/update-manager/overview) as part of your update management process. Update Manager is a unified service that you can use to monitor updates across your deployments. Use Update Manager to survey your entire fleet of machines in Azure, on-premises, and in other clouds.
 
@@ -79,7 +78,7 @@ To centrally enforce strict access policies, integrate [Red Hat Identity Managem
 
 Compared to traditional Linux deployments, this approach generates benefits, such as:
 
-- Streamline change control through reduced automation touch points.
+- Streamlined change control through reduced automation touch points.
 - Decreased logging and analysis-related load.
 - Compliance with authentication auditing requirements.
 - Policy consistency.
@@ -90,7 +89,7 @@ Red Hat recommends that you enable and run SELinux on all RHEL-based instances, 
 
 SELinux policy generation tools can generate RPM-based policy files to include in content repositories for standardized image deployment. Development, security, and operations teams can deliver artifacts upstream in an iterative manner within the pipeline. After testing determines that no SELinux violations are generated, you can set the SELinux configuration to enforcing mode. SELinux violations that are generated during production denote a significant deviation from acceptable application behavior. You should flag and investigate these violations. Use SELinux to provide comprehensive visibility and proactive threat management.
 
-To define the RBAC roles that you assign to RHEL machines, understand the roles and responsibilities on your team. Relevant teams might require elevated access to virtual machines (VMs). Consider Virtual Machine Contributor, Virtual Machine Reader, and similar roles to access VMs. Consider just-it-time access if you don't require standing access. Consider managed identities if the RHEL system must authenticate with Azure. System-assigned managed identities provide more security than service principals and are associated with the VM resource. In addition to RBAC roles, consider conditional access for people who need access to your Azure environment. Use conditional access to restrict user access to your Azure environment based on the location, IP address, and other criteria.
+To define the RBAC roles that you assign to RHEL machines, understand the roles and responsibilities on your team. Relevant teams might require elevated access to virtual machines (VMs). Consider Virtual Machine Contributor, Virtual Machine Reader, and similar roles to access VMs. Consider just-in-time access if you don't require standing access. Consider managed identities if the RHEL system must authenticate with Azure. System-assigned managed identities provide more security than service principals and are associated with the VM resource. In addition to RBAC roles, consider conditional access for people who need access to your Azure environment. Use conditional access to restrict user access to your Azure environment based on the location, IP address, and other criteria.
 
 ### Use antivirus software
 
