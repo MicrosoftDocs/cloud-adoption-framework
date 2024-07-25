@@ -1,5 +1,5 @@
 ---
-title: Resource organization for Red Hat Enterprise Linux on Azure
+title: Resource organization considerations for Red Hat Enterprise Linux on Azure
 description: Learn about key design considerations and recommendations for resource organization in RHEL on Azure infrastructure.
 author: moisesjgomez
 ms.author: mgomezcortez
@@ -7,7 +7,7 @@ ms.date: 07/24/2024
 ms.topic: conceptual
 ---
 
-# Resource organization for Red Hat Enterprise Linux on Azure
+# Resource organization considerations for Red Hat Enterprise Linux on Azure
 
 When you organize a Red Hat Enterprise Linux (RHEL) deployment on Azure, carefully consider management groups and subscriptions to ensure that you effectively govern and manage resources.
 

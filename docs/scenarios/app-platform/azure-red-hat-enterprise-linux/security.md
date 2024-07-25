@@ -1,5 +1,5 @@
 ---
-title: Security for Red Hat Enterprise Linux on Azure
+title: Security considerations for Red Hat Enterprise Linux on Azure
 description: Learn about key design considerations and recommendations for security in Red Hat Enterprise Linux on Azure infrastructure.
 author: jhajduk-microsoft
 ms.author: jhajduk
@@ -7,7 +7,7 @@ ms.date: 7/24/2024
 ms.topic: conceptual
 ---
 
-# Security for Red Hat Enterprise Linux on Azure
+# Security considerations for Red Hat Enterprise Linux on Azure
 
 To provide security for your Red Hat Enterprise Linux (RHEL) systems, you need a multi-pronged approach. Security requires that all teams work together to secure your workloads. Deployed products or platforms can't solely ensure security for an environment.
 

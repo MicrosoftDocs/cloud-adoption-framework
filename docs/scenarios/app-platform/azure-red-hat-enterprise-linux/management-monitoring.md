@@ -1,5 +1,5 @@
 ---
-title: Management and monitoring for Red Hat Enterprise Linux on Azure
+title: Management and monitoring considerations for Red Hat Enterprise Linux on Azure
 description: Learn about key design considerations and recommendations for management and monitoring in RHEL on Azure infrastructure.
 author: heisthesisko
 ms.author: joelsisk
@@ -7,7 +7,7 @@ ms.topic: conceptual
 md.date: 07/24/2024
 ---
 
-# Management and monitoring for Red Hat Enterprise Linux on Azure
+# Management and monitoring considerations for Red Hat Enterprise Linux on Azure
 
 This article describes how to use various services and tools to manage and monitor Red Hat Enterprise Linux (RHEL) on Azure.
 
