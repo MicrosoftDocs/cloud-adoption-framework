@@ -52,7 +52,7 @@ Review the following sections to find recommended security controls and governan
 
 - Use [Adaptive Network Hardening features](/azure/defender-for-cloud/adaptive-network-hardening) in Microsoft Defender for Cloud to find network security group configurations that limit ports and source IPs with reference to external network traffic rules.
 
-- Collect your Azure Firewall (or third-party firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Azure Sentinel or a similar service.
+- Collect your Azure Firewall (or third-party firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Microsoft Sentinel or a similar service.
 
 - Only use a private endpoint for Azure files that are used for [FSLogix Profile containers](/fslogix/configure-profile-container-tutorial).
 
