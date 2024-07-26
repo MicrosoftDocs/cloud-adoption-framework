@@ -10,16 +10,10 @@ ms.custom: internal, UpdateFrequency2
 
 # Adopt confidentiality
 
-## Intro section
 
-The CIA Triad is a fundamental model in information security representing three core principles: Confidentiality, [Integrity](./refresh-adopt-integrity.md), and [Availability](./refresh-adopt-availability.md).
-
-Confidentiality: Ensures that sensitive information is accessed only by authorized individuals. This involves implementing measures like encryption and access controls to protect data from unauthorized access.
-Integrity: Maintains the accuracy and completeness of data. This means protecting data from being altered or tampered with by unauthorized users, ensuring that the information remains reliable.
-Availability: Ensures that information and resources are accessible to authorized users when needed. This involves maintaining systems and networks to prevent downtime and ensure continuous access to data.
 Why It Matters
 
-Data Protection: The CIA Triad helps protect sensitive data from breaches, ensuring privacy and compliance with regulations.
+- **Data Protection:** The CIA Triad helps protect sensitive data from breaches, ensuring privacy and compliance with regulations.
 Business Continuity: Ensuring data integrity and availability is critical for maintaining business operations and avoiding downtime.
 Trust and Reliability: Implementing the CIA Triad builds trust with customers and stakeholders by demonstrating a commitment to data security.
 The CIA Triad is crucial for securing data and workloads in the cloud. These three principles work together to provide a comprehensive approach to securing information systems. While CAF: Secure contains articles that address the Integrity and Availability [link to adopt Integrity and Adopt Availability articles, respectively] principles of the triad, this article is focused primarily on Confidentiality and why you should adopt it as a core principle/practice in your enterprise cloud environment.
@@ -30,18 +24,23 @@ Adoption of the Confidentiality principle ensures that the organization can prot
 
 When defining a strategy for adopting confidentiality in an enterprise cloud environment, it’s essential to consider several key points:
 
-1. Define Business Objectives
+1. **Define business objectives**
 
-Prioritize Data Privacy and Protection: Establish clear business objectives that emphasize the importance of data privacy and protection. This includes compliance with relevant regulations (e.g., GDPR, HIPAA) and industry standards.
-Risk Management: Identify and assess potential risks to data confidentiality and develop strategies to mitigate these risks.
-2. Implement Zero Trust (ZT) as a Strategy
+- *Prioritize data privacy and protection:* Establish clear business objectives that emphasize the importance of data privacy and protection. This includes compliance with relevant regulations like GDPR, HIPAA, and industry standards.
 
-Zero Trust Principles: Adopt Zero Trust principles, which include verifying explicitly, using least privilege access, and assuming breach. This approach ensures that every access request is authenticated, authorized, and encrypted.
-Identity and Access Management (IAM): Implement robust IAM solutions to control access to cloud resources. This includes multi-factor authentication (MFA) and role-based access control (RBAC).
-3. Microsoft’s Support for Zero Trust
+- *Risk Management:* Identify and assess potential risks to data confidentiality and develop strategies to mitigate these risks.
 
-Microsoft Zero Trust Framework: Microsoft supports Zero Trust through a comprehensive framework that integrates various security solutions. This includes Microsoft Entra for identity management, Microsoft Defender for threat protection, and Microsoft Sentinel for security analytics.
-Cloud-Native Security: Microsoft provides cloud-native security tools that help organizations implement Zero Trust principles effectively. These tools offer capabilities such as continuous monitoring, automated threat detection, and real-time compliance checks.
+2. **Implement Zero Trust (ZT) as a strategy**
+
+- *Zero Trust Principles:* Adopt Zero Trust principles, which include verifying explicitly, using least privilege access, and assuming breach. This approach ensures that every access request is authenticated, authorized, and encrypted.
+
+- *Identity and access management (IAM):* Implement robust IAM solutions to control access to cloud resources. This includes multi-factor authentication (MFA) and role-based access control (RBAC).
+
+3. **Microsoft’s support for Zero Trust**
+
+- *Microsoft Zero Trust Framework:* Microsoft supports Zero Trust through a comprehensive framework that integrates various security solutions. This includes Microsoft Entra for identity management, Microsoft Defender for threat protection, and Microsoft Sentinel for security analytics.
+ 
+- *Cloud-native security:* Microsoft provides cloud-native security tools that help organizations implement Zero Trust principles effectively. These tools offer capabilities such as continuous monitoring, automated threat detection, and real-time compliance checks.
 Guidance and Best Practices: Microsoft offers detailed guidance and best practices for implementing Zero Trust, tailored to different industries and regulatory requirements.
 Summary
 
@@ -51,20 +50,23 @@ By defining clear business objectives, adopting Zero Trust principles, and lever
 
 Once a strategy has been developed and is in place to help guide decision making, development of a comprehensive implementation plan that takes into consideration the Confidentiality principle of the CIA Triad should begin.
 
-1. Include Data Protection Requirements in Cloud Migration or Development Plans
+1. **Include data protection requirements in cloud migration or development plans**
 
-Data Classification: Identify and classify data based on sensitivity and regulatory requirements. This helps in applying appropriate security measures.
-Encryption: Ensure that data will be encrypted both at rest and in transit. Use strong encryption standards to protect sensitive information.
-Access Controls: Implement strict access controls to ensure that only authorized users can access sensitive data. Use multi-factor authentication (MFA) and role-based access control (RBAC), as well as the principle of ZT, Verify Explicitly, always authenticating and authorizing based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies.
-2. Introduce the Concept of Landing Zones
+- *Data classification:* Identify and classify data based on sensitivity and regulatory requirements. This helps in applying appropriate security measures.
 
-Landing Zones: A landing zone is a pre-configured, secure, and scalable environment in the cloud that serves as a foundation for your workloads. It includes network topology, identity management, security, and governance components.
-Benefits: Landing zones help standardize cloud environments, ensuring consistency and compliance with security policies. They also facilitate easier management and scalability.
-3. Microsoft Options to Assist with Secure Migration of Data and Workloads
+- *Encryption:* Ensure that data will be encrypted both at rest and in transit. Use strong encryption standards to protect sensitive information.
 
-Azure Migrate: A comprehensive service that helps you discover, assess, and migrate on-premises workloads to Azure. It supports various migration scenarios, including servers, databases, and applications1.
+- *Access controls:* Implement strict access controls to ensure that only authorized users can access sensitive data. Use multi-factor authentication (MFA) and role-based access control (RBAC), as well as the principle of ZT, Verify Explicitly, always authenticating and authorizing based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies.
+
+2. **Adopt Azure landing zones**
+
+- *Landing Zones:* A landing zone is a pre-configured, secure, and scalable environment in the cloud that serves as a foundation for your workloads. It includes network topology, identity management, security, and governance components.
+    - *Benefits:* Landing zones help standardize cloud environments, ensuring consistency and compliance with security policies. They also facilitate easier management and scalability.
+
+3. **MOVE TO BOTTOM - FACILITATION**
+- Azure Migrate: A comprehensive service that helps you discover, assess, and migrate on-premises workloads to Azure. It supports various migration scenarios, including servers, databases, and applications1.
 Microsoft Defender for Cloud: Provides unified security management and advanced threat protection across hybrid cloud environments. It helps detect and respond to threats, ensuring the security of your workloads.
-Azure Landing Zones: Microsoft offers Azure Landing Zones as part of the Cloud Adoption Framework. These are blueprints that provide a well-architected environment, incorporating best practices for security, governance, and compliance.
+Azure landing zones accelerators: Microsoft offers Azure Landing Zones as part of the Cloud Adoption Framework. These are blueprints that provide a well-architected environment, incorporating best practices for security, governance, and compliance.
 Azure Confidential Computing: Protects data in use by performing computations in a hardware-based trusted execution environment (TEE). This ensures that data remains confidential even during processing.
 Summary
 
@@ -74,29 +76,37 @@ By including data protection requirements in your cloud migration plans, leverag
 
 With the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality already in place, the next step is to prepare the environment. This involves configuring secure landing zones and implementing robust data access controls, conditional access controls, and role-based access controls.
 
-1. Configuring Secure Landing Zones
+1. **Configuring secure landing zones**
 
-Landing Zones are pre-configured environments that provide a secure and consistent foundation for deploying and managing workloads in the cloud. They are essential for enforcing data access controls and ensuring that the environment is secure from the outset.
+Landing zones are pre-configured environments that provide a secure and consistent foundation for deploying and managing workloads in the cloud. They are essential for enforcing data access controls and ensuring that the environment is secure from the outset.
 
 Azure Landing Zones: These are scalable and modular environments that follow key design principles across various areas such as identity and access management, network topology, and security. They help isolate and scale application resources and platform resources, ensuring that data access controls are consistently applied. Microsoft offers both ready-made and customizable templates for Azure Landing Zones. Ready-made templates, often referred to as landing zone accelerators, provide a quick and efficient way to deploy a secure environment using Infrastructure as Code (IaC) technologies like ARM, Bicep, and Terraform. These accelerators automate the deployment process, ensuring consistency and compliance with best practices. For organizations with specific requirements, customizable templates allow for tailored configurations to meet unique business needs. More detailed information on landing zones and their configuration can be found on the Azure Landing Zone overview page.
-2. Implementing Data Access Controls
+
+2. **Implementing data access controls**
 
 Data access controls are critical for maintaining confidentiality in cloud environments. They ensure that only authorized users can access sensitive data.
 
-Principle of Least Privilege: Grant users the minimum access required to perform their tasks.
-Role-Based Access Control (RBAC): Assign roles and permissions based on job responsibilities. This helps in managing access efficiently and reduces the risk of unauthorized access.
-Multi-Factor Authentication (MFA): Implement MFA to add an extra layer of security.
-Data Confidentiality and Sensitivity Protections: Implement data classification and labeling to identify and protect sensitive information. Use encryption both at rest and in transit to safeguard data from unauthorized access and breaches.
-Microsoft Data Access Management: Microsoft offers comprehensive data access management solutions that help protect your data from inappropriate or unauthorized access. Microsoft solutions also help organizations meet industry and regulatory requirements, such as GDPR, HIPPA, and CCPA. These solutions include Microsoft Purview, which offers comprehensive compliance and data protection capabilities. More information can be found on the Microsoft Compliance page and the Microsoft Data Access Management page.
-3. Conditional Access Controls
+- *Principle of least privilege:* Grant users the minimum access required to perform their tasks.
+
+- *Role-Based Access Control (RBAC):* Assign roles and permissions based on job responsibilities. This helps in managing access efficiently and reduces the risk of unauthorized access.
+
+- *Multi-Factor Authentication (MFA):* Implement MFA to add an extra layer of security.
+
+- *Data confidentiality and sensitivity protections:* Implement data classification and labeling to identify and protect sensitive information. Use encryption both at rest and in transit to safeguard data from unauthorized access and breaches.
+
+- *Microsoft Data Access Management:* Microsoft offers comprehensive data access management solutions that help protect your data from inappropriate or unauthorized access. Microsoft solutions also help organizations meet industry and regulatory requirements, such as GDPR, HIPPA, and CCPA. These solutions include Microsoft Purview, which offers comprehensive compliance and data protection capabilities. More information can be found on the Microsoft Compliance page and the Microsoft Data Access Management page.
+
+
+3. **Conditional access controls**
 
 Conditional access controls provide additional security by enforcing policies based on specific conditions.
 
-Microsoft Entra Conditional Access: This allows administrators to assign controls to specific applications, services, actions, or authentication contexts. Policies can be tailored based on user identity, device health, location, and more.
-Session Controls: These enable limited experiences within specific cloud applications based on device compliance and user actions.
+- *Microsoft Entra Conditional Access:* This allows administrators to assign controls to specific applications, services, actions, or authentication contexts. Policies can be tailored based on user identity, device health, location, and more.
+
+- *Session Controls:* These enable limited experiences within specific cloud applications based on device compliance and user actions.
 Conditional access controls can be tailored to various use cases. For example, organizations can enforce policies that block access from untrusted networks, require multi-factor authentication for high-risk sign-ins, or restrict access to sensitive data based on device compliance. These controls help balance security and user experience by applying stricter measures only when necessary. To learn more about Conditional Access Controls, visit the Microsoft Conditional Access overview page.
 
-4. Role-Based Access Controls
+4. **Role-Based Access Controls**
 
 Role-Based Access Control (RBAC) is a fundamental component of cloud security, providing a structured way to manage access to cloud resources. Imagine you have a large enterprise cloud environment with various resources like databases, virtual machines, and applications. Not everyone in the organization needs access to all these resources. Role-Based Access Control (RBAC) helps manage who can access what based on their role within the company. For example, a database administrator can access and manage databases, while a developer can only access the resources needed for their development tasks. This ensures that access is granted appropriately and IAW the principle of Confidentiality, keeping the environment secure and organized.
 

@@ -14,14 +14,26 @@ ms.custom: internal, UpdateFrequency2
 
 Availability refers to a system's ability to remain operational through normal and abnormal conditions and is a critical aspect of the Microsoft Cloud Adoption Framework (CAF). It is critical in maintaining business continuity and minimizing downtime, which are essential for organizational success in the cloud. Abnormal conditions include spiking utilization, malfunction, or a malicious attack, among other scenarios. A system's availability is dependent upon the reliability mechanisms built into its design. Highly available systems have reliabilty mechanisms built in at every level: infrastructure design, application design, operations, and governance. This article provides guidance on adopting availability in these areas to help ensure that your cloud estate remains operational and is resilient against security threats and malfunctions.
 
-## Key strategies for ensuring availability
+## Strategy
+
+Developing a strategy for ensuring availability in your cloud estate relies on establishing [reliability targets](/azure/well-architected/reliability/metrics). These are metrics negotiated by business and technology stakeholders that define the tolerable amount of downtime for your [workloads](/azure/cloud-adoption-framework/plan/workloads), so are typically defined per workload. Different workloads may have different reliability requirements depending on their criticality, and [user or system flows](/azure/well-architected/cross-cutting-guides/optimize-workload-using-flows) within a given workload may have different reliability requirements depending on their own criticality. The Well-Architected Framework provides detailed guidance for workload-focused reliability strategies, and it is recommended that architects and engineers base their workload designs based on that guidance.
+
+While your availability strategy may primarily be defined by workload-focused metrics, you still need a more holisitic approach to availability as it relates to security, and that is the focus of this article. By necessity, some general workload guidance is included, but it should be considered for applying broadly across your cloud estate.
+
+## Plan
+
+As you plan your cloud estate, ensure that your infrastructure and application designs are optimized for availability. 
+
+### Adopt the landing zone model
+
+The [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/) approach helps you design your cloud foundation to ensure that your entire cloud estate is highly manageable and optimized to allow you to design secure, scalable workloads that are isolated from each other and from functions that are either uninvolved or shared across workloads.
 
 ### Resilient architectural design
 
 Designing your infrastructure for resiliency helps ensure that your cloud systems are able to withstand malfunctions or security incidents, allowing the business to continue operations while the affected systems are attended to. A highly available architecture includes the following design decisions:
 
 - **Redundancy and replication:** Minimize single point of failure risks through [redundanct infrastructure design](/azure/well-architected/reliability/redundancy), including data replication.
-    - Distribute your [workloads](/azure/cloud-adoption-framework/plan/workloads) across [multiple regions](/azure/well-architected/reliability/highly-available-multi-region-design) to protect against regional issues.
+    - Distribute your workloads across [multiple regions](/azure/well-architected/reliability/highly-available-multi-region-design) to protect against regional issues.
 - **Autoscaling:** Implement [automatic scaling](/azure/well-architected/reliability/scaling) in your workloads to protect against resource exhaustion caused by spikes in utilization.
 - **Load balancing:** [Choose an appropriate load balancing solution](/azure/architecture/guide/technology-choices/load-balancing-overview) to distribute traffic across multiple servers, ensuring that no single server (or cluster) becomes a point of failure.
 
@@ -32,6 +44,8 @@ Adopt application [design patterns](/azure/well-architected/reliability/design-p
 - **Microservices and containerization:** Avoid monolithic applications by breaking them down into smaller, independent services that can be deployed and scaled independently.
 
 - **Decouple services:** Isolate services from each other to reduce the blast radius of incidents.
+
+## Ready
 
 ### Operational practices to support availability
 
@@ -60,16 +74,6 @@ Maintaining a highly available cloud estate can only be done the teams operating
 - **Zero Trust access and authorization controls:** Strong access controls and identity management systems ensure that only authorized personnel have access to critical systems and data. This reduces the risk of malicious activities that could disrupt services. Standardizing on strictly enforced role-based access controls (RBAC) and requiring multi-factor authentication (MFA) helps prevent unauthorized access to your systems that could disrupt service availability. Refer to the [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) article for detailed guidance on this topic.
 
 - **Adherence to and enforcement of compliance standards:** Adhering to regulations such as GDPR and HIPAA ensures that systems are designed and maintained to high standards, including those related to availability. Non-compliance can lead to legal actions and fines that might disrupt business operations. Enforce adherence through tooling, like [Azure Policy](/azure/policy) to reduce the risk of misconfiguration or non-compliant systems. Compliance often isn't limited to system configuration. Most compliance frameworks also require risk management and incident response standards. Ensure that your operational standards meet the framework requirements and staff is trained regularly. Refer to the [Adopt preparedness](./refresh-adopt-preparedness.md) article for detailed guidance on this topic.
-
-## Synergy between security, compliance, and availability
-
-- **Proactive threat mitigation:** Security measures proactively mitigate threats that could impact system availability. For example, preventing DDoS attacks ensures continuous service availability.
-
-- **Reliability and trust:** Compliance with recognized standards builds trust with customers and stakeholders, ensuring that systems are reliable and continuously available.
-
-- **System resilience:** Secure and compliant systems are generally more resilient to attacks and failures. This resilience directly translates to higher availability.
-
-- **Continuous monitoring and improvement:** Compliance with standards often requires continuous monitoring and regular audits. These practices help identify and address vulnerabilities and issues that could affect availability.
 
 ## Resources
 
