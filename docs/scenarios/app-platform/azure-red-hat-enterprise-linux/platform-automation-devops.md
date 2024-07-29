@@ -35,7 +35,7 @@ As an alternative identity management solution, you can join RHEL to create an e
 
 ### Red Hat Ansible Automation Platform design considerations
 
-Red Hat Ansible Automation Platform (AAP) helps to standardize technical workflows and recurring tasks. You can use AAP to orchestrate workflows, provision processes for new systems, and create recurring operational tasks. To reduce complexity, use one common automation platform and language. Fully automated workflows accelerate application innovation and simplify mass workload migrations across on-premises environments and cloud environments.
+Red Hat Ansible Automation Platform (AAP) helps standardize technical workflows and recurring tasks. You can use AAP to orchestrate workflows, provision processes for new systems, and create recurring operational tasks. To reduce complexity, use one common automation platform and language. Fully automated workflows accelerate application innovation and simplify mass workload migrations across on-premises environments and cloud environments.
 
 Benefits of RHEL as a platform automation strategy include:
 
@@ -47,7 +47,7 @@ Benefits of RHEL as a platform automation strategy include:
 
 You can implement: 
 
-- A self-managed AAP instance either via on-premises infrastructure, cloud infrastructure, or both. You can use a RHEL deployment or a Red Hat OpenShift Container Platform deployment.
+- A self-managed AAP instance via on-premises infrastructure, cloud infrastructure, or both. You can use a RHEL deployment or a Red Hat OpenShift Container Platform deployment.
 
 - A self-managed AAP instance in a public cloud.
 - A managed AAP instance in a public cloud.
@@ -70,7 +70,7 @@ Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/m
 
 - **Streamlined integration**: AAP on Azure is integrated with Azure services. Microsoft and Red Hat developed and security tested the Ansible collection for Azure, so you need minimal setup, and you get maximum support. Use AAP on Azure as part of your hybrid cloud automation strategy to unify management and automation across hybrid cloud, Internet of Things, and edge deployments.
 - **Existing committed Azure spend**: You can use existing committed spending with Microsoft to purchase Red Hat AAP on Azure. Use committed spending so that teams across your entire organization can deploy, configure, and automate components seamlessly. Integrated billing means you get one bill and full visibility into the cost. 
-- **Automation beyond the cloud**: With AAP on Azure, you can deploy applications in your Microsoft Azure cloud and then extend across your infrastructure. Deploy, run, and scale applications across Azure and hybrid cloud environments.
+- **Automation beyond the cloud**: With AAP on Azure, you can deploy applications in your Microsoft Azure cloud and then extend them across your infrastructure. Deploy, run, and scale applications across Azure and hybrid cloud environments.
 - **Support**: Red Hat and Microsoft partnered to build AAP on Azure to ensure consistent, security-focused operations. Red Hat manages, services, and supports the application so that your IT team can focus on delivering automation strategies. 
 
 #### Other considerations for managed mode
@@ -86,7 +86,7 @@ AAP on Azure in managed mode uses the following resource groups:
 - **A new or existing resource group in your tenant**. This resource group includes a single resource that refers to the AAP on Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades. But Red Hat doesn't manage the resource group.
 	
 - **A multitenant managed resource group (MRG)** that contains most of the required infrastructure to operate AAP on Azure. The Red Hat tenant and your tenant share this multitenant resource group. Red Hat has full administrative control. You have read-only access to the resource group. 
-- **An AKS node pool resource group (NPRG)**. Microsoft requires an NPRG for AKS deployments. An NPRG contains resources that AKS uses to function. This resource group is created on deployment. Red Hat doesn't manage this resource group. For more information, see [Microsoft AKS documentation](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
+- **An Azure Kubernetes Service (AKS) node pool resource group (NPRG)**. Microsoft requires an NPRG for AKS deployments. An NPRG contains resources that AKS uses to function. This resource group is created on deployment. Red Hat doesn't manage this resource group. For more information, see [Microsoft AKS documentation](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
 
 For AAP on Azure in managed mode, also consider the following factors: 
 
@@ -96,7 +96,7 @@ For AAP on Azure in managed mode, also consider the following factors:
 
 #### Other considerations for self-managed mode 
 
-AAP on Azure in self-managed mode provides many of the same benefits of managed AAP. But where managed mode runs within an AKS cluster, self-managed mode automation platform resources are VM-based.
+AAP on Azure in self-managed mode provides many of the same benefits of managed AAP. But where managed mode runs within an AKS cluster, self-managed mode automation platform resources are virtual machine (VM)-based.
 
 For AAP on Azure in self-managed mode, consider the following factors: 
 
@@ -107,7 +107,7 @@ For AAP on Azure in self-managed mode, consider the following factors:
 
 ## Design recommendations
 
-When you operate the RHEL platform for Azure landing zones, use Red Hat-certified content and validated content collections from Red Hat Automation Hub. The following collections have prominent roles in the automation framework:
+When you operate the RHEL platform for Azure landing zones, use Red Hat-certified content and validated content collections from Red Hat automation hub. The following collections have prominent roles in the automation framework:
 
 - **redhat.rhel_idm**
   - Configure IdM primary VMs.
@@ -148,7 +148,7 @@ For more information, see:
 
 - [IaC](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code). Explore the benefits of implementing Azure landing zones via IaC. Learn about considerations related to code structure, tools, and technology. 
 - [Environments](/azure/cloud-adoption-framework/ready/considerations/environments). Learn how to use multiple environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
-- [Test-driven development](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development). Learn how to use unit testing to improve the quality of new features and improvements in the Azure landing zone codebase. 
+- [Test-driven development](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development). Learn how to use unit testing to improve the quality of new features and make improvements in the Azure landing zone code base. 
 
 When you have the requisite source code management tooling in place and the source code management processes established from the previous sections, you can implement automation. Develop Ansible automation code with accompanying IaC or configuration as code to deploy core infrastructure and support the RHEL platform for Azure landing zones model. For greenfield deployments, you can automate the following tasks for a full environmental implementation. For brownfield deployments, you can automate only the tasks that your use case requires.
 
@@ -166,13 +166,13 @@ When you have the requisite source code management tooling in place and the sour
     - Automation controller VMs.
     - Execution node VMs.
     - Hop node VMs (optional).
-    - Automation Hub VMs.
+    - Automation hub VMs.
     - Event-Driven Ansible VMs (if enabled).
-    - Azure Database for PostgreSQL Server and necessary databases for the controller, Hub, and Event-Driven Ansible components. High availability or disaster recovery Azure Database for PostgreSQL configurations require extra automation, either via replication shipping, log shipping, or [Crunchy Postgres](https://www.crunchydata.com/solutions/ansible).
+    - Azure Database for PostgreSQL server and the necessary databases for the controller, Hub, and Event-Driven Ansible components. High availability or disaster recovery Azure Database for PostgreSQL configurations require extra automation via replication shipping, log shipping, or [Crunchy Postgres](https://www.crunchydata.com/solutions/ansible).
 - Create load balancers (application gateways).
     - Front end for Capsule VMs 
     - Front end for AAP controller VMs 
-    - Front end for Automation Hub VMs 
+    - Front end for Automation hub VMs 
 - Create application security groups.
     - IdM infrastructure
     - AAP infrastructure
@@ -187,10 +187,10 @@ After core platform infrastructure is in place, you can implement automation for
 1. Promote content views (CV) and composite content views (CCV) to development.
 1. Deploy RHEL development test systems from Satellite host groups. RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite. 
 1. Update or create Azure network security groups based on application communication paths.
-1. Update or create Azure application security groups to provide extra layered security for multi-tier application stacks.
+1. Update or create Azure application security groups to provide extra layered security for multiple-tier application stacks.
 1. Update RHEL development systems, and deploy and configure desired applications from Satellite development CV or CCV.
    - Deploy to a single RHEL instance for a simple application stack.
-   - Deploy to several RHEL instances for multi-tier application stacks.
+   - Deploy to several RHEL instances for multiple-tier application stacks.
    - Configure an application stack.
 1. Run an application testing framework.
    - If the test fails, notify OnCall automation administration to help with troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
@@ -203,10 +203,10 @@ Subsequent stages in the lifecycle pipeline are slightly different from the deve
 1. Deploy RHEL QA test systems from Satellite host groups. RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite.
        
 1. Update or create Azure network security groups based on application communication paths.
-1. Update or create Azure application security groups to provide extra layered security for multi-tier application stacks. 
+1. Update or create Azure application security groups to provide extra layered security for multiple-tier application stacks. 
 1. Update RHEL QA systems, and deploy and configure desired applications from CV or CCV in Satellite QA.
    - Deploy to a single RHEL instance for a simple application stack.
-   - Deploy to several RHEL instances for multi-tier application stacks. 
+   - Deploy to several RHEL instances for multiple-tier application stacks. 
    - Configure an application stack.
 1. Run an application testing framework.
    - If the test fails, notify OnCall automation administration to help with troubleshooting and analysis. Exit the automation workflow. RHEL test systems remain deployed for post-mortem failure analysis.
@@ -282,7 +282,7 @@ For more information, see [ARM template documentation](/azure/azure-resource-man
   ] 
 }  
 ```
-You can use Bicep domain-specific language to reduce the complexity of the JSON syntax and minimize the learning curve for people that are new to Azure. Bicep is a transparent abstraction compared to an ARM template that uses JSON, and Bicep preserves the JSON template capabilities. During deployment, the Bicep command-line interface converts a Bicep file into an ARM template that uses JSON. 
+You can use Bicep domain-specific language to reduce the complexity of the JSON syntax and minimize the learning curve for people who are new to Azure. Bicep is a transparent abstraction compared to an ARM template that uses JSON, and Bicep preserves the JSON template capabilities. During deployment, the Bicep command-line interface converts a Bicep file into an ARM template that uses JSON. 
 
 The examples in this section show the difference between a Bicep file and the equivalent JSON template. Both examples deploy a storage account. 
 
