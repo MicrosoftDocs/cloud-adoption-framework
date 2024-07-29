@@ -1,7 +1,7 @@
 ---
 title: Platform automation considerations for Red Hat Enterprise Linux on Azure
 description: Learn about the tools, features, and services to automate various tasks and manage the Red Hat Enterprise Linux lifecycle within your Azure environment.
-author: AnthonyDelagarde, parmstro, heatmiser
+author: parmstro
 ms.author: joelsisk
 ms.date: 07/24/2024
 ms.topic: conceptual
@@ -153,7 +153,6 @@ For more information, see:
 When you have the requisite source code management tooling in place and the source code management processes established from the previous sections, you can implement automation. Develop Ansible automation code with accompanying IaC or configuration as code to deploy core infrastructure and support the RHEL platform for Azure landing zones model. For greenfield deployments, you can automate the following tasks for a full environmental implementation. For brownfield deployments, you can automate only the tasks that your use case requires.
 
 - Create Azure resource groups.
-
 - Create virtual networks.
 - Create subnets. 
 - Create network security groups.
@@ -168,7 +167,7 @@ When you have the requisite source code management tooling in place and the sour
     - Hop node VMs (optional).
     - Automation hub VMs.
     - Event-Driven Ansible VMs (if enabled).
-    - Azure Database for PostgreSQL server and the necessary databases for the controller, Hub, and Event-Driven Ansible components. High availability or disaster recovery Azure Database for PostgreSQL configurations require extra automation via replication shipping, log shipping, or [Crunchy Postgres](https://www.crunchydata.com/solutions/ansible).
+    - Azure Database for PostgreSQL server and the necessary databases for the controller, hub, and Event-Driven Ansible components. High availability or disaster recovery Azure Database for PostgreSQL configurations require extra automation via replication shipping, log shipping, or [Crunchy Postgres](https://www.crunchydata.com/solutions/ansible).
 - Create load balancers (application gateways).
     - Front end for Capsule VMs 
     - Front end for AAP controller VMs 

@@ -1,7 +1,7 @@
 ---
 title: Security considerations for Red Hat Enterprise Linux on Azure
 description: Learn about key design considerations and recommendations for security in Red Hat Enterprise Linux on Azure infrastructure.
-author: jhajduk-microsoft, parmstro, heatmiser
+author: parmstro
 ms.author: jhajduk
 ms.date: 7/24/2024
 ms.topic: conceptual

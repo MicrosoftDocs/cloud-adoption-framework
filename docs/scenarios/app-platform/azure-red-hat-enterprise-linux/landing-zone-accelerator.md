@@ -1,7 +1,7 @@
 ---
 title: Azure Red Hat Enterprise Linux landing zone accelerator
 description: Learn how to use the Red Hat Enterprise Linux (RHEL) landing zone accelerator to create a consistent, repeatable, and secure environment deployment.
-author: terrymandin, parmstro, heatmiser
+author: parmstro
 ms.author: temandin
 ms.date: 7/24/2024
 ms.topic: conceptual
