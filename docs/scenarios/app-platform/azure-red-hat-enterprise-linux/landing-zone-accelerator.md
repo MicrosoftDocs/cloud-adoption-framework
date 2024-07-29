@@ -47,6 +47,8 @@ The following diagram shows the landing zone accelerator architecture.
 
 :::image type="content" source="./images/landing-zone-accelerator/landing-zone-architecture.svg" alt-text="Diagram that shows the landing zone accelerator architecture." border="false" lightbox="./images/landing-zone-accelerator/landing-zone-architecture.svg":::
 
+*Download a [Visio file](https://github.com/Microsoft/CloudAdoptionFramework/tree/main/scenarios/app-platform/azure-rhel/azure-landing-zone-rhel-full-view.vsdx) of this architecture.*
+
 ## Next step
 
 [Identity and access management for your Azure RHEL landing zone](./identity-access-management.md)
