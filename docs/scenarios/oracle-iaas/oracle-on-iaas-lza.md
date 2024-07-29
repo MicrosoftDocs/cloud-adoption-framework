@@ -12,13 +12,13 @@ ms.custom: think-tank
 
 # Oracle on Azure IaaS landing zone accelerator
 
-The Oracle on Azure IaaS landing zone accelerator is an open-source collection of Terraform/Bicep and Ansible templates that you can use to automate the deployment of an environment capable of hosting Oracle on Azure IaaS Virtual Machines. It can provide a specific architectural approach and reference implementation to prepare your landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+The Oracle on Azure IaaS landing zone accelerator is an open-source collection of Terraform/Bicep and Ansible templates that you can use to automate the deployment of an environment capable of hosting Oracle on Azure Virtual Machines. It can provide a specific architectural approach and reference implementation to prepare your landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
 
 Customers adopt Oracle on Azure IaaS in various ways. The landing zone accelerator can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
 
 ## To begin, implement an Azure landing zone
 
-The Oracle on Azure IaaS landing zone accelerator assumes that an Azure landing zone has been successfully implemented, although it can also be leveraged if your infrastructure does not conform to Azure landing zones. For more information on this prerequisite, review these articles:
+The Oracle on Azure IaaS landing zone accelerator assumes that an Azure landing zone has been successfully implemented. However, you can use the Oracle on Azure IaaS landing zone accelerator if your infrastructure does not conform to Azure landing zones. For more information on this prerequisite, review these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
