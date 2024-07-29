@@ -375,7 +375,7 @@ For more information, see:
 
 Azure Policy directly applies to resources within Azure environments, but its principles and governance can indirectly influence Azure DevOps practices. For example, Azure Policy can affect: 
 
-- **Compliance in CI/CD pipelines**: You can integrate compliance checks into your Azure pipelines. For example, ensure that any infrastructure that you deploy through Azure DevOps complies with the policies that you define in Azure Policy.
+- **Compliance in CI/CD pipelines**: You can integrate compliance checks into your pipelines. For example, ensure that any infrastructure that you deploy through Azure DevOps complies with the policies that you define in Azure Policy.
 
 - **Environment consistency**: Use Azure Policy to enforce specific configurations or resource types to ensure that the environments that you deploy to through Azure DevOps are consistent and compliant. 
 - **Security and governance**: Policies can enforce security standards and governance practices on the resources that Azure DevOps Projects manages. This regulation ensures that the development lifecycle includes compliance with organizational and regulatory standards. 
