@@ -5,6 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 keywords: ai applications, what are ai applications, speech recognition apis, computer vision apis, decision logic apis
 ---

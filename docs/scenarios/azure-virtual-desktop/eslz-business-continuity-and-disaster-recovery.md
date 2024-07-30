@@ -60,6 +60,11 @@ For host pool VM resiliency, consider these factors:
 
 - Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
 
+> [!TIP]
+>
+> - To check if resources are deployed in a zone resilient fashion, see [Azure Policy Initiative for Zone Resilience](/azure/governance/policy/samples/built-in-initiatives#resilience).
+> - For more insights about the Azure Policy Initiative for Zone Resilience, see [AzAdvertizer: Resources should be Zone Resilient](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/130fb88f-0fc9-4678-bfe1-31022d71c7d5.html).
+
 - Availability Sets - This option ensures host pool resiliency only at the single Azure datacenter level. Azure availability sets for virtual machines have a formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
   > [!NOTE]

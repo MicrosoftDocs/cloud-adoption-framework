@@ -401,6 +401,8 @@ items:
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
+            - name: Azure Virtual Network Manager in Azure landing zones
+              href: ready/azure-best-practices/azure-virtual-network-manager.md
 
         - name: Security
           items:
@@ -465,6 +467,8 @@ items:
               href: ready/considerations/automation.md
           - name: Subscription vending
             href: ready/landing-zone/design-area/subscription-vending.md
+          - name: Common subscription vending product lines
+            href: ready/landing-zone/design-area/subscription-vending-product-lines.md
           - name: DevOps
             items:
             - name: DevOps considerations
@@ -877,7 +881,7 @@ items:
           items:
           - name: Overview
             href: manage/azure-server-management/ongoing-management-overview.md
-          - name: Enable guest configuration policy
+          - name: Enable machine configuration policy
             href: manage/azure-server-management/guest-configuration-policy.md
           - name: Critical changes (tracking and alerting)
             href: manage/azure-server-management/enable-tracking-alerting.md

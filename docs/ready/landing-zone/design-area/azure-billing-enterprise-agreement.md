@@ -10,10 +10,10 @@ ms.custom: think-tank, UpdateFrequency.5
 
 # Plan for Enterprise Agreement enrollment
 
-Enterprise Agreement enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides billing foundation for your subscriptions and how your digital estate is administered. The Cost Management + Billing blade in the Azure portal helps you to manage your Enterprise Agreement enrollment. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
+Enterprise Agreement enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides billing foundation for your subscriptions and how your digital estate is administered. The Microsoft Cost Management blade in the Azure portal helps you to manage your Enterprise Agreement enrollment. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
 
->[!NOTE]
-> The Azure EA portal ([https://ea.azure.com](https://ea.azure.com)) has been retied as of February 15, 2024, customers should now use the Cost Management + Billing blade in the Azure portal to manage their enrollments as documented further in:
+> [!NOTE]
+> The Azure EA portal [https://ea.azure.com](https://ea.azure.com) has been retired as of February 15, 2024. Customers should now use the Cost Management blade in the Azure portal to manage their enrollments as documented further in:
 >
 > - [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration)
 > - [Get started with your Enterprise Agreement billing account](/azure/cost-management-billing/manage/ea-direct-portal-get-started)
@@ -22,9 +22,9 @@ Enterprise Agreement enrollment represents the commercial relationship between M
 
 - Departments help to segment costs into logical groupings and set a budget or quota at the department level. The quota isn't firmly enforced; it's used for reporting purposes.
 
-- Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
+- Accounts are organizational units in the Cost Management blade of the Azure portal. They can be used to manage subscriptions and access reports.
 
-- Subscriptions are the smallest units in the Azure EA portal. They're containers for Azure services that are managed by a Service Administrator. This is where your organization deploys Azure services.
+- Subscriptions are the smallest units in the Azure portal. They're containers for Azure services that are managed by a Service Administrator. This is where your organization deploys Azure services.
 
 - [Enterprise Agreement enrollment roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles) link users with their functional role. These roles are:
 
@@ -52,7 +52,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - A range of administrators can be assigned to a single enrollment.
 
-- Each subscription should have a designated account owner. See [Azure EA portal administration guide](/azure/cost-management-billing/manage/ea-portal-administration#change-azure-subscription-or-account-ownership) for details on how to change this, if needed.
+- Each subscription should have a designated account owner. See [Azure EA administration guide](/azure/cost-management-billing/manage/ea-portal-administration#change-azure-subscription-or-account-ownership) for details on how to change this, if needed.
 
 - Each account owner is a subscription owner for any subscriptions provisioned under that account.
 
@@ -72,7 +72,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - An organization can have various structures, including functional, divisional, geographic, matrix, or team structures. Using departments and accounts to map your organization's structure to your enrollment hierarchy can help with separating billing.
 
-- Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which can use Azure metadata (for example, tags and location) to explore and analyze your organization's costs.
+- Use [Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which can use Azure metadata (for example, tags and location) to explore and analyze your organization's costs.
 
 - Restrict and minimize the number of account owners within the enrollment to limit administrator access to subscriptions and associated Azure resources.
 
@@ -88,8 +88,8 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Don't move or rename an Enterprise Agreement account in Microsoft Entra ID.
 
-- Periodically audit the Azure EA portal to review who has access, and when possible, avoid using a Microsoft account.
+- Periodically audit the Cost Management blade in the Azure portal to review who has access, and when possible, avoid using a Microsoft account.
 
-- [Enable both **DA View Charges** and **AO View Charges** on every Enterprise Agreement enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Azure Cost Management + Billing data.
+- [Enable both **DA View Charges** and **AO View Charges** on every Enterprise Agreement enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Cost Management data.
 
-- Any user that has permissions upon an enrollment to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles), must be protected with Multi-Factor Authentication (MFA) as any other privileged account should be as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)
+- Any user that has permissions upon an enrollment to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles), must be protected with multifactor authentication as any other privileged account should be as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)

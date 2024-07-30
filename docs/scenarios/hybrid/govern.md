@@ -22,9 +22,7 @@ Well-defined governance starts with sound resource consistency practices. Organi
 - Tag resources from AWS, GCP, and so on.
 - Query your resources to see where each is hosted.
 
-To get started, [inventory and tag your hybrid and multicloud resources](../../manage/hybrid/server/best-practices/arc-inventory-tagging.md).
-
-After you establish your tagging standards and bring on some of your assets, you can begin governing those resources by using familiar governance tools like Azure Policy. To assign policies to your hybrid and multicloud resources, see the recommended practices on [managing Azure Arc enabled servers with Azure Policy](../../manage/hybrid/server/best-practices/arc-policies-mma.md).
+After you establish your tagging standards and bring on some of your assets, you can begin governing those resources by using familiar governance tools like Azure Policy.
 
 ## Governance disciplines
 

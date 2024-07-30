@@ -12,9 +12,9 @@ ms.custom: internal, e2e-retail
 
 Industry priority scenarios aim to unlock the highest level of your digital retail maturity in the cloud, Intelligent Retail—implementing the master data management (MDM) approach to integrate consumer data within one dashboard. Understanding data throughout the consumer shopping journey requires gathering analytics—a deep view inside individual consumer product affinity, advertising effectiveness, and item forecast needs. This happens with a cohesive data model—an open data model for both internal and external solution providers that—
 
-- ensures data is only visible to the entities that require it
-- natively manages read/write privileges
-- allows for rapid, secure deployment of solutions
+- Ensures data is only visible to the entities that require it
+- Natively manages read/write privileges
+- Allows for rapid, secure deployment of solutions
 
 Implementing industry priority scenarios (IPS), you can harmonize your loosely coupled datasets, and implement a master data management (MDM) program to realize targeted, successful business outcomes.
 
@@ -41,9 +41,9 @@ Great customer service is—and has long been—the core art of retail. But the 
 
 In your strategy and plan document—do you require that your:
 
-- central IT, a cloud center of excellence (CCoE), or other forms of centralized operations be responsible for operating all workloads?
-- on-premises datacenter locations be integrated into your cloud environment?
-- certain deployments be included—that require adherence to regulatory compliance standards, such as the Payment Card Industry Data Security Standard (PCI DSS)?
+- Central IT, a cloud center of excellence (CCoE), or other forms of centralized operations be responsible for operating all workloads?
+- On-premises datacenter locations be integrated into your cloud environment?
+- Certain deployments be included—that require adherence to regulatory compliance standards, such as the Payment Card Industry Data Security Standard (PCI DSS)?
 
 The two use cases for Know your customer are personalization and omnichannel optimization. Personalization is the use of customer behavioral data across channels to tailor shopping experiences and offer the right product, in the right place, at the right time. Omnichannel optimization enables customers to switch platforms, devices, and channels—maintaining a coherent experience.
 

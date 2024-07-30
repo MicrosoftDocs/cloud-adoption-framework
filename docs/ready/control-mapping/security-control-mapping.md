@@ -39,7 +39,7 @@ Gather all existing and required lists of compliance controls from the Security 
 
 :::image type="content" source="./media/formalized-controls-list-template.jpg" alt-text="Screenshot of a formalized controls list template." lightbox="./media/formalized-controls-list-template.jpg":::
 
-_A sample of formalized controls list._
+*A sample of formalized controls list.*
 
 ### 2. Map the controls to Microsoft cloud security benchmark and create set of custom controls
 
@@ -49,9 +49,9 @@ You can also use common frameworks that are mapped to both your organization’s
 
 :::image type="content" source="./media/single-control-mapping-sample.jpg" alt-text="Screenshot of single control sample." lightbox="./media/single-control-mapping-sample.jpg":::
 
-_Single control mapping example: Your organization's control objectives_
+*Single control mapping example: Your organization's control objectives*
 
-_The table above shows one of the unique control objectives with key words highlighted._
+*The table above shows one of the unique control objectives with key words highlighted.*
 
 In this example, we can look at the existing categorization of a given control ‘Application Security' to identify it as an application-related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the Microsoft cloud security benchmark controls and guidance for a proper match, we can see that there are many controls that might apply and map appropriately.
 

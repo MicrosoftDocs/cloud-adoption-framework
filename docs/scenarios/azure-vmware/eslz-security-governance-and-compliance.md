@@ -70,7 +70,7 @@ Consider the following factors when deciding which systems, users, or devices ca
 
   Use Azure Arc for servers to onboard your guest VMs. Once onboarded, use Azure Log Analytics, Azure Monitor, and Microsoft Defender for Cloud to collect logs and metrics and create dashboards and alerts. Use Microsoft Defender Security Center to protect and alert on threats associated with VM guests. For more information, see [Integrate and deploy Azure native services in Azure VMware Solution](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers).
 
-  Deploy the Log Analytics agent on VMware vSphere VMs before starting a migration, or when deploying new guest VMs. Configure the MMA agent to send metrics and logs to an Azure Log Analytics workspace. After the migration, verify that the Azure VMware Solution VM reports alerts in Azure Monitor and Microsoft Defender for Cloud.
+  Deploy the Azure Monitor Agent on VMware vSphere VMs before starting a migration, or when deploying new guest VMs. Configure Data Collection Rules to send metrics and logs to an Azure Log Analytics workspace. After the migration, verify that the Azure VMware Solution VM reports alerts in Azure Monitor and Microsoft Defender for Cloud.
 
   Alternatively, use a solution from an Azure VMware Solution certified partner to assess VM security postures and provide regulatory compliance against Center for Internet Security (CIS) requirements.
 
@@ -112,7 +112,7 @@ Consider implementing the following recommendations when planning for environmen
 
 - **Security, planned maintenance, and Service Health alerts:** Understand and view service health to plan and respond to outages and issues appropriately. Configure [Service Health alerts](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/serviceIssues) for Azure VMware Solution service issues, planned maintenance, health advisories, and security advisories. Schedule and plan Azure VMware Solution workload activities outside of Microsoft-suggested maintenance windows.
 
-- **Cost governance:** Monitor costs for good financial accountability and budget allocation. Use a cost management solution for cost tracking, cost allocation, budget creation, cost alerts, and good financial governance. For Azure billed charges, use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) tools to create budgets, generate alerts, allocate costs, and produce reports for financial stakeholders.
+- **Cost governance:** Monitor costs for good financial accountability and budget allocation. Use a cost management solution for cost tracking, cost allocation, budget creation, cost alerts, and good financial governance. For Azure billed charges, use [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) tools to create budgets, generate alerts, allocate costs, and produce reports for financial stakeholders.
 
 - **Azure services integration:** Avoid using the public endpoint of the Azure platform as a service (PaaS), which can lead to traffic leaving the desired network boundaries. To ensure that traffic stays within a defined virtual network boundary, use a private endpoint to access Azure services like Azure SQL Database and Azure Blob Storage.
 
@@ -124,7 +124,7 @@ Security posture awareness for Azure VMware Solution workload VMs helps you unde
 
 - **Use [Azure Arc enabled servers](/azure/azure-arc/servers/overview)** to manage Azure VMware Solution guest VMs with tools that replicate Azure native resource tooling, including:
 
-  - Azure Policy to govern, report, and audit guest configurations and settings
+  - Azure Policy to govern, report, and audit machine configurations and settings
   - Azure Automation State Configuration and supported extensions to simplify deployments
   - Update Management to manage updates for the Azure VMware Solution application VM landscape
   - Tags to manage and organize Azure VMware Solution application VM inventory
@@ -135,7 +135,7 @@ Security posture awareness for Azure VMware Solution workload VMs helps you unde
 
 - **Workload VM logging and monitoring:** Enable diagnostics metrics and logging on workload VMs to more easily debug OS and application issues. Implement log collection and querying capabilities that provide quick response times for debugging and troubleshooting. Enable near-real time [VM insights](/azure/azure-monitor/vm/vminsights-overview) on workload VMs for prompt detection of performance bottlenecks and operational issues. Configure [log alerts](/azure/azure-monitor/alerts/alerts-log) to capture boundary conditions for workload VMs.
 
-  Deploy the Log Analytics agent (MMA) on VMware vSphere workload VMs before migration, or when deploying new workload VMs in the Azure VMware Solution environment. Configure the MMA with an Azure Log Analytics workspace, and [link the Azure Log Analytics workspace with Azure Automation](/azure/automation/how-to/region-mappings). Validate the status of any workload VM MMA agents deployed before migration with Azure Monitor after migration.
+  Deploy the Azure Monitor Agent on VMware vSphere workload VMs before migration, or when deploying new workload VMs in the Azure VMware Solution environment. Configure Data Collection Rules to send metrics and logs to an Azure Log Analytics workspace, and [link the Azure Log Analytics workspace with Azure Automation](/azure/automation/how-to/region-mappings). Validate the status of any workload VM monitoring agents deployed before migration with Azure Monitor.
 
 - **Workload VM update governance:** Delayed or incomplete updates or patching are top attack vectors that can result in exposing or compromising Azure VMware Solution workload VMs and applications. Ensure timely update installations on guest VMs.
 

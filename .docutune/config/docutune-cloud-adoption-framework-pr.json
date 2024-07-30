@@ -8,12 +8,16 @@
   ],
 
   "Command": "Fix",
+  "SentenceCase": true,
   "Downcase": false,
   "FixMetadata": true,
   "MarkdownListIndicator": "-",
   "PreloadTOCFiles": [ "docs/scenarios/hybrid/toc.yml" ],
   "Exclude": [
-    "SECURITY.md"
+    "SECURITY.md",
+    "docs/_bread/toc.yml",
+    "templates/",
+    "whats-new.md"
   ],
   "TermFiles": [
     "Bundle-Standard.txt",
@@ -22,7 +26,5 @@
     "Dictionary-EntraRebrand.ps1"
   ],
   "RemoveTermSets": [
-//    "invalid-microsoft-can-may",
-//    "*azure-batch*"
   ]
 }

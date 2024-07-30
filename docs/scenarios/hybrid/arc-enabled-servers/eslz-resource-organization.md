@@ -18,7 +18,7 @@ Before onboarding any machine onto Azure Arc, it's important to define a structu
 
 When designing this structure, be aware of [Azure Resource Manager service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits) which may apply to some components of your end-to-end solution. There are no limits to the number of Arc-enabled servers you can add to a resource group or subscription.
 
-After you've created a taxonomy structure and agreed on naming standards, it's recommended to apply tags to the Azure Arc-enabled server resources. Once a server is registered in Azure, it can benefit from standard Azure constructs such as [resource tags](../../../manage/hybrid/server/best-practices/arc-inventory-tagging.md). A server registered in Azure means it has a resource ID and becomes part of the resource group within a subscription.
+After you've created a taxonomy structure and agreed on naming standards, it's recommended to apply tags to the Azure Arc-enabled server resources. Once a server is registered in Azure, it can benefit from standard Azure constructs such as resource tags. A server registered in Azure means it has a resource ID and becomes part of the resource group within a subscription.
 
 Resource tags allow you to add metadata to a resource to quickly locate it and automate operational tasks. These actions are important to your day-to-day tasks as described in the [Cloud Adoption Framework tagging strategy](../../../ready/azure-best-practices/naming-and-tagging.md). Specifically for Azure Arc-enabled servers, it's a good practice to include a tag that reflects the "hosting platform" for Azure Arc-enabled resources and the physical "location".
 
@@ -34,5 +34,5 @@ For more guidance for your hybrid cloud adoption journey, review the following r
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
-- Learn how to apply [resource tags](../../../manage/hybrid/server/best-practices/arc-inventory-tagging.md) for Azure Arc-enabled servers.
+- Learn how to apply resource tags for Azure Arc-enabled servers.
 - Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

@@ -5,6 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 08/25/2023
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: devx-track-python
 keywords: what is machine learning, azure machine learning, machine learning tools, mlops, automated machine learning
 ---

@@ -50,9 +50,9 @@ Review the following sections to find recommended security controls and governan
 
 - Use [Just-in-Time access](/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting your session hosts. Avoid granting direct RDP access to session hosts. AVD session hosts use Reverse Connect transport to establish remote sessions.
 
-- Use [Adaptive Network Hardening features](/azure/defender-for-cloud/adaptive-network-hardening#:~:text=From%20Defender%20for%20Cloud's%20menu,adaptive%20network%20hardening%20(2).&text=The%20insights%20panel%20shows%20the,defended%20with%20adaptive%20network%20hardening.) in Microsoft Defender for Cloud to find network security group configurations that limit ports and source IPs with reference to external network traffic rules.
+- Use [Adaptive Network Hardening features](/azure/defender-for-cloud/adaptive-network-hardening) in Microsoft Defender for Cloud to find network security group configurations that limit ports and source IPs with reference to external network traffic rules.
 
-- Collect your Azure Firewall (or third-party firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Azure Sentinel or a similar service.
+- Collect your Azure Firewall (or third-party firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Microsoft Sentinel or a similar service.
 
 - Only use a private endpoint for Azure files that are used for [FSLogix Profile containers](/fslogix/configure-profile-container-tutorial).
 
@@ -97,7 +97,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest through platform-managed encryption keys.
   - [Encryption at the VM host](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) (Azure server that your VM is allocated to). Each virtual machine's temporary disk and OS/data disk cache data are stored on the VM host. When encryption at the VM host is enabled, that data is encrypted at rest and flows encrypted to the Storage service to be persisted.  
 
-- Deploy an information protection solution like [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or a third party solution, which makes sure sensitive information gets stored, processed, and transmitted securely by your organization's technology systems.
+- Deploy an information protection solution like [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or a third party solution, which makes sure sensitive information is stored, processed, and transmitted securely by your organization's technology systems.
 
 - Use the [Security Policy Advisor for Microsoft 365 Apps for enterprise](/deployoffice/admincenter/overview-office-cloud-policy-service) to improve Office deployment security. This tool identifies policies you can apply to your deployment for more security, and also recommends policies based on their effects on your security and productivity.
 
@@ -107,11 +107,11 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Use Azure Tags](/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. To identify Azure Virtual Desktop's associated compute cost, tag all your host pools and virtual machines. Tag Azure Files or Azure NetApp Files resources to track the storage cost associated with FSLogix User Profile Containers, custom OS images, and MSIX app attach (if used).
 
-- Define the [minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules.
+- Define the [minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies) to enforce tagging rules.
 
-- [Set budget(s) in Azure Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
+- [Set budget(s) in Microsoft Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
 
-- [Create Azure Cost Management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor Azure usage and spending against Azure Virtual Desktop Landing zone.
+- [Create Cost Management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor Azure usage and spending against Azure Virtual Desktop Landing zone.
 
 - Configure the [Start VM on Connect feature](/azure/virtual-desktop/start-virtual-machine-connect) to save costs by allowing end users to turn on their VMs only when they need them.
 
@@ -123,7 +123,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Multi-session session hosts management with Intune](/mem/intune/fundamentals/azure-virtual-desktop-multi-session) allows you to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Intune admin center, just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), can use both device-based configuration targeted to devices or user-based configuration targeted to users.
 
-- Audit and configure the hardening of your session hosts' operating system by using [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration). Use the [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
+- Audit and configure the hardening of your session hosts' operating system by using [Azure Policy machine configuration](/azure/governance/machine-configuration/overview). Use the [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
 
 - [Use Azure Policy built-in definitions](/azure/azure-monitor/policy-reference)  to configure the diagnostics settings for Azure Virtual Desktop resources like workspaces, application groups, and host pools.
 

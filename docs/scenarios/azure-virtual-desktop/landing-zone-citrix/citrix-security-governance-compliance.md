@@ -182,10 +182,10 @@ By using NSGs to allow only expected traffic in the Citrix Cloud environment, yo
 
 | Source | Destination | Protocol | Port | Purpose |
 |----|----|----|----|----|
-| Cloud Connectors | \*.digicert.com | HTTP | 80 | Certificate Revocation Check |
-| Cloud Connectors | \*.digicert.com | HTTPS | 443 | Certificate Revocation Check |
-| Cloud Connectors | dl.cacerts.digicert.com/DigiCertAssuredIDRootCA.crt | HTTPS | 443 | Certificate Revocation Check |
-| Cloud Connectors | dl.cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt | HTTPS | 443 | Certificate Revocation Check |
+| Cloud Connectors | `*.digicert.com` | HTTP | 80 | Certificate Revocation Check |
+| Cloud Connectors | `*.digicert.com` | HTTPS | 443 | Certificate Revocation Check |
+| Cloud Connectors | `dl.cacerts.digicert.com/DigiCertAssuredIDRootCA.crt` | HTTPS | 443 | Certificate Revocation Check |
+| Cloud Connectors | `dl.cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt` | HTTPS | 443 | Certificate Revocation Check |
 | Cloud Connectors | Cloud Connectors | TCP | 80 | Communication between controllers |
 | Cloud Connectors | Cloud Connectors | TCP | 89 | Local host cache |
 | Cloud Connectors | Cloud Connectors | TCP | 9095 | Orchestration service |
@@ -194,7 +194,7 @@ By using NSGs to allow only expected traffic in the Citrix Cloud environment, yo
 | Cloud Connector | VDA | TCP | 80 (bidirect) | Application and performance discovery |
 | VDA | Gateway Service | TCP | 443 | Rendezvous Protocol |
 | VDA | Gateway Service | UDP | 443 | EDT UDP over 443 to Gateway Service |
-| VDA | \*.nssvc.net <br> \*.c.nssv.net <br> \*.g.nssv.net | TCP UDP | 443 | Gateway service domains and subdomains |
+| VDA | `*.nssvc.net` <br> `*.c.nssv.net` <br> `*.g.nssv.net` | TCP UDP | 443 | Gateway service domains and subdomains |
 | Citrix Provisioning Services | Cloud Connectors | HTTPS | 443 | Citrix Cloud Studio integration |
 | Citrix License Server | Citrix Cloud | HTTPS | 443 | Citrix Cloud Licensing integration |
 | CVAD Remote PowerShell SDK | Citrix Cloud | HTTPS | 443 | Any system running remote PowerShell scripts via the SDK |
@@ -205,7 +205,7 @@ If you use Citrix Application Delivery Management (ADM), see [System Requirement
 
 ## Antivirus
 
-Antivirus software is a crucial element for end user environment protection. Configuring antivirus appropriately in a Citrix DaaS environment is key to a smooth operation. Incorrect antivirus configuration can result in performance issues, degraded user experiences, or timeouts and failures of various components. For more information about how to configure antivirus in your Citrix DaaS environment, see [Tech Paper: Endpoint Security, Antivirus, and Antimalware Best Practices](https://docs.citrix.com/en-us/tech-zone/build/tech-papers/antivirus-best-practices.html).
+Antivirus software is a crucial element for end user environment protection. Configuring antivirus appropriately in a Citrix DaaS environment is key to a smooth operation. Incorrect antivirus configuration can result in performance issues, degraded user experiences, or timeouts and failures of various components. For more information about how to configure antivirus in your Citrix DaaS environment, see [Tech Paper: Endpoint Security, Antivirus, and Antimalware Best Practices](https://community.citrix.com/tech-zone/build/tech-papers/antivirus-best-practices#_=_).
 
 ## Next step
 

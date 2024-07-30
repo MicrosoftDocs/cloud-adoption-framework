@@ -5,6 +5,7 @@ author: DonnaForlin
 ms.author: krbock
 ms.date: 06/21/2023
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 ---
 
@@ -97,7 +98,7 @@ Real-time inference is a method that enables you to trigger model inference at a
 
 Consider the following best practices for real-time inference:
 
-- **Compute options.** The best way to implement real-time inference is to deploy the model that's in an online endpoint to a managed online endpoint or a Kubernetes online endpoint. Managed online endpoints deploy your machine learning models immediately by using CPU or GPU machines in Azure. This method is scalable and fully managed. Kubernetes online endpoints deploy models and serve online endpoints on your fully configured and managed Kubernetes cluster. For more information, see [Managed online endpoints vs Kubernetes online endpoints](/azure/machine-learning/concept-endpoints-online#managed-online-endpoints-vs-kubernetes-online-endpoints).
+- **Compute options.** The best way to implement real-time inference is to deploy the model that's in an online endpoint to a managed online endpoint or a Kubernetes online endpoint. Managed online endpoints deploy your machine learning models immediately by using CPU or GPU machines in Azure. This method is scalable and fully managed. Kubernetes online endpoints deploy models and serve online endpoints on your fully configured and managed Kubernetes cluster. Get started with deploying an open-source large language model (LLM) for inferencing on your cluster with the [AI toolchain operator add-on](/azure/aks/ai-toolchain-operator) for Azure Kubernetes Service (AKS). For more information, see [Managed online endpoints vs Kubernetes online endpoints](/azure/machine-learning/concept-endpoints-online#managed-online-endpoints-vs-kubernetes-online-endpoints).
 
 - **Multiregional deployment and high availability.** Regional deployment and high-availability architectures are examples of real-time inference scenarios because latency and model performance are critical. To reduce latency in multiregional deployments, locate the model as close as possible to the consumption point. For the model and the supporting infrastructure, follow the business' high-availability and disaster recovery principles and strategy.
 

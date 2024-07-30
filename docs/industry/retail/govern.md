@@ -59,9 +59,7 @@ Most retail organizations require compliance with Payment Card Industry data sec
 
 Microsoft Azure maintains PCI DSS validation, which can make it easier to govern PCI DSS compliant deployments in the cloud. For more information, see [Azure and PCI DSS](/azure/compliance/offerings/offering-pci-dss#azure-and-pci-dss). Your organization also shares in responsibilities to fully comply with PCI DSS standards.
 
-If your cloud deployments require PCI DSS compliance, review the [control mapping of PCI DSS v3.2.1](/azure/governance/blueprints/samples/pci-dss-3.2.1/control-mapping). You can deploy the blueprint sample and assign it to specific Azure environments. It can automate many of the required PCI controls. For more information, see [Deploy the PCI DSS v3.2.1 blueprint sample](/azure/governance/blueprints/samples/pci-dss-3.2.1/deploy).
-
-For compliance standards that have been automated in a similar Azure blueprint approach, see [Azure blueprint samples](/azure/governance/blueprints/samples/). If you prefer to work with built-in Azure Policy initiatives, see [Regulatory compliance built-ins in Azure Policy](/azure/governance/policy/samples/iso-27001).
+To discover built-in Azure Policy initiatives, see [Azure Policy Samples - Regulatory compliance](/azure/governance/policy/samples/#regulatory-compliance).
 
 ## Next steps
 
