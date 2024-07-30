@@ -16,7 +16,7 @@ This article describes how to set up and manage Oracle workloads within your Azu
 
 ## Define Oracle on Azure
 
-When considering Oracle on Azure adoption scenarios there are the following two principal technology platform options available:
+Oracle on Azure adoption scenarios provide two principal technology platform options:
 
 - **Oracle on Azure Virtual Machines**: Run Oracle databases and enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure. You can use an Oracle Linux image, Red Hat Enterprise Linux (RHEL), or another endorsed operating system. There are multiple VMs and storage options available.
 

@@ -32,7 +32,7 @@ items:
     - name: Implementation options
       items:
       - name: Oracle on Azure IaaS landing zone accelerator
-        href: oracle-on-iaas-lza.md
+        href: oracle-landing-zone-accelerator.md
   - name: Migrate your Oracle workloads
     items: 
     - name: Capacity planning
