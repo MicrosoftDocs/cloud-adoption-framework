@@ -6,8 +6,6 @@ ms.author: bamajeed
 ms.reviewer: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ---
 
 # Security guidelines for Oracle Database@Azure

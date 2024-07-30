@@ -5,8 +5,6 @@ author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ---
 
 # Network topology and connectivity for Oracle Database@Azure
