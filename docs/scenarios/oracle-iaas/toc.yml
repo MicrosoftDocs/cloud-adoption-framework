@@ -33,6 +33,10 @@ items:
           href: oracle-disaster-recovery-iaas.md
         - name: Business continuity and disaster recovery for Oracle Database@Azure
           href: oracle-disaster-recovery-odaa.md
+    - name: Implementation options
+      items:
+      - name: Oracle on Azure IaaS landing zone accelerator
+        href: oracle-landing-zone-accelerator.md
   - name: Migrate your Oracle workloads
     items: 
     - name: Capacity planning
