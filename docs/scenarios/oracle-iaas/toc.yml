@@ -26,7 +26,11 @@ items:
           - name: Business continuity and disaster recovery
             href: oracle-disaster-recovery-oracle-landing-zone.md
       - name: Management
-        href: oracle-manage-monitor-workload.md
+        items: 
+          - name: Manage and monitor Oracle workloads on Azure Virtual Machines
+            href: oracle-manage-monitor-iaas.md
+          - name: Manage and monitor Oracle Database@Azure
+            href: oracle-manage-monitor-odaa.md
       - name: Governance discipline
         href: governance-compliance-oracle-landing-zone.md
   - name: Migrate your Oracle workloads
