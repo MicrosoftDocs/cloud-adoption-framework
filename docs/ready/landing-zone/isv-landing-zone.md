@@ -3,7 +3,7 @@ title: Independent software vendor (ISV) considerations for Azure landing zones
 description: Discuss Independent Software Vendor (ISV) specific considerations for Azure landing zones.
 author: arsenvlad
 ms.author: arsenv
-ms.date: 03/14/2023
+ms.date: 07/30/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -133,7 +133,7 @@ Each Microsoft Entra tenant must have its own domain name. If your organization 
 
 Avoid using separate Microsoft Entra tenants for pre-production and production environments. Rather than creating two tenants like `contoso-saas-ops-preprod.com` and `contoso-saas-ops-prod.com` with separate Azure subscriptions under each, you should create one Microsoft Entra tenant. You can use management groups and Azure RBAC to govern the access to subscriptions and resources under this single tenant.
 
-For more information on the using multiple Microsoft Entra tenants, see [Azure landing zones and multiple Microsoft Entra tenants](../landing-zone/design-area/multi-tenant/overview.md) and [securing Azure environments with Microsoft Entra whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
+For more information on the using multiple Microsoft Entra tenants, see [Azure landing zones and multiple Microsoft Entra tenants](../landing-zone/design-area/multi-tenant/overview.md) and [resource isolation with multiple tenants](/entra/architecture/secure-multiple-tenants).
 
 ## Management groups
 

@@ -70,3 +70,4 @@ The following section describes the migration process in more detail. The steps 
 
 > [!div class="nextstepaction"]
 > [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure)
+> [Oracle on Azure IaaS landing zone accelerator](oracle-landing-zone-accelerator.md)
