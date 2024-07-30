@@ -24,9 +24,11 @@ items:
           - name: Security overview for Oracle Database@Azure
             href: oracle-security-overview-odaa.md
       - name: Management
-        items:
-        - name: Manage and monitor Oracle on Azure virtual machines
-          href: oracle-manage-monitor-workload.md
+        items: 
+        - name: Management and monitoring for Oracle workloads on Azure Virtual Machines
+          href: oracle-manage-monitor-iaas.md
+        - name: Management and monitoring for Oracle Database@Azure
+          href: oracle-manage-monitor-odaa.md
         - name: Governance discipline
           href: governance-compliance-oracle-landing-zone.md
         - name: Business continuity and disaster recovery for Oracle on Azure virtual machines
