@@ -28,18 +28,18 @@ For additional design considerations, see [Plan for Oracle on Azure adoption](/a
 
 ## Design recommendations
 
-### Health Monitoring Metric Enablement
+### Monitor for health and performance
 
-You should collect quantitative metrics for Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure such as CPU, memory utilization, storage utilization, database operations, SQL queries, and overall transactions. You could use the Azure Monitor metrics to diagnose and proactively troubleshoot issues or your monitoring tool of choice. The database metrics are for operational readiness and long-term sustainment.
+You should collect quantitative metrics such as CPU use, memory utilization, storage utilization, database operations, SQL queries, and overall transactions. You can use Azure Monitor metrics, or your monitoring tool of choice, to diagnose and proactively troubleshoot issues. The collection and review of database metrics helps to ensure operational readiness and long-term sustainment.
 
 - Create a custom dashboard in the Azure portal with an aggregated view of the various metrics collected. For more information on how to create a custom dashboard, see [Create a dashboard in the Azure portal](/azure/azure-portal/azure-portal-dashboards).
 - To review the required roles, see [Roles, permissions, and security in Azure Monitor](/azure/azure-monitor/roles-permissions-security).
 - If you require granular database monitoring, see [Enterprise Manager Database Management](https://www.oracle.com/database/technologies/manageability.html).
 - For information on the Oracle comprehensive monitoring guide, see [Oracle Cloud Database Metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html).
 
-### Key Metric Monitoring
+### Key metric monitoring
 
-The following table has the initial recommended settings. Add counters based on your enterprise needs. Make sure that you set each monitoring setting against all the available nodes in the cluster. Azure Monitor doesn't allow you to select multiple objects at the same time when adding metrics. You'll need to select each Exadata cluster node with the specified settings.
+The following table contains initial recommended settings. Add counters based on your enterprise needs. Set each monitoring setting against all the available nodes in the cluster. Azure Monitor doesn't allow you to select multiple objects at the same time when adding metrics. You'll need to select each Exadata cluster node to enter specified settings.
 
 Set alerts in your monitoring solution for critical workloads. If you use Azure Monitor, see [Azure Monitor action groups](/azure/azure-monitor/alerts/action-groups) to set alerts.
 
@@ -55,7 +55,7 @@ Set alerts in your monitoring solution for critical workloads. If you use Azure 
 | OCI Database Cluster Memory Utilization                | 5 Minutes                                               | 90%                            | The amount of memory the Exadata Database clusters are consuming. |
 | Average Node Status                                    | 5 Minutes                                               | 0 (this dimension means false) | Evaluate if the Exadata Database cluster node within the cluster is available or unavailable. |
 
-For detailed information and key metrics to monitor Oracle Exadata, see [Oracle Cloud Database Metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html).
+For detailed information about key metrics to monitor Oracle Exadata, see [Oracle Cloud Database Metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html).
 
 ## Next steps
 
