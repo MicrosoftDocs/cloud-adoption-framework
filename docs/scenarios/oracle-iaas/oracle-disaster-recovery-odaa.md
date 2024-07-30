@@ -11,7 +11,6 @@ ms.custom:
   - engagement-fy24
 --- 
 
-
 # Business continuity and disaster recovery considerations for Oracle Database@Azure
 
 This article builds on considerations and recommendations defined in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). 
@@ -20,7 +19,7 @@ The first step to building a resilient architecture for your workload environmen
 
 ## Design considerations
 
-- Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure is colocated in Azure datacenters and placed in one Azure availability zone. It's important to remember that availability zones are specific to a subscription. Availability zone 1 might not represent the same physical datacenter as availability zone 1 in another subscription. For more information, see [What are availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones). 
+- Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure is colocated in Azure datacenters and placed in one Azure availability zone (AZ). It's important to remember that availability zones are specific to a subscription. Availability zone 1 might not represent the same physical datacenter as availability zone 1 in another subscription. For more information, see [What are availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones). 
 - The Oracle Database@Azure solution provides native Oracle technologies, such as Real Application Cluster (RAC) and Automated Data Guard, for high availability and disaster recovery.
 - Automated Data Guard configuration for the first secondary is included in the solution. You must configure extra Data Guard replicas manually.
 - For active-active environments, consider using [Oracle GoldenGate](https://www.oracle.com/integration/goldengate/) for real-time data integration and replication capabilities, which help to ensure high availability and data consistency across your systems. This tool supports a wide range of databases and platforms, allowing seamless data movement and transformation. By using Oracle GoldenGate, you can minimize downtime during migrations and upgrades, enhancing your disaster recovery strategies. Oracle GoldenGate isn't included in the solution and licensing costs might be incurred.
@@ -39,10 +38,10 @@ Application services that are dependent on the database should be in the same av
   -	Maximum Availability Mode (SYNC) is recommended for environments where data integrity and zero data loss are paramount.
   -	Maximum Performance Mode (ASYNC) is better suited for environments where performance is critical and some data loss can be tolerated.
 
-### Cross-Region BCDR
+### Cross-region BCDR
 
 - Configure Data Guard in Maximum Performance Mode for regional BCDR based on your application capabilities and network latency between regions. For more information on network latency, see [Azure Network Latency Test Results](/azure/networking/azure-network-latency).
-- The combination of Cross-AZ and Cross-Region BCDR aligns with the "Gold" level of the [Oracle MAA Reference Architectures](https://docs.oracle.com/en/database/oracle/oracle-database/19/haiad/). The gold level architecture provides protection from a complete regional failure.
+- The combination of Cross-AZ and Cross-region BCDR aligns with the "Gold" level of the [Oracle MAA Reference Architectures](https://docs.oracle.com/en/database/oracle/oracle-database/19/haiad/). The gold level architecture provides protection from a complete regional failure.
 - Cross-AZ and Cross-Region BCDR recommendations are focused on resiliency for the Oracle Database@Azure service. You can help to ensure resilience for other application services by using Virtual Machine Scale Sets, Azure Site Recovery, Azure Front Door, or other features that enable application service availability across availability zones or regions.
 - We recommend that you use managed backups and store backup data in OCI Object Storage. 
 
