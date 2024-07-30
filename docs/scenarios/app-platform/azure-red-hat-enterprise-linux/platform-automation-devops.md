@@ -1,7 +1,7 @@
 ---
 title: Platform automation considerations for Red Hat Enterprise Linux on Azure
 description: Learn about the tools, features, and services to automate various tasks and manage the Red Hat Enterprise Linux lifecycle within your Azure environment.
-author: parmstro
+author: heisthesisko
 ms.author: joelsisk
 ms.date: 07/24/2024
 ms.topic: conceptual
