@@ -12,6 +12,8 @@ ms.custom: internal, UpdateFrequency2
 
 The CAF Secure methodology provides a structured approach for securing your Azure cloud estate. 
 
+This set of guidance applies recommendations for topics across the entirety of the CAF methodologies as security must be deeply integrated in every aspect of cloud adoption.
+
 ## The CIA Triad (Confidentiality, Integrity and Availability)
 
 The CIA Triad is a fundamental model in information security representing three core principles: [Confidentiality](./refresh-adopt-confidentiality.md), [Integrity](./refresh-adopt-integrity.md), and [Availability](./refresh-adopt-availability.md).
@@ -21,3 +23,11 @@ The CIA Triad is a fundamental model in information security representing three 
 - **Integrity:** Maintains the accuracy and completeness of data. This means protecting data from being altered or tampered with by unauthorized users, ensuring that the information remains reliable.
 
 - **Availability:** Ensures that information and resources are accessible to authorized users when needed. This involves maintaining systems and networks to prevent downtime and ensure continuous access to data.
+
+Adopting the CIA triad helps ensure that the technology that runs your business is reliable and secure and that your operations enforce reliabilty and security through well-defined, strictly followed, and proven practices. Some of the ways the principles of the triad can help ensure security and reliability are:
+
+- **Data protection:** The CIA Triad helps protect sensitive data from breaches, ensuring privacy and compliance with regulations.
+
+- **Business continuity:** Ensuring data integrity and availability is critical for maintaining business operations and avoiding downtime.
+
+- **Customer trust:** Implementing the CIA Triad builds trust with customers and stakeholders by demonstrating a commitment to data security.
