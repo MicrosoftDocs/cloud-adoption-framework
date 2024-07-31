@@ -22,7 +22,9 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Application security groups ([ASG](/azure/virtual-network/application-security-groups)) don't span or provide protection across virtual networks.
 
-- NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) are now supported through Azure Resource Manager templates.
+- NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) are used to inspect traffic flowing through a network point with an NSG attached.
+
+- [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provides similar capabilities as NSG flow logs but cover a wider ranges of use cases and simplifies the scope of traffic monitoring because you can enable logging at the virtual network level.
 
 **Design recommendations:**
 
@@ -36,7 +38,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 
-- Enable NSG flow logs and feed them into [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gain insights into internal and external traffic flows. Flow logs should be enabled on all critical VNets/subnets in your subscription as an audit-ability and security best practice.
+- Enable [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and use [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gain insights into ingress and egress traffic flows. Flow logs should be enabled on all critical virtual networks and subnets in your subscriptions, for example those containing Active Directory Domain Controllers or critical data stores. Additionally, flow logs can be used to detect and investigate potential security incidents, compliance and monitoring, and for usage optimization.
 
 - Use NSGs to selectively allow connectivity between landing zones.
 
