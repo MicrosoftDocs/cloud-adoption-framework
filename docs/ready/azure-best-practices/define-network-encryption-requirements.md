@@ -3,7 +3,7 @@ title: Define network encryption requirements
 description: Examine key design considerations and recommendations surrounding network encryption between on-premises and Azure.
 author: JefferyMitchell
 ms.author: martinek
-ms.date: 02/18/2021
+ms.date: 07/31/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -16,17 +16,17 @@ This section explores key recommendations to achieve network encryption between 
 
 - Cost and available bandwidth are inversely proportional to the length of the encryption tunnel between endpoints.
 
-- Azure [Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) enhances existing encryption-in-transit capabilities in Azure and allows seamless traffic encryption and decryption between Virtual Machines and Virtual Machines Scale Sets.
+- [Azure Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) enhances existing encryption-in-transit capabilities in Azure and allows seamless traffic encryption and decryption between virtual machines (VMs) and virtual machines scale sets.
 
 - When you're using a VPN to connect to Azure, traffic is encrypted over the internet via IPsec tunnels.
 
-- When you're using ExpressRoute with private peering, traffic isn't currently encrypted.
+- When you're using Azure ExpressRoute with private peering, traffic isn't currently encrypted.
 
-- Its is possible to configure a Site-to-Site [VPN connection over ExpressRoute private peering](/azure/vpn-gateway/site-to-site-vpn-private-peering).
+- It's possible to configure a Site-to-Site [VPN connection over ExpressRoute private peering](/azure/vpn-gateway/site-to-site-vpn-private-peering).
 
 - You can apply [media access control security (MACsec)](/azure/expressroute/expressroute-howto-MACsec) encryption to ExpressRoute Direct to achieve network encryption.
 
-- When Azure traffic moves between datacenters (outside physical boundaries not controlled by Microsoft or on behalf of Microsoft), [MACsec data-link layer encryption](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit) is used on the underlying network hardware. This is applicable to VNet peering traffic.
+- When Azure traffic moves between datacenters (outside physical boundaries not controlled by Microsoft or on behalf of Microsoft), [MACsec data-link layer encryption](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit) is used on the underlying network hardware. This is applicable to virtual network peering traffic.
 
 **Design recommendations:**
 
@@ -36,7 +36,7 @@ This section explores key recommendations to achieve network encryption between 
 
 - When you're establishing VPN connections from on-premises to Azure by using VPN gateways, traffic is encrypted at a protocol level through IPsec tunnels. The preceding diagram shows this encryption in flow `A`.
 
-- In scenarios where VM-to-VM traffic must be encrypted, inside the same VNet or across regional or global peered VNets, use [Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview).
+- If you need to encrypt VM-to-VM traffic in the same virtual network or across regional or global peered virtual networks, use [Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview).
 
 - When you're using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-MACsec) in order to encrypt traffic at Layer 2 between your organization's routers and MSEE. The diagram shows this encryption in flow `B`.
 

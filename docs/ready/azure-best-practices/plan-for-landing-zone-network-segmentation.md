@@ -3,28 +3,28 @@ title: Plan for landing zone network segmentation
 description: Examine key design considerations and recommendations surrounding network segmentation with Azure landing zones.
 author: JefferyMitchell
 ms.author: martinek
-ms.date: 10/28/2021
+ms.date: 07/31/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
 
 # Plan for landing zone network segmentation
 
-This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation.
+This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network Zero Trust implementation.
 
 **Design considerations:**
 
-- The [zero-trust model](/security/zero-trust/deploy/networks) assumes a breached state and verifies each request as though it originates from an uncontrolled network.
+- The [Zero Trust model](/security/zero-trust/deploy/networks) assumes a breached state and verifies each request as though it originates from an uncontrolled network.
 
-- An advanced zero-trust network implementation employs fully distributed ingress/egress cloud micro-perimeters and deeper micro-segmentation.
+- An advanced Zero Trust network implementation employs fully distributed ingress/egress cloud micro-perimeters and deeper micro-segmentation.
 
-- Network security groups ([NSG](/azure/virtual-network/network-security-groups-overview)) can use Azure [service tags](/azure/virtual-network/service-tags-overview) to facilitate connectivity to Azure PaaS services.
+- Network security groups ([NSGs](/azure/virtual-network/network-security-groups-overview)) can use Azure [service tags](/azure/virtual-network/service-tags-overview) to facilitate connectivity to Azure PaaS services.
 
-- Application security groups ([ASG](/azure/virtual-network/application-security-groups)) don't span or provide protection across virtual networks.
+- Application security groups ([ASGs](/azure/virtual-network/application-security-groups)) don't span or provide protection across virtual networks.
 
-- NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) are used to inspect traffic flowing through a network point with an NSG attached.
+- Use [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) to inspect traffic that flows through a network point with an NSG attached.
 
-- [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provides similar capabilities as NSG flow logs but cover a wider ranges of use cases and simplifies the scope of traffic monitoring because you can enable logging at the virtual network level.
+- [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provide capabilities that are similar to NSG flow logs but cover a wider ranges of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
 
 **Design recommendations:**
 
