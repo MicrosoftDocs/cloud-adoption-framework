@@ -16,7 +16,7 @@ This section explores key considerations and recommended approaches for capturin
 
 ## Design considerations
 
-*Azure VPN Gateway:* VPN Gateway lets you run a packet capture on a VPN gateway, a specific connection, multiple tunnels, one-way traffic, or bi-directional traffic. A maximum of five packet captures can run in parallel per gateway. They can be gateway-wide and per-connection packet captures. For more information, see [VPN packet capture](/azure/vpn-gateway/packet-capture).
+*Azure VPN Gateway:* VPN Gateway lets you run a packet capture on a VPN gateway, a specific connection, multiple tunnels, one-way traffic, or bi-directional traffic. A maximum of five packet captures can run in parallel per gateway. They can be gateway-wide and per connection packet capture. For more information, see [VPN packet capture](/azure/vpn-gateway/packet-capture).
 
 *Azure ExpressRoute:* You can use [Azure Traffic Collector](/azure/expressroute/traffic-collector) to gain visibility into traffic that traverses ExpressRoute circuits. To perform trending analysis, evaluate the amount of inbound and outbound traffic that goes through ExpressRoute. You can sample network flows that traverse the external interfaces of the Microsoft edge routers for ExpressRoute. A Log Analytics workspace receives the flow logs, and you can create your own log queries for further analysis. Traffic Collector supports both provider-managed circuits and ExpressRoute Direct circuits that have 1 Gbps or more bandwidth. Traffic Collector also supports private peering or Microsoft peering configurations.
 
@@ -34,7 +34,7 @@ This section explores key considerations and recommended approaches for capturin
 
   - Simplify the scope of traffic monitoring. You can enable logging at the virtual network level so that you don't need to enable multiple-level flow logging to cover both subnet and NIC levels.
   
-  - Add visibility for scenarios where you can't use NSG flow logs due to platform restrictions on NSG deployments.
+  - Add visibility for scenarios where you can't use NSG flow logs because of platform restrictions on NSG deployments.
   - Provide extra details about the [Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) status and the presence of [Azure Virtual Network Manager security admin rules](/azure/virtual-network-manager/concept-virtual-network-flow-logs).
 
   For a comparison, see [Virtual network flow logs compared to network security group flow logs](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).

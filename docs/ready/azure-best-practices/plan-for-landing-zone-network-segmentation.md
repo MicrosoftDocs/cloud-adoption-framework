@@ -16,15 +16,15 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - The [Zero Trust model](/security/zero-trust/deploy/networks) assumes a breached state and verifies each request as though it originates from an uncontrolled network.
 
-- An advanced Zero Trust network implementation employs fully distributed ingress/egress cloud micro-perimeters and deeper micro-segmentation.
+- An advanced Zero Trust network implementation employs fully distributed ingress and egress cloud micro-perimeters and deeper micro-segmentation.
 
-- Network security groups ([NSGs](/azure/virtual-network/network-security-groups-overview)) can use Azure [service tags](/azure/virtual-network/service-tags-overview) to facilitate connectivity to Azure PaaS services.
+- [Network security groups (NSGs)](/azure/virtual-network/network-security-groups-overview) can use Azure [service tags](/azure/virtual-network/service-tags-overview) to facilitate connectivity to Azure platform as a service (PaaS) solutions.
 
-- Application security groups ([ASGs](/azure/virtual-network/application-security-groups)) don't span or provide protection across virtual networks.
+- [Application security groups (ASGs)](/azure/virtual-network/application-security-groups) don't span or provide protection across virtual networks.
 
 - Use [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) to inspect traffic that flows through a network point with an NSG attached.
 
-- [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provide capabilities that are similar to NSG flow logs but cover a wider ranges of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
+- [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provide capabilities that are similar to NSG flow logs but cover a wider range of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
 
 **Design recommendations:**
 
