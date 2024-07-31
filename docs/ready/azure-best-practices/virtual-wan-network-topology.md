@@ -3,7 +3,7 @@ title: Virtual WAN network topology
 description: Examine key design considerations and recommendations surrounding virtual wide area networks in Microsoft Azure.
 author: JefferyMitchell
 ms.author: martinek
-ms.date: 08/11/2022
+ms.date: 07/31/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -65,7 +65,7 @@ _Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.git
 
 - Azure Firewall Manager supports deployment of Azure Firewall in the Virtual WAN hub, known as secured virtual hub. For more information, see the [Azure Firewall Manager overview](/azure/firewall-manager/overview) for secured virtual hubs and the latest [constraints](/azure/firewall-manager/overview#known-issues).
 
-- Virtual WAN hub-to-hub traffic that goes through Azure Firewall in both source hubs and target hubs (secured virtual hubs) is supported when you enable routing intent and policies. For more information, see [Use cases for Virtual WAN Hub routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies#use-cases).
+- Virtual WAN hub-to-hub traffic that goes through Azure Firewall in both source hubs and target hubs (secured virtual hubs) is supported when you enable routing intent and policies. For more information, see [Use cases for Virtual WAN hub routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies#use-cases).
 
 - The Virtual WAN portal experience requires that all Virtual WAN resources deploy together into the same resource group.
 
