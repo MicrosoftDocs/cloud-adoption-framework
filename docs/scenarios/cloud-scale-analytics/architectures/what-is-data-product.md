@@ -3,7 +3,7 @@ title: What is a data product?
 description: Learn about data products
 author: sasever
 ms.author: sasever
-ms.date: 07/31/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -24,7 +24,7 @@ The following sections outline common characteristics of good data products.
 
 ## Data product characteristics
 
-Well-designed data products are:
+Ensure that your data products are:
 
 - **Discoverable, understandable, and trustworthy.** To provide discoverability and clarity, domain teams share and update information about each data product, its data, its meaning, the format of shape of its data, and its refresh cycle. They communicate changes to the data or shape to downstream consumers in a timely manner. To ensure trustworthiness, interfaces provide time-bounded backwards compatibility for data product shapes.
 
@@ -46,12 +46,12 @@ Ensure that your data products have the common characteristics described in this
 
 ## Data product and data application guidance for Azure
 <!---Direct Guidance for MS Products -->
-You can position all possible approaches for your data application environment within Azure data landing zones if your domain application teams use a shared platform and shared set of services.
+You can position all possible approaches for your data application environment within Azure data landing zones if your domain application teams use a shared platform and a shared set of services.
 
 :::image type="content" source="../media/data-application-options-in-adlz.png" alt-text="Diagram that shows the data-application-rg resource group from Data Applications Context and the shared-application-rg resource group from Core Services Context." lightbox="../media/data-application-options-in-adlz.png":::
 
-You can find three different data application pattern templates for Azure data landing zones in [Cloud-scale analytics data products in Azure - Sample data applications](../../data-management/architectures/data-landing-zone-data-products.md#sample-data-applications).
+For data application pattern templates for Azure data landing zones, see [Sample data applications](../../data-management/architectures/data-landing-zone-data-products.md#sample-data-applications).
 
-## Next steps
+## Next step
 
 - [Design considerations for self-serve data platforms](self-serve-data-platforms.md)
