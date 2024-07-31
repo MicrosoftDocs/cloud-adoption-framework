@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 ## Introduction
 
-Availability refers to a system's ability to remain operational through normal and abnormal conditions and is a critical aspect of the Microsoft Cloud Adoption Framework (CAF). It is critical in maintaining business continuity and minimizing downtime, which are essential for organizational success in the cloud. Abnormal conditions include spiking utilization, malfunction, or a malicious attack, among other scenarios. A system's availability is dependent upon the reliability mechanisms built into its design. Highly available systems have reliabilty mechanisms built in at every level: infrastructure design, application design, operations, and governance. This article provides guidance on adopting availability in these areas to help ensure that your cloud estate remains operational and is resilient against security threats and malfunctions.
+Availability refers to a system's ability to remain operational through normal and abnormal conditions and is a critical aspect of the Microsoft Cloud Adoption Framework (CAF). It is critical in maintaining business continuity and minimizing downtime, which are essential for organizational success in the cloud. Abnormal conditions include spiking utilization, malfunction, or a malicious attack, among other scenarios. A system's availability is dependent upon the reliability mechanisms built into its design. Highly available systems have reliability mechanisms built in at every level: infrastructure design, application design, operations, and governance. This article provides guidance on adopting availability in these areas to help ensure that your cloud estate remains operational and is resilient against security threats and malfunctions.
 
 ## Strategy
 
@@ -49,11 +49,11 @@ Adopt application [design patterns](/azure/well-architected/reliability/design-p
 
 ### Operational practices to support availability
 
-Maintaining a highly available cloud estate can only be done the teams operating the cloud systems have standardized, mature practices that are strictly followed. These practices should include:
+Maintaining a highly available cloud estate can only be done if the teams operating the cloud systems have standardized, mature practices that are strictly followed. These practices should include:
 
 - **Operational continuity:** Organizations must plan for continuous operations even under attack conditions. This includes establishing processes for rapid recovery and maintaining critical services at a degraded level until full recovery is possible. Refer to the [Adopt preparedness](./refresh-adopt-preparedness.md) guide for detailed guidance on this topic.
 
-- **Robust and continuous observability:** An organization's ability to detect security incidents as they happen allows them to initiate their incident response plans quickly, helping to minimize the business impact as much as possible. Incident detection is only possible through a well-designed monitoring and alerting system, following best-practices for threat detection . Refer to the Well-Architected Framework's [observability guide](/azure/well-architected/operational-excellence/observability) and [security monitoring and threat detection guide](/azure/well-architected/security/monitor-threats) for detailed guidance on this topic.
+- **Robust and continuous observability:** An organization's ability to detect security incidents as they happen allows them to initiate their incident response plans quickly, helping to minimize the business impact as much as possible. Incident detection is only possible through a well-designed monitoring and alerting system, following best-practices for threat detection. Refer to the Well-Architected Framework's [observability guide](/azure/well-architected/operational-excellence/observability) and [security monitoring and threat detection guide](/azure/well-architected/security/monitor-threats) for detailed guidance on this topic.
 
 - **Incindent response:** Mitigating security incidents is integral to business continuity. To efficiently respond to incidents, an organization must have strict standard procedures that are applied to every incident and followed by all teams involved in the mitigation. These procedures are captured in the incident response plan. Refer to the Well-Architected Framework's [incident response guide](/azure/well-architected/security/incident-response) for detailed guidance on this topic.
 
@@ -96,7 +96,7 @@ Maintaining a highly available cloud estate can only be done the teams operating
 - **[Azure Load Balancer](/azure/load-balancer/load-balancer-overview):** is a high-performance, ultra-low-latency Layer 4 load-balancing service (inbound and outbound) for all UDP and TCP protocols. It's built to handle millions of requests per second while ensuring your solution is highly available. Load Balancer is zone redundant, ensuring high availability across availability zones. It supports both a regional deployment topology and a [cross-region topology](/azure/load-balancer/cross-region-overview).
 
 - **[Azure Availability Zones](/azure/reliability/availability-zones-overview)**:** Deploy resources across multiple, physically separate locations within an Azure region to protect against datacenter failures.
-- 
+
 - **[Azure Virtual Machines (VMs)](/azure/virtual-machines/):**
     - **[Availability sets](/azure/virtual-machines/availability-set-overview):** Ensure that VMs are distributed across multiple isolated hardware nodes in a cluster to avoid single points of failure.
     - **[Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview):** Automatically scale the number of VMs based on demand, providing redundancy and improved performance.
@@ -106,5 +106,3 @@ Maintaining a highly available cloud estate can only be done the teams operating
     - Node Pools: Manage and scale different types of workloads independently within the same AKS cluster.
 
 - **[Azure Storage](/azure/storage/blobs/storage-blobs-overview):** Various redundancy options are available for storage services, like Locally Redundant Storage (LRS), Geo-Redundant Storage (GRS), and Zone-redundant Storage, ensuring data availability throughout data center or regional outages.
-
-- 
