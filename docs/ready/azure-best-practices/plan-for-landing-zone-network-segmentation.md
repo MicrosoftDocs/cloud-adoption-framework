@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network Zero Trust implementation.
 
-**Design considerations:**
+## Design considerations
 
 - The [Zero Trust model](/security/zero-trust/deploy/networks) assumes a breached state and verifies each request as though it originates from an uncontrolled network.
 
@@ -26,7 +26,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provide capabilities that are similar to NSG flow logs but cover a wider range of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
 
-**Design recommendations:**
+## Design recommendations
 
 - Delegate subnet creation to the landing zone owner. This will enable them to define how to segment workloads across subnets (for example, a single large subnet, multitier application, or network-injected application). The platform team can use Azure Policy to ensure that an NSG with specific rules (such as deny inbound SSH or RDP from internet, or allow/block traffic across landing zones) is always associated with subnets that have deny-only policies.
 
@@ -34,7 +34,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - The application team should use application security groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
 
-    ![Diagram that shows how application security group works.](./media/azure-asg.png)
+    [ ![Diagram that shows how application security group works.](./media/azure-asg.png) ](./media/azure-asg.png#lightbox)
 
 - Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 

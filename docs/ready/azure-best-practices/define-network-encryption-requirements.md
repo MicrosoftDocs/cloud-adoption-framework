@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 This section explores key recommendations to achieve network encryption between on-premises and Azure as well as across Azure regions.
 
-**Design considerations:**
+## Design considerations
 
 - Cost and available bandwidth are inversely proportional to the length of the encryption tunnel between endpoints.
 
@@ -28,7 +28,7 @@ This section explores key recommendations to achieve network encryption between 
 
 - When Azure traffic moves between datacenters (outside physical boundaries not controlled by Microsoft or on behalf of Microsoft), [MACsec data-link layer encryption](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit) is used on the underlying network hardware. This is applicable to virtual network peering traffic.
 
-**Design recommendations:**
+## Design recommendations
 
 ![Diagram that illustrates encryption flows.](./media/enc-flows.png)
 
