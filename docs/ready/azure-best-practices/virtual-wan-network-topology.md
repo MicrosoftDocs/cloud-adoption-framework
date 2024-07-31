@@ -107,7 +107,7 @@ We recommend Virtual WAN for new large or global network deployments in Azure wh
 
 - For internet outbound protection and filtering, consider deploying Azure Firewall in the virtual hub.
 
-- [Security provided by NVA firewalls](/azure/virtual-wan/about-nva-hub#security-provided-by-nva-firewalls). Customers can also deploy NVAs into a Virtual WAN hub that perform both SD-WAN connectivity and Next-Generation Firewall capabilities. Customers can connect on-premises devices to the NVA in the hub and also use the same appliance to inspect all North-South, East-West, and Internet-bound traffic.
+- [Security provided by NVA firewalls](/azure/virtual-wan/about-nva-hub#security-provided-by-nva-firewalls). Customers can also deploy NVAs into a Virtual WAN hub that performs both SD-WAN connectivity and Next-Generation Firewall capabilities. Customers can connect on-premises devices to the NVA in the hub and also use the same appliance to inspect all North-South, East-West, and Internet-bound traffic.
 
 - When you're deploying partner networking technologies and NVAs, follow the partner vendor's guidance to ensure there are no conflicting configurations with Azure networking.
 
