@@ -88,6 +88,26 @@ items:
         href: app-services/governance.md
       - name: Platform automation and DevOps
         href: app-services/platform-automation-and-devops.md
+    - name: Azure Red Hat Enterprise Linux (RHEL)
+      items:
+      - name: Azure Red Hat Enterprise Linux landing zone accelerator
+        href: azure-red-hat-enterprise-linux\landing-zone-accelerator.md
+      - name: Identity and access management
+        href: azure-red-hat-enterprise-linux\identity-access-management.md
+      - name: Business continuity and disaster recovery
+        href: azure-red-hat-enterprise-linux\business-continuity-disaster-recovery.md
+      - name: Network topology and connectivity
+        href: azure-red-hat-enterprise-linux\network-topology-connectivity.md
+      - name: Resource organization
+        href: azure-red-hat-enterprise-linux\resource-organization.md
+      - name: Security
+        href: azure-red-hat-enterprise-linux\security.md
+      - name: Management
+        href: azure-red-hat-enterprise-linux\management-monitoring.md
+      - name: Governance
+        href: azure-red-hat-enterprise-linux\governance-compliance.md
+      - name: Platform automation 
+        href: azure-red-hat-enterprise-linux\platform-automation-devops.md
     - name: Azure Red Hat OpenShift (ARO)
       items:
       - name: Azure Red Hat OpenShift landing zone accelerator
