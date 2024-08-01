@@ -1,5 +1,5 @@
 ---
-title: Management and monitoring considerations for Oracle Database@Azure
+title: Manage and monitor Oracle Database@Azure
 description: Learn about considerations and recommendations that you can use to manage and monitor your Oracle Database@Azure and Exadata Database services.
 author: AnthonyDelagarde
 ms.author: anthdela
@@ -8,7 +8,7 @@ ms.date: 08/01/2024
 ms.topic: conceptual
 ---
 
-# Management and monitoring considerations for Oracle Database@Azure
+# Manage and monitor Oracle Database@Azure
 
 This article provides business practices that you can implement to manage and monitor Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure. Implement these considerations when you create your overall design and when you onboard this service within your Azure enterprise landing zone.
 
