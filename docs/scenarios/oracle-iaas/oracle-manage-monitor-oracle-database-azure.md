@@ -20,7 +20,7 @@ Consider these key topics before you deploy Oracle Database@Azure and Exadata Da
 
 - Consider your network plan before you deploy your resources. You deploy Oracle Exadata Database resources to a private subnet that isn't accessible from either on-premises or spoke virtual networks without deploying a network virtual appliance (NVA). An NVA isn't a traditional firewall. An NVA is a Linux virtual machine (VM) with a user-defined route that provides the next hop IP address and custom *iptables*. You must deploy iptables if you have an on-premises enterprise monitoring solution.
 - Familiarize yourself with network constraints. The subnets that you deploy within a virtual network and that are associated with Oracle Exadata Database clusters are delegated private subnets. Delegated subnets don't allow network communication outside of the virtual network without deploying an NVA. For more information, see [Network planning constraints](/azure/oracle/oracle-db/oracle-database-network-plan#constraints).
-- Choose a network topology that best supports your migration method of choice when you create your network plan. Your migration method should monitor the process when you move your critical data. Options for migration include Oracle Recovery Manager, Oracle Data Guard, Oracle Data Pump, or a Linux VM with the Network File System role installed. Consult with your Oracle and Microsoft representative for detailed guidance.
+- Choose a network topology that best supports your migration method of choice when you create your network plan. Your migration method should monitor the process when you move your critical data. Options for migration include Oracle Recovery Manager, Oracle Data Guard, Oracle Data Pump, or a Linux VM that has the Network File System role installed. Consult with your Oracle and Microsoft representative for detailed guidance.
 - Determine how to integrate monitor alerts into your triage process.
 - Make a list of key stakeholders that you need to notify when an alert is triggered.
 - Review monitoring metrics with database administrators to align expectations.
@@ -43,7 +43,7 @@ You should collect quantitative metrics such as CPU usage, memory usage, storage
 
 ### Monitor key metrics
 
-The following table contains initial recommended settings. You can add counters based on your organization's needs. Set each monitoring setting against all the available nodes in the cluster. In Azure Monitor, you can't select multiple objects at the same time when you add metrics. To enter specified settings, you must select each Exadata cluster node.
+The following table contains initial recommended settings for Oracle Cloud Database metrics. You can add counters based on your organization's needs. Set each monitoring setting against all the available nodes in the cluster. In Azure Monitor, you can't select multiple objects at the same time when you add metrics. To enter specified settings, you must select each Exadata cluster node.
 
 Set alerts in your monitoring solution for critical workloads. If you use Azure Monitor, you can create [action groups](/azure/azure-monitor/alerts/action-groups).
 
