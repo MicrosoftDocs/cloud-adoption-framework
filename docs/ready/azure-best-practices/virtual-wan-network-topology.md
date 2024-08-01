@@ -3,7 +3,7 @@ title: Virtual WAN network topology
 description: Examine key design considerations and recommendations surrounding virtual wide area networks in Microsoft Azure.
 author: JefferyMitchell
 ms.author: martinek
-ms.date: 08/11/2022
+ms.date: 07/31/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -65,7 +65,7 @@ _Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.git
 
 - Azure Firewall Manager supports deployment of Azure Firewall in the Virtual WAN hub, known as secured virtual hub. For more information, see the [Azure Firewall Manager overview](/azure/firewall-manager/overview) for secured virtual hubs and the latest [constraints](/azure/firewall-manager/overview#known-issues).
 
-- Virtual WAN hub-to-hub traffic, by way of Azure Firewall, isn't currently supported when the Azure Firewall deploys inside of the Virtual WAN hub itself (secured virtual hub). Depending on your requirements, you have workarounds. You can place the [Azure Firewall in a spoke virtual network](/azure/virtual-wan/scenario-route-through-nva), or use NSGs for traffic filtering.
+- Virtual WAN hub-to-hub traffic that goes through Azure Firewall in both source hubs and target hubs (secured virtual hubs) is supported when you enable routing intent and policies. For more information, see [Use cases for Virtual WAN hub routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies#use-cases).
 
 - The Virtual WAN portal experience requires that all Virtual WAN resources deploy together into the same resource group.
 
@@ -107,13 +107,15 @@ We recommend Virtual WAN for new large or global network deployments in Azure wh
 
 - For internet outbound protection and filtering, consider deploying Azure Firewall in the virtual hub.
 
-- [Security provided by NVA firewalls](/azure/virtual-wan/about-nva-hub#security-provided-by-nva-firewalls). Customers can also deploy NVAs into a Virtual WAN hub that perform both SD-WAN connectivity and Next-Generation Firewall capabilities. Customers can connect on-premises devices to the NVA in the hub and also use the same appliance to inspect all North-South, East-West, and Internet-bound traffic.
+- [Security provided by NVA firewalls](/azure/virtual-wan/about-nva-hub#security-provided-by-nva-firewalls). Customers can also deploy NVAs into a Virtual WAN hub that performs both SD-WAN connectivity and Next-Generation Firewall capabilities. Customers can connect on-premises devices to the NVA in the hub and also use the same appliance to inspect all North-South, East-West, and Internet-bound traffic.
 
 - When you're deploying partner networking technologies and NVAs, follow the partner vendor's guidance to ensure there are no conflicting configurations with Azure networking.
 
 - For brownfield scenarios where you're migrating from a hub-and-spoke network topology not based on Virtual WAN, see [Migrate to Azure Virtual WAN](/azure/virtual-wan/migrate-from-hub-spoke-topology).
 
 - Create Azure Virtual WAN and Azure Firewall resources within the connectivity subscription.
+
+- Use [Virtual WAN hub routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies) to support traffic that goes between secured hubs.
 
 - Don't create more than 500 virtual network connections per Virtual WAN virtual hub.
 
