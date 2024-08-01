@@ -13,21 +13,21 @@ ms.custom:
 
 # Business continuity and disaster recovery considerations for Oracle Database@Azure
 
-This article expands on considerations and recommendations outlined in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md).
+This article expands on considerations and recommendations that are defined in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md).
 
-The first step to building a resilient architecture for your workload environment is to determine the availability requirements for your solution. You need to identify the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failure. RTO defines the maximum downtime an application can tolerate after an incident, and RPO specifies the maximum data loss that an application can tolerate because of a disaster. After you determine your solution’s requirements, you can design your architecture to meet your RTO and RPO objectives.
+The first step to building a resilient architecture for your workload environment is to identify the availability requirements for your solution. You need to determine the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failure. RTO defines the maximum downtime an application can tolerate after an incident. RPO specifies the maximum data loss that an application can tolerate because of a disaster. After you determine your solution’s requirements, you can design your architecture to meet your RTO and RPO objectives.
 
 ## Design considerations
 
-- Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure is colocated in Azure datacenters and placed in one Azure availability zone. It's important to remember that availability zones are specific to a subscription. Availability zone 1 might not represent the same physical datacenter as availability zone 1 in another subscription. For more information, see [What are availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
+- Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure is colocated in Azure datacenters and placed in one Azure availability zone. Availability zones are specific to a subscription. For example, availability zone 1 might not represent the same physical datacenter as availability zone 1 in another subscription. For more information, see [What are availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
 
 - The Oracle Database@Azure solution provides native Oracle technologies, such as Real Application Cluster (RAC) and Automated Data Guard, for high availability and DR.
 
-- Automated Data Guard configuration for the first secondary is included in the solution. You must configure extra Data Guard replicas manually.
+- The solution includes automated Data Guard configuration for the initial standby database, also known as the _first secondary_. You must manually configure any extra Data Guard replicas.
 
-- For active-active environments, consider using [Oracle GoldenGate](https://www.oracle.com/integration/goldengate/) for real-time data integration and replication capabilities. This solution helps ensure high availability and data consistency across your systems. This tool supports a wide range of databases and platforms, which allows seamless data movement and transformation. Use Oracle GoldenGate, to minimize downtime during migrations and upgrades, which enhances your DR strategies. Oracle GoldenGate isn't part of the solution, and licensing costs might be incurred.
+- For active-active environments, consider using [Oracle GoldenGate](https://www.oracle.com/integration/goldengate/) for real-time data integration and replication capabilities. This approach helps ensure high availability and data consistency across your systems. This tool supports a wide range of databases and platforms, which allows seamless data movement and transformation. Use Oracle GoldenGate to minimize downtime during migrations and upgrades, which enhances your DR strategies. Oracle GoldenGate isn't included in the solution, so you might incur licensing costs.
 
-- The Oracle Database@Azure solution and core components are constrained to the subscription and region where the instance is created. The service isn't multi-zonal and doesn't span multiple regions. You can deploy new instances to either target availability zones or target regions to achieve multi-zonal or multi-regional resiliency.
+- The Oracle Database@Azure solution and its core components are limited to the subscription and region in which the instance is created. The service isn't multi-zonal and doesn't span multiple regions. You can deploy new instances to target availability zones or target regions to achieve multi-zonal or multi-regional resiliency.
 
 - Oracle Database@Azure integrates automatic database backups by using redundant Oracle Cloud Infrastructure (OCI) Object Storage. The Oracle Database Autonomous Recovery Service provides protection for Oracle Databases that are deployed on Exadata.
 
@@ -35,13 +35,13 @@ The first step to building a resilient architecture for your workload environmen
 
 ### Cross-AZ BCDR
 
-To ensure high availability and DR protection against failures of databases, database clusters, or availability zones, use Oracle RAC on Oracle Database@Azure and a symmetric standby database located in another zone. This configuration can help you achieve data center resiliency for database services.
+To ensure high availability and DR protection against failures of databases, database clusters, or availability zones, use Oracle RAC on Oracle Database@Azure and a symmetric standby database that's located in another zone. This configuration can help you achieve data center resiliency for database services.
 
 For optimal performance, application services that are dependent on the database should be in the same availability zone as the database. If the application services are in a different subscription than the database services, you should apply the code located in [What are availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones). Use the `availabilityZoneMappings` property to identify the physical availability zone where you should colocate your services.
 
 - You can configure Data Guard in Maximum Availability mode with SYNC transport or Max Performance mode with ASYNC transport according to your application services and RPO requirements.
 
-  - We recommend that you use Maximum Availability Mode (SYNC) for environments where data integrity and zero data loss are paramount.
+  - We recommend that you use Maximum Availability Mode (SYNC) for environments where data integrity and zero data loss are the most important factors.
 
   - We recommend that you use Maximum Performance Mode (ASYNC) for environments where performance is critical and some data loss can be tolerated.
 
@@ -61,7 +61,7 @@ For optimal performance, application services that are dependent on the database
 
 - Use IaC to deploy databases in the Oracle Cloud Infrastructure. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
   
-- Use test failover and switchback operations to help ensure that they work in a real disaster scenario. Automate failover and switchback operations as much as possible to minimize errors.
+- Use test failover and switchback operations to help ensure that they work in a real disaster scenario. Automate failover and switchback operations when possible to minimize errors.
 
 ## Next steps
 
