@@ -33,6 +33,8 @@ The first step to building a resilient architecture for your workload environmen
 
 ## Design recommendations
 
+Consider these BCDR considerations for Oracle Database@Azure.
+
 ### Cross-AZ BCDR
 
 To ensure high availability and DR protection against failures of databases, database clusters, or availability zones, use Oracle RAC on Oracle Database@Azure and a symmetric standby database that's located in another zone. This configuration can help you achieve data center resiliency for database services.
