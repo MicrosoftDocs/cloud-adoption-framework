@@ -67,4 +67,5 @@ This project's team should have Oracle and Azure experts, but it's unlikely for 
 
 > [!div class="nextstepaction"]
 > [Oracle on Azure migration planning](oracle-migration-planning.md)
+>
 > [Oracle on Azure IaaS landing zone accelerator](oracle-landing-zone-accelerator.md)
