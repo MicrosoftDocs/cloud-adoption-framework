@@ -19,7 +19,7 @@ The first step to building a resilient architecture for your workload environmen
 
 ## Design considerations
 
-- Colocate Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure in Azure datacenters and place the datacenters in one Azure availability zone. Availability zones are specific to a subscription. For example, availability zone 1 in a subscription might not represent the same physical datacenter as availability zone 1 in a different subscription. For more information, see [What are availability zones](/azure/reliability/availability-zones-overviewi#physical-and-logical-availability-zones).
+- Colocate Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure in Azure datacenters and place the datacenters in one Azure availability zone. Availability zones are specific to a subscription. For example, availability zone 1 in a subscription might not represent the same physical datacenter as availability zone 1 in a different subscription. For more information, see [What are availability zones](/azure/reliability/availability-zones-overview#physical-and-logical-availability-zones).
 
 - The Oracle Database@Azure solution provides native Oracle technologies, such as Real Application Clusters (RAC) and automated Data Guard, for high availability and DR.
 
