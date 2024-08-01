@@ -114,7 +114,7 @@ With the overarching strategy and implementation plan for adopting the CIA Triad
 
 1. **Implement encryption and secure access controls**
 
-To protect sensitive information from unauthorized access, it is crucial to implement robust encryption and secure access controls. Encryption ensures that data is unreadable to unauthorized users, while access controls regulate who can access specific data and resources. Microsoft provides several options for encryption, including:
+To protect sensitive information from unauthorized access, it is crucial to implement robust encryption and secure access controls. Encryption ensures that data is unreadable to unauthorized users, while access controls regulate who can access specific data and resources. Understand the encryption capabilities of the cloud services that you deploy and enable the appropriate encryption mechanisms to meet your business requirements.
 
 2. **Access controls: adoption and enterprise institutionalization**
 
