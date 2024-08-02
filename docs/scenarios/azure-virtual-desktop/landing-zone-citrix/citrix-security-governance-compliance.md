@@ -58,11 +58,11 @@ Each Enterprise Application grants Citrix Cloud specific permissions to either t
 
 ### Built-in roles
 
-The **Contributor** built-in role works well to assign to service principal accounts at the subscription level. Once granted, Azure prompts for the required permissions during the initial connection from Citrix Cloud to Microsoft Entra ID.
+Use the Cloud Application Administrator to assign to service principal accounts at the subscription level. Granting Contributor permissions at the subscription level requires at least the Azure Role Based Access Control Administrator role to assign permissions. Once granted, Azure prompts for the required permissions during the initial connection from Citrix Cloud to Microsoft Entra ID.
 
-Any accounts used for authentication during host connection creation must also have enough permissions on the subscription. You need the Citrix Cloud to create necessary objects without restriction. Typically, you use this approach when the entire subscription is dedicated to Citrix resources.
+Any accounts used for authentication during host connection creation must also be at least a Contributor on the subscription. This level of permissions allows Citrix Cloud to create necessary objects without restriction. Typically, you use this approach when the entire subscription is dedicated to Citrix resources.
 
-Some environments don't allow service principals to have **Contributor** permissions at a subscription level. Citrix provides an alternative solution called a *narrow-scope service principal*. For a narrow-scope service principal, a Cloud Application Administrator completes an application registration manually, and then a subscription administrator manually grants the service principal account the appropriate permissions.
+Some environments don't allow service principals to have Contributor permissions at a subscription level. Citrix provides an alternative solution called a *narrow-scope service principal*. For a narrow-scope service principal, a Cloud Application Administrator completes an application registration manually, and then a subscription administrator manually grants the service principal account the appropriate permissions.
 
 Narrow-scoped service principals don't have **Contributor** permissions to the entire subscription, just to the resource groups, networks, and images required to create and manage machine catalogs. Narrow-scoped service principals require the following **Contributor** permissions:
 
