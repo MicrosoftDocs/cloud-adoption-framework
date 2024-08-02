@@ -34,7 +34,7 @@ items:
         - name: Business continuity and disaster recovery for Oracle on Azure virtual machines
           href: oracle-disaster-recovery-iaas.md
         - name: Business continuity and disaster recovery for Oracle Database@Azure
-          href: oracle-disaster-recovery-odaa.md
+          href: oracle-disaster-recovery-oracle-database-azure.md
     - name: Implementation options
       items:
       - name: Oracle on Azure IaaS landing zone accelerator
