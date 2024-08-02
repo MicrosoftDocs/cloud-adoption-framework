@@ -30,7 +30,7 @@ Azure policies in cloud-scale analytics were developed with the following design
 - Use available prebuilt policies to save time.
 - Assign policies to the highest level possible in the management group tree to simplify policy management.
 - Limit Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
-- Only use policy exceptions if necessary, and they should require global admin approval.
+- Only use policy exceptions if necessary, and they require approval.
 
 ## Azure policies for cloud-scale analytics
 
