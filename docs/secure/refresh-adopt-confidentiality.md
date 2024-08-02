@@ -230,6 +230,10 @@ Refer to the [Manange](../manage/) methodology for detailed guidance on topics r
 
 ### Policy management
 
+- [**Azure Policy**](/azure/governance/policy) Azure Policy is a cloud governance solution for Azure environments. It allows you to define policies for your environment and automatically enforce those policies. It has built-in support for many compliance frameworks and integrates seamlessly with other Microsoft tools like Azure Arc, and Defender for Cloud.
+
+### Data security
+
 - [**Purview data security:**](/purview/purview-security) Microsoft Purview is a comprehensive set of solutions that can help your organization govern, protect, and manage data, wherever it lives. Microsoft Purview solutions provide integrated coverage and help address the fragmentation of data across organizations, the lack of visibility that hampers data protection and governance, and the blurring of traditional IT management roles.
 
 ### Data encryption
