@@ -99,9 +99,7 @@ In most cases, Microsoft personnel perform operations, support, and troubleshoot
 
 ##### Customer Lockbox for Microsoft Azure
 
-In the rare circumstances when access is required, you can use Customer Lockbox for Microsoft Azure. This feature provides an interface that you can use to review and then approve or reject customer data access requests.
-
-Consider enabling Customer Lockbox. You need to have a Global Admin role to turn on this feature, because it's a tenant-wide setting. For more information about how to correctly set up role-based access control for Customer Lockbox, see [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview).
+In the rare circumstances when access is required, you can use [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview). This feature provides an interface that you can use to review and then approve or reject customer data access requests.
 
 ### Platform automation and DevOps
 
