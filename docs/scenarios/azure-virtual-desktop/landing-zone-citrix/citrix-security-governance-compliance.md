@@ -54,17 +54,17 @@ Depending on your Citrix Cloud and Microsoft Entra configuration, you can add on
 | 5c913119-2257-4316-9994-5e8f3832265b | Default connection between Microsoft Entra ID and Citrix Cloud with Citrix Endpoint Management |
 | e067934c-b52d-4e92-b1ca-70700bd1124e | Legacy connection between Microsoft Entra ID and Citrix Cloud with Citrix Endpoint Management | 
 
-Each Enterprise Application grants Citrix Cloud specific permissions to either the Microsoft Graph API or the Microsoft Entra API. For example, the Workspace subscriber sign-in application grants **User.Read** permissions to both APIs, so that users can sign in and read their profiles. For more information about the permissions granted, see [Microsoft Entra Permissions for Citrix Cloud](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-management/identity-access-management/azure-ad-permissions.html). 
+Each Enterprise Application grants Citrix Cloud specific permissions to either the Microsoft Graph API or the Microsoft Entra API. For example, the Workspace subscriber sign-in application grants **User.Read** permissions to both APIs, so that users can sign in and read their profiles. For more information about the permissions granted, see [Microsoft Entra Permissions for Citrix Cloud](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-management/identity-access-management/azure-ad-permissions.html).
 
 ### Built-in roles
 
-The **Contributor** built-in role contains the broadest permission set, and works well to assign to service principal accounts at the subscription level. Granting contributor permissions at the subscription level requires a Microsoft Entra Global Administrator account. Once granted, Azure prompts for the required permissions during the initial connection from Citrix Cloud to Microsoft Entra ID.
+After you create the service principal, grant it the Contributor role at the subscription level. Granting Contributor permissions at the subscription level requires at least the Azure Role Based Access Control Administrator role to assign permissions. Once granted, Azure prompts for the required permissions during the initial connection from Citrix Cloud to Microsoft Entra ID.
 
-Any accounts used for authentication during host connection creation must also be at least co-administrators on the subscription. This level of permissions allows Citrix Cloud to create necessary objects without restriction. Typically, you use this approach when the entire subscription is dedicated to Citrix resources.
- 
-Some environments don't allow service principals to have **Contributor** permissions at a subscription level. Citrix provides an alternative solution called a *narrow-scope service principal*. For a narrow-scope service principal, a Microsoft Entra Global Administrator completes an application registration manually, and then a subscription administrator manually grants the service principal account the appropriate permissions.
+Any accounts used for authentication during host connection creation must also be at least a Contributor on the subscription. This level of permissions allows Citrix Cloud to create necessary objects without restriction. Typically, you use this approach when the entire subscription is dedicated to Citrix resources.
 
-Narrow-scoped service principals don't have **Contributor** permissions to the entire subscription, just to the resource groups, networks, and images required to create and manage machine catalogs. Narrow-scoped service principals require the following **Contributor** permissions:
+Some environments don't allow service principals to have Contributor permissions at a subscription level. Citrix provides an alternative solution called a *narrow-scope service principal*. For a narrow-scope service principal, a Cloud Application Administrator completes an application registration manually, and then a subscription administrator manually grants the service principal account the appropriate permissions.
+
+Narrow-scoped service principals don't have Contributor permissions to the entire subscription, just to the resource groups, networks, and images required to create and manage machine catalogs. Narrow-scoped service principals require the following roles:
 
 - Pre-created resource groups: **Virtual Machine Contributor**, **Storage Account Contributor**, and **Disk Snapshot Contributor**
 - Virtual networks: **Virtual Machine Contributor**
