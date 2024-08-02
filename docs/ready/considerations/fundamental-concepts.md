@@ -58,11 +58,7 @@ The account administrator role is assigned to the email account that's used to c
 
 By default, the service administrator role for a subscription is also assigned to the email account that's used to create the Azure subscription. The service administrator has permissions to the subscription equivalent to the Azure role-based access control Owner role. The service administrator also has full access to the Azure portal. The account administrator can change the service administrator to a different email account.
 
-When you create an Azure subscription, you can associate it with an existing Microsoft Entra tenant. Otherwise, creating a new subscription creates a new Microsoft Entra tenant with an associated directory. Assign the global administrator role in the Microsoft Entra directory to the email account used to create the Microsoft Entra subscription.
-
-You can associate an email account with multiple Azure subscriptions. An account administrator can transfer a subscription to another account.
-
-For more information, see [Classic subscription administrator roles, Azure roles, and Microsoft Entra roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
+When you create an Azure subscription, you can associate it with an existing Microsoft Entra tenant. You provide an email account and can associate that email account with multiple Azure subscriptions. An account administrator can transfer a subscription to another account. For more information, see [Classic subscription administrator roles, Azure roles, and Microsoft Entra roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 ## Subscriptions and regions
 
