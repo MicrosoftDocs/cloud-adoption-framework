@@ -43,6 +43,8 @@ Understand the difference between Microsoft Entra ID roles and Azure RBAC roles.
 
   - The Azure RBAC Owner and User Access Administrator roles can modify the role assignments on Azure resources. By default, the Microsoft Entra Global Administrator role doesn't have permission to manage access to Azure resources. It must be explicitly enabled. For more information, see [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin).
 
+[!INCLUDE [global admin warning](../../../includes/global-admin-warning.md)]
+
 The following diagram shows the relationship between Microsoft Entra ID roles and Azure RBAC roles:
 
 ![Diagram showing the relationship between Microsoft Entra ID and Azure RBAC roles.](media/azure-rbac-roles.png)
