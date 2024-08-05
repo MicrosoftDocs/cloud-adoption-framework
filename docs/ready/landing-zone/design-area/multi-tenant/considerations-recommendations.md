@@ -97,6 +97,7 @@ For more information, see [Resource isolation in a single tenant](/azure/active-
 - Require approval in PIM to activate critical roles, such as the Global Administrator role. Consider creating approvers from multiple teams to approve Global Administrator usage.
 - Enable monitoring and notifications to all required stakeholders about the Global Administrator role activation.
 - Ensure that the "Access management for Azure resources" setting on Global Administrators is set to **No** where it's not required.
+[!INCLUDE [global administrator warning](../../../../includes/global-admin-warning.md)]
 - Enable and configure the following Microsoft Entra services and features to simplify the multi-tenant experience for administration and users within your organization:
   - [B2B collaboration](/azure/active-directory/external-identities/what-is-b2b)
   - [B2B direct connect](/azure/active-directory/external-identities/b2b-direct-connect-overview)
