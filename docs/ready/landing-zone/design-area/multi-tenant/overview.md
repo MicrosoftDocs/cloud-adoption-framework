@@ -63,7 +63,7 @@ When you create a new Microsoft Entra tenant, it requires extra work to provisio
 Organizations need to be clear about why they're deviating from the corporate Microsoft Entra tenant model to ensure the extra overhead and complexity is justified in meeting the requirements. There are examples of these instances in the [scenarios article](scenarios.md).
 
 >[!IMPORTANT]
-> Use [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) protect privileged roles within Microsoft Entra ID and Azure.
+> Use [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to protect privileged roles within Microsoft Entra ID and Azure.
 
 The ownership of privileged roles across internal teams and departments can provide a challenge as the Identity team and the Azure team are often in different teams, departments, and organization structures.
 
