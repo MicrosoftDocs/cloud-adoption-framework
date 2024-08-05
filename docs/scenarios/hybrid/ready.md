@@ -72,7 +72,7 @@ You might want to simplify complex and distributed environments across on-premis
 - **Manage Kubernetes applications at scale**: Use DevOps techniques to deploy and manage Kubernetes applications across environments. Ensure that you consistently deploy and configure applications from source control.
 
 - **Run Azure services anywhere**: Get automated patching, upgrades, security, and scaling on-demand across on-premises, edge, and multicloud environments for your data estate.
-- **Enable self-service access to your virtual machines**: Use Azure RBAC to grant self service ability to your VMware vSphere and System Center Virtual Machine Manager resources through Azure. Perform every VM lifecycle and power cycle operation from Azure portal and automate the operations through Azure templates, APIs, and SDKs.
+- **Enable self-service access to your virtual machines**: Use Azure role-based access control (RBAC) to grant self-service ability to your VMware vSphere and System Center Virtual Machine Manager resources through Azure. Perform every VM lifecycle and power cycle operation from Azure portal and automate the operations through Azure templates, APIs, and SDKs.
 
 ## Azure Arc customer snapshot
 
