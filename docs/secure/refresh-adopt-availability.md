@@ -16,17 +16,19 @@ Availability refers to a system's ability to remain operational through normal a
 
 ## Strategy
 
-Developing a strategy for ensuring availability in your cloud estate relies on establishing [reliability targets](/azure/well-architected/reliability/metrics). These are metrics negotiated by business and technology stakeholders that define the tolerable amount of downtime for your [workloads](/azure/cloud-adoption-framework/plan/workloads), so are typically defined per workload. Different workloads may have different reliability requirements depending on their criticality, and [user or system flows](/azure/well-architected/cross-cutting-guides/optimize-workload-using-flows) within a given workload may have different reliability requirements depending on their own criticality. The Well-Architected Framework provides detailed guidance for workload-focused reliability strategies, and it is recommended that architects and engineers base their workload designs based on that guidance.
+Refer to the [cross-cutting recommendations](./refresh-adopt-confidentiality.md#cross-cutting-guidance) in the "Adopt confidentialiy" guide.
 
-While your availability strategy may primarily be defined by workload-focused metrics, you still need a more holisitic approach to availability as it relates to security, and that is the focus of this article. By necessity, some general workload guidance is included, but it should be considered for applying broadly across your cloud estate.
+## Plan 
 
-## Plan
+Refer to the [cross-cutting recommendations](./refresh-adopt-confidentiality.md#cross-cutting-guidance) in the "Adopt confidentialiy" guide.
 
-As you plan your cloud estate, ensure that your infrastructure and application designs are optimized for availability. 
+## Ready
 
-### Adopt the landing zone model
+After completing your cloud adoption strategy and plan, you can begin your move into the Ready phase by configuring your landing zones and defining the design patterns that will be used for your workload deployments.
 
-The [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/) approach helps you design your cloud foundation to ensure that your entire cloud estate is highly manageable and optimized to allow you to design secure, scalable workloads that are isolated from each other and from functions that are either uninvolved or shared across workloads.
+### Landing zone configuration
+
+Optimizing your landing zone for availability focuses on properly isolating zones from one another and workloads from one another to ensure that an incident has minimal bast radius. Review the [resource organization](../ready/landing-zone/design-area/resource-org.md) and [network segmentation](../ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md) guidance to learn about best practices on these topics. 
 
 ### Resilient architectural design
 
@@ -45,9 +47,17 @@ Adopt application [design patterns](/azure/well-architected/reliability/design-p
 
 - **Decouple services:** Isolate services from each other to reduce the blast radius of incidents.
 
-## Ready
+### Summary
 
-### Operational practices to support availability
+Having reslient designs for your landing zones and workloads will build a solid foundation for building a cloud estate that prioritizes availability. Your landing zone design should minimize the blast radius of any incident, which allows your teams to act quickly towards mitigating the incident while keeping other business functions operational. Resilient infrastructure design patterns further minimizes blast radius while removing single points of failure. Resilient application design patterns help your workload function in a degraded state or automatically heal itself.
+
+Refer to the [Ready](../ready/) methodology section for detailed guidance on topics related to preparing for cloud adoption.
+
+### Adopt
+
+With resilient design patterns defined, your organization can move on to the adoption phase. For detailed guidance on workload availability, refer to the Well-Architected Framework's [reliability](/azure/well-architected/reliability) pillar and the [Azure reliability](/azure/reliability/overview) documentation. In the context of cloud adoption, the focus is on establishing and codifying operational practices that support availability.
+
+### Establishing operational practices to support availability
 
 Maintaining a highly available cloud estate can only be done if the teams operating the cloud systems have standardized, mature practices that are strictly followed. These practices should include:
 
@@ -56,6 +66,8 @@ Maintaining a highly available cloud estate can only be done if the teams operat
 - **Robust and continuous observability:** An organization's ability to detect security incidents as they happen allows them to initiate their incident response plans quickly, helping to minimize the business impact as much as possible. Incident detection is only possible through a well-designed monitoring and alerting system, following best-practices for threat detection. Refer to the Well-Architected Framework's [observability guide](/azure/well-architected/operational-excellence/observability) and [security monitoring and threat detection guide](/azure/well-architected/security/monitor-threats) for detailed guidance on this topic.
 
 - **Incindent response:** Mitigating security incidents is integral to business continuity. To efficiently respond to incidents, an organization must have strict standard procedures that are applied to every incident and followed by all teams involved in the mitigation. These procedures are captured in the incident response plan. Refer to the Well-Architected Framework's [incident response guide](/azure/well-architected/security/incident-response) for detailed guidance on this topic.
+
+- **Infrastructure as Code deployments:** All infrastructure should be deployed through code, without exception. Reduce the risk of misconfigured infrastructure and unauthorized deployments by mandating this standard. All infrastructure code assets should be colocated with application code assets and treated with same [safe deployment practices](/azure/well-architected/operational-excellence/safe-deployments) as software deployments.
 
 - **Proactive maintenance:** System updates should be standardized and enforced through policies. Schedule regular maintenance windows to apply updates and patches to systems without disrupting services. Conduct regular health checks and maintenance activities to ensure all components are functioning optimally​.
 
@@ -73,7 +85,37 @@ Maintaining a highly available cloud estate can only be done if the teams operat
 
 - **Zero Trust access and authorization controls:** Strong access controls and identity management systems ensure that only authorized personnel have access to critical systems and data. This reduces the risk of malicious activities that could disrupt services. Standardizing on strictly enforced role-based access controls (RBAC) and requiring multi-factor authentication (MFA) helps prevent unauthorized access to your systems that could disrupt service availability. Refer to the [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) article for detailed guidance on this topic.
 
-- **Adherence to and enforcement of compliance standards:** Adhering to regulations such as GDPR and HIPAA ensures that systems are designed and maintained to high standards, including those related to availability. Non-compliance can lead to legal actions and fines that might disrupt business operations. Enforce adherence through tooling, like [Azure Policy](/azure/policy) to reduce the risk of misconfiguration or non-compliant systems. Compliance often isn't limited to system configuration. Most compliance frameworks also require risk management and incident response standards. Ensure that your operational standards meet the framework requirements and staff is trained regularly. Refer to the [Adopt preparedness](./refresh-adopt-preparedness.md) article for detailed guidance on this topic.
+- **Compliance requirements:** Adhering to regulations such as GDPR and HIPAA ensures that systems are designed and maintained to high standards, including those related to availability. Non-compliance can lead to legal actions and fines that might disrupt business operations. Compliance often isn't limited to system configuration. Most compliance frameworks also require risk management and incident response standards. Ensure that your operational standards meet the framework requirements and staff is trained regularly. Refer to the [Adopt preparedness](./refresh-adopt-preparedness.md) article for detailed guidance on this topic.
+
+### Summary
+
+Adopting the availability principle relies on deploying reslient workloads and following well-defined operational practices that support the resilience of the workloads and your business functions. These operational practices should be standardized and enforced to ensure that when incidents happen, your teams act with confidence, working to restore services as efficiently as possible.
+
+Refer to the [Adopt](../adopt/) methodology section for detailed guidance on cloud adoption topics.
+
+## Govern
+
+After establishing and standardizing your operational practices and implementing workloads and other operational functions, proper governance will help ensure that standards are enforced and regularly reviewed to stay up to date as your cloud estate evolves.
+
+1. **Managing and enforcing standards:** Ensure that all standards are documented and stored in highly available and secure storage. Use version control to ensure that documentation is auditable and reviews are tracked. Enforce standards through regularly recurring mandatory incident response drills. Operators should know where to find their procedures and understand all the steps to follow as they go through their drills. Refer to the [Adopt preparedness](./refresh-adopt-preparedness.md) guide for detailed guidance on this topic. Enforce compliance requirment adherence through tooling, like [Azure Policy](/azure/policy) to reduce the risk of misconfiguration or non-compliant systems.
+
+2. **Continuous improvement of standards:** Your cloud estate will evolve over time, and as technology evolves, so must your operational practices. Without keeping your standards up to date, you risk exposing your business to gaps that may have been introduced through the adoption of new technologies or more advanced attack techniques that come about. To protect against these risks, ensure that every standard is reviewed regularly to keep up to date. Use learnings gained from drills to inform updates to your practices. Your standards should always be considered living documents that should be improved as often as possible.
+
+### Summary
+
+Proper governance of your operational standards that support availability will ensure that those standards are enforced, which helps maintain availability throughout incidents. Governance includes properly maintaining documented standards, regularly drilling procedures, and continuous improvement practices.
+
+Refer to the [Govern](../govern/) methodology section for detailed guidance on cloud governance topics.
+
+## Manage
+
+Managing the availability of your cloud estate relies on robust, proactive availability monitoring that is validated through testing.
+
+1. **Availability monitoring:** Ensure that all infrastructure and applications are configured for monitoring and that alerting is configured to notify the appropriate teams. Make use of cloud-native logging and [application instrumenting](/azure/well-architected/operational-excellence/instrument-application) functionality to simplify your monitoring design and reduce operational burden.
+
+1. **Availability testing:** All infrastructure and applications must be tested regularly for availability as part of your overall testing strategy. [Fault injection and chaos testing](/azure/well-architected/reliability/testing-strategy#fault-injection-and-chaos-engineering-guidance) are excellent strategies to test availability and security by purposely introducing malfunctions.
+
+Refer to the [Manage](../manage/) methodology section for detailed guidance on cloud management topics.
 
 ## Resources
 
@@ -83,9 +125,15 @@ Maintaining a highly available cloud estate can only be done if the teams operat
 
 ## Azure facilitation
 
+The following Azure services can help you ensure high availability:
+
+### System and data replication
+
 - **[Azure Site Recovery](/azure/site-recovery/):** A service that helps ensure business continuity by keeping business apps and workloads running during outages. It automates the replication, failover, and recovery of workloads so that they remain available during interruptions.
 
 - **[Azure Backup](/azure/backup/backup-overview):** Regularly back up data to ensure it can be restored in case of accidental deletion or corruption.
+
+### Networking
 
 - **[Azure Front Door](/azure/frontdoor/front-door-overview):** is an application delivery network that provides global load balancing and site acceleration service for web applications. It offers Layer 7 capabilities for your application like SSL offload, path-based routing, fast failover, and caching to improve performance and high availability of your applications.
 
@@ -97,12 +145,6 @@ Maintaining a highly available cloud estate can only be done if the teams operat
 
 - **[Azure Availability Zones](/azure/reliability/availability-zones-overview)**:** Deploy resources across multiple, physically separate locations within an Azure region to protect against datacenter failures.
 
-- **[Azure Virtual Machines (VMs)](/azure/virtual-machines/):**
-    - **[Availability sets](/azure/virtual-machines/availability-set-overview):** Ensure that VMs are distributed across multiple isolated hardware nodes in a cluster to avoid single points of failure.
-    - **[Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview):** Automatically scale the number of VMs based on demand, providing redundancy and improved performance.
+### Compute and data services
 
-- **[Azure Kubernetes Service (AKS)](/azure/aks):**
-    - Cluster autoscaling: Automatically adjusts the number of cluster nodes to maintain performance and availability.
-    - Node Pools: Manage and scale different types of workloads independently within the same AKS cluster.
-
-- **[Azure Storage](/azure/storage/blobs/storage-blobs-overview):** Various redundancy options are available for storage services, like Locally Redundant Storage (LRS), Geo-Redundant Storage (GRS), and Zone-redundant Storage, ensuring data availability throughout data center or regional outages.
+Refer to the [Reliability guides by service](/azure/reliability/overview-reliability-guidance) for details on many Azure compute and data services.

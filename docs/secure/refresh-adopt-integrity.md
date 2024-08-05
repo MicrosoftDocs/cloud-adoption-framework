@@ -148,6 +148,9 @@ Managing your data and system integrity relies on robust monitoring with specifi
 
 Detecting and reacting to changes in your data or to your systems is key to maintaining integrity. Implementing intelligent tooling to facilitate these activities will help your data and security teams work efficiently while reducing the risk of human error. Combining these strategies with continuous improvement efforts and a well-designed training program will help ensure that your integrity policies, procedures, and mechanisms are managed to the highest degree possible.
 
+Refer to the [Manage](../manage/) methodology section for detailed guidance on cloud management topics.
+
+
 ## References
 
 - [**Zero Trust data pillar:**](/security/zero-trust/deploy/data) Learn about the Microsoft's Zero Trust guidance for data.
