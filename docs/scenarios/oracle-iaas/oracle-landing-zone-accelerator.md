@@ -56,4 +56,4 @@ The Oracle on Azure IaaS landing zone accelerator is available [on GitHub](https
 
 ## Next step
 
-- To see more recommendations for your architecture, review the Oracle on Azure IaaS landing zone accelerator [design areas](./oracle-network-topology-iaas.md).
+To see more recommendations for your architecture, review the Oracle on Azure IaaS landing zone accelerator [design areas](./oracle-network-topology-iaas.md).
