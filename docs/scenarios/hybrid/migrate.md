@@ -46,7 +46,7 @@ Hybrid and multicloud migrations that come across assessment challenges indicate
   - **Azure Stack HCI compatibility**, which is important if you're modernizing your datacenter to allow for cloud native solutions on-premises.
   - **Kubernetes compatibility**, which is important if you're maintaining portability through container-based infrastructure.
   - **Azure Edge compatibility**, which might be important to extend workloads and reduce latency at the point of interaction.
-  - **Regulatory, compliance, or business requirements**, which might dictate that some assets or data remain on-premises. To monitor assets that are migrated, you might need to add more monitoring tools.
+  - **Regulatory, compliance, or business requirements**, which might dictate that some assets or data remain on-premises. To manage, govern, secure, configure and monitor the on-premises assets from Azure, you can consider [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview) and [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview).
 
 These articles will help you to develop the most impactful processes required for this type of migration:
 
