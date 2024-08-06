@@ -35,14 +35,6 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 - Backup and restore considerations.
 - Criteria for deciding between cross-regional and regional disaster recovery.
 
-You can also use Azure Backup to back up databases that have SAP HANA System Replication (HSR) enabled. Azure Backup automatically manages backups when a failover occurs and eliminates the necessity for manual intervention. 
-
-- Azure Backup also allows immediate protection with no remedial full backups, so you can protect HANA instances or HSR setup nodes as a single HSR container. 
-- Azure Backup also gives the benefit of instant backup and instant restore. 
-- For SAP HANA, Azure Backup provides a HANA-consistent, snapshot-based approach that's integrated with Backint. This integration allows you to use Azure Backup as a single product for your entire HANA landscape, irrespective of database size.  
-
-For more information, see [SAP HANA database system with replication enabled](/azure/backup/sap-hana-database-about#back-up-a-hana-system-with-replication-enabled) and [SAP HANA instance snapshot backup](/azure/backup/sap-hana-database-about#back-up-database-instance-snapshots).
-
 ## High availability within an Azure region
 
 The following sections provide design considerations and recommendations for high availability within an Azure region for an SAP enterprise scenario.
@@ -153,7 +145,6 @@ The following sections describe design considerations and recommendations for ba
 Although backup and restore isn't typically considered an adequate high-availability solution for a production SAP workload, the technology provides other benefits. Most companies that use SAP applications need to follow compliance regulations that require the storage of backups for many years. It's also essential to have a backup and be able to restore from it in other scenarios. The assumption is that you've already established and are following backup and restore best practices for SAP applications, which means that you can:
 
 - Perform a point-in-time recovery for your production databases at any point, in a time frame that meets your RTO. Point-in-time recovery typically provides protection from operator errors like deleting data, either on the DBMS layer or through SAP.
-
 - Maintain a store to keep your long-term backups in order to meet compliance regulations.
 - Use database backups to clone the SAP system and restore the backups against another server or VM.
 - Use production database data from database backups to refresh nonproduction systems.
@@ -165,7 +156,15 @@ When you back up and restore on-premises, you need to bring these capabilities t
 
 If you're satisfied with your current solution, check whether your backup vendor supports Azure deployments or whether it has a software as a service (SaaS) solution for Azure.
 
-Azure provides a backup SaaS service, [Azure Backup](/azure/backup/backup-overview), which takes VM snapshots and manages streaming [SQL Server](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) backups. If you use [Azure NetApp Files](https://azure.microsoft.com/services/netapp) to store your SAP HANA databases, you can run backups based on HANA-consistent storage snapshots.
+Azure provides a backup SaaS service, [Azure Backup](/azure/backup/backup-overview), which takes VM snapshots and manages streaming [SQL Server](/azure/backup/backup-azure-sql-database) and [SAP HANA](/azure/backup/sap-hana-db-about) backups. If you use [Azure NetApp Files](https://azure.microsoft.com/services/netapp) to store your SAP HANA databases, you can run backups based on HANA-consistent storage snapshots. 
+
+You can also use Azure Backup to back up databases that have SAP HANA System Replication (HSR) enabled. Azure Backup automatically manages backups when a failover occurs and eliminates the necessity for manual intervention. 
+
+- Azure Backup also allows immediate protection with no remedial full backups, so you can protect HANA instances or HSR setup nodes as a single HSR container. 
+- Azure Backup also gives the benefit of instant backup and instant restore. 
+- For SAP HANA, Azure Backup provides a HANA-consistent, snapshot-based approach that's integrated with Backint. This integration allows you to use Azure Backup as a single product for your entire HANA landscape, irrespective of database size.  
+
+For more information, see [SAP HANA database system with replication enabled](/azure/backup/sap-hana-database-about#back-up-a-hana-system-with-replication-enabled) and [SAP HANA instance snapshot backup](/azure/backup/sap-hana-database-about#back-up-database-instance-snapshots).
 
 ### Design recommendations for backup and restore
 
