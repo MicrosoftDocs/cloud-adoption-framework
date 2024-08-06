@@ -34,6 +34,8 @@ Consider the following guidance when you design your security guidelines for Ora
 
 - You can use [OCI Vulnerability Scanning Service](https://docs.oracle.com/iaas/scanning/using/overview.htm) for vulnerability scanning on individual nodes in the Oracle Database@Azure solution. Integration with Microsoft Defender isn't possible at this time.
 
+- Third-party and Oracle agents are permitted on the ExaCS OS, provided they do not alter or taint the OS kernel. Ensure these agents are installed in locations that will not be impacted by database (DB) or Grid Infrastructure patches.
+
 ## Design recommendations
 
 Consider the following recommendations when you design your security for Oracle Database@Azure:
