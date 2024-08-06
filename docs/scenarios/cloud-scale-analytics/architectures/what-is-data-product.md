@@ -3,14 +3,14 @@ title: What is a data product?
 description: Learn about the data mesh approach, which adopts the concept of data as a product. Learn how to create effective data products and use them in your design.
 author: sasever
 ms.author: sasever
-ms.date: 08/05/2024
+ms.date: 08/06/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # What is a data product?
 
-Every application creates and stores data either temporarily or permanently. Many applications also create and save data for operational management purposes, such as error logging and health monitoring. To consume and process the data that these applications produce, centralized data teams use extract, transform, and load (ETL) processes. Application operation teams often have other data processing flows for data like application health data and KPI status monitoring data.
+Every application creates and stores data either temporarily or permanently. Many applications also create and save data for operational management purposes, such as error logging and health monitoring. To consume and process the data that these applications produce, centralized data teams use extract, transform, and load processes. Application operation teams often have other data processing flows for data like application health data and KPI status monitoring data.
 
 For data integration, a traditional waterfall approach in which teams follow a specific order of phases isn't ideal. It can lead to knowledge gaps, ownership problems, and communication conflicts that affect your data's quality, timeliness, and value for users. Application teams are responsible for application performance and success. When they use a waterfall approach, they make changes to downstream processes that other teams own. Sometimes these changes can affect other areas. For example, a minor upstream change might drastically alter a KPI's trend. These conflicts can affect your ability to make critical decisions.
 
@@ -20,7 +20,7 @@ To prevent these problems, the [data mesh](./what-is-data-mesh.md) approach adop
 
 Data products are created specifically for analytical consumption. They have defined and agreed-upon shapes, consumption interfaces, and maintenance and refresh cycles, all of which are documented.
 
-Data products are processed domain data assets or datasets that you can share with downstream processes through interfaces in a service-level objective. Unless otherwise required, you should process, shape, cleanse, aggregate, and normalize your raw data to meet agreed-upon quality standards before you make it available for consumption.
+Data products are processed domain data assets or datasets that you can share with downstream processes through interfaces in a service-level objective. Unless otherwise required, you should process, shape, cleanse, aggregate, and normalize your raw data to meet agreed-upon quality standards before you make it available for use.
 
 The following sections outline common characteristics of good data products.
 
@@ -30,9 +30,9 @@ Ensure that your data products are:
 
 - **Discoverable, understandable, and trustworthy.** To provide discoverability and clarity, share and update information about each data product, its data, its meaning, the shape format of its data, and its refresh cycle. Communicate data changes or shape changes to downstream consumers in a timely manner. To ensure trustworthiness, interfaces provide time-bounded backwards compatibility for data product shapes.
 
-- **Addressable, natively accessible, and secure.** To provide addressability, create defined processes to locate and gain access to each data product. Implement security measures for various access requirements. Shift your data domain ownership mentality from gatekeeping data to serving data with well-defined security precautions. Well-documented access interfaces can vary in different technologies. Commonly used interfaces for natively accessible data products include APIs, database users, tables, or views, and files with necessary access rights.
+- **Addressable, natively accessible, and secure.** To provide addressability, create defined processes to locate and gain access to each data product. Implement security measures for various access requirements. Shift your data domain ownership mentality from gatekeeping data to serving data with well-defined security precautions. Well-documented access interfaces can vary across different technologies. Commonly used interfaces for natively accessible data products include APIs, database users, tables, or views, and files with necessary access rights.
 
-- **Interoperable, truthful, and valuable.** To provide interoperability, ensure that your data follows defined common standards, such as values that have the same name and data type. For example, you might name a column that contains customer identification data *CustomerID* in every data product, and its data might always be an integer. Data products provide value to customers, and you can use them as upstream sources for new data products in the same or different domains. But you can't just carry and copy the same data product in multiple places. Each data product that comes from a previous data product should provide new value and information to downstream consumers. Data products must also provide truthful, accurate data.
+- **Interoperable, truthful, and valuable.** To provide interoperability, ensure that your data follows defined common standards, such as values that have the same name and data type. For example, you might name a column that contains customer identification data *CustomerID* in every data product, and its data might always be an integer. Data products provide value to customers, and you can use them as upstream sources for new data products in the same domain or different domains. But you can't just carry and copy the same data product in multiple places. Each data product that comes from a previous data product should provide new value and information to downstream consumers. Data products must also provide truthful, accurate data.
 
 Use well-designed, well-maintained data products and their interfaces to help avoid duplicating data and create a native single source of truth.
 
