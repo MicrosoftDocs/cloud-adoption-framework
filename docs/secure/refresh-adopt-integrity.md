@@ -165,7 +165,7 @@ Refer to the [Manage](../manage/) methodology section for detailed guidance on c
 
 ### Policy management
 
-- [**Azure Policy**](/azure/governance/policy) Azure Policy is a cloud governance solution for Azure environments. It allows you to define policies for your environment and automatically enforce those policies. It has built-in support for many compliance frameworks and integrates seamlessly with other Microsoft tools like Azure Arc, and Defender for Cloud.
+- [**Azure Policy:**](/azure/governance/policy) Azure Policy is a cloud governance solution for Azure environments. It allows you to define policies for your environment and automatically enforce those policies. It has built-in support for many compliance frameworks and integrates seamlessly with other Microsoft tools like Azure Arc, and Defender for Cloud.
 
 ### Data security
 
