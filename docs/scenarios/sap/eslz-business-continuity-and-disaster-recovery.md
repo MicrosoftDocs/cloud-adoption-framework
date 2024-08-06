@@ -35,7 +35,13 @@ This article covers the following aspects of BCDR for an enterprise-scale SAP sc
 - Backup and restore considerations.
 - Criteria for deciding between cross-regional and regional disaster recovery.
 
-You can also use Azure Backup to  back up databases that have SAP HANA System Replication (HSR) enabled, which helps to manage backups automatically when a failover occurs and eliminates the necessity for manual intervention. Azure Backup also allows immediate protection with no remedial full backups, so you can protect HANA instances or HSR setup nodes as a single HSR container. Azure Backup also gives the benefit of instant backup and instant restore. For SAP HANA, Azure Backup provides a HANA-consistent, snapshot-based approach that's integrated with Backint, so that you can use Azure Backup as a single product for your entire HANA landscape, irrespective of database size.  Learn more about [SAP HANA database system with replication enabled](/azure/backup/sap-hana-database-about#back-up-a-hana-system-with-replication-enabled) and [SAP HANA instance snapshot backup](/azure/backup/sap-hana-database-about#back-up-database-instance-snapshots).
+You can also use Azure Backup to back up databases that have SAP HANA System Replication (HSR) enabled. Azure Backup automatically manages backups when a failover occurs and eliminates the necessity for manual intervention. 
+
+- Azure Backup also allows immediate protection with no remedial full backups, so you can protect HANA instances or HSR setup nodes as a single HSR container. 
+- Azure Backup also gives the benefit of instant backup and instant restore. 
+- For SAP HANA, Azure Backup provides a HANA-consistent, snapshot-based approach that's integrated with Backint. This integration allows you to use Azure Backup as a single product for your entire HANA landscape, irrespective of database size.  
+
+For more information, see [SAP HANA database system with replication enabled](/azure/backup/sap-hana-database-about#back-up-a-hana-system-with-replication-enabled) and [SAP HANA instance snapshot backup](/azure/backup/sap-hana-database-about#back-up-database-instance-snapshots).
 
 ## High availability within an Azure region
 
