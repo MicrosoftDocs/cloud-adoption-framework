@@ -106,6 +106,8 @@ The following figure shows this topology.
 
  *Figure 3: Multiple virtual networks connected with multiple ExpressRoute circuits.*
 
+- For dual-homed peering within the same city, consider [ExpressRoute Metro](/azure/expressroute/metro)
+
 - Deploy a set of minimal shared services, including ExpressRoute gateways, VPN gateways (as required), and Azure Firewall or partner NVAs (as required) in the central-hub virtual network. If necessary, also deploy Active Directory domain controllers and DNS servers.
 
 - Deploy Azure Firewall or partner NVAs for east/west or south/north traffic protection and filtering, in the central-hub virtual network.
