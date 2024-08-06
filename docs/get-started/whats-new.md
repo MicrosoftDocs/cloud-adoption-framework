@@ -45,7 +45,7 @@ This month, we introduced new articles that have guidance for Red Hat Enterprise
 - [Networking for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity.md): Explore the new reference architecture for a hub and spoke topology with hybrid connectivity scenario.
 - [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): Learn about new resources for checking the zone resilience of your resources.
 
-We made updates to the following articles to include the latest guidance, product releases, and updates on networking:
+We made updates to the following articles to provide the latest guidance on networking:
 
 - [Define network encryption requirements](../ready/azure-best-practices/define-network-encryption-requirements.md)
 - [Plan for landing zone network segmentation](../ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md)
