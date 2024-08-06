@@ -1,9 +1,9 @@
 ---
 title: Introduction to Oracle on Azure adoption scenarios
-description: Learn how to set up and manage Oracle workloads within your Azure landing zone. 
+description: Learn how to set up and manage Oracle workloads within your Azure landing zone. See reference implementations for Oracle database systems on Azure.
 author: jfaurskov
 ms.author: janfaurs
-ms.date: 04/26/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 ms.custom:
   - think-tank
