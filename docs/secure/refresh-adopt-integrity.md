@@ -69,7 +69,7 @@ After establishing your cloud adoption strategy and plan, you can begin your [la
 
 - *Automated patch management:* Codify the use of tooling like [Azure Update Manager](/azure/update-manager/overview) to manage and govern updates for virtual machines (VMs). Automated patching helps ensure that all systems are patched regularly and system versions are consistent.
 
-- *Automated infrastructure deployments:* Codify the use of infrastructure as code (IaC) for all deployments. Apply the same [safe deployment practices](/azure/well-architected/operational-excellence/safe-deployments) for IaC deployments as you would for software deployments.
+- *Automated infrastructure deployments:* Codify the use of infrastructure as code (IaC) for all deployments, and deploy them as part of your continuous integration and continuous deployment (CI/CD) pipelines. Apply the same [safe deployment practices](/azure/well-architected/operational-excellence/safe-deployments) for IaC deployments as you would for software deployments.
 
 ### Summary
 

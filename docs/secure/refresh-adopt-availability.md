@@ -24,28 +24,31 @@ Refer to the [cross-cutting recommendations](./refresh-adopt-confidentiality.md#
 
 ## Ready
 
-After completing your cloud adoption strategy and plan, you can begin your move into the Ready phase by configuring your landing zones and defining the design patterns that will be used for your workload deployments.
+After completing your cloud adoption strategy and plan, you can begin your move into the Ready phase by configuring your landing zones and defining the workload design standards that teams will follow when designing and deploying applications and infrastructure.
 
 ### Landing zone configuration
 
 Optimizing your landing zone for availability focuses on properly isolating zones from one another and workloads from one another to ensure that an incident has minimal bast radius. Review the [resource organization](../ready/landing-zone/design-area/resource-org.md) and [network segmentation](../ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md) guidance to learn about best practices on these topics. 
 
-### Resilient architectural design
+### Resilient workload design
 
-Designing your infrastructure for resiliency helps ensure that your cloud systems are able to withstand malfunctions or security incidents, allowing the business to continue operations while the affected systems are attended to. A highly available architecture includes the following design decisions:
+Designing your workloads for resiliency helps ensure that the business is able to withstand malfunctions or security incidents, and to continue operations while the affected systems are attended to. The following recommendations will help you design resilient workloads, aligning to CAF principles:
 
-- **Redundancy and replication:** Minimize single point of failure risks through [redundanct infrastructure design](/azure/well-architected/reliability/redundancy), including data replication.
-    - Distribute your workloads across [multiple regions](/azure/well-architected/reliability/highly-available-multi-region-design) to protect against regional issues.
-- **Autoscaling:** Implement [automatic scaling](/azure/well-architected/reliability/scaling) in your workloads to protect against resource exhaustion caused by spikes in utilization.
-- **Load balancing:** [Choose an appropriate load balancing solution](/azure/architecture/guide/technology-choices/load-balancing-overview) to distribute traffic across multiple servers, ensuring that no single server (or cluster) becomes a point of failure.
-
-### Resilient application design
-
-Adopt application [design patterns](/azure/well-architected/reliability/design-patterns) that increase their resilience to non-infrastructure incidents. Standardize designs that include [self-healing and self-preservation mechanisms](/azure/well-architected/reliability/self-preservation)
-
-- **Microservices and containerization:** Avoid monolithic applications by breaking them down into smaller, independent services that can be deployed and scaled independently.
-
-- **Decouple services:** Isolate services from each other to reduce the blast radius of incidents.
+- **Resilient Application Design:** Adopt application design patterns that enhance resilience to both infrastructure and non-infrastructure incidents, aligning with the broader principles of the Cloud Adoption Framework. Standardize designs that incorporate self-healing and self-preservation mechanisms to ensure continuous operation and rapid recovery. For detailed guidance on resilient design patterns, refer to the Well-Architected Framework's [Reliability](/azure/well-architected/reliability) pillar.
+ 
+- **Adopt serverless architecture:** Utilize serverless technologies to reduce server management overhead, automatically scale with demand, and ensure high availability. This supports CAF’s emphasis on modernizing workloads and optimizing operational efficiency.
+By adopting this approach, your cloud adoption strategy under the CAF will lead to more resilient, scalable, and maintainable applications, ensuring robust governance and operational excellence.
+ 
+- **Microservices and containerization:** Implement microservices and containerization to avoid monolithic applications, breaking them down into smaller, independent services that can be deployed and scaled independently. This aligns with CAF’s principles of agility and scalability in cloud environments.
+ 
+- **Decouple services:** Strategically isolate services from each other to reduce the blast radius of incidents, ensuring that failures in one component do not affect the entire system. This approach supports CAF’s governance model, promoting robust service boundaries and operational resilience.
+ 
+- **Enable automatic scaling:** Ensure your application architecture supports automatic scaling to handle varying loads, maintaining availability during traffic spikes. This practice aligns with CAF’s guidance on building scalable and responsive cloud environments.
+Implement fault isolation: Design your application to isolate failures to individual tasks or functions, preventing widespread outages and enhancing resilience. This supports CAF’s focus on creating reliable and fault-tolerant systems.
+ 
+- **Ensure high availability:** Incorporate built-in redundancy and disaster recovery mechanisms to maintain continuous operation, following CAF’s best practices for high availability and business continuity planning.
+ 
+- **Plan for automatic failover:** Deploy applications across multiple regions to support seamless failover and uninterrupted service, aligning with CAF’s strategy for geographic redundancy and disaster recovery.
 
 ### Summary
 
@@ -113,7 +116,9 @@ Managing the availability of your cloud estate relies on robust, proactive avail
 
 1. **Availability monitoring:** Ensure that all infrastructure and applications are configured for monitoring and that alerting is configured to notify the appropriate teams. Make use of cloud-native logging and [application instrumenting](/azure/well-architected/operational-excellence/instrument-application) functionality to simplify your monitoring design and reduce operational burden.
 
-1. **Availability testing:** All infrastructure and applications must be tested regularly for availability as part of your overall testing strategy. [Fault injection and chaos testing](/azure/well-architected/reliability/testing-strategy#fault-injection-and-chaos-engineering-guidance) are excellent strategies to test availability and security by purposely introducing malfunctions.
+2. **Availability testing:** All infrastructure and applications must be tested regularly for availability as part of your overall testing strategy. [Fault injection and chaos testing](/azure/well-architected/reliability/testing-strategy#fault-injection-and-chaos-engineering-guidance) are excellent strategies to test availability and security by purposely introducing malfunctions.
+
+3. **Disaster recovery (DR) testing:** Regularly test your disaster recovery plans to ensure that you can successfully failover your cloud systems and recover data from backups. Depending on the criticality of a given workload, you may opt to perform limited disaster simulations or table-top exercises, but full DR drills should occur at least yearly to ensure that they are kept up to date and the teams involved in recovery have experience to rely on.
 
 Refer to the [Manage](../manage/) methodology section for detailed guidance on cloud management topics.
 
