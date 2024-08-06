@@ -35,7 +35,7 @@ When you migrate workloads in a hybrid and multicloud environment, the real effe
 
 ## Assess workloads for hybrid and multicloud migration
 
-Azure products used in a standard migration are still applicable to a hybrid and multicloud migration. Specifically, Azure Migrate and Service Map can be used to understand your digital estate and outline your dependencies. For more information on both tools, see the [Getting started guide for assessing workloads](../../migrate/azure-migration-guide/assess.md). When you build out your plan or assess waves of hybrid and multicloud workloads, the [best practices for digital estate assessment in Azure](../../plan/contoso-migration-assessment.md) still apply.
+Azure products used in a standard migration are still applicable to a hybrid and multicloud migration. Specifically, Azure Migrate and Service Map can be used to understand your digital estate and outline your dependencies. For more information on both tools, see the [Getting started guide for assessing workloads](../../migrate/azure-migration-guide/assess.md). When you build out your plan or assess waves of hybrid and multicloud workloads, the [best practices for digital estate assessment in Azure](../../digital-estate/index.md) still apply.
 
 Hybrid and multicloud migrations that come across assessment challenges indicate a lack of maturity within their migration team's assessment processes. Factor the following considerations into your assessment plans:
 
@@ -46,7 +46,7 @@ Hybrid and multicloud migrations that come across assessment challenges indicate
   - **Azure Stack HCI compatibility**, which is important if you're modernizing your datacenter to allow for cloud native solutions on-premises.
   - **Kubernetes compatibility**, which is important if you're maintaining portability through container-based infrastructure.
   - **Azure Edge compatibility**, which might be important to extend workloads and reduce latency at the point of interaction.
-  - **Regulatory, compliance, or business requirements**, which might dictate that some assets or data remain on-premises. To monitor assets that are migrated, you might need to add more monitoring tools.
+  - **Regulatory, compliance, or business requirements**, which might dictate that some assets or data remain on-premises. To manage, govern, secure, configure and monitor the on-premises assets from Azure, you can consider [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview) and [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview).
 
 These articles will help you to develop the most impactful processes required for this type of migration:
 

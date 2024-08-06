@@ -1,10 +1,9 @@
 ---
-title: Plan for Oracle on Azure Virtual Machines landing zone accelerator
-description: Learn about how to plan for Oracle on Azure Virtual Machines landing zone accelerator.
-author: jjaygbay1
-ms.author: jacobjaygbay
-ms.reviewer: ramakoni
-ms.date: 01/10/2023
+title: Plan for Oracle on Azure adoption
+description: Learn how to create a cloud adoption workload migration plan for Oracle on Azure.
+author: jfaurskov
+ms.author: janfaurs
+ms.date: 04/26/2024
 ms.topic: conceptual
 ms.custom: 
   - think-tank
@@ -12,58 +11,60 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Plan for Oracle on Azure Virtual Machines landing zone accelerator  
+# Plan for Oracle on Azure
 
-This article describes how to plan for Oracle on Azure Virtual Machines landing zone accelerator. As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure are high only if you right size your Oracle workload on Azure Infrastructure. Getting the   sizing right also provides an opportunity to optimize Oracle licensing cost.
+This article describes how to plan for an Oracle on Azure adoption and builds on the [Oracle on Azure strategy](oracle-landing-zone-strategy.md) article. Consider the various factors that affect your decision to move to Azure to get the most out of your migration.
 
-The strategy and plan template and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure.
+The [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources in the Azure Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure. Use the [Plan methodology](/azure/cloud-adoption-framework/plan) of the Cloud Adoption Framework to create an overall cloud adoption plan and help guide your team. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams based on what you want to do in the cloud. This article describes how to include Oracle on Azure adoption into the overall cloud adoption plan.
 
-## Oracle digital estate planning
+## Plan your Oracle on Azure estate
 
-Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
+Like most complex platforms, your Oracle digital estate includes three asset categories that you should plan for: platform, foundational, and workload assets.
 
-**Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Regardless of what your organization does with Oracle, Oracle deployment requirements on Azure are to some extent defined by those assets. This is true if your on-premises implementations include Oracle Real Application Clusters or Exadata configurations.
+- **Platform assets**: On-premises Oracle estates can run on various types of infrastructure. To some extent, the on-premises assets define the requirements for Oracle deployment on Azure whether your on-premises implementation is Linux-x86 or includes more advanced features. Advanced features include Oracle Real Application Clusters, Exadata configurations, or large endian platforms such as Hewlett Packard Unix (HP-UX), Advanced Interactive Executive (AIX), or a similar platform.
 
-**Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools, etc. These articles describe how these assets translate in an Azure environment.
+- **Foundational assets**: Your Oracle platform and the supporting environment are comprised of a collection of necessary assets like networking, disaster recovery, and monitoring tools. These assets have corresponding Azure services that you can use to replace or augment your existing Oracle environment. You should inventory and rationalize these assets.
 
-**Workload assets**: Your existing Oracle solution can consist of Oracle first-party, third-party, or bespoke applications. Each workload with a dependency on Oracle database services should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
+- **Workload assets**: Your existing Oracle solution can consist of Oracle applications, partner applications, or custom applications. Individually name, inventory, rationalize, and track each workload that has a dependency on Oracle database services to prepare for granular financial and technical planning decisions.
 
 Consider the following items when planning for migrating Oracle workloads to Azure:
 
-**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database information performance information. AWR reports or statspack report should be taken when the system is running at peak load.
+- **Describe the Oracle database platform**: Describe your Oracle estate using AWR reports or statspack reports. Provide a list of hosts and database performance information. AWR reports or statspack reports should be taken when the system is running at peak load. If you're considering moving to Oracle Database@Azure, you should reach out to your local Oracle sales team for sizing guidance.
 
-**Describe Oracle workloads**: Describe your Oracle applications – Oracle first party or third party applications and any custom developed applications. Thereby, it's also important to fix the region you plan to host your application in or other technical requirements like maximum acceptable downtime, SSL offloading and current architecture diagrams. List the application server describing the CPU configuration, memory, storage and its utilization as well as operating system, app version, throughput and IOPS. 
+- **Describe Oracle workloads**: Describe your applications, including Oracle applications and partner applications. Include custom-developed applications. Prepare the region that you plan to host your application in. You should also ensure that the technical requirements, like maximum acceptable downtime, Secure Sockets Layer (SSL) offloading, and current architecture diagrams, are met. List the application server and describe the CPU configuration, memory, storage, and its usage. Include details on the operating system, app version, throughput, and input/output operations per second (IOPS).
 
-**Evaluate dependencies**: External dependencies on a core platform like Oracle should be documented. Be sure to include a dependency analysis for all assets in the portfolio.  
+- **Evaluate dependencies**: Document the external dependencies on your Oracle platform. Be sure to include a dependency analysis for all assets in the portfolio. 
 
-**Environment planning**: Are you moving production and nonproduction Oracle workload at the same time or separately? Customers often move their nonproduction workload to Azure initially, creating an environment for learning and reducing risk. Once the team is comfortable with how the Oracle solution performs and operates on Azure, the path to migrating the production is smoother.
+- **Plan your environment**: Determine whether you're moving production and nonproduction Oracle workloads concurrently or separately. Customers often move their nonproduction workload to Azure initially, which creates an environment for learning and reduces risk. The path to migrating the production environment is smoother after the team is comfortable with how the Oracle solution performs and operates on Azure.
 
-**Platform rationalization**: The most important consideration is how to rationalize an Oracle solution’s assets; consider how you migrate the platform using lift & shift approach.  
+- **Rationalize your platform**: You should consider identifying and eliminating redundant or obsolete assets as part of the digital estate planning. This process can help you to reduce costs and improve efficiency.
 
-Once these considerations are integrated into your digital estate evaluation, you can refine your business justification. You're ready to build out your Oracle cloud adoption plan.
+After you integrate these considerations into your digital estate evaluation, you can refine your business justification. You're ready to build out your Oracle cloud adoption plan.
 
-## Oracle on Azure cloud adoption plan
+## Create an Oracle on Azure cloud adoption plan
 
-The Cloud Adoption Framework includes a tool and several templates for creating a cloud adoption plan or Azure DevOps backlog, which are based on the tasks outlined in each methodology. Learn more about templates in the cloud adoption plan and Azure DevOps article.
+The Cloud Adoption Framework includes tooling and several templates for creating a cloud adoption plan or Azure DevOps backlog, which are based on the tasks outlined in each methodology. For more information, see [Tools and templates](/azure/cloud-adoption-framework/resources/tools-templates#plan).
 
 Whether you use templates or your own project planning tools, factor in the following Oracle-specific actions:
 
-- Depending on requirements create an Azure landing zone to contain the relevant assets for your complete solution – based on architecture guidelines.
+- Depending on requirements, create an Azure landing zone to contain the relevant assets for your complete solution based on architecture guidelines.
 
-- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database. and right-sizing your Oracle estate to optimize licensing costs and gain desired performance by choosing the correct Virtual Machine SKU on Azure – based on OMA Tool.
+- Evaluate your database assets. This evaluation should include a performance analysis to review the current behavior of the database. Adjust the size of your Oracle estate to effectively manage licensing costs and achieve optimal performance. Select the most suitable Azure architecture for your needs. This architecture can be based entirely on VMs, Oracle Database@Azure, or a combination of both. 
 
-- Choose the right deployment architecture - based on architecture guidelines.
+- Choose the right deployment architecture based on architecture guidelines.
 
-- Account for each workload (or wave of workloads) to be migrated.
+- Account for each workload, or wave of workloads, that you plan to migrate.
 
-You can use the Azure DevOps web interface to add those line items to the plan. If you're working from a current asset inventory, you could build your plan faster with the Microsoft Excel integration outlined in the Cloud Adoption Framework article about [tracking workloads](../../plan/workloads.md).
+You can use the Azure DevOps web interface to add the preceding items to your plan. If you use a current asset inventory, you can quickly build your plan with Excel. For more information, see [Add or modify work items in bulk with Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel).
 
-## Oracle readiness plan
+## Create an Oracle readiness plan
 
-Once you have a general work plan, you can begin aligning team members and estimating the work.
+After you have a general work plan, you can begin aligning team members and estimating the work.
 
-This project's team members could be Oracle or Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine the skills that the team needs to acquire. Then, map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. The Cloud Adoption Framework building a skills readiness plan article and strategy and plan template can help your team to track and address skilling gaps to create stronger cross-functional collaboration in each sprint.
+This project's team should have Oracle and Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine if your team needs to acquire any skills. Then map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. To help your team to track and address skilling gaps to create stronger cross-functional collaboration in each sprint, see [Adapt existing roles, skills, and processes for the cloud](/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes).
 
-## Next steps  
+## Next step
 
-- [Oracle on Azure landing zone accelerator](introduction-oracle-landing-zone.md)
+> [!div class="nextstepaction"]
+> [Oracle on Azure migration planning](oracle-migration-planning.md)
+> [Oracle on Azure IaaS landing zone accelerator](oracle-landing-zone-accelerator.md)

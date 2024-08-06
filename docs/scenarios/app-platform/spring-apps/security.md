@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # Security considerations for the Azure Spring Apps landing zone accelerator
 
-This article describes security considerations and recommendations for a workload that's hosted in Azure Spring Apps. This guidance helps you create a workload that's capable of detecting, preventing, and responding to security vulnerabilities.
+This article describes security considerations and recommendations for a workload hosted in Azure Spring Apps. This guidance helps you create a workload that's capable of detecting, preventing, and responding to security vulnerabilities.
 
 A secured application can't guarantee the security of the entire workload. As the workload owner, evaluate human errors, and evaluate the attack surface, like the application and the infrastructure services with which the application interacts.
 
-Azure provides security controls for the network, identity, and data to support your defense in depth strategy. Many of the [controls are built into Azure Spring Apps](/azure/spring-apps/concept-security-controls). This guidance is based on the [Azure security baseline for Azure Spring Apps](/security/benchmark/azure/baselines/azure-spring-apps-security-baseline) that's derived from [Azure Security Benchmark version 2.0](/security/benchmark/azure/overview-v2). The benchmark provides recommendations about how to secure your workload that runs on Azure Spring Apps cloud.
+Azure provides security controls for the network, identity, and data to support your defense in depth strategy. Many of the [controls are built into Azure Spring Apps](/azure/spring-apps/concept-security-controls). This guidance is based on the [Azure security baseline for Azure Spring Apps](/security/benchmark/azure/baselines/azure-spring-apps-security-baseline), which is derived from [Azure Security Benchmark version 2.0](/security/benchmark/azure/overview-v2). The benchmark provides recommendations about how to secure your workload that runs on Azure Spring Apps cloud.
 
-The centralized teams provide networking and identity controls as part of the platform. They provide guardrails to maintain control over platforms, applications, and resources in Azure. The application landing zone subscription provided for the workload is preprovisioned with policies, which are inherited from the management group.
+The centralized teams provide networking and identity controls as part of the platform. They provide guardrails to maintain control over platforms, applications, and resources in Azure. The application landing zone subscription provided for the workload is pre-provisioned with policies, which are inherited from the management group.
 
 As you design the workload, ensure that the security controls that you own are aligned with the central controls. The design is subject to periodic reviews conducted by the centralized security team. Regularly review the security controls and platform policies with the central teams to make sure the workload requirements are accommodated.
 
@@ -46,7 +46,7 @@ For information about the platform design, see:
 
 - **Credential exposure**. You can deploy and run code, configurations, and persisted data with identities or secrets. Make sure the credentials are examined when you access the assets.
 
-- **Certificate management**. Certificates must be loaded based on the Zero Trust principle of never trust, always verify, and they must be credential-free. Only trust shared certificates by verifying the identity prior to granting access to the certificates.
+- **Certificate management**. Certificates must be loaded based on the Zero Trust principle of never trust, always verify, and they must be credential-free. Only trust shared certificates by verifying the identity before granting access to the certificates.
 
 - **Consistent deployments**. Use infrastructure-as-code (IaC) to automate the provisioning and configuration of all Azure resources and strengthen the security posture.
 
@@ -114,7 +114,7 @@ These Microsoft Entra features are recommended:
 
 - **Microsoft Entra single sign-on (SSO)**. [Microsoft Entra SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended to authenticate access to the application from other applications or devices that run in the cloud or on-premises. SSO provides identity management to internal and external users, such as partners or vendors.
 
-- **Strong authentication controls**. Microsoft Entra ID supports strong authentication controls through multi-factor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius if there's a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Microsoft Entra ID](/azure/active-directory/authentication/concept-authentication-passwordless).
+- **Strong authentication controls**. Microsoft Entra ID supports strong authentication controls through multifactor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius if there's a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Microsoft Entra ID](/azure/active-directory/authentication/concept-authentication-passwordless).
 
 - **Conditional access to resources**. Azure Spring Apps supports [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions to include user sign-ins from certain IP ranges that need to sign in by using MFA. These [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Microsoft Entra ID to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources.
 
@@ -148,7 +148,7 @@ For support scenarios, when Microsoft needs access to relevant customer data, us
 
 Microsoft Defender for Cloud is recommended to receive alerts about suspicious activities, such as an excessive number of failed authentication attempts or deprecated accounts in the subscription.
 
-Azure Spring Apps is integrated with Microsoft Entra ID, which can track sign-in activities including risky sign-ins. You can use audit logs to detect changes that are made to any resources within Microsoft Entra ID. The data is integrated with Azure Monitor and can be exported to Azure Sentinel.
+Azure Spring Apps is integrated with Microsoft Entra ID, which can track sign-in activities including risky sign-ins. You can use audit logs to detect changes that are made to any resources within Microsoft Entra ID. The data is integrated with Azure Monitor and can be exported to Microsoft Sentinel.
 
 For more information, see:
 

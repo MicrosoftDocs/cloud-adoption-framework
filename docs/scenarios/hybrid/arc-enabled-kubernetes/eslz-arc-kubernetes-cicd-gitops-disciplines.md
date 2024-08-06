@@ -1,8 +1,8 @@
 ---
 title: CI/CD and GitOps disciplines with Azure Arc-enabled Kubernetes
 description: Learn design considerations and recommendations for CI/CD workflows using GitOps for Azure Arc-enabled Kubernetes.
-author: jpocloud
-ms.author: johnpoole
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 01/20/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
@@ -21,7 +21,7 @@ Implementing GitOps lets you:
 - Improve security by reducing the number of service accounts that are required to have deployment permissions to your cluster.
 - Implement a CI/CD pipeline for deploying applications to your cluster.
 
-GitOps on Azure Arc-enabled Kubernetes uses an extension that implements [Flux](https://www.weave.works/oss/flux/), a popular open-source tool set. Flux is an operator that automates GitOps configuration deployments in your cluster. Flux provides support for common file sources (Git repositories, Helm repositories, Buckets) and template types (YAML, Helm, and Kustomize). Flux also supports multi-tenancy and deployment dependency management among other features.
+GitOps on Azure Arc-enabled Kubernetes uses an extension that implements [Flux](https://fluxcd.io/flux/), a popular open-source tool set. Flux is an operator that automates GitOps configuration deployments in your cluster. Flux provides support for common file sources (Git repositories, Helm repositories, Buckets) and template types (YAML, Helm, and Kustomize). Flux also supports multi-tenancy and deployment dependency management among other features.
 
 ## Architecture
 
@@ -88,7 +88,7 @@ Platform Operators and Application Operators have several options for managing K
 
 - Raw Kubernetes YAML files that represent YAML specs for each Kubernetes API object you're deploying can work well for single environments. The drawback to using raw YAML files is that customizing becomes difficult when you begin to incorporate multiple environments, since you need to then duplicate YAML files and there isn't a good reuse method.
 - [Helm](https://helm.sh/) is a package management tool for Kubernetes objects. It’s a valid option Cluster Operators can use for installing third-party off-the-shelf applications. Make sure you don't use templating too heavily as a configuration management tool for internal applications, because it can become complex to manage as your templates grow.
-  - If using Helm, Flux includes a Helm Controller that lets you declaratively manage Helm Chart releases with Kubernetes manifests. You can create a _HelmRelease_ object to manage that process.
+  - If using Helm, Flux includes a Helm Controller that lets you declaratively manage Helm Chart releases with Kubernetes manifests. You can create a *HelmRelease* object to manage that process.
 - Kustomize is a Kubernetes native configuration management tool that introduces a template-free way to customize application configuration.
   - If using Kustomize, Flux includes a Kustomize controller that specializes in running continuous delivery pipelines for infrastructure and workloads defined with Kubernetes manifests and assembled with Kustomize. You can create a Kustomization object to manage that process.
 - With Azure Arc-enabled Kubernetes, instead of needing to manage the lifecycle and support of components yourself, you can use a [list of available extensions](/azure/azure-arc/kubernetes/extensions#currently-available-extensions) that Microsoft manages and supports. These extensions are managed through [Azure Resource Manager](/azure/azure-resource-manager/management/overview). Some of these extensions, like Azure Key Vault Secrets Provider, have open source alternatives. Managing components outside of the extension process gives you more control over the components, but also requires more overhead for support and lifecycle management.

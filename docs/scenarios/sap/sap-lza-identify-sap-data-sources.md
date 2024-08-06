@@ -36,13 +36,13 @@ SAP systems contain data from across the organization that's used to derive insi
 
 Customers might also deploy the following cloud-based analytics and planning solutions in their landscape:
 
-- [SAP Analytics Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-analytics-cloud?region=all&tab=service_plan&provider=azure&commercialModel=subscription)
-- [SAP Data Warehouse Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-data-warehouse-cloud?region=all&tab=service_plan&provider=azure&service_plan=standard&commercialModel=subscription)
+- [SAP Analytics Cloud](https://www.sap.com/products/technology-platform/cloud-analytics.html)
+- [SAP Datasphere](https://www.sap.com/products/technology-platform/datasphere.html)
 
 SAP SaaS solutions:
 
 - [SAP S/4HANA Cloud](https://www.sap.com/products/erp/s4hana.html) is the public SaaS version of SAP S/4HANA.
-- SAP Customer Experience solutions, such as [SAP Commerce Cloud](https://www.sap.com/products/crm/commerce-cloud.html), [SAP Sales Cloud](https://www.sap.com/products/crm/sales-cloud.html) and [SAP Service Cloud](https://www.sap.com/products/service-management/service-cloud.html).
+- SAP Customer Experience solutions, such as [SAP Commerce Cloud](https://www.sap.com/products/crm/commerce-cloud.html), [SAP Sales Cloud](https://www.sap.com/products/crm/sales-cloud.html) and [SAP Service Cloud](https://www.sap.com/products/crm/service-cloud.html).
 - [SAP Business Network](https://www.sap.com/products/spend-management/ariba-network.html) for direct and indirect spend.
 - [SAP Concur](https://www.concur.com/) for travel and expense.
 - [SAP Fieldglass](https://www.fieldglass.com/) for external workforce management.

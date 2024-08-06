@@ -1,8 +1,8 @@
 ---
 title: Services observability for Azure Arc-enabled Kubernetes
 description: Learn design considerations and recommendations for services observability for Azure Arc-enabled Kubernetes.
-author: jpocloud
-ms.author: johnpoole
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 04/29/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
@@ -59,9 +59,9 @@ The following table shows collection impact for the three pillars.
 
 | Collection characteristic        | Metrics           | Logs  | Distributed Tracing  |
 | ------------- |:-------------:| -----:| -----:|
-| Accounts for every transaction      | yes | yes | no (sampled) |
-| Immune to cardinality issues      | no      |   yes |   yes |
-| Cost  | low      |    high |    low |
+| Accounts for every transaction      | Yes | Yes | No (sampled) |
+| Immune to cardinality issues      | No      |   Yes |   Yes |
+| Cost  | Low      |    High |    Low |
 
 There are different ways you can achieve service observability. You can use a service mesh to do it at the platform layer, where your application is unaware and unchanged. You can also instrument an application with a library, which is commonly done using an Application Performance Monitoring (APM) tool like [Application Insights](/azure/azure-monitor/app/app-insights-overview). API gateways provide observability into north-south traffic, but lacks observability into pod to pod communication and ease of configuration at scale.
 
@@ -115,14 +115,14 @@ The following table shows differences between implementation options to help you
 
 | Capability        | Service Mesh           | Application Performance Monitoring  | Self-hosted API Gateway |
 | ------------- |:-------------:| -----:| -----:|
-| East-West Traffic supported    | yes | yes | no |
-| Metrics capability     | yes | yes | yes |
-| Logging capability     | yes      |   yes |   custom implementation |
-| Distributed Traces capability  | yes      |    yes |    yes |
-| Implementation layer  | network      |    application |    network |
-| Protocols supported | http(s), tcp, gRPC      |    N/A |    http(s), websockets |
+| East-West Traffic supported    | Yes | Yes | No |
+| Metrics capability     | Yes | Yes | Yes |
+| Logging capability     | Yes      |   Yes |   Custom implementation |
+| Distributed Traces capability  | Yes      |    Yes |    Yes |
+| Implementation layer  | Network      |    Application |    Network |
+| Protocols supported | HTTP(S), TCP, gRPC      |    N/A |    HTTP(S), websockets |
 | Configuration responsibility | Cluster Operators      |    Application Developers |   Application Operators & Cluster Operators  |
-| Configuration complexity for observability | low      |    high |    medium |
+| Configuration complexity for observability | Low      |    High |    Medium |
 
 ## Design recommendations
 

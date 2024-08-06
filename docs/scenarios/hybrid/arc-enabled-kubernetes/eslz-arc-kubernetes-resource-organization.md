@@ -22,11 +22,11 @@ Before onboarding any Kubernetes cluster onto Azure Arc, define a structure for 
 
 Keep [Azure Resource Manager service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) in mind, as they apply to Azure Arc-enabled Kubernetes. While designing your structure, determine how many clusters should connect to a specific [resource group](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) or [subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-kubernetes-service-limits).
 
-After you've created a taxonomy and agreed on naming standards, you should apply necessary [tags](../../../manage/hybrid/server/best-practices/arc-inventory-tagging.md) to your Azure Arc-enabled Kubernetes resources. Resource tags let you add metadata to a resource so you can quickly locate it and automate operational tasks, which is important for day-to-day operations.
+After you've created a taxonomy and agreed on naming standards, you should apply necessary tags to your Azure Arc-enabled Kubernetes resources. Resource tags let you add metadata to a resource so you can quickly locate it and automate operational tasks, which is important for day-to-day operations.
 
 For detailed guidance on tagging, review the [Cloud Adoption Framework tagging strategy](../../../ready/azure-best-practices/naming-and-tagging.md). You can apply a tag either during cluster onboarding or once your cluster is registered in Azure (meaning your cluster has a resource ID and is part of a resource group within your subscription).
 
-Once you've onboarded clusters to resource groups and added tags, you can use [Resource Graph](/azure/governance/resource-graph/overview#:~:text=Azure%20Resource%20Graph%20is%20a,can%20effectively%20govern%20your%20environment.) queries, view groupings based on resource groups, or organize and inventory your resources using tags. For Arc-enabled Kubernetes, it's a good practice to include a tag that reflects the "hosting platform" or "infrastructure type" for Azure Arc-enabled resources and their physical location.
+Once you've onboarded clusters to resource groups and added tags, you can use [Resource Graph](/azure/governance/resource-graph/overview) queries, view groupings based on resource groups, or organize and inventory your resources using tags. For Arc-enabled Kubernetes, it's a good practice to include a tag that reflects the "hosting platform" or "infrastructure type" for Azure Arc-enabled resources and their physical location.
 
 The following diagram provides a visual overview of resource tagging for Azure Arc-enabled Kubernetes:
 

@@ -13,23 +13,23 @@ ms.custom: UpdateFrequency2
 
 This article is part of a series in [the cloud monitoring guide](./index.md).
 
-The sections below aim to drive operational maturity by being observant and constantly iterating to improve how you monitor your services. Learn how organizations implement a consistent monitoring strategy quicker by establishing _observability_ for each monitoring solution.
+The sections below aim to drive operational maturity by being observant and constantly iterating to improve how you monitor your services. Learn how organizations implement a consistent monitoring strategy quicker by establishing *observability* for each monitoring solution.
 
 ## Defining observability
 
 While observability and monitoring complement each other, there's a notable distinction:
 
 - **Monitoring**: Collects information and informs you that it detected an issue based on you configuring it to monitor for those conditions. You're monitoring for known or predictable failures.
-- **Observability**: The ability to understand what's happening inside a system by looking at the output data. An _observability solution_ helps you analyze this data to assess the system's health and find ways to fix problems in your IT infrastructure.
+- **Observability**: The ability to understand what's happening inside a system by looking at the output data. An *observability solution* helps you analyze this data to assess the system's health and find ways to fix problems in your IT infrastructure.
 
-Observability first drives the monitoring consumer to understand what is considered a service's _normal_ operation. In other words, you seek _total visibility_ as soon as possible.
+Observability first drives the monitoring consumer to understand what is considered a service's *normal* operation. In other words, you seek *total visibility* as soon as possible.
 
 Once you achieve initial observability, you build upon that initial level of visibility to develop actionable alerts, create useful dashboards, and evaluate [AIOps solutions](/azure/azure-monitor/logs/aiops-machine-learning). These insights let you get comfortable with the underlying metric and log monitoring data.
 
 > [!NOTE]
 > This is the opposite of the approach used in the past when teams worked to define all of the monitoring requirements first on paper before building, testing, and deploying.
 
-Whether your monitoring plan targets an application, the cloud infrastructure, or the Azure Platform, the first step is to _establish observability_.
+Whether your monitoring plan targets an application, the cloud infrastructure, or the Azure Platform, the first step is to *establish observability*.
 
 This approach also simplifies your plans. In all cases, total visibility means achieving and sustaining sufficient visibility across three dimensions or aspects:
 
@@ -51,7 +51,7 @@ This is demonstrated in the following ways:
 - **Built-in monitoring**: Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
 - **Expansive monitoring** Cloud-native architectures such as Azure Monitor are similar to security incident and event management (SIEM) tools. Azure Monitor is expansive, log-driven, and orders of magnitude more flexible than traditional on-premises tooling.
 
-_Architects_ must, like _operators_, understand what diagnostic information an infrastructure component or application emits.
+*Architects* must, like *operators*, understand what diagnostic information an infrastructure component or application emits.
 
 Combining multivariate, dynamic, time-series, eventful, stateful, and telemetric log streams into valuable intelligence depends on the following:
 
@@ -60,7 +60,7 @@ Combining multivariate, dynamic, time-series, eventful, stateful, and telemetric
 - **Learning from history**: Review past incidents to find non-technology reasons that can be auto-remediated later.
 - **Documentation**: Guidance in documentation, software, training, or consulting by the software or hardware vendor.
 
-Microsoft and its partners provide management packs for System Center Operations Manager. Management packs are technology-specific; for example, if you import a SQL management pack, Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, _observability is more or less predefined_. Operations Manager is primarily designed for on-premises infrastructure, which tends to be **fixed** in components and architectural design patterns relative to cloud services.
+Microsoft and its partners provide management packs for System Center Operations Manager. Management packs are technology-specific; for example, if you import a SQL management pack, Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, *observability is more or less predefined*. Operations Manager is primarily designed for on-premises infrastructure, which tends to be **fixed** in components and architectural design patterns relative to cloud services.
 
 In the cloud, you have enormous **flexibility** in the types of services to choose from. Monitoring includes how services change over time, and can be dynamic, global, and resilient. With Azure Monitor, you can take advantage of existing workbooks included in [Azure Monitor Insights](/azure/azure-monitor/insights/insights-overview) providing functionality similar to a management pack in Operations Manager.
 
@@ -72,7 +72,7 @@ In Azure, there are multiple monitoring data sources, each delivering a differen
 
 ### Observe the platform
 
-In Azure, Microsoft provides the perspective of the _service provider_ through different _platform logs_.
+In Azure, Microsoft provides the perspective of the *service provider* through different *platform logs*.
 
 Services in Azure can change in different, unpredictable ways over time. We refer to this behavior as dynamic. Managers of cloud services observing the service over time also need to take into account the following:
 
@@ -88,9 +88,10 @@ Here are a few examples of tools that enable your platform observability:
 |[Azure Resource Health](/azure/service-health/resource-health-overview)|Reports on your resources' current and past health.|
 |[Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log)|Reports subscription-level events across all the resources deployed in the subscription.|
 |[Azure Monitor Change Analysis](/azure/azure-monitor/change/change-analysis)|Reports on changes to your Azure applications and reduces mean time to repair (MTTR).|
-|[Azure resource logs](/azure/azure-monitor/essentials/resource-logs)|Previously known as _diagnostic logs_, resource logs reports on operations performed within an Azure resource, on the data plane.|
+|[Azure resource logs](/azure/azure-monitor/essentials/resource-logs)|Previously known as *diagnostic logs*, resource logs reports on operations performed within an Azure resource, on the data plane.|
 |[Microsoft Entra reports (AzureAD) logs](/azure/azure-monitor/essentials/platform-logs-overview)|Reports on the history of sign-in activity and the audit trail of changes in Microsoft Entra ID for a given tenant.|
 |[Azure Advisor](/azure/advisor/advisor-overview)|Use Azure Advisor to receive recommended solutions based on best practices to optimize your Azure deployments.|
+| [Microsoft Cloud for Sovereignty transparency logs](/industry/sovereignty/transparency-logs) | Reports about when resources are accessed and which Microsoft engineer accesses the resource. Transparency logs provide details of access to customer resources. The logs also notify you when there has been no access, which is common. |
 
 Observability evolves gradually, starting with a minimally viable monitoring plan, and the effort to integrate tools and processes is underway. As you get comfortable with the data (metrics, logs, and transactions), you can understand the behavior and signs of symptoms or issues from those resources or applications. By getting familiar with the data, you build trust in working with Azure Monitor and the data.
 
@@ -146,7 +147,7 @@ The essence of the plan is to define the line of visibility between service prov
 
 ### Business perspective
 
-A comprehensive monitoring plan must consider what the business needs with and from monitoring, including a user-centric focus. While defining the plan, it's essential to document and share the business requirements, and the following _suggests the scope_ of this part of the plan.
+A comprehensive monitoring plan must consider what the business needs with and from monitoring, including a user-centric focus. While defining the plan, it's essential to document and share the business requirements, and the following *suggests the scope* of this part of the plan.
 
 - Stakeholders and consumers
 - Business value streams and processes
@@ -158,7 +159,7 @@ A comprehensive monitoring plan must consider what the business needs with and f
 
 ### Service perspective
 
-A comprehensive monitoring plan must consider what the service owners need with and from monitoring. While defining the plan, it's essential to document and share their requirements, and the following _suggests the scope_ of this part of the plan.
+A comprehensive monitoring plan must consider what the service owners need with and from monitoring. While defining the plan, it's essential to document and share their requirements, and the following *suggests the scope* of this part of the plan.
 
 - Stakeholders and consumers
 - Roles and accountability
@@ -173,7 +174,7 @@ A comprehensive monitoring plan must consider what the service owners need with 
 
 ### Technology perspective
 
-This section of the plan represents the monitoring solution using information from the business and service perspective. The following _suggests the scope_ of this part of the plan.
+This section of the plan represents the monitoring solution using information from the business and service perspective. The following *suggests the scope* of this part of the plan.
 
 - User stories and scenarios
 - Technical targets (for example, networking)

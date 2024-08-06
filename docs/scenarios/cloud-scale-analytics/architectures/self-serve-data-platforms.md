@@ -3,14 +3,14 @@ title: Self-serve data platforms
 description: Learn about design considerations for self-serve data platforms
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 06/22/2022
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Design considerations for self-serve data platforms
 
-Data mesh is an exciting new approach to data architecture design and development. Unlike traditional data architecture, data mesh separates responsibility between functional [data domains](./data-domains.md) that focus on creating [data products](./what-is-data-product.md) and a platform team that focuses on technical capabilities. This separation of responsibilities must be reflected in your platform. You must strike a balance between providing domain-agnostic capabilities and enabling your domain teams to model, process, and distribute their data across your organization. 
+Data mesh is an exciting new approach to data architecture design and development. Unlike traditional data architecture, data mesh separates responsibility between functional [data domains](./data-domains.md) that focus on creating [data products](./what-is-data-product.md) and a platform team that focuses on technical capabilities. This separation of responsibilities must be reflected in your platform. You must strike a balance between providing domain-agnostic capabilities and enabling your domain teams to model, process, and distribute their data across your organization.
 
 Choosing the right level of domain granularity and rules for decoupling using platforms isn't easy. This article contains several scenarios that provide you with detailed guidance.
 
@@ -21,7 +21,7 @@ When you want to build a data mesh with Azure, we recommend you adopt [cloud-sca
 - **Data management landing zone:** The foundation of your data architecture. It contains all critical capabilities for data management, like data catalog, data lineage, API catalog, master data management, and so on.
 - **Data landing zones:** Subscriptions that host your analytics and AI solutions. They include key capabilities for hosting an analytics platform.
 
-:::image type="content" source="../media/high-level-design-single-data-landing-zone.png" alt-text="A diagram showing an overview of a cloud-scale analytics platform that contains a data management landing zone and a single data landing zone.":::
+:::image type="content" source="../media/high-level-design-single-data-landing-zone.png" alt-text="A diagram that shows an overview of a cloud-scale analytics platform that contains a data management landing zone and a single data landing zone.":::
 
 The following diagram provides an overview of a cloud-scale analytics platform with a data management landing zone and a single data landing zone. Not all Azure services are represented in the diagram. It has been simplified to highlight the core concepts resource organization within this architecture.
 
@@ -33,7 +33,7 @@ Understand that all architectures adhere to the data mesh principles: domain own
 
 The simplest deployment pattern for building a data mesh architecture involves one data management landing zone and one data landing zone. The data architecture in such a scenario would look like the following:
 
-:::image type="content" source="../media/domain-agnostic-infra-01.png" alt-text="A diagram showing the simplest possible data mesh architecture, which as a single data management landing zone and a single data landing zone." lightbox="../media/domain-agnostic-infra-01.png":::
+:::image type="content" source="../media/domain-agnostic-infra-01.png" alt-text="A diagram that shows the simplest possible data mesh architecture, which is a single data management landing zone and a single data landing zone." lightbox="../media/domain-agnostic-infra-01.png":::
 
 In this model, all your functional data domains reside same data landing zone. A single subscription contains a standard set of services. Resource groups segregate different data domains and data products. Standard data services, like Azure Data Lake Store, Azure Logic Apps and Azure Synapse Analytics, apply to all domains.
 
@@ -45,7 +45,7 @@ This deployment option can be useful for smaller companies or greenfield project
 
 In the previous model, we didn't take into account other subscriptions or on-premises applications. You can slightly alter the previous model by adding a source system-aligned landing zone to manage all incoming data. Data onboarding is a difficult process, so having two data landing zones is useful. Onboarding remains one of the most challenging parts of using data at large. Onboarding also often requires extra tools to address integration, because its challenges differ from those of integration. It helps to distinguish between providing data and consuming data.
 
-:::image type="content" source="../media/domain-agnostic-infra-02.png" alt-text="Source system- and consumer-aligned landing zones" lightbox="../media/domain-agnostic-infra-02.png":::
+:::image type="content" source="../media/domain-agnostic-infra-02.png" alt-text="Diagram that shows the source system- and consumer-aligned landing zones." lightbox="../media/domain-agnostic-infra-02.png":::
 
 In the architecture on the left of this diagram, services facilitate all data onboarding, like [CDC](https://en.wikipedia.org/wiki/Change_data_capture), services for pulling APIs, or data lake services for dynamically building datasets. Services in this platform can pull data from on-premises, cloud environments or SaaS vendors. This type of platform typically also has more overhead, because there's more coupling with underlying operational applications. You might want to treat this differently from any data usage.
 
@@ -57,7 +57,7 @@ These architecture domains follow all principles of data mesh. Domains take owne
 
 The next deployment option is another iteration of the previous design. This deployment follows a governed mesh topology: data is distributed via a central hub, in which data is partitioned per domain, logically isolated, and not integrated. This model's hub uses its own (domain-agnostic) data landing zone, and can be owned by a central data governance team overseeing which data is distributed to which other domains. The hub also carries services that facilitate data onboarding.
 
-:::image type="content" source="../media/domain-agnostic-infra-03.png" alt-text="Hub-, generic- and special data landing zones" lightbox="../media/domain-agnostic-infra-03.png":::
+:::image type="content" source="../media/domain-agnostic-infra-03.png" alt-text="Diagram that shows the hub-, generic-, and special data landing zones." lightbox="../media/domain-agnostic-infra-03.png":::
 
 For domains that require standard services for consuming, using, analyzing and creating new data, use generic data landing zone. This single subscription holds a standard set of services. Also apply data virtualization, as most of your data products are already persisted in the hub and you don't need more data duplication.
 
@@ -69,9 +69,9 @@ If your organization needs to control which data is distributed and consumed by 
 
 Provisioning multiple data landing zones can help you group functional domains based on cohesion and efficiency for working and sharing data. All your data landing zones adhere to the same auditing and controls, but you can still have flexibility and design changes between different data landing zones.
 
-:::image type="content" source="../media/domain-agnostic-infra-04.png" alt-text="Functional and regionally aligned data landing zones" lightbox="../media/domain-agnostic-infra-04.png":::
+:::image type="content" source="../media/domain-agnostic-infra-04.png" alt-text="Diagram that shows the functional and regionally aligned data landing zones." lightbox="../media/domain-agnostic-infra-04.png":::
 
-Multiple aspects determine which functional data domains you should logically group together and make candidates for a shared data landing zone. For example, regional boundaries can result in you implementing the same blueprints. Ownership, security, or legal boundaries can force you to segregate domains. Flexibility, the pace of change, and separation or selling of your capabilities are also important factors.
+Determine the functional data domains that you want to logically group together for a shared data landing zone. For example, you might implement the same templates if you have regional boundaries. Ownership, security, or legal boundaries can force you to segregate domains. Flexibility, the pace of change, and separation or selling of your capabilities are also important factors to consider.
 
 Further guidance and best practices can be found in [data domains](./data-domains.md).
 
@@ -85,7 +85,7 @@ Deploying multiple data landing zones is good option if your data architecture i
 
 Large enterprises operating on a global scale can have contrasting data management requirements between different parts of their organization. You can deploy multiple data management and data landing zones together to address this issue. The following diagram shows an example of this type of architecture:
 
-:::image type="content" source="../media/domain-agnostic-infra-05.png" alt-text="Large scale enterprise requiring different data management zones" lightbox="../media/domain-agnostic-infra-05.png":::
+:::image type="content" source="../media/domain-agnostic-infra-05.png" alt-text="Diagram that shows large scale enterprise that requires different data management zones." lightbox="../media/domain-agnostic-infra-05.png":::
 
 Multiple data management landing zones should justify your overhead and integration complexity. For example, another data management landing zone might make sense for situations where your organization's (meta)data must not be seen by anyone outside your organization.
 
@@ -93,6 +93,6 @@ Multiple data management landing zones should justify your overhead and integrat
 
 The transition towards data mesh is a cultural shift involving nuances, trade offs and considerations. You can use cloud-scale analytics to obtain best practices and executable resources. This article's reference architectures offer starting points for you to kick-start your implementation.
 
-## Next steps
+## Next step
 
 - [Data marketplace](data-mesh-data-marketplace.md)

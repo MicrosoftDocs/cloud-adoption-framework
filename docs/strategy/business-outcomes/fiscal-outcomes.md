@@ -18,13 +18,13 @@ The three basic concepts of fiscal conversation are:
 
 This article explains these fiscal outcomes within the context of a cloud transformation.
 
-[Sentara Healthcare](https://customers.microsoft.com/story/769786-sentara-healthcare-health-provider-azure) moved its data to Azure to provide:
+Sentara Healthcare moved its data to Azure to provide:
 
-- better mobile app experiences for members
-- faster access to critical diagnostic data for clinicians
-- reduced IT team costs
-- improved patient care
-- a more agile, change-ready organization overall
+- Better mobile app experiences for members
+- Faster access to critical diagnostic data for clinicians
+- Reduced IT team costs
+- Improved patient care
+- A more agile, change-ready organization overall
 
 > [!NOTE]
 > The following examples are hypothetical and should not be considered a guarantee of returns when adopting any cloud strategy.

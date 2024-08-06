@@ -1,6 +1,6 @@
 items:
-  - name: Oracle Migration - Microsoft Cloud Adoption
-    href: introduction-oracle-landing-zone.md 
+  - name: Oracle migration—Microsoft cloud adoption
+    href: index.md 
   - name: Strategic impact
     href: oracle-landing-zone-strategy.md
   - name: Technical planning
@@ -10,17 +10,35 @@ items:
     - name: Design areas
       items:
       - name: Network topology and connectivity
-        href: oracle-network-topology.md
+        items: 
+        - name: Network topology and connectivity for Oracle on Azure virtual machines
+          href: oracle-network-topology-iaas.md
+        - name: Network topology and connectivity for Oracle Database@Azure
+          href: oracle-network-topology-odaa.md
+      - name: Identity and access management for Oracle Database@Azure
+        href: oracle-iam-odaa.md
       - name: Security
         items:
-          - name: Security overview
-            href: oracle-security-guideline-landing-zone.md
-          - name: Business continuity and disaster recovery
-            href: oracle-disaster-recovery-oracle-landing-zone.md
+          - name: Security overview for Oracle on Azure virtual machines
+            href: oracle-security-overview-iaas.md
+          - name: Security overview for Oracle Database@Azure
+            href: oracle-security-overview-odaa.md
       - name: Management
-        href: oracle-manage-monitor-workload.md
-      - name: Governance discipline
-        href: governance-compliance-oracle-landing-zone.md
+        items: 
+        - name: Management and monitoring for Oracle workloads on Azure Virtual Machines
+          href: oracle-manage-monitor-iaas.md
+        - name: Management and monitoring for Oracle Database@Azure
+          href: oracle-manage-monitor-oracle-database-azure.md
+        - name: Governance discipline
+          href: governance-compliance-oracle-landing-zone.md
+        - name: Business continuity and disaster recovery for Oracle on Azure virtual machines
+          href: oracle-disaster-recovery-iaas.md
+        - name: Business continuity and disaster recovery for Oracle Database@Azure
+          href: oracle-disaster-recovery-oracle-database-azure.md
+    - name: Implementation options
+      items:
+      - name: Oracle on Azure IaaS landing zone accelerator
+        href: oracle-landing-zone-accelerator.md
   - name: Migrate your Oracle workloads
     items: 
     - name: Capacity planning

@@ -62,12 +62,10 @@ When you create a new Microsoft Entra tenant, it requires extra work to provisio
 
 Organizations need to be clear about why they're deviating from the corporate Microsoft Entra tenant model to ensure the extra overhead and complexity is justified in meeting the requirements. There are examples of these instances in the [scenarios article](scenarios.md).
 
-The Global Administrator (Global Admin) role is another concern. The Global Admin role provides the highest level of permissions available in a Microsoft Entra tenant. In Azure, any Global Admin can assume control of any Azure subscription linked to the Microsoft Entra tenant. For more information, see [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin).
-
 >[!IMPORTANT]
-> [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) should be used to help protect this role, and other privileged roles, within Microsoft Entra ID and Azure.
+> Use [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to protect privileged roles within Microsoft Entra ID and Azure.
 
-The ownership of this role across internal teams and departments can provide a challenge as the Identity team and the Azure team are often in different teams, departments, and organization structures.
+The ownership of privileged roles across internal teams and departments can provide a challenge as the Identity team and the Azure team are often in different teams, departments, and organization structures.
 
 The teams that operate Azure are responsible for Azure services and want to ensure the security of the services that they manage. When individuals outside of that team have roles with the power to potentially access their environments, the security is weaker. For more information, see [Understand required cloud functions](../../../../organize/index.md#understand-required-cloud-functions).
 

@@ -44,19 +44,19 @@ Use this architecture as a starting point. Download the [Visio file](https://www
 
 The core services layer includes all services required to enable your data landing zone within the context of cloud-scale analytics. The following table lists the resource groups that provide the standard suite of available services in every data landing zone you deploy.
 
-| Resource Group        | Required | Description             |
-|-----------------------|----------|-------------------------|
-| network-rg            | Yes      | Networking              |
-| databricks-monitoring-rg | Optional | Monitoring for Azure Databricks workspaces |
-| hive-rg            | Optional      | Hive metastore for Azure Databricks   |
-| storage-rg            | Yes      | Data lakes services     |
-| external-data-rg      | Yes      | Upload ingest storage   |
-| runtimes-rg           | Yes      | Shared integration runtimes |
-| mgmt-rg               | Yes      | CI/CD Agents |
-| metadata-ingestion-rg | Optional | Data agnostic ingestion |
-| databricks-monitoring-rg | Optional | Log analytics workspace for databricks workspaces in landing zone|
-| shared-synapse-rg  | Optional | Shared Azure Synapse |
-| shared-databricks-rg  | Optional | Shared Azure Databricks workspace |
+| Resource Group              | Required | Description             |
+|-----------------------------|----------|-------------------------|
+|  `network-rg`               | Yes      | Networking              |
+|  `databricks-monitoring-rg` | Optional | Monitoring for Azure Databricks workspaces |
+|  `hive-rg`                  | Optional | Hive metastore for Azure Databricks   |
+|  `storage-rg`               | Yes      | Data lakes services     |
+|  `external-data-rg`         | Yes      | Upload ingest storage   |
+|  `runtimes-rg`              | Yes      | Shared integration runtimes |
+|  `mgmt-rg`                  | Yes      | CI/CD Agents |
+|  `metadata-ingestion-rg`    | Optional | Data agnostic ingestion |
+|  `databricks-monitoring-rg` | Optional | Log analytics workspace for databricks workspaces in landing zone|
+|  `shared-synapse-rg`        | Optional | Shared Azure Synapse |
+|  `shared-databricks-rg`     | Optional | Shared Azure Databricks workspace |
 
 ### Networking
 

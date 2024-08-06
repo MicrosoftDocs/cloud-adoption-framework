@@ -1,8 +1,8 @@
 ---
 title: Overview of network topology and connectivity for Azure
 description: Examine key design considerations and best practices surrounding networking and connectivity.
-author: timwarner-msft
-ms.author: timwarner
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 06/22/2022
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
@@ -45,4 +45,4 @@ The Online management group in the conceptual Azure landing zone architecture ca
 In the conceptual Azure landing zone architecture, the virtual network in the Online management group can be, optionally, peered with virtual networks in the Corp management group, either directly or indirectly via the hub and associated routing requirements via an Azure Firewall or NVA, allowing public-facing resources to communicate with internal resources in a secure and controlled manner. This topology ensures that the network traffic between public-facing resources and internal resources is secure and restricted, while still allowing the resources to communicate as needed. 
 
 > [!TIP]
-> It is is also important to understand and review the Azure Policies that are assigned, and inherited, on each of the Management Groups as part of the Azure landing zone. As these help shape, protect and govern the workloads that are deployed within the subscriptions that are in these Management Groups. The policy assignments for Azure landing zones can be found [here](https://aka.ms/alz/policies).
+> It is also important to understand and review the Azure Policies that are assigned, and inherited, on each of the Management Groups as part of the Azure landing zone. As these help shape, protect and govern the workloads that are deployed within the subscriptions that are in these Management Groups. The policy assignments for Azure landing zones can be found [here](https://aka.ms/alz/policies).

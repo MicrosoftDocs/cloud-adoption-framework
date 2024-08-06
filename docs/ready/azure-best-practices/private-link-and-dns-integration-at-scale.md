@@ -21,7 +21,7 @@ Many customers build their network infrastructure in Azure using the hub and spo
 
 In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (*a spoke*) connected to the *hub* VNet. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks by way of ExpressRoute or VPN.
 
- A central network virtual appliance (NVA), such as Azure Firewall, provides Internet-outbound connectivity.
+A central network virtual appliance (NVA), such as Azure Firewall, provides Internet-outbound connectivity. Additionally, that device, such as with [Azure Firewall DNS proxy](/azure/firewall/dns-details), or another service in or adjacent to the hub is typically used to customize DNS forwarding.
 
 Many application teams build their solutions using a combination of Azure IaaS and PaaS resources. Some Azure PaaS services (such as SQL Managed Instance) can be deployed in customer VNets. As a result, traffic stays private within the Azure network and is fully routable from on-premises.
 
@@ -45,11 +45,14 @@ The following diagram shows a typical high-level architecture for enterprise env
 
 From the previous diagram, it's important to highlight that:
 
-- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the DNS servers `10.100.2.4` and `10.100.2.5` hosted in the hub VNet.
-- The DNS servers `10.100.2.4` and `10.100.2.5` hosted in the hub VNet use the Azure-provided DNS resolver (`168.63.129.16`) as a forwarder.
+- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the Private DNS Resolver hosted in the hub VNet.
+- The Private DNS Resolver hosted in the hub VNet use the Azure-provided DNS (168.63.129.16) as a forwarder.
 - The hub VNet must be linked to the Private DNS zone names for Azure services (such as `privatelink.blob.core.windows.net`, as shown in the diagram).
-- All Azure VNets use the DNS servers hosted in the hub VNet (`10.100.2.4` and `10.100.2.5`) as the primary and secondary DNS servers.
-- If the DNS servers `10.100.2.4` and `10.100.2.5` aren't authoritative for customer's corporate domains (for example, Active Directory domain names), they should have conditional forwarders for the customer's corporate domains, pointing to the on-premises DNS Servers (`172.16.1.10` and `172.16.1.11`) or DNS servers deployed in Azure that are authoritative for such zones.
+- All Azure VNets use Private DNS Resolver hosted in the hub VNet
+- As the Private DNS Resolver isn't authoritative for customer's corporate domains, as it's just a forwarder, (for example, Active Directory domain names), it should have outbound endpoint forwarders to the customer's corporate domains, pointing to the on-premises DNS Servers (172.16.1.10 and 172.16.1.11) or DNS servers deployed in Azure that are authoritative for such zones.
+
+> [!NOTE] 
+> You can deploy a DNS Private Resolver in your Hub Virtual Network alongside your ExpressRoute Gateway etc. However, you must ensure that resolution of public FQDNs is permitted and replies with a valid response via a DNS Forwarding Ruleset Rule to the targeted DNS server. As some Azure services rely upon rely upon the ability to resolve public DNS names to function. See more [here](/azure/dns/private-resolver-endpoints-rulesets#rules)
 
 While the previous diagram depicts a single hub and spoke architecture, customers might need to extend their Azure footprint across multiple regions to address resiliency, proximity or data residency requirements, several scenarios have emerged where the same Private-Link-enabled PaaS instance must be accessed through multiple Private Endpoints (PE’s).
 
@@ -63,7 +66,7 @@ This scenario requires manual maintenance/updates of the Private Link DNS record
 
 For other use cases, a single global Private Endpoint can be deployed, making accessible to all clients by adding routing from the relevant regions to the single Private Endpoint in a single region. 
 
-To enable resolution, and therefore connectivity, from on premise networks to the `privatelink` private DNS zone and private endpoints, the appropriate DNS configuration (conditional forwarders etc.) need to be provisioned in the DNS infrastructure.
+To enable resolution, and therefore connectivity, from on premise networks to the `privatelink` private DNS zone and private endpoints, the appropriate DNS configuration (such as conditional forwarders) need to be provisioned in the DNS infrastructure.
 
 There are two conditions that must be true for application teams to create any required Azure PaaS resources in their subscription:
 
@@ -72,7 +75,7 @@ There are two conditions that must be true for application teams to create any r
 - DNS records must follow the lifecycle of the private endpoint, in that, it's automatically removed when the private endpoint is deleted.
 
 > [!NOTE]
-> if [FQDNs in network rules based on DNS resolution is needed to be used in Azure Firewall and Firewall policy](/azure/firewall/fqdn-filtering-network-rules) (This capability allows you to filter outbound traffic with any TCP/UDP protocol -including NTP, SSH, RDP, and more-). You must enable Azure Firewall DNS Proxy to use FQDNs in your network rules, then those spoke VNets are forced to change their DNS setting from custom DNS server to Azure Firewall DNS Proxy. Changing the DNS settings of a spoke VNet requires reboot of all VMs inside that VNet.
+> If [FQDNs in network rules based on DNS resolution is needed to be used in Azure Firewall and Firewall policy](/azure/firewall/fqdn-filtering-network-rules) (This capability allows you to filter outbound traffic with any TCP/UDP protocol -including NTP, SSH, RDP, and more-). You must enable Azure Firewall DNS Proxy to use FQDNs in your network rules, then those spoke VNets are forced to change their DNS setting from custom DNS server to Azure Firewall DNS Proxy. Changing the DNS settings of a spoke VNet requires reboot of all VMs inside that VNet.
 
 The following sections describe how application teams enable these conditions by using [Azure Policy][link-10]. The example uses Azure Storage as the Azure service that application teams need to deploy. But the same principle applies to most [Azure services that support Private Link][link-2].
 

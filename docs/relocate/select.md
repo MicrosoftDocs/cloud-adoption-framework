@@ -34,7 +34,7 @@ Cold relocation can take a few minutes or a few days depending on the number of 
 
 ### Hot relocation
 
-The hot relocation method is for workloads that need minimal to zero downtime. For critical workloads, you should see if the service supports hot relocation before trying a warm approach. Hot relocation helps minimize the data delta after cutover. Hot relocation is only possible if the service supports synchronous data replication. Some services don't have this feature, and you need to use a warm relocation approach instead. Here's the hot relocation process.
+The hot relocation method is for workloads that need minimal (seconds, minutes) to zero downtime. For critical workloads, you should see if the service supports hot relocation before trying a warm approach. Hot relocation helps minimize the data delta after cutover. Hot relocation is only possible if the service supports synchronous data replication. Some services don't have this feature, and you need to use a warm relocation approach instead. Here's the hot relocation process.
 
 1. Perform service replication in the new target region.
 1. Keep the workload running in the source region.
@@ -54,31 +54,25 @@ Warm relocation is for critical workloads that don't support hot relocation. War
 1. Switch and validate endpoints.
 1. Shut down the workload in the source region.
 
+Warm relocation can take a few minutes or an hour depending on the number of services and volume of data.
+
 ## Select service-relocation automation
 
-There are three primary service-relocation approaches. The following paragraphs give an overview of each with links to more guidance. If you use infrastructure as code (IaC) automation to move the workload, you need to find a separate [data-relocation approach](#select-data-relocation-automation). You should review the capabilities of each service-relocation tool and select the tool that best meets your needs.
+There are two primary service-relocation automation methods: infrastructure as code (IaC) and Azure Resource Mover. Each Azure service supports one or both automation approaches. Use the [Azure services relocation guidance](/azure/operational-excellence/overview-relocation) to see which automation method each Azure service supports and detailed steps for relocation. Here's an overview of the automation that the service relocation guidance uses:
 
-**Azure Resource Mover:** Azure Resource Mover is a built-in Azure service that allows you to move Azure resources between regions, subscriptions, and resource groups. Azure Resource Mover can move [supported Azure resources](/azure/resource-mover/overview#what-resources-can-i-move-across-regions) with its dependencies by analyzing and preparing the resources before the move. For more information, see [Azure Resource Mover overview](/azure/resource-mover/overview).
+- *Infrastructure as code (IaC):* IaC can relocate every Azure service. Export the Azure Resource Manager (ARM) template (JSON) of an existing Azure service. Modify the template as needed and redeploy the template to a new region. You can convert ARM templates to Bicep templates by [pasting the JSON](/azure/azure-resource-manager/bicep/visual-studio-code#paste-as-bicep) into Visual Studio Code. When you use IaC to deploy a new instance of an Azure service, you can deploy multiple copies of the resource in parallel. With multiple copies, you can use one of the cutover techniques to redirect connections to the workloads in the new target region. Infrastructure as code (IaC) doesn't relocate data. Data relocation requires extra steps to move data to the newly deployed resource in the target region. Use the [data-relocation automation](#select-data-relocation-automation) guidance for more details.
 
-**Azure Site Recovery:** Azure Site Recovery can replicate any application running on a supported virtual machine in Azure. It's a disaster recovery tool by design, but you can also use it to relocate workloads. Site Recovery uses a Recovery Services Vault like Azure Backup does and can move services quickly. It requires a few cleanup steps after relocation since it's a disaster recovery tool. For more information, see:
-
-- [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview)
-- [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
-- [Replicate DNS and Active Directory](/azure/site-recovery/site-recovery-workload#replicate-active-directory-and-dns)
-
-**Infrastructure as code (IaC):** IaC allows you to copy and redeploy Azure services. You can use Azure Resource Manager, Bicep, or Terraform templates for the services in the source region. You can deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md).
-
-When you use IaC to deploy a new instance of an Azure service, you can deploy multiple copies of the resource in parallel. With multiple copies, you can use one of the cutover techniques to redirect connections to the workloads in the new target region.
+- *Azure Resource Mover:* Azure Resource Mover allows you to move a limited number of [supported Azure resources](/azure/resource-mover/overview#what-resources-can-i-move-across-regions) with its dependencies between regions, subscriptions, and resource groups.
 
 ## Select data-relocation automation
 
-If your service-relocation automation doesn't move data, you also need to pick a data-relocation automation. For data relocation, you need to have the service running in the target region before moving the data. Review the [relocation methods](#select-a-relocation-method) to get a sense of the sequence. Here's a list of automation tools you can use to relocate data. The list starts with hot relocation tools and finishes with cold. It isn't in order of preference. Evaluate each automation tool and pick the right one for your workload.
+If you used IaC to relocate stateful Azure services, you need to use a data-relocation automation method to relocate your data. For data relocation, you need to have the Azure service running in the target region before moving the data. Review the [relocation methods](#select-a-relocation-method) to get a sense of the relocation sequence and where data relocation fits. Here's a list of automation tools you can use to relocate data:
 
-- *Synchronous data replication:* Synchronous data replication replicates data in near real-time across regions. It's the preferred data relocation approach for hot relocation because it limits downtime and data delta migrations after cutover. This capability is built into some Azure services such as Data Sync in [Azure SQL](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database). You need to check each service in your workload to see if it supports synchronous data replication.
+- *Synchronous data replication:* Synchronous data replication replicates data in near real-time across regions. It's the preferred data relocation approach for hot relocation because it limits downtime and data delta migrations after cutover. This capability is built into some Azure services such as [Data Sync in Azure SQL Database](/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database). You need to check each service in your workload to see if it supports synchronous data replication.
 
 - *Geo-replication:* Geo-replication can be a useful data relocation tool for the Azure services that support it. The way a geo-replication feature handles data and the underlying service instance varies across supported Azure services. Before using geo-replication for data relocation, you need to understand the geo-replication feature of the particular service you're relocating. For examples, see [Azure SQL](/azure/azure-sql/database/active-geo-replication-overview) and [Cosmos DB](/azure/cosmos-db/how-to-manage-database-account#addremove-regions-from-your-database-account).
 
-- *Azure Site Recovery:* Azure Site Recovery can relocate services and data. It supports cold and warm relocation strategies. For more information, see [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview).
+- *Azure Site Recovery:* Azure Site Recovery can relocate services and data. It supports warm and cold relocation. For more information, see [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview).
 
 - *AzCopy:* AzCopy is a command-line utility that automates data movements in and out of Azure Storage. You need to download the tool and then use Microsoft Entra ID or shared access signature (SAS) tokens to authorize the move. For more information, see [AzCopy overview](/azure/storage/common/storage-ref-azcopy) and [Use AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 

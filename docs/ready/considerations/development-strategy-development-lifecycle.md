@@ -2,7 +2,7 @@
 title: Development lifecycle
 description: Design area guidance for DevOps principles and practices in Azure Landing Zones
 author: emguzman13
-ms.author: emguzman
+ms.author: eguzmanarias
 ms.date: 06/18/2022
 ms.topic: conceptual
 ms.custom: internal
@@ -153,7 +153,7 @@ Development lifecycle strategy provides key design considerations and recommenda
   - Diagnostic resource health
   - Security
 
-- Include IaC pre-deployment checks so you can preview changes. and see details on whether a resource has been created, modified, or deleted.
+- Include IaC pre-deployment checks so you can preview changes and see details on whether a resource has been created, modified, or deleted.
 
 ## Rollback strategy
 

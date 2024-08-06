@@ -31,7 +31,7 @@ Prioritizing requirements and meeting all needs requires a team effort. Your org
 Use the following guidelines to make sure applications and workloads don't provide easy (low cost, low friction) means for attackers to abuse their functionality:
 
 - **Secure design:** Follow a sound security design approach. This can involve using a threat modeling technique.
-- **Secure code:** Validate the security of actual implementations. (including dependent components). This can involve using tooling like static and dynamic analysis to find and correct bugs.
+- **Secure code:** Validate the security of actual implementations (including dependent components). This can involve using tooling like static and dynamic analysis to find and correct bugs.
 - **Secure environment:** Validate that underlying infrastructure configurations follow best practices for patching, configuration, and more.
 
 ## Secure production DevOps

@@ -39,7 +39,6 @@ A hub is a central network zone that controls and inspects ingress or egress tra
 
 The hub often contains the common service components that the spokes consume. Examples of common central services are:
 
-- The Windows Server Active Directory infrastructure is required to authenticate third-party users who access untrusted networks before they access workloads in the spoke. It includes the related Active Directory Federation Services (AD FS).
 - A DNS service resolves naming the workload in the spokes to access resources on-premises and on the internet if [Azure DNS](/azure/dns/dns-overview) isn't used.
 - A public key infrastructure implements single sign-on for workloads.
 - TCP and UDP traffic flow is controlled between the spoke network zones and the internet.
@@ -94,8 +93,7 @@ A typical example of this scenario is the case where application processing serv
 Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level, level 0, becomes the hub of lower spokes, or level 1, of the hierarchy. The spokes are required to forward the traffic to the central hub. This requirement is so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub-and-spoke relationship.
 
 > [!NOTE]
-> You can use [Azure Virtual Network Manager (AVNM)](/azure/virtual-network-manager/overview) to create new or onboard existing
-hub and spoke virtual network topologies for central management of connectivity and security controls.
+> You can use [Azure Virtual Network Manager (AVNM)](/azure/virtual-network-manager/overview) to create new or onboard existing hub and spoke virtual network topologies for central management of connectivity and security controls.
 >
 > A connectivity configuration enables you to create a mesh or a hub-and-spoke network topology including direct connectivity between spoke virtual networks.
 >

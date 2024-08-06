@@ -47,12 +47,12 @@ Review the [security](../../../ready/landing-zone/design-area/security.md) and [
 - Review the [network connectivity critical design area](./eslz-arc-data-service-sql-managed-instance-network-connectivity.md) for best practices and guidance.
 - Decide on the [connectivity mode](/azure/azure-arc/data/connectivity#connectivity-modes) to be used for your Arc-enabled SQL Managed Instance depending on your organization's security and compliance requirements.
 - Depending on where your cluster is deployed, consider the [network ports and endpoints](/azure/azure-arc/data/monitor-grafana-kibana#additional-firewall-configuration) needed for monitoring your Arc-enabled SQL Managed Instance using Grafana and Kibana.
-- When creating the Data Controller, decide which service type you'll use between Kubernetes _LoadBalancer_ or _NodePort_.
+- When creating the Data Controller, decide which service type you'll use between Kubernetes *LoadBalancer* or *NodePort*.
 
 ### Identity and access management
 
 - Review the [identity and access management for Arc-enabled SQL Managed Instance](./eslz-arc-data-service-sql-managed-instance-identity-access-management.md) for best practices and guidance.
-- While considering your organization's separation of duties and least-privileged access requirements, define cluster administration, operations, database administration, and developer roles within your organization. Mapping each team to actions and responsibilities determines Azure role-based access control (RBAC) roles or the Kubernetes _ClusterRoleBinding_ and _RoleBinding_ depending on the connectivity mode used.
+- While considering your organization's separation of duties and least-privileged access requirements, define cluster administration, operations, database administration, and developer roles within your organization. Mapping each team to actions and responsibilities determines Azure role-based access control (RBAC) roles or the Kubernetes *ClusterRoleBinding* and *RoleBinding* depending on the connectivity mode used.
 - Consider using a [responsible, accountable, consulted, and informed (RACI) parties](../../../organize/raci-alignment.md) matrix to support this effort. Build controls into the management scope hierarchy that you define based on [resource consistency](../../../govern/resource-consistency/index.md) and [inventory management](../../../manage/considerations/inventory.md) guidance.
 - Deploying the Azure Arc Data Controller requires some permissions that can be considered high privilege, such as creating a Kubernetes namespace or creating a cluster role. Understand the [permissions](/azure/azure-arc/data/least-privilege) needed to prevent excessive privileges.
 - Decide on the authentication model to be used within your Arc-enabled SQL Managed Instance, whether it's Microsoft Entra authentication or SQL authentication. Review the [identity and access management design area](./eslz-arc-data-service-sql-managed-instance-identity-access-management.md) for design considerations and recommendations to choose the right authentication mode.
@@ -79,7 +79,7 @@ Review the [security](../../../ready/landing-zone/design-area/security.md) and [
 ### Network security
 
 - Secure your Grafana and Kibana monitoring dashboards with [SSL/TLS certificates](/azure/azure-arc/data/monitor-certificates) for transport layer security.
-- Use Kubernetes _LoadBalancer_ as your service type when deploying Arc-enabled SQL Managed Instance for better availability.
+- Use Kubernetes *LoadBalancer* as your service type when deploying Arc-enabled SQL Managed Instance for better availability.
 
 ### Identity and access management
 

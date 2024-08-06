@@ -22,12 +22,14 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 
 This article describes the flow of SAP data from source SAP systems to downstream targets. Each target serves a purpose in the data journey for your enterprise. The architecture design extends SAP solutions by using Azure data services. Use Azure Synapse Analytics to build a modern data platform to ingest, process, store, serve, and visualize data from various sources.
 
+*Apache Spark® and Apache Kafka® are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. No endorsement by The Apache Software Foundation is implied by the use of these marks.*
+
 ## Architecture
 
 The following diagram is an example architecture of an SAP data integration on Azure. Use this example architecture as a starting point.
 
 :::image type="content" source="./media/sap-extend-data-integration-architecture-updated.svg" border="false" alt-text="Diagram that shows the SAP data integration security architecture on Azure." lightbox="./media/sap-extend-data-integration-architecture-updated.svg":::
-_Download a [Visio file](https://arch-center.azureedge.net/sap-extend-data-integration-architecture.vsdx) of this architecture._
+*Download a [Visio file](https://arch-center.azureedge.net/sap-extend-data-integration-architecture.vsdx) of this architecture.*
 
 ### Dataflow
 
@@ -55,7 +57,7 @@ Data Factory and Synapse pipelines extract data by using the following SAP conne
 
 - [SAP Business Warehouse via Open Hub](/azure/data-factory/connector-sap-business-warehouse-open-hub)
 - [SAP Business Warehouse via Multidimensional Expressions (MDX)](/azure/data-factory/connector-sap-business-warehouse)
-- [SAP Customer Data Cloud (CDC)](/azure/data-factory/connector-sap-change-data-capture)
+- [SAP Change Data Capture (CDC) connector](/azure/data-factory/connector-sap-change-data-capture)
 - [SAP Cloud for Customer](/azure/data-factory/connector-sap-cloud-for-customer)
 - [SAP ERP Central Component (ECC)](/azure/data-factory/connector-sap-ecc)
 - [SAP HANA](/azure/data-factory/connector-sap-hana)
@@ -73,8 +75,7 @@ In Data Lake Storage Gen2, Azure Storage is the foundation for building enterpri
 
 Data is encrypted at rest after it's ingested into the data lake. Use your customer-managed keys to further enhance encryption and add access control flexibility.
 
-For more information, see the Data Lake Storage Gen2 [introduction](/azure/storage/blobs/data-lake-storage-introduction)
-and [best practices](/azure/storage/blobs/data-lake-storage-best-practices).
+For more information, see the Data Lake Storage Gen2 [introduction](/azure/storage/blobs/data-lake-storage-introduction) and [best practices](/azure/storage/blobs/data-lake-storage-best-practices).
 
 #### Data transformation and consumption
 

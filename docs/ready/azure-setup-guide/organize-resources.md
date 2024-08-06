@@ -24,15 +24,18 @@ Azure provides four levels of management: management groups, subscriptions, reso
 
 - **Subscriptions** logically associate user accounts with the resources that they create. Each subscription has limits or quotas on the amount of resources that it can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, and projects.
 
-- **Resource groups** are logical containers where you can deploy and manage Azure resources like web apps, databases, and storage accounts.
+- **Resource groups** are logical containers where you can deploy and manage Azure resources like virtual machines, web apps, databases, and storage accounts.
 
-- **Resources** are instances of services that you can create, such as virtual machines, storage, and SQL databases.
+- **Resources** are instances of services that you can create in a resource group, such as virtual machines, storage, and SQL databases.
+
+  > [!NOTE]
+  > To minimize the effect of regional outages, we recommend that you place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 ### Management settings scope
 
 You can apply management settings, such as policies and role-based access control, at any management level. The level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy applies to all resource groups and resources in that subscription.
 
-Usually, it makes sense to apply critical settings at higher levels and project-specific requirements at lower levels. For example, to make sure that all resources for your organization deploy to certain regions, apply a policy to the subscription that specifies the allowed regions. The allowed locations are automatically enforced when users in your organization add new resource groups and resources. Learn more about policies in [Governance, security, and compliance](govern-org-compliance.md), another article in this setup guide.
+Usually, it makes sense to apply critical settings at higher levels and project-specific requirements at lower levels. For example, to make sure that all resources for your organization deploy to certain regions, apply a policy to the subscription that specifies the allowed regions. The allowed locations are automatically enforced when users in your organization add new resource groups and resources.
 
 Managing a few subscriptions independently is easy. However, for a larger number of subscriptions, consider creating a management group hierarchy to simplify management of subscriptions and resources. For more information, see [Organize and manage multiple Azure subscriptions](../azure-best-practices/organize-subscriptions.md).
 
@@ -111,17 +114,6 @@ A good naming standard helps to identify resources in the Azure portal, on a bil
 
 ::: zone-end
 
-The following table shows restrictions and naming patterns for resource groups, availability sets, and tags.
-
-| | Resource group | Availability set | Tag |
-|----------|----------|----------|----------|
-| **Scope** | Subscription | Resource group | Associated entity |
-| **Length** | 1-90 | 1-80 | 512 (name), 256 (value) |
-| **Valid characters** | Alphanumeric, underscore, parentheses, hyphen, and period except at end | Alphanumeric, underscore, and hyphen | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period |
-| **Suggested pattern** | `<service-short-name>-<environment>-rg` | `<service-short-name>-<context>-as`  | `key` : `value` |
-| **Example**           | `profx-prod-rg` | `profx-SQL-as` | `Department` : `Central IT ☺` |
-
-
 ## Resource tags
 
 Tags can quickly identify your resources and resource groups. You apply tags to your Azure resources to logically organize them by categories. Tags can include context about the resource's associated workload or application, operational requirements, and ownership information.
@@ -134,7 +126,7 @@ Other common uses for tags include:
 
 - **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like *ProjectOwner*.
 - **Automation:** Regularly running scripts can take action based on a tag value like *ShutdownTime* or *DeprovisionDate*.
-- **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the costs. In [Cost Management + Billing](/azure/cost-management-billing/), you can apply your cost center tag as a filter to report charges based on usage by team or department.
+- **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the costs. In [Microsoft Cost Management](/azure/cost-management-billing/), you can apply your cost center tag as a filter to report charges based on usage by team or department.
 
 Each resource or resource group can have a maximum of 50 pairs of tag names and values. This limitation is only for tags that directly apply to the resource group or resource.
 
@@ -173,13 +165,11 @@ To apply one or more tags to a resource group:
 1. Enter the name and value for a tag under **Name** and **Value**.
 1. Enter more names and values or select **Save**.
 
-
 To remove one or more tags from a resource group:
 
 1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the ellipses menu for the group, and then select **Edit tags**.
 1. Select the trash can icon for each tag that you want to remove.
 1. To save your changes, select **Save**.
-
 
 ::: zone-end
 

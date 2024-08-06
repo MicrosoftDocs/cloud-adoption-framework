@@ -1,25 +1,25 @@
 ---
-title: Azure Policy guest configuration extension
-description: Use the Cloud Adoption Framework for Azure to learn how to use the Azure Policy guest configuration extension to audit the configuration settings in an Azure VM.
-author: martinekuan
-ms.author: timwarner
+title: Azure Policy machine configuration extension
+description: Use the Cloud Adoption Framework for Azure to learn how to use the Azure Policy machine configuration extension to audit the configuration settings in an Azure VM.
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 01/06/2023
 ms.topic: conceptual
 ms.custom: internal, devx-track-azurepowershell
 ---
 
-# Azure Policy guest configuration extension
+# Azure Policy machine configuration extension
 
-You can use the [Azure Policy guest configuration extension](/azure/governance/policy/concepts/guest-configuration) to audit the configuration settings in a virtual machine. Guest configuration supports Azure VMs natively and non-Azure physical and virtual servers through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview).
+You can use the [Azure Policy machine configuration extension](/azure/governance/machine-configuration/overview) to audit the configuration settings of a virtual machine. Machine configuration supports Azure VMs natively. Physical servers and non-Azure virtual servers are supported with [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview), or [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview).
 
-To find the list of guest configuration policies, search for *guest configuration* on the Azure Policy portal page, or run this cmdlet in a PowerShell window to find the list:
+To find the list of machine configuration policies, search for *machine configuration* on the Azure Policy portal page, or run this cmdlet in a PowerShell window to find the list:
 
 ```powershell
-Get-AzPolicySetDefinition | Where-Object {$_.Properties.metadata.category -eq "Guest Configuration"}
+Get-AzPolicySetDefinition | Where-Object {$_.Properties.metadata.category -eq "Machine Configuration"}
 ```
 
 > [!NOTE]
-> Guest configuration functionality is regularly updated to support additional policy sets. Check for new supported policies periodically and evaluate whether they'll be useful.
+> Machine configuration functionality is regularly updated to support additional policy sets. Check for new supported policies periodically and evaluate whether they'll be useful.
 
 ## Deployment
 
@@ -32,7 +32,7 @@ Before you run this script, use the [`Connect-AzAccount`](/powershell/module/az.
 
 ```powershell
 
-    # Assign guest configuration policy.
+    # Assign machine configuration policy.
 
     param (
         [Parameter(Mandatory=$true)]
