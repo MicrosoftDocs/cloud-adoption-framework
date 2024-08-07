@@ -104,6 +104,8 @@ Configure your subscription policy by providing a list of [exempted users](/azur
 
   - You can only specify individual user accounts as [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users), not Microsoft Entra groups.
 
+[!INCLUDE [global admin warning](../../../includes/global-admin-warning.md)]
+
 - All users with access to Azure can view the policy that's defined for your Microsoft Entra tenant.
 
   - Users can't view your [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users) list.

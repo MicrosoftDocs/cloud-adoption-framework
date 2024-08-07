@@ -406,6 +406,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/scenarios/oracle-iaas/oracle-disaster-recovery-odaa.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/scenarios/aks/manage.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/manage",
       "redirect_document_id": true
