@@ -10,23 +10,13 @@ ms.custom: internal, UpdateFrequency2
 
 # Adopt integrity
 
-## Intro section
+## Introduction
 
-Goal: Adoption of this principle prevents data corruption, reduces errors, and supports decision-making processes. Maintaining high standards of integrity allows the organization to operate more efficiently and with greater confidence in the results produced by its data.
+The integrity of your data and your systems is critical to maintaining security. Integrity means that an asset is free from unauthorized alterations. Only authorized entities should be able to modify an asset, and only in specific authorized ways. For example, if you are reviewing orders placed by customers on your online store, you should not be able to increase the price of any items in those orders after they have been purchased. Integrity also means that data are free from corruption and errors and that your systems are configured to align with your standards. Misconfiguration of systems and incorrect data can both expose your organization to security risks that can be exploited.
 
-Integrity means that an asset is free from unauthorized alterations. Only authorized entities should be able to modify an asset, and only in specific authorized ways. For example, if you are reviewing orders placed by customers on your online store, you should not be able to increase the price of any items in those orders after they have been purchased.
+Adoption of this principle prevents data corruption, reduces errors, and supports decision-making processes. Maintaining high standards of integrity allows the organization to operate more efficiently and with greater confidence in the results produced by its data.
 
 Cloud environments need to ensure integrity in two general areas: data integrity and system integrity. 
-
-Data integrity is ensured through a variety of methods including:
-
-- **Robust data management practices** that include data validation, data verification, and use of error detection and correction algorithms to ensure accuracy and consistency of data. 
-- **Access controls** are implemented to prevent unauthorized access or modification of data. 
-- Regular **data backups** are performed to protect against data loss. 
-- **Checksums** and **hash functions** are used to detect any unintentional changes to data. 
-- **Data encryption** is used to protect data in transit and at rest, preventing unauthorized access and maintaining data integrity.
-- **Database normalization** techniques reduce data redundancy and improve data integrity.
-- Regular **audits** are conducted to ensure compliance with data integrity standards. 
 
 > [!NOTE]
 > Some guidance in this article overlaps with guidance provided in the [Adopt confidentiality](./refresh-adopt-confidentiality.md) article. In those instances, this article will direct you to the relevant guidance in that article to avoid repetition.
@@ -109,11 +99,15 @@ In the adopt phase, planning and designs are turned into real-world implementati
     - Using the CHECKSUM and BINARY_CHECKSUM functions in SQL to ensure data isn't corrupted in transit.
     - Storing hashes in tables and creating subroutines that modify the hashes when the last modified date changes.
 
-- *Access controls:* Apply role-based access controls (RBAC), conditional access controls, just-in-time access, and just-enough-access to all data stores and standardize practices of reviewing permissions regularly.
+- *Access controls:* Apply role-based access controls (RBAC), conditional access controls, just-in-time access, and just-enough-access to all data stores and standardize practices of reviewing permissions regularly. Lockdown write access to configuration systems and allow write access only through specific automation account which applies the changes after comprehensive review processes, typically as part of DevOps pipelines. 
+
+Monitor changes with detailed change history information to help with reviews and configure alerting to ensure that you have appropriate visibility and you can take efficient actions in case of any incidents that could affect data integrity.
 
 - *Backup policies:* Apply backup policies on all appropriate systems. Understand the backup capabilities of platform as a service (PaaS) ans software as a service (SaaS) services. For example, Azure SQL Database includes [automatic backups](azure/azure-sql/database/automated-backups-overview?view=azuresql) and you can configure the retention policy as necessary.
 
 - *Strong encryption:* Enable encryption on data stores when practical and consider managing your own keys. Your cloud provider may offer encryption at rest for the storage that your data store is hosted on, and give you the option of enabling database encryption like [transparent data encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview) in Azure SQL Database. Apply the extra layer of encryption when practical.
+
+- *Share design standards:* Publish and share application design standards that incorporate data integrity mechanisms across the organization. Design standards should include nonfunctional requirements like tracking configuration and data changes at the application level natively and capturing this history in the data schema. This approach mandates that the data schema retains details about data history and configuration history as part of the datastore, in addition to standard logging mechanisms to bolster your integrity monitoring.
  
 2. **System integrity adoption**
 
