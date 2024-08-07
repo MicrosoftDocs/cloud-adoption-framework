@@ -23,7 +23,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AI Search | `Microsoft.Search/searchServices` | `srch` |
-| Azure AI services multi-service account | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `aisa` |
+| Azure AI services | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `ais` |
+| Azure AI Studio hub | `Microsoft.MachineLearningServices/workspaces` (kind: `Hub`) | `hub` |
 | Azure AI Video Indexer | `Microsoft.VideoIndexer/accounts` | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` (kind: `OpenAI`) | `oai` |
