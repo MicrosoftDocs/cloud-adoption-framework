@@ -59,7 +59,9 @@ _Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.git
 
 - Site-to-site VPN gateways in Virtual WAN scale up to 20-Gbps aggregated throughput.
 
-- You can connect ExpressRoute circuits to a Virtual WAN hub by using a Local, Standard, or Premium SKU.
+- You can connect ExpressRoute circuits to a Virtual WAN hub by using a Local, Standard, or Premium SKU. 
+
+- For deployment is the same city, consider [ExpressRoute Metro](/azure/expressroute/metro)
 
 - ExpressRoute Standard or Premium circuits, in locations supported by Azure ExpressRoute Global Reach, can connect to a Virtual WAN ExpressRoute gateway. And they have all the Virtual WAN transit capabilities (VPN-to-VPN, VPN, and ExpressRoute transit). ExpressRoute Standard or Premium circuits that are in locations not supported by Global Reach can connect to Azure resources, but can't use Virtual WAN transit capabilities.
 
