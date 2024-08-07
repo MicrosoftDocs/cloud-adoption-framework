@@ -16,11 +16,29 @@ Availability refers to a system's ability to remain operational through normal a
 
 ## Strategy
 
-Refer to the [cross-cutting recommendations](./refresh-adopt-confidentiality.md#cross-cutting-guidance) in the "Adopt confidentialiy" guide.
+Including considerations for availability in your cloud adoption strategy will ensure that you are well prepared for a reliable and resilient cloud estate and that you're able to be confident in meeting your business requirements as they relate to availability.
+
+- **Define business requirements and objectives:** Availability requirements and objectives span across the entire cloud estate, including all business functions and workloads and the underlying cloud platform. Ensure that as you develop your cloud adoption strategy, you start with high-level goals for determining the criticality of various aspects of your cloud estate and begin discussions amongst stakeholders on what the proper level of availbility must be set at while balancing cost and performance requirements and objectives.  This approach will put a structure on your cloud adoption plans that helps you work toward more defined targets as you progress to the next phases in your cloud adoption journey, laying the groundwork for appropriately scoped designs and standards.
+
+- **Adopt Azure landing zones:** Using the landing zone approach allows you to safely design your cloud foundation, optimizing it for availability. This approach logically segregates different cloud functions and implement a networking design that isolates functions from each other, protecting each one from the blast radius of an incident happening in a given segment of your estate.
+
+### Summary
+
+Your cloud adoption strategy risks being unsuccessful if you don't address availability at the outset. Defining business requirements and objectives takes careful consideration due to the tradeoffs with cost and performance that aggressive availability requirments may introduce. Using the Azure landing zone approach helps start you off with a secure, well-designed foundation for your cloud journey.
 
 ## Plan 
 
-Refer to the [cross-cutting recommendations](./refresh-adopt-confidentiality.md#cross-cutting-guidance) in the "Adopt confidentialiy" guide.
+Your cloud adoption plan should address availability by adopting standards for architecture design and operations. These standards will guide the implementation and further phases, providing a blueprint for how availability requirements will be achieved. Consider the following recommendations as you build out your cloud adoption plan:
+
+- *Standardize infrastructure and application design patterns:* To help ensure that your workloads are reliable, infrastructure and application design patterns must be standardized. Avoid unnecessary complexity to make designs repeatable and to discourage shadow IT behaviors. Follow best practices for [highly available infrastructure](/azure/well-architected/reliability/redundancy) and [resilient applications](azure/well-architected/reliability/self-preservation) as you define your design standards. 
+
+- *Standardize development tools and practices:* Develop well-defined and enforcable [standards for your development tools and practices](/azure/well-architected/operational-excellence/formalize-development-practices) to help ensure that your deployments adhere to the principles of the CIA Triad, incorporating best practices for [safe deployments](/azure/well-architected/operational-excellence/safe-deployments).
+
+- *Standardize operational tools and practices:* Maintaining confidentialiy, integrity, and availabiilty relies on well-defined and strictly enforced standards for operators to follow. Having standards that are always followed and are routinely trained on will help ensure that your systems are resilient to attacks and that you can respond efficiently to incidents.
+
+### Summary
+
+Incorporating plans for a resilient and reliable architecture and supporting operational practices will help ensure that your implementations result in meeting your availability targets, balanced with cost and performance targets. Base your standards on best practices and modify them to meet your particular business requirements, keeping in mind the criticality of availability as it relates to security and overall cloud success.
 
 ## Ready
 
@@ -36,8 +54,7 @@ Designing your workloads for resiliency helps ensure that the business is able t
 
 - **Resilient Application Design:** Adopt application design patterns that enhance resilience to both infrastructure and non-infrastructure incidents, aligning with the broader principles of the Cloud Adoption Framework. Standardize designs that incorporate self-healing and self-preservation mechanisms to ensure continuous operation and rapid recovery. For detailed guidance on resilient design patterns, refer to the Well-Architected Framework's [Reliability](/azure/well-architected/reliability) pillar.
  
-- **Adopt serverless architecture:** Utilize serverless technologies to reduce server management overhead, automatically scale with demand, and ensure high availability. This supports CAF’s emphasis on modernizing workloads and optimizing operational efficiency.
-By adopting this approach, your cloud adoption strategy under the CAF will lead to more resilient, scalable, and maintainable applications, ensuring robust governance and operational excellence.
+- **Adopt serverless architecture:** Utilize serverless technologies including platform as a service (PaaS), software as a service (SaaS), and function as a service (FaaS) to reduce server management overhead, automatically scale with demand, and ensure high availability. This supports CAF’s emphasis on modernizing workloads and optimizing operational efficiency.
  
 - **Microservices and containerization:** Implement microservices and containerization to avoid monolithic applications, breaking them down into smaller, independent services that can be deployed and scaled independently. This aligns with CAF’s principles of agility and scalability in cloud environments.
  
@@ -52,7 +69,7 @@ Implement fault isolation: Design your application to isolate failures to indivi
 
 ### Summary
 
-Having reslient designs for your landing zones and workloads will build a solid foundation for building a cloud estate that prioritizes availability. Your landing zone design should minimize the blast radius of any incident, which allows your teams to act quickly towards mitigating the incident while keeping other business functions operational. Resilient infrastructure design patterns further minimizes blast radius while removing single points of failure. Resilient application design patterns help your workload function in a degraded state or automatically heal itself.
+Having reslient designs for your landing zones and workloads will build a solid foundation for building a cloud estate that prioritizes availability. Your landing zone design should minimize the blast radius of any incident, which allows your teams to act quickly towards mitigating the incident while keeping other business functions operational. By adopting the approaches listed above, your cloud adoption strategy under the CAF will lead to more resilient, scalable, and maintainable applications, ensuring robust governance and operational excellence.
 
 Refer to the [Ready](../ready/) methodology section for detailed guidance on topics related to preparing for cloud adoption.
 

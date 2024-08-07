@@ -33,11 +33,31 @@ Data integrity is ensured through a variety of methods including:
 
 ## Strategy
 
-Refer to the [cross-cutting recommendations](./refresh-adopt-confidentiality.md#cross-cutting-guidance) in the "Adopt confidentialiy" guide.
+- **Define business requirements and objectives:** Maintaining data and system integrity should be a key tenet in business requirements and objectives. To that end, prioritize security controls and operational practices that support a high level of integrity like the approaches described throughout this guide.
+
+- **Adopt Zero Trust as a strategy:** Refer to the guidance found in the [Strategy](./refresh-adopt-confidentiality.md#strategy) section of the "Adopt confidentiality" guide for applicable guidance on this topic.
+
+By defining clear business requirements and objectives, adopting Zero Trust principles, and leveraging Microsoft’s comprehensive security solutions, organizations can effectively ensure data and system integrity in the cloud. This strategy not only protects sensitive information but also enhances overall security posture and compliance.
+
+Refer to the [Strategy](../strategy/) methodology section for detailed guidance on topics related to developing a cloud adoption strategy.
 
 ## Plan 
 
-Refer to the [cross-cutting recommendations](./refresh-adopt-confidentiality.md#cross-cutting-guidance) in the "Adopt confidentialiy" guide.
+Once a strategy has been developed and is in place to help guide decision making, development of a comprehensive implementation plan that takes data and system integrity into consideration should begin.
+
+Refer to the guidance found in the [Strategy](./refresh-adopt-confidentiality.md#strategy) section of the "Adopt confidentiality" guide for applicable guidance on this topic.
+
+Further recommendations specific to data and system integrity include:
+
+- **Plan for data and system integrity governance:** Include plans for monitoring for unauthorized changes to data and systems and policies for data hygiene.
+
+- **Plan for integrity incidents:** Include plans for incident response with considerations for integrity. These plans should address unauthorized changes to data or systems and remediating invalid or corrupted data that is discovered through your monitoring and data hygiene practices.
+
+### Summary
+
+Include data protection requirements, integrity governance and integrity incident planning in your cloud adoption plan to ensure that integrity is a key consideration for your overall plans. Leveraging landing zones for a standardized and secure environment and utilizing Microsoft’s tools and services are also critical aspects of a well-designed cloud adoption plan to enhance security.
+
+Refer to the [Plan](../plan/) methodology section for detailed guidance on topics related to developing a cloud adoption plan.
 
 ## Ready
 

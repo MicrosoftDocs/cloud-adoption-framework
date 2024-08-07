@@ -14,25 +14,19 @@ Adoption of the Confidentiality principle ensures that the organization can prot
 
 Refer to the [Zero Trust deployment guide for data](/security/zero-trust/deploy/data#data-zero-trust-deployment-objectives) for planning an end-to-end Zero Trust framework for data implementation.
 
-## Cross-cutting guidance
-
-The following sections discuss recommendations that apply to each principle of the CIA Triad.
-
 ### Strategy
 
-When defining a strategy for adopting confidentiality, integrity and availability in an enterprise cloud environment, it’s essential to consider several key points:
+When defining a strategy for adopting confidentiality in an enterprise cloud environment, it’s essential to consider several key points:
 
 1. **Define business requiements and objectives**
 
-- *Prioritize data privacy, protection, and integrity:* Establish clear business objectives that emphasize the importance of data privacy, protection, and integrity. This includes compliance with relevant regulations like GDPR, HIPAA, and industry standards.
+- *Prioritize data privacy and protection:* Establish clear business objectives that emphasize the importance of data privacy and protection. This includes compliance with relevant regulations like GDPR, HIPAA, and industry standards.
 
-- *Plan for a risk management strategy:* Identify and assess potential risks to data confidentiality and integrity and develop strategies to mitigate these risks.
-
-- *Define your workloads and their reliability targets:* Building out a map of your workloads and defining [reliability targets](/azure/well-architected/reliability/metrics) for them will prepare you to design your cloud estate in an optimal way. 
+- *Plan for a risk management strategy:* Identify and assess potential risks to data confidentiality and develop strategies to mitigate these risks.
 
 2. **Implement Zero Trust (ZT) as a strategy**
 
-- *Zero Trust Principles:* Adopt Zero Trust principles, which include verifying explicitly, using least privilege access, and assuming breach. This approach ensures that every access request is authenticated, authorized, and encrypted.
+- *Zero Trust Principles:* Adopt Zero Trust principles and methodologies, which include verifying explicitly, using least privilege access, and assuming breach. This approach ensures that every access request is authenticated, authorized, and encrypted.
 
 3. **Microsoft’s support for Zero Trust**
 
@@ -49,21 +43,15 @@ Refer to the [Strategy](../strategy/) methodology section for detailed guidance 
 
 ### Plan 
 
-Once a strategy has been developed and is in place to help guide decision making, development of a comprehensive implementation plan that takes into consideration the CIA Triad principles should begin.
+Once a strategy has been developed and is in place to help guide decision making, development of a comprehensive implementation plan that takes confidentiality into consideration should begin.
 
-1. **Include data protection and integrity, and reliability requirements in your cloud migration or development plans**
+1. **Include data protection requirements in your cloud migration or development plans**
 
 - *Data classification:* Identify and classify data based on sensitivity and regulatory requirements. This helps in applying appropriate security measures.
 
 - *Encryption:* Ensure that data will be encrypted both at rest and in transit. Use strong encryption standards to protect sensitive information.
 
-- *Access controls:* Implement strict access controls to ensure that only authorized users can access sensitive data. Use multi-factor authentication (MFA) and role-based access control (RBAC), as well as the principle of ZT, Verify Explicitly, always authenticating and authorizing based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies.
-
-- *Standardize infrastructure and application design patterns:* To help ensure that your workloads are reliable, infrastructure and application design patterns must be standardized. Avoid unnecessary complexity to make designs repeatable and to discourage shadow IT behaviors. Follow best practices for [highly available infrastructure](/azure/well-architected/reliability/redundancy) and [resilient applications](azure/well-architected/reliability/self-preservation) as you define your design standards. 
-
-- *Standardize development tools and practices:* Develop well-defined and enforcable [standards for your development tools and practices](/azure/well-architected/operational-excellence/formalize-development-practices) to help ensure that your deployments adhere to the principles of the CIA Triad, incorporating best practices for [safe deployments](/azure/well-architected/operational-excellence/safe-deployments).
-
-- *Standardize operational tools and practices:* Maintaining confidentialiy, integrity, and availabiilty relies on well-defined and strictly enforced standards for operators to follow. Having standards that are always followed and are routinely trained on will help ensure that your systems are resilient to attacks and that you can respond efficiently to incidents.
+- *Access controls:* Implement strict access controls to ensure that only authorized users can access sensitive data. Use multi-factor authentication (MFA) and role-based access control (RBAC), as well as the principle of Zero Trust, Verify Explicitly, always authenticating and authorizing based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies.
 
 2. **Adopt Azure landing zones**
 
@@ -75,8 +63,6 @@ Once a strategy has been developed and is in place to help guide decision making
 By including data protection requirements in your cloud migration plans, leveraging landing zones for a standardized and secure environment, and utilizing Microsoft’s tools and services, you can effectively plan and implement a robust confidentiality strategy in the cloud. This approach ensures that your data and workloads are protected throughout the migration process and beyond.
 
 Refer to the [Plan](../plan/) methodology section for detailed guidance on topics related to developing a cloud adoption plan.
-
-**This concludes cross-cutting guidance. All subsequent sections are specific to the Confidentiality principle.**
 
 ## Ready
 
@@ -108,7 +94,7 @@ By configuring secure landing zones and implementing robust data access controls
 
 Refer to the [Ready](../ready/) methodology section for detailed guidance on topics related to preparing for cloud adoption.
 
-## Adopt 
+## Adopt
 
 With the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality already in place, the next step is to focus on adoption and change management. This involves ensuring that encryption and secure access controls are effectively implemented and institutionalized across the enterprise cloud environment.
 
