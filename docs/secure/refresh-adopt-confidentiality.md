@@ -46,7 +46,7 @@ Refer to the [Strategy](../strategy/) methodology section for detailed guidance 
 ### Plan 
 
 Once a strategy has been developed and is in place to help guide decision making, development of a comprehensive implementation plan that takes confidentiality into consideration should begin.
-
+1. _Data Loss Protection:_ Specific DLP policies and procedures must be well planned to ensure organizational data confidentiality will be instantiated across the enterprise. This includes identifying sensitive data, determining how it will be protected, and planning for the deployment of encryption technologies and secure access controls.
 1. **Include data protection requirements in your cloud migration or development plans**
 
 - *Data classification:* Identify and classify data based on sensitivity and regulatory requirements. This helps in applying appropriate security measures.
@@ -99,7 +99,7 @@ Refer to the [Ready](../ready/) methodology section for detailed guidance on top
 
 ## Adopt
 
-With the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality already in place, the next step is to focus on adoption and change management. This involves ensuring that encryption and secure access controls are effectively implemented and institutionalized across the enterprise cloud environment.
+With the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality already in place, the next step is to focus on adoption and change management. This involves ensuring that encryption and secure access controls are effectively implemented and institutionalized across the enterprise cloud environment. In the adoption phase, DLP measures are implemented to protect sensitive data in transit and at rest. This involves deploying encryption solutions, configuring access controls, and ensuring that all employees are trained in the importance of data confidentiality and how to adhere to DLP policies.
 
 1. **Implement encryption and secure access controls**
 
@@ -150,7 +150,7 @@ Effective governance in cloud environments begins with robust policies that defi
 - *Written policies:* Written policies act as the governing framework for the entire enterprise environment. They establish the requirements and parameters for data handling, access, and protection. These documents ensure consistency and compliance across the organization, providing clear guidelines for employees and IT staff. Written policies also serve as a reference point for audits and assessments, helping to identify and address any gaps in security practices.
 
 - *Authoritative documentation:* Having documentation that has been vetted and approved by the organization’s leadership is essential. This documentation provides clear direction and guidance for the maintenance and lifecycle management of the enterprise cloud environment. It ensures that all policies and procedures are aligned with the organization’s strategic goals and regulatory requirements. Not all policies lend themselves to automation but instead require consistent human interaction, such as incident response plans, data classification and handling procedures, and regular security training and awareness programs. These policies ensure that human oversight and judgment are applied to critical security processes, maintaining a high level of vigilance and adaptability.
-
+_Data Loss Protection:_ Continuous monitoring and auditing of DLP measures should be conducted to ensure ongoing compliance with confidentiality requirements. This includes regularly reviewing and updating DLP policies, conducting security assessments, and responding to any incidents that may compromise data confidentiality. Establishing DLP programmatically across the organization ensures a consistent and scalable approach to protecting sensitive data.
 2. **Modern Service Management (MSM)**
 
 Modern Service Management (MSM) encompasses a set of practices and tools designed to manage and optimize IT services in a cloud environment. MSM focuses on aligning IT services with business needs, ensuring efficient service delivery, and maintaining high standards of security and compliance. It is useful because it provides a structured approach to managing complex cloud environments, enabling organizations to respond quickly to changes, mitigate risks, and ensure continuous improvement. MSM is particularly relevant to the principle of confidentiality, as it includes tools and practices that enforce data protection and monitor access controls.
