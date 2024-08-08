@@ -154,7 +154,20 @@ Managing your data and system integrity relies on robust monitoring with specifi
 3. **Continuous improvement:** The continuous improvement [guidance](./refresh-adopt-confidentiality.md#manage) provided in the "Adopt confidentiality" article is applicable to integrity. Recommendations specific to integrity are:
 
 - *Routinely audit your data:* Routinely perform manual audits of your data to ensure that your data governance and monitoring tooling is performing as expected and look for areas of improvement.
-- *Data hygiene:* Adopt good data hygiene habits like routinely reviewing access permissions to your data stores and deleting sensitive data when its no longer valuable or necessary. 
+
+- *Data hygiene:* Adopt good data hygiene habits like:
+
+    - Manually audit data for quality, accuracy and consistency, correcting errors when they are discovered.
+    
+    - Use strategies to reduce inconsistencies and redundancies like normalization.
+    
+    - Archive historical data in cold or offline storage when no longer needed in production or purge data that doesn't need to be archived.
+    
+    - Regularly review encryption configurations to ensure that all sensitive data is encrypted at rest and in transit.
+    
+    - Regularly review backup configurations to ensure that all data stores containing sensitive data or other critical data is being backed up and perform restore tests to ensure that the backup data is valid.
+    
+- *Regularly review access to systems and data:* Access permissions to systems and data stores should happen regularly to ensure that there are no gaps in your access controls and policies. 
 
 4. **Integrity training:** As part of your overall training strategy, ensure that employees are trained on your data and system integrity policies and procedures. This training should be mandatory for new hires, with deeper training specific to their roles for those in the security team, and should be regularly recurring for all employees.
 
