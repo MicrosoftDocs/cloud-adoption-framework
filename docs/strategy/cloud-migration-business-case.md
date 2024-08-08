@@ -88,7 +88,7 @@ Download the following files to use the Power BI model:
 
 **Solution assessments:** Get assistance from a Microsoft solutions assessment expert or qualified partner as part of a [solution assessment engagement](https://www.microsoft.com/solutionassessments/).
 
-**Azure Migration and Modernization Program:** Join [this program](https://azure.microsoft.com/migration/migration-modernization-program/) to get guidance and expert help at every stage of the cloud migration journey. Migrate infrastructure, databases, and apps so you can move forward with confidence.
+**Azure Migration and Modernization Program:** Join [this program](https://azure.microsoft.com/migration/migration-modernization-program/) to get guidance and expert help at every stage of the cloud migration journey - Migrate infrastructure, databases, and apps so you can move forward with confidence. [Learn more](https://learn.microsoft.com/en-us/azure/migrate/how-to-build-a-business-case).
 
 ### Learn about Azure
 
