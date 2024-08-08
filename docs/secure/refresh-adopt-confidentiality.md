@@ -24,6 +24,8 @@ When defining a strategy for adopting confidentiality in an enterprise cloud env
 
 - *Plan for a risk management strategy:* Identify and assess potential risks to data confidentiality and develop strategies to mitigate these risks.
 
+- *Develop a Data Loss Protection (DLP) strategy:* DLP is a set of tools and processes used to ensure that sensitive data is not lost, misused, or accessed by unauthorized users. In terms of the principle of Confidentiality, this involves defining clear data protection objectives and establishing a framework for implementing robust encryption and access controls. In the strategy phase, DLP is integrated into the overall security vision to ensure that sensitive data is protected from unauthorized access.
+
 2. **Implement Zero Trust (ZT) as a strategy**
 
 - *Zero Trust Principles:* Adopt Zero Trust principles and methodologies, which include verifying explicitly, using least privilege access, and assuming breach. This approach ensures that every access request is authenticated, authorized, and encrypted.
@@ -56,6 +58,7 @@ Once a strategy has been developed and is in place to help guide decision making
 2. **Adopt Azure landing zones**
 
 - *Landing Zones:* A landing zone is a pre-configured, secure, and scalable environment in the cloud that serves as a foundation for your workloads. It includes network topology, identity management, security, and governance components.
+    
     - *Benefits:* Landing zones help standardize cloud environments, ensuring consistency and compliance with security policies. They also facilitate easier management and scalability.
 
 ### Summary
