@@ -78,7 +78,7 @@ Endpoint discovery refers to the process of identifying all the endpoints or IP 
 
 Where possible, use automated tools to collect information about applications and Azure services that make up your workload. You can use these tools to perform low-level discovery and architecture design discovery for the relocation of a specific workload. You should use the following Azure tools and services.
 
-**Try Azure Resource Mover.** You should try Azure Resource Mover first. It's currently the easiest discovery tool to use, and you can also relocate services and data with the service. However, Azure Resource Mover only supports a limited number of services, so make sure your services are supported before continuing. For more information, see [Supported resources for Azure Resource Mover](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
+**Try Azure Resource Mover.** You should try [Azure Resource Mover](/azure/resource-mover/overview) first. It's currently the easiest discovery tool to use, and you can also relocate services and data with the service. However, Azure Resource Mover only supports a limited number of services, so make sure your services are supported before continuing. For more information, see [Supported resources for Azure Resource Mover](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
 
 **Use visualization tools.** If Azure Resource Mover doesn't meet all your needs, you can use visualization tools to aid your discovery. Azure has several visualization tools that you can use to map dependencies. Pick the tool that best supports your needs.
 
