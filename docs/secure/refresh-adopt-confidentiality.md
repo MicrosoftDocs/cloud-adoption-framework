@@ -14,7 +14,7 @@ Adoption of the Confidentiality principle ensures that the organization can prot
 
 Refer to the [Zero Trust deployment guide for data](/security/zero-trust/deploy/data#data-zero-trust-deployment-objectives) for planning an end-to-end Zero Trust framework for data implementation.
 
-### Strategy
+## Strategy
 
 When defining a strategy for adopting confidentiality in an enterprise cloud environment, it’s essential to consider several key points:
 
@@ -43,7 +43,7 @@ By defining clear business requirements and objectives, adopting Zero Trust prin
 
 Refer to the [Strategy](../strategy/) methodology section for detailed guidance on topics related to developing a cloud adoption strategy.
 
-### Plan 
+## Plan 
 
 Once a strategy has been developed and is in place to help guide decision making, development of a comprehensive implementation plan that takes confidentiality into consideration should begin.
 1. _Data Loss Protection:_ Specific DLP policies and procedures must be well planned to ensure organizational data confidentiality will be instantiated across the enterprise. This includes identifying sensitive data, determining how it will be protected, and planning for the deployment of encryption technologies and secure access controls.

@@ -22,8 +22,6 @@ Moving your organization into the cloud adds significant complexity to security,
 
 Refer to the [Define a security strategy](../strategy/define-security-strategy.md) guide for a comprehensive overview of these considerations.
 
-For Microsoft's recommendations for modernizing your cloud posture, refer to the [Zero Trust guidance](/security/zero-trust/adopt/rapidly-modernize-security-posture)
-
 ### Adopting Zero Trust
 
 Adopting [Zero Trust](/security/zero-trust/zero-trust-overview) as a strategy will help start your cloud journey off with a modern approach to security in place. The Zero Trust approach is founded on three principles:
@@ -36,27 +34,58 @@ Adopting [Zero Trust](/security/zero-trust/zero-trust-overview) as a strategy wi
 
 By applying these principles across the cloud adoption process, the transformation to modern security can be a smoother experience for the entire organization.
 
+Microsoft offers a [Zero Trust-based security modernization blueprint](/security/zero-trust/adopt/rapidly-modernize-security-posture) that organizations can use as a guide. Refer to the [Define strategy phase](/security/zero-trust/adopt/rapidly-modernize-security-posture#define-strategy-phase) for strategy recommendations.
+
 ### Summary
 
 Modernizing your security strategy can be an undertaking as large and complex as any your organization might take on, but getting it right is critical to the success of your cloud adoption journey. Redefining your security practices and incorporating the principles of the Zero Trust approach can help ease the transformations that your organization must accomplish, giving you the tools you need to implement a well-designed cloud strategy.
+
+Refer to the [Strategy](../strategy/) methodology section for detailed guidance on topics related to developing a cloud adoption strategy.
 
 ## Plan
 
 Building a security modernization plan focuses primarily on the adoption of new technologies and new operational practices, but business alignment is an equally important aspect as well.
 
-### Pillars
+### Planning for Zero Trust
 
-- **Identity** https://learn.microsoft.com/en-us/security/zero-trust/deploy/identity
-- **Endpoints** https://learn.microsoft.com/en-us/security/zero-trust/deploy/endpoints
-- **Data** https://learn.microsoft.com/en-us/security/zero-trust/deploy/data
-- **Apps** https://learn.microsoft.com/en-us/security/zero-trust/deploy/applications
-- **Infra** https://learn.microsoft.com/en-us/security/zero-trust/deploy/infrastructure
-- **Network** https://learn.microsoft.com/en-us/security/zero-trust/deploy/networks
-- **Visibility, automation, and orchestration** https://learn.microsoft.com/en-us/security/zero-trust/deploy/visibility-automation-orchestration
+As you develop your modernization plan, incorporate the prinicples of Zero Trust across the breadth of the plan to help structure the phases and steps that teams throughout the organization will be responsible for and how their activities will be accomplished.
 
-## Business alignment
+The Microsoft Zero Trust approach provides guidance for seven technology pillars with deployment and configuration recommendations. Explore each pillar as you bild your plan to ensure that these areas are covered thoroughly.
 
-Condense https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/secure/security-integration
+#### Zero Trust technology pillars
+
+- **[Identity](/security/zero-trust/deploy/identity):** Guidance for verifying identies with strong authentication and controlling access under the principle of least privilege.
+
+- **[Endpoints](/security/zero-trust/deploy/endpoints):** Guidance for securing all endpoints (devices and apps) that interact with your data, regardless of where they connect from and how they connect.
+
+- **[Data](/security/zero-trust/deploy/data):** Guidance for securing all data through a defense in depth approach.
+
+- **[Apps](/security/zero-trust/deploy/applications):** Guidance for securing the cloud apps and services that you consume.
+
+- **[Infrastructure](/security/zero-trust/deploy/infrastructure):** Guidance for securing cloud infrastructure through strict policies and enforcement strategies.
+
+- **[Network](/security/zero-trust/deploy/networks):** Guidance for securing your cloud network through segmentation, traffic inspection, and end-to-end encryption.
+
+- **[Visibility, automation, and orchestration](/security/zero-trust/deploy/visibility-automation-orchestration):** Guidance for operational policies and practices that enforce the Zero Trust principles.
+
+
+### Business alignment
+
+Alignment between technology and business stakeholders is critical to the success of your security modernization plan. As such, the plan development must be approached as a collaborative process that is accomplished through negotiations between stakeholders to find the right way to adapt processes and policies. Business stakeholders must understand how business functions may be effected by the modernization plan and technology stakeholders must understand where they may need to make concessions to ensure that critical business functions remain intact while being secured.
+
+Refer to the [Plan phase](/security/zero-trust/adopt/rapidly-modernize-security-posture#plan-phase) of the Zero Trust modernization blueprint for recommendations on developing your plan.
+
+### Summary
+
+As you move from the strategy phase to the planning phase of your security modernization initiative, apply the principles of the Zero Trust approach to the phases and steps throughout the plan. Apply recommendations for the seven technolgoy pillars found in Microsoft's Zero Trust guidance to ensure that your cloud technology adoption is accomplished with security as a cornerstone design requirement.
+
+Refer to the [Plan](../plan/) methodology section for detailed guidance on topics related to developing a cloud adoption strategy.
+
+## Ready
+
+TBD
+
+
 
 ## Enforcement
 
