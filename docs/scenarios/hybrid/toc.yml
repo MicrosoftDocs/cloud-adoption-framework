@@ -93,20 +93,6 @@ items:
   - name: Manage your portfolio
     href: manage.md
 
-  - name: Well-architected for hybrid workloads
-    items:
-    - name: Overview
-      href: /azure/architecture/framework/hybrid/hybrid-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Cost optimization
-      href: /azure/architecture/framework/hybrid/hybrid-cost?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Operational excellence
-      href: /azure/architecture/framework/hybrid/hybrid-opex?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Performance efficiency
-      href: /azure/architecture/framework/hybrid/hybrid-performance-efficiency?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Reliability
-      href: /azure/architecture/framework/hybrid/hybrid-reliability?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Security
-      href: /azure/architecture/framework/hybrid/hybrid-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
   - name: Hybrid architectures
     items:
     - name: Overview

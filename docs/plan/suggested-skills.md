@@ -24,9 +24,9 @@ The Cloud Adoption Framework guides you through the full adoption lifecycle. Eac
 - [Migration phase](../migrate/suggested-skills.md): Gain the skills required to implement the cloud migration plan.
 - [Management phase - Monitoring](../manage/monitor/suggested-skills.md): Gain the skills needed to monitor a cloud environment.
 
-Each of these learning paths shares opportunities across multiple media types to maximize knowledge acquisition. 
+Each of these learning paths shares opportunities across multiple media types to maximize knowledge acquisition.
 
-You can also explore certification paths. The [Azure Certification Deck](https://aka.ms/azuretraincertdeck) provides an overview of Microsoft Azure training journeys and certifications.
+You can also explore certification paths. For more information, see the [Certification process overview](/credentials/certifications/certification-process-overview#getting-started-with-microsoft-certification).
 
 ## Microsoft Learn
 

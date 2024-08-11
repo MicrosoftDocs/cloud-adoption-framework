@@ -55,6 +55,8 @@ Microsoft Entra ID uses a different approach to permissions than traditional on-
 
 **Microsoft Entra roles.** You assign permissions in Microsoft Entra ID using [Microsoft Entra directory roles](/azure/active-directory/roles/permissions-reference). These roles grant access to specific APIs and scopes. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Microsoft Entra ID. There are many built-in roles for various limited admin functions. You should delegate granular permissions to reduce attack surface area.
 
+[!INCLUDE [global administrator warning](../../../../includes/global-admin-warning.md)]
+
 **Elevated permission assignment.** To enhance security and reduce unnecessary privileges, Microsoft Entra ID provides two principles for permission assignment:
 
 *Just-in-Time (JIT)*: Microsoft Entra ID supports [just-in-time access](/azure/active-directory/privileged-identity-management/pim-configure). The JIT feature lets you assign permissions temporarily when needed. JIT access minimizes the exposure of unnecessary privileges and reduces the attack surface.
