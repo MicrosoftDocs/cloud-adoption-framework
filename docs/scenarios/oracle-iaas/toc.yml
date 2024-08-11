@@ -23,12 +23,22 @@ items:
             href: oracle-security-overview-iaas.md
           - name: Security overview for Oracle Database@Azure
             href: oracle-security-overview-odaa.md
-          - name: Business continuity and disaster recovery
-            href: oracle-disaster-recovery-oracle-landing-zone.md
       - name: Management
-        href: oracle-manage-monitor-workload.md
-      - name: Governance discipline
-        href: governance-compliance-oracle-landing-zone.md
+        items: 
+        - name: Management and monitoring for Oracle workloads on Azure Virtual Machines
+          href: oracle-manage-monitor-iaas.md
+        - name: Management and monitoring for Oracle Database@Azure
+          href: oracle-manage-monitor-oracle-database-azure.md
+        - name: Governance discipline
+          href: governance-compliance-oracle-landing-zone.md
+        - name: Business continuity and disaster recovery for Oracle on Azure virtual machines
+          href: oracle-disaster-recovery-iaas.md
+        - name: Business continuity and disaster recovery for Oracle Database@Azure
+          href: oracle-disaster-recovery-oracle-database-azure.md
+    - name: Implementation options
+      items:
+      - name: Oracle on Azure IaaS landing zone accelerator
+        href: oracle-landing-zone-accelerator.md
   - name: Migrate your Oracle workloads
     items: 
     - name: Capacity planning

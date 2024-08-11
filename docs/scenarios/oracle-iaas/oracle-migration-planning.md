@@ -66,7 +66,9 @@ The following section describes the migration process in more detail. The steps 
   
   For more information about Oracle licensing on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
   
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure)
+>
+> [Oracle on Azure IaaS landing zone accelerator](oracle-landing-zone-accelerator.md)

@@ -1,22 +1,22 @@
 ---
-title: Introduction to the Oracle on Azure adoption scenario
-description: Learn how to set up and manage Oracle workloads within your Azure landing zone.
+title: Introduction to Oracle on Azure adoption scenarios
+description: Learn how to set up and manage Oracle workloads within your Azure landing zone. See reference implementations for Oracle database systems on Azure.
 author: jfaurskov
 ms.author: janfaurs
-ms.date: 04/26/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 ms.custom:
   - think-tank
   - e2e-oracle
   - engagement-fy24
 ---
-# Introduction: Migrate Oracle workloads to Azure
+# Introduction to Oracle on Azure adoption scenarios
 
 This article describes how to set up and manage Oracle workloads within your Azure landing zone. It also describes specific architectural strategies and provides reference implementations for Oracle database systems on Azure. The guidance assumes that you have an Azure landing zone. For more information, see [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options).
 
 ## Define Oracle on Azure
 
-You can lift and shift your Oracle workloads to Azure virtual machines or use Oracle Database@Azure. Oracle Database@Azure provides two principal options for migrating Oracle workloads to Azure:
+Oracle on Azure adoption scenarios provide two principal technology platform options:
 
 - **Oracle on Azure Virtual Machines**: Run Oracle databases and enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure. You can use an Oracle Linux image, Red Hat Enterprise Linux (RHEL), or another endorsed operating system. There are multiple VMs and storage options available.
 

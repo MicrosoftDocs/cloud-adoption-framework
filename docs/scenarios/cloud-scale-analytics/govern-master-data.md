@@ -26,8 +26,8 @@ It's important to govern your master data maintenance. Identify where maintenanc
 
 Microsoft has partnered with Profisee and CluedIn to provide native integrations for Azure Purview. Assess these products for your organization's master data requirements.
 
-- [Data governance with Profisee and Microsoft Purview](/azure/architecture/reference-architectures/data/profisee-master-data-management-purview)
-- [Migrate master data services to Azure with CluedIn and Microsoft Purview](/azure/architecture/reference-architectures/data/migrate-master-data-services-with-cluedin)
+- [Microsoft Purview and Profisee integration for master data management](/purview/profisee-master-data-management-purview)
+- [Microsoft Purview and CluedIn integration for master data management](/purview/cluedin-master-data-management-purview)
 
 Other vendors in this space are:
 

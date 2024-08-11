@@ -951,8 +951,18 @@
           "redirect_document_id": true
       },
       {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-disaster-recovery-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-disaster-recovery-iaas",
+          "redirect_document_id": true
+      },
+      {
          "source_path": "docs/scenarios/oracle-iaas/oracle-security-guideline-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-security-overview-iaas",
+          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-workload.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-manage-monitor-iaas",
           "redirect_document_id": true
       },
       {
@@ -1963,6 +1973,11 @@
       {
          "source_path": "docs/ready/azure-best-practices/organize-subscriptions.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-odaa.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure",
          "redirect_document_id": false
       }
    ]
