@@ -45,7 +45,7 @@ Power BI offers versatile integration options for SAP Business Warehouse and SAP
 
 - Connect to a SAP BW Application Server - [Power Query SAP Business Warehouse Application Server connector](/power-query/connectors/sap-bw/application-setup-and-connect)
 
-- **Data Extraction for Sensitive Environments** : For organizations cautious about direct connections to production environments, Power BI supports an alternative approach. Data can be extracted from SAP systems and then Power BI connects to this extracted dataset. This method ensures the protection of production environments and allows for analytics on a static copy of the data. The extraction can be scheduled to keep the Power BI dataset up to date without impacting the SAP systems' performance. 
+- **Data extraction for sensitive environments**: For organizations cautious about direct connections to production environments, Power BI supports an alternative approach. Data can be extracted from SAP systems and then Power BI connects to this extracted dataset. This method ensures the protection of production environments and allows for analytics on a static copy of the data. The extraction should be scheduled to keep the Power BI dataset up to date without impacting the SAP systems' performance.
 
 This flexibility in connecting Power BI with SAP systems—either through direct access for real-time insights or via data extraction for a more controlled approach—provides a tailored solution for effective SAP data analytics.
 
