@@ -46,7 +46,7 @@ The various options differ in speed, latency, reliability, service-level agreeme
 - Use option 1 or option 2 to avoid use of the public internet, if you require an SLA, if you want predictable throughput, or need to handle data volume transfer. Consider whether to use a customer-managed routing or a cloud exchange provider if you haven't implemented ExpressRoute already.
 - Create the ExpressRoute circuits for option 1 and option 2 in the connectivity subscription.
 - Use the ExpressRoute circuit of option 1 or option 2 to connect to the hub virtual network of a traditional hub and spoke topology or to the virtual hub for a Virtual WAN topology. For more information, see Figure 2 and Figure 3.
-- For deployment is the same city, consider [ExpressRoute Metro](/azure/expressroute/metro)
+- For deployments in the same city, consider [ExpressRoute Metro](/azure/expressroute/metro).
 
     ![Figure 2: Cross-cloud connectivity with customer-managed routing (option 1)](./media/eslz-other-cloud-providers.png)
 

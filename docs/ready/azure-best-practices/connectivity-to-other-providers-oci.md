@@ -36,7 +36,7 @@ This section provides different connectivity approaches to integrate an Azure la
 
 - Create the ExpressRoute circuit that will be used to interconnect Azure with OCI in the **connectivity** subscription.
 
-- For deployment is the same city, consider [ExpressRoute Metro](/azure/expressroute/metro)
+- For deployments in the same city, consider [ExpressRoute Metro](/azure/expressroute/metro).
 
 - You can interconnect an Azure network architecture based on the traditional hub and spoke architecture or Azure Virtual WAN-based network topologies. It can be done by connecting the ExpressRoute circuit that will be used to interconnect Azure to OCI to the hub VNet or Virtual WAN hub as shown in the following diagram.
 
