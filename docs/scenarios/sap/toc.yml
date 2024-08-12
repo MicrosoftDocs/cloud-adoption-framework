@@ -61,13 +61,12 @@ items:
         href: sap-lza-data-example-architecture.md
     - name: SAP and Power Platform
       items:
-      - name: SAP and Power Platform Fundamentals
+      - name: SAP and Power Platform fundamentals
         href: sap-lza-powerplatform-fundamental.md
-      - name: SAP and Power Platform Architecture Workflow
+      - name: SAP and Power Platform architecture workflow
         href: sap-lza-powerplatform-architecture-workflow.md
-      - name: Extend SAP LZA to support Power Platform 
+      - name: Extend an SAP landing zone to support Power Platform 
         href: sap-lza-powerplatform-extend-sap-lza.md
-        
     href: innovate.md
   - name: Manage SAP platform and workloads
     href: manage.md

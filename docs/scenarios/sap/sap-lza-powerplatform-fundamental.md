@@ -84,7 +84,7 @@ Copilot Studio offers an opportunity for you to enhance your SAP users' experien
 - **Automated customer support**: Copilot Studio can handle routine inquiries and support tickets, freeing up human resources for more complex tasks. This leads to faster resolution times and improved customer satisfaction.
 
   - **Self-service capabilities**: Users can interact with the copilots to perform simple tasks like data retrieval, status updates, and transaction initiations directly within the SAP system, fostering a sense of autonomy and efficiency.
-- **Streamlined processes**: The integration of copilots with SAP automates various workflows, such as approvals, data entry, and report generation. This automation reduces manual errors and accelerates business processes.
+  - **Streamlined processes**: The integration of copilots with SAP automates various workflows, such as approvals, data entry, and report generation. This automation reduces manual errors and accelerates business processes.
 
 - **Personalized user interactions**: Copilot Studio can be programmed to provide personalized experiences based on user roles and preferences, making the SAP system more intuitive and user-friendly.
 
