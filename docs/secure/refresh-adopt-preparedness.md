@@ -50,19 +50,37 @@ After defining your strategy and developing your plan for incident preparedness 
 
 ## Adopt
 
-#### Threat readiness and mitigation
+After establishing your landing zone with secure network segmentation, you can begin implementation with a focus on incident preparedness and response. In this phase, building out your preparedness and response mechanisms including your incident response plan will ensure that cloud estate and your operational practices align with business goals. The adoption phase should approach the theme of incident preparedness and response from two perspective: Threat readiness and mitigation and infrastructure and application security.
 
-- **Incident response:** Develop and maintain an incident response plan that includes detection, analysis, and remediation steps to quickly address and recover from security incidents. Refer to the Well-Architected Framework [incident response](/azure/well-architected/security/incident-response) guide for workload-focused guidance on this topic.
+### Threat readiness and mitigation
 
 - **Threat detection:** Implement advanced monitoring tools and practices to detect threats in real-time. This includes setting up alert systems for unusual activities and integrating eXtended detection and response (XDR) security information and event management (SIEM) solutions. Refer to the [Zero trust threat protection and XDR](/security/zero-trust/adopt/prevent-reduce-business-damage-breach-threat-protection) guide for detailed guidance on this topic.
 
 - **Vulnerability management:** Regularly identify and mitigate vulnerabilities through patch management and security updates to ensure that systems and applications are protected against known threats.
 
+- **Incident response:** Develop and maintain an incident response plan that includes detection, analysis, and remediation steps to quickly address and recover from security incidents. Refer to the Well-Architected Framework [incident response](/azure/well-architected/security/incident-response) guide for workload-focused guidance on this topic.
+
+### Infrastructure and application security
+
+- **Secure deployment pipelines:** Build CI/CD pipelines with integrated security checks to ensure that applications are securely developed, tested, and deployed. This includes static code analysis, vulnerability scanning, and compliance checks. For detailed guidance, refer to the [Zero trust developer guidance](/security/zero-trust/develop/overview) for detailed articles on this topic.
+
+- **Infrastructure as Code (IaC):** Use Infrastructure as Code (IaC) to manage and automate the deployment of cloud infrastructure. Incorporate security best practices into IaC templates to maintain consistent and secure configurations. Refer to the Well-Architected Framework [IaC guide](/security/zero-trust/develop/overview) for workload-focused guidance that can be broadly applied.
+
+### Summary
+
+In the Adopt phase, implementing mechanisms and practices in the areas of threat detection and mitigation and infrastructure and app security will help your organization handle incidents, whether they are known or emerging threats. 
+
+Refer to the [Adopt](../adopt/) methodology section for detailed guidance on cloud adoption topics.
+
 ## Govern
+
+Security governance is critical for maintaining your preparedness. Implementing preparedness and response mechansims and operational practices must be bolstered by strong governance mechanisms and practices to ensure that policies and practices are adhered to with strict enforcement. The following recommendations can help you establish your governance strategy.
 
 ### Security policies and compliance
 
 - **Governance and compliance:** Ensure the cloud environment adheres to regulatory requirements and internal security policies. Implement governance frameworks that provide guidelines for data handling, privacy, and security controls. Refer to the [security governance](/refresh-security-governance.md) article for detailed guidance on this topic.
+    
+    - **Policy enforcement:** Implement an automated policy management and enforcement solution, like [Azure Policy](/azure/governance/policy) to reduce the operational burden and potential for human error in implementing your governance framework.
 
 - **Identity, authorization, and access management:** Apply role-based access control (RBAC), identity and access management (IAM), and least privilege principles to secure access to cloud resources. Regularly review and update access policies to ensure they meet the evolving security landscape. Refer to the [Zero trust identity technology pillar](/security/zero-trust/deploy/identity) guide for detailed guidance on this topic.
 
@@ -70,13 +88,15 @@ After defining your strategy and developing your plan for incident preparedness 
 
 - **Security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines help you ensure that you're existing deployments are secured properly and new deployments are configured properly at the outset, while reducing the risk of misconfigurations.
 
-#### Infrastructure and application security
+### Summary
 
-- **Secure deployment pipelines:** Build CI/CD pipelines with integrated security checks to ensure that applications are securely developed, tested, and deployed. This includes static code analysis, vulnerability scanning, and compliance checks. For detailed guidance, refer to the [Zero trust developer guidance](/security/zero-trust/develop/overview) for detailed articles on this topic.
+Governance of your incident preparedness and response mechanisms through the standardization of robust security policies and implementing an enforcement solution will help ensure that your organization maintains a vigilant state of readiness. 
 
-- **Infrastructure as Code (IaC):** Use Infrastructure as Code (IaC) to manage and automate the deployment of cloud infrastructure. Incorporate security best practices into IaC templates to maintain consistent and secure configurations. Refer to the Well-Architected Framework [IaC guide](/security/zero-trust/develop/overview) for workload-focused guidance that can be broadly applied.
+Refer to the [Govern](../govern/) methodology section for detailed guidance on topics related to cloud governance.
 
 ## Manage
+
+The Manage principle of the CAF focuses on establishing on-going practices to ensure that your operations teams are successful in detecting and responding to known and emerging threats. Establishing robust monitoring and auditing standards and practices, disaster recovery plans and testing exercises, and implementing a strong testing program will help your security operations stay prepared and actively pursue continuous improvement opportunities.
 
 ### Operational readiness
 
@@ -101,7 +121,11 @@ Encourage ongoing education and certification in cloud security practices to sta
     - **Integrity:** Educate on the use of DevOps processes for infrastructure as code (IaC) to ensure data accuracy and reliability. DevOps practices, such as version control, continuous integration, and automated testing, help track, audit, and validate changes to the cloud environment's infrastructure before deployment. This is particularly important in maintaining landing zones, as it ensures consistency and integrity in the configuration by providing a systematic way to handle infrastructure changes.
     - **Availability:** Instruct on deploying high availability and disaster recovery solutions using Azure’s services to ensure data and resources remain accessible when needed. This includes maintaining pre-planned responses that outline the steps for maintaining availability during an incident. Education should cover strategies for ensuring continuous access to critical resources, even in the face of disruptions, and include hands-on training in setting up and managing Azure’s high availability and disaster recovery tools.
 - **Simulation exercises:** Conduct regular security drills and simulations to prepare the team for real-world scenarios. These exercises should evaluate the organization's ability to respond to incidents within the Zero Trust framework, treating all network segments as potentially compromised until verified secure. Scenarios such as phishing attacks, data breaches, and ransomware should be simulated to identify gaps in response strategies and provide hands-on experience in handling incidents. Drills should emphasize containment strategies by quickly isolating compromised systems to prevent further spread, rapid communication by establishing clear and efficient channels for disseminating information, and evidence preservation by ensuring that all relevant data is securely collected and stored to support subsequent analysis and investigation. Use pre-planned responses like incident playbooks and communication protocols to ensure that actions during these drills are consistent and systematic.
-- **Incident response drills:** Regularly test incident response plans through realistic drills that simulate various threat scenarios. These drills should involve all relevant stakeholders, including the Security Operations Center (SOC) Team, Incident Response Coordinators, Governance Lead, Incident Controller, Investigation Lead, Infrastructure Lead, and the Cloud Governance Team, ensuring comprehensive preparedness across the organization. Incorporate elements of the CIA Triad and Zero Trust principles into these drills, such as testing the effectiveness of access controls (Confidentiality), integrity checks for critical data, and procedures for maintaining service availability during an incident. Emphasize effective coordination by ensuring clear communication and collaborative efforts across teams, using pre-planned responses such as predefined roles and responsibilities, and rapid containment by swiftly isolating affected systems and mitigating threats. Ensure detailed documentation of actions taken to provide a clear record for post-incident review and continuous improvement. 
+- **Incident response drills:** Regularly test incident response plans through realistic drills that simulate various threat scenarios. These drills should involve all relevant stakeholders, including the Security Operations Center (SOC) Team, Incident Response Coordinators, Governance Lead, Incident Controller, Investigation Lead, Infrastructure Lead, and the Cloud Governance Team, ensuring comprehensive preparedness across the organization. Incorporate elements of the CIA Triad and Zero Trust principles into these drills, such as testing the effectiveness of access controls (Confidentiality), integrity checks for critical data, and procedures for maintaining service availability during an incident. Emphasize effective coordination by ensuring clear communication and collaborative efforts across teams, using pre-planned responses such as predefined roles and responsibilities, and rapid containment by swiftly isolating affected systems and mitigating threats. Ensure detailed documentation of actions taken to provide a clear record for post-incident review and continuous improvement.
+
+### Summary
+
+By implementing a robust monitoring and auditing framework, establishing a disaster recover and business continuity strategy, and building a comprehensive training program, your security operations teams will be set up for success in handling incidents and threats. These practices shouldn't be considered as static and should be continuously reviewed for improvement opportunities to prepare for emerging threats and technologies.
 
 ## Resources
 
