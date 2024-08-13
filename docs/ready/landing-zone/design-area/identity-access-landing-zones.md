@@ -59,7 +59,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - Some Azure RBAC roles support [attribute-based access control (ABAC)](/azure/role-based-access-control/conditions-overview), or role assignment conditions. When you use conditions, administrators can dynamically assign roles based on the attributes of the resource. For example, you can assign the Storage Blob Data Contributor role but only for blobs that have a specific index tag rather than all blobs in a container.
 
-- Built-in and custom RBAC roles with `Microsoft.Authorization/roleAssignments/write` and/or `Microsoft.Authorization/roleAssignments/delete` permissions allow for users to create/delete/update role assignments, members of these roles can decide who can have write, read, and delete permissions for any resource in the assignment scope. Platform or application landing zone team members should consider how to delegate those privileged roles to other users and groups to provide them with the autonomy they need while staying compliant to least-privilege access using [conditions](/azure/role-based-access-control/delegate-role-assignments-overview).
+- Built-in and custom RBAC roles with `Microsoft.Authorization/roleAssignments/write` and/or `Microsoft.Authorization/roleAssignments/delete` permissions allow for users to create/delete/update role assignments. Members of these roles can decide who can have write, read, and delete permissions for any resource in the assignment scope. Platform or application landing zone team members should consider how to delegate those privileged roles to other users and groups to provide them with the autonomy they need while staying compliant to least-privilege access using [conditions](/azure/role-based-access-control/delegate-role-assignments-overview).
 
 ## Design recommendations
 
@@ -152,7 +152,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
     :::image type="content" source="./media/azure-landing-zone-rbac-conditions.png" alt-text="Screenshot showing the condition templates for RBAC constrained delegation." lightbox="./media/azure-landing-zone-rbac-conditions.png":::
 
-  - Review the [limitations](/azure/role-based-access-control/delegate-role-assignments-overview#known-issues) of this capability.
+  - Review the known limitations of [Delegate Azure access management to others](/azure/role-based-access-control/delegate-role-assignments-overview#known-issues) of this capability.
 - The following table shows an example role assignment structure for an Azure landing zone environment. It provides a balance between security and ease of administration. You can adapt the structure to suit your organization's requirements. You can assign the same individual to multiple groups, depending on their role within the organization. But you should apply the RBAC assignments to a specific group within a specific landing zone.
 
   | Resource | User | Role assignment | Assignment target | Assignment scope |
