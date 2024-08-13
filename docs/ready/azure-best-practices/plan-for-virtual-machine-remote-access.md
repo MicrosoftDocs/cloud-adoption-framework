@@ -39,6 +39,7 @@ The choice of which remote access solution is most appropriate depends on factor
 
 > [!TIP]
 > Azure Bastion IP based connection also allows for connectivity to on-premises based machines, providing there is hybrid connectivity established between the Azure Bastion resource and the machine you are wanting to connect to. See, [Connect to a VM via specified private IP address through the portal](/azure/bastion/connect-ip-address)
+
 ## Design recommendations
 
 - Use existing ExpressRoute or VPN connectivity to provide remote access to Azure VMs that are accessible from on-premises via ExpressRoute or VPN connections.
