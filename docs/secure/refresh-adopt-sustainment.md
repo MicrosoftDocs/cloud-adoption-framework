@@ -10,23 +10,30 @@ ms.custom: internal, UpdateFrequency2
 
 # Adopt sustainment
 
-## Intro section
+## Introduction
 
-Goal: Adoption of this principle allows the organization to maintain robust security postures, continuously optimize security operations, and respond quickly to emerging threats and technological changes.
+The journey towards a modern, robust security posture doesn't end with the initial implementation. In order to keep up with new threats, your security practices must be continuously reviewed and refined while maintaining a strict adherence to standards. Sustaining security is an ongoing effort to run day-to-day operations to the expectations your organization has set for itself while preparing for emerging threats and technological changes. Adoption of this principle will codify your continuous improvement approach, providing security teams with their guiding standards to maintain vigilant security practices and giving stakeholders piece of mind that security remains a cornerstone tenet of the cloud adoption journey.
 
 ## Strategy
 
-Define long-term security goals for your landing zones that prioritize sustainment. This includes planning for ongoing security updates, scalability, and adaptation to evolving security threats and compliance requirements.
+Developing a sustainment strategy focuses on learning about how your overall security strategy performs in the real world and applying learnings to evolve it continuously. A sustainment strategy should incorporate long term business goals to ensure that long term security goals are aligned. With these goals understood, the sustainment strategy defines how the security posture must evolve to stay in alignment.
+
+Refer to the [Strategy](../strategy/) methodology section for detailed guidance on topics related to developing a cloud adoption strategy.
 
 ## Plan
 
-Develop a detailed implementation plan that incorporates security sustainment strategies. Create a Security Review Board that continuously reviews projects and mandates security controls. Review your processes regularly to find areas of improvement. Develop processes to ensure that security is always top of mind for everyone.
+Turning your sustainment strategy into a plan involves defining clear, achievable phases and goals to maintain a highly secure environment on a day-to-day basis, while incorporating continuous improvement practices. Consider the following recommendations as you develop your plan.
 
+- 
+- 
 ## Ready 
 
 Prepare your environment with a focus on security sustainability by choosing scalable, secure, and manageable solutions that can evolve with your organization’s needs.
  
 ## Adopt
+
+ Create a Security Review Board that continuously reviews projects and mandates security controls. Review your processes regularly to find areas of improvement. Develop processes to ensure that security is always top of mind for everyone.
+
 
 - **Migrate:** Ensure that your migration strategy includes considerations for long-term security maintenance and management of cloud resources. This includes resource and enterprise level security considerations like, encryption in transit and at rest, proper access controls and continuous monitoring with a CSPM solution.
 - **Innovate:**  Develop new cloud solutions with an emphasis on long-term security viability, maintainability, and compliance with future technological advancements and business requirements. Ensure that innovation does not compromise security.

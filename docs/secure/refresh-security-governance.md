@@ -68,7 +68,6 @@ The Microsoft Zero Trust approach provides guidance for seven technology pillars
 
 - **[Visibility, automation, and orchestration](/security/zero-trust/deploy/visibility-automation-orchestration):** Guidance for operational policies and practices that enforce the Zero Trust principles.
 
-
 ### Business alignment
 
 Alignment between technology and business stakeholders is critical to the success of your security modernization plan. As such, the plan development must be approached as a collaborative process that is accomplished through negotiations between stakeholders to find the right way to adapt processes and policies. Business stakeholders must understand how business functions may be effected by the modernization plan and technology stakeholders must understand where they may need to make concessions to ensure that critical business functions remain intact while being secured.

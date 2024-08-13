@@ -1,5 +1,5 @@
 ---
-title: Adopt preparedness
+title: Incident preparedness and response
 description: Learn how to prepare for and react to security incidents.
 author: claytonsiemens77
 ms.author: csiemens
@@ -8,25 +8,37 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Adopt preparedness
+# Incident preparedness and response
 
 ## Introduction
 
-How an organization handles security threats and incidents is a direct indication of how well it has built its preparedness measures. Preparedness should be the cornerstone of your security strategy and continually evaluated and improved. 
+How an organization handles security threats and incidents is a direct indication of how well it has built its preparedness measures. Preparedness should be the cornerstone of your security strategy and should be continually evaluated and improved. 
 
 This article defines an approach to preparedness that will help ensure your organization is fully prepared to address and mitigate security threats in its cloud environment. By implementing comprehensive training, rigorous security protocols, and robust incident response plans, the organization strengthens its defenses against cyber threats, ensuring it can rapidly and effectively respond to security incidents and maintain continuity of operations.
 
 ## Strategy
 
-Establish a clear vision and well-defined, specific objectives for cloud security readiness, focusing on building security capacity and developing security skills. For example, one of your objectives might be achieving ISO/IEC 27001 certification, and your plan should include concrete steps to achieve that goal. Focus on achievable, realistic goals that align to business and technology requirements.
+Establish a clear vision and well-defined, specific objectives for cloud security readiness, focusing on building security capacity and developing security skills. Align your incident preparedness and response strategy to the overall business strategy to ensure that the business strategy isn't impeded by security. Understand business requirements for reliability and performance to ensure that your strategy can accomodate those requirements while building the necessary technology foundation to prepare for and respond to incidents.
 
-Refer to the [Define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy) article for throrough guidance.
+Refer to the [Strategy](../strategy/) methodology section for detailed guidance on topics related to developing a cloud adoption strategy.
 
 ## Plan
 
 A key tenet of preparedness is continuous improvement. In order to be able to improve, you must first thoroughly understand your current security posture to establish your baseline and move towards finding areas for improvement. 
 
 The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidly-modernize-security-posture#technical-plans-and-skills-readiness) offers a four-staged approach to defining your baseline and planning your continuous improvement strategies.
+
+Your plan should begin with your security baseline and end with your [sustainment strategy](./refresh-adopt-sustainment.md), taking you from your current security posture to being as prepared as possible for incidents as a guiding principle. Consider the following recommendations as you develop your plan.
+
+- **Adopt landing zones:** The Azure landing zone approach will provide you a well-designed foundation for your cloud estate, setting you up for a manageable environment that can be secured according to best practices.
+
+- **Plan for preparedness:** Plan for incident preparation by evaluating vulnerability management solutions, threat and incident detection systems and robust infrastructure monitoring solutions. Plan for infrastructure hardening to reduce attack surfaces.
+
+Refer to the [Plan](../plan/) methodology section for detailed guidance on topics related to developing a cloud adoption plan.
+
+## Ready
+
+After defining your strategy and developing your plan for incident preparedness and response, you can begin your implementation. Using the Azure landing zone approach, you can lay down a secure foundation for your cloud environment, preparing you for the full implementation phase and the management phase.
 
 ### Establishing a secure cloud estate
 
@@ -36,6 +48,8 @@ The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidl
 
 - **Network segmentation:** Design a network architecture with proper segmentation and isolation to minimize attack surfaces and contain potential breaches. Use techniques such as virtual private clouds (VPCs), subnets, and security groups to manage and control traffic. Refer to the [Plan for network segmentation](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-landing-zone-network-segmentation) article for detailed guidance on this topic.
 
+## Adopt
+
 #### Threat readiness and mitigation
 
 - **Incident response:** Develop and maintain an incident response plan that includes detection, analysis, and remediation steps to quickly address and recover from security incidents. Refer to the Well-Architected Framework [incident response](/azure/well-architected/security/incident-response) guide for workload-focused guidance on this topic.
@@ -44,7 +58,9 @@ The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidl
 
 - **Vulnerability management:** Regularly identify and mitigate vulnerabilities through patch management and security updates to ensure that systems and applications are protected against known threats.
 
-#### Security policies and compliance
+## Govern
+
+### Security policies and compliance
 
 - **Governance and compliance:** Ensure the cloud environment adheres to regulatory requirements and internal security policies. Implement governance frameworks that provide guidelines for data handling, privacy, and security controls. Refer to the [security governance](/refresh-security-governance.md) article for detailed guidance on this topic.
 
@@ -60,7 +76,9 @@ The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidl
 
 - **Infrastructure as Code (IaC):** Use Infrastructure as Code (IaC) to manage and automate the deployment of cloud infrastructure. Incorporate security best practices into IaC templates to maintain consistent and secure configurations. Refer to the Well-Architected Framework [IaC guide](/security/zero-trust/develop/overview) for workload-focused guidance that can be broadly applied.
 
-#### Operational readiness
+## Manage
+
+### Operational readiness
 
 - **Continuous monitoring and auditing:** Establish continuous monitoring for security events and regular auditing to ensure compliance and maintain an up-to-date security posture. Use tools that provide visibility into cloud resources and help detect potential security issues. Refer to the [Zero trust visibility, automation, and orchestration guide](/security/zero-trust/deploy/visibility-automation-orchestration) for detailed guidance on this topic.
 
