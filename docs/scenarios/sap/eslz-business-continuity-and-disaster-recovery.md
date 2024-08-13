@@ -3,7 +3,7 @@ title: Business continuity and disaster recovery for an SAP migration
 description: Learn how to incorporate principles that address business continuity and disaster recovery (BCDR) for SAP migrations on Azure.
 author: PmeshramPM
 ms.author: pameshra
-ms.date: 08/12/2024
+ms.date: 08/13/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
 ---
@@ -82,7 +82,7 @@ Before you deploy your high availability infrastructure, determine whether to de
 
 When you deploy your high availability architecture across different availability zones, you can have a higher SLA for the VMs. For more information, see [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. For more information, see [SAP workload configurations with Azure availability zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
-If you choose a zonal deployment approach, consider the effects of cross-zone latency for the chosen Azure region, between the application server and the database and between the two database nodes, on performance and architecture design choices.
+If you choose a zonal deployment approach, consider how cross-zone latency for the chosen Azure region might affect performance and architecture design choices. Consider the latency between the application server and the database and between the two database nodes.
 
 If you use an active/passive zonal deployment for the application server tier in which application servers must connect to the database in the same availability zone, configure automation and create an SOP to enable quick and automated recovery if a database failover occurs.
 
@@ -112,7 +112,7 @@ If you use availability zones in your SAP solution, design all other Azure servi
 - Run all production systems on Azure Premium SSDs, and use Azure NetApp Files or Azure Ultra Disk Storage. At a minimum, ensure that the OS disk is on the Premium tier so that you can improve performance and get the best SLA.
 - Deploy both VMs in the high availability pair in an availability set or in availability zones. Ensure that these VMs are the same size and have the same storage configuration.
 - Use native database replication technology to synchronize the database in a high availability pair.
-- Use one of the following services to run SAP central services clusters, depending on the operating system:
+- Use one of the following services to run SAP central services clusters, depending on the OS:
 
   - A [SUSE Linux Enterprise Server Pacemaker cluster](/azure/virtual-machines/workloads/sap/high-availability-guide-suse-netapp-files) supports an Azure fence agent and as many as three node isolation devices.
 
@@ -132,7 +132,7 @@ If you use availability zones in your SAP solution, design all other Azure servi
 
   |Storage type|High availability configuration support|
   | :------------------------------ | :------------------------------------------- |
-  | Azure shared disks (locally redundant storage (LRS) or zone-redundant storage (ZRS))  | Windows Server 2022 failover cluster. For configuration details, see [Design SAP high availability with Windows Server 2022 failover clustering](/azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk) . | 
+  | Azure shared disks (locally redundant storage (LRS) or zone-redundant storage (ZRS))  | Windows Server 2022 failover cluster. For configuration details, see [Design SAP high availability with Windows Server 2022 failover clustering](/azure/virtual-machines/workloads/sap/sap-high-availability-guide-wsfc-shared-disk). | 
   | NFS on Azure Files (LRS or ZRS) | Pacemaker-based cluster on Linux environments. Be sure to check the [availability of NFS in various regions](https://azure.microsoft.com/global-infrastructure/services/). |
   | NFS on Azure NetApp Files       | Pacemaker-based cluster on Linux environments. For more information, see [Azure NetApp Files for SAP VMs](/azure/virtual-machines/workloads/sap/hana-vm-operations-netapp).  |
   | SMB on Azure Files (LRS or ZRS) | Windows Server 2022 failover cluster. For configuration details, see [Install high availability SAP NetWeaver with Azure Files SMB](/azure/virtual-machines/workloads/sap/high-availability-guide-windows-azure-files-smb).  |
@@ -145,7 +145,7 @@ If you use availability zones in your SAP solution, design all other Azure servi
 
 The following sections describe design considerations and recommendations for backup and restore in an SAP scenario.
 
-Although backup and restore isn't typically considered an adequate high availability solution for a production SAP workload, the technology provides other benefits. Most companies that use SAP applications need to follow compliance regulations that require the storage of backups for many years. In other scenarios, you also need to have a backup that you can restore from. This guidance assumes that you already established backup and restore and follow best practices for SAP applications, which means that you can:
+Although backup and restore isn't typically considered an adequate high availability solution for a production SAP workload, the technology provides other benefits. Most companies that use SAP applications need to follow compliance regulations that require long-term storage of backups. In other scenarios, you also need to have a backup that you can restore from. This guidance assumes that you already established backup and restore and follow best practices for SAP applications, which means that you can:
 
 - Perform a point-in-time recovery for your production databases at any point, in a time frame that meets your RTO. Point-in-time recovery typically provides protection from operator errors like deleting data, either on the DBMS layer or through SAP.
 
@@ -226,14 +226,14 @@ Another factor to consider when you choose your disaster recovery region is the 
 - Ensure that the classless inter-domain routing (CIDR) for the primary virtual network doesn't conflict or overlap with the CIDR of the disaster recovery site's virtual network.
 
 - Set up ExpressRoute connections from on-premises to the primary and secondary Azure disaster recovery regions.
-- As an alternative to using ExpressRoute, consider setting up VPN connections from on-premises to the primary and secondary Azure disaster recovery regions.
+- Consider setting up VPN connections from on-premises to the primary and secondary Azure disaster recovery regions. Use this method as an alternative to using ExpressRoute.
 - Use Site Recovery to replicate an application server to a disaster recovery site. Site Recovery can also help you replicate central services cluster VMs to the disaster recovery site. When you invoke disaster recovery, you need to reconfigure the Linux Pacemaker cluster on the disaster recovery site. For example, you might need to replace the virtual IP address or SBD or run corosync.conf.
-- Replicate key vault contents like certificates, secrets, or keys across regions so you can decrypt data in the disaster recovery region.
+- Replicate key vault contents like certificates, secrets, or keys across regions so that you can decrypt data in the disaster recovery region.
 - Use [cross-region replication in Azure NetApp Files](/azure/azure-netapp-files/cross-region-replication-introduction) to synchronize file volumes between the primary region and the disaster recovery region.
 - Use native database replication, rather than Site Recovery, to synchronize data to the disaster recovery site.
 - Peer the primary and disaster recovery virtual networks. For example, for HANA system replication, you need to peer an SAP HANA DB virtual network needs to the disaster recovery site's SAP HANA DB virtual network.
 - If you use Azure NetApp Files storage for your SAP deployments, at a minimum, create two Azure NetApp Files accounts in the Premium tier, in two regions.
-- Consider grouping systems based on their business importance and proximity dependency based on application performance. To minimize the business effect of a regional outage, deploy each group to a separate region in a paired region construct. For example, to minimize the effect of a regional outage, you can deploy two critical ERP Central Component systems, that serve two different business units, in UK South and UK West.
+- Consider grouping systems based on their business importance and proximity dependency based on application performance. To minimize the business effect of a regional outage, deploy each group to a separate region in a paired region construct. For example, to minimize the effect of a regional outage, you can deploy two critical ERP Central Component systems that serve two different business units, in UK South and UK West.
 
 ## Next step
 
