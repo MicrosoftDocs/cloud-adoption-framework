@@ -152,7 +152,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
       ![Screenshot showing the condition templates for RBAC constrained delegation](./media/azure-landing-zone-rbac-conditions.png)
 
-  - Review the [limitations](/azure/role-based-access-control/delegate-role-assignments-overview#known-issues) of this capability.
+  - Review the known limitations of [Delegate Azure access management to others](/azure/role-based-access-control/delegate-role-assignments-overview#known-issues) of this capability.
 - The following table shows an example role assignment structure for an Azure landing zone environment. It provides a balance between security and ease of administration. You can adapt the structure to suit your organization's requirements. You can assign the same individual to multiple groups, depending on their role within the organization. But you should apply the RBAC assignments to a specific group within a specific landing zone.
 
   | Resource | User | Role assignment | Assignment target | Assignment scope |
