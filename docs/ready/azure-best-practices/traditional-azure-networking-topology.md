@@ -99,7 +99,11 @@ If you use BGP metrics to influence ExpressRoute routing, you need to change the
 
    :::image type="content" source="./media/vnet-multiple-circuits.png" alt-text="Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits." lightbox="./media/vnet-multiple-circuits.png" border="false":::
 
+- For dual-homed peering within the same city, consider [ExpressRoute Metro](/azure/expressroute/metro).
+
 - Deploy Azure Firewall or partner NVAs in the central-hub virtual network for east/west or south/north traffic protection and filtering.
+
+- Deploy a set of minimal shared services, including ExpressRoute gateways, VPN gateways (as required), and Azure Firewall or partner NVAs (as required) in the central-hub virtual network. If necessary, also deploy Active Directory domain controllers and DNS servers.
 
 - Deploy a single DDoS Protection standard plan in the connectivity subscription. Use this plan for all landing zone and platform virtual networks.
 
