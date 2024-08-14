@@ -4,7 +4,7 @@ description: Learn about considerations and recommendations for implementing ide
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 02/26/2024
+ms.date: 08/14/2024
 ---
 
 # Landing zone identity and access management
@@ -79,7 +79,9 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
   - For nonprivileged job function roles that can manage Azure application resources, consider whether you require separate administrative accounts or use [Microsoft Entra PIM](/entra/id-governance/privileged-identity-management/pim-configure) to control administrative access. PIM ensures that the account has the required permissions only when needed and that the permissions are removed when the task is complete (also known as *just-in-time access*).
 
 - To make role assignments more manageable, don't assign roles directly to users. Instead, assign roles to groups to help minimize the number of role assignments, which has a [limit for each subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits).
+
   - Use [Microsoft Entra PIM for groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) to apply just-in-time administrative access controls to privileged users. Consider controlling group membership with [entitlement management](/entra/id-governance/entitlement-management-overview). You can use the entitlement management feature to add approval and auditing workflows to group membership operations and help ensure that administrative group members aren't unnecessarily added or removed.
+  
   - When you grant access to resources, use Microsoft Entra-only groups for Azure control-plane resources. Both Entra-only users and groups, and those synchronized from on-premises using Microsoft Entra Connect, can be added to an Entra-only group. Add on-premises groups to the Microsoft Entra-only group if a group management system is already in place. Using Entra-only groups helps protect the cloud control plane from unauthorized modification of on-premises directory services. Note that *Microsoft Entra-only* is also known as *cloud only*.
 
 - Create [emergency-access](/entra/identity/role-based-access-control/security-emergency-access) accounts, or break-glass accounts, to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency-access accounts are highly privileged and are only assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure that you can use them if there's a disaster.
