@@ -150,15 +150,15 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - When you delegate administrative responsibility to others, such as application teams, consider if they require the full set of privileges or only a subset. Follow the principle of least privilege (PoLP). For example, you might assign the User Access Administrator or RBAC Administrator roles to a user who needs to manage access to Azure resources but not manage the resources themselves. To limit the identities, identity types, and roles that users can delegate and assign Azure RBAC assignments to, use [delegated role assignments with conditions](/azure/role-based-access-control/delegate-role-assignments-overview). Conditions enable application teams to manage their own security principals within the constraints that the platform team sets. More privileged role assignments require escalation to the platform team. Consider the following factors when you use conditions to delegate RBAC roles:
 
-  - Review current role assignments for built-in and custom privileged roles and evaluate if you should add appropriate conditions to those existing assignments. For instance, you can add conditions to the ‘Subscription Owner’ and ‘Application Owner’ custom roles provided by the Azure landing zone accelerator to limit the types of principals they can assign roles to, or even limit them to assigning specific roles.
+  - Review current role assignments for built-in and custom privileged roles and evaluate if you should add appropriate conditions to those existing assignments. For example, you can add conditions to the Subscription Owner and Application Owner custom roles provided by the Azure landing zone accelerator. These conditions can restrict the principal types that they can assign roles to, or limit specific roles to assign.
   
   - Follow the PoLP when you add conditions to role assignments. For example, limit delegates to only assign roles to groups or enable delegates to assign all roles except privileged administrator roles like Owner, User Access Administrator, and RBAC administrator.
   
-  - If the available condition templates don't fulfill your requirements or policies, you can build your own conditions.
+  - Build your own conditions if the available condition templates don’t fulfill your requirements or policies.
 
     :::image type="content" source="./media/azure-landing-zone-rbac-conditions.png" alt-text="Screenshot that shows the condition templates for RBAC constrained delegation." lightbox="./media/azure-landing-zone-rbac-conditions.png":::
 
-  - Review the limitations of [delegating Azure access management to others](/azure/role-based-access-control/delegate-role-assignments-overview#known-issues).
+  - Review the known limitations of [delegating Azure access management to others](/azure/role-based-access-control/delegate-role-assignments-overview#known-issues).
   
 - The following table shows an example role assignment structure for an Azure landing zone environment. It provides a balance between security and ease of administration. You can adapt the structure to suit your organization's requirements. You can assign the same individual to multiple groups, depending on their role within the organization. But you should apply the RBAC assignments to a specific group within a specific landing zone.
 
