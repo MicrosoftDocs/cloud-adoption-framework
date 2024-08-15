@@ -4,7 +4,7 @@ description: Learn about considerations and recommendations for implementing ide
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 02/26/2024
+ms.date: 08/14/2024
 ---
 
 # Landing zone identity and access management
@@ -59,6 +59,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - Some Azure RBAC roles support [attribute-based access control (ABAC)](/azure/role-based-access-control/conditions-overview), or role assignment conditions. When you use conditions, administrators can dynamically assign roles based on the attributes of the resource. For example, you can assign the Storage Blob Data Contributor role but only for blobs that have a specific index tag rather than all blobs in a container.
 
+- You can use built-in and custom RBAC roles with `Microsoft.Authorization/roleAssignments/write` or `Microsoft.Authorization/roleAssignments/delete` permissions to create, delete, and update role assignments. Anyone that has this role can decide who has write, read, and delete permissions for any resource in the assignment scope. Platform or application landing zone team members should consider how to delegate privileged roles to other users and groups to grant them necessary autonomy. To ensure compliance with least-privilege access principles, they can use [conditions](/azure/role-based-access-control/delegate-role-assignments-overview#a-more-secure-method-delegate-role-assignment-management-with-conditions) to delegate users.
 
 ## Design recommendations
 
@@ -74,11 +75,13 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - Separate administrative access from nonadministrative, day-to-day access, such as web browsing and email access. Web and email are common attack vectors. When a user account is compromised, it's less likely to result in a security breach if the account isn't used for administrative access.
   - Use [separate, cloud-only accounts for privileged roles](/entra/architecture/protect-m365-from-on-premises-attacks#specific-security-recommendations). Don't use the same account for daily use that you do for privileged administration. Privileged Microsoft Entra ID and Azure RBAC roles are marked as *PRIVILEGED* in the Azure portal and in documentation.
-  
+
   - For nonprivileged job function roles that can manage Azure application resources, consider whether you require separate administrative accounts or use [Microsoft Entra PIM](/entra/id-governance/privileged-identity-management/pim-configure) to control administrative access. PIM ensures that the account has the required permissions only when needed and that the permissions are removed when the task is complete (also known as *just-in-time access*).
 
 - To make role assignments more manageable, don't assign roles directly to users. Instead, assign roles to groups to help minimize the number of role assignments, which has a [limit for each subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits).
+
   - Use [Microsoft Entra PIM for groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) to apply just-in-time administrative access controls to privileged users. Consider controlling group membership with [entitlement management](/entra/id-governance/entitlement-management-overview). You can use the entitlement management feature to add approval and auditing workflows to group membership operations and help ensure that administrative group members aren't unnecessarily added or removed.
+  
   - When you grant access to resources, use Microsoft Entra-only groups for Azure control-plane resources. Both Entra-only users and groups, and those synchronized from on-premises using Microsoft Entra Connect, can be added to an Entra-only group. Add on-premises groups to the Microsoft Entra-only group if a group management system is already in place. Using Entra-only groups helps protect the cloud control plane from unauthorized modification of on-premises directory services. Note that *Microsoft Entra-only* is also known as *cloud only*.
 
 - Create [emergency-access](/entra/identity/role-based-access-control/security-emergency-access) accounts, or break-glass accounts, to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency-access accounts are highly privileged and are only assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure that you can use them if there's a disaster.
@@ -103,7 +106,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 - Don't assign a higher-privileged role to a task that a lower-privileged role can do. For example, assign the User Administrator role to manage users, not the Global Administrator role. For more information, see [Microsoft Entra built-in roles permissions](/entra/identity/role-based-access-control/permissions-reference).
 
 - Use [administrative units](/entra/identity/role-based-access-control/administrative-units) to restrict a set of administrators so they can only manage specific objects in your tenant. You can use administrative units to delegate the administration of a subset of the directory. For example, you can delegate the administration of a service desk to a single business unit within a wider organization.
-  
+
   Administrative units can also help eliminate the need for separate Microsoft Entra ID tenants as a security boundary, where separate teams manage the Microsoft 365 platform and the Azure platform in the same organization. For example, you can use administrative units to delegate the management of Azure application security principals to the application team without granting privileges on the entire Microsoft Entra ID tenant.
 
 - Use [restricted management administrative units](/entra/identity/role-based-access-control/admin-units-restricted-management) to provide further protection. Prevent anyone other than a specific set of administrators that you designate from modifying specific objects. For example, your separation of duty policies might require that you use this feature to prevent anyone from modifying a specific user account, even users with the User Administrator role. This restriction is useful for service accounts that applications use and that even administrators shouldn't modify. You can also prevent privilege escalation, for example if someone modifies a user account or group that has platform or landing zone administration privileges.
@@ -120,7 +123,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - Consider whether [built-in roles](/azure/role-based-access-control/built-in-roles) are suitable for your requirements. In many cases, you can assign multiple built-in roles to a security group to provide the appropriate access for a user. But sometimes, you can't use built-in roles and also comply with least-privilege access because the roles might include permissions that exceed what your users require. For more granular control, consider creating a custom role that reflects the specific permissions required to carry out a job function. For more information, see [Provide role-based authorization](/azure/well-architected/security/identity-access#role-assignment).
 - Many Azure built-in roles provide predefined role assignments at the platform and resource level. When you [combine several role assignments](/azure/role-based-access-control/overview#multiple-role-assignments), consider the overall effects.
-  
+
 - The Azure landing zone accelerator includes several custom roles for common administrative functions. You can use these roles alongside Azure built-in roles. The following table describes the custom administrative roles or areas for the Azure landing zone accelerator:
 
    | Administrative role or area | Description | Actions | NotActions |
@@ -138,13 +141,27 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 - When the platform team provisions an application landing zone, they should ensure that all required identity and access management objects are created, such as security groups, standard role assignments, and user-assigned managed identities.
 
 - Create landing zone role assignments at the subscription or resource group scope. Azure Policy assignments occur at the management group scope, so you should provision landing zone role assignments at a lower scope. Use this approach to ensure that landing zone administrators have full autonomy over their resources but can't modify the Azure Policy assignments that govern their landing zone.
-  
+
 - Each application landing zone should have its own groups and role assignments. Don't create generic groups and assign them to multiple landing zones. This approach can lead to misconfiguration and security breaches, and it's difficult to manage at scale. If one user requires access to multiple landing zones, assign them to the appropriate groups in each landing zone. Use ID Governance to manage their group membership.
-  
+
 - Assign roles to groups, not to users. This approach helps to ensure that users have the correct permissions when they join or leave your organization. It also helps to ensure that users have the correct permissions when they move between teams. For example, if a user moves from the network team to the security team, you should remove them from the network group and add them to the security group. If you assign a role directly to a user, they retain the role after moving to a different team. Use ID Governance to manage group membership rather than manually adding and removing group members.
+
 - Maintain separate security configurations for different environments of the same application, such as dev/test and production. Create separate groups and role assignments for each environment. Don't share managed identities or service principals across environments. Treat each environment as a separate landing zone. This approach helps to ensure isolation between dev/test and production, and standardizes the process of moving application deployments between environments. If the same individual requires access to several landing zones, you should assign them to the appropriate groups in each landing zone.
+
 - Consider whether platform administrators require permissions on application landing zones. If so, use Microsoft Entra PIM to control access to those resources, and assign the least-privileged permissions required. For example, a platform administrator might require access to a specific application landing zone to troubleshoot an issue but shouldn't have routine access to the application data or code. In this case, the platform administrator can request access to the application. A privileged role administrator approves the request, and the platform administrator is granted the required permissions for the specified time period. This approach helps enforce separation of duties and protects application landing zones from accidental or malicious misconfiguration.
-- When you delegate administrative responsibility to others, such as application teams, consider whether they require the full set of privileges or only a subset. Follow the principle of least privilege. For example, you might assign the User Access Administrator or RBAC Administrator roles to a user who needs to manage access to Azure resources but not manage the resources themselves. To restrict the identities, identity types, and roles to which they can delegate and assign Azure RBAC assignments to, use [delegated role assignments with conditions](/azure/role-based-access-control/delegate-role-assignments-overview). Conditions enable application teams to manage their own security principals within the constraints that the platform team sets. More privileged role assignments require escalation to the platform team.
+
+- When you delegate administrative responsibility to others, such as application teams, consider whether they require the full set of privileges or only a subset. Follow the principle of least privilege (PoLP). For example, you might assign the User Access Administrator role or RBAC Administrator role to a user who needs to manage access to Azure resources but doesn't need to manage the resources themselves. To limit the identities, identity types, and roles that users can delegate and assign Azure RBAC assignments to, use [delegated role assignments with conditions](/azure/role-based-access-control/delegate-role-assignments-overview). Application teams can use conditions to manage their own security principals within the constraints that the platform team sets. More privileged role assignments require escalation to the platform team. Consider the following factors when you use conditions to delegate RBAC roles:
+
+  - Review current role assignments for built-in and custom privileged roles and evaluate if you should add appropriate conditions to those existing assignments. For example, you can add conditions to the Subscription Owner and Application Owner custom roles that the Azure landing zone accelerator provides. These conditions can restrict the principal types that they can assign roles to or limit specific roles that they can assign.
+  
+  - Follow the PoLP when you add conditions to role assignments. For example, limit delegates to only assign roles to groups or enable delegates to assign all roles except privileged administrator roles like Owner, User Access Administrator, and RBAC Administrator.
+  
+  - Build your own conditions if the available condition templates don't fulfill your requirements or policies.
+
+    :::image type="content" source="./media/azure-landing-zone-rbac-conditions.png" alt-text="Screenshot that shows the condition templates for RBAC constrained delegation." lightbox="./media/azure-landing-zone-rbac-conditions.png":::
+
+  - Review the [known limitations](/azure/role-based-access-control/delegate-role-assignments-overview#known-issues) of delegating Azure access management to others.
+  
 - The following table shows an example role assignment structure for an Azure landing zone environment. It provides a balance between security and ease of administration. You can adapt the structure to suit your organization's requirements. You can assign the same individual to multiple groups, depending on their role within the organization. But you should apply the RBAC assignments to a specific group within a specific landing zone.
 
   | Resource | User | Role assignment | Assignment target | Assignment scope |
@@ -162,7 +179,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
   | Tenant-wide | Network team | Network Operations (Custom, included in Azure landing zone accelerator) | `Network Ops` security group | All subscriptions |
   | Tenant-wide | FinOps team | Billing Reader (built-in) | `FinOps Team` security group | Organizational top-level management group |
 
-- Azure Policy assignments with the `DeployIfNotExists` effect [require a managed identity](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations) to remediate noncompliant resources. If you use a system-assigned managed identity as part of the Azure Policy assignment process, Azure automatically grants the permissions required. If you use a user-assigned managed identity, the permissions must be granted manually. The managed identity role assignments must follow the principle of least privilege and allow only the permissions required to carry out the policy remediation on the target scope. Policy remediation managed identities don't support custom role definitions. Apply role assignments directly to managed identities, not to groups.
+- Azure Policy assignments that have the `DeployIfNotExists` effect require a [managed identity](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations) to remediate noncompliant resources. If you use a system-assigned managed identity as part of the Azure Policy assignment process, Azure automatically grants the required permissions. If you use a user-assigned managed identity, the permissions must be granted manually. The managed identity role assignments must follow the PoLP and enable only the required permissions to carry out the policy remediation on the target scope. Policy remediation managed identities don't support custom role definitions. Apply role assignments directly to managed identities and not to groups.
 
 ### Microsoft Entra PIM recommendations
 
