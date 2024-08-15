@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
 ---
 
-# SAP and Power Platform Architecture Workflow
+# Extend your SAP Landing Zone to support Power Platform
 
 This article is part of the "SAP and Power Platform" article series.
 	
@@ -59,6 +59,4 @@ Before trying to integrate SAP systems with Power Platform, you must have the Po
 
 ## Next steps
 
-- [SAP and Power Platform fundamentals](./sap-lza-powerplatform-fundamental.md)
-- [SAP and Power Platform Architecture Workflow](./sap-lza-powerplatform-architecture-workflow.md)
-- [Extend your SAP Landing Zone to support Power Platform](./sap-lza-powerplatform-extend-sap-lza.md)
+- [Innovate with SAP and Azure](./innovate.md)
