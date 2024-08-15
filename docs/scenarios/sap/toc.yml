@@ -66,7 +66,7 @@ items:
       - name: SAP and Power Platform Architecture Workflow
         href: sap-and-powerplatform-architecture-workflow.md
       - name: Extend SAP LZA to support Power Platform 
-        href: sap-lza-powerplatform-extend-landing-zone.md
+        href: sap-and-powerplatform-extend-landing-zone.md
         
     href: innovate.md
   - name: Manage SAP platform and workloads
