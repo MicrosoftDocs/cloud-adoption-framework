@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-sap
 
 This article is part of the "SAP and Power Platform" article series.
 	
-- [SAP and Power Platform fundamentals](./sap-lza-powerplatform-fundamental.md)
-- [SAP and Power Platform Architecture Workflow](./sap-lza-powerplatform-architecture-workflow.md)
-- [Extend your SAP Landing Zone to support Power Platform](./sap-lza-powerplatform-extend-sap-lza.md)
+- [SAP and Power Platform fundamentals](./sap-and-powerplatform-fundamental.md)
+- [SAP and Power Platform Architecture Workflow](./sap-and-powerplatform-architecture-workflow.md)
+- [Extend your SAP Landing Zone to support Power Platform](./sap-and-powerplatform-extend-landing-zone.md)
 
 
 This article is Part 1 of the SAP and Power Platform Articles. 
@@ -93,4 +93,4 @@ By leveraging Copilot Studio, customers can significantly enhance the SAP user e
 
 ## Next steps
 
-- [SAP and Power Platform Architecture Workflow](./sap-lza-sap-powerplatform-architecture-workflow.md)
+- [SAP and Power Platform Architecture Workflow](./sap-and-sap-powerplatform-architecture-workflow.md)
