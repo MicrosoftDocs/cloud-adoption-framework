@@ -6,6 +6,8 @@ ms.author: bamajeed
 ms.reviewer: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenario
 ---
 
 # Security guidelines for Oracle Database@Azure
@@ -16,7 +18,7 @@ This article builds on several considerations and recommendations that are defin
 
 Most databases contain sensitive data that requires a secure architecture beyond database-level protections. The defense-in-depth strategy provides comprehensive security by layering multiple defense mechanisms. This approach combines various measures to avoid relying solely on one type of security, such as network defenses. These measures include strong authentication and authorization frameworks, network security, encryption of data at rest, and encryption of data in transit. This multilayered strategy is essential for securing Oracle workloads effectively.
 
-For more information, see [Overview of Oracle Exadata security](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-overview.html#GUID-4D178313-47E7-451B-8AF8-1FEAC2CD38B2) and [Security features of Oracle Exadata Database Machine](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-features.html#GUID-31C2978A-238C-4F30-82C7-17B355727810).
+For more information, see [Security Guide for Oracle Exadata Database Service on Dedicated Infrastructure](https://docs.oracle.com/en/engineered-systems/exadata-cloud-service/ecscm/ecs-security-guide.html#GUID-EBDA0EB5-734A-4AD2-A740-8C174B1FFE3B) and [Exadata Security Controls](https://www.oracle.com/a/ocom/docs/engineered-systems/exadata/exadata-cloud-service-security.pdf). 
 
 ## Design considerations
 
@@ -30,7 +32,7 @@ Consider the following guidance when you design your security guidelines for Ora
 
 - The Oracle Database@Azure solution uses many default Transmission Control Protocol (TCP) ports for various operations. For the full list of ports, see [Default port assignments](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmin/exadata-network-requirements.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
 
-- The Oracle Database@Azure solution uses [OCI Vault](https://docs.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm) to store and manage keys for Transparent Data Encryption (TDE), which is enabled by default. Integration with Azure Key Vault isn't possible at this time.
+- To store and manage keys Transparent Data Encryption (TDE), which is enabled by default, the Oracle Database@Azure solution can use [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm), or [OKV](https://www.oracle.com/security/database-security/key-vault/). Integration with Azure Key Vault isn't possible at this time.
 
 - You can use [OCI Vulnerability Scanning Service](https://docs.oracle.com/iaas/scanning/using/overview.htm) for vulnerability scanning on individual nodes in the Oracle Database@Azure solution. Integration with Microsoft Defender isn't possible at this time.
 
@@ -54,4 +56,3 @@ Consider the following recommendations when you design your security for Oracle 
 
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
-- [Business continuity and disaster recovery (BCDR) for Oracle Database@Azure](oracle-disaster-recovery-odaa.md)
