@@ -53,3 +53,9 @@ Consider the following recommendations when you design your security for Oracle 
 - If you use your own encryption keys, establish a rigorous key rotation process to uphold security and compliance standards.
  
 - If using third-party or Oracle agents on Oracle Database@Azure, ensure these agents are installed in locations that will not be impacted by database or Grid Infrastructure patches.
+
+## Next steps
+
+- [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
+- [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
+- [Business continuity and disaster recovery (BCDR) for Oracle Database@Azure](oracle-disaster-recovery-odaa.md)
