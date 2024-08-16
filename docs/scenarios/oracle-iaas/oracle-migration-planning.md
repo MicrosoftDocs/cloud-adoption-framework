@@ -32,7 +32,7 @@ For Oracle Database@Azure, make sure to:
 
 - **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Available regions](/azure/oracle/oracle-db/database-overview#available-regions).
 
-- **Consider required database changes** when you move from on-premises environments to Oracle Database@Azure. Migration might involve some changes to the database tablespaces and schema. For more information, see [Migrating Oracle databases to Exadata Cloud Service](https://docs.oracle.com/en/cloud/paas/exadata-cloud/csexa/mig-migrating-premises-oracle-db-cloud.html).
+- **Consider using Oracle Zero Downtime Migration (ZDM)** for the migration process. Evaluate the migration strategies to determine the most suitable approach for the specific migration requirements. For more information, see [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/).
 
 ## Oracle migration workload-specific activities
 
@@ -42,11 +42,11 @@ The following section describes the migration process in more detail. The steps 
 
   - If you need to update one or more resources, update them before migration to avoid complicating the migration process.
   
-  - If your on-premises database runs on a large endian operating system, for example Oracle Solaris, IBM Advanced Interactive Executive (AIX), or Hewlett Packard Unix (HP-UX), the database migration process includes an endian conversion. Azure supports only little endian operating systems. From a tooling perspective, this support limits the number of options when you consider what tool to use for the migration. Specifically, you can't use Oracle Data Guard, Azure Migrate and Modernize, or any other file copy method. Migration methods that are compatible with endian conversion include Oracle Data Pump Export, Oracle Data Pump Import, Oracle Cross Platform Transportable Tablespaces (XTTS), or data replication utilities such as Oracle GoldenGate, Quest SharePlex, and Striim.
+  - If your on-premises database runs on a large endian operating system, for example Oracle Solaris, IBM Advanced Interactive Executive (AIX), or Hewlett Packard Unix (HP-UX), the database migration process includes an endian conversion. Azure supports only little endian operating systems. From a tooling perspective, this support limits the number of options when you consider what tool to use for the migration. Specifically, you can't use Oracle Data Guard or any other file copy method. Migration methods that are compatible with endian conversion include Oracle Data Pump Export/Import, Oracle Cross Platform Transportable Tablespaces (XTTS), or data replication utilities such as Oracle GoldenGate, Quest SharePlex, and Striim.
   
   - You can modernize or migrate on-premises application servers depending on requirements and compatibility. For more information, see [Cloud adoption scenarios](../index.md).
 
-- **Assess the workload availability requirements during the migration process**: If you need to minimize workload downtime, then migration methods such as the Data Pump Export feature, the Data Pump Import feature, or Azure Migrate and Modernize might not suit your workload. In that case, you can do the following three-step process:
+- **Assess the workload availability requirements during the migration process**: If you need to minimize workload downtime, then migration methods such as Data Pump Export/Import might not suit your workload. In that case, you can do the following three-step process:
 
   - Use Oracle Recovery Manager (RMAN) to back up and then restore the entire database in Azure. Perform an endian conversion through XTTS if necessary. The result is a database that's a point-in-time copy of the on-premises source database. For more information, see [Transporting data across platforms](https://docs.oracle.com/en/database/oracle/oracle-database/23/admin/transporting-data.html#GUID-FE3003B9-605A-4269-B167-005AC778C870).
   
@@ -55,8 +55,6 @@ The following section describes the migration process in more detail. The steps 
   - After you synchronize the target database in Azure with the source on-premises database, you can schedule a *cutover*. A cutover shuts down the source on-premises database and flushes the last few transactions to the target database in Azure. Then you can open the target database in Azure as the new source database. A cutover can take as little as a few minutes, depending on the sync method that you use.
   
   - Depending on the migration approach that you choose for application services, you might need to complete several application service tasks before you fully migrate the application to Azure.
-  
-  - Consider using Oracle Zero Downtime Migration (ZDM) for the migration process. For more information, see [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/).
 
 - **Assess required licenses**: Your database might require various licenses depending on the migration tooling. For instance:
 
@@ -66,9 +64,7 @@ The following section describes the migration process in more detail. The steps 
   
   For more information about Oracle licensing on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
   
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure)
->
-> [Oracle on Azure IaaS landing zone accelerator](oracle-landing-zone-accelerator.md)
