@@ -50,7 +50,7 @@ This diagram shows an example conceptual reference architecture that illustrates
 
 :::image type="content" source="media/index/reference-architecture-oracle-infrastructure-landing-zone.svg" alt-text="A diagram that shows a reference architecture of the Oracle on Azure landing zone accelerator." border="false" lightbox="media/index/reference-architecture-oracle-infrastructure-landing-zone.svg":::
 
-*Download a Visio file of this architecture.*
+*Download a [Visio file](https://github.com/Microsoft/CloudAdoptionFramework/tree/main/scenarios/oracle-iaas/reference-architecture-oracle-iaas-landing-zone.vsdx) of this architecture.*
 
 ## Get the Oracle on Azure IaaS landing zone accelerator
 
