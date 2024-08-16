@@ -62,7 +62,7 @@ Packaging these capabilities into a single Terraform module makes it easier to b
 
 These resources align with the [Azure landing zones conceptual architecture](index.md#azure-landing-zone-architecture):
 
-:::image type="content" source="../enterprise-scale/media/azure-landing-zone-architecutre-diagram-hub-spoke.svg" alt-text="Diagram of the Azure landing zone conceptual architecture." lightbox="../enterprise-scale/media/azure-landing-zone-architecutre-diagram-hub-spoke.svg":::
+:::image type="content" source="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg" alt-text="Diagram of the Azure landing zone conceptual architecture." lightbox="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg":::
 
 You can deploy these resources, by capability, across multiple subscriptions by using the [Provider Configuration][wiki_provider_configuration] on the module block.
 

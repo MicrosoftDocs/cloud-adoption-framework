@@ -18,7 +18,7 @@ A specific architectural approach.
 Reference architecture.
 Set of reference implementations that help you prepare your landing zones for mission-critical technology platforms and supported workloads.
 
-:::image type="content" source="../../ready/enterprise-scale/media/azure-landing-zone-architecutre-diagram-hub-spoke.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../ready/enterprise-scale/media/azure-landing-zone-architecutre-diagram-hub-spoke.svg":::
+:::image type="content" source="../../ready/enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../ready/enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg":::
 
 *For more information on the design areas labeled A-I in the visual, see [environment design areas](../../ready/landing-zone/design-areas.md#environment-design-areas).*
 
