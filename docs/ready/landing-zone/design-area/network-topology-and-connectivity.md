@@ -26,7 +26,7 @@ Network topology and connectivity are fundamental for organizations that are pla
 
 [![Diagram of networking areas of ALZ conceptional Management Group Hierarchy.](media/network-design-overview-mg.png)](media/network-design-overview-mg.png#lightbox)
 
-In the [conceptual Azure landing zone architecture](../../enterprise-scale/media/ns-arch-cust-expanded.svg), there are two main management groups hosting workloads: Corp and Online. These management groups serve distinct purposes in organizing and governing Azure subscriptions. The networking relationship between the various Azure landing zones management groups depends on the organization's specific requirements and network architecture. The next few sections discuss the networking relationship between **Corp**, **Online**, and the **Connectivity** management groups in relation to what the Azure landing zone accelerator provides.
+In the [conceptual Azure landing zone architecture](../../enterprise-scale/media/azure-landing-zone-architecutre-diagram-hub-spoke.svg), there are two main management groups hosting workloads: Corp and Online. These management groups serve distinct purposes in organizing and governing Azure subscriptions. The networking relationship between the various Azure landing zones management groups depends on the organization's specific requirements and network architecture. The next few sections discuss the networking relationship between **Corp**, **Online**, and the **Connectivity** management groups in relation to what the Azure landing zone accelerator provides.
 
 ### What is the purpose of Connectivity, Corp, and Online Management Groups?
 
