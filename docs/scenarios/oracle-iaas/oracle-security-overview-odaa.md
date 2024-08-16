@@ -28,7 +28,7 @@ Consider the following guidance when you design your security guidelines for Ora
  
 - The Oracle Database@Azure service is deployed on private subnets in Azure only. The service isn't immediately accessible from the internet.
  
-- Network security groups (NSGs) aren't currently supported Oracle Database delegated subnets.
+- Network security groups (NSGs) aren't currently supported Oracle Database@Azure delegated subnets.
  
 - The Oracle Database@Azure solution uses many default Transmission Control Protocol (TCP) ports for various operations. For the full list of ports, see [Default port assignments](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmin/exadata-network-requirements.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
  
