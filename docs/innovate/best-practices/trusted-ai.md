@@ -1,10 +1,9 @@
 ---
 title: Responsible and trusted AI
-description: Understand the six guiding Microsoft principles for responsible AI, which include accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security.
-author: msteller-Ai
-ms.author: martinek
-ms.date: 01/20/2021
-ms.topic: conceptual
+description: Understand the principles for responsible AI, including accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security.
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 08/19/2024
 ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 ---
@@ -12,6 +11,8 @@ ms.custom: think-tank
 # Responsible and trusted AI
 
 Microsoft outlines six key principles for responsible AI: accountability, inclusiveness, reliability and safety, fairness, transparency, and privacy and security. These principles are essential to creating responsible and trustworthy AI as it moves into mainstream products and services. They're guided by two perspectives: ethical and explainable.
+
+To learn more about the latest developments for responsible AI, see [Empowering responsible AI practices](https://www.microsoft.com/ai/responsible-ai).
 
 ![A diagram of responsible AI principles.](./media/responsible-ai-principles.png)
 
@@ -22,36 +23,6 @@ From an ethical perspective, AI should:
 - Be fair and inclusive in its assertions.
 - Be accountable for its decisions.
 - Not discriminate or hinder different races, disabilities, or backgrounds.
-
-In 2017, Microsoft established an advisory committee for AI, ethics, and effects in engineering and research [Aether](https://www.microsoft.com/ai/principles-and-approach). The core responsibility of the committee is to advise on issues, technologies, processes, and best practices for responsible AI.
-
-### Accountability
-
-Accountability is an essential pillar of responsible AI. The people who design and deploy an AI system need to be accountable for its actions and decisions, especially as we progress toward more autonomous systems.
-
-Organizations should consider establishing an internal review body that provides oversight, insights, and guidance about developing and deploying AI systems. This guidance might vary depending on the company and region, and it should reflect an organization's AI journey.
-
-### Inclusiveness
-
-Inclusiveness mandates that AI should consider all human races and experiences. Inclusive design practices can help developers understand and address potential barriers that could unintentionally exclude people. Where possible, organizations should use speech-to-text, text-to-speech, and visual recognition technology to empower people who have hearing, visual, and other impairments.
-
-### Fairness
-
-Fairness is a core ethical principle that all humans aim to understand and apply. This principle is even more important when AI systems are being developed. Key checks and balances need to make sure that the system's decisions don't discriminate against, or express a bias toward, a group or individual based on gender, race, sexual orientation, or religion.
-
-Microsoft provides an [AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA) that offers guidance and solutions for AI systems. These solutions are loosely categorized into five stages: envision, prototype, build, launch, and evolve. Each stage lists recommended due-diligence activities that help minimize the impact of unfairness in the system.
-
-Fairlearn integrates with Azure Machine Learning and supports data scientists and developers to assess and improve the fairness of their AI systems. It provides unfairness-mitigation algorithms and an interactive dashboard that visualizes the fairness of the model. An organization should use the toolkit and closely assess the fairness of the model while it's being built. This activity should be an integral part of the data science process.
-
-Learn how to [mitigate unfairness in machine learning models](/azure/machine-learning/concept-fairness-ml).
-
-### Reliability and safety
-
-For AI systems to be trusted, they need to be reliable and safe. It's important for a system to perform as it was originally designed and to respond safely to new situations. Its inherent resilience should resist intended or unintended manipulation.
-
-An organization should establish rigorous testing and validation for operating conditions to ensure that the system responds safely to edge cases. It should integrate A/B testing and champion/challenger methods into the evaluation process.
-
-An AI system's performance can degrade over time. An organization needs to establish a robust monitoring and model-tracking process to reactively and proactively measure the model's performance (and retrain it for modernization, as necessary).
 
 ## Explainable
 
@@ -71,6 +42,36 @@ Microsoft has developed [InterpretML](https://interpret.ml/), an open-source too
 
 To learn more about explainability, explore [model interpretability in Azure Machine Learning](/azure/machine-learning/how-to-machine-learning-interpretability).
 
+## Principles of responsible AI
+
+### Fairness
+
+Fairness is a core ethical principle that all humans aim to understand and apply. This principle is even more important when AI systems are being developed. Key checks and balances need to make sure that the system's decisions don't discriminate against, or express a bias toward, a group or individual based on gender, race, sexual orientation, or religion.
+
+Microsoft provides an [AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA) that offers guidance and solutions for AI systems. These solutions are loosely categorized into five stages: envision, prototype, build, launch, and evolve. Each stage lists recommended due-diligence activities that help minimize the impact of unfairness in the system.
+
+Fairlearn integrates with Azure Machine Learning and supports data scientists and developers to assess and improve the fairness of their AI systems. It provides unfairness-mitigation algorithms and an interactive dashboard that visualizes the fairness of the model. An organization should use the toolkit and closely assess the fairness of the model while it's being built. This activity should be an integral part of the data science process.
+
+Learn how to [mitigate unfairness in machine learning models](/azure/machine-learning/concept-fairness-ml).
+
+### Reliability and safety
+
+For AI systems to be trusted, they need to be reliable and safe. It's important for a system to perform as it was originally designed and to respond safely to new situations. Its inherent resilience should resist intended or unintended manipulation.
+
+An organization should establish rigorous testing and validation for operating conditions to ensure that the system responds safely to edge cases. It should integrate A/B testing and champion/challenger methods into the evaluation process.
+
+An AI system's performance can degrade over time. An organization needs to establish a robust monitoring and model-tracking process to reactively and proactively measure the model's performance (and retrain it for modernization, as necessary).
+
+### Privacy and security
+
+A data holder is obligated to protect the data in an AI system. Privacy and security are an integral part of this system.
+
+Personal data needs to be secured, and access to it shouldn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) helps protect and preserve privacy by randomizing data and adding noise to conceal personal information from data scientists.
+
+### Inclusiveness
+
+Inclusiveness mandates that AI should consider all human races and experiences. Inclusive design practices can help developers understand and address potential barriers that could unintentionally exclude people. Where possible, organizations should use speech-to-text, text-to-speech, and visual recognition technology to empower people who have hearing, visual, and other impairments.
+
 ### Transparency
 
 Achieving transparency helps the team understand:
@@ -82,11 +83,11 @@ Achieving transparency helps the team understand:
 
 This information offers insights about how the model was created, so the team can reproduce it in a transparent way. Snapshots within [Azure Machine Learning workspaces](/azure/machine-learning/concept-workspace) support transparency by recording or retraining all training-related assets and metrics involved in the experiment.
 
-### Privacy and security
+### Accountability
 
-A data holder is obligated to protect the data in an AI system. Privacy and security are an integral part of this system.
+Accountability is an essential pillar of responsible AI. The people who design and deploy an AI system need to be accountable for its actions and decisions, especially as we progress toward more autonomous systems.
 
-Personal data needs to be secured, and access to it shouldn't compromise an individual's privacy. [Azure differential privacy](/azure/machine-learning/concept-differential-privacy) helps protect and preserve privacy by randomizing data and adding noise to conceal personal information from data scientists.
+Organizations should consider establishing an internal review body that provides oversight, insights, and guidance about developing and deploying AI systems. This guidance might vary depending on the company and region, and it should reflect an organization's AI journey.
 
 ## Human AI guidelines
 
@@ -163,4 +164,4 @@ AI business consumers (business experts) close the feedback loop and provide inp
 
 ## Next steps
 
-Explore [human AI guidelines](/ai/guidelines-human-ai-interaction/) to learn more about responsible AI.
+See [Empowering responsible AI practices](https://www.microsoft.com/ai/responsible-ai) to learn more about responsible AI.
