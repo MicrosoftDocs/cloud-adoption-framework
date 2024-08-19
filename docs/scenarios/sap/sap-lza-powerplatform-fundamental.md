@@ -69,14 +69,12 @@ A Power Automate flow is a type of workflow that can automatically perform tasks
 
 There are three types of flows in Power Automate:
 
-- **Cloud Flows**: These are created when you want your automation to be triggered either automatically, instantly, or via a schedule. These are API based integrations. 
+- **Cloud Flows**: These are created when you want your automation to be triggered either automatically, instantly, or via a schedule. These are API based integrations which uses SAP ERP, SAP OData, HTML, and other connectors. Examples: Read or update SAP order, product or stock data in SAP. 
 
-- **Desktop Flows**: These are used to automate tasks on the Web or the desktop and enables SAP users to automate mundane, rules-based tasks on their desktop in combination with their SAP Application Interfaces like SAP Gui or SAP Fiori.
+- **Desktop Flows**: These are used to automate tasks on the Web or the desktop and enables SAP users to automate mundane, rules-based tasks on their desktop in combination with their SAP Application Interfaces like SAP Gui or SAP Fiori. For example, automate repetitive tasks like entering customer or finance data from mails or Excel into SAP.
 
   Desktop flows broaden the existing robotic process automation (RPA) capabilities in Power Automate and enable you to automate all repetitive desktop processes. Automating is done through the Power Automate desktop flow designer using the prebuilt drag-and-drop actions or recording your own desktop flows to run later.
-
-- **Business Process Flows**: These provide a guide for people to get work done. They provide a streamlined user experience that leads people through the processes their organization has defined for interactions that need to be advanced to a conclusion of some kind.
-
+ 
 ## Enhancing user engagement with Microsoft Copilot Studio
 
 Copilot Studio offers an opportunity for you to enhance your SAP users' experience. These AI-driven copilots can be integrated with SAP systems, providing a more interactive and user-friendly interface.
