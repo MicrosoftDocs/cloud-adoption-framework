@@ -21,13 +21,13 @@ This article is part 2 of the SAP and Power Platform articles.
 
 ## Architecture
 
-The following image depicts the components of an architecture. The components utilized depend on the use case and security requirements.
+The following image depicts the components of an architecture. The components utilized are depending on the use cases and security requirements.
 
 - The SAP ERP Connector requires an on-premises data gateway for a connection to SAP.
-- An OData connection or the use of "other connectors," such as the HTTP Connector, can be directly connected to SAP or through a firewall and API Management gateway.
-- A firewall and an API gateway are recommended for implementations in production environments with sensitive customer data. Especially for further improvement of access control, traffic management, governance, scalability, and flexibility adding the Azure API Management is recommended.
+- An OData connection or the use of "other connectors," such as the HTTP Connector, can be directly connected to SAP or through a firewall and API gateway.
+- A firewall and an API gateway are recommended for implementations in production environments with sensitive customer data. Especially for further improvement of access control, traffic management, governance, scalability, and flexibility adding the API gateway is recommended.
 
-:::image type="content" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with SAP." lightbox="./media/sap-powerplatform-architecture.svg":::
+:::image type="complex" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text=" A diagram that shows different options for connecting Power Platform solutions with SAP." lightbox="./media/sap-powerplatform-architecture.svg":::
 
 *Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/sap-powerplatform-architecture.vsdx) of this architecture.*
 
@@ -73,7 +73,7 @@ Please see the On-premise data Gateway [Installation and Configuration](/azure/a
 
 - **Use API Management** - API Management is instrumental in ensuring secure, efficient, and reliable communication with the SAP backend.
 
-  - SAP Principal Propagation using [APIM policy](https://github.com/Azure/api-management-policy-snippets/blob/master/examples/Request%20OAuth2%20access%20token%20from%20SAP%20using%20AAD%20JWT%20token.xml).
+  - SAP Principal Propagation requires [APIM](https://github.com/Azure/api-management-policy-snippets/blob/master/examples/Request%20OAuth2%20access%20token%20from%20SAP%20using%20AAD%20JWT%20token.xml).
   - **Use rate limiting for load management**: Controls the volume of incoming requests to the backend, preventing overload and ensuring continuous service availability.
   - **Implement IP address filtering**: Bolsters security by selectively permitting or denying requests based on predefined IP address criteria.
   - **Performance optimization through caching**: Enhances response times by caching backend responses, facilitating quicker access to commonly requested data.
