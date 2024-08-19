@@ -70,7 +70,7 @@ These two options depend on host operations practices and the degree of variabil
 
 All Azure landing zones are designed around a set of common design areas listed below. Each article includes a set of AKS-specific considerations and recommendations that can help the modern application platforms team prepare a landing zone for AKS containers:
 
-- [Enterprise enrollment](./aks/azure-billing-ad-tenant.md)
+- [Enterprise enrollment](./aks/azure-billing-microsoft-entra-tenant.md)
 - [Identity and access management](./aks/identity-and-access-management.md)
 - [Network topology and connectivity](./aks/network-topology-and-connectivity.md)
 - [Resource organization](./aks/resource-organization.md)

@@ -1979,6 +1979,11 @@
          "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-odaa.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/design-area/azure-billing-ad-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+         "redirect_document_id": false
       }
    ]
 }
