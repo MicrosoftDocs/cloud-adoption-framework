@@ -22,7 +22,7 @@ This article is part 3 of the SAP and Power Platform articles.
 
 Depending on your scenario for Power Platform usage with SAP, there will be a need of middleware component deployment.
 
-:::image type="content" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with SAP." lightbox="./media/sap-powerplatform-architecture.svg":::
+:::image type="complex" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="A diagram that shows different options for connecting Power Platform solutions with SAP." lightbox="./media/sap-powerplatform-architecture.svg":::
 
 *Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/sap-powerplatform-architecture.vsdx) of this architecture.*
 
