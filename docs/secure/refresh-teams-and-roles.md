@@ -11,18 +11,24 @@ ms.custom: internal, UpdateFrequency2
 
 ## Introduction
 
-This article describes teams and roles involved in cloud security, and the functions they perform. Many security functions are performed by specialized teams and roles that operate alongside other technology functions, ensuring that security is part of every aspect of the cloud estate. Depending on the size of your organization, some roles and functions discussed in this article may be covered by consolidated teams rather than having a one-to-one relationship between roles and teams. Enterprise and large organizations tend to have more granularity with teams and roles, whereas smaller organizations tend to consolidate multiple roles and functions between a smaller set of teams, or even individuals. Regardless of the size or your organization, it is imperative that stakeholders agree on business requirements that will help determine the roles and functions that need to be covered and the amount of resources needed to fill those roles. Use the following guidance to help understand specific functions that teams and roles perform and how different teams interact to cover the entirety of a cloud security organization.
+This article describes security roles involved in cloud security, and the functions they perform. These roles ensure that security is part of every aspect of the cloud estate, from development to operations and continuous improvement.
+
+Depending on your organization’s size and other factors, the roles and functions discussed in this article may be covered by consolidated teams rather than having a one-to-one relationship between roles and teams. Enterprise and large organizations tend to have more granularity with teams and roles, whereas smaller organizations tend to consolidate multiple roles and functions between a smaller set of teams, or even individuals. Sometimes these security functions are performed by specialized security teams that operate alongside technology and cloud teams and sometimes these functions are performed by people in cloud and technology teams.  
+
+Regardless of the size and structure your organization, it is imperative that stakeholders have a clear understanding of business requirements and the security risk tolerance of the organization to make good decisions about cloud and workload security.
+
+Use the following guidance to help understand specific functions that teams and roles perform and how different teams interact to cover the entirety of a cloud security organization. 
 
 ## Overview of roles and teams
 
-The following section provides examples of typical teams and individual roles and the functions that they typically perform. Your particular team may be organized differently, with different nomenclature, but in order to operate securely in the cloud, ensure that you map out your existing teams to the functions listed below and look for gaps in your operational coverage.
+The following section provides examples of typical teams and individual roles and the functions that they typically perform. You should map out your existing teams to the functions listed below and look for gaps in your operational coverage.
 
 **Chief Information Security Officer (CISO):**
 
-The CISO is typically the overall technology leader of a business or business unit. While this role is typically removed from day-to-day operations, they need to stay connected to the rest of the security organziation to ensure that everyone is aligned on strategies and teams are adhering to the business standards. The CISO functions include:
+The CISO is the overall security executive who works with business and technology to build a security strategy. The CISO prioritizes security investments to ensure teams are focused on the most important aspects of security (out of a potentially infinite set of security work teams could do). This role is typically removed from day-to-day operations, but influences many aspects of cloud security through CISO responsibilities including: 
 
-- Oversees the overall security strategy and ensures alignment with business goals.
-- Establishes security policies, standards, and frameworks.
+- Establishes the overall security strategy and ensures alignment with business goals.
+- Directs overall security policies, standards, and frameworks.
 - Manages the security budget and communicates security initiatives to senior leadership.
 
 **Cloud security architecture and engineering team:**
@@ -38,13 +44,13 @@ This team is responsible for turning the strategies and standards approved by se
 
 This team is commonly referred to as a Security Operations Center (SOC), and is normally organized in multiple tiers. The SOC team serves as the frontline defense against cyber threats, ensuring the organization's systems, data, and operations remain secure and resilient against evolving cybersecurity challenges.
 
-- *Tier I*
-    -  Triage specialists who collect raw data and review alarms & alerts.
+- *Triage Analysts (Tier 1)*
+    - Triage specialists who collect raw data and review alarms & alerts.
     - They determine criticality of alerts and enrich it with relevant data to properly classify incidents and identify false positives, escalating issues to Tier II teams when appropriate.
     - Responsible for management and configuration of monitoring tools.
     - Continuously monitor the organization's network, endpoints, servers, and other digital assets for security threats.
 
-- *Tier II* 
+- *Investigation Analysts (Tier 2)* 
     - Primary incident response team.
     - They conduct in-depth analysis with threat intelligence for incidents escalated from Tier I.
     - They design and enforce strategies to contain and recover from incidents.
