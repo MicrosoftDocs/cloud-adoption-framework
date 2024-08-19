@@ -5,6 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 08/19/2024
 ms.collection: ce-skilling-ai-copilot
+ms.topic: conceptual
 ms.custom: think-tank
 ---
 
