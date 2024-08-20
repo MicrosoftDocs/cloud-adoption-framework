@@ -47,6 +47,7 @@ Before trying to integrate SAP systems with Power Platform, you must have the Po
 - Consider organization naming, tagging and resource organization standards for on-premises data gateway.
 - Consider combining on-premises data gateway for all non-production environments.
 - Consider using any existing on-premises data gateway and API management solution for proof-of-concept or pilot use cases.
+- Consider the performance needs of the application during design and choose the location of various design components to minimize the network latency between Power Platform and SAP system. For example: it's recommended to deploy API gateway in cloud for scenario where SAP system is running in Cloud (RISE or Native)
 
 ## Design recommendations
 
