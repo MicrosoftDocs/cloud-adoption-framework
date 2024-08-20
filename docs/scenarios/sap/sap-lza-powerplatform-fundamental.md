@@ -69,9 +69,9 @@ A Power Automate flow is a type of workflow that can automatically perform tasks
 
 There are three types of flows in Power Automate:
 
-- **Cloud Flows**: These are created when you want your automation to be triggered either automatically, instantly, or via a schedule. These are API based integrations which uses SAP ERP, SAP OData, HTML, and other connectors. Examples: Read or update SAP order, product or stock data in SAP. 
+- **Cloud Flows**: These are created when you want your automation to be triggered either automatically, instantly, or via a schedule. These are API based integrations which uses SAP ERP, SAP OData, HTML, and other connectors. For example, you can use these flows to read or update objects in SAP such as an order, product, or stock information. 
 
-- **Desktop Flows**: These are used to automate tasks on the Web or the desktop and enables SAP users to automate mundane, rules-based tasks on their desktop in combination with their SAP Application Interfaces like SAP Gui or SAP Fiori. For example, automate repetitive tasks like entering customer or finance data from mails or Excel into SAP.
+- **Desktop Flows**: These are used to automate tasks on the Web or the desktop and enables SAP users to automate mundane, rules-based tasks on their desktop in combination with their SAP Application Interfaces like SAP Gui or SAP Fiori. For example, automate repetitive tasks like entering customer or finance data from email or Excel into SAP.
 
   Desktop flows broaden the existing robotic process automation (RPA) capabilities in Power Automate and enable you to automate all repetitive desktop processes. Automating is done through the Power Automate desktop flow designer using the prebuilt drag-and-drop actions or recording your own desktop flows to run later.
  
