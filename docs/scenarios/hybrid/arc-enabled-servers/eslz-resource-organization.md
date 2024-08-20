@@ -26,7 +26,7 @@ The following image shows a conceptual reference for resource tagging for Azure 
 
 :::image type="content" source="./media/arc-enabled-servers-resource-tag.svg" alt-text="A diagram that shows resource tagging for Azure Arc-enabled servers." border="false" lightbox="./media/arc-enabled-servers-resource-tag.svg":::
 
-*Download a [Visio file](https://github.com/Microsoft/CloudAdoptionFramework/tree/main/scenarios/hybrid/arc-enabled-servers/arc-enabled-servers-resource-tag-update.vsdx) of this architecture.*
+*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/scenarios/hybrid/arc-enabled-servers/arc-enabled-servers-resource-tag-update.vsdx) of this architecture.*
 
 ## Next steps
 
