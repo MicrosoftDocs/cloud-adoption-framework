@@ -24,7 +24,7 @@ This critical design area focuses on the two highest levels of alignment across 
 
 The Azure service presents a range of [active subscription offers](https://azure.microsoft.com/support/legal/offer-details/), and customers can use these offers at the same time to gain flexible billing options. Example subscriptions include Enterprise Agreement (Enterprise Agreement), Microsoft customer agreement, cloud service provider, and others.
 
-![Diagram that shows Azure scopes within one Microsoft Entra tenant with various billing offers and subscriptions.](../../enterprise-scale/media/az-scopes-billing.png)
+:::image type="content" source="./media/azure-scopes-billing.svg" alt-text="Diagram that shows Azure scopes within one Microsoft Entra tenant with various billing offers and subscriptions." border="false":::
 
 The Azure landing zone architecture supports subscriptions from any [Azure offer](https://azure.microsoft.com/support/legal/offer-details/). Subscriptions can only exist within one Microsoft Entra tenant to then relocate into the management group hierarchy within that tenant. They can then be managed by the various controls with enterprise-scale platforms like Azure Policy and role-based access control (RBAC).
 
