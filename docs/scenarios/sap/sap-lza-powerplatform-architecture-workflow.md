@@ -87,7 +87,6 @@ Please see the On-premise data Gateway [Installation and Configuration](/azure/a
 
   - SAP Principal Propagation requires [APIM](https://github.com/Azure/api-management-policy-snippets/blob/master/examples/Request%20OAuth2%20access%20token%20from%20SAP%20using%20AAD%20JWT%20token.xml).
   - **Implement IP address filtering**: Bolsters security by selectively permitting or denying requests based on predefined IP address criteria.
-  - **Performance optimization through caching**: Enhances response times by caching backend responses, facilitating quicker access to commonly requested data.
   - **Perform request validation**: Ensures incoming requests are in line with expected patterns by pre-validating headers, queries, or path parameters against the API schema.
   - **Backend decoupling**: Protect backend system from directly exposing it to API consumers.
   - **Configure monitoring and alerts**: Perform vigilant monitoring of backend API use and establish alert mechanisms for prompt identification and resolution of potential security issues.
