@@ -2029,6 +2029,16 @@
          "source_path": "docs/innovate/best-practices/ml-security.md",
          "redirect_url": "/azure/machine-learning/how-to-secure-inferencing-vnet",
          "redirect_document_id": false
-      }   
+      },
+      {
+         "source_path": "docs/innovate/best-practices/set-up-ml-workspaces.md",
+         "redirect_url": "/azure/machine-learning/concept-workspace",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/dev-train-comp-instances-for-ml",
+         "redirect_url": "/azure/machine-learning/how-to-secure-inferencing-vnet",
+         "redirect_document_id": false
+      }
    ]
 }
