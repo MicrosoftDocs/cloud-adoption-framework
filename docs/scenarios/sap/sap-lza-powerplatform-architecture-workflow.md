@@ -41,7 +41,7 @@ Importantly, the Power Platform is a cloud-based service (PaaS), while other com
 
 :::image type="complex" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="Diagram illustrating how Power Platform components connect to SAP systems" lightbox="./media/sap-powerplatform-architecture.svg":::
     This diagram illustrates how Power Platform components (Power BI, Power Apps, Power Automate, Power Pages, and Copilot Studio) connect to SAP systems. For SAP systems using RFC or BAPI protocols, Power Platform components rely on the SAP ERP connector, which communicates with the SAP system via an on-premises data gateway and SAP .NET connector running in a virtual machine. For SAP systems offering OData endpoints, the SAP OData connector is used. REST or SOAP-based SAP systems are accessed through custom connectors. Security best practices dictate that connections to the on-premises data gateway pass through a firewall, while OData and REST/SOAP calls are routed via an API gateway. Both Power Platform components and the on-premises data gateway are linked to the same Microsoft Entra tenant. The diagram also depicts how mobile and laptop devices can access Power Platform components, and how Power Automate Desktop can connect to SAP systems through SAP GUI. Power BI Desktop can connect to SAP applications using the SAP .NET connector and the SAP HANA database using SAP HANA ODBC driver. Importantly, the Power Platform is a cloud-based service (PaaS), while other components can be deployed either on-premises or in the cloud (IaaS)
-:::
+:::image-end:::
 
 *Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/sap-powerplatform-architecture.vsdx) of this architecture.*
 
