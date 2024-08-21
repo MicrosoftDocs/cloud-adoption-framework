@@ -36,7 +36,7 @@ Use the reference architectures as a starting point. Modify the reference archit
 
 The following diagram shows Oracle on Azure Virtual Machines deployed to an application landing zone. It also shows the critical design areas that support this deployment. The Oracle databases run on VMs. You can change the number and size of VMs to accommodate your needs.
 
-:::image type="content" source="./media/index/reference-architecture-oracle-iaas-landing-zone.svg" alt-text="Diagram that shows a reference architecture of Oracle on Azure Virtual Machines." border="false" lightbox="./media/index/reference-architecture-oracle-iaas-landing-zone.svg":::
+:::image type="content" source="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg" alt-text="Diagram that shows a reference architecture of Oracle on Azure Virtual Machines." border="false" lightbox="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg":::
 
 ### Landing zone architecture for Oracle Database@Azure
 
