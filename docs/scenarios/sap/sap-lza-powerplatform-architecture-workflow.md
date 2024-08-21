@@ -5,7 +5,7 @@ author: shekhag
 ms.author: shegupt
 ms.date: 02/09/2024
 ms.topic: conceptual
-ms.custom: think-tank, e2e-sap
+ms.custom: e2e-sap
 ---
 
 # SAP and Power Platform architecture workflow
