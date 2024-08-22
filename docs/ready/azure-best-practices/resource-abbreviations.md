@@ -275,6 +275,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
 | Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
 | Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
+| Backup Vault instance | `Microsoft.DataProtection/backupVaults/backupInstances` | `bkinst` |
 | File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
 | Storage account | `Microsoft.Storage/storageAccounts` | `st` |
 | Storage Sync Service name | `Microsoft.StorageSync/storageSyncServices` | `sss` |
