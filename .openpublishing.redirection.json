@@ -2039,6 +2039,11 @@
          "source_path": "docs/innovate/best-practices/dev-train-comp-instances-for-ml",
          "redirect_url": "/azure/machine-learning/how-to-secure-inferencing-vnet",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/how-to-approach-mlops.md",
+         "redirect_url": "/training/paths/build-first-machine-operations-workflow/",
+         "redirect_document_id": false
       }
    ]
 }
