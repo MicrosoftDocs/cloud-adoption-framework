@@ -2036,7 +2036,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/innovate/best-practices/dev-train-comp-instances-for-ml",
+         "source_path": "docs/innovate/best-practices/dev-train-comp-instances-for-ml.md",
          "redirect_url": "/azure/machine-learning/how-to-secure-inferencing-vnet",
          "redirect_document_id": false
       },
