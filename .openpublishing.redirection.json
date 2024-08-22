@@ -2042,7 +2042,12 @@
       },
       {
          "source_path": "docs/innovate/best-practices/how-to-approach-mlops.md",
-         "redirect_url": "/training/paths/build-first-machine-operations-workflow/",
+         "redirect_url": "/training/paths/build-first-machine-operations-workflow",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/mlops-process.md",
+         "redirect_url": "/azure/architecture/data-science-process/overview",
          "redirect_document_id": false
       }
    ]

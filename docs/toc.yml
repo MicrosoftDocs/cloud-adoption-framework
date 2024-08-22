@@ -731,8 +731,6 @@ items:
             href: innovate/best-practices/predict.md
           - name: Machine learning
             items:
-            - name: The machine learning operations process
-              href: innovate/best-practices/mlops-process.md
             - name: Deploy machine learning models
               href: innovate/best-practices/ml-deployment-inference.md
             - name: Responsible and trusted AI
