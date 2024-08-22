@@ -10,7 +10,7 @@ ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-VMware
 ---
 
-## Secure Virtual WAN for Azure VMware Solution
+# Secure Virtual WAN for Azure VMware Solution
  A security solution such as Azure Firewall, a third-party Network Virtual Appliance (NVA), or SaaS solution in the Virtual WAN hub effectively converts the hub to a Secure Virtual WAN hub. A Secure Virtual WAN hub is a requirement for configuring Routing Intent. Routing Intent streamlines the routing/security design of the secure hub, by driving all private and internet traffic to the hub security solution. Routing Intent improves the security breadth and conducts traffic inspection for all traffic transiting through the secure hub, including Azure VMware Solution. 
 
 
@@ -196,8 +196,8 @@ Traffic flow to and from Virtual Networks
 
 ## Next steps
 
-- For more information on Azure VMware Solution with Single Region Virtual WAN with Global Reach, see [Single-Region Azure VMware Solution design with Global Reach, using Secure Virtual WAN with Routing Intent](/azure/azure-vmware/2-single-region-with-secure-virtual-wan-with-globalreach.md).
-- For more information on Azure VMware Solution with Single Region Virtual WAN without Global Reach, see [Single-Region Azure VMware Solution design without Global Reach, using Secure Virtual WAN with Routing Intent](/azure/azure-vmware/4-single-region-with-secure-virtual-wan-without-globalreach.md).
- - For more information on Azure VMware Solution with Dual Region Virtual WAN with Global Reach, see [Dual-Region Azure VMware Solution design with Global Reach, using Secure Virtual WAN with Routing Intent](/azure/azure-vmware/3-dual-region-with-secure-virtual-wan-with-globalreach.md).
-- For more information on Azure VMware Solution with Dual Region Virtual WAN without Global Reach, see [Dual-Region Azure VMware Solution design without Global Reach, using Secure Virtual WAN with Routing Intent](/azure/azure-vmware/5-dual-region-with-secure-virtual-wan-without-globalreach.md).
+- For more information on Azure VMware Solution with Single Region Virtual WAN with Global Reach, see [Single-Region Azure VMware Solution design with Global Reach, using Secure Virtual WAN with Routing Intent](eslz-single-region-with-secure-virtual-wan-with-globalreach.md).
+- For more information on Azure VMware Solution with Single Region Virtual WAN without Global Reach, see [Single-Region Azure VMware Solution design without Global Reach, using Secure Virtual WAN with Routing Intent](eslz-single-region-with-secure-virtual-wan-without-globalreach.md).
+ - For more information on Azure VMware Solution with Dual Region Virtual WAN with Global Reach, see [Dual-Region Azure VMware Solution design with Global Reach, using Secure Virtual WAN with Routing Intent](eslz-dual-region-with-secure-virtual-wan-with-globalreach.md).
+- For more information on Azure VMware Solution with Dual Region Virtual WAN without Global Reach, see [Dual-Region Azure VMware Solution design without Global Reach, using Secure Virtual WAN with Routing Intent](eslz-dual-region-with-secure-virtual-wan-without-globalreach.md).
 
