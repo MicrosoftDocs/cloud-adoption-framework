@@ -46,7 +46,11 @@ Refer to the [Strategy](../strategy/) methodology section for detailed guidance 
 ## Plan 
 
 Once a strategy has been developed and is in place to help guide decision making, development of a comprehensive implementation plan that takes confidentiality into consideration should begin.
-1. _Data Loss Protection:_ Specific DLP policies and procedures must be well planned to ensure organizational data confidentiality will be instantiated across the enterprise. This includes identifying sensitive data, determining how it will be protected, and planning for the deployment of encryption technologies and secure access controls.
+
+1. _**Data Loss Protection**
+ 
+Specific DLP policies and procedures must be well planned to ensure organizational data confidentiality will be instantiated across the enterprise. This includes identifying sensitive data, determining how it will be protected, and planning for the deployment of encryption technologies and secure access controls.
+
 1. **Include data protection requirements in your cloud migration or development plans**
 
 - *Data classification:* Identify and classify data based on sensitivity and regulatory requirements. This helps in applying appropriate security measures.
