@@ -2058,7 +2058,7 @@
       {
          "source_path": "docs/innovate/best-practices/predict.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
-         "redirect_document_id": true
+         "redirect_document_id": false
       }      
    ]
 }
