@@ -725,13 +725,6 @@ items:
         - name: Interact with devices
           href: innovate/best-practices/devices.md
 
-        - name: Innovate with AI
-          items:
-          - name: Machine learning
-            items:
-            - name: Deploy machine learning models
-              href: innovate/best-practices/ml-deployment-inference.md
-
       - name: Process improvements
         items:
         - name: Overview
