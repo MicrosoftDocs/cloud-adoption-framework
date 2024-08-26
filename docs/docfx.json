@@ -62,6 +62,9 @@
       }
     },
     "fileMetadata": {
+      "ms.collection": {
+        "scenarios/ai/**/*.md": "ce-skilling-ai-copilot"
+      },
       "ms.subservice": {
         "adopt/**/*.md": "caf-methodology-adopt",
         "digital-estate/**/*.md": "caf-methodology-plan",
