@@ -27,7 +27,7 @@ There are **six key principles** for responsible AI:
 
 The responsible AI principles should be considered across each phase of the AI adoption journey. From strategy and planning, to implementation, and securing, managing, and governing your AI initiatives.
 
-![Diagram that shows how responsible AI is foundational to all AI work across methodologies in the Cloud Adoption Framework](./media/responsible-ai.png)
+![Diagram that shows how responsible AI is foundational to all AI work across methodologies in the Cloud Adoption Framework.](./media/responsible-ai.png)
 
 Throughout this AI adoption guidance, you find examples of where CAF provides support to help you implement responsible AI practices. The principles of responsible AI are embedded in the guidance and recommendations provided in this AI adoption journey.
 
