@@ -16,11 +16,9 @@ The guidance provided in this article is meant to help you develop your cloud ad
 
 TODO - Add to this
 
-## General plan recommendations
+## Plan for landing zone adoption
 
-As you develop your cloud adoption plans, use the following recommendations as a first step to ensure that security is tightly integrated in each phase.
-
-- **Plan for landing zones:**
+As a first step in your cloud adoption plan, review the Azure landing zone [documentation](../ready/landing-zone/) to understand Microsoft's modern approach to cloud design at scale. 
 
 The Azure landing zone approach will provide you a well-designed foundation for your cloud estate, setting you up for a manageable environment that can be secured according to best practices.
 
@@ -28,9 +26,35 @@ The Azure landing zone approach will provide you a well-designed foundation for 
     
     - *Benefits:* Landing zones help standardize cloud environments, ensuring consistency and compliance with security policies. They also facilitate easier management and scalability.
 
-- **Plan for Zero Trust adoption:** 
+## Security posture modernization
 
-Review the [Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview) for thorough guidance on implementing the Zero Trust approach as you develop your cloud adoption plan. This framework is structured to align with and augment the CAF approach, helping to ensure that security is tightly integrated into your adoption journey.
+Building a security modernization plan focuses primarily on the adoption of new technologies and new operational practices, but business alignment is an equally important aspect as well.
+
+### Plan for Zero Trust adoption
+
+As you develop your adoption plan, incorporate the prinicples of Zero Trust across the breadth of the plan to help structure the phases and steps that teams throughout the organization will be responsible for and how their activities will be accomplished.
+
+The Microsoft Zero Trust approach provides guidance for seven technology pillars with deployment and configuration recommendations. Explore each pillar as you bild your plan to ensure that these areas are covered thoroughly.
+
+#### Zero Trust technology pillars
+
+- **[Identity](/security/zero-trust/deploy/identity):** Guidance for verifying identies with strong authentication and controlling access under the principle of least privilege.
+
+- **[Endpoints](/security/zero-trust/deploy/endpoints):** Guidance for securing all endpoints (devices and apps) that interact with your data, regardless of where they connect from and how they connect.
+
+- **[Data](/security/zero-trust/deploy/data):** Guidance for securing all data through a defense in depth approach.
+
+- **[Apps](/security/zero-trust/deploy/applications):** Guidance for securing the cloud apps and services that you consume.
+
+- **[Infrastructure](/security/zero-trust/deploy/infrastructure):** Guidance for securing cloud infrastructure through strict policies and enforcement strategies.
+
+- **[Network](/security/zero-trust/deploy/networks):** Guidance for securing your cloud network through segmentation, traffic inspection, and end-to-end encryption.
+
+- **[Visibility, automation, and orchestration](/security/zero-trust/deploy/visibility-automation-orchestration):** Guidance for operational policies and practices that enforce the Zero Trust principles.
+
+### Business alignment
+
+Alignment between technology and business stakeholders is critical to the success of your security modernization plan. As such, the plan development must be approached as a collaborative process that is accomplished through negotiations between stakeholders to find the right way to adapt processes and policies. Business stakeholders must understand how business functions may be effected by the modernization plan and technology stakeholders must understand where they may need to make concessions to ensure that critical business functions remain intact while being secured.
 
 ## Incident preparedness and response
 
