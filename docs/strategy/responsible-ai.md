@@ -3,16 +3,16 @@ title: Responsible and trusted AI adoption
 description: Learn about the importance of responsible AI considerations when adopting AI on Azure in your organization.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 08/23/2024
+ms.date: 08/27/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
 # Responsible and trusted AI adoption
 
-Microsoft outlines six key principles for responsible AI: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountabilities. These principles are essential to creating responsible and trustworthy AI as it moves into mainstream products and services throughout your AI adoption journey.
+Microsoft outlines six key principles for responsible AI: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. These principles are essential to creating responsible and trustworthy AI as it moves into mainstream products and services throughout your AI adoption journey.
 
-## The Responsible AI Principles
+## The responsible AI principles
 
 Microsoft believes in [empowering responsible AI practices](https://www.microsoft.com/ai/responsible-ai).
 
@@ -27,7 +27,7 @@ There are **six key principles** for responsible AI:
 
 The responsible AI principles should be considered across each phase of the AI adoption journey. From strategy and planning, to implementation, and securing, managing, and governing your AI initiatives.
 
-![Responsible AI Principles](./media/responsible-ai-caf.png)
+![Diagram that shows how responsible AI is foundational to all AI work across methodologies in the Cloud Adoption Framework](./media/responsible-ai.png)
 
 Throughout this AI adoption guidance, you find examples of where CAF provides support to help you implement responsible AI practices. The principles of responsible AI are embedded in the guidance and recommendations provided in this AI adoption journey.
 
