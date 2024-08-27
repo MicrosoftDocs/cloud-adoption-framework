@@ -48,7 +48,7 @@ Direct connectivity between private clouds is based on [ExpressRoute Global Reac
    Diagram of Figure 2, which shows Azure VMware Solution private clouds in different regions are directly connected to each other over a Global Reach connection between the private clouds' managed ExpressRoute circuits. In each Azure region where Azure VMware Solution is available, network infrastructure that terminates the Azure VMware Solution side of the Azure VMware Solution managed circuits is present. It's referred to as a Dedicated ExpressRoute meet-me location in the picture.
 :::image-end:::
 
-*Figure 2: This reference scenario shows Azure VMware Solution private clouds in different regions. A Gobal Reach connection directly connects the clouds between their managed ExpressRoute circuits.*
+*Figure 2: This reference scenario shows Azure VMware Solution private clouds in different regions. A Global Reach connection directly connects the clouds between their managed ExpressRoute circuits.*
 
 ### Hybrid connectivity
 
@@ -125,7 +125,7 @@ When you originate default routes in Azure, special care must be taken to avoid 
 
 :::image type="content" source="media/dual-region-figure-9.png" alt-text="Diagram of Figure 9, which shows the BGP speakers that terminate the customer-managed ExpressRoute circuits are filtering Azure NVAs' default routes." lightbox="media/dual-region-figure-9.png":::
 
-*Figure 9: *This reference scenario shows the Border Gateway Protocol speakers that terminate the customer-managed ExpressRoute circuits and filter Azure Netowrk Virtual Appliances default routes.*
+*Figure 9: This reference scenario shows the Border Gateway Protocol speakers that terminate the customer-managed ExpressRoute circuits and filter Azure Network Virtual Appliances default routes.*
 
 ## Next steps
 
