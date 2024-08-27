@@ -35,15 +35,15 @@ To aid in your decision process, the remainder of this article describes these a
 
 ## IT operations prerequisites
 
-The [Azure Management Guide](../azure-management-guide/index.md) outlines the management tools that are available in Azure. Before reaching a commitment with the business, IT should determine an acceptable standard-level management baseline to be applied to all managed workloads. IT would then calculate a standard management cost for each of the managed workloads in the IT portfolio, based on counts of CPU cores, disk space, and other asset-related variables. IT would also estimate a composite SLA for each workload, based on the architecture.
+The [Azure Management Guide](../azure-management-guide/index.md) outlines the management tools that are available in Azure. Before reaching a commitment with the business, IT should determine an acceptable standard-level management baseline to be applied to all managed workloads. IT would then calculate a standard management cost for each of the managed workloads in the IT portfolio, based on counts of CPU cores, disk space, and other asset-related variables. IT would also estimate a composite SLO for each workload, based on the architecture.
 
 > [!TIP]
-> IT operations teams often use a default minimum of 99.9 percent uptime for the initial composite SLA. They might also choose to normalize management costs based on the average workload, especially for solutions with minimal logging and storage needs. Averaging the costs of a few medium criticality workloads can provide a starting point for initial conversations.
+> IT operations teams often use a default minimum of 99.9 percent uptime for the initial composite SLO. They might also choose to normalize management costs based on the average workload, especially for solutions with minimal logging and storage needs. Averaging the costs of a few medium criticality workloads can provide a starting point for initial conversations.
 
 <!-- -->
 
 > [!TIP]
-> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, the operations management fields should be updated to reflect these prerequisites. Those fields include *Commitment level*, *Composite SLA*, and *Monthly cost*. Monthly cost should represent the cost of the added operational management tools on a monthly basis.
+> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, the operations management fields should be updated to reflect these prerequisites. Those fields include *Commitment level*, *Composite SLO*, and *Monthly cost*. Monthly cost should represent the cost of the added operational management tools on a monthly basis.
 
 The operations management baseline serves as an initial starting point to be validated in each of the following sections.
 
@@ -104,13 +104,13 @@ For managed solutions, several design principles and template solutions can be a
 The following calculations will walk through formulas to help you better understand the differences between losses and increased management investments. For guidance on calculating the cost of increased management, see [Workload automation](./workload.md) and [Platform automation](./platform.md).
 
 > [!TIP]
-> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the operations management fields to reflect to reflect each conversation. Those fields include *Commitment level*, *Composite SLA*, and *Monthly cost*. Monthly cost should represent the monthly cost of the added operational management tools. After they're updated, the fields will update the ROI formulas and each of the following fields.
+> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the operations management fields to reflect to reflect each conversation. Those fields include *Commitment level*, *Composite SLO*, and *Monthly cost*. Monthly cost should represent the monthly cost of the added operational management tools. After they're updated, the fields will update the ROI formulas and each of the following fields.
 
 ### Estimate outage (hours per year)
 
-Composite SLA is the service-level agreement that's based on the deployment of each asset in the workload. That field drives *estimated outage* (labeled `Est.Outage` in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
+Composite SLO is the service-level agreement that's based on the deployment of each asset in the workload. That field drives *estimated outage* (labeled `Est.Outage` in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
 
-> *Estimated outage = (1 - composite SLA percentage) &#215; number of hours in a year*
+> *Estimated outage = (1 - composite SLO percentage) &#215; number of hours in a year*
 
 The workbook uses the default value of *8,760 hours per year*.
 
@@ -122,17 +122,17 @@ The workbook uses the default value of *8,760 hours per year*.
 
 This serves as a baseline for cost, should the business stakeholders choose to invest in a higher level of management.
 
-### Composite-SLA impact
+### Composite-SLO impact
 
-*Composite-SLA impact* (labeled `Commitment level impact` in the workbook) provides updated fiscal impact, based on the changes to the uptime SLA. This calculation allows you to compare the projected financial impact of both options. To calculate this forecast impact without the spreadsheet, apply the following formula:
+*Composite-SLO impact* (labeled `Commitment level impact` in the workbook) provides updated fiscal impact, based on the changes to the uptime SLA. This calculation allows you to compare the projected financial impact of both options. To calculate this forecast impact without the spreadsheet, apply the following formula:
 
-> *Composite-SLA impact = estimated outage &#215; time-value impact*
+> *Composite-SLO impact = estimated outage &#215; time-value impact*
 
-The value represents the potential losses to be avoided by the changed commitment level and new composite SLA.
+The value represents the potential losses to be avoided by the changed commitment level and new composite SLO.
 
 ### Comparison basis
 
-*Comparison basis* evaluates standard impact and composite SLA impact to determine which is most appropriate in the return column.
+*Comparison basis* evaluates standard impact and composite SLO impact to determine which is most appropriate in the return column.
 
 ### Return on loss avoidance
 
