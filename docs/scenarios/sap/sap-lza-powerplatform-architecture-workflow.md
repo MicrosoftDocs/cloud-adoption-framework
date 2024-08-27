@@ -21,7 +21,7 @@ This article is part 2 of the SAP and Power Platform articles.
 
 ## Architecture
 
-The following image depicts the components of an architecture. The components utilized are depending on the use cases and security requirements. This diagram illustrates how Power Platform components (Power BI, Power Apps, Power Automate, Power Pages, and Copilot Studio) connect to SAP systems.
+The following image depicts the components of a scenario where SAP on Azure (Native/RISE) is integrated with Power Platform for developing low-code, no-code applications. The components utilized are depending on the use cases and security requirements. This diagram illustrates how Power Platform components (Power BI, Power Apps, Power Automate, Power Pages, and Copilot Studio) connect to SAP systems.
  
 For SAP systems using Remote Function Call (RFC) or Business Application Programming Interface (BAPI) protocols, Power Platform components rely on the SAP ERP connector, which communicates with the SAP system via an on-premises data gateway and SAP .NET connector running in a virtual machine.
  
