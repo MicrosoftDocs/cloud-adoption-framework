@@ -17,12 +17,12 @@ This article describes how to configure network connectivity when Azure VMware S
 This article focuses on a typical dual-region scenario, shown in the following Figure 1:
 
 - An Azure hub and spoke network exists in each region.
-- A disaster-resilient configuration for ExpressRoute (two circuits in two different peering locations, with each circuit connected to hub virtual networks in both regions) has been deployed. The guidance provided in the following sections stays the same in case [fall-back VPN connectivity](/azure/expressroute/expressroute-howto-coexist-resource-manager#configure-a-site-to-site-vpn-as-a-failover-path-for-expressroute) is configured.
+- A disaster-resilient configuration for Azure ExpressRoute (two circuits in two different peering locations, with each circuit connected to hub virtual networks in both regions) has been deployed. The guidance provided in the following sections stays the same in case [fall-back VPN connectivity](/azure/expressroute/expressroute-howto-coexist-resource-manager#configure-a-site-to-site-vpn-as-a-failover-path-for-expressroute) is configured.
 - An Azure VMware Solution private cloud has been deployed in each region.
 
 :::image type="content" source="media/dual-region-figure-1.png" alt-text="Diagram of Figure 1, which shows the dual-region scenario covered in this article." lightbox="media/dual-region-figure-1.png":::
 
-*Figure 1: A dual-region scenario shows how global VNet peering connects two virtual networks in different regions.*
+*Figure 1: A dual-region scenario that shows how global Virtual Network peering connects two virtual networks in different regions*
 
 > [!NOTE]
 > In the reference scenario of Figure 1, the two regional hub virtual networks are connected via global VNet peering. While not strictly necessary, as traffic between Azure virtual networks in the two regions could be routed over ExpressRoute connections, we strongly recommend this configuration. VNet Peering minimizes latency and maximizes throughput, as it removes the need to hairpin traffic through the ExpressRoute meet-me edge routers.
@@ -95,7 +95,7 @@ Internet-bound traffic emitted by Azure VMware Solution virtual machines can be 
 
 :::image type="content" source="media/dual-region-figure-6.png" alt-text="Diagram of Figure 6, which shows the Azure VMware Solution configuration to enable internet connectivity via internet edges in Azure Virtual Network." lightbox="media/dual-region-figure-6.png":::
 
-*Figure 6: This screenshot highlights the Azure VMware Solution configuration that you must select to enable internet connectivity via internet edges in Azure Virtual Network.*
+*Figure 6: This screenshot highlights the Azure VMware Solution configuration that you must select to enable internet connectivity via internet edges in Virtual Network.*
 
 The internet edge NVAs can originate the default route if they support BGP. If not, you must deploy other BGP-capable NVAs. For more information on how to implement internet outbound connectivity for Azure VMware Solution in a single region, see [Implementing internet connectivity for Azure VMware Solution with Azure NVAs](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Networking/Step-By-Step-Guides/Implementing%20internet%20connectivity%20for%20AVS%20with%20Azure%20NVAs). In the dual-region scenario discussed in this article, the same configuration must be applied to both regions.
 
@@ -105,7 +105,7 @@ The key consideration in dual-region scenarios is that the default route origina
    Diagram of Figure 7, which shows the cross-region connections between ExpressRoute Gateways and Azure VMware Solution-managed ExpressRoute circuits must be removed to avoid cross-region propagation of the default route.
 :::image-end:::
 
-*Figure 7: This reference scenario shows which cross-region connections between ExpressRoute gateways and Azure VMware Solution-managed ExpressRoute circuits you must remove to avoid cross-region propagation of the default route.*
+*Figure 7: This reference scenario shows the cross-region connections between ExpressRoute gateways and ExpressRoute circuits managed by Azure VMware Solution that you must remove to prevent cross-region propagation of the default route.*
 
 Removing the Azure VMware Solution cross-region ExpressRoute connections achieves the goal of injecting, in each private cloud, a default route to forward internet-bound connections to the Azure internet edge in the local region.
 
@@ -119,7 +119,7 @@ The recommended topology for dual-region deployments with internet breakouts in 
    Diagram of Figure 8, which shows the recommended topology for dual region Azure VMware Solution deployments with internet outbound access through internet edges in Azure Virtual Network. Cross-region connections between ExpressRoute Gateways and Azure VMware Solution managed circuits must not be established to prevent unwanted cross-region propagation of the default route.
 :::image-end:::
 
-*Figure 8: This reference scenario shows the recommended topology for dual-region deployments with internet outbound access through internet edges in Azure Virtual Network.*
+*Figure 8: This reference scenario shows the recommended topology for dual-region deployments that have internet outbound access through internet edges in Azure Virtual Network.*
 
 When you originate default routes in Azure, special care must be taken to avoid propagation to on-premises sites, unless there's a requirement to provide internet access to on-premises sites via an internet edge in Azure. The customer-operated devices that terminate the customer managed ExpressRoute circuits must be configured to filter default routes received from Azure, as shown in Figure 9. This configuration is necessary to avoid disrupting internet access for the on-premises sites.
 
