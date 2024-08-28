@@ -45,8 +45,7 @@ If a workload requires real-time business continuity for hardware failures or da
 
 For more information, see the [complete Azure Site Recovery replication matrix](/azure/site-recovery/site-recovery-overview#what-can-i-replicate).
 
-An efficient, easy-to-use web-based user interface is Azure Business Continuity Center (preview). This console enables you  to manage your backup and disaster recovery at scale from a single place across various environments and solutions. To configure backups and replication, define protection policies, monitor operations, review configurations, and much more, see the [Azure Business Continuity Center (preview) overview article](/azure/business-continuity-center/business-continuity-center-overview).
-
+An efficient and easy-to-use web-based user interface is [Azure Business Continuity Center (preview)](/azure/business-continuity-center/business-continuity-center-overview). This console enables you to manage your backup and disaster recovery at scale from a single place across various environments and solutions. Learn how to [configure backups and replication, define protection policies](/azure/business-continuity-center/tutorial-configure-protection-datasource), [monitor operations, and review configurations](/azure/business-continuity-center/tutorial-monitor-protection-summary).
 For your file-server data, another service to consider is [Azure File Sync](/azure/storage/file-sync/file-sync-planning). This service helps you centralize your organization's file shares in Azure Files, while preserving the flexibility, performance, and compatibility of an on-premises file server. To use this service, follow the instructions for deploying Azure File Sync.
 
 ## Monitor
