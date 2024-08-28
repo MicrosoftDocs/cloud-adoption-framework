@@ -67,8 +67,8 @@ Several services fit into this category. They can help you to:
 
 These services are essential to supporting ongoing operations:
 
-- [Update Management](/azure/automation/update-management/overview) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
-- [Change Tracking and Inventory](/azure/automation/change-tracking/overview) provides insight into the software that's running in your environment, and highlights any changes that have occurred.
+- [Azure Update Manager](/azure/automation/update-manager/overview) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
+- [Change Tracking and Inventory](/azure/automation/change-tracking/ooverview-monitoring-agent) provides insight into the software that's running in your environment, and highlights any changes that have occurred.
 - [Azure Automation](/azure/automation/automation-intro) lets you run Python and PowerShell scripts or runbooks to automate tasks across your environment. When you use Azure Automation with the [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker), you can extend your runbooks to your on-premises resources as well.
 - [Azure Automation State Configuration](/azure/automation/automation-dsc-overview) enables you to push PowerShell Desired State Configuration (DSC) configurations directly from Azure. DSC also lets you monitor and preserve configurations for guest operating systems and workloads.
 
@@ -83,20 +83,14 @@ The governance design for standard organizations often differs from governance d
 To learn about pricing for Azure management services, go to these pages:
 
 - [Azure Site Recovery](https://azure.microsoft.com/pricing/details/site-recovery/)
-
 - [Azure Backup](https://azure.microsoft.com/pricing/details/backup/)
-
 - [Azure Monitor](https://azure.microsoft.com/pricing/details/monitor/)
-
 - [Microsoft Defender for Cloud](https://azure.microsoft.com/pricing/details/azure-defender/)
-
 - [Azure Automation](https://azure.microsoft.com/pricing/details/automation/), including:
   - Desired State Configuration
-  - Update Management solution
   - Change Tracking and Inventory solution
-
+- [Azure Update Manager](https://azure.microsoft.com/pricing/details/azure-update-management-center/)
 - [Azure Policy](https://azure.microsoft.com/pricing/details/azure-policy/)
-
 - [Azure File Sync service](https://azure.microsoft.com/pricing/details/storage/blobs/)
 
 > [!NOTE]
