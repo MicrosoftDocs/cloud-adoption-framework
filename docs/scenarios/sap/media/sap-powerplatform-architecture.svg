@@ -122,12 +122,12 @@
 		<v:layer v:name="Background" v:index="0"/>
 		<v:layer v:name="Connector" v:index="1"/>
 		<v:layer v:name="Comments" v:index="2"/>
-		<g id="shape1210-1" v:mID="1210" v:groupContext="shape" transform="translate(18,-18)">
+		<g id="shape1210-1" v:mID="1210" v:groupContext="shape" transform="translate(21.2598,-18)">
 			<title>Rectangle.1160</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<rect x="0" y="36" width="805.89" height="559.276" class="st1"/>
+			<rect x="0" y="36" width="793.701" height="559.276" class="st1"/>
 		</g>
 		<g id="shape1000-3" v:mID="1000" v:groupContext="shape" v:layerMember="0" transform="translate(42.5197,-103.181)">
 			<title>Rounded Rectangle.1168</title>
@@ -20527,5 +20527,13 @@
 			<title>Dynamic connector.1173</title>
 			<path d="M0 588.19 L22.75 588.19" class="st21"/>
 		</g>
+		<g id="shape1211-713" v:mID="1211" v:groupContext="shape" transform="translate(386.22,-180.836)">
+			<title>Sheet.1211</title>
+			<desc>Connectivity Subscription</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="31.8898" cy="585.448" width="63.78" height="19.6561"/>
+			<rect x="0" y="575.619" width="63.7795" height="19.6561" class="st29"/>
+			<text x="9.3" y="583.05" class="st30" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Connectivity <tspan
+						x="9.21" dy="1.2em" class="st7">Subscription</tspan></text>		</g>
 	</g>
 </svg>
