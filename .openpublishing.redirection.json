@@ -432,7 +432,7 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-vmware-to-azure.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-vmware",
+         "redirect_url": "/docs/scenarios/azure-vmware/index.md",
          "redirect_document_id": true
       },
       {
