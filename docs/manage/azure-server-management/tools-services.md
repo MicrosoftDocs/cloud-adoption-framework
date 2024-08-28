@@ -67,7 +67,7 @@ Several services fit into this category. They can help you to:
 
 These services are essential to supporting ongoing operations:
 
-- [Azure Update Manager](/azure/automation/update-manager/overview) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
+- [Azure Update Manager](/azure/update-manager/overview) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
 - [Change Tracking and Inventory](/azure/automation/change-tracking/ooverview-monitoring-agent) provides insight into the software that's running in your environment, and highlights any changes that have occurred.
 - [Azure Automation](/azure/automation/automation-intro) lets you run Python and PowerShell scripts or runbooks to automate tasks across your environment. When you use Azure Automation with the [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker), you can extend your runbooks to your on-premises resources as well.
 - [Azure Automation State Configuration](/azure/automation/automation-dsc-overview) enables you to push PowerShell Desired State Configuration (DSC) configurations directly from Azure. DSC also lets you monitor and preserve configurations for guest operating systems and workloads.
