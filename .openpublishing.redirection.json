@@ -1984,7 +1984,7 @@
          "source_path": "docs/ready/landing-zone/design-area/azure-billing-ad-tenant.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
          "redirect_document_id": false
-      }
+      },
          "source_path": "docs/innovate/best-practices/conversational-ai.md",
          "redirect_url": "/azure/cloud-adoption-framework/innovate",
          "redirect_document_id": false
