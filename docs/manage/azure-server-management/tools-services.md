@@ -23,7 +23,7 @@ The following sections briefly describe these management areas and provide links
 
 ## Migrate
 
-Migration services can help you migrate your workloads into Azure. To provide the best guidance, the Azure Migrate service starts by measuring on-premises server performance and assessing suitability for migration. After Azure Migrate completes the assessment, you can use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) and [Azure Database Migration Service](/azure/dms/dms-overview) to migrate your on-premises machines to Azure.
+Migration services can help you migrate your workloads into Azure. To provide the best guidance, the [Azure Migrate](/azure/migrate/migrate-services-overview) service starts by measuring on-premises server performance and assessing suitability for migration. After Azure Migrate completes the assessment, you can use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) and [Azure Database Migration Service](/azure/dms/dms-overview) to migrate your on-premises machines to Azure.
 
 ## Secure
 
@@ -83,6 +83,7 @@ The governance design for standard organizations often differs from governance d
 To learn about pricing for Azure management services, go to these pages:
 
 - [Azure Site Recovery](https://azure.microsoft.com/pricing/details/site-recovery/)
+- [Azure Migrate](https://azure.microsoft.com/pricing/details/azure-migrate/)
 - [Azure Backup](https://azure.microsoft.com/pricing/details/backup/)
 - [Azure Monitor](https://azure.microsoft.com/pricing/details/monitor/)
 - [Microsoft Defender for Cloud](https://azure.microsoft.com/pricing/details/azure-defender/)
