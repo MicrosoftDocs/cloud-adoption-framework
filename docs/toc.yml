@@ -278,10 +278,10 @@ items:
       - name: Design areas
         href: ready/landing-zone/design-areas.md
         items:
-        - name: Azure billing and Active Directory tenant
+        - name: Azure billing and Microsoft Entra tenant
           items:
           - name: Overview
-            href: ready/landing-zone/design-area/azure-billing-ad-tenant.md
+            href: ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md
           - name: Enterprise Agreement
             href: ready/landing-zone/design-area/azure-billing-enterprise-agreement.md
           - name: Microsoft customer agreement

@@ -21,7 +21,7 @@ Whatever the deployment option, you should carefully consider each design area. 
 
 | Design area | Objective |
 |--|--|
-| [Azure billing and Active Directory tenant](./design-area/azure-billing-ad-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. |
+| [Azure billing and Microsoft Entra tenant](./design-area/azure-billing-microsoft-entra-tenant.md) | Proper tenant creation, enrollment, and billing setup are important early steps. |
 | [Identity and access management](./design-area/identity-access.md) | Identity and access management is a primary security boundary in the public cloud. It's the foundation for any secure and fully compliant architecture. |
 | [Network topology and connectivity](./design-area/network-topology-and-connectivity.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. |
 | [Resource organization](./design-area/resource-org.md) | As cloud adoption scales, considerations for subscription design and management group hierarchy have an impact on governance, operations management, and adoption patterns. |
