@@ -18,6 +18,8 @@ TODO - Add to this
 
 ## Plan for landing zone adoption
 
+We recommend lz but if you've got it setup differently, the rest of the guidance still applies
+
 As a first step in your cloud adoption plan, review the Azure landing zone [documentation](../ready/landing-zone/) to understand Microsoft's modern approach to cloud design at scale. 
 
 The Azure landing zone approach will provide you a well-designed foundation for your cloud estate, setting you up for a manageable environment that can be secured according to best practices.
