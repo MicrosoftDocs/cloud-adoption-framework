@@ -31,7 +31,7 @@ The following Power Platform components are especially helpful in combination wi
 
 These components can be used individually or together, and they integrate with SAP, Microsoft 365, Dynamics 365, Azure and hundreds of other apps to build end-to-end business solutions.
 
-## SAP analytics with Power BI
+## Enhance business intelligence with PowerBI and SAP connectivity
 
 Power BI offers versatile integration options for SAP Business Warehouse and SAP HANA, catering to different organizational needs and security considerations.
 
