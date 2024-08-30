@@ -75,7 +75,7 @@ There are three types of flows in Power Automate:
 
   Desktop flows broaden the existing robotic process automation (RPA) capabilities in Power Automate and enable you to automate all repetitive desktop processes. Automating is done through the Power Automate desktop flow designer using the prebuilt drag-and-drop actions or recording your own desktop flows to run later.
  
-## Enhancing user engagement with Microsoft Copilot Studio
+## Build intelligent SAP solutions with Microsoft Copilot Studio
 
 Copilot Studio offers an opportunity for you to enhance your SAP users' experience. These AI-driven copilots can be integrated with SAP systems, providing a more interactive and user-friendly interface.
 
