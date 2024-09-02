@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.custom: e2e-sap
 ---
 
-# SAP and Power Platform fundamentals
+# Extend SAP with the Microsoft Power Platform
 
 This article is part of the "SAP and Power Platform" article series.
 
-- [SAP and Power Platform fundamentals](./sap-and-powerplatform-fundamental.md)
+- [Extend SAP with the Microsoft Power Platform](./sap-and-powerplatform-fundamental.md)
 - [SAP and Power Platform Architecture Workflow](./sap-and-powerplatform-architecture-workflow.md)
 - [Extend your SAP Landing Zone to support Power Platform](./sap-and-powerplatform-extend-landing-zone.md)
 
