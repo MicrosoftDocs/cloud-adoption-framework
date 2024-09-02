@@ -21,7 +21,7 @@ The following architecture shows a scenario where SAP on Azure (Native/RISE) is 
 ## Architecture
 
 :::image type="complex" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with a typical SAP landing zone." lightbox="./media/sap-powerplatform-architecture.svg":::
-   On the left side of the image is box label "Power Platform Environment - Cloud." It contains Power Pages, Power App, Power Automate, and Copilot Studio, and Power BI Service. Power Automate has arrows coming out of it to SAP ERP Connector, OData Connector, and Custom Connector all in the same box. To the right of that box is Microsoft Entra, Firewall, and API Gateway. Going through the firewall is and arrow from SAP ERP Connector and Power BI Service. Going through the API Gateway is an arrow from OData Connector and Custom Connector. To the right of the Firewall and A.P.I. Gateway is a box labeled "S.A.P. Environment on on-premises data gateway - On-Premises/IaaS." In that box is an On-premises data gateway icon with arrows pointing at it from Firewall and an arrow pointing to SAP .NET Connector. That Box also contains OData API and REST/SOAP API icons, with arrows coming from API Gateway and going into the SAP logo. Also going into the SAP logo is a HANA SQL Port icon. A final box sits above those icons, and that box is labeled "Client Applications." A laptop, mobile device, Power Automate Desktop, SAP GUI, Power BI Desktop all are shown. The Power BI Desktop shows an arrow to two additional icons in that box called SAP .NET Connector and SAP HANA ODBC Driver. Those two icons both connect into the SAP Icon through a DIAG & RFC PORT icon and the HANA SQL Port icon respectively.
+   On the left side of the image is box label "Power Platform Environment - Cloud." It contains Power Pages, Power App, Power Automate, and Copilot Studio, and Power BI Service. Power Automate has arrows coming out of it to SAP ERP Connector, OData Connector, and Custom Connector all in the same box. To the right of that box is Microsoft Entra, Firewall, and API Gateway. Going through the firewall is and arrow from SAP ERP Connector and Power BI Service. Going through the API Gateway is an arrow from OData Connector and Custom Connector. To the right of the Firewall and A.P.I. Gateway is a box labeled "S.A.P. Environment on on-premises data gateway - On-premises/IaaS." In that box is an On-premises data gateway icon with arrows pointing at it from Firewall and an arrow pointing to SAP .NET Connector. That Box also contains OData API and REST/SOAP API icons, with arrows coming from API Gateway and going into the SAP logo. Also going into the SAP logo is a HANA SQL Port icon. A final box sits above those icons, and that box is labeled "Client Applications." A laptop, mobile device, Power Automate Desktop, SAP GUI, Power BI Desktop all are shown. The Power BI Desktop shows an arrow to two additional icons in that box called SAP .NET Connector and SAP HANA ODBC Driver. Those two icons both connect into the SAP Icon through a DIAG & RFC PORT icon and the HANA SQL Port icon respectively.
 :::image-end:::
 
 *Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/sap-powerplatform-architecture.vsdx) of this architecture.*
@@ -52,50 +52,57 @@ In this architecture, Power Platform and the on-premises data gateway are linked
 | SAP RFC and BAPI functions | On-premises data gateway | [SAP ERP Connector](/connectors/saperp/) | The SAP ERP connector for Power Automate and Power Apps allows you to invoke SAP RFC and BAPI functions using on-premises data gateway. |
 | SAP data manipulation via OData APIs | OData APIs | [SAP OData Connector](/connectors/sapodata/) | The OData connector provides the ability to fetch, create, and update records exposed by an SAP system through OData APIs. Currently this connector is in private preview. |
 | Any web service with REST or SOAP API | REST or SOAP API | [Custom Connector](/power-platform/connectors/custom-connectors-overview) | A custom connector for Power Platform is a way to connect your Power Apps or Power Automate to any web service that has a REST or SOAP API. |
-| End-user task automation | SAP GUI | Power Automate Desktop | Power Automate Desktop can automate repetitive tasks within SAP's UIs. For details, please see [Use low-code RPA with SAP GUI in Power Automate Desktop](/power-automate/guidance/rpa-sap-playbook/action-based-sap-gui-automation-manually-overview). |
+| End-user task automation | SAP GUI | Power Automate Desktop | Power Automate Desktop can automate repetitive tasks within SAP's UIs. For details, see [Use low-code RPA with SAP GUI in Power Automate Desktop](/power-automate/guidance/rpa-sap-playbook/action-based-sap-gui-automation-manually-overview). |
 
 ## Security and compliance considerations
 
-When integrating SAP with the Power Platform, prioritizing security and compliance is imperative, especially given the sensitive nature of data typically managed within SAP systems and its significance to enterprise operations. This section outlines essential security and compliance considerations, focusing on key components integral to securing and streamlining the integration process. These components collectively establish a fortified security framework, ensuring the protection of sensitive data and compliance with regulatory standards, thereby enhancing the overall integrity and reliability of the integrated system.
+When integrating SAP with the Power Platform, prioritizing security and compliance is imperative, especially given the sensitive nature of data typically managed within SAP systems and its significance to enterprise operations.
 
-- **On-Premises Data Gateway** - The on-premises data gateway serves as a critical conduit, facilitating secure and efficient data transfer between Power BI, Power Apps, Power Automate, Azure Analysis Services, Azure Logic Apps, and your SAP system, irrespective of whether they are cloud-based or on-premises. To connect with SAP ERP, certain pre-requisites need to be met and installed on a Windows machine with network access to the SAP system. Please see the pre-requisites details [here](/connectors/saperp/#pre-requisites).
+This section outlines essential security and compliance considerations, focusing on key components integral to securing and streamlining the integration process. These components collectively establish a fortified security framework, ensuring the protection of sensitive data and compliance with regulatory standards, thereby enhancing the overall integrity and reliability of the integrated system.
 
-Please see the On-premise data Gateway [Installation and Configuration](/azure/analysis-services/analysis-services-gateway-install?tabs=azure-portal) guidance. 
+## On-premises data gateway
 
-- **Use Single Sign-On (SSO)** - SSO is a user authentication process that allows a user to access multiple applications with one set of login credentials. Implementing SSO with the Microsoft Power Platform and SAP offers several significant benefits:
+The on-premises data gateway serves as a critical conduit, facilitating secure and efficient data transfer between Power BI, Power Apps, Power Automate, Azure Analysis Services, Azure Logic Apps, and your SAP system, whether they're cloud-based or on-premises.
 
-  - Unified authentication: Simplifies user authentication across SAP and Power Platform, enhancing user experience without compromising security.
-  - Reduced credential exposure: Minimizes the risk of password-related breaches by eliminating the need for multiple credentials.
-  - Compliance with identity management policies: Aligns with organizational identity management policies and standards.
+To connect with SAP ERP, certain prerequisites need to be met and installed on a Windows machine with network access to the SAP system.
 
-  See the following tutorials for SSO setup:
+For more information, see [SAP ERP connector pre-requisites](/connectors/saperp/#pre-requisites) and [Install and configure an on-premises data gateway](/azure/analysis-services/analysis-services-gateway-install).
 
-  - [Setup SAP SSO with Microsoft Entra ID](/entra/identity/saas-apps/sap-netweaver-tutorial)
-  - [SSO authentication setup in the SAP ERP Connector](/connectors/saperp/#authentication)
+### Use single sign-on (SSO)
 
+SSO is a user authentication process that allows a user to access multiple applications with one set of sign-in credentials. Implementing SSO with the Microsoft Power Platform and SAP offers several significant benefits:
 
-- **Use API Management** - API Management is instrumental in ensuring secure, efficient, and reliable communication with the SAP backend.
+- Unified authentication: Simplified user authentication across SAP and Power Platform, enhancing user experience without compromising security.
+- Reduced credential exposure: Minimizes the risk of password-related breaches by eliminating the need for multiple credentials.
+- Compliance with identity management policies: Aligns with organizational identity management policies and standards.
 
-  - SAP Principal Propagation requires [APIM](https://github.com/Azure/api-management-policy-snippets/blob/master/examples/Request%20OAuth2%20access%20token%20from%20SAP%20using%20AAD%20JWT%20token.xml).
-  - **Implement IP address filtering**: Bolsters security by selectively permitting or denying requests based on predefined IP address criteria.
-  - **Perform request validation**: Ensures incoming requests are in line with expected patterns by pre-validating headers, queries, or path parameters against the API schema.
-  - **Backend decoupling**: Protect backend system from directly exposing it to API consumers.
-  - **Configure monitoring and alerts**: Perform vigilant monitoring of backend API use and establish alert mechanisms for prompt identification and resolution of potential security issues.
+For more information, see [Setup SAP SSO with Microsoft Entra ID](/entra/identity/saas-apps/sap-netweaver-tutorial) and [SSO authentication setup in the SAP ERP Connector](/connectors/saperp/#authentication).
 
-For more details, please see [The One with protecting SAP services with Azure APIM and SSO](https://www.youtube.com/watch?v=KFd2x06c4nM)
+### Use API Management
 
-- **Deploy behind a firewall** - Implementing a firewall is crucial for enhancing network security in the integration of SAP and Power Platform.
+API Management is instrumental in ensuring secure, efficient, and reliable communication with the SAP backend, and offers several key benefits:
 
-  - **Network Protection**: Shields the SAP and Power Platform infrastructure from unauthorized external access.
-  - **Intrusion Prevention**: Monitors and blocks potentially harmful traffic, safeguarding against network-based attacks.
-  - **Data Leakage Prevention**: Helps in preventing unauthorized data access and ensures data does not leave the network without proper authorization.
+- IP address filtering: Bolsters security by selectively permitting or denying requests based on predefined IP address criteria.
+- Request validation: Ensures incoming requests are in line with expected patterns by prevalidating headers, queries, or path parameters against the API schema.
+- Backend decoupling: Protect backend system from directly exposing it to API consumers.
+- Configure monitoring and alerts: Perform vigilant monitoring of backend API use and establish alert mechanisms for prompt identification and resolution of potential security issues.
 
-  Power Platform specific service tags are available to restrict incoming connections from the Power Platform IP addresses, with even region-specific tags being an option.
+SAP Principal Propagation requires [APIM](https://github.com/Azure/api-management-policy-snippets/blob/master/examples/Request%20OAuth2%20access%20token%20from%20SAP%20using%20AAD%20JWT%20token.xml).
+
+For more information, see [The One with protecting SAP services with Azure APIM and SSO](https://www.youtube.com/watch?v=KFd2x06c4nM)
+
+### Deploy behind a firewall
+
+Implementing a firewall is crucial for enhancing network security in the integration of SAP and Power Platform. Key benefits include:
+
+- **Network Protection**: Shields the SAP and Power Platform infrastructure from unauthorized external access.
+- **Intrusion Prevention**: Monitors and blocks potentially harmful traffic, safeguarding against network-based attacks.
+- **Data Leakage Prevention**: Helps in preventing unauthorized data access and ensures data doesn't leave the network without proper authorization.
+
+Power Platform specific service tags are available to restrict incoming connections from the Power Platform IP addresses, with even region-specific tags being an option.
 
 By addressing these security and compliance considerations, organizations can ensure a secure, efficient, and compliant integration of SAP with the Power Platform, fostering a secure and responsive environment conducive to modern enterprise needs.
 
 ## Next steps
 
 - [Extend your SAP Landing Zone to support Power Platform](./sap-and-powerplatform-extend-landing-zone.md)
-
-
