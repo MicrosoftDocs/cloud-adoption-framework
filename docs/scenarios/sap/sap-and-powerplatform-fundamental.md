@@ -50,7 +50,7 @@ Power Apps is a suite of apps, services, and connectors that allows you to creat
 
 - **Canvas Apps**: These apps start with a blank screen and the creator manually lays out each screen. This gives the creator complete control over the placement of each element on the canvas. Canvas apps are good for scenarios where the user is expecting a customized user experience.
 
-- **Model-Driven Apps**: These apps require a Microsoft Dataverse database. They're built on top of the data modeled in that database environment. Views and detail screens for model-driven apps are based on the data structure. Model-driven apps are good for scenarios where the business logic is complex. SAP data reside in SAP system database only. Dataverse is the database of Power Platform. In certain use cases, Dataverse can be used as a temporary caching area for mobile workers when they have no connectivity to the backend SAP system.
+- **Model-Driven Apps**: For complex business logic, model-driven apps might be a good fit. These apps require a [Microsoft Dataverse database](/power-apps/maker/data-platform/data-platform-intro). They're built on top of the data modeled in that database environment. Views and detail screens for model-driven apps are based on the data structure. The SAP data resides only in the SAP system database. Dataverse is the database of Power Platform. In certain use cases, Dataverse can be used as a temporary caching area for mobile workers when they have no connectivity to the backend SAP system.
 
 - **Power Pages**: Enable teams to create professional websites with a no-code approach and integrate with other Power Platform components to make use of SAP data and functionality.
 
