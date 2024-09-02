@@ -61,7 +61,7 @@ items:
         href: sap-lza-data-example-architecture.md
     - name: SAP and Power Platform
       items:
-      - name: SAP and Power Platform Fundamentals
+      - name: Extend SAP with Power Platform
         href: sap-and-powerplatform-fundamental.md
       - name: SAP and Power Platform Architecture Workflow
         href: sap-and-powerplatform-architecture-workflow.md
