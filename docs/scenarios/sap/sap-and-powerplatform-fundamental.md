@@ -32,12 +32,9 @@ You can build end-to-end-business solutions using these components individually 
 Power BI offers versatile integration options for SAP Business Warehouse and SAP HANA, catering to different organizational needs and security considerations.
 
 - **Direct Connection**: For real-time analytics, dynamic data visualization, and timely decision-making, Power BI can directly connect to SAP HANA and SAP Business Warehouse. This direct integration allows for immediate access and analysis of operational data, supporting high-speed analytics and in-depth reporting. It also supports single sign-on (SSO) ensuring SAP access roles and permissions are respected.
-
-- **SAP HANA** - [Use Kerberos for single sign-on (SSO) to SAP HANA](/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)
-
-- **SAP BW** - [Use Kerberos single sign-on for SSO to SAP BW using CommonCryptoLib (sapcrypto.dll)](/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-commoncryptolib)
-
-- **SAP BW** - [Use Kerberos for single sign-on (SSO) to SAP BW using gx64krb5](/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-gx64krb)
+  - **SAP HANA** - [Use Kerberos for SSO to SAP HANA](/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)
+  - **SAP BW** - [Use Kerberos for SSO to SAP BW using CommonCryptoLib (sapcrypto.dll)](/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-commoncryptolib)
+  - **SAP BW** - [Use Kerberos for SSO to SAP BW using gx64krb5](/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-gx64krb)
 
 - **Connect to an SAP HANA database** - [Power Query SAP HANA database connector](/power-query/connectors/sap-hana/overview)
 
