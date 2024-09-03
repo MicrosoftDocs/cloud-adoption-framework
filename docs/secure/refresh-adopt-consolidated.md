@@ -1,5 +1,5 @@
 ---
-title: Perform your secure cloud adoption
+title: Perform your cloud adoption securely
 description: Learn how to adopt security best practices in your cloud estate adoption phase
 author: claytonsiemens77
 ms.author: csiemens
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Perform your secure cloud adoption
+# Perform your cloud adoption securely
 
 ## Security posture modernization adoption
 
@@ -138,4 +138,4 @@ Consider the following recommendations to help ensure that the security mechanis
 
 - **Utilize the MITRE ATT&CK knowledge base:** Use the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base to help develop threat models and methodologies for common real-world attack tactics and techniques.
  
-Consider having segregated environment with different access levels for development vs production. Use this approach to shift left the security process with right flexibility in lower environment. Use the hardened images, resources as a base to build the applications, not as afterthought during production.
+- **Shift left:** Use segregated environments with different access levels for pre-production vs production. This approach will help you shift left, addign security concerns to all phases of development and providing flexibility in lower environments.
