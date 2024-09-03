@@ -68,7 +68,10 @@ The on-premises data gateway serves as a critical conduit, facilitating secure a
 
 To connect with SAP ERP, certain prerequisites need to be met and installed on a Windows machine with network access to the SAP system.
 
-For more information, see [SAP ERP connector pre-requisites](/connectors/saperp/#pre-requisites) and [Install and configure an on-premises data gateway](/azure/analysis-services/analysis-services-gateway-install).
+For more information, see these resources:
+
+- [SAP ERP connector pre-requisites](/connectors/saperp/#pre-requisites)
+- [Install and configure an on-premises data gateway](/azure/analysis-services/analysis-services-gateway-install)
 
 ### Use single sign-on (SSO)
 
@@ -78,7 +81,10 @@ SSO is a user authentication process that allows a user to access multiple appli
 - **Reduced credential exposure**: Minimizes the risk of password-related breaches by eliminating the need for multiple credentials.
 - **Compliance with identity management policies**: Aligns with organizational identity management policies and standards.
 
-For more information, see [Setup SAP SSO with Microsoft Entra ID](/entra/identity/saas-apps/sap-netweaver-tutorial) and [SSO authentication setup in the SAP ERP Connector](/connectors/saperp/#authentication).
+For more information, see these resources:
+
+- [Setup SAP SSO with Microsoft Entra ID](/entra/identity/saas-apps/sap-netweaver-tutorial)
+- [SSO authentication setup in the SAP ERP Connector](/connectors/saperp/#authentication)
 
 ### Use API Management
 
