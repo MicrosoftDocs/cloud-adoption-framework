@@ -6,6 +6,7 @@ ms.author: janfaurs
 ms.reviewer: tozimmergren
 ms.date: 04/26/2024
 ms.topic: conceptual
+ms.custom: e2e-oracle
 ---
 
 # Migrate Oracle workloads to Azure

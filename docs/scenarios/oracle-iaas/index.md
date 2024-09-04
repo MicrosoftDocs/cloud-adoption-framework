@@ -5,10 +5,7 @@ author: jfaurskov
 ms.author: janfaurs
 ms.date: 08/01/2024
 ms.topic: conceptual
-ms.custom:
-  - think-tank
-  - e2e-oracle
-  - engagement-fy24
+ms.custom: e2e-oracle
 ---
 # Introduction to Oracle on Azure adoption scenarios
 

@@ -6,6 +6,7 @@ ms.author: anthdela
 ms.reviewer: janfaurs
 ms.date: 08/01/2024
 ms.topic: conceptual
+ms.custom: e2e-oracle
 ---
 
 # Manage and monitor Oracle Database@Azure

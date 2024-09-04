@@ -6,10 +6,7 @@ ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 01/10/2023
 ms.topic: conceptual
-ms.custom: 
-  - think-tank
-  - e2e-oracle
-  - engagement-fy24
+ms.custom: e2e-oracle
 ---
 
 

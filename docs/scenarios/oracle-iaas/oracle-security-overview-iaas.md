@@ -5,10 +5,7 @@ author: gkayali
 ms.author: guherk
 ms.date: 04/04/2024
 ms.topic: conceptual
-ms.custom: 
-  - think-tank
-  - e2e-oracle
-  - engagement-fy24
+ms.custom: e2e-oracle
 ---
 
 # Security guidelines for Oracle workloads on Azure Virtual Machines landing zone accelerator
