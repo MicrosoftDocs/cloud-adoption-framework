@@ -6,6 +6,7 @@ ms.author: bamajeed
 ms.reviewer: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
+ms.custom: e2e-oracle
 ---
 
 # Security guidelines for Oracle Database@Azure
