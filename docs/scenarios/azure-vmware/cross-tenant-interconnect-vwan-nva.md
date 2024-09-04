@@ -1,5 +1,5 @@
 ---
-title: Cross-tenant network connectivity for Azure VMware Solution SDDCs with vWANs and NVAs
+title: Cross-tenant network connectivity for Azure VMware Solution SDDCs with vWANs and Network Virtual Appliances (NVAs)
 description: Get started with cross-tenant Azure VMware Solution SDDCs deployment. Understand how they can be connected with Azure Virtual WAN (vWAN) and used alongside with Network Virtual Appliances (NVAs).
 author: Mahesh-MSFT
 ms.author: maksh
