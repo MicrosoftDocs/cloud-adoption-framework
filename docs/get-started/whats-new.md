@@ -19,11 +19,11 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 ### New articles
 
 - [Manage and monitor Oracle Database@Azure](../scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure.md): Learn about considerations and recommendations that you can use to manage and monitor your Oracle Database@Azure and Exadata Database services.
-- [Business continuity and disaster recovery considerations for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure.md): Learn about business continuity and disaster recovery (BCDR) for Oracle Database@Azure and how to build a resilient architecture for your workload environment.
+- [Business continuity and disaster recovery considerations for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure.md): Learn how to incorporate business continuity and disaster recovery (BCDR) into Oracle Database@Azure workloads to build a resilient architecture for your workload environment.
 
 ### Updated articles
 
-- [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about the importance of responsible AI, how to develop AI responsibly, and how to build safer systems with Azure AI Content Safety. Learn about the features of the Responsible AI dashboard for Azure Machine Learning.
+- [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
 - [Landing zone identity and access management](../ready/landing-zone/design-area/identity-access-landing-zones.md): Find new guidance about built-in and custom RBAC roles, least-privelage access, and conditions.
 - [Business commitment in cloud management](../manage/considerations/commitment.md): We updated the service-level agreement references to service-level objective references.
 - [Network considerations for Azure VMware Solution dual-region deployments](../scenarios/azure-vmware/eslz-dual-region-network-topology.md): These updates add figure captions to the images.
