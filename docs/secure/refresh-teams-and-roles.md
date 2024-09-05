@@ -180,7 +180,7 @@ Security Governance, Risk, and Compliance (GRC) is a set of interrelated discipl
 
 All three of these disciplines operate across all technologies and systems to drive organizational outcomes across all teams. All three also rely on context they get from each other and benefit significantly from current high-fidelity data on threats, business, and the technology environment. These disciplines also rely on architecture to express an actionable vision that can be executed and security education and policy to establish rules and guide teams through the many daily decisions.
 
-Cloud engineering and operation teams may work with **Posture Management** roles, **Compliance and Audit** teams, and **Security Architecture and Engineering** roles on GRC topics.
+Cloud engineering and operation teams may work with **Posture Management** roles, **Compliance and Audit** teams, **Security Architecture and Engineering**, or **Chief Information Security Officers (CISOs)** roles on GRC topics.
 
 ### Security education and policy
 
