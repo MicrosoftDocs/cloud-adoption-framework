@@ -34,7 +34,7 @@ As your hybrid and multicloud resources become a part of Azure Resource Manager,
 
 ### Resource organization
 
-- **Change Tracking and Inventory:** [Track changes](/azure/automation/change-tracking/overview) on the operating system, application files, and registry to identify operational and security issues on your on-premises and other cloud environments.
+- **Change Tracking and Inventory:** [Track changes](/azure/automation/change-tracking/overview-monitoring-agent) on the operating system, application files, and registry to identify operational and security issues on your on-premises and other cloud environments.
 
 ### Governance disciplines
 
@@ -137,7 +137,7 @@ Microsoft Defender for Cloud provides a unified security-management platform seg
 
 ### Change Tracking and Inventory
 
-Centralizing logs drives reports that can be used as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview) forward and collects the data in a Log Analytics workspace. When using Microsoft Defender for servers, you get File Integrity Monitoring (FIM) to examine and track software changes, for Windows services and Linux daemons on your Azure Arc-enabled servers.
+Centralizing logs drives reports that can be used as additional layers of security and reduces the chances for gaps in observability. [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview-monitoring-agent) forward and collects the data in a Log Analytics workspace. When using Microsoft Defender for servers, you get File Integrity Monitoring (FIM) to examine and track software changes, for Windows services and Linux daemons on your Azure Arc-enabled servers.
 
 ### Software updates
 

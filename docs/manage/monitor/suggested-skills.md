@@ -24,7 +24,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Resource Manager](/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, Azure role-based access control (Azure RBAC), using Azure Resource Manager (ARM) templates, and managing resources using Azure CLI and Azure PowerShell.
 
-- Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how to use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure VM insights and Microsoft Defender for Cloud, deploy diagnostic settings, audit guest configuration settings, and more.
+- Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how to use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure VM insights and Microsoft Defender for Cloud, deploy diagnostic settings, audit machine configuration settings, and more.
 
 - Introduction to [Azure CLI](/cli/azure/get-started-with-azure-cli), our cross-platform command-line experience for managing Azure resources. Also, review the introduction to [Azure PowerShell](/powershell/azure/get-started-azureps). Extend your skills with the Azure CLI and Azure PowerShell further by taking these Microsoft Learn courses:
 
@@ -53,8 +53,6 @@ Developing the necessary skills can be accelerated with the following learning p
 - Review the documentation on [Monitoring your storage service with Azure Monitor Storage insights](/azure/storage/common/storage-insights-overview).
 
 - [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) explores the key monitoring capabilities used to gain insight and actionable steps for Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
-
-- [`Monitoring Microsoft Azure Hybrid Cloud Networks`](https://www.pluralsight.com/courses/microsoft-azure-hybrid-cloud-networks-monitoring) is an advanced-level course that helps you learn how to use Azure monitoring tools to visualize, maintain, and optimize virtual networks and virtual private network connections for your hybrid cloud implementation.
 
 - With [Azure Arc for servers](/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage virtual machines running in Azure.
 

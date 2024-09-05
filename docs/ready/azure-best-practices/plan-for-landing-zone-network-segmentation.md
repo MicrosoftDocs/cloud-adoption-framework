@@ -3,28 +3,30 @@ title: Plan for landing zone network segmentation
 description: Examine key design considerations and recommendations surrounding network segmentation with Azure landing zones.
 author: JefferyMitchell
 ms.author: martinek
-ms.date: 10/28/2021
+ms.date: 07/31/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
 
 # Plan for landing zone network segmentation
 
-This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network zero-trust implementation.
+This section explores key recommendations to deliver highly secure internal network segmentation within a landing zone to drive a network Zero Trust implementation.
 
-**Design considerations:**
+## Design considerations
 
-- The [zero-trust model](/security/zero-trust/deploy/networks) assumes a breached state and verifies each request as though it originates from an uncontrolled network.
+- The [Zero Trust model](/security/zero-trust/deploy/networks) assumes a breached state and verifies each request as though it originates from an uncontrolled network.
 
-- An advanced zero-trust network implementation employs fully distributed ingress/egress cloud micro-perimeters and deeper micro-segmentation.
+- An advanced Zero Trust network implementation employs fully distributed ingress and egress cloud micro-perimeters and deeper micro-segmentation.
 
-- Network security groups ([NSG](/azure/virtual-network/network-security-groups-overview)) can use Azure [service tags](/azure/virtual-network/service-tags-overview) to facilitate connectivity to Azure PaaS services.
+- [Network security groups (NSGs)](/azure/virtual-network/network-security-groups-overview) can use Azure [service tags](/azure/virtual-network/service-tags-overview) to facilitate connectivity to Azure platform as a service (PaaS) solutions.
 
-- Application security groups ([ASG](/azure/virtual-network/application-security-groups)) don't span or provide protection across virtual networks.
+- [Application security groups (ASGs)](/azure/virtual-network/application-security-groups) don't span or provide protection across virtual networks.
 
-- NSG [flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) are now supported through Azure Resource Manager templates.
+- Use [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) to inspect traffic that flows through a network point with an NSG attached.
 
-**Design recommendations:**
+- [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provide capabilities that are similar to NSG flow logs but cover a wider range of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
+
+## Design recommendations
 
 - Delegate subnet creation to the landing zone owner. This will enable them to define how to segment workloads across subnets (for example, a single large subnet, multitier application, or network-injected application). The platform team can use Azure Policy to ensure that an NSG with specific rules (such as deny inbound SSH or RDP from internet, or allow/block traffic across landing zones) is always associated with subnets that have deny-only policies.
 
@@ -32,11 +34,11 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - The application team should use application security groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
 
-    ![Diagram that shows how application security group works.](./media/azure-asg.png)
+    [ ![Diagram that shows how application security group works.](./media/azure-asg.png) ](./media/azure-asg.png#lightbox)
 
 - Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 
-- Enable NSG flow logs and feed them into [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gain insights into internal and external traffic flows. Flow logs should be enabled on all critical VNets/subnets in your subscription as an audit-ability and security best practice.
+- Enable [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and use [traffic analytics](/azure/network-watcher/traffic-analytics) to gain insights into ingress and egress traffic flows. Enable flow logs on all critical virtual networks and subnets in your subscriptions, for example virtual networks and subnets that contain Windows Server Active Directory domain controllers or critical data stores. Additionally, you can use flow logs to detect and investigate potential security incidents, compliance and monitoring, and to optimize usage.
 
 - Use NSGs to selectively allow connectivity between landing zones.
 

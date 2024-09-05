@@ -5,8 +5,7 @@ author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.custom: e2e-oracle
 ---
 
 # Network topology and connectivity for Oracle Database@Azure
@@ -59,3 +58,4 @@ The following example network topology is for a complex application portfolio th
 
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)
+- [Business continuity and disaster recovery (BCDR) for Oracle Database@Azure](oracle-disaster-recovery-odaa.md)

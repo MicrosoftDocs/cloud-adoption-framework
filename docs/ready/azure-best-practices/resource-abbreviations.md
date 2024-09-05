@@ -23,7 +23,9 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AI Search | `Microsoft.Search/searchServices` | `srch` |
-| Azure AI services multi-service account | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `aisa` |
+| Azure AI services | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `ais` |
+| Azure AI Studio hub | `Microsoft.MachineLearningServices/workspaces` (kind: `Hub`) | `hub` |
+| Azure AI Studio project | `Microsoft.MachineLearningServices/workspaces` (kind: `Project`) | `proj` |
 | Azure AI Video Indexer | `Microsoft.VideoIndexer/accounts` | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` (kind: `OpenAI`) | `oai` |
@@ -282,7 +284,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure Lab Services lab plan | `Microsoft.LabServices/labPlans` | `lp` |
 | Virtual desktop host pool | `Microsoft.DesktopVirtualization/hostPools` | `vdpool` |
 | Virtual desktop application group | `Microsoft.DesktopVirtualization/applicationGroups` | `vdag` |
 | Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |

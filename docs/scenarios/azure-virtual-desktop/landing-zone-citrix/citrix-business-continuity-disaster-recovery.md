@@ -3,7 +3,7 @@ title: Business continuity and disaster recovery for Citrix on Azure
 description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for a Citrix on Azure environment.
 author: BenMartinBaur
 ms.author: martinek
-ms.date: 02/06/2023
+ms.date: 07/08/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
 ---
@@ -14,19 +14,19 @@ This article describes how you can improve business continuity and disaster reco
 
 ## Citrix design considerations
 
-Design considerations for Citrix technologies are summarized in [Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix Tech Zone. This guide assists with BCDR architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
+Design considerations for Citrix technologies are summarized in [Design Decision: Disaster Recovery Planning](https://community.citrix.com/tech-zone/design/design-decisions/cvad-disaster-recovery) on Citrix Tech Zone. This guide assists with BCDR architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
 
 When you deploy Citrix on Azure, we recommended that you follow the same design considerations for [optimal storage for profile and Office containers](../eslz-business-continuity-and-disaster-recovery.md#optimal-storage-for-profile-and-office-containers), [golden image availability](../eslz-business-continuity-and-disaster-recovery.md#golden-image-availability), and [infrastructure and application dependencies](../eslz-business-continuity-and-disaster-recovery.md#infrastructure-and-application-dependencies) that you would follow for Azure Virtual Desktop.
 
-Because Azure VM availability isn't guaranteed by default (including for reserved instances), we recommend that you use the Azure [on-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) feature to ensure sufficient availability within the required regions when it's most needed. 
+Because Azure VM availability isn't guaranteed by default (including for reserved instances), we recommend that you use the Azure [on-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) feature to ensure sufficient availability within the required regions when it's most needed.
 
 Additional design factors for Citrix on Azure deployments are highlighted in the following sections.
 
 ## Machine catalog availability strategies
 
-You can deploy Citrix machine catalogs in an active/active or active/passive configuration by using a combination of Azure and on-premises workloads. 
+You can deploy Citrix machine catalogs in an active/active or active/passive configuration by using a combination of Azure and on-premises workloads.
 
-The following lists aren't inclusive. They contain key highlights. For more information, see [Citrix TechZone - Disaster Recovery Options](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html).
+The following lists aren't inclusive. They contain key highlights. For more information, see [Citrix TechZone - Disaster Recovery Options](https://community.citrix.com/tech-zone/design/design-decisions/cvad-disaster-recovery#wiki-header-28).
 
 ### Active/active
 
@@ -46,7 +46,7 @@ The following lists aren't inclusive. They contain key highlights. For more info
 |----|----|----|
 | [Regions](/azure/availability-zones/az-overview) | A set of datacenters that's deployed within a latency-defined perimeter and connected through a dedicated regional low-latency network. | Your [selection of an Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) should be based on proximity to existing datacenters, users, or required back-end data. You also need to be aware of which services are available in the regions you choose. For Citrix deployments, organizations often start with a single region. However, you should consider using two or more regions in the long term for geographic redundancy in a BCDR strategy. |
 | [Azure ExpressRoute](/azure/expressroute/expressroute-faqs) | An Azure service that you can use to create private connections between Microsoft datacenters and infrastructure that's on your premises or in a colocation facility. | ExpressRoute is an essential infrastructure component for bridging a Microsoft datacenter and your organization's datacenter or colocation facility. It's often a prerequisite for an enterprise-scale Citrix deployment. <br> ExpressRoute is a shared service. You should conduct bandwidth capacity planning to determine overall bandwidth needs for the enterprise. If you don't have enough available bandwidth, the user experience or access to key services in the datacenter can be affected. Additionally, Independent Computing Architecture (ICA) performance is affected if sessions cross ExpressRoute to get to the datacenter. |
- | [Availability zones](/azure/availability-zones/az-region) | Unique physical locations within a region. Each zone is made up of one or more datacenters that's equipped with independent power, cooling, and networking. | Availability zones provide a [high SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9). You should use them for all applicable Citrix infrastructure and [machine catalogs](https://docs.citrix.com/en-us/citrix-daas/install-configure/resource-location/azure-resource-manager.html#provision-machines-into-specified-availability-zones) to provide datacenter redundancy within a region. Not all regions support availability zones, so you should plan accordingly. |
+ | [Availability zones](/azure/availability-zones/az-region) | Unique physical locations within a region. Each zone is made up of one or more datacenters that's equipped with independent power, cooling, and networking. | Availability zones provide a [high SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9). You should use them for all applicable Citrix infrastructure and [machine catalogs](https://docs.citrix.com/en-us/citrix-daas/install-configure/resource-location/azure-resource-manager.html#provision-machines-into-specified-availability-zones) to provide datacenter redundancy within a region. Not all regions support availability zones, so you should plan accordingly. To ensure that you create a resilient and zone-redundant solution from the start, take advantage of built-in [Azure initiatives](/azure/governance/policy/samples/built-in-initiatives#resilience). |
 | [Availability sets](/azure/virtual-machines/availability-set-overview) | A set of VMs that are spread across several fault domains. A *fault domain* is a group of VMs that share a common power source and network switch.  | Availability sets provide a [high SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9). You should use them for Citrix infrastructure only if availability zones aren't available in the region. Availability sets only provide hardware redundancy (like hypervisor anti-affinity rules). Therefore, you should use a multiregion strategy to provide datacenter and geographic redundancy if your chosen regions don't have availability zones. |
 | [Managed disks](/azure/virtual-machines/managed-disks-overview) | Disks that are managed by Azure and automatically placed in different storage scale units to limit the effects of hardware failure. | You should use managed disks for all Citrix infrastructure and Virtual Delivery Agents (VDAs). We don't recommend the use of unmanaged disks. For information about SLAs for single-instance virtual machines, like a user's VDI or a published application server, see [SLA for Virtual Machines](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9). <br> Each type of disk provides different performance and has different associated costs. We recommend Premium  for Citrix infrastructure machines. When determining the disk type for VDAs, factor in cost, performance, and availability needs.|
 | [Azure Backup](/azure/backup/backup-overview) | A service that provides cost-effective solutions for backing up your data and recovering it from the Azure cloud. | We recommend Azure Backup for Citrix infrastructure, master image VMs, and persistent desktops. |

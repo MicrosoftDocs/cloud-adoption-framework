@@ -5,10 +5,7 @@ author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
-ms.custom: 
-  - think-tank
-  - e2e-oracle
-  - engagement-fy24
+ms.custom: e2e-oracle
 --- 
 
 # Plan for Oracle on Azure
@@ -63,7 +60,9 @@ After you have a general work plan, you can begin aligning team members and esti
 
 This project's team should have Oracle and Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine if your team needs to acquire any skills. Then map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. To help your team to track and address skilling gaps to create stronger cross-functional collaboration in each sprint, see [Adapt existing roles, skills, and processes for the cloud](/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes).
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Oracle on Azure migration planning](oracle-migration-planning.md)
+>
+> [Oracle on Azure IaaS landing zone accelerator](oracle-landing-zone-accelerator.md)

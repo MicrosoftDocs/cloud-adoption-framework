@@ -30,7 +30,7 @@ This solution is ideal for scenarios that require:
 - Non-Microsoft solutions for collaboration, authentication, or identity.
 - Business-to-business or guest user access.
 
-The preceding list doesn't cover all Citrix capabilities when deployed with Microsoft solutions. For more information and customer scenarios, see [Citrix Tech Zone – Enhancing Azure Virtual Desktop](https://docs.citrix.com/en-us/tech-zone/learn/tech-briefs/windows-virtual-desktop-value-add.html).
+The preceding list doesn't cover all Citrix capabilities when deployed with Microsoft solutions. For more information and customer scenarios, see [Citrix Tech Zone – Enhancing Azure Virtual Desktop](https://community.citrix.com/tech-zone/learn/tech-briefs/windows-virtual-desktop-value-add).
 
 ## Architecture
 
@@ -38,7 +38,7 @@ The following diagram shows a reference architecture that demonstrates major des
 
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in a Citrix Cloud and Azure environment.](../media/citrix-cloud-azure-virtual-desktop-architecture.png)](../media/citrix-cloud-azure-virtual-desktop-architecture.png#lightbox)
 
-[Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
+[Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/azure-virtual-desktop/landing-zone-citrix/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
 
 ## Design guidelines
 

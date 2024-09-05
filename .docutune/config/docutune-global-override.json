@@ -3,6 +3,9 @@
     "casing-quotations",
     "*oxford-comma*",
     "*cloudsimple*",
-    "*-llm-*"
-  ]
+    "*-llm-*",
+    "*product-azure-storage-files*"
+  ],
+  "Grammar": {
+  }
 }

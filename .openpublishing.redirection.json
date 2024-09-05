@@ -16,6 +16,111 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-azure-sentinel.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-inventory-tagging.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-policies-mma.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-security-center.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arm-template-linux.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arm-template-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/aws-scale-ansible.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/aws-terraform-al2.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/aws-terraform-ubuntu.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/gcp-terraform-ubuntu.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/gcp-terraform-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/local-vagrant-ubuntu.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/local-vagrant-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/onboard-server-linux.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/onboard-server-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-scaled-powercli-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-terraform-ubuntu.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-terraform-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-ubuntu-template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-windows-template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/get-started/help.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
          "redirect_document_id": false
@@ -318,6 +423,16 @@
       {
          "source_path": "docs/getting-started/migrate.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md",
+         "redirect_url": "/azure/virtual-desktop/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-vmware-to-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-vmware/index",
          "redirect_document_id": true
       },
       {
@@ -846,8 +961,18 @@
           "redirect_document_id": true
       },
       {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-disaster-recovery-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-disaster-recovery-iaas",
+          "redirect_document_id": true
+      },
+      {
          "source_path": "docs/scenarios/oracle-iaas/oracle-security-guideline-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-security-overview-iaas",
+          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-workload.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-manage-monitor-iaas",
           "redirect_document_id": true
       },
       {
@@ -1858,6 +1983,101 @@
       {
          "source_path": "docs/ready/azure-best-practices/organize-subscriptions.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-odaa.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/design-area/azure-billing-ad-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/conversational-ai.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/ai/machine-learning.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/ai/knowledge-mining.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/ai/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/ai/ai-applications.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/ai-applications.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/cognitive-search.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/predict.md",
+         "redirect_url": "/azure/cloud-adoption-framework/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/machine-learning.md",
+         "redirect_url": "/azure/machine-learning/overview-what-is-azure-machine-learning",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/ml-security.md",
+         "redirect_url": "/azure/machine-learning/how-to-secure-inferencing-vnet",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/set-up-ml-workspaces.md",
+         "redirect_url": "/azure/machine-learning/concept-workspace",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/dev-train-comp-instances-for-ml.md",
+         "redirect_url": "/azure/machine-learning/how-to-secure-inferencing-vnet",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/how-to-approach-mlops.md",
+         "redirect_url": "/training/paths/build-first-machine-operations-workflow",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/mlops-process.md",
+         "redirect_url": "/azure/architecture/data-science-process/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/trusted-ai.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/innovate/best-practices/predict.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/ml-deployment-inference.md",
+         "redirect_url": "/azure/machine-learning/overview-what-is-azure-machine-learning",
          "redirect_document_id": false
       }
    ]
