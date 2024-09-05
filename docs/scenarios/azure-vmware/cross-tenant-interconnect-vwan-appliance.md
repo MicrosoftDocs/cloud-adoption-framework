@@ -36,7 +36,7 @@ Combined behavior of Azure VMware Solution SDDC, its associated Expressroute cir
 
 The architecture depicting connectivity between cross-tenant Azure VMware Solution SDDCs, Azure and on-premises environment is as shown below.
 
-:::image type="content" source="media/azure-vmware-solution-ct-cr-vwan-nva.png" alt-text="Diagram showing the cross-tenant AVS SDDCs with vWAN and NVA." lightbox="media/azure-vmware-solution-ct-cr-vwan-nva.png":::
+:::image type="content" source="media/azure-vmware-solution-crosstenant-crossregion-vwan-appliance.png" alt-text="Diagram showing the cross-tenant AVS SDDCs with vWAN and Network Virtual Appliance." lightbox="media/azure-vmware-solution-crosstenant-crossregion-vwan-appliance.png":::
 
 ### Components
 
