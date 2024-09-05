@@ -16,23 +16,20 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## August 2024
 
-### New articles
-
-- [Manage and monitor Oracle Database@Azure](../scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure.md): Learn about considerations and recommendations that you can use to manage and monitor your Oracle Database@Azure and Exadata Database services.
-- [Business continuity and disaster recovery considerations for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure.md): Learn how to incorporate business continuity and disaster recovery (BCDR) into Oracle Database@Azure workloads to build a resilient architecture for your workload environment.
-
 ### Updated articles
 
 - [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
 - [Landing zone identity and access management](../ready/landing-zone/design-area/identity-access-landing-zones.md): Find new guidance about built-in and custom RBAC roles, least-privelage access, and conditions.
 - [Business commitment in cloud management](../manage/considerations/commitment.md): We updated the service-level agreement references to service-level objective references.
-- [Network considerations for Azure VMware Solution dual-region deployments](../scenarios/azure-vmware/eslz-dual-region-network-topology.md): These updates add figure captions to the images.
 - [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Explore new updates about network security group rules and Oracle Data Safe.
 - [Business continuity and disaster recovery for an SAP migration](../scenarios/sap/eslz-business-continuity-and-disaster-recovery.md): Learn about the benefits of using Azure Backup to back up databases that have SAP HANA System Replication enabled.
-- [What is a data product?](../scenarios/cloud-scale-analytics/architectures/what-is-data-product.md): These updates improve the clarity of this content based on customer feedback.
-- [Cloud adoption scenarios](../scenarios/index.md): These edits clean up and simplify this index file.
-- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-iaas/oracle-landing-zone-accelerator.md): These updates improve the grammar, spelling, and format of this article.
-- [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md): These updates clarify the types of roles, like the Contributor role and the Cloud Application Administrator role.
+
+We made updates to the following articles for clarity:
+- [Network considerations for Azure VMware Solution dual-region deployments](../scenarios/azure-vmware/eslz-dual-region-network-topology.md)
+- [What is a data product?](../scenarios/cloud-scale-analytics/architectures/what-is-data-product.md)
+- [Cloud adoption scenarios](../scenarios/index.md)
+- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-iaas/oracle-landing-zone-accelerator.md)
+- [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
 
 ## July 2024
 
