@@ -6,6 +6,7 @@ ms.author: gereyeso
 ms.reviewer: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
+ms.custom: e2e-oracle
 ---
 # Identity and access management for Oracle Database@Azure
 
