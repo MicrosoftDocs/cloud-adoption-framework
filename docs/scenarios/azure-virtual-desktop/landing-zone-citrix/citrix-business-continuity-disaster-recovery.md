@@ -14,19 +14,19 @@ This article describes how you can improve business continuity and disaster reco
 
 ## Citrix design considerations
 
-Design considerations for Citrix technologies are summarized in [Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix Tech Zone. This guide assists with BCDR architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
+Design considerations for Citrix technologies are summarized in [Design Decision: Disaster Recovery Planning](https://community.citrix.com/tech-zone/design/design-decisions/cvad-disaster-recovery) on Citrix Tech Zone. This guide assists with BCDR architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
 
 When you deploy Citrix on Azure, we recommended that you follow the same design considerations for [optimal storage for profile and Office containers](../eslz-business-continuity-and-disaster-recovery.md#optimal-storage-for-profile-and-office-containers), [golden image availability](../eslz-business-continuity-and-disaster-recovery.md#golden-image-availability), and [infrastructure and application dependencies](../eslz-business-continuity-and-disaster-recovery.md#infrastructure-and-application-dependencies) that you would follow for Azure Virtual Desktop.
 
-Because Azure VM availability isn't guaranteed by default (including for reserved instances), we recommend that you use the Azure [on-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) feature to ensure sufficient availability within the required regions when it's most needed. 
+Because Azure VM availability isn't guaranteed by default (including for reserved instances), we recommend that you use the Azure [on-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) feature to ensure sufficient availability within the required regions when it's most needed.
 
 Additional design factors for Citrix on Azure deployments are highlighted in the following sections.
 
 ## Machine catalog availability strategies
 
-You can deploy Citrix machine catalogs in an active/active or active/passive configuration by using a combination of Azure and on-premises workloads. 
+You can deploy Citrix machine catalogs in an active/active or active/passive configuration by using a combination of Azure and on-premises workloads.
 
-The following lists aren't inclusive. They contain key highlights. For more information, see [Citrix TechZone - Disaster Recovery Options](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html).
+The following lists aren't inclusive. They contain key highlights. For more information, see [Citrix TechZone - Disaster Recovery Options](https://community.citrix.com/tech-zone/design/design-decisions/cvad-disaster-recovery#wiki-header-28).
 
 ### Active/active
 

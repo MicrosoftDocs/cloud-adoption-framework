@@ -426,6 +426,16 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md",
+         "redirect_url": "/azure/virtual-desktop/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-vmware-to-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-vmware/index",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/getting-started/whats-new.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/whats-new",
          "redirect_document_id": true
@@ -1981,6 +1991,11 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/ready/landing-zone/design-area/azure-billing-ad-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/innovate/best-practices/conversational-ai.md",
          "redirect_url": "/azure/cloud-adoption-framework/innovate",
          "redirect_document_id": false
@@ -2064,8 +2079,6 @@
          "source_path": "docs/innovate/best-practices/ml-deployment-inference.md",
          "redirect_url": "/azure/machine-learning/overview-what-is-azure-machine-learning",
          "redirect_document_id": false
-      }  
-
-      
+      }
    ]
 }
