@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Network topology and connectivity for Azure Arc-enabled servers
 
-You can use Azure Arc-enabled servers to manage your Windows and Linux physical servers and virtual machines via the Azure control plane. This article describes key design considerations and best practices for Azure Arc-enabled servers connectivity as part of the Cloud Adoption Framework enterprise-scale landing zone guidance. This guidance is for physical servers and virtual machines that you host either in your on-premises environment or via a partner cloud provider.
+You can use Azure Arc-enabled servers to manage your Windows and Linux physical servers and virtual machines via the Azure control plane. This article describes key design considerations and best practices for Azure Arc-enabled servers connectivity as part of the Cloud Adoption Framework enterprise-scale landing zone guidance. This guidance is for physical servers and virtual machines that you host in your on-premises environment or via a partner cloud provider.
 
 This article assumes that you have successfully implemented an enterprise-scale landing zone and established hybrid network connections. The guidance focuses on the connectivity of the connected machine agent for Azure Arc-enabled servers. For more information, see [Enterprise-scale landing zones overview](../../../ready/enterprise-scale/index.md) and [Implement enterprise-scale landing zones](../../../ready/enterprise-scale/implementation.md).
 
@@ -44,7 +44,7 @@ You can use Azure Arc-enabled servers to connect hybrid machines via:
 
 #### Direct connection
 
-Azure Arc-enabled servers offer [direct connectivity to Azure public endpoints](/azure/azure-arc/servers/network-requirements#networking-configuration). When you use this connectivity method, all machine agents use a public endpoint to open a connection to Azure via the internet. The connected machine agent for Linux and Windows securely communicates outbound to Azure via the HTTPS protocol (TCP/443).
+Azure Arc-enabled servers can provide [direct connectivity to Azure public endpoints](/azure/azure-arc/servers/network-requirements#networking-configuration). When you use this connectivity method, all machine agents use a public endpoint to open a connection to Azure via the internet. The connected machine agent for Linux and Windows securely communicates outbound to Azure via the HTTPS protocol (TCP/443).
 
 When you use the direct connection method, evaluate your internet access for the connected machine agent. We recommend that you configure the [required network rules](/azure/azure-arc/servers/network-requirements).
 
@@ -63,11 +63,11 @@ To ensure that all traffic from your Azure Arc agents remains on your network, u
 - Azure Arc Private Link Scope encompasses all Azure Arc clients under the same Domain Name System (DNS) scope. You can't have some Azure Arc clients that use private endpoints and some that use public endpoints when they share a DNS server. But you can implement workarounds like [DNS policies](/windows-server/networking/dns/deploy/dns-policies-overview).
 
 - Your Azure Arc clients can have all private endpoints in a primary region. If they don't, you need to configure DNS so that the same private endpoint names resolve to different IP addresses. For example, you might use [selectively replicated DNS partitions for Windows Server Active Directory-integrated DNS](/troubleshoot/windows-server/networking/create-apply-custom-application-directory-partition). If you use the same private endpoints for all your Azure Arc clients, you must have the ability to route traffic from all your networks to the private endpoints.
-- You must do extra steps to use private endpoints for any Azure services that extensions software components, that you deploy via Azure Arc, access. These services include Log Analytics workspaces, Azure Automation accounts, Azure Key Vault, and Azure Storage.
+- You must do extra steps to use private endpoints for any Azure services that are accessed by extension software components that you deploy via Azure Arc. These services include Log Analytics workspaces, Azure Automation accounts, Azure Key Vault, and Azure Storage.
 - Connectivity to Microsoft Entra ID uses public endpoints, so clients require some internet access.
 - If you use Azure ExpressRoute for private connectivity, consider reviewing the resiliency best practices for [circuits](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/), [gateways](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteGateways/), [connections](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/connections/), and [ExpressRoute Direct](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRoutePorts/).
 
-Because of these challenges, we recommend that you evaluate whether you need Private Link for your Azure Arc implementation. Public endpoints encrypt traffic. Depending on how you use Azure Arc for servers, you might limit traffic to management and metadata traffic. To alleviate security concerns, implement [local agent security controls](/azure/azure-arc/servers/security-overview#local-agent-security-controls).
+Because of these challenges, we recommend that you evaluate if you need Private Link for your Azure Arc implementation. Public endpoints encrypt traffic. Depending on how you use Azure Arc for servers, you might limit traffic to management and metadata traffic. To address security concerns, implement [local agent security controls](/azure/azure-arc/servers/security-overview#local-agent-security-controls).
 
 For more information, see [Private Link security](/azure/azure-arc/servers/private-link-security#how-it-works) and see the [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) that are associated with Private Link support for Azure Arc.
 
