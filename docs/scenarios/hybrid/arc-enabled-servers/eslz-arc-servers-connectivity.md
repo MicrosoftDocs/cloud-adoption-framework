@@ -18,7 +18,7 @@ This article assumes that you have successfully implemented an enterprise-scale 
 
 The following diagram shows a conceptual reference architecture for the connectivity of Azure Arc-enabled servers.
 
-[![Diagram that shows Azure Arc-enabled servers connectivity options.](./media/arc-enabled-servers-connectivity-options.png)](./media/arc-enabled-servers-connectivity-options.png#lightbox)
+:::image type="content" source="./media/arc-enabled-servers-connectivity-options.png" alt-text="Diagram that shows Azure Arc-enabled servers connectivity options." lightbox="./media/arc-enabled-servers-connectivity-options.png" border="false":::
 
 ## Design considerations
 
@@ -42,11 +42,11 @@ You can use Azure Arc-enabled servers to connect hybrid machines via:
 
 #### Direct connection
 
-Azure Arc-enabled servers offer [direct connectivity to Azure public endpoints](/azure/azure-arc/servers/network-requirements#networking-configuration). With this connectivity method, all machine agents use a public endpoint to open a connection to the internet. The connected machine agent for Linux and Windows securely communicates outbound to Azure via the HTTPS protocol (TCP/443).
+Azure Arc-enabled servers offer [direct connectivity to Azure public endpoints](/azure/azure-arc/servers/network-requirements#networking-configuration). With this connectivity method, all machine agents use a public endpoint to open a connection to Azure via the internet. The connected machine agent for Linux and Windows securely communicates outbound to Azure via the HTTPS protocol (TCP/443).
 
 When you use the direct connection method, review your internet access for the connected machine agent. We recommend that you configure the [required network rules](/azure/azure-arc/servers/network-requirements).
 
-#### Proxy server or firewall connection (optional)
+#### Proxy server or firewall connection
 
 If your machine uses a firewall or a proxy server to communicate over the internet, the agent connects outbound via the HTTPS protocol.
 
@@ -56,21 +56,20 @@ If you deploy extensions on your Azure Arc-enabled servers, every extension conn
 
 #### Private Link
 
-To ensure that all traffic from your Azure Arc agents remains on your network, use an Azure Arc-enabled server with Azure Arc Private Link Scope. This configuration has security advantages. The traffic doesn't traverse the internet, and you don't need to open as many outbound exceptions on your datacenter firewall. But Private Link imposes a number of management challenges and increases the overall complexity and cost, especially for global organizations. Consider the following challenges:
+To ensure that all traffic from your Azure Arc agents remains on your network, use an Azure Arc-enabled server with Azure Arc Private Link Scope. This configuration provides security advantages. The traffic doesn't traverse the internet, and you don't need to open as many outbound exceptions on your datacenter firewall. But Private Link imposes a number of management challenges and increases the overall complexity and cost, especially for global organizations. Consider the following challenges:
 
-<<<<<<< HEAD
-- Azure Arc Private Link Scopes encompasses all Azure Arc clients under the same Domain Name System (DNS) scope. You can't have some Azure Arc clients that use private endpoints and some that use public endpoints when they share a DNS server. You can implement workarounds like [DNS policies](/windows-server/networking/dns/deploy/dns-policies-overview).
+- Azure Arc Private Link Scope encompasses all Azure Arc clients under the same Domain Name System (DNS) scope. You can't have some Azure Arc clients that use private endpoints and some that use public endpoints when they share a DNS server. You can implement workarounds like [DNS policies](/windows-server/networking/dns/deploy/dns-policies-overview).
 
 - Your Azure Arc clients can have either all private endpoints in a primary region, or you need to configure DNS so that the same private endpoint names resolve to different IP addresses. For example, you might use [selectively replicated DNS partitions for Active Directory-integrated DNS](/troubleshoot/windows-server/networking/create-apply-custom-application-directory-partition). If you use the same private endpoints for all your Azure Arc clients, you must have the ability to route traffic from all your networks to the private endpoints.
 - You must do extra steps to use private endpoints for any Azure services that extensions software components, that you deploy via Azure Arc, access. These services include Log Analytics workspaces, Azure Automation accounts, Azure Key Vault, and Azure Storage.
 - Connectivity to Microsoft Entra ID uses public endpoints, so clients require some internet access.
-- If ExpressRoute is used for private connectivity, consider reviewing the resiliency best practices for [circuits](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-circuits/), [gateways](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-gateway/), [connections](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-connection/) and [ExpressRoute Direct](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-direct/).
+- If you use Azure ExpressRoute for private connectivity, consider reviewing the resiliency best practices for [circuits](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/), [gateways](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteGateways/), [connections](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/connections/) and [ExpressRoute Direct](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRoutePorts/).
 
 Because of these challenges, we recommend that you evaluate whether you need Private Link for your Azure Arc implementation. With public endpoints, the traffic is encrypted. Depending on how you use Azure Arc for Servers, traffic might also be limited to management and metadata traffic. To alleviate security concerns, implement [local agent security controls](/azure/azure-arc/servers/security-overview#local-agent-security-controls).
 
 For more information, see the [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) that are associated with Private Link support for Azure Arc.
 
-[![Diagram that shows the Azure Arc-enabled servers Private Link topology.](./media/arc-enabled-servers-private-link-topology.png)](./media/arc-enabled-servers-private-link-topology.png#lightbox)
+:::image type="content" source="./media/arc-enabled-servers-private-link-topology.png" alt-text="Diagram that shows the Azure Arc-enabled servers Private Link topology." lightbox="./media/arc-enabled-servers-private-link-topology.png" border="false":::
 
 > [!TIP]
 > For more information, see [Private Link security](/azure/azure-arc/servers/private-link-security#how-it-works).
@@ -79,23 +78,15 @@ For more information, see the [restrictions and limitations](/azure/azure-arc/se
 
 We recommend that you implement an automated process to update the firewall and proxy network rules according to the [Azure Arc network requirements](/azure/azure-arc/servers/network-requirements).
 
-### Define an extensions connectivity method
-
-When you enable any of the Azure Arc-enabled servers supported VM extensions, those extensions connect to other Azure services. It's important to determine the connectivity method for those extensions: either directly, behind a proxy server/firewall, or using Private Link.
-
-If your Azure Arc-enabled servers use a proxy or a firewall, you must also allow all URLs required for the extensions, as they'll communicate with their own endpoints.
-
-If you use Private Link, you must configure [Private Link for each service](/azure/azure-arc/servers/private-link-security#how-it-works).
-
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey,  review the following resources:
+For more guidance for your hybrid cloud adoption journey, see the following resources:
 
-- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
-- Review the [prerequisites](/azure/azure-arc/servers/prerequisites) for Azure Arc-enabled servers.
-- Review the required [network configuration](/azure/azure-arc/servers/private-link-security#network-configuration) for the Private Link connectivity method.
-- Understand how Azure Arc-enabled servers [Private Link](/azure/azure-arc/servers/private-link-security#how-it-works) works.
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
-- Plan your [Private Link setup](/azure/azure-arc/servers/private-link-security#planning-your-private-link-setup).
-- For solving any connectivity issues, review the [troubleshooting Azure Arc-enabled servers agent connection guide](/azure/azure-arc/servers/troubleshoot-agent-onboard).
-- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- [Azure Arc jumpstart scenarios](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/)
+- [Connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites)
+- [Network configuration for the Private Link connectivity method](/azure/azure-arc/servers/private-link-security#network-configuration)
+- [Use Private Link to connect servers to Azure Arc](/azure/azure-arc/servers/private-link-security#how-it-works)
+- [Plan an at-scale deployment of Azure Arc-enable servers](/azure/azure-arc/servers/plan-at-scale-deployment)
+- [Private Link setup](/azure/azure-arc/servers/private-link-security#planning-your-private-link-setup)
+- [Troubleshoot Azure connected machine agent connection problems](/azure/azure-arc/servers/troubleshoot-agent-onboard)
+- [Training: Bring Azure innovation to your hybrid environments with Azure Arc](/training/paths/manage-hybrid-infrastructure-with-azure-arc/)
