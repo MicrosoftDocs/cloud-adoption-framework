@@ -12,50 +12,73 @@ ms.custom: internal, UpdateFrequency2
 
 ## Introduction
 
+Security governance bridges your business priorities with technical implementation like architecture, standards, and policy. Governance teams provide oversight and monitoring to sustain and improve security posture over time. These teams also report compliance as required by regulating bodies.
+
+:::image type="content" source="./media/governance-structure.png" alt-text="Security Governance" lightbox="./media/governance-structure-popout.png":::
+
+**Business goals and risk** provide the best direction for security. This direction ensures that security focuses their efforts on important matters for the organization. It also informs risk owners using familiar language and processes in the risk management framework.
+
 ## Security posture modernization
 
-- **Automate governance:** Embrace tooling to automate governance to the extent practical. Tooling can help you manage policies for infrastructure deployments and hardening measures, data protection, and identity and access (IAM) standards.
+Hope and reporting problems isn't a plan. Governance in the cloud age must have an active component that continuously engages with other teams. Security posture management is an emerging function. It represents a step forward in the long-term convergence of security functions. These functions answer the question "how secure is the environment?", including vulnerability management and security compliance reporting.
+
+In the on-premises world, security governance followed the cadence of data it could get about the environment. This way of getting data might take time and be constantly out of date. Cloud technology now provides on-demand visibility into the current security posture and asset coverage. This visibility drives a major transformation of governance into a more dynamic organization. This organization provides a closer relationship to other security teams to monitor security standards, provide guidance, and improve processes.
+
+In its ideal state, governance is the heart of continuous improvement. This improvement engages across your organization to constantly improve security posture.
+
+The key tenets of success for governance are:
+
+- **Continuous discovery of assets and asset types:** A static inventory isn't possible in a dynamic cloud environment. Your organization must focus on the continuous discovery of assets and asset types. In the cloud, new types of services are added regularly. Workload owners dynamically spin up and down instances of applications and services as needed, making inventory management a dynamic discipline. Governance teams need to continuously discover asset types and instances to keep up with this pace of change.
+
+- **Continuous improvement of asset security posture:** Governance teams should focus on improving standards, and enforcement of those standards, to keep up with the cloud and attackers. Information technology (IT) organizations must react quickly to new threats and adapt accordingly. Attackers are continuously evolving their techniques, and defenses are continuously improving and might need to be enabled. You can't always get all the security you need into the initial configuration.
+
+- **Policy-driven governance:** This governance provides consistent execution by fixing something once in policy that's automatically applied at scale across resources. This process limits any wasted time and effort on repeated manual tasks. It's often implemented using Azure Policy or third-party policy automation frameworks.
+
+To maintain agility, best practices guidance is often iterative. It digests small pieces of information from multiple sources to create the whole picture and continuously make small adjustments.
+
+### Azure facilitation
+
+- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) can help you continuously discover and automatically manage virtual machines in your environment through automatic data collection provisioning.
+
+- [Microsoft Defender for Cloud Apps](/azure/defender-for-cloud/defender-for-cloud-introduction) can help you continuously discover and govern first-party and third-party software-as-service (SaaS) apps being used in your environments.
 
 ## Incident preparedness and response
 
-Security governance is critical for maintaining your preparedness. Implementing preparedness and response mechansims and operational practices must be bolstered by strong governance mechanisms and practices to ensure that standards are adhered to with strict enforcement. The following recommendations can help you establish your governance strategy.
+Security governance is critical for maintaining your preparedness. Implementing preparedness and response mechansims and operational practices must be bolstered by strong governance mechanisms and practices to ensure that standards are adhered to with strict enforcement. Consider the following recommendations to help govern incident preparedness and response standards:
 
-### Security policies and compliance
+### Incident preparedness governance
 
-- **Governance and compliance:** Ensure the cloud environment adheres to regulatory requirements and internal security policies. Implement governance frameworks that provide guidelines for data handling, privacy, and security controls. Refer to the  article for detailed guidance on this topic.
-    
-    - **Policy enforcement:** Implement an automated policy management and enforcement solution, like [Azure Policy](/azure/governance/policy) to reduce the operational burden and potential for human error in implementing your governance framework.
+- **Automate governance:** Embrace tooling to automate governance to the extent practical. Tooling can help you manage policies for infrastructure deployments and hardening measures, data protection, and identity and access (IAM) standards. Automating the governance of these security measures will help ensure that your all resources in your environments are compliant with your own security standards and any compliance frameworks that are required for your business.
 
-- **Identity, authorization, and access management:** Apply role-based access control (RBAC), identity and access management (IAM), and least privilege principles to secure access to cloud resources. Regularly review and update access policies to ensure they meet the evolving security landscape. Refer to the [Zero trust identity technology pillar](/security/zero-trust/deploy/identity) guide for detailed guidance on this topic.
+- **Adhere to Microsoft's security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines help you ensure that you're existing deployments are secured properly and new deployments are configured properly at the outset, while reducing the risk of misconfigurations.
 
-- **Data protection:** Enforce data encryption, both at rest and in transit, along with data loss prevention (DLP) strategies to protect sensitive information and ensure data integrity. Refer to the [Zero trust data technology pillar](/security/zero-trust/deploy/data) guide for detailed guidance on this topic.
+### Incident repsonse governance
 
-- **Security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines help you ensure that you're existing deployments are secured properly and new deployments are configured properly at the outset, while reducing the risk of misconfigurations.
+- **Governance of the incident response plan:** The incident response plan should be maintained with same care as other critical documents in your estate. 
+ 
+    - It should be version controlled to ensure that teams are working off of the most recent version, and the versioning can be audited.
+ 
+    - It should be stored in highly available and secure storage.
+
+    - It should be reviewed on a regular cadence and updated when changes to the environment necessitate it.
+
+- **Governance of incident response training:** Training materials for incident response should also be version-controlled for auditability and ensuring that the most recent version is being used at any given time. They should also be reviewed on a regular cadence and updated when updates to the incident response plan are made.
+
+### Azure facilitation
+
+- [Azure Policy](/azure/governance/policy) is a policy management solution that helps enforce organizational standards and to assess compliance at-scale. Take advantage of [built-in policy definitions](/azure/governance/policy/samples/built-in-policies) to automate policy enforcement for many Azure services.
+
+- [Microsoft Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) provides security policies that can automate compliance with your security standards.
 
 ## Conifidentiality governance
 
 Effective governance is crucial for maintaining security and compliance in enterprise cloud environments. Governance encompasses the policies, procedures, and controls that ensure data is managed securely and in accordance with regulatory requirements. It provides a framework for decision-making, accountability, and continuous improvement, which is essential for protecting sensitive information and maintaining trust. This framework is particularly important for upholding the principle of confidentiality from the CIA Triad, ensuring that sensitive data is accessible only to authorized users and processes.
 
-1. **Policies and their applicability to secure data**
-
-Effective governance in cloud environments begins with robust policies that define how data should be handled, accessed, and protected. While technical policies are crucial, they must be supported by authoritative written policies, standard operating procedures (SOPs), and guidance documents. These provide the framework, requirements, and associated parameters that technical policies must adhere to and enforce.
-
 - *Technical policies:* These include access control policies, data encryption policies, and data masking/tokenization policies. The intent behind these policies is to create a secure environment where data confidentiality is maintained through stringent access controls and robust encryption methods.
 
 - *Written policies:* Written policies act as the governing framework for the entire enterprise environment. They establish the requirements and parameters for data handling, access, and protection. These documents ensure consistency and compliance across the organization, providing clear guidelines for employees and IT staff. Written policies also serve as a reference point for audits and assessments, helping to identify and address any gaps in security practices.
 
-- *Authoritative documentation:* Having documentation that has been vetted and approved by the organization’s leadership is essential. This documentation provides clear direction and guidance for the maintenance and lifecycle management of the enterprise cloud environment. It ensures that all policies and procedures are aligned with the organization’s strategic goals and regulatory requirements. Not all policies lend themselves to automation but instead require consistent human interaction, such as incident response plans, data classification and handling procedures, and regular security training and awareness programs. These policies ensure that human oversight and judgment are applied to critical security processes, maintaining a high level of vigilance and adaptability.
-_Data Loss Protection:_ Continuous monitoring and auditing of DLP measures should be conducted to ensure ongoing compliance with confidentiality requirements. This includes regularly reviewing and updating DLP policies, conducting security assessments, and responding to any incidents that may compromise data confidentiality. Establishing DLP programmatically across the organization ensures a consistent and scalable approach to protecting sensitive data.
-
-2. **Modern Service Management (MSM)**
-
-Modern Service Management (MSM) encompasses a set of practices and tools designed to manage and optimize IT services in a cloud environment. MSM focuses on aligning IT services with business needs, ensuring efficient service delivery, and maintaining high standards of security and compliance. It is useful because it provides a structured approach to managing complex cloud environments, enabling organizations to respond quickly to changes, mitigate risks, and ensure continuous improvement. MSM is particularly relevant to the principle of confidentiality, as it includes tools and practices that enforce data protection and monitor access controls.
-
-- *Unified security management:* MSM tools offer comprehensive security management, integrating various security functions to provide a holistic view of the cloud environment. This helps in enforcing security policies and detecting and responding to threats in real-time.
-
-- *Policy management and compliance:* MSM facilitates the creation, enforcement, and monitoring of policies across the cloud environment. It ensures that all resources comply with organizational standards and regulatory requirements, providing real-time insights and alerts.
-
-- *Continuous monitoring and improvement:* MSM emphasizes continuous monitoring of the cloud environment to identify and address potential issues proactively. This approach supports ongoing optimization and improvement of IT services, ensuring they remain aligned with business objectives.
+- *Data Loss Protection:* Continuous monitoring and auditing of DLP measures should be conducted to ensure ongoing compliance with confidentiality requirements. This includes regularly reviewing and updating DLP policies, conducting security assessments, and responding to any incidents that may compromise data confidentiality. Establishing DLP programmatically across the organization ensures a consistent and scalable approach to protecting sensitive data.
 
 3. **Monitoring compliance and methods of enforcement**
 
@@ -71,20 +94,45 @@ Monitoring compliance and enforcing policies are critical for maintaining the pr
 
 Ensuring that your integrity protections are properly maintained requires a well-designed governance strategy that ensures all polices and procedures are documented and enforced and that all systems involved are continuously audited for compliance. 
 
-The guidance provided above in the Confidentialiy governance section also applies to integrity. Some additional recommendations specific to integrity are:
+The guidance provided above in the Confidentialiy governance section also applies to the principle of integrity. Some additional recommendations specific to integrity are:
 
-- **Automated data quality governance:** Consider using an off-the-shelf solution to govern your data. For example, [Microsoft Purview Data Quality](/purview/data-quality-overview) offers users the ability to evaluate data quality using no-code/low-code rules, including out-of-the-box (OOB) rules and AI-generated rules. These rules are applied at the column level and aggregated to provide scores at the levels of data assets, data products, and business domains, ensuring end-to-end visibility of data quality within each domain.
+- **Automated data quality governance:** Consider using an off-the-shelf solution to govern your data. Using a pre-built solution relieves your data governance team burden of manual quality validation and reduces the risk of unauthorized access and alterations to data when performing quality validation.
 
 - **Automated system integrity governance:** Consider using a centralized, unified tool to automate your system integrity governance. For example, [Azure Arc](/azure/azure-arc/overview) allows you to govern systems across multiple clouds, on-premises data centers, and edge sites. Using a system like this can simplify your governance responsibilities and reduce operational burden.
 
+### Azure facilitation
+
+- [Microsoft Purview Data Quality](/purview/data-quality-overview) offers users the ability to evaluate data quality using no-code/low-code rules, including out-of-the-box (OOB) rules and AI-generated rules. These rules are applied at the column level and aggregated to provide scores at the levels of data assets, data products, and business domains, ensuring end-to-end visibility of data quality within each domain.
+
 ## Availability governance
 
-After establishing and standardizing your operational practices and implementing workloads and other operational functions, proper governance will help ensure that standards are enforced and regularly reviewed to stay up to date as your cloud estate evolves.
+The architecture designs that you standardize in your cloud estate require governance to ensure that they aren't deviated from and your availability isn't compromised by nonconforming design patterns. Likewise, your disaster recovery plans must also be governed to ensure that they are well-maintained.
 
-1. **Managing and enforcing standards:** Ensure that all standards are documented and stored in highly available and secure storage. Use version control to ensure that documentation is auditable and reviews are tracked. Enforce standards through regularly recurring mandatory incident response drills. Operators should know where to find their procedures and understand all the steps to follow as they go through their drills. Refer to the [Adopt preparedness](./refresh-adopt-preparedness.md) guide for detailed guidance on this topic. Enforce compliance requirment adherence through tooling, like [Azure Policy](/azure/policy) to reduce the risk of misconfiguration or non-compliant systems.
+### Availability design governance
 
-2. **Continuous improvement of standards:** Your cloud estate will evolve over time, and as technology evolves, so must your operational practices. Without keeping your standards up to date, you risk exposing your business to gaps that may have been introduced through the adoption of new technologies or more advanced attack techniques that come about. To protect against these risks, ensure that every standard is reviewed regularly to keep up to date. Use learnings gained from drills to inform updates to your practices. Your standards should always be considered living documents that should be improved as often as possible.
+- **Maintaining standardized design patterns:** Infrastructure and application design patterns should be codified and strictly enforced. Maintainence of those standards of design must be governed to keep them up-to-date and safe from unauthorized access or alteration. As such, these standards should be treated with the same care as other policies.
+
+### Disaster recovery governance
+
+- **Governance of the disaster recovery plans:** Disaster recovery plans should be treated with the same criticality as incident response plans:
+
+    - They should be version controlled to ensure that teams are working off of the most recent version, and the versioning can be audited.
+
+    - They should be stored in highly available and secure storage.
+
+    - They should be reviewed on a regular cadence and updated when changes to the environment necessitate it.
+
+- **Governance of disaster recovery drills:** Disaster recovery drills are not only for training on the plans, they are also learning opportunities to improve the plan itself and potentially for operational or design standards. Meticulous record keeping of disaster recovery drills will help find areas for improvement and will satisfy compliance requiements for auditing of disaster preparedness. Storing records of drills in the same repository as plans helps keep things organized and secure.
 
 ## Sustaining secure governance
 
-- **Integrity training:** As part of your overall training strategy, ensure that employees are trained on your data and system integrity policies and procedures. This training should be mandatory for new hires, with deeper training specific to their roles for those in the security team, and should be regularly recurring for all employees.
+### Modern Service Management (MSM)
+
+Modern Service Management (MSM) encompasses a set of practices and tools designed to manage and optimize IT services in a cloud environment. MSM focuses on aligning IT services with business needs, ensuring efficient service delivery, and maintaining high standards of security and compliance. It is useful because it provides a structured approach to managing complex cloud environments, enabling organizations to respond quickly to changes, mitigate risks, and ensure continuous improvement. MSM is particularly relevant to the principle of confidentiality, as it includes tools and practices that enforce data protection and monitor access controls.
+
+- *Unified security management:* MSM tools offer comprehensive security management, integrating various security functions to provide a holistic view of the cloud environment. This helps in enforcing security policies and detecting and responding to threats in real-time.
+
+- *Policy management and compliance:* MSM facilitates the creation, enforcement, and monitoring of policies across the cloud environment. It ensures that all resources comply with organizational standards and regulatory requirements, providing real-time insights and alerts.
+
+- *Continuous monitoring and improvement:* MSM emphasizes continuous monitoring of the cloud environment to identify and address potential issues proactively. This approach supports ongoing optimization and improvement of IT services, ensuring they remain aligned with business objectives.
+

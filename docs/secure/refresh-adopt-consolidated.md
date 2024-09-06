@@ -234,4 +234,4 @@ Consider the following recommendations to help ensure that the security mechanis
 
 ### Azure facilitation
 
-**Vulnerability management:** [Microsoft Defender Vulnerability Management](defender-vulnerability-management/defender-vulnerability-management) is a comprehensive risk-based vulnerability management solution that helps you identify, assess, remediate, and track all your biggest vulnerabilities across your most critical assets, all in a single solution.
+**Vulnerability management:** [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) is a comprehensive risk-based vulnerability management solution that helps you identify, assess, remediate, and track all your biggest vulnerabilities across your most critical assets, all in a single solution.
