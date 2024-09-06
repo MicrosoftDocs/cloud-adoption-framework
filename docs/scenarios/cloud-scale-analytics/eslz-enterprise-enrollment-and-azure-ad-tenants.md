@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 Azure landing zones for cloud-scale analytics don't have any considerations or recommendations that affect enterprise enrollment or Microsoft Entra tenant decisions.
 
-However, it's important to understand the decisions made by the cloud platform team, and to be aware of existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
+However, it's important to understand the decisions made by the cloud platform team, and to be aware of existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
 
 ## Identity and access management
 

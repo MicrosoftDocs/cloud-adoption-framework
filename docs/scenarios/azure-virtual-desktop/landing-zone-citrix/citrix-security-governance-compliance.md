@@ -91,7 +91,7 @@ The following JSON description of the **Citrix_Hosting_Connection** role has the
             {
                 "actions": [
                     "Microsoft.Resources/subscriptions/resourceGroups/read",
-                    "Microsoft.Compute/snapshots/read"
+                    "Microsoft.Compute/snapshots/read",
                     "Microsoft.Compute/disks/read",
                     "Microsoft.Network/virtualNetworks/read",
                     "Microsoft.Network/virtualNetworks/subnets/join/action"

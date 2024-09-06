@@ -5,9 +5,7 @@ author: jfaurskov
 ms.author: janfaurs
 ms.date: 08/02/2024
 ms.topic: conceptual
-ms.service: azure-cloud-adoption-framework
-ms.subservice: scenario
-ms.custom: think-tank
+ms.custom: e2e-oracle
 ---
 
 # Oracle on Azure IaaS landing zone accelerator
@@ -48,7 +46,9 @@ For guidelines to create your landing zone, see these articles:
 
 This diagram shows an example conceptual reference architecture that illustrates design areas and best practices.
 
-:::image type="content" source="media/index/reference-architecture-oracle-iaas-landing-zone.svg" alt-text="A diagram that shows a reference architecture of the Oracle on Azure landing zone accelerator." lightbox="media/index/reference-architecture-oracle-iaas-landing-zone.svg":::
+:::image type="content" source="media/index/reference-architecture-oracle-infrastructure-landing-zone.svg" alt-text="A diagram that shows a reference architecture of the Oracle on Azure landing zone accelerator." border="false" lightbox="media/index/reference-architecture-oracle-infrastructure-landing-zone.svg":::
+
+*Download a [Visio file](https://github.com/Microsoft/CloudAdoptionFramework/tree/main/scenarios/oracle-iaas/reference-architecture-oracle-iaas-landing-zone.vsdx) of this architecture.*
 
 ## Get the Oracle on Azure IaaS landing zone accelerator
 
