@@ -64,6 +64,8 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Review [Programmatically create Azure Enterprise Agreement subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about Enterprise Agreement subscription limitations.
 
+> [!WARNING]
+> You will not be able to create new subscriptions or transfer existing subscriptions from an enrollment account if the UPI is deleted from Microsoft Entra ID.
 ## Design recommendations
 
 - Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
@@ -86,7 +88,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important Enterprise Agreement prompts to this account.
 
-- Don't move or rename an Enterprise Agreement account in Microsoft Entra ID.
+- Don't move, rename or delete the Entra ID user associated to EA enrollment account.
 
 - Periodically audit the Cost Management blade in the Azure portal to review who has access, and when possible, avoid using a Microsoft account.
 
