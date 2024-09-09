@@ -88,7 +88,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important Enterprise Agreement prompts to this account.
 
-- Don't move or delete the Entra ID user associated to user enrollment account.
+- Don't move, rename or delete the Entra ID user associated to EA enrollment account.
 
 - Periodically audit the Cost Management blade in the Azure portal to review who has access, and when possible, avoid using a Microsoft account.
 
