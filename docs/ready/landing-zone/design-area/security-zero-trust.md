@@ -38,7 +38,7 @@ The following table correlates the Zero Trust pillars to the design areas shown 
 
 | Legend | Landing zone design area | Zero Trust pillar |
 |--|--|--|
-| ![The letter A](../media/diagram-legends/a.png) | [Azure billing and Microsoft Entra tenant](./azure-billing-ad-tenant.md) | [Identity pillar](/security/zero-trust/deploy/identity) |
+| ![The letter A](../media/diagram-legends/a.png) | [Azure billing and Microsoft Entra tenant](./azure-billing-microsoft-entra-tenant.md) | [Identity pillar](/security/zero-trust/deploy/identity) |
 | ![The letter B](../media/diagram-legends/b.png) | [Identity and access management](./identity-access.md) |[Identity pillar](/security/zero-trust/deploy/identity), <br> [Applications pillar](/security/zero-trust/deploy/applications),<br> [Data pillar](/security/zero-trust/deploy/data) |
 | ![The letter C](../media/diagram-legends/c.png) | [Resource organization](./resource-org.md) | [Identity pillar](/security/zero-trust/deploy/identity) |
 | ![The letter C](../media/diagram-legends/c.png) ![The letter D](../media/diagram-legends/d.png) | [Governance](../design-area/governance.md) | [Visibility, automation, and orchestration pillar](/security/zero-trust/deploy/visibility-automation-orchestration) |
