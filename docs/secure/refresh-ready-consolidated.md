@@ -32,7 +32,7 @@ Develop secure, scalable landing zones that provide controlled environments for 
 
 ### Azure facilitation
 
-- **Azure landing zone accelerators:** Microsoft maintains several landing zone accelerators, which are pre-packed deployments of a given workload type that can be easily deployed into a landing zone to get you up and running quickly. They include [Azure Integration Services](../scenarios/app-platform/integration-services/), [Azure Kubernetes Service (AKS)](../scenarios/app-platform/aks/), [Azure API Management](../scenarios/app-platform/api-management/), and others. Refer to the [Modern application platform scenario](../scenarios/app-platform/index.md) section of CAF for a full list of accelerators and other topics related to modern application considerations.
+- **Azure landing zone accelerators:** Microsoft maintains several landing zone accelerators, which are pre-packaged deployments of a given workload type that can be easily deployed into a landing zone to get you up and running quickly. They include [Azure Integration Services](../scenarios/app-platform/integration-services/), [Azure Kubernetes Service (AKS)](../scenarios/app-platform/aks/), [Azure API Management](../scenarios/app-platform/api-management/), and others. Refer to the [Modern application platform scenario](../scenarios/app-platform/index.md) section of CAF for a full list of accelerators and other topics related to modern application considerations.
 
 - **Azure landing zones Terraform module:** You can optimize your landing zones deployments with automation by using the [Azure landing zones Terraform module](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest). Using your continuous deployment and continuous integration (CI/CD) pipeline to deploy landing zones ensures that all of your landing zones are deployed identically, with all security mechanisms in place.
 
@@ -46,7 +46,7 @@ After defining your strategy and developing your plan for incident preparedness 
 
 ### Azure facilitation 
 
--**Azure Virtual WAN:** [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) is a networking service that brings many networking, security, and routing functionalities together to provide a single operational interface. It is a hub and spoke architecture with scale and performance built in for branches (VPN/SD-WAN devices), users (Azure VPN/OpenVPN/IKEv2 clients), ExpressRoute circuits, and virtual networks. When implementing your landing zones, Azure Virtual WAN can help you optimize your network through segmentation and security mechanisms.
+- **Azure Virtual WAN:** [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) is a networking service that brings many networking, security, and routing functionalities together to provide a single operational interface. It is a hub and spoke architecture with scale and performance built in for branches (VPN/SD-WAN devices), users (Azure VPN/OpenVPN/IKEv2 clients), ExpressRoute circuits, and virtual networks. When implementing your landing zones, Azure Virtual WAN can help you optimize your network through segmentation and security mechanisms.
 
 ## Ready for confidentiality
 
@@ -112,7 +112,7 @@ Designing your workloads for resiliency helps ensure that the business is able t
  
 - **Enable automatic scaling:** Ensure your application architecture supports automatic scaling to handle varying loads, maintaining availability during traffic spikes. This practice aligns with CAF’s guidance on building scalable and responsive cloud environments.
 
--**Implement fault isolation:** Design your application to isolate failures to individual tasks or functions, preventing widespread outages and enhancing resilience. This supports CAF’s focus on creating reliable and fault-tolerant systems.
+- **Implement fault isolation:** Design your application to isolate failures to individual tasks or functions, preventing widespread outages and enhancing resilience. This supports CAF’s focus on creating reliable and fault-tolerant systems.
  
 - **Ensure high availability:** Incorporate built-in redundancy and disaster recovery mechanisms to maintain continuous operation, following CAF’s best practices for high availability and business continuity planning.
  
