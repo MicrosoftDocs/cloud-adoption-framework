@@ -35,7 +35,7 @@ When your business establishes a commitment, determine how to align the followin
 
 To help you make decisions, the following sections describe these aspects in greater detail.
 
-## IT operations prerequisites
+## Determine IT operations prerequisites
 
 The [Azure Management Guide](../azure-management-guide/index.md) outlines Azure management tools. Before your business makes a commitment, IT should determine an acceptable standard-level management baseline to apply to all managed workloads. IT can then calculate a standard management cost for each of the managed workloads in the IT portfolio, based on CPU cores, disk space, and other asset-related variables. IT can also estimate a composite SLO for each workload, based on the architecture.
 
@@ -46,11 +46,11 @@ IT operations teams often use a default minimum of 99.9% uptime for the initial 
 
 The operations management baseline serves as an initial starting point, and you should also validate the baseline with the following aspects.
 
-## Management responsibility
+## Choose a responsibility model
 
-In a traditional on-premises environment, you might assume that the cost of managing the environment is an IT operations sunk cost. A *sunk cost* is an expense that you can't recover. In the cloud, management is a purposeful decision that has a direct budgetary impact. You can directly attribute the costs of each management function to each workload that you deploy to the cloud. You have greater control with this approach. But the cloud operations teams and cloud strategy teams must first commit to an agreement about responsibilities.
+In a traditional on-premises environment, you might assume that the cost of managing the environment is a sunk cost for IT operations. A *sunk cost* is an expense that you can't recover. In the cloud, management is a purposeful decision that has a direct budgetary impact. You can directly attribute the costs of each management function to each workload that you deploy to the cloud. You have greater control with this approach. But the cloud operations teams and cloud strategy teams must first commit to an agreement about responsibilities.
 
-Your business might also [outsource some of your ongoing management functions to a service provider](https://azure.microsoft.com/partners). Service providers can use [Azure Lighthouse](/azure/lighthouse/overview) to provide your business with precise control. For example, you can grant access to your resources and have greater visibility into the actions that service providers perform.
+Your business might also outsource some of your ongoing management functions to a [service provider](https://azure.microsoft.com/partners). Service providers can use [Azure Lighthouse](/azure/lighthouse/overview) to provide your business with precise control. For example, you can grant access to your resources and have greater visibility into the actions that service providers perform.
 
 To manage your cloud environment, you can implement various models.
 
@@ -66,17 +66,13 @@ To manage your cloud environment, you can implement various models.
 
   A mixed-model approach provides balance. In this approach, a central IT team provides a centralized operating model for all workloads that are mission critical or contain sensitive information. The team places all other workload classifications in a cloud environment that supports delegated responsibilities. The centralized responsibility approach serves as the general operating model, but your business has flexibility to adopt a specialized operating model based on your required level of support and sensitivity.
 
-You must first commit to a responsibility approach, which then shapes the following commitments.
+Consider who is responsible for the day-to-day operations management for a workload. Your responsibility approach affects your commitments.
 
-**Which business is responsible for day-to-day operations management for this workload?**
-
-## Cloud tenancy
+## Manage cloud tenancy
 
 Typically, you can manage assets easier when they reside in a single tenant. But you might need to maintain multiple tenants. For more information about why you might require a multitenant Azure environment, see [Centralize management operations with Azure Lighthouse](../centralize-operations.md).
 
-**Does this workload reside in a single Azure tenant, alongside all other workloads?**
-
-## Soft-cost factors
+## Consider soft-cost factors
 
 The next section outlines an approach to determine comparative returns that are associated with various levels of management processes and tooling. For each analyzed workload, you can measure the cost of management relative to the forecasted impact of business disruptions. Use the following method to determine if you need to invest in more extensive management approaches.
 
@@ -95,9 +91,7 @@ To make a commitment, the next data point that you should evaluate is a list of 
 
 When the IT team that's responsible for cloud operations calculates the relative return on operations management costs, they should complete the previously mentioned prerequisites and assume a minimum level of management for all workloads.
 
-The next commitment that your business should make is to accept the costs that are associated with the baseline-managed offering.
-
-**Does your business agree to invest in the baseline offering to meet the minimum standards of cloud operations?**
+The next commitment that your business should make is to accept the costs that are associated with the baseline-managed offering. Determine whether your business agrees to invest in the baseline offering to meet the minimum standards of cloud operations.
 
 If your business doesn't agree to that level of management, you must create a solution so that your business can proceed. Ensure that your solution doesn't materially affect the cloud operations of other workloads.
 
@@ -152,7 +146,7 @@ Unless you have other soft-cost factors to consider, this comparison can quickly
 
 At this point in the process, your business can make commitments, including centralized or delegated responsibility and Azure tenancy, and determine the level of commitment. You can validate and document each commitment to ensure that the cloud operations team, cloud strategy team, and business stakeholders align on these commitments to manage the workload.
 
-## Next steps
+## Next step
 
 After you make commitments, the responsible operations teams can configure the workload in question. To get started, evaluate various approaches to inventory and visibility.
 
