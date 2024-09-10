@@ -65,7 +65,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 - Review [Programmatically create Azure Enterprise Agreement subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about Enterprise Agreement subscription limitations.
 
 > [!WARNING]
-> You will not be able to create new subscriptions or transfer existing subscriptions from an enrollment account if the UPI is deleted from Microsoft Entra ID.
+> You will not be able to create new subscriptions or transfer existing subscriptions from an enrollment account if the associated UPN is deleted from Microsoft Entra ID.
 ## Design recommendations
 
 - Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
