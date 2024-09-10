@@ -29,7 +29,7 @@ In the Manage phase of your cloud adoption journey, you should have a robust [ob
 
 - **Incident preparedness:** 
 
-    - Implement a SIEM and SOAR solution to augment your infrastructure monitoring and alerting systems to detect and respond to security incidents.
+    - Implement a security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution to augment your infrastructure monitoring and alerting systems to detect and respond to security incidents.
 
     - Proactively scan your cloud systems for vulnerabilities. Using a vulnerability scanner that can be integrated with a SIEM system consolidates security data from across your environment, helping you efficiently detect and respond to multiple types of security risks and incidents.
     
