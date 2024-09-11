@@ -151,7 +151,6 @@ Security teams work with infrastructure and platform roles (and others) to help 
 
         - Administrators using shared accounts to perform privileged tasks instead of their own individual accounts.
 
-        - Administrators bypassing Privileged Access Management (PAM) security controls by using built-in administrator/root accounts.
         - Use of ['browse-up configurations'](https://www.ncsc.gov.uk/whitepaper/security-architecture-anti-patterns) that create elevation of privilege paths which can be abused by attackers. This occurs when high privileged administrative accounts log onto lower trust user devices and workstations (standard user workstations, BYOD devices, etc.), sometimes employing  ‘jump servers’ that don’t effectively mitigate these risks. See securing privileged access and privileged access workstations (PAWs) for more information.
 
 ### Security operations (SecOps/SOC)

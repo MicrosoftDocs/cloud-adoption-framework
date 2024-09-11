@@ -12,15 +12,13 @@ ms.custom: internal, UpdateFrequency2
 
 ## Introduction
 
-The guidance provided in this article is meant to help you develop your cloud adoption plan with security as a cornerstone tenet. 
+Developing a cloud adoption plan is a complex undertaking, often with many technical challenges that need to be carefully strategized to ensure success, like modernizing legacy workloads to run on cloud infrastructure. It is critical that security considerations are integrated into every phase of the adoption plan to ensure that you're new cloud estate is built securely from the ground up. When making decisions about your migration or implementation default to designing for the highest security strategy stance allowable for your business. It is best to start your designs with security taking precedence over performance and cost efficiency to ensure that you're not introducing risks in your design that will have to be dealt with later, which could mean redesigning workloads. The guidance provided in this article is meant to help you develop your cloud adoption plan with security as a cornerstone tenet.
 
-TODO - Add to this
+This article is a supporting guide to the [Plan](../plan) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
 ## Plan for landing zone adoption
 
-We recommend lz but if you've got it setup differently, the rest of the guidance still applies
-
-As a first step in your cloud adoption plan, review the Azure landing zone [documentation](../ready/landing-zone/) to understand Microsoft's modern approach to cloud design at scale. 
+Microsoft recommends using the [landing zone](../ready/landing-zone/) approach to building out your cloud estate foundational elements. This is especially true for enterprise and large organizations. Smaller organizations and start-ups may not benefit from adopting this approach at the beginning of their cloud journey, but its important to understand the [design areas](../ready/landing-zone/design-areas.md) as you will need to include these areas in your cloud adoption plan whether you build a full-blown landing zone or not.
 
 The Azure landing zone approach will provide you a well-designed foundation for your cloud estate, setting you up for a manageable environment that can be secured according to best practices.
 

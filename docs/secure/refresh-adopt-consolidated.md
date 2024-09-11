@@ -10,7 +10,15 @@ ms.custom: internal, UpdateFrequency2
 
 # Perform your cloud adoption securely
 
+## Introduction
+
+As you implement your cloud estate and move workloads in, having robust security mechanisms and practices in place will help ensure that your workloads will be secure at the outset and you won't have to go back and fill in security gaps once workloads are in production. Building out your security mechansims and practices should be prioritized in the Adopt phase to ensure that workloads are consistently built according to best practices and IT teams are prepared for cloud operations through well-designed policies and procedures.
+
+This article is a supporting guide to the [Adopt](../adopt) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
+
 ## Security posture modernization adoption
+
+Consider the following recommendations as you work towards modernizing your security posture as part of the Adopt phase:
 
 - **Security baselines:** Establish security baselines that include availability requirements to have a well understood foundation to build from. Using an off-the-shelf security baseline analysis tool can save you time and reduce the risk of human error in analyzing your environments.
 

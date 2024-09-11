@@ -12,9 +12,13 @@ ms.custom: internal, UpdateFrequency2
 
 ## Introduction
 
+Moving your organization into the cloud adds significant complexity to security, and to be successful in the cloud, your security strategy needs to meet modern challenges inherent to cloud computing. In the adoption and operation of a cloud estate, security becomes a necessary consideration in all facets, rather than a separate function that is secondarily involved in certain facets, which can be a common approach for organizations running on-premises technology platforms. As you define your cloud adoption strategy, consider the recommendations provided in this article to ensure that security is an integral piece of the strategy and will be built into your cloud adoption plan as you move forward.
+
+This article is a supporting guide to the [Strategy](../strategy) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
+
 ## Security posture mondernization 
 
-Moving your organization into the cloud adds significant complexity to security, and to be successful in the cloud, your security strategy needs to meet modern challenges inherent to cloud computing. In the adoption and operation of a cloud estate, security becomes a necessary consideration in all facets, rather than a separate function that is secondarily involved in certain facets, which can be a common approach for organizations running on-premises technology platforms. Strategy modernization not only involves the adoption of new technologies and new operational practices, it also normally involves a mindset shift across the organization. New [teams and roles](./refresh-teams-and-roles.md) may need to be filled and existing teams and roles may need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it is important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
+The strategy of security posture modernization not only involves the adoption of new technologies and new operational practices, it also normally involves a mindset shift across the organization. New [teams and roles](./refresh-teams-and-roles.md) may need to be filled and existing teams and roles may need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it is important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
 
 Refer to the [Define a security strategy](../strategy/define-security-strategy.md) guide for a comprehensive overview of these considerations.
 
@@ -34,41 +38,33 @@ Microsoft offers a [Zero Trust-based security modernization blueprint](/security
 
 ## Defining a strategy for incident preparedness and response
 
-- **Define business requirements and objectives:**
-    
-    Establish a clear vision and well-defined, specific objectives for cloud security readiness, focusing on building security capacity and developing security skills. Align your incident preparedness and response strategy to the overall business strategy to ensure that the business strategy isn't impeded by security. Understand business requirements for reliability and performance to ensure that your strategy can accomodate those requirements while building the necessary technology foundation to prepare for and respond to incidents.
+Establish a clear vision and well-defined, specific objectives for cloud security readiness, focusing on building security capacity and developing security skills. Align your incident preparedness and response strategy to the overall business strategy to ensure that the business strategy isn't impeded by security. Understand business requirements for reliability and performance to ensure that your strategy can accomodate those requirements while building the necessary technology foundation to prepare for and respond to incidents.
 
 ## Defining a strategy for confidentiality
 
 When defining a strategy for adopting confidentiality in an enterprise cloud environment, it’s essential to consider several key points:
 
-- **Define business requiements and objectives**
+- **Prioritize data privacy and protection:** Establish clear business objectives that emphasize the importance of data privacy and protection. This includes compliance with relevant regulations like GDPR, HIPAA, and industry standards.
 
-- *Prioritize data privacy and protection:* Establish clear business objectives that emphasize the importance of data privacy and protection. This includes compliance with relevant regulations like GDPR, HIPAA, and industry standards.
+- **Plan for a risk management strategy:** Identify and assess potential risks to data confidentiality and develop strategies to mitigate these risks.
 
-- *Plan for a risk management strategy:* Identify and assess potential risks to data confidentiality and develop strategies to mitigate these risks.
-
-- *Develop a Data Loss Protection (DLP) strategy:* DLP is a set of tools and processes used to ensure that sensitive data is not lost, misused, or accessed by unauthorized users. In terms of the principle of Confidentiality, this involves defining clear data protection objectives and establishing a framework for implementing robust encryption and access controls. In the strategy phase, DLP is integrated into the overall security vision to ensure that sensitive data is protected from unauthorized access.
+- **Develop a Data Loss Protection (DLP) strategy:** DLP is a set of tools and processes used to ensure that sensitive data is not lost, misused, or accessed by unauthorized users. In terms of the principle of Confidentiality, this involves defining clear data protection objectives and establishing a framework for implementing robust encryption and access controls. In the strategy phase, DLP is integrated into the overall security vision to ensure that sensitive data is protected from unauthorized access.
 
 ## Defining a strategy for integrity
 
-- **Define business requirements and objectives:** 
-
 Maintaining data and system integrity requires many of the same strategies as those suggested for confidentiality, like well-designed data protection controls and risk management. These strategies should be augmented with additional considerations for data and system integrity:
 
-- *Prioritize data and system integrity:* Maintaining data and system integrity should be a key tenet in business requirements and objectives. To that end, prioritize security controls and operational practices that support a high level of integrity. In particular, embrace automation through tooling for as much of you data and system integrity management as practical. Automation can be used for many functions related to integrity like:
+- **Prioritize data and system integrity:** Maintaining data and system integrity should be a key tenet in business requirements and objectives. To that end, prioritize security controls and operational practices that support a high level of integrity. In particular, embrace automation through tooling for as much of you data and system integrity management as practical. Automation can be used for many functions related to integrity like:
 
-    - **Policy management**
+    - *Policy management*
 
-    - **Data classification and management**
+    - *Data classification and management*
 
-    - **Infrastructure deployments and update management**
+    - *Infrastructure deployments and update management*
 
 ## Defining a strategy for availability
 
 Including considerations for availability in your cloud adoption strategy will ensure that you are well prepared for a reliable and resilient cloud estate and that you're able to be confident in meeting your business requirements as they relate to availability.
-
-- **Define business requirements and objectives:** 
 
 Availability requirements and objectives span across the entire cloud estate, including all business functions and workloads and the underlying cloud platform. Ensure that as you develop your cloud adoption strategy, you start with high-level goals for determining the criticality of various aspects of your cloud estate and begin discussions amongst stakeholders on what the proper level of availbility must be set at while balancing cost and performance requirements and objectives.  This approach will put a structure on your cloud adoption plans that helps you work toward more defined targets as you progress to the next phases in your cloud adoption journey, laying the groundwork for appropriately scoped designs and standards.
 
