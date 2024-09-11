@@ -12,7 +12,7 @@ ms.custom: internal
 
 A *business commitment* helps you define your level of operational management at an acceptable operating cost. To define a business commitment, you must balance priorities. This article describes how to evaluate data points and calculations to find that balance.
 
-You can have commitments that are related to business stability that justify business decisions. Stability commitments can include service-level agreements (SLAs) or a certain level of technical resiliency. For most workloads, you need only a baseline level of cloud management. For other workloads, you might spend two to four times more on cloud management compared to a baseline level. You can justify this cost because of the potential impact of business interruptions.
+You can have commitments that are related to business stability that justify business decisions. Stability commitments can include service-level agreements (SLAs) or a certain level of technical resiliency. For most workloads, you only need a baseline level of cloud management. For other workloads, you might spend two to four times more on cloud management compared to a baseline level. You can justify this cost because of the potential impact of business interruptions.
 
 The previous articles in this series can help you understand the classification and impact of interruptions to various workloads. This article helps you calculate the returns.
 
@@ -37,7 +37,7 @@ To help you make decisions, the following sections describe these aspects in gre
 
 ## Determine IT operations prerequisites
 
-The [Azure Management Guide](../azure-management-guide/index.md) outlines Azure management tools. Before your business makes a commitment, IT should determine an acceptable standard-level management baseline to apply to all managed workloads. IT can then calculate a standard management cost for each of the managed workloads in the IT portfolio, based on CPU cores, disk space, and other asset-related variables. IT can also estimate a composite SLO for each workload, based on the architecture.
+The [Azure Management Guide](../azure-management-guide/index.md) outlines Azure management tools. Before your business makes a commitment, IT should determine an acceptable standard-level management baseline to apply to all managed workloads. For each of the managed workloads in the IT portfolio, IT can then calculate a standard management cost that's based on CPU cores, disk space, and other asset-related variables. IT can also estimate a composite service-level objective (SLO) for each workload, based on the architecture.
 
 IT operations teams often use a default minimum of 99.9% uptime for the initial composite SLO. They might normalize management costs based on the average workload, especially for solutions that have minimal logging and storage needs. To provide a starting point for initial conversations, the IT operations team can average the costs of a few medium-criticality workloads.
 
@@ -99,16 +99,16 @@ You might want more than the standard management level. The following section he
 
 ### Increase levels of management
 
-For managed solutions, you can apply several design principles and template solutions in addition to the management baseline. Each design principle for reliability and resiliency adds operating cost to the workload. IT and your business must agree on these extra commitments, so you must understand potential losses that you can avoid when you implement more principles.
+For managed solutions, you can apply several design principles and template solutions in addition to the management baseline. Each design principle for reliability and resiliency adds operating costs to the workload. IT and your business must agree on these extra commitments, so you must understand potential losses that you can avoid when you implement more principles.
 
-The following calculations provide formulas to help you better understand the differences between losses and increased management investments. For more information about calculating the cost of increased management, see [Workload automation](./workload.md) and [Platform automation](./platform.md).
+The following calculations provide formulas to help you better understand the differences between losses and increased management investments. For more information about how to calculate the cost of increased management, see [Workload automation](./workload.md) and [Platform automation](./platform.md).
 
 > [!TIP]
 > If you use the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the operations management fields to reflect each conversation. These changes update the ROI formulas and each of the following fields.
 
 #### Estimate outage
 
-The composite service-level objective (SLO) is the SLA that's based on the deployment of each asset in the workload. The composite SLO field drives the *estimated outage*, which is labeled `Est. Outage` in the workbook. To calculate the estimated outage in hours per year without using the workbook, apply the following formula:
+The composite SLO is the SLA that's based on the deployment of each asset in the workload. The composite SLO field drives the *estimated outage*, which is labeled `Est. Outage` in the workbook. To calculate the estimated outage in hours per year without using the workbook, apply the following formula:
 
 > *Estimated outage = (1 - composite SLO percentage) &#215; number of hours in a year*
 
@@ -136,11 +136,11 @@ The *Comparison basis* field evaluates the standard impact and composite-SLO imp
 
 #### Return on loss avoidance
 
-If the cost of managing a workload exceeds the potential losses, the proposed investment in cloud management might not be fruitful. To compare the *Return on loss avoidance*, see the column labeled `Annual ROI`. To calculate this column on your own, use the following formula:
+If the cost of managing a workload exceeds the potential losses, the proposed investment in cloud management might not be worthwhile. To compare the *Return on loss avoidance*, see the column labeled `Annual ROI`. To calculate this column on your own, use the following formula:
 
 > *Return on loss avoidance = (comparison basis - (monthly cost &#215; 12) ) &#247; (monthly cost &#215; 12)*
 
-Unless you have other soft-cost factors to consider, this comparison can quickly determine if you need to invest more in cloud operations, resiliency, reliability, or other areas.
+If you don't have other soft-cost factors to consider, you can use this comparison to quickly determine if you need to invest more in cloud operations, resiliency, reliability, or other areas.
 
 ### Validate the commitment
 
@@ -148,7 +148,7 @@ At this point in the process, your business can make commitments, including cent
 
 ## Next step
 
-After you make commitments, the responsible operations teams can configure the workload in question. To get started, evaluate various approaches to inventory and visibility.
+After you make commitments, the responsible operations teams can configure the workload. To get started, evaluate various approaches to inventory and visibility.
 
 > [!div class="nextstepaction"]
 > [Inventory and visibility options](./inventory.md)
