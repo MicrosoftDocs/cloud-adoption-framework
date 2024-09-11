@@ -3,7 +3,7 @@ title: Security governance and compliance for Citrix on Azure
 description: Learn about key design considerations and recommendations for security governance and compliance in Citrix on Azure infrastructure.
 author: BenMartinBaur
 ms.author: nataliak
-ms.date: 02/06/2023
+ms.date: 09/12/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
 ---
@@ -16,7 +16,7 @@ Security governance and compliance are critical to Citrix DaaS deployments on Az
 
 [Azure Policy](/azure/governance/policy/overview) is an important tool for Citrix on Azure deployments. Policies can help you adhere to security standards set by your cloud platform team. Policies provide automatic enforcement and reporting to support continuous regulatory compliance.
 
-Review your policy baseline with your platform team per the [Design area: Azure governance](../../../ready/landing-zone/design-area/governance.md) guidelines. Apply policy definitions at the top-level root management group so you can assign them at inherited scopes.
+Review your policy baseline with your platform team per the [Azure governance](../../../ready/landing-zone/design-area/governance.md) guidelines. Apply policy definitions at the top-level root management group so you can assign them at inherited scopes.
 
 The following sections focus on identity, networking, and antivirus recommendations.
 
@@ -30,23 +30,24 @@ The following sections discuss Citrix DaaS service principal creation, roles, an
 
 ### App registration
 
-App registration is the process of creating a one-way trust relationship between a Citrix Cloud account and Azure, such that the Citrix Cloud trusts Azure. The app registration process creates an Azure service principal account that the Citrix Cloud can use for all Azure actions through the hosting connection. The hosting connection set up in the Citrix Cloud console links the Citrix Cloud through the Cloud Connectors to resource locations in Azure.
+App registration is the process of creating a one-way trust relationship between a Citrix Cloud account and Azure so that the Citrix Cloud trusts Azure. The app registration process creates an Azure service principal account that the Citrix Cloud can use for all Azure actions through the hosting connection. The hosting connection that's set up in the Citrix Cloud console links the Citrix Cloud through the Cloud Connectors to resource locations in Azure.
 
-You must grant the service principal access to the resource groups that contain Citrix resources. Depending on your organization's security posture, you can either provide subscription access at the **Contributor** level, or create a custom role for the service principal.
+You must grant the service principal access to the resource groups that contain Citrix resources. Depending on your organization's security posture, you can either provide subscription access at the **Contributor** level or create a custom role for the service principal.
  
 When you create the service principal in Microsoft Entra ID, set the following values:
  
 - Add a **Redirect URI** and set it to **Web** with a value of `https://citrix.cloud.com`.
+
 - For **API Permissions**, add the **Azure Services Management API** from the **APIs my organization uses** tab, and select the **user_impersonation** delegated permission.
 - For **Certificates & secrets**, create a **New client secret** with a recommended expiration period of one year. You must keep this secret updated as part of your security key rotation schedule.
  
-You need both the **Application (client) ID** and the client secret **Value** from App Registration to configure the hosting connection setup within the Citrix Cloud.
+You need both the **Application (client) ID** and the client secret **Value** from the app registration to configure the hosting connection setup within the Citrix Cloud.
  
-### Enterprise Applications
+### Enterprise applications
 
-Depending on your Citrix Cloud and Microsoft Entra configuration, you can add one or more **Citrix Cloud Enterprise Applications** to your Microsoft Entra tenant. These applications allow Citrix Cloud to access data stored in the Microsoft Entra tenant. The following table lists the Application IDs and functions of the Citrix Cloud Enterprise Applications in Microsoft Entra ID.
+Depending on your Citrix Cloud and Microsoft Entra configuration, you can add one or more **Citrix Cloud enterprise applications** to your Microsoft Entra tenant. These applications allow Citrix Cloud to access data that's stored in the Microsoft Entra tenant. The following table lists the Application IDs and functions of the Citrix Cloud enterprise applications in Microsoft Entra ID.
 
-| Enterprise Application ID | Purpose |
+| Enterprise application ID | Purpose |
 |:----|:----|
 | f9c0e999-22e7-409f-bb5e-956986abdf02 | Default connection between Microsoft Entra ID and Citrix Cloud |
 | 1b32f261-b20c-4399-8368-c8f0092b4470 | Administrator invitations and sign-ins |
@@ -54,7 +55,7 @@ Depending on your Citrix Cloud and Microsoft Entra configuration, you can add on
 | 5c913119-2257-4316-9994-5e8f3832265b | Default connection between Microsoft Entra ID and Citrix Cloud with Citrix Endpoint Management |
 | e067934c-b52d-4e92-b1ca-70700bd1124e | Legacy connection between Microsoft Entra ID and Citrix Cloud with Citrix Endpoint Management | 
 
-Each Enterprise Application grants Citrix Cloud specific permissions to either the Microsoft Graph API or the Microsoft Entra API. For example, the Workspace subscriber sign-in application grants **User.Read** permissions to both APIs, so that users can sign in and read their profiles. For more information about the permissions granted, see [Microsoft Entra Permissions for Citrix Cloud](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-management/identity-access-management/azure-ad-permissions.html).
+Each Enterprise Application grants Citrix Cloud specific permissions to either the Microsoft Graph API or the Microsoft Entra API. For example, the Workspace subscriber sign-in application grants **User.Read** permissions to both APIs, so that users can sign in and read their profiles. For more information about the permissions granted, see [Microsoft Entra permissions for Citrix Cloud](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-management/identity-access-management/azure-ad-permissions.html).
 
 ### Built-in roles
 
@@ -178,7 +179,7 @@ Assign the **Citrix_Machine_Catalog** custom role to the **Citrix_MachineCatalog
 
 The NSGs are stateful, so they allow return traffic that can apply to a VM, a subnet, or both. When both subnet and VM NSGs exist, the subnet NSGs apply first for inbound traffic, and the VM NSGs apply first for outbound traffic. By default, all traffic between hosts is allowed within a virtual network, along with all inbound traffic from a load balancer. By default, only outbound internet traffic is allowed, and all other outbound traffic is denied.
  
-By using NSGs to allow only expected traffic in the Citrix Cloud environment, you can limit potential attack vectors and significantly increase deployment security. The following table lists the required networking ports and protocols that a Citrix deployment must allow. This list includes only the ports the Citrix infrastructure uses, and doesn't include the ports your applications use. Be sure to define all ports in the NSG that protects the VMs.
+Use NSGs to allow only expected traffic in the Citrix Cloud environment so that you can limit potential attack vectors and significantly increase deployment security. The following table lists the required networking ports and protocols that a Citrix deployment must allow. This list includes only the ports the Citrix infrastructure uses and doesn't include the ports that your applications use. Be sure to define all ports in the NSG that protects the VMs.
 
 | Source | Destination | Protocol | Port | Purpose |
 |----|----|----|----|----|
@@ -201,14 +202,14 @@ By using NSGs to allow only expected traffic in the Citrix Cloud environment, yo
 | WEM Agent | WEM Service | HTTPS | 443 | Agent to service communication |
 | WEM Agent | Cloud Connectors | TCP | 443 | Registration traffic |
 
-If you use Citrix Application Delivery Management (ADM), see [System Requirements](https://docs.citrix.com/en-us/citrix-application-delivery-management-service/system-requirements.html#ports) for network and port requirements.
+For information about network and port requirements for Citrix Application Delivery Management (ADM), see [System Requirements](https://docs.citrix.com/en-us/citrix-application-delivery-management-service/system-requirements.html#ports).
 
 ## Antivirus
 
-Antivirus software is a crucial element for end user environment protection. Configuring antivirus appropriately in a Citrix DaaS environment is key to a smooth operation. Incorrect antivirus configuration can result in performance issues, degraded user experiences, or timeouts and failures of various components. For more information about how to configure antivirus in your Citrix DaaS environment, see [Tech Paper: Endpoint Security, Antivirus, and Antimalware Best Practices](https://community.citrix.com/tech-zone/build/tech-papers/antivirus-best-practices#_=_).
+Antivirus software is a crucial element for end user environment protection. Configure antivirus appropriately in a Citrix DaaS environment to ensure a smooth operation. Incorrect antivirus configuration can result in performance problems, degraded customer experiences, or timeouts and failures of various components. For more information about how to configure antivirus in your Citrix DaaS environment, see [Endpoint security, antivirus, and antimalware best practices](https://community.citrix.com/tech-zone/build/tech-papers/antivirus-best-practices#_=_).
 
 ## Next step
 
-Review the critical design considerations and recommendations for business continuity and disaster recovery (BCDR) specific to the deployment of Citrix on Azure.
+Review the critical design considerations and recommendations for business continuity and disaster recovery (BCDR) that's specific to the deployment of Citrix on Azure.
 
 - [Business continuity and disaster recovery](citrix-business-continuity-disaster-recovery.md)
