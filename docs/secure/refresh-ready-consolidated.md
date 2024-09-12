@@ -12,11 +12,11 @@ ms.custom: internal, UpdateFrequency2
 
 ## Introduction
 
-The Ready phase of a cloud adoption journey focuses on building out the foundation of the estate. Microsoft's [Azure landing zone](../ready/landing-zone/) approach offers enterprises and large organizations a secure, scalable, and modular design pattern to follow when implementing their estates. Smaller organizations and startups may not need the level of organization that the landing zone approach uses, but understanding the landing zone philosophy can help any organization strategize their foundational design to ensure a high degree of security and scalability.
+The Ready phase of a cloud adoption journey focuses on building out the foundation of the estate. Microsoft's [Azure landing zone](../ready/landing-zone/index.md) approach offers enterprises and large organizations a secure, scalable, and modular design pattern to follow when implementing their estates. Smaller organizations and startups may not need the level of organization that the landing zone approach uses, but understanding the landing zone philosophy can help any organization strategize their foundational design to ensure a high degree of security and scalability.
 
 After defining your cloud adoption [strategy](./refresh-strategy-consolidated.md) and [plan](./refresh-plan-consolidated.md), you can turn begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
 
-This article is a supporting guide to the [Ready](../ready) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
+This article is a supporting guide to the [Ready](../ready/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
 ## Security posture modernization
 
@@ -28,11 +28,11 @@ The first implementation steps in modernizing your security posture are building
 
 Develop secure, scalable landing zones that provide controlled environments for deploying cloud resources. These zones ensure that security policies are consistently applied and that resources are segregated according to their security requirements. Refer to the [security design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) for detailed guidance on this topic.
 
-- **Modern identity, authorization, and access:** Following the principles of Zero Trust, the modern approach to identity, authorization, and access moves from trust-by-default to trust-by-exception. As such, users, devices, systems, and apps should only be allowed to access resources that they require, and only for as long as required to fulfill their function. The same guidance applies to the foundational elements of your estate: tightly control permissions to subscriptions, networking resources, governance solutions, the identity and access management (IAM) platform, and tenants using the same recommendations as the workloads that you run. Refer to the [identity and access management design area](../ready/landing-zone/design-area/identity-access) for detailed guidance on this topic.
+- **Modern identity, authorization, and access:** Following the principles of Zero Trust, the modern approach to identity, authorization, and access moves from trust-by-default to trust-by-exception. As such, users, devices, systems, and apps should only be allowed to access resources that they require, and only for as long as required to fulfill their function. The same guidance applies to the foundational elements of your estate: tightly control permissions to subscriptions, networking resources, governance solutions, the identity and access management (IAM) platform, and tenants using the same recommendations as the workloads that you run. Refer to the [identity and access management design area](../ready/landing-zone/design-area/identity-access.md) for detailed guidance on this topic.
 
 ### Azure facilitation
 
-- **Azure landing zone accelerators:** Microsoft maintains several landing zone accelerators, which are pre-packaged deployments of a given workload type that can be easily deployed into a landing zone to get you up and running quickly. They include [Azure Integration Services](../scenarios/app-platform/integration-services/), [Azure Kubernetes Service (AKS)](../scenarios/app-platform/aks/), [Azure API Management](../scenarios/app-platform/api-management/), and others. Refer to the [Modern application platform scenario](../scenarios/app-platform/index.md) section of CAF for a full list of accelerators and other topics related to modern application considerations.
+- **Azure landing zone accelerators:** Microsoft maintains several landing zone accelerators, which are pre-packaged deployments of a given workload type that can be easily deployed into a landing zone to get you up and running quickly. They include [Azure Integration Services](../scenarios/app-platform/integration-services/landing-zone-accelerator.md), [Azure Kubernetes Service (AKS)](../scenarios/app-platform/aks/landing-zone-accelerator.md), [Azure API Management](../scenarios/app-platform/api-management/landing-zone-accelerator.md), and others. Refer to the [Modern application platform scenario](../scenarios/app-platform/index.md) section of CAF for a full list of accelerators and other topics related to modern application considerations.
 
 - **Azure landing zones Terraform module:** You can optimize your landing zones deployments with automation by using the [Azure landing zones Terraform module](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest). Using your continuous deployment and continuous integration (CI/CD) pipeline to deploy landing zones ensures that all of your landing zones are deployed identically, with all security mechanisms in place.
 
@@ -92,7 +92,7 @@ Like your confidentiality preparations, ensure that you have well-governed polic
 
 ### Azure facilitation
 
-- [Azure Policy](/azure/governance/policy) and [Microsoft Defender for Cloud](/defender-for-cloud/defender-for-cloud-introduction) work hand-in-hand to help you define and enforce security policies across your cloud estate. Both solutions support the governance of your foundational elements along with workload resources.
+- [Azure Policy](/azure/governance/policy) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) work hand-in-hand to help you define and enforce security policies across your cloud estate. Both solutions support the governance of your foundational elements along with workload resources.
 
 - [Azure Update Manager](/azure/update-manager/overview) is Azure's native update and patch management solution. It can be extended to on-premises systems and Arc-enabled systems.
 

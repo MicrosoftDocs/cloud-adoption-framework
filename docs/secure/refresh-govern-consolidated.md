@@ -18,7 +18,7 @@ Security governance bridges your business priorities with technical implementati
 
 **Business goals and risk** provide the best direction for security. This direction ensures that security focuses their efforts on important matters for the organization. It also informs risk owners using familiar language and processes in the risk management framework.
 
-This article is a supporting guide to the [Govern](../govern) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
+This article is a supporting guide to the [Govern](../govern/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
 ## Security posture modernization
 

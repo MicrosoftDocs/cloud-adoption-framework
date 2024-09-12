@@ -14,7 +14,7 @@ ms.custom: internal, UpdateFrequency2
 
 As you implement your cloud estate and move workloads in, having robust security mechanisms and practices in place will help ensure that your workloads will be secure at the outset and you won't have to go back and fill in security gaps once workloads are in production. Building out your security mechansims and practices should be prioritized in the Adopt phase to ensure that workloads are consistently built according to best practices and IT teams are prepared for cloud operations through well-designed policies and procedures.
 
-This article is a supporting guide to the [Adopt](../adopt) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
+This article is a supporting guide to the [Adopt](../adopt/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
 ## Security posture modernization adoption
 
@@ -72,9 +72,7 @@ By incorporating these ACM methodologies and best practices, organizations can e
 
     - **Azure Functions**: [Azure Functions](/azure/azure-functions/functions-overview) is a serverless tool that you can use to automate tasks by using your preferred development language. Functions provides a comprehensive set of event-driven triggers and bindings that connect your functions to other services. You don't have to write extra code.
 
-    - **Azure Automation**: PowerShell and Python are popular programming languages for automating operational tasks. Use these languages to perform operations like restarting services, transferring logs between data stores, and scaling infrastructure to meet demand. You can express these operations in code and run them on demand. Alone, these languages don't offer a platform for centralized management, version control, or run history. The languages also lack a native mechanism for responding to events like monitoring-driven alerts. To provide these capabilities, you need an automation platform.
-
-    [Automation](/azure/automation/overview) provides an Azure-hosted platform for hosting and running PowerShell and Python code across cloud and on-premises environments, both Azure and non-Azure. PowerShell and Python code is stored in an Automation runbook. Use Automation to:
+    - **Azure Automation**: PowerShell and Python are popular programming languages for automating operational tasks. Use these languages to perform operations like restarting services, transferring logs between data stores, and scaling infrastructure to meet demand. You can express these operations in code and run them on demand. Alone, these languages don't offer a platform for centralized management, version control, or run history. The languages also lack a native mechanism for responding to events like monitoring-driven alerts. To provide these capabilities, you need an automation platform. [Automation](/azure/automation/overview) provides an Azure-hosted platform for hosting and running PowerShell and Python code across cloud and on-premises environments, both Azure and non-Azure. PowerShell and Python code is stored in an Automation runbook. Use Automation to:
 
         - Trigger runbooks on demand, on a schedule, or through a webhook.
 
@@ -172,7 +170,7 @@ In the adopt phase, planning and designs are turned into real-world implementati
 
 - **Monitoring and alerting:** Monitor your data stores for changes with detailed change history information to help with reviews. Configure alerting to ensure that you have appropriate visibility and you can take efficient actions in case of any incidents that could affect data integrity.
 
-- **Backup policies:** Apply backup policies on all appropriate systems. Understand the backup capabilities of platform as a service (PaaS) ans software as a service (SaaS) services. For example, Azure SQL Database includes [automatic backups](azure/azure-sql/database/automated-backups-overview?view=azuresql) and you can configure the retention policy as necessary.
+- **Backup policies:** Apply backup policies on all appropriate systems. Understand the backup capabilities of platform as a service (PaaS) ans software as a service (SaaS) services. For example, Azure SQL Database includes [automatic backups](/azure/azure-sql/database/automated-backups-overview) and you can configure the retention policy as necessary.
 
 - **Share design standards:** Publish and share application design standards that incorporate data integrity mechanisms across the organization. Design standards should include nonfunctional requirements like tracking configuration and data changes at the application level natively and capturing this history in the data schema. This approach mandates that the data schema retains details about data history and configuration history as part of the datastore, in addition to standard logging mechanisms to bolster your integrity monitoring.
  
@@ -188,7 +186,7 @@ In the adopt phase, planning and designs are turned into real-world implementati
 
 - **Data classification and labeling:** [Microsoft Purview](/purview/purview) is a robust set of solutions that can help your organization govern, protect, and manage data, wherever it lives. It offers manual and automatic [data classification](/purview/concept-classification) and [sensitivity labeling](/purview/create-sensitivity-label).
 
-- **Configuration management:** [Azure Arc](azure/azure-arc/overview) is a centralized and unified infrastructure governance and managment platform that can manage configurations for cloud-based and on-premises systems. Using Azure Arc, you can extend your Security Baselines from [Azure Policy](/azure/governance/policy/overview), your [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) policies, and Secure Score evaluations, as well as logging and monitoring all your resources in one place.
+- **Configuration management:** [Azure Arc](/azure/azure-arc/overview) is a centralized and unified infrastructure governance and managment platform that can manage configurations for cloud-based and on-premises systems. Using Azure Arc, you can extend your Security Baselines from [Azure Policy](/azure/governance/policy/overview), your [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) policies, and Secure Score evaluations, as well as logging and monitoring all your resources in one place.
 
 - **Patch management:** [Azure Update Manager](/azure/update-manager/overview) is a unified update management solution for Windows and Linux machines that can be used for Azure, on-premises and multi-cloud environments. It has built-in support for [Azure Policy](/azure/governance/policy) and [Azure Arc](azure/azure-arc/overview) managed machines.
 
@@ -210,7 +208,7 @@ Maintaining a highly available cloud estate can only be done if the teams operat
 
 - **Disaster recovery preparedness:** Develop and regulary test disaster recovery plans for your workloads to ensure that they will be able to be recovered in the event of a disaster. Refer to the Azure reliability [disaster recovery](/azure/reliability/disaster-recovery-overview) documentation for detailed guidance on this topic.
 
-    - Automate recovery activities to the extent practical. For example, make use of automatic failvoer capabilities in services like [Azure SQL Database](/azure/azure-sql/database/failover-group-sql-db?view=azuresql)
+    - Automate recovery activities to the extent practical. For example, make use of automatic failvoer capabilities in services like [Azure SQL Database](/azure/azure-sql/database/failover-group-sql-db)
 
 - **Understanding service-level agreements:** Service-level agreements (SLAs) that are provided by your cloud platform for their services help you understand the guaranteed uptime for the components of your workloads. Using those SLAs as your basis, you can then develop your own target metrics for the SLAs you offer your customers. Microsoft publishes the SLAs for all cloud services at [Service-level agreements for online services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services)
 

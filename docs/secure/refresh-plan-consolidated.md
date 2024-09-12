@@ -14,11 +14,11 @@ ms.custom: internal, UpdateFrequency2
 
 Developing a cloud adoption plan is a complex undertaking, often with many technical challenges that need to be carefully strategized to ensure success, like modernizing legacy workloads to run on cloud infrastructure. It is critical that security considerations are integrated into every phase of the adoption plan to ensure that you're new cloud estate is built securely from the ground up. When making decisions about your migration or implementation default to designing for the highest security strategy stance allowable for your business. It is best to start your designs with security taking precedence over performance and cost efficiency to ensure that you're not introducing risks in your design that will have to be dealt with later, which could mean redesigning workloads. The guidance provided in this article is meant to help you develop your cloud adoption plan with security as a cornerstone tenet.
 
-This article is a supporting guide to the [Plan](../plan) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
+This article is a supporting guide to the [Plan](../plan/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
 ## Plan for landing zone adoption
 
-Microsoft recommends using the [landing zone](../ready/landing-zone/) approach to building out your cloud estate foundational elements. This is especially true for enterprise and large organizations. Smaller organizations and start-ups may not benefit from adopting this approach at the beginning of their cloud journey, but its important to understand the [design areas](../ready/landing-zone/design-areas.md) as you will need to include these areas in your cloud adoption plan whether you build a full-blown landing zone or not.
+Microsoft recommends using the [landing zone](../ready/landing-zone/index.md) approach to building out your cloud estate foundational elements. This is especially true for enterprise and large organizations. Smaller organizations and start-ups may not benefit from adopting this approach at the beginning of their cloud journey, but its important to understand the [design areas](../ready/landing-zone/design-areas.md) as you will need to include these areas in your cloud adoption plan whether you build a full-blown landing zone or not.
 
 The Azure landing zone approach will provide you a well-designed foundation for your cloud estate, setting you up for a manageable environment that can be secured according to best practices.
 
@@ -96,7 +96,7 @@ Include considerations for integrity in your incident response plan. These consi
 
 Your cloud adoption plan should address availability by adopting standards for architecture design and operations. These standards will guide the implementation and further phases, providing a blueprint for how availability requirements will be achieved. Consider the following recommendations as you build out your cloud adoption plan:
 
-- **Standardize infrastructure and application design patterns:** To help ensure that your workloads are reliable, infrastructure and application design patterns must be standardized. Avoid unnecessary complexity to make designs repeatable and to discourage shadow IT behaviors. Follow best practices for [highly available infrastructure](/azure/well-architected/reliability/redundancy) and [resilient applications](azure/well-architected/reliability/self-preservation) as you define your design standards. 
+- **Standardize infrastructure and application design patterns:** To help ensure that your workloads are reliable, infrastructure and application design patterns must be standardized. Avoid unnecessary complexity to make designs repeatable and to discourage shadow IT behaviors. Follow best practices for [highly available infrastructure](/azure/well-architected/reliability/redundancy) and [resilient applications](/azure/well-architected/reliability/self-preservation) as you define your design standards. 
 
 - **Standardize development tools and practices:** Develop well-defined and enforcable [standards for your development tools and practices](/azure/well-architected/operational-excellence/formalize-development-practices) to help ensure that your deployments adhere to the principles of the CIA Triad, incorporating best practices for [safe deployments](/azure/well-architected/operational-excellence/safe-deployments).
 

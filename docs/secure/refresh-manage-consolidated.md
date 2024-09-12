@@ -14,7 +14,7 @@ ms.custom: internal, UpdateFrequency2
 
 The Manage phase of a cloud adoption journey focuses on the ongoing operation of your cloud estate. Maintaining and strenthening your security posture continuously is critical to successfully managing your estate and should be considered the cornerstone of your management practices. If you neglect security in favor of cost savings or performance improvements, you risk exposing your business to threats that could severely damage your business and reverse any short-term benefits that doing so brought. Investing in security mechanisms and practices will set your business up for long-term success by minimizing the risks of detrimental attacks.
 
-This article is a supporting guide to the [Manage](../manage) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
+This article is a supporting guide to the [Manage](../manage/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
 ## Security posture mondernization
 
