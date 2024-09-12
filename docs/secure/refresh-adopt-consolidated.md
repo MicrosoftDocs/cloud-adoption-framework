@@ -188,7 +188,7 @@ In the adopt phase, planning and designs are turned into real-world implementati
 
 - **Configuration management:** [Azure Arc](/azure/azure-arc/overview) is a centralized and unified infrastructure governance and managment platform that can manage configurations for cloud-based and on-premises systems. Using Azure Arc, you can extend your Security Baselines from [Azure Policy](/azure/governance/policy/overview), your [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) policies, and Secure Score evaluations, as well as logging and monitoring all your resources in one place.
 
-- **Patch management:** [Azure Update Manager](/azure/update-manager/overview) is a unified update management solution for Windows and Linux machines that can be used for Azure, on-premises and multi-cloud environments. It has built-in support for [Azure Policy](/azure/governance/policy) and [Azure Arc](azure/azure-arc/overview) managed machines.
+- **Patch management:** [Azure Update Manager](/azure/update-manager/overview) is a unified update management solution for Windows and Linux machines that can be used for Azure, on-premises and multi-cloud environments. It has built-in support for [Azure Policy](/azure/governance/policy) and [Azure Arc](/azure/azure-arc/overview) managed machines.
 
 ## Adopt the principle of availability
 
