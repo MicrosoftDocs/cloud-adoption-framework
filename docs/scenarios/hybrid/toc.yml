@@ -146,6 +146,10 @@ items:
         href: /azure/architecture/hybrid/hybrid-server-os-mgmt?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Azure Arc hybrid management and deployment for Kubernetes clusters
         href: /azure/architecture/hybrid/arc-hybrid-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      - name: Azure Arc-enabled System Center Virtual Machine Manager
+        href: /azure/architecture/hybrid/azure-arc/system-center-virtual-machine-manager?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      - name: Azure Arc-enabled VMware vSphere
+        href: /azure/architecture/hybrid/azure-arc/vmware-vsphere?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Disaster recovery for Azure Stack Hub virtual machines
         href: /azure/architecture/hybrid/azure-stack-vm-dr?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Cross cloud scaling
