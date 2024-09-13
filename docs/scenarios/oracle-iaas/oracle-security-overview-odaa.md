@@ -17,7 +17,7 @@ This article builds on several considerations and recommendations that are defin
 
 Most databases contain sensitive data that requires a secure architecture beyond database-level protections. The defense-in-depth strategy provides comprehensive security by layering multiple defense mechanisms. This approach combines various measures to avoid relying solely on one type of security, such as network defenses. These measures include strong authentication and authorization frameworks, network security, encryption of data at rest, and encryption of data in transit. This multilayered strategy is essential for securing Oracle workloads effectively.
 
-For more information, see [Security Guide for Oracle Exadata Database Service on dedicated infrastructure](https://docs.oracle.com/en/engineered-systems/exadata-cloud-service/ecscm/ecs-security-guide.html#GUID-EBDA0EB5-734A-4AD2-A740-8C174B1FFE3B) and [Exadata Security Controls](https://www.oracle.com/a/ocom/docs/engineered-systems/exadata/exadata-cloud-service-security.pdf).
+For more information, see [Security Guide for Oracle Exadata Database Service on Dedicated Infrastructure](https://docs.oracle.com/en/engineered-systems/exadata-cloud-service/ecscm/ecs-security-guide.html#GUID-EBDA0EB5-734A-4AD2-A740-8C174B1FFE3B) and [Exadata Security Controls](https://www.oracle.com/a/ocom/docs/engineered-systems/exadata/exadata-cloud-service-security.pdf).
 
 ## Design considerations
 
@@ -31,9 +31,9 @@ Consider the following guidance when you design your security guidelines for Ora
 
 - The Oracle Database@Azure solution uses many default Transmission Control Protocol (TCP) ports for various operations. For the full list of ports, see [Default port assignments](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmin/exadata-network-requirements.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
 
-- To store and manage keys Transparent Data Encryption (TDE), which is enabled by default, the Oracle Database@Azure solution can use [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) or [Oracle Key Vault](https://www.oracle.com/security/database-security/key-vault/). Integration with Azure Key Vault isn't available.
+- To store and manage keys Transparent Data Encryption (TDE), which is enabled by default, the Oracle Database@Azure solution can use [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) or [Oracle Key Vault](https://www.oracle.com/security/database-security/key-vault/). Integration with Azure Key Vault isn't currently available.
 
-- By default, the database is configured by using Oracle-managed encryption keys. Customer managed keys are also supported.
+- By default, the database is configured by using Oracle-managed encryption keys. Customer-managed keys are also supported.
 
 - To enhance data protection, use [Oracle Data Safe](https://docs.oracle.com/en/cloud/paas/data-safe/admds/register-oracle-cloud-database.html#GUID-F75522C5-5D6C-499C-875C-228ADE00472A) with Oracle Database@Azure.
 
@@ -51,7 +51,7 @@ Consider the following recommendations when you design your security for Oracle 
 
 - If you use your own encryption keys, establish a rigorous key rotation process to uphold security and compliance standards.
 
-- If you use third-party or Oracle agents on Oracle Database@Azure, ensure these agents are installed in locations that will not be impacted by database or Grid Infrastructure patches.
+- If you use third-party or Oracle agents on Oracle Database@Azure, ensure that these agents are installed in locations that won't be affected by database or grid infrastructure patches.
 
 ## Next steps
 
