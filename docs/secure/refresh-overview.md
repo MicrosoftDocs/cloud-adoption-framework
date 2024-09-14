@@ -12,11 +12,21 @@ ms.custom: internal, UpdateFrequency2
 
 The CAF Secure methodology provides a structured approach for securing your Azure cloud estate. 
 
-This set of guidance applies recommendations for topics across the entirety of the CAF methodologies as security must be deeply integrated in every aspect of cloud adoption.
+This set of guidance applies recommendations for topics across the entirety of the CAF methodologies as security must be deeply integrated in every aspect of cloud adoption. As such, you will find articles aligned with each methodology that provide security recommendations to consider as you work through that phase of your cloud adoptoin journey.
+
+Each article looks at several topics as they relate to the methodology with which they align:
+
+## Security posture modernization
+
+Throughout your cloud adoption journey, look for opportunities to enhance your overall security posture through modernization. The guidance provided throughout this methodology align with the [Microsoft Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview). This framework provides a detailed step-by-step approach to security posture modernization. As you consider the recommendations for this topic in each phase of the CAF methodology, complement these recommendations with the guidance found in the Zero Trust adoption framework.
+
+## Incident preparation and response
+
+Incident preparation and response are cornerstone elements of your overall security posture. How well you are prepared for incidents and how well you respond to incidents could determine whether you can successfully operate in the cloud. Well-designed preparation mechanisms and operational practices can help you detect threats quicker and minimize the blast radius of incidents, helping you recover quicker. Likewise well-designed response mechanisms and operational practices can help you move efficiently through recovery activities and offer clear areas for improvement throughout the process.
 
 ## The CIA Triad (Confidentiality, Integrity and Availability)
 
-The CIA Triad is a fundamental model in information security representing three core principles: [Confidentiality](./refresh-adopt-confidentiality.md), [Integrity](./refresh-adopt-integrity.md), and [Availability](./refresh-adopt-availability.md).
+The CIA Triad is a fundamental model in information security representing three core principles: confidentiality, integrity, and availability. 
 
 - **Confidentiality:** Ensures that sensitive information is accessed only by authorized individuals. This involves implementing measures like encryption and access controls to protect data from unauthorized access.
 
@@ -31,3 +41,9 @@ Adopting the CIA triad helps ensure that the technology that runs your business 
 - **Business continuity:** Ensuring data integrity and availability is critical for maintaining business operations and avoiding downtime.
 
 - **Customer trust:** Implementing the CIA Triad builds trust with customers and stakeholders by demonstrating a commitment to data security.
+
+Each methodology-aligned article provides recommendations for each principle of the CIA Triad, helping you ensure that confidentiality, integrity, and availability are thoroughly considered in each phase of your cloud adoption journey.
+
+## Security posture sustainment
+
+Continuous improvement is imperative for sustained success in the cloud. This is especially true for your security posture as cyber threats constantly grow more sophisticated and proliferate ever more rapidly. The guidance in these sections will help you think about ways to set your organization up for long-term sustained success by focusing on finding opportunities for continuous improvement as your cloud estate is established and evolves over time.
