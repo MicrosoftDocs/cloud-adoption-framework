@@ -27,7 +27,7 @@ This article focuses on identity, networking, and antivirus recommendations.
 
 ## Service principal roles and identity
 
-The following sections discuss Citrix DaaS service principal creation, roles, and requirements.
+The following sections describe the creation, roles, and requirements of Citrix DaaS service principals.
 
 ### App registration
 
@@ -40,7 +40,7 @@ When you create the service principal in Microsoft Entra ID, set the following v
 - Add a **Redirect URI** and set it to **Web** with a value of `https://citrix.cloud.com`.
 
 - For **API Permissions**, add the **Azure Services Management API** from the **APIs my organization uses** tab, and select the **user_impersonation** delegated permission.
-- For **Certificates & secrets**, create a **New client secret** with a recommended expiration period of one year. You must regularly update this secret as part of your security key rotation schedule.
+- For **Certificates & secrets**, create a **New client secret** that has a recommended expiration period of one year. You must regularly update this secret as part of your security key rotation schedule.
  
 You need both the **Application (client) ID** and the client secret **Value** from the app registration to configure the hosting connection setup within Citrix Cloud.
  
@@ -119,7 +119,7 @@ The following JSON description of the **Citrix_Machine_Catalog** role has the mi
     "id": "",
     "properties": {
     "roleName": "Citrix_Machine_Catalog",
-    "description": "Minimum permissions to create a machine catalog. Assign to resource groups that contain Citrix workload servers that run the Virtual Delivery Agent.",
+    "description": "The minimum permissions to create a machine catalog. Assign to resource groups that contain Citrix workload servers that run the Virtual Delivery Agent.",
     "assignableScopes": [
     "/"
     ],
@@ -181,7 +181,7 @@ Assign the **Citrix_Machine_Catalog** custom role to the **Citrix_MachineCatalog
 
 The NSGs are stateful, so they allow return traffic that can apply to a VM, a subnet, or both. When both subnet and VM NSGs exist, the subnet NSGs apply first for inbound traffic, and the VM NSGs apply first for outbound traffic. By default, a virtual network allows all traffic between hosts and all inbound traffic from a load balancer. By default, a virtual network allows only outbound internet traffic and denies all other outbound traffic.
  
-Use NSGs to allow only expected traffic in the Citrix Cloud environment so that you can limit potential attack vectors and increase deployment security. The following table lists the required networking ports and protocols that a Citrix deployment must allow. This list includes only the ports that the Citrix infrastructure uses and doesn't include the ports that your applications use. In the NSG that protects the VMs, be sure to define all ports.
+To limit potential attack vectors and increase deployment security, use NSGs to allow only the expected traffic in the Citrix Cloud environment. The following table lists the required networking ports and protocols that a Citrix deployment must allow. This list includes only the ports that the Citrix infrastructure uses and doesn't include the ports that your applications use. In the NSG that protects the VMs, be sure to define all ports.
 
 | Source | Destination | Protocol | Port | Purpose |
 |----|----|----|----|----|
