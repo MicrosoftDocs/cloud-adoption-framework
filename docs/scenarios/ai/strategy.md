@@ -14,12 +14,11 @@ This article shows you how to define an AI adoption strategy. As with any strate
 
 ## Identify AI use cases
 
-In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes. *Generative* AI fosters individual productivity and provides a more adaptive customer experience across many business areas.  *Non-generative* AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data  
+Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas with high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes. 
 
-Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas with high error rates. 
+*Generative* AI fosters individual productivity and provides a more adaptive customer experience across many business areas. 
 
 *Table. A few examples of generative AI use cases* 
-
 | Business Area  | Use case  |
 |--------|--------|
 | Marketing  | Use generative AI to automatically create social media posts and email newsletters.  |
@@ -31,8 +30,9 @@ Look for processes that can benefit from automation or optimization, especially 
 | Advertising agencies  | Create targeted ad variations for different audience segments.  |
 | Health and wellness apps  | Generate customized workout routines and meal plans  |
 
-*Table. A few examples of non-generative AI use cases* 
+*Non-generative* AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data  
 
+*Table. A few examples of non-generative AI use cases* 
 | Business tasks | Use Case  |
 |---------------------|-------------|
 | Prediction  | Make informed decisions or predictions based on historical data, such as forecasting trends or optimizing operations. Non-generative AI is the right tool for these tasks.  |
@@ -57,12 +57,12 @@ Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) servi
 
 | SaaS Copilot products | Description |
 |--------|--------|
-| [Copilot for Microsoft 365](../copilot/microsoft-365/microsoft-365-copilot-overview) | Use [Copilot for Microsoft 365](../copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. |
+| Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](../copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. |
 | Copilots for specific business roles | Use to enhance productivity for specific business roles, such as [Copilot for Security](/copilot/security/microsoft-security-copilot), [Copilot for Sales](/microsoft-sales-copilot/introduction), [Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). |
 | Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). |
 | Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. |
 
-- *Use Azure AI platforms (PaaS) to build AI applications.* Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying building AI, analytical AI, and machine learning applications.
+- *Use Azure AI platform services (PaaS) to build AI applications.* Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying building AI, analytical AI, and machine learning applications.
 
 | Platform | Description | Skills Required |
 |---------|------------|---------|
@@ -71,7 +71,7 @@ Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) servi
 | Azure AI Studio | Code-first platform to develop generative AI applications | Developer and data science skills |
 | Azure Machine Learning and Microsoft Fabric | Platform to train and deploy AI models using your own data | Developer and advanced data science skills |
 
-- *Use Azure infrastructure (IaaS) to bring your own AI models.* For more advanced AI needs, Azure Virtual Machines and Azure Kubernetes Service provide access to GPUs and CPUs with virtual machine images to bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway and should be used first before attempting IaaS.
+- *Use Azure infrastructure services (IaaS) to bring your own AI models.* For more advanced AI needs, Azure Virtual Machines and Azure Kubernetes Service provide access to GPUs and CPUs with virtual machine images to bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway and should be used first before attempting IaaS.
 
 ### Understand the skills needed to adopt AI
 
@@ -79,7 +79,7 @@ There are different approaches to adopting AI, and each approach requires differ
 
 *Table. Summary of skills required to adopt*  
 
-| AI type | Service model | General use case | Solution | Data needed | Skills required to adopt |
+| AI type | Service model | General use | Solution | Data needed | Skills required to adopt |
 |---------|--------------|-----------------|----------|-------------|-------------------------|
 | Generative AI | SaaS | Individual productivity | Copilot (Free or Pro) | No | None |
 | Generative AI | SaaS | Individual productivity and chatting with business data | Copilot for M365 and other SaaS Copilot products | Yes | General IT |
