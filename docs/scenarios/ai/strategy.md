@@ -47,7 +47,7 @@ Look for processes that can benefit from automation or optimization, especially 
 
 ## Define your AI technology strategy
 
-Each AI technology choice requires a different skillset, data, and effort to implement a production-ready solution. You need to take some time to understand the technology available and start identifying and validating the right solutions for your business.
+For each use case, you need to identify an AI technology to support it. Each AI technology choice requires a different skillset, data, and effort to implement a production-ready solution. You need to take some time to understand the technology available and start identifying and validating the right solutions for your business.
 
 Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) services you can use to adopt AI. There are services to improve individual productivity and many platforms to automate business processes using generative and non-generative AI. Use the following AI decision tree to help narrow the options for each AI opportunity. After identifying a service, carefully validate the selection by reviewing the skills needed, data needed, and cost factors.
 
