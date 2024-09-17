@@ -60,7 +60,7 @@ The following Citrix components within the Azure landing zone are optional. Cons
 
 Consider the [system, workload, user, and network guidance](https://docs.citrix.com/en-us/tech-zone/toc/by-product/citrix-daas/design-guidance.html) for Citrix technologies. This guidance aligns with Cloud Adoption Framework design principles.
 
-The Citrix on Azure solution requires a certain amount of throughput for each user, various protocols and ports, and other network considerations. You must appropriately size all network appliances, such as Citrix ADC and firewalls, to handle load increases during disaster recovery scenarios. For more information, see [Azure-specific considerations](https://community.citrix.com/tech-zone/design/design-decisions/azure-system-considerations.html).
+The Citrix on Azure solution requires a certain amount of throughput for each user, various protocols and ports, and other network considerations. You must appropriately size all network appliances, such as Citrix ADC and firewalls, to handle load increases during disaster recovery scenarios. For more information, see [Azure-specific considerations](https://community.citrix.com/tech-zone/design/design-decisions/azure-system-considerations).
 
 #### Network segmentation
 
