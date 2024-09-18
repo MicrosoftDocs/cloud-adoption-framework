@@ -16,34 +16,32 @@ This article shows you how to define an AI adoption strategy. As with any strate
 
 Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas with high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes. 
 
-*Generative* AI fosters individual productivity and provides a more adaptive customer experience across many business areas. 
+- *Generative* AI fosters individual productivity and provides a more adaptive customer experience across many business areas. 
 
-*Table. A few examples of generative AI use cases* 
-| Business Area  | Use case  |
-|--------|--------|
-| Marketing  | Use generative AI to automatically create social media posts and email newsletters.  |
-| E-commerce platforms  | Generate personalized product recommendations and tailored shopping experiences.  |
-| Product design  | Create multiple variations of product prototypes or design elements quickly.  |
-| Software development  | Automate the generation of repetitive code, such as CRUD operations.  |
-| Educational platforms  | Generate personalized quizzes and study materials for students.  |
-| Customer service  | Provide context-based responses through AI-driven chatbots.  |
-| Advertising agencies  | Create targeted ad variations for different audience segments.  |
-| Health and wellness apps  | Generate customized workout routines and meal plans  |
+- *Non-generative* AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data  
 
-*Non-generative* AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data  
+*Table. Examples of generative AI and non-generative AI use cases*
 
-*Table. A few examples of non-generative AI use cases* 
-| Business tasks | Use Case  |
-|---------------------|-------------|
-| Prediction  | Make informed decisions or predictions based on historical data, such as forecasting trends or optimizing operations. Non-generative AI is the right tool for these tasks.  |
-| Process automation  | Automate routine tasks and processes that do not require generating new content, such as customer service bots or operational workflows.  |
-| Data analysis  | Uncover patterns using structured data to gain insights and make data-driven decisions. |
-| Model Simulation  | Use scientific AI to simulate complex systems, such as fluid dynamics or finite element analysis, to predict behavior under various conditions and optimize designs or processes.  |
-| Anomaly Detection  | Identify unusual patterns or outliers in data that may indicate fraud, equipment failure, or other significant events.  |
-| Recommendation  | Provide personalized recommendations based on user behavior and preferences, commonly used in e-commerce, streaming services, and content platforms.  |
-| Optimization  | Enhance efficiency and performance by finding the best solutions to complex problems, such as supply chain optimization, resource allocation, and scheduling.  |
-| Sentiment Analysis  | Analyze text data from social media, customer reviews, or feedback to understand public sentiment and improve customer experience.  |
-| Image Recognition  | Identify and classify objects, people, or scenes in images and videos, used in applications like security surveillance, quality control, and medical imaging.  |
+| AI Type              | Business Area / Task            | Use Case     |
+|----------------------|---------------------------------|--------------|
+| **Generative AI**     | Marketing                      | Automatically create social media posts and email newsletters.           |
+|                      | E-commerce platforms            | Generate personalized product recommendations and tailored shopping experiences.   |
+|                      | Product design                  | Quickly create multiple variations of product prototypes or design elements.   |
+|                      | Software development            | Automate repetitive code generation, such as CRUD operations.      |
+|                      | Educational platforms           | Generate personalized quizzes and study materials for students.    |
+|                      | Customer service                | Provide context-based responses through AI-driven chatbots.   |
+|                      | Advertising agencies            | Create targeted ad variations for different audience segments.  |
+|                      | Health and wellness apps        | Generate customized workout routines and meal plans.   |
+| **Non-Generative AI** | Prediction                     | Forecast trends or optimize operations based on historical data.    |
+|                      | Process automation              | Automate routine tasks and workflows that don't require content generation, such as customer service bots.      |
+|                      | Data analysis                   | Uncover patterns in structured data for insights and data-driven decisions.   |
+|                      | Model simulation                | Simulate complex systems (e.g., fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes.    |
+|                      | Anomaly detection               | Identify unusual patterns in data (e.g., fraud detection, equipment failure prediction).  |
+|                      | Recommendation                  | Offer personalized recommendations based on user behavior, commonly used in e-commerce and streaming services.  |
+|                      | Optimization                    | Improve efficiency by solving complex problems (e.g., supply chain optimization, resource allocation).  |
+|                      | Sentiment analysis              | Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience.     |
+|                      | Image recognition               | Identify and classify objects in images and videos, applied in areas like security surveillance, quality control, and medical imaging |
+
 
 ## Define your AI technology strategy
 
