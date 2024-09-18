@@ -53,18 +53,18 @@ Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) servi
 
 :::image type="content" source="./images/ai-decision-tree.png" alt-text="Diagram showing Microsoft and Azure services on the right and decision points that lead to each service." lightbox="./images/ai-decision-tree.pn" border="false":::
 
-- *Use Microsoft Copilots (SaaS) to improve productivity.* Microsoft has four different types of SaaS generative AI services. Use the table for an overview and links for more information.  
+- *Buy Microsoft Copilots (SaaS) to improve productivity.* Microsoft has four different types of SaaS generative AI services. Use the table for an overview and links for more information.  
 
-| SaaS Copilot products | Description |
-|--------|--------|
-| Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](../copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. |
-| Copilots for specific business roles | Use to enhance productivity for specific business roles, such as [Copilot for Security](/copilot/security/microsoft-security-copilot), [Copilot for Sales](/microsoft-sales-copilot/introduction), [Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). |
-| Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). |
-| Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. |
+| SaaS Copilot products | Description | User
+|--------|--------|-------|
+| Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](../copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. | Business |
+| Role-based agents for Microsoft 365 | Use to enhance productivity for specific business roles, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business |
+| Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
+| Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. | Individual |
 
-- *Use Azure AI platform services (PaaS) to build AI applications.* Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying building AI, analytical AI, and machine learning applications.
+- *Build intelligent apps with Azure AI platform services (PaaS).* Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying building AI, analytical AI, and machine learning applications.
 
-| Platform | Description | Skills Required |
+| Platform | Description | Skills required |
 |---------|------------|---------|
 | Copilot Studio | Low-code platform to build generative AI applications | Without developer or data science skills |
 | Azure AI Services | Code-first platform to build analytical AI applications | Developer skills |
