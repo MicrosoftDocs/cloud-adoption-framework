@@ -3,7 +3,7 @@ title: Cloud adoption scenarios
 description: Find guidance for technology-specific and industry-specific scenarios that unify technical and nontechnical considerations to support your cloud adoption strategy for the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/17/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 ms.custom: internal
 ---

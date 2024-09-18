@@ -5,6 +5,7 @@ author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
+ms.custom: e2e-oracle
 ---
 
 # Network topology and connectivity for Oracle Database@Azure

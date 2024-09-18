@@ -14,7 +14,7 @@ Azure landing zones for HPC in finance don't have any specific considerations or
 
 ## Previous recommendations
 
-Keep in mind that it could be important to understand any decisions made previously by the cloud platform team so you know about existing [enterprise enrollment or Active Directory tenant decisions](../../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
+Keep in mind that it could be important to understand any decisions made previously by the cloud platform team so you know about existing [enterprise enrollment or Microsoft Entra tenant decisions](../../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
 
 ## Next steps
 

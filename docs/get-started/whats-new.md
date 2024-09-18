@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 07/02/2024
+ms.date: 09/05/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -13,6 +13,66 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## August 2024
+
+### Updated articles
+
+- [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
+- [Landing zone identity and access management](../ready/landing-zone/design-area/identity-access-landing-zones.md): Find new guidance about built-in and custom RBAC roles, least-privelage access, and conditions.
+- [Business commitment in cloud management](../manage/considerations/commitment.md): We updated the service-level agreement references to service-level objective references.
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Explore new updates about network security group rules and Oracle Data Safe.
+- [Business continuity and disaster recovery for an SAP migration](../scenarios/sap/eslz-business-continuity-and-disaster-recovery.md): Learn about the benefits of using Azure Backup to back up databases that have SAP HANA System Replication enabled.
+
+We made updates to the following articles for clarity:
+- [Network considerations for Azure VMware Solution dual-region deployments](../scenarios/azure-vmware/eslz-dual-region-network-topology.md)
+- [What is a data product?](../scenarios/cloud-scale-analytics/architectures/what-is-data-product.md)
+- [Cloud adoption scenarios](../scenarios/index.md)
+- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-iaas/oracle-landing-zone-accelerator.md)
+- [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
+
+## July 2024
+
+### New articles
+
+This month, we introduced new articles that have guidance for Red Hat Enterprise Linux (RHEL) on Azure. We also added new articles and made major updates to existing articles for Oracle on Azure IaaS and Oracle Database@Azure. Take a look at the new and updated content to see how you can apply these recommendations in your organization.
+
+#### Red Hat Enterprise Linux on Azure
+
+- [Azure RHEL landing zone accelerator](../scenarios/app-platform/azure-red-hat-enterprise-linux/landing-zone-accelerator.md): Learn how to use the RHEL landing zone accelerator to create a consistent, repeatable, and secure environment deployment. Use the architectural guidance and reference implementation recommendations to accelerate the migration and deployment of RHEL-based workloads to Microsoft Azure.
+- [Identity and access management (IAM) for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/identity-access-management.md): Discover IAM considerations for your RHEL landing zone accelerator deployment. Learn how to carefully design your hybrid cloud IAM implementation to ensure smooth integration and management of your instance landscape in the Azure cloud.
+- [Business continuity and disaster recovery for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/business-continuity-disaster-recovery.md): Learn how to improve business continuity and disaster recovery for your RHEL on Azure environment. Explore recommendations that you can use to support RHEL workloads and to deploy RHEL platform-management components.
+- [Network topology and connectivity for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/network-topology-connectivity.md): Learn how to implement design considerations and recommendations for network topology and connectivity in RHEL on Azure infrastructure. See how you can deploy various RHEL platform components and roles on virtual machines (VMs) with specific sizing and redundancy as needed.
+- [Resource organization for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/resource-organization.md): Learn key tactics for how to choose management groups and subscriptions that will help to ensure that you effectively govern and manage resources for your RHEL deployment.
+- [Security for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/security.md): See how you can design your security to target multiple areas to protect your RHEL systems. Learn how to create a secure and resilient cloud environment by implementing a strategic approach that applies both Azure and Red Hat security mechanisms.
+- [Management and monitoring for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/management-monitoring.md): Learn about best practices for effective management and monitoring in your RHEL on Azure infrastructure.
+- [Governance and compliance for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/governance-compliance.md): Learn about design considerations and recommendations for governance and compliance in a RHEL on Azure infrastructure. Discover key tactics for establishing efficient and effective governance and compliance in a cloud environment.
+- [Platform automation for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/platform-automation-devops.md): Learn about the tools, features, and services you can use to automate various tasks and manage the RHEL lifecycle within your Azure environment. Discover how to implement automation to improve the efficiency and reliability of your RHEL on Azure infrastructure.
+
+#### Oracle
+
+- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-iaas/oracle-landing-zone-accelerator.md): Learn how you can use the Oracle on Azure IaaS landing zone accelerator to automate the deployment of an environment capable of hosting Oracle on Azure IaaS Virtual Machines. See how the landing zone accelerator can be adapted to produce an architecture that fits your scenario and puts your organization on a path to sustainable scale.
+- [Manage and monitor Oracle Database@Azure](../scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure.md): Explore best practices for management and monitoring Oracle Exadata Database Service on a Dedicated Infrastructure with Oracle Database@Azure. Learn about key design considerations for health and metrics monitoring.
+- [Business continuity and disaster recovery for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure.md): Learn about business continuity and disaster recovery for Oracle Database@Azure and how to build a resilient architecture for your workload environment. Discover how you can design your architecture to meet the recovery time objective (RTO) and recovery point objective (RPO) of your solution.
+- [Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator](../scenarios/oracle-iaas/oracle-disaster-recovery-iaas.md): Find significant updates that reflect new guidance including the deprecation of availability sets and new recommendations for Virtual Machine Scale Sets flexible orchestration.
+
+### Updated articles
+
+- [Configure hybrid networking for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-network-topology-connectivity.md): Find new guidance and additional recommendations for large scale deployments of Azure and Citrix Cloud environments in a single region.
+- [Networking for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity.md): Explore the new reference architecture for a hub and spoke topology with hybrid connectivity scenario.
+- [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): Learn about new resources for checking the zone resilience of your resources.
+
+We made updates to the following articles to provide the latest guidance on networking:
+
+- [Define network encryption requirements](../ready/azure-best-practices/define-network-encryption-requirements.md)
+- [Plan for landing zone network segmentation](../ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md)
+- [Plan for traffic inspection](../ready/azure-best-practices/plan-for-traffic-inspection.md)
+
+These files were updated to include considerations for [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview) and [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview):
+
+- [Hybrid and multicloud migration](../scenarios/hybrid/migrate.md)
+- [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md)
+- [Azure Policy machine configuration extension](../manage/azure-server-management/guest-configuration-policy.md)
 
 ## June 2024
 
@@ -124,15 +184,13 @@ Explore dozens of new and updated articles to guide you through the migration pr
     - [Prepare tools and initial migration backlog](../migrate/prepare/tools-backlog.md): Prepare the tools and initial migration backlog that you need to support a migration to Azure.
     - [Select Azure regions for a migration](../migrate/prepare/select-regions-migration.md): Choose the Azure regions that best meet your requirements for a migration.
     - [Align roles and responsibilities](../migrate/prepare/roles-responsibilities.md): Ensure clarity and coverage of essential functions for the migration to Azure by aligning roles and responsibilities across the departments in your organization.
-    - [Get support resources and improve skills for migration projects](../migrate/prepare/skills-support.md): Make sure that your team has the right skills and resources to support a migration to Azure. 
-    
+    - [Get support resources and improve skills for migration projects](../migrate/prepare/skills-support.md): Make sure that your team has the right skills and resources to support a migration to Azure.
 
-- **Assess your readiness** 
+- **Assess your readiness**
     - [Migration assessment checklist](../migrate/assess/index.md): Follow the checklist to assess your workload's readiness for migration to the cloud.
     - [Classify workloads for a migration](../migrate/assess/classify.md): Conduct a premigration assessment to classify your workloads based on the data sensitivity.
     - [Evaluate workload readiness](../migrate/assess/evaluate.md): Understand how to adjust your workload to prepare it for migration to the cloud. Learn how to validate all assets and associated dependencies.
     - [Design workload architecture before migration](../migrate/assess/architect.md): Use the Cloud Adoption Framework to define the cloud architecture of a workload before you begin migration.
-    
 
 - **Prepare for deployment**
     - [Migration deployment checklist](../migrate/deploy/index.md): Follow the checklist to prepare for the deploy phase of migrating a workload to Azure.
@@ -141,8 +199,7 @@ Explore dozens of new and updated articles to guide you through the migration pr
     - [Replicate assets in a cloud migration](../migrate/deploy/replicate.md): Make sure that you understand the role of replication in the migration process and how to plan for the prerequisites and risks of replication activities. 
     - [Prepare for management activities](../migrate/deploy/prepare-for-management.md): Prepare to carry out management activities after a workload migration is complete. 
     - [Test your migration deployment in Azure](../migrate/deploy/migration-test.md): Perform migration testing in Azure to ensure that your architecture works with the replicated or staged resources.
-    
- 
+
 - **Complete a migration to Azure**
     - [Migration release checklist](../migrate/release/index.md): Follow the checklist to release a workload to production after a migration to Azure.
     - [Change communication](../migrate/release/change-communication.md): Communicate changes to your organization before, during, and after a migration to Azure.
@@ -150,10 +207,9 @@ Explore dozens of new and updated articles to guide you through the migration pr
     - [Complete the migration to Azure](../migrate/release/complete-migration.md): Complete final steps in the migration to Azure.
     - [Optimize cost after migration](../migrate/release/optimize-cost-after-migration.md): Optimize costs to ensure that you're getting the most value from your cloud resources.
     - [Build a growth mindset by conducting retrospectives](../migrate/release/retrospective.md): Use retrospectives to build a growth mindset in your team and to improve your migration process.
-     
+
 - **Explore relevant migration scenarios**
     - [Review product migration scenarios](../migrate/scenarios.md): Review the migration scenarios that are available for your product.
-
 
 #### Govern methodology refresh
 
@@ -182,7 +238,6 @@ Find new articles about Azure landing zones in the Ready methodology.
 - [Zero trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): Review a new multitenant architecture diagram and information about Microsoft Entra ID Protection.
 - [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md): Explore updates related to ExpressRoute.
 - [Manufacturing HPC storage in Azure](../scenarios/azure-hpc/manufacturing/storage.md): Learn about updates related to Azure Managed Lustre.
-
 
 ## March 2024
 
@@ -255,7 +310,7 @@ In the following articles, find updated guidance about workload discovery proces
 - [Migrate a cloud workload to another region](../relocate/migrate.md)
 - [How to initiate a cloud relocation project](../relocate/initiate.md)
 
-In [Centralized security operations with external identities for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/security-operations.md), we updated our guidance for centralized security operations. 
+In [Centralized security operations with external identities for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/security-operations.md), we updated our guidance for centralized security operations.
 
 In [Identity and access management for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-identity-and-access-management.md), we added updates for Azure Virtual Desktop design considerations and supported identity scenarios.
 
@@ -312,9 +367,9 @@ This article was updated with relevant information about IPv4 exhaustion and IPA
 
 To support the imminent general availability of Azure Monitor baseline alerts for an Azure landing zone, we have created Cloud Architecture Framework documentation about baseline alerts. Find out what baseline alerts are and where to go for more information about how to enhance your Azure platform by using Azure Monitor alerts.
 
--   [Monitor Azure platform landing zone components](../ready/landing-zone/design-area/management-monitor.md)
+- [Monitor Azure platform landing zone components](../ready/landing-zone/design-area/management-monitor.md)
 
--   [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md)
+- [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md)
 
 ### Azure VMware Solution network design guides
 
@@ -331,33 +386,5 @@ These guides describe the Microsoft-recommended approach to help you design netw
 - [Azure VMware Solution network design guide: Connectivity with on-premises sites](../scenarios/azure-vmware/on-premises-connectivity.md)
 
 - [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](../scenarios/azure-vmware/virtual-network-connectivity.md)
-
-## July 2023
-
-### Landing zone regions
-
-This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone and considerations for migrating your Azure estate to a different region.
-
-- [Landing zone regions](../ready/considerations/regions.md)
-
-### Enhanced migration guidance
-
-This article describes how to ensure that configurations are in place when you migrate your landing zone. It explores tasks, such as preparing your identity, enabling hybrid Domain Name System (DNS) services, and enabling subscription vending.
-
-- [Readying your landing zone for migration](../migrate/azure-migration-guide/ready-alz.md)
-
-### New best practices for SAP landing zone accelerator security on Azure
-
-This series provides guidance for your SAP environment in Azure. You can find best practices for security operations to secure your SAP environment in Azure, security recommendations for SAP on Azure that runs on a SQL Server database, and guidance about the flow of SAP data from source SAP systems to downstream targets. Learn how to use Azure Synapse Analytics to build a modern data platform to ingest, process, store, serve, and visualize data from various sources.
-
-- [SAP data integration example architecture](../scenarios/sap/sap-lza-data-example-architecture.md)
-
-- [Data integration security for SAP on Azure](../scenarios/sap/sap-lza-data-integration-security.md)
-
-- [SQL Server database security for SAP on Azure](../scenarios/sap/sap-lza-database-security.md)
-
-- [Security operations for SAP on Azure](../scenarios/sap/sap-lza-security-operations.md)
-
-- [Microsoft Sentinel for SAP on Azure](../scenarios/sap/sap-lza-sentinel-for-sap.md)
 
 <!-- docutune:ignoreNextStep -->
