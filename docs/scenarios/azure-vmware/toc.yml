@@ -47,15 +47,15 @@ items:
               - name: Virtual WAN Toplogies for Azure VMware Solution
                 items: 
                   - name: Introduction to Single and Dual Virtual WAN Regions for AVS             
-                    href: eslz-introduction-to-single-and-dual-virtual-wan-regions-for-avs.md
+                    href: introduction-to-single-and-dual-virtual-wan-regions-for-avs.md
                   - name: Single region Secure Virtual WAN with Global Reach               
-                    href: eslz-single-region-with-secure-virtual-wan-with-globalreach.md
+                    href: single-region-with-secure-virtual-wan-with-globalreach.md
                   - name: Dual region Secure Virtual WAN with Global Reach               
-                    href: eslz-dual-region-with-secure-virtual-wan-with-globalreach.md
+                    href: dual-region-with-secure-virtual-wan-with-globalreach.md
                   - name: Single region Secure Virtual WAN without Global Reach               
-                    href: eslz-single-region-with-secure-virtual-wan-without-globalreach.md
+                    href: single-region-with-secure-virtual-wan-without-globalreach.md
                   - name: Dual region Secure Virtual WAN without Global Reach               
-                    href: eslz-dual-region-with-secure-virtual-wan-without-globalreach.md
+                    href: dual-region-with-secure-virtual-wan-without-globalreach.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring
