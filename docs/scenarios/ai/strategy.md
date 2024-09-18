@@ -147,3 +147,4 @@ Adopting AI responsibly is an iterative process with regular monitoring and meas
 ## Next step 
 
 Plan to adopt AI.  
+
