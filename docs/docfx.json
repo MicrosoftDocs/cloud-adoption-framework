@@ -62,6 +62,9 @@
       }
     },
     "fileMetadata": {
+      "ms.collection": {
+        "scenarios/ai/**/*.md": "ce-skilling-ai-copilot"
+      },
       "ms.subservice": {
         "adopt/**/*.md": "caf-methodology-adopt",
         "digital-estate/**/*.md": "caf-methodology-plan",
@@ -81,6 +84,7 @@
         "ready/enterprise-scale/**/*.md": "caf-alz",
         "ready/landing-zone/**/*.md": "caf-alz",
         "relocate/**/*.md": "caf-methodology-adopt-relocate",
+        "scenarios/ai/**/*.md": "caf-scenario-ai",
         "scenarios/app-platform/**/*.md": "caf-scenario-app-plat",
         "scenarios/azure-hpc/**/*.md": "caf-scenario-hpc",
         "scenarios/azure-vmware/**/*.md": "caf-scenario-vmware",
