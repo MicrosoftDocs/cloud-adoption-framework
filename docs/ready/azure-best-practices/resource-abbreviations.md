@@ -211,12 +211,12 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
-| DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS zone | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
 | DNS forwarding ruleset | `Microsoft.Network/dnsForwardingRulesets` | `dnsfrs` |
 | DNS private resolver | `Microsoft.Network/dnsResolvers` | `dnspr` |
 | DNS private resolver inbound endpoint | `Microsoft.Network/dnsResolvers/inboundEndpoints` | `in` |
 | DNS private resolver outbound endpoint | `Microsoft.Network/dnsResolvers/outboundEndpoints` | `out` |
-| DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
+| Private DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
