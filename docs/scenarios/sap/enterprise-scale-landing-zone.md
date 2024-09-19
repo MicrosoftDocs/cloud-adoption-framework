@@ -119,6 +119,15 @@ For all pools and clusters (SAP Web Dispatcher, SAP application servers, SAP Cen
 
 An Azure availability zone is a unique physical location within a region. Each zone is made up of one or more datacenters that are equipped with independent power, cooling, and networking.
 
+It is important to ensure all Azure resources used in your workload are set up with Zone-redundant or across availability zones for zonal components. In order to assist in the process assign [Azure Policy Initiative for Zone Resilience](https://learn.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives#resilience) to intermediate Management Group. This ensures “start resilient & stay resilient” approach. The Zone Resilient built-in policies aim to:
+
+- Deliver clear and actionable information that assists in the design, planning, and automation of AZ-resilient deployments.
+- Detect: Audit subscriptions for non-compliance of these policies.
+- Prevent configurations using the Deny effect for resources that do not adhere to zone resiliency standards.
+
+Compliance to this initiative can be checked at the end of the Implementation process. More information of the Azure Policy Initiative for Zone Resilience can be found here.
+
+
 When you design for availability zones, check the latency between zones. Knowing the network latency between the zones of a region helps you choose availability zones that have the least network latency for cross-zone network traffic.
 
 When you set up your availability zones, use zone-redundant services for your instances of ExpressRoute, [Azure VPN Gateway](/azure/vpn-gateway/about-zone-redundant-vnet-gateways), and [Application Gateway](/azure/application-gateway/overview-v2).
