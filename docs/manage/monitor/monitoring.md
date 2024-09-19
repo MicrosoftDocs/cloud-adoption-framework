@@ -1,9 +1,9 @@
 ---
-title: Observability in cloud monitoring
+title: Monitoring in the cloud
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
-author: Zimmergren
-ms.author: tozimmergren
-ms.date: 06/20/2023
+author: bwren
+ms.author: bwren
+ms.date: 09/19/2024
 ms.topic: conceptual
 products: azure-monitor
 ms.custom: UpdateFrequency2
@@ -93,14 +93,3 @@ The Microsoft Azure Well-Architected Framework (WAF) is a set of guiding tenets 
 
 Observability evolves gradually, starting with a minimally viable monitoring plan, and the effort to integrate tools and processes is underway. As you get comfortable with the data (metrics, logs, and transactions), you can understand the behavior and signs of symptoms or issues from those resources or applications. By getting familiar with the data, you build trust in working with Azure Monitor and the data.
 
-
-
-
-
-
-
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Service Level Objectives](./service-level-objectives.md)
