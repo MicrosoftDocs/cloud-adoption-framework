@@ -125,7 +125,7 @@ When you set up your availability zones, use zone-redundant services for your in
 
 For more information about the availability zone architecture for SAP on Azure, see [SAP HA availability zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
-It is important to ensure all Azure resources used in your workload are set up with Zone-redundant or across availability zones for zonal components. In order to assist in the process assign [Azure Policy Initiative for Zone Resilience](https://learn.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives#resilience) to intermediate Management Group. This ensures “start resilient & stay resilient” approach. The Zone Resilient built-in policies aim to:
+It is important to ensure all Azure resources used in your workload are set up with Zone-redundant or across availability zones for zonal components. In order to assist in the process assign [Azure Policy Initiative for Zone Resilience](/azure/governance/policy/samples/built-in-initiatives#resilience) to intermediate Management Group. This ensures “start resilient & stay resilient” approach. The Zone Resilient built-in policies aim to:
 
 - Deliver clear and actionable information that assists in the design, planning, and automation of AZ-resilient deployments.
 - Detect: Audit subscriptions for non-compliance of these policies.
