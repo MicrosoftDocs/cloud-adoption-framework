@@ -11,9 +11,9 @@ ms.custom: UpdateFrequency2
 
 # Monitoring in the cloud
 
-Whether you're a business owner, platform owner, or application owner, you need visibility of your cloud environment to ensure that your workloads are running smoothly. You need to answer basic questions such as whether your applications are available and performing to your customers' expectations, if you have any security threats that require investigation, and if your consumption costs are within expected range.
+Whether you're a business owner, platform owner, or application owner, you need observability of your cloud environment to ensure that your workloads are running smoothly. You need to answer basic questions such as whether your applications are available and performing to your customers' expectations, if you have any security threats that require investigation, and if your consumption costs are within expected range.
 
-Monitoring is the process of collecting, analyzing, and acting on metrics, logs, and transactions indicating the health of your platform, resources, and applications. An effective monitoring environment includes your entire cloud estate which may include resources across multiple clouds and on-premises.
+Monitoring is the process of collecting, analyzing, and acting on telemetry indicating the health of your platform, resources, and applications. An effective monitoring environment includes your entire cloud estate which may include resources across multiple clouds and on-premises.
 
 > [!NOTE]
 > Observability is a property of a system that's a measure of how well its internal states can be inferred from its external outputs. In addition to deploying service and processes in place to monitor your cloud environment, you need to have the ability to observe and understand the behavior of your services running in the cloud. 
@@ -23,13 +23,13 @@ Monitoring is the process of collecting, analyzing, and acting on metrics, logs,
 
 Investment in your monitoring environment provides a positive return across multiple aspects of your cloud including the following. 
 
-**Availability and performance:** Monitoring helps ensure that your cloud services applications are available and performing as expected. By tracking key metrics and setting up alerts, you can identify and respond to issues before they impact users.
+**Availability and performance:** Monitoring helps ensure that your cloud services and applications are available and performing as expected. By tracking key metrics and configuring alert rules, you can identify and respond to issues before they impact users.
 
 **Cost Optimization:** By tracking resource utilization through monitoring, you can optimize costs by scaling resources according to demand, which helps to avoid over-provisioning and under-utilization. Monitoring can also identify and alert you to any cost overruns or unexpected spikes in usage.
 
-**Compliance:** Monitoring ensures that cloud services comply with policies and regulations by providing logs and records of activities. Reports using this data can assist with regular audits and compliance checks.
+**Compliance:** Monitoring ensures that cloud services comply with policies and regulations by maintaining logs and records of activities. Reports using this data can assist with regular audits and compliance checks.
 
-**Security:** Continuous monitoring can detect security threats and vulnerabilities, allowing for immediate action to protect data and resources. Collected data can also be analyzed for threat detection and response.
+**Security:** Continuous monitoring can detect security threats and vulnerabilities allowing for immediate action to protect data and resources. Collected data can also be analyzed for threat detection and response.
 
 **Troubleshooting:** Detailed monitoring allows for in-depth analysis of issues, facilitating faster troubleshooting and identification of root cause.
 
@@ -47,13 +47,25 @@ There are multiple types of monitoring that are required to maintain the health 
 | Compliance Monitoring | Compliance monitoring ensures that the cloud environment adheres to regulatory and industry standards. It involves tracking configurations, access controls, and data handling practices to ensure compliance with relevant regulations. |
 | Cost monitoring | Cost monitoring involves tracking cloud spending and resource utilization to identify cost-saving opportunities and prevent budget overruns. This includes monitoring resource usage, identifying underutilized resources, and optimizing resource configurations to reduce costs. |
 
+## Aspects of monitoring
+A typical monitoring environment can be broken down in the following aspects:
+
+- **Data collection.** Monitoring begins by collecting telemetry data from your different cloud and on-premises resources. Telemetry can be broken down into logs, metrics, and traces, which are often referred to as the three pillars of observability. You must configure your environment to collect only the data that is relevant to your monitoring goals to avoid unnecessary data collection and storage costs. You must also store collected data in a manner and location that allows for effective analysis and alerting.
+
+- **Data analysis.** Collected data needs to be analyzed to identify trends, patterns, and anomalies. In addition to manual analysis, you should be able to leverage automated tools that use machine learning and artificial intelligence to identify issues and provide insights into your data. Data analysis can help you identify performance bottlenecks, security threats, and compliance violations.
+
+- **Alerting:** Alerts automatically notify you of issues that require attention. Effective alerting helps you respond to issues quickly and proactively, reducing the impact on your users and business. Monitoring tools may provide predefined alert rules based on best practices and will allow you to define custom alert rules based on your specific requirements. You also need to configure notifications to ensure that alerts are delivered to the right people at the right time.
+
+- **Visualization:** Dashboards and reports allow you to visualize monitoring data insights into the health and performance of your cloud environment. They typically provide a graphical representation of key metrics and trends, making it easier to identify issues and communicate insights to stakeholders.
+
+
 
 ## Azure facilitation
-Azure includes multiple services that provide the different types of monitoring required for your cloud environment. Azure Monitor is the center of the Azure monitoring ecosystem, providing a data platform for collecting and analyzing logs, metrics, and traces in addition to analysis and alerting services. Other features and services in Azure Monitor leverage the Azure Monitor data platform to provide additional monitoring capabilities.
+Azure includes multiple services that provide the different types of monitoring required for your cloud environment. 
 
 | Service | Description | 
 |:---|:---|
-| [Azure Monitor](/azure/azure-monitor) | Azure Monitor is at the center of the Azure monitoring ecosystem providing a comprehensive monitoring solution for collecting, analyzing, and responding to monitoring data from your cloud and on-premises environments. In addition to providing complete monitoring of your infrastructure, network, and applications, Azure Monitor provides a data platform and core features such as analysis, visualization, and alerting used by other services. |
+| [Azure Monitor](/azure/azure-monitor) | Azure Monitor is at the center of the Azure monitoring ecosystem providing a comprehensive monitoring solution for collecting, analyzing, and responding to monitoring data from your cloud and on-premises environments. In addition to providing complete monitoring of your infrastructure, network, and applications, Azure Monitor provides a data platform and core features such as data analysis, visualization, and alerting used by other services. |
 | [Application insights](/azure/azure-monitor/app/app-insights-overview) | Application Insights is a feature of Azure Monitor that provides Application Performance Management (APM) service for your cloud applications. |
 | [Network Watcher](/azure/network-watcher/network-watcher-overview) | Network Watcher is a feature of Azure Monitor that provides monitoring and visualization capabilities for network resources in Azure. It helps you monitor, diagnose, view metrics, and enable or disable logs for resources in an Azure virtual network. |
 | [Azure Service Health](/azure/service-health/overview) | Azure Service Health provides a health status of the services that your Azure resources rely on. This includes informing you of any service outages and a personalized view of the health of the Azure services and regions you're using.  |
@@ -67,7 +79,7 @@ Azure includes multiple services that provide the different types of monitoring 
 The Microsoft Azure Well-Architected Framework (WAF) is a set of guiding tenets that can be used to improve the quality of cloud workloads. The WAF is based on five pillars: cost optimization, operational excellence, performance efficiency, reliability, and security. Each of these pillars fits into a type of monitoring that should be included in your monitoring strategy.
 
 
-
+ 
 
 |Log source|Description|
 |---|---|
