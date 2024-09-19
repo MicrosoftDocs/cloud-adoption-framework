@@ -1,18 +1,36 @@
 ---
-title: AI Center of Excellence
+title: Establishing an AI Center of Excellence
 description: Learn how to establish an AI Center of Excellence (CCoE) to drive AI adoption on Azure in your organization.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 06/20/2024
+ms.date: 1/01/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Building an AI Center of Excellence (CoE)
+# Establishing an AI Center of Excellence
 
-An AI Center of Excellence (CoE) is a strategic framework that enables organizations—whether startups or enterprises—to effectively leverage artificial intelligence (AI) at scale. By following this step-by-step guide, organizations can create a structured approach to AI adoption, aligned with business objectives.
+An AI Center of Excellence (AI CoE) is a dedicated team or organizational structure that centralizes AI expertise, resources, and governance. It serves as the nerve center for AI initiatives, ensuring that your organization effectively leverages artificial intelligence to achieve business objectives. This guide provides a step-by-step approach to building a practical and impactful AI CoE.
 
-## Define the AI CoE Function
+## What is an AI CoE?
+
+An AI CoE is a centralized hub within an organization that focuses on:
+
+- Strategic Alignment: Ensuring AI projects align with business goals.
+- Resource Optimization: Centralizing AI tools, technologies, and expertise.
+- Best Practices: Establishing standards and methodologies for AI development.
+- Governance: Overseeing compliance, ethical considerations, and risk management.
+- Cultural Transformation: Promoting an AI-driven mindset across the organization.
+
+## Why is an AI CoE Important?
+
+- Accelerates AI Adoption: Streamlines the implementation of AI initiatives.
+- Enhances Efficiency: Reduces duplication of efforts by centralizing resources.
+- Improves ROI: Focuses on high-impact projects that offer significant business value.
+- Mitigates Risks: Establishes governance to manage ethical and compliance issues.
+- Fosters Innovation: Encourages collaboration and knowledge sharing.
+
+## Define the AI CoE function
 
 The first step in building an AI CoE is to clearly define its role and objectives. The CoE should focus on operationalizing the following areas:
 
