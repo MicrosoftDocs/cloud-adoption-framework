@@ -53,7 +53,7 @@ As a tactical step to developing AI solutions, you need to be able to access the
 
 - *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure AI Studio, Azure Machine Learning, and Azure AI services, which includes Azure OpenAI, and Azure Virtual Machines.
 
-## Create a AI proof of concept
+## Create an AI proof of concept
 
 A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s technically optional, but it’s a valuable step for those new to AI. It provides a concrete evaluation of your AI maturity level and helps you set realistic expectations around delivery timelines. All Microsoft AI platforms have Quickstart articles for PoCs that align with common use cases. Use the table to find the right Quickstart article.
 
