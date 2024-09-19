@@ -5,22 +5,21 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
-ms.custom: internal, UpdateFrequency2
 ---
 
 # AI Strategy - Recommendations to develop an AI adoption strategy
 
-This article shows you how to define an AI adoption strategy. As with any strategy, you need data to create an actionable vision for your organization. The data requires understanding of where AI can benefit your business (use cases) and identifying the right solution for each use case. It’s advisable to appoint someone to lead this effort and set goals and success targets to measure progress.  
+This article shows you how to define an AI adoption strategy. As with any strategy, you need data to create an actionable vision for your organization. The data requires understanding of where AI can benefit your business (use cases) and identifying the right solution for each use case. It’s advisable to appoint someone to lead this effort and set goals and success targets to measure progress.
 
 ## Identify AI use cases
 
-Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas with high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes. 
+Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas with high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes.
 
-- *Generative* AI fosters individual productivity and provides a more adaptive customer experience across many business areas. 
+- *Generative* AI fosters individual productivity and provides a more adaptive customer experience across many business areas.
 
-- *Non-generative* AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data  
+- *Non-generative* AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data.
 
-*Table. Examples of generative AI and non-generative AI use cases*
+*Table 1. Examples of generative AI and non-generative AI use cases*
 
 | AI Type              | Business Area / Task            | Use Case     |
 |----------------------|---------------------------------|--------------|
@@ -49,11 +48,11 @@ For each use case, you need to identify an AI technology to support it. Each AI 
 
 Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) services you can use to adopt AI. There are services to improve individual productivity and many platforms to automate business processes using generative and non-generative AI. Use the following AI decision tree to help narrow the options for each AI opportunity. After identifying a service, carefully validate the selection by reviewing the skills needed, data needed, and cost factors.
 
-:::image type="content" source="./images/ai-decision-tree.png" alt-text="Diagram showing Microsoft and Azure services on the right and decision points that lead to each service." lightbox="./images/ai-decision-tree.pn" border="false":::
+:::image type="content" source="./images/ai-decision-tree.png" alt-text="Diagram showing Microsoft and Azure services on the right and decision points that lead to each service." lightbox="./images/ai-decision-tree.png" border="false":::
 
-- *Buy Microsoft Copilots (SaaS) to improve productivity.* Microsoft has four different types of SaaS generative AI services. Use the table for an overview and links for more information.  
+- *Buy Microsoft Copilots (SaaS) to improve productivity.* Microsoft has four different types of SaaS generative AI services. Use the table for an overview and links for more information.
 
-| SaaS Copilot products | Description | User
+| SaaS AI Copilot products | Description | User |
 |--------|--------|-------|
 | Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](../copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. | Business |
 | Role-based agents for Microsoft 365 | Use to enhance productivity for specific business roles, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business |
@@ -62,7 +61,7 @@ Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) servi
 
 - *Build intelligent apps with Azure AI platform services (PaaS).* Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying building AI, analytical AI, and machine learning applications.
 
-| Platform | Description | Skills required |
+| AI platform products | Description | Skills required |
 |---------|------------|---------|
 | Copilot Studio | Low-code platform to build generative AI applications | Without developer or data science skills |
 | Azure AI Services | Code-first platform to build analytical AI applications | Developer skills |
@@ -73,9 +72,9 @@ Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) servi
 
 ### Understand the skills needed to adopt AI
 
-There are different approaches to adopting AI, and each approach requires different skills *(see table).* Adopting SaaS products requires very few skills to adopt. Building a RAG application with generative AI or training an AI model on your own data requires more advanced skills. Use the following table to see the skills required adopt AI for each AI approach: 
+There are different approaches to adopting AI, and each approach requires different skills *(see table).* Adopting SaaS products requires very few skills to adopt. Building a RAG application with generative AI or training an AI model on your own data requires more advanced skills. Use the following table to see the skills required adopt AI for each AI approach:
 
-*Table. Summary of skills required to adopt*  
+*Table. Summary of skills required to adopt*
 
 | AI type | Service model | General use | Solution | Data needed | Skills required to adopt |
 |---------|--------------|-----------------|----------|-------------|-------------------------|
@@ -96,19 +95,19 @@ AI solutions have varying data needs. Some require only general enterprise data,
 
 - *Understand Copilot Studio (low-code, generative AI platform) data needs.* You need to [connect data](/microsoft-copilot-studio/knowledge-copilot-studio) (knowledge sources) from across your enterprise and external public websites. Copilot Studio automates much of the data processing needed to create custom copilots for various business applications.
 
-- *Understand Azure AI Studio and Azure OpenAI (code-first, generative AI platforms) data needs.* Creating generative AI apps typically requires grounding data for retrieval augmented generation. The grounding data needs to be limited to your specific use case. You don’t want to mix different types of information or irrelevant data in the grounding data.  Unstructured data needs to be in the [right format](/azure/search/search-how-to-create-search-index?tabs=portal#prerequisites) and [properly processed](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) to create an [index](/azure/search/search-how-to-create-search-index).
+- *Understand Azure AI Studio and Azure OpenAI (code-first, generative AI platforms) data needs.* Creating generative AI apps typically requires grounding data for retrieval augmented generation. The grounding data needs to be limited to your specific use case. You don’t want to mix different types of information or irrelevant data in the grounding data. Unstructured data needs to be in the [right format](/azure/search/search-how-to-create-search-index?tabs=portal#prerequisites) and [properly processed](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) to create an [index](/azure/search/search-how-to-create-search-index).
 
-For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications?view=azuresql) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database) supports database vectorization. [Azure Database for PostgreSQ](/azure/postgresql/flexible-server/generative-ai-azure-overview)L allows you to connect to Azure AI via code.  
+For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications?view=azuresql) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database) supports database vectorization. [Azure Database for PostgreSQ](/azure/postgresql/flexible-server/generative-ai-azure-overview)L allows you to connect to Azure AI via code.
 
-- *Understand Azure Machine Learning and Microsoft Fabric data needs.* Training machine learning models in Azure Machine Learning or Fabric requires large data sets on a specific domain. You need to preprocess, clean, and filter before splitting, training, and validating AI models. 
+- *Understand Azure Machine Learning and Microsoft Fabric data needs.* Training machine learning models in Azure Machine Learning or Fabric requires large data sets on a specific domain. You need to preprocess, clean, and filter before splitting, training, and validating AI models.
 
-- *Understand Azure AI services (analytical AI platforms) data needs.* Most Azure AI services don’t require additional data, but you can fine-tune some models, like models in Custom Vision.  
+- *Understand Azure AI services (analytical AI platforms) data needs.* Most Azure AI services don’t require additional data, but you can fine-tune some models, like models in Custom Vision.
 
 ### Understand cost factor for each AI solution
 
-Cost is an important consideration when validating your AI solution choice. The goal here is to make it easy to find and estimate the costs of different services. Microsoft Saas Copilots and Copilot Studio have a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Azure Virtual Machines (CPUs or GPUs) are the primary cost for AI models running on. For Azure services, use the individual product [pricing page](https://azure.microsoft.com/products/) and [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.  
+Cost is an important consideration when validating your AI solution choice. The goal here is to make it easy to find and estimate the costs of different services. Microsoft Saas Copilots and Copilot Studio have a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Azure Virtual Machines (CPUs or GPUs) are the primary cost for AI models running on. For Azure services, use the individual product [pricing page](https://azure.microsoft.com/products/) and [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.
 
-*Table . Overview of Microsoft AI solutions* 
+*Table . Overview of Microsoft AI solutions*
 
 | Service | AI approach supported | Access | Main cost factors |
 |---------|----------------------|--------|-------------------|
@@ -124,27 +123,27 @@ Cost is an important consideration when validating your AI solution choice. The 
 
 ## Define your AI data strategy
 
-When you are training, grounding, or using AI models, you want to ensure you only send the right data to the model and abide by ethical and regulatory standards. Your data strategy should outline acceptable data use and prepare your business to use ethical, accurate, high-quality data. Evaluate the completeness, relevance, and representativeness of the data to support reliable AI outputs. 
+When you are training, grounding, or using AI models, you want to ensure you only send the right data to the model and abide by ethical and regulatory standards. Your data strategy should outline acceptable data use and prepare your business to use ethical, accurate, high-quality data. Evaluate the completeness, relevance, and representativeness of the data to support reliable AI outputs.
 
-- *Protect data security and privacy.* Establish robust security measures to safeguard sensitive data in AI processes, including encryption, access controls, and anonymization. Define access controls to protect data from unauthorized use or breaches. Don’t let data boundaries blur when fed into AI systems. For example, AI workloads for all employees should only use data appropriate for all employees. Internet-facing AI workloads must only use data that’s appropriate for public use.  
+- *Protect data security and privacy.* Establish robust security measures to safeguard sensitive data in AI processes, including encryption, access controls, and anonymization. Define access controls to protect data from unauthorized use or breaches. Don’t let data boundaries blur when fed into AI systems. For example, AI workloads for all employees should only use data appropriate for all employees. Internet-facing AI workloads must only use data that’s appropriate for public use.
 
-- *Manage the data lifecycle.* Define how data will be collected, stored, processed, and retired. Ensure compliance with data retention and disposal policies, and use version control to maintain accuracy across model updates and data changes. 
+- *Manage the data lifecycle.* Define how data will be collected, stored, processed, and retired. Ensure compliance with data retention and disposal policies, and use version control to maintain accuracy across model updates and data changes.
 
-- *Define acceptable use.* Provide limits around how individuals and systems interact with AI. Read the data security and privacy policies for individual products to define what data should be shared. Some services, like Azure OpenAI, allow you to elevate privacy levels above the platform default. 
+- *Define acceptable use.* Provide limits around how individuals and systems interact with AI. Read the data security and privacy policies for individual products to define what data should be shared. Some services, like Azure OpenAI, allow you to elevate privacy levels above the platform default.
 
 - *Monitor and evaluate continuously.* Set up ongoing monitoring of AI models and data pipelines to ensure data quality, performance, and fairness over time. Regularly audit data and model outputs to catch any shifts that could affect reliability or compliance.
 
 ## Define your Responsible AI strategy
 
-Adopting AI responsibly is an iterative process with regular monitoring and measuring to ensure AI meets your business objectives. Microsoft follows six [Responsible AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6#advancing-aI-policy) principles when developing AI systems. They govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI applications you build in accordance with Responsible AI.   
+Adopting AI responsibly is an iterative process with regular monitoring and measuring to ensure AI meets your business objectives. Microsoft follows six [Responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. They govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI applications you build in accordance with Responsible AI.
 
-- *Set up data governance and accountability.* Create a governance framework to assign responsibility for managing data quality, enforcing ethical AI practices, and ensuring proper data usage. Implement auditing processes to maintain accountability throughout AI data handling. 
+- *Set up data governance and accountability.* Create a governance framework to assign responsibility for managing data quality, enforcing ethical AI practices, and ensuring proper data usage. Implement auditing processes to maintain accountability throughout AI data handling
 
-- *Mitigate data biases.* Identify potential biases in datasets and apply strategies to reduce them. Regularly assess fairness, address imbalances, and ensure AI outputs are unbiased toward any group or demographic. 
+- *Mitigate data biases.* Identify potential biases in datasets and apply strategies to reduce them. Regularly assess fairness, address imbalances, and ensure AI outputs are unbiased toward any group or demographic
 
-- *Ensure data transparency.* Enable stakeholders to understand how data is collected, used, and processed in AI systems. Provide clear traceability of data inputs and AI decisions to foster trust and accountability. 
+- *Ensure data transparency.* Enable stakeholders to understand how data is collected, used, and processed in AI systems. Provide clear traceability of data inputs and AI decisions to foster trust and accountability
 
-## Next step 
+## Next step
 
-Plan to adopt AI.  
-
+> [!div class="nextstepaction"]
+> [Create a plan to adopt AI](plan.md)
