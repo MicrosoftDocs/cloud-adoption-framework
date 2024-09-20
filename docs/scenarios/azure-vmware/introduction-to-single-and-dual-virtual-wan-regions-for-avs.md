@@ -84,8 +84,8 @@ Traffic flow to and from Azure VMware Solution
 | Azure VMware Solution | &#8594;<br>&#8592; | Internet | Yes|
 | Azure VMware Solution | &#8594;<br>&#8592; | on-premises | No|
 
-Traffic flow to and from Virtual Networks
-
+Traffic flow to and from Virtual Networks  
+  
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
 | -------------- | -------- | ---------- | --- |
 | Virtual Networks | &#8594;<br>&#8592; | on-premises | Yes|
@@ -100,14 +100,15 @@ When using single-region without Global Reach, the secure hub routes all private
 See the table for the traffic flows that the Secured Virtual Hub inspects with this design.
 
 **Traffic Inspection**
-
-Traffic flow to and from Azure VMware Solution
-| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
-| -------------- | -------- | ---------- | ---|
-| Azure VMware Solution   | &#8594;<br>&#8592;| Virtual Networks |  Yes 
-| Azure VMware Solution   | &#8594;<br>&#8592;| Internet |  Yes 
-| Azure VMware Solution   | &#8594;<br>&#8592;| on-premises |  Yes 
-
+  
+Traffic flow to and from Azure VMware Solution  
+  
+| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
+| -------------- | -------- | ---------- | --- |
+| Azure VMware Solution | &#8594;<br>&#8592; | on-premises | Yes| 
+| Azure VMware Solution | &#8594;<br>&#8592; | Internet | Yes|
+| Azure VMware Solution | &#8594;<br>&#8592; | Virtual Networks | Yes|
+  
 Traffic flow to and from Virtual Networks
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
 | -------------- | -------- | ---------- | ---|
