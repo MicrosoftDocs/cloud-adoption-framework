@@ -105,17 +105,18 @@ Traffic flow to and from Azure VMware Solution
   
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
 | -------------- | -------- | ---------- | --- |
-| Azure VMware Solution | &#8594;<br>&#8592; | on-premises | Yes| 
+| Azure VMware Solution | &#8594;<br>&#8592; | on-premises | Yes|
 | Azure VMware Solution | &#8594;<br>&#8592; | Internet | Yes|
 | Azure VMware Solution | &#8594;<br>&#8592; | Virtual Networks | Yes|
   
-Traffic flow to and from Virtual Networks
-| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
-| -------------- | -------- | ---------- | ---|
-| Virtual Networks   | &#8594;<br>&#8592;| on-premises |  Yes 
-| Virtual Networks   | &#8594;<br>&#8592;| Internet |  Yes 
-| Virtual Networks   | &#8594;<br>&#8592;| Virtual Networks |  Yes
-
+Traffic flow to and from Virtual Networks  
+  
+| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
+| -------------- | -------- | ---------- | --- |
+| Virtual Networks | &#8594;<br>&#8592; | on-premises | Yes|
+| Virtual Networks | &#8594;<br>&#8592; | Internet | Yes|
+| Virtual Networks | &#8594;<br>&#8592; | Virtual Networks | Yes|
+  
 ## Dual-region design with Global Reach 
 When using dual-region with Global Reach, you deploy two secure hubs in different regions within your Virtual WAN. Additionally, you set up two Azure VMware Solution private clouds, each located in a separate region. Each regional Azure VMware Solution private cloud is connected directly to its local regional hub (as shown by connection “D”). on-premises has connectivity to each regional hub (connection “E”). All RFC 1918 and internet traffic routes through a security solution (such as Azure Firewall, a third-party NVA, or a SaaS solution) on both secure hubs using Routing Intent. The Azure VMware Solution private clouds have connectivity back to on-premises via Global Reach (connections “A” and “B”). Azure VMware Solution Clouds have connectivity back to each other via Global Reach (connection “C”). Global Reach traffic between the Azure VMware Solution private clouds or between the Azure VMware Solution private clouds and on-premises bypasses the two hub firewalls (see connections “A”, “B”, and “C”). For enhanced security across Global Reach sites, inspect this traffic using NSX-T in Azure VMware Solution or a firewall on-premises.
 
