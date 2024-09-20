@@ -192,7 +192,7 @@ If a destination IP doesnt match, or is set to "deny" in the Mobility Optimized 
 
 **HCX Policy Routes**  
   
-| Network |Redirect to Peer | Note |
+| Network |Redirect to Peer | Note |  
 | - | -------------- | -------- |
 | Azure Virtual Network Address Space | Deny | Please ensure to explicitly include the address ranges for all your Virtual Networks. Traffic intended for Azure is directed out via the Azure VMware Solution and doesnt return to the on-premises network.|
 | Default RFC 1918 Address Spaces | Allow | Add in the default RFC 1918 addresses 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. This configuration ensures that any traffic not matching the above criteria is rerouted back to the on-premises network. If your on-premises setup utilizes addresses that aren't part of RFC 1918, you must explicitly include those ranges.|
