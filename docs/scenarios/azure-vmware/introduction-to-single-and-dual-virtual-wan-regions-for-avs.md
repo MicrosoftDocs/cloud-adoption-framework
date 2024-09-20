@@ -85,6 +85,7 @@ Traffic flow to and from Azure VMware Solution
 | Azure VMware Solution | &#8594;<br>&#8592; | on-premises | No|
 
 Traffic flow to and from Virtual Networks
+
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
 | -------------- | -------- | ---------- | --- |
 | Virtual Networks | &#8594;<br>&#8592; | on-premises | Yes|
