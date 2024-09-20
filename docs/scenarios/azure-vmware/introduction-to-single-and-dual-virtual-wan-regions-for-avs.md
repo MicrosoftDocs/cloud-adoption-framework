@@ -148,17 +148,17 @@ Traffic flow to and from Azure VMware Solution Private Cloud Region 1 and Azure 
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
 | -------------- | -------- | ---------- | ---|
 | Azure VMware Solution Private Cloud Region 1   | &#8594;<br>&#8592;| Azure VMware Solution Private Cloud Region 2 |  No
-
-Traffic flow to and from Virtual Networks
-| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
-| -------------- | -------- | ---------- | ---|
-| Virtual Network 1   | &#8594;<br>&#8592;| on-premises |  Yes, via the Hub 1 firewall  
-| Virtual Network 1   | &#8594;<br>&#8592;| Internet |  Yes, via the Hub 1 firewall 
-| Virtual Network 1  | &#8594;<br>&#8592;| Virtual Network 2 |  Yes, via the Hub 1 and Hub 2 firewalls 
-| Virtual Network 2   | &#8594;<br>&#8592;| on-premises |  Yes, via the Hub 2 firewall  
-| Virtual Network 2   | &#8594;<br>&#8592;| Internet |  Yes, via the Hub 2 firewall  
-
-
+  
+Traffic flow to and from Virtual Networks  
+  
+| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
+| -------------- | -------- | ---------- | --- |
+| Virtual Network 1 | &#8594;<br>&#8592; | on-premises | Yes, via the Hub 1 firewall|
+| Virtual Network 1 | &#8594;<br>&#8592; | Internet | Yes, via the Hub 1 firewall|
+| Virtual Network 1 | &#8594;<br>&#8592; | Virtual Network 2 | Yes, via the Hub 1 and Hub 2 firewalls|
+| Virtual Network 2 | &#8594;<br>&#8592; | on-premises | Yes, via the Hub 2 firewall|
+| Virtual Network 2 | &#8594;<br>&#8592; | Internet | Yes, via the Hub 2 firewall|
+  
 ## Dual-region design without Global Reach 
 When using dual-region with Global Reach, you deploy two secure hubs in different regions within your Virtual WAN. Additionally, you set up two Azure VMware Solution private clouds, each located in a separate region. Each regional Azure VMware Solution private cloud is connected directly to its local regional hub (as shown by connection “D”). On-premises has connectivity to each regional hub (connection “E”). All RFC 1918 and internet traffic routes through a security solution (such as Azure Firewall, a third-party NVA, or a SaaS solution) on both secure hubs using Routing Intent.
 
