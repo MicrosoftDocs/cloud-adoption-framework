@@ -58,7 +58,7 @@ Connectivity between two Azure VMware Solution SDDCs deployed across tenants dep
 1. Navigate to Azure VMware Solution service in Azure portal.
 1. Select "Clusters" menu under "Manage" menu category.
 1. Select "Edit" button on the three dots menu.
-1. Observe the Host FQDN value. Pod number is followed by letter p.
+1. Take note of the Host FQDN value. Pod number is followed by letter p.
 
 :::image type="content" source="media/azure-vmware-solution-pod.png" alt-text="Diagram showing the Azure VMware Solution pod." lightbox="media/azure-vmware-solution-pod.png":::
 
