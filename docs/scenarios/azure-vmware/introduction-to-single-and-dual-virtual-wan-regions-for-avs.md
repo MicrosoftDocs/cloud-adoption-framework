@@ -79,9 +79,9 @@ See the table for the traffic flows that the Secured Virtual Hub inspects with t
 Traffic flow to and from Azure VMware Solution
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |
 | -------------- | -------- | ---------- | --- |
-| Azure VMware Solution   | &#8594;<br>&#8592;| Virtual Networks | Yes
-| Azure VMware Solution   | &#8594;<br>&#8592;| Internet | Yes
-| Azure VMware Solution   | &#8594;<br>&#8592;| on-premises | No
+| Azure VMware Solution   | &#8594;<br>&#8592;| Virtual Networks | Yes|
+| Azure VMware Solution   | &#8594;<br>&#8592;| Internet | Yes|
+| Azure VMware Solution   | &#8594;<br>&#8592;| on-premises | No|
 
 Traffic flow to and from Virtual Networks
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
