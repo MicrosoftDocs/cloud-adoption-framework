@@ -3,7 +3,7 @@ title: Responsible and trusted AI adoption
 description: Learn about the importance of responsible AI considerations when you adopt AI on Azure in your organization.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 09/19/2024
+ms.date: 09/23/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -22,7 +22,7 @@ Six key principles define responsible AI:
 
 - **Reliability and safety**: AI systems must operate reliably, safely, and consistently under various conditions to help build trust.
 
-- **Privacy and security**: AI systems must respect privacy and maintain security by protecting private and confidential information, and resisting attacks and attempts to corrupt or compromise the system.
+- **Privacy and security**: AI systems must respect privacy and maintain security by protecting private and confidential information. They must also resist attacks and attempts to corrupt or compromise the system.
 
 - **Inclusiveness**: AI systems must empower and engage everyone. Inclusive design practices enable AI system developers to understand and address potential exclusion barriers in a product or service. Inclusiveness fosters innovation and helps design experiences that benefit everyone.
 
@@ -46,27 +46,27 @@ The following are key reasons why responsible AI is essential:
 
 - **Bias**: Bias mitigation in AI can be challenging but is necessary to ensure that AI systems are fair and unbiased. Use the responsible AI principles to help guide you.
 
-- **Sensitive technologies**: Specific technologies such as facial recognition can be considered a sensitive technology because of the risk to fundamental freedoms and human rights. Make sure to consider the implications of using such technologies to ensure that they're used responsibly.
+- **Sensitive technologies**: Specific technologies such as facial recognition can be considered sensitive technology because of the risk to fundamental freedoms and human rights. Consider the implications of using such technologies to ensure that they're used responsibly.
 
 ## Azure facilitation
 
 Microsoft Azure provides a range of tools, services, and resources to help you build responsible AI systems. Here are some examples:
 
-### Build safer systems with Azure AI Content Safety
+### Build safer systems with Microsoft Azure AI Content Safety
 
-Use [Microsoft Azure AI Content Safety](/azure/ai-services/content-safety/) to detect harmful user-generated and AI-generated content in applications and services. Content Safety helps you analyze generated content in your AI applications, including text and images, to ensure that it's safe and appropriate for your users. Content Safety provides the following capabilities:
+Use [Microsoft Azure AI Content Safety](/azure/ai-services/content-safety/) to detect harmful user-generated and AI-generated content in applications and services. Use Content Safety helps you analyze generated content in your AI applications, including text and images, to ensure that it's safe and appropriate for your users. Content Safety provides the following capabilities:
 
-- [Prompt Shields, or jailbreak detection](/azure/ai-services/content-safety/concepts/jailbreak-detection), scans text and documents for the risk of a User input attack, or jailbreak, on an LLM model.
+- [Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) scans text and documents for the risk of a user input attack, or jailbreak, on a language model.
 
-- [Groundedness detection](/azure/ai-services/content-safety/concepts/groundedness) detects if the text responses of an LLM are grounded in the source materials provided by the users.
+- [Groundedness detection](/azure/ai-services/content-safety/concepts/groundedness) detects if the text responses of a language model are grounded in the source materials that the users provide.
 
-- [Protected material detection](/azure/ai-services/content-safety/concepts/protected-material) detects if the text responses of an LLM contain protected material, such as copyrighted text, song lyrics, articles, web content, and more.
+- [Protected material detection](/azure/ai-services/content-safety/concepts/protected-material) detects if the text responses of a language model contain protected material, such as copyrighted text, song lyrics, articles, web content, and more.
 
-- [Custom categories (rapid)](/azure/ai-services/content-safety/concepts/custom-categories-rapid) define emerging harmful content patterns and scan text and images for matches.
+- [Custom categories (rapid) API](/azure/ai-services/content-safety/concepts/custom-categories-rapid) define emerging harmful content patterns and scan text and images for matches.
 
-- [Analyze Text API](/rest/api/contentsafety/text-operations/analyze-text) analyzes potentially harmful text content. It typically identifies categories like hate, self harm, sexual, or violent content.
+- [Analyze Text API](/rest/api/contentsafety/text-operations/analyze-text) analyzes potentially harmful text content. It typically identifies categories like hate, self harm, and sexual or violent content.
 
-- [Analyze Image API](/rest/api/contentsafety/image-operations/analyze-image) analyzes potential harmful image content. It typically identifies categories like hate, self harm, sexual, or violent content.
+- [Analyze Image API](/rest/api/contentsafety/image-operations/analyze-image) analyzes potential harmful image content. It typically identifies categories like hate, self harm, and sexual or violent content.
 
 ### Understand responsible use of AI with Azure AI services
 
@@ -78,7 +78,7 @@ If you build systems with Azure Machine Learning, you can use the [Responsible A
 
 - **Data analysis**: Understand and explore your dataset distributions and statistics.
 
-- **Model overview and fairness assessment**: Evaluate the performance of your model and your model's group fairness issues.
+- **Model overview and fairness assessment**: Evaluate your model's performance and your model's group fairness problems.
 
 - **Error analysis**: View and understand how errors are distributed in your dataset.
 
@@ -92,11 +92,11 @@ If you build systems with Azure Machine Learning, you can use the [Responsible A
 
 |Resource|Description|
 |--------|-----------|
-|[Hands-on tools for building effective human-AI experiences](https://www.microsoft.com/haxtoolkit/)|The HAX Toolkit is for teams that build user-facing AI products. It helps you conceptualize what the AI system does and how it behaves. Use the HAX Toolkit early in your design process.|
-|[Conversational AI guidelines](https://www.microsoft.com/research/uploads/prod/2018/11/Bot_Guidelines_Nov_2018.pdf)|In order for people and society to realize the full potential of bots, they need to be designed in such a way that they earn the trust of others. These guidelines are aimed at helping you design a bot that builds trust in the company and service that the bot represents.|
-|[Inclusive AI design guidelines](https://inclusive.microsoft.design/tools-and-activities/InPursuitofInclusiveAI.pdf)|These guidelines are intended to help you design AI that is inclusive and accessible to everyone.|
+|[Hands-on tools for building effective human-AI experiences](https://www.microsoft.com/haxtoolkit/)|The HAX Toolkit is for teams that build user-facing AI products. Use the HAX Toolkit early in your design process. It helps you conceptualize what the AI system does and how it behaves.|
+|[Conversational AI guidelines](https://www.microsoft.com/research/uploads/prod/2018/11/Bot_Guidelines_Nov_2018.pdf)|For people and society to realize the full potential of bots, they need to be designed in such a way earns the trust of others. Use these guidelines to help you design a bot that builds trust in the company and service that the bot represents.|
+|[Inclusive AI design guidelines](https://inclusive.microsoft.design/tools-and-activities/InPursuitofInclusiveAI.pdf)|Use these guidelines to help you design AI that is inclusive and accessible to everyone.|
 |[AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA)|Use the AI fairness checklist to determine whether your AI system is fair and unbiased.|
-|[Responsible AI](/azure/machine-learning/concept-responsible-ai) in Machine Learning|Review these responsible AI resources if you build AI systems by using Machine Learning.|
+|[Responsible AI](/azure/machine-learning/concept-responsible-ai) in Machine Learning|Review these responsible AI resources if you use Machine Learning to build AI systems.|
 
 ## Next steps
 
