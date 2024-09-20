@@ -29,7 +29,7 @@ Whether you're a business owner, platform owner, or application owner, you need 
 ## Types of monitoring
 Monitoring is a multifaceted discipline that requires a combination of tools, processes, and practices. It can be broken down into the types described in the following table. Different services and features may provide different combinations of these types of monitoring, but a comprehensive monitoring environment will include all of them.
 
-| Monitoring Type | Description |
+| Type | Description |
 |:---|:---|
 | Infrastructure | Infrastructure monitoring includes the performance and availability of cloud resources such as virtual machines, storage, and networks. This type of monitoring ensures that the underlying infrastructure is functioning optimally, which is critical for maintaining availability and performance of the applications that rely on them. |
 | Application Performance (APM) | APM focuses on monitoring the performance and availability of applications running in the cloud. It tracks metrics such as response times, error rates, and transaction volumes. APM identifies performance bottlenecks and ensures that applications meet user expectations. |
