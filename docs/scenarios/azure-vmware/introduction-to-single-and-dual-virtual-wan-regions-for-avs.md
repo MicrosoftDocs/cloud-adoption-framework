@@ -11,6 +11,8 @@ ms.custom: think-tank, e2e-azure-VMware
 ---
 
 # Secure Virtual WAN for Azure VMware Solution
+This document explores the Azure VMware Solution network design topologies and considerations of Single and Dual Region Secure Virtual WAN with Routing Intent. It provides insights into how Routing Intent enhances security and streamlines network management by directing all traffic through a centralized security solution, such as Azure Firewall, a third-party Network Virtual Appliance (NVA), or a SaaS solution. Additionally, it discusses the design considerations for deployments with and without Global Reach, highlighting their respective benefits and challenges.
+
  A security solution such as Azure Firewall, a third-party Network Virtual Appliance (NVA), or SaaS solution in the Virtual WAN hub effectively converts the hub to a Secure Virtual WAN hub. A Secure Virtual WAN hub is a requirement for configuring Routing Intent. Routing Intent streamlines the routing/security design of the secure hub, by driving all private and internet traffic to the hub security solution. Routing Intent improves the security breadth and conducts traffic inspection for all traffic transiting through the secure hub, including Azure VMware Solution. 
 
 
