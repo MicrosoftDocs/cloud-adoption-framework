@@ -85,11 +85,11 @@ Traffic flow to and from Azure VMware Solution
 | Azure VMware Solution | &#8594;<br>&#8592; | on-premises | No|
 
 Traffic flow to and from Virtual Networks
-| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
-| -------------- | -------- | ---------- | ---|
-| Virtual Networks   | &#8594;<br>&#8592;| on-premises |  Yes 
-| Virtual Networks   | &#8594;<br>&#8592;| Internet |  Yes 
-| Virtual Networks   | &#8594;<br>&#8592;| Virtual Networks |  Yes
+| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |
+| -------------- | -------- | ---------- | --- |
+| Virtual Networks   | &#8594;<br>&#8592;| on-premises |  Yes|
+| Virtual Networks   | &#8594;<br>&#8592;| Internet |  Yes|
+| Virtual Networks   | &#8594;<br>&#8592;| Virtual Networks |  Yes|
 
 ## Single-region design without Global Reach
 When using single-region without Global Reach, the secure hub routes all private and internet traffic through a security solution, such as Azure Firewall, a third-party NVA, or a SaaS solution. Inspection of traffic is done by using Routing Intent. With this design, traffic between Azure VMware Solution and on-premises transits the hub firewall for inspection. As mentioned earlier, Virtual Hubs do not support ExpressRoute to ExpressRoute transitivity by default. To enable this transitivity, a support ticket needs to be initiated. Once the support ticket has been fulfilled, the secure hub advertises the default RFC 1918 addresses to Azure VMware Solution and to on-premises. When using Routing Intent from on-premises, you cannot advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
