@@ -123,25 +123,27 @@ When using dual-region with Global Reach, you deploy two secure hubs in differen
 ![Diagram of Dual-Region with Global Reach Azure VMware Solution Scenario](./media/dual-region-virtual-wan-1.png)
 
 See the table for the traffic flows that the Secured Virtual Hub inspects with this design.
-
+  
 **Traffic Inspection**
-
-Traffic flow to and from Azure VMware Solution Private Cloud Region 1
-| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
-| -------------- | -------- | ---------- | ---|
-| Azure VMware Solution Private Cloud Region 1   | &#8594;<br>&#8592;| Virtual Network 1 |  Yes, via the Hub 1 firewall
-| Azure VMware Solution Private Cloud Region 1   | &#8594;<br>&#8592;| Virtual Network 2 |  Yes, via the Hub 1 and Hub 2 firewalls
-| Azure VMware Solution Private Cloud Region 1   | &#8594;<br>&#8592;| Internet |  Yes, via the Hub 1 firewall  
-| Azure VMware Solution Private Cloud Region 1   | &#8594;<br>&#8592;| on-premises |  No 
-
-Traffic flow to and from Azure VMware Solution Private Cloud Region 2
-| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
-| -------------- | -------- | ---------- | ---|
-| Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| Virtual Network 1 |   Yes, via the Hub 1 and Hub 2 firewalls
-| Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| Virtual Network 2 |  Yes, via the Hub 2 firewall
-| Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| Internet |  Yes, via the Hub 2 firewall  
-| Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| on-premises |  No 
-
+  
+Traffic flow to and from Azure VMware Solution Private Cloud Region 1  
+  
+| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
+| -------------- | -------- | ---------- | --- |
+| Azure VMware Solution Private Cloud Region 1  | &#8594;<br>&#8592; | Virtual Network 1 | Yes, via the Hub 1 firewall|
+| Azure VMware Solution Private Cloud Region 1  | &#8594;<br>&#8592; | Virtual Network 2 | Yes, via the Hub 1 and Hub 2 firewalls|
+| Azure VMware Solution Private Cloud Region 1  | &#8594;<br>&#8592; | Internet | Yes, via the Hub 1 firewall|
+| Azure VMware Solution Private Cloud Region 1  | &#8594;<br>&#8592; | on-premises | No|
+  
+Traffic flow to and from Azure VMware Solution Private Cloud Region 2  
+  
+| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
+| -------------- | -------- | ---------- | --- |
+| Azure VMware Solution Private Cloud Region 2 | &#8594;<br>&#8592; | Virtual Network 1 | Yes, via the Hub 1 and Hub 2 firewalls|
+| Azure VMware Solution Private Cloud Region 2 | &#8594;<br>&#8592; | Virtual Network 2 | Yes, via the Hub 2 firewall|
+| Azure VMware Solution Private Cloud Region 2 | &#8594;<br>&#8592; | Internet | Yes, via the Hub 2 firewall|  
+| Azure VMware Solution Private Cloud Region 2 | &#8594;<br>&#8592; | on-premises | No| 
+  
 Traffic flow to and from Azure VMware Solution Private Cloud Region 1 and Azure VMware Solution Private Cloud Region 2
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
 | -------------- | -------- | ---------- | ---|
