@@ -151,12 +151,13 @@ If a destination IP matches and is set to "allow" in the Mobility Optimized Netw
 If a destination IP doesn't match, or is set to "deny" in the Mobility Optimized Networking (MON) policy, the system sends the packet to the Azure VMware Solution Tier-0 for routing.
 
 **HCX Policy Routes**  
-| Network |Redirect to Peer | Note |
+  
+| Network |Redirect to Peer | Note |  
 | - | -------------- | -------- |
-| Azure Virtual Network Address Space | Deny | Please ensure to explicitly include the address ranges for all your Virtual Networks. Traffic intended for Azure is directed out via the Azure VMware Solution and doesn't return to the on-premises network.
-| Default RFC 1918 Address Spaces | Allow | Add in the default RFC 1918 addresses 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. This configuration ensures that any traffic not matching the above criteria is rerouted back to the on-premises network. If your on-premises setup utilizes addresses that aren't part of RFC 1918, you must explicitly include those ranges.
-| 0.0.0.0/0 | Deny | For addresses that aren’t covered by RFC 1918, such as Internet-routable IPs, or any traffic that doesn’t match the specified entries above, exits directly through the Azure VMware Solution and isn't redirected back to the on-premises network.
-
+| Azure Virtual Network Address Space | Deny | Please ensure to explicitly include the address ranges for all your Virtual Networks. Traffic intended for Azure is directed out via the Azure VMware Solution and doesn't return to the on-premises network.|
+| Default RFC 1918 Address Spaces | Allow | Add in the default RFC 1918 addresses 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. This configuration ensures that any traffic not matching the above criteria is rerouted back to the on-premises network. If your on-premises setup utilizes addresses that aren't part of RFC 1918, you must explicitly include those ranges.|
+| 0.0.0.0/0 | Deny | For addresses that aren’t covered by RFC 1918, such as Internet-routable IPs, or any traffic that doesn’t match the specified entries above, exits directly through the Azure VMware Solution and isn't redirected back to the on-premises network.|
+  
 ## Next steps
 
 - For more information on Virtual WAN hub configuration, see [About virtual hub settings](/azure/virtual-wan/hub-settings).
