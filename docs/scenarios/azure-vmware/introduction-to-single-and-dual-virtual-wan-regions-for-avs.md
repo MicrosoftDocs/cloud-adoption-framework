@@ -199,7 +199,7 @@ Traffic flow to and from Azure VMware Solution Private Cloud Region 1 and Azure 
   
 Traffic flow to and from Virtual Networks  
   
-| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |
+| Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |  
 | -------------- | -------- | ---------- | --- |
 | Virtual Network 1 | &#8594;<br>&#8592; | on-premises |  Yes, via the Hub 1 firewall|  
 | Virtual Network 1 | &#8594;<br>&#8592; | Internet |  Yes, via the Hub 1 firewall|
