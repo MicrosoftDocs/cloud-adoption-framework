@@ -40,11 +40,11 @@ Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual
 | Connections (E) | on-premises connectivity via ExpressRoute to both regional hubs.  |
 | Inter-Hub | Inter-Hub logical connection between two hubs that are deployed under the same Virtual WAN.  |
 
-### Dual-region Secure Virtual WAN Traffic Flows
+## Dual-region Secure Virtual WAN Traffic Flows
 
 The following sections cover traffic flows and connectivity for Azure VMware Solution, on-premises, Azure Virtual Networks, and the Internet when using Global Reach.
 
-## Azure VMware Solution cross-region connectivity & traffic flows
+### Azure VMware Solution cross-region connectivity & traffic flows
 
 This section focuses on only the Azure VMware Solution Cloud Region 1 and Azure VMware Solution Cloud Region 2. Each Azure VMware Solution private cloud has an ExpressRoute connection to its local regional hub (connections labeled as "D").
 
@@ -70,7 +70,7 @@ The diagram illustrates traffic flows from the perspective of the Azure VMware S
 | 7 | Azure VMware Solution Cloud Region 2 | &#8594;| on-premises | No, traffic bypasses firewall and transits Global Reach (B)|
 
 
-## on-premises connectivity & traffic flow
+### on-premises connectivity & traffic flow
 
 This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (connections labeled as "E").
 
@@ -91,7 +91,7 @@ The diagram illustrates traffic flows from an on-premises perspective.
 | 8 | on-premises | &#8594;| Virtual Network 1 | Yes, traffic is inspected at Hub 1 firewall|
 | 9 | on-premises | &#8594;| Virtual Network 2 | Yes, traffic is inspected at Hub 2 firewall|
 
-## Azure Virtual Network connectivity & traffic flow
+### Azure Virtual Network connectivity & traffic flow
 
 This section focuses only on connectivity from an Azure Virtual Network perspective. As depicted in the diagram, both Virtual Network1 and Virtual Network2 have a Virtual Network peering directly to their local regional hub.
 
