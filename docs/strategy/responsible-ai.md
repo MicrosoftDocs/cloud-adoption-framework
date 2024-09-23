@@ -1,6 +1,6 @@
 ---
 title: Responsible and trusted AI adoption
-description: Learn about the importance of responsible AI considerations when you adopt AI on Azure in your organization.
+description: Learn about the importance of responsible AI principles when you adopt AI on Azure to ensure ethical and effective implementation in your organization.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 09/23/2024
@@ -12,7 +12,7 @@ ms.collection: ce-skilling-ai-copilot
 
 The six key principles for responsible AI at Microsoft are fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. These principles are essential for creating responsible and trustworthy AI as it integrates into mainstream products and services throughout your AI adoption journey.
 
-## The responsible AI principles
+## Responsible AI principles
 
 Microsoft is committed to [empowering responsible AI practices](https://www.microsoft.com/ai/responsible-ai).
 
@@ -30,11 +30,11 @@ Six key principles define responsible AI:
 
 - **Accountability**: AI systems and their developers must be accountable and answerable.
 
-Consider responsible AI principles at every phase of your AI adoption journey, from strategy and planning to implementation, and securing, managing, and governing your AI initiatives.
+Incorporate responsible AI principles throughout your AI adoption journey, from strategy and planning to implementation. Ensure that these principles are applied when you secure, manage, and govern your AI initiatives.
 
 :::image type="content" source="./media/responsible-ai.png" alt-text="Diagram that shows how responsible AI is foundational to all AI work across methodologies in the Cloud Adoption Framework for Azure." border="false":::
 
-This AI adoption guidance includes examples of how the Cloud Adoption Framework for Azure can help you implement responsible AI practices. The principles of responsible AI are integrated into the guidance and recommendations throughout this AI adoption journey.
+This AI adoption guidance includes examples of how you can use the Cloud Adoption Framework for Azure to implement responsible AI practices. The principles of responsible AI are integrated into the guidance and recommendations throughout this AI adoption journey.
 
 ## The importance of responsible AI
 
@@ -46,15 +46,15 @@ The following are key reasons why responsible AI is essential:
 
 - **Bias**: Bias mitigation in AI can be challenging but is necessary to ensure that AI systems are fair and unbiased. Use the responsible AI principles to help guide you.
 
-- **Sensitive technologies**: Specific technologies such as facial recognition can be considered sensitive technology because of the risk to fundamental freedoms and human rights. Consider the implications of using such technologies to ensure that they're used responsibly.
+- **Sensitive technologies**: Technologies like facial recognition can be considered sensitive technology because of the risk to fundamental freedoms and human rights. Consider the implications of these technologies to ensure that they're used responsibly.
 
 ## Azure facilitation
 
 Microsoft Azure provides a range of tools, services, and resources to help you build responsible AI systems. Here are some examples:
 
-### Build safer systems with Microsoft Azure AI Content Safety
+### Build safer systems by using Microsoft Azure AI Content Safety
 
-Use [Microsoft Azure AI Content Safety](/azure/ai-services/content-safety/) to detect harmful user-generated and AI-generated content in applications and services. Use Content Safety helps you analyze generated content in your AI applications, including text and images, to ensure that it's safe and appropriate for your users. Content Safety provides the following capabilities:
+Use [Microsoft Azure AI Content Safety](/azure/ai-services/content-safety/) to detect harmful user-generated and AI-generated content in applications and services. Content Safety helps you analyze generated content in your AI applications, including text and images, to ensure that it's safe and appropriate for your users. Content Safety provides the following capabilities:
 
 - [Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) scans text and documents for the risk of a user input attack, or jailbreak, on a language model.
 
@@ -70,11 +70,11 @@ Use [Microsoft Azure AI Content Safety](/azure/ai-services/content-safety/) to d
 
 ### Understand responsible use of AI with Azure AI services
 
-Microsoft provides a list of transparency notes for AI-relevant Azure services. Use the following link to learn more about the guidelines on how to responsibly use AI in applications. Different services within the Azure AI service suite are represented. For more information, see [Responsible use of AI with Azure AI services](/azure/ai-services/responsible-use-of-ai-overview).
+Microsoft provides a list of transparency notes for AI-relevant Azure services. Different services within the Azure AI service suite are represented. For more information, see [Responsible use of AI with Azure AI services](/azure/ai-services/responsible-use-of-ai-overview).
 
 ### Use the Responsible AI dashboard for Azure Machine Learning
 
-If you build systems with Azure Machine Learning, you can use the [Responsible AI dashboard](/azure/machine-learning/concept-responsible-ai-dashboard) to assess your AI systems. The Responsible AI dashboard has a single interface to help you implement Responsible AI in practice. Some of the Responsible AI components include:
+If you build systems with Azure Machine Learning, you can use the [Responsible AI dashboard](/azure/machine-learning/concept-responsible-ai-dashboard) to assess your AI systems. The Responsible AI dashboard provides a single interface to help you implement responsible AI principles. Some of the Responsible AI components include:
 
 - **Data analysis**: Understand and explore your dataset distributions and statistics.
 
@@ -82,7 +82,7 @@ If you build systems with Azure Machine Learning, you can use the [Responsible A
 
 - **Error analysis**: View and understand how errors are distributed in your dataset.
 
-- **Model interpretability**: Understand your model's predictions and how both overall and individual predictions are made.
+- **Model interpretability**: Understand your model's predictions and how individual and overall predictions are made.
 
 - **Counterfactual what-if analysis**: Observe how changes in features can affect your model predictions.
 
@@ -92,8 +92,8 @@ If you build systems with Azure Machine Learning, you can use the [Responsible A
 
 |Resource|Description|
 |--------|-----------|
-|[Hands-on tools for building effective human-AI experiences](https://www.microsoft.com/haxtoolkit/)|The HAX Toolkit is for teams that build user-facing AI products. Use the HAX Toolkit early in your design process. It helps you conceptualize what the AI system does and how it behaves.|
-|[Conversational AI guidelines](https://www.microsoft.com/research/uploads/prod/2018/11/Bot_Guidelines_Nov_2018.pdf)|For people and society to realize the full potential of bots, they need to be designed in such a way earns the trust of others. Use these guidelines to help you design a bot that builds trust in the company and service that the bot represents.|
+|[Hands-on tools for building effective human-AI experiences](https://www.microsoft.com/haxtoolkit/)| Use the HAX Toolkit early in your design process to help you conceptualize what the AI system does and how it behaves. The HAX Toolkit is designed for teams that build user-facing AI products.|
+|[Conversational AI guidelines](https://www.microsoft.com/research/uploads/prod/2018/11/Bot_Guidelines_Nov_2018.pdf)|Design bots in a way that earns the trust of others to help people and society realize their full potential. Use these guidelines to create a bot that builds trust in the company and service it represents. |
 |[Inclusive AI design guidelines](https://inclusive.microsoft.design/tools-and-activities/InPursuitofInclusiveAI.pdf)|Use these guidelines to help you design AI that is inclusive and accessible to everyone.|
 |[AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA)|Use the AI fairness checklist to determine whether your AI system is fair and unbiased.|
 |[Responsible AI](/azure/machine-learning/concept-responsible-ai) in Machine Learning|Review these responsible AI resources if you use Machine Learning to build AI systems.|
