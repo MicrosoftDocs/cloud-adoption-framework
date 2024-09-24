@@ -10,7 +10,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Responsible and trusted AI adoption
 
-The six key principles for responsible AI at Microsoft are fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. These principles are essential for creating responsible and trustworthy AI as it integrates into mainstream products and services throughout your AI adoption journey.
+The six key principles for responsible AI at Microsoft include fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Use these principles to create responsible and trustworthy AI as you integrate it into mainstream products and services throughout your AI adoption journey.
 
 ## Responsible AI principles
 
