@@ -14,6 +14,22 @@ The CAF Secure methodology provides a structured approach for securing your Azur
 
 This set of guidance applies recommendations for topics across the entirety of the CAF methodologies as security must be deeply integrated in every aspect of cloud adoption. As such, you will find articles aligned with each methodology that provide security recommendations to consider as you work through that phase of your cloud adoptoin journey.
 
+All of the recommendations in this guidance follow the [Zero Trust principles](/security/zero-trust/zero-trust-overview) of assume compromise (assume breach), least privilege, and explicit verification of trust that should guide your security strategy, architecture, and implementation.
+
+## One component of holistic security guidance
+
+Security is a complex and challenging discipline that must be considered in nearly all aspects of your cloud and overall technology estates. This is because:
+
+- **Anything is a potential target or attack vector:** Attackers in today’s world exploit any weakness in the people, process, and technologies of an organization to achieve their illicit objectives.
+- **Security is a team sport:** Defending against these attacks requires a coordinated approach across business, technology, and security teams to each do their part for security and to all work together collaboratively. This is illustrated by the wide variety of roles required to secure Azure resources described in the [Teams and roles](./refresh-teams-and-roles) article.
+
+This CAF Secure guidance is one component of a larger holistic set of Microsoft security guidance that guides different teams through their part of security. The full set of guidance includes:
+
+- **Cloud Adoption Framework (CAF) Secure Methodology (this documentation):** provides security guidance for teams managing the technology infrastructure that supports all the workload development and operations hosted on Azure
+- **[Well Architected Framework (WAF) security guidance](/azure/well-architected/security/):** provides guidance for individual workload owners on how to apply security best practices to application development and DevOps/DevSecOps Processes. This is complemented by Microsoft guidance on how apply [security practices](https://www.microsoft.com/securityengineering/sdl/practices) and DevSecOps controls in a Security Development Lifecycle (SDL).
+- **[Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/):** provides clear and detailed best practice guidance for all stakeholders on what good looks like for cloud security. This includes security baselines that describe the available security capabilities and the optimal security configurations for Azure product offerings.
+- **[Zero Trust guidance](/security/zero-trust/):** provides guidance for security teams to implement technical capabilities to support a Zero Trust modernization initiative. 
+
 Each article looks at several topics as they relate to the methodology with which they align:
 
 - Security posture modernization
