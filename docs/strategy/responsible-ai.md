@@ -98,7 +98,7 @@ If you build systems with Azure Machine Learning, you can use the [Responsible A
 |[AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA)|Use the AI fairness checklist to determine whether your AI system is fair and unbiased.|
 |[Responsible AI in Machine Learning](/azure/machine-learning/concept-responsible-ai) |Review these responsible AI resources if you use Machine Learning to build AI systems.|
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Skills relevant to strategy](./suggested-skills.md)
