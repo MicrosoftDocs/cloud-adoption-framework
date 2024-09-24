@@ -18,7 +18,7 @@ Microsoft is committed to [empowering responsible AI practices](https://www.micr
 
 Six key principles define responsible AI:
 
-- **Fairness**: AI systems must treat everyone equally and provide the same recommendations to all individuals. Ensuring fairness in AI systems is essential to prevent discrimination based on personal characteristics.
+- **Fairness**: AI systems should treat everyone equally and provide the same recommendations to all individuals. Fairness in AI systems prevents discrimination based on personal characteristics.
 
 - **Reliability and safety**: AI systems must operate reliably, safely, and consistently under various conditions to help build trust.
 
