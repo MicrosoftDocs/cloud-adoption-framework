@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI Ready – Recommendations to prepare an AI foundation
 
-This article provides recommendations for making key design and process decisions that all your AI workloads inherit. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, governance baselines, networking, and connectivity to align with [your AI model centralization and sharing approach](bookmark://_Plan_AI_model).
+This article provides recommendations for making key design and process decisions that all your AI workloads inherit. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, governance baselines, networking, and connectivity to align with [your AI model centralization and sharing approach](./plan.md#plan-for-ai-centralization-and-endpoint-sharing).
 
 :::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing AI workloads within a resource hierarchy using management groups and subscriptions, organized in a hub-and-spoke architecture. It shows where internal and external users connect to different AI workload types. The architecture illustrates centralized and decentralized AI workload deployment, highlighting internal and internet-facing workloads, with security and networking components for resource management across regions. Centralized AI resources are shared, while intelligent apps are deployed within individual subscriptions." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
 *Figure 1. Resource hierarchy for AI workloads. It shows a hub and spoke approach with internet-facing and internal applications. It depicts centralized and decentralized AI endpoints.*
@@ -70,7 +70,7 @@ Choosing the right approach for the foundation of AI workloads involves not only
 
 Azure landing zone provides a starting point for preparing your Azure environment. Deploy AI workload resources such as Azure AI Studio, Azure Machine Learning, Azure AI services, Azure Virtual Machines, and supporting resources to an Application Landing Zone (*see figure 2: "Landing zone A2 subscription"*). You can use the various implementations for Azure Landing Zone. Ensure to apply the policies relevant to your AI deployment as you're using the Azure Landing Zone accelerator.
 
-:::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone. lightbox="./images/alz-ai.svg" border="false":::
+:::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
 *Figure 2. AI applications in the context of an Azure landing zone.*
 
 ### Deploy a custom environment
