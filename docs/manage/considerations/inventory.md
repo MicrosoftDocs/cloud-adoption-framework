@@ -48,7 +48,7 @@ Creating visibility on any cloud platform requires a few key components:
 
 ### Responsibility and visibility
 
-When you establish commitments for each workload, [management responsibility](./commitment.md#management-responsibility) is a key factor. Delegated responsibility creates a need for delegated visibility. The first step toward inventory and visibility is to ensure that the responsible parties have access to the right data. Before you implement any cloud-native tools for visibility, ensure that each monitoring tool has the proper access and scope for each operations team.
+When you establish commitments for each workload, [management responsibility](./commitment.md#choose-a-responsibility-model) is a key factor. Delegated responsibility creates a need for delegated visibility. The first step toward inventory and visibility is to ensure that the responsible parties have access to the right data. Before you implement any cloud-native tools for visibility, ensure that each monitoring tool has the proper access and scope for each operations team.
 
 ### Inventory
 
