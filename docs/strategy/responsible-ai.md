@@ -58,9 +58,9 @@ Use [Microsoft Azure AI Content Safety](/azure/ai-services/content-safety/) to d
 
 - [Prompt shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) scans text and documents for the risk of a user input attack, or jailbreak, on a large language model (LLM).
 
-- [Groundedness detection](/azure/ai-services/content-safety/concepts/groundedness) detects if the text responses of a language model are grounded in the source materials that the users provide.
+- [Groundedness detection](/azure/ai-services/content-safety/concepts/groundedness) detects if the text responses of an LLM are grounded in the source materials that the users provide.
 
-- [Protected material detection](/azure/ai-services/content-safety/concepts/protected-material) detects if the text responses of a language model contain protected material, such as copyrighted text, song lyrics, articles, and web content.
+- [Protected material detection](/azure/ai-services/content-safety/concepts/protected-material) detects if the text responses of an LLM contain protected material, such as copyrighted text, song lyrics, articles, and web content.
 
 - The [Custom Categories (rapid) API](/azure/ai-services/content-safety/concepts/custom-categories-rapid) defines emerging harmful content patterns and scans text and images for matches.
 
