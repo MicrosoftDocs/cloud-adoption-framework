@@ -84,4 +84,4 @@ The rest of the guidance focuses on building AI workloads in Azure using PaaS an
 > [Adopt AI with Azure PaaS](adopt-paas.md)
 
 > [!div class="nextstepaction"]
-> [Adopt AI with Azure PaaS](adopt-iaas.md)
+> [Adopt AI with Azure IaaS](adopt-iaas.md)
