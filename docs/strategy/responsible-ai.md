@@ -22,15 +22,15 @@ Six key principles define responsible AI:
 
 - **Reliability and safety**: AI systems must operate reliably, safely, and consistently under various conditions to help build trust.
 
-- **Privacy and security**: AI systems must respect privacy and maintain security by protecting private and confidential information. They must also resist attacks and attempts to corrupt or compromise the system.
+- **Privacy and security**: AI systems should respect privacy and maintain security by protecting private and confidential information. They should also resist attacks and attempts to corrupt or compromise the system.
 
-- **Inclusiveness**: AI systems must empower and engage everyone. Inclusive design practices enable AI system developers to understand and address potential exclusion barriers in a product or service. Inclusiveness fosters innovation and helps design experiences that benefit everyone.
+- **Inclusiveness**: AI systems should empower and engage everyone. Inclusive design practices can help AI system developers understand and address potential exclusion barriers in a product or service. Inclusiveness fosters innovation and helps design experiences that benefit everyone.
 
-- **Transparency**: AI systems must be transparent and understandable. Because AI systems can inform decisions that can deeply affect people's lives, it's crucial for individuals to understand how these decisions are made.
+- **Transparency**: AI systems should be transparent and understandable. AI systems can inform decisions that can deeply affect people's lives, so it's crucial for individuals to understand how the system makes these decisions.
 
-- **Accountability**: AI systems and their developers must be accountable and answerable.
+- **Accountability**: AI systems and their developers should be accountable and answerable.
 
-Incorporate responsible AI principles throughout your AI adoption journey, from strategy and planning to implementation. Ensure that these principles are applied when you secure, manage, and govern your AI initiatives.
+Incorporate responsible AI principles throughout your AI adoption journey, from strategy and planning to implementation. Ensure that you apply these principles when you secure, manage, and govern your AI initiatives.
 
 :::image type="content" source="./media/responsible-ai.png" alt-text="Diagram that shows how responsible AI is foundational to all AI work across methodologies in the Cloud Adoption Framework for Azure." border="false":::
 
@@ -38,43 +38,43 @@ This AI adoption guidance includes examples of how you can use the Cloud Adoptio
 
 ## The importance of responsible AI
 
-The following are key reasons why responsible AI is essential:
+Responsible AI helps to mitigate the following risks:
 
-- **Unintended consequences**: Planning and oversight are crucial to reduce the risk of unforeseen effects that have ethical implications.
+- **Unintended consequences**: Plan and oversee your responsible AI implementation to reduce the risk of unforeseen effects that have ethical implications.
 
 - **Evolving threats**: Novel threats emerge regularly as AI technology evolves. To help mitigate and stay ahead of these threats, adhere to the principles of responsible AI.
 
 - **Bias**: Bias mitigation in AI can be challenging but is necessary to ensure that AI systems are fair and unbiased. Use the responsible AI principles to help guide you.
 
-- **Sensitive technologies**: Technologies like facial recognition can be considered sensitive technology because of the risk to fundamental freedoms and human rights. Consider the implications of these technologies to ensure that they're used responsibly.
+- **Sensitive technologies**: Technologies like facial recognition can be considered sensitive technology because of the risk to fundamental freedoms and human rights. Consider the implications of these technologies to ensure that you use them responsibly.
 
 ## Azure facilitation
 
-Microsoft Azure provides a range of tools, services, and resources to help you build responsible AI systems. Here are some examples:
+Microsoft Azure provides a range of tools, services, and resources to help you build responsible AI systems.
 
-### Build safer systems by using Microsoft Azure AI Content Safety
+### Use Microsoft Azure AI Content Safety to build safe systems
 
 Use [Microsoft Azure AI Content Safety](/azure/ai-services/content-safety/) to detect harmful user-generated and AI-generated content in applications and services. Content Safety helps you analyze generated content in your AI applications, including text and images, to ensure that it's safe and appropriate for your users. Content Safety provides the following capabilities:
 
-- [Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) scans text and documents for the risk of a user input attack, or jailbreak, on a language model.
+- [Prompt shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) scans text and documents for the risk of a user input attack, or jailbreak, on a large language model (LLM).
 
 - [Groundedness detection](/azure/ai-services/content-safety/concepts/groundedness) detects if the text responses of a language model are grounded in the source materials that the users provide.
 
-- [Protected material detection](/azure/ai-services/content-safety/concepts/protected-material) detects if the text responses of a language model contain protected material, such as copyrighted text, song lyrics, articles, web content, and more.
+- [Protected material detection](/azure/ai-services/content-safety/concepts/protected-material) detects if the text responses of a language model contain protected material, such as copyrighted text, song lyrics, articles, and web content.
 
-- [Custom categories (rapid) API](/azure/ai-services/content-safety/concepts/custom-categories-rapid) define emerging harmful content patterns and scan text and images for matches.
+- The [Custom Categories (rapid) API](/azure/ai-services/content-safety/concepts/custom-categories-rapid) defines emerging harmful content patterns and scans text and images for matches.
 
-- [Analyze Text API](/rest/api/contentsafety/text-operations/analyze-text) analyzes potentially harmful text content. It typically identifies categories like hate, self harm, and sexual or violent content.
+- The [Analyze Text API](/rest/api/contentsafety/text-operations/analyze-text) analyzes potentially harmful text content. It typically identifies categories like hate, self harm, and sexual or violent content.
 
-- [Analyze Image API](/rest/api/contentsafety/image-operations/analyze-image) analyzes potential harmful image content. It typically identifies categories like hate, self harm, and sexual or violent content.
+- The [Analyze Image API](/rest/api/contentsafety/image-operations/analyze-image) analyzes potential harmful image content. It typically identifies categories like hate, self harm, and sexual or violent content.
 
-### Understand responsible use of AI with Azure AI services
+### Use AI responsibly in Azure AI services
 
-Microsoft provides a list of transparency notes for AI-relevant Azure services. Different services within the Azure AI service suite are represented. For more information, see [Responsible use of AI with Azure AI services](/azure/ai-services/responsible-use-of-ai-overview).
+Microsoft provides a list of transparency notes for AI-relevant Azure services. The list includes services within the Azure AI services suite. For more information, see [Responsible use of AI with Azure AI services](/azure/ai-services/responsible-use-of-ai-overview).
 
 ### Use the Responsible AI dashboard for Azure Machine Learning
 
-If you build systems with Azure Machine Learning, you can use the [Responsible AI dashboard](/azure/machine-learning/concept-responsible-ai-dashboard) to assess your AI systems. The Responsible AI dashboard provides a single interface to help you implement responsible AI principles. Some of the Responsible AI components include:
+If you build systems with Azure Machine Learning, you can use the [Responsible AI dashboard](/azure/machine-learning/concept-responsible-ai-dashboard) to assess your AI systems. The Responsible AI dashboard provides a single interface to help you implement responsible AI principles. Some of the Responsible AI features include:
 
 - **Data analysis**: Understand and explore your dataset distributions and statistics.
 
@@ -82,13 +82,13 @@ If you build systems with Azure Machine Learning, you can use the [Responsible A
 
 - **Error analysis**: View and understand how errors are distributed in your dataset.
 
-- **Model interpretability**: Understand your model's predictions and how individual and overall predictions are made.
+- **Model interpretability**: Understand your model's predictions and how your model makes individual and overall predictions.
 
 - **Counterfactual what-if analysis**: Observe how changes in features can affect your model predictions.
 
 - **Causal analysis**: Use historical data to view the causal effects of treatment features on real-world outcomes.
 
-### Guidelines to develop AI responsibly
+### Develop AI responsibly
 
 |Resource|Description|
 |--------|-----------|
