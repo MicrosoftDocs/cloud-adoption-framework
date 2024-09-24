@@ -96,7 +96,7 @@ If you build systems with Azure Machine Learning, you can use the [Responsible A
 |[Conversational AI guidelines](https://www.microsoft.com/research/uploads/prod/2018/11/Bot_Guidelines_Nov_2018.pdf)|Design bots in a way that earns the trust of others to help people and society realize their full potential. Use these guidelines to create a bot that builds trust in the company and service that it represents. |
 |[Inclusive AI design guidelines](https://inclusive.microsoft.design/tools-and-activities/InPursuitofInclusiveAI.pdf)|Use these guidelines to help you design AI that is inclusive and accessible to everyone.|
 |[AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA)|Use the AI fairness checklist to determine whether your AI system is fair and unbiased.|
-|[Responsible AI](/azure/machine-learning/concept-responsible-ai) in Machine Learning|Review these responsible AI resources if you use Machine Learning to build AI systems.|
+|[Responsible AI in Machine Learning](/azure/machine-learning/concept-responsible-ai) |Review these responsible AI resources if you use Machine Learning to build AI systems.|
 
 ## Next steps
 
