@@ -1,6 +1,6 @@
 ---
 title: AI Plan - Recommendations to develop an AI adoption plan
-description: Recommendations to develop an AI adoption plan.
+description: Comprehensive guide on AI adoption planning, skill acquisition, resource access, PoC creation, and responsible AI practices for organizations.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
