@@ -133,6 +133,7 @@ The rest of the guidance focuses on building AI workloads in Azure using PaaS an
 To adopt a Microsoft Copilot solution, use these links to find more information:
 
 - [Microsoft Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)
+- [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 - Role-based agents in Microsoft 365:
     - [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot)
@@ -148,6 +149,6 @@ To adopt a Microsoft Copilot solution, use these links to find more information:
     - [Power Automate](https://www.microsoft.com/power-platform/products/power-automate)
     - [Azure](https://azure.microsoft.com/products/copilot/)
 
-- [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Browser-based Copilots:
 - [Microsoft Copilot (free)](https://copilot.microsoft.com/)
 - [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro)
