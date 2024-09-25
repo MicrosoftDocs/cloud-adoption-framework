@@ -122,5 +122,5 @@ Alternatively, use this blog when SAP API Management is the preferred choice:
 
 ### Next steps
 
-tbd.
+- [Innovate with SAP and Azure](./innovate.md)
 
