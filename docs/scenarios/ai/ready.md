@@ -1,6 +1,6 @@
 ---
 title: AI Ready – Recommendations to prepare an AI foundation
-description: Recommendations to prepare an AI foundation
+description: Optimize your AI foundation with Azure's best practices for region selection, governance, networking, and connectivity.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
@@ -61,6 +61,8 @@ This guidance provides recommendations on how different end users should connect
 - *Secure internet-facing networks.* External, online users access internet-facing AI workloads through the applications resources in the spoke network. Front these workloads with Application Gateway or Azure Front Door with Azure Web Application Firewall policies for security purposes.
 
 - *Connect to on-premises data.* For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection. Azure [ExpressRoute](/azure/expressroute/expressroute-introduction) is ideal for high data volumes, real-time processing, or workloads that require consistent performance. It has [FastPath](/azure/expressroute/about-fastpath) feature that improves data path performance. Use [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) for moderate data volumes, infrequent data transfer, or when public internet access is required. It’s simpler to set up and cost-effective for smaller datasets than ExpressRoute. For more information, see [Connect an on-premises network to Azure](/azure/architecture/reference-architectures/hybrid-networking/).
+
+- *Prepare domain name resolution services.* Use private endpoints to protect AI workloads by assigning them private IP addresses for communication. [Integrate private endpoints with DNS](/azure/private-link/private-endpoint-dns-integration) for proper DNS resolution and successful private endpoint functionality. Deploy Azure DNS infrastructure as part of your [Azure landing zone](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources) and configure conditional forwarders from existing DNS services for the appropriate zones (/azure/private-link/private-endpoint-dns). For more information,see, [Private Link and DNS integration at scale for Azure landing zones](s/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
 ## Implementation options
 
