@@ -34,15 +34,7 @@ Here are the high-level choices you need to make when building a generative AI a
 
 - *Select the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large data sets. Consider CPUs for data preprocessing tasks or training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
-Use the following resources to find guidance for generative AI applications
-
-| Guidance type | Articles |
-| --- | --- |
-| Reference architectures | [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) 
-| &nbsp; | [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) 
-| &nbsp; | [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
-| Implementation guides | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) |
-| &nbsp;| [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
+*Table 1 Use the following resources to find guidance for generative AI applications*
 
 | Reference architectures  | Implementation guides |
 | --- | --- |
