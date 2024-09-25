@@ -73,19 +73,19 @@ This guidance outlines recommendations to control the security risks to AI workl
 
 This guidance outlines recommendations to control AI workloads operations.
 
-- *Consider centralizing AI model governance.* Having a single individual or team govern AI model endpoints makes it easier to standardize governance and monitor the endpoints. The AI CoE handles this function for the business as an extension of the Cloud CoE or standalone team. For more information, see [AI CoE](center-of-excellence)
+- *Consider centralizing AI model governance.* Having a single individual or team govern AI model endpoints makes it easier to standardize governance and monitor the endpoints. The AI CoE handles this function for the business as an extension of the Cloud CoE or standalone team. For more information, see [AI CoE](center-of-excellence.md)
 
 - *Review and manage AI models*. Develop a policy for managing model versioning, especially as models are upgraded or retired. You need to maintain compatibility with existing systems and ensure a smooth transition between model versions.
 
 - *Define business continuity and disaster recovery plan.* Establish a policy for business continuity and disaster recovery for your AI endpoints and AI data. Configure baseline disaster recovery for resources hosting your AI model endpoints, such as virtual machines ([Linux](/azure/virtual-machines/linux/tutorial-disaster-recovery), [Windows](/azure/virtual-machines/windows/tutorial-disaster-recovery)), [Azure AI Studio](/azure/ai-studio/how-to/disaster-recovery), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning?view=azureml-api-2), [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery), or Azure AI services. All Azure data stores, such as [Azure Blob storage](/azure/storage/common/storage-disaster-recovery-guidance), [Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore), and [Azure SQL Database](/azure/azure-sql/accelerated-database-recovery), have reliability and disaster recovery guidance that you should follow.
 
-- *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For example, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning?view=azureml-api-2), [Azure AI studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), [Azure Virtual Machines](/azure/azure-monitor/vm/monitor-virtual-machine-alerts), and guidance on individual Azure AI services.
+- *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For example, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), [Azure AI studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), [Azure Virtual Machines](/azure/azure-monitor/vm/monitor-virtual-machine-alerts), and guidance on individual Azure AI services.
 
 ## Govern AI regulatory compliance
 
 This guidance outlines recommendations to control AI workload compliance with current and future AI regulations.
 
-- *Automate compliance.* Use [Microsoft Purview Compliance Manager](https://docs.microsoft.com/microsoft-365/compliance/compliance-manager-overview) to assess and manage compliance across cloud environments. Use the applicable [regulatory compliance initiatives](/azure/governance/policy/samples/#regulatory-compliance) in Azure Policy for your industry. Apply other policies based on the AI services you’re using, such as [Azure AI Studio](/azure/ai-services/security-controls-policy), [Azure Machine Learning](/azure/machine-learning/policy-reference), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference).
+- *Automate compliance.* Use [Microsoft Purview Compliance Manager](/microsoft-365/compliance/compliance-manager-overview) to assess and manage compliance across cloud environments. Use the applicable [regulatory compliance initiatives](/azure/governance/policy/samples/#regulatory-compliance) in Azure Policy for your industry. Apply other policies based on the AI services you’re using, such as [Azure AI Studio](/azure/ai-services/security-controls-policy), [Azure Machine Learning](/azure/machine-learning/policy-reference), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference).
 
 - *Develop industry-specific compliance checklists.* Regulations and standards differ by industry and location. You need to know your regulatory requirements and compile checklists reflecting the regulatory demands relevant to your industry. Use standards, such as ISO/IEC 23053:2022 ("Framework for Artificial Intelligence Systems Using Machine Learning"), to audit your policies applied to AI workloads.
 
@@ -93,7 +93,7 @@ This guidance outlines recommendations to control AI workload compliance with cu
 
 This guidance outlines recommendations to control AI data fed into AI models.
 
-- *Establish a process for cataloging data.* Use a tool like [Microsoft Purview](/azure/purview/what-is-data-catalog) to implement a unified data catalog and classification system across your organization. Integrate these policies into your CI/CD pipelines for AI development.
+- *Establish a process for cataloging data.* Use a tool like [Microsoft Purview](/purview/what-is-data-catalog) to implement a unified data catalog and classification system across your organization. Integrate these policies into your CI/CD pipelines for AI development.
 
 - *Maintain data security boundary.* Cataloging data helps ensure you don’t feed sensitive data into public facing AI endpoints. When you create indexes from certain data sources, the indexing process can remove the current security boundaries around data. Ensure any data ingested into AI models is classified and vetted according to centralized standards.
 
