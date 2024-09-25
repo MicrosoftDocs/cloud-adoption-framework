@@ -1,5 +1,5 @@
 ---
-title: Extend SAP with the Microsoft Power Platform
+title: SAP and Power Platform Fundamentals
 description: Learn how to extend SAP with the Microsoft Power Platform to create better end-to-end business solutions.
 author: mimergel
 ms.author: mimergel
