@@ -6,6 +6,7 @@ ms.author: gereyeso
 ms.reviewer: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
+ms.custom: e2e-oracle
 ---
 # Identity and access management for Oracle Database@Azure
 
@@ -29,4 +30,4 @@ Consider the following identity and access management recommendations for Oracle
 
 - [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
-- [Business continuity and disaster recovery (BCDR) for Oracle Database@Azure](oracle-disaster-recovery-odaa.md)
+- [BCDR for Oracle Database@Azure](oracle-disaster-recovery-odaa.md)

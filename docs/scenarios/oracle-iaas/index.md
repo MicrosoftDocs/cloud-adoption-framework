@@ -1,14 +1,11 @@
 ---
 title: Introduction to Oracle on Azure adoption scenarios
-description: Learn how to set up and manage Oracle workloads within your Azure landing zone. 
+description: Learn how to set up and manage Oracle workloads within your Azure landing zone. See reference implementations for Oracle database systems on Azure.
 author: jfaurskov
 ms.author: janfaurs
-ms.date: 04/26/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
-ms.custom:
-  - think-tank
-  - e2e-oracle
-  - engagement-fy24
+ms.custom: e2e-oracle
 ---
 # Introduction to Oracle on Azure adoption scenarios
 
@@ -36,7 +33,7 @@ Use the reference architectures as a starting point. Modify the reference archit
 
 The following diagram shows Oracle on Azure Virtual Machines deployed to an application landing zone. It also shows the critical design areas that support this deployment. The Oracle databases run on VMs. You can change the number and size of VMs to accommodate your needs.
 
-:::image type="content" source="./media/index/reference-architecture-oracle-iaas-landing-zone.svg" alt-text="Diagram that shows a reference architecture of Oracle on Azure Virtual Machines." border="false" lightbox="./media/index/reference-architecture-oracle-iaas-landing-zone.svg":::
+:::image type="content" source="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg" alt-text="Diagram that shows a reference architecture of Oracle on Azure Virtual Machines." border="false" lightbox="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg":::
 
 ### Landing zone architecture for Oracle Database@Azure
 
