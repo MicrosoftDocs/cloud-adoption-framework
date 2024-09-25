@@ -1,6 +1,6 @@
 ---
 title: AI Plan - Recommendations to develop an AI adoption plan
-description: Recommendations to develop an AI adoption plan.
+description: Comprehensive guide on AI adoption planning, skill acquisition, resource access, PoC creation, and responsible AI practices for organizations.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
@@ -13,22 +13,22 @@ This article provides recommendations for planning AI adoption. Strategy provide
 
 ## Evaluate AI maturity level
 
-As with any technology, there’s a learning curve to adopting AI. Evaluating your AI maturity level can help you prioritize the right AI opportunities. Tackling an AI project that’s too advanced for your experience won’t provide the return on investment you need. If you plan to build generative AI applications, start with this generative AI technical assessment. At a high level, here are the readiness factors you need to consider.  
+As with any technology, there’s a learning curve to adopting AI. Evaluating your AI maturity level can help you prioritize the right AI opportunities. AI projects that are too advanced for your experience don't provide the return on investment you need. If you plan to build generative AI applications, start with this generative AI technical assessment. At a high level, here are the readiness factors you need to consider.  
 
 | AI Maturity Level | Feasible AI Projects | Skills Required | Data Readiness |
 |-------------------|----------------------|-----------------|----------------|
 | **Level 1**       | - Microsoft Learn Quickstart <br> - Copilot Studio app | - Basic understanding of AI concepts <br> - Ability to integrate data sources and map out prompts | - Minimal to zero data available <br> - Enterprise data available |
 | **Level 2**       | - Any of the previous projects <br> - Custom analytical AI application using Azure AI Services <br> - Custom generative AI chat app with Azure AI Studio without retrieval augmented generation <br> - Custom machine learning app with automated model training <br> - Fine-tuning generative AI model | - Experience with AI model selection <br> - Familiarity with AI deployment and endpoint management <br> - Experience with data cleaning and processing | - Minimal to zero data available <br> - Small, structured dataset <br> - Small amount of domain-specific data available |
 | **Level 3**       | - Any of the previous projects <br> - Generative AI app with RAG in Azure AI Studio (or Azure Machine Learning) <br> - Train and deploy machine learning model in Azure Machine Learning <br> - Train and run small AI model on Azure Virtual Machines | - Proficiency in prompt engineering <br> - Proficiency with AI model selection, data chunking, and query processing <br> - Proficiency in data preprocessing, cleaning, splitting, and validating <br> - Grounding data for indexing | - Large amounts of historical business data available for machine learning <br> - Small amount of domain-specific data available |
-| **Level 4**       | - Any of the previous projects <br> - Train and run large generative or non-generative AI app on Azure Virtual Machines, Azure Kubernetes Service, Azure Container Apps | - Advanced AI/ML expertise, including infrastructure management <br> - Proficiency in handling complex AI model training workflows <br> - Experience with orchestration, model benchmarking, and performance optimization <br> - Strong skills in securing and managing AI endpoints | - Large amounts of data available for training |
+| **Level 4**       | - Any of the previous projects <br> - Train and run large generative or nongenerative AI app on Azure Virtual Machines, Azure Kubernetes Service, Azure Container Apps | - Advanced AI/ML expertise, including infrastructure management <br> - Proficiency in handling complex AI model training workflows <br> - Experience with orchestration, model benchmarking, and performance optimization <br> - Strong skills in securing and managing AI endpoints | - Large amounts of data available for training |
 
 ## Acquire AI skills
 
-Assess your organization’s current AI skill set to identify gaps and determine whether to develop internally or hire externally. A combination of approaches is often needed, balancing in-house development with outsourcing based on broader organizational strategy. For strategic projects, focus on building in-house expertise for long-term success. In areas requiring quick value, external partnerships can fill immediate gaps while internal capabilities are developed. This ensures efficiency in the short term and strategic skill growth for long-term competitiveness.
+Assess your organization’s current AI skill set to identify gaps and determine whether to develop internally or hire externally. A combination of approaches is often needed, balancing in-house development with outsourcing based on broader organizational strategy. For strategic projects, focus on building in-house expertise for long-term success. In areas requiring quick value, external partnerships can fill immediate gaps while internal capabilities are developed. This combination ensures efficiency in the short term and strategic skill growth for long-term competitiveness.
 
 - *Learn AI skills.* The [Microsoft Learn](/) platform has free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certifications goals, such as earning Azure AI related certifications: [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/) , and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There’s learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
-- *Recruit AI skills.* For skills that cannot be developed internally within your time frame, recruit professionals who possess the necessary expertise, particularly in areas like advanced AI model development, generative AI operations, or AI ethics and compliance. For expertise that cannot be developed internally within your time frame, recruit professionals with advanced AI model development, generative AI operations, or AI ethics skills.
+- *Recruit AI skills.* For expertise that can't be developed internally within your time frame, recruit professionals. These professionals should have experience in AI model development, generative AI operations, or AI ethics skills.
 
     - *Form partnerships with educational institutions.* Collaborate with universities and training centers to access fresh talent equipped with the latest AI skills and insights.
     - *Regularly update job descriptions.* Ensure job roles and requirements reflect the rapidly evolving AI landscape, helping you attract candidates with the most relevant skills.
@@ -39,7 +39,7 @@ Assess your organization’s current AI skill set to identify gaps and determine
 
 ## Gain access to AI resources
 
-As a tactical step to developing AI solutions, you need to be able to access them. The goal here is to provide a quick way to understand and access what’s needed to start using AI solutions.
+As a tactical step to developing AI solutions, you need to be able to access them. The goal here's to provide a quick way to understand and access what you need to start using AI solutions.
 
 - *Access Microsoft Copilots.* Microsoft SaaS Copilots require a license or add-on subscription, except [Microsoft Copilot (free)](https://copilot.microsoft.com/).
 
@@ -51,11 +51,11 @@ As a tactical step to developing AI solutions, you need to be able to access the
 
     - Role-based agents in Microsoft 365: [Role-based agents for Microsoft 365.](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-extensions)
 
-- *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure AI Studio, Azure Machine Learning, and Azure AI services, which includes Azure OpenAI, and Azure Virtual Machines.
+- *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure AI Studio, Azure Machine Learning, and Azure AI services, which include Azure OpenAI, and Azure Virtual Machines.
 
 ## Create an AI proof of concept
 
-A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s technically optional, but it’s a valuable step for those new to AI. It provides a concrete evaluation of your AI maturity level and helps you set realistic expectations around delivery timelines. All Microsoft AI platforms have Quickstart articles for PoCs that align with common use cases. Use the table to find the right Quickstart article.
+A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s technically optional, but it’s a valuable step for anyone new to AI. It provides a concrete evaluation of your AI maturity level and helps you set realistic expectations around delivery timelines. All Microsoft AI platforms have Quickstart articles for PoCs that align with common use cases. Use the table to find the right Quickstart article.
 
 | AI Type  | Quickstart links |
 |----------|--------------|
@@ -65,9 +65,9 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s tec
 
 - *Prioritize AI use cases.* Prioritize use cases that allow you to learn quickly and work toward your overall business impact. Focus on strategic areas like facilitating sales teams, customer-facing applications, and time-intensive processes.
 
-- *Select the right opportunity.* PoCs should align with your current AI maturity level and your prioritized AI opportunities. Within those filters, prefer projects that provide the most value, balancing the opportunity priority, time, and money it takes to see results. Prefer internal use cases for minimized testing risk. Refine PoC and convert to a pilot. Conduct AB testing to create a baseline of what works and what does not for your organization.
+- *Select the right opportunity.* PoCs should align with your current AI maturity level and your prioritized AI opportunities. Within those filters, prefer projects that provide the most value, balancing the opportunity priority, time, and money it takes to see results. Prefer internal use cases for minimized testing risk. Refine PoC and convert to a pilot. Conduct AB testing to create a baseline of what works and what doesn't for your organization.
 
-- *Document learnings*. As you test, you should have a good collection of data leading them to the best strategy for their organization (rule-out pathway). Never let a PoC make it to production. Reevaluate the skills needed and data readiness. proof-of-concept exercise should determine whether you have the necessary skills and resources to develop AI solutions internally.
+- *Document learnings*. As you test, you should have a good collection of data leading them to the best strategy for their organization (rule-out pathway). Don't let a PoC make it to production. Reevaluate the skills needed and data readiness. proof-of-concept exercise should determine whether you have the necessary skills and resources to develop AI solutions internally.
 
 - *Reprioritize AI opportunities*. Based on your PoC experience, reevaluate which AI opportunity you want to implement first.
 
@@ -75,17 +75,17 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s tec
 
 Understanding the requirements of Responsible AI helps when setting delivery timelines. To plan for responsible AI, follow these recommendations:
 
-- *Use responsible AI planning tools.* If you’re new to AI, rely on the planning tools available to align development with responsible AI principles. Microsoft has developed resources facilitate align AI adoption based on its experience. For more information, see [AI Impact Assessment template](https://www.microsoft.com/ai/tools-practices) , [Human-AI experience toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
+- *Use responsible AI planning tools.* If you’re new to AI, rely on the planning tools available to align development with responsible AI principles. Microsoft has resource to align AI adoption to Responsible AI principles. For more information, see [AI Impact Assessment template](https://www.microsoft.com/ai/tools-practices) , [Human-AI experience toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
-- *Plan for AI governance.* Factor in the effort to assess AI risks, develop AI governance policies, and controls needed to eliminate all instances of unauthorized AI use. Set up processes to manage data access, usage, and compliance with regulations like CCPA. These processes will be unique to your organization, data, and AI opportunities. Create clear data ownership policies and ensuring data lineage is traceable. For more information, see [Govern AI](govern.md).
+- *Plan for AI governance.* Factor in the effort to assess AI risks, develop AI governance policies, and controls needed to eliminate all instances of unauthorized AI use. Set up processes to manage data access, usage, and compliance with regulations. These processes are unique to your organization, data, and AI opportunities. Create clear data ownership policies and ensuring data lineage is traceable. For more information, see [Govern AI](govern.md).
 
-- *Plan for AI security.* Plan to apply secure configurations to Azure resources and models so that you pass any IT security standards. Azure has security baselines for each services. Familiarize yourself with common AI security threats, such as model poisoning, data tampering, and adversarial attacks. Any data fed into AI models should respect the same security, privacy, and sensitivity boundaries as any other technology. For more information, see [Secure AI](secure.md).
+- *Plan for AI security.* Plan to apply secure configurations to Azure resources and models so that you pass any IT security standards. Azure has security baselines for each service. Familiarize yourself with common AI security threats, such as model poisoning, data tampering, and adversarial attacks. Any data fed into AI models should respect the same security, privacy, and sensitivity boundaries as any other technology. For more information, see [Secure AI](secure.md).
 
-- *Plan for AI management.* Consider how you will manage AI systems throughout their lifecycle, from updates to monitoring and resilience. Think about how you’ll handle regular tasks, like deploying updates and maintaining infrastructure, specifically tailored to AI environments. For more information, see [Manage AI](manage.md).
+- *Plan for AI management.* Consider how you should manage AI systems throughout their lifecycle, from updates to monitoring and resilience. Think about how to handle regular tasks, like deploying updates and maintaining infrastructure, tailored to AI environments. For more information, see [Manage AI](manage.md).
 
 ## Plan for AI centralization and endpoint sharing
 
-AI centralization means there’s a single team that manages AI resources and endpoint deployments. The decision to centralize AI models is primarily a governance issue. Centralization allows you to use a single process to deploy, govern, and manage AI endpoints for all AI workloads, rather than allow application teams to control these resources individually. Cost allocation for chargeback and showback and performance are other considerations centralization. If you had an AI CoE, they would determine whose responsibility it is to manage centralize AI resources.
+AI centralization means there’s a single team that manages AI resources and endpoint deployments. The decision to centralize AI models is primarily a governance issue. Centralization allows you to use a single process to deploy, govern, and manage AI endpoints for all AI workloads, rather than allow application teams to control these resources individually. Cost allocation for chargeback and showback and performance are other considerations centralization. If you had an AI CoE, they would determine whose responsibility it's to manage centralized AI resources.
 
 ### Start with a centralized model
 
@@ -101,9 +101,9 @@ In a centralized model, you can share a single AI endpoint across multiple appli
 :::image type="content" source="./images/centralized-ai-sharing.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint." lightbox="./images/centralized-ai.svg" border="false":::
 *Figure 2. Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint.*
 
-- *Production use cases to share a single AI endpoint.* You can share stateless AI endpoints freely as long as the content filter governance needs are consistent. For non-global deployments in Azure OpenAI, fronting a shared AI endpoint with a reverse proxy like Azure API Management is a common practice. With some configurations in APIM, you can track costs across applications and route client request to the appropriate endpoint if data residency and compliance requires it. From an operations perspective, sharing AI endpoints is easiest when the same application team develops, deploys, and manages multiple applications. For global AI endpoint deployments. For more information, see [Azure OpenAI deployment types](/azure/ai-services/openai/how-to/deployment-types)
+- *Production use cases to share a single AI endpoint.* Sharing an AI endpoint works best when the same application team develops, deploys, and manages multiple applications that share the same governance and model needs. For sharing nonglobal, regional deployments, a generative AI gateway is best practice. With some configuration in APIM, you can monitor tokens and track costs across applications.
 
-- *Share AI endpoints in non-production environments.* Sharing a single AI endpoint in non-production environments simplifies resource management without major concerns about performance or operational impact. You can even share a single AI endpoint across different non-production environments. Ultimately, there should be flexibility in to try different models before finalizing on the model to be chosen for the use case.
+- *Share AI endpoints in nonproduction environments.* Sharing a single AI endpoint in nonproduction environments simplifies resource management without major concerns about performance or operational impact. You can even share a single AI endpoint across different nonproduction environments. Ultimately, there should be flexibility in to try different models before finalizing on the model to be chosen for the use case.
 
 #### Don’t share AI endpoints when governance needs vary
 

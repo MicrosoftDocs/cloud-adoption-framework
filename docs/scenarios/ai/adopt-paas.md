@@ -1,6 +1,6 @@
 ---
 title: Adopt AI platforms (PaaS) - Recommendations to build AI apps with Azure platforms
-description: Recommendations to build AI apps with Azure platforms
+description: Learn how to build AI applications using Azure PaaS services, including generative and nongenerative AI, with detailed recommendations and architecture guides.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
