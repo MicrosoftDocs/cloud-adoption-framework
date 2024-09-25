@@ -26,7 +26,7 @@ As with any technology, there’s a learning curve to adopting AI. Evaluating yo
 
 Assess your organization’s current AI skill set to identify gaps and determine whether to develop internally or hire externally. A combination of approaches is often needed, balancing in-house development with outsourcing based on broader organizational strategy. For strategic projects, focus on building in-house expertise for long-term success. In areas requiring quick value, external partnerships can fill immediate gaps while internal capabilities are developed. This ensures efficiency in the short term and strategic skill growth for long-term competitiveness.
 
-- *Learn AI skills.* The [Microsoft Learn](/) platform has free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](https://learn.microsoft.com//azure/docs/) for all Microsoft and Azure AI services. Set certifications goals, such as earning Azure AI related certifications: [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/) , and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There’s learning resources for other subjects on the platform, so filter the results to return AI-specific results.
+- *Learn AI skills.* The [Microsoft Learn](/) platform has free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/azure/docs/) for all Microsoft and Azure AI services. Set certifications goals, such as earning Azure AI related certifications: [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/) , and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There’s learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
 - *Recruit AI skills.* For skills that cannot be developed internally within your time frame, recruit professionals who possess the necessary expertise, particularly in areas like advanced AI model development, generative AI operations, or AI ethics and compliance. For expertise that cannot be developed internally within your time frame, recruit professionals with advanced AI model development, generative AI operations, or AI ethics skills.
 
@@ -75,7 +75,7 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s tec
 
 Understanding the requirements of Responsible AI helps when setting delivery timelines. To plan for responsible AI, follow these recommendations:
 
-- *Use responsible AI planning tools.* If you’re new to AI, rely on the planning tools available to align development with responsible AI principles. Microsoft has developed resources facilitate align AI adoption based on its experience. For more information, see [AI Impact Assessment template](https://www.microsoft.com/ai/tools-practices) , [Human-AI interaction workbook](https://www.microsoft.com/haxtoolkit/workbook/), and [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
+- *Use responsible AI planning tools.* If you’re new to AI, rely on the planning tools available to align development with responsible AI principles. Microsoft has developed resources facilitate align AI adoption based on its experience. For more information, see [AI Impact Assessment template](https://www.microsoft.com/ai/tools-practices) , [Human-AI experience toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
 - *Plan for AI governance.* Factor in the effort to assess AI risks, develop AI governance policies, and controls needed to eliminate all instances of unauthorized AI use. Set up processes to manage data access, usage, and compliance with regulations like CCPA. These processes will be unique to your organization, data, and AI opportunities. Create clear data ownership policies and ensuring data lineage is traceable. For more information, see [Govern AI](govern.md).
 
@@ -132,19 +132,22 @@ The rest of the guidance focuses on building AI workloads in Azure using PaaS an
 
 To adopt a Microsoft Copilot solution, use these links to find more information:
 
-- [Microsoft Copilot for Microsoft 365](https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-overview)
+- [Microsoft Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)
+
 - Role-based agents in Microsoft 365:
     - [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot)
-    - [Microsoft 365 Copilot for Sales](/azure/microsoft-sales-copilot/introduction)
-    - [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service)
+    - [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction)
+    - [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service)
     - [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance)
-- In-product Copilots
+
+- In-product Copilots:
     - [GitHub](https://azure.microsoft.com//products/github/copilot)
-    - [Power Apps](https://www.microsoft.com//power-platform/products/power-apps)
-    - [Power BI](https://www.microsoft.com//power-platform/products/power-bi?culture=&country=us)
-    - [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai)
-    - [Power Automate](https://www.microsoft.com//power-platform/products/power-automate)
-    - [Azure](https://azure.microsoft.com//products/copilot/)
-    - [Microsoft Copilot Studio](/azure-studio/requirements-licensing-subscriptions)
-    - [Microsoft Copilot (free)](https://copilot.microsoft.com/)
-    - [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro)
+    - [Power Apps](https://www.microsoft.com/power-platform/products/power-apps)
+    - [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=&country=us)
+    - [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai)
+    - [Power Automate](https://www.microsoft.com/power-platform/products/power-automate)
+    - [Azure](https://azure.microsoft.com/products/copilot/)
+
+- [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)
+- [Microsoft Copilot (free)](https://copilot.microsoft.com/)
+- [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro)
