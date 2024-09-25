@@ -3,152 +3,152 @@ title: Business commitment in cloud management
 description: Calculate future returns from the classification and impact of interruptions to various workloads to make better business decisions and commitments.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/17/2019
+ms.date: 09/12/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
 
 # Business commitment in cloud management
 
-Defining *business commitment* is an exercise in balancing priorities. The objective is to align the proper level of operational management at an acceptable operating cost. Finding that balance requires a few data points and calculations, which we've outlined in this article.
+A *business commitment* helps you define your level of operational management at an acceptable operating cost. To define a business commitment, you must balance priorities. This article describes how to evaluate data points and calculations to find that balance.
 
-![Balance cost and resiliency](../../_images/manage/business-commitment-scale.png)
+You can have commitments that are related to business stability that justify business decisions. Stability commitments can include service-level agreements (SLAs) or a certain level of technical resiliency. For most workloads, you only need a baseline level of cloud management. For other workloads, you might spend two to four times more on cloud management compared to a baseline level. You can justify this cost because of the potential impact of business interruptions.
 
-Commitments to business stability, via technical resiliency or other service-level agreement (SLA) impacts, are a business justification decision. For most workloads in an environment, a baseline level of cloud management is sufficient. For others, a 2x to 4x cost increase is easily justified because of the potential impact of any business interruptions.
+The previous articles in this series can help you understand the classification and impact of interruptions to various workloads. This article helps you calculate the returns.
 
-The previous articles in this series can help you understand the classification and impact of interruptions to various workloads. This article helps you calculate the returns. As illustrated in the preceding image, each level of cloud management has inflection points where cost can rise faster than increases in resiliency. Those inflection points will prompt detailed business decisions and business commitments.
+The following diagram shows that each level of cloud management has inflection points in which cost can rise faster than resiliency. Those inflection points prompt detailed business decisions and business commitments.
 
-## Determine a proper commitment with the business
+:::image type="content" source="../../_images/manage/business-commitment-scale.png" alt-text="Diagram that shows the balance of cost and resiliency." border="false":::
 
-For each workload in the portfolio, the cloud operations team and cloud strategy team should align on the level of management that's provided directly by the cloud operations team.
+## Determine a proper commitment
 
-As you're establishing a commitment with the business, there are a few key aspects to align:
+For each workload in a portfolio, the cloud operations team and cloud strategy team should align on the level of management that the cloud operations team directly provides.
 
-- IT operations prerequisites.
-- Management responsibility.
-- Cloud tenancy.
-- Soft-cost factors.
-- Loss avoidance ROI.
-- Validation of management level.
+When your business establishes a commitment, determine how to align the following aspects.
 
-To aid in your decision process, the remainder of this article describes these aspects in greater detail.
+- IT operations prerequisites
+- Management responsibility
+- Cloud tenancy
+- Soft-cost factors
+- Return on investment (ROI) loss avoidance
+- Validation of the management level
 
-## IT operations prerequisites
+To help you make decisions, the following sections describe these aspects in greater detail.
 
-The [Azure Management Guide](../azure-management-guide/index.md) outlines the management tools that are available in Azure. Before reaching a commitment with the business, IT should determine an acceptable standard-level management baseline to be applied to all managed workloads. IT would then calculate a standard management cost for each of the managed workloads in the IT portfolio, based on counts of CPU cores, disk space, and other asset-related variables. IT would also estimate a composite SLO for each workload, based on the architecture.
+## Determine IT operations prerequisites
+
+The [Azure Management Guide](../azure-management-guide/index.md) outlines Azure management tools. Before your business makes a commitment, IT should determine an acceptable standard-level management baseline to apply to all managed workloads. For each of the managed workloads in the IT portfolio, IT can then calculate a standard management cost that's based on CPU cores, disk space, and other asset-related variables. IT can also estimate a composite service-level objective (SLO) for each workload, based on the architecture.
+
+IT operations teams often use a default minimum of 99.9% uptime for the initial composite SLO. They might normalize management costs based on the average workload, especially for solutions that have minimal logging and storage needs. To provide a starting point for initial conversations, the IT operations team can average the costs of a few medium-criticality workloads.
 
 > [!TIP]
-> IT operations teams often use a default minimum of 99.9 percent uptime for the initial composite SLO. They might also choose to normalize management costs based on the average workload, especially for solutions with minimal logging and storage needs. Averaging the costs of a few medium criticality workloads can provide a starting point for initial conversations.
+> If you use the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, you should update the operations management fields to reflect the IT operations prerequisites. The operations management fields include *Commitment level*, *Composite SLO*, and *Monthly cost*. The monthly cost should represent the cost of the operational management tools that you add on a monthly basis.
 
-<!-- -->
+The operations management baseline serves as an initial starting point, and you should also validate the baseline with the following aspects.
 
-> [!TIP]
-> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/main/manage/opsmanagementworkbook.xlsx) to plan for cloud management, the operations management fields should be updated to reflect these prerequisites. Those fields include *Commitment level*, *Composite SLO*, and *Monthly cost*. Monthly cost should represent the cost of the added operational management tools on a monthly basis.
+## Choose a responsibility model
 
-The operations management baseline serves as an initial starting point to be validated in each of the following sections.
+In a traditional on-premises environment, you might assume that the cost of managing the environment is a sunk cost for IT operations. A *sunk cost* is an expense that you can't recover. In the cloud, management is a purposeful decision that has a direct budgetary impact. You can directly attribute the costs of each management function to each workload that you deploy to the cloud. You have greater control with this approach. But the cloud operations teams and cloud strategy teams must first commit to an agreement about responsibilities.
 
-## Management responsibility
+Your business might also outsource some of your ongoing management functions to a [service provider](https://azure.microsoft.com/partners). Service providers can use [Azure Lighthouse](/azure/lighthouse/overview) to provide your business with precise control. For example, you can grant access to your resources and have greater visibility into the actions that service providers perform.
 
-In a traditional on-premises environment, the cost of managing the environment is commonly assumed to be a sunk cost that's owned by IT operations. In the cloud, management is a purposeful decision with direct budgetary impact. The costs of each management function can be more directly attributed to each workload that's deployed to the cloud. This approach allows for greater control, but it does create a requirement for cloud operations teams and cloud strategy teams to first commit to an agreement about responsibilities.
+To manage your cloud environment, you can implement various models.
 
-Organizations might also choose to [outsource some of their ongoing management functions to a service provider](https://aka.ms/adopt/partneroffers). These service providers can use [Azure Lighthouse](/azure/lighthouse/overview) to give organizations more precise control in granting access to their resources, along with greater visibility into the actions performed by the service providers.
+- **Delegated responsibility model:** IT operations can use an approach known as *delegated responsibility*. This approach doesn't require centralized management and prevents operational management overhead. In a cloud center of excellence (CCoE) model, platform operations and platform automation provide self-service management tools that business-led operations teams can use, independent of a centralized IT operations team. 
 
-- **Delegated responsibility:** Because there's no need to centralize and assume operational management overhead, IT operations for many organizations are considering new approaches. One common approach is referred to as *delegated responsibility*. In a cloud center of excellence model, platform operations and platform automation provide self-service management tools that can be used by business-led operations teams, independent of a centralized IT operations team. This approach gives business stakeholders complete control over management-related budgets. It also allows the cloud center of excellence (CCoE) team to ensure that a minimum set of guardrails has been properly implemented. In this model, IT acts as a broker and a guide to help the business make wise decisions. Business operations oversee day to day operations of dependent workloads.
+  This approach gives business stakeholders complete control over management-related budgets. The CCoE team can also ensure that a minimum set of guardrails is properly implemented. IT acts as a broker and a guide to help your business make wise decisions. Business operations oversee day-to-day operations of dependent workloads.
 
-- **Centralized responsibility:** Compliance requirements, technical complexity, and some shared service models might require a *Central IT team* model. In this model, IT continues to exercise its operations management responsibilities. Environmental design, management controls, and governance tooling might be centrally managed and controlled, which restricts the role of business stakeholders in making management commitments. But the visibility into the cost and architecture of cloud approaches makes it much easier for centralized IT to communicate the cost and level of management for each workload.
+- **Centralized responsibility model:** Your business might require a *central IT team model* if you have compliance requirements, technical complexity, or some shared service models. In a central IT model, IT performs its operations management responsibilities.
+ 
+  You might centrally manage and control environmental design, management controls, and governance tooling, which prevents business stakeholders from making management commitments. But the visibility into the cost and the architecture of the cloud approaches makes it easier for centralized IT to communicate the cost and level of management for each workload.
 
-- **Mixed model:** Classification is at the heart of a *mixed model* of management responsibilities. Companies that are in the midst of a transformation from on-premises to cloud might require an on-premises-first operating model for a while. Companies with strict compliance requirements, or that depend on long-term contracts with IT outsourcing vendors, might require a centralized operating model.
+- **Mixed model:** Classification is the foundation of a *mixed model* of management responsibilities. If your business is in the process of transforming from on-premises to the cloud, you might require an on-premises-first operating model for some time. If your business has strict compliance requirements or depends on long-term contracts with IT outsourcing vendors, you might need a centralized operating model.
 
-  Regardless of their constraints, today's businesses must innovate. When rapid innovation must flourish, in the midst of a central-IT, centralized-responsibility model, a mixed-model approach might provide balance. In this approach, a central IT team provides a centralized operating model for all workloads that are mission-critical or contain sensitive information. At the same time, all other workload classifications might be placed in a cloud environment that's designed for delegated responsibilities. The centralized responsibility approach serves as the general operating model. The business then has flexibility to adopt a specialized operating model, based on its required level of support and sensitivity.
+  A mixed-model approach provides balance. In this approach, a central IT team provides a centralized operating model for all workloads that are mission critical or contain sensitive information. The team places all other workload classifications in a cloud environment that supports delegated responsibilities. The centralized responsibility approach serves as the general operating model, but your business has flexibility to adopt a specialized operating model based on your required level of support and sensitivity.
 
-The first step is committing to a responsibility approach, which then shapes the following commitments.
+Consider who is responsible for the day-to-day operations management for a workload. Your responsibility approach affects your commitments.
 
-**Which organization will be responsible for day-to-day operations management for this workload?**
+## Manage cloud tenancy
 
-## Cloud tenancy
+Typically, you can manage assets easier when they reside in a single tenant. But you might need to maintain multiple tenants. For more information about why you might require a multitenant Azure environment, see [Centralize management operations with Azure Lighthouse](../centralize-operations.md).
 
-For most businesses, management is easier when all assets reside in a single tenant. However, some organizations might need to maintain multiple tenants. To learn why a business might require a multitenant Azure environment, see [Centralize management operations with Azure Lighthouse](../centralize-operations.md).
+## Consider soft-cost factors
 
-**Will this workload reside in a single Azure tenant, alongside all other workloads?**
+The next section outlines an approach to determine comparative returns that are associated with various levels of management processes and tooling. For each analyzed workload, you can measure the cost of management relative to the forecasted impact of business disruptions. Use the following method to determine if you need to invest in more extensive management approaches.
 
-## Soft-cost factors
+Before you calculate the numbers, consider the soft-cost factors. Soft-cost factors produce a return, but that return is difficult to measure through direct hard-cost savings that are visible in a profit-and-loss statement. Soft-cost factors can indicate a need to invest in a higher level of management than is fiscally prudent.
 
-The next section outlines an approach to comparative returns that are associated with levels of management processes and tooling. At the end of that section, each analyzed workload measures the cost of management relative to the forecast impact of business disruptions. That approach provides a relatively easy way to understand whether an investment in richer management approaches is warranted.
-
-Before you run the numbers, it's important to look at the soft-cost factors. Soft-cost factors produce a return, but that return is difficult to measure through direct hard-cost savings that would be visible in a profit-and-loss statement. Soft-cost factors are important because they can indicate a need to invest in a higher level of management than is fiscally prudent.
-
-A few examples of soft-cost factors would include:
+A few examples of soft-cost factors include:
 
 - Daily workload usage by the board or CEO.
+
 - Workload usage by the top *x%* of customers that leads to a greater revenue impact elsewhere.
 - Impact on employee satisfaction.
 
-The next data point that's required to make a commitment is a list of soft-cost factors. These factors don't need to be documented at this stage, but business stakeholders should be aware of the importance of these factors and their exclusion from the following calculations.
+To make a commitment, the next data point that you should evaluate is a list of soft-cost factors. You don't need to document these factors at this stage, but make business stakeholders aware of their importance and their exclusion from the following calculations.
 
 ## Calculate loss avoidance ROI
 
-When it's calculating the relative return on operations management costs, the IT team that's responsible for cloud operations should complete the previously mentioned prerequisites and assume a minimum level of management for all workloads.
+When the IT team that's responsible for cloud operations calculates the relative return on operations management costs, they should complete the previously mentioned prerequisites and assume a minimum level of management for all workloads.
 
-The next commitment to be made is an acceptance by the business of the costs associated with the baseline-managed offering.
+The next commitment that your business should make is to accept the costs that are associated with the baseline-managed offering. Determine whether your business agrees to invest in the baseline offering to meet the minimum standards of cloud operations.
 
-**Does the business agree to invest in the baseline offering to meet minimum standards of cloud operations?**
+If your business doesn't agree to that level of management, you must create a solution so that your business can proceed. Ensure that your solution doesn't materially affect the cloud operations of other workloads.
 
-If the business does not agree to that level of management, a solution must be devised that allows the business to proceed, without materially affecting the cloud operations of other workloads.
+You might want more than the standard management level. The following section helps validate that investment and the associated returns in the form of loss avoidance.
 
-If the business wants more than the standard management level, the remainder of this section will help validate that investment and the associated returns (in the form of loss avoidance).
+### Increase levels of management
 
-### Increased levels of management: Design principles and service catalog
+For managed solutions, you can apply several design principles and template solutions in addition to the management baseline. Each design principle for reliability and resiliency adds operating costs to the workload. IT and your business must agree on these extra commitments, so you must understand potential losses that you can avoid when you implement more principles.
 
-For managed solutions, several design principles and template solutions can be applied in addition to the management baseline. Each of the design principles for reliability and resiliency adds operating cost to the workload. For IT and the business to agree on these additional commitments, it's important to understand potential losses that can be avoided through that increased investment.
-
-The following calculations will walk through formulas to help you better understand the differences between losses and increased management investments. For guidance on calculating the cost of increased management, see [Workload automation](./workload.md) and [Platform automation](./platform.md).
+The following calculations provide formulas to help you better understand the differences between losses and increased management investments. For more information about how to calculate the cost of increased management, see [Workload automation](./workload.md) and [Platform automation](./platform.md).
 
 > [!TIP]
-> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/main/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the operations management fields to reflect to reflect each conversation. Those fields include *Commitment level*, *Composite SLO*, and *Monthly cost*. Monthly cost should represent the monthly cost of the added operational management tools. After they're updated, the fields will update the ROI formulas and each of the following fields.
+> If you use the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the operations management fields to reflect each conversation. These changes update the ROI formulas and each of the following fields.
 
-### Estimate outage (hours per year)
+#### Estimate outage
 
-Composite SLO is the service-level agreement that's based on the deployment of each asset in the workload. That field drives *estimated outage* (labeled `Est.Outage` in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
+The composite SLO is the SLA that's based on the deployment of each asset in the workload. The composite SLO field drives the *estimated outage*, which is labeled `Est. Outage` in the workbook. To calculate the estimated outage in hours per year without using the workbook, apply the following formula:
 
 > *Estimated outage = (1 - composite SLO percentage) &#215; number of hours in a year*
 
 The workbook uses the default value of *8,760 hours per year*.
 
-### Standard loss impact
+#### Standard loss impact
 
-*Standard loss impact* (labeled `Standard Impact` in the workbook) forecasts the financial impact of any outage, assuming that the *estimated outage* prediction proves accurate. To calculate this forecast without using the workbook, apply the following formula:
+The *standard loss impact* forecasts the financial impact of any outage, assuming that the *estimated outage* prediction proves accurate. The standard loss impact is labeled `Standard Impact` in the workbook. To calculate this forecast without using the workbook, apply the following formula:
 
 > *Standard impact = estimated outage @ three 9s of uptime &#215; time-value impact*
 
-This serves as a baseline for cost, should the business stakeholders choose to invest in a higher level of management.
+The value serves as a baseline for cost if the business stakeholders invest in a higher level of management.
 
-### Composite-SLO impact
+#### Composite-SLO impact
 
-*Composite-SLO impact* (labeled `Commitment level impact` in the workbook) provides updated fiscal impact, based on the changes to the uptime SLA. This calculation allows you to compare the projected financial impact of both options. To calculate this forecast impact without the spreadsheet, apply the following formula:
+The *composite-SLO impact* provides the updated fiscal impact, based on the changes to the uptime SLA. Use this calculation to compare the projected financial impact of both options. The composite-SLO impact is labeled `Commitment level impact` in the workbook. To calculate this forecasted impact without the spreadsheet, apply the following formula:
 
 > *Composite-SLO impact = estimated outage &#215; time-value impact*
 
-The value represents the potential losses to be avoided by the changed commitment level and new composite SLO.
+The value represents the potential losses that the changed commitment level and the new composite SLO should prevent.
 
-### Comparison basis
+#### Comparison basis
 
-*Comparison basis* evaluates standard impact and composite SLO impact to determine which is most appropriate in the return column.
+The *Comparison basis* field evaluates the standard impact and composite-SLO impact to determine the amount of return in the *Annual ROI* field.
 
-### Return on loss avoidance
+#### Return on loss avoidance
 
-If the cost of managing a workload exceeds the potential losses, the proposed investment in cloud management might not be fruitful. To compare the *Return on Loss Avoidance*, see the column labeled *Annual ROI*****. To calculate this column on your own, use the following formula:
+If the cost of managing a workload exceeds the potential losses, the proposed investment in cloud management might not be worthwhile. To compare the *Return on loss avoidance*, see the column labeled `Annual ROI`. To calculate this column on your own, use the following formula:
 
-> *Return on loss avoidance = (comparison basis - (monthly cost &#215; 12) ) &#247; (monthly cost &#215; 12) )*
+> *Return on loss avoidance = (comparison basis - (monthly cost &#215; 12) ) &#247; (monthly cost &#215; 12)*
 
-Unless there are other soft-cost factors to consider, this comparison can quickly suggest whether there should be a deeper investment in cloud operations, resiliency, reliability, or other areas.
+If you don't have other soft-cost factors to consider, you can use this comparison to quickly determine if you need to invest more in cloud operations, resiliency, reliability, or other areas.
 
-## Validate the commitment
+### Validate the commitment
 
-By this point in the process, commitments have been made: centralized or delegated responsibility, Azure tenancy, and level of commitment. Each commitment should be validated and documented to ensure that the cloud operations team, the cloud strategy team, and the business stakeholders are aligned on this commitment to manage the workload.
+At this point in the process, your business can make commitments, including centralized or delegated responsibility and Azure tenancy, and determine the level of commitment. You can validate and document each commitment to ensure that the cloud operations team, cloud strategy team, and business stakeholders align on these commitments to manage the workload.
 
-## Next steps
+## Next step
 
-After the commitments are made, the responsible operations teams can begin configuring the workload in question. To get started, evaluate various approaches to [inventory and visibility](./inventory.md).
+After you make commitments, the responsible operations teams can configure the workload. To get started, evaluate various approaches to inventory and visibility.
 
 > [!div class="nextstepaction"]
 > [Inventory and visibility options](./inventory.md)
