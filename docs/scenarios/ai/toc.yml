@@ -10,7 +10,7 @@ items:
   - name: Adopt AI
     items:
       - name: Adopt AI platforms (PaaS)
-        href: adopt-platforms.md
+        href: adopt-paas.md
       - name: Adopt AI infrastructure (IaaS)
         href: adopt-infrastructure.md
   - name: Secure AI
