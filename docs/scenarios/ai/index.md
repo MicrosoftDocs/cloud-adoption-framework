@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI adoption on Azure
+# AI adoption
 
 
 ## AI adoption checklist
