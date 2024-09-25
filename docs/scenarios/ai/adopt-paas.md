@@ -15,23 +15,12 @@ This article provides recommendations on building AI applications using Azure pl
 
 This section provides high-level recommendations to guide you through choosing the appropriate generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
 
-### Generative AI applications components
-
-Most generative AI applications implement retrieval augmented generation (RAG). At a high-level, RAG applications need the following components:
-
 :::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
 *Figure 1. Basic components of a generative AI application with RAG.*
 
-1. Application user interface to receive the user query.
-1. An orchestrator like PromptFlow, Semantic Kernel, or LangChain to manage the dataflow.
-1. A search and retrieval mechanism the search and retrieval mechanism exposes data from several data sources in a way that is consumable by AI apps.
-1. A generative AI model endpoint to create a response based on the user query and grounding data.
+Most generative AI applications implement retrieval augmented generation (RAG). At a high-level, RAG applications need the following components: (1) An application receives the user query. (2) An orchestrator like PromptFlow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism exposes data from several data sources in a way that is consumable by AI apps. (4) A generative AI model endpoint creates a response based on the user query and grounding data. For more information, see [Guide to designing and developing a RAG solution.](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) 
 
-For more information, see [Guide to designing and developing a RAG solution.](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide)
-
-### Recommendation for building generative AI applications
-
-Here are the high-level choices you need to make when building a generative AI application in Azure.
+Here are the high-level choices you need to make when building a generative AI application in Azure:
 
 - *Pick a generative AI Platform.* To deploy and consume a generative AI model endpoint, you need a generative AI platform. Based on your needs, you can use [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) or Azure OpenAI. as the default and use Azure OpenAI if you just need to access OpenAI models. Azure AI Studio provides code-first development experience. You get access to a wide variety of generative AI models and built-in development tools such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing. Azure OpenAI gives you access to OpenAI models and is a good starting point if you just want to use those models.
 
@@ -45,36 +34,23 @@ Here are the high-level choices you need to make when building a generative AI a
 
 - *Select the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large data sets. Consider CPUs for data preprocessing tasks or training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
-### Implementation guidance for generative AI applications
+Use the following resources to find implementation guidance for generative AI applications
 
-Architecture guidance:
-
-- [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat)
-- [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat)
-- [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)
-
-More resources:
-
-- [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide)
-- [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main)
+| Guidance type | Artices |
+| --- | --- |
+| Architecture guidance|- [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) <br>- [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) <br>- [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
+| Decision guidance |- [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) <br>- [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
 
 ## Build nongenerative AI applications
 
 Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to guide you through choosing the appropriate nongenerative AI platform, data sources, and application platform.
-
-### Nongenerative AI application components
 
 Within the Azure ecosystem, analytical AI applications need the following components:
 
 :::image type="content" source="./images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/non-generative-ai-app.svg" border="false":::
 *Figure 2. Basic components of a nongenerative AI application.*
 
-1. An application to ingest incoming data.
-1. An optional data processing mechanism to extract or manipulate the incoming data. It makes the data fit the model format expectations or extract relevant data to send to the AI model endpoint.
-1. An analytical AI model endpoint that integrates with the application and analyzes the incoming data.
-1. Training data to build machine learning models in Azure Machine Learning. Optionally, fine-tuning-data to customize prebuilt AI models in Azure AI Services. Azure has various data sources to choose from.
-
-### Recommendations for building nongenerative applications
+(1) An application ingests incoming data. (2) An data processing mechanism (optional) extracts or manipulates the incoming data. This mechanism makes the data fit the model format expectations or extract relevant data to send to the AI model endpoint. (3) An analytical AI model endpoint integrates with the application and analyzes the incoming data. (4) Training data is used to train machine learning models in Azure Machine Learning. Optionally, you need fine-tuning-data to customize prebuilt AI models in Azure AI Services. Azure has various data sources to choose from for these tasks. 
 
 Here are the high-level choices you need to make when building a nongenerative AI application in Azure:
 
@@ -85,8 +61,6 @@ Here are the high-level choices you need to make when building a nongenerative A
 - *Pick an application platform.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right application platform.
 
 - *Pick a data processing service (optional).* Azure Functions is a common data processing choice since they provide a serverless option. Azure Event Grid is also a common trigger mechanism to kick off a data processing pipeline.
-
-### Implementation guides for nongenerative applications.
 
 The Azure Architecture Center has dozens of articles with implementation guidance using Azure AI services and Azure Machine Learning. Start with the [Machine Learning and AI architectures](/azure/architecture/ai-ml/) to see the available guidance aligned to different use cases.
 
