@@ -1,6 +1,6 @@
 ---
 title: AI Plan - Recommendations to develop an AI adoption plan
-description: Recommendations to develop an AI adoption strategy
+description: Recommendations to develop an AI adoption plan.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
@@ -125,12 +125,10 @@ Based on your proof-of-concept, assign a delivery timeline to your AI opportunit
 
 ## Next step
 
-The rest of the guidance focuses on building AI workloads in Azure using PaaS and IaaS solutions.
-> [!div class="nextstepaction"]
-> [Adopt AI with Azure PaaS](adopt-paas.md)
+The rest of the guidance focuses on building AI workloads in Azure using PaaS and IaaS solutions. To be successful in Azure, first establish your AI foundation.
 
 > [!div class="nextstepaction"]
-> [Adopt AI with Azure PaaS](adopt-iaas.md)
+> [AI Ready](ready.md)
 
 To adopt a Microsoft Copilot solution, use these links to find more information:
 
