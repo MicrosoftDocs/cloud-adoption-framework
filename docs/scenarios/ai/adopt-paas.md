@@ -44,6 +44,13 @@ Use the following resources to find guidance for generative AI applications
 | Implementation guides | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) |
 | &nbsp;| [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
 
+| Reference architectures  | Implementation guides |
+| --- | --- |
+| [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) |
+| [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) | [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
+| [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
+
+
 ## Build nongenerative AI applications
 
 Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to guide you through choosing the appropriate nongenerative AI platform, data sources, and application platform.
