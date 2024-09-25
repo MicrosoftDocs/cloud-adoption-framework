@@ -1,39 +1,21 @@
 items:
   - name: AI adoption on Azure
     href: index.md
-  - name: Responsible AI adoption
-    href: responsible-ai.md
-  - name: Strategy
+  - name: AI Strategy
+    href: strategy.md
+  - name: AI Plan
+    href: plan.md
+  - name: AI Ready
+    href: ready.md
+  - name: Adopt AI
     items:
-    - name: Overview
-      href: strategy.md
-    - name: Business outcomes
-      href: business-outcomes-goals.md
-    - name: Generative vs. traditional AI
-      href: generative-vs-traditional-ai.md
-    - name: Organizational readiness
-      href: leadership-organizational-readiness.md
-    - name: Buy, build, or blend
-      href: buy-build-blend.md
-  - name: Plan
-    items:
-    - name: Overview
-      href: plan.md
-    - name: Skills readiness
-      href: skills-readiness-ai.md
-    - name: AI Center of Excellence
-      href: ai-center-of-excellence.md
-  - name: Ready
-    items: 
-    - name: SaaS
-      href: ready.md
-    - name: PaaS
-      href: ready.md
-    - name: IaaS
-      href: ready.md
-  - name: Secure
+      - name: Adopt AI platforms (PaaS)
+        href: adopt-platforms.md
+      - name: Adopt AI infrastructure (IaaS)
+        href: adopt-infrastructure.md
+  - name: Secure AI
     href: secure.md
-  - name: Govern
+  - name: Govern AI
     href: govern.md
-  - name: Manage
+  - name: Manage AI
     href: manage.md
