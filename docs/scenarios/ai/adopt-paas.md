@@ -38,9 +38,11 @@ Use the following resources to find guidance for generative AI applications
 
 | Guidance type | Articles |
 | --- | --- |
-| Reference architecture | [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) 
-| &nbsp; | <br><br>[Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) <br><br> [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
-| Implementation guides | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) <br><br> [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
+| Reference architectures | [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) 
+| &nbsp; | [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) 
+| &nbsp; | [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
+| Implementation guides | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) |
+| &nbsp;| [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
 
 ## Build nongenerative AI applications
 
