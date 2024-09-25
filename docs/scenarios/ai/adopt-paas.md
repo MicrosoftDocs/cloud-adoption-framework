@@ -19,7 +19,7 @@ This section provides high-level recommendations to guide you through choosing t
 
 Most generative AI applications implement retrieval augmented generation (RAG). At a high-level, RAG applications need the following components:
 
-:::image type="content" source="./images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/non-generative-ai-app.svg" border="false":::
+:::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
 *Figure 1. Basic components of a generative AI application with RAG.*
 
 1. Application user interface to receive the user query.
