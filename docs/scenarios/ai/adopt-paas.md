@@ -86,11 +86,11 @@ Here are the high-level choices you need to make when building a nongenerative A
 
 - *Pick a data processing service (optional).* Azure Functions is a common data processing choice since they provide a serverless option. Azure Event Grid is also a common trigger mechanism to kick off a data processing pipeline.
 
-### Implementation guides for nongenerative applications.*
+### Implementation guides for nongenerative applications.
 
 The Azure Architecture Center has dozens of articles with implementation guidance using Azure AI services and Azure Machine Learning. Start with the [Machine Learning and AI architectures](/azure/architecture/ai-ml/) to see the available guidance aligned to different use cases.
 
-## Next steps
+## Next step
 
 There are essential security recommendations for Azure AI resources from unapproved access and use. They represent a starting point for Azure PaaS services. You must also review and implement the guidance in the Secure AI article.
 
