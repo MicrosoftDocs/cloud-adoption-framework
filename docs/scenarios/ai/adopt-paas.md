@@ -46,12 +46,10 @@ Here are the high-level choices you need to make when building a generative AI a
 
 Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to guide you through choosing the appropriate nongenerative AI platform, data sources, and application platform.
 
-Within the Azure ecosystem, analytical AI applications need the following components:
-
 :::image type="content" source="./images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/non-generative-ai-app.svg" border="false":::
 *Figure 2. Basic components of a nongenerative AI application.*
 
-(1) An application ingests incoming data. (2) An data processing mechanism (optional) extracts or manipulates the incoming data. This mechanism makes the data fit the model format expectations or extract relevant data to send to the AI model endpoint. (3) An analytical AI model endpoint integrates with the application and analyzes the incoming data. (4) Training data is used to train machine learning models in Azure Machine Learning. Optionally, you need fine-tuning-data to customize prebuilt AI models in Azure AI Services. Azure has various data sources to choose from for these tasks. 
+Within the Azure ecosystem, analytical AI applications need the following components: (1) An application ingests incoming data. (2) An data processing mechanism (optional) extracts or manipulates the incoming data. This mechanism makes the data fit the model format expectations or extract relevant data to send to the AI model endpoint. (3) An analytical AI model endpoint integrates with the application and analyzes the incoming data. (4) Training data is used to train machine learning models in Azure Machine Learning. Optionally, you need fine-tuning-data to customize prebuilt AI models in Azure AI Services. Azure has various data sources to choose from for these tasks. 
 
 Here are the high-level choices you need to make when building a nongenerative AI application in Azure:
 
