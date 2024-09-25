@@ -19,3 +19,8 @@ items:
     href: govern.md
   - name: Manage AI
     href: manage.md
+  - name: Additional resources
+    items:
+      - name: AI Center of Excellence
+        href: center-of-excellence.md
+
