@@ -1,6 +1,6 @@
 ---
 title: AI Strategy - Recommendations to develop an AI adoption strategy
-description: Recommendations to develop an AI adoption strategy
+description: Get recommendations for developing an AI adoption strategy. Identify use cases and define strategies for data, technologies, and Responsible AI. 
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
@@ -13,42 +13,42 @@ This article describes how to define an AI adoption strategy. As with any strate
 
 ## Identify AI use cases
 
-Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas that have high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes.
+Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, and areas that have high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes.
 
 - *Generative AI* fosters individual productivity and provides a more adaptive customer experience across many business areas.
 
-- *Non-generative AI* includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions that are based on trends in historical data.
+- *Non-generative AI* includes machine learning and analytical AI, such as search, speech, translation, and vision. Use non-generative AI to analyze structured data, automate repetitive processes, and make data-driven decisions that are based on trends in historical data.
 
 The following table shows examples of generative AI and non-generative AI use cases.
 
-| AI Type              | Business area or task            | Use case     |
+| AI type              | Business area or task            | Use case     |
 |----------------------|---------------------------------|--------------|
 | **Generative AI**     | Marketing                      | Automatically create social media posts and email newsletters.           |
 |                      | E-commerce platforms            | Generate personalized product recommendations and tailored shopping experiences.   |
 |                      | Product design                  | Quickly create multiple variations of product prototypes or design elements.   |
-|                      | Software development            | Automate repetitive code generation, such as CRUD operations.      |
+|                      | Software development            | Automate repetitive code generation, such as create, read, update, and delete (CRUD) operations.      |
 |                      | Educational platforms           | Generate personalized quizzes and study materials for students.    |
 |                      | Customer service                | Provide context-based responses through AI-driven chatbots.   |
 |                      | Advertising agencies            | Create targeted ad variations for different audience segments.  |
 |                      | Health and wellness apps        | Generate customized workout routines and meal plans.   |
-| **Non-Generative AI** | Prediction                     | Forecast trends or optimize operations based on historical data.    |
+| **Non-generative AI** | Prediction                     | Forecast trends or optimize operations based on historical data.    |
 |                      | Process automation              | Automate routine tasks and workflows that don't require content generation, such as customer service bots.      |
 |                      | Data analysis                   | Uncover patterns in structured data for insights and data-driven decisions.   |
-|                      | Model simulation                | Simulate complex systems (e.g., fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes.    |
-|                      | Anomaly detection               | Identify unusual patterns in data (e.g., fraud detection, equipment failure prediction).  |
-|                      | Recommendation                  | Offer personalized recommendations based on user behavior, commonly used in e-commerce and streaming services.  |
-|                      | Optimization                    | Improve efficiency by solving complex problems (e.g., supply chain optimization, resource allocation).  |
+|                      | Model simulation                | Simulate complex systems, such as fluid dynamics or finite element analysis, to predict behavior and optimize designs or processes.    |
+|                      | Anomaly detection               | Identify unusual patterns in data for use cases like fraud detection and equipment failure prediction.  |
+|                      | Recommendation                  | Provide personalized recommendations based on user behavior. For example, you can use recommendations for e-commerce and streaming services.  |
+|                      | Optimization                    | Solve complex problems to improve efficiency. For example, you can optimize supply chains or allocate resources.  |
 |                      | Sentiment analysis              | Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience.     |
-|                      | Image recognition               | Identify and classify objects in images and videos, applied in areas like security surveillance, quality control, and medical imaging |
+|                      | Image recognition               | Identify and classify objects in images and videos. You can apply image recognition in areas like security surveillance, quality control, and medical imaging. |
 
 
 ## Define your AI technology strategy
 
-For each use case, you need to identify an AI technology to support it. Each AI technology choice requires a different skillset, data, and effort to implement a production-ready solution. You need to take some time to understand the technology available and start identifying and validating the right solutions for your business.
+For each use case, you need to identify an AI technology to support it. Each AI technology requires a different skillset, different data, and a different amount of effort for the implementation of a production-ready solution. You need to take some time to understand the available technologies and identify and validate the right solutions for your business.
 
-Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) services you can use to adopt AI. There are services to improve individual productivity and many platforms to automate business processes using generative and non-generative AI. Use the following AI decision tree to help narrow the options for each AI opportunity. After identifying a service, carefully validate the selection by reviewing the skills needed, data needed, and cost factors.
+Microsoft has software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. There are services to improve individual productivity and many platforms to automate business processes by using generative and non-generative AI. Use the following decision tree to narrow the options for each AI opportunity. After identifying a service, carefully validate the selection by reviewing the skills needed, the data needed, and cost factors.
 
-:::image type="content" source="./images/ai-decision-tree.png" alt-text="Diagram showing Microsoft and Azure services on the right and decision points that lead to each service." lightbox="./images/ai-decision-tree.png" border="false":::
+:::image type="content" source="./images/ai-decision-tree.png" alt-text="Diagram that shows Microsoft and Azure services on the right and decision points that indicate each service." border="false":::
 
 - *Buy Microsoft Copilots (SaaS) to improve productivity.* Microsoft has four different types of SaaS generative AI services. Use the table for an overview and links for more information.
 
