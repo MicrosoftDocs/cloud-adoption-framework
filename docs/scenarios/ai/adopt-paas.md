@@ -34,7 +34,7 @@ Here are the high-level choices you need to make when building a generative AI a
 
 - *Select the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large data sets. Consider CPUs for data preprocessing tasks or training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
-- *Harden application resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Also, follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/). 
+- *Harden Azure resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every Azure resource. Also, follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/). 
 
 *Table 1. Technical guidance for building generative AI applications*
 
@@ -64,7 +64,7 @@ Here are the high-level choices you need to make when building a nongenerative A
 
 - *Pick a data processing service (optional).* Azure Functions is a common data processing choice since they provide a serverless option. Azure Event Grid is also a common trigger mechanism to kick off a data processing pipeline.
 
-- *Harden application resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Also, follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/).  
+- *Harden Azure resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every Azure resource. Also, follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/). 
 
 The Azure Architecture Center has dozens of articles with implementation guidance using Azure AI services and Azure Machine Learning. Start with the [Machine Learning and AI architectures](/azure/architecture/ai-ml/) to see the available guidance aligned to different use cases.
 
