@@ -34,6 +34,8 @@ Here are the high-level choices you need to make when building a generative AI a
 
 - *Select the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large data sets. Consider CPUs for data preprocessing tasks or training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
+- *Harden application resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Also, follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/). 
+
 *Table 1. Technical guidance for building generative AI applications*
 
 | Reference architectures  | Implementation guides |
@@ -56,11 +58,13 @@ Here are the high-level choices you need to make when building a nongenerative A
 
 - *Pick a nongenerative AI platform.* Azure AI Services and Azure Machine Learning both allow you to integrate AI models into applications. Azure AI Services provides over 10 AI services to developers. They don’t need data science skills to use and consume AI models into applications. To pick the right AI service, see [Choose a Azure AI services (formerly cognitive services) technology.](/azure/architecture/data-guide/technology-choices/cognitive-services). [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) allows you to build and improve your own machine learning models with your own data and consume those models in applications.
 
-- *Pick a data source.*For Azure Machine Learning, use one of the supported [data sources](/azure/machine-learning/how-to-access-data#supported-data-storage-service-types) to host your training data. For Azure AI Services, many of the services don’t require fine-tuning data, and some, like Azure Custom Vision, provide a local upload option to a managed data storage solution.
+- *Pick a data source.* For Azure Machine Learning, use one of the supported [data sources](/azure/machine-learning/how-to-access-data#supported-data-storage-service-types) to host your training data. For Azure AI Services, many of the services don’t require fine-tuning data, and some, like Azure Custom Vision, provide a local upload option to a managed data storage solution.
 
 - *Pick an application platform.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right application platform.
 
 - *Pick a data processing service (optional).* Azure Functions is a common data processing choice since they provide a serverless option. Azure Event Grid is also a common trigger mechanism to kick off a data processing pipeline.
+
+- *Harden application resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Also, follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/).  
 
 The Azure Architecture Center has dozens of articles with implementation guidance using Azure AI services and Azure Machine Learning. Start with the [Machine Learning and AI architectures](/azure/architecture/ai-ml/) to see the available guidance aligned to different use cases.
 
