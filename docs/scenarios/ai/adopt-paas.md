@@ -34,16 +34,17 @@ Here are the high-level choices you need to make when building a generative AI a
 
 - *Select the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large data sets. Consider CPUs for data preprocessing tasks or training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
+- *Use implementation guidance.* Microsoft has detailed implementation guidance and deployable assets to build secure generative AI applications. Use this guidance as a baseline and adapt to your needs (*see table 1*).
+
 - *Harden Azure resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every Azure resource. Also, follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/). 
 
-*Table 1. Technical guidance for building generative AI applications*
+*Table 1. Implementation guidance for building generative AI applications*
 
-| Reference architectures  | Implementation guides |
+| Reference architectures  | Technical guides |
 | --- | --- |
 | [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) |
 | [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) | [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
 | [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
-
 
 ## Build nongenerative AI applications
 
@@ -64,13 +65,12 @@ Here are the high-level choices you need to make when building a nongenerative A
 
 - *Pick a data processing service (optional).* Azure Functions is a common data processing choice since they provide a serverless option. Azure Event Grid is also a common trigger mechanism to kick off a data processing pipeline.
 
-- *Harden Azure resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every Azure resource. Also, follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/). 
+- *Use implementation guidance.* Microsoft has detailed implementation guidance and deployable assets to build secure nongenerative AI applications. Use this guidance as a baseline and adapt to your needs. Start with the [Machine Learning and AI architectures](/azure/architecture/ai-ml/) to see the available guidance aligned to different use cases.
 
-The Azure Architecture Center has dozens of articles with implementation guidance using Azure AI services and Azure Machine Learning. Start with the [Machine Learning and AI architectures](/azure/architecture/ai-ml/) to see the available guidance aligned to different use cases.
+- *Harden Azure resources.* As a starting security baseline, apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) and follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/) for every Azure resource in your AI workloads. Additionally, you must follow the AI workload security guidance in [Secure AI](secure.md).
+
 
 ## Next step
-
-There are essential security recommendations for Azure AI resources from unapproved access and use. They represent a starting point for Azure PaaS services. You must also review and implement the guidance in the Secure AI article.
 
 > [!div class="nextstepaction"]
 > [Secure AI](secure.md)
