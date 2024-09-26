@@ -1,14 +1,14 @@
 ---
-title: Establishing an AI Center of Excellence
+title: Establish an AI Center of Excellence
 description: Learn how to establish an AI Center of Excellence (AI CoE) to drive AI adoption on Azure in your organization.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 09/26/2024
+ms.date: 11/01/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Establishing an AI Center of Excellence
+# Establish an AI Center of Excellence
 
 An AI Center of Excellence (AI CoE) is a dedicated team or organizational structure that centralizes AI expertise, resources, and governance. It serves as the nerve center for AI initiatives, ensuring that your organization effectively uses AI to achieve business objectives. This guide provides a step-by-step approach to building a practical and impactful AI CoE.
 
@@ -24,7 +24,7 @@ An AI CoE is a centralized hub within an organization that focuses on:
 
 ## Why is an AI CoE important?
 
-An AI CoE handles the following essential activities to ensure that you adopt and manage AI successfully:
+An AI CoE handles the following essential activities to help you adopt and manage AI successfully:
 
 - Accelerates AI adoption. Streamlines the implementation of AI initiatives.
 - Enhances efficiency. Reduces duplication of efforts by centralizing resources.
@@ -39,16 +39,17 @@ The first step in building an AI CoE is to clearly define its role and objective
 - *Business strategy*:
     - Identify and prioritize business goals that AI can support.
     - Select high-impact use cases that align with organizational objectives.
-    - Establish measurable KPIs to track AI success and business value.
-    - Define a roadmap to enable employees to engage with AI platforms and enhance their skills.
+    - Establish measurable key performance indicators (KPIs)
+ to track AI success and business value.
+    - Define a roadmap to enable employees to engage with AI platforms and improve their skills.
 
 - *Technology strategy*:
     - Design an AI-ready platform and data architecture.
-    - Create a decision framework for determining when to build AI solutions in house versus buying off-the-shelf tools.
+    - Create a decision framework for determining when to build AI solutions in-house versus buying off-the-shelf tools.
     - Plan for scalable data storage, compute, and application hosting.
 
 - *AI strategy and experience*:
-    - Develop customer-centric AI solutions, ensuring the right models are applied to the right use cases.
+    - Develop customer-centric AI solutions to ensure that the right models are applied to the right use cases.
     - Create a process for building, testing, and deploying AI models across various business units.
 
 - *Organization and culture*:
@@ -89,7 +90,7 @@ Define how the AI CoE operates within your organization. Consider whether it fun
     - Develop a timeline for AI adoption across the organization.
     - Map the necessary resources, including infrastructure, tools, and personnel.
 
-- *Enable pro and citizen developers*:
+- *Enable professional and citizen developers*:
     - Provide resources, training, and self-service tools for AI development.
     - Set up a support system, such as an internal knowledge base, for ongoing learning.
 
@@ -100,10 +101,10 @@ Define how the AI CoE operates within your organization. Consider whether it fun
 
 - *Implement AI governance and oversight*:
     - Set up governance frameworks to monitor the ethical use of AI.
-    - Regularly review AI models for bias, fairness, and transparency.
+    - Review AI models regularly for bias, fairness, and transparency.
     - Establish protocols for data security and privacy, and regularly audit AI systems for compliance.
 
-## Execute, monitor, and evolve
+## Implement, monitor, and evolve
 
 After the AI CoE is operational, continuously monitor performance, make adjustments, and scale AI initiatives as needed. 
 
@@ -120,7 +121,7 @@ After the AI CoE is operational, continuously monitor performance, make adjustme
     - Update governance frameworks as laws and guidelines evolve.
 
 - *Foster continuous learning and development*:
-    - Offer ongoing AI training programs to keep employees up to date with the latest advancements in AI.
+    - Provide ongoing AI training programs to keep employees up to date with the latest advancements in AI.
     - Encourage experimentation and learning from real-world AI applications.
 
 By following these steps and adhering to these recommendations, organizations can build an AI Center of Excellence that drives innovation, scales effectively, and aligns with business objectives.
