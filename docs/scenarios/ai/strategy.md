@@ -9,19 +9,19 @@ ms.topic: conceptual
 
 # AI Strategy - Recommendations to develop an AI adoption strategy
 
-This article describes how to define an AI adoption strategy. As with any strategy, you need data to create an actionable vision for your organization. The data requires understanding of where AI can benefit your business (use cases) and identifying the right solution for each use case. It’s advisable to appoint someone to lead this effort and set goals and success targets to measure progress.
+This article describes how to define an AI adoption strategy. As with any strategy, you need data to create an actionable vision for your organization. The data requires understanding of where AI can benefit your business (use cases) and identifying the right solution for each use case. We recommend that you appoint someone to lead this effort and set goals and success targets to measure progress.
 
 ## Identify AI use cases
 
-Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas with high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes.
+Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas that have high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes.
 
-- *Generative* AI fosters individual productivity and provides a more adaptive customer experience across many business areas.
+- *Generative AI* fosters individual productivity and provides a more adaptive customer experience across many business areas.
 
-- *Non-generative* AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data.
+- *Non-generative AI* includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions that are based on trends in historical data.
 
-*Table 1. Examples of generative AI and non-generative AI use cases*
+The following table shows examples of generative AI and non-generative AI use cases.
 
-| AI Type              | Business Area / Task            | Use Case     |
+| AI Type              | Business area or task            | Use case     |
 |----------------------|---------------------------------|--------------|
 | **Generative AI**     | Marketing                      | Automatically create social media posts and email newsletters.           |
 |                      | E-commerce platforms            | Generate personalized product recommendations and tailored shopping experiences.   |
