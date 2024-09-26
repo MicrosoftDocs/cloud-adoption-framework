@@ -3,7 +3,7 @@ title: Data governance overview
 description: Understand the concepts of data governance in the cloud and the data governance maturity model.
 author: mboswell
 ms.author: mboswell
-ms.date: 01/04/2023
+ms.date: 09/26/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -98,4 +98,5 @@ Once you determine where you currently stand in the governance maturity model, m
 
 ## Next steps
 
+> [!div class="nextstepaction"]
 - [Requirements for governing data](./govern-requirements.md)

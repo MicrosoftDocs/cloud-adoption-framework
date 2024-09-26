@@ -3,7 +3,7 @@ title: Metadata standards
 description: Learn about metadata standards
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 03/16/2022
+ms.date: 09/26/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -31,13 +31,22 @@ As you are deciding what metadata to manage centrally or federate to your [data 
 
 Using your answers to these questions, map out the content life cycle for each of your metadata streams and determine all dependencies. You then have a metadata model that can connect business domains, processes, technology, and data.
 
-Once you know what metadata you need, you must choose a place to store and process it. You can do this using Azure Purview.
+Once you know what metadata you need, you must choose a place to store and process it. You can do this using Microsoft Purview.
 
-## Use Azure Purview to manage your data estate at large
+## Use Microsoft Purview to manage your data estate at large
 
-[Azure Purview](/azure/purview) is a unified data governance solution that helps you manage and govern your on-premises, multicloud, and software-as-a-service (SaaS) data. It does metadata management at scale, because it's a fully automated service that intelligently performs data discovery, data scanning and access management. It also provides a holistic map of many insights about your data mesh architecture.
+[Microsoft Purview](/azure/purview) is a unified data governance solution that helps you manage and govern your on-premises, multicloud, and software-as-a-service (SaaS) data. It does metadata management at scale, because it's a fully automated service that intelligently performs data discovery, data scanning, data quality and access management. It also provides a holistic map of many insights about your data mesh architecture.
 
-When implementing Azure Purview, don't introduce too much change and complexity quickly. Technical metadata is Azure Purview's foundation. You need to gather and organize your metadata before you can make sense of it.
+Microsoft Purview is a comprehensive set of solutions that can help your organization govern, protect, and manage data, wherever it lives. Microsoft Purview solutions provide integrated coverage and help address the fragmentation of data across organizations, the lack of visibility that hampers data protection and governance, and the blurring of traditional IT management roles.
+
+Microsoft Purview combines data governance solutions and Microsoft 365 compliance solutions and services together into a unified platform to help your organization:
+
+- Gain visibility into data across your organization
+- Safeguard and manage sensitive data across its lifecycle, wherever it lives
+- Govern data seamlessly in new, comprehensive ways
+- Manage critical data risks and regulatory requirements
+
+When implementing Microsoft Purview, don't introduce too much change and complexity quickly. Technical metadata is Microsoft Purview's foundation. You need to gather and organize your metadata before you can make sense of it.
 
 Once you have your metadata, start with the basics:
 
@@ -51,9 +60,9 @@ Once you have your metadata, start with the basics:
 
 Then scale by slowly involving more domain owners and data stewards and by adding more classifications and sensitivity labels. These additions improve the search experience and allow for better data access management.
 
-For your custom metadata attributes, like lists of domains and application metadata, consider creating extra [type definitions](/rest/api/purview/catalogdataplane/types/create-type-definitions) in Azure Purview.
+For your custom metadata attributes, like lists of domains and application metadata, consider creating extra [type definitions](/rest/api/purview/catalogdataplane/types/create-type-definitions) in Microsoft Purview.
 
-For your domain-oriented architecture, align your Azure Purview Collections and Glossaries with your data domains. Azure Purview Collections organize assets and sources. You can use a Collection as a boundary for your assets and sources and align it with a particular domain. You can do the same thing with your Glossary. Create hierarchy structures within your Glossary and align them with your domains. Ask your domains to take ownership for creating relationships between your glossary terms and collection attributes. This creates data ownership transparency and improves your data semantics.
+Microsoft Purview offers a feature called Governance domains, which establish boundaries for unified governance, ownership, and discovery of data products and business concepts within your domain-oriented architecture. For more information, see [Governance domains in Microsoft Purview](/purview/concept-governance-domain).
 
 ## Use Azure Cosmos DB to create organization's Knowledge Graph
 
@@ -79,4 +88,5 @@ The end result of the Azure Cosmos DB architecture is an organization-wide graph
 
 ## Next steps
 
+> [!div class="nextstepaction"]
 - [Secure cloud-scale analytics in Azure](../data-management/secure.md)

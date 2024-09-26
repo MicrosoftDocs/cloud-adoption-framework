@@ -3,7 +3,7 @@ title: Data catalog
 description: Understand data catalog for data governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 03/15/2022
+ms.date: 09/26/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -16,7 +16,7 @@ ms.custom: e2e-data-management, think-tank
 
 Data discovery reflects the state of all the data that the enterprise owns. This data is known as the data estate. During data discovery, the data estate is scanned and classified. The data scanning process connects directly to the data source according to a set schedule.
 
-As you add a new data landing zone to the environment, the associated data lakes and polyglot persistence sources are registered as sources for the data catalog crawlers to scan.
+As you add a new data landing zone to the environment, the associated data lakes and polyglot persistence sources must be registered as sources for the data catalog crawlers to scan.
 
 With automated discovery of your data estate to populate the catalog, you can:
 
@@ -26,7 +26,7 @@ With automated discovery of your data estate to populate the catalog, you can:
 - Allow automated catalog updates through configurable scheduling of scans and scan rule sets
 
 > [!IMPORTANT]
-> When you add a new data landing zone to the environment, register the associated data lakes and polyglot storage through Azure DevOps as a source for the data catalog crawlers to scan.
+> When you add a new data landing zone to the environment, register the associated data lakes and polyglot storage through Azure DevOps as a source for the data catalog crawlers to scan, govern and manage data integrity.
 
 ## Data classification
 
@@ -40,4 +40,5 @@ Microsoft Purview can scan and automatically classify documents. For example, if
 
 ## Next steps
 
+> [!div class="nextstepaction"]
 - [Data lineage](govern-lineage.md)

@@ -3,7 +3,7 @@ title: Manage master data
 description: Learn about managing master data in Azure, including how to create, store, and synchronize between systems, and governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 03/16/2022
+ms.date: 09/26/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -14,7 +14,7 @@ Master data is data that describes the objects around a business process. Custom
 
 Master data management (MDM) is central to any data governance program, making the creation of trusted master data critical. Create master data by defining master data entities in your data catalog's business glossary. You can register data sources in your data catalog and search multiple data stores across the distributed data landscape to discover where various master data is located.
 
-You can map the physical data names of discovered master data to your common business vocabulary in Azure Purview. You can also clean, match, and integrate the data you discovered across the distributed data landscape and use it to create golden master data records stored in a central MDM system.
+You can map the physical data names of discovered master data to your common business vocabulary in Microsoft Purview. You can also clean, match, and integrate the data you discovered across the distributed data landscape and use it to create golden master data records stored in a central MDM system.
 
 :::image type="content" source="./images/central-master-data-management.png" alt-text="Diagram that shows central master data management.":::
 
@@ -24,15 +24,12 @@ It's important to govern your master data maintenance. Identify where maintenanc
 
 ## Master data partner solutions
 
-Microsoft has partnered with Profisee and CluedIn to provide native integrations for Azure Purview. Assess these products for your organization's master data requirements.
+Microsoft has partnered with to provide native integrations for Microsoft Purview. Assess these products for your organization's master data requirements.
 
 - [Microsoft Purview and Profisee integration for master data management](/purview/profisee-master-data-management-purview)
 - [Microsoft Purview and CluedIn integration for master data management](/purview/cluedin-master-data-management-purview)
-
-Other vendors in this space are:
-
-- [SAP master data governance](https://www.sap.com/products/master-data-governance.html)
-- [Semarchy](https://www.semarchy.com/)
+- [Master Data Management with Semarchy](/purview/semarchy-master-data-management-purview)
+- [Reltio Integration for Microsoft Purview](/purview/data-governance-with-reltio-and-purview)
 
 ## Alternative solutions
 
@@ -48,4 +45,5 @@ Outside of a purpose-built MDMapplication, some of the technical capabilities ne
 
 ## Next steps
 
+> [!div class="nextstepaction"]
 - [Data quality](../cloud-scale-analytics/govern-data-quality.md)
