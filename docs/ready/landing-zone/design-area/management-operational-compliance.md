@@ -39,7 +39,7 @@ Learn about [Azure Automanage Machine Configuration](/azure/governance/machine-c
 
 ## Operational compliance recommendations
 
-- Use [Update Management in Azure Automation](/azure/automation/update-management/overview) as a long-term patching mechanism for both Windows and Linux VMs. Enforcing Update Management configurations through Azure Policy ensures that all VMs are included in your patch management regimen. It also provides your application teams with the ability to manage patch deployment for their VMs, and provides visibility and enforcement capabilities to your central IT team across all VMs.
+- Use [Azure Update Manager](azure/update-manager/overview) as a long-term patching mechanism for both Windows and Linux VMs. Enforcing Update Management configurations through Azure Policy ensures that all VMs are included in your patch management regimen. It also provides your application teams with the ability to manage patch deployment for their VMs, and provides visibility and enforcement capabilities to your central IT team across all VMs.
 - Use Azure Policy to monitor in-machine virtual machine (VM) configuration drift. Enabling [Azure Automanage Machine Configuration](/azure/governance/machine-configuration/overview) audit capabilities through policy helps your application team workloads to consume feature capabilities immediately with little effort.
 
 ## Next steps
