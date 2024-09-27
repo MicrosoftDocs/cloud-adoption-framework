@@ -48,16 +48,18 @@ For each use case, you need to identify an AI technology to support it. Each AI 
 
 Microsoft has software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. There are services to improve individual productivity and many platforms to automate business processes by using generative and non-generative AI. Use the following decision tree to narrow the options for each AI opportunity. After identifying a service, carefully validate the selection by reviewing the skills needed, the data needed, and cost factors.
 
-:::image type="content" source="./images/ai-decision-tree.png" alt-text="Diagram that shows Microsoft and Azure services on the right and decision points that indicate each service." border="false":::
+:::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services on the right and decision points that indicate each service." border="false" lightbox="./images/ai-decision-tree.svg":::
 
-- *Buy Microsoft Copilots (SaaS) to improve productivity.* Microsoft has four different types of SaaS generative AI services. Use the table for an overview and links for more information.
+Microsoft offers these options for AI services: 
 
-| SaaS AI Copilot products | Description | User |
-|--------|--------|-------|
-| Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](../copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. | Business |
-| Role-based agents for Microsoft 365 | Use to enhance productivity for specific business roles, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business |
-| Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
-| Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. | Individual |
+- *Purchase Microsoft copilots (SaaS) to improve productivity.* Microsoft has four types of SaaS generative AI services. This table gives you an overview and links that provde more information.
+
+   | SaaS AI Copilot products | Description | User |
+   |--------|--------|-------|
+   | Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in Microsoft 365 apps and provides an enhanced-security way to chat with business data in Microsoft Graph. | Business |
+   | Role-based agents for Microsoft 365 | Use to enhance productivity for specific business roles, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business |
+   | Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
+   | Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. | Individual |
 
 - *Build intelligent apps with Azure AI platform services (PaaS).* Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying building AI, analytical AI, and machine learning applications.
 
