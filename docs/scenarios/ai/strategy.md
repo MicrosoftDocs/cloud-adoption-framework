@@ -13,24 +13,17 @@ This article shows you how to define an AI adoption strategy. As with any strate
 
 ## Identify AI use cases
 
-Look for processes that can benefit from automation or optimization, especially repetitive tasks, data-intensive workflows, or areas with high error rates. In general, AI accommodates two strategic goals: enhancing individual productivity and improving business processes.
+Compile a comprehensive list of possible AI use cases. Don't limit ideas to current capabilities. Consider future possibilities as well. Later, when you choose your AI technology, you evaluate the technical capability or can acquire it to implement each use case. For now, focus on compiling use cases. For an example, see [Example AI strategy](strategy.md#example-ai-strategy]. 
 
-- *Generative* AI fosters individual productivity and provides a more adaptive customer experience across many business areas.
+- *Understand AI.* In general, AI accommodates two strategic goals, enhancing individual efficiency and improving business processes.  Generative AI fosters individual productivity and provides a more adaptive customer experience across many business areas. Non-generative AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data. 
 
-- *Non-generative* AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data.
+- *Analyze business processes for automation opportunities.* Identifying processes suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.  
 
-*Table 1. Examples of generative AI and non-generative AI use cases*
+- *Conduct an assessment.* Gather input from various departments to understand challenges and inefficiencies that could be addressed with AI. Document current workflows to spot areas where AI can automate tasks or provide insights. 
 
-| **Generative AI**                                      | **Non-Generative AI**                                                                 |
-|--------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data.           |
-| E-commerce platforms: Generate personalized product recommendations and tailored shopping experiences. | Process automation: Automate routine tasks and workflows that don't require content generation, such as customer service bots. |
-| Product design: Quickly create multiple variations of product prototypes or design elements. | Data analysis: Uncover patterns in structured data for insights and data-driven decisions. |
-| Software development: Automate repetitive code generation, such as CRUD operations. | Model simulation: Simulate complex systems (fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes. |
-| Educational platforms: Generate personalized quizzes and study materials for students. | Anomaly detection: Identify unusual patterns in data (fraud detection, equipment failure prediction). |
-| Customer service: Provide context-based responses through AI-driven chatbots. | Recommendation: Offer personalized recommendations based on user behavior, commonly used in e-commerce and streaming services. |
-| Advertising agencies: Create targeted ad variations for different audience segments. | Optimization: Improve efficiency by solving complex problems (supply chain optimization, resource allocation). |
-| Health and wellness apps: Generate customized workout routines and meal plans. | Sentiment analysis: Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience. |
+- *Align AI initiatives with strategic goals.* Aligning AI projects with your strategic objectives ensures that efforts contribute to overall business success. Map out how AI can enhance productivity or streamline processes and prioritize use cases that directly support your company's mission and goals. 
+
+- *Explore industry use cases.* Research how other businesses are using AI to gain insights. Stay informed about emerging AI technologies and applications relevant to your industry. 
 
 ## Identify your AI technology
 
@@ -137,3 +130,30 @@ Adopting AI responsibly is an iterative process with regular monitoring and meas
 
 > [!div class="nextstepaction"]
 > [Create a plan to adopt AI](plan.md)
+
+## Example AI use cases
+
+| **Generative AI**                                      | **Non-Generative AI**                                                                 |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data.           |
+| E-commerce platforms: Generate personalized product recommendations and tailored shopping experiences. | Process automation: Automate routine tasks and workflows that don't require content generation, such as customer service bots. |
+| Product design: Quickly create multiple variations of product prototypes or design elements. | Data analysis: Uncover patterns in structured data for insights and data-driven decisions. |
+| Software development: Automate repetitive code generation, such as CRUD operations. | Model simulation: Simulate complex systems (fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes. |
+| Educational platforms: Generate personalized quizzes and study materials for students. | Anomaly detection: Identify unusual patterns in data (fraud detection, equipment failure prediction). |
+| Customer service: Provide context-based responses through AI-driven chatbots. | Recommendation: Offer personalized recommendations based on user behavior, commonly used in e-commerce and streaming services. |
+| Advertising agencies: Create targeted ad variations for different audience segments. | Optimization: Improve efficiency by solving complex problems (supply chain optimization, resource allocation). |
+| Health and wellness apps: Generate customized workout routines and meal plans. | Sentiment analysis: Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience. |
+
+## Example AI adoption strategy
+
+Use this example AI adoption strategy to build your own strategy. The table is based on a fictional company, **Contoso**, that has a customer-facing ecommerce application and sales employees with a need to forecast business data. The company develops a product and needs to manage inventory for production. Their sales channels include private companies and highly-regulated public sector agencies. These agencies require a separate, custom ecommerce app to meet regulations. Here’s their AI adoption strategy.
+
+| Goals                        | Objectives                | Opportunities                                             | Success Metrics                      | AI Approach                   | Microsoft Solution                        | Data Needs                              | Skill Needs                      | Cost Factors                           |
+|------------------------------|---------------------------|-----------------------------------------------------------|--------------------------------------|--------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------|-----------------------------------------|
+| Automate business process     | Improve customer satisfaction | Ecommerce web application chat feature                      | Increased customer retention rate    | PaaS, GenAI, RAG               | Azure AI Studio                            | Item descriptions and pairings           | RAG and cloud app development     | Usage                                   |
+| Automate business process     | Lower costs               | Internal app document processing workflow                  | Increased completion rate            | Analytical AI, fine tune       | Azure AI services - Document Intelligence  | Standard documents                      | App development                   | Estimated usage                         |
+| Automate business process     | Lower costs               | Inventory management application and product purchasing     | Shorten shelf life of inventory      | Machine learning, train model  | Azure Machine Learning                     | Historical inventory and sales data      | Machine learning and app development | Estimated usage                         |
+| Enhance individual productivity | Improve employee experience | Daily work across company                                   | Increased employee satisfaction survey results | SaaS generative AI          | Copilot free and Copilot for M365          | OneDrive data                            | General IT                        | Subscription costs                      |
+| Automate business process     | Increase sales            | Ecommerce application for regulated industry chat feature   | Increased sales                      | IaaS generative AI model training | Azure Virtual Machines                     | Vast training data on domain specific data | Cloud infrastructure, app dev, VM maintenance, networking | Infrastructure and software |
+
+
