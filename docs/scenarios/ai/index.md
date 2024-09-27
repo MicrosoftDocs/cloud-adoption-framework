@@ -19,7 +19,7 @@ When applied appropriately to the right use cases, AI delivers significant busin
 
 AI adoption has seven steps that apply the methodologies of the Cloud Adoption Framework for AZure. The following image shows you how to follow the guidance. It's a sequential process with securing, governing, and managing AI representing continuous processes. While represented at the end, security, governance, and management are in integral Responsible AI activities and must be a part of your planning process before deployment. The AI guidance here indicate the appropriate time to engage in these Responsible AI activities.
 
-:::image type="content" source="./images/responsible-ai-caf.png" alt-text="Diagram showing the AI adoption framework process. It starts with Strategy, Plan, Ready, and Adopt. Then Secure, Manage, and Govern are cyclical processes after Adopt. Undergirding the entire process is Responsible AI." lightbox="./images/responsible-ai-caf.png" border="false":::
+:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It starts with Strategy, Plan, Ready, and Adopt. Then Secure, Manage, and Govern are cyclical processes after Adopt. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
 *Figure 1. How to use the AI adoption guidance for Azure.*
 
 1. *AI Strategy*: Learn how to pick the right AI technology for each use case based on required AI skills, data, and cost.
