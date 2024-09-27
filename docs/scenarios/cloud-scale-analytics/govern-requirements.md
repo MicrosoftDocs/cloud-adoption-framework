@@ -125,4 +125,4 @@ Your data governance solution should have several components:
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Data governance process](./govern-components.md)
+> [Data governance process](./govern-components.md)

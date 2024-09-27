@@ -88,4 +88,4 @@ You can use tooling as a free choice, but ensure it includes expectations (rules
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Data lifecycle management?](govern-lifecycle.md)
+> [Data lifecycle management?](govern-lifecycle.md)

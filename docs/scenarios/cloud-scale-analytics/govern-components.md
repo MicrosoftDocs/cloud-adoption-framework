@@ -67,4 +67,4 @@ It should then be possible to monitor data quality, privacy, access security, us
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Data Catalog](../cloud-scale-analytics/govern-data-catalog.md)
+> [Data Catalog](../cloud-scale-analytics/govern-data-catalog.md)

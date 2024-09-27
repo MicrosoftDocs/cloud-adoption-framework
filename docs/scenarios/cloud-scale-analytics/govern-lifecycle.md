@@ -38,4 +38,4 @@ There are two ways to approach data lifecycle management in cloud-scale analytic
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Understand data lineage for data governance](govern-lineage.md)
+> [Understand data lineage for data governance](govern-lineage.md)

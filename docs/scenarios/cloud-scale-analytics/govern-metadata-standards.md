@@ -39,7 +39,7 @@ Once you know what metadata you need, you must choose a place to store and proce
 
 Microsoft Purview is a comprehensive set of solutions that can help your organization govern, protect, and manage data, wherever it lives. Microsoft Purview solutions provide integrated coverage and help address the fragmentation of data across organizations, the lack of visibility that hampers data protection and governance, and the blurring of traditional IT management roles.
 
-Microsoft Purview combines data governance solutions and Microsoft 365 compliance solutions and services together into a unified platform to help your organization:
+Microsoft Purview combines data governance and compliance solutions and services together into a unified platform to help your organization:
 
 - Gain visibility into data across your organization
 - Safeguard and manage sensitive data across its lifecycle, wherever it lives
@@ -66,7 +66,7 @@ Microsoft Purview offers a feature called Governance domains, which establish bo
 
 ## Use Azure Cosmos DB to create organization's Knowledge Graph
 
-There's a growing trend in the industry to bring data insights closer to data analysts and scientists using portals that use more metadata intensively. This trend is known as *data observability*. Data observability uses concepts like metadata lake, knowledge graphs, or metadata graphs to describe platforms where metadata is centralized. This is a good way for you to build a unified view of how data are used and sourced across your organization when using a distributed data mesh.
+There's a growing trend in the industry to bring data insights closer to data analysts and scientists using portals that use more metadata intensively. This trend is known as *data observability*. Data observability uses concepts like metadata lake, knowledge graphs, or metadata graphs to describe platforms where metadata is centralized. This is a good way for you to build a unified view of how data is used and sourced across your organization when using a distributed data mesh.
 
 A data insight solution must describe how data is used and the relations between entities like source data and data products and between data products from one domain and dependent products from another domain. You can use a graph database or custom user interface to model these relations.
 
@@ -89,4 +89,4 @@ The end result of the Azure Cosmos DB architecture is an organization-wide graph
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Secure cloud-scale analytics in Azure](../data-management/secure.md)
+> [Secure cloud-scale analytics in Azure](../data-management/secure.md)

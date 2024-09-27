@@ -99,4 +99,4 @@ Once you determine where you currently stand in the governance maturity model, m
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Requirements for governing data](./govern-requirements.md)
+> [Requirements for governing data](./govern-requirements.md)

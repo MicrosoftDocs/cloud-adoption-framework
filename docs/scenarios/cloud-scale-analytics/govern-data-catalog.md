@@ -41,4 +41,4 @@ Microsoft Purview can scan and automatically classify documents. For example, if
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Data lineage](govern-lineage.md)
+> [Data lineage](govern-lineage.md)
