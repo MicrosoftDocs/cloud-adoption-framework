@@ -9,16 +9,16 @@ ms.topic: conceptual
 
 # Adopt AI platforms (PaaS) – Recommendations to build AI apps with Azure platforms
 
-This article provides recommendations on building AI applications using Azure platform-as-a-service (PaaS). The goal is to define the level of effort and help needed to be successful in AI application development using Azure PaaS services like Azure AI Studio, Azure AI Services, and Azure Machine Learning. It outlines the components you need to build generative and nongenerative AI applications. For each section, it provides links to architecture examples that you can use to implement.
+This article provides recommendations on building AI applications using Azure platform-as-a-service (PaaS). The goal is to define the level of effort and help needed to be successful in AI application development using Azure PaaS services like Azure AI Studio, Azure AI Services, and Azure Machine Learning. It outlines the components you need to build generative and nongenerative AI applications. For each section, it provides links to architecture examples that you can use to implement. If you're unsure if these are the right technology choices for your use case, review the AI 
 
-## Build generative AI applications
+## Adopt generative AI
 
 This section provides high-level recommendations to guide you through choosing the appropriate generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
 
-:::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
+:::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
 *Figure 1. Basic components of a generative AI application with RAG.*
 
-Most generative AI applications implement retrieval augmented generation (RAG). At a high-level, RAG applications need the following components: (1) An application receives the user query. (2) An orchestrator like PromptFlow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism exposes data from several data sources in a way that is consumable by AI apps. (4) A generative AI model endpoint creates a response based on the user query and grounding data. For more information, see [Guide to designing and developing a RAG solution.](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) 
+Most generative AI applications implement retrieval augmented generation (RAG). At a high-level, RAG applications need the following components: (1) An application receives the user query. (2) An orchestrator like PromptFlow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism exposes data from several data sources in a way that is consumable by AI apps. (4) A generative AI model endpoint creates a response based on the user query and grounding data. For more information, see [Guide to designing and developing a RAG solution.](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
 
 Here are the high-level choices you need to make when building a generative AI application in Azure:
 
@@ -46,7 +46,7 @@ Here are the high-level choices you need to make when building a generative AI a
 | [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) | [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
 | [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
 
-## Build nongenerative AI applications
+## Adopt nongenerative AI
 
 Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to guide you through choosing the appropriate nongenerative AI platform, data sources, and application platform.
 
@@ -68,7 +68,6 @@ Here are the high-level choices you need to make when building a nongenerative A
 - *Harden Azure resources.* As a starting security baseline, apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) and follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/) for every Azure resource in your AI workloads. Additionally, you must follow the AI workload security guidance in [Secure AI](secure.md).
 
 - *Use implementation guidance.* Microsoft has detailed implementation guidance and deployable assets to build secure nongenerative AI applications. Use this guidance as a baseline and adapt to your needs. Start with the [Machine Learning and AI architectures](/azure/architecture/ai-ml/) to see the available guidance aligned to different use cases.
-
 
 ## Next step
 

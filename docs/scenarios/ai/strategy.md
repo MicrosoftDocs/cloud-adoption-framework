@@ -41,8 +41,7 @@ Look for processes that can benefit from automation or optimization, especially 
 |                      | Sentiment analysis              | Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience.     |
 |                      | Image recognition               | Identify and classify objects in images and videos, applied in areas like security surveillance, quality control, and medical imaging |
 
-
-## Define your AI technology strategy
+## Identify your AI technology
 
 For each use case, you need to identify an AI technology to support it. Each AI technology choice requires a different skillset, data, and effort to implement a production-ready solution. You need to take some time to understand the technology available and start identifying and validating the right solutions for your business.
 
@@ -54,7 +53,7 @@ Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) servi
 
 | SaaS AI Copilot products | Description | User |
 |--------|--------|-------|
-| Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](../copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. | Business |
+| Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. | Business |
 | Role-based agents for Microsoft 365 | Use to enhance productivity for specific business roles, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business |
 | Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
 | Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. | Individual |
@@ -97,7 +96,7 @@ AI solutions have varying data needs. Some require only general enterprise data,
 
 - *Understand Azure AI Studio and Azure OpenAI (code-first, generative AI platforms) data needs.* Creating generative AI apps typically requires grounding data for retrieval augmented generation. The grounding data needs to be limited to your specific use case. You don’t want to mix different types of information or irrelevant data in the grounding data. Unstructured data needs to be in the [right format](/azure/search/search-how-to-create-search-index?tabs=portal#prerequisites) and [properly processed](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) to create an [index](/azure/search/search-how-to-create-search-index).
 
-For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications?view=azuresql) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database) supports database vectorization. [Azure Database for PostgreSQ](/azure/postgresql/flexible-server/generative-ai-azure-overview)L allows you to connect to Azure AI via code.
+For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database) supports database vectorization. [Azure Database for PostgreSQ](/azure/postgresql/flexible-server/generative-ai-azure-overview)L allows you to connect to Azure AI via code.
 
 - *Understand Azure Machine Learning and Microsoft Fabric data needs.* Training machine learning models in Azure Machine Learning or Fabric requires large data sets on a specific domain. You need to preprocess, clean, and filter before splitting, training, and validating AI models.
 
@@ -107,21 +106,21 @@ For structured data in databases, you need to embed and connect the data to your
 
 Cost is an important consideration when validating your AI solution choice. The goal here is to make it easy to find and estimate the costs of different services. Microsoft Saas Copilots and Copilot Studio have a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Azure Virtual Machines (CPUs or GPUs) are the primary cost for AI models running on. For Azure services, use the individual product [pricing page](https://azure.microsoft.com/products/) and [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.
 
-*Table . Overview of Microsoft AI solutions*
+*Table. Overview of Microsoft AI solutions*
 
 | Service | AI approach supported | Access | Main cost factors |
 |---------|----------------------|--------|-------------------|
 | [Copilot (free)](https://copilot.microsoft.com/) | SaaS Generative AI | Free in browser or mobile app | None |
 | Copilot Pro | SaaS Generative AI | Available in browser or mobile app with subscription | [Subscription](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
 | [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) | SaaS Generative AI with RAG | Add to an existing Microsoft 365 subscription | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans) |
-| [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio&#39;) | PaaS generative AI with RAG via low-code platform | Browser | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
+| [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | PaaS generative AI with RAG via low-code platform | Browser | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
 | [Azure AI services](/azure/ai-services/what-are-ai-services) | PaaS analytical AI | Azure | Use of model endpoints consumed, storage, data transfer, compute (if custom model training) |
 | Azure OpenAI | PaaS generative AI with and without RAG for OpenAI models | Azure | Use of tokens in/out and compute |
 | [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | PaaS generative AI with and without RAG, PaaS fine-tune generative AI models | Azure | Use of compute, tokens in/out, AI services consumed, storage, data transfer |
-| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2) | PaaS train machine learning and generative AI models | Azure | Use of compute, storage, data transfer |
+| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | PaaS train machine learning and generative AI models | Azure | Use of compute, storage, data transfer |
 | [Virtual Machines](/azure/virtual-machines/overview) | IaaS, train any AI model | Azure | Use of compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
-## Define your AI data strategy
+## Identify your AI data
 
 When you are training, grounding, or using AI models, you want to ensure you only send the right data to the model and abide by ethical and regulatory standards. Your data strategy should outline acceptable data use and prepare your business to use ethical, accurate, high-quality data. Evaluate the completeness, relevance, and representativeness of the data to support reliable AI outputs.
 
@@ -133,7 +132,7 @@ When you are training, grounding, or using AI models, you want to ensure you onl
 
 - *Monitor and evaluate continuously.* Set up ongoing monitoring of AI models and data pipelines to ensure data quality, performance, and fairness over time. Regularly audit data and model outputs to catch any shifts that could affect reliability or compliance.
 
-## Define your Responsible AI strategy
+## Identify your AI responsibility
 
 Adopting AI responsibly is an iterative process with regular monitoring and measuring to ensure AI meets your business objectives. Microsoft follows six [Responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. They govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI applications you build in accordance with Responsible AI.
 
