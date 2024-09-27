@@ -21,25 +21,16 @@ Look for processes that can benefit from automation or optimization, especially 
 
 *Table 1. Examples of generative AI and non-generative AI use cases*
 
-| AI Type              | Business Area / Task            | Use Case     |
-|----------------------|---------------------------------|--------------|
-| **Generative AI**     | Marketing                      | Automatically create social media posts and email newsletters.           |
-|                      | E-commerce platforms            | Generate personalized product recommendations and tailored shopping experiences.   |
-|                      | Product design                  | Quickly create multiple variations of product prototypes or design elements.   |
-|                      | Software development            | Automate repetitive code generation, such as CRUD operations.      |
-|                      | Educational platforms           | Generate personalized quizzes and study materials for students.    |
-|                      | Customer service                | Provide context-based responses through AI-driven chatbots.   |
-|                      | Advertising agencies            | Create targeted ad variations for different audience segments.  |
-|                      | Health and wellness apps        | Generate customized workout routines and meal plans.   |
-| **Non-Generative AI** | Prediction                     | Forecast trends or optimize operations based on historical data.    |
-|                      | Process automation              | Automate routine tasks and workflows that don't require content generation, such as customer service bots.      |
-|                      | Data analysis                   | Uncover patterns in structured data for insights and data-driven decisions.   |
-|                      | Model simulation                | Simulate complex systems (e.g., fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes.    |
-|                      | Anomaly detection               | Identify unusual patterns in data (e.g., fraud detection, equipment failure prediction).  |
-|                      | Recommendation                  | Offer personalized recommendations based on user behavior, commonly used in e-commerce and streaming services.  |
-|                      | Optimization                    | Improve efficiency by solving complex problems (e.g., supply chain optimization, resource allocation).  |
-|                      | Sentiment analysis              | Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience.     |
-|                      | Image recognition               | Identify and classify objects in images and videos, applied in areas like security surveillance, quality control, and medical imaging |
+| **Generative AI**                                      | **Non-Generative AI**                                                                 |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data.           |
+| E-commerce platforms: Generate personalized product recommendations and tailored shopping experiences. | Process automation: Automate routine tasks and workflows that don't require content generation, such as customer service bots. |
+| Product design: Quickly create multiple variations of product prototypes or design elements. | Data analysis: Uncover patterns in structured data for insights and data-driven decisions. |
+| Software development: Automate repetitive code generation, such as CRUD operations. | Model simulation: Simulate complex systems (fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes. |
+| Educational platforms: Generate personalized quizzes and study materials for students. | Anomaly detection: Identify unusual patterns in data (fraud detection, equipment failure prediction). |
+| Customer service: Provide context-based responses through AI-driven chatbots. | Recommendation: Offer personalized recommendations based on user behavior, commonly used in e-commerce and streaming services. |
+| Advertising agencies: Create targeted ad variations for different audience segments. | Optimization: Improve efficiency by solving complex problems (supply chain optimization, resource allocation). |
+| Health and wellness apps: Generate customized workout routines and meal plans. | Sentiment analysis: Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience. |
 
 ## Identify your AI technology
 
@@ -51,21 +42,21 @@ Microsoft has software (SaaS), platforms (PaaS), and infrastructure (IaaS) servi
 
 - *Buy Microsoft Copilots (SaaS) to improve productivity.* Microsoft has four different types of SaaS generative AI services. Use the table for an overview and links for more information.
 
-| SaaS AI Copilot products | Description | User |
-|--------|--------|-------|
-| Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. | Business |
-| Role-based agents for Microsoft 365 | Use to enhance productivity for specific business roles, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business |
-| Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
-| Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. | Individual |
+    | SaaS AI Copilot products | Description | User |
+    |--------|--------|-------|
+    | Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. | Business |
+    | Role-based agents for Microsoft 365 | Use to enhance productivity for specific business roles, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business |
+    | Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
+    | Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. | Individual |
 
 - *Build intelligent apps with Azure AI platform services (PaaS).* Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying building AI, analytical AI, and machine learning applications.
 
-| AI platform products | Description | Skills required |
-|---------|------------|---------|
-| Copilot Studio | Low-code platform to build generative AI applications | Without developer or data science skills |
-| Azure AI Services | Code-first platform to build analytical AI applications | Developer skills |
-| Azure AI Studio | Code-first platform to develop generative AI applications | Developer and data science skills |
-| Azure Machine Learning and Microsoft Fabric | Platform to train and deploy AI models using your own data | Developer and advanced data science skills |
+    | AI platform products | Description | Skills required |
+    |---------|------------|---------|
+    | Copilot Studio | Low-code platform to build generative AI applications | Without developer or data science skills |
+    | Azure AI Services | Code-first platform to build analytical AI applications | Developer skills |
+    | Azure AI Studio | Code-first platform to develop generative AI applications | Developer and data science skills |
+    | Azure Machine Learning and Microsoft Fabric | Platform to train and deploy AI models using your own data | Developer and advanced data science skills |
 
 - *Use Azure infrastructure services (IaaS) to bring your own AI models.* For more advanced AI needs, Azure Virtual Machines and Azure Kubernetes Service provide access to GPUs and CPUs with virtual machine images to bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway and should be used first before attempting IaaS.
 
