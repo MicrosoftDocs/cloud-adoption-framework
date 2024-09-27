@@ -3,7 +3,7 @@ title: Data lifecycle management
 description: Understand data lifecycle for data governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 03/21/2022
+ms.date: 09/26/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -37,4 +37,5 @@ There are two ways to approach data lifecycle management in cloud-scale analytic
 
 ## Next steps
 
-- [Understand data lineage for data governance](govern-lineage.md)
+> [!div class="nextstepaction"]
+> [Understand data lineage for data governance](govern-lineage.md)
