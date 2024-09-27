@@ -21,28 +21,18 @@ Look for processes that can benefit from automation or optimization, especially 
 
 The following table shows examples of generative AI and non-generative AI use cases.
 
-| AI type              | Business area or task            | Use case     |
-|----------------------|---------------------------------|--------------|
-| **Generative AI**     | Marketing                      | Automatically create social media posts and email newsletters.           |
-|                      | E-commerce platforms            | Generate personalized product recommendations and tailored shopping experiences.   |
-|                      | Product design                  | Quickly create multiple variations of product prototypes or design elements.   |
-|                      | Software development            | Automate repetitive code generation, such as create, read, update, and delete (CRUD) operations.      |
-|                      | Educational platforms           | Generate personalized quizzes and study materials for students.    |
-|                      | Customer service                | Provide context-based responses through AI-driven chatbots.   |
-|                      | Advertising agencies            | Create targeted ad variations for different audience segments.  |
-|                      | Health and wellness apps        | Generate customized workout routines and meal plans.   |
-| **Non-generative AI** | Prediction                     | Forecast trends or optimize operations based on historical data.    |
-|                      | Process automation              | Automate routine tasks and workflows that don't require content generation, such as customer service bots.      |
-|                      | Data analysis                   | Uncover patterns in structured data for insights and data-driven decisions.   |
-|                      | Model simulation                | Simulate complex systems, such as fluid dynamics or finite element analysis, to predict behavior and optimize designs or processes.    |
-|                      | Anomaly detection               | Identify unusual patterns in data for use cases like fraud detection and equipment failure prediction.  |
-|                      | Recommendation                  | Provide personalized recommendations based on user behavior. For example, you can use recommendations for e-commerce and streaming services.  |
-|                      | Optimization                    | Solve complex problems to improve efficiency. For example, you can optimize supply chains or allocate resources.  |
-|                      | Sentiment analysis              | Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience.     |
-|                      | Image recognition               | Identify and classify objects in images and videos. You can apply image recognition in areas like security surveillance, quality control, and medical imaging. |
+| **Generative AI**                                      | **Non-Generative AI**                                                                 |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data.           |
+| E-commerce platforms: Generate personalized product recommendations and tailored shopping experiences. | Process automation: Automate routine tasks and workflows that don't require content generation, such as customer service bots. |
+| Product design: Quickly create multiple variations of product prototypes or design elements. | Data analysis: Uncover patterns in structured data for insights and data-driven decisions. |
+| Software development: Automate repetitive code generation, such as CRUD operations. | Model simulation: Simulate complex systems (fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes. |
+| Educational platforms: Generate personalized quizzes and study materials for students. | Anomaly detection: Identify unusual patterns in data (fraud detection, equipment failure prediction). |
+| Customer service: Provide context-based responses through AI-driven chatbots. | Recommendation: Offer personalized recommendations based on user behavior, commonly used in e-commerce and streaming services. |
+| Advertising agencies: Create targeted ad variations for different audience segments. | Optimization: Improve efficiency by solving complex problems (supply chain optimization, resource allocation). |
+| Health and wellness apps: Generate customized workout routines and meal plans. | Sentiment analysis: Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience. |
 
-
-## Define your AI technology strategy
+## Identify your AI technology
 
 For each use case, you need to identify an AI technology to support it. Each AI technology requires a different skill set, different data, and a different amount of effort for the implementation of a production-ready solution. You need to take some time to understand the available technologies and identify and validate the right solutions for your business.
 
@@ -52,7 +42,12 @@ Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) s
 
 Microsoft offers these options for AI services: 
 
-- *Purchase Microsoft copilots (SaaS) to improve productivity.* Microsoft has four types of SaaS generative AI services. This table gives you an overview and includes links to articles that provide more information:
+    | SaaS AI Copilot products | Description | User |
+    |--------|--------|-------|
+    | Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in M365 apps and provides a secure way to chat with business data in Microsoft Graph. | Business |
+    | Role-based agents for Microsoft 365 | Use to enhance productivity for specific business roles, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business |
+    | Copilots in Microsoft products | Use to enhance productivity within Microsoft products, such as [Copilot in GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
+    | Copilot in browser and mobile apps | Use [free](https://copilot.microsoft.com/) version for browser-based access to GPT models and [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) version for better performance and more capacity. | Individual |
 
    | SaaS AI Copilot products | Description | User |
    |--------|--------|-------|
@@ -61,7 +56,12 @@ Microsoft offers these options for AI services:
    | Copilots in Microsoft products | Use to these copilots to enhance productivity within Microsoft products, like [GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
    | Copilot in browser and mobile apps | Use the [free](https://copilot.microsoft.com/) version for browser-based access to GPT models. Use [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) for better performance and more capacity. | Individual |
 
-- *Build intelligent apps with Azure AI platform services (PaaS).* Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying and building AI, analytical AI, and machine learning applications.
+    | AI platform products | Description | Skills required |
+    |---------|------------|---------|
+    | Copilot Studio | Low-code platform to build generative AI applications | Without developer or data science skills |
+    | Azure AI Services | Code-first platform to build analytical AI applications | Developer skills |
+    | Azure AI Studio | Code-first platform to develop generative AI applications | Developer and data science skills |
+    | Azure Machine Learning and Microsoft Fabric | Platform to train and deploy AI models using your own data | Developer and advanced data science skills |
 
    | AI platform products | Description | Skills required |
    |---------|------------|---------|
@@ -97,7 +97,7 @@ AI solutions have varying data needs. Some, like Copilot for Microsoft 365, requ
 
 - *Understand Azure AI Studio and Azure OpenAI (code-first, generative AI platforms) data needs.* Creating generative AI apps typically requires grounding data for RAG. The grounding data needs to be limited to your specific use case. You shouldn't mix different types of information or include irrelevant data in the grounding data. Unstructured data needs to be in the [right format](/azure/search/search-how-to-create-search-index?tabs=portal#prerequisites) and [properly processed](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) when you create an [index](/azure/search/search-how-to-create-search-index).
 
-For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications?view=azuresql) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database). [Azure Database for PostgreSQ](/azure/postgresql/flexible-server/generative-ai-azure-overview)L allows you to connect to Azure AI via code.
+For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database) supports database vectorization. [Azure Database for PostgreSQ](/azure/postgresql/flexible-server/generative-ai-azure-overview)L allows you to connect to Azure AI via code.
 
 - *Understand Azure Machine Learning and Microsoft Fabric data needs.* Training machine learning models in Azure Machine Learning or Fabric requires large data sets on a specific domain. You need to preprocess, clean, and filter data before you split, train, and validate AI models.
 
@@ -111,17 +111,17 @@ This table provides an overview of cost factors for Microsoft AI solutions:
 
 | Service | Supported AI approach | Access | Main cost factors |
 |---------|----------------------|--------|-------------------|
-| [Copilot (free)](https://copilot.microsoft.com/) | SaaS generative AI | Free in browser or mobile apps | None |
-| Copilot Pro | SaaS generative AI | With a subscription, available in browser or mobile apps | [Subscription](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
-| [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) | SaaS generative AI with RAG | Add to an existing Microsoft 365 subscription | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans) |
-| [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio&#39;) | PaaS generative AI with RAG via low-code platform | Browser | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
-| [Azure AI services](/azure/ai-services/what-are-ai-services) | PaaS analytical AI | Azure | Use of model endpoints consumed, storage, data transfer, compute (if you train custom models) |
-| Azure OpenAI | PaaS generative AI, with and without RAG, for OpenAI models | Azure | Number of tokens in and out and compute |
-| [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | PaaS generative AI with and without RAG, PaaS fine-tuning generative AI models | Azure |Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
-| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2) | PaaS training machine learning and generative AI models | Azure | Compute, storage, and data transfer |
-| [Virtual Machines](/azure/virtual-machines/overview) | IaaS training of any AI model | Azure | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
+| [Copilot (free)](https://copilot.microsoft.com/) | SaaS Generative AI | Free in browser or mobile app | None |
+| Copilot Pro | SaaS Generative AI | Available in browser or mobile app with subscription | [Subscription](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
+| [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) | SaaS Generative AI with RAG | Add to an existing Microsoft 365 subscription | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans) |
+| [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | PaaS generative AI with RAG via low-code platform | Browser | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
+| [Azure AI services](/azure/ai-services/what-are-ai-services) | PaaS analytical AI | Azure | Use of model endpoints consumed, storage, data transfer, compute (if custom model training) |
+| Azure OpenAI | PaaS generative AI with and without RAG for OpenAI models | Azure | Use of tokens in/out and compute |
+| [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | PaaS generative AI with and without RAG, PaaS fine-tune generative AI models | Azure | Use of compute, tokens in/out, AI services consumed, storage, data transfer |
+| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | PaaS train machine learning and generative AI models | Azure | Use of compute, storage, data transfer |
+| [Virtual Machines](/azure/virtual-machines/overview) | IaaS, train any AI model | Azure | Use of compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
-## Define your AI data strategy
+## Identify your AI data
 
 When you train, ground, or use AI models, be sure that you send only the right data to the model and abide by ethical and regulatory standards. Your data strategy should outline acceptable data use and prepare your business to use ethical, accurate, high-quality data. Evaluate the completeness, relevance, and representativeness of the data to support reliable AI outputs.
 
@@ -133,7 +133,7 @@ When you train, ground, or use AI models, be sure that you send only the right d
 
 - *Monitor and evaluate continuously.* Set up ongoing monitoring of AI models and data pipelines to ensure data quality, performance, and fairness over time. Regularly audit data and model outputs to catch any shifts that could affect reliability or compliance.
 
-## Define your Responsible AI strategy
+## Identify your AI responsibility
 
 Adopting AI responsibly is an iterative process that implements regular monitoring and measuring to ensure that AI meets your business objectives. Microsoft follows six [Responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. These principles govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI applications that you build in accordance with Responsible AI.
 
