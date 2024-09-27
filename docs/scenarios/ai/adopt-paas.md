@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article provides recommendations on building AI applications using Azure platform-as-a-service (PaaS). The goal is to define the level of effort and help needed to be successful in AI application development using Azure PaaS services like Azure AI Studio, Azure AI Services, and Azure Machine Learning. It outlines the components you need to build generative and nongenerative AI applications. For each section, it provides links to architecture examples that you can use to implement.
 
-## Build generative AI applications
+## Adopt generative AI
 
 This section provides high-level recommendations to guide you through choosing the appropriate generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
 
@@ -46,7 +46,7 @@ Here are the high-level choices you need to make when building a generative AI a
 | [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) | [Azure OpenAI Landing Zones Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
 | [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
 
-## Build nongenerative AI applications
+## Adopt nongenerative AI
 
 Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to guide you through choosing the appropriate nongenerative AI platform, data sources, and application platform.
 
@@ -68,7 +68,6 @@ Here are the high-level choices you need to make when building a nongenerative A
 - *Harden Azure resources.* As a starting security baseline, apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) and follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/) for every Azure resource in your AI workloads. Additionally, you must follow the AI workload security guidance in [Secure AI](secure.md).
 
 - *Use implementation guidance.* Microsoft has detailed implementation guidance and deployable assets to build secure nongenerative AI applications. Use this guidance as a baseline and adapt to your needs. Start with the [Machine Learning and AI architectures](/azure/architecture/ai-ml/) to see the available guidance aligned to different use cases.
-
 
 ## Next step
 
