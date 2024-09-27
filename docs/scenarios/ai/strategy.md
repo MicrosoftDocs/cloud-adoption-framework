@@ -41,8 +41,7 @@ Look for processes that can benefit from automation or optimization, especially 
 |                      | Sentiment analysis              | Analyze text from social media or customer reviews to gauge public sentiment and enhance customer experience.     |
 |                      | Image recognition               | Identify and classify objects in images and videos, applied in areas like security surveillance, quality control, and medical imaging |
 
-
-## Define your AI technology strategy
+## Identify your AI technology
 
 For each use case, you need to identify an AI technology to support it. Each AI technology choice requires a different skillset, data, and effort to implement a production-ready solution. You need to take some time to understand the technology available and start identifying and validating the right solutions for your business.
 
@@ -121,7 +120,7 @@ Cost is an important consideration when validating your AI solution choice. The 
 | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2) | PaaS train machine learning and generative AI models | Azure | Use of compute, storage, data transfer |
 | [Virtual Machines](/azure/virtual-machines/overview) | IaaS, train any AI model | Azure | Use of compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
-## Define your AI data strategy
+## Identify your AI data
 
 When you are training, grounding, or using AI models, you want to ensure you only send the right data to the model and abide by ethical and regulatory standards. Your data strategy should outline acceptable data use and prepare your business to use ethical, accurate, high-quality data. Evaluate the completeness, relevance, and representativeness of the data to support reliable AI outputs.
 
@@ -133,7 +132,7 @@ When you are training, grounding, or using AI models, you want to ensure you onl
 
 - *Monitor and evaluate continuously.* Set up ongoing monitoring of AI models and data pipelines to ensure data quality, performance, and fairness over time. Regularly audit data and model outputs to catch any shifts that could affect reliability or compliance.
 
-## Define your Responsible AI strategy
+## Identify your AI responsibility
 
 Adopting AI responsibly is an iterative process with regular monitoring and measuring to ensure AI meets your business objectives. Microsoft follows six [Responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. They govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI applications you build in accordance with Responsible AI.
 

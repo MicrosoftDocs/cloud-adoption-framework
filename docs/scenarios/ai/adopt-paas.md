@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Adopt AI platforms (PaaS) – Recommendations to build AI apps with Azure platforms
 
-This article provides recommendations on building AI applications using Azure platform-as-a-service (PaaS). The goal is to define the level of effort and help needed to be successful in AI application development using Azure PaaS services like Azure AI Studio, Azure AI Services, and Azure Machine Learning. It outlines the components you need to build generative and nongenerative AI applications. For each section, it provides links to architecture examples that you can use to implement.
+This article provides recommendations on building AI applications using Azure platform-as-a-service (PaaS). The goal is to define the level of effort and help needed to be successful in AI application development using Azure PaaS services like Azure AI Studio, Azure AI Services, and Azure Machine Learning. It outlines the components you need to build generative and nongenerative AI applications. For each section, it provides links to architecture examples that you can use to implement. If you're unsure if these are the right technology choices for your use case, review the AI 
 
 ## Adopt generative AI
 
@@ -18,7 +18,7 @@ This section provides high-level recommendations to guide you through choosing t
 :::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
 *Figure 1. Basic components of a generative AI application with RAG.*
 
-Most generative AI applications implement retrieval augmented generation (RAG). At a high-level, RAG applications need the following components: (1) An application receives the user query. (2) An orchestrator like PromptFlow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism exposes data from several data sources in a way that is consumable by AI apps. (4) A generative AI model endpoint creates a response based on the user query and grounding data. For more information, see [Guide to designing and developing a RAG solution.](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) 
+Most generative AI applications implement retrieval augmented generation (RAG). At a high-level, RAG applications need the following components: (1) An application receives the user query. (2) An orchestrator like PromptFlow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism exposes data from several data sources in a way that is consumable by AI apps. (4) A generative AI model endpoint creates a response based on the user query and grounding data. For more information, see [Guide to designing and developing a RAG solution.](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
 
 Here are the high-level choices you need to make when building a generative AI application in Azure:
 
