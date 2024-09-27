@@ -84,37 +84,25 @@ Understanding the requirements of Responsible AI helps when setting delivery tim
 
 AI centralization means there’s a single team that manages AI resources and endpoint deployments. The decision to centralize AI models is primarily a governance issue. Centralization allows you to use a single process to deploy, govern, and manage AI endpoints for all AI workloads, rather than allow application teams to control these resources individually. Cost allocation for chargeback and showback and performance are other considerations centralization. If you had an AI CoE, they would determine whose responsibility it's to manage centralized AI resources.
 
-### Start with a centralized model
+- *Start with a centralized model.* Centralizing AI deployments under one team gives you greater control over governance. Begin with a centralized approach (see figure 1*), and as your governance processes mature, you can move to a more decentralized model if needed. If quota becomes a limitation, you can deploy the AI model in another region or request an increased quota.
 
-Centralizing AI deployments under one team gives you greater control over governance. Begin with a centralized approach (see figure 1*), and as your governance processes mature, you can move to a more decentralized model if needed. If quota becomes a limitation, you can deploy the AI model in another region or request an increased quota.
+    :::image type="content" source="./images/centralized-ai.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications." lightbox="./images/centralized-ai.svg" border="false":::
+    *Figure 1. Centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications.*
 
-:::image type="content" source="./images/centralized-ai.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications." lightbox="./images/centralized-ai.svg" border="false":::
-*Figure 1. Centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications.*
+- *Know when to share AI endpoints.* In a centralized model, you can share a single AI endpoint across multiple applications (*see figure 2*). Sharing an AI endpoint in production works best when the same application team develops, deploys, and manages multiple applications that share the same governance and model needs. For sharing nonglobal, regional deployments, a generative AI gateway is best practice. With some configuration in APIM, you can monitor tokens and track costs across applications. Sharing a single AI endpoint in nonproduction environments simplifies resource management without major concerns about performance or operational impact. You can even share a single AI endpoint across different nonproduction environments. Ultimately, there should be flexibility in to try different models before finalizing on the model to be chosen for the use case.
 
-#### Know when to share AI endpoints
+    :::image type="content" source="./images/centralized-ai-sharing.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint." lightbox="./images/centralized-ai.svg" border="false":::
+    *Figure 2. Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint.*
 
-In a centralized model, you can share a single AI endpoint across multiple applications (*see figure 2*).
+- *Don’t share AI endpoints when governance needs vary.* Applications that require different content filter settings (governance on input and output) shouldn't share an endpoint. Don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet application requirements.
 
-- *Production use cases to share a single AI endpoint.* Sharing an AI endpoint works best when the same application team develops, deploys, and manages multiple applications that share the same governance and model needs. For sharing nonglobal, regional deployments, a generative AI gateway is best practice. With some configuration in APIM, you can monitor tokens and track costs across applications.
+    :::image type="content" source="./images/centralized-ai-no-share.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications with their own AI endpoint." lightbox="./images/centralized-ai-no-share.svg" border="false":::
+    *Figure 3. Centralized AI resources approach. It shows two intelligent applications with their own AI endpoint.*
 
-- *Share AI endpoints in nonproduction environments.* Sharing a single AI endpoint in nonproduction environments simplifies resource management without major concerns about performance or operational impact. You can even share a single AI endpoint across different nonproduction environments. Ultimately, there should be flexibility in to try different models before finalizing on the model to be chosen for the use case.
+- *Decentralize AI endpoints for critical applications* Use a decentralized model when isolation, security, and cost tracking are priorities. Decentralization allows teams to manage AI models aligned with their applications. It provides dedicated AI resources to the application where performance or criticality demands it. Gradual decentralization is key. Start with strong governance to manage risks and maintain visibility. As governance matures, teams can be given more autonomy over their AI endpoints.
 
-:::image type="content" source="./images/centralized-ai-sharing.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint." lightbox="./images/centralized-ai.svg" border="false":::
-*Figure 2. Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint.*
-
-#### Don’t share AI endpoints when governance needs vary
-
-Applications that require different content filter settings (governance on input and output) shouldn't share an endpoint. Don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet application requirements.
-
-:::image type="content" source="./images/centralized-ai-no-share.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications with their own AI endpoint." lightbox="./images/centralized-ai-no-share.svg" border="false":::
-*Figure 3. Centralized AI resources approach. It shows two intelligent applications with their own AI endpoint.*
-
-### Decentralize AI endpoints for critical applications
-
-Use a decentralized model when isolation, security, and cost tracking are priorities. Decentralization allows teams to manage AI models aligned with their applications. It provides dedicated AI resources to the application where performance or criticality demands it. Gradual decentralization is key. Start with strong governance to manage risks and maintain visibility. As governance matures, teams can be given more autonomy over their AI endpoints.
-
-:::image type="content" source="./images/decentralized-ai.svg" alt-text="Diagram showing Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints." lightbox="./images/decentralized-ai.svg" border="false":::
-*Figure 4. Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints.*
+    :::image type="content" source="./images/decentralized-ai.svg" alt-text="Diagram showing Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints." lightbox="./images/decentralized-ai.svg" border="false":::
+    *Figure 4. Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints.*
 
 ## Estimate delivery timelines
 
