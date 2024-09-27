@@ -9,9 +9,9 @@ items:
     href: ready.md
   - name: Adopt
     items:
-      - name: Adopt AI platforms (PaaS)
+      - name: AI on platforms (PaaS)
         href: adopt-paas.md
-      - name: Adopt AI infrastructure (IaaS)
+      - name: AI on infrastructure (IaaS)
         href: adopt-infrastructure.md
   - name: Secure
     href: secure.md
