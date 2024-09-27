@@ -47,7 +47,7 @@ The AI adoption checklists guide you through the AI adoption process. There are 
 | [Strategy](./strategy.md) | &#9744; [Identify your AI technology]() <br> &#9744; [Identify your AI responsibility]() |
 | [Plan](./plan.md) | &#9744; [Access AI resources]() |
 | [Ready](./ready.md) | &#9744;  [Pick AI deployment regions]() |
-| [Adopt](./adopt-pass.md) | &#9744; [Adopt generative AI applications]() <br> &#9744; [Adopt nongenerative AI applications]() |
+| [Adopt](./adopt-paas.md) | &#9744; [Adopt generative AI applications]() <br> &#9744; [Adopt nongenerative AI applications]() |
 | [Secure](./secure.md) | &#9744; [Secure AI resources]() <br> &#9744; [Secure AI models]() <br> &#9744; [Secure AI data]() <br> &#9744; [Secure AI access]() |
 | [Govern](./govern.md) | &#9744; [Govern AI models]() <br> &#9744; [Govern AI costs]() <br> &#9744; [Govern AI data]() |
 | [Manage](./manage.md) | &#9744; [Manage AI models]() <br> &#9744; [Manage AI costs]() |
@@ -61,7 +61,7 @@ The AI adoption checklists guide you through the AI adoption process. There are 
 | [Strategy](./strategy.md) | &#9744; |
 | [Plan](./plan.md) | &#9744; |
 | [Ready](./ready.md) | &#9744;  |
-| [Adopt](./adopt-pass.md) | &#9744;
+| [Adopt](./adopt-paas.md) | &#9744;
 | [Secure](./secure.md) | &#9744;  |
 | [Govern](./govern.md) | &#9744; |
 | [Manage](./manage.md) | &#9744; |
@@ -69,4 +69,4 @@ The AI adoption checklists guide you through the AI adoption process. There are 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [](strategy.md)
+> [AI Strategy](strategy.md)
