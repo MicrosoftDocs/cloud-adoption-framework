@@ -9,13 +9,16 @@ products: azure-monitor
 ms.custom: UpdateFrequency2
 ---
 
-# Monitoring in the cloud
+# Monitoring in a cloud environment
 
 Whether you're a business owner, platform owner, or application owner, you need observability of your cloud environment to ensure that your workloads are running smoothly. You need to answer basic questions such as whether your applications are available and performing to your customers' expectations, if you have any security threats that require investigation, and if your consumption costs are within expected range.
 
 *Observability is* a property of a system that's a measure of how well its internal states can be inferred from its external outputs. In addition to deploying service and processes in place to monitor your cloud environment, you need to have the ability to observe and understand the behavior of your services running in the cloud. 
 
-*Monitoring* is the process of collecting, analyzing, and acting on telemetry indicating the health of your platform, resources, and applications. An effective monitoring environment includes your entire cloud estate which may include resources across multiple clouds and on-premises. Investment in your monitoring environment provides a positive return across multiple aspects of your cloud including the following:
+*Monitoring* is the process of collecting, analyzing, and acting on telemetry indicating the health of your platform, resources, and applications. An effective monitoring environment includes your entire cloud estate which may include resources across multiple clouds and on-premises. 
+
+## Value of monitoring
+Investment in your monitoring environment provides a positive return across multiple aspects of your cloud including the following:
 
 **Availability and performance:** Monitoring helps ensure that your cloud services and applications are available and performing as expected. By tracking key metrics and configuring alert rules, you can identify and respond to issues before they impact users.
 
@@ -25,9 +28,12 @@ Whether you're a business owner, platform owner, or application owner, you need 
 
 **Security:** Continuous monitoring can detect security threats and vulnerabilities allowing for immediate action to protect data and resources. Collected data can also be analyzed for threat detection and response.
 
+## Monitoring platforms
+An effective monitoring strategy includes all platforms in your computing environment. In addition to Azure, you may have on-premises, multicloud, and edge resources, and each requires the same levels of monitoring. Following the guidance of the [Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/overview), you should include monitoring in your [unified operations strategy](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations). Using this strategy, your monitoring tools are hosted by the primary cloud platform along with other management tools, and are used to monitor all resources across all platforms.
+
 
 ## Types of monitoring
-Monitoring is a multifaceted discipline that requires a combination of tools, processes, and practices. It can be broken down into the types described in the following table. Different services and features may provide different combinations of these types of monitoring, but a comprehensive monitoring environment will include all of them.
+Monitoring is a multifaceted discipline that requires a combination of tools, processes, and practices. It can be broken down into the types described in the following table. Different services and features may provide different combinations of these types of monitoring, but a comprehensive monitoring environment will include all of them across each of the platforms in your computing environment.
 
 | Type | Description |
 |:---|:---|
