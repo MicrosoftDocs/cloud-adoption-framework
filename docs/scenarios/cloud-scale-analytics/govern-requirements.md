@@ -3,7 +3,7 @@ title: Requirements for governing data
 description: Learn about requirements for governing data
 author: mboswell
 ms.author: mboswell
-ms.date: 02/16/2022
+ms.date: 09/29/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -66,8 +66,12 @@ Another requirement is the need for accountability. Otherwise confusion lingers 
 - Who ensures customer data is consistent across all systems?
 - Who is policing external subscription data usage versus the license?
 - Who is policing privileged users like database administrators and data scientists?
-
-Is it a C-level executive? Is it a department head? Is it the head of governance, risk, and compliance? What about the legal department? Or is it IT's responsibility? Roles and responsibilities are needed to avoid confusion and to set the foundation upon which a data culture can materialize.
+- Is it a C-level executive? Is it a department head? 
+- Is it the head of governance, risk, and compliance? 
+- What about the legal department? 
+- Or is it IT's responsibility?
+- 
+Roles and responsibilities are needed to avoid confusion and to set the foundation upon which a data culture can materialize.
 
 ## Data governance processes
 
@@ -124,4 +128,5 @@ Your data governance solution should have several components:
 
 ## Next steps
 
-- [Data governance process](./govern-components.md)
+> [!div class="nextstepaction"]
+> [Data governance process](./govern-components.md)
