@@ -43,25 +43,25 @@ This section provides a quick way to help you understand and access what you nee
 
 - *Access Microsoft copilots.* Microsoft SaaS copilots require a license or an add-on subscription, except for [the free version](https://copilot.microsoft.com/).
 
-    - [Copilot for Microsoft 365](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans)requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
+    - [Copilot for Microsoft 365](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
 
-    - [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or as an add-on license.
+    - [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license.
 
-    - In-product Copilots, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi?culture=&country=us), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
+    - In-product copilots. See [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi?culture=&country=us), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
 
-    - Role-based agents in Microsoft 365: [Role-based agents for Microsoft 365.](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-extensions)
+    - Role-based agents in Microsoft 365. See [the product page](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-extensions).
 
-- *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure AI Studio, Azure Machine Learning, and Azure AI services, which include Azure OpenAI, and Azure Virtual Machines.
+- *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure AI Studio, Azure Machine Learning, and Azure AI services, which include Azure OpenAI Service and Azure Virtual Machines.
 
 ## Create an AI proof of concept
 
-A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s technically optional, but it’s a valuable step for anyone new to AI. It provides a concrete evaluation of your AI maturity level and helps you set realistic expectations around delivery timelines. All Microsoft AI platforms have Quickstart articles for PoCs that align with common use cases. Use the table to find the right Quickstart article.
+A proof of concept (PoC) is a valuable planning tool for AI adoption. This step is optional, but it's a valuable step for anyone who's new to AI. It provides a concrete evaluation of your AI maturity level and helps you set realistic expectations around delivery timelines. For all Microsoft AI platforms, quickstart articles that provide PoCs that align with common use cases are available. Use the following table to find the right quickstart article.
 
-| AI Type  | Quickstart links |
+| AI type  | Quickstart link |
 |----------|--------------|
 | Generative AI | [Azure AI Studio](/azure/ai-studio/quickstarts/get-started-playground), [Azure OpenAI](/azure/ai-services/openai/assistants-quickstart), [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started)   |
 | Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day?)         |
-| Analytical AI | Azure AI Services: [Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), [Face](/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library), \*[AI Language](/azure/ai-services/language-service/overview#available-features), [Speech](/azure/ai-services/speech-service/overview#get-started), \*[Translator](/azure/ai-services/translator/translator-overview#translator-features-and-development-options), [AI Vision](/azure/ai-services/computer-vision/overview#get-started) <br> \**Each feature of this AI service has its own Quickstart guide*|
+| Analytical AI | Azure AI services: [Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), [Face](/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library), \*[AI Language](/azure/ai-services/language-service/overview#available-features), [Speech](/azure/ai-services/speech-service/overview#get-started), \*[Translator](/azure/ai-services/translator/translator-overview#translator-features-and-development-options), [AI Vision](/azure/ai-services/computer-vision/overview#get-started) <br> \**Each feature of this AI service has its own Quickstart guide*|
 
 - *Prioritize AI use cases.* Prioritize use cases that allow you to learn quickly and work toward your overall business impact. Focus on strategic areas like facilitating sales teams, customer-facing applications, and time-intensive processes.
 
