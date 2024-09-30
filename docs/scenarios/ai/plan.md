@@ -1,5 +1,5 @@
 ---
-title: AI Plan - Recommendations to develop an AI adoption plan
+title: AI Plan - Recommendations for developing an AI adoption plan
 description: View a comprehensive guide on AI adoption planning, skill acquisition, resource access, PoC creation, and responsible AI practices for organizations.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,41 +7,41 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Plan - Recommendations to develop an AI adoption plan
+# AI Plan - Recommendations for developing an AI adoption plan
 
-This article provides recommendations for planning AI adoption. Strategy provided an end goal to your AI adoption. Here, you get more tactical with preparing your organization to adopt AI. Fundamental to planning is ensuring you have the right skills and planning for AI deployment. Deployment requires thought around responsible AI and your approach to deploying and consuming AI endpoints across your applications.  
+This article provides recommendations for planning AI adoption. Strategy provides an end goal to your AI adoption. During this stage, you get more tactical about preparing your organization to adopt AI. During planning, you need to ensure that you have the right skills and planning for AI deployment. Deployment requires consideration of responsible AI and your approach to deploying and consuming AI endpoints across your applications.  
 
-## Evaluate AI maturity level
+## Evaluate your AI maturity level
 
-As with any technology, there’s a learning curve to adopting AI. Evaluating your AI maturity level can help you prioritize the right AI opportunities. AI projects that are too advanced for your experience don't provide the return on investment you need. If you plan to build generative AI applications, start with this generative AI technical assessment. At a high level, here are the readiness factors you need to consider.  
+As with any technology, there's a learning curve to adopting AI. Evaluating your AI maturity level can help you prioritize AI opportunities. AI projects that are too advanced for your experience don't provide the return on investment you need. If you plan to build generative AI applications, start with this generative AI technical assessment. At a high level, here are the readiness factors you need to consider:
 
-| AI Maturity Level | Feasible AI Projects | Skills Required | Data Readiness |
+| AI maturity level | Feasible AI projects | Skills required | Data readiness |
 |-------------------|----------------------|-----------------|----------------|
-| **Level 1**       | - Microsoft Learn Quickstart <br> - Copilot Studio app | - Basic understanding of AI concepts <br> - Ability to integrate data sources and map out prompts | - Minimal to zero data available <br> - Enterprise data available |
-| **Level 2**       | - Any of the previous projects <br> - Custom analytical AI application using Azure AI Services <br> - Custom generative AI chat app with Azure AI Studio without retrieval augmented generation <br> - Custom machine learning app with automated model training <br> - Fine-tuning generative AI model | - Experience with AI model selection <br> - Familiarity with AI deployment and endpoint management <br> - Experience with data cleaning and processing | - Minimal to zero data available <br> - Small, structured dataset <br> - Small amount of domain-specific data available |
-| **Level 3**       | - Any of the previous projects <br> - Generative AI app with RAG in Azure AI Studio (or Azure Machine Learning) <br> - Train and deploy machine learning model in Azure Machine Learning <br> - Train and run small AI model on Azure Virtual Machines | - Proficiency in prompt engineering <br> - Proficiency with AI model selection, data chunking, and query processing <br> - Proficiency in data preprocessing, cleaning, splitting, and validating <br> - Grounding data for indexing | - Large amounts of historical business data available for machine learning <br> - Small amount of domain-specific data available |
-| **Level 4**       | - Any of the previous projects <br> - Train and run large generative or nongenerative AI app on Azure Virtual Machines, Azure Kubernetes Service, Azure Container Apps | - Advanced AI/ML expertise, including infrastructure management <br> - Proficiency in handling complex AI model training workflows <br> - Experience with orchestration, model benchmarking, and performance optimization <br> - Strong skills in securing and managing AI endpoints | - Large amounts of data available for training |
+| Level 1       | - Microsoft Learn quickstart <br> - Copilot Studio app | - Basic understanding of AI concepts <br> - Ability to integrate data sources and map out prompts | - Minimal to zero data available <br> - Enterprise data available |
+| Level 2       | - Any of the previous projects <br> - Custom analytical AI application that uses Azure AI Services <br> - Custom generative AI chat app without Retrieval Augmented Generation (RAG) in Azure AI Studio  <br> - Custom machine learning app with automated model training <br> - Fine-tuning a generative AI model | - Experience with AI model selection <br> - Familiarity with AI deployment and endpoint management <br> - Experience with data cleaning and processing | - Minimal to zero data available <br> - Small, structured dataset <br> - Small amount of domain-specific data available |
+| Level 3       | - Any of the previous projects <br> - Generative AI app with RAG in Azure AI Studio (or Azure Machine Learning) <br> - Training and deploying a machine learning model in Azure Machine Learning <br> - Training and running a small AI model on Azure Virtual Machines | - Proficiency in prompt engineering <br> - Proficiency in AI model selection, data chunking, and query processing <br> - Proficiency in data preprocessing, cleaning, splitting, and validating <br> - Grounding data for indexing | - Large amounts of historical business data available for machine learning <br> - Small amount of domain-specific data available |
+| Level 4    | - Any of the previous projects <br> - Training and running a large generative or nongenerative AI app on Virtual Machines, Azure Kubernetes Service, or Azure Container Apps | - Advanced AI / machine learning expertise, including infrastructure management <br> - Proficiency in handling complex AI model training workflows <br> - Experience with orchestration, model benchmarking, and performance optimization <br> - Strong skills in securing and managing AI endpoints | - Large amounts of data available for training |
 
 ## Acquire AI skills
 
-Assess your organization’s current AI skill set to identify gaps and determine whether to develop internally or hire externally. A combination of approaches is often needed, balancing in-house development with outsourcing based on broader organizational strategy. For strategic projects, focus on building in-house expertise for long-term success. In areas requiring quick value, external partnerships can fill immediate gaps while internal capabilities are developed. This combination ensures efficiency in the short term and strategic skill growth for long-term competitiveness.
+Assess your organization's current AI skill set to identify gaps and determine whether to develop internally or hire externally. A combination of approaches is often needed, balancing in-house development with outsourcing, based on broader organizational strategy. For strategic projects, focus on building in-house expertise for long-term success. In areas that require quick value, external partnerships can fill immediate gaps while internal capabilities are developed. This combination ensures efficiency in the short term and strategic skill growth for long-term competitiveness.
 
-- *Learn AI skills.* The [Microsoft Learn](/) platform has free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certifications goals, such as earning Azure AI related certifications: [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/) , and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There’s learning resources for other subjects on the platform, so filter the results to return AI-specific results.
+- *Learn AI skills.* The [Microsoft Learn](/) platform provides free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certification goals, such as earning certifications related to Azure AI: [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
-- *Recruit AI skills.* For expertise that can't be developed internally within your time frame, recruit professionals. These professionals should have experience in AI model development, generative AI operations, or AI ethics skills.
+- *Recruit AI skills.* For expertise that you can't develop internally within your time frame, recruit professionals. These professionals should have experience in AI model development, generative AI operations, or AI ethics skills.
 
-    - *Form partnerships with educational institutions.* Collaborate with universities and training centers to access fresh talent equipped with the latest AI skills and insights.
-    - *Regularly update job descriptions.* Ensure job roles and requirements reflect the rapidly evolving AI landscape, helping you attract candidates with the most relevant skills.
-    - *Create an attractive employer brand.* Showcase your organization’s commitment to innovation and technological advancement, making your brand appealing to AI professionals.
+    - *Form partnerships with educational institutions.* Collaborate with universities and training centers to find fresh talent with the latest AI skills and insights.
+    - *Regularly update job descriptions.* Ensure that job roles and requirements reflect the rapidly evolving AI landscape. Doing so helps you attract candidates with the most relevant skills.
+    - *Create an attractive employer brand.* Showcase your organization's commitment to innovation and technological advancement to make your brand appealing to AI professionals.
     - *Offer competitive compensation packages.* Provide AI professionals with attractive salary structures and benefits to both attract and retain top-tier talent in the field.
 
-- *Use Microsoft partners to access AI skills.* Use a Microsoft partner to address skills shortages. build more complex solutions or increase personnel count to meet time constraints. Use the [Microsoft partners marketplace](https://partner.microsoft.com//partnership/find-a-partner) to find partners with expertise in AI, data, and Azure across multiple industries.
+- *Use Microsoft partners to acquire AI skills.* Use a Microsoft partner to address skill shortages. Build more complex solutions or increase personnel count to meet time constraints. Use the [Microsoft partners marketplace](https://partner.microsoft.com//partnership/find-a-partner) to find partners who have expertise in AI, data, and Azure across multiple industries.
 
 ## Gain access to AI resources
 
-As a tactical step to developing AI solutions, you need to be able to access them. The goal here's to provide a quick way to understand and access what you need to start using AI solutions.
+This section provides a quick way to help you understand and access what you need to start using AI solutions.
 
-- *Access Microsoft Copilots.* Microsoft SaaS Copilots require a license or add-on subscription, except [Microsoft Copilot (free)](https://copilot.microsoft.com/).
+- *Access Microsoft copilots.* Microsoft SaaS copilots require a license or an add-on subscription, except for [the free version](https://copilot.microsoft.com/).
 
     - [Copilot for Microsoft 365](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans)requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
 
