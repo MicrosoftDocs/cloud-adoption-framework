@@ -101,39 +101,40 @@ The following diagram shows two intelligent applications, each with its own AI e
 
 - *Decentralize AI endpoints for critical applications.* Use a decentralized model when isolation, security, and cost tracking are priorities. Decentralization allows teams to manage AI models that are aligned with their applications. It provides dedicated AI resources to the application when performance or criticality demands it. Gradual decentralization is key. Start with strong governance to manage risks and maintain visibility. As governance matures, teams can be given more autonomy over their AI endpoints.
 
-  Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints.
+  The following diagram shows a model in which AI resources are dedicated to each application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints.
 
-  :::image type="content" source="./images/decentralized-ai.svg" alt-text="Diagram showing Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints." lightbox="./images/decentralized-ai.svg" border="false":::
+  :::image type="content" source="./images/decentralized-ai.svg" alt-text="Diagram that shows dedicated AI resources for each application." lightbox="./images/decentralized-ai.svg" border="false":::
 
 ## Estimate delivery timelines
 
-Based on your proof-of-concept, assign a delivery timeline to your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships.  
+Based on your PoC, assign a delivery timeline for your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships.  
 
-Microsoft AI SaaS solutions have the shortest timelines to see a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. Most efforts take weeks to months to have a production-ready AI application. 
+Microsoft AI SaaS solutions provide the shortest timelines for seeing a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. In most cases, it takes between weeks and months before you have a production-ready AI application. 
 
 ## Next step
 
-The rest of the guidance focuses on building AI workloads in Azure using PaaS and IaaS solutions. To be successful in Azure, first establish your AI foundation.
+The rest of this guidance focuses on building AI workloads in Azure by using PaaS and IaaS solutions. To be successful in Azure, first establish your AI foundation.
 
 > [!div class="nextstepaction"]
 > [AI Ready](ready.md)
 
-To adopt a Microsoft Copilot solution, use these links to find more information:
+For more information about adopting a Microsoft Copilot solution, see these resources:
 
-- [Microsoft Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)
-- [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)
+- [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)
+- [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)
 - Role-based agents in Microsoft 365:
     - [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot)
     - [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction)
     - [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service)
     - [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance)
-- In-product Copilots:
+- In-product copilots:
     - [GitHub](https://azure.microsoft.com//products/github/copilot)
     - [Power Apps](https://www.microsoft.com/power-platform/products/power-apps)
     - [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=&country=us)
     - [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai)
     - [Power Automate](https://www.microsoft.com/power-platform/products/power-automate)
     - [Azure](https://azure.microsoft.com/products/copilot/)
-Browser-based Copilots:
-- [Microsoft Copilot (free)](https://copilot.microsoft.com/)
-- [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro)
+    
+Browser-based copilots:
+- [Copilot (free)](https://copilot.microsoft.com/)
+- [Copilot Pro](https://www.microsoft.com/store/b/copilotpro)
