@@ -1,23 +1,23 @@
 items:
-  - name: AI
+  - name: AI Adoption on Azure
     href: index.md
-  - name: AI Strategy
+  - name: Strategy
     href: strategy.md
-  - name: AI Plan
+  - name: Plan
     href: plan.md
-  - name: AI Ready
+  - name: Ready
     href: ready.md
-  - name: Adopt AI
+  - name: Adopt
     items:
       - name: Adopt AI platforms (PaaS)
         href: adopt-paas.md
       - name: Adopt AI infrastructure (IaaS)
         href: adopt-infrastructure.md
-  - name: Secure AI
+  - name: Secure
     href: secure.md
-  - name: Govern AI
+  - name: Govern
     href: govern.md
-  - name: Manage AI
+  - name: Manage
     href: manage.md
   - name: Additional resources
     items:

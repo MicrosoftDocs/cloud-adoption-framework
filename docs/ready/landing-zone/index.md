@@ -3,7 +3,7 @@ title: What is an Azure landing zone?
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 05/31/2023
+ms.date: 09/27/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
