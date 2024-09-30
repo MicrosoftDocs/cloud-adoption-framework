@@ -43,20 +43,10 @@ This section provides a quick way to help you understand and access what you nee
 
 - *Access Microsoft copilots.* Microsoft SaaS copilots require a license or an add-on subscription, except for [the free version](https://copilot.microsoft.com/).
 
-<<<<<<< HEAD
     - [Copilot for Microsoft 365](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
-
     - [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license.
-
-    - In-product copilots. See [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi?culture=&country=us), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
-
-    - Role-based agents in Microsoft 365. See [the product page](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-extensions).
-=======
-    - [Copilot for Microsoft 365](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans)requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
-    - [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or as an add-on license.
-    - In-product Copilots, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi?culture=&country=us), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
-    - Role-based agents in Microsoft 365: [Role-based agents for Microsoft 365.](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-extensions)
->>>>>>> 3d809b3b5e7a36ff5b39cce0a6edf3ddcc7b6d7c
+    - In-product Copilots. See [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi?culture=&country=us), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
+    - Role-based agents in Microsoft 365. [See the product page](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-extensions).
 
 - *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure AI Studio, Azure Machine Learning, and Azure AI services, which include Azure OpenAI Service and Azure Virtual Machines.
 
