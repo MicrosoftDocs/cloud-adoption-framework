@@ -60,7 +60,7 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s tec
     | Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day?)         |
     | Analytical AI | Azure AI Services: [Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), [Face](/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library), \*[AI Language](/azure/ai-services/language-service/overview#available-features), [Speech](/azure/ai-services/speech-service/overview#get-started), \*[Translator](/azure/ai-services/translator/translator-overview#translator-features-and-development-options), [AI Vision](/azure/ai-services/computer-vision/overview#get-started) <br> \**Each feature of this AI service has its own Quickstart guide*|
 
-- *Prioritize AI use cases.* Prioritize use cases that allow you to learn quickly and work toward your overall business impact. Focus on strategic areas like facilitating sales teams, customer-facing applications, and time-intensive processes.
+- *Prioritize AI use cases.* Prioritize use cases that allow you to learn quickly and work toward your overall business impact. Focus on strategic areas like facilitating sales teams, customer-facing applications, and time-intensive processes. Balance short-term projects that can demonstrate immediate value with long-term strategic initiatives. Consider the required investment in terms of time, budget, and personnel. 
 
 - *Select the right opportunity.* PoCs should align with your current AI maturity level and your prioritized AI opportunities. Within those filters, prefer projects that provide the most value, balancing the opportunity priority, time, and money it takes to see results. Prefer internal use cases for minimized testing risk. Refine PoC and convert to a pilot. Conduct AB testing to create a baseline of what works and what doesn't for your organization.
 
@@ -106,7 +106,9 @@ AI centralization means there’s a single team that manages AI resources and en
 
 ## Estimate delivery timelines
 
-Based on your proof-of-concept, assign a delivery timeline to your AI opportunities. Microsoft AI SaaS solutions have the shortest timelines to see a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. Most efforts take weeks to months to have a production-ready AI application.
+Based on your proof-of-concept, assign a delivery timeline to your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships.  
+
+Microsoft AI SaaS solutions have the shortest timelines to see a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. Most efforts take weeks to months to have a production-ready AI application. 
 
 ## Next step
 
