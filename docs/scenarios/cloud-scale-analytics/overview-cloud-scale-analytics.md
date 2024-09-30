@@ -1,16 +1,22 @@
 ---
-title: Introduction to cloud-scale analytics
+title: Introduction to cloud-scale analytics for regulated industry
 description: Learn about cloud-scale analytics for Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 06/22/2022
+ms.date: 09/30/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Introduction to cloud-scale analytics
+# Introduction to cloud-scale analytics for regulated industry
 
-Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The main purpose of an Azure landing zone is to ensure that, when an application or workload lands on Azure, the required infrastructure is already in place. Before you deploy your cloud-scale analytics landing zone, you must have already established one or more Azure landing zones. Microsoft provides sample templates to get you started, which you can use for your data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. These templates provide agility and are compliant with security and governance requirements.
+Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The main purpose of an Azure landing zone is to ensure that, when an application or workload lands on Azure, the required infrastructure is already in place. Before you deploy your cloud-scale analytics landing zone, you must have already worked through the [cloud adoption framework](/azure/cloud-adoption-framework/) to deploy an [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) with plaform landing zones.
+
+For sovereign workloads, Microsoft has the [Sovereign Landing Zone (SLZ)](/industry/sovereignty/slz-overview) which is a variant of the enterprise scale Azure Landing Zone intended for organizations that need advanced sovereign controls. Cloud-scale ananlytics can be deployed against this variat of azure landing zone.
+
+Cloud-scale analytics aligns to deploying to application landing zones which typically reside under the landing zone management group with policies filtering down to the sample templates which Microsoft provide.
+
+Microsoft provides sample templates to get you started, which you can use for your data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. These templates provide agility and are compliant with security and governance requirements.
 
 ## Cloud-scale analytics evaluation
 
@@ -32,7 +38,7 @@ Data warehouse and data lake are still valuable, and play an important role in y
 
 ## Moving to cloud-scale analytics
 
-Your current analytical data architecture and operating model can include data warehouse, data lake, and data lakehouse structures, or even an emerging model like data fabric or data mesh.
+Your current analytical data architecture and operating model can include data warehouse, data lake, and data lakehouse structures, data fabric or data mesh.
 
 Each data model has its own merits and challenges. Cloud-scale analytics helps you work from your current setup to shift your approach to data management so that it can evolve with your infrastructure.
 
@@ -106,7 +112,7 @@ It's also important to engage your end users throughout the modernization proces
 
 ## Architectures
 
-Azure landing zones represent the strategic design path and target technical state for your environment. They allow ease of deployment and governance to provide greater agility and compliance. Azure landing zones also ensure that when a new application or workload lands in your environment, the proper infrastructure is already in place. Azure data management and data landing zones are designed with these same foundational principles in mind and, when combined with the other elements of the cloud-scale analytics, can help to enable:
+Azure landing zones represent the strategic design path and target technical state for your environment. They allow ease of deployment and governance to provide greater agility and compliance. Azure landing zones also ensure that when a new application or workload lands in your environment, the proper infrastructure is already in place. Azure data management and data landing zones, integrated with Microsoft software-as-service governance and analytics solutions, are designed with these same foundational principles in mind and, when combined with the other elements of the cloud-scale analytics, can help to enable:
 
 - Self-service
 - Scalability
@@ -121,13 +127,16 @@ The data management landing zone provides the foundation for your platform's cen
 
 The data management landing zone supports numerous other data management and governance capabilities, such as:
 
-- Data catalog
-- Data classification
-- Data lineage
-- Data quality management
+- Data catalog*
+- Data quality management*
+- Data classification*
+- Data lineage*
 - Data modeling repository
 - API catalog
 - Data sharing and contracts
+
+> [!TIP]
+> * If using 3rd party solutions for Data catalog, quality and lineage solutions then these should reside in the data management landing zone. Otherwise, Microsoft Purview is deployed as software-as-a-service and connects through to the data management landing and data landing zones.
 
 ### Data landing zones
 
@@ -141,12 +150,16 @@ As you decide between single and multiple landing zones, consider regional depen
 
 Regardless of your initial decision, you can add or remove data landing zones as needed. If you're starting with a single landing zone, we recommend that you plan to extend to multiple landing zones to avoid future needs for migration.
 
+> [!NOTE]
+> Where Microsoft Fabric has been deployed, the data landing zone hosts non software-as-service solutions such as data lakes related and other Azure data services.
+
 For more information about landing zones, see [Azure landing zones for cloud-scale analytics](../data-management/ready.md).
 
 ## Conclusion
 
-After you've read this documentation set, in particular the governance, security, operating and best practices sections, we recommend you set up a proof-of-concept environment by using the deployment templates. These templates, along with architecture guidance, give you hands-on experience with some of the Azure technologies. For more information, see the [Getting started checklist](architectures/data-mesh-checklist.md).
+After you've read this documentation set, in particular the governance, security, operating and best practices sections, we recommend you set up a proof-of-concept environment by using the deployment templates. These templates, along with architecture guidance, give you hands-on experience with some of the Azure and Microsoft software-as-a-service technologies. For more information, see the [Getting started checklist](architectures/data-mesh-checklist.md).
 
 ## Next steps
 
+> [!div class="nextstepaction"]
 [Integrate cloud-scale analytics into your cloud adoption strategy](../data-management/strategy.md)
