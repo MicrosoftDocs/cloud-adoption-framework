@@ -13,17 +13,17 @@ This article describes how to define an AI adoption strategy. As with any strate
 
 ## Identify AI use cases
 
-Compile a comprehensive list of possible AI use cases. Don't limit ideas to current capabilities. Consider future possibilities as well. Later, when you choose your AI technology, you evaluate the technical capability or can acquire it to implement each use case. For now, focus on compiling use cases. For an example, see [Example AI strategy](strategy.md#example-ai-strategy]. 
+Compile a comprehensive list of possible AI use cases. Don't limit ideas to current capabilities. Consider future possibilities as well. Later, when you choose your AI technology, you evaluate the technical capability or can acquire it to implement each use case. For now, focus on compiling use cases. For an example, see [Example AI strategy](strategy.md#example-ai-strategy). 
 
-- *Understand AI.* In general, AI accommodates two strategic goals, enhancing individual efficiency and improving business processes.  Generative AI fosters individual productivity and provides a more adaptive customer experience across many business areas. Non-generative AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It’s best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data. 
+- *Understand AI.* In general, AI accommodates two strategic goals: enhancing individual efficiency and improving business processes.  Generative AI fosters individual productivity and provides a more adaptive customer experience across many business areas. Non-generative AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It's best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data. 
 
-- *Analyze business processes for automation opportunities.* Identifying processes suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.  
+- *Analyze business processes for automation opportunities.* Identifying processes that are suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.  
 
-- *Conduct an assessment.* Gather input from various departments to understand challenges and inefficiencies that could be addressed with AI. Document current workflows to spot areas where AI can automate tasks or provide insights. 
+- *Conduct an assessment.* Gather input from various departments to understand challenges and inefficiencies that could be addressed with AI. Document current workflows to identify areas where AI can automate tasks or provide insights. 
 
 - *Align AI initiatives with strategic goals.* Aligning AI projects with your strategic objectives ensures that efforts contribute to overall business success. Map out how AI can enhance productivity or streamline processes and prioritize use cases that directly support your company's mission and goals. 
 
-- *Explore industry use cases.* Research how other businesses are using AI to gain insights. Stay informed about emerging AI technologies and applications relevant to your industry. 
+- *Explore industry use cases.* Research how other businesses are using AI to gain insights. Stay informed about emerging AI technologies and applications that are relevant to your industry. 
 
 ## Identify your AI technology
 
@@ -33,9 +33,9 @@ Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) s
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
-### Buy Microsoft Copilots (SaaS) to improve efficiency.
+### Purchase Microsoft copilots (SaaS) to improve efficiency
 
-Microsoft has four different types of SaaS generative AI services. Use the table for an overview and links for more information.
+Microsoft has four types of SaaS generative AI services. See the following table for an overview and links to articles that provide more information.
 
     | SaaS AI Copilot products | Description | User |
     |--------|--------|-------|
@@ -57,14 +57,13 @@ Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-c
 
 ### Use Azure infrastructure services (IaaS) to bring your own AI models
 
-For more advanced AI needs, Azure Virtual Machines and Azure Kubernetes Service provide access to GPUs and CPUs with virtual machine images to bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway and should be used first before attempting IaaS.
+For more advanced AI needs, Azure Virtual Machines and Azure Kubernetes Service provide access to GPUs and CPUs with virtual machine images so you can bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway. You should use them first before you try IaaS.
 
 ### Understand the skills needed to adopt AI
 
-There are different approaches to adopting AI, and each approach requires different skills, as described in the following table. Adopting SaaS products requires very few skills to adopt. Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills. Use the following table to see the skills required adopt AI for each AI approach:
+There are different approaches to adopting AI, and each approach requires different skills, as described in the following table. Adopting SaaS products requires very few skills to adopt. Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills. The following table shows the skills that are required adopt AI for each AI approach:
 
-*Table. Summary of skills required to adopt*
-| AI type | Service model | General use | Solution | Data needed | Skills required to adopt |
+| AI type | Service model | General use | Solution | Data needed | Skills required  |
 |---------|--------------|-----------------|----------|-------------|-------------------------|
 | Generative AI | SaaS | Increase individual productivity | Copilot (Free or Pro) | No | None |
 | Generative AI | SaaS | Increase individual productivity and chat with business data | Copilot for Microsoft 365 and other SaaS Copilot products | Yes | General IT |
@@ -85,7 +84,7 @@ AI solutions have varying data needs. Some, like Copilot for Microsoft 365, requ
 
 - *Understand Azure AI Studio and Azure OpenAI (code-first, generative AI platforms) data needs.* Creating generative AI apps typically requires grounding data for RAG. The grounding data needs to be limited to your specific use case. You shouldn't mix different types of information or include irrelevant data in the grounding data. Unstructured data needs to be in the [right format](/azure/search/search-how-to-create-search-index?tabs=portal#prerequisites) and [properly processed](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) when you create an [index](/azure/search/search-how-to-create-search-index).
 
-    For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database) supports database vectorization. [Azure Database for PostgreSQ](/azure/postgresql/flexible-server/generative-ai-azure-overview)L allows you to connect to Azure AI via code.
+    For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database). [Azure Database for PostgreSQ](/azure/postgresql/flexible-server/generative-ai-azure-overview)L allows you to connect to Azure AI via code.
 
 - *Understand Azure Machine Learning and Microsoft Fabric data needs.* Training machine learning models in Azure Machine Learning or Fabric requires large data sets on a specific domain. You need to preprocess, clean, and filter data before you split, train, and validate AI models.
 
@@ -95,8 +94,9 @@ AI solutions have varying data needs. Some, like Copilot for Microsoft 365, requ
 
 Cost is an important consideration when you validate your choice of AI solutions. The goal of this section is to make it easy to find and estimate the costs of different services. Microsoft Saas copilots and Copilot Studio have a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Virtual machines (CPUs or GPUs) are the primary cost for AI models running on Azure Virtual Machines. For Azure services, use the individual product [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.
 
-*Table. Overview of Microsoft AI solutions*
-| Service | AI approach supported | Access | Main cost factors |
+This table provides an overview of cost factors for Microsoft AI solutions:
+
+| Service | Supported AI approach | Access | Main cost factors |
 |---------|----------------------|--------|-------------------|
 | [Copilot (free)](https://copilot.microsoft.com/) | SaaS generative AI | Free in browser or mobile apps | None |
 | Copilot Pro | SaaS generative AI | With a subscription, available in browser or mobile apps| [Subscription](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
