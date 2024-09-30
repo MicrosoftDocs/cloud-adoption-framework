@@ -17,7 +17,7 @@ Securing AI requires all the same security measures as any cloud workload. Howev
 
 This guidance provides recommendations for identifying AI security risks. Familiarity with AI risk is required to properly implement security controls.
 
-- *Identify common AI security risks.* Use widely recognized resources like [MITRE ATLAS Matrix](https://atlas.mitre.org/matrices/ATLAS), [OWASP Machine Learning risk](https://mltop10.info/), and [OWASP Generative AI risk](https://genai.owasp.org/) to regularly evaluate risks across all AI workloads. For ongoing security posture management, consider using AI security tools like [AI security posture management](/azure/defender-for-cloud/ai-security-posture) in Microsoft Defender for Cloud, which can automate the detection and remediation of generative AI risks.
+- *Identify common AI security risks.* Use widely recognized resources like [MITRE ATLAS](https://atlas.mitre.org/), [OWASP Machine Learning risk](https://mltop10.info/), and [OWASP Generative AI risk](https://genai.owasp.org/) to regularly evaluate risks across all AI workloads. For ongoing security posture management, consider using AI security tools like [AI security posture management](/azure/defender-for-cloud/ai-security-posture) in Microsoft Defender for Cloud, which can automate the detection and remediation of generative AI risks.
 
 - *Identify data risks.* Sensitive data loss or exposure can have significant impacts on your organization’s stakeholders and compliance obligations. Use enterprise-wide tools like [Microsoft Purview Insider Risk Management](/purview/insider-risk-management) to assess insider risk and maintain data security throughout the business. Across all AI workloads, classify and prioritize risks based on the sensitivity of the data they process, store, or transmit.
 
@@ -105,11 +105,11 @@ This section outlines security recommendations for accessing AI resources in Azu
 
     - *AI Developers* should have access to development environments, deployment permissions, and the ability to modify AI applications.
     - *IT Administrators* should have full access to manage infrastructure, network configurations, and security policies
-    - *Secure Azure service-to-service interactions.* Use [Managed Identities](/azure/entra/identity/managed-identities-azure-resources/overview) to allow Azure services to authenticate to each other without managing credentials, enhancing security and simplifying identity management.
+    - *Secure Azure service-to-service interactions.* Use [Managed Identities](/entra/identity/managed-identities-azure-resources/overview) to allow Azure services to authenticate to each other without managing credentials, enhancing security and simplifying identity management.
 
 - *Secure external access to AI model endpoints.* Require clients to authenticate using Entra ID when accessing AI model endpoints. Consider using Azure API Management as an AI gateway in front of AI model endpoints to enforce access policies, control usage, and provide monitoring capabilities.
 
-***Maintain AI security controls ***
+## Maintain AI security controls
 
 Effective monitoring and continuous review of AI security controls are essential to protect AI workloads across an organization. To ensure robust security, organizations should implement a comprehensive strategy that includes regular assessments, ongoing monitoring, employee training, incident response planning, and adaptive control updates.
 
