@@ -44,11 +44,8 @@ As a tactical step to developing AI solutions, you need to be able to access the
 - *Access Microsoft Copilots.* Microsoft SaaS Copilots require a license or add-on subscription, except [Microsoft Copilot (free)](https://copilot.microsoft.com/).
 
     - [Copilot for Microsoft 365](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans)requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
-
     - [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or as an add-on license.
-
     - In-product Copilots, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi?culture=&country=us), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
-
     - Role-based agents in Microsoft 365: [Role-based agents for Microsoft 365.](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-extensions)
 
 - *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure AI Studio, Azure Machine Learning, and Azure AI services, which include Azure OpenAI, and Azure Virtual Machines.
@@ -57,13 +54,13 @@ As a tactical step to developing AI solutions, you need to be able to access the
 
 A proof of concept (PoC) is a valuable planning tool for AI adoption. It’s technically optional, but it’s a valuable step for anyone new to AI. It provides a concrete evaluation of your AI maturity level and helps you set realistic expectations around delivery timelines. All Microsoft AI platforms have Quickstart articles for PoCs that align with common use cases. Use the table to find the right Quickstart article.
 
-| AI Type  | Quickstart links |
-|----------|--------------|
-| Generative AI | [Azure AI Studio](/azure/ai-studio/quickstarts/get-started-playground), [Azure OpenAI](/azure/ai-services/openai/assistants-quickstart), [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started)   |
-| Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day?)         |
-| Analytical AI | Azure AI Services: [Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), [Face](/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library), \*[AI Language](/azure/ai-services/language-service/overview#available-features), [Speech](/azure/ai-services/speech-service/overview#get-started), \*[Translator](/azure/ai-services/translator/translator-overview#translator-features-and-development-options), [AI Vision](/azure/ai-services/computer-vision/overview#get-started) <br> \**Each feature of this AI service has its own Quickstart guide*|
+    | AI Type  | Quickstart links |
+    |----------|--------------|
+    | Generative AI | [Azure AI Studio](/azure/ai-studio/quickstarts/get-started-playground), [Azure OpenAI](/azure/ai-services/openai/assistants-quickstart), [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started)   |
+    | Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day?)         |
+    | Analytical AI | Azure AI Services: [Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), [Face](/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library), \*[AI Language](/azure/ai-services/language-service/overview#available-features), [Speech](/azure/ai-services/speech-service/overview#get-started), \*[Translator](/azure/ai-services/translator/translator-overview#translator-features-and-development-options), [AI Vision](/azure/ai-services/computer-vision/overview#get-started) <br> \**Each feature of this AI service has its own Quickstart guide*|
 
-- *Prioritize AI use cases.* Prioritize use cases that allow you to learn quickly and work toward your overall business impact. Focus on strategic areas like facilitating sales teams, customer-facing applications, and time-intensive processes.
+- *Prioritize AI use cases.* Prioritize use cases that allow you to learn quickly and work toward your overall business impact. Focus on strategic areas like facilitating sales teams, customer-facing applications, and time-intensive processes. Balance short-term projects that can demonstrate immediate value with long-term strategic initiatives. Consider the required investment in terms of time, budget, and personnel. 
 
 - *Select the right opportunity.* PoCs should align with your current AI maturity level and your prioritized AI opportunities. Within those filters, prefer projects that provide the most value, balancing the opportunity priority, time, and money it takes to see results. Prefer internal use cases for minimized testing risk. Refine PoC and convert to a pilot. Conduct AB testing to create a baseline of what works and what doesn't for your organization.
 
@@ -87,41 +84,31 @@ Understanding the requirements of Responsible AI helps when setting delivery tim
 
 AI centralization means there’s a single team that manages AI resources and endpoint deployments. The decision to centralize AI models is primarily a governance issue. Centralization allows you to use a single process to deploy, govern, and manage AI endpoints for all AI workloads, rather than allow application teams to control these resources individually. Cost allocation for chargeback and showback and performance are other considerations centralization. If you had an AI CoE, they would determine whose responsibility it's to manage centralized AI resources.
 
-### Start with a centralized model
+- *Start with a centralized model.* Centralizing AI deployments under one team gives you greater control over governance. Begin with a centralized approach (see figure 1*), and as your governance processes mature, you can move to a more decentralized model if needed. If quota becomes a limitation, you can deploy the AI model in another region or request an increased quota.
 
-Centralizing AI deployments under one team gives you greater control over governance. Begin with a centralized approach *(see figure 1*)*,* and as your governance processes mature, you can move to a more decentralized model if needed. If quota becomes a limitation, you can deploy the AI model in another region or request an increased quota.
+    :::image type="content" source="./images/centralized-ai.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications." lightbox="./images/centralized-ai.svg" border="false":::
+    *Figure 1. Centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications.*
 
-:::image type="content" source="./images/centralized-ai.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications." lightbox="./images/centralized-ai.svg" border="false":::
-*Figure 1. Centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications.*
+- *Know when to share AI endpoints.* In a centralized model, you can share a single AI endpoint across multiple applications (*see figure 2*). Sharing an AI endpoint in production works best when the same application team develops, deploys, and manages multiple applications that share the same governance and model needs. For sharing nonglobal, regional deployments, a generative AI gateway is best practice. With some configuration in APIM, you can monitor tokens and track costs across applications. Sharing a single AI endpoint in nonproduction environments simplifies resource management without major concerns about performance or operational impact. You can even share a single AI endpoint across different nonproduction environments. Ultimately, there should be flexibility in to try different models before finalizing on the model to be chosen for the use case.
 
-#### Know when to share AI endpoints with multiple applications
+    :::image type="content" source="./images/centralized-ai-sharing.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint." lightbox="./images/centralized-ai.svg" border="false":::
+    *Figure 2. Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint.*
 
-In a centralized model, you can share a single AI endpoint across multiple applications *(see figure 2*)*.
+- *Don’t share AI endpoints when governance needs vary.* Applications that require different content filter settings (governance on input and output) shouldn't share an endpoint. Don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet application requirements.
 
-:::image type="content" source="./images/centralized-ai-sharing.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint." lightbox="./images/centralized-ai.svg" border="false":::
-*Figure 2. Centralized AI resources approach. It shows two intelligent applications sharing a single AI endpoint.*
+    :::image type="content" source="./images/centralized-ai-no-share.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications with their own AI endpoint." lightbox="./images/centralized-ai-no-share.svg" border="false":::
+    *Figure 3. Centralized AI resources approach. It shows two intelligent applications with their own AI endpoint.*
 
-- *Production use cases to share a single AI endpoint.* Sharing an AI endpoint works best when the same application team develops, deploys, and manages multiple applications that share the same governance and model needs. For sharing nonglobal, regional deployments, a generative AI gateway is best practice. With some configuration in APIM, you can monitor tokens and track costs across applications.
+- *Decentralize AI endpoints for critical applications* Use a decentralized model when isolation, security, and cost tracking are priorities. Decentralization allows teams to manage AI models aligned with their applications. It provides dedicated AI resources to the application where performance or criticality demands it. Gradual decentralization is key. Start with strong governance to manage risks and maintain visibility. As governance matures, teams can be given more autonomy over their AI endpoints.
 
-- *Share AI endpoints in nonproduction environments.* Sharing a single AI endpoint in nonproduction environments simplifies resource management without major concerns about performance or operational impact. You can even share a single AI endpoint across different nonproduction environments. Ultimately, there should be flexibility in to try different models before finalizing on the model to be chosen for the use case.
-
-#### Don’t share AI endpoints when governance needs vary
-
-Applications that require different content filter settings (governance on input and output) shouldn't share an endpoint. Don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet application requirements.
-
-:::image type="content" source="./images/centralized-ai-no-share.svg" alt-text="Diagram showing Centralized AI resources approach. It shows two intelligent applications with their own AI endpoint." lightbox="./images/centralized-ai-no-share.svg" border="false":::
-*Figure 3. Centralized AI resources approach. It shows two intelligent applications with their own AI endpoint.*
-
-### Decentralize AI endpoints for critical applications
-
-Use a decentralized model when isolation, security, and cost tracking are priorities. Decentralization allows teams to manage AI models aligned with their applications. It provides dedicated AI resources to the application where performance or criticality demands it. Gradual decentralization is key. Start with strong governance to manage risks and maintain visibility. As governance matures, teams can be given more autonomy over their AI endpoints.
-
-:::image type="content" source="./images/decentralized-ai.svg" alt-text="Diagram showing Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints." lightbox="./images/decentralized-ai.svg" border="false":::
-*Figure 4. Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints.*
+    :::image type="content" source="./images/decentralized-ai.svg" alt-text="Diagram showing Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints." lightbox="./images/decentralized-ai.svg" border="false":::
+    *Figure 4. Dedicated AI resources per application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints.*
 
 ## Estimate delivery timelines
 
-Based on your proof-of-concept, assign a delivery timeline to your AI opportunities. Microsoft AI SaaS solutions have the shortest timelines to see a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. Most efforts take weeks to months to have a production-ready AI application.
+Based on your proof-of-concept, assign a delivery timeline to your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships.  
+
+Microsoft AI SaaS solutions have the shortest timelines to see a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. Most efforts take weeks to months to have a production-ready AI application. 
 
 ## Next step
 
@@ -134,13 +121,11 @@ To adopt a Microsoft Copilot solution, use these links to find more information:
 
 - [Microsoft Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)
 - [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)
-
 - Role-based agents in Microsoft 365:
     - [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot)
     - [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction)
     - [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service)
     - [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance)
-
 - In-product Copilots:
     - [GitHub](https://azure.microsoft.com//products/github/copilot)
     - [Power Apps](https://www.microsoft.com/power-platform/products/power-apps)
@@ -148,7 +133,6 @@ To adopt a Microsoft Copilot solution, use these links to find more information:
     - [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai)
     - [Power Automate](https://www.microsoft.com/power-platform/products/power-automate)
     - [Azure](https://azure.microsoft.com/products/copilot/)
-
 Browser-based Copilots:
 - [Microsoft Copilot (free)](https://copilot.microsoft.com/)
 - [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro)
