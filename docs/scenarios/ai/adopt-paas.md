@@ -15,7 +15,7 @@ This article provides recommendations for building AI applications by using Azur
 
 This section provides high-level recommendations to guide you through choosing the appropriate generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
 
-The following diagram shows the basic components of a generative AI application that implements retrieval augmented generation.
+The following diagram shows the basic components of a generative AI application that implements Retrieval Augmented Generation (RAG).
 
 :::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
 
@@ -26,21 +26,21 @@ Most generative AI applications implement RAG. At a high-level, RAG applications
 1. A search and retrieval mechanism exposes data from several data sources in a way that ensures that the data can be consumed by AI apps. 
 1. A generative AI model endpoint creates a response based on the user query and grounding data. 
 
-For more information, see [Guide to designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). 
+For more information, see [Designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). 
 
 Here are the high-level choices you need to make when you create a generative AI application in Azure:
 
-- *Pick a generative AI platform.* To deploy and consume a generative AI model endpoint, you need a generative AI platform. Depending on your needs, you can use either [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) or Azure OpenAI Service as the default and use Azure OpenAI if you just need to access OpenAI models. Azure AI Studio provides a code-first development experience. You get access to a wide variety of generative AI models and built-in development tools, such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing. Azure OpenAI gives you access to OpenAI models and is a good starting point if you just want to use those models.
+- *Pick a generative AI platform.* To deploy and consume a generative AI model endpoint, you need a generative AI platform. Depending on your needs, you can use either [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) or Azure OpenAI Service. Azure AI Studio provides a code-first development experience. You get access to a wide variety of generative AI models and built-in development tools, such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing. Azure OpenAI gives you access to OpenAI models and is a good starting point if you just want to use those models.
 
 - *Pick an orchestrator.* Popular generative AI orchestrators include Microsoft [Semantic Kernel](/semantic-kernel/overview/), [Prompt flow](https://microsoft.github.io/promptflow/index.html), and [LangChain](https://python.langchain.com/v0.2/docs/integrations/platforms/microsoft/). Semantic Kernel easily integrates with Azure services. LangChain is likely to have easier extensibility outside of the Microsoft ecosystem.
 
-- *Pick a search and knowledge retrieval mechanism.* To ground generative AI models, you need to create an index or vector database to search and retrieve the most relevant grounding data. Use Azure AI Search to create traditional and vector indexes from various [data sources](/azure/search/search-indexer-overview#supported-data-sources), perform [data chunking](/azure/search/vector-search-integrated-vectorization), and use [multiple query types](/azure/search/search-query-overview#types-of-queries). Azure AI Search gives you the best results unless you have your data already in structured format in any of the other data store. If your data is in a database or datastore that supports vector databases and vector search, consider using the database functionality. For example, [Azure Cosmos DB](/azure/cosmos-db/vector-database), [Azure Database for PostgreSQL,](/azure/postgresql/flexible-server/how-to-use-pgvector) and [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview-vector-similarity).
+- *Pick a search and knowledge retrieval mechanism.* To ground generative AI models, you need to create an index or vector database to search and retrieve the most relevant grounding data. Use Azure AI Search to create traditional and vector indexes from various [data sources](/azure/search/search-indexer-overview#supported-data-sources), perform [data chunking](/azure/search/vector-search-integrated-vectorization), and implement [multiple query types](/azure/search/search-query-overview#types-of-queries). Azure AI Search provides the best results unless you have your data already in structured format in any of the other data stores. If your data is in a database or datastore that supports vector databases and vector search, consider using the database functionality. For example, [Azure Cosmos DB](/azure/cosmos-db/vector-database), [Azure Database for PostgreSQL,](/azure/postgresql/flexible-server/how-to-use-pgvector) and [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview-vector-similarity).
 
-- *Choose a data source for grounding data.* For unstructured data like images, audio, videos, and large datasets, use Azure Blob Storage for hosting grounding data. Alternatively, you can use databases supported by [Azure AI Search](/azure/search/search-indexer-overview#supported-data-sources) or [vector databases](/dotnet/ai/conceptual/vector-databases#available-vector-database-solutions).
+- *Choose a data source for grounding data.* For unstructured data like images, audio, video, and large datasets, use Azure Blob Storage to host grounding data. Alternatively, you can use databases supported by [Azure AI Search](/azure/search/search-indexer-overview#supported-data-sources) or [vector databases](/dotnet/ai/conceptual/vector-databases#available-vector-database-solutions).
 
 - *Pick an application platform.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right application platform for your application.
 
-- *Choose the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large datasets. Consider CPUs for data preprocessing tasks or training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
+- *Choose the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large datasets. Consider CPUs for data preprocessing tasks or for training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
 - *Get implementation guidance.* Microsoft has detailed implementation guidance and deployable assets for creating enhanced-security generative AI applications. Use this guidance as a baseline and adapt the baseline to your needs. (See the following table.)
 
@@ -66,7 +66,7 @@ The following diagram shows the basic components of a nongenerative AI applicati
 Within the Azure ecosystem, analytical AI applications need the following components: 
 
 1. An application ingests incoming data. 
-1. An optional data processing mechanism extracts or manipulates the incoming data. This mechanism makes the data fit the expectations of the model format or extracts relevant data to send to the AI model endpoint. 
+1. An optional data processing mechanism extracts or manipulates the incoming data. This mechanism ensures that the data fits the expectations of the model format or extracts relevant data to send to the AI model endpoint. 
 1. An analytical AI model endpoint integrates with the application and analyzes the incoming data. 
 1. Training data is used to train machine learning models in Azure Machine Learning. Optionally, you can use fine-tuning data to customize prebuilt AI models in Azure AI services. Azure has various data sources to choose from for these tasks. 
 
