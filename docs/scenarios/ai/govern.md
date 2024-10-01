@@ -1,5 +1,5 @@
 ---
-title: Govern AI – Recommendations to govern AI
+title: Govern AI – Recommendations for governing AI
 description: This guidance provides recommendations for governing AI, covering models, costs, security, operations, compliance, and data management.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Govern AI – Recommendations to govern AI
+# Govern AI – Recommendations for governing AI
 
 This article offers recommendations for developing your AI governance framework. It assumes you're already familiar with the governance processes defined in [CAF Govern](/azure/cloud-adoption-framework/govern/) and doesn't repeat the common cloud governance practices found there. Additionally, it presumes you established governance policies at the management group level for your AI workload types, such as internet-facing ("online") and internal ("corporate") workloads, which was covered in [AI Ready](ready.md#prepare-ai-resource-organization).
 
