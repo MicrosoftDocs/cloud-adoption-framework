@@ -1,6 +1,6 @@
 ---
 title: Adopt AI on Azure infrastructure (IaaS)
-description: Learn how to build AI applications using Azure PaaS services, including generative and nongenerative AI, with detailed recommendations and architecture guides.
+description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024
@@ -11,23 +11,17 @@ ms.topic: conceptual
 
 This article provides recommendations for bringing your own AI models to run on Azure infrastructure. The preferred approach is to start with Azure AI platform solutions (PaaS). The focus is on building AI applications in Azure.
 
-## Select AI networking
+## Understand AI networking
 
 This guidance provides recommendations for selecting the right networking features for AI workloads on Azure infrastructure.
+
+- *Use high-performance networking.* A minimum bandwidth of 10-20 Gbps is often required for distributed AI workloads involving multiple nodes and large datasets. Use virtual machines and virtual machines images that support high performance technologies, such as interconnects, Infiniband, and GPUDirect RDMA.
 
 - *Deploy dedicated virtual networks for each application environment.* Size the networks appropriately and deploy them within the relevant subscription to optimize performance and resource allocation.
 
 - *Deploy VMs to their appropriate subscriptions.* Use different SKUs and availability configurations as needed to meet environment-specific requirements.
 
-- *Use high-performance networking.* A minimum bandwidth of 10-20 Gbps is often required for distributed AI workloads involving multiple nodes and large datasets. Use virtual machines and virtual machines images that support high performance technologies, such as interconnects, Infiniband, and GPUDirect RDMA.
-
-    - *NVLink & NVSwitch (Intra-node GPU interconnect)*: For AI workloads using multiple GPUs within a single node, NVLink and NVSwitch provide high-speed, low-latency communication between GPUs. This technology ensures efficient data sharing inside a node, reducing the need for external network bandwidth. It is ideal for workloads that demand fast intra-node data transfers, ensuring smooth processing even when external bandwidth is limited.
-
-    - *InfiniBand (High-performance network interconnect)*: InfiniBand is essential for distributed AI workloads where nodes need to communicate frequently and transfer large datasets. For seamless performance, especially in multi-node AI training, high bandwidth is critical. A typical minimum recommendation for smooth data transfers in distributed AI tasks is 10-20 Gbps, but higher bandwidth (such as 100 Gbps or more) is ideal for large-scale, high-performance applications. In environments with constrained bandwidth, strategies like data compression and local computation can help reduce network demands and avoid bottlenecks.
-
-    - *GPUDirect RDMA (Direct GPU-to-GPU data transfer across nodes)*: GPUDirect RDMA enables direct GPU-to-GPU data transfers across nodes, bypassing the CPU, which significantly reduces latency and overhead in distributed AI models. However, it requires high-bandwidth, low-latency connections to be fully effective. In lower-bandwidth environments, the benefits might be limited, so it's important to ensure sufficient bandwidth is available for large-scale data transfers, or focus on local GPU processing to reduce inter-node communication demands.
-
-## Select AI compute
+## Understand AI compute
 
 Compute refers to the hardware, images used to train and inference AI models. Compute resources directly affect the efficiency, speed, and cost-effectiveness of your AI operations.
 
@@ -38,7 +32,7 @@ Compute refers to the hardware, images used to train and inference AI models. Co
 | Training AI models   | [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | [Memory-optimized](https://azure.microsoft.com/services/virtual-machines/memory-optimized/) (CPU) |
 | Inferencing AI models| [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (NC or ND family)  | GPU (NC or ND family) | [Compute-optimized](https://azure.microsoft.com/services/virtual-machines/compute-optimized/) (CPU) |
 
-### Pick a virtual machine image
+### Pick the right virtual machine image
 
 Choose a virtual machine image (Linux and Windows distributions) that expedites your ability to build AI workloads. Use images that have preinstalled tools for AI workloads.
 
@@ -89,7 +83,7 @@ Consider using containers for your AI workloads. Containers provide a consistent
 
 - *Use toolkits.* The NVIDIA Container Toolkit is commonly used to enable GPU resources within containers. It’s crucial to ensure that all necessary drivers, including those for CUDA and the GPU, are installed. You can then use your preferred container runtime and engine to execute your AI workloads.
 
-## Configure AI data storage
+## Understand AI data storage
 
 Implement a storage solution that combines a high-performance file system for active workloads and scalable blob storage for long-term data management. This ensures data integrity, efficiency, and reproducibility in AI workflows.
 
@@ -113,7 +107,7 @@ Implement a storage solution that combines a high-performance file system for ac
 
 ## Secure AI infrastructure
 
-The following is a starting point for Azure infrastructure and any PaaS services in the environment. For more comprehensive information on securing AI, see the Secure AI article.
+The following is a starting point for Azure infrastructure and any PaaS services in the AI application. For more comprehensive information on securing AI, see the [Secure AI](./secure.md).
 
 - *Apply secure configurations to Azure services.* Follow the [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include:
 
