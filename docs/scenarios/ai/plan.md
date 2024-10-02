@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI Plan - Recommendations for developing an AI adoption plan
 
-This article provides recommendations for planning AI adoption. Strategy provides an end goal to your AI adoption. During this stage, you get more tactical about preparing your organization to adopt AI. During planning, you need to ensure that you have the right skills and planning for AI deployment. Deployment requires consideration of responsible AI and your approach to deploying and consuming AI endpoints across your applications.  
+This article provides recommendations for planning AI adoption. Strategy provides an end goal to your AI adoption. During this stage, you get more tactical about preparing your organization to adopt AI. During planning, you need to ensure that you have the right skills and planning for AI deployment. When you deploy AI, you need to consider responsible AI practices and your approach to deploying and consuming AI endpoints across your applications.  
 
 ## Evaluate your AI maturity level
 
@@ -24,9 +24,9 @@ As with any technology, there's a learning curve to adopting AI. Evaluating your
 
 ## Acquire AI skills
 
-Assess your organization's current AI skill set to identify gaps and determine whether to develop internally or hire externally. A combination of approaches is often needed, balancing in-house development with outsourcing, based on broader organizational strategy. For strategic projects, focus on building in-house expertise for long-term success. In areas that require quick value, external partnerships can fill immediate gaps while internal capabilities are developed. This combination ensures efficiency in the short term and strategic skill growth for long-term competitiveness.
+Assess your organization's current AI skill set to identify gaps and determine whether to develop internally or hire external talent. A combination of approaches is often needed, balancing in-house development with outsourcing, based on broader organizational strategy. For strategic projects, focus on building in-house expertise for long-term success. In areas that require quick value, external partnerships can fill immediate gaps while internal capabilities are developed. This combination ensures efficiency in the short term and strategic skill growth for long-term competitiveness.
 
-- *Learn AI skills.* The [Microsoft Learn](/) platform provides free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certification goals, such as earning certifications related to Azure AI: [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
+- *Learn AI skills.* The [Microsoft Learn](/) platform provides free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certification goals, such as earning certifications related to Azure AI. These certifications include [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
 - *Recruit AI professionals.* For expertise that you can't develop internally within your time frame, recruit professionals. These professionals should have experience in AI model development, generative AI operations, or AI ethics.
 
@@ -41,7 +41,7 @@ Assess your organization's current AI skill set to identify gaps and determine w
 
 This section provides a quick way to help you understand and access what you need to start using AI solutions.
 
-- *Access Microsoft copilots.* Microsoft SaaS copilots require a license or an add-on subscription, except for [the free version](https://copilot.microsoft.com/).
+- *Access Microsoft copilots.* Microsoft software as a service (SaaS) copilots require a license or an add-on subscription, except for [the free version](https://copilot.microsoft.com/).
 
     - [Copilot for Microsoft 365](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
     - [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license.
@@ -72,7 +72,7 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. This step 
 
 When you set delivery timelines, it helps to understand the requirements of responsible AI. To plan for responsible AI, follow these recommendations:
 
-- *Use responsible-AI planning tools.* If you're new to AI, rely on the planning tools available to align development with responsible AI principles. Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
+- *Use responsible-AI planning tools.* If you're new to AI, rely on the available planning tools to align development with responsible AI principles. Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
 - *Plan for AI governance.* Factor in the effort for assessing AI risks, developing AI governance policies, and setting the controls needed to eliminate all instances of unauthorized AI use. Set up processes to manage data access, data usage, and compliance with regulations. These processes are unique to your organization, data, and AI opportunities. Create clear data ownership policies and ensure that data lineage is traceable. For more information, see [Govern AI](govern.md).
 
@@ -82,7 +82,7 @@ When you set delivery timelines, it helps to understand the requirements of resp
 
 ## Plan for AI centralization and endpoint sharing
 
-When AI is centralized, there's a single team that manages AI resources and endpoint deployments. The centralization of AI models is primarily a governance issue. Centralization allows you to use a single process to deploy, govern, and manage AI endpoints for all AI workloads rather than allowing application teams to control these resources individually. Performance and cost allocation for chargeback and showback are other considerations that centralization affects. If you have an AI Center of Excellence, this group determines whose responsibility it is to manage centralized AI resources.
+When AI is centralized, there's a single team that manages AI resources and endpoint deployments. The centralization of AI models is primarily a governance issue. Centralization allows you to use a single process to deploy, govern, and manage AI endpoints for all AI workloads rather than allowing application teams to control these resources individually. Centralization also affects performance and cost allocation for chargeback and showback. If you have an AI Center of Excellence, this group determines whose responsibility it is to manage centralized AI resources.
 
 - *Start with a centralized model.* Centralizing AI deployments under one team gives you more control over governance. Begin with a centralized approach. As your governance processes mature, you can move to a more decentralized model if you need to. If quota becomes a limitation, you can deploy the AI model in another region or request an increased quota.
 
@@ -109,11 +109,11 @@ The following diagram shows two intelligent applications, each with its own AI e
 
 Based on your PoC, assign a delivery timeline for your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships.  
 
-Microsoft AI SaaS solutions provide the shortest timelines for seeing a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. In most cases, it takes between weeks and months before you have a production-ready AI application. 
+Microsoft AI SaaS solutions provide the shortest timelines for seeing a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. In most cases, it takes weeks or months before you have a production-ready AI application. 
 
 ## Next step
 
-The rest of this guidance focuses on building AI workloads in Azure by using PaaS and IaaS solutions. To be successful in Azure, first establish your AI foundation.
+The rest of this guidance focuses on building AI workloads in Azure by using PaaS and IaaS solutions. To be successful in Azure, you must first establish your AI foundation.
 
 > [!div class="nextstepaction"]
 > [AI Ready](ready.md)
