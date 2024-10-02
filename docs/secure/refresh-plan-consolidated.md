@@ -66,7 +66,7 @@ Plan for incident preparation by evaluating vulnerability management solutions, 
 
 Building a robust incident response plan is critical for cloud security. In the Plan phase, you should begin drafting your incident response plan by identifying roles that will be involved and key phases like investigation, mitigation, and communications that will be fleshed out as you build out your cloud estate.
 
-## Adopt confidentiality
+## Plan for confidentiality
 
 - **Data Loss Protection**
  
@@ -80,7 +80,7 @@ Specific DLP policies and procedures must be well planned to ensure organization
 
     - *Access controls:* Implement strict access controls to ensure that only authorized users can access sensitive data. Use multi-factor authentication (MFA) and role-based access control (RBAC), as well as the principle of Zero Trust, Verify Explicitly, always authenticating and authorizing based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies.
  
-## Adopt integrity
+## Plan for integrity
 
 In addition to the measures recommended for confidentiality, consider implementing specific data and system integrity measures.
 
@@ -92,7 +92,7 @@ Include plans to monitor data and systems for unauthorized changes and policies 
 
 Include considerations for integrity in your incident response plan. These considerations should address unauthorized changes to data or systems and remediating invalid or corrupted data that is discovered through your monitoring and data hygiene practices.
 
-## Adopt availability
+## Plan for availability
 
 Your cloud adoption plan should address availability by adopting standards for architecture design and operations. These standards will guide the implementation and further phases, providing a blueprint for how availability requirements will be achieved. Consider the following recommendations as you build out your cloud adoption plan:
 
