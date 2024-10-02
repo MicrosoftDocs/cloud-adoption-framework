@@ -9,10 +9,10 @@ items:
     href: ready.md
   - name: Adopt
     items:
-      - name: Adopt AI platforms (PaaS)
+      - name: Build with AI platforms (PaaS)
         href: adopt-paas.md
-      - name: Adopt AI infrastructure (IaaS)
-        href: adopt-infrastructure.md
+      - name: AI on Azure infrastructure (IaaS)
+        href: adopt-iaas.md
   - name: Secure
     href: secure.md
   - name: Govern
