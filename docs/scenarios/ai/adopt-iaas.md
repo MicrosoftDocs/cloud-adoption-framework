@@ -170,14 +170,14 @@ The following guidance provides recommendations for implementing and managing bu
 
 - *Create snapshots.* You can use the capabilities of your scheduler to take snapshots. For example, CycleCloud can take point-in-time snapshots of the underlying application datastore as recovery points.
 
-## AI on infrastructure implementation options
+## Implementation options
 
-- *AI on infrastructure landing zone accelerator:* If you use Azure landing zones, deploy the [Cycle Cloud Workspace for SLURM](/azure/cyclecloud/qs-deploy-ccws) to your application landing zone.
+If you use Azure landing zones, deploy the [Cycle Cloud Workspace for SLURM](/azure/cyclecloud/qs-deploy-ccws) to your application landing zone (*see figure 1*).
 
-:::image type="content" source="./images/ai-infra-in-alz.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
-*Figure 1. Basic components of a generative AI application with RAG.*
+:::image type="content" source="./images/ai-infra-alz.svg" alt-text="Diagram showing AI application on Azure infrastructure in Azure landing zone." lightbox="./images/ai-infra-alz.svg" border="false":::
+*Figure 1. AI application on Azure infrastructure in Azure landing zone.*
 
-- *Custom AI application.* If you have an existing Azure environment or don’t want to start with Azure landing zone, use the guidance discussed in this article to create an AI application.
+If you don't want to use Azure landing zone, follow the guidance discussed in this article to create an AI application.
 
 ## Next step
 
