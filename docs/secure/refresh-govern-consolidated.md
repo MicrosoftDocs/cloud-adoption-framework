@@ -34,7 +34,7 @@ The key tenets of success for governance are:
 
 - **Continuous improvement of asset security posture:** Governance teams should focus on improving standards, and enforcement of those standards, to keep up with the cloud and attackers. Information technology (IT) organizations must react quickly to new threats and adapt accordingly. Attackers are continuously evolving their techniques, and defenses are continuously improving and might need to be enabled. You can't always get all the security you need into the initial configuration.
 
-- **Policy-driven governance:** This governance provides consistent execution by fixing something once in policy that's automatically applied at scale across resources. This process limits any wasted time and effort on repeated manual tasks. It's often implemented using Azure Policy or third-party policy automation frameworks.
+- **Policy-driven governance:** This governance provides consistent execution by fixing something once in policy that's automatically applied at scale across resources. This process limits any wasted time and effort on repeated manual tasks. It's often implemented using Azure Policy or third-party policy automation frameworks. 
 
 To maintain agility, best practices guidance is often iterative. It digests small pieces of information from multiple sources to create the whole picture and continuously make small adjustments.
 
@@ -50,7 +50,9 @@ Security governance is critical for maintaining your preparedness. Implementing 
 
 ### Incident preparedness governance
 
-- **Automate governance:** Embrace tooling to automate governance to the extent practical. Tooling can help you manage policies for infrastructure deployments and hardening measures, data protection, and identity and access (IAM) standards. Automating the governance of these security measures will help ensure that your all resources in your environments are compliant with your own security standards and any compliance frameworks that are required for your business.
+- **Automate governance:** Embrace tooling to automate governance to the extent practical. Tooling can help you manage policies for infrastructure deployments and hardening measures, data protection, and identity and access (IAM) standards. Automating the governance of these security measures will help ensure that your all resources in your environments are compliant with your own security standards and any compliance frameworks that are required for your business. Review the Govern methodology's [guidance](../govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically) for additional recommendations.
+
+ - [Automate 
 
 - **Adhere to Microsoft's security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines help you ensure that you're existing deployments are secured properly and new deployments are configured properly at the outset, while reducing the risk of misconfigurations.
 
