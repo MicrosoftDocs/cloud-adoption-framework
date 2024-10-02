@@ -77,45 +77,45 @@ This guidance outlines recommendations for controlling AI workload operations.
 
 - *Review and manage AI models*. Develop a policy for managing model versioning, especially as models are upgraded or retired. You need to maintain compatibility with existing systems and ensure a smooth transition between model versions.
 
-- *Define a business continuity and disaster recovery plan.* Establish a policy for business continuity and disaster recovery for your AI endpoints and AI data. Configure baseline disaster recovery for resources hosting your AI model endpoints, such as virtual machines ([Linux](/azure/virtual-machines/linux/tutorial-disaster-recovery), [Windows](/azure/virtual-machines/windows/tutorial-disaster-recovery)), [Azure AI Studio](/azure/ai-studio/how-to/disaster-recovery), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning?view=azureml-api-2), [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery), or Azure AI services. All Azure data stores, such as [Azure Blob storage](/azure/storage/common/storage-disaster-recovery-guidance), [Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore), and [Azure SQL Database](/azure/azure-sql/accelerated-database-recovery), have reliability and disaster recovery guidance that you should follow.
+- *Define a business continuity and disaster recovery plan.* Establish a policy for business continuity and disaster recovery for your AI endpoints and AI data. Configure baseline disaster recovery for resources that host your AI model endpoints, like [Linux](/azure/virtual-machines/linux/tutorial-disaster-recovery) and [Windows](/azure/virtual-machines/windows/tutorial-disaster-recovery) virtual machines, [Azure AI Studio](/azure/ai-studio/how-to/disaster-recovery), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning?view=azureml-api-2), [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery), or Azure AI services. All Azure data stores, such as [Azure Blob Storage](/azure/storage/common/storage-disaster-recovery-guidance), [Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore), and [Azure SQL Database](/azure/azure-sql/accelerated-database-recovery), provide reliability and disaster recovery guidance that you should follow.
 
-- *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For example, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), [Azure AI studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), [Azure Virtual Machines](/azure/azure-monitor/vm/monitor-virtual-machine-alerts), and guidance on individual Azure AI services.
+- *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For example, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), [Azure AI Studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), [Azure Virtual Machines](/azure/azure-monitor/vm/monitor-virtual-machine-alerts), and guidance on individual Azure AI services.
 
 ## Govern AI regulatory compliance
 
-This guidance outlines recommendations to control AI workload compliance with current and future AI regulations.
+This guidance outlines recommendations for controlling AI workload compliance with current and future AI regulations.
 
-- *Automate compliance.* Use [Microsoft Purview Compliance Manager](/microsoft-365/compliance/compliance-manager-overview) to assess and manage compliance across cloud environments. Use the applicable [regulatory compliance initiatives](/azure/governance/policy/samples/#regulatory-compliance) in Azure Policy for your industry. Apply other policies based on the AI services you’re using, such as [Azure AI Studio](/azure/ai-services/security-controls-policy), [Azure Machine Learning](/azure/machine-learning/policy-reference), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference).
+- *Automate compliance.* Use [Microsoft Purview Compliance Manager](/microsoft-365/compliance/compliance-manager-overview) to assess and manage compliance across cloud environments. Use the applicable [regulatory compliance initiatives](/azure/governance/policy/samples/#regulatory-compliance) in Azure Policy for your industry. Apply other policies based on the AI services that you're using, such as [Azure AI Studio](/azure/ai-services/security-controls-policy), [Azure Machine Learning](/azure/machine-learning/policy-reference), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference).
 
-- *Develop industry-specific compliance checklists.* Regulations and standards differ by industry and location. You need to know your regulatory requirements and compile checklists reflecting the regulatory demands relevant to your industry. Use standards, such as ISO/IEC 23053:2022 ("Framework for Artificial Intelligence Systems Using Machine Learning"), to audit your policies applied to AI workloads.
+- *Develop industry-specific compliance checklists.* Regulations and standards differ by industry and location. You need to know your regulatory requirements and compile checklists that reflect the regulatory demands that are relevant to your industry. Use standards, such as ISO/IEC 23053:2022 (Framework for Artificial Intelligence Systems Using Machine Learning), to audit policies applied to your AI workloads.
 
 ## Govern AI data
 
-This guidance outlines recommendations to control AI data fed into AI models.
+This guidance outlines recommendations for controlling AI data that's fed into AI models.
 
 - *Establish a process for cataloging data.* Use a tool like [Microsoft Purview](/purview/what-is-data-catalog) to implement a unified data catalog and classification system across your organization. Integrate these policies into your CI/CD pipelines for AI development.
 
-- *Maintain data security boundary.* Cataloging data helps ensure you don’t feed sensitive data into public facing AI endpoints. When you create indexes from certain data sources, the indexing process can remove the current security boundaries around data. Ensure any data ingested into AI models is classified and vetted according to centralized standards.
+- *Maintain data security boundary.* Cataloging data helps ensure that you don't feed sensitive data into public-facing AI endpoints. When you create indexes from certain data sources, the indexing process can remove the current security boundaries around data. Ensure that any data ingested into AI models is classified and vetted according to centralized standards.
 
-- *Prevent copyright infringement.* Use a content filtering system such as the [Protected material detection in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/protected-material) to filter out copyrighted material. If you're grounding, training, or fine-tuning an AI model, ensure you use legally obtained and properly licensed data while implementing safeguards to prevent the model from infringing on copyrights. Regularly reviewing outputs for intellectual property compliance.
+- *Prevent copyright infringement.* Use a content filtering system like [Protected material detection in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/protected-material) to filter out copyrighted material. If you're grounding, training, or fine-tuning an AI model, ensure that you use legally obtained and properly licensed data and implement safeguards to prevent the model from infringing on copyrights. Regularly review outputs for intellectual property compliance.
 
-- *Implement version control for grounding data.* Establish a version control process for grounding data, for example, in retrieval-augmented generation (RAG). Versioning ensures any changes to the underlying data or its structure are tracked and can be reverted if necessary, maintaining consistency across deployments.
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Manage AI](manage.md)
+- *Implement version control for grounding data.* Establish a version control process for grounding data, for example, in RAG. Versioning ensures that any changes to the underlying data or its structure are tracked and can be reverted if necessary, which maintains consistency across deployments.
 
 ## Example AI risk mitigations
 
-The following table outlines some common AI risks, a mitigation strategy, and a sample policy for each. The table isn’t a complete set of risks.
+The following table lists some common AI risks and provides a mitigation strategy and a sample policy for each one. The table doesn't list a complete set of risks.
 
 | Risk ID | AI risk  | Mitigation | Policy|
 |---|---|---|---|
-| R001    | Noncompliance with data protection laws  | Use Microsoft Purview Compliance Manager to evaluate data compliance.                                  | All AI development and deployment must comply with data protection laws by implementing the Security Development Lifecycle.          |
-| R005    | Lack of transparency in AI decision-making | Apply a standardized framework and language to enhance transparency in AI processes and decision-making.                 | AI models must maintain transparency by thorough documentation and adopting the NIST AI Risk Management Framework.              |
-| R006    | Inaccurate predictions           | Use Azure API Management to track AI model metrics to ensure accuracy and reliability.                          | AI models must ensure accurate predictions through continuous performance monitoring and enabling human feedback.               |
-| R007    | Adversarial attack             | Use PyRIT to test AI systems for vulnerabilities and strengthen defenses.                                | AI systems must be secured against adversarial attacks by implementing the Security Development Lifecycle and conducting AI Red Team testing. |
-| R008    | Insider threats              | Use Entra ID to enforce strict access controls based on roles and group memberships to limit insider access to sensitive data.      | Insider threats must be mitigated by enforcing strict identity and access management and ensuring continuous monitoring.           |
-| R009    | Unexpected costs              | Use Azure Cost Management to track CPU, GPU, memory, and storage usage to ensure efficient resource utilization and prevent cost spikes. | Manage unexpected costs by monitoring and optimizing resource usage and implementing automated detection of cost overruns.      |
-| R010    | Underutilization of AI resources      | Monitor AI service metrics such as request rates and response times to optimize usage.                          | AI resource utilization must be optimized by monitoring performance metrics and using automation for scalability.               |
+| R001    | Noncompliance with data protection laws  | Use Microsoft Purview Compliance Manager to evaluate data compliance.                                  |The Security Development Lifecycle must be implemented to ensure that all AI development and deployment complies with data protection laws.          |
+| R005    | Lack of transparency in AI decision making | Apply a standardized framework and language to improve transparency in AI processes and decision making.                 | The NIST AI Risk Management Framework must be adopted and all AI models must be thoroughly documented to maintain transparency of all AI models.              |
+| R006    | Inaccurate predictions           | Use Azure API Management to track AI model metrics to ensure accuracy and reliability.                          |Continuous performance monitoring and human feedback must be used to ensure that AI model predictions are accurate.               |
+| R007    | Adversarial attack             | Use PyRIT to test AI systems for vulnerabilities and strengthen defenses.                                |The Security Development Lifecycle and AI Red Team testing must be used to secure AI systems against adversarial attacks. |
+| R008    | Insider threats              | Use Microsoft Entra ID to enforce strict access controls that are based on roles and group memberships to limit insider access to sensitive data.      | Strict identity and access management and continuous monitoring must be used to mitigate insider threats.           |
+| R009    | Unexpected costs              | Use Azure Cost Management to track CPU, GPU, memory, and storage usage to ensure efficient resource utilization and prevent cost spikes. |Monitoring and optimization of resource usage and automated detection of cost overruns must be used to manage unexpected costs.      |
+| R010    | Underutilization of AI resources      | Monitor AI service metrics, like request rates and response times, to optimize usage.                          | Performance metrics and automated scalability must be used to optimize AI resource utilization.               |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Manage AI](manage.md)
