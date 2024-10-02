@@ -13,7 +13,7 @@ This article describes how to define an AI adoption strategy. As with any strate
 
 ## Identify AI use cases
 
-Compile a comprehensive list of possible AI use cases. Don't limit ideas to current capabilities. Consider future possibilities as well. Later, when you choose your AI technology, you evaluate your technical capabilities, or you can acquire capablilities to implement each use case. For now, focus on compiling use cases. For an example, see [Example AI use cases](strategy.md#example-ai-use-cases). 
+Compile a comprehensive list of possible AI use cases. Don't limit ideas to current capabilities. Consider future possibilities as well. Later, when you choose your AI technology, you evaluate your technical capabilities, or you can acquire capabilities to implement each use case. For now, focus on compiling use cases. For an example, see [Example AI use cases](strategy.md#example-ai-use-cases). 
 
 - *Understand AI.* In general, AI accommodates two strategic goals: enhancing individual efficiency and improving business processes. Generative AI fosters individual productivity and provides a more adaptive customer experience across many business areas. Non-generative AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It's best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data. 
 
