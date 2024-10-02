@@ -18,7 +18,7 @@ With Azure landing zones, you can start with a small implementation and expand o
 
 When preparing any environment for sustained cloud adoption, we use the [Azure landing zones](../../ready/landing-zone/index.md) conceptual architecture to represent what a target end state should look like in Azure, as pictured below.
 
-[![Diagram of a conceptual architecture for an Azure landing zone](../../_images/ready/alz-arch-cust-inline.png)](../../_images/ready/alz-arch-cust-expanded.png#lightbox)
+[![Diagram of a conceptual architecture for an Azure landing zone](../../_images/ready/azure-landing-zone-architecture-diagram-hub-spoke.svg)](../../_images/ready/azure-landing-zone-architecture-diagram-hub-spoke.svg#lightbox)
 
 When developing a long-term vision for landing zones, consider the design above. Working within this scenario, we focus on the most appropriate starting point to meet your strategic and planning requirements for SAP on Azure. This article is about the starting point, not necessarily all of the details required to reach the longer term target.
 
