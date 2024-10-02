@@ -122,7 +122,7 @@ After establishing your landing zone or other platform design with secure networ
 
 - **IaC deployment security:** Use [deployment stacks](/azure/azure-resource-manager/bicep/deployment-stacks) to manage Azure resources as a single, cohesive unit. Prevent users from performing unauthorized modifications using [deny settings](/azure/azure-resource-manager/bicep/deployment-stacks?tabs=azure-powershell#protect-managed-resources).
 
-## Adopt the principal of confidentiality
+## Adopt the principle of confidentiality
 
 With the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality already in place, the next step is to focus on adoption and change management. This involves ensuring that encryption and secure access controls are effectively implemented and institutionalized across the enterprise cloud environment. In the adoption phase, DLP measures are implemented to protect sensitive data in transit and at rest. This involves deploying encryption solutions, configuring access controls, and ensuring that all employees are trained in the importance of data confidentiality and how to adhere to DLP policies.
 
@@ -151,7 +151,7 @@ Developing and adopting associated standards is essential for ensuring the consi
     - [Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) uses advanced machine learning to identify sign-in risks and unusual user behavior to block, challenge, limit, or allow access. It helps prevent identity compromise, protects against credential theft and provides insights into your identity security posture.
 
     - [Microsoft Defender for Indentity](/defender-for-identity/what-is) is a cloud-based security identity threat detection (ITDR) solution that helps secure your identity monitoring across your organization. It can help you better identify, detect, and investigate advanced threats directed at your organization through automated threat detection and response mechanisms.
-    - 
+  
 - [**Azure Confidential Computing:**](/azure/confidential-computing/overview) This service protects data while it is being processed. It uses hardware-based trusted execution environments (TEEs) to isolate and protect data in use, ensuring that even cloud administrators cannot access the data.
 
 ## Adopt the principle of integrity

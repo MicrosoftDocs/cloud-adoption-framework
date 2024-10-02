@@ -11,7 +11,7 @@ ms.custom: internal, UpdateFrequency2
 
 ## Introduction
 
-TThis article describes security roles involved in cloud security and the functions they perform related to cloud infrastructure and platforms. These roles ensure that security is part of every stage of the cloud lifecycle from development to operations and continuous improvement.
+This article describes security roles involved in cloud security and the functions they perform related to cloud infrastructure and platforms. These roles ensure that security is part of every stage of the cloud lifecycle from development to operations and continuous improvement.
 
 >[!NOTE]
 >The Cloud Adoption Framework (CAF) focuses on cloud infrastructure and platforms that support multiple workloads. For security guidance on for individual workloads, see the [security guidance](/azure/well-architected/security) in the Azure Well-Architected Framework.  
@@ -51,7 +51,6 @@ The roles who perform security tasks include:
 - **Cloud service provider**
 
 - **Infrastructure/Platform Teams (architecture, engineering, and operations)**
-- 
 - **Security architecture, engineering, posture management teams**
 - 
     - **Security Architects and Engineers (Data security, Identity and access management (IAM), Network security, Servers and Container security, Application security and DevSecOps)**
