@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Adopt AI platforms (PaaS) – Recommendations for building AI apps with Azure platforms
 
-This article provides recommendations for building AI applications by using Azure platform as a service (PaaS). The goal is to define the level of effort and help that you'll need to be successful in AI application development with Azure PaaS services like Azure AI Studio, Azure AI services, and Azure Machine Learning. The article outlines the components you need to build generative and nongenerative AI applications. It also provides links to examples of architectures.
+This article provides recommendations for building AI applications by using Azure platform as a service (PaaS). The goal is to define the level of effort and help that you'll need to be successful in AI application development with Azure PaaS services like Azure AI Studio, Azure AI services, and Azure Machine Learning. The article outlines the components you need to build generative and nongenerative AI applications. It also provides links to example architectures.
 
 ## Adopt generative AI
 
-This section provides high-level recommendations to guide you through choosing the appropriate generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
+This section provides high-level recommendations to help you choose the appropriate generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
 
 The following diagram shows the basic components of a generative AI application that implements Retrieval Augmented Generation (RAG).
 
@@ -56,7 +56,7 @@ The following table provides links to implementation guidance for building gener
 
 ## Adopt nongenerative AI
 
-Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to guide you through choosing the appropriate nongenerative AI platform, data sources, and application platform.
+Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to help you choose the appropriate nongenerative AI platform, data sources, and application platform.
 
 The following diagram shows the basic components of a nongenerative AI application.
 
