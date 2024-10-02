@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Adopt AI on Azure infrastructure (IaaS) - Recommendations to build AI applications with Azure infrastructure services (IaaS)
 
-This article provides recommendations for bringing your own AI models to run on Azure infrastructure. The preferred approach is to start with Azure AI platform solutions (PaaS).
+This article provides recommendations for bringing your own AI models to run on Azure infrastructure. The preferred approach is to start with Azure AI platform solutions (PaaS). The focus is on building AI applications in Azure.
 
 ## Select AI networking
 
