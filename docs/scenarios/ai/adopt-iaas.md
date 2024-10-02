@@ -1,4 +1,13 @@
-# Adopt Azure infrastructure (IaaS) - Recommendations to build AI applications with Azure infrastructure services (IaaS)
+---
+title: Adopt AI on Azure infrastructure (IaaS)
+description: Learn how to build AI applications using Azure PaaS services, including generative and nongenerative AI, with detailed recommendations and architecture guides.
+author: stephen-sumner
+ms.author: rajanaki
+ms.date: 11/01/2024
+ms.topic: conceptual
+---
+
+# Adopt AI on Azure infrastructure (IaaS) - Recommendations to build AI applications with Azure infrastructure services (IaaS)
 
 This article provides recommendations for bringing your own AI models to run on Azure infrastructure. The preferred approach is to start with Azure AI platform solutions (PaaS).
 
@@ -10,15 +19,13 @@ This guidance provides recommendations for selecting the right networking featur
 
 - *Deploy VMs to their appropriate subscriptions.* Use different SKUs and availability configurations as needed to meet environment-specific requirements.
 
-- *Minimize the physical distance between virtual machines.* Deploy virtual machines for AI to a single region or availability zone to reduce network latency. As the number of Azure virtual machines increases, use [proximity placement groups](/azure/virtual-machines/co-location) to ensure Azure compute resources remain physically close to each other.
-
-- *Use high-performance networking.* A minimum bandwidth of 10-20 Gbps is often required for distributed AI workloads involving multiple nodes and large datasets. Use virtual machines and virtual machines images that support high performance technologies, such as interconnects, Infiniband, and GPUDirect RDMA. For more information, see [Pick the right virtual machines](bookmark://_Pick_the_right).
+- *Use high-performance networking.* A minimum bandwidth of 10-20 Gbps is often required for distributed AI workloads involving multiple nodes and large datasets. Use virtual machines and virtual machines images that support high performance technologies, such as interconnects, Infiniband, and GPUDirect RDMA.
 
     - *NVLink & NVSwitch (Intra-node GPU interconnect)*: For AI workloads using multiple GPUs within a single node, NVLink and NVSwitch provide high-speed, low-latency communication between GPUs. This technology ensures efficient data sharing inside a node, reducing the need for external network bandwidth. It is ideal for workloads that demand fast intra-node data transfers, ensuring smooth processing even when external bandwidth is limited.
 
     - *InfiniBand (High-performance network interconnect)*: InfiniBand is essential for distributed AI workloads where nodes need to communicate frequently and transfer large datasets. For seamless performance, especially in multi-node AI training, high bandwidth is critical. A typical minimum recommendation for smooth data transfers in distributed AI tasks is 10-20 Gbps, but higher bandwidth (such as 100 Gbps or more) is ideal for large-scale, high-performance applications. In environments with constrained bandwidth, strategies like data compression and local computation can help reduce network demands and avoid bottlenecks.
 
-    - *GPUDirect RDMA (Direct GPU-to-GPU data transfer across nodes)*: GPUDirect RDMA enables direct GPU-to-GPU data transfers across nodes, bypassing the CPU, which significantly reduces latency and overhead in distributed AI models. However, it requires high-bandwidth, low-latency connections to be fully effective. In lower-bandwidth environments, the benefits may be limited, so it's important to ensure sufficient bandwidth is available for large-scale data transfers, or focus on local GPU processing to reduce inter-node communication demands.
+    - *GPUDirect RDMA (Direct GPU-to-GPU data transfer across nodes)*: GPUDirect RDMA enables direct GPU-to-GPU data transfers across nodes, bypassing the CPU, which significantly reduces latency and overhead in distributed AI models. However, it requires high-bandwidth, low-latency connections to be fully effective. In lower-bandwidth environments, the benefits might be limited, so it's important to ensure sufficient bandwidth is available for large-scale data transfers, or focus on local GPU processing to reduce inter-node communication demands.
 
 ## Select AI compute
 
@@ -35,7 +42,7 @@ Compute refers to the hardware, images used to train and inference AI models. Co
 
 Choose a virtual machine image (Linux and Windows distributions) that expedites your ability to build AI workloads. Use images that have preinstalled tools for AI workloads.
 
-- *Start with the Data Science Virtual Machines images.* [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview?view=azureml-api-2) image offers pre-configured access to PyTorch, TensorFlow, scikit-learn, Jupyter, Visual Studio Code, Azure CLI, pyspark, and other tools for quick setup on Azure. When you use it with GPUs, the image installs Nvidia drivers, CUDA Toolkit, and cuDNN.
+- *Start with the Data Science Virtual Machines images.* [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) image offers pre-configured access to PyTorch, TensorFlow, scikit-learn, Jupyter, Visual Studio Code, Azure CLI, pyspark, and other tools for quick setup on Azure. When you use it with GPUs, the image installs Nvidia drivers, CUDA Toolkit, and cuDNN.
 
 - *Find alternative images as needed.* If the Data Science Virtual Machine image doesn’t meet your needs, use the [Azure marketplace](https://azuremarketplace.microsoft.com/marketplace/apps) or other searching [methods](/azure/virtual-machines/overview#distributions) to find an alternate image. For example, with GPUs, you should use [Linux images](/azure/virtual-machines/configure) that include InfiniBand drivers, NVIDIA drivers, communication libraries, MPI libraries, and health check and monitoring tools.
 
@@ -108,37 +115,26 @@ Implement a storage solution that combines a high-performance file system for ac
 
 The following is a starting point for Azure infrastructure and any PaaS services in the environment. For more comprehensive information on securing AI, see the Secure AI article.
 
-- *Apply secure configurations to Azure services.* Follow the [Azure security baselines](/azure/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include:
+- *Apply secure configurations to Azure services.* Follow the [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include:
 
-    - [Windows](/azure/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline) and [Linux](/azure/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) Azure Virtual Machines
-    -  [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices)
+    - [Windows](/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline) and [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) Azure Virtual Machines
+    - [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices)
     - Virtual Machine Scale Sets
     - Azure Managed Lustre File System
     - Azure NetApp Files
     - Azure Kubernetes Service
     - Azure Database for MySQL
-    - [Key Vault](/azure/security/benchmark/azure/baselines/key-vault-security-baseline)
+    - [Key Vault](/security/benchmark/azure/baselines/key-vault-security-baseline)
 
 - *Use private endpoints.* Use private endpoints available in [Azure Private Link](/azure/networking/fundamentals/networking-overview#privatelink) for any PaaS solution in your architecture, such as your storage or filesystem.
 
-- *Implement Network Security Groups (NSGs).* NSGs can be complex. Ensure you understand the NSG rules and their implications when setting up your Azure infrastructure for AI workloads. [NSG](/azure/virtual-network/network-security-groups-overview) rules have a priority order. Understand this order to avoid conflicts and ensure the smooth running of your AI workloads.
+- *Implement network security groups (NSGs).* NSGs can be complex. Ensure you understand the NSG rules and their implications when setting up your Azure infrastructure for AI workloads. [NSG](/azure/virtual-network/network-security-groups-overview) rules have a priority order. Understand this order to avoid conflicts and ensure the smooth running of your AI workloads.
 
-- *Use Application Security Groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups). This can be useful when managing traffic for specific AI workloads.
+- *Use application security groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups). This can be useful when managing traffic for specific AI workloads.
+
 - *Close unused ports.* Limit internet exposure by exposing only services intended for external-facing use cases and using private connectivity for other services.
 
-AI workloads on Azure infrastructure are responsible for securing the images and operation systems. Follow all traditional security practices for IaaS and note the following recommendations:
-
-- *Patch virtual machine guests.* Regularly apply patches to virtual machines and container images. Consider enabling [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for your virtual machines and scale sets.
-
 - *Use antimalware.* Use [Microsoft Antimalware for Azure](/azure/security/fundamentals/antimalware) on your virtual machines to protect them from malicious files, adware, and other threats.
-
-- *Schedule updates.* Use maintenance configurations to schedule updates for Azure resources, including VMs and extensions.
-
-- *Monitor notifications.* Keep an eye on notifications before, during, and after maintenance operations to stay prepared and responsive.
-
-- *Use Azure Update Manager.* Utilize [Azure Update Manager](/azure/update-manager/overview) to govern updates across hybrid environments.
-
-For more information, see [Guest updates and host maintenance overview](/azure/virtual-machines/updates-maintenance-overview).
 
 ## Manage AI infrastructure
 
@@ -152,15 +148,15 @@ The following guidance provides recommendations for monitoring AI workloads runn
 
 - *Use Azure Update Manager.* You can monitor Windows and Linux update compliance across your machines in Azure and on-premises/on other cloud platforms (connected by [Azure Arc](/azure/azure-arc/)) from a single pane of management. You can also use Update Manager to make real-time updates or schedule them within a defined maintenance window.
 
-- *Monitor virtual machines.* [Monitor](/azure/virtual-machines/monitor-vm) VM host data (physical host) and VM guest data (operating system and application).  Consider using [VM Insights](https://docs.microsoft.com/azure/azure-monitor/vm/vminsights-enable-overview) to simplify the onboarding, access predefined performance charts, and utilize dependency mapping. Track Spot VM evictions and maintenance events to manage interruptions effectively. [Learn more about scheduled events](https://docs.microsoft.com/azure/virtual-machines/linux/scheduled-events).
+- *Monitor virtual machines.* [Monitor](/azure/virtual-machines/monitor-vm) VM host data (physical host) and VM guest data (operating system and application). Consider using [VM Insights](/azure/azure-monitor/vm/vminsights-enable-overview) to simplify the onboarding, access predefined performance charts, and utilize dependency mapping. Track Spot VM evictions and maintenance events to manage interruptions effectively. [Learn more about scheduled events](/azure/virtual-machines/linux/scheduled-events).
 
-- *Monitor networks.* [Monitor and diagnose](/azure/network-watcher/network-watcher-overview) networking issues without logging into your VMs. Get real-time performance information at the packet level. Troubleshoot performance issues with the [Performance Diagnostics tool](/azure/troubleshoot/azure/virtual-machines/windows/performance-diagnostics).  [Track](/azure/network-watcher/network-insights-overview) topology, health, and metrics for all deployed network resources.
+- *Monitor networks.* [Monitor and diagnose](/azure/network-watcher/network-watcher-overview) networking issues without logging into your VMs. Get real-time performance information at the packet level. Troubleshoot performance issues with the [Performance Diagnostics tool](/azure/troubleshoot/azure/virtual-machines/windows/performance-diagnostics). [Track](/azure/network-watcher/network-insights-overview) topology, health, and metrics for all deployed network resources.
 
-- *Monitor storage.* Monitor the performance of storage, such as local SSDs, [attached disks](/azure/virtual-machines/disks-metrics), file shares, and [Azure storage accounts](https://docs.microsoft.com/azure/azure-monitor/insights/storage-insights-overview).
+- *Monitor storage.* Monitor the performance of storage, such as local SSDs, [attached disks](/azure/virtual-machines/disks-metrics), file shares, and [Azure storage accounts](/azure/azure-monitor/insights/storage-insights-overview).
 
 - *Use orchestrator monitoring capabilities (if applicable).* Consider using the built-in monitoring capabilities of orchestrators like Azure CycleCloud, Azure Batch, and Azure Kubernetes Service (AKS). Follow the guidance for the orchestrator you chose:
 
-    - *Azure CycleCloud:*Track CPU, disk, and network metrics. store data from Azure Cycle Cloud clusters to Log Analytics and create custom metrics dashboards. For more information, see [Monitoring Azure CycleCloud](/azure/cyclecloud/concepts/monitoring?view=cyclecloud-8). [Node Health Checks](https://github.com/Azure/azurehpc-health-checks#Configuration) are a set of automated tests to ensure that your HPC/AI hardware is healthy. You can run this check in Azure CycleCloud as part of cluster deployment or separately using the GitHub repo instructions. Ensure that you pay attention to the compatibility matrix in the documentation and run where appropriate to ensure that you identify any unhealthy nodes prior to running your AI workloads.
+    - *Azure CycleCloud:* Track CPU, disk, and network metrics. store data from Azure Cycle Cloud clusters to Log Analytics and create custom metrics dashboards. For more information, see [Monitoring Azure CycleCloud](/azure/cyclecloud/concepts/monitoring). [Node Health Checks](https://github.com/Azure/azurehpc-health-checks#Configuration) are a set of automated tests to ensure that your HPC/AI hardware is healthy. You can run this check in Azure CycleCloud as part of cluster deployment or separately using the GitHub repo instructions. Ensure that you pay attention to the compatibility matrix in the documentation and run where appropriate to ensure that you identify any unhealthy nodes prior to running your AI workloads.
 
     - *Azure Batch:* Collect job and task metrics (active tasks, task duration, job start time, duration, task start time) and pool metrics (idle nodes, running nodes, CPU usage, Disk I/O). For more information, see [Azure Batch monitoring](/azure/batch/monitor-batch).
 
@@ -168,7 +164,7 @@ The following guidance provides recommendations for monitoring AI workloads runn
 
 ## Manage business continuity and disaster recovery
 
-The following guidance provides recommendations for implementing and managing
+The following guidance provides recommendations for implementing and managing business continuity and disaster recovery for your AI applications.
 
 - *Use Azure Site Recovery.* Site Recovery uses real-time replication and recovery automation to replicate workloads across regions. Built-in platform capabilities for VM workloads meet low RPO and RTO requirements. You can use Site Recovery to run recovery drills without affecting production workloads. You can also use Azure Policy to enable replication and to audit VM protection.
 
@@ -183,6 +179,10 @@ The following guidance provides recommendations for implementing and managing
 ## AI on infrastructure implementation options
 
 - *AI on infrastructure landing zone accelerator:* If you use Azure landing zones, deploy the [Cycle Cloud Workspace for SLURM](/azure/cyclecloud/qs-deploy-ccws) to your application landing zone.
+
+:::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
+*Figure 1. Basic components of a generative AI application with RAG.*
+
 - *Custom AI application.* If you have an existing Azure environment or don’t want to start with Azure landing zone, use the guidance discussed in this article to create an AI application.
 
 ## Next step
