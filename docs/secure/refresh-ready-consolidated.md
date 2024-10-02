@@ -74,7 +74,7 @@ Like your confidentiality preparations, ensure that you have well-governed polic
 
 - *Data verification and validation:* Invest in tooling that automates data verification and validation to relieve burden on your data engineers and administrators and to reduce the risk of human error.
 
-- *Backup policies:* Codify backup policies to ensure that all data is regularly backed up. Backups and restores should be regularly tested to ensure that backups are both successfully occuring and for data correctness and consistency.
+- *Backup policies:* Codify backup policies to ensure that all data is regularly backed up. Backups and restores should be regularly tested to ensure that backups are both successfully occurring and for data correctness and consistency. Ensure that you align these policies with your organization's recovery time objective (RTO) and recovery point objective (RPO) targets.
 
 - *Strong encryption:* Ensure that your cloud provider encrypts your data at rest and in transit by default. In Azure, your data is encrypted end-to-end. Refer to the [Microsoft Trust Center](https://www.microsoft.com/en-us/trust-center/privacy#securing_your_data) for full details. For the services that you use in your workloads, ensure that strong encryption is supported and appropriately configured to meet your business requirements.
 
@@ -84,7 +84,7 @@ Like your confidentiality preparations, ensure that you have well-governed polic
 
     - *Security information and event management (SIEM) and threat detection:* Include the use of security information and event management (SIEM) and security orchestration, automation, and response (SOAR) tooling like  and threat detection tooling to detect suspicious activities and potential threats to your infrastructure. 
 
-- *Automated configuration management:* Codify the use of tooling like to automate configuration management. Automation helps ensure that all system configurations are consistent, free from human error, and enforced .
+- *Automated configuration management:* Codify the use of tooling like to automate configuration management. Automation helps ensure that all system configurations are consistent, free from human error, and enforced automatically.
 
 - *Automated patch management:* Codify the use of tooling to manage and govern updates for virtual machines (VMs). Automated patching helps ensure that all systems are patched regularly and system versions are consistent.
 
