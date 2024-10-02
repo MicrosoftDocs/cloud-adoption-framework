@@ -318,7 +318,7 @@
     {
       "source_path": "docs/scenarios/data-management/best-practices/sap-data-ingestion.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/aks/azure-products.md",
@@ -443,6 +443,11 @@
     {
       "source_path": "docs/scenarios/cloud-scale-analytics/security-provisioning.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/sap/sap-lza-choose-azure-connectors",
       "redirect_document_id": true
     }
   ]
