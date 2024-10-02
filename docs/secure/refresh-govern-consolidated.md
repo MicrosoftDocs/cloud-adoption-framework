@@ -52,8 +52,6 @@ Security governance is critical for maintaining your preparedness. Implementing 
 
 - **Automate governance:** Embrace tooling to automate governance to the extent practical. Tooling can help you manage policies for infrastructure deployments and hardening measures, data protection, and identity and access (IAM) standards. Automating the governance of these security measures will help ensure that your all resources in your environments are compliant with your own security standards and any compliance frameworks that are required for your business. Review the Govern methodology's [guidance](../govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically) for additional recommendations.
 
- - [Automate 
-
 - **Adhere to Microsoft's security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines help you ensure that you're existing deployments are secured properly and new deployments are configured properly at the outset, while reducing the risk of misconfigurations.
 
 ### Incident repsonse governance
@@ -115,6 +113,8 @@ The architecture designs that you standardize in your cloud estate require gover
 ### Availability design governance
 
 - **Maintaining standardized design patterns:** Infrastructure and application design patterns should be codified and strictly enforced. Maintainence of those standards of design must be governed to keep them up-to-date and safe from unauthorized access or alteration. As such, these standards should be treated with the same care as other policies.
+
+ - When possible, automate the enforcement of maintaining design patterns. For example, you can enable policies to control the types of resources that are allowed to be deployed and the regions where deployments are allowed.  
 
 ### Disaster recovery governance
 
