@@ -14,7 +14,7 @@ ms.custom: internal, UpdateFrequency2
 
 The Ready phase of a cloud adoption journey focuses on building out the foundation of the estate. Microsoft's [Azure landing zone](../ready/landing-zone/index.md) approach offers enterprises and large organizations a secure, scalable, and modular design pattern to follow when implementing their estates. Smaller organizations and startups may not need the level of organization that the landing zone approach uses, but understanding the landing zone philosophy can help any organization strategize their foundational design to ensure a high degree of security and scalability.
 
-After defining your cloud adoption [strategy](./refresh-strategy-consolidated.md) and [plan](./refresh-plan-consolidated.md), you can turn begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
+After defining your cloud adoption [strategy](./refresh-strategy-consolidated.md) and [plan](./refresh-plan-consolidated.md), you can begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
 
 This article is a supporting guide to the [Ready](../ready/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
@@ -66,7 +66,7 @@ In the Ready phase, preparing for your workloads with confidentiality in mind me
 
 ## Ready for integrity
 
-Like your confidentiality preparations, ensure that you have well-governed policies and standards for data and system integrity so you deploy workloads. Define policies and standards for the following:
+Like your confidentiality preparations, ensure that you have well-governed policies and standards for data and system integrity so you deploy workloads securely by default. Define policies and standards for the following:
 
 ### Data management practices
 
@@ -110,7 +110,7 @@ Designing your workloads for resiliency helps ensure that the business is able t
  
 - **Decouple services:** Strategically isolate services from each other to reduce the blast radius of incidents, ensuring that failures in one component do not affect the entire system. This approach supports CAF’s governance model, promoting robust service boundaries and operational resilience.
  
-- **Enable automatic scaling:** Ensure your application architecture supports automatic scaling to handle varying loads, maintaining availability during traffic spikes. This practice aligns with CAF’s guidance on building scalable and responsive cloud environments.
+- **Enable automatic scaling:** Ensure your application architecture supports automatic scaling to handle varying loads, maintaining availability during traffic spikes. This practice aligns with CAF’s guidance on building scalable and responsive cloud environments, and helps keep costs manageable and predictable.
 
 - **Implement fault isolation:** Design your application to isolate failures to individual tasks or functions, preventing widespread outages and enhancing resilience. This supports CAF’s focus on creating reliable and fault-tolerant systems.
  

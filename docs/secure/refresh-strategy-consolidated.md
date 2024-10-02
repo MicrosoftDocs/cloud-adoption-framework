@@ -30,7 +30,7 @@ Adopting [Zero Trust](/security/zero-trust/zero-trust-overview) as a strategy wi
 
 - **Use least privilege:** Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.
 
-- **Assume breach:** Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses.
+- **Assume breach:** Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility into activities related to your systems, drive threat detection, and improve defenses.
 
 By applying these principles across the cloud adoption process, the transformation to modern security can be a smoother experience for the entire organization.
 

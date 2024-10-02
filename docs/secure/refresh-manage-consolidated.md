@@ -68,7 +68,7 @@ The ongoing management of your security posture as it relates to confidentiality
 
     - *Separation of Duties (SoD):* Implementing SoD helps prevent conflicts of interest and reduces the risk of fraud. By dividing responsibilities among different individuals, it ensures that no single person has control over all aspects of a critical process.
 
-    - *Proactive user lifecycle maintenance:* Regularly updating and managing user accounts is vital. This includes promptly revoking access for users who no longer need it, updating permissions as roles change, and ensuring that inactive accounts are disabled. Proactive maintenance helps prevent unauthorized access and ensures that only current, authorized users have access to sensitive data.
+    - *Proactive user lifecycle maintenance:* Regularly updating and managing user accounts is vital. This includes promptly revoking access for users who no longer need it, updating permissions as roles change, and ensuring that inactive accounts are disabled. Proactive maintenance helps prevent unauthorized access and ensures that only current, authorized users have access to sensitive data. The Access Architects should include these measures in their standard operating procedures (SOPs).
 
 ### Azure facilitation
 
@@ -145,9 +145,9 @@ Continuous improvement is essential for maintaining and enhancing confidentialit
 
             - Archive historical data in cold or offline storage when no longer needed in production or purge data that doesn't need to be archived.
 
-            - Regularly review encryption configurations to ensure that all sensitive data is encrypted at rest and in transit.
+            - Regularly review encryption configurations to ensure that all sensitive data is encrypted at rest and in transit. Be sure to regularly review industry standards for encryption and ensure that your systems align with those standards.
 
-        - Regularly review backup configurations to ensure that all data stores containing sensitive data or other critical data is being backed up and perform restore tests to ensure that the backup data is valid.
+        - Regularly review backup configurations to ensure that all data stores containing sensitive data or other critical data is being backed up and perform restore tests to ensure that the backup data is valid. Regularly test restores to ensure that your systems are in compliance with your organization's recovery time objective (RTO) and recovery point objective (RPO) targets.
     
     - *Regularly review access to systems and data:* Access permissions to systems and data stores should happen regularly to ensure that there are no gaps in your access controls and policies. 
 

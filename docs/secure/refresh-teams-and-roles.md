@@ -82,9 +82,9 @@ It’s critical to ensure that everyone understands their role in security and h
 
 ### Cloud service provider
 
-Cloud service providers are effectively “virtual team members” that provide security functions and capabilities for the underlying cloud platform. Some cloud providers also provide security features and capabilities for your teams to use to manage your security posture and incidents. For more information on what cloud services providers do, see the cloud shared responsibility model (/azure/security/fundamentals/shared-responsibility).  
+Cloud service providers are effectively “virtual team members” that provide security functions and capabilities for the underlying cloud platform. Some cloud providers also provide security features and capabilities for your teams to use to manage your security posture and incidents. For more information on what cloud services providers do, see the [cloud shared responsibility model](/azure/security/fundamentals/shared-responsibility).  
 
-Many cloud security providers provide information on their security practices and controls upon request or via a portal like the [Microsoft service trust portal](https://servicetrust.microsoft.com/).
+Many cloud service providers provide information on their security practices and controls upon request or via a portal like the [Microsoft service trust portal](https://servicetrust.microsoft.com/).
 
 ### Infrastructure/Platform Teams (architecture, engineering, and operations)
 
