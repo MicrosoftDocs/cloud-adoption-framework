@@ -144,7 +144,7 @@ The following guidance provides recommendations for monitoring AI workloads runn
 
 - *Monitor virtual machines.* [Monitor](/azure/virtual-machines/monitor-vm) VM host data (physical host) and VM guest data (operating system and application). Consider using [VM Insights](/azure/azure-monitor/vm/vminsights-enable-overview) to simplify the onboarding, access predefined performance charts, and utilize dependency mapping. Track Spot VM evictions and maintenance events to manage interruptions effectively. [Learn more about scheduled events](/azure/virtual-machines/linux/scheduled-events).
 
-- *Monitor networks.* [Monitor and diagnose](/azure/network-watcher/network-watcher-overview) networking issues without logging into your VMs. Get real-time performance information at the packet level. Troubleshoot performance issues with the [Performance Diagnostics tool](/azure/troubleshoot/azure/virtual-machines/windows/performance-diagnostics). [Track](/azure/network-watcher/network-insights-overview) topology, health, and metrics for all deployed network resources.
+- *Monitor networks.* [Monitor and diagnose](/azure/network-watcher/network-watcher-overview) networking issues without logging into your VMs. Get real-time performance information at the packet level. Troubleshoot performance issues with the [Performance Diagnostics tool](/troubleshoot/azure/virtual-machines/windows/performance-diagnostics). [Track](/azure/network-watcher/network-insights-overview) topology, health, and metrics for all deployed network resources.
 
 - *Monitor storage.* Monitor the performance of storage, such as local SSDs, [attached disks](/azure/virtual-machines/disks-metrics), file shares, and [Azure storage accounts](/azure/azure-monitor/insights/storage-insights-overview).
 
