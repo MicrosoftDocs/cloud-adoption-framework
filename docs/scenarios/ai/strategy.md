@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI Strategy - Recommendations to develop an AI adoption strategy
 
-This article describes how to define an AI adoption strategy. As with any strategy, you need data to create an actionable vision for your organization. You need to understand where AI can benefit your business (identify use cases) and identify the right solution for each use case. We recommend that you appoint someone to lead this effort and set goals and success targets to measure progress.
+This article describes how to define an AI adoption strategy. As with any strategy, you need data to create an actionable vision for your organization. You need to understand where AI can benefit your business (identify use cases) and identify the right solution for each use case. We recommend that you establish an [AI center of excellence] (./center-of-excellence.md) (AI CoE) or appoint someone to lead this effort and set goals to measure progress.
 
 ## Identify AI use cases
 
