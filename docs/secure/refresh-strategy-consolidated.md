@@ -134,6 +134,12 @@ As our global expansion progresses, our data estate will grow exponentially and 
 
 As we expand across the globe, our LOB workload must maintain the high performance and zero-downtime availability our customer's rely on.
 
+- **Business owner:** COO
+ 
+- **Technical owner:** CTO
+
+- **Security owner:** CISO
+
 **Business considerations:**
 
 - *Maintaining performance and reliability throughout the migration:** Our customers have high expectations for our LOB application and we cannot afford to suffer reputational and financial damage if application experiences downtime or prolonged degraded service over the course of the migration to the cloud. Involving our Microsoft support team to help design the migration plan and engage on the migration will minimize the risks of downtime or degraded service.
