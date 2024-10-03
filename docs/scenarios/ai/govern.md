@@ -19,15 +19,15 @@ This guidance outlines recommendations for controlling the input and output of A
 
 - *Govern generative AI models.* Generative AI models are nondeterministic and require governance controls that are tailored to their algorithms.
 
-- *Define baseline content filters for generative AI models.* Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to define a baseline content filter for your approved AI models. This safety system runs both the prompt and completion for your model through a group of classification models. These classification models detect and help prevent the output of harmful content across a range of categories. Content Safety provides features like prompt shields, groundedness protection, and protected material text detection. It scans images and text. Create a process for application teams to communicate different governance needs.
+- *Define baseline content filters for generative AI models.* Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to define a baseline content filter for your approved AI models. This safety system runs both the prompt and completion for your model through a group of classification models. These classification models detect and help prevent the output of harmful content across a range of categories. Content Safety provides features like prompt shields, groundedness detection, and protected material text detection. It scans images and text. Create a process for application teams to communicate different governance needs.
 
-- *Establish a process to detect AI risks*. Use tools like Defender for Cloud to [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [explore risks to predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk). Establish a policy to regularly [red team generative AI models](/azure/ai-services/openai/concepts/red-teaming). Document identified risks and continuously update your AI governance policies to mitigate emerging issues.
+- *Establish a process to detect AI risks.* Use tools like Defender for Cloud to [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [explore risks to predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk). Establish a policy to regularly [red team generative AI models](/azure/ai-services/openai/concepts/red-teaming). Document identified risks and continuously update your AI governance policies to mitigate emerging issues.
 
 - *Ground generative AI models.* Use [system messages](/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext) and the [retrieval augmented generation](/azure/ai-studio/concepts/retrieval-augmented-generation) (RAG) pattern to govern the output of generative AI models. Test the effectiveness of grounding by using tools like [prompt flow](/azure/ai-studio/how-to/prompt-flow) or the open-source red teaming framework PyRIT.
 
 - *Consider a reverse proxy for monitoring.* A reverse proxy like Azure API Management allows you to implement logging and monitoring that aren't native to the platform. API Management allows you to collect source IPs, input text, and output text. For more information, see [Implement logging and monitoring for Azure OpenAI Service language models](/azure/architecture/ai-ml/openai/architecture/log-monitor-azure-openai).
 
-- *Invest in a golden dataset.* Create a golden dataset that serves as a benchmark for testing AI applications. A golden dataset is a collection of preferred answers to common user queries. This dataset can significantly streamline the iterative development process, ensuring that models consistently produce high-quality, expected outputs.
+- *Invest in a golden dataset.* Create a golden dataset that serves as a benchmark for testing AI applications. A golden dataset is a collection of preferred answers to common user queries. This dataset can significantly streamline the iterative development process, which ensures that models consistently produce high-quality, expected outputs.
 
 - *Establish policies for which models to use.* Different AI models serve different use cases. Create a policy for approving AI models that factors in the cost, model capabilities and tasks, and source of AI models.
 
@@ -41,7 +41,7 @@ This guidance outlines recommendations for controlling the cost of AI workloads.
 
 - *Choose the right model for your use case.* Select the AI model that meets your needs without incurring excessive costs. Use less expensive models like GPT-3.5 Turbo instead of higher-cost options like GPT-4, unless the use case demands a more expensive model. For fine-tuning, maximize time usage within each billing period to avoid extra charges.
 
-- *Set provisioning limits.* Allocate provisioning quotas for each model based on expected workloads to prevent unnecessary costs. Continuously monitor dynamic quotas to ensure that they match actual demand and adjust accordingly to maintain optimal throughput without overspending.
+- *Set provisioning limits.* Allocate provisioning quotas for each model based on expected workloads to prevent unnecessary costs. Continuously monitor dynamic quotas to ensure that they match actual demand and adjust them accordingly to maintain optimal throughput without overspending.
 
 - *Use the right deployment type.* Azure OpenAI models allow you to use different [deployment types](/azure/ai-services/openai/how-to/deployment-types). Global deployment offers lower cost-per-token pricing on certain GPT models.
 
@@ -59,7 +59,7 @@ For more cost management guidance, see [Manage AI costs](manage.md#manage-ai-cos
 
 This guidance outlines recommendations for controlling security risks to AI workloads.
 
-- *Enable Microsoft Defender for Cloud on every subscription*. Defender for Cloud provides a cost-effective approach for detecting configurations in your deployed resources that aren't secure. You should also enable [AI threat protection](/azure/defender-for-cloud/ai-threat-protection).
+- *Enable Defender for Cloud on every subscription.* Defender for Cloud provides a cost-effective approach for detecting configurations in your deployed resources that aren't secure. You should also enable [AI threat protection](/azure/defender-for-cloud/ai-threat-protection).
 
 - *Deny public access to AI resources.* Platform as a service (PaaS) services and AI model endpoints shouldn't be accessible from the public internet. For PaaS, use private endpoints for end user access. For Azure Virtual Machines, use a public load balancer and only permit access requests to the AI model endpoint through the load balancer. Use a jumpbox to manage your AI resources.
 
@@ -67,7 +67,7 @@ This guidance outlines recommendations for controlling security risks to AI work
 
 - *Use managed identities.* Use managed identities on all supported Azure services. Grant least privilege access to application resources that need to access AI model endpoints.
 
-- *Use just-in-time access.* Use Privileged Identity Management (PIM) for just-in-time access.
+- *Use just-in-time access.* Use privileged identity management (PIM) for just-in-time access.
 
 ## Govern AI operations
 
@@ -75,11 +75,11 @@ This guidance outlines recommendations for controlling AI workload operations.
 
 - *Consider centralizing AI model governance.* Having a single individual or team govern AI model endpoints makes it easier to standardize governance and monitor the endpoints. The AI Center of Excellence (CoE) handles this function for the business as an extension of the Cloud CoE or standalone team. For more information, see [AI CoE](center-of-excellence.md).
 
-- *Review and manage AI models*. Develop a policy for managing model versioning, especially as models are upgraded or retired. You need to maintain compatibility with existing systems and ensure a smooth transition between model versions.
+- *Review and manage AI models.* Develop a policy for managing model versioning, especially as models are upgraded or retired. You need to maintain compatibility with existing systems and ensure a smooth transition between model versions.
 
 - *Define a business continuity and disaster recovery plan.* Establish a policy for business continuity and disaster recovery for your AI endpoints and AI data. Configure baseline disaster recovery for resources that host your AI model endpoints, like [Linux](/azure/virtual-machines/linux/tutorial-disaster-recovery) and [Windows](/azure/virtual-machines/windows/tutorial-disaster-recovery) virtual machines, [Azure AI Studio](/azure/ai-studio/how-to/disaster-recovery), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning), [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery), or Azure AI services. All Azure data stores, such as [Azure Blob Storage](/azure/storage/common/storage-disaster-recovery-guidance), [Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore), and [Azure SQL Database](/azure/azure-sql/accelerated-database-recovery), provide reliability and disaster recovery guidance that you should follow.
 
-- *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For example, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), [Azure AI Studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), [Azure Virtual Machines](/azure/azure-monitor/vm/monitor-virtual-machine-alerts), and guidance on individual Azure AI services.
+- *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For examples, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), [Azure AI Studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), [Azure Virtual Machines](/azure/azure-monitor/vm/monitor-virtual-machine-alerts), and guidance on individual Azure AI services.
 
 ## Govern AI regulatory compliance
 
