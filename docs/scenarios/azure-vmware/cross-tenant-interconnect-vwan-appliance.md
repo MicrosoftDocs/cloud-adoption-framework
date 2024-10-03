@@ -80,69 +80,71 @@ Any of these options can establish network connectivity between two SDDCs. But t
 
 ### Azure VMware Solution SDDC to Azure connectivity
 
-As shown in the architecture diagram above, each SDDC is also connected with Virtual WAN running in its own Azure Entra tenant. This connectivity is established using following procedure.
+In this architecture, each SDDC connects to Virtual WAN, and each Virtual WAN instance runs in its own Microsoft Entra tenant. Use the following procedure to establish connectivity.
 
-1. Create an Azure VMware Solution SDDC Authorization Key from Azure portal/Azure CLI/Powershell.
+1. Create an Azure VMware Solution SDDC authorization key from the Azure portal, Azure CLI, or PowerShell.
+
 1. Create a hub and an ExpressRoute gateway in Virtual WAN.
-1. Redeem the Authorization key to establish connectivity between SDDC and Virtual WAN
+1. Redeem the authorization key to establish connectivity between the SDDC and Virtual WAN.
 
-Along with connectivity between SDDC and Virtual WAN, other Azure Virtual Networks (VNets) are also connected to this Virtual WAN. These VNets could be of following different types.
+Other Azure virtual networks also connect to this Virtual WAN.
 
-1. Direct Spoke VNets: These are VNets *directly* connected to Virtual WAN - hence referred as *Direct* spoke VNets - using Virtual WAN virtual network connection. A spoke virtual network can potentially run an NVA deployed in it. Purpose of NVA is to inspect and control traffic from Azure and Azure VMware Solution SDDC to outside world.
-1. Indirect Spoke VNets: These are VNets connected to *direct* spoke VNets. They're referred as *Indirect* because they aren't directly connected with Virtual WAN. They're used to host workloads running in Azure. Network traffic originated from them is inspected by NVAs running in *direct* spoke VNets.
+- **Direct spoke virtual networks** *directly* connect to Virtual WAN via the Virtual WAN virtual network connection. A spoke virtual network can run an NVA that's deployed in it. The NVA inspects and controls traffic from Azure and the Azure VMware Solution SDDC to the outside world.
 
-Connectivity between SDDCs and VNets (Direct and Indirect) in Azure is established using following options.
+- **Indirect spoke virtual networks** connect to *direct* spoke virtual networks. They don't directly connect with Virtual WAN. Indirect spoke virtual networks host workloads that run in Azure. NVAs that run in *direct* spoke virtual networks inspect network traffic that originates from indirect spoke virtual networks.
 
-1. *Direct* spokes can connect with SDDC running in their own tenant using connectivity between Virtual WAN and SDDC.
-1. *Direct* spokes can also connect with SDDC running in the other tenant by using Azure VMware Solution Interconnect (Globalreach) or Azure VMware Solution ExpressRoute Globalreach connectivity.
-1. *Indirect* spokes don't have connectivity with SDDC in their tenant by default. A User Defined Route (UDR) needs to be associated with them. UDR will have SDDC prefixes in their tenant as destination network and *direct* spoke in their own tenant as the next hop.
-1. *Indirect* spokes don't have connectivity with SDDC in other tenant as well. A User Defined Route (UDR) needs to be associated with them. UDR will have SDDC prefixes in other tenant as destination network and *direct* spoke in their own tenant as the next hop. This connectivity needs either Azure VMware Solution Interconnect (Globalreach) or Azure VMware Solution ExpressRoute Globalreach connectivity between SDDCs.
+You can use the following methods to establish direct and indirect connectivity between SDDCs and virtual networks in Azure.
+
+1. *Direct* spokes can connect with an SDDC that runs in their own tenant via connectivity between Virtual WAN and the SDDC.
+
+1. *Direct* spokes can also connect with an SDDC that runs in the other tenant via Azure VMware Solution Interconnect (Globalreach) or Azure VMware Solution ExpressRoute Globalreach connectivity.
+1. *Indirect* spokes don't have connectivity with an SDDC in their tenant by default. A user-defined route (UDR) needs to be associated with them. A UDR has SDDC prefixes in their tenant as the destination network and a *direct* spoke in their own tenant as the next hop.
+1. *Indirect* spokes also don't have connectivity with SDDC in the other tenant. A UDR needs to be associated with them. UDR has SDDC prefixes in the other tenant as the destination network and *direct* spoke in their own tenant as the next hop. This connectivity needs either Azure VMware Solution Interconnect (Globalreach) or Azure VMware Solution ExpressRoute Globalreach connectivity between SDDCs.
 
 > [!NOTE]
-> Scenario discussed here covers a single hub connected with a spoke virtual network hosting NVA solution. If there are multiple hubs which need connectivity to Azure VMware Solution SDDC then a [full mesh network architecture](/azure/virtual-wan/virtual-wan-global-transit-network-architecture) will be required.
+> This scenario covers a single hub connected with a spoke virtual network hosting NVA solution. If you have multiple hubs that need to connect to Azure VMware Solution SDDC, use a [full-mesh network architecture](/azure/virtual-wan/virtual-wan-global-transit-network-architecture).
 
 ### Azure VMware Solution SDDC to on-premises connectivity
 
-Connectivity between each Azure VMware Solution SDDC and on-premises environment should be established using Azure ExpressRoute Globalreach. Each SDDC ExpressRoute circuit and on-premises ExpressRoute circuits are connected in such a setup. When SDDC ExpressRoute circuit learns on-premises routes using Azure ExpressRoute Globalreach connection, these routes are *non-transitive* - hence aren't advertised across the tenant - even when [Azure VMware Solution SDDC to SDDC connectivity](#azure-vmware-solution-sddc-to-sddc-connectivity) exists.
+Use Azure ExpressRoute Globalreach to establish connectivity between each Azure VMware Solution SDDC and the on-premises environment. In this scenario, each SDDC ExpressRoute circuit and on-premises ExpressRoute circuit connect to each other. When the SDDC ExpressRoute circuit learns on-premises routes via an Azure ExpressRoute Globalreach connection, these routes are *non-transitive*. They don't advertise across the tenant, even when [Azure VMware Solution SDDC to SDDC connectivity](#azure-vmware-solution-sddc-to-sddc-connectivity) exists.
 
-SDDC to on-premises connectivity coexists with cross tenant SDDC to SDDC connectivity. In such a setup, one SDDC ExpressRoute circuit learns on-premises routes using Globalreach connection and also learns cross tenant Virtual WAN routes through SDDC to SDDC connectivity. It's important that cross tenant Virtual WAN or SDDC doesn't advertise the on-premises prefixes through other means such as static route, VPN connection or any other means. If this happens, then SDDC ExpressRoute learns duplicate routes for on-premises environment resulting in routing loop breaking connectivity with it.
+SDDC to on-premises connectivity coexists with cross-tenant SDDC to SDDC connectivity. In such a setup, one SDDC ExpressRoute circuit learns on-premises routes via a Globalreach connection and also learns cross-tenant Virtual WAN routes via SDDC to SDDC connectivity. The cross-tenant Virtual WAN or SDDC must not advertise the on-premises prefixes through other means, such as a static route or a VPN connection. If this happens, then the SDDC ExpressRoute learns duplicate routes for the on-premises environment, which creates a routing loop and breaks connectivity.
 
-If on-premises environment uses multiple ExpressRoute circuits for redundancy, then public AS path prepend should be used for preferring one circuit over the other.
+If the on-premises environment uses multiple ExpressRoute circuits for redundancy, use the public AS path prepend to prefer one circuit over the other.
 
 > [!NOTE]
-> SDDC to on-premises connectivity coexists with Azure to on-premises connectivity as well. An ExpressRoute gateway in Virtual WAN can be used for connecting with SDDC ExpressRoute circuit as well as on-premises ExpressRoute circuit. However, this connectivity is not *transitive*.
+> SDDC to on-premises connectivity coexists with Azure to on-premises connectivity. You can use an ExpressRoute gateway in Virtual WAN to connect with the SDDC ExpressRoute circuit and the on-premises ExpressRoute circuit. But this connectivity isn't *transitive*.
 
 ### Azure to Azure connectivity
 
-*Direct* and *Indirect* VNets need to communicate with each other in same Azure tenant and across the Azure tenants. This is established as discussed below.
+*Direct* and *indirect* virtual networks need to communicate with each other in same Azure tenant and across the Azure tenants. Use the following methods to establish connections.
 
 #### Within the same tenant
 
-1. *Direct* spokes can connect with each other through Virtual WAN virtual network connection.
-1. *Direct* spokes can connect with *Indirect* spokes through virtual network peering.
-1. *Indirect* spokes can connect with *Direct* spokes through virtual network peering.
-1. *Indirect* spokes can connect with each other through virtual network peering with *Direct* spoke and UDR associated with them. UDR will have *indirect* spoke prefix as destination network and NVA in *direct* spoke as next hop. NVA in *Direct* spoke should be configured to forward the traffic through its Network Interface Card (NIC).
+- *Direct* spokes can connect with each other through a Virtual WAN virtual network connection.
+
+- *Direct* spokes can connect with *indirect* spokes through virtual network peering.
+- *Indirect* spokes can connect with *direct* spokes through virtual network peering.
+- *Indirect* spokes can connect with each other through virtual network peering with a *direct* spoke and UDR that are associated with them. A UDR has an *indirect* spoke prefix as the destination network and an NVA in the *direct* spoke as next hop. Configure the NVA in the *direct* spoke to forward the traffic through its network interface card (NIC).
 
 #### Across the tenant
 
-1. *Direct* spoke can connect with cross-tenant *direct* spoke by using Global virtual network Peering.
-1. *Direct* spokes can connect with cross-tenant *Indirect* spokes through Global virtual network peering between *direct* spokes and UDR associated with *direct* spoke. UDR will have cross-tenant *indirect* spoke prefix as destination network and NVA in cross-tenant *direct* spoke as next hop.
-1. *Indirect* spokes can connect with cross-tenant *direct* spokes through Global virtual network Peering between *direct* spoke VNets, UDR associated with themselves with cross-tenant *direct* spoke prefix as destination network and NVA in its own *direct* spoke as next hop.
-1. *Indirect* spokes can connect with cross-tenant *indirect* spokes through Global virtual network Peering between *direct* spoke VNets, UDR associated with themselves with cross-tenant *indirect* spoke prefix as destination network and NVA in its own *direct* spoke as next hop.
+- *Direct* spokes can connect with a cross-tenant *direct* spoke via global virtual network peering.
+
+- *Direct* spokes can connect with cross-tenant *indirect* spokes via global virtual network peering between *direct* spokes and UDRs that are associated with the *direct* spoke. A UDR has a cross-tenant *indirect* spoke prefix as the destination network and an NVA in the cross-tenant *direct* spoke as the next hop.
+- *Indirect* spokes can connect with cross-tenant *direct* spokes via global virtual network peering between *direct* spoke virtual networks and a UDR that's associated with themselves that has a cross-tenant *direct* spoke prefix as the destination network and an NVA in its own *direct* spoke as the next hop.
+- *Indirect* spokes can connect with cross-tenant *indirect* spokes via global virtual network peering between *direct* spoke virtual networks, a UDR that's associated with themselves that has a cross-tenant *indirect* spoke prefix as the destination network and an NVA in its own *direct* spoke as the next hop.
 
 ### Azure to on-premises connectivity
 
-Azure to on-premises connectivity is established using on-premises ExpressRoute circuit and the ExpressRoute gateway of the Virtual WAN. This connectivity is *non-transitive* with the Azure VMware Solution SDDC ExpressRoute connected to same ExpressRoute gateway. It's also *non-transitive* over the global virtual network peering between *direct* spoke virtual network connected to Virtual WAN. *Indirect* spoke connected to Virtual WAN needs to have UDR with on-premises prefix as destination network as NVA running in *direct* spoke as the next hop.
+Use the on-premises ExpressRoute circuit and the ExpressRoute gateway of the Virtual WAN to establish Azure to on-premises connectivity. This connectivity is *non-transitive* with the Azure VMware Solution SDDC ExpressRoute connected to same ExpressRoute gateway. It's also *non-transitive* over the global virtual network peering between *direct* spoke virtual network connected to Virtual WAN. *Indirect* spoke connected to Virtual WAN needs to have UDR with on-premises prefix as destination network as NVA running in *direct* spoke as the next hop.
 
 ## Next steps
 
-See the following guidance about other Azure VMware Solution architectural options:
-
-- [Azure VMware Solution - Network Design Guide](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-design-guide-intro)
-
-## Related resources
-
-Refer to the following related resources:
-
-- [Prepare for connectivity for Azure VMware Solution](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-get-started)
+- [Azure VMware Solution network design guide](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-design-guide-intro)
 - [Networking planning checklist](/azure/azure-vmware/tutorial-network-checklist)
+
+## Related resource
+
+- [Prepare for connectivity for Azure VMware Solution](../../scenarios/azure-vmware/network-get-started.md)
+
