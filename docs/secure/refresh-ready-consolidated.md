@@ -123,3 +123,8 @@ Designing your workloads for resiliency helps ensure that the business is able t
 In the Ready phase, preparing for long-term security sustainment involves ensuring that the foundational elements of your estate adhere to security best practices for the initial workloads, but are also scalable to ensure that as your estate grows and evolves, your security won't be compromised and the management of your security won't become too complex and burdensome to avoid shadow IT behaviors. To that end, in the Ready phase think about how your business goals for the longer term can be accomplished without major architectural redesigns or major overhauls to operational practices. Even if you choose to lay down a much simpler foundation than a landing zone design, ensure that your foundational design can be uplifted to an enterprise architecture without having to redeploy major elements of your estate like the networking or critical workloads. Having a design that can grow as your estate grows while staying secure will be instrumental to the success of your cloud journey.
 
 Review the [Transition an existing Azure environment to the Azure landing zone conceptual architecture](../ready/enterprise-scale/transition.md) article for recommendations on uplifting an existing Azure footprint into a landing zone architecture.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Perform your cloud adoption securely](./refresh-adopt-consolidated.md)

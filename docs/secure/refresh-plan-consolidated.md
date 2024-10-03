@@ -108,7 +108,7 @@ Plan for the long-term sustainment of your security posture by adopting a mindse
 
 - **Security baseline planning:** In order to be able to improve, you must first thoroughly understand your current security posture to establish your baseline and move towards finding areas for improvement. Use an automated tool like [Microsoft's Secure Score](/defender-xdr/microsoft-secure-score-improvement-actions) to establish your baseline quickly while gaining deep insights into areas for improvement.
 
-## Next steps
+## Next step
 
-The [Zero trust framework modernization guide](/security/zero-trust/adopt/rapidly-modernize-security-posture#technical-plans-and-skills-readiness) offers a four-staged approach to defining your baseline and planning your continuous improvement strategies.
-
+> [!div class="nextstepaction"]
+> [Ready your secure cloud estate](./refresh-ready-consolidated.md)

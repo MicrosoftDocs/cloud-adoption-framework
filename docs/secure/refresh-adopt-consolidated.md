@@ -10,8 +10,6 @@ ms.custom: internal, UpdateFrequency2
 
 # Perform your cloud adoption securely
 
-## Introduction
-
 As you implement your cloud estate and move workloads in, having robust security mechanisms and practices in place will help ensure that your workloads will be secure at the outset and you won't have to go back and fill in security gaps once workloads are in production. Building out your security mechansims and practices should be prioritized in the Adopt phase to ensure that workloads are consistently built according to best practices and IT teams are prepared for cloud operations through well-designed policies and procedures.
 
 The guidance provided in this article is applicable whether you're migrating workloads into the cloud or building an entirely new cloud estate. The CAF [Adopt](../adopt/index.md) methodology focuses on the following scenarios: [Migrate](../migrate), [Modernize](../modernize/), [Innovate](../innovate/), and [Relocate](../relocate/). No matter which path you followin the Adopt phase of your cloud journey, the recommendations provided in this article should be considered as you go through the process of building up the foundational elements of your cloud estate and building or migrating workloads.
@@ -243,3 +241,8 @@ Consider the following recommendations to help ensure that the security mechanis
 ### Azure facilitation
 
 **Vulnerability management:** [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) is a comprehensive risk-based vulnerability management solution that helps you identify, assess, remediate, and track all your biggest vulnerabilities across your most critical assets, all in a single solution.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Securely govern your cloud estate](./refresh-govern-consolidated.md)

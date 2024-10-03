@@ -10,8 +10,6 @@ ms.custom: internal, UpdateFrequency2
 
 # Securely manage your cloud estate
 
-## Introduction
-
 The Manage phase of a cloud adoption journey focuses on the ongoing operation of your cloud estate. Maintaining and strenthening your security posture continuously is critical to successfully managing your estate and should be considered the cornerstone of your management practices. If you neglect security in favor of cost savings or performance improvements, you risk exposing your business to threats that could severely damage your business and reverse any short-term benefits that doing so brought. Investing in security mechanisms and practices will set your business up for long-term success by minimizing the risks of detrimental attacks.
 
 This article is a supporting guide to the [Manage](../manage/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
@@ -152,3 +150,9 @@ Continuous improvement is essential for maintaining and enhancing confidentialit
     - *Regularly review access to systems and data:* Access permissions to systems and data stores should happen regularly to ensure that there are no gaps in your access controls and policies. 
 
     - *Integrity training:* As part of your overall training strategy, ensure that employees are trained on your data and system integrity policies and procedures. This training should be mandatory for new hires, with deeper training specific to their roles for those in the security team, and should be regularly recurring for all employees. Educate on the use of DevOps processes for infrastructure as code (IaC) to ensure data accuracy and reliability. DevOps practices, such as version control, continuous integration, and automated testing, help track, audit, and validate changes to the cloud environment's infrastructure before deployment. This is particularly important in maintaining landing zones, as it ensures consistency and integrity in the configuration by providing a systematic way to handle infrastructure changes.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> Review the [Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview) to learn about integrating Zero Trust approaches throughout your cloud adoption journey.
+> Review the Well-Architected Framework's [Security](/azure/well-architected/security) pillar to find workload-focused security guidance.

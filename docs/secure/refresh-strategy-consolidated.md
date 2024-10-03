@@ -143,3 +143,8 @@ As we expand across the globe, our LOB workload must maintain the high performan
 - We must develop secure design patterns to ensure that we can deploy identical infrastructure packages in each new region we expand into efficiently and secure at deployment time. Our [availability](#defining-a-strategy-for-availability) strategy should consider trade-offs that we'll need to make to ensure security isn't compromised by our performance designs and our performance targets are not affected by our security measures.
     
     - We must include system [integrity](#defining-a-strategy-for-integrity) processes and mechanisms in our design patterns to ensure that our systems are protected by default as we deploy our workload in new geographies.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Plan for a secure cloud adoption](./refresh-plan-consolidated.md)

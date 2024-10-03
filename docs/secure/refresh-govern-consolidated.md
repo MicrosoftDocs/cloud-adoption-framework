@@ -10,8 +10,6 @@ ms.custom: internal, UpdateFrequency2
 
 # Securely govern your cloud estate
 
-## Introduction
-
 Security governance bridges your business priorities with technical implementation like architecture, standards, and policy. Governance teams provide oversight and monitoring to sustain and improve security posture over time. These teams also report compliance as required by regulating bodies.
 
 :::image type="content" source="./media/governance-structure.png" alt-text="Security Governance" lightbox="./media/governance-structure-popout.png":::
@@ -140,3 +138,7 @@ Modern Service Management (MSM) encompasses a set of practices and tools designe
 
 - *Continuous monitoring and improvement:* MSM emphasizes continuous monitoring of the cloud environment to identify and address potential issues proactively. This approach supports ongoing optimization and improvement of IT services, ensuring they remain aligned with business objectives.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Securely manage your cloud estate](./refresh-manage-consolidated.md)

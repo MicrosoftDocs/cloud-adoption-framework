@@ -216,3 +216,8 @@ When an organization deploys and operationalizes a Web Application Firewall (WAF
     1. The *Cloud Governance team member* reviews the WAF deployment and management processes to ensure they align with organizational policies and standards
     
 By collaborating effectively, these roles ensure that the WAF is not only deployed correctly but also continuously monitored, managed, and improved to protect the organization's web applications from evolving threats.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Integrate security in your cloud adoption strategy](./refresh-strategy-consolidated.md)
