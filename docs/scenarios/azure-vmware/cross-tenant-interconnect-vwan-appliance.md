@@ -65,18 +65,18 @@ Connectivity between two Azure VMware Solution SDDCs that you deploy across tena
 
 In the preceding screenshot, SDDC hosts are deployed in pod 2 and 3. Repeat the same process for other SDDC. Determine whether they share any common pods.
 
-Once the pod sharing between SDDCs is identified, proceed with one of the options discussed below.
+After you identify the pods that SDDCs share, do one of the following options:
 
-1. Azure VMware Solution Interconnect (Globalreach): Use this option when two SDDCs are in same Azure region AND don't share any common pod between them. An ExpressRoute circuit Globalreach connection between two SDDC ExpressRoute circuits is established in this option. This option also enables *transitive* - meaning routes learnt by SDDC ExpressRoute circuit from SDDC and Virtual WAN and its direct spoke VNets - are also advertised across the tenant to other SDDC ExpressRoute circuit and SDDC and Virtual WAN and direct spoke VNets connected to it.
+1. **Azure VMware Solution Interconnect (Globalreach):** Use this option when two SDDCs are in same Azure region *and* don't share any common pods between them. This option establishes an ExpressRoute circuit Globalreach connection between two SDDC ExpressRoute circuits. This option also enables *transitive* connectivity, which means that routes that the SDDC ExpressRoute circuit learns from the SDDC, Virtual WAN, and its direct spoke virtual networks are advertised across the tenant to other SDDC ExpressRoute circuits and SDDC, Virtual WAN, direct spoke virtual networks that are connected to the circuits.
 
-1. Azure VMware Solution Interconnect (Non-Globalreach): Use this option when two SDDCs are in same Azure region AND also share a common pod between them. There's no cross-tenant *transitive* connectivity for routes advertised by Virtual WAN and its direct spoke VNets in this option.
+1. **Azure VMware Solution Interconnect (Non-Globalreach):** Use this option when two SDDCs are in same Azure region *and* also share a common pod between them. This option doesn't provide cross-tenant *transitive* connectivity for routes that are advertised by Virtual WAN and its direct spoke virtual networks.
 
-1. Azure VMware Solution ExpressRoute GlobalReach: Use this option when two SDDCs are in different Azure regions. Whether they share a pod or not, doesn't matter in this case. There's a cross-tenant *transitive* connectivity for routes advertised by Virtual WAN and its direct spoke VNets in this option.
+1. **Azure VMware Solution ExpressRoute GlobalReach:** Use this option when two SDDCs are in different Azure regions whether they share a pod or not. This option provides cross-tenant *transitive* connectivity for routes that are advertised by Virtual WAN and its direct spoke virtual networks.
 
-Any of the options discussed above can establish network connectivity between two SDDCs. However, option used for such connectivity also affects the Azure VMware Solution SDDC to Azure connectivity as discussed in later sections of this article.
+Any of these options can establish network connectivity between two SDDCs. But the option that you choose affects the Azure VMware Solution SDDC to Azure connectivity.
 
 > [!NOTE]
-> While it is possible to establish network connectivity between two SDDCs using [self-service model](/azure/azure-vmware/connect-multiple-private-clouds-same-region#add-connection-between-private-clouds), in case of SDDCs running on stretched clusters, a [support ticket](/azure/azure-vmware/deploy-vsan-stretched-clusters#what-are-the-limitations-i-should-be-aware-of) should be raised.
+> You can use a [self-service model](/azure/azure-vmware/connect-multiple-private-clouds-same-region#add-connection-between-private-clouds) to establish network connectivity between two SDDCs. But if SDDCs run on stretched clusters, you should raise a [support ticket](/azure/azure-vmware/deploy-vsan-stretched-clusters#what-are-the-limitations-i-should-be-aware-of).
 
 ### Azure VMware Solution SDDC to Azure connectivity
 
