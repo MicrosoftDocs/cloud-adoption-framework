@@ -16,49 +16,49 @@ An AI Center of Excellence (AI CoE) is a dedicated team or organizational struct
 
 An AI CoE is a centralized hub within an organization that focuses on:
 
-- Strategic alignment. Ensuring that AI projects align with business goals.
-- Resource optimization. Centralizing AI tools, technologies, and expertise.
-- Best practices. Establishing standards and methodologies for AI development.
-- Governance. Overseeing compliance, ethical considerations, and risk management.
-- Cultural transformation. Promoting an AI-driven mindset across the organization.
+- Ensuring that AI projects align with business goals.
+- Centralizing AI tools, technologies, and expertise.
+- Establishing standards and methodologies for AI development.
+- Overseeing compliance, ethical considerations, and risk management.
+- Promoting an AI-driven mindset across the organization.
 
 ## Why is an AI CoE important?
 
 An AI CoE handles the following essential activities to help you adopt and manage AI successfully:
 
-- Accelerates AI adoption. Streamlines the implementation of AI initiatives.
-- Enhances efficiency. Reduces duplication of efforts by centralizing resources.
-- Improves return on investment. Focuses on high-impact projects that offer significant business value.
-- Mitigates risks. Establishes governance to manage ethical and compliance issues.
-- Fosters innovation. Encourages collaboration and knowledge sharing.
+- Streamlines the implementation of AI initiatives.
+- Reduces duplication of efforts by centralizing resources.
+- Focuses on high-impact projects that offer significant business value.
+- Establishes governance to manage ethical and compliance issues.
+- Encourages collaboration and knowledge sharing.
 
 ## Define the AI CoE function
 
 The first step in building an AI CoE is to clearly define its role and objectives. The CoE should focus on operationalizing the following areas.
 
-- *Business strategy*:
+- *Operationalize AI business strategy*:
     - Identify and prioritize business goals that AI can support.
     - Select high-impact use cases that align with organizational objectives.
     - Establish measurable key performance indicators (KPIs)
  to track AI success and business value.
     - Define a roadmap to enable employees to engage with AI platforms and improve their skills.
 
-- *Technology strategy*:
+- *Operationalize AI technology strategy*:
     - Design an AI-ready platform and data architecture.
     - Create a decision framework for determining when to build AI solutions in-house versus buying off-the-shelf tools.
     - Plan for scalable data storage, compute, and application hosting.
 
-- *AI strategy and experience*:
+- *Operationalize AI development*:
     - Develop customer-centric AI solutions to ensure that the right models are applied to the right use cases.
     - Create a process for building, testing, and deploying AI models across various business units.
 
-- *Organization and culture*:
+- *Operationalize an AI culture*:
     - Establish a formal operating model to oversee AI activities.
     - Secure executive sponsorship to ensure commitment and drive organizational change.
     - Create a structured learning and development pathway to upskill employees.
     - Implement clear governance policies on data usage, security, and ethical AI practices.
 
-- *AI governance*:
+- *Operationalize AI governance*:
     - Develop controls and accountability structures to oversee AI ethics, data privacy, and security.
     - Create a governance model for responsible AI use across the organization.
 
