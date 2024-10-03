@@ -1,5 +1,5 @@
 ---
-title: AI Ready – Recommendations to prepare an AI foundation
+title: AI ready – Recommendations to prepare an AI foundation
 description: Optimize your AI foundation with Azure's best practices for region selection, governance, networking, and connectivity.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,11 +7,11 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Ready – Recommendations to prepare an AI foundation
+# AI ready – Recommendations to prepare an AI foundation
 
 This article provides recommendations for making key design and process decisions that all your AI workloads inherit. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, governance baselines, networking, and connectivity to align with your [AI centralization and endpoint sharing](./plan.md#plan-for-ai-centralization-and-endpoint-sharing) approach.
 
-:::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing AI workloads within a resource hierarchy using management groups and subscriptions, organized in a hub-and-spoke architecture. It shows where internal and external users connect to different AI workload types. The architecture illustrates centralized and decentralized AI workload deployment, highlighting internal and internet-facing workloads, with security and networking components for resource management across regions. Centralized AI resources are shared, while intelligent apps are deployed within individual subscriptions." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
+:::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram that shows AI workloads within a resource hierarchy that use management groups and subscriptions and are organized in a hub-and-spoke architecture. It shows where internal and external users connect to different AI workload types. The architecture illustrates centralized and decentralized AI workload deployment, highlighting internal and internet-facing workloads, with security and networking components for resource management across regions. Centralized AI resources are shared, while intelligent apps are deployed within individual subscriptions." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
 *Figure 1. Resource hierarchy for AI workloads. It shows a hub and spoke approach with internet-facing and internal applications. It depicts centralized and decentralized AI endpoints.*
 
 ## Prepare AI deployment regions
@@ -62,7 +62,7 @@ This guidance provides recommendations on how different end users should connect
 
 - *Connect to on-premises data.* For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection. Azure [ExpressRoute](/azure/expressroute/expressroute-introduction) is ideal for high data volumes, real-time processing, or workloads that require consistent performance. It has [FastPath](/azure/expressroute/about-fastpath) feature that improves data path performance. Use [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) for moderate data volumes, infrequent data transfer, or when public internet access is required. It’s simpler to set up and cost-effective for smaller datasets than ExpressRoute. For more information, see [Connect an on-premises network to Azure](/azure/architecture/reference-architectures/hybrid-networking/).
 
-- *Prepare domain name resolution services.* Use private endpoints to protect AI workloads by assigning them private IP addresses for communication. [Integrate private endpoints with DNS](/azure/private-link/private-endpoint-dns-integration) for proper DNS resolution and successful private endpoint functionality. Deploy Azure DNS infrastructure as part of your [Azure landing zone](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources) and [configure conditional forwarders](/azure/private-link/private-endpoint-dns) from existing DNS services for the appropriate zones. For more information,see, [Private Link and DNS integration at scale for Azure landing zones](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
+- *Prepare domain name resolution services.* Use private endpoints to protect AI workloads by assigning them private IP addresses for communication. [Integrate private endpoints with DNS](/azure/private-link/private-endpoint-dns-integration) for proper DNS resolution and successful private endpoint functionality. Deploy Azure DNS infrastructure as part of your [Azure landing zone](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources) and [configure conditional forwarders](/azure/private-link/private-endpoint-dns) from existing DNS services for the appropriate zones. For more information, see, [Private Link and DNS integration at scale for Azure landing zones](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
 ## Implementation options
 
@@ -70,9 +70,9 @@ Choosing the right approach for the foundation of AI workloads involves not only
 
 ### Deploy a foundation with Azure landing zone
 
-Azure landing zone provides a starting point for preparing your Azure environment. Deploy AI workload resources such as Azure AI Studio, Azure Machine Learning, Azure AI services, Azure Virtual Machines, and supporting resources to an Application Landing Zone (*see figure 2: "Landing zone A2 subscription"*). You can use the various implementations for Azure Landing Zone. Ensure to apply the policies relevant to your AI deployment as you're using the Azure Landing Zone accelerator.
+Azure landing zone provides a starting point for preparing your Azure environment. Deploy AI workload resources, such as Azure AI Studio, Azure Machine Learning, Azure AI services, Azure Virtual Machines, and supporting resources to an Application Landing Zone. For more information, see figure 2: "Landing zone A2 subscription". You can use the various implementations for Azure Landing Zone. Make sure to apply the policies relevant to your AI deployment when you use the Azure Landing Zone accelerator.
 
-:::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
+:::image type="content" source="./images/alz-ai.svg" alt-text="Diagram that shows AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
 *Figure 2. AI applications in the context of an Azure landing zone.*
 
 ### Deploy a custom environment
