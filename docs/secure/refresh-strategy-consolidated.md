@@ -73,3 +73,73 @@ Availability requirements and objectives span across the entire cloud estate, in
 The journey towards a modern, robust security posture doesn't end with the initial implementation. In order to keep up with new threats, your security practices must be continuously reviewed and refined while maintaining a strict adherence to standards. Sustaining security is an ongoing effort to run day-to-day operations to the expectations your organization has set for itself while preparing for emerging threats and technological changes. Adoption of this principle will codify your continuous improvement approach, providing security teams with their guiding standards to maintain vigilant security practices and giving stakeholders piece of mind that security remains a cornerstone tenet of the cloud adoption journey. 
 
 Developing a sustainment strategy focuses on learning about how your overall security strategy performs in the real world and applying learnings to evolve it continuously. A sustainment strategy should incorporate long term business goals to ensure that long term security goals are aligned. With these goals understood, the sustainment strategy defines how the security posture must evolve to stay in alignment.
+
+## Example strategy
+
+Your organization should develop your cloud adoption strategy in the way that works best for the organization, but the following example shows how you might incorporate the guidance offered in this article into a narrative artifact, like a Word document.
+
+### Motivations
+
+The motivation for moving to the cloud is modernize our line-of-business (LOB) workload and take advantage of Microsoft's worldwide cloud infrastructure to efficiently scale out across the globe as our customer base grows.
+
+**Business considerations:**
+
+- *Board and senior leadership buy-in:* We must present an executive summary of our cloud adoption plan with financial projections to the board for approval. The executive summary must be co-developed by senior leadership to ensure that the leadership team is in agreement about the high level plan.
+
+**Security considerations:**
+
+- *Technical readiness:* Our IT and Security teams will need up-skilling to successfully define our migration plan, and we may need to add new [teams and roles](./refresh-teams-and-roles.md) as we prepare to move into the cloud.
+
+### Business outcome - global reach
+
+We are currently operating only in North America. Our five-year plan is to expand into Europe and Asia. Leveraging Microsoft's global Azure cloud will allow us to build out the necessary infrastructure to deliver our LOB application in Europe and Asia efficiently.
+
+- **Business owner:** COO
+
+- **Technical owner:** CTO
+
+- **Security owner:** CISO
+
+**Business considerations:**
+
+- *Budget forecasting:* As part of developing our cloud migration plan, IT, Security, and Sales must co-develop budget forecasting models with the Finance department to ensure that stakeholders understand the potential costs of expanding into Europe and Asia.
+
+**Security considerations:**
+
+- *Increased attack surfaces:* Expanding across the globe will dramatically increase our attack surfaces by having publicly exposed systems in mulitple regions. We need to rapidly [modernize our security posture](#security-posture-mondernization). We will follow the [Zero Trust guidance](/security/zero-trust/zero-trust-ramp-overview) to ensure we follow best practices.
+
+- *Cloud-focused threats:* Our move to the cloud will bring new threats that we haven't been exposed to. These threats are not limited to malicious attacks on our systems. The cloud provider is also a major target for threats and incidents affecting the provider can have downstream affects on our systems or business. We need to review our [incident preparedness and response](#defining-a-strategy-for-incident-preparedness-and-response) processes and incorporate necessary improvements as part of our plan.
+
+### Business outcome - data innovation
+
+As our global expansion progresses, our data estate will grow exponentially and handling that data will be unsustainable without adopting cloud-scale data and analytics technologies.
+
+- **Business owner:** CEO
+
+- **Technical owner:** CTO
+
+- **Security owner:** CISO
+
+**Business considerations:**
+
+- *Local compliance requirements:* We must work with experts in local compliance regulations to ensure that the business is ready to support the technical teams for maintaining compliance. This may mean setting up business entities in certain geographies or using sovereign clouds in countries like Germany and China.
+
+**Security considerations:**
+
+- *Data confidentiality and integrity at scale:* We must review and uplift our [confidentialiy](#defining-a-strategy-for-confidentiality) and [integrity](#defining-a-strategy-for-integrity) strategies and mechanisms to ensure that as we adopt new technologies and move into new geographies, we do not put our data or our customers' data at risk of corruption, breach, or loss, and that we comply with regulatory frameworks by default.
+
+- *Zero Trust access and authorization strategy:* We must adopt the Zero Trust approach to ensure that our access and authorization strategy meets modern best practices and is manageable as we expand globally.
+
+### Business outcome - performance and reliability
+
+As we expand across the globe, our LOB workload must maintain the high performance and zero-downtime availability our customer's rely on.
+
+**Business considerations:**
+
+- *Maintaining performance and reliability throughout the migration:** Our customers have high expectations for our LOB application and we cannot afford to suffer reputational and financial damage if application experiences downtime or prolonged degraded service over the course of the migration to the cloud. Involving our Microsoft support team to help design the migration plan and engage on the migration will minimize the risks of downtime or degraded service.
+
+**Security considerations:**
+
+- We must develop secure design patterns to ensure that we can deploy identical infrastructure packages in each new region we expand into efficiently and secure at deployment time. Our [availability](#defining-a-strategy-for-availability) strategy should consider trade-offs that we'll need to make to ensure security isn't compromised by our performance designs and our performance targets are not affected by our security measures.
+    
+    - We must include system [integrity](#defining-a-strategy-for-integrity) processes and mechanisms in our design patterns to ensure that our systems are protected by default as we deploy our workload in new geographies.

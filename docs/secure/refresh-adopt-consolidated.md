@@ -14,6 +14,8 @@ ms.custom: internal, UpdateFrequency2
 
 As you implement your cloud estate and move workloads in, having robust security mechanisms and practices in place will help ensure that your workloads will be secure at the outset and you won't have to go back and fill in security gaps once workloads are in production. Building out your security mechansims and practices should be prioritized in the Adopt phase to ensure that workloads are consistently built according to best practices and IT teams are prepared for cloud operations through well-designed policies and procedures.
 
+The guidance provided in this article is applicable whether you're migrating workloads into the cloud or building an entirely new cloud estate. The CAF [Adopt](../adopt/index.md) methodology focuses on the following scenarios: [Migrate](../migrate), [Modernize](../modernize/), [Innovate](../innovate/), and [Relocate](../relocate/). No matter which path you followin the Adopt phase of your cloud journey, the recommendations provided in this article should be considered as you go through the process of building up the foundational elements of your cloud estate and building or migrating workloads.
+
 This article is a supporting guide to the [Adopt](../adopt/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
 ## Security posture modernization adoption
@@ -236,7 +238,7 @@ Consider the following recommendations to help ensure that the security mechanis
 
 - **Utilize the MITRE ATT&CK knowledge base:** Use the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base to help develop threat models and methodologies for common real-world attack tactics and techniques.
  
-- **Shift left:** Use segregated environments with different access levels for pre-production vs production. This approach will help you shift left, addign security concerns to all phases of development and providing flexibility in lower environments.
+- **Shift left:** Use segregated environments with different access levels for pre-production vs production. This approach will help you shift left, adding security concerns to all phases of development and providing flexibility in lower environments.
 
 ### Azure facilitation
 

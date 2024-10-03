@@ -33,8 +33,8 @@ This CAF Secure guidance is one component of a larger holistic set of Microsoft 
 Each article looks at several topics as they relate to the methodology with which they align:
 
 - Security posture modernization
-- The CIA Triad (Confidentiality, Integrity and Availability)
 - Incident preparation and response
+- The CIA Triad (Confidentiality, Integrity and Availability)
 - Security posture sustainment
 
 ## Security posture modernization
