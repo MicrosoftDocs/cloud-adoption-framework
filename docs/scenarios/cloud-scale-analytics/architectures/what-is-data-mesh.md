@@ -81,7 +81,7 @@ You can successfully implement your self-serve platform by adopting the practice
 
 ## Federated governance
 
-When you adopt a self-serve distributed data platform, you must place an increased emphasis on governance. Lack of governance leads to silos and data duplication across your data domains. Federate your governance, as people who understand the governance need exist within your domain aligned teams and amongst data owners.
+When you adopt a self-serve distributed data platform, you must place an increased emphasis on governance. Lack of governance leads to silos and data duplication across your data domains. Federate your governance, as people who understand the governance need exist within your domain aligned teams and among data owners.
 
 To create your federated governance, implement automated policies around both platform and data needs. Use a high degree of automation for testing and monitoring. Adopt a code-first implementation strategy to handle standards, policies, data products, and platform deployment as code.
 
