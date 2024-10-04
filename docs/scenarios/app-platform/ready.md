@@ -19,7 +19,7 @@ With Azure landing zones, you can start with a small implementation and expand o
 
 When preparing any environment for sustained cloud adoption, we use the [Azure landing zones](../../ready/landing-zone/index.md) conceptual architecture to represent what a target end state should look like in Azure, as pictured below.
 
-[![Diagram that shows a conceptual architecture of an Azure landing zone](../../_images/ready/azure-landing-zone-architecture-diagram-hub-spoke.svg)](../../_images/ready/azure-landing-zone-architecture-diagram-hub-spoke.svg#lightbox)
+[![Diagram that shows a conceptual architecture of an Azure landing zone.](../../_images/ready/azure-landing-zone-architecture-diagram-hub-spoke.svg)](../../_images/ready/azure-landing-zone-architecture-diagram-hub-spoke.svg#lightbox)
 
 *For more information on the design areas labeled A-I in the visual, see [environment design areas](../../ready/landing-zone/design-areas.md#environment-design-areas).*
 
