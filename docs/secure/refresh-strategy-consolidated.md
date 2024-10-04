@@ -54,7 +54,7 @@ When defining a strategy for adopting confidentiality in an enterprise cloud env
 
 Maintaining data and system integrity requires many of the same strategies as those suggested for confidentiality, like well-designed data protection controls and risk management. These strategies should be augmented with additional considerations for data and system integrity:
 
-- **Prioritize data and system integrity:** Maintaining data and system integrity should be a key tenet in business requirements and objectives. To that end, prioritize security controls and operational practices that support a high level of integrity. In particular, embrace automation through tooling for as much of you data and system integrity management as practical. Automation can be used for many functions related to integrity like:
+- **Prioritize data and system integrity:** Maintaining data and system integrity should be a key tenet in business requirements and objectives. To that end, prioritize security controls and operational practices that support a high level of integrity. In particular, embrace automation through tooling for as much of your data and system integrity management as practical. Automation can be used for many functions related to integrity like:
 
     - *Policy management*
 
@@ -70,7 +70,7 @@ Availability requirements and objectives span across the entire cloud estate, in
 
 ## Defining a strategy for security posture sustainment
 
-The journey towards a modern, robust security posture doesn't end with the initial implementation. In order to keep up with new threats, your security practices must be continuously reviewed and refined while maintaining a strict adherence to standards. Sustaining security is an ongoing effort to run day-to-day operations to the expectations your organization has set for itself while preparing for emerging threats and technological changes. Adoption of this principle will codify your continuous improvement approach, providing security teams with their guiding standards to maintain vigilant security practices and giving stakeholders piece of mind that security remains a cornerstone tenet of the cloud adoption journey. 
+The journey towards a modern, robust security posture doesn't end with the initial implementation. In order to keep up with new threats, your security practices must be continuously reviewed and refined while maintaining a strict adherence to standards. Sustaining security is an ongoing effort to run day-to-day operations to the expectations your organization has set for itself while preparing for emerging threats and technological changes. Adoption of this principle will codify your continuous improvement approach, providing security teams with their guiding standards to maintain vigilant security practices and giving stakeholders peace of mind that security remains a cornerstone tenet of the cloud adoption journey. 
 
 Developing a sustainment strategy focuses on learning about how your overall security strategy performs in the real world and applying learnings to evolve it continuously. A sustainment strategy should incorporate long term business goals to ensure that long term security goals are aligned. With these goals understood, the sustainment strategy defines how the security posture must evolve to stay in alignment.
 
@@ -80,7 +80,7 @@ Your organization should develop your cloud adoption strategy in the way that wo
 
 ### Motivations
 
-The motivation for moving to the cloud is modernize our line-of-business (LOB) workload and take advantage of Microsoft's worldwide cloud infrastructure to efficiently scale out across the globe as our customer base grows.
+The motivation for moving to the cloud is to modernize our line-of-business (LOB) workload and take advantage of Microsoft's worldwide cloud infrastructure to efficiently scale out across the globe as our customer base grows.
 
 **Business considerations:**
 
@@ -108,7 +108,7 @@ We are currently operating only in North America. Our five-year plan is to expan
 
 - *Increased attack surfaces:* Expanding across the globe will dramatically increase our attack surfaces by having publicly exposed systems in mulitple regions. We need to rapidly [modernize our security posture](#security-posture-mondernization). We will follow the [Zero Trust guidance](/security/zero-trust/zero-trust-ramp-overview) to ensure we follow best practices.
 
-- *Cloud-focused threats:* Our move to the cloud will bring new threats that we haven't been exposed to. These threats are not limited to malicious attacks on our systems. The cloud provider is also a major target for threats and incidents affecting the provider can have downstream affects on our systems or business. We need to review our [incident preparedness and response](#defining-a-strategy-for-incident-preparedness-and-response) processes and incorporate necessary improvements as part of our plan.
+- *Cloud-focused threats:* Our move to the cloud will bring new threats that we haven't been exposed to. These threats are not limited to malicious attacks on our systems. The cloud provider is also a major target for threats and incidents affecting the provider can have downstream effects on our systems or business. We need to review our [incident preparedness and response](#defining-a-strategy-for-incident-preparedness-and-response) processes and incorporate necessary improvements as part of our plan.
 
 ### Business outcome - data innovation
 
