@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 09/05/2024
+ms.date: 10/04/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -13,6 +13,29 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## September 2024
+
+### Updated articles
+
+We reviewed and made updates to the following articles to reflect the latest product naming and guidance:
+
+- [Data catalog](../scenarios/cloud-scale-analytics/govern-data-catalog.md)
+- [Data lineage](../scenarios/cloud-scale-analytics/govern-lineage.md)
+- [Data quality](../scenarios/cloud-scale-analytics/govern-data-quality.md)
+- [Manage master data](../scenarios/cloud-scale-analytics/govern-master-data.md)
+- [Metadata standards](../scenarios/cloud-scale-analytics/govern-metadata-standards.md)
+
+We made updates to the following articles for clarity and accessibility:
+
+- [Adopt responsible and trusted AI principles](../strategy/responsible-ai.md)
+- [Business commitment in cloud management](../manage/considerations/commitment.md)
+- [Migrate Oracle workloads to Azure](../scenarios/oracle-iaas/oracle-migration-planning.md)
+- [Network connectivity for Azure Arc-enabled servers](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md)
+- [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md)
+
+- [SAP on Azure landing zone accelerator](../scenarios/sap/enterprise-scale-landing-zone.md): We added guidance on best practices for zone resiliency.
 
 ## August 2024
 
@@ -354,37 +377,5 @@ Learn how to [select Azure regions for your cloud footprint](../ready/azure-setu
 ### Network topology and connectivity for Azure Virtual Desktop
 
 The [updates to the Network topology and connectivity for Azure Virtual Desktop article](../scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity.md) describe two new scenarios to help you understand how to manage network topology and connectivity at scale in Azure Virtual Desktop. The first scenario describes a hub-and-spoke architecture with hybrid connectivity over managed networks. The second scenario describes a hub-and-spoke architecture with public networks. Both scenarios use Remote Desktop Protocol Shortpath (RDP Shortpath).
-
-## September 2023
-
-### Plan for IP addressing
-
-This article was updated with relevant information about IPv4 exhaustion and IPAM (IP address management) tools.
-
-- [Plan for IP addressing](../ready/azure-best-practices/plan-for-ip-addressing.md).
-
-### Guidance for documenting and deploying alerts
-
-To support the imminent general availability of Azure Monitor baseline alerts for an Azure landing zone, we have created Cloud Architecture Framework documentation about baseline alerts. Find out what baseline alerts are and where to go for more information about how to enhance your Azure platform by using Azure Monitor alerts.
-
-- [Monitor Azure platform landing zone components](../ready/landing-zone/design-area/management-monitor.md)
-
-- [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md)
-
-### Azure VMware Solution network design guides
-
-These guides describe the Microsoft-recommended approach to help you design network connectivity for Azure VMware Solution private clouds. They explore four design areas: connectivity with on-premises sites, connectivity with Azure virtual networks, inbound internet connectivity, and outbound internet connectivity. Each design area is covered in a dedicated article, which presents architectural options, including their pros and cons. There are also two articles that cover the basics of Azure VMware Solution networking and guidance on how to prioritize requirements and related design areas.
-
-- [Azure VMware Solution network design guide](../scenarios/azure-vmware/network-design-guide-intro.md)
-
-- [Azure VMware Solution network design guide: Inbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity.md)
-
-- [Azure VMware Solution network design guide: Networking basics](../scenarios/azure-vmware/azure-vmware-solution-network-basics.md)
-
-- [Azure VMware Solution network design guide: Outbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-outbound-connectivity.md)
-
-- [Azure VMware Solution network design guide: Connectivity with on-premises sites](../scenarios/azure-vmware/on-premises-connectivity.md)
-
-- [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](../scenarios/azure-vmware/virtual-network-connectivity.md)
 
 <!-- docutune:ignoreNextStep -->
