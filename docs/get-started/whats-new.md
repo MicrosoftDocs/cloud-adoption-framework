@@ -18,6 +18,8 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Updated articles
 
+- [SAP on Azure landing zone accelerator](../scenarios/sap/enterprise-scale-landing-zone.md): We added guidance on best practices for zone resiliency.
+
 We reviewed and made updates to the following articles to reflect the latest product naming and guidance:
 
 - [Data catalog](../scenarios/cloud-scale-analytics/govern-data-catalog.md)
@@ -35,13 +37,11 @@ We made updates to the following articles for clarity and accessibility:
 - [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
 - [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md)
 
-- [SAP on Azure landing zone accelerator](../scenarios/sap/enterprise-scale-landing-zone.md): We added guidance on best practices for zone resiliency.
-
 ## August 2024
 
 ### Updated articles
 
-- [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
+- [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
 - [Landing zone identity and access management](../ready/landing-zone/design-area/identity-access-landing-zones.md): Find new guidance about built-in and custom RBAC roles, least-privelage access, and conditions.
 - [Business commitment in cloud management](../manage/considerations/commitment.md): We updated the service-level agreement references to service-level objective references.
 - [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Explore new updates about network security group rules and Oracle Data Safe.
@@ -69,7 +69,7 @@ This month, we introduced new articles that have guidance for Red Hat Enterprise
 - [Resource organization for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/resource-organization.md): Learn key tactics for how to choose management groups and subscriptions that will help to ensure that you effectively govern and manage resources for your RHEL deployment.
 - [Security for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/security.md): See how you can design your security to target multiple areas to protect your RHEL systems. Learn how to create a secure and resilient cloud environment by implementing a strategic approach that applies both Azure and Red Hat security mechanisms.
 - [Management and monitoring for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/management-monitoring.md): Learn about best practices for effective management and monitoring in your RHEL on Azure infrastructure.
-- [Governance and compliance for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/governance-compliance.md): Learn about design considerations and recommendations for governance and compliance in a RHEL on Azure infrastructure. Discover key tactics for establishing efficient and effective governance and compliance in a cloud environment.
+- [Governance and compliance for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/governance-compliance.md): Learn about design considerations and recommendations for governance and compliance in an RHEL on Azure infrastructure. Discover key tactics for establishing efficient and effective governance and compliance in a cloud environment.
 - [Platform automation for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/platform-automation-devops.md): Learn about the tools, features, and services you can use to automate various tasks and manage the RHEL lifecycle within your Azure environment. Discover how to implement automation to improve the efficiency and reliability of your RHEL on Azure infrastructure.
 
 #### Oracle
@@ -258,7 +258,7 @@ Find new articles about Azure landing zones in the Ready methodology.
 
 - [Cloud adoption scenarios](../scenarios/index.md): Extensive revisions help you find scenarios that are relevant to your organization's cloud adoption journey.
 - [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): Find updates about the data-collection and alert-processing rules.
-- [Zero trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): Review a new multitenant architecture diagram and information about Microsoft Entra ID Protection.
+- [Zero Trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): Review a new multitenant architecture diagram and information about Microsoft Entra ID Protection.
 - [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md): Explore updates related to ExpressRoute.
 - [Manufacturing HPC storage in Azure](../scenarios/azure-hpc/manufacturing/storage.md): Learn about updates related to Azure Managed Lustre.
 
