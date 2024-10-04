@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 As you implement your cloud estate and move workloads in, having robust security mechanisms and practices in place will help ensure that your workloads will be secure at the outset and you won't have to go back and fill in security gaps once workloads are in production. Building out your security mechansims and practices should be prioritized in the Adopt phase to ensure that workloads are consistently built according to best practices and IT teams are prepared for cloud operations through well-designed policies and procedures.
 
-The guidance provided in this article is applicable whether you're migrating workloads into the cloud or building an entirely new cloud estate. The CAF [Adopt](../adopt/index.md) methodology focuses on the following scenarios: [Migrate](../migrate), [Modernize](../modernize/), [Innovate](../innovate/), and [Relocate](../relocate/). No matter which path you followin the Adopt phase of your cloud journey, the recommendations provided in this article should be considered as you go through the process of building up the foundational elements of your cloud estate and building or migrating workloads.
+The guidance provided in this article is applicable whether you're migrating workloads into the cloud or building an entirely new cloud estate. The CAF [Adopt](../adopt/index.md) methodology focuses on the following scenarios: [Migrate](../migrate), [Modernize](../modernize/), [Innovate](../innovate/), and [Relocate](../relocate/). No matter which path you follow in the Adopt phase of your cloud journey, the recommendations provided in this article should be considered as you go through the process of building up the foundational elements of your cloud estate and building or migrating workloads.
 
 This article is a supporting guide to the [Adopt](../adopt/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
@@ -34,7 +34,7 @@ Consider the following recommendations as you work towards modernizing your secu
 
     - Scaling
 
-- **Zero Trust access and authorization controls:** Strong access controls and identity management systems ensure that only authorized personnel have access to critical systems and data. This reduces the risk of malicious activities that could disrupt services. Standardizing on strictly enforced role-based access controls (RBAC) and requiring multi-factor authentication (MFA) helps prevent unauthorized access to your systems that could disrupt service availability. Refer to the [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) article for detailed guidance on this topic.
+- **Zero Trust access and authorization controls:** Strong access controls and identity management systems ensure that only authorized personnel have access to critical systems and data. This approach reduces the risk of malicious activities that could disrupt services. Standardizing on strictly enforced role-based access controls (RBAC) and requiring multifactor authentication (MFA) helps prevent unauthorized access to your systems that could disrupt service availability. Refer to the [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) article for detailed guidance on this topic.
 
 ### Change management institutionalization
 
@@ -52,9 +52,9 @@ By incorporating these ACM methodologies and best practices, organizations can e
 
 ### Azure facilitation
 
-- **Establishing a security baseline:** [Microsoft Secure Score](/defender-xdr/microsoft-secure-score-improvement-actions) can help you establish baselines with tangible recommendations for improvements. It is offered as part of the Microsoft Defender XDR suite and can analyze the security of many [Microsoft and third-party products](/defender-xdr/microsoft-secure-score#products-included-in-secure-score).
+- **Establishing a security baseline:** [Microsoft Secure Score](/defender-xdr/microsoft-secure-score-improvement-actions) can help you establish baselines with tangible recommendations for improvements. It's offered as part of the Microsoft Defender XDR suite and can analyze the security of many [Microsoft and third-party products](/defender-xdr/microsoft-secure-score#products-included-in-secure-score).
 
-- **Infrastructure deployment automation:** [Azure Resource Manager templates (ARM templates)](/azure/azure-resource-manager/templates/overview) and [Bicep](/azure/azure-resource-manager/bicep/overview) are Azure-native tools for deploying infrastructure-as-code (IaC) by using declarative syntax. ARM templates are written in JSON, whereas Bicep is a domain-specific language. Both can easily be integrated into [Azure pipelines](/azure/azure-resource-manager/bicep/add-template-to-azure-pipelines) or [GitHub Actions](/devops/deliver/iac-github-actions) CI/CD pipelines.
+- **Infrastructure deployment automation:** [Azure Resource Manager templates (ARM templates)](/azure/azure-resource-manager/templates/overview) and [Bicep](/azure/azure-resource-manager/bicep/overview) are Azure-native tools for deploying infrastructure-as-code (IaC) by using declarative syntax. ARM templates are written in JSON, whereas Bicep is a domain-specific language. Both can easily be integrated into [Azure Pipelines](/azure/azure-resource-manager/bicep/add-template-to-azure-pipelines) or [GitHub Actions](/devops/deliver/iac-github-actions) CI/CD pipelines.
 
     - [Terraform](/azure/developer/terraform/overview) is another declarative IaC tool that's fully supported in Azure. It can be used to deploy and manage infrastructure, and can be integrated into your CI/CD pipeline.
 
@@ -98,11 +98,11 @@ By incorporating these ACM methodologies and best practices, organizations can e
 
 ## Incident preparedness and response adoption
 
-After establishing your landing zone or other platform design with secure network segmentation and well-designed subscription and resource organization, you can begin implementation with a focus on incident preparedness and response. In this phase, building out your preparedness and response mechanisms including your incident response plan will ensure that cloud estate and your operational practices align with business goals. The adoption phase should approach the theme of incident preparedness and response from two perspective: Threat readiness and mitigation and infrastructure and application security.
+After establishing your landing zone or other platform design with secure network segmentation and well-designed subscription and resource organization, you can begin implementation with a focus on incident preparedness and response. In this phase, building out your preparedness and response mechanisms including your incident response plan will ensure that cloud estate and your operational practices align with business goals. The adoption phase should approach the theme of incident preparedness and response from two perspectives: Threat readiness and mitigation and infrastructure and application security.
 
 ### Threat readiness and mitigation
 
-- **Threat detection:** Implement advanced monitoring tools and practices to detect threats in real-time. This includes setting up alert systems for unusual activities and integrating eXtended detection and response (XDR) and security information and event management (SIEM) solutions. Refer to the [Zero trust threat protection and XDR](/security/zero-trust/adopt/prevent-reduce-business-damage-breach-threat-protection) guide for detailed guidance on this topic.
+- **Threat detection:** Implement advanced monitoring tools and practices to detect threats in real-time. This implementation includes setting up alert systems for unusual activities and integrating eXtended detection and response (XDR) and security information and event management (SIEM) solutions. Refer to the [Zero Trust threat protection and XDR](/security/zero-trust/adopt/prevent-reduce-business-damage-breach-threat-protection) guide for detailed guidance on this topic.
 
 - **Vulnerability management:** Regularly identify and mitigate vulnerabilities through patch management and security updates to ensure that systems and applications are protected against known threats.
 
@@ -112,7 +112,7 @@ After establishing your landing zone or other platform design with secure networ
 
 ### Infrastructure and application security
 
-- **Secure deployment pipelines:** Build CI/CD pipelines with integrated security checks to ensure that applications are securely developed, tested, and deployed. This includes static code analysis, vulnerability scanning, and compliance checks. For detailed guidance, refer to the [Zero trust developer guidance](/security/zero-trust/develop/overview) for detailed articles on this topic.
+- **Secure deployment pipelines:** Build CI/CD pipelines with integrated security checks to ensure that applications are securely developed, tested, and deployed. This solution includes static code analysis, vulnerability scanning, and compliance checks. For detailed guidance, refer to the [Zero Trust developer guidance](/security/zero-trust/develop/overview) for detailed articles on this topic.
 
 - **Infrastructure as Code deployments:** All infrastructure should be deployed through code, without exception. Reduce the risk of misconfigured infrastructure and unauthorized deployments by mandating this standard. All infrastructure code assets should be colocated with application code assets and treated with same [safe deployment practices](/azure/well-architected/operational-excellence/safe-deployments) as software deployments.
 
@@ -124,11 +124,11 @@ After establishing your landing zone or other platform design with secure networ
 
 ## Adopt the principle of confidentiality
 
-With the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality already in place, the next step is to focus on adoption and change management. This involves ensuring that encryption and secure access controls are effectively implemented and institutionalized across the enterprise cloud environment. In the adoption phase, DLP measures are implemented to protect sensitive data in transit and at rest. This involves deploying encryption solutions, configuring access controls, and ensuring that all employees are trained in the importance of data confidentiality and how to adhere to DLP policies.
+With the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality already in place, the next step is to focus on adoption and change management. This step involves ensuring that encryption and secure access controls are effectively implemented and institutionalized across the enterprise cloud environment. In the adoption phase, DLP measures are implemented to protect sensitive data in transit and at rest. This implementation involves deploying encryption solutions, configuring access controls, and ensuring that all employees are trained in the importance of data confidentiality and how to adhere to DLP policies.
 
 ### Implement encryption and secure access controls
 
-To protect sensitive information from unauthorized access, it is crucial to implement robust encryption and secure access controls. Encryption ensures that data is unreadable to unauthorized users, while access controls regulate who can access specific data and resources. Understand the encryption capabilities of the cloud services that you deploy and enable the appropriate encryption mechanisms to meet your business requirements.
+To protect sensitive information from unauthorized access, it's crucial to implement robust encryption and secure access controls. Encryption ensures that data is unreadable to unauthorized users, while access controls regulate who can access specific data and resources. Understand the encryption capabilities of the cloud services that you deploy and enable the appropriate encryption mechanisms to meet your business requirements.
 
 ### Incorporating and adopting associated standards
 
@@ -138,21 +138,21 @@ Developing and adopting associated standards is essential for ensuring the consi
 
 - **Access controls:** Apply role-based access controls (RBAC), conditional access controls, just-in-time access, and just-enough-access to all data stores and standardize practices of reviewing permissions regularly. Lockdown write access to configuration systems and allow write access only through specific automation account which applies the changes after comprehensive review processes, typically as part of DevOps pipelines. 
 
-- **Standards adoption:** The organization might develop a standard that requires all emails containing sensitive information to be encrypted using [Microsoft Purview Information Protection](/purview/information-protection). This ensures that sensitive data is protected during transmission and can only be accessed by authorized recipients.
+- **Standards adoption:** The organization might develop a standard that requires all emails containing sensitive information to be encrypted using [Microsoft Purview Information Protection](/purview/information-protection). This activity ensures that sensitive data is protected during transmission and can only be accessed by authorized recipients.
 
 ### Azure facilitation
 
 - **SIEM and SOAR solutions:** [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal) is a scalable, cloud-native security information and event management (SIEM) that delivers an intelligent and comprehensive solution for SIEM and security orchestration, automation, and response (SOAR). Microsoft Sentinel provides cyberthreat detection, investigation, response, and proactive hunting, with a bird's-eye view across your enterprise.
 
-- **Azure Encryption:** Azure offers encryption for services like Azure SQL Database, Azure Cosmos DB, and Azure Data Lake. The encryption models supported include server-side encryption with service-managed keys, customer-managed keys in Azure Key Vault, and customer-managed keys on customer-controlled hardware. Client-side encryption models support data encryption by an application before it is sent to Azure. For more detailed information, you can refer to the [Azure Encryption Overview](/azure/security/fundamentals/encryption-overview) guide.
+- **Azure Encryption:** Azure offers encryption for services like Azure SQL Database, Azure Cosmos DB, and Azure Data Lake. The encryption models supported include server-side encryption with service-managed keys, customer-managed keys in Azure Key Vault, and customer-managed keys on customer-controlled hardware. Client-side encryption models support data encryption by an application before it's sent to Azure. For more detailed information, you can refer to the [Azure Encryption Overview](/azure/security/fundamentals/encryption-overview) guide.
 
--  **Access control management:** [Microsoft Entra ID](/entra/fundamentals/whatis) Formerly known as Azure Active Directory, Microsoft Entra ID offers comprehensive identity and access management capabilities. It supports multi-factor authentication (MFA), conditional access policies, and single sign-on (SSO) to ensure that only authorized users can access sensitive data.
+- **Access control management:** [Microsoft Entra ID](/entra/fundamentals/whatis) Formerly known as Azure Active Directory, Microsoft Entra ID offers comprehensive identity and access management capabilities. It supports multifactor authentication (MFA), conditional access policies, and single sign-on (SSO) to ensure that only authorized users can access sensitive data.
 
     - [Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) uses advanced machine learning to identify sign-in risks and unusual user behavior to block, challenge, limit, or allow access. It helps prevent identity compromise, protects against credential theft and provides insights into your identity security posture.
 
-    - [Microsoft Defender for Indentity](/defender-for-identity/what-is) is a cloud-based security identity threat detection (ITDR) solution that helps secure your identity monitoring across your organization. It can help you better identify, detect, and investigate advanced threats directed at your organization through automated threat detection and response mechanisms.
+    - [Microsoft Defender for Identity](/defender-for-identity/what-is) is a cloud-based security identity threat detection (ITDR) solution that helps secure your identity monitoring across your organization. It can help you better identify, detect, and investigate advanced threats directed at your organization through automated threat detection and response mechanisms.
   
-- [**Azure Confidential Computing:**](/azure/confidential-computing/overview) This service protects data while it is being processed. It uses hardware-based trusted execution environments (TEEs) to isolate and protect data in use, ensuring that even cloud administrators cannot access the data.
+- [**Azure Confidential Computing:**](/azure/confidential-computing/overview) This service protects data while it's being processed. It uses hardware-based trusted execution environments (TEEs) to isolate and protect data in use, ensuring that even cloud administrators can't access the data.
 
 ## Adopt the principle of integrity
 
@@ -162,7 +162,7 @@ In the adopt phase, planning and designs are turned into real-world implementati
 
 - **Data classification:** Implement your data classification framework through automation when possible and manually when necessary. Use off the shelf tools to automate your data classification and identify sensitive information. Use manual labeling for documents and containers, and manually curate data sets used in analytics where classification and sensitivity are best established by knowledgeable users.
 
-- **Data verifcation and validation:** Take advantage of built-in verification and validation functionality in the services that you deploy. For example, Azure Data Factory has built-in functionality to [verify data consistency](/azure/data-factory/copy-activity-data-consistency) when moving data from a source to a destination store. Consider adopting practices like:
+- **Data verification and validation:** Take advantage of built-in verification and validation functionality in the services that you deploy. For example, Azure Data Factory has built-in functionality to [verify data consistency](/azure/data-factory/copy-activity-data-consistency) when moving data from a source to a destination store. Consider adopting practices like:
 
     - Using the CHECKSUM and BINARY_CHECKSUM functions in SQL to ensure data isn't corrupted in transit.
 
@@ -170,7 +170,7 @@ In the adopt phase, planning and designs are turned into real-world implementati
 
 - **Monitoring and alerting:** Monitor your data stores for changes with detailed change history information to help with reviews. Configure alerting to ensure that you have appropriate visibility and you can take efficient actions in case of any incidents that could affect data integrity.
 
-- **Backup policies:** Apply backup policies on all appropriate systems. Understand the backup capabilities of platform as a service (PaaS) ans software as a service (SaaS) services. For example, Azure SQL Database includes [automatic backups](/azure/azure-sql/database/automated-backups-overview) and you can configure the retention policy as necessary.
+- **Backup policies:** Apply backup policies on all appropriate systems. Understand the backup capabilities of platform as a service (PaaS) and software as a service (SaaS) services. For example, Azure SQL Database includes [automatic backups](/azure/azure-sql/database/automated-backups-overview) and you can configure the retention policy as necessary.
 
 - **Share design standards:** Publish and share application design standards that incorporate data integrity mechanisms across the organization. Design standards should include nonfunctional requirements like tracking configuration and data changes at the application level natively and capturing this history in the data schema. This approach mandates that the data schema retains details about data history and configuration history as part of the datastore, in addition to standard logging mechanisms to bolster your integrity monitoring.
  
@@ -186,9 +186,9 @@ In the adopt phase, planning and designs are turned into real-world implementati
 
 - **Data classification and labeling:** [Microsoft Purview](/purview/purview) is a robust set of solutions that can help your organization govern, protect, and manage data, wherever it lives. It offers manual and automatic [data classification](/purview/concept-classification) and [sensitivity labeling](/purview/create-sensitivity-label).
 
-- **Configuration management:** [Azure Arc](/azure/azure-arc/overview) is a centralized and unified infrastructure governance and managment platform that can manage configurations for cloud-based and on-premises systems. Using Azure Arc, you can extend your Security Baselines from [Azure Policy](/azure/governance/policy/overview), your [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) policies, and Secure Score evaluations, as well as logging and monitoring all your resources in one place.
+- **Configuration management:** [Azure Arc](/azure/azure-arc/overview) is a centralized and unified infrastructure governance and management platform that can manage configurations for cloud-based and on-premises systems. Using Azure Arc, you can extend your Security Baselines from [Azure Policy](/azure/governance/policy/overview), your [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) policies, and Secure Score evaluations, as well as logging and monitoring all your resources in one place.
 
-- **Patch management:** [Azure Update Manager](/azure/update-manager/overview) is a unified update management solution for Windows and Linux machines that can be used for Azure, on-premises and multi-cloud environments. It has built-in support for [Azure Policy](/azure/governance/policy) and [Azure Arc](/azure/azure-arc/overview) managed machines.
+- **Patch management:** [Azure Update Manager](/azure/update-manager/overview) is a unified update management solution for Windows and Linux machines that can be used for Azure, on-premises and multicloud environments. It has built-in support for [Azure Policy](/azure/governance/policy) and [Azure Arc](/azure/azure-arc/overview) managed machines.
 
 ## Adopt the principle of availability
 
@@ -198,7 +198,7 @@ With resilient design patterns defined, your organization can move on to the ado
 
 Maintaining a highly available cloud estate can only be done if the teams operating the cloud systems have standardized, mature practices that are strictly followed. These practices should include:
 
-- **Operational continuity:** Organizations must plan for continuous operations even under attack conditions. This includes establishing processes for rapid recovery and maintaining critical services at a degraded level until full recovery is possible. 
+- **Operational continuity:** Organizations must plan for continuous operations even under attack conditions. This approach includes establishing processes for rapid recovery and maintaining critical services at a degraded level until full recovery is possible. 
 
 - **Robust and continuous observability:** An organization's ability to detect security incidents as they happen allows them to initiate their incident response plans quickly, helping to minimize the business impact as much as possible. Incident detection is only possible through a well-designed monitoring and alerting system, following best-practices for threat detection. Refer to the Well-Architected Framework's [observability guide](/azure/well-architected/operational-excellence/observability) and [security monitoring and threat detection guide](/azure/well-architected/security/monitor-threats) for detailed guidance on this topic.
 
@@ -206,9 +206,9 @@ Maintaining a highly available cloud estate can only be done if the teams operat
 
 - **Standardized governance policies:** Enforce all security standards through tooling-supported policies. Use a policy management tool to ensure that all of your systems are compliant with your business requirements by default and that your policies are easily auditable. 
 
-- **Disaster recovery preparedness:** Develop and regulary test disaster recovery plans for your workloads to ensure that they will be able to be recovered in the event of a disaster. Refer to the Azure reliability [disaster recovery](/azure/reliability/disaster-recovery-overview) documentation for detailed guidance on this topic.
+- **Disaster recovery preparedness:** Develop and regularly test disaster recovery plans for your workloads to ensure that they will be able to be recovered in the event of a disaster. Refer to the Azure reliability [disaster recovery](/azure/reliability/disaster-recovery-overview) documentation for detailed guidance on this topic.
 
-    - Automate recovery activities to the extent practical. For example, make use of automatic failvoer capabilities in services like [Azure SQL Database](/azure/azure-sql/database/failover-group-sql-db)
+    - Automate recovery activities to the extent practical. For example, make use of automatic failover capabilities in services like [Azure SQL Database](/azure/azure-sql/database/failover-group-sql-db)
 
 - **Understanding service-level agreements:** Service-level agreements (SLAs) that are provided by your cloud platform for their services help you understand the guaranteed uptime for the components of your workloads. Using those SLAs as your basis, you can then develop your own target metrics for the SLAs you offer your customers. Microsoft publishes the SLAs for all cloud services at [Service-level agreements for online services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services)
 
@@ -226,9 +226,9 @@ Maintaining a highly available cloud estate can only be done if the teams operat
 
 ## Adopt security sustainment
 
-Consider the following recommendations to help ensure that the security mechanisms and practices that you have put in place as part of your cloud adoption can be sustained and consinously improved as you continue your journey:
+Consider the following recommendations to help ensure that the security mechanisms and practices that you have put in place as part of your cloud adoption can be sustained and continously improved as you continue your journey:
 
-- **Institue a Security Review Board:** Create a Security Review Board that continuously reviews projects and mandates security controls. Review your processes regularly to find areas of improvement. Develop processes to ensure that security is always top of mind for everyone.
+- **Institute a Security Review Board:** Create a Security Review Board that continuously reviews projects and mandates security controls. Review your processes regularly to find areas of improvement. Develop processes to ensure that security is always top of mind for everyone.
 
 - **Implement a vulnerability management solution:**  Use a vulnerability management solution to monitor the security vulnerability risk score and have a process defined to act on the highest risk score to lowest to minimize the risk. Keep track of the latest CVE risks and have a policy to apply those mitigations regularly for remediation.
 

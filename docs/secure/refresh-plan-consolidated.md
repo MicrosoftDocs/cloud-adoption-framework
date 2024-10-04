@@ -10,19 +10,17 @@ ms.custom: internal, UpdateFrequency2
 
 # Plan for a secure cloud adoption
 
-## Introduction
-
 Developing a cloud adoption plan is a complex undertaking, often with many technical challenges that need to be carefully strategized to ensure success, like modernizing legacy workloads to run on cloud infrastructure. It is critical that security considerations are integrated into every phase of the adoption plan to ensure that you're new cloud estate is built securely from the ground up. When making decisions about your migration or implementation default to designing for the highest security strategy stance allowable for your business. It is best to start your designs with security taking precedence over performance and cost efficiency to ensure that you're not introducing risks in your design that will have to be dealt with later, which could mean redesigning workloads. The guidance provided in this article is meant to help you develop your cloud adoption plan with security as a cornerstone tenet.
 
 This article is a supporting guide to the [Plan](../plan/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
 
 ## Plan for landing zone adoption
 
-Microsoft recommends using the [landing zone](../ready/landing-zone/index.md) approach to building out your cloud estate foundational elements. This is especially true for enterprise and large organizations. Smaller organizations and start-ups may not benefit from adopting this approach at the beginning of their cloud journey, but its important to understand the [design areas](../ready/landing-zone/design-areas.md) as you will need to include these areas in your cloud adoption plan whether you build a full-blown landing zone or not.
+Microsoft recommends using the [landing zone](../ready/landing-zone/index.md) approach to building out your cloud estate foundational elements. This recommendation especially applies to enterprise and large organizations. Smaller organizations and start-ups may not benefit from adopting this approach at the beginning of their cloud journey, but it's important to understand the [design areas](../ready/landing-zone/design-areas.md) as you'll need to include these areas in your cloud adoption plan whether you build a full-blown landing zone or not.
 
-The Azure landing zone approach will provide you a well-designed foundation for your cloud estate, setting you up for a manageable environment that can be secured according to best practices.
+The Azure landing zone approach will provide you with a well-designed foundation for your cloud estate, setting you up for a manageable environment that can be secured according to best practices.
 
-- *Landing Zones:* A landing zone is a pre-configured, secure, and scalable environment in the cloud that serves as a foundation for your workloads. It includes network topology, identity management, security, and governance components.
+- *Landing Zones:* A landing zone is a preconfigured, secure, and scalable environment in the cloud that serves as a foundation for your workloads. It includes network topology, identity management, security, and governance components.
     
     - *Benefits:* Landing zones help standardize cloud environments, ensuring consistency and compliance with security policies. They also facilitate easier management and scalability.
 
@@ -34,11 +32,11 @@ Building a security modernization plan focuses primarily on the adoption of new 
 
 As you develop your adoption plan, incorporate the prinicples of Zero Trust across the breadth of the plan to help structure the phases and steps that teams throughout the organization will be responsible for and how their activities will be accomplished.
 
-The Microsoft Zero Trust approach provides guidance for seven technology pillars with deployment and configuration recommendations. Explore each pillar as you bild your plan to ensure that these areas are covered thoroughly.
+The Microsoft Zero Trust approach provides guidance for seven technology pillars with deployment and configuration recommendations. Explore each pillar as you build your plan to ensure that these areas are covered thoroughly.
 
 #### Zero Trust technology pillars
 
-- **[Identity](/security/zero-trust/deploy/identity):** Guidance for verifying identies with strong authentication and controlling access under the principle of least privilege.
+- **[Identity](/security/zero-trust/deploy/identity):** Guidance for verifying identities with strong authentication and controlling access under the principle of least privilege.
 
 - **[Endpoints](/security/zero-trust/deploy/endpoints):** Guidance for securing all endpoints (devices and apps) that interact with your data, regardless of where they connect from and how they connect.
 
@@ -54,13 +52,13 @@ The Microsoft Zero Trust approach provides guidance for seven technology pillars
 
 ### Business alignment
 
-Alignment between technology and business stakeholders is critical to the success of your security modernization plan. As such, the plan development must be approached as a collaborative process that is accomplished through negotiations between stakeholders to find the right way to adapt processes and policies. Business stakeholders must understand how business functions may be effected by the modernization plan and technology stakeholders must understand where they may need to make concessions to ensure that critical business functions remain intact while being secured.
+Alignment between technology and business stakeholders is critical to the success of your security modernization plan. As such, the plan development must be approached as a collaborative process that is accomplished through negotiations between stakeholders to find the right way to adapt processes and policies. Business stakeholders must understand how business functions may be affected by the modernization plan and technology stakeholders must understand where they may need to make concessions to ensure that critical business functions remain intact while being secured.
 
 ## Incident preparedness and response
 
 - **Plan for preparedness:** 
 
-Plan for incident preparation by evaluating vulnerability management solutions, threat and incident detection systems and robust infrastructure monitoring solutions. Plan for infrastructure hardening to reduce attack surfaces.
+Plan for incident preparation by evaluating vulnerability management solutions, threat and incident detection systems, and robust infrastructure monitoring solutions. Plan for infrastructure hardening to reduce attack surfaces.
 
 - **Plan for incident response:** 
 
@@ -98,13 +96,13 @@ Your cloud adoption plan should address availability by adopting standards for a
 
 - **Standardize infrastructure and application design patterns:** To help ensure that your workloads are reliable, infrastructure and application design patterns must be standardized. Avoid unnecessary complexity to make designs repeatable and to discourage shadow IT behaviors. Follow best practices for [highly available infrastructure](/azure/well-architected/reliability/redundancy) and [resilient applications](/azure/well-architected/reliability/self-preservation) as you define your design standards. 
 
-- **Standardize development tools and practices:** Develop well-defined and enforcable [standards for your development tools and practices](/azure/well-architected/operational-excellence/formalize-development-practices) to help ensure that your deployments adhere to the principles of the CIA Triad, incorporating best practices for [safe deployments](/azure/well-architected/operational-excellence/safe-deployments).
+- **Standardize development tools and practices:** Develop well-defined and enforceable [standards for your development tools and practices](/azure/well-architected/operational-excellence/formalize-development-practices) to help ensure that your deployments adhere to the principles of the CIA Triad, incorporating best practices for [safe deployments](/azure/well-architected/operational-excellence/safe-deployments).
 
-- **Standardize operational tools and practices:** Maintaining confidentialiy, integrity, and availabiilty relies on well-defined and strictly enforced standards for operators to follow. Having standards that are always followed and are routinely trained on will help ensure that your systems are resilient to attacks and that you can respond efficiently to incidents.
+- **Standardize operational tools and practices:** Maintaining confidentiality, integrity, and availability relies on well-defined and strictly enforced standards for operators to follow. Having standards that are always followed and are routinely trained on will help ensure that your systems are resilient to attacks and that you can respond efficiently to incidents.
 
 ## Adopt sustainment
 
-Plan for the long-term sustainment of your security posture by adopting a mindset across the organization of continuous improvement. Sustainment involves not only the everyday practices of adhering to operational standards, but always looking for improvement opportunities. Plan for regulary recurring reviews of your standards and policies and for implementing a training program will help you adopt the mindset of continuous improvement.
+Plan for the long-term sustainment of your security posture by adopting a mindset across the organization of continuous improvement. Sustainment involves not only the everyday practices of adhering to operational standards, but always looking for improvement opportunities. Plan for regularly recurring reviews of your standards and policies and for implementing a training program will help you adopt the mindset of continuous improvement.
 
 - **Security baseline planning:** In order to be able to improve, you must first thoroughly understand your current security posture to establish your baseline and move towards finding areas for improvement. Use an automated tool like [Microsoft's Secure Score](/defender-xdr/microsoft-secure-score-improvement-actions) to establish your baseline quickly while gaining deep insights into areas for improvement.
 

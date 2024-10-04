@@ -1,6 +1,6 @@
 ---
 title: Security teams, roles, and functions
-description: Learn how to build a security team and thier roles.
+description: Learn how to build a security team and their roles.
 author: claytonsiemens77
 ms.author: csiemens
 ms.date: 06/24/2024
@@ -9,8 +9,6 @@ ms.custom: internal, UpdateFrequency2
 ---
 # Security teams, roles, and functions
 
-## Introduction
-
 This article describes security roles involved in cloud security and the functions they perform related to cloud infrastructure and platforms. These roles ensure that security is part of every stage of the cloud lifecycle from development to operations and continuous improvement.
 
 >[!NOTE]
@@ -18,7 +16,7 @@ This article describes security roles involved in cloud security and the functio
 
 Depending on your organization’s size and other factors, the roles and functions discussed in this article may be fulfilled by people performing multiple functions (roles) rather than having a single person or a team dedicated to the function. Enterprise and large organizations tend to have larger teams with more specialized roles, whereas smaller organizations tend to consolidate multiple roles and functions into a smaller number of people. The specific security responsibilities will also vary by the technical platforms and services in use by the organization.
 
-Some security tasks will be performed directly by technology and cloud teams while others may be performed by specialized security teams operating collaboratively with them. Regardless of the size and structure your organization, it is imperative that stakeholders have a clear understanding of the security ‘jobs to be done.’ Everyone must also have awareness of the business requirements and the security risk tolerance of the organization to make good decisions about cloud services that consider and balance security as a key requirement.  
+Some security tasks will be performed directly by technology and cloud teams while others may be performed by specialized security teams operating collaboratively with them. Regardless of the size and structure your organization, it's imperative that stakeholders have a clear understanding of the security "jobs to be done." Everyone must also have awareness of the business requirements and the security risk tolerance of the organization to make good decisions about cloud services that consider and balance security as a key requirement.  
 
 Use the guidance in this article to help understand specific functions that teams and roles perform and how different teams interact to cover the entirety of a cloud security organization. 
 
@@ -26,15 +24,15 @@ Use the guidance in this article to help understand specific functions that team
 
 Security Architecture, Engineering, and Operations roles are undergoing a significant transformation of their responsibilities and processes (similar to the cloud-driven transformation of infrastructure and platform roles). This security role transformation has been driven by multiple factors: 
 
-- As security tools are increasingly becoming SaaS based, there is less need to design, implement, test, and operate security tool infrastructures. These roles do still need to support the full lifecycle of configuring cloud services and solutions (including continuous improvement) to ensure they meet security requirements.
+- As security tools are increasingly becoming SaaS based, there's less need to design, implement, test, and operate security tool infrastructures. These roles do still need to support the full lifecycle of configuring cloud services and solutions (including continuous improvement) to ensure they meet security requirements.
 
-- The recognition that ‘security is everyone’s job’ is driving a more collaborative and mature approach for security and technology teams to work together: 
+- The recognition that "security is everyone’s job" is driving a more collaborative and mature approach for security and technology teams to work together: 
 
     - Technical engineering teams are accountable to ensure security measures are applied effectively to their workloads. This increases their need for context and expertise from security teams on how to meet these obligations effectively and efficiently.
 
     - Security teams are shifting from a (slightly adversarial) quality control role to an enablement role for technical teams- making the secure path into the easiest path. Security teams are reducing friction and barriers using automation, documentation, training, and other means.
 
-- Security teams are increasingly broadening their skills to look at security problems across multiple technologies and through the full attacker lifecycle and systems vs. specific narrow technical areas (network security, endpoint security, application security, cloud security for example). This is further amplified by how cloud platforms integrate different technologies closely together.
+- Security teams are increasingly broadening their skills to look at security problems across multiple technologies and systems to address the full attacker lifecycle rather than focusing on specific narrow technical areas (network security, endpoint security, application security, cloud security for example). This skill development need is further amplified by how cloud platforms integrate different technologies closely together.
 
 - The increased rate of change from both technology and security cloud services requires security processes to be continuously updated to keep up and manage risk effectively.
 
@@ -82,7 +80,7 @@ It’s critical to ensure that everyone understands their role in security and h
 
 ### Cloud service provider
 
-Cloud service providers are effectively “virtual team members” that provide security functions and capabilities for the underlying cloud platform. Some cloud providers also provide security features and capabilities for your teams to use to manage your security posture and incidents. For more information on what cloud services providers do, see the [cloud shared responsibility model](/azure/security/fundamentals/shared-responsibility).  
+Cloud service providers are effectively "virtual team members" that provide security functions and capabilities for the underlying cloud platform. Some cloud providers also provide security features and capabilities for your teams to use to manage your security posture and incidents. For more information on what cloud services providers do, see the [cloud shared responsibility model](/azure/security/fundamentals/shared-responsibility).  
 
 Many cloud service providers provide information on their security practices and controls upon request or via a portal like the [Microsoft service trust portal](https://servicetrust.microsoft.com/).
 
@@ -102,7 +100,7 @@ Security teams work with infrastructure and platform roles (and others) to help 
 
     - *Tenants/Subscriptions* - **Security Architects and Engineers** collaborate with **Infrastructure Architects and Engineers** and **Access Architects** (Identity, Networking, App, and others) to help establish security configurations for cloud tenants, subscriptions, and accounts across cloud providers (which are monitored by **Security Posture Management** teams).
 
-    - *Identity and access management (IAM)* - **Access Architects** (Identity, Networking, App, and others) collaborate with **Identity Engineers and Operations**, and infrastructure/platform teams to design, implement, and operate the access management solutions. These solutions protect against unauthorized usage of the organization’s business assets while enabling authorized users to follow business processes to easily and securely access organizational resources. These teams work on solutions include identity directories and single sign-on (SSO) solutions, passwordless and multi-factor authentication (MFA), risk based conditional access solutions, workload identities, privileged identity/access management (PIM/PAM) cloud infrastructure and entitlement management (CIEM), and more.  These teams also collaborate with network engineers and operations to design, implement, and operate security service edge (SSE) solutions. These capabilities can be leveraged by workload teams to provide seamless and secure access to individual workload and application components.  
+    - *Identity and access management (IAM)* - **Access Architects** (Identity, Networking, App, and others) collaborate with **Identity Engineers and Operations**, and infrastructure/platform teams to design, implement, and operate the access management solutions. These solutions protect against unauthorized usage of the organization’s business assets while enabling authorized users to follow business processes to easily and securely access organizational resources. These teams work on solutions include identity directories and single sign-on (SSO) solutions, passwordless and multifactor authentication (MFA), risk based conditional access solutions, workload identities, privileged identity/access management (PIM/PAM) cloud infrastructure and entitlement management (CIEM), and more.  These teams also collaborate with network engineers and operations to design, implement, and operate security service edge (SSE) solutions. These capabilities can be leveraged by workload teams to provide seamless and secure access to individual workload and application components.  
 
     - *Data security* -  **Security Architects and Engineers** collaborate with **Data and Artificial Intelligence (AI) Architects and Engineers** to help infrastructure/platform teams establish foundational data security capabilities for all data and advanced capabilities that can be leveraged to classify and protect data in individual workloads. For more information on foundational data security, refer to the Microsoft security [Data protection benchmark](/security/benchmark/azure/mcsb-data-protection). For more information on protecting data in individual workloads, refer to the Well-Architected Framework [guidance](/azure/well-architected/security/data-classification).
     
@@ -116,11 +114,11 @@ Security teams work with infrastructure and platform roles (and others) to help 
 
 - **Posture Management (vulnerability management / attack surface management)** - is the operational security team focused on security enablement for technical operations teams. Posture management focuses on helping these teams prioritize and successfully implement controls to block or mitigate attack techniques. Posture management teams work across all technical operations teams (including cloud) and often serve as their primary conduit to understand security requirements, compliance requirements, and governance processes.</br></br>Posture management often acts as a center of excellence (CoE) for security infrastructure teams, similar to the way software engineers often act as a security CoE for application development teams. Typical tasks for these teams include:
 
-    - *Monitor security posture* - monitor all technical systems using posture management tools like Microsoft Exposure Management, Entra Permission Management (EPM), 3rd party vulnerability and External Attack Surface Management (EASM) and Cloud infrastructure entitlement management (CIEM) tools, and custom security posture tools and dashboards. Additionally, posture management performs additional analysis to build insights by:
+    - *Monitor security posture* - monitor all technical systems using posture management tools like Microsoft Exposure Management, Microsoft Entra Permission Management (EPM), 3rd party vulnerability and External Attack Surface Management (EASM) and Cloud infrastructure entitlement management (CIEM) tools, and custom security posture tools and dashboards. Additionally, posture management performs additional analysis to build insights by:
 
-        -  *Anticipating highly likely and damaging attack paths* – Attackers ‘think in graphs’ and seek out paths to business-critical systems by chaining together multiple assets and vulnerabilities across different systems (e.g. compromise user endpoints, then use pass the hash/ticket to capture an admin credential, then access the business-critical data). Posture management teams work with security architects and engineers to discover and mitigate these hidden risks that don’t always show up in technical lists and reports.
+        -  *Anticipating highly likely and damaging attack paths* – Attackers "think in graphs" and seek out paths to business-critical systems by chaining together multiple assets and vulnerabilities across different systems (for example, compromise user endpoints, then use the hash/ticket to capture an admin credential, then access the business-critical data). Posture management teams work with security architects and engineers to discover and mitigate these hidden risks that don’t always show up in technical lists and reports.
 
-        - *Conducting security assessments* to review systems configurations and operational processes to gain deeper understanding and insights beyond the technical data from security posture tools. These may take the form of informal discovery conversations or formal threat modelling exercises.
+        - *Conducting security assessments* to review systems configurations and operational processes to gain deeper understanding and insights beyond the technical data from security posture tools. These may take the form of informal discovery conversations or formal threat modeling exercises.
 
     - *Assist with prioritization* – Posture management teams make these available to technical teams to proactively monitor their assets and help them prioritize security work. Posture management helps put the risk mitigation work into context using  security risk impact (informed by experience, security operations incident reports and other threat intelligence, business intelligence, and other sources) as well as security compliance requirements.
 
@@ -150,7 +148,7 @@ Security teams work with infrastructure and platform roles (and others) to help 
 
         - Administrators using shared accounts to perform privileged tasks instead of their own individual accounts.
 
-        - Use of ['browse-up configurations'](https://www.ncsc.gov.uk/whitepaper/security-architecture-anti-patterns) that create elevation of privilege paths which can be abused by attackers. This occurs when high privileged administrative accounts log onto lower trust user devices and workstations (standard user workstations, BYOD devices, etc.), sometimes employing  ‘jump servers’ that don’t effectively mitigate these risks. See securing privileged access and privileged access workstations (PAWs) for more information.
+        - Use of ['browse-up configurations'](https://www.ncsc.gov.uk/whitepaper/security-architecture-anti-patterns) that create elevation of privilege paths which can be abused by attackers. This occurs when high privileged administrative accounts log onto lower trust user devices and workstations (like standard user workstations and user-owned devices), sometimes employing  "jump servers" that don’t effectively mitigate these risks. See securing privileged access and privileged access workstations (PAWs) for more information.
 
 ### Security operations (SecOps/SOC)
 
@@ -162,7 +160,7 @@ The Security Operations (SecOps) team is sometimes referred to as a Security Ope
 
    - **Threat hunting** - Proactively search for hidden threats within the technical estate that have evaded standard detection mechanisms, using advanced analytics and hypothesis-driven investigations.
 
-   - **Threat intelligence** – Gather and disseminate information about attackers and threats to all stakeholders including business, technology, and security. Threat intelligence teams perform research, share their findings (formally or informally), and disseminate them to various stakeholders including cloud security team. This security context helps these teams make cloud services more resilient to attacks because they are using real world attack information in the design, implementation, testing, operation, and continuously improvement.
+   - **Threat intelligence** – Gather and disseminate information about attackers and threats to all stakeholders including business, technology, and security. Threat intelligence teams perform research, share their findings (formally or informally), and disseminate them to various stakeholders including cloud security team. This security context helps these teams make cloud services more resilient to attacks because they're using real world attack information in the design, implementation, testing, operation, and continuously improvement.
 
    - **Detection Engineering** – Builds custom attack detections and customizes attack detections provided by vendors and the broader community. These custom attack detections supplement vendor-provided detections for common attacks commonly found in extended detection and response (XDR) tools and some security information and event management (SIEM) tools. Detection Engineers work with cloud security teams to identify opportunities for designing and implementing detections, the data required to support them, and the response/recovery procedures for the detections.
 
@@ -174,7 +172,7 @@ Security Governance, Risk, and Compliance (GRC) is a set of interrelated discipl
 
 - The **Risk management** discipline focuses on ensuring the organization is effectively assessing, understanding, and mitigating risk. Risk management roles work with many teams across the organization to build a clear picture on the organization’s risk and keep it current. Because many critical business services can be hosted on cloud infrastructure and platforms, cloud and risk teams need to collaborate to assess and manage this organizational risk. Additionally, supply chain security focuses on risks associated with third-party vendors, open source components, and partners.
 
-- The **Compliance** discipline ensures that systems and processes are compliant with regulatory requirements and internal policies. Without this, the organization may be exposed to risk related to noncompliance with external obligations (fines, liability, loss of revenue from inability to operate in some markets, and more). Compliance requirements typically cannot keep up with the speed of attacker evolution, but are an important requirement source nonetheless.
+- The **Compliance** discipline ensures that systems and processes are compliant with regulatory requirements and internal policies. Without this, the organization may be exposed to risk related to noncompliance with external obligations (fines, liability, loss of revenue from inability to operate in some markets, and more). Compliance requirements typically can't keep up with the speed of attacker evolution, but are an important requirement source nonetheless.
 
 All three of these disciplines operate across all technologies and systems to drive organizational outcomes across all teams. All three also rely on context they get from each other and benefit significantly from current high-fidelity data on threats, business, and the technology environment. These disciplines also rely on architecture to express an actionable vision that can be executed and security education and policy to establish rules and guide teams through the many daily decisions.
 
@@ -182,17 +180,17 @@ Cloud engineering and operation teams may work with **Posture Management** roles
 
 ### Security education and policy
 
-Organizations must ensure that all roles have basic security literacy as well as guidance on what they are expected to do in security and how to do it using a combination of written policy and education. The education for cloud teams may be informal mentoring by security professionals working directly with them or it may be a formal program with documented curriculum and designated security champions. 
+Organizations must ensure that all roles have basic security literacy as well as guidance on what they're expected to do in security and how to do it using a combination of written policy and education. The education for cloud teams may be informal mentoring by security professionals working directly with them or it may be a formal program with documented curriculum and designated security champions. 
 
 In a larger organization, security teams work with **Organizational Readiness / Training** and **Security Education and Engagement** roles on formal security training and setting up security champions within technical teams to evangelize and educate their peers on security.
 
 Security education and policy must help each role understand:
 
-- **Why** - Show each role why it is important to them and their goals in the context of their role responsibilities. If people don’t clearly feel **why** security matters to them, they will judge it to be unimportant and move onto something else.
+- **Why** - Show each role why it's important to them and their goals in the context of their role responsibilities. If people don’t clearly feel **why** security matters to them, they'll judge it to be unimportant and move onto something else.
 
-- **What** – Summarize what security tasks they need to do in language the roles already understand. If people don’t know what they are being asked to do, they will assume security isn’t important or relevant to them and move onto something else.
+- **What** – Summarize what security tasks they need to do in language the roles already understand. If people don’t know what they're being asked to do, they'll assume security isn’t important or relevant to them and move onto something else.
 
-- **How** -  Ensure each role has clear explanation/instructions on how to apply it in their life/role/job. If people don’t know how to actually do what they are being asked to do (e.g. patch servers, identify whether it’s a phishing link, report the message properly, review code, perform threat model, etc.), they will fail and move onto something else.
+- **How** -  Ensure each role has clear explanation/instructions on how to apply it in their life/role/job. If people don’t know how to actually do what they're being asked to do (for example, patch servers identify whether it’s a phishing link, report the message properly, review code, or perform threat model), they'll fail and move onto something else.
 
 ## Example scenario: Typical interoperability between teams
 

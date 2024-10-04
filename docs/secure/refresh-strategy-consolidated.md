@@ -10,8 +10,6 @@ ms.custom: internal, UpdateFrequency2
 
 # Integrate security in your cloud adoption strategy
 
-## Introduction
-
 Moving your organization into the cloud adds significant complexity to security, and to be successful in the cloud, your security strategy needs to meet modern challenges inherent to cloud computing. In the adoption and operation of a cloud estate, security becomes a necessary consideration in all facets, rather than a separate function that is secondarily involved in certain facets, which can be a common approach for organizations running on-premises technology platforms. As you define your cloud adoption strategy, consider the recommendations provided in this article to ensure that security is an integral piece of the strategy and will be built into your cloud adoption plan as you move forward.
 
 This article is a supporting guide to the [Strategy](../strategy/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
@@ -126,7 +124,7 @@ As our global expansion progresses, our data estate will grow exponentially and 
 
 **Security considerations:**
 
-- *Data confidentiality and integrity at scale:* We must review and uplift our [confidentialiy](#defining-a-strategy-for-confidentiality) and [integrity](#defining-a-strategy-for-integrity) strategies and mechanisms to ensure that as we adopt new technologies and move into new geographies, we do not put our data or our customers' data at risk of corruption, breach, or loss, and that we comply with regulatory frameworks by default.
+- *Data confidentiality and integrity at scale:* We must review and uplift our [confidentialiy](#defining-a-strategy-for-confidentiality) and [integrity](#defining-a-strategy-for-integrity) strategies and mechanisms to ensure that as we adopt new technologies and move into new geographies, we don't put our data or our customers' data at risk of corruption, breach, or loss, and that we comply with regulatory frameworks by default.
 
 - *Zero Trust access and authorization strategy:* We must adopt the Zero Trust approach to ensure that our access and authorization strategy meets modern best practices and is manageable as we expand globally.
 
@@ -142,11 +140,11 @@ As we expand across the globe, our LOB workload must maintain the high performan
 
 **Business considerations:**
 
-- *Maintaining performance and reliability throughout the migration:** Our customers have high expectations for our LOB application and we cannot afford to suffer reputational and financial damage if application experiences downtime or prolonged degraded service over the course of the migration to the cloud. Involving our Microsoft support team to help design the migration plan and engage on the migration will minimize the risks of downtime or degraded service.
+- *Maintaining performance and reliability throughout the migration:** Our customers have high expectations for our LOB application and we can't afford to suffer reputational and financial damage if application experiences downtime or prolonged degraded service over the course of the migration to the cloud. Involving our Microsoft support team to help design the migration plan and engage on the migration will minimize the risks of downtime or degraded service.
 
 **Security considerations:**
 
-- We must develop secure design patterns to ensure that we can deploy identical infrastructure packages in each new region we expand into efficiently and secure at deployment time. Our [availability](#defining-a-strategy-for-availability) strategy should consider trade-offs that we'll need to make to ensure security isn't compromised by our performance designs and our performance targets are not affected by our security measures.
+- We must develop secure design patterns to ensure that we can deploy identical infrastructure packages in each new region we expand into efficiently and secure at deployment time. Our [availability](#defining-a-strategy-for-availability) strategy should consider trade-offs that we'll need to make to ensure security isn't compromised by our performance designs and our performance targets aren't affected by our security measures.
     
     - We must include system [integrity](#defining-a-strategy-for-integrity) processes and mechanisms in our design patterns to ensure that our systems are protected by default as we deploy our workload in new geographies.
 

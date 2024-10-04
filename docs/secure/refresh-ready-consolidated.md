@@ -10,8 +10,6 @@ ms.custom: internal, UpdateFrequency2
 
 # Ready your secure cloud estate
 
-## Introduction
-
 The Ready phase of a cloud adoption journey focuses on building out the foundation of the estate. Microsoft's [Azure landing zone](../ready/landing-zone/index.md) approach offers enterprises and large organizations a secure, scalable, and modular design pattern to follow when implementing their estates. Smaller organizations and startups may not need the level of organization that the landing zone approach uses, but understanding the landing zone philosophy can help any organization strategize their foundational design to ensure a high degree of security and scalability.
 
 After defining your cloud adoption [strategy](./refresh-strategy-consolidated.md) and [plan](./refresh-plan-consolidated.md), you can begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
@@ -22,9 +20,9 @@ This article is a supporting guide to the [Ready](../ready/index.md) methodology
 
 The first implementation steps in modernizing your security posture are building your landing zone or cloud foundation and creating or modernizing your identity, authorization, and access platform.
 
-- **Adopting the landing zone approach:** Adopting the landing zone approach or incorporating the desing principles of the landing zone approach to the extent practical for your use case allows you to start your implementation off in an optimized way. As your cloud estate evolves, keeping different domains of your estate separated helps keep the entire estate more secure and manageble.
+- **Adopting the landing zone approach:** Adopting the landing zone approach or incorporating the design principles of the landing zone approach to the extent practical for your use case allows you to start your implementation off in an optimized way. As your cloud estate evolves, keeping different domains of your estate separated helps keep the entire estate more secure and manageable.
 
-    - If you don't plan on adopting a full-blown enterprise landing zone, it is still important to understand the [design areas](../ready/landing-zone/design-areas.md) and apply guidance that is relevant to your cloud estate. You will still need to think about all of these design areas and implement controls specific to each area no matter how your foundation is architected. For example, using management groups will help you govern your cloud estate even if it only consists of a few subscriptions.
+    - If you don't plan on adopting a full-blown enterprise landing zone, it's still important to understand the [design areas](../ready/landing-zone/design-areas.md) and apply guidance that is relevant to your cloud estate. You'll still need to think about all of these design areas and implement controls specific to each area no matter how your foundation is architected. For example, using management groups will help you govern your cloud estate even if it only consists of a few subscriptions.
 
 Develop secure, scalable landing zones that provide controlled environments for deploying cloud resources. These zones ensure that security policies are consistently applied and that resources are segregated according to their security requirements. Refer to the [security design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) for detailed guidance on this topic.
 
@@ -32,7 +30,7 @@ Develop secure, scalable landing zones that provide controlled environments for 
 
 ### Azure facilitation
 
-- **Azure landing zone accelerators:** Microsoft maintains several landing zone accelerators, which are pre-packaged deployments of a given workload type that can be easily deployed into a landing zone to get you up and running quickly. They include [Azure Integration Services](../scenarios/app-platform/integration-services/landing-zone-accelerator.md), [Azure Kubernetes Service (AKS)](../scenarios/app-platform/aks/landing-zone-accelerator.md), [Azure API Management](../scenarios/app-platform/api-management/landing-zone-accelerator.md), and others. Refer to the [Modern application platform scenario](../scenarios/app-platform/index.md) section of CAF for a full list of accelerators and other topics related to modern application considerations.
+- **Azure landing zone accelerators:** Microsoft maintains several landing zone accelerators, which are prepackaged deployments of a given workload type that can be easily deployed into a landing zone to get you up and running quickly. They include [Azure Integration Services](../scenarios/app-platform/integration-services/landing-zone-accelerator.md), [Azure Kubernetes Service (AKS)](../scenarios/app-platform/aks/landing-zone-accelerator.md), [Azure API Management](../scenarios/app-platform/api-management/landing-zone-accelerator.md), and others. Refer to the [Modern application platform scenario](../scenarios/app-platform/index.md) section of CAF for a full list of accelerators and other topics related to modern application considerations.
 
 - **Azure landing zones Terraform module:** You can optimize your landing zones deployments with automation by using the [Azure landing zones Terraform module](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest). Using your continuous deployment and continuous integration (CI/CD) pipeline to deploy landing zones ensures that all of your landing zones are deployed identically, with all security mechanisms in place.
 
@@ -46,7 +44,7 @@ After defining your strategy and developing your plan for incident preparedness 
 
 ### Azure facilitation 
 
-- **Azure Virtual WAN:** [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) is a networking service that brings many networking, security, and routing functionalities together to provide a single operational interface. It is a hub and spoke architecture with scale and performance built in for branches (VPN/SD-WAN devices), users (Azure VPN/OpenVPN/IKEv2 clients), ExpressRoute circuits, and virtual networks. When implementing your landing zones, Azure Virtual WAN can help you optimize your network through segmentation and security mechanisms.
+- **Azure Virtual WAN:** [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) is a networking service that brings many networking, security, and routing functionalities together to provide a single operational interface. The design is a hub and spoke architecture with scale and performance built in for branches (VPN/SD-WAN devices), users (Azure VPN/OpenVPN/IKEv2 clients), ExpressRoute circuits, and virtual networks. When implementing your landing zones, Azure Virtual WAN can help you optimize your network through segmentation and security mechanisms.
 
 ## Ready for confidentiality
 
@@ -56,7 +54,7 @@ In the Ready phase, preparing for your workloads with confidentiality in mind me
 
 - *Role-based access control (RBAC):* Assign roles and permissions based on job responsibilities. This helps in managing access efficiently and reduces the risk of unauthorized access.
 
-- *Multi-factor authentication (MFA):* Implement MFA to add an extra layer of security.
+- *Multifactor authentication (MFA):* Implement MFA to add an extra layer of security.
 
 - *Conditional access controls:* Conditional access controls provide additional security by enforcing policies based on specific conditions. Policies can include enforcing MFA or blocking access based on geography, among many other scenarios. When deciding on an IAM platform, ensure that conditional access is supported and will meet your requirements
 
@@ -104,15 +102,15 @@ Designing your workloads for resiliency helps ensure that the business is able t
 
 - **Resilient application design:** Adopt application design patterns that enhance resilience to both infrastructure and non-infrastructure incidents, aligning with the broader principles of the Cloud Adoption Framework. Standardize designs that incorporate self-healing and self-preservation mechanisms to ensure continuous operation and rapid recovery. For detailed guidance on resilient design patterns, refer to the Well-Architected Framework's [Reliability](/azure/well-architected/reliability) pillar.
  
-- **Adopt serverless architecture:** Utilize serverless technologies including platform as a service (PaaS), software as a service (SaaS), and function as a service (FaaS) to reduce server management overhead, automatically scale with demand, and ensure high availability. This supports CAF’s emphasis on modernizing workloads and optimizing operational efficiency.
+- **Adopt serverless architecture:** Utilize serverless technologies including platform as a service (PaaS), software as a service (SaaS), and function as a service (FaaS) to reduce server management overhead, automatically scale with demand, and ensure high availability. This approach supports CAF’s emphasis on modernizing workloads and optimizing operational efficiency.
  
 - **Microservices and containerization:** Implement microservices and containerization to avoid monolithic applications, breaking them down into smaller, independent services that can be deployed and scaled independently. This aligns with CAF’s principles of agility and scalability in cloud environments.
  
-- **Decouple services:** Strategically isolate services from each other to reduce the blast radius of incidents, ensuring that failures in one component do not affect the entire system. This approach supports CAF’s governance model, promoting robust service boundaries and operational resilience.
+- **Decouple services:** Strategically isolate services from each other to reduce the blast radius of incidents, ensuring that failures in one component don't affect the entire system. This approach supports CAF’s governance model, promoting robust service boundaries and operational resilience.
  
 - **Enable automatic scaling:** Ensure your application architecture supports automatic scaling to handle varying loads, maintaining availability during traffic spikes. This practice aligns with CAF’s guidance on building scalable and responsive cloud environments, and helps keep costs manageable and predictable.
 
-- **Implement fault isolation:** Design your application to isolate failures to individual tasks or functions, preventing widespread outages and enhancing resilience. This supports CAF’s focus on creating reliable and fault-tolerant systems.
+- **Implement fault isolation:** Design your application to isolate failures to individual tasks or functions, preventing widespread outages and enhancing resilience. This approach supports CAF’s focus on creating reliable and fault-tolerant systems.
  
 - **Ensure high availability:** Incorporate built-in redundancy and disaster recovery mechanisms to maintain continuous operation, following CAF’s best practices for high availability and business continuity planning.
  

@@ -130,7 +130,7 @@ The architecture designs that you standardize in your cloud estate require gover
 
 ### Modern Service Management (MSM)
 
-Modern Service Management (MSM) encompasses a set of practices and tools designed to manage and optimize IT services in a cloud environment. MSM focuses on aligning IT services with business needs, ensuring efficient service delivery, and maintaining high standards of security and compliance. It is useful because it provides a structured approach to managing complex cloud environments, enabling organizations to respond quickly to changes, mitigate risks, and ensure continuous improvement. MSM is particularly relevant to the principle of confidentiality, as it includes tools and practices that enforce data protection and monitor access controls.
+Modern Service Management (MSM) encompasses a set of practices and tools designed to manage and optimize IT services in a cloud environment. MSM focuses on aligning IT services with business needs, ensuring efficient service delivery, and maintaining high standards of security and compliance. It's useful because it provides a structured approach to managing complex cloud environments, enabling organizations to respond quickly to changes, mitigate risks, and ensure continuous improvement. MSM is particularly relevant to the principle of confidentiality, as it includes tools and practices that enforce data protection and monitor access controls.
 
 - *Unified security management:* MSM tools offer comprehensive security management, integrating various security functions to provide a holistic view of the cloud environment. This helps in enforcing security policies and detecting and responding to threats in real-time.
 
