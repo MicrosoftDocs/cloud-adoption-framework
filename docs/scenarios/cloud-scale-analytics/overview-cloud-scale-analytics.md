@@ -1,5 +1,5 @@
 ---
-title: Introduction to cloud-scale analytics for regulated industry
+title: Introduction to cloud-scale analytics for regulated industries
 description: Learn about cloud-scale analytics for Azure.
 author: mboswell
 ms.author: mboswell
@@ -8,13 +8,14 @@ ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Introduction to cloud-scale analytics for regulated industry
+# Introduction to cloud-scale analytics for regulated industries
 
 Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The main purpose of an Azure landing zone is to ensure that, when an application or workload lands on Azure, the required infrastructure is already in place. Before you deploy your cloud-scale analytics landing zone, you must have already worked through the [cloud adoption framework](/azure/cloud-adoption-framework/) to deploy an [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) with plaform landing zones.
 
-For sovereign workloads, Microsoft has the [Sovereign Landing Zone (SLZ)](/industry/sovereignty/slz-overview) which is a variant of the enterprise scale Azure Landing Zone intended for organizations that need advanced sovereign controls. Cloud-scale ananlytics can be deployed against this variat of azure landing zone.
 
-Cloud-scale analytics aligns to deploying to application landing zones which typically reside under the landing zone management group with policies filtering down to the sample templates which Microsoft provide.
+For sovereign workloads, Microsoft has the [Sovereign Landing Zone (SLZ)](/industry/sovereignty/slz-overview) which is a variant of the enterprise scale Azure Landing Zone intended for organizations that need advanced sovereign controls. Cloud-scale analytics can be deployed against this variant of Azure Landing Zone.
+
+Cloud-scale analytics involves deploying to application landing zones. These zones typically reside under the landing zone management group, with policies filtering down to the sample templates provided by Microsoft.
 
 Microsoft provides sample templates to get you started, which you can use for your data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments. These templates provide agility and are compliant with security and governance requirements.
 
@@ -136,7 +137,7 @@ The data management landing zone supports numerous other data management and gov
 - Data sharing and contracts
 
 > [!TIP]
-> * If using 3rd party solutions for Data catalog, quality and lineage solutions then these should reside in the data management landing zone. Otherwise, Microsoft Purview is deployed as software-as-a-service and connects through to the data management landing and data landing zones.
+> * If using partner solutions for Data catalog, Data quality management, or Data lineage capabilities, they should reside in the data management landing zone. Alternatively, Microsoft Purview can be deployed as a software-as-a-service solution, connecting both the data management landing zone and the data landing zones.
 
 ### Data landing zones
 
