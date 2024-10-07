@@ -59,7 +59,7 @@ Azure has a range of platform-as-a-service (PaaS) solutions to build intelligent
 
 For more advanced AI needs, Azure Virtual Machines provides access to GPUs and CPUs with virtual machine (VM) images so you can bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway. You should use them first before you try IaaS.
 
-### Understand the skills needed to adopt AI
+### Understand AI skills
 
 There are different approaches to adopting AI, and each approach requires different skills, as described in the following table. Adopting SaaS products requires very few skills. Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills. The following table shows the skills that are required to adopt AI for each AI approach:
 
@@ -74,7 +74,7 @@ There are different approaches to adopting AI, and each approach requires differ
 | Analytical AI | PaaS | Consume analytical AI models in applications | Azure AI services | Yes | Picking the right AI model, securing endpoints, consuming endpoints in apps, and fine-tuning as needed |
 | Generative AI, machine learning, analytical AI | IaaS | Train and inference your own AI models. Bring your own models to Azure. | Azure Virtual Machines, Azure Kubernetes Service, Azure Container Apps | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps |
 
-### Understand the data needed
+### Understand AI data needs
 
 AI solutions have varying data needs. Some, like Microsoft 365 Copilot, require only general enterprise data. Other AI solutions, like RAG applications, require domain-specific information. The level of expertise needed to gather and prepare the required data also varies. Some solutions require no special skills. Others require advanced data science capabilities. Knowing these data requirements in advance helps you set the right expectations and choose the appropriate AI service for your needs.
 
@@ -90,7 +90,7 @@ AI solutions have varying data needs. Some, like Microsoft 365 Copilot, require 
 
 - *Understand analytical AI data needs.* Most Azure AI services don't require additional data. You can fine-tune some models, like models in Azure AI Custom Vision. Otherwise, you consume the APIs in your application and inference them with data coming into the application.
 
-### Understand cost factors for each AI solution
+### Understand AI cost factors
 
 Cost is an important consideration when you validate your choice of AI solutions. The goal of this section is to make it easy to find and estimate the costs of different services. Microsoft SaaS copilots and Copilot Studio require a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Virtual machines (CPUs or GPUs) are the primary cost for AI models that run on Azure Virtual Machines. For Azure services, use the individual product [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.
 
@@ -101,12 +101,13 @@ This table provides an overview of cost factors for Microsoft AI solutions:
 | [Copilot (free)](https://copilot.microsoft.com/) | SaaS generative AI | Free in browser or mobile apps | None |
 | Copilot Pro | SaaS generative AI | With a subscription, available in browser or mobile apps| [Subscription](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
 | [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) | SaaS generative AI with RAG | Add to an existing Microsoft 365 subscription | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans) |
+| [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security) | SaaS generative AI with RAG | Azure account [Security Compute Units](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security#pricing) |
 | [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | PaaS generative AI with RAG via a low-code platform | Browser | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
 | [Azure AI services](/azure/ai-services/what-are-ai-services) | PaaS analytical AI | Azure | Use of model endpoints consumed, storage, data transfer, compute (if you train custom models) |
 | Azure OpenAI | PaaS generative AI, with and without RAG, for OpenAI models | Azure | Number of tokens in and out and compute |
-| [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | PaaS generative AI with and without RAG, PaaS fine-tuning generative AI models | Azure | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
-| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | PaaS training machine learning and generative AI models | Azure | Compute, storage, and data transfer |
-| [Virtual Machines](/azure/virtual-machines/overview) | IaaS, train any AI model | Azure | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
+| [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | PaaS generative AI with and without RAG, PaaS fine-tuning generative AI models | Azure account | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
+| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | PaaS training machine learning and generative AI models | Azure account | Compute, storage, and data transfer |
+| [Virtual Machines](/azure/virtual-machines/overview) | IaaS, train any AI model | Azure account | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
 ## Define an AI data strategy
 
