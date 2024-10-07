@@ -32,33 +32,17 @@ Whether you use a centralized or decentralized approach to AI model deployment, 
 
 In Azure, resource organization is how you structure management groups and subscriptions to organize your Azure resources. Resource organization is critical for AI governance across AI workloads and cost management.
 
-- *Use management groups to govern different workload types*. AI workloads should at least be divided into two different types: internet-facing ("online") and internal only ("corporate") workloads. The distinction provides an important data governance boundary. You don’t want to allow external users to access sensitive or confidential business information required for internal work. You don’t need a separate management group for AI workloads. This distinction between internet-facing and internal workloads aligns with Azure landing zone. For more information, see [Azure landing zone management groups.](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
+- *Separate internet facing and internal AI workloads*. At a minimum, use management groups to separate AI workloads into internet-facing ("online") and internal only ("corporate"). The distinction provides an important data governance boundary. It helps you keep internal separate from public data. You don't want external users to access sensitive business information required for internal work. This distinction between internet-facing and internal workloads aligns with [Azure landing zone management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
 
-- *Apply AI policies to each management group.* Start with baseline policies for each workload type. Start with [Azure landing zone policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies). Add more Azure Policy definitions to this baseline for AI services, such as [Azure AI services](/azure/ai-services/policy-reference), [Azure AI Search](/azure/governance/policy/samples/built-in-policies#search), [Azure Machine Learning](/azure/governance/policy/samples/built-in-policies#machine-learning), [Azure Virtual Machines](/azure/virtual-machines/policy-reference).
+- *Apply AI policies to each management group.* Start with baseline policies for each workload type, such as those articulated by [Azure landing zone policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies). Add more Azure Policy definitions to your baseline to drive uniform governance for [Azure AI services](/azure/ai-services/policy-reference), [Azure AI Search](/azure/governance/policy/samples/built-in-policies#search), [Azure Machine Learning](/azure/governance/policy/samples/built-in-policies#machine-learning), [Azure Virtual Machines](/azure/virtual-machines/policy-reference) and others.
 
-- *Know where to place centralized AI resources.* If you’re using a centralized model to share AI endpoints, place those AI resources in a dedicated AI subscription. The subscription provides a governance boundary for a dedicated team to deploy, govern, secure, and manage AI endpoints. It also isolates AI resources from workload resources (*see figure 1: Intelligent app 3*). In the context of Azure landing zone, it's an application landing zone subscription with only AI resources.
+- *Deploy AI resources with workload resources.* AI resources need to inherit workload governance policies from the workload management group (internal or internet-facing). Keep them separate from platform resources. AI resources controlled by platform teams tend to create development bottlenecks. In the context of Azure landing zone, deploy AI platforms to application landing zone subscriptions.
 
-- *Know where to place decentralized AI resources.* In a decentralized model, where you dedicate AI resources to an application, deploy AI resources and application resources together in the same subscription. In the context of Azure landing zone, it's an application landing zone subscription with AI resources and application resources.
-
-## Prepare AI network topology
+## Prepare AI networking
 
 This guidance provides recommendations for setting up your network topology for AI workloads. Organizations with multiple intelligent applications should use a hub and spoke network topology. If you have a single intelligent application, hub and spoke topology is where you should head when you have more workloads.
 
-- *Deploy networking and security resources to the hub.* Centralize Azure Bastion in the hub virtual network for AI development access. Place Azure Firewall as needed here to secure network traffic between. It can be beneficial to group all private endpoints in the hub for security reasons. Also deploy on-premises connectivity resources like VPN Gateway and Express Route to the hub virtual network.
-
-- *Deploy AI resources and endpoints in spoke virtual networks.* Spoke virtual networks host all AI resources and endpoints so they inherit the governance policies of the management group they’re in. This guidance includes centralized AI resources.
-
-- *Secure public endpoints for intelligent applications.* Public-facing AI applications need to place all AI endpoints and intelligent application resources behind virtual networks. Use private endpoints for any PaaS services to maintain secure internal communication between Azure resources without exposing them to the public internet. Route public traffic through Azure Front Door or Application Gateway, coupled with Azure Web Application Firewall (WAF) policies.
-
-- *Deploy reverse proxies in spoke virtual networks.* Regional load balancers like Application Gateway and reverse proxies like Azure API Management (APIM) that reside in a virtual network should be in the spoke virtual network and front intelligent application resources. Secure these endpoints with WAF policies to ensure safe access from external sources. Coupling Application Gateway, WAF policies, and APIM within the virtual network is an established [architecture](https://github.com/Azure/apim-landing-zone-accelerator/blob/main/scenarios/workload-genai/README.md#scenario-3-azure-api-management---generative-ai-resources-as-backend) in generative AI solutions. For more information, see [AI Hub architecture](https://github.com/Azure-Samples/ai-hub-gateway-solution-accelerator#ai-hub-gateway-landing-zone-accelerator) and [Deploy Azure API Management instance to multiple Azure regions](/azure/api-management/api-management-howto-deploy-multi-region).
-
-## Prepare AI connectivity
-
-This guidance provides recommendations on how different end users should connect to AI applications and resources. It also addresses dedicated on-premises connectivity to high-throughput data transfer.
-
-- *Connect to internal AI workloads.* On-premises users connect to internal AI workloads through an Application Gateway or Azure Front Door with Azure Web Application Firewall policies for security purposes. AI developers and administrators connect via Azure Bastion in the hub virtual network (*see figure 1*).
-
-- *Secure internet-facing networks.* External, online users access internet-facing AI workloads through the applications resources in the spoke network. Front these workloads with Application Gateway or Azure Front Door with Azure Web Application Firewall policies for security purposes.
+- *Consider a generative AI gateway.* Consider using Azure API Management (APIM) as a generative AI gateway within your virtual networks. A generative AI gateway sits between your front-end and the AI endpoints. Application Gateway, WAF policies, and APIM within the virtual network is an established [architecture](https://github.com/Azure/apim-landing-zone-accelerator/blob/main/scenarios/workload-genai/README.md#scenario-3-azure-api-management---generative-ai-resources-as-backend) in generative AI solutions. For more information, see [AI Hub architecture](https://github.com/Azure-Samples/ai-hub-gateway-solution-accelerator#ai-hub-gateway-landing-zone-accelerator) and [Deploy Azure API Management instance to multiple Azure regions](/azure/api-management/api-management-howto-deploy-multi-region).
 
 - *Connect to on-premises data.* For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection. Azure [ExpressRoute](/azure/expressroute/expressroute-introduction) is ideal for high data volumes, real-time processing, or workloads that require consistent performance. It has [FastPath](/azure/expressroute/about-fastpath) feature that improves data path performance. Use [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) for moderate data volumes, infrequent data transfer, or when public internet access is required. It’s simpler to set up and cost-effective for smaller datasets than ExpressRoute. For more information, see [Connect an on-premises network to Azure](/azure/architecture/reference-architectures/hybrid-networking/).
 
@@ -70,14 +54,14 @@ Choosing the right approach for the foundation of AI workloads involves not only
 
 ### Deploy a foundation with Azure landing zone
 
-Azure landing zone provides a starting point for preparing your Azure environment. Deploy AI workload resources such as Azure AI Studio, Azure Machine Learning, Azure AI services, Azure Virtual Machines, and supporting resources to an Application Landing Zone (*see figure 2: "Landing zone A2 subscription"*). You can use the various implementations for Azure Landing Zone. Ensure to apply the policies relevant to your AI deployment as you're using the Azure Landing Zone accelerator.
+Azure landing zone provides a starting point for preparing your Azure environment. Deploy AI workload resources such as Azure AI Studio, Azure Machine Learning, Azure AI services, Azure Virtual Machines, and supporting resources to an new application landing zone (*see figure 2: "Landing zone A2 subscription"*). You can use the various implementations for Azure Landing Zone. Ensure to apply the policies relevant to your AI deployment as you're using the Azure Landing Zone accelerator.
 
 :::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
 *Figure 2. AI applications in the context of an Azure landing zone.*
 
 ### Deploy a custom environment
 
-If you have an existing Azure environment or don’t want to start with Azure landing zone, use the guidance discussed in this article to create a custom environment for your AI workloads.
+You can use the guidance discussed in this article to create a custom environment for your AI workloads.
 
 ## Next steps
 
