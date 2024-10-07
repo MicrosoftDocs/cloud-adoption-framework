@@ -11,6 +11,24 @@ ms.topic: conceptual
 
 This article provides recommendations for managing AI from development, deployment, and operations. AI management requires standardization in development and deployment and regularly measuring AI output to ensure data and models don't drift over time.
 
+## Manage AI deployment
+
+A primary consideration for AI endpoint management is deciding who can deploy AI resources and who’s responsible for governing the endpoints. The [AI CoE](./center-of-excellence.md) should lead the effort to determine the best approach. There are two principal options:
+
+- *Use application-team management AI resources for faster development.* When application teams manage AI resources, they have to autonomy to develop intelligent applications within the confines of governance policies. Use a policy-driven approach to enforce governance consistently across all application environments. Where there are governance gaps, create and communicate AI policies that the application teams must follow. For example, create generative AI policies for content filter settings and disallowed models. Make these policies clearly known to application teams and audit regularly.
+
+- *Use a shared AI management for increased AI governance.* In a shared management approach, a single team manages AI resources for all AI workloads. This team deploys core AI resources and configures security and governance that all applications teams use. Use this approach if want to a single team to control AI deployments and governance across your workloads. Azure AI Studio facilitates this approach with [Azure AI Studio hubs and projects](/azure/ai-studio/concepts/ai-resources). The central AI team deploys and configures the hub. Then the application teams use projects, which inherit hub configurations, to move from a proof of concept to production. Azure Machine Learning has similar capabilities with its [Azure Machine Learning hub workspaces](/azure/machine-learning/concept-hub-workspace).
+
+## Manage AI endpoint sharing
+
+This guidance provides recommendations on when to share and not share an AI endpoint across multiple applications.
+
+- *Don’t share AI endpoints when application governance and model needs vary.* Applications that require different content filter settings (governance on input and output) shouldn't share an endpoint. Also don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet application requirements.
+
+- *Use a sandbox environment for AI experimentation.* If you don’t plan on sharing AI endpoints in production, don't share AI endpoints in dev and test environments. Instead, use a sandbox environment for AI model experimenting. You want to consistency across dev, test, and prod environments. So, the sandbox environment should be distinct from dev, test, and production environments in the AI development lifecycle. Changing deployment and governance models between dev, test, and prod can hide and introduce breaking changes.
+
+- *Consider share AI endpoints when applications comprise a single workload.* Sharing an AI endpoint works best when a workload team has multiple applications. AI endpoint sharing provides the least amount of management overhead and simplifies deployment. These applications must share the same governance needs and AI model needs. Sharing endpoints could cause you to hit rate limits and quota limitations. Most Azure services have limits per subscription. Within a subscription, each region has quota limits.
+
 ## Manage AI operations
 
 This guidance provides recommendations for establishing an operational framework for AI workloads and how to establish visibility and consistency across the AI lifecycle.
@@ -23,7 +41,7 @@ This guidance provides recommendations for establishing an operational framework
 
 - *Establish CI/CD pipelines for deployment.* Ensure your data pipelines cover: Code quality checks (linting, static analysis), unit and integration tests, experimentation and evaluation flows, production deployment steps, such as promoting releases to test and production environments following manual approvals. Maintain separation between models, prompt flows, and the client user interface to ensure updates to one component don't impact others. Each flow should have its own lifecycle for independent promotion.
 
-- *Standardize AI development tools.* Define and standardize the use of SDKs and APIs for consistency across development teams. Tools like [Azure SDK](/azure/developer/) for AI workloads provide libraries and APIs that are optimized for scaling AI models and integrating them into applications. For generative AI, standardize your AI platform and orchestrators, such as [Semantic Kernel](/semantic-kernel/overview/), LangChain, and [Prompt Flow](/azure/ai-studio/how-to/prompt-flow), to standardize operations across AI models.
+- *Standardize AI development tools.* Define and standardize the use of SDKs and APIs for consistency across development teams. Tools like [Azure SDK](/azure/developer/) for AI workloads provide libraries and APIs that are optimized for scaling AI models and integrating them into applications. For generative AI, standardize your AI platform and orchestrators, such as [Semantic Kernel](/semantic-kernel/overview/), LangChain, and [Prompt Flow](/azure/ai-studio/how-to/prompt-flow).
 
 ## Manage AI models
 

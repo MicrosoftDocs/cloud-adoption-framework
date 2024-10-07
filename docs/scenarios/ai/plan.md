@@ -70,46 +70,21 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. This step 
 
 ## Plan for responsible AI
 
-When you set delivery timelines, it helps to understand the requirements of responsible AI. To plan for responsible AI, follow these recommendations:
+Before building applications in Azure, you need to think through your AI deployment. Responsible AI should serve as a guide to your application development.  
 
 - *Use responsible-AI planning tools.* If you're new to AI, rely on the available planning tools to align development with responsible AI principles. Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
-- *Plan for AI governance.* Factor in the effort for assessing AI risks, developing AI governance policies, and setting the controls needed to eliminate all instances of unauthorized AI use. Set up processes to manage data access, data usage, and compliance with regulations. These processes are unique to your organization, data, and AI opportunities. Create clear data ownership policies and ensure that data lineage is traceable. For more information, see [Govern AI](govern.md).
+- *Plan for AI security.* Assess security risks and apply secure configurations to Azure resources and models so that you pass IT security standards. Familiarize yourself with common AI security threats, such as model poisoning, data tampering, and adversarial attacks. Any data fed into AI models should respect the same security, privacy, and sensitivity boundaries as any other data or technology. For more information, see [Secure AI](secure.md).
 
-- *Plan for AI security.* Plan to apply secure configurations to Azure resources and models so that you pass IT security standards. Azure provides security baselines for each service. Familiarize yourself with common AI security threats, such as model poisoning, data tampering, and adversarial attacks. Any data fed into AI models should respect the same security, privacy, and sensitivity boundaries as any other data or technology. For more information, see [Secure AI](secure.md).
+- *Plan for AI governance.* Develop AI governance policies to mitigate organizational risk and eliminate unauthorized AI use. Set up processes to manage data access, data usage, and compliance with regulations. Create clear data ownership policies and ensure that data lineage is traceable. For more information, see [Govern AI](govern.md).
 
 - *Plan AI management.* Consider how you should manage AI systems throughout their lifecycles, from updates to monitoring and resilience. Think about how to handle regular tasks, like deploying updates and maintaining infrastructure. Tailor these plans to AI environments. For more information, see [Manage AI](manage.md).
-
-## Plan for AI centralization and endpoint sharing
-
-When AI is centralized, there's a single team that manages AI resources and endpoint deployments. The centralization of AI models is primarily a governance issue. Centralization allows you to use a single process to deploy, govern, and manage AI endpoints for all AI workloads rather than allowing application teams to control these resources individually. Centralization also affects performance and cost allocation for chargeback and showback. If you have an AI Center of Excellence, this group determines whose responsibility it is to manage centralized AI resources.
-
-- *Start with a centralized model.* Centralizing AI deployments under one team gives you more control over governance. Begin with a centralized approach. As your governance processes mature, you can move to a more decentralized model if you need to. If quota becomes a limitation, you can deploy the AI model in another region or request an increased quota.
-
-   The following diagram shows a centralized AI resources approach. It shows two intelligent applications that are connected to a centralized AI resources virtual network. A single team can deploy, govern, and retire AI model endpoints for intelligent applications.
-  
-   :::image type="content" source="./images/centralized-ai.svg" alt-text="Diagram that shows a centralized AI resources approach. It shows two intelligent applications connected to a centralized AI resources virtual network." lightbox="./images/centralized-ai.svg" border="false":::
-
-- *Know when to share AI endpoints.* In a centralized model, you can share a single AI endpoint across multiple applications, as shown in the following diagram. Sharing an AI endpoint in production works best when the same application team develops, deploys, and manages multiple applications that share the same governance and model needs. For sharing nonglobal, regional deployments, a generative AI gateway is a best practice. With some configuration in Azure API Management, you can monitor tokens and track costs across applications. Sharing a single AI endpoint in nonproduction environments simplifies resource management without creating major concerns about performance or operational impact. You can even share a single AI endpoint across different nonproduction environments. Ultimately, you should be flexible and try different models before you choose one.
-
-    :::image type="content" source="./images/centralized-ai-sharing.svg" alt-text="Diagram that shows a centralized AI resources approach. It shows two intelligent applications that share a single AI endpoint." lightbox="./images/centralized-ai-sharing.svg" border="false":::
-
-- *Don't share AI endpoints when governance needs vary.* Applications that require different content filter settings (governance on input and output) shouldn't share an endpoint. Don't share a single AI endpoint if a different AI model would provide a more cost-effective way to meet application requirements.
-The following diagram shows two intelligent applications, each with its own AI endpoint.
-
-    :::image type="content" source="./images/centralized-ai-no-share.svg" alt-text="Diagram that shows a centralized AI resources approach. It shows two intelligent applications, each with its own AI endpoint." lightbox="./images/centralized-ai-no-share.svg" border="false":::
-
-- *Decentralize AI endpoints for critical applications.* Use a decentralized model when isolation, security, and cost tracking are priorities. Decentralization allows teams to manage AI models that are aligned with their applications. It provides dedicated AI resources to the application when performance or criticality demands it. Gradual decentralization is key. Start with strong governance to manage risks and maintain visibility. As governance matures, teams can be given more autonomy over their AI endpoints.
-
-  The following diagram shows a model in which AI resources are dedicated to each application. It shows two workloads in two separate subscriptions with their own AI resources so they can deploy, govern, and retire their own AI model endpoints.
-
-  :::image type="content" source="./images/decentralized-ai.svg" alt-text="Diagram that shows dedicated AI resources for each application." lightbox="./images/decentralized-ai.svg" border="false":::
 
 ## Estimate delivery timelines
 
 Based on your PoC, assign a delivery timeline for your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships.  
 
-Microsoft AI SaaS solutions provide the shortest timelines for seeing a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. In most cases, it takes weeks or months before you have a production-ready AI application. 
+Microsoft AI SaaS solutions provide the shortest timelines for seeing a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. In most cases, it takes weeks or months before you have a production-ready AI application.
 
 ## Next step
 
