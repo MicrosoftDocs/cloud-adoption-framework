@@ -50,13 +50,13 @@ Use the AI adoption checklist to see the roadmap to adopting AI. There's a check
 
 | AI adoption phase | Activities |
 |---|---|
-| [Strategy](./strategy.md) | &#9744; |
-| [Plan](./plan.md) | &#9744; |
-| [Ready](./ready.md) | &#9744;  |
-| [Adopt](./adopt-paas.md) | &#9744;
-| [Secure](./secure.md) | &#9744;  |
-| [Govern](./govern.md) | &#9744; |
-| [Manage](./manage.md) | &#9744; |
+| [Strategy](./strategy.md) | &#9744; [Define AI uses cases](./strategy.md#define-ai-use-cases) &#9744; [Define an AI technology strategy](./strategy.md#define-an-ai-technology-strategy) <br> &#9744; [Define an AI data strategy](./strategy.md#define-an-ai-data-strategy) <br> &#9744; [Define a responsible AI strategy](./strategy.md#define-a-responsible-ai-strategy) |
+| [Plan](./plan.md) |  &#9744; [Evaluate AI maturity](./plan.md#evaluate-ai-maturity) <br> &#9744; [Acquire AI skills](./plan.md#acquire-ai-skills) <br> &#9744; [Access AI resources](./plan.md#access-to-resources) <br> &#9744; [Create an AI proof of concept](./plan.md#create-an-ai-proof-of-concept) <br> &#9744; [Plan for Responsible AI](./plan.md#plan-for-responsible-ai-adoption) |
+| [Ready](./ready.md) | &#9744;  [Prepare AI deployment regions](./ready.md#prepare-ai-deployment-regions) <br> &#9744; [Estimate delivery timelines](./plan.md#estimate-delivery-timelines) |
+| [Adopt](./adopt-paas.md) | &#9744; [Adopt Azure AI platforms (PaaS)](./adopt-paas.md) |
+| [Secure](./secure.md) | &#9744; [Secure AI resources](./secure.md#secure-ai-resources) <br> &#9744; [Secure AI models](./secure.md#secure-the-ai-models) <br> &#9744; [Secure AI data](./secure.md#secure-ai-data) <br> &#9744; [Secure AI access](./secure.md#secure-ai-access) |
+| [Govern](./govern.md) | &#9744; [Govern AI models](./govern.md#govern-ai-models) <br> &#9744; [Govern AI costs](./govern.md#govern-ai-costs) <br> &#9744; [Govern AI data](./govern.md#govern-ai-data) |
+| [Manage](./manage.md) | &#9744; [Manage AI models](./manage.md#manage-ai-models) <br> &#9744; [Manage AI costs](./manage.md#manage-ai-costs) |
 
 ## Next steps
 

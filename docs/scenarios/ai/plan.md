@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article provides recommendations for planning AI adoption. Strategy provides an end goal to your AI adoption. During this stage, you get more tactical about preparing your organization to adopt AI. During planning, you need to ensure that you have the right skills and planning for AI deployment. When you deploy AI, you need to consider responsible AI practices and your approach to deploying and consuming AI endpoints across your applications.  
 
-## Evaluate your AI maturity level
+## Evaluate AI maturity
 
 As with any technology, there's a learning curve to adopting AI. Evaluating your AI maturity level can help you prioritize AI opportunities. AI projects that are too advanced for your experience don't provide the return on investment you need. If you plan to build generative AI applications, start with this generative AI technical assessment. At a high level, here are the readiness factors you need to consider:
 
@@ -37,7 +37,7 @@ Assess your organization's current AI skill set to identify gaps and determine w
 
 - *Use Microsoft partners to acquire AI skills.* Use a Microsoft partner to address skill shortages. Build more complex solutions or increase personnel count to meet time constraints. Use the [Microsoft partners marketplace](https://partner.microsoft.com//partnership/find-a-partner) to find partners who have expertise in AI, data, and Azure across multiple industries.
 
-## Access to AI resources
+## Access AI resources
 
 This section provides a quick way to help you understand and access what you need to start using AI solutions.
 
@@ -68,7 +68,7 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. This step 
 
 - *Reprioritize AI opportunities*. Based on your PoC experience, reevaluate which AI opportunity you want to implement first.
 
-## Plan for responsible AI adoption
+## Plan for responsible AI
 
 When you set delivery timelines, it helps to understand the requirements of responsible AI. To plan for responsible AI, follow these recommendations:
 
