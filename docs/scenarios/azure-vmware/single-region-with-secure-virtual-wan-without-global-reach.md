@@ -108,7 +108,7 @@ This section focuses only on how internet connectivity is provided for Azure nat
 - *Option 2:* Azure VMware Solution-managed SNAT  
 - *Option 3:* Azure public IPv4 address to the NSX-T Data Center edge   
 
-You can use all three options with single-region secure Virtual WAN with routing intent. But when you use secure Virtual WAN with routing intent, you should use option 1. This scenario also uses option 1 to provide internet connectivity. Option 1 works best with secure Virtual WAN because it makes security inspection, deployment, and manageability easy.
+You can use all three options with single-region secure Virtual WAN with routing intent. But when you use secure Virtual WAN with routing intent, you should use option 1. This scenario also uses option 1 to provide internet connectivity. Option 1 works best with secure Virtual WAN because it's easy to inspect, deploy, and manage.
 
 When you enable routing intent on the secure hub, it advertises RFC 1918 to all peered virtual networks. BUt you can also advertise a default route 0.0.0.0/0 for internet connectivity to downstream resources. When you use routing intent, you can generate a default route from the hub firewall. This default route is advertised to your virtual network and to Azure VMware Solution. This section is broken into two sections, one that explains internet connectivity from an Azure VMware Solution perspective and another from the virtual network perspective.  
 
