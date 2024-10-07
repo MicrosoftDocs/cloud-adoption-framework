@@ -1,5 +1,5 @@
 ---
-title: Use secure Virtual WAN for Azure VMware Solution in a single region or dual regions
+title: Use Secure Virtual WAN for Azure VMware Solution in a Single Region or Dual Regions
 description: Learn about recommendations to use secure Virtual WAN and Azure VMware Solution for single-region and dual-region deployments.
 author: jasonmedina
 ms.author: jasonmedina
