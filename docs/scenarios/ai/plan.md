@@ -37,7 +37,7 @@ Assess your organization's current AI skill set to identify gaps and determine w
 
 - *Use Microsoft partners to acquire AI skills.* Use a Microsoft partner to address skill shortages. Build more complex solutions or increase personnel count to meet time constraints. Use the [Microsoft partners marketplace](https://partner.microsoft.com//partnership/find-a-partner) to find partners who have expertise in AI, data, and Azure across multiple industries.
 
-## Gain access to AI resources
+## Access to AI resources
 
 This section provides a quick way to help you understand and access what you need to start using AI solutions.
 
