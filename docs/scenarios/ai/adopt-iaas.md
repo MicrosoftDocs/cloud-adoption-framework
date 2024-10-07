@@ -28,7 +28,7 @@ Compute refers to the hardware, images used to train and inference AI models. Co
 *Table 1. Summary of compute recommendations by use case.*
 
 | AI phase             | Virtual Machine Image  | Generative AI (LLMs, SLMs) | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
-|---------|------------|---------              |-----------------------------|-----------------------------        | ---                               |
+|----------------------|------------------------|----------------------------|------------------------------------|----------------------------------|
 | Training AI models   | [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | [Memory-optimized](https://azure.microsoft.com/services/virtual-machines/memory-optimized/) (CPU) |
 | Inferencing AI models| [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (NC or ND family)  | GPU (NC or ND family) | [Compute-optimized](https://azure.microsoft.com/services/virtual-machines/compute-optimized/) (CPU) |
 
@@ -46,12 +46,12 @@ Virtual machine must align with your AI model complexity, dataset size, cost con
 
 - *Narrow your virtual machine options.* AI training is faster on memory-optimized hardware. AI inferencing is faster on compute-optimized hardware. Use GPUs to train and inference large datasets, such as those required for LLM, SLM, and image recognition. Select GPU virtual machines that support Infiniband, GPUDirect RDMA, and GPU interconnects for high-speed data transfer between the GPUs. The following table provides a recommended series based on data size.
 
-| VM series | Infiniband | GPUDirect RDMA | GPU interconnects | Compute capacity |
-| ----      | ---        | ---            | ---               | ---              |
-| [ND MI300X v5 series](/azure/virtual-machines/sizes/gpu-accelerated/nd-mi300x-v5-series) | X | X | X | Extra high |
-| [ND H100 v5 series](/azure/virtual-machines/nd-h100-v5-series) | X | X | X | High |
-| [NDm A100 v4-series](/azure/virtual-machines/ndm-a100-v4-series) | X | X | X | Medium-high |
-| [ND A100 v4-series](/azure/virtual-machines/nda100-v4-series) | X | X | X | Medium |
+    | VM series | Infiniband | GPUDirect RDMA | GPU interconnects | Compute capacity |
+    | ----      | ---        | ---            | ---               | ---              |
+    | [ND MI300X v5 series](/azure/virtual-machines/sizes/gpu-accelerated/nd-mi300x-v5-series) | Yes | Yes | Yes | Extra high |
+    | [ND H100 v5 series](/azure/virtual-machines/nd-h100-v5-series) | Yes | Yes | Yes | High |
+    | [NDm A100 v4-series](/azure/virtual-machines/ndm-a100-v4-series) | Yes | Yes | Yes | Medium-high |
+    | [ND A100 v4-series](/azure/virtual-machines/nda100-v4-series) | Yes | Yes |YesX | Medium |
 
 - *Check virtual machine pricing.* Use the virtual machine pricing pages for [Linux](https://azure.microsoft.com//pricing/details/virtual-machines/linux/) and [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) VMs for a general understanding of the cost of your VM choice. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to get a more detailed pricing estimate of your architecture.
 
