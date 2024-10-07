@@ -72,13 +72,13 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. This step 
 
 Before building applications in Azure, you need to think through your AI deployment. Responsible AI should serve as a guide to your application development.  
 
-- *Use responsible-AI planning tools.* If you're new to AI, rely on the available planning tools to align development with responsible AI principles. Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
+- *Use responsible-AI planning tools.* Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
-- *Plan for AI security.* Assess security risks and apply secure configurations to Azure resources and models so that you pass IT security standards. Familiarize yourself with common AI security threats, such as model poisoning, data tampering, and adversarial attacks. Any data fed into AI models should respect the same security, privacy, and sensitivity boundaries as any other data or technology. For more information, see [Secure AI](secure.md).
+- *Plan for AI security.* Plan to assess security risks specific to AI workloads. Based on those risks, you must implement security controls and maintain them over time. Review [Secure AI](secure.md) before deployment.
 
-- *Plan for AI governance.* Develop AI governance policies to mitigate organizational risk and eliminate unauthorized AI use. Set up processes to manage data access, data usage, and compliance with regulations. Create clear data ownership policies and ensure that data lineage is traceable. For more information, see [Govern AI](govern.md).
+- *Plan for AI governance.* Plan to govern AI workloads using automated and manual enforcement. Review [Govern AI](govern.md) before deployment.
 
-- *Plan AI management.* Consider how you should manage AI systems throughout their lifecycles, from updates to monitoring and resilience. Think about how to handle regular tasks, like deploying updates and maintaining infrastructure. Tailor these plans to AI environments. For more information, see [Manage AI](manage.md).
+- *Plan AI management.* Plan to determine who's responsible for deploying and configuring AI resource to meet governance and security standards. Develop a plan for AI endpoint sharing and how to measure AI workloads throughout their lifecycle. Review [Manage AI](manage.md) before deployment.
 
 ## Estimate delivery timelines
 
