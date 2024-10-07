@@ -101,6 +101,11 @@ This guidance outlines recommendations for controlling AI data that's fed into A
 
 - *Implement version control for grounding data.* Establish a version control process for grounding data, for example, in RAG. Versioning ensures that any changes to the underlying data or its structure are tracked and can be reverted if necessary, which maintains consistency across deployments.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Manage AI](manage.md)
+
 ## Example AI risk mitigations
 
 The following table lists some common AI risks and provides a mitigation strategy and a sample policy for each one. The table doesn't list a complete set of risks.
@@ -115,7 +120,3 @@ The following table lists some common AI risks and provides a mitigation strateg
 | R009    | Unexpected costs              | Use Microsoft Cost Management to track CPU, GPU, memory, and storage usage to ensure efficient resource utilization and prevent cost spikes. |Monitoring and optimization of resource usage and automated detection of cost overruns must be used to manage unexpected costs.      |
 | R010    | Underutilization of AI resources      | Monitor AI service metrics, like request rates and response times, to optimize usage.                          | Performance metrics and automated scalability must be used to optimize AI resource utilization.               |
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Manage AI](manage.md)
