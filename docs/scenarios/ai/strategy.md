@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article describes how to define an AI adoption strategy. As with any strategy, you need data to create an actionable vision for your organization. You need to understand where AI can benefit your business (identify use cases) and identify the right solution for each use case. We recommend that you establish an [AI center of excellence] (./center-of-excellence.md) (AI CoE) or appoint someone to lead this effort and set goals to measure progress.
 
-## Identify AI use cases
+## Define AI use cases
 
 Compile a comprehensive list of possible AI use cases. Don't limit ideas to current capabilities. Consider future possibilities as well. Later, when you choose your AI technology, you evaluate your technical capabilities, or you can acquire capabilities to implement each use case. For now, focus on compiling use cases. For an example, see [Example AI use cases](strategy.md#example-ai-use-cases). 
 
@@ -25,28 +25,28 @@ Compile a comprehensive list of possible AI use cases. Don't limit ideas to curr
 
 - *Explore industry use cases.* Research how other businesses use AI to gain insights. Stay informed about emerging AI technologies and applications that are relevant to your industry. 
 
-## Identify your AI technology
+## Define an AI technology strategy
 
 For each use case, you need to identify an AI technology to support it. Each AI technology requires a different skill set, different data, and a different amount of effort for the implementation of a production-ready solution. You need to take some time to understand the available technologies and identify and validate the right solutions for your business.
 
-Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. There are services to improve individual productivity and many platforms to automate business processes by using generative and non-generative AI. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, carefully validate the selection by reviewing the skills needed, the data needed, and cost factors.
+Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. There are services to improve individual productivity and AI platforms to automate business processes. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, carefully validate the selection by reviewing the skills needed, the data needed, and cost factors.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
-### Purchase Microsoft copilots (SaaS) to improve efficiency
+### Purchase Microsoft Copilots (SaaS) to improve efficiency
 
 Microsoft has four types of SaaS generative AI services. See the following table for an overview and links to articles that provide more information.
 
 | SaaS AI Copilot products | Description | User |
 |--------|--------|-------|
-| Copilot for Microsoft 365 | Use [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in Microsoft 365 apps and provides an enhanced-security way to chat with business data in Microsoft Graph. | Business |
-| Role-based agents for Microsoft 365 | Use agents, such as [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance), to enhance productivity for specific business roles. | Business |
+| Copilot for Microsoft 365 | Use [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in Microsoft 365 apps and provides an enhanced-security way to chat with business data in Microsoft Graph. | Business |
+| Role-based agents for Microsoft 365 | Use agents, such as [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot), [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance), to enhance productivity for specific business roles. | Business |
 | Copilots in Microsoft products | Use copilots to enhance productivity within Microsoft products, such as [GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
 | Copilot in browser and mobile apps | Use the [free](https://copilot.microsoft.com/) version for browser-based access to GPT models. Use [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) for better performance and more capacity. | Individual |
 
 ### Build intelligent apps with Azure AI platform services (PaaS)
 
-Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-code to code-first platforms. These platforms cater to different skill levels and provide options for deploying and building AI, analytical AI, and machine learning applications.
+Azure has a range of platform-as-a-service (PaaS) solutions to build intelligent applications. There are low-code platforms for businesses without developer or data science skills. There are also code-first AI platforms for developers and data scientists. Pick the platform that aligns with your current and future goals.
 
 | AI platform products | Description | Skills required |
 |---------|------------|---------|
@@ -57,7 +57,7 @@ Microsoft provides a range of platform-as-a-service (PaaS) solutions, from low-c
 
 ### Use Azure infrastructure services (IaaS) to bring your own AI models
 
-For more advanced AI needs, Azure Virtual Machines and Azure Kubernetes Service (AKS) provide access to GPUs and CPUs with virtual machine (VM) images so you can bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway. You should use them first before you try IaaS.
+For more advanced AI needs, Azure Virtual Machines provides access to GPUs and CPUs with virtual machine (VM) images so you can bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway. You should use them first before you try IaaS.
 
 ### Understand the skills needed to adopt AI
 
@@ -108,7 +108,7 @@ This table provides an overview of cost factors for Microsoft AI solutions:
 | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | PaaS training machine learning and generative AI models | Azure | Compute, storage, and data transfer |
 | [Virtual Machines](/azure/virtual-machines/overview) | IaaS, train any AI model | Azure | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
-## Identify your AI data
+## Define an AI data strategy
 
 When you train, ground, or use AI models, be sure that you send only the right data to the model and abide by ethical and regulatory standards. Your data strategy should outline acceptable data use and prepare your business to use ethical, accurate, high-quality data. Evaluate the completeness, relevance, and representativeness of the data to support reliable AI outputs.
 
@@ -120,7 +120,7 @@ When you train, ground, or use AI models, be sure that you send only the right d
 
 - *Monitor and evaluate continuously.* Set up ongoing monitoring of AI models and data pipelines to ensure data quality, performance, and fairness over time. Regularly audit data and model outputs to identify any shifts that could affect reliability or compliance.
 
-## Identify your AI responsibility
+## Define a responsible AI strategy
 
 Adopting AI responsibly is an iterative process that implements regular monitoring and measuring to ensure that AI meets your business objectives. Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. These principles govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI applications that you build in accordance with responsible AI.
 
