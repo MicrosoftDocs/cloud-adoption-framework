@@ -32,7 +32,7 @@ AI adoption is a seven-step process. The first three steps are foundational.   p
 
 ## AI adoption checklists
 
-Use the AI adoption checklist to see the roadmap to adopting AI. There's a checklist for startups and enterprises. The startup checklist covers the essentials for securing and governing AI workloads in Azure. The Enterprise checklist 
+Use the AI adoption checklist to see the roadmap to adopting AI. There's a checklist for startups and enterprises. The startup checklist covers the essentials for securing and governing AI workloads in Azure. The Enterprise checklist.
 
 ### Startup AI adoption checklist
 
@@ -42,9 +42,9 @@ Use the AI adoption checklist to see the roadmap to adopting AI. There's a check
 | [Plan](./plan.md) | &#9744; [Access AI resources](./plan.md#access-to-ai-resources) |
 | [Ready](./ready.md) | &#9744;  [Prepare AI deployment regions](./ready.md#prepare-ai-deployment-regions) |
 | [Adopt](./adopt-paas.md) | &#9744; [Adopt Azure AI platforms (PaaS)](./adopt-paas.md) |
-| [Secure](./secure.md) | &#9744; [Secure AI resources](./secure.md#secure-ai-resources) <br> &#9744; [Secure AI models]() <br> &#9744; [Secure AI data]() <br> &#9744; [Secure AI access]() |
-| [Govern](./govern.md) | &#9744; [Govern AI models]() <br> &#9744; [Govern AI costs]() <br> &#9744; [Govern AI data]() |
-| [Manage](./manage.md) | &#9744; [Manage AI models]() <br> &#9744; [Manage AI costs]() |
+| [Secure](./secure.md) | &#9744; [Secure AI resources](./secure.md#secure-ai-resources) <br> &#9744; [Secure AI models](./secure.md#secure-the-ai-models) <br> &#9744; [Secure AI data](./secure.md#secure-ai-data) <br> &#9744; [Secure AI access](./secure.md#secure-ai-access) |
+| [Govern](./govern.md) | &#9744; [Govern AI models](./govern.md#govern-ai-models) <br> &#9744; [Govern AI costs](./govern.md#govern-ai-costs) <br> &#9744; [Govern AI data](./govern.md#govern-ai-data) |
+| [Manage](./manage.md) | &#9744; [Manage AI models](./manage.md#manage-ai-models) <br> &#9744; [Manage AI costs](./manage.md#manage-ai-costs) |
 
 ### Enterprise AI adoption checklist
 
