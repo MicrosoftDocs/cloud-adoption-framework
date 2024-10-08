@@ -1,5 +1,5 @@
 ---
-title: Secure AI - Recommendations to secure AI
+title: Secure AI - Recommendations to Secure AI
 description: Secure AI with comprehensive recommendations that focus on confidentiality, integrity, and availability. Learn best practices for AI security.
 ms.author: ssumner
 author: stephen-sumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Secure AI – Recommendations to secure AI
+# Secure AI – Recommendations to Secure AI
 
 This article provides recommendations for securing AI. It focuses on the confidentiality, integrity, and availability of AI systems. Alternatively, AI security governance focuses on organizational risks and creating evergreen policies to mitigate those risks.
 
@@ -46,7 +46,7 @@ This guidance provides recommendations for securing Azure resources that are dep
     | Azure Machine Learning | Follow the [security best practices](/azure/machine-learning/concept-enterprise-security) for Machine Learning |
     | Azure Virtual Machines | Use a public load balancer and only permit access requests to the AI model endpoint through the load balancer |
 
-- **Limit outbound traffic from your AI resources**. Limit outbound traffic from your AI model endpoints to help protect sensitive data and maintain the integrity of your AI models. For minimizing data exfiltration risks, restrict outbound traffic to approved services or fully qualified domain names (FQDNs) and maintain a list of trusted sources. You should only allow unrestricted internet outbound traffic if you need access to public machine learning resources. Regularly monitor and update your systems. For more information, see [Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention), [Studio,](/azure/ai-studio/how-to/configure-managed-network), and [Machine Learning.](/azure/machine-learning/how-to-network-isolation-planning#allow-only-approved-outbound-mode).
+- **Limit outbound traffic from your AI resources**. Limit outbound traffic from your AI model endpoints to help protect sensitive data and maintain the integrity of your AI models. For minimizing data exfiltration risks, restrict outbound traffic to approved services or fully qualified domain names (FQDNs) and maintain a list of trusted sources. You should only allow unrestricted internet outbound traffic if you need access to public machine learning resources. Regularly monitor and update your systems. For more information, see [Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention), [Studio](/azure/ai-studio/how-to/configure-managed-network), and [Machine Learning.](/azure/machine-learning/how-to-network-isolation-planning#allow-only-approved-outbound-mode).
 
 ### Secure the AI models
 
@@ -58,7 +58,7 @@ This guidance focuses on applying threat protection, monitoring for prompt injec
 
 - **Ensure model verification.** Establish company-wide verification mechanisms to ensure that all AI models in use are legitimate and secure. If you use open-source models, use model signatures or other verification processes to confirm the authenticity of AI models. This approach prevents the deployment of unauthorized or tampered models.
 
-- **Consider using an AI Gateway.** Use [Azure API Management](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) to help ensure consistent security across AI workloads. Use its built-in policies for traffic control and security enforcement. Integrate API Management with Microsoft Entra ID to centralize authentication and authorization and ensure that only authorized users or applications interact with your AI models. Configure least privilege access on the [reverse proxy’s managed identity](/azure/api-management/api-management-howto-use-managed-service-identity). For more information, see [AI authentication with API Management](/azure/architecture/ai-ml/guide/azure-openai-gateway-custom-authentication#general-recommendations).
+- **Consider using an AI gateway.** Use [Azure API Management](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) to help ensure consistent security across AI workloads. Use its built-in policies for traffic control and security enforcement. Integrate API Management with Microsoft Entra ID to centralize authentication and authorization and ensure that only authorized users or applications interact with your AI models. Configure least privilege access on the [reverse proxy’s managed identity](/azure/api-management/api-management-howto-use-managed-service-identity). For more information, see [AI authentication with API Management](/azure/architecture/ai-ml/guide/azure-openai-gateway-custom-authentication#general-recommendations).
 
 ### Secure AI execution
 
@@ -116,7 +116,7 @@ This section outlines security recommendations for accessing AI resources in Azu
 
 This guidance provides recommendations for maintaining the security of AI workloads over time. Effective monitoring and continuous review of AI security controls are essential to protect AI workloads across an organization.
 
-- **Implement testing for data leakage and coercion in AI systems**. Conduct rigorous tests to determine if sensitive data can be leaked or coerced through AI systems. Perform data loss prevention tests and simulate AI-specific attack scenarios. Simulate model inversion or adversarial attacks to evaluate the resilience of data protection measures. Ensuring that AI models and data handling processes are secure against unauthorized access and manipulation is crucial to maintain data integrity and trust in AI applications.
+- **Implement testing for data leakage and coercion in AI systems.** Conduct rigorous tests to determine if sensitive data can be leaked or coerced through AI systems. Perform data loss prevention tests and simulate AI-specific attack scenarios. Simulate model inversion or adversarial attacks to evaluate the resilience of data protection measures. Ensuring that AI models and data handling processes are secure against unauthorized access and manipulation is crucial to maintain data integrity and trust in AI applications.
 
 - **Provide AI-focused employee training and awareness.** Provide comprehensive training programs for all employees involved in AI projects. Emphasize the importance of data security and best practices specific to AI development and deployment. Educate staff on how to handle sensitive data that's used in training and recognize threats like model inversion or data poisoning attacks. Regular training ensures that team members are knowledgeable about the latest AI security protocols and understand their role in maintaining the integrity of AI workloads.
 
