@@ -131,6 +131,11 @@ Adopting AI responsibly is an iterative process that implements regular monitori
 
 - *Ensure data transparency.* Enable stakeholders to understand how data is collected, used, and processed in AI systems. Provide clear traceability of data inputs and AI decisions to foster trust and accountability.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a plan to adopt AI](plan.md)
+
 ## Example AI use cases
 
 | **Generative AI**                                      | **Non-generative AI**                                                                 |
@@ -155,8 +160,3 @@ Use this example AI adoption strategy to build your own strategy. The example is
 | Automate business process     | Reduce costs               | Inventory management application and product purchasing     | Shorter shelf life of inventory      | Machine learning, training models  | Azure Machine Learning                     | Historical inventory and sales data      | Machine learning and app development | Estimated usage                         |
 | Enhance individual productivity | Improve employee experience | Daily work across company                                   | Increased employee satisfaction survey results | SaaS generative AI          | The free version of Copilot and Microsoft 365 Copilot          | OneDrive data                            | General IT                        | Subscription costs                      |
 | Automate business process     | Increase sales            | E-commerce application for regulated industry chat feature   | Increased sales                      | IaaS generative AI model training | Azure Virtual Machines                     | Vast training data on domain-specific data | Cloud infrastructure, app development, VM maintenance, networking | Infrastructure and software |
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a plan to adopt AI](plan.md)
