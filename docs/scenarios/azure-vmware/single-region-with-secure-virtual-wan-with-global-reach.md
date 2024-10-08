@@ -12,14 +12,14 @@ ms.custom: think-tank, e2e-azure-VMware
 
 # Use a single-region Azure VMware Solution design that has Global Reach
 
-This article describes best practices for Azure VMware Solution in a single region when you use Azure secure Virtual WAN with routing intent. It provides connectivity and traffic-flow recommendations for secure Virtual WAN with routing intent and Global Reach. This article breaks down the topology from the perspective of an Azure VMware Solution private cloud, on-premises sites, and Azure-native environments. The implementation and configuration of secure Virtual WAN with routing intent are beyond the scope of this article.
+This article describes best practices for Azure VMware Solution in a single region when you use secure Azure Virtual WAN with routing intent. It provides connectivity and traffic flow recommendations for secure Virtual WAN with routing intent and Azure ExpressRoute Global Reach. This article describes the topology for designs in Azure VMware Solution private clouds, on-premises sites, and Azure-native resources. The implementation and configuration of secure Virtual WAN with routing intent are beyond the scope of this article.
 
 ## Use secure Virtual WAN in a single region
   
 Only the Virtual WAN Standard SKU supports secure Virtual WAN with routing intent. Use secure Virtual WAN with routing intent to send all internet traffic and private network traffic to a security solution, like Azure Firewall, a non-Microsoft network virtual appliance (NVA), or a software as a service (SaaS) solution. You must have a secure Virtual WAN hub if you use routing intent. 
 
 > [!NOTE]
-> When you configure Azure VMware Solution with secure Virtual WAN hubs, set the hub routing preference option to **AS Path** to ensure optimal routing results on the hub. For more information, see [Virtual hub routing preference](/azure/virtual-wan/about-virtual-hub-routing-preference).
+> When you configure Azure VMware Solution with secure Virtual WAN hubs, set the hub routing preference option to **AS Path** to ensure optimal routing results on the hub. For more information, see [Virtual hub routing preferences](/azure/virtual-wan/about-virtual-hub-routing-preference).
 
 This scenario's hub has the following configuration:
 
@@ -48,7 +48,7 @@ The following table describes the topology connectivity in the preceding diagram
 
 | Connection | Description  |
 |:-------------------- |:--------------------  |
-| D | Azure VMware Solution private cloud-managed Azure ExpressRoute connection to the hub  |
+| D | Azure VMware Solution private cloud-managed ExpressRoute connection to the hub  |
 | A | Azure VMware Solution Global Reach connection to on-premises  |
 | E | On-premises ExpressRoute connection to the hub  |
 
@@ -60,10 +60,6 @@ The following sections describe traffic flows and connectivity for Azure VMware 
 
 The following diagram shows the traffic flows for the Azure VMware Solution private cloud. 
 
-The Azure VMware Solution private cloud has an ExpressRoute connection to its hub (connection **D**). The Azure VMware Solution cloud region establishes a connection to on-premises via ExpressRoute Global Reach (connection **A**). Traffic that travels via Global Reach doesn't transit the hub firewall.
-
-For your scenario, explicitly configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
-
 :::image type="content" source="./media/single-region-virtual-wan-2.png" alt-text="Diagram that shows a single-region Azure VMware Solution that has a cross-Azure VMware Solution topology." border="false":::
  
 The following table describes the traffic flow in the preceding diagram. 
@@ -72,6 +68,10 @@ The following table describes the traffic flow in the preceding diagram.
 | - | -------------- | -------- | ---------- | ---------- |
 | 1 | Azure VMware Solution cloud | &#8594;| Virtual network| Yes |
 | 2 | Azure VMware Solution cloud | &#8594;| On-premises | No |
+
+The Azure VMware Solution private cloud has an ExpressRoute connection to its hub (connection **D**). The Azure VMware Solution cloud region establishes a connection to on-premises via ExpressRoute Global Reach (connection **A**). Traffic that travels via Global Reach doesn't transit the hub firewall.
+
+For your scenario, explicitly configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
 
 ### On-premises connectivity and traffic flow
 
@@ -90,9 +90,9 @@ The following table describes the traffic flow in the preceding diagram.
 
 ### Azure virtual network connectivity and traffic flow
 
-A secure hub that has routing intent enabled sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered virtual networks, plus any other prefixes that are added as *private traffic prefixes*. For more information, see [Routing intent private address prefixes](/azure/virtual-wan/how-to-routing-policies#nva). In this scenario, with routing intent enabled, all resources in the virtual network possess the default RFC 1918 addresses and use the hub firewall as the next hop. All traffic that ingresses and egresses the virtual network transits the hub firewall.
+A secure hub that has routing intent enabled sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16) to peered virtual networks, plus any other prefixes that are added as private-traffic prefixes. For more information, see [Routing intent private-address prefixes](/azure/virtual-wan/how-to-routing-policies#nva). This scenario has routing intent enabled, so all resources in the virtual network possess the default RFC 1918 addresses and use the hub firewall as the next hop. All traffic that ingresses and egresses the virtual network transits the hub firewall.
 
-The following diagram shows the virtual network peered directly to the hub.
+The following diagram shows how the virtual network peers directly to the hub.
 
 :::image type="content" source="./media/single-region-virtual-wan-4.png" alt-text="Diagram that shows a single-region Azure VMware Solution that has a virtual network connection." border="false":::
 
@@ -105,29 +105,23 @@ The following table describes the traffic flow in the preceding diagram.
 
 ### Internet connectivity
 
-This section focuses only on how to provide internet connectivity to Azure-native resources in a virtual network and a Azure VMware Solution private cloud. For more information, see [Internet access concepts for Azure VMware Solution](/azure/azure-VMware/concepts-design-public-internet-access). Choose from several options to provide internet connectivity to Azure VMware Solution.
+This section focuses only on how to provide internet connectivity to Azure-native resources in a virtual network and in a Azure VMware Solution private cloud. For more information, see [Internet access concepts for Azure VMware Solution](/azure/azure-VMware/concepts-design-public-internet-access). You can use the following options to provide internet connectivity to Azure VMware Solution.
 
 - *Option 1:* Azure-hosted internet service
 - *Option 2:* Azure VMware Solution-managed SNAT  
 - *Option 3:* Azure public IPv4 address to the NSX-T Data Center edge  
 
-A single-region secure Virtual WAN design with routing intent supports all options, but we recommend option 1. The scenario later in this article uses option 1 to provide internet connectivity. Option 1 works best with secure Virtual WAN because it's easy to inspect, deploy, and manage.
+A single-region secure Virtual WAN design that has routing intent supports all options, but we recommend option 1. The scenario later in this article uses option 1 to provide internet connectivity. Option 1 works best with secure Virtual WAN because it's easy to inspect, deploy, and manage.
 
-When you use routing intent, you can generate a default route from the hub firewall. This default route is advertised to your virtual network and to Azure VMware Solution. This section is broken into two sections, one that explains internet connectivity from an Azure VMware Solution perspective and another from the virtual network perspective.
+When you use routing intent, you can generate a default route from the hub firewall. This default route advertises to your virtual network and to Azure VMware Solution.
 
-#### Azure VMware Solution internet connectivity
+#### Azure VMware Solution and virtual network internet connectivity
 
-When you enable routing intent for internet traffic, by default, the secure Virtual WAN hub doesn't advertise the default route across ExpressRoute circuits. To ensure the default route is propagated to the Azure VMware Solution from the Azure Virtual WAN, you must enable default route propagation on your Azure VMware Solution ExpressRoute circuits. For more information, see [Advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints).
+When you enable routing intent for internet traffic, by default, the secure Virtual WAN hub doesn't advertise the default route across ExpressRoute circuits. To ensure that the default route propagates to Azure VMware Solution from Virtual WAN, you must enable default route propagation on your Azure VMware Solution ExpressRoute circuits. For more information, see [Advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints).
 
-After changes are complete, the default route 0.0.0.0/0 is then advertised via connection **D** from the hub. Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route 0.0.0.0/0 to Azure VMware Solution, but the default route is also advertised to on-premises via Global Reach (connection **A**). As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment to exclude learning the default route. This step ensures that your configuration doesn't affect on-premises internet connectivity.
+After you enable default route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route 0.0.0.0/0 to Azure VMware Solution, but Global Reach (connection **A**) also advertises the default route to on-premises. As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment so that it doesn't learn the default route. This step ensures that your configuration doesn't affect on-premises internet connectivity.
 
-#### Virtual network internet connectivity
-
-When you enable routing intent for internet access, the default route generated from the secure Virtual WAN hub is automatically advertised to the hub-peered virtual network connections. Under *Effective Routes* for the virtual machines' NICs in the virtual network, the 0.0.0.0/0 next hop is the hub firewall.
-
-For more information, see the traffic flow section.
-
-:::image type="content" source="./media/single-region-virtual-wan-5.png" alt-text="Diagram of single-region Azure VMware Solution with internet.":::
+:::image type="content" source="./media/single-region-virtual-wan-5.png" alt-text="Diagram of a single-region Azure VMware Solution that has an internet connection." border="false":::
 
 The following table describes the traffic flow in the preceding diagram.
 
@@ -136,12 +130,13 @@ The following table describes the traffic flow in the preceding diagram.
 | 7 | Azure VMware Solution cloud | &#8594;| The internet| Yes |
 | 8 | Virtual network | &#8594;| The internet | Yes |
 
+When you enable routing intent for internet access, the default route that generates from the secure Virtual WAN hub automatically advertises to the hub-peered virtual network connections. Note that in the virtual machines' network interface cards (NICs) in the virtual network, the 0.0.0.0/0 next hop is the hub firewall. This value is under *Effective Routes*. 
 
 ## Next steps
 
 - [Virtual hub settings](/azure/virtual-wan/hub-settings)
 - [Configure Azure Firewall in a Virtual WAN hub](/azure/virtual-wan/howto-firewall)
-- [Configure Palo Alto Networks Cloud NGFW in Virtual WAN](/azure/virtual-wan/how-to-palo-alto-cloud-ngfw)
+- [Configure Palo Alto Networks Cloud Next Generation Firewall in Virtual WAN](/azure/virtual-wan/how-to-palo-alto-cloud-ngfw)
 - [Configure routing intent and policies through the Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva)
 
 
