@@ -30,10 +30,7 @@ Use the AI adoption checklist to see the roadmap to adopting AI. There's a check
 1. *Govern AI*: Control your AI workloads and models by establishing guardrails to ensure compliance and responsible use.
 1. *Manage AI*: Manage your AI deployments, operations, models, and data over time to ensure they remain aligned with your business goals.
 
-## AI adoption checklists
-
-
-### Startup AI adoption checklist
+### Startup AI checklist
 
 | AI adoption phase | Activities |
 |---|---|
@@ -45,7 +42,7 @@ Use the AI adoption checklist to see the roadmap to adopting AI. There's a check
 | [Govern](./govern.md) | &#9744; [Govern AI models](./govern.md#govern-ai-models) <br> &#9744; [Govern AI costs](./govern.md#govern-ai-costs) <br> &#9744; [Govern AI data](./govern.md#govern-ai-data) |
 | [Manage](./manage.md) | &#9744; [Manage AI models](./manage.md#manage-ai-models) <br> &#9744; [Manage AI costs](./manage.md#manage-ai-costs) |
 
-### Enterprise AI adoption checklist
+### Enterprise AI checklist
 
 | AI adoption phase | Activities |
 |---|---|
