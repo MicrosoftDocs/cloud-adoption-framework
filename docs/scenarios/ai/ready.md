@@ -36,7 +36,7 @@ In Azure, resource organization is how you structure management groups and subsc
 
 - *Apply AI policies to each management group.* Start with baseline policies for each workload type, such as those articulated by [Azure landing zone policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies). Add more Azure Policy definitions to your baseline to drive uniform governance for [Azure AI services](/azure/ai-services/policy-reference), [Azure AI Search](/azure/governance/policy/samples/built-in-policies#search), [Azure Machine Learning](/azure/governance/policy/samples/built-in-policies#machine-learning), [Azure Virtual Machines](/azure/virtual-machines/policy-reference) and others.
 
-- *Deploy AI resources with workload resources.* AI resources need to inherit workload governance policies from the workload management group (internal or internet-facing). Keep them separate from platform resources. AI resources controlled by platform teams tend to create development bottlenecks. In the context of Azure landing zone, deploy AI platforms to application landing zone subscriptions.
+- *Deploy AI resources in workload subscriptions.* AI resources need to inherit workload governance policies from the workload management group (internal or internet-facing). Keep them separate from platform resources. AI resources controlled by platform teams tend to create development bottlenecks. In the context of Azure landing zone, deploy AI platforms to application landing zone subscriptions.
 
 ## Prepare AI networking
 
