@@ -23,14 +23,20 @@ When applied effectively, AI brings business value by enhancing individual and a
 Use the AI adoption checklist to see the roadmap to adopting AI. There's a checklist for startups and enterprises. The startup checklist covers the essentials for securing and governing AI workloads in Azure. The Enterprise checklist provide comprehensive guidance for scaling AI workloads in Azure. The following steps outline how to adopt AI on Azure:
 
 1. *AI Strategy*: Choose the right AI technology for each use case based on the required skills, data availability, and associated costs. Define your data strategy and Responsible AI strategy based on your technology strategy.
+   
 1. *AI Plan*: Assess your AI maturity, acquire necessary AI skills, access the AI technology you need, and plan for responsible AI. Part of planning is reviewing the needs of the AI security, governance, and management processes.
+
 1. *AI Ready*: Prepare your Azure environment for deployment and establish a strong security and governance foundation for all AI workloads.
+
 1. *Adopt AI*: Understand common adoption patterns and find implementation resources to build AI applications on AI platforms and infrastructure.
+
 1. *Secure AI*: Assess AI security risks and apply security controls to protect your AI workloads.
+
 1. *Govern AI*: Control your AI workloads and models by establishing guardrails to ensure compliance and responsible use.
+
 1. *Manage AI*: Manage your AI deployments, operations, models, and data over time to ensure they remain aligned with your business goals.
 
-## AI Checklist
+## AI adoption checklists
 
 | AI adoption phase | Startup checklist | Enterprise checklist |
 |---|---|---|
