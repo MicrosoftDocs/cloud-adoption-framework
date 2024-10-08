@@ -29,7 +29,7 @@ Before ingesting data, you must categorize the data as **confidential or below**
 
 After you have mapped your data classification, you should align this with local regulated industry policy requirements and your internal company policies. This helps you to create an Azure policy set that governs what infrastructure can be deployed, the location where it can be deployed, and specifies networking and encryption standards.
 
-For regulated industries, Microsoft has developed many [Regulatory compliance policy initiatives](../../../../../industry/sovereignty/policy-portfolio-baseline.md) which acts as a baseline for compliance frameworks.
+For regulated industries, Microsoft has developed many [Regulatory compliance policy initiatives](/industry/sovereignty/policy-portfolio-baseline.md) which acts as a baseline for compliance frameworks.
 
 For data classification which follows the same rules for encryption and allowed infrastructure SKUs, and policy initiatives then the data can sit inside the same data landing zone.
 
@@ -52,13 +52,13 @@ In addition to defining policies for location and allowed Azure services, you sh
 - What are your requirements, per classification, for data in-transit encryption?
 - What are your requirements, per classification, for data in-use encryption?
 
-For key management, encryption keys can be either platform managed, or customer managed. Microsoft has documented key management in Azure to help you choose a key management solution. For more information, see [Overview of Key Management in Azure](../../../../security/fundamentals/key-management.md) and [How to choose the right key management solution](../../../../security/fundamentals/key-management-choose.md).
+For key management, encryption keys can be either platform managed, or customer managed. Microsoft has documented key management in Azure to help you choose a key management solution. For more information, see [Overview of Key Management in Azure](/security/fundamentals/key-management.md) and [How to choose the right key management solution](/security/fundamentals/key-management-choose.md).
 
-Microsoft has published documentation explaining [Azure Data encryption at rest](../../../../security/fundamentals/encryption-atrest.md) and [data encryption models](../../../../security/fundamentals/encryption-models.md) which help you understand the encryption options which are available.
+Microsoft has published documentation explaining [Azure Data encryption at rest](/security/fundamentals/encryption-atrest.md) and [data encryption models](/security/fundamentals/encryption-models.md) which help you understand the encryption options which are available.
 
-Microsoft gives customers the ability to use [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data when it's traveling between the cloud services and customers. For more information, see [Encryption of data in transit](../../../../security/fundamentals/encryption-overview%23encryption-of-data-in-transit.md).
+Microsoft gives customers the ability to use [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data when it's traveling between the cloud services and customers. For more information, see [Encryption of data in transit](/security/fundamentals/encryption-overview%23encryption-of-data-in-transit.md).
 
-If your scenario requires that data remains encrypted in-use, Azure Confidential Computing threat model aims to reduce trust or remove the ability for a cloud provider operator or other actors in the tenant's domain accessing code and data while it's being executed. For the latest Azure Confidential Computing offerings, see [Azure confidential computing products](../../../../confidential-computing/overview-azure-products.md). 
+If your scenario requires that data remains encrypted in-use, Azure Confidential Computing threat model aims to reduce trust or remove the ability for a cloud provider operator or other actors in the tenant's domain accessing code and data while it's being executed. For the latest Azure Confidential Computing offerings, see [Azure confidential computing products](/confidential-computing/overview-azure-products.md). 
 
 ## Data Governance
 
