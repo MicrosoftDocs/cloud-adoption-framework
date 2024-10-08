@@ -11,19 +11,37 @@ ms.topic: conceptual
 
 This article provides recommendations for managing AI from development, deployment, and operations. AI management requires standardization in development and deployment and regularly measuring AI output to ensure data and models don't drift over time.
 
+## Manage AI deployment
+
+A primary consideration for AI endpoint management is deciding who can deploy AI resources and who’s responsible for governing the endpoints. The [AI CoE](./center-of-excellence.md) should lead the effort to determine the best approach. There are two principal options:
+
+- *Use workload-team management AI resources for faster development.* When workload teams manage AI resources, they have to autonomy to deploy and manage AI resources within the confines of your governance policies. Use Azure Policy to enforce governance consistently across all workload environments. Where there are governance gaps, create and communicate AI policies that the workload teams must follow. For example, create generative AI policies for content filter settings and disallowed models. Make these policies clearly known to workload teams and audit regularly.
+
+- *Use a shared AI management for increased AI governance.* In a shared management approach, a single team manages AI resources for all AI workloads. This team deploys core AI resources and configures security and governance that all workload teams use. Use this approach if want to a single team to control AI deployments and governance across your workloads. Azure AI Studio facilitates this approach with [Azure AI Studio hubs and projects](/azure/ai-studio/concepts/ai-resources). The central AI team deploys and configures the hub. Then the workload teams use projects, which inherit hub configurations, to move from a proof of concept to production. Azure Machine Learning has similar capabilities with its [Azure Machine Learning hub workspaces](/azure/machine-learning/concept-hub-workspace).
+
+## Manage AI endpoint sharing
+
+This guidance provides recommendations on when to share and not share an AI endpoint across multiple applications.
+
+- *Don’t share AI endpoints when governance and model needs vary.* Applications that require different content filter settings (governance on input and output) shouldn't share an endpoint. Also don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet application requirements.
+
+- *Only share AI endpoints within a single workload.* Sharing an AI endpoint works best when a workload team has multiple applications. AI endpoint sharing provides the least amount of management overhead and simplifies deployment. These applications must share the same governance needs and AI model needs. Sharing endpoints could cause you to hit rate limits and quota limitations. Most Azure services have limits per subscription. Within a subscription, each region has quota limits.
+
 ## Manage AI operations
 
 This guidance provides recommendations for establishing an operational framework for AI workloads and how to establish visibility and consistency across the AI lifecycle.
 
 - *Adopt an AI operational framework.* Implement [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2) (Machine learning operations) frameworks for traditional machine learning workflows and [GenAIOps](/azure/machine-learning/prompt-flow/how-to-end-to-end-azure-devops-with-prompt-flow) for generative AI workloads. These operational frameworks organize the end-to-end cycle for AI development.
 
-- *Standardize compute management.* For PaaS services, you need to provision compute resources for certain actions like prompt flows and training models. A service like Azure Machine Learning has different compute options, such as compute instances, clusters, and serverless options. You want to standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Azure AI Studio](/azure/ai-studio/how-to/create-manage-compute), [Azure Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio),
+- *Use a sandbox environment for AI experimentation.* Use a sandbox environment for AI model experimenting. You want to consistency across dev, test, and prod environments. So, the sandbox environment should be distinct from dev, test, and production environments in the AI development lifecycle. Changing deployment and governance models between dev, test, and prod can hide and introduce breaking changes.
+
+- *Standardize compute management.* For PaaS services, you need to provision compute resources for certain actions like prompt flows and training models. A service like Azure Machine Learning has different compute options, such as compute instances, clusters, and serverless options. You want to standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Azure AI Studio](/azure/ai-studio/how-to/create-manage-compute) and [Azure Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio).
 
 - *Monitor platform resources.* Use diagnostic settings to capture logs and metrics for all key services, such as Azure AI Studio, Azure Machine Learning, [Azure AI services](/azure/ai-services/diagnostic-logging). Specific services should capture audit logs and relevant service-specific logs. Implement custom monitoring alerts based on your architecture’s specific needs. Examples include alerts for container registries, Machine Learning services, and Azure OpenAI operations.
 
 - *Establish CI/CD pipelines for deployment.* Ensure your data pipelines cover: Code quality checks (linting, static analysis), unit and integration tests, experimentation and evaluation flows, production deployment steps, such as promoting releases to test and production environments following manual approvals. Maintain separation between models, prompt flows, and the client user interface to ensure updates to one component don't impact others. Each flow should have its own lifecycle for independent promotion.
 
-- *Standardize AI development tools.* Define and standardize the use of SDKs and APIs for consistency across development teams. Tools like [Azure SDK](/azure/developer/) for AI workloads provide libraries and APIs that are optimized for scaling AI models and integrating them into applications. For generative AI, standardize your AI platform and orchestrators, such as [Semantic Kernel](/semantic-kernel/overview/), LangChain, and [Prompt Flow](/azure/ai-studio/how-to/prompt-flow), to standardize operations across AI models.
+- *Standardize AI development tools.* Define and standardize the use of SDKs and APIs for consistency across development teams. Tools like [Azure SDK](/azure/developer/) for AI workloads provide libraries and APIs that are optimized for scaling AI models and integrating them into applications. For generative AI, standardize your AI platform and orchestrators, such as [Semantic Kernel](/semantic-kernel/overview/), LangChain, and [Prompt Flow](/azure/ai-studio/how-to/prompt-flow).
 
 ## Manage AI models
 
@@ -47,11 +65,11 @@ This guidance provides recommendations for measuring AI model performance over t
 
 To manage AI costs, you need to understand the expenses related to AI resources, including compute, storage, and token processing. The cost management fundamentals apply here.
 
-- *Monitor and maximize billing efficiency. Understand cost breakpoints to avoid unnecessary charges. Examples include making full use of fixed-price thresholds for image generation or hourly fine-tuning. Track your usage patterns, including tokens per minute (TPM) and requests per minute (RPM), and adjust models and architecture accordingly. Consider a commitment-based billing model for consistent usage patterns.
+- *Monitor and maximize billing efficiency.* Understand cost breakpoints to avoid unnecessary charges. Examples include making full use of fixed-price thresholds for image generation or hourly fine-tuning. Track your usage patterns, including tokens per minute (TPM) and requests per minute (RPM), and adjust models and architecture accordingly. Consider a commitment-based billing model for consistent usage patterns.
 
 - *Set up automated cost alerts.* Use budget alerts notify you of unexpected charges and establish budgeting strategies to control and predict your AI expenses.
 
-- *Follow cost management best practices for each service.* Each Azure service has specific features and best practices that maximize cost optimization. Familiarize yourself with following guidance for planning and managing cost in [Azure AI Studio, ](/azure/ai-studio/how-to/costs-plan-manage)[Azure OpenAI Service, ](/azure/ai-services/openai/how-to/manage-costs)[virtual machines](/azure/virtual-machines/cost-optimization-plan-to-manage-costs)
+- *Follow cost management best practices for each service.* Each Azure service has specific features and best practices that maximize cost optimization. Familiarize yourself with following guidance for planning and managing cost in [Azure AI Studio](/azure/ai-studio/how-to/costs-plan-manage), [Azure OpenAI Service](/azure/ai-services/openai/how-to/manage-costs), [Azure Machine Learning](/azure/machine-learning/concept-plan-manage-cost), [Azure Virtual Machines](/azure/virtual-machines/cost-optimization-plan-to-manage-costs)
 
 For generative AI applications using Azure OpenAI, see these [cost optimization recommendations.](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat#cost-optimization)
 

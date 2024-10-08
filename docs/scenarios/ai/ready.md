@@ -71,7 +71,7 @@ This guidance provides recommendations on how different users should connect to 
 
 To choose the right approach for the foundation of AI workloads, you need to set up the core infrastructure and understand the separation of responsibilities and considerations that you need for an AI-focused Azure landing zone.
 
-### Deploy a foundation with Azure landing zone
+### Deploy a foundation with an Azure landing zone
 
 An Azure landing zone provides a starting point to prepare your Azure environment. Deploy AI workload resources, such as Azure AI Studio, Machine Learning, AI services, Virtual Machines, and supporting resources to an Application Landing Zone. For more information, see *Figure 2: Landing zone A2 subscription*. You can use various implementations for an Azure landing zone. Make sure to apply the policies that are relevant to your AI deployment when you use the Azure landing zone accelerator.
 
