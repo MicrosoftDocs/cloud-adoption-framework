@@ -1,6 +1,6 @@
 ---
 title: Secure AI - Recommendations to Secure AI
-description: Secure AI with comprehensive recommendations that focus on confidentiality, integrity, and availability. Learn best practices for AI security.
+description: Learn how to secure AI with comprehensive recommendations that focus on confidentiality, integrity, and availability. Learn best practices for AI security.
 ms.author: ssumner
 author: stephen-sumner
 ms.date: 11/01/2024
@@ -19,7 +19,7 @@ This guidance provides recommendations for identifying AI security risks. To pro
 
 - **Identify common AI security risks.** Use recognized resources like [MITRE ATLAS](https://atlas.mitre.org/), [OWASP Machine Learning risk](https://mltop10.info/), and [OWASP Generative AI risk](https://genai.owasp.org/) to regularly evaluate risks across all AI workloads. For ongoing security posture management, consider using AI security tools like [AI security posture management](/azure/defender-for-cloud/ai-security-posture) in Microsoft Defender for Cloud. These tools can automate the detection and remediation of generative AI risks.
 
-- **Identify data risks.** Sensitive data loss or exposure can have significant effects on your organization’s stakeholders and compliance obligations. Use enterprise-wide tools like [Microsoft Purview Insider Risk Management](/purview/insider-risk-management) to assess insider risk and maintain data security throughout the business. Across all AI workloads, classify and prioritize risks based on the sensitivity of the data that they process, store, or transmit.
+- **Identify data risks.** Consider the significant effects on your organization’s stakeholders and compliance obligations that can result from sensitive data loss or exposure. Use enterprise-wide tools like [Microsoft Purview Insider Risk Management](/purview/insider-risk-management) to assess insider risk and maintain data security throughout the business. Across all AI workloads, classify and prioritize risks based on the sensitivity of the data that they process, store, or transmit.
 
 - **Conduct AI threat modeling.** Perform company-wide AI [threat modeling](https://www.microsoft.com/securityengineering/sdl/threatmodeling) by using frameworks like STRIDE to assess potential attack vectors for all AI workloads. Update threat models regularly to adapt to new AI use cases and threats. The [AI CoE](./center-of-excellence.md) should consider centralizing AI threat modeling to ensure a uniform approach across the organization and mitigate risks associated with various AI models, data sources, and processes.
 
@@ -76,9 +76,9 @@ For more information, see [How to create Assistants with Azure OpenAI Service](/
 
 This guidance outlines best practices for securing data involved in AI systems across all applications built in Azure within your organization. Adhere to these practices to help safeguard sensitive information, maintain data integrity, and prevent unauthorized access or breaches.
 
-- **Define and maintain data boundaries.** Ensure AI workloads use data appropriate for their access level. AI applications tht are accessible to all employees should only process data suitable for all employees. Internet-facing AI applications must use data that's appropriate for public consumption. Use separate datasets or environments for different AI applications to prevent inadvertent data access. Consider using Microsoft Purview’s suite of [data security tools](/purview/purview-security) to secure your data.
+- **Define and maintain data boundaries.** Ensure that AI workloads use data appropriate for their access level. AI applications tht are accessible to all employees should only process data suitable for all employees. Internet-facing AI applications must use data that's appropriate for public consumption. Use separate datasets or environments for different AI applications to prevent inadvertent data access. Consider using Microsoft Purview’s suite of [data security tools](/purview/purview-security) to secure your data.
 
-- **Implement strict data access controls.** Ensure applications verify that end-users are authorized to access the data included in their queries. Avoid broad system permissions for user actions. Operate under the principle that if the AI can access certain information, the user should be authorized to access it directly.
+- **Implement strict data access controls.** Ensure that applications verify that end-users are authorized to access the data included in their queries. Avoid broad system permissions for user actions. Operate under the principle that if the AI can access certain information, the user should be authorized to access it directly.
 
 - **Maintain a data catalog.** Keep an up-to-date catalog of all data that AI systems are connected to and consume, including storage locations and access details. Scan and label data regularly to track sensitivity levels and suitability. This approach aids in analytics and risk identification. Consider using [Microsoft Purview Data Catalog](/purview/purview-security) to map and govern your data.
 
