@@ -1,5 +1,5 @@
 ---
-title: Use a Single-Region Azure VMware Solution Design that has Global Reach
+title: Use a single-region Azure VMware Solution design that has Virtual WAN and Global Reach
 description: Learn how to configure network connectivity for a single-region Azure VMware Solution private cloud that has secure Virtual WAN and Global Reach.
 author: jasonmedina
 ms.author: jasonmedina
@@ -10,7 +10,7 @@ ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-VMware
 ---
 
-# Use a single-region Azure VMware Solution design that has Global Reach
+# Use a single-region Azure VMware Solution design that has Virtual WAN and Global Reach
 
 This article describes best practices for Azure VMware Solution in a single region when you use secure Azure Virtual WAN with routing intent. It provides connectivity and traffic flow recommendations for secure Virtual WAN with routing intent and Azure ExpressRoute Global Reach. This article describes the topology for designs in Azure VMware Solution private clouds, on-premises sites, and Azure-native resources. The implementation and configuration of secure Virtual WAN with routing intent are beyond the scope of this article.
 

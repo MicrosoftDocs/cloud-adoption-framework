@@ -48,8 +48,8 @@ items:
                 items: 
                   - name: Use secure Virtual WAN for Azure VMware Solution            
                     href: introduction-to-virtual-wan-for-azure-vmware-solution.md
-                  - name: Single region Secure Virtual WAN with Global Reach               
-                    href: single-region-with-secure-virtual-wan-with-global-reach.md
+                  - name: Use a single-region design that has Global Reach               
+                    href: single-region-secure-virtual-wan-global-reach.md
                   - name: Dual region Secure Virtual WAN with Global Reach               
                     href: dual-region-with-secure-virtual-wan-with-global-reach.md
                   - name: Single region Secure Virtual WAN without Global Reach               
