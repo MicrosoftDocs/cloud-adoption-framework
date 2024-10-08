@@ -1,5 +1,5 @@
 ---
-title: Use Secure Virtual WAN for Azure VMware Solution in a Single Region or Dual Regions
+title: Use Secure Virtual WAN for Azure VMware Solution in a Single Region or in Dual Regions
 description: Learn about recommendations to use secure Virtual WAN and Azure VMware Solution for single-region and dual-region deployments.
 author: jasonmedina
 ms.author: jasonmedina
@@ -10,7 +10,7 @@ ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-VMware
 ---
 
-# Use secure Virtual WAN for Azure VMware Solution in a single region or dual regions
+# Use secure Virtual WAN for Azure VMware Solution in a single region or in dual regions
 
 This article explores the Azure VMware Solution network design topologies and considerations for single-region and dual-region scenarios that use secure Azure Virtual WAN with routing intent. It describes how routing intent directs traffic through a centralized security solution. This method enhances security and streamlines network management. This article provides design considerations for deployments with and without Azure ExpressRoute Global Reach. It highlights the benefits and challenges of each scenario.
 
@@ -64,7 +64,7 @@ We recommend that you consistently use Global Reach unless you have specific req
 
 - **Your on-premises ExpressRoute instance uses the ExpressRoute Local SKU.** The ExpressRoute Local SKU doesn't support Global Reach. If you use the Local SKU, you can use routing intent to establish connectivity between the Azure VMware Solution and your on-premises network.
 
-The following diagram shows that an example that doesn't use Global Reach.
+The following diagram shows an example that doesn't use Global Reach.
 
 :::image type="content" source="./media/single-region-without-globalreach-1.png" alt-text="Diagram that shows an example that doesn't have Global Reach." border="false":::
 
