@@ -15,7 +15,7 @@ To protect data privacy with a cloud environment such as Azure, you can start by
 
 ## Create data confidentiality classification scheme
 
-[!INCLUDE [data-confidentiality-classification-scheme](includes/data-confidentiality-classification-scheme)]
+[!INCLUDE [data-confidentiality-classification-scheme](includes/data-confidentiality-classification-scheme.md)]
 
 Before ingesting data, you must categorize the data as **confidential or below**, **sensitive (personal data) or restricted**:
 
@@ -56,7 +56,7 @@ For key management, encryption keys can be either platform managed, or customer 
 
 Microsoft has published documentation explaining [Azure Data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [data encryption models](/azure/security/fundamentals/encryption-models) which help you understand the encryption options which are available.
 
-Microsoft gives customers the ability to use [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data when it's traveling between the cloud services and customers. For more information, see [Encryption of data in transit](/azure/security/fundamentals/encryption-overview%23encryption-of-data-in-transit).
+Microsoft gives customers the ability to use [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data when it's traveling between the cloud services and customers. For more information, see [Encryption of data in transit](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit).
 
 If your scenario requires that data remains encrypted in-use, Azure Confidential Computing threat model aims to reduce trust or remove the ability for a cloud provider operator or other actors in the tenant's domain accessing code and data while it's being executed. For the latest Azure Confidential Computing offerings, see [Azure confidential computing products](/azure/confidential-computing/overview-azure-products). 
 
@@ -127,4 +127,5 @@ By performing encryption and decryption operations on the client side, Always En
 
 ## Next steps
 
-- [Data Access Management](security-provisioning)
+> [!div class="nextstepaction"]
+- [Organize data operations team members](organize)
