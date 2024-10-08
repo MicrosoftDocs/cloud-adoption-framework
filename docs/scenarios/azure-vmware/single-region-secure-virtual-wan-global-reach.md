@@ -38,7 +38,7 @@ This scenario also has these components:
 - Global Reach connections don't transit the hub firewall. So Global Reach traffic that goes both ways between on-premises and Azure VMware Solution doesn't get inspected.
 
 > [!NOTE]
-> When you use Global Reach, consider inspecting traffic within the Azure VMware Solution environment's NSX-T or an on-premises firewall, which enhances security between Global Reach sites.
+> When you use Global Reach, consider inspecting traffic within the Azure VMware Solution environment's NSX-T or an on-premises firewall. This approach enhances security between Global Reach sites.
 
 The following diagram shows an example of this scenario.
 
@@ -71,13 +71,13 @@ The following table describes the traffic flow in the preceding diagram.
 
 The Azure VMware Solution private cloud has an ExpressRoute connection to its hub (connection **D**). The Azure VMware Solution cloud region establishes a connection to on-premises via ExpressRoute Global Reach (connection **A**). Traffic that travels via Global Reach doesn't transit the hub firewall.
 
-For your scenario, explicitly configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
+For your scenario, configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
 
 ### On-premises connectivity and traffic flow
 
 The following diagram shows the on-premises site connected the hub via an ExpressRoute connection (connection **E**). On-premises systems can communicate to Azure VMware Solution via the Global Reach connection (connection **A**).
 
-For your scenario, explicitly configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
+For your scenario, configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
 
 :::image type="content" source="./media/single-region-virtual-wan-3.png" alt-text="Diagram that shows a single-region Azure VMware Solution that has an on-premises connection." border="false":::
 
@@ -90,7 +90,7 @@ The following table describes the traffic flow in the preceding diagram.
 
 ### Azure virtual network connectivity and traffic flow
 
-A secure hub that has routing intent enabled sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16) to peered virtual networks, plus any other prefixes that are added as private-traffic prefixes. For more information, see [Routing intent private-address prefixes](/azure/virtual-wan/how-to-routing-policies#nva). This scenario has routing intent enabled, so all resources in the virtual network possess the default RFC 1918 addresses and use the hub firewall as the next hop. All traffic that ingresses and egresses the virtual network transits the hub firewall.
+A secure hub that has routing intent enabled sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16) to peered virtual networks, along with any other prefixes that are added as private-traffic prefixes. For more information, see [Routing intent private-address prefixes](/azure/virtual-wan/how-to-routing-policies#nva). This scenario has routing intent enabled, so all resources in the virtual network possess the default RFC 1918 addresses and use the hub firewall as the next hop. All traffic that ingresses and egresses the virtual network transits the hub firewall.
 
 The following diagram shows how the virtual network peers directly to the hub.
 
@@ -130,7 +130,7 @@ The following table describes the traffic flow in the preceding diagram.
 | 7 | Azure VMware Solution cloud | &#8594;| The internet| Yes |
 | 8 | Virtual network | &#8594;| The internet | Yes |
 
-When you enable routing intent for internet access, the default route that generates from the secure Virtual WAN hub automatically advertises to the hub-peered virtual network connections. Note that in the virtual machines' network interface cards (NICs) in the virtual network, the 0.0.0.0/0 next hop is the hub firewall. This value is under *Effective Routes*. 
+When you enable routing intent for internet access, the default route that generates from the secure Virtual WAN hub automatically advertises to the hub-peered virtual network connections. Note that in the virtual machines' network interface cards (NICs) in the virtual network, the 0.0.0.0/0 next hop is the hub firewall. To find the next hop, select *Effective routes* in the NIC. 
 
 ## Next steps
 

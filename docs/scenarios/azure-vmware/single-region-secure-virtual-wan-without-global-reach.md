@@ -14,9 +14,9 @@ ms.custom: think-tank, e2e-azure-VMware
 
 This article describes best practices for Azure VMware Solution in a single region when you use secure Azure Virtual WAN with routing intent. It provides connectivity and traffic flow recommendations for secure Virtual WAN with routing intent. This article describes the topology for designs in Azure VMware Solution private clouds, on-premises sites, and Azure-native resources when you don't use Azure ExpressRoute Global Reach. The implementation and configuration of secure Virtual WAN with routing intent are beyond the scope of this article.
 
-If you use a region that doesn't support Global Reach or if you have a security requirement to inspect traffic between Azure VMware Solution and on-premises at the hub firewall, you must open a support ticket to enable ExpressRoute-to-ExpressRoute transitivity. Virtual WAN doesn't support ExpressRoute to ExpressRoute transitivity by default. For more information, see [Transit connectivity between ExpressRoute circuits with routing intent](/azure/virtual-wan/how-to-routing-policies#expressroute).
+If you use a region that doesn't support Global Reach or if you have a security requirement to inspect traffic between Azure VMware Solution and on-premises at the hub firewall, you must open a support ticket to enable ExpressRoute-to-ExpressRoute transitivity. Virtual WAN doesn't support ExpressRoute-to-ExpressRoute transitivity by default. For more information, see [Transit connectivity between ExpressRoute circuits with routing intent](/azure/virtual-wan/how-to-routing-policies#expressroute).
 
-## Single-region scenario: Secure Virtual WAN without Global Reach
+## Use secure Virtual WAN without Global Reach
  
 Only the Virtual WAN Standard SKU supports secure Virtual WAN with routing intent. Use secure Virtual WAN with routing intent to send all internet traffic and private network traffic (RFC 1918) to a security solution, like Azure Firewall, a non-Microsoft network virtual appliance (NVA), or a software as a service (SaaS) solution.
 
@@ -120,19 +120,13 @@ A single-region secure Virtual WAN design that has routing intent supports all o
 
 When you enable routing intent on the secure hub, it advertises RFC 1918 to all peered virtual networks. BUt you can also advertise a default route 0.0.0.0/0 for internet connectivity to downstream resources. When you use routing intent, you can generate a default route from the hub firewall. This default route advertises to your virtual network and to Azure VMware Solution.
 
-#### Azure VMware Solution internet connectivity
+#### Azure VMware Solution and virtual network internet connectivity
 
-When you enable routing intent for internet traffic, by default, the secure Virtual WAN hub doesn't advertise the default route across ExpressRoute circuits. To ensure the default route is propagated to the Azure VMware Solution from the Virtual WAN, you must enable default route propagation on your Azure VMware Solution ExpressRoute circuits. For more information, see [To advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints). After changes are complete, the default route 0.0.0.0/0 is then advertised via connection "D" from the hub. Don't enable this setting for on-premises ExpressRoute circuits. As a best practice, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment. A BGP filter prevents the inadvertent learning of the default route, adds an extra layer of precaution, and ensures that uour configuration doesn't affect on-premises internet connectivity.
+When you enable routing intent for internet traffic, by default, the secure Virtual WAN hub doesn't advertise the default route across ExpressRoute circuits. To ensure the default route propagates to Azure VMware Solution from Virtual WAN, you must enable default route propagation on your Azure VMware Solution ExpressRoute circuits. For more information, see [Advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints).
 
-#### Virtual network internet connectivity
+The diagram shows traffic flows for virtual network and Azure VMware Solution internet connectivity.
 
-When you enable routing intent for internet access, the default route generated from the secure Virtual WAN hub is automatically advertised to the hub-peered virtual network connections. Under *Effective Routes* for the virtual machines' NICs in the virtual network, the 0.0.0.0/0 next hop is the hub firewall.
-
-For more information, see the traffic flow section.
-
-The diagram illustrates traffic flows from a virtual network and Azure VMware Solution perspective.
-
-:::image type="content" source="./media/single-region-without-globalreach-5.png" alt-text="Diagram that shows single-region Azure VMware Solution with internet." border="false":::
+:::image type="content" source="./media/single-region-without-globalreach-5.png" alt-text="Diagram that shows single-region Azure VMware Solution that has internet connectivity." border="false":::
 
 The following table describes the traffic flow in the preceding diagram.  
 
@@ -141,41 +135,47 @@ The following table describes the traffic flow in the preceding diagram.
 | 7 | Virtual network | &#8594;| The internet| Yes
 | 8 | Azure VMware Solution cloud | &#8594;| The internet | Yes
 
+After you enable default route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. We recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment. A BGP filter prevents resources from inadvertently learning the default route, adds an extra layer of precaution, and ensures that your configuration doesn't affect on-premises internet connectivity.
+
+When you enable routing intent for internet access, the default route that generates from the secure Virtual WAN hub automatically advertises to the hub-peered virtual network connections. Note that in the virtual machines' network interface cards (NICs) in the virtual network, the 0.0.0.0/0 next hop is the hub firewall. To find the next hop, select *Effective routes* in the NIC.
+
 ## Use VMware HCX Mobility Optimized Networking (MON) without Global Reach
 
-HCX Mobility Optimized Networking (MON) is an optional feature that you can enable when you use HCX Network Extension. MON provides optimal traffic routing in certain scenarios to prevent network tromboning between the on-premises-based and cloud-based resources on extended networks.
+HCX Mobility Optimized Networking (MON) is an optional feature that you can enable when you use HCX Network Extension. MON provides optimal traffic routing in certain scenarios to prevent networks from overlapping or looping between the on-premises-based and cloud-based resources on extended networks.
 
 ### Egress traffic from Azure VMware Solution
  
-Enable MON for a specific extended network and a virtual machine to change the traffic flow. After you implement MON, egress traffic from that virtual machine doesn't trombone back to on-premises. Instead, it bypasses the Network Extension IPSEC tunnel. Traffic for that virtual machine egresses out of the Azure VMware Solution NSX-T Tier-1 Gateway> NSX-T Tier-0 Gateway>Azure Virtual WAN.
+When you enable MON for a specific extended network and a virtual machine, you change the traffic flow. After you implement MON, egress traffic from the virtual machine doesn't loop back to on-premises. Instead, it bypasses the Network Extension IPSec tunnel. Traffic for the virtual machine egresses out of the Azure VMware Solution NSX-T Tier-1 gateway, goes to the NSX-T Tier-0 gateway, and then goes to Virtual WAN.
 
 ### Ingress traffic to Azure VMware Solution
 
-Enabling MON for a specific extended network and a virtual machine results in a change. From Azure VMware Solution NSX-T, it injects a /32 host route back to Virtual WAN. Virtual WAN advertises this /32 route back to on-premises, virtual networks, and branch networks (S2S VPN, P2S VPN, SDWAN). This /32 host route ensures that traffic from on-premises, virtual networks, and branch networks doesn't use the Network Extension IPSEC tunnel when it goes to the MON-enabled virtual machine. Traffic from source networks is directed straight to the MON-enabled virtual machine due to the /32 route that is learned.
+When you enable MON for a specific extended network and a virtual machine, you introduce the following changes. From Azure VMware Solution NSX-T, MON injects a /32 host route back to Virtual WAN. Virtual WAN advertises this /32 route back to on-premises, virtual networks, and branch networks. This /32 host route ensures that traffic from on-premises, virtual networks, and branch networks doesn't use the Network Extension IPSec tunnel when the traffic goes to the MON-enabled virtual machine. Traffic from source networks goes straight to the MON-enabled virtual machine because it learned the /32 route.
 
-### HCX MON limitation with secure Virtual WAN without Global Reach
+### HCX MON limitation for secure Virtual WAN without Global Reach
 
-With ExpressRoute to ExpressRoute transitivity enabled on the secure hub and routing intent enabled, the secure hub sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to both the on-premises and Azure VMware Solution. In addition to the default RFC 1918 addresses, both on-premises and Azure VMware Solution learn more specific routes from Azure virtual networks and branch networks that are connected to the hub. But on-premises networks don't learn specific routes from Azure VMware Solution, and Azure VMware Solution doesn't learn specific routes from on-premises networks. Instead, both environments rely on the default RFC 1918 addresses to facilitate routing back to one another via the hub firewall. Therefore, more specific routes, such as HCX MON host routes, aren't advertised from the Azure VMware Solution ExpressRoute to the on-premises-based ExpressRoute circuit and vice-versa. The inability to learn specific routes introduces asymmetric traffic flows. Traffic egresses Azure VMware Solution via the NSX-T Tier-0 gateway, but returning traffic from on-premises returns over the Network Extension IPSEC tunnel.
+When you enable ExpressRoute-to-ExpressRoute transitivity on the secure hub and you enable routing intent, the secure hub sends the default RFC 1918 addresses to both on-premises and Azure VMware Solution. In addition to the default RFC 1918 addresses, both on-premises and Azure VMware Solution learn more specific routes from Azure virtual networks and branch networks that connect to the hub.
 
-### Resolution
+But on-premises networks don't learn specific routes from Azure VMware Solution, and Azure VMware Solution doesn't learn specific routes from on-premises networks. Instead, both environments rely on the default RFC 1918 addresses to facilitate routing back to one another via the hub firewall. Therefore, more specific routes, such as HCX MON host routes, don't advertise from the Azure VMware Solution ExpressRoute to the on-premises-based ExpressRoute circuit and vice-versa. The inability to learn specific routes introduces asymmetric traffic flows. Traffic egresses Azure VMware Solution via the NSX-T Tier-0 gateway, but returning traffic from on-premises returns over the Network Extension IPSec tunnel.
+
+### Correct traffic asymmetry
 
 To correct traffic asymmetry, you need to adjust the HCX MON policy routes. MON policy routes determine which traffic goes back to the on-premises gateway via an L2 extension. They also decide which traffic goes through the Azure VMware Solution NSX Tier-0 gateway.
 
-If a destination IP matches and is set to *allow* in the MON policy configuration, then two actions occur. First, the packet is identified. Second, it's sent to the on-premises gateway through the HCX Network Extension appliance.
+If a destination IP matches and you set it to *allow* in the MON policy configuration, then two actions occur. First, the packet is identified. Second, the system sends the packet to the on-premises gateway through the HCX Network Extension appliance.
 
-If a destination IP doesn't match, or is set to *deny* in the MON policy, the system sends the packet to the Azure VMware Solution Tier-0 for routing.
+If a destination IP doesn't match or you set it to *deny* in the MON policy, the system sends the packet to the Azure VMware Solution Tier-0 gateway for routing.
 
 The following table describes HCX policy routes. 
   
 | Network |Redirect to peer | Note |  
 | - | -------------- | -------- |
-| Azure virtual network address space | Deny | Explicitly include the address ranges for all your virtual networks. Traffic intended for Azure is directed out via the Azure VMware Solution and doesn't return to the on-premises network.|
-| Default RFC 1918 address spaces | Allow | Add in the default RFC 1918 addresses 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. This configuration ensures that any traffic not matching the above criteria is rerouted back to the on-premises network. If your on-premises setup uses addresses that aren't part of RFC 1918, you must explicitly include those ranges.|
-| 0.0.0.0/0 address space | Deny | Addresses that RFC 1918 doesn't cover, such as internet-routable IPs, or traffic that doesn't match the specified entries above, exit directly through the Azure VMware Solution and don't redirect back to the on-premises network.|
+| Azure virtual network address space | Deny | Explicitly include the address ranges for all your virtual networks. Traffic that's intended for Azure directs outbound via Azure VMware Solution and doesn't return to the on-premises network.|
+| Default RFC 1918 address spaces | Allow | Add in the default RFC 1918 addresses. This configuration ensures that any traffic that doesn't match the preceding criteria reroutes back to the on-premises network. If your on-premises setup uses addresses that aren't part of RFC 1918, you must explicitly include those ranges.|
+| 0.0.0.0/0 address space | Deny | Addresses that RFC 1918 doesn't cover, such as internet-routable IPs, or traffic that doesn't match the specified entries, exit directly through the Azure VMware Solution and don't redirect back to the on-premises network.|
   
 ## Next steps
 
-- [About virtual hub settings](/azure/virtual-wan/hub-settings)
+- [Virtual hub settings](/azure/virtual-wan/hub-settings)
 - [Configure Azure Firewall in a Virtual WAN hub](/azure/virtual-wan/howto-firewall)
-- [Configure Palo Alto Networks Cloud NGFW in Virtual WAN](/azure/virtual-wan/how-to-palo-alto-cloud-ngfw)
+- [Configure Palo Alto Networks Cloud Next Generation Firewall in Virtual WAN](/azure/virtual-wan/how-to-palo-alto-cloud-ngfw)
 - [Configure routing intent and policies through the Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva)
