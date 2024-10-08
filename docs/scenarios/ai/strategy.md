@@ -27,15 +27,13 @@ Compile a comprehensive list of possible AI use cases. Don't limit ideas to curr
 
 ## Define an AI technology strategy
 
-For each use case, you need to identify an AI technology to support it. Each AI technology requires a different skill set, different data, and a different amount of effort for the implementation of a production-ready solution. You need to understand the available technologies and identify and validate the right solutions for your business.
-
-Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. There are services to improve individual productivity and AI platforms to automate business processes. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, carefully validate the selection by reviewing the skills needed, the data needed, and cost factors.
+For each use case, you need to identify an AI technology to support it. Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. Understand the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) There are services to improve individual productivity and AI platforms to automate business processes. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, carefully validate the selection by reviewing the skills needed, data needed, and cost factors.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
 ### Buy AI to improve efficiency (SaaS)
 
-Microsoft has four types of SaaS generative AI services. See the following table for an overview and links to articles that provide more information.
+Microsoft has a range of Copilot generative AI services. These Copilots allow you to buy software-as-a-service (SaaS) and provide generative AI capabilities across your business or to individuals.
 
 | SaaS AI Copilot products | Description | User |
 |--------|--------|-------|
