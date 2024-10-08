@@ -11,6 +11,9 @@ ms.topic: conceptual
 
 This article provides recommendations for making key design and process decisions that all your AI workloads inherit. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, governance baselines, networking, and connectivity to align with your [AI centralization and endpoint sharing](./plan.md#plan-for-ai-centralization-and-endpoint-sharing) approach.
 
+:::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
+*Figure 1. Resource organization for internal and internet-facing AI workloads.*
+
 ## Prepare AI deployment regions
 
 Whether you use a centralized or decentralized approach to AI model deployment, you still need to select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
