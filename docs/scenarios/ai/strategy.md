@@ -27,13 +27,13 @@ Compile a comprehensive list of possible AI use cases. Don't limit ideas to curr
 
 ## Define an AI technology strategy
 
-For each use case, you need to identify an AI technology to support it. Each AI technology requires a different skill set, different data, and a different amount of effort for the implementation of a production-ready solution. You need to take some time to understand the available technologies and identify and validate the right solutions for your business.
+For each use case, you need to identify an AI technology to support it. Each AI technology requires a different skill set, different data, and a different amount of effort for the implementation of a production-ready solution. You need to understand the available technologies and identify and validate the right solutions for your business.
 
 Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. There are services to improve individual productivity and AI platforms to automate business processes. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, carefully validate the selection by reviewing the skills needed, the data needed, and cost factors.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
-### Purchase Microsoft Copilots (SaaS) to improve efficiency
+### Buy AI to improve efficiency (SaaS)
 
 Microsoft has four types of SaaS generative AI services. See the following table for an overview and links to articles that provide more information.
 
@@ -44,9 +44,9 @@ Microsoft has four types of SaaS generative AI services. See the following table
 | In-product Copilots | Use copilots to enhance productivity within Microsoft products, such as [GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
 | Copilot in browser and mobile apps | Use the [free](https://copilot.microsoft.com/) version for browser-based access to GPT models. Use [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) for better performance and more capacity. | Individual |
 
-### Build intelligent apps with Azure AI platform services (PaaS)
+### Build AI workloads with AI platform (PaaS)
 
-Azure has a range of platform-as-a-service (PaaS) solutions to build intelligent applications. There are low-code platforms for businesses without developer or data science skills. There are also code-first AI platforms for developers and data scientists. Pick the platform that aligns with your current and future goals.
+Azure has a range of platform-as-a-service (PaaS) solutions to build AI workloads. Azure provides low-code platforms for businesses without developer or data science skills. There are also code-first AI platforms for developers and data scientists. Pick the platform that aligns with your current and future goals.
 
 | AI platform products | Description | Skills required |
 |---------|------------|---------|
@@ -55,7 +55,7 @@ Azure has a range of platform-as-a-service (PaaS) solutions to build intelligent
 | Azure AI Studio | Code-first platform for developing generative AI applications | Developer and data science skills |
 | Azure Machine Learning and Microsoft Fabric | Platform for training and deploying AI models by using your own data | Developer skills and advanced data science skills |
 
-### Use Azure infrastructure services (IaaS) to bring your own AI models
+### Bring your own models with infrastructure services (IaaS)
 
 For more advanced AI needs, Azure Virtual Machines provides access to GPUs and CPUs with virtual machine (VM) images so you can bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway. You should use them first before you try IaaS.
 
