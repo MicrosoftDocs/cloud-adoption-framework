@@ -105,7 +105,7 @@ The following table describes the traffic flow in the preceding diagram.
 
 ### Internet connectivity
 
-This section focuses only on how to provide internet connectivity to Azure-native resources in a virtual network and in a Azure VMware Solution private cloud. For more information, see [Internet access concepts for Azure VMware Solution](/azure/azure-VMware/concepts-design-public-internet-access). You can use the following options to provide internet connectivity to Azure VMware Solution.
+This section focuses only on how to provide internet connectivity to Azure-native resources in a virtual network and in a Azure VMware Solution private cloud. For more information, see [Internet connectivity design considerations](/azure/azure-VMware/concepts-design-public-internet-access). You can use the following options to provide internet connectivity to Azure VMware Solution.
 
 - *Option 1:* Azure-hosted internet service
 - *Option 2:* Azure VMware Solution-managed SNAT  
