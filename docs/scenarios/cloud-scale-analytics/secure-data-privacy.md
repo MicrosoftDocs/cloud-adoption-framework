@@ -27,9 +27,9 @@ Before ingesting data, you must categorize the data as **confidential or below**
 
 ## Create an Azure Policy Set
 
-After you have mapped your data classification, you should align this with local regulated industry policy requirements and your internal company policies. This helps you to create an Azure policy set that governs what infrastructure can be deployed, the location where it can be deployed, and specifies networking and encryption standards.
+After you map your data classification, you should align the classification with local regulated industry policy requirements and your internal company policies. This step helps you to create an Azure policy set that governs what infrastructure can be deployed, the location where it can be deployed, and specifies networking and encryption standards.
 
-For regulated industries, Microsoft has developed many [Regulatory compliance policy initiatives](/industry/sovereignty/policy-portfolio-baseline) which acts as a baseline for compliance frameworks.
+For regulated industries, Microsoft developed many [Regulatory compliance policy initiatives](/industry/sovereignty/policy-portfolio-baseline) which acts as a baseline for compliance frameworks.
 
 For data classification which follows the same rules for encryption and allowed infrastructure SKUs, and policy initiatives then the data can sit inside the same data landing zone.
 
@@ -52,17 +52,19 @@ In addition to defining policies for location and allowed Azure services, you sh
 - What are your requirements, per classification, for data in-transit encryption?
 - What are your requirements, per classification, for data in-use encryption?
 
-For key management, encryption keys can be either platform managed, or customer managed. Microsoft has documented key management in Azure to help you choose a key management solution. For more information, see [Overview of Key Management in Azure](/azure/security/fundamentals/key-management) and [How to choose the right key management solution](/azure/security/fundamentals/key-management-choose).
+For key management, encryption keys can be either platform managed, or customer managed. Microsoft documented key management in Azure to help you choose a key management solution. For more information, see [Overview of Key Management in Azure](/azure/security/fundamentals/key-management) and [How to choose the right key management solution](/azure/security/fundamentals/key-management-choose).
 
-Microsoft has published documentation explaining [Azure Data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [data encryption models](/azure/security/fundamentals/encryption-models) which help you understand the encryption options which are available.
+Microsoft published documentation explaining [Azure Data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [data encryption models](/azure/security/fundamentals/encryption-models) which help you understand the encryption options which are available.
 
 Microsoft gives customers the ability to use [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data when it's traveling between the cloud services and customers. For more information, see [Encryption of data in transit](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit).
 
-If your scenario requires that data remains encrypted in-use, Azure Confidential Computing threat model aims to reduce trust or remove the ability for a cloud provider operator or other actors in the tenant's domain accessing code and data while it's being executed. For the latest Azure Confidential Computing offerings, see [Azure confidential computing products](/azure/confidential-computing/overview-azure-products). 
+If your scenario requires data to remain encrypted in-use, Azure Confidential Computing threat model aims to minimize trust or remove the possibility of a cloud provider operator or other actors in the tenant's domain accessing code and data during execution. 
+
+For the latest Azure Confidential Computing offerings, see [Azure confidential computing products](/azure/confidential-computing/overview-azure-products). 
 
 ## Data Governance
 
-After you have defined the policies for deployment of allowed Azure services, you must decide how you grant access to the data product.
+After you define the policies for deployment of allowed Azure services, you must decide how you grant access to the data product.
 
 If you have a data governance solution such as [Microsoft Purview](/purview/purview) or [Azure Databricks Unity Catalog](/azure/databricks/data-governance/unity-catalog/), then you can create data assets/product for enriched and curated data lake layers. Ensure that you set the permissions within the data catalog to secure those data objects.
 
@@ -80,7 +82,7 @@ For more information on managing read or modify access with Microsoft Purview, s
 
 Whether you decide to implement Microsoft Purview or any another data governance solution, it's essential to use Microsoft Entra ID groups to apply policies to data products. 
 
-It's important to use the data governance solutions REST API to onboard a new dataset. Data application teams create data products and register them in the data governance solution to help identify **sensitive (personal data)**. The data governance solution imports the definition and denies all access to data until the teams have set up its access policies. 
+It's important to use the data governance solutions REST API to onboard a new dataset. Data application teams create data products and register them in the data governance solution to help identify **sensitive (personal data)**. The data governance solution imports the definition and denies all access to data until the teams set up its access policies. 
 
 ## Use patterns for protection of sensitive data
 
@@ -96,13 +98,13 @@ While this process fulfills separating out sensitive (personal data) and confide
 
 ### Row-level and Column-level security
 
-If you need to filter rows which are seen by users, then you'll need to move your data into a compute solution which can use row-level security.
+If you need to filter rows seen by users, then you need to move your data into a compute solution which can use row-level security.
 
 Selecting the appropriate Azure service or Microsoft Fabric solution for your particular use case is essential to prevent re-engineering. An OLTP database is unsuitable for extensive analytics, just as a solution tailored for big data analytics can't achieve millisecond response times required by an e-commerce application.
 
-To work with solutions that support row-level security the data application teams create different Microsoft Entra ID groups and assign permissions that support the data's sensitivity.
+To work with solutions that support row-level security, the data application teams create different Microsoft Entra ID groups and assign permissions based on the data's sensitivity.
 
-To illustrate further, let's elaborate on the scenario by specifying that along with row-level security, there's a need to restrict access to certain columns. 
+To illustrate further, let's elaborate on the scenario by specifying that along with row-level security, there's a need to restrict access to certain columns. The data application teams created the four Microsoft Entra ID groups with read-only access as shown in the following table:
 
 | **Group** | **Permission** |
 |---|---|
@@ -111,17 +113,15 @@ To illustrate further, let's elaborate on the scenario by specifying that along 
 | `DA-EUROPE-HRMANAGER-R` | View Europe HR personnel data asset **with** salary information. |
 | `DA-EUROPE-HRGENERAL-R` | View Europe HR personnel data asset **without** salary information. |
 
-The data application teams have created the above four Microsoft Entra ID groups with read-only access.
-
 The first level of restrictions would support dynamic data masking, which hides sensitive data from users without privileges. One advantage of this approach is that it can be integrated into a data set's onboarding with a REST API.
 
 The second level of restrictions is to add column-level security to restrict non-HR managers from seeing salaries and row-level security to restrict which rows European and North American team members can see.
 
 ### Column Encryption
 
-While dynamic data masking masks the data at the point of presentation, some use cases require that the solution never has access to the plaintext data. 
+While dynamic data masking masks the data at the point of presentation, some use cases require that the solution never has access to the plaintext data.
 
-SQL Always Encrypted is a powerful feature introduced by Microsoft that enhances the security of sensitive data stored in SQL Server databases. SQL Always Encrypted ensures that sensitive data stored in SQL Server databases remains secure and protected from unauthorized access. By encrypting the data both at rest and in transit, this feature helps in maintaining the highest levels of data confidentiality and compliance with regulatory requirements.
+SQL Always Encrypted is a powerful feature introduced by Microsoft that enhances the security of sensitive data stored in SQL Server databases. SQL Always Encrypted ensures that sensitive data stored in SQL Server databases remains secure and protected from unauthorized access. This feature helps in maintaining maximum data confidentiality and regulatory compliance by encrypting the data both at rest and in transit. 
 
 By performing encryption and decryption operations on the client side, Always Encrypted ensures that sensitive data remains protected from unauthorized access. Its ease of integration and compliance benefits make it an essential tool for organizations looking to safeguard their most valuable data assets.
 
