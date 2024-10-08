@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This guidance provides a comprehensive roadmap for adopting AI on Azure, serving as a framework to help you navigate the AI landscape. Use it to find detailed implementation instructions and to establish processes for securing, governing, and managing AI workloads. Think of this as your manual for achieving AI success on Azure.
 
-:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It starts with Strategy, Plan, Ready, and Adopt. Then Secure, Manage, and Govern are cyclical processes after Adopt. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
+:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It starts with Strategy, Plan, Ready, and Adopt as sequential steps. Then Secure, Manage, and Govern are cyclical processes after Adopt. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
 *Figure 1. How to use the AI adoption guidance for Azure.*
 
 ## Why adopt AI on Azure?
@@ -56,7 +56,7 @@ Use the AI adoption checklist to see the roadmap to adopting AI. There's a check
 | [Adopt](./adopt-paas.md) | &#9744; [Build AI with Azure platforms (PaaS)](./adopt-paas.md) |
 | [Secure](./secure.md) | &#9744; [Assess AI security risks](./secure.md#assess-ai-security-risks) <br> &#9744; [Implement AI security controls](./secure.md#secure-ai-resources) <br> &#9744; [Maintain AI security controls](./secure.md#secure-the-ai-models) <br> &#9744; [Secure AI data](./secure.md#secure-ai-data) <br> &#9744; [Secure AI access](./secure.md#secure-ai-access) |
 | [Govern](./govern.md) | &#9744; [Govern AI models](./govern.md#govern-ai-models) <br> &#9744; [Govern AI costs](./govern.md#govern-ai-costs) <br> &#9744; [Govern AI security](./govern.md#govern-ai-security) <br> &#9744; [Govern AI operations](./govern.md#govern-ai-operations) <br> &#9744; [Govern AI regulatory compliance](./govern.md#govern-ai-regulatory-compliance) <br> &#9744;[Govern AI data](./govern.md#govern-ai-data) |
-| [Manage](./manage.md) | &#9744; [Manage AI deployment](./manage.md#manage-ai-deployment) <br> &#9744; [Manage AI endpoint sharing](./manage.md) <br> &#9744; [Mange AI operations](./manage.md#manage-ai-operations) [Manage AI models](./manage.md#manage-ai-models) <br> &#9744; [Manage AI costs](./manage.md#manage-ai-costs) <br> &#9744; [Manage AI data](./manage.md#manage-ai-data) <br> &#9744; [Mange AI continuity of operations](./manage.md#manage-ai-continuity-of-operations) |
+| [Manage](./manage.md) | &#9744; [Manage AI deployment](./manage.md#manage-ai-deployment) <br> &#9744; [Manage AI endpoint sharing](./manage.md) <br> &#9744; [Mange AI operations](./manage.md#manage-ai-operations) [Manage AI models](./manage.md#manage-ai-models) <br> &#9744; [Manage AI costs](./manage.md#manage-ai-costs) <br> &#9744; [Manage AI data](./manage.md#manage-ai-data) <br> &#9744; [Mange AI business continuity](./manage.md#manage-business-continuity-and-disaster-recovery) |
 
 ## Next steps
 
