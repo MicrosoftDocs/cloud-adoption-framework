@@ -128,4 +128,4 @@ By performing encryption and decryption operations on the client side, Always En
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Organize data operations team members](organize)
+- [Organize data operations team members](organize.md)
