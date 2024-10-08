@@ -15,17 +15,23 @@ This article provides recommendations for managing AI from development, deployme
 
 A primary consideration for AI endpoint management is deciding who can deploy AI resources and who’s responsible for governing the endpoints. The [AI CoE](./center-of-excellence.md) should lead the effort to determine the best approach. There are two principal options:
 
-- *Use workload-team management AI resources for faster development.* When workload teams manage AI resources, they have to autonomy to deploy and manage AI resources within the confines of your governance policies. Use Azure Policy to enforce governance consistently across all workload environments. Where there are governance gaps, create and communicate AI policies that the workload teams must follow. For example, create generative AI policies for content filter settings and disallowed models. Make these policies clearly known to workload teams and audit regularly.
+- *Use workload-team management of AI resources for faster development.* When workload teams manage AI resources, they have the autonomy to deploy and manage AI resources within the confines of your governance policies. Use Azure Policy to enforce governance consistently across all workload environments. Create and communicate AI policies that the workload teams must follow to address any governance gaps. For example, create generative AI policies for enforcing content filter settings and prevent disallowed models. Make these policies clearly known to workload teams and audit regularly.
 
-- *Use a shared AI management for increased AI governance.* In a shared management approach, a single team manages AI resources for all AI workloads. This team deploys core AI resources and configures security and governance that all workload teams use. Use this approach if want to a single team to control AI deployments and governance across your workloads. Azure AI Studio facilitates this approach with [Azure AI Studio hubs and projects](/azure/ai-studio/concepts/ai-resources). The central AI team deploys and configures the hub. Then the workload teams use projects, which inherit hub configurations, to move from a proof of concept to production. Azure Machine Learning has similar capabilities with its [Azure Machine Learning hub workspaces](/azure/machine-learning/concept-hub-workspace).
+    :::image type="content" source="./images/workload-team-ai-management.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/workload-team-ai-management.svg" border="false":::
+    *Figure 1. Workload-team management of AI resources.*
+
+- *Use a shared management of AI resources increased AI governance.* In a shared AI management approach, a central team manages AI resources for all AI workloads. This team deploys core AI resources and configures security and governance that all workload teams use. Use this approach if you want a single team to control AI deployments and governance across your workloads. Azure AI Studio facilitates this approach with [Azure AI Studio hubs and projects](/azure/ai-studio/concepts/ai-resources). The central AI team deploys and configures the hub. Then the workload teams use projects, which inherit hub configurations, to move from a proof of concept to production. Azure Machine Learning has similar capabilities with its [hub workspaces](/azure/machine-learning/concept-hub-workspace).
+
+    :::image type="content" source="./images/central-ai-management.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/central-ai-management.svg" border="false":::
+    *Figure 2. Central AI team management of AI resources.*
 
 ## Manage AI endpoint sharing
 
-This guidance provides recommendations on when to share and not share an AI endpoint across multiple applications.
+This guidance provides recommendations on when to share and not share an AI endpoint across multiple workloads.
 
-- *Don’t share AI endpoints when governance and model needs vary.* Applications that require different content filter settings (governance on input and output) shouldn't share an endpoint. Also don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet application requirements.
+- *Don’t share AI endpoints when governance and model needs vary.* Workloads that require different content filter settings (governance on input and output) shouldn't share an endpoint. Also don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet workloads requirements.
 
-- *Only share AI endpoints within a single workload.* Sharing an AI endpoint works best when a workload team has multiple applications. AI endpoint sharing provides the least amount of management overhead and simplifies deployment. These applications must share the same governance needs and AI model needs. Sharing endpoints could cause you to hit rate limits and quota limitations. Most Azure services have limits per subscription. Within a subscription, each region has quota limits.
+- *Only share AI endpoints within a single workload.* Sharing an AI endpoint works best when a workload team has multiple applications as part of the same workload. AI endpoint sharing provides the least amount of management overhead and simplifies deployment. These applications must share the same governance needs and AI model needs. Sharing endpoints could cause you to hit rate limits and quota limitations. Most Azure services have limits per subscription. Within a subscription, each region has quota limits.
 
 ## Manage AI operations
 
