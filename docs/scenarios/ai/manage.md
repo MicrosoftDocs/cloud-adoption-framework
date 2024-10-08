@@ -65,11 +65,11 @@ This guidance provides recommendations for measuring AI model performance over t
 
 To manage AI costs, you need to understand the expenses related to AI resources, including compute, storage, and token processing. The cost management fundamentals apply here.
 
-- *Monitor and maximize billing efficiency. Understand cost breakpoints to avoid unnecessary charges. Examples include making full use of fixed-price thresholds for image generation or hourly fine-tuning. Track your usage patterns, including tokens per minute (TPM) and requests per minute (RPM), and adjust models and architecture accordingly. Consider a commitment-based billing model for consistent usage patterns.
+- *Monitor and maximize billing efficiency.* Understand cost breakpoints to avoid unnecessary charges. Examples include making full use of fixed-price thresholds for image generation or hourly fine-tuning. Track your usage patterns, including tokens per minute (TPM) and requests per minute (RPM), and adjust models and architecture accordingly. Consider a commitment-based billing model for consistent usage patterns.
 
 - *Set up automated cost alerts.* Use budget alerts notify you of unexpected charges and establish budgeting strategies to control and predict your AI expenses.
 
-- *Follow cost management best practices for each service.* Each Azure service has specific features and best practices that maximize cost optimization. Familiarize yourself with following guidance for planning and managing cost in [Azure AI Studio, ](/azure/ai-studio/how-to/costs-plan-manage)[Azure OpenAI Service, ](/azure/ai-services/openai/how-to/manage-costs)[virtual machines](/azure/virtual-machines/cost-optimization-plan-to-manage-costs)
+- *Follow cost management best practices for each service.* Each Azure service has specific features and best practices that maximize cost optimization. Familiarize yourself with following guidance for planning and managing cost in [Azure AI Studio](/azure/ai-studio/how-to/costs-plan-manage), [Azure OpenAI Service](/azure/ai-services/openai/how-to/manage-costs), [Azure Machine Learning](/azure/machine-learning/concept-plan-manage-cost), [Azure Virtual Machines](/azure/virtual-machines/cost-optimization-plan-to-manage-costs)
 
 For generative AI applications using Azure OpenAI, see these [cost optimization recommendations.](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat#cost-optimization)
 
