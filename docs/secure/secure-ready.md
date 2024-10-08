@@ -125,4 +125,4 @@ Review the [Transition an existing Azure environment to the Azure landing zone c
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Perform your cloud adoption securely](./refresh-adopt-consolidated.md)
+> [Perform your cloud adoption securely](./secure-adopt.md)

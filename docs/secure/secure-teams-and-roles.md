@@ -218,4 +218,4 @@ By collaborating effectively, these roles ensure that the WAF is not only deploy
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Integrate security in your cloud adoption strategy](./refresh-strategy-consolidated.md)
+> [Integrate security in your cloud adoption strategy](./secure-strategy.md)

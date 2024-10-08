@@ -16,7 +16,7 @@ This article is a supporting guide to the [Strategy](../strategy/index.md) metho
 
 ## Security posture mondernization 
 
-The strategy of security posture modernization not only involves the adoption of new technologies and new operational practices, it also normally involves a mindset shift across the organization. New [teams and roles](./refresh-teams-and-roles.md) may need to be filled and existing teams and roles may need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it is important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
+The strategy of security posture modernization not only involves the adoption of new technologies and new operational practices, it also normally involves a mindset shift across the organization. New [teams and roles](./secure-teams-and-roles.md) may need to be filled and existing teams and roles may need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it is important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
 
 Refer to the [Define a security strategy](../strategy/define-security-strategy.md) guide for a comprehensive overview of these considerations.
 
@@ -151,4 +151,4 @@ As we expand across the globe, our LOB workload must maintain the high performan
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Plan for a secure cloud adoption](./refresh-plan-consolidated.md)
+> [Plan for a secure cloud adoption](./secure-plan.md)

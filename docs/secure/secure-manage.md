@@ -34,7 +34,7 @@ In the Manage phase of your cloud adoption journey, you should have a robust [ob
 
     - Proactively scan your cloud systems for vulnerabilities. Using a vulnerability scanner that can be integrated with a SIEM system consolidates security data from across your environment, helping you efficiently detect and respond to multiple types of security risks and incidents.
     
-    - Increase the depth of your visibility into security risks in your environment by implementing an eXtended Detection and Response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [Security Operations](./refresh-teams-and-roles.md) team's efficiency.
+    - Increase the depth of your visibility into security risks in your environment by implementing an eXtended Detection and Response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [Security Operations](./secure-teams-and-roles.md) team's efficiency.
 
 - **Incident response planning:** 
 

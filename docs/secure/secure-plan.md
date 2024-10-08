@@ -109,4 +109,4 @@ Plan for the long-term sustainment of your security posture by adopting a mindse
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Ready your secure cloud estate](./refresh-ready-consolidated.md)
+> [Ready your secure cloud estate](./secure-ready.md)

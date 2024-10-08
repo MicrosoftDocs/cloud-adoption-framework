@@ -245,4 +245,4 @@ Consider the following recommendations to help ensure that the security mechanis
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Securely govern your cloud estate](./refresh-govern-consolidated.md)
+> [Securely govern your cloud estate](./secure-govern.md)
