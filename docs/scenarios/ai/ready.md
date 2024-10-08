@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Ready – Recommendations to Prepare an AI Foundation
+# AI Ready – Recommendations to prepare an AI foundation
 
 This article provides recommendations for making key design and process decisions that your workloads inherit. It assumes that you're already familiar with [Cloud Adoption Framework for Azure - Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). The article focuses on AI-specific guidance for region selection, governance baselines, networking, and connectivity to align with your [AI centralization and endpoint sharing](./plan.md#plan-for-ai-centralization-and-endpoint-sharing) approach.
 
