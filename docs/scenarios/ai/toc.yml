@@ -1,0 +1,26 @@
+items:
+  - name: AI Adoption on Azure
+    href: index.md
+  - name: Strategy
+    href: strategy.md
+  - name: Plan
+    href: plan.md
+  - name: Ready
+    href: ready.md
+  - name: Adopt
+    items:
+      - name: Build with AI platforms (PaaS)
+        href: adopt-paas.md
+      - name: AI on Azure infrastructure (IaaS)
+        href: adopt-iaas.md
+  - name: Secure
+    href: secure.md
+  - name: Govern
+    href: govern.md
+  - name: Manage
+    href: manage.md
+  - name: Additional resources
+    items:
+      - name: AI Center of Excellence
+        href: center-of-excellence.md
+
