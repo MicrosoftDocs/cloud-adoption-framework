@@ -41,7 +41,7 @@ In Azure, resource organization includes structuring management groups and subsc
 
 - **Know where to place centralized AI resources.** If you use a centralized model to share AI endpoints, place those AI resources in a dedicated AI subscription. A dedicated AI subscription provides a governance boundary for a dedicated team to deploy, govern, secure, and manage AI endpoints. It also isolates AI resources from workload resources. For more information, see *Figure 1: Intelligent app 3*. In the context of an Azure landing zone, a dedicated AI subscription is an application landing zone subscription that only has AI resources.
 
-- - *Deploy AI resources in workload subscriptions.* AI resources need to inherit workload governance policies from the workload management group (internal or internet-facing). Keep them separate from platform resources. AI resources controlled by platform teams tend to create development bottlenecks. In the context of Azure landing zone, deploy AI platforms to application landing zone subscriptions.
+- *Deploy AI resources in workload subscriptions.* AI resources need to inherit workload governance policies from the workload management group, whether they are internal or internet-facing. Keep AI resources separate from platform resources. AI resources that are controlled by platform teams tend to create development bottlenecks. In the context of an Azure landing zone, deploy AI platforms to application landing zone subscriptions.
 
 ## Prepare AI network topology
 
