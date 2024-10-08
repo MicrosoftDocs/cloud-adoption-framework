@@ -1,9 +1,9 @@
 ---
 title: What is a data mesh?
 description: Learn about data mesh in Azure.
-author: simonlid
-ms.author: simonlid
-ms.date: 03/12/2023
+author: mboswell
+ms.author: mboswell
+ms.date: 09/30/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -20,8 +20,6 @@ However, as business changes and generates more diverse data, data warehousing s
 
 In recent years, many organizations successfully use modern architectural and analytical patterns that combine data warehousing technologies and more recent big data technologies.
 
-:::image type="content" source="../media/azure-analytics-end-to-end.png" alt-text="Diagram of architecture." lightbox="../media/azure-analytics-end-to-end.png":::
-
 However, some organizations encounter issues when deploying analytical solutions that use analytical patterns. These solutions are commonly still implemented as monolithic solutions, where a single team is the platform provider and the team is doing data integration. Smaller organizations and organizations that have a high degree of centralization from a team setup perspective can use a single team. However, a larger organization using only a single team often creates a bottleneck. This bottleneck causes a huge backlog, which results in parts of an organization waiting for data integration services and analytical solutions.
 
 This pattern becomes more common as organizations adopt modern data science solutions. Many modern data science solutions require more data than traditional business intelligence solutions did in the past.
@@ -30,7 +28,7 @@ The recent switch to using microservices as an application development pattern i
 
 A single team handling all data ingestion on a single platform in a large organization can also be problematic. One team rarely has experts for every data source. Most organizations are decentralized and distributed from a business perspective. Different business units and departments handle different parts of the business operation, so data experts are typically spread out across various sectors.
 
-A new architectural pattern called data mesh was introduced recently to solve these problems. Data mesh's goal is to let distributed teams work with and share information in a decentralized and agile manner.
+A pattern called data mesh was introduced to solve these problems. Data mesh's goal is to let distributed teams work with and share information in a decentralized and agile manner.
 
 Data mesh is a technical pattern that also requires organizational change. The benefits of a data mesh approach are achieved by implementing multi-disciplinary teams that publish and consume data products.
 
@@ -54,6 +52,8 @@ There are three aspects to data domains:
 * Your domains need to have atomic integrity. If areas have no relationship with each other, don't combine them in a domain together.
 
 For more information about data domains and how you should define them, see [Data domains](data-domains.md).
+
+
 
 ## Data products
 
@@ -81,7 +81,7 @@ You can successfully implement your self-serve platform by adopting the practice
 
 ## Federated governance
 
-When you adopt a self-serve distributed data platform, you must place an increased emphasis on governance. Lack of governance leads to silos and data duplication across your data domains. Federate your governance, as people who understand the governance need exist within your domain aligned teams and amongst data owners.
+When you adopt a self-serve distributed data platform, you must place an increased emphasis on governance. Lack of governance leads to silos and data duplication across your data domains. Federate your governance, as people who understand the governance need exist within your domain aligned teams and among data owners.
 
 To create your federated governance, implement automated policies around both platform and data needs. Use a high degree of automation for testing and monitoring. Adopt a code-first implementation strategy to handle standards, policies, data products, and platform deployment as code.
 
@@ -95,4 +95,5 @@ When using data mesh, take special care when implementing your governance so you
 
 ## Next Steps
 
+> [!div class="nextstepaction"]
 [Data domains](data-domains.md)
