@@ -1,165 +1,129 @@
 ---
 title: Data privacy for cloud-scale analytics in Azure
 description: Learn about data privacy for cloud-scale analytics in Azure.
-author: abdale
-ms.author: hamoodaleem
-ms.date: 02/14/2022
+author: mboswell
+ms.author: mboswell
+ms.date: 10/08/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
-
 # Data privacy for cloud-scale analytics in Azure
 
-Cloud-scale analytics frees organizations to determine the best patterns to suit their requirements while guarding personal data at multiple levels. Personal data is any data that can be used to identify individuals, for example, driver's license numbers, social security numbers, bank account numbers, passport numbers, email addresses, and more. Many regulations exist today to protect user privacy.
+Cloud-scale analytics enables organizations to determine the optimal data access patterns to suit their requirements while safeguarding personal data at multiple levels. Personal data includes any information that can uniquely identify individuals, for example, driver's license numbers, social security numbers, bank account details, passport numbers, email addresses, and more. Many regulations exist today to protect user privacy.
 
-## Data confidentiality classification scheme
+To protect data privacy with a cloud environment such as Azure, you can start by creating a data confidentiality scheme, specifying data access polices. These policies can define the underlying architecture that the data application resides on, define how data access is authorized and specify what rows or columns can be accessed once granted.
+
+## Create data confidentiality classification scheme
 
 [!INCLUDE [data-confidentiality-classification-scheme](includes/data-confidentiality-classification-scheme.md)]
 
-Before ingesting data, you must categorize the data as **confidential or below** or **sensitive (personal data)**:
+Before ingesting data, you must categorize the data as **confidential or below**, **sensitive (personal data) or restricted**:
 
-- Data might be sorted into **confidential or below** if a user gains access to the data asset in **enriched** or **curated**. Users can view all columns and rows.
-
-- Data might be sorted into **sensitive (personal data)** if there are restrictions for which columns and rows are visible to different users.
+- Data can be sorted into **confidential or below** if there are no restrictions for which columns and rows are visible to different users.
+- Data can be sorted into **sensitive (personal data)** if there are restrictions for which columns and rows are visible to different users.
 
 > [!IMPORTANT]
-> A dataset *can* change from **confidential or below** to **sensitive (personal data)** when data is combined. In situations where data should be persistent, it should be copied to a separate folder that aligns with the data confidentiality classification and process for onboarding it.
+>  A dataset can change from **confidential or below** to **sensitive (personal data)** when data is combined with other data products which previously had a lower classification. When data needs to be persistent, it should be moved to a designated folder that aligns with its confidentiality level and the onboarding process.
 
-## Confidential or below
+## Create an Azure Policy Set
 
-For every onboarded data product, we create two data lake folders in the enriched and curated layers, **confidential or below** and **sensitive (personal data)**, and use access control lists to enable Microsoft Azure directory (Microsoft Entra ID) Pass-through Authentication.
+After you have mapped your data classification, you should align this with  local regulated industry policy requirements and your internal company policies. This will help you to create an Azure policy set  that governs what infrastructure can be deployed, the location where it can be deployed, and specifies networking and encryption standards.
 
-If a data application team onboards a **confidential or below** data asset, then user principal names and service principal objects can be added to two Microsoft Entra groups (one for read/write access and the other for read-only access). These two Microsoft Entra groups should be created during the onboarding process and sorted in the appropriate data product folder with **confidential or below** containers for raw and enriched data.
+For regulated industries, Microsoft has developed a number of [Regulatory compliance policy initiatives](../../../../../industry/sovereignty/policy-portfolio-baseline.md) which acts as a baseline for compliance frameworks.
 
-This pattern enables any compute product that supports Microsoft Entra pass-through authentication to connect to the data lake and authenticate logged-in users. If a user is part of the data asset's Microsoft Entra group, they can access the data via Microsoft Entra pass-through authentication. It allows those users inside the group to read the entire data asset without policy filters. Access can then be audited in detail with appropriate logs and Microsoft Graph.
+For data classification which follows the same rules for encryption and allowed infrastructure SKUs, and policy initiatives then the data can sit inside the same data landing zone.
 
-For recommendations on the layout of your data lake please review [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](../cloud-scale-analytics/best-practices/data-lake-zones.md).
+For restricted data, we recommend hosting data in a **dedicated** data landing zone under a management group where you can define a higher set of requirements for infrastructure such as customer-managed keys for encryption, and inbound or outbound restrictions applied to the landing zone. 
 
 > [!NOTE]
-> Examples of compute products are Azure Databricks, Azure Synapse Analytics, Apache Spark, and Azure Synapse SQL on-demand pools enabled with Microsoft Entra pass-through authentication.
+> The guidance has evaluated putting* *restricted and* *confidential or below* *data into the same data landing zone but different storage accounts. However, it can make the solution complicated on the networking layer, for example, with network security groups and others.
 
-## Sensitive data (personal data)
+Any deployed data governance solution should restrict who can search for restricted data in the catalog.
 
-For **sensitive (personal data)**, the enterprise needs to restrict what users can see via policy, data copies or compute. In this case, the organization needs to consider moving or injecting the access control into the compute layer. There are four options to approach securing data within cloud-scale analytics.
+You should also consider implementing Microsoft Entra-ID conditional access for all data assets and services, and just-in-time access for restricted data to enhance security.
 
-### Example scenario
+## Encryption
 
-The following example describes options for securing **sensitive (personal data)**:
+In addition to defining policies for location and allowed Azure services, you should consider the encryption requirements for each of the data classifications.
 
-A data application ingests a human resources (HR) personnel data product for North America and Europe. The use case calls for European users to see only European personnel records and North American users to see only North American personnel records. It's further restricted so that only HR managers see columns containing salary data.
+- What are your requirements for key management?
+- What are your requirements for storing those keys? 
+- What are your requirements, per classification for data at-rest encryption?
+- What are your requirements, per classification, for data in-transit encryption?
+- What are your requirements, per classification, for data in-use encryption?
 
-#### Option 1: Policy engine (recommended)
+For key management, encryption keys can be either platform managed, or customer managed. Microsoft has documented key management in Azure to help you choose a key management solution. For more information, see [Overview of Key Management in Azure](../../../../security/fundamentals/key-management.md) and [How to choose the right key management solution](../../../../security/fundamentals/key-management-choose.md).
 
-The first two options provide a way to handle **sensitive (personal data)**, and they also grant control to integrations ops and data product teams to identify and restrict access. It might be enough for a small-scale analytics platform, but a policy engine should be placed in the data management landing zone for a large enterprise with hundreds of data products. Policy engines support a central way of managing, securing, and controlling:
+Microsoft has published documentation explaining [Azure Data encryption at rest](../../../../security/fundamentals/encryption-atrest.md) and [data encryption models](../../../../security/fundamentals/encryption-models.md) which will help you understand the encryption options which are available.
+
+Microsoft gives customers the ability to use [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data when it is traveling between the cloud services and customers. For more information, see [Encryption of data in transit](../../../../security/fundamentals/encryption-overview%23encryption-of-data-in-transit.md).
+
+If your scenario  requires that data remains encrypted in-use, Azure Confidential Computing threat model aims to reduce trust or remove the ability for a cloud provider operator or other actors in the tenant's domain accessing code and data while it is being executed. For the latest Azure Confidential Computing offerings see [Azure confidential computing products](../../../../confidential-computing/overview-azure-products.md). 
+
+## Data Governance
+
+After you have defined the policies for deployment of allowed Azure services, you must decide how you grant access to the data product.
+
+If you have a data governance solution such as Microsoft Purview or Azure Databricks Unity Catalogue, then you can create data assets/product for enriched and curated data lake layers. Ensure that you set the permissions within the data catalog to secure those data objects.
+
+Microsoft Purview provides a central way of managing, securing, and controlling:
 
 - Access to data
-- Managing the data lifecycle
+- Data lifecycle
 - Internal and external policies and regulations
 - Data-sharing policies
-- Identifying **sensitive (personal data)**
+- Identifying **s**e**nsitive (personal data)**
 - Insights about protection and compliance
 - Policies for data protection reporting
 
-Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row-level and column-level security. As at Jan 2022, Azure Purview has launched a public preview for access policies to control access to data stored in Blob and Azure Data Lake Storage (ADLS) Gen2. See [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/tutorial-data-owner-policies-storage).
+For more information on managing read or modify access with Microsoft Purview, see [Microsoft Purview Data owner policies concepts](/purview/concept-policies-data-owner).
 
-The policy engine should use Microsoft Entra groups to apply policies to data products. The expectation for any policy solution providing data privacy is to tokenize **sensitive (personal data)** and to always check through attribute access control so that the user has can detokenize the columns they need to access.
+Whether you decide to implement Microsoft Purview or any another data governance solution, it is essential to use Microsoft Entra groups to apply policies to data products. 
 
-As mentioned, for a policy engine to succeed, it's important for it to integrate into the data catalog and for DevOps to use a REST API to onboard a new dataset. As data application teams create read data sources, they would be registered in the data catalog and help identify **sensitive (personal data)**. The policy engine should import the definition and deny all access to data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT service management solution.
+It is important to use the data governance solutions REST API to onboard a new dataset. Data application teams create data products and register them in the data governance solution to help identify **sensitive (personal data)**. The data governance solution imports the definition and denies all access to data until the teams have set up its access policies. 
 
-#### Option 2: Confidential or below and sensitive (personal data) versions
+## Use patterns for protection of sensitive data
 
-For every data product which is classified as **sensitive (personal data)** two copies are created by it's pipeline. One which is classified as **confidential or below** which has all the **sensitive (personal data)** columns removed and is created under the **confidential or below** folder for the data product. The other copy is created in the **sensitive (personal data)** folder, for the data product, which has all the sensitive data included. Each folder would be assigned a Microsoft Entra reader security group and a Microsoft Entra writer security group. Using [Data Access Management](security-provisioning.md) a user could request access to the data product.
+There are several patterns which can be adopted depending on data, services, and policies that you need to implement for protection of sensitive data.
 
-Whilst this fulfills separating out **sensitive (personal data)** and **confidential or below**, a user granted access via Active Directory passthrough authentication to the **sensitive (personal data)** would be able to query all the rows. If you required row-level security then you would need to use [Option 1: Policy engine (recommended)](#option-1-policy-engine-recommended) or [Option 3: Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools](#option-3-azure-sql-database-sql-managed-instance-or-azure-synapse-analytics-sql-pools).
+### Multiple Copies
 
-#### Option 3: Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools
+For every data product which is classified as **sensitive (personal data)** two copies are created by its pipeline. The first copy is classified as **confidential or** **below.** This copy has all the **sensitive (personal data)** columns removed and is created under the **confidential** **or below** folder for the data product. The other copy is created in the **sensitive (personal data)** folder and has all the sensitive data included. Each folder would be assigned a Microsoft Entra reader and a Microsoft Entra writer security group.
 
-A data application uses SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools to load the data products into a database that supports row-level security, column-level security, and dynamic data masking. The data application teams create different Microsoft Entra groups and assign permissions that support the data's sensitivity.
+If Microsoft Purview were in use, you would register both versions of the data product and use policies to secure the data. 
 
-For this scenario's use case, data application teams would need to create the following four Microsoft Entra groups with read-only access:
+While this process fulfills separating out sensitive (personal data) and confidential or below, a user granted access to the sensitive (personal data) would be able to query all the rows. Your organization might need to look at other solutions which provide row-level security to filter rows.
 
-| Group | Permission|
-|--|--|
+### Row-level and Column-level security
+
+If you need to filter rows which are seen by users, then you will need to move your data into a compute solution which can use row-level security.
+
+Selecting the appropriate Azure service or Microsoft Fabric solution for your particular use case is essential to prevent re-engineering. An OLTP database is unsuitable for extensive analytics, just as a solution tailored for Big data analytics cannot achieve millisecond response times required by an e-commerce application.
+
+To work with solutions that support row-level security the data application teams create different Microsoft Entra groups and assign permissions that support the data's sensitivity.
+
+To illustrate further, let's elaborate on the scenario by specifying that along with row-level security, there is a need to restrict access to certain columns. 
+
+| **Group** | **Permission** |
+|---|---|
 | `DA-AMERICA-HRMANAGER-R` | View North America HR personnel data asset **with** salary information. |
 | `DA-AMERICA-HRGENERAL-R` | View North America HR personnel data asset **without** salary information. |
 | `DA-EUROPE-HRMANAGER-R` | View Europe HR personnel data asset **with** salary information. |
 | `DA-EUROPE-HRGENERAL-R` | View Europe HR personnel data asset **without** salary information. |
 
-The first level of restrictions would support [dynamic data masking](/azure/azure-sql/database/dynamic-data-masking-overview), which hides sensitive data from users without privileges. One advantage of this approach is that it can be integrated into a data set's onboarding with a REST API.
+The data application teams have created the above four Microsoft Entra groups with read-only access.
 
-The second level is to add [column-level security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) to restrict non-HR managers from seeing salaries and [row-level security](/sql/relational-databases/security/row-level-security) to restrict which rows European and North American team members can see.
+The first level of restrictions would support dynamic data masking, which hides sensitive data from users without privileges. One advantage of this approach is that it can be integrated into a data set's onboarding with a REST API.
 
-In addition to transparent data encryption, security layer would be to [encrypt the column of data](/sql/relational-databases/security/encryption/encrypt-a-column-of-data) and decrypt upon read.
+The second level of restrictions is to add column-level security to restrict non-HR managers from seeing salaries and row-level security to restrict which rows European and North American team members can see.
 
-The tables can be made available to Azure Databricks with [Apache Spark connector: SQL Server and Azure SQL Database](/sql/connect/spark/connector).
+### Column Encryption
 
-#### Option 4: Azure Databricks
+While dynamic data masking will mask the data at the point of presentation, some use cases require that the solution never has access to the plaintext data. 
 
-Option four is to use Azure Databricks to explore **sensitive (personal data)**. Using a combination of Fernet encryption libraries, user-defined functions (UDFs), Databricks secrets, table access control, and dynamic view functions helps to encrypt and decrypt columns.
+SQL Always Encrypted is a powerful feature introduced by Microsoft that enhances the security of sensitive data stored in SQL Server databases. SQL Always Encrypted ensures that sensitive data stored in SQL Server databases remains secure and protected from unauthorized access. By encrypting the data both at rest and in transit, this feature helps in maintaining the highest levels of data confidentiality and compliance with regulatory requirements.
 
-As blog post, [enforcing Column-level encryption and avoiding data duplication](https://databricks.com/blog/2020/11/20/enforcing-column-level-encryption-and-avoiding-data-duplication-with-pii.html), describes:
-
-> The first step in this process is to protect the data by encrypting it during ingestion and one possible solution is the Fernet Python library. Fernet uses symmetric encryption, which is built with several standard cryptographic primitives. This library is used within an encryption UDF that will enable us to encrypt any given column in a data frame. To store the encryption key, we use Databricks secrets with access controls in place to only allow our data ingestion process to access it. Once the data is written to our Delta Lake tables, personal data columns holding values such as social security number, phone number, credit card number, and other identifiers will be impossible for an unauthorized user to read.
->
-> Once you have the sensitive data written and protected, you need a way for privileged users to read the sensitive data. The first thing that needs to be done is to create a permanent UDF to add to the Hive instance running on Databricks. In order for a UDF to be permanent, it must be written in Scala. Fortunately, Fernet also has a Scala implementation that you can use for your decrypted reads. This UDF also accesses the same secret used in the encrypted write to do the decryption, and, in this case, it's added to the Spark configuration of the cluster. This requires us to add cluster access controls for privileged and non-privileged users to control their access to the key. Once the UDF is created, we can use it within our view definitions for privileged users to see the decrypted data.
-
-With [dynamic view functions](/azure/databricks/security/access-control/table-acls/object-privileges#dynamic-view-functions), you can create only one view and return the encrypted or decrypted values based on the Databricks group to which they belong.
-
-In the previous example, you would create two dynamic view functions, one for North America and another for Europe, and implement the encryption techniques in this [notebook](https://databricks.com/notebooks/enforcing-column-level-encryption.html).
-
-**North American view**:
-
-```sql
--- Alias the field 'email' to itself (as 'email') to prevent the
--- permission logic from showing up directly in the column name results.
-CREATE VIEW vhr_us AS
-SELECT
-  emp_id,
-  CASE WHEN
-    is_member('DA-AMERICA-HRMANAGER-R') THEN udfPIIDecrypt(salary, "${spark.fernet}")
-    ELSE 0
-  END AS salary,
-FROM hr_enriched
-where region='US'
-```
-
-**European view**:
-
-```sql
--- Alias the field 'email' to itself (as 'email') to prevent the
--- permission logic from showing up directly in the column name results.
-CREATE VIEW vhr_eu AS
-SELECT
-  emp_id,
-  CASE WHEN
-    is_member('DA-EUROPE-HRMANAGER-R') THEN udfPIIDecrypt(salary, "${spark.fernet}")
-    ELSE 0
-  END AS salary,
-FROM hr_enriched
-where region='EU'
-```
-
-For it to work, you'd enable Azure Databricks [table access control](/azure/databricks/security/access-control/table-acls/object-privileges) in the workspace and apply the following permissions:
-
-- Grant `DA-AMERICA-HRMANAGER-R` and `DA-AMERICA-HRGENERAL-R` Microsoft Entra groups access to the `vhr_us` view.
-- Grant `DA-EUROPE-HRMANAGER-R` and `DA-EUROPE-HRGENERAL-R` Microsoft Entra groups access to the `vhr_eu` view.
-
-Since columns are encrypted and can't be decrypted in the **confidential or below** workspace, the **confidential or below** workspaces can still use Microsoft Entra pass-through authentication and allow users to explore the lake, based upon their permissions.
-
-Where table access is used, teams that require access are added to the Azure Databricks workspace. Azure Databricks would use service principals to map to Azure Data Lake Storage, but the data would be secured with Azure Databricks table access control.
-
-As new data products are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the Azure Databricks workspace and add the correct Microsoft Entra groups to those permissions.
-
-> [!NOTE]
-> Azure Databricks table access control can't be combined Microsoft Entra pass-through authentication. Therefore, you could use only one Azure Databricks workspace and use table access control instead.
-
-## Restricted data
-
-Along with implementing options for confidential or restricted data, we also recommend you host highly confidential data in a **dedicated** data landing zone and data management landing zone.
-
-It allows specific requirements like just-in-time access, customer-managed keys for encryption, and inbound or outbound restrictions applied to the landing zone. The guidance has evaluated putting data of this type into the same data landing zone but different storage accounts. However, it can make the solution complicated on the networking layer, for example, with network security groups and others.
-
-The dedicated 'restricted' data management landing zone should connect to catalog the data in the 'restricted' data landing zone. It should restrict who can search for this data in the catalog.
+By performing encryption and decryption operations on the client side, Always Encrypted ensures that sensitive data remains protected from unauthorized access. Its ease of integration and compliance benefits make it an essential tool for organizations looking to safeguard their most valuable data assets.
 
 ## Next steps
 
