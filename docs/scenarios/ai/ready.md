@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI Ready – Recommendations to prepare an AI foundation
 
-This article provides recommendations for making key design and process decisions that all your AI workloads inherit. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, governance baselines, networking, and connectivity to align with your [AI centralization and endpoint sharing](./plan.md#plan-for-ai-centralization-and-endpoint-sharing) approach.
+This article provides recommendations for making key design and process decisions that all your AI workloads inherit. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking.
 
 :::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
 *Figure 1. Resource organization for internal and internet-facing AI workloads.*

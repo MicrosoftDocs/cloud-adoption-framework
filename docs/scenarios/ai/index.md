@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This guidance provides a comprehensive roadmap for adopting AI on Azure, serving as a framework to help you navigate the AI landscape. Use it to find detailed implementation instructions and to establish processes for securing, governing, and managing AI workloads. Think of this as your manual for achieving AI success on Azure.
 
-:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It starts with Strategy, Plan, Ready, and Adopt. Then Secure, Manage, and Govern are cyclical processes after Adopt. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
+:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It starts with Strategy, Plan, Ready, and Adopt as sequential steps. Then Secure, Manage, and Govern are cyclical processes after Adopt. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
 *Figure 1. How to use the AI adoption guidance for Azure.*
 
 ## Why adopt AI on Azure?
