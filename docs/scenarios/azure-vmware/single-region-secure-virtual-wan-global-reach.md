@@ -105,10 +105,10 @@ The following table describes the traffic flow in the preceding diagram.
 
 ### Internet connectivity
 
-This section focuses only on how to provide internet connectivity to Azure-native resources in a virtual network and in a Azure VMware Solution private cloud. For more information, see [Internet connectivity design considerations](/azure/azure-VMware/concepts-design-public-internet-access). You can use the following options to provide internet connectivity to Azure VMware Solution.
+This section describes how to provide internet connectivity to Azure-native resources in a virtual network and in a Azure VMware Solution private cloud. For more information, see [Internet connectivity design considerations](/azure/azure-VMware/concepts-design-public-internet-access). You can use the following options to provide internet connectivity to Azure VMware Solution.
 
 - *Option 1:* Azure-hosted internet service
-- *Option 2:* Azure VMware Solution-managed SNAT  
+- *Option 2:* Azure VMware Solution-managed Source Network Address Translation (SNAT)  
 - *Option 3:* Azure public IPv4 address to the NSX-T Data Center edge  
 
 A single-region secure Virtual WAN design that has routing intent supports all options, but we recommend option 1. The scenario later in this article uses option 1 to provide internet connectivity. Option 1 works best with secure Virtual WAN because it's easy to inspect, deploy, and manage.
