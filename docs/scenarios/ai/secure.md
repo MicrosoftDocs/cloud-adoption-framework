@@ -9,15 +9,15 @@ ms.topic: conceptual
 
 # Secure AI – Recommendations to Secure AI
 
-This article provides recommendations for securing AI. It focuses on the confidentiality, integrity, and availability of AI systems. Alternatively, AI security governance focuses on organizational risks and creating evergreen policies to mitigate those risks.
+This article provides recommendations for securing AI. It focuses on the confidentiality, integrity, and availability of AI systems. In comparison, AI security governance focuses on organizational risks and creating evergreen policies to mitigate those risks.
 
-Securing AI requires you to implement the same security measures as any cloud workload. However, it requires you to pay special attention to securing data that flows in and out of AI endpoints, and securing the AI endpoints themselves. This guidance assumes that you're familiar with [CAF Secure](/azure/cloud-adoption-framework/secure/) and doesn’t repeat the cloud security practices found there.
+To secure AI, you must implement the same security measures required by all cloud workloads. However, you must pay special attention to the data that flows in and out of AI endpoints, and secure the AI endpoints themselves. This guidance assumes that you're familiar with [CAF Secure](/azure/cloud-adoption-framework/secure/) and doesn’t repeat the cloud security practices found there.
 
 ## Assess AI security risks
 
 This guidance provides recommendations for identifying AI security risks. To properly implement security controls, you need to be familiar with AI risk.
 
-- **Identify common AI security risks.** Use recognized resources like [MITRE ATLAS](https://atlas.mitre.org/), [OWASP Machine Learning risk](https://mltop10.info/), and [OWASP Generative AI risk](https://genai.owasp.org/) to regularly evaluate risks across all AI workloads. For ongoing security posture management, consider using AI security tools like [AI security posture management](/azure/defender-for-cloud/ai-security-posture) in Microsoft Defender for Cloud. These tools can automate the detection and remediation of generative AI risks.
+- **Identify common AI security risks.** Use recognized resources like [MITRE ATLAS](https://atlas.mitre.org/), [OWASP Machine Learning risk](https://mltop10.info/), and [OWASP generative AI risk](https://genai.owasp.org/) to regularly evaluate risks across all AI workloads. For ongoing security posture management, consider using AI security tools like [AI security posture management](/azure/defender-for-cloud/ai-security-posture) in Microsoft Defender for Cloud. These tools can automate the detection and remediation of generative AI risks.
 
 - **Identify data risks.** Consider the significant effects on your organization’s stakeholders and compliance obligations that can result from sensitive data loss or exposure. Use enterprise-wide tools like [Microsoft Purview Insider Risk Management](/purview/insider-risk-management) to assess insider risk and maintain data security throughout the business. Across all AI workloads, classify and prioritize risks based on the sensitivity of the data that they process, store, or transmit.
 
@@ -46,7 +46,7 @@ This guidance provides recommendations for securing Azure resources that are dep
     | Azure Machine Learning | Follow the [security best practices](/azure/machine-learning/concept-enterprise-security) for Machine Learning |
     | Azure Virtual Machines | Use a public load balancer and only permit access requests to the AI model endpoint through the load balancer |
 
-- **Limit outbound traffic from your AI resources**. Limit outbound traffic from your AI model endpoints to help protect sensitive data and maintain the integrity of your AI models. For minimizing data exfiltration risks, restrict outbound traffic to approved services or fully qualified domain names (FQDNs) and maintain a list of trusted sources. You should only allow unrestricted internet outbound traffic if you need access to public machine learning resources. Regularly monitor and update your systems. For more information, see [Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention), [Studio](/azure/ai-studio/how-to/configure-managed-network), and [Machine Learning.](/azure/machine-learning/how-to-network-isolation-planning#allow-only-approved-outbound-mode).
+- **Limit outbound traffic from your AI resources**. Limit outbound traffic from your AI model endpoints to help protect sensitive data and maintain the integrity of your AI models. For minimizing data exfiltration risks, restrict outbound traffic to approved services or fully qualified domain names (FQDNs) and maintain a list of trusted sources. You should only allow unrestricted internet outbound traffic if you need access to public machine learning resources. Regularly monitor and update your systems. For more information, see [Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention), [Studio](/azure/ai-studio/how-to/configure-managed-network), and [Machine Learning](/azure/machine-learning/how-to-network-isolation-planning#allow-only-approved-outbound-mode).
 
 ### Secure the AI models
 
