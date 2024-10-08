@@ -1,6 +1,6 @@
 ---
 title: Secure AI - Recommendations to Secure AI
-description: Learn how to secure AI with comprehensive recommendations that focus on confidentiality, integrity, and availability. Learn best practices for AI security.
+description: Learn how to secure AI by using comprehensive recommendations that focus on confidentiality, integrity, and availability. Learn best practices for AI security.
 ms.author: ssumner
 author: stephen-sumner
 ms.date: 11/01/2024
@@ -70,13 +70,13 @@ This guidance provides recommendations for secure code executions that AI system
 
 - **Implement resource limits.** Set resource limits on CPU, memory, and disk usage for code execution environments to prevent any single execution from consuming excessive resources. This helps avoid potential disruptions to other services. Define execution timeouts to ensure that long-running or potentially stuck processes are terminated automatically.
 
-For more information, see [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant), [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions?tabs=python), and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
+For more information, see [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant), [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions?tabs=python) and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
 
 ### Secure AI data
 
 This guidance outlines best practices for securing data involved in AI systems across all applications built in Azure within your organization. Adhere to these practices to help safeguard sensitive information, maintain data integrity, and prevent unauthorized access or breaches.
 
-- **Define and maintain data boundaries.** Ensure that AI workloads use data appropriate for their access level. AI applications tht are accessible to all employees should only process data suitable for all employees. Internet-facing AI applications must use data that's appropriate for public consumption. Use separate datasets or environments for different AI applications to prevent inadvertent data access. Consider using Microsoft Purview’s suite of [data security tools](/purview/purview-security) to secure your data.
+- **Define and maintain data boundaries.** Ensure that AI workloads use data appropriate for their access level. AI applications that are accessible to all employees should only process data suitable for all employees. Internet-facing AI applications must use data that's appropriate for public consumption. Use separate datasets or environments for different AI applications to prevent inadvertent data access. Consider using Microsoft Purview’s suite of [data security tools](/purview/purview-security) to secure your data.
 
 - **Implement strict data access controls.** Ensure that applications verify that end-users are authorized to access the data included in their queries. Avoid broad system permissions for user actions. Operate under the principle that if the AI can access certain information, the user should be authorized to access it directly.
 
@@ -94,23 +94,23 @@ This section outlines security recommendations for accessing AI resources in Azu
 
 - **Organize resources and access controls.** Use distinct workspaces to organize and manage AI artifacts like datasets, models, and experiments. Workspaces centralize resource management and simplify access control. For example, use [projects](/azure/ai-studio/concepts/ai-resources#organize-work-in-projects-for-customization) within Studio to manage resources and permissions efficiently. This approach facilitates collaboration while maintaining security boundaries.
 
-- **Use Entra ID for authentication.** Eliminate static API keys in favor of Microsoft Entra ID for authentication whenever possible. This step enhances security through centralized identity management and reduces secret management overhead. Limit the distribution of API keys. Instead, prefer identities in Entra ID over API keys for authentication. Audit the list of individuals with API key access to ensure it's current. For more information about authentication guidance, see [Studio](/azure/ai-studio/concepts/rbac-ai-studio), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), [Azure AI services](/azure/ai-services/authentication), [Machine Learning](/azure/machine-learning/how-to-setup-authentication), and [Virtual Machines](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities).
+- **Use Microsoft Entra ID for authentication.** Eliminate static API keys in favor of Microsoft Entra ID for authentication whenever possible. This step enhances security through centralized identity management and reduces secret management overhead. Limit the distribution of API keys. Instead, prefer identities in Microsoft Entra ID over API keys for authentication. Audit the list of individuals with API key access to ensure it's current. For more information about authentication guidance, see [Studio](/azure/ai-studio/concepts/rbac-ai-studio), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), [Azure AI services](/azure/ai-services/authentication), [Machine Learning](/azure/machine-learning/how-to-setup-authentication), and [Virtual Machines](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities).
 
-- **Configure authentication.** Enable [multifactor authentication (MFA)](/entra/identity/authentication/tutorial-enable-azure-mfa) and prefer secondary administrative accounts or just-in-time access with [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) for sensitive accounts. Limit control plane access by using services like Azure Bastion as secure entry points into private networks.
+- **Configure authentication.** Enable [multifactor authentication (MFA)](/entra/identity/authentication/tutorial-enable-azure-mfa) and prefer secondary administrative accounts or just-in-time access with [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) for sensitive accounts. Limit control plane access by using services like Azure Bastion as secure entry points into private networks.
 
 - **Use conditional access policies.** Implement risk-based [conditional access policies](/entra/identity/conditional-access/overview) that respond to unusual sign-in activity or suspicious behavior. Use signals like user location, device state, and sign-in behavior to trigger extra verification steps. Require MFA for accessing critical AI resources to enhance security. Restrict access to AI infrastructure based on geographic locations or trusted IP ranges. Ensure that only compliant devices, which are devices that meet security requirements, can access AI resources.
 
-- **Configure least privilege access.** Configure least privilege access by implementing role-based access control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access required to perform their tasks. Regularly review and adjust permissions to prevent privilege creep. For example:
+- **Configure least privilege access.** Configure least privilege access by implementing role-based access control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine-tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access required to perform their tasks. Regularly review and adjust permissions to prevent privilege creep. For example:
 
-- *Data scientists* should have read and write access to data storage, permission to run training jobs, and access to model training environments.
+  - *Data scientists* should have read and write access to data storage, permission to run training jobs, and access to model training environments.
 
-- *AI developers* should have access to development environments, deployment permissions, and the ability to modify AI applications.
+  - *AI developers* should have access to development environments, deployment permissions, and the ability to modify AI applications.
 
-- *IT administrators* should have full access to manage infrastructure, network configurations, and security policies.
+  - *IT administrators* should have full access to manage infrastructure, network configurations, and security policies.
 
-- **Secure Azure service-to-service interactions.** Use [Managed Identities](/entra/identity/managed-identities-azure-resources/overview) to allow Azure services to authenticate to each other without managing credentials.
+- **Secure Azure service-to-service interactions.** Use [managed identities](/entra/identity/managed-identities-azure-resources/overview) so that Azure services can authenticate to each other without managing credentials.
 
-- **Secure external access to AI model endpoints.** Require clients to authenticate by using Entra ID when they access AI model endpoints. Consider using Azure API Management as an AI gateway in front of AI model endpoints to enforce access policies, control usage, and provide monitoring capabilities.
+- **Secure external access to AI model endpoints.** Require clients to authenticate by using Microsoft Entra ID when they access AI model endpoints. Consider using Azure API Management as an AI gateway in front of AI model endpoints to enforce access policies, control usage, and provide monitoring capabilities.
 
 ## Maintain AI security controls
 
@@ -118,11 +118,11 @@ This guidance provides recommendations for maintaining the security of AI worklo
 
 - **Implement testing for data leakage and coercion in AI systems.** Conduct rigorous tests to determine if sensitive data can be leaked or coerced through AI systems. Perform data loss prevention tests and simulate AI-specific attack scenarios. Simulate model inversion or adversarial attacks to evaluate the resilience of data protection measures. Ensuring that AI models and data handling processes are secure against unauthorized access and manipulation is crucial to maintain data integrity and trust in AI applications.
 
-- **Provide AI-focused employee training and awareness.** Provide comprehensive training programs for all employees involved in AI projects. Emphasize the importance of data security and best practices specific to AI development and deployment. Educate staff on how to handle sensitive data that's used in training and recognize threats like model inversion or data poisoning attacks. Regular training ensures that team members are knowledgeable about the latest AI security protocols and understand their role in maintaining the integrity of AI workloads.
+- **Provide AI-focused employee training and awareness.** Provide comprehensive training programs for all employees that are included in AI projects. Emphasize the importance of data security and best practices that are specific to AI development and deployment. Educate staff on how to handle sensitive data that's used in training and recognize threats like model inversion or data poisoning attacks. Regular training ensures that team members are knowledgeable about the latest AI security protocols and understand their role in maintaining the integrity of AI workloads.
 
 - **Develop and maintain an incident response plan for AI security incidents.** Create an incident response strategy tailored to AI systems to address potential data breaches or security incidents. The plan should outline clear procedures for detecting, reporting, and mitigating security incidents that might affect AI models, data, or infrastructure. Conduct regular drills and simulations focused on AI-specific scenarios to ensure that the response team is prepared to handle real-world AI security incidents efficiently.
 
-- **Conduct periodic risk assessments and impact analyses for AI workloads.** Evaluate emerging threats and vulnerabilities specific to AI regularly through risk assessments and impact analyses. These evaluations help identify new risks that are associated with AI models, data handling processes, and deployment environments. Evaluations also assess the potential impact of security breaches on AI systems.
+- **Conduct periodic risk assessments and impact analyses for AI workloads.** Evaluate emerging threats and vulnerabilities specific to AI regularly through risk assessments and impact analyses. These evaluations help identify new risks that are associated with AI models, data handling processes, and deployment environments. Evaluations also assess the potential effects of security breaches on AI systems.
 
 ## Next step
 
