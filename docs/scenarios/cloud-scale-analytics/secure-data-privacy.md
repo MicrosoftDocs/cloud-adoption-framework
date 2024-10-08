@@ -52,13 +52,13 @@ In addition to defining policies for location and allowed Azure services, you sh
 - What are your requirements, per classification, for data in-transit encryption?
 - What are your requirements, per classification, for data in-use encryption?
 
-For key management, encryption keys can be either platform managed, or customer managed. Microsoft has documented key management in Azure to help you choose a key management solution. For more information, see [Overview of Key Management in Azure](/security/fundamentals/key-management) and [How to choose the right key management solution](/security/fundamentals/key-management-choose).
+For key management, encryption keys can be either platform managed, or customer managed. Microsoft has documented key management in Azure to help you choose a key management solution. For more information, see [Overview of Key Management in Azure](/azure/security/fundamentals/key-management) and [How to choose the right key management solution](/azure/security/fundamentals/key-management-choose).
 
-Microsoft has published documentation explaining [Azure Data encryption at rest](/security/fundamentals/encryption-atrest) and [data encryption models](/security/fundamentals/encryption-models) which help you understand the encryption options which are available.
+Microsoft has published documentation explaining [Azure Data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [data encryption models](/azure/security/fundamentals/encryption-models) which help you understand the encryption options which are available.
 
-Microsoft gives customers the ability to use [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data when it's traveling between the cloud services and customers. For more information, see [Encryption of data in transit](/security/fundamentals/encryption-overview%23encryption-of-data-in-transit).
+Microsoft gives customers the ability to use [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data when it's traveling between the cloud services and customers. For more information, see [Encryption of data in transit](/azure/security/fundamentals/encryption-overview%23encryption-of-data-in-transit).
 
-If your scenario requires that data remains encrypted in-use, Azure Confidential Computing threat model aims to reduce trust or remove the ability for a cloud provider operator or other actors in the tenant's domain accessing code and data while it's being executed. For the latest Azure Confidential Computing offerings, see [Azure confidential computing products](/confidential-computing/overview-azure-products). 
+If your scenario requires that data remains encrypted in-use, Azure Confidential Computing threat model aims to reduce trust or remove the ability for a cloud provider operator or other actors in the tenant's domain accessing code and data while it's being executed. For the latest Azure Confidential Computing offerings, see [Azure confidential computing products](/azure/confidential-computing/overview-azure-products). 
 
 ## Data Governance
 
