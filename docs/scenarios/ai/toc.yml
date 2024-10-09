@@ -9,43 +9,41 @@ items:
     items:
       - name: Prepare AI environment
         href: ready.md
-        - name: AI with Azure platforms (PaaS)
+      - name: AI with Azure platforms (PaaS)
+        items:
+        - name: Design areas
           items:
-          - name: Design areas
-            items:
-              - name: Networking
-                href: platform/networking.md
-              - name: Secure
-                href: platform/secure.md
-              - name: Management
-                href: platform/management.md
-              - name: Governance
-                href: platform/governance.md
-          - name: Implementation options
-        - name: AI on Azure infrastructure (IaaS)
+            - name: Networking
+              href: platform/networking.md
+            - name: Secure
+              href: platform/secure.md
+            - name: Management
+              href: platform/management.md
+            - name: Governance
+              href: platform/governance.md
+        - name: Implementation options
+      - name: AI on Azure infrastructure (IaaS)
+        items:
+        - name: Design areas
           items:
-          - name: Design areas
-            items:
-              - name: Compute
-                href: infrastructure/compute.md
-              - name: Storage
-                href: infrastructure/storage.md
-              - name: Network topology and connectivity
-                href: infrastructure/network-topology-connectivity.md
-              - name: Resource organization
-                href: infrastructure/resource-organization.md
-              - name: Secure
-                href: infrastructure/secure.md
-              - name: Management
-                href: infrastructure/management.md
-              - name: Governance
-                href: infrastructure/governance.md
-              - name: Platform automation and DevOps
-                href: infrastructure/platform-automation-devops.md
-          - name: Implementation options
-            items:
-              - name: CycleCloud landing zone accelerator
-                href: infrastructure/implementation-options.md
+            - name: Compute
+              href: infrastructure/compute.md
+            - name: Storage
+              href: infrastructure/storage.md
+            - name: Networking
+              href: infrastructure/networking.md
+            - name: Resource organization
+              href: infrastructure/resource-organization.md
+            - name: Secure
+              href: infrastructure/secure.md
+            - name: Management
+              href: infrastructure/management.md
+            - name: Governance
+              href: infrastructure/governance.md
+        - name: Implementation options
+          items:
+            - name: CycleCloud landing zone accelerator
+              href: infrastructure/implementation-options.md
   - name: Secure
     href: secure.md
   - name: Govern

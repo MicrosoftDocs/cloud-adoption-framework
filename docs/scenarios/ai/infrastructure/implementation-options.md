@@ -1,3 +1,11 @@
+---
+title: Implementation options for AI on Azure infrastructure
+description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
+author: stephen-sumner
+ms.author: rajanaki
+ms.date: 11/01/2024
+ms.topic: conceptual
+---
 
 # Implementation options
 
