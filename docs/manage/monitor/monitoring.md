@@ -45,6 +45,25 @@ Monitoring is a multifaceted discipline that requires a combination of tools, pr
 | Compliance | Compliance monitoring ensures that the cloud environment adheres to regulatory and industry standards. It involves tracking configurations, access controls, and data handling practices to ensure compliance with relevant regulations. |
 | Cost | Cost monitoring involves tracking cloud spending and resource utilization to identify cost-saving opportunities and prevent budget overruns. This includes monitoring resource usage, identifying underutilized resources, and optimizing resource configurations to reduce costs. |
 
+## Roles and responsibilities
+There are multiple roles in an organization that maintain the monitoring environment and require access to monitoring data to perform their job functions. Each role has different requirements for monitoring data based on their particular responsibilities. Depending on the size of your organization, you may have 
+
+The following table describes the roles and their monitoring requirements.
+
+- **Cloud Architect**: Designs and oversees the cloud infrastructure, ensuring it meets the organization’s business goals. The cloud architect focuses on reliability, security, and scalability of the cloud architecture and requires high-level telemetry to get a holistic view of the digital estate. This includes resource utilization metrics, application performance monitoring (APM), cost and billing insights, and compliance reports.
+
+- **Platform Engineer**: Builds and manages the platform that developers use to deploy their applications. This includes creating CI/CD pipelines, managing cloud infrastructure as code, and ensuring the scalability and reliability of the platform. The platform engineer requires telemetry related to the platform's operational status. This includes container performance metrics, orchestration logs, infrastructure-as-code (IaC) validation, and service availability.
+
+- **System Administrator:** Manages and maintains servers, operating systems, and other infrastructure components in the cloud. They ensure systems are up-to-date, perform backups, and troubleshoot issues. The system administrator requires server and OS-level telemetry including CPU, memory, disk usage, network performance, and system logs. 
+
+- **Security Engineer:** Implements and manages security measures to protect data and applications from threats. The security engineer handles everything from identity management to threat detection and response. They need telemetry focused on security events including access logs, threat detection alerts, vulnerability assessments, and compliance metrics.
+
+- **Network Administrator:** Responsible for managing and maintaining the cloud network, ensuring that data flows securely and efficiently between servers, applications, and end-users. The network administrator handles network configurations, monitors performance, and implements security measures. They require network-centric telemetry including network traffic analysis, latency measurements, packet loss, and firewall logs. 
+
+- **Database Administrator (DBA):** Manages and maintains databases, ensuring data integrity, performance, and availability. The DBA handles database backups, recovery, and optimize queries for efficiency. They need telemetry related to database performance and integrity including query performance metrics, database response times, transaction logs, and backup/recovery status.
+
+- **Developer:** Design, write, test, and maintain the software that runs on cloud platforms. The developer creates features, fixing bugs, and ensuring the application performs well and is secure. They require application-specific telemetry including error rates, latency, response times, user behavior analytics, and feature usage metrics. 
+
 ## Aspects of monitoring
 While you may use multiple services with different sets of features to provide the a complete monitoring environment, the core aspects of monitoring can be broken down in the following aspects:
 
