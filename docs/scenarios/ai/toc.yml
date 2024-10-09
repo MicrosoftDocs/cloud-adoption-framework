@@ -32,8 +32,6 @@ items:
             href: infrastructure/storage.md
           - name: Networking
             href: infrastructure/networking.md
-          - name: Resource organization
-            href: infrastructure/resource-organization.md
           - name: Secure
             href: infrastructure/secure.md
           - name: Management
