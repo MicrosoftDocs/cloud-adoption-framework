@@ -16,7 +16,7 @@ This article provides recommendations for making key design and process decision
 
 ## Prepare AI deployment regions
 
-Whether you use a centralized or decentralized approach to AI model deployment, you still need to select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
+Select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
 
 - *Use multiple regions to host AI model endpoints.* For production workloads, host AI endpoints in at least two regions to provide redundancy and ensure high availability. Although generative AI models are stateless, hosting them in multiple regions enables faster failover and recovery during regional failures. For Azure OpenAI models (GPTs), you can use [global deployments](/azure/ai-services/openai/how-to/deployment-types#deployment-types), which is multi-region and can automatically and transparently route the request to a region with enough capacity. If you opt for a nonglobal deployment (regional), use [Azure API Management](/azure/api-management/genai-gateway-capabilities#backend-load-balancer-and-circuit-breaker) for load balancing API requests to AI endpoints.
 

@@ -9,6 +9,8 @@ ms.topic: conceptual
 
 # Governance for AI workloads using AI platforms
 
+Additionally, it assumes that you've established governance policies at the management group level for your AI workload types, like internet-facing (online) and internal (corporate) workloads. These polices are covered in [AI Ready](ready.md#prepare-ai-resource-organization). The following recommendations are intended as a starting point for your AI governance.
+
 ## Govern AI models
 
 This guidance outlines recommendations for controlling the input and output of AI model endpoints.
@@ -19,13 +21,7 @@ This guidance outlines recommendations for controlling the input and output of A
 
 - *Ground generative AI models.* Use [system messages](/azure/ai-services/openai/concepts/system-message) and the [retrieval augmented generation](/azure/ai-studio/concepts/retrieval-augmented-generation) (RAG) pattern to govern the output of generative AI models. Test the effectiveness of grounding by using tools like [prompt flow](/azure/ai-studio/how-to/prompt-flow) or the open-source red teaming framework PyRIT.
 
-- *Consider a reverse proxy for monitoring.* A reverse proxy like Azure API Management allows you to implement logging and monitoring that aren't native to the platform. API Management allows you to collect source IPs, input text, and output text. For more information, see [Implement logging and monitoring for Azure OpenAI Service language models](/azure/architecture/ai-ml/openai/architecture/log-monitor-azure-openai).
-
-- *Establish policies for which models to use.* Different AI models serve different use cases. Create a policy for approving AI models that factors in the cost, model capabilities and tasks, and source of AI models.
-
-- *Establish a policy to onboard new models.* Use sandbox environments to experiment with different models. When you move a model to production, implement a formal onboarding process that includes justification, validation, and approval. Review existing models in the production catalog to prevent duplication and maintain streamlined operations.
-
-- *Invest in a golden dataset.* Create a golden dataset that serves as a benchmark for testing AI applications. A golden dataset is a collection of preferred answers to common user queries. This dataset can significantly streamline the iterative development process, which ensures that models consistently produce high-quality, expected outputs.
+- *Consider a generative AI gateway for monitoring.* A reverse proxy like Azure API Management allows you to implement logging and monitoring that aren't native to the platform. API Management allows you to collect source IPs, input text, and output text. For more information, see [Implement logging and monitoring for Azure OpenAI Service language models](/azure/architecture/ai-ml/openai/architecture/log-monitor-azure-openai).
 
 ## Govern AI costs
 
