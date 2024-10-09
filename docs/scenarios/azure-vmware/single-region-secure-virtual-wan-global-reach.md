@@ -1,5 +1,5 @@
 ---
-title: Use a single-region Azure VMware Solution design that has Virtual WAN and Global Reach
+title: Use a Single-Region Azure VMware Solution Design That Has Virtual WAN and Global Reach
 description: Learn how to configure network connectivity for a single-region Azure VMware Solution private cloud that has secure Virtual WAN and Global Reach.
 author: jasonmedina
 ms.author: jasonmedina
@@ -23,7 +23,7 @@ Only the Virtual WAN Standard SKU supports secure Virtual WAN with routing inten
 
 This scenario's hub has the following configuration:
 
-- The single-region network and a Virtual WAN has one hub.
+- The single-region network has a Virtual WAN instance and one hub.
 
 - The hub has an Azure Firewall instance deployed, which makes it a secure Virtual WAN hub.
 - The secure Virtual WAN hub has routing intent enabled.
@@ -117,9 +117,9 @@ When you use routing intent, you can generate a default route from the hub firew
 
 #### Azure VMware Solution and virtual network internet connectivity
 
-When you enable routing intent for internet traffic, by default, the secure Virtual WAN hub doesn't advertise the default route across ExpressRoute circuits. To ensure that the default route propagates to Azure VMware Solution from Virtual WAN, you must enable default route propagation on your Azure VMware Solution ExpressRoute circuits. For more information, see [Advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints).
+When you enable routing intent for internet traffic, by default, the secure Virtual WAN hub doesn't advertise the default route across ExpressRoute circuits. To help ensure that the default route propagates to Azure VMware Solution from Virtual WAN, you must enable default-route propagation on your Azure VMware Solution ExpressRoute circuits. For more information, see [Advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints).
 
-After you enable default route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route 0.0.0.0/0 to Azure VMware Solution, but Global Reach (connection **A**) also advertises the default route to on-premises. As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment so that it doesn't learn the default route. This step ensures that your configuration doesn't affect on-premises internet connectivity.
+After you enable default-route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route 0.0.0.0/0 to Azure VMware Solution, but Global Reach (connection **A**) also advertises the default route to on-premises. As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment so that it doesn't learn the default route. This step ensures that your configuration doesn't affect on-premises internet connectivity.
 
 :::image type="content" source="./media/single-region-virtual-wan-5.png" alt-text="Diagram of a single-region Azure VMware Solution that has an internet connection." border="false":::
 

@@ -51,7 +51,7 @@ items:
                   - name: Use a single-region design that has Global Reach               
                     href: single-region-secure-virtual-wan-global-reach.md
                   - name: Dual region Secure Virtual WAN with Global Reach               
-                    href: dual-region-with-secure-virtual-wan-with-global-reach.md
+                    href: dual-region-secure-virtual-wan-global-reach.md
                   - name: Use a single-region design that doesn't have Global Reach               
                     href: single-region-secure-virtual-wan-without-global-reach.md
                   - name: Dual region Secure Virtual WAN without Global Reach               
