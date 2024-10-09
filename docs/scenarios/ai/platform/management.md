@@ -1,3 +1,15 @@
+---
+title: Management of AI workloads on Azure platforms
+description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
+author: stephen-sumner
+ms.author: rajanaki
+ms.date: 11/01/2024
+ms.topic: conceptual
+---
+
+# Management of AI workloads on Azure platforms
+
+
 
 ## Manage AI deployments
 
