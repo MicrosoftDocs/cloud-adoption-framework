@@ -206,8 +206,8 @@ The following table shows the traffic flow to and from virtual networks.
   
 ## Related resources
 
-- [Single-region Azure VMware Solution design with Global Reach, using Secure Virtual WAN with Routing Intent](single-region-with-secure-virtual-wan-with-global-reach.md)
-- [Single-region Azure VMware Solution design without Global Reach, using Secure Virtual WAN with Routing Intent](single-region-with-secure-virtual-wan-without-global-reach.md)
- - [Dual-region Azure VMware Solution design with Global Reach, using Secure Virtual WAN with Routing Intent](dual-region-with-secure-virtual-wan-with-global-reach.md)
-- [Dual-region Azure VMware Solution design without Global Reach, using Secure Virtual WAN with routing intent](dual-region-with-secure-virtual-wan-without-global-reach.md)
+- [Single-region Azure VMware Solution design that has Virtual WAN and Global Reach](single-region-secure-virtual-wan-global-reach.md)
+- [Single-region Azure VMware Solution design that doesn't have Global Reach](single-region-secure-virtual-wan-without-global-reach.md)
+ - [Dual-region Azure VMware Solution design that has Virtual WAN and Global Reach](dual-region-secure-virtual-wan-global-reach.md)
+- [Dual-region Azure VMware Solution design that doesn't have Global Reach](dual-region-secure-virtual-wan-without-global-reach.md)
 

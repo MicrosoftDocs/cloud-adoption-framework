@@ -25,7 +25,7 @@ This scenario's hub has the following configuration:
 - The dual-region network has one Virtual WAN and two hubs. Each region has one hub.
 
 - Each hub has its own Azure Firewall instance deployed, which makes them secure Virtual WAN hubs.
-- The secure Virtual WAN hub has routing intent enabled.
+- The secure Virtual WAN hubs have routing intent enabled.
 
 This scenario also has these components:
 
@@ -59,7 +59,7 @@ The following table describes the topology connectivity in the preceding diagram
 
 ## Dual-region secure Virtual WAN traffic flows
 
-The following sections cover traffic flows and connectivity for Azure VMware Solution, on-premises, Azure virtual networks, and the internet when you use Global Reach.
+The following sections describe traffic flows and connectivity for Azure VMware Solution, on-premises, Azure virtual networks, and the internet when you use Global Reach.
 
 ### Azure VMware Solution private cloud cross-region connectivity and traffic flows
 

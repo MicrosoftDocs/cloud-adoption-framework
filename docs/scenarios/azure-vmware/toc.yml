@@ -50,12 +50,12 @@ items:
                     href: introduction-to-virtual-wan-for-azure-vmware-solution.md
                   - name: Use a single-region design that has Global Reach               
                     href: single-region-secure-virtual-wan-global-reach.md
-                  - name: Dual region Secure Virtual WAN with Global Reach               
+                  - name: Use a dual-region design that has Global Reach                 
                     href: dual-region-secure-virtual-wan-global-reach.md
                   - name: Use a single-region design that doesn't have Global Reach               
                     href: single-region-secure-virtual-wan-without-global-reach.md
-                  - name: Dual region Secure Virtual WAN without Global Reach               
-                    href: dual-region-with-secure-virtual-wan-without-global-reach.md
+                  - name: Use a dual-region design that doesn't have Global Reach                 
+                    href: dual-region-secure-virtual-wan-without-global-reach.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring

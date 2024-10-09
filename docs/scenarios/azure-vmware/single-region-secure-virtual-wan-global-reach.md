@@ -38,7 +38,7 @@ This scenario also has these components:
 - Global Reach connections don't transit the hub firewall. So Global Reach traffic that goes both ways between on-premises and Azure VMware Solution doesn't get inspected.
 
 > [!NOTE]
-> When you use Global Reach, consider inspecting traffic within the Azure VMware Solution environment's NSX-T or an on-premises firewall. This approach enhances security between Global Reach sites.
+> To enhance security between Global Reach sites, consider inspecting traffic within the Azure VMware Solution environment's NSX-T or an on-premises firewall.
 
 The following diagram shows an example of this scenario.
 
@@ -69,13 +69,13 @@ The following table describes the traffic flow in the preceding diagram.
 | 1 | Azure VMware Solution cloud | &#8594;| Virtual network| Yes |
 | 2 | Azure VMware Solution cloud | &#8594;| On-premises | No |
 
-The Azure VMware Solution private cloud has an ExpressRoute connection to its hub (connection **D**). The Azure VMware Solution cloud region establishes a connection to on-premises via ExpressRoute Global Reach (connection **A**). Traffic that travels via Global Reach doesn't transit the hub firewall.
+The Azure VMware Solution private cloud connects to its hub via ExpressRoute connection **D**. The Azure VMware Solution cloud region establishes a connection to on-premises via ExpressRoute Global Reach connection **A**. Traffic that travels via Global Reach doesn't transit the hub firewall.
 
 For your scenario, configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
 
 ### On-premises connectivity and traffic flow
 
-The following diagram shows the on-premises site connected the hub via an ExpressRoute connection (connection **E**). On-premises systems can communicate to Azure VMware Solution via the Global Reach connection (connection **A**).
+The following diagram shows the on-premises site connected the hub via ExpressRoute connection **E**. On-premises systems can communicate to Azure VMware Solution via the Global Reach connection **A**.
 
 For your scenario, configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
 

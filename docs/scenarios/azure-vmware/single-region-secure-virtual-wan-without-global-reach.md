@@ -84,7 +84,7 @@ The following table describes the traffic flow in the preceding diagram.
 | 3 | On-premises | &#8594;| Azure VMware Solution cloud | Yes |
 | 4 | On-premises | &#8594;| Virtual network | Yes |
 
-The on-premises site has an ExpressRoute connection to the hub (connection **E**).
+The on-premises site connects to the hub via ExpressRoute connection **E**.
 
 When you enable ExpressRoute to ExpressRoute transitivity on the secure hub and you enable routing intent, the secure hub sends the default RFC 1918 addresses to on-premises over connection **E**. In addition to the default RFC 1918 addresses, on-premises learns more specific routes from Azure virtual networks and branch networks that connect to the hub. On-premises doesn't learn specific routes from Azure VMware Solution networks. To route traffic back to Azure VMware Solution networks, Azure VMware Solution uses the default RFC 1918 addresses that it learns from connection **E**. This traffic transits through the hub firewall. The hub firewall uses the specific routes for Azure VMware Solution networks to route traffic toward the destinations over connection **D**. Traffic that goes from on-premises to virtual networks transits the hub firewall.
 
