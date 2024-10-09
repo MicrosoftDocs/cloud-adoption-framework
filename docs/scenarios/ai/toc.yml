@@ -20,17 +20,17 @@ items:
           - name: Storage
             href: infrastructure/storage.md
           - name: Networking 
-            href: infrastructure/networking.md
+            href: infrastructure/network-topology-connectivity.md
           - name: Resource organization
             href: infrastructure/resource-organization.md
-          - name: Security
-            href: infrastructure/security.md
+          - name: Secure
+            href: infrastructure/secure.md
           - name: Management
             href: infrastructure/management.md
           - name: Governance
             href: infrastructure/governance.md
           - name: Platform automation and DevOps
-            href: infrastructure/platform-automation-and-devops.md
+            href: infrastructure/platform-automation-devops.md
           - name: Implementation options
             href: infrastructure/implementation-options.md
   - name: Secure
