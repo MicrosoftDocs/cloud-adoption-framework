@@ -15,8 +15,8 @@ items:
         items:
           - name: Networking
             href: platform/networking.md
-          - name: Secure
-            href: platform/secure.md
+          - name: Security
+            href: platform/security.md
           - name: Management
             href: platform/management.md
           - name: Governance
@@ -32,8 +32,8 @@ items:
             href: infrastructure/storage.md
           - name: Networking
             href: infrastructure/networking.md
-          - name: Secure
-            href: infrastructure/secure.md
+          - name: Security
+            href: infrastructure/security.md
           - name: Management
             href: infrastructure/management.md
           - name: Governance
