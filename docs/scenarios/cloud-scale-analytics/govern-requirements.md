@@ -49,7 +49,12 @@ An example of these schemes is:
 
 ### Data lifecycle retention classification scheme
 
-[!INCLUDE [data-retention-classification-scheme](./includes/data-retention-classification-scheme.md)]
+| Retention | Description |
+|---|---|
+| None | Data can be deleted at any time. |
+| Temporary  | Keep data for a short period of time. For example, keep Twitter data for a week. |
+| Fixed period | Keep data for a set number of years, after which it can be deleted. For example, keep tax records for seven years to comply with government laws. |
+| Permanent | Never delete data. For example, legal correspondence. |
 
 Automating the data confidentiality and data lifecycle retention classification process using the classes defined in each scheme is needed to consistently label data across the distributed data landscape. The automation will enable it to be consistently and correctly governed. Then, define rules and policies for each class in the classification scheme to specify how to govern data according to its classification.
 
