@@ -27,7 +27,7 @@ Compile a comprehensive list of possible AI use cases. Don't limit ideas to curr
 
 ## Define an AI technology strategy
 
-For each use case, you need to identify an AI technology to support it. Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. Understand the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) There are services to improve individual productivity and AI platforms to automate business processes. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, carefully validate the selection by reviewing the skills needed, data needed, and cost factors.
+For each use case, you need to identify an AI technology to support it. Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. Each service model affects the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, review the skills and data needed to be successful. Also understand the cost factors to avoid surprises later.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
