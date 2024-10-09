@@ -86,7 +86,7 @@ We recommend evaluating Microsoft Purview Data Quality as a solution for assessi
 
 For more information, see [What is Data Quality](/purview/data-quality-overview).
 
-If your organization has decided to implement Azure Databricks to manipulate data then you should assess the data quality controls, testing, montiroing, and enformenet that this solution offers. Using expectations can capture data quality issues at ingestion before they affect related child data products.
+If your organization has decided to implement Azure Databricks to manipulate data then you should assess the data quality controls, testing, montiroing, and enformenet that this solution offers. Using [expectations](/azure/databricks/delta-live-tables/expectations) can capture data quality issues at ingestion before they affect related child data products. For more information, see [Establish data quality standards](/azure/databricks/lakehouse-architecture/data-governance/best-practices).
 
 You can also choose from partners, open-source, and custom options for a data quality solution.
 
