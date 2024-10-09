@@ -14,25 +14,25 @@ items:
       - name: AI on Azure infrastructure (IaaS)
         items:
           - name: Overview
-            href: overview.md
+            href: infrastructure/overview.md
           - name: Compute
-            href: compute.md
+            href: infrastructure/compute.md
           - name: Storage
-            href: storage.md
+            href: infrastructure/storage.md
           - name: Networking 
-            href: networking.md
+            href: infrastructure/networking.md
           - name: Resource organization
-            href: resource-organization.md
+            href: infrastructure/resource-organization.md
           - name: Security
-            href: security.md
+            href: infrastructure/security.md
           - name: Management
-            href: management.md
+            href: infrastructure/management.md
           - name: Governance
-            href: governance.md
+            href: infrastructure/governance.md
           - name: Platform automation and DevOps
-            href: Platform automation and DevOps
+            href: infrastructure/platform-automation-and-devops.md
           - name: Implementation options
-            href: implementation-options.md
+            href: infrastructure/implementation-options.md
   - name: Secure
     href: secure.md
   - name: Govern

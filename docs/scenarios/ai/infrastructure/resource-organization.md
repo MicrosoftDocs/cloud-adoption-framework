@@ -13,7 +13,7 @@ Effectively organizing Azure resources for AI infrastructure supports efficient 
 
 ## Separate subscriptions
 
-- *Create a separate subscription for each AI workload.* This improves security, compliance, and cost management. For more information on managing subscriptions, refer to the [Azure Landing Zone documentation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/).
+- *Create a separate subscription for each AI workload.* This improves security, compliance, and cost management. For more information on managing subscriptions, refer to the [Azure Landing Zone documentation](/azure/cloud-adoption-framework/ready/landing-zone/).
 
 ## Management groups
 
@@ -34,7 +34,7 @@ Effectively organizing Azure resources for AI infrastructure supports efficient 
 
 ## Tags
 
-- *Implement a consistent tagging strategy.* Tags help categorize resources by project, cost center, environment, and owner, aiding in management and billing. Use the [Azure Naming and Tagging](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) guidance for best practices. Examples of useful tags:
+- *Implement a consistent tagging strategy.* Tags help categorize resources by project, cost center, environment, and owner, aiding in management and billing. Use the [Azure Naming and Tagging](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) guidance for best practices. Examples of useful tags:
   - Tag all resources related to a specific AI project with `Project: AIResearch2024` and `Environment: Production`.
 
 ## Review existing policies for AI initiatives
