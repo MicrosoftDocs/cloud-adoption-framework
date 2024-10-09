@@ -12,26 +12,27 @@ items:
       - name: AI with Azure platforms (PaaS)
         href: adopt-paas.md
       - name: AI on Azure infrastructure (IaaS)
-      - name: Design areas
         items:
-          - name: Compute
-            href: infrastructure/compute.md
-          - name: Storage
-            href: infrastructure/storage.md
-          - name: Network topology and connectivity
-            href: infrastructure/network-topology-connectivity.md
-          - name: Resource organization
-            href: infrastructure/resource-organization.md
-          - name: Secure
-            href: infrastructure/secure.md
-          - name: Management
-            href: infrastructure/management.md
-          - name: Governance
-            href: infrastructure/governance.md
-          - name: Platform automation and DevOps
-            href: infrastructure/platform-automation-devops.md
-          - name: Implementation options
-            href: infrastructure/implementation-options.md
+        - name: Design areas
+          items:
+            - name: Compute
+              href: infrastructure/compute.md
+            - name: Storage
+              href: infrastructure/storage.md
+            - name: Network topology and connectivity
+              href: infrastructure/network-topology-connectivity.md
+            - name: Resource organization
+              href: infrastructure/resource-organization.md
+            - name: Secure
+              href: infrastructure/secure.md
+            - name: Management
+              href: infrastructure/management.md
+            - name: Governance
+              href: infrastructure/governance.md
+            - name: Platform automation and DevOps
+              href: infrastructure/platform-automation-devops.md
+        - name: Implementation options
+          href: infrastructure/implementation-options.md
   - name: Secure
     href: secure.md
   - name: Govern
