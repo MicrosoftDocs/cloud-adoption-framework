@@ -12,14 +12,13 @@ items:
       - name: AI with Azure platforms (PaaS)
         href: adopt-paas.md
       - name: AI on Azure infrastructure (IaaS)
+      - name: Design areas
         items:
-          - name: Overview
-            href: infrastructure/overview.md
           - name: Compute
             href: infrastructure/compute.md
           - name: Storage
             href: infrastructure/storage.md
-          - name: Networking 
+          - name: Network topology and connectivity
             href: infrastructure/network-topology-connectivity.md
           - name: Resource organization
             href: infrastructure/resource-organization.md

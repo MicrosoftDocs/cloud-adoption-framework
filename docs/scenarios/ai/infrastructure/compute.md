@@ -11,8 +11,6 @@ ms.topic: conceptual
 
 AI workloads require specialized virtual machines (VMs) to handle the intensive computational demands and large-scale data processing. Choosing the right VMs maximizes resource utilization and accelerates AI model development and deployment.
 
-*Table 1. Summary of compute recommendations by use case.*
-
 | AI phase             | Virtual Machine Image  | Generative AI (LLMs, SLMs) | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
 |----------------------|------------------------|----------------------------|------------------------------------|----------------------------------|
 | Training AI models   | [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | [Memory-optimized](https://azure.microsoft.com/services/virtual-machines/memory-optimized/) (CPU) |
