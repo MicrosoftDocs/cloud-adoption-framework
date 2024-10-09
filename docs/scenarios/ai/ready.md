@@ -16,7 +16,7 @@ This article provides recommendations for making key design and process decision
 
 ## Prepare AI deployment regions
 
-Whether you use a centralized or decentralized approach to AI model deployment, you still need to select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
+Select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
 
 - *Use multiple regions to host AI model endpoints.* For production workloads, host AI endpoints in at least two regions to provide redundancy and ensure high availability. Although generative AI models are stateless, hosting them in multiple regions enables faster failover and recovery during regional failures. For Azure OpenAI models (GPTs), you can use [global deployments](/azure/ai-services/openai/how-to/deployment-types#deployment-types), which is multi-region and can automatically and transparently route the request to a region with enough capacity. If you opt for a nonglobal deployment (regional), use [Azure API Management](/azure/api-management/genai-gateway-capabilities#backend-load-balancer-and-circuit-breaker) for load balancing API requests to AI endpoints.
 
@@ -41,8 +41,6 @@ In Azure, resource organization is how you structure management groups and subsc
 ## Prepare AI networking
 
 This guidance provides recommendations for setting up your network topology for AI workloads. Organizations with multiple intelligent applications should use a hub and spoke network topology. If you have a single intelligent application, hub and spoke topology is where you should head when you have more workloads.
-
-- *Consider a generative AI gateway.* Consider using Azure API Management (APIM) as a generative AI gateway within your virtual networks. A generative AI gateway sits between your front-end and the AI endpoints. Application Gateway, WAF policies, and APIM within the virtual network is an established [architecture](https://github.com/Azure/apim-landing-zone-accelerator/blob/main/scenarios/workload-genai/README.md#scenario-3-azure-api-management---generative-ai-resources-as-backend) in generative AI solutions. For more information, see [AI Hub architecture](https://github.com/Azure-Samples/ai-hub-gateway-solution-accelerator#ai-hub-gateway-landing-zone-accelerator) and [Deploy Azure API Management instance to multiple Azure regions](/azure/api-management/api-management-howto-deploy-multi-region).
 
 - *Connect to on-premises data.* For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection. Azure [ExpressRoute](/azure/expressroute/expressroute-introduction) is ideal for high data volumes, real-time processing, or workloads that require consistent performance. It has [FastPath](/azure/expressroute/about-fastpath) feature that improves data path performance. Use [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) for moderate data volumes, infrequent data transfer, or when public internet access is required. It’s simpler to set up and cost-effective for smaller datasets than ExpressRoute. For more information, see [Connect an on-premises network to Azure](/azure/architecture/reference-architectures/hybrid-networking/).
 
