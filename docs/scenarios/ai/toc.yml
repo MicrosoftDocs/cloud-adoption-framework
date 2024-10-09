@@ -9,10 +9,30 @@ items:
     href: ready.md
   - name: Adopt
     items:
-      - name: Build with AI platforms (PaaS)
+      - name: AI with Azure platforms (PaaS)
         href: adopt-paas.md
       - name: AI on Azure infrastructure (IaaS)
-        href: adopt-iaas.md
+        items:
+          - name: Overview
+            href: overview.md
+          - name: Compute
+            href: compute.md
+          - name: Storage
+            href: storage.md
+          - name: Networking 
+            href: networking.md
+          - name: Resource organization
+            href: resource-organization.md
+          - name: Security
+            href: security.md
+          - name: Management
+            href: management.md
+          - name: Governance
+            href: governance.md
+          - name: Platform automation and DevOps
+            href: Platform automation and DevOps
+          - name: Implementation options
+            href: implementation-options.md
   - name: Secure
     href: secure.md
   - name: Govern
