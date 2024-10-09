@@ -3,7 +3,7 @@ title: SAP and Power Platform architecture workflow
 description: Learn about the architecture workflow of SAP and Power Platform, along with security considerations and recommendations.
 author: mimergel
 ms.author: mimergel
-ms.date: 09/16/2024
+ms.date: 10/08/2024
 ms.topic: conceptual
 ms.custom: e2e-sap
 ---

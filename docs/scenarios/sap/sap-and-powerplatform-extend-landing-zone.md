@@ -19,8 +19,8 @@ This article is part of the "SAP and Power Platform" article series.
 When integrating SAP systems with Microsoft Power Platform, specific actions are required to enable the service, depending on the chosen use cases and connectors. Each connector has unique technical requirements that need to be addressed.
 In this guide, we outline the integration options and provide links to the relevant implementation guides to establish the connection and technical setup required for each scenario. Based on your organization's specific needs and use cases, you can select and implement the appropriate components to extend your SAP environment with the Power Platform.
 
-
 ## Architecture Diagram
+
 Depending on your scenario for Power Platform usage with SAP, there will be a need of middleware component deployment.
 
 ![Alt text for the image](./media/sap-powerplatform-architecture.svg)

@@ -3,7 +3,7 @@ title: SAP and Power Platform Fundamentals
 description: Learn how to extend SAP with the Microsoft Power Platform to create better end-to-end business solutions.
 author: mimergel
 ms.author: mimergel
-ms.date: 09/16/2024
+ms.date: 10/08/2024
 ms.topic: conceptual
 ms.custom: e2e-sap
 ---
@@ -20,15 +20,15 @@ This article is part of the "SAP and Power Platform" article series.
 
 Core changes to SAP require investments in care and maintenance to ensure you maintain forwards compatibility for future platform updates. The Microsoft Power Platform can help you extend SAP with extra functionality without changing the core SAP system.
 
-This article provides an introduction to enhancing your SAP systems using these Microsoft Power Platform main components:
+This article provides an introduction to enhancing your SAP systems using these Microsoft Power Platform components:
 
 - **Power Apps**
 - **Power Automate**
 - **Microsoft Copilot Studio**
-- **Power Pages** and
+- **Power Pages**
 - **Power BI**
 
-You can build end-to-end-business solutions using these individually or together and integrate them with SAP, Microsoft 365, Dynamics 365, Azure, or other apps. The following image illustrates the main components as an integrated, low-code development suite, offering immense potential when combined with SAP systems. It enables businesses to enhance their SAP landscapes by building custom applications, automating processes, integrating AI, and providing actionable insights, all while minimizing the need for extensive coding expertise.
+You can build end-to-end-business solutions using these individually or together and integrate them with SAP, Microsoft 365, Dynamics 365, Azure, or other apps. The following image illustrates the main components as an integrated, low-code development suite, offering immense potential when combined with SAP systems. It enables businesses to enhance their SAP landscapes by building custom applications, automating processes, integrate AI, and provide actionable insights, all while minimizing the need for extensive coding expertise.
 
 ![Refer to the SAP configuration guide](./media/power-platform-overview.svg)
 
@@ -36,18 +36,18 @@ These underlying features offer essential functionalities and capabilities for b
 
 - **Data connectors**: With out-of-the-box SAP connectors, the Power Platform can access and interact with SAP data without needing complex middleware. This allows for the smooth integration of SAP data into custom applications, automated workflows, or analytics dashboards.
 
-- **AI builder**: Introduces intelligent automation to extract information from documents, images, text or add predictive analytics into your SAP workflows. Users can also add generative AI capabilities into SAP processes, such as demand forecasting or intelligent inventory management, without needing in-depth AI expertise.
+- **AI builder**: Introduces intelligent automation to extract information from documents, images, text, or add predictive analytics into your SAP workflows. Users can also add generative AI capabilities into SAP processes, such as demand forecasting or intelligent inventory management, without needing in-depth AI expertise.
 
-- **Microsoft dataverse**: Acts as an optional additional data repository where SAP and other business data can be securely stored and managed. It allows SAP data to be buffered for off-line work or combined with non-SAP data, creating a unified data source for deeper insights and broader functionality.
+- **Microsoft Dataverse**: Acts as an optional additional data repository where SAP and other business data can be securely stored and managed. It allows SAP data to be buffered for off-line work or combined with non-SAP data, creating a unified data source for deeper insights and broader functionality.
 
 - **Power Fx**: The low-code language that powers app development across the platform, enabling to easily create custom logic into the workflows that interact with SAP data.
 
-- **Managed environments**: Facilitates governance, compliance, and scalability when deploying Power Platform solutions integrated with SAP systems. You are encouraged to adopt a structured approach by implementing development, test, and production environments, similar to best practices in the SAP landscape.
+- **Managed environments**: Facilitates governance, compliance, and scalability when deploying Power Platform solutions integrated with SAP systems. You're encouraged to adopt a structured approach by implementing development, test, and production environments, similar to best practices in the SAP landscape.
 
 
 ## Extend SAP application development with Power Apps or Power Pages
 
-Power Apps is a suite of apps, services, and connectors that allows you to create custom business apps without coding. Users can rapidly develop web and mobile applications that extend SAP functionality. With pre-built connectors for SAP, Power Apps allow businesses to build custom front-ends or lightweight applications that interact directly with their SAP data. This can streamline specific workflows, enable mobile access, and improve user experiences without modifying the core SAP system. 
+Power Apps is a suite of apps, services, and connectors that allows you to create custom business apps without coding. Users can rapidly develop web and mobile applications that extend SAP functionality. With prebuilt connectors for SAP, Power Apps allows businesses to build custom front-ends or lightweight applications that interact directly with their SAP data. This can streamline specific workflows, enable mobile access, and improve user experiences without modifying the core SAP system. 
 There are three types of apps you can create with Power Apps:
 
 - **Canvas Apps**: These apps start with a blank screen and the creator manually lays out each screen. This gives the creator complete control over the placement of each element on the canvas. Canvas apps are good for scenarios where the user is expecting a customized user experience.
