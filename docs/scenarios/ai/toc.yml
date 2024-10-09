@@ -32,7 +32,9 @@ items:
             - name: Platform automation and DevOps
               href: infrastructure/platform-automation-devops.md
         - name: Implementation options
-          href: infrastructure/implementation-options.md
+          items:
+            - name: CycleCloud landing zone accelerator
+              href: infrastructure/implementation-options.md
   - name: Secure
     href: secure.md
   - name: Govern
