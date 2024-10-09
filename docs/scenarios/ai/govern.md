@@ -9,11 +9,19 @@ ms.topic: conceptual
 
 # Govern AI – Recommendations for governing AI
 
-This article provides recommendations for developing an AI governance framework. It assumes that you're already familiar with the governance processes defined in [Govern overview](/azure/cloud-adoption-framework/govern/) and doesn't repeat the common cloud governance practices described there. Additionally, it assumes that you've established governance policies at the management group level for your AI workload types, like internet-facing (online) and internal (corporate) workloads. These polices are covered in [AI Ready](ready.md#prepare-ai-resource-organization).
+This article provides recommendations for developing an AI governance framework. It assumes that you're already familiar with the governance processes defined in [Govern overview](/azure/cloud-adoption-framework/govern/) and doesn't repeat the common cloud governance practices described there.  The goal is to create a unified governance framework to mitigate AI risks. You need to assess the risks that are specific to your business and stay vigilant about emerging risks so that you can update your AI governance policies accordingly.
 
-The following recommendations are intended as a starting point for your AI governance. The goal is to create a unified governance framework to mitigate AI risks. You need to assess the risks that are specific to your business and stay vigilant about emerging risks so that you can update your AI governance policies accordingly.
+## Assess AI organizational risks
 
+- *Use Responsible AI framework.*
 
+## Document and enforce AI governance policies
+
+- *Establish policies for which models to use.* Different AI models serve different use cases. Create a policy for approving AI models that factors in the cost, model capabilities and tasks, and source of AI models.
+
+- *Establish a policy to onboard new models.* Use sandbox environments to experiment with different models. When you move a model to production, implement a formal onboarding process that includes justification, validation, and approval. Review existing models in the production catalog to prevent duplication and maintain streamlined operations.
+
+- *Invest in a golden dataset.* Create a golden dataset that serves as a benchmark for testing AI applications. A golden dataset is a collection of preferred answers to common user queries. This dataset can significantly streamline the iterative development process, which ensures that models consistently produce high-quality, expected outputs.
 
 ## Next step
 

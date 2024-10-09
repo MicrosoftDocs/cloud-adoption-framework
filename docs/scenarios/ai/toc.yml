@@ -42,11 +42,11 @@ items:
         items:
           - name: CycleCloud landing zone accelerator
             href: infrastructure/implementation-options.md
-  - name: Secure
+  - name: Secure AI
     href: secure.md
-  - name: Govern
+  - name: Govern AI
     href: govern.md
-  - name: Manage
+  - name: Manage AI 
     href: manage.md
   - name: Additional resources
     items:
