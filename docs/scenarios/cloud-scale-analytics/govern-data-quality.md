@@ -26,8 +26,8 @@ Data quality metrics are key to assessing and increasing the quality of your dat
 
 |Metrics  |Metrics definitions  |
 |---------|---------|
-| Completeness = % total of non-nulls + non-blanks | Measures data availability, fields in the dataset that aren't empty, and default values that were changed. For example, if a record includes 01/01/1900 as a data of birth, it's highly likely that the field was never populated.|
-| Uniqueness = % of non-duplicate values | Measures distinct values in a given column compared to the number of rows in the table. For example, given four distinct color values (red, blue, yellow, and green) in a table with five rows, that field is 80% (or 4/5) unique. |
+| Completeness = % total of non-nulls + nonblanks | Measures data availability, fields in the dataset that aren't empty, and default values that were changed. For example, if a record includes 01/01/1900 as a data of birth, it's highly likely that the field was never populated.|
+| Uniqueness = % of nonduplicate values | Measures distinct values in a given column compared to the number of rows in the table. For example, given four distinct color values (red, blue, yellow, and green) in a table with five rows, that field is 80% (or 4/5) unique. |
 | Consistency = % of data having patterns | Measures compliance within a given column to its expected data type or format. For example, an email field containing formatted email addresses, or a name field with numeric values. |
 | Validity= % of reference matching | Measures successful data matching to its domain reference set. For example, given a *country/region* field (complying with taxonomy values) in a transactional records system, the value of "US of A" isn't valid. |
 | Accuracy= % of unaltered values | Measures successful reproduction of the intended values across multiple systems. For example, if an invoice itemizes a SKU and extended price that differs from the original order, the invoice line item is inaccurate. |
@@ -75,7 +75,20 @@ To implement data quality, you need to use both human and computational power as
 > [!TIP]
 > Define data quality rules at both a global and domain level. Doing so allows the business to define its standards for every created data product and allows data domains to create additional rules related to their domain.
 
-[!INCLUDE [data-quality-solutions](includes/data-quality-solutions.md)]
+## Data quality solutions
+
+We recommend evaluating Microsoft Purview Data Quality as a solution for assessing and managing data quality, crucial for reliable AI-driven insights and decision-making. It includes:
+
+- No-code/Low-code Rules: Evaluate data quality using out-of-the-box and AI-generated rules.
+- AI-powered Data Profiling: Recommends columns for profiling and allows human intervention for refinement.
+- Data Quality Scoring: Provides scores at the levels of data assets, data products, and governance domains.
+- Data Quality Alerts: Notifies data owners and stewards of quality issues.
+
+For more information, see [What is Data Quality](/purview/data-quality-overview).
+
+If your organization has decided to implement Azure Databricks to manipulate data then you should assess the data quality controls, testing, montiroing, and enformenet that this solution offers. Using expectations can capture data quality issues at ingestion before they affect related child data products.
+
+You can also choose from partners, open-source, and custom options for a data quality solution.
 
 ## Data quality summary
 
