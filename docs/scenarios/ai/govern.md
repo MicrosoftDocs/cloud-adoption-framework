@@ -128,4 +128,3 @@ The following table lists some common AI risks and provides a mitigation strateg
 | R008| Insider threats| Use Microsoft Entra ID to enforce strict access controls that are based on roles and group memberships to limit insider access to sensitive data.| Strict identity and access management and continuous monitoring must be used to mitigate insider threats. |
 | R009| Unexpected costs| Use Microsoft Cost Management to track CPU, GPU, memory, and storage usage to ensure efficient resource utilization and prevent cost spikes. |Monitoring and optimization of resource usage and automated detection of cost overruns must be used to manage unexpected costs.|
 | R010| Underutilization of AI resources| Monitor AI service metrics, like request rates and response times, to optimize usage.| Performance metrics and automated scalability must be used to optimize AI resource utilization. |
-
