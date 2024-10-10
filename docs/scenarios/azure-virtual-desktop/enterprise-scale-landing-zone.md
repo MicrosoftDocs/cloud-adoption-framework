@@ -42,7 +42,7 @@ The following diagram shows a conceptual reference architecture that demonstrate
 
 [![Diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/avd-accelerator-baseline-architecture-diagram.png)](./media/avd-accelerator-baseline-architecture-diagram.png#lightbox)
 
-_For more information on the design areas labeled A-J in the visual, see the Azure Landing Zone [environment design areas](../../ready/landing-zone/design-areas.md#environment-design-areas). To learn more about the design areas for Azure Virtual Desktop, see [network topology and connectivity for Azure Virtual Desktop](./eslz-network-topology-and-connectivity.md)_
+To learn more about the design areas for Azure Virtual Desktop, see [network topology and connectivity for Azure Virtual Desktop](./eslz-network-topology-and-connectivity.md)_
 
 _Download a [Visio file](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.vsdx) of this architecture._
 
