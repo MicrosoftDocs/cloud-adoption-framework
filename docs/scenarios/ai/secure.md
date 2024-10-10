@@ -27,9 +27,9 @@ This guidance provides recommendations for identifying AI security risks. To pro
 
 ## Implement AI security controls
 
-This guidance provides recommendations for implementing security controls for AI. You must apply consistent security controls to all AI resources across the organization.
+This guidance provides recommendations for implementing security controls for AI. Apply consistent security controls to all AI resources across the organization.
 
-### Secure AI resources
+- *Establish a centralized AI asset inventory.* Maintaining a detailed and up-to-date inventory of your AI workload resources ensures you can apply security policies uniformly to all AI workloads. Compile a company-wide inventory of all AI systems, models, datasets, and infrastructure across Azure. Utilize tools like Azure Resource Graph Explorer and Microsoft Defender for Cloud to automate the discovery process. Microsoft Defender for Cloud can [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and in [predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk).
 
 This guidance provides recommendations for securing Azure resources that are deployed for AI workloads.
 
