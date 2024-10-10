@@ -19,14 +19,14 @@ The following diagram shows the basic components of a generative AI application 
 
 :::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
 
-Most generative AI applications implement RAG. At a high-level, RAG applications need the following components: 
+Most generative AI applications implement RAG. At a high-level, RAG applications need the following components:
 
 1. An application receives the user query. 
-1. An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow. 
-1. A search and retrieval mechanism exposes data from several data sources in a way that ensures that the data can be consumed by AI apps. 
-1. A generative AI model endpoint creates a response based on the user query and grounding data. 
+1. An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow.
+1. A search and retrieval mechanism exposes data from several data sources in a way that ensures that the data can be consumed by AI apps.
+1. A generative AI model endpoint creates a response based on the user query and grounding data.
 
-For more information, see [Designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). 
+For more information, see [Designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
 
 Here are the high-level choices you need to make when you create a generative AI application in Azure:
 
