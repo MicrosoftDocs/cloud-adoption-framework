@@ -3,7 +3,7 @@ title: Azure Data Lake Storage
 description: How to use Azure Data Lake Storage for cloud-scale analytics.
 author: mboswell
 ms.author: mboswell
-ms.date: 04/12/2022
+ms.date: 10/10/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -13,10 +13,10 @@ ms.custom: e2e-data-management, think-tank
 
 The Azure Data Lake is a massively scalable and secure data storage for high-performance analytics workloads. You can create storage accounts within a single resource group for cloud-scale analytics. We recommend provisioning three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts within a single resource group similar to the `storage-rg` resource group described in the article [cloud-scale analytics architecture data landing zone overview](../architectures/data-landing-zone.md).
 
-Each storage account within your data landing zone stores data in one of three stages:
+Each storage account within your data landing zone stores data in one of three stages, which align to a [medallion architecture](/azure/databricks/lakehouse/medallion):
 
-- Raw data
-- Enriched and curated data
+- Raw data (bronze)
+- Enriched (silver) and curated data (gold)
 - Development data lakes
 
 A [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account which has been ingested an automated data agnostic ingestion service. You can create a [source aligned data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md) if you don't implement data agnostics engine or facilitate complex connections for ingesting data from operational sources. This data application follows the same flow as a data agnostics engine when ingesting data from external data sources.
@@ -82,4 +82,5 @@ To do this, create a data landing zone in one region, then replicate global data
 
 ## Next steps
 
+> [!div class="nextstepaction"]
 [Data lake zones and containers](../../cloud-scale-analytics/best-practices/data-lake-zones.md)
