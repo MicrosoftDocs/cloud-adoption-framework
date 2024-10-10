@@ -106,7 +106,7 @@ The following table describes the traffic flow in the preceding diagram.
 | 5 | Virtual network | &#8594;| Azure VMware Solution cloud | Yes |
 | 6 | Virtual network | &#8594;| On-premises | Yes |
 
-In this scenario, the virtual network peers directly to the hub. The diagram shows how Azure-native resources in the virtual network learn their routes. A secure hub that has routing intent enabled sends the default RFC 1918 addresses to peered virtual networks. Azure-native resources in the virtual network don't learn specific routes from outside their virtual network. When you enable routing intent, all resources in the virtual network possess the default RFC 1918 address and use the hub firewall as the next hop. All traffic that ingresses and egresses the virtual networks transit the hub firewall.
+In this scenario, the virtual network peers directly to the hub. The diagram shows how Azure-native resources in the virtual network learn their routes. A secure hub that has routing intent enabled sends the default RFC 1918 addresses to peered virtual networks. Azure-native resources in the virtual network don't learn specific routes from outside their virtual network. When you enable routing intent, all resources in the virtual network possess the default RFC 1918 address and use the hub firewall as the next hop. All traffic that enters and exits the virtual networks transit the hub firewall.
 
 ### Internet connectivity
 
@@ -135,17 +135,17 @@ The following table describes the traffic flow in the preceding diagram.
 | 7 | Virtual network | &#8594;| The internet| Yes
 | 8 | Azure VMware Solution cloud | &#8594;| The internet | Yes
 
-After you enable default-route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. We recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment. A BGP filter prevents resources from inadvertently learning the default route, adds an extra layer of precaution, and ensures that your configuration doesn't affect on-premises internet connectivity.
+After you enable default-route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. We recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment. A BGP filter prevents resources from inadvertently learning the default route, adds an extra layer of precaution, and helps to ensure that your configuration doesn't affect on-premises internet connectivity.
 
 When you enable routing intent for internet access, the default route that generates from the secure Virtual WAN hub automatically advertises to the hub-peered virtual network connections. Note that in the virtual machines' NICs in the virtual network, the 0.0.0.0/0 next hop is the hub firewall. To find the next hop, select *Effective routes* in the NIC.
 
 ## Use VMware HCX Mobility Optimized Networking (MON) without Global Reach
 
-HCX Mobility Optimized Networking (MON) is an optional feature that you can enable when you use HCX Network Extension. MON provides optimal traffic routing in certain scenarios to prevent networks from overlapping or looping between the on-premises-based and cloud-based resources on extended networks.
+You can enable HCX Mobility Optimized Networking (MON) when you use HCX Network Extension. MON provides optimal traffic routing in certain scenarios to prevent networks from overlapping or looping between the on-premises-based and cloud-based resources on extended networks.
 
 ### Egress traffic from Azure VMware Solution
  
-When you enable MON for a specific extended network and a virtual machine, you change the traffic flow. After you implement MON, egress traffic from the virtual machine doesn't loop back to on-premises. Instead, it bypasses the Network Extension IPSec tunnel. Traffic for the virtual machine egresses out of the Azure VMware Solution NSX-T Tier-1 gateway, goes to the NSX-T Tier-0 gateway, and then goes to Virtual WAN.
+When you enable MON for a specific extended network and a virtual machine, the traffic flow changes. After you implement MON, egress traffic from the virtual machine doesn't loop back to on-premises. Instead, it bypasses the Network Extension IPSec tunnel. Traffic for the virtual machine exits out of the Azure VMware Solution NSX-T Tier-1 gateway, goes to the NSX-T Tier-0 gateway, and then goes to Virtual WAN.
 
 ### Ingress traffic to Azure VMware Solution
 
@@ -161,7 +161,7 @@ But on-premises networks don't learn specific routes from Azure VMware Solution,
 
 To correct traffic asymmetry, you need to adjust the MON policy routes. MON policy routes determine which traffic goes back to the on-premises gateway via an L2 extension. They also decide which traffic goes through the Azure VMware Solution NSX Tier-0 gateway.
 
-If a destination IP matches and you set it to *allow* in the MON policy configuration, then two actions occur. First, the packet is identified. Second, the system sends the packet to the on-premises gateway through the Network Extension appliance.
+If a destination IP matches and you set it to *allow* in the MON policy configuration, then two actions occur. First, the system identifies the packet. Second, the system sends the packet to the on-premises gateway through the Network Extension appliance.
 
 If a destination IP doesn't match or you set it to *deny* in the MON policy, the system sends the packet to the Azure VMware Solution Tier-0 gateway for routing.
 
@@ -170,7 +170,7 @@ The following table describes HCX policy routes.
 | Network |Redirect to peer | Note |  
 | - | -------------- | -------- |
 | Azure virtual network address space | Deny | Explicitly include the address ranges for all your virtual networks. Traffic that's intended for Azure directs outbound via Azure VMware Solution and doesn't return to the on-premises network.|
-| Default RFC 1918 address spaces | Allow | Add in the default RFC 1918 addresses. This configuration ensures that any traffic that doesn't match the preceding criteria reroutes back to the on-premises network. If your on-premises setup uses addresses that aren't part of RFC 1918, you must explicitly include those ranges.|
+| Default RFC 1918 address spaces | Allow | Add the default RFC 1918 addresses. This configuration ensures that any traffic that doesn't match the preceding criteria reroutes back to the on-premises network. If your on-premises setup uses addresses that aren't part of RFC 1918, you must explicitly include those ranges.|
 | 0.0.0.0/0 address space | Deny | Addresses that RFC 1918 doesn't cover, such as internet-routable IPs, or traffic that doesn't match the specified entries, exit directly through the Azure VMware Solution and don't redirect back to the on-premises network.|
   
 ## Next steps

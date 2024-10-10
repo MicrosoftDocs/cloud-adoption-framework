@@ -90,7 +90,7 @@ The following table describes the traffic flow in the preceding diagram.
 
 ### Azure virtual network connectivity and traffic flow
 
-A secure hub that has routing intent enabled sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16) to peered virtual networks, along with any other prefixes that are added as private-traffic prefixes. For more information, see [Routing intent private-address prefixes](/azure/virtual-wan/how-to-routing-policies#nva). This scenario has routing intent enabled, so all resources in the virtual network possess the default RFC 1918 addresses and use the hub firewall as the next hop. All traffic that ingresses and egresses the virtual network transits the hub firewall.
+A secure hub that has routing intent enabled sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16) to peered virtual networks, along with any other prefixes that are added as private-traffic prefixes. For more information, see [Routing intent private-address prefixes](/azure/virtual-wan/how-to-routing-policies#nva). This scenario has routing intent enabled, so all resources in the virtual network possess the default RFC 1918 addresses and use the hub firewall as the next hop. All traffic that enters and exits the virtual network transits the hub firewall.
 
 The following diagram shows how the virtual network peers directly to the hub.
 
@@ -119,7 +119,7 @@ When you use routing intent, you can generate a default route from the hub firew
 
 When you enable routing intent for internet traffic, by default, the secure Virtual WAN hub doesn't advertise the default route across ExpressRoute circuits. To help ensure that the default route propagates to Azure VMware Solution from Virtual WAN, you must enable default-route propagation on your Azure VMware Solution ExpressRoute circuits. For more information, see [Advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints).
 
-After you enable default-route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route 0.0.0.0/0 to Azure VMware Solution, but Global Reach (connection **A**) also advertises the default route to on-premises. As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment so that it doesn't learn the default route. This step ensures that your configuration doesn't affect on-premises internet connectivity.
+After you enable default-route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route 0.0.0.0/0 to Azure VMware Solution, but Global Reach (connection **A**) also advertises the default route to on-premises. As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment so that it doesn't learn the default route. This step helps ensure that your configuration doesn't affect on-premises internet connectivity.
 
 :::image type="content" source="./media/single-region-virtual-wan-5.png" alt-text="Diagram of a single-region Azure VMware Solution that has an internet connection." border="false":::
 

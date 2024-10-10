@@ -95,10 +95,10 @@ The following table describes the traffic flow in the preceding diagram.
 
 | Traffic flow number | Source |   Direction | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
 | - | -------------- | -------- | ---------- | ---------- |
-| 2 | On-premises | &#8594;| Azure VMware Solution cloud region 1 | No, traffic bypasses firewall and transits Global Reach (A)|
-| 7 | On-premises | &#8594;| Azure VMware Solution cloud region 2 | No, traffic bypasses firewall and transits Global Reach (B)|
-| 8 | On-premises | &#8594;| Virtual network 1 | Yes, traffic is inspected at hub 1 firewall|
-| 9 | On-premises | &#8594;| Virtual network 2 | Yes, traffic is inspected at hub 2 firewall|
+| 2 | On-premises | &#8594;| Azure VMware Solution cloud region 1 | No, traffic bypasses the firewall and transits Global Reach connection A|
+| 7 | On-premises | &#8594;| Azure VMware Solution cloud region 2 | No, traffic bypasses the firewall and transits Global Reach connection B|
+| 8 | On-premises | &#8594;| Virtual network 1 | Yes, via the hub 1 firewall|
+| 9 | On-premises | &#8594;| Virtual network 2 | Yes, via the hub 2 firewall|
 
 The on-premises site connects to both region 1 and region 2 hubs via ExpressRoute connection **E**.
 
@@ -122,13 +122,13 @@ The following table describes the traffic flow in the preceding diagram.
 | 6 | Virtual network 2 | &#8594;| Azure VMware Solution cloud region 2| Yes, via the hub 2 firewall|
 | 8 | Virtual network 1 | &#8594;| On-premises | Yes, via the hub 1 firewall|
 | 9 | Virtual network 2 | &#8594;| On-premises | Yes, via the hub 2 firewall|
-| 10 | Virtual network 1 | &#8594;| Virtual network 2 | Yes, via the hub 1 firewall. Traffic then goes over the interhub connection and then is inspected via the hub 2 firewall. |
+| 10 | Virtual network 1 | &#8594;| Virtual network 2 | Yes, via the hub 1 firewall. Traffic then goes over the interhub connection and is inspected via the hub 2 firewall. |
 
 Both virtual networks directly peer to their local regional hub.
 
 A secure hub that has routing intent sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered virtual networks, along with any other prefixes that are added as private-traffic prefixes. For more information, see [Routing intent private-address prefixes](/azure/virtual-wan/how-to-routing-policies#nva).
 
-This scenario has routing intent enabled, so all resources in virtual network 1 and virtual network 2 possess the default RFC 1918 addresses and use their local regional hub firewall as the next hop. All traffic that ingresses and egresses the virtual networks transit the hub firewalls.
+This scenario has routing intent enabled, so all resources in virtual network 1 and virtual network 2 possess the default RFC 1918 addresses and use their local regional hub firewall as the next hop. All traffic that enters and exits the virtual networks transit the hub firewalls.
 
 ## Internet connectivity
 
@@ -172,7 +172,7 @@ For example, cross-regional internet traffic that goes from Azure VMware private
 
 When you enable routing intent for internet traffic, by default, the secure Virtual WAN hub doesn't advertise the default route across ExpressRoute circuits. To help ensure that the default route propagates to Azure VMware Solution from Virtual WAN, you must enable default-route propagation on your Azure VMware Solution ExpressRoute circuits. For more information, see [Advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints).
 
-Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route "∞ 0.0.0.0/0" to the Azure VMware Solution private clouds, but the default route also advertises to on-premises via Global Reach connection **A** and Global Reach connection **B**. As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment to exclude learning the default route. This step ensures that your configuration doesn't affect on-premises internet connectivity.
+Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route "∞ 0.0.0.0/0" to the Azure VMware Solution private clouds, but the default route also advertises to on-premises via Global Reach connection **A** and Global Reach connection **B**. As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment to exclude learning the default route. This step helps ensure that your configuration doesn't affect on-premises internet connectivity.
 
 Each virtual network egresses to the internet via its local regional hub firewall. When you enable routing intent for internet access, the default route that the secure Virtual WAN hub generates automatically advertises to the hub-peered virtual network connections. But this default route doesn't advertise across regional hubs over the interhub link. So virtual networks use their local regional hub for internet access and have no backup internet connectivity to the cross-regional hub.
 

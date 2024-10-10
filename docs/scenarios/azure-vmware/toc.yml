@@ -38,10 +38,10 @@ items:
             items:
               - name: Hub and spoke 
                 href: network-hub-spoke.md
-              - name: Dual region network topologies
+              - name: Dual-region network topologies
                 href: eslz-dual-region-network-topology.md
-              - name: Cross tenant network topologies
-                href: cross-tenant-interconnect-vwan-appliance.md
+              - name: Cross-tenant network topologies
+                href: cross-tenant-interconnect-virtual-wan-appliance.md
               - name: Example architectures for Azure VMware Solution
                 href: example-architectures.md
               - name: Use Virtual WAN topologies for Azure VMware Solution
