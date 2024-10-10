@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Manage AI – Recommendations for managing AI
 
-This article provides recommendations for managing AI from development, deployment, and operations. AI management requires standardization in development and deployment and regularly measuring AI output to ensure data and models don't drift over time.
+This article provides recommendations for managing AI from development, deployment, and operations. Effective AI management requires a structured approach from development through deployment and ongoing operations. Businesses need standardized practices and regular monitoring to prevent issues such as data and model drift, ensuring AI remains accurate and reliable over time.
 
 ## Manage AI deployment
 
-A primary consideration for AI endpoint management is deciding who can deploy AI resources and who’s responsible for governing the endpoints. The [AI CoE](./center-of-excellence.md) should lead the effort to determine the best approach. There are two principal options:
+AI deployment management is about defining who can deploy AI resources and who governs these endpoints. A structured approach, led by an AI center of excellence, helps businesses decide whether workload teams or a central team should manage resources, balancing development speed with governance requirements. The [AI CoE](./center-of-excellence.md) should lead the effort to determine the best approach.
 
 - *Use workload-team management of AI resources for faster development.* When workload teams manage AI resources, they have the autonomy to deploy and manage AI resources within the confines of your governance policies. Use Azure Policy to enforce governance consistently across all workload environments. Create and communicate AI policies that the workload teams must follow to address any governance gaps. For example, create generative AI policies for enforcing content filter settings and prevent disallowed models. Make these policies clearly known to workload teams and audit regularly.
 
@@ -27,7 +27,7 @@ A primary consideration for AI endpoint management is deciding who can deploy AI
 
 ## Manage AI endpoint sharing
 
-This guidance provides recommendations on when to share and not share an AI endpoint across multiple workloads.
+Sharing AI endpoints across workloads can streamline management, but it requires careful consideration of governance and model requirements. Businesses should only share endpoints within a single workload with consistent needs, as shared usage across differing needs can complicate governance and increase costs.
 
 - *Don’t share AI endpoints when governance and model needs vary.* Workloads that require different content filter settings (governance on input and output) shouldn't share an endpoint. Also don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet workloads requirements.
 
@@ -35,7 +35,7 @@ This guidance provides recommendations on when to share and not share an AI endp
 
 ## Manage AI operations
 
-This guidance provides recommendations for establishing an operational framework for AI workloads and how to establish visibility and consistency across the AI lifecycle.
+Managing AI operations ensures visibility and consistency throughout the AI lifecycle. By adopting operational frameworks like MLOps, creating sandbox environments, and establishing CI/CD pipelines, you can oversee development, testing, and deployment.
 
 - *Adopt an AI operational framework.* Implement [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2) (Machine learning operations) frameworks for traditional machine learning workflows and [GenAIOps](/azure/machine-learning/prompt-flow/how-to-end-to-end-azure-devops-with-prompt-flow) for generative AI workloads. These operational frameworks organize the end-to-end cycle for AI development.
 
@@ -47,7 +47,7 @@ This guidance provides recommendations for establishing an operational framework
 
 ## Manage AI models
 
-This guidance provides recommendations for measuring AI model performance over time and realign it with Responsible AI principles.
+AI model management involves setting governance structures, continuous monitoring, and retraining to maintain performance over time. This process helps businesses align models with ethical standards, track model performance, and ensure that AI systems remain effective and aligned with business objectives.
 
 - *Establish a governance structure for AI oversight.* The AI CoE should ensure adherence to ethical and operational standards. Assign roles such as AI audit leads, data privacy officers, and fairness officers who are responsible for continuous measurement, compliance, and reporting. Use the [Responsible AI dashboard](/azure/machine-learning/concept-responsible-ai-dashboard) to generate reports around model outputs. This committee should make decisions on whether systems need to be adjusted based on these reports.
 
@@ -65,7 +65,7 @@ This guidance provides recommendations for measuring AI model performance over t
 
 ## Manage AI costs
 
-To manage AI costs, you need to understand the expenses related to AI resources, including compute, storage, and token processing. The cost management fundamentals apply here.
+Managing AI costs requires a clear understanding of expenses related to resources like compute, storage, and token processing. You should implement cost management best practices, monitor usage, and set up automated alerts to avoid unexpected expenses and optimize resource efficiency.
 
 - *Follow cost management best practices for each service.* Each Azure service has specific features and best practices that maximize cost optimization. Familiarize yourself with following guidance for planning and managing cost in [Azure AI Studio](/azure/ai-studio/how-to/costs-plan-manage), [Azure OpenAI Service](/azure/ai-services/openai/how-to/manage-costs), [Azure Machine Learning](/azure/machine-learning/concept-plan-manage-cost), [Azure Virtual Machines](/azure/virtual-machines/cost-optimization-plan-to-manage-costs).
 
@@ -77,7 +77,7 @@ For generative AI applications using Azure OpenAI, see these [cost optimization 
 
 ## Manage AI data
 
-This guidance outlines best practices for ensuring data pipeline integrity, consistent ingestion, model versioning, drift detection, and high-quality processing.
+Effective AI data management focuses on maintaining data accuracy, integrity, and sensitivity throughout the AI lifecycle. By curating high-quality datasets and securing data pipelines, businesses can ensure that data remains reliable and compliant with changing regulatory requirements.
 
 - *Maintain data accuracy and curate golden datasets.* Develop an authoritative set of data used for regular testing and validation across both AI types. Continuously curate this dataset to ensure it reflects up-to-date, accurate information.
 
@@ -87,7 +87,7 @@ This guidance outlines best practices for ensuring data pipeline integrity, cons
 
 ## Manage business continuity and disaster recovery
 
-This guidance outlines business continuity and recovery processes for AI workloads.
+Business continuity and disaster recovery for AI involve creating multi-region deployments and regularly testing recovery plans. These strategies help ensure AI systems remain operational during disruptions and minimize the risk of prolonged outages or data loss.
 
 - *Use multi-region deployments for AI.* Implement multi-region deployments to ensure high availability and resiliency for AI workloads. These strategies minimize downtime and ensure critical AI applications remain operational during regional outages or infrastructure failures. Make sure to implement the necessary redundancy for trained and fine-tuned models to avoid the need for retraining during an outage.
 
