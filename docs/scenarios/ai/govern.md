@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Govern AI – Recommendations for governing AI
 
-This guide offers recommendations for developing a strong AI governance framework at the business level. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and aligns with the governance practices defined in [CAF Govern](azure/cloud-adoption-framework/govern/). The goal is to create a unified governance approach that effectively manages AI risks by integrating AI risk management into broader enterprise risk management strategies. When you address AI risks alongside other risks, such as cybersecurity and privacy, it supports a more cohesive and efficient organizational outcome.
+This guide offers recommendations for developing a strong AI governance framework at the business level. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). It also aligns with the governance practices defined in [CAF Govern](azure/cloud-adoption-framework/govern/). The goal is to create a unified governance approach that effectively manages AI risks by integrating AI risk management into broader enterprise risk management strategies. When you address AI risks alongside other risks, such as cybersecurity and privacy, it supports a more cohesive and efficient organizational outcome.
 
 ## Assess AI organizational risks
 
