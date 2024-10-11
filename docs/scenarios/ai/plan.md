@@ -13,7 +13,7 @@ An AI adoption plan outlines the necessary steps for an organization to incorpor
 
 ## Evaluate AI maturity
 
-Evaluating AI maturity helps an organization understand its current capabilities and readiness to implement AI. This step is important because it allows organizations to choose AI projects that align with their skill level and available data, increasing the chances of achieving a positive return on investment while reducing the risk of overreaching.
+Organizations can evaluate AI maturity to understand their current capabilities and readiness to implement AI. This step matters because it allows organizations to choose AI projects that match their skill level and available data, increasing the chances of achieving a positive return on investment while reducing the risk of overreaching.
 
 | AI maturity level | Feasible AI projects | Skills required | Data readiness |
 |-------------------|----------------------|-----------------|----------------|
@@ -26,7 +26,7 @@ For more information, see [Technical Assessment for Generative AI in Azure](http
 
 ## Acquire AI skills
 
-Acquiring the right AI skills involves assessing the existing talent and deciding between internal development or hiring external experts. This process matters because building a capable team supports sustained AI adoption, enabling organizations to respond quickly to new challenges and maintain competitive relevance through continuous learning and skill development.
+Teams need to acquire the right AI skills by assessing the existing talent and deciding whether to develop skills internally or hire external experts. This process is important because a capable team supports sustained AI adoption, enabling organizations to respond quickly to new challenges and maintain competitive relevance through continuous learning.
 
 - *Learn AI skills.* The [Microsoft Learn](/) platform provides free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certification goals, such as earning certifications related to Azure AI. These certifications include [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
@@ -41,7 +41,7 @@ Acquiring the right AI skills involves assessing the existing talent and decidin
 
 ## Access AI resources
 
-Accessing AI resources means identifying and using tools, platforms, and software necessary for AI deployment. This step is important because it provides a quick way to understand what is needed to begin using AI solutions, helping organizations avoid delays due to resource constraints.
+Organizations must access AI resources by identifying and using tools, platforms, and software necessary for AI deployment. This step is important because it provides a quick way to understand what is needed to begin using AI solutions, helping organizations avoid delays due to resource constraints.
 
 - *Access Microsoft copilots.* Most Microsoft SaaS Copilots require a license or an add-on subscription.
 
@@ -72,7 +72,7 @@ An AI proof of concept (PoC) demonstrates the potential of AI projects on a smal
 
 ## Plan for responsible AI
 
-Responsible AI planning involves implementing practices that promote ethical, secure, and reliable AI use. This approach is crucial as it ensures that AI applications align with organizational values and regulatory requirements, protecting users, minimizing risks, and building trust in AI systems.
+Organizations should plan for responsible AI by implementing practices that promote ethical, secure, and reliable AI use. This approach is crucial because it ensures that AI applications align with organizational values and regulatory requirements, protecting users, minimizing risks, and building trust in AI systems.
 
 - *Use responsible-AI planning tools.* Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
@@ -84,7 +84,7 @@ Responsible AI planning involves implementing practices that promote ethical, se
 
 ## Estimate delivery timelines
 
-Estimating delivery timelines involves planning realistic schedules and milestones for AI project implementation. Clear timelines are important because they help organizations allocate resources effectively, manage expectations, and ensure that AI initiatives progress efficiently from proof of concept to full deployment.
+Teams need to estimate delivery timelines by planning realistic schedules and milestones for AI project implementation. Clear timelines help organizations allocate resources effectively, manage expectations, and ensure that AI initiatives progress efficiently from proof of concept to full deployment.
 
 Based on your PoC, assign a delivery timeline for your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships. Microsoft AI SaaS solutions provide the shortest timelines for seeing a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. In most cases, it takes weeks or months before you have a production-ready AI application.
 
