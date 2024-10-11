@@ -63,18 +63,7 @@ For more advanced AI needs, Azure Virtual Machines provides access to GPUs and C
 
 ### Understand AI skills needed
 
-There are different approaches to adopting AI, and each approach requires different skills, as described in the following table. Adopting SaaS products requires very few skills. Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills. The following table shows the skills that are required to adopt AI for each AI approach:
-
-| AI type | Service model | General use | Solution | Data needed | Skills required|
-|---------|--------------|-----------------|----------|-------------| --------|
-| Generative AI | SaaS | Increase individual productivity | Copilot (Free or Pro) | No | None |
-| Generative AI | SaaS | Increase individual productivity, and chat with business data | Microsoft 365 Copilot and other SaaS Copilots | Yes | General IT and data management |
-| Generative AI | PaaS low-code | Build RAG applications | Copilot Studio | Yes | Using a low-code platform to connect data sources, mapping out prompts, and deploying copilots to various locations |
-| Generative AI | PaaS code-first | Build RAG applications | Azure AI Studio or Azure OpenAI | Yes | Selecting models, orchestrating dataflow, chunking data, enriching chunks, choosing indexing, understanding query types (full-text, vector, hybrid), understanding filters and facets, performing reranking, engineering prompt flow, deploying endpoints, and consuming endpoints in apps |
-| Generative AI | PaaS | Fine-tune generative AI models | Azure AI Studio | Yes | Preprocessing data, splitting data into training and validation data, validating models, configuring additional parameters, improving models, deploying models, and consuming endpoints in apps |
-| Machine learning | PaaS | Train and inference machine learning models by using your own data | Azure Machine Learning or Microsoft Fabric | Yes |Preprocessing data, training models by using code or automation, improving models, deploying machine learning models, and consuming endpoints in apps |
-| Analytical AI | PaaS | Consume analytical AI models in applications | Azure AI services | Yes | Picking the right AI model, securing endpoints, consuming endpoints in apps, and fine-tuning as needed |
-| Generative AI, machine learning, analytical AI | IaaS | Train and inference your own AI models. Bring your own models to Azure. | Azure Virtual Machines | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps |
+There are different approaches to adopting AI, and each approach requires different skills, as described in the following table. Adopting SaaS products requires very few skills. Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills.
 
 ### Understand AI data needs
 
@@ -96,20 +85,7 @@ For structured data in databases, you need to embed and connect the data to your
 
 Cost is an important consideration when you validate your choice of AI solutions. The goal of this section is to make it easy to find and estimate the costs of different services. Microsoft SaaS copilots and Copilot Studio require a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Virtual machines (CPUs or GPUs) are the primary cost for AI models that run on Azure Virtual Machines. For Azure services, use the individual product [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.
 
-
-| Service | Supported AI approach | Access | Main cost factors |
-|---------| -----|--------|-------------------|
-| [Copilot (free)](https://copilot.microsoft.com/) | SaaS generative AI | Free in browser or mobile apps | None |
-| [Copilot Pro](https://www.microsoft.com/store/b/copilotpro5) | SaaS generative AI | With a subscription, available in browser or mobile apps| [Subscription](https://www.microsoft.com/store/b/copilotpro) |
-| [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) | SaaS generative AI with RAG | Add to an existing Microsoft 365 subscription | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans) |
-| [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security) | SaaS generative AI with RAG | Azure account [Security Compute Units](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security#pricing) |
-| [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | PaaS generative AI with RAG via a low-code platform | Browser | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
-| [Azure AI services](/azure/ai-services/what-are-ai-services) | PaaS analytical AI | Azure | Use of model endpoints consumed, storage, data transfer, compute (if you train custom models) |
-| [Azure OpenAI](/azure/ai-services/openai/overview) | PaaS generative AI, with and without RAG, for OpenAI models | Azure | Number of tokens in and out and compute |
-| [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | PaaS generative AI with and without RAG, PaaS fine-tuning generative AI models | Azure account | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
-| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | PaaS training machine learning and generative AI models | Azure account | Compute, storage, and data transfer |
-| [Azure Virtual Machines](/azure/virtual-machines/overview) | IaaS, train any AI model | Azure account | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
-
+*Table 1. Summary
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|  ----|-------------| ---------| ---- |
