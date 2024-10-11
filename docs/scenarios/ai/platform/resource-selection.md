@@ -29,9 +29,9 @@ Generative AI workloads using RAG need a generative AI model endpoint, orchestra
 
 - *Pick a generative AI platform.* To deploy and consume a generative AI model endpoint, you need a generative AI platform. Use Azure OpenAI Service and Azure AI Studio to deploy generative AI models:
 
-    - [Azure OpenAI Service](/azure/ai-services/openai/overview) gives you access to [OpenAI models](/azure/ai-services/openai/concepts/models), Embedding models, DALL-E, Whisper, and text to speech models with the security and enterprise promise of Azure. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering.
+    - [Azure OpenAI Service](/azure/ai-services/openai/overview) gives you access to [OpenAI models](/azure/ai-services/openai/concepts/models) and other models. It offers private networking, regional availability, and responsible AI content filtering.
 
-    - [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is a platform for developing and deploying generative AI apps and Azure AI APIs responsibly. It includes a rich set of AI capabilities, simplified user interface and code-first experiences, offering a one-stop shop to build, test, deploy, and manage intelligent solutions. Azure AI Studio is designed to help developers and data scientists efficiently build and deploy generative AI applications with the power of Azure's broad AI offerings. The model catalog in Azure AI Studio features hundreds of models across model providers such as Azure OpenAI Service, Mistral, Meta, Cohere, NVIDIA, and Hugging Face, including models that Microsoft trained. and built-in development tools, such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing.
+    - [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is a platform for developing and deploying generative AI apps and Azure AI APIs responsibly. It includes a rich set of AI capabilities, simplified user interface and code-first experiences, offering a one-stop shop to build, test, deploy, and manage intelligent solutions. Azure AI Studio is designed to help developers and data scientists efficiently build and deploy generative AI applications with the power of Azure's broad AI offerings. The model catalog in Azure AI Studio features hundreds of models. It provides built-in development tools, such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing.
 
 - *Choose the right AI compute type.* For Azure AI Studio, you need compute instances for prompt flow, creating an index, and opening Visual Studio Code (Web or Desktop) in Azure AI Studio. GPUs are ideal for deep learning, complex matrix operations, and large datasets. Consider CPUs for data preprocessing tasks or for training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
@@ -52,7 +52,7 @@ Nongenerative AI workloads use machine learning algorithms to automate business 
 Within the Azure ecosystem,  AI workloads need the following components:
 
 1. An workload ingests incoming data.
-1. An optional data processing mechanism extracts or manipulates the incoming data. This mechanism ensures that the data fits the expectations of the model format or extracts relevant data to send to the AI model endpoint. 
+1. An optional data processing mechanism extracts or manipulates the incoming data. This mechanism ensures that the data fits the expectations of the model format or extracts relevant data to send to the AI model endpoint.
 1. An analytical AI model endpoint integrates with the workload and analyzes the incoming data.
 1. Training data is used to train machine learning models in Azure Machine Learning. Optionally, you can use fine-tuning data to customize prebuilt AI models in Azure AI services. Azure has various data sources to choose from for these tasks.
 
