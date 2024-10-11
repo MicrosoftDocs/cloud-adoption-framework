@@ -46,6 +46,12 @@ This guidance provides recommendations for setting up your network topology for 
 
 - *Prepare domain name resolution services.* Use private endpoints to protect AI workloads by assigning them private IP addresses for communication. [Integrate private endpoints with DNS](/azure/private-link/private-endpoint-dns-integration) for proper DNS resolution and successful private endpoint functionality. Deploy Azure DNS infrastructure as part of your [Azure landing zone](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources) and [configure conditional forwarders](/azure/private-link/private-endpoint-dns) from existing DNS services for the appropriate zones. For more information,see, [Private Link and DNS integration at scale for Azure landing zones](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale).
 
+- *Segment virtual networks.* Apply network segmentation to control traffic flow and reduce the risk of lateral movement in case of a breach. Microsegmentation can provide even finer control at the workload or application level within Azure Virtual Networks (VNets).
+
+- *Configure network access controls.* Utilize Network Security Groups (NSGs) and Azure Firewall to define and apply access policies that govern inbound and outbound traffic to and from AI workloads. These controls can be used to implement the principle of least privilege, ensuring that only essential communication is permitted.
+
+- *Use network monitoring services.* Use services such as Azure Monitor Network Insights and Azure Network Watcher to gain visibility into network performance and health. Additionally, use Azure Sentinel for advanced threat detection and response across your Azure network.
+
 ## Implementation options
 
 Choosing the right approach for the foundation of AI workloads involves not only setting up the core infrastructure but also understanding the separation of responsibilities and considerations necessary for an AI-focused Azure landing zone.
