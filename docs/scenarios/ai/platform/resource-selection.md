@@ -15,7 +15,7 @@ This article provides recommendations for building AI applications by using Azur
 
 Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)] (/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). RAG workloads need a generative AI model endpoint, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
 
-:::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
+:::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
 
 1. An application receives the user query.
 1. An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow.
@@ -44,7 +44,7 @@ Nongenerative AI applications use machine learning algorithms to automate busine
 
 The following diagram shows the basic components of a nongenerative AI application.
 
-:::image type="content" source="./images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/non-generative-ai-app.svg" border="false":::
+:::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/non-generative-ai-app.svg" border="false":::
 
 Within the Azure ecosystem, analytical AI applications need the following components: 
 
