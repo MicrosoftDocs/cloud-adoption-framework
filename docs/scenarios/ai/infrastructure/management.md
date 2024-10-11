@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Management for AI workloads on Azure infrastructure
 
-This guidance focuses on ensuring observability and managing business continuity for AI workloads on Azure infrastructure. To effectively manage AI infrastructure on Azure, use continuous monitoring and optimization practices, along with a robust backup and recovery strategy.
+This guidance focuses on observability and business continuity for AI workloads on Azure infrastructure. Effective management of AI workloads on Azure requires continuous monitoring, optimization practices, and a strong backup and recovery strategy to minimize downtime and ensure reliability in AI-driven operations. For general AI management guidance, see [Manage AI](../manage.md).
 
 ## Monitor AI infrastructure
 
-The following guidance provides recommendations for monitoring AI workloads running on Azure infrastructure.
+This guidance provides recommendations for monitoring AI workloads on Azure infrastructure to ensure optimal performance and system reliability. By monitoring all components, from virtual machines to network resources, organizations can proactively address potential issues and maintain high availability and performance in their AI operations.
 
 - *Ensure monitoring by default.* Deploy the required Azure Monitor agents for virtual machines and Azure Virtual Machine Scale Sets, including Azure Arc connected servers. Connect them to the central Log Analytics workspace in the management subscription. Consider using [Azure Monitor Baseline Alerts](https://azure.github.io/azure-monitor-baseline-alerts/welcome/) (AMBA).
 
@@ -35,7 +35,7 @@ The following guidance provides recommendations for monitoring AI workloads runn
 
 ## Manage business continuity and disaster recovery
 
-The following guidance provides recommendations for implementing and managing business continuity and disaster recovery for your AI applications.
+This guidance outlines best practices for implementing business continuity and disaster recovery for AI applications on Azure. With strategies like real-time replication, automated recovery, and regular backups, organizations can safeguard their AI infrastructure against disruptions and ensure rapid recovery in case of unexpected failures, supporting continuous availability.
 
 - *Use Azure Site Recovery.* Site Recovery uses real-time replication and recovery automation to replicate workloads across regions. Built-in platform capabilities for VM workloads meet low RPO and RTO requirements. You can use Site Recovery to run recovery drills without affecting production workloads. You can also use Azure Policy to enable replication and to audit VM protection.
 
