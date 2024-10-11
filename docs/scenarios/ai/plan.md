@@ -32,10 +32,13 @@ Teams need to acquire the right AI skills by assessing the existing talent and d
 
 - *Recruit AI professionals.* For expertise that you can't develop internally within your time frame, recruit professionals. These professionals should have experience in AI model development, generative AI operations, or AI ethics.
 
-    - *Form partnerships with educational institutions.* Collaborate with universities and training centers to find fresh talent with the latest AI skills and insights.
-    - *Regularly update job descriptions.* Ensure that job roles and requirements reflect the rapidly evolving AI landscape. Doing so helps you attract candidates with the most relevant skills.
-    - *Create an attractive employer brand.* Showcase your organization's commitment to innovation and technological advancement to make your brand appealing to AI professionals.
-    - *Offer competitive compensation packages.* Provide AI professionals with attractive salary structures and benefits to attract and retain top-tier talent in the field.
+  - *Form partnerships with educational institutions.* Collaborate with universities and training centers to find fresh talent with the latest AI skills and insights.
+  
+  - *Regularly update job descriptions.* Ensure that job roles and requirements reflect the rapidly evolving AI landscape. Doing so helps you attract candidates with the most relevant skills.
+  
+  - *Create an attractive employer brand.* Showcase your organization's commitment to innovation and technological advancement to make your brand appealing to AI professionals.
+  
+  - *Offer competitive compensation packages.* Provide AI professionals with attractive salary structures and benefits to attract and retain top-tier talent in the field.
 
 - *Use Microsoft partners to acquire AI skills.* Use a Microsoft partner to address skill shortages. Build more complex solutions or increase personnel count to meet time constraints. Use the [Microsoft partners marketplace](https://partner.microsoft.com//partnership/find-a-partner) to find partners who have expertise in AI, data, and Azure across multiple industries.
 
@@ -43,12 +46,7 @@ Teams need to acquire the right AI skills by assessing the existing talent and d
 
 Organizations must access AI resources by identifying and using tools, platforms, and software necessary for AI deployment. This step is important because it provides a quick way to understand what is needed to begin using AI solutions, helping organizations avoid delays due to resource constraints.
 
-- *Access Microsoft copilots.* Most Microsoft SaaS Copilots require a license or an add-on subscription.
-
-    - [Microsoft 365 Copilot](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
-    - [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license.
-    - In-product Copilots have different access requirements for each, but access to the primary product is required. For more information on each, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
-    - Role-based Copilots also have their own access requirements. For more information, see [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security).
+- *Access Microsoft Copilots.* Most Microsoft SaaS Copilots require a license or an add-on subscription. [Microsoft 365 Copilot](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license. [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license. In-product Copilots have different access requirements for each, but access to the primary product is required. For more information on each, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/). Role-based Copilots also have their own access requirements. For more information, see [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security).
 
 - *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure OpenAI Service, Azure AI Studio, Azure Machine Learning, Azure AI services, and Azure Virtual Machines.
 
@@ -111,7 +109,6 @@ For more information about adopting a Microsoft Copilot solution, see these reso
     - [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai)
     - [Power Automate](https://www.microsoft.com/power-platform/products/power-automate)
     - [Azure](https://azure.microsoft.com/products/copilot/)
-    
-Browser-based copilots:
-- [Copilot (free)](https://copilot.microsoft.com/)
-- [Copilot Pro](https://www.microsoft.com/store/b/copilotpro)
+- Browser-based copilots:
+    - [Copilot (free)](https://copilot.microsoft.com/)
+    - [Copilot Pro](https://www.microsoft.com/store/b/copilotpro)

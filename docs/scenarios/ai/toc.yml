@@ -19,10 +19,10 @@ items:
             href: platform/networking.md
           - name: Security
             href: platform/security.md
-          - name: Management
-            href: platform/management.md
           - name: Governance
             href: platform/governance.md
+          - name: Management
+            href: platform/management.md
       - name: Implementation options
     - name: AI on Azure infrastructure (IaaS)
       items:
@@ -36,10 +36,10 @@ items:
             href: infrastructure/networking.md
           - name: Security
             href: infrastructure/security.md
-          - name: Management
-            href: infrastructure/management.md
           - name: Governance
             href: infrastructure/governance.md
+          - name: Management
+            href: infrastructure/management.md
       - name: Implementation options
         items:
           - name: CycleCloud landing zone accelerator

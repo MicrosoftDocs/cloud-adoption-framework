@@ -9,12 +9,12 @@ ms.topic: conceptual
 
 # AI Ready – Recommendations to prepare an AI foundation
 
-This article provides recommendations for making key design and process decisions that all your AI workloads inherit. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking.
+This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking.
 
 :::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
 *Figure 1. Resource organization for internal and internet-facing AI workloads.*
 
-## Prepare AI deployment regions
+## Prepare AI reliability
 
 Select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
 
@@ -59,13 +59,14 @@ Azure landing zone provides a starting point for preparing your Azure environmen
 
 ### Deploy a custom environment
 
-You can use the guidance discussed in this article to create a custom environment for your AI workloads.
+You can use the guidance discussed in this article to establish a foundational environment for your AI workloads.
 
 ## Next steps
 
 The rest of the guidance focuses on building AI workloads in Azure using PaaS and IaaS solutions.
-> [!div class="nextstepaction"]
-> [Adopt AI with Azure PaaS](adopt-paas.md)
 
 > [!div class="nextstepaction"]
-> [Adopt AI with Azure IaaS](adopt-iaas.md)
+> [Adopt AI with Azure PaaS](./platform/resource-selection.md)
+
+> [!div class="nextstepaction"]
+> [Adopt AI with Azure IaaS](./infrastructure/compute.md)

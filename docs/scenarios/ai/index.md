@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This guidance provides a comprehensive roadmap for adopting AI on Azure, serving as a framework to help you navigate the AI landscape. Use it to find detailed implementation instructions and to establish processes for securing, governing, and managing AI workloads. Think of this as your manual for achieving AI success on Azure.
 
-:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It starts with Strategy, Plan, Ready, and Adopt as sequential steps. Then Secure, Manage, and Govern are cyclical processes after Adopt. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
+:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It starts with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
 *Figure 1. How to use the AI adoption guidance for Azure.*
 
 ## Why adopt AI on Azure?
@@ -23,7 +23,7 @@ When applied effectively, AI brings business value by enhancing individual and a
 Use the AI adoption checklist to see the roadmap to adopting AI. There's a checklist for startups and enterprises. The startup checklist covers the essentials for securing and governing AI workloads in Azure. The Enterprise checklist provide comprehensive guidance for scaling AI workloads in Azure. The following steps outline how to adopt AI on Azure:
 
 1. *AI Strategy*: Choose the right AI technology for each use case based on the required skills, data availability, and associated costs. Define your data strategy and Responsible AI strategy based on your technology strategy.
-   
+
 1. *AI Plan*: Assess your AI maturity, acquire necessary AI skills, access the AI technology you need, and plan for responsible AI. Part of planning is reviewing the needs of the AI security, governance, and management processes.
 
 1. *AI Ready*: Prepare your Azure environment for deployment and establish a strong security and governance foundation for all AI workloads.
