@@ -26,7 +26,7 @@ For more information, see [Technical Assessment for Generative AI in Azure](http
 
 ## Acquire AI skills
 
-Teams need to acquire the right AI skills by assessing the existing talent and deciding whether to develop skills internally or hire external experts. This process is important because a capable team supports sustained AI adoption, enabling organizations to respond quickly to new challenges and maintain competitive relevance through continuous learning.
+Teams need to acquire the right AI skills by assessing the existing talent and deciding whether to develop skills internally or hire external experts. A capable team supports sustained AI adoption, enabling organizations to respond quickly to new challenges and maintain competitive relevance through continuous learning.
 
 - *Learn AI skills.* The [Microsoft Learn](/) platform provides free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certification goals, such as earning certifications related to Azure AI. These certifications include [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
@@ -44,7 +44,7 @@ Teams need to acquire the right AI skills by assessing the existing talent and d
 
 ## Access AI resources
 
-Organizations must access AI resources by identifying and using tools, platforms, and software necessary for AI deployment. This step is important because it provides a quick way to understand what is needed to begin using AI solutions, helping organizations avoid delays due to resource constraints.
+Organizations must access AI resources by identifying and using tools, platforms, and software necessary for AI deployment. This step provides a quick way to understand what is needed to begin using AI solutions, helping organizations avoid delays due to resource constraints.
 
 - *Access Microsoft Copilots.* Most Microsoft SaaS Copilots require a license or an add-on subscription. [Microsoft 365 Copilot](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license. [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license. In-product Copilots have different access requirements for each, but access to the primary product is required. For more information on each, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/). Role-based Copilots also have their own access requirements. For more information, see [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security).
 
@@ -52,7 +52,7 @@ Organizations must access AI resources by identifying and using tools, platforms
 
 ## Create an AI proof of concept
 
-An AI proof of concept (PoC) demonstrates the potential of AI projects on a small scale before full deployment. This process is important because it allows organizations to test feasibility, gather insights, and refine AI use cases, ensuring that they commit to projects that align with their capabilities and business objectives.
+An AI proof of concept (PoC) demonstrates the potential of AI projects on a small scale before full deployment. This process allows organizations to test feasibility, gather insights, and refine AI use cases, ensuring that they commit to projects that align with their capabilities and business objectives. We have quickstart articles that show you how to quickly deploy a functioning application.
 
 | AI type  | Quickstart link |
 |----------|--------------|
@@ -70,7 +70,7 @@ An AI proof of concept (PoC) demonstrates the potential of AI projects on a smal
 
 ## Plan for responsible AI
 
-Organizations should plan for responsible AI by implementing practices that promote ethical, secure, and reliable AI use. This approach is crucial because it ensures that AI applications align with organizational values and regulatory requirements, protecting users, minimizing risks, and building trust in AI systems.
+Organizations should plan for responsible AI by implementing practices that promote ethical, secure, and reliable AI use. This approach ensures that AI applications align with organizational values and regulatory requirements, protecting users, minimizing risks, and building trust in AI systems.
 
 - *Use responsible-AI planning tools.* Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
