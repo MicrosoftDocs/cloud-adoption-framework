@@ -9,9 +9,11 @@ ms.topic: conceptual
 
 # Security for AI on Azure infrastructure
 
-AI workload combine data, storage, networking, and compute infrastructure used to generate and host models. It’s recommended to evaluate security from the viewpoint of the wholistic system as well as the individual components that comprise the whole. To secure your AI infrastructure, follow these recommendations:
+Security for AI on Azure infrastructure involves protecting data, compute, and networking resources that support AI workloads. Securing these components ensures that sensitive information remains safe, minimizes exposure to potential threats, and ensures a stable operational environment for AI models and applications.
 
 ## Secure Azure services
+
+Securing Azure services means configuring each Azure service used in an AI architecture to meet specific security standards and benchmarks. This step helps prevent vulnerabilities by implementing consistent security configurations, which protect AI workloads from potential attacks and unauthorized access.
 
 - *Apply secure configurations to Azure services.* Follow the [Azure security baselines](/azure/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include:
 	- [Windows](/azure/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline) and [Linux](/azure/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) Azure Virtual Machines
@@ -25,6 +27,8 @@ AI workload combine data, storage, networking, and compute infrastructure used t
 
 ## Secure networks
 
+Securing networks involves setting up private endpoints, Network Security Groups (NSGs), and firewalls to manage and control data flow within Azure. This step limits exposure to external threats and protects sensitive data as it moves between services within the Azure infrastructure.
+
 - *Use private endpoints.* Use private endpoints available in [Azure Private Link](/azure/networking/fundamentals/networking-overview#privatelink) for any PaaS solution in your architecture, such as your storage or filesystem.
 - *Implement Network Security Groups (NSGs).* NSGs can be complex. Ensure you have a clear understanding of the NSG rules and their implications when setting up your Azure infrastructure for AI workloads.
 - *Use Application Security Groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups). This can be useful when managing traffic for specific AI workloads.
@@ -34,10 +38,14 @@ AI workload combine data, storage, networking, and compute infrastructure used t
 
 ## Secure data
 
+Securing data includes encrypting data at rest and in transit, along with protecting sensitive information such as keys and passwords. These measures ensure that data remains private and inaccessible to unauthorized users, reducing the risk of data breaches and unauthorized access to sensitive information.
+
 - *Encrypt data*: Encrypt data at rest and in transit using strong encryption technologies between each service in the architecture.
 - *Protect secrets*: Protect secrets by storing them in a key vault or HSM and routinely rotating them.
 
 ## Secure access
+
+Securing access means configuring authentication and access control mechanisms to enforce strict access permissions and verify user identities. By restricting access based on roles, policies, and multi-factor authentication, organizations can limit exposure to unauthorized access and protect critical AI resources.
 
 - *Configure authentication*: Enable multi-factor authentication (MFA) and prefer secondary administrative accounts or just-in-time access for sensitive accounts. Limit control plane access using services like Azure Bastion as secure entry points into private networks.
 - *Use Conditional Access Policies.* Require MFA for accessing critical AI resources to enhance security. Restrict access to AI infrastructure based on geographic locations or trusted IP ranges. Ensure that only compliant devices (those meeting security requirements) can access AI resources. Implement risk-based conditional access policies that respond to unusual sign-in activity or suspicious behavior. Use signals like user location, device state, and sign-in behavior to trigger additional verification steps.
@@ -48,9 +56,11 @@ AI workload combine data, storage, networking, and compute infrastructure used t
 
 ## Prepare for incident response
 
-- *Collect logs.* Implement logging and integrate with a Security Information and Event Management (SIEM) system to detect, analyze, and respond to threats.
+Preparing for incident response involves collecting logs and integrating them with a Security Information and Event Management (SIEM) system. This proactive approach enables organizations to detect and respond to security incidents quickly, reducing potential damage and minimizing downtime for AI systems.
 
 ## Secure operating systems
+
+Securing operating systems requires keeping virtual machines and container images up-to-date with the latest patches and running antimalware software. These practices protect AI infrastructure from vulnerabilities, malware, and other security threats, helping maintain a secure and reliable environment for AI operations.
 
 - *Patch VM guests.* Regularly apply patches to virtual machines and container images. Consider enabling [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for your virtual machines and scale sets.
 - *Use antimalware.* Use [Microsoft Antimalware for Azure](/azure/security/fundamentals/antimalware) on your virtual machines to protect them from malicious files, adware, and other threats.
