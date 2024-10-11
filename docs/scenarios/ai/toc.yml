@@ -13,6 +13,8 @@ items:
       items:
       - name: Design areas
         items:
+          - name: Resource selection
+            href: platform/resource-selection.md
           - name: Networking
             href: platform/networking.md
           - name: Security

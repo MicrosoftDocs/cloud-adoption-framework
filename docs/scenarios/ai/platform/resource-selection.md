@@ -7,13 +7,13 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Adopt AI platforms (PaaS) – Recommendations for building AI apps with Azure platforms
+# Resource selection for AI workloads on Azure
 
 This article provides recommendations for building AI applications by using Azure platform as a service (PaaS). The goal is to define the level of effort and help that you'll need to be successful in AI application development with Azure PaaS services like Azure AI Studio, Azure AI services, and Azure Machine Learning. The article outlines the components you need to build generative and nongenerative AI applications. It also provides links to example architectures.
 
-## Adopt generative AI
+## Understand generative AI workloads
 
-This section provides high-level recommendations to help you choose the appropriate generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
+Generative AI workloads on Azure platforms share a common set of components. The current best practice is to  generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
 
 The following diagram shows the basic components of a generative AI application that implements Retrieval Augmented Generation (RAG).
 
@@ -21,12 +21,14 @@ The following diagram shows the basic components of a generative AI application 
 
 Most generative AI applications implement RAG. At a high-level, RAG applications need the following components:
 
-1. An application receives the user query. 
+1. An application receives the user query.
 1. An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow.
 1. A search and retrieval mechanism exposes data from several data sources in a way that ensures that the data can be consumed by AI apps.
 1. A generative AI model endpoint creates a response based on the user query and grounding data.
 
 For more information, see [Designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
+
+## Select AI 
 
 Here are the high-level choices you need to make when you create a generative AI application in Azure:
 
@@ -44,15 +46,8 @@ Here are the high-level choices you need to make when you create a generative AI
 
 - *Get implementation guidance.* Microsoft has detailed implementation guidance and deployable assets for creating enhanced-security generative AI applications. Use this guidance as a baseline and adapt the baseline to your needs. (See the following table.)
 
-- *Harden Azure resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every Azure resource. Also, follow the security recommendations in [Azure service guides](/azure/well-architected/service-guides/). 
+- *Harden Azure resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every Azure resource. Also, follow the security recommendations in [Azure service guides](/azure/well-architected/service-guides/).
 
-The following table provides links to implementation guidance for building generative AI applications.
-
-| Reference architectures  | Technical guides |
-| --- | --- |
-| [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) |
-| [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) | [Azure OpenAI Landing Zone Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
-| [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
 
 ## Adopt nongenerative AI
 
@@ -81,8 +76,6 @@ Here are the high-level choices you need to make when you create a nongenerative
 - *Pick a data processing service (optional).* Azure Functions is a common data processing choice because it provides a serverless option. Azure Event Grid is also a common trigger mechanism for kicking off a data processing pipeline.
 
 - *Harden Azure resources.* As a starting point, apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) and follow the security recommendations in [Azure service guides](/azure/well-architected/service-guides/) for every Azure resource in your AI workloads. Additionally, you must follow the AI workload security guidance in [Secure AI](secure.md).
-
-- *Get implementation guidance.* Microsoft provides detailed implementation guidance and deployable assets for creating enhanced-security nongenerative AI applications. Use this guidance as a baseline, and adapt the baseline to your needs. Review the [machine learning and AI architectures](/azure/architecture/ai-ml/) to see guidance that's aligned to different use cases.
 
 ## Next step
 

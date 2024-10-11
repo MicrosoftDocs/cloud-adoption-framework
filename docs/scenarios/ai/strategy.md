@@ -9,25 +9,29 @@ ms.topic: conceptual
 
 # AI Strategy - Recommendations to develop an AI adoption strategy
 
-This article describes how to define an AI adoption strategy. As with any strategy, you need data to create an actionable vision for your organization. You need to understand where AI can benefit your business (identify use cases) and identify the right solution for each use case. We recommend that you establish an [AI center of excellence] (./center-of-excellence.md) (AI CoE) or appoint someone to lead this effort and set goals to measure progress.
+An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success. To oversee the AI adoption process, establish an [AI center of excellence] (./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress.
 
 ## Define AI use cases
 
-Compile a comprehensive list of possible AI use cases. Don't limit ideas to current capabilities. Consider future possibilities as well. Later, when you choose your AI technology, you evaluate your technical capabilities, or you can acquire capabilities to implement each use case. For now, focus on compiling use cases. For an example, see [Example AI use cases](strategy.md#example-ai-use-cases). 
+Defining AI use cases involves creating a list of tasks and processes where AI might add value. This approach helps you explore current needs and future possibilities for AI adoption. Identifying these use cases allows you to prioritize areas that offer the most benefit and align with your strategic goals.
 
-- *Understand AI.* In general, AI accommodates two strategic goals: enhancing individual efficiency and improving business processes. Generative AI fosters individual productivity and provides a more adaptive customer experience across many business areas. Non-generative AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It's best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data. 
+- *Understand AI.* In general, AI accommodates two strategic goals: enhancing individual efficiency and improving business processes. Generative AI fosters individual productivity and provides a more adaptive customer experience across many business areas. Non-generative AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It's best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data.
 
 - *Analyze business processes for automation opportunities.* Identifying processes that are suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.  
 
-- *Conduct an assessment.* Gather input from various departments to understand challenges and inefficiencies that could be addressed by using AI. Document current workflows to identify areas where AI can automate tasks or provide insights. 
+- *Conduct an assessment.* Gather input from various departments to understand challenges and inefficiencies that could be addressed by using AI. Document current workflows to identify areas where AI can automate tasks or provide insights.
 
-- *Align AI initiatives with strategic goals.* Aligning AI projects with your strategic objectives ensures that efforts contribute to overall business success. Map out how AI can enhance productivity or streamline processes, and prioritize use cases that directly support your company's mission and goals. 
+- *Align AI initiatives with strategic goals.* Aligning AI projects with your strategic objectives ensures that efforts contribute to overall business success. Map out how AI can enhance productivity or streamline processes, and prioritize use cases that directly support your company's mission and goals.
 
-- *Explore industry use cases.* Research how other businesses use AI to gain insights. Stay informed about emerging AI technologies and applications that are relevant to your industry. 
+- *Explore industry use cases.* Research how other businesses use AI to gain insights. Stay informed about emerging AI technologies and applications that are relevant to your industry.
+
+For more information, see [Example AI use cases](strategy.md#example-ai-use-cases).
 
 ## Define an AI technology strategy
 
-For each use case, you need to identify an AI technology to support it. Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. Each service model affects the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, review the skills and data needed to be successful. Also understand the cost factors to avoid surprises later.
+An AI technology strategy involves selecting the right tools and platforms for each AI use case. You need to choose between Software as a Service (SaaS), Platform as a Service (PaaS), or Infrastructure as a Service (IaaS) based on your goals and technical needs. This strategy helps you align technology choices with specific objectives, ensuring a scalable and cost-effective AI implementation.
+
+For each use case, identify an AI technology to support it. Microsoft provides software (SaaS), platform (PaaS), and infrastructure (IaaS) services that you can use to adopt AI. Each service model affects the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft. Use the following decision tree to narrow the options for each AI opportunity. After you identify a service, review the skills and data needed to be successful. Also understand the cost factors to avoid surprises later.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
@@ -109,7 +113,7 @@ This table provides an overview of cost factors for Microsoft AI solutions:
 
 ## Define an AI data strategy
 
-When you train, ground, or use AI models, be sure that you send only the right data to the model and abide by ethical and regulatory standards. Your data strategy should outline acceptable data use and prepare your business to use ethical, accurate, high-quality data. Evaluate the completeness, relevance, and representativeness of the data to support reliable AI outputs.
+An AI data strategy ensures that you handle data in a way that meets regulatory, ethical, and operational standards. This strategy involves outlining data collection, storage, and usage practices, as well as ensuring data security and privacy. An effective AI data strategy builds trust in your AI systems and promotes accurate, reliable outputs.
 
 - *Protect data security and privacy.* Establish robust security measures, including encryption, access controls, and anonymization, to safeguard sensitive data in AI processes. Define access controls to protect data from unauthorized use and breaches. Don't let data boundaries blur when data is fed into AI systems. For example, AI workloads for all employees should only use data that's appropriate for all employees. Internet-facing AI workloads must only use data that's appropriate for public use.
 
@@ -121,7 +125,9 @@ When you train, ground, or use AI models, be sure that you send only the right d
 
 ## Define a responsible AI strategy
 
-Adopting AI responsibly is an iterative process that implements regular monitoring and measuring to ensure that AI meets your business objectives. Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. These principles govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI workloads that you build in accordance with responsible AI.
+A responsible AI strategy guides you in building AI systems that are ethical, fair, and transparent. This strategy involves monitoring AI systems to prevent bias, ensuring data transparency, and fostering accountability. By adopting responsible AI practices, you can build trust with customers and stakeholders, promoting a positive AI impact.
+
+Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. These principles govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI workloads that you build in accordance with responsible AI.
 
 - *Set up data governance and accountability.* Create a governance framework to assign responsibility for managing data quality, enforcing ethical AI practices, and ensuring proper data usage. Implement auditing processes to maintain accountability throughout AI data handling.
 
@@ -136,6 +142,8 @@ Adopting AI responsibly is an iterative process that implements regular monitori
 
 ## Example AI use cases
 
+Example AI use cases show how AI can solve specific problems and improve processes within your business. These examples cover a range of applications, from automating tasks to analyzing data for better decision-making. By reviewing AI use cases, you can gain insights into potential AI applications relevant to your industry.
+
 | **Generative AI**                                      | **Non-generative AI**                                                                 |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------|
 | Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data.           |
@@ -149,7 +157,7 @@ Adopting AI responsibly is an iterative process that implements regular monitori
 
 ## Example AI adoption strategy
 
-Use this example AI adoption strategy to build your own strategy. The example is based on a fictional company, Contoso, that has a customer-facing e-commerce application and employs sales representatives who need to forecast business data. The company develops a product and needs to manage inventory for production. Its sales channels include private companies and highly regulated public sector agencies. These agencies require a separate, custom e-commerce app to meet regulations. Here's the company's AI adoption strategy:
+An AI adoption strategy provides a roadmap for integrating AI into your operations. It includes setting goals, identifying AI opportunities, and defining success metrics. By using an AI adoption strategy, you can systematically approach AI integration, ensuring it aligns with your mission and delivers measurable benefits. The example is based on a fictional company, Contoso, that has a customer-facing e-commerce application and employs sales representatives who need to forecast business data. The company develops a product and needs to manage inventory for production. Its sales channels include private companies and highly regulated public sector agencies. These agencies require a separate, custom e-commerce app to meet regulations. Here's the company's AI adoption strategy:
 
 | Goals                        | Objectives                | Opportunities                                             | Success metrics                      | AI approach                   | Microsoft solution                        | Data needs                              | Skill needs                      | Cost factors                           |
 |------------------------------|---------------------------|-----------------------------------------------------------|--------------------------------------|--------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------|-----------------------------------------|
