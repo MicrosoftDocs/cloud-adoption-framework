@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Compute for AI workloads on Azure infrastructure
 
-AI workloads require specialized virtual machines (VMs) to handle the intensive computational demands and large-scale data processing. Choosing the right VMs maximizes resource utilization and accelerates AI model development and deployment.
+AI workloads need specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Using the right VMs optimizes resource use and speeds up the development and deployment of AI models, making this step essential for organizations adopting AI.
 
 | AI phase             | Virtual Machine Image  | Generative AI (LLMs, SLMs) | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
 |----------------------|------------------------|----------------------------|------------------------------------|----------------------------------|
@@ -18,7 +18,7 @@ AI workloads require specialized virtual machines (VMs) to handle the intensive 
 
 ## Pick the right virtual machine image
 
-Choose a virtual machine image (Linux and Windows distributions) that expedites your ability to build AI workloads.
+Choosing a suitable virtual machine image, such as the Data Science Virtual Machines, allows quick access to pre-configured tools for building AI workloads. This choice saves time and resources while ensuring you have the necessary software for efficient AI processing.
 
 - *Start with the Data Science Virtual Machines images.* The [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) image offers preconfigured access to data science tools. These tools include PyTorch, TensorFlow, scikit-learn, Jupyter, Visual Studio Code, Azure CLI, pyspark, and others. When you use it with GPUs, the image installs Nvidia drivers, CUDA Toolkit, and cuDNN.
 
@@ -26,7 +26,7 @@ Choose a virtual machine image (Linux and Windows distributions) that expedites 
 
 ## Pick a virtual machine size
 
-Virtual machine must align with your AI model complexity, dataset size, cost considerations. The type of virtual machine you use should take into account whether you’re training or inferencing AI models.
+Selecting an appropriate virtual machine size is essential to align with the complexity of your AI model, data size, and cost constraints. Using hardware that matches your training or inferencing needs maximizes efficiency and ensures that resources are neither underused nor overwhelmed.
 
 - *Narrow your virtual machine options.* AI training is faster on memory-optimized hardware. AI inferencing is faster on compute-optimized hardware. Use GPUs to train and inference large datasets, such as those required for LLM, SLM, and image recognition. Select GPU virtual machines that support Infiniband, GPUDirect RDMA, and GPU interconnects for high-speed data transfer between the GPUs. The following table provides a recommended series based on data size.
 
@@ -43,7 +43,7 @@ Virtual machine must align with your AI model complexity, dataset size, cost con
 
 ## Choose a compute orchestration solution
 
-Use an orchestrator if you have complex orchestration requirements and virtual machine clusters. You need to choose a compute orchestrator now because you can’t always add a compute orchestrator to deployed virtual machines. The orchestrator you should use depends on your scheduler preference, cluster management needs, container usage, and scalability requirements. To choose an orchestrator, follow this guidance:
+Compute orchestration solutions enable the efficient management of complex AI tasks across virtual machine clusters. Selecting an orchestration tool based on your scheduling, containerization, and scaling requirements helps streamline operations and improves scalability for organizations adopting AI.
 
 - *Use Azure CycleCloud to access open-source schedulers.* Azure CycleCloud is ideal for using open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It offers flexibility in cluster management, customizable configurations, advanced scheduling capabilities, and support for running containerized applications in an HPC environment. For more information, see [Azure HPC deployment](https://github.com/Azure/azurehpc#azurehpc). Virtual machines deployed as part of the cluster must be configured for AI workload execution.
 
@@ -61,7 +61,7 @@ Use an orchestrator if you have complex orchestration requirements and virtual m
 
 ## Consider containers
 
-Consider using containers for your AI workloads. Containers provide a consistent, reproducible, and isolated environment that can efficiently utilize computational resources, scale based on demand, and transition seamlessly between different environments.
+Using containers for AI workloads provides a consistent, reproducible environment that efficiently manages computational resources and scales based on demand. Containers allow seamless transitions between different environments, essential for organizations looking to adopt scalable and flexible AI solutions.
 
 - *Install drivers.* Ensure that you have the necessary drivers installed to enable containers to run in various scenarios. For cluster configurations, container runtime tools such as Pyxis and Enroot are typically required.
 
