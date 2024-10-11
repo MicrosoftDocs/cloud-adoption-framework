@@ -14,9 +14,9 @@ Authentication is the process of verifying the identity of the user or applicati
 
 Any data lake solution should use and integrate with the directory service that's already in use. For most organizations, Active Directory is the directory service for all identity-related services. It's the primary and centralized database for all service and user accounts.
 
-In the cloud, Microsoft Entra ID (formerly Azure AD) is a centralized identity provider and the preferred source for identity management. Delegating authentication and authorization to Microsoft Entra ID enables scenarios such as conditional access policies that require a user to be in a specific location. It supports multifactor authentication to increase the level of access security. Data services should be configured with Microsoft Entra integration whenever possible.
+In the cloud, Microsoft Entra ID is a centralized identity provider and the preferred source for identity management. Delegating authentication and authorization to Microsoft Entra ID enables scenarios such as conditional access policies that require a user to be in a specific location. It supports multifactor authentication to increase the level of access security. Data services should be configured with Microsoft Entra integration whenever possible.
 
-For data services that do not support Microsoft Entra ID, authentication should be performed using an access key or token. The client should store the access key in a key management store, such as Azure Key Vault.
+For data services that don't support Microsoft Entra ID, authentication should be performed using an access key or token. The client should store the access key in a key management store, such as Azure Key Vault.
 
 Authentication scenarios for cloud-scale analytics are:
 
@@ -58,14 +58,14 @@ These benefits mean that the credential is better protected and security comprom
 
 Another access scenario is an application, such as a mobile web application, accessing an Azure service. Whoever is accessing an Azure service, the accessor must provide its identity and that identity must be verified.
 
-An Azure **service principal** is the alternative for applications and services that don't support managed identities to authenticate to Azure resources. An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. This access is restricted by the roles assigned to the service principal. For security reasons, we recommend using service principals with automated tools or applications rather than allowing them to sign in with a user identity. For more information, see [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals).
+An Azure **service principal** is the alternative for applications and services that don't support managed identities to authenticate to Azure resources. An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. Access is controlled by the roles assigned to the service principal. For security reasons, we recommend using service principals with automated tools or applications rather than allowing them to sign in with a user identity. For more information, see [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals).
 
 #### Difference between managed identity and service principal
 
 | Service principal | Managed identity |
 |-------------------|------------------|
 | A security identity manually created in Microsoft Entra ID for use by applications, services, and tools to access specific Azure resources. | A special type of service principal. It's an automatic identity that is created when an Azure service is created. |
-| Can be used by any application or service. It isn't tied to a specific Azure service. | Represents an Azure service instance itself. It cannot be used to represent other Azure services. |
+| Used by any application or service and isn't tied to a specific Azure service. | Represents an Azure service instance itself. It can't be used to represent other Azure services. |
 | Has an independent lifecycle. You must delete it explicitly. | Is deleted automatically when the Azure service instance is deleted. |
 | Password-based or certificate-based authentication. | No explicit password to be provided for authentication. |
 
@@ -74,12 +74,12 @@ An Azure **service principal** is the alternative for applications and services 
 
 ## Best practices for authentication in cloud-scale analytics
 
-In cloud-scale analytics, ensuring robust and secure authentication practices is paramount. Following are best practices for authentication across various layers, including databases, storage, and analytics services. By leveraging Microsoft Entra ID, organizations can enhance security through features like Multi-Factor Authentication (MFA) and conditional access policies.
+In cloud-scale analytics, ensuring robust and secure authentication practices is paramount. Following are best practices for authentication across various layers, including databases, storage, and analytics services. By using Microsoft Entra ID, organizations can enhance security through features like multifactor authentication (MFA) and conditional access policies.
 
 |Layer|Service|Recommendations|
 |-------------|----------|----------|
-|Databases|Azure SQL DB, SQL MI, Synapse, MySQL, PostgreSQL, etc.|Use Microsoft Entra ID for authentication with databases such as [PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication), [Azure SQL](/azure/azure-sql/database/authentication-aad-overview) and [MySQL](/azure/mysql/concepts-azure-ad-authentication). |
-|Storage|Azure Data Lake Storage (ADLS)|Use Microsoft Entra ID for authentication for security principals (user, group, service principal, or managed identity) with ADLS over shared key or SAS as it allows for enhanced security through its support for Mulfti-Factor Authentication (MFA) and conditional access policies.|
+|Databases|Azure SQL DB, SQL MI, Synapse, MySQL, PostgreSQL, etc.|Use Microsoft Entra ID for authentication with databases such as [PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication), [Azure SQL](/azure/azure-sql/database/authentication-aad-overview), and [MySQL](/azure/mysql/concepts-azure-ad-authentication). |
+|Storage|Azure Data Lake Storage (ADLS)|Use Microsoft Entra ID for authentication for security principals (user, group, service principal, or managed identity) with ADLS over shared key or SAS as it allows for enhanced security through its support for multifactor authentication (MFA) and conditional access policies.|
 |Storage|ADLS from Azure Databricks|Connect to ADLS [using Unity Catalog](/azure/databricks/connect/unity-catalog/) instead of direct storage-level access by creating a [storage credential using a managed identity](/azure/databricks/connect/unity-catalog/storage-credentials#create-a-storage-credential-using-a-managed-identity) and an [external location](/azure/databricks/connect/unity-catalog/external-locations).|
 |Analytics|Azure Databricks|Use SCIM to [sync users and groups from Microsoft Entra ID](/azure/databricks/admin/users-groups/scim/). To access Databricks resources using REST APIs, [use OAuth with a Databricks service principal](/azure/databricks/dev-tools/auth/#what-authentication-approach-should-i-choose).|
 
