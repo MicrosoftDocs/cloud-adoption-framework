@@ -137,7 +137,7 @@ The data management landing zone supports numerous other data management and gov
 - Data sharing and contracts
 
 > [!TIP]
-> * If using partner solutions for Data catalog, Data quality management, or Data lineage capabilities, they should reside in the data management landing zone. Alternatively, Microsoft Purview can be deployed as a software-as-a-service solution, connecting both the data management landing zone and the data landing zones.
+> * If using partner solutions for data catalog, data quality management, or data lineage capabilities, they should reside in the data management landing zone. Alternatively, Microsoft Purview can be deployed as a software-as-a-service solution, connecting to both the data management landing zone and the data landing zones.
 
 ### Data landing zones
 
@@ -152,7 +152,7 @@ As you decide between single and multiple landing zones, consider regional depen
 Regardless of your initial decision, you can add or remove data landing zones as needed. If you're starting with a single landing zone, we recommend that you plan to extend to multiple landing zones to avoid future needs for migration.
 
 > [!NOTE]
-> Where Microsoft Fabric has been deployed, the data landing zone hosts non software-as-service solutions such as data lakes related and other Azure data services.
+> Where Microsoft Fabric has been deployed, the data landing zone hosts non software-as-service solutions such as data lakes and other Azure data services.
 
 For more information about landing zones, see [Azure landing zones for cloud-scale analytics](../data-management/ready.md).
 

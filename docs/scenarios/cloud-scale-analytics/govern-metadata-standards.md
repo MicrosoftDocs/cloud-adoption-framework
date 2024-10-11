@@ -12,6 +12,8 @@ ms.custom: e2e-data-management, think-tank
 
 Metadata Management plays a crucial role in data architecture. Metadata is data about other data. It describes data, providing a reference that helps you to find, secure and control data. Metadata also binds data together. It can be used to validate data's integrity and quality, route or replicate data to a new location, transform data, and know data meanings. Metadata is also essential in democratizing data through self-service portals.
 
+There's a growing trend in the industry to bring data insights closer to data analysts and scientists using portals that use more metadata intensively. This trend is known as *data observability*. Data observability uses concepts like metadata lake, knowledge graphs, or metadata graphs to describe platforms where metadata is centralized. This is a good way for you to build a unified view of how data is used and sourced across your organization when using a distributed data mesh.
+
 A good metadata management strategy grows organically. It starts simple and small by first identifying the most important areas. A good metadata management strategy also is supported with services and clear processes. To get started, it's good to be aware of the different metadata categories:
 
 - **Business metadata** describes all aspects used for governance, finding & understanding data. Some well-known examples include business terms and definitions and information on data ownership, usage, and origination.
@@ -53,20 +55,18 @@ Once you have your metadata, start with the basics:
 - Business terms
 - Lists of authoritative data sources
 - Lists of databases
+- Governance Domains
 - Schema information
 - Data ownership
 - Data stewardship
 - Security
+- Data quality
 
 Then scale by slowly involving more domain owners and data stewards and by adding more classifications and sensitivity labels. These additions improve the search experience and allow for better data access management.
-
-For your custom metadata attributes, like lists of domains and application metadata, consider creating extra [type definitions](/rest/api/purview/catalogdataplane/types/create-type-definitions) in Microsoft Purview.
 
 Microsoft Purview offers a feature called Governance domains, which establish boundaries for unified governance, ownership, and discovery of data products and business concepts within your domain-oriented architecture. For more information, see [Governance domains in Microsoft Purview](/purview/concept-governance-domain).
 
 ## Use Azure Cosmos DB to create organization's Knowledge Graph
-
-There's a growing trend in the industry to bring data insights closer to data analysts and scientists using portals that use more metadata intensively. This trend is known as *data observability*. Data observability uses concepts like metadata lake, knowledge graphs, or metadata graphs to describe platforms where metadata is centralized. This is a good way for you to build a unified view of how data is used and sourced across your organization when using a distributed data mesh.
 
 A data insight solution must describe how data is used and the relations between entities like source data and data products and between data products from one domain and dependent products from another domain. You can use a graph database or custom user interface to model these relations.
 
