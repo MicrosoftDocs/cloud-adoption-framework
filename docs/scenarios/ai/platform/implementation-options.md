@@ -12,4 +12,4 @@ The following table provides links to implementation guidance for building gener
 
 ## Non-generative AI implementation options
 
-- *Get implementation guidance.* Microsoft provides detailed implementation guidance and deployable assets for creating enhanced-security nongenerative AI applications. Use this guidance as a baseline, and adapt the baseline to your needs. Review the [machine learning and AI architectures](/azure/architecture/ai-ml/) to see guidance that's aligned to different use cases.
+Microsoft provides detailed implementation guidance and deployable assets for creating enhanced-security nongenerative AI applications. Use this guidance as a baseline, and adapt the baseline to your needs. Review the [machine learning and AI architectures](/azure/architecture/ai-ml/) to see guidance that's aligned to different use cases.
