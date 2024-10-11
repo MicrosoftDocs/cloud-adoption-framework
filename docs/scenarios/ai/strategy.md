@@ -11,15 +11,15 @@ ms.topic: conceptual
 
 An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success. To oversee the AI adoption process, establish an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress.
 
-
-
 ## Define an AI technology strategy
+
+Defining an AI technology strategy involves identifying use cases and solutions that align with your goals. This strategy ensures that your AI initiatives address your business needs and maximize value.
 
 ### Identify AI use cases
 
-Defining AI use cases involves creating a list of tasks and processes where AI might add value. This approach helps you explore current needs and future possibilities for AI adoption. Identifying these use cases allows you to prioritize areas that offer the most benefit and align with your strategic goals.
+Identifying AI use cases involves listing tasks and processes where AI might add value. This approach lets you explore your current needs and prioritize AI initiatives that align with your strategic goals.
 
-- *Understand AI.* In general, AI accommodates two strategic goals: enhancing individual efficiency and improving business processes. Generative AI fosters individual productivity and provides a more adaptive customer experience across many business areas. Non-generative AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It's best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data.
+- *Understand AI.* AI supports two goals: enhancing individual efficiency and improving business processes. Generative AI fosters productivity and enhances customer experiences. Non-generative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks.
 
 - *Analyze business processes for automation opportunities.* Identifying processes that are suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.
 
@@ -41,22 +41,20 @@ For each use case, identify an AI technology to support it. Microsoft provides s
 
 #### Buy AI software services (Saas)
 
-Microsoft has a range of Copilot generative AI services increase individual efficiency . These Copilots allow you to buy software-as-a-service (SaaS) and provide generative AI capabilities across your business or to individuals. Some, like Microsoft 365 Copilot, require only general enterprise data. 
+Microsoft provides a range of Copilot generative AI services to enhance individual efficiency. These Copilots allow you to buy software as a service (SaaS) to provide AI capabilities across your business or to specific individuals. Adopting SaaS products requires very few skills.
 
-- *Understand the skills required.* Adopting SaaS products requires very few skills.
-
-- *Understand Copilots and Copilot Studio data needs.* Microsoft 365 Copilot uses enterprise data in Microsoft Graph. No provisioning is needed. You just need to [categorize your data](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot#step-1-deploy-or-validate-your-data-protection) by using sensitivity labels. Copilots for specific business roles have different data connection and plug-in options, and most in-product SaaS copilots don’t require additional data preparation. Check the documentation for each service for more information. For Copilot Studio, [connect data](/microsoft-copilot-studio/knowledge-copilot-studio) (knowledge sources) from across your enterprise and external public websites. Copilot Studio automates much of the data processing needed to create custom copilots for various business applications.
+Microsoft 365 Copilot uses enterprise data in Microsoft Graph. [Categorize your data](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot#step-1-deploy-or-validate-your-data-protection) with sensitivity labels. Role-based Copilots have different data connection and plug-in options in ingest data. Most in-product Copilots don’t require additional data preparation. Check the documentation for each service for more information. For Copilot Studio, [connect data](/microsoft-copilot-studio/knowledge-copilot-studio) from across your enterprise and external public websites. Copilot Studio automates much of the data processing needed to create custom copilots for various business applications.
 
 | Microsoft Copilots | Description | User | Skills | Data | Cost |
 |--------|--------|-------| --- | --- | --- |
 | Microsoft 365 Copilot | Use [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in Microsoft 365 apps and provides an enhanced-security way to chat with business data in Microsoft Graph. | Business | General IT and data management | Yes | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans) |
-| Role-based Copilots | Use [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot) and role-based agents for Microsoft 365 like [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance), to enhance productivity for specific business roles. | Business | General IT and data management | Yes | Licenses or [Security Compute Units](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security#pricing) |
+| Role-based Copilots | Use [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot) and role-based agents for Microsoft 365 like [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance), to enhance productivity for specific business roles. | Business | General IT and data management | Yes | Licenses or [Security Compute Units (Copilot for Security)](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security#pricing) |
 | In-product Copilots | Use copilots to enhance productivity within Microsoft products, such as [GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual | None | Yes | Free or subscription |
 | Copilot Free or Pro | Use the [free](https://copilot.microsoft.com/) version for browser-based access to GPT models. Use [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) for better performance and more capacity. | Individual | None | No | None for Free or [subscription for Pro](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
 
 #### Build AI workloads with AI platform (PaaS)
 
-Azure has a range of platform-as-a-service (PaaS) solutions to build AI workloads. Azure provides low-code platforms for businesses without developer or data science skills. There are also code-first AI platforms for developers and data scientists. Pick the platform that aligns with your current and future goals.  Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills.
+Microsoft offers a range of platform-as-a-service (PaaS) solutions for building AI workloads. Your AI goals determine the solution, skills, and data needed for deployment. Azure provides platforms suited to different skill levels, from beginner-friendly options to advanced tools for experienced developers and data scientists. Choose a platform that aligns with both your current needs and future goals. To estimate costs, use the relevant [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|  ----|-------------| ---------| ---- |
@@ -66,23 +64,17 @@ Azure has a range of platform-as-a-service (PaaS) solutions to build AI workload
 | Train and inference machine learning models by using your own data | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) or [Microsoft Fabric](/fabric/get-started/microsoft-fabric-overview) | Yes | Preprocessing data, training models by using code or automation, improving models, deploying machine learning models, and consuming endpoints in apps | Compute, storage, and data transfer |
 | Consume analytical AI models in applications | [Azure AI services](/azure/ai-services/what-are-ai-services) | Yes | Picking the right AI model, securing endpoints, consuming endpoints in apps, and fine-tuning as needed | Use of model endpoints consumed, storage, data transfer, compute (if you train custom models) |
 
-#### Bring your own models with infrastructure services (IaaS) 
+#### Bring your own models with infrastructure services (IaaS)
 
-For more advanced AI needs, Azure Virtual Machines provides access to GPUs and CPUs with virtual machine (VM) images so you can bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway. You should use them first before you try IaaS.
+For advanced AI needs, Azure Virtual Machines provide access to GPUs and CPUs, enabling you to bring your own AI models to Azure using virtual machine (VM) images. Although Azure PaaS solutions are generally the preferred pathway for AI adoption, consider IaaS if you need more control and customization. Refer to the relevant [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|  ----|-------------| ---------| ---- |
 | Train and inference your own AI models. Bring your own models to Azure. | [Azure Virtual Machines](/azure/virtual-machines/overview) | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
-
-### Understand AI cost factors
-
-Cost is an important consideration when you validate your choice of AI solutions. The goal of this section is to make it easy to find and estimate the costs of different services. Microsoft SaaS copilots and Copilot Studio require a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Virtual machines (CPUs or GPUs) are the primary cost for AI models that run on Azure Virtual Machines. For Azure services, use the individual product [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.
-
-
 ### Define an AI data strategy
 
-An AI data strategy ensures that you handle data in a way that meets regulatory, ethical, and operational standards. This strategy involves outlining data collection, storage, and usage practices, as well as ensuring data security and privacy. An effective AI data strategy builds trust in your AI systems and promotes accurate, reliable outputs.
+An AI data strategy outlines data collection, storage, and usage practices that meet regulatory, ethical, and operational standards. This strategy promotes reliable AI outputs and ensures data security and privacy.
 
 - *Protect data security and privacy.* Establish robust security measures, including encryption, access controls, and anonymization, to safeguard sensitive data in AI processes. Define access controls to protect data from unauthorized use and breaches. Don't let data boundaries blur when data is fed into AI systems. For example, AI workloads for all employees should only use data that's appropriate for all employees. Internet-facing AI workloads must only use data that's appropriate for public use.
 
@@ -94,9 +86,11 @@ An AI data strategy ensures that you handle data in a way that meets regulatory,
 
 ## Define a responsible AI strategy
 
-A responsible AI strategy guides you in building AI systems that are ethical, fair, and transparent. This strategy involves monitoring AI systems to prevent bias, ensuring data transparency, and fostering accountability. By adopting responsible AI practices, you can build trust with customers and stakeholders, promoting a positive AI impact.
+A responsible AI strategy guides you in building AI systems that are ethical, fair, and transparent. It governs your business processses This strategy involves monitoring AI systems to prevent bias, ensuring data transparency, and fostering accountability. By adopting responsible AI practices, you can build trust with customers and stakeholders, promoting a positive AI impact.
 
-Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. These principles govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI workloads that you build in accordance with responsible AI.
+Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. These principles govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI workloads in accordance with responsible AI principles.
+
+- *Ensure regulatory compliance.* Regulatory requirements dictate how you adopt, build, and manage AI workloads. Ensure you know the regulatory requirements for AI workloads in every country you operate.
 
 - *Set up data governance and accountability.* Create a governance framework to assign responsibility for managing data quality, enforcing ethical AI practices, and ensuring proper data usage. Implement auditing processes to maintain accountability throughout AI data handling.
 
