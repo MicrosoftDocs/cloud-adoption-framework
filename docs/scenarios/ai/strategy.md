@@ -11,6 +11,18 @@ ms.topic: conceptual
 
 An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success. To oversee the AI adoption process, establish an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress.
 
+## Define a responsible AI strategy
+
+A responsible AI strategy helps you build AI systems that are ethical, fair, and trustworthy. This strategy guides you AI adoption and the ongoing management of AI workloads. Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principle. The principles provide a framework for creating AI systems that benefit all users. You should define or adopt similar principles to guide your AI initiatives. Microsoft also offers  [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage AI workloads in line with responsible AI practices. This strategy involves monitoring AI systems to prevent bias, ensuring transparency, and promoting accountability. By adopting responsible AI practices, you can build trust with customers and stakeholders, fostering a positive impact.
+
+- *Ensure regulatory compliance.* Adhere to regulatory requirements governing AI use in each country where you operate. This compliance dictates how you adopt, build, and manage AI systems.
+
+- *Establish AI accountability.* Create a governance framework that assigns responsibility for data quality, ethical AI practices, and proper data usage. Set up auditing processes to maintain accountability throughout AI data handling.
+
+- *Mitigate data biases.* Identify potential biases in datasets and apply strategies to minimize them. Regularly assess fairness, address data imbalances, and ensure AI outputs are unbiased toward any group or demographic.
+
+- *Ensure data transparency.* Help users understand how data is collected, used, and processed in AI systems. Provide clear traceability for data inputs and AI decisions to build trust and accountability.
+
 ## Define an AI technology strategy
 
 Defining an AI technology strategy involves identifying use cases and solutions that align with your goals. This strategy ensures that your AI initiatives address your business needs and maximize value.
@@ -83,20 +95,6 @@ An AI data strategy outlines data collection, storage, and usage practices that 
 - *Define acceptable use.* Provide limits on how individuals and systems interact with AI. Read the data security and privacy policies for individual products to define what data should be shared. Some services, like Azure OpenAI, allow you to elevate privacy levels above the platform default.
 
 - *Monitor and evaluate continuously.* Set up ongoing monitoring of AI models and data pipelines to ensure data quality, performance, and fairness over time. Regularly audit data and model outputs to identify any shifts that could affect reliability or compliance.
-
-## Define a responsible AI strategy
-
-A responsible AI strategy guides you in building AI systems that are ethical, fair, and transparent. It governs your business processses This strategy involves monitoring AI systems to prevent bias, ensuring data transparency, and fostering accountability. By adopting responsible AI practices, you can build trust with customers and stakeholders, promoting a positive AI impact.
-
-Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles when developing AI systems. These principles govern the process of building AI workloads that are beneficial to all end users. You need to define or adopt similar principles to guide your process of managing AI workloads. Microsoft has [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage the AI workloads in accordance with responsible AI principles.
-
-- *Ensure regulatory compliance.* Regulatory requirements dictate how you adopt, build, and manage AI workloads. Ensure you know the regulatory requirements for AI workloads in every country you operate.
-
-- *Set up data governance and accountability.* Create a governance framework to assign responsibility for managing data quality, enforcing ethical AI practices, and ensuring proper data usage. Implement auditing processes to maintain accountability throughout AI data handling.
-
-- *Mitigate data biases.* Identify potential biases in datasets and apply strategies to reduce them. Regularly assess fairness, address imbalances, and ensure that AI outputs are unbiased toward any group or demographic.
-
-- *Ensure data transparency.* Enable stakeholders to understand how data is collected, used, and processed in AI systems. Provide clear traceability of data inputs and AI decisions to foster trust and accountability.
 
 ## Next step
 
