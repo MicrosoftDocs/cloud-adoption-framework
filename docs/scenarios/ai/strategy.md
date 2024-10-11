@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI Strategy - Recommendations to develop an AI adoption strategy
 
-An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success. To oversee the AI adoption process, establish an [AI center of excellence] (./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress.
+An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success. To oversee the AI adoption process, establish an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress.
 
 ## Define AI use cases
 
@@ -17,7 +17,7 @@ Defining AI use cases involves creating a list of tasks and processes where AI m
 
 - *Understand AI.* In general, AI accommodates two strategic goals: enhancing individual efficiency and improving business processes. Generative AI fosters individual productivity and provides a more adaptive customer experience across many business areas. Non-generative AI includes machine learning and analytical AI, such as search, speech, translation, and vision. It's best for analyzing structured data, automating repetitive processes, and making data-driven decisions based on trends in historical data.
 
-- *Analyze business processes for automation opportunities.* Identifying processes that are suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.  
+- *Analyze business processes for automation opportunities.* Identifying processes that are suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.
 
 - *Conduct an assessment.* Gather input from various departments to understand challenges and inefficiencies that could be addressed by using AI. Document current workflows to identify areas where AI can automate tasks or provide insights.
 
@@ -65,16 +65,16 @@ For more advanced AI needs, Azure Virtual Machines provides access to GPUs and C
 
 There are different approaches to adopting AI, and each approach requires different skills, as described in the following table. Adopting SaaS products requires very few skills. Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills. The following table shows the skills that are required to adopt AI for each AI approach:
 
-| AI type | Service model | General use | Solution | Data needed | Skills required  |
-|---------|--------------|-----------------|----------|-------------|-------------------------|
+| AI type | Service model | General use | Solution | Data needed | Skills required|
+|---------|--------------|-----------------|----------|-------------| --------|
 | Generative AI | SaaS | Increase individual productivity | Copilot (Free or Pro) | No | None |
 | Generative AI | SaaS | Increase individual productivity, and chat with business data | Microsoft 365 Copilot and other SaaS Copilots | Yes | General IT and data management |
 | Generative AI | PaaS low-code | Build RAG applications | Copilot Studio | Yes | Using a low-code platform to connect data sources, mapping out prompts, and deploying copilots to various locations |
 | Generative AI | PaaS code-first | Build RAG applications | Azure AI Studio or Azure OpenAI | Yes | Selecting models, orchestrating dataflow, chunking data, enriching chunks, choosing indexing, understanding query types (full-text, vector, hybrid), understanding filters and facets, performing reranking, engineering prompt flow, deploying endpoints, and consuming endpoints in apps |
 | Generative AI | PaaS | Fine-tune generative AI models | Azure AI Studio | Yes | Preprocessing data, splitting data into training and validation data, validating models, configuring additional parameters, improving models, deploying models, and consuming endpoints in apps |
-| Machine learning | PaaS | Train and inference machine learning models by using your own data | Azure Machine Learning or Microsoft Fabric | Yes |  Preprocessing data, training models by using code or automation, improving models, deploying machine learning models, and consuming endpoints in apps |
+| Machine learning | PaaS | Train and inference machine learning models by using your own data | Azure Machine Learning or Microsoft Fabric | Yes |Preprocessing data, training models by using code or automation, improving models, deploying machine learning models, and consuming endpoints in apps |
 | Analytical AI | PaaS | Consume analytical AI models in applications | Azure AI services | Yes | Picking the right AI model, securing endpoints, consuming endpoints in apps, and fine-tuning as needed |
-| Generative AI, machine learning, analytical AI | IaaS | Train and inference your own AI models. Bring your own models to Azure. | Azure Virtual Machines, Azure Kubernetes Service, Azure Container Apps | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps |
+| Generative AI, machine learning, analytical AI | IaaS | Train and inference your own AI models. Bring your own models to Azure. | Azure Virtual Machines | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps |
 
 ### Understand AI data needs
 
@@ -86,7 +86,7 @@ AI solutions have varying data needs. Some, like Microsoft 365 Copilot, require 
 
 - *Understand code-first generative AI data needs.* Creating generative AI apps typically requires grounding data for RAG. The grounding data needs to be limited to your specific use case. You shouldn't mix different types of information or include irrelevant data in the grounding data. Unstructured data needs to be in the [right format](/azure/search/search-how-to-create-search-index?tabs=portal#prerequisites) and [properly processed](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) when you create an [index](/azure/search/search-how-to-create-search-index).
 
-    For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database). [Azure Database for PostgreSQL](/azure/postgresql/flexible-server/generative-ai-azure-overview) allows you to connect to Azure AI via code.
+For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database). [Azure Database for PostgreSQL](/azure/postgresql/flexible-server/generative-ai-azure-overview) allows you to connect to Azure AI via code.
 
 - *Understand machine learning data needs.* Training machine learning models in Azure Machine Learning or Fabric requires large datasets on a specific domain. You need to preprocess, clean, and filter data before you split, train, and validate AI models.
 
@@ -98,9 +98,9 @@ Cost is an important consideration when you validate your choice of AI solutions
 
 
 | Service | Supported AI approach | Access | Main cost factors |
-|---------|----------------------|--------|-------------------|
+|---------| -----|--------|-------------------|
 | [Copilot (free)](https://copilot.microsoft.com/) | SaaS generative AI | Free in browser or mobile apps | None |
-| [Copilot Pro](https://www.microsoft.com/store/b/copilotpro5) | SaaS generative AI | With a subscription, available in browser or mobile apps| [Subscription](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
+| [Copilot Pro](https://www.microsoft.com/store/b/copilotpro5) | SaaS generative AI | With a subscription, available in browser or mobile apps| [Subscription](https://www.microsoft.com/store/b/copilotpro) |
 | [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) | SaaS generative AI with RAG | Add to an existing Microsoft 365 subscription | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans) |
 | [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security) | SaaS generative AI with RAG | Azure account [Security Compute Units](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security#pricing) |
 | [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | PaaS generative AI with RAG via a low-code platform | Browser | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
@@ -109,6 +109,18 @@ Cost is an important consideration when you validate your choice of AI solutions
 | [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | PaaS generative AI with and without RAG, PaaS fine-tuning generative AI models | Azure account | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
 | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | PaaS training machine learning and generative AI models | Azure account | Compute, storage, and data transfer |
 | [Azure Virtual Machines](/azure/virtual-machines/overview) | IaaS, train any AI model | Azure account | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
+
+
+| AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
+| --------------|  ----|-------------| ---------| ---- |
+| Increase individual productivity | Copilot ([Free](https://copilot.microsoft.com/) or [Pro](https://www.microsoft.com/store/b/copilotpro5)) | No | None | None for Free or [subscription for Pro](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
+| Increase individual productivity, and chat with business data | [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) and other SaaS Copilots | Yes | General IT and data management | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans), [Security Compute Units](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security#pricing) |
+| Build RAG applications with low-code platform | [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | Yes | Using a low-code platform to connect data sources, mapping out prompts, and deploying copilots to various locations | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
+| Build RAG applications with code-first platform | [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) or [Azure OpenAI](/azure/ai-services/openai/overview) | Yes | Selecting models, orchestrating dataflow, chunking data, enriching chunks, choosing indexing, understanding query types (full-text, vector, hybrid), understanding filters and facets, performing reranking, engineering prompt flow, deploying endpoints, and consuming endpoints in apps | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
+| Fine-tune generative AI models | [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | Yes | Preprocessing data, splitting data into training and validation data, validating models, configuring additional parameters, improving models, deploying models, and consuming endpoints in apps | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
+| Train and inference machine learning models by using your own data | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) or [Microsoft Fabric](/fabric/get-started/microsoft-fabric-overview) | Yes | Preprocessing data, training models by using code or automation, improving models, deploying machine learning models, and consuming endpoints in apps | Compute, storage, and data transfer |
+| Consume analytical AI models in applications | [Azure AI services](/azure/ai-services/what-are-ai-services) | Yes | Picking the right AI model, securing endpoints, consuming endpoints in apps, and fine-tuning as needed | Use of model endpoints consumed, storage, data transfer, compute (if you train custom models) |
+| Train and inference your own AI models. Bring your own models to Azure. | [Azure Virtual Machines](/azure/virtual-machines/overview) | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
 ## Define an AI data strategy
 
@@ -143,9 +155,9 @@ Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-
 
 Example AI use cases show how AI can solve specific problems and improve processes within your business. These examples cover a range of applications, from automating tasks to analyzing data for better decision-making. By reviewing AI use cases, you can gain insights into potential AI applications relevant to your industry.
 
-| **Generative AI**                                      | **Non-generative AI**                                                                 |
-|--------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data.           |
+| **Generative AI**| **Non-generative AI** |
+| --- | ---|
+| Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data. |
 | E-commerce platforms: Generate personalized product recommendations and tailored shopping experiences. | Process automation: Automate routine tasks and workflows that don't require content generation, such as customer service bots. |
 | Product design: Quickly create multiple variations of product prototypes or design elements. | Data analysis: Uncover patterns in structured data for insights and data-driven decisions. |
 | Software development: Automate repetitive code generation, such as CRUD operations. | Model simulation: Simulate complex systems (fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes. |
@@ -158,10 +170,10 @@ Example AI use cases show how AI can solve specific problems and improve process
 
 An AI adoption strategy provides a roadmap for integrating AI into your operations. It includes setting goals, identifying AI opportunities, and defining success metrics. By using an AI adoption strategy, you can systematically approach AI integration, ensuring it aligns with your mission and delivers measurable benefits. The example is based on a fictional company, Contoso, that has a customer-facing e-commerce application and employs sales representatives who need to forecast business data. The company develops a product and needs to manage inventory for production. Its sales channels include private companies and highly regulated public sector agencies. These agencies require a separate, custom e-commerce app to meet regulations. Here's the company's AI adoption strategy:
 
-| Goals                        | Objectives                | Opportunities                                             | Success metrics                      | AI approach                   | Microsoft solution                        | Data needs                              | Skill needs                      | Cost factors                           |
-|------------------------------|---------------------------|-----------------------------------------------------------|--------------------------------------|--------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------|-----------------------------------------|
-| Automate business process     | Improve customer satisfaction | E-commerce web application chat feature                      | Increased customer retention rate    | PaaS, generative AI, RAG               | Azure AI Studio                            | Item descriptions and pairings           | RAG and cloud app development     | Usage                                   |
-| Automate business process     | Reduce costs               | Internal app document-processing workflow                  | Increased completion rate            | Analytical AI, fine-tuning       | Azure AI services - Document Intelligence  | Standard documents                      | App development                   | Estimated usage                         |
-| Automate business process     | Reduce costs               | Inventory management application and product purchasing     | Shorter shelf life of inventory      | Machine learning, training models  | Azure Machine Learning                     | Historical inventory and sales data      | Machine learning and app development | Estimated usage                         |
-| Enhance individual productivity | Improve employee experience | Daily work across company                                   | Increased employee satisfaction survey results | SaaS generative AI          | The free version of Copilot and Microsoft 365 Copilot          | OneDrive data                            | General IT                        | Subscription costs                      |
-| Automate business process     | Increase sales            | E-commerce application for regulated industry chat feature   | Increased sales                      | IaaS generative AI model training | Azure Virtual Machines                     | Vast training data on domain-specific data | Cloud infrastructure, app development, VM maintenance, networking | Infrastructure and software |
+| Goals| Objectives| Opportunities | Success metrics| AI approach | Microsoft solution| Data needs| Skill needs| Cost factors |
+| -------------| ----------| ------|  ----| ---------------| -------| -----| ------------------| -----|
+| Automate business process | Improve customer satisfaction | E-commerce web application chat feature| Increased customer retention rate| PaaS, generative AI, RAG | Azure AI Studio| Item descriptions and pairings | RAG and cloud app development | Usage |
+| Automate business process | Reduce costs | Internal app document-processing workflow| Increased completion rate| Analytical AI, fine-tuning | Azure AI services - Document Intelligence| Standard documents| App development | Estimated usage |
+| Automate business process | Reduce costs | Inventory management application and product purchasing | Shorter shelf life of inventory| Machine learning, training models| Azure Machine Learning | Historical inventory and sales data| Machine learning and app development | Estimated usage |
+| Enhance individual productivity | Improve employee experience | Daily work across company | Increased employee satisfaction survey results | SaaS generative AI| The free version of Copilot and Microsoft 365 Copilot| OneDrive data| General IT| Subscription costs|
+| Automate business process | Increase sales| E-commerce application for regulated industry chat feature | Increased sales| IaaS generative AI model training | Azure Virtual Machines | Vast training data on domain-specific data | Cloud infrastructure, app development, VM maintenance, networking | Infrastructure and software |
