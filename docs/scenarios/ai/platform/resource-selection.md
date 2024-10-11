@@ -23,7 +23,7 @@ The current best practice is to ground generative AI workloads with the [retriev
 
 :::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI workload." lightbox="./images/generative-ai-app.svg" border="false":::
 
-### Choose the right Azure resources
+### Choose generative AI resources
 
 Choosing the right resources for generative AI ensures efficient data processing, retrieval, and model execution. This section outlines key resource decisions and resources for selecting platforms, compute types, orchestrators, and data sources in Azure.
 
@@ -55,17 +55,17 @@ The nongenerative AI dataflow outlines the stages involved in ingesting, process
 
 (1) The workload ingests data. (2) An optional data processing mechanism extracts or manipulates the incoming data. This mechanism ensures that the data fits the expectations of the model format or extracts relevant data to send to the AI model endpoint. (3) An analytical AI model endpoint integrates with the workload and analyzes the incoming data. (4) Training data is used to train machine learning models in Azure Machine Learning. Optionally, you can use fine-tuning data to customize prebuilt AI models in Azure AI services. Azure has various data sources to choose from for these tasks.
 
-### Choose the right Azure resources
+### Choose nongenerative AI resources
 
 Selecting the correct Azure resources for nongenerative AI workloads is essential for building a responsive and efficient AI system. This section discusses the major resource decisions, including platform selection, compute resources, data sources, and optional data processing services.
 
 - *Pick a nongenerative AI platform.* Azure AI services and Azure Machine Learning both allow you to integrate AI models into workloads.
 
-    - [Azure AI services](/azure/ai-services/what-are-ai-services) provide more than 10 AI services. Developers don't need data science skills to use and consume AI models in workloads. To pick the right Azure AI service, see [Choose an Azure AI services technology](/azure/architecture/data-guide/technology-choices/cognitive-services). 
+    - [Azure AI services](/azure/ai-services/what-are-ai-services) provide more than 10 AI services. Developers don't need data science skills to use and consume AI models in workloads. To pick the right Azure AI service, see [Choose an Azure AI services technology](/azure/architecture/data-guide/technology-choices/cognitive-services).
 
     - [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) provides a platform to build machine learning models with your own data and consume those models in AI workloads.
 
-- *Choose the right AI compute.* For Azure Machine Learning, you need AI compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large datasets. Consider CPUs for data preprocessing tasks or for training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
+- *Choose the right AI compute.* For Azure Machine Learning, you need [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run a job or host an endpoint. Use the compute type that meets your performance and budget needs. Azure AI services doesn't require compute resources.
 
 - *Pick a data source.* For Azure Machine Learning, use one of the supported [data sources](/azure/machine-learning/how-to-access-data#supported-data-storage-service-types) to host your training data. For Azure AI services, many of the services don't require fine-tuning data, and some, like Azure AI Custom Vision, provide an option to upload local files to a managed data storage solution.
 
