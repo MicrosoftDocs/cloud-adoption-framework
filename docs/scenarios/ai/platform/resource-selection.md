@@ -13,22 +13,14 @@ This article provides recommendations for building AI applications by using Azur
 
 ## Understand generative AI workloads
 
-Generative AI workloads on Azure platforms share a common set of components. The current best practice is to  generative AI platform, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
-
-The following diagram shows the basic components of a generative AI application that implements Retrieval Augmented Generation (RAG).
+Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)] (/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). RAG workloads need a generative AI model endpoint, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
 
 :::image type="content" source="./images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
-
-Most generative AI applications implement RAG. At a high-level, RAG applications need the following components:
 
 1. An application receives the user query.
 1. An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow.
 1. A search and retrieval mechanism exposes data from several data sources in a way that ensures that the data can be consumed by AI apps.
 1. A generative AI model endpoint creates a response based on the user query and grounding data.
-
-For more information, see [Designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
-
-## Select AI 
 
 Here are the high-level choices you need to make when you create a generative AI application in Azure:
 
@@ -44,19 +36,15 @@ Here are the high-level choices you need to make when you create a generative AI
 
 - *Choose the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large datasets. Consider CPUs for data preprocessing tasks or for training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
-- *Get implementation guidance.* Microsoft has detailed implementation guidance and deployable assets for creating enhanced-security generative AI applications. Use this guidance as a baseline and adapt the baseline to your needs. (See the following table.)
-
 - *Harden Azure resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every Azure resource. Also, follow the security recommendations in [Azure service guides](/azure/well-architected/service-guides/).
 
-
-## Adopt nongenerative AI
+## Understand analytical AI workloads
 
 Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to help you choose the appropriate nongenerative AI platform, data sources, and application platform.
 
 The following diagram shows the basic components of a nongenerative AI application.
 
 :::image type="content" source="./images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/non-generative-ai-app.svg" border="false":::
-
 
 Within the Azure ecosystem, analytical AI applications need the following components: 
 
