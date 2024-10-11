@@ -9,6 +9,8 @@ ms.topic: conceptual
 
 # Compute for AI workloads on Azure infrastructure
 
+This article provides recommendations for bringing your own AI models to run on Azure infrastructure. The preferred approach is to start with Azure AI platform solutions (PaaS). For organizations looking to bring their own models to Azure for training, this is the guidance to get you AI workload running on Azure infrastructure.
+
 AI workloads need specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Using the right VMs optimizes resource use and speeds up the development and deployment of AI models, making this step essential for organizations adopting AI.
 
 | AI phase             | Virtual Machine Image  | Generative AI (LLMs, SLMs) | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
@@ -28,14 +30,7 @@ Choosing a suitable virtual machine image, such as the Data Science Virtual Mach
 
 Selecting an appropriate virtual machine size is essential to align with the complexity of your AI model, data size, and cost constraints. Using hardware that matches your training or inferencing needs maximizes efficiency and ensures that resources are neither underused nor overwhelmed.
 
-- *Narrow your virtual machine options.* AI training is faster on memory-optimized hardware. AI inferencing is faster on compute-optimized hardware. Use GPUs to train and inference large datasets, such as those required for LLM, SLM, and image recognition. Select GPU virtual machines that support Infiniband, GPUDirect RDMA, and GPU interconnects for high-speed data transfer between the GPUs. The following table provides a recommended series based on data size.
-
-    | VM series | Infiniband | GPUDirect RDMA | GPU interconnects | Compute capacity |
-    | ----      | ---        | ---            | ---               | ---              |
-    | [ND MI300X v5 series](/azure/virtual-machines/sizes/gpu-accelerated/nd-mi300x-v5-series) | Yes | Yes | Yes | Extra high |
-    | [ND H100 v5 series](/azure/virtual-machines/nd-h100-v5-series) | Yes | Yes | Yes | High |
-    | [NDm A100 v4-series](/azure/virtual-machines/ndm-a100-v4-series) | Yes | Yes | Yes | Medium-high |
-    | [ND A100 v4-series](/azure/virtual-machines/nda100-v4-series) | Yes | Yes |YesX | Medium |
+- *Narrow your virtual machine options.* Opt for the latest virtual machine SKUs for the fastest training and inference times. When training, use SKUs that support RDMA and GPU interconnects for high-speed data transfer between the GPUs. Inferencing models often do not require SKUs with InfiniBand. For example, see [ND MI300X v5 series](/azure/virtual-machines/sizes/gpu-accelerated/nd-mi300x-v5-series), [ND H100 v5 series](/azure/virtual-machines/nd-h100-v5-series), [NDm A100 v4-series](/azure/virtual-machines/ndm-a100-v4-series), and [ND A100 v4-series](/azure/virtual-machines/nda100-v4-series).
 
 - *Check virtual machine pricing.* Use the virtual machine pricing pages for [Linux](https://azure.microsoft.com//pricing/details/virtual-machines/linux/) and [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) VMs for a general understanding of the cost of your VM choice. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to get a more detailed pricing estimate of your architecture.
 
@@ -45,7 +40,8 @@ Selecting an appropriate virtual machine size is essential to align with the com
 
 Compute orchestration solutions enable the efficient management of complex AI tasks across virtual machine clusters. Selecting an orchestration tool based on your scheduling, containerization, and scaling requirements helps streamline operations and improves scalability for organizations adopting AI.
 
-- *Use Azure CycleCloud to access open-source schedulers.* Azure CycleCloud is ideal for using open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It offers flexibility in cluster management, customizable configurations, advanced scheduling capabilities, and support for running containerized applications in an HPC environment. For more information, see [Azure HPC deployment](https://github.com/Azure/azurehpc#azurehpc). Virtual machines deployed as part of the cluster must be configured for AI workload execution.
+- *Use Azure CycleCloud to access open-source schedulers.* Azure CycleCloud is ideal for using open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It offers flexibility in cluster management, customizable configurations, advanced scheduling capabilities, and support for running containerized applications in an HPC environment. For more information, see [Azure HPC deployment](https://github.com/Azure/azurehpc#azurehpc).
+Virtual machines within the cluster require configuration for AI workload execution. [Azure CycleCloud Workspace for Slurm (CCWS)](/azure/cyclecloud/overview-ccws) offers a managed Marketplace deployment option for Slurm clusters. Because setting up and managing Slurm clusters can be complex, CCWS simplifies the process by enabling users to deploy pre-configured Slurm clusters within minutes—no prior knowledge of Slurm or Azure required.
 
 - *Use Azure Batch for its built-in scheduling features.* Azure Batch provides built-in scheduling features without the need for other software installation or management. It has a consumption pricing model and no licensing fees. It's suitable if you want to avoid upfront costs. Azure Batch provides native support for containerized tasks. For a repository that contains an accelerator to deploy Azure batch with best practices, see [Azure Batch Accelerator](https://github.com/Azure/bacc).
 
