@@ -78,7 +78,7 @@ Microsoft offers a range of platform-as-a-service (PaaS) solutions for building 
 
 #### Bring your own models with infrastructure services (IaaS)
 
-For advanced AI needs, Azure Virtual Machines provide access to GPUs and CPUs, enabling you to bring your own AI models to Azure using virtual machine (VM) images. Although Azure PaaS solutions are generally the preferred pathway for AI adoption, consider IaaS if you need more control and customization. Refer to the relevant [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
+The preferred approach to developing AI workloads on Azure are Azure AI platforms (PaaS). For organizations looking to bring their own models to Azure for training, use Azure infrastructure. For advanced AI needs, Azure Virtual Machines provide access to GPUs and CPUs, enabling you to bring your own AI models to Azure using virtual machine (VM) images. Although Azure PaaS solutions are generally the preferred pathway for AI adoption, consider IaaS if you need more control and customization. Refer to the relevant [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|  ----|-------------| ---------| ---- |
