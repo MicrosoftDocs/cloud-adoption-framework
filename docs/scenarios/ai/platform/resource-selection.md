@@ -1,6 +1,6 @@
 ---
 title: Adopt AI platforms (PaaS) - Recommendations for building AI apps with Azure platforms
-description: Learn how to build AI applications, including generative and nongenerative AI apps, by using Azure PaaS services. Get detailed recommendations and architecture guides.
+description: Learn how to build AI workloads, including generative and nongenerative AI apps, by using Azure PaaS services. Get detailed recommendations and architecture guides.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
@@ -9,20 +9,20 @@ ms.topic: conceptual
 
 # Resource selection for AI workloads on Azure
 
-This article provides recommendations for building AI applications by using Azure platform as a service (PaaS). The goal is to define the level of effort and help that you'll need to be successful in AI application development with Azure PaaS services like Azure AI Studio, Azure AI services, and Azure Machine Learning. The article outlines the components you need to build generative and nongenerative AI applications. It also provides links to example architectures.
+This article provides recommendations for building AI workloads by using Azure platform as a service (PaaS). The goal is to define the level of effort and help that you'll need to be successful in AI workload development with Azure PaaS services like Azure AI Studio, Azure AI services, and Azure Machine Learning. The article outlines the components you need to build generative and nongenerative AI workloads. It also provides links to example architectures.
 
 ## Understand generative AI workloads
 
-Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)] (/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). RAG workloads need a generative AI model endpoint, orchestrator, search and retrieval mechanisms, data sources, application platform, and compute resources.
+Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)] (/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). RAG workloads need a generative AI model endpoint, orchestrator, search and retrieval mechanisms, data sources, workload platform, and compute resources.
 
-:::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI application." lightbox="./images/generative-ai-app.svg" border="false":::
+:::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI workload." lightbox="./images/generative-ai-app.svg" border="false":::
 
-1. An application receives the user query.
+1. An workload receives the user query.
 1. An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow.
 1. A search and retrieval mechanism exposes data from several data sources in a way that ensures that the data can be consumed by AI apps.
 1. A generative AI model endpoint creates a response based on the user query and grounding data.
 
-Here are the high-level choices you need to make when you create a generative AI application in Azure:
+Here are the high-level choices you need to make when you create a generative AI workload in Azure:
 
 - *Pick a generative AI platform.* To deploy and consume a generative AI model endpoint, you need a generative AI platform. Depending on your needs, you can use either [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) or Azure OpenAI Service. Azure AI Studio provides a code-first development experience. You get access to a wide variety of generative AI models and built-in development tools, such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing. Azure OpenAI gives you access to OpenAI models and is a good starting point if you just want to use those models.
 
@@ -32,7 +32,7 @@ Here are the high-level choices you need to make when you create a generative AI
 
 - *Choose a data source for grounding data.* For unstructured data like images, audio, video, and large datasets, use Azure Blob Storage to host grounding data. Alternatively, you can use databases supported by [Azure AI Search](/azure/search/search-indexer-overview#supported-data-sources) or [vector databases](/dotnet/ai/conceptual/vector-databases#available-vector-database-solutions).
 
-- *Pick an application platform.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right application platform for your application.
+- *Pick an workload platform.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right workload platform for your workload.
 
 - *Choose the right compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large datasets. Consider CPUs for data preprocessing tasks or for training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
@@ -40,26 +40,26 @@ Here are the high-level choices you need to make when you create a generative AI
 
 ## Understand nongenerative AI workloads
 
-Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to help you choose the appropriate nongenerative AI platform, data sources, and application platform.
+Nongenerative AI workloads use machine learning algorithms to automate business processes within workloads. This section provides high-level recommendations to help you choose the appropriate nongenerative AI platform, data sources, and workload platform.
 
-The following diagram shows the basic components of a nongenerative AI application.
+The following diagram shows the basic components of a nongenerative AI workload.
 
-:::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI application." lightbox="./images/non-generative-ai-app.svg" border="false":::
+:::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI workload." lightbox="./images/non-generative-ai-app.svg" border="false":::
 
-Within the Azure ecosystem, analytical AI applications need the following components: 
+Within the Azure ecosystem,  AI workloads need the following components:
 
-1. An application ingests incoming data. 
+1. An workload ingests incoming data.
 1. An optional data processing mechanism extracts or manipulates the incoming data. This mechanism ensures that the data fits the expectations of the model format or extracts relevant data to send to the AI model endpoint. 
-1. An analytical AI model endpoint integrates with the application and analyzes the incoming data. 
-1. Training data is used to train machine learning models in Azure Machine Learning. Optionally, you can use fine-tuning data to customize prebuilt AI models in Azure AI services. Azure has various data sources to choose from for these tasks. 
+1. An analytical AI model endpoint integrates with the workload and analyzes the incoming data. 
+1. Training data is used to train machine learning models in Azure Machine Learning. Optionally, you can use fine-tuning data to customize prebuilt AI models in Azure AI services. Azure has various data sources to choose from for these tasks.
 
-Here are the high-level choices you need to make when you create a nongenerative AI application in Azure:
+Here are the high-level choices you need to make when you create a nongenerative AI workload in Azure:
 
-- *Pick a nongenerative AI platform.* Azure AI services and Azure Machine Learning both allow you to integrate AI models into applications. Azure AI services provide more than 10 AI services. Developers don't need data science skills to use and consume AI models in applications. To pick the right AI service, see [Choose an Azure AI services technology](/azure/architecture/data-guide/technology-choices/cognitive-services). You can use [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) to build and improve your own machine learning models with your own data and consume those models in applications.
+- *Pick a nongenerative AI platform.* Azure AI services and Azure Machine Learning both allow you to integrate AI models into workloads. Azure AI services provide more than 10 AI services. Developers don't need data science skills to use and consume AI models in workloads. To pick the right AI service, see [Choose an Azure AI services technology](/azure/architecture/data-guide/technology-choices/cognitive-services). You can use [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) to build and improve your own machine learning models with your own data and consume those models in workloads.
 
 - *Pick a data source.* For Azure Machine Learning, use one of the supported [data sources](/azure/machine-learning/how-to-access-data#supported-data-storage-service-types) to host your training data. For Azure AI services, many of the services don't require fine-tuning data, and some, like Azure AI Custom Vision, provide an option to upload local files to a managed data storage solution.
 
-- *Pick an application platform.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right application platform.
+- *Pick an workload platform.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right workload platform.
 
 - *Pick a data processing service (optional).* Azure Functions is a common data processing choice because it provides a serverless option. Azure Event Grid is also a common trigger mechanism for kicking off a data processing pipeline.
 
