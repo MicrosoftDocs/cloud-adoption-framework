@@ -1,5 +1,5 @@
 ---
-title: Adopt AI platforms (PaaS) - Recommendations for building AI apps with Azure platforms
+title: Resource selection for AI workloads on Azure platforms
 description: Learn how to build AI workloads, including generative and nongenerative AI apps, by using Azure PaaS services. Get detailed recommendations and architecture guides.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,17 +7,17 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Resource selection for AI workloads on Azure
+# Resource selection for AI workloads on Azure platforms
 
-This article provides recommendations for building AI workloads by using Azure platform as a service (PaaS). The goal is to define the level of effort and help that you'll need to be successful in AI workload development with Azure PaaS services like Azure AI Studio, Azure AI services, and Azure Machine Learning. The article outlines the components you need to build generative and nongenerative AI workloads. It also provides links to example architectures.
+This article provides recommendations for choosing the right platform resources and components for your AI workloads. It covers generative AI workloads and nongenerative AI workloads.
 
 ## Understand generative AI workloads
 
-Generative AI workloads use large and small language models to generate responses based on an input or query. 
+Generative AI workloads use large and small language models to generate an output based on an input. Most generative AI workloads running on Azure platforms share a common set of components.
 
 ### Generative AI components
 
-Most generative AI workloads Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
+The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). RAG helps scope and govern the output of generative AI models.
 
 (1) An workload receives the user query. (2) An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism finds the right grounding data to send to the generative AI endpoint. (4) A generative AI model endpoint creates a response based on the user query and grounding data.
 
