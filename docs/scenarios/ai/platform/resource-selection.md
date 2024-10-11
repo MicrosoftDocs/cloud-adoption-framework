@@ -13,9 +13,11 @@ This article provides recommendations for building AI workloads by using Azure p
 
 ## Understand generative AI workloads
 
-Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
+Generative AI workloads use large and small language models to generate responses based on an input or query. 
 
 ### Generative AI components
+
+Most generative AI workloads Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
 
 (1) An workload receives the user query. (2) An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism finds the right grounding data to send to the generative AI endpoint. (4) A generative AI model endpoint creates a response based on the user query and grounding data.
 
@@ -43,9 +45,7 @@ Generative AI workloads using RAG need a generative AI model endpoint, orchestra
 
 ## Understand nongenerative AI workloads
 
-Nongenerative AI workloads use machine learning algorithms to automate business processes within workloads. This section provides high-level recommendations to help you choose the appropriate nongenerative AI platform, data sources, and workload platform.
-
-The following diagram shows the basic components of a nongenerative AI workload.
+Nongenerative AI workloads use machine learning algorithms to automate business processes within workloads. This section provides high-level recommendations to help you choose the appropriate nongenerative AI platform, data sources, and workload platform. The following diagram shows the basic components of a nongenerative AI workload.
 
 :::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI workload." lightbox="./images/non-generative-ai-app.svg" border="false":::
 
