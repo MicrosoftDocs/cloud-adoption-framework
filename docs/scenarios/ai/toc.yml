@@ -24,7 +24,7 @@ items:
           - name: Management
             href: platform/management.md
       - name: Implementation options
-      - href: platform/implementation-options.md
+        href: platform/implementation-options.md
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Design areas
