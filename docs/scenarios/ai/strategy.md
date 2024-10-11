@@ -11,7 +11,11 @@ ms.topic: conceptual
 
 An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success. To oversee the AI adoption process, establish an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress.
 
-## Define AI use cases
+
+
+## Define an AI technology strategy
+
+### Identify AI use cases
 
 Defining AI use cases involves creating a list of tasks and processes where AI might add value. This approach helps you explore current needs and future possibilities for AI adoption. Identifying these use cases allows you to prioritize areas that offer the most benefit and align with your strategic goals.
 
@@ -27,7 +31,7 @@ Defining AI use cases involves creating a list of tasks and processes where AI m
 
 For more information, see [Example AI use cases](strategy.md#example-ai-use-cases).
 
-## Define an AI technology strategy
+### Identify AI solutions
 
 An AI technology strategy involves selecting the right tools and platforms for each AI use case. You need to choose between Software as a Service (SaaS), Platform as a Service (PaaS), or Infrastructure as a Service (IaaS) based on your goals and technical needs. This strategy helps you align technology choices with specific objectives, ensuring a scalable and cost-effective AI implementation.
 
@@ -35,70 +39,48 @@ For each use case, identify an AI technology to support it. Microsoft provides s
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
-### Buy AI to improve efficiency (SaaS)
+#### Buy AI software services (Saas)
 
-Microsoft has a range of Copilot generative AI services. These Copilots allow you to buy software-as-a-service (SaaS) and provide generative AI capabilities across your business or to individuals.
+Microsoft has a range of Copilot generative AI services increase individual efficiency . These Copilots allow you to buy software-as-a-service (SaaS) and provide generative AI capabilities across your business or to individuals. Some, like Microsoft 365 Copilot, require only general enterprise data. 
 
-| SaaS AI Copilot products | Description | User |
-|--------|--------|-------|
-| Microsoft 365 Copilot | Use [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in Microsoft 365 apps and provides an enhanced-security way to chat with business data in Microsoft Graph. | Business |
-| Role-based Copilots | Use [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot) and role-based agents for Microsoft 365 like [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance), to enhance productivity for specific business roles. | Business |
-| In-product Copilots | Use copilots to enhance productivity within Microsoft products, such as [GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual |
-| Copilot in browser and mobile apps | Use the [free](https://copilot.microsoft.com/) version for browser-based access to GPT models. Use [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) for better performance and more capacity. | Individual |
+- *Understand the skills required.* Adopting SaaS products requires very few skills.
 
-### Build AI workloads with AI platform (PaaS)
+- *Understand Copilots and Copilot Studio data needs.* Microsoft 365 Copilot uses enterprise data in Microsoft Graph. No provisioning is needed. You just need to [categorize your data](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot#step-1-deploy-or-validate-your-data-protection) by using sensitivity labels. Copilots for specific business roles have different data connection and plug-in options, and most in-product SaaS copilots don’t require additional data preparation. Check the documentation for each service for more information. For Copilot Studio, [connect data](/microsoft-copilot-studio/knowledge-copilot-studio) (knowledge sources) from across your enterprise and external public websites. Copilot Studio automates much of the data processing needed to create custom copilots for various business applications.
 
-Azure has a range of platform-as-a-service (PaaS) solutions to build AI workloads. Azure provides low-code platforms for businesses without developer or data science skills. There are also code-first AI platforms for developers and data scientists. Pick the platform that aligns with your current and future goals.
+| Microsoft Copilots | Description | User | Skills | Data | Cost |
+|--------|--------|-------| --- | --- | --- |
+| Microsoft 365 Copilot | Use [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) for an enterprise-wide solution that automates work in Microsoft 365 apps and provides an enhanced-security way to chat with business data in Microsoft Graph. | Business | General IT and data management | Yes | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans) |
+| Role-based Copilots | Use [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot) and role-based agents for Microsoft 365 like [Microsoft 365 Copilot for Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Microsoft 365 Copilot for Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance), to enhance productivity for specific business roles. | Business | General IT and data management | Yes | Licenses or [Security Compute Units](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security#pricing) |
+| In-product Copilots | Use copilots to enhance productivity within Microsoft products, such as [GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual | None | Yes | Free or subscription |
+| Copilot Free or Pro | Use the [free](https://copilot.microsoft.com/) version for browser-based access to GPT models. Use [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) for better performance and more capacity. | Individual | None | No | None for Free or [subscription for Pro](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
 
-| AI platform products | Description | Skills required |
-|---------|------------|---------|
-| Copilot Studio | Low-code platform for creating generative AI applications | No developer or data science skills |
-| Azure AI services | Code-first platform for creating analytical AI applications | Developer skills |
-| Azure AI Studio | Code-first platform for developing generative AI applications | Developer and data science skills |
-| Azure Machine Learning and Microsoft Fabric | Platform for training and deploying AI models by using your own data | Developer skills and advanced data science skills |
+#### Build AI workloads with AI platform (PaaS)
 
-### Bring your own models with infrastructure services (IaaS)
-
-For more advanced AI needs, Azure Virtual Machines provides access to GPUs and CPUs with virtual machine (VM) images so you can bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway. You should use them first before you try IaaS.
-
-### Understand AI skills needed
-
-There are different approaches to adopting AI, and each approach requires different skills, as described in the following table. Adopting SaaS products requires very few skills. Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills.
-
-### Understand AI data needs
-
-AI solutions have varying data needs. Some, like Microsoft 365 Copilot, require only general enterprise data. Other AI solutions, like RAG applications, require domain-specific information. The level of expertise needed to gather and prepare the required data also varies. Some solutions require no special skills. Others require advanced data science capabilities. Knowing these data requirements in advance helps you set the right expectations and choose the appropriate AI service for your needs.
-
-- *Understand SaaS AI data needs.* Microsoft 365 Copilot uses enterprise data in Microsoft Graph. No provisioning is needed. You just need to [categorize your data](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot#step-1-deploy-or-validate-your-data-protection) by using sensitivity labels. Copilots for specific business roles have different data connection and plug-in options, and most in-product SaaS copilots don’t require additional data preparation. Check the documentation for each service for more information.
-
-- *Understand low-code generative AI data needs.* You need to [connect data](/microsoft-copilot-studio/knowledge-copilot-studio) (knowledge sources) from across your enterprise and external public websites. Copilot Studio automates much of the data processing needed to create custom copilots for various business applications.
-
-- *Understand code-first generative AI data needs.* Creating generative AI apps typically requires grounding data for RAG. The grounding data needs to be limited to your specific use case. You shouldn't mix different types of information or include irrelevant data in the grounding data. Unstructured data needs to be in the [right format](/azure/search/search-how-to-create-search-index?tabs=portal#prerequisites) and [properly processed](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) when you create an [index](/azure/search/search-how-to-create-search-index).
-
-    For structured data in databases, you need to embed and connect the data to your app. For example, [Azure SQL Database](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications) natively connects to Azure AI Search. You can also use certain database capabilities, such as the vector database capability in [Azure Cosmos DB](/azure/cosmos-db/vector-database). [Azure Database for PostgreSQL](/azure/postgresql/flexible-server/generative-ai-azure-overview) allows you to connect to Azure AI via code.
-
-- *Understand machine learning data needs.* Training machine learning models in Azure Machine Learning or Fabric requires large datasets on a specific domain. You need to preprocess, clean, and filter data before you split, train, and validate AI models.
-
-- *Understand analytical AI data needs.* Most Azure AI services don't require additional data. You can fine-tune some models, like models in Azure AI Custom Vision. Otherwise, you consume the APIs in your application and inference them with data coming into the application.
-
-### Understand AI cost factors
-
-Cost is an important consideration when you validate your choice of AI solutions. The goal of this section is to make it easy to find and estimate the costs of different services. Microsoft SaaS copilots and Copilot Studio require a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Virtual machines (CPUs or GPUs) are the primary cost for AI models that run on Azure Virtual Machines. For Azure services, use the individual product [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.
-
-*Table 1. Summary
+Azure has a range of platform-as-a-service (PaaS) solutions to build AI workloads. Azure provides low-code platforms for businesses without developer or data science skills. There are also code-first AI platforms for developers and data scientists. Pick the platform that aligns with your current and future goals.  Building a Retrieval Augmented Generation (RAG) application with generative AI or training an AI model on your own data requires more advanced skills.
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|  ----|-------------| ---------| ---- |
-| Increase individual productivity | Copilot ([Free](https://copilot.microsoft.com/) or [Pro](https://www.microsoft.com/store/b/copilotpro5)) | No | None | None for Free or [subscription for Pro](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
-| Increase individual productivity, and chat with business data | [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) and other SaaS Copilots | Yes | General IT and data management | [License](https://www.microsoft.com/microsoft-365/microsoft-copilot#plans), [Security Compute Units](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security#pricing) |
 | Build RAG applications with low-code platform | [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | Yes | Using a low-code platform to connect data sources, mapping out prompts, and deploying copilots to various locations | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
 | Build RAG applications with code-first platform | [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) or [Azure OpenAI](/azure/ai-services/openai/overview) | Yes | Selecting models, orchestrating dataflow, chunking data, enriching chunks, choosing indexing, understanding query types (full-text, vector, hybrid), understanding filters and facets, performing reranking, engineering prompt flow, deploying endpoints, and consuming endpoints in apps | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
 | Fine-tune generative AI models | [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) | Yes | Preprocessing data, splitting data into training and validation data, validating models, configuring additional parameters, improving models, deploying models, and consuming endpoints in apps | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
 | Train and inference machine learning models by using your own data | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) or [Microsoft Fabric](/fabric/get-started/microsoft-fabric-overview) | Yes | Preprocessing data, training models by using code or automation, improving models, deploying machine learning models, and consuming endpoints in apps | Compute, storage, and data transfer |
 | Consume analytical AI models in applications | [Azure AI services](/azure/ai-services/what-are-ai-services) | Yes | Picking the right AI model, securing endpoints, consuming endpoints in apps, and fine-tuning as needed | Use of model endpoints consumed, storage, data transfer, compute (if you train custom models) |
+
+#### Bring your own models with infrastructure services (IaaS) 
+
+For more advanced AI needs, Azure Virtual Machines provides access to GPUs and CPUs with virtual machine (VM) images so you can bring your own AI models to Azure. Azure PaaS solutions are the preferred adoption pathway. You should use them first before you try IaaS.
+
+| AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
+| --------------|  ----|-------------| ---------| ---- |
 | Train and inference your own AI models. Bring your own models to Azure. | [Azure Virtual Machines](/azure/virtual-machines/overview) | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
-## Define an AI data strategy
+
+### Understand AI cost factors
+
+Cost is an important consideration when you validate your choice of AI solutions. The goal of this section is to make it easy to find and estimate the costs of different services. Microsoft SaaS copilots and Copilot Studio require a subscription or license. The main cost factors for Azure AI PaaS services are model usage, data storage, and compute costs. Virtual machines (CPUs or GPUs) are the primary cost for AI models that run on Azure Virtual Machines. For Azure services, use the individual product [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop full estimates.
+
+
+### Define an AI data strategy
 
 An AI data strategy ensures that you handle data in a way that meets regulatory, ethical, and operational standards. This strategy involves outlining data collection, storage, and usage practices, as well as ensuring data security and privacy. An effective AI data strategy builds trust in your AI systems and promotes accurate, reliable outputs.
 

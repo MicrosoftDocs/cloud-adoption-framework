@@ -11,6 +11,13 @@ ms.topic: conceptual
 
 This article provides guidance on selecting the right Azure platform resources for different types of AI workloads, covering both generative and nongenerative AI. Choosing the correct resources is essential for optimizing performance, cost, and scalability, helping businesses leverage AI effectively on Azure.
 
+| AI platform | AI type | Description | Skills required |
+|---------|------------|---------| --- |
+| Azure AI services | Analytical AI | Platform for consuming prebuilt machine learning models | Developer skills |
+| Azure OpenAI | Generative AI | Platform for accessing OpenAI models | Developer and data science skills |
+| Azure AI Studio | Generative AI | Platform for prompt engineering and deploy generative AI endpoints | Developer and data science skills |
+| Azure Machine Learning | Machine learning | Platform for training and deploying machine learning models | Developer skills and advanced data science skills |
+
 ## Understand generative AI workloads
 
 Generative AI workloads use large and small language models to create content based on inputs. These workloads typically rely on a core set of components that work together to provide coherent, relevant responses, and this section explains why these components matter.
