@@ -13,7 +13,7 @@ This article provides recommendations for building AI workloads by using Azure p
 
 ## Understand generative AI workloads
 
-Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). 
+Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
 
 ### Generative AI components
 
@@ -23,11 +23,11 @@ Generative AI workloads on Azure platforms share a common set of components. The
 
 ### Generative AI resources
 
-RAG workloads need a generative AI model endpoint, orchestrator, search and retrieval mechanisms, data sources, workload platform, and compute resources. Here are the high-level choices you need to make when you create a generative AI workload in Azure:
+Generative AI workloads using RAG need a generative AI model endpoint, orchestrator, search and retrieval mechanisms, data sources, workload platform, and compute resources. Here are the high-level choices you need to make when you create a generative AI workload in Azure:
 
 - *Pick a generative AI platform.* To deploy and consume a generative AI model endpoint, you need a generative AI platform. Use Azure OpenAI Service and Azure AI Studio to deploy generative AI models:
 
-    - Azure OpenAI Service gives you access to [OpenAI models](/azure/ai-services/openai/concepts/models?tabs=python-secure), Embedding models, DALL-E, Whisper, and text to speech models with the security and enterprise promise of Azure. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering.
+    - [Azure OpenAI Service](/azure/ai-services/openai/overview) gives you access to [OpenAI models](/azure/ai-services/openai/concepts/models), Embedding models, DALL-E, Whisper, and text to speech models with the security and enterprise promise of Azure. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering.
 
     - [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is a platform for developing and deploying generative AI apps and Azure AI APIs responsibly. It includes a rich set of AI capabilities, simplified user interface and code-first experiences, offering a one-stop shop to build, test, deploy, and manage intelligent solutions. Azure AI Studio is designed to help developers and data scientists efficiently build and deploy generative AI applications with the power of Azure's broad AI offerings. The model catalog in Azure AI Studio features hundreds of models across model providers such as Azure OpenAI Service, Mistral, Meta, Cohere, NVIDIA, and Hugging Face, including models that Microsoft trained. and built-in development tools, such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing.
 
