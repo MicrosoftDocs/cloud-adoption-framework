@@ -75,13 +75,6 @@ You can enter details of your on-premises infrastructure, including servers, dat
 
 **Retail Rates Prices API:** Use the [Retail Rates Prices API](/rest/api/cost-management/retail-prices/azure-retail-prices) to retrieve retail prices for all Azure services. Previously, the only way that you could retrieve prices for Azure services was to either use the Azure Pricing Calculator or use the Azure portal. This API gives you an unauthenticated experience to get retail rates for all Azure services. Use the API to explore prices for Azure services against different regions and different SKUs. The programmatic API can also help you create your own tools for internal analysis and price comparison across SKUs and regions.
 
-**Azure VM cost estimator:** This Power BI model allows you to estimate your cost savings against pay-as-you-go pricing by optimizing Azure offers and benefits for VMs like Azure Hybrid Benefit and reserved instances. 
-
-Download the following files to use the Power BI model:
-
-- [Power BI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/azure-virtual-machine-cost-estimator.pbix)
-- [Excel file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/on-premises-compute-unit-lists.xlsx)
-
 **Azure Pricing Calculator:** Use the [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to estimate your hourly or monthly costs for Azure products.
 
 **Partner toolsets:** Microsoft Partners have tools in the [Azure Marketplace](https://azuremarketplace.microsoft.com/home) that can help create a migration cost analysis.
