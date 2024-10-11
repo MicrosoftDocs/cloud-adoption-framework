@@ -13,20 +13,25 @@ This article provides recommendations for building AI workloads by using Azure p
 
 ## Understand generative AI workloads
 
-Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)] (/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). RAG workloads need a generative AI model endpoint, orchestrator, search and retrieval mechanisms, data sources, workload platform, and compute resources.
+Generative AI workloads on Azure platforms share a common set of components. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). 
+
+### Generative AI components
+
+(1) An workload receives the user query. (2) An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism finds the right grounding data to send to the generative AI endpoint. (4) A generative AI model endpoint creates a response based on the user query and grounding data.
 
 :::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI workload." lightbox="./images/generative-ai-app.svg" border="false":::
 
-1. An workload receives the user query.
-1. An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow.
-1. A search and retrieval mechanism exposes data from several data sources in a way that ensures that the data can be consumed by AI apps.
-1. A generative AI model endpoint creates a response based on the user query and grounding data.
+### Generative AI resources
 
-Here are the high-level choices you need to make when you create a generative AI workload in Azure:
+RAG workloads need a generative AI model endpoint, orchestrator, search and retrieval mechanisms, data sources, workload platform, and compute resources. Here are the high-level choices you need to make when you create a generative AI workload in Azure:
 
-- *Pick a generative AI platform.* To deploy and consume a generative AI model endpoint, you need a generative AI platform. Depending on your needs, you can use either [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) or Azure OpenAI Service. Azure AI Studio provides a code-first development experience. You get access to a wide variety of generative AI models and built-in development tools, such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing. Azure OpenAI gives you access to OpenAI models and is a good starting point if you just want to use those models.
+- *Pick a generative AI platform.* To deploy and consume a generative AI model endpoint, you need a generative AI platform. Use Azure OpenAI Service and Azure AI Studio to deploy generative AI models:
 
-- *Choose the right AI compute.* For Azure AI Studio and Azure Machine Learning, you need compute resources to build, evaluate, inference, or fine-tune your AI models and prompt flows. GPUs should be the default for most AI workloads. They're ideal for deep learning, complex matrix operations, and large datasets. Consider CPUs for data preprocessing tasks or for training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
+    - Azure OpenAI Service gives you access to [OpenAI models](/azure/ai-services/openai/concepts/models?tabs=python-secure), Embedding models, DALL-E, Whisper, and text to speech models with the security and enterprise promise of Azure. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering.
+
+    - [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is a platform for developing and deploying generative AI apps and Azure AI APIs responsibly. It includes a rich set of AI capabilities, simplified user interface and code-first experiences, offering a one-stop shop to build, test, deploy, and manage intelligent solutions. Azure AI Studio is designed to help developers and data scientists efficiently build and deploy generative AI applications with the power of Azure's broad AI offerings. The model catalog in Azure AI Studio features hundreds of models across model providers such as Azure OpenAI Service, Mistral, Meta, Cohere, NVIDIA, and Hugging Face, including models that Microsoft trained. and built-in development tools, such as prompt flow, fine-tuning, model evaluation, content safety filters, and tracing.
+
+- *Choose the right AI compute type.* For Azure AI Studio, you need compute instances for prompt flow, creating an index, and opening Visual Studio Code (Web or Desktop) in Azure AI Studio. GPUs are ideal for deep learning, complex matrix operations, and large datasets. Consider CPUs for data preprocessing tasks or for training machine learning models on small datasets. You might want to use CPUs to reserve your GPU quota.
 
 - *Pick an orchestrator.* Popular generative AI orchestrators include Microsoft [Semantic Kernel](/semantic-kernel/overview/), [Prompt flow](https://microsoft.github.io/promptflow/index.html), and [LangChain](https://python.langchain.com/v0.2/docs/integrations/platforms/microsoft/). Semantic Kernel easily integrates with Azure services. LangChain is likely to have easier extensibility outside of the Microsoft ecosystem.
 
