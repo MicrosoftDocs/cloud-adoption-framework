@@ -28,3 +28,8 @@ A storage solution for AI workloads on Azure infrastructure must be capable of m
 - *Ensure data consistency across distributed environments.* Ensure data consistency across distributed AI workloads by setting up synchronization between Azure Managed Lustre and Azure Blob Storage. This synchronization ensures that all nodes accessing the data are working with the same, consistent version, preventing errors and discrepancies in distributed environments.
 
 - *Enable data versioning for reproducibility.* Activate versioning in Azure Blob Storage to track changes to datasets and models over time. This feature facilitates rollback, enhances reproducibility, and supports collaboration. It maintains a detailed history of modifications to data and models and allows you to compare and restore previous versions as needed.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [IaaS AI networking](./networking.md)

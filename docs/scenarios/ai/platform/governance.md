@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Governance for AI workloads using AI platforms
 
-Additionally, it assumes that you've established governance policies at the management group level for your AI workload types, like internet-facing (online) and internal (corporate) workloads. These polices are covered in [AI Ready](ready.md#prepare-ai-resource-organization). The following recommendations are intended as a starting point for your AI governance.
+This guidance assumes that you've established governance policies at the management group level for your AI workload types, like internet-facing (online) and internal (corporate) workloads. These polices are covered in [AI Ready](ready.md#prepare-ai-resource-organization). The following recommendations are intended as a starting point for your AI governance.
 
 ## Govern AI models
 
-This guidance outlines recommendations for controlling the input and output of AI model endpoints.
+Organizations need clear processes for managing AI models to ensure reliable, safe, and ethical outputs. Controls over AI model inputs and outputs help mitigate risks, such as harmful content and unintended behaviors, which could have serious implications for both users and the organization.
 
 - *Establish a process to detect AI risks.* Use tools like Defender for Cloud to [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [explore risks to predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk). Establish a policy to regularly [red team generative AI models](/azure/ai-services/openai/concepts/red-teaming). Document identified risks and continuously update your AI governance policies to mitigate emerging issues.
 
@@ -25,7 +25,7 @@ This guidance outlines recommendations for controlling the input and output of A
 
 ## Govern AI costs
 
-This guidance outlines recommendations for controlling the cost of AI workloads.
+Controlling costs in AI workloads allows organizations to maximize efficiency while reducing expenses. Cost governance strategies ensure that AI investments align with business goals and help prevent unexpected expenses from over-provisioning or underutilization.
 
 - *Use the right billing model.* If you have predictable workloads, use AI commitment tiers in Azure AI services. Use provisioned throughput units, which can be less expensive than pay-as-you-go pricing with Azure OpenAI and OpenAI models via Azure AI Studio.
 
@@ -47,7 +47,7 @@ For more cost management guidance, see [Manage AI costs](manage.md#manage-ai-cos
 
 ## Govern AI security
 
-This guidance outlines recommendations for controlling security risks to AI workloads.
+Security in AI workloads protects against potential threats that could compromise data, models, or infrastructure. Strong security practices for AI maintain the safety and integrity of these systems, reducing risks of unauthorized access and data breaches.
 
 - *Enable Defender for Cloud on every subscription.* Defender for Cloud provides a cost-effective approach for detecting configurations in your deployed resources that aren't secure. You should also enable [AI threat protection](/azure/defender-for-cloud/ai-threat-protection).
 
@@ -61,7 +61,7 @@ This guidance outlines recommendations for controlling security risks to AI work
 
 ## Govern AI operations
 
-This guidance outlines recommendations for controlling AI workload operations.
+Effective AI operations management ensures stable and consistent AI services for organizations. Centralized oversight and continuity plans enable companies to maintain reliable model performance and minimize downtime, which is essential for sustaining AI’s business value.
 
 - *Consider centralizing AI model governance.* Having a single individual or team govern AI model endpoints makes it easier to standardize governance and monitor the endpoints. The AI Center of Excellence (CoE) handles this function for the business as an extension of the Cloud CoE or standalone team. For more information, see [AI CoE](center-of-excellence.md).
 
@@ -73,7 +73,7 @@ This guidance outlines recommendations for controlling AI workload operations.
 
 ## Govern AI regulatory compliance
 
-This guidance outlines recommendations for controlling AI workload compliance with current and future AI regulations.
+Regulatory compliance in AI ensures that organizations adhere to industry standards and legal requirements. Robust compliance measures help mitigate risks related to legal liabilities and build trust in AI solutions among users, clients, and regulators.
 
 - *Automate compliance.* Use [Microsoft Purview Compliance Manager](/microsoft-365/compliance/compliance-manager-overview) to assess and manage compliance across cloud environments. Use the applicable [regulatory compliance initiatives](/azure/governance/policy/samples/#regulatory-compliance) in Azure Policy for your industry. Apply other policies based on the AI services that you use, such as [Azure AI Studio](/azure/ai-services/security-controls-policy), [Azure Machine Learning](/azure/machine-learning/policy-reference), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference).
 
@@ -81,7 +81,7 @@ This guidance outlines recommendations for controlling AI workload compliance wi
 
 ## Govern AI data
 
-This guidance outlines recommendations for controlling AI data that's fed into AI models.
+Proper data governance for AI ensures that only appropriate, compliant data feeds into models. This safeguards data privacy and intellectual property, reducing risks associated with data misuse and enhancing the quality and reliability of AI outputs.
 
 - *Establish a process for cataloging data.* Use a tool like [Microsoft Purview](/purview/what-is-data-catalog) to implement a unified data catalog and classification system across your organization. Integrate these policies into your CI/CD pipelines for AI development.
 
@@ -90,3 +90,8 @@ This guidance outlines recommendations for controlling AI data that's fed into A
 - *Prevent copyright infringement.* Use a content filtering system like [Protected material detection in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/protected-material) to filter out copyrighted material. If you're grounding, training, or fine-tuning an AI model, ensure that you use legally obtained and properly licensed data and implement safeguards to prevent the model from infringing on copyrights. Regularly review outputs for intellectual property compliance.
 
 - *Implement version control for grounding data.* Establish a version control process for grounding data, for example, in RAG. Versioning ensures that any changes to the underlying data or its structure are tracked and can be reverted if necessary, which maintains consistency across deployments.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [PaaS AI management](./management.md)

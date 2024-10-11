@@ -64,3 +64,8 @@ Securing operating systems requires keeping virtual machines and container image
 
 - *Patch VM guests.* Regularly apply patches to virtual machines and container images. Consider enabling [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for your virtual machines and scale sets.
 - *Use antimalware.* Use [Microsoft Antimalware for Azure](/azure/security/fundamentals/antimalware) on your virtual machines to protect them from malicious files, adware, and other threats.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [IaaS AI governance](./governance.md)

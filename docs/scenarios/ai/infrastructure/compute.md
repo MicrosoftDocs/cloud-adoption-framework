@@ -66,3 +66,8 @@ Using containers for AI workloads provides a consistent, reproducible environmen
 - *Install drivers.* Ensure that you have the necessary drivers installed to enable containers to run in various scenarios. For cluster configurations, container runtime tools such as Pyxis and Enroot are typically required.
 
 - *Use toolkits.* The NVIDIA Container Toolkit is commonly used to enable GPU resources within containers. Ensure you install all necessary drivers, such as drivers for CUDA and the GPU. You can then use your preferred container runtime and engine to execute your AI workloads.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [IaaS AI storage](./storage.md)

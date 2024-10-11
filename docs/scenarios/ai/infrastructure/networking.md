@@ -40,3 +40,8 @@ Optimizing for large-scale data processing involves strategies to manage extensi
 - *Apply data or model parallelism techniques.* To manage extensive data transfers across multiple GPUs, implement data parallelism or model parallelism depending on your AI workload needs. Ensure the use of High Bandwidth Memory (HBM), which is ideal for high-performance applications due to its high bandwidth, low power consumption, and compact design. HBM supports fast data processing, essential for AI applications that require processing large datasets.
 
 - *Use advanced GPU networking features.* For demanding AI scenarios, choose Azure VMs like NDH100v5 and NDMI300Xv5. These VMs come with dedicated 400 Gb/s NVIDIA Quantum-2 CX7 InfiniBand connections, which are automatically configured within virtual machine scale sets. These connections support GPUDirect RDMA, enabling direct GPU-to-GPU data transfers that reduce latency and enhance overall system performance.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [IaaS AI security](./security.md)

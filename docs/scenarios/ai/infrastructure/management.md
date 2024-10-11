@@ -46,3 +46,8 @@ This guidance outlines best practices for implementing business continuity and d
 - *Ensure data compliance.* Make sure your backup strategy complies with data protection regulations. Comply with data residency requirements and store backups in appropriate geographic locations.
 
 - *Create snapshots.* You can use the capabilities of your scheduler to take snapshots. For example, CycleCloud can take point-in-time snapshots of the underlying application datastore as recovery points.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [IaaS AI management](./management.md)
