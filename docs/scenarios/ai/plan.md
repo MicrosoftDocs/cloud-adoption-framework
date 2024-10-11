@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # AI Plan - Recommendations for developing an AI adoption plan
 
-This article provides recommendations for planning AI adoption. Strategy provides an end goal to your AI adoption. During this stage, you get more tactical about preparing your organization to adopt AI. During planning, you need to ensure that you have the right skills and planning for AI deployment. When you deploy AI, you need to consider responsible AI practices and your approach to deploying and consuming AI endpoints across your applications.  
+An AI adoption plan outlines the necessary steps for an organization to incorporate AI into its operations. This guidance is essential because a structured approach enables organizations to align AI initiatives with business goals, ensuring that resources, skills, and technology align effectively for successful deployment.
 
 ## Evaluate AI maturity
 
-As with any technology, there's a learning curve to adopting AI. Evaluating your AI maturity level can help you prioritize AI opportunities. AI projects that are too advanced for your experience don't provide the return on investment you need. If you plan to build generative AI applications, start with this generative AI technical assessment. At a high level, here are the readiness factors you need to consider:
+Evaluating AI maturity helps an organization understand its current capabilities and readiness to implement AI. This step is important because it allows organizations to choose AI projects that align with their skill level and available data, increasing the chances of achieving a positive return on investment while reducing the risk of overreaching.
 
 | AI maturity level | Feasible AI projects | Skills required | Data readiness |
 |-------------------|----------------------|-----------------|----------------|
@@ -22,9 +22,11 @@ As with any technology, there's a learning curve to adopting AI. Evaluating your
 | Level 3       | - Any of the previous projects <br> - Generative AI app with RAG in Azure AI Studio (or Azure Machine Learning) <br> - Training and deploying a machine learning model in Machine Learning <br> - Training and running a small AI model on Azure Virtual Machines | - Proficiency in prompt engineering <br> - Proficiency in AI model selection, data chunking, and query processing <br> - Proficiency in data preprocessing, cleaning, splitting, and validating <br> - Grounding data for indexing | - Large amounts of historical business data available for machine learning <br> - Small amount of domain-specific data available |
 | Level 4    | - Any of the previous projects <br> - Training and running a large generative or nongenerative AI app on Virtual Machines, Azure Kubernetes Service, or Azure Container Apps | - Advanced AI / machine learning expertise, including infrastructure management <br> - Proficiency in handling complex AI model training workflows <br> - Experience with orchestration, model benchmarking, and performance optimization <br> - Strong skills in securing and managing AI endpoints | - Large amounts of data available for training |
 
+For more information, see [Technical Assessment for Generative AI in Azure](https://learn.microsoft.com/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
+
 ## Acquire AI skills
 
-Assess your organization's current AI skill set to identify gaps and determine whether to develop internally or hire external talent. A combination of approaches is often needed, balancing in-house development with outsourcing, based on broader organizational strategy. For strategic projects, focus on building in-house expertise for long-term success. In areas that require quick value, external partnerships can fill immediate gaps while internal capabilities are developed. This combination ensures efficiency in the short term and strategic skill growth for long-term competitiveness.
+Acquiring the right AI skills involves assessing the existing talent and deciding between internal development or hiring external experts. This process matters because building a capable team supports sustained AI adoption, enabling organizations to respond quickly to new challenges and maintain competitive relevance through continuous learning and skill development.
 
 - *Learn AI skills.* The [Microsoft Learn](/) platform provides free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certification goals, such as earning certifications related to Azure AI. These certifications include [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
@@ -39,7 +41,7 @@ Assess your organization's current AI skill set to identify gaps and determine w
 
 ## Access AI resources
 
-This section provides a quick way to help you understand and access what you need to start using AI solutions.
+Accessing AI resources means identifying and leveraging tools, platforms, and software required for AI deployment. This step provides a quick way to help you understand and access what you need to start using AI solutions.
 
 - *Access Microsoft copilots.* Most Microsoft SaaS Copilots require a license or an add-on subscription.
 
@@ -52,7 +54,7 @@ This section provides a quick way to help you understand and access what you nee
 
 ## Create an AI proof of concept
 
-A proof of concept (PoC) is a valuable planning tool for AI adoption. This step is optional, but it's a valuable step for anyone who's new to AI. It provides a concrete evaluation of your AI maturity level and helps you set realistic expectations around delivery timelines. For all Microsoft AI platforms, quickstart articles that provide PoCs that align with common use cases are available. Use the following table to find the right quickstart article.
+An AI proof of concept (PoC) demonstrates the potential of AI projects on a small scale before full deployment. This process is important because it allows organizations to test feasibility, gather insights, and refine AI use cases, ensuring that they commit to projects that align with their capabilities and business objectives.
 
 | AI type  | Quickstart link |
 |----------|--------------|
@@ -70,7 +72,7 @@ A proof of concept (PoC) is a valuable planning tool for AI adoption. This step 
 
 ## Plan for responsible AI
 
-Before building applications in Azure, you need to think through your AI deployment. Responsible AI should serve as a guide to your application development.  
+Responsible AI planning involves implementing practices that promote ethical, secure, and reliable AI use. This approach is crucial as it ensures that AI applications align with organizational values and regulatory requirements, protecting users, minimizing risks, and building trust in AI systems.
 
 - *Use responsible-AI planning tools.* Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
@@ -82,9 +84,9 @@ Before building applications in Azure, you need to think through your AI deploym
 
 ## Estimate delivery timelines
 
-Based on your PoC, assign a delivery timeline for your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships.  
+Estimating delivery timelines involves planning realistic schedules and milestones for AI project implementation. Clear timelines are important because they help organizations allocate resources effectively, manage expectations, and ensure that AI initiatives progress efficiently from proof of concept to full deployment.
 
-Microsoft AI SaaS solutions provide the shortest timelines for seeing a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. In most cases, it takes weeks or months before you have a production-ready AI application.
+Based on your PoC, assign a delivery timeline for your AI opportunities. Create a timeline with clear milestones and deliverables for implementing selected use cases. Assign teams, define roles, and secure necessary tools or partnerships. Microsoft AI SaaS solutions provide the shortest timelines for seeing a return on investment. Timelines for building AI apps on Azure PaaS and IaaS solutions depend on your use case and AI maturity. In most cases, it takes weeks or months before you have a production-ready AI application.
 
 ## Next step
 

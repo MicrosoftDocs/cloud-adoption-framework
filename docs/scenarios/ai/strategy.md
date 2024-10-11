@@ -9,15 +9,15 @@ ms.topic: conceptual
 
 # AI Strategy - Recommendations to develop an AI adoption strategy
 
-An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success. To oversee the AI adoption process, establish an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress.
+An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success.
 
 ## Define a responsible AI strategy
 
 A responsible AI strategy helps you build AI systems that are ethical, fair, and trustworthy. This strategy guides you AI adoption and the ongoing management of AI workloads. Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principle. The principles provide a framework for creating AI systems that benefit all users. You should define or adopt similar principles to guide your AI initiatives. Microsoft also offers  [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage AI workloads in line with responsible AI practices. This strategy involves monitoring AI systems to prevent bias, ensuring transparency, and promoting accountability. By adopting responsible AI practices, you can build trust with customers and stakeholders, fostering a positive impact.
 
-- *Ensure regulatory compliance.* Adhere to regulatory requirements governing AI use in each country where you operate. This compliance dictates how you adopt, build, and manage AI systems.
+- *Establish AI accountability.* To oversee the AI adoption process, establish an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress. Create a governance framework that assigns responsibility for data quality, ethical AI practices, and proper data usage. Set up auditing processes to maintain accountability throughout AI data handling.
 
-- *Establish AI accountability.* Create a governance framework that assigns responsibility for data quality, ethical AI practices, and proper data usage. Set up auditing processes to maintain accountability throughout AI data handling.
+- *Ensure regulatory compliance.* Adhere to regulatory requirements governing AI use in each country where you operate. This compliance dictates how you adopt, build, and manage AI systems.
 
 - *Mitigate data biases.* Identify potential biases in datasets and apply strategies to minimize them. Regularly assess fairness, address data imbalances, and ensure AI outputs are unbiased toward any group or demographic.
 
