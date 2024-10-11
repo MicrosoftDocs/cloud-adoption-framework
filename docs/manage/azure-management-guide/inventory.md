@@ -21,9 +21,9 @@ For any enterprise-grade environment, the following table outlines the suggested
 | Process | Tool | Purpose |
 |---|---|---|
 | Monitor health of Azure services | [Azure Service Health](/azure/service-health/service-health-overview) | Health, performance, and diagnostics for services running in Azure |
-| Log centralization | [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) | Central logging for all visibility purposes |
+| Log centralization | [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-overview) | Central logging for all visibility purposes |
 | Monitoring centralization | [Azure Monitor](/azure/azure-monitor/overview) | Central monitoring of operational data and trends |
-| Virtual machine inventory and change tracking | [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview) | Inventory VMs and monitor changes for guest OS level |
+| Virtual machine inventory and change tracking | [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview-monitoring-agent) | Inventory VMs and monitor changes for guest OS level |
 | Subscription monitoring | [Azure activity log](/azure/azure-monitor/essentials/activity-log) | Monitoring change at the subscription level |
 | Guest OS monitoring | [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) | Monitoring changes and performance of VMs |
 | Network monitoring | [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) | Monitoring network changes and performance |
@@ -72,16 +72,16 @@ To set up Service Health alerts, go to the [Azure portal](https://portal.azure.c
 
 For more information, see [Azure Service Health](/azure/service-health/).
 
-## Log Analytics
+## Azure Monitor Agent
 
 ::: zone-end
 ::: zone target="chromeless"
 
-## [Log Analytics](#tab/Log-Analytics)
+## [Azure Monitor Agent](#tab/Monitor-Agent)
 
 ::: zone-end
 
-A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) is a unique environment for storing Azure Monitor log data. Each workspace has its own data repository and configuration. Data sources and solutions are configured to store their data in particular workspaces. Azure monitoring solutions require all servers to be connected to a workspace, so that their log data can be stored and accessed.
+A [Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/azure-monitor-agent-overview) serves as a repository for metrics, logs, and telemetry from monitored resources such as virtual machines, containers, and apps. The data in the workspace can be queried, visualized, and used for alerts or automation. You can connect multiple resources to a single workspace, allowing centralized monitoring and management of diverse environments.
 
 ::: zone target="chromeless"
 
@@ -92,7 +92,7 @@ A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) is
 
 ### Learn more
 
-To learn more, see the [Log Analytics workspace creation documentation](/azure/azure-monitor/logs/quick-create-workspace).
+To learn more, see the [Azure Monitor Agent workspace creation documentation](/azure/azure-monitor/logs/logs-ingestion-api-overview).
 
 ## Azure Monitor
 
@@ -151,7 +151,7 @@ There are two approaches to onboarding:
 
 Each article guides you through a series of steps to onboard these solutions:
 
-- Update Management in Azure Automation
+- Azure Update Manager
 - Change Tracking and Inventory in Azure Automation
 - Azure activity log
 - Azure Log Analytics Agent Health
