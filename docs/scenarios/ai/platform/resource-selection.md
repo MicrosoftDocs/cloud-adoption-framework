@@ -38,7 +38,7 @@ Here are the high-level choices you need to make when you create a generative AI
 
 - *Harden Azure resources.* Apply [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every Azure resource. Also, follow the security recommendations in [Azure service guides](/azure/well-architected/service-guides/).
 
-## Understand analytical AI workloads
+## Understand nongenerative AI workloads
 
 Nongenerative AI applications use machine learning algorithms to automate business processes within applications. This section provides high-level recommendations to help you choose the appropriate nongenerative AI platform, data sources, and application platform.
 
