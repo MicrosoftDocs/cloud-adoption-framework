@@ -13,11 +13,11 @@ Networking for AI workloads involves setting up Azure infrastructure to support 
 
 ## Ensure sufficient bandwidth
 
-Sufficient bandwidth refers to the capacity of a network to handle large volumes of data without delays or interruptions. For businesses adopting AI, high bandwidth ensures fast, uninterrupted data transfer between on-premises systems and Azure, supporting rapid AI model training and reducing downtime in the pipeline. For organizations transferring large datasets from on-premises to the cloud for AI model training, a high-bandwidth connection is essential. Use Azure ExpressRoute to establish a dedicated, secure, and reliable high-speed connection between your on-premises network and Azure. This ensures seamless data transfer, reducing bottlenecks in the model training pipeline.
+Sufficient bandwidth refers to the capacity of a network to handle large volumes of data without delays or interruptions. High bandwidth ensures fast, uninterrupted data transfer between on-premises systems and Azure, supporting rapid AI model training and reducing downtime in the pipeline. For organizations transferring large datasets from on-premises to the cloud for AI model training, a high-bandwidth connection is essential. Use Azure ExpressRoute to establish a dedicated, secure, and reliable high-speed connection between your on-premises network and Azure. This ensures seamless data transfer, reducing bottlenecks in the model training pipeline.
 
 ## Minimize latency
 
-Minimizing latency involves reducing delays in data transfer between networked resources. Businesses implementing AI benefit from lower latency by achieving quicker data processing, enabling real-time insights, and improving the performance of latency-sensitive applications.
+Minimizing latency involves reducing delays in data transfer between networked resources. Lower latency provides quicker data processing, enabling real-time insights, and improving the performance of latency-sensitive applications.
 
 - *Optimize resource placement.* To minimize latency for AI workloads, such as data preprocessing, model training, and inference, deploy Virtual Machines (VMs) within the same Azure region or availability zone. Co-locating resources reduces physical distance, thus improving network performance.
   
@@ -27,7 +27,7 @@ Minimizing latency involves reducing delays in data transfer between networked r
 
 ## Implement high-performance networking
 
-High-performance networking utilizes advanced networking features to support large-scale, intensive AI computations, particularly for GPU-accelerated tasks. For businesses, high-performance networks ensure rapid, efficient data exchanges between GPUs, which optimizes model training and accelerates AI development cycles.
+High-performance networking utilizes advanced networking features to support large-scale, intensive AI computations, particularly for GPU-accelerated tasks. High-performance networks ensure rapid, efficient data exchanges between GPUs, which optimizes model training and accelerates AI development cycles.
 
 - *Utilize InfiniBand for GPU workloads.* For applications dependent on GPU acceleration and distributed training across multiple GPUs, use Azure's InfiniBand network. InfiniBand’s GPUDirect RDMA capability supports direct GPU-to-GPU communication, improving data transfer speed and model training efficiency.
   
@@ -35,7 +35,7 @@ High-performance networking utilizes advanced networking features to support lar
 
 ## Optimize for large-scale data processing
 
-Optimizing for large-scale data processing involves strategies to manage extensive data transfers and high computational loads. By using data and model parallelism, businesses can scale their AI workloads effectively, enhancing processing speed and using Azure’s GPU-optimized virtual machines to handle complex, data-intensive AI applications.
+Optimizing for large-scale data processing involves strategies to manage extensive data transfers and high computational loads. By using data and model parallelism, you can scale their AI workloads effectively, enhancing processing speed and using Azure’s GPU-optimized virtual machines to handle complex, data-intensive AI applications.
 
 - *Apply data or model parallelism techniques.* To manage extensive data transfers across multiple GPUs, implement data parallelism or model parallelism depending on your AI workload needs. Ensure the use of High Bandwidth Memory (HBM), which is ideal for high-performance applications due to its high bandwidth, low power consumption, and compact design. HBM supports fast data processing, essential for AI applications that require processing large datasets.
 
