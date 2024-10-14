@@ -1,5 +1,5 @@
 ---
-title: Security for AI workloads using Azure AI platforms
+title: Security for AI workloads using Azure AI PaaS
 description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Security for AI workloads using Azure AI platforms
+# Security for AI workloads using Azure AI PaaS
 
 This articles provides recommendations for securing AI workloads that use Azure AI platform as a service (PaaS) solutions, such as Azure AI Studio, Azure Machine Learning, and Azure AI services. It focuses on the implementation of security configurations for the AI models and platforms on which they run. It's the second step in the overarching [Secure AI](./security.md) process.
 
@@ -62,3 +62,8 @@ This guidance provides recommendations for secure code executions made by AI sys
 - *Implement resource limits.* Set resource limits (CPU, memory, disk usage) for code execution environments to prevent any single execution from consuming excessive resources and potentially disrupting other services. Define execution timeouts to ensure that long-running or potentially stuck processes are terminated automatically.
 
 For more information, see [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant) , [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions?tabs=python) , and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Governance for AI workloads using Azure AI PaaS](../platform/governance.md)

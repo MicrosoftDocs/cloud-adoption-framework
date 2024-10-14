@@ -1,5 +1,5 @@
 ---
-title: Networking for AI workloads on Azure platforms
+title: Networking for AI workloads using Azure AI PaaS
 description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Networking for AI workloads on Azure platforms
+# Networking for AI workloads using Azure AI PaaS
 
 Azure AI Studio and Azure Machine Learning deploy to Microsoft Managed virtual networks that use private endpoints to access supporting Azure services like Azure Storage, Azure Key Vault, and Azure Container Registry.
 
@@ -23,3 +23,8 @@ Azure AI Studio and Azure Machine Learning deploy to Microsoft Managed virtual n
 - *Limit outbound traffic from your AI resources*. Limiting outbound traffic from your AI model endpoints helps protect sensitive data and maintain the integrity of your AI models. For minimizing data exfiltration risks, restrict outbound traffic to approved services or fully qualified domain names (FQDNs) and maintain a list of trusted sources. You should only allow unrestricted internet outbound traffic if you need access to public machine learning resources, but regularly monitor and update your systems. For more information, see [Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention), [Azure AI Studio](/azure/ai-studio/how-to/configure-managed-network), and [Azure Machine Learning.](/azure/machine-learning/how-to-network-isolation-planning#allow-only-approved-outbound-mode)
 
 - *Consider a generative AI gateway.* Consider using Azure API Management (APIM) as a generative AI gateway within your virtual networks. A generative AI gateway sits between your front-end and the AI endpoints. Application Gateway, WAF policies, and APIM within the virtual network is an established [architecture](https://github.com/Azure/apim-landing-zone-accelerator/blob/main/scenarios/workload-genai/README.md#scenario-3-azure-api-management---generative-ai-resources-as-backend) in generative AI solutions. For more information, see [AI Hub architecture](https://github.com/Azure-Samples/ai-hub-gateway-solution-accelerator#ai-hub-gateway-landing-zone-accelerator) and [Deploy Azure API Management instance to multiple Azure regions](/azure/api-management/api-management-howto-deploy-multi-region).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Security for AI workloads using Azure AI PaaS](../platform/security.md)

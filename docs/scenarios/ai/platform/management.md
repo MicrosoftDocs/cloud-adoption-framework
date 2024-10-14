@@ -1,5 +1,5 @@
 ---
-title: Management for AI workloads using Azure AI platforms
+title: Management for AI workloads using Azure AI PaaS
 description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: rajanaki
@@ -7,8 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Management of AI workloads on Azure platforms
-
+# Management for AI workloads using Azure AI PaaS
 
 
 ## Manage AI deployments
@@ -44,3 +43,8 @@ This guidance provides recommendations for measuring AI model performance over t
 ## Manage business continuity and disaster recovery
 
 *Use multi-region deployments for AI.* Implement multi-region deployments to ensure high availability and resiliency for both generative and nongenerative AI systems For more information, see multi-region deployment in [Azure AI Studio,](/azure/ai-studio/how-to/disaster-recovery#plan-for-multi-regional-deployment) [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning#plan-for-multi-regional-deployment), and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Implementation options for AI workloads using Azure AI PaaS](../platform/implementation-options.md)
