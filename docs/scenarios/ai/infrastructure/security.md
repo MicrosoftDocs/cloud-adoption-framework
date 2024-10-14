@@ -9,6 +9,8 @@ ms.topic: conceptual
 
 # Security for AI on Azure infrastructure
 
+This articles provides recommendations for securing AI workloads that use Azure AI platform as a service (PaaS) solutions, such as Azure AI Studio, Azure Machine Learning, and Azure AI services. It focuses on the implementation of security configurations for the AI models and platforms on which they run. It's the second step in the overarching [Secure AI](./security.md) process.
+
 Security for AI on Azure infrastructure involves protecting data, compute, and networking resources that support AI workloads. Securing these components ensures that sensitive information remains safe, minimizes exposure to potential threats, and ensures a stable operational environment for AI models and applications.
 
 ## Secure Azure services

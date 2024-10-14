@@ -1,5 +1,5 @@
 ---
-title: Management of AI workloads on Azure platforms
+title: Management for AI workloads using Azure AI platforms
 description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: rajanaki
