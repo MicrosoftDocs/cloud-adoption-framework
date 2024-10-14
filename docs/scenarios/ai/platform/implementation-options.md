@@ -9,18 +9,18 @@ ms.topic: conceptual
 
 # Implementation options for AI workloads on Azure platforms
 
-## Generative AI implementation options
-
 The following table provides links to implementation guidance for building generative AI applications.
 
-## AI reference architectures
+## Generative AI implementation options
 
-| --- | --- |
-| [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) |
-| [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) | [Azure OpenAI Landing Zone Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
-| [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
+- Recommended for Azure landing zones: [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)
+- [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat)
+- [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat)
 
-## AI technical guides
+Additional links:
+
+- [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide)
+- [Azure OpenAI Landing Zone Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main)
 
 ## Non-generative AI implementation options
 
@@ -31,5 +31,5 @@ Microsoft provides detailed implementation guidance and deployable assets for cr
 > [!div class="nextstepaction"]
 > [Secure AI](secure.md)
 
-:::image type="content" source="./images/secureai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Secure AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/secureai.svg" border="false":::
+:::image type="content" source="../images/secureai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Secure AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/secureai.svg" border="false":::
 *Figure 1. Secure AI in the AI adoption process.*
