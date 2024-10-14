@@ -547,8 +547,7 @@ More details and resources include:
 - [AppLocker](/windows/security/application-security/application-control/windows-defender-application-control/applocker/applocker-overview)
 - [Securing SQL Server](/sql/relational-databases/security/securing-sql-server)
 - [Windows Security baselines](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
-- [Windows Defender Application Control and virtualization-based protection of code integrity](/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
-- [Device Guard](/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [App Control and virtualization-based protection of code integrity](/windows/security/application-security/application-control/introduction-to-virtualization-based-security-and-appcontrol)
 
 #### Network access controls
 
