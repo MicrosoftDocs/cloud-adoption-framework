@@ -1,5 +1,5 @@
 ---
-title: Governance for AI workloads on Azure platforms
+title: Implementation options for AI workloads on Azure platforms
 description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: ssumner
