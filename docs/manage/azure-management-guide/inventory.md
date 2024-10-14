@@ -92,7 +92,7 @@ A [Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/azure-monitor-agent-ov
 
 ### Learn more
 
-To learn more, see the [Azure Monitor Agent workspace creation documentation](/azure/azure-monitor/logs/logs-ingestion-api-overview).
+To learn more, see the [Azure Monitor Agent overview](/azure/azure-monitor/agents/azure-monitor-agent-overview).
 
 ## Azure Monitor
 
