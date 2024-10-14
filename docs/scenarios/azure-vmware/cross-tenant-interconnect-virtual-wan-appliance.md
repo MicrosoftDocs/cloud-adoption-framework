@@ -30,7 +30,7 @@ Network connectivity in a cross-tenant environment consists of the following con
 
 ### Azure VMware Solution SDDC-to-SDDC connectivity
 
-The connectivity between two Azure VMware Solution SDDCs that you deploy across tenants depends on the *pod* in which you deploy them. Use the following instructions to identify the pods in which you deploy SDDCs.
+The connectivity between two Azure VMware Solution SDDCs that you deploy across tenants depends on the pod in which you deploy them. Use the following instructions to identify the pods in which you deploy SDDCs.
 
 1. In the Azure portal, go to Azure VMware Solution.
 1. Select **Manage**, and then select **Clusters**.
@@ -46,11 +46,13 @@ Repeat the same process for other SDDCs. Determine whether they share any common
 
 After you identify the pods that SDDCs share, do one of the following options:
 
+- **Azure VMware Solution interconnect (Global Reach):** Use this option when two SDDCs are in same Azure region *and* don't share common pods between them. This option establishes an Expressroute circuit Global Reach connection between two SDDC Expressroute circuits. This option also enables transitive connectivity. Transitive connectivity means that the routes that the SDDC Expressroute circuit learns from the SDDC, Virtual WAN, the Virtual WAN direct spoke virtual networks also advertise across the tenant to the other SDDC Expressroute circuit, the SDDC, Virtual WAN, and the Virtual WAN direct spoke virtual networks.
+
 - **Use Azure VMware Solution interconnect (non-Global Reach):** Use this option when two SDDCs are in same Azure region *and* share a common pod between them. This option doesn't provide cross-tenant transitive connectivity for routes that Virtual WAN and its direct spoke virtual networks advertise.
 
 - **Use Azure VMware Solution ExpressRoute Global Reach:** Use this option when two SDDCs are in different Azure regions whether they share a pod or not. This option provides cross-tenant transitive connectivity for routes that Virtual WAN and its direct spoke virtual networks advertise.
 
-Both of these options can establish network connectivity between two SDDCs. The option that you choose the Azure VMware Solution SDDC-to-Azure connectivity.
+All of these options can establish network connectivity between two SDDCs. The option that you choose affects Azure VMware Solution SDDC-to-Azure connectivity.
 
 > [!NOTE]
 > You can use a [self-service model](/azure/azure-vmware/connect-multiple-private-clouds-same-region#add-connection-between-private-clouds) to establish network connectivity between two SDDCs. But if SDDCs run on stretched clusters, you should raise a [support ticket](/azure/azure-vmware/deploy-vsan-stretched-clusters#what-are-the-limitations-i-should-be-aware-of).
@@ -83,11 +85,11 @@ Use the following configurations to establish direct and indirect connectivity b
 
 ### Azure VMware Solution SDDC-to-on-premises connectivity
 
-Use Global Reach to establish connectivity between each Azure VMware Solution SDDC and the on-premises environment. In this scenario, each SDDC ExpressRoute circuit and on-premises ExpressRoute circuit connect to each other. The on-premises routes that the SDDC ExpressRoute circuit learns via a Global Reach connection are non-transitive. They don't advertise across the tenant, even when [Azure VMware Solution SDDC-to-SDDC connectivity](#azure-vmware-solution-sddc-to-sddc-connectivity) exists.
+Use Global Reach to establish connectivity between each Azure VMware Solution SDDC and the on-premises environment. In this scenario, each SDDC ExpressRoute circuit and on-premises ExpressRoute circuit connect to each other. The on-premises routes that the SDDC ExpressRoute circuit learns via a Global Reach connection are nontransitive. The routes don't advertise across the tenant, even if you have [Azure VMware Solution SDDC-to-SDDC connectivity](#azure-vmware-solution-sddc-to-sddc-connectivity).
 
 SDDC-to-on-premises connectivity coexists with cross-tenant SDDC-to-SDDC connectivity. In such a setup, one SDDC ExpressRoute circuit learns on-premises routes via a Global Reach connection and also learns cross-tenant Virtual WAN routes via SDDC-to-SDDC connectivity. The cross-tenant Virtual WAN or SDDC must not advertise the on-premises prefixes through other means, such as a static route or a VPN connection. If this occurs, the SDDC ExpressRoute learns duplicate routes for the on-premises environment, which creates a routing loop and breaks connectivity.
 
-If the on-premises environment uses multiple ExpressRoute circuits for redundancy, use the public AS path prepend to prefer one circuit over the other.
+If the on-premises environment has multiple ExpressRoute circuits for redundancy, use the public AS path prepend to prefer one circuit over the other.
 
 > [!NOTE]
 > SDDC-to-on-premises connectivity coexists with Azure-to-on-premises connectivity. You can use an ExpressRoute gateway in Virtual WAN to connect with the SDDC ExpressRoute circuit and the on-premises ExpressRoute circuit. But this connectivity isn't transitive.
@@ -114,7 +116,7 @@ If the on-premises environment uses multiple ExpressRoute circuits for redundanc
 
 ### Azure-to-on-premises connectivity
 
-Use the on-premises ExpressRoute circuit and the ExpressRoute gateway of Virtual WAN to establish Azure-to-on-premises connectivity. The connectivity between the Azure VMware Solution SDDC ExpressRoute and the same on-premises ExpressRoute gateway is non-transitive. The connection between the direct spoke virtual network and Virtual WAN via global virtual network peering is also non-transitive. The indirect spoke that connects to Virtual WAN must have a UDR that has an on-premises prefix as the destination network and an NVA that runs in the direct spoke as the next hop.
+Use the on-premises ExpressRoute circuit and the ExpressRoute gateway of Virtual WAN to establish Azure-to-on-premises connectivity. The connectivity between the Azure VMware Solution SDDC ExpressRoute and the same on-premises ExpressRoute gateway is nontransitive. The connection between the direct spoke virtual network and Virtual WAN via global virtual network peering is also nontransitive. The indirect spoke that connects to Virtual WAN must have a UDR that has an on-premises prefix as the destination network and an NVA that runs in the direct spoke as the next hop.
 
 ## Scenario details
 
