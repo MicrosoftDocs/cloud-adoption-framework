@@ -27,7 +27,9 @@ This guidance provides recommendations for identifying AI security risks. Famili
 
 ## Implement AI security controls
 
-This guidance provides recommendations for implementing security controls for AI. Apply consistent security controls to all AI resources across the organization.
+This guidance provides recommendations for implementing security controls for AI. Apply consistent security controls to all AI resources and data across the organization.
+
+### Secure AI resources
 
 - *Establish a centralized AI asset inventory.* Maintaining a detailed and up-to-date inventory of your AI workload resources ensures you can apply security policies uniformly to all AI workloads. Compile a company-wide inventory of all AI systems, models, datasets, and infrastructure across Azure. Utilize tools like Azure Resource Graph Explorer and Microsoft Defender for Cloud to automate the discovery process. Microsoft Defender for Cloud can [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and in [predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk).
 
@@ -38,9 +40,7 @@ Follow the specific security guidance for your AI workload type:
 - [AI on Azure AI platforms (PaaS)](./platform/./secure.md)
 - [AI on Azure infrastructure (IaaS)](./infrastructure/storage.md)
 
-## Secure AI data
-
-This guidance outlines best practices for securing data involved in AI systems across all applications built in Azure within our organization. Adhering to these practices helps safeguard sensitive information, maintain data integrity, and prevent unauthorized access or breaches.
+### Secure AI data
 
 - *Define and maintain data boundaries.* Ensure AI workloads use data appropriate for their access level. AI applications accessible to all employees should only process data suitable for all employees. Internet-facing AI applications must use data appropriate for public consumption. Use separate datasets or environments for different AI applications to prevent inadvertent data access. Consider using Microsoft Purview’s suite of [data security](/purview/purview-security) tools to secure your data.
 

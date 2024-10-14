@@ -9,19 +9,19 @@ ms.topic: conceptual
 
 # AI Strategy - Recommendations to develop an AI adoption strategy
 
-An AI strategy helps you define your vision and goals for AI adoption. This strategy allows you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success.
+An AI strategy outlines your AI adoption helps you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success.
 
 ## Define a responsible AI strategy
 
-A responsible AI strategy helps you build AI systems that are ethical, fair, and trustworthy. This strategy guides you AI adoption and the ongoing management of AI workloads. Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principle. The principles provide a framework for creating AI systems that benefit all users. You should define or adopt similar principles to guide your AI initiatives. Microsoft also offers  [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) to help you map, measure, and manage AI workloads in line with responsible AI practices. This strategy involves monitoring AI systems to prevent bias, ensuring transparency, and promoting accountability. By adopting responsible AI practices, you can build trust with customers and stakeholders, fostering a positive impact.
+A responsible AI strategy defines your role in ensure your AI workloads are trustworthy and equally beneficial to all users. It's a responsibility shared between you and your AI provider, in this case Microsoft. The  vary depending on whether you use software as a service (SaaS), like Microsoft' Copilots, or AI platform as a service (PaaS), like Azure AI Studio.
 
-- *Establish AI accountability.* To oversee the AI adoption process, establish an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint someone to set goals to measure progress. Create a governance framework that assigns responsibility for data quality, ethical AI practices, and proper data usage. Set up auditing processes to maintain accountability throughout AI data handling.
+- *Align with responsible AI principles.* Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles that adhere to the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf).
 
-- *Ensure regulatory compliance.* Adhere to regulatory requirements governing AI use in each country where you operate. This compliance dictates how you adopt, build, and manage AI systems.
+- *Establish AI accountability.* AI technology and regulations are advancing rapidly, and you need someone accountable to monitor and govern these changes. To oversee the AI adoption process, create an [AI center of excellence](./center-of-excellence.md) (AI CoE), or appoint an AI lead to oversee the AI adoption process.
 
-- *Mitigate data biases.* Identify potential biases in datasets and apply strategies to minimize them. Regularly assess fairness, address data imbalances, and ensure AI outputs are unbiased toward any group or demographic.
+- *Identify responsible AI tools.* Responsible AI tools can help you validate your AI align with broader responsible AI practices. As part of your strategy, identify what Responsible AI [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1)
 
-- *Ensure data transparency.* Help users understand how data is collected, used, and processed in AI systems. Provide clear traceability for data inputs and AI decisions to build trust and accountability.
+- *Understand legal and regulatory compliance requirements.* AI legal and regulatory compliance determine how you build and manage AI workloads. Research and adhere to the legal and regulatory requirements governing AI use in each country where you operate.
 
 ## Define an AI technology strategy
 
@@ -29,11 +29,9 @@ Defining an AI technology strategy involves identifying use cases and solutions 
 
 ### Identify AI use cases
 
-Identifying AI use cases involves listing tasks and processes where AI might add value. This approach lets you explore your current needs and prioritize AI initiatives that align with your strategic goals.
+AI supports two goals: enhancing individual efficiency and improving business processes. Generative AI fosters productivity and enhances customer experiences. Non-generative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this basic knowledge, you can identify areas across your business where AI could add value.
 
-- *Understand AI.* AI supports two goals: enhancing individual efficiency and improving business processes. Generative AI fosters productivity and enhances customer experiences. Non-generative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks.
-
-- *Analyze business processes for automation opportunities.* Identifying processes that are suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.
+- *Look for automation opportunities.* Identifying processes that are suitable for automation can greatly enhance efficiency and reduce operational costs. Examine your workflows to find repetitive tasks, data-heavy operations, or areas with high error rates where AI can make a significant impact.
 
 - *Conduct an assessment.* Gather input from various departments to understand challenges and inefficiencies that could be addressed by using AI. Document current workflows to identify areas where AI can automate tasks or provide insights.
 
