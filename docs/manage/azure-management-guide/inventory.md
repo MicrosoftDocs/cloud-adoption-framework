@@ -81,7 +81,7 @@ For more information, see [Azure Service Health](/azure/service-health/).
 
 ::: zone-end
 
-A [Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/azure-monitor-agent-overview) serves as a repository for metrics, logs, and telemetry from monitored resources such as virtual machines, containers, and apps. The data in the workspace can be queried, visualized, and used for alerts or automation. You can connect multiple resources to a single workspace, allowing centralized monitoring and management of diverse environments.
+Azure Monitor Agent (AMA) collects monitoring data from the guest operating system of Azure and hybrid virtual machines and delivers it to Azure Monitor for use by features, insights, and other services such as Microsoft Sentinel and Microsoft Defender for Cloud.
 
 ::: zone target="chromeless"
 
