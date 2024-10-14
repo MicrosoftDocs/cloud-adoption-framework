@@ -1,5 +1,5 @@
 ---
-title: Establish Cross-Tenant Network Connectivity For Azure VMware Solution SDDCs
+title: Establish Cross-Tenant Network Connectivity for Azure VMware Solution SDDCs
 description: Learn how to use Azure Virtual WAN and NVAs to establish network connectivity for Azure VMware Solution SDDCs in a cross-tenant environment.
 author: Mahesh-MSFT
 ms.author: maksh
@@ -39,16 +39,16 @@ The connectivity between two Azure VMware Solution SDDCs that you deploy across 
 
 Repeat the same process for other SDDCs. Determine whether they share any common pods. The following image shows SDDC hosts that are deployed in pods 2 and 3.
 
-:::image type="content" source="media/azure-vmware-solution-pod.png" alt-text="Diagram showing the Azure VMware Solution pod." lightbox="media/azure-vmware-solution-pod.png":::
+:::image type="content" source="media/azure-vmware-solution-pod.png" alt-text="Diagram that shows the Azure VMware Solution pod." lightbox="media/azure-vmware-solution-pod.png":::
 
 > [!NOTE]
 > You can't select a pod during an Azure VMware Solution SDDC deployment. Pod assignment isn't predetermined, so the exact node that a scheduler assigns to a pod can vary each time a process runs.
 
 After you identify the pods that SDDCs share, do one of the following options:
 
-- **Azure VMware Solution interconnect (Global Reach):** Use this option when two SDDCs are in same Azure region *and* don't share common pods between them. This option establishes an Expressroute circuit Global Reach connection between two SDDC Expressroute circuits. This option also enables transitive connectivity. Transitive connectivity means that the routes that the SDDC Expressroute circuit learns from the SDDC, Virtual WAN, the Virtual WAN direct spoke virtual networks also advertise across the tenant to the other SDDC Expressroute circuit, the SDDC, Virtual WAN, and the Virtual WAN direct spoke virtual networks.
+- **Azure VMware Solution interconnect (Global Reach):** Use this option when two SDDCs are in the same Azure region *and* don't share common pods between them. This option establishes an ExpressRoute circuit Global Reach connection between two SDDC ExpressRoute circuits. This option also enables transitive connectivity. Transitive connectivity means that the routes that the SDDC ExpressRoute circuit learns from the SDDC, Virtual WAN, the Virtual WAN direct spoke virtual networks also advertise across the tenant to the other SDDC ExpressRoute circuit, the SDDC, Virtual WAN, and the Virtual WAN direct spoke virtual networks.
 
-- **Use Azure VMware Solution interconnect (non-Global Reach):** Use this option when two SDDCs are in same Azure region *and* share a common pod between them. This option doesn't provide cross-tenant transitive connectivity for routes that Virtual WAN and its direct spoke virtual networks advertise.
+- **Use Azure VMware Solution interconnect (non-Global Reach):** Use this option when two SDDCs are in the same Azure region *and* share a common pod between them. This option doesn't provide cross-tenant transitive connectivity for routes that Virtual WAN and its direct spoke virtual networks advertise.
 
 - **Use Azure VMware Solution ExpressRoute Global Reach:** Use this option when two SDDCs are in different Azure regions whether they share a pod or not. This option provides cross-tenant transitive connectivity for routes that Virtual WAN and its direct spoke virtual networks advertise.
 
@@ -96,23 +96,23 @@ If the on-premises environment has multiple ExpressRoute circuits for redundancy
 
 ### Azure-to-Azure connectivity
 
-*Direct* and *indirect* virtual networks need to communicate with each other in same Azure tenant and across the Azure tenants. Use the following methods to establish connections.
+Direct and indirect virtual networks need to communicate with each other in same Azure tenant and across the Azure tenants. Use the following methods to establish connections.
 
 #### Establish connections within the same tenant
 
-- Connect *direct* spokes with each other via a Virtual WAN virtual network connection.
+- Connect direct spokes with each other via a Virtual WAN virtual network connection.
 
-- Connect *direct* spokes with *indirect* spokes via virtual network peering.
-- Connect *indirect* spokes with *direct* spokes via virtual network peering.
-- Connect *indirect* spokes with each other via virtual network peering with a *direct* spoke and a UDR that you associate with the direct spoke. A UDR has an *indirect* spoke prefix as the destination network and an NVA in the *direct* spoke as next hop. Configure the NVA in the *direct* spoke to forward the traffic through its network interface card (NIC).
+- Connect direct spokes with indirect spokes via virtual network peering.
+- Connect indirect spokes with direct spokes via virtual network peering.
+- Connect indirect spokes with each other via virtual network peering with a direct spoke and a UDR that you associate with the direct spoke. A UDR has an indirect spoke prefix as the destination network and an NVA in the direct spoke as next hop. Configure the NVA in the direct spoke to forward the traffic through its network interface card (NIC).
 
 #### Establish connections across the tenant
 
-- Connect *direct* spokes with cross-tenant *direct* spokes via global virtual network peering.
+- Connect direct spokes with cross-tenant direct spokes via global virtual network peering.
 
-- Connect *direct* spokes with cross-tenant *indirect* spokes via global virtual network peering between *direct* spokes and UDRs that you associate with the *direct* spoke. A UDR has a cross-tenant *indirect* spoke prefix as the destination network and an NVA in the cross-tenant *direct* spoke as the next hop.
-- Connect *indirect* spokes with cross-tenant *direct* spokes via global virtual network peering between *direct* spoke virtual networks and a UDR that you associate with the direct spoke virtual networks. The UDR has a cross-tenant *direct* spoke prefix as the destination network and an NVA in its own *direct* spoke as the next hop.
-- Connect *indirect* spokes with cross-tenant *indirect* spokes via global virtual network peering between *direct* spoke virtual networks and a UDR that you associate with the direct spoke virtual networks. The UDR has a cross-tenant *indirect* spoke prefix as the destination network and an NVA in its own *direct* spoke as the next hop.
+- Connect direct spokes with cross-tenant indirect spokes via global virtual network peering between direct spokes and UDRs that you associate with the direct spoke. A UDR has a cross-tenant indirect spoke prefix as the destination network and an NVA in the cross-tenant direct spoke as the next hop.
+- Connect indirect spokes with cross-tenant direct spokes via global virtual network peering between direct spoke virtual networks and a UDR that you associate with the direct spoke virtual networks. The UDR has a cross-tenant direct spoke prefix as the destination network and an NVA in its own direct spoke as the next hop.
+- Connect indirect spokes with cross-tenant indirect spokes via global virtual network peering between direct spoke virtual networks and a UDR that you associate with the direct spoke virtual networks. The UDR has a cross-tenant indirect spoke prefix as the destination network and an NVA in its own direct spoke as the next hop.
 
 ### Azure-to-on-premises connectivity
 

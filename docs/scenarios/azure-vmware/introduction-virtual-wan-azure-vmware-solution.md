@@ -32,13 +32,13 @@ Use secure Virtual WAN with routing intent to send all internet traffic and priv
  
 Use the single-region design to inspect network traffic within the virtual hub security solution that goes to and from Azure VMware Solution. This approach simplifies network management and enhances your overall security posture. This design also prepares you if you want to deploy another Azure VMware Solution private cloud in a different region that has a dual-region design. Enable routing intent in a single region hub to help scale to a dual-hub region design later. This design supports configurations with or without Global Reach. 
 
-:::image type="content" source="./media/single-region-virtual-wan-high-level-design.png" alt-text="Diagram that shows a single-region, high-level design." border="false":::
+:::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/single-region-virtual-wan-high-level-design.svg" alt-text="Diagram that shows a single-region, high-level design." border="false":::
 
 ### Use a dual-region or dual-hub design  
 
 Use a dual-region design to inspect network traffic on two virtual hub security solutions. Inspect traffic to and from Azure VMware Solution, and inspect traffic across Azure VMware Solution private clouds that are in different regions. Enable routing intent on both regional hubs so that traffic can pass through both hub security solutions. A dual-region design with routing intent improves security and simplifies network management across regions. This design supports configurations with or without Global Reach.
 
-:::image type="content" source="./media/dual-region-virtual-wan-high-level-design.png" alt-text="Diagram that shows a dual-region, high-level design." border="false":::
+:::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/dual-region-virtual-wan-high-level-design.svg" alt-text="Diagram that shows a dual-region, high-level design." border="false":::
 
 ## Global Reach deployment options  
 
@@ -50,7 +50,7 @@ When you deploy Global Reach, traffic between the Global Reach sites bypasses th
 
 For example, the following diagram shows how traffic between Azure VMware Solution and on-premises uses the Global Reach connection labeled as **A** to communicate. This traffic doesn't transit the hub firewall because of Global Reach connection **A**. For optimal security between Global Reach sites, the Azure VMware Solution environment's NSX-T or an on-premises firewall must inspect traffic.
 
-:::image type="content" source="./media/single-region-virtual-wan-1.png" alt-text="Diagram that shows a Global Reach example." border="false":::
+:::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/single-region-virtual-wan-1.svg" alt-text="Diagram that shows a Global Reach example." border="false":::
 
 Global Reach simplifies the design because it provides a direct logical connection between Azure VMware Solution and on-premises or regional Azure VMware Solution private clouds. Use Global Reach to help troubleshoot traffic between Global Reach sites and eliminate throughput limitations at the secure Virtual WAN. A drawback is that Global Reach prevents the secure virtual hub security solution from inspecting traffic between regional Azure VMware Solution private clouds and on-premises, and also within Azure VMware Solution private clouds themselves. So the secure virtual hub's security solution can't inspect the traffic that flows directly between these entities.
 
@@ -66,7 +66,7 @@ We recommend that you consistently use Global Reach unless you have specific req
 
 The following diagram shows an example that doesn't use Global Reach.
 
-:::image type="content" source="./media/single-region-without-globalreach-1.png" alt-text="Diagram that shows an example that doesn't have Global Reach." border="false":::
+:::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/single-region-without-global-reach-1.svg" alt-text="Diagram that shows an example that doesn't have Global Reach." border="false":::
 
 ## Consider Global Reach options for a single region or for dual regions
 
@@ -76,7 +76,7 @@ Use the following guidance to determine whether you need to enable Global Reach 
  
 When you use Global Reach in a single region, the secure hub routes all private traffic and internet traffic through a security solution, such as Azure Firewall, a non-Microsoft NVA, or a SaaS solution. In the following diagram, routing intent inspects traffic, but Global Reach traffic between Azure VMware Solution and on-premises bypasses the hub firewall (connection **A**). So you need to inspect this Global Reach traffic with NSX-T in Azure VMware Solution or an on-premises firewall for better security across Global Reach sites.
                             
-:::image type="content" source="./media/single-region-virtual-wan-1.png" alt-text="Diagram that shows a single region that has Global Reach and Azure VMware Solution." border="false":::
+:::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/single-region-virtual-wan-1.svg" alt-text="Diagram that shows a single region that has Global Reach and Azure VMware Solution." border="false":::
 
 The following table shows the traffic flow to and from Azure VMware Solution.
 
@@ -98,7 +98,7 @@ The following table shows the traffic flow to and from virtual networks.
 
 When you don't use Global Reach in a single region, the secure hub routes all private traffic and internet traffic through a security solution. Routing intent inspects traffic. With this design, traffic between Azure VMware Solution and on-premises transits the hub firewall for inspection. Virtual hubs don't support ExpressRoute to ExpressRoute transitivity by default. To enable this transitivity, you must initiate a support ticket. After the support ticket is fulfilled, the secure hub advertises the default RFC 1918 addresses to Azure VMware Solution and to on-premises. When you use routing intent from on-premises, you can't advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
 
-:::image type="content" source="./media/single-region-without-globalreach-1.png" alt-text="Diagram that shows a single region that doesn't use Global Reach." border="false":::
+:::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/single-region-without-global-reach-1.svg" alt-text="Diagram that shows a single region that doesn't use Global Reach." border="false":::
 
 The following table shows the traffic flow to and from Azure VMware Solution. 
   
@@ -122,7 +122,7 @@ When you use Global Reach in two regions, you deploy two secure hubs in differen
 
 The following diagram shows an example of this configuration. Each regional Azure VMware Solution private cloud connects directly to its local regional hub (connection **D**). On-premises connects to each regional hub (connection **E**). All RFC 1918 traffic and internet traffic routes through a security solution on both secure hubs via routing intent. The Azure VMware Solution private clouds have connectivity back to on-premises via Global Reach (connections **A** and **B**). Azure VMware Solution clouds connect to each other via Global Reach (connection **C**). Global Reach traffic between the Azure VMware Solution private clouds or between the Azure VMware Solution private clouds and on-premises bypasses the two hub firewalls (connections **A**, **B**, and **C**). For enhanced security across Global Reach sites, use NSX-T in Azure VMware Solution or an on-premises firewall to inspect this traffic.
 
-:::image type="content" source="./media/dual-region-virtual-wan-1.png" alt-text="Diagram that shows dual regions with Global Reach and Azure VMware Solution." border="false":::
+:::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/dual-region-virtual-wan-1.svg" alt-text="Diagram that shows dual regions with Global Reach and Azure VMware Solution." border="false":::
 
 The following table shows the traffic flow to and from *Azure VMware Solution private cloud region 1*. 
   
@@ -168,7 +168,7 @@ Virtual hubs don't support ExpressRoute to ExpressRoute transitivity by default.
 
 RFC 1918 addresses are advertised to on-premises, you can't advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
 
-:::image type="content" source="./media/dual-region-virtual-wan-without-globalreach-1.png" alt-text="Diagram that shows a dual region that doesn't have Global Reach." border="false":::
+:::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/dual-region-virtual-wan-without-global-reach-1.svg" alt-text="Diagram that shows a dual region that doesn't have Global Reach." border="false":::
 
 The following table shows the traffic flow to and from *Azure VMware Solution private cloud region 1*.
   
@@ -206,8 +206,8 @@ The following table shows the traffic flow to and from virtual networks.
   
 ## Related resources
 
-- [Single-region Azure VMware Solution design that has Virtual WAN and Global Reach](single-region-secure-virtual-wan-global-reach.md)
-- [Single-region Azure VMware Solution design that doesn't have Global Reach](single-region-secure-virtual-wan-without-global-reach.md)
- - [Dual-region Azure VMware Solution design that has Virtual WAN and Global Reach](dual-region-secure-virtual-wan-global-reach.md)
-- [Dual-region Azure VMware Solution design that doesn't have Global Reach](dual-region-secure-virtual-wan-without-global-reach.md)
+- [Single-region Azure VMware Solution design that has Virtual WAN and Global Reach](single-region-virtual-wan-global-reach.md)
+- [Single-region Azure VMware Solution design that doesn't have Global Reach](single-region-virtual-wan-without-global-reach.md)
+ - [Dual-region Azure VMware Solution design that has Virtual WAN and Global Reach](dual-region-virtual-wan-global-reach.md)
+- [Dual-region Azure VMware Solution design that doesn't have Global Reach](dual-region-virtual-wan-without-global-reach.md)
 

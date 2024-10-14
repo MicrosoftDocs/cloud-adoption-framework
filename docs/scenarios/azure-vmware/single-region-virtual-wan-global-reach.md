@@ -42,7 +42,7 @@ This scenario also has these components:
 
 The following diagram shows an example of this scenario.
 
-:::image type="content" source="./media/single-region-virtual-wan-1.png" alt-text="Diagram that shows Azure VMware Solution in a single region." border="false":::
+:::image type="content" source="./media/single-region-virtual-wan-global-reach/single-region-virtual-wan-1.svg" alt-text="Diagram that shows Azure VMware Solution in a single region." border="false":::
 
 The following table describes the topology connectivity in the preceding diagram.
 
@@ -60,14 +60,14 @@ The following sections describe traffic flows and connectivity for Azure VMware 
 
 The following diagram shows the traffic flows for the Azure VMware Solution private cloud. 
 
-:::image type="content" source="./media/single-region-virtual-wan-2.png" alt-text="Diagram that shows a single-region Azure VMware Solution that has a cross-Azure VMware Solution topology." border="false":::
+:::image type="content" source="./media/single-region-virtual-wan-global-reach/single-region-virtual-wan-2.svg" alt-text="Diagram that shows a single-region Azure VMware Solution that has a cross-Azure VMware Solution topology." border="false":::
  
 The following table describes the traffic flow in the preceding diagram. 
 
-| Traffic flow number | Source |   Direction | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
-| - | -------------- | -------- | ---------- | ---------- |
-| 1 | Azure VMware Solution cloud | &#8594;| Virtual network| Yes |
-| 2 | Azure VMware Solution cloud | &#8594;| On-premises | No |
+| Traffic flow number | Source | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
+| - | -------------- | -------- | ---------- |
+| 1 | Azure VMware Solution cloud | Virtual network| Yes |
+| 2 | Azure VMware Solution cloud | On-premises | No |
 
 The Azure VMware Solution private cloud connects to its hub via ExpressRoute connection **D**. The Azure VMware Solution cloud region establishes a connection to on-premises via ExpressRoute Global Reach connection **A**. Traffic that travels via Global Reach doesn't transit the hub firewall.
 
@@ -79,14 +79,14 @@ The following diagram shows the on-premises site connected the hub via ExpressRo
 
 For your scenario, configure Global Reach to prevent connectivity problems between on-premises and Azure VMware Solution.
 
-:::image type="content" source="./media/single-region-virtual-wan-3.png" alt-text="Diagram that shows a single-region Azure VMware Solution that has an on-premises connection." border="false":::
+:::image type="content" source="./media/single-region-virtual-wan-global-reach/single-region-virtual-wan-3.svg" alt-text="Diagram that shows a single-region Azure VMware Solution that has an on-premises connection." border="false":::
 
 The following table describes the traffic flow in the preceding diagram.
 
-| Traffic flow number | Source |   Direction | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
-| - | -------------- | -------- | ---------- | ---------- |
-| 3 | On-premises | &#8594;| Azure VMware Solution cloud | No |
-| 4 | On-premises | &#8594;| Virtual network | Yes |
+| Traffic flow number | Source | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
+| - | -------------- | -------- | ---------- |
+| 3 | On-premises | Azure VMware Solution cloud | No |
+| 4 | On-premises | Virtual network | Yes |
 
 ### Azure virtual network connectivity and traffic flow
 
@@ -94,14 +94,14 @@ A secure hub that has routing intent enabled sends the default RFC 1918 addresse
 
 The following diagram shows how the virtual network peers directly to the hub.
 
-:::image type="content" source="./media/single-region-virtual-wan-4.png" alt-text="Diagram that shows a single-region Azure VMware Solution that has a virtual network connection." border="false":::
+:::image type="content" source="./media/single-region-virtual-wan-global-reach/single-region-virtual-wan-4.svg" alt-text="Diagram that shows a single-region Azure VMware Solution that has a virtual network connection." border="false":::
 
 The following table describes the traffic flow in the preceding diagram.
 
-| Traffic flow number | Source |   Direction | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
-| - | -------------- | -------- | ---------- | ---------- |
-| 5 | Virtual network | &#8594;| Azure VMware Solution cloud | Yes |
-| 6 | Virtual network | &#8594;| Azure VMware Solution cloud | Yes |
+| Traffic flow number | Source | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
+| - | -------------- | -------- | ---------- |
+| 5 | Virtual network | Azure VMware Solution cloud | Yes |
+| 6 | Virtual network | Azure VMware Solution cloud | Yes |
 
 ### Internet connectivity
 
@@ -121,14 +121,14 @@ When you enable routing intent for internet traffic, by default, the secure Virt
 
 After you enable default-route propagation, connection **D** advertises the default route 0.0.0.0/0 from the hub. Don't enable this setting for on-premises ExpressRoute circuits. Connection **D** advertises the default route 0.0.0.0/0 to Azure VMware Solution, but Global Reach (connection **A**) also advertises the default route to on-premises. As a result, we recommend that you implement a Border Gateway Protocol (BGP) filter on your on-premises equipment so that it doesn't learn the default route. This step helps ensure that your configuration doesn't affect on-premises internet connectivity.
 
-:::image type="content" source="./media/single-region-virtual-wan-5.png" alt-text="Diagram of a single-region Azure VMware Solution that has an internet connection." border="false":::
+:::image type="content" source="./media/single-region-virtual-wan-global-reach/single-region-virtual-wan-5.svg" alt-text="Diagram of a single-region Azure VMware Solution that has an internet connection." border="false":::
 
 The following table describes the traffic flow in the preceding diagram.
 
-| Traffic flow number | Source |   Direction | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
-| - | -------------- | -------- | ---------- | ---------- |
-| 7 | Azure VMware Solution cloud | &#8594;| The internet| Yes |
-| 8 | Virtual network | &#8594;| The internet | Yes |
+| Traffic flow number | Source | Destination | Does the secure Virtual WAN hub firewall inspect this traffic? |
+| - | -------------- | -------- | ---------- |
+| 7 | Azure VMware Solution cloud | The internet| Yes |
+| 8 | Virtual network | The internet | Yes |
 
 When you enable routing intent for internet access, the default route that generates from the secure Virtual WAN hub automatically advertises to the hub-peered virtual network connections. Note that in the virtual machines' network interface cards (NICs) in the virtual network, the 0.0.0.0/0 next hop is the hub firewall. To find the next hop, select *Effective routes* in the NIC. 
 
