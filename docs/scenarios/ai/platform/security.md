@@ -1,5 +1,5 @@
 ---
-title: Security for AI workloads using Azure AI PaaS
+title: Security for AI workloads on Azure platforms
 description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Security for AI workloads using Azure AI PaaS
+# Security for AI workloads on Azure platforms
 
 This articles provides recommendations for securing AI workloads that use Azure AI platform as a service (PaaS) solutions, such as Azure AI Studio, Azure Machine Learning, and Azure AI services. It focuses on the implementation of security configurations for the AI models and platforms on which they run. It's the second step in the overarching [Secure AI](./security.md) process.
 
@@ -66,4 +66,4 @@ For more information, see [How to create Assistants with Azure OpenAI Service](/
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Governance for AI workloads using Azure AI PaaS](../platform/governance.md)
+> [PaaS AI Governance](../platform/governance.md)

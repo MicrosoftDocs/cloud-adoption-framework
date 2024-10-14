@@ -1,5 +1,5 @@
 ---
-title: Resource selection for AI workloads using Azure AI PaaS
+title: Resource selection for AI workloads on Azure platforms
 description: Learn how to build AI workloads, including generative and nongenerative AI apps, by using Azure PaaS services. Get detailed recommendations and architecture guides.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Resource selection for AI workloads using Azure AI PaaS
+# Resource selection for AI workloads on Azure platforms
 
 This article provides guidance on selecting the right Azure platform resources for different types of AI workloads, covering both generative and nongenerative AI. Choosing the correct resources is essential for optimizing performance, cost, and scalability, helping businesses leverage AI effectively on Azure.
 
@@ -83,4 +83,4 @@ Selecting the correct Azure resources for nongenerative AI workloads is essentia
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Networking for AI workloads using Azure AI PaaS](../platform/networking.md)
+> [PaaS AI Networking](../platform/networking.md)

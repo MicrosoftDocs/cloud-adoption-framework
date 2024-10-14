@@ -50,4 +50,4 @@ This guidance outlines best practices for implementing business continuity and d
 ## Next step
 
 > [!div class="nextstepaction"]
-> [IaaS AI management](./management.md)
+> [IaaS AI implementation options](./implementation-options.md)

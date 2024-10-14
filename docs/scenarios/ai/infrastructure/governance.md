@@ -33,3 +33,8 @@ Optimizing resource usage involves using Azure tools to adjust resource allocati
 
 - *Implement autoscaling and scheduling.* Use autoscaling to automatically adjust resource allocation based on demand and schedule non-critical resources to shut down during off-hours to minimize costs.
 - *Deallocate or shut down unused resources.* Review your resource usage and deallocate or shut down any idle or underutilized resources to avoid unnecessary costs.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [IaaS AI management](./management.md)

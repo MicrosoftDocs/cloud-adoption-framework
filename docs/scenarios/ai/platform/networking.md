@@ -1,5 +1,5 @@
 ---
-title: Networking for AI workloads using Azure AI PaaS
+title: Networking for AI workloads on Azure platforms
 description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Networking for AI workloads using Azure AI PaaS
+# Networking for AI workloads on Azure platforms
 
 Azure AI Studio and Azure Machine Learning deploy to Microsoft Managed virtual networks that use private endpoints to access supporting Azure services like Azure Storage, Azure Key Vault, and Azure Container Registry.
 
@@ -27,4 +27,4 @@ Azure AI Studio and Azure Machine Learning deploy to Microsoft Managed virtual n
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Security for AI workloads using Azure AI PaaS](../platform/security.md)
+> [PaaS AI Security](../platform/security.md)

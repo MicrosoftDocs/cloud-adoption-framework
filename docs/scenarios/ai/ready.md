@@ -77,7 +77,7 @@ You can use the guidance discussed in this article to establish a foundational e
 The rest of the guidance focuses on building AI workloads in Azure using PaaS and IaaS solutions.
 
 > [!div class="nextstepaction"]
-> [Adopt AI with Azure PaaS](./platform/resource-selection.md)
+> [PaaS AI workloads](./platform/resource-selection.md)
 
 > [!div class="nextstepaction"]
-> [Adopt AI with Azure IaaS](./infrastructure/compute.md)
+> [IaaS AI workloads](./infrastructure/compute.md)

@@ -1,5 +1,5 @@
 ---
-title: Governance for AI workloads using Azure AI PaaS
+title: Governance for AI workloads on Azure platforms
 description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,17 +7,20 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Implementation options for AI workloads using Azure AI PaaS
+# Implementation options for AI workloads on Azure platforms
 
 ## Generative AI implementation options
 
 The following table provides links to implementation guidance for building generative AI applications.
 
-| Reference architectures  | Technical guides |
+## AI reference architectures
+
 | --- | --- |
 | [Baseline OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) | [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) |
 | [Basic OpenAI end-to-end chat reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) | [Azure OpenAI Landing Zone Solution Accelerator](https://github.com/Azure/azure-openai-landing-zone/tree/main) |
 | [Azure OpenAI chat baseline architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
+
+## AI technical guides
 
 ## Non-generative AI implementation options
 

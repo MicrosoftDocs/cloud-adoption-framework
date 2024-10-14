@@ -1,5 +1,5 @@
 ---
-title: Management for AI workloads using Azure AI PaaS
+title: Management for AI workloads on Azure platforms
 description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: rajanaki
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Management for AI workloads using Azure AI PaaS
+# Management for AI workloads on Azure platforms
 
 
 ## Manage AI deployments
@@ -47,4 +47,4 @@ This guidance provides recommendations for measuring AI model performance over t
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Implementation options for AI workloads using Azure AI PaaS](../platform/implementation-options.md)
+> [PaaS AI implementation options](../platform/implementation-options.md)
