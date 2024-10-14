@@ -26,6 +26,3 @@ Azure CycleCloud Workspace for Slurm offers several benefits for users who want 
 
 > [!div class="nextstepaction"]
 > [Secure AI](secure.md)
-
-:::image type="content" source="../images/secureai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Secure AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/secureai.svg" border="false":::
-*Figure 1. Secure AI in the AI adoption process.*
