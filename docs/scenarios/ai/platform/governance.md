@@ -19,9 +19,7 @@ Organizations need clear processes for managing AI models to ensure reliable, sa
 
 - *Define baseline content filters for generative AI models.* Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to define a baseline content filter for your approved AI models. This safety system runs both the prompt and completion for your model through a group of classification models. These classification models detect and help prevent the output of harmful content across a range of categories. Content Safety provides features like prompt shields, groundedness detection, and protected material text detection. It scans images and text. Create a process for application teams to communicate different governance needs.
 
-- *Ground generative AI models.* Use [system messages](/azure/ai-services/openai/concepts/system-message) and the [retrieval augmented generation](/azure/ai-studio/concepts/retrieval-augmented-generation) (RAG) pattern to govern the output of generative AI models. Test the effectiveness of grounding by using tools like [prompt flow](/azure/ai-studio/how-to/prompt-flow) or the open-source red teaming framework PyRIT.
-
-- *Consider a generative AI gateway for monitoring.* A reverse proxy like Azure API Management allows you to implement logging and monitoring that aren't native to the platform. API Management allows you to collect source IPs, input text, and output text. For more information, see [Implement logging and monitoring for Azure OpenAI Service language models](/azure/architecture/ai-ml/openai/architecture/log-monitor-azure-openai).
+- *Ground generative AI models.* Use [system messages](/azure/ai-services/openai/concepts/system-message) and the [retrieval augmented generation](/azure/ai-studio/concepts/retrieval-augmented-generation) (RAG) pattern to govern the output of generative AI models. Test the effectiveness of grounding by using tools like [prompt flow](/azure/ai-studio/how-to/prompt-flow) or the open-source red teaming framework [PyRIT](https://github.com/Azure/PyRI#python-risk-identification-tool-for-generative-ai-pyrit).
 
 ## Govern AI costs
 
@@ -51,7 +49,7 @@ Security in AI workloads protects against potential threats that could compromis
 
 - *Enable Defender for Cloud on every subscription.* Defender for Cloud provides a cost-effective approach for detecting configurations in your deployed resources that aren't secure. You should also enable [AI threat protection](/azure/defender-for-cloud/ai-threat-protection).
 
-- *Deny public access to AI resources.* Platform as a service (PaaS) services and AI model endpoints shouldn't be accessible from the public internet. For PaaS, use private endpoints for end user access. For Azure Virtual Machines, use a public load balancer and only permit access requests to the AI model endpoint through the load balancer. Use a jumpbox to manage your AI resources.
+- *Deny public access to AI resources.* Platform as a service (PaaS) services and AI model endpoints shouldn't be accessible from the public internet. For PaaS, use private endpoints for end user access. Use a jumpbox to manage your AI resources.
 
 - *Configure access control.* Grant least privilege user access to centralized AI resources. For example, start with the Reader Azure role, and elevate to the Contributor Azure role if the limited permissions slow down application development.
 
