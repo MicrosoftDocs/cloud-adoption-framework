@@ -4,7 +4,7 @@ description: Learn how to enable SAP with SQL Server database security on Azure 
 author: msclash
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 07/18/2023
+ms.date: 10/14/2024
 ms.topic: conceptual
 ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
@@ -22,7 +22,7 @@ This article provides security considerations and recommendations for SAP on Azu
 
 ## Secure data at rest
 
-The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) encrypts the data and log files for user databases and SQL Server system databases. After it's encrypted, copies of the data and log files or backup files can't be restored and used without the associated certificates. This process is called securing data at rest. It's a transparent technology to the SAP system, so it's supported by [SAP note 1380493 - SQL Server TDE](https://me.sap.com/notes/1380493). For information about the TDE procedure, see [SQL Server encryption](/sql/relational-databases/security/encryption/sql-server-encryption).
+The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) encrypts the data and log files for user databases and SQL Server system databases. After it's encrypted, copies of the data and log files or backup files can't be restored and used without the associated certificates. This process is called securing data at rest. It's a transparent technology to the SAP system, supported by [SAP note 1380493 - SQL Server TDE](https://me.sap.com/notes/1380493). For information about the TDE procedure, see [SQL Server encryption](/sql/relational-databases/security/encryption/sql-server-encryption).
 
 All data pages that are read or written to disk must be encrypted or decrypted, so TDE has a CPU penalty. When TDE is applied to a user database, the CPU usage increases between 3% and 8%. Applications that heavily use TempDB of SQL Server or perform large scans on large tables are more affected. When at least one user database on the SQL Server instance is encrypted with TDE, the system databases, like TempDB, are also encrypted. SAP Business Warehouse (SAP BW) is an example of this type of application.
 
@@ -49,7 +49,7 @@ Backup encryption is when you encrypt the backup file while the backup is taken.
 
 If the database isn’t encrypted with TDE before the encrypted backup is taken, it still isn’t encrypted after the restore. Only the backup files get encrypted. The database file and its content aren’t altered.
 
-You can use backup encryption with TDE, but it’s not beneficial because the data is already encrypted in the database files and in the backup files. When you use backup encryption and TDE together, the encrypted database with the TDE certificate or key-encrypted data pages are encrypted again with the backup certificate or key. This method prolongs the backup process and adds extra CPU load to the system while the backup process runs.
+You can use backup encryption with TDE, but it’s not beneficial because the data is already encrypted in the database files and in the backup files. When you use backup encryption and TDE together, the encrypted database with the TDE certificate or key-encrypted data pages is encrypted again with the backup certificate or key. This method prolongs the backup process and adds extra CPU load to the system while the backup process runs.
 
 ## Secure SQL Server and SAP system
 
@@ -68,7 +68,7 @@ You can control most of the security settings for the SCHANNEL SSP through regis
 - The hash algorithms, for example MD5 and SHA.
 - The key exchange algorithms, for example Diffie-Hellman and ECDH.
 
-The various combinations of these parts, such as the protocol, cipher, and hash and key exchange algorithm, are represented in cipher suites. By disabling one of these parts, for example protocol SSL 2.0, all cipher suites that contain this part are unusable for the system.
+The various combinations of these parts, such as the protocol, cipher, and hash and key exchange algorithm, are represented in cipher suites. When you disable one of these parts, for example protocol SSL 2.0, all cipher suites that contain this part are unusable for the system.
 
 > [!NOTE]
 >When you combine multiple changes, the client, for example the SAP system, and the server, for example SQL Server, might not be able to use a cipher suite to communicate, and the SAP system might not start.
@@ -92,7 +92,7 @@ Here are some considerations for authentication with SAP on Azure.
 
 - The **SAP ABAP NetWeaver system** doesn't require SQL Server logins because all connections use Windows authentication. For example, for the user `SAPService<SID>` or `<SID>administrator`, you can disable the SQL Server authentication feature.
 
-- The **SAP JAVA NetWeaver system** requires the SQL Server authentication feature because it uses a SQL Server login, such as `SAP<SID>DB`, for the connection.
+- The **SAP JAVA NetWeaver system** requires the SQL Server authentication feature because it uses a SQL Server sign in, such as `SAP<SID>DB`, for the connection.
 
 - For **SAP on SQL Server**, you can disable the SQL Server system administrator account because the SAP systems on SQL Server don't use the account. Ensure that another user with system administrator rights can access the server before disabling the original system administrator account.
 
@@ -108,10 +108,10 @@ Here are some considerations for authentication with SAP on Azure.
 
 - **Disable `xp_cmdshell`.** The SQL Server feature `xp_cmdshell` enables a SQL Server internal operating system command shell. It's a potential risk in security audits.  
 
-  This feature is on when you install SAP. It gathers and displays operating system data in transaction `DBACockpit`. If you disable the setting, some monitoring data isn't available in transaction `DBACockpit` and a warning message displays in the `DBACockpit` message window. For more information, see [SAP KBA 2283909 - Side effect in monitoring](https://userapps.support.sap.com/sap/support/knowledge/en/2283909) and [SAP note 3019299 - Security audit questions or security customization in NetWeaver and SQL Server systems](https://me.sap.com/notes/3019299/E).
+  This feature is on when you install SAP. It gathers and displays operating system data in transaction `DBACockpit`. If you disable the setting, some monitoring data isn't available in transaction `DBACockpit` and a warning message displays in the `DBACockpit` message window. For more information, [SAP note 3019299 - Security audit questions or security customization in NetWeaver and SQL Server systems](https://me.sap.com/notes/3019299/E).
 
 - **Properly configure virus scanners.** SAP supports virus scanners to protect against viruses and other malware, but a poorly configured virus scanner can cause performance issues or even database corruption. To set up and configure a virus scanner on the operating system for an SAP NetWeaver system, see [SAP note 106267 - Virus scanner software on Windows](https://service.sap.com/sap/support/notes/106267). For a SQL Server database, set the proper configurations to avoid performance and corruption problems. For detailed configurations, see [How to choose antivirus software to run on computers that run SQL Server](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b).
 
 ## Next steps
 
-- [Sentinel for SAP](./sap-lza-sentinel-for-sap.md)
+- [Microsoft Sentinel for SAP](./sap-lza-sentinel-for-sap.md)

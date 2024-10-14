@@ -197,8 +197,6 @@ items:
           href: best-practices/data-lake-zones.md
         - name: Data lake key considerations
           href: ./best-practices/data-lake-key-considerations.md
-        - name: Managing data lake access
-          href: ./best-practices/data-lake-access.md
       - name: Azure Databricks implementation
         href: ./best-practices/azure-databricks-implementation.md
       - name: Azure Synapse Analytics implementation

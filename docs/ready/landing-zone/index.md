@@ -3,7 +3,7 @@ title: What is an Azure landing zone?
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 10/07/2024
+ms.date: 09/27/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -59,7 +59,7 @@ You should use the Azure landing zone portal accelerator if you plan to manage y
 
 ### Application landing zone accelerators
 
-[Application landing zone accelerators](/azure/architecture/landing-zones/landing-zone-deploy#application) help you deploy application landing zones. Use the list of available application landing zone accelerators in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) and deploy the accelerator that matches your scenario.
+Application landing zone accelerators help you deploy application landing zones. Use the list of available application landing zone accelerators in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) and deploy the accelerator that matches your scenario.
 
 <!-- markdownlint-disable MD034 -->
 
