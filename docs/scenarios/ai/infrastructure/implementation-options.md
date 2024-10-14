@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 After deploying the [Azure Landing Zone](../ready.md#deploy-a-foundation-with-azure-landing-zone), you can set up the application landing zone using the [Cycle Cloud Workspace for SLURM](/azure/cyclecloud/qs-deploy-ccws).
 
-:::image type="content" source="../" alt-text="Diagram showing AI application on Azure infrastructure in Azure landing zone." lightbox="./images/ai-infra-alz.svg" border="false":::
+:::image type="content" source="../images/ai-infra-alz.svg" alt-text="Diagram showing AI application on Azure infrastructure in Azure landing zone." lightbox="../images/ai-infra-alz.svg" border="false":::
 *Figure 1. AI application on Azure infrastructure in Azure landing zone.*
 
 Azure CycleCloud Workspace for Slurm offers several benefits for users who want to run AI workloads with Slurm scheduler.
