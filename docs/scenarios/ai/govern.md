@@ -11,6 +11,9 @@ ms.topic: conceptual
 
 This guide offers recommendations for developing a strong AI governance framework at the business level. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). It also aligns with the governance practices defined in [CAF Govern](azure/cloud-adoption-framework/govern/). The goal is to create a unified governance approach that effectively manages AI risks by integrating AI risk management into broader enterprise risk management strategies. When you address AI risks alongside other risks, such as cybersecurity and privacy, it supports a more cohesive and efficient organizational outcome.
 
+:::image type="content" source="./images/governai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Govern AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/governai.svg" border="false":::
+*Figure 1. Govern AI in the AI adoption process.*
+
 ## Assess AI organizational risks
 
 Assessing AI organizational risks involves identifying potential vulnerabilities and threats that AI technologies might introduce to a business. This process is crucial for companies adopting AI, as it helps them mitigate risks related to ethics, security, and regulatory compliance. Proactively addressing these risks builds trust in AI workloads and ensures that AI enhances business operations without unintended negative consequences.

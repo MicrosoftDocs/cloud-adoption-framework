@@ -9,10 +9,15 @@ ms.topic: conceptual
 
 # AI Ready – Recommendations to prepare an AI foundation
 
-This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking.
+This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/).
+
+:::image type="content" source="./images/aiready.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Ready. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiready.svg" border="false":::
+*Figure 1. AI Ready in the AI adoption process.*
+
+It focuses on AI-specific guidance for region selection, resource organization, and networking. The following diagram illustrates a scalable, baseline environment for your AI workloads.
 
 :::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
-*Figure 1. Resource organization for internal and internet-facing AI workloads.*
+*Figure 1. Scalable pattern for AI workloads.*
 
 ## Prepare AI reliability
 

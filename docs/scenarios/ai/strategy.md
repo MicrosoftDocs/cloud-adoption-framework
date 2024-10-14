@@ -11,6 +11,9 @@ ms.topic: conceptual
 
 An AI strategy outlines your AI adoption helps you to identify areas where AI can add value, choose the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives, ensuring that AI projects contribute to overall success.
 
+:::image type="content" source="./images/aistrategy.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Strategy. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aistrategy.svg" border="false":::
+*Figure 1. AI Strategy in the AI adoption process.*
+
 ## Define a responsible AI strategy
 
 A responsible AI strategy defines your role in ensure your AI workloads are trustworthy and equally beneficial to all users. It's a responsibility shared between you and your AI provider, in this case Microsoft. The  vary depending on whether you use software as a service (SaaS), like Microsoft' Copilots, or AI platform as a service (PaaS), like Azure AI Studio.
