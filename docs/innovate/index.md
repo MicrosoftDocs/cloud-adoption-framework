@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 08/25/2022
 ms.topic: conceptual
-ms.custom: internal
+ms.custom: internal, ai-learning-hub
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
 ---
 
