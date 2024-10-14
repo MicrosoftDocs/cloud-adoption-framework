@@ -21,8 +21,8 @@ For any enterprise-grade environment, the following table outlines the suggested
 | Process | Tool | Purpose |
 |---|---|---|
 | Monitor health of Azure services | [Azure Service Health](/azure/service-health/service-health-overview) | Health, performance, and diagnostics for services running in Azure |
-| Log centralization | [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-overview) | Central logging for all visibility purposes |
 | Monitoring centralization | [Azure Monitor](/azure/azure-monitor/overview) | Central monitoring of operational data and trends |
+| Virtual machine monitoring | [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-overview) | Monitoring data from the guest operating system of Azure and hybrid virtual machines |
 | Virtual machine inventory and change tracking | [Change Tracking and Inventory in Azure Automation](/azure/automation/change-tracking/overview-monitoring-agent) | Inventory VMs and monitor changes for guest OS level |
 | Subscription monitoring | [Azure activity log](/azure/azure-monitor/essentials/activity-log) | Monitoring change at the subscription level |
 | Guest OS monitoring | [Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-overview) | Monitoring changes and performance of VMs |
@@ -72,28 +72,6 @@ To set up Service Health alerts, go to the [Azure portal](https://portal.azure.c
 
 For more information, see [Azure Service Health](/azure/service-health/).
 
-## Azure Monitor Agent
-
-::: zone-end
-::: zone target="chromeless"
-
-## [Azure Monitor Agent](#tab/Monitor-Agent)
-
-::: zone-end
-
-Azure Monitor Agent (AMA) collects monitoring data from the guest operating system of Azure and hybrid virtual machines and delivers it to Azure Monitor for use by features, insights, and other services such as Microsoft Sentinel and Microsoft Defender for Cloud.
-
-::: zone target="chromeless"
-
-
-::: zone-end
-
-::: zone target="docs"
-
-### Learn more
-
-To learn more, see the [Azure Monitor Agent overview](/azure/azure-monitor/agents/azure-monitor-agent-overview).
-
 ## Azure Monitor
 
 ::: zone-end
@@ -132,6 +110,28 @@ To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#bla
 ### Learn more
 
 To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
+
+## Azure Monitor Agent
+
+::: zone-end
+::: zone target="chromeless"
+
+## [Azure Monitor Agent](#tab/Monitor-Agent)
+
+::: zone-end
+
+Azure Monitor Agent (AMA) collects monitoring data from the guest operating system of Azure and hybrid virtual machines and delivers it to Azure Monitor for use by features, insights, and other services such as Microsoft Sentinel and Microsoft Defender for Cloud.
+
+::: zone target="chromeless"
+
+
+::: zone-end
+
+::: zone target="docs"
+
+### Learn more
+
+To learn more, see the [Azure Monitor Agent overview](/azure/azure-monitor/agents/azure-monitor-agent-overview).
 
 ## Onboard solutions
 
