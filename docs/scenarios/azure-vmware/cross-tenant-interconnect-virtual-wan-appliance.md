@@ -1,6 +1,6 @@
 ---
-title: Cross-tenant network connectivity for Azure VMware Solution SDDCs with vWANs and network virtual appliances
-description: Get started with cross-tenant Azure VMware Solution SDDCs deployment. Understand how they can be connected with Azure Virtual WAN and used alongside with network virtual appliances.
+title: Establish Cross-Tenant Network Connectivity For Azure VMware Solution SDDCs
+description: Learn how to use Azure Virtual WAN and NVAs to establish network connectivity for Azure VMware Solution SDDCs in a cross-tenant environment.
 author: Mahesh-MSFT
 ms.author: maksh
 ms.date: 10/21/2024
@@ -8,30 +8,9 @@ ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
-# Cross-tenant network connectivity for Azure VMware Solution SDDCs with Virtual WANs and network virtual appliances
+# Establish cross-tenant network connectivity for Azure VMware Solution SDDCs
 
-This article describes how to set up Azure VMware Solution software-defined datacenter (SDDC) in a cross-tenant environment. It provides guidance about how to establish network connectivity by using Azure Virtual WAN and network virtual appliances (NVAs) that run in a spoke virtual network. The spoke virtual network connects to Virtual WAN.
-
-## Potential use cases
-
-Consider the following scenarios that might use this architecture:
-
-- Multinational corporations run Azure VMware Solution SDDC in different Microsoft Entra tenants.
-
-- An enterprise undergoes a demerger or divestment process, which results in separate business entities that have separate Microsoft Entra tenants. Each separate business entity requires access to a common on-premises environment and requires cross-tenant access to Azure VMware Solution SDDC and other Azure resources.
-- Two separate businesses have their own separate Microsoft Entra tenants but still require cross-tenant access to workloads that run in both Azure VMware Solution SDDCs and Azure.
-
-## Scenario details
-
-This article examines the following scenarios. You can apply these scenarios for either cross-tenant migration or workload-access purposes.
-
-- Cross-tenant Azure VMware Solution SDDC-to-SDDC network connectivity
-- Cross-tenant Azure-to-Azure connectivity
-- Cross-tenant network access between an Azure VMware Solution SDDC and Azure virtual networks
-- Cross-tenant network access between an Azure VMware Solution SDDC and an on-premises environment
-- Cross-tenant network traffic inspection and control via an NVA that runs in a virtual network that connects to Virtual WAN 
-
-In a cross-tenant environment, Azure VMware Solution SDDC, its associated Azure ExpressRoute circuit, and Virtual WAN can create a challenging migration or workload-access experience. The ExpressRoute circuit that's associated with the Azure VMware Solution SDDC connects with the SDDC and also with the Virtual WAN ExpressRoute gateway. The ExpressRoute circuit learns the routes that the Azure VMware Solution SDDC and Virtual WAN advertise. The ExpressRoute circuit advertises those routes across the tenant to other the Azure VMware Solution SDDC and Virtual WAN that connect to the circuit. Carefully plan your configuration to avoid cyclic route propagation between Virtual WAN, the ExpressRoute circuit of SDDC, and the ExpressRoute gateway of Virtual WAN.
+This article describes how to set up Azure VMware Solution software-defined datacenters (SDDCs) in a cross-tenant environment. It provides guidance about how to establish network connectivity by using Azure Virtual WAN and network virtual appliances (NVAs) that run in a spoke virtual network. The spoke virtual network connects to Virtual WAN.
 
 ## Architecture
 
@@ -39,9 +18,9 @@ The following architecture shows the connectivity between cross-tenant Azure VMw
 
 :::image type="content" source="media/azure-vmware-solution-crosstenant-crossregion-vwan-appliance.png" alt-text="Diagram that shows the cross-tenant Azure VMware Solution SDDCs with Virtual WAN and NVAs." lightbox="media/azure-vmware-solution-crosstenant-crossregion-vwan-appliance.png" border="false":::
 
-### Components
+## Connectivity
 
-Network connectivity in a cross-tenant environment has following main components.
+Network connectivity in a cross-tenant environment consists of the following connections.
 
 - [Azure VMware Solution SDDC-to-SDDC connectivity](#azure-vmware-solution-sddc-to-sddc-connectivity)
 - [Azure VMware Solution SDDC-to-Azure connectivity](#azure-vmware-solution-sddc-to-azure-connectivity)
@@ -119,23 +98,44 @@ If the on-premises environment uses multiple ExpressRoute circuits for redundanc
 
 #### Establish connections within the same tenant
 
-- *Direct* spokes can connect with each other through a Virtual WAN virtual network connection.
+- Connect *direct* spokes with each other via a Virtual WAN virtual network connection.
 
-- *Direct* spokes can connect with *indirect* spokes through virtual network peering.
-- *Indirect* spokes can connect with *direct* spokes through virtual network peering.
-- *Indirect* spokes can connect with each other through virtual network peering with a *direct* spoke and a UDR that you associate with the direct spoke. A UDR has an *indirect* spoke prefix as the destination network and an NVA in the *direct* spoke as next hop. Configure the NVA in the *direct* spoke to forward the traffic through its network interface card (NIC).
+- Connect *direct* spokes with *indirect* spokes via virtual network peering.
+- Connect *indirect* spokes with *direct* spokes via virtual network peering.
+- Connect *indirect* spokes with each other via virtual network peering with a *direct* spoke and a UDR that you associate with the direct spoke. A UDR has an *indirect* spoke prefix as the destination network and an NVA in the *direct* spoke as next hop. Configure the NVA in the *direct* spoke to forward the traffic through its network interface card (NIC).
 
 #### Establish connections across the tenant
 
-- *Direct* spokes can connect with a cross-tenant *direct* spoke via global virtual network peering.
+- Connect *direct* spokes with cross-tenant *direct* spokes via global virtual network peering.
 
-- *Direct* spokes can connect with cross-tenant *indirect* spokes via global virtual network peering between *direct* spokes and UDRs that you associate with the *direct* spoke. A UDR has a cross-tenant *indirect* spoke prefix as the destination network and an NVA in the cross-tenant *direct* spoke as the next hop.
-- *Indirect* spokes can connect with cross-tenant *direct* spokes via global virtual network peering between *direct* spoke virtual networks and a UDR that you associate with the direct spoke virtual networks. The UDR has a cross-tenant *direct* spoke prefix as the destination network and an NVA in its own *direct* spoke as the next hop.
-- *Indirect* spokes can connect with cross-tenant *indirect* spokes via global virtual network peering between *direct* spoke virtual networks and a UDR that you associate with the direct spoke virtual networks. The UDR has a cross-tenant *indirect* spoke prefix as the destination network and an NVA in its own *direct* spoke as the next hop.
+- Connect *direct* spokes with cross-tenant *indirect* spokes via global virtual network peering between *direct* spokes and UDRs that you associate with the *direct* spoke. A UDR has a cross-tenant *indirect* spoke prefix as the destination network and an NVA in the cross-tenant *direct* spoke as the next hop.
+- Connect *indirect* spokes with cross-tenant *direct* spokes via global virtual network peering between *direct* spoke virtual networks and a UDR that you associate with the direct spoke virtual networks. The UDR has a cross-tenant *direct* spoke prefix as the destination network and an NVA in its own *direct* spoke as the next hop.
+- Connect *indirect* spokes with cross-tenant *indirect* spokes via global virtual network peering between *direct* spoke virtual networks and a UDR that you associate with the direct spoke virtual networks. The UDR has a cross-tenant *indirect* spoke prefix as the destination network and an NVA in its own *direct* spoke as the next hop.
 
 ### Azure-to-on-premises connectivity
 
-Use the on-premises ExpressRoute circuit and the ExpressRoute gateway of Virtual WAN to establish Azure-to-on-premises connectivity. The connectivity between the Azure VMware Solution SDDC ExpressRoute and the same on-premises ExpressRoute gateway is *non-transitive*. The connection between the *direct* spoke virtual network and Virtual WAN via global virtual network peering is also *non-transitive*. The *indirect* spoke that connects to Virtual WAN must have a UDR that has an on-premises prefix as the destination network and an NVA that runs in the *direct* spoke as the next hop.
+Use the on-premises ExpressRoute circuit and the ExpressRoute gateway of Virtual WAN to establish Azure-to-on-premises connectivity. The connectivity between the Azure VMware Solution SDDC ExpressRoute and the same on-premises ExpressRoute gateway is non-transitive. The connection between the direct spoke virtual network and Virtual WAN via global virtual network peering is also non-transitive. The indirect spoke that connects to Virtual WAN must have a UDR that has an on-premises prefix as the destination network and an NVA that runs in the direct spoke as the next hop.
+
+## Scenario details
+
+This article examines the following scenarios. You can apply these scenarios for either cross-tenant migration or workload-access purposes.
+
+- Cross-tenant Azure VMware Solution SDDC-to-SDDC network connectivity
+- Cross-tenant Azure-to-Azure connectivity
+- Cross-tenant network access between an Azure VMware Solution SDDC and Azure virtual networks
+- Cross-tenant network access between an Azure VMware Solution SDDC and an on-premises environment
+- Cross-tenant network traffic inspection and control via an NVA that runs in a virtual network that connects to Virtual WAN 
+
+In a cross-tenant environment, the Azure VMware Solution SDDC, its associated Azure ExpressRoute circuit, and Virtual WAN can create a challenging migration or workload-access experience. The ExpressRoute circuit that's associated with the Azure VMware Solution SDDC connects with the SDDC and also with the Virtual WAN ExpressRoute gateway. The ExpressRoute circuit learns the routes that the Azure VMware Solution SDDC and Virtual WAN advertise. The ExpressRoute circuit advertises those routes across the tenant to the other Azure VMware Solution SDDC and Virtual WAN that connect to the circuit. Carefully plan your configuration to avoid cyclic route propagation between Virtual WAN, the SDDC ExpressRoute circuit, and the Virtual WAN ExpressRoute gateway.
+
+## Potential use cases
+
+Consider the following scenarios that might benefit from this architecture:
+
+- Multinational corporations run Azure VMware Solution SDDC in different Microsoft Entra tenants.
+
+- An enterprise undergoes a demerger or divestment process, which results in separate business entities that have separate Microsoft Entra tenants. Each separate business entity requires access to a common on-premises environment and requires cross-tenant access to Azure VMware Solution SDDC and other Azure resources.
+- Two separate businesses have their own separate Microsoft Entra tenants but still require cross-tenant access to workloads that run in both Azure VMware Solution SDDCs and Azure.
 
 ## Next steps
 

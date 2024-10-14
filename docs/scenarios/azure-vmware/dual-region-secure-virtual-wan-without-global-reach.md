@@ -1,6 +1,6 @@
 ---
 title: Use a Dual-Region Azure VMware Solution Design That Doesn't Have Global Reach
-description: Learn how to configure network connectivity when you deploy Azure VMware Solution private clouds in two Azure regions with Secure Virtual WAN without Global Reach.
+description: Learn how to configure network connectivity when you deploy Azure VMware Solution private clouds in two Azure regions with secure Virtual WAN without Global Reach.
 author: jasonmedina
 ms.author: jasonmedina
 ms.date: 10/21/2024
@@ -78,7 +78,9 @@ The following table describes the topology connectivity in the preceding diagram
 
 Each Azure VMware Solution private cloud connects to the hub via ExpressRoute connection **D**.
 
-When you enable ExpressRoute-to-ExpressRoute transitivity on the secure hub and you enable routing intent, the secure hub sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to Azure VMware Solution over connection **D**. In addition to the default RFC 1918 addresses, Azure VMware Solution learns more specific routes from Azure virtual networks and branch networks, such as S2S VPN, P2S VPN, and SD-WAN, that connect to both hubs. Both Azure VMware Solution private clouds don't learn specific routes from on-premises networks. To route traffic back to on-premises networks, Azure VMware Solution uses the default RFC 1918 addresses that it learns via connection **D** from its local regional hub. This traffic transits through the local regional hub firewall. The hub firewall uses the specific routes for on-premises networks to route traffic toward the destinations over connection **E**. Traffic that goes from either Azure VMware Solution private cloud to virtual networks transits the hub firewall.
+When you enable ExpressRoute-to-ExpressRoute transitivity on the secure hub and you enable routing intent, the secure hub sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to Azure VMware Solution over connection **D**. In addition to the default RFC 1918 addresses, Azure VMware Solution learns more specific routes from Azure virtual networks and branch networks, such as S2S VPN, P2S VPN, and SD-WAN, that connect to both hubs. Both Azure VMware Solution private clouds don't learn specific routes from on-premises networks.
+
+To route traffic back to on-premises networks, Azure VMware Solution uses the default RFC 1918 addresses that it learns via connection **D** from its local regional hub. This traffic transits through the local regional hub firewall. The hub firewall uses the specific routes for on-premises networks to route traffic toward the destinations over connection **E**. Traffic that goes from either Azure VMware Solution private cloud to virtual networks transits the hub firewall.
 
 ## On-premises connectivity and traffic flow
 
@@ -102,11 +104,11 @@ When you enable ExpressRoute-to-ExpressRoute transitivity on both secure hubs an
 On-premises doesn't learn the specific routes for Azure VMware Solution private clouds. On-premises learns the default RFC 1918 addresses from both hubs via connection **E**. On-premises routes to both Azure VMware Solution private clouds via the default RFC 1918 addresses that it learns over connection **E**. 
 
 > [!NOTE]
->  You must add specific routes on both hubs. If you don't add specific routes on the hubs, you can introduce suboptimal routing because on-premises uses equal-cost multi-path (ECMP) between the **E** connections for traffic that goes to a Azure VMware Solution private cloud. As a result, traffic between on-premises and a Azure VMware Solution private cloud might experience latency, performance problems, or packet drops.
+>  You must add specific routes on both hubs. If you don't add specific routes on the hubs, you can introduce suboptimal routing because on-premises uses equal-cost multi-path (ECMP) routing between the **E** connections for traffic that goes to an Azure VMware Solution private cloud. As a result, traffic between on-premises and an Azure VMware Solution private cloud might experience latency, performance problems, or packet drops.
 
 To advertise a more specific route down to on-premises, specify those prefixes in the *Private traffic prefixes* field of the routing intent feature. For more information, see [Configure routing intent and policies through the Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva). You need to add a summarized route that encompasses both your Azure VMware Solution /22 block and your Azure VMware Solution subnets. If you add the same exact prefix or a more specific prefix instead of a summary route, you introduce routing problems within the Azure environment. Only include summarized routes in the *Private traffic prefixes* field.
 
-As illustrated in the diagram, Azure VMware Solution private cloud 1 includes workload subnets from 10.10.0.0/24 to 10.10.7.0/24. On hub 1, the summary route 10.10.0.0/21 is added to *Private traffic prefixes* because it encompasses all eight subnets. Additionally, on hub 1, the summary route 10.150.0.0/22 is added to *Private traffic prefixes* to cover the Azure VMware Solution management block. Summary routes 10.10.0.0/21 and 10.150.0.0/22 are advertise down to on-premises via connection **E** so that on-premises has a more specific route rather than 10.0.0.0/8.
+As illustrated in the diagram, Azure VMware Solution private cloud 1 includes workload subnets from 10.10.0.0/24 to 10.10.7.0/24. On hub 1, the summary route 10.10.0.0/21 is added to *Private traffic prefixes* because it encompasses all eight subnets. Additionally, on hub 1, the summary route 10.150.0.0/22 is added to *Private traffic prefixes* to cover the Azure VMware Solution management block. Summary routes 10.10.0.0/21 and 10.150.0.0/22 are advertised down to on-premises via connection **E** so that on-premises has a more specific route rather than 10.0.0.0/8.
 
 Azure VMware Solution private cloud 2 includes workload subnets from 10.20.0.0/24 to 10.20.7.0/24. On hub 2, the summary route 10.20.0.0/21 is added to *Private traffic prefixes* because it encompasses all eight subnets. Additionally, on hub 2, the summary route 10.250.0.0/22 is added to *Private traffic prefixes* to cover the Azure VMware Solution management block. Summary routes 10.20.0.0/21 and 10.250.0.0/22 advertise down to on-premises via connection **E** so that on-premises has a more specific route rather than 10.0.0.0/8.
 
