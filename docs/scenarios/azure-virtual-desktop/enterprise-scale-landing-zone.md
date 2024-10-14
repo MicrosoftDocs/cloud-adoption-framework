@@ -40,9 +40,9 @@ Learn the guidelines that direct the design of the Cloud Adoption Framework for 
 
 The following diagram shows a conceptual reference architecture that demonstrates major design areas and design best practices in an Azure Virtual Desktop environment.
 
-[![Diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/accelerator-baseline-architecture.svg)](./media/accelerator-baseline-architecture.svg#lightbox)
+[![A diagram of a reference architecture for a Virtual Desktop environment.](./media/accelerator-baseline-architecture.svg)](./media/accelerator-baseline-architecture.svg#lightbox)
 
-To learn more about the design areas for Azure Virtual Desktop, see [network topology and connectivity for Azure Virtual Desktop](./eslz-network-topology-and-connectivity.md)_
+To learn more about the design areas for Virtual Desktop, see [network topology and connectivity for Virtual Desktop](./eslz-network-topology-and-connectivity.md).
 
 _Download a [Visio file](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.vsdx) of this architecture._
 
