@@ -22,9 +22,9 @@ This article provides guidance on selecting the right Azure platform resources f
 
 This section outlines key resource decisions and resources for selecting platforms, compute types, orchestrators, and data sources in Azure. The current best practice is to ground generative AI workloads with the [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide). RAG helps scope and govern the output of generative AI models.
 
-In a typical RAG workload, (1) the workload receives the user query. (2) An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism finds the right (4) grounding data to send to the generative AI endpoint. (5) A generative AI model endpoint creates a response based on the user query and grounding data.
-
 :::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI workload." lightbox="./images/generative-ai-app.svg" border="false":::
+
+In a typical RAG workload, (1) the workload receives the user query. (2) An orchestrator like Prompt flow, Semantic Kernel, or LangChain manages the dataflow. (3) A search and retrieval mechanism finds the right (4) grounding data to send to the generative AI endpoint. (5) A generative AI model endpoint creates a response based on the user query and grounding data.
 
 Choosing the right resources for generative AI ensures efficient data processing, retrieval, and model execution. Use the following recommendations as framework to build generative RAG workloads.
 
@@ -44,9 +44,9 @@ Choosing the right resources for generative AI ensures efficient data processing
 
 This section discusses the major resource decisions, including platform selection, compute resources, data sources, and optional data processing services.
 
-In a typical nongenerative AI workload, (1) the workload ingests data. (2) An optional data processing mechanism extracts or manipulates the incoming data. (3) An AI model endpoint integrates with the workload and analyzes the incoming data. (4) Data is used to train or fine-tune the AI models.
-
 :::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI workload." lightbox="./images/non-generative-ai-app.svg" border="false":::
+
+In a nongenerative AI workload, (1) the workload ingests data. (2) An optional data processing mechanism extracts or manipulates the incoming data. (3) An AI model endpoint analyzes the incoming data. (4) Data is used to train or fine-tune the AI models.
 
 Selecting the correct Azure resources for nongenerative AI workloads is essential for building a responsive and efficient AI system. Use the following recommendations as framework to build nongenerative AI workloads.
 
