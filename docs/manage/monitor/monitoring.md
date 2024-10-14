@@ -45,6 +45,11 @@ Monitoring is a multifaceted discipline that requires a combination of tools, pr
 | Compliance | Compliance monitoring ensures that the cloud environment adheres to regulatory and industry standards. It involves tracking configurations, access controls, and data handling practices to ensure compliance with relevant regulations. |
 | Cost | Cost monitoring involves tracking cloud spending and resource utilization to identify cost-saving opportunities and prevent budget overruns. This includes monitoring resource usage, identifying underutilized resources, and optimizing resource configurations to reduce costs. |
 
+## Shared responsibilities
+
+:::image type="content" source="media/monitor/responsibilities.png" alt-text="Diagram showing shared responsibilities for monitoring in the cloud." lightbox="media/monitor/responsibilities.png":::
+
+
 ## Roles and responsibilities
 There are multiple roles in an organization that maintain the monitoring environment and require access to monitoring data to perform their job functions. Each role has different requirements for monitoring data based on their particular responsibilities. Depending on the size of your organization, you may have 
 
