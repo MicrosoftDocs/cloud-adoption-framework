@@ -16,11 +16,11 @@ After deploying the [Azure Landing Zone](../ready.md#deploy-a-foundation-with-az
 
 Azure CycleCloud Workspace for Slurm offers several benefits for users who want to run AI workloads with Slurm scheduler.
 
-- Easy and fast cluster creation. Users can quickly create Slurm clusters on Azure through a simple GUI. They can choose from various Azure virtual machine (VM) sizes and types, and customize cluster settings such as node count, network configuration, storage options (like Azure NetApp Files and Azure Managed Lustre Filesystem), and Slurm parameters.
+- *Easy and fast cluster creation.* Users can quickly create Slurm clusters on Azure through a simple GUI. They can choose from various Azure virtual machine (VM) sizes and types, and customize cluster settings such as node count, network configuration, storage options (like Azure NetApp Files and Azure Managed Lustre Filesystem), and Slurm parameters.
 
-- Flexible and dynamic cluster management. Azure CycleCloud scales Slurm clusters up or down automatically. Users can monitor cluster status, performance, and utilization, and view logs and metrics through the GUI. They can delete clusters when not needed and only pay for the resources they use.
+- *Flexible and dynamic cluster management.* Azure CycleCloud scales Slurm clusters up or down automatically. Users can monitor cluster status, performance, and utilization, and view logs and metrics through the GUI. They can delete clusters when not needed and only pay for the resources they use.
 
-- Full control of the infrastructure. Users have full control over the deployed infrastructure, allowing them to bring their own code, libraries, and packages, and to use resources on demand.
+- *Full control of the infrastructure.* Users have full control over the deployed infrastructure, allowing them to bring their own code, libraries, and packages, and to use resources on demand.
 
 ## Next step
 
