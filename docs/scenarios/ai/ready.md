@@ -9,12 +9,10 @@ ms.topic: conceptual
 
 # AI Ready – Recommendations to prepare an AI foundation
 
-This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/).
-
 :::image type="content" source="./images/aiready.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Ready. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiready.svg" border="false":::
 *Figure 1. AI Ready in the AI adoption process.*
 
-It focuses on AI-specific guidance for region selection, resource organization, and networking. The following diagram illustrates a scalable, baseline environment for your AI workloads.
+This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking. The following diagram illustrates a scalable, baseline environment for your AI workloads.
 
 :::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
 *Figure 1. Scalable pattern for AI workloads.*
@@ -33,7 +31,7 @@ Select the right region or regions to host your AI models. It affects the perfor
 
 - *Prepare for continuity of operations.* To ensure Business Continuity and Disaster Recovery (BCDR), replicate critical assets such as fine-tuned models, RAG data, trained models, and training datasets in a secondary region. This redundancy enables faster recovery if there's an outage and ensures continued service availability.
 
-## Prepare AI resource organization
+## Prepare AI governance
 
 In Azure, resource organization is how you structure management groups and subscriptions to organize your Azure resources. Resource organization is critical for AI governance across AI workloads and cost management.
 
