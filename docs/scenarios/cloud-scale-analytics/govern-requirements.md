@@ -113,7 +113,7 @@ The same applies to reference data such as code sets and financial markets data.
 
 ## Metadata lineage
 
-Finally, there's a requirement for metadata lineage. You can use an audit trail to know where data originated and how it is transformed on route to a report or a data store. You can use metadata to trace who or what is maintaining data, including when and where it occurs.
+Finally, there's a requirement for metadata lineage. You can use an audit trail to know where data originated and how it's transformed on route to a report or a data store. You can use metadata to trace who or what is maintaining data, including when and where it occurs.
 
 ## Summary of what is needed for end-to-end data governance
 
