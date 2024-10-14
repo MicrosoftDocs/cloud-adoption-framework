@@ -3,7 +3,7 @@ title: Development lifecycle
 description: Design area guidance for DevOps principles and practices in Azure Landing Zones
 author: elanzel
 ms.author: elanzelm
-ms.date: 06/18/2022
+ms.date: 10/14/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -43,9 +43,9 @@ Development lifecycle strategy provides key design considerations and recommenda
 
 - Use private repositories when building Azure Landing Zones
 
-- Use public repositories when sharing non-confidential information like automation examples, public documentation, and open-source collaboration material.
+- Use public repositories when sharing nonconfidential information like automation examples, public documentation, and open-source collaboration material.
 
-- Adopt an IaC approach for deploying, managing, governing and supporting cloud resources.
+- Adopt an IaC approach for deploying, managing, governing, and supporting cloud resources.
 
 ## Branch strategy
 
@@ -123,7 +123,7 @@ Development lifecycle strategy provides key design considerations and recommenda
 
 - When you connect Azure DevOps or GitHub to Azure via service connections or GitHub secrets, make sure you always define the scope so they can access only required resources.
 
-- Use Key Vault secrets to avoid hard-coding sensitive information such as credentials (virtual machine´s user passwords), certificates or keys. Then use secrets as variables in your build and release jobs.
+- Use Key Vault secrets to avoid hard-coding sensitive information such as credentials (virtual machine´s user passwords), certificates, or keys. Then use secrets as variables in your build and release jobs.
 
 ## Deployment strategy
 
@@ -138,7 +138,7 @@ Development lifecycle strategy provides key design considerations and recommenda
   - Staging
   - Production
 
-- Consider using IaC as part of your strategy to validate and confirm changes pre-deployment.
+- Consider using IaC as part of your strategy to validate and confirm changes predeployment.
   - [ARM Templates what-if](/azure/azure-resource-manager/templates/deploy-what-if?tabs=azure-powershell)
   - [Bicep what-if](/azure/azure-resource-manager/bicep/deploy-what-if?tabs=azure-powershell%2cCLI)
   - [Terraform plan](https://www.terraform.io/cli/commands/plan)
@@ -153,7 +153,7 @@ Development lifecycle strategy provides key design considerations and recommenda
   - Diagnostic resource health
   - Security
 
-- Include IaC pre-deployment checks so you can preview changes and see details on whether a resource has been created, modified, or deleted.
+- Include IaC predeployment checks so you can preview changes and see details on whether a resource i created, modified, or deleted.
 
 ## Rollback strategy
 
@@ -161,8 +161,8 @@ Development lifecycle strategy provides key design considerations and recommenda
 
 - Consider creating a rollback plan. Rolling back a deployment involves reverting the deployment to a known good state and provides a crucial ability to recover from a failed deployment.
 
-- Consider using [undo changes](/azure/devops/repos/git/undo) in Git if you need to revert changes in a commit, discard changes or reset a branch to a previous state.
+- Consider using [undo changes](/azure/devops/repos/git/undo) in Git if you need to revert changes in a commit, discard changes, or reset a branch to a previous state.
 
 ### Design recommendations
 
-- Adopt the use of undo changes in Git when you need to revert changes to committed files, discard uncommitted changes or reset a branch to a previous state.
+- Adopt the use of undo changes in Git when you need to revert changes to committed files, discard uncommitted changes, or reset a branch to a previous state.

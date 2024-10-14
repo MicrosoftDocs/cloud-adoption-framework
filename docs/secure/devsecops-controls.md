@@ -137,7 +137,7 @@ Metrics are measurements used to see how effective the security controls and pro
 > [!NOTE]
 > This concept differs from MTTR in security operations focused on time to remove adversary access to the organization’s assets.
 
-Security governance acts as a guiding hand to security teams and is often built upon frameworks and processes that organizations use to manage and control their information security. These include Policies, Procedures, Controls, and Risk Management. Metrics help quantify risk exposure. Without them, the organization might not fully understand its vulnerabilities and potential impact.
+Security governance acts as a guiding hand to security teams and is often built upon frameworks and processes that organizations use to manage and control their information security. These guidance include Policies, Procedures, Controls, and Risk Management. Metrics help quantify risk exposure. Without them, the organization might not fully understand its vulnerabilities and potential impact.
 
 Because security requirements might be new, you have the opportunity to take a progressive approach that gradually ramps up coding standards to the ideal state. This approach gives teams time to learn and automate the monitoring and controls.
 
@@ -354,9 +354,9 @@ This control supports Continuous SDL Practice 7 – Perform Security Testing.
 
 This control focuses on reducing risk from authentication keys and other secrets exposed in code. Threat actors have expertise and automation to find and exploit embedded secrets in code.
 
-The best approach is to use of managed identities and modern authentication protocols instead of keys and secrets when possible. While using API keys and secrets has traditionally been a coding and testing practice, the preferred method should always be identity-based authentication to resources because of the increased security and lifecycle management abilities. The implementation of this control takes the form of using managed identities, like [Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview).
+The best approach is to use of managed identities and modern authentication protocols instead of keys and secrets when possible. While using API keys and secrets have traditionally been a coding and testing practice, the preferred method should always be identity-based authentication to resources because of the increased security and lifecycle management abilities. The implementation of this control takes the form of using managed identities, like [Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview).
 
-If the use of secrets is required, you must secure them through their whole lifecycle including their creation, use, regular rotation, and revocation. Avoid directly using secrets in code and only store them in a secure key/secret storage system such as Azure Key Vault or a Hardware Security Module (HSM) if necessary. **Under no circumstances should plain text keys and secrets ever be stored in code, even temporarily!** Attackers will find and exploit these secrets.
+If the use of secrets is required, you must secure them through their whole lifecycle including their creation, use, regular rotation, and revocation. Avoid directly using secrets in code and only store them in a secure key/secret storage system such as Azure Key Vault or a Hardware Security Module (HSM) if necessary. **Under no circumstances should plain text keys and secrets ever be stored in code, even temporarily!** Attackers find and exploit these secrets.
 
 > [!IMPORTANT]
 > Internal source code repositories are not safe!
@@ -417,7 +417,7 @@ To learn more about pipeline security, see [Securing Azure Pipelines](/azure/dev
 
 This control supports Continuous SDL Practice 7 – Perform Security Testing.
 
-Have professional application penetration testers attempt to compromise a live instance of the complete workload. This testing validates that the workload's security controls are effective and consistent. Penetration testing helps find and highlight the path of least resistance that an attacker could use to exploit your application and compromise the business. Penetration tests can be incredibly valuable when done at the right time. Use them once you've mitigated the cheap and easy to exploit vulnerabilities found in previous scans.
+Have professional application penetration testers attempt to compromise a live instance of the complete workload. This testing validates that the workload's security controls are effective and consistent. Penetration testing helps find and highlight the path of least resistance that an attacker could use to exploit your application and compromise the business. Penetration tests can be incredibly valuable when done at the right time. Use them after you mitigate the cheap and easy to exploit vulnerabilities found in previous scans.
 
 We recommend you do this testing at all levels of the DevSecOps security profiles.
 
@@ -426,7 +426,7 @@ We recommend you do this testing at all levels of the DevSecOps security profile
       :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **Temporary minimum** – We recommend that you do a penetration test on all applications. Due to time constraints, you might only be able to identify easier methods into the application that an attacker might exploit. Plan to quickly bring this up to the standard level at minimum.
+      **Temporary minimum** – We recommend that you do a penetration test on all applications. Due to time constraints, you might only be able to identify easier methods into the application that an attacker might exploit. Plan to quickly bring this value up to the standard level at minimum.
    :::column-end:::
 :::row-end:::
 :::row:::

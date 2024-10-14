@@ -76,12 +76,12 @@ The differences between full loads and delta loads are:
 
 - **Full load** - Complete data from the source can be onboarded if:
   - The data volume at the source is small.
-  - The source system doesn't maintain a timestamp field that identifies if data has been added, updated, or deleted.
+  - The source system doesn't maintain a timestamp field that identifies if data is added, updated, or deleted.
   - The source system overwrites the complete data each time.
 
 - **Delta load** - Incremental data from the source can be onboarded if:
   - The data volume at the source is large.
-  - The source system maintains a timestamp field that identifies if data has been added, updated, or deleted.
+  - The source system maintains a timestamp field that identifies if data is added, updated, or deleted.
   - The source system creates and updates files on data changes.
 
 Your raw data lake is composed of your landing and conformance containers. Each container uses a 100% mandatory folder structure specific to its purpose.
@@ -191,7 +191,7 @@ Use tools, like Spark or Data Factory, to do dimensional modeling instead of doi
 
 If you do dimensional modeling outside of your lake, you might want to publish models back to your lake for consistency. This layer isn't a replacement for a data warehouse. Its performance typically isn't adequate for responsive dashboards or end user and consumer interactive analytics. This layer is best suited for internal analysts and data scientists who run large-scale, improvised queries or analysis, or for advanced analysts who don't have time-sensitive reporting needs. Because storage costs are lower in your data lake than your data warehouse, it can be cost effective to keep granular, low-level data in your lake. Store aggregated data in your warehouse. Generate these aggregations by using Spark or Azure Data Factory. Persist them to your data lake before loading them into your data warehouse.
 
-Data assets in this zone are typically highly governed and well documented. Assign permissions by department or by function, and organize permissions by consumer group or data mart.
+Data assets in this zone are highly governed and well documented. Assign permissions by department or by function, and organize permissions by consumer group or data mart.
 
 ### Data products container
 

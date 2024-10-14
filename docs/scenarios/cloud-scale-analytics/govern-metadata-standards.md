@@ -10,9 +10,9 @@ ms.custom: e2e-data-management, think-tank
 
 # Metadata standards
 
-Metadata Management plays a crucial role in data architecture. Metadata is data about other data. It describes data, providing a reference that helps you to find, secure and control data. Metadata also binds data together. It can be used to validate data's integrity and quality, route or replicate data to a new location, transform data, and know data meanings. Metadata is also essential in democratizing data through self-service portals.
+Metadata Management plays a crucial role in data architecture. Metadata is data about other data. It describes data, providing a reference that helps you to find, secure, and control data. Metadata also binds data together. It can be used to validate data's integrity and quality, route or replicate data to a new location, transform data, and know data meanings. Metadata is also essential in democratizing data through self-service portals.
 
-There's a growing trend in the industry to bring data insights closer to data analysts and scientists using portals that use more metadata intensively. This trend is known as *data observability*. Data observability uses concepts like metadata lake, knowledge graphs, or metadata graphs to describe platforms where metadata is centralized. This is a good way for you to build a unified view of how data is used and sourced across your organization when using a distributed data mesh.
+There's a growing trend in the industry to bring data insights closer to data analysts and scientists using portals that use more metadata intensively. This trend is known as *data observability*. Data observability uses concepts like metadata lake, knowledge graphs, or metadata graphs to describe platforms where metadata is centralized. It's a good way for you to build a unified view of how data is used and sourced across your organization when using a distributed data mesh.
 
 A good metadata management strategy grows organically. It starts simple and small by first identifying the most important areas. A good metadata management strategy also is supported with services and clear processes. To get started, it's good to be aware of the different metadata categories:
 
@@ -23,7 +23,7 @@ A good metadata management strategy grows organically. It starts simple and smal
 
 In decentralized data architecture, metadata management is an organizational challenge that requires finding a balance between centrally managed metadata and federated managed metadata. It's important for you to [understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md) as you plan your metadata management. Using a collaborative data management practice improves communication, integration, and data flow automation between your teams. You can address some of metadata management's complexity by striking the right balance between central governance and domain ownership.
 
-As you are deciding what metadata to manage centrally or federate to your [data domains](./architectures/data-domains.md) and begin your implementation, ask yourself:
+As you're deciding what metadata to manage centrally or federate to your [data domains](./architectures/data-domains.md) and begin your implementation, ask yourself:
 
 - What business metadata is critical?
 - What technical metadata is required for interoperability?
@@ -31,13 +31,13 @@ As you are deciding what metadata to manage centrally or federate to your [data 
 - Where are the models or schemas created and maintained?
 - What information teams need to deliver centrally to allow the data governance department to do its work correctly?
 
-Using your answers to these questions, map out the content life cycle for each of your metadata streams and determine all dependencies. You then have a metadata model that can connect business domains, processes, technology, and data.
+Using your answers to these questions, map out the content life cycle for each of your metadata streams, and determine all dependencies. You then have a metadata model that can connect business domains, processes, technology, and data.
 
 Once you know what metadata you need, you must choose a place to store and process it. You can do this using Microsoft Purview.
 
 ## Use Microsoft Purview to manage your data estate at large
 
-[Microsoft Purview](/azure/purview) is a unified data governance solution that helps you manage and govern your on-premises, multicloud, and software-as-a-service (SaaS) data. It does metadata management at scale, because it's a fully automated service that intelligently performs data discovery, data scanning, data quality and access management. It also provides a holistic map of many insights about your data mesh architecture.
+[Microsoft Purview](/azure/purview) is a unified data governance solution that helps you manage and govern your on-premises, multicloud, and software-as-a-service (SaaS) data. It does metadata management at scale, because it's a fully automated service that intelligently performs data discovery, data scanning, data quality, and access management. It also provides a holistic map of many insights about your data mesh architecture.
 
 Microsoft Purview is a comprehensive set of solutions that can help your organization govern, protect, and manage data, wherever it lives. Microsoft Purview solutions provide integrated coverage and help address the fragmentation of data across organizations, the lack of visibility that hampers data protection and governance, and the blurring of traditional IT management roles.
 
