@@ -9,7 +9,7 @@ items:
     items:
     - name: Prepare AI environment
       href: ready.md
-    - name: AI with Azure platforms (PaaS)
+    - name: AI on Azure platforms (PaaS)
       items:
       - name: Design areas
         items:
