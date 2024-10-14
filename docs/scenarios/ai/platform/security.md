@@ -43,9 +43,11 @@ This section outlines security recommendations for accessing AI resources in Azu
 
 - *Configure least privilege access.* Configure least privilege access by implementing Role-Based Access Control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine-tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access necessary to perform their tasks. Regularly review and adjust permissions to prevent privilege creep. For example,
 
-    - *Data scientists* should have read/write access to data storage, permission to run training jobs, and access to model training environments.
-    - *AI developers* should have access to development environments, deployment permissions, and the ability to modify AI applications.
-    - *IT administrators* should have full access to manage infrastructure, network configurations, and security policies
+    | Role              | Permissions             |
+    |-------------------|-------------------------|
+    | Data scientists   | Read/write access to data storage, permission to run training jobs, and access to model training environments. |
+    | AI developers     | Access to development environments, deployment permissions, and the ability to modify AI applications.          |
+    | IT administrators | Full access to manage infrastructure, network configurations, and security policies.                          |
 
 - *Secure Azure service-to-service interactions.* Use [Managed Identities](/entra/identity/managed-identities-azure-resources/overview) to allow Azure services to authenticate to each other without managing credentials.
 
