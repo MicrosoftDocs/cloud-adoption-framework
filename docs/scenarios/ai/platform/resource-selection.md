@@ -40,7 +40,7 @@ Choosing the right resources for generative AI ensures efficient data processing
 
 - *Pick a compute platform for you application.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right  platform for your workload.
 
-## Understand nongenerative AI workloads
+## Select resources for nongenerative AI workloads
 
 This section discusses the major resource decisions, including platform selection, compute resources, data sources, and optional data processing services.
 
