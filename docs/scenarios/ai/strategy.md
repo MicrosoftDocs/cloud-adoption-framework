@@ -48,7 +48,7 @@ For each use case, identify an AI technology to support it. Microsoft provides s
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
-### Buy AI software services (Saas)
+### Buy AI software services (SaaS)
 
 Microsoft provides a range of Copilot generative AI services to enhance individual efficiency. These Copilots allow you to buy software as a service (SaaS) to provide AI capabilities across your business or to specific individuals. Adopting SaaS products requires very few skills.
 
