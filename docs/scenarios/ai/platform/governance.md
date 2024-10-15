@@ -43,13 +43,15 @@ Controlling costs in AI workloads allows organizations to maximize efficiency wh
 
 For more cost management guidance, see [Manage AI costs](manage.md#manage-ai-costs) and [Cost optimization in the Azure OpenAI baseline](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat#cost-optimization).
 
+## Govern AI platforms
+
+Use Azure Policy to apply built-in policy definitions for each AI platform you're using. [Azure AI Search](/azure/search/policy-reference)
+
 ## Govern AI security
 
 Security in AI workloads protects against potential threats that could compromise data, models, or infrastructure. Strong security practices for AI maintain the safety and integrity of these systems, reducing risks of unauthorized access and data breaches.
 
 - *Enable Defender for Cloud on every subscription.* Defender for Cloud provides a cost-effective approach for detecting configurations in your deployed resources that aren't secure. You should also enable [AI threat protection](/azure/defender-for-cloud/ai-threat-protection).
-
-- *Deny public access to AI resources.* Platform as a service (PaaS) services and AI model endpoints shouldn't be accessible from the public internet. For PaaS, use private endpoints for end user access. Use a jumpbox to manage your AI resources.
 
 - *Configure access control.* Grant least privilege user access to centralized AI resources. For example, start with the Reader Azure role, and elevate to the Contributor Azure role if the limited permissions slow down application development.
 
@@ -61,19 +63,17 @@ Security in AI workloads protects against potential threats that could compromis
 
 Effective AI operations management ensures stable and consistent AI services for organizations. Centralized oversight and continuity plans enable companies to maintain reliable model performance and minimize downtime, which is essential for sustaining AI’s business value.
 
-- *Consider centralizing AI model governance.* Having a single individual or team govern AI model endpoints makes it easier to standardize governance and monitor the endpoints. The AI Center of Excellence (CoE) handles this function for the business as an extension of the Cloud CoE or standalone team. For more information, see [AI CoE](center-of-excellence.md).
-
 - *Review and manage AI models.* Develop a policy for managing model versioning, especially as models are upgraded or retired. You need to maintain compatibility with existing systems and ensure a smooth transition between model versions.
 
 - *Define a business continuity and disaster recovery plan.* Establish a policy for business continuity and disaster recovery for your AI endpoints and AI data. Configure baseline disaster recovery for resources that host your AI model endpoints, like [Linux](/azure/virtual-machines/linux/tutorial-disaster-recovery) and [Windows](/azure/virtual-machines/windows/tutorial-disaster-recovery) virtual machines, [Azure AI Studio](/azure/ai-studio/how-to/disaster-recovery), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning), [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery), or Azure AI services. All Azure data stores, such as [Azure Blob Storage](/azure/storage/common/storage-disaster-recovery-guidance), [Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore), and [Azure SQL Database](/azure/azure-sql/accelerated-database-recovery), provide reliability and disaster recovery guidance that you should follow.
 
-- *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For examples, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), [Azure AI Studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), [Azure Virtual Machines](/azure/azure-monitor/vm/monitor-virtual-machine-alerts), and guidance on individual Azure AI services.
+- *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For examples, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), [Azure AI Studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), and guidance on individual Azure AI services.
 
 ## Govern AI regulatory compliance
 
 Regulatory compliance in AI ensures that organizations adhere to industry standards and legal requirements. Robust compliance measures help mitigate risks related to legal liabilities and build trust in AI solutions among users, clients, and regulators.
 
-- *Automate compliance.* Use [Microsoft Purview Compliance Manager](/microsoft-365/compliance/compliance-manager-overview) to assess and manage compliance across cloud environments. Use the applicable [regulatory compliance initiatives](/azure/governance/policy/samples/#regulatory-compliance) in Azure Policy for your industry. Apply other policies based on the AI services that you use, such as [Azure AI Studio](/azure/ai-services/security-controls-policy), [Azure Machine Learning](/azure/machine-learning/policy-reference), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference).
+- *Automate compliance.* Use [Microsoft Purview Compliance Manager](/microsoft-365/compliance/compliance-manager-overview) to assess and manage compliance across cloud environments. Use the applicable [regulatory compliance initiatives](/azure/governance/policy/samples/#regulatory-compliance) in Azure Policy for your industry. Apply other policies based on the AI services that you use, such as [Azure AI Studio](/azure/ai-services/security-controls-policy) and [Azure Machine Learning](/azure/machine-learning/policy-reference).
 
 - *Develop industry-specific compliance checklists.* Regulations and standards differ by industry and location. You need to know your regulatory requirements and compile checklists that reflect the regulatory demands that are relevant to your industry. Use standards, such as ISO/IEC 23053:2022 (Framework for Artificial Intelligence Systems Using Machine Learning), to audit policies that are applied to your AI workloads.
 
