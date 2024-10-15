@@ -12,7 +12,7 @@ ms.topic: conceptual
 :::image type="content" source="./images/aiready.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Ready. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiready.svg" border="false":::
 *Figure 1. AI Ready in the AI adoption process.*
 
-This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with [CAF Ready](/azure/cloud-adoption-framework/ready/) and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking. The following diagram illustrates a scalable, baseline environment for your AI workloads.
+This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with the [Ready](/azure/cloud-adoption-framework/ready/) methodology in the Cloud Adoption Framework and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking. The following diagram illustrates a scalable, baseline environment for your AI workloads.
 
 :::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
 *Figure 1. Scalable pattern for reliable and secure AI workloads.*
@@ -21,15 +21,15 @@ This article provides recommendations for making key design and process decision
 
 Select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
 
-- *Use multiple regions to host AI model endpoints.* For production workloads, host AI endpoints in at least two regions to provide redundancy and ensure high availability. Although generative AI models are stateless, hosting them in multiple regions enables faster failover and recovery during regional failures. For Azure OpenAI models (GPTs), you can use [global deployments](/azure/ai-services/openai/how-to/deployment-types#deployment-types), which is multi-region and can automatically and transparently route the request to a region with enough capacity. If you opt for a nonglobal deployment (regional), use [Azure API Management](/azure/api-management/genai-gateway-capabilities#backend-load-balancer-and-circuit-breaker) for load balancing API requests to AI endpoints.
+- *Use multiple regions to host AI model endpoints.* For production workloads, host AI endpoints in at least two regions to provide redundancy and ensure high availability. Although generative AI models are stateless, hosting them in multiple regions ensures faster failover and recovery during regional failures. For Azure OpenAI Service models, like GPT models, you can use [global deployments](/azure/ai-services/openai/how-to/deployment-types#deployment-types). These multiregion deployments can automatically and transparently route requests to a region that has enough capacity. If you choose a nonglobal deployment, also known as a regional deployment, use [Azure API Management](/azure/api-management/genai-gateway-capabilities#backend-load-balancer-and-circuit-breaker) for load balancing API requests to AI endpoints.
 
-- *Confirm service availability.* Before deployment, ensure the necessary AI services [availability in the region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/#products-by-region_tab5) you selected. Some regions might not offer specific AI services or might have limited features, which can affect the functionality and scalability of your solution. For example, Azure OpenAI service availability can differ depending on the deployment model: Global Standard, Global Provisioned, (Regional) Standard, (Regional) Provisioned. Verify the AI service to ensure you have access to the resources you need.
+- *Confirm service availability.* Before deployment, ensure that there's [availability in the region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/#products-by-region_tab5) for the AI resources that you need. Certain regions might not provide specific AI services or might have limited features, which can affect the functionality of your solution. This limitation can also affect the scalability of your deployment. For example, Azure OpenAI service availability can vary based on your deployment model. These deployment models include global standard, global provisioned, regional standard, and regional provisioned. Check the AI service to confirm that you have access to the necessary resources.
 
-- *Evaluate region quota and capacity.* As your AI workloads grow, consider the quota or subscription limits in your chosen region. Azure services have regional subscription limits, and these limits could affect large-scale AI model deployments, such as large inference workloads. Proactively reach out to Azure support if you anticipate needing extra capacity to avoid disruptions.
+- *Evaluate region quota and capacity.* Consider the quota or subscription limits in your chosen region as your AI workloads grow. Azure services have regional subscription limits. These limits can affect large-scale AI model deployments, such as large inference workloads. To prevent disruptions, contact Azure support in advance if you foresee a need for additional capacity.
 
-- *Evaluate performance.* Additionally, when building applications that need to retrieve data, such as a RAG applications, consider where you store your data to optimize performance. While data colocation with models in RAG apps isn't required, it can improve performance by reducing latency and ensuring efficient data retrieval.
+- *Evaluate performance.* When you build applications that need to retrieve data, such as retrieval-augmented-generation (RAG) applications, it's important to consider data storage locations to optimize performance. You don't have to colocate data with models in RAG apps, but doing so can improve performance by reducing latency and ensuring efficient data retrieval.
 
-- *Prepare for continuity of operations.* To ensure Business Continuity and Disaster Recovery (BCDR), replicate critical assets such as fine-tuned models, RAG data, trained models, and training datasets in a secondary region. This redundancy enables faster recovery if there's an outage and ensures continued service availability.
+- *Prepare for continuity of operations.* To ensure business continuity and disaster recovery, replicate critical assets such as fine-tuned models, RAG data, trained models, and training datasets in a secondary region. This redundancy enables faster recovery if there's an outage and ensures continued service availability.
 
 ## Prepare AI governance
 
@@ -43,7 +43,7 @@ In Azure, resource organization is how you structure management groups and subsc
 
 ## Prepare AI networking
 
-This guidance provides recommendations for setting up your network topology for AI workloads. Organizations with multiple intelligent applications should use a hub and spoke network topology. If you have a single intelligent application, hub and spoke topology is where you should head when you have more workloads.
+This guidance provides recommendations for setting up your network topology for AI workloads. Organizations that have multiple intelligent applications should use a hub-and-spoke network topology. When you have a single intelligent application, consider adopting a hub-and-spoke topology as the number of your workloads increases.
 
 - *Connect to on-premises data.* For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection.
 
@@ -61,11 +61,11 @@ This guidance provides recommendations for setting up your network topology for 
 
 ## Implementation options
 
-Choosing the right approach for the foundation of AI workloads involves not only setting up the core infrastructure but also understanding the separation of responsibilities and considerations necessary for an AI-focused Azure landing zone.
+To choose the right approach for the foundation of AI workloads, you need to set up the core infrastructure and understand the separation of responsibilities and considerations that you need for an AI-focused Azure landing zone.
 
 ### Deploy a foundation with Azure landing zone
 
-Azure landing zone provides a starting point for preparing your Azure environment. Deploy AI workload resources such as Azure AI Studio, Azure Machine Learning, Azure AI services, Azure Virtual Machines, and supporting resources to an new application landing zone (*see figure 2: "Landing zone A2 subscription"*). You can use the various implementations for Azure Landing Zone. Ensure to apply the policies relevant to your AI deployment as you're using the Azure Landing Zone accelerator.
+An Azure landing zone provides a starting point to prepare your Azure environment. Deploy AI workload resources, such as Azure AI Studio, Machine Learning, AI services, Virtual Machines, and supporting resources to an application landing zone. For more information, see *Figure 2: Landing zone A2 subscription*. You can use various implementations for an Azure landing zone. Make sure to apply the policies that are relevant to your AI deployment when you use the Azure landing zone accelerator.
 
 :::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
 *Figure 2. AI applications in the context of an Azure landing zone.*
@@ -76,7 +76,7 @@ You can use the guidance discussed in this article to establish a foundational e
 
 ## Next steps
 
-The rest of the guidance focuses on building AI workloads in Azure using PaaS and IaaS solutions.
+The following guidance focuses on building AI workloads in Azure by using PaaS and infrastructure as a service (IaaS) solutions.
 
 > [!div class="nextstepaction"]
 > [PaaS AI workloads](./platform/resource-selection.md)
