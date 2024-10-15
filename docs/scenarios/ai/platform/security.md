@@ -15,7 +15,13 @@ This articles provides recommendations for securing AI workloads that use Azure 
 
 This guidance provides recommendations for securing Azure resources deployed for AI workloads.
 
-*Secure Azure AI platforms.* Standardize the application of [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/?product=popular).
+*Secure Azure AI platforms.* Standardize the application of [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/?product=popular) within the Azure Well-Architected Framework.
+
+| Azure AI platform security baseline | Azure Well-Architected Framework service guide |
+| --- | --- |
+[Azure Machine Learning](/security/benchmark/azure/baselines/machine-learning-service-security-baseline) | [Azure Machine Learning](/azure/well-architected/service-guides/azure-machine-learning)
+[Azure AI Studio](/security/benchmark/azure/baselines/azure-ai-studio-security-baseline) | |
+[Azure OpenAI](/security/benchmark/azure/baselines/azure-openai-security-baseline) | [Azure Open AI](/azure/well-architected/service-guides/azure-openai)
 
 ## Secure the AI models
 

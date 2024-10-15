@@ -21,6 +21,8 @@ Securing networks involves setting up private endpoints, Network Security Groups
 
 - *Use private endpoints.* Use private endpoints available in [Azure Private Link](/azure/networking/fundamentals/networking-overview#privatelink) for any PaaS solution in your architecture, such as your storage or filesystem.
 
+- *Use encrypted virtual network connections for Azure to Azure connectivity.* Encrypted connections between VMs or VMSS in the same or peered virtual networks prevent unauthorized access and eavesdropping. Establish these secure connections by configuring encryption options in Azure Virtual Network for virtual machine communication.
+
 - *Implement Network Security Groups (NSGs).* NSGs can be complex. Ensure you have a clear understanding of the NSG rules and their implications when setting up your Azure infrastructure for AI workloads.
 
 - *Use Application Security Groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups). This can be useful when managing traffic for specific AI workloads.

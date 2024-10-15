@@ -45,6 +45,8 @@ In Azure, resource organization is how you structure management groups and subsc
 
 This guidance provides recommendations for setting up your network topology for AI workloads. Organizations that have multiple intelligent applications should use a hub-and-spoke network topology. When you have a single intelligent application, consider adopting a hub-and-spoke topology as the number of your workloads increases.
 
+- *Activate Azure DDoS Protection for internet-facing AI workloads.* Azure DDoS Protection safeguards your AI services from potential disruptions and downtime caused by Distributed Denial of Service attacks. Enable DDoS protection at the virtual network level to defend against traffic floods targeting internet-facing applications.
+
 - *Connect to on-premises data.* For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection.
 
     - *Consider Azure ExpressRoute.* Azure [ExpressRoute](/azure/expressroute/expressroute-introduction) is ideal for high data volumes, real-time processing, or workloads that require consistent performance. It has [FastPath](/azure/expressroute/about-fastpath) feature that improves data path performance.
@@ -58,6 +60,10 @@ This guidance provides recommendations for setting up your network topology for 
 - *Configure network access controls.* Utilize Network Security Groups (NSGs) and Azure Firewall to define and apply access policies that govern inbound and outbound traffic to and from AI workloads. These controls can be used to implement the principle of least privilege, ensuring that only essential communication is permitted.
 
 - *Use network monitoring services.* Use services such as Azure Monitor Network Insights and Azure Network Watcher to gain visibility into network performance and health. Additionally, use Azure Sentinel for advanced threat detection and response across your Azure network.
+
+- *Deploy Azure Firewall to inspect and secure outbound Azure workload traffic.* Azure Firewall inspects outbound traffic before it reaches the internet, enforcing security measures and policies for data leaving Azure. Use Azure Firewall as an additional security layer to control and monitor outgoing traffic from your AI workloads. Enable Azure Firewall SNAT for Azure to internet connectivity. Azure Firewall SNAT conceals internal IP addresses, adding a security layer by translating private IPs of Azure services to the public IP address of the firewall. Configure SNAT on Azure Firewall to ensure outbound traffic from Azure to the internet uses a secure, identifiable public IP for monitoring and security.
+
+- *Use Azure Web Application Firewall v2 (WAFv2) for internet-facing workloads.* Azure WAFv2 helps protect your AI applications from common web vulnerabilities, including SQL injections and cross-site scripting attacks. Configure Azure WAFv2 on Application Gateway for applications that require enhanced security against malicious web traffic.
 
 ## Implementation options
 
