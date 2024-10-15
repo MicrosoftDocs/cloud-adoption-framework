@@ -86,7 +86,7 @@ To route traffic back to on-premises networks, Azure VMware Solution uses the de
 
 The following diagram shows traffic flows for on-premises connectivity. 
 
-:::image type="content" source="./media/dual-region-virtual-wan-without-globalreach-3.png" alt-text="Diagram that shows a dual-region Azure VMware Solution with on-premises." border="false":::
+:::image type="content" source="./media/dual-region-virtual-wan-without-global-reach/dual-region-virtual-wan-without-global-reach-3.svg" alt-text="Diagram that shows a dual-region Azure VMware Solution with on-premises." border="false":::
 
 The following table describes the topology connectivity in the preceding diagram.
 
