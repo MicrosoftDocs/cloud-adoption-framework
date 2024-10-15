@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Security for AI workloads on Azure platforms
 
-This articles provides recommendations for securing AI workloads that use Azure AI platform as a service (PaaS) solutions, such as Azure AI Studio, Azure Machine Learning, and Azure AI services. It focuses on the implementation of security configurations for the AI models and platforms on which they run. It's the second step in the overarching [Secure AI](./security.md) process.
+This article provides recommendations for securing Azure resources deployed for AI workloads. As AI becomes more integrated into business operations, protecting these resources from potential threats is crucial to maintain data integrity and compliance. Applying standardized security baselines and following well-architected frameworks helps organizations safeguard their AI infrastructure against vulnerabilities.
 
 ## Secure AI resources
 
@@ -25,7 +25,7 @@ This guidance provides recommendations for securing Azure resources deployed for
 
 ## Secure the AI models
 
-This guidance focuses on applying threat protection, monitoring for prompt injection risks, verifying model integrity, and centralizing governance to ensure consistent security across all workloads.
+Securing AI models refers to implementing threat protection, monitoring for prompt injection risks, verifying model integrity, and centralizing governance. These practices ensure that AI models remain safe from malicious manipulation, maintain their reliability, and provide accurate results.
 
 - *Implement threat protection for all AI models.* Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/ai-threat-protection) to protect AI models from threats like prompt injection attacks and model manipulation. This tool provides continuous monitoring of AI workloads, helping to detect and prevent emerging threats. Implementing this protection across all workloads ensures a consistent security posture throughout the organization.
 
@@ -37,7 +37,7 @@ This guidance focuses on applying threat protection, monitoring for prompt injec
 
 ## Secure AI access
 
-This section outlines security recommendations for accessing AI resources in Azure, addressing both management plane access to AI resources and external access to AI model endpoints. The guidance focuses on practices applicable to all AI applications across your business.
+Securing AI access includes establishing authentication and authorization controls for both management plane and external access to AI resources. Proper access management restricts resource usage to only those with verified permissions. It reduces the chances of unauthorized interactions with AI models. Implementing strong access controls, such as role-based access and conditional access policies, helps protect sensitive data and maintain compliance with security standards.
 
 - *Organize resources and access controls.* Use distinct workspaces to organize and manage AI artifacts like datasets, models, and experiments. Workspaces centralize resource management and simplify access control. For example, use [projects](/azure/ai-studio/concepts/ai-resources#organize-work-in-projects-for-customization) within Azure AI Studio to manage resources and permissions efficiently, facilitating collaboration while maintaining security boundaries.
 
@@ -61,7 +61,7 @@ This section outlines security recommendations for accessing AI resources in Azu
 
 ## Secure AI execution
 
-This guidance provides recommendations for secure code executions made by AI systems, such as [virtual assistants](/azure/ai-services/openai/how-to/assistant) or [autonomous agents](/azure/cosmos-db/ai-agents), to run scripts or programs in response to user queries or tasks. This capability allows AI agents to perform a wide range of functions, from simple data retrieval to complex computations and system operations. By executing code, AI agents can automate tasks, interact with other software systems, and provide more dynamic and responsive services.
+Securing AI execution involves safeguarding the processes by which AI agents, such as [virtual assistants](/azure/ai-services/openai/how-to/assistant) or [autonomous agents](/azure/cosmos-db/ai-agents), run code in response to user requests. Isolating execution environments, conducting code reviews, and setting resource limits ensure that these executions do not compromise system stability or security. These practices prevent malicious activities and protect the integrity of the systems in which AI agents operate, allowing them to function reliably within a secure framework.
 
 - *Implement isolation mechanisms.* Utilize dynamic session management, such as [Dynamic Sessions](/azure/container-apps/sessions?tabs=azure-cli) in Azure Container Apps, to ensure each code execution occurs in a fresh, isolated environment that is destroyed after use.
 
