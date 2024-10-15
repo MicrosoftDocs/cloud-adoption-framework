@@ -48,8 +48,8 @@ AI model management involves setting governance structures, continuous monitorin
 
 Managing AI costs requires a clear understanding of expenses related to resources like compute, storage, and token processing. You should implement cost management best practices, monitor usage, and set up automated alerts to avoid unexpected expenses and optimize resource efficiency.
 
-- *Follow cost management best practices for each service.* Each Azure service has specific features and best practices that maximize cost optimization. Familiarize yourself with following guidance for planning and managing cost in [Azure AI Studio](/azure/ai-studio/how-to/costs-plan-manage), [Azure OpenAI Service](/azure/ai-services/openai/how-to/manage-costs), [Azure Machine Learning](/azure/machine-learning/concept-plan-manage-cost), [Azure Virtual Machines](/azure/virtual-machines/cost-optimization-plan-to-manage-costs).
-
+- *Follow cost management best practices for each service.* Each Azure service has specific features and best practices that maximize cost optimization. Familiarize yourself with following guidance for planning and managing cost in [Azure AI Studio](/azure/ai-studio/how-to/costs-plan-manage), [Azure OpenAI Service](/azure/ai-services/openai/how-to/manage-costs), and [Azure Machine Learning](/azure/machine-learning/concept-plan-manage-cost).
+-
 - *Monitor and maximize billing efficiency.* Understand cost breakpoints to avoid unnecessary charges. Examples include making full use of fixed-price thresholds for image generation or hourly fine-tuning. Track your usage patterns, including tokens per minute (TPM) and requests per minute (RPM), and adjust models and architecture accordingly. Consider a commitment-based billing model for consistent usage patterns.
 
 - *Set up automated cost alerts.* Use budget alerts notify you of unexpected charges and establish budgeting strategies to control and predict your AI expenses.
