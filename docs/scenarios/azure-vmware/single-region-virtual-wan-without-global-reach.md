@@ -58,7 +58,7 @@ The following sections describe traffic flows and connectivity for Azure VMware 
 
 The following diagram shows traffic flows for an Azure VMware Solution private cloud. 
 
-:::image type="content" source="./media/single-region-without-globalreach-2.png" alt-text="Diagram that shows a single-region Azure VMware Solution that has Azure VMware Solution private cloud connectivity." border="false":::
+:::image type="content" source="./media/single-region-virtual-wan-without-global-reach/single-region-without-global-reach-2.svg" alt-text="Diagram that shows a single-region Azure VMware Solution that has Azure VMware Solution private cloud connectivity." border="false":::
 
 The following table describes the traffic flow in the preceding diagram.  
 
@@ -75,7 +75,7 @@ When you enable ExpressRoute-to-ExpressRoute transitivity on the secure hub and 
 
 The following diagram shows traffic flows for on-premises connectivity. 
 
-:::image type="content" source="./media/single-region-without-globalreach-3.png" alt-text="Diagram that shows a single-region Azure VMware Solution that has on-premises connectivity." border="false":::
+:::image type="content" source="./media/single-region-virtual-wan-without-global-reach/single-region-without-global-reach-3.svg" alt-text="Diagram that shows a single-region Azure VMware Solution that has on-premises connectivity." border="false":::
 
 The following table describes the traffic flow in the preceding diagram.
 
@@ -97,7 +97,7 @@ When you enable ExpressRoute-to-ExpressRoute transitivity on the hub, it sends t
 
 The following diagram shows traffic flows for Azure virtual network connectivity.
 
-:::image type="content" source="./media/single-region-without-globalreach-4.png" alt-text="Diagram that shows a single-region Azure VMware Solution with virtual networks." border="false":::
+:::image type="content" source="./media/single-region-virtual-wan-without-global-reach/single-region-without-global-reach-4.svg" alt-text="Diagram that shows a single-region Azure VMware Solution with virtual networks." border="false":::
 
 The following table describes the traffic flow in the preceding diagram.
 

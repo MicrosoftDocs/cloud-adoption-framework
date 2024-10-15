@@ -62,7 +62,7 @@ The following sections describe traffic flows and connectivity for Azure VMware 
 
 The following diagram shows traffic flows for both Azure VMware Solution private clouds. 
 
-:::image type="content" source="./media/dual-region-virtual-wan-without-globalreach-2.png" alt-text="Diagram that shows a dual-region Azure VMware Solution that has private cloud connectivity." border="false":::
+:::image type="content" source="./media/dual-region-virtual-wan-without-global-reach/dual-region-virtual-wan-without-global-reach-2.svg" alt-text="Diagram that shows a dual-region Azure VMware Solution that has private cloud connectivity." border="false":::
 
 The following table describes the topology connectivity in the preceding diagram.
 
@@ -123,7 +123,7 @@ When you enable ExpressRoute-to-ExpressRoute transitivity on the hub, it sends t
 
 The following diagram shows traffic flows for Azure virtual networks.
 
-:::image type="content" source="./media/dual-region-virtual-wan-without-globalreach-4.png" alt-text="Diagram that shows a dual-region Azure VMware Solution that has virtual network connectivity." border="false":::
+:::image type="content" source="./media/dual-region-virtual-wan-without-global-reach/dual-region-virtual-wan-without-global-reach-4.svg" alt-text="Diagram that shows a dual-region Azure VMware Solution that has virtual network connectivity." border="false":::
 
 The following table describes the traffic flow in the preceding diagram. 
 

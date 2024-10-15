@@ -16,7 +16,7 @@ This article describes how to set up Azure VMware Solution software-defined data
 
 The following architecture shows the connectivity between cross-tenant Azure VMware Solution SDDCs, Azure, and an on-premises environment.
 
-:::image type="content" source="media/azure-vmware-solution-crosstenant-crossregion-vwan-appliance.png" alt-text="Diagram that shows the cross-tenant Azure VMware Solution SDDCs with Virtual WAN and NVAs." lightbox="media/azure-vmware-solution-crosstenant-crossregion-vwan-appliance.png" border="false":::
+:::image type="content" source="media/cross-tenant-network-connectivity/cross-tenant-cross-region-virtual-wan.svg" alt-text="Diagram that shows the cross-tenant Azure VMware Solution SDDCs with Virtual WAN and NVAs." lightbox="media/cross-tenant-network-connectivity/cross-tenant-cross-region-virtual-wan.svg" border="false":::
 
 ## Connectivity
 
