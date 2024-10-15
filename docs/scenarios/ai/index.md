@@ -32,7 +32,7 @@ Use the AI adoption checklist to see the roadmap to adopting AI. There's a check
 
 1. *Secure AI*: Assess AI security risks and apply security controls to protect your AI workloads.
 
-1. *Govern AI*: Control your AI workloads and models by establishing guardrails to ensure compliance and responsible use.
+1. *Govern AI*: Control your AI workloads and models by establishing guardrails to ensure compliance and responsible AI use.
 
 1. *Manage AI*: Manage your AI deployments, operations, models, and data over time to ensure they remain aligned with your business goals.
 
