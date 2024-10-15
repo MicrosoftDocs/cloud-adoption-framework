@@ -21,7 +21,7 @@ This guidance provides recommendations for securing Azure resources deployed for
 | --- | --- |
 [Azure Machine Learning](/security/benchmark/azure/baselines/machine-learning-service-security-baseline) | [Azure Machine Learning](/azure/well-architected/service-guides/azure-machine-learning)
 [Azure AI Studio](/security/benchmark/azure/baselines/azure-ai-studio-security-baseline) | |
-[Azure OpenAI](/security/benchmark/azure/baselines/azure-openai-security-baseline) | [Azure Open AI](/azure/well-architected/service-guides/azure-openai)
+[Azure OpenAI](/security/benchmark/azure/baselines/azure-openai-security-baseline) | [Azure OpenAI](/azure/well-architected/service-guides/azure-openai)
 
 ## Secure the AI models
 
