@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Compute for AI workloads on Azure infrastructure
 
-This article provides recommendations for bringing your own AI models to run on Azure infrastructure. The preferred approach is to start with Azure AI platform solutions (PaaS). For organizations looking to bring their own models to Azure for training, this is the guidance to get you AI workload running on Azure infrastructure.
+This article provides recommendations for selecting and configuring compute for AI workloads running on Azure infrastructure (IaaS). The preferred approach to AI adoption to start with Azure AI platform solutions (PaaS). But for organizations with access to Azure GPUs, use this guidance to get you AI workload running on Azure infrastructure.
 
-AI workloads need specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Using the right VMs optimizes resource use and speeds up the development and deployment of AI models, making this step essential for organizations adopting AI.
+AI workloads need specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Using the right VMs optimizes resource use and speeds up the development and deployment of AI models, making this step essential for organizations adopting AI. The following table provides an overview of our compute recommendations.
 
 | AI phase             | Virtual Machine Image  | Generative AI (LLMs, SLMs) | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
 |----------------------|------------------------|----------------------------|------------------------------------|----------------------------------|
