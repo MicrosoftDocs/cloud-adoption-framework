@@ -30,7 +30,11 @@ This section provides best practices for securing your AI workloads on Azure. It
 
 - *Consider private endpoints.* No PaaS services or AI model endpoints should be accessible from the public internet. Private endpoints to provide private connectivity to Azure services within a virtual network. Private endpoints add complexity to deployments and operations, but the security benefit often outweighs the complexity.
 
-- *Consider enforcing private DNS zones.* Private DNS zones centralize and secure DNS management for accessing PaaS services within your AI network. Set up Azure policies that enforce private DNS zones and require private endpoints to ensure secure, internal DNS resolutions.
+- *Consider creating private endpoints for AI service portals.* Private endpoints provide secure, private access to PaaS portals like Azure AI Studio and Azure Machine Learning studioF. Set up private endpoints for these global portals in a hub virtual network. This configuration provides secure access to public-facing portal interfaces directly from user devices.
+
+Configure the hub for private portal access. In a Hub/Spoke network architecture, set up private endpoints in the hub to centralize access to AI service portals. For vWAN-hub setups with Private DNS resolvers and DNS forwarding, configure this in the vWAN hub for single or multi-region use.
+
+- *Consider enforcing private DNS zones.* Private DNS zones centralize and secure DNS management for accessing PaaS services within your AI network. Set up Azure policies that enforce private DNS zones and require private endpoints to ensure secure, internal DNS resolutions. If you do not have central Private DNS Zones, the DNS forwarding will not work until you also add conditional forwarding manually. For example, see [using custom DNS](/azure/machine-learning/how-to-custom-dns) with Azure AI Studio hubs and Azure Machine Learning workspace.
 
 - *Enable custom DNS servers and private endpoints for PaaS services.* Custom DNS servers manage PaaS connectivity within the network, bypassing public DNS. Configure private DNS zones in Azure to resolve PaaS service names securely and route all traffic through private networking channels.
 
