@@ -40,7 +40,7 @@ Consider the following recommendations when you design your network topology for
 
 - Ensure that you place application and database components in the same region and availability zone to reduce latency between your application and database. If your application components are in different subscriptions from your database components, see [Physical and logical availability zones](/azure/reliability/availability-zones-overview#physical-and-logical-availability-zones). Use the `AvailabilityZoneMappings` property to identify the specific physical availability zone for colocating the services.
 
-- Oracle Database@Azure subnets don't support network security groups (NSGs). Use the NSG that gets created in the OCI Virtual Cloud Network (VCN) (also known as a shadow VCN) to control traffic to and from the Exadata/ADBS system
+- Oracle Database@Azure subnets don't support Azure network security groups (NSGs). Instead, use the [Oracle Cloud NSG](https://docs.oracle.com/iaas/Content/Network/Concepts/networksecuritygroups.htm) that gets created in the Oracle Database@Azure OCI Virtual Cloud Network (VCN) to control traffic to and from the Exadata/ADBS system
   
 - Use Azure private DNS zones for name resolution between application and database subnets. For more information, see [Private DNS](/azure/dns/private-dns-overview).
 
