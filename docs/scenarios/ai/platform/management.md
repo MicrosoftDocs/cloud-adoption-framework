@@ -35,19 +35,23 @@ Managing AI models includes monitoring their outputs, performance, and alignment
 
 ## Manage AI operations
 
-- *Standardize compute management.* For PaaS services, you need to provision compute resources for certain actions like prompt flows and training models. A service like Azure Machine Learning has different compute options, such as compute instances, clusters, and serverless options. You want to standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Azure AI Studio](/azure/ai-studio/how-to/create-manage-compute) and [Azure Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio).
+AI operations management involves standardizing compute resources and monitoring platform resources for Azure AI workloads. It ensures that teams use the correct compute resources efficiently and capture metrics and logs from platform resources.
 
-- *Monitor platform resources.* Use diagnostic settings to capture logs and metrics for all key services, such as Azure AI Studio, Azure Machine Learning, [Azure AI services](/azure/ai-services/diagnostic-logging). Specific services should capture audit logs and relevant service-specific logs. Implement custom monitoring alerts based on your architecture’s specific needs. Examples include alerts for container registries, Machine Learning services, and Azure OpenAI operations.
+- *Standardize compute management.* For platform as a service services, you need to provision compute resources for certain actions like prompt flows and training models. A service like Machine Learning has different compute options, such as compute instances, clusters, and serverless options. Standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Studio](/azure/ai-studio/how-to/create-manage-compute) and [Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio).
+
+- *Monitor platform resources.* Use diagnostic settings to capture logs and metrics for all key services, such as Studio, Machine Learning, and [Azure AI services](/azure/ai-services/diagnostic-logging). Specific services should capture audit logs and relevant service-specific logs. Implement custom monitoring alerts based on your architecture’s specific needs. Examples include alerts for container registries, Machine Learning services, and Azure OpenAI Service operations.
 
 ## Manage AI data
 
-Ensuring data quality and detecting model drift are key steps in data management.
+High-quality data is the foundation of accurate AI models. Tracking model drift helps maintain the relevance of AI predictions over time, and it allows organizations to adapt models as necessary to reflect current conditions.
 
 - *Ensure high-quality data processing.* For [machine learning](/azure/architecture/data-science-process/lifecycle-modeling), training data must be formatted, clean, and ready for model consumption. For generative AI, grounding data needs to be in the correct format, and likely chunked, enriched, and embedded for AI model consumption. For more information, see [Guide to designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
 
 - *Manage model versioning and detect drift.* In both generative and nongenerative AI, continuously track accuracy and data drift to ensure models remain relevant. Monitoring can alert you when model predictions or LLM responses start to deviate from expected behavior, indicating a need for retraining or adjustment. Set up custom alerts to detect performance thresholds, enabling early intervention when problems arise. Use [Evaluations in Azure AI Studio](/azure/ai-studio/concepts/evaluation-approach-gen-ai) and metrics supported in [Azure Machine Learning](/azure/machine-learning/concept-model-monitoring).
 
 ## Manage business continuity and disaster recovery
+
+Managing business continuity and disaster recovery involves deploying AI systems across multiple regions to provide high availability and resilience. This safeguards against service outages, ensuring that both generative and non-generative AI systems continue to function even in the event of regional disruptions, which is crucial for maintaining reliable AI operations.
 
 *Use multi-region deployments for AI.* Implement multi-region deployments to ensure high availability and resiliency for both generative and nongenerative AI systems For more information, see multi-region deployment in [Azure AI Studio,](/azure/ai-studio/how-to/disaster-recovery#plan-for-multi-regional-deployment) [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning#plan-for-multi-regional-deployment), and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery).
 
