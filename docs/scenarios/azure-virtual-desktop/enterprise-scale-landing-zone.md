@@ -50,7 +50,7 @@ _Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw
 
 Although having an Azure Virtual Desktop deployment in a single Azure region is enough for many customers, some customers might require expanding their Azure Virtual Desktop deployment to another Azure region. A couple of reasons that would require a customer to expand their Azure Virtual Desktop deployment across Azure regions include:
 
-- **Scenario A:** Customer requires to deploy additional Azure Virtual Desktop Virtual Machines, but there is no more capacity in the existing Azure region.
+- **Scenario A:** Customer requires to deploy additional Azure Virtual Desktop Virtual Machines, but there's no more capacity in the existing Azure region.
 
 - **Scenario B:** Customers have a need to deploy Azure Virtual Desktop Virtual Machines closer to where their users and on-premises datacenters are located.
 
@@ -69,16 +69,16 @@ The following list describes the key networking considerations to implement in t
 
 The following list describes the key networking considerations to implement in the new Azure region(s) when expanding an Azure Virtual Desktop deployment into a secondary Azure region that will be connected to an on-premises datacenter in the same geo for **Scenario B:**
 
-Some customers may require deploying Azure Virtual Desktop across multiple Azure regions, as they may want to deploy the Azure Virtual Desktop Virtual Machines closer to where the users are, but also, closer to where the existing systems and applications exist in on-premises datacenters.
+Some customers should deploy Azure Virtual Desktop across multiple Azure regions, as they might want to deploy the Azure Virtual Desktop Virtual Machines closer to where the users are, but also, closer to where the existing systems and applications exist in on-premises datacenters.
 
 - Deploy a new Virtual Network with non-overlapping IP address space.
 - Connect the Virtual Network in the new region to on-premises datacenter by using VPN or ExpressRoute with Private Peering.
 - This connectivity ensures Azure Virtual Desktop users have access to resources located in on-premises datacenters in their region.
-- Deploy the storage solution required to store user’s profiles.
+- Deploy the storage solution required to store user's profiles.
 - (Optional) Deploy a Domain Controller in the Virtual Network in the new region.
 - Configure internet outbound connectivity in the Virtual Network in the new region with either NSG or NVA/Azure Firewall
 - Deploy Azure Virtual Desktop Virtual Machines in the new Azure region
-- Ensure users are assigned to Windows Virtual Desktops in only one region, to ensure they don'’'t have different profiles (if users are assigned to Virtual Desktops on both regions, then they'll have different profiles, as profiles are be stored in the regional storage system).
+- Ensure users are assigned to Windows Virtual Desktops in only one region, to ensure they don't have different profiles (if users are assigned to Virtual Desktops on both regions, then they'll have different profiles, since profiles are stored in the regional storage system).
 
 ## Deploy Azure Virtual Desktop with the landing zone accelerator
 
@@ -86,7 +86,7 @@ The Azure Virtual Desktop landing zone accelerator includes an open-source colle
 
 The Azure Virtual Desktop accelerator is available in the [Azure Virtual Desktop accelerator](https://github.com/Azure/avdaccelerator) GitHub repository. It contains Infrastructure as Code based on [Common Azure Resource Modules Library (CARML)](https://github.com/Azure/ResourceModules). The Azure Virtual Desktop landing zone accelerator ([deployment prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md)) can be deployed using integration into your CI/CD pipelines, command line [PowerShell or Azure CLI](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) or Azure portal deployments:
 
-**Optional: Custom Image Build:**
+**(Optional) Custom Image Build:**
 Deploy a custom image based on the latest version of the Azure Marketplace image to an Azure Compute Gallery.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-custom-image.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-custom-image.json)
