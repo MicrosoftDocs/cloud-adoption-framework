@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Networking for AI workloads on Azure infrastructure
 
-Networking for AI workloads involves setting up Azure infrastructure to support efficient data flow, performance, and scalability across distributed AI systems. Designing a well-optimized network can enhance data processing speed, reduce latency, and ensure the network infrastructure scales alongside growing AI demands.
+This article provides recommendations for configuring networking for AI workloads running on Azure infrastructure (IaaS). Designing a well-optimized network can enhance data processing speed, reduce latency, and ensure the network infrastructure scales alongside growing AI demands.
 
 ## Ensure sufficient bandwidth
 
