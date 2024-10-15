@@ -43,7 +43,7 @@ Cost management focuses on monitoring and controlling expenses associated with A
 
 - *Consider autoscaling.* Use a [virtual machine scale set](/azure/virtual-machine-scale-sets/overview) to add or remove virtual machine count to match demand and optimize cost.
 
-- *Configure VM auto-shutdown.* Use the [auto-shutdown feature](/azure/virtual-machines/auto-shutdown-vm?tabs=portal) in Azure to shut down the VMs during off hours when they aren't needed and automatically restart them when they're needed again.
+- *Configure VM auto-shutdown.* Use the [auto-shutdown feature](/azure/virtual-machines/auto-shutdown-vm) in Azure to shut down the VMs during off hours when they aren't needed and automatically restart them when they're needed again.
 
 ### Security governance
 
