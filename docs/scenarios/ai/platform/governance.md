@@ -25,7 +25,7 @@ Organizations need clear processes for managing AI models to ensure reliable, sa
 
 Controlling costs in AI workloads allows organizations to maximize efficiency while reducing expenses. Cost governance strategies ensure that AI investments align with business goals and help prevent unexpected expenses from over-provisioning or underutilization.
 
-- *Use the right billing model.* If you have predictable workloads, use AI commitment tiers in Azure AI services. Use provisioned throughput units, which can be less expensive than pay-as-you-go pricing with Azure OpenAI and OpenAI models via Azure AI Studio.
+- *Use the right billing model.* If you have predictable workloads, use AI commitment tiers in Azure AI services. Use [provisioned throughput units](s/azure/ai-services/openai/concepts/provisioned-throughput), which can be less expensive than pay-as-you-go pricing with Azure OpenAI and OpenAI models via Azure AI Studio.
 
 - *Choose the right model for your use case.* Select the AI model that meets your needs without incurring excessive costs. Use less expensive models like GPT-3.5 Turbo instead of higher-cost options like GPT-4, unless the use case demands a more expensive model. For fine-tuning, maximize time usage within each billing period to avoid extra charges.
 
@@ -45,7 +45,9 @@ For more cost management guidance, see [Manage AI costs](manage.md#manage-ai-cos
 
 ## Govern AI platforms
 
-Use Azure Policy to apply built-in policy definitions for each AI platform you're using. [Azure AI Search](/azure/search/policy-reference)
+Use Azure Policy to apply built-in policy definitions for each AI platform you're using. It includes [Azure AI Studio](/azure/ai-services/policy-reference?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext), [Azure Machine Learning](/azure/machine-learning/policy-reference), [Azure AI services](/azure/ai-services/policy-reference), [Azure AI Search](/azure/search/policy-reference), and others.
+
+The Azure landing zone [deployment](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#environment-development-approaches) includes a curated set of recommended built-in policies for Azure AI platform services. You can select the policy initiative you want to use under the *Workload Specific Compliance* category during an Azure landing zone deployment. The policies sets include [Azure OpenAI](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-OpenAI.html), [Azure Machine Learning](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-MachineLearning.html), and [Azure AI Search](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-CognitiveServices.html).
 
 ## Govern AI security
 
