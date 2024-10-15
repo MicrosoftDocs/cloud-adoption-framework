@@ -1,6 +1,6 @@
 ---
 title: Manage AI – Recommendations for managing AI
-description: Discover essential AI management strategies for models, costs, security, operations, compliance, and data in this comprehensive guide.
+description: Learn about essential AI management strategies for models, costs, security, operations, compliance, and data in this comprehensive guide.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Manage AI – Recommendations for managing AI
 
-This article provides recommendations for managing AI from development, deployment, and operations. Effective AI management requires a structured approach from development through deployment and ongoing operations. Businesses need standardized practices and regular monitoring to prevent issues such as data and model drift, ensuring AI remains accurate and reliable over time.
+This article provides recommendations for managing AI workloads from development, deployment, and operations. Effective AI management requires a structured approach from development through deployment and ongoing operations. Businesses need standardized practices and regular monitoring to prevent issues such as data and model drift, ensuring AI remains accurate and reliable over time.
 
 :::image type="content" source="./images/manageai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Manage AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/manageai.svg" border="false":::
 *Figure 1. Manage AI in the AI adoption process.*
