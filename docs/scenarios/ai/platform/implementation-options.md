@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Implementation options for AI workloads on Azure platforms
 
-The Azure Architecture Center has reference architectures and guides to build generative AI and nongenerative AI workloads. following table provides links to implementation guidance for building generative AI applications.
+The Azure Architecture Center has reference architectures and guides to build generative AI and nongenerative AI workloads. The following table provides links to implementation guidance for building generative AI applications.
 
 ## Generative AI 
 
