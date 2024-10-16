@@ -20,16 +20,18 @@ Whether you're a business owner, platform owner, or application owner, you need 
 ## Value of monitoring
 Investment in your monitoring environment provides a positive return across multiple aspects of your cloud including the following:
 
-**Availability and performance:** Monitoring helps ensure that your cloud services and applications are available and performing as expected. By tracking key metrics and configuring alert rules, you can identify and respond to issues before they impact users.
+- **Availability and performance:** Monitoring helps ensure that your cloud services and applications are available and performing as expected. By tracking key metrics and configuring alert rules, you can identify and respond to issues before they impact users.
 
-**Cost Optimization:** By tracking resource utilization through monitoring, you can optimize costs by scaling resources according to demand, which helps to avoid over-provisioning and under-utilization. Monitoring can also identify and alert you to any cost overruns or unexpected spikes in usage.
+- **Cost Optimization:** By tracking resource utilization through monitoring, you can optimize costs by scaling resources according to demand, which helps to avoid over-provisioning and under-utilization. Monitoring can also identify and alert you to any cost overruns or unexpected spikes in usage.
 
-**Compliance:** Monitoring ensures that cloud services comply with policies and regulations by maintaining logs and records of activities. Reports using this data can assist with regular audits and compliance checks.
+- **Compliance:** Monitoring ensures that cloud services comply with policies and regulations by maintaining logs and records of activities. Reports using this data can assist with regular audits and compliance checks.
 
-**Security:** Continuous monitoring can detect security threats and vulnerabilities allowing for immediate action to protect data and resources. Collected data can also be analyzed for threat detection and response.
+- **Security:** Continuous monitoring can detect security threats and vulnerabilities allowing for immediate action to protect data and resources. Collected data can also be analyzed for threat detection and response.
 
 ## Monitoring platforms
 An effective monitoring strategy includes all platforms in your computing environment. In addition to Azure, you may have on-premises, multicloud, and edge resources, and each requires the same levels of monitoring. Following the guidance of the [Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/overview), you should include monitoring in your [unified operations strategy](/azure/cloud-adoption-framework/scenarios/hybrid/unified-operations). Using this strategy, your monitoring tools are hosted by the primary cloud platform along with other management tools, and are used to monitor all resources across all platforms.
+
+:::image type="content" source="media/monitor/primary-cloud-provider-extended.png" alt-text="Conceptual diagram showing the unified operations strategy." lightbox="media/monitor/primary-cloud-provider-extended.png" border="false":::
 
 
 ## Types of monitoring
@@ -46,15 +48,20 @@ Monitoring is a multifaceted discipline that requires a combination of tools, pr
 | Cost | Cost monitoring involves tracking cloud spending and resource utilization to identify cost-saving opportunities and prevent budget overruns. This includes monitoring resource usage, identifying underutilized resources, and optimizing resource configurations to reduce costs. |
 
 ## Shared responsibilities
-In an om-premises environment, the customer is responsible for all aspects of monitoring since they own and manage all computing resources. In the cloud, this becomes a shared responsibility with the customer and the cloud provider.
+In an on-premises environment, the customer is responsible for all aspects of monitoring since they own and manage all computing resources. In the cloud, this becomes a shared responsibility between the customer and the cloud provider. Depending on the type of deployment model you choose, the responsibilities for monitoring will move from you to the cloud provider.
+
+In an IaaS deployment, the cloud provider is responsible for monitoring the underlying cloud platform such as the physical infrastructure and virtualization layer. The customer is responsible for monitoring the operating system, applications, and data running on the virtual machines deployed to the cloud platform. As the deployment model moves up the stack, the cloud provider takes on more responsibility for monitoring the environment culminating in a SaaS deployment where they are responsible for monitoring the entire stack including the application and data. 
+
+The following diagram illustrates the shared responsibilities for monitoring in the cloud.
 
 :::image type="content" source="media/monitor/responsibilities.png" alt-text="Diagram showing shared responsibilities for monitoring in the cloud." lightbox="media/monitor/responsibilities.png" border="false":::
 
+ While the customer may use monitoring tools provided by the cloud provider to monitor their layers of the stack, they're responsible for configuring and these and analyzing and alerting on the data they collect. The cloud provider is responsible for providing reporting and alerting back to the customers for they layers of the stack they manage.
 
 ## Roles and responsibilities
-There are multiple roles in an organization that maintain the monitoring environment and require access to monitoring data to perform their job functions. Each role has different requirements for monitoring data based on their particular responsibilities. Depending on the size of your organization, you may have 
+Most enterprise organizations will have a centralized operations team that's responsible for monitoring the overall health and performance of the cloud environment. This team will typically set the strategies for the overall company, perform centralized configuration of the monitoring environment, and delegate permissions to different stakeholders in your organization that require access to the monitoring data related to their applications and services. 
 
-The following table describes the roles and their monitoring requirements.
+There are multiple roles in an organization that maintain the monitoring environment and require access to monitoring data to perform their job functions. Each role has different requirements for monitoring data based on their particular responsibilities. Depending on the size of your organization, you may have multiple individuals filling each role or may have one individual that fills multiple roles. Following is a listing of typical roles and the responsibilities of each role.
 
 - **Cloud Architect**: Designs and oversees the cloud infrastructure, ensuring it meets the organization’s business goals. The cloud architect focuses on reliability, security, and scalability of the cloud architecture and requires high-level telemetry to get a holistic view of the digital estate. This includes resource utilization metrics, application performance monitoring (APM), cost and billing insights, and compliance reports.
 
@@ -80,16 +87,6 @@ While you may use multiple services with different sets of features to provide t
 - **Alerting:** Alerts automatically notify you of issues that require attention. Effective alerting helps you respond to issues quickly and proactively, reducing the impact on your users and business. Monitoring tools may provide predefined alert rules based on best practices and will allow you to define custom alert rules based on your specific requirements. You also need to configure notifications to ensure that alerts are delivered to the right people at the right time.
 
 - **Visualization:** Dashboards and reports allow you to visualize monitoring data insights into the health and performance of your cloud environment. They typically provide a graphical representation of key metrics and trends, making it easier to identify issues and communicate insights to stakeholders.
-
-## Who needs monitoring data?
-Most enterprise organizations will have a centralized operations team that's responsible for monitoring the overall health and performance of the cloud environment. This team will typically set the strategies for the overall company, perform centralized configuration of the monitoring environment, and delegate permissions to different teams and individuals as required by their particular role.
-
-Different stakeholders in your organization require access to the monitoring data related to their applications and services. Depending on their specific needs, they may also require the following:
-
-- Access to features of the monitoring tools required to analyze the telemetry related to their applications and services.
-- Custom dashboards and reports that provide insights into their applications without requiring detailed knowledge of the underlying data.
-- Authority to configure alerts and notifications for their applications.
-
 
 ## Azure facilitation
 Azure includes multiple services that provide the different types of monitoring required for your cloud environment. These services together provide the features required for a comprehensive monitoring environment. 
