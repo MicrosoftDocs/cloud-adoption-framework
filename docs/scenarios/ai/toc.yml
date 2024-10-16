@@ -17,12 +17,12 @@ items:
             href: platform/resource-selection.md
           - name: Networking
             href: platform/networking.md
-          - name: Security
-            href: platform/security.md
           - name: Governance
             href: platform/governance.md
           - name: Management
             href: platform/management.md
+          - name: Security
+            href: platform/security.md
       - name: Implementation options
         href: platform/implementation-options.md
     - name: AI on Azure infrastructure (IaaS)
