@@ -88,14 +88,14 @@ Enforcing AI policies helps an organization maintain consistent and ethical AI p
 
 - *Manually enforce AI policies.* Provide training for staff on AI risks, ethical considerations, and compliance requirements. Ensure that employees understand their role in upholding AI governance policies. Conduct regular workshops or refresher courses to keep staff informed of updates to AI policies and best practices in ethical AI deployment. Where automation is insufficient, actively communicate AI policies to relevant stakeholders, including team members and decision-makers. Implement periodic audits to monitor adherence to policies. Use audit findings to identify gaps, track compliance levels, and make adjustments to the policies or their enforcement as needed.
 
-- *Use workload specific governance guidance.* There's detailed governance guidance for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use that guidance for specific instructions on how to govern AI models, costs, and data withing those workload types.
+- *Use workload specific governance guidance.* There's detailed governance guidance for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use this guidance for specific instructions on how to govern AI models, costs, and data withing those workload types.
 
-> [!div class="nextstepaction"]
-> [Govern PaaS AI workloads](./platform/resource-selection.md)
-
-> [!div class="nextstepaction"]
-> [Govern IaaS AI workloads](./infrastructure/compute.md)
-
+    > [!div class="nextstepaction"]
+    > [Govern PaaS AI workloads](./platform/resource-selection.md)
+    
+    > [!div class="nextstepaction"]
+    > [Govern IaaS AI workloads](./infrastructure/compute.md)
+    
 ## Monitor AI risks
 
 Ongoing AI risk monitoring helps businesses continuously identify and address potential risks that might emerge over time. Established procedures for regular risk evaluation ensure that AI workloads operate as intended and adapt to changing conditions. Monitoring AI risks improves the organization’s ability to manage unforeseen challenges and maintain AI reliability.
