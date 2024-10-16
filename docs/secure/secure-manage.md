@@ -119,15 +119,15 @@ Encourage ongoing education and certification in cloud security practices to kee
 
 ### Continuous improvement strategies for confidentiality and integrity
 
-Continuous improvement is essential for maintaining and enhancing confidentiality and integrity in enterprise cloud environments. Documenting the results of configuration management (CM) and audits/inspections is crucial. This documentation provides a historical record that can be analyzed to identify trends, recurring issues, and areas for improvement.
+Continuous improvement is essential for maintaining and enhancing confidentiality and integrity in enterprise cloud environments. Documenting the results of configuration management and audits and inspections is crucial. This documentation provides a historical record that you can analyze to identify trends, recurring issues, and areas for improvement.
 
 - **Confidentiality strategies:**
 
-    - *Learn from the past:* Implementing lessons learned from past inspections is a key tenet of continuous improvement. By analyzing the outcomes of previous audits and inspections, organizations can identify weaknesses and implement corrective actions to prevent similar issues in the future. This proactive approach ensures that the organization continuously evolves and improves its security posture.
+    - *Learn from the past.* Implementing lessons learned from past inspections is a key tenet of continuous improvement. By analyzing the outcomes of previous audits and inspections, organizations can identify weaknesses and implement corrective actions to prevent similar issues in the future. This proactive approach ensures that the organization continuously evolves and improves its security posture.
 
-    - *Leverage real-time data:* Real-time monitoring plays a critical role in continuous improvement. By leveraging real-time data, organizations can quickly identify and respond to potential threats, ensuring that security measures are always up-to-date and effective. This dynamic approach helps avoid repeating past mistakes and ensures that the organization remains resilient against emerging threats.
+    - *Use real-time data.* Real-time monitoring plays a critical role in continuous improvement. By leveraging real-time data, organizations can quickly identify and respond to potential threats, ensuring that security measures are always up-to-date and effective. This dynamic approach helps avoid repeating past mistakes and ensures that the organization remains resilient against emerging threats.
 
-    - *Confidentiality training:* As part of your overall training strategy, ensure that employees are trained on your confidentiality policies and procedures. This training should be mandatory for new hires, with deeper training specific to their roles for those in the security team, and should be regularly recurring for all employees. Teach the importance of implementing encryption and strict access controls to protect sensitive information from unauthorized access. Training should cover best practices in data encryption technologies and access management tools to ensure only authorized personnel can access sensitive data.
+    - *Confidentiality training.* As part of your overall training strategy, ensure that employees are trained on your confidentiality policies and procedures. This training should be mandatory for new hires, with deeper training specific to their roles for those in the security team, and should be regularly recurring for all employees. Teach the importance of implementing encryption and strict access controls to protect sensitive information from unauthorized access. Training should cover best practices in data encryption technologies and access management tools to ensure only authorized personnel can access sensitive data.
     
 - **Integrity strategies:**
 
