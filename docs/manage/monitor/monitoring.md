@@ -48,7 +48,7 @@ Monitoring is a multifaceted discipline that requires a combination of tools, pr
 ## Shared responsibilities
 In an om-premises environment, the customer is responsible for all aspects of monitoring since they own and manage all computing resources. In the cloud, this becomes a shared responsibility with the customer and the cloud provider.
 
-:::image type="content" source="media/monitor/responsibilities.png" alt-text="Diagram showing shared responsibilities for monitoring in the cloud." lightbox="media/monitor/responsibilities.png":::
+:::image type="content" source="media/monitor/responsibilities.png" alt-text="Diagram showing shared responsibilities for monitoring in the cloud." lightbox="media/monitor/responsibilities.png" border="false":::
 
 
 ## Roles and responsibilities
