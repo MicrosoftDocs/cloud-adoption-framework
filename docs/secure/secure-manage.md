@@ -38,9 +38,9 @@ During the Manage phase of your cloud adoption journey, you should have a robust
 
 - **Incident response planning:** 
 
-Modernizingyour observability platform is essential for incident detection, and is also the foundation for maintaining your incident response plan. Your incident response plan must be considered a living document that is updated regularly to keep pace with your threat hunting and detection engineering efforts, along with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base. 
+  Modernizing your observability platform is essential for incident detection. It's also the foundation for maintaining your incident response plan. Your incident response plan must be a living document that's updated regularly to keep pace with your threat hunting and detection engineering efforts, along with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base. 
 
-In addition to maintaining your incident response plans, you also need to have fully developed incident response and disaster recovery plans.
+  In addition to maintaining your incident response plans, you also need to have fully developed incident response and disaster recovery plans.
 
 - **Business continuity and disaster recovery:** Develop and test disaster recovery plans to ensure that the cloud environment is resilient and can quickly recover from incidents. Include backup and recovery strategies that support business continuity. In many cases, individual workloads in your environment will have unique recovery targets and processes, so having workload-based plans is a good strategy rather than a single plan that covers all facets of the business. Refer to the Well-Architected [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) for workload-focused guidance on this topic.
 
