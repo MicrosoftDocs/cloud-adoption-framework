@@ -32,7 +32,7 @@ items:
           - name: Basic OpenAI architecture 
             href: /azure/architecture/ai-ml/architecture/basic-openai-e2e-chat?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/ai/toc.json
           - name: AI + ML architectures
-            href: /azure/architecture/ai-ml/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/ai/toc.json
+            href: /azure/architecture/ai-ml?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/ai/toc.json
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Design areas
