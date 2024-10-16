@@ -3,7 +3,7 @@ title: Establish Cross-Tenant Network Connectivity for Azure VMware Solution SDD
 description: Learn how to use Azure Virtual WAN and NVAs to establish network connectivity for Azure VMware Solution SDDCs in a cross-tenant environment.
 author: Mahesh-MSFT
 ms.author: maksh
-ms.date: 10/21/2024
+ms.date: 10/16/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware
 ---
@@ -37,9 +37,9 @@ The connectivity between two Azure VMware Solution SDDCs that you deploy across 
 1. Select the three dots, and then select **Edit**.
 1. Note the host FQDN value. The letter **p** precedes the pod number.
 
-Repeat the same process for other SDDCs. Determine whether they share any common pods. The following image shows SDDC hosts that are deployed in pods 2 and 3.
+Repeat the same process for other SDDCs. Determine whether they share any common pods. The following image shows SDDC hosts that are deployed in pod 1.
 
-:::image type="content" source="media/azure-vmware-solution-pod.png" alt-text="Diagram that shows the Azure VMware Solution pod." lightbox="media/azure-vmware-solution-pod.png":::
+:::image type="content" source="media/cross-tenant-network-connectivity/azure-vmware-solution-pod.png" alt-text="Diagram that shows the Azure VMware Solution pod." lightbox="media/azure-vmware-solution-pod.png":::
 
 > [!NOTE]
 > You can't select a pod during an Azure VMware Solution SDDC deployment. Pod assignment isn't predetermined, so the exact node that a scheduler assigns to a pod can vary each time a process runs.
