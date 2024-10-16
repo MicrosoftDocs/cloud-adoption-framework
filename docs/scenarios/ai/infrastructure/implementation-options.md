@@ -25,4 +25,4 @@ Azure CycleCloud Workspace for Slurm offers several benefits for users who want 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Secure AI](secure.md)
+> [Govern AI](govern.md)
