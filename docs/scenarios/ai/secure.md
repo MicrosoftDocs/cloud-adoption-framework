@@ -9,15 +9,13 @@ ms.topic: conceptual
 
 # Secure AI – Recommendations to secure AI
 
-This article offers recommendations for securing AI and focuses on the confidentiality, integrity, and availability (CIA) of AI systems. AI security governance, on the other hand, focuses on organizational risks and creating evergreen policies to mitigate those risks.
-
-Securing AI requires all the same security measures as any cloud workload. However, it requires special attention to securing data in and out of AI endpoints and securing the AI endpoints themselves. This guidance assumes familiarity with [CAF Secure](/azure/cloud-adoption-framework/secure/) and doesn’t repeat the cloud security practices found there.
+This article offers recommendations for securing AI and focuses on the confidentiality, integrity, and availability (CIA) of AI systems. Effective security practices reduce the risk of compromise by safeguarding the confidentiality, integrity, and availability of AI models and data. A secure AI environment also aligns with business security goals and enhances trust in AI-driven processes.
 
 :::image type="content" source="./images/secureai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Secure AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/secureai.svg" border="false":::
 
 ## Assess AI security risks
 
-This guidance provides recommendations for identifying AI security risks. Familiarity with AI risk is required to properly implement security controls.
+Assessing AI security risks involves identifying and evaluating potential vulnerabilities that might affect AI workloads. Proactively addressing these risks helps prevent breaches, manipulation, and misuse, which strengthens the reliability of AI applications. This approach also supports organizational goals by protecting sensitive data and maintaining stakeholder trust.
 
 - *Identify common AI security risks.* Use recognized resources like [MITRE ATLAS](https://atlas.mitre.org/), [OWASP Machine Learning risk](https://mltop10.info/), and [OWASP Generative AI risk](https://genai.owasp.org/) to regularly evaluate risks across all AI workloads. For ongoing security posture management, consider using AI security tools like [AI security posture management](/azure/defender-for-cloud/ai-security-posture) in Microsoft Defender for Cloud. These tools can automate the detection and remediation of generative AI risks.
 
@@ -29,20 +27,27 @@ This guidance provides recommendations for identifying AI security risks. Famili
 
 ## Implement AI security controls
 
-This guidance provides recommendations for implementing security controls for AI. Apply consistent security controls to all AI resources and data across the organization.
+Implementing AI security controls means establishing policies, procedures, and tools that safeguard AI resources and data. These controls help ensure compliance with regulatory requirements and protect against unauthorized access, supporting continuous operation and data privacy. By applying consistent controls across AI workloads, organizations can manage security more effectively.
 
 ### Secure AI resources
+
+Securing AI resources includes managing and protecting the systems, models, and infrastructure that support AI applications. This step reduces the likelihood of unauthorized access and helps standardize security practices across the organization. A comprehensive resource inventory allows consistent application of security policies and strengthens overall control of AI assets.
 
 - *Establish a centralized AI asset inventory.* Maintaining a detailed and up-to-date inventory of your AI workload resources ensures you can apply security policies uniformly to all AI workloads. Compile a company-wide inventory of all AI systems, models, datasets, and infrastructure across Azure. Utilize tools like Azure Resource Graph Explorer and Microsoft Defender for Cloud to automate the discovery process. Microsoft Defender for Cloud can [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and in [predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk).
 
 - *Secure Azure AI platforms.* Standardize the application of [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/?product=popular).
 
-Follow the specific security guidance for your AI workload type:
+- *Use workload specific governance guidance.* Detailed security guidance is available for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use this guidance to secure AI models, resources, and data within these workload types.
 
-- [AI on Azure AI platforms (PaaS)](./platform/./secure.md)
-- [AI on Azure infrastructure (IaaS)](./infrastructure/storage.md)
+    > [!div class="nextstepaction"]
+    > [Secure PaaS AI workloads](./platform/security.md)
+    
+    > [!div class="nextstepaction"]
+    > [Secure IaaS AI workloads](./infrastructure/security.md)
 
 ### Secure AI data
+
+Securing AI data involves protecting the data that AI models use and generate. Effective data security practices help prevent unauthorized access, data leaks, and compliance breaches. Controlling data access and maintaining a detailed catalog also support informed decision-making and reduce the risk of exposing sensitive information.
 
 - *Define and maintain data boundaries.* Ensure AI workloads use data appropriate for their access level. AI applications accessible to all employees should only process data suitable for all employees. Internet-facing AI applications must use data appropriate for public consumption. Use separate datasets or environments for different AI applications to prevent inadvertent data access. Consider using Microsoft Purview’s suite of [data security](/purview/purview-security) tools to secure your data.
 
@@ -58,7 +63,7 @@ Follow the specific security guidance for your AI workload type:
 
 ## Maintain AI security controls
 
-This guidance provides recommendations for maintaining the security of AI workloads over time. Effective monitoring and continuous review of AI security controls are essential to protect AI workloads across an organization.
+Maintaining AI security controls includes ongoing monitoring, testing, and updating of security measures to address evolving threats. Regularly reviewing security controls ensures that AI workloads remain protected and that the organization can adapt to new risks. Proactive maintenance helps prevent breaches and maintains trust in AI systems over time.
 
 - *Implement testing for data leakage and coercion in AI systems*. Conduct rigorous tests to determine if sensitive data can be leaked or coerced through AI systems. Perform data loss prevention (DLP) tests and simulate AI-specific attack scenarios. Simulate model inversion or adversarial attacks to evaluate the resilience of data protection measures. Ensuring that AI models and data handling processes are secure against unauthorized access and manipulation is critical for maintaining data integrity and trust in AI applications.
 

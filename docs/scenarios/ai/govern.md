@@ -68,13 +68,13 @@ AI governance policies create a structured framework for responsible AI usage wi
 
 - *Adapt AI for regional variability.* Flexibility in AI workloads allows for location-specific functionality adjustments. For global operations, document region-specific adaptations like localized training data and feature restrictions.
 
-### Define policies for misuse and set user guidelines
+### Define policies for user guidelines
 
 - *Define risk mitigation strategies for misuse.* Misuse prevention policies help protect against intentional or unintentional harms. Outline possible misuse scenarios and incorporate controls, such as restricted functionalities or misuse detection features.
 
 - *Set user conduct guidelines.* User agreements clarify acceptable behaviors when interacting with the AI workload, reducing the risk of misuse. Draft clear terms of use to communicate standards and support responsible AI interaction.
 
-### Integrate AI and manage transitions
+### Define policies for AI integration and replacement
 
 - *Outline integration policies.* Integration guidelines ensure AI workloads maintain data integrity and security during workload interfacing. Specify technical requirements, data-sharing protocols, and security measures.
 
@@ -88,13 +88,13 @@ Enforcing AI policies helps an organization maintain consistent and ethical AI p
 
 - *Manually enforce AI policies.* Provide training for staff on AI risks, ethical considerations, and compliance requirements. Ensure that employees understand their role in upholding AI governance policies. Conduct regular workshops or refresher courses to keep staff informed of updates to AI policies and best practices in ethical AI deployment. Where automation is insufficient, actively communicate AI policies to relevant stakeholders, including team members and decision-makers. Implement periodic audits to monitor adherence to policies. Use audit findings to identify gaps, track compliance levels, and make adjustments to the policies or their enforcement as needed.
 
-- *Use workload specific governance guidance.* There's detailed governance guidance for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use this guidance for specific instructions on how to govern AI models, costs, and data withing those workload types.
+- *Use workload specific governance guidance.* Detailed security guidance is available for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use this guidance to govern AI models, resources, and data within these workload types.
 
     > [!div class="nextstepaction"]
-    > [Govern PaaS AI workloads](./platform/resource-selection.md)
+    > [Govern PaaS AI workloads](./platform/governance.md)
     
     > [!div class="nextstepaction"]
-    > [Govern IaaS AI workloads](./infrastructure/compute.md)
+    > [Govern IaaS AI workloads](./infrastructure/governance.md)
     
 ## Monitor AI risks
 
