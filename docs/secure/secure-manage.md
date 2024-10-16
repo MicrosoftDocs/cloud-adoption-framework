@@ -38,7 +38,7 @@ During the Manage phase of your cloud adoption journey, you should have a robust
 
 - **Incident response planning:** 
 
-  Modernizing your observability platform is essential for incident detection. It's also the foundation for maintaining your incident response plan. Your incident response plan must be a living document that's updated regularly to keep pace with your threat hunting and detection engineering efforts, along with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base. 
+  Modernizing your observability platform is essential for incident detection. It's also the foundation for maintaining your incident response plan. Your incident response plan must be a living document that's updated regularly. It needs to keep pace with your threat hunting and detection engineering efforts, along with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base. 
 
   In addition to maintaining your incident response plans, you also need to have fully developed incident response and disaster recovery plans.
 
