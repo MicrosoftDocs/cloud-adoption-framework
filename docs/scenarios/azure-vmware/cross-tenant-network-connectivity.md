@@ -39,7 +39,7 @@ The connectivity between two Azure VMware Solution SDDCs that you deploy across 
 
 Repeat the same process for other SDDCs. Determine whether they share any common pods. The following image shows SDDC hosts that are deployed in pod 1.
 
-:::image type="content" source="media/cross-tenant-network-connectivity/azure-vmware-solution-pod.png" alt-text="Diagram that shows the Azure VMware Solution pod." lightbox="media/azure-vmware-solution-pod.png":::
+:::image type="content" source="media/cross-tenant-network-connectivity/azure-vmware-solution-pod.png" alt-text="Diagram that shows the Azure VMware Solution pod.":::
 
 > [!NOTE]
 > You can't select a pod during an Azure VMware Solution SDDC deployment. Pod assignment isn't predetermined, so the exact node that a scheduler assigns to a pod can vary each time a process runs.
