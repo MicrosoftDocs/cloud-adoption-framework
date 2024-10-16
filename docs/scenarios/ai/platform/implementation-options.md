@@ -9,23 +9,69 @@ ms.topic: conceptual
 
 # Implementation options for AI workloads on Azure platforms
 
-The following table provides links to implementation guidance for building generative AI applications.
+The Azure Architecture Center has reference architectures and guides to  following table provides links to implementation guidance for building generative AI applications.
 
 ## Generative AI
 
-Architectures
+Generative AI architectures
 - [Azure landing zone OpenAI architecture](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)
 - [Baseline OpenAI reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat)
 - [Basic OpenAI reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat)
 
-Guides
-- [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide)
+Generative AI guides
+- [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops)
+- [Developing RAG solutions](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide)
+- [Proxy Azure OpenAI usage](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide)
 
 ## Nongenerative AI
 
-[Analytical AI + ML architectures](/azure/architecture/ai-ml/)
+Nongenerative AI architectures
+[Azure machine learning architectures](/azure/architecture/ai-ml/#azure-machine-learning)
+[Document processing](/azure/architecture/ai-ml/architecture/automate-document-classification-durable-functions)
+[Video and image classification](/azure/architecture/ai-ml/architecture/analyze-video-computer-vision-machine-learning)
+[Audio processing](/azure/architecture/ai-ml/openai/architecture/call-center-openai-analytics)
+[Predictive analytics](/azure/architecture/ai-ml/architecture/customer-lifecycle-churn)
+[Bat]
+
+Nongenerative AI Guides
+- [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2)
+- [Team Data Science Process](/azure/architecture/data-science-process/overview)
+
+## Generative AI
+
+| Category                 | Resource                                                                                                  |
+|--------------------------|-----------------------------------------------------------------------------------------------------------|
+| Generative AI architectures | [Azure landing zone OpenAI architecture](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) |
+|                          | [Baseline OpenAI reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat)     |
+|                          | [Basic OpenAI reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat)        |
+| Generative AI guides     | [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops)                                            |
+|                          | [Developing RAG solutions](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide)   |
+|                          | [Proxy Azure OpenAI usage](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide)                    |
+
+## Nongenerative AI
+
+| Category                 | Resource                                                                                                  |
+|--------------------------|-----------------------------------------------------------------------------------------------------------|
+| Nongenerative AI architectures | [Azure machine learning architectures](/azure/architecture/ai-ml/#azure-machine-learning)                   |
+|                          | [Document processing](/azure/architecture/ai-ml/architecture/automate-document-classification-durable-functions) |
+|                          | [Video and image classification](/azure/architecture/ai-ml/architecture/analyze-video-computer-vision-machine-learning) |
+|                          | [Audio processing](/azure/architecture/ai-ml/openai/architecture/call-center-openai-analytics)              |
+|                          | [Predictive analytics](/azure/architecture/ai-ml/architecture/customer-lifecycle-churn)                   |
+| Nongenerative AI guides  | [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2)                                  |
+|                          | [Team Data Science Process](/azure/architecture/data-science-process/overview)                             |
+
+
+## Design guidelines
+
+The following articles provide organizational guidelines for adopting Azure AI platforms:
+
+- [AI resource selection](./resource-selection.md)
+- [AI networking](./compute.md)
+- [AI governance](./compute.md)
+- [AI management](./compute.md)
+- [AI security](./compute.md)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Govern AI](govern.md)
+> [AI resource selection](./resource-selection.md)

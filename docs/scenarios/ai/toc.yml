@@ -9,8 +9,10 @@ items:
     items:
     - name: Prepare AI environment
       href: ready.md
-    - name: AI with Azure platforms (PaaS)
+    - name: AI on Azure platforms (PaaS)
       items:
+      - name: Implementation options
+        href: platform/implementation-options.md
       - name: Design areas
         items:
           - name: Resource selection
@@ -23,10 +25,10 @@ items:
             href: platform/management.md
           - name: Security
             href: platform/security.md
-      - name: Implementation options
-        href: platform/implementation-options.md
     - name: AI on Azure infrastructure (IaaS)
       items:
+      - name: Implementation options
+        href: infrastructure/implementation-options.md
       - name: Design areas
         items:
           - name: Compute
@@ -41,8 +43,7 @@ items:
             href: infrastructure/management.md
           - name: Security
             href: infrastructure/security.md
-      - name: Implementation options
-        href: infrastructure/implementation-options.md
+
   - name: Secure AI
     href: secure.md
   - name: Govern AI
