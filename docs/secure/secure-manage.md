@@ -3,7 +3,7 @@ title: Securely manage your cloud estate
 description: Learn how to adopt security best practices in your cloud estate management phase
 author: claytonsiemens77
 ms.author: csiemens
-ms.date: 06/24/2024
+ms.date: 10/16/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
