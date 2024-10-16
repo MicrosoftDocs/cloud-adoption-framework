@@ -14,7 +14,6 @@ This article offers recommendations for securing AI and focuses on the confident
 Securing AI requires all the same security measures as any cloud workload. However, it requires special attention to securing data in and out of AI endpoints and securing the AI endpoints themselves. This guidance assumes familiarity with [CAF Secure](/azure/cloud-adoption-framework/secure/) and doesn’t repeat the cloud security practices found there.
 
 :::image type="content" source="./images/secureai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Secure AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/secureai.svg" border="false":::
-*Figure 1. Secure AI in the AI adoption process.*
 
 ## Assess AI security risks
 

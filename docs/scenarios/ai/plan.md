@@ -12,13 +12,12 @@ ms.topic: conceptual
 An AI adoption plan outlines the necessary steps for an organization to incorporate AI into its operations. This guidance is essential because a structured approach enables organizations to align AI initiatives with business goals, ensuring that resources, skills, and technology align effectively for successful deployment.
 
 :::image type="content" source="./images/aiplan.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Plan. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiplan.svg" border="false":::
-*Figure 1. AI Plan in the AI adoption process.*
 
 ## Evaluate AI maturity
 
-Organizations can evaluate AI maturity to understand their current capabilities and readiness to implement AI. This step matters because it allows organizations to choose AI projects that match their skill level and available data, increasing the chances of achieving a positive return on investment while reducing the risk of overreaching.
+Organizations needs to evaluate their AI maturity to understand their current capabilities and readiness to implement AI. This step allows organizations to choose AI use cases that match their skill level and available data, increasing the chances of achieving a positive return on investment while reducing the risk of overreaching. Use the following table to help assess your AI maturity level.
 
-| AI maturity level | Feasible AI projects | Skills required | Data readiness |
+| AI maturity level | Feasible AI use cases | Skills required | Data readiness |
 |-------------------|----------------------|-----------------|----------------|
 | Level 1       | ▪ Microsoft Learn quickstart <br> ▪ Copilot Studio app | ▪ Basic understanding of AI concepts <br> ▪ Ability to integrate data sources and map out prompts | ▪ Minimal to zero data available <br> ▪ Enterprise data available |
 | Level 2       | ▪ Any of the previous projects <br> ▪ Custom analytical AI application that uses Azure AI services <br> ▪ Custom generative AI chat app without Retrieval Augmented Generation (RAG) in Azure AI Studio  <br> ▪ Custom machine learning app with automated model training <br> ▪ Fine-tuning a generative AI model | ▪ Experience with AI model selection <br> ▪ Familiarity with AI deployment and endpoint management <br> ▪ Experience with data cleaning and processing | ▪ Minimal to zero data available <br> ▪ Small, structured dataset <br> ▪ Small amount of domain▪specific data available |
@@ -73,15 +72,15 @@ An AI proof of concept (PoC) demonstrates the potential of AI projects on a smal
 
 ## Plan for responsible AI
 
-Organizations should plan for responsible AI by implementing practices that promote ethical, secure, and reliable AI use. This approach ensures that AI applications align with organizational values and regulatory requirements, protecting users, minimizing risks, and building trust in AI systems.
+Organizations should plan for responsible AI by using responsible AI planning tools. This approach ensures that AI applications align with organizational values and regulatory requirements. Next, familiarize yourself with the processes to govern, manage, and secure AI workloads.
 
 - *Use responsible-AI planning tools.* Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
-- *Plan AI security.* Plan to assess security risks specific to AI workloads. Based on those risks, you must implement security controls and maintain them over time. Review [Secure AI](secure.md) before deployment.
+- *Understand AI governance.* Familiarize yourself with organizational AI risks and start developing AI governance policies. For more information, see review [Govern AI](govern.md) before deployment.
 
-- *Plan AI governance.* Plan to govern AI workloads using automated and manual enforcement. Review [Govern AI](govern.md) before deployment.
+- *Understand AI management.* Adopt an operational framework, such as GenAIOps or MLOps, to manage your AI workloads. Understand how to manage AI models and costs over time. For more information, see [Manage AI](manage.md).
 
-- *Plan AI management.* Plan to determine who's responsible for deploying and configuring AI resource to meet governance and security standards. Develop a plan for AI endpoint sharing and how to measure AI workloads throughout their lifecycle. Review [Manage AI](manage.md) before deployment.
+- *Understand AI security.* Assess [Secure AI](secure.md) before deployment.
 
 ## Plan AI deployment
 
@@ -120,20 +119,10 @@ The rest of this guidance focuses on building AI workloads in Azure by using Paa
 
 For more information about adopting a Microsoft Copilot solution, see these resources:
 
-- [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)
-- [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)
-- Role-based agents in Microsoft 365:
-    - [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot)
-    - [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction)
-    - [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service)
-    - [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance)
-- In-product copilots:
-    - [GitHub](https://azure.microsoft.com//products/github/copilot)
-    - [Power Apps](https://www.microsoft.com/power-platform/products/power-apps)
-    - [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=&country=us)
-    - [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai)
-    - [Power Automate](https://www.microsoft.com/power-platform/products/power-automate)
-    - [Azure](https://azure.microsoft.com/products/copilot/)
-- Browser-based copilots:
-    - [Copilot (free)](https://copilot.microsoft.com/)
-    - [Copilot Pro](https://www.microsoft.com/store/b/copilotpro)
+| Category                    | Copilot Solution                                                                                   |
+|-----------------------------|----------------------------------------------------------------------------------------------------|
+| Enterprise productivity     | [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)                 |
+| Low-code platform           | [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)                   |
+| Role-based agents in Microsoft 365 | - [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot) <br> - [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction) <br> - [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service) <br> - [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance) |
+| In-product Copilots         | - [GitHub](https://azure.microsoft.com//products/github/copilot) <br> - [Power Apps](https://www.microsoft.com/power-platform/products/power-apps) <br> - [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=&country=us) <br> - [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai) <br> - [Power Automate](https://www.microsoft.com/power-platform/products/power-automate) <br> - [Azure](https://azure.microsoft.com/products/copilot/) |
+| Browser-based Copilots      | - [Copilot (free)](https://copilot.microsoft.com/) <br> - [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) |
