@@ -90,7 +90,11 @@ Enforcing AI policies helps an organization maintain consistent and ethical AI p
 
 - *Use workload specific governance guidance.* There's detailed governance guidance for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use that guidance for specific instructions on how to govern AI models, costs, and data withing those workload types.
 
- 
+> [!div class="nextstepaction"]
+> [Govern PaaS AI workloads](./platform/resource-selection.md)
+
+> [!div class="nextstepaction"]
+> [Govern IaaS AI workloads](./infrastructure/compute.md)
 
 ## Monitor AI risks
 
