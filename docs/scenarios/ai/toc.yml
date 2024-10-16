@@ -24,7 +24,15 @@ items:
           - name: Management
             href: platform/management.md
       - name: Implementation options
-        href: platform/implementation-options.md
+        items:
+          - name: Azure landing zone OpenAI architecture
+            href: /azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/ai/toc.json
+          - name: Baseline OpenAI architecture
+            href: /azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/ai/toc.json
+          - name: Basic OpenAI architecture 
+            href: /azure/architecture/ai-ml/architecture/basic-openai-e2e-chat?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/ai/toc.json
+          - name: AI + ML architectures
+            href: /azure/architecture/ai-ml/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/ai/toc.json
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Design areas
@@ -42,7 +50,9 @@ items:
           - name: Management
             href: infrastructure/management.md
       - name: Implementation options
-        href: infrastructure/implementation-options.md
+        items:
+          - name: CycleCloud landing zone accelerator
+            href: infrastructure/cycle-cloud.md
   - name: Secure AI
     href: secure.md
   - name: Govern AI
