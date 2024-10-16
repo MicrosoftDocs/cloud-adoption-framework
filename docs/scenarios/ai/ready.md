@@ -1,5 +1,5 @@
 ---
-title: AI Ready – Recommendations to prepare an AI foundation
+title: AI Ready – Recommendations to establish an AI foundation
 description: Optimize your AI foundation with Azure's best practices for region selection, governance, networking, and connectivity.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,17 +7,13 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Ready – Recommendations to prepare an AI foundation
+# AI Ready – Recommendations to establish an AI foundation
+
+This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with the [Ready](/azure/cloud-adoption-framework/ready/) methodology in the Cloud Adoption Framework and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking.
 
 :::image type="content" source="./images/aiready.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Ready. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiready.svg" border="false":::
-*Figure 1. AI Ready in the AI adoption process.*
 
-This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with the [Ready](/azure/cloud-adoption-framework/ready/) methodology in the Cloud Adoption Framework and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking. The following diagram illustrates a scalable, baseline environment for your AI workloads.
-
-:::image type="content" source="./images/ai-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/ai-resource-hierarchy.svg" border="false":::
-*Figure 1. Scalable pattern for reliable and secure AI workloads.*
-
-## Prepare AI reliability
+## Establish AI reliability
 
 Select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
 
@@ -31,7 +27,7 @@ Select the right region or regions to host your AI models. It affects the perfor
 
 - *Prepare for continuity of operations.* To ensure business continuity and disaster recovery, replicate critical assets such as fine-tuned models, RAG data, trained models, and training datasets in a secondary region. This redundancy enables faster recovery if there's an outage and ensures continued service availability.
 
-## Prepare AI governance
+## Establish AI governance
 
 In Azure, resource organization is how you structure management groups and subscriptions to organize your Azure resources. Resource organization is critical for AI governance across AI workloads and cost management.
 
@@ -41,7 +37,7 @@ In Azure, resource organization is how you structure management groups and subsc
 
 - *Deploy AI resources in workload subscriptions.* AI resources need to inherit workload governance policies from the workload management group (internal or internet-facing). Keep them separate from platform resources. AI resources controlled by platform teams tend to create development bottlenecks. In the context of Azure landing zone, deploy AI platforms to application landing zone subscriptions.
 
-## Prepare AI networking
+## Establish AI networking
 
 This guidance provides recommendations for setting up your network topology for AI workloads. Organizations that have multiple intelligent applications should use a hub-and-spoke network topology. When you have a single intelligent application, consider adopting a hub-and-spoke topology as the number of your workloads increases.
 
@@ -65,24 +61,27 @@ This guidance provides recommendations for setting up your network topology for 
 
 - *Use Azure Web Application Firewall v2 (WAFv2) for internet-facing workloads.* Azure WAFv2 helps protect your AI applications from common web vulnerabilities, including SQL injections and cross-site scripting attacks. Configure Azure WAFv2 on Application Gateway for applications that require enhanced security against malicious web traffic.
 
-## Implementation options
+## Establish an AI foundation
 
 To choose the right approach for the foundation of AI workloads, you need to set up the core infrastructure and understand the separation of responsibilities and considerations that you need for an AI-focused Azure landing zone.
 
-### Deploy a foundation with Azure landing zone
+### Use Azure landing zone
 
-An Azure landing zone provides a starting point to prepare your Azure environment. Deploy AI workload resources, such as Azure AI Studio, Machine Learning, AI services, Virtual Machines, and supporting resources to an application landing zone. For more information, see *Figure 2: Landing zone A2 subscription*. You can use various implementations for an Azure landing zone. Make sure to apply the policies that are relevant to your AI deployment when you use the Azure landing zone accelerator.
+An Azure landing zone provides a starting point to prepare your Azure environment. It provides a prebuilt experience to deploy and configure platform subscriptions and resources. With the platform ready, you deploy AI workloads to application landing zones (*see figure 2 in red*).
 
 :::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
 *Figure 2. AI applications in the context of an Azure landing zone.*
 
-### Deploy a custom environment
+### Build a custom environment
 
-You can use the guidance discussed in this article to establish a foundational environment for your AI workloads.
+You can use the guidance discussed in this article to establish a foundational environment for your AI workloads. The following diagram illustrates a baseline resource hierarchy for your AI workloads. It uses two distinct management groups to that separate internal AI workloads from internet-facing AI workloads. This separation prevents exposing internal data to the external users.
+
+:::image type="content" source="./images/baseline-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/baseline-resource-hierarchy.svg" border="false":::
+*Figure 3. Baseline resource hierarchy for AI workloads.*
 
 ## Next steps
 
-The following guidance focuses on building AI workloads in Azure by using PaaS and infrastructure as a service (IaaS) solutions.
+The following guidance focuses on building AI workloads in Azure by using PaaS and infrastructure as a service (IaaS) solutions. Start with PaaS AI workloads. It's the preferred Microsoft approach.
 
 > [!div class="nextstepaction"]
 > [PaaS AI workloads](./platform/resource-selection.md)

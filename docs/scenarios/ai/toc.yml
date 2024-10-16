@@ -24,7 +24,7 @@ items:
           - name: Management
             href: platform/management.md
       - name: Implementation options
-        href: /azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/ai/toc.json
+        href: platform/implementation-options.md
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Design areas
