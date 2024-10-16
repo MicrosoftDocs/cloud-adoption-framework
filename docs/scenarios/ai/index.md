@@ -20,7 +20,11 @@ When applied effectively, AI improves business. It enhances individual efficienc
 
 ## How to adopt AI
 
-AI adoption is a sequential process. Some steps in the process you visit once, others are continuous. This guidance serves as your roadmap for AI adoption and a hub for finding the resources you need. There's aAI adoption checklist to see the roadmap to adopting AI. There's a checklist for startups and enterprises. The startup checklist covers the essentials for securing and governing AI workloads in Azure. The Enterprise checklist provide comprehensive guidance for scaling AI workloads in Azure. The following steps outline how to adopt AI on Azure:
+Adopting AI is a sequential process. Some steps are one-time actions, while others are continuous. Work through AI Strategy, AI Plan, and AI Ready once, and revisit them as needed. Govern AI, Manage AI, and Secure AI are continuous processes that you must iterate through regularly to ensure your AI workloads remain secure, cost-effective, and trustworthy.
+
+This guidance serves as your roadmap for AI adoption. Use it as a central hub to find the resources and guidance you need. There are AI adoption checklists available for both startups and enterprises. The startup checklist covers the essentials for securing and governing AI workloads in Azure, while the enterprise checklist provides comprehensive guidance for scaling AI workloads in Azure.
+
+The following steps outline how to adopt AI on Azure:
 
 1. *AI Strategy*: Choose the right AI technology for each use case based on the required skills, data availability, and associated costs. Define your data and Responsible AI strategy.
 1. *AI Plan*: Assess your AI maturity, acquire necessary AI skills, access the AI technology you need, and plan for responsible AI. Part of planning is reviewing the needs of the AI security, governance, and management processes.
