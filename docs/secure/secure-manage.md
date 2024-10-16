@@ -1,6 +1,6 @@
 ---
-title: Securely manage your cloud estate
-description: Learn how to adopt security best practices in your cloud estate management phase
+title: Manage your cloud estate with enhanced security
+description: Learn how to adopt security best practices during your cloud estate management phase.
 author: claytonsiemens77
 ms.author: csiemens
 ms.date: 10/16/2024
@@ -8,23 +8,23 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Securely manage your cloud estate
+# Manage your cloud estate with enhanced security
 
-The Manage phase of a cloud adoption journey focuses on the ongoing operation of your cloud estate. Maintaining and strengthening your security posture continuously is critical to successfully managing your estate and should be considered the cornerstone of your management practices. If you neglect security in favor of cost savings or performance improvements, you risk exposing your business to threats that could severely damage your business and reverse any short-term benefits that doing so brought. Investing in security mechanisms and practices will set your business up for long-term success by minimizing the risks of detrimental attacks.
+The Manage phase of a cloud adoption journey focuses on the ongoing operation of your cloud estate. Maintaining and strengthening your security posture continuously is critical to successfully managing your estate and should be considered the cornerstone of your management practices. If you neglect security in favor of cost savings or performance improvements, you risk exposing your business to threats that could severely damage your business and reverse any short-term benefits that doing so brought. Investing in security mechanisms and practices sets your business up for long-term success by minimizing the risks of detrimental attacks.
 
-This article is a supporting guide to the [Manage](../manage/index.md) methodology, offering areas of security optimization that should be considered as you move through that phase in your journey.
+This article is a supporting guide to the [Manage](../manage/index.md) methodology. It describes areas of security optimization that you should  consider as you move through that phase in your journey.
 
 ## Security posture modernization
 
-In the Manage phase of your cloud adoption journey, you should have a robust [observability platform](../manage/monitor/observability.md) with thorough monitoring and intelligent alerting setup already, but modernizing this platform may require a new mindset that focuses heavily on proactive measures and adopting the principles of Zero Trust.
+During the Manage phase of your cloud adoption journey, you should have a robust [observability platform](../manage/monitor/observability.md) with thorough monitoring and intelligent alerting set up already, but modernizing this platform might require a new mindset that focuses heavily on proactive measures and adopting the principles of Zero Trust.
 
-- **Assume breach:** Assuming that there's a breach in one or more of your systems is a key tenet of proactive detection and the driver of threat hunting and detection engineering. *Threat hunting* uses a hypothesis-based approach - that a breach has already happened in more particular form - to intelligently analyze your systems through tooling in an attempt to prove or disprove that hypothesis. *Detection engineering* is the practice of developing specialized detection mechanisms to augment observability platforms that aren't equipped to detect new and novel cyber attacks. 
+- **Assume breach:** Assuming that there's a breach in one or more of your systems is a key tenet of proactive detection and the driver of threat hunting and detection engineering. *Threat hunting* uses a hypothesis-based approach - that a breach has already happened in more particular form - to intelligently analyze your systems through tooling in an attempt to prove or disprove that hypothesis. *Detection engineering* is the practice of developing specialized detection mechanisms to augment observability platforms that aren't equipped to detect new and novel cyberattacks. 
 
-- **Verify explicitly:** Moving from a mindset of "trust-by-default" to "trust-by-exception" means that you need to be able to validate trusted activities through visibility. Augmenting your observability platform with intelligent identity and access monitoring can help you detect anomalousbehavior in real time.
+- **Verify explicitly:** Moving from a mindset of "trust-by-default" to "trust-by-exception" means that you need to be able to validate trusted activities through visibility. Augmenting your observability platform with intelligent identity and access monitoring can help you detect anomalous behavior in real time.
 
 ### Azure facilitation
 
-- [Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview) provides advanced threat hunting across multiple domains, like endpoints, cloud apps and identity. 
+- [Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview) provides advanced threat hunting across multiple domains, like endpoints, cloud apps, and identity. 
 
 ## Managing incident preparedness and response
 
@@ -32,9 +32,9 @@ In the Manage phase of your cloud adoption journey, you should have a robust [ob
 
     - Implement a security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution to augment your infrastructure monitoring and alerting systems to detect and respond to security incidents.
 
-    - Proactively scan your cloud systems for vulnerabilities. Using a vulnerability scanner that can be integrated with a SIEM system consolidates security data from across your environment, helping you efficiently detect and respond to multiple types of security risks and incidents.
+    - Proactively scan your cloud systems for vulnerabilities. Using a vulnerability scanner that can be integrated with a SIEM system consolidates security data from across your environment, which helps you efficiently detect and respond to multiple types of security risks and incidents.
     
-    - Increase the depth of your visibility into security risks in your environment by implementing an eXtended Detection and Response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [Security Operations](./secure-teams-and-roles.md) team's efficiency.
+    - Increase the depth of your visibility into security risks in your environment by implementing an extended detection and response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [Security Operations](./secure-teams-and-roles.md) team's efficiency.
 
 - **Incident response planning:** 
 
