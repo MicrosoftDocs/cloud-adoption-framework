@@ -26,7 +26,7 @@ During the Manage phase of your cloud adoption journey, you should have a robust
 
 - [Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview) provides advanced threat hunting across multiple domains, like endpoints, cloud apps, and identity. 
 
-## Manage incident preparedness and response
+## Managing incident preparedness and response
 
 - **Incident preparedness:** 
 
@@ -52,7 +52,7 @@ During the Manage phase of your cloud adoption journey, you should have a robust
 
 - [Automated investigation and response in Defender XDR](/defender-xdr/m365d-autoir) helps your security operations team address threats more efficiently and effectively by providing automated detection and self-healing capabilities for many scenarios.
 
-## Manage confidentiality
+## Managing confidentiality
 
 The ongoing management of your security posture as it relates to confidentiality involves regularly performing well-designed monitoring and auditing practices, maintaining codified audit procedures, and looking for continuous improvement opportunities.
 
@@ -72,7 +72,7 @@ The ongoing management of your security posture as it relates to confidentiality
 
 - [Microsoft Purview Insider Risk Management](/purview/insider-risk-management-solution-overview) can help you detect and prevent potential malicious or inadvertent insider risks, such as IP theft, data leakage, and security violations.
 
-## Manage integrity
+## Managing integrity
 
 Managing your data and system integrity requires robust monitoring with specific configurations for detecting unauthorized changes to your assets. Other key tenets of the Manage phase are adopting continuous improvement and training practices.
 
@@ -98,7 +98,7 @@ Managing the availability of your cloud estate requires robust, proactive availa
 
 In addition to the Defender for Cloud solutions discussed previously, consider the following solutions:
 
-- [Automatic instrumentation](/azure/azure-monitor/app/codeless-overview) for [Application Insights](/azure/azure-monitor/app/app-insights-overview) allows you to easily instrument your application for rich telemetry monitoring. Many Azure-based and on-premises hosting types are supported for automatic instrumentation.
+- [Automatic instrumentation for Azure Monitor Application Insights](/azure/azure-monitor/app/codeless-overview) allows you to easily instrument your application for rich telemetry monitoring through [Application Insights](/azure/azure-monitor/app/app-insights-overview). Many Azure-based and on-premises hosting types are supported for automatic instrumentation.
 
 - [Azure Chaos Studio](/azure/chaos-studio/chaos-studio-overview) is a managed service that uses chaos engineering to help you measure, understand, and improve your cloud application and service resilience.
 
