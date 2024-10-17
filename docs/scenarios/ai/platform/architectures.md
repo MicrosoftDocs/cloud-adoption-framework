@@ -46,5 +46,7 @@ The AI design areas organize the AI best practices for organizations using Azure
 
  Use the AI design area articles as a framework for building AI workloads. Use the articles along side the reference architectures. Each design area provides recommendations for generative and nongenerative AI workloads on Azure.
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [AI resource selection](./resource-selection.md)
