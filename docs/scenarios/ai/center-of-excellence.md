@@ -14,11 +14,11 @@ An AI Center of Excellence (AI CoE) is a dedicated team or organizational struct
 
 ## What is an AI CoE?
 
-An AI CoE serves as a centralized hub for AI initiatives. It provides a structured approach to AI adoption by aligning AI projects with business goals, centralizing tools and expertise, establishing development standards, overseeing compliance and ethical concerns, and promoting an AI-driven mindset across the organization.
+An AI CoE serves as a centralized hub for AI initiatives. It provides a structured approach to AI adoption and aligns AI workloads with business goals. The AI CoE also establishes development standards, oversees compliance and ethical concerns, and promotes an AI-driven mindset across the organization.
 
 ## Why is an AI CoE important?
 
-An AI CoE facilitates AI adoption by streamlining initiatives, reducing duplication, and focusing on projects with significant business impact. It establishes governance structures to manage ethical and compliance issues, fosters collaboration, and enables knowledge sharing.
+An AI CoE facilitates AI adoption by streamlining initiatives, reducing duplication, and focusing on projects with significant business results. It establishes governance structures to manage ethical and compliance issues, fosters collaboration, and enables knowledge sharing.
 
 ## Define the AI CoE function
 
@@ -26,7 +26,7 @@ The first step in building an AI CoE is to clearly define its role and objective
 
 The first step involves defining the AI CoE's role and objectives. Focus on operationalizing key areas:
 
-- *Business strategy:* Identify business goals that AI can support, prioritize high-impact use cases, and establish measurable KPIs to track success. Develop a roadmap to guide employee engagement with AI and foster skill development.
+- *Business strategy:* Identify business goals that AI can support, prioritize use cases, and establish measurable KPIs to track success. Develop a roadmap to guide employee engagement with AI and foster skill development.
 
 - *Technology strategy:* Design an AI-ready platform and data architecture. Create a decision framework for building or purchasing AI tools and plan for scalable storage, compute, and application hosting.
 
@@ -56,7 +56,7 @@ An AI CoE requires a diverse set of skills and expertise. Assemble a cross-funct
 
 Determine whether the AI CoE operates as an extension of an existing Cloud CoE or functions as a standalone team. Define workflows to ensure that AI projects align with business goals.
 
-- *Identify strategic opportunities:* Collaborate with business leaders to uncover AI use cases, prioritizing those with high business value and feasibility.
+- *Identify strategic opportunities:* Collaborate with business leaders to uncover AI use cases. Prioritize use cases with high business value and feasibility.
 
 - *Create an implementation roadmap:* Develop a timeline for AI adoption, specifying the necessary infrastructure, tools, and personnel.
 
@@ -72,7 +72,7 @@ After establishing the AI CoE, continuously monitor performance, make adjustment
 
 - *Monitor AI performance:* Track KPIs and business metrics related to AI initiatives. Use feedback loops to improve model accuracy and impact.
 
-- *Iterate and scale:* Optimize AI processes based on lessons learned from pilot projects, and expand successful solutions to additional business units or regions.
+- *Iterate and scale:* Optimize AI processes based on lessons learned from pilot projects, and expand successful solutions to other business units or regions.
 
 - *Maintain compliance and ethics:* Conduct regular audits to ensure adherence to ethical standards and regulatory requirements. Update governance frameworks as necessary.
 
