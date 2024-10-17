@@ -1,6 +1,6 @@
 ---
 title: Integrate Security Into Your Cloud Adoption Strategy
-description: Learn how to integrate security best practices into your cloud adoption strategy.
+description: Learn how to integrate security best practices into your cloud adoption strategy. View an example strategy document. 
 author: claytonsiemens77
 ms.author: csiemens
 ms.date: 11/01/2024
