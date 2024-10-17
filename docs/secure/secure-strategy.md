@@ -10,19 +10,19 @@ ms.custom: internal, UpdateFrequency2
 
 # Integrate security into your cloud adoption strategy
 
-Moving your organization to the cloud adds significant complexity to security. To be successful in the cloud, your security strategy needs to meet modern challenges inherent to cloud computing. In the adoption and operation of a cloud estate, security becomes a necessary consideration in all facets of the organization, not a separate function that's secondarily applied to certain facets. The latter approach can be common for organizations that run on-premises technology platforms. As you define your cloud adoption strategy, consider the recommendations provided in this article to ensure that security is an integral part of the strategy and will be built into your cloud adoption plan as you move forward.
+Moving your organization to the cloud adds significant complexity to security. To be successful in the cloud, your security strategy needs to meet modern challenges that are inherent to cloud computing. In the adoption and operation of a cloud estate, security becomes a necessary consideration in all facets of the organization. It's not a separate function that's secondarily applied to certain facets, as can be common for organizations that run on-premises technology platforms. When you define your cloud adoption strategy, consider the recommendations provided in this article to ensure that security is an integral part of the strategy and will be built into your cloud adoption plan as you move forward.
 
 This article is a supporting guide to the [Strategy](../strategy/index.md) methodology. It describes areas of security optimization that you should  consider as you move through that phase in your journey.
 
 ## Security posture modernization 
 
-The strategy of security posture modernization doesn't just involve the adoption of new technologies and new operational practices. It normally also  involves a mindset shift across the organization. New [teams and roles](./secure-teams-and-roles.md) might need to be filled, and existing teams and roles might need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it's important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
+The strategy of security posture modernization doesn't just involve the adoption of new technologies and new operational practices. It typically also  involves a mindset shift across the organization. New [teams and roles](./secure-teams-and-roles.md) might need to be filled, and existing teams and roles might need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it's important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
 
 See the [Define a security strategy](../strategy/define-security-strategy.md) guide for a comprehensive overview of these considerations.
 
 ### Adopting Zero Trust as a strategy
 
-Adopting [Zero Trust](/security/zero-trust/zero-trust-overview) as a strategy will help you start your cloud journey off with a modern approach to security in place. The Zero Trust approach is founded on three principles:
+Adopting [Zero Trust](/security/zero-trust/zero-trust-overview) as a strategy will help you start your cloud journey with a modern approach to security in place. The Zero Trust approach is founded on three principles:
 
 - **Verify explicitly.** Always authenticate and authorize based on all available data points.
 
@@ -90,7 +90,7 @@ The motivation for moving to the cloud is to modernize our line-of-business (LOB
 
 ### Business outcome - global reach
 
-We're currently operating only in North America. Our five-year plan is to expand into Europe and Asia. Taking advantage of the Microsoft global Azure cloud will allow us to build out the necessary infrastructure to efficiently deliver our LOB application in Europe and Asia.
+We currently operate only in North America. Our five-year plan is to expand into Europe and Asia. Taking advantage of the Microsoft global Azure cloud will allow us to build out the necessary infrastructure to efficiently deliver our LOB application in Europe and Asia.
 
 - **Business owner:** COO
 
