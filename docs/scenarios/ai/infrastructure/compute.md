@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Compute recommendations for AI workloads on Azure infrastructure (IaaS)
 
-This article provides recommendations for selecting and configuring compute for AI workloads on Azure infrastructure (IaaS). The preferred approach for AI adoption on Azure is to start with Azure AI platform-as-a-service (PaaS) solutions. But for organizations with access to Azure GPUs, use this guidance to get you AI workload running on Azure infrastructure. Start with [Azure AI platform-as-a-service (PaaS) solutions](../platform/architectures.md) for AI adoption on Azure. However, if your organization has access to Azure GPUs, follow this guidance to run AI workloads on Azure IaaS.
+This article provides compute recommendations for organizations running AI workloads on Azure infrastructure (IaaS). The preferred approach is to start your AI adoption with [Azure AI platform-as-a-service (PaaS) solutions](../platform/architectures.md). However, if you have access to Azure GPUs, follow this guidance to run AI workloads on Azure IaaS.
 
 AI workloads require specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Choosing the right VMs optimizes resource use and accelerates AI model development and deployment. The following table provides an overview of recommended compute options.
 
