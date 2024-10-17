@@ -1,15 +1,15 @@
 ---
-title: Security for AI workloads on Azure platforms
-description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
+title: Security recommendations for AI workloads on Azure
+description: Learn how to secure AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Security for AI workloads on Azure platforms
+# Security recommendations for AI workloads on Azure
 
-This article provides recommendations for securing Azure resources deployed for AI workloads. As AI becomes more integrated into business operations, protecting these resources from potential threats is crucial to maintain data integrity and compliance. Applying standardized security baselines and following well-architected frameworks helps organizations safeguard their AI infrastructure against vulnerabilities.
+This article provides recommendations for securing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. As AI becomes more integrated into business operations, protecting these resources from potential threats is crucial to maintain data integrity and compliance. Applying standardized security baselines and following well-architected frameworks helps organizations safeguard their AI infrastructure against vulnerabilities.
 
 ## Secure AI resources
 

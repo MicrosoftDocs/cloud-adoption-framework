@@ -1,13 +1,13 @@
 ---
-title: Governance for AI workloads on Azure infrastructure
-description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
+title: Governance recommendations for AI workloads on Azure infrastructure (IaaS)
+description: Learn how to govern AI workloads on Azure infrastructure (IaaS)
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Governance for AI workloads on Azure infrastructure
+# Governance recommendations for AI workloads on Azure infrastructure (IaaS)
 
 This article provides recommendations for governing AI workloads using Azure infrastructure as a service (IaaS). For broader AI governance on Azure, refer to [Govern AI](../govern.md).
 

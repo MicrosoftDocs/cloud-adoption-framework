@@ -1,15 +1,15 @@
 ---
-title: Networking for AI workloads on Azure platforms
-description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
+title: Networking recommendations for AI workloads on Azure
+description: Learn networking for AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Networking for AI workloads on Azure platforms
+# Networking recommendations for AI workloads on Azure
 
-This guide provides recommendations and best practices for networking configurations when deploying AI workloads on Azure platforms. It covers understanding managed networking, configuring virtual networks, securing AI resources, managing connectivity, and considering advanced architectures for AI applications.
+This article provides recommendations for configuring networking for AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers understanding managed networking, configuring virtual networks, securing AI resources, managing connectivity, and considering advanced architectures for AI applications.
 
 ## Configure virtual networks
 

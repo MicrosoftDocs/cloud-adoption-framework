@@ -1,15 +1,15 @@
 ---
-title: Governance for AI workloads on Azure platforms
-description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
+title: Governance recommendations for AI workloads on Azure
+description: Learn how to govern AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Governance for AI workloads on Azure platforms
+# Governance recommendations for AI workloads on Azure
 
-This guidance assumes that you've established governance policies at the management group level for your AI workload types, like internet-facing (online) and internal (corporate) workloads. These polices are covered in [AI Ready](ready.md#prepare-ai-resource-organization). The following recommendations are intended as a starting point for your AI governance.
+This article provides recommendations for governing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services.
 
 ## Govern AI models
 

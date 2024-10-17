@@ -1,13 +1,13 @@
 ---
-title: Storage for AI on Azure infrastructure
-description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
+title: Storage recommendations for AI workloads on Azure infrastructure (IaaS)
+description: Learn how to select storage for AI workloads on Azure infrastructure (IaaS)
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Storage for AI on Azure infrastructure
+# Storage recommendations for AI workloads on Azure infrastructure (IaaS)
 
 This article provides recommendations for selecting and configuring storage for AI workloads running on Azure infrastructure (IaaS). A storage solution for AI workloads on Azure infrastructure must be capable of managing the demands of data storage, access, and transfer that are inherent to AI model training and inferencing.
 

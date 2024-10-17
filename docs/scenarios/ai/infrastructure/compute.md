@@ -1,13 +1,13 @@
 ---
-title: Compute for AI workloads on Azure infrastructure
-description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
+title: Compute recommendations for AI workloads on Azure infrastructure (IaaS)
+description: Learn how to select compute for AI workloads on Azure infrastructure (IaaS)
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Compute for AI workloads on Azure infrastructure
+# Compute recommendations for AI workloads on Azure infrastructure (IaaS)
 
 This article provides recommendations for selecting and configuring compute for AI workloads running on Azure infrastructure (IaaS). The preferred approach to AI adoption to start with Azure AI platform solutions (PaaS). But for organizations with access to Azure GPUs, use this guidance to get you AI workload running on Azure infrastructure.
 

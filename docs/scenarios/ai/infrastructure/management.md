@@ -1,13 +1,13 @@
 ---
-title: Management for AI workloads on Azure infrastructure
-description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
+title: Management recommendations for AI workloads on Azure infrastructure (IaaS)
+description: Learn how to manage AI workloads on Azure infrastructure (IaaS)
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Management for AI workloads on Azure infrastructure
+# Management recommendations for AI workloads on Azure infrastructure (IaaS)
 
 This article provides recommendations for monitoring for AI workloads running on Azure infrastructure (IaaS). Effective management of AI workloads on Azure requires continuous monitoring, optimization practices, and a strong backup and recovery strategy to minimize downtime and ensure reliability in AI-driven operations. For general AI management guidance, see [Manage AI](../manage.md).
 

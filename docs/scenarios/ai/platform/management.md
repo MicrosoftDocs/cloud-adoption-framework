@@ -1,15 +1,15 @@
 ---
-title: Management for AI workloads on Azure platforms
-description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
+title: Management recommendations for AI workloads on Azure
+description: Learn how to manage AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Management for AI workloads on Azure platforms
+# Management recommendations for AI workloads on Azure
 
-Effective management of AI workloads on Azure involves overseeing deployment, model performance, operations, data, and disaster recovery to support AI-driven initiatives. This topic matters when adopting AI because proper management ensures that AI systems operate reliably, align with responsible AI principles, and remain secure throughout their lifecycle.
+This article provides recommendations for managing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. Effective management of AI workloads on Azure involves overseeing deployment, model performance, operations, data, and disaster recovery to support AI-driven initiatives. This topic matters when adopting AI because proper management ensures that AI systems operate reliably, align with responsible AI principles, and remain secure throughout their lifecycle.
 
 ## Manage AI deployments
 

@@ -1,13 +1,13 @@
 ---
-title: Security for AI on Azure infrastructure
-description: Discover how to build AI applications on Azure IaaS with detailed recommendations, architecture guides, and best practices.
+title: Security recommendations for AI workloads on Azure infrastructure (IaaS)
+description: Learn how to secure AI workloads on Azure infrastructure (IaaS)
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Security for AI on Azure infrastructure
+# Security recommendations for AI workloads on Azure infrastructure (IaaS)
 
 This article provides recommendations for securing AI workloads running on Azure infrastructure (IaaS). Security for AI on Azure infrastructure involves protecting data, compute, and networking resources that support AI workloads. Securing these components ensures that sensitive information remains safe, minimizes exposure to potential threats, and ensures a stable operational environment for AI models and applications.
 

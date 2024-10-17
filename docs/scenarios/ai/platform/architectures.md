@@ -1,5 +1,5 @@
 ---
-title: Find architecture guidance to build AI workloads on Azure
+title: Architecture guidance to build AI workloads on Azure
 description: Discover how to build AI applications on Azure PaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Use architecture guidance to build AI workloads on Azure
+# Architecture guidance to build AI workloads on Azure
 
 The Azure Architecture Center has reference architectures and guides to build generative AI and nongenerative AI workloads. The following tables provides links to implementation guidance for building generative AI applications.
 
@@ -36,7 +36,7 @@ For Azure landing zone users, start with the [Baseline Azure OpenAI architecture
 | [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2)| Guides|Any |
 | [Team Data Science Process](/azure/architecture/data-science-process/overview) | Guides|Any |
 
-## Understand AI workload lifecycle
+## Understand AI workload design best practices
 
 To understand the level of effort to build AI workloads, see the following articles. They provide organizational guidelines for building AI workloads on Azure:
 
