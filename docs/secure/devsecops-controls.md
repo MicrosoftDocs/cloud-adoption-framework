@@ -137,7 +137,7 @@ Metrics are measurements used to see how effective the security controls and pro
 > [!NOTE]
 > This concept differs from MTTR in security operations focused on time to remove adversary access to the organization’s assets.
 
-Security governance acts as a guiding hand to security teams and are often built upon frameworks and processes that organizations use to manage and control their information security. This guidance include Policies, Procedures, Controls, and Risk Management. Metrics help quantify risk exposure. Without them, the organization might not fully understand its vulnerabilities and potential impact.
+Security governance acts as a guiding hand to security teams and are often built upon frameworks and processes that organizations use to manage and control their information security. This guidance includes Policies, Procedures, Controls, and Risk Management. Metrics help quantify risk exposure. Without them, the organization might not fully understand its vulnerabilities and potential impact.
 
 Because security requirements might be new, you have the opportunity to take a progressive approach that gradually ramps up coding standards to the ideal state. This approach gives teams time to learn and automate the monitoring and controls.
 
