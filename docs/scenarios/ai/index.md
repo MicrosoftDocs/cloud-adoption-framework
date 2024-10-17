@@ -1,5 +1,5 @@
 ---
-title: Adopt AI on Azure
+title: Adopting AI on Azure
 description: Learn how Microsoft recommends adopting Artificial Intelligence (AI) in your organization with the Microsoft Cloud Adoption Framework.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Adopt AI on Azure
+# Adopting AI on Azure
 
 The AI adoption scenario in the Cloud Adoption Framework (CAF) provides a structured approach for integrating AI into your organization using Azure. It covers both generative and non-generative AI adoption guidance, offering recommendations relevant for organizations of all sizes and industries. This guidance serves as your roadmap for AI adoption, acting as a central hub to find the resources and advice you need.
 
