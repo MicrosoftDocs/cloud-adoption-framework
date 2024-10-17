@@ -9,7 +9,9 @@ ms.topic: conceptual
 
 # Networking recommendations for AI workloads on Azure
 
-This article provides recommendations for configuring networking for AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers understanding managed networking, configuring virtual networks, securing AI resources, managing connectivity, and considering advanced architectures for AI applications.
+This article offers networking recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and non-generative AI workloads.
+
+Networking enables secure and efficient connectivity to critical AI resources and is foundational to data integrity and privacy. Effective networking strategies protect sensitive AI workloads from unauthorized access and help optimize performance for AI model training and deployment.
 
 ## Configure virtual networks
 

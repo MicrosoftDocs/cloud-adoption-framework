@@ -1,6 +1,6 @@
 ---
 title: Resource selection recommendations for AI workloads on Azure
-description: Learn to select the right resources for Azure AI workloads with recommendations and best practices.
+description: Organizations learn to select the right resources for Azure AI workloads with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
@@ -9,7 +9,9 @@ ms.topic: conceptual
 
 # Resource selection recommendations for AI workloads on Azure
 
-This article provides recommendations for selecting the right resources for AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions. It covers both generative and nongenerative AI. Making informed resource choices enables organizations to achieve better performance, scalability, and cost-effectiveness when deploying AI solutions. The following table provides an overview of the primary Azure AI PaaS solutions and important decision criteria.
+This article offers resource selection recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and non-generative AI workloads.
+
+Making informed resource choices enables organizations to achieve better performance, scalability, and cost-effectiveness when deploying AI solutions. The following table provides an overview of the primary Azure AI PaaS solutions and important decision criteria.
 
 | AI platform | AI type | Description | Skills required |
 |---------|------------|---------| --- |
