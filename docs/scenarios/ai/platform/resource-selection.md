@@ -22,7 +22,7 @@ This article provides recommendations for selecting the right resources for AI w
 
 Generative AI requires the combination of different resources to process and generate meaningful outputs based on input data. Proper selection ensures that generative AI applications, such as those using [retrieval augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide), deliver accurate by grounding AI models.
 
-:::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI workload." lightbox="./images/generative-ai-app.svg" border="false":::
+:::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram showing the basic components of a generative AI workload." lightbox="../images/generative-ai-app.svg" border="false":::
 
 In a typical RAG workload, (1) the workload receives the user query. (2) An orchestrator, such as Prompt flow, Semantic Kernel, or LangChain, manages the data flow. (3) A search and retrieval mechanism finds the appropriate (4) grounding data to send to the generative AI endpoint. (5) A generative AI model endpoint generates a response based on the user query and grounding data. Use the following recommendations as framework to build generative RAG workloads.
 
@@ -42,7 +42,7 @@ In a typical RAG workload, (1) the workload receives the user query. (2) An orch
 
 Nongenerative AI workloads rely on platforms, compute resources, data sources, and data processing tools to support machine learning tasks. Selecting the right resources allows you to build AI workloads using both prebuilt and custom solutions.
 
-:::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI workload." lightbox="./images/non-generative-ai-app.svg" border="false":::
+:::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram showing the basic components of a nongenerative AI workload." lightbox="../images/non-generative-ai-app.svg" border="false":::
 
 In a nongenerative AI workload, (1) the workload ingests data. (2) An optional data processing mechanism extracts or manipulates incoming data. (3) An AI model endpoint analyzes the data. (4) Data supports training or fine-tuning of the AI models. Use the following recommendations as framework to build nongenerative AI workloads.
 
