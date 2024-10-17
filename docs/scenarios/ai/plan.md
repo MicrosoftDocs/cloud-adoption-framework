@@ -13,9 +13,22 @@ An AI adoption plan outlines the necessary steps for an organization to incorpor
 
 :::image type="content" source="./images/aiplan.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Plan. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiplan.svg" border="false":::
 
+## Prioritize AI use cases
+
+Prioritize use cases that allow you to learn quickly and that have the most business impact. Focus on strategic areas like facilitating sales teams, customer-facing applications, and time-intensive processes. Balance short-term projects that can demonstrate immediate value with long-term strategic initiatives. Consider the required investment in terms of time, budget, and personnel. Prefer workloads with a narrow scope to build faster and minimize risk.
+
+In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), you identified the Microsoft AI solutions you wanted to adopt. If you have a skill gaps, you need to acquire the skills to be successful. Organizations needs to evaluate their AI maturity to understand their current capabilities and readiness to implement AI. This step allows you to choose AI use cases that match their skill level and available data. It increases the chances of achieving a positive return on investment while reducing the risk of overreaching. Use the following table to help assess your AI maturity level. For more information, see [Technical Assessment for Generative AI in Azure](https://learn.microsoft.com/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
+
+  | AI maturity level | Skills required | Data readiness | Feasible AI use cases |
+  |-------------------|-----------------|----------------|----------------------|
+  | Level 1       | ▪ Basic understanding of AI concepts <br> ▪ Ability to integrate data sources and map out prompts | ▪ Minimal to zero data available <br> ▪ Enterprise data available | ▪ Azure quickstart (*see table*) <br> ▪ Copilot Studio app |
+  | Level 2       | ▪ Experience with AI model selection <br> ▪ Familiarity with AI deployment and endpoint management <br> ▪ Experience with data cleaning and processing | ▪ Minimal to zero data available <br> ▪ Small, structured dataset <br> ▪ Small amount of domain-specific data available | ▪ Any of the previous projects <br> ▪ Custom analytical AI application that uses Azure AI services <br> ▪ Custom generative AI chat app without Retrieval Augmented Generation (RAG) in Azure AI Studio  <br> ▪ Custom machine learning app with automated model training <br> ▪ Fine-tuning a generative AI model |
+  | Level 3       | ▪ Proficiency in prompt engineering <br> ▪ Proficiency in AI model selection, data chunking, and query processing <br> ▪ Proficiency in data preprocessing, cleaning, splitting, and validating <br> ▪ Grounding data for indexing | ▪ Large amounts of historical business data available for machine learning <br> ▪ Small amount of domain-specific data available | ▪ Any of the previous projects <br> ▪ Generative AI app with RAG in Azure AI Studio (or Azure Machine Learning) <br> ▪ Training and deploying a machine learning model in Machine Learning <br> ▪ Training and running a small AI model on Azure Virtual Machines |
+  | Level 4    | ▪ Advanced AI / machine learning expertise, including infrastructure management <br> ▪ Proficiency in handling complex AI model training workflows <br> ▪ Experience with orchestration, model benchmarking, and performance optimization <br> ▪ Strong skills in securing and managing AI endpoints | ▪ Large amounts of data available for training | ▪ Any of the previous projects <br> ▪ Training and running a large generative or non-generative AI app on Virtual Machines, Azure Kubernetes Service, or Azure Container Apps |
+
 ## Acquire AI skills
 
-Teams need to acquire the right AI skills by assessing the existing talent and deciding whether to develop skills internally or hire external experts. In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), you identified the Microsoft AI solutions you wanted to adopt. If you have a skill gaps, you need to acquire the skills to be successful. A capable team supports sustained AI adoption, enabling organizations to respond quickly to new challenges and maintain competitive relevance through continuous learning.
+Teams need to acquire the right AI skills by assessing the existing talent and deciding whether to develop skills, find a partner, or hire new personnel. A highly-skilled team allows you to respond quickly to new challenges and the flexibility to build different types of AI workloads. Even if you hire new talent, AI is an evolving field. You should foster a culture of continuous learning.
 
 - *Learn AI skills.* The [Microsoft Learn](/) platform provides free AI skills [training](/training/), [certifications](/credentials/), and [product-specific guidance](/docs/) for all Microsoft and Azure AI services. Set certification goals, such as earning certifications related to Azure AI. These certifications include [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
@@ -43,17 +56,6 @@ Organizations must access AI resources by identifying and using tools, platforms
 
 An AI proof of concept (PoC) demonstrates the potential of AI projects on a small scale before full deployment. This process allows organizations to test feasibility, gather insights, and refine AI use cases, ensuring that they commit to projects that align with their capabilities and business objectives. We have quickstart articles that show you how to quickly deploy a functioning application.
 
-- *Prioritize AI use cases.* Prioritize use cases that allow you to learn quickly and that have the most business impact. Focus on strategic areas like facilitating sales teams, customer-facing applications, and time-intensive processes. Balance short-term projects that can demonstrate immediate value with long-term strategic initiatives. Consider the required investment in terms of time, budget, and personnel. Prefer workloads with a narrow scope to build faster and minimize risk.
-
-- *Evaluate AI maturity level.* Organizations needs to evaluate their AI maturity to understand their current capabilities and readiness to implement AI. This step allows organizations to choose AI use cases that match their skill level and available data, increasing the chances of achieving a positive return on investment while reducing the risk of overreaching. Use the following table to help assess your AI maturity level. For more information, see [Technical Assessment for Generative AI in Azure](https://learn.microsoft.com/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
-
-    | AI maturity level | Skills required | Data readiness | Feasible AI use cases |
-    |-------------------|-----------------|----------------|----------------------|
-    | Level 1       | ▪ Basic understanding of AI concepts <br> ▪ Ability to integrate data sources and map out prompts | ▪ Minimal to zero data available <br> ▪ Enterprise data available | ▪ Microsoft Learn quickstart (*see following table*) <br> ▪ Copilot Studio app |
-    | Level 2       | ▪ Experience with AI model selection <br> ▪ Familiarity with AI deployment and endpoint management <br> ▪ Experience with data cleaning and processing | ▪ Minimal to zero data available <br> ▪ Small, structured dataset <br> ▪ Small amount of domain-specific data available | ▪ Any of the previous projects <br> ▪ Custom analytical AI application that uses Azure AI services <br> ▪ Custom generative AI chat app without Retrieval Augmented Generation (RAG) in Azure AI Studio  <br> ▪ Custom machine learning app with automated model training <br> ▪ Fine-tuning a generative AI model |
-    | Level 3       | ▪ Proficiency in prompt engineering <br> ▪ Proficiency in AI model selection, data chunking, and query processing <br> ▪ Proficiency in data preprocessing, cleaning, splitting, and validating <br> ▪ Grounding data for indexing | ▪ Large amounts of historical business data available for machine learning <br> ▪ Small amount of domain-specific data available | ▪ Any of the previous projects <br> ▪ Generative AI app with RAG in Azure AI Studio (or Azure Machine Learning) <br> ▪ Training and deploying a machine learning model in Machine Learning <br> ▪ Training and running a small AI model on Azure Virtual Machines |
-    | Level 4    | ▪ Advanced AI / machine learning expertise, including infrastructure management <br> ▪ Proficiency in handling complex AI model training workflows <br> ▪ Experience with orchestration, model benchmarking, and performance optimization <br> ▪ Strong skills in securing and managing AI endpoints | ▪ Large amounts of data available for training | ▪ Any of the previous projects <br> ▪ Training and running a large generative or non-generative AI app on Virtual Machines, Azure Kubernetes Service, or Azure Container Apps |
-
 - *Select the right opportunity.* PoCs should align with your current AI maturity level and your prioritized AI opportunities. Within those PoCs, prioritize projects that provide the most value, balancing the opportunity priority and the time and cost that it takes to see results. Prefer internal use cases to minimize testing risk. Refine the PoC and then convert to a pilot. Conduct AB testing to create a baseline of what works and what doesn't work. If you're using an Azure service, use a quickstart guide to familiarize yourself with the service.
 
     | AI type  | Azure AI quickstart guide |
@@ -66,19 +68,17 @@ An AI proof of concept (PoC) demonstrates the potential of AI projects on a smal
 
 - *Reprioritize AI opportunities*. Based on your PoC experience, reevaluate which AI opportunity you want to implement first.
 
-
-
 ## Plan for responsible AI
 
 Organizations should plan for responsible AI by using responsible AI planning tools. This approach ensures that AI applications align with organizational values and regulatory requirements. Next, familiarize yourself with the processes to govern, manage, and secure AI workloads.
 
 - *Use responsible-AI planning tools.* Microsoft has resources to align AI adoption to responsible AI principles. For more information, see the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), the [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and the [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/). Plan to review your AI workloads throughout development and regularly after deployment. The frequency of the review depends on your use case and AI use.
 
-- *Understand AI governance.* Familiarize yourself with organizational AI risks and start developing AI governance policies. For more information, see review [Govern AI](govern.md) before deployment.
+- *Start the AI governance process.* Familiarize yourself with organizational AI risks and start developing AI governance policies. For more information, see review [Govern AI](govern.md) before deployment.
 
-- *Understand AI management.* Adopt an operational framework, such as GenAIOps or MLOps, to manage your AI workloads. Understand how to manage AI models and costs over time. For more information, see [Manage AI](manage.md).
+- *Start the AI management process.* Adopt an operational framework, such as GenAIOps or MLOps, to manage your AI workloads. Understand how to manage AI models and costs over time. For more information, see [Manage AI](manage.md).
 
-- *Understand AI security.* For more information, see [Secure AI](secure.md).
+- *Start the AI security process.* Conduct an AI security risks assessment. Security focuses on the threats to the confidentiality, integrity, and availability of AI workloads. For more information, see [Secure AI](secure.md).
 
 ## Estimate delivery timelines
 
