@@ -13,7 +13,7 @@ This article provides recommendations for governing AI workloads that use Azure 
 
 ## Govern AI models
 
-AI model governance refers to the processes for managing AI models to ensure they produce reliable, safe, and ethical outputs. Controls over model inputs and outputs help mitigate risks, including harmful content and unintended behaviors, which could impact both users and the organization. These processes support responsible AI deployment, safeguarding against potential legal and ethical challenges.
+AI model governance refers to the processes for managing AI models to ensure they produce reliable, safe, and ethical outputs. Controls over model inputs and outputs help mitigate risks, including harmful content and unintended behaviors, which could affect both users and the organization. These processes support responsible AI deployment, and they safeguard against potential legal and ethical challenges.
 
 - *Establish a process to detect AI risks.* Use tools like Defender for Cloud to [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [explore risks to predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk). Establish a policy to regularly [red team generative AI models](/azure/ai-services/openai/concepts/red-teaming). Document identified risks and continuously update your AI governance policies to mitigate emerging issues.
 
@@ -31,7 +31,7 @@ AI cost governance involves managing expenses associated with AI workloads to ma
 
 - *Set provisioning limits.* Allocate provisioning quotas for each model based on expected workloads to prevent unnecessary costs. Continuously monitor dynamic quotas to ensure that they match actual demand and adjust them accordingly to maintain optimal throughput without overspending.
 
-- *Use the right deployment type.* Azure OpenAI models allow you to use different [deployment types](/azure/ai-services/openai/how-to/deployment-types). Global deployment offers lower cost-per-token pricing on certain GPT models.
+- *Use the right deployment type.* Azure OpenAI models allow you to use different [deployment types](/azure/ai-services/openai/how-to/deployment-types). Global deployment offers lower cost-per-token pricing on certain OpenAI models.
 
 - *Evaluate hosting options.* Choose the right hosting infrastructure, depending on your solution's needs. For example, for generative AI workloads, options include managed online endpoints, Azure Kubernetes Service (AKS), and Azure App Service, each with its own billing model. Select the option that provides the best balance between performance and cost for your specific requirements.
 
@@ -65,11 +65,11 @@ AI security governance addresses the need to protect AI workloads from threats t
 
 ## Govern AI operations
 
-AI operations governance focuses on managing and maintaining stable AI services, which supports long-term reliability and performance. Centralized oversight and continuity plans help organizations avoid downtime, which ensures the consistent business value of AI. These efforts contribute to efficient AI deployment and sustained operational effectiveness.
+AI operations governance focuses on managing and maintaining stable AI services. These operations support long-term reliability and performance. Centralized oversight and continuity plans help organizations avoid downtime, which ensures the consistent business value of AI. These efforts contribute to efficient AI deployment and sustained operational effectiveness.
 
 - *Review and manage AI models.* Develop a policy for managing model versioning, especially as models are upgraded or retired. You need to maintain compatibility with existing systems and ensure a smooth transition between model versions.
 
-- *Define a business continuity and disaster recovery plan.* Establish a policy for business continuity and disaster recovery for your AI endpoints and AI data. Configure baseline disaster recovery for resources that host your AI model endpoints, like [Linux](/azure/virtual-machines/linux/tutorial-disaster-recovery) and [Windows](/azure/virtual-machines/windows/tutorial-disaster-recovery) virtual machines, [Azure AI Studio](/azure/ai-studio/how-to/disaster-recovery), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning), [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery), or Azure AI services. All Azure data stores, such as [Azure Blob Storage](/azure/storage/common/storage-disaster-recovery-guidance), [Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore), and [Azure SQL Database](/azure/azure-sql/accelerated-database-recovery), provide reliability and disaster recovery guidance that you should follow.
+- *Define a business continuity and disaster recovery plan.* Establish a policy for business continuity and disaster recovery for your AI endpoints and AI data. Configure baseline disaster recovery for resources that host your AI model endpoints. These resources include [Azure AI Studio](/azure/ai-studio/how-to/disaster-recovery), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning), [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery), or Azure AI services. All Azure data stores, such as [Azure Blob Storage](/azure/storage/common/storage-disaster-recovery-guidance), [Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore), and [Azure SQL Database](/azure/azure-sql/accelerated-database-recovery), provide reliability and disaster recovery guidance that you should follow.
 
 - *Define baseline metrics for AI resources.* Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health. For examples, see [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), [Azure AI Studio prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety?tabs=azure-studio), and guidance on individual Azure AI services.
 
@@ -83,7 +83,7 @@ Regulatory compliance in AI requires organizations to follow industry standards 
 
 ## Govern AI data
 
-AI data governance involves policies for ensuring that data feeding into AI models is appropriate, compliant, and secure. Data governance protects privacy and intellectual property, which enhances AI outputs' reliability and quality. These measures help mitigate risks related to data misuse, aligning with regulatory and ethical standards.
+AI data governance involves policies for ensuring that data feeding into AI models is appropriate, compliant, and secure. Data governance protects privacy and intellectual property, which enhances AI outputs' reliability and quality. These measures help mitigate risks related to data misuse, and they align with regulatory and ethical standards.
 
 - *Establish a process for cataloging data.* Use a tool like [Microsoft Purview](/purview/what-is-data-catalog) to implement a unified data catalog and classification system across your organization. Integrate these policies into your CI/CD pipelines for AI development.
 
@@ -91,7 +91,7 @@ AI data governance involves policies for ensuring that data feeding into AI mode
 
 - *Prevent copyright infringement.* Use a content filtering system like [Protected material detection in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/protected-material) to filter out copyrighted material. If you're grounding, training, or fine-tuning an AI model, ensure that you use legally obtained and properly licensed data and implement safeguards to prevent the model from infringing on copyrights. Regularly review outputs for intellectual property compliance.
 
-- *Implement version control for grounding data.* Establish a version control process for grounding data, for example, in RAG. Versioning ensures that any changes to the underlying data or its structure are tracked and can be reverted if necessary, which maintains consistency across deployments.
+- *Implement version control for grounding data.* Establish a version control process for grounding data, for example, in RAG. Versioning ensures that you can track any changes to the underlying data or its structure. You can revert the changes if necessary, helping maintain consistency across deployments.
 
 ## Next step
 

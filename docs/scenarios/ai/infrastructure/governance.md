@@ -13,13 +13,13 @@ This article provides recommendations for governing AI workloads on Azure infras
 
 ## Resource governance
 
-Resource governance establishes rules and standards for managing Azure resources. By enforcing governance policies, organizations can ensure compliance, standardize resource use, and control costs, which supports the responsible scaling of AI operations.
+Resource governance establishes rules and standards for managing Azure resources. By enforcing governance policies, organizations can ensure compliance, standardize resource use, and control costs, which support the responsible scaling of AI operations.
 
 - *Enforce tag usage.* Use Azure Policy to enforce rules like resource location, allowed SKUs, and mandatory tags. For example, create policies to restrict the deployment of certain high-cost VMs, helping to manage budgets effectively.
 
 - *Apply governance policies to ensure compliance and standardization.* Use Azure Policy to enforce rules such as resource location, allowed SKUs, and mandatory tags. For example, create policies to restrict the deployment of certain high-cost VMs to control the budget.
 
-- *Use resource groups for lifecycle management.* Deploy AI resources within resource groups that share a common lifecycle. Resource groups allow you to deploy, configure, and delete resources collectively. They also provide additional governance (policy), security (RBAC), and cost (budget) boundaries.
+- *Use resource groups for lifecycle management.* Deploy AI resources within resource groups that share a common lifecycle. Resource groups allow you to deploy, configure, and delete resources collectively. They also provide extra governance (policy), security (RBAC), and cost (budget) boundaries.
 
 - *Standardize naming conventions.* Implement a standardized naming convention for AI resources. This practice improves tracking and management. Use the [naming rules and restrictions for each Azure resource](/azure/azure-resource-manager/management/resource-name-rules) and follow the [recommended abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations), as many resources often have name-length restrictions.
 
@@ -43,11 +43,11 @@ Cost management monitors and controls expenses related to AI workloads on Azure.
 
 - *Consider autoscaling.* Use a [virtual machine scale set](/azure/virtual-machine-scale-sets/overview) to dynamically adjust VM counts based on demand, optimizing costs.
 
-- *Configure VM auto-shutdown.* Use the [auto-shutdown feature](/azure/virtual-machines/auto-shutdown-vm) to schedule VMs to shut down during off-hours, reducing unnecessary costs.
+- *Configure VM autoshutdown.* Use the [autoshutdown feature](/azure/virtual-machines/auto-shutdown-vm) to schedule VMs to shut down during off-hours, reducing unnecessary costs.
 
 ### Security governance
 
-Security governance addresses the need for robust protection measures across AI workloads. By implementing security policies and access controls, organizations can protect sensitive data and resources, which reduces risks and supports a secure AI environment on Azure.
+Security governance addresses the need for robust protection measures across AI workloads. By implementing security policies and access controls, organizations can protect sensitive data and resources. It reduces risk and supports a secure AI environment on Azure.
 
 - *Integrate with Microsoft Entra ID.* Use Entra ID for centralized identity management and single sign-on (SSO) capabilities across AI workloads.
 

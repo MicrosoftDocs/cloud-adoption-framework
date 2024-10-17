@@ -13,7 +13,7 @@ This article provides recommendations for securing AI workloads on Azure infrast
 
 ## Secure Azure services
 
-Securing Azure services means configuring each Azure service used in an AI architecture to meet specific security standards and benchmarks. To apply secure configurations to Azure services, use the [Azure security baselines](/azure/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include: [Windows virtual machines](/azure/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline), [Linux virtual machines](/azure/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline), [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices), and [Key Vault](/azure/security/benchmark/azure/baselines/key-vault-security-baseline).
+Azure service security requires configuring each Azure service used in an AI architecture to meet specific security standards and benchmarks. To apply secure configurations to Azure services, use the [Azure security baselines](/azure/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include: [Windows virtual machines](/azure/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline), [Linux virtual machines](/azure/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline), [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices), and [Key Vault](/azure/security/benchmark/azure/baselines/key-vault-security-baseline).
 
 ## Secure networks
 
@@ -21,11 +21,11 @@ Securing networks involves setting up private endpoints, Network Security Groups
 
 - *Use private endpoints.* Use private endpoints available in [Azure Private Link](/azure/networking/fundamentals/networking-overview#privatelink) for any PaaS solution in your architecture, such as your storage or filesystem.
 
-- *Use encrypted virtual network connections for Azure to Azure connectivity.* Encrypted connections between VMs or VMSS in the same or peered virtual networks prevent unauthorized access and eavesdropping. Establish these secure connections by configuring encryption options in Azure Virtual Network for virtual machine communication.
+- *Use encrypted virtual network connections for Azure to Azure connectivity.* Encrypted connections between virtual machines or virtual machine scale sets in the same or peered virtual networks prevent unauthorized access and eavesdropping. Establish these secure connections by configuring encryption options in Azure Virtual Network for virtual machine communication.
 
 - *Implement Network Security Groups (NSGs).* NSGs can be complex. Ensure you have a clear understanding of the NSG rules and their implications when setting up your Azure infrastructure for AI workloads.
 
-- *Use Application Security Groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups). This can be useful when managing traffic for specific AI workloads.
+- *Use Application Security Groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups).
 
 - *Understand NSG prioritization rules*. [NSG](/azure/virtual-network/network-security-groups-overview) rules have a priority order. Understand this order to avoid conflicts and ensure the smooth running of your AI workloads.
 
@@ -39,25 +39,25 @@ Securing data includes encrypting data at rest and in transit, along with protec
 
 - *Encrypt data*: Encrypt data at rest and in transit using strong encryption technologies between each service in the architecture.
 
-- *Protect secrets*: Protect secrets by storing them in a key vault or HSM and routinely rotating them.
+- *Protect secrets*: Protect secrets by storing them in a key vault or a hardware security module and routinely rotate them.
 
 ## Secure access
 
-Securing access means configuring authentication and access control mechanisms to enforce strict access permissions and verify user identities. By restricting access based on roles, policies, and multi-factor authentication, organizations can limit exposure to unauthorized access and protect critical AI resources.
+Securing access means configuring authentication and access control mechanisms to enforce strict access permissions and verify user identities. By restricting access based on roles, policies, and multifactor authentication, organizations can limit exposure to unauthorized access and protect critical AI resources.
 
-- *Configure authentication*: Enable multi-factor authentication (MFA) and prefer secondary administrative accounts or just-in-time access for sensitive accounts. Limit control plane access using services like Azure Bastion as secure entry points into private networks.
+- *Configure authentication*: Enable multifactor authentication (MFA) and prefer secondary administrative accounts or just-in-time access for sensitive accounts. Limit control plane access using services like Azure Bastion as secure entry points into private networks.
 
-- *Use Conditional Access Policies.* Require MFA for accessing critical AI resources to enhance security. Restrict access to AI infrastructure based on geographic locations or trusted IP ranges. Ensure that only compliant devices (those meeting security requirements) can access AI resources. Implement risk-based conditional access policies that respond to unusual sign-in activity or suspicious behavior. Use signals like user location, device state, and sign-in behavior to trigger additional verification steps.
+- *Use Conditional Access Policies.* Require MFA for accessing critical AI resources to enhance security. Restrict access to AI infrastructure based on geographic locations or trusted IP ranges. Ensure that only compliant devices (those meeting security requirements) can access AI resources. Implement risk-based conditional access policies that respond to unusual sign-in activity or suspicious behavior. Use signals like user location, device state, and sign-in behavior to trigger extra verification steps.
 
-- *Configure least privilege access.* Configure least privilege access by implementing Role-Based Access Control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine-tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access necessary to perform their tasks. Regularly review and adjust permissions to prevent privilege creep.
+- *Configure least privilege access.* Configure least privilege access by implementing role-based access control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine-tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access necessary to perform their tasks. Regularly review and adjust permissions to prevent privilege creep.
 
 ## Prepare for incident response
 
-Preparing for incident response involves collecting logs and integrating them with a Security Information and Event Management (SIEM) system. This proactive approach enables organizations to detect and respond to security incidents quickly, reducing potential damage and minimizing downtime for AI systems.
+Preparing for incident response involves collecting logs and integrating them with a Security Information and Event Management (SIEM) system. This proactive approach enables organizations to detect and respond to security incidents quickly, reducing potential damage, and minimizing downtime for AI systems.
 
 ## Secure operating systems
 
-Securing operating systems requires keeping virtual machines and container images up-to-date with the latest patches and running antimalware software. These practices protect AI infrastructure from vulnerabilities, malware, and other security threats, helping maintain a secure and reliable environment for AI operations.
+Securing operating systems requires keeping virtual machines and container images up-to-date with the latest patches and running antimalware software. These practices protect AI infrastructure from vulnerabilities, malware, and other security threats. They help maintain a secure and reliable environment for AI operations.
 
 - *Patch VM guests.* Regularly apply patches to virtual machines and container images. Consider enabling [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for your virtual machines and scale sets.
 

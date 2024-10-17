@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Management recommendations for AI workloads on Azure
 
-This article provides recommendations for managing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. Effective management of AI workloads on Azure involves overseeing deployment, model performance, operations, data, and disaster recovery to support AI-driven initiatives. This topic matters when adopting AI because proper management ensures that AI systems operate reliably, align with responsible AI principles, and remain secure throughout their lifecycle.
+This article provides recommendations for managing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. Effective management of AI workloads on Azure involves overseeing deployment, model performance, operations, data, and disaster recovery to support your AI workloads. Proper management helps ensure that AI workloads are reliable, trustworthy, and secure throughout their lifecycle.
 
 ## Manage AI deployments
 
@@ -21,7 +21,7 @@ Managing AI models includes monitoring their outputs, performance, and alignment
 
 - *Monitor model outputs.* AI workloads can change over time due to evolving data, model updates, or shifts in user behavior. Implement a monitoring and testing process to ensure that these workloads remain aligned with your responsible AI targets.
 
-    - *Monitor generative AI.* For generative AI workloads, use Azure AI Studio's built-in [evaluation](/azure/ai-studio/concepts/evaluation-metrics-built-in) and [manual](/azure/ai-studio/how-to/evaluate-prompts-playground) monitoring capabilities. If you're using prompt flow, [monitor prompt flow deployments](/azure/ai-studio/how-to/develop/trace-production-sdk).  Also consider using [responsible AI tools](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to supplement model monitoring.
+    - *Monitor generative AI.* For generative AI workloads, use Azure AI Studio's built-in [evaluation](/azure/ai-studio/concepts/evaluation-metrics-built-in) and [manual](/azure/ai-studio/how-to/evaluate-prompts-playground) monitoring capabilities. If you're using prompt flow, [monitor prompt flow deployments](/azure/ai-studio/how-to/develop/trace-production-sdk). Also consider using [responsible AI tools](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to supplement model monitoring.
 
     - *Monitor nongenerative AI.* For nongenerative AI workloads, monitor data processing stages and model performance metrics to ensure predictions remain accurate and reliable. Enable [model monitoring](/azure/machine-learning/concept-model-monitoring?view=azureml-api-2) in Azure Machine Learning. For Azure AI services, enable monitoring for each AI service you use.
 
@@ -37,7 +37,7 @@ Managing AI models includes monitoring their outputs, performance, and alignment
 
 AI operations management involves standardizing compute resources and monitoring platform resources for Azure AI workloads. It ensures that teams use the correct compute resources efficiently and capture metrics and logs from platform resources.
 
-- *Standardize compute management.* For platform as a service services, you need to provision compute resources for certain actions like prompt flows and training models. A service like Machine Learning has different compute options, such as compute instances, clusters, and serverless options. Standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Studio](/azure/ai-studio/how-to/create-manage-compute) and [Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio).
+- *Standardize compute management.* You need compute resources for certain actions like prompt flows and training models. A service like Machine Learning has different compute options, such as compute instances, clusters, and serverless options. Standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Studio](/azure/ai-studio/how-to/create-manage-compute) and [Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio).
 
 - *Monitor platform resources.* Use diagnostic settings to capture logs and metrics for all key services, such as Studio, Machine Learning, and [Azure AI services](/azure/ai-services/diagnostic-logging). Specific services should capture audit logs and relevant service-specific logs. Implement custom monitoring alerts based on your architecture’s specific needs. Examples include alerts for container registries, Machine Learning services, and Azure OpenAI Service operations.
 
@@ -51,9 +51,7 @@ High-quality data is the foundation of accurate AI models. Tracking model drift 
 
 ## Manage business continuity and disaster recovery
 
-Managing business continuity and disaster recovery involves deploying AI systems across multiple regions to provide high availability and resilience. This safeguards against service outages, ensuring that both generative and non-generative AI systems continue to function even in the event of regional disruptions, which is crucial for maintaining reliable AI operations.
-
-*Use multi-region deployments for AI.* Implement multi-region deployments to ensure high availability and resiliency for both generative and nongenerative AI systems For more information, see multi-region deployment in [Azure AI Studio,](/azure/ai-studio/how-to/disaster-recovery#plan-for-multi-regional-deployment) [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning#plan-for-multi-regional-deployment), and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery).
+Implement multi-region deployments to ensure high availability and resiliency for both generative and nongenerative AI systems For more information, see multi-region deployment in [Azure AI Studio,](/azure/ai-studio/how-to/disaster-recovery#plan-for-multi-regional-deployment) [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning#plan-for-multi-regional-deployment), and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery).
 
 ## Next step
 

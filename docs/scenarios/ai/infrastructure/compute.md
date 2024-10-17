@@ -13,18 +13,18 @@ This article provides recommendations for selecting and configuring compute for 
 
 AI workloads require specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Choosing the right VMs optimizes resource use and accelerates AI model development and deployment. The following table provides an overview of recommended compute options.
 
-| AI phase             | Virtual Machine Image  | Generative AI (LLMs, SLMs) | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
+| AI phase             | Virtual Machine Image  | Generative AI | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
 |----------------------|------------------------|----------------------------|------------------------------------|----------------------------------|
 | Training AI models   | [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | [Memory-optimized](https://azure.microsoft.com/services/virtual-machines/memory-optimized/) (CPU) |
 | Inferencing AI models| [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (NC or ND family)  | GPU (NC or ND family) | [Compute-optimized](https://azure.microsoft.com/services/virtual-machines/compute-optimized/) (CPU) |
 
 ## Pick the right virtual machine image
 
-Choose a suitable virtual machine image, such as the Data Science Virtual Machines, to access pre-configured tools for AI workloads quickly. This choice saves time and resources while providing the software necessary for efficient AI processing
+Choose a suitable virtual machine image, such as the Data Science Virtual Machines, to access preconfigured tools for AI workloads quickly. This choice saves time and resources while providing the software necessary for efficient AI processing
 
-- *Start with the Data Science Virtual Machines images.* The [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview)  image offers preconfigured access to data science tools, including PyTorch, TensorFlow, scikit-learn, Jupyter, Visual Studio Code, Azure CLI, and PySpark. When used with GPUs, the image also includes Nvidia drivers, CUDA Toolkit, and cuDNN.
+- *Start with the Data Science Virtual Machines images.* The [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) image offers preconfigured access to data science tools. These tools include PyTorch, TensorFlow, scikit-learn, Jupyter, Visual Studio Code, Azure CLI, and PySpark. When used with GPUs, the image also includes Nvidia drivers, CUDA Toolkit, and cuDNN.
 
-- *Find alternative images as needed.* If the Data Science Virtual Machine image does not meet your needs, use the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps) or other search [methods](/azure/virtual-machines/overview#distributions) to find alternate images. For example, with GPUs, you may need [Linux images](/azure/virtual-machines/configure) that include InfiniBand drivers, NVIDIA drivers, communication libraries, MPI libraries, and monitoring tools.
+- *Find alternative images as needed.* If the Data Science Virtual Machine image doesn't meet your needs, use the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps) or other search [methods](/azure/virtual-machines/overview#distributions) to find alternate images. For example, with GPUs, you might need [Linux images](/azure/virtual-machines/configure) that include InfiniBand drivers, NVIDIA drivers, communication libraries, MPI libraries, and monitoring tools.
 
 ## Pick a Virtual Machine Size
 
@@ -34,7 +34,7 @@ Selecting an appropriate virtual machine size aligns with your AI model complexi
 
 - *Check virtual machine pricing.* Use the [Linux](https://azure.microsoft.com/pricing/details/virtual-machines/linux/) and [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) VM pricing pages for a general cost overview. For a detailed estimate, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
 
-- *Consider spot instances.* Spot instances are cost-effective for inference scenarios with minimal data loss risk. Spot instances offer significant savings by utilizing unused datacenter capacity at a discount. However, this capacity can be reclaimed at any time, so spot instances are best for workloads that can handle interruptions. Regularly checkpoint data to minimize loss in case of eviction.
+- *Consider spot instances.* Spot instances are cost-effective for inference scenarios with minimal data loss risk. Spot instances offer significant savings by utilizing unused datacenter capacity at a discount. However, this capacity can be reclaimed at any time, so spot instances are best for workloads that can handle interruptions. Regularly checkpoint data to minimize loss when evicted.
 
 ## Choose a Compute Orchestration Solution
 
@@ -44,9 +44,9 @@ Compute orchestration solutions facilitate the management of complex AI tasks ac
 
 - *Use Azure Batch for built-in scheduling.* Azure Batch offers built-in scheduling features with no need for extra software installation or management. It has a consumption pricing model and no licensing fees. It also supports containerized tasks natively. For deployment best practices, see [Azure Batch Accelerator](https://github.com/Azure/bacc).
 
-- *Use Azure Kubernetes Service (AKS) for container scaling.* AKS is a managed service for deploying, scaling, and managing containers across a cluster. It is suitable for running AI workloads in containers at scale.
+- *Use Azure Kubernetes Service (AKS) for container scaling.* AKS is a managed service for deploying, scaling, and managing containers across a cluster. It's suitable for running AI workloads in containers at scale.
 
-- *Manually orchestrate jobs for simpler tasks.* If orchestration needs are minimal, manage AI resources manually. Consider the following for small-scale workloads:
+- *Manually orchestrate jobs for simpler tasks.* If orchestration needs are minimal, manage AI resources manually. Consider the following steps for small-scale workloads:
     - *Define your workflow.* Understand your workflow end-to-end, including dependencies and job sequence. Consider how to handle failures at any step.
     - *Log and monitor jobs.* Implement clear logging and monitoring frameworks for your jobs.
     - *Validate prerequisites.* Ensure your environment meets all workflow requirements, including necessary libraries and frameworks.
