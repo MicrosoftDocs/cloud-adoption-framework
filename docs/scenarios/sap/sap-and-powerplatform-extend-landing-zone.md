@@ -23,7 +23,6 @@ In this guide, we outline the integration options and provide links to the relev
 
 Depending on your scenario for Power Platform usage with SAP, there will be a need of middleware component deployment.
 
-![Alt text for the image](./media/sap-powerplatform-architecture.svg)
 
 
 :::image type="complex" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with a typical SAP landing zone." lightbox="./media/sap-powerplatform-architecture.svg":::
