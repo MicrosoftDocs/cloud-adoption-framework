@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Compute recommendations for AI workloads on Azure infrastructure (IaaS)
 
-This article provides recommendations for selecting and configuring compute for AI workloads running on Azure infrastructure (IaaS). The preferred approach to AI adoption to start with Azure AI platform solutions (PaaS). But for organizations with access to Azure GPUs, use this guidance to get you AI workload running on Azure infrastructure.
+This article provides recommendations for selecting and configuring compute for AI workloads on Azure infrastructure (IaaS). The preferred approach for AI adoption on Azure is to start with Azure AI platform-as-a-service (PaaS) solutions. But for organizations with access to Azure GPUs, use this guidance to get you AI workload running on Azure infrastructure. Start with [Azure AI platform-as-a-service (PaaS) solutions](../platform/architectures.md) for AI adoption on Azure. However, if your organization has access to Azure GPUs, follow this guidance to run AI workloads on Azure IaaS.
 
-AI workloads need specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Using the right VMs optimizes resource use and speeds up the development and deployment of AI models, making this step essential for organizations adopting AI. The following table provides an overview of our compute recommendations.
+AI workloads require specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Choosing the right VMs optimizes resource use and accelerates AI model development and deployment. The following table provides an overview of recommended compute options.
 
 | AI phase             | Virtual Machine Image  | Generative AI (LLMs, SLMs) | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
 |----------------------|------------------------|----------------------------|------------------------------------|----------------------------------|
@@ -20,48 +20,48 @@ AI workloads need specialized virtual machines (VMs) to handle high computationa
 
 ## Pick the right virtual machine image
 
-Choosing a suitable virtual machine image, such as the Data Science Virtual Machines, allows quick access to pre-configured tools for building AI workloads. This choice saves time and resources while ensuring you have the necessary software for efficient AI processing.
+Choose a suitable virtual machine image, such as the Data Science Virtual Machines, to access pre-configured tools for AI workloads quickly. This choice saves time and resources while providing the software necessary for efficient AI processing
 
-- *Start with the Data Science Virtual Machines images.* The [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) image offers preconfigured access to data science tools. These tools include PyTorch, TensorFlow, scikit-learn, Jupyter, Visual Studio Code, Azure CLI, pyspark, and others. When you use it with GPUs, the image installs Nvidia drivers, CUDA Toolkit, and cuDNN.
+- *Start with the Data Science Virtual Machines images.* The [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview)  image offers preconfigured access to data science tools, including PyTorch, TensorFlow, scikit-learn, Jupyter, Visual Studio Code, Azure CLI, and PySpark. When used with GPUs, the image also includes Nvidia drivers, CUDA Toolkit, and cuDNN.
 
-- *Find alternative images as needed.* If the Data Science Virtual Machine image doesn’t meet your needs, use the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps) or other searching [methods](/azure/virtual-machines/overview#distributions) to find an alternate image. For example, with GPUs, you should use [Linux images](/azure/virtual-machines/configure) that include InfiniBand drivers, NVIDIA drivers, communication libraries, MPI libraries, and health check and monitoring tools.
+- *Find alternative images as needed.* If the Data Science Virtual Machine image does not meet your needs, use the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps) or other search [methods](/azure/virtual-machines/overview#distributions) to find alternate images. For example, with GPUs, you may need [Linux images](/azure/virtual-machines/configure) that include InfiniBand drivers, NVIDIA drivers, communication libraries, MPI libraries, and monitoring tools.
 
-## Pick a virtual machine size
+## Pick a Virtual Machine Size
 
-Selecting an appropriate virtual machine size is essential to align with the complexity of your AI model, data size, and cost constraints. Using hardware that matches your training or inferencing needs maximizes efficiency and ensures that resources are neither underused nor overwhelmed.
+Selecting an appropriate virtual machine size aligns with your AI model complexity, data size, and cost constraints. Matching hardware to training or inferencing needs maximizes efficiency and prevents underutilization or overload.
 
-- *Narrow your virtual machine options.* Opt for the latest virtual machine SKUs for the fastest training and inference times. When training, use SKUs that support RDMA and GPU interconnects for high-speed data transfer between the GPUs. Inferencing models often do not require SKUs with InfiniBand. For example, see [ND MI300X v5 series](/azure/virtual-machines/sizes/gpu-accelerated/nd-mi300x-v5-series), [ND H100 v5 series](/azure/virtual-machines/nd-h100-v5-series), [NDm A100 v4-series](/azure/virtual-machines/ndm-a100-v4-series), and [ND A100 v4-series](/azure/virtual-machines/nda100-v4-series).
+- *Narrow your virtual machine options.* Choose the latest virtual machine SKUs for optimal training and inference times. For training, select SKUs that support RDMA and GPU interconnects for high-speed data transfer between GPUs. For inference, avoid SKUs with InfiniBand, which is unnecessary. Examples include the [ND MI300X v5 series](/azure/virtual-machines/sizes/gpu-accelerated/nd-mi300x-v5-series), [ND H100 v5 series](/azure/virtual-machines/nd-h100-v5-series), [NDm A100 v4-series](/azure/virtual-machines/ndm-a100-v4-series), and [ND A100 v4-series](/azure/virtual-machines/nda100-v4-series).
 
-- *Check virtual machine pricing.* Use the virtual machine pricing pages for [Linux](https://azure.microsoft.com//pricing/details/virtual-machines/linux/) and [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) VMs for a general understanding of the cost of your VM choice. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to get a more detailed pricing estimate of your architecture.
+- *Check virtual machine pricing.* Use the [Linux](https://azure.microsoft.com/pricing/details/virtual-machines/linux/) and [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) VM pricing pages for a general cost overview. For a detailed estimate, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
 
-- *Consider spot instances.* Spot Instances are optimal for inferencing scenarios where the risk of losing data is minimal. Spot instances offer significant cost savings on certain SKUs for AI infrastructure as they utilize unused capacity in datacenters at a discounted rate. However, this capacity can be reclaimed at any time, so spot instances are best for AI workloads that can handle interruptions. Ensure regular checkpointing to minimize data loss if your VM is evicted.
+- *Consider spot instances.* Spot instances are cost-effective for inference scenarios with minimal data loss risk. Spot instances offer significant savings by utilizing unused datacenter capacity at a discount. However, this capacity can be reclaimed at any time, so spot instances are best for workloads that can handle interruptions. Regularly checkpoint data to minimize loss in case of eviction.
 
-## Choose a compute orchestration solution
+## Choose a Compute Orchestration Solution
 
-Compute orchestration solutions enable the efficient management of complex AI tasks across virtual machine clusters. Selecting an orchestration tool based on your scheduling, containerization, and scaling requirements helps streamline operations and improves scalability for organizations adopting AI.
+Compute orchestration solutions facilitate the management of complex AI tasks across virtual machine clusters. Select an orchestration tool based on your scheduling, containerization, and scaling needs to improve operations and scalability.
 
-- *Use Azure CycleCloud to access open-source schedulers.* Azure CycleCloud is ideal for using open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It offers flexibility in cluster management, customizable configurations, advanced scheduling capabilities, and support for running containerized applications in an HPC environment. For more information, see [Azure HPC deployment](https://github.com/Azure/azurehpc#azurehpc).
-Virtual machines within the cluster require configuration for AI workload execution. [Azure CycleCloud Workspace for Slurm (CCWS)](/azure/cyclecloud/overview-ccws) offers a managed Marketplace deployment option for Slurm clusters. Because setting up and managing Slurm clusters can be complex, CCWS simplifies the process by enabling users to deploy pre-configured Slurm clusters within minutes—no prior knowledge of Slurm or Azure required.
+- *Use Azure CycleCloud for open-source schedulers.* Azure CycleCloud is ideal for open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It provides flexible cluster management, customizable configurations, and advanced scheduling capabilities. Virtual machines within the cluster need configuration for AI workload execution. For more information, see [Azure HPC deployment](https://github.com/Azure/azurehpc#azurehpc).
 
-- *Use Azure Batch for its built-in scheduling features.* Azure Batch provides built-in scheduling features without the need for other software installation or management. It has a consumption pricing model and no licensing fees. It's suitable if you want to avoid upfront costs. Azure Batch provides native support for containerized tasks. For a repository that contains an accelerator to deploy Azure batch with best practices, see [Azure Batch Accelerator](https://github.com/Azure/bacc).
+- *Use Azure Batch for built-in scheduling.* Azure Batch offers built-in scheduling features with no need for extra software installation or management. It has a consumption pricing model and no licensing fees. It also supports containerized tasks natively. For deployment best practices, see [Azure Batch Accelerator](https://github.com/Azure/bacc).
 
-- *Use Azure Kubernetes Service (AKS) to run containers at scale.* AKS is a managed service for deploying, scaling, and managing Docker containers and container-based applications across a cluster of container hosts. It’s a great choice if you’re planning to run AI workloads in containers at scale.
+- *Use Azure Kubernetes Service (AKS) for container scaling.* AKS is a managed service for deploying, scaling, and managing containers across a cluster. It is suitable for running AI workloads in containers at scale.
 
-- *Manually orchestrate jobs for simple orchestration.* If you don’t have complex orchestration tasks or multiple jobs to execute, deploy and manage AI resources manually. For small scale workloads, keep these items in mind:
+- *Manually orchestrate jobs for simpler tasks.* If orchestration needs are minimal, manage AI resources manually. Consider the following for small-scale workloads:
+    - *Define your workflow.* Understand your workflow end-to-end, including dependencies and job sequence. Consider how to handle failures at any step.
+    - *Log and monitor jobs.* Implement clear logging and monitoring frameworks for your jobs.
+    - *Validate prerequisites.* Ensure your environment meets all workflow requirements, including necessary libraries and frameworks.
+    - *Use version control.* Track and manage changes using version control.
+    - *Automate tasks.* Use scripts to automate data preprocessing, training, and evaluation.
 
-    - *Define your workflow.* You should understand your workflow end-to-end and map out each step that is needed for the job or jobs. Understanding the architecture of your workload is imperative, including all dependencies and constraints. You need to consider the order in which jobs run and what happens If the workload fails at a particular job.
-    - *Log and monitor jobs.* You need to implement clear logging and monitoring while running your jobs/scripts. There are frameworks that can help implement logging and monitoring at the script level
-    - *Validate prerequisites.* Ensure that your environment has all the prerequisites necessary to support the workflow. Include any frameworks or libraries in the environment that the workflow runs in.
-    - *Use version control.* Use a version control system to track/revert changes
-    - *Automate*. Use scripts to automate each step of the process, including data preprocessing, training, and evaluation.
+## Consider Containers
 
-## Consider containers
+Containers provide a consistent, reproducible environment that scales efficiently. Containers streamline transitions between environments, making them essential for scalable AI solutions.
 
-Using containers for AI workloads provides a consistent, reproducible environment that efficiently manages computational resources and scales based on demand. Containers allow seamless transitions between different environments, essential for organizations looking to adopt scalable and flexible AI solutions.
+- *Install drivers.* Ensure the necessary drivers are installed to enable container functionality in various scenarios. For cluster configurations, tools like Pyxis and Enroot are often required.
 
-- *Install drivers.* Ensure that you have the necessary drivers installed to enable containers to run in various scenarios. For cluster configurations, container runtime tools such as Pyxis and Enroot are typically required.
+- *Use NVIDIA Container Toolkit.* This toolkit enables GPU resources within containers. Install all required drivers, such as CUDA and GPU drivers, and use your preferred container runtime and engine for AI workload execution.
 
-- *Use toolkits.* The NVIDIA Container Toolkit is commonly used to enable GPU resources within containers. Ensure you install all necessary drivers, such as drivers for CUDA and the GPU. You can then use your preferred container runtime and engine to execute your AI workloads.
+## Next Step
 
 ## Next step
 

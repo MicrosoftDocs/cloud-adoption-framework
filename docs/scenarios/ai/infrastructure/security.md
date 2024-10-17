@@ -28,7 +28,7 @@ Securing networks involves setting up private endpoints, Network Security Groups
 - *Use Application Security Groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups). This can be useful when managing traffic for specific AI workloads.
 
 - *Understand NSG prioritization rules*. [NSG](/azure/virtual-network/network-security-groups-overview) rules have a priority order. Understand this order to avoid conflicts and ensure the smooth running of your AI workloads.
--
+
 - *Use a network firewall.* If you’re using a hub-spoke topology, deploy a [network firewall](/azure/networking/fundamentals/networking-overview#firewall) to inspect and filter network traffic between the spokes.
 
 - *Close unused ports.* Limit internet exposure by exposing only services intended for external-facing use cases and using private connectivity for other services.

@@ -35,11 +35,11 @@ High-performance networking utilizes advanced networking features to support lar
 
 ## Optimize for large-scale data processing
 
-Optimizing for large-scale data processing involves strategies to manage extensive data transfers and high computational loads. By using data and model parallelism, you can scale their AI workloads effectively, enhancing processing speed and using Azure’s GPU-optimized virtual machines to handle complex, data-intensive AI applications.
+Optimizing for large-scale data processing involves strategies to manage extensive data transfers and high computational loads. By using data and model parallelism, you can scale your AI workloads effectively, enhancing processing speed and using Azure’s GPU-optimized virtual machines to handle complex, data-intensive AI applications.
 
 - *Apply data or model parallelism techniques.* To manage extensive data transfers across multiple GPUs, implement data parallelism or model parallelism depending on your AI workload needs. Ensure the use of High Bandwidth Memory (HBM), which is ideal for high-performance applications due to its high bandwidth, low power consumption, and compact design. HBM supports fast data processing, essential for AI applications that require processing large datasets.
 
-- *Use advanced GPU networking features.* For demanding AI scenarios, choose Azure VMs like NDH100v5 and NDMI300Xv5. These VMs come with dedicated 400 Gb/s NVIDIA Quantum-2 CX7 InfiniBand connections, which are automatically configured within virtual machine scale sets. These connections support GPUDirect RDMA, enabling direct GPU-to-GPU data transfers that reduce latency and enhance overall system performance.
+- *Use advanced GPU networking features.* For demanding AI scenarios, choose Azure VMs like NDH100v5 and NDMI300Xv5. Azure configures these VMs with dedicated 400 Gb/s NVIDIA Quantum-2 CX7 InfiniBand connections within virtual machine scale sets. These connections support GPUDirect RDMA, enabling direct GPU-to-GPU data transfers that reduce latency and enhance overall system performance.
 
 ## Next step
 
