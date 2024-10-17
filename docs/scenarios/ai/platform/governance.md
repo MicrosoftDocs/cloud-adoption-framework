@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Governance recommendations for AI workloads on Azure
 
-This article provides recommendations for governing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. These recommendations help organizations establish controls and policies that enhance the safety, compliance, and efficiency of AI operations. Effective governance supports the responsible use of AI. It enables businesses to optimize their AI investments while reducing risks associated with security, cost, and regulatory compliance.
+This article provides organizations recommendations for governing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. These recommendations help organizations establish controls and policies that enhance the safety, compliance, and efficiency of AI operations. Effective governance supports the responsible use of AI. It enables businesses to optimize their AI investments while reducing risks associated with security, cost, and regulatory compliance.
 
 ## Govern AI models
 
