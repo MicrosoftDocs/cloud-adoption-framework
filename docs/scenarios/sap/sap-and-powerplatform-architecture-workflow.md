@@ -3,7 +3,7 @@ title: SAP and Power Platform architecture workflow
 description: Learn about the architecture workflow of SAP and Power Platform, along with security considerations and recommendations.
 author: mimergel
 ms.author: mimergel
-ms.date: 10/08/2024
+ms.date: 09/16/2024
 ms.topic: conceptual
 ms.custom: e2e-sap
 ---
@@ -40,30 +40,14 @@ To integrate SAP with the Microsoft Power Platform effectively, select the appro
 | **Power Automate Desktop**| Automate tasks within SAP GUI (RPA) for automating repetitive GUI tasks, screen scraping, or legacy application automation. | Installed Power Automate Desktop software on client machines | None, UI Automation | - SAP GUI scripting enabled on SAP server and client |
 | **Power BI** | Create reports and dashboards with SAP data, visualizing data in reports and performing business intelligence tasks (for example, data analysis, real-time insights). | SAP HANA ODBC driver,<br> SAP .NET Connector | HANA: ODBC,<br>BW: OLAP BAPI (RFC) | - Appropriate authentication is configured |
 
-### Selecting the right connectivity
+---
 
-When deciding which connectivity to use, consider the following factors:
+There are several factors to consider when selecting a connector for working with transactional data via the SAP ERP or SAP OData Connectors. The decision may depend on the interfaces already available in your SAP system. First, check if your SAP system exposes RFC/BAPI or OData services, and for simplicity, choose the method you are most familiar with. SAP often provides both options for external connectivity.
 
-- **SAP System capabilities**:
-  - **Connectivity preference**: Does your SAP system expose RFC/BAPI, OData services, SOAP services, or support direct connections for reporting?
-  - **Interfaces availability**: Are additional actions required to enabled and expose these services in your SAP environment?
+If your system lacks RFC or OData services for the specific use case, your choice will depend on the connectivity requirements and what’s easier to implement: API Management for OData services or an on-premises gateway for the SAP ERP connector. In general, we recommend exposing an existing SAP OData service, or developing one if it doesn’t exist, due to its modern architecture and flexibility. Consult the [SAP Business Accelerator Hub](https://api.sap.com/) to check for existing Odata services.
 
-- **Integration Requirements**:
-  - **Type of operations**: Do you need to perform real-time data operations, data analysis, or task automation?
-  - **Focus area**: Is the integration focused on data retrieval, data updates, reporting, or automating user interface tasks?
+In the next chapter, we will provide detailed instructions and links to resources for setting up these connectivity options, helping you implement the best solution for your scenario.
 
-- **Technical constraints**:
-  - **Network restrictions**: Are there network restrictions (for example, firewalls, proxies) that prevent connectivity? Who is required to make necessary changes and where have changes to be implemented to allow connectivity?
-  - **Middleware infrastructure**: Do you have or can provision the infrastructure to support middleware components like the on-premises data gateway?
-  - **Client requirements**: For Power BI and Power Automate Desktop, can you install necessary drivers and software on client machines?
-
-- **Development Resources**:
-  - **Development effort**: Do you have the time and expertise to create the scenarios or is a partner needed to help with the implementation and integration?
-  - **Connectivity preference**: Most SAP services can be exposed in multiple ways as RFC, OData, or SOAP services, allowing you to choose the method that best fits your expertise and what's easier for you to handle in SAP and the Power Platform.
-
-- **Security and Compliance**:
-  - **Authentication methods**: Can you implement the required authentication methods (for example, SSO with Microsoft Entra ID)?
-  - **Data protection**: Does the connector support your organization's data protection policies and compliance requirements?
 
 ### Design considerations
 
@@ -101,51 +85,32 @@ When building integrations between SAP and the Microsoft Power Platform, it's cr
   - _Set measurable goals_: Establish what success looks like in terms of efficiency gains, cost savings, or user experience improvements.
 
 - **Assess current environment**
-  - _Licensing requirements_: Ensure you have the necessary Power Platform licenses for the components you plan to use (for example, Power Apps, Power Automate, Power BI, Copilot Studio). You can consider [trial licenses](https://www.microsoft.com/power-platform/try-free) for piloting.
-  - _SAP system location_: Identify the location of the SAP systems, for example, Azure native or SAP RISE, other clouds or on-premises.
-  - _Network infrastructure_: Evaluate your network setup, including firewalls, proxies, and VPNs, to ensure connectivity between the Power Platform and your SAP systems.
-
-- **Understand integration options**
-  - _Connectors_: Choose the appropriate connectors based on your integration needs:
-    - _Power BI connections_ directly via ODBC or via Power Query SAP HANA database connector
-    - _SAP ERP connector_ for RFC and BAPI functions.
-    - _SAP OData connector_ for OData APIs.
-    - _Custom connectors_ for REST or SOAP APIs.
-  - _Middleware requirements_: Determine required middleware components like the on-premises data gateway and Azure API Management for single sign-on (SSO).
+  - _Licensing requirements_: Ensure you have the necessary Power Platform licenses for the components you plan to use (for example, Power Apps, Power Automate, Power BI, Copilot and Copilot Studio). You can consider [trial licenses](https://www.microsoft.com/power-platform/try-free) for piloting. All licensing options are outlined in the Microsoft Power Platform Licensing Guide: [Licensing overview for Microsoft Power Platform](https://learn.microsoft.com/power-platform/admin/pricing-billing-skus).
+  - _Network connectivity_: Identify the location of the SAP systems, e.g. Azure native or SAP RISE, other clouds or on-premises or a combination of mutliple locations. Then evaluate your network situation depending on the SAP systems location and involve required parties to enable connectivity.
 
 - **Security and compliance**
-  - _Authentication mechanisms_: Plan for secure authentication methods such as single sign-on (SSO) using Microsoft Entra ID (formerly Azure Active Directory).
-  - _Data protection_: Ensure compliance with data protection regulations (for example, GDPR, HIPAA) by implementing encryption and data governance policies.
-  - _Data residency_: Consider data residency requirements that might affect where data can be stored or processed.
-  - _Network security_: Design your network connectivity between the SAP systems and the Power Platform.
-  - _Access control_: Apply role-based access control (RBAC) and the principle of least privilege to restrict access to critical systems and data.
+  - _Authentication mechanisms_: Plan for secure authentication methods such as single sign-on (SSO) using Microsoft Entra ID (formerly Azure Active Directory). Follow this blog to get all information for the setup: [SAP OData Connector: Single Sign-On through Microsoft Azure API Management](https://www.microsoft.com/power-platform/blog/power-apps/announcing-public-preview-of-expanded-single-sign-on-authentication-options-for-sap-connectors/). This blog also contains a reference when you prefer the API Management capability of SAP Integration Suite.
+  - _Data protection_: Ensure compliance with data protection regulations (for example, GDPR, HIPAA) by implementing relevant best practices. See Power Platform [Compliance and data privacy](https://learn.microsoft.com/en-us/power-platform/admin/wp-compliance-data-privacy).
+  - _Data residency_: Consider data residency requirements that might affect where data can be stored or processed. Chose the location of your power platform environment accordingly. Consult this article for more information on the Power Platform [Datacenter regions](https://learn.microsoft.com/power-platform/admin/new-datacenter-regions).
 
 - **Technical readiness**
-  - System readiness: Ensure your SAP system is prepared for integration by verifying that Remote Function Call (RFC) enabled function modules are available, OData or SOAP services are exposed, and network access is configured to allow access by the Power Platform connectors.
-  - Infrastructure capacity: Assess whether your current infrastructure can handle additional load from the integration.
-  - Software requirements: Install necessary software like the SAP .NET Connector and ensure that the on-premises data gateway meets system requirements.
-
-- **Design and architecture planning**
-  - _Integration architecture_: Plan your integration architecture to minimize latency and maximize performance.
-  - _Scalability and availability_: Design for scalability to accommodate future growth and ensure high availability.
-  - _Resource organization_: Align with your organization's standards for naming conventions, tagging, and resource grouping.
+  - Infrastructure capacity: Assess whether your current infrastructure can support the additional load introduced by the integration. Estimate the anticipated load by considering user activity and reviewing current performance metrics, including SAP EarlyWatch reports. Keep in mind that users may not generate more load, but rather perform their tasks in a different way through the integration, so overall system impact may remain similar.
 
 - **Governance**
   - _Policy enforcement_: Establish governance policies for using the Power Platform to prevent unauthorized access and changes.
   - _Monitoring and auditing_: Implement monitoring solutions to track system performance and user activities.
-  - _Change management_: Develop a change management process to handle updates and modifications to the integration.
+  - _Change management_: Set up separate environments for development, testing, and production to ensure proper change management and stability.
 
 - **Skill set and team readiness**
   - _Training needs_: Identify any training requirements for your team to effectively use and manage the Power Platform and SAP integration.
   - _Stakeholder engagement_: Involve key stakeholders from both IT and business units early in the planning process.
 
 - **Testing strategy**
-  - _Development and testing environments_: Set up separate environments for development, testing, and production to ensure stability.
   - _Quality assurance (QA)_: Plan for thorough testing, including unit tests, integration tests, and user acceptance tests.
 
 - **Cost considerations**
   - _Budget planning_: Account for all costs associated with licensing, development, infrastructure, and maintenance.
-  - _Cost optimization_: Explore opportunities to optimize costs, such as using existing resources or choosing cost-effective service tiers.
+  - _Cost optimization_: Explore opportunities to optimize costs, such as using existing licenses, resources or choosing cost-effective service tiers.
 
 - **Future-proofing**
   - _Flexibility_: Design the integration to be adaptable to future changes in business requirements or technology updates.
