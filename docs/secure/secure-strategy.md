@@ -86,7 +86,7 @@ The motivation for moving to the cloud is to modernize our line-of-business (LOB
 
 **Security considerations:**
 
-- *Technical readiness.* Our IT and Security teams will need upskilling to successfully define our migration plan. We might need to add new [teams and roles](./refresh-teams-and-roles.md) as we prepare to move to the cloud.
+- *Technical readiness.* Our IT and Security teams will need upskilling to successfully define our migration plan. We might need to add new [teams and roles](./secure-teams-and-roles.md) as we prepare to move to the cloud.
 
 ### Business outcome - global reach
 
