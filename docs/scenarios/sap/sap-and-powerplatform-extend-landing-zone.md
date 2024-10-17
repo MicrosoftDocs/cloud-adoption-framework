@@ -52,27 +52,25 @@ When you’re looking for ways to automate frequent, mundane, and rules-based ta
 For real-time analytics, dynamic data visualization, and timely decision-making on SAP Business Warehouse, see [PowerQuery SAP Business Warehouse Application Server connector](/power-query/connectors/sap-bw/application-setup-and-connect)
 
 
-To use the SAP BW Message Server connector in Power BI, you must install the SAP .NET Connector as described here: 
-
-- [Power Query SAP Business Warehouse Message Server connector - Power Query | Microsoft Learn](https://learn.microsoft.com/power-query/connectors/sap-bw/message-setup-and-connect)
+To use the SAP BW Message Server connector in Power BI, you must install the SAP .NET Connector. To learn more, see [Power Query SAP Business Warehouse Message Server connector](/power-query/connectors/sap-bw/message-setup-and-connect
 
 
-### 3. Reporting and Data Analytics with Power BI on SAP HANA
-For real-time analytics, dynamic data visualization, and timely decision-making on SAP HANA systems, follow this guide to learn about all options, capabilities, and how to establish connectivity:
 
-- [Power Query SAP HANA database connector - Power Query | Microsoft Learn](https://learn.microsoft.com/power-query/connectors/sap-hana/overview)
+### Reporting and analytics with Power BI on SAP HANA
+For real-time analytics, dynamic data visualization, and timely decision-making on SAP HANA systems, see [Power Query SAP HANA database connector](/power-query/connectors/sap-hana/overview)
 
-> [!Note] Access to the SAP HANA database ports from your desktop may not always be permitted. Firewall rules may need to be configured to enable this access.
 
-### 4. Applications, Copilots and more by leveraging the connectors
+> [!Note] 
+> Access to the SAP HANA database ports from your desktop may not always be permitted. Firewall rules may need to be configured to enable this access.
+
+### Custom applications and Copilots using connectors
 When building apps, copilots, web pages, or automations using the SAP ERP or SAP OData connectors, several activities are required to establish the appropriate network connectivity. The specific configuration will vary depending on the connector being used and the location of your SAP systems.
 
 > [!Note]
 > In an SAP Rise context, where SAP systems are hosted on Azure and managed by SAP AG, required middleware components like the firewall, the on-premises data gateway, or Azure API Management are installed in your Azure Subscription, and the SAP Rise network is peered with the customer’s own Azure virtual network.
-> Follow this documentation to establish NW connectivity of your Azure subscription with the networks in scope of SAP Rise:  
-[Integrating Azure with SAP RISE | Microsoft Learn](https://learn.microsoft.com/azure/sap/workloads/rise-integration)
+> Learn how to establish network connectivity of your Azure subscription with the networks in scope of SAP Rise, see [Integrating Azure with SAP RISE managed workloads](/azure/sap/workloads/rise-integration)  
 
-#### 4.1. SAP ERP connector
+#### SAP ERP connector
 This connector requires the on-premises data gateway, a locally installed Windows client application that acts as a bridge between your local on-premises data sources and services in the Microsoft cloud. It provides quick and secure data transfer and requires no inbound ports to your network. Only outbound ports are needed to reach the Azure web service to which the gateway connects.
 
 - The on-premises gateway should be installed on a Windows VM in close proximity to the SAP system and positioned behind a firewall, as illustrated in the architecture diagram.
@@ -80,44 +78,46 @@ This connector requires the on-premises data gateway, a locally installed Window
 - Consider combining on-premises data gateway for non-production environments.
 - For business critical use-cases on productions consider implementing 2 on-premises data gateways for redundancy.
 
-- Follow this documentation for the setup: [On-premises and virtual network (VNet) data gateways documentation | Microsoft Learn](https://learn.microsoft.com/data-integration/gateway/)
+- To learn how to set this up, see: [On-premises and virtual network (VNet) data gateways documentation](/data-integration/gateway/)
 
-Also check the connector documentation for more details: [SAP ERP - Connectors | Microsoft Learn](https://learn.microsoft.com/connectors/saperp/)  
+To learn more about the SAP ERP connectors, see [SAP ERP - Connectors](/connectors/saperp/)
 
-> [!Note] In an SAP Rise context, the on-premises data gateway will be installed within your Azure subscription and will connect to the SAP Rise environment via network peering. If your SAP systems are still running on-premises, the gateway must be installed in your on-premises environment.
+> [!Note] 
+> In an SAP Rise context, the on-premises data gateway will be installed within your Azure subscription and will connect to the SAP Rise environment via network peering. If your SAP systems are still running on-premises, the gateway must be installed in your on-premises environment.
 
-#### 4.2. SAP OData connector
+#### SAP OData connector
 Unlike the SAP ERP connector, the SAP OData connector opens communication through an HTTP/S-based protocol. A connection is triggered from the connector in the Power Platform.  
 
-See the connector documentation for more details: [SAP OData - Connectors | Microsoft Learn](https://learn.microsoft.com/connectors/sapodata)  
+To learn more, see [SAP OData - Connectors](/connectors/sapodata)  
 
 At a minimum, you need to configure your firewall(s) to allow communication between the public IPs of Power Platform and your SAP system. This ensures the necessary functionality for integration.  
-- The outbound IP addresses for Power Platform are documented here: [Connectors outbound IP addresses | Microsoft Learn](https://learn.microsoft.com/connectors/common/outbound-ip-addresses)  
-- If you are using Azure Firewall, you can simplify this process by using Service Tags, eliminating the need to manage individual IP address ranges manually.  
-[Azure service tags overview | Microsoft Learn](https://learn.microsoft.com/azure/virtual-network/service-tags-overview)  
+
+- For a list of the outbound IP addresses for Power Platform, see: [Connectors outbound IP addresses](/connectors/common/outbound-ip-addresses)  
+- If you are using Azure Firewall, you can simplify this process by using Service Tags, eliminating the need to manage individual IP address ranges manually. To learn more, see [Azure service tags overview](/azure/virtual-network/service-tags-overview) 
 
 As an optimal implementation, recommended for production workloads, we propose including API management, which allows for Single Sign-On and other helpful features. See the next chapter for more details.
 
 
-> [!Note] In an SAP Rise context, you can leverage the SAP API management service on the SAP Business Technology Platform.
+> [!Note]
+> In an SAP Rise context, you can leverage the SAP API management service on the SAP Business Technology Platform.
 
 
 #### Setup Single Sign-On (SSO)
 In addition to Basic, Anonymous, and API Key Authentication, the SAP OData Connector, currently in public preview, now supports Single Sign-On available through Microsoft Azure API Management. It enables SAP Principal propagation with SAP services such as SAP Gateway, S/4HANA Cloud, RISE, and many more using Microsoft Entra ID (formerly Azure AD) as the Identity Provider. This way, users of your low-code solutions spanning the Microsoft and SAP ecosystem are mapped from their Microsoft Entra ID identities to their named SAP backend users. SAP authorizations are fully retained.
 
-[Announcing public preview of expanded Single Sign-On authentication options for SAP Connectors - Microsoft Power Platform Blog](https://www.microsoft.com/power-platform/blog/power-apps/announcing-public-preview-of-expanded-single-sign-on-authentication-options-for-sap-connectors/)
 
 
 
-![Alt text for the image](./media/Power-Platform-SSO.png)
+![A diagram showing Power Platform integration with Single sign-on](./media/Power-Platform-SSO.png)
 
 
 
-This blog guides you through the setup of SSO using Azure API Management:  
-[Hurray 🎉 SAP OData connector now supports OAuth2 and SAP Principal Propagation (powerplatform.com)](https://community.powerplatform.com/blogs/post/?postid=c6a609ab-3556-ef11-a317-6045bda95bf0)  
+To learn more about the options for using SSO, see these resources:
 
-Alternatively, use this blog when SAP API Management is the preferred choice:  
-[Integrating low-code solutions with Microsoft using SAP API Management - SAP Community](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/integrating-low-code-solutions-with-microsoft-using-sap-integration-suite/ba-p/13789298)
+- [SAP OData Connector: Single Sign-On through Microsoft Azure API Management](https://www.microsoft.com/power-platform/blog/power-apps/announcing-public-preview-of-expanded-single-sign-on-authentication-options-for-sap-connectors/) 
+- [SAP OData connector now supports OAuth2 and SAP Principal Propagation](https://community.powerplatform.com/blogs/post/?postid=c6a609ab-3556-ef11-a317-6045bda95bf0)
+- [Integrating low-code solutions with Microsoft using SAP API Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/integrating-low-code-solutions-with-microsoft-using-sap-integration-suite/ba-p/13789298)
+
 
 
 ### Next steps
