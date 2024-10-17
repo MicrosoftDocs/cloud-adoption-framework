@@ -52,7 +52,7 @@ When you’re looking for ways to automate frequent, mundane, and rules-based ta
 For real-time analytics, dynamic data visualization, and timely decision-making on SAP Business Warehouse, see [PowerQuery SAP Business Warehouse Application Server connector](/power-query/connectors/sap-bw/application-setup-and-connect)
 
 
-To use the SAP BW Message Server connector in Power BI, you must install the SAP .NET Connector. To learn more, see [Power Query SAP Business Warehouse Message Server connector](/power-query/connectors/sap-bw/message-setup-and-connect
+To use the SAP BW Message Server connector in Power BI, you must install the SAP .NET Connector. To learn more, see [Power Query SAP Business Warehouse Message Server connector](/power-query/connectors/sap-bw/message-setup-and-connect)
 
 
 
