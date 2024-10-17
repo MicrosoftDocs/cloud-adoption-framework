@@ -86,7 +86,7 @@ Managing your data and system integrity requires robust monitoring with specific
 
 - [Microsoft Purview health management](/purview/data-estate-health) can help you codify data standards and measure how the data in your estate complies with those standards over time. It provides reports to track data health and helps data owners remediate issues that arise.
 
-## Manage availability
+## Managing availability
 
 Managing the availability of your cloud estate requires robust, proactive availability monitoring that's validated through testing.
 
@@ -151,6 +151,6 @@ Continuous improvement is essential for maintaining and enhancing confidentialit
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> Review the [Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview) to learn about integrating Zero Trust approaches throughout your cloud adoption journey.
-> Review the Well-Architected Framework [Security](/azure/well-architected/security) pillar to get workload-focused security guidance.
+Review the [Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview) to learn about integrating Zero Trust approaches throughout your cloud adoption journey.
+
+Review the Well-Architected Framework [Security](/azure/well-architected/security) pillar to get workload-focused security guidance.
