@@ -104,7 +104,7 @@ We're currently operating only in North America. Our five-year plan is to expand
 
 **Security considerations:**
 
-- *Increased attack surfaces.* Expanding across the globe will dramatically increase our attack surfaces by placing publicly exposed systems in multiple regions. We need to rapidly [modernize our security posture](#security-posture-mondernization). We'll follow the [Zero Trust guidance](/security/zero-trust/zero-trust-ramp-overview) to ensure that we follow best practices.
+- *Increased attack surfaces.* Expanding across the globe will dramatically increase our attack surfaces by placing publicly exposed systems in multiple regions. We need to rapidly [modernize our security posture](#security-posture-modernization). We'll follow the [Zero Trust guidance](/security/zero-trust/zero-trust-ramp-overview) to ensure that we follow best practices.
 
 - *Cloud-focused threats.* Our move to the cloud will bring new threats that we haven't been exposed to. These threats aren't limited to malicious attacks on our systems. The cloud provider is also a major target for threats, and incidents that affect the provider can have downstream effects on our systems or business. We need to review our [incident preparedness and response](#defining-a-strategy-for-incident-preparedness-and-response) processes and incorporate necessary improvements as part of our plan.
 
