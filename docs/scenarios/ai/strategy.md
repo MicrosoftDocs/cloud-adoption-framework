@@ -13,7 +13,7 @@ An AI strategy outlines your approach to AI adoption. It helps you identify wher
 
 :::image type="content" source="./images/aistrategy.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Strategy. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aistrategy.svg" border="false":::
 
-## Define AI use cases
+## Identify AI use cases
 
 AI supports two main goals: enhancing individual efficiency and improving business processes. Generative AI fosters productivity and enhances customer experiences, while non-generative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value.
 
