@@ -11,13 +11,15 @@ ms.topic: conceptual
 
 The Azure Architecture Center has reference architectures and guides to build generative AI and nongenerative AI workloads. The following tables provides links to implementation guidance for building generative AI applications.
 
+For Azure landing zone users, start with the [Baseline Azure OpenAI architecture in Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
+
 ## Generative AI
 
 | Architectures| Article Type | Description |
 |--------------|--------------|-------------|
-| [Azure landing zone OpenAI architecture](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)| Architecture | |
-| [Baseline OpenAI reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat)| Architecture | |
-| [Basic OpenAI reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat)| Architecture | |
+| [Baseline Azure OpenAI reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat)| Architecture | |
+| [Basic Azure OpenAI reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat)| Architecture | |
+| [Baseline Azure OpenAI architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)| Architecture | |
 | [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops) | Guide| |
 | [Developing RAG solutions](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) | Guides| |
 | [Proxy Azure OpenAI usage](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) | Guide| |
@@ -36,7 +38,7 @@ The Azure Architecture Center has reference architectures and guides to build ge
 
 ## Understand AI workloads
 
-To understand the level of effort required to build AI workloads, see the following articles. They provide organizational guidelines for building AI workloads on Azure:
+To understand the level of effort to build AI workloads, see the following articles. They provide organizational guidelines for building AI workloads on Azure:
 
 - [AI resource selection](./resource-selection.md)
 - [AI networking](./compute.md)

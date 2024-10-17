@@ -15,8 +15,6 @@ items:
         items:
         - name: AI architectures and guides
           href: platform/architectures.md
-        - name: Azure OpenAI chat baseline architecture in an Azure landing zone
-          href: platform/openai-landing-zone.md
       - name: Design areas
         items:
           - name: Resource selection
@@ -32,7 +30,9 @@ items:
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Implementation options
-        href: infrastructure/implementation-options.md
+        items:
+        - name: CycleCloud Workspace for SLURM 
+          href: infrastructure/cycle-cloud.md
       - name: Design areas
         items:
           - name: Compute

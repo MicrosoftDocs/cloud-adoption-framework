@@ -12,13 +12,13 @@ ms.topic: conceptual
 The AI adoption scenario in the Cloud Adoption Framework (CAF) provides a structured approach for adopting AI in Azure. It covers generative AI and nongenerative AI adoption guidance. The recommendations are relevant for organizations of any size and industry. This guidance serves as your roadmap for AI adoption. Use it as a central hub to find the resources and guidance you need.
 
 AI adoption is the process of integrating AI workloads into your organization. Effective AI adoption uses and builds trustworthy AI.
- 
+
 :::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It's a continuous process that contains AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
 *Figure 1. How to use the AI adoption guidance for Azure.*
 
 ## Why adopt AI?
 
-AI adoption is foundational to optimizing operations at an individual and organizational level. AI enhances individual efficiency by automating administrative tasks and providing insights. It enhances business efficiency by automating business processes from intelligent chatbots to business forecasts. These uses allow businesses and personnel to focus on the work that matters most. The barrier to adopting AI is lower than it's ever been. Microsoft provides a range of AI services that cater to different skill sets, budgets, and data needs. You decide if you want to buy or build AI workloads based on your business needs.
+AI adoption is foundational to optimizing operations at an individual and organizational level. AI enhances individual efficiency by automating busy work and providing insights. It enhances business efficiency by automating business processes from intelligent chatbots to business forecasts. These uses allow businesses and personnel to focus on the work that matters most. The barrier to adopting AI is lower than it's ever been. Microsoft provides a range of AI services that cater to different skill sets, budgets, and data needs. You decide if you want to buy or build AI workloads based on your business needs.
 
 ## How to adopt AI
 
@@ -34,7 +34,6 @@ Adopting AI is a sequential process. It requires ongoing monitoring, governance,
 ## AI adoption checklists
 
  Use the AI adoption checklists as your AI roadmap. There are checklists for startups and enterprises. We recommend you use the Enterprise checklist. It provides the most comprehensive guidance to prepare your organization for AI at scale. Use the startup checklist for the quickest path to AI adoption. Consult the other guidance as you grow.
-
 
 | AI adoption phase | Startup checklist | Enterprise checklist |
 |---|---|---|
