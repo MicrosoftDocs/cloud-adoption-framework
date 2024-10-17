@@ -93,7 +93,7 @@ A responsible AI strategy outlines your role in ensuring that AI solutions remai
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a plan to adopt AI](plan.md)
+> [AI Plan](plan.md)
 
 ## Example AI use cases
 
