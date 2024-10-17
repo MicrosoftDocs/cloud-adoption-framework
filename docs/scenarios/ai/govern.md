@@ -1,15 +1,15 @@
 ---
-title: Govern AI – Recommendations for governing AI
-description: Get recommendations for governing AI. Get recommendations for governing models, costs, security, operations, compliance, and data management.
+title: Govern AI – Recommendations for organizations governing AI workloads in Azure
+description: Learn the process to govern AI workloads in Azure with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Govern AI – Recommendations for governing AI
+# Govern AI – Recommendations for organizations governing AI workloads in Azure
 
-TThis guide outlines recommendations for developing a comprehensive AI governance framework at the business level. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). It also aligns with the framework in [CAF Govern](azure/cloud-adoption-framework/govern/).
+This articles outlines the organizational process for governing AI workloads. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). It also aligns with the framework in [CAF Govern](azure/cloud-adoption-framework/govern/).
 
 This guidance aims to help you integrate AI risk management into broader risk management strategies. This integration prodives more cohesive handling of AI, cybersecurity, and privacy risks for a unified governance approach.
 

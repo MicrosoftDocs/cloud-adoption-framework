@@ -1,13 +1,13 @@
 ---
-title: AI Ready – Recommendations to establish an AI foundation
-description: Optimize your AI foundation with Azure's best practices for region selection, governance, networking, and connectivity.
+title: AI Ready – Recommendations for organizations building AI workloads in Azure
+description: Learn the process to build AI workloads in Azure with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Ready – Recommendations to establish an AI foundation
+# AI Ready – Recommendations for organizations building AI workloads in Azure
 
 This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with the [Ready](/azure/cloud-adoption-framework/ready/) methodology in the Cloud Adoption Framework and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking.
 

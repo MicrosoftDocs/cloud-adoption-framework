@@ -1,15 +1,15 @@
 ---
-title: AI Strategy - Recommendations to develop an AI adoption strategy
-description: Get recommendations for developing an AI adoption strategy. Identify use cases and define strategies for data, technologies, and Responsible AI. 
+title: AI Strategy - Recommendations for organizations developing an AI adoption strategy
+description: Learn the process to develop a strategy for AI adoption with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Strategy - Recommendations to develop an AI adoption strategy
+# AI Strategy - Recommendations for organizations developing an AI adoption strategy
 
-An AI strategy outlines your approach to AI adoption. It helps you identify where AI can add value, select the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success. Create an [AI center of excellence](./center-of-excellence.md) (AI CoE), or appoint an AI lead to oversee your AI adoption.
+An AI strategy outlines the organizational process for developing an AI adoption strategy. It helps you identify where AI can add value, select the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success. Create an [AI center of excellence](./center-of-excellence.md) (AI CoE), or appoint an AI lead to oversee your AI adoption.
 
 :::image type="content" source="./images/aistrategy.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Strategy. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aistrategy.svg" border="false":::
 

@@ -1,15 +1,15 @@
 ---
-title: Secure AI - Recommendations to secure AI
-description: Secure AI with comprehensive recommendations focusing on confidentiality, integrity, and availability. Learn best practices for AI security.
+title: Secure AI – Recommendations for organizations securing AI workloads in Azure
+description: Learn the process to secure AI workloads in Azure with best practices and recommendations.
 ms.author: ssumner
 author: stephen-sumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Secure AI – Recommendations to secure AI
+# Secure AI – Recommendations for organizations securing AI workloads in Azure
 
-This article offers recommendations for securing AI and focuses on the confidentiality, integrity, and availability (CIA) of AI systems. Effective security practices reduce the risk of compromise by safeguarding the confidentiality, integrity, and availability of AI models and data. A secure AI environment also aligns with business security goals and enhances trust in AI-driven processes.
+This articles outlines the organizational process for securing AI workloads. It focuses on the confidentiality, integrity, and availability (CIA) of AI. Effective security practices reduce the risk of compromise by safeguarding the confidentiality, integrity, and availability of AI models and data. A secure AI environment also aligns with business security goals and enhances trust in AI-driven processes.
 
 :::image type="content" source="./images/secureai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Secure AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/secureai.svg" border="false":::
 
