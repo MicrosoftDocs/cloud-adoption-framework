@@ -48,7 +48,7 @@ When you’re looking for ways to automate frequent, mundane, and rules-based ta
 - [Introduction to SAP GUI–based RPA in Power Automate Desktop](/power-automate/guidance/rpa-sap-playbook/introduction)
 
 
-### 2. Reporting and Data Analytics with Power BI on SAP HANA Business Warehouse
+### Reporting and analytics with Power BI on SAP HANA Business Warehouse
 For real-time analytics, dynamic data visualization, and timely decision-making on SAP Business Warehouse, follow this guide to establish the connectivity:
 
 - [Power Query SAP Business Warehouse Application Server connector - Power Query | Microsoft Learn](https://learn.microsoft.com/power-query/connectors/sap-bw/application-setup-and-connect)  
