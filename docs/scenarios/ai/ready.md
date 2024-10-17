@@ -84,7 +84,7 @@ You can use the guidance discussed in this article to establish a foundational e
 The next step is to build and deploy workloads to your established AI foundation. Use the following links to find the architecture guidance that meets your needs. Start with platform-as-a-service (PaaS) architectures. PaaS is Microsoft's recommended approach to adopting AI.
 
 > [!div class="nextstepaction"]
-> [PaaS AI architecture guidance](./platform/resource-selection.md)
+> [PaaS AI architecture guidance](./platform/architectures.md)
 
 > [!div class="nextstepaction"]
-> [IaaS AI architecture guidance](./infrastructure/compute.md)
+> [IaaS AI architecture guidance](./infrastructure/cycle-cloud.md)
