@@ -45,7 +45,7 @@ Before you begin, ensure you have:
 ### SAP GUI–based RPA in Power Automate Desktop 
 When you’re looking for ways to automate frequent, mundane, and rules-based tasks, please follow the SAP GUI automation patterns and best practices using Microsoft Power Automate, Power Automate Desktop, and desktop flows as described here and subsequent documents:
 
-- [Introduction to SAP GUI–based RPA in Power Automate Desktop - Power Automate | Microsoft Learn](https://learn.microsoft.com/power-automate/guidance/rpa-sap-playbook/introduction)
+- [Introduction to SAP GUI–based RPA in Power Automate Desktop](/power-automate/guidance/rpa-sap-playbook/introduction)
 
 
 ### 2. Reporting and Data Analytics with Power BI on SAP HANA Business Warehouse
