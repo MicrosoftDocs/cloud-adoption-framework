@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Networking recommendations for AI workloads on Azure infrastructure (IaaS)
 
-This article provides recommendations for configuring networking for AI workloads running on Azure infrastructure (IaaS). Designing a well-optimized network can enhance data processing speed, reduce latency, and ensure the network infrastructure scales alongside growing AI demands.
+This article provides recommendations for configuring networking for AI workloads on Azure infrastructure (IaaS). Designing a well-optimized network can enhance data processing speed, reduce latency, and ensure the network infrastructure scales alongside growing AI demands.
 
 ## Ensure sufficient bandwidth
 
