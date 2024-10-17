@@ -38,6 +38,7 @@ Before you begin, ensure you have:
 - Administrative access to your SAP systems and Azure subscription.
 - Necessary licenses for Power Platform components (consider using [trial licenses](https://www.microsoft.com/power-platform/try-free) for piloting).
 - Understanding of your network infrastructure, including firewalls and virtual networks.
+- An existing [SAP landing zone](/azure/cloud-adoption-framework/scenarios/sap/ready) to extend.
 
 ## Integration options
 
