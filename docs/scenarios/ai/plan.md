@@ -68,7 +68,7 @@ Developing an AI proof of concept (PoC) validates the feasibility and potential 
 
 - *Reprioritize AI opportunities*. Use the insights gained from the PoC to refine your list of AI use cases. If the PoC reveals that a use case requires more resources than anticipated or presents unexpected challenges, you can adjust your priorities and focus on more feasible projects.
 
-## Start responsible AI adoption
+## Implement responsible AI
 
 Responsible AI adoption requires incorporating ethical frameworks and regulatory practices into your AI implementation plan. This approach ensures that AI initiatives align with organizational values, protect user rights, and comply with legal standards. By embedding responsible AI principles at every stage, organizations build trust, manage risk, and maintain a positive reputation
 

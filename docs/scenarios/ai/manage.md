@@ -59,7 +59,7 @@ AI model management involves setting governance structures, continuous monitorin
 
 - *Identify root causes of performance issues.* Pinpoint the source of the issue when a drop in performance or accuracy is detected by monitoring the AI. Ensure that you have visibility into each stage of the interaction to isolate the problem and implement corrective actions more quickly. For example, if a customer service chatbot generates inaccurate responses, monitoring should help you determine whether the error is in the prompt crafting or the model's understanding of context. Use built-in tools like Azure Monitor and Application Insights to proactively identify performance bottlenecks and anomalies.
 
-- *Track model retirement.** Track retirement for pretrained models to prevent performance issues as vendor support ends. For instance, a generative AI model might be deprecated, so you'd need to update it to maintain functionality. Studio shows the model retirement date for all deployments.
+- *Track model retirement.* Track retirement for pretrained models to prevent performance issues as vendor support ends. For instance, a generative AI model might be deprecated, so you'd need to update it to maintain functionality. Studio shows the model retirement date for all deployments.
 
 - *Retrain AI models as needed.* Account for models degrading over time because of changes in data. Schedule regular retraining based on model performance or business needs to ensure that the AI system stays relevant. Retraining can be expensive, so assess the initial training cost and use that cost to evaluate how frequently you should retrain AI models. Maintain version control for models and ensure a rollback mechanism for underperforming versions.
 
@@ -75,7 +75,7 @@ Managing AI costs requires a clear understanding of expenses related to resource
 
 - *Set up automated cost alerts.* Use budget alerts notify you of unexpected charges and establish budgeting strategies to control and predict your AI expenses.
 
-For generative AI applications using Azure OpenAI, see these [cost optimization recommendations.](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat#cost-optimization).
+For generative AI applications using Azure OpenAI, see these [cost optimization recommendations](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat#cost-optimization).
 
 ## Manage AI data
 
@@ -100,4 +100,4 @@ Business continuity and disaster recovery for AI involve creating multi-region d
 ## Next step
 
 > [!div class="nextstepaction"]
-> [AI management lifecycle](./index.md#how-to-adopt-ai-on-azure)
+> [Secure AI](./secure.md)
