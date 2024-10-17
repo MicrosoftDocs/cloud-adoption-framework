@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: e2e-sap
 ---
 
-# Extend your SAP landing zone to support Power Platform
+# Extend an SAP landing zone to support Power Platform
 
 This article is part of the "SAP and Power Platform" article series.
 
