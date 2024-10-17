@@ -13,7 +13,7 @@ items:
       items:
       - name: Implementation options
         items:
-        - name: AI architectures and guides
+        - name: AI architecture guidance
           href: platform/architectures.md
       - name: Design areas
         items:

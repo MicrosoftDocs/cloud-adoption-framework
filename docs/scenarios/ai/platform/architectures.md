@@ -36,7 +36,7 @@ For Azure landing zone users, start with the [Baseline Azure OpenAI architecture
 | [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2)| Guides|Any |
 | [Team Data Science Process](/azure/architecture/data-science-process/overview) | Guides|Any |
 
-## Understand AI workloads
+## Understand AI workload lifecycle
 
 To understand the level of effort to build AI workloads, see the following articles. They provide organizational guidelines for building AI workloads on Azure:
 
