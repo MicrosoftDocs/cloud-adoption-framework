@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Governance recommendations for AI workloads on Azure
 
-This article provides recommendations for governing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services.
+This article provides recommendations for governing AI workloads that use Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. These recommendations help organizations establish controls and policies that enhance the safety, compliance, and efficiency of AI operations. Effective governance supports the responsible use of AI. It enables businesses to optimize their AI investments while reducing risks associated with security, cost, and regulatory compliance.
 
 ## Govern AI models
 
-Organizations need clear processes for managing AI models to ensure reliable, safe, and ethical outputs. Controls over AI model inputs and outputs help mitigate risks, such as harmful content and unintended behaviors, which could have serious implications for both users and the organization.
+AI model governance refers to the processes for managing AI models to ensure they produce reliable, safe, and ethical outputs. Controls over model inputs and outputs help mitigate risks, including harmful content and unintended behaviors, which could impact both users and the organization. These processes support responsible AI deployment, safeguarding against potential legal and ethical challenges.
 
 - *Establish a process to detect AI risks.* Use tools like Defender for Cloud to [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [explore risks to predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk). Establish a policy to regularly [red team generative AI models](/azure/ai-services/openai/concepts/red-teaming). Document identified risks and continuously update your AI governance policies to mitigate emerging issues.
 
@@ -23,7 +23,7 @@ Organizations need clear processes for managing AI models to ensure reliable, sa
 
 ## Govern AI costs
 
-Controlling costs in AI workloads allows organizations to maximize efficiency while reducing expenses. Cost governance strategies ensure that AI investments align with business goals and help prevent unexpected expenses from over-provisioning or underutilization.
+AI cost governance involves managing expenses associated with AI workloads to maximize efficiency and reduce unnecessary spending. Effective cost control ensures that AI investments align with business objectives, which prevents unforeseen costs from over-provisioning or underutilization. These practices enable organizations to optimize their AI operations financially.
 
 - *Use the right billing model.* If you have predictable workloads, use AI commitment tiers in Azure AI services. Use [provisioned throughput units](s/azure/ai-services/openai/concepts/provisioned-throughput), which can be less expensive than pay-as-you-go pricing with Azure OpenAI and OpenAI models via Azure AI Studio.
 
@@ -45,13 +45,15 @@ For more cost management guidance, see [Manage AI costs](manage.md#manage-ai-cos
 
 ## Govern AI platforms
 
+AI platform governance includes applying policy controls to various AI services on Azure, such as Azure AI Studio and Azure Machine Learning. Using platform-level governance enforces consistent security, compliance, and operational policies across the AI ecosystem. This alignment supports effective oversight, which strengthens overall AI management and reliability.
+
 Use Azure Policy to apply built-in policy definitions for each AI platform you're using. It includes [Azure AI Studio](/azure/ai-services/policy-reference?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext), [Azure Machine Learning](/azure/machine-learning/policy-reference), [Azure AI services](/azure/ai-services/policy-reference), [Azure AI Search](/azure/search/policy-reference), and others.
 
 The Azure landing zone [deployment](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#environment-development-approaches) includes a curated set of recommended built-in policies for Azure AI platform services. You can select the policy initiative you want to use under the *Workload Specific Compliance* category during an Azure landing zone deployment. The policies sets include [Azure OpenAI](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-OpenAI.html), [Azure Machine Learning](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-MachineLearning.html), and [Azure AI Search](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-CognitiveServices.html), and [Azure Bot services](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-BotService.html).
 
 ## Govern AI security
 
-Security in AI workloads protects against potential threats that could compromise data, models, or infrastructure. Strong security practices for AI maintain the safety and integrity of these systems, reducing risks of unauthorized access and data breaches.
+AI security governance addresses the need to protect AI workloads from threats that could compromise data, models, or infrastructure. Robust security practices safeguard these systems against unauthorized access and data breaches. This protection ensures the integrity and reliability of AI solutions, which is essential for maintaining user trust and regulatory compliance.
 
 - *Enable Defender for Cloud on every subscription.* Defender for Cloud provides a cost-effective approach for detecting configurations in your deployed resources that aren't secure. You should also enable [AI threat protection](/azure/defender-for-cloud/ai-threat-protection).
 
@@ -63,7 +65,7 @@ Security in AI workloads protects against potential threats that could compromis
 
 ## Govern AI operations
 
-Effective AI operations management ensures stable and consistent AI services for organizations. Centralized oversight and continuity plans enable companies to maintain reliable model performance and minimize downtime, which is essential for sustaining AI’s business value.
+AI operations governance focuses on managing and maintaining stable AI services, which supports long-term reliability and performance. Centralized oversight and continuity plans help organizations avoid downtime, which ensures the consistent business value of AI. These efforts contribute to efficient AI deployment and sustained operational effectiveness.
 
 - *Review and manage AI models.* Develop a policy for managing model versioning, especially as models are upgraded or retired. You need to maintain compatibility with existing systems and ensure a smooth transition between model versions.
 
@@ -73,7 +75,7 @@ Effective AI operations management ensures stable and consistent AI services for
 
 ## Govern AI regulatory compliance
 
-Regulatory compliance in AI ensures that organizations adhere to industry standards and legal requirements. Robust compliance measures help mitigate risks related to legal liabilities and build trust in AI solutions among users, clients, and regulators.
+Regulatory compliance in AI requires organizations to follow industry standards and legal obligations, which reduce risks related to liabilities and build trust. Compliance measures help organizations avoid penalties and improve credibility with clients and regulators. Adhering to these standards establishes a solid foundation for responsible and compliant AI usage.
 
 - *Automate compliance.* Use [Microsoft Purview Compliance Manager](/microsoft-365/compliance/compliance-manager-overview) to assess and manage compliance across cloud environments. Use the applicable [regulatory compliance initiatives](/azure/governance/policy/samples/#regulatory-compliance) in Azure Policy for your industry. Apply other policies based on the AI services that you use, such as [Azure AI Studio](/azure/ai-services/security-controls-policy) and [Azure Machine Learning](/azure/machine-learning/policy-reference).
 
@@ -81,7 +83,7 @@ Regulatory compliance in AI ensures that organizations adhere to industry standa
 
 ## Govern AI data
 
-Proper data governance for AI ensures that only appropriate, compliant data feeds into models. This safeguards data privacy and intellectual property, reducing risks associated with data misuse and enhancing the quality and reliability of AI outputs.
+AI data governance involves policies for ensuring that data feeding into AI models is appropriate, compliant, and secure. Data governance protects privacy and intellectual property, which enhances AI outputs' reliability and quality. These measures help mitigate risks related to data misuse, aligning with regulatory and ethical standards.
 
 - *Establish a process for cataloging data.* Use a tool like [Microsoft Purview](/purview/what-is-data-catalog) to implement a unified data catalog and classification system across your organization. Integrate these policies into your CI/CD pipelines for AI development.
 
