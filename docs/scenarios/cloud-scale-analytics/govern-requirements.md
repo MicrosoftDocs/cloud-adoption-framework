@@ -40,8 +40,6 @@ There needs to be a way to classify data to understand its level of confidential
 - A data confidentiality classification scheme
 - A data retention classification scheme
 
-An example of these schemes is:
-
 ### Data confidentiality classification scheme
 
 [!INCLUDE [data-confidentiality-classification-scheme](./includes/data-confidentiality-classification-scheme.md)]
@@ -74,8 +72,8 @@ Another requirement is the need for accountability. Otherwise confusion lingers 
 - Is it a C-level executive? Is it a department head? 
 - Is it the head of governance, risk, and compliance? 
 - What about the legal department? 
-- Or is it IT's responsibility?
-- 
+- Is it IT's responsibility?
+
 Roles and responsibilities are needed to avoid confusion and to set the foundation upon which a data culture can materialize.
 
 ## Data governance processes

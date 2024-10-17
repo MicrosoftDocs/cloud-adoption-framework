@@ -91,11 +91,11 @@ All other failed anonymous requests aren't logged.
 
 The following usages are the recommended security patterns for each of the data lake zones:
 
-- Raw should allow access to data only by using security principal names (SPNs) - preferably using managed identities.
-- Enriched should allow access to data only by using security principal names (SPNs) - preferably using managed identities.
-- Curated should allow access with both security principal names (SPNs) and user principal names (UPNs).
+- Raw usage allows access to data only by using security principal names (SPNs) - preferably using managed identities.
+- Enriched usage allows access to data only by using security principal names (SPNs) - preferably using managed identities.
+- Curated usage enables access to both security principal names (SPNs) and user principal names (UPNs).
 
-For more information, see [Access control model in Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-access-control-model)
+For more information, see [Access control model in Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-access-control-model).
 
 ## Next steps
 

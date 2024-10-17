@@ -30,4 +30,4 @@ The focus of cloud-scale analytics is based on key management principles:
 ## Next steps
 
 > [!div class="nextstepaction"]
-[Authentication for cloud-scale analytics in Azure](./secure-authentication.md)
+> [Authentication for cloud-scale analytics in Azure](./secure-authentication.md)

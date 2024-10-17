@@ -82,4 +82,4 @@ When dictated by data residency rules or a requirement that you keep data close 
 ## Next steps
 
 > [!div class="nextstepaction"]
-[Data lake zones and containers](../../cloud-scale-analytics/best-practices/data-lake-zones.md)
+> [Data lake zones and containers](../../cloud-scale-analytics/best-practices/data-lake-zones.md)

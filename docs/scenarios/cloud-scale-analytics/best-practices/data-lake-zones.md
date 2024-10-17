@@ -228,4 +228,4 @@ When these data products mature, your enterprise can promote these data products
 ## Next steps
 
 > [!div class="nextstepaction"]
-- [Key considerations for Azure Data Lake Storage](../../data-management/best-practices/data-lake-key-considerations.md)
+> [Key considerations for Azure Data Lake Storage](../../data-management/best-practices/data-lake-key-considerations.md)
