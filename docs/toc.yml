@@ -164,16 +164,14 @@ items:
         href: strategy/define-sovereignty-strategy.md
       - name: Define security strategy
         href: strategy/define-security-strategy.md
-      - name: Responsible AI
+      - name: Adopt responsible and trusted AI principles
         href: strategy/responsible-ai.md
       - name: Accelerate cloud adoption with GitHub
         href: scenarios/github-velocity/index.md
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
-
     - name: Strategy antipatterns
       href: antipatterns/strategy-antipatterns.md
-
   - name: Plan
     items:
     - name: Overview

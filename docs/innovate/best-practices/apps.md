@@ -88,7 +88,7 @@ Below you'll find articles to help you get started with each of the tools in thi
   - Chatbots
     - [Choose the right chatbot solution](/azure/bot-service/bot-overview)
     - [Create a bot with Composer](/composer/quickstart-create-bot)
-    - [Create and deploy a Power Virtual Agents bot](/power-virtual-agents/fundamentals-get-started)
+    - [Create and deploy a Microsoft Copilot Studio (formerly Power Virtual Agents) copilot](/microsoft-copilot-studio/fundamentals-get-started)
     - [Create a bot with Bot Framework SDK](/azure/bot-service/bot-service-quickstart-create-bot)
 
 ### Cloud-native applications
