@@ -81,10 +81,10 @@ You can use the guidance discussed in this article to establish a foundational e
 
 ## Next steps
 
-The following guidance focuses on building AI workloads in Azure by using PaaS and infrastructure as a service (IaaS) solutions. Start with PaaS AI workloads. It's the preferred Microsoft approach.
+The next step is to build and deploy workloads to your established AI foundation. Use the following links to find the architecture guidance that meets your needs. Start with platform-as-a-service (PaaS) architectures. PaaS is Microsoft's recommended approach to adopting AI.
 
 > [!div class="nextstepaction"]
-> [PaaS AI workloads](./platform/resource-selection.md)
+> [PaaS AI architecture guidance](./platform/resource-selection.md)
 
 > [!div class="nextstepaction"]
-> [IaaS AI workloads](./infrastructure/compute.md)
+> [IaaS AI architecture guidance](./infrastructure/compute.md)

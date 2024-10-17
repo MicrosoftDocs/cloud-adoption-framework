@@ -112,15 +112,15 @@ Based on your PoC, assign a delivery timeline for your AI opportunities. Create 
 
 ## Next step
 
-The rest of this guidance focuses on building AI workloads in Azure by using PaaS and IaaS solutions. To be successful in Azure, you must first establish your AI foundation.
+The rest of this guidance focuses on building AI workloads in Azure by using PaaS and IaaS solutions. To be successful in Azure, you must first establish your AI foundation in AI Ready.
 
 > [!div class="nextstepaction"]
 > [AI Ready](ready.md)
 
 For more information about adopting a Microsoft Copilot solution, see these resources:
 
-| Category                    | Copilot Solution                                                                                   |
-|-----------------------------|----------------------------------------------------------------------------------------------------|
+| Category                    | Copilot solution     |
+|-----------------------------|--------------------------------|
 | Enterprise productivity     | [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)                 |
 | Low-code platform           | [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)                   |
 | Role-based agents in Microsoft 365 | - [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot) <br> - [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction) <br> - [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service) <br> - [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance) |
