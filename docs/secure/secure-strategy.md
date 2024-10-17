@@ -3,7 +3,7 @@ title: Integrate security in your cloud adoption strategy
 description: Learn how to adopt security best practices in your cloud adoption strategy
 author: claytonsiemens77
 ms.author: csiemens
-ms.date: 06/24/2024
+ms.date: 11/01/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
