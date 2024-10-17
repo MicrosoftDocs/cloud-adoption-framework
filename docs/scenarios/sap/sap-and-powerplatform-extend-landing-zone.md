@@ -49,7 +49,7 @@ When you’re looking for ways to automate frequent, mundane, and rules-based ta
 
 
 ### Reporting and analytics with Power BI on SAP HANA Business Warehouse
-For real-time analytics, dynamic data visualization, and timely decision-making on SAP Business Warehouse, follow this guide to establish the connectivity:
+For real-time analytics, dynamic data visualization, and timely decision-making on SAP Business Warehouse, see [PowerQuery SAP Business Warehouse Application Server connector](/power-query/connectors/sap-bw/application-setup-and-connect)
 
 - [Power Query SAP Business Warehouse Application Server connector - Power Query | Microsoft Learn](https://learn.microsoft.com/power-query/connectors/sap-bw/application-setup-and-connect)  
 
