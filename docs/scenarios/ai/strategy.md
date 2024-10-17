@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI Strategy - Recommendations to develop an AI adoption strategy
 
-An AI strategy outlines your approach to AI adoption. It helps you identify where AI can add value, select the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success.
+An AI strategy outlines your approach to AI adoption. It helps you identify where AI can add value, select the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success. Create an [AI center of excellence](./center-of-excellence.md) (AI CoE), or appoint an AI lead to oversee your AI adoption.
 
 :::image type="content" source="./images/aistrategy.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Strategy. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aistrategy.svg" border="false":::
 
@@ -82,7 +82,7 @@ An AI data strategy outlines data collection, storage, and usage practices that 
 
 A responsible AI strategy outlines your role in ensuring that AI solutions remain trustworthy and beneficial for all users. You and your AI provider, in this case Microsoft, share this responsibility. Your responsibilities vary depending on whether you use software as a service (SaaS), such as Microsoft Copilots, or an AI platform as a service (PaaS), like Azure AI Studio.
 
-- *Establish AI accountability.* As AI technology and regulations advance, assign someone to monitor and govern these changes. Create an [AI center of excellence](./center-of-excellence.md) (AI CoE), or appoint an AI lead to oversee your AI adoption.
+- *Establish AI accountability.* As AI technology and regulations advance, assign someone to monitor and govern these changes. It's typically a responsibility of the AI CoE or an AI lead.
 
 - *Align with established responsible AI principles.* Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles that adhere to the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf). Use these as business goals to define success and govern your AI adoption.
 
@@ -99,7 +99,7 @@ A responsible AI strategy outlines your role in ensuring that AI solutions remai
 
 Example AI use cases show how AI can solve specific problems and improve processes within your business. These examples cover a range of applications, from automating tasks to analyzing data for better decision-making. By reviewing AI use cases, you can gain insights into potential AI applications relevant to your industry.
 
-| **Generative AI**| **Non-generative AI** |
+| Generative AI| Non-generative AI |
 | --- | ---|
 | Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data. |
 | E-commerce platforms: Generate personalized product recommendations and tailored shopping experiences. | Process automation: Automate routine tasks and workflows that don't require content generation, such as customer service bots. |
