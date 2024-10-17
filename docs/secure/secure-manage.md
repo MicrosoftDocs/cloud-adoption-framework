@@ -1,5 +1,5 @@
 ---
-title: Manage your cloud estate with enhanced security
+title: Manage Your Cloud Estate with Enhanced Security
 description: Learn how to adopt security best practices during your cloud estate management phase. Manage incident preparedness and response, confidentiality, and more. 
 author: claytonsiemens77
 ms.author: csiemens
@@ -20,13 +20,13 @@ During the Manage phase of your cloud adoption journey, you should have a robust
 
 - **Assume breach:** Assuming that there's a breach in one or more of your systems is a key tenet of proactive detection and the driver of threat hunting and detection engineering. *Threat hunting* uses a hypothesis-based approach - that a breach has already happened in more particular form - to intelligently analyze your systems through tooling in an attempt to prove or disprove that hypothesis. *Detection engineering* is the practice of developing specialized detection mechanisms to augment observability platforms that aren't equipped to detect new and novel cyberattacks. 
 
-- **Verify explicitly:** Moving from a mindset of "trust-by-default" to "trust-by-exception" means that you need to be able to validate trusted activities through visibility. Augmenting your observability platform with intelligent identity and access monitoring can help you detect anomalous behavior in real time.
+- **Verify explicitly:** Moving from a mindset of "trust by default" to "trust by exception" means that you need to be able to validate trusted activities through visibility. Augmenting your observability platform with intelligent identity and access monitoring can help you detect anomalous behavior in real time.
 
 ### Azure facilitation
 
 - [Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview) provides advanced threat hunting across multiple domains, like endpoints, cloud apps, and identity. 
 
-## Managing incident preparedness and response
+## Manage incident preparedness and response
 
 - **Incident preparedness:** 
 
@@ -36,23 +36,23 @@ During the Manage phase of your cloud adoption journey, you should have a robust
     
     - Increase the depth of your visibility into security risks in your environment by implementing an extended detection and response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [security operations](./secure-teams-and-roles.md) team's efficiency.
 
-- **Incident response planning:** Modernizing your observability platform is essential for incident detection. It's also the foundation for maintaining your incident response plan. Your incident response plan must be a living document that's updated regularly. It needs to keep up to date with your threat hunting and detection engineering efforts and with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base. 
+- **Incident response planning:** Modernizing your observability platform is essential for incident detection. It's also the foundation for maintaining your incident response plan. Your incident response plan must be a living document that's updated regularly. It needs to stay up to date with your threat hunting and detection engineering efforts and with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base. 
 
   In addition to maintaining your incident response plans, you also need to have fully developed incident response and disaster recovery plans.
 
-- **Business continuity and disaster recovery:** Develop and test disaster recovery plans to ensure that your cloud environment is resilient and can quickly recover from incidents. Include backup and recovery strategies that support business continuity. In many cases, individual workloads in your environment will have unique recovery targets and processes, so having workload-based plans, rather than a single plan that covers all facets of the business, is a good strategy. Refer to the Well-Architected Framework [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) for workload-focused guidance on this topic.
+- **Business continuity and disaster recovery:** Develop and test disaster recovery plans to ensure that your cloud environment is resilient and can quickly recover from incidents. Include backup and recovery strategies that support business continuity. In many cases, individual workloads in your environment have unique recovery targets and processes, so having workload-based plans, rather than a single plan that covers all facets of the business, is a good strategy. Refer to the Well-Architected Framework [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) for workload-focused guidance on this topic.
 
 ### Azure facilitation
 
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offers plans that monitor and protect many workload resources, like [servers](/azure/defender-for-cloud/plan-defender-for-servers-select-plan), [storage](/azure/defender-for-cloud/defender-for-storage-introduction), [containers](/azure/defender-for-cloud/defender-for-containers-introduction), [SQL databases](/azure/defender-for-cloud/quickstart-enable-database-protections), [DNS](/azure/defender-for-cloud/defender-for-dns-introduction), and more. These plans enable you to discover deep insights that you might otherwise be unable to find with your existing monitoring solution.
+- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offers plans that monitor and protect many workload resources, like [servers](/azure/defender-for-cloud/plan-defender-for-servers-select-plan), [storage](/azure/defender-for-cloud/defender-for-storage-introduction), [containers](/azure/defender-for-cloud/defender-for-containers-introduction), [SQL databases](/azure/defender-for-cloud/quickstart-enable-database-protections), and [DNS](/azure/defender-for-cloud/defender-for-dns-introduction). These plans enable you to discover deep insights that you might otherwise be unable to find with your existing monitoring solution.
 
-    - Defender for Server includes [Microsoft Defender Vulnerability Management](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) for vulnerability scanning against your Azure-based or Azure Arc-enabled VMs.
+    - Defender for Servers includes [Microsoft Defender Vulnerability Management](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) for vulnerability scanning against your Azure-based or Azure Arc-enabled VMs.
 
 - [Microsoft Sentinel](/azure/sentinel/overview) is the Microsoft cloud-native SIEM and SOAR solution. You can use it as a standalone solution. It also integrates with Microsoft Defender to provide a [unified security operations platform](/azure/sentinel/microsoft-sentinel-defender-portal).
 
 - [Automated investigation and response in Defender XDR](/defender-xdr/m365d-autoir) helps your security operations team address threats more efficiently and effectively by providing automated detection and self-healing capabilities for many scenarios.
 
-## Managing confidentiality
+## Manage confidentiality
 
 The ongoing management of your security posture as it relates to confidentiality involves regularly performing well-designed monitoring and auditing practices, maintaining codified audit procedures, and looking for continuous improvement opportunities.
 
@@ -60,7 +60,7 @@ The ongoing management of your security posture as it relates to confidentiality
 
 - **Documenting and institutionalizing audit procedures:** Documenting audit procedures is crucial for consistency and accountability. Institutionalizing these procedures ensures that audits are conducted systematically and regularly. Detailed documentation should include the scope of the audit, methodologies, tools used, and the frequency of audits. This practice helps you maintain a high standard of security. It also provides a clear trail for compliance and regulatory purposes.
 
-- **Some best practices for enhancing confidentiality**
+- **Best practices for enhancing confidentiality include:**
 
     - *Separation of duties (SoD):* Implementing SoD helps prevent conflicts of interest and reduces the risk of fraud. Dividing responsibilities among different individuals ensures that no single person has control over all aspects of a critical process.
 
@@ -68,13 +68,13 @@ The ongoing management of your security posture as it relates to confidentiality
 
 ### Azure facilitation
 
-- [Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) can help you detect and prevent exfiltration through common processes used by attackers today.  Microsoft Purview DLP can detect adversaries that use any first time use or cloud application to exfiltrate sensitive data from endpoint devices. Microsoft Purview DLP can also identify the execution of these tools when adversaries rename them to remain undetected.
+- [Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) can help you detect and prevent exfiltration through common processes used by attackers. Purview DLP can detect adversaries that use any first time use or cloud application to exfiltrate sensitive data from endpoint devices. Purview DLP can also identify the execution of these tools when adversaries rename them to remain undetected.
 
 - [Microsoft Purview Insider Risk Management](/purview/insider-risk-management-solution-overview) can help you detect and prevent potential malicious or inadvertent insider risks, such as IP theft, data leakage, and security violations.
 
-## Managing integrity
+## Manage integrity
 
-Managing your data and system integrity requires robust monitoring with specific configurations for detecting unauthorized changes to your assets. Other key tenets of the manage phase are adopting continuous improvement and training practices.
+Managing your data and system integrity requires robust monitoring with specific configurations for detecting unauthorized changes to your assets. Other key tenets of the Manage phase are adopting continuous improvement and training practices.
 
 - **Data integrity monitoring:** Effectively monitoring data integrity is a complex task. Intelligent tooling can ease the burden of configuring the appropriate monitoring mechanisms. If you combine intelligent data governance with SIEM and SOAR solutions, you can gain deep insights into activities that are related to your data and automate parts of your incident response plan. Your monitoring should detect anomalous behaviors, including unauthorized access to data stores and changes to data stores. Automated incident responses like immediate lockouts can help minimize the blast radius of malicious activities.
 
@@ -86,7 +86,7 @@ Managing your data and system integrity requires robust monitoring with specific
 
 - [Microsoft Purview health management](/purview/data-estate-health) can help you codify data standards and measure how the data in your estate complies with those standards over time. It provides reports to track data health and helps data owners remediate issues that arise.
 
-## Managing availability
+## Manage availability
 
 Managing the availability of your cloud estate requires robust, proactive availability monitoring that's validated through testing.
 
@@ -96,9 +96,9 @@ Managing the availability of your cloud estate requires robust, proactive availa
 
 ### Azure facilitation
 
-In addition to the Microsoft Defender for Cloud solutions discussed previously, consider the following solutions:
+In addition to the Defender for Cloud solutions discussed previously, consider the following solutions:
 
-- [Autoinstrumentation for Azure Monitor Application Insights](/azure/azure-monitor/app/codeless-overview) allows you to easily instrument your application for rich telemetry monitoring by using [Application Insights](/azure/azure-monitor/app/app-insights-overview). Many Azure-based and on-premises hosting types are supported for autoinstrumentation.
+- [Automatic instrumentation](/azure/azure-monitor/app/codeless-overview) for [Application Insights](/azure/azure-monitor/app/app-insights-overview) allows you to easily instrument your application for rich telemetry monitoring. Many Azure-based and on-premises hosting types are supported for automatic instrumentation.
 
 - [Azure Chaos Studio](/azure/chaos-studio/chaos-studio-overview) is a managed service that uses chaos engineering to help you measure, understand, and improve your cloud application and service resilience.
 
