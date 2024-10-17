@@ -2116,12 +2116,12 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/monitor/cloud-models-monitor-overview.md",
+         "source_path": "docs/manage/monitor/cloud-models-monitor-overview.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/monitor/data-collection.md",
+         "source_path": "docs/manage/monitor/data-collection.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
          "redirect_document_id": false
       }
