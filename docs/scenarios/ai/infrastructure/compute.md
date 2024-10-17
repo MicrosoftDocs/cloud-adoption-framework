@@ -40,7 +40,7 @@ Selecting an appropriate virtual machine size aligns with your AI model complexi
 
 Compute orchestration solutions facilitate the management of complex AI tasks across virtual machine clusters. Select an orchestration tool based on your scheduling, containerization, and scaling needs to improve operations and scalability.
 
-- *Use Azure CycleCloud for open-source schedulers.* Azure CycleCloud is ideal for open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It provides flexible cluster management, customizable configurations, and advanced scheduling capabilities. Virtual machines within the cluster need configuration for AI workload execution. For more information, see [Azure HPC deployment](https://github.com/Azure/azurehpc#azurehpc).
+- *Use Azure CycleCloud for open-source schedulers.* Azure CycleCloud is ideal for open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It provides flexible cluster management, customizable configurations, and advanced scheduling capabilities. Virtual machines within the cluster need configuration for AI workload execution.
 
 - *Use Azure Batch for built-in scheduling.* Azure Batch offers built-in scheduling features with no need for extra software installation or management. It has a consumption pricing model and no licensing fees. It also supports containerized tasks natively. For deployment best practices, see [Azure Batch Accelerator](https://github.com/Azure/bacc).
 

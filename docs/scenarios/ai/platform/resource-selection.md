@@ -28,7 +28,7 @@ In a typical RAG workload, (1) the workload receives the user query. (2) An orch
 
 Choosing the right resources for generative AI ensures efficient data processing, retrieval, and model execution. Use the following recommendations as framework to build generative RAG workloads.
 
-- *Pick a generative AI platform.* Use Azure OpenAI Service or Azure AI Studio to deploy and manage generative AI models. [Azure OpenAI Service](/azure/ai-services/openai/overview) offers access to [OpenAI models](/azure/ai-services/openai/concepts/models) private networking, and content filtering. [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is a code-first platform for developing generative AI workloads. It provides provides tools for building and deploying AI applications, with a large model catalog, prompt flow, fine-tuning, content safety filters, and more.
+- *Pick a generative AI platform.* Use Azure OpenAI Service or Azure AI Studio to deploy and manage generative AI models. [Azure OpenAI Service](/azure/ai-services/openai/overview) offers access to [OpenAI models](/azure/ai-services/openai/concepts/models) private networking, and content filtering. [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is a code-first platform for developing generative AI workloads. It provides tools for building and deploying AI applications, with a large model catalog, prompt flow, fine-tuning, content safety filters, and more.
 
 - *Choose the right AI compute type.* In Azure AI Studio, you need [compute instances](/azure/ai-studio/how-to/create-manage-compute) for prompt flow, creating an index, and opening Visual Studio Code (Web or Desktop) in Azure AI Studio. Use the compute type that meets your performance and budget needs.
 
@@ -38,7 +38,7 @@ Choosing the right resources for generative AI ensures efficient data processing
 
 - *Choose a data source for grounding data.* For images, audio, video, and large datasets, use Azure Blob Storage to host grounding data. Alternatively, use databases supported by [Azure AI Search](/azure/search/search-indexer-overview#supported-data-sources) or [vector databases](/dotnet/ai/conceptual/vector-databases#available-vector-database-solutions).
 
-- *Pick a compute platform for you application.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right  platform for your workload.
+- *Pick a compute platform.* Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to pick the right  platform for your workload.
 
 ## Select resources for nongenerative AI workloads
 
@@ -52,7 +52,7 @@ Selecting the correct Azure resources for nongenerative AI workloads is essentia
 
 - *Pick a nongenerative AI platform.* Azure AI services and Azure Machine Learning both allow you to integrate AI models into workloads. [Azure AI services](/azure/ai-services/what-are-ai-services) provide more than 10 AI services. Developers don't need data science skills to use and consume AI models in workloads. To pick the right Azure AI service, see [Choose an Azure AI services technology](/azure/architecture/data-guide/technology-choices/cognitive-services). [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) provides a platform to build machine learning models with your own data and consume those models in AI workloads.
 
-- *Choose the right AI compute.* For Azure Machine Learning, you need [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run a job or host an endpoint. Use the compute type that meets your performance and budget needs. Azure AI services doesn't require compute resources.
+- *Choose the right AI compute.* For Azure Machine Learning, you need [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run a job or host an endpoint. Use the compute type that meets your performance and budget needs. Azure AI services don't require compute resources.
 
 - *Pick a data source.* For Azure Machine Learning, use one of the supported [data sources](/azure/machine-learning/how-to-access-data#supported-data-storage-service-types) to host your training data. For Azure AI services, many of the services don't require fine-tuning data, and some, like Azure AI Custom Vision, provide an option to upload local files to a managed data storage solution.
 

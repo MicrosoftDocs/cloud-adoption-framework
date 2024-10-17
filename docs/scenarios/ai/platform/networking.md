@@ -15,13 +15,13 @@ This article provides recommendations for configuring networking for AI workload
 
 [Azure AI Studio](/azure/ai-studio/how-to/configure-managed-network) and [Azure Machine Learning](/azure/machine-learning/how-to-managed-network) deploy to Microsoft-managed virtual networks and deploy required dependent services. The managed virtual networks use private endpoints to access supporting Azure services like Azure Storage, Azure Key Vault, and Azure Container Registry. Use the links to view the network architectures of these services so you can best configure your virtual network.
 
-Azure has detailed networking guidance for each Azure AI platform. Use the following table to find the right guidance to configure your virtual networks.
+Azure has networking guidance for each Azure AI platform. Use the following table to find the right guidance to configure your virtual networks.
 
 | AI platform | Virtual network recommendations |
 | --- | --- |
 | Azure AI Studio | Configure the [managed network](/azure/ai-studio/how-to/configure-managed-network) and use [private endpoints](/azure/ai-studio/how-to/configure-private-link)|
 | Azure OpenAI | Restrict access to select [virtual networks](/azure/ai-services/cognitive-services-virtual-networks#scenarios) or use [private endpoints](/azure/ai-services/cognitive-services-virtual-networks#use-private-endpoints) |
-| Azure Machine Learning | Create a [secure workspace](/azure/machine-learning/tutorial-create-secure-workspace-vnet) with a virtual network. [Plan for network isolation](/azure/machine-learning/how-to-network-isolation-planning).Follow the [security best practices](/azure/machine-learning/concept-enterprise-security) for Azure Machine Learning |
+| Azure Machine Learning | Create a [secure workspace](/azure/machine-learning/tutorial-create-secure-workspace-vnet) with a virtual network. [Plan for network isolation](/azure/machine-learning/how-to-network-isolation-planning). Follow the [security best practices](/azure/machine-learning/concept-enterprise-security) for Azure Machine Learning |
 | Azure AI services | Restrict access to select [virtual networks](/azure/ai-services/cognitive-services-virtual-networks#scenarios) or use [private endpoints](/azure/ai-services/cognitive-services-virtual-networks#use-private-endpoints) |
 
 ## Secure virtual networks
@@ -32,9 +32,7 @@ This section provides best practices for securing your AI workloads on Azure. It
 
 - *Consider creating private endpoints for AI service portals.* Private endpoints provide secure, private access to PaaS portals like Azure AI Studio and Azure Machine Learning studioF. Set up private endpoints for these global portals in a hub virtual network. This configuration provides secure access to public-facing portal interfaces directly from user devices.
 
-Configure the hub for private portal access. In a Hub/Spoke network architecture, set up private endpoints in the hub to centralize access to AI service portals. For vWAN-hub setups with Private DNS resolvers and DNS forwarding, configure this in the vWAN hub for single or multi-region use.
-
-- *Consider enforcing private DNS zones.* Private DNS zones centralize and secure DNS management for accessing PaaS services within your AI network. Set up Azure policies that enforce private DNS zones and require private endpoints to ensure secure, internal DNS resolutions. If you do not have central Private DNS Zones, the DNS forwarding will not work until you also add conditional forwarding manually. For example, see [using custom DNS](/azure/machine-learning/how-to-custom-dns) with Azure AI Studio hubs and Azure Machine Learning workspace.
+- *Consider enforcing private DNS zones.* Private DNS zones centralize and secure DNS management for accessing PaaS services within your AI network. Set up Azure policies that enforce private DNS zones and require private endpoints to ensure secure, internal DNS resolutions. If you don't have central Private DNS Zones, the DNS forwarding doesn't work until you add conditional forwarding manually. For example, see [using custom DNS](/azure/machine-learning/how-to-custom-dns) with Azure AI Studio hubs and Azure Machine Learning workspace.
 
 - *Enable custom DNS servers and private endpoints for PaaS services.* Custom DNS servers manage PaaS connectivity within the network, bypassing public DNS. Configure private DNS zones in Azure to resolve PaaS service names securely and route all traffic through private networking channels.
 
@@ -48,7 +46,7 @@ Efficient and secure connectivity is crucial for seamless AI development and dep
 
 - *Consider a generative AI gateway.* Consider using Azure API Management (APIM) as a generative AI gateway within your virtual networks. A generative AI gateway sits between your front-end and the AI endpoints. Application Gateway, WAF policies, and APIM within the virtual network is an established [architecture](https://github.com/Azure/apim-landing-zone-accelerator/blob/main/scenarios/workload-genai/README.md#scenario-3-azure-api-management---generative-ai-resources-as-backend) in generative AI solutions. For more information, see [AI Hub architecture](https://github.com/Azure-Samples/ai-hub-gateway-solution-accelerator#ai-hub-gateway-landing-zone-accelerator) and [Deploy Azure API Management instance to multiple Azure regions](/azure/api-management/api-management-howto-deploy-multi-region).
 
-*Use HTTPS for internet to Azure connectivity.* Secure connections using SSL and TLS protocols help protect data integrity and confidentiality for AI workloads connecting from the internet. Implement HTTPS through Azure Application Gateway or Azure Front Door. Both services provide encrypted, secure tunnels for internet-originating connections.
+*Use HTTPS for internet to Azure connectivity.* Secure connections using TLS protocols help protect data integrity and confidentiality for AI workloads connecting from the internet. Implement HTTPS through Azure Application Gateway or Azure Front Door. Both services provide encrypted, secure tunnels for internet-originating connections.
 
 ## Next step
 

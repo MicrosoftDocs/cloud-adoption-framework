@@ -31,7 +31,7 @@ items:
       items:
       - name: Implementation options
         items:
-        - name: CycleCloud Workspace for SLURM 
+        - name: CycleCloud Workspace for Slurm 
           href: infrastructure/cycle-cloud.md
       - name: Design areas
         items:
