@@ -34,7 +34,7 @@ To plan for workload management and monitoring, consider the following factors:
   - A traffic-light model to represent health.
   - How to respond to failures across workload components.
 
-For more information, see [Cloud monitoring guide: Monitoring strategy for cloud deployment models](../../../manage/monitor/cloud-models-monitor-overview.md).
+For more information, see [Monitoring in a cloud environment](../../../manage/monitor/monitoring.md).
 
 ## Workload management and monitoring recommendations
 

@@ -2106,12 +2106,12 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/manage/monitor/platform-overview.md",
-         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring#azure_facilitation",
+         "source_path": "docs/manage/monitor/observability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/manage/monitor/observability.md",
+         "source_path": "docs/strategy/monitoring-strategy.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
          "redirect_document_id": false
       }
