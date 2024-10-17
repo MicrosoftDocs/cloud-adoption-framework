@@ -47,13 +47,12 @@ items:
             href: infrastructure/management.md
           - name: Security
             href: infrastructure/security.md
-
-  - name: Secure AI
-    href: secure.md
   - name: Govern AI
     href: govern.md
   - name: Manage AI 
-    href: manage.md
+    href: manage.md  
+  - name: Secure AI
+    href: secure.md
   - name: Additional resources
     items:
       - name: AI Center of Excellence
