@@ -9,11 +9,9 @@ ms.topic: conceptual
 
 # Architecture guidance to build AI workloads on Azure
 
-The Azure Architecture Center has reference architectures and guides to build generative AI and nongenerative AI workloads. The following tables provides links to implementation guidance for building generative AI applications.
+The Azure Architecture Center has reference architectures and guides to build generative AI and nongenerative AI workloads. The following table provides links to implementation guidance for building generative AI applications. For Azure landing zone users, start with the [Baseline Azure OpenAI architecture in Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
 
-For Azure landing zone users, start with the [Baseline Azure OpenAI architecture in Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
-
-## Generative AI
+## Generative AI guidance
 
 | Article | Article type | Target organization |
 |--------------|--------------|-------------|
@@ -26,9 +24,9 @@ For Azure landing zone users, start with the [Baseline Azure OpenAI architecture
 
 ## Nongenerative AI
 
-| Architectures| Article Type | Description |
+| Article | Article type | Target organization |
 |------------|--------------|-------------|
-| [Azure machine learning architectures](/azure/architecture/ai-ml/#azure-machine-learning)| Architectures | Any |
+| [Azure Machine Learning architectures](/azure/architecture/ai-ml/#azure-machine-learning)| Architectures | Any |
 | [Document processing architectures](/azure/architecture/ai-ml/architecture/automate-document-classification-durable-functions) | Architectures | Any |
 | [Video and image classification architecture](/azure/architecture/ai-ml/architecture/analyze-video-computer-vision-machine-learning)| Architectures |Any |
 | [Audio processing architecture](/azure/architecture/ai-ml/openai/architecture/call-center-openai-analytics) | Architecture | Any|
@@ -36,15 +34,17 @@ For Azure landing zone users, start with the [Baseline Azure OpenAI architecture
 | [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2)| Guides|Any |
 | [Team Data Science Process](/azure/architecture/data-science-process/overview) | Guides|Any |
 
-## Understand AI workload design best practices
+## Use the AI design areas as a framework
 
-To understand the level of effort to build AI workloads, see the following articles. They provide organizational guidelines for building AI workloads on Azure:
+The AI design areas organize the AI best practices for organizations using Azure AI platform-as-a-service (PaaS) solutions. They provide organizational guidelines for building AI workloads on Azure.
 
 - [AI resource selection](./resource-selection.md)
 - [AI networking](./compute.md)
 - [AI governance](./compute.md)
 - [AI management](./compute.md)
 - [AI security](./compute.md)
+
+ Use the AI design area articles as a framework for building AI workloads. Use the articles along side the reference architectures. Each design area provides recommendations for generative and nongenerative AI workloads on Azure.
 
 > [!div class="nextstepaction"]
 > [AI resource selection](./resource-selection.md)
