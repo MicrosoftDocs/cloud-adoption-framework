@@ -9,9 +9,11 @@ ms.topic: conceptual
 
 # Architecture guidance to build AI workloads on Azure
 
-The Azure Architecture Center has reference architectures and guides to build generative AI and nongenerative AI workloads. The following table provides links to implementation guidance for building generative AI applications. For Azure landing zone users, start with the [Baseline Azure OpenAI architecture in Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
+The Azure Architecture Center has reference architectures and guides to build generative AI and nongenerative AI workloads. These architectures and guides help you build AI workloads in Azure. In [AI Ready](../ready.md#establish-ai-governance), you created a resource hierarchy that divides AI workloads, at least, into internal and internet-facing workloads. You deploy these architecture resources to workload subscriptions in either the internal or internet-facing management groups.
 
-## Generative AI guidance
+The following table provides links to implementation guidance for building generative AI applications. For Azure landing zone users, start with the [Baseline Azure OpenAI architecture in Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
+
+## Generative AI architectures and guides
 
 | Article | Article type | Target organization |
 |--------------|--------------|-------------|
@@ -22,7 +24,7 @@ The Azure Architecture Center has reference architectures and guides to build ge
 | [Developing RAG solutions](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) | Guides| Any |
 | [Proxy Azure OpenAI usage](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) | Guide| Any |
 
-## Nongenerative AI
+## Nongenerative AI architectures and guides
 
 | Article | Article type | Target organization |
 |------------|--------------|-------------|
