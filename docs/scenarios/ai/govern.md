@@ -9,15 +9,19 @@ ms.topic: conceptual
 
 # Govern AI – Recommendations for governing AI
 
-This guide offers recommendations for developing a strong AI governance framework at the business level. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). It also aligns with the governance practices defined in [CAF Govern](azure/cloud-adoption-framework/govern/). The goal is to create a unified governance approach that effectively manages AI risks by integrating AI risk management into broader enterprise risk management strategies. When you address AI risks alongside other risks, such as cybersecurity and privacy, it supports a more cohesive and efficient organizational outcome.
+TThis guide outlines recommendations for developing a comprehensive AI governance framework at the business level. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). It also aligns with the framework in [CAF Govern](azure/cloud-adoption-framework/govern/).
+
+This guidance aims to help you integrate AI risk management into broader risk management strategies. This integration prodives more cohesive handling of AI, cybersecurity, and privacy risks for a unified governance approach.
 
 :::image type="content" source="./images/governai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Govern AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/governai.svg" border="false":::
 
 ## Assess AI organizational risks
 
-Assessing AI organizational risks involves identifying potential negative outcomes that AI technologies might introduce to your business. Proactively addressing these risks builds trust in AI workloads and ensures that AI enhances business operations without unintended negative consequences. Follow these recommendations:
+AI risk assessment helps identify and address potential risks AI technologies might introduce. Effective AI risk management builds trust and minimizes unintended consequences.
 
-- *Set Responsible AI principles as targets.* Microsoft's Responsible AI principles are a framework to assess and mitigate AI risks. These principles correspond to the characteristics of trustworthy AI in the NIST AI RMF. Use the definition and risk assessment question to identify AI risks in your business.
+- *Understand the AI workloads.* To mitigate AI risks, you must understand your AI workloads. By clarifying the scope and purpose of each AI workload, you can map associated risks. This should include any assumptions and limitations related to the AI workload.
+
+- *Use Responsible AI principles to identify risks.* These principles provide a framework for assessing AI risks. Use the table below to identify and mitigate risks through a structured assessment of AI principles, such as privacy, security, reliability, fairness, inclusiveness, transparency, and accountability.
 
     | Responsible AI principle | Definition | Risk assessment question |
     |--------------------------|------------|--------------------------|
@@ -28,65 +32,32 @@ Assessing AI organizational risks involves identifying potential negative outcom
     | Transparency | AI workloads should be understandable. | How can the organization ensure users understand and responsibly use AI workloads? |
     | Accountability | People should be accountable for AI workloads. | How can the organization establish oversight to ensure accountability and control? |
 
-- *Understand the AI workloads.* By clarifying the scope and purpose of each workload, you can more easily map associated risks, such as potential biases or technical limitations that could lead to failures. This should include any assumptions and limitations related to the AI workload.
+- *Identify AI risks.* Start by evaluating the security risks of AI workloads, including potential data breaches, unauthorized access, or misuse. Consult stakeholders to uncover less visible risks, and assess both qualitative and quantitative impacts, including reputational risks, to determine the organization’s risk tolerance.
 
-- *Identify AI risks.* Start by identifying baseline security risks to AI workloads. Assess whether your AI workloads are vulnerable to data breaches, unauthorized access, or misuse. Perform a context analysis to identify possible negative outcomes that could result from AI malfunctions or misuse. Consult external stakeholders and communities affected by the AI. Use their insights to identify risks that might not be visible. Assess both qualitative and quantitative costs, including nonmonetary impacts like reputational harm. Document these to evaluate the organization’s tolerance for such risks.
-
-- *Identify risks from external dependencies.* Assess risks related to third-party data sources, software, and integrations across the business. These risks might include security vulnerabilities, bias, and intellectual property issues. Develop policies to manage external risks and ensure that third-party components align with the organization’s privacy and compliance standards. By addressing these risks proactively, your organization strengthens its AI governance framework and builds resilience for future AI adoption.
+- *Identify risks from external dependencies.* Assess risks related to third-party data sources, software, and integrations. Address issues like security vulnerabilities, bias, and intellectual property risks by establishing policies that ensure alignment with organizational privacy and compliance standards.
 
 - *Assess integration risks.* Evaluate AI workloads integrate with existing workloads and processes. Document potential risks, such as dependency on other workloads, increased complexity, or incompatibilities that could impact functionality.
 
 ## Document AI governance policies
 
-AI governance policies create a structured framework for responsible AI usage within an organization. These policies provide clear guidelines to align AI operations with ethical standards, regulatory requirements, and business goals. By establishing governance policies, businesses can control AI-related risks, enhance accountability, and foster trust among stakeholders.
+AI governance policies create a structured framework for responsible AI usage within an organization. These policies provide clear guidelines to align AI operations with ethical standards, regulatory requirements, and business goals.
 
-### Define policies for selecting and onboard models
-
-- *Establish policies for selecting AI models.* Policies should outline criteria for choosing models that meet organizational values, capabilities, and cost constraints. Review potential models for alignment with risk tolerance and intended task requirements.
-
-- *Onboard new models with structured policies.* A formal process for model onboarding maintains consistency in model justification, validation, and approval. Use sandbox environments for initial experiments, then validate and review models in the production catalog to avoid duplication.
-
-### Define policies for using third-party tools and data
-
-- *Set controls for third-party tools.* A vetting process for third-party tools safeguards against security, compliance, and alignment risks. Policies should include guidelines for data privacy, security, and ethical standards when using external datasets.
-
-- *Define data sensitivity standards.* Keeping sensitive and public data separate is essential for mitigating AI risks. Create policies around data handling and separation.
-
-- *Define data quality standards.* A "golden dataset" provides a reliable benchmark for AI model testing and evaluation. Establish clear policies for data consistency and quality to ensure high performance and trustworthy outputs.
-
-### Define policies for maintain and monitor models
-
-- *Specify retraining frequency by use case.* Frequent retraining supports accuracy for high-risk AI workloads. Define guidelines that consider the use case and risk level of each model, especially for sectors like healthcare and finance.
-
-- *Monitor for performance degradation.* Monitoring model performance over time helps detect issues before they affect outcomes. Document benchmarks, and if a model’s performance declines, initiate a retraining or review process.
-
-### Define policies for regulatory compliance
-
-- *Comply with regional legal requirements.* Understanding regional laws ensures AI operations remain compliant across locations. Research applicable regulations for each deployment area, such as data privacy laws, ethical standards, and industry regulations.
-
-- *Develop region-specific policies.* Tailoring AI policies to regional considerations supports compliance with local standards. Policies might include language support, data storage protocols, and cultural adaptations.
-
-- *Adapt AI for regional variability.* Flexibility in AI workloads allows for location-specific functionality adjustments. For global operations, document region-specific adaptations like localized training data and feature restrictions.
-
-### Define policies for user guidelines
-
-- *Define risk mitigation strategies for misuse.* Misuse prevention policies help protect against intentional or unintentional harms. Outline possible misuse scenarios and incorporate controls, such as restricted functionalities or misuse detection features.
-
-- *Set user conduct guidelines.* User agreements clarify acceptable behaviors when interacting with the AI workload, reducing the risk of misuse. Draft clear terms of use to communicate standards and support responsible AI interaction.
-
-### Define policies for AI integration and replacement
-
-- *Outline integration policies.* Integration guidelines ensure AI workloads maintain data integrity and security during workload interfacing. Specify technical requirements, data-sharing protocols, and security measures.
-
-- *Plan for transition and replacement.* Transition policies provide structure when replacing old processes with AI workloads. Outline steps for phasing out legacy processes, training staff, and monitoring performance throughout the change.
+| AI governance policy area | AI governance policy recommendations |
+|-----------|----------------------|
+| Define policies for selecting and onboarding models | ▪ *Establish policies for selecting AI models.* Policies should outline criteria for choosing models that meet organizational values, capabilities, and cost constraints. Review potential models for alignment with risk tolerance and intended task requirements.<br><br> ▪ *Onboard new models with structured policies.* A formal process for model onboarding maintains consistency in model justification, validation, and approval. Use sandbox environments for initial experiments, then validate and review models in the production catalog to avoid duplication. |
+| Define policies for using third-party tools and data | ▪ *Set controls for third-party tools.* A vetting process for third-party tools safeguards against security, compliance, and alignment risks. Policies should include guidelines for data privacy, security, and ethical standards when using external datasets.<br><br> ▪ *Define data sensitivity standards.* Keeping sensitive and public data separate is essential for mitigating AI risks. Create policies around data handling and separation.<br><br> ▪ *Define data quality standards.* A "golden dataset" provides a reliable benchmark for AI model testing and evaluation. Establish clear policies for data consistency and quality to ensure high performance and trustworthy outputs. |
+| Define policies for maintaining and monitoring models | ▪ *Specify retraining frequency by use case.* Frequent retraining supports accuracy for high-risk AI workloads. Define guidelines that consider the use case and risk level of each model, especially for sectors like healthcare and finance.<br><br> ▪ *Monitor for performance degradation.* Monitoring model performance over time helps detect issues before they affect outcomes. Document benchmarks, and if a model’s performance declines, initiate a retraining or review process. |
+| Define policies for regulatory compliance     | ▪ *Comply with regional legal requirements.* Understanding regional laws ensures AI operations remain compliant across locations. Research applicable regulations for each deployment area, such as data privacy laws, ethical standards, and industry regulations.<br><br> ▪ *Develop region-specific policies.* Tailoring AI policies to regional considerations supports compliance with local standards. Policies might include language support, data storage protocols, and cultural adaptations.<br><br> ▪ *Adapt AI for regional variability.* Flexibility in AI workloads allows for location-specific functionality adjustments. For global operations, document region-specific adaptations like localized training data and feature restrictions. |
+| Define policies for user conduct              | ▪ *Define risk mitigation strategies for misuse.* Misuse prevention policies help protect against intentional or unintentional harms. Outline possible misuse scenarios and incorporate controls, such as restricted functionalities or misuse detection features.<br><br> ▪ *Set user conduct guidelines.* User agreements clarify acceptable behaviors when interacting with the AI workload, reducing the risk of misuse. Draft clear terms of use to communicate standards and support responsible AI interaction. |
+| Define policies for AI integration and replacement | ▪ *Outline integration policies.* Integration guidelines ensure AI workloads maintain data integrity and security during workload interfacing. Specify technical requirements, data-sharing protocols, and security measures.<br><br> ▪ *Plan for transition and replacement.* Transition policies provide structure when replacing old processes with AI workloads. Outline steps for phasing out legacy processes, training staff, and monitoring performance throughout the change. |
 
 ## Enforce AI policies
 
-Enforcing AI policies helps an organization maintain consistent and ethical AI practices across its operations. Use automated means where possible. Use manual enforcement where automation has gaps. Effective enforcement eliminates all unapproved AI use.
+Enforcing AI policies promotes consistent and ethical AI practices across the organization. Automate enforcement where possible and conduct manual enforcement where necessary to ensure compliance with governance policies.
 
-- *Automate policy enforcement where possible* Use tools like Azure Policy and Microsoft Purview to enforce policies automatically across AI deployments. Automation reduces human error and ensures consistent workload of policies. Conduct regular assessments to identify areas where automation could be expanded, and prioritize automating the most critical compliance tasks.
+- *Automate policy enforcement where possible* Use platforms like Azure Policy and Microsoft Purview to enforce policies automatically across AI deployments, reducing human error. Regularly assess areas where automation can improve policy adherence.
 
-- *Manually enforce AI policies.* Provide training for staff on AI risks, ethical considerations, and compliance requirements. Ensure that employees understand their role in upholding AI governance policies. Conduct regular workshops or refresher courses to keep staff informed of updates to AI policies and best practices in ethical AI deployment. Where automation is insufficient, actively communicate AI policies to relevant stakeholders, including team members and decision-makers. Implement periodic audits to monitor adherence to policies. Use audit findings to identify gaps, track compliance levels, and make adjustments to the policies or their enforcement as needed.
+- *Manually enforce AI policies.* Provide AI risk and compliance training for employees to ensure they understand their role in AI governance. Regular workshops keep staff updated on AI policies, and periodic audits help monitor adherence and identify areas for improvement.
 
 - *Use workload specific governance guidance.* Detailed security guidance is available for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use this guidance to govern AI models, resources, and data within these workload types.
 
@@ -95,26 +66,20 @@ Enforcing AI policies helps an organization maintain consistent and ethical AI p
     
     > [!div class="nextstepaction"]
     > [Govern IaaS AI workloads](./infrastructure/governance.md)
-    
+
 ## Monitor AI risks
 
-Ongoing AI risk monitoring helps businesses continuously identify and address potential risks that might emerge over time. Established procedures for regular risk evaluation ensure that AI workloads operate as intended and adapt to changing conditions. Monitoring AI risks improves the organization’s ability to manage unforeseen challenges and maintain AI reliability.
+Ongoing risk monitoring enables the organization to identify and address potential risks as they emerge. By establishing procedures for regular risk evaluations, the organization can ensure that AI workloads continue to operate as intended, adapting to changing conditions and challenges.
 
-- *Establish procedures for ongoing risk evaluation.* Ongoing evaluations help identify emerging risks and ensure AI workloads continue to operate as intended. Set up a schedule for regular reviews focused on performance, new risks, and updated risk assessments, engaging stakeholders to understand the AI’s broader impacts. When issues arise, have a response plan ready to reassess risks and make adjustments as necessary.
-
-- *Develop risk-prevention procedures.* Proactive risk prevention reduces the chance of AI workload failures and associated costs. Regularly evaluate both qualitative and quantitative risks, and use these findings to guide deployment decisions throughout the AI lifecycle. Outline specific prevention, detection, and correction actions, updating them as new risks surface.
-
-- *Implement tracking mechanisms for AI risks.* Effective risk tracking allows continuous monitoring of both known and emergent risks. Establish processes, personnel, and documentation to identify and monitor AI risks over time, particularly focusing on intended versus actual performance. In challenging settings, document limitations in tracking, and consider adding alternative methods.
-
-- *Quantify and qualify AI risks.* A balanced approach to measurement provides a clearer understanding of the AI’s risk profile. Choose quantitative metrics (error rates, accuracy) and qualitative indicators (user feedback, ethical concerns) that align with the workload’s purpose. Benchmark performance against industry standards to track the AI’s impacts, trustworthiness, and performance.
+- *Establish procedures for ongoing risk evaluation.* Set up regular reviews to identify new risks, engaging stakeholders to assess the broader impacts of AI. Develop a response plan for issues that arise to allow for risk reassessment and necessary adjustments.
 
 - *Develop a measurement plan.* A clear measurement plan ensures consistent data collection and analysis. Define data collection methods, such as automated logging for operational metrics and surveys for qualitative feedback. Establish the frequency and scope of measurements, focusing on high-risk areas, and create feedback loops to refine risk assessments based on stakeholder input.
 
-- *Monitor key trustworthiness characteristics.* Trustworthiness metrics help ensure AI workloads are reliable, secure, and respectful of privacy. Track performance metrics like accuracy and robustness, and monitor security risks to assess resilience to threats. Regularly evaluate data handling practices for privacy compliance, implementing privacy-enhancing technologies as needed.
+- *Quantify and qualify AI risks.* Choose quantitative metrics (error rates, accuracy) and qualitative indicators (user feedback, ethical concerns) that align with the workload’s purpose. Benchmark performance against industry standards to track the AI’s impacts, trustworthiness, and performance.
 
 - *Document and report measurement outcomes.* Regular documentation and reporting enhance transparency and accountability. Create standardized reports that summarize metrics, findings, and any anomalies to guide decision-making. Share these insights with stakeholders, using them to refine risk mitigation strategies and improve future deployments.
 
-- *Establish independent review processes.* Independent reviews provide objective assessments of AI risks and compliance. Conduct periodic audits with external or uninvolved internal reviewers, and engage subject matter experts to interpret findings and offer more insights. Address any limitations in measurement methods, adjusting them to strengthen the overall risk assessment process.
+- *Establish independent review processes.* Regular independent reviews provide objective assessments of AI risks and compliance, using external or uninvolved internal reviewers. Use findings to strengthen risk assessments and refine governance policies.
 
 ## Next step
 

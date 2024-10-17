@@ -72,7 +72,7 @@ An Azure landing zone provides a starting point to prepare your Azure environmen
 :::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
 *Figure 2. AI applications in the context of an Azure landing zone.*
 
-### Build a custom environment
+### Build an environment
 
 You can use the guidance discussed in this article to establish a foundational environment for your AI workloads. The following diagram illustrates a baseline resource hierarchy for your AI workloads. It uses two distinct management groups to that separate internal AI workloads from internet-facing AI workloads. This separation prevents exposing internal data to the external users.
 
