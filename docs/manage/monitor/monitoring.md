@@ -13,9 +13,7 @@ ms.custom: UpdateFrequency2
 
 Whether you're a business owner, platform owner, or application owner, you need observability of your cloud environment to ensure that your workloads are running smoothly. You need to answer basic questions such as whether your applications are available and performing to your customers' expectations, if you have any security threats that require investigation, and if your consumption costs are within expected range.
 
-*Observability is* a property of a system that's a measure of how well its internal states can be inferred from its external outputs. In addition to deploying service and processes in place to monitor your cloud environment, you need to have the ability to observe and understand the behavior of your services running in the cloud. 
-
-*Monitoring* is the process of collecting, analyzing, and acting on telemetry indicating the health of your platform, resources, and applications. An effective monitoring environment includes your entire cloud estate which may include resources across multiple clouds and on-premises. 
+*Monitoring* is the process of collecting, analyzing, and acting on telemetry indicating the health of your platform, resources, and applications. An effective monitoring environment includes your entire cloud estate which may include resources across multiple clouds and on-premises. *Observability* is a property of a system that's a measure of how well its internal states can be inferred from its external outputs. In addition to deploying service and processes in place to monitor your cloud environment, you need to have the ability to observe and understand the behavior of your services running in the cloud. 
 
 ## Value of monitoring
 Investment in your monitoring environment provides a positive return across multiple aspects of your cloud including the following:
@@ -48,22 +46,22 @@ Monitoring is a multifaceted discipline that requires a combination of tools, pr
 | Cost | Cost monitoring involves tracking cloud spending and resource utilization to identify cost-saving opportunities and prevent budget overruns. This includes monitoring resource usage, identifying underutilized resources, and optimizing resource configurations to reduce costs. |
 
 ## Shared responsibilities
-In an on-premises environment, the customer is responsible for all aspects of monitoring since they own and manage all computing resources. In the cloud, this becomes a shared responsibility between the customer and the cloud provider. Depending on the type of deployment model you choose, the responsibilities for monitoring will move from customer to cloud provider.
+In an on-premises environment, the customer is responsible for all aspects of monitoring since you own and manage all computing resources. In the cloud, this becomes a shared responsibility between the customer and the cloud provider. Depending on the type of deployment model you choose, the responsibilities for monitoring different layers of the cloud stack will move from customer to cloud provider.
 
-In an IaaS deployment, the cloud provider is responsible for monitoring the underlying cloud platform such as the physical infrastructure and virtualization layer. while the customer monitors the operating system, applications, and data running on the virtual machines deployed to the cloud platform. As the deployment model moves up the stack, the cloud provider takes on more responsibility for monitoring the environment. This culminates in a SaaS deployment where the customer abdicates monitoring responsibility to the cloud provider for the entire stack including the application and data. 
-
-The following diagram illustrates the shared responsibilities for monitoring in the cloud across each layer in the stack.
+In an IaaS deployment, the cloud provider is responsible for monitoring the underlying cloud platform such as the physical infrastructure and virtualization layer while the customer monitors the operating system, applications, and data running on the virtual machines deployed to the cloud platform. As the deployment model moves up the stack, the cloud provider takes on more responsibility for monitoring the environment. This culminates in a SaaS deployment where the customer abdicates monitoring responsibility to the cloud provider for the entire stack including the application and data. 
 
 :::image type="content" source="media/monitor/responsibilities.png" alt-text="Diagram showing shared responsibilities for monitoring in the cloud." lightbox="media/monitor/responsibilities.png" border="false":::
 
  While you may use monitoring tools from the cloud provider to monitor your layers of the stack, you're responsible for configuring these tools and analyzing the data they collect. You need to grant access to different members of your organization and create dashboards and alerting to help them distinguish critical information. You may also need to integrate these with other tools and ticketing systems used by your organization.
  
- The cloud provider is obligated to perform the same types of service for their layers of the stack that you provide to your internal customers. They must continuously monitor the health and performance of the platform they've contracted to you, providing you with dashboards and alerting to proactively notify you of any services issues. Must like your internal customers, you don't need visibility into the intricacies of how they monitor their platform, only that they meet the SLAs you've contracted with them.
+ The cloud provider is obligated to perform the same types of service for their layers of the stack that you provide to your internal customers. They must continuously monitor the health and performance of the platform they've contracted to you, providing you with dashboards and alerting to proactively notify you of any services issues. Much like your internal customers, you don't need visibility into the intricacies of how they monitor their platform, only that they meet the SLAs you've contracted with them.
 
 ## Roles and responsibilities
 Most enterprise organizations will have a centralized operations team that's responsible for monitoring the overall health and performance of the cloud environment. This team will typically set the strategies for the overall company, perform centralized configuration of the monitoring environment, and delegate permissions to different stakeholders in your organization that require access to the monitoring data related to their applications and services. 
 
-There are multiple roles in an organization that maintain the monitoring environment and require access to monitoring data to perform their job functions. Each role has different requirements for monitoring data based on their particular responsibilities. Depending on the size of your organization, you may have multiple individuals filling each role or may have one individual that fills multiple roles. Following is a listing of typical roles and the responsibilities of each role.
+There are multiple roles in an organization that maintain the monitoring environment and require access to monitoring data to perform their job functions. Each role has different requirements for monitoring data based on their particular responsibilities. Depending on the size of your organization, you may have multiple individuals filling each role or may have one individual that fills multiple roles. 
+
+While individual organizations may distribute responsibilities differently, the following table shows the roles and responsibilities for a typical organization.
 
 | Role | Description |
 |:---|:---|
@@ -77,7 +75,7 @@ There are multiple roles in an organization that maintain the monitoring environ
 
 
 ## Azure facilitation
-Azure includes multiple services that provide the different types of monitoring required for your cloud environment. These services together provide the features required for a comprehensive monitoring environment. 
+Azure includes multiple services that supporting the different [types of monitoring](#types-of-monitoring) required for your cloud environment. Each is targeted to one or more of the [roles](#roles-and-responsibilities) and together provide the features required for a comprehensive monitoring environment. 
 
 | Service | Description | Type | Roles
 |:---|:---|:---|:---|
