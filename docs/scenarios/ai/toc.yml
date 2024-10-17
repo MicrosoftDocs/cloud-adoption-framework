@@ -12,7 +12,11 @@ items:
     - name: AI on Azure platforms (PaaS)
       items:
       - name: Implementation options
-        href: platform/implementation-options.md
+        items:
+        - name: AI architectures and guides
+          href: platform/architectures.md
+        - name: Azure OpenAI chat baseline architecture in an Azure landing zone
+          href: platform/openai-landing-zone.md
       - name: Design areas
         items:
           - name: Resource selection
