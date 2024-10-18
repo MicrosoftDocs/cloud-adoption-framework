@@ -17,7 +17,7 @@ This guidance aims to help you integrate AI risk management into broader risk ma
 
 ## Assess AI organizational risks
 
-AI risk assessment helps identify and address potential risks AI technologies might introduce. Effective AI risk management builds trust and minimizes unintended consequences.
+AI risk assessment identifies and addresses potential risks introduced by AI technologies. This process builds trust in AI systems and reduces unintended consequences. Addressing organizational risks ensures that AI deployments align with the organization's values, risk tolerance, and operational goals.
 
 - *Understand the AI workloads.* To mitigate AI risks, you must understand your AI workloads. By clarifying the scope and purpose of each AI workload, you can map associated risks. This should include any assumptions and limitations related to the AI workload.
 
@@ -40,7 +40,7 @@ AI risk assessment helps identify and address potential risks AI technologies mi
 
 ## Document AI governance policies
 
-AI governance policies create a structured framework for responsible AI usage within an organization. These policies provide clear guidelines to align AI operations with ethical standards, regulatory requirements, and business goals.
+AI governance policies provide a structured framework for responsible AI usage. These policies align AI activities with ethical standards, regulatory requirements, and business objectives. Documenting policies ensures clear guidelines for managing AI models, data, and operations.
 
 | AI governance policy area | AI governance policy recommendations |
 |-----------|----------------------|
@@ -53,7 +53,7 @@ AI governance policies create a structured framework for responsible AI usage wi
 
 ## Enforce AI governance policies
 
-Enforcing AI policies promotes consistent and ethical AI practices across the organization. Automate enforcement where possible and conduct manual enforcement where necessary to ensure compliance with governance policies.
+Enforcing AI governance policies ensures consistent and ethical AI practices within an organization. Automated tools and manual interventions support policy adherence across deployments. Proper enforcement helps maintain compliance and minimizes human error.
 
 - *Automate policy enforcement where possible* Use platforms like Azure Policy and Microsoft Purview to enforce policies automatically across AI deployments, reducing human error. Regularly assess areas where automation can improve policy adherence.
 
@@ -69,7 +69,7 @@ Enforcing AI policies promotes consistent and ethical AI practices across the or
 
 ## Monitor AI organizational risks
 
-Ongoing risk monitoring enables the organization to identify and address potential risks as they emerge. By establishing procedures for regular risk evaluations, the organization can ensure that AI workloads continue to operate as intended, adapting to changing conditions and challenges.
+Monitoring AI risks enables organizations to identify emerging risks and address them promptly. Regular evaluations ensure AI workloads operate as intended. Consistent monitoring helps organizations adapt to evolving conditions and prevent negative impacts from AI systems.
 
 - *Establish procedures for ongoing risk evaluation.* Set up regular reviews to identify new risks, engaging stakeholders to assess the broader impacts of AI. Develop a response plan for issues that arise to allow for risk reassessment and necessary adjustments.
 
