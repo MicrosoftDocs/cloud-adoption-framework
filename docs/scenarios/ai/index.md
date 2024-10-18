@@ -22,12 +22,12 @@ AI adoption is foundational to optimizing operations for individuals and organiz
 
 AI adoption is a sequential process. This guidance divides AI adoption into six steps. If you're new to AI adoption, complete all six steps. As you define new AI use cases for your organization, revisit the AI Strategy, AI Plan, and AI Ready. Govern AI, Manage AI, and Secure AI are continuous processes. You need to iterate through these processes to ensure your AI workloads remain secure, cost-effective, and trustworthy.
 
-1. *AI Strategy*: Guidance on how to choose the right AI technology for your business and ground AI adoption in responsible AI principles.
-1. *AI Plan*: Guidance to assess and find the AI skills needed and how to prioritize use cases to bring to production.
-1. *AI Ready*: Guidance to establish a governed and secure Azure environment for your AI workloads and data.
-1. *Govern AI*: The process to control your AI workloads and models by establishing guardrails to ensure compliance and responsible AI use.
-1. *Manage AI*: The process to manage your AI deployments, operations, models, and data over time to ensure they remain aligned with your business goals.
-1. *Secure AI*: The process to assess AI security risks and apply security controls to protect your AI workloads.
+- *AI Strategy*: Guidance on how to choose the right AI technology for your business and ground AI adoption in responsible AI principles.
+- *AI Plan*: Guidance to assess and find the AI skills needed and how to prioritize use cases to bring to production.
+- *AI Ready*: Guidance to establish a governed and secure Azure environment for your AI workloads and data.
+- *Govern AI*: The process to control your AI workloads and models by establishing guardrails to ensure compliance and responsible AI use.
+- *Manage AI*: The process to manage your AI deployments, operations, models, and data over time to ensure they remain aligned with your business goals.
+- *Secure AI*: The process to assess AI security risks and apply security controls to protect your AI workloads.
 
 ## AI adoption checklists
 
