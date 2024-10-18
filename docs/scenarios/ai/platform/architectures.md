@@ -1,5 +1,5 @@
 ---
-title: Architecture guidance to build AI workloads on Azure
+title: AI architecture guidance to build AI workloads on Azure
 description: Learn to find AI architectures and guides to build AI workloads with Azure AI platform services (PaaS).
 author: stephen-sumner
 ms.author: ssumner
@@ -7,19 +7,22 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Architecture guidance to build AI workloads on Azure
+# AI architecture guidance to build AI workloads on Azure
 
 This article offers architecture guidance for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and non-generative AI workloads.
 
-The Azure Architecture Center offers reference architectures and guides for building generative and non-generative AI workloads on Azure. These resources provide structured, well-tested architectural guidance for creating AI workloads. In [AI Ready](../ready.md#establish-ai-governance), ou established a resource hierarchy that categorizes AI workloads into internal and internet-facing groups. You can deploy these architectural resources to workload subscriptions within either the internal or internet-facing management groups. The following tables link to resources for implementing generative AI workloads.
+The Azure Architecture Center offers reference architectures and guides to help organizations build AI workloads efficiently and securely. These resources provide well-tested, structured frameworks for AI workload deployment.
 
-If you're using Azure landing zones, begin with the [Baseline Azure OpenAI architecture in Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) and deploy it to an application landing zone subscription.
+In [AI Ready](../ready.md#establish-ai-governance), you established a resource hierarchy that categorizes AI workloads into internal and internet-facing groups. Deploy AI workloads to subscriptions under the appropriate management groups (internal vs. internet-facing). The following tables list articles for building AI workloads.
+
+> [!NOTE]
+> If you're using Azure landing zones, begin with the ***[Baseline Azure OpenAI architecture in Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)*** and deploy it to an application landing zone subscription.
 
 ## Generative AI architectures and guides
 
 | Article | Article type | Target organization |
 |--------------|--------------|-------------|
-| [Baseline Azure OpenAI architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)| Architecture | Enterprise<br> Azure landing zone user |
+| [Baseline Azure OpenAI architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)| Architecture | Enterprise |
 | [Baseline Azure OpenAI reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat)| Architecture | Any |
 | [Basic Azure OpenAI reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat)| Architecture | Startup |
 | [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops) | Guide| Any |
