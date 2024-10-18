@@ -50,4 +50,4 @@ Managing business continuity and disaster recovery for AI applications on Azure 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Implementation options IaaS AI](./cycle-cloud.md)
+> [Secure IaaS AI](./security.md)
