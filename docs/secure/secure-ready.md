@@ -1,6 +1,6 @@
 ---
 title: Prepare Your Secure Cloud Estate
-description: Learn how to adopt security best practices during your cloud estate setup phase.
+description: Learn how to adopt security best practices during your cloud estate setup phase. Prepare for incident preparedness, confidentiality, availabilty, and more. 
 author: claytonsiemens77
 ms.author: csiemens
 ms.date: 10/18/2024
@@ -48,7 +48,7 @@ After you define your strategy and develop your plan for incident preparedness a
 
 ## Prepare for confidentiality
 
-During the Ready phase, preparing for your workloads from a confidentiality standpoint is a process of ensuring that your IAM policies and standards are implemented and enforced. This prepartaion ensures that, when you deploy workloads, your data will be secured by default. Be sure to have well-governed policies and standards for:
+During the Ready phase, preparing for your workloads from a confidentiality standpoint is a process of ensuring that your IAM policies and standards are implemented and enforced. This preparation ensures that, when you deploy workloads, your data will be secured by default. Be sure to have well-governed policies and standards for:
 
 - *The principle of least privilege.* Grant users the minimum access required to perform their tasks.
 
@@ -56,7 +56,7 @@ During the Ready phase, preparing for your workloads from a confidentiality stan
 
 - *Multifactor authentication (MFA).* Implement MFA to add an extra layer of security.
 
-- *Conditional access controls.* Conditional access controls provide additional security by enforcing policies based on specific conditions. Policies can include enforcing MFA, blocking access based on geography, and many other scenarios. When you choose an IAM platform, be sure that conditional access is supported and that the implmentation meets your requirements.
+- *Conditional access controls.* Conditional access controls provide additional security by enforcing policies based on specific conditions. Policies can include enforcing MFA, blocking access based on geography, and many other scenarios. When you choose an IAM platform, be sure that conditional access is supported and that the implementation meets your requirements.
 
 ### Azure facilitation
  
