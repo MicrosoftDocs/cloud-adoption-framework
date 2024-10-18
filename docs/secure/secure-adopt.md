@@ -120,7 +120,7 @@ After you establish your landing zone or other platform design with secure netwo
 
 ## Adopt the principle of confidentiality
 
-After the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality is already in place, the next step is to focus on ACM. This step includes ensuring that encryption and secure access controls are effectively implemented and institutionalized across the enterprise cloud environment. In the adoption phase, DLP measures are implemented to protect sensitive data in transit and data at rest. This implementation includes deploying encryption solutions, configuring access controls, and ensuring that all employees are trained in the importance of data confidentiality and how to adhere to DLP policies.
+After the overarching strategy and implementation plan for adopting the CIA Triad principle of confidentiality is already in place, the next step is to focus on ACM. This step includes ensuring that encryption and secure access controls are effectively implemented and institutionalized across the enterprise cloud environment. In the adoption phase, DLP measures are implemented to protect sensitive data in transit and data at rest. The implementation involves deploying encryption solutions, configuring access controls, and training all employees on the importance of data confidentiality and adherence to DLP policies.
 
 ### Implement encryption and secure access controls
 
@@ -152,7 +152,7 @@ To ensure the consistent implementation of encryption and access controls, it's 
 
 ## Adopt the principle of integrity
 
-In the Adopt phase, planning and designs are turned into real-world implementations. In the context of data and system integrity, this means building out your systems according to the standards that you developed in the earlier phases and ensuring that engineers, administrators, and operators are trained on protocols and procedures.
+In the Adopt phase, planning and designs are turned into real-world implementations. To ensure data and system integrity, build your systems according to the standards developed in earlier phases. Additionally, train engineers, administrators, and operators on the relevant protocols and procedures.
 
 ### Data integrity adoption
 
