@@ -51,7 +51,7 @@ AI governance policies create a structured framework for responsible AI usage wi
 | Define policies for user conduct              | ▪ *Define risk mitigation strategies for misuse.* Misuse prevention policies help protect against intentional or unintentional harms. Outline possible misuse scenarios and incorporate controls, such as restricted functionalities or misuse detection features.<br><br> ▪ *Set user conduct guidelines.* User agreements clarify acceptable behaviors when interacting with the AI workload, reducing the risk of misuse. Draft clear terms of use to communicate standards and support responsible AI interaction. |
 | Define policies for AI integration and replacement | ▪ *Outline integration policies.* Integration guidelines ensure AI workloads maintain data integrity and security during workload interfacing. Specify technical requirements, data-sharing protocols, and security measures.<br><br> ▪ *Plan for transition and replacement.* Transition policies provide structure when replacing old processes with AI workloads. Outline steps for phasing out legacy processes, training staff, and monitoring performance throughout the change. |
 
-## Enforce AI policies
+## Enforce AI governance policies
 
 Enforcing AI policies promotes consistent and ethical AI practices across the organization. Automate enforcement where possible and conduct manual enforcement where necessary to ensure compliance with governance policies.
 
@@ -67,7 +67,7 @@ Enforcing AI policies promotes consistent and ethical AI practices across the or
     > [!div class="nextstepaction"]
     > [Govern IaaS AI workloads](./infrastructure/governance.md)
 
-## Monitor AI risks
+## Monitor AI organizational risks
 
 Ongoing risk monitoring enables the organization to identify and address potential risks as they emerge. By establishing procedures for regular risk evaluations, the organization can ensure that AI workloads continue to operate as intended, adapting to changing conditions and challenges.
 

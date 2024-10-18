@@ -72,13 +72,13 @@ Developing an AI proof of concept (PoC) validates the feasibility and potential 
 
 Responsible AI adoption requires incorporating ethical frameworks and regulatory practices into your AI implementation plan. This approach ensures that AI initiatives align with organizational values, protect user rights, and comply with legal standards. By embedding responsible AI principles at every stage, organizations build trust, manage risk, and maintain a positive reputation
 
-- *Use responsible-AI planning tools.* To integrate responsible AI principles into your adoption process, use tools and frameworks that support ethical AI practices. Microsoft offers several resources, including:
+- *Use responsible-AI planning tools.* To integrate responsible AI principles into your adoption process, use tools and frameworks that support ethical AI practices. Microsoft offers several resources.
 
-    - [AI impact assessment template](https://www.microsoft.com/ai/tools-practices): Evaluate potential social, economic, and ethical impacts of AI initiatives.
-
-    - [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/): Design AI systems that prioritize user well-being and foster positive interactions.
-
-    - [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/): Assess and advance your organization's maturity in implementing responsible AI practices.
+    | Responsible AI planning tool | Description |
+    | --- | --- |
+    | [AI impact assessment template](https://www.microsoft.com/ai/tools-practices)| Evaluate potential social, economic, and ethical impacts of AI initiatives.|
+    | [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/) | Design AI systems that prioritize user well-being and foster positive interactions. |
+    | [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/) | Assess and advance your organization's maturity in implementing responsible AI practices.|
 
 - *Start the AI governance process.* Responsible AI adoption involves creating governance policies to guide AI projects and monitor AI system behaviors. Start by identifying organizational risks specific to your AI initiatives. Document governance policies that outline responsibilities, compliance requirements, and ethical standards. Refer to [Govern AI](govern.md) for guidance on policy creation, including topics like data privacy, model explainability, and accountability.
 

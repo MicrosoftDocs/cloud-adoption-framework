@@ -63,18 +63,18 @@ This guidance provides recommendations for setting up your network topology for 
 
 ## Establish an AI foundation
 
-To choose the right approach for the foundation of AI workloads, you need to set up the core infrastructure and understand the separation of responsibilities and considerations that you need for an AI-focused Azure landing zone.
+To build a solid foundation for AI workloads in Azure, you must set up your resource hierarchy and core infrastructure. This foundation ensures that your AI environment is scalable, secure, and aligned with governance and operational requirements.
 
 ### Use Azure landing zone
 
-An Azure landing zone provides a starting point to prepare your Azure environment. It provides a prebuilt experience to deploy and configure platform subscriptions and resources. With the platform ready, you deploy AI workloads to application landing zones (*see figure 2 in red*).
+An Azure landing zone is the recommended starting point that prepares your Azure environment. It provides a predefined setup for platform and application resources. Once the platform is in place, you can deploy AI workloads to dedicated application landing zones. Figure 2 below illustrates how AI workloads integrate within an Azure landing zone.
 
 :::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
 *Figure 2. AI applications in the context of an Azure landing zone.*
 
-### Build an environment
+### Build an AI environment
 
-You can use the guidance discussed in this article to establish a foundational environment for your AI workloads. The following diagram illustrates a baseline resource hierarchy for your AI workloads. It uses two distinct management groups to that separate internal AI workloads from internet-facing AI workloads. This separation prevents exposing internal data to the external users.
+Follow the recommendations outlined in this article to create a foundational environment for your AI workloads. The following diagram shows a baseline resource hierarchy. It distinguishes between internal AI workloads and internet-facing AI workloads, as described in [establish AI governance](#establish-ai-governance). This separation safeguards internal data by preventing exposure to external users.
 
 :::image type="content" source="./images/baseline-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/baseline-resource-hierarchy.svg" border="false":::
 *Figure 3. Baseline resource hierarchy for AI workloads.*
