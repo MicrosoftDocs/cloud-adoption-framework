@@ -59,7 +59,7 @@ Preparing for incident response involves collecting logs and integrating them wi
 
 Securing operating systems requires keeping virtual machines and container images up-to-date with the latest patches and running antimalware software. These practices protect AI infrastructure from vulnerabilities, malware, and other security threats. They help maintain a secure and reliable environment for AI operations.
 
-- *Patch VM guests.* Regularly apply patches to virtual machines and container images. Consider enabling [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for your virtual machines and scale sets.
+- *Patch virtual machine guests.* Regularly apply patches to virtual machines and container images. Consider enabling [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for your virtual machines and scale sets.
 
 - *Use antimalware.* Use [Microsoft Antimalware for Azure](/azure/security/fundamentals/antimalware) on your virtual machines to protect them from malicious files, adware, and other threats.
 
