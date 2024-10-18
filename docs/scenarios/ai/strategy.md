@@ -86,7 +86,7 @@ An AI data strategy outlines data collection, storage, and usage practices that 
 
 ## Define a responsible AI strategy
 
-A responsible AI strategy outlines your role in ensuring that AI solutions remain trustworthy and beneficial for all users. You and your AI provider, in this case Microsoft, share this responsibility. Your responsibilities vary depending on whether you use software as a service (SaaS), such as Microsoft Copilots, or an AI platform as a service (PaaS), like Azure AI Studio.
+A responsible AI strategy outlines your role in ensuring that AI solutions remain trustworthy and beneficial for all users. You share this responsibility with your AI provider. Your responsibilities vary depending the technology you adopt.
 
 - *Establish AI accountability.* As AI technology and regulations advance, assign someone to monitor and govern these changes. It's typically a responsibility of the [AI CoE](./center-of-excellence.md) or an AI lead.
 
