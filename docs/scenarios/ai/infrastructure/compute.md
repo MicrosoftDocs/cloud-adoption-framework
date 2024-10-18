@@ -53,7 +53,7 @@ Compute orchestration solutions facilitate the management of complex AI tasks ac
     - *Use version control.* Track and manage changes using version control.
     - *Automate tasks.* Use scripts to automate data preprocessing, training, and evaluation.
 
-## Consider Containers
+## Consider containers
 
 Containers provide a consistent, reproducible environment that scales efficiently. Containers streamline transitions between environments, making them essential for scalable AI solutions.
 
