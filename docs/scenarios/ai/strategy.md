@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 An AI strategy outlines the organizational process for developing an AI adoption strategy. It helps you identify where AI can add value, select the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success. As a first step, create an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint an AI lead to oversee your AI adoption.
 
-:::image type="content" source="./images/aistrategy.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Strategy. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aistrategy.svg" border="false":::
+:::image type="content" source="./images/ai-strategy.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/ai-strategy.svg" border="false":::
 
 ## Identify AI use cases
 

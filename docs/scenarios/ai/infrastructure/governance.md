@@ -49,7 +49,7 @@ Cost management monitors and controls expenses related to AI workloads on Azure.
 
 Security governance addresses the need for robust protection measures across AI workloads. By implementing security policies and access controls, organizations can protect sensitive data and resources. It reduces risk and supports a secure AI environment on Azure.
 
-- *Integrate with Microsoft Entra ID.* Use Entra ID for centralized identity management and single sign-on (SSO) capabilities across AI workloads.
+- *Integrate with Microsoft Entra ID.* Use Microsoft Entra ID for centralized identity management and single sign-on (SSO) capabilities across AI workloads.
 
 - *Implement distinct access controls for each environment.* Limit each deployment pipeline’s identity to its designated environment, reducing the risk of accidental deployments.
 

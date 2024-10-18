@@ -13,7 +13,7 @@ This article outlines the organizational process for governing AI workloads. It 
 
 This guidance aims to help you integrate AI risk management into broader risk management strategies. This integration prodives more cohesive handling of AI, cybersecurity, and privacy risks for a unified governance approach.
 
-:::image type="content" source="./images/governai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Govern AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/governai.svg" border="false":::
+:::image type="content" source="./images/govern-ai.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/govern-ai.svg" border="false":::
 
 ## Assess AI organizational risks
 
@@ -23,14 +23,14 @@ AI risk assessment identifies and addresses potential risks introduced by AI tec
 
 - *Use Responsible AI principles to identify risks.* These principles provide a framework for assessing AI risks. Use the following table to identify and mitigate risks through a structured assessment of AI principles.
 
-    | Responsible AI principle | Definition | Risk assessment question |
-    |--------------------------|------------|--------------------------|
-    | AI Privacy and Security| AI workloads should respect privacy and be secure. | How can the organization ensure AI workloads maintain privacy and security? |
-    | Reliability and Safety | AI workloads should perform safely and reliably. | How can the organization guarantee reliable performance across diverse conditions and use cases? |
-    | Fairness | AI workloads should treat people equitably. | How can the organization ensure AI distributes resources or information fairly? |
-    | Inclusiveness| AI workloads should be inclusive and empowering. | How can AI workloads be designed to include and empower people of all abilities? |
-    | Transparency | AI workloads should be understandable. | How can the organization ensure users understand and responsibly use AI workloads? |
-    | Accountability | People should be accountable for AI workloads. | How can the organization establish oversight to ensure accountability and control? |
+    | Responsible AI principle    | Definition  | Risk assessment question    |
+    |-----------------------------|-------------|----------------|
+    | AI Privacy and Security      | AI workloads should respect privacy and be secure.  | How might AI workloads handle sensitive data or become vulnerable to security breaches?            |
+    | Reliability and Safety       | AI workloads should perform safely and reliably.    | In what situations could AI workloads fail to operate safely or produce unreliable outcomes?   |
+    | Fairness                     | AI workloads should treat people equitably.         | How could AI workloads lead to unequal treatment or unintended bias in decision-making? |
+    | Inclusiveness                | AI workloads should be inclusive and empowering.     | How might certain groups be excluded or disadvantaged in the design or deployment of AI workloads?|
+    | Transparency                 | AI workloads should be understandable.               | What aspects of AI decision-making could be difficult for users to understand or explain?|
+    | Accountability               | People should be accountable for AI workloads.       | Where could accountability be unclear or difficult to establish in the development or use of AI?|
 
 - *Identify AI risks.* Start by evaluating the security risks of AI workloads, including potential data breaches, unauthorized access, or misuse. Consult stakeholders to uncover less visible risks, and assess both qualitative and quantitative impacts, including reputational risks, to determine the organization’s risk tolerance.
 

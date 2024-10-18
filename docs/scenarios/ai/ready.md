@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article outlines the organizational process for building AI workloads in Azure. The article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It focuses on AI-specific guidance for region selection, resource organization, and networking.
 
-:::image type="content" source="./images/aiready.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Ready. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiready.svg" border="false":::
+:::image type="content" source="./images/ai-ready.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/ai-ready.svg" border="false":::
 
 ## Establish AI reliability
 
@@ -67,8 +67,8 @@ An AI foundation provides the core infrastructure and resource hierarchy that su
 
 An Azure landing zone is the recommended starting point that prepares your Azure environment. It provides a predefined setup for platform and application resources. Once the platform is in place, you can deploy AI workloads to dedicated application landing zones. Figure 2 below illustrates how AI workloads integrate within an Azure landing zone.
 
-:::image type="content" source="./images/alz-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/alz-ai.svg" border="false":::
-*Figure 2. AI applications in the context of an Azure landing zone.*
+:::image type="content" source="./images/azure-landing-zone-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/azure-landing-zone-ai.svg" border="false":::
+*Figure 2. AI workload in an Azure landing zone.*
 
 ### Build an AI environment
 

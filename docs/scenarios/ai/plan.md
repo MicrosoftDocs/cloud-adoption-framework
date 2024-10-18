@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article outlines the organizational process for planning AI adoption. An AI adoption plan details the steps an organization must take to integrate AI into its operations. This plan ensures alignment between AI initiatives and business goals. It helps organizations allocate resources, develop skills, and deploy technology for effective AI adoption.
 
-:::image type="content" source="./images/aiplan.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Plan. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiplan.svg" border="false":::
+:::image type="content" source="./images/ai-plan.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/ai-plan.svg" border="false":::
 
 ## Assess AI skills
 

@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article outlines the organizational process for securing AI workloads. It focuses on the confidentiality, integrity, and availability (CIA) of AI. Effective security practices reduce the risk of compromise by safeguarding the confidentiality, integrity, and availability of AI models and data. A secure AI environment also aligns with business security goals and enhances trust in AI-driven processes.
 
-:::image type="content" source="./images/secureai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Secure AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/secureai.svg" border="false":::
+:::image type="content" source="./images/secure-ai.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/secure-ai.svg" border="false":::
 
 ## Assess AI security risks
 

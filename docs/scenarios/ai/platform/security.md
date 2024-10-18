@@ -43,7 +43,7 @@ Securing AI access includes establishing authentication and authorization contro
 
 - *Organize resources and access controls.* Use distinct workspaces to organize and manage AI artifacts like datasets, models, and experiments. Workspaces centralize resource management and simplify access control. For example, use [projects](/azure/ai-studio/concepts/ai-resources#organize-work-in-projects-for-customization) within Azure AI Studio to manage resources and permissions efficiently, facilitating collaboration while maintaining security boundaries.
 
-- *Use Microsoft Entra ID for authentication.* Wherever possible, eliminate static API keys in favor of Microsoft Entra ID for authentication. This step enhances security through centralized identity management and reduces secret management overhead. Also limit the distribution of API keys. Instead, prefer identities in Entra ID over API keys for authentication. Audit the list of individuals with API key access to ensure it's current. For authentication guidance, see [Azure AI Studio](/azure/ai-studio/concepts/rbac-ai-studio), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), [Azure AI services](/azure/ai-services/authentication), [Azure Machine Learning](/azure/machine-learning/how-to-setup-authentication).
+- *Use Microsoft Entra ID for authentication.* Wherever possible, eliminate static API keys in favor of Microsoft Entra ID for authentication. This step enhances security through centralized identity management and reduces secret management overhead. Also limit the distribution of API keys. Instead, prefer identities in Microsoft Entra ID over API keys for authentication. Audit the list of individuals with API key access to ensure it's current. For authentication guidance, see [Azure AI Studio](/azure/ai-studio/concepts/rbac-ai-studio), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), [Azure AI services](/azure/ai-services/authentication), [Azure Machine Learning](/azure/machine-learning/how-to-setup-authentication).
 
 - *Configure authentication.* Enable [multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa) (MFA) and prefer secondary administrative accounts or just-in-time access with [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) for sensitive accounts. Limit control plane access using services like Azure Bastion as secure entry points into private networks.
 
@@ -59,7 +59,7 @@ Securing AI access includes establishing authentication and authorization contro
 
 - *Secure Azure service-to-service interactions.* Use [managed identity](/entra/identity/managed-identities-azure-resources/overview) to allow Azure services to authenticate to each other without managing credentials.
 
-- *Secure external access to AI model endpoints.* Require clients to authenticate using Entra ID when accessing AI model endpoints. Consider using Azure API Management as an AI gateway in front of AI model endpoints to enforce access policies, control usage, and provide monitoring capabilities.
+- *Secure external access to AI model endpoints.* Require clients to authenticate using Microsoft Entra ID when accessing AI model endpoints. Consider using Azure API Management as an AI gateway in front of AI model endpoints to enforce access policies, control usage, and provide monitoring capabilities.
 
 ## Secure AI execution
 
