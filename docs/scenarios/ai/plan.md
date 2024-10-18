@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # AI Plan - Recommendations for organizations planning AI adoption
 
-This article outlines the organizational process for planning AI adoption. An AI adoption plan outlines the steps an organization must take to integrate AI into its operations. This plan ensures alignment between AI initiatives and business goals and helps organizations allocate resources, develop skills, and deploy technology for effective AI adoption.
+This article outlines the organizational process for planning AI adoption. An AI adoption plan details the steps an organization must take to integrate AI into its operations. This plan ensures alignment between AI initiatives and business goals. It helps organizations allocate resources, develop skills, and deploy technology for effective AI adoption.
 
 :::image type="content" source="./images/aiplan.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Plan. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiplan.svg" border="false":::
 
 ## Assess AI skills
 
-In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), you identified Microsoft AI solutions for adoption. Evaluate your current skills and identify gaps to address before proceeding. An AI maturity assessment helps determine your readiness to implement AI. It also guides the selection of use cases that match your capabilities and improves your chances for positive outcomes and minimizing risks. Use the table below to assess your AI maturity level. For more information, see [Technical Assessment for Generative AI in Azure](/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
+In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), you identified AI uses cases and AI solutions for each. These solutions requires certain AI skills to adopt. Evaluate your current AI skills and identify gaps to address before proceeding. An AI maturity assessment helps determine your readiness to implement AI. It also guides the selection of use cases that match your capabilities and expedites your success. Use the table below to assess your AI maturity level. For more information, see [Technical Assessment for Generative AI in Azure](/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
 
   | AI maturity level | Skills required | Data readiness | Feasible AI use cases |
   |-------------------|-----------------|----------------|----------------------|
