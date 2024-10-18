@@ -40,7 +40,7 @@ Securing virtual networks involves using private endpoints, enforcing DNS zones,
 
 ## Manage connectivity
 
-Managing connectivity controls how AI resources interact with external systems, focusing on secure data transmission and access. Techniques like using a jumpbox and limiting outbound traffic help protect AI workloads. Proper connectivity management minimizes security risks and ensures smooth, uninterrupted AI operations.
+Managing connectivity controls how AI resources interact with external systems. Techniques like using a jumpbox and limiting outbound traffic help protect AI workloads. Proper connectivity management minimizes security risks and ensures smooth, uninterrupted AI operations.
 
 - *Use a jumpbox for access.* AI development access should use a jumpbox within the virtual network of the workload or through a connectivity hub virtual network. Use Azure Bastion to securely connect to virtual machines interacting with AI services. Azure Bastion provides secure RDP/SSH connectivity without exposing VMs to the public internet. Enable Azure Bastion to ensure encrypted session data and protect access through TLS-based RDP/SSH connections.
 
