@@ -1,7 +1,7 @@
 ---
 author: mboswell
 ms.author: mboswell
-ms.date: 09/26/2024
+ms.date: 09/30/2024
 ms.topic: include
 ms.custom: e2e-data-management, think-tank
 ---
@@ -11,7 +11,7 @@ ms.custom: e2e-data-management, think-tank
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Build an Initial Strategy**](../../data-management/strategy.md)| How to build your data strategy and pivot to become a data driven organization.
 | [**Define your plan**](../../data-management/plan.md)        | How to develop a plan for cloud-scale analytics.                                                                                                                                                                    |
-| [**Prepare analytics estate**](../../data-management/ready.md)  | Overview of data management and data landing zones with key design area considerations like enterprise enrollment, networking, identity and access management, policies, business continuity and disaster recovery. |
+| [**Prepare analytics estate**](../../data-management/ready.md)  | Overview of preparing your cloud-scale analytics estate with key design area considerations like enterprise enrollment, networking, identity and access management, policies, business continuity and disaster recovery. |
 | [**Govern your analytics**](../../data-management/govern.md)      | Requirements to govern data, data catalog, lineage, master data management, data quality, data sharing agreements and metadata.                                                                                       |
 | [**Secure your analytics estate**](../../data-management/secure.md) | How to secure analytics estate with authentication and authorization, data privacy, and data access management.                                                                                                       |
 | [**Organize people and teams**](../../data-management/organize.md)   | How to organize effective operations, roles, teams, and team functions.                                                                                                                                              |
