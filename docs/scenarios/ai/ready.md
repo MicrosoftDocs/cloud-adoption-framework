@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # AI Ready – Recommendations for organizations building AI workloads in Azure
 
-This article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It assumes as a prerequisite familiarity with the [Ready](/azure/cloud-adoption-framework/ready/) methodology in the Cloud Adoption Framework and [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/). It focuses on AI-specific guidance for region selection, resource organization, and networking.
+This article outlines the organizational process for building AI workloads in Azure. The article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It focuses on AI-specific guidance for region selection, resource organization, and networking.
 
 :::image type="content" source="./images/aiready.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Ready. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aiready.svg" border="false":::
 
 ## Establish AI reliability
 
-Select the right region or regions to host your AI models. It affects the performance, compliance, cost, and availability of your AI services:
+AI reliability involves selecting appropriate regions to host AI models to ensure consistent performance, compliance, and availability. Organizations must address redundancy, failover, and performance optimization to maintain reliable AI services.
 
 - *Use multiple regions to host AI model endpoints.* For production workloads, host AI endpoints in at least two regions to provide redundancy and ensure high availability. Although generative AI models are stateless, hosting them in multiple regions ensures faster failover and recovery during regional failures. For Azure OpenAI Service models, you can use [global deployments](/azure/ai-services/openai/how-to/deployment-types#deployment-types). These multiregion deployments can automatically and transparently route requests to a region that has enough capacity. If you choose a nonglobal deployment, also known as a regional deployment, use [Azure API Management](/azure/api-management/genai-gateway-capabilities#backend-load-balancer-and-circuit-breaker) for load balancing API requests to AI endpoints.
 
@@ -29,7 +29,7 @@ Select the right region or regions to host your AI models. It affects the perfor
 
 ## Establish AI governance
 
-In Azure, resource organization is how you structure management groups and subscriptions to organize your Azure resources. Resource organization is critical for AI governance across AI workloads and cost management.
+AI governance encompasses organizing resources and applying policies to manage AI workloads and costs. It involves structuring management groups and subscriptions to ensure compliance and security across different workloads. Proper AI governance prevents unauthorized access, manages risks, and ensures that AI resources operate efficiently within the organization.
 
 - *Separate internet facing and internal AI workloads*. At a minimum, use management groups to separate AI workloads into internet-facing ("online") and internal only ("corporate"). The distinction provides an important data governance boundary. It helps you keep internal separate from public data. You don't want external users to access sensitive business information required for internal work. This distinction between internet-facing and internal workloads aligns with [Azure landing zone management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
 
@@ -39,7 +39,7 @@ In Azure, resource organization is how you structure management groups and subsc
 
 ## Establish AI networking
 
-This guidance provides recommendations for setting up your network topology for AI workloads. Organizations that have multiple intelligent applications should use a hub-and-spoke network topology. When you have a single intelligent application, consider adopting a hub-and-spoke topology as the number of your workloads increases.
+AI networking refers to the design and implementation of network infrastructure for AI workloads, including security and connectivity. This involves using topologies like hub-and-spoke, applying security measures such as DDoS protection, and ensuring efficient data transfer. Effective AI networking is critical for secure and reliable communication, preventing network-based disruptions and maintaining performance.
 
 - *Activate Azure DDoS Protection for internet-facing AI workloads.* Azure DDoS Protection safeguards your AI services from potential disruptions and downtime caused by Distributed Denial of Service attacks. Enable DDoS protection at the virtual network level to defend against traffic floods targeting internet-facing applications.
 
@@ -63,7 +63,7 @@ This guidance provides recommendations for setting up your network topology for 
 
 ## Establish an AI foundation
 
-To build a solid foundation for AI workloads in Azure, you must set up your resource hierarchy and core infrastructure. This foundation ensures that your AI environment is scalable, secure, and aligned with governance and operational requirements.
+An AI foundation provides the core infrastructure and resource hierarchy that support AI workloads in Azure. This includes setting up scalable, secure environments that align with governance and operational needs. A strong AI foundation enables efficient deployment and management of AI workloads. It also ensures security and flexibility for future growth.
 
 ### Use Azure landing zone
 
