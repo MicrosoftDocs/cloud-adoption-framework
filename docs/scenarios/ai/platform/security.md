@@ -76,4 +76,4 @@ For more information, see [How to create Assistants with Azure OpenAI Service](/
 ## Next step
 
 > [!div class="nextstepaction"]
-> [PaaS AI Governance](../platform/governance.md)
+> [AI Govern](../govern.md)

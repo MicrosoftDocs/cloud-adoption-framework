@@ -53,4 +53,4 @@ Efficient and secure connectivity is crucial for seamless AI development and dep
 ## Next step
 
 > [!div class="nextstepaction"]
-> [PaaS AI Security](../platform/security.md)
+> [PaaS AI Governance](../platform/governance.md)
