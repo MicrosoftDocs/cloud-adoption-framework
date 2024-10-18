@@ -75,7 +75,7 @@ Maintaining AI security controls includes ongoing monitoring, testing, and updat
 
 ## Next steps
 
-Govern AI, Manage AI, and Secure AI are continuous processes you must iterate through regularly. Revisit each AI Strategy, AI Plan, and AI Ready as needed. Use the AI adoption checklist to determine what your next step should be.
+Govern AI, Manage AI, and Secure AI are continuous processes you must iterate through regularly. Revisit each AI Strategy, AI Plan, and AI Ready as needed. Use the AI adoption checklists to determine what your next step should be.
 
 > [!div class="nextstepaction"]
-> [AI adoption checklist](index.md#ai-adoption-checklists)
+> [AI adoption checklists](index.md#ai-adoption-checklists)

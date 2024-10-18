@@ -53,4 +53,4 @@ Use the AI design area articles as a framework alongside the reference architect
 ## Next step
 
 > [!div class="nextstepaction"]
-> [AI resource selection](./resource-selection.md)
+> [Resource selection PaaS AI](./resource-selection.md)

@@ -40,4 +40,4 @@ The [Cycle Cloud Workspace for Slurm](/azure/cyclecloud/qs-deploy-ccws) can be u
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Compute for AI workloads on Azure infrastructure (IaaS)](./compute.md)
+> [Compute IaaS AI](./compute.md)

@@ -98,4 +98,4 @@ AI data governance involves policies for ensuring that data feeding into AI mode
 ## Next step
 
 > [!div class="nextstepaction"]
-> [PaaS AI Management](../platform/management.md)
+> [Management PaaS AI](../platform/management.md)

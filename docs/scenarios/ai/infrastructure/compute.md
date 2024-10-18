@@ -61,9 +61,7 @@ Containers provide a consistent, reproducible environment that scales efficientl
 
 - *Use NVIDIA Container Toolkit.* This toolkit enables GPU resources within containers. Install all required drivers, such as CUDA and GPU drivers, and use your preferred container runtime and engine for AI workload execution.
 
-## Next Step
-
 ## Next step
 
 > [!div class="nextstepaction"]
-> [IaaS AI storage](./storage.md)
+> [Storage IaaS AI](./storage.md)

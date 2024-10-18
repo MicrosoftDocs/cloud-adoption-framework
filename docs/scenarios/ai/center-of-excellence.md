@@ -77,3 +77,10 @@ After establishing the AI CoE, continuously monitor performance, make adjustment
 - *Maintain compliance and ethics:* Conduct regular audits to ensure adherence to ethical standards and regulatory requirements. Update governance frameworks as necessary.
 
 - *Foster continuous learning:* Provide ongoing training programs and encourage experimentation to keep employees up-to-date on AI advancements.
+
+## Next step
+
+Use the AI adoption checklists to determine what your next step should be.
+
+> [!div class="nextstepaction"]
+> [AI adoption checklists](index.md#ai-adoption-checklists)

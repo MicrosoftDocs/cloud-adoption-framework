@@ -58,4 +58,4 @@ Implement multi-region deployments to ensure high availability and resiliency fo
 ## Next step
 
 > [!div class="nextstepaction"]
-> [PaaS AI Security](../platform/security.md)
+> [Security PaaS AI](../platform/security.md)

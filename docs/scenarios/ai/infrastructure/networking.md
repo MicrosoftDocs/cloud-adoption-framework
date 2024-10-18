@@ -44,4 +44,4 @@ Optimizing for large-scale data processing involves strategies to manage extensi
 ## Next step
 
 > [!div class="nextstepaction"]
-> [IaaS AI security](./security.md)
+> [Security IaaS AI](./security.md)

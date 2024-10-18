@@ -68,4 +68,4 @@ Operational governance ensures consistent monitoring and management of AI worklo
 ## Next step
 
 > [!div class="nextstepaction"]
-> [IaaS AI management](./management.md)
+> [Management IaaS AI](./management.md)

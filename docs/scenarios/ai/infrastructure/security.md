@@ -66,4 +66,4 @@ Securing operating systems requires keeping virtual machines and container image
 ## Next step
 
 > [!div class="nextstepaction"]
-> [IaaS AI governance](./governance.md)
+> [Governance IaaS AI](./governance.md)
