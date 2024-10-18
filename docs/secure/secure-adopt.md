@@ -58,9 +58,9 @@ Organizations can ensure that access controls are implemented and embraced by em
 
   - **Azure Deployment Environments:** [Deployment Environments](/azure/deployment-environments/overview-what-is-azure-deployment-environments) enables development teams to quickly create consistent app infrastructure by using project-based templates. These templates minimize setup time and maximize security, compliance, and cost efficiency. A deployment environment is a collection of Azure resources that are deployed in predefined subscriptions. Development infrastructure administrators can enforce enterprise security policies and provide a curated set of predefined IaC templates.
 
-Development infrastructure administrators define deployment environments as catalog items. Catalog items are hosted in a GitHub or Azure DevOps repository, called a *catalog*. A catalog item consists of an IaC template and a manifest.yml file.
+    Development infrastructure administrators define deployment environments as catalog items. Catalog items are hosted in a GitHub or Azure DevOps repository, called a *catalog*. A catalog item consists of an IaC template and a manifest.yml file.
 
-You can script the creation of deployment environments and programmatically manage the environments. For detailed, workload-focused guidance, see the Azure Well-Architected Framework's [IaC approach](/azure/well-architected/operational-excellence/infrastructure-as-code-design).
+    You can script the creation of deployment environments and programmatically manage the environments. For detailed, workload-focused guidance, see the Azure Well-Architected Framework's [IaC approach](/azure/well-architected/operational-excellence/infrastructure-as-code-design).
 
 - **Routine task automation:**
 
@@ -112,7 +112,7 @@ After you establish your landing zone or other platform design with secure netwo
 
 - **Threat detection and response automation:** Automate threat detection and response with the automated investigation and response functionality in [Microsoft Defender XDR](/defender-xdr/m365d-autoir).
 
-- **IaC deployment security:** Use [deployment stacks](/azure/azure-resource-manager/bicep/deployment-stacks) to manage Azure resources as a single, cohesive unit. Prevent users from performing unauthorized modifications using [deny settings](/azure/azure-resource-manager/bicep/deployment-stacks?tabs=azure-powershell#protect-managed-resources).
+- **IaC deployment security:** Use [deployment stacks](/azure/azure-resource-manager/bicep/deployment-stacks) to manage Azure resources as a single, cohesive unit. Prevent users from performing unauthorized modifications by using [deny settings](/azure/azure-resource-manager/bicep/deployment-stacks?tabs=azure-powershell#protect-managed-resources).
 
 ## Adopt the principle of confidentiality
 
