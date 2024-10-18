@@ -13,7 +13,7 @@ This article provides security recommendations for organizations running AI work
 
 ## Secure Azure services
 
-Azure service security requires configuring each Azure service used in an AI architecture to meet specific security standards and benchmarks. To apply secure configurations to Azure services, use the [Azure security baselines](/azure/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include: [Windows virtual machines](/azure/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline), [Linux virtual machines](/azure/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline), [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices), and [Key Vault](/azure/security/benchmark/azure/baselines/key-vault-security-baseline).
+Azure service security requires configuring each Azure service used in an AI architecture to meet specific security standards and benchmarks. To apply secure configurations to Azure services, use the [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include: [Windows virtual machines](/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline), [Linux virtual machines](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline), [Azure CycleCloud](/cyclecloud/concepts/security-best-practices), and [Key Vault](/security/benchmark/azure/baselines/key-vault-security-baseline).
 
 ## Secure networks
 

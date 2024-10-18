@@ -15,7 +15,7 @@ This article outlines the organizational process for planning AI adoption. An AI
 
 ## Assess AI skills
 
-In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), you identified Microsoft AI solutions for adoption. Evaluate your current skills and identify gaps to address before proceeding. An AI maturity assessment helps determine your readiness to implement AI. It also guides the selection of use cases that match your capabilities and improves your chances for positive outcomes and minimizing risks. Use the table below to assess your AI maturity level. For more information, see [Technical Assessment for Generative AI in Azure](https://learn.microsoft.com/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
+In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), you identified Microsoft AI solutions for adoption. Evaluate your current skills and identify gaps to address before proceeding. An AI maturity assessment helps determine your readiness to implement AI. It also guides the selection of use cases that match your capabilities and improves your chances for positive outcomes and minimizing risks. Use the table below to assess your AI maturity level. For more information, see [Technical Assessment for Generative AI in Azure](/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
 
   | AI maturity level | Skills required | Data readiness | Feasible AI use cases |
   |-------------------|-----------------|----------------|----------------------|
@@ -44,7 +44,7 @@ Accessing AI resources involves identifying and procuring the necessary tools, p
 
 ## Prioritize AI use cases
 
-After assessing skills, resources, and AI maturity, prioritize AI use cases identified in your [AI Strategy](./strategy.md#define-ai-use-cases). This prioritization ensures you focus on projects that offer the greatest value, align with business goals, and match your current capabilities. Follow these steps:
+After assessing skills, resources, and AI maturity, prioritize AI use cases identified in your [AI Strategy](./strategy.md#identify-ai-use-cases). This prioritization ensures you focus on projects that offer the greatest value, align with business goals, and match your current capabilities. Follow these steps:
 
 - *Assess skills and resources*. Review your current AI maturity, available data, and resource access.
 

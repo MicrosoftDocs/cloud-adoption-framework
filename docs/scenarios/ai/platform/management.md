@@ -25,7 +25,7 @@ Managing AI models includes monitoring their outputs, performance, and alignment
 
     - *Monitor generative AI.* For generative AI workloads, use Azure AI Studio's built-in [evaluation](/azure/ai-studio/concepts/evaluation-metrics-built-in) and [manual](/azure/ai-studio/how-to/evaluate-prompts-playground) monitoring capabilities. If you're using prompt flow, [monitor prompt flow deployments](/azure/ai-studio/how-to/develop/trace-production-sdk). Also consider using [responsible AI tools](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to supplement model monitoring.
 
-    - *Monitor nongenerative AI.* For nongenerative AI workloads, monitor data processing stages and model performance metrics to ensure predictions remain accurate and reliable. Enable [model monitoring](/azure/machine-learning/concept-model-monitoring?view=azureml-api-2) in Azure Machine Learning. For Azure AI services, enable monitoring for each AI service you use.
+    - *Monitor nongenerative AI.* For nongenerative AI workloads, monitor data processing stages and model performance metrics to ensure predictions remain accurate and reliable. Enable [model monitoring](/azure/machine-learning/concept-model-monitoring) in Azure Machine Learning. For Azure AI services, enable monitoring for each AI service you use.
 
 - *Monitor model performance.* When a drop in performance or accuracy is detected, monitoring helps pinpoint the source of the issue. As with all workloads, use Azure Monitor and Application Insights to monitor the performance of AI workloads.
 
@@ -58,4 +58,4 @@ Implement multi-region deployments to ensure high availability and resiliency fo
 ## Next step
 
 > [!div class="nextstepaction"]
-> [PaaS AI implementation options](../platform/implementation-options.md)
+> [PaaS AI workload architectures](../platform/architectures.md)

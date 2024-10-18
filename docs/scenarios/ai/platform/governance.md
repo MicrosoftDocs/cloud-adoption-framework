@@ -27,7 +27,7 @@ AI model governance refers to the processes for managing AI models to ensure the
 
 AI cost governance involves managing expenses associated with AI workloads to maximize efficiency and reduce unnecessary spending. Effective cost control ensures that AI investments align with business objectives, which prevents unforeseen costs from over-provisioning or underutilization. These practices enable organizations to optimize their AI operations financially.
 
-- *Use the right billing model.* If you have predictable workloads, use AI commitment tiers in Azure AI services. Use [provisioned throughput units](s/azure/ai-services/openai/concepts/provisioned-throughput), which can be less expensive than pay-as-you-go pricing with Azure OpenAI and OpenAI models via Azure AI Studio.
+- *Use the right billing model.* If you have predictable workloads, use AI commitment tiers in Azure AI services. Use [provisioned throughput units](/azure/ai-services/openai/concepts/provisioned-throughput), which can be less expensive than pay-as-you-go pricing with Azure OpenAI and OpenAI models via Azure AI Studio.
 
 - *Choose the right model for your use case.* Select the AI model that meets your needs without incurring excessive costs. Use less expensive models like GPT-3.5 Turbo instead of higher-cost options like GPT-4, unless the use case demands a more expensive model. For fine-tuning, maximize time usage within each billing period to avoid extra charges.
 
@@ -43,7 +43,7 @@ AI cost governance involves managing expenses associated with AI workloads to ma
 
 - *Create a policy to shut down compute instances.* Define and enforce a policy stating that AI resources must use the automatic shutdown feature on virtual machines and compute instances in Azure AI Studio and Azure Machine Learning. Automatic shutdown is applicable to nonproduction environments and production workloads that you can take offline for certain periods of time.
 
-For more cost management guidance, see [Manage AI costs](manage.md#manage-ai-costs) and [Cost optimization in the Azure OpenAI baseline](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat#cost-optimization).
+For more cost management guidance, see [Manage AI costs](../manage.md#manage-ai-costs) and [cost optimization](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat#cost-optimization) in the Azure OpenAI baseline architecture.
 
 ## Govern AI platforms
 
