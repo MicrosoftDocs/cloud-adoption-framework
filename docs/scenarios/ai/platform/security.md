@@ -23,7 +23,7 @@ Securing AI resources means applying security baselines and best practices to pr
 | --- | --- |
 [Azure Machine Learning](/security/benchmark/azure/baselines/machine-learning-service-security-baseline) | [Azure Machine Learning](/azure/well-architected/service-guides/azure-machine-learning)
 [Azure AI Studio](/security/benchmark/azure/baselines/azure-ai-studio-security-baseline) | |
-[Azure OpenAI](/security/benchmark/azure/baselines/azure-openai-security-baseline) | [Azure OpenAI](/azure/well-architected/service-guides/azure-openai)
+[Azure OpenAI](/security/benchmark/azure/baselines/azure-openai-security-baseline) | [Azure OpenAI](/azure/well-architected/service-guides/azure-openai)|
 
 ## Secure the AI models
 
@@ -57,7 +57,7 @@ Securing AI access includes establishing authentication and authorization contro
     | AI developers     | Access to development environments, deployment permissions, and the ability to modify AI applications.          |
     | IT administrators | Full access to manage infrastructure, network configurations, and security policies.                          |
 
-- *Secure Azure service-to-service interactions.* Use [Managed Identities](/entra/identity/managed-identities-azure-resources/overview) to allow Azure services to authenticate to each other without managing credentials.
+- *Secure Azure service-to-service interactions.* Use [managed identity](/entra/identity/managed-identities-azure-resources/overview) to allow Azure services to authenticate to each other without managing credentials.
 
 - *Secure external access to AI model endpoints.* Require clients to authenticate using Entra ID when accessing AI model endpoints. Consider using Azure API Management as an AI gateway in front of AI model endpoints to enforce access policies, control usage, and provide monitoring capabilities.
 
