@@ -25,7 +25,9 @@ AI supports two main goals: enhancing individual efficiency and improving busine
 
 - *Explore industry use cases.* Research how other businesses use AI for insights. Stay informed about emerging AI technologies and applications relevant to your industry.
 
-For more information, see [Example AI use cases](strategy.md#example-ai-use-cases).
+- *Set success metrics.* For each use case, define a success metric to guide your AI adoption. A clear objective shapes the technology you adopt and focuses your efforts.
+
+For more information, see [example AI use cases](#example-ai-use-cases) and [example AI adoption strategy](#example-ai-adoption-strategy).
 
 ## Define an AI technology strategy
 
@@ -82,7 +84,7 @@ An AI data strategy outlines data collection, storage, and usage practices that 
 
 A responsible AI strategy outlines your role in ensuring that AI solutions remain trustworthy and beneficial for all users. You and your AI provider, in this case Microsoft, share this responsibility. Your responsibilities vary depending on whether you use software as a service (SaaS), such as Microsoft Copilots, or an AI platform as a service (PaaS), like Azure AI Studio.
 
-- *Establish AI accountability.* As AI technology and regulations advance, assign someone to monitor and govern these changes. It's typically a responsibility of the AI CoE or an AI lead.
+- *Establish AI accountability.* As AI technology and regulations advance, assign someone to monitor and govern these changes. It's typically a responsibility of the [AI CoE](./center-of-excellence.md) or an AI lead.
 
 - *Align with established responsible AI principles.* Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles that adhere to the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf). Use these as business goals to define success and govern your AI adoption.
 
