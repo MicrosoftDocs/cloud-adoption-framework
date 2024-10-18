@@ -30,15 +30,21 @@ Acquiring AI skills requires organizations to assess their current talent pool a
 
 - *Learn AI skills.* Use the [Microsoft Learn](/) platform for free AI [training](/training/), [certifications](/credentials/), and [product guidance](/docs/). Set certification goals, such as [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
-- *Recruit AI professionals.* For expertise beyond your internal capabilities, recruit AI professionals experienced in model development, generative AI, or AI ethics. Collaborate with educational institutions to access fresh talent, update job descriptions to reflect evolving AI needs, and offer competitive compensation.
+- *Recruit AI professionals.* For expertise beyond your internal capabilities, recruit AI professionals experienced in model development, generative AI, or AI ethics. These professionals are in high-demand. Consider collaborating with educational institutions to access fresh talent. Make sure to update job descriptions to reflect evolving AI needs, and offer competitive compensation. Create an attractive employer brand. Showcase your organization’s commitment to innovation and technological advancement, making your brand appealing to AI professionals.
 
 - *Use Microsoft partners to acquire AI skills.* Use the [Microsoft partners marketplace](https://partner.microsoft.com//partnership/find-a-partner) to address skill shortages and meet time constraints. Microsoft partners provide AI, data, and Azure expertise across various industries.
 
 ## Access AI resources
 
-Accessing AI resources involves identifying and procuring the necessary tools, platforms, and software to support AI initiatives. Identify and acquire the necessary tools and platforms for AI initiatives. Appropriate resources prevent delays and streamline deployment.
+As a tactical step to developing AI solutions, you need to be able to access them. The goal here is to provide a quick way to understand and access what’s needed to start using Microsoft AI solutions.
 
-- *Access Microsoft Copilots.* Most Microsoft SaaS Copilots require a license or an add-on subscription. [Microsoft 365 Copilot](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license. [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license. In-product Copilots have different access requirements for each, but access to the primary product is required. For more information on each, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/). Role-based Copilots also have their own access requirements. For more information, see [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security).
+- *Access Microsoft 365 Copilot.* Most Microsoft SaaS Copilots require a license or an add-on subscription. [Microsoft 365 Copilot](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
+
+- *Access Microsoft Copilot Studio.* [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license.
+
+- *Access in-product Copilots.* In-product Copilots have different access requirements for each, but access to the primary product is required.For more information on each, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
+
+- *Access role-based Copilots.* Role-based Copilots also have their own access requirements. For more information, see [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security).
 
 - *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure OpenAI Service, Azure AI Studio, Azure Machine Learning, Azure AI services, and Azure Virtual Machines.
 
@@ -46,9 +52,9 @@ Accessing AI resources involves identifying and procuring the necessary tools, p
 
 After assessing skills, resources, and AI maturity, prioritize AI use cases identified in your [AI Strategy](./strategy.md#identify-ai-use-cases). This prioritization ensures you focus on projects that offer the greatest value, align with business goals, and match your current capabilities. Follow these steps:
 
-- *Assess skills and resources*. Review your current AI maturity, available data, and resource access.
+- *Assess skills and resources*. After acquiring AI skills, review your current AI maturity, available data, and resource access. This assessment helps reset priorities based on what's possible.
 
-- *Evaluate use cases.* Prioritize projects based on their potential impact, feasibility, and the strategic value they add to your organization. Align AI use cases with your strategic objectives to ensure that efforts contribute to overall success. Map out how AI can enhance productivity or streamline processes, and prioritize use cases that support your company’s mission and goals.
+- *Evaluate use cases.* Prioritize projects based on their potential impact, feasibility, and the strategic value they add to your organization. Align AI use cases with your strategic objectives to ensure that efforts contribute to overall success.
 
 - *Select top use cases.* Create a shortlist of high-priority AI use cases that will form the basis for further exploration and testing.
 
@@ -56,7 +62,9 @@ After assessing skills, resources, and AI maturity, prioritize AI use cases iden
 
 Developing an AI proof of concept (PoC) validates the feasibility and potential value of a prioritized use case on a smaller scale. The PoC process helps refine use case priority, reduce risk, and identify challenges before moving to full-scale deployment. This iterative approach lets you adjust your AI plan based on real-world insights.
 
-- *Select the right opportunity.* From your prioritized use cases, choose a high-value project that aligns with your AI maturity level. Ideally, start with an internal project that minimizes risk and provides a foundation for further testing. Use the PoC to validate the approach and refine it before expanding to production. Conduct A/B testing to establish what works and gather baseline data.
+- *Select the right opportunity.* From your shortlist of AI use cases, choose a high-value project that aligns with your AI maturity level. Ideally, start with an internal project, not customer facing. This minimizes risk and provides a foundation for testing the workload. Use the PoC to validate the approach and refine it before expanding to production. Conduct A/B testing to establish what works and gather baseline data.
+
+- *Start with an Azure quickstart guide.* Azure offers step-by-step guidance for creating basic applications using its AI platforms. These guides, called quickstarts, help you deploy an application and include instructions for deleting it afterward. Quickstarts provide a simple way to familiarize your organization with the technology.
 
     | AI type  | Azure AI quickstart guide |
     |----------|--------------|
