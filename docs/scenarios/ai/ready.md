@@ -81,7 +81,7 @@ Follow the recommendations outlined in this article to create a foundational env
 
 ## Next steps
 
-The next step is to build and deploy workloads to your established AI foundation. Use the following links to find the architecture guidance that meets your needs. Start with platform-as-a-service (PaaS) architectures. PaaS is Microsoft's recommended approach to adopting AI.
+The next step is to build and deploy AI workloads to your AI environment. Use the following links to find the architecture guidance that meets your needs. Start with platform-as-a-service (PaaS) architectures. PaaS is Microsoft's recommended approach to adopting AI.
 
 > [!div class="nextstepaction"]
 > [PaaS AI architecture guidance](./platform/architectures.md)
