@@ -59,7 +59,7 @@ You should use the Azure landing zone portal accelerator if you plan to manage y
 
 ### Application landing zone accelerators
 
-[Application landing zone accelerators](/azure/architecture/landing-zones/landing-zone-deploy#application) help you deploy application landing zones. Use the list of available application landing zone accelerators in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) and deploy the accelerator that matches your scenario.
+Application landing zone accelerators help you deploy application landing zones. Use the list of available application landing zone accelerators in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) and deploy the accelerator that matches your scenario.
 
 <!-- markdownlint-disable MD034 -->
 

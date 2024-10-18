@@ -72,6 +72,7 @@ An Azure **service principal** is the alternative for applications and services 
 > [!NOTE]
 > Both managed identities and service principals are created and maintained only in Microsoft Entra ID.
 
+
 ## Best practices for authentication in cloud-scale analytics
 
 In cloud-scale analytics, ensuring robust and secure authentication practices is paramount. Best practices for authentication across various layers, including databases, storage, and analytics services. By using Microsoft Entra ID, organizations can enhance security with features such as multifactor authentication (MFA) and conditional access policies.
@@ -85,6 +86,7 @@ In cloud-scale analytics, ensuring robust and secure authentication practices is
 
 > [!IMPORTANT]
 > Allowing Azure Databricks users direct storage-level access to ADLS bypasses Unity Catalog’s permissions, audits, and security features, including access control and monitoring. To fully secure and govern data, access to data stored in ADLS for Azure Databricks workspace users should be managed through Unity Catalog.
+
 
 ## Next steps
 
