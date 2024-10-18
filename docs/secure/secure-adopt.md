@@ -124,11 +124,11 @@ After the overarching strategy and implementation plan for adopting the CIA Tria
 
 ### Implement encryption and secure access controls
 
-To protect sensitive information from unauthorized access, it's crucial to implement robust encryption and secure access controls. Encryption ensures that data is unreadable to unauthorized users, while access controls regulate who can access specific data and resources. Understand the encryption capabilities of the cloud services that you deploy and enable the appropriate encryption mechanisms to meet your business requirements.
+To protect sensitive information from unauthorized access, it's crucial that you implement robust encryption and secure access controls. Encryption ensures that data is unreadable to unauthorized users, while access controls regulate who can access specific data and resources. Understand the encryption capabilities of the cloud services that you deploy and enable the appropriate encryption mechanisms to meet your business requirements.
 
 ### Incorporating and adopting associated standards
 
-Developing and adopting associated standards is essential for ensuring the consistent implementation of encryption and access controls. Organizations should establish clear guidelines and best practices for using encryption and access controls, and ensure that these standards are communicated to all employees. For example, a standard might specify that all sensitive data must be encrypted by using AES-256 encryption, and that access to this data must be restricted to authorized personnel only. Organizations can ensure that encryption and access controls are consistently applied across the enterprise by incorporating these standards into their policies and procedures. Providing regular training and support further reinforces these practices among employees. Other examples include:
+To ensure the consistent implementation of encryption and access controls, it's essential to develop and adopt associated standards. Organizations should establish clear guidelines and best practices for using encryption and access controls, and ensure that these standards are communicated to all employees. For example, a standard might specify that all sensitive data must be encrypted by using AES-256 encryption, and that access to this data must be restricted to authorized personnel only. Organizations can ensure that encryption and access controls are consistently applied across the enterprise by incorporating these standards into their policies and procedures. Providing regular training and support further reinforces these practices among employees. Other examples include:
 
 - **Strong encryption:** Enable encryption on data stores when possible and consider managing your own keys. Your cloud provider might offer encryption at rest for the storage that your data store is hosted on, and give you the option of enabling database encryption like [transparent data encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview) in Azure SQL Database. Apply the extra layer of encryption when possible.
 
@@ -158,17 +158,17 @@ In the Adopt phase, planning and designs are turned into real-world implementati
 
 - **Data classification:** Implement your data classification framework through automation when possible and manually when necessary. Use off the shelf tools to automate your data classification and identify sensitive information. Manually label documents and containers to ensure accurate classification. Curate data sets for analytics by taking advantage of the expertise of knowledgeable users to establish sensitivity.
 
-- **Data verification and validation:** Take advantage of built-in verification and validation functionality in the services that you deploy. For example, Azure Data Factory has built-in functionality to [verify data consistency](/azure/data-factory/copy-activity-data-consistency) when moving data from a source to a destination store. Consider adopting practices like:
+- **Data verification and validation:** Take advantage of built-in verification and validation functionality in the services that you deploy. For example, Azure Data Factory has built-in functionality to [verify data consistency](/azure/data-factory/copy-activity-data-consistency) when you move data from a source to a destination store. Consider adopting practices like:
 
-  - Using the CHECKSUM and BINARY_CHECKSUM functions in SQL to ensure data isn't corrupted in transit.
+  - Using the CHECKSUM and BINARY_CHECKSUM functions in SQL to ensure that data isn't corrupted in transit.
 
   - Storing hashes in tables and creating subroutines that modify the hashes when the last modified date changes.
 
 - **Monitoring and alerting:** Monitor your data stores for changes with detailed change history information to help with reviews. Configure alerting to ensure that you have appropriate visibility and you can take efficient actions if there are any incidents that could affect data integrity.
 
-- **Backup policies:** Apply backup policies on all appropriate systems. Understand the backup capabilities of platform as a service (PaaS) and software as a service (SaaS) services. For example, Azure SQL Database includes [automatic backups](/azure/azure-sql/database/automated-backups-overview) and you can configure the retention policy as necessary.
+- **Backup policies:** Apply backup policies on all appropriate systems. Understand the backup capabilities of platform as a service and software as a service services. For example, Azure SQL Database includes [automatic backups](/azure/azure-sql/database/automated-backups-overview) and you can configure the retention policy as necessary.
 
-- **Share design standards:** Publish and share application design standards that incorporate data integrity mechanisms across the organization. Design standards should include nonfunctional requirements like tracking configuration and data changes at the application level natively and capturing this history in the data schema. This approach mandates that the data schema retains details about data history and configuration history as part of the datastore, in addition to standard logging mechanisms to bolster your integrity monitoring.
+- **Share design standards:** Publish and share application design standards that incorporate data integrity mechanisms across the organization. Design standards should encompass nonfunctional requirements, such as natively tracking configuration and data changes at the application level and recording this history within the data schema. This approach mandates that the data schema retains details about data history and configuration history as part of the datastore, in addition to standard logging mechanisms to strengthen your integrity monitoring.
 
 ### System integrity adoption
 
@@ -216,7 +216,7 @@ To maintain a highly available cloud estate, teams operating the cloud systems m
 
 - [Azure Policy](/azure/governance/policy) is a policy management solution that helps enforce organizational standards and assess compliance at-scale. To automate policy enforcement for many Azure services, take advantage of [built-in policy definitions](/azure/governance/policy/samples/built-in-policies).
 
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) provides security policies that can automate compliance with your security standards.
+- [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) provides security policies that can automate compliance with your security standards.
 
 **Operational continuity and disaster recovery:** Many Azure services have built-in recovery capabilities that you can incorporate into your operational continuity and disaster recovery plans. For more information, see [Azure services reliability guides](/azure/reliability/overview-reliability-guidance).
 
@@ -230,7 +230,7 @@ Consider the following recommendations to help ensure that the security mechanis
 
 - **Harden production infrastructure:** Secure your cloud estate by hardening your infrastructure. To harden your infrastructure according to industry best practices, follow benchmarking guidance like the [Center for Internet Security (CIS) benchmarks](https://www.cisecurity.org/cis-benchmarks).
 
-- **Utilize the MITRE ATT&CK knowledge base:** Use the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base to help develop threat models and methodologies for common real-world attack tactics and techniques.
+- **Use the MITRE ATT&CK knowledge base:** Use the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base to help develop threat models and methodologies for common real-world attack tactics and techniques.
 
 - **Shift left:** Use segregated environments with different access levels for preproduction versus production. This approach helps you shift left, which adds security concerns to all phases of development and provides flexibility in lower environments.
 
