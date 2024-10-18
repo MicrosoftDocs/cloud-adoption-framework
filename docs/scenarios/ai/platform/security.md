@@ -15,7 +15,7 @@ As AI becomes more integrated into business operations, protecting these resourc
 
 ## Secure AI resources
 
-This guidance provides recommendations for securing Azure resources deployed for AI workloads.
+Securing AI resources means applying security baselines and best practices to protect the infrastructure used for AI workloads on Azure. This protection minimizes risks from external threats and ensures a consistent security posture across the organization.
 
 *Secure Azure AI platforms.* Standardize the application of [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/?product=popular) within the Azure Well-Architected Framework.
 
