@@ -21,8 +21,6 @@ AI supports two main goals: enhancing individual efficiency and improving busine
 
 - *Conduct an assessment.* Gather input from various departments to identify challenges and inefficiencies that AI could address. Document current workflows to find areas where AI can automate tasks or provide insights.
 
-- *Align AI initiatives with strategic goals.* Align AI projects with your strategic objectives to ensure that efforts contribute to overall success. Map out how AI can enhance productivity or streamline processes, and prioritize use cases that support your company’s mission and goals.
-
 - *Explore industry use cases.* Research how other businesses use AI for insights. Stay informed about emerging AI technologies and applications relevant to your industry.
 
 - *Set success metrics.* For each use case, define a success metric to guide your AI adoption. A clear objective shapes the technology you adopt and focuses your efforts.

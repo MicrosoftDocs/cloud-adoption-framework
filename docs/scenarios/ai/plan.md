@@ -48,7 +48,7 @@ After assessing skills, resources, and AI maturity, prioritize AI use cases iden
 
 - *Assess skills and resources*. Review your current AI maturity, available data, and resource access.
 
-- *Evaluate use cases.* Prioritize projects based on their potential impact, feasibility, and the strategic value they add to your organization.
+- *Evaluate use cases.* Prioritize projects based on their potential impact, feasibility, and the strategic value they add to your organization. Align AI use cases with your strategic objectives to ensure that efforts contribute to overall success. Map out how AI can enhance productivity or streamline processes, and prioritize use cases that support your company’s mission and goals.
 
 - *Select top use cases.* Create a shortlist of high-priority AI use cases that will form the basis for further exploration and testing.
 
