@@ -11,10 +11,8 @@ items:
       href: ready.md
     - name: AI on Azure platforms (PaaS)
       items:
-      - name: Implementation options
-        items:
-        - name: AI architecture guidance
-          href: platform/architectures.md
+      - name: AI architecture guidance
+        href: platform/architectures.md
       - name: Design areas
         items:
           - name: Resource selection
@@ -30,9 +28,7 @@ items:
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Implementation options
-        items:
-        - name: CycleCloud Workspace for Slurm 
-          href: infrastructure/cycle-cloud.md
+        href: infrastructure/cycle-cloud.md
       - name: Design areas
         items:
           - name: Compute
