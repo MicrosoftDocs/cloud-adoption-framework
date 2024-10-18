@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI Strategy - Recommendations for organizations developing an AI adoption strategy
 
-An AI strategy outlines the organizational process for developing an AI adoption strategy. It helps you identify where AI can add value, select the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success. Create an [AI center of excellence](./center-of-excellence.md) (AI CoE), or appoint an AI lead to oversee your AI adoption.
+An AI strategy outlines the organizational process for developing an AI adoption strategy. It helps you identify where AI can add value, select the right solutions, and measure progress. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success. As a first step, create an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint an AI lead to oversee your AI adoption.
 
 :::image type="content" source="./images/aistrategy.svg" alt-text="Diagram showing the AI adoption framework process. It highlights AI Strategy. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/aistrategy.svg" border="false":::
 
@@ -29,7 +29,7 @@ For more information, see [example AI use cases](#example-ai-use-cases) and [exa
 
 ## Define an AI technology strategy
 
-An AI technology strategy involves selecting the right tools and platforms for each AI use case. Choose between software as a service (SaaS), platform as a service (PaaS), or infrastructure as a service (IaaS) based on your goals and technical needs. Each service model impacts the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft. For each use case, identify a supporting AI technology.
+An AI technology strategy involves selecting the right tools and platforms for each AI use case you identified. Choose between software as a service (SaaS), platform as a service (PaaS), or infrastructure as a service (IaaS) based on your goals and technical needs. Each service model impacts the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft. For each use case, identify a supporting AI technology.
 
 Use the decision tree to narrow down options for each AI opportunity. While the adoption guidance focuses on Azure, it's important to understand the AI options available to your business. After selecting a service, review the skills and data needed to succeed, and consider cost factors to avoid surprises.
 
