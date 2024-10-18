@@ -21,7 +21,7 @@ Managing AI operations ensures visibility and consistency throughout the AI life
 
 - *Standardize AI development tools.* Define and standardize the use of SDKs and APIs for consistency across development teams. Tools like [Azure SDK](/azure/developer/) for AI workloads provide libraries and APIs that are optimized for scaling AI models and integrating them into applications. For generative AI, standardize your AI platform and orchestrators, such as [Semantic Kernel](/semantic-kernel/overview/), LangChain, and [Prompt Flow](/azure/ai-studio/how-to/prompt-flow).
 
-- *Use a sandbox environment for AI experimentation.* Use a sandbox environment for AI model experimenting. You want to consistency across dev, test, and prod environments. So, the sandbox environment should be distinct from dev, test, and production environments in the AI development lifecycle. Changing deployment and governance models between dev, test, and prod can hide and introduce breaking changes.
+- *Use a sandbox environment for AI experimentation.* Use a sandbox environment for AI model experimenting. You want to consistency across dev, test, and prod environments. So, the sandbox environment should be distinct from dev, test, and production environments in the AI development lifecycle. If you change deployment and governance models between dev, test, and prod environments, it can hide and introduce breaking changes.
 
 - *Establish continuous integration and continuous delivery pipelines for deployment.* Ensure that your data pipelines cover code quality checks, including linting and static analysis. Data pipelines should also include unit and integration tests, as well as experimentation and evaluation flows. Finally, incorporate production deployment steps, such as promoting releases to test and production environments following manual approvals. Maintain separation between models, prompt flows, and the client user interface to ensure updates to one component don't affect others. Each flow should have its own lifecycle for independent promotion.
 
@@ -79,7 +79,7 @@ For generative AI applications using Azure OpenAI, see these [cost optimization 
 
 ## Manage AI data
 
-Effective AI data management focuses on maintaining data accuracy, integrity, and sensitivity throughout the AI lifecycle. By curating high-quality datasets and securing data pipelines, businesses can ensure that data remains reliable and compliant with changing regulatory requirements.
+Effective AI data management focuses on maintaining data accuracy, integrity, and sensitivity throughout the AI lifecycle. When you curate high-quality datasets and securing data pipelines, your organization can ensure that data remains reliable and compliant with changing regulatory requirements.
 
 - *Maintain data accuracy and curate golden datasets.* Develop an authoritative set of data used for regular testing and validation across both AI types. Continuously curate this dataset to ensure it reflects up-to-date, accurate information.
 

@@ -29,7 +29,7 @@ For more information, see [example AI use cases](#example-ai-use-cases) and [exa
 
 ## Define an AI technology strategy
 
-An AI technology strategy involves selecting the right tools and platforms for each AI use case you identified. Choose between software as a service (SaaS), platform as a service (PaaS), or infrastructure as a service (IaaS) based on your goals and technical needs. The service model you affects the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft. Use the decision tree to narrow down options for each AI use case. After selecting a service, review the skills and data needed to succeed, and consider cost factors to avoid surprises.
+An AI technology strategy involves selecting the right tools and platforms for each AI use case you identified. Choose between software as a service (SaaS), platform as a service (PaaS), or infrastructure as a service (IaaS) based on your goals and technical needs. The service model you choose affects the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft. Use the decision tree to narrow down options for each AI use case. After selecting a service, review the skills and data needed to succeed, and consider cost factors to avoid surprises.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
@@ -70,23 +70,23 @@ For organizations needing more control and customization, Microsoft offers infra
 
 An AI data strategy outlines data collection, storage, and usage practices that align with regulatory, ethical, and operational standards. This strategy ensures reliable AI outputs and promotes data security and privacy.
 
-- *Establish data governance*. Define data governance principles that ensure AI workloads are transparent, accountable, and compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage.
+- *Establish data governance.* Define data governance principles that ensure AI workloads are transparent, accountable, and compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage.
 
-- *Plan the data lifecycle*. Specify how you will collect, store, process, and retire data. Include retention and disposal policies and use version control to maintain accuracy during updates.
+- *Plan the data lifecycle.* Specify how you collect, store, process, and retire data. Include retention and disposal policies and use version control to maintain accuracy during updates.
 
-- *Set up AI fairness and bias controls*. Develop processes to detect and address bias in data. Use tools like Fairlearn to ensure models provide fair and equitable outcomes, especially when working with sensitive data attributes.
+- *Set up AI fairness and bias controls.* Develop processes to detect and address bias in data. Use tools like Fairlearn to ensure models provide fair and equitable outcomes, especially when working with sensitive data attributes.
 
-- *Promote collaboration between AI and data teams*. Align AI development with data engineering efforts to ensure models are built using high-quality, well-managed data. Establish a unified pipeline for AI model training and data updates.
+- *Promote collaboration between AI and data teams.* Align AI development with data engineering efforts to ensure models are built using high-quality, well-managed data. Establish a unified pipeline for AI model training and data updates.
 
-- *Prepare for data scalability*. Forecast the volume, velocity, and variety of data needed for AI workloads. Use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
+- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for AI workloads. Use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
 
-- *Incorporate data management automation*. Plan to use AI and machine learning to automate tasks like tagging, cataloging, and data quality checks. Automation improves accuracy and allows teams to focus on strategic efforts.
+- *Incorporate data management automation.* Plan to use AI and machine learning to automate tasks like tagging, cataloging, and data quality checks. Automation improves accuracy and allows teams to focus on strategic efforts.
 
-- *Plan for continuous monitoring and evaluation*. Establish regular audits of data and model outputs to ensure ongoing data quality, performance, and fairness. Monitor AI models and data pipelines to identify any shifts that might impact reliability or compliance.
+- *Plan for continuous monitoring and evaluation.* Establish regular audits of data and model outputs to ensure ongoing data quality, performance, and fairness. Monitor AI models and data pipelines to identify any shifts that might impact reliability or compliance.
 
 ## Define a responsible AI strategy
 
-A responsible AI strategy outlines your role in ensuring that AI solutions remain trustworthy and beneficial for all users. You share this responsibility with your AI provider. Your responsibilities vary depending the technology you adopt.
+A responsible AI strategy outlines your role in ensuring that AI solutions remain trustworthy and beneficial for all users. You share this responsibility with your AI provider. Your responsibilities vary depending on the technology you adopt.
 
 - *Establish AI accountability.* As AI technology and regulations advance, assign someone to monitor and govern these changes. It's typically a responsibility of the [AI CoE](./center-of-excellence.md) or an AI lead.
 

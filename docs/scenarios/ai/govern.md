@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Govern AI – Recommendations for organizations governing AI workloads in Azure
 
-This articles outlines the organizational process for governing AI workloads. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). It also aligns with the framework in [CAF Govern](/azure/cloud-adoption-framework/govern/).
+This article outlines the organizational process for governing AI workloads. It follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). It also aligns with the framework in [CAF Govern](/azure/cloud-adoption-framework/govern/).
 
 This guidance aims to help you integrate AI risk management into broader risk management strategies. This integration prodives more cohesive handling of AI, cybersecurity, and privacy risks for a unified governance approach.
 
@@ -19,9 +19,9 @@ This guidance aims to help you integrate AI risk management into broader risk ma
 
 AI risk assessment identifies and addresses potential risks introduced by AI technologies. This process builds trust in AI systems and reduces unintended consequences. Addressing organizational risks ensures that AI deployments align with the organization's values, risk tolerance, and operational goals.
 
-- *Understand the AI workloads.* To mitigate AI risks, you must understand your AI workloads. By clarifying the scope and purpose of each AI workload, you can map associated risks. This should include any assumptions and limitations related to the AI workload.
+- *Understand the AI workloads.* To mitigate AI risks, you must understand your AI workloads. By clarifying the scope and purpose of each AI workload, you can map associated risks. This clarification should include any assumptions and limitations related to the AI workload.
 
-- *Use Responsible AI principles to identify risks.* These principles provide a framework for assessing AI risks. Use the table below to identify and mitigate risks through a structured assessment of AI principles, such as privacy, security, reliability, fairness, inclusiveness, transparency, and accountability.
+- *Use Responsible AI principles to identify risks.* These principles provide a framework for assessing AI risks. Use the following table to identify and mitigate risks through a structured assessment of AI principles.
 
     | Responsible AI principle | Definition | Risk assessment question |
     |--------------------------|------------|--------------------------|
@@ -77,7 +77,7 @@ Monitoring AI risks enables organizations to identify emerging risks and address
 
 - *Quantify and qualify AI risks.* Choose quantitative metrics (error rates, accuracy) and qualitative indicators (user feedback, ethical concerns) that align with the workload’s purpose. Benchmark performance against industry standards to track the AI’s impacts, trustworthiness, and performance.
 
-- *Document and report measurement outcomes.* Regular documentation and reporting enhance transparency and accountability. Create standardized reports that summarize metrics, findings, and any anomalies to guide decision-making. Share these insights with stakeholders, using them to refine risk mitigation strategies and improve future deployments.
+- *Document and report measurement outcomes.* Regular documentation and reports enhance transparency and accountability. Create standardized reports that summarize metrics, findings, and any anomalies to guide decision-making. Share these insights with stakeholders, using them to refine risk mitigation strategies and improve future deployments.
 
 - *Establish independent review processes.* Regular independent reviews provide objective assessments of AI risks and compliance, using external or uninvolved internal reviewers. Use findings to strengthen risk assessments and refine governance policies.
 

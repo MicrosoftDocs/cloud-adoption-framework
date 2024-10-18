@@ -16,7 +16,7 @@ This AI adoption guidance provides a structured approach for integrating AI into
 
 ## Why adopt AI?
 
-AI adoption is foundational to optimizing operations for individuals and organizations. Effective AI adoption uses governance, security, and management best practices to build trustworthy AI workloads. It enhances individual efficiency by automating routine tasks and providing creative insights. AI automates business processes, ranging from adaptive user experiences to business forecasting. These use cases allow businesses and employees to focus on customers and work that matters most. You have options on how you want to adopt AI. Microsoft has AI services for different skill set, budgets, and data needs. You can decide what works best based on your needs. This guidance helps you navigate these decisions.
+AI adoption is foundational to optimizing operations for individuals and organizations. Effective AI adoption uses governance, security, and management best practices to build trustworthy AI workloads. It enhances individual efficiency by automating routine tasks and providing creative insights. AI automates business processes, ranging from adaptive user experiences to business forecasting. These use cases allow businesses and employees to focus on customers and work that matters most. You have options to adopt AI the way that best helps your organization. Microsoft has AI services for different skill set, budgets, and data needs. You can decide what works best based on your goals. This guidance helps you navigate these decisions.
 
 ## How to adopt AI
 

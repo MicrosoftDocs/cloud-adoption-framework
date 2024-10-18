@@ -15,14 +15,14 @@ This article outlines the organizational process for planning AI adoption. An AI
 
 ## Assess AI skills
 
-In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), you identified AI uses cases and AI solutions for each. These solutions requires certain AI skills to adopt. Evaluate your current AI skills and identify gaps to address before proceeding. An AI maturity assessment helps determine your readiness to implement AI. It also guides the selection of use cases that match your capabilities and expedites your success. Use the table below to assess your AI maturity level. For more information, see [Technical Assessment for Generative AI in Azure](/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
+In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), you identified AI uses cases and AI solutions for each. These solutions require certain AI skills to adopt. Evaluate your current AI skills and identify gaps to address before proceeding. An AI maturity assessment helps determine your readiness to implement AI. It also guides the selection of use cases that match your capabilities and expedites your success. Use the following table to assess your AI maturity level. For more information, see [Technical Assessment for Generative AI in Azure](/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/).
 
   | AI maturity level | Skills required | Data readiness | Feasible AI use cases |
   |-------------------|-----------------|----------------|----------------------|
   | Level 1       | ▪ Basic understanding of AI concepts <br> ▪ Ability to integrate data sources and map out prompts | ▪ Minimal to zero data available <br> ▪ Enterprise data available | ▪ Azure quickstart (*see table*) <br> ▪ Copilot Studio app |
   | Level 2       | ▪ Experience with AI model selection <br> ▪ Familiarity with AI deployment and endpoint management <br> ▪ Experience with data cleaning and processing | ▪ Minimal to zero data available <br> ▪ Small, structured dataset <br> ▪ Small amount of domain-specific data available | ▪ Any of the previous projects <br> ▪ Custom analytical AI workload that uses Azure AI services <br> ▪ Custom generative AI chat app without Retrieval Augmented Generation (RAG) in Azure AI Studio  <br> ▪ Custom machine learning app with automated model training <br> ▪ Fine-tuning a generative AI model |
   | Level 3       | ▪ Proficiency in prompt engineering <br> ▪ Proficiency in AI model selection, data chunking, and query processing <br> ▪ Proficiency in data preprocessing, cleaning, splitting, and validating <br> ▪ Grounding data for indexing | ▪ Large amounts of historical business data available for machine learning <br> ▪ Small amount of domain-specific data available | ▪ Any of the previous projects <br> ▪ Generative AI app with RAG in Azure AI Studio (or Azure Machine Learning) <br> ▪ Training and deploying a machine learning model in Machine Learning <br> ▪ Training and running a small AI model on Azure Virtual Machines |
-  | Level 4    | ▪ Advanced AI / machine learning expertise, including infrastructure management <br> ▪ Proficiency in handling complex AI model training workflows <br> ▪ Experience with orchestration, model benchmarking, and performance optimization <br> ▪ Strong skills in securing and managing AI endpoints | ▪ Large amounts of data available for training | ▪ Any of the previous projects <br> ▪ Training and running a large generative or non-generative AI app on Virtual Machines, Azure Kubernetes Service, or Azure Container Apps |
+  | Level 4    | ▪ Advanced AI / machine learning expertise, including infrastructure management <br> ▪ Proficiency in handling complex AI model training workflows <br> ▪ Experience with orchestration, model benchmarking, and performance optimization <br> ▪ Strong skills in securing and managing AI endpoints | ▪ Large amounts of data available for training | ▪ Any of the previous projects <br> ▪ Training and running a large generative or nongenerative AI app on Virtual Machines, Azure Kubernetes Service, or Azure Container Apps |
 
 ## Acquire AI skills
 
@@ -36,13 +36,13 @@ Acquiring AI skills requires organizations to assess their current talent pool a
 
 ## Access AI resources
 
-As a tactical step to developing AI solutions, you need to be able to access them. The goal here is to provide a quick way to understand and access what’s needed to start using Microsoft AI solutions.
+As a tactical step to developing AI solutions, you need to be able to access them. The goal is to provide a quick way to understand and access what you need to start using Microsoft AI solutions.
 
 - *Access Microsoft 365 Copilot.* Most Microsoft SaaS Copilots require a license or an add-on subscription. [Microsoft 365 Copilot](https://www.microsoft.com//microsoft-365/microsoft-copilot#plans) requires a Microsoft 365 business or enterprise license to which you add on the Copilot license.
 
 - *Access Microsoft Copilot Studio.* [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) uses a standalone license or an add-on license.
 
-- *Access in-product Copilots.* In-product Copilots have different access requirements for each, but access to the primary product is required.For more information on each, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
+- *Access in-product Copilots.* In-product Copilots have different access requirements for each, but access to the primary product is required. For more information on each, see [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), and [Azure](https://azure.microsoft.com//products/copilot/).
 
 - *Access role-based Copilots.* Role-based Copilots also have their own access requirements. For more information, see [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security).
 
@@ -54,15 +54,15 @@ After assessing skills, resources, and AI maturity, prioritize AI use cases iden
 
 - *Assess skills and resources*. After acquiring AI skills, review your current AI maturity, available data, and resource access. This assessment helps reset priorities based on what's possible.
 
-- *Evaluate use cases.* Prioritize projects based on their potential impact, feasibility, and the strategic value they add to your organization. Align AI use cases with your strategic objectives to ensure that efforts contribute to overall success.
+- *Evaluate use cases.* Prioritize projects based on their feasibility and strategic value they add to your organization. Align AI use cases with your strategic objectives to ensure that efforts contribute to overall success.
 
-- *Select top use cases.* Create a shortlist of high-priority AI use cases that will form the basis for further exploration and testing.
+- *Select top use cases.* Create a shortlist of high-priority AI use cases that form the basis for further exploration and testing.
 
 ## Create an AI proof of concept
 
 Developing an AI proof of concept (PoC) validates the feasibility and potential value of a prioritized use case on a smaller scale. The PoC process helps refine use case priority, reduce risk, and identify challenges before moving to full-scale deployment. This iterative approach lets you adjust your AI plan based on real-world insights.
 
-- *Select the right opportunity.* From your shortlist of AI use cases, choose a high-value project that aligns with your AI maturity level. Ideally, start with an internal project, not customer facing. This minimizes risk and provides a foundation for testing the workload. Use the PoC to validate the approach and refine it before expanding to production. Conduct A/B testing to establish what works and gather baseline data.
+- *Select the right opportunity.* From your shortlist of AI use cases, choose a high-value project that aligns with your AI maturity level. Ideally, start with an internal project, not customer facing. Internal projects minimize risk and provide a foundation for testing the workload. Use the PoC to validate the approach and refine it before expanding to production. Conduct A/B testing to establish what works and gather baseline data.
 
 - *Start with an Azure quickstart guide.* Azure offers step-by-step guidance for creating basic applications using its AI platforms. These guides, called quickstarts, help you deploy an application and include instructions for deleting it afterward. Quickstarts provide a simple way to familiarize your organization with the technology.
 
@@ -74,7 +74,7 @@ Developing an AI proof of concept (PoC) validates the feasibility and potential 
 
 - *Document learnings*. Track key learnings from the PoC. Use this information to inform your overall AI strategy and better understand the resources, data, and skills needed for larger-scale projects.
 
-- *Reprioritize AI opportunities*. Use the insights gained from the PoC to refine your list of AI use cases. If the PoC reveals that a use case requires more resources than anticipated or presents unexpected challenges, you can adjust your priorities and focus on more feasible projects.
+- *Reprioritize AI opportunities*. Use the insights gained from the PoC to refine your list of AI use cases. If the PoC presents unexpected challenges, adjust your priorities and focus on more feasible projects.
 
 ## Implement responsible AI
 

@@ -70,7 +70,7 @@ Determine whether the AI CoE operates as an extension of an existing Cloud CoE o
 
 After establishing the AI CoE, continuously monitor performance, make adjustments, and scale AI initiatives as needed:
 
-- *Monitor AI performance:* Track KPIs and business metrics related to AI initiatives. Use feedback loops to improve model accuracy and impact.
+- *Monitor AI performance:* Track KPIs and business metrics related to AI initiatives. Use feedback loops to improve model accuracy.
 
 - *Iterate and scale:* Optimize AI processes based on lessons learned from pilot projects, and expand successful solutions to other business units or regions.
 

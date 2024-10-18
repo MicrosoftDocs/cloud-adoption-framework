@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Secure AI – Recommendations for organizations securing AI workloads in Azure
 
-This articles outlines the organizational process for securing AI workloads. It focuses on the confidentiality, integrity, and availability (CIA) of AI. Effective security practices reduce the risk of compromise by safeguarding the confidentiality, integrity, and availability of AI models and data. A secure AI environment also aligns with business security goals and enhances trust in AI-driven processes.
+This article outlines the organizational process for securing AI workloads. It focuses on the confidentiality, integrity, and availability (CIA) of AI. Effective security practices reduce the risk of compromise by safeguarding the confidentiality, integrity, and availability of AI models and data. A secure AI environment also aligns with business security goals and enhances trust in AI-driven processes.
 
 :::image type="content" source="./images/secureai.svg" alt-text="Diagram showing the AI adoption framework process. It highlights Secure AI. The process with AI Strategy, AI Plan, AI Ready as sequential steps. Then Secure AI, Govern AI, and Manage AI are cyclical processes after AI Ready. Undergirding the entire process is Responsible AI." lightbox="./images/secureai.svg" border="false":::
 
@@ -23,11 +23,11 @@ Assessing AI security risks involves identifying and evaluating potential vulner
 
 - *Conduct AI threat modeling.* Perform company-wide AI [threat modeling](https://www.microsoft.com/securityengineering/sdl/threatmodeling) by using frameworks like STRIDE to assess potential attack vectors for all AI workloads. Update threat models regularly to adapt to new AI use cases and threats. The [AI center of excellence](./center-of-excellence.md) should consider centralizing AI threat modeling to ensure a uniform approach across the organization and mitigate risks associated with various AI models, data sources, and processes.
 
-- *Test AI models.* Conduct red-team testing against [generative AI models](/azure/ai-services/openai/concepts/red-teaming) and nongenerative models to assess their vulnerability to attacks. Tools like [PyRIT](https://github.com/Azure/PyRIT/tree/main#python-risk-identification-tool-for-generative-ai-pyrit) can automate this process for generative AI, so that you can challenge the model's outputs under various conditions. This step is highly technical and requires dedicated expertise to preform effectively.
+- *Test AI models.* Conduct red-team testing against [generative AI models](/azure/ai-services/openai/concepts/red-teaming) and nongenerative models to assess their vulnerability to attacks. Tools like [PyRIT](https://github.com/Azure/PyRIT/tree/main#python-risk-identification-tool-for-generative-ai-pyrit) can automate this process for generative AI, so that you can challenge the model's outputs under various conditions. This step is highly technical and requires dedicated expertise to perform effectively.
 
 ## Implement AI security controls
 
-Implementing AI security controls means establishing policies, procedures, and tools that safeguard AI resources and data. These controls help ensure compliance with regulatory requirements and protect against unauthorized access, supporting continuous operation and data privacy. By applying consistent controls across AI workloads, organizations can manage security more effectively.
+Implementing AI security controls means establishing policies, procedures, and tools that safeguard AI resources and data. These controls help ensure compliance with regulatory requirements and protect against unauthorized access, supporting continuous operation and data privacy. When you apply consistent controls across AI workloads, you can manage security more effectively.
 
 ### Secure AI resources
 
@@ -71,7 +71,7 @@ Maintaining AI security controls includes ongoing monitoring, testing, and updat
 
 - *Develop and maintain an incident response plan for AI security incidents.* Create an incident response strategy tailored to AI systems to address potential data breaches or security incidents. The plan should outline clear procedures for detecting, reporting, and mitigating security incidents that might affect AI models, data, or infrastructure. Conduct regular drills and simulations focused on AI-specific scenarios to ensure that the response team is prepared to handle real-world AI security incidents efficiently.
 
-- *Conduct periodic risk assessments and impact analyses for AI workloads.* Evaluate emerging threats and vulnerabilities specific to AI regularly through risk assessments and impact analyses. These evaluations help identify new risks that are associated with AI models, data handling processes, and deployment environments. Evaluations also assess the potential effects of security breaches on AI systems.
+- *Conduct periodic risk assessments.* Evaluate emerging threats and vulnerabilities specific to AI regularly through risk assessments and impact analyses. These evaluations help identify new risks that are associated with AI models, data handling processes, and deployment environments. Evaluations also assess the potential effects of security breaches on AI systems.
 
 ## Next steps
 

@@ -39,7 +39,7 @@ AI governance encompasses organizing resources and applying policies to manage A
 
 ## Establish AI networking
 
-AI networking refers to the design and implementation of network infrastructure for AI workloads, including security and connectivity. This involves using topologies like hub-and-spoke, applying security measures such as DDoS protection, and ensuring efficient data transfer. Effective AI networking is critical for secure and reliable communication, preventing network-based disruptions and maintaining performance.
+AI networking refers to the design and implementation of network infrastructure for AI workloads, including security and connectivity. It involves using topologies like hub-and-spoke, applying security measures such as DDoS protection, and ensuring efficient data transfer. Effective AI networking is critical for secure and reliable communication, preventing network-based disruptions and maintaining performance.
 
 - *Activate Azure DDoS Protection for internet-facing AI workloads.* [Azure DDoS Protection](azure/ddos-protection/ddos-protection-overview) safeguards your AI services from potential disruptions and downtime caused by distributed denial of service attacks. Enable Azure DDoS protection at the virtual network level to defend against traffic floods targeting internet-facing applications.
 
@@ -55,13 +55,13 @@ AI networking refers to the design and implementation of network infrastructure 
 
 - *Use network monitoring services.* Use services such as Azure Monitor Network Insights and Azure Network Watcher to gain visibility into network performance and health. Additionally, use Microsoft Sentinel for advanced threat detection and response across your Azure network.
 
-- *Deploy Azure Firewall to inspect and secure outbound Azure workload traffic.* [Azure Firewall](/azure/firewall/overview) enforces security policies for outgoing traffic before it reaches the internet. Use it to control and monitor outgoing traffic and enable SNAT to conceal internal IP addresses by translating private IPs to the firewall's public IP. This ensures secure and identifiable outbound traffic for better monitoring and security.
+- *Deploy Azure Firewall to inspect and secure outbound Azure workload traffic.* [Azure Firewall](/azure/firewall/overview) enforces security policies for outgoing traffic before it reaches the internet. Use it to control and monitor outgoing traffic and enable SNAT to conceal internal IP addresses by translating private IPs to the firewall's public IP. It ensures secure and identifiable outbound traffic for better monitoring and security.
 
-- *Use Azure Web Application Firewall (WAF)for internet-facing workloads.* [Azure WAF](/azure/web-application-firewall/overview) helps protect your AI workloads from common web vulnerabilities, including SQL injections and cross-site scripting attacks. Configure Azure WAF on [Application Gateway](/azure/web-application-firewall/ag/ag-overview) for workloads that require enhanced security against malicious web traffic.
+- *Use Azure Web Application Firewall (WAF) for internet-facing workloads.* [Azure WAF](/azure/web-application-firewall/overview) helps protect your AI workloads from common web vulnerabilities, including SQL injections and cross-site scripting attacks. Configure Azure WAF on [Application Gateway](/azure/web-application-firewall/ag/ag-overview) for workloads that require enhanced security against malicious web traffic.
 
 ## Establish an AI foundation
 
-An AI foundation provides the core infrastructure and resource hierarchy that support AI workloads in Azure. This includes setting up scalable, secure environments that align with governance and operational needs. A strong AI foundation enables efficient deployment and management of AI workloads. It also ensures security and flexibility for future growth.
+An AI foundation provides the core infrastructure and resource hierarchy that support AI workloads in Azure. It includes setting up scalable, secure environments that align with governance and operational needs. A strong AI foundation enables efficient deployment and management of AI workloads. It also ensures security and flexibility for future growth.
 
 ### Use Azure landing zone
 

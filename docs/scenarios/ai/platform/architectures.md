@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI architecture guidance to build AI workloads on Azure
 
-This article offers architecture guidance for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and non-generative AI workloads.
+This article offers architecture guidance for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
 
 The Azure Architecture Center offers reference architectures and guides to help organizations build AI workloads efficiently and securely. These resources provide well-tested, structured frameworks for AI workload deployment.
 
@@ -43,7 +43,7 @@ In [AI Ready](../ready.md#establish-ai-governance), you established a resource h
 
 ## Use the AI design areas as a framework
 
-The AI design areas outlined in this guidance offer structured recommendations for organizations building AI workloads with Azure's platform-as-a-service (PaaS) solutions. The following design areas provide comprehensive guidelines for adopting AI workloads on Azure and managing them throughout their lifecycle:
+The AI design areas offer recommendations for organizations building AI workloads with Azure's platform-as-a-service (PaaS) solutions. The following design areas provide comprehensive guidelines for adopting AI workloads on Azure and managing them throughout their lifecycle:
 
 - [AI resource selection](./resource-selection.md)
 - [AI networking](./networking.md)
