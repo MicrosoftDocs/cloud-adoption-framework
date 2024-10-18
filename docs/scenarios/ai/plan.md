@@ -78,9 +78,9 @@ Developing an AI proof of concept (PoC) validates the feasibility and potential 
 
 ## Implement responsible AI
 
-Responsible AI adoption requires incorporating ethical frameworks and regulatory practices into your AI implementation plan. This approach ensures that AI initiatives align with organizational values, protect user rights, and comply with legal standards. By embedding responsible AI principles at every stage, organizations build trust, manage risk, and maintain a positive reputation
+Responsible AI adoption requires incorporating ethical frameworks and regulatory practices into your AI implementation plan. This approach ensures that AI initiatives align with organizational values, protect user rights, and comply with legal standards.
 
-- *Use responsible-AI planning tools.* To integrate responsible AI principles into your adoption process, use tools and frameworks that support ethical AI practices. Microsoft offers several resources.
+- *Use responsible AI planning tools.* To integrate responsible AI principles into your adoption process, use tools and frameworks that support ethical AI practices. Microsoft offers several resources.
 
     | Responsible AI planning tool | Description |
     | --- | --- |
@@ -88,11 +88,11 @@ Responsible AI adoption requires incorporating ethical frameworks and regulatory
     | [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/) | Design AI systems that prioritize user well-being and foster positive interactions. |
     | [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/) | Assess and advance your organization's maturity in implementing responsible AI practices.|
 
-- *Start the AI governance process.* Responsible AI adoption involves creating governance policies to guide AI projects and monitor AI system behaviors. Start by identifying organizational risks specific to your AI initiatives. Document governance policies that outline responsibilities, compliance requirements, and ethical standards. Refer to [Govern AI](govern.md) for guidance on policy creation, including topics like data privacy, model explainability, and accountability.
+- *Plan AI governance.* Responsible AI adoption involves creating governance policies to guide AI projects and monitor AI system behaviors. Start by identifying organizational risks specific to your AI initiatives. Document governance policies that outline responsibilities, compliance requirements, and ethical standards. See [Govern AI](govern.md) outlines the entire process.
 
-- *Start the AI management process.* AI management frameworks, such as GenAIOps or MLOps, help ensure ongoing adherence to responsible AI principles as your AI systems evolve. These practices involve deployment management, continuous monitoring, and cost optimization for AI models in production. Refer to [Manage AI](./manage.md) for insights on applying operational frameworks that support responsible AI, such as model versioning, testing for bias, and tracking performance metrics.
+- *Plan AI management.* AI management frameworks, such as GenAIOps or MLOps, help ensure ongoing adherence to responsible AI principles as your AI systems evolve. These practices involve deployment management, continuous monitoring, and cost optimization for AI models in production. See [Manage AI](./manage.md) outlines the entire process.
 
-- *Start the AI security process.* Security forms a critical part of responsible AI adoption. Regular security assessments help protect the confidentiality, integrity, and availability of your AI systems. Conduct risk assessments that address potential security threats specific to AI, such as adversarial attacks or data breaches. For further guidance, see the [Secure AI](./secure.md) section. It outlines security best practices tailored for AI workloads, including threat modeling and access control.
+- *Plan AI security.* Security forms a critical part of responsible AI adoption. Regular security assessments help protect the confidentiality, integrity, and availability of your AI systems. Conduct risk assessments that address potential security threats specific to AI, such as adversarial attacks or data breaches. See [Secure AI](./secure.md) outlines the entire process.
 
 ## Estimate delivery timelines
 
