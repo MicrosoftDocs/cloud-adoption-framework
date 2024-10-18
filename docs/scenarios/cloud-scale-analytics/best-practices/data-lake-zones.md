@@ -59,6 +59,9 @@ For more information, see [Data privacy](../../data-management/secure-data-priva
 
 ## Raw layer (bronze) or data lake one
 
+> [!NOTE]
+> The [medallion architecture](/azure/databricks/sql/#medallion-architecture) is a data design pattern that describes a series of incrementally refined data layers that provide a basic structure in the lakehouse. The bronze, silver, and gold layers signify increasing data quality at each level, with gold representing the highest quality.
+
 Think of the raw layer as a reservoir that stores data in its natural and original state. It's unfiltered and unpurified. You might store the data in its original format, such as JSON or CSV. Or it might be cost effective to store the file contents as a column in a compressed file format, like Avro, Parquet, or Databricks Delta Lake.
 
 This raw data is immutable. Keep your raw data locked down, and if you give permissions to any consumers, automated or human, ensure that they're read-only. You can organize this layer by using one folder per source system. Give each ingestion process write access to only its associated folder.
