@@ -3,7 +3,7 @@ title: Inventory and visibility in Azure
 description: Learn the tools that provide both an inventory and visibility into the inventory's run state to collect operational data.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/17/2019
+ms.date: 10/14/2024
 ms.topic: conceptual
 ms.custom: internal, fasttrack-edit, AQC
 ---
@@ -42,7 +42,7 @@ For any enterprise-grade environment, the following table outlines the suggested
 
 Azure Service Health provides a personalized view of the health of your Azure services and regions. Information about active issues is posted to Azure Service Health to help you understand the effect on your resources. Regular updates keep you informed as issues are resolved.
 
-We also publish planned maintenance events to Azure Service Health so you'll know about changes that can affect resource availability. Set up Service Health alerts to notify you when service issues, planned maintenance, or other changes might affect your Azure services and regions.
+We also publish planned maintenance events to Azure Service Health so you know about changes that can affect resource availability. Set up Service Health alerts to notify you when service issues, planned maintenance, or other changes might affect your Azure services and regions.
 
 Azure Service Health includes:
 
@@ -85,7 +85,7 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 - **Monitor and visualize metrics.** Metrics are numerical values available from Azure resources. They help you understand the health of your systems. Customize charts for your dashboards, and use workbooks for reporting.
 
-- **Query and analyze logs.** Logs include activity logs and diagnostic logs from Azure. Collect additional logs from other monitoring and management solutions for your cloud or on-premises resources. Log Analytics provides a central repository to aggregate all of this data. From there, you can run queries to help troubleshoot issues or to visualize data.
+- **Query and analyze logs.** Logs include activity logs and diagnostic logs from Azure. Collect more logs from other monitoring and management solutions for your cloud or on-premises resources. Log Analytics provides a central repository to aggregate all of this data. From there, you can run queries to help troubleshoot issues or to visualize data.
 
 - **Set up alerts and actions.** Alerts notify you of critical conditions. Corrective actions can be taken based on triggers from metrics, logs, or service-health issues. You can set up different notifications and actions and can also send data to your IT service management tools.
 
@@ -103,7 +103,7 @@ Start monitoring your:
 - [Virtual machines](/azure/azure-monitor/vm/service-map)
 - [Networks](/azure/networking/network-monitoring-overview)
 
-To monitor other resources, find additional solutions in Azure Marketplace.
+To monitor other resources, find other solutions in Azure Marketplace.
 
 To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview).
 
