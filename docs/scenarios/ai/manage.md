@@ -19,11 +19,11 @@ Managing AI operations ensures visibility and consistency throughout the AI life
 
 - *Adopt an AI operational framework.* Implement [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2) (Machine learning operations) frameworks for traditional machine learning workflows and [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops) for generative AI workloads. These operational frameworks organize the end-to-end cycle for AI development.
 
+- *Standardize AI development tools.* Define and standardize the use of SDKs and APIs for consistency across development teams. Tools like [Azure SDK](/azure/developer/) for AI workloads provide libraries and APIs that are optimized for scaling AI models and integrating them into applications. For generative AI, standardize your AI platform and orchestrators, such as [Semantic Kernel](/semantic-kernel/overview/), LangChain, and [Prompt Flow](/azure/ai-studio/how-to/prompt-flow).
+
 - *Use a sandbox environment for AI experimentation.* Use a sandbox environment for AI model experimenting. You want to consistency across dev, test, and prod environments. So, the sandbox environment should be distinct from dev, test, and production environments in the AI development lifecycle. Changing deployment and governance models between dev, test, and prod can hide and introduce breaking changes.
 
 - *Establish continuous integration and continuous delivery pipelines for deployment.* Ensure that your data pipelines cover code quality checks, including linting and static analysis. Data pipelines should also include unit and integration tests, as well as experimentation and evaluation flows. Finally, incorporate production deployment steps, such as promoting releases to test and production environments following manual approvals. Maintain separation between models, prompt flows, and the client user interface to ensure updates to one component don't affect others. Each flow should have its own lifecycle for independent promotion.
-
-- *Standardize AI development tools.* Define and standardize the use of SDKs and APIs for consistency across development teams. Tools like [Azure SDK](/azure/developer/) for AI workloads provide libraries and APIs that are optimized for scaling AI models and integrating them into applications. For generative AI, standardize your AI platform and orchestrators, such as [Semantic Kernel](/semantic-kernel/overview/), LangChain, and [Prompt Flow](/azure/ai-studio/how-to/prompt-flow).
 
 ## Manage AI deployment
 
