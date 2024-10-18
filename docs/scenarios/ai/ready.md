@@ -41,7 +41,7 @@ AI governance encompasses organizing resources and applying policies to manage A
 
 AI networking refers to the design and implementation of network infrastructure for AI workloads, including security and connectivity. It involves using topologies like hub-and-spoke, applying security measures such as DDoS protection, and ensuring efficient data transfer. Effective AI networking is critical for secure and reliable communication, preventing network-based disruptions and maintaining performance.
 
-- *Activate Azure DDoS Protection for internet-facing AI workloads.* [Azure DDoS Protection](azure/ddos-protection/ddos-protection-overview) safeguards your AI services from potential disruptions and downtime caused by distributed denial of service attacks. Enable Azure DDoS protection at the virtual network level to defend against traffic floods targeting internet-facing applications.
+- *Activate Azure DDoS Protection for internet-facing AI workloads.* [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) safeguards your AI services from potential disruptions and downtime caused by distributed denial of service attacks. Enable Azure DDoS protection at the virtual network level to defend against traffic floods targeting internet-facing applications.
 
 - *Connect to on-premises data.* For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection.
 
