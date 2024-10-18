@@ -26,7 +26,7 @@ Choose a suitable virtual machine image, such as the Data Science Virtual Machin
 
 - *Find alternative images as needed.* If the Data Science Virtual Machine image doesn't meet your needs, use the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps) or other search [methods](/azure/virtual-machines/overview#distributions) to find alternate images. For example, with GPUs, you might need [Linux images](/azure/virtual-machines/configure) that include InfiniBand drivers, NVIDIA drivers, communication libraries, MPI libraries, and monitoring tools.
 
-## Pick a Virtual Machine Size
+## Pick a virtual machine size
 
 Selecting an appropriate virtual machine size aligns with your AI model complexity, data size, and cost constraints. Matching hardware to training or inferencing needs maximizes efficiency and prevents underutilization or overload.
 
@@ -36,7 +36,7 @@ Selecting an appropriate virtual machine size aligns with your AI model complexi
 
 - *Consider spot instances.* Spot instances are cost-effective for inference scenarios with minimal data loss risk. Spot instances offer significant savings by utilizing unused datacenter capacity at a discount. However, this capacity can be reclaimed at any time, so spot instances are best for workloads that can handle interruptions. Regularly checkpoint data to minimize loss when evicted.
 
-## Choose a Compute Orchestration Solution
+## Choose a compute orchestration solution
 
 Compute orchestration solutions facilitate the management of complex AI tasks across virtual machine clusters. Select an orchestration tool based on your scheduling, containerization, and scaling needs to improve operations and scalability.
 
