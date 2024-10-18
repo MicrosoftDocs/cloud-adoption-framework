@@ -130,7 +130,7 @@ As our global expansion progresses, our data estate will grow exponentially. Han
 
 ### Business outcome: Performance and reliability
 
-As we expand across the globe, our LOB workload must maintain the high performance and zero-downtime availability that our customer's rely on.
+As we expand across the globe, our LOB workload must maintain the high performance and zero-downtime availability that our customers rely on.
 
 - **Business owner:** COO
  
