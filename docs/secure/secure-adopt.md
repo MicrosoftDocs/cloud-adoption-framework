@@ -30,7 +30,7 @@ Consider the following recommendations as you work toward modernizing your secur
   - Monitoring and alerting
   - Scaling
 
-**Zero Trust access and authorization controls:** Implement strong access controls and identity management systems to ensure that only authorized personnel have access to critical systems and data. This approach reduces the risk of malicious activities that could disrupt services. Standardize strictly enforced role-based access controls (RBAC) and require multifactor authentication (MFA) to prevent unauthorized access that could disrupt service availability. For more information, see [Securing identity with Zero Trust](/security/zero-trust/deploy/identity).
+- **Zero Trust access and authorization controls:** Implement strong access controls and identity management systems to ensure that only authorized personnel have access to critical systems and data. This approach reduces the risk of malicious activities that could disrupt services. Standardize strictly enforced role-based access controls (RBAC) and require multifactor authentication (MFA) to prevent unauthorized access that could disrupt service availability. For more information, see [Securing identity with Zero Trust](/security/zero-trust/deploy/identity).
 
 ### Change management institutionalization
 
@@ -58,11 +58,9 @@ Organizations can ensure that access controls are implemented and embraced by em
 
   - **Azure Deployment Environments**: [Deployment Environments](/azure/deployment-environments/overview-what-is-azure-deployment-environments) enables development teams to quickly create consistent app infrastructure by using project-based templates. These templates minimize setup time and maximize security, compliance, and cost efficiency. A deployment environment is a collection of Azure resources that are deployed in predefined subscriptions. Development infrastructure administrators can enforce enterprise security policies and provide a curated set of predefined IaC templates.
 
-    Development infrastructure administrators define deployment environments as catalog items. Catalog items are hosted in a GitHub or Azure DevOps repository, called a *catalog*. A catalog item consists of an IaC template and a manifest.yml file.
+Development infrastructure administrators define deployment environments as catalog items. Catalog items are hosted in a GitHub or Azure DevOps repository, called a *catalog*. A catalog item consists of an IaC template and a manifest.yml file.
 
-    You can script the creation of deployment environments and programmatically manage the environments.
-
-    - Refer to the Well-Architected Framework's [IaC approach](/azure/well-architected/operational-excellence/infrastructure-as-code-design) for detailed, workload-focused guidance on this topic.
+You can script the creation of deployment environments and programmatically manage the environments. Refer to the Well-Architected Framework's [IaC approach](/azure/well-architected/operational-excellence/infrastructure-as-code-design) for detailed, workload-focused guidance on this topic.
 
 - **Routine task automation:**
 
@@ -78,7 +76,7 @@ Organizations can ensure that access controls are implemented and embraced by em
 
     - Integrate source control.
 
-    - **Azure Update Manager**: [Update Manager](/azure/update-manager/overview) is a unified service that can help you manage and govern updates for virtual machines. You can monitor Windows and Linux update compliance across your workload. You can also use Update Manager to make real-time updates or schedule them within a defined maintenance window. Use Update Manager to:
+  - **Azure Update Manager**: [Update Manager](/azure/update-manager/overview) is a unified service that you can use to manage and govern updates for virtual machines. You can monitor Windows and Linux update compliance across your workload. You can also use Update Manager to make real-time updates or schedule them within a defined maintenance window. Use Update Manager to:
 
     - Oversee compliance on your entire fleet of machines.
 
@@ -102,9 +100,7 @@ After you establish your landing zone or other platform design with secure netwo
 
 - **Vulnerability management:** Identify and mitigate vulnerabilities regularly through patch management and security updates to ensure that systems and applications are protected against known threats.
 
-- **Incident response:** Develop and maintain an incident response plan that includes detection, analysis, and remediation steps to quickly address and recover from security incidents. For workload-focused guidance, see [Recommendations for security incident response](/azure/well-architected/security/incident-response).
-
-  - Automate mitigation activities as much as possible to make these activities more efficient and less prone to human error. For example, if you detect a SQL injection, you could have a runbook or workflow that automatically locks all connections to SQL to contain the incident.
+- **Incident response:** Develop and maintain an incident response plan that includes detection, analysis, and remediation steps to quickly address and recover from security incidents. For workload-focused guidance, see [Recommendations for security incident response](/azure/well-architected/security/incident-response). Automate mitigation activities as much as possible to make these activities more efficient and less prone to human error. For example, if you detect a SQL injection, you could have a runbook or workflow that automatically locks all connections to SQL to contain the incident.
 
 ### Infrastructure and application security
 
@@ -202,11 +198,9 @@ To maintain a highly available cloud estate, teams operating the cloud systems m
 
 - **Standardized governance policies:** Enforce all security standards through tooling-supported policies. Use a policy management tool to ensure that all of your systems are compliant with your business requirements by default and that your policies are easily auditable.
 
-- **Disaster recovery preparedness:** Develop and regularly test disaster recovery plans for your workloads to ensure that they're recoverable if a disaster occurs. For more information, see [Disaster recovery](/azure/reliability/disaster-recovery-overview).
+- **Disaster recovery preparedness:** Develop and regularly test disaster recovery plans for your workloads to ensure that they're recoverable if a disaster occurs. For more information, see [Disaster recovery](/azure/reliability/disaster-recovery-overview). Automate recovery activities as much as possible. For example, use automatic failover capabilities in services like [Azure SQL Database](/azure/azure-sql/database/failover-group-sql-db).
 
-  - Automate recovery activities as much as possible. For example, use automatic failover capabilities in services like [Azure SQL Database](/azure/azure-sql/database/failover-group-sql-db).
-
-- **Understanding service-level agreements:** Service-level agreements (SLAs) that your cloud platform provides for their services help you understand the guaranteed uptime for the components of your workloads. Use those SLAs as your basis to then develop your own target metrics for the SLAs that you provide your customers. Microsoft publishes the SLAs for all cloud services at [SLAs for online services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
+- **Service-level agreements:** Service-level agreements (SLAs) that your cloud platform provides for their services help you understand the guaranteed uptime for the components of your workloads. Use those SLAs as your basis to then develop your own target metrics for the SLAs that you provide your customers. Microsoft publishes the SLAs for all cloud services at [SLAs for online services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
 
 - **Compliance requirements:** Adhere to regulations such as GDPR and HIPAA to ensure that systems are designed and maintained to high standards, including standards that are related to availability. Noncompliance can result in legal actions and fines that might disrupt business operations. Compliance often isn't limited to system configuration. Most compliance frameworks also require risk management and incident response standards. Ensure that your operational standards meet the framework requirements and that staff is trained regularly.
 
@@ -218,7 +212,7 @@ To maintain a highly available cloud estate, teams operating the cloud systems m
 
 - [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) provides security policies that can automate compliance with your security standards.
 
-**Operational continuity and disaster recovery:** Many Azure services have built-in recovery capabilities that you can incorporate into your operational continuity and disaster recovery plans. For more information, see [Azure services reliability guides](/azure/reliability/overview-reliability-guidance).
+- **Operational continuity and disaster recovery:** Many Azure services have built-in recovery capabilities that you can incorporate into your operational continuity and disaster recovery plans. For more information, see [Azure services reliability guides](/azure/reliability/overview-reliability-guidance).
 
 ## Adopt security sustainment
 
