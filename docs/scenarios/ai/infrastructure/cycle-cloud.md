@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Implementation options for AI on Azure infrastructure
+# Implementation option for AI on Azure infrastructure
 
 This article provides implementation recommendations for organizations running AI workloads on Azure infrastructure (IaaS). After deploying an [Azure landing zone](../ready.md#use-azure-landing-zone), you can set up the application landing zone using the [CycleCloud Workspace for Slurm](/azure/cyclecloud/qs-deploy-ccws). Azure CycleCloud Workspace for Slurm offers several benefits for users who want to run AI workloads with the Slurm scheduler.
 
