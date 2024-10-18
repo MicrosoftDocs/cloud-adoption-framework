@@ -36,12 +36,26 @@ items:
                 href: network-design-guide-internet-outbound-connectivity.md
           - name: Architectures
             items:
-              - name: Hub and Spoke 
+              - name: Hub and spoke 
                 href: network-hub-spoke.md
-              - name: Dual region network topology
+              - name: Dual-region network topologies
                 href: eslz-dual-region-network-topology.md
-              - name: Example Architectures for Azure VMware Solution
+              - name: Cross-tenant network topologies
+                href: cross-tenant-network-connectivity.md
+              - name: Example architectures for Azure VMware Solution
                 href: example-architectures.md
+              - name: Virtual WAN topologies for Azure VMware Solution
+                items: 
+                  - name: Secure Virtual WAN for Azure VMware Solution            
+                    href: introduction-virtual-wan-azure-vmware-solution.md
+                  - name: Single-region design that has Global Reach               
+                    href: single-region-virtual-wan-global-reach.md
+                  - name: Dual-region design that has Global Reach                 
+                    href: dual-region-virtual-wan-global-reach.md
+                  - name: Single-region design that doesn't have Global Reach               
+                    href: single-region-virtual-wan-without-global-reach.md
+                  - name: Dual-region design that doesn't have Global Reach                 
+                    href: dual-region-virtual-wan-without-global-reach.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring
