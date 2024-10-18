@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 The Ready phase of a cloud adoption journey focuses on creating the foundation of the estate. The Microsoft [Azure landing zone](../ready/landing-zone/index.md) approach provides enterprises and large organizations with an enhanced-security, scalable, modular design pattern to follow when they implement their estates. Smaller organizations and startups might not need the level of organization that the landing zone approach provides, but understanding the landing zone philosophy can help any organization strategize a foundational design and help them gain a high degree of security and scalability.
 
-After you define your cloud adoption [strategy](./refresh-strategy-consolidated.md) and [plan](./refresh-plan-consolidated.md), you can begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
+After you define your cloud adoption [strategy](./secure-strategy.md) and [plan](./secure-plan.md), you can begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
 
 This article is a supporting guide to the [Ready](../ready/index.md) methodology. It describes areas of security optimization that you should consider as you move through that phase in your journey.
 
