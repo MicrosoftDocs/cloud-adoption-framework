@@ -63,7 +63,7 @@ Enforcing AI policies promotes consistent and ethical AI practices across the or
 
     > [!div class="nextstepaction"]
     > [Govern PaaS AI workloads](./platform/governance.md)
-    
+
     > [!div class="nextstepaction"]
     > [Govern IaaS AI workloads](./infrastructure/governance.md)
 

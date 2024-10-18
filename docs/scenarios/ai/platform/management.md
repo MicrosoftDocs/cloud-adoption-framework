@@ -15,13 +15,13 @@ Effective management of AI workloads on Azure involves overseeing deployment, mo
 
 ## Manage AI deployments
 
-Managing AI deployments helps workload teams move from proof-of-concept stages to production environments with consistent configurations that improve security and compliance across teams. Azure offers tools like Azure AI Studio [hubs and projects](/azure/ai-studio/concepts/ai-resources) to enforce governance and security. Azure Machine Learning has similar capabilities with its [hub workspaces](/azure/machine-learning/concept-hub-workspace).
+Managing AI deployments helps workload teams move from proof-of-concept stages to production environments with consistent configurations that improve security and compliance across teams. Azure offers tools like Azure AI Studio [hubs and projects](/azure/ai-studio/concepts/ai-resources) to enforce governance and security. Azure Machine Learning has similar capabilities with its [hub workspaces](/azure/machine-learning/concept-hub-workspace). For more information, see [Manage AI deployments](../manage.md#manage-ai-deployment).
 
 ## Manage AI models
 
 Managing AI models includes monitoring their outputs, performance, and alignment with Responsible AI principles. AI models can drift over time due to changing data, user behaviors, or other external factors. These changes can lead to inaccurate results or ethical concerns if not addressed.
 
-- *Monitor model outputs.* AI workloads can change over time due to evolving data, model updates, or shifts in user behavior. Implement a monitoring and testing process to ensure that these workloads remain aligned with your responsible AI targets.
+- *Monitor model outputs.* Implement a monitoring and testing process to ensure that these workloads remain aligned with your responsible AI targets.
 
     - *Monitor generative AI.* For generative AI workloads, use Azure AI Studio's built-in [evaluation](/azure/ai-studio/concepts/evaluation-metrics-built-in) and [manual](/azure/ai-studio/how-to/evaluate-prompts-playground) monitoring capabilities. If you're using prompt flow, [monitor prompt flow deployments](/azure/ai-studio/how-to/develop/trace-production-sdk). Also consider using [responsible AI tools](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to supplement model monitoring.
 
@@ -39,15 +39,15 @@ Managing AI models includes monitoring their outputs, performance, and alignment
 
 AI operations management involves standardizing compute resources and monitoring platform resources for Azure AI workloads. It ensures that teams use the correct compute resources efficiently and capture metrics and logs from platform resources.
 
-- *Monitor platform resources.* Use diagnostic settings to capture logs and metrics for all key services, such as Studio, Machine Learning, and [Azure AI services](/azure/ai-services/diagnostic-logging). Specific services should capture audit logs and relevant service-specific logs. Implement custom monitoring alerts based on your architecture’s specific needs. Examples include alerts for container registries, Machine Learning services, and Azure OpenAI Service operations.
+- *Monitor platform resources.* Use diagnostic settings to capture logs and metrics for all key services, such as Azure AI Studio, [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), and [Azure AI services](/azure/ai-services/diagnostic-logging). Specific services should capture audit logs and relevant service-specific logs. Implement custom monitoring alerts based on your architecture’s specific needs. Examples include alerts for container registries, Machine Learning services, and Azure OpenAI Service operations.
 
-- *Standardize compute management.* You need compute resources for certain actions like prompt flows and training models. A service like Machine Learning has different compute options, such as compute instances, clusters, and serverless options. Standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Studio](/azure/ai-studio/how-to/create-manage-compute) and [Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio).
+- *Standardize compute management.* You need compute resources for certain actions like prompt flows and training models. A service like Machine Learning has different compute options, such as compute instances, clusters, and serverless options. Standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Azure AI Studio](/azure/ai-studio/how-to/create-manage-compute) and [Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio).
 
 ## Manage AI data
 
 High-quality data is the foundation of accurate AI models. Tracking model drift helps maintain the relevance of AI predictions over time, and it allows organizations to adapt models as necessary to reflect current conditions.
 
-- *Monitor data drift.* Track accuracy and data drift continuously in generative and nongenerative AI to ensure that models remain relevant. Monitoring can alert you when model predictions or large language model responses deviate from expected behavior. This deviation indicates a need for retraining or adjustment. Set up custom alerts to detect performance thresholds. This approach enables early intervention when problems arise. Use [evaluations in Studio](/azure/ai-studio/concepts/evaluation-approach-gen-ai) and [metrics supported in Machine Learning](/azure/machine-learning/concept-model-monitoring).
+- *Monitor data drift.* Track accuracy and data drift continuously in generative and nongenerative AI to ensure that models remain relevant. Monitoring can alert you when model predictions or large language model responses deviate from expected behavior. This deviation indicates a need for retraining or adjustment. Set up custom alerts to detect performance thresholds. This approach enables early intervention when problems arise. Use [evaluations in Azure AI Studio](/azure/ai-studio/concepts/evaluation-approach-gen-ai) and [metrics supported in Machine Learning](/azure/machine-learning/concept-model-monitoring).
 
 - *Ensure quality data processing.* For [machine learning](/azure/architecture/data-science-process/lifecycle-modeling), training data must be formatted, clean, and ready for model consumption. For generative AI, grounding data needs to be in the correct format, and likely chunked, enriched, and embedded for AI model consumption. For more information, see [Guide to designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
 

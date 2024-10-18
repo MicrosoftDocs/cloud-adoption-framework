@@ -15,9 +15,9 @@ Effective governance supports the responsible use of AI. It enables businesses t
 
 ## Govern AI models
 
-AI model governance refers to the processes for managing AI models to ensure they produce reliable, safe, and ethical outputs. Controls over model inputs and outputs help mitigate risks, including harmful content and unintended behaviors, which could affect both users and the organization. These processes support responsible AI deployment, and they safeguard against potential legal and ethical challenges.
+AI model governance refers to the processes for managing AI models to ensure they produce reliable, safe, and ethical outputs. Controls over model inputs and outputs help mitigate risks. These risks include harmful content and unintended AI use. Both could affect users and the organization. These processes support responsible AI deployment, and they safeguard against potential legal and ethical challenges.
 
-- *Establish a process to detect AI risks.* Use tools like Defender for Cloud to [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [explore risks to predeployment generative AI artifacts](/azure/defender-for-cloud/explore-ai-risk). Establish a policy to regularly [red team generative AI models](/azure/ai-services/openai/concepts/red-teaming). Document identified risks and continuously update your AI governance policies to mitigate emerging issues.
+- *Establish a process to detect AI risks.* Use tools like Defender for Cloud to [discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [explore risks](/azure/defender-for-cloud/explore-ai-risk) to predeployment generative AI artifacts. Establish a policy to regularly [red team generative AI models](/azure/ai-services/openai/concepts/red-teaming). Document identified risks and continuously update your AI governance policies to mitigate emerging issues.
 
 - *Define baseline content filters for generative AI models.* Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to define a baseline content filter for your approved AI models. This safety system runs both the prompt and completion for your model through a group of classification models. These classification models detect and help prevent the output of harmful content across a range of categories. Content Safety provides features like prompt shields, groundedness detection, and protected material text detection. It scans images and text. Create a process for application teams to communicate different governance needs.
 
@@ -49,9 +49,9 @@ For more cost management guidance, see [Manage AI costs](../manage.md#manage-ai-
 
 AI platform governance includes applying policy controls to various AI services on Azure, such as Azure AI Studio and Azure Machine Learning. Using platform-level governance enforces consistent security, compliance, and operational policies across the AI ecosystem. This alignment supports effective oversight, which strengthens overall AI management and reliability.
 
-Use Azure Policy to apply built-in policy definitions for each AI platform you're using. It includes [Azure AI Studio](/azure/ai-services/policy-reference?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext), [Azure Machine Learning](/azure/machine-learning/policy-reference), [Azure AI services](/azure/ai-services/policy-reference), [Azure AI Search](/azure/search/policy-reference), and others.
+- *Use built-in governance policies.* Use Azure Policy to apply built-in policy definitions for each AI platform you're using. It includes [Azure AI Studio](/azure/ai-services/policy-reference?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext), [Azure Machine Learning](/azure/machine-learning/policy-reference), [Azure AI services](/azure/ai-services/policy-reference), [Azure AI Search](/azure/search/policy-reference), and others.
 
-The Azure landing zone [deployment](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#environment-development-approaches) includes a curated set of recommended built-in policies for Azure AI platform services. You can select the policy initiative you want to use under the *Workload Specific Compliance* category during an Azure landing zone deployment. The policies sets include [Azure OpenAI](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-OpenAI.html), [Azure Machine Learning](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-MachineLearning.html), and [Azure AI Search](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-CognitiveServices.html), and [Azure Bot services](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-BotService.html).
+- *Enable Azure landing zone AI policies.* For Azure landing zone users, the [deployment](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#environment-development-approaches) includes a curated set of recommended built-in policies for Azure AI platform services. Select the policy initiative you want to use under the *Workload Specific Compliance* category during an Azure landing zone deployment. The policies sets include [Azure OpenAI](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-OpenAI.html), [Azure Machine Learning](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-MachineLearning.html), and [Azure AI Search](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-CognitiveServices.html), and [Azure Bot services](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-BotService.html).
 
 ## Govern AI security
 
@@ -61,9 +61,9 @@ AI security governance addresses the need to protect AI workloads from threats t
 
 - *Configure access control.* Grant least privilege user access to centralized AI resources. For example, start with the Reader Azure role, and elevate to the Contributor Azure role if the limited permissions slow down application development.
 
-- *Use managed identities.* Use managed identities on all supported Azure services. Grant least privilege access to application resources that need to access AI model endpoints.
+- *Use managed identities.* Use [managed identity](/entra/identity/managed-identities-azure-resources/overview) on all supported Azure services. Grant least privilege access to application resources that need to access AI model endpoints.
 
-- *Use just-in-time access.* Use privileged identity management (PIM) for just-in-time access.
+- *Use just-in-time access.* Use [privileged identity management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) for just-in-time access.
 
 ## Govern AI operations
 
