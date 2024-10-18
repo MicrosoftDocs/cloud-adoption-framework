@@ -9,27 +9,25 @@ ms.topic: conceptual
 
 # Adopting AI on Azure
 
-The AI adoption scenario in the Cloud Adoption Framework (CAF) provides a structured approach for integrating AI into your organization using Azure. It covers both generative and non-generative AI adoption guidance, offering recommendations relevant for organizations of all sizes and industries. This guidance serves as your roadmap for AI adoption, acting as a central hub to find the resources and advice you need.
-
-AI adoption is the process of integrating AI into your organization. Effective AI adoption is characterized by AI that is trustworthy.
+This AI adoption guidance provides a structured approach for integrating AI into your organization using Azure. The guidance is relevant for organizations of any size and industry. It covers both generative and nongenerative AI adoption guidance. It is your roadmap for AI adoption and a central hub to find the resources you need.
 
 :::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption framework process. It's a continuous process that contains AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI. Undergirding the entire process is Responsible AI." lightbox="./images/ai-adoption-process.svg" border="false":::
 *Figure 1. How to use the AI adoption guidance for Azure.*
 
 ## Why adopt AI?
 
-AI adoption is foundational for optimizing operations at both the individual and organizational levels. It enhances individual efficiency by automating routine tasks and providing creative insights. At the business level, AI boosts efficiency by automating processes ranging from adaptive chatbots to business forecasting. These use cases allow businesses and employees to focus on customers and work that matters most. The barriers to adopting AI are lower than ever. Microsoft provides a range of AI services that cater to different skill sets, budgets, and data needs. You can decide whether to buy or build AI workloads based on your business requirements.
+AI adoption is foundational to optimizing operations for individuals and organizations. Effective AI adoption uses governance, security, and management best practices to build trustworthy AI workloads. It enhances individual efficiency by automating routine tasks and providing creative insights. AI automates business processes, ranging from adaptive user experiences to business forecasting. These use cases allow businesses and employees to focus on customers and work that matters most. You have options on how you want to adopt AI. Microsoft has AI services for different skill set, budgets, and data needs. You can decide what works best based on your needs. This guidance helps you navigate these decisions.
 
 ## How to adopt AI
 
-Adopting AI is a sequential process that requires ongoing monitoring, governance, and adjustments to adapt to evolving technologies, opportunities, and requirements. The CAF AI adoption guidance divides AI adoption into six steps. If you're new to AI adoption, complete all six steps. Revisit the AI Strategy, AI Plan, and AI Ready steps as needed. Govern AI, Manage AI, and Secure AI are continuous processes that you should iterate through regularly to ensure your AI workloads remain secure, cost-effective, and trustworthy.
+AI adoption is a sequential process. This guidance divides AI adoption into six steps. If you're new to AI adoption, complete all six steps. As you define new AI use cases for your organization, revisit the AI Strategy, AI Plan, and AI Ready. Govern AI, Manage AI, and Secure AI are continuous processes. You need to iterate through these processes to ensure your AI workloads remain secure, cost-effective, and trustworthy.
 
-1. *AI Strategy*: Choose the right AI technology for each use case based on the required skills, data availability, and associated costs. Define your data and Responsible AI strategy.
-1. *AI Plan*: Assess your AI maturity, acquire necessary AI skills, access the AI technology you need, and plan for responsible AI. Part of planning is reviewing the needs of the AI security, governance, and management processes.
-1. *AI Ready*: Prepare your Azure environment for deployment and establish a strong security and governance foundation for all AI workloads.
-1. *Govern AI*: Control your AI workloads and models by establishing guardrails to ensure compliance and responsible AI use.
-1. *Manage AI*: Manage your AI deployments, operations, models, and data over time to ensure they remain aligned with your business goals.
-1. *Secure AI*: Assess AI security risks and apply security controls to protect your AI workloads.
+1. *AI Strategy*: Guidance on how to choose the right AI technology for your business and ground AI adoption in responsible AI principles.
+1. *AI Plan*: Guidance to assess and find the AI skills needed and how to prioritize use cases to bring to production.
+1. *AI Ready*: Guidance to establish a governed and secure Azure environment for your AI workloads and data.
+1. *Govern AI*: The process to control your AI workloads and models by establishing guardrails to ensure compliance and responsible AI use.
+1. *Manage AI*: The process to manage your AI deployments, operations, models, and data over time to ensure they remain aligned with your business goals.
+1. *Secure AI*: The process to assess AI security risks and apply security controls to protect your AI workloads.
 
 ## AI adoption checklists
 
