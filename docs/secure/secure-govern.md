@@ -40,7 +40,7 @@ To maintain agility, best practices guidance is often iterative. It digests smal
 
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) can help you continuously discover and automatically manage virtual machines in your environment through automatic data collection provisioning.
 
-- [Microsoft Defender for Cloud Apps](/azure/defender-for-cloud/defender-for-cloud-introduction) can help you continuously discover and govern first-party and non-Microsoft software as a service apps that are used in your environments.
+- [Microsoft Defender for Cloud apps](/azure/defender-for-cloud/defender-for-cloud-introduction) can help you continuously discover and govern first-party and non-Microsoft software as a service apps that are used in your environments.
 
 ## Incident preparedness and response
 
@@ -50,11 +50,11 @@ Security governance is critical for maintaining your preparedness. To strictly e
 
 - **Automate governance:** Embrace tooling to automate governance as much as possible. You can use tooling to manage policies for infrastructure deployments, implement hardening measures, protect data, and maintain identity and access management standards. By automating the governance of these security measures, you can ensure that all resources in your environment are compliant with your own security standards and all compliance frameworks that are required for your business. For more information, see [Enforce cloud governance policies](../govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically).
 
-- **Adhere to Microsoft's security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, published as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines ensure that your existing deployments are properly secured and new deployments are correctly configured from the start. This approach reduces the risk of misconfigurations.
+- **Adhere to Microsoft's security baselines:** Understand Microsoft's security recommendations for the services in your cloud estate, which are available as [security baselines](/security/benchmark/azure/security-baselines-overview). These baselines ensure that your existing deployments are properly secured and new deployments are correctly configured from the start. This approach reduces the risk of misconfigurations.
 
 ### Incident response governance
 
-- **Governance of the incident response plan:** The incident response plan should be maintained with same care as the other critical documents in your estate. Your incident response plan should be:
+- **Governance of the incident response plan:** The incident response plan should be maintained with the same care as the other critical documents in your estate. Your incident response plan should be:
 
   - Version controlled to ensure that teams are working off of the most recent version, and the versioning can be audited.
 
@@ -68,7 +68,7 @@ Security governance is critical for maintaining your preparedness. To strictly e
 
 - [Azure Policy](/azure/governance/policy) is a policy management solution that you can use to help enforce organizational standards and to assess compliance at-scale. To automate policy enforcement for many Azure services, take advantage of [built-in policy definitions](/azure/governance/policy/samples/built-in-policies).
 
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) provides security policies that can automate compliance with your security standards.
+- [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) provides security policies that can automate compliance with your security standards.
 
 ## Confidentiality governance
 
@@ -78,7 +78,7 @@ Effective governance is crucial for maintaining security and compliance in enter
 
 - **Written policies:** Written policies serve as the governing framework for the entire enterprise environment. They establish the requirements and parameters for data handling, access, and protection. These documents ensure consistency and compliance across the organization and provide clear guidelines for employees and IT staff. Written policies also serve as a reference point for audits and assessments, which helps identify and address any gaps in security practices.
 
-- **Data loss protection:** Continuous monitoring and auditing of DLP measures should be conducted to ensure ongoing compliance with confidentiality requirements. This process includes regularly reviewing and updating DLP policies, conducting security assessments, and responding to any incidents that might compromise data confidentiality. Establish DLP programmatically across the organization to ensure a consistent and scalable approach to protecting sensitive data.
+- **Data loss protection:** Continuous monitoring and auditing of data loss prevention (DLP) measures should be conducted to ensure ongoing compliance with confidentiality requirements. This process includes regularly reviewing and updating DLP policies, conducting security assessments, and responding to any incidents that might compromise data confidentiality. Establish DLP programmatically across the organization to ensure a consistent and scalable approach to protecting sensitive data.
 
 ## Monitor compliance and methods of enforcement
 
@@ -102,11 +102,11 @@ The guidance described previously in the Confidentiality governance section also
 
 ### Azure facilitation
 
-- [Microsoft Purview Data Quality](/purview/data-quality-overview) enables users to assess data quality by using no-code/low-code rules, including out-of-the-box (OOB) rules and AI-generated rules. These rules are applied at the column level and then aggregated to provide scores for data assets, data products, and business domains. This approach ensures comprehensive visibility of data quality across each domain.
+- [Microsoft Purview Data Quality](/purview/data-quality-overview) allows users to assess data quality by using no-code/low-code rules, including out-of-the-box (OOB) rules and AI-generated rules. These rules are applied at the column level and then aggregated to provide scores for data assets, data products, and business domains. This approach ensures comprehensive visibility of data quality across each domain.
 
 ## Availability governance
 
-To ensure that your standardized architecture designs in the cloud estate are adhered to and that nonconforming design patters don't compromise availability, governance is essential. Likewise, your disaster recovery plans must also be governed to ensure that they're well-maintained.
+The architecture designs that you standardize in your cloud estate require governance to ensure that they aren't deviated from and your availability isn't compromised by nonconforming design patterns. Likewise, your disaster recovery plans must also be governed to ensure that they're well-maintained.
 
 ### Availability design governance
 
@@ -114,7 +114,7 @@ To ensure that your standardized architecture designs in the cloud estate are ad
 
 ### Disaster recovery governance
 
-- **Governance of the disaster recovery plans:** Treat disaster recovery plans with the same level of importance as incident response plans. They should be:
+- **Governance of the disaster recovery plans:** Treat disaster recovery plans with the same level of importance as incident response plans. Disaster recovery plans should be:
 
   - Version-controlled to ensure that teams are always working with the most recent version. Additionally, the versioning can be audited for accuracy and compliance.
 
@@ -122,7 +122,7 @@ To ensure that your standardized architecture designs in the cloud estate are ad
 
   - Reviewed regularly and updated when changes to the environment are needed.
 
-- **Governance of disaster recovery drills:** Disaster recovery drills aren't only for training on the plans but also serve as learning opportunities to improve the plan itself. They can also help refine operational or design standards. Meticulous record keeping of disaster recovery drills helps identify areas for improvement and ensures compliance with auditing requirements for disaster preparedness. Storing these records in the same repository as the plans keeps everything organized and secure.
+- **Governance of disaster recovery drills:** Disaster recovery drills aren't only for training on the plans but also serve as learning opportunities to improve the plan itself. They can also help refine operational or design standards. Meticulous record keeping of disaster recovery drills helps identify areas for improvement and ensures compliance with auditing requirements for disaster preparedness. By storing these records in the same repository as the plans, you can keep everything organized and secure.
 
 ## Sustaining secure governance
 
