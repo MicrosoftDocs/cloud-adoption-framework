@@ -819,12 +819,12 @@ An item that isn't in either of the following tables is the `RemovePasswords` sc
 
 | Name | Object type | Dataset name | Data store | Format type | Linked service | File or folder |
 | --- | --- | --- | --- | --- | --- | --- |
-| `CRMAddress` | source | `DevRaw_CRM_Address` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\CRM\SalesLTAddress.csv` |
-| `CustAddress` | sink | `DevEncur_Cust_Address` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\Address.parquet* |
-| `CRMCustomer` | source | `DevRaw_CRM_Customer` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\CRM\SalesLTCustomer.csv` |
-| `CustCustomer` | sink | `DevEncur_Cust_Customer` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\Customer.parquet* |
-| `CRMCustomerAddress` | source | `DevRaw_CRM_CustomerAddress` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\CRM\SalesLTCustomerAddress.csv` |
-| `CustCustomerAddress` | sink | `DevEncur_Cust_CustomerAddress` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\CustomerAddress.parquet* |
+| `CRMAddress` | Source | `DevRaw_CRM_Address` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\CRM\SalesLTAddress.csv` |
+| `CustAddress` | Sink | `DevEncur_Cust_Address` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\Address.parquet* |
+| `CRMCustomer` | Source | `DevRaw_CRM_Customer` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\CRM\SalesLTCustomer.csv` |
+| `CustCustomer` | Sink | `DevEncur_Cust_Customer` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\Customer.parquet* |
+| `CRMCustomerAddress` | Source | `DevRaw_CRM_CustomerAddress` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\CRM\SalesLTCustomerAddress.csv` |
+| `CustCustomerAddress` | Sink | `DevEncur_Cust_CustomerAddress` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Customer\CustomerAddress.parquet* |
 
 ### The ERP to Sales table
 
@@ -834,20 +834,20 @@ In the following table, you'll find the objects to create in the `ERP_to_Sales` 
 
 | Name | Object type | Dataset name | Data store | Format type | Linked service | File or folder |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ERPProduct` | source | `DevRaw_ERP_Product` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProduct.csv` |
-| `SalesProduct` | sink | `DevEncur_Sales_Product` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\Product.parquet* |
-| `ERPProductCategory` | source | `DevRaw_ERP_ProductCategory` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductCategory.csv` |
-| `SalesProductCategory` | sink | `DevEncur_Sales_ProductCategory` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductCategory.parquet* |
-| `ERPProductDescription` | source | `DevRaw_ERP_ProductDescription` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductDescription.csv` |
-| `SalesProductDescription` | sink | `DevEncur_Sales_ProductDescription` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductDescription.parquet* |
-| `ERPProductModel` | source | `DevRaw_ERP_ProductModel` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductModel.csv` |
-| `SalesProductModel` | sink | `DevEncur_Sales_ProductModel` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductModel.parquet* |
-| `ERPProductModelProductDescription` | source | `DevRaw_ERP_ProductModelProductDescription` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductModelProductDescription.csv` |
-| `SalesProductModelProductDescription` | sink | `DevEncur_Sales_ProductModelProductDescription` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductModelProductDescription.parquet* |
-| `ERPProductSalesOrderDetail` | source | `DevRaw_ERP_ProductSalesOrderDetail` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductSalesOrderDetail.csv` |
-| `SalesProductSalesOrderDetail` | sink | `DevEncur_Sales_ProductSalesOrderDetail` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductSalesOrderDetail.parquet* |
-| `ERPProductSalesOrderHeader` | source | `DevRaw_ERP_ProductSalesOrderHeader` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductSalesOrderHeader.csv` |
-| `SalesProductSalesOrderHeader` | sink | `DevEncur_Sales_ProductSalesOrderHeader` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductSalesOrderHeader.parquet* |
+| `ERPProduct` | Source | `DevRaw_ERP_Product` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProduct.csv` |
+| `SalesProduct` | Sink | `DevEncur_Sales_Product` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\Product.parquet* |
+| `ERPProductCategory` | Source | `DevRaw_ERP_ProductCategory` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductCategory.csv` |
+| `SalesProductCategory` | Sink | `DevEncur_Sales_ProductCategory` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductCategory.parquet* |
+| `ERPProductDescription` | Source | `DevRaw_ERP_ProductDescription` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductDescription.csv` |
+| `SalesProductDescription` | Sink | `DevEncur_Sales_ProductDescription` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductDescription.parquet* |
+| `ERPProductModel` | Source | `DevRaw_ERP_ProductModel` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductModel.csv` |
+| `SalesProductModel` | Sink | `DevEncur_Sales_ProductModel` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductModel.parquet* |
+| `ERPProductModelProductDescription` | Source | `DevRaw_ERP_ProductModelProductDescription` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductModelProductDescription.csv` |
+| `SalesProductModelProductDescription` | Sink | `DevEncur_Sales_ProductModelProductDescription` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductModelProductDescription.parquet* |
+| `ERPProductSalesOrderDetail` | Source | `DevRaw_ERP_ProductSalesOrderDetail` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductSalesOrderDetail.csv` |
+| `SalesProductSalesOrderDetail` | Sink | `DevEncur_Sales_ProductSalesOrderDetail` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductSalesOrderDetail.parquet* |
+| `ERPProductSalesOrderHeader` | Source | `DevRaw_ERP_ProductSalesOrderHeader` | Azure Data Lake Storage Gen2 | DelimitedText | `devraw` | `Data\ERP\SalesLTProductSalesOrderHeader.csv` |
+| `SalesProductSalesOrderHeader` | Sink | `DevEncur_Sales_ProductSalesOrderHeader` | Azure Data Lake Storage Gen2 | Parquet | `devencur` | *Data\Sales\ProductSalesOrderHeader.parquet* |
 
 ## Next steps
 

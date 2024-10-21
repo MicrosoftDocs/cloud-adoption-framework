@@ -27,7 +27,7 @@ You can also use GitOps practices to develop image pipelines. This approach is a
 
 To effectively use images, implement the following considerations:
 
-- Create a hardened base image that adheres to the model of [least privilege](https://www.redhat.com/topics/security/what-identity-and-access-management-iam#:~:text=Least%20privilege%20only%20gives%20a%20user%20access%20to,to%20take%20the%20actions%20%28permissions%29%20they%20are%20required.) to provide a solid foundation.
+- Create a hardened base image that adheres to the model of [least privilege](https://www.redhat.com/topics/security/what-identity-and-access-management-iam#:~:text=Least%20privilege%20only%20gives%20a%20user%20access%20to,to%20take%20the%20actions%20%28permissions%29%20they%20are%20required.) To provide a solid foundation.
 
 - Layer software and security configuration together to promote reuse and follow standard operating environment and [DevSecOps best practices](https://www.redhat.com/topics/security/devsecops/approach).
 - Use composition models for images to reduce testing and qualification effort and decrease maintenance costs.
