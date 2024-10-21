@@ -29,7 +29,7 @@ AI cost governance involves managing expenses associated with AI workloads to ma
 
 - *Use the right billing model.* If you have predictable workloads, use AI commitment tiers in Azure AI services. Use [provisioned throughput units](/azure/ai-services/openai/concepts/provisioned-throughput), which can be less expensive than pay-as-you-go pricing with Azure OpenAI and OpenAI models via Azure AI Studio.
 
-- *Choose the right model for your use case.* Select the AI model that meets your needs without incurring excessive costs. Use less expensive models like GPT-3.5 Turbo instead of higher-cost options like GPT-4, unless the use case demands a more expensive model. For fine-tuning, maximize time usage within each billing period to avoid extra charges.
+- *Choose the right model for your use case.* Select the AI model that meets your needs without incurring excessive costs. Use less expensive models unless the use case demands a more expensive model. For fine-tuning, maximize time usage within each billing period to avoid extra charges. For more information, see [Azure OpenAI models](/azure/ai-studio/how-to/model-catalog-overview) and Azure AI Studio [model catalog](/azure/ai-studio/how-to/model-catalog-overview).
 
 - *Set provisioning limits.* Allocate provisioning quotas for each model based on expected workloads to prevent unnecessary costs. Continuously monitor dynamic quotas to ensure that they match actual demand and adjust them accordingly to maintain optimal throughput without overspending.
 
