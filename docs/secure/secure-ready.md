@@ -90,7 +90,7 @@ As with your confidentiality preparations, ensure that you have well-governed po
 
 ### Azure facilitation
 
-- [Azure Policy](/azure/governance/policy) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) work together to help you define and enforce security policies across your cloud estate. Both solutions support the governance of your foundational elements together with workload resources.
+- [Azure Policy](/azure/governance/policy) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) work together to help you define and enforce security policies across your cloud estate. Both solutions support the governance of your foundational elements and your workload resources.
 
 - [Azure Update Manager](/azure/update-manager/overview) is the native Azure update and patch management solution. You can extend it to on-premises systems and Arc-enabled systems.
 
