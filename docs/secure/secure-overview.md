@@ -12,17 +12,17 @@ ms.custom: internal, UpdateFrequency2
 
 The Microsoft Cloud Adoption Framework Secure Methodology provides a structured approach for securing your Azure cloud estate.
 
-The guidance in this article provides recommendations relevant to all methodologies within the Cloud Adoption Framework. Security should be an integral part of every phase of your cloud adoption journey. Therefore, you'll find articles aligned with each methodology that provide security recommendations to consider as you progress through each phase of your cloud adoption journey.
+The guidance in this article provides recommendations relevant to all methodologies within the Cloud Adoption Framework. Security should be an integral part of every phase of your cloud adoption journey. Therefore, you can find articles aligned with each methodology that provide security recommendations to consider as you progress through each phase of your cloud adoption journey.
 
 All of the recommendations in this guidance adhere to the [Zero Trust principles](/security/zero-trust/zero-trust-overview) of assume compromise (or assume breach), least privilege, and explicit verification of trust that should guide your security strategy, architecture, and implementation.
 
-## Holistic security guidance component
+## Holistic security guidance
 
-Security is a complex and challenging discipline that you need to consider in nearly all aspects of your cloud and technology environments. This is because:
+Security is a complex and challenging discipline that you need to consider in nearly all aspects of your cloud and technology environments. Key points to consider include:
 
 - **Anything is a potential target or attack vector:** In today’s world, attackers can exploit any weaknesses in an organization’s people, processes, and technologies to accomplish their malicious goals.
 
-- **Security is a team sport:** To defend against these attacks, a coordinated approach is required across business, technology, and security teams. Each team must contribute to security efforts and collaborate effectively. This point is illustrated by the various roles that are required to secure Azure resources described in [Teams and roles](./secure-teams-and-roles.md).
+- **Security is a team sport:** To defend against these attacks, a coordinated approach is required across business, technology, and security teams. Each team must contribute to security efforts and collaborate effectively. The various roles required to secure Azure resources, described in [Teams and roles](./secure-teams-and-roles.md), illustrate this point.
 
 This Cloud Adoption Framework Secure guidance is one component of a larger holistic set of Microsoft security guidance designed to help various teams understand and perform their security responsibilities.  The complete set of guidance includes:
 
