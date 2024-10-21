@@ -3,7 +3,7 @@ title: Prepare Your Secure Cloud Estate
 description: Learn how to adopt security best practices during your cloud estate setup phase. Prepare for incident preparedness, confidentiality, availabilty, and more. 
 author: claytonsiemens77
 ms.author: csiemens
-ms.date: 10/18/2024
+ms.date: 11/01/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
@@ -30,7 +30,7 @@ Develop secure, scalable landing zones that provide controlled environments for 
 
 ### Azure facilitation
 
-- **Azure landing zone accelerators:** Microsoft maintains several landing zone accelerators, which are prepackaged deployments of a given workload type that can be easily deployed into a landing zone to quickly get you started. They include accelerators for [Azure Integration Services](../scenarios/app-platform/integration-services/landing-zone-accelerator.md), [Azure Kubernetes Service (AKS)](../scenarios/app-platform/aks/landing-zone-accelerator.md), [Azure API Management](../scenarios/app-platform/api-management/landing-zone-accelerator.md), and others. See the [Modern application platform scenario](../scenarios/app-platform/index.md) section of CAF for a full list of accelerators and other topics related to modern application considerations.
+- **Azure landing zone accelerators:** Microsoft maintains several landing zone accelerators, which are prepackaged deployments of a given workload type that can be easily deployed into a landing zone to quickly get you started. They include accelerators for [Azure Integration Services](../scenarios/app-platform/integration-services/landing-zone-accelerator.md), [Azure Kubernetes Service (AKS)](../scenarios/app-platform/aks/landing-zone-accelerator.md), [Azure API Management](../scenarios/app-platform/api-management/landing-zone-accelerator.md), and others. See the [Modern application platform scenario](../scenarios/app-platform/index.md) section of the Cloud Adoption Framework for Azure documentation for a full list of accelerators and other topics related to modern application considerations.
 
 - **Azure landing zones Terraform module:** You can optimize your landing zone deployments with automation by using the [Azure landing zones Terraform module](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest). By using your continuous integration and continuous deployment (CI/CD) pipeline to deploy landing zones, you can ensure that all of your landing zones are deployed identically, with all security mechanisms in place.
 
@@ -44,7 +44,7 @@ After you define your strategy and develop your plan for incident preparedness a
 
 ### Azure facilitation 
 
-- **Azure Virtual WAN:** [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) is a networking service that brings many networking, security, and routing functionalities together to provide a single operational interface. The design is a hub-and-spoke architecture that has scale and performance built in for branches (VPN/SD-WAN devices), users (Azure VPN/OpenVPN/IKEv2 clients), Azure ExpressRoute circuits, and virtual networks. When you implement your landing zones, Azure Virtual WAN can help you optimize your network through segmentation and security mechanisms.
+- **Azure Virtual WAN:** [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) is a networking service that consolidates many networking, security, and routing functionalities to provide a single operational interface. The design is a hub-and-spoke architecture that has scale and performance built in for branches (VPN/SD-WAN devices), users (Azure VPN/OpenVPN/IKEv2 clients), Azure ExpressRoute circuits, and virtual networks. When you implement your landing zones, Azure Virtual WAN can help you optimize your network through segmentation and security mechanisms.
 
 ## Prepare for confidentiality
 
@@ -98,23 +98,23 @@ As with your confidentiality preparations, ensure that you have well-governed po
 
 ## Prepare for availability
 
-Designing your workloads for resiliency helps ensure that your business can withstand malfunctions and security incidents, and that operations can continue while problems with affected systems are addressed. The following recommendations, which align to Cloud Adoption Framework (CAF) principles, can help you design resilient workloads:
+Designing your workloads for resiliency helps ensure that your business can withstand malfunctions and security incidents, and that operations can continue while problems with affected systems are addressed. The following recommendations, which align to Cloud Adoption Framework principles, can help you design resilient workloads:
 
-- **Implement resilient application design.** Adopt application design patterns that enhance resilience against both infrastructure and non-infrastructure incidents, aligning with the broader principles of CAF. Standardize on designs that incorporate self-healing and self-preservation mechanisms to ensure continuous operation and rapid recovery. For detailed guidance on resilient design patterns, see the Well-Architected Framework's [Reliability](/azure/well-architected/reliability) pillar.
+- **Implement resilient application design.** Adopt application design patterns that enhance resilience against both infrastructure and non-infrastructure incidents, aligning with the broader principles of the Cloud Adoption Framework. Standardize on designs that incorporate self-healing and self-preservation mechanisms to ensure continuous operation and rapid recovery. For detailed guidance on resilient design patterns, see the Well-Architected Framework's [Reliability](/azure/well-architected/reliability) pillar.
  
-- **Adopt serverless architecture.** Use serverless technologies, including platform as a service (PaaS), software as a service (SaaS), and function as a service (FaaS), to reduce server management overhead, automatically scale with demand, and improve availability. This approach supports CAF's emphasis on modernizing workloads and optimizing operational efficiency.
+- **Adopt serverless architecture.** Use serverless technologies, including platform as a service (PaaS), software as a service (SaaS), and function as a service (FaaS), to reduce server management overhead, automatically scale with demand, and improve availability. This approach supports the Cloud Adoption Framework emphasis on modernizing workloads and optimizing operational efficiency.
  
-- **Use microservices and containerization.** Implement microservices and containerization to avoid monolithic applications, breaking them down into smaller, independent services that you can deploy and scale independently. This approach aligns with CAF's principles of agility and scalability in cloud environments.
+- **Use microservices and containerization.** Implement microservices and containerization to avoid monolithic applications by breaking them down into smaller, independent services that you can deploy and scale independently. This approach aligns with Cloud Adoption Framework principles of agility and scalability in cloud environments.
  
-- **Decouple services.** Strategically isolate services from each other to reduce the blast radius of incidents. This strategy helps to ensure that failures in one component don't affect the entire system. It supports CAF's governance model by promoting robust service boundaries and operational resilience.
+- **Decouple services.** Strategically isolate services from each other to reduce the blast radius of incidents. This strategy helps to ensure that failures in one component don't affect the entire system. It supports the Cloud Adoption Framework governance model by promoting robust service boundaries and operational resilience.
  
-- **Enable automatic scaling.** Ensure that your application architecture supports automatic scaling to handle varying loads so that it can maintain availability during traffic spikes. This practice aligns with CAF's guidance on creating scalable and responsive cloud environments and can help you keep costs manageable and predictable.
+- **Enable automatic scaling.** Ensure that your application architecture supports automatic scaling to handle varying loads so that it can maintain availability during traffic spikes. This practice aligns with Cloud Adoption Framework guidance on creating scalable and responsive cloud environments and can help you keep costs manageable and predictable.
 
-- **Implement fault isolation.** Design your application to isolate failures to individual tasks or functions. Doing so can help prevent widespread outages and enhance resilience. This approach supports CAF's focus on creating reliable and fault-tolerant systems.
+- **Implement fault isolation.** Design your application to isolate failures to individual tasks or functions. Doing so can help prevent widespread outages and enhance resilience. This approach supports the Cloud Adoption Framework focus on creating reliable and fault-tolerant systems.
  
-- **Ensure high availability.** Incorporate built-in redundancy and disaster recovery mechanisms to maintain continuous operation. This approach supports CAF's best practices for high availability and business continuity planning.
+- **Ensure high availability.** Incorporate built-in redundancy and disaster recovery mechanisms to maintain continuous operation. This approach supports Cloud Adoption Framework best practices for high availability and business continuity planning.
  
-- **Plan for automatic failover.** Deploy applications across multiple regions to support seamless failover and uninterrupted service. This approach aligns with the CAF strategy for geographic redundancy and disaster recovery.
+- **Plan for automatic failover.** Deploy applications across multiple regions to support seamless failover and uninterrupted service. This approach aligns with the Cloud Adoption Framework strategy for geographic redundancy and disaster recovery.
 
 ## Prepare for security sustainment
 
