@@ -21,7 +21,7 @@ All of the recommendations in this guidance follow the [Zero Trust principles](/
 Security is a complex and challenging discipline that must be considered in nearly all aspects of your cloud and overall technology estates. This is because:
 
 - **Anything is a potential target or attack vector:** Attackers in today’s world exploit any weakness in the people, process, and technologies of an organization to achieve their illicit objectives.
-- **Security is a team sport:** Defending against these attacks requires a coordinated approach across business, technology, and security teams to each do their part for security and to all work together collaboratively. This point is illustrated by the wide variety of roles required to secure Azure resources described in the [Teams and roles](./secure-teams-and-roles) article.
+- **Security is a team sport:** Defending against these attacks requires a coordinated approach across business, technology, and security teams to each do their part for security and to all work together collaboratively. This point is illustrated by the wide variety of roles required to secure Azure resources described in the [Teams and roles](./secure-teams-and-roles.md) article.
 
 This CAF Secure guidance is one component of a larger holistic set of Microsoft security guidance that guides different teams through their part of security. The full set of guidance includes:
 

@@ -3,7 +3,7 @@ title: Key considerations for Azure Data Lake Storage
 description: Understand key Azure Data Lake Storage considerations for cloud-scale analytics.
 author: mboswell
 ms.author: mboswell
-ms.date: 04/04/2022
+ms.date: 10/10/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -56,15 +56,15 @@ Soft delete for containers protects your data from accidental or malicious delet
 
 Enable the following data protection features to achieve end-to-end blob data protection:
 
-- Container soft delete, to restore a container that has been deleted. To learn how to enable container soft delete, see [Enable and manage soft delete for containers](/azure/storage/blobs/soft-delete-container-enable).
-- Blob soft delete, to restore a blob or version that has been deleted. To learn how to enable blob soft delete, see [Enable and manage soft delete for blobs](/azure/storage/blobs/soft-delete-blob-enable).
+- Container soft delete, to restore a container that is deleted. To learn how to enable container soft delete, see [Enable and manage soft delete for containers](/azure/storage/blobs/soft-delete-container-enable).
+- Blob soft delete, to restore a blob or version that is deleted. To learn how to enable blob soft delete, see [Enable and manage soft delete for blobs](/azure/storage/blobs/soft-delete-blob-enable).
 
 > [!WARNING]
 > Deleting a storage account can't be undone. Container soft delete does not protect against storage account deletion, only against the deletion of containers within an account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information about locking Azure Resource Manager resources, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
 
 ## Monitoring
 
-In a data landing zone, all monitoring should be sent to your [enterprise-scale management subscription](../../../ready/landing-zone/design-area/management.md) for analysis.
+In a data landing zone, all monitoring should be sent to your [Azure Landing Zone management subscription](../../../ready/landing-zone/design-area/management.md) for analysis.
 
 To learn about the monitoring data Azure Storage uses, see [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource). For more information on the logs and metrics Azure Storage creates, see [Monitoring Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage).
 
@@ -87,6 +87,16 @@ All other failed anonymous requests aren't logged.
 > [!IMPORTANT]
 > Set your default monitoring policy to audit storage and send logs to your enterprise-scale management subscription.
 
+## Recommended data lake zones security
+
+The following usages are the recommended security patterns for each of the data lake zones:
+
+- Raw usage allows access to data only by using security principal names (SPNs) - preferably using managed identities.
+- Enriched usage allows access to data only by using security principal names (SPNs) - preferably using managed identities.
+- Curated usage enables access to both security principal names (SPNs) and user principal names (UPNs).
+
+For more information, see [Access control model in Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-access-control-model).
+
 ## Next steps
 
-- [Access control and data lake configurations in Azure Data Lake Storage Gen2](./data-lake-access.md)
+- [Use Azure Databricks within cloud-scale analytics in Azure](./azure-databricks-implementation.md)
