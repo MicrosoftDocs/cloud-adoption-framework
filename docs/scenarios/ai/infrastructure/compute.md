@@ -44,7 +44,7 @@ Compute orchestration solutions facilitate the management of complex AI tasks ac
 
 - *Use Azure Batch for built-in scheduling.* Azure Batch offers built-in scheduling features with no need for extra software installation or management. It has a consumption pricing model and no licensing fees. It also supports containerized tasks natively. For deployment best practices, see [Azure Batch Accelerator](https://github.com/Azure/bacc).
 
-- *Use Azure Kubernetes Service (AKS) for container scaling.* AKS is a managed service for deploying, scaling, and managing containers across a cluster. It's suitable for running AI workloads in containers at scale.
+- *Use Azure Kubernetes Service (AKS) for container scaling.* AKS is a managed service for deploying, scaling, and managing containers across a cluster. It's suitable for running AI workloads in containers at scale. For more information, see [Use Azure Kubernetes Service to host GPU-based workloads](/azure/architecture/reference-architectures/containers/aks-gpu/gpu-aks).
 
 - *Manually orchestrate jobs for simpler tasks.* If orchestration needs are minimal, manage AI resources manually. Consider the following steps for small-scale workloads:
     - *Define your workflow.* Understand your workflow end-to-end, including dependencies and job sequence. Consider how to handle failures at any step.
