@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 The Microsoft Cloud Adoption Framework Secure Methodology provides a structured approach for securing your Azure cloud estate.
 
-The guidance in this article provides recommendations relevant to all methodologies within the Cloud Adoption Framework. Security should be an integral part of every phase of your cloud adoption journey. Therefore, you can find articles aligned with each methodology that provide security recommendations to consider as you progress through each phase of your cloud adoption journey.
+The guidance in this article provides recommendations relevant to all methodologies within the Cloud Adoption Framework. Security should be an integral part of every phase of your cloud adoption journey. Therefore, you can find articles aligned with each methodology that provide security recommendations for you to consider as you progress through each phase of your cloud adoption journey.
 
 All of the recommendations in this guidance adhere to the [Zero Trust principles](/security/zero-trust/zero-trust-overview) of assume compromise (or assume breach), least privilege, and explicit verification of trust that should guide your security strategy, architecture, and implementation.
 
@@ -24,13 +24,13 @@ Security is a complex and challenging discipline that you need to consider in ne
 
 - **Security is a team sport:** To defend against these attacks, a coordinated approach is required across business, technology, and security teams. Each team must contribute to security efforts and collaborate effectively. The various roles required to secure Azure resources, described in [Teams and roles](./secure-teams-and-roles.md), illustrate this point.
 
-This Cloud Adoption Framework Secure guidance is one component of a larger holistic set of Microsoft security guidance designed to help various teams understand and perform their security responsibilities.  The complete set of guidance includes:
+This Cloud Adoption Framework Secure guidance is one component of a larger holistic set of Microsoft security guidance designed to help various teams understand and perform their security responsibilities. The complete set of guidance includes:
 
 - **Cloud Adoption Framework Secure Methodology** provides security guidance for teams that manage the technology infrastructure that supports all the workload development and operations hosted on Azure.
 
 - **[Azure Well-Architected Framework security guidance](/azure/well-architected/security/)** provides guidance for individual workload owners about how to apply security best practices to application development and DevOps and DevSecOps processes. Microsoft provides guidance on how to apply [security practices](https://www.microsoft.com/securityengineering/sdl/practices) and DevSecOps controls in a security development lifecycle that complements this documentation.
 
-- **[Microsoft Cloud Security Benchmark](/security/benchmark/azure/)** provides  best practice guidance for stakeholders to ensure robust cloud security. This guidance includes security baselines that describe the available security features and recommended optimal configurations for Azure services.
+- **[Microsoft Cloud Security Benchmark](/security/benchmark/azure/)** provides best practice guidance for stakeholders to ensure robust cloud security. This guidance includes security baselines that describe the available security features and recommended optimal configurations for Azure services.
 
 - **[Zero Trust guidance](/security/zero-trust/)** provides guidance for security teams to implement technical capabilities to support a Zero Trust modernization initiative.
 
@@ -90,4 +90,4 @@ Use the cloud security checklist to see all tasks for each cloud security step. 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Understand cloud security teams, roles, and functions](./secure-teams-and-roles.md)
+> [Security teams, roles, and functions](./secure-teams-and-roles.md)
