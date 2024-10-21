@@ -1,0 +1,56 @@
+items:
+  - name: Adopting AI on Azure
+    href: index.md
+  - name: AI Strategy
+    href: strategy.md
+  - name: AI Plan
+    href: plan.md
+  - name: AI Ready
+    items:
+    - name: Prepare AI environment
+      href: ready.md
+    - name: AI on Azure platforms (PaaS)
+      items:
+      - name: AI architectures
+        href: platform/architectures.md
+      - name: Design areas
+        items:
+          - name: Resource selection
+            href: platform/resource-selection.md
+          - name: Networking
+            href: platform/networking.md
+          - name: Governance
+            href: platform/governance.md
+          - name: Management
+            href: platform/management.md
+          - name: Security
+            href: platform/security.md
+    - name: AI on Azure infrastructure (IaaS)
+      items:
+      - name: Implementation options
+        href: infrastructure/cycle-cloud.md
+      - name: Design areas
+        items:
+          - name: Compute
+            href: infrastructure/compute.md
+          - name: Storage
+            href: infrastructure/storage.md
+          - name: Networking
+            href: infrastructure/networking.md
+          - name: Governance
+            href: infrastructure/governance.md
+          - name: Management
+            href: infrastructure/management.md
+          - name: Security
+            href: infrastructure/security.md
+  - name: Govern AI
+    href: govern.md
+  - name: Manage AI 
+    href: manage.md  
+  - name: Secure AI
+    href: secure.md
+  - name: Additional resources
+    items:
+      - name: AI Center of Excellence
+        href: center-of-excellence.md
+
