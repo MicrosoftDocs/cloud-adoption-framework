@@ -28,9 +28,9 @@ In its ideal state, governance drives continuous improvement throughout the orga
 
 The following are key principles for security governance:
 
-- **Continuous discovery of assets and asset types:** A static inventory isn't possible in a dynamic cloud environment. Your organization must focus on the continuous discovery of assets and asset types. In the cloud, new types of services are added regularly. Workload owners dynamically adjust the number of application and service instances on demand, which creates a constantly changing environment. This situation makes inventory management a continuously evolving discipline. Governance teams need to continuously identify asset types and instances to keep up with this pace of change.
+- **Continuous discovery of assets and asset types:** A static inventory isn't possible in a dynamic cloud environment. Your organization must focus on the continuous discovery of assets and asset types. In the cloud, new types of services are added regularly. Workload owners dynamically adjust the number of application and service instances as needed, which creates a constantly changing environment. This situation makes inventory management a continuously evolving discipline. Governance teams need to continuously identify asset types and instances to keep up with this pace of change.
 
-- **Continuous improvement of asset security posture:** Governance teams should focus on improving and enforcing standards to keep up with the cloud and attackers. Information technology (IT) organizations must react quickly to new threats and adapt accordingly. Attackers constantly evolve their techniques, while defenses continuously improve and might need to be activated. You can’t always incorporate all necessary security measures in the initial setup.
+- **Continuous improvement of asset security posture:** Governance teams should focus on improving and enforcing standards to keep up with the cloud and attackers. Information technology (IT) organizations must react quickly to new threats and adapt accordingly. Attackers constantly evolve their techniques, while defenses continuously improve and might need to be updated. You can’t always incorporate all necessary security measures in the initial setup.
 
 - **Policy-driven governance:** This governance ensures consistent implementation because you define policies once and apply them automatically across resources. This process limits wasted time and effort on repeated manual tasks. It's often implemented by using Azure Policy or non-Microsoft policy automation frameworks.
 
@@ -84,7 +84,7 @@ Effective governance is crucial for maintaining security and compliance in enter
 
 It’s critical to monitor compliance and enforce policies to maintain the principle of confidentiality in enterprise cloud environments. These actions are essential for robust security standards. These processes ensure that all security measures are consistently applied and effective to help protect sensitive data from unauthorized access and breaches. Regular assessments, automated monitoring, and comprehensive training programs are essential to ensure adherence to established policies and procedures.
 
-- **Regular audits and assessments:** Conduct regular security audits and assessments to ensure that policies are being followed and identify areas for improvement. These audits should cover regulatory, industry, and organizational standards and requirements, and might involve non-Microsoft assessors to provide an unbiased evaluation. An approved assessment and inspection program helps maintain high standards of security and compliance, and ensures that all aspects of data confidentiality are thoroughly reviewed and addressed.
+- **Regular audits and assessments:** Conduct regular security audits and assessments to ensure that policies are being followed and identify areas for improvement. These audits should cover regulatory, industry, and organizational standards and requirements, and might involve third-party assessors to provide an unbiased evaluation. An approved assessment and inspection program helps maintain high standards of security and compliance, and ensures that all aspects of data confidentiality are thoroughly reviewed and addressed.
 
 - **Automated compliance monitoring:** Tools like [Azure Policy](/azure/governance/policy/overview) automate the monitoring of compliance with security policies and provide real-time insights and alerts. This functionality helps ensure continuous adherence to security standards. Automated monitoring helps you detect and respond to policy violations quickly, which reduces the risk of data breaches. It also ensures continuous compliance by regularly checking configurations and access controls against established policies.
 
@@ -116,13 +116,13 @@ The architecture designs that you standardize in your cloud estate require gover
 
 - **Governance of the disaster recovery plans:** Treat disaster recovery plans with the same level of importance as incident response plans. Disaster recovery plans should be:
 
-  - Version-controlled to ensure that teams are always working with the most recent version. Additionally, the versioning can be audited for accuracy and compliance.
+  - Version-controlled to ensure that teams are always working with the most recent version and that versioning can be audited for accuracy and compliance.
 
   - Stored in highly available and secure storage.
 
   - Reviewed regularly and updated when changes to the environment are needed.
 
-- **Governance of disaster recovery drills:** Disaster recovery drills aren't only for training on the plans but also serve as learning opportunities to improve the plan itself. They can also help refine operational or design standards. Meticulous record keeping of disaster recovery drills helps identify areas for improvement and ensures compliance with auditing requirements for disaster preparedness. By storing these records in the same repository as the plans, you can keep everything organized and secure.
+- **Governance of disaster recovery drills:** Disaster recovery drills aren't only for training on the plans but also serve as learning opportunities to improve the plan itself. They can also help refine operational or design standards. Meticulous record keeping of disaster recovery drills helps identify areas for improvement and ensures compliance with auditing requirements for disaster preparedness. By storing these records in the same repository as the plans, you can help keep everything organized and secure.
 
 ## Sustaining secure governance
 
@@ -139,4 +139,4 @@ Modern Service Management (MSM) is a set of practices and tools designed to mana
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Securely manage your cloud estate](./secure-manage.md)
+> [Manage your cloud estate with enhanced security](./secure-manage.md)
