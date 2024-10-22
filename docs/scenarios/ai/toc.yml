@@ -1,5 +1,5 @@
 items:
-  - name: Adopting AI on Azure
+  - name: Adopting AI
     href: index.md
   - name: AI Strategy
     href: strategy.md
@@ -13,7 +13,7 @@ items:
       items:
       - name: AI architectures
         href: platform/architectures.md
-      - name: Design areas
+      - name: AI design areas
         items:
           - name: Resource selection
             href: platform/resource-selection.md
@@ -29,7 +29,7 @@ items:
       items:
       - name: Implementation options
         href: infrastructure/cycle-cloud.md
-      - name: Design areas
+      - name: Ai design areas
         items:
           - name: Compute
             href: infrastructure/compute.md
