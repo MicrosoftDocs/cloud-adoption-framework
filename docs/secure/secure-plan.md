@@ -54,7 +54,7 @@ The Microsoft Zero Trust approach provides guidance for seven technology pillars
 
 ### Business alignment
 
-Alignment between technology and business stakeholders is critical to the success of your security modernization plan. As such, you must approach the plan development as a collaborative process that's accomplished through negotiations between stakeholders to find the right way to adapt processes and policies. Business stakeholders must understand how the modernization plan affects business functions. Technology stakeholders must know where to make concessions to keep critical business functions secure and intact.
+Alignment between technology and business stakeholders is critical to the success of your security modernization plan. You must approach plan development as a collaborative process and negotiate with stakeholders to find the best way to adapt processes and policies. Business stakeholders must understand how the modernization plan affects business functions. Technology stakeholders must know where to make concessions to keep critical business functions secure and intact.
 
 ## Incident preparedness and response
 
@@ -64,7 +64,7 @@ Alignment between technology and business stakeholders is critical to the succes
 
 ## Plan for confidentiality
 
-- **Data loss protection:** To ensure that organizational data confidentiality is established across the enterprise, it's crucial to meticulously plan specific data loss prevention policies and procedures. This process includes identifying sensitive data, determining how to protect the data, and planning for the deployment of encryption technologies and secure access controls.
+- **Data loss protection:** To establish organizational data confidentiality across the enterprise, meticulously plan specific data loss prevention policies and procedures. This process includes identifying sensitive data, determining how to protect the data, and planning for the deployment of encryption technologies and secure access controls.
 
 - **Include data protection requirements in your cloud migration or development plans:**
 
@@ -80,11 +80,11 @@ In addition to the measures recommended for confidentiality, consider implementi
 
 - **Plan for data and system integrity observability and governance:** In your cloud adoption or development plans, include plans to monitor data and systems for unauthorized changes and policies for data hygiene.
 
-- **Plan for integrity incidents:** In your incident response plan, include considerations for integrity. These considerations should address unauthorized changes to data or systems and how to remediate invalid or corrupted data that's discovered through your monitoring and data hygiene practices.
+- **Plan for integrity incidents:** In your incident response plan, include considerations for integrity. These considerations should address unauthorized changes to data or systems and how to remediate invalid or corrupted data discovered through your monitoring and data hygiene practices.
 
 ## Plan for availability
 
-Your cloud adoption plan should address availability by adopting standards for architecture design and operations. These standards will guide the implementation. In further phases, they will provide a blueprint for achieving availability requirements. Consider the following recommendations as you build out your cloud adoption plan.
+Your cloud adoption plan should address availability by adopting standards for architecture design and operations. These standards guide the implementation. In further phases, they provide a blueprint for achieving availability requirements. Consider the following recommendations as you build out your cloud adoption plan.
 
 - **Standardize infrastructure and application design patterns:** Standardize infrastructure and application design patterns to help ensure that your workloads are reliable. Avoid unnecessary complexity to make designs repeatable and to discourage shadow IT behaviors. Follow best practices for [highly available infrastructure](/azure/well-architected/reliability/redundancy) and [resilient applications](/azure/well-architected/reliability/self-preservation) as you define your design standards.
 
@@ -101,4 +101,4 @@ In order to plan your security baseline, you must first understand your current 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Ready your secure cloud estate](./secure-ready.md)
+> [Prepare your secure cloud estate](./secure-ready.md)
