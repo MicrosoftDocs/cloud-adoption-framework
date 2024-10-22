@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 The Cloud Adoption Framework for Azure Secure methodology provides a structured approach for securing your Azure cloud estate.
 
-The guidance in this article provides recommendations relevant to all methodologies within the Cloud Adoption Framework because security should be an integral part of every phase of your cloud adoption journey. Therefore, you can find articles aligned with each methodology that provide security recommendations for you to consider as you progress through each phase of your cloud adoption journey.
+The guidance in this series of articles provides recommendations relevant to all methodologies within the Cloud Adoption Framework because security should be an integral part of every phase of your cloud adoption journey. Therefore, you can find articles aligned with each methodology that provide security recommendations for you to consider as you progress through each phase of your cloud adoption journey.
 
 All of the recommendations in this guidance adhere to the [Zero Trust principles](/security/zero-trust/zero-trust-overview) of assume compromise (or assume breach), least privilege, and explicit verification of trust that should guide your security strategy, architecture, and implementation.
 
