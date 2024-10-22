@@ -29,7 +29,7 @@ items:
       items:
       - name: Implementation options
         href: infrastructure/cycle-cloud.md
-      - name: Ai design areas
+      - name: AI design areas
         items:
           - name: Compute
             href: infrastructure/compute.md
