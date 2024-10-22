@@ -72,7 +72,7 @@ An Azure landing zone is the recommended starting point that prepares your Azure
 
 ### Build an AI environment
 
-If you don't use an Azure landing zone, follow the recommendations in this article to build your AI. The following diagram shows a baseline resource hierarchy. It segments internal AI workloads and internet-facing AI workloads, as described in [establish AI governance](#establish-ai-governance). Internal workloads use policy to deny online access from customers. This separation safeguards internal data from exposure to external users. AI development uses a jumpbox to manage AI resources and data.
+If you don't use an Azure landing zone, follow the recommendations in this article to build your AI environment. The following diagram shows a baseline resource hierarchy. It segments internal AI workloads and internet-facing AI workloads, as described in [establish AI governance](#establish-ai-governance). Internal workloads use policy to deny online access from customers. This separation safeguards internal data from exposure to external users. AI development uses a jumpbox to manage AI resources and data.
 
 :::image type="content" source="./images/baseline-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/baseline-resource-hierarchy.svg" border="false":::
 *Figure 3. Baseline resource hierarchy for AI workloads.*
