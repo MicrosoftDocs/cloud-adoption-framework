@@ -919,7 +919,7 @@ items:
     - name: Overview 
       href: secure/secure-overview.md
     - name: Teams and roles
-      href: secure/secure-teams-and-roles.md
+      href: secure/secure-teams-roles.md
     - name: Strategy
       href: secure/secure-strategy.md
     - name: Plan

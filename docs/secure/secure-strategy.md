@@ -16,7 +16,7 @@ This article is a supporting guide to the [Strategy](../strategy/index.md) metho
 
 ## Security posture modernization 
 
-The strategy of security posture modernization doesn't just involve the adoption of new technologies and new operational practices. It typically also  involves a mindset shift across the organization. New [teams and roles](./secure-teams-and-roles.md) might need to be filled, and existing teams and roles might need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it's important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
+The strategy of security posture modernization doesn't just involve the adoption of new technologies and new operational practices. It typically also  involves a mindset shift across the organization. New [teams and roles](./secure-teams-roles.md) might need to be filled, and existing teams and roles might need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it's important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
 
 See the [Define a security strategy](../strategy/define-security-strategy.md) guide for a comprehensive overview of these considerations.
 
@@ -86,7 +86,7 @@ The motivation for moving to the cloud is to modernize our line-of-business (LOB
 
 **Security considerations:**
 
-- *Technical readiness.* Our IT and Security teams will need upskilling to successfully define our migration plan. We might need to add new [teams and roles](./secure-teams-and-roles.md) as we prepare to move to the cloud.
+- *Technical readiness.* Our IT and Security teams will need upskilling to successfully define our migration plan. We might need to add new [teams and roles](./secure-teams-roles.md) as we prepare to move to the cloud.
 
 ### Business outcome: Global reach
 
