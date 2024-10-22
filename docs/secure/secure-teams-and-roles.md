@@ -148,7 +148,7 @@ Security teams work with infrastructure and platform roles (and others) to help 
 
         - Administrators using shared accounts instead of their own individual accounts to perform privileged tasks.
 
-        - Use of ["browse-up" configurations](https://www.ncsc.gov.uk/whitepaper/security-architecture-anti-patterns) that create elevation-of-privilege paths that can be abused by attackers. This vulerability occurs when high privileged administrative accounts sign in to lower-trust user devices and workstations (like standard user workstations and user-owned devices), sometimes via  jump servers that don't effectively mitigate these risks. For more information, see [securing privileged access](/security/privileged-access-workstations/privileged-access-strategy) and [privileged access devices](/security/privileged-access-workstations/privileged-access-devices).
+        - Use of ["browse-up" configurations](https://www.ncsc.gov.uk/whitepaper/security-architecture-anti-patterns) that create elevation-of-privilege paths that can be abused by attackers. This vulnerability occurs when high privileged administrative accounts sign in to lower-trust user devices and workstations (like standard user workstations and user-owned devices), sometimes via  jump servers that don't effectively mitigate these risks. For more information, see [securing privileged access](/security/privileged-access-workstations/privileged-access-strategy) and [privileged access devices](/security/privileged-access-workstations/privileged-access-devices).
 
 ### Security operations (SecOps/SOC)
 
@@ -162,60 +162,60 @@ The SecOps team is sometimes referred to as a Security Operations Center (SOC). 
 
    - **Threat intelligence.** Gathers and disseminates information about attackers and threats to all stakeholders, including business, technology, and security. Threat intelligence teams perform research, share their findings (formally or informally), and disseminate them to various stakeholders, including the cloud security team. This security context helps these teams make cloud services more resilient to attacks because they're using real-world attack information in design, implementation, testing, and operation, and continuously improving.
 
-   - **Detection engineering.** Creates custom attack detections and customizes attack detections provided by vendors and the broader community. These custom attack detections supplement vendor-provided detections for common attacks that are commonly found in extended detection and response (XDR) tools and some security information and event management (SIEM) tools. Detection Engineers work with cloud security teams to identify opportunities for designing and implementing detections, the data required to support them, and the response/recovery procedures for the detections.
+   - **Detection engineering.** Creates custom attack detections and customizes attack detections provided by vendors and the broader community. These custom attack detections supplement vendor-provided detections for common attacks that are commonly found in extended detection and response (XDR) tools and some security information and event management (SIEM) tools. Detection engineers work with cloud security teams to identify opportunities for designing and implementing detections, the data required to support them, and the response/recovery procedures for the detections.
 
-### Security Governance, Risk, and Compliance (GRC)
+### Security Governance, Risk, and Compliance
 
-Security Governance, Risk, and Compliance (GRC) is a set of interrelated disciplines that integrate the technical work of security teams with organizational goals and expectations. These roles and teams may be a hybrid of two or more disciplines or may be discrete roles. Cloud teams will interact with each of these over the course of the cloud technology lifecycle:
+Security Governance, Risk, and Compliance (GRC) is a set of interrelated disciplines that integrate the technical work of security teams with organizational goals and expectations. These roles and teams can be a hybrid of two or more disciplines or can be discrete roles. Cloud teams will interact with each of these disciplines over the course of the cloud technology lifecycle:
 
-- The **Governance** discipline is a foundational capability that focuses on ensuring the organization is consistently executing across all aspects of security. Governance teams focus on decision rights (who makes what decisions) and process frameworks that connect and guide teams. Without effective governance, an organization with all the right controls, policies, and technology may still be breached by attackers who found areas where the intended defenses weren’t executed well, fully, or at all.
+- The **governance** discipline is a foundational capability that focuses on ensuring the organization is consistently implementing all aspects of security. Governance teams focus on decision rights (who makes what decisions) and process frameworks that connect and guide teams. Without effective governance, an organization with all the right controls, policies, and technology can still be breached by attackers who found areas where the intended defenses aren't implemented well, fully, or at all.
 
-- The **Risk management** discipline focuses on ensuring the organization is effectively assessing, understanding, and mitigating risk. Risk management roles work with many teams across the organization to build a clear picture on the organization’s risk and keep it current. Because many critical business services can be hosted on cloud infrastructure and platforms, cloud and risk teams need to collaborate to assess and manage this organizational risk. Additionally, supply chain security focuses on risks associated with third-party vendors, open source components, and partners.
+- The **risk management** discipline focuses on ensuring the organization is effectively assessing, understanding, and mitigating risk. Risk management roles work with many teams across the organization to create a clear representation of the organization's risk and keep it current. Because many critical business services can be hosted on cloud infrastructure and platforms, cloud and risk teams need to collaborate to assess and manage this organizational risk. Additionally, supply chain security focuses on risks associated with external vendors, open source components, and partners.
 
-- The **Compliance** discipline ensures that systems and processes are compliant with regulatory requirements and internal policies. Without this, the organization may be exposed to risk related to noncompliance with external obligations (fines, liability, loss of revenue from inability to operate in some markets, and more). Compliance requirements typically can't keep up with the speed of attacker evolution, but are an important requirement source nonetheless.
+- The **compliance** discipline ensures that systems and processes are compliant with regulatory requirements and internal policies. Without this discipline, the organization might be exposed to risk related to noncompliance with external obligations (fines, liability, loss of revenue from inability to operate in some markets, and more). Compliance requirements typically can't keep up with the speed of attacker evolution, but they're an important requirement source nonetheless.
 
-All three of these disciplines operate across all technologies and systems to drive organizational outcomes across all teams. All three also rely on context they get from each other and benefit significantly from current high-fidelity data on threats, business, and the technology environment. These disciplines also rely on architecture to express an actionable vision that can be executed and security education and policy to establish rules and guide teams through the many daily decisions.
+All three of these disciplines operate across all technologies and systems to drive organizational outcomes across all teams. All three also rely on context they get from each other and benefit significantly from current high-fidelity data on threats, business, and the technology environment. These disciplines also rely on architecture to express an actionable vision that can be implemented and security education and policy to establish rules and guide teams through the many daily decisions.
 
-Cloud engineering and operation teams may work with **Posture Management** roles, **Compliance and Audit** teams, **Security Architecture and Engineering**, or **Chief Information Security Officers (CISOs)** roles on GRC topics.
+Cloud engineering and operation teams might work with **posture management** roles, **compliance and audit** teams, **security architecture and engineering**, or **chief information security officer (CISO)** roles on GRC topics.
 
 ### Security education and policy
 
-Organizations must ensure that all roles have basic security literacy as well as guidance on what they're expected to do in security and how to do it using a combination of written policy and education. The education for cloud teams may be informal mentoring by security professionals working directly with them or it may be a formal program with documented curriculum and designated security champions. 
+Organizations must ensure that all roles have basic security literacy and guidance on what they're expected to do regarding security and how to do it. This requires a combination of written policy and education. The education for cloud teams can be informal mentoring by security professionals who work directly with them, or it can be a formal program with documented curriculum and designated security champions. 
 
-In a larger organization, security teams work with **Organizational Readiness / Training** and **Security Education and Engagement** roles on formal security training and setting up security champions within technical teams to evangelize and educate their peers on security.
+In a larger organization, security teams work with **organizational readiness / training** and **security education and engagement** roles on formal security training and setting up security champions within technical teams to evangelize and educate their peers on security.
 
 Security education and policy must help each role understand:
 
-- **Why** - Show each role why it's important to them and their goals in the context of their role responsibilities. If people don’t clearly feel **why** security matters to them, they'll judge it to be unimportant and move onto something else.
+- **Why.** Show each role why it's important to them and their goals in the context of their role responsibilities. If people don't clearly understand why security matters to them, they'll judge it to be unimportant and move on to something else.
 
-- **What** – Summarize what security tasks they need to do in language the roles already understand. If people don’t know what they're being asked to do, they'll assume security isn’t important or relevant to them and move onto something else.
+- **What.** Summarize what security tasks they need to do in language they already understand. If people don't know what they're being asked to do, they'll assume security isn't important or relevant to them and move on to something else.
 
-- **How** -  Ensure each role has clear explanation/instructions on how to apply it in their life/role/job. If people don’t know how to actually do what they're being asked to do (for example, patch servers identify whether it’s a phishing link, report the message properly, review code, or perform threat model), they'll fail and move onto something else.
+- **How.** Ensure that each role has clear instructions on how to apply security guidance in their role. If people don't know how to actually do what they're being asked to do (for example, patch servers, identify whether a link is a phishing link, report a message properly, review code, or perform a threat model), they'll fail and move on to something else.
 
-## Example scenario: Typical interoperability between teams
+## Example scenario: Typical interoperability among teams
 
-When an organization deploys and operationalizes a Web Application Firewall (WAF), several security teams must collaborate to ensure its effective deployment, management, and integration into the existing security infrastructure. Here’s how the interoperability among the teams might look in an enterprise security organization:
+When an organization deploys and operationalizes a WAF, several security teams must collaborate to ensure its effective deployment, management, and integration into the existing security infrastructure. Here's how the interoperability among teams might look in an enterprise security organization:
 
 1. **Planning and design**
-    1. The *Governance team* identifies the need for enhanced web application security and allocates budget for a WAF.
-    1. The *Network Security Architect* designs the WAF deployment strategy, ensuring it integrates seamlessly with existing security controls and aligns with the organization's security architecture.
+    1. The *governance team* identifies the need for enhanced web application security and allocates budget for a WAF.
+    1. The *network security architect* designs the WAF deployment strategy, ensuring it integrates seamlessly with existing security controls and aligns with the organization's security architecture.
 1. **Implementation**
-    1. The *Network Security Engineer* deploys the WAF according to the architect’s design, configuring it to protect the specific web applications, and enables monitoring.
-    1. The *IAM Engineer* sets up access controls, ensuring only authorized personnel can manage the WAF.
+    1. The *network security engineer* deploys the WAF according to the architect's design, configuring it to protect the specific web applications, and enables monitoring.
+    1. The *IAM engineer* sets up access controls, ensuring that only authorized personnel can manage the WAF.
 1. **Monitoring and management**
-    1. The *Posture management team* provides instructions for the *SOC* to configure monitoring and alerting for the WAF and to set up dashboards to track WAF activity.
-    1. The *Threat Intelligence and Detection Engineering teams* help develop response plans for incidents involving the WAF and in conducting simulations to test these plans.
+    1. The *posture management team* provides instructions for the *SOC* to configure monitoring and alerting for the WAF and to set up dashboards to track WAF activity.
+    1. The *threat intelligence and detection engineering teams* help to develop response plans for incidents that involve the WAF and to conduct simulations to test these plans.
 1. **Compliance and risk management**
-    1. The *Compliance and Risk Management Officer* reviews the WAF deployment to ensure it meets regulatory requirements and conducts periodic audits.
-    1. The *Data Security Engineer* ensures that the WAF's logging and data protection measures comply with data privacy regulations.
+    1. The *compliance and risk management officer* reviews the WAF deployment to ensure it meets regulatory requirements and conducts periodic audits.
+    1. The *data security engineer* ensures that the WAF's logging and data protection measures comply with data privacy regulations.
 1. **Continuous improvement and training**
-    1. The *DevSecOps Engineer* integrates WAF management into the continuous integration and continuous deployment (CI/CD) pipeline, ensuring that updates and configurations are automated and consistent.
-    1. The *Security Education and Engagement Specialist* develops and delivers training programs to ensure that all relevant personnel understand how to use and manage the WAF effectively.
-    1. The *Cloud Governance team member* reviews the WAF deployment and management processes to ensure they align with organizational policies and standards
+    1. The *DevSecOps engineer* integrates WAF management into the CI/CD pipeline, ensuring that updates and configurations are automated and consistent.
+    1. The *security education and engagement specialist* develops and delivers training programs to ensure that all relevant personnel understand how to use and manage the WAF effectively.
+    1. The *cloud governance team member* reviews the WAF deployment and management processes to ensure they align with organizational policies and standards.
     
-By collaborating effectively, these roles ensure that the WAF is not only deployed correctly but also continuously monitored, managed, and improved to protect the organization's web applications from evolving threats.
+By collaborating effectively, these roles ensure that the WAF is deployed correctly and also continuously monitored, managed, and improved to protect the organization's web applications from evolving threats.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Integrate security in your cloud adoption strategy](./secure-strategy.md)
+> [Integrate security into your cloud adoption strategy](./secure-strategy.md)
