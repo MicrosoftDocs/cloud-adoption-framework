@@ -134,7 +134,7 @@ Security teams work with infrastructure and platform roles (and others) to help 
 
     - *Functional vulnerabilities* occur in software design or implementation. They can allow unauthorized control of the affected software. These vulnerabilities might be flaws in software that your own teams developed or flaws in commercial or open source software (typically tracked by a Common Vulnerabilities and Exposures identifier).
     
-    - *Configuration vulnerabilities* are misconfigurations of systems that allow unauthorized access to system functionality. These vulnerabilities can be introduced during ongoing operations, also knows as configuration drift. They can also be introduced during the initial deployment and configuration of software and systems, or by weak security defaults from a vendor. Some common examples include:
+    - *Configuration vulnerabilities* are misconfigurations of systems that allow unauthorized access to system functionality. These vulnerabilities can be introduced during ongoing operations, also known as configuration drift. They can also be introduced during the initial deployment and configuration of software and systems, or by weak security defaults from a vendor. Some common examples include:
 
         - Orphaned objects that allow unauthorized access to items like DNS records and group membership.
 
