@@ -50,7 +50,7 @@ For more information on data quality management, see [Data quality](../../cloud-
 
 You should capture and store entity relationship models in a central location within your data management landing zone. This provides data consumers a single place to find conceptual diagrams.
 
-Many customers use [ER Studio](https://www.idera.com/products/er-studio/enterprise-data-modeling) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) to model their data products before ingestion.
+Many customers use [ER Studio](https://erstudio.com/) and [iServer](https://www.orbussoftware.com/solutions/enterprise-architecture/data-architecture) to model their data products before ingestion.
 
 ## Master data management
 
