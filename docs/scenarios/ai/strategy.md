@@ -15,7 +15,7 @@ An AI strategy outlines the organizational process for developing an AI adoption
 
 ## Identify AI use cases
 
-AI supports two main goals: enhancing individual efficiency and improving business processes. Generative AI fosters productivity and enhances customer experiences, while nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value.
+AI supports two main goals: enhancing individual efficiency and improving business processes. Generative AI fosters productivity and enhances customer experiences, while nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value. For more information, see [example AI use cases](#example-ai-use-cases).
 
 - *Look for automation opportunities.* Identify processes suitable for automation to improve efficiency and reduce operational costs. Focus on repetitive tasks, data-heavy operations, or areas with high error rates where AI can have a significant effect.
 
@@ -23,9 +23,9 @@ AI supports two main goals: enhancing individual efficiency and improving busine
 
 - *Explore industry use cases.* Research how other businesses use AI for insights. Stay informed about emerging AI technologies and applications relevant to your industry.
 
-- *Set success metrics.* For each use case, define a success metric to guide your AI adoption. A clear objective shapes the technology you adopt and focuses your efforts.
+- *Set AI targets.* For each use case, define a goal (general purpose), objective (desired outcome), and success metric (quantifiable measure) to guide your AI adoption. Clear AI targets drive you toward the right AI solution and help you measure and achieve value faster.
 
-For more information, see [example AI use cases](#example-ai-use-cases) and [example AI adoption strategy](#example-ai-adoption-strategy).
+ For more information, see [example AI strategy](#example-ai-strategy).
 
 ## Define an AI technology strategy
 
@@ -66,35 +66,41 @@ For organizations needing more control and customization, Microsoft offers infra
 | --------------|----|-------------| ---------| ---- |
 | Train and inference your own AI models. Bring your own models to Azure. | [Azure Virtual Machines](/azure/virtual-machines/overview) | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps | Compute, compute node orchestration, managed disks, storage transactions, public IPs, and other Azure services used |
 
+ For more information, see [example AI strategy](#example-ai-strategy).
+
 ## Define an AI data strategy
 
-An AI data strategy outlines data collection, storage, and usage practices that align with regulatory, ethical, and operational standards. This strategy ensures reliable AI outputs and promotes data security and privacy.
+For each AI use case, you should define an AI data strategy that outlines data collection, storage, and usage practices aligning with regulatory, ethical, and operational standards. Tailoring the strategy to each specific use case ensures reliable AI outputs and promotes data security and privacy. If needed, you can consolidate these individual strategies into a broader summary data strategy for your organization.
 
-- *Establish data governance.* Define data governance principles that ensure AI workloads are transparent, accountable, and compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage.
+- *Establish data governance.* Define data governance principles specific to the AI use case to ensure workloads are transparent, accountable, and compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage relevant to the use case.
 
-- *Plan the data lifecycle.* Specify how you collect, store, process, and retire data. Include retention and disposal policies and use version control to maintain accuracy during updates.
+- *Plan the data lifecycle.* Specify how you collect, store, process, and retire data for this particular AI use case. Include retention and disposal policies, and use version control to maintain accuracy during updates.
 
-- *Set up AI fairness and bias controls.* Develop processes to detect and address bias in data. Use tools like Fairlearn to ensure models provide fair and equitable outcomes, especially when working with sensitive data attributes.
+- *Set up AI fairness and bias controls.* Develop processes to detect and address bias in the data used for this AI use case. Use tools like Fairlearn to ensure models provide fair and equitable outcomes, especially when working with sensitive data attributes.
 
 - *Promote collaboration between AI and data teams.* Align AI development with data engineering efforts to ensure models are built using high-quality, well-managed data. Establish a unified pipeline for AI model training and data updates.
 
-- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for AI workloads. Use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
+- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for this AI workload. Use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
 
 - *Incorporate data management automation.* Plan to use AI and machine learning to automate tasks like tagging, cataloging, and data quality checks. Automation improves accuracy and allows teams to focus on strategic efforts.
 
 - *Plan for continuous monitoring and evaluation.* Establish regular audits of data and model outputs to ensure ongoing data quality, performance, and fairness. Monitor AI models and data pipelines to identify any shifts that might impact reliability or compliance.
 
+ For more information, see [example AI strategy](#example-ai-strategy).
+
 ## Define a responsible AI strategy
 
-A responsible AI strategy outlines your role in ensuring that AI solutions remain trustworthy and beneficial for all users. You share this responsibility with your AI provider. Your responsibilities vary depending on the technology you adopt.
+For each AI use case, you should define a responsible AI strategy that outlines your role in ensuring AI solutions remain trustworthy and beneficial for all users. Responsibilities might vary depending on the technology adopted in each case. If necessary, create a broader summary responsible AI strategy that encompasses overarching principles derived from individual use cases.
 
 - *Establish AI accountability.* As AI technology and regulations advance, assign someone to monitor and govern these changes. It's typically a responsibility of the [AI CoE](./center-of-excellence.md) or an AI lead.
 
-- *Align with established responsible AI principles.* Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles that adhere to the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf). Use these principles as business goals to define success and govern your AI adoption.
+- *Align with established responsible AI principles.* Microsoft follows six [responsible AI](https://www.microsoft.com/ai/responsible-ai#advancing-aI-policy) principles that adhere to the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf). Use these principles as business goals to define success and govern your AI adoption in each use case.
 
 - *Identify responsible AI tools.* Responsible AI tools ensure that your AI aligns with broader responsible AI practices. As part of your strategy, identify which Responsible AI [tools and processes](https://www.microsoft.com/ai/tools-practices#tabs-pill-bar-oc8dad_tab1) are relevant.
 
 - *Understand legal and regulatory compliance requirements.* Legal and regulatory compliance influence how you build and manage AI workloads. Research and adhere to the requirements governing AI where you operate.
+
+ For more information, see [example AI strategy](#example-ai-strategy).
 
 ## Next step
 
@@ -103,10 +109,11 @@ A responsible AI strategy outlines your role in ensuring that AI solutions remai
 
 ### Example AI use cases
 
-Example AI use cases show how AI can solve specific problems and improve processes within your business. These examples cover a range of applications, from automating tasks to analyzing data for better decision-making. By reviewing AI use cases, you can gain insights into potential AI applications relevant to your industry.
+These examples highlight various generative and nongenerative AI applications. While not exhaustive, they provide insights into how AI can be applied to different areas of your business.
 
 | Generative AI| Nongenerative AI |
 | --- | ---|
+| Autonomous agents: Develop AI systems that perform tasks independently, such as virtual assistants managing schedules or customer inquiries.| Image recognition: Utilize AI to identify and classify objects within images or videos, useful in security or quality control systems.|
 | Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data. |
 | E-commerce platforms: Generate personalized product recommendations and tailored shopping experiences. | Process automation: Automate routine tasks and workflows that don't require content generation, such as customer service bots. |
 | Product design: Quickly create multiple variations of product prototypes or design elements. | Data analysis: Uncover patterns in structured data for insights and data-driven decisions. |
@@ -116,14 +123,14 @@ Example AI use cases show how AI can solve specific problems and improve process
 | Advertising agencies: Create targeted ad variations for different audience segments. | Optimization: Improve efficiency by solving complex problems (supply chain optimization, resource allocation). |
 | Health and wellness apps: Generate customized workout routines and meal plans. | Sentiment analysis: Analyze text from social media or customer reviews to gauge public sentiment and enhance the customer experience. |
 
-### Example AI adoption strategy
+### Example AI strategy
 
-An AI adoption strategy provides a roadmap for integrating AI into your operations. It includes setting goals, identifying AI opportunities, and defining success metrics. By using an AI adoption strategy, you can workloadatically approach AI integration, ensuring it aligns with your mission and delivers measurable benefits. The example is based on a fictional company, Contoso, that has a customer-facing e-commerce application and employs sales representatives who need to forecast business data. The company develops a product and needs to manage inventory for production. Its sales channels include private companies and highly regulated public sector agencies. These agencies require a separate, custom e-commerce app to meet regulations. Here's the company's AI adoption strategy:
+This example AI strategy is based on a fictional company, Contoso. Contoso operates a customer-facing e-commerce platform and employs sales representatives who need tools to forecast business data. The company also manages product development and inventory for production. Its sales channels include both private companies and highly regulated public sector agencies.
 
-| Goals| Objectives| Opportunities | Success metrics| AI approach | Microsoft solution| Data needs| Skill needs| Cost factors |
-| -------------| ----------| ------|----| ---------------| -------| -----| ------------------| -----|
-| Automate business process | Improve customer satisfaction | E-commerce web application chat feature| Increased customer retention rate| PaaS, generative AI, RAG | Azure AI Studio| Item descriptions and pairings | RAG and cloud app development | Usage |
-| Automate business process | Reduce costs | Internal app document-processing workflow| Increased completion rate| Analytical AI, fine-tuning | Azure AI services - Document Intelligence| Standard documents| App development | Estimated usage |
-| Automate business process | Reduce costs | Inventory management application and product purchasing | Shorter shelf life of inventory| Machine learning, training models| Azure Machine Learning | Historical inventory and sales data| Machine learning and app development | Estimated usage |
-| Enhance individual productivity | Improve employee experience | Daily work across company | Increased employee satisfaction survey results | SaaS generative AI| The free version of Copilot and Microsoft 365 Copilot| OneDrive data| General IT| Subscription costs|
-| Automate business process | Increase sales| E-commerce application for regulated industry chat feature | Increased sales| IaaS generative AI model training | Azure Virtual Machines | Vast training data on domain-specific data | Cloud infrastructure, app development, VM maintenance, networking | Infrastructure and software |
+| AI use case | Goals | Objectives | Success metrics | AI approach | Microsoft solution | Data needs | Skill needs | Cost factors | AI data strategy | Responsible AI strategy |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **E-commerce web application chat feature** | Automate business process | Improve customer satisfaction | Increased customer retention rate | PaaS, generative AI, RAG | Azure AI Studio | Item descriptions and pairings | RAG and cloud app development | Usage | Establish data governance for customer data and implement AI fairness controls. | Assign AI accountability to AI CoE and align with Responsible AI principles. |
+| **Internal app document-processing workflow** | Automate business process | Reduce costs | Increased completion rate | Analytical AI, fine-tuning | Azure AI services - Document Intelligence | Standard documents | App development | Estimated usage | Define data governance for internal documents and plan data lifecycle policies. | Assign AI accountability and ensure compliance with data handling policies. |
+| **Inventory management and product purchasing** | Automate business process | Reduce costs | Shorter shelf life of inventory | Machine learning, training models | Azure Machine Learning | Historical inventory and sales data | Machine learning and app development | Estimated usage | Establish governance for sales data and detect and address biases in data. | Assign AI accountability and comply with financial regulations. |
+| **Daily work across company** | Enhance individual productivity | Improve employee experience | Increased employee satisfaction | SaaS generative AI | Microsoft 365 Copilot | OneDrive data | General IT | Subscription costs | Implement data governance for employee data and ensure data privacy. | Assign AI accountability and utilize built-in responsible AI features. |
+| **E-commerce app for regulated industry chat feature** | Automate business process | Increase sales | Increased sales | IaaS generative AI model training | Azure Virtual Machines | Domain-specific training data | Cloud infrastructure and app development | Infrastructure and software | Define governance for regulated data and plan lifecycle with compliance measures. | Assign AI accountability and adhere to industry regulations. |
