@@ -72,8 +72,6 @@ Developing an AI proof of concept (PoC) validates the feasibility and potential 
     | Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day?)         |
     | Analytical AI | Azure AI services: [Azure AI Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Azure AI Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence Studio](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), [Face service](/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library), \*[Azure AI Language](/azure/ai-services/language-service/overview#available-features), [Azure AI Speech](/azure/ai-services/speech-service/overview#get-started), \*[Azure AI Translator](/azure/ai-services/translator/translator-overview#translator-features-and-development-options), [Azure AI Vision](/azure/ai-services/computer-vision/overview#get-started). <br> \**Each feature of this AI service has its own quickstart guide.*|
 
-- *Document learnings*. Track key learnings from the PoC. Use this information to inform your overall AI strategy and better understand the resources, data, and skills needed for larger-scale projects.
-
 - *Reprioritize AI opportunities*. Use the insights gained from the PoC to refine your list of AI use cases. If the PoC presents unexpected challenges, adjust your priorities and focus on more feasible projects.
 
 ## Implement responsible AI
