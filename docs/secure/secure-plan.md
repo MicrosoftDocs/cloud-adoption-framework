@@ -24,7 +24,7 @@ You can use the Azure landing zone approach to establish a solid foundation for 
 
 - *Landing Zones:* A landing zone is a preconfigured, enhanced-security, scalable environment in the cloud that serves as a foundation for your workloads. It includes network topology, identity management, security, and governance components.
 
-- *Benefits:* Landing zones can help you standardize cloud environments. This approach helps ensures consistency and compliance with security policies. Also, they facilitate easier management and scalability.
+- *Benefits:* Landing zones can help you standardize cloud environments. This approach helps ensure consistency and compliance with security policies. Also, they facilitate easier management and scalability.
 
 ## Security posture modernization
 
