@@ -34,7 +34,7 @@ During the Manage phase of your cloud adoption journey, you should have a robust
 
     - Proactively scan your cloud systems for vulnerabilities. Using a vulnerability scanner that can be integrated with a SIEM system consolidates security data from across your environment, which helps you efficiently detect and respond to multiple types of security risks and incidents.
     
-    - Increase the depth of your visibility into security risks in your environment by implementing an extended detection and response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [security operations](./secure-teams-and-roles.md) team's efficiency.
+    - Increase the depth of your visibility into security risks in your environment by implementing an extended detection and response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [security operations](./secure-teams-roles.md) team's efficiency.
 
 - **Incident response planning:** Modernizing your observability platform is essential for incident detection. It's also the foundation for maintaining your incident response plan. Your incident response plan must be a living document that's updated regularly. It needs to stay up to date with your threat hunting and detection engineering efforts and with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base. 
 
