@@ -16,7 +16,7 @@ This implementation follows the Cloud Adoption Framework Azure landing zone arch
 
 ## Implementation checklist
 
-After reviewing the conceptual Citrix on Azure design recommendations, see [Baseline Deployment Prerequisites for Citrix on Azure
+After reviewing the conceptual Citrix on Azure design recommendations, see [Baseline Deployment Prerequisites for Citrix on Azure](https://community.citrix.com/tech-zone/build/tech-papers/deployment-prerequisites-citrix-on-azure). This article focuses on the prerequisites for building an Azure environment to host a Citrix solution. It outlines the key design areas, Citrix environment implications, and initial requirements, emphasizing the importance of a well-architected, secure platform. 
 
 ## Potential use cases
 
