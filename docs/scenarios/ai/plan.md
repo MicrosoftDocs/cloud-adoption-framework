@@ -46,7 +46,7 @@ As a tactical step to developing AI solutions, you need to be able to access the
 
 - *Access role-based Copilots.* Role-based Copilots also have their own access requirements. For more information, see [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security).
 
-- *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure OpenAI Service, Azure AI Studio, Azure Machine Learning, Azure AI services, and Azure Virtual Machines.
+- *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure OpenAI Service, Azure AI Studio, Azure Machine Learning, Azure AI services, Azure Virtual Machines, and Azure CycleCloud.
 
 ## Prioritize AI use cases
 

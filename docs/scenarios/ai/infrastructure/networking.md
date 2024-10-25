@@ -19,9 +19,9 @@ Sufficient bandwidth refers to the capacity of a network to handle large volumes
 
 Minimizing latency involves reducing delays in data transfer between networked resources. Lower latency provides quicker data processing, enabling real-time insights, and improving the performance of latency-sensitive workloads.
 
-- *Optimize resource placement.* To minimize latency for AI workloads, such as data preprocessing, model training, and inference, deploy Virtual Machines (VMs) within the same Azure region or availability zone. Colocating resources reduces physical distance, thus improving network performance.
+- *Optimize resource placement.* To minimize latency for AI workloads, such as data preprocessing, model training, and inference, deploy virtual machines (VMs) within the same Azure region or availability zone. Colocating resources reduces physical distance, thus improving network performance.
   
-- *Use proximity placement groups (PPGs).* For latency-sensitive workloads requiring real-time processing or fast inter-process communication, utilize PPGs to physically colocate resources within an Azure datacenter. PPGs ensure that compute, storage, and networking resources remain close together, minimizing latency for demanding workloads.
+- *Use proximity placement groups (PPGs).* For latency-sensitive workloads requiring real-time processing or fast inter-process communication, utilize PPGs to physically colocate resources within an Azure datacenter. PPGs ensure that compute, storage, and networking resources remain close together, minimizing latency for demanding workloads. Orchestration solutions and InfiniBand handle node proximity automatically.
   
 - *Use preconfigured Linux OS images.* Simplify cluster deployment by selecting Linux OS images from the Azure Marketplace prepackaged with InfiniBand drivers, NVIDIA drivers, communication libraries, and monitoring tools. These images are optimized for performance and can be deployed with Azure CycleCloud for fast, efficient cluster creation.
 
@@ -29,7 +29,7 @@ Minimizing latency involves reducing delays in data transfer between networked r
 
 High-performance networking utilizes advanced networking features to support large-scale, intensive AI computations, particularly for GPU-accelerated tasks. High-performance networks ensure rapid, efficient data exchanges between GPUs, which optimizes model training and accelerates AI development cycles.
 
-- *Utilize InfiniBand for GPU workloads.* For workloads dependent on GPU acceleration and distributed training across multiple GPUs, use Azure's InfiniBand network. InfiniBand’s GPUDirect remote direct memory access (RDMA) capability supports direct GPU-to-GPU communication. It improves data transfer speed and model training efficiency.
+- *Utilize InfiniBand for GPU workloads.* For workloads dependent on GPU acceleration and distributed training across multiple GPUs, use Azure's InfiniBand network. InfiniBand’s GPUDirect remote direct memory access (RDMA) capability supports direct GPU-to-GPU communication. It improves data transfer speed and model training efficiency. Orchestration solutions like Azure CycleCloud and Azure Batch handle InfiniBand network configuration when you use the appropriate VM SKUs.
   
 - *Choose Azure’s GPU-optimized VMs.* Select VMs that use InfiniBand, such as ND-series VMs, which are designed for high-bandwidth, low-latency inter-GPU communication. This configuration is essential for scalable distributed training and inference, allowing faster data exchange between GPUs.
 
