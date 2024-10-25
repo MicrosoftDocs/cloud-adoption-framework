@@ -45,7 +45,7 @@ Managing business continuity and disaster recovery for AI applications on Azure 
 
 - *Ensure data compliance.* Make sure your backup strategy complies with data protection regulations. Comply with data residency requirements and store backups in appropriate geographic locations.
 
-- *Create snapshots.* You can use the capabilities of your scheduler to take snapshots. For example, [CycleCloud](/azure/cyclecloud/how-to/backup-and-restore?view=cyclecloud-8) can take point-in-time snapshots of the underlying application datastore as recovery points.
+- *Create snapshots.* You can use the capabilities of your scheduler to take snapshots. For example, [CycleCloud](/azure/cyclecloud/how-to/backup-and-restore) can take point-in-time snapshots of the underlying application datastore as recovery points.
 
 ## Next step
 
