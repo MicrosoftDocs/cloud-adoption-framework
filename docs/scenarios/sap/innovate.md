@@ -29,6 +29,8 @@ Learn more about ways you can [build applications](../../innovate/best-practices
 
 Extend the capabilities of SAP through new applications as:
 
+- Power Platform enables low-code / no-code innovation and makes it easy to innovate quickly using SAP data anywhere. Achieve a deeper integration with SAP Business Technology Platform, extend and integrate events between SAP S/4HANA and Microsoft Azure, and benefit from simplified administration and provisioning. For more information, see [Power Platform with SAP](./sap-and-powerplatform-fundamental.md).
+
 - Citizen developers, to empower business teams from sales, payroll, finance, and so on. To extend SAP by creating their own Power Apps and Power Automate solutions using the **SAP ERP** connector.
 - Intelligent experiences, to build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into your modern applications with speech, text, vision, and chat bots.
 
