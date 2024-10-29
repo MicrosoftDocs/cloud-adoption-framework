@@ -1,32 +1,32 @@
 ---
 title: SAP and Power Platform Fundamentals
-description: Learn how to extend SAP with the Microsoft Power Platform to create better end-to-end business solutions.
+description: Learn how to extend SAP with Microsoft Power Platform to create better end-to-end business solutions.
 author: mimergel
 ms.author: mimergel
-ms.date: 10/08/2024
+ms.date: 10/30/2024
 ms.topic: conceptual
 ms.custom: e2e-sap
 ---
 
-# Extend SAP with the Microsoft Power Platform
+# Extend SAP by using Microsoft Power Platform
 
-This article is part of the "SAP and Power Platform" article series.
+This article is part of the **SAP and Power Platform** article series:
 
-- [Extend SAP with the Microsoft Power Platform](./sap-and-powerplatform-fundamental.md)
-- [SAP and Power Platform Architecture Workflow](./sap-and-powerplatform-architecture-workflow.md)
-- [Extend your SAP Landing Zone to support Power Platform](./sap-and-powerplatform-extend-landing-zone.md)
+- Extend SAP by using the Microsoft Power Platform
+- [SAP and Power Platform architecture workflow](./sap-power-platform-architecture-workflow.md)
+- [Extend your SAP landing zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
 
 ## Microsoft Power Platform components
 
-Core changes to SAP require investments in care and maintenance to ensure you maintain forwards compatibility for future platform updates. The Microsoft Power Platform can help you extend SAP with extra functionality without changing the core SAP system.
+Core changes to SAP necessitate investments in care and maintenance to ensure that you maintain forward compatibility for future platform updates. The Microsoft Power Platform can help you extend SAP with extra functionality without changing the core SAP system.
 
-This article provides an introduction to enhancing your SAP systems using these Microsoft Power Platform components:
+This article provides an introduction to enhancing your SAP systems by using these Microsoft Power Platform components:
 
-- **Power Apps**
-- **Power Automate**
-- **Microsoft Copilot Studio**
-- **Power Pages**
-- **Power BI**
+- Power Apps
+- Power Automate
+- Microsoft Copilot Studio
+- Power Pages
+- Power BI
 
 You can build end-to-end-business solutions using these individually or together and integrate them with SAP, Microsoft 365, Dynamics 365, Azure, or other apps. The following image illustrates the main components as an integrated, low-code development suite, offering immense potential when combined with SAP systems. It enables businesses to enhance their SAP landscapes by building custom applications, automating processes, integrate AI, and provide actionable insights, all while minimizing the need for extensive coding expertise.
 
