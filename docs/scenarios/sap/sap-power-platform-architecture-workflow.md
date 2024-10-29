@@ -12,9 +12,9 @@ ms.custom: e2e-sap
 
 This article is part of the "SAP and Power Platform" article series.
 
-- [Extend SAP with the Microsoft Power Platform](./sap-and-powerplatform-fundamental.md)
-- [SAP and Power Platform Architecture Workflow](./sap-and-powerplatform-architecture-workflow.md)
-- [Extend your SAP Landing Zone to support Power Platform](./sap-and-powerplatform-extend-landing-zone.md)
+- [Extend SAP with the Microsoft Power Platform](./sap-and-power-platform-fundamental.md)
+- SAP and Power Platform architecture workflow
+- [Extend your SAP Landing Zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
 
 ## Architecture
 
@@ -126,4 +126,4 @@ Starting with easy pilot projects can help you achieve quick wins, allowing you 
 
 ## Next steps
 
-- [Extend your SAP Landing Zone to support Power Platform](./sap-and-powerplatform-extend-landing-zone.md)
+- [Extend your SAP Landing Zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)

@@ -12,9 +12,9 @@ ms.custom: e2e-sap
 
 This article is part of the "SAP and Power Platform" article series.
 
-- [Extend SAP with the Microsoft Power Platform](./sap-and-powerplatform-fundamental.md)
-- [SAP and Power Platform architecture workflow](./sap-and-powerplatform-architecture-workflow.md)
-- [Extend your SAP landing zone to support Power Platform](./sap-and-powerplatform-extend-landing-zone.md)
+- [Extend SAP with the Microsoft Power Platform](./sap-power-platform-fundamental.md)
+- [SAP and Power Platform architecture workflow](./sap-power-platform-architecture-workflow.md)
+- Extend your SAP landing zone to support Power Platform 
 
 When you integrate SAP systems with Microsoft Power Platform, specific actions are required to enable the service, depending on the chosen use cases and connectors. Each connector has unique technical requirements that need to be addressed.
 In this guide, we outline the integration options and provide links to the relevant implementation guides to establish the connection and technical setup required for each scenario. Based on your organization's specific needs and use cases, you can select and implement the appropriate components to extend your SAP environment with the Power Platform.
