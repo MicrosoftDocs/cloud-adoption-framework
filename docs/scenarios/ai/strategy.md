@@ -31,7 +31,7 @@ AI supports two main goals: enhancing individual efficiency and improving busine
 
 An AI technology strategy involves selecting the right tools and platforms for your generative and nongenerative AI use cases. You need to pick AI solutions that align with your skill set, data readiness, and budget. Microsoft has a variety of AI solutions to align with different needs.
 
-Use the following AI decision tree to narrow down options for each AI use case. When you land on a service, confirm that the service is a good fit. Use the guidance after the decision tree to review the skills, data, and cost factors for each AI service.
+Use the following AI decision tree to narrow down options for each AI use case. When you land on a service, use the following guidance to confirm that the service is a good fit.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
