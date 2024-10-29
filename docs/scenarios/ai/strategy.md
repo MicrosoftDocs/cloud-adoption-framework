@@ -29,7 +29,9 @@ AI supports two main goals: enhancing individual efficiency and improving busine
 
 ## Define an AI technology strategy
 
-An AI technology strategy involves selecting the right tools and platforms for each AI use case you identified. Choose between software as a service (SaaS), platform as a service (PaaS), or infrastructure as a service (IaaS) based on your goals and technical needs. The service model you choose affects the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft. Use the decision tree to narrow down options for each AI use case. After selecting a service, review the skills and data needed to succeed, and consider cost factors to avoid surprises.
+An AI technology strategy involves selecting the right tools and platforms for your generative and nongenerative AI use cases. You need to pick AI solutions that align with your skill set, data readiness, and budget. Microsoft has a variety of AI solutions to align with different needs.
+
+Use the following AI decision tree to narrow down options for each AI use case. When you land on a service, confirm that the service is a good fit. Use the guidance after the decision tree to review the skills, data, and cost factors for each AI service.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
