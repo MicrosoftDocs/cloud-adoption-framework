@@ -101,4 +101,5 @@ This flexibility in connecting Power BI with SAP systems, either through direct 
 
 ## Next step
 
-- [SAP and Power Platform architecture workflow](./sap-power-platform-architecture-workflow.md)
+> [!div class="nextstepaction"]
+> [SAP and Power Platform architecture workflow](./sap-power-platform-architecture-workflow.md)
