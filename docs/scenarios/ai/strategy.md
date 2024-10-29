@@ -37,7 +37,7 @@ An AI technology strategy involves selecting the right tools and platforms for e
 
 Microsoft offers various Copilot generative AI services that enhance individual efficiency. These Copilots allow you to purchase software as a service (SaaS) for AI capabilities across your business or for specific users. SaaS products generally require minimal technical skills.
 
-In terms of data needs, *Microsoft 365 Copilot* uses enterprise data in Microsoft Graph. You can [Categorize your data](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot#step-1-deploy-or-validate-your-data-protection) with sensitivity labels. *Role-based Copilots* have different data connection and plug-in options in ingest data. Most *in-product Copilots* don’t require extra data preparation. *Copilot Studio* automates much of the data processing needed to create custom copilots for various business applications.
+In terms of data needs, *Microsoft 365 Copilot* uses enterprise data in Microsoft Graph. You can [categorize your data](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot#step-1-deploy-or-validate-your-data-protection) with sensitivity labels. *Role-based Copilots* have different data connection and plug-in options to ingest data. Most *in-product Copilots* don’t require extra data preparation. *Copilot Studio* automates much of the data processing needed to create custom copilots for various business applications. Use the links in the following table for more information.
 
 | Microsoft Copilots | Description | User| Data needed | Skills required | Main cost factors |
 |-------|----|-----|----|-----|------|
