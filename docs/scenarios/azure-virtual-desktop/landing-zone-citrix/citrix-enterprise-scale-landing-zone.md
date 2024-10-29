@@ -58,6 +58,19 @@ Design guidelines for the Cloud Adoption Framework for Citrix Cloud in an Azure 
 
 Design guidance for [Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/citrix-daas-azure.html) is available on Citrix TechZone. This guidance highlights the system, workload, user, and network considerations for Citrix technologies in alignment with Cloud Adoption Framework design principles.
 
+## Contributors
+
+*This article is maintained by Microsoft. It was originally written by the following contributors.*
+
+Principal authors:
+
+* [Ben Martin Baur](https://www.linkedin.com/in/ben-martin-baur/) | Senior Cloud Endpoint Technical Specialist
+* [Jen Sheerin](https://www.linkedin.com/in/jensheerin/) | Senior Cloud Solution Architect, Azure Infrastructure
+* [Ravi Varma Addala](https://www.linkedin.com/in/ravi-varma-addala-7b24011b/) | Senior Cloud Solution Architect, Azure Infrastructure
+* [Faisal Rajib](https://www.linkedin.com/in/faisalrajib/) | Senior Cloud Solution Architect, Azure Infrastructure
+  
+*To see non-public LinkedIn profiles, sign in to LinkedIn.*
+
 ## Next steps
 
 Review the critical design considerations and recommendations for identity and access management specific to the deployment of Citrix on Azure.
