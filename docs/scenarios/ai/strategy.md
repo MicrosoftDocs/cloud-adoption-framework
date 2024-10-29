@@ -47,7 +47,7 @@ In terms of data needs, *Microsoft 365 Copilot* uses enterprise data in Microsof
 | Copilot Free or Pro | Use the [free](https://copilot.microsoft.com/) version for browser-based access to Azure OpenAI models. Use [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) for better performance and more capacity. | Individual| No| None| None for Copilot Free or [subscription for Copilot Pro](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
 | Copilot Studio | Use [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to build test, and deploy agents in an authoring environment. | Developer | Yes | Using a platform to connect data sources, mapping out prompts, and deploying copilots to various locations | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing)
 
-### Build AI workloads Azure AI platforms (PaaS)
+### Build AI workloads with Azure AI platforms (PaaS)
 
 Microsoft provides various platform-as-a-service (PaaS) options for building AI workloads. The platform you choose depends on your AI goals, required skills, and data needs. Azure offers platforms suitable for different expertise levels, from beginner-friendly tools to advanced options for experienced developers and data scientists. Review the [pricing pages](https://azure.microsoft.com/products/) and use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to estimate casts.
 
