@@ -12,7 +12,7 @@ ms.custom: e2e-sap
 
 This article is part of the "SAP and Power Platform" article series.
 
-- [Extend SAP with the Microsoft Power Platform](./sap-and-power-platform-fundamental.md)
+- [Extend SAP with the Microsoft Power Platform](./sap-power-platform-fundamental.md)
 - SAP and Power Platform architecture workflow
 - [Extend your SAP Landing Zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
 

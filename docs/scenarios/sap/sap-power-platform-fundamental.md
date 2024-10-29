@@ -28,9 +28,9 @@ This article provides an introduction to enhancing your SAP systems by using the
 - Power Pages
 - Power BI
 
-You can build end-to-end-business solutions using these individually or together and integrate them with SAP, Microsoft 365, Dynamics 365, Azure, or other apps. The following image illustrates the main components as an integrated, low-code development suite, offering immense potential when combined with SAP systems. It enables businesses to enhance their SAP landscapes by building custom applications, automating processes, integrate AI, and provide actionable insights, all while minimizing the need for extensive coding expertise.
+You can build end-to-end-business solutions by using these components individually or together and integrate them with SAP, Microsoft 365, Dynamics 365, Azure, or other apps. The following image illustrates the main components of the integrated, low-code development suite. It enables businesses to enhance their SAP landscapes by building custom applications, automating processes, integrating AI, and getting actionable insights, all with a minimal need for extensive coding expertise.
 
-![Refer to the SAP configuration guide](./media/power-platform-overview.svg)
+![Diagram that describes the components of Microsoft Power Platform.](./media/power-platform-overview.svg)
 
 These underlying features offer essential functionalities and capabilities for building seamless SAP integration:
 
