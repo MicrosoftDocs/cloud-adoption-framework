@@ -66,7 +66,7 @@ Power Automate provides these two types of flows:
 
 - **Cloud flows.** Use cloud flows when you want your automation to be triggered automatically, instantly, or via a schedule. These flows are API-based integrations that use SAP ERP, SAP OData, HTML, and other connectors. For example, you can use these flows to read or update objects in SAP, like orders, products, or stock information.
 
-- **Desktop flows.** You can use desktop flows to automate tasks on the web or the desktop. It enables you to automate mundane, rule-based tasks when you use it with SAP application interfaces like SAP GUI or SAP Fiori. For example, you can automate repetitive tasks like entering customer or finance data from email or Excel into SAP.
+- **Desktop flows.** You can use desktop flows to automate tasks on the web or the desktop. These flows enable you to automate mundane, rule-based tasks when you use them with SAP application interfaces like SAP GUI or SAP Fiori. For example, you can automate repetitive tasks like entering customer or finance data from email or Excel into SAP.
 
   Desktop flows broaden the existing robotic process automation (RPA) capabilities in Power Automate and enable you to automate all repetitive desktop processes. You create automated processes by using the Power Automate desktop flow designer. You can use prebuilt drag-and-drop actions or record desktop flows.
 
@@ -84,7 +84,7 @@ You can use Copilot Studio to enhance your SAP users' experience. You can integr
 
 - **Continuous availability**: Unlike human agents, copilots are available all day, every day to provide consistent support and ensure business continuity outside regular working hours.
 
-By using Copilot Studio, you can significantly enhance the SAP user experience, making it more efficient, user-friendly, and responsive to business needs.
+By using Copilot Studio, you can significantly enhance the SAP user experience, making SAP more efficient, user-friendly, and responsive to business needs.
 
 ## Enhance business intelligence with Power BI and SAP connectivity
 
@@ -92,7 +92,7 @@ Power BI provides versatile integration options for SAP Business Warehouse and S
 
 - **Direct connection**: Power BI can connect directly to [SAP HANA](/power-query/connectors/sap-hana/overview) and [SAP Business Warehouse (BW)](/power-query/connectors/sap-bw/application-setup-and-connect) to provide real-time analytics, dynamic data visualization, and timely decision-making. This direct integration enables immediate access and analysis of operational data and supports high-speed analytics and in-depth reporting. It also supports single sign-on (SSO) to help ensure that SAP access roles and permissions are respected.
   - [Use Kerberos for SSO to SAP HANA](/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)
-  - [Use Kerberos for SSO to SAP BW by using CommonCryptoLib (sapcrypto.dll)](/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-commoncryptolib)
+  - [Use Kerberos for SSO to SAP BW by using CommonCryptoLib](/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-commoncryptolib)
   - [Use Kerberos for SSO to SAP BW by using gx64krb5](/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-gx64krb)
 
 - **Data extraction for sensitive environments**: For organizations that are cautious about direct connections to production environments, Power BI supports an alternative approach. You can extract data from SAP systems and then use Power BI to connect to the extracted dataset. This method provides protection for production environments and enables analytics on a static copy of the data. You should schedule the extraction to keep the Power BI dataset up to date without affecting the SAP systems' performance.
