@@ -1,27 +1,27 @@
 ---
 title: SAP and Power Platform Architecture Workflow
-description: Learn about the architecture workflow of SAP and Power Platform, along with security considerations and recommendations.
+description: View an architecture workflow for integrations of SAP and Microsoft Power Platform and learn about security considerations.
 author: mimergel
 ms.author: mimergel
-ms.date: 09/16/2024
+ms.date: 10/30/2024
 ms.topic: conceptual
 ms.custom: e2e-sap
 ---
 
-# SAP and Power Platform architecture workflow
+# SAP and Microsoft Power Platform architecture workflow
 
-This article is part of the "SAP and Power Platform" article series.
+This article is part of the **SAP and Power Platform** article series.
 
-- [Extend SAP with the Microsoft Power Platform](./sap-power-platform-fundamental.md)
+- [Extend SAP by using the Microsoft Power Platform](./sap-power-platform-fundamental.md)
 - SAP and Power Platform architecture workflow
-- [Extend your SAP Landing Zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
+- [Extend your SAP landing zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
 
 ## Architecture
 
-The following architecture illustrates a comprehensive integration scenario that encompasses all possible integration options. It's designed to accommodate SAP systems operating on-premises, on Azure (both native and RISE), or on other cloud platforms.
+The following architecture illustrates a comprehensive integration scenario that encompasses all integration options. It's designed to accommodate SAP systems operating on-premises, on Azure (both native and SAP RISE), or on other cloud platforms.
 
-:::image type="complex" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with a typical SAP landing zone." lightbox="./media/sap-powerplatform-architecture.svg":::
-   On the left side of the image is box label "Power Platform Environment - Cloud." It contains Power Pages, Power App, Power Automate, and Copilot Studio, and Power BI Service. Power Automate has arrows coming out of it to SAP ERP Connector, OData Connector, and Custom Connector all in the same box. To the right of that box is Microsoft Entra, Firewall, and API Gateway. Going through the firewall is an arrow from SAP ERP Connector and Power BI Service. Going through the API Gateway is an arrow from OData Connector and Custom Connector. To the right of the Firewall and A.P.I. Gateway is a box labeled "S.A.P. Environment on on-premises data gateway - On-premises/IaaS." In that box is an On-premises data gateway icon with arrows pointing at it from Firewall and an arrow pointing to SAP .NET Connector. That Box also contains OData API and REST/SOAP API icons, with arrows coming from API Gateway and going into the SAP logo. Also going into the SAP logo is a HANA SQL Port icon. A final box sits above those icons, and that box is labeled "Client Applications." A laptop, mobile device, Power Automate Desktop, SAP GUI, Power BI Desktop all are shown. Power BI Desktop shows an arrow to two more icons in that box called SAP .NET Connector and SAP HANA ODBC Driver. Those two icons both connect into the SAP Icon through a DIAG & RFC PORT icon and the HANA SQL Port icon respectively.
+:::image type="complex" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="Diagram that shows an architecture of a Microsoft Power Platform integration with a typical SAP landing zone." lightbox="./media/sap-powerplatform-architecture.svg":::
+   Diagram that shows an architecture of a Microsoft Power Platform integration with a typical SAP landing zone. The Power Platform environment contains Power BI, Power Apps, Power Pages, Copilot Studio, all of which connect to Power Automate. Power Automate connects to SAP ERP connector, OData connector, and a custom connector.
 :::image-end:::
 
 _Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/sap-powerplatform-architecture.vsdx) of this architecture._
