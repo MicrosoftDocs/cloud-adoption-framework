@@ -63,7 +63,7 @@ items:
       items:
       - name: Extend SAP with Power Platform
         href: sap-power-platform-fundamental.md
-      - name: SAP and Power Platform Architecture Workflow
+      - name: SAP and Power Platform architecture workflow
         href: sap-power-platform-architecture-workflow.md
       - name: Extend an SAP landing zone to support Power Platform
         href: sap-power-platform-extend-landing-zone.md
