@@ -17,9 +17,9 @@
 		.st7 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.16556291390728}
 		.st8 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
 		.st9 {fill:#000000;font-family:Calibri;font-size:0.833336em;font-weight:bold}
-		.st10 {fill:#76bed3;stroke:#c7c8c8;stroke-width:0.5}
-		.st11 {marker-end:url(#mrkr4-68);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st12 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st10 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st11 {fill:#76bed3;stroke:#c7c8c8;stroke-width:0.5}
+		.st12 {marker-end:url(#mrkr4-68);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
 		.st13 {fill:#ffffff;stroke:none;stroke-width:0.5}
 		.st14 {fill:#000000;font-family:Calibri;font-size:1.00001em;font-weight:bold}
 		.st15 {font-size:1em;font-weight:normal}
@@ -191,7 +191,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="61.3372" cy="891.375" width="50" height="20.0036"/>
 			<path d="M0 891.97 L119.65 890.81" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="54.2278" y="885.375" width="14.2188" height="12.0001" class="st8"/>
+			<rect v:rectContext="textBkgnd" x="54.2278" y="885.375" width="14.2188" height="12.0001" class="st10"/>
 			<text x="54.23" y="894.38" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Yes</text>		</g>
 		<g id="shape35-32" v:mID="35" v:groupContext="shape" transform="translate(155.653,-826.554)">
 			<title>Diamond.35</title>
@@ -199,7 +199,7 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(11000):26"/>
 			</v:userDefs>
-			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st10"/>
+			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st11"/>
 		</g>
 		<g id="shape38-34" v:mID="38" v:groupContext="shape" v:layerMember="0" transform="translate(178.153,-844.929)">
 			<title>Dynamic connector.38</title>
@@ -222,7 +222,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-65.2418" cy="900" width="92.19" height="32.0037"/>
 			<path d="M0 900.37 L-130.23 900.37 L-130.23 1227.25" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="-105.071" y="888" width="79.6577" height="23.9999" class="st8"/>
+			<rect v:rectContext="textBkgnd" x="-105.071" y="888" width="79.6577" height="23.9999" class="st10"/>
 			<text x="-105.07" y="897" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Automate business <v:newlineChar/><tspan
 						x="-91.64" dy="1.2em" class="st5">functionality</tspan></text>		</g>
 		<g id="shape1005-51" v:mID="1005" v:groupContext="shape" transform="translate(13.6345,-213.528)">
@@ -231,7 +231,7 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(16000):26"/>
 			</v:userDefs>
-			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st10"/>
+			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st11"/>
 		</g>
 		<g id="shape1008-53" v:mID="1008" v:groupContext="shape" transform="translate(31.3409,-180.513)">
 			<title>Sheet.1008</title>
@@ -265,8 +265,8 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-9" cy="940.843" width="50" height="20.0036"/>
-			<path d="M-8.88 900.37 L-9.1 975.27" class="st11"/>
-			<rect v:rectContext="textBkgnd" x="-14.9813" y="934.844" width="11.9627" height="12.0001" class="st12"/>
+			<path d="M-8.88 900.37 L-9.1 975.27" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-14.9813" y="934.844" width="11.9627" height="12.0001" class="st8"/>
 			<text x="-14.98" y="943.84" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="shape1013-71" v:mID="1013" v:groupContext="shape" transform="translate(13.8655,-313.215)">
 			<title>Diamond.1013</title>
@@ -274,7 +274,7 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(23000):26"/>
 			</v:userDefs>
-			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st10"/>
+			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st11"/>
 		</g>
 		<g id="shape1015-73" v:mID="1015" v:groupContext="shape" transform="translate(13.9034,-408.192)">
 			<title>Diamond.1015</title>
@@ -282,7 +282,7 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(25000):26"/>
 			</v:userDefs>
-			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st10"/>
+			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st11"/>
 		</g>
 		<g id="shape1016-75" v:mID="1016" v:groupContext="shape" transform="translate(34.8253,-370.958)">
 			<title>Sheet.1016</title>
@@ -294,9 +294,9 @@
 			<v:textRect cx="180.77" cy="884.625" width="361.55" height="31.5"/>
 			<rect x="0" y="868.875" width="361.54" height="31.5" class="st3"/>
 			<text x="4" y="869.63" class="st4" v:langID="1033"><v:paragraph v:bulletSize="0.166667"/><v:tabList/>Need a development platform to build custom AI applications with access to Azure <tspan
-						x="4" dy="1.2em" class="st5">OpenAI, AI Services, and other generative AI models and with built</tspan>-in development <tspan
-						x="4" dy="1.2em" class="st5">tools such as prompt flow, fine</tspan>-tuning, model evaluation, content safety filters, <tspan
-						x="4" dy="1.2em" class="st5">tracing, and Visual Studio Code integration?</tspan></text>		</g>
+						x="4" dy="1.2em" class="st5">OpenAI, Azure AI services, and other generative AI models, as well as built</tspan>-in <tspan
+						x="4" dy="1.2em" class="st5">development tools such as prompt flow, fine</tspan>-tuning, model evaluation, content safety <tspan
+						x="4" dy="1.2em" class="st5">filters, tracing, and Visual Studio Code integration?</tspan></text>		</g>
 		<g id="shape1026-81" v:mID="1026" v:groupContext="shape" transform="translate(39.1534,-858.625)">
 			<title>Rounded Rectangle.1026</title>
 			<desc>Each AI use case (generative &#38; non-generative)</desc>
@@ -339,7 +339,7 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(67000):26"/>
 			</v:userDefs>
-			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st10"/>
+			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st11"/>
 		</g>
 		<g id="shape1060-94" v:mID="1060" v:groupContext="shape" transform="translate(32.5753,-18.3718)">
 			<title>Sheet.1060</title>
@@ -360,8 +360,8 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="9" cy="975.293" width="50" height="20.0036"/>
-			<path d="M8.68 900.37 L9.3 1044.17" class="st11"/>
-			<rect v:rectContext="textBkgnd" x="3.01871" y="969.293" width="11.9627" height="12.0001" class="st12"/>
+			<path d="M8.68 900.37 L9.3 1044.17" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="3.01871" y="969.293" width="11.9627" height="12.0001" class="st10"/>
 			<text x="3.02" y="978.29" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1063-105" transform="translate(434.384,-545.095)" v:mID="1063" v:groupContext="group">
 			<v:userDefs>
@@ -4816,8 +4816,8 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-9" cy="938.488" width="50" height="20.0036"/>
-			<path d="M-8.98 900.37 L-9.02 970.56" class="st11"/>
-			<rect v:rectContext="textBkgnd" x="-14.9813" y="932.489" width="11.9627" height="12.0001" class="st8"/>
+			<path d="M-8.98 900.37 L-9.02 970.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-14.9813" y="932.489" width="11.9627" height="12.0001" class="st10"/>
 			<text x="-14.98" y="941.49" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1030-121" transform="translate(424.584,-369.692)" v:mID="1030" v:groupContext="group">
 			<v:userDefs>
@@ -4855,7 +4855,7 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(84000):26"/>
 			</v:userDefs>
-			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st10"/>
+			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st11"/>
 		</g>
 		<g id="shape1091-131" v:mID="1091" v:groupContext="shape" transform="translate(234.403,-185.513)">
 			<title>Sheet.1091</title>
@@ -10115,7 +10115,7 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(107000):26"/>
 			</v:userDefs>
-			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st10"/>
+			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st11"/>
 		</g>
 		<g id="shape1149-233" v:mID="1149" v:groupContext="shape" v:layerMember="0" transform="translate(299.933,-826.554)">
 			<title>Dynamic connector.1149</title>
@@ -10125,7 +10125,7 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-9" cy="935.526" width="50" height="20.0036"/>
-			<path d="M-8.78 900.37 L-9.18 964.64" class="st11"/>
+			<path d="M-8.78 900.37 L-9.18 964.64" class="st12"/>
 			<rect v:rectContext="textBkgnd" x="-14.9813" y="929.526" width="11.9627" height="12.0001" class="st8"/>
 			<text x="-14.98" y="938.53" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1150-240" transform="translate(433.897,-704.175)" v:mID="1150" v:groupContext="group">
@@ -10134,7 +10134,7 @@
 			</v:userDefs>
 			<title>Sheet.1150</title>
 		</g>
-		<g id="shape1152-241" v:mID="1152" v:groupContext="shape" transform="translate(303.028,-699.461)">
+		<g id="shape1152-241" v:mID="1152" v:groupContext="shape" transform="translate(302.478,-701.125)">
 			<title>Sheet.1152</title>
 			<desc>Need to enhance productivity within products like Azure, GitH...</desc>
 			<v:userDefs>
@@ -10184,7 +10184,7 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="9" cy="935.884" width="50" height="20.0036"/>
-			<path d="M9 900.37 L9 965.35" class="st11"/>
+			<path d="M9 900.37 L9 965.35" class="st12"/>
 			<rect v:rectContext="textBkgnd" x="3.01871" y="929.884" width="11.9627" height="12.0001" class="st8"/>
 			<text x="3.02" y="938.88" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1157-270" transform="translate(432.759,-721.872)" v:mID="1157" v:groupContext="group">
@@ -19077,7 +19077,7 @@
 				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 			</g>
 		</g>
-		<g id="shape1160-288" v:mID="1160" v:groupContext="shape" transform="translate(300.216,-617.122)">
+		<g id="shape1160-288" v:mID="1160" v:groupContext="shape" transform="translate(300.216,-615.625)">
 			<title>Sheet.1160</title>
 			<desc>Need to enhance productivity within roles like security, sale...</desc>
 			<v:userDefs>
@@ -28823,7 +28823,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="199.33" cy="900.375" width="398.66" height="0"/>
 			<path d="M0 900.37 L395.64 900.37" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="192.22" y="894.375" width="14.2188" height="12.0001" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="192.22" y="894.375" width="14.2188" height="12.0001" class="st8"/>
 			<text x="192.22" y="903.38" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Yes</text>		</g>
 		<g id="shape1203-353" v:mID="1203" v:groupContext="shape" v:layerMember="0" transform="translate(36.1321,-409.458)">
 			<title>Dynamic connector.1203</title>
@@ -28842,7 +28842,7 @@
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(137000):26"/>
 			</v:userDefs>
-			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st10"/>
+			<path d="M11.25 900.37 L22.5 891 L11.25 881.62 L0 891 L11.25 900.37 Z" class="st11"/>
 		</g>
 		<g id="shape1205-362" v:mID="1205" v:groupContext="shape" v:layerMember="0" transform="translate(36.6685,-487.661)">
 			<title>Dynamic connector.1021</title>
@@ -28853,7 +28853,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="196.972" cy="891.375" width="50" height="20.0036"/>
 			<path d="M0 891.37 L390.92 891.37" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="189.863" y="885.375" width="14.2188" height="12.0001" class="st8"/>
+			<rect v:rectContext="textBkgnd" x="189.863" y="885.375" width="14.2188" height="12.0001" class="st10"/>
 			<text x="189.86" y="894.38" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Yes</text>		</g>
 		<g id="shape1206-369" v:mID="1206" v:groupContext="shape" transform="translate(37.9185,-460.833)">
 			<title>Sheet.1206</title>
@@ -29682,11 +29682,11 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-9" cy="930.547" width="50" height="20.0036"/>
-			<path d="M-8.87 900.37 L-9.11 954.68" class="st11"/>
+			<path d="M-8.87 900.37 L-9.11 954.68" class="st12"/>
 			<rect v:rectContext="textBkgnd" x="-14.9813" y="924.547" width="11.9627" height="12.0001" class="st8"/>
 			<text x="-14.98" y="933.55" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/ai/strategy#define-an-ai-technology-strategy">
+				xlink:href="https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy#define-an-ai-technology-strategy">
 			<g id="shape1210-389" v:mID="1210" v:groupContext="shape" transform="translate(54,-759.561)">
 				<title>Sheet.1210</title>
 				<desc>Review all the options before making an initial decision. Use...</desc>
