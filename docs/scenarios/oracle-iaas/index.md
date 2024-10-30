@@ -35,7 +35,7 @@ The following diagram shows Oracle on Azure Virtual Machines deployed to an appl
 
 :::image type="content" source="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg" alt-text="Diagram that shows a reference architecture of Oracle on Azure Virtual Machines." border="false" lightbox="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg":::
 
-### Landing zone architecture for Oracle Database@Azure
+### Multi-region Landing zone architecture for Oracle Database@Azure
 
 The following diagram shows Oracle Database@Azure deployed to an application landing zone. It also shows the critical design areas that support this deployment. The Oracle databases run on Oracle Exadata VM clusters in Azure. You can change the number and size of VM clusters to accommodate your needs.
 
