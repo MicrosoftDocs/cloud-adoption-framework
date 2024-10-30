@@ -28,7 +28,7 @@ _Download a [Visio file](https://arch-center.azureedge.net/sap-power-platform-ar
 
 ## Connectivity options and when to use them
 
-To effectively integrate SAP with the Microsoft Power Platform, select the appropriate connectivity option, based on your use cases, integration requirements, and technical constraints. The following table provides an overview of the available connectors and their use cases, requirements, communication protocols, and typical scenarios.
+To effectively integrate SAP with the Microsoft Power Platform, select the appropriate connectivity option, based on your use cases, integration requirements, and technical constraints. The following table provides an overview of the available connectors and their use cases, requirements, and communication protocols.
 
 | **Connectivity option** | **Scenarios** | **Middleware, software, and driver requirements** | **Communication protocol** | **SAP requirements** |
 |---|---|---|---|---|
@@ -48,20 +48,19 @@ To help you implement the best solution for your scenario, the next article in t
 
 **Custom connectors and SOAP services**:
 
-Custom connectors in Microsoft Power Platform support REST APIs but don't support SOAP directly. To integrate with SAP SOAP services, you can expose them as RESTful APIs by using Azure API Management or SAP API Management. Alternatively, generate SOAP services from RFCs in SAP and then use API Management to turn them into REST services.
+Custom connectors in Microsoft Power Platform support REST APIs but don't support SOAP directly. To integrate with SAP SOAP services, you can expose them as RESTful APIs by using Azure API Management or SAP API Management. Alternatively, generate SOAP services from RFCs in SAP and then use API Management to convert them into REST services.
 
 **Power Automate desktop for SAP GUI automation**:
 
-Use the new SAP GUI actions available in Power Automate desktop to automate tasks without writing code. Ensure that SAP GUI scripting is enabled on both the SAP server and client.
+Use the SAP GUI actions available in Power Automate desktop to automate tasks without writing code. Ensure that SAP GUI scripting is enabled on both the SAP server and client.
 
 **Middleware requirements for specific connectors**:
 
-- The SAP ERP connector requires both an on-premises data gateway and SAP .NET Connector.
-- For Power BI connections to SAP Business Warehouse, SAP .NET Connector is also required.
+The SAP ERP connector requires both an on-premises data gateway and SAP .NET Connector. For Power BI connections to SAP Business Warehouse, SAP .NET Connector is also required.
 
 **High availability and load balancing**:
 
-For enterprise scenarios, consider setting up the on-premises data gateway in high-availability clusters to ensure continuous connectivity and load balancing. For guidance, see [Manage on-premises data gateway high-availability clusters and load balancing](/data-integration/gateway/service-gateway-high-availability-clusters).
+For enterprise scenarios, consider setting up the on-premises data gateway in [high-availability clusters to ensure continuous connectivity and load balancing](/data-integration/gateway/service-gateway-high-availability-clusters).
 
 **SAP API Management and SAP Cloud Connector**:
 
@@ -77,7 +76,7 @@ There are several considerations to take into account when you integrate SAP wit
 
 **Business objectives**
   
-- _Identify business challenges_: Clearly outline the business processes or challenges that you aim to improve or automate through integration.
+- _Identify business challenges_: Clearly outline the business processes or challenges that you want to improve or automate through integration.
 - _Set measurable goals_: Establish what success looks like in terms of efficiency gains, cost savings, or user experience improvements.
 
 **Current environment**
@@ -89,7 +88,7 @@ There are several considerations to take into account when you integrate SAP wit
   
 - _Authentication mechanisms_: Plan for high-security authentication methods like single sign-on (SSO) via Microsoft Entra ID (formerly Azure Active Directory). See this blog post to get information about the setup: [SAP OData Connector: Single sign-on through Microsoft Azure API Management](https://www.microsoft.com/power-platform/blog/power-apps/announcing-public-preview-of-expanded-single-sign-on-authentication-options-for-sap-connectors/). This post also contains a reference that you can use if you prefer to use the API Management capability of SAP Integration Suite.
 - _Data protection_: Ensure compliance with data protection regulations (for example, GDPR and HIPAA) by implementing relevant best practices. See [Compliance and data privacy](/power-platform/admin/wp-compliance-data-privacy) in the Microsoft Power Platform documentation.
-- _Data residency_: Consider data residency requirements that might affect where data can be stored or processed. Choose the [location of your Microsoft Power Platform environment accordingly](/power-platform/admin/new-datacenter-regions).
+- _Data residency_: Consider data residency requirements that might affect where data can be stored or processed. Choose the [location of your Microsoft Power Platform environment](/power-platform/admin/new-datacenter-regions) accordingly.
 
 **Technical readiness**
   
@@ -103,7 +102,7 @@ There are several considerations to take into account when you integrate SAP wit
 
 **Skill set and team readiness**
   
-- _Training needs_: Identify any training requirements for your team to effectively use and manage the Microsoft Power Platform and SAP integration.
+- _Training needs_: Identify any training requirements that your team needs to effectively use and manage the Microsoft Power Platform and SAP integration.
 - _Stakeholder engagement_: Involve key stakeholders from both IT and business units early in the planning process.
 
 **Testing strategy**
@@ -117,14 +116,14 @@ There are several considerations to take into account when you integrate SAP wit
 
 **Future-proofing**
 
--  _Flexibility_: Design the integration to be adaptable to future changes in business requirements and technology updates.
+-  _Flexibility_: Design the integration to be adaptable to changes in business requirements and technology updates.
 - _Vendor roadmaps_: Stay informed about updates and roadmap changes from SAP and Microsoft that could affect your integration.
 
 By thoroughly evaluating these factors when you start your integration project, you can mitigate risks, help ensure compliance, and set a strong foundation for a successful integration between SAP and the Microsoft Power Platform.
 
 Integrating SAP systems with the Microsoft Power Platform enables you to enhance business processes, automate tasks, and gain valuable insights. By considering factors like business objectives, the current environment, integration options, security, and technical readiness, you can establish a strong foundation for successful integration.
 
-By clearly defining business objectives and setting measurable goals, you can effectively focus your integration efforts. For instance, automating manual data entry to reduce errors and free up staff time, or integrating real-time inventory dashboards to improve decision-making, can lead to significant efficiency gains. Setting specific targets, like decreasing data entry errors by 90% or cutting report generation time from five days to one, doesn't just only measures the success of your projects. It also aligns your integration initiatives with tangible business outcomes.
+By clearly defining business objectives and setting measurable goals, you can effectively focus your integration efforts. For instance, automating manual data entry to reduce errors and free up staff time, or integrating real-time inventory dashboards to improve decision-making, can lead to significant efficiency gains. Setting specific targets, like decreasing data entry errors by 90% or cutting report generation time from five days to one, doesn't just measure the success of your projects. It also aligns your integration initiatives with tangible business outcomes.
 
 Starting with easy pilot projects can help you achieve success quickly, which allows you to further extend and refine your approach to effectively take advantage of your SAP and Microsoft Power Platform integration.
 
