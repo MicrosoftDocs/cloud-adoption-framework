@@ -12,13 +12,13 @@ ms.custom: e2e-sap
 
 This article is part of the **SAP and Power Platform** article series:
 
-- Extend SAP by using the Microsoft Power Platform
+- Extend SAP by using Microsoft Power Platform
 - [SAP and Power Platform architecture workflow](./sap-power-platform-architecture-workflow.md)
 - [Extend your SAP landing zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
 
 ## Microsoft Power Platform components
 
-Core changes to SAP necessitate investments in care and maintenance to ensure that you maintain forward compatibility for future platform updates. The Microsoft Power Platform can help you extend SAP with extra functionality without changing the core SAP system.
+Core changes to SAP necessitate investments in care and maintenance to ensure that you maintain forward compatibility for future platform updates. Microsoft Power Platform can help you extend SAP with extra functionality without changing the core SAP system.
 
 This article provides an introduction to enhancing your SAP systems by using these Microsoft Power Platform components:
 
@@ -46,7 +46,7 @@ The following underlying features provide essential capabilities for enabling se
 
 ## Extend SAP application development with Power Apps or Power Pages
 
-Power Apps is a suite of apps, services, and connectors that allows you to create custom business apps without coding. You can rapidly develop web and mobile applications that extend SAP functionality. With prebuilt connectors for SAP, Power Apps allows you to build custom front ends or lightweight applications that interact directly with SAP data. This can streamline workflows, enable mobile access, and improve user experiences without modifying the core SAP system. 
+Power Apps is a suite of apps, services, and connectors that you can use to create custom business apps without coding. You can rapidly develop web and mobile applications that extend SAP functionality. With prebuilt connectors for SAP, Power Apps allows you to build custom front ends or lightweight applications that interact directly with SAP data. This can streamline workflows, enable mobile access, and improve user experiences without modifying the core SAP system. 
 
 You can create three types of apps by using Power Apps:
 
