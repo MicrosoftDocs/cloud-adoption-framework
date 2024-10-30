@@ -130,5 +130,5 @@ Starting with easy pilot projects can help you achieve success quickly, which al
 
 ## Next step
 
-[!div class="nextstepaction"]
-[Extend your SAP landing zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
+> [!div class="nextstepaction"]
+> [Extend your SAP landing zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
