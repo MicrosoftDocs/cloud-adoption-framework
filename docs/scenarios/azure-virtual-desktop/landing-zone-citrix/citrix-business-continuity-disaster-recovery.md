@@ -54,6 +54,6 @@ The following lists aren't inclusive. They contain key highlights. For more info
 
 ## Citrix design recommendations
   
-Design guidance for Citrix DaaS on Azure is available on [Citrix TechZone - Design Guidance for Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/tech-zone/toc/by-product/citrix-daas/design-guidance.html). The article highlights the system, workload, user, and network considerations for aligning Citrix deployments with Cloud Adoption Framework design principles. 
+Design guidance for Citrix DaaS on Azure is available on [Citrix TechZone - Design Guidance for Citrix DaaS on Microsoft Azure](https://community.citrix.com/tech-zone/by-product/citrix-daas#_=_). The article highlights the system, workload, user, and network considerations for aligning Citrix deployments with Cloud Adoption Framework design principles. 
   
 You can improve the overall resilience of some Citrix components, like the App Layering ELM appliance, by using [Azure Site Recovery](https://azure.microsoft.com/products/site-recovery). Note that core infrastructure components, like Cloud Connectors and NetScalers, should always be deployed full-time throughout other regions.
