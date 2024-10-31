@@ -10,15 +10,15 @@ ms.custom: e2e-sap
 
 # SAP and Microsoft Power Platform architecture workflow
 
-This article is part of the **SAP and Power Platform** article series.
+This article is part of the **SAP and Power Platform** article series:
 
-- [Extend SAP by using the Microsoft Power Platform](./sap-power-platform-fundamental.md)
+- [Extend SAP by using Microsoft Power Platform](./sap-power-platform-fundamental.md)
 - SAP and Power Platform architecture workflow
 - [Extend your SAP landing zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
 
 ## Architecture
 
-The following architecture illustrates a comprehensive integration scenario that encompasses all integration options. It's designed to accommodate SAP systems operating on-premises, on Azure (both native and SAP RISE), or on other cloud platforms.
+The following architecture illustrates a comprehensive integration scenario that encompasses all integration options. It's designed to accommodate SAP systems operating on-premises, on Azure (both native and RISE with SAP), or on other cloud platforms.
 
 :::image type="complex" source="./media/sap-power-platform-architecture.png" border="false" alt-text="Diagram that shows an architecture of a Microsoft Power Platform integration with a typical SAP landing zone." lightbox="./media/sap-power-platform-architecture.png":::
    Diagram that shows an architecture of a Microsoft Power Platform integration with a typical SAP landing zone. The architecture contains a Power Platform environment, an SAP environment, and box for client applications. The Power Platform environment contains Power BI, Power Apps, Power Pages, and Copilot Studio, all of which connect to Power Automate. Power Automate connects to SAP ERP connector, OData connector, and a custom connector. The Power Platform environment connects to a Microsoft Entra tenant. Data from Power BI and the SAP ERP connector go through a firewall and then to an SAP environment. Data from the OData connector and the custom connector goes through an API gateway into the SAP environment. The SAP environment contains an on-premises data gateway. Data enters this gateway from the firewall. From this gateway, data flows to SAP .NET Connector. The SAP environment also contains icons that represent OData API, REST / SOAP API, and HANA SQL port. Data flows from the API gateway through these APIs and into SAP. Data from HANA SQL port also flows into SAP. The client application box contains a laptop, a mobile device, Power Automate desktop, SAP GUI, and Power BI Desktop. In this box, data from Power BI Desktop flows to SAP .NET Connector and an SAP HANA ODBC driver. Data from SAP .NET Connector crosses through a DIAG and RFC port in the SAP environment and then flows to SAP. Data from the SAP HANA ODBC driver flows into a HANA SQL port in the SAP environment and then into SAP.  
@@ -28,7 +28,7 @@ _Download a [Visio file](https://arch-center.azureedge.net/sap-power-platform-ar
 
 ## Connectivity options and when to use them
 
-To effectively integrate SAP with the Microsoft Power Platform, select the appropriate connectivity option, based on your use cases, integration requirements, and technical constraints. The following table provides an overview of the available connectors and their use cases, requirements, and communication protocols.
+To effectively integrate SAP with Microsoft Power Platform, select the appropriate connectivity option, based on your use cases, integration requirements, and technical constraints. The following table provides an overview of the available connectors and their use cases, requirements, and communication protocols.
 
 | **Connectivity option** | **Scenarios** | **Middleware, software, and driver requirements** | **Communication protocol** | **SAP requirements** |
 |---|---|---|---|---|
@@ -82,7 +82,7 @@ There are several considerations to take into account when you integrate SAP wit
 **Current environment**
   
 - _Licensing requirements_: Ensure that you have the necessary Microsoft Power Platform licenses for the components that you plan to use (for example, Power Apps, Power Automate, Power BI, Copilot, and Copilot Studio). Consider [trial licenses](https://www.microsoft.com/power-platform/try-free) for pilot projects. All licensing options are outlined in [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus).
-- _Network connectivity_: Identify the location of SAP systems, for example, Azure native or SAP RISE, other clouds or on-premises, or a combination of multiple locations. Then evaluate your network situation, based on the SAP systems locations, and involve required parties to enable connectivity.
+- _Network connectivity_: Identify the location of SAP systems, for example, Azure native or RISE with SAP, other clouds or on-premises, or a combination of multiple locations. Then evaluate your network situation, based on the SAP systems locations, and involve required parties to enable connectivity.
 
 **Security and compliance**
   
@@ -96,7 +96,7 @@ There are several considerations to take into account when you integrate SAP wit
 
 **Governance**
   
-- _Policy enforcement_: Establish governance policies for using the Microsoft Power Platform to help prevent unauthorized access and changes.
+- _Policy enforcement_: Establish governance policies for using Microsoft Power Platform to help prevent unauthorized access and changes.
 - _Monitoring and auditing_: Implement monitoring solutions to track system performance and user activities.
 - _Change management_: Set up separate environments for development, testing, and production to ensure proper change management and stability.
 
@@ -119,7 +119,7 @@ There are several considerations to take into account when you integrate SAP wit
 -  _Flexibility_: Design the integration to be adaptable to changes in business requirements and technology updates.
 - _Vendor roadmaps_: Stay informed about updates and roadmap changes from SAP and Microsoft that could affect your integration.
 
-By thoroughly evaluating these factors when you start your integration project, you can mitigate risks, help ensure compliance, and set a strong foundation for a successful integration between SAP and the Microsoft Power Platform.
+By thoroughly evaluating these factors when you start your integration project, you can mitigate risks, help ensure compliance, and set a strong foundation for a successful integration between SAP and Microsoft Power Platform.
 
 Integrating SAP systems with the Microsoft Power Platform enables you to enhance business processes, automate tasks, and gain valuable insights. By considering factors like business objectives, the current environment, integration options, security, and technical readiness, you can establish a strong foundation for successful integration.
 
