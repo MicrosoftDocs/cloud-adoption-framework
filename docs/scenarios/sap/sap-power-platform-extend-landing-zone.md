@@ -102,16 +102,17 @@ For production workloads, we recommend that you include API management, which en
 
 #### Set up SSO
 
-In addition to basic, anonymous, and API key authentication, the SAP OData connector, currently in public preview, now supports SSO available through Microsoft Azure API Management. It enables SAP Principal propagation with SAP services such as SAP Gateway, S/4HANA Cloud, RISE, and many more using Microsoft Entra ID (formerly Azure AD) as the Identity Provider. This way, users of your low-code solutions spanning the Microsoft and SAP ecosystem are mapped from their Microsoft Entra ID identities to their named SAP backend users. SAP authorizations are fully retained.
+In addition to basic, anonymous, and API key authentication, the SAP OData connector now supports SSO (currently in preview), through Azure API Management. It enables SAP principal propagation with SAP services like SAP Gateway, S/4HANA Cloud, RISE, and many more by using Microsoft Entra ID (formerly Azure Active Directory) as the identity provider. With this approach, users of your low-code solutions that span the Microsoft and SAP ecosystem are mapped from their Microsoft Entra ID identities to their named SAP back-end users. SAP authorizations are fully retained.
 
-![A diagram showing Power Platform integration with SSO](./media/Power-Platform-SSO.png)
+![Diagram that shows Microsoft Power Platform integration with SSO.](./media/power-platform-sso.png)
 
 To learn more about the options for using SSO, see these resources:
 
-- [SAP OData Connector: SSO through Microsoft Azure API Management](https://www.microsoft.com/power-platform/blog/power-apps/announcing-public-preview-of-expanded-single-sign-on-authentication-options-for-sap-connectors/) 
-- [SAP OData connector now supports OAuth2 and SAP Principal Propagation](https://community.powerplatform.com/blogs/post/?postid=c6a609ab-3556-ef11-a317-6045bda95bf0)
+- [SAP OData connector: SSO through Microsoft Azure API Management](https://www.microsoft.com/power-platform/blog/power-apps/announcing-public-preview-of-expanded-single-sign-on-authentication-options-for-sap-connectors/) 
+- [SAP OData connector now supports OAuth2 and SAP principal propagation](https://community.powerplatform.com/blogs/post/?postid=c6a609ab-3556-ef11-a317-6045bda95bf0)
 - [Integrating low-code solutions with Microsoft using SAP API Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/integrating-low-code-solutions-with-microsoft-using-sap-integration-suite/ba-p/13789298)
 
-### Next steps
+### Next step
 
-- [Innovate with SAP and Azure](./innovate.md)
+> [!div class="nextstepaction"]
+> [Innovate with SAP and Azure](./innovate.md)
