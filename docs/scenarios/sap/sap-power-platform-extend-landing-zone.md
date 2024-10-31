@@ -104,7 +104,7 @@ For production workloads, we recommend that you include API management, which en
 
 In addition to basic, anonymous, and API key authentication, the SAP OData connector now supports SSO (currently in preview), through Azure API Management. It enables SAP principal propagation with SAP services like SAP Gateway, S/4HANA Cloud, RISE, and many more by using Microsoft Entra ID (formerly Azure Active Directory) as the identity provider. With this approach, users of your low-code solutions that span the Microsoft and SAP ecosystem are mapped from their Microsoft Entra ID identities to their named SAP back-end users. SAP authorizations are fully retained.
 
-![Diagram that shows Microsoft Power Platform integration with SSO.](./media/power-platform-sso.png)
+:::image type="content" source="./media/power-platform-sso.png" alt-text="Diagram that shows Microsoft Power Platform integration with SSO." lighgtbox="./media/power-platform-sso.png":::
 
 To learn more about the options for using SSO, see these resources:
 
