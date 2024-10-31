@@ -98,7 +98,7 @@ At a minimum, you need to configure your firewalls to allow communication betwee
 For production workloads, we recommend that you include API management, which enables single sign-on (SSO) and other helpful features. For more details, see the next section.
 
 > [!NOTE]
-> In an SAP Rise context, you can use the SAP API management service on the SAP Business Technology Platform.
+> In a RISE with SAP context, you can use the SAP API management service on the SAP Business Technology Platform.
 
 #### Set up SSO
 
