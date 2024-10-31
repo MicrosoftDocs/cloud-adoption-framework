@@ -12,7 +12,7 @@ ms.custom: e2e-sap
 
 This article is part of the **SAP and Power Platform** article series:
 
-- [Extend SAP by using the Microsoft Power Platform](./sap-power-platform-fundamental.md)
+- [Extend SAP by using Microsoft Power Platform](./sap-power-platform-fundamental.md)
 - [SAP and Power Platform architecture workflow](./sap-power-platform-architecture-workflow.md)
 - Extend your SAP landing zone to support Power Platform 
 
@@ -22,7 +22,7 @@ This article outlines integration options and provides links to implementation g
 
 ## Architecture
 
-Depending on your scenario for Power Platform usage with SAP, there will be a need of middleware component deployment.
+Depending on your scenario for using Microsoft Power Platform with SAP, there will be a need of middleware component deployment.
 
 :::image type="complex" source="./media/sap-power-platform-architecture.png" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with a typical SAP landing zone." lightbox="./media/sap-power-platform-architecture.png":::
    Diagram that shows an architecture of a Microsoft Power Platform integration with a typical SAP landing zone. The architecture contains a Power Platform environment, an SAP environment, and box for client applications. The Power Platform environment contains Power BI, Power Apps, Power Pages, and Copilot Studio, all of which connect to Power Automate. Power Automate connects to SAP ERP connector, OData connector, and a custom connector. The Power Platform environment connects to a Microsoft Entra tenant. Data from Power BI and the SAP ERP connector go through a firewall and then to an SAP environment. Data from the OData connector and the custom connector goes through an API gateway into the SAP environment. The SAP environment contains an on-premises data gateway. Data enters this gateway from the firewall. From this gateway, data flows to SAP .NET Connector. The SAP environment also contains icons that represent OData API, REST / SOAP API, and HANA SQL port. Data flows from the API gateway through these APIs and into SAP. Data from HANA SQL port also flows into SAP. The client application box contains a laptop, a mobile device, Power Automate desktop, SAP GUI, and Power BI Desktop. In this box, data from Power BI Desktop flows to SAP .NET Connector and an SAP HANA ODBC driver. Data from SAP .NET Connector crosses through a DIAG and RFC port in the SAP environment and then flows to SAP. Data from the SAP HANA ODBC driver flows into a HANA SQL port in the SAP environment and then into SAP.
@@ -104,7 +104,7 @@ For production workloads, we recommend that you include API management, which en
 
 In addition to basic, anonymous, and API key authentication, the SAP OData connector now supports SSO (currently in preview), through Azure API Management. It enables SAP principal propagation with SAP services like SAP Gateway, S/4HANA Cloud, RISE, and many more by using Microsoft Entra ID (formerly Azure Active Directory) as the identity provider. With this approach, users of your low-code solutions that span the Microsoft and SAP ecosystem are mapped from their Microsoft Entra ID identities to their named SAP back-end users. SAP authorizations are fully retained.
 
-:::image type="content" source="./media/power-platform-sso.png" alt-text="Diagram that shows Microsoft Power Platform integration with SSO." lighgtbox="./media/power-platform-sso.png":::
+:::image type="content" source="./media/power-platform-sso.png" alt-text="Diagram that shows Microsoft Power Platform integration with SSO." lightbox="./media/power-platform-sso.png":::
 
 To learn more about the options for using SSO, see these resources:
 
