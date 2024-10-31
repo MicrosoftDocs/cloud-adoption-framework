@@ -86,11 +86,11 @@ Responsible AI adoption requires incorporating ethical frameworks and regulatory
     | [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/) | Design AI systems that prioritize user well-being and foster positive interactions. |
     | [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/) | Assess and advance your organization's maturity in implementing responsible AI practices.|
 
-- *Start the AI governance process.* Responsible AI adoption involves creating governance policies to guide AI projects and monitor AI system behaviors. Start by identifying organizational risks specific to your AI initiatives. Document governance policies that outline responsibilities, compliance requirements, and ethical standards. See Govern AI for details on this process.
+- *Start the AI governance process.* Responsible AI adoption involves creating governance policies to guide AI projects and monitor AI system behaviors. Start by identifying organizational risks specific to your AI initiatives. Document governance policies that outline responsibilities, compliance requirements, and ethical standards. See the article on Govern AI for details on this process.
     > [!div class="nextstepaction"]
     > [Govern AI](./govern.md)
 
-- *Start the AI management process.* AI management frameworks, such as GenAIOps or MLOps, help ensure ongoing adherence to responsible AI principles as your AI systems evolve. These practices involve deployment management, continuous monitoring, and cost optimization for AI models in production. See Manage AI for details on this process.
+- *Start the AI management process.* AI management frameworks, such as GenAIOps or MLOps, help ensure ongoing adherence to responsible AI principles as your AI systems evolve. These practices involve deployment management, continuous monitoring, and cost optimization for AI models in production. See the article on Manage AI for details on this process.
     > [!div class="nextstepaction"]
     > [Manage AI](./manage.md)
 
