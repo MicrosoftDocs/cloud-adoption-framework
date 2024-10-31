@@ -22,7 +22,7 @@ This article outlines integration options and provides links to implementation g
 
 ## Architecture
 
-Depending on your scenario for using Microsoft Power Platform with SAP, there will be a need of middleware component deployment.
+Depending on your scenario for using Microsoft Power Platform with SAP, you might need to deploy a middleware component.
 
 :::image type="complex" source="./media/sap-power-platform-architecture.png" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with a typical SAP landing zone." lightbox="./media/sap-power-platform-architecture.png":::
    Diagram that shows an architecture of a Microsoft Power Platform integration with a typical SAP landing zone. The architecture contains a Power Platform environment, an SAP environment, and box for client applications. The Power Platform environment contains Power BI, Power Apps, Power Pages, and Copilot Studio, all of which connect to Power Automate. Power Automate connects to SAP ERP connector, OData connector, and a custom connector. The Power Platform environment connects to a Microsoft Entra tenant. Data from Power BI and the SAP ERP connector go through a firewall and then to an SAP environment. Data from the OData connector and the custom connector goes through an API gateway into the SAP environment. The SAP environment contains an on-premises data gateway. Data enters this gateway from the firewall. From this gateway, data flows to SAP .NET Connector. The SAP environment also contains icons that represent OData API, REST / SOAP API, and HANA SQL port. Data flows from the API gateway through these APIs and into SAP. Data from HANA SQL port also flows into SAP. The client application box contains a laptop, a mobile device, Power Automate desktop, SAP GUI, and Power BI Desktop. In this box, data from Power BI Desktop flows to SAP .NET Connector and an SAP HANA ODBC driver. Data from SAP .NET Connector crosses through a DIAG and RFC port in the SAP environment and then flows to SAP. Data from the SAP HANA ODBC driver flows into a HANA SQL port in the SAP environment and then into SAP.
@@ -43,19 +43,19 @@ Before you begin, ensure that you have:
 
 ### SAP GUI–based RPA in Power Automate for desktop
 
-When you're looking for ways to automate frequent, mundane, and rules-based tasks, follow the SAP GUI automation patterns and best practices described here and in subsequent articles:
+When you're looking for ways to automate frequent, mundane, and rule-based tasks, follow the SAP GUI automation patterns and best practices described here and in subsequent articles:
 
 - [Introduction to SAP GUI–based RPA in Power Automate desktop](/power-automate/guidance/rpa-sap-playbook/introduction)
 
 ### Reporting and analytics with Power BI on SAP HANA Business Warehouse
 
-For information about real-time analytics, dynamic data visualization, and timely decision making on SAP Business Warehouse (BW), see [PowerQuery SAP Business Warehouse Application Server connector](/power-query/connectors/sap-bw/application-setup-and-connect).
+If you want to implement real-time analytics, dynamic data visualization, and timely decision making on SAP Business Warehouse (BW), see [PowerQuery SAP Business Warehouse Application Server connector](/power-query/connectors/sap-bw/application-setup-and-connect).
 
 To use the SAP BW Message Server connector in Power BI, you need to install SAP .NET Connector. For more information, see [Power Query SAP Business Warehouse Message Server connector](/power-query/connectors/sap-bw/message-setup-and-connect).
 
 ### Reporting and analytics with Power BI on SAP HANA
 
-For information about real-time analytics, dynamic data visualization, and timely decision making on SAP HANA systems, see [Power Query SAP HANA database connector](/power-query/connectors/sap-hana/overview).
+If you want to implement real-time analytics, dynamic data visualization, and timely decision making on SAP HANA systems, see [Power Query SAP HANA database connector](/power-query/connectors/sap-hana/overview).
 
 > [!NOTE]
 > Access to the SAP HANA database ports from your desktop might not always be permitted. You might need to configure firewall rules to enable this access.
@@ -65,9 +65,9 @@ For information about real-time analytics, dynamic data visualization, and timel
 When you create apps, copilots, web pages, or automation by using the SAP ERP or SAP OData connector, you need to establish the appropriate network connectivity. The specific configuration varies depending on the connector you use and the location of your SAP systems.
 
 > [!NOTE]
-> In an SAP Rise context, where SAP systems are hosted on Azure and managed by SAP AG, required middleware components like the firewall, the on-premises data gateway, and Azure API Management are installed in your Azure subscription, and the SAP Rise network is peered with your Azure virtual network.
+> In a RISE with SAP context, where SAP systems are hosted on Azure and managed by SAP AG, required middleware components like the firewall, the on-premises data gateway, and Azure API Management are installed in your Azure subscription, and the RISE with SAP network is peered with your Azure virtual network.
 >
-> To learn how to establish network connectivity of your Azure subscription with the networks in the scope of SAP Rise, see [Integrating Azure with SAP RISE managed workloads](/azure/sap/workloads/rise-integration).
+> To learn how to establish network connectivity of your Azure subscription with the networks in the scope of RISE with SAP, see [Integrating Azure with SAP RISE managed workloads](/azure/sap/workloads/rise-integration).
 
 #### SAP ERP connector
 
