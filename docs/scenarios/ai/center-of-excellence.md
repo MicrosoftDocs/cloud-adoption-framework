@@ -42,15 +42,15 @@ An AI CoE requires a diverse set of skills and expertise. Assemble a cross-funct
 
 | Role               | Responsibilities                                    | Key deliverables                                                  |
 |--------------------|-----------------------------------------------------|-------------------------------------------------------------------|
-| AI CoE Lead     | Sets the strategic direction of the CoE.             | AI roadmap, leadership for AI initiatives.                        |
-| AI Strategist   | Aligns AI strategy with business objectives.         | AI strategy document, prioritized AI projects.                    |
-| Business Analyst| Integrates AI solutions into business workflows.     | Business case documentation, process improvement plans.           |
-| Data Scientist  | Develops and tests AI models.                        | AI models, data insights, and actionable recommendations.          |
-| Data Engineer   | Manages data pipelines and infrastructure.           | Data integration plan, data quality assurance reports.             |
-| AI Engineer     | Deploys and maintains AI systems.                    | AI system architecture, deployment schedules, and maintenance logs.|
-| Chief Ethics Officer | Monitors AI ethical standards and compliance.  | AI ethics review processes, risk assessment reports.               |
-| Compliance Officer   | Ensures AI compliance with regulations.       | Compliance documentation, regulatory reports.                      |
-| MLOps Specialist     | Oversees AI model lifecycle management.       | AI model pipeline, continuous improvement processes.               |
+| AI CoE Lead     | Sets the strategic direction of the CoE             | AI roadmap, leadership for AI initiatives                        |
+| AI Strategist   | Aligns AI strategy with business objectives         | AI strategy document, prioritized AI projects                    |
+| Business Analyst| Integrates AI solutions into business workflows     | Business case documentation, process improvement plans           |
+| Data Scientist  | Develops and tests AI models                        | AI models, data insights, and actionable recommendations          |
+| Data Engineer   | Manages data pipelines and infrastructure           | Data integration plan, data quality assurance reports             |
+| AI Engineer     | Deploys and maintains AI systems                    | AI system architecture, deployment schedules, and maintenance logs|
+| Chief Ethics Officer | Monitors AI ethical standards and compliance  | AI ethics review processes, risk assessment reports               |
+| Compliance Officer   | Ensures AI compliance with regulations       | Compliance documentation, regulatory reports                      |
+| MLOps Specialist     | Oversees AI model lifecycle management       | AI model pipeline, continuous improvement processes               |
 
 ## Define structure and operations
 
