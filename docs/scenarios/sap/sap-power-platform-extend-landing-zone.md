@@ -24,7 +24,7 @@ This article outlines integration options and provides links to implementation g
 
 Depending on your scenario for using Microsoft Power Platform with SAP, you might need to deploy a middleware component.
 
-:::image type="complex" source="./media/sap-power-platform-architecture.png" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with a typical SAP landing zone." lightbox="./media/sap-power-platform-architecture.png":::
+:::image type="complex" source="./media/sap-power-platform-architecture.png" border="false" alt-text="Diagram that shows an architecture diagram of Power Platform integration with a typical SAP landing zone." lightbox="./media/sap-power-platform-architecture.png":::
    Diagram that shows an architecture of a Microsoft Power Platform integration with a typical SAP landing zone. The architecture contains a Power Platform environment, an SAP environment, and box for client applications. The Power Platform environment contains Power BI, Power Apps, Power Pages, and Copilot Studio, all of which connect to Power Automate. Power Automate connects to SAP ERP connector, OData connector, and a custom connector. The Power Platform environment connects to a Microsoft Entra tenant. Data from Power BI and the SAP ERP connector go through a firewall and then to an SAP environment. Data from the OData connector and the custom connector goes through an API gateway into the SAP environment. The SAP environment contains an on-premises data gateway. Data enters this gateway from the firewall. From this gateway, data flows to SAP .NET Connector. The SAP environment also contains icons that represent OData API, REST / SOAP API, and HANA SQL port. Data flows from the API gateway through these APIs and into SAP. Data from HANA SQL port also flows into SAP. The client application box contains a laptop, a mobile device, Power Automate desktop, SAP GUI, and Power BI Desktop. In this box, data from Power BI Desktop flows to SAP .NET Connector and an SAP HANA ODBC driver. Data from SAP .NET Connector crosses through a DIAG and RFC port in the SAP environment and then flows to SAP. Data from the SAP HANA ODBC driver flows into a HANA SQL port in the SAP environment and then into SAP.
 :::image-end:::
 
@@ -49,7 +49,7 @@ When you're looking for ways to automate frequent, mundane, and rule-based tasks
 
 ### Reporting and analytics with Power BI on SAP HANA Business Warehouse
 
-If you want to implement real-time analytics, dynamic data visualization, and timely decision making on SAP Business Warehouse (BW), see [PowerQuery SAP Business Warehouse Application Server connector](/power-query/connectors/sap-bw/application-setup-and-connect).
+If you want to implement real-time analytics, dynamic data visualization, and timely decision making on SAP Business Warehouse (BW), see [Power Query SAP Business Warehouse Application Server connector](/power-query/connectors/sap-bw/application-setup-and-connect).
 
 To use the SAP BW Message Server connector in Power BI, you need to install SAP .NET Connector. For more information, see [Power Query SAP Business Warehouse Message Server connector](/power-query/connectors/sap-bw/message-setup-and-connect).
 
@@ -71,7 +71,7 @@ When you create apps, copilots, web pages, or automation by using the SAP ERP or
 
 #### SAP ERP connector
 
-This connector requires an on-premises data gateway: a locally installed Windows client application that serves as a bridge between your local on-premises data sources and services in the Microsoft cloud. It provides quick, high-security data transfer and requires no inbound ports to your network. Only outbound ports are needed to reach the Azure web service to which the gateway connects.
+This connector requires an on-premises data gateway: a locally installed Windows client application that serves as a bridge between your local on-premises data sources and services in the Microsoft cloud. It provides quick, high-security data transfer and requires no inbound ports to your network. It only needs outbound ports to reach the Azure web service to which the gateway connects.
 
 - The on-premises gateway should be installed on a Windows VM in close proximity to the SAP system and positioned behind a firewall, as illustrated in the architecture diagram.
 - Segment on-premises data gateways for nonproduction and production SAP environments.
@@ -82,7 +82,7 @@ This connector requires an on-premises data gateway: a locally installed Windows
 For more information, see [SAP ERP connectors](/connectors/saperp/).
 
 > [!NOTE] 
-> In an SAP Rise context, the on-premises data gateway is installed within your Azure subscription and connects to the SAP Rise environment via network peering. If your SAP systems are still running on-premises, the gateway must be installed in your on-premises environment.
+> In a RISE with SAP context, the on-premises data gateway is installed within your Azure subscription and connects to the RISE with SAP environment via network peering. If your SAP systems are still running on-premises, the gateway must be installed in your on-premises environment.
 
 #### SAP OData connector
 
@@ -93,7 +93,7 @@ For more information, see [SAP OData connectors](/connectors/sapodata).
 At a minimum, you need to configure your firewalls to allow communication between the public IPs of Microsoft Power Platform and your SAP system. Doing so ensures the necessary functionality for integration.  
 
 - For a list of the outbound IP addresses for Microsoft Power Platform, see [Managed connectors outbound IP addresses](/connectors/common/outbound-ip-addresses).  
-- If you're using Azure Firewall, you can simplify this process by using service tags, which eliminates the need to manage individual IP address ranges manually. For more information, see [Azure service tags overview](/azure/virtual-network/service-tags-overview).
+- If you use Azure Firewall, you can simplify this process by using service tags, which eliminates the need to manage individual IP address ranges manually. For more information, see [Azure service tags overview](/azure/virtual-network/service-tags-overview).
 
 For production workloads, we recommend that you include API management, which enables single sign-on (SSO) and other helpful features. For more details, see the next section.
 
