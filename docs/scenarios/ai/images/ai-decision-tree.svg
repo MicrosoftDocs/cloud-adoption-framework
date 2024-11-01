@@ -18,13 +18,13 @@
 		.st8 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
 		.st9 {fill:#000000;font-family:Calibri;font-size:0.833336em;font-weight:bold}
 		.st10 {fill:#76bed3;stroke:#c7c8c8;stroke-width:0.5}
-		.st11 {marker-end:url(#mrkr4-68);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st12 {fill:#ffffff;stroke:none;stroke-width:0.5}
-		.st13 {fill:#000000;font-family:Calibri;font-size:1.00001em;font-weight:bold}
-		.st14 {font-size:1em;font-weight:normal}
-		.st15 {font-size:1em;font-style:italic;font-weight:normal}
-		.st16 {fill:none;stroke:none;stroke-width:0.25}
-		.st17 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st11 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st12 {marker-end:url(#mrkr4-68);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st13 {fill:#ffffff;stroke:none;stroke-width:0.5}
+		.st14 {fill:#000000;font-family:Calibri;font-size:1.00001em;font-weight:bold}
+		.st15 {font-size:1em;font-weight:normal}
+		.st16 {font-size:1em;font-style:italic;font-weight:normal}
+		.st17 {fill:none;stroke:none;stroke-width:0.25}
 		.st18 {fill:#198ab3;stroke:none;stroke-linecap:butt;stroke-width:0.75}
 		.st19 {fill:url(#grad0-153);stroke:none;stroke-linecap:butt;stroke-width:0.75}
 		.st20 {fill:#32bedd;stroke:none;stroke-linecap:butt;stroke-width:0.75}
@@ -210,7 +210,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="50.875" cy="909.375" width="65.43" height="44.0037"/>
 			<path d="M0 909.37 L98.73 909.37" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="23.2946" y="891.375" width="55.161" height="36" class="st8"/>
+			<rect v:rectContext="textBkgnd" x="23.2946" y="891.375" width="55.161" height="36" class="st11"/>
 			<text x="33.31" y="900.38" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Enhance <v:newlineChar/><tspan
 						x="30.4" dy="1.2em" class="st5">individual <v:newlineChar/></tspan><tspan x="23.29" dy="1.2em" class="st5">productivity?</tspan></text>		</g>
 		<g id="shape74-43" v:mID="74" v:groupContext="shape" v:layerMember="0" transform="translate(155.653,-835.929)">
@@ -247,16 +247,16 @@
 						class="st5">data, and you have data science skills?</tspan></text>		</g>
 		<g id="shape1009-58" v:mID="1009" v:groupContext="shape" transform="translate(32.7206,-281.086)">
 			<title>Sheet.1009</title>
-			<desc>Need access to prebuilt and customizable AI models for natura...</desc>
+			<desc>Need access Azure OpenAI and prebuilt AI models for nongenera...</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(19000):26"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="181.125" cy="884.625" width="362.25" height="31.5"/>
 			<rect x="0" y="868.875" width="362.25" height="31.5" class="st3"/>
-			<text x="4" y="875.62" class="st4" v:langID="1033"><v:paragraph v:bulletSize="0.166667"/><v:tabList/>Need access to prebuilt and customizable AI models for natural language processing, <tspan
-						x="4" dy="1.2em" class="st5">search, monitoring, translation, speech, </tspan>vision, and decision-making without the need <tspan
-						x="4" dy="1.2em" class="st5">for data science skills?</tspan></text>		</g>
+			<text x="4" y="875.62" class="st4" v:langID="1033"><v:paragraph v:bulletSize="0.166667"/><v:tabList/>Need access Azure OpenAI and prebuilt AI models for nongenerative AI tasks, such as <tspan
+						x="4" dy="1.2em" class="st5">translation, search, monitoring, translation, speech, vision, and decision</tspan>-making <tspan
+						x="4" dy="1.2em" class="st5">without the need for data science skills?</tspan></text>		</g>
 		<g id="shape1012-63" v:mID="1012" v:groupContext="shape" v:layerMember="0" transform="translate(34,-313.215)">
 			<title>Dynamic connector.1012</title>
 			<desc>No</desc>
@@ -265,8 +265,8 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-9" cy="940.843" width="50" height="20.0036"/>
-			<path d="M-8.88 900.37 L-9.1 975.27" class="st11"/>
-			<rect v:rectContext="textBkgnd" x="-14.9813" y="934.844" width="11.9627" height="12.0001" class="st8"/>
+			<path d="M-8.88 900.37 L-9.1 975.27" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-14.9813" y="934.844" width="11.9627" height="12.0001" class="st11"/>
 			<text x="-14.98" y="943.84" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="shape1013-71" v:mID="1013" v:groupContext="shape" transform="translate(13.8655,-313.215)">
 			<title>Diamond.1013</title>
@@ -322,10 +322,10 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="127.798" cy="884.125" width="255.6" height="32.5"/>
 			<path d="M16.25 900.37 L239.35 900.37 A16.2497 16.2497 -180 0 0 255.6 884.12 A16.2497 16.2497 -180 0 0 239.35 867.88
-						 L16.25 867.88 A16.2497 16.2497 -180 0 0 0 884.12 A16.2497 16.2497 -180 0 0 16.25 900.37 Z" class="st12"/>
-			<text x="87.35" y="880.53" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Each AI use case <v:newlineChar/><tspan
-						x="54.06" dy="1.2em" class="st14">(generative &#38; non</tspan><tspan class="st14">-</tspan><tspan
-						class="st14">generative)</tspan></text>		</g>
+						 L16.25 867.88 A16.2497 16.2497 -180 0 0 0 884.12 A16.2497 16.2497 -180 0 0 16.25 900.37 Z" class="st13"/>
+			<text x="87.35" y="880.53" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Each AI use case <v:newlineChar/><tspan
+						x="54.06" dy="1.2em" class="st15">(generative &#38; non</tspan><tspan class="st15">-</tspan><tspan
+						class="st15">generative)</tspan></text>		</g>
 		<g id="shape1029-87" v:mID="1029" v:groupContext="shape" v:layerMember="0" transform="translate(175.928,-860.964)">
 			<title>Dynamic connector.1029</title>
 			<v:userDefs>
@@ -360,7 +360,7 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="9" cy="975.293" width="50" height="20.0036"/>
-			<path d="M8.68 900.37 L9.3 1044.17" class="st11"/>
+			<path d="M8.68 900.37 L9.3 1044.17" class="st12"/>
 			<rect v:rectContext="textBkgnd" x="3.01871" y="969.293" width="11.9627" height="12.0001" class="st8"/>
 			<text x="3.02" y="978.29" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1063-105" transform="translate(434.384,-545.095)" v:mID="1063" v:groupContext="group">
@@ -377,14 +377,14 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="58.1875" cy="881.036" width="116.38" height="38.6786"/>
 				<rect x="0" y="861.696" width="116.375" height="38.6786" class="st3"/>
-				<text x="7.67" y="871.44" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Copilot (Free or Pro)<v:newlineChar/><tspan
-							x="8.11" dy="1.2em" class="st15">SaaS | Generative AI</tspan><v:newlineChar/></text>			</g>
+				<text x="7.67" y="871.44" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Copilot (Free or Pro)<v:newlineChar/><tspan
+							x="8.11" dy="1.2em" class="st16">SaaS | Generative AI</tspan><v:newlineChar/></text>			</g>
 			<g id="shape76-110" v:mID="76" v:groupContext="shape" transform="translate(39.875,-36.4286)">
 				<title>Sheet.76</title>
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:val="VT0(61000):26"/>
 				</v:userDefs>
-				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 				<image x="0" y="866.687" width="33.6875" height="33.6875" preserveAspectRatio="none" xlink:href="data:image/png;base64,
 							iVBORw0KGgoAAAANSUhEUgAABgAAAAYACAYAAACw7oNrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYA
 							ABnWARjRyu0AAP+lSURBVHhe7L13mGVlma/diFLVOdB0Qye6yUFARKqbZAbM2TFnRz3pmzNzJnhmzpxxzsyZmXNmjkrTZCQoJhQQ
@@ -4805,7 +4805,7 @@
 							AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 							AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBt/H8k+J3jXD4zZAAAAABJ
 							RU5ErkJggg=="/>
-				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 			</g>
 		</g>
 		<g id="shape1065-114" v:mID="1065" v:groupContext="shape" v:layerMember="0" transform="translate(34.1345,-408.192)">
@@ -4816,7 +4816,7 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-9" cy="938.488" width="50" height="20.0036"/>
-			<path d="M-8.98 900.37 L-9.02 970.56" class="st11"/>
+			<path d="M-8.98 900.37 L-9.02 970.56" class="st12"/>
 			<rect v:rectContext="textBkgnd" x="-14.9813" y="932.489" width="11.9627" height="12.0001" class="st8"/>
 			<text x="-14.98" y="941.49" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1030-121" transform="translate(424.584,-369.692)" v:mID="1030" v:groupContext="group">
@@ -4844,9 +4844,9 @@
 					<v:textBlock v:margins="rect(4,4,4,4)"/>
 					<v:textRect cx="62.2391" cy="884.625" width="124.48" height="31.5"/>
 					<rect x="0" y="868.875" width="124.478" height="31.5" class="st3"/>
-					<text x="20.11" y="867.82" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure AI services<v:newlineChar/><tspan
-								x="7.5" dy="1.2em" class="st15">PaaS | Generative and </tspan><tspan x="20.68" dy="1.2em"
-								class="st15">nongenerative AI</tspan><v:newlineChar/></text>				</g>
+					<text x="20.11" y="867.82" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure AI services<v:newlineChar/><tspan
+								x="7.5" dy="1.2em" class="st16">PaaS | Generative and </tspan><tspan x="20.68" dy="1.2em"
+								class="st16">nongenerative AI</tspan><v:newlineChar/></text>				</g>
 			</g>
 		</g>
 		<g id="shape1089-129" v:mID="1089" v:groupContext="shape" transform="translate(216.403,-213.528)">
@@ -4877,7 +4877,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-0.271261" cy="933.746" width="50" height="20.0036"/>
 			<path d="M0 900.37 L0 982.39 L184.33 982.39" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="-6.25255" y="927.746" width="11.9627" height="12.0001" class="st17"/>
+			<rect v:rectContext="textBkgnd" x="-6.25255" y="927.746" width="11.9627" height="12.0001" class="st11"/>
 			<text x="-6.25" y="936.75" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1094-142" transform="translate(427.009,-110.924)" v:mID="1094" v:groupContext="group">
 			<v:userDefs>
@@ -4893,8 +4893,8 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="71.8415" cy="890.375" width="143.69" height="20"/>
 				<rect x="0" y="880.375" width="143.683" height="20" class="st3"/>
-				<text x="11.67" y="880.78" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure Machine Learning<v:newlineChar/><tspan
-							x="11.89" dy="1.2em" class="st15">PaaS | Machine learning</tspan><v:newlineChar/></text>			</g>
+				<text x="11.67" y="880.78" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure Machine Learning<v:newlineChar/><tspan
+							x="11.89" dy="1.2em" class="st16">PaaS | Machine learning</tspan><v:newlineChar/></text>			</g>
 			<g id="group1084-147" transform="translate(49.5,-29.5893)" v:mID="1084" v:groupContext="group">
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:val="VT0(82000):26"/>
@@ -4955,9 +4955,9 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="69.1203" cy="884.625" width="138.25" height="31.5"/>
 				<rect x="0" y="868.875" width="138.241" height="31.5" class="st3"/>
-				<text x="30.72" y="867.82" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure AI Studio<v:newlineChar/><tspan
-							x="8.04" dy="1.2em" class="st15">PaaS | Generative AI and </tspan><tspan x="27.56" dy="1.2em"
-							class="st15">nongenerative AI</tspan><v:newlineChar/></text>			</g>
+				<text x="30.72" y="867.82" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure AI Studio<v:newlineChar/><tspan
+							x="8.04" dy="1.2em" class="st16">PaaS | Generative AI and </tspan><tspan x="27.56" dy="1.2em"
+							class="st16">nongenerative AI</tspan><v:newlineChar/></text>			</g>
 		</g>
 		<g id="shape33-177" v:mID="33" v:groupContext="shape" transform="translate(427.022,-803.196)">
 			<title>Sheet.33</title>
@@ -4968,14 +4968,14 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="67" cy="880.536" width="134" height="39.6786"/>
 			<rect x="0" y="860.696" width="134" height="39.6786" class="st3"/>
-			<text x="13.11" y="870.94" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Microsoft 365 Copilot<v:newlineChar/><tspan
-						x="16.92" dy="1.2em" class="st15">SaaS | Generative AI</tspan><v:newlineChar/></text>		</g>
+			<text x="13.11" y="870.94" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Microsoft 365 Copilot<v:newlineChar/><tspan
+						x="16.92" dy="1.2em" class="st16">SaaS | Generative AI</tspan><v:newlineChar/></text>		</g>
 		<g id="shape81-181" v:mID="81" v:groupContext="shape" transform="translate(452.616,-845.199)">
 			<title>Sheet.81</title>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(81000):26"/>
 			</v:userDefs>
-			<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st16"/>
+			<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 			<image x="0" y="866.687" width="33.6875" height="33.6875" preserveAspectRatio="none" xlink:href="data:image/png;base64,
 						iVBORw0KGgoAAAANSUhEUgAABgAAAAYACAYAAACw7oNrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYAABnW
 						ARjRyu0AAP+lSURBVHhe7L13mGVlma/diFLVOdB0Qye6yUFARKqbZAbM2TFnRz3pmzNzJnhmzpxxzsyZmXNmjkrTZCQoJhQQUBEcRaU6
@@ -9226,7 +9226,7 @@
 						AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 						AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBt/H8k+J3jXD4z
 						ZAAAAABJRU5ErkJggg=="/>
-			<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st16"/>
+			<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 		</g>
 		<g id="group1110-185" transform="translate(433.272,-207.153)" v:mID="1110" v:groupContext="group">
 			<v:userDefs>
@@ -9242,14 +9242,14 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="64.6141" cy="890.375" width="129.23" height="20"/>
 				<rect x="0" y="880.375" width="129.228" height="20" class="st3"/>
-				<text x="24.02" y="873.57" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Microsoft Fabric<v:newlineChar/><tspan
-							x="24.36" dy="1.2em" class="st15">SaaS | Fabric for </tspan><tspan x="22.5" dy="1.2em" class="st15">machine learning</tspan><v:newlineChar/></text>			</g>
+				<text x="24.02" y="873.57" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Microsoft Fabric<v:newlineChar/><tspan
+							x="24.36" dy="1.2em" class="st16">SaaS | Fabric for </tspan><tspan x="22.5" dy="1.2em" class="st16">machine learning</tspan><v:newlineChar/></text>			</g>
 			<g id="shape82-191" v:mID="82" v:groupContext="shape" transform="translate(41.4525,-25.265)">
 				<title>Sheet.82</title>
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:val="VT0(93000):26"/>
 				</v:userDefs>
-				<rect v:rectContext="foreign" x="0" y="866.28" width="34.095" height="34.095" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="866.28" width="34.095" height="34.095" class="st17"/>
 				<image x="0" y="866.28" width="34.095" height="34.095" preserveAspectRatio="none" xlink:href="data:image/png;base64,
 							iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYA
 							ABnWARjRyu0AANW2SURBVHhe7P2Hcx3XlS6Kv1f1ezPjVzd4rEwxZxIMYAYBBjBHSZRsj7NESRQziEDkeBAOTo7IOTJKFJWTJVPB
@@ -9982,7 +9982,7 @@
 							exCB/p4vCKi2zrOmEOe+KP6cL51wb712dvLF+rkHz9c9mxpfNzfZ/9dzk5vpS63l+XSCPLXU/tJGXwStpJSknAqpQP+nwJzP8kDn
 							r9VcPm/vt35u6r8C5HMPJgjydQJ5fu+ppZba/2GjLwMCjuADiHNTUPT5vgxCWT9P+Z8BPH9Ox5pTL/GF8+zBNEFOpfrrX3/wNwny
 							1FJ7hRqdn38xO7lBVHiCVXnqW1boyZehPLeA05iexemLhM/jF9N5PLXU/vftvwE1Y1jQ2xn8HgAAAABJRU5ErkJggg=="/>
-				<rect v:rectContext="foreign" x="0" y="866.28" width="34.095" height="34.095" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="866.28" width="34.095" height="34.095" class="st17"/>
 			</g>
 		</g>
 		<g id="group1111-195" transform="translate(428.772,-26.0325)" v:mID="1111" v:groupContext="group">
@@ -9999,9 +9999,9 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="67.7078" cy="881.036" width="135.42" height="38.6786"/>
 				<rect x="0" y="861.696" width="135.416" height="38.6786" class="st3"/>
-				<text x="9.67" y="864.24" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure Virtual Machines<v:newlineChar/><tspan
-							x="8.22" dy="1.2em" class="st15">IaaS | Generative AI and </tspan><tspan x="26.15" dy="1.2em"
-							class="st15">nongenerative AI</tspan><v:newlineChar/></text>			</g>
+				<text x="9.67" y="864.24" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure Virtual Machines<v:newlineChar/><tspan
+							x="8.22" dy="1.2em" class="st16">IaaS | Generative AI and </tspan><tspan x="26.15" dy="1.2em"
+							class="st16">nongenerative AI</tspan><v:newlineChar/></text>			</g>
 			<g id="group1049-201" transform="translate(45.9525,-35.6598)" v:mID="1049" v:groupContext="group">
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:val="VT0(59000):26"/>
@@ -10125,8 +10125,8 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-9" cy="935.526" width="50" height="20.0036"/>
-			<path d="M-8.78 900.37 L-9.18 964.64" class="st11"/>
-			<rect v:rectContext="textBkgnd" x="-14.9813" y="929.526" width="11.9627" height="12.0001" class="st8"/>
+			<path d="M-8.78 900.37 L-9.18 964.64" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-14.9813" y="929.526" width="11.9627" height="12.0001" class="st11"/>
 			<text x="-14.98" y="938.53" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1150-240" transform="translate(433.897,-704.175)" v:mID="1150" v:groupContext="group">
 			<v:userDefs>
@@ -10155,7 +10155,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="65.428" cy="891.375" width="50" height="20.0036"/>
 			<path d="M0 891.37 L127.84 891.37" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="58.3187" y="885.375" width="14.2188" height="12.0001" class="st8"/>
+			<rect v:rectContext="textBkgnd" x="58.3187" y="885.375" width="14.2188" height="12.0001" class="st11"/>
 			<text x="58.32" y="894.38" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Yes</text>		</g>
 		<g id="shape1154-254" v:mID="1154" v:groupContext="shape" transform="translate(279.403,-647.782)">
 			<title>Diamond.1154</title>
@@ -10184,7 +10184,7 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="9" cy="935.884" width="50" height="20.0036"/>
-			<path d="M9 900.37 L9 965.35" class="st11"/>
+			<path d="M9 900.37 L9 965.35" class="st12"/>
 			<rect v:rectContext="textBkgnd" x="3.01871" y="929.884" width="11.9627" height="12.0001" class="st8"/>
 			<text x="3.02" y="938.88" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<g id="group1157-270" transform="translate(432.759,-721.872)" v:mID="1157" v:groupContext="group">
@@ -10201,14 +10201,14 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="58.1875" cy="881.036" width="116.38" height="38.6786"/>
 				<rect x="0" y="861.696" width="116.375" height="38.6786" class="st3"/>
-				<text x="10.3" y="871.44" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>In-product Copilots <v:newlineChar/><tspan
-							x="8.11" dy="1.2em" class="st15">SaaS | Generative AI</tspan><v:newlineChar/></text>			</g>
+				<text x="10.3" y="871.44" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>In-product Copilots <v:newlineChar/><tspan
+							x="8.11" dy="1.2em" class="st16">SaaS | Generative AI</tspan><v:newlineChar/></text>			</g>
 			<g id="shape83-275" v:mID="83" v:groupContext="shape" transform="translate(17.5447,-35.1518)">
 				<title>Sheet.83</title>
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:val="VT0(61000):26"/>
 				</v:userDefs>
-				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 				<image x="0" y="866.687" width="33.6875" height="33.6875" preserveAspectRatio="none" xlink:href="data:image/png;base64,
 							iVBORw0KGgoAAAANSUhEUgAABgAAAAYACAYAAACw7oNrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYA
 							ABnWARjRyu0AAP+lSURBVHhe7L13mGVlma/diFLVOdB0Qye6yUFARKqbZAbM2TFnRz3pmzNzJnhmzpxxzsyZmXNmjkrTZCQoJhQQ
@@ -14629,7 +14629,7 @@
 							AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 							AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBt/H8k+J3jXD4zZAAAAABJ
 							RU5ErkJggg=="/>
-				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 			</g>
 		</g>
 		<g id="group1158-279" transform="translate(432.447,-630.372)" v:mID="1158" v:groupContext="group">
@@ -14646,14 +14646,14 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="58.1875" cy="881.036" width="116.38" height="38.6786"/>
 				<rect x="0" y="861.696" width="116.375" height="38.6786" class="st3"/>
-				<text x="5.41" y="871.44" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Role-aligned Copilots <v:newlineChar/><tspan
-							x="8.11" dy="1.2em" class="st15">SaaS | Generative AI</tspan><v:newlineChar/></text>			</g>
+				<text x="5.41" y="871.44" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Role-aligned Copilots <v:newlineChar/><tspan
+							x="8.11" dy="1.2em" class="st16">SaaS | Generative AI</tspan><v:newlineChar/></text>			</g>
 			<g id="shape84-284" v:mID="84" v:groupContext="shape" transform="translate(17.3192,-35.1518)">
 				<title>Sheet.84</title>
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:val="VT0(61000):26"/>
 				</v:userDefs>
-				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 				<image x="0" y="866.687" width="33.6875" height="33.6875" preserveAspectRatio="none" xlink:href="data:image/png;base64,
 							iVBORw0KGgoAAAANSUhEUgAABgAAAAYACAYAAACw7oNrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYA
 							ABnWARjRyu0AAP+lSURBVHhe7L13mGVlma/diFLVOdB0Qye6yUFARKqbZAbM2TFnRz3pmzNzJnhmzpxxzsyZmXNmjkrTZCQoJhQQ
@@ -19074,7 +19074,7 @@
 							AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 							AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBt/H8k+J3jXD4zZAAAAABJ
 							RU5ErkJggg=="/>
-				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="866.687" width="33.6875" height="33.6875" class="st17"/>
 			</g>
 		</g>
 		<g id="shape1160-288" v:mID="1160" v:groupContext="shape" transform="translate(300.216,-615.625)">
@@ -19093,7 +19093,7 @@
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(118000):26"/>
 			</v:userDefs>
-			<rect v:rectContext="foreign" x="0" y="869.622" width="28.6911" height="30.7534" class="st16"/>
+			<rect v:rectContext="foreign" x="0" y="869.622" width="28.6911" height="30.7534" class="st17"/>
 			<image x="0" y="869.622" width="28.6911" height="30.7534" preserveAspectRatio="none" xlink:href="data:image/png;base64,
 						iVBORw0KGgoAAAANSUhEUgAACG8AAAkLCAYAAABe+3e6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYAABnW
 						ARjRyu0AAP+lSURBVHhe7N13lBzVnbdxg4hCZIkgggAJIXIQiihLMyORMwgECIFAOefQ5IzISJoZcrIxzhiwsck5mBxEkhoD+3q967AO
@@ -28672,7 +28672,7 @@
 						3q1hu+bd6uTm5JVX//9CREREREREREREREREREREVFj1KrVyG9RsUjm+Wg1qNqnToGaTevVrNmlUv2aTxvG1/O8mn7+634apr42M7dXx
 						G6a+unrD1a/eUmKPbrj61X2/k/vOHdzQ4w0Fbfzhtqte2XfblWJP3nblK7fcduXL/93q2658efytV7488vAm9l/Zr+T/vfVrNmkS/9/g
 						8P8eh/93qVO/ZpNa9Ws2qVK/ZpPK1SvXzFX/NyUiIiIiIiIiKtn/B3U5SvctzkGyAAAAAElFTkSuQmCC"/>
-			<rect v:rectContext="foreign" x="0" y="869.622" width="28.6911" height="30.7534" class="st16"/>
+			<rect v:rectContext="foreign" x="0" y="869.622" width="28.6911" height="30.7534" class="st17"/>
 		</g>
 		<g id="group1161-297" transform="translate(498.267,-673.444)" v:mID="1161" v:groupContext="group">
 			<v:userDefs>
@@ -28834,7 +28834,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="201.903" cy="891.375" width="50" height="20.0036"/>
 			<path d="M0 891.37 L400.79 891.37" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="194.794" y="885.375" width="14.2188" height="12.0001" class="st17"/>
+			<rect v:rectContext="textBkgnd" x="194.794" y="885.375" width="14.2188" height="12.0001" class="st8"/>
 			<text x="194.79" y="894.38" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Yes</text>		</g>
 		<g id="shape1204-360" v:mID="1204" v:groupContext="shape" transform="translate(14.1685,-487.286)">
 			<title>Diamond.1018</title>
@@ -28853,19 +28853,19 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="196.972" cy="891.375" width="50" height="20.0036"/>
 			<path d="M0 891.37 L390.92 891.37" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="189.863" y="885.375" width="14.2188" height="12.0001" class="st17"/>
+			<rect v:rectContext="textBkgnd" x="189.863" y="885.375" width="14.2188" height="12.0001" class="st8"/>
 			<text x="189.86" y="894.38" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Yes</text>		</g>
 		<g id="shape1206-369" v:mID="1206" v:groupContext="shape" transform="translate(37.9185,-459)">
 			<title>Sheet.1206</title>
-			<desc>Need a SaaS tool to build, test, and deploy natural language ...</desc>
+			<desc>Need a SaaS tool to build, test, and deploy agents with natur...</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(139000):26"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:verticalAlign="2"/>
 			<v:textRect cx="178.795" cy="884.625" width="357.6" height="31.5"/>
 			<rect x="0" y="868.875" width="357.59" height="31.5" class="st3"/>
-			<text x="4" y="881.37" class="st4" v:langID="1033"><v:paragraph v:bulletSize="0.166667"/><v:tabList/>Need a SaaS tool to build, test, and deploy natural language agents with a single <tspan
-						x="4" dy="1.2em" class="st5">pricing model that includes all necessary services, without needing separate sign</tspan>-ups?</text>		</g>
+			<text x="4" y="881.37" class="st4" v:langID="1033"><v:paragraph v:bulletSize="0.166667"/><v:tabList/>Need a SaaS tool to build, test, and deploy agents with natural language and a single <tspan
+						x="4" dy="1.2em" class="st5">pricing model that includes all necessary services without separate sign</tspan>-ups?</text>		</g>
 		<g id="group1207-373" transform="translate(440.474,-472.012)" v:mID="1207" v:groupContext="group">
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(140000):26"/>
@@ -28876,7 +28876,7 @@
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:val="VT0(74000):26"/>
 				</v:userDefs>
-				<rect v:rectContext="foreign" x="0" y="867.334" width="36.9176" height="33.0412" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="867.334" width="36.9176" height="33.0412" class="st17"/>
 				<image x="0" y="867.334" width="36.9176" height="33.0412" preserveAspectRatio="none" xlink:href="data:image/png;base64,
 							iVBORw0KGgoAAAANSUhEUgAAAZAAAAFmCAYAAABDdMzIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYA
 							ABnWARjRyu0AAORxSURBVHhe7N0HdBXHof/xVe9dVOPenZ7YTuyXxE4c94YBY2NwAdN7bxIgQEIIISE6AkQ1vReJJkC9d9F77+qi
@@ -29660,7 +29660,7 @@
 							Y+k/DPMrabdPLv0Pi99qMPnVgH6yK60Q+xVDqalVoJteAbrpKx/opq24oZuxst3oX+E0+K9M1ftX+Jv5ITUfPnz4DP0ZP7Hw2ZGv
 							VYTaJ66utvqtPmufWH7D4ld+wzyl4oZpKs04pbzdPLXCaZ5WmWqeWuE/3K+EA8GHDx8+fPjw4cOHDx8+fPjweQLm/wMrkjyEq4kM
 							9QAAAABJRU5ErkJggg=="/>
-				<rect v:rectContext="foreign" x="0" y="867.334" width="36.9176" height="33.0412" class="st16"/>
+				<rect v:rectContext="foreign" x="0" y="867.334" width="36.9176" height="33.0412" class="st17"/>
 			</g>
 			<g id="shape1208-378" v:mID="1208" v:groupContext="shape" transform="translate(-9.8622,8.01795)">
 				<title>Sheet.1208</title>
@@ -29671,8 +29671,8 @@
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="62.1378" cy="881.036" width="124.28" height="38.6786"/>
 				<rect x="0" y="861.696" width="124.276" height="38.6786" class="st3"/>
-				<text x="26.85" y="871.44" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Copilot Studio<v:newlineChar/><tspan
-							x="12.06" dy="1.2em" class="st15">SaaS | Generative AI</tspan><v:newlineChar/></text>			</g>
+				<text x="26.85" y="871.44" class="st14" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Copilot Studio<v:newlineChar/><tspan
+							x="12.06" dy="1.2em" class="st16">SaaS | Generative AI</tspan><v:newlineChar/></text>			</g>
 		</g>
 		<g id="shape1209-382" v:mID="1209" v:groupContext="shape" v:layerMember="0" transform="translate(34.2859,-487.286)">
 			<title>Dynamic connector.1209</title>
@@ -29682,8 +29682,8 @@
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="-9" cy="930.547" width="50" height="20.0036"/>
-			<path d="M-8.87 900.37 L-9.11 954.68" class="st11"/>
-			<rect v:rectContext="textBkgnd" x="-14.9813" y="924.547" width="11.9627" height="12.0001" class="st17"/>
+			<path d="M-8.87 900.37 L-9.11 954.68" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-14.9813" y="924.547" width="11.9627" height="12.0001" class="st8"/>
 			<text x="-14.98" y="933.55" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>No</text>		</g>
 		<a
 				xlink:href="https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy#define-an-ai-technology-strategy">
@@ -29705,7 +29705,7 @@
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(134000):26"/>
 			</v:userDefs>
-			<rect v:rectContext="foreign" x="0" y="836.708" width="120.536" height="63.6672" class="st16"/>
+			<rect v:rectContext="foreign" x="0" y="836.708" width="120.536" height="63.6672" class="st17"/>
 			<image x="0" y="836.708" width="120.536" height="63.6672" preserveAspectRatio="none" xlink:href="data:image/png;base64,
 						iVBORw0KGgoAAAANSUhEUgAABqYAAAODCAYAAADetLAsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYAABnW
 						ARjRyu0AAGu3SURBVHhe7d3BkeNImibsFqE02LKRoATYw4iQt/9aIrQZBdgSIQXYQx1WgLzunlqEFCE1mLJRoH/zGrAnyh0RQcL9dTjJ
@@ -30062,7 +30062,7 @@
 						AAAJTQEAAAAAAAASmgIAAAAAAAAkNAUAAAAAAABIaAoAAAAAAACQ0BQAAAAAAAAgoSkAAAAAAABAQlMAAAAAAACAhKYAAAAAAAAACU0B
 						AAAAAAAAEpoCAAAAAAAAJDQFAAAAAAAASGgKAAAAAAAAkNAUAAAAAAAAIKEpAAAAAAAAQEJTAAAAAAAAgISmAAAAAAAAAAlNAQAAAAAA
 						ABKaAgAAAAAAACQ0BQAAAAAAAEhoCgAAAAAAAJDQFAAAAAAAACChKQAAAAAAAEDC/w8aGiK+5Pn7SwAAAABJRU5ErkJggg=="/>
-			<rect v:rectContext="foreign" x="0" y="836.708" width="120.536" height="63.6672" class="st16"/>
+			<rect v:rectContext="foreign" x="0" y="836.708" width="120.536" height="63.6672" class="st17"/>
 		</g>
 		<g id="shape1211-398" v:mID="1211" v:groupContext="shape" transform="translate(236.151,-222.899) rotate(-0.175147)">
 			<title>Sheet.1211</title>
@@ -30073,7 +30073,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="101.055" cy="900.375" width="202.11" height="0"/>
 			<path d="M0 900.37 L199.09 900.37" class="st6"/>
-			<rect v:rectContext="textBkgnd" x="93.9455" y="894.375" width="14.2188" height="12.0001" class="st8"/>
+			<rect v:rectContext="textBkgnd" x="93.9455" y="894.375" width="14.2188" height="12.0001" class="st11"/>
 			<text x="93.95" y="903.38" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Yes</text>		</g>
 		<a
 				xlink:href="https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy#define-an-ai-technology-strategy">

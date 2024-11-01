@@ -11,9 +11,7 @@ ms.topic: conceptual
 
 This article offers architecture guidance for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
 
-The Azure Architecture Center offers reference architectures and guides to help organizations build AI workloads efficiently and securely. These resources provide well-tested, structured frameworks for AI workload deployment.
-
-In [AI Ready](../ready.md#establish-ai-governance), you established a resource hierarchy that categorizes AI workloads into internal and internet-facing groups. Deploy AI workloads to subscriptions under the appropriate management groups (internal vs. internet-facing). The following tables list articles for building AI workloads.
+The Azure Architecture Center offers reference architectures and guides to help organizations build AI workloads efficiently and securely. These resources provide well-tested, structured frameworks for AI workload deployment. In [AI Ready](../ready.md#establish-ai-governance), you established a resource hierarchy that categorizes AI workloads into internal and internet-facing groups. Deploy AI workloads to subscriptions under the appropriate management groups (internal vs. internet-facing). The following tables list articles for building AI workloads.
 
 > [!NOTE]
 > If you're using Azure landing zones, begin with the ***[Baseline Azure OpenAI architecture in Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)*** and deploy it to an application landing zone subscription.
@@ -33,11 +31,11 @@ In [AI Ready](../ready.md#establish-ai-governance), you established a resource h
 
 | Article | Article type | Target organization |
 |------------|--------------|-------------|
-| [Azure Machine Learning architectures](/azure/architecture/ai-ml/#azure-machine-learning)| Architectures | Any |
 | [Document processing architectures](/azure/architecture/ai-ml/architecture/automate-document-classification-durable-functions) | Architectures | Any |
 | [Video and image classification architecture](/azure/architecture/ai-ml/architecture/analyze-video-computer-vision-machine-learning)| Architectures |Any |
 | [Audio processing architecture](/azure/architecture/ai-ml/openai/architecture/call-center-openai-analytics) | Architecture | Any|
 | [Predictive analytics architecture](/azure/architecture/ai-ml/architecture/customer-lifecycle-churn)| Architecture | Any|
+| [Azure Machine Learning](/azure/architecture/ai-ml/#azure-machine-learning)| Guides | Any |
 | [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2)| Guides|Any |
 | [Team Data Science Process](/azure/architecture/data-science-process/overview) | Guides|Any |
 

@@ -33,9 +33,9 @@ The following articles provide guidelines for AI workloads on Azure infrastructu
 :::image type="content" source="../images/ai-infrastructure-landing-zone.svg" alt-text="Diagram showing AI application on Azure infrastructure in Azure landing zone." lightbox="../images/ai-infrastructure-landing-zone.svg" border="false":::
 *Figure 1. AI application on Azure infrastructure in Azure landing zone.*
 
-## Deploy Cycle Cloud Workspace for Slurm
+## Deploy CycleCloud Workspace for Slurm
 
-The [Cycle Cloud Workspace for Slurm](/azure/cyclecloud/qs-deploy-ccws) can be used as the initial deployment in the enterprise environment. You can develop and customize the code to expand its functionality and/or adapt it to your Azure landing zone environment. Then, follow the guidance to [fine-tune a diffusion model from Hugging Face using Azure CycleCloud Workspace for Slurm](https://techcommunity.microsoft.com/t5/azure-compute-blog/fine-tuning-a-hugging-face-diffusion-model-on-cyclecloud/ba-p/4262431).
+The [CycleCloud Workspace for Slurm](/azure/cyclecloud/qs-deploy-ccws) can be used as the initial deployment in the enterprise environment. You can develop and customize the code to expand its functionality and/or adapt it to your Azure landing zone environment. Then, follow the guidance to [fine-tune a diffusion model from Hugging Face using Azure CycleCloud Workspace for Slurm](https://techcommunity.microsoft.com/t5/azure-compute-blog/fine-tuning-a-hugging-face-diffusion-model-on-cyclecloud/ba-p/4262431).
 
 ## Next step
 
