@@ -65,7 +65,7 @@ An AI foundation provides the core infrastructure and resource hierarchy that su
 
 ### Use Azure landing zone
 
-An Azure landing zone is the recommended starting point that prepares your Azure environment. It provides a predefined setup for platform and application resources. Once the platform is in place, you can deploy AI workloads to dedicated application landing zones. Figure 2 below illustrates how AI workloads integrate within an Azure landing zone.
+An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point that prepares your Azure environment. It provides a predefined setup for platform and application resources. Once the platform is in place, you can deploy AI workloads to dedicated application landing zones. Figure 2 below illustrates how AI workloads integrate within an Azure landing zone.
 
 :::image type="content" source="./images/azure-landing-zone-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/azure-landing-zone-ai.svg" border="false":::
 *Figure 2. AI workload in an Azure landing zone.*
