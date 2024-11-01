@@ -31,7 +31,7 @@ Use the multi-region reference architectures as a starting point. Modify the ref
 
 ### Landing zone architecture for Oracle on Azure Virtual Machines
 
-The following diagram shows Oracle on Azure Virtual Machines deployed to an application landing zone utilizing a multi-region design. This approach distributes your Oracle databases across multiple Azure regions to enhance availability, scalability, and disaster recovery capabilities. It also highlights the critical design areas that support this multi-region deployment. The Oracle databases run on VMs in each region, and you can change the number and size of VMs to accommodate your needs. 
+The following diagram shows Oracle on Azure Virtual Machines deployed to an application landing zone utilizing a multi-region design. This approach distributes your Oracle databases across multiple Azure regions to enhance availability, scalability, and disaster recovery capabilities. It also highlights the critical design areas that support this multi-region deployment. The Oracle databases run on VMs in each region, and you can change the number and size of VMs to accommodate your needs.
 
 :::image type="content" source="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg" alt-text="Diagram that shows a reference architecture of Oracle on Azure Virtual Machines." border="false" lightbox="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg":::
 
