@@ -21,7 +21,7 @@ AI supports two main goals: enhancing individual efficiency and improving busine
 
 - *Conduct an assessment.* Gather input from various departments to identify challenges and inefficiencies that AI could address. Document current workflows to find areas where AI can automate tasks or provide insights.
 
-- *Explore industry use cases.* Research how other businesses use AI for insights. Stay informed about emerging AI technologies and applications relevant to your industry.
+- *Explore industry use cases.* Use the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for insights on problems AI can solve. Research how other businesses use AI. Stay informed about emerging AI technologies and applications relevant to your industry.
 
 - *Set AI targets.* For each use case, define a goal (general purpose), objective (desired outcome), and success metric (quantifiable measure) to guide your AI adoption. Clear AI targets drive you toward the right AI solution and help you measure and achieve value faster.
 
