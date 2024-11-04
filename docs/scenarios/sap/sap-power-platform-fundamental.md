@@ -30,7 +30,7 @@ This article provides an introduction to enhancing your SAP systems by using the
 
 You can build end-to-end-business solutions by using these components individually or together and integrate them with SAP, Microsoft 365, Dynamics 365, Azure, or other apps. The following image illustrates the main components of the integrated, low-code development suite. It enables businesses to enhance their SAP landscapes by building custom applications, automating processes, integrating AI, and getting actionable insights, all with a minimal need for extensive coding expertise.
 
-![Diagram that describes the components of Microsoft Power Platform.](./media/power-platform-overview.svg)
+:::image type="content" source="./media/power-platform-overview.svg" alt-text="[Diagram that describes the components of Microsoft Power Platform." lightbox="./media/power-platform-overview.svg":::
 
 The following underlying features provide essential capabilities for enabling seamless SAP integration.
 
