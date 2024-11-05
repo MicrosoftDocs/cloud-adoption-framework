@@ -65,14 +65,14 @@ An AI foundation provides the core infrastructure and resource hierarchy that su
 
 ### Use Azure landing zone
 
-An Azure landing zone is the recommended starting point that prepares your Azure environment. It provides a predefined setup for platform and application resources. Once the platform is in place, you can deploy AI workloads to dedicated application landing zones. Figure 2 below illustrates how AI workloads integrate within an Azure landing zone.
+An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point that prepares your Azure environment. It provides a predefined setup for platform and application resources. Once the platform is in place, you can deploy AI workloads to dedicated application landing zones. Figure 2 below illustrates how AI workloads integrate within an Azure landing zone.
 
 :::image type="content" source="./images/azure-landing-zone-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/azure-landing-zone-ai.svg" border="false":::
 *Figure 2. AI workload in an Azure landing zone.*
 
 ### Build an AI environment
 
-If you don't use an Azure landing zone, follow the recommendations in this article to build your AI. The following diagram shows a baseline resource hierarchy. It segments internal AI workloads and internet-facing AI workloads, as described in [establish AI governance](#establish-ai-governance). Internal workloads use policy to deny online access from customers. This separation safeguards internal data from exposure to external users. AI development uses a jumpbox to manage AI resources and data.
+If you don't use an Azure landing zone, follow the recommendations in this article to build your AI environment. The following diagram shows a baseline resource hierarchy. It segments internal AI workloads and internet-facing AI workloads, as described in [establish AI governance](#establish-ai-governance). Internal workloads use policy to deny online access from customers. This separation safeguards internal data from exposure to external users. AI development uses a jumpbox to manage AI resources and data.
 
 :::image type="content" source="./images/baseline-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/baseline-resource-hierarchy.svg" border="false":::
 *Figure 3. Baseline resource hierarchy for AI workloads.*
