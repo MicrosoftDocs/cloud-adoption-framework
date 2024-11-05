@@ -28,7 +28,7 @@ In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), y
 
 Acquiring AI skills requires organizations to assess their current talent pool and determine whether to upskill, recruit, or partner with external experts. Assess your current talent pool to identify needs for upskilling, recruiting, or external partnerships. Building a skilled AI team ensures you can adapt to challenges and handle various AI projects. AI constantly evolves, so maintaining a culture of continuous learning supports innovation and keeps skills current.
 
-- *Learn AI skills.* Use the [Microsoft Learn](/) platform for free AI [training](/training/), [certifications](/credentials/), and [product guidance](/docs/). Set certification goals, such as [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) . There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
+- *Learn AI skills.* Use the [Microsoft Learn](/) platform for free AI [training](/training/), [certifications](/credentials/), and [product guidance](/docs/). Set certification goals, such as [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/). There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
 
 - *Recruit AI professionals.* For expertise beyond your internal capabilities, recruit AI professionals experienced in model development, generative AI, or AI ethics. These professionals are in high-demand. Consider collaborating with educational institutions to access fresh talent. Make sure to update job descriptions to reflect evolving AI needs, and offer competitive compensation. Create an attractive employer brand. Showcase your organization’s commitment to innovation and technological advancement, making your brand appealing to AI professionals.
 
@@ -46,7 +46,7 @@ As a tactical step to developing AI solutions, you need to be able to access the
 
 - *Access role-based Copilots.* Role-based Copilots also have their own access requirements. For more information, see [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security).
 
-- *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure OpenAI Service, Azure AI Studio, Azure Machine Learning, Azure AI services, and Azure Virtual Machines.
+- *Access Azure AI resources.* Azure PaaS and IaaS solutions require an Azure account. These services include Azure OpenAI Service, Azure AI Studio, Azure Machine Learning, Azure AI services, Azure Virtual Machines, and Azure CycleCloud.
 
 ## Prioritize AI use cases
 
@@ -72,8 +72,6 @@ Developing an AI proof of concept (PoC) validates the feasibility and potential 
     | Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day?)         |
     | Analytical AI | Azure AI services: [Azure AI Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Azure AI Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence Studio](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), [Face service](/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library), \*[Azure AI Language](/azure/ai-services/language-service/overview#available-features), [Azure AI Speech](/azure/ai-services/speech-service/overview#get-started), \*[Azure AI Translator](/azure/ai-services/translator/translator-overview#translator-features-and-development-options), [Azure AI Vision](/azure/ai-services/computer-vision/overview#get-started). <br> \**Each feature of this AI service has its own quickstart guide.*|
 
-- *Document learnings*. Track key learnings from the PoC. Use this information to inform your overall AI strategy and better understand the resources, data, and skills needed for larger-scale projects.
-
 - *Reprioritize AI opportunities*. Use the insights gained from the PoC to refine your list of AI use cases. If the PoC presents unexpected challenges, adjust your priorities and focus on more feasible projects.
 
 ## Implement responsible AI
@@ -88,11 +86,17 @@ Responsible AI adoption requires incorporating ethical frameworks and regulatory
     | [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/) | Design AI systems that prioritize user well-being and foster positive interactions. |
     | [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/) | Assess and advance your organization's maturity in implementing responsible AI practices.|
 
-- *Start the AI governance process.* Responsible AI adoption involves creating governance policies to guide AI projects and monitor AI system behaviors. Start by identifying organizational risks specific to your AI initiatives. Document governance policies that outline responsibilities, compliance requirements, and ethical standards. See [Govern AI](govern.md) for details on this process.
+- *Start the AI governance process.* Responsible AI adoption involves creating governance policies to guide AI projects and monitor AI system behaviors. Start by identifying organizational risks specific to your AI initiatives. Document governance policies that outline responsibilities, compliance requirements, and ethical standards. See the article on Govern AI for details on this process.
+    > [!div class="nextstepaction"]
+    > [Govern AI](./govern.md)
 
-- *Start the AI management process.* AI management frameworks, such as GenAIOps or MLOps, help ensure ongoing adherence to responsible AI principles as your AI systems evolve. These practices involve deployment management, continuous monitoring, and cost optimization for AI models in production. See [Manage AI](./manage.md) for details on this process.
+- *Start the AI management process.* AI management frameworks, such as GenAIOps or MLOps, help ensure ongoing adherence to responsible AI principles as your AI systems evolve. These practices involve deployment management, continuous monitoring, and cost optimization for AI models in production. See the article on Manage AI for details on this process.
+    > [!div class="nextstepaction"]
+    > [Manage AI](./manage.md)
 
-- *Start the AI security process.* Security forms a critical part of responsible AI adoption. Regular security assessments help protect the confidentiality, integrity, and availability of your AI systems. Conduct risk assessments that address potential security threats specific to AI, such as adversarial attacks or data breaches. See [Secure AI](./secure.md) for details on this process.
+- *Start the AI security process.* Security forms a critical part of responsible AI adoption. Regular security assessments help protect the confidentiality, integrity, and availability of your AI systems. Conduct risk assessments that address potential security threats specific to AI, such as adversarial attacks or data breaches. See the article on Secure AI for details on this process.
+    > [!div class="nextstepaction"]
+    > [Secure AI](./secure.md)
 
 ## Estimate delivery timelines
 
@@ -113,6 +117,6 @@ For more information about adopting a Microsoft Copilot solution, see these reso
 |-----------------------------|--------------------------------|
 | Enterprise productivity     | [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)                 |
 | Low-code platform           | [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)                   |
-| Role-based agents in Microsoft 365 | [Microsoft 365 Copilot for Security](/copilot/security/microsoft-security-copilot) <br> [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction) <br> [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service) <br> [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance) |
+| Role-based | [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot) <br> [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction) <br> [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service) <br> [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance) |
 | In-product Copilots         | [GitHub](https://azure.microsoft.com//products/github/copilot) <br> [Power Apps](https://www.microsoft.com/power-platform/products/power-apps) <br> [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=&country=us) <br> [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai) <br> [Power Automate](https://www.microsoft.com/power-platform/products/power-automate) <br> [Azure](https://azure.microsoft.com/products/copilot/) |
-| Browser-based Copilots      | [Copilot (free)](https://copilot.microsoft.com/) <br> [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) |
+| Browser-based      | [Copilot (free)](https://copilot.microsoft.com/) <br> [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) |

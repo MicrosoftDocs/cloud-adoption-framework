@@ -1,5 +1,5 @@
 ---
-title: Use Secure Virtual WAN for Azure VMware Solution in a Single Region or in Dual Regions
+title: Secure Virtual WAN for Azure VMware Solution in a Single Region or in Dual Regions
 description: Learn about recommendations to use secure Virtual WAN and Azure VMware Solution for single-region and dual-region deployments.
 author: jasonmedina
 ms.author: jasonmedina
@@ -10,7 +10,7 @@ ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-VMware
 ---
 
-# Use secure Virtual WAN for Azure VMware Solution in a single region or in dual regions
+# Secure Virtual WAN for Azure VMware Solution in a single region or in dual regions
 
 This article explores the Azure VMware Solution network design topologies and considerations for single-region and dual-region scenarios that use secure Azure Virtual WAN with routing intent. It describes how routing intent directs traffic through a centralized security solution. This method enhances security and streamlines network management. This article provides design considerations for deployments with and without Azure ExpressRoute Global Reach. It highlights the benefits and challenges of each scenario.
 
@@ -28,13 +28,13 @@ For more information, see the following resources:
 
 Use secure Virtual WAN with routing intent to send all internet traffic and private network traffic (RFC 1918) to a security solution, such as Azure Firewall, a non-Microsoft network virtual appliance (NVA), or a software as a service (SaaS) solution. To support both single-region and dual-region designs, use Azure VMware Solution along with secure Virtual WAN and routing intent.
 
-### Use a single-region design
+### Single-region design
  
 Use the single-region design to inspect network traffic within the virtual hub security solution that goes to and from Azure VMware Solution. This approach simplifies network management and enhances your overall security posture. This design also prepares you if you want to deploy another Azure VMware Solution private cloud in a different region that has a dual-region design. Enable routing intent in a single region hub to help scale to a dual-hub region design later. This design supports configurations with or without Global Reach. 
 
 :::image type="content" source="./media/introduction-virtual-wan-azure-vmware-solution/single-region-virtual-wan-high-level-design.svg" alt-text="Diagram that shows a single-region, high-level design." border="false":::
 
-### Use a dual-region or dual-hub design  
+### Dual-region or dual-hub design  
 
 Use a dual-region design to inspect network traffic on two virtual hub security solutions. Inspect traffic to and from Azure VMware Solution, and inspect traffic across Azure VMware Solution private clouds that are in different regions. Enable routing intent on both regional hubs so that traffic can pass through both hub security solutions. A dual-region design with routing intent improves security and simplifies network management across regions. This design supports configurations with or without Global Reach.
 
@@ -44,7 +44,7 @@ Use a dual-region design to inspect network traffic on two virtual hub security 
 
 Use Global Reach to connect Azure VMware Solution to on-premises or regional Azure VMware Solution private clouds. Global Reach establishes a direct logical link via the Microsoft backbone.
 
-### Use Global Reach
+### Deployment with Global Reach
 
 When you deploy Global Reach, traffic between the Global Reach sites bypasses the secure Virtual WAN hub firewall. The secure Virtual WAN hub firewall doesn't inspect Global Reach traffic that goes between Azure VMware Solution and on-premises or between Azure VMware Solution private clouds in different regions.
 
@@ -54,7 +54,7 @@ For example, the following diagram shows how traffic between Azure VMware Soluti
 
 Global Reach simplifies the design because it provides a direct logical connection between Azure VMware Solution and on-premises or regional Azure VMware Solution private clouds. Use Global Reach to help troubleshoot traffic between Global Reach sites and eliminate throughput limitations at the secure Virtual WAN. A drawback is that Global Reach prevents the secure virtual hub security solution from inspecting traffic between regional Azure VMware Solution private clouds and on-premises, and also within Azure VMware Solution private clouds themselves. So the secure virtual hub's security solution can't inspect the traffic that flows directly between these entities.
 
-### Don't use Global Reach
+### Deployment without Global Reach
  
 We recommend that you consistently use Global Reach unless you have specific requirements. When you don't use Global Reach, you can inspect all the traffic on the secure Virtual WAN hub security solution between Azure VMware Solution and the on-premises or regional Azure VMware Solution private clouds. But this approach increases the complexity of the design. Also consider the throughput limitations at the secure Virtual WAN hub. Use Global Reach unless you have one of the following limitations.
 
@@ -72,7 +72,7 @@ The following diagram shows an example that doesn't use Global Reach.
 
 Use the following guidance to determine whether you need to enable Global Reach for your scenario.
  
-### Use a single-region design that has Global Reach
+### Single-region design that has Global Reach
  
 When you use Global Reach in a single region, the secure hub routes all private traffic and internet traffic through a security solution, such as Azure Firewall, a non-Microsoft NVA, or a SaaS solution. In the following diagram, routing intent inspects traffic, but Global Reach traffic between Azure VMware Solution and on-premises bypasses the hub firewall (connection **A**). So you need to inspect this Global Reach traffic with NSX-T in Azure VMware Solution or an on-premises firewall for better security across Global Reach sites.
                             
@@ -94,7 +94,7 @@ The following table shows the traffic flow to and from virtual networks.
 | Virtual networks | &#8594;<br>&#8592; | The internet | Yes|
 | Virtual networks | &#8594;<br>&#8592; | Virtual networks | Yes|
 
-### Use a single-region design that doesn't have Global Reach
+### Single-region design that doesn't have Global Reach
 
 When you don't use Global Reach in a single region, the secure hub routes all private traffic and internet traffic through a security solution. Routing intent inspects traffic. With this design, traffic between Azure VMware Solution and on-premises transits the hub firewall for inspection. Virtual hubs don't support ExpressRoute to ExpressRoute transitivity by default. To enable this transitivity, you must initiate a support ticket. After the support ticket is fulfilled, the secure hub advertises the default RFC 1918 addresses to Azure VMware Solution and to on-premises. When you use routing intent from on-premises, you can't advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
 
@@ -116,7 +116,7 @@ The following table shows the traffic flow to and from virtual networks.
 | Virtual networks | &#8594;<br>&#8592; | The internet | Yes|
 | Virtual networks | &#8594;<br>&#8592; | Virtual networks | Yes|
   
-### Use a dual-region design that has Global Reach
+### Dual-region design that has Global Reach
 
 When you use Global Reach in two regions, you deploy two secure hubs in different regions within your Virtual WAN. You also set up two Azure VMware Solution private clouds in separate regions.
 
@@ -158,7 +158,7 @@ The following table shows the traffic flow to and from virtual networks.
 | Virtual network 2 | &#8594;<br>&#8592; | On-premises | Yes, via the hub 2 firewall|
 | Virtual network 2 | &#8594;<br>&#8592; | The internet | Yes, via the hub 2 firewall|
   
-### Use a dual-region design that doesn't have Global Reach
+### Dual-region design that doesn't have Global Reach
 
 When you use Global Reach in two regions, you deploy two secure hubs in different regions within your Virtual WAN. You also set up two Azure VMware Solution private clouds in separate regions. 
 
