@@ -60,6 +60,12 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Enterprise-scale support for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md): We made updates to the baseline architecture and guidance for Azure Virtual Desktop in the enterprise-scale landing zone.
 - [Inventory and visibility in Azure](../manage/azure-management-guide/inventory.md): We made updates to the guidance for Azure Monitor Agent.
+- [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md): We reviewed the Azure Update Manager guidance and refreshed the architecture diagram.
+
+We made updates to the Azure Landing Zone architecture diagram to reflect guidance for multi-region deployments:
+
+- [Azure landing zones for modern application platforms](../scenarios/app-platform/ready.md)
+- [Review your environment or Azure landing zone for an SAP enterprise-scale migration](../scenarios/sap/ready.md)
 
 We made changes to refresh cloud scale analytics documentation. These updates include modifications to reflect the latest product naming and guidance and to improve clarity and readability. Explore the following articles to learn more:
 
