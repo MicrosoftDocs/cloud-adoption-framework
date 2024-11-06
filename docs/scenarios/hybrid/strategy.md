@@ -87,7 +87,7 @@ Azure Arc extends a single enterprise control plane with Azure management and se
 - **Promote greater accountability for enterprise IT teams.** Extend a uniform enterprise control plane from Azure Arc by centralizing visibility, operations, and compliance across resources and locations.
 - **Organize, govern, and secure across on-premises, multicloud, and edge environments.** Support Windows, Linux, SQL Server, and Kubernetes.
 - **Maintain standardized management and security with unified operations.** Ensure consistency across data workloads.
-- **Perform virtual machine lifecycle and management operations.** Provision, resize, delete, and manage virtual machines based on [VMware vSphere](/azure/azure-arc/vmware-vsphere/overview), [System Center Virtual Machine Manager (SCVMM)](/azure/azure-arc/system-center-virtual-machine-manager/overview), or [Azure Stack HCI](/azure-stack/hci/manage/azure-arc-vm-management-overview) environments.
+- **Perform virtual machine lifecycle and management operations.** Provision, resize, delete, and manage virtual machines based on [VMware vSphere](/azure/azure-arc/vmware-vsphere/overview), [System Center](/azure/azure-arc/system-center-virtual-machine-manager/overview), or [Azure Stack HCI](/azure-stack/hci/manage/azure-arc-vm-management-overview) environments.
 
 A combination of hybrid and multicloud environments is the most common scenario found across today's enterprise IT landscape. For most customers, moving to a hybrid and multicloud scenario embraces market reality and is motivated by a sound business strategy. The next decision for your organization is to commit to a distributed cloud computing model that can increase the speed of your cloud adoption and migration efforts.
 
