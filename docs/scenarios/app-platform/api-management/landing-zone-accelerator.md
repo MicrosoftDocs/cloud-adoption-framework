@@ -52,13 +52,19 @@ The following conceptual reference architecture is an example that shows design 
 
 [![Diagram that shows Azure A P I Management landing zone accelerator architecture.](./media/landing-zone-accelerator/apim-secure-baseline.jpg)](./media/landing-zone-accelerator/apim-secure-baseline.jpg#lightbox)
 
-It consists of API Management deployed in a virtual network in internal mode, fronted by an Application Gateway, with sample Azure Functions backends.
+It consists of API Management deployed in a virtual network in internal mode, fronted by an Application Gateway.
+
+## GenAI Gateway scenario
 
 GenAI Gateway reference implementation demonstrates how to provision and interact with Generative AI resources through API Management. The implementation is on top of the APIM baseline and additionally includes private deployments of Azure OpenAI endpoints, and the policies that are specifically tailored for GenAI use cases.
 
 By the end of this deployment guide, you would have deployed private Azure OpenAI endpoints and an opinionated set of policies in APIM to manage traffic to these endpoints. You can then test the policies by sending requests to the APIM gateway, and can modify either to include the policy fragments listed here or to include your own custom policies.
 
 [![Diagram that shows GenAI resources governance through Azure A P I Management.](./media/landing-zone-accelerator/apim-workload-ai.jpg)](./media/landing-zone-accelerator/apim-workload-ai.jpg#lightbox)
+
+The recommended approach for enterprise implementation is to begin with an Azure Landing Zone (ALZ) to ensure scalability, governance, and security are aligned with Cloud Adoption Framework best practices. If you’re planning to start your baseline integration with Azure OpenAI within an Azure Landing Zone, following the steps mentioned in the official documentation: [Azure OpenAI Baseline Landing Zone](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone)
+
+To help you manage generative AI APIs, such as those provided by Azure OpenAI Service, leverage Azure API Management that provides a range of policies, metrics, and other features to enhance security, performance, and reliability for the APIs serving your intelligent apps. Refer to [GenAI Gateway scenario](https://aka.ms/apim-genai-lza) on APIM landing zone for the reference implementation. 
 
 ## Deploy the Azure API Management landing zone accelerator
 
