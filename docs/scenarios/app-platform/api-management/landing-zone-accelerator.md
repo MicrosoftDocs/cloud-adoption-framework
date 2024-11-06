@@ -25,14 +25,15 @@ The Azure API Management landing zone accelerator assumes that a platform founda
 
 ## What the Azure API Management landing zone accelerator provides
 
-The landing zone accelerator approach provides these assets to support your project:
+The landing zone accelerator approach provides multiple scenarios and below assets to support your project:
 
 - A modular approach, so that you can customize environment variables
 - Design guidelines to aid in evaluating critical decisions
 - The landing zone architecture
 - An implementation that includes:
-  - A deployable reference capable of creating the environment for your API Management deployment
+  - A deployable reference capable of creating the APIM with a secure baseline configuration with no backends and a sample API
   - A Microsoft-approved API Management reference implementation to test the deployed environment
+  - GenAI Gateway scenario, deploys on top of the secure baseline, private Azure OpenAI endpoints as backend and provision API that can handle [multiple use cases](https://github.com/Azure/apim-landing-zone-accelerator/blob/main/scenarios/workload-genai/README.md#scenarios-handled-by-this-accelerator) like load balancing multiple Open AI endpoints, tracking token usage, adaptive rate limiting, managing spikes with PAYG and more.
 
 ## Design guidelines
 
@@ -42,16 +43,22 @@ These articles provide guidelines for creating your landing zone based on the de
 - [Network topology and connectivity](./network-topology-and-connectivity.md)
 - [Security](./security.md)
 - [Management](./management.md)
-- [Governance](./governance.md)
+- [Governance](./governance.md) 
 - [Platform automation and DevOps](./platform-automation-and-devops.md)
 
 ## Example conceptual reference architecture
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-[![Diagram that shows Azure A P I Management landing zone accelerator architecture.](./media/landing-zone-accelerator/reference-implementation.png)](./media/landing-zone-accelerator/reference-implementation.png#lightbox)
+[![Diagram that shows Azure A P I Management landing zone accelerator architecture.](./media/landing-zone-accelerator/apim-secure-baseline.jpg)](./media/landing-zone-accelerator/apim-secure-baseline.jpg#lightbox)
 
 It consists of API Management deployed in a virtual network in internal mode, fronted by an Application Gateway, with sample Azure Functions backends.
+
+GenAI Gateway reference implementation demonstrates how to provision and interact with Generative AI resources through API Management. The implementation is on top of the APIM baseline and additionally includes private deployments of Azure OpenAI endpoints, and the policies that are specifically tailored for GenAI use cases.
+
+By the end of this deployment guide, you would have deployed private Azure OpenAI endpoints and an opinionated set of policies in APIM to manage traffic to these endpoints. You can then test the policies by sending requests to the APIM gateway, and can modify either to include the policy fragments listed here or to include your own custom policies.
+
+[![Diagram that shows GenAI resources governance through Azure A P I Management.](./media/landing-zone-accelerator/apim-workload-ai.jpg)](./media/landing-zone-accelerator/apim-workload-ai.jpg#lightbox)
 
 ## Deploy the Azure API Management landing zone accelerator
 
