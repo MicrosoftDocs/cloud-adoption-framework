@@ -34,7 +34,7 @@ The Azure Architecture Center offers reference architectures and guides to help 
 | [Document processing architectures](/azure/architecture/ai-ml/architecture/automate-document-classification-durable-functions) | Architectures | Any |
 | [Video and image classification architecture](/azure/architecture/ai-ml/architecture/analyze-video-computer-vision-machine-learning)| Architectures |Any |
 | [Audio processing architecture](/azure/architecture/ai-ml/openai/architecture/call-center-openai-analytics) | Architecture | Any|
-| [Predictive analytics architecture](/azure/architecture/ai-ml/architecture/customer-lifecycle-churn)| Architecture | Any|
+| [Predictive analytics architecture](/azure/architecture/ai-ml/idea/personalized-offers)| Architecture | Any|
 | [Azure Machine Learning](/azure/architecture/ai-ml/#azure-machine-learning)| Guides | Any |
 | [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2)| Guides|Any |
 | [Team Data Science Process](/azure/architecture/data-science-process/overview) | Guides|Any |
