@@ -22,17 +22,17 @@ Reliability involves minimizing downtime and ensuring consistent performance for
 
 - *Design for graceful degradation during partial failures.* Ensure core functionality remains available by serving less complex AI models or limiting specific features when some VMs become unavailable, allowing users access to essential services even during outages.
 
-- *Implement regular backups for key assets.* Regularly back up model data, training datasets, and configurations to enable quick restoration in case of failure, safeguarding valuable progress and data.
+- *Implement regular backups for key assets.* Regularly back up model data, training datasets, and configurations to enable quick restoration if there was a failure, safeguarding valuable progress and data.
 
 ## Security
 
-Security covers protective measures to safeguard AI models, data, and infrastructure against unauthorized access and threats. Implementing updates, monitoring model integrity, and controlling access prevent vulnerabilities that could compromise sensitive information. These steps are essential to maintain data privacy and trustworthiness of AI solutions in production environments.
+Security covers protective measures to safeguard AI models, data, and infrastructure against unauthorized access and threats. Implement updates, monitor model integrity, and control access to prevent vulnerabilities that could compromise sensitive information. These steps are essential to maintain data privacy and trustworthiness of AI solutions in production environments.
 
 - *Schedule updates for Azure resources.* Use maintenance configurations to set specific update schedules for VMs and extensions, reducing vulnerability windows.
 
 - *Patch virtual machines and container images regularly.* Enable [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for VMs and scale sets to maintain security against new threats. For more information, see [Guest updates and host maintenance overview](/azure/virtual-machines/updates-maintenance-overview).
 
-- *Monitor for model drift and ensure integrity.* Ensure model integrity by implementing security mechanisms such as digital signatures or hash verifications for model files to prevent unauthorized modifications. Use Azure Monitor to track key performance metrics and identify model drift, which could indicate potential security vulnerabilities or data shifts. You can define custom metrics (accuracy, F1-score, and data distribution on your models) in your code by using the [Azure Monitor Metrics SDK](/azure/azure-monitor/metrics/custom-overview), which allows you to send your model’s performance statistics and data drift measurements to Azure Monitor. Monitoring for performance changes over time can help detect when a model's behavior deviates, potentially signaling an attack or a need for retraining. This proactive approach helps safeguard model integrity and maintain security compliance.
+- *Monitor for model drift and ensure integrity.* Ensure model integrity by implementing security mechanisms such as digital signatures or hash verifications for model files to prevent unauthorized modifications. Use Azure Monitor to track key performance metrics and identify model drift, which could indicate potential security vulnerabilities or data shifts. You can define custom metrics (accuracy, F1-score, and data distribution on your models) in your code by using the [Azure Monitor Metrics SDK](/azure/azure-monitor/metrics/custom-overview). Azure Monitor Metrics SDK allows you to send your model’s performance statistics and data drift measurements to Azure Monitor. Monitoring for performance changes over time can help detect when a model's behavior deviates, potentially signaling an attack or a need for retraining. This proactive approach helps safeguard model integrity and maintain security compliance.
 
 - *Implement auditing and access logs.* Use Azure Monitor and Log Analytics to log access to models and VMs, helping to identify unauthorized access or unusual usage patterns. For more information, see [Activity logs in Azure Monitor](/azure/azure-monitor/essentials/activity-log).
 
@@ -40,9 +40,9 @@ Security covers protective measures to safeguard AI models, data, and infrastruc
 
 - *Set up anomaly detection for model outputs.* Use Azure Monitor to track the output metrics of your models and set up alerts for unusual behavior. For example, monitoring API responses from your model can help detect abnormal output. You can set anomaly detection on a metric like prediction accuracy to automatically detect when it drops outside of an expected range. For more information, see [Create and Manage Metric Alerts with Dynamic Thresholds](/azure/azure-monitor/alerts/alerts-dynamic-thresholds).
 
-- *Enforce model access policies.* Use [Azure RBAC](/azure/role-based-access-control/overview) and Azure AD Entra ID to secure access to VMs and model files, limiting access to authorized users only.
+- *Enforce model access policies.* Use [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview) and Microsoft Entra ID to secure access to VMs and model files, limiting access to authorized users only.
 
-- *Regularly revalidate models against updated data.*  Implementing periodic revalidation of your model using automated scripts or workflows on your VMs ensures that the model remains accurate and effective against current datasets, mitigating risks from outdated or inaccurate predictions. By scheduling these tasks with Azure Automation or Azure Logic Apps, you can maintain compliance with data standards and enhance overall model security. This proactive approach helps identify vulnerabilities early, ensuring continuous improvement and safeguarding against potential threats. You can schedule your automation workflows to periodically trigger revalidation tasks. Start with an [Azure automation runbook](/azure/automation/automation-runbook-execution), [run in the virtual machine](/azure/automation/automation-hybrid-runbook-worker), create an appropriate [schedule](/azure/automation/shared-resources/schedules) to get validation results.
+- *Regularly revalidate models against updated data.* Implementing periodic revalidation of your model using automated scripts or workflows on your VMs ensures that the model remains accurate and effective against current datasets, mitigating risks from outdated or inaccurate predictions. By scheduling these tasks with Azure Automation or Azure Logic Apps, you can maintain compliance with data standards and enhance overall model security. This proactive approach helps identify vulnerabilities early, ensuring continuous improvement and safeguarding against potential threats. You can schedule your automation workflows to periodically trigger revalidation tasks. Start with an [Azure Automation runbook](/azure/automation/automation-runbook-execution), [run in the virtual machine](/azure/automation/automation-hybrid-runbook-worker), create an appropriate [schedule](/azure/automation/shared-resources/schedules) to get validation results.
 
 - *Track data lineage and model file changes.* Enable versioning in Azure Blob Storage and track data used in training and inference, ensuring no unauthorized data affects model outcomes.
 
@@ -52,11 +52,11 @@ Security covers protective measures to safeguard AI models, data, and infrastruc
 
 ## Cost optimization
 
-Cost optimization involves aligning resource usage with workload requirements to avoid unnecessary expenses. Right-sizing VMs, committing to reserved instances, and setting up auto-scaling help manage costs without compromising performance. Controlling costs on Azure infrastructure is vital for long-term sustainability and scalability of AI deployments.
+Cost optimization involves aligning resource usage with workload requirements to avoid unnecessary expenses. Right-sizing VMs, committing to reserved instances, and setting up autoscaling help manage costs without compromising performance. Controlling costs on Azure infrastructure is vital for long-term sustainability and scalability of AI deployments.
 
 - *Commit to [Reserved Instances](https://azure.microsoft.com/pricing/reserved-vm-instances).* Save on virtual machine (VM) costs by committing to a one- or three-year term, which offers discounted rates.
 
-- *Use VM Scale Sets (VMSS) for automatic scaling.* [Automatically scale](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview)  VM instances based on metrics like CPU usage, paying only for what you need and preventing over-provisioning.
+- *Use Azure Virtual Machine Scale Sets for automatic scaling.* [Automatically scale](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview)  VM instances based on metrics like CPU usage, paying only for what you need and preventing over-provisioning.
 
 - *Set automatic shutdowns for idle instances.* Avoid costs from unused resources by enabling automatic shutdown, especially for development and test environments.
 
@@ -72,19 +72,19 @@ Operational excellence involves optimizing the configuration and management of A
 
 - *Optimize resource allocation.* Regularly review Azure VM sizes and configurations based on actual resource usage to match workload needs. Use Azure Advisor for recommendations on optimal sizing and scaling.
 
-- *Configure auto-scaling for efficiency.* Set up auto-scaling for VMs or containers to handle workload demands without over-provisioning. Use Azure Virtual Machine Scale Sets to adjust resources dynamically based on demand. For more information, see [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview).
+- *Configure autoscaling for efficiency.* Set up autoscaling for VMs or containers to handle workload demands without over-provisioning. Use Azure Virtual Machine Scale Sets to adjust resources dynamically based on demand. For more information, see [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview).
 
 - *Conduct regular performance tuning.* Continuously profile the application to identify and resolve performance bottlenecks. Use [Application Insights Profiler](/azure/azure-monitor/profiler/profiler-overview) to analyze model code and resource usage.
 
 - *Implement distributed training for efficiency.* Use distributed training techniques, if applicable, to reduce training time by using multiple VMs. Frameworks like Horovod and PyTorch support distributed training on Azure.
 
-- *Save checkpoints in Azure Blob Storage.* Save model states, weights, and configurations periodically to Azure Blob Storage. This can be done using Azure SDKs or libraries available in the programming language you're using for the LLM. Store the checkpoints in a structured format, like TensorFlow SavedModel or PyTorch checkpoint files. Modify your training or inference code to include checkpoint logic. Start with setting intervals (after every epoch or a certain number of iterations) to save the model's state. Use a consistent naming convention for checkpoint files to track the most recent state easily.
+- *Save checkpoints in Azure Blob Storage.* Save model states, weights, and configurations periodically to Azure Blob Storage. You can use Azure SDKs or libraries available in the programming language you're using for the LLM. Store the checkpoints in a structured format, like TensorFlow SavedModel or PyTorch checkpoint files. Modify your training or inference code to include checkpoint logic. Start with setting intervals (after every epoch or some iterations) to save the model's state. Use a consistent naming convention for checkpoint files to track the most recent state easily.
 
-- *Design for state recovery.* Ensure your application can recover from a saved checkpoint. Implement logic to load the model's state from Azure Blob Storage when the application starts. This includes, checking for existing checkpoints, and loading the most recent checkpoint if available, allowing the application to resume without losing progress.
+- *Design for state recovery.* Ensure your application can recover from a saved checkpoint. Implement logic to load the model's state from Azure Blob Storage when the application starts. It includes, checking for existing checkpoints, and loading the most recent checkpoint if available, allowing the application to resume without losing progress.
 
 ## Performance efficiency
 
-Performance efficiency refers to maximizing the processing power of Azure infrastructure to meet AI model demands. Tuning GPU settings, optimizing input/output (I/O) processes, and running benchmarking tests improve computational speed and responsiveness. Ensuring high performance supports the execution of complex AI models at scale, which enhances user satisfaction and reduces latency.
+Performance efficiency refers to maximizing the processing power of Azure infrastructure to meet AI model demands. You should tune GPU settings, optimize input/output (I/O) processes, and run benchmarking tests to improve computational speed and responsiveness. Ensuring high performance supports the execution of complex AI models at scale, which enhances user satisfaction and reduces latency.
 
 ### GPU tuning
 
@@ -94,9 +94,9 @@ Increase the clock rate of a graphics processing unit (GPU) to improve performan
 
 ### I/O tuning
 
-- *Optimize scratch storage.* Scratch needs to have high throughput and low latency. The training job requires reading data, processing it, and using this storage location as scratch space while the job runs. Ideally, you would use the local SSD directly on each VM. If you need a shared filesystem for scratch, combining all NVMe SSDs to create a Parallel File System (PFS) might be a great option in terms of cost and performance, assuming it has sufficient capacity. One method to achieve this is with BeeOND. If this is not suitable, other storage options like IaaS Lustre PFS, Azure ClusterStor, and Azure NetApp files can be explored.
+- *Optimize scratch storage.* Scratch needs to have high throughput and low latency. The training job requires reading data, processing it, and using this storage location as scratch space while the job runs. Ideally, you would use the local SSD directly on each VM. If you need a shared filesystem for scratch, combining all NVMe SSDs to create a Parallel File System (PFS) might be a great option in terms of cost and performance, assuming it has sufficient capacity. One method is to use BeeOND. If BeeOnd isn't suitable, you can explore storage options like IaaS Lustre PFS, Azure ClusterStor, and Azure NetApp files.
 
-- *Implement checkpoint storage.* Large deep learning training jobs can run for weeks, depending on the number of VMs used. Just like any HPC cluster, you can encounter failures, such as InfiniBand issues, dual in-line memory module (DIMM) failures, error-correcting ode (ECC) errors in GPU memory. It is critical to have a checkpointing strategy. Know the checkpoint interval (when data is saved). Understand how much data is transferred each time. Have a storage solution that meets capacity and performance requirements. Use Blob Storage, if it meets the performance needs.
+- *Implement checkpoint storage.* Large deep learning training jobs can run for weeks, depending on the number of VMs used. Just like any HPC cluster, you can encounter failures, such as InfiniBand issues, dual in-line memory module (DIMM) failures, error-correcting ode (ECC) errors in GPU memory. It's critical to have a checkpointing strategy. Know the checkpoint interval (when data is saved). Understand how much data is transferred each time. Have a storage solution that meets capacity and performance requirements. Use Blob Storage, if it meets the performance needs.
 
 ### Benchmarking tests
 
@@ -124,18 +124,18 @@ Deploying Megatron-LM requires specific software and hardware.
 
 - *Pick the right deployment options.* Use the [CycleCloud Workspace for Slurm](./cycle-cloud.md) to simplify deployment. Choose NC-series or ND-series SKUs for the GPU partition. For multi-node training, ND-series SKUs are recommended for RDMA support. Azure’s HPC marketplace images generally include these drivers and libraries. If customization is needed, the azhpc-images repository can ensure compatibility.
 
-- *Use the right image.* The software requirements for the project include a Linux-based operating system, typically Ubuntu. For multi-GPU and multi-node communication, it is essential to have communication libraries such as NCCL and MPI. Additionally, appropriate NVIDIA drivers must be installed to ensure GPU acceleration. [Azure's HPC marketplace images](/azure/virtual-machines/azure-hpc-vm-images) generally come with these drivers and libraries pre-installed. However, if customization is necessary, the [azhpc-images](https://github.com/Azure/azhpc-images?tab=readme-ov-file#azure-hpcai-vm-images) repository can be used to ensure compatibility.
+- *Use the right image.* The software requirements for the project include a Linux-based operating system, typically Ubuntu. For multi-GPU and multi-node communication, it's essential to have communication libraries such as NCCL and MPI. Additionally, appropriate NVIDIA drivers must be installed to ensure GPU acceleration. [Azure's HPC marketplace images](/azure/virtual-machines/azure-hpc-vm-images) come with these drivers and libraries preinstalled. However, if customization is necessary, the [azhpc-images](https://github.com/Azure/azhpc-images?tab=readme-ov-file#azure-hpcai-vm-images) repository can be used to ensure compatibility.
 
 #### Running Megatron-LM on Azure HPC
 
-It is typically recommended that Megatron-LM be launched using the latest release of [NGC's PyTorch container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch). This introduces a set of additional requirements for traditional Slurm-based HPC clusters:
+You should run Megatron-LM using the latest release of [NGC's PyTorch container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch). It introduces a set of extra requirements for traditional Slurm-based HPC clusters:
 
 - [enroot](https://github.com/NVIDIA/enroot): a tool that allows users to run containerized applications on HPC clusters without requiring root privileges or modifying the host system.
 - [pyxis](https://github.com/NVIDIA/pyxis): a plugin for Slurm that enables seamless integration of enroot with Slurm, allowing users to submit containerized jobs to Slurm queues and run them on HPC nodes.
 
-Both of these components are included in the CycleCloud Slurm workspace but are currently not included in Slurm clusters that are built via CycleCloud. These additional components can be introduced via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects?view=cyclecloud-8).
+Both of these components are included in the CycleCloud Slurm workspace but are currently not included in Slurm clusters that are built via CycleCloud. These extra components can be introduced via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects?view=cyclecloud-8).
 
-With these requirements met, you will be able to use Megatron-LM for LLM training by:
+With these requirements met, you can use Megatron-LM for LLM training by:
 
 1.*Verifying the performance of your cluster*: with [Node Health Checks](https://github.com/Azure/azurehpc-health-checks) you can identify any potential hardware issues before running your workload, and NCCL tests can be used to verify the distributed all-reduce performance of the cluster.
 2.*Selecting your training data*: the [codeParrot](https://huggingface.co/codeparrot/codeparrot-small) model can be used as a starting point to validate your workflow.
@@ -146,9 +146,7 @@ This setup ensures efficient deployment and training of large language models on
 
 ### NCCL bandwidth test
 
-For more information, see [NVIDIA/nccl: Optimized primitives for collective multi-GPU communication](https://github.com/nvidia/nccl).
-
-To verify and optimize GPU communication across nodes, run the NCCL bandwidth test, a specialized tool within NCCL, a library that facilitates high-speed communication between GPUs. NCCL supports collective operations, including all-reduce, all-gather, reduce, broadcast, and reduce-scatter, across single or multi-GPU nodes, and achieves optimal performance on platforms with PCIe, NVLink, NVswitch, or networking setups like InfiniBand or TCP/IP.
+To verify and optimize GPU communication across nodes, run the NCCL bandwidth test. The NCCL bandwidth test is specialized tool within NCCL, a library that facilitates high-speed communication between GPUs. NCCL supports collective operations, including all-reduce, all-gather, reduce, broadcast, and reduce-scatter, across single or multi-GPU nodes, and achieves optimal performance on platforms with PCIe, NVLink, NVswitch, or networking setups like InfiniBand or TCP/IP. For more information, see [NVIDIA/NCCL tests](https://github.com/nvidia/nccl).
 
 #### NCCL tests performance metrics
 
@@ -156,11 +154,11 @@ Use the NCCL bandwidth test to assess key metrics, including time and bandwidth.
 
 #### Initiate test
 
-To initiate these tests within a CycleCloud deployment, connect to the scheduler node via SSH and access a GPU-equipped compute node. Clone the CycleCloud Git repository for NCCL tests, navigate to the `nccl-tests` directory, and create a hostfile listing the nodes for testing. Obtain the scheduler node’s IP address from CycleCloud’s web app or use a default IP like 10.50.0.5.
+To initiate these tests within a CycleCloud deployment, connect to the scheduler node via SSH and access a GPU-equipped compute node. Clone the CycleCloud Git repository for NCCL tests, navigate to the `nccl-tests` directory, and create a host file listing the nodes for testing. Obtain the scheduler node’s IP address from CycleCloud’s web app or use a default IP like 10.50.0.5.
 
 Before running tests, specify different [arguments](https://github.com/nvidia/nccl-tests?tab=readme-ov-file#arguments) like the number of GPUs per thread (`-g`), data size range (`-b` for minimum bytes and `-e` for maximum bytes), step increment (`-i` or `-f`), reduction operation type (`-o`), datatype (`-d`), root device (`-r`), iteration count (`-n`), warmup count (`-w`), and CUDA graph settings (`-G`). Refer to the NCCL test documentation for a full list of adjustable parameters.
 
-Sample performance metrics from two `Standard_ND96amsr_a100_v4` VMs show the performance impact of configurations such as PCIe Relaxed Ordering (RO). For further information on NCCL bandwidth testing, view the documentation or examples provided on the NVIDIA and Microsoft HPC forums.
+Sample performance metrics from two `Standard_ND96amsr_a100_v4` VMs show the performance effects of configurations such as PCIe Relaxed Ordering (RO). For further information on NCCL bandwidth testing, view the documentation or examples provided on the NVIDIA and Microsoft HPC forums.
 
 ### RCCL tests
 
@@ -168,5 +166,5 @@ ROCm Communication Collectives Library is a specialized library designed for eff
 
 - Set Up Environment: Install ROCm and ensure RCCL is properly installed on all nodes.
 - Build RCCL Tests: Clone the repository, navigate to the rccl-tests directory, and compile the tests.
-- Run Bandwidth Tests: Use the provided test executables (e.g., rccl-tests), specifying communication operations like all-reduce.
-- Analyze Performance: Compare bandwidth and latency results across nodes and GPUs
+- Run Bandwidth Tests: Use the provided test executables (rccl-tests), specifying communication operations like all-reduce.
+- Analyze Performance: Compare bandwidth and latency results across nodes and GPUs.
