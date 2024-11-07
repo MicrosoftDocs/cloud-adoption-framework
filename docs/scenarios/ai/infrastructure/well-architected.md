@@ -52,50 +52,86 @@ ms.topic: conceptual
 
 - *Conduct regular performance tuning.* Continuously profile the application to identify and resolve performance bottlenecks. Use Application Insights Profiler to analyze model code and resource usage.
 
-- *Implement distributed training for efficiency.* Use distributed training techniques, if applicable, to reduce training time by leveraging multiple VMs. Frameworks like Horovod and PyTorch support distributed training on Azure.
+- *Implement distributed training for efficiency.* Use distributed training techniques, if applicable, to reduce training time by using multiple VMs. Frameworks like Horovod and PyTorch support distributed training on Azure.
 
 - *Save checkpoints in Azure Blob Storage.* Store model states, weights, and configurations periodically in Azure Blob Storage using structured formats like TensorFlow SavedModel or PyTorch checkpoints. Set up interval-based checkpointing to capture model progress at key stages.
 
 - *Design for state recovery.* Ensure the application can recover from saved checkpoints by loading the model state from Azure Blob Storage on startup. Check for existing checkpoints and load the latest available to resume without loss of progress.
 
+## Cost optimization
+
+Using models on Azure IaaS might become costly if not carefully managed, especially as compute and storage demands grow. When planning is not intentional, over-provisioned resources or idle instances can drive up expenses. Resource usage must align with workload needs to avoid unnecessary costs and ensure sustainable model development. Consider these strategies:
+
+- *Commit to Reserved Instances.* Save on virtual machine (VM) costs by committing to a one- or three-year term, which offers discounted rates.
+
+- *Use VM Scale Sets (VMSS) for automatic scaling.* Automatically adjust VM instances based on metrics like CPU usage, paying only for what you need and preventing over-provisioning.
+
+- *Set automatic shutdowns for idle instances.* Avoid costs from unused resources by enabling automatic shutdown, especially for development and test environments.
+
+- *Use Azure Savings Plans for predictable usage.* Reduce costs compared to pay-as-you-go pricing by committing to consistent usage across VM sizes and regions.
+
+- *Use Azure Spot instances for fault-tolerant workloads.* Get substantial discounts on spare capacity for workloads that can tolerate interruptions.
+
+- *Select the right storage solution.* Balance cost and performance based on workload needs. Choose Azure Managed Lustre (AMLFS) for high-throughput, large-scale applications, and Azure NetApp Files (ANF) for advanced data management and reliability.
+
 ## Performance efficiency
 
-### Tune GPUs
+### GPU tuning
 
-Increasing the clock rate of a Graphics Processing Unit (GPU) can significantly improve performance, especially for tasks requiring high graphical processing or complex computations. Higher clock speeds allow the GPU to execute more operations in a given time period, enhancing overall efficiency. Use this [GPU-optimization script](https://github.com/Azure/azurehpc/tree/master/experimental/gpu_optimizations#gpu-optimization) to set the GPU clock frequencies to their maximum values.
+Increase the clock rate of a graphics processing unit (GPU) to improve performance, especially for tasks requiring high graphical processing or complex computations. Higher clock speeds allow the GPU to execute more operations in a given time period, enhancing overall efficiency. Use this [GPU-optimization script](https://github.com/Azure/azurehpc/tree/master/experimental/gpu_optimizations#gpu-optimization) to set the GPU clock frequencies to their maximum values.
 
-- *Enable Accelerated Networking for supported VM SKUs.* This feature enhances front-end network performance, especially on VM SKUs that support it.
+- *Enable Accelerated Networking.* Accelerated Networking is a hardware acceleration technology that allows virtual machines to use single root I/O virtualization (SR-IOV) on supported virtual machines types. It provides lower latency, reduced jitter, and decreased CPU utilization. Enable accelerated Networking offers substantial enhancements in front-end network performance.
 
-**I/O tuning**
+### I/O tuning
 
-- *Optimize scratch storage for high throughput and low latency.* Use local SSDs on VMs whenever possible for fast access to temporary data. If shared scratch storage is required, consider combining NVMe SSDs with a parallel file system (PFS) like BeeOND, IaaS Lustre PFS, Azure ClusterStor, or Azure NetApp Files.
-- *Implement checkpoint storage for DL training jobs.* Large training jobs need reliable checkpointing. Determine checkpoint intervals, data transfer volume, and required storage performance. Use Blob Storage if it meets these needs.
+- *Optimize scratch storage.* Scratch needs to have high throughput and low latency. The training job requires reading data, processing it, and using this storage location as scratch space while the job runs. Ideally, you would use the local SSD directly on each VM. If you need a shared filesystem for scratch, combining all NVMe SSDs to create a Parallel File System (PFS) might be a great option in terms of cost and performance, assuming it has sufficient capacity. One method to achieve this is with BeeOND. If this is not suitable, other storage options like IaaS Lustre PFS, Azure ClusterStor, and Azure NetApp files can be explored.
 
-**Benchmarking tests**
+- *Implement checkpoint storage.* Large deep learning training jobs can run for weeks, depending on the number of VMs used. Just like any HPC cluster, you can encounter failures, such as InfiniBand issues, dual in-line memory module (DIMM) failures, error-correcting ode (ECC) errors in GPU memory. It is critical to have a checkpointing strategy. Know the checkpoint interval (when data is saved). Understand how much data is transferred each time. Have a storage solution that meets capacity and performance requirements. Use Blob Storage, if it meets the performance needs.
 
-- *Run High-Performance Linpack (HPL) on each VM.* HPL in the Nvidia HPC-benchmarks container verifies floating-point GPU performance.
-- *Use CUDA’s bandwidthTest for data transfer rates.* This test checks the speed of data transfer between host and GPU to ensure optimal bandwidth.
-- *Conduct distributed deep learning benchmark tests.* Use tests like Megatron, NCCL, and RCCL to assess and optimize multi-GPU training efficiency, focusing on minimizing communication bottlenecks and ensuring model scalability.
+### Benchmarking tests
 
-### Megatron tests
+Benchmarking tests help evaluate and improve distributed deep learning training performance on GPUs, especially for large-scale models. These tests measure the efficiency of GPU communication across nodes, aiming to reduce data transfer bottlenecks during distributed training. The three tests discussed include:
 
-**Overview of NVIDIA Megatron-LM**
+- **Megatron Framework**: Supports large-scale language models by improving distributed training efficiency.
+- **NCCL and RCCL Tests**: Evaluate performance and accuracy in multi-GPU communication using NCCL or RCCL libraries, testing patterns like all-reduce and scatter.
 
-- *Use Megatron-LM for training large NLP models.* This open-source framework enables training models with billions of parameters, optimized for NVIDIA hardware.
-- *Leverage Azure HPC for scalable model training.* Azure’s HPC infrastructure, including NC- or ND-series SKUs, supports scalable, high-performance model training without on-premises hardware.
-  
-**Architecture requirements**
+These tests ensure scalability and optimal performance for LLMs, with Megatron focusing on model training and NCCL/RCCL on GPU communication.
 
-- *Set up Megatron-LM on CycleCloud Slurm Workspace.* This pre-configured solution deploys a Slurm cluster with required libraries, ideal for NC- or ND-series GPU SKUs. Note that NC-series SKUs lack RDMA support, so use ND-series for multi-node training.
-  
-**Software requirements**
+### Using NVIDIA Megatron-LM
 
-- *Use a Linux OS and install NCCL, MPI, and NVIDIA drivers.* These components support multi-GPU and multi-node communication. Marketplace HPC images include the necessary libraries and drivers. If a custom image is needed, base it on HPC marketplace images or use the azhpc-images repository to ensure compatibility.
-  
-**Running Megatron-LM on Azure HPC infrastructure**
+NVIDIA Megatron-LM is an open-source framework for training large language models. It allows developers to create massive neural networks for NLP tasks, with features including:
 
-- *Launch Megatron-LM using the latest NGC PyTorch container.* For Slurm clusters, use enroot and pyxis to run containerized applications seamlessly. The CycleCloud Slurm workspace includes these components.
-- *Verify cluster performance and configure data processing.* Conduct Node Health Checks and NCCL tests for distributed performance. Preprocess training data using the Megatron-LM’s preprocess_data.py script and refer to provided training examples.
+- **Parallelism**: Supports model, data, and pipeline parallelism for billion-parameter models.
+- **Scalability**: Scales across multiple GPUs and nodes for efficient large model training.
+- **Flexibility**: Allows configuration of model architecture, data loading, and training strategies.
+- **Optimizations**: Uses NVIDIA’s GPU optimizations for performance gains.
+
+Megatron-LM deploys on Azure HPC infrastructure, and it uses Azure’s scalability for large language models without requiring on-premises hardware.
+
+#### Setting Up Megatron-LM on Azure HPC
+
+Deploying Megatron-LM requires specific software and hardware.
+
+- *Pick .* Use the CycleCloud Slurm Workspace to simplify deployment. Choose NC-series or ND-series SKUs for the GPU partition. For multi-node training, ND-series SKUs are recommended for RDMA support. Azure’s HPC marketplace images generally include these drivers and libraries. If customization is needed, the azhpc-images repository can ensure compatibility.
+- *Use the right image.* The software requirements for the project include a Linux-based operating system, typically Ubuntu. For multi-GPU and multi-node communication, it is essential to have communication libraries such as NCCL and MPI. Additionally, appropriate NVIDIA drivers must be installed to ensure GPU acceleration. [Azure's HPC marketplace images](/azure/virtual-machines/azure-hpc-vm-images) generally come with these drivers and libraries pre-installed. However, if customization is necessary, the azhpc-images repository can be used to ensure compatibility.
+
+#### Running Megatron-LM on Azure HPC
+
+Using Megatron-LM with Azure’s infrastructure involves a few additional components:
+
+- **enroot**: Runs containerized applications on HPC clusters without root privileges.
+- **pyxis**: Integrates enroot with Slurm, enabling containerized jobs on HPC nodes.
+
+These are included in the CycleCloud Slurm workspace but may need to be added to other Slurm clusters via CycleCloud projects.
+
+Steps to train with Megatron-LM:
+
+1. **Verify Cluster Performance**: Run Node Health Checks to identify hardware issues. Use NCCL tests to confirm distributed all-reduce performance.
+2. **Prepare Training Data**: Use a model like CodeParrot to validate the workflow.
+3. **Data Preprocessing**: Use the `preprocess_data.py` script in Megatron-LM to format data for training.
+4. **Training Configuration**: Refer to Megatron-LM examples to set up training parameters. 
+
+This setup ensures efficient deployment and training of large language models on Azure’s HPC resources.
 
 **NCCL bandwidth test**
 
