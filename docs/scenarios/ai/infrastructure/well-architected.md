@@ -168,3 +168,8 @@ ROCm Communication Collectives Library is a specialized library designed for eff
 - Build RCCL Tests: Clone the repository, navigate to the rccl-tests directory, and compile the tests.
 - Run Bandwidth Tests: Use the provided test executables (rccl-tests), specifying communication operations like all-reduce.
 - Analyze Performance: Compare bandwidth and latency results across nodes and GPUs.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Govern AI](../govern.md)
