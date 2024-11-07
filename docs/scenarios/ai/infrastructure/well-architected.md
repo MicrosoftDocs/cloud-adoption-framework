@@ -6,9 +6,13 @@ ms.author: rajanaki
 ms.date: 11/15/2024
 ms.topic: conceptual
 ---
+# Well-architected considerations for AI on Azure infrastructure (IaaS)
 
+Well-architected considerations for AI on Azure infrastructure involve best practices that optimize the reliability, security, operational efficiency, cost management, and performance of AI solutions. These principles ensure robust deployment, secure data handling, efficient model operation, and scalable infrastructure on Azure’s IaaS platform. Applying these principles allows organizations to build resilient, secure, and cost-effective AI models that meet business needs.
 
 ## Reliability
+
+Reliability involves minimizing downtime and ensuring consistent performance for AI applications on Azure infrastructure. Ensuring reliable operations across distributed virtual machines (VMs) and maintaining performance during infrastructure changes prevents service interruptions. These practices are important because they guarantee continuous model availability and improve user experience.
 
 - *Distribute VMs across Availability Zones.* Minimize downtime from hardware failures or maintenance events by using [Availability Zones](/azure/reliability/availability-zones-overview). They distribute VMs across fault and update domains to ensure continued application operation.
 
@@ -21,6 +25,8 @@ ms.topic: conceptual
 - *Implement regular backups for key assets.* Regularly back up model data, training datasets, and configurations to enable quick restoration in case of failure, safeguarding valuable progress and data.
 
 ## Security
+
+Security covers protective measures to safeguard AI models, data, and infrastructure against unauthorized access and threats. Implementing updates, monitoring model integrity, and controlling access prevent vulnerabilities that could compromise sensitive information. These steps are essential to maintain data privacy and trustworthiness of AI solutions in production environments.
 
 - *Schedule updates for Azure resources.* Use maintenance configurations to set specific update schedules for VMs and extensions, reducing vulnerability windows.
 
@@ -44,23 +50,9 @@ ms.topic: conceptual
 
 - *Conduct regular vulnerability scans.* Use Microsoft Defender Vulnerability Scanning to conduct vulnerability assessments of your VMs and related resources. Regularly check for any security issues or misconfigurations in your VM setup that could expose your models. [Microsoft Defender Vulnerability Scanning](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management).
 
-## Operational excellence
-
-- *Optimize resource allocation.* Regularly review Azure VM sizes and configurations based on actual resource usage to match workload needs. Use Azure Advisor for recommendations on optimal sizing and scaling.
-
-- *Configure auto-scaling for efficiency.* Set up auto-scaling for VMs or containers to handle workload demands without over-provisioning. Use Azure Virtual Machine Scale Sets to adjust resources dynamically based on demand. For more information, see [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview).
-
-- *Conduct regular performance tuning.* Continuously profile the application to identify and resolve performance bottlenecks. Use [Application Insights Profiler](/azure/azure-monitor/profiler/profiler-overview) to analyze model code and resource usage.
-
-- *Implement distributed training for efficiency.* Use distributed training techniques, if applicable, to reduce training time by using multiple VMs. Frameworks like Horovod and PyTorch support distributed training on Azure.
-
-- *Save checkpoints in Azure Blob Storage.* Save model states, weights, and configurations periodically to Azure Blob Storage. This can be done using Azure SDKs or libraries available in the programming language you're using for the LLM. Store the checkpoints in a structured format, like TensorFlow SavedModel or PyTorch checkpoint files. Modify your training or inference code to include checkpoint logic. Start with setting intervals (after every epoch or a certain number of iterations) to save the model's state. Use a consistent naming convention for checkpoint files to track the most recent state easily.
-
-- *Design for state recovery.* Ensure your application can recover from a saved checkpoint. Implement logic to load the model's state from Azure Blob Storage when the application starts. This includes, checking for existing checkpoints, and loading the most recent checkpoint if available, allowing the application to resume without losing progress.
-
 ## Cost optimization
 
-Using models on Azure IaaS might become costly if not carefully managed, especially as compute and storage demands grow. When planning is not intentional, over-provisioned resources or idle instances can drive up expenses. Resource usage must align with workload needs to avoid unnecessary costs and ensure sustainable model development. Consider these strategies:
+Cost optimization involves aligning resource usage with workload requirements to avoid unnecessary expenses. Right-sizing VMs, committing to reserved instances, and setting up auto-scaling help manage costs without compromising performance. Controlling costs on Azure infrastructure is vital for long-term sustainability and scalability of AI deployments.
 
 - *Commit to [Reserved Instances](https://azure.microsoft.com/pricing/reserved-vm-instances).* Save on virtual machine (VM) costs by committing to a one- or three-year term, which offers discounted rates.
 
@@ -74,7 +66,25 @@ Using models on Azure IaaS might become costly if not carefully managed, especia
 
 - *Select the right storage solution.* Balance cost and performance based on workload needs. Choose Azure Managed Lustre (AMLFS) for high-throughput, large-scale applications, and Azure NetApp Files (ANF) for advanced data management and reliability.
 
+## Operational excellence
+
+Operational excellence involves optimizing the configuration and management of Azure resources to improve the functionality of AI applications. Efficient resource allocation, performance tuning, and distributed training support smooth operation and adaptability to varying demands. This focus on operational efficiency ensures AI models perform as intended, without excessive resource use.
+
+- *Optimize resource allocation.* Regularly review Azure VM sizes and configurations based on actual resource usage to match workload needs. Use Azure Advisor for recommendations on optimal sizing and scaling.
+
+- *Configure auto-scaling for efficiency.* Set up auto-scaling for VMs or containers to handle workload demands without over-provisioning. Use Azure Virtual Machine Scale Sets to adjust resources dynamically based on demand. For more information, see [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview).
+
+- *Conduct regular performance tuning.* Continuously profile the application to identify and resolve performance bottlenecks. Use [Application Insights Profiler](/azure/azure-monitor/profiler/profiler-overview) to analyze model code and resource usage.
+
+- *Implement distributed training for efficiency.* Use distributed training techniques, if applicable, to reduce training time by using multiple VMs. Frameworks like Horovod and PyTorch support distributed training on Azure.
+
+- *Save checkpoints in Azure Blob Storage.* Save model states, weights, and configurations periodically to Azure Blob Storage. This can be done using Azure SDKs or libraries available in the programming language you're using for the LLM. Store the checkpoints in a structured format, like TensorFlow SavedModel or PyTorch checkpoint files. Modify your training or inference code to include checkpoint logic. Start with setting intervals (after every epoch or a certain number of iterations) to save the model's state. Use a consistent naming convention for checkpoint files to track the most recent state easily.
+
+- *Design for state recovery.* Ensure your application can recover from a saved checkpoint. Implement logic to load the model's state from Azure Blob Storage when the application starts. This includes, checking for existing checkpoints, and loading the most recent checkpoint if available, allowing the application to resume without losing progress.
+
 ## Performance efficiency
+
+Performance efficiency refers to maximizing the processing power of Azure infrastructure to meet AI model demands. Tuning GPU settings, optimizing input/output (I/O) processes, and running benchmarking tests improve computational speed and responsiveness. Ensuring high performance supports the execution of complex AI models at scale, which enhances user satisfaction and reduces latency.
 
 ### GPU tuning
 
