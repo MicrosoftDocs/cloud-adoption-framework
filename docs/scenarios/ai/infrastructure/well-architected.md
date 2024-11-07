@@ -133,7 +133,7 @@ You should run Megatron-LM using the latest release of [NGC's PyTorch container]
 - [enroot](https://github.com/NVIDIA/enroot): a tool that allows users to run containerized applications on HPC clusters without requiring root privileges or modifying the host system.
 - [pyxis](https://github.com/NVIDIA/pyxis): a plugin for Slurm that enables seamless integration of enroot with Slurm, allowing users to submit containerized jobs to Slurm queues and run them on HPC nodes.
 
-Both of these components are included in the CycleCloud Slurm workspace but are currently not included in Slurm clusters that are built via CycleCloud. These extra components can be introduced via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects?view=cyclecloud-8).
+Both of these components are included in the CycleCloud Slurm workspace but are currently not included in Slurm clusters that are built via CycleCloud. These extra components can be introduced via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects).
 
 With these requirements met, you can use Megatron-LM for LLM training by:
 
