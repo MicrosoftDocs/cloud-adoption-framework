@@ -43,8 +43,8 @@ items:
             href: infrastructure/management.md
           - name: Security
             href: infrastructure/security.md
-        - name: Well-architected
-          href: infrastructure/well-architected.md
+      - name: Well-architected
+        href: infrastructure/well-architected.md
   - name: Govern AI
     href: govern.md
   - name: Manage AI 
