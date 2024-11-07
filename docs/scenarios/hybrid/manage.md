@@ -30,8 +30,10 @@ After you finish the exercise, you can begin to operate your hybrid and multiclo
 
 ## Operations management disciplines
 
-Along with tagging and bringing on assets, you can also deliver many operations management disciplines by using hybrid and multicloud tools.
-
+Along with tagging and bringing on assets, you can also deliver many operations management disciplines by using hybrid and multicloud tools. Azure Arc resource bridge deployed on VMware vSphere and System Center managed private cloud environments simplifies hybrid workload management with Azure as the single control plane across your Azure and on-premises workloads. You can manage the lifecycle and powercycle of your workloads wherever they are running using Azure Portal and set up automation using Azure APIs, SDKs, and Infrastructure as Code (IaC) templates. These articles provide more information:
+- [Perform VM operations on VMware VMs through Azure](/azure/azure-arc/vmware-vsphere/perform-vm-ops-through-azure)
+- [Perform VM operations on SCVMM VMs through Azure](/azure/azure-arc/system-center-virtual-machine-manager/perform-vm-ops-on-scvmm-through-azure)
+ 
 Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a VM requires software installation or antivirus protection, or if you need to run a script on a VM, you can use a VM extension. These articles provide more information:
 
 - [Virtual machine extension management with Azure Arc-enabled servers](/azure/azure-arc/servers/manage-vm-extensions)
