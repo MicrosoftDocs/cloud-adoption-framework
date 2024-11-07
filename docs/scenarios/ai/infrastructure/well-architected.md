@@ -102,12 +102,12 @@ Increase the clock rate of a graphics processing unit (GPU) to improve performan
 
 Benchmarking tests help evaluate and improve distributed deep learning training performance on GPUs, especially for large-scale models. These tests measure the efficiency of GPU communication across nodes, aiming to reduce data transfer bottlenecks during distributed training. The three tests discussed include:
 
-- *Megatron Framework*: Supports large-scale language models by improving distributed training efficiency.
-- *NCCL and RCCL Tests*: Evaluate performance and accuracy in multi-GPU communication using NCCL or RCCL libraries, testing patterns like all-reduce and scatter.
+- *Megatron framework*: Supports large-scale language models by improving distributed training efficiency.
+- *The NVIDIA Collective Communications Library (NCCL) and ROCm Communication Collectives Library (RCCL) tests*: Evaluate performance and accuracy in multi-GPU communication using NCCL or RCCL libraries, testing patterns like all-reduce and scatter.
 
 These tests ensure scalability and optimal performance for LLMs, with Megatron focusing on model training and NCCL/RCCL on GPU communication.
 
-### Using NVIDIA Megatron-LM
+### NVIDIA Megatron-LM test
 
 NVIDIA Megatron-LM is an open-source framework for training large language models. It allows developers to create massive neural networks for NLP tasks, with features including:
 
@@ -118,7 +118,7 @@ NVIDIA Megatron-LM is an open-source framework for training large language model
 
 Megatron-LM deploys on Azure HPC infrastructure, and it uses Azure’s scalability for large language models without requiring on-premises hardware.
 
-#### Setting Up Megatron-LM on Azure HPC
+#### Megatron-LM test set up
 
 Deploying Megatron-LM requires specific software and hardware.
 
@@ -126,7 +126,7 @@ Deploying Megatron-LM requires specific software and hardware.
 
 - *Use the right image.* The software requirements for the project include a Linux-based operating system, typically Ubuntu. For multi-GPU and multi-node communication, it's essential to have communication libraries such as NCCL and MPI. Additionally, appropriate NVIDIA drivers must be installed to ensure GPU acceleration. [Azure's HPC marketplace images](/azure/virtual-machines/azure-hpc-vm-images) come with these drivers and libraries preinstalled. However, if customization is necessary, the [azhpc-images](https://github.com/Azure/azhpc-images?tab=readme-ov-file#azure-hpcai-vm-images) repository can be used to ensure compatibility.
 
-#### Running Megatron-LM on Azure HPC
+#### Megatron-LM test use
 
 You should run Megatron-LM using the latest release of [NGC's PyTorch container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch). It introduces a set of extra requirements for traditional Slurm-based HPC clusters:
 
@@ -148,21 +148,21 @@ This setup ensures efficient deployment and training of large language models on
 
 To verify and optimize GPU communication across nodes, run the NCCL bandwidth test. The NCCL bandwidth test is specialized tool within NCCL, a library that facilitates high-speed communication between GPUs. NCCL supports collective operations, including all-reduce, all-gather, reduce, broadcast, and reduce-scatter, across single or multi-GPU nodes, and achieves optimal performance on platforms with PCIe, NVLink, NVswitch, or networking setups like InfiniBand or TCP/IP. For more information, see [NVIDIA/NCCL tests](https://github.com/nvidia/nccl).
 
-#### NCCL tests performance metrics
+#### NCCL performance metrics
 
 Use the NCCL bandwidth test to assess key metrics, including time and bandwidth. "Time" (in milliseconds) measures the overhead or latency in operations, making it useful for evaluating operations with small data sizes. "Bandwidth" (in GB/s) evaluates point-to-point operation efficiency, such as Send/Receive. "Bus bandwidth" reflects hardware usage efficiency by accounting for inter-GPU communication speed and bottlenecks in components like NVLink or PCI. Calculations for various collective operations are provided, such as AllReduce, ReduceScatter, AllGather, Broadcast, and Reduce.
 
-#### Initiate test
+#### NCCL test initiation
 
 To initiate these tests within a CycleCloud deployment, connect to the scheduler node via SSH and access a GPU-equipped compute node. Clone the CycleCloud Git repository for NCCL tests, navigate to the `nccl-tests` directory, and create a host file listing the nodes for testing. Obtain the scheduler node’s IP address from CycleCloud’s web app or use a default IP like 10.50.0.5.
 
-Before running tests, specify different [arguments](https://github.com/nvidia/nccl-tests?tab=readme-ov-file#arguments) like the number of GPUs per thread (`-g`), data size range (`-b` for minimum bytes and `-e` for maximum bytes), step increment (`-i` or `-f`), reduction operation type (`-o`), datatype (`-d`), root device (`-r`), iteration count (`-n`), warmup count (`-w`), and CUDA graph settings (`-G`). Refer to the NCCL test documentation for a full list of adjustable parameters.
+### NCCL test arguments
 
-Sample performance metrics from two `Standard_ND96amsr_a100_v4` VMs show the performance effects of configurations such as PCIe Relaxed Ordering (RO). For further information on NCCL bandwidth testing, view the documentation or examples provided on the NVIDIA and Microsoft HPC forums.
+Before running tests, specify different [arguments](https://github.com/nvidia/nccl-tests?tab=readme-ov-file#arguments) like the number of GPUs per thread (`-g`), data size range (`-b` for minimum bytes and `-e` for maximum bytes), step increment (`-i` or `-f`), reduction operation type (`-o`), datatype (`-d`), root device (`-r`), iteration count (`-n`), warmup count (`-w`), and CUDA graph settings (`-G`). Refer to the NCCL test documentation for a full list of adjustable parameters.
 
 ### RCCL tests
 
-ROCm Communication Collectives Library is a specialized library designed for efficient communication between AMD GPUs. It provides collective operations such as all-reduce, all-gather, broadcast, and reduce, supporting both intra- and inter-node GPU communication. Optimized for platforms using PCIe and networking technologies like InfiniBand, RCCL ensures scalable data transfer in multi-GPU environments. It supports integration into both single- and multi-process workflows, such as those using MPI. For more information, see [ROCm Communication Collectives Library](https://github.com/rocm/rccl#rccl)
+ROCm Communication Collectives Library (RCCL) is a specialized library designed for efficient communication between AMD GPUs. It provides collective operations such as all-reduce, all-gather, broadcast, and reduce, supporting both intra- and inter-node GPU communication. Optimized for platforms using PCIe and networking technologies like InfiniBand, RCCL ensures scalable data transfer in multi-GPU environments. It supports integration into both single- and multi-process workflows, such as those using MPI. For more information, see [ROCm Communication Collectives Library](https://github.com/rocm/rccl#rccl)
 
 - Set Up Environment: Install ROCm and ensure RCCL is properly installed on all nodes.
 - Build RCCL Tests: Clone the repository, navigate to the rccl-tests directory, and compile the tests.
