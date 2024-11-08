@@ -73,7 +73,7 @@ You might want to simplify complex and distributed environments across on-premis
 
 - **Run Azure services anywhere**: Get automated patching, upgrades, security, and scaling on-demand across on-premises, edge, and multicloud environments for your data estate.
 
-- **Enable self-service access to your virtual machines**: Use Azure role-based access control (RBAC) to grant self-service ability to your VMware vSphere and System Center Virtual Machine Manager resources through Azure. Perform VM lifecycle and powercycle operations from Azure portal and build automation Azure templates, APIs, and SDKs.
+- **Enable self-service access to your virtual machines**: Use Azure role-based access control (RBAC) to grant self-service ability to your VMware vSphere and System Center Virtual Machine Manager resources through Azure. Perform VM lifecycle and powercycle operations from Azure portal and build automation using Azure templates, APIs, and SDKs.
 
 ## Azure Arc customer snapshot
 
