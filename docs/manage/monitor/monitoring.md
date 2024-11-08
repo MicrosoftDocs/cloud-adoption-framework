@@ -42,7 +42,7 @@ Monitoring is a multifaceted discipline that requires a combination of tools, pr
 | Type | Description |
 |:---|:---|
 | Infrastructure | Infrastructure monitoring includes the performance and availability of cloud resources, such as virtual machines, storage resources, and networks. This type of monitoring helps ensure that the underlying infrastructure functions optimally, which helps maintain the availability and performance of the applications that rely on it. |
-| Application performance (APM) | APM monitors the performance and availability of applications that run in the cloud. It tracks metrics such as response times, error rates, and transaction volumes. APM identifies performance bottlenecks and helps ensure that applications meet user expectations. |
+| Application performance monitoring (APM) | APM tracks the performance and availability of applications that run in the cloud. It tracks metrics such as response times, error rates, and transaction volumes. APM identifies performance bottlenecks and helps ensure that applications meet user expectations. |
 | Database | Database monitoring tracks the performance, availability, and resource consumption of cloud databases. Key metrics include query performance, index usage, and lock statuses. |
 | Network | Network monitoring tracks the performance and availability of network components in the cloud environment. Metrics include bandwidth usage, latency, and packet loss. |
 | Security | Security monitoring tracks and analyzes security events and vulnerabilities within the cloud environment, including unauthorized access, malware, and compliance violations. Effective security monitoring helps protect sensitive data, ensure compliance with regulatory requirements, and prevent costly security breaches. |
@@ -63,16 +63,21 @@ The cloud provider must perform the same types of service for their layers of th
 
 ## Roles and responsibilities
 
-Most enterprise organizations will have a centralized operations team that's responsible for monitoring the overall health and performance of the cloud environment. This team will typically set the strategies for the overall company, perform centralized configuration of the monitoring environment, and delegate permissions to different stakeholders in your organization that require access to the monitoring data related to their applications and services. 
+Most enterprise organizations have a centralized operations team that monitors the overall health and performance of the cloud environment. 
 
-There are multiple roles in an organization that maintain the monitoring environment and require access to monitoring data to perform their job functions. Each role has different requirements for monitoring data based on their particular responsibilities. Depending on the size of your organization, you may have multiple individuals filling each role or may have one individual that fills multiple roles. 
+This team typically:
+- Sets the strategies for the overall company.
+- Performs centralized configuration of the monitoring environment.
+- Delegates permissions to stakeholders in your organization that require access to the monitoring data that's related to their applications and services.
 
-While individual organizations may distribute responsibilities differently, the following table shows the roles and responsibilities for a typical organization.
+Organizations have multiple roles that maintain the monitoring environment and that require access to monitoring data to perform their job functions. Each role has different requirements to monitor data based on their particular responsibilities. Depending on the size of your organization, you might have multiple individuals that fill each role, or you might have one individual that fills multiple roles. 
+
+Individual organizations might distribute responsibilities differently. The following table shows an example of the roles and responsibilities for a typical organization.
 
 | Role | Description |
 |:---|:---|
-| Cloud Architect | Designs and oversees the cloud infrastructure, ensuring it meets the organization’s business goals. The cloud architect focuses on reliability, security, and scalability of the cloud architecture and requires high-level telemetry to get a holistic view of the digital estate. This includes resource utilization metrics, application performance monitoring (APM), cost and billing insights, and compliance reports.
-| Platform Engineer | Builds and manages the platform that developers use to deploy their applications. This includes creating CI/CD pipelines, managing cloud infrastructure as code, and ensuring the scalability and reliability of the platform. The platform engineer requires telemetry related to the platform's operational status. This includes container performance metrics, orchestration logs, infrastructure-as-code (IaC) validation, and service availability.
+| Cloud Architect | The Cloud Architect designs and oversees the cloud infrastructure to help ensure that it meets the organization's business goals. The cloud architect focuses on reliability, security, and scalability of the cloud architecture. They require high-level telemetry to get a holistic view of the digital estate. This telemetry includes resource usage metrics, APM metrics, cost and billing insights, and compliance reports.
+| Platform Engineer | The Platform Engineer builds and manages the platform that developers use to deploy their applications. The Platform Engineer might create continuous integration and continuous delivery (CI/CD) pipelines, manage cloud infrastructure as code, and ensure the scalability and reliability of the platform. The platform engineer requires telemetry about the platform's operational status. This telemtry includes container performance metrics, orchestration logs, infrastructure as code (IaC) validation, and service availability.
 | System Administrator | Manages and maintains servers, operating systems, and other infrastructure components in the cloud. They ensure systems are up-to-date, perform backups, and troubleshoot issues. The system administrator requires server and OS-level telemetry including CPU, memory, disk usage, network performance, and system logs. 
 | Security Engineer | Implements and manages security measures to protect data and applications from threats. The security engineer handles everything from identity management to threat detection and response. They need telemetry focused on security events including access logs, threat detection alerts, vulnerability assessments, and compliance metrics.
 | Network Administrator | Responsible for managing and maintaining the cloud network, ensuring that data flows securely and efficiently between servers, applications, and end-users. The network administrator handles network configurations, monitors performance, and implements security measures. They require network-centric telemetry including network traffic analysis, latency measurements, packet loss, and firewall logs. 
