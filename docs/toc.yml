@@ -843,7 +843,7 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-      - name: Monitoring
+      - name: Monitor a cloud environment
         href: manage/monitor/monitoring.md
       - name: Centralize management operations
         href: manage/centralize-operations.md

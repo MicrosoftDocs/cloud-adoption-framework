@@ -22,7 +22,7 @@ The Cloud Adoption Framework guides you through the full adoption lifecycle. Eac
 - [Strategy phase](../strategy/suggested-skills.md): Develop the skills needed to prepare an actionable migration plan, including business justification and other required business-planning skills.
 - [Readiness phase](../ready/suggested-skills.md): Develop the skills needed to prepare the business, culture, people, and environment for coming changes.
 - [Migration phase](../migrate/suggested-skills.md): Gain the skills required to implement the cloud migration plan.
-- [Management phase - Monitoring](../manage/monitor/suggested-skills.md): Gain the skills needed to monitor a cloud environment.
+- [Management phase - Monitoring](../manage/monitor/monitoring.md): Gain the skills needed to monitor a cloud environment.
 
 Each of these learning paths shares opportunities across multiple media types to maximize knowledge acquisition.
 
