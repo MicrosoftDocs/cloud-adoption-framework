@@ -52,7 +52,7 @@ These articles provide guidelines for creating your landing zone based on the de
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-[![Diagram that shows Azure A P I Management landing zone accelerator architecture.](./media/landing-zone-accelerator/apim-secure-baseline.jpg)](./media/landing-zone-accelerator/apim-secure-baseline.jpg#lightbox)
+[![Diagram that shows Azure A P I Management landing zone accelerator architecture.](./media/landing-zone-accelerator/api-management-secure-baseline.png)](./media/landing-zone-accelerator/api-management-secure-baseline.png#lightbox)
 
 This architecture consists of API Management deployed in a virtual network in internal mode, fronted by an Application Gateway.
 
@@ -62,7 +62,7 @@ The generative AI gateway sample code demonstrates how to provision and interact
 
 By the end of the deployment guide, you deploy private Azure OpenAI endpoints and an opinionated set of policies in API Management to manage traffic to these endpoints. You test the policies by sending requests to the gateway. You should use the provided policy fragments or modify the solution to include your own custom policies.
 
-[![Diagram that shows generative A I resources governance through Azure A P I Management.](./media/landing-zone-accelerator/apim-workload-ai.jpg)](./media/landing-zone-accelerator/apim-workload-ai.jpg#lightbox)
+[![Diagram that shows generative A I resources governance through Azure A P I Management.](./media/landing-zone-accelerator/api-management-workload-ai.png)](./media/landing-zone-accelerator/api-management-workload-ai.png#lightbox)
 
 The recommended approach for enterprise implementation is to begin with an Azure landing zone to ensure scalability, governance, and security are aligned with Cloud Adoption Framework best practices. If you’re planning to start your baseline integration with Azure OpenAI within an Azure landing zone, follow the steps mentioned in the official documentation: [Azure OpenAI baseline in an application landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
 
