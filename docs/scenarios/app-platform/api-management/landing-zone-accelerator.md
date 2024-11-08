@@ -60,11 +60,11 @@ This architecture consists of API Management deployed in a virtual network in in
 
 The generative AI gateway sample code demonstrates how to provision and interact with generative AI resources through API Management. Gateway offloading is a common design pattern when interacting with generative AI models. For more information on this pattern, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide). The implementation is on top of the API Management baseline and additionally includes private deployments of Azure OpenAI endpoints, and the API Management policies that are tailored for generative AI use cases.
 
-By the end of this deployment guide, you deploy private Azure OpenAI endpoints and an opinionated set of policies in API Management to manage traffic to these endpoints. You test the policies by sending requests to the gateway. You should use the provided policy fragments or modify the solution to include your own custom policies.
+By the end of the deployment guide, you deploy private Azure OpenAI endpoints and an opinionated set of policies in API Management to manage traffic to these endpoints. You test the policies by sending requests to the gateway. You should use the provided policy fragments or modify the solution to include your own custom policies.
 
 [![Diagram that shows generative A I resources governance through Azure A P I Management.](./media/landing-zone-accelerator/apim-workload-ai.jpg)](./media/landing-zone-accelerator/apim-workload-ai.jpg#lightbox)
 
-The recommended approach for enterprise implementation is to begin with an Azure landing zone to ensure scalability, governance, and security are aligned with Cloud Adoption Framework best practices. If you’re planning to start your baseline integration with Azure OpenAI within an Azure landing zone, following the steps mentioned in the official documentation: [Azure OpenAI baseline in an application landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
+The recommended approach for enterprise implementation is to begin with an Azure landing zone to ensure scalability, governance, and security are aligned with Cloud Adoption Framework best practices. If you’re planning to start your baseline integration with Azure OpenAI within an Azure landing zone, follow the steps mentioned in the official documentation: [Azure OpenAI baseline in an application landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
 
 ## Deploy the Azure API Management landing zone accelerator
 
