@@ -16,7 +16,7 @@ The data management landing zone is a management function and is central to clou
 
 Your data management landing zone is a separate subscription that has the same standard Azure landing zone services. It allows data governance of your data through crawlers, which connect to your data lakes and polyglot storage in your data landing zones. Virtual network peering connects your data management landing zone to your data landing zones and connectivity subscription.
 
-This architecture is a starting point and modify it to fit your specific business and technical requirements when planning your data management landing zone implementation.
+This architecture is a starting point and you can modify it to fit your specific business and technical requirements when planning your data management landing zone implementation.
 
 > [!NOTE]
 > Polyglot persistence is a storage term that describes your choice between different data storage/data stores technologies to support your various data types and their storage needs. Essentially, polyglot persistence is the concept that an application can use more than one core database or storage technology.
@@ -84,7 +84,7 @@ Your data marketplace or operations console calls a middle tier of microservices
 You can provision the **service layer** resource group to host your metadata store.
 
 > [!IMPORTANT]
-> None of these automation services are products, and they do not illustrate any roadmap item. They are listed to help you consider which items you might want to automate.
+> None of these automation services are products, and they don't illustrate any roadmap item. They are listed to help you consider which items you might want to automate.
 
 | Service                        | Service Scope                    |
 |--------------------------------|-----------------------------------|
