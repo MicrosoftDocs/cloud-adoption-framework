@@ -14,6 +14,10 @@ Employees need a consistent experience and seamless access to vital applications
 
 This implementation follows the Cloud Adoption Framework Azure landing zone architecture and best practices, with a focus on enterprise-scale design principles. Although you can deploy this implementation in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator#getting-started), it's best to use this solution after you implement an [enterprise-scale landing zone](../../../ready/landing-zone/index.md). For more information, see [Landing zone implementation options](../../../ready/landing-zone/implementation-options.md).
 
+## Implementation checklist
+
+After reviewing the conceptual Citrix on Azure design recommendations, see [Baseline Deployment Prerequisites for Citrix on Azure](https://community.citrix.com/tech-zone/build/tech-papers/deployment-prerequisites-citrix-on-azure). This article focuses on the prerequisites for building an Azure environment to host a Citrix solution. It outlines the key design areas, Citrix environment implications, and initial requirements, emphasizing the importance of a well-architected, secure platform. 
+
 ## Potential use cases
 
 This solution is ideal for scenarios that require:

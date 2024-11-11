@@ -16,7 +16,7 @@ The [Plan methodology of this scenario](./plan.md) outlines a process for you to
 
 It's critical to architect with the right tool for the right solution in mind. This principal can help you analyze spend over time. It can also help you analyze your ability to scale out versus scale in when needed. For your data workloads, consider reusability, on-demand scaling, reduced data duplication, and take advantage of the Azure Advisor service.
 
-For more information, see [Design review checklist for Cost Optimization](/azure/well-architected/cost-optimization/checklist)
+For more information, see [Design review checklist for Cost Optimization](/azure/well-architected/cost-optimization/checklist).
 
 ## Performance efficiency
 
@@ -29,13 +29,13 @@ User delight comes from performance of your workloads. Performance can vary base
 - Enhanced drivers
 - Multilayer cache
 
-For more information, see [Design review checklist for Performance Efficiency](/azure/well-architected/performance-efficiency/checklist/)
+For more information, see [Design review checklist for Performance Efficiency](/azure/well-architected/performance-efficiency/checklist/).
 
 ## Operational excellence
 
 Operational management of your data workloads can include advanced automation that improves your ability to quickly respond to events. Build on top of centralized data operations through workload-specific process automation, automated testing, and consistency. For AI, consider using the shared MLOps framework as part of your normal release cycle.
 
-For more information, see [Design review checklist for Operational Excellence](/azure/well-architected/operational-excellence/checklist)
+For more information, see [Design review checklist for Operational Excellence](/azure/well-architected/operational-excellence/checklist).
 
 ## Security
 
@@ -62,9 +62,9 @@ On top of these environmental controls, the workload team should consider:
 - Redundancy of workload-specific architecture
 - Processes for monitoring and notification beyond what is provided by the cloud operations teams
 
-For more information, see [Design review checklist for Reliability](/azure/well-architected/reliability/checklist)
+For more information, see [Design review checklist for Reliability](/azure/well-architected/reliability/checklist).
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-[Introduction to architectures for cloud-scale analytics](../cloud-scale-analytics/architectures/overview-architectures.md)
+> [Introduction to architectures for cloud-scale analytics](../cloud-scale-analytics/architectures/overview-architectures.md)

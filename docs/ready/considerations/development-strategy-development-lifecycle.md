@@ -153,7 +153,7 @@ Development lifecycle strategy provides key design considerations and recommenda
   - Diagnostic resource health
   - Security
 
-- Include IaC predeployment checks so you can preview changes and see details on whether a resource i created, modified, or deleted.
+- Include IaC predeployment checks so you can preview changes and see details on whether a resource is created, modified, or deleted.
 
 ## Rollback strategy
 

@@ -53,8 +53,6 @@ There are three aspects to data domains:
 
 For more information about data domains and how you should define them, see [Data domains](data-domains.md).
 
-
-
 ## Data products
 
 Data products are another important component of data mesh. Data products aim to take product thinking to the world of data. In order for your data product to be successful, it needs to provide a long term business value to the intended users. In data mesh, a data product involves data, code assets, metadata, and related policies. Data products can be delivered as an API, report, table, or dataset in a data lake.
@@ -93,7 +91,7 @@ Data mesh can be an effective way to implement enterprise data platforms, but it
 
 When using data mesh, take special care when implementing your governance so you don't create silos. Always keep product thinking for data at the core of your implementation to ensure success.
 
-## Next Steps
+## Next steps
 
 > [!div class="nextstepaction"]
-[Data domains](data-domains.md)
+> [Data domains](data-domains.md)

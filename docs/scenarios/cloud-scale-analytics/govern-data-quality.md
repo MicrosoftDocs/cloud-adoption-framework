@@ -77,12 +77,12 @@ To implement data quality, you need to use both human and computational power as
 
 ## Data quality solutions
 
-We recommend evaluating Microsoft Purview Data Quality as a solution for assessing and managing data quality, crucial for reliable AI-driven insights and decision-making. It includes:
+We recommend evaluating Microsoft Purview Data Quality as a solution for assessing and managing data quality, which is crucial for reliable AI-driven insights and decision-making. It includes:
 
-- No-code/Low-code Rules: Evaluate data quality using out-of-the-box and AI-generated rules.
-- AI-powered Data Profiling: Recommends columns for profiling and allows human intervention for refinement.
-- Data Quality Scoring: Provides scores at the levels of data assets, data products, and governance domains.
-- Data Quality Alerts: Notifies data owners and stewards of quality issues.
+- No-code/low-code rules: Evaluate data quality using out-of-the-box, AI-generated rules.
+- AI-powered data profiling: Recommends columns for profiling and allows human intervention for refinement.
+- Data quality scoring: Provides scores for data assets, data products, and governance domains.
+- Data quality alerts: Notifies data owners of quality issues.
 
 For more information, see [What is Data Quality](/purview/data-quality-overview).
 

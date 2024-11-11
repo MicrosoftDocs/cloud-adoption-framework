@@ -13,7 +13,7 @@ ms.custom: think-tank, e2e-avd, engagement-fy23
 
 The Microsoft Azure Virtual Desktop landing zone accelerator provides a specific architectural approach and reference implementation for preparing landing zone subscriptions for an enterprise Azure Virtual Desktop deployment.
 
-Its reference implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, focusing on enterprise-scale design principles. Although this implementation can be deployed in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites), we recommend that you implement an enterprise-scale landing zone first, [enterprise-scale overview](../../ready/enterprise-scale/index.md) and review the [implementation guidance](../../ready/enterprise-scale/implementation.md) before deploying the enterprise-scale for Azure Virtual Desktop solution.
+Its reference implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, focusing on enterprise-scale design principles. Although you can deploy this implementation in any Azure environment that complies with the [prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites), we recommend that you implement an enterprise-scale landing zone first. For more information, see [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md). You should also review the [implementation guidance](../../ready/enterprise-scale/implementation.md) before you deploy the enterprise-scale for Azure Virtual Desktop solution.
 
 This Azure Virtual Desktop solution is open source. You can adapt its templates to create an architecture that meets your needs. This article's guidance includes design considerations for building an enterprise-ready Azure Virtual Desktop deployment.
 
@@ -40,17 +40,17 @@ Learn the guidelines that direct the design of the Cloud Adoption Framework for 
 
 The following diagram shows a conceptual reference architecture that demonstrates major design areas and design best practices in an Azure Virtual Desktop environment.
 
-[![Diagram of a reference architecture for an Azure Virtual Desktop environment.](./media/azure-virtual-desktop-architecture.png)](./media/azure-virtual-desktop-architecture.png#lightbox)
+[![A diagram of a reference architecture for a Virtual Desktop environment.](./media/accelerator-baseline-architecture.svg)](./media/accelerator-baseline-architecture.svg#lightbox)
 
-_For more information on the design areas labeled A-J in the visual, see the Azure Landing Zone [environment design areas](../../ready/landing-zone/design-areas.md#environment-design-areas). To learn more about the design areas for Azure Virtual Desktop, see [network topology and connectivity for Azure Virtual Desktop](./eslz-network-topology-and-connectivity.md)_
+To learn more about the design areas for Virtual Desktop, see [network topology and connectivity for Virtual Desktop](./eslz-network-topology-and-connectivity.md).
 
-*Download a [Visio file](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/diagrams/avd-accelerator-enterprise-scale-alz-architecture.vsdx) of this architecture.*
+_Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/accelerator-baseline-architecture.vsdx) of this architecture._
 
 ### Guidance for regional expansion
 
-While having an Azure Virtual Desktop deployment in a single Azure region will be enough for many customers, some customers may require expanding their Azure Virtual Desktop deployment to another Azure region. A couple of reasons that would require a customer to expand their Azure Virtual Desktop deployment across Azure regions include:
+Although having an Azure Virtual Desktop deployment in a single Azure region is enough for many customers, some customers might require expanding their Azure Virtual Desktop deployment to another Azure region. A couple of reasons that would require a customer to expand their Azure Virtual Desktop deployment across Azure regions include:
 
-- **Scenario A:** Customer requires to deploy additional Azure Virtual Desktop Virtual Machines, but there is no additional capacity in the existing Azure region.
+- **Scenario A:** Customer requires to deploy additional Azure Virtual Desktop Virtual Machines, but there's no more capacity in the existing Azure region.
 
 - **Scenario B:** Customers have a need to deploy Azure Virtual Desktop Virtual Machines closer to where their users and on-premises datacenters are located.
 
@@ -60,25 +60,25 @@ The following list describes the key networking considerations to implement in t
 
 - Deploy a new Virtual Network with non-overlapping IP address space.
 - Connect the Virtual Network in the new region to the Virtual Network in the primary region with Global VNet Peering and enabling Gateway Transit.
-- Enabling Gateway Transit is important, as that will ensure that the Virtual Network in the new region can access on-premises resources via VPN or ExpressRoute with Private Peering.
+- Enabling Gateway Transit is important, as that ensures that the Virtual Network in the new region can access on-premises resources via VPN or ExpressRoute with Private Peering.
 - Deploy the storage solution required to store user’s profiles.
 - (Optional) Deploy a Domain Controller in the Virtual Network in the new region.
 - Configure internet outbound connectivity in the Virtual Network in the new region with either NSG or NVA/Azure Firewall.
 - Deploy Azure Virtual Desktop Virtual Machines in the new Azure region
-- Ensure users are assigned to Windows Virtual Desktops in only one region, to ensure they don’t have different profiles (if users are assigned to Virtual Desktops on both regions, then they will have different profiles, as profiles will be stored in the regional storage system).
+- Ensure users are assigned to Windows Virtual Desktops in only one region, to ensure they don’t have different profiles (if users are assigned to Virtual Desktops on both regions, then they'll have different profiles, as profiles are stored in the regional storage system).
 
 The following list describes the key networking considerations to implement in the new Azure region(s) when expanding an Azure Virtual Desktop deployment into a secondary Azure region that will be connected to an on-premises datacenter in the same geo for **Scenario B:**
 
-Some customers may require deploying Azure Virtual Desktop across multiple Azure regions, as they may want to deploy the Azure Virtual Desktop Virtual Machines closer to where the users are, but also, closer to where the existing systems and applications exists in on-premises datacenters.
+Some customers should deploy Azure Virtual Desktop across multiple Azure regions, as they might want to deploy the Azure Virtual Desktop Virtual Machines closer to where the users are, but also, closer to where the existing systems and applications exist in on-premises datacenters.
 
 - Deploy a new Virtual Network with non-overlapping IP address space.
 - Connect the Virtual Network in the new region to on-premises datacenter by using VPN or ExpressRoute with Private Peering.
-- This connectivity will ensure Azure Virtual Desktop users have access to resources located in on-premises datacenters in their region.
-- Deploy the storage solution required to store user’s profiles.
+- This connectivity ensures Azure Virtual Desktop users have access to resources located in on-premises datacenters in their region.
+- Deploy the storage solution required to store user's profiles.
 - (Optional) Deploy a Domain Controller in the Virtual Network in the new region.
 - Configure internet outbound connectivity in the Virtual Network in the new region with either NSG or NVA/Azure Firewall
 - Deploy Azure Virtual Desktop Virtual Machines in the new Azure region
-- Ensure users are assigned to Windows Virtual Desktops in only one region, to ensure they don’t have different profiles (if users are assigned to Virtual Desktops on both regions, then they will have different profiles, as profiles will be stored in the regional storage system).
+- Ensure users are assigned to Windows Virtual Desktops in only one region, to ensure they don't have different profiles (if users are assigned to Virtual Desktops on both regions, then they'll have different profiles, since profiles are stored in the regional storage system).
 
 ## Deploy Azure Virtual Desktop with the landing zone accelerator
 
@@ -86,7 +86,7 @@ The Azure Virtual Desktop landing zone accelerator includes an open-source colle
 
 The Azure Virtual Desktop accelerator is available in the [Azure Virtual Desktop accelerator](https://github.com/Azure/avdaccelerator) GitHub repository. It contains Infrastructure as Code based on [Common Azure Resource Modules Library (CARML)](https://github.com/Azure/ResourceModules). The Azure Virtual Desktop landing zone accelerator ([deployment prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md)) can be deployed using integration into your CI/CD pipelines, command line [PowerShell or Azure CLI](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) or Azure portal deployments:
 
-**Optional: Custom Image Build:**
+**(Optional) Custom Image Build:**
 Deploy a custom image based on the latest version of the Azure Marketplace image to an Azure Compute Gallery.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-custom-image.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-custom-image.json)
