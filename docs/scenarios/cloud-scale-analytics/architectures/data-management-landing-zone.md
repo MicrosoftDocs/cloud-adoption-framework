@@ -89,7 +89,7 @@ If you decide to build these automation services, you should have a user interfa
 
 Your data marketplace or operations console calls a middle tier of microservices to facilitate onboarding, metadata registration, security provisioning, data lifecycle, and observability.
 
-You can provision the **automationdb-rg** resource group to host your metadata store.
+You can provision the **service layer** resource group to host your metadata store.
 
 > [!IMPORTANT]
 > None of these automation services are products, and they do not illustrate any roadmap item. They are listed to help you consider which items you might want to automate.
