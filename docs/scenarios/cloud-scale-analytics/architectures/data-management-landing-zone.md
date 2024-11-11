@@ -112,15 +112,6 @@ You can provision the **service layer** resource group to host your metadata sto
 
 Your data management landing zone hosts an Azure Container Registry. The Azure Container Registry allows your data platform operations to deploy standard containers for use in data science projects that your data application teams consume.
 
-## Data standardization
-
-Although it isn't a specific feature or product of your data management landing zone, you should call out data standardization across all services. Data standardization defines the format in which your data should land and be stored.
-
-> [!TIP]
-> Use delta-lake format wherever possible as the defacto standard across all services and storage.
-
-For more information, see [Data standardization](../../cloud-scale-analytics/architectures/data-standardization.md).
-
 ## Next steps
 
 - [Overview of the data landing zone](./data-landing-zone.md)
