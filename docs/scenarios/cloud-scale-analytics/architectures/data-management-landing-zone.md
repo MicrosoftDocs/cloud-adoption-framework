@@ -16,7 +16,7 @@ The data management landing zone is a management function and is central to clou
 
 Your data management landing zone is a separate subscription that has the same standard Azure landing zone services. It allows data governance of your data through crawlers, which connect to your data lakes and polyglot storage in your data landing zones. Virtual network peering connects your data management landing zone to your data landing zones and connectivity subscription.
 
-Use this architecture as a starting point and modify it to fit your specific business and technical requirements when planning your data management landing zone implementation.
+This architecture is a starting point and modify it to fit your specific business and technical requirements when planning your data management landing zone implementation.
 
 > [!NOTE]
 > Polyglot persistence is a storage term that describes your choice between different data storage/data stores technologies to support your various data types and their storage needs. Essentially, polyglot persistence is the concept that an application can use more than one core database or storage technology.
@@ -24,13 +24,11 @@ Use this architecture as a starting point and modify it to fit your specific bus
 > [!IMPORTANT]
 > Your data management landing zone must be deployed as a separate subscription under a management group with the appropriate governance. You can then control governance across your organization. The [Azure landing zone accelerator](../../../ready/landing-zone/index.md) illustrates how you should approach Azure landing zones.
 
-## Azure Marketplace
-
-Write an intro line...
-
 ## Data governance
 
-Write an intro line...
+Cloud Scale Analytics for the regulated industry suggests using Microsoft Purview. Alternatively, Microsoft Partner solutions can be deployed to manage specific data governance functions. Key functions to consider in your architecture include a global data catalog, master data management, data sharing and contracts, API catalog, data quality management, and a data modeling repository.
+
+Microsoft partner data governance products that need deployment in a subscription should be deployed to the Data Governance resource group within the data management landing zone.
 
 ### Data catalog
 
