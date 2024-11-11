@@ -72,7 +72,8 @@ You might want to simplify complex and distributed environments across on-premis
 - **Manage Kubernetes applications at scale**: Use DevOps techniques to deploy and manage Kubernetes applications across environments. Ensure that you consistently deploy and configure applications from source control.
 
 - **Run Azure services anywhere**: Get automated patching, upgrades, security, and scaling on-demand across on-premises, edge, and multicloud environments for your data estate.
-- **Enable self-service access to your virtual machines**: Use Azure role-based access control (RBAC) to grant self-service ability to your VMware vSphere and System Center Virtual Machine Manager resources through Azure. Perform every VM lifecycle and power cycle operation from Azure portal and automate the operations through Azure templates, APIs, and SDKs.
+
+- **Enable self-service access to your virtual machines**: Use Azure role-based access control (RBAC) to grant self-service ability to your VMware vSphere and System Center Virtual Machine Manager resources through Azure. Perform VM lifecycle and powercycle operations from Azure portal and build automation using Azure templates, APIs, and SDKs.
 
 ## Azure Arc customer snapshot
 
@@ -118,7 +119,7 @@ For each cloud mix, you'll need an Azure environment to support, govern, and man
 
 Azure Arc resources can be part of any application. Examples include:
 
-- Azure Arc-enabled servers, Azure Arc-enabled VMware vSphere, and Azure Arc-enabled System Center Virtual Machine Manager, which represent IT assets deployed outside of Azure. Purpose-built Azure Arc services, such as Azure Arc-enabled VMware vSphere and Azure Arc-enabled System Center Virtual Machine Manager, project IT assets deployed in vCenter and System Center Virtual Machine Manager managed on-premises datacenters into Azure.
+- Azure Arc-enabled servers, Azure Arc-enabled VMware vSphere, and Azure Arc-enabled System Center Virtual Machine Manager, which represent IT assets deployed outside of Azure. Purpose-built Azure Arc services, such as Azure Arc-enabled VMware vSphere and Azure Arc-enabled System Center Virtual Machine Manager, project IT assets deployed in VMware vCenter and System Center Virtual Machine Manager managed on-premises datacenters into Azure.
 - Customer-managed Kubernetes clusters in a multicloud environment.
 - Azure Arc-enabled data, application, and machine-learning services working at the edge.
 
