@@ -94,7 +94,7 @@ Increase the clock rate of a graphics processing unit (GPU) to improve performan
 
 ### I/O tuning
 
-- *Optimize scratch storage.* Scratch needs to have high throughput and low latency. The training job requires reading data, processing it, and using this storage location as scratch space while the job runs. Ideally, you would use the local SSD directly on each VM. If you need a shared filesystem for scratch, combining all NVMe SSDs to create a Parallel File System (PFS) might be a great option in terms of cost and performance, assuming it has sufficient capacity. One method is to use BeeOND. If BeeOnd isn't suitable, you can explore storage options like IaaS Lustre PFS, Azure ClusterStor, and Azure NetApp files.
+- *Optimize scratch storage.* Scratch needs to have high throughput and low latency. The training job requires reading data, processing it, and using this storage location as scratch space while the job runs. Ideally, you would use the local SSD directly on each VM. If you need a shared filesystem for scratch, combining all NVMe SSDs to create a Parallel File System (PFS) might be a great option in terms of cost and performance, assuming it has sufficient capacity. One method is to use [Azure Managed Lustre](https://learn.microsoft.com/en-us/azure/azure-managed-lustre/amlfs-overview). If Azure Managed Lustre isn't suitable, you can explore storage options like [Azure NetApp Files](https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-introduction) or [Azure Native Qumulo](https://learn.microsoft.com/en-us/azure/partner-solutions/qumulo/qumulo-overview).
 
 - *Implement checkpoint storage.* Large deep learning training jobs can run for weeks, depending on the number of VMs used. Just like any HPC cluster, you can encounter failures, such as InfiniBand issues, dual in-line memory module (DIMM) failures, error-correcting ode (ECC) errors in GPU memory. It's critical to have a checkpointing strategy. Know the checkpoint interval (when data is saved). Understand how much data is transferred each time. Have a storage solution that meets capacity and performance requirements. Use Blob Storage, if it meets the performance needs.
 
@@ -113,8 +113,8 @@ NVIDIA Megatron-LM is an open-source framework for training large language model
 
 - *Parallelism*: Supports model, data, and pipeline parallelism for billion-parameter models.
 - *Scalability*: Scales across multiple GPUs and nodes for efficient large model training.
-- **Flexibility*: Allows configuration of model architecture, data loading, and training strategies.
-- **Optimizations*: Uses NVIDIA’s GPU optimizations for performance gains.
+- *Flexibility*: Allows configuration of model architecture, data loading, and training strategies.
+- *Optimizations*: Uses NVIDIA’s GPU optimizations for performance gains.
 
 Megatron-LM deploys on Azure HPC infrastructure, and it uses Azure’s scalability for large language models without requiring on-premises hardware.
 
@@ -128,19 +128,19 @@ Deploying Megatron-LM requires specific software and hardware.
 
 #### Megatron-LM test use
 
-You should run Megatron-LM using the latest release of [NGC's PyTorch container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch). It introduces a set of extra requirements for traditional Slurm-based HPC clusters:
+You should run Megatron-LM using the latest release of [NGC's PyTorch container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch). To run the container against a traditional Slurm-based HPC clusters, you will need to install and configure these additional components in your cluster:
 
 - [enroot](https://github.com/NVIDIA/enroot): a tool that allows users to run containerized applications on HPC clusters without requiring root privileges or modifying the host system.
 - [pyxis](https://github.com/NVIDIA/pyxis): a plugin for Slurm that enables seamless integration of enroot with Slurm, allowing users to submit containerized jobs to Slurm queues and run them on HPC nodes.
 
-Both of these components are included in the CycleCloud Slurm workspace but are currently not included in Slurm clusters that are built via CycleCloud. These extra components can be introduced via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects).
+Both of these components are included in [CycleCloud Workspace for Slurm](./cycle-cloud.md) but are currently not included in Slurm clusters that are built via CycleCloud. These extra components can be introduced via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects).
 
 With these requirements met, you can use Megatron-LM for LLM training by:
 
-1.*Verifying the performance of your cluster*: with [Node Health Checks](https://github.com/Azure/azurehpc-health-checks) you can identify any potential hardware issues before running your workload, and NCCL tests can be used to verify the distributed all-reduce performance of the cluster.
-2.*Selecting your training data*: the [codeParrot](https://huggingface.co/codeparrot/codeparrot-small) model can be used as a starting point to validate your workflow.
-3.*Preprocess your data*: use the [preprocess\_data.py](https://github.com/NVIDIA/Megatron-LM/tree/main?tab=readme-ov-file#data-preprocessing) script within the Megatron-LM repository to convert your data to a format that is compatible with Megatron-LM.
-4.*Train with Megatron-LM*: there are several [examples](https://github.com/NVIDIA/Megatron-LM/tree/main/examples) within Megatron-LM that can be used as a reference to configure Megatron for training.
+- *Verifying the performance of your cluster*: with [Node Health Checks](https://github.com/Azure/azurehpc-health-checks) you can identify any potential hardware issues before running your workload, and NCCL tests can be used to verify the distributed all-reduce performance of the cluster.
+- *Selecting your training data*: the [codeParrot](https://huggingface.co/codeparrot/codeparrot-small) model can be used as a starting point to validate your workflow.
+- *Preprocess your data*: use the [preprocess\_data.py](https://github.com/NVIDIA/Megatron-LM/tree/main?tab=readme-ov-file#data-preprocessing) script within the Megatron-LM repository to convert your data to a format that is compatible with Megatron-LM.
+- *Train with Megatron-LM*: there are several [examples](https://github.com/NVIDIA/Megatron-LM/tree/main/examples) within Megatron-LM that can be used as a reference to configure Megatron for training.
 
 This setup ensures efficient deployment and training of large language models on Azure’s HPC resources.
 
@@ -154,7 +154,7 @@ Use the NCCL bandwidth test to assess key metrics, including time and bandwidth.
 
 #### NCCL test initiation
 
-To initiate these tests within a CycleCloud deployment, connect to the scheduler node via SSH and access a GPU-equipped compute node. Clone the CycleCloud Git repository for NCCL tests, navigate to the `nccl-tests` directory, and create a host file listing the nodes for testing. Obtain the scheduler node’s IP address from CycleCloud’s web app or use a default IP like 10.50.0.5.
+To initiate these tests within a CycleCloud deployment, connect to the scheduler node via SSH and access a GPU-equipped compute node. Clone the Git repository for NCCL tests, navigate to the `nccl-tests` directory, and create a host file listing the nodes for testing. Obtain the scheduler node’s IP address from CycleCloud’s web app.
 
 ### NCCL test arguments
 
