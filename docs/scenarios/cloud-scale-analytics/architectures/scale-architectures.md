@@ -32,7 +32,7 @@ Each large organization has thousands of data consumers. A complicated process l
 
 ## Methods for scaling
 
-:::image type="content" source="../media/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones." lightbox="../media/high-level-design-multiple-landing-zones.png" border="false" :::
+:::image type="content" source="../images/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones." lightbox="../media/high-level-design-multiple-landing-zones.png" border="false" :::
 
 Cloud-scale analytics addresses scaling challenges by using two core concepts:
 
@@ -121,5 +121,5 @@ The foundation of your data platform is datasets that are integrated from source
 By using the scaling mechanisms of your cloud-scale analytics architecture, your organization grows your data estate within Azure over time while avoiding well-known technical limitations. Both of the scaling methods described in this article help you overcome different technical complexities, and can be used in a simple and efficient way.
 
 ## Next steps
-
-- [Data standardization](data-standardization.md)
+> [!div class="nextstepaction"]
+> [Data standardization](data-standardization.md)
