@@ -1,6 +1,6 @@
 ---
-title: Cloud-scale analytics data management landing zone overview
-description: Gain an overview of cloud-scale analytics data management landing zone in Azure
+title: Data management landing zone overview
+description: Gain an overview of data management landing zone in Azure
 author: mboswell
 ms.author: mboswell
 ms.date: 11/11/2024
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Cloud-scale analytics data management landing zone overview
+# Data management landing zone overview
 
 The data management landing zone is a management function and is central to cloud-scale analytics. It's responsible for the governance of your analytics platform.
 
