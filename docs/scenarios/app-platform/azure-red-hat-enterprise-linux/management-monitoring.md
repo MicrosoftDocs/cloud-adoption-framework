@@ -4,7 +4,7 @@ description: Learn about key design considerations and recommendations for manag
 author: heisthesisko
 ms.author: joelsisk
 ms.topic: conceptual
-md.date: 07/24/2024
+ms.date: 07/24/2024
 ---
 
 # Management and monitoring considerations for Red Hat Enterprise Linux on Azure
