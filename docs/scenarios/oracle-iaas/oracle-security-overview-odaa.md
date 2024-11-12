@@ -29,7 +29,7 @@ Consider the following guidance when you design your security guidelines for Ora
 
 - Oracle Database@Azure delegated subnets don't support network security groups (NSGs).
 
-- The Oracle Database@Azure solution uses many default Transmission Control Protocol (TCP) ports for various operations. For the full list of ports, see [Default port assignments](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmin/exadata-network-requirements.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
+- The Oracle Database@Azure solution uses many default Transmission Control Protocol (TCP) ports for various operations. For the full list of ports, see [Default port assignments](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/index.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
 
 - To store and manage keys by using Transparent Data Encryption (TDE), which is enabled by default, the Oracle Database@Azure solution can use [OCI vaults](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) or [Oracle Key Vault](https://www.oracle.com/security/database-security/key-vault/). The Oracle Database@Azure solution doesn't support Azure Key Vault.
 

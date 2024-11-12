@@ -2079,6 +2079,51 @@
          "source_path": "docs/innovate/best-practices/ml-deployment-inference.md",
          "redirect_url": "/azure/machine-learning/overview-what-is-azure-machine-learning",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/platform-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring#azure_facilitation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/response.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/service-level-objectives.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/observability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/monitoring-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/cloud-models-monitor-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/data-collection.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
       }
    ]
 }
