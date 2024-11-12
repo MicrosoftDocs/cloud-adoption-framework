@@ -29,9 +29,9 @@ AI adoption is a sequential process. This guidance divides AI adoption into six 
 - *Manage AI*: The process to manage your AI deployments, operations, models, and data over time to ensure they remain aligned with your business goals.
 - *Secure AI*: The process to assess AI security risks and apply security controls to protect your AI workloads.
 
-## AI adoption checklists
+## AI checklists
 
-Use the AI adoption checklists as your roadmap for being successful with AI. There are two checklists available: one for startups and one for enterprises. The enterprise checklist provides the most comprehensive guidance. It helps you prepare your organization to adopt AI at scale. For a quicker path to AI adoption, use the startup checklist. As your organization grows, consult the enterprise checklist to support your expanding AI needs.
+Use the AI checklists as your roadmap for adopting and maintaining AI. There are two checklists available: one for startups and one for enterprises. The enterprise checklist provides the most comprehensive guidance. It helps you prepare your organization to adopt AI at scale. For a quicker path to AI adoption, use the startup checklist. As your organization grows, consult the enterprise checklist to support your expanding AI needs.
 
 | AI adoption phase | Startup checklist | Enterprise checklist |
 |---|---|---|
