@@ -221,6 +221,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
+| ExpressRoute direct | `Microsoft.Network/expressRoutePorts` | `erd` |
 | ExpressRoute gateway | `Microsoft.Network/virtualNetworkGateways` | `ergw` |
 | Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `afd` |
 | Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
