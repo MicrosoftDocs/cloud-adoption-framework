@@ -162,10 +162,10 @@ Before running tests, specify different [arguments](https://github.com/nvidia/nc
 
 ROCm Communication Collectives Library (RCCL) is a specialized library designed for efficient communication between AMD GPUs. It provides collective operations such as all-reduce, all-gather, broadcast, and reduce, supporting both intra- and inter-node GPU communication. Optimized for platforms using PCIe and networking technologies like InfiniBand, RCCL ensures scalable data transfer in multi-GPU environments. It supports integration into both single- and multi-process workflows, such as those using MPI. For more information, see [ROCm Communication Collectives Library](https://github.com/rocm/rccl#rccl)
 
-- Set Up Environment: Install ROCm and ensure RCCL is properly installed on all nodes.
-- Build RCCL Tests: Clone the repository, navigate to the rccl-tests directory, and compile the tests.
-- Run Bandwidth Tests: Use the provided test executables (rccl-tests), specifying communication operations like all-reduce.
-- Analyze Performance: Compare bandwidth and latency results across nodes and GPUs.
+- *Set Up Environment.* Install ROCm and ensure RCCL is properly installed on all nodes.
+- *Build RCCL Tests.* Clone the repository, navigate to the rccl-tests directory, and compile the tests.
+- *Run Bandwidth Tests.* Use the provided test executables (rccl-tests), specifying communication operations like all-reduce.
+- *Analyze Performance.* Compare bandwidth and latency results across nodes and GPUs.
 
 ## Next step
 
