@@ -1,10 +1,10 @@
 ---
 title: Azure API Management landing zone accelerator
-description: The Azure API Management landing zone accelerator is an open-source collection of Bicep templates to deploy an environment capable of hosting API Management.
+description: Learn how the Azure API Management landing zone accelerator, an open-source collection of Bicep templates, can help you deploy an environment capable of hosting API Management. 
 author: aarthiem
 ms.author: aamurugan
 ms.reviewer: tozimmergren
-ms.date: 11/08/2024
+ms.date: 11/13/2024
 ms.topic: conceptual
 ms.custom: devx-track-bicep
 ms.collection: ce-skilling-ai-copilot
@@ -12,15 +12,15 @@ ms.collection: ce-skilling-ai-copilot
 
 # Azure API Management landing zone accelerator
 
-The Microsoft Azure API Management landing zone accelerator provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable API Management infrastructure. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale.
+The Azure API Management landing zone accelerator provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable API Management infrastructure. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones with a focus on the design principles of enterprise-scale.
 
-Customers adopt API Management in various ways. The architectural approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using API Management. The reference implementation can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
+Customers adopt API Management in various ways. The architectural approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using API Management. The reference implementation can be adapted to produce an architecture that fits your way and puts your organization on a path to sustainable scale.
 
 The provided infrastructure-as-code template can be modified to fit your naming conventions, use existing resource such as Azure DevOps agents and Azure Key Vault, and extend to different backends. For example, you can add connections to APIs hosted on Azure App Service or Microsoft Azure Kubernetes Service (AKS).
 
 ## Implement a platform foundation
 
-The API Management landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize an enterprise-scale landing zone has been successfully implemented. This isn't mandatory when implementing the API Management landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review these articles:
+The API Management landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize an enterprise-scale landing zone has been successfully implemented. This isn't mandatory when implementing the API Management landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information, review the following articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../../ready/enterprise-scale/implementation.md)
@@ -52,7 +52,7 @@ These articles provide guidelines for creating your landing zone based on the de
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-[![Diagram that shows Azure A P I Management landing zone accelerator architecture.](./media/landing-zone-accelerator/api-management-secure-baseline.png)](./media/landing-zone-accelerator/api-management-secure-baseline.png#lightbox)
+[![Diagram that shows the Azure API Management landing zone accelerator architecture.](./media/landing-zone-accelerator/api-management-secure-baseline.png)](./media/landing-zone-accelerator/api-management-secure-baseline.png#lightbox)
 
 This architecture consists of API Management deployed in a virtual network in internal mode, fronted by an Application Gateway.
 
