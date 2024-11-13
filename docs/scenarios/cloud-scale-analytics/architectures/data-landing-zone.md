@@ -3,14 +3,14 @@ title: Data landing zones
 description: Learn about cloud-scale analytics architecture data landing zones in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 04/11/2022
+ms.date: 11/11/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Data landing zones
 
-Data landing zones are connected to your [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering or private endpoints. Each data landing zone is considered a [landing zone](../../../ready/landing-zone/index.md) related to Azure landing zone architecture.
+Data landing zones are connected to your [data management landing zone](./data-management-landing-zone.md) by virtual network peering or private endpoints. Each data landing zone is considered a [landing zone](../../../ready/landing-zone/index.md) related to Azure landing zone architecture.
 
 > [!IMPORTANT]
 > Before provisioning a data landing zone, make sure your DevOps and CI/CD operating model is in place and a data management landing zone is deployed.
@@ -32,7 +32,7 @@ A typical Azure subscription associated with a data landing zone has the followi
 
 ## Data landing zone architecture
 
-Data landing zone architecture illustrates the layers, their resource groups, and services each resource group contains. The architecture also provides an overview of all groups and roles associated with your data landing zone, plus the extent of their access to your control and data planes. This also illustrates how each layer aligns to the Operational Model responsibilities.
+Data landing zone architecture illustrates the layers, their resource groups, and services each resource group contains. The architecture also provides an overview of all groups and roles associated with your data landing zone, plus the extent of their access to your control and data planes. The architecture also illustrates how each layer aligns to the Operational Model responsibilities.
 
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
@@ -54,7 +54,7 @@ The platform services layer includes services required to enable connectivity an
 
 The network resource group contains connectivity services, including Azure [Virtual Networks](azure/virtual-network/virtual-networks-overview), [Network Security Groups](/azure/virtual-network/network-security-groups-overview) (NSG), and [route tables](/azure/virtual-network/virtual-networks-udr-overview). All of these services are deployed into a single resource group.
 
-The virtual network of your data landing zone is [automatically peered with your data management landing zone's VNet](../eslz-network-topology-and-connectivity.md) and your [connectivity subscription's VNet](../../../ready/landing-zone/index.md).
+The virtual network of your data landing zone is [automatically peered with your data management landing zone's virtual network](../eslz-network-topology-and-connectivity.md) and your [connectivity subscription's virtual network](../../../ready/landing-zone/index.md).
 
 
 ### Security and Monitoring
@@ -87,7 +87,7 @@ As shown in the diagram, three [Azure Data Lake Storage Gen2](/azure/storage/blo
 [!INCLUDE [data-lake-layers](../../cloud-scale-analytics/includes/data-lake-layers.md)]
 
 > [!NOTE]
-> In the previous diagram, each data landing zone has three data lake storage accounts. However, depending on your requirements, you can choose to consolidate your raw, enriched and curated layers into one storage account, and maintain another storage account called 'workspace' for data consumers to bring in other useful data products.
+> In the previous diagram, each data landing zone has three data lake storage accounts. However, depending on your requirements, you can choose to consolidate your raw, enriched, and curated layers into one storage account, and maintain another storage account called 'workspace' for data consumers to bring in other useful data products.
 
 For more information, see:
 
@@ -99,7 +99,7 @@ For more information, see:
 
 ### Shared integration runtimes
 
-Azure Data Factory and Azure Synapse Analytics Pipelines use integration runtimes (IR) to securely access data sources in peered or isolated networks. Shared IRs should be deployed to a virtual machine (or VM scale set) in the shared integration runtime resource group.
+Azure Data Factory and Azure Synapse Analytics Pipelines use integration runtimes (IR) to securely access data sources in peered or isolated networks. Shared IRs should be deployed to a virtual machine (or Azure Virtual Machine Scale Sets) in the shared integration runtime resource group.
 
 :::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
 
@@ -107,11 +107,11 @@ To enable the shared resource group:
 
 - Create at least one Azure Data Factory in your data landing zone's shared integration resource group. Use it only for linking the shared self-hosted integration runtime, not for data pipelines.
 - [Create and configure a self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime) on the virtual machine.
-- Associate the self-hosted integration runtime with Azure data factories in your data landing zone(s).
-- Use Powershell scripts to [periodically update the self hosted integration runtime](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
+- Associate the self-hosted integration runtime with Azure data factories in your data landing zones.
+- Use PowerShell scripts to [periodically update the self hosted integration runtime](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
 
 > [!NOTE]
-> The above deployment describes a single virtual machine deployment with a self-hosted integration runtime. You can associate a self-hosted integration runtime with multiple virtual machines on-premises or in Azure. These machines are called nodes and you can have up to four nodes associated with a self-hosted integration runtime. The benefits of having multiple nodes are:
+> The deployment describes a single virtual machine deployment with a self-hosted integration runtime. You can associate a self-hosted integration runtime with multiple virtual machines on-premises or in Azure. These machines are called nodes and you can have up to four nodes associated with a self-hosted integration runtime. The benefits of having multiple nodes are:
 >
 > - Higher availability of the self-hosted integration runtime so that it's no longer the single point of failure in your data application or in the orchestration of cloud data integration.
 > - Improved performance and throughput during data movement between on-premises and cloud data services. Get more information on [performance comparisons](/azure/data-factory/copy-activity-performance).
@@ -132,11 +132,11 @@ For more information, see [Azure Pipeline agents](/azure/devops/pipelines/agents
 
 ### Upload ingest storage
 
-Third-party data publishers may need to land data in your platform so your data application teams can pull it into their data lakes. You may also have internal or external data sources which cannot support the connectivity or authentication requirements that are enforced across the rest of the data landing zone(s). Using a separate storage account is the recommended approach to receive data, then a shared integration runtime or similar ingestion process to bring it into your processing pipeline. As seen in the following diagram, your upload ingest storage resource group lets you provision blob stores for these use-cases.
+Third-party data publishers may need to land data in your platform so your data application teams can pull it into their data lakes. You may also have internal or external data sources which can't support the connectivity or authentication requirements that are enforced across the rest of the data landing zones. Using a separate storage account is the recommended approach to receive data, then a shared integration runtime or similar ingestion process to bring it into your processing pipeline. As seen in the following diagram, your upload ingest storage resource group lets you provision blob stores for these use-cases.
 
 ![Diagram of upload ingest storage service.](../images/data-landing-zone-ingest-storage.png)
 
-Your data application teams request these storage blobs. Their requests are then approved by your data landing zone operations team. Data should be removed from its source storage blob once it's been pulled from the storage blob into raw.
+The data application teams request the storage blobs. These requests get approved by the data landing zone operations team. Data should be deleted from its source storage blob after being ingested into the raw data storage.
 
 > [!IMPORTANT]
 > Since Azure Storage blobs are provisioned on an *as-needed* basis, you should initially deploy an empty storage services resource group in each data landing zone.
@@ -170,7 +170,7 @@ Services included in this resource group include:
 
 ### Shared applications
 
-This optional resource group is used when there is a need to have a set of shared services made available to all the teams building data applications in this data landing zone. Example uses include:
+This optional resource group is used when there's a need to have a set of shared services made available to all the teams building data applications in this data landing zone. Example uses include:
 
 - An Azure Databricks workspace used as a shared Metastore for all other Databricks workspaces created in the same data landing zone (or region)
 - A shared Azure Synapse Analytics instance using Serverless SQL Pools to enable users to query across isolated storage accounts.
@@ -185,7 +185,7 @@ Follow cloud-scale analytics best practices to integrate Azure Databricks:
 
 ## Data application
 
-Each data landing zone can have multiple data applications. You can create these by ingesting data from various sources. You can also create data applications from other data applications within the same data landing zone or from other data landing zones. Creation of the data applications is subject to data steward approval.
+Each data landing zone can have multiple data applications. You can create these applications by ingesting data from various sources. You can also create data applications from other data applications within the same data landing zone or from other data landing zones. Creation of the data applications is subject to data steward approval.
 
 ### Data application resource group
 
@@ -198,7 +198,7 @@ For more information on how to onboard data products, see [Cloud-scale analytics
 
 ## Visualization
 
-You can use visualization and reporting tools within Fabric Workspaces, which have many similarities to Power BI Workspaces, without having to deploy unique resources within your data landing zone. There is an option to include a resource group to deploy Fabric capacity, virtual machines for data gateways, or other data services into which are required to deliver your data application to the end user. 
+You can use visualization and reporting tools within Fabric Workspaces, which have many similarities to Power BI Workspaces, without having to deploy unique resources within your data landing zone. You can include a resource group to deploy Fabric capacity, virtual machines for data gateways, or other necessary data services to deliver your data application to the end user.
 
 ## Next steps
 
