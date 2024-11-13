@@ -51,7 +51,7 @@ Securing AI data involves protecting the data that AI models use and generate. E
 
 - *Define and maintain data boundaries.* Ensure AI workloads use data appropriate for their access level. AI applications accessible to all employees should only process data suitable for all employees. Internet-facing AI applications must use data appropriate for public consumption. Use separate datasets or environments for different AI applications to prevent inadvertent data access. Consider using Microsoft Purview’s suite of [data security](/purview/purview-security) tools to secure your data.
 
-- *Implement strict data access controls. Ensure applications verify that end-users are authorized to access the data involved in their queries.* Avoid broad system permissions for user actions. Operate under the principle that if the AI can access certain information, the user should be authorized to access it directly.
+- *Implement strict data access controls.* Ensure applications verify that end-users are authorized to access the data involved in their queries. Avoid broad system permissions for user actions. Operate under the principle that if the AI can access certain information, the user should be authorized to access it directly.
 
 - *Maintain a data catalog.* Keep an up-to-date catalog of all data connected to and consumed by AI systems, including storage locations and access details. Regularly scan and label data to track sensitivity levels and suitability, aiding in analytics and risk identification. Consider using [Microsoft Purview Data Catalog](/purview/purview-security) to map and govern your data.
 
