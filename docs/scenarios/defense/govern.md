@@ -9,7 +9,7 @@ ms.topic: conceptual
 ---
 # Govern for defense cloud adoption
 
-The govern methodology focuses on the platform domain. It affects your workload cost management, security baseline, identity access roles, and resource consistency parameters.
+The Govern methodology focuses on the platform domain. It affects your workload cost management, security baseline, identity access roles, and resource consistency parameters.
 
 :::image type="content" source="./images/platform.png" alt-text="Figure that shows a domain tracker. It shows mission, platform, and workload. Platform is highlighted to show we're in the platform domain of cloud adoption." border="false":::
 *Figure 1: Domain tracker - platform domain*
@@ -96,7 +96,7 @@ For more information on governance, see:
 
 ## Next step
 
-After governance, cloud adoption moves into the workload domain and starts with the adopt methodology.
+After governance, cloud adoption moves into the workload domain and starts with the Adopt methodology.
 
 > [!div class="nextstepaction"]
 > [Adopt](adopt.md)
