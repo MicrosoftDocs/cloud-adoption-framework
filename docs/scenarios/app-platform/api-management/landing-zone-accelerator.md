@@ -68,8 +68,6 @@ The following conceptual reference architecture is an example that outlines desi
 
 This architecture consists of API Management deployed in a virtual network in internal mode and is fronted by an Application Gateway.
 
-*Download a [Visio file](https://arch-center.azureedge.net/api-management-secure-baseline.vsdx) of this architecture.*
-
 ## Generative AI gateway scenario
 
 The generative AI gateway sample code describes how to provision and interact with generative AI resources through API Management. Gateway offloading is a common design pattern when you interact with generative AI models. For more information on this pattern, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide). The implementation is on top of the API Management baseline and incorporates private deployments of Azure OpenAI endpoints. It also includes API Management policies specifically tailored for generative AI use cases.
