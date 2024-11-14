@@ -898,20 +898,20 @@ items:
   - name: Secure
     items:
     - name: Overview 
-      href: secure/secure-overview.md
+      href: secure/overview.md
     - name: Teams and roles
-      href: secure/secure-teams-roles.md
+      href: secure/teams-roles.md
     - name: Strategy
-      href: secure/secure-strategy.md
+      href: secure/strategy.md
     - name: Plan
-      href: secure/secure-plan.md     
+      href: secure/plan.md     
     - name: Adopt 
-      href: secure/secure-adopt.md
+      href: secure/adopt.md
     - name: Govern  
-      href: secure/secure-govern.md
+      href: secure/govern.md
     - name: Manage  
-      href: secure/secure-manage.md
-
+      href: secure/manage.md
+  
   - name: Organize
     items:
     - name: Managing organization alignment

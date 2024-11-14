@@ -101,4 +101,4 @@ In order to plan your security baseline, you must first understand your current 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prepare your secure cloud estate](./secure-ready.md)
+> [Prepare your secure cloud estate](./ready.md)

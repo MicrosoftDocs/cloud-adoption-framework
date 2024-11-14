@@ -139,4 +139,4 @@ Modern Service Management (MSM) is a set of practices and tools designed to mana
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Manage your cloud estate with enhanced security](./secure-manage.md)
+> [Manage your cloud estate with enhanced security](./manage.md)
