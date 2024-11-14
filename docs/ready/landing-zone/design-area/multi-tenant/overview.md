@@ -77,7 +77,6 @@ Microsoft Entra ID provides controls that help mitigate this problem on a techni
 > For more information, see:
 > 
 > - [Define Microsoft Entra tenants](../azure-ad-define.md)
-> - [Architecture: Standardize on a single directory and identity](../../../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
 > - [Testing approach for Azure landing zones](../../../enterprise-scale/testing-approach.md)
 > - [Introduction to delegated administration and isolated environments](/azure/active-directory/fundamentals/secure-with-azure-ad-introduction)
 > - [Resource isolation in a single tenant](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant)

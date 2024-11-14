@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 During the Ready phase of a cloud adoption journey, you focus on creating the foundation of the estate. The Microsoft [Azure landing zone](../ready/landing-zone/index.md) approach provides enterprises and large organizations with a more secure, scalable, modular design pattern to follow when they implement their estates. Smaller organizations and startups might not need the level of organization that the landing zone approach provides, but an understanding of the landing zone philosophy can help any organization strategize a foundational design and gain a high degree of security and scalability.
 
-After you define your cloud adoption [strategy](./secure-strategy.md) and [plan](./secure-plan.md), you can begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
+After you define your cloud adoption [strategy](./strategy.md) and [plan](./plan.md), you can begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
 
 This article is a supporting guide to the [Ready](../ready/index.md) methodology. It describes areas of security optimization that you should consider as you move through that phase in your journey.
 
@@ -24,7 +24,7 @@ The first implementation steps in modernizing your security posture are building
 
     - If you don't plan to adopt a complete enterprise landing zone, you still need to understand the [design areas](../ready/landing-zone/design-areas.md) and apply guidance that's relevant to your cloud estate. You need to think about all of these design areas and implement controls that are specific to each area, no matter how your foundation is architected. For example, using management groups can help you govern your cloud estate even if it only consists of a few subscriptions.
 
-Develop secure, scalable landing zones that provide controlled environments for deploying cloud resources. These zones help you ensure that security policies are consistently applied and that resources are segregated according to their security requirements. See the [security design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) for detailed guidance on this topic.
+Develop secure, scalable landing zones that provide controlled environments for deploying cloud resources. These zones help you ensure that security policies are consistently applied and that resources are segregated according to their security requirements. See the [security design area](../ready/landing-zone/design-area/security.md) for detailed guidance on this topic.
 
 - **Modern identity, authorization, and access:** Based on the principles of Zero Trust, the modern approach to identity, authorization, and access moves from trust-by-default to trust-by-exception. It follows from these principles that users, devices, systems, and apps should be allowed to access only resources that they require, and only for as long as needed to meet their needs. The same guidance applies to the foundational elements of your estate: tightly control permissions to subscriptions, networking resources, governance solutions, the identity and access management (IAM) platform, and tenants by following the same recommendations that you follow for the workloads that you run. See the [identity and access management design area](../ready/landing-zone/design-area/identity-access.md) for detailed guidance on this topic.
 
@@ -40,7 +40,7 @@ Develop secure, scalable landing zones that provide controlled environments for 
 
 After you define your strategy and develop your plan for incident preparedness and response, you can begin your implementation. Whether you adopt a full enterprise landing zone design or a smaller foundational design, network segregation is critical for maintaining a high degree of security.
 
-**Network segmentation:** Design a network architecture with proper segmentation and isolation to minimize attack surfaces and contain potential breaches. Use techniques like virtual private clouds (VPCs), subnets, and security groups to manage and control traffic. See the [Plan for network segmentation](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-landing-zone-network-segmentation) article for detailed guidance on this topic. Be sure to review the rest of the Azure landing zone network security guides. The guidance includes recommendations for [inbound and outbound connectivity](../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md), [network encryption](../ready/azure-best-practices/define-network-encryption-requirements.md), and [traffic inspection](../ready/azure-best-practices/plan-for-traffic-inspection.md).
+**Network segmentation:** Design a network architecture with proper segmentation and isolation to minimize attack surfaces and contain potential breaches. Use techniques like virtual private clouds (VPCs), subnets, and security groups to manage and control traffic. See the [Plan for network segmentation](../ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md) article for detailed guidance on this topic. Be sure to review the rest of the Azure landing zone network security guides. The guidance includes recommendations for [inbound and outbound connectivity](../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md), [network encryption](../ready/azure-best-practices/define-network-encryption-requirements.md), and [traffic inspection](../ready/azure-best-practices/plan-for-traffic-inspection.md).
 
 ### Azure facilitation 
 
@@ -125,4 +125,4 @@ See [Transition an existing Azure environment to the Azure landing zone conceptu
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Perform your cloud adoption with enhanced security](./secure-adopt.md)
+> [Perform your cloud adoption with enhanced security](./adopt.md)

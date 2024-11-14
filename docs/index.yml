@@ -132,14 +132,14 @@ productDirectory:
     - title: Secure
       imageSrc: ./_images/icons/secure.png
       links:
-        - url: ./secure/index.md
+        - url: ./secure/overview.md
           text: Overview
-        - url: ./secure/risk-insights.md
-          text: Risk insights
-        - url: ./secure/business-resilience.md
-          text: Business resilience
-        - url: ./secure/asset-protection.md
-          text: Asset protection
+        - url: ./secure/plan.md
+          text: Plan for a Secure Cloud Adoption
+        - url: ./secure/strategy.md
+          text: Plan for a Secure Cloud Adoption
+        - url: ./secure/ready.md
+          text: Prepare Your Secure Cloud Estate
 
     # Card
     - title: Manage

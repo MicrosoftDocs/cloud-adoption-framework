@@ -24,7 +24,7 @@ The following incremental methodologies are designed to help you develop your op
 
 - [Manage](../manage/index.md): Align ongoing processes for operational technology management.
 - [Govern](../govern/index.md): Maintain alignment with governance and compliance requirements and ensure consistency across your adoption efforts.
-- [Secure](../secure/index.md): Align your business to the security disciplines and strengthen your security posture.
+- [Secure](../secure/overview.md): Align your business to the security disciplines and strengthen your security posture.
 - [Organize](../organize/index.md): Outline which functions your business needs and define organizational methods for your business goals and people.
 
 ### Collective operating model output

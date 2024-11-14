@@ -47,7 +47,7 @@ Policies in Azure create a firm guardrail and automate the bulk of governance ta
 
 For more on governance automation, see
 
-- [Security governance](../../secure/security-governance.md)
+- [Security governance](../../secure/govern.md)
 - [Overview of Azure Policy](/azure/governance/policy/)
 - [Compliance in Azure](/azure/azure-government/documentation-government-plan-compliance)
 - [Azure compliance standards](/azure/compliance/)
