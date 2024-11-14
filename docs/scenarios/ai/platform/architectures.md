@@ -41,17 +41,17 @@ The Azure Architecture Center offers reference architectures and guides to help 
 
 ## Use the AI design areas as a framework
 
-The AI design areas offer recommendations for organizations building AI workloads with Azure's platform-as-a-service (PaaS) solutions. The following design areas provide comprehensive guidelines for adopting AI workloads on Azure and managing them throughout their lifecycle:
+The AI design areas provide technology-specific framework to design AI workloads with Azure's AI platform-as-a-service (PaaS) solutions. It focuses on Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. Use them to establish standards and best practices related to these services:
 
-- [AI resource selection](./resource-selection.md)
-- [AI networking](./networking.md)
-- [AI governance](./governance.md)
-- [AI management](./management.md)
-- [AI security](./security.md)
+- [Resource selection](./resource-selection.md)
+- [Networking](./networking.md)
+- [Governance](./governance.md)
+- [Management](./management.md)
+- [Security](./security.md)
 
-Use the AI design area articles as a framework alongside the reference architectures. Each design area includes recommendations for both generative and nongenerative AI workloads on Azure, consolidating best practices that apply to all AI workloads using Azure PaaS AI platforms.
+Each design area includes recommendations for both generative and nongenerative AI workloads on Azure, consolidating best practices that apply to all AI workloads using Azure PaaS AI platforms.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Resource selection PaaS AI](./resource-selection.md)
+> [Resource selection](./resource-selection.md)
