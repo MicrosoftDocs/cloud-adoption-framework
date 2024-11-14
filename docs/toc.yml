@@ -904,7 +904,9 @@ items:
     - name: Strategy
       href: secure/strategy.md
     - name: Plan
-      href: secure/plan.md     
+      href: secure/plan.md
+    - name: Ready
+      href: secure/ready.md    
     - name: Adopt 
       href: secure/adopt.md
     - name: Govern  

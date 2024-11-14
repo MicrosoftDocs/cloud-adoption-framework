@@ -137,7 +137,7 @@ productDirectory:
         - url: ./secure/plan.md
           text: Plan for a Secure Cloud Adoption
         - url: ./secure/strategy.md
-          text: Plan for a Secure Cloud Adoption
+          text: Integrate Security Into Your Cloud Adoption Strategy
         - url: ./secure/ready.md
           text: Prepare Your Secure Cloud Estate
 
