@@ -62,7 +62,7 @@ To apply a policy to a resource group:
 1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts).
 1. Select **Automation accounts**, and choose one of the listed accounts.
 1. Go to **Configuration Management**.
-1. Use **Inventory**, **Change Management**, and **State Configuration** to control the state and operational compliance of the managed VMs.
+1. Use **State Configuration (DSC)** to control the state and operational compliance of the managed VMs.
 
 ::: zone target="chromeless"
 
