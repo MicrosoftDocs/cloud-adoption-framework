@@ -30,39 +30,7 @@ Use these steps to plan and execute your strategy for securing your cloud assets
 
 Security in the cloud starts with applying the most important security practices to the people, process, and technology elements of your system. Additionally, some architectural decisions are foundational and are very difficult to change later so should be carefully applied.
 
-Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow these 11 essential security practices (in addition to meeting any explicit regulatory compliance requirements).
-
-<!-- markdownlint-disable MD029 -->
-
-**People:**
-
-1. [Educate teams about the cloud security journey](../secure/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
-
-1. [Educate teams on cloud security technology](../secure/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
-
-**Process:**
-
-3. [Assign accountability for cloud security decisions](../secure/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
-
-1. [Update incident response processes for cloud](../secure/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
-
-1. [Establish security posture management](../secure/security-top-10.md#5-process-establish-security-posture-management)
-
-**Technology:**
-
-6. [Require passwordless or multifactor authentication](../secure/security-top-10.md#6-technology-require-passwordless-or-multifactor-authentication)
-
-1. [Integrate native firewall and network security](../secure/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
-
-1. [Integrate native threat detection](../secure/security-top-10.md#8-technology-integrate-native-threat-detection)
-
-**Foundational architecture decisions:**
-
-9. [Standardize on a single directory and identity](../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
-
-1. [Use identity-based access control (instead of keys)](../secure/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
-
-1. [Establish a single unified security strategy](../secure/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
+Whether you're already operating in the cloud or you're planning for future adoption, we recommend that you follow essential security practices (in addition to meeting any explicit regulatory compliance requirements). For more information, see the [Microsoft security documentation](/security/).
 
 <!-- markdownlint-enable MD029 -->
 
