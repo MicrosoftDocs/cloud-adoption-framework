@@ -10,7 +10,7 @@ ms.custom: think-tank
 
 # Secure Azure high-performance computing (HPC) in Azure
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Security methodology](../../secure/index.md)
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Cloud Adoption Framework's Security methodology](../../secure/overview.md)
 
 ## Security principles
 
