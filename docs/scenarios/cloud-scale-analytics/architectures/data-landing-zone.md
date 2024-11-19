@@ -3,9 +3,10 @@ title: Data landing zones
 description: Learn about cloud-scale analytics architecture data landing zones in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 04/11/2022
+ms.reviewer: tozimmergren
+ms.date: 12/19/2022
 ms.topic: conceptual
-ms.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management
 ---
 
 # Data landing zones
