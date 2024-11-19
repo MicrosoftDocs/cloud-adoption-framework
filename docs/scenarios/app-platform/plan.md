@@ -133,8 +133,8 @@ In Azure, organizations can standardize operations across various orchestrators 
 
 When workloads must be run in a private cloud or edge environment, but the workload is best supported by a PaaS runtime, there are a few tools that can enable developers to build on top of consistent PaaS runtimes using Azure App Service:
 
-- **Azure Stack HCI:** Allows for hosting Azure App Service natively on Azure Stack, managed by the Azure Stack operator.
-- **Azure Stack HCI for AKS:** Allows for hosting of custom runtimes running on AKS within Azure Stack, managed by Azure Stack and AKS operators to allow for portability to other Kubernetes solutions.
+- **Azure Local:** Allows for hosting Azure App Service natively on Azure Stack, managed by the Azure Stack operator.
+- **Azure Local for AKS:** Allows for hosting of custom runtimes running on AKS within Azure Stack, managed by Azure Stack and AKS operators to allow for portability to other Kubernetes solutions.
 - **Azure App Service on Kubernetes with Azure Arc:** Allows any Kubernetes host to provide application services in Azure. All hosts become a small instance of Azure App Service. Since each host is also onboarded into Azure Arc, those hosts can also be managed through consistent cloud-based host operations.
 
 ## Modern application platform readiness plan

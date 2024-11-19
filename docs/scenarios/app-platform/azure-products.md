@@ -24,8 +24,8 @@ The following table maps the questions above to a few Azure products to consider
 | Azure products | Application platform | Operations | Location | Consolidation |
 |--|--|--|--|--|
 | Azure App Service | Cloud runtime | Cloud ops | Fixed (public cloud only) | Managed by Azure |
-| Azure Stack HCI | Cloud runtime | Customizable | Fixed (private cloud only) | Shared host |
-| Azure Stack HCI for AKS | Customizable | Customizable | Fixed (private cloud only) | Shared host |
+| Azure Local | Cloud runtime | Customizable | Fixed (private cloud only) | Shared host |
+| Azure Local for AKS | Customizable | Customizable | Fixed (private cloud only) | Shared host |
 | Azure Kubernetes Service (AKS) | Customizable | Customizable | Fixed (public cloud only) | Supports dedicated or shared hosts |
 | Azure Arc for Kubernetes | Not applicable | Cloud operations | Supports public and private cloud | Not applicable |
 | Azure App Service on Kubernetes with Azure Arc | Cloud runtime | Customizable and cloud operations | Supports public and private cloud | Supports dedicated or shared hosts |
@@ -41,9 +41,9 @@ Azure App Service enables you to build and host web apps, mobile back ends, and 
 - **Developers** can best accelerate development using the Azure-native application platform and runtime defined by Microsoft Azure as their application platform.
 - **Operations teams** want the ease and scale of operations that come from deferring many of the host operations tasks to the cloud provider.
 
-### Azure Stack HCI
+### Azure Local
 
-Azure Stack HCI provides an application platform, based on Azure's PaaS services, running on Azure Stack operated in private cloud or the edge, using tools which are very similar to cloud operations.
+Azure Local provides an application platform, based on Azure's PaaS services, running on Azure Stack operated in private cloud or the edge, using tools which are very similar to cloud operations.
 
 - **Developers** can best accelerate development using the Azure-native application platform and runtime defined by Microsoft Azure as their application platform.
 - **Operations teams** have specific constraints:
@@ -51,9 +51,9 @@ Azure Stack HCI provides an application platform, based on Azure's PaaS services
   - It requires custom operations to fit parallel private cloud operations.
   - Most likely will consolidate workloads on shared hosts, separating host and workload operations into distinct sets of tasks for centralized host operations and workload operations which could be centralized or workload specific.
 
-### Azure Stack HCI for AKS
+### Azure Local for AKS
 
-Azure Stack HCI can also run an instance of Azure Kubernetes Service to support customizable application platforms running on Kubernetes.
+Azure Local can also run an instance of Azure Kubernetes Service to support customizable application platforms running on Kubernetes.
 
 - **Developers** require the ability to customize the application platform to meet the runtime requirements of the application.
 - **Operations teams** have specific constraints:
