@@ -5,7 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.custom: think-tank
-ms.date: 11/15/2024
+ms.date: 11/20/2024
 ---
 
 # Azure billing and Microsoft Entra tenants for HPC
