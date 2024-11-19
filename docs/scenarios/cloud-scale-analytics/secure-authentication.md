@@ -90,4 +90,4 @@ In cloud-scale analytics, ensuring robust and secure authentication practices is
 
 ## Next steps
 
-[Authorization for cloud-scale analytics in Azure](./secure-analytics-role-based-access-control.md)
+[Authorization for cloud-scale analytics in Azure](./secure-authorization.md)

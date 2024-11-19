@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 Authorization is the act of granting an authenticated party permission to perform an action. The key principle of **access control** is giving users only the amount of access that they need to do their jobs and only allowing certain actions at a particular scope. Role-based security corresponds to access control and is used by many organizations to control access based on defined roles or job functions versus individual users. Users are then assigned one or more security roles, each of which is given authorized permissions to perform specific tasks.
 
-When you use Microsoft Entra ID as the centralized identity provider, authorization to access data services and storage can be granted per user or per application and is based on a Microsoft Entra identity.
+When you use Microsoft Entra ID as the centralized identity provider, authorization to access data services, and storage can be granted per user or per application and is based on a Microsoft Entra identity.
 
 ## Data service authorization
 
@@ -105,7 +105,7 @@ Cloud-scale analytics probably contains polyglot storage. Examples include Postg
 - **Refrain from assigning permissions to individual users**: Use roles (database or server roles) consistently instead. Roles helps greatly with reporting and troubleshooting permissions. (Azure RBAC only supports permission assignment via roles.)
 
 > [!NOTE]
-> Data applications can store sensitive data products in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive data](./secure-data-privacy.md#sensitive-data-personal-data).
+> Data applications can store sensitive data products in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive data](./secure-data-privacy.md).
 
 ### Data Lake access control best practices
 

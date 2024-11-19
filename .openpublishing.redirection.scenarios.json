@@ -454,6 +454,11 @@
       "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-lake-access.md",
       "redirect_url": "/azure/storage/blobs/data-lake-storage-access-control-model",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/secure-analytics-role-based-access-control.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure-authorization",
+      "redirect_document_id": false
     }
   ]
 }
