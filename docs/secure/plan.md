@@ -92,7 +92,7 @@ Your cloud adoption plan should address availability by adopting standards for a
 
 - **Standardize operational tools and practices:** Depend on well-defined and strictly enforced standards for operators to follow in order to maintain confidentiality, integrity, and availability. Follow standards consistently and train on them routinely so that your systems are resilient to attacks and can respond efficiently to incidents.
 
-## Adopt sustainment
+## Plan for security sustainment
 
 For the long-term sustainment of your security posture, adopt a mindset of continuous improvement across the organization. This approach includes not only adhering to operational standards in everyday practices but also actively seeking opportunities for enhancement. Regularly review your standards and policies, and implement a training program that fosters a continuous improvement mindset.
 
