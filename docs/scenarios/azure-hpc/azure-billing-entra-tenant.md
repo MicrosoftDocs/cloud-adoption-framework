@@ -10,7 +10,7 @@ ms.date: 11/20/2024
 
 # Azure billing and Microsoft Entra tenants for HPC
 
-Azure landing zones for HPC don't have specific considerations or recommendations that affect billing offer decisions, enterprise enrollment, or Microsoft Entra tenant decisions.
+Azure landing zones for HPC don't have specific considerations or recommendations that affect billing decisions, enterprise enrollment, or Microsoft Entra tenant decisions.
 
 ## Previous recommendations
 
