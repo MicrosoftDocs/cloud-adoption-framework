@@ -15,7 +15,7 @@ When you implement your cloud estate and migrate workloads in, it's essential to
 Whether you're migrating workloads into the cloud or building an entirely new cloud estate, you can apply the guidance in this article. The Cloud Adoption Framework [Adopt](../adopt/index.md) methodology incorporates the [Migrate](../migrate/index.md), [Modernize](../modernize/index.md), [Innovate](../innovate/index.md), and [Relocate](../relocate/index.md) scenarios. Regardless of the path that you take during the Adopt phase of your cloud journey, it's important to consider the recommendations in this article as you establish the foundational elements of your cloud estate and build or migrate workloads.
 
 
-::image type="content" source="./media/caf-secure-adopt.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-adopt.png" border="false":::
+:::image type="content" source="./media/caf-secure-adopt.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-adopt.png" border="false":::
 
 
 This article is a supporting guide to the [Adopt](../adopt/index.md) methodology. It provides areas of security optimization that you should consider as you move through that phase in your journey.

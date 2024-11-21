@@ -11,7 +11,7 @@ ms.custom: internal, UpdateFrequency2
 
 This article describes the security roles required for cloud security and the functions they perform related to cloud infrastructure and platforms. These roles help you ensure that security is part of every stage of the cloud lifecycle, from development to operations and continuous improvement.
 
-::image type="content" source="./media/caf-secure-teams-roles.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-teams-roles.png" border="false":::
+:::image type="content" source="./media/caf-secure-teams-roles.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-teams-roles.png" border="false":::
 
 >[!NOTE]
 >The Cloud Adoption Framework for Azure focuses on cloud infrastructure and platforms that support multiple workloads. For security guidance for individual workloads, see the [security guidance](/azure/well-architected/security) in the Azure Well-Architected Framework.  

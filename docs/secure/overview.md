@@ -14,7 +14,7 @@ The Cloud Adoption Framework for Azure Secure methodology provides a structured 
 
 The guidance in this series of articles provides recommendations relevant to all methodologies within the Cloud Adoption Framework because security should be an integral part of every phase of your cloud adoption journey. Therefore, you can find articles aligned with each methodology that provide security recommendations for you to consider as you progress through each phase of your cloud adoption journey.
 
-::image type="content" source="./media/caf-secure-overview.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage." lightbox="./media/caf-secure-overview.png" border="false":::
+:::image type="content" source="./media/caf-secure-overview.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage." lightbox="./media/caf-secure-overview.png" border="false":::
 
 All of the recommendations in this guidance adhere to the [Zero Trust principles](/security/zero-trust/zero-trust-overview) of assume compromise (or assume breach), least privilege, and explicit verification of trust that should guide your security strategy, architecture, and implementation.
 

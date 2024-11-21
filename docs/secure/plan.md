@@ -14,7 +14,7 @@ Developing a cloud adoption plan can be difficult and often have many technical 
 
 When you make decisions about your migration or implementation, design for the highest security strategy stance that's feasible for your business. Prioritize security over performance and cost efficiency when you start your designs. This approach ensures that you don't introduce risks that could require you to redesign workloads later. The guidance provided in this article can help you develop a cloud adoption plan that has security as a fundamental principle.
 
-::image type="content" source="./media/caf-secure-plan.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-plan.png" border="false":::
+:::image type="content" source="./media/caf-secure-plan.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-plan.png" border="false":::
 
 This article is a supporting guide to the [Plan](../plan/index.md) methodology. It provides areas of security optimization for you to consider as you move through that phase in your journey.
 

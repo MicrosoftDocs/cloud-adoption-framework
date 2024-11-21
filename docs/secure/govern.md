@@ -16,7 +16,7 @@ Security governance connects your business priorities with technical implementat
 
 **Business goals and risk** provide the most effective guidance for security. This approach ensures that security efforts are concentrated on the organization’s key priorities. Additionally, it helps risk owners by using familiar language and processes within the risk management framework.
 
-::image type="content" source="./media/caf-secure-govern.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-govern.png" border="false":::
+:::image type="content" source="./media/caf-secure-govern.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-govern.png" border="false":::
 
 This article is a supporting guide to the [Govern](../govern/index.md) methodology. It provides areas of security optimization for you to consider as you move through that phase in your journey.
 
