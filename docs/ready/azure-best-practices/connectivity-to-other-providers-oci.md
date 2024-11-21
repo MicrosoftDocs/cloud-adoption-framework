@@ -26,7 +26,7 @@ This section provides different connectivity approaches to integrate an Azure la
 
 - While you can use [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach) to enable communication from on-premises to OCI via ExpressRoute circuits, it might incur more bandwidth costs that you can calculate by using the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/). It's important to consider any extra costs when you migrate large amounts of data from on-premises to Oracle by using ExpressRoute circuits.
 
-- In Azure regions that support [Availability Zones](/azure/availability-zones/az-overview#availability-zones), placing your Azure workloads in one zone or the other can have a small effect on latency. Design your application to balance availability and performances requirements.
+- In Azure regions that support [availability zones](/azure/reliability/availability-zones-overview), placing your Azure workloads in one zone or the other can have a small effect on latency. Design your application to balance availability and performances requirements.
 
 - Interconnectivity between Azure and OCI is only available for [specific regions](/azure/virtual-machines/workloads/oracle/oracle-oci-overview#region-availability).
 
