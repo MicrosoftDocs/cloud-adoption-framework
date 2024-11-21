@@ -1,9 +1,9 @@
 ---
 title: Business continuity and disaster recovery considerations for Oracle Database@Azure
 description: Learn about business continuity and disaster recovery (BCDR) for Oracle Database@Azure and how to build a resilient architecture for your workload environment.
-author: jfaurskov
-ms.author: janfaurs
-ms.date: 08/01/2024
+author: gkayali
+ms.author: guherk
+ms.date: 21/11/2024
 ms.topic: conceptual
 ms.custom: e2e-oracle
 --- 
