@@ -25,7 +25,7 @@ The following table maps the questions above to a few Azure products to consider
 |--|--|--|--|--|
 | Azure App Service | Cloud runtime | Cloud ops | Fixed (public cloud only) | Managed by Azure |
 | Azure Local | Cloud runtime | Customizable | Fixed (private cloud only) | Shared host |
-| Azure Local for AKS | Customizable | Customizable | Fixed (private cloud only) | Shared host |
+| Azure Kubernetes Service on Azure Local | Customizable | Customizable | Fixed (private cloud only) | Shared host |
 | Azure Kubernetes Service (AKS) | Customizable | Customizable | Fixed (public cloud only) | Supports dedicated or shared hosts |
 | Azure Arc for Kubernetes | Not applicable | Cloud operations | Supports public and private cloud | Not applicable |
 | Azure App Service on Kubernetes with Azure Arc | Cloud runtime | Customizable and cloud operations | Supports public and private cloud | Supports dedicated or shared hosts |
@@ -51,7 +51,7 @@ Azure Local provides an application platform, based on Azure's PaaS services, ru
   - It requires custom operations to fit parallel private cloud operations.
   - Most likely will consolidate workloads on shared hosts, separating host and workload operations into distinct sets of tasks for centralized host operations and workload operations which could be centralized or workload specific.
 
-### Azure Local for AKS
+### Azure Kubernetes Service on Azure Local
 
 Azure Local can also run an instance of Azure Kubernetes Service to support customizable application platforms running on Kubernetes.
 
