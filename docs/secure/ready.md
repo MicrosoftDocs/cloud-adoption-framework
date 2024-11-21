@@ -14,6 +14,8 @@ During the Ready phase of a cloud adoption journey, you focus on creating the fo
 
 After you define your cloud adoption [strategy](./strategy.md) and [plan](./plan.md), you can begin the implementation phase by designing the foundation. Use the recommendations in this guide to ensure that your foundation design and implementation prioritize security.
 
+::image type="content" source="./media/caf-secure-ready.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-ready.png" border="false":::
+
 This article is a supporting guide to the [Ready](../ready/index.md) methodology. It describes areas of security optimization that you should consider as you move through that phase in your journey.
 
 ## Security posture modernization

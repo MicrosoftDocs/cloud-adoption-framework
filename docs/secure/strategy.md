@@ -12,6 +12,8 @@ ms.custom: internal, UpdateFrequency2
 
 Moving your organization to the cloud adds significant complexity to security. To be successful in the cloud, your security strategy needs to meet modern challenges that are inherent to cloud computing. In the adoption and operation of a cloud estate, security becomes a necessary consideration in all facets of the organization. It's not a separate function that's secondarily applied to certain facets, as can be common for organizations that run on-premises technology platforms. When you define your cloud adoption strategy, consider the recommendations provided in this article to ensure that security is an integral part of the strategy and will be built into your cloud adoption plan as you move forward.
 
+::image type="content" source="./media/caf-secure-strategy.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-strategy.png" border="false":::
+
 This article is a supporting guide to the [Strategy](../strategy/index.md) methodology. It describes areas of security optimization that you should  consider as you move through that phase in your journey.
 
 ## Security posture modernization
