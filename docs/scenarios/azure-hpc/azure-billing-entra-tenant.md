@@ -1,6 +1,6 @@
 ---
 title: Azure Billing and Microsoft Entra Tenants for HPC
-description: Learn about Azure billing and Microsoft Entra tenants for HPC.
+description: Learn about Azure billing and Microsoft Entra tenants for HPC. Get links to guidance on the cloud adoption journey for HPC.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -14,13 +14,13 @@ Azure landing zones for HPC don't have specific considerations or recommendation
 
 ## Previous recommendations
 
-Keep in mind that it might be important to understand any decisions made previously by the cloud platform team so that you know about existing [enterprise enrollment or Microsoft Entra tenant decisions](../../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
+Keep in mind that it might be important to  understand decisions previously made by the cloud platform team and the existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
 
 ## Next steps 
 
 The following articles provide guidance on each step in the cloud adoption journey for HPC environments.
 
-### Energy HPC environments
+**Energy HPC environments**
 
 - [Identity and access management for Azure HPC in energy](./identity-access-management.md)
 - [Management for Azure HPC in energy](./management.md)
@@ -31,9 +31,9 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Security for Azure HPC in energy](./security.md)
 - [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
 - [Storage for HPC energy environments](./storage.md)
-- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](azure-hpc-landing-zone-accelerator.md)
 
-### Finance HPC environments
+**Finance HPC environments**
 
 - [Finance HPC Azure identity and access management](./identity-access-management.md)
 - [Management for HPC in the finance sector](./management.md)
@@ -43,9 +43,9 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Governance for finance HPC](./security-governance-compliance.md)
 - [Security for HPC in the finance sector](./security.md)
 - [Storage for HPC in the finance sector](./storage.md)
-- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](azure-hpc-landing-zone-accelerator.md)
 
-### Manufacturing HPC environments 
+**Manufacturing HPC environments** 
 
 - [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
 - [Management for HPC in the manufacturing industry](./management.md)
@@ -55,4 +55,4 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
-- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](azure-hpc-landing-zone-accelerator.md)

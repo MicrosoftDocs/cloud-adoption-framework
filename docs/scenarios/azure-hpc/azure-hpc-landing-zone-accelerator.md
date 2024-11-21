@@ -37,7 +37,6 @@ The approach to landing zones of the HPC landing zone accelerator provides the f
 The architectures of landing zones vary by business sector, in addition to varying by organization. This section lists articles by sector that provide guidelines for creating your landing zone:
 
 - Energy (Oil and Gas)
-  - [Azure Billing and Microsoft Entra tenants for energy HPC](./energy/azure-billing-active-directory-tenant.md)
   - [Identity and access management for Azure HPC in energy](./energy/identity-access-management.md)
   - [Management for Azure HPC in energy](./energy/management.md)
   - [Network topology and connectivity for Azure HPC in energy](./energy/network-topology-connectivity.md)
@@ -49,7 +48,6 @@ The architectures of landing zones vary by business sector, in addition to varyi
   - [Storage for HPC energy environments](./energy/storage.md)
 
 - Manufacturing
-  - [Manufacturing HPC Azure billing and Active Directory tenants](./manufacturing/azure-billing-active-directory-tenant.md)
   - [Azure identity and access management for HPC in manufacturing](./manufacturing/identity-access-management.md)
   - [Management for HPC in the manufacturing industry](./manufacturing/management.md)
   - [Manufacturing HPC network topology and connectivity](./manufacturing/network-topology-connectivity.md)
@@ -60,7 +58,6 @@ The architectures of landing zones vary by business sector, in addition to varyi
   - [Manufacturing HPC storage](./manufacturing/storage.md)
   
 - Finance
-  - [Azure billing offers and Active Directory tenants for finance HPC](./finance/azure-billing-active-directory-tenant.md)
   - [Finance HPC Azure identity and access management](./finance/identity-access-management.md)
   - [Management for HPC in the finance sector](./finance/management.md)
   - [Network topology and connectivity for HPC in the finance sector](./finance/network-topology-connectivity.md)
