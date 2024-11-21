@@ -21,7 +21,7 @@ AI model governance refers to the processes for managing AI models to ensure the
 
 - *Define baseline content filters for generative AI models.* Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to define a baseline content filter for your approved AI models. This safety system runs both the prompt and completion for your model through a group of classification models. These classification models detect and help prevent the output of harmful content across a range of categories. Content Safety provides features like prompt shields, groundedness detection, and protected material text detection. It scans images and text. Create a process for application teams to communicate different governance needs.
 
-- *Ground generative AI models.* Use [system messages](/azure/ai-services/openai/concepts/system-message) and the [retrieval augmented generation](/azure/ai-studio/concepts/retrieval-augmented-generation) (RAG) pattern to govern the output of generative AI models. Test the effectiveness of grounding by using tools like [prompt flow](/azure/ai-studio/how-to/prompt-flow) or the open-source red teaming framework [PyRIT](https://github.com/Azure/PyRI#python-risk-identification-tool-for-generative-ai-pyrit).
+- *Ground generative AI models.* Use [system messages](/azure/ai-services/openai/concepts/system-message) and the [retrieval augmented generation](/azure/ai-studio/concepts/retrieval-augmented-generation) (RAG) pattern to govern the output of generative AI models. Test the effectiveness of grounding by using tools like [prompt flow](/azure/ai-studio/how-to/prompt-flow) or the open-source red teaming framework [PyRIT](https://github.com/Azure/PyRIT).
 
 ## Govern AI costs
 

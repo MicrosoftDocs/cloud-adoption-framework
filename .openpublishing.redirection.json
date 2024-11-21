@@ -602,8 +602,13 @@
       },
       {
          "source_path": "docs/security/security-top-10.md",
-         "redirect_url": "/azure/cloud-adoption-framework/secure/security-top-10",
-         "redirect_document_id": true
+         "redirect_url": "/azure/cloud-adoption-framework/secure/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/security-top-10.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/overview",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/reference/azure-scaffold.md",
@@ -672,7 +677,12 @@
       },
       {
          "source_path": "docs/secure/best-practices/security-governance-and-compliance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/secure/best-practices/end-to-end-governance",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/best-practices/end-to-end-governance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/govern",
          "redirect_document_id": false
       },
       {
@@ -2078,6 +2088,171 @@
       {
          "source_path": "docs/innovate/best-practices/ml-deployment-inference.md",
          "redirect_url": "/azure/machine-learning/overview-what-is-azure-machine-learning",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/platform-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring#azure_facilitation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/response.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/service-level-objectives.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/observability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/monitoring-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/cloud-models-monitor-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/monitor/data-collection.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor/monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/asset-protection.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/access-control.md",
+         "redirect_url": "/security/zero-trust/deploy/identity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/best-practices/secure-devops.md",
+         "redirect_url": "/security/zero-trust/develop/secure-dev-environment-zero-trust",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/best-practices/toolchain.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/adopt",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/business-resilience.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/plan",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/development-innovation-security.md",
+         "redirect_url": "/security/zero-trust/develop/identity-zero-trust-compliance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/development-security-architecture.md",
+         "redirect_url": "/security/zero-trust/develop/secure-devops-environments-zero-trust",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/development-security-implementation-operations.md",
+         "redirect_url": "/security/zero-trust/develop/secure-devops-environments-zero-trust",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/development-security-strategy-overview.md",
+         "redirect_url": "/security/zero-trust/develop/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/devops-strategy-process-security.md",
+         "redirect_url": "/security/zero-trust/develop/secure-devops-platform-environment-zero-trust",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/devsecops-controls.md",
+         "redirect_url": "/security/zero-trust/develop/secure-devops-environments-zero-trust",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/infrastructure-security-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/infrastructure-security-architecture.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/infrastructure-security-implementation.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/adopt",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/infrastructure-security-operations-governance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/infrastructure-security-strategy.md",
+         "redirect_url": "/security/zero-trust/deploy/infrastructure",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/innovation-security.md",
+         "redirect_url": "/security/zero-trust/develop/identity-zero-trust-compliance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/risk-insights.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/security-best-practices-introduction.md",
+         "redirect_url": "/security/zero-trust/deploy/infrastructure",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/security-governance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/security-integration.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/security-operations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/secure/best-practices/manage-secrets.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/adopt",
          "redirect_document_id": false
       }
    ]

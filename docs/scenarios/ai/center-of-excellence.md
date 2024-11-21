@@ -83,4 +83,4 @@ After establishing the AI CoE, continuously monitor performance, make adjustment
 Use the AI adoption checklists to determine what your next step should be.
 
 > [!div class="nextstepaction"]
-> [AI adoption checklists](index.md#ai-adoption-checklists)
+> [AI checklists](index.md#ai-checklists)
