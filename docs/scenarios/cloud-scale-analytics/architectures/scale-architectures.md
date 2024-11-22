@@ -3,7 +3,7 @@ title: Scale cloud-scale analytics in Azure
 description: Learn how to scale cloud-scale analytics in Azure by using data landing zones. Your scalable platform can have one or more landing zones, as required.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 01/23/2023
+ms.date: 11/12/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -32,12 +32,12 @@ Each large organization has thousands of data consumers. A complicated process l
 
 ## Methods for scaling
 
-:::image type="content" source="../media/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones." lightbox="../media/high-level-design-multiple-landing-zones.png" border="false" :::
+:::image type="content" source="../images/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones." lightbox="../media/high-level-design-multiple-landing-zones.png" border="false" :::
 
 Cloud-scale analytics addresses scaling challenges by using two core concepts:
 
-- Using data landing zones for scaling
-- Using data products or data integrations for scaling, in order to make distributed and decentralized data ownership possible
+- Data landing zones for scaling
+- Data products or data integrations for scaling, in order to make distributed and decentralized data ownership possible
 
 You can deploy a single data landing zone, or multiple ones. Data landing zones make it possible for you to discover and manage data by connecting to a data management landing zone. Each data management landing zone is within a single Azure subscription.
 
@@ -45,11 +45,11 @@ Subscriptions are Azure's units of management, billing, and scale. They play a c
 
 ### Scaling with data landing zones
 
-The central concepts of cloud-scale analytics are the data management landing zone and the data landing zone. You should place each in its own Azure subscription. Separating them lets you clearly separate duties, follow the least privilege principle, and partially address the subscription scale issues that were mentioned earlier. A minimal cloud-scale analytics setup includes a single data landing zone and a single data management landing zone.
+The central concepts of cloud-scale analytics are Microsoft Purview, Azure Databricks Unity Catalog if you're using Azure Databricks, a data management landing zone and the data landing zone. You should place each in its own Azure subscription. Separating them lets you clearly separate duties, follow the least privilege principle, and partially address the subscription scale issues that were mentioned earlier. A minimal cloud-scale analytics setup includes a single data landing zone and a single data management landing zone.
 
 However, a minimal setup isn't sufficient for large-scale data platform deployments. Companies build large-scale platforms and make investments to consistently and efficiently scale their data and analytics efforts over time. To overcome subscription-level limitations, cloud-scale analytics uses subscriptions as the unit of scaling, as discussed in [Azure landing zones](../../../ready/landing-zone/index.md). This technique makes it possible to increase the data platform footprint by adding more data landing zones to the architecture. Adopting this technique also addresses the problem of one Azure Data Lake Gen2 being used for a whole organization, since each data landing zone includes three data lakes. Projects and activities from multiple domains can be distributed across more than one Azure subscription, thus providing greater scalability.
 
-Decide how many data landing zones your organization requires before you implement a cloud-scale analytics architecture. Making the right decision lays the foundation for an effective and efficient data platform.
+Decide how many data landing zones your organization requires before you implement a cloud-scale analytics architecture. Choosing the right solution establishes the foundation for an effective and efficient data platform.
 
 The number of data landing zones that are required depends on many factors,  especially:
 
@@ -63,14 +63,14 @@ Consider the following factors when you decide on the number of data landing zon
 | Factor | Description |
 |--|--|
 | Organizational structure and data ownership | Consider how your organization is structured and how data is owned in your organization. |
-| Region and location | If you deploy in multiple regions, decide which region or regions should host the data zones. Be sure to honor all data residency requirements. |
+| Region and location | If you deploy in multiple regions, decide which regions should host the data zones. Be sure to honor all data residency requirements. |
 | Quotas | Subscription quotas aren't capacity guarantees and are applied on a per-region basis. |
 | Data sovereignty | Due to data sovereignty regulations, data must be stored in a specific region and follow region-specific policies. |
 | Azure policies | Data landing zones must follow the requirements of various Azure policies. |
 | Management boundary | Subscriptions provide a management boundary for governance and isolation that clearly separates concerns. |
 | Networking | Each landing zone has a virtual network. Because a virtual network resides in a single region, each new region requires a new landing zone. The virtual networks must be peer virtual networks to enable cross-domain communication. |
 | Limits | A subscription has limits. By having several subscriptions, you can mitigate the dangers of hitting these limits. |
-| Cost allocation | Consider whether shared services like storage accounts that are paid centrally should be split by business unit or domain. Using a separate subscription creates a boundary for cost allocation. You can achieve the same functionality by using tags. |
+| Cost allocation | Consider whether shared services like storage accounts that are paid centrally needs to be split by business unit or domain. Using a separate subscription creates a boundary for cost allocation. You can achieve the same functionality by using tags. |
 | Data classifications and highly confidential data | Security mechanisms can affect data product development and the usability of a data platform. Consider data classifications and decide whether highly confidential datasets require special treatment, like just-in-time access, customer managed keys (CMK), fine-grained network controls, or more encryption. |
 | Other legal or security implications | Consider whether there are any other legal or security requirements that require logical or physical separation of data. |
 
@@ -78,7 +78,7 @@ If you implement a data mesh architecture, consider the following factors as you
 
 | Factor | Description |
 |--|--|
-| Data domains | Consider the data domains that your organization uses, and decide which will be on your data platform. Consider the size of your individual data domains. For more information, see [What are data domains?](data-domains.md) |
+| Data domains | Consider the data domains that your organization uses, and decide the data domains for your data platform. Consider the size of your individual data domains. For more information, see [What are data domains?](data-domains.md) |
 | Latency | Domains that collaborate on large amounts of data can transfer a large amount of data across landing zones. Consider allocating your domains in the same landing zone or region. Separating them increases latency and can increase costs in cross-region domains. |
 | Security | Some service deployments or configurations require elevated privileges in a subscription. Giving these privileges to a user in one domain implicitly gives that user the same privileges in other domains within the same subscription.                                                             |
 
@@ -106,20 +106,20 @@ Cloud-scale analytics architecture and the concept of data landing zones make it
 
 Within each landing zone, your organization can scale by using data applications. Data applications are units or components of your data architecture that encapsulate functionality that provides read-optimized data products for consumption by other data applications. In Azure, data applications are environments in the form of resource groups that make it possible for cross-functional teams to implement data solutions and workloads. An associated team takes care of the end-to-end lifecycle of the data solution, which includes ingestion, cleansing, aggregation, and serving tasks.
 
-Cloud-scale analytics addresses the data integration and responsibility issues that were discussed earlier. Instead of monolithic functional responsibilities for table ingestion and source system integration, the reference design provides a distributed architecture that's driven by data domains. Cross-functional teams take over the end-to-end functional responsibility and ownership for the data scope.
+Cloud-scale analytics addresses the data integration and responsibility issues that were discussed earlier. Instead of monolithic functional responsibilities for table ingestion and source system integration, the reference design provides a distributed architecture driven by data domains. Cross-functional teams take over the end-to-end functional responsibility and ownership for the data scope.
 
 Instead of having a centralized technical stack, and a team that's responsible for all tasks of your data processing workflow, you can distribute end-to-end responsibility across multiple autonomous cross-functional data integration teams. Each team owns a domain or subdomain capability and is encouraged to serve datasets as required by data consumers.
 
-These architectural differences lead to increased velocity on your data platform. Your data consumers no longer have to rely on a set of centralized teams or fight for their requested changes to be prioritized. As smaller teams take ownership of your end-to-end integration workflow, the feedback loop between data provider and data consumer is much shorter. This approach results in faster prioritization, faster development cycles, and a more agile development process. Your teams no longer need to synchronize processes and release plans among themselves, because the cross-functional data integration team has full awareness of the end-to-end technical stack and of the implications of changes. It can use software engineering practices to run unit and integration tests to minimize the overall effect on consumers.
+These architectural differences lead to increased velocity on your data platform. Your data consumers no longer have to rely on a set of centralized teams or fight for their requested changes to be prioritized. As smaller teams take ownership of your end-to-end integration workflow, the feedback loop between data provider and data consumer is shorter. This approach results in faster prioritization, faster development cycles, and a more agile development process. Your teams no longer need to synchronize processes and release plans among themselves, because the cross-functional data integration team has full awareness of the end-to-end technical stack and of the implications of changes. It can use software engineering practices to run unit and integration tests to minimize the overall effect on consumers.
 
-Ideally, the team that owns the data integration systems also owns the source systems. This team should consist of data engineers who work on the source systems, subject matter experts (SMEs) for the datasets, cloud engineers, and data product owners. Building this kind of cross-functional team reduces the amount of communication that's needed with outside teams, and is essential while developing your complete stack from infrastructure to actual data pipelines.
+Ideally, the team that owns the data integration systems also owns the source systems. This team should consist of data engineers who work on the source systems, subject matter experts (SMEs) for the datasets, cloud engineers, and data product owners. Building this kind of cross-functional team reduces the amount of communication needed with outside teams, and is essential while developing your complete stack from infrastructure to actual data pipelines.
 
 The foundation of your data platform is datasets that are integrated from source systems. These datasets make it possible for your data product teams to innovate on business fact tables and to improve decision making and business processes. Your data integration teams and data product teams should offer SLAs to consumers and ensure that all agreements are met. The offered SLAs can be related to data quality, timeliness, error rates, uptime, and other tasks.
 
 ## Summary
 
-By using the scaling mechanisms of your cloud-scale analytics architecture, your organization grows your data estate within Azure over time while avoiding well-known technical limitations. Both of the scaling methods described in this article help you overcome different technical complexities, and can be used in a simple and efficient way.
+Using the scaling mechanisms of your cloud-scale analytics architecture allows your organization to expand its data estate within Azure over time, while avoiding common technical limitations. Both of the scaling methods described in this article help you overcome different technical complexities, and can be used in a simple and efficient way.
 
 ## Next steps
-
-- [Data standardization](data-standardization.md)
+> [!div class="nextstepaction"]
+> [Data standardization](data-standardization.md)
