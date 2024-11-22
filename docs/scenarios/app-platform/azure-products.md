@@ -51,7 +51,7 @@ Azure Local provides an application platform, based on Azure's PaaS services, ru
   - It requires custom operations to fit parallel private cloud operations.
   - Most likely will consolidate workloads on shared hosts, separating host and workload operations into distinct sets of tasks for centralized host operations and workload operations which could be centralized or workload specific.
 
-### Azure Kubernetes Service on Azure Local
+### AKS on Azure Local
 
 Azure Local can also run an instance of Azure Kubernetes Service to support customizable application platforms running on Kubernetes.
 
