@@ -32,7 +32,7 @@ A typical Azure subscription associated with a data landing zone has the followi
 
 ## Data landing zone architecture
 
-Data landing zone architecture illustrates the layers, their resource groups, and services each resource group contains. The architecture also provides an overview of all groups and roles associated with your data landing zone, plus the extent of their access to your control and data planes. The architecture also illustrates how each layer aligns to the Operational Model responsibilities.
+Data landing zone architecture illustrates the layers, their resource groups, and services each resource group contains. The architecture offers an overview of all groups and roles associated with your data landing zone, and the extent of their access to your control and data planes. The architecture also illustrates how each layer aligns to the Operational Model responsibilities.
 
 :::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
 
@@ -131,7 +131,7 @@ For more information, see [Azure Pipeline agents](/azure/devops/pipelines/agents
 
 ### Upload ingest storage
 
-Third-party data publishers may need to land data in your platform so your data application teams can pull it into their data lakes. You may also have internal or external data sources which can't support the connectivity or authentication requirements that are enforced across the rest of the data landing zones. Using a separate storage account is the recommended approach to receive data, then a shared integration runtime or similar ingestion process to bring it into your processing pipeline. As seen in the following diagram, your upload ingest storage resource group lets you provision blob stores for these use-cases.
+Partner data publishers need to land data in your platform so your data application teams can pull it into their data lakes. You can also have internal or external data sources which can't support the connectivity or authentication requirements that are enforced across the rest of the data landing zones. Using a separate storage account is the recommended approach to receive data, then a shared integration runtime or similar ingestion process to bring it into your processing pipeline. As seen in the following diagram, your upload ingest storage resource group lets you provision blob stores for these use-cases.
 
 ![Diagram of upload ingest storage service.](../images/data-landing-zone-ingest-storage.png)
 
@@ -140,14 +140,13 @@ The data application teams request the storage blobs. These requests get approve
 > [!IMPORTANT]
 > Since Azure Storage blobs are provisioned on an *as-needed* basis, you should initially deploy an empty storage services resource group in each data landing zone.
 
-
 ### Data agnostic ingestion
 
 :::image type="content" source="../images/data-landing-zone-ingest-processing-rg.png" alt-text="Diagram of Data landing zone ingest and processing resource group.":::
 
-This resource group is optional, and doesn't prohibit you from deploying your landing zone. 
+This resource group is optional and doesn't prevent you from deploying your landing zone. It's applicable if you have, or are developing, a data-agnostic ingestion engine that automatically ingests data based on registered metadata, including connection strings, paths for data transfer, and ingestion schedules.
 
-This resource group applies if you have (or are developing) a data agnostic ingestion engine for automatically ingesting data based on registering metadata including connection strings, path to copy data from and to, and ingestion schedule. The ingestion and processing resource group has key services for this kind of framework.
+The ingestion and processing resource group has key services for this kind of framework.
 
 Deploy an Azure SQL Database instance to hold metadata used by Azure Data Factory. Provision an Azure Key Vault to store secrets relating to automated ingestion services. These secrets can include:
 
