@@ -2,17 +2,17 @@
    "redirections": [
       {
          "source_path": "docs/scenarios/azure-hpc/energy/azure-billing-active-directory-tenant.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-billing-entra-tenant",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/finance/azure-billing-active-directory-tenant.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-billing-entra-tenant",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/manufacturing/azure-billing-active-directory-tenant.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-billing-entra-tenant",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
          "redirect_document_id": false
       },
       {

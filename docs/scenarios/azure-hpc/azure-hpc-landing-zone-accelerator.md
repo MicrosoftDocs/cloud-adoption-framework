@@ -31,6 +31,16 @@ The approach to landing zones of the HPC landing zone accelerator provides the f
 - An implementation that includes:
   - A deployable reference capable of creating the environment for your HPC deployment
   - A Microsoft-approved HPC reference implementation to test the deployed environment
+ 
+ ## Design guidelines for energy, manufacturing, and finance
+
+The architectures of landing zones vary by business sector, in addition to varying by organization. This section lists articles that provide guidelines for creating your landing zone:
+
+  - [Identity and access management for Azure HPC](identity-access-management.md)
+  - [Network topology and connectivity for Azure HPC](network-topology-connectivity.md)
+  - [Resource organization for HPC](resource-organization.md)
+  - [Compute large-scale HPC application workloads in Azure VMs](compute.md)
+  - [Storage for HPC environments](storage.md)
 
 ### Design Guidelines for choosing HPC compute for AI workloads
 
