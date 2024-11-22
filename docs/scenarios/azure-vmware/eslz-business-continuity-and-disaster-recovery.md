@@ -128,7 +128,7 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
 - Set up smoke tests or disaster recovery drills at least once a year to ensure recovery plans work as expected. The orchestration capabilities of the chosen disaster recovery tool determine the level of effort that's involved with running these drills.
 
-- Use [geopolitical regional pairs](/azure/availability-zones/cross-region-replication-azure) as the secondary disaster recovery environment. Some of the benefits of regional pairs are prioritized region recovery, sequential updates, physical isolation, and data residency.
+- Use [geopolitical regional pairs](/azure/reliability/cross-region-replication-azure) as the secondary disaster recovery environment. Some of the benefits of regional pairs are prioritized region recovery, sequential updates, physical isolation, and data residency.
 
 - Keep address spaces different to avoid overlapping IP addresses between the two sites. For example, you can use `192.168.0.0/16` for region 1 and `10.0.0.0/16` for region 2.
 
