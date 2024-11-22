@@ -11,8 +11,6 @@ items:
       href: ready.md
     - name: Design areas
       items:
-      - name: Billing and Microsoft Entra tenant
-        href: azure-billing-entra-tenant.md
       - name: Identity and access management
         href: identity-access-management.md
       - name: Network topology and connectivity
@@ -23,21 +21,10 @@ items:
         href: storage.md
       - name: Resource organization
         href: resource-organization.md
-      - name: Security
-        href: security.md
-      - name: Management
-        href: management.md
-      - name: Governance
-        href: security-governance-compliance.md
-      - name: Platform automation and DevOps
-        href: platform-automation-devops.md
     - name: Implementation options
       items:
       - name: HPC landing zone accelerator
         href: azure-hpc-landing-zone-accelerator.md
-      - name: Compute manufacturing architecture
-        href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview
-        maintainContext: true
       - name: Condition monitoring architecture
         href: /azure/architecture/solution-ideas/articles/condition-monitoring
         maintainContext: true
@@ -64,12 +51,6 @@ items:
     items:
     - name: Overview
       href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
-    - name: Energy example architecture
-      href: energy/compute.md#hpc-reference-architecture
-    - name: Finance example architecture
-      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance
-    - name: Manufacturing example architecture
-      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-manufacturing
     - name: 3D video rendering
       href: /azure/architecture/example-scenario/infrastructure/video-rendering
       maintainContext: true
