@@ -34,7 +34,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 > Billing for Azure services used in conjunction with Azure Arc-enabled Kubernetes is the same as billing for the Azure Kubernetes Service.
 
 > [!NOTE]
-> If your Azure Arc-enabled Kubernetes cluster is on Azure Kubernetes Service on Azure  Local, Kubernetes GitOps configuration is included at no extra charge.
+> If your Azure Arc-enabled Kubernetes cluster is on Azure Kubernetes Service (AKS) on Azure Local, Kubernetes GitOps configuration is included at no extra charge.
 
 ## Design considerations
 

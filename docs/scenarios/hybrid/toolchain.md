@@ -42,7 +42,7 @@ This article series helps to integrate these tools into relevant processes that 
 ## Deploy hybrid and multicloud solutions
 
 - [Azure Local (20h2)](/azure-stack/hci/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is a hyperconverged infrastructure (HCI) cluster solution that hosts virtualized Windows and Linux operating system workloads and their storage in a hybrid on-premises environment. A cluster consists of 2 to 16 physical nodes.
-- [Azure Kubernetes Service on Azure Local](/azure-stack/aks-hci/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an implementation of Azure Kubernetes Service (AKS), which automates running containerized applications at scale on Azure Local.
+- [Azure Kubernetes Service (AKS) on Azure Local](/azure-stack/aks-hci/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an implementation of AKS, which automates running containerized applications at scale on Azure Local.
 - [Azure Kubernetes Service](/azure/aks/intro-kubernetes?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) makes it simple to deploy a managed Kubernetes cluster in Azure.
 - [Azure IoT Edge](/azure/iot-edge/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) deploys cloud-based solutions to the edge of your local environment, with full support from Azure to manage those devices and the IoT data they produce.
 

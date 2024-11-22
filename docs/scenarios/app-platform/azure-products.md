@@ -25,7 +25,7 @@ The following table maps the questions above to a few Azure products to consider
 |--|--|--|--|--|
 | Azure App Service | Cloud runtime | Cloud ops | Fixed (public cloud only) | Managed by Azure |
 | Azure Local | Cloud runtime | Customizable | Fixed (private cloud only) | Shared host |
-| Azure Kubernetes Service on Azure Local | Customizable | Customizable | Fixed (private cloud only) | Shared host |
+| Azure Kubernetes Service (AKS) on Azure Local | Customizable | Customizable | Fixed (private cloud only) | Shared host |
 | Azure Kubernetes Service (AKS) | Customizable | Customizable | Fixed (public cloud only) | Supports dedicated or shared hosts |
 | Azure Arc for Kubernetes | Not applicable | Cloud operations | Supports public and private cloud | Not applicable |
 | Azure App Service on Kubernetes with Azure Arc | Cloud runtime | Customizable and cloud operations | Supports public and private cloud | Supports dedicated or shared hosts |
