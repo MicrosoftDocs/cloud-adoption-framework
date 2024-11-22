@@ -69,7 +69,7 @@ items:
     - name: Authentication
       href: ./secure-authentication.md
     - name: Authorization
-      href: ./secure-analytics-role-based-access-control.md
+      href: ./secure-authorization.md
     - name: Data privacy
       href: ./secure-data-privacy.md
 
