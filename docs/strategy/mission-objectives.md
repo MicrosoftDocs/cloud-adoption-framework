@@ -1,10 +1,10 @@
 ---
 title: Cloud adoption strategy mission and objectives
 description: Learn how to define your mission and objectives to drive your cloud adoption strategy.
-author: tozimmergren
-ms.author: Zimmergren
+ms.author: tozimmergren
+author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/24
+ms.date: 11/21/2024
 ---
 
 # Mission and objectives

@@ -1,15 +1,17 @@
 ---
 title: Define your cloud strategy team
 description: Learn how to define your cloud strategy team to align your cloud adoption efforts with your business goals.
-author: tozimmergren
-ms.author: Zimmergren
+ms.author: tozimmergren
+author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/24
+ms.date: 11/21/2024
 ---
 
 # Define your cloud strategy team
 
 This article outlines the process to define your cloud strategy team. A cloud strategy team or function defines the motivations and business objectives for cloud adoption and transformation projects. These functions validate and maintain alignment between business priorities and cloud adoption efforts.
+
+:::image type="content" source="media/placeholder-4.png" alt-text="Diagram showing flow at define.":::
 
 Establishing a *motivation-driven strategy* helps map and align the initiatives with the desired business objectives. The cloud strategy team will help facilitate the alignment between the business and the adoption initiatives.
 
