@@ -1,37 +1,31 @@
 ---
 title: Assess your cloud adoption strategy
-description: Learn how the Cloud Adoption Strategy Evaluator can help you the overall state of your cloud adoption strategy, build a robust business case, and enable a successful cloud adoption.
-author: mpvenables
-ms.author: martinek
-ms.date: 06/24/2022
+description:  Learn how to assess your existing cloud adoption strategy to inform your organization about your current cloud maturity.
+ms.author: tozimmergren
+author: Zimmergren
 ms.topic: conceptual
-ms.custom: internal, UpdateFrequency2
+ms.date: 11/21/2024
 ---
 
 # Assess your cloud adoption strategy
 
-The Cloud Adoption Framework provides the Cloud Adoption Strategy Evaluator to help you assess your overall cloud adoption strategy. This assessment offers recommendations based on the cloud economics principles that can help your organization create a robust business case and enable a successful cloud adoption.
+This article outlines the process to assess your existing cloud adoption strategy to inform your organization about your current cloud maturity.
 
-## Cloud Adoption Strategy Evaluator
+:::image type="content" source="media/placeholder-2.png" alt-text="Diagram showing flow at assess.":::
 
-Every cloud adoption journey is unique, and there's often room for optimization as you start to migrate your organization's services to the cloud. No matter what your situation is, it can be a challenge to build solutions the right way with minimum trial and error. Several cloud services and different [on-ramps to cloud adoption](../ready/landing-zone/landing-zone-journey.md) are available to help you achieve this. Depending on which solution you're considering for your cloud adoption plan, there might be a dozen or more viable paths you can use to start building it. [Microsoft Assessments](/assessments/) make it easier to find tailored guidance to assist your organization in building or hosting your workloads in Azure with relevant SLAs. The assessments help you comprehensively assess the current state of your cloud strategy and close any gaps in your skill sets, stakeholder support, business KPIs and budget targets to ensure you have a successful cloud adoption journey.
+Every cloud journey is unique and should be aligned with your business goals. Optimization of both the cloud adoption strategy and your execution is key when migrating or innovating in the cloud. With multiple cloud services and pathways available, choosing the right solution requires the right level of understanding.
 
-The [Cloud Adoption Strategy Evaluator](/assessments/?id=8fefc6d5-97ac-42b3-8e97-d82701e55bab&mode=pre-assessment) assesses your strategy posture across distinct areas of the Strategy methodology:
+The Cloud Adoption Framework offers the [Cloud Adoption Strategy Evaluator](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) to help assess your *current* cloud strategy posture. This tool provides recommendations based on cloud economics principles, aiding in building a strong business case for successful cloud adoption.
 
-- Identifying motivations
-- Documenting expected business outcomes
-- Evaluating financial considerations
-- Technical considerations in creating a business case
+Follow these steps to assess and document your cloud adoption maturity:
 
-Based on your responses to the assessment questions, we guide you in detail through the categories that are most relevant to your organization. We provide you with a personalized aggregate strategy score that's calculated and averaged across your uniquely identified strategy areas.
-
-As you create your cloud adoption plan and document your strategy for stakeholder review, you'll also receive curated guidance that points to specific tools and templates, plus recommendations based on cloud economics and organizational alignment principles that provide a unified approach you can use to build your business case.
-
-[Take the Cloud Adoption Strategy Evaluator assessment](/assessments/?id=8fefc6d5-97ac-42b3-8e97-d82701e55bab&mode=pre-assessment).
+1. *Assess*: Use the [Cloud Adoption Strategy Evaluator](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/).
+1. *Identify gaps*: Discover any gaps you might have in your current cloud adoption strategy and document them.
+1. *Guidance*: Use the identified gaps to educate your business on potential action points and information you need to bring into your new or updated cloud strategy. Use the guidance provided to discover how you can address any gaps.
+1. *Iterate*: Do this assessment iteratively as your cloud adoption strategy matures. Iterate and refine as necessary across the lifecycle of your cloud footprint.
 
 ## Next steps
 
-Understanding the motivations behind your organization's cloud migration can help you achieve more successful business outcomes. The following exercise helps you have a conversation about available options and, ultimately, create positive business outcomes.
-
 > [!div class="nextstepaction"]
-> [Overview of motivations](./motivations.md)
+> [Why are you moving to or expanding in the cloud?](motivations.md)
+

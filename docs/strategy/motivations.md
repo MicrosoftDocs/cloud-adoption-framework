@@ -1,80 +1,87 @@
 ---
-title: Why are we moving to the cloud?
+title: Motivations – why are you moving to or expanding in the cloud? 
 description: Use the Cloud Adoption Framework for Azure to understand the motivations behind cloud migration that can help produce more successful business outcomes.
-author: mpvenables
-ms.author: martinek
-ms.reviewer: tozimmergren
-ms.date: 10/18/2022
+ms.author: tozimmergren
+author: Zimmergren
+ms.date: 11/21/2024
 ms.topic: conceptual
-ms.custom:
- - internal
- - engagement-fy23
- - UpdateFrequency2
 ---
 
-# Why are we moving to the cloud?
+# Why are you moving to or expanding in the cloud?
 
-"Why are we moving to the cloud?" This is a common question for both businesses and technical stakeholders. If the answer is, "Our board (or CIO or C-level executives) told us to move to the cloud," it might be more difficult for those businesses to achieve their expected outcomes.
+This article aims to help you understand and define motivations for your cloud adoption strategy. This is crucial for IT decision-makers and executives as it ensures alignment with strategic business objectives, maximizes return on investment, and facilitates informed decision-making.
 
-This article discusses some of the motivations behind cloud migration that can help produce more successful business outcomes. Understanding these motivations will help you create a conversation about the available options and, ultimately, create positive business outcomes.
+:::image type="content" source="media/placeholder-3.png" alt-text="Diagram showing flow at motivations.":::
 
-## Motivations
+Clear motivations help prioritize initiatives, streamline resource allocation, and mitigate risks by addressing specific business needs such as reducing operational costs, enhancing security, and driving innovation.  
 
-Various motivations can drive business transformations that are supported by cloud adoption. Several motivations likely apply at the same time. The goal of the list in the following table is to help generate ideas about which motivations are relevant. From there, you can evaluate and assess the potential impacts of the applicable motivations. Your cloud adoption team should meet with the stakeholders, executives, and business leaders and discuss which motivations can help your business's cloud adoption.
+By articulating these motivations, organizations can harness the full potential of cloud technologies, improve agility, and maintain a competitive edge in a rapidly evolving digital landscape.
 
-| Critical business events | Migration | Innovation |
-|---|---|---|
-| Datacenter exit <br><br> Merger, acquisition, or divestiture <br><br> Reduction in capital expenses <br><br> End of support for mission-critical technologies <br><br> Response to regulatory compliance changes <br><br> New data sovereignty requirements <br><br> Reduction of disruptions and improvement of IT stability <br><br>Report and manage the environmental impact of your business <br><br> | Cost savings <br><br> Reduction in vendor or technical complexity <br><br> Optimization of internal operations <br><br> Increase in business agility <br><br> Preparation for new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Integration of a complex IT portfolio <br><br> | Preparation for new technical capabilities <br><br> Building new technical capabilities <br><br> Scaling to meet market demands <br><br> Scaling to meet geographic demands <br><br> Improved customer experiences and engagements <br><br> Transformation of products or services <br><br> Market disruption with new products or services <br><br> Democratization and/or self-service environments |
+Motivations for cloud adoption can be achieved either *directly* or *indirectly*. For instance, improving your resilience or optimizing your costs may be the direct result of moving from on-premises architecture into Platform-as-a-Service (PaaS) in the cloud. Alternatively, they can be an *indirect* outcome of other improvements, such as accelerating the delivery of business applications.
 
-## Classify your motivations
+## Define your motivations
 
-Your motivations for cloud adoption will likely fall into multiple categories. As you're building the list of motivations, trends will likely emerge. Motivations tend to be associated more with one classification than with others. Use the predominant classification to help guide the development of your cloud adoption strategy.
+While motivations for adopting and expanding your cloud footprint are many, here are some of the common motivation examples you might encounter.  
 
-When responding to critical business events is the highest priority, it's important to [get started with migration](../get-started/migrate.md) early, often in parallel with strategy and planning efforts. Taking this approach requires a growth mindset and a willingness to improve processes based on lessons learned iteratively.
+Use these examples to guide your decision making and inform your strategy.
 
-When migration is the highest priority, strategy and planning will play a vital role early in the process. We recommend that you implement the first workload in parallel with planning efforts to help the team understand and anticipate any learning curves associated with cloud adoption.
+### Reduce business risk  
 
-When innovation is the highest priority, strategy and planning require more investments early in the process. This ensures balance in the portfolio and wise alignment of the investments made during cloud adoption. For more information and guidance, see [Understand the innovation journey](../get-started/innovate.md).
+- *Security*: Utilize advanced security offerings to protect your assets.
+- *Sustainability*: Achieve carbon savings and enhance green IT compliance.
+- *Resiliency*: Increase redundancy and resilience through cloud capabilities, including multi-region deployments.
+- *Business continuity*: Use the capabilities of the cloud for high availability (HA) and uptime guarantees and establish disaster recovery (DR) routines with reliable backup and recovery solutions.
+- *Datacenter modernization*: Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities.
+- *Data governance*: Minimize risks by implementing robust data governance, ensuring compliance and security across decentralized data sources.
+- *Compliance management*: Minimize compliance risks with policies that block or alert deployments not aligned to your compliance requirements.  
+- *Financial transparency*: Finance and leadership teams get more visibility into financial aspects of the cloud investments, including detailed billing and usage reports.
+- *Cloud scale*: Use the cloud’s built-in redundancy and disaster recovery capabilities to ensure business continuity, and to mitigate operational risks.
 
-To ensure better decision-making, all participants in the migration process should have a clear awareness of their motivations. The following section outlines how customers can guide and affect decisions through consistent and strategic methodologies.
+### Accelerate innovation  
 
-## Motivation-driven strategies and business outcomes
+- *AI*: Access cutting-edge AI capabilities for transformative solutions.
+- *Cloud-native*: Benefit from exclusive cloud capabilities unavailable elsewhere.
+- *Security*: Utilize robust security controls to enhance innovation securely.
+- *Customer solutions*: Develop SaaS offerings and consumer apps efficiently.
+- *Shared responsibility*: Focus IT efforts on delivering business value.
+- *Data empowerment*: Use accessible data to democratize insights, driving rapid, data-driven innovation across teams.
+- *Compliance empowerment*: Apply policies to make compliance a feature of solutions you develop as opposed to an assessment that needs to be passed after the fact.
+- *Cost flexibility*: Use the pay-as-you-go cost model to easily drive short-term innovative projects and Proof-of Concept (PoC) solutions without the need to own anything when you shut it down.
 
-This section highlights the *migration* and *innovation* motivations and their corresponding strategies.
+## Enhance agility and efficiency
 
-### Migration
+- **Profitability improvement potential**: Accelerate business growth and optimize investments with operational efficiency opportunities, cloud innovation, enhanced security, flexibility, and scalability.
+- **Multicloud opportunities**: Support multicloud strategies with Azure integration.
+- Rapid prototyping: Quickly prototyping and access services like AI and robotic process automation (RPA).
+- **Simplified operations**: Using consistent tooling and platforms across your estate improves visibility and enables collaborative working across technical disciplines.
+- **Decoupled data services:** Independent, scalable data services, that free application architecture from data dependencies and enable agility in application development.
+- **Cloud-scale**: Utilize modern capabilities for scaling up and down with your business requirements.
+- **Software-defined compliance**: Infrastructure as code (IaC) and software-based policy controls enable you to more easily adjust to regulation changes.
 
-The *migration* motivations listed near the top of the motivations table are the most common reasons for adopting the cloud but not necessarily the most significant. These outcomes are crucial to achieve, but they're most effectively used to transition to other, more useful worldviews. This essential first step to cloud adoption is often called a *cloud migration*. The [Migrate methodology](../get-started/migrate.md) of the Cloud Adoption Framework outlines the *strategy for executing a cloud migration*.
+## Classify motivations
 
-Some motivations align well with a migration strategy. Motivations at the top of this list can have less business impact than the ones towards the bottom. **Strategies with migration driving motivations** have helped organizations to successfully create business outcomes that:
+After you identify your motivations and key considerations, you need to assess the needs and prioritize them. Follow these steps when you document your motivations:
 
-- Move towards their [Sustainability goals](./business-outcomes/sustainability.md)
-- Increase cost savings. Read the [customer story](https://customers.microsoft.com/story/canadian-power-generator-shines-light-on-numbers).
-- Reduce vendor or technical complexity.
-- Optimize internal operations.
-- Increase business agility. Read the [customer story](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
-- Prepare for new technical capabilities.
-- Scale to market demand.
-- Scale to geographic demand. Read the [customer story](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
+- *Assess needs*: Identify which motivations align with your organization’s strategic goals.
+- *Prioritize*: Define the priority and urgency for each line item in each motivation.
+- *Iterate and review:* Regularly revisit and adjust priorities as the business needs evolve. When you later define your mission and goals, you'll link them to your motivations and expand as necessary.
 
-### Innovation
+### Example classification
 
-Data is the new commodity, and modern applications are the supply chain driving that data into various experiences. In today's business market, it's hard to find a transformative product or service that isn't built on top of data, insights, and customer experiences. The [Innovate methodology](../get-started/innovate.md) of the Cloud Adoption Framework includes *motivations aligned to a technology strategy* that appear lower in the *Innovation* column of the motivation list above.
+Here's an example classification of motivations and key considerations, mapped to the business priority and urgency.
 
-The motivations below help IT organizations to focus more on innovation than a migration strategy. **Strategies with innovation driving motivations** have helped organizations to successfully create business outcomes that:
+| **Motivation category** | **Category** | **Priority** | **Urgency** |
+|---------|---------|---------|---------|
+| Reduce business risk | Security | High | High |
+| Reduce business risk | Sustainability | Medium | Low |
+| Reduce business risk | Resiliency | High | Medium |
+| Accelerate innovation | AI | High | High |
+| Accelerate innovation | Customer solutions | High | Medium |
+| Enhance agility and efficiency | Maximize investments | High | High |
 
-- Move towards their [Sustainability goals](./business-outcomes/sustainability.md)
-- Increase business agility.
-- Prepare for new technical capabilities.
-- Build new technical capabilities.
-- Scale to market demand.
-- Scale to geographic demand.
-- Improve customer experience and engagement. Read the [customer story](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database).
-- Transform products or services.
+Use your classified motivations to inform the priorities and urgency in your goals.
 
 ## Next steps
 
-Understanding your projected business outcomes, will help facilitate conversations that you'll need to have.  These conversations will prove invaluable in documenting your motivations and supporting metrics, in alignment with your business strategy. Next, read an overview of business outcomes that are commonly associated with a move to the cloud.
-
 > [!div class="nextstepaction"]
-> [Overview of business outcomes](./business-outcomes/index.md)
+> [Define your mission and goals for cloud adoption](define-your-team.md)
