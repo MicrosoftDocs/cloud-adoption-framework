@@ -35,7 +35,7 @@ To do tests, you need:
   
   Alternatively, your isolated network might have a test domain controller in it. Peer the network to allow for replication of Active Directory traffic. You can take a snapshot of the domain controller in Azure, and then delete the peer for testing purposes to isolate the network. You can seize any necessary roles, and then restore the state when you complete testing to avoid making changes to the live identity provider.
 
-[Test migration](/azure/migrate/vmware/how-to-test-replicating-virtual-machines#changing-test-migration-virtual-network-and-subnet-of-a-replicating-machine-agentless-vmware-migration) guides you on how to test replicating virtusal machines before the actual migration in Azure Migrate. It outlines the prerequisites, steps to set up the test environment, and precautions to take while selecting virtual network for the test migration in Azure Migrate.
+[Test migration](/azure/migrate/vmware/how-to-test-replicating-virtual-machines#changing-test-migration-virtual-network-and-subnet-of-a-replicating-machine-agentless-vmware-migration) guides you on how to test replicating virtual machines before the actual migration in Azure Migrate. It outlines the prerequisites, steps to set up the test environment, and precautions to take while selecting virtual network for the test migration in Azure Migrate.
 
 Your migration tool should have instructions for running a test migration and cleaning it up after you run your testing plan. [Run a test migration](/azure/migrate/tutorial-migrate-hyper-v?tabs=UI#run-a-test-migration) describes the process to run a test migration for replicated Hyper-V VMs in Azure Migrate.
 
