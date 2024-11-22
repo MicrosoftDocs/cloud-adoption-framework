@@ -21,9 +21,9 @@ A typical Azure subscription associated with a data landing zone has the followi
 
 | Layer | Required |Resource groups |
 |---|---|---|
-|[Platform services](#core-services-layer) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security) </li> </ul> |
-|[Core services](#core-services-layer)     | Yes | <ul> <li> [Management](#management)  </li> <li> [Storage](#storage)  </li>  <li> [External Data](#external-data) </li> <li> [Integration Runtimes](#integration-runtime) </li> <li> [Shared Applications](#shared-applications)  </li> </ul> |
-|[Data application](#data-application)     | Optional | <ul> <li> [Data application](#data-product-resource-group) (1 or more) </li> </ul> |
+|[Platform services](#core-services-layer) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
+|[Core services](#core-services-layer)     | Yes | <ul> <li> [Management](#management)  </li> <li> [Storage](#storage)  </li>  <li> [External Data](#external-data) </li> <li> [Shared Integration Runtimes](#shared-integration-runtimes) </li> <li> [Shared Applications](#shared-applications)  </li> </ul> |
+|[Data application](#data-application)     | Optional | <ul> <li> [Data application](#data-application-resource-group) (1 or more) </li> </ul> |
 |[Visualization](#visualization)           | Optional | <ul> <li> [Reporting and visualization](#visualization) </li> </ul> |
 
 > [!NOTE]
@@ -123,7 +123,6 @@ To enable the shared resource group:
 > [!IMPORTANT]
 > Deploy shared integration runtimes as close to the data source as possible. You can deploy the integration runtimes in a data landing zone, into third-party clouds, or into a private cloud provided the virtual machine has connectivity to the required data source(s).
 
-
 ### CI/CD Agents
 
 CI/CD Agents run on virtual machines and help deploy artifacts from the source code repository, including data applications and changes to the data landing zone.
@@ -148,7 +147,7 @@ The data application teams request the storage blobs. These requests get approve
 
 This resource group is optional, and doesn't prohibit you from deploying your landing zone. 
 
-This resource group applies if you have (or are developing) a data agnostic ingestion engine for automatically ingesting data based on registering metadata (including connection strings, path to copy data from and to, and ingestion schedule. The ingestion and processing resource group has key services for this kind of framework.
+This resource group applies if you have (or are developing) a data agnostic ingestion engine for automatically ingesting data based on registering metadata including connection strings, path to copy data from and to, and ingestion schedule. The ingestion and processing resource group has key services for this kind of framework.
 
 Deploy an Azure SQL Database instance to hold metadata used by Azure Data Factory. Provision an Azure Key Vault to store secrets relating to automated ingestion services. These secrets can include:
 
