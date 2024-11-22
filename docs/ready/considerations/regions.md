@@ -55,7 +55,7 @@ You should consider a multi-region strategy, either from the start of your cloud
 | Identity | If you deployed Active Directory Domain Services or Microsoft Entra Domain Services into your *Identity* subscription or spoke, expand the service into the new Azure region. |
 
 > [!NOTE]
-> You should also use [availability zones](/azure/reliability/availability-zones-overview) for high availability within a region. Check whether your regions and services support [availability zones](/azure/reliability/availability-zones-service-support).
+> You should also use [availability zones](/azure/reliability/availability-zones-overview) for high availability within a region. Check whether your [Azure regions support availability zones](/azure/reliability/availability-zones-region-support), and [how the services you use support availability zones](/azure/reliability/availability-zones-service-support).
 
 Microsoft Cloud for Sovereignty has guidelines for restricting services and regions. You can use these guidelines to enforce service configuration to help customers achieve their [data residency](/industry/sovereignty/data-residency) needs.
 

@@ -26,7 +26,7 @@ You should periodically assess the services and technologies that you use to ens
 
 Identity management is a fundamental framework that governs access to important resources. Identity management becomes critical when you work with different types of personnel, such as temporary interns, part-time employees, or full-time employees. These personnel require different levels of access that need to be monitored, maintained, and promptly revoked as necessary. There are four distinct identity management use cases to consider for your Oracle workloads, and each use case requires a different identity management solution.
 
-- **Oracle applications**: Users can access Oracle applications without having to reenter their credentials after they are authorized via single sign-on (SSO). Use Microsoft Entra ID integration to access Oracle applications. The following table lists the supported SSO strategy for each Oracle solution.
+- **Oracle applications**: Users can access Oracle applications without having to reenter their credentials after they're authorized via single sign-on (SSO). Use Microsoft Entra ID integration to access Oracle applications. The following table lists the supported SSO strategy for each Oracle solution.
 
   | Oracle application | Link to document |
   | --- | --- |
@@ -45,7 +45,7 @@ Identity management is a fundamental framework that governs access to important 
 
 - **Azure Key Vault to store credentials**: Key Vault is a powerful tool for cloud applications and services that you can use to secure storage of secrets, such as passwords and database connection strings. You can use Key Vault to store credentials for both [Windows](/entra/identity/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad) and [Linux](/entra/identity/managed-identities-azure-resources/tutorial-linux-vm-access-nonaad) VMs in a centralized and secure manner, regardless of the OS.
 
-  - You can avoid the need to store credentials in plain text within your code or configuration files by using Key Vault. You can retrieve the credentials from the Key Vault at runtime, which adds an additional layer of security to your application and helps to prevent unauthorized access to your VMs. Key Vault integrates seamlessly with other Azure services, such as Virtual Machines, and you can control access to the Key Vault by using Azure Active Directory (Azure AD). This process ensures that only authorized users and applications can access the stored credentials.
+  - You can avoid the need to store credentials in plain text within your code or configuration files by using Key Vault. You can retrieve the credentials from the Key Vault at runtime, which adds an additional layer of security to your application and helps to prevent unauthorized access to your VMs. Key Vault integrates seamlessly with other Azure services, such as Virtual Machines, and you can control access to the Key Vault by using Microsoft Entra ID. This process ensures that only authorized users and applications can access the stored credentials.
 
 - **Hardened OS images**: A Center for Internet Security (CIS) hardened image for Windows or Linux in Azure has multiple benefits. [CIS benchmarks](https://www.cisecurity.org/insights/blog/cis-hardened-images-now-in-microsoft-azure-marketplace) are globally recognized as the best practices for securing IT systems and data. These images are preconfigured to meet the security recommendations of CIS, which can save time and effort in hardening the OS. Hardened OS images can help organizations improve their security posture and comply with security frameworks like the National Institute of Standards and Technology (NIST) and Peripheral Component Interconnect (PCI).
 
@@ -55,8 +55,8 @@ Ensure the OS is hardened to eliminate vulnerabilities that could be exploited t
 
 - Use Secure Shell (SSH) key pairs for Linux account access instead of passwords.
 - Disable password-protected Linux accounts and enable them only on request for a short period.
-- Disable login access for privileged Linux accounts (root or Oracle), which allows login access only to personalized accounts.
-- Instead of direct login access, use *sudo* to grant access to privileged Linux accounts from personalized accounts.
+- Disable sign in access for privileged Linux accounts (root or Oracle), which allows sign in access only to personalized accounts.
+- Instead of direct sign in access, use *sudo* to grant access to privileged Linux accounts from personalized accounts.
 - Capture Linux audit trail logs and *sudo* access logs in Azure Monitor Logs by using the Linux SYSLOG utility.
 - Apply security patches and OS patches or updates regularly from trusted sources only.
 - Implement restrictions to limit access to the OS.
@@ -101,7 +101,7 @@ Azure Bastion is essentially a hardened jump box that helps prevent access from 
 
 There are no specific built-in Azure policy definitions for Oracle workloads on Virtual Machines landing zone accelerator. However, Azure Policy offers comprehensive coverage for the fundamental resources that are used by any Oracle solution on Azure, including VMs, storage, and networking. For more information, see [Azure Policy built-in policy definitions](/azure/governance/policy/samples/built-in-policies).
 
-You can also create custom policies to address your organization’s requirements to bridge the gap. For example, use custom Oracle policies to enforce storage encryption, manage NSG rules, or prohibit the assignment of public IP address to an Oracle VM.
+You can also create custom policies to address your organization's requirements to bridge the gap. For example, use custom Oracle policies to enforce storage encryption, manage NSG rules, or prohibit the assignment of public IP address to an Oracle VM.
 
 ## Use encryption to store data
 
