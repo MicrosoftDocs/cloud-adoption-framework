@@ -44,4 +44,4 @@ Use the cloud adoption strategy checklist to see all the tasks for each cloud st
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Assess your cloud adoption strategy](assess.md)
+> [Assess your cloud adoption strategy](cloud-adoption-strategy-evaluator.md)

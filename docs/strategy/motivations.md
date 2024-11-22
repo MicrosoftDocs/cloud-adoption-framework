@@ -46,12 +46,12 @@ Use these examples to guide your decision making and inform your strategy.
 - *Shared responsibility*: Focus IT efforts on delivering business value.
 - *Data empowerment*: Use accessible data to democratize insights, driving rapid, data-driven innovation across teams.
 - *Compliance empowerment*: Apply policies to make compliance a feature of solutions you develop as opposed to an assessment that needs to be passed after the fact.
-- *Cost flexibility*: Use the Pay-as-you-Go (PAYG) cost model to easily drive short-term innovative projects and Proof-of Concept (PoC) solutions without the need to own anything when you shut it down.
+- *Cost flexibility*: Use the pay-as-you-go cost model to easily drive short-term innovative projects and Proof-of Concept (PoC) solutions without the need to own anything when you shut it down.
 
 ## Enhance agility and efficiency
 
 - **Profitability improvement potential**: Accelerate business growth and optimize investments with operational efficiency opportunities, cloud innovation, enhanced security, flexibility, and scalability.
-- **Multicloud opportunities**: Support multi-cloud strategies with Azure integration.
+- **Multicloud opportunities**: Support multicloud strategies with Azure integration.
 - Rapid prototyping: Quickly prototyping and access services like AI and robotic process automation (RPA).
 - **Simplified operations**: Using consistent tooling and platforms across your estate improves visibility and enables collaborative working across technical disciplines.
 - **Decoupled data services:** Independent, scalable data services, that free application architecture from data dependencies and enable agility in application development.
@@ -64,7 +64,7 @@ After you identify your motivations and key considerations, you need to assess t
 
 - *Assess needs*: Identify which motivations align with your organization’s strategic goals.
 - *Prioritize*: Define the priority and urgency for each line item in each motivation.
-- *Iterate and review:* Regularly revisit and adjust priorities as the business needs evolve. When you later define your mission and goals, you will link them to your motivations and expand as necessary.
+- *Iterate and review:* Regularly revisit and adjust priorities as the business needs evolve. When you later define your mission and goals, you'll link them to your motivations and expand as necessary.
 
 ### Example classification
 
