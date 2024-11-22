@@ -99,7 +99,7 @@ You can provision the **service layer** resource group to host your metadata sto
 
 ## Azure Container Registry
 
-The data management landing zone hosts an Azure Container Registry. The Azure Container Registry allows your data platform operations to deploy standard containers for use in data science projects that your data application teams consume.
+Your data management landing zone hosts an Azure Container Registry. The Azure Container Registry allows your data platform operations to deploy standard containers for use in data science projects that your data application teams consume.
 
 ## Next steps
 > [!div class="nextstepaction"]
