@@ -43,7 +43,7 @@ Hybrid and multicloud migrations that come across assessment challenges indicate
 - Place a more thorough emphasis on dependencies because a larger percentage of assets might be hosted in other clouds.
 - Understand the reason behind the hybrid and multicloud decision to evaluate compatibility of the various workloads with tools that support:
 
-  - **Azure Stack HCI compatibility**, which is important if you're modernizing your datacenter to allow for cloud native solutions on-premises.
+  - **Azure Local compatibility**, which is important if you're modernizing your datacenter to allow for cloud native solutions on-premises.
   - **Kubernetes compatibility**, which is important if you're maintaining portability through container-based infrastructure.
   - **Azure Edge compatibility**, which might be important to extend workloads and reduce latency at the point of interaction.
   - **Regulatory, compliance, or business requirements**, which might dictate that some assets or data remain on-premises. To manage, govern, secure, configure, and monitor the on-premises assets from Azure, you can consider [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview), and [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview).
@@ -60,11 +60,11 @@ These articles will help you to develop the most impactful processes required fo
 
 When you migrate to the cloud, have a clear inventory of all dependent assets and network paths to ensure that those assets are deployed in the correct cloud. A clear inventory, or digital estate assessment, is even more important in hybrid environments before you migrate workloads. See the preceding *Assess workloads* section before you try to migrate workloads to a hybrid and multicloud environment.
 
-[Azure Migrate](/azure/migrate/migrate-services-overview) is the principal solution for migrating workloads from your private cloud to Azure. Best practices for migrating to Azure from other public clouds will vary. You also might need to add a few other tools when you migrate to Azure Stack HCI. See the following tutorials:
+[Azure Migrate](/azure/migrate/migrate-services-overview) is the principal solution for migrating workloads from your private cloud to Azure. Best practices for migrating to Azure from other public clouds will vary. You also might need to add a few other tools when you migrate to Azure Local. See the following tutorials:
 
 - [Migrate from AWS to Azure](/azure/migrate/tutorial-migrate-aws-virtual-machines)
 - [Migrate from GCP to Azure](/azure/migrate/tutorial-migrate-gcp-virtual-machines)
-- [Migrate to Azure Stack HCI](../../scenarios/azure-stack/migrate-deploy.md#deploy-workloads)
+- [Migrate to Azure Local](../../scenarios/azure-stack/migrate-deploy.md#deploy-workloads)
 
 ## Release migrated workloads for hybrid and multicloud
 

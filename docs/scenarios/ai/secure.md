@@ -40,10 +40,10 @@ Securing AI resources includes managing and protecting the systems, models, and 
 - *Use workload specific governance guidance.* Detailed security guidance is available for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use this guidance to secure AI models, resources, and data within these workload types.
 
     > [!div class="nextstepaction"]
-    > [Secure PaaS AI workloads](./platform/security.md)
-    
+    > [Security for Azure platforms (PaaS)](./platform/security.md)
+
     > [!div class="nextstepaction"]
-    > [Secure IaaS AI workloads](./infrastructure/security.md)
+    > [Security for Azure infrastructure (IaaS)](./infrastructure/security.md)
 
 ### Secure AI data
 

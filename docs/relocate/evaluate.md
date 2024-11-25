@@ -102,7 +102,7 @@ If automated discovery approaches aren't enough, you can conduct a manual assess
 
 Not every region in Azure offers the same services, so you must make sure the services your workload needs to run are available in the target region. It might seem late in the process to make this determination, but you need the discovery details to ensure supportability. To determine region supportability for your workload, see the [products and services available in each Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region).
 
-Know if the target region is a paired region or not and if it supports availability zones. Region pairing and availability zones don't affect the relocation effort, but they do affect your business continuity and disaster recovery (BCDR) strategy in the target region. For more information, see [Azure geographies](https://azure.microsoft.com/explore/global-infrastructure/geographies/#geographies) and [Availability zones](/azure/reliability/availability-zones-service-support#azure-regions-with-availability-zone-support).
+Know if the target region is a paired region or not and if it supports availability zones. Region pairing and availability zones don't affect the relocation effort, but they do affect your business continuity and disaster recovery (BCDR) strategy in the target region. For more information, see [Azure geographies](https://azure.microsoft.com/explore/global-infrastructure/geographies/#geographies) and [Availability zones](/azure/reliability/availability-zones-overview).
 
 ## Categorize workload services
 
