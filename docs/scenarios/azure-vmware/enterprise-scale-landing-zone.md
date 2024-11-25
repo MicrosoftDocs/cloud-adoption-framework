@@ -4,14 +4,14 @@ description: Learn how the Microsoft Azure VMWare Solution landing zone accelera
 author: pgandham
 ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 02/17/2023
+ms.date: 11/25/2024
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank, engagement-fy23
 ---
 
 # Azure VMware Solution landing zone accelerator
 
-The Microsoft Azure VMware Solution landing zone accelerator is an open-source collection of Azure Resource Manager and Bicep templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, focusing on enterprise-scale design principles.
+The Microsoft Azure VMware Solution landing zone accelerator is an open-source collection of Azure Resource Manager, Bicep and Terraform templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, focusing on enterprise-scale design principles.
 
 The Azure VMware Solution accelerator provides a reference implementation for a scalable Azure VMware Solution in your landing zone. The design decisions your organization makes, based on the guidance provided by the accelerator, lay the groundwork for scalability.
 
@@ -19,9 +19,9 @@ Customers adopt Azure VMware Solution in various ways. You can adapt the enterpr
 
 The Azure VMware Solution landing zone accelerator has the following features:
 
-- A modular approach to customize environment variables.
-- Design guidelines to aid in evaluating critical decisions.
 - Landing zone architecture.
+- Design guidelines to aid in evaluating critical decisions.
+- A modular approach to customize environment variables.
 - An implementation that includes:
   - A deployable reference to create the environment for your Azure VMware Solution deployment.
   - A Microsoft-approved Azure VMware Solution reference implementation to test the deployed environment.
@@ -32,6 +32,7 @@ The following articles provide guidelines for creating your Azure VMware Solutio
 
 - [Enterprise-scale identity and access management for Azure VMware Solution](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity for Azure VMware Solution](./eslz-network-topology-connectivity.md)
+- [Network considerations for Azure VMware Solution dual-region deployments](./eslz-dual-region-network-topology.md)
 - [Management and monitoring for an Azure VMware Solution enterprise-scale scenario](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery for Azure VMware Solution enterprise-scale scenario](./eslz-business-continuity-and-disaster-recovery.md)
 - [Security, governance, and compliance for Azure VMware Solution](./eslz-security-governance-and-compliance.md)
