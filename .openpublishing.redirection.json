@@ -2,17 +2,17 @@
    "redirections": [
       {
          "source_path": "docs/scenarios/azure-hpc/energy/azure-billing-active-directory-tenant.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/finance/azure-billing-active-directory-tenant.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/manufacturing/azure-billing-active-directory-tenant.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
@@ -2272,62 +2272,62 @@
       },
       {
          "source_path": "docs/scenarios/azure-hpc/energy/management.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/finance/management.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/manufacturing/management.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/energy/platform-automation-devops.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/finance/platform-automation-devops.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/manufacturing/platform-automation-devops.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/energy/security-governance-compliance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/finance/security-governance-compliance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/manufacturing/security-governance-compliance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/energy/security.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/security",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/finance/security.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/security",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/azure-hpc/manufacturing/security.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/security",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       }
    ]
