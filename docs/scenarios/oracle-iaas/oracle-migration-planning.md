@@ -19,7 +19,7 @@ Migrating Oracle workloads involves transitioning both databases and application
 
 - Applications on Azure Virtual Machines: Run Oracle enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure. 
 
-- Oracle Standard Edition or Enterprise Edition Databasees on Azure Virtual Machines. Thereby you deploy your Oracle Database on a Virtual Machine. There are several options available from self-managed to managed Databases. 
+- Oracle Standard Edition or Enterprise Edition Databases on Azure Virtual Machines. Thereby you deploy your Oracle Database on a Virtual Machine. There are several options available from self-managed to managed Databases. 
 
 - Oracle Database@Azure: Oracle Database@Azure is an Oracle database service running on Oracle Cloud Infrastructure (OCI), colocated in Microsoft data centers.
 
