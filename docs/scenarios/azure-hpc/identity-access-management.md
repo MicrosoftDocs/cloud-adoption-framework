@@ -54,7 +54,7 @@ HPC deployment uses the Azure landing zone infrastructure setup for security ide
  
 For more information, see [Design recommendations for platform access](../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
-### Design considerations for the energy industry 
+### Design considerations for the energy industry
 
 In addition to the preceding considerations, take these considerations into account.
 
