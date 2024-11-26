@@ -68,11 +68,11 @@ Workloads in the cloud only deployment model use Microsoft Entra ID for Azure se
 
 The following diagram shows a manufacturing reference architecture that uses CycleCloud for authentication:
 
-:::image type="content" source="../azure-hpc/media/hpc-identity-access-management-cyclecloud.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure CycleCloud." lightbox="../media/hpc-identity-access-management-cyclecloud.png":::
+:::image type="content" source="../azure-hpc/media/hpc-identity-access-management-cyclecloud.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure CycleCloud." lightbox="../azure-hpc/media/hpc-identity-access-management-cyclecloud.png":::
 
 This diagram shows a manufacturing architecture that uses Batch for authentication: 
 
-:::image type="content" source="../media/hpc-identity-access-management-batch.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure Batch." lightbox="../media/hpc-identity-access-management-batch.png":::
+:::image type="content" source="../azure-hpc/media/hpc-identity-access-management-batch.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure Batch." lightbox="../azure-hpc/media/hpc-identity-access-management-batch.png":::
 
 ## Next steps
 
@@ -87,28 +87,5 @@ The following articles provide guidance for various stages of the cloud adoption
 - [Security](./security.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelerator.md)
-
-**Manufacturing**
-
-These resources apply specifically to the manufactuing industry.
-
-- [Management for HPC in the manufacturing industry](./management.md)
-- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
-- [Manufacturing HPC resource organization](./resource-organization.md)
-- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
-- [Security for HPC in manufacturing industries](./security.md)
-- [Manufacturing HPC storage](./storage.md)
- 
-**Energy**
-
-These resources apply specifically to the energy industry. 
-
-- [Management for Azure HPC in energy](./management.md)
-- [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
-- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
-- [Resource organization for HPC in the energy industry](./resource-organization.md)
-- [Governance for HPC in energy industries](./security-governance-compliance.md)
-- [Security for Azure HPC in energy](./security.md)
+- [HPC network topology and connectivity](./network-topology-connectivity.md)
 - [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
-- [Storage for HPC energy environments](./storage.md)
