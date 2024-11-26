@@ -49,11 +49,11 @@ HPC deployment uses the Azure landing zone infrastructure setup for security ide
 
   - [Azure CycleCloud](/azure/cyclecloud/overview?view=cyclecloud-8&preserve-view=true). CycleCloud provides [three authentication methods](/azure/cyclecloud/how-to/user-authentication?view=cyclecloud-8&preserve-view=true): a built-in database with encryption, Active Directory, and LDAP.
   - [Azure Batch](/azure/batch/batch-technical-overview). Batch account access supports [two authentication methods](/azure/batch/security-best-practices): Shared Key and Microsoft Entra ID.
-  - [HPC Pack](/azure/cyclecloud/hpcpack?view=cyclecloud-8&preserve-view=true). Currently, all HPC Pack nodes must be joined into an Active Directory domain. If you're deploying the HPC Pack cluster in a virtual network that has a site-to-site VPN or Azure ExpressRoute connection to your corporate network (and firewall rules allow access to Active Directory domain Controllers), there's typically already an Active Directory domain. If you don't have an Active Directory domain in your virtual network, you can choose to create one by promoting the head node as domain controller. Another option would be to utilize Microsoft Entra Domain Services to allow the HPC Pack nodes to be domain joined to this service vs. on-premises Active Directory domain controllers. If the Head Nodes will be deployed in Azure, it is important to determine if remote users on-premises will be submitting jobs. If remote users are submitting jobs it would be recommended to use Active Directory as this will allow a better experience and allow certificates to be used properly for authentication. Otherwise, if Active Directory is not utilized and Microsoft Entra Domain Services is used instead, the remote clients will need to use the REST API service to submit jobs. 
+  - [HPC Pack](/azure/cyclecloud/hpcpack?view=cyclecloud-8&preserve-view=true). Currently, all HPC Pack nodes must be joined into an Active Directory domain. If you're deploying the HPC Pack cluster in a virtual network that has a site-to-site VPN or Azure ExpressRoute connection to your corporate network (and firewall rules allow access to Active Directory domain Controllers), there's typically already an Active Directory domain. If you don't have an Active Directory domain in your virtual network, you can choose to create one by promoting the head node as domain controller. Another option would be to utilize Microsoft Entra Domain Services to allow the HPC Pack nodes to be domain joined to this service vs. on-premises Active Directory domain controllers. If the Head Nodes will be deployed in Azure, it's important to determine if remote users on-premises will be submitting jobs. If remote users are submitting jobs, it would be recommended to use Active Directory as this will allow a better experience and allow certificates to be used properly for authentication. Otherwise, if Active Directory isn't utilized and Microsoft Entra Domain Services is used instead, the remote clients will need to use the REST API service to submit jobs. 
 
 ### Design considerations for the energy industry 
 
-In addition to the preceding conisiderations, take these conisiderations into account.
+In addition to the preceding considerations, take these considerations into account.
 
 Two common deployment types in oil and gas industry workloads are *cloud only* and *hybrid cloud* models. While it's less complex to have all of your compute, storage, and visualization resources in the cloud, our customers sometimes use a hybrid model due to multiple business constraints for seismic and reservoir-simulation HPC workloads.
 
@@ -61,9 +61,9 @@ Both the cloud only and hybrid cloud models might have their own unique identity
 
 Workloads in the cloud only deployment model use Microsoft Entra ID for Azure service fabric authentication, while the HPC hybrid cloud model uses the [Microsoft Entra hybrid identity solution](/azure/active-directory/hybrid/choose-ad-authn) for authentication. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy active directory support through Microsoft Entra Domain Services.
 
-### Desgin considerations for the manufacturing industry 
+### Design considerations for the manufacturing industry 
 
-The following diagram shows a manufacturing reference architecture that uses CycleCloud for for authentication:
+The following diagram shows a manufacturing reference architecture that uses CycleCloud for authentication:
 
 :::image type="content" source="../media/hpc-identity-access-management-cyclecloud.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure CycleCloud." lightbox="../media/hpc-identity-access-management-cyclecloud.png":::
 
