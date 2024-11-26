@@ -60,7 +60,7 @@ There are two paths to migrate:
 | **Tools used** : Data Box, DataPump, RMAN | **Tools used**: DataGuard, RMAN, Goldengate |
 
 >! Note:
-If you decide to perform an online migration, make sure that you can open the firewall for data transfer.
+If you decide to perform an online migration, make sure that you configure firewall rules to allow for data transfer.
 
 >! Note: If you decide to use Goldengate, please review if required license is available.
 
