@@ -20,7 +20,7 @@ For more information, see [design recommendations for platform access](../../rea
 
 HPC deployment uses the Azure landing zone infrastructure setup for security identity and access management needs. Keep the following design considerations in mind when you deploy your HPC application:
 
-- Determine the Azure resource administration that's required by various members of the team. Consider providing those team members with elevated Azure resource administration access in a non-production environment.
+- Determine the Azure resource administration that's required by various members of the team. Consider providing those team members with elevated Azure resource administration access in a nonproduction environment.
   - For example, give them a [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role.
   - You can also give team members partially elevated administration access, like a partial Virtual Machine Contributor role in a production environment.
   
