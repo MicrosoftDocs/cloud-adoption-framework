@@ -78,7 +78,7 @@ This diagram shows a manufacturing architecture that uses Batch for authenticati
 
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting HPC environments for the cloud.
 
-- [Azure billing offers and Active Directory tenants](../../ready/azure-billing-active-directory-tenant.md)
+- [Azure billing offers and Microsoft Entra tenants](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md)
 - [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
 - [Platform automation and DevOps](./platform-automation-devops.md)
@@ -86,13 +86,12 @@ The following articles provide guidance for various stages of the cloud adoption
 - [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [HPC landing zone accelerator](../azure-hpc/azure-hpc-landing-zone-accelerator.md)
 
 **Manufacturing**
 
 These resources apply specifically to the manufactuing industry.
 
-- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
 - [Management for HPC in the manufacturing industry](./management.md)
 - [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
@@ -105,7 +104,6 @@ These resources apply specifically to the manufactuing industry.
 
 These resources apply specifically to the energy industry. 
 
-- [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
 - [Management for Azure HPC in energy](./management.md)
 - [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
