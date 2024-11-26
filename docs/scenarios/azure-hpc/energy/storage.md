@@ -34,7 +34,7 @@ Oil and gas companies must be able to effectively manage and store exabytes of s
 
 [Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale. Azure supports several approaches for managing the speed and capacity of HPC applications.
 
-Large-scale Batch and HPC workloads in energy industry have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance I/O requirements and massive scalability needs of [high-performance computing (HPC)](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
+Large-scale Batch and HPC workloads in energy industry have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance I/O requirements and massive scalability needs of [high-performance computing (HPC)](https://azure.microsoft.com/solutions/high-performance-computing/) introduce unique challenges for data storage and access.
 
 HPC is used to solve complex problems, such as Seismic and Reservoir simulation and modeling, that are not practical or cost effective to handle with traditional computing techniques. It does this through a combination of parallel processing and massive scalability to perform large and complicated computing tasks quickly, efficiently, and reliably.
 
