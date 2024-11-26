@@ -160,11 +160,11 @@ Specific migration scenarios require different approaches and tools. This articl
 | [SAP on Azure migration](https://azure.microsoft.com/solutions/sap/migration/) | Learn how to migrate your SAP estate to Azure, with resources to support your journey at every step. |
 | [Migrate from SAP ASE to Azure SQL](/azure/azure-sql/migration-guides/database/sap-ase-to-sql-database) | Learn how to migrate your SAP Adaptive Server Enterprise (ASE) databases to Azure SQL Database by using SSMA for SAP ASE. |
 
-## Azure Stack HCI
+## Azure Local
 
 | Link | Description |
 |---|---|
-| [Overview of an Azure Migrate-based migration for Azure Stack HCI](/azure-stack/hci/migrate/migration-azure-migrate-hci-overview) | Get an overview of how to migrate Hyper-V VMs to your Azure Stack HCI cluster by using Azure Migrate. |
+| [Overview of an Azure Migrate-based migration for Azure Local](/azure-stack/hci/migrate/migration-azure-migrate-hci-overview) | Get an overview of how to migrate Hyper-V VMs to your Azure Local instance by using Azure Migrate. |
 
 ### Azure Synapse Analytics
 

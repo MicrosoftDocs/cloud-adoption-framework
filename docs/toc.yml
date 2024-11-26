@@ -897,83 +897,23 @@ items:
 
   - name: Secure
     items:
-    - name: Overview
-      href: secure/index.md
-    - name: Methodology
-      items:
-      - name: Risk insights
-        href: secure/risk-insights.md
-      - name: Security integration
-        href: secure/security-integration.md
-      - name: Business resilience
-        href: secure/business-resilience.md
-      - name: Access control
-        href: secure/access-control.md
-      - name: Security operations
-        href: secure/security-operations.md
-      - name: Asset protection
-        href: secure/asset-protection.md
-      - name: Security governance
-        href: secure/security-governance.md
-      - name: Innovation security
-        href: secure/innovation-security.md
-      - name: DevSecOps controls
-        href: secure/devsecops-controls.md
-
-    - name: Best practices
-      items:  
-      - name: Infrastructure and development security
-        items:
-        - name: Introduction
-          href: secure/security-best-practices-introduction.md
-        - name: Infrastructure security
-          items:
-          - name: Overview
-            href: secure/infrastructure-security-overview.md
-          - name: Strategy
-            href: secure/infrastructure-security-strategy.md
-          - name: Architecture
-            href: secure/infrastructure-security-architecture.md
-          - name: Implementation
-            href: secure/infrastructure-security-implementation.md
-          - name: Operations and governance
-            href: secure/infrastructure-security-operations-governance.md
-        - name: Development security
-          items:
-          - name: Strategy
-            href: secure/development-security-strategy-overview.md
-          - name: Innovation security
-            href: secure/development-innovation-security.md
-          - name: Securing DevOps strategy and process
-            href: secure/devops-strategy-process-security.md
-          - name: Securing DevOps CI/CD pipelines
-            href: secure/best-practices/secure-devops.md
-          - name: Secure DevOps governance
-            href: secure/best-practices/end-to-end-governance.md
-          - name: Architecture
-            href: secure/development-security-architecture.md
-          - name: Implementation
-            href: secure/development-security-implementation-operations.md
-      - name: Toolchain
-        href: secure/best-practices/toolchain.md
-
-    - name: Security considerations
-      items:
-      - name: Security strategy
-        href: strategy/define-security-strategy.md
-      - name: Roles and responsibilities
-        href: organize/cloud-security.md
-      - name: Getting started
-        href: get-started/security.md
-      - name: Security best practices
-        href: secure/security-top-10.md
-      - name: Microsoft Cybersecurity Reference Architectures
-        href: /security/cybersecurity-reference-architecture/mcra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Security documentation
-        href: /security/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: Azure Security Benchmark
-        href: /security/benchmark/azure/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-
+    - name: Overview 
+      href: secure/overview.md
+    - name: Teams and roles
+      href: secure/teams-roles.md
+    - name: Strategy
+      href: secure/strategy.md
+    - name: Plan
+      href: secure/plan.md
+    - name: Ready
+      href: secure/ready.md    
+    - name: Adopt 
+      href: secure/adopt.md
+    - name: Govern  
+      href: secure/govern.md
+    - name: Manage  
+      href: secure/manage.md
+  
   - name: Organize
     items:
     - name: Managing organization alignment

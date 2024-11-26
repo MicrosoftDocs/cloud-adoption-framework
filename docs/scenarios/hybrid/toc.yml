@@ -106,7 +106,7 @@ items:
         href: /azure/architecture/solution-ideas/articles/ai-at-the-edge-disconnected?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Azure Functions in a hybrid environment
         href: /azure/architecture/hybrid/azure-functions-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: ROBO application example on Azure Stack HCI
+      - name: ROBO application example on Azure Local
         href: /azure/architecture/hybrid/azure-stack-robo?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Run containers in a hybrid environment
         href: /azure/architecture/hybrid/hybrid-containers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
@@ -210,11 +210,11 @@ items:
       href: /hybrid/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Azure Arc
       href: /azure/azure-arc/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Azure Stack HCI
+    - name: Azure Local
       href: /azure-stack/hci/overview#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Azure Modular Datacenter
       href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hub
-    - name: Azure Stack HCI
+    - name: Azure Local
       href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hci
     - name: Azure IoT Edge
       href: /azure/iot-edge/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
@@ -256,11 +256,11 @@ items:
       items:
       - name: Intro to Azure Stack
         href: /training/modules/intro-to-azure-stack/
-      - name: Azure Stack HCI foundations
+      - name: Azure Local foundations
         href: /training/paths/azure-stack-hci-foundations/
-      - name: Azure Stack HCI deployment
+      - name: Azure Local deployment
         href: /training/modules/azure-stack-hci-plan-deploy/
-      - name: Azure Stack HCI technologies
+      - name: Azure Local technologies
         href: /training/modules/azure-stack-hci-technologies/
-      - name: Azure Stack HCI - Azure Arc integration
+      - name: Azure Local - Azure Arc integration
         href: /training/modules/stack-hci-arc-integration/

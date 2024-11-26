@@ -1,3 +1,4 @@
+
 ---
 title: Azure identity and access management for HPC in manufacturing
 description: This article describes considerations and provides recommendations for identity and access management in manufacturing HPC environments.
@@ -28,11 +29,11 @@ Depending on the HPC compute resource orchestrator that you use, various authent
 
 The following diagram shows a manufacturing reference architecture that uses CycleCloud:
 
-:::image type="content" source="./media/hpc-identity-access-management-cyclecloud.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure CycleCloud." lightbox="./media/hpc-identity-access-management-cyclecloud.png":::
+:::image type="content" source="../media/hpc-identity-access-management-cyclecloud.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure CycleCloud." lightbox="../media/hpc-identity-access-management-cyclecloud.png":::
 
 This diagram shows a manufacturing architecture that uses Batch: 
 
-:::image type="content" source="./media/hpc-identity-access-management-batch.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure Batch." lightbox="./media/hpc-identity-access-management-batch.png":::
+:::image type="content" source="../media/hpc-identity-access-management-batch.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure Batch." lightbox="../media/hpc-identity-access-management-batch.png":::
 
 ## Next steps
 
@@ -47,3 +48,4 @@ The following articles provide guidance that you might find helpful at various p
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+

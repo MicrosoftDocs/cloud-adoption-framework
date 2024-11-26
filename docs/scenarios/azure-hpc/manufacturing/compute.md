@@ -43,7 +43,7 @@ When you design your HPC infrastructure, several tools and services are availabl
 
 The following architecture provides an example of using VMs in HPC in manufacturing.
 
-:::image type="content" alt-text="Architecture diagram that shows a manufacturing HPC workload that uses Azure CycleCloud and HC-series VMs." source="./media/hpc-manufacturing-architecture-example.svg" lightbox="./media/hpc-manufacturing-architecture-example.svg":::
+:::image type="content" alt-text="Architecture diagram that shows a manufacturing HPC workload that uses Azure CycleCloud and HC-series VMs." source="../media/hpc-manufacturing-architecture-example.svg" lightbox="../media/hpc-manufacturing-architecture-example.svg":::
 
 This architecture uses Azure Files shares and Azure Storage accounts that are connected to an Azure Private Link subnet.
 

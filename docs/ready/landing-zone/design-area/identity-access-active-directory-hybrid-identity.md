@@ -80,7 +80,7 @@ To implement Microsoft directory services, familiarize administrators with the f
 
 - [Domain Services](/entra/identity/domain-services/overview) is an Azure-managed service that you can use to create a new managed Active Directory domain that's hosted in Azure. The domain can have a trust relationship with existing domains and can synchronize identities from Microsoft Entra ID. Administrators don't have direct access to the domain controllers and aren't responsible for patching and other maintenance operations.
 
-- When you deploy Domain Services or integrate on-premises environments into Azure, use locations with [availability zones](/azure/availability-zones/az-overview) for increased availability when possible. Also consider deploying across multiple Azure regions for increased resiliency.
+- When you deploy Domain Services or integrate on-premises environments into Azure, use [regions with availability zones](/azure/reliability/availability-zones-region-support) for increased availability when possible. Also consider deploying across multiple Azure regions for increased resiliency.
 
 After you configure AD DS or Domain Services, you can use the same method as on-premises computers to domain join Azure VMs and file shares. For more information, see [Compare Microsoft directory-based services](/entra/identity/domain-services/compare-identity-solutions).
 
