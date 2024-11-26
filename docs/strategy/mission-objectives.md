@@ -83,4 +83,4 @@ These metrics should provide insights into your progress against each key result
 ## Next steps
 
 > [!div class="nextstepaction"]
-> Prepare your organization
+> [Define your mission and goals for cloud adoption](define-your-team.md)

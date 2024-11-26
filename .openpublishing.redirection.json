@@ -2254,6 +2254,11 @@
          "source_path": "docs/secure/best-practices/manage-secrets.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/adopt",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/strategy/cloud-adoption-strategy-evaluator.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/assessment",
+         "redirect_document_id": false
+      }  
    ]
 }

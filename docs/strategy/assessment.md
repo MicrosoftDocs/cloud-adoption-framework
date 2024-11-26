@@ -28,4 +28,3 @@ Follow these steps to assess and document your cloud adoption maturity:
 
 > [!div class="nextstepaction"]
 > [Why are you moving to or expanding in the cloud?](motivations.md)
-

@@ -84,4 +84,4 @@ Use your classified motivations to inform the priorities and urgency in your goa
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Define your mission and goals for cloud adoption](define-your-team.md)
+> [Cloud adoption strategy mission and objectives](mission-objectives.md)

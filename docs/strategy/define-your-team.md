@@ -59,6 +59,3 @@ Your cloud strategy team should continuously seek input from areas across the bu
 - **Iterate on your strategy**: Create an initial strategy draft with your core team, in consultation with business leaders and stakeholders. Use the first iteration to explore business goals that can be achieved through cloud adoption. Once you have executive support to proceed, expand the scope and detail of your strategy. Ensure that it is updated as business objectives and cloud opportunities evolve.
 
 ## Next steps
-
-> [!div class="nextstepaction"]
-> [Mission and objectives](mission-objectives.md)
