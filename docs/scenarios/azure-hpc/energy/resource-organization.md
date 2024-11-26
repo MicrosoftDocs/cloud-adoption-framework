@@ -23,7 +23,7 @@ Resources to name include VMs, load balancers, DNS labels, availability sets, vi
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC in the energy industry.
 
 - [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
-- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Identity and access management for Azure HPC](../identity-access-management.md)
 - [Management for Azure HPC in energy](./management.md)
 - [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)

@@ -87,7 +87,7 @@ For more information on Parallel Virtual file system on Azure, see [Parallel Vir
 The following list of articles takes you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
 
 - [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
-- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Identity and access management for Azure HPC](../identity-access-management.md)
 - [Management for Azure HPC in energy](./management.md)
 - [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)

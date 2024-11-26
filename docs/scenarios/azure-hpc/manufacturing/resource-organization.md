@@ -47,7 +47,7 @@ A sample use case would be to tag all Azure development VMs with the tag of Dev.
 The following articles provide guidance on each step in the cloud adoption journey for manufacturing HPC environments.
 
 - [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Azure identity and access management for HPC](../identity-access-management.md)
 - [Management for HPC in the manufacturing industry](./management.md)
 - [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
