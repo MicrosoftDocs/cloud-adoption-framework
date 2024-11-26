@@ -10,11 +10,11 @@ ms.date: 11/15/2024
 
 # Identity and access management for Azure HPC
 
-This article builds on considerations and recommendations that are described in the article [Azure identity and access management design](../../../ready/landing-zone/design-area/identity-access.md). It can help you examine design considerations for identity and access management that are specific to the deployment, on Azure, of HPC applications.
+This article builds on considerations and recommendations that are described in the article [Azure identity and access management design](../../ready/landing-zone/design-area/identity-access.md). It can help you examine design considerations for identity and access management that are specific to the deployment, on Azure, of HPC applications.
 
 [Microsoft Entra Domain Services](/azure/active-directory-domain-services/overview) (Microsoft Entra Domain Services) provides managed domain services like domain join and Group Policy. It also provides access to legacy authentication protocols like lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Microsoft Entra Domain Services integrates with your existing Microsoft Entra tenant. This integration enables users to sign in to services and applications connected to the managed domain by using their existing credentials in Microsoft Entra ID. You can also use existing groups and user accounts to help secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for hybrid environments.
 
-For more information, see [design recommendations for platform access](../../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
+For more information, see [design recommendations for platform access](../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
 ## Design considerations
 
@@ -52,7 +52,7 @@ HPC deployment uses the Azure landing zone infrastructure setup for security ide
   - [HPC Pack](/azure/cyclecloud/hpcpack?view=cyclecloud-8&preserve-view=true). Currently, all HPC Pack nodes must be joined into an Active Directory domain. If you're deploying the HPC Pack cluster in a virtual network that has a site-to-site VPN or Azure ExpressRoute connection to your corporate network (and firewall rules allow access to Active Directory domain Controllers), there's typically already an Active Directory domain. If you don't have an Active Directory domain in your virtual network, you can choose to create one by promoting the head node as domain controller. Another option would be to utilize Microsoft Entra Domain Services to allow the HPC Pack nodes to be domain joined to this service vs. on-premises Active Directory domain controllers. If the Head Nodes will be deployed in Azure, it's important to determine if remote users on-premises will be submitting jobs. If remote users are submitting jobs, it would be recommended to use Active Directory as this will allow a better experience and allow certificates to be used properly for authentication. Otherwise, if Active Directory isn't utilized and Microsoft Entra Domain Services is used instead, the remote clients will need to use the REST API service to submit jobs. 
   - If you want to extend your on-premises capabilities to a hybrid environment, you can authenticate through Active Directory with a read-only domain controller that's hosted in Azure. This approach minimizes traffic across the link. This integration provides a way for users to use their existing credentials to sign in to services and applications that are connected to the managed domain. You can also use existing groups and user accounts to help secure access to resources. These features provide a smoother lift and shift of on-premises resources to Azure.
 
-For more information, see [Design recommendations for platform access](../../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
+For more information, see [Design recommendations for platform access](../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
 ### Design considerations for the energy industry 
 
@@ -78,7 +78,7 @@ This diagram shows a manufacturing architecture that uses Batch for authenticati
 
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting HPC environments for the cloud.
 
-- [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure billing offers and Active Directory tenants](azure-billing-active-directory-tenant.md)
 - [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
 - [Platform automation and DevOps](./platform-automation-devops.md)
