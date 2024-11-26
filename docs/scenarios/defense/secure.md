@@ -18,11 +18,11 @@ Security refers to the cybersecurity triad of confidentiality, integrity, and av
 
 Security is no less important for a workload. Workloads inherit security controls from the platform but must still apply security controls above the platform level. Here are a few security recommendations to consider when building and managing defense workloads.
 
-## Implement zero trust
+## Implement Zero Trust
 
-Zero Trust is a security methodology, not a product. Implementations of zero trust will differ, but the commonality is an attempt to eliminate trust.
+Zero Trust is a security methodology, not a product. Implementations of Zero Trust will differ, but the commonality is an attempt to eliminate trust.
 
-Three main principles of zero trust addressed are (1) verify every session explicitly, (2) enforce the least privilege on every identity, and (3) monitor, search, and secure continuously. Let's dig into these principles further.
+Three main principles of Zero Trust addressed are (1) verify every session explicitly, (2) enforce the least privilege on every identity, and (3) monitor, search, and secure continuously. Let's dig into these principles further.
 
 **Verify every session explicitly** - Verify refers to authentication and authorization. You need to authenticate and authorize every device regardless of location. Multifactor authentication is a common defense standard where the use of a security token supplements authentication process.
 
@@ -38,7 +38,7 @@ Granting elevated privilege for a defined period is a security best-practice. Mi
 
 - [PIM for just-in-time access](/azure/active-directory/roles/best-practices#2-use-privileged-identity-management-to-grant-just-in-time-access)
 - [Azure identity management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices)
-- [Securing identity with zero trust](/security/zero-trust/deploy/identity)
+- [Securing identity with Zero Trust](/security/zero-trust/deploy/identity)
 
 **Monitor, scan, and improve continuously** - Security shouldn’t be static. The threat landscape shifts constantly, and security must shift with it. Defense security teams should monitor, scan, and improve cloud environments to mitigate risks. Defense organizations often have required security tools that cloud-native tooling can supplement for comprehensive security detection and analysis. We recommend Microsoft Defender for Cloud as a baseline cloud security posture management tool that continually assesses the environment's security posture. For more information, see [What is Microsoft Defender for Cloud?](/azure/defender-for-cloud/defender-for-cloud-introduction).
 
@@ -50,7 +50,7 @@ Here are a few tools that add value to defense deployments:
 
 - ***Security Information and Event Management (SIEM)***: A SIEM is a necessary threat detection and forensic capabilities that analyze, aggregates, and detects threats in logs generated throughout a cloud environment. For a list of available security tools, see [Azure Government security](/azure/azure-government/documentation-government-plan-security).
 
-For more information on zero trust, see [zero trust in Azure](/security/zero-trust/).
+For more information, see [Zero Trust in Azure](/security/zero-trust/).
 
 ## Automate security compliance
 
@@ -67,7 +67,7 @@ For general security information, see:
 - [Security fundamentals](/azure/security/fundamentals/)
 - [Operational security checklist](/azure/security/fundamentals/operational-checklist)
 - [Cybersecurity reference architectures](/security/cybersecurity-reference-architecture/mcra)
-- [CAF security](../../secure/index.md)
+- [CAF security](../../secure/overview.md)
 
 ## Next step
 

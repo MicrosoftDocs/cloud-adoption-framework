@@ -42,7 +42,7 @@ When you design your HPC infrastructure, several tools and services are availabl
 
 The following architecture provides an example of using VMs in HPC for finance workloads.
 
-:::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="./media/hpc-finance-architecture-example.svg" lightbox="./media/hpc-finance-architecture-example.svg":::
+:::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="../media/hpc-finance-architecture-example.svg" lightbox="../media/hpc-finance-architecture-example.svg":::
 
 This workload uses HPC Pack HB-series compute nodes.
 
