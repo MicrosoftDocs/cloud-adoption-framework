@@ -68,7 +68,7 @@ Workloads in the cloud only deployment model use Microsoft Entra ID for Azure se
 
 The following diagram shows a manufacturing reference architecture that uses CycleCloud for authentication:
 
-:::image type="content" source="../media/hpc-identity-access-management-cyclecloud.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure CycleCloud." lightbox="../media/hpc-identity-access-management-cyclecloud.png":::
+:::image type="content" source="../azure-hpc/media/hpc-identity-access-management-cyclecloud.png" alt-text="Diagram that shows a manufacturing reference architecture, which uses Azure CycleCloud." lightbox="../media/hpc-identity-access-management-cyclecloud.png":::
 
 This diagram shows a manufacturing architecture that uses Batch for authentication: 
 
