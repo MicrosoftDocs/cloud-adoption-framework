@@ -78,7 +78,7 @@ This diagram shows a manufacturing architecture that uses Batch for authenticati
 
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting HPC environments for the cloud.
 
-- [Azure billing offers and Active Directory tenants](azure-billing-active-directory-tenant.md)
+- [Azure billing offers and Active Directory tenants](../../ready/azure-billing-active-directory-tenant.md)
 - [Identity and access management](./identity-access-management.md)
 - [Management](./management.md)
 - [Platform automation and DevOps](./platform-automation-devops.md)
