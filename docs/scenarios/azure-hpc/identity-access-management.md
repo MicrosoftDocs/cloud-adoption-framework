@@ -79,7 +79,9 @@ This diagram shows a manufacturing architecture that uses Batch for authenticati
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting HPC environments for the cloud.
 
 - [Azure billing offers and Microsoft Entra tenants](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md)
+- [Management](manage.md)
 - [Resource organization](resource-organization.md)
+- [Secure](secure.md)
 - [Storage](storage.md)
 - [HPC landing zone accelerator](azure-hpc-landing-zone-accelerator.md)
 - [HPC network topology and connectivity](network-topology-connectivity.md)
