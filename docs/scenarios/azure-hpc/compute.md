@@ -1,6 +1,6 @@
 ---
 title: Compute Large-scale HPC Application Workloads in Azure Virtual Machines
-description: Learn about the Azure VM instances that are ideal for large-scale HPC application workloads, HPC use cases, reference architecture, design considerations, and design recommendations.
+description: Learn about the ideal Azure VM instances for large-scale HPC application workloads, use cases, reference architecture, and design considerations and recommendations.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -20,7 +20,7 @@ Big compute applications typically have the following characteristics:
 - Tasks can be independent or tightly coupled, which requires high-speed networking technologies like InfiniBand and remote direct memory access (RDMA) connectivity.
 - You can use compute-intensive virtual machine (VM) sizes such as H16r, H16mr, and A9. Your selection depends on the workload.
 
-:::image type="content" source="../media/tasks.png" alt-text="Diagram of Azure tasks." lightbox="../media/tasks.png" border="false":::
+:::image type="content" source="./media/tasks.png" alt-text="Diagram of Azure tasks." lightbox="./media/tasks.png" border="false":::
 
 Azure provides a range of VM instances that are optimized for CPU-intensive and GPU-intensive workloads. These VMs can run in Azure Virtual Machine Scale Sets to provide resiliency and load balancing. Azure is also the only cloud platform that offers InfiniBand-enabled hardware. InfiniBand provides a significant performance advantage for tasks such as financial risk modeling, engineering stress analysis, and running reservoir simulation and seismic workloads. This advantage results in performance that approaches or exceeds current on-premises infrastructure performance.
 
@@ -98,9 +98,9 @@ This job is data and compute-intensive. The company needs to process terabytes o
 
 Companies relentlessly process large volumes of seismic acquisition data to locate and accurately quantify and qualify the hydrocarbon content in reservoirs that they discover in the subsurface before they begin recovery operations. Acquisition data is unstructured and can easily reach petabyte levels for one potential oil and gas field. Because of these factors, you can only complete seismic processing activity within a reasonable timeframe by using HPC and other appropriate data management strategies.
 
-:::image type="content" source="../media/network-interconnect.png" alt-text="Diagram of the network interconnect compute and storage for seismic interpretation and modeling." lightbox="../media/network-interconnect.png" border="false":::
+:::image type="content" source="./media/network-interconnect.png" alt-text="Diagram of the network interconnect compute and storage for seismic interpretation and modeling." lightbox="./media/network-interconnect.png" border="false":::
 
-:::image type="content" source="../media/network-reference-architecture-seismic-processing.png" alt-text="Diagram of the network reference architecture for seismic processing." lightbox="../media/network-reference-architecture-seismic-processing.png" border="false":::
+:::image type="content" source="./media/network-reference-architecture-seismic-processing.png" alt-text="Diagram of the network reference architecture for seismic processing." lightbox="./media/network-reference-architecture-seismic-processing.png" border="false":::
 
 #### Reference architecture for reservoir simulation and modeling
 
@@ -108,9 +108,9 @@ Physical subsurface characteristics, such as water saturation, porosity, and per
 
 A reservoir modeling workload is also an area of reservoir engineering. The workload combines physics, mathematics, and computer programming in a reservoir model to analyze and predict fluid behavior in the reservoir over time. This analysis requires high computation power and big compute workload demands, including fast networking.
 
-:::image type="content" source="../media/network-reference-architecture-reservoir-simulation.png" alt-text="Diagram of the network reference architecture for reservoir simulation." lightbox="../media/network-reference-architecture-reservoir-simulation.png" border="false":::
+:::image type="content" source="./media/network-reference-architecture-reservoir-simulation.png" alt-text="Diagram of the network reference architecture for reservoir simulation." lightbox="./media/network-reference-architecture-reservoir-simulation.png" border="false":::
 
-:::image type="content" source="../media/network-interconnect-compute-and-storage-seismic-analysis.png" alt-text="Diagram of the network interconnect compute and storage seismic analysis." lightbox="../media/network-interconnect-compute-and-storage-seismic-analysis.png" border="false":::
+:::image type="content" source="./media/network-interconnect-compute-and-storage-seismic-analysis.png" alt-text="Diagram of the network interconnect compute and storage seismic analysis." lightbox="./media/network-interconnect-compute-and-storage-seismic-analysis.png" border="false":::
 
 For more information about reference architectures or cookbooks for relevant HPC independent software vendor (ISV) applications that support HPC for energy use cases, see:
 
@@ -121,7 +121,7 @@ For more information about reference architectures or cookbooks for relevant HPC
 
 The following architecture is an example of how to use VMs in HPC for finance workloads.
 
-:::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="../media/hpc-finance-architecture-example.svg" lightbox="../media/hpc-finance-architecture-example.svg" border="false":::
+:::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="./media/hpc-finance-architecture-example.svg" lightbox="./media/hpc-finance-architecture-example.svg" border="false":::
 
 This workload uses HPC Pack HB-series compute nodes.
 
@@ -157,15 +157,15 @@ For reference architectures and cookbooks about how to deploy HPC ISV applicatio
 
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting manufacturing HPC environments for the cloud.
 
-- [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure billing offers and Active Directory tenants](azure-billing-active-directory-tenant.md)
 - [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
+- [Management](management.md)
 - [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
+- [Platform automation and DevOps](platform-automation-devops.md)
 - [Resource organization](./resource-organization.md)
-- [Governance](./security-governance-compliance.md)
-- [Security](./security.md)
+- [Governance](security-governance-compliance.md)
+- [Security](security.md)
 - [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [HPC landing zone accelerator](./azure-hpc-landing-zone-accelerator.md)
 - [Spot virtual machines](/azure/architecture/guide/spot/spot-eviction)
 
