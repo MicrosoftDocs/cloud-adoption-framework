@@ -3,7 +3,7 @@ title: Data landing zones
 description: Learn about cloud-scale analytics architecture data landing zones in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/11/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -21,8 +21,8 @@ A typical Azure subscription associated with a data landing zone has the followi
 
 | Layer | Required |Resource groups |
 |---|---|---|
-|[Platform services](#core-services-layer) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
-|[Core services](#core-services-layer)     | Yes | <ul> <li> [Management](#management)  </li> <li> [Storage](#storage)  </li>  <li> [External Data](#external-data) </li> <li> [Shared Integration Runtimes](#shared-integration-runtimes) </li> <li> [Shared Applications](#shared-applications)  </li> </ul> |
+|[Platform services layer](#platform-services) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
+|[Core services](#core-services)     | Yes | <ul> <li> [Management](#management)  </li> <li> [Storage](#storage)  </li>  <li> [External Data](#external-data) </li> <li> [Shared Integration Runtimes](#integration-runtimes) </li> <li> [Shared Applications](#shared-applications)  </li> </ul> |
 |[Data application](#data-application)     | Optional | <ul> <li> [Data application](#data-application-resource-group) (1 or more) </li> </ul> |
 |[Visualization](#visualization)           | Optional | <ul> <li> [Reporting and visualization](#visualization) </li> </ul> |
 
@@ -34,12 +34,12 @@ A typical Azure subscription associated with a data landing zone has the followi
 
 Data landing zone architecture illustrates the layers, their resource groups, and services each resource group contains. The architecture offers an overview of all groups and roles associated with your data landing zone, and the extent of their access to your control and data planes. The architecture also illustrates how each layer aligns to the Operational Model responsibilities.
 
-:::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
+:::image type="content" source="../images/data-landing-zone.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone.png":::
 
 > [!TIP]
 > Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](../../cloud-scale-analytics/architectures/scale-architectures.md).
 
-## Platform services layer
+## Platform services
 
 The platform services layer includes services required to enable connectivity and observability to your data landing zone within the context of cloud-scale analytics. The following table lists the recommended resource groups.
 
@@ -64,7 +64,7 @@ The virtual network of your data landing zone is [automatically peered with your
 The security and monitoring resource group includes [Azure Monitor](/azure/azure-monitor/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to collect service telemetry, define monitoring criteria and alerts, and apply policies and scanning to services.
 
 
-## Core services layer
+## Core services
 
 The core services layer includes foundational services required to enable your data landing zone within the context of cloud-scale analytics. The following table lists the resource groups that provide the standard suite of available services in every data landing zone you deploy.
 
@@ -78,7 +78,7 @@ The core services layer includes foundational services required to enable your d
 |  `shared-applications-rg`   | Optional | Shared applications (Synapse or Databricks) |
 
 
-### Data lake services
+### Storage
 
 :::image type="content" source="../images/data-landing-zone-data-lake-services-rg.png" alt-text="Diagram of data landing zone data lake services resource group.":::
 
