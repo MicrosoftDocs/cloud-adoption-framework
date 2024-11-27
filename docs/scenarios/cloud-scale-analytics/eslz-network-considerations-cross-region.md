@@ -3,7 +3,7 @@ title: Cross-region data landing zone connectivity
 description: Learn cross-region connectivity for cloud-scale analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 03/22/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---

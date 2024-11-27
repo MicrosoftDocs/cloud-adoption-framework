@@ -3,7 +3,7 @@ title: Security, governance, and compliance for enterprise-scale cloud-scale ana
 description: Learn how to improve security, governance, and compliance for enterprise-scale cloud-scale analytics in Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/16/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -24,7 +24,7 @@ Both Microsoft and customers share responsibility for security. For accepted sec
 
 ### Data-at-rest encryption
 
-Data-at-rest encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. Dar is a critical security control since the underlying data is unrecoverable and can't be changed without its decryption key. Dar is an important layer in the defense-in-depth strategy of Microsoft datacenters. Often, there are compliance and governance reasons to deploy data-at-rest encryption.
+Data-at-rest encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. Data-at-rest is a critical security control since the underlying data is unrecoverable and can't be changed without its decryption key. DData-at-rest is an important layer in the defense-in-depth strategy of Microsoft datacenters. Often, there are compliance and governance reasons to deploy data-at-rest encryption.
 
 Several Azure services support data-at-rest encryption, including Azure Storage and Azure SQL databases. Although common concepts and models influence the design of Azure services, each service can apply data-at-rest encryption at different stack layers or have different encryption requirements.
 
@@ -36,7 +36,7 @@ Several Azure services support data-at-rest encryption, including Azure Storage 
 Data is in transit or in flight when it moves from one location to another. This can be internally, on-premises or within Azure, or externally, such as across the internet to an end user. Azure offers several mechanisms, including encryption, to keep data private in transit. These mechanisms include:
 
 - Communication through VPNs using IPsec/IKE encryption.
-- Transport Layer Security (TLS) 1.2 or later used by Azure components such as Azure Application Gateway or Azure Front Door.
+- Transport Layer Security (TLS)
 - Protocols available on Azure Virtual Machines, such as Windows IPsec or SMB.
 
 Encryption using MACsec (media access control security), an IEEE standard at the data-link layer, is automatically enabled for all Azure traffic between Azure datacenters. This encryption ensures customer data confidentiality and integrity. For more information, see [Azure customer data protection](/azure/security/fundamentals/protection-customer-data).
@@ -97,7 +97,7 @@ You can save time and reduce errors by automating deployments. Reduce the deploy
 
 ### Lock resources for production workloads
 
-Create required core data management and data landing zone Azure resources at the start of your project. When all additions, moves, and changes are finished, and the Azure deployment is operational, lock all resources. Then, only an administrator can unlock or modify resources, such as a data catalog. For more information, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
+Create required core data management and data landing zone Azure resources at the start of your project. When all additions, moves, and changes are finished, and the Azure deployment is operational, lock all resources. Then, only an administrator can unlock or modify resources. For more information, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
 
 ### Implement role-based access control
 

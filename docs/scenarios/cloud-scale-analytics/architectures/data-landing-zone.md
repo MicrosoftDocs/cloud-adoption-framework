@@ -24,7 +24,7 @@ A typical Azure subscription associated with a data landing zone has the followi
 |[Platform services layer](#platform-services) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
 |[Core services](#core-services)     | Yes | <ul> <li> [Management](#management)  </li> <li> [Storage](#storage)  </li>  <li> [External Data](#external-data) </li> <li> [Shared Integration Runtimes](#integration-runtimes) </li> <li> [Shared Applications](#shared-applications)  </li> </ul> |
 |[Data application](#data-application)     | Optional | <ul> <li> [Data application](#data-application-resource-group) (1 or more) </li> </ul> |
-|[Visualization](#visualization)           | Optional | <ul> <li> [Reporting and visualization](#visualization) </li> </ul> |
+|[Reporting and visualization](#reporting-and-visualization)           | Optional | <ul> <li> [Reporting and visualization](#reporting-and-visualization) </li> </ul> |
 
 > [!NOTE]
 > While the Core services layer is marked as required, not all resource groups and services included in this article may be required for your data landing zone.
@@ -50,16 +50,12 @@ The platform services layer includes services required to enable connectivity an
 
 ### Networking
 
-:::image type="content" source="../images/data-landing-zone-network-rg.png" alt-text="Diagram of a data landing zone network resource group.":::
-
 The network resource group contains connectivity services, including Azure [Virtual Networks](azure/virtual-network/virtual-networks-overview), [Network Security Groups](/azure/virtual-network/network-security-groups-overview) (NSG), and [route tables](/azure/virtual-network/virtual-networks-udr-overview). All of these services are deployed into a single resource group.
 
 The virtual network of your data landing zone is [automatically peered with your data management landing zone's virtual network](../eslz-network-topology-and-connectivity.md) and your [connectivity subscription's virtual network](../../../ready/landing-zone/index.md).
 
 
 ### Security and Monitoring
-
-:::image type="content" source="../images/data-landing-zone-network-rg.png" alt-text="Diagram of a data landing zone network resource group.":::
 
 The security and monitoring resource group includes [Azure Monitor](/azure/azure-monitor/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to collect service telemetry, define monitoring criteria and alerts, and apply policies and scanning to services.
 
@@ -80,8 +76,6 @@ The core services layer includes foundational services required to enable your d
 
 ### Storage
 
-:::image type="content" source="../images/data-landing-zone-data-lake-services-rg.png" alt-text="Diagram of data landing zone data lake services resource group.":::
-
 As shown in the diagram, three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts are provisioned in a single data lake services resource group. Data transformed at different stages is saved in one of your data landing zone's data lakes. The data is available for consumption by your analytics, data science, and visualization teams.
 
 [!INCLUDE [data-lake-layers](../../cloud-scale-analytics/includes/data-lake-layers.md)]
@@ -100,8 +94,6 @@ For more information, see:
 ### Shared integration runtimes
 
 Azure Data Factory and Azure Synapse Analytics Pipelines use integration runtimes (IR) to securely access data sources in peered or isolated networks. Shared IRs should be deployed to a virtual machine (or Azure Virtual Machine Scale Sets) in the shared integration runtime resource group.
-
-:::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
 
 To enable the shared resource group:
 
@@ -123,13 +115,13 @@ To enable the shared resource group:
 > [!IMPORTANT]
 > Deploy shared integration runtimes as close to the data source as possible. You can deploy the integration runtimes in a data landing zone, into third-party clouds, or into a private cloud provided the virtual machine has connectivity to the required data source(s).
 
-### CI/CD Agents
+### Management
 
 CI/CD Agents run on virtual machines and help deploy artifacts from the source code repository, including data applications and changes to the data landing zone.
 
 For more information, see [Azure Pipeline agents](/azure/devops/pipelines/agents/agents).
 
-### Upload ingest storage
+### External Storage
 
 Partner data publishers need to land data in your platform so your data application teams can pull it into their data lakes. You can also have internal or external data sources which can't support the connectivity or authentication requirements that are enforced across the rest of the data landing zones. Using a separate storage account is the recommended approach to receive data, then a shared integration runtime or similar ingestion process to bring it into your processing pipeline. As seen in the following diagram, your upload ingest storage resource group lets you provision blob stores for these use-cases.
 
@@ -140,9 +132,7 @@ The data application teams request the storage blobs. These requests get approve
 > [!IMPORTANT]
 > Since Azure Storage blobs are provisioned on an *as-needed* basis, you should initially deploy an empty storage services resource group in each data landing zone.
 
-### Data agnostic ingestion
-
-:::image type="content" source="../images/data-landing-zone-ingest-processing-rg.png" alt-text="Diagram of Data landing zone ingest and processing resource group.":::
+### Data ingestion
 
 This resource group is optional and doesn't prevent you from deploying your landing zone. It's applicable if you have, or are developing, a data-agnostic ingestion engine that automatically ingests data based on registered metadata, including connection strings, paths for data transfer, and ingestion schedules.
 
@@ -194,7 +184,7 @@ Your data application resource group includes all the services required to make 
 
 For more information on how to onboard data products, see [Cloud-scale analytics data applications in Azure](./data-landing-zone-data-products.md).
 
-## Visualization
+## Reporting and Visualization
 
 You can use visualization and reporting tools within Fabric Workspaces, which have many similarities to Power BI Workspaces, without having to deploy unique resources within your data landing zone. You can include a resource group to deploy Fabric capacity, virtual machines for data gateways, or other necessary data services to deliver your data application to the end user.
 

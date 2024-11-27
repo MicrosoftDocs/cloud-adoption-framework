@@ -3,7 +3,7 @@ title: Authentication for cloud-scale analytics in Azure
 description: Learn about authentication techniques for cloud-scale analytics in Azure, including user, application, and service-to-service authentication.
 author: mboswell
 ms.author: mboswell
-ms.date: 10/10/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---

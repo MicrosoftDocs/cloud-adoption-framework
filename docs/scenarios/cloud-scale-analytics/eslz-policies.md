@@ -3,7 +3,7 @@ title: Policies in cloud-scale analytics
 description: Learn about Azure policies in cloud-scale analytics. Azure policies help your organization govern resources as needed.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 12/15/2021
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -42,9 +42,6 @@ The responsible IT teams should use this platform feature to address their secur
 
 Cloud-scale analytics contains custom policies related to **resource and cost management, authentication, encryption, network isolation, logging, resilience, and more**.
 
-> [!NOTE]
-> The policies provided are not applied by default during deployment. They should be viewed as guidance only, and can be applied depending on business requirements. Policies should always be applied to the highest level possible. In most cases, this is a [management group](/azure/governance/management-groups/overview). All of the policies are available in our GitHub repository.
-
 - [All services](#all-services)
 - [Storage](#storage)
 - [Key Vault](#key-vault)
@@ -76,7 +73,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Power BI](#power-bi)
 
 > [!NOTE]
-> The policies provided below are not applied by default during deployment. They should be viewed as guidance-only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview). All the policies are available in our GitHub repository.
+> The policies should be viewed as guidance-only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview).
 
 ## All services
 

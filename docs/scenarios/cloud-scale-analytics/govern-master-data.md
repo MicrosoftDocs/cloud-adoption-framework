@@ -3,7 +3,7 @@ title: Manage master data
 description: Learn about managing master data in Azure, including how to create, store, and synchronize between systems, and governance.
 author: mboswell
 ms.author: mboswell
-ms.date: 09/26/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---

@@ -3,7 +3,7 @@ title: Identity and access management for cloud-scale analytics
 description: Learn how this scenario can improve identity and access management for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -30,9 +30,9 @@ To be able to create resources and role assignments between resources within the
 
 These two first role assignments will enable self-service deployment of data services within these environments. To address the cost management concern, organizations should add a cost center tag to the resource groups to enable cross-charging and distributed cost ownership. This raises awareness within the teams and enforces them to make the right decisions with respect to required SKUs and service tiers.
 
-To also enable self-service use of other shared resources within the data landing zone, few extra role assignments are required. If access to a Databricks environment is required, organizations should use the [SCIM Synch from Microsoft Entra ID](/azure/databricks/administration-guide/users-groups/scim/aad) to provide access. This is important, as this mechanism automatically synchs users and groups from Microsoft Entra ID to the Databricks data plane and also automatically removes access rights when an individual leaves the organization or business. This couldn't be the case, if separate user accounts are used in Azure Databricks. Data application teams should be added to the Databricks workspace in the `shared-product-rg` and in the `shared-integration-rg`. Within Azure Databricks, the data application teams should be given `Can Restart` access rights to a predefined cluster to be able to run workloads within the workspace.
+To also enable self-service use of other shared resources within the data landing zone, few extra role assignments are required. If access to a Databricks environment is required, organizations should use the [SCIM Synch from Microsoft Entra ID](/azure/databricks/administration-guide/users-groups/scim/aad) to provide access. This is important, as this mechanism automatically synchs users and groups from Microsoft Entra ID to the Databricks data plane and also automatically removes access rights when an individual leaves the organization or business. Within Azure Databricks, the data application teams should be given `Can Restart` access rights to a predefined cluster to be able to run workloads within the workspace.
 
-Individual teams will require access to the central Purview account to discover data assets within the respective data landing zones. Therefore, the teams will have to be added as `Data Reader` to the Purview top-level collection. In addition, the teams will in most cases require the option to edit cataloged data assets that they're owning in order to provide extra details such as contact details of data owners and experts as well as more granular details about what columns within a dataset describe and what information they're including.
+Individual teams will require access to the Microsoft Purview account to discover data assets within the respective data landing zones. In addition, the teams will in most cases require the option to edit cataloged data assets that they're owning in order to provide extra details such as contact details of data owners and experts as well as more granular details about what columns within a dataset describe and what information they're including.
 
 ### Summary of role based access control requirements
 
@@ -139,7 +139,7 @@ The following role assignments are required for deploying a data product within 
 
 ## Access to other resources
 
-Outside of Azure, Data Product and Data Integration teams will also require access to a repository to store code artifacts, collaborate effectively and roll out updates and changes consistently via CI/CD to higher environments. In addition, a project board should be provided to allow for agile development, sprint planning, tracking of tasks and as well as user feedback and feature requests.
+Outside of Azure, data application teams will also require access to a repository to store code artifacts, collaborate effectively and roll out updates and changes consistently via CI/CD to higher environments. In addition, a project board should be provided to allow for agile development, sprint planning, tracking of tasks and as well as user feedback and feature requests.
 
 Lastly, the CI/CD automation will require setting up a connection to Azure, which is done in most services via service principles. Hence, teams will require access to a service principle to achieve automation within their project.
 
@@ -147,19 +147,7 @@ Lastly, the CI/CD automation will require setting up a connection to Azure, whic
 
 Managing access to data should be done using Microsoft Entra groups. Add user principle names or service principal names to the Microsoft Entra groups. Add the groups to the services and grant permissions to the group. This approach allows for fine-grained access control.
 
-For data products in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Microsoft Entra passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse SQL Serverless, Apache Spark for Azure Synapse and Azure Databricks.
-
-Other polyglot storage is likely to be used in cloud-scale analytics. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data application teams to store data products.
-
-- [Use Microsoft Entra ID for authentication with Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
-- [Use Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview) with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics
-- [Use Microsoft Entra ID for authenticating with Azure Database for MySQL](/azure/mysql/concepts-azure-ad-authentication)
-
-We recommend that you use Microsoft Entra groups to secure database objects instead of individual Microsoft Entra user accounts. These Microsoft Entra groups are used to authenticate users and help protect database objects. Similar to the data lake pattern, you could use your domain or data products onboarding to create these groups within your Microsoft Entra service.
-
-This approach also gives a single management location and allows reviewing access rights inside the Azure Graph.
-
-For more information on how to drive security for data management landing zones and data landing zones managing your data estate, see [Provision security for cloud-scale analytics in Azure](./security-provisioning.md).
+For more information on how to drive security for data management landing zones and data landing zones managing your data estate, see [Authentication for cloud-scale analytics in Azure](./secure-authentication.md).
 
 ## Next steps
 

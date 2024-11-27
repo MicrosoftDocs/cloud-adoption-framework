@@ -3,7 +3,7 @@ title: Network topology and connectivity for cloud-scale analytics landing zones
 description: Learn about the network topology and connectivity for cloud-scale analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 03/04/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -29,7 +29,7 @@ You can connect virtual networks to each other with virtual network peering. The
 
 The data management landing zone connects to the Azure networking management subscription using virtual network peering. The virtual network peering then connects to on-premises resources using ExpressRoute circuits and third-party clouds.
 
-Data management landing zone services that support Azure Private Link are injected into the data management landing zone virtual network. For example, Azure Purview supports Private Link.
+Data management landing zone services that support Azure Private Link are injected into the data management landing zone virtual network.
 
 ## Data management landing zone to data landing zone
 

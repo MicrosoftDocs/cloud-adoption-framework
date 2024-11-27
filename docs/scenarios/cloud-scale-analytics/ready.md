@@ -3,7 +3,7 @@ title: Review your environment for Azure landing zones for cloud-scale analytics
 description: Learn about how cloud-scale analytics affects your Azure landing zone design.
 author: mboswell
 ms.author: mboswell
-ms.date: 12/15/2021
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -15,10 +15,9 @@ In response to the need of frictionless governance and platform to actionable in
 The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, cloud-scale analytics includes the following capabilities:
 
 - Storage
-- Data lineage
-- Data classification
+- Data governance
 - Data ingestion
-- Data Quality
+- Data quality
 - Access Provisioning
 - Networking
 - Encryption
@@ -45,26 +44,11 @@ To learn more, see:
 
 At the heart of cloud-scale analytics, is its management capability. This capability is enabled through the data management landing zone.
 
-:::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview." lightbox="./images/data-management-overview-1.png":::
-
-The **Data management landing zone** is a subscription that governs the platform and supports the following capabilities:
-
-- [Data catalog](architectures/data-management-landing-zone.md#data-catalog)
-- [Data quality](architectures/data-management-landing-zone.md#data-quality-management)
-- [Data modeling repository](architectures/data-management-landing-zone.md#data-modeling-repository)
-- [Master data management](architectures/data-management-landing-zone.md#master-data-management)
-- [API catalog](architectures/data-management-landing-zone.md#api-catalog)
-- [Data sharing and contracts](../cloud-scale-analytics/govern-data-quality.md)
-- [Data privacy for cloud-scale analytics in Azure](secure-data-privacy.md)
-- [Provision security for cloud-scale analytics in Azure](security-provisioning.md)
-
-For more information, see [Overview of the cloud-scale analytics data management landing zone](architectures/data-management-landing-zone.md).
+For more information, see [Data management landing zone](architectures/data-management-landing-zone.md).
 
 ## Data landing zone
 
 **Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within cloud-scale analytics represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
-
-:::image type="content" source="./images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone" lightbox="./images/data-landing-zone-overview.png":::
 
 A few important points to keep in mind about data landing zones:
 

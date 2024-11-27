@@ -3,12 +3,12 @@ title: Data management landing zone overview
 description: Gain an overview of data management landing zone in Azure
 author: mboswell
 ms.author: mboswell
-ms.date: 11/11/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Data management landing zone overview
+# Data management landing zone
 
 The data management landing zone is a management function and is central to cloud-scale analytics. It's responsible for the governance of your analytics platform.
 
@@ -26,7 +26,7 @@ This architecture is a starting point and you can modify it to fit your specific
 
 ## Data governance
 
-Cloud Scale Analytics for the regulated industry suggests using Microsoft Purview. Alternatively, Microsoft Partner solutions can be deployed to manage specific data governance functions. Key functions to consider in your architecture include a global data catalog, master data management, data sharing and contracts, API catalog, data quality management, and a data modeling repository.
+Cloud Scale Analytics suggests using Microsoft Purview. Alternatively, Microsoft Partner solutions can be deployed to manage specific data governance functions. Key functions to consider in your architecture include a global data catalog, master data management, data sharing and contracts, API catalog, data quality management, and a data modeling repository.
 
 Microsoft partner data governance products that need deployment in a subscription should be deployed to the Data Governance resource group within the data management landing zone.
 

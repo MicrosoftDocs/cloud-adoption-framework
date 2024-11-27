@@ -3,7 +3,7 @@ title: Authorization for cloud-scale analytics in Azure
 description: Learn about data management and role-based access control for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 10/10/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---

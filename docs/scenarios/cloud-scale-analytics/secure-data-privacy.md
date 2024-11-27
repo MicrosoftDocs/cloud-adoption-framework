@@ -3,7 +3,7 @@ title: Data privacy for cloud-scale analytics in Azure
 description: Learn about data privacy for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 10/08/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -27,7 +27,7 @@ Before ingesting data, you must categorize the data as either **confidential or 
 
 ## Create an Azure policy set
 
-After you map your data classification, you should align the classification with local regulated industry policy requirements and your internal company policies. This step helps you to create an Azure policy set that governs what infrastructure can be deployed, the location where it can be deployed, and specifies networking and encryption standards.
+After you map your data classification, you should align the classification with your industry policy requirements and your internal company policies. This step helps you to create an Azure policy set that governs what infrastructure can be deployed, the location where it can be deployed, and specifies networking and encryption standards.
 
 For regulated industries, Microsoft developed many [Regulatory compliance policy initiatives](/industry/sovereignty/policy-portfolio-baseline) which act as a baseline for compliance frameworks.
 
