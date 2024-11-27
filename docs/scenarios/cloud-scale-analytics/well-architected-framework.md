@@ -3,7 +3,7 @@ title: Azure Well-Architected Framework for data workloads
 description: Use Azure Well-Architected Framework architecture principles to design and optimize workloads running in your data estate.
 author: mboswell
 ms.author: mboswell
-ms.date: 10/10/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---

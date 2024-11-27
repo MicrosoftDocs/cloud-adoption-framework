@@ -22,7 +22,7 @@ A typical Azure subscription associated with a data landing zone has the followi
 | Layer | Required |Resource groups |
 |---|---|---|
 |[Platform services layer](#platform-services) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
-|[Core services](#core-services)     | Yes | <ul> <li> [Management](#management)  </li> <li> [Storage](#storage)  </li>  <li> [External Data](#external-data) </li> <li> [Shared Integration Runtimes](#integration-runtimes) </li> <li> [Shared Applications](#shared-applications)  </li> </ul> |
+|[Core services](#core-services)     | Yes | <ul> <li> [Management](#management)  </li> <li> [Storage](#storage)  </li>  <li> [External Data](#external-storage) </li> <li> [Shared integration runtimes](#shared-integration-runtimes) </li> <li> [Shared Applications](#shared-applications)  </li> </ul> |
 |[Data application](#data-application)     | Optional | <ul> <li> [Data application](#data-application-resource-group) (1 or more) </li> </ul> |
 |[Reporting and visualization](#reporting-and-visualization)           | Optional | <ul> <li> [Reporting and visualization](#reporting-and-visualization) </li> </ul> |
 
@@ -50,7 +50,7 @@ The platform services layer includes services required to enable connectivity an
 
 ### Networking
 
-The network resource group contains connectivity services, including Azure [Virtual Networks](azure/virtual-network/virtual-networks-overview), [Network Security Groups](/azure/virtual-network/network-security-groups-overview) (NSG), and [route tables](/azure/virtual-network/virtual-networks-udr-overview). All of these services are deployed into a single resource group.
+The network resource group contains connectivity services, including [Azure Virtual Networks](/azure/virtual-network/virtual-networks-overview), [Network Security Groups](/azure/virtual-network/network-security-groups-overview) (NSG), and [route tables](/azure/virtual-network/virtual-networks-udr-overview). All of these services are deployed into a single resource group.
 
 The virtual network of your data landing zone is [automatically peered with your data management landing zone's virtual network](../eslz-network-topology-and-connectivity.md) and your [connectivity subscription's virtual network](../../../ready/landing-zone/index.md).
 
@@ -124,8 +124,6 @@ For more information, see [Azure Pipeline agents](/azure/devops/pipelines/agents
 ### External Storage
 
 Partner data publishers need to land data in your platform so your data application teams can pull it into their data lakes. You can also have internal or external data sources which can't support the connectivity or authentication requirements that are enforced across the rest of the data landing zones. Using a separate storage account is the recommended approach to receive data, then a shared integration runtime or similar ingestion process to bring it into your processing pipeline. As seen in the following diagram, your upload ingest storage resource group lets you provision blob stores for these use-cases.
-
-![Diagram of upload ingest storage service.](../images/data-landing-zone-ingest-storage.png)
 
 The data application teams request the storage blobs. These requests get approved by the data landing zone operations team. Data should be deleted from its source storage blob after being ingested into the raw data storage.
 
