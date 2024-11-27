@@ -64,7 +64,7 @@ Consider the following recommendations and use cases when you design an architec
 
 ### Design recommendations
 
-- Both reservoir and seismic workflows typically have similar requirements for compute and job scheduling.
+- Understand that reservoir and seismic workflows typically have similar requirements for compute and job scheduling.
 
 - Consider your network needs. Azure HPC provides HBv2 and HBv3-series VM sizes for memory-intensive seismic imaging and reservoir simulations.
 
@@ -72,7 +72,7 @@ Consider the following recommendations and use cases when you design an architec
 
 - Use NV-series VMs for 3D reservoir modeling and visualizing seismic data.
 
-- We recommend the NCv4-series VM for GPU-accelerated seismic full-waveform inversion (FWI) analysis. 
+- Use the NCv4-series VM for GPU-accelerated seismic full-waveform inversion (FWI) analysis. 
 
    For more data-intensive resin transfer molding (RTM) processing, the NDv4 VM size is the best option because it provides Non-Volatile Memory Express (NVMe) drives that have a cumulative capacity of 7 TB. 
    
@@ -84,19 +84,19 @@ Consider the following recommendations and use cases when you design an architec
 
 ### Use cases for the oil and gas seismic and reservoir simulation reference architecture
 
-Reservoir and seismic workflows usually have similar requirements for compute and job scheduling. However, seismic workloads challenge the infrastructure's storage capabilities. They sometimes need multiple PBs of storage and throughput requirements that might be measured in the hundreds of GBs. For example, a single seismic processing project might start with 500 TBs of raw data, which requires potentially several PBs of long-term storage. 
+Reservoir and seismic workflows usually have similar requirements for compute and job scheduling. However, seismic workloads challenge the infrastructure's storage capabilities. They sometimes need multiple PBs of storage and throughput requirements that might be measured in the hundreds of gigabytes. For example, a single seismic processing project might start with 500 TB of raw data, which requires potentially several PBs of long-term storage. 
 
 See the following reference architectures that can help you successfully meet your goals for running your application in Azure.
 
 #### Reference architecture for seismic processing
 
-Seismic processing and imaging are fundamental for the oil and gas industry because they create a model of the subsurface based on the exploration data. The process of qualifying and quantifying what might be in the subsurface is typically conducted by geoscientists. Geoscientists usually use datacenter and cloud-bound software. Occasionally they access the software remotely or in the cloud by using virtual desktop technology.
+Seismic processing and imaging are fundamental for the oil and gas industry because they create a model of the subsurface based on the exploration data. Geoscientists typically conduct the process of qualifying and quantifying what might be in the subsurface. Geoscientists usually use datacenter and cloud-bound software. Occasionally they access the software remotely or in the cloud by using virtual desktop technology.
 
 The quality of the subsurface model and the quality and resolution of the data is crucial to make the right business decisions about bidding on leases or deciding where to drill. Seismic image interpretation images can improve the position of wells and reduce the risk of drilling a *dry hole*. For oil and gas companies, having a better understanding of subsurface structures translates directly to reducing exploration risk. Basically, the higher the accuracy of the company's view of the geological area, the better its chance of striking oil when it drills.
 
 This job is data and compute-intensive. The company needs to process terabytes of data. This data processing requires massive and fast computation power, which includes fast networking. Because of the data and computing-intensive nature of seismic imaging, companies use parallel computing to process data and reduce the time to compilation and completion. 
 
-Companies relentlessly process large volumes of seismic acquisition data to locate and accurately quantify and qualify the hydrocarbon content in reservoirs that they discover in the subsurface before they begin recovery operations. Because acquisition data is unstructured and can easily reach petabyte levels for one potential oil and gas field, seismic processing activity can only be completed within a meaningful timeframe by using HPC and appropriate data management strategies.
+Companies relentlessly process large volumes of seismic acquisition data to locate and accurately quantify and qualify the hydrocarbon content in reservoirs that they discover in the subsurface before they begin recovery operations. Acquisition data is unstructured and can easily reach petabyte levels for one potential oil and gas field. Because of these factors, you can only complete seismic processing activity within a reasonable timeframe by using HPC and other appropriate data management strategies.
 
 :::image type="content" source="../media/network-interconnect.png" alt-text="Diagram of the network interconnect compute and storage for seismic interpretation and modeling." lightbox="../media/network-interconnect.png" border="false":::
 
@@ -115,21 +115,21 @@ A reservoir modeling workload is also an area of reservoir engineering. The work
 For more information about reference architectures or cookbooks for relevant HPC independent software vendor (ISV) applications that support HPC for energy use cases, see:
 
 - [Azure HPC certification.github.io](https://github.com/AzureHPC-Certification/AzureHPC-Certification.github.io/).
-- [Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). Note that this standalone reference architecture might not be compliant with the Azure landing zone paradigm.
+- [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). This standalone reference architecture might not be compliant with the Azure landing zone paradigm.
 
 ## Finance reference architecture
 
-The following architecture provides an example of using VMs in HPC for finance workloads.
+The following architecture is an example of how to use VMs in HPC for finance workloads.
 
-:::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="../media/hpc-finance-architecture-example.svg" lightbox="../media/hpc-finance-architecture-example.svg":::
+:::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="../media/hpc-finance-architecture-example.svg" lightbox="../media/hpc-finance-architecture-example.svg" border="false":::
 
 This workload uses HPC Pack HB-series compute nodes.
 
-The [HB-series VMs](/azure/virtual-machines/hb-series) are optimized for HPC applications, such as financial analysis, weather simulation, and silicon register-transfer level (RTL) modeling. HB VMs feature up to 120 AMD EPYC™ 7003-series CPU cores, 448 GB of RAM, and no hyperthreading. HB-series VMs also provide 350 GB/sec of memory bandwidth, up to 32 MB of L3 cache per core, up to 7 GB/s of block device solid-state drive (SSD) performance, and clock frequencies of up to 3.675 GHz.
+The [HB-series VMs](/azure/virtual-machines/hb-series) are optimized for HPC applications, such as financial analysis, weather simulation, and silicon register-transfer level (RTL) modeling. HB VMs feature up to 120 AMD EPYC™ 7003-series CPU cores, 448 GB of RAM, and no hyperthreading. HB-series VMs also provide 350 GB per second of memory bandwidth, up to 32 MB of L3 cache per core, up to 7 GB per second of block device solid-state drive (SSD) performance, and clock frequencies of up to 3.675 GHz.
 
-For the HPC head node, the workload uses a different sized VM. Specifically, it uses a D16s_v4 VM, a type of general purpose SKU.
+For the HPC head node, the workload uses a different sized VM. Specifically, it uses a D16s_v4 VM, a type of general purpose product.
 
-For reference architectures and cookbooks for deploying HPC independent software vendor (ISV) applications that support use cases in the finance sector, see the following resources:
+For reference architectures and cookbooks about how to deploy HPC ISV applications that support use cases in the finance sector, see the following resources:
 
 - [Virtual machine series](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
 - [Azure HPC certification.github.io](https://github.com/AzureHPC-Certification/AzureHPC-Certification.github.io/).
@@ -137,18 +137,35 @@ For reference architectures and cookbooks for deploying HPC independent software
 
 ## Manufacturing reference architecture
 
-The following architecture provides an example of using VMs in HPC in manufacturing.
+The following architecture is an example of how to use VMs in HPC in manufacturing.
 
-:::image type="content" alt-text="Architecture diagram that shows a manufacturing HPC workload that uses Azure CycleCloud and HC-series VMs." source="../media/hpc-manufacturing-architecture-example.svg" lightbox="../media/hpc-manufacturing-architecture-example.svg":::
+:::image type="content" alt-text="Architecture diagram that shows a manufacturing HPC workload that uses Azure CycleCloud and HC-series VMs." source="../media/hpc-manufacturing-architecture-example.svg" lightbox="../media/hpc-manufacturing-architecture-example.svg" border="false":::
 
 This architecture uses Azure Files shares and Azure Storage accounts that are connected to an Azure Private Link subnet.
 
-The architecture uses Azure CycleCloud its own subnet. HC-series VMs are used in an arrangement of cluster nodes.
+The architecture uses Azure CycleCloud in its own subnet. HC-series VMs are used in an arrangement of cluster nodes.
 
-The HC-series VMs are optimized for HPC applications that are driven by intensive computation. Examples include implicit finite element analysis, reservoir simulation, and computational chemistry applications. HC VMs feature 44 Intel Xeon Platinum 8168 processor cores, 8 GB of RAM per CPU core, no hyperthreading, and up to four managed disks. The Intel Xeon Platinum platform supports Intel's rich ecosystem of software tools and features and an all-cores clock speed of 3.4 GHz for most workloads.
+The HC-series VMs are optimized for HPC applications that intensive computation drives. Examples include implicit, finite element analysis, reservoir simulation, and computational chemistry applications. HC VMs feature 44 Intel Xeon Platinum 8168 processor cores, 8 GB of RAM per CPU core, no hyperthreading, and up to four managed disks. The Intel Xeon Platinum platform supports Intel's rich ecosystem of software tools and features and an all-cores clock speed of 3.4 GHz for most workloads.
 
-For reference architectures and cookbooks for deploying HPC independent software vendor (ISV) applications that support manufacturing use cases, see the following resources:
+For reference architectures and cookbooks about how to deploy HPC ISV applications that support manufacturing use cases, see the following resources:
 
 - [Virtual machine series](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
 - [Azure HPC certification.github.io](https://github.com/AzureHPC-Certification/AzureHPC-Certification.github.io/).
 - [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). This standalone reference architecture might not be compliant with the Azure landing zone paradigm.
+
+## Next steps
+
+The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting manufacturing HPC environments for the cloud.
+
+- [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Identity and access management](./identity-access-management.md)
+- [Management](./management.md)
+- [Network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps](./platform-automation-devops.md)
+- [Resource organization](./resource-organization.md)
+- [Governance](./security-governance-compliance.md)
+- [Security](./security.md)
+- [Storage](./storage.md)
+- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Spot virtual machines](/azure/architecture/guide/spot/spot-eviction)
+
