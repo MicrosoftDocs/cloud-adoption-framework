@@ -139,7 +139,7 @@ For reference architectures and cookbooks about how to deploy HPC ISV applicatio
 
 The following architecture is an example of how to use VMs in HPC in manufacturing.
 
-:::image type="content" alt-text="Architecture diagram that shows a manufacturing HPC workload that uses Azure CycleCloud and HC-series VMs." source="../media/hpc-manufacturing-architecture-example.svg" lightbox="../media/hpc-manufacturing-architecture-example.svg" border="false":::
+:::image type="content" alt-text="Architecture diagram that shows a manufacturing HPC workload that uses Azure CycleCloud and HC-series VMs." source="./media/hpc-manufacturing-architecture-example.svg" lightbox="./media/hpc-manufacturing-architecture-example.svg" border="false":::
 
 This architecture uses Azure Files shares and Azure Storage accounts that are connected to an Azure Private Link subnet.
 
@@ -157,14 +157,14 @@ For reference architectures and cookbooks about how to deploy HPC ISV applicatio
 
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting manufacturing HPC environments for the cloud.
 
-- [Azure billing offers and Active Directory tenants](azure-billing-active-directory-tenant.md)
+- [Azure billing offers and Active Directory tenants](/azure-billing-active-directory-tenant.md)
 - [Identity and access management](./identity-access-management.md)
-- [Management](management.md)
+- [Management](/management.md)
 - [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](platform-automation-devops.md)
+- [Platform automation and DevOps](/platform-automation-devops.md)
 - [Resource organization](./resource-organization.md)
-- [Governance](security-governance-compliance.md)
-- [Security](security.md)
+- [Governance](/security-governance-compliance.md)
+- [Security](/security.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](./azure-hpc-landing-zone-accelerator.md)
 - [Spot virtual machines](/azure/architecture/guide/spot/spot-eviction)
