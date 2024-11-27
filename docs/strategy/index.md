@@ -13,7 +13,7 @@ A cloud strategy is a comprehensive plan that outlines an organization's approac
 
 Establishing a cloud strategy involves understanding the specific needs and objectives of the business and ensuring alignment with overall business goals.
 
-The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework (CAF) Strategy methodology. Organizations typically mature in iterations – consider the CAF Strategy guide an iterative supplement to your cloud strategy, and come back to re-assess and iterate regularly.
+The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework (CAF) Strategy methodology. Organizations typically mature in iterations – consider the CAF Strategy guide an iterative supplement to your cloud strategy and come back to re-assess and iterate regularly.
 
 :::image type="content" source="media/placeholder-1.png" alt-text="Diagram showing flow.":::
 

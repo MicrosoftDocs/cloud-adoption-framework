@@ -51,7 +51,7 @@ Your cloud strategy team should continuously seek input from areas across the bu
 - *Executive leadership*: Meeting market growth requirements and environmental sustainability metrics. 
 - *Sustainability leads*: Driving sustainability as a strategy throughout the business, aligned with the company’s commitments.
 
-## Recommendations
+### Recommendations
 
 - **Start small and expand**: Define the core members of the initial team, which typically should include IT, finance, and security. Seek input from other functions as necessary for the first iterations of your strategy.
 - **Define the role of your strategy team**: Ensure you map your business requirements and objectives to the operational responsibility of the cloud adoption strategy team. Having a clear accountability structure in place will help when you communicate organizational changes or invest in new initiatives to enhance your cloud maturity.
@@ -59,3 +59,6 @@ Your cloud strategy team should continuously seek input from areas across the bu
 - **Iterate on your strategy**: Create an initial strategy draft with your core team, in consultation with business leaders and stakeholders. Use the first iteration to explore business goals that can be achieved through cloud adoption. Once you have executive support to proceed, expand the scope and detail of your strategy. Ensure that it is updated as business objectives and cloud opportunities evolve.
 
 ## Next steps
+
+> [!div class="nextstepaction"]
+> [Prepare your organization for cloud adoption](./prepare/index.md)

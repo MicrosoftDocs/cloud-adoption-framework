@@ -2259,6 +2259,16 @@
          "source_path": "docs/strategy/cloud-adoption-strategy-evaluator.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/assessment",
          "redirect_document_id": false
-      }  
+      },
+      {
+         "source_path": "docs/strategy/responsible-ai.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcames/sustainability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/sustainability",
+         "redirect_document_id": false
+      }
    ]
 }
