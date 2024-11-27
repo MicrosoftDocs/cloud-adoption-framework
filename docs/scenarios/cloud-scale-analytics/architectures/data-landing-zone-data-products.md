@@ -32,7 +32,7 @@ A data landing zone can be served multiple data products created by ingesting da
 > [!IMPORTANT]
 > Data product B consumes data from data products A and C. Before this can happen, data product B must register its consumption of data products via data sharing agreements. This data sharing agreement should update the lineage from data product A to data product B and from data product C to data product B.
 
-The resource group for a data product includes all services required to create and maintain it. We can call this resource group a **data application**. Examples of services that might be part of a data application include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Azure Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB. For more information, see [data application samples](#sample-data-applications).
+The resource group for a data product includes all services required to create and maintain it. We can call this resource group a **data application**. Examples of services that might be part of a data application include Azure Functions, Azure App Service, Logic Apps, Azure Analysis Services, Azure Cognitive Services, Azure Machine Learning, Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB.
 
 Data products have data from *READ* data sources that have had some data transformations applied. Examples might be a newly curated dataset or a BI report.
 
