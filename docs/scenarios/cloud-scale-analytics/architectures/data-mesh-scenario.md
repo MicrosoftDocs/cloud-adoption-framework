@@ -3,7 +3,7 @@ title: A financial institution scenario for data mesh
 description: Learn about a data mesh scenario for cloud-scale analytics in Azure that uses landing zones, data integrations, and data products.
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 02/28/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management
 adobe-target: true
@@ -80,9 +80,9 @@ The following diagram illustrates what a data product might look like:
 
 A pragmatic approach to building data products is to either align with the source, where the data originates, or with the consuming use case. In both cases, you need to provide an abstract view of the underlying (complex) application data model. You must try to hide the technical details and optimize for intensive data consumption. An Azure Synapse view or Parquet file, which logically groups data together, is an example of how a data product can be shared across various data domains.
 
-Next, you need to work on data discoverability, provenance, usage, and lineage. A proven approach is to use a data governance service, like Azure Purview, to register all data. Data integration in cloud-scale analytics perfectly connects the dots because it allows building these data products as it simultaneously performs metadata registration.
+Next, you need to work on data discoverability, provenance, usage, and lineage. A proven approach is to use a data governance service, like Microsoft Purview, to register all data. Data integration in cloud-scale analytics perfectly connects the dots because it allows building these data products as it simultaneously performs metadata registration.
 
-By aligning data domains and Azure Purview collections, you automatically capture all data origin, lineage, data quality details, and consumption information from the individual domains. With this approach, you can connect multiple data domains and products to a centralized governance solution, which stores all the metadata from each environment. The benefit is that it centrally integrates all the metadata and makes it easily accessible to various consumers. You can extend this architecture to register new data products.
+By aligning data domains and Microsoft Purview collections, you automatically capture all data origin, lineage, data quality details, and consumption information from the individual domains. With this approach, you can connect multiple data domains and products to a centralized governance solution, which stores all the metadata from each environment. The benefit is that it centrally integrates all the metadata and makes it easily accessible to various consumers. You can extend this architecture to register new data products.
 
 The following diagram illustrates a cross-domain data mesh architecture that uses cloud-scale analytics.
 

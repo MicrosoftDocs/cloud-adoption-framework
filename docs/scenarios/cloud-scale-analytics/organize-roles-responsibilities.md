@@ -3,7 +3,7 @@ title: Understand the roles and responsibilities for cloud-scale analytics in Az
 description: Learn about the roles and responsibilities for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 05/07/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---

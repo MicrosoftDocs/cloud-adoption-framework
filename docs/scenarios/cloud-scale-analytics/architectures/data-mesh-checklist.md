@@ -3,12 +3,12 @@ title: Getting started checklist
 description: Learn the stages companies typically go through to deploy a data mesh.
 author: mboswell
 ms.author: mboswell
-ms.date: 04/03/2021
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Getting started checklist
+# Getting started with data mesh checklist
 
 During your data journey with cloud-scale analytics, you'll find there are multiple stages in your adoption lifecycle. This section provides a quick getting started checklist to help you adopt your scenario in stages. These stages are:
 

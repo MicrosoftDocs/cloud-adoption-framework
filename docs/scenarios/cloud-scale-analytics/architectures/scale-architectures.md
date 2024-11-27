@@ -102,7 +102,7 @@ Cloud-scale analytics places a strong emphasis on central cataloging and classif
 
 Cloud-scale analytics architecture and the concept of data landing zones make it possible for your organization to easily increase the size of your data platform over time. You can add more data landing zones in a phased approach. Your customers don't need to have multiple landing zones at first. When you adopt this architecture, prioritize a few data landing zones and the data products that they contain. Proper prioritization helps ensure the success of your cloud-scale analytics deployment.
 
-### Scaling with data products or data integrations
+### Scaling with data applications
 
 Within each landing zone, your organization can scale by using data applications. Data applications are units or components of your data architecture that encapsulate functionality that provides read-optimized data products for consumption by other data applications. In Azure, data applications are environments in the form of resource groups that make it possible for cross-functional teams to implement data solutions and workloads. An associated team takes care of the end-to-end lifecycle of the data solution, which includes ingestion, cleansing, aggregation, and serving tasks.
 

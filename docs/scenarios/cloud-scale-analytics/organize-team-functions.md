@@ -3,7 +3,7 @@ title: Understand teams and functions for cloud-scale analytics in Azure
 description: Learn about teams and functions for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 12/15/2021
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---

@@ -3,7 +3,7 @@ title: Cloud-scale analytics data applications (source-aligned)
 description: Learn about cloud-scale analytics data applications (source-aligned) in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 03/18/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -21,8 +21,6 @@ This section explains the infrastructure deployed for each data applications (so
 > [!TIP]
 > For data mesh, you can chose to deploy one of these per source or one per domain. The principles of data standardization, data quality, and data lineage must still be followed. Data platform ops teams can develop snippets of standard code and call upon them to achieve this.
 
-:::image type="content" source="../media/data-application-source-aligned.png" alt-text="Data application (source-aligned) resource group":::
-
 For each data application (source-aligned) resource group in your data landing zone, you should create:
 
 - An Azure Key Vault
@@ -30,13 +28,6 @@ For each data application (source-aligned) resource group in your data landing z
 - A service principal used by the data application (source-aligned) for deploying ingest jobs to the Azure Databricks (only if using Azure Databricks)
 
 You can also create instances of other services, such as Azure Event Hubs, Azure IoT Hub, Azure Stream Analytics, and Azure Machine Learning.
-
-> [!NOTE]
->You need to use a spark engine like Azure Synapse Spark or Azure Databricks to enforce the delta lake standard.
->
-> If you decide to use Azure Databricks, we recommend deploying Azure Data Factory rather than Azure Synapse Analytics workspace to reduce the surface area to only required features.
->
-> However, if you need an all-encompassing development area with pipelines and spark, use Azure Synapse Analytics. Apply a policy to only allow the use of spark and pipelines so you avoid creating silos in an Azure Synapse SQL pool.
 
 ## Azure Key Vault
 
@@ -51,7 +42,7 @@ All keys relating to your data application (source-aligned) should be contained 
 
 ## Azure Data Factory
 
-Deploy an Azure Data Factory to allow pipelines written by your data application team to take data from raw to enriched using developed pipelines. Use mapping data flows for transformations, and break out to use Azure Databricks (ingest) workspace or Azure Synapse Spark for complex transformations.
+Deploy an Azure Data Factory to allow pipelines written by your data application team to take data from raw to enriched using developed pipelines. Use mapping data flows for transformations, and break out to use either Azure Databricks, Azure Synapse Spark or Microsoft Fabric for complex transformations.
 
 You should connect Azure Data Factory to the DevOps instance of your data application (source-aligned) repo. This connection allows CI/CD deployments.
 

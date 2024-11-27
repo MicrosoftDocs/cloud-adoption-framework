@@ -3,7 +3,7 @@ title: Data contracts
 description: Data contracts in a data mesh
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 05/19/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -22,7 +22,7 @@ Data product distribution and usage has two dimensions: technical concerns and b
 
 The two dimensions involve different roles. Generally, you should rely on application owners or data engineers for technical concerns, and rely on product owners or business representatives for business concerns.
 
-## Data contracts
+## Data contracts principals
 
 Data contracts are similar to service contracts or data delivery contracts.
 
@@ -65,7 +65,7 @@ Data contracts involve large quantities of technical metadata. To document your 
 
 In a distributed architecture, you distribute a data pipeline framework across different domains, and the domains conform to a common way of working. Since the domains process data themselves, control and responsibility stay with them, while the framework and metadata remain under central governance.
 
-When implementing a federated method, start small. Begin with basics, like metadata storage for schema validation, enterprise identifiers, and references to other datasets in your shared metadata repository. Add data [lineage](../govern-lineage.md) support to help you visualize data movement. Bootstrap your processes and use libraries like [Great Expectations](https://greatexpectations.io/) to implement controls for technical data quality validation.
+When implementing a federated method, start small. Begin with basics, like metadata storage for schema validation, enterprise identifiers, and references to other datasets in your shared metadata repository. Add data [lineage](../govern-lineage.md) support to help you visualize data movement. Bootstrap your processes and implement controls for technical data quality validation.
 
 All your controls should be part of your continuous integration procedures. Capture all runtime information, including metrics and logging, and make that information part of your metadata foundation for gaining data pipeline stability insights. This setup ensures that you have a feedback loop between your domains and your central management cockpit.
 
@@ -103,7 +103,7 @@ The following steps outline the process of implementing data contracts for your 
 
 1. Once you have your first processes firmly in place, begin replacing your manual forms with a web-based application, database, and/or message queue. Your central data governance team should still be responsible for oversight during this phase. Data access granularity at this point is typically course-grained, focusing on folders or files. Whenever possible, use REST APIs to automatically provision your data access policies or ACLs.
 
-1. Put data owners or data stewards in charge of a strong workflow for approval management. Your central data governance role should now oversee approvals only from a backseat role, and review all data contracts regularly. At this point, you should have a data catalog like [Azure Purview](/azure/purview/) up and running that shows all your ready-for-consumption data products. Improve your data and security enforcement capability by allowing for fine-grained selections and filtering, and consider using techniques like dynamic data masking to prevent your data from being duplicated.
+1. Put data owners or data stewards in charge of a strong workflow for approval management. Your central data governance role should now oversee approvals only from a backseat role, and review all data contracts regularly. At this point, you should have a data catalog like [Microsoft Purview](/purview/what-is-data-catalog) up and running that shows all your ready-for-consumption data products. Improve your data and security enforcement capability by allowing for fine-grained selections and filtering, and consider using techniques like dynamic data masking to prevent your data from being duplicated.
 
 1. In the final stage of your data contract implementation journey, everything should be self-service and fully automated. Automated machine learning should predict data approvals. Security 
 
