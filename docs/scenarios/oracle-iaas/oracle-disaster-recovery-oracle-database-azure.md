@@ -16,7 +16,7 @@ The first step to building a resilient architecture for your Oracle databases ru
 
 ## Design considerations
 
-- The service is available in two different availability zones within a region, ensuring service reliability and disaster recovery(DR). To verify the deployment location of your Oracle Database@Azure, check your VM Cluster in the Azure portal. For information on service availability, refer to the [Region availability for Oracle Database@Azure](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-database-regions). 
+- The service is available in two different availability zones within a region, ensuring service reliability and disaster recovery(DR). To verify the deployment location of your Oracle Database@Azure, check your VM Cluster in the Azure portal. For information on service availability, refer to the [Region availability for Oracle Database@Azure](https://learn.microsoft.com/azure/oracle/oracle-db/oracle-database-regions). 
 
 - The Oracle Database@Azure solution and its core components are limited to the availability zone in which you create the instance. The service isn't multi-zonal and doesn't span multiple regions. To achieve multi-zonal or multi-regional resiliency, you can deploy new Oracle Database@Azure instances to target availability zones or regions. 
 
@@ -45,13 +45,13 @@ The first step to building a resilient architecture for your Oracle databases ru
     
     OCI Object storage is appropriate for workloads with less stringent recovery time and recovery point objectives, offering a cost-effective general-purpose backup solution. 
     
-    These solutions enable automatic scheduling and management of database backups with a pre-defined retention period.  For details, refer to [manage database backup and recovery documentation](https://docs.oracle.com/en-us/iaas/exadatacloud/doc/ecs-managing-db-backup-and-recovery.html).  
+    These solutions enable automatic scheduling and management of database backups with a pre-defined retention period.  For details, refer to [manage database backup and recovery documentation](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-managing-db-backup-and-recovery.html).  
 
   - **Manual Backup**: Oracle Database@Azure can be configured to stream database backups to Azure Storage services, including Blob, Azure Files (via private endpoints), and Azure NetApp Files (ANF). 
 
     This option requires manual configuration and ongoing maintenance. 
   
-    **Note** that currently using private endpoints with  Oracle Database@Azure requires [deploying a local NVA](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101) into Oracle Database@Azure Vnet. For details refer to the [network Planning](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-database-network-plan). 
+    **Note** that currently using private endpoints with  Oracle Database@Azure requires [deploying a local NVA](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101) into Oracle Database@Azure Vnet. For details refer to the [network Planning](https://learn.microsoft.com/azure/oracle/oracle-db/oracle-database-network-plan). 
 
   - **Third-Party Backup Solutions**: Third-party backup solutions available on the Azure Marketplace can also be utilized for storing database backups. 
 
@@ -73,7 +73,7 @@ It is recommended to configure at least two Oracle Database@Azure instances with
 
   Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach may introduce additional time for scaling operations and their reflection at the database level.  
 
-  ![A diagram of multi-zone BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/cross_az_DG.png)]
+  ![A diagram of multi-zone BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/cross_az_DG.png)
 
 - You can configure Data Guard redo transport mode according to your application services and RPO requirements as such :  
 
@@ -97,7 +97,7 @@ It is recommended to configure at least two Oracle Database@Azure instances with
 - For a regional BCDR strategy, it is recommended to implement a secondary Oracle Database@Azure deployment with a standby database located in a different region where the service is available.  
 This setup provides **protection** against full **regional outages**.
 
-- Configure Data Guard in Maximum Performance mode(ASYNC) for regional disaster recovery based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network latency test results](https://learn.microsoft.com/en-us/azure/networking/azure-network-latency?tabs=Americas%2CWestUS). 
+- Configure Data Guard in Maximum Performance mode(ASYNC) for regional disaster recovery based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network latency test results](https://learn.microsoft.com/azure/networking/azure-network-latency?tabs=Americas%2CWestUS). 
 
   **Note** that automated data guard only allow Maximum Performance mode(ASYNC) configuration for cross region deployments.
 
