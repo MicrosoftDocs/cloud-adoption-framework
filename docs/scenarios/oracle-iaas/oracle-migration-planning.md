@@ -19,12 +19,12 @@ Migrating Oracle workloads involves transitioning both databases and application
 
 - Applications on Azure Virtual Machines: Run Oracle enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure. 
 
-- Oracle Standard Edition or Enterprise Edition Databases on Azure Virtual Machines. Thereby you deploy your Oracle Database on a Virtual Machine. There are several options available from self-managed to managed Databases. 
+- Oracle Standard Edition or Enterprise Edition Databases on Azure Virtual Machines. Thereby you deploy your Oracle Database on a Virtual Machine. There are several options available from self-managed to managed Databases. If you prefer a managed databse solution please review [Tessel](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/tessellinc1655919615020.tessell_database_service?tab=overview).
 
 - Oracle Database@Azure: Oracle Database@Azure is an Oracle database service running on Oracle Cloud Infrastructure (OCI), colocated in Microsoft data centers.
 
 > Note!
-> for supported operating systems for your specific Database version, please visit [supported databases and operating systems](https://docs.oracle.com/en/cloud/paas/db-backup-cloud/csdbb/supported-databases-and-operating-systems.html).
+> for supported operating systems for your specific Database version, please visit [supported databases and operating systems](https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=366138251488223&id=742060.1&_afrWindowMode=0&_adf.ctrl-state=cgm96remu_193).
 
 ## The Oracle migration process
 
@@ -46,8 +46,8 @@ Review the migration resources to define your Oracle to Azure migration process.
 - **Identify data capacity**: Identify the amount of data to migrate and assess the current available network connectivity capacity from on-premises environments to Azure. Use this information to determine if you can copy the data directly from on-premises environments to Azure. You might need a physical data transfer appliance like [Azure Data Box](/azure/databox/data-box-overview) for the initial data load.
 
 - **Determine availability requirements**: Determine the workload availability requirements because they might affect the migration tools that you can use.
-Thereby please define your Recovery Point Objective (RPO) and Recovery Time Objective (RTO) as well as your maximum acceptable downtime. These metrics will help you to define your migration tooling and approach.
-The acceptable downtime will help you to define if you should rather perform an online or offline migration. This equally applies to your application. If you cannot accept a disruption in your day-to-day operations, you will need to perform an online migration.
+Thereby please define your maximum acceptable downtime. These metric will help you to define your migration tooling and approach.
+This equally applies to your application. If you cannot accept a disruption in your day-to-day operations, you will need to perform an online migration.
 
 - **Determine your tooling**:
 
@@ -61,18 +61,6 @@ There are two paths to migrate:
 
 >! Note:
 If you decide to perform an online migration, make sure that you configure firewall rules to allow for data transfer.
-
->! Note: If you decide to use Goldengate, please review if required license is available.
-
-
-For Oracle Database@Azure, make sure to:
-
-- **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Available regions](/azure/oracle/oracle-db/database-overview#available-regions).
-
-- **Consider using Oracle Zero Downtime Migration** for the migration process. Evaluate the migration strategies to determine the most suitable approach for your specific migration requirements. For more information, see [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/).
-
-> Note!
-> Make sure to have the ability to establish a bi-directional SSH connectivity between the on-premises Oracle Database and the Oracle Exadata which relies in the Azure VNet.
 
 ## Oracle migration workload-specific activities
 
@@ -103,6 +91,16 @@ The following section describes the migration process in more detail. The steps 
   - Oracle GoldenGate requires Oracle GoldenGate licenses.
   
   For more information about Oracle licensing on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
+
+## For Oracle Database@Azure, make sure to:
+
+- **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Available regions](/azure/oracle/oracle-db/database-overview#available-regions).
+
+- **Consider using Oracle Zero Downtime Migration** for the migration process. Evaluate the migration strategies to determine the most suitable approach for your specific migration requirements. For more information, see [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/).
+ZDM offers the ability to either choose logical or physical migrations scenarios. The following whitepaper will provide you with further instructions: [ZDM migration](https://www.oracle.com/a/otn/docs/database/zdm-physical-migration-to-oracle-at-azure.pdf).
+
+>! Note: If you choose Autonomous Database Service (ADB-S), please keep in mind, that only logical migration scenarios are supported. 
+
   
 ## Next steps
 
