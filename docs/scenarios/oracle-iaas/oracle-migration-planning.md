@@ -101,7 +101,26 @@ ZDM offers the ability to either choose logical or physical migrations scenarios
 
 >! Note: If you choose Autonomous Database Service (ADB-S), please keep in mind, that only logical migration scenarios are supported. 
 
-  
+## Additional Guidance
+In order to equip you sufficiently, you can use the following section which helps you to choose the right migration option for your requirements and data sizes.
+
+### Express-Route based Migration Duration Reference
+
+Please note that the following table only serves as a baseline. It does not take into account other production workloads that you run the same time through the same ER connection. 
+
+VMWare may need more bandwidth than indicated. Please properly assess your bandwidth needs during your Proof-of-Concept phase. If support is needed, always feel free to reach out to your local contact persons, to receive support as needed.
+
+| Data size   | Bandwidth of 1 Gpbs  | Bandwidth of 10 Gbps  |
+|-------------|-------------|-------------|
+| 1 TB | 3 hours | 15 min |
+| 10 TB| 1 day | 3 hours |
+| 35 TB | 4 days | 9 hours |
+| 80 TB | 8 days | 20 hours |
+| 100 TB | 11 days | 1 day |
+| 200 TB | 21 days | 2 days |
+| 500 TB | 53 days | 5 days |
+
+
 ## Next steps
 
 > [!div class="nextstepaction"]
