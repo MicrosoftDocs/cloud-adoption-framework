@@ -4,7 +4,7 @@ description: Learn about recommendations that application owners and developers 
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 02/26/2024
+ms.date: 11/28/2024
 ---
 
 # Application identity and access management

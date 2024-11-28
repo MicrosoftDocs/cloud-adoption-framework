@@ -3,7 +3,7 @@ title: Azure landing zones canary approach with multiple tenants
 description: Learn about the considerations and recommendations for the canary approach to use when handling multiple Microsoft Entra tenants with Azure landing zones.
 author: jtracey93
 ms.author: jatracey
-ms.date: 01/16/2023
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---

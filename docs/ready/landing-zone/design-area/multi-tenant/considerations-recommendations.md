@@ -3,7 +3,7 @@ title: Considerations and recommendations for multi-tenant Azure landing zone sc
 description: Learn about the considerations and recommendations when handling multiple Microsoft Entra tenants with Azure landing zones.
 author: jtracey93
 ms.author: jatracey
-ms.date: 01/16/2023
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -103,8 +103,8 @@ For more information, see [Resource isolation in a single tenant](/azure/active-
   - [B2B direct connect](/azure/active-directory/external-identities/b2b-direct-connect-overview)
   - [Cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview)
   - [Cross-tenant synchronization](/azure/active-directory/multi-tenant-organizations/cross-tenant-synchronization-overview)
-  - [Multitenant Organization (Preview)](/entra/identity/multi-tenant-organizations/multi-tenant-organization-overview)
-- For organizations with a Microsoft Entra tenant in multiple Microsoft clouds, like Microsoft Azure Commercial cloud, Microsoft Azure China 21Vianet, Microsoft Azure Government, configure [Microsoft cloud settings for B2B collaboration (preview)](/entra/external-id/cross-cloud-settings) to simplify user's experiences when collaborating across tenants.
+  - [Multitenant Organization](/entra/identity/multi-tenant-organizations/multi-tenant-organization-overview)
+- For organizations with a Microsoft Entra tenant in multiple Microsoft clouds, like Microsoft Azure Commercial cloud, Microsoft Azure China 21Vianet, Microsoft Azure Government, configure [Microsoft cloud settings for B2B collaboration](/entra/external-id/cross-cloud-settings) to simplify user's experiences when collaborating across tenants.
 - Application teams and developers should review the following resources when constructing applications and services for multi-tenancy:
   - [Multi-tenant apps in Microsoft Entra ID](/azure/active-directory/develop/application-model#multi-tenant-apps)
   - [Architect multi-tenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
