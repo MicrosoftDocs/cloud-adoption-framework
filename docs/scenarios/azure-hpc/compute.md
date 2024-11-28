@@ -28,7 +28,7 @@ Azure VMs provide various VM sizes for HPC and GPU-optimized computing. It's imp
 
 Keep in mind that not all Azure products are available in all regions. To see what's available in your area, see [Products available by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/).
 
-For best practices for choosing Azure compute options, see the [Azure compute blog](https://techcommunity.microsoft.com/t5/azure-compute-blog/bg-p/AzureCompute), or see the [Azure compute service](/azure/architecture/guide/technology-choices/compute-decision-tree) content to choose a service.
+For more information about Azure compute options, see the [Azure compute blog](https://techcommunity.microsoft.com/t5/azure-compute-blog/bg-p/AzureCompute) or [Choose an Azure compute service](/azure/architecture/guide/technology-choices/compute-decision-tree).
 
 Azure provides both CPU-based and GPU-enabled VMs. 
 
@@ -50,11 +50,11 @@ HPC products are designed for high-performance scenarios. But other products, su
 
 When you design your HPC infrastructure, several tools and services are available to help you manage and schedule your workloads.
 
-[Azure Batch](/azure/batch/) is a managed service for running large-scale HPC applications. Use Batch to configure a VM pool and upload the applications and data files. Then the Batch service configures the VMs, assigns tasks to the VMs, runs the tasks, and monitors progress. Batch can automatically scale VMs up and down in response to changing workloads. Batch also provides a job-scheduling functionality.
+- [Azure Batch](/azure/batch/) is a managed service for running large-scale HPC applications. Use Batch to configure a VM pool and upload the applications and data files. Then the Batch service configures the VMs, assigns tasks to the VMs, runs the tasks, and monitors progress. Batch can automatically scale VMs up and down in response to changing workloads. Batch also provides a job-scheduling functionality.
 
-[Azure CycleCloud](/azure/cyclecloud/) is a tool for creating, managing, operating, and optimizing HPC and big compute clusters in Azure. Use Azure CycleCloud to dynamically configure HPC Azure clusters and orchestrate data and jobs for hybrid and cloud workflows. Azure CycleCloud provides the simplest way to manage HPC workloads by using a workload manager. Azure CycleCloud supports workload managers such as Grid Engine, Microsoft HPC Pack, HTCondor, LSF, PBS Pro, SLURM, and Symphony.
+- [Azure CycleCloud](/azure/cyclecloud/) is a tool for creating, managing, operating, and optimizing HPC and big compute clusters in Azure. Use Azure CycleCloud to dynamically configure HPC Azure clusters and orchestrate data and jobs for hybrid and cloud workflows. Azure CycleCloud provides the simplest way to manage HPC workloads by using a workload manager. Azure CycleCloud supports workload managers such as Grid Engine, Microsoft HPC Pack, HTCondor, LSF, PBS Pro, SLURM, and Symphony.
 
-[Azure Scheduler](/azure/logic-apps/logic-apps-overview) is a specialized service for scheduling compute-intensive work to run on a managed pool of VMs. You can automatically scale compute resources to meet your jobs' needs.
+- [Azure Logic Apps](/azure/logic-apps/logic-apps-overview) is a specialized service for scheduling compute-intensive work to run on a managed pool of VMs. You can automatically scale compute resources to meet your jobs' needs.
 
 The following sections describe reference architectures for the energy, finance, and manufacturing industries.
 
@@ -157,14 +157,14 @@ For reference architectures and cookbooks about how to deploy HPC ISV applicatio
 
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting manufacturing HPC environments for the cloud.
 
-- [Azure billing offers and Active Directory tenants](/azure-billing-active-directory-tenant.md)
+- [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
 - [Identity and access management](./identity-access-management.md)
-- [Management](/management.md)
+- [Management](./management.md)
 - [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](/platform-automation-devops.md)
+- [Platform automation and DevOps](./platform-automation-devops.md)
 - [Resource organization](./resource-organization.md)
-- [Governance](/security-governance-compliance.md)
-- [Security](/security.md)
+- [Governance](./security-governance-compliance.md)
+- [Security](./security.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](./azure-hpc-landing-zone-accelerator.md)
 - [Spot virtual machines](/azure/architecture/guide/spot/spot-eviction)

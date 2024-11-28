@@ -111,4 +111,4 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Governance for HPC in energy industries](./security-governance-compliance.md)
 - [Security for Azure HPC in energy](./security.md)
 - [Storage for HPC energy environments](./storage.md)
-- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](./azure-hpc-landing-zone-accelerator.md)
