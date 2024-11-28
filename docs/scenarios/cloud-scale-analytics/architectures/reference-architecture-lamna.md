@@ -1,9 +1,9 @@
 ---
 title: Lamna Healthcare scenario for cloud-scale analytics in Azure
 description: Learn about the Lamna Healthcare scenario for cloud-scale analytics in Azure.
-author: AnalyticJeremy
-ms.author: jepeach
-ms.date: 09/21/2021
+author: mboswell
+ms.author: mboswell
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management
 ---
@@ -28,7 +28,7 @@ Lamna will implement cloud-scale analytics as their solution for a cloud-based a
 
 ### Data management landing zone
 
-A critical concept for every cloud-scale analytics implementation is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every cloud-scale analytics implementation is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalogue have been deployed as services at tenant level.
 
 ### Patient data landing zone
 

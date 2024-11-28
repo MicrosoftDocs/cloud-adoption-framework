@@ -1,9 +1,9 @@
 ---
 title: Multiple data zones for cloud-scale analytics in Azure
 description: See how Relecloud, a fictional cloud provider company, implements multiple landing zones for cloud-scale analytics in Azure.
-author: AnalyticJeremy
-ms.author: jepeach
-ms.date: 02/28/2022
+author: mboswell
+ms.author: mboswell
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management
 ---
@@ -36,7 +36,7 @@ The following diagram doesn't represent all Azure services. The diagram is simpl
 
 ### Data management landing zone
 
-A key requirement for a cloud-scale analytics implementation is a data management landing zone. This subscription contains resources that are shared across all landing zones, including shared networking components like a firewall or private DNS zones. The data management landing zone also includes resources for data and cloud governance like Azure Policy and Azure Purview.
+A key requirement for a cloud-scale analytics implementation is a data management landing zone. This subscription contains resources that are shared across all landing zones, including shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalogue have been deployed as services at tenant level.
 
 Relecloud created a data management landing zone when they deployed the data analytics solution for the operations group. When the billing group joins the platform, they use the same data management landing zone to share common resources with the operations group.
 
@@ -75,25 +75,6 @@ Both of these applications are powered by pipelines in the shared Azure Synapse 
 #### Billing data product
 
 The billing analysts create a new data product called **Revenue by service** that analyzes how much revenue each cloud service generates for Relecloud. This product relies on the data in the **Invoices** ingestion. The product also connects to the operations landing zone and reads the service usage data. Like the data applications, the data product also relies on the shared Azure Synapse workspace.
-
-## Deployment templates
-
-To deploy the architectures, use the following data management landing zone and data landing zone reference implementation templates:
-
-- [Data management landing zone template](https://github.com/Azure/data-management-zone)
-- [Data landing zone template](https://github.com/Azure/data-landing-zone)
-
-Use the following templates to deploy the other data applications and data products in the Relecloud billing and operations data landing zones:
-
-|Name  |Data landing zone  |Type  |Template  |
-|---------|---------|---------|---------|
-|Cloud accounts     |Operations         |Data application         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Recommender revenue     |Operations         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Cloud service recommender     |Operations         |Data application         |[Data product analytics template](https://github.com/Azure/data-product-analytics)         |
-|Revenue by service     |Billing         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-
-> [!IMPORTANT]
-> Relecloud doesn't have to deploy everything in the preceding reference implementation templates to meet their needs. The templates require some level of customization. Remove services you don't need from the templates before deployment.
 
 ## Next steps
 

@@ -1,9 +1,9 @@
 ---
 title: Adatum Corporation scenario for cloud-scale analytics in Azure
 description: Learn about the Adatum Corporation scenario for cloud-scale analytics in Azure.
-author: AnalyticJeremy
-ms.author: jepeach
-ms.date: 02/28/2022
+author: mboswell
+ms.author: mbsoswell
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management
 ---
@@ -34,7 +34,7 @@ In this reference architecture, we'll deploy a data management landing zone, whi
 
 ### Data management landing zone
 
-A critical concept for every cloud-scale analytics is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance, such as Azure Policy and Azure Purview.
+A critical concept for every cloud-scale analytics is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalogue have been deployed as services at tenant level.
 
 ### Data applications
 
@@ -73,20 +73,6 @@ In this example, the corporate sales team is the first to move to the new cloud-
 ## How to evolve in the future
 
 Scaling is accomplished by adding more landing zones to the architecture. These landing zones will use VNet peering to connect to the data management landing zone and all of the other landing zones. This mesh pattern allows data products and resources to be shared across zones. By splitting into different zones, the workloads are spread across Azure subscriptions and resources. This allows enterprises to avoid reaching the limits of the Azure services and continue to grow their data estates.
-
-### Deployment templates deployment
-
-To deploy the architecture baselines above, use the data management landing zone and the data landing zone reference implementation templates in the following GitHub repositories:
-
-- [Data management landing zone template](https://github.com/Azure/data-management-zone)
-- [Data landing zone template](https://github.com/Azure/data-landing-zone)
-
-Use the following template to deploy sales transactions, customer Data applications, and **Summary** data products in the Adatum sales data landing zones:
-
-- [Data product batch template](https://github.com/Azure/data-product-batch)
-
-> [!IMPORTANT]
-> Not every template listed above will need to be deployed to meet the needs of Adatum. Some customization will be required for the templates. Services that aren't needed should be removed from the templates prior to deployment.
 
 ## Next steps
 
