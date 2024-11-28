@@ -16,7 +16,7 @@ The Azure Data Lake is a massively scalable and secure data storage for high-per
 Each storage account within your data landing zone stores data in one of three stages, which align to a [medallion architecture](/azure/databricks/lakehouse/medallion):
 
 - Raw data (bronze)
-- Enriched (silver)
+- Enriched data (silver)
 - Curated data (gold)
 
 ## Development data lakes
