@@ -16,8 +16,10 @@ The Azure Data Lake is a massively scalable and secure data storage for high-per
 Each storage account within your data landing zone stores data in one of three stages, which align to a [medallion architecture](/azure/databricks/lakehouse/medallion):
 
 - Raw data (bronze)
-- Enriched (silver) and curated data (gold)
-- Development data lakes
+- Enriched (silver)
+- Curated data (gold)
+
+## Development data lakes
 
 A [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account which has been ingested an automated data agnostic ingestion service. You can create a [source aligned data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md) if you don't implement data agnostics engine or facilitate complex connections for ingesting data from operational sources. This data application follows the same flow as a data agnostics engine when ingesting data from external data sources.
 
