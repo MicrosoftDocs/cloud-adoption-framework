@@ -10,15 +10,15 @@ ms.custom: think-tank, e2e-data-management
 
 # Cloud-scale analytics data products in Azure
 
-[Data products](../../cloud-scale-analytics/architectures/what-is-data-product.md) are data served as product and computed, saved, and served by polyglot persistence services, which can be required by certain use cases. The process of creating and serving a data product can require services and technologies that aren't included in the [data landing zone](./data-landing-zone.md) core services. An example of this would be reporting with niche requirements, such as compliance and tax reporting.
+[Data products](../../cloud-scale-analytics/architectures/what-is-data-product.md) are data served as products and computed, saved, and served by polyglot persistence services, which may be required by certain use cases. The process of creating and serving a data product can require services and technologies that aren't included in the [data landing zone](./data-landing-zone.md) core services. An example of this would be reporting with niche requirements, such as compliance and tax reporting.
 
 ## Design considerations
 
-A data landing zone can be served multiple data products created by ingesting data from within the same data landing zone or from across multiple data landing zones. This is showing in the following diagram.
+A data landing zone can serve multiple data products created by ingesting data from within the same data landing zone or from across multiple data landing zones. This is shown in the following diagram.
 
-  :::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross-data landing zone consumption.":::
+:::image type="content" source="../images/data-product-cross-data-landing-zone.png" alt-text="Diagram of cross-data landing zone consumption.":::
 
-  The example above shows:
+The example above shows:
 
 - Intrazone data consumption:
   - Data product B consumes data from data product A and other data or data products existing in the data lake within its own landing zone.
@@ -42,7 +42,7 @@ Build data products within your data landing zone by adhering to design principl
 
 ### Deploy multiple resource groups
 
-Each data application is a resource group. Since data applications are compute services, polyglot persistence services, or both, they can only be required depending on certain use cases. As such, they're considered an optional data landing zone component. In a case where you do need data applications, create multiple resource groups by data application as the following diagram shows.
+Each data application is a resource group. Since data applications are compute services, polyglot persistence services, or both, they can only be required depending on certain use cases. As such, they're considered an optional data landing zone component. In cases where you do need data applications, create multiple resource groups by data application as the following diagram shows.
 
 ![Diagram of data application resource groups.](../images/data-products-resource-group.png)
 
@@ -83,14 +83,14 @@ Your data product teams should publish their data models in a modeling repositor
 
 ### Set expectations for data product users
 
-Update your data sharing contracts with service-level agreements and certifications for your data products so you to convey accurate expectations to potential users of the data product.
+Update your data sharing contracts with service-level agreements and certifications for your data products so you can convey accurate expectations to potential users of the data product.
 
 ### Capture lineage
 
 If data product B is created from data coming from data products A and D, lineage must be captured from A and D to B. Further lineage should also be captured for data product C, since it's created using data from data product B. Updated lineage should be captured in a data lineage application before every release of your data product.
 
 > [!NOTE]
-> Using Azure Pipelines allows you to build approval gates and invoke functions that can make sure metadata, lineage, and SLAs are registered in the correct governance service.
+> Using Azure Pipelines allows you to build approval gates and invoke functions that can ensure metadata, lineage, and SLAs are registered in the correct governance service.
 
 ### Define data application architecture
 
