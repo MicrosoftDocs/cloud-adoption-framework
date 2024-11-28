@@ -40,10 +40,10 @@ Securing AI resources includes managing and protecting the systems, models, and 
 - *Use workload specific governance guidance.* Detailed security guidance is available for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS). Use this guidance to secure AI models, resources, and data within these workload types.
 
     > [!div class="nextstepaction"]
-    > [Secure PaaS AI workloads](./platform/security.md)
-    
+    > [Security for Azure platforms (PaaS)](./platform/security.md)
+
     > [!div class="nextstepaction"]
-    > [Secure IaaS AI workloads](./infrastructure/security.md)
+    > [Security for Azure infrastructure (IaaS)](./infrastructure/security.md)
 
 ### Secure AI data
 
@@ -51,7 +51,7 @@ Securing AI data involves protecting the data that AI models use and generate. E
 
 - *Define and maintain data boundaries.* Ensure AI workloads use data appropriate for their access level. AI applications accessible to all employees should only process data suitable for all employees. Internet-facing AI applications must use data appropriate for public consumption. Use separate datasets or environments for different AI applications to prevent inadvertent data access. Consider using Microsoft Purview’s suite of [data security](/purview/purview-security) tools to secure your data.
 
-- *Implement strict data access controls. Ensure applications verify that end-users are authorized to access the data involved in their queries.* Avoid broad system permissions for user actions. Operate under the principle that if the AI can access certain information, the user should be authorized to access it directly.
+- *Implement strict data access controls.* Ensure applications verify that end-users are authorized to access the data involved in their queries. Avoid broad system permissions for user actions. Operate under the principle that if the AI can access certain information, the user should be authorized to access it directly.
 
 - *Maintain a data catalog.* Keep an up-to-date catalog of all data connected to and consumed by AI systems, including storage locations and access details. Regularly scan and label data to track sensitivity levels and suitability, aiding in analytics and risk identification. Consider using [Microsoft Purview Data Catalog](/purview/purview-security) to map and govern your data.
 
@@ -78,4 +78,4 @@ Maintaining AI security controls includes ongoing monitoring, testing, and updat
 Govern AI, Manage AI, and Secure AI are continuous processes you must iterate through regularly. Revisit each AI Strategy, AI Plan, and AI Ready as needed. Use the AI adoption checklists to determine what your next step should be.
 
 > [!div class="nextstepaction"]
-> [AI adoption checklists](index.md#ai-adoption-checklists)
+> [AI checklists](index.md#ai-checklists)
