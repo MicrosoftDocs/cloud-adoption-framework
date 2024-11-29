@@ -15,7 +15,7 @@ As part of your cloud adoption journey, you must migrate your existing workloads
 
 ## The Oracle migration scenarios
 
-Migrating Oracle workloads involves transitioning both databases and applications. This article specifically discusses the lift-and-shift approach for application and database migrations, which involves deploying Oracle applications on Azure Virtual Machines (VMs). For database migration, several options are available.
+Migrating Oracle workloads involves transitioning both databases and applications. This article specifically discusses the lift-and-shift approach for application and database migrations, which involves deploying Oracle applications on Azure Virtual Machines (VMs). For database migration, several options are available. The lower section provides specific guidance applying to Oracle Database@Azure. 
 
 - Applications on Azure Virtual Machines: Run Oracle enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure. 
 
@@ -49,7 +49,7 @@ Review the migration resources to define your Oracle to Azure migration process.
 Thereby please define your maximum acceptable downtime. These metric will help you to define your migration tooling and approach.
 This equally applies to your application. If you cannot accept a disruption in your day-to-day operations, you will need to perform an online migration.
 
-- **Determine your tooling**:
+- **Determine your tooling for migrating your workload to Oracle on Azure virtual machines**:
 
 There are two paths to migrate: 
 
@@ -92,7 +92,7 @@ The following section describes the migration process in more detail. The steps 
   
   For more information about Oracle licensing on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
 
-## For Oracle Database@Azure, make sure to:
+## For Oracle Database@Azure specifically, make sure to:
 
 - **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Available regions](/azure/oracle/oracle-db/database-overview#available-regions).
 
@@ -104,7 +104,7 @@ ZDM offers the ability to either choose logical or physical migrations scenarios
 ## Additional Guidance
 In order to equip you sufficiently, you can use the following section which helps you to choose the right migration option for your requirements and data sizes.
 
-### Express-Route based Migration Duration Reference
+### ExpressRoute based Migration Duration Reference
 
 Please note that the following table only serves as a baseline. It does not take into account other production workloads that you run the same time through the same ER connection. 
 
@@ -120,6 +120,7 @@ VMWare may need more bandwidth than indicated. Please properly assess your bandw
 | 200 TB | 21 days | 2 days |
 | 500 TB | 53 days | 5 days |
 
+Whenever you plan to use ExpressRoute for your migration, ensure the resiliency of it. Therefore review [ExpressRoute Circuit Risiliency] (https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/)
 
 ## Next steps
 
