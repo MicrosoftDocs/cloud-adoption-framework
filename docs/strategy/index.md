@@ -1,6 +1,6 @@
 ---
 title: Develop a Cloud Adoption Strategy
-description: Learn how to develop a cloud adoption strategy that aligns with your business goals.
+description: Learn how to develop a cloud adoption strategy to migrate or innovate in the cloud, in alignment with your business goals.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: overview
