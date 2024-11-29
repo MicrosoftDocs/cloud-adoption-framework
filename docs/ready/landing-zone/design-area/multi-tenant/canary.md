@@ -21,7 +21,7 @@ If you're a customer that's following a [deployment stamps pattern](/azure/archi
 > This approach is common in a Managed Service Provider (MSP) environment where the MSP manages several Microsoft Entra tenants for different clients that are all similar, except for their naming.
 
 >[!TIP]
-> Customers that follow the deployment stamp style pattern might also benefit from following the [Automation approach 2 – Shared application registration (multitenant) with multiple service principals](automation.md#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals).
+> Customers that follow the deployment stamp style pattern might also benefit from following the [Automation approach 2 – Shared application registration (multitenant) with multiple service principals](automation.md#approach-2--shared-application-registration-multitenant-with-multiple-service-principals).
 
 ## Next steps
 

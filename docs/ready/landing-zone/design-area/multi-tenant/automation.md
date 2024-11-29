@@ -29,7 +29,7 @@ There are two approaches to automate the deployment of Azure landing zones acros
 
 [Approach 1 – Complete isolation](#approach-1--complete-isolation) is the most common approach in multitenant scenarios. This approach keeps the required separation and isolation between Microsoft Entra tenants, which is the most common requirement when using a multitenant approach.
 
-[Approach 2 – Shared application registration (multitenant) with multiple service principals](#approach-2--shared-application-registration-multi-tenant-with-multiple-service-principals) is commonly used in Managed Service Provider (MSP) scenarios. In this approach, a [deployment stamps pattern](/azure/architecture/patterns/deployment-stamp) can be used to automate the deployment of an almost identical architecture across multiple tenants at scale.
+[Approach 2 – Shared application registration (multitenant) with multiple service principals](#approach-2--shared-application-registration-multitenant-with-multiple-service-principals) is commonly used in Managed Service Provider (MSP) scenarios. In this approach, a [deployment stamps pattern](/azure/architecture/patterns/deployment-stamp) can be used to automate the deployment of an almost identical architecture across multiple tenants at scale.
 
 Both of these approaches are provided as examples and inspiration. You can mix and match the approaches in your deployments based on your organization's requirements.
 
