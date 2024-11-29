@@ -4,7 +4,7 @@ description: Learn about considerations and recommendations to design and implem
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 05/23/2024
+ms.date: 11/28/2024
 ---
 
 # Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones

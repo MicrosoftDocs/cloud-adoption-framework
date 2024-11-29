@@ -3,7 +3,7 @@ title: Scenarios for multiple Microsoft Entra tenants
 description: Learn about the scenarios for multiple Microsoft Entra tenants, and learn when they're required in Azure landing zones.
 author: jtracey93
 ms.author: jatracey
-ms.date: 01/16/2023
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -107,9 +107,9 @@ For more information about how to navigate this scenario, see the [Mergers and a
 
 ## Summary
 
-As detailed in the scenarios, there are several reasons why your organization might require multiple Microsoft Entra tenants. But when you create multiple tenants to meet the requirements within these scenarios, it adds complexity and operational tasks to maintain the multiple tenants and potentially adds costs for licensing requirements. For more information, see [Considerations and recommendations for Azure landing zones in multi-tenant scenarios](considerations-recommendations.md).
+As detailed in the scenarios, there are several reasons why your organization might require multiple Microsoft Entra tenants. But when you create multiple tenants to meet the requirements within these scenarios, it adds complexity and operational tasks to maintain the multiple tenants and potentially adds costs for licensing requirements. For more information, see [Considerations and recommendations for Azure landing zones in multitenant scenarios](considerations-recommendations.md).
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Considerations and recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md)
+> [Considerations and recommendations for multitenant Azure landing zone scenarios](considerations-recommendations.md)
