@@ -1,5 +1,5 @@
 ---
-title: Azure Lighthouse usage in Azure landing zones multi-tenant scenarios
+title: Azure Lighthouse usage in Azure landing zones multitenant scenarios
 description: Learn how Azure Lighthouse is used in environments with multiple Microsoft Entra tenants with Azure landing zones.
 author: jtracey93
 ms.author: jatracey
@@ -8,9 +8,9 @@ ms.topic: conceptual
 ms.custom: think-tank
 ---
 
-# Azure Lighthouse usage in Azure landing zones multi-tenant scenarios
+# Azure Lighthouse usage in Azure landing zones multitenant scenarios
 
-[Azure Lighthouse](/azure/lighthouse/overview) enables multi-tenant management with scalability, higher automation, and enhanced governance across resources. Azure Lighthouse can be adopted in Azure landing zone scenarios in single or multi-tenant architectures.
+[Azure Lighthouse](/azure/lighthouse/overview) enables multitenant management with scalability, higher automation, and enhanced governance across resources. Azure Lighthouse can be adopted in Azure landing zone scenarios in single or multitenant architectures.
 
 The following considerations and recommendations describe common scenarios for Azure Lighthouse in Azure landing zone deployments.
 
@@ -41,4 +41,4 @@ When you use this architecture, application landing zone owners have access to m
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Considerations and recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md)
+> [Considerations and recommendations for multitenant Azure landing zone scenarios](considerations-recommendations.md)
