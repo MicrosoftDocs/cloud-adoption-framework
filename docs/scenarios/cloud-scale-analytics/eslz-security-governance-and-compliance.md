@@ -10,7 +10,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Security, governance, and compliance for cloud-scale analytics
 
-When planning cloud-scale analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale cloud-scale analytics. This article also discusses design recommendations and best practices for deployment of an cloud-scale analytics on Azure. Review [enterprise-scale security governance and compliance](../../ready/landing-zone/design-area/governance.md) to fully prepare for governance of an enterprise solution.
+When planning cloud-scale analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale cloud-scale analytics. This article also discusses design recommendations and best practices for deployment of a cloud-scale analytics on Azure. Review [enterprise-scale security governance and compliance](../../ready/landing-zone/design-area/governance.md) to fully prepare for governance of an enterprise solution.
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the lifecycle of cloud services.
 
@@ -33,7 +33,7 @@ Several Azure services support data-at-rest encryption, including Azure Storage 
 
 ### Secure data in transit
 
-Data is in transit or in flight when it moves from one location to another. This can be internally, on-premises or within Azure, or externally, such as across the internet to an end user. Azure offers several mechanisms, including encryption, to keep data private in transit. These mechanisms include:
+Data is considered in transit or in flight when it moves from one location to another. This transit can occur internally, on-premises or within Azure, or externally, such as across the internet to an end user. Azure offers several mechanisms, including encryption, to keep data private during transit. These mechanisms include:
 
 - Communication through VPNs using IPsec/IKE encryption.
 - Transport Layer Security (TLS)
@@ -79,7 +79,7 @@ Microsoft Defender for Identity is part of the advanced data security offering, 
 
 ## Networking
 
-Cloud-scale analytics prescribed view is to use Azure private endpoints for all PaaS services and not use public IPs for all infrastructure as a service (IaaS) services. For more information, see [Cloud-scale analytics networking](./eslz-network-topology-and-connectivity.md).
+Cloud-scale analytics prescribed view is to use Azure private endpoints for all PaaS services and not uses public IPs for all infrastructure as a service (IaaS) services. For more information, see [Cloud-scale analytics networking](./eslz-network-topology-and-connectivity.md).
 
 ## Compliance and governance design recommendations
 
@@ -93,7 +93,7 @@ Azure Policy helps bring your resources into compliance through bulk remediation
 
 ### Automate deployments
 
-You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reuseable code templates. This minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the cloud-scale analytics in Azure](../cloud-scale-analytics/manage.md)
+You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reuseable code templates. This automation minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the cloud-scale analytics in Azure](../cloud-scale-analytics/manage.md)
 
 ### Lock resources for production workloads
 

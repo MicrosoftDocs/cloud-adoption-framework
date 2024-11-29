@@ -16,7 +16,7 @@ This widespread distribution of data increases complexity because multiple versi
 
 ## Domain-oriented master data management
 
-Master identification numbers are an important aspect of your MDM. These numbers link together mastered data and data from your domains. They are critical to your ability to track down what data has been mastered and what data belongs together. You can only identify unique data and assign master identification numbers centrally, not locally within a system. Your master data from different systems must be together within your MDM solution.
+Master identification numbers are an important aspect of your MDM. These numbers link together mastered data and data from your domains. They're critical to your ability to track down what data has been mastered and what data belongs together. You can only identify unique data and assign master identification numbers centrally, not locally within a system. Your master data from different systems must be together within your MDM solution.
 
 MDM works differently in domain-oriented architectures due to their distributed nature. Consistency is harder to achieve because you rely on MDM within your domains.
 
