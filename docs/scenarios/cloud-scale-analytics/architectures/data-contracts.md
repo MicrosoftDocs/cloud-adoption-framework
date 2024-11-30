@@ -67,7 +67,7 @@ As you stabilize all data movement, capture which data attributes (like tables a
 
 Data sharing agreements are an extension of data contracts. The agreements outline data usage, privacy, and purpose, including any limitations. Data sharing agreements are interface-independent and offer insights into what data is used for a particular purpose. They also function as input for data security controls. You can use a data sharing agreement to outline which filters or security protections must be applied to your data.
 
-Data sharing agreements also help prevent miscommunication over data usage. Domain owners should discuss data sharing and data usage issues before any data is shared. Having a common understanding is critical for your ability to regulate data and its usage and ensure you can deliver value to your organization. Once all domain owners reach a collaborative understanding, ensure that they document it in a data sharing agreement. In this agreement, you can also address areas like:
+Data sharing agreements also help prevent miscommunication over data usage. Domain owners should discuss data sharing and data usage issues before any data is shared. Having a common understanding is critical for your ability to regulate data and its usage and ensure you can deliver value to your organization. After all domain owners reach a collaborative understanding, ensure that they document it in a data sharing agreement. In this agreement, you can also address areas like:
 
 - Functional data quality
 - Historization

@@ -20,7 +20,7 @@ You can map the physical data names of discovered master data to your common bus
 
 After master data has been created and centrally stored, it can be synchronized with all systems that use master data to ensure their consistency.
 
-It's important to govern your master data maintenance. Identify where maintenance takes place, noting which tasks from which business processes are involved. You can use business process identification and create, read, update, or delete (CRUD) analysis to identify these tasks. Once you identify the tasks that maintain master data, you can then govern the data. Working out this data governance is often a manual task, but process mining and database log file analysis can aid you in the process.
+It's important to govern your master data maintenance. Identify where maintenance takes place, noting which tasks from which business processes are involved. You can use business process identification and create, read, update, or delete (CRUD) analysis to identify these tasks. After you identify the tasks that maintain master data, you can then govern the data. Working out this data governance is often a manual task, but process mining and database log file analysis can aid you in the process.
 
 ## Master data partner solutions
 

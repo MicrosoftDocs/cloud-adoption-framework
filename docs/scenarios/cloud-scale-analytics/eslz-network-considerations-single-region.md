@@ -233,7 +233,7 @@ The exponential growth of Private Endpoints in this network architecture can cau
 
 Another network option is to host Private Endpoints in your Connectivity Hub and connect them to the Hub virtual network. In this solution, you host a single Private Endpoint for each service on your corporate virtual network. Due to the existing hub and spoke network architecture at most corporations, and the fact that your Connectivity Hub hosts your Private Endpoints in this solution, transitivity isn't required. Virtual network peering between your Connectivity Hub and data landing zones allows for direct access.
 
-Data traverses a single virtual network peering between the Connectivity Hub and data landing zone in order to load a dataset stored in Storage Account A in VM B. Once that dataset is loaded and processed ((3) and (4)), it traverses the same virtual network peering a second time (5) before finally getting stored in Storage Account B through the Private Endpoint connected to the Hub virtual network (6).
+Data traverses a single virtual network peering between the Connectivity Hub and data landing zone in order to load a dataset stored in Storage Account A in VM B. After that dataset is loaded and processed ((3) and (4)), it traverses the same virtual network peering a second time (5) before finally getting stored in Storage Account B through the Private Endpoint connected to the Hub virtual network (6).
 
 :::image type="content" source="./images/network-options-private-endpoints-in-connectivity-hub.png" alt-text="Private Endpoints in Connectivity Hub" lightbox="./images/network-options-private-endpoints-in-connectivity-hub.png":::
 

@@ -33,7 +33,7 @@ As you're deciding what metadata to manage centrally or federate to your data do
 
 Using your answers to these questions, map out the content life cycle for each of your metadata streams, and determine all dependencies. You then have a metadata model that can connect business domains, processes, technology, and data.
 
-Once you know which metadata you need, you must choose a place to store and process it. You can use Microsoft Purview for this.
+After you know which metadata you need, you must choose a place to store and process it. You can use Microsoft Purview for this.
 
 ## Use Microsoft Purview to manage your data estate at large
 
@@ -50,7 +50,7 @@ Microsoft Purview combines data governance and compliance solutions and services
 
 When implementing Microsoft Purview, avoid introducing too much change and complexity quickly. Technical metadata forms the foundation of Microsoft Purview. You need to gather and organize your metadata before making sense of it.
 
-Once you have your metadata, start with the basics:
+After you have your metadata, start with the basics:
 
 - Business terms
 - Lists of authoritative data sources

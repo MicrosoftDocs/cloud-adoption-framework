@@ -22,7 +22,7 @@ Some of these connectors support being used as a source (read) or as a sink (wri
 
 Proprietary native and third-party tooling provides niche capabilities to integrate with specialized systems and near-real-time replication.
 
-- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. Once you create a data share account and add data products, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
+- [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. After you create a data share account and add data products, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
 
 > [!IMPORTANT]
 > Every data landing zone has an [metadata-ingestion resource group](../architectures/data-landing-zone.md#data-agnostic-ingestion) that exists for businesses with an data agnostic ingestion engine. If you don't have this framework engine, the only recommended resource is deploying an Azure Databricks analytics workspace, which would be used by data integrations to run complex ingestion. See the [data agnostic ingestion engine](./automated-ingestion-pattern.md) for potential automation patterns.

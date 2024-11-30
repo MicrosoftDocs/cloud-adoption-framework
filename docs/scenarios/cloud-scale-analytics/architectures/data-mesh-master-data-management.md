@@ -54,7 +54,7 @@ Your organization must find the correct balance for MDM. Having too many areas o
 
 After you implement a repository, you need to outline a clear scope. Don't fall into the trap of enterprise data unification by selecting all data. Only master data from your most important fields. Begin by selecting subjects that add the most value, like customers, contracts, products, and organizational units. Your number of attributes should be in the tens, not the hundreds or thousands.
 
-Align your processes and governance once you've come to an agreement with your domains. Make any agreements on timelines and reviews clear to all domains. Also, make sure you work on your metadata. Catalog your master data. Ensure your domains know which data elements are candidates from which source systems, and how those elements flow through your data pipelines.
+Align your processes and governance after you've come to an agreement with your domains. Make any agreements on timelines and reviews clear to all domains. Also, make sure you work on your metadata. Catalog your master data. Ensure your domains know which data elements are candidates from which source systems, and how those elements flow through your data pipelines.
 
 The final step, and your ultimate goal, is achieving coexistence. Your improvements should flow directly back to your domains. This is the most difficult part of the process because it requires you to make many architecture changes. Your domains need to be able to handle corrections and improvements sent from your centrally managed MDM solution.
 

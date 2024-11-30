@@ -11,7 +11,7 @@ ms.custom: e2e-data-management, think-tank
 
 Cloud-scale analytics enables organizations to determine the optimal data access patterns to suit their requirements while safeguarding personal data at multiple levels. Personal data includes any information that can uniquely identify individuals, for example, driver's license numbers, social security numbers, bank account details, passport numbers, email addresses, and more. Many regulations exist today to protect user privacy.
 
-To protect data privacy within a cloud environment such as Azure, you can start by creating a data confidentiality scheme that specifies data access policies. These policies can define the underlying architecture that the data application resides on, define how data access is authorized, and specify what rows or columns can be accessed once granted.
+To protect data privacy within a cloud environment such as Azure, you can start by creating a data confidentiality scheme that specifies data access policies. These policies can define the underlying architecture that the data application resides on, define how data access is authorized, and specify what rows or columns can be accessed after its granted.
 
 ## Create data confidentiality classification scheme
 

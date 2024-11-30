@@ -30,7 +30,7 @@ The platform group consists of two teams:
 
 ### Respond to new data landing zone requests
 
-The data platform ops team must provide the tools and services to support the templates they've created. IT service management tools like ServiceNow can handle ticket requests approved by the data platform ops team for creating new data landing zones. Once approved, a new landing zone would fork from the base template to create a new DevOps project, and pipelines would deploy templates to a new environment.
+The data platform ops team must provide the tools and services to support the templates they've created. IT service management tools like ServiceNow can handle ticket requests approved by the data platform ops team for creating new data landing zones. After its approved, a new landing zone would fork from the base template to create a new DevOps project, and pipelines would deploy templates to a new environment.
 
 ### The data platform ops feedback and enhancement loop
 
@@ -64,7 +64,7 @@ As the owner of the landing zone, Azure DevOps routes the approval for changes t
 
 ### Respond to new data product requests
 
-Data landing zone ops support data application teams in creating new data products. When a data application team requests assistance, an IT service management solution, such as an automation logic app, orchestrates the approval or deployment of a new data application repository. Data landing zone ops are notified of new requests and approve or decline deployments. Once approved, a new DevOps project is created, the main template and artifacts are forked, and a new data application is deployed.
+Data landing zone ops support data application teams in creating new data products. When a data application team requests assistance, an IT service management solution, such as an automation logic app, orchestrates the approval or deployment of a new data application repository. Data landing zone ops are notified of new requests and approve or decline deployments. After approved, a new DevOps project is created, the main template and artifacts are forked, and a new data application is deployed.
 
 ### Adhere to the Azure Well-Architected Framework
 
@@ -104,7 +104,7 @@ Users can submit feedback with an IT service management solution or directly wit
 
 While the data science products team creates data products, it's distinct because their functions lead to data products. Their work results in published models becoming data products for others to use, and the pattern follows a Machine Learning ops model associated with the data landing zone.
 
-The data science products team starts by searching for and finding relevant data products for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or a Microsoft Entra access package, the team uses the services in the data landing zone to explore and analyze the data.
+The data science products team starts by searching for and finding relevant data products for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. After data access is granted via a data catalog or a Microsoft Entra access package, the team uses the services in the data landing zone to explore and analyze the data.
 
 Before processing all data, the team uses local or remote compute to process and analyze sample data products. They can optimize remote compute targets with larger data products to train and develop machine learning models with runs, outputs, and models tracked inside Azure Machine Learning.
 
