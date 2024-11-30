@@ -114,7 +114,7 @@ The spoke-hub-hub-spoke design is well-known and established at many organizatio
 
 ## Conclusion
 
-[Global virtual network Peering](#global-vnet-peering-recommended) has many advantages over the [traditional spoke-hub-hub-spoke design](#traditional-spoke-hub-hub-spoke-design-not-recommended), as it's cost effective, easily managed, and offers reliable connectivity across regions. While traditional spoke-hub-hub-spoke design can be a viable option while your data volume and need for cross-region data exchange is low, we recommend you use the Global virtual network Peering approach as the amount of data you need to exchange across regions grows.
+[Global virtual network Peering](#global-virtual-network-peering-recommended) has many advantages over the [traditional spoke-hub-hub-spoke design](#traditional-spoke-hub-hub-spoke-design-not-recommended), as it's cost effective, easily managed, and offers reliable connectivity across regions. While traditional spoke-hub-hub-spoke design can be a viable option while your data volume and need for cross-region data exchange is low, we recommend you use the Global virtual network Peering approach as the amount of data you need to exchange across regions grows.
 
 ## Next steps
 
