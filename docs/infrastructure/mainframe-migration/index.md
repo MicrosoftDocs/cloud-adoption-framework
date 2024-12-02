@@ -67,4 +67,4 @@ The following are typical mainframe operations:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Myths and facts](/azure/cloud-adoption-framework/infrastructure/mainframe-migration/)
+> [Migrate applications from mainframes to Azure](migration-strategies.md)

@@ -3,7 +3,7 @@ title: Microsoft customer agreement and Microsoft Entra tenants
 description: Understand mca agreements and Microsoft Entra tenants.
 author: jtracey93
 ms.author: jatracey
-ms.date: 08/23/2021
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5
 ---
@@ -30,7 +30,7 @@ The Microsoft customer agreement often represents an organization's hierarchy, w
 
 - New Azure subscriptions provisioned with an agreement are associated with the Microsoft Entra tenant in which the agreement billing account is located.
 
-- Agreements use the RBAC model. Multiple users can be assigned with the required roles at the same scopes (for example, billing account, billing profile, and invoice section). These billing roles and assignments are outside of standard Azure RBAC roles and assignments. They can't be assigned at a management group or resource group scope.
+- Agreements use the role-based access control (RBAC) model. Multiple users can be assigned with the required roles at the same scopes (for example, billing account, billing profile, and invoice section). These billing roles and assignments are outside of standard Azure RBAC roles and assignments. They can't be assigned at a management group or resource group scope.
 
 - A subscription can belong to only one invoice section at any time. Subscriptions can only be moved between invoice sections within the same billing profile.
 
@@ -48,7 +48,7 @@ The Microsoft customer agreement often represents an organization's hierarchy, w
 
 - Assign a budget for each invoice section or billing profile, and establish an alert associated with the budget.
 
-- An organization can have a variety of structures, such as functional, divisional, geographic, matrix, or team. Use organizational structures to map your organization to your agreement hierarchy. Invoice sections are suitable for most scenarios.
+- An organization can have various structures, such as functional, divisional, geographic, matrix, or team. Use organizational structures to map your organization to your agreement hierarchy. Invoice sections are suitable for most scenarios.
 
 - If your business domain has independent IT capabilities, create a new invoice section for IT.
 
@@ -58,4 +58,4 @@ The Microsoft customer agreement often represents an organization's hierarchy, w
 
 - For development/testing (dev/test) workloads, use the Microsoft Azure plan for dev/test offer, where available. Ensure you comply with the [terms of use](https://azure.microsoft.com/offers/ms-azr-0148g/).
 
-- Any user that has permissions upon an invoice section, billing profile or billing account to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-mca-roles#subscription-billing-roles-and-tasks), must be protected with Multi-Factor Authentication (MFA) as any other privileged account should be as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)
+- Any user with [permissions](/azure/cost-management-billing/manage/understand-mca-roles#subscription-billing-roles-and-tasks) on an invoice section, billing profile, or billing account to create subscriptions must use multifactor authentication (MFA). This applies to all privileged accounts as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json).

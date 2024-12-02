@@ -3,7 +3,7 @@ title: Secure cloud-scale analytics in Azure
 description: Learn about the security principles for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 10/01/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -25,8 +25,9 @@ The focus of cloud-scale analytics is based on key management principles:
 | **Better clarity and enforceability of rules and definitions**| Clearly separate data to help keep the environment organized, while making it easy to enforce security rules and definitions. |
 
 > [!TIP]
-> When you deploy cloud-scale analytics, consider using these automation principles to enable security, as opposed to manually applying them. Ideally, a user should do manual interaction only to approve or deny an access request. For more information, see [Deployment templates for cloud-scale analytics deployment](./architectures/deployment-templates.md).
+> When deploying cloud-scale analytics, use automation principles to enable security instead of applying them manually. Ideally, you should only manually interact to approve or deny access requests.
 
 ## Next steps
 
-[Authentication for cloud-scale analytics in Azure](./secure-authentication.md)
+> [!div class="nextstepaction"]
+> [Authentication for cloud-scale analytics in Azure](./secure-authentication.md)

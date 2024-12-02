@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 08/06/2024
+ms.date: 10/04/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -13,6 +13,114 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## October 2024
+
+### New articles
+
+#### Azure VMware Solution and Global Reach
+
+- [Establish Cross-Tenant Network Connectivity for Azure VMware Solution SDDCs](../scenarios/azure-vmware/cross-tenant-network-connectivity.md): Learn how to establish cross-tenant network connectivity for Azure VMware Solution software-defined datacenters (SDDCs) using Azure Virtual WAN and network virtual appliances (NVAs). Explore connectivity options between SDDCs, Azure, and on-premises environments.
+- [Use a Dual-Region Azure VMware Solution Design That Has Virtual WAN and Global Reach](../scenarios/azure-vmware/dual-region-virtual-wan-global-reach.md): Learn best practices for deploying Azure VMware Solution in two regions by focusing on secure connectivity, traffic flows, and high availability using Azure Virtual WAN and Global Reach.
+- [Use a Dual-Region Azure VMware Solution Design That Doesn't Have Global Reach](../scenarios/azure-vmware/dual-region-virtual-wan-without-global-reach.md): Explore recommendations for network connectivity, traffic flows, high availability, and the configuration of various components like Virtual WAN hubs, Azure Firewalls, and routing intents.
+- [Secure Virtual WAN for Azure VMware Solution in a Single Region or in Dual Regions](../scenarios/azure-vmware/introduction-virtual-wan-azure-vmware-solution.md): Learn how to design secure Virtual WAN topologies for Azure VMware Solution in both single and dual-region scenarios. Learn about routing intent for traffic inspection and explore design considerations for deployments with and without Azure ExpressRoute Global Reach.
+- [Use a Single-Region Azure VMware Solution Design That Has Virtual WAN and Global Reach](../scenarios/azure-vmware/single-region-virtual-wan-global-reach.md): Explore best practices for configuring a secure Virtual WAN with routing intent and Azure ExpressRoute Global Reach for a single-region Azure VMware Solution. Find guidance on network connectivity, traffic flows, and the configuration of security solutions in the Virtual WAN hub.
+- [Use a Single-Region Azure VMware Solution Design That Doesn't Have Global Reach](../scenarios/azure-vmware/single-region-virtual-wan-without-global-reach.md): See recommendations for configuring a single-region Azure VMware Solution with secure Virtual WAN and routing intent without using Azure ExpressRoute Global Reach. Find guidance on network connectivity, traffic flows, and security considerations for Azure VMware Solution private clouds, on-premises sites, and Azure-native resources.
+
+#### New CAF Scenario: AI Adoption on Azure
+
+- [Establish an AI Center of Excellence](../scenarios/ai/center-of-excellence.md): Learn how to create and manage an AI Center of Excellence (AI CoE) to drive AI adoption within an organization. Find guidance on the importance of an AI CoE, defining its functions, building a cross-functional team, structuring operations, and ensuring ongoing monitoring and evolution of AI initiatives.
+- [Recommendations for organizations governing AI workloads in Azure](../scenarios/ai/govern.md): Learn best practices and recommendations for integrating AI risk management into broader risk management strategies, assessing organizational AI risks, documenting and enforcing AI governance policies, and monitoring AI risks.
+- [Recommendations for managing AI](../scenarios/ai/manage.md): Learn best practices for managing AI workloads in Azure, including AI operations, deployment, endpoint sharing, model management, cost management, data management, and business continuity. Explore the need for structured practices, continuous monitoring, and adherence to governance standards to ensure effective and reliable AI system management.
+- [Recommendations for organizations planning AI adoption](../scenarios/ai/plan.md): See guidance on integrating AI into an organization, including assessing and acquiring AI skills, accessing AI resources, prioritizing AI use cases, creating AI proofs of concept, implementing responsible AI practices, and estimating delivery timelines.
+- [Recommendations for organizations building AI workloads in Azure](../scenarios/ai/ready.md): Explore guidance on establishing reliability, governance, networking, and foundational infrastructure for AI workloads in Azure. Learn best practices for ensuring availability, managing costs, securing networks, and creating scalable environments.
+- [Recommendations for organizations securing AI workloads in Azure](../scenarios/ai/secure.md): Review guidelines on assessing AI security risks, implementing security controls for AI resources and data, and maintaining these controls through continuous monitoring and updates. Learn about the importance of protecting the confidentiality, integrity, and availability of AI models and data to prevent breaches and ensure compliance.
+- [Recommendations for organizations developing an AI adoption strategy](../scenarios/ai/strategy.md): Learn the latest guidance on identifying AI use cases, defining technology and data strategies, and ensuring responsible AI practices to effectively adopt AI within an organization.
+
+##### AI workloads on Azure infrastructure (IaaS)
+
+- [Compute recommendations](../scenarios/ai/infrastructure/compute.md): Learn how to select virtual machines, images, and orchestration solutions to optimize AI workloads on Azure. See recommendations for training and inferencing AI models, managing costs, and using containers for scalable AI solutions.
+- [Implementation options](../scenarios/ai/infrastructure/cycle-cloud.md): See recommendations for deploying AI workloads using Azure CycleCloud and Slurm. This article covers cluster creation, dynamic management, and infrastructure control, offering guidelines and architecture for efficient AI operations on Azure IaaS.
+- [Governance recommendations](../scenarios/ai/infrastructure/governance.md): Explore guidelines for managing resources, controlling costs, ensuring security, and maintaining operational consistency for AI workloads on Azure.
+- [Management recommendations](../scenarios/ai/infrastructure/management.md): Learn strategies for effectively managing AI workloads on Azure by emphasizing continuous monitoring, optimizing practices, and establishing robust backup and disaster recovery plans.
+- [Networking recommendations](../scenarios/ai/infrastructure/networking.md): Learn about how to network to optimize bandwidth, minimize latency, and implement high-performance networking for AI workloads on Azure. Explore strategies for resource placement, using proximity placement groups, and utilizing GPU-optimized VMs and InfiniBand for efficient data processing.
+- [Security recommendations](../scenarios/ai/infrastructure/security.md): Find guidance on securing Azure services, networks, data, access, and operating systems for AI workloads. Learn how to prioritize encryption, network security, access control, and incident response preparation.
+- [Storage recommendations](../scenarios/ai/infrastructure/storage.md): Learn how to use different storage options like Azure Managed Lustre, Azure NetApp Files, and local NVMe/SSD-based storage for active data, transferring inactive data to Azure Blob Storage, implementing checkpointing for model training, automating data migration to lower-cost storage tiers, ensuring data consistency, and enabling data versioning for reproducibility.
+
+##### AI workloads and Azure AI platform services (PaaS)
+
+- [AI architecture guidance to build AI workloads on Azure](../scenarios/ai/platform/architectures.md): This set of articles provides architecture guidance for building AI workloads on Azure using platform-as-a-service (PaaS) solutions, including references and guides for both generative and nongenerative AI architectures, as well as recommendations for AI resource selection, networking, governance, management, and security.
+- [Governance recommendations](../scenarios/ai/platform/governance.md): Find recommendations and best practices for managing, including AI model governance, cost control, platform policies, security measures, operational management, regulatory compliance, and data governance.
+- [Management recommendations](../scenarios/ai/platform/management.md): Learn best practices for deployment, model monitoring, operations, data management, and business continuity to ensure effective and secure AI operations.
+- [Networking recommendations](../scenarios/ai/platform/networking.md): Explore networking recommendations, including how to configure and secure virtual networks, manage connectivity, and implement strategies to protect sensitive AI resources and ensure data integrity and privacy.
+- [Resource selection recommendations](../scenarios/ai/platform/resource-selection.md): Find guidance on choosing the right Azure AI platform, compute resources, data sources, and processing tools for both generative and nongenerative AI applications.
+- [Security recommendations](../scenarios/ai/platform/security.md): Learn security recommendations covering topics such as securing AI resources, models, access, and execution to protect against potential threats and maintain data integrity and compliance.
+
+### Updated articles
+
+- We made updates to the Azure Landing Zone architecture diagram to reflect guidance for multi-region deployments:
+
+  - [Azure landing zones for modern application platforms](../scenarios/app-platform/ready.md)
+  - [Review your environment or Azure landing zone for an SAP enterprise-scale migration](../scenarios/sap/ready.md)
+
+- We refreshed the cloud-scale analytics documentation. These updates include modifications to reflect the latest product naming and guidance and to improve clarity and readability. Explore the following articles to learn more:
+
+  - [Development lifecycle](../ready/considerations/development-strategy-development-lifecycle.md)
+  - [What is a data mesh?](../scenarios/cloud-scale-analytics/architectures/what-is-data-mesh.md)
+  - [Key considerations for Azure Data Lake Storage](../scenarios/cloud-scale-analytics/best-practices/data-lake-key-considerations.md)
+  - [Azure Data Lake Storage](../scenarios/cloud-scale-analytics/best-practices/data-lake-overview.md)
+  - [Data lake zones and containers](../scenarios/cloud-scale-analytics/best-practices/data-lake-zones.md)
+  - [Data quality](../scenarios/cloud-scale-analytics/govern-data-quality.md)
+  - [Metadata standards](../scenarios/cloud-scale-analytics/govern-metadata-standards.md)
+  - [Requirements for governing data](../scenarios/cloud-scale-analytics/govern-requirements.md)
+  - [Cloud-scale analytics for regulated industries - Microsoft Cloud Adoption Framework for Azure](../scenarios/cloud-scale-analytics/index.md)
+  - [Introduction to cloud-scale analytics for regulated industries](../scenarios/cloud-scale-analytics/overview-cloud-scale-analytics.md)
+  - [Data privacy for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-data-privacy.md)
+  - [Azure Well-Architected Framework for data workloads](../scenarios/cloud-scale-analytics/well-architected-framework.md)
+
+- [Enterprise-scale support for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md): We made updates to the baseline architecture and guidance for Azure Virtual Desktop in the enterprise-scale landing zone.
+- [Inventory and visibility in Azure](../manage/azure-management-guide/inventory.md): We made updates to the guidance for Azure Monitor Agent.
+- [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md): We reviewed the Azure Update Manager guidance and refreshed the architecture diagram.
+
+## September 2024
+
+### Updated articles
+
+- [SAP on Azure landing zone accelerator](../scenarios/sap/enterprise-scale-landing-zone.md): We added guidance on best practices for zone resiliency.
+
+We reviewed and made updates to the following articles to reflect the latest product naming and guidance:
+
+- [Data catalog](../scenarios/cloud-scale-analytics/govern-data-catalog.md)
+- [Data lineage](../scenarios/cloud-scale-analytics/govern-lineage.md)
+- [Data quality](../scenarios/cloud-scale-analytics/govern-data-quality.md)
+- [Manage master data](../scenarios/cloud-scale-analytics/govern-master-data.md)
+- [Metadata standards](../scenarios/cloud-scale-analytics/govern-metadata-standards.md)
+
+We made updates to the following articles for clarity and accessibility:
+
+- [Adopt responsible and trusted AI principles](../strategy/responsible-ai.md)
+- [Business commitment in cloud management](../manage/considerations/commitment.md)
+- [Migrate Oracle workloads to Azure](../scenarios/oracle-iaas/oracle-migration-planning.md)
+- [Network connectivity for Azure Arc-enabled servers](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md)
+- [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md)
+
+## August 2024
+
+### Updated articles
+
+- [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
+- [Landing zone identity and access management](../ready/landing-zone/design-area/identity-access-landing-zones.md): Find new guidance about built-in and custom RBAC roles, least-privelage access, and conditions.
+- [Business commitment in cloud management](../manage/considerations/commitment.md): We updated the service-level agreement references to service-level objective references.
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Explore new updates about network security group rules and Oracle Data Safe.
+- [Business continuity and disaster recovery for an SAP migration](../scenarios/sap/eslz-business-continuity-and-disaster-recovery.md): Learn about the benefits of using Azure Backup to back up databases that have SAP HANA System Replication enabled.
+
+We made updates to the following articles for clarity:
+- [Network considerations for Azure VMware Solution dual-region deployments](../scenarios/azure-vmware/eslz-dual-region-network-topology.md)
+- [What is a data product?](../scenarios/cloud-scale-analytics/architectures/what-is-data-product.md)
+- [Cloud adoption scenarios](../scenarios/index.md)
+- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-iaas/oracle-landing-zone-accelerator.md)
+- [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
 
 ## July 2024
 
@@ -29,7 +137,7 @@ This month, we introduced new articles that have guidance for Red Hat Enterprise
 - [Resource organization for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/resource-organization.md): Learn key tactics for how to choose management groups and subscriptions that will help to ensure that you effectively govern and manage resources for your RHEL deployment.
 - [Security for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/security.md): See how you can design your security to target multiple areas to protect your RHEL systems. Learn how to create a secure and resilient cloud environment by implementing a strategic approach that applies both Azure and Red Hat security mechanisms.
 - [Management and monitoring for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/management-monitoring.md): Learn about best practices for effective management and monitoring in your RHEL on Azure infrastructure.
-- [Governance and compliance for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/governance-compliance.md): Learn about design considerations and recommendations for governance and compliance in a RHEL on Azure infrastructure. Discover key tactics for establishing efficient and effective governance and compliance in a cloud environment.
+- [Governance and compliance for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/governance-compliance.md): Learn about design considerations and recommendations for governance and compliance in an RHEL on Azure infrastructure. Discover key tactics for establishing efficient and effective governance and compliance in a cloud environment.
 - [Platform automation for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/platform-automation-devops.md): Learn about the tools, features, and services you can use to automate various tasks and manage the RHEL lifecycle within your Azure environment. Discover how to implement automation to improve the efficiency and reliability of your RHEL on Azure infrastructure.
 
 #### Oracle
@@ -218,7 +326,7 @@ Find new articles about Azure landing zones in the Ready methodology.
 
 - [Cloud adoption scenarios](../scenarios/index.md): Extensive revisions help you find scenarios that are relevant to your organization's cloud adoption journey.
 - [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): Find updates about the data-collection and alert-processing rules.
-- [Zero trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): Review a new multitenant architecture diagram and information about Microsoft Entra ID Protection.
+- [Zero Trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): Review a new multitenant architecture diagram and information about Microsoft Entra ID Protection.
 - [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md): Explore updates related to ExpressRoute.
 - [Manufacturing HPC storage in Azure](../scenarios/azure-hpc/manufacturing/storage.md): Learn about updates related to Azure Managed Lustre.
 
@@ -306,68 +414,5 @@ This new article describes how to meet digital sovereignty requirements when you
 - [Sovereignty considerations for Azure landing zones](../ready/landing-zone/sovereign-landing-zone.md)
 
 - [Azure landing zone FAQ](../ready/enterprise-scale/faq.md)
-
-## October 2023
-
-### HPC baseline computing
-
-HPC baseline computing updates and new articles describe the benefits of Azure HPC OnDemand Platform (AzHop), compare the features of Azure Batch and Azure CycleCloud, and provide a large-scale HPC architecture for the finance industry.
-
-- [Azure landing zone for HPC](../scenarios/azure-hpc/ready.md)
-
-- [Finance HPC Azure identity and access management](../scenarios/azure-hpc/finance/identity-access-management.md)
-- [Run large-scale HPC application workloads for the finance industry on Azure virtual machines](../scenarios/azure-hpc/finance/compute.md)
-- [Big compute in the manufacturing industry](../scenarios/azure-hpc/manufacturing/compute.md)
-
-### Brownfield alignment scenarios
-
-This series starts with an introduction that describes recommendations for transitioning an existing Azure environment into an Azure landing zone conceptual architecture. It includes considerations for moving resources and subscriptions. There are four distinct articles that describe transitioning scenarios based on the existing Azure environment. The final article provides guidance about maintaining a cloud environment over time.
-
-- [Transition an existing Azure environment to the Azure landing zone conceptual architecture](../ready/enterprise-scale/transition.md)
-- [Scenario: Transition a single subscription with no management groups to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenario-single-subscription.md)
-- [Scenario: Transition management groups to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenario-multiple-management-groups.md)
-- [Scenario: Transition a regional organization environment to the Azure landing zone conceptual architecture](../ready/landing-zone/align-scenario-regional-org.md)
-- [Scenario: Transition an environment by duplicating a landing zone management group](../ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md)
-- [Journey toward the target architecture](../ready/landing-zone/landing-zone-journey.md)
-
-### Updated CAF Azure regions decision guide
-
-Learn how to [select Azure regions for your cloud footprint](../ready/azure-setup-guide/regions.md) by considering the characteristics of each region, like availability zones, region pairs, available services, and nonfunctional requirements, like region proximity and capacity. We’ve also provided new guidance about operating across multiple Azure regions. As part of this change, we simplified the [guidance about selecting Azure regions for migrations](../migrate/azure-best-practices/multiple-regions.md).
-
-### Network topology and connectivity for Azure Virtual Desktop
-
-The [updates to the Network topology and connectivity for Azure Virtual Desktop article](../scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity.md) describe two new scenarios to help you understand how to manage network topology and connectivity at scale in Azure Virtual Desktop. The first scenario describes a hub-and-spoke architecture with hybrid connectivity over managed networks. The second scenario describes a hub-and-spoke architecture with public networks. Both scenarios use Remote Desktop Protocol Shortpath (RDP Shortpath).
-
-## September 2023
-
-### Plan for IP addressing
-
-This article was updated with relevant information about IPv4 exhaustion and IPAM (IP address management) tools.
-
-- [Plan for IP addressing](../ready/azure-best-practices/plan-for-ip-addressing.md).
-
-### Guidance for documenting and deploying alerts
-
-To support the imminent general availability of Azure Monitor baseline alerts for an Azure landing zone, we have created Cloud Architecture Framework documentation about baseline alerts. Find out what baseline alerts are and where to go for more information about how to enhance your Azure platform by using Azure Monitor alerts.
-
-- [Monitor Azure platform landing zone components](../ready/landing-zone/design-area/management-monitor.md)
-
-- [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md)
-
-### Azure VMware Solution network design guides
-
-These guides describe the Microsoft-recommended approach to help you design network connectivity for Azure VMware Solution private clouds. They explore four design areas: connectivity with on-premises sites, connectivity with Azure virtual networks, inbound internet connectivity, and outbound internet connectivity. Each design area is covered in a dedicated article, which presents architectural options, including their pros and cons. There are also two articles that cover the basics of Azure VMware Solution networking and guidance on how to prioritize requirements and related design areas.
-
-- [Azure VMware Solution network design guide](../scenarios/azure-vmware/network-design-guide-intro.md)
-
-- [Azure VMware Solution network design guide: Inbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity.md)
-
-- [Azure VMware Solution network design guide: Networking basics](../scenarios/azure-vmware/azure-vmware-solution-network-basics.md)
-
-- [Azure VMware Solution network design guide: Outbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-outbound-connectivity.md)
-
-- [Azure VMware Solution network design guide: Connectivity with on-premises sites](../scenarios/azure-vmware/on-premises-connectivity.md)
-
-- [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](../scenarios/azure-vmware/virtual-network-connectivity.md)
 
 <!-- docutune:ignoreNextStep -->

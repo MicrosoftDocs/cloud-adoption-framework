@@ -5,10 +5,7 @@ author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
-ms.custom: 
-  - think-tank
-  - e2e-oracle
-  - engagement-fy24
+ms.custom: e2e-oracle
 --- 
 
 # Plan for Oracle on Azure

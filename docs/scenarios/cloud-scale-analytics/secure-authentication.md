@@ -84,7 +84,7 @@ Cloud-scale analytics probably contains polyglot storage. Examples include Postg
 We recommend that you use Microsoft Entra groups to secure database objects instead of individual Microsoft Entra user accounts. Use these Microsoft Entra groups to authenticate users and protects database objects. Similar to the data lake pattern, you could use your data application onboarding to create these groups.
 
 > [!NOTE]
-> Data applications can store sensitive data products in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Sensitive data](./secure-data-privacy.md#sensitive-data-personal-data).
+> Data applications can store sensitive data products in Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Data privacy for cloud-scale analytics in Azure](./secure-data-privacy.md).
 
 ## Azure Data Lake security in cloud-scale analytics
 
@@ -96,7 +96,7 @@ Similar to Azure RBAC general practices, the following rules should apply to ACL
 
 - **Least privilege.** In most cases, users should have only read permission to the folders and files they need in the data lake. A managed identity or service principal, such as the one used by Azure Data Factory, has read, write, and execute permissions. Data users shouldn't have access to the storage account container.
 
-- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. For more information, see [[Data lake partitioning](../cloud-scale-analytics/architectures/data-standardization.md#data-lake-partitioning)].
+- **Align with data partitioning scheme.** ACL and data partition design must align to ensure effective data access control. For more information, see [Data lake partitioning](../cloud-scale-analytics/architectures/data-standardization.md#data-lake-partitioning).
 
 ## Next steps
 

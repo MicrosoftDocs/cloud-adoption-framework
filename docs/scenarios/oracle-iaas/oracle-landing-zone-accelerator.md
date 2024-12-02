@@ -5,9 +5,7 @@ author: jfaurskov
 ms.author: janfaurs
 ms.date: 08/02/2024
 ms.topic: conceptual
-ms.service: azure-cloud-adoption-framework
-ms.subservice: scenario
-ms.custom: think-tank
+ms.custom: e2e-oracle
 ---
 
 # Oracle on Azure IaaS landing zone accelerator

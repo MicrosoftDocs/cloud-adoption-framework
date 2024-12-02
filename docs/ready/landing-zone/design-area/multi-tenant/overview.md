@@ -3,7 +3,7 @@ title: Azure landing zones and multiple Microsoft Entra tenants
 description: Learn how multiple Microsoft Entra tenants work within the context of Azure landing zones and the benefits of using a single tenant.
 author: jtracey93
 ms.author: jatracey
-ms.date: 01/16/2023
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -32,8 +32,8 @@ Your organization might be required to use multiple Microsoft Entra tenants for 
 >
 > It focuses on [the platform rather than applications](../../index.md#platform-landing-zones-vs-application-landing-zones) that are built on top of the platform in tenants. For information about multiple Microsoft Entra tenants and application architecture, see:
 >
-> - [Multi-tenant apps in Microsoft Entra ID](/azure/active-directory/develop/application-model#multi-tenant-apps)
-> - [Architect multi-tenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
+> - [Multitenant apps in Microsoft Entra ID](/azure/active-directory/develop/application-model#multi-tenant-apps)
+> - [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
 
 <a name='why-a-single-azure-active-directory-tenant-is-sufficient'></a>
 
@@ -53,12 +53,12 @@ With Microsoft 365, the corporate Microsoft Entra tenant is generally the first 
 
 ### Complexities with multiple Microsoft Entra tenants
 
-When you create a new Microsoft Entra tenant, it requires extra work to provision, manage, secure, and govern the identities. You must also establish the required policies and procedures. Collaboration is best in a single Microsoft Entra tenant. Moving to a multi-tenant model creates a boundary, which can result in user friction, management overhead, and increase the attack surface area, which can cause a security risk and complicates product scenarios and limitations. Some examples include:
+When you create a new Microsoft Entra tenant, it requires extra work to provision, manage, secure, and govern the identities. You must also establish the required policies and procedures. Collaboration is best in a single Microsoft Entra tenant. Moving to a multitenant model creates a boundary, which can result in user friction, management overhead, and increase the attack surface area, which can cause a security risk and complicates product scenarios and limitations. Some examples include:
 
-- **Multiple identities for users and administrators for each tenant** – If [Microsoft Entra B2B](/azure/active-directory/external-identities/what-is-b2b) isn’t used, the user has multiple sets of credentials to manage. For more information, see [Considerations and recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md).
+- **Multiple identities for users and administrators for each tenant** – If [Microsoft Entra B2B](/azure/active-directory/external-identities/what-is-b2b) isn’t used, the user has multiple sets of credentials to manage. For more information, see [Considerations and recommendations for multitenant Azure landing zone scenarios](considerations-recommendations.md).
 - **Azure services limitations in supporting multiple Microsoft Entra tenants** – Azure workloads that only support identities homed in the tenant to which it's bound to. For more information, see [Azure products and services Microsoft Entra integration](considerations-recommendations.md#azure-products-and-services-azure-active-directory-integration).
 - **No centralized configuration or management for Microsoft Entra tenants** – Multiple security policies, management policies, configuration, portals, APIs, and JML (joiners, movers, and leavers) processes.
-- **Billing and licensing complexities and potential requirement for license duplication for Microsoft Entra ID P1 or P2 licenses** - For more information, see [Considerations and recommendations for multi-tenant Azure landing zone scenarios](considerations-recommendations.md).
+- **Billing and licensing complexities and potential requirement for license duplication for Microsoft Entra ID P1 or P2 licenses** - For more information, see [Considerations and recommendations for multitenant Azure landing zone scenarios](considerations-recommendations.md).
 
 Organizations need to be clear about why they're deviating from the corporate Microsoft Entra tenant model to ensure the extra overhead and complexity is justified in meeting the requirements. There are examples of these instances in the [scenarios article](scenarios.md).
 
@@ -73,11 +73,10 @@ Microsoft Entra ID provides controls that help mitigate this problem on a techni
 
 >[!IMPORTANT]
 > Multiple Microsoft Entra tenants **are not the recommended** approach for most customers. A single Microsoft Entra tenant, typically the corporate Microsoft Entra tenant, is recommended for most customers because it provides the necessary separation requirements.
-> 
+>
 > For more information, see:
-> 
+>
 > - [Define Microsoft Entra tenants](../azure-ad-define.md)
-> - [Architecture: Standardize on a single directory and identity](../../../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
 > - [Testing approach for Azure landing zones](../../../enterprise-scale/testing-approach.md)
 > - [Introduction to delegated administration and isolated environments](/azure/active-directory/fundamentals/secure-with-azure-ad-introduction)
 > - [Resource isolation in a single tenant](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant)

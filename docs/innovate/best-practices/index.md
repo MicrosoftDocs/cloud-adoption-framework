@@ -17,7 +17,7 @@ Azure can help accelerate the development of each area of digital invention. Thi
 
 There are many combinations of cloud-based tools for digital invention and innovation within Azure. The following image shows an overview of how different digital invention tools align to each type of innovation.
 
-![Diagram that shows the Cloud Adoption Framework innovate toolchain.](../../_images/innovate/innovate-toolchain.png)
+[ ![Diagram that shows the Cloud Adoption Framework innovate toolchain.](../../_images/innovate/innovate-toolchain.png) ](../../_images/innovate/innovate-toolchain.png#lightbox)
 
 ## Toolchain
 

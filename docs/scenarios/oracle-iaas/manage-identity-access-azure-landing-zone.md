@@ -6,10 +6,7 @@ ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 08/31/2023
 ms.topic: conceptual
-ms.custom: 
-  - think-tank
-  - e2e-oracle
-  - engagement-fy24
+ms.custom: e2e-oracle
 --- 
 
 # Manage identity and access for Oracle on Azure Virtual Machines landing zone

@@ -88,6 +88,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
+| Azure Arc private link scope | `Microsoft.HybridCompute/privateLinkScopes` | `pls` |
 | Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
 | Communication Services | `Microsoft.Communication/communicationServices` | `acs` |
@@ -220,6 +221,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
+| ExpressRoute direct | `Microsoft.Network/expressRoutePorts` | `erd` |
 | ExpressRoute gateway | `Microsoft.Network/virtualNetworkGateways` | `ergw` |
 | Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `afd` |
 | Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |

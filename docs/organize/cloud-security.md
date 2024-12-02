@@ -43,7 +43,7 @@ You can learn more about each function from the following articles. They include
 
 ## Roles and responsibilities
 
-Security roles and responsibilities are referenced throughout Microsoft documentation, including the [Azure Security Benchmark](/security/benchmark/azure/), [rapid modernization plan to secure privileged access](/security/compass/security-rapid-modernization-plan), and [Azure security best practices](../secure/security-top-10.md).
+Security roles and responsibilities are referenced throughout Microsoft documentation, including the [Azure Security Benchmark](/security/benchmark/azure/), [rapid modernization plan to secure privileged access](/security/compass/security-rapid-modernization-plan), and [Azure security best practices](../secure/overview.md).
 
 The following diagram depicts how these functions map to role types within an organization:
 
@@ -62,7 +62,7 @@ In the diagram, responsibilities are organized into typical roles that have comm
 - **Security posture and compliance:** A newer role type that represents the convergence of compliance reporting with traditional security disciplines like vulnerability management and configuration baselines. While the scope and audience are different for security and compliance reporting, they both measure the security of the organization. The way that question is answered is growing more similar via tools like [Microsoft Secure Score](https://www.microsoft.com/security/business/microsoft-secure-score) and [Microsoft Defender for Cloud](https://azure.microsoft.com/services/defender-for-cloud):
   - The use of on-demand data feeds from cloud services reduces the time required to report compliance.
   - The increased scope of data available is enabling security governance to look beyond traditional software updates and discover vulnerabilities from security configurations and operational practices.
-- **Platform security engineer:** These technology roles focus on platforms that host multiple workloads&mdash;both access control and asset protection. These roles are often grouped into teams with specialized technical skill sets including network security, infrastructure and endpoints, identity and key management, and others. These teams work on both preventive controls and detective controls, with detective controls being a partnership with SecOps and preventive controls being primarily a partnership with IT operations. For more information, see [Security integration](../secure/security-integration.md).
+- **Platform security engineer:** These technology roles focus on platforms that host multiple workloads&mdash;both access control and asset protection. These roles are often grouped into teams with specialized technical skill sets including network security, infrastructure and endpoints, identity and key management, and others. These teams work on both preventive controls and detective controls, with detective controls being a partnership with SecOps and preventive controls being primarily a partnership with IT operations. For more information, see [Security integration](../secure/strategy.md).
 - **Application security engineer:** These technology roles focus on security controls for specific workloads, supporting both classic development models and modern DevOps/DevSecOps model. They blend application/development security skills for unique code and infrastructure skills for common technical components like VMs, databases, and containers. These roles can be located in central IT or security organizations or within business and development teams, depending on organizational factors.
 
 > [!NOTE]
@@ -70,4 +70,4 @@ In the diagram, responsibilities are organized into typical roles that have comm
 
 ## Next steps
 
-Learn more about [security in the Microsoft Cloud Adoption Framework](../secure/index.md).
+Learn more about [security in the Microsoft Cloud Adoption Framework](../secure/overview.md).

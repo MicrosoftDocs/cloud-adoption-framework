@@ -163,8 +163,6 @@ Consider and implement the following recommendations when planning for Azure VMw
 
 - **Data retention and residency requirements:** Azure VMware Solution doesn't support retention or extraction of data stored in clusters. Deleting a cluster terminates all running workloads and components, and destroys all cluster data and configuration settings, including public IP addresses. This data can't be recovered.
 
-   Azure VMware Solution doesn't guarantee that all metadata and configuration data for running the service exists only in the deployed geographical region. If your data residency requirements require all data to exist in the deployed region, contact Azure VMware Solution support for assistance.
-
 - **Data processing:** Read and understand the legal terms when you sign up. Pay attention to the [VMware data processing agreement for Microsoft Azure VMware Solution customers transferred for L3 support](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/privacy/vmware-data-processing-agreement.pdf). If a support issue needs VMware support, Microsoft shares professional service data and associated personal data with VMware. From that point on, Microsoft and VMware act as two independent data processors.
 
 ## Next steps

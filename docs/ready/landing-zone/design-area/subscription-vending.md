@@ -102,7 +102,7 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-re
 
 **Use production and non-production subscriptions.** In the request for a new subscription, you must specify whether the workload is for Production or DevTest. DevTest environments result in lower resource charges but have other [terms](https://azure.microsoft.com/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
 
-- [Azure billing offers and Active Directory tenants](./azure-billing-ad-tenant.md)
+- [Azure billing offers and Microsoft Entra tenants](./azure-billing-microsoft-entra-tenant.md)
 - [Resource organization design area overview](./resource-org.md)
 - [Create Azure subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
 

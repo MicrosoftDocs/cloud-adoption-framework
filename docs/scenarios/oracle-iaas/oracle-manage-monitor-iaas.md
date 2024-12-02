@@ -6,10 +6,7 @@ ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 07/27/2023
 ms.topic: conceptual
-ms.custom: 
-  - think-tank
-  - e2e-oracle
-  - engagement-fy24
+ms.custom: e2e-oracle
 ---
 
 # Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator

@@ -6,6 +6,7 @@ ms.author: anthdela
 ms.reviewer: janfaurs
 ms.date: 08/01/2024
 ms.topic: conceptual
+ms.custom: e2e-oracle
 ---
 
 # Manage and monitor Oracle Database@Azure
@@ -59,7 +60,7 @@ Set alerts in your monitoring solution for critical workloads. If you use Azure 
 | Oracle Cloud Infrastructure (OCI) Database Cluster Memory Utilization                | 5 minutes                                               | 90%                            | The amount of memory that the Exadata Database clusters consume. |
 | Average Node Status                                    | 5 minutes                                               | 0 (this dimension means false) | Whether the Exadata Database cluster node within the cluster is available or unavailable. |
 
-For more information, see [Oracle Cloud Database metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html).
+For more information, see [Oracle Cloud Database metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-cloudvmclusters-metrics).
 
 ## Next steps
 

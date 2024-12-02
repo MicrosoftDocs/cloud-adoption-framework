@@ -60,7 +60,7 @@ Identify the right balance between costs and features such as [high resiliency a
 - A single VM might have an SLA with a guaranteed uptime of 99.9%.
 - Two VMs running the same workload would provide an SLA with an uptime between 99.95 and 99.99 percent.
 
-Engage in the essential process of *requirements engineering* when designing a cloud-based solution. Use an [SLA estimator](https://github.com/mspnp/samples/tree/master/Reliability/SLAEstimator) to help calculate your application's end-to-end SLA.
+Engage in the essential process of *requirements engineering* when designing a cloud-based solution.
 
 ## Antipattern: Become a cloud provider
 

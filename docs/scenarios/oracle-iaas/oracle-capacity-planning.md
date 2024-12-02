@@ -5,7 +5,7 @@ author: Jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
 ms.topic: conceptual
-ms.custom: UpdateFrequency2
+ms.custom: UpdateFrequency2, e2e-oracle
 ---
 
 # Capacity planning for migrating Oracle workloads to Azure

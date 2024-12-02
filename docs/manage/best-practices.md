@@ -17,7 +17,7 @@ Cloud adoption is a catalyst for enabling business value. However, real business
 Modern operations management solutions create a multicloud view of operations. Assets managed through the following best practices may live in the cloud, in an existing datacenter, or even in a competing cloud provider. Currently, the framework includes two best-practices references to guide operations management maturity in the cloud:
 
 - [Azure server management](./azure-server-management/index.md): An onboarding guide to incorporating the cloud-native tools and services needed to manage operations.
-- [Hybrid monitoring](./monitor/index.md): Many customers have already made a substantial investment in System Center Operations Manager. For those customers, this guide to hybrid monitoring can help them compare and contrast the cloud-native reporting tools with Operations Manager tooling. This comparison makes it easier to decide which tools to use for operational management.
+- [Hybrid monitoring](./monitor/monitoring.md): Many customers have already made a substantial investment in System Center Operations Manager. For those customers, this guide to hybrid monitoring can help them compare and contrast the cloud-native reporting tools with Operations Manager tooling. This comparison makes it easier to decide which tools to use for operational management.
 
 ## Cloud operations
 

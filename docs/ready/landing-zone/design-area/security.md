@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency.5
 
 # Design area: Security
 
-This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Secure methodology](../../../secure/index.md) of the Cloud Adoption Framework.
+This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Secure methodology](../../../secure/overview.md) of the Cloud Adoption Framework.
 
 ## Design area review
 
@@ -18,19 +18,18 @@ This design area creates a foundation for security across your Azure, hybrid, an
 
 **Scope:** The goal of this exercise is to understand security requirements and implement them consistently across all workloads in your cloud platform. The primary scope of this exercise focuses on security operations tooling and access control. This scope includes Zero Trust and advanced network security.
 
-**Out of scope:** This exercise focuses on the foundation for a modern security operations center in the cloud. To streamline the conversation, this exercise doesn't address some of the disciplines in the [CAF Secure methodology](../../../secure/index.md). Security operations, asset protection, and innovation security will build on your Azure landing zone deployment. However, they're out of scope for this design area discussion.
+**Out of scope:** This exercise focuses on the foundation for a modern security operations center in the cloud. To streamline the conversation, this exercise doesn't address some of the disciplines in the [CAF Secure methodology](../../../secure/overview.md). Security operations, asset protection, and innovation security will build on your Azure landing zone deployment. However, they're out of scope for this design area discussion.
 
 ## Design area overview
 
 Security is a core consideration for all customers, in every environment. When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
 
-The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/index.md) of the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
+The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/overview.md) of the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
 
 **New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
 
 **Existing (brownfield) cloud environment:** Consider using the following [Microsoft Entra](https://www.microsoft.com/security/business/microsoft-entra) identity and access services if you are interested in applying the principles from security design area to existing Azure environments:
 
-- Make use of Microsoft's [top 10 Azure security best practices](../../../secure/security-top-10.md). This guidance summarizes field-proven guidance from Microsoft cloud solution architects (CSAs) as well as Microsoft Partners.
 - Deploy [Microsoft Entra Connect cloud sync](/azure/active-directory/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Microsoft Entra ID-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Microsoft Entra multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [Microsoft Entra Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to further protect these identities
 - Consider [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) to provided secure authentication to your cloud apps and Azure resources.
 - Implement [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
@@ -65,7 +64,7 @@ An organization must have visibility into what's happening within their technica
 | Security logs |- Data retention periods for audit data. Microsoft Entra ID P1 or P2 reports have a 30-day retention period. <br> - Long-term archiving of logs like Azure activity logs, virtual machine (VM) logs, and platform as a service (PaaS) logs.|
 | Security controls| - Baseline security configuration via Azure in-guest VM policy. <br> - Consider how your security controls will align with governance guardrails. |
 | Vulnerability management | - Emergency patching for critical vulnerabilities. <br> - Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
-| Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](../../../secure/security-operations.md). |
+| Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](../../../secure/overview.md). |
 | Encryption and keys | - Who requires access to keys in the environment? <br> - Who will be responsible for managing the keys? <br> - Explore [encryption and keys further](./encryption-and-keys.md). |
 | Attestation | - Will you use Trusted Launch for your VMs, and do you need attestation of the integrity of the entire boot chain of your VM (UEFI, OS, system, and drivers)? <br> - Do you want to take advantage of confidential disk encryption for your confidential VMs? <br> - Do your workloads require attestation that they're running inside a trusted environment? |
 
@@ -128,7 +127,7 @@ Implementing Zero Trust can go beyond just identity and access management. You s
 
 - Align your security requirements with Azure platform roadmaps to stay current with newly released security controls.
 
-- Implement a [zero-trust approach for access](../../../secure/access-control.md) to the Azure platform where appropriate.
+- Implement a [zero-trust approach for access](/security/zero-trust/deploy/identity) to the Azure platform where appropriate.
 
 ## Security in the Azure landing zone accelerator
 

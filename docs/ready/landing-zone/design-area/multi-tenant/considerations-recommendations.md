@@ -1,14 +1,14 @@
 ---
-title: Considerations and recommendations for multi-tenant Azure landing zone scenarios
+title: Considerations and recommendations for multitenant Azure landing zone scenarios
 description: Learn about the considerations and recommendations when handling multiple Microsoft Entra tenants with Azure landing zones.
 author: jtracey93
 ms.author: jatracey
-ms.date: 01/16/2023
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
 
-# Considerations and recommendations for multi-tenant Azure landing zone scenarios
+# Considerations and recommendations for multitenant Azure landing zone scenarios
 
 The article, [Azure landing zones and multiple Microsoft Entra tenants](overview.md), describes how management groups and Azure Policy and subscriptions interact and operate with Microsoft Entra tenants. The article describes the limitation of these resources when they operate within a single Microsoft Entra tenant. Under these conditions, if multiple Microsoft Entra tenants exist, or are required for an organization, the Azure landing zones must be deployed into each of the Microsoft Entra tenants separately.
 
@@ -41,9 +41,9 @@ The Contoso Corporation has a separate Microsoft Entra tenant for the sole purpo
 >[!NOTE]
 > Azure landing zones are deployed within a single Microsoft Entra tenant. If you have multiple Microsoft Entra tenants that you want to deploy Azure resources within, and you want to control, govern, and monitor them by using Azure landing zones, you must deploy Azure landing zones within each of those tenants individually.
 
-## Considerations and recommendations for Azure landing zones in multi-tenant scenarios
+## Considerations and recommendations for Azure landing zones in multitenant scenarios
 
-This section explains key considerations and recommendations about Azure landing zones and Microsoft Entra multi-tenant scenarios and usage.
+This section explains key considerations and recommendations about Azure landing zones and Microsoft Entra multitenant scenarios and usage.
 
 ### Considerations
 
@@ -61,10 +61,10 @@ This section explains key considerations and recommendations about Azure landing
 - Consider the increase in licensing costs when multiple Microsoft Entra tenants are used. Licenses for products like Microsoft Entra ID P1 or P2 or Microsoft 365 services don't span across Microsoft Entra tenants.
 - A single Enterprise Agreement enrollment can support and provide subscriptions to multiple Microsoft Entra tenants by setting the authentication level on the enrollment to work and school account cross-tenant. For more information, see [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant).
 - A single Microsoft Customer Agreement can support and provide subscriptions to multiple Microsoft Entra tenants. For more information, see [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants).
-- When opting for a Microsoft Entra multi-tenant architecture, consider the limitations that might occur for application teams and developers. Be aware of limitations in Microsoft Entra integration for Azure products and services, such as Azure Virtual Desktop, Azure Files, and Azure SQL. For more information, see the [Azure products and services Microsoft Entra integration](#azure-products-and-services-azure-active-directory-integration) section in this article.
+- When opting for a Microsoft Entra multitenant architecture, consider the limitations that might occur for application teams and developers. Be aware of limitations in Microsoft Entra integration for Azure products and services, such as Azure Virtual Desktop, Azure Files, and Azure SQL. For more information, see the [Azure products and services Microsoft Entra integration](#azure-products-and-services-azure-active-directory-integration) section in this article.
 - Consider using [Microsoft Entra B2B](/azure/active-directory/external-identities/what-is-b2b) to simplify and enhance user experience and administration when your organization has multiple Microsoft Entra tenants.
-- Consider using the Microsoft identity platform, with Microsoft Entra ID with B2B and B2C capabilities, so developers can create applications in a single Azure subscription and within a single tenant. This method supports users from many identity sources. For more information, see [Multi-tenant apps](/azure/active-directory/develop/application-model#multi-tenant-apps) and [Architect multi-tenant solutions on Azure](/azure/architecture/guide/multitenant/overview).
-- Consider using the features available for multi-tenant organizations. For more information, see [What is a multi-tenant organization in Microsoft Entra ID](/azure/active-directory/multi-tenant-organizations/overview).
+- Consider using the Microsoft identity platform, with Microsoft Entra ID with B2B and B2C capabilities, so developers can create applications in a single Azure subscription and within a single tenant. This method supports users from many identity sources. For more information, see [multitenant apps](/azure/active-directory/develop/application-model#multi-tenant-apps) and [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview).
+- Consider using the features available for multitenant organizations. For more information, see [What is a multitenant organization in Microsoft Entra ID](/azure/active-directory/multi-tenant-organizations/overview).
 - Consider [keeping your Azure landing zone up to date](../../../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md).
 
 <a name='azure-products-and-services-azure-active-directory-integration'></a>
@@ -87,9 +87,9 @@ For more information, see [Resource isolation in a single tenant](/azure/active-
 
 - Use a single Microsoft Entra tenant, which is usually the corporate Microsoft Entra tenant. Only create more Microsoft Entra tenants when there are requirements that can't be met by using the corporate Microsoft Entra tenant.
 - Use sandbox subscriptions to provide application teams safe, controlled, and isolated development environments within the same single Microsoft Entra tenant. For more information, see [How to handle "dev/test/production" workload landing zones in Azure landing zone architecture](https://aka.ms/alz/dtp).
-- Use Microsoft Entra multi-tenant applications when you create integrations from operational tooling, such as ServiceNow, and connect them to multiple Microsoft Entra tenants. For more information, see [Best practices for all isolation architectures](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools).
+- Use Microsoft Entra multitenant applications when you create integrations from operational tooling, such as ServiceNow, and connect them to multiple Microsoft Entra tenants. For more information, see [Best practices for all isolation architectures](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools).
 - If you're an ISV, see [Independent software vendor (ISV) considerations for Azure landing zones](../../isv-landing-zone.md).
-- Use Azure Lighthouse to simplify cross-tenant management experiences. For more information, see [Azure Lighthouse usage in Azure landing zones multi-tenant scenarios](lighthouse.md).
+- Use Azure Lighthouse to simplify cross-tenant management experiences. For more information, see [Azure Lighthouse usage in Azure landing zones multitenant scenarios](lighthouse.md).
 - On your Enterprise Agreement enrollments or Microsoft Customer Agreements that are homed in the destination Microsoft Entra tenant, create account owners, invoice section owners, and subscription creators. Assign the owners and creators to the subscriptions they create to avoid having to [change directories on Azure subscriptions](/azure/role-based-access-control/transfer-subscription) once created. For more information, see [Add an account from another Microsoft Entra tenant](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant) and [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants).
 - See the [Microsoft Entra security operations guide](/azure/active-directory/fundamentals/security-operations-introduction).
 - Keep the number of Global Administrator accounts to a minimum, less than 5 is preferred.
@@ -98,16 +98,16 @@ For more information, see [Resource isolation in a single tenant](/azure/active-
 - Enable monitoring and notifications to all required stakeholders about the Global Administrator role activation.
 - Ensure that the "Access management for Azure resources" setting on Global Administrators is set to **No** where it's not required.
 [!INCLUDE [global administrator warning](../../../../includes/global-admin-warning.md)]
-- Enable and configure the following Microsoft Entra services and features to simplify the multi-tenant experience for administration and users within your organization:
+- Enable and configure the following Microsoft Entra services and features to simplify the multitenant experience for administration and users within your organization:
   - [B2B collaboration](/azure/active-directory/external-identities/what-is-b2b)
   - [B2B direct connect](/azure/active-directory/external-identities/b2b-direct-connect-overview)
   - [Cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview)
   - [Cross-tenant synchronization](/azure/active-directory/multi-tenant-organizations/cross-tenant-synchronization-overview)
-  - [Multitenant Organization (Preview)](/entra/identity/multi-tenant-organizations/multi-tenant-organization-overview)
-- For organizations with a Microsoft Entra tenant in multiple Microsoft clouds, like Microsoft Azure Commercial cloud, Microsoft Azure China 21Vianet, Microsoft Azure Government, configure [Microsoft cloud settings for B2B collaboration (preview)](/entra/external-id/cross-cloud-settings) to simplify user's experiences when collaborating across tenants.
+  - [Multitenant Organization](/entra/identity/multi-tenant-organizations/multi-tenant-organization-overview)
+- For organizations with a Microsoft Entra tenant in multiple Microsoft clouds, like Microsoft Azure Commercial cloud, Microsoft Azure China 21Vianet, Microsoft Azure Government, configure [Microsoft cloud settings for B2B collaboration](/entra/external-id/cross-cloud-settings) to simplify user's experiences when collaborating across tenants.
 - Application teams and developers should review the following resources when constructing applications and services for multi-tenancy:
-  - [Multi-tenant apps in Microsoft Entra ID](/azure/active-directory/develop/application-model#multi-tenant-apps)
-  - [Architect multi-tenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
+  - [multitenant apps in Microsoft Entra ID](/azure/active-directory/develop/application-model#multi-tenant-apps)
+  - [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
 
 ## Next steps
 

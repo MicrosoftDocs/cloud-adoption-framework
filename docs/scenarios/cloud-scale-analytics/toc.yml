@@ -72,8 +72,6 @@ items:
       href: ./secure-analytics-role-based-access-control.md
     - name: Data privacy
       href: ./secure-data-privacy.md
-    - name: Data access management
-      href: ./security-provisioning.md
 
   - name: Organize people and teams
     items:
@@ -185,8 +183,6 @@ items:
         items:
         - name: Overview
           href: ./best-practices/data-ingestion.md
-        - name: SAP data ingestion
-          href: ./best-practices/sap-data-ingestion.md
         - name: Data agnostic ingestion engine
           href: ./best-practices/automated-ingestion-pattern.md
       - name: Data lake implementation
@@ -197,8 +193,6 @@ items:
           href: best-practices/data-lake-zones.md
         - name: Data lake key considerations
           href: ./best-practices/data-lake-key-considerations.md
-        - name: Managing data lake access
-          href: ./best-practices/data-lake-access.md
       - name: Azure Databricks implementation
         href: ./best-practices/azure-databricks-implementation.md
       - name: Azure Synapse Analytics implementation

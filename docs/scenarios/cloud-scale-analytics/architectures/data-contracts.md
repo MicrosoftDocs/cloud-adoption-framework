@@ -111,8 +111,6 @@ The following steps outline the process of implementing data contracts for your 
 
 Data contracts are a relatively new yet important addition to data mesh architecture, providing transparency for data usage and dependencies. Focus on technical stability and standardization as you first begin to use data contracts, then use a lessons-learned process as you iterate. Slowly build up and automate your data governance so you don't increase your organization's overhead. 
 
-For more information about observability and data sharing agreements, see [Cloud monitoring guide: Observability](../../../manage/monitor/observability.md).
-
 As part of your data contract documentation you also need terms of service and service-level agreements (SLAs). Use SLAs to outline quality requirements for your data delivery and interfaces, including for uptime, error rates, and availability. SLAs can also include any deprecation, roadmap, and version number requirements you need to define.
 
 ## Next steps

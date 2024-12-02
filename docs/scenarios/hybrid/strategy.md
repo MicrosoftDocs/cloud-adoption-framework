@@ -24,7 +24,7 @@ A hybrid and multicloud scenario isn't a strategy. It's a technical approach wit
 
 - **Migration motivations:** Looking beyond immediate and critical events, migration and modernization motivations strive for midterm optimization of technology costs, operational complexity, and business agility. Connectivity between the current environment and the cloud provider allows for one-way migration capabilities. Use of abstraction layers, like containers, Kubernetes, or Azure Kubernetes Service (AKS), streamlines the migration process.
 
-- **Innovation motivations:** When you build solutions to drive long-term innovation, a hybrid and multicloud scenario might accelerate development efforts. Containers, Kubernetes, and AKS allow developers to build solutions with fewer dependencies on the features of any one cloud platform. Azure Stack HCI, Azure Stack Hub, and Azure Stack Edge allow developers to continue innovating with cloud native solutions, even in the local, on-premises datacenter. Conversely, connectivity across multiple clouds allows developers to maximize the use of cloud native services on their chosen platform while they integrate across those clouds for holistic enterprise environments.
+- **Innovation motivations:** When you build solutions to drive long-term innovation, a hybrid and multicloud scenario might accelerate development efforts. Containers, Kubernetes, and AKS allow developers to build solutions with fewer dependencies on the features of any one cloud platform. Azure Local, Azure Stack Hub, and Azure Stack Edge allow developers to continue innovating with cloud native solutions, even in the local, on-premises datacenter. Conversely, connectivity across multiple clouds allows developers to maximize the use of cloud native services on their chosen platform while they integrate across those clouds for holistic enterprise environments.
 
 Review a detailed list of [common motivations](../../strategy/motivations.md) to see which of the preceding motivations most closely maps to your organization's strategy.
 
@@ -87,6 +87,7 @@ Azure Arc extends a single enterprise control plane with Azure management and se
 - **Promote greater accountability for enterprise IT teams.** Extend a uniform enterprise control plane from Azure Arc by centralizing visibility, operations, and compliance across resources and locations.
 - **Organize, govern, and secure across on-premises, multicloud, and edge environments.** Support Windows, Linux, SQL Server, and Kubernetes.
 - **Maintain standardized management and security with unified operations.** Ensure consistency across data workloads.
+- **Perform virtual machine lifecycle and management operations.** Provision, resize, delete, and manage virtual machines based on [VMware vSphere](/azure/azure-arc/vmware-vsphere/overview), [System Center](/azure/azure-arc/system-center-virtual-machine-manager/overview), or [Azure Local](/azure-stack/hci/manage/azure-arc-vm-management-overview) environments.
 
 A combination of hybrid and multicloud environments is the most common scenario found across today's enterprise IT landscape. For most customers, moving to a hybrid and multicloud scenario embraces market reality and is motivated by a sound business strategy. The next decision for your organization is to commit to a distributed cloud computing model that can increase the speed of your cloud adoption and migration efforts.
 
@@ -142,7 +143,7 @@ Standardize activities by creating, applying, and enforcing policies to Kubernet
 
 ### Unified tools and experiences across platforms
 
-Create a shared application and infrastructure lifecycle within teams traditionally siloed by location, skill, and job description. Simplify work with a unified, consistent view of resources across datacenters, edge locations, and multicloud environments through the Azure portal and Azure API Management. Connect and gain access to Windows and Linux virtual machines, physical servers, and any Kubernetes distribution within the Kubernetes ecosystem. Bring Azure data services to on-premises, multicloud, and edge environments with Azure Arc enabled data services. Establish clear roles and responsibilities for team members with clear separation of concerns, without losing visibility and access.
+Create a shared application and infrastructure lifecycle within teams traditionally siloed by location, skill, and job description. Simplify work with a unified, consistent view of resources across datacenters, edge locations, and multicloud environments through the Azure portal and Azure API Management. Connect and gain access to Windows and Linux virtual machines, physical servers, and any Kubernetes distribution within the Kubernetes ecosystem. Bring Azure data services to on-premises, multicloud, and edge environments with Azure Arc enabled data services. Establish clear roles and responsibilities for team members with clear separation of concerns, without losing visibility and access. Empower developers and application teams to self-serve VM operations on-demand using Azure role-based access control (RBAC).
 
 ### Integrated DevOps and management capabilities
 

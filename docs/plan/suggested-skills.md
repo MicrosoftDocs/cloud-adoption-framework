@@ -22,7 +22,7 @@ The Cloud Adoption Framework guides you through the full adoption lifecycle. Eac
 - [Strategy phase](../strategy/suggested-skills.md): Develop the skills needed to prepare an actionable migration plan, including business justification and other required business-planning skills.
 - [Readiness phase](../ready/suggested-skills.md): Develop the skills needed to prepare the business, culture, people, and environment for coming changes.
 - [Migration phase](../migrate/suggested-skills.md): Gain the skills required to implement the cloud migration plan.
-- [Management phase - Monitoring](../manage/monitor/suggested-skills.md): Gain the skills needed to monitor a cloud environment.
+- [Management phase - Monitoring](../manage/monitor/monitoring.md): Gain the skills needed to monitor a cloud environment.
 
 Each of these learning paths shares opportunities across multiple media types to maximize knowledge acquisition.
 
@@ -40,7 +40,7 @@ Examples of tailored learning paths that align to the Cloud Adoption Framework i
 
 - [Azure for the data engineer](/training/paths/azure-for-the-data-engineer/): Explore how the world of data has evolved and how the advent of cloud technologies provides new opportunities for business to explore. You'll learn about various data platform technologies, and how a data engineer can take advantage of this technology to an organization's benefit.
 
-- [The Principles of Sustainable Software Engineering](/training/modules/sustainable-software-engineering-overview/): Sustainability, or cloud efficiency, is a fundamental topic to understand to optimize your cloud infrastructure, applications, and workloads. Regarding skilling and sustainability, you might benefit from reading the report on [Closing the Sustainability Skills Gap: Helping businesses move from pledges to progress](https://blogs.microsoft.com/on-the-issues/2022/11/02/closing-sustainability-skills-gap/).
+- [The Principles of Sustainable Software Engineering](/training/modules/sustainable-software-engineering-overview/): Sustainability, or cloud efficiency, is a fundamental topic to understand how to optimize your cloud infrastructure, applications, and workloads. Regarding skilling and sustainability, you might benefit from reading the report on [Closing the Sustainability Skills Gap: Helping businesses move from pledges to progress](https://blogs.microsoft.com/on-the-issues/2022/11/02/closing-sustainability-skills-gap/).
 
 ## Learn more
 
