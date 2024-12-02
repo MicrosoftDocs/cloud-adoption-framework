@@ -34,7 +34,7 @@ Oil and gas companies must be able to effectively manage and store exabytes of s
 
 [Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale. Azure supports several approaches for managing the speed and capacity of HPC applications.
 
-Large-scale Batch and HPC workloads in energy industry have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance I/O requirements and massive scalability needs of [high-performance computing (HPC)](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
+Large-scale Batch and HPC workloads in energy industry have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance I/O requirements and massive scalability needs of [high-performance computing (HPC)](https://azure.microsoft.com/solutions/high-performance-computing/) introduce unique challenges for data storage and access.
 
 HPC is used to solve complex problems, such as Seismic and Reservoir simulation and modeling, that are not practical or cost effective to handle with traditional computing techniques. It does this through a combination of parallel processing and massive scalability to perform large and complicated computing tasks quickly, efficiently, and reliably.
 
@@ -87,11 +87,11 @@ For more information on Parallel Virtual file system on Azure, see [Parallel Vir
 The following list of articles takes you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
 
 - [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
-- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Identity and access management for Azure HPC](../identity-access-management.md)
 - [Management for Azure HPC in energy](./management.md)
 - [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
-- [Resource organization for HPC in the energy industry](./resource-organization.md)
+- [Resource organization for HPC](../resource-organization.md)
 - [Governance for HPC in energy industries](./security-governance-compliance.md)
 - [Security for Azure HPC in energy](./security.md)
 - [Compute large-scale HPC application workloads in Azure VMs](./compute.md)

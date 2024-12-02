@@ -145,10 +145,10 @@ It's vital to plan for IP address needs in Azure to ensure that:
 The following articles provide guidance on each step in the cloud adoption journey for manufacturing HPC environments.
 
 - [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Azure identity and access management for HPC](../identity-access-management.md)
 - [Management for HPC in the manufacturing industry](./management.md)
 - [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
-- [Manufacturing HPC resource organization](./resource-organization.md)
+- [HPC resource organization](./resource-organization.md)
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
