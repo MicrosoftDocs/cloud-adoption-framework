@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI architecture guidance to build AI workloads on Azure
 
-This article offers architecture guidance for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
+This article offers architecture guidance for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
 
 The Azure Architecture Center offers reference architectures and guides to help organizations build AI workloads efficiently and securely. These resources provide well-tested, structured frameworks for AI workload deployment. In [AI Ready](../ready.md#establish-ai-governance), you established a resource hierarchy that categorizes AI workloads into internal and internet-facing groups. Deploy AI workloads to subscriptions under the appropriate management groups (internal vs. internet-facing). The following tables list articles for building AI workloads.
 
@@ -41,7 +41,7 @@ The Azure Architecture Center offers reference architectures and guides to help 
 
 ## Use the AI design areas as a framework
 
-The AI design areas provide technology-specific framework to design AI workloads with Azure's AI platform-as-a-service (PaaS) solutions. It focuses on Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. Use them to establish standards and best practices related to these services:
+The AI design areas provide technology-specific framework to design AI workloads with Azure's AI platform-as-a-service (PaaS) solutions. It focuses on Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. Use them to establish standards and best practices related to these services:
 
 - [Resource selection](./resource-selection.md)
 - [Networking](./networking.md)
