@@ -64,7 +64,7 @@ The following articles provide guidance for various stages of the cloud adoption
 - [Identity and access management](../identity-access-management.md)
 - [Management](./management.md)
 - [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
+- [Resource organization](../resource-organization.md)
 - [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)

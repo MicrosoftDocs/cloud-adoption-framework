@@ -65,7 +65,7 @@ The following articles provide guidance for various stages of the cloud adoption
 - [Management](./management.md)
 - [Network topology and connectivity](./network-topology-connectivity.md)
 - [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
+- [Resource organization](../resource-organization.md)
 - [Governance](./security-governance-compliance.md)
 - [Security](./security.md)
 - [Storage](./storage.md)
