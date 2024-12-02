@@ -2330,5 +2330,20 @@
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
       }
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      }
    ]
 }
