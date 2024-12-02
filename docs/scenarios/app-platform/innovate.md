@@ -22,7 +22,7 @@ The following are examples of innovation from the layers of abstraction provided
 
 - **Data and innovation anywhere:** Using application portability lets data live where it makes the most sense for your users. Applications can follow the data. This approach encourages data democratization and application innovation. Azure Arc enabled data services and Azure Arc enabled Kubernetes offer management consistency when applications and data move to various environments. This approach allows developers to focus more on the application and the data, instead of the cloud or infrastructure.
 
-- **Modernize your datacenter:** Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development for even the most extensively governed workloads. Use Azure App Service for Kubernetes with Azure Arc or Azure Stack HCI to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
+- **Modernize your datacenter:** Modernizing your datacenter allows workloads to evolve and modernize to use Azure-native tools. This approach can accelerate development for even the most extensively governed workloads. Use Azure App Service for Kubernetes with Azure Arc or Azure Local to abstract out datacenter dependencies. This approach allows teams to build for cloud capabilities without leaving the datacenter.
 
 - **Application platforms for the edge:** Extend your common runtime, shared containers, and orchestration to the edge by running Azure IoT or your application runtime on Kubernetes. For more information, see [How to install IoT Edge on Kubernetes](/azure/iot-edge/how-to-install-iot-edge-kubernetes).
 

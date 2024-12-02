@@ -101,7 +101,6 @@ However, this approach doesn't allow you to test with the inheritance of RBAC an
 Considerations to take into account when you use a single Microsoft Entra tenant are:
 
 - Follows [Enterprise-scale design recommendations](../landing-zone/design-area/azure-billing-microsoft-entra-tenant.md) for Microsoft Entra tenants.
-- As per the [Cloud Adoption Framework Azure best practices, standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity) guidance, single Microsoft Entra tenants are best practice for most.
   - In a single Microsoft Entra tenant, you can use the different Microsoft Entra groups for both production environments and canary Azure landing zones environments, with the same users, assigned to their relevant management group hierarchy within the same Microsoft Entra tenant.
 - Increased or duplicated Microsoft Entra ID licensing costs because of multiple identities across different Microsoft Entra tenants.
   - This point is especially relevant to customers who use Microsoft Entra ID P1 or P2 features.

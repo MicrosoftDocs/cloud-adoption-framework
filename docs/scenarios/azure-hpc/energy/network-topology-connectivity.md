@@ -128,7 +128,7 @@ MPI environments are dedicated as they have unique requirements with the need fo
 The following articles provide guidance for each step in the cloud adoption journey for energy HPC environments.
 
 - [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
-- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Identity and access management for Azure HPC](../identity-access-management.md)
 - [Management for Azure HPC in energy](./management.md)
 - [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
 - [Resource organization for HPC in the energy industry](./resource-organization.md)

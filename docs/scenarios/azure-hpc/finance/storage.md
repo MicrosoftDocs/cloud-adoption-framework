@@ -58,7 +58,7 @@ The following table provides a comparison of Blob Storage, Azure Files, Azure Ma
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC in the finance sector.
 
 - [Azure billing offers and Active Directory tenants for finance HPC](./azure-billing-active-directory-tenant.md)
-- [Finance HPC Azure identity and access management](./identity-access-management.md)
+- [HPC Azure identity and access management](../identity-access-management.md)
 - [Management for HPC in the finance sector](./management.md)
 - [Network topology and connectivity for HPC in the finance sector](./network-topology-connectivity.md)
 - [Platform automation and DevOps for HPC in the finance sector](./platform-automation-devops.md)

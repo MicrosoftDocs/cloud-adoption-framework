@@ -42,7 +42,7 @@ When you design your HPC infrastructure, several tools and services are availabl
 
 The following architecture provides an example of using VMs in HPC for finance workloads.
 
-:::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="./media/hpc-finance-architecture-example.svg" lightbox="./media/hpc-finance-architecture-example.svg":::
+:::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="../media/hpc-finance-architecture-example.svg" lightbox="../media/hpc-finance-architecture-example.svg":::
 
 This workload uses HPC Pack HB-series compute nodes.
 
@@ -61,7 +61,7 @@ For reference architectures and cookbooks for deploying HPC independent software
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting finance sector HPC environments for the cloud.
 
 - [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Identity and access management](./identity-access-management.md)
+- [Identity and access management](../identity-access-management.md)
 - [Management](./management.md)
 - [Platform automation and DevOps](./platform-automation-devops.md)
 - [Resource organization](./resource-organization.md)

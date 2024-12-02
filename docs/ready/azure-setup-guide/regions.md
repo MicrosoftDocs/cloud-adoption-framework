@@ -19,7 +19,7 @@ To learn more about how Azure regions work, see [What are Azure regions and avai
 
 ### Availability zones
 
-Many Azure regions include availability zones, which are physically separate locations within a region. By using availability zones, you can achieve higher availability and resilience in your deployments. For more information about availability zones, and for a list of Azure regions and services that support availability zones, see [Availability zone service and regional support](/azure/reliability/availability-zones-service-support).
+Many Azure regions include availability zones, which are physically separate locations within a region. By using availability zones, you can achieve higher availability and resilience in your deployments. For more information about availability zones, see [Availability zone service support](/azure/reliability/availability-zones-service-support) and [Availability zone region support](/azure/reliability/availability-zones-region-support).
 
 ### Paired regions
 
@@ -162,7 +162,7 @@ Newer Azure regions have no regional pair. They achieve high availability by usi
 
 When you use these regions, you can use locally redundant storage (LRS) or zone-redundant storage (ZRS). Regions without a pair don't support GRS. Services like Backup that have a dependency on Storage might also require that you use ZRS or LRS storage. When possible, it's a good practice to use ZRS to improve your resiliency within your region.
 
-To prepare for the rare event that an entire Azure region is unavailable, you need to plan for cross-region disaster recovery. At a minimum, it's a good practice to deploy your infrastructure by using automation approaches, and to back up your data across regions. If a full-region outage occurs, you can manually redeploy your resources and restore your backups. For some scenarios, you might need to consider other alternatives to reduce your potential recovery time and data loss. For more information, see [Availability zone service and regional support](/azure/reliability/availability-zones-service-support#azure-services-with-availability-zone-support) and [Azure Resiliency – Business Continuity and Disaster Recovery](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/resiliency-whitepaper-2022.pdf).
+To prepare for the rare event that an entire Azure region is unavailable, you need to plan for cross-region disaster recovery. At a minimum, it's a good practice to deploy your infrastructure by using automation approaches, and to back up your data across regions. If a full-region outage occurs, you can manually redeploy your resources and restore your backups. For some scenarios, you might need to consider other alternatives to reduce your potential recovery time and data loss. For more information, see [Availability zone service support](/azure/reliability/availability-zones-service-support), [Availability zone region support](/azure/reliability/availability-zones-region-support), and [Azure Resiliency – Business Continuity and Disaster Recovery](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/resiliency-whitepaper-2022.pdf).
 
 Consider your data resiliency needs. Regardless of where your data is located, you can move, copy, or access your data from any location globally.
 
