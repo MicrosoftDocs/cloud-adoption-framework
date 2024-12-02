@@ -148,7 +148,7 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Azure identity and access management for HPC](../identity-access-management.md)
 - [Management for HPC in the manufacturing industry](./management.md)
 - [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
-- [Manufacturing HPC resource organization](./resource-organization.md)
+- [HPC resource organization](./resource-organization.md)
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)

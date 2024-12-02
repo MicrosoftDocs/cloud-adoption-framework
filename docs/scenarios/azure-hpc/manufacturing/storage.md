@@ -101,7 +101,7 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Management for HPC in the manufacturing industry](./management.md)
 - [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
-- [Manufacturing HPC resource organization](./resource-organization.md)
+- [HPC resource organization](../resource-organization.md)
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

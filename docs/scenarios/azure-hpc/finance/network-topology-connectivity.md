@@ -96,7 +96,7 @@ The following articles provide guidance that you might find helpful during vario
 - [HPC Azure identity and access management](../identity-access-management.md)
 - [Management for HPC in the finance sector](./management.md)
 - [Platform automation and DevOps for HPC in the finance sector](./platform-automation-devops.md)
-- [Resource organization for Azure HPC in the finance sector](./resource-organization.md)
+- [Resource organization for Azure HPC](../resource-organization.md)
 - [Governance for finance HPC](./security-governance-compliance.md)
 - [Security for HPC in the finance sector](./security.md)
 - [Storage for HPC in the finance sector](./storage.md)

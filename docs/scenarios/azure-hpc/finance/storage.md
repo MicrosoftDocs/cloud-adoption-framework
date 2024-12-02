@@ -62,7 +62,7 @@ The following articles provide guidance that you might find helpful at various p
 - [Management for HPC in the finance sector](./management.md)
 - [Network topology and connectivity for HPC in the finance sector](./network-topology-connectivity.md)
 - [Platform automation and DevOps for HPC in the finance sector](./platform-automation-devops.md)
-- [Resource organization for Azure HPC in the finance sector](./resource-organization.md)
+- [Resource organization for Azure HPC](../resource-organization.md)
 - [Governance for finance HPC](./security-governance-compliance.md)
 - [Security for HPC in the finance sector](./security.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

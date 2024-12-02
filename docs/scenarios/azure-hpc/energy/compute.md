@@ -107,7 +107,7 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Management for Azure HPC in energy](./management.md)
 - [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
-- [Resource organization for HPC in the energy industry](./resource-organization.md)
+- [Resource organization for HPC](../resource-organization.md)
 - [Governance for HPC in energy industries](./security-governance-compliance.md)
 - [Security for Azure HPC in energy](./security.md)
 - [Storage for HPC energy environments](./storage.md)
