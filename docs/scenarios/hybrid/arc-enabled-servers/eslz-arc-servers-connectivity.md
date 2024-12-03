@@ -40,7 +40,7 @@ Consider the following network design recommendations for Azure Arc-enabled serv
 You can use Azure Arc-enabled servers to connect hybrid machines via:
 
 - A direct connection, optionally from behind a firewall or a proxy server.
--   Additionally, while using the internet, you can choose to use the [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway) to reduce number of endpoints that the proxy must allow.
+-   Additionally, while using the internet, you can choose to use the [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway) to reduce the number of endpoints that the proxy must allow.
 
   OR 
   
