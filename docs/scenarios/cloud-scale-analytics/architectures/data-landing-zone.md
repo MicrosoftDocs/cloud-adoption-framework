@@ -22,7 +22,7 @@ A typical Azure subscription associated with a data landing zone has the followi
 | Layer | Required | Resource groups |
 |---|---|---|
 | [Platform services layer](#platform-services) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
-| [Core services](#core-services) | Yes | <ul> <li> [Management](#management) </li> <li> [Storage](#storage) </li> <li> [External Data](#external-storage) </li> <li> [Shared integration runtimes](#shared-integration-runtimes) </li> <li> [Shared Applications](#shared-applications) </li> </ul> |
+| [Core services](#core-services) | Yes | <ul> <li> [Storage](#storage) </li> <li> [Shared integration runtimes](#shared-integration-runtimes) </li> <li> [Management](#management) </li> <li> [External storage](#external-storage) </li> <li> [Data Ingestion](#data-ingestion) </li> <li> [Shared Applications](#shared-applications) </li> </ul> |
 | [Data application](#data-application) | Optional | <ul> <li> [Data application](#data-application-resource-group) (1 or more) </li> </ul> |
 | [Reporting and visualization](#reporting-and-visualization) | Optional | <ul> <li> [Reporting and visualization](#reporting-and-visualization) </li> </ul> |
 
@@ -117,7 +117,7 @@ CI/CD Agents run on virtual machines and help deploy artifacts from the source c
 
 For more information, see [Azure Pipeline agents](/azure/devops/pipelines/agents/agents).
 
-### External Storage
+### External storage
 
 Partner data publishers need to land data in your platform so your data application teams can pull it into their data lakes. You can also have internal or external data sources that can't support the connectivity or authentication requirements enforced across the rest of the data landing zones. Using a separate storage account is the recommended approach to receive data, then a shared integration runtime or similar ingestion process to bring it into your processing pipeline. As seen in the following diagram, your upload ingest storage resource group lets you provision blob stores for these use cases.
 

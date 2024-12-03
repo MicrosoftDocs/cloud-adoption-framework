@@ -63,7 +63,7 @@ Services that make up data applications are incremental deployments to the data 
 
 ### Enable data discovery
 
-Automatically register your data products in a data catalog such as [Azure Purview](../best-practices/purview-deployment.md) to allow data scanning.
+Automatically register your data products in a data catalog such as [Microsoft Purview](/purview/data-catalog-best-practices) to allow data scanning.
 
 ### Identify your data products
 

@@ -47,7 +47,6 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Key Vault](#key-vault)
 - [Azure Data Factory](#azure-data-factory)
 - [Azure Synapse Analytics](#azure-synapse-analytics)
-- [Azure Purview](#azure-purview)
 - [Azure Databricks](#azure-databricks)
 - [Azure IoT Hub](#azure-iot-hub)
 - [Azure Event Hubs](#azure-event-hubs)
@@ -153,12 +152,6 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 |Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse SQL pool security alert policy.|
 |Deploy-SynapseSql-TransparentDataEncryption|Encryption|Deploy Synapse SQL transparent data encryption.|
 |Deploy-SynapseSql-VulnerabilityAssessment|Logging|Deploy Synapse SQL pool vulnerability assessments.|
-
-## Azure Purview
-
-|Policy name  |Policy area  |Description  |
-|---------|---------|---------|
-|Deny-Purview|Resource Management|Restrict deployment of Purview accounts to avoid proliferation.|
 
 ## Azure Databricks
 

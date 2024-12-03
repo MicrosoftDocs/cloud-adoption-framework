@@ -46,8 +46,6 @@ Data profiles help users answer questions about data products, including:
 
 Users can view the data product profile by using a reporting dashboard within their data marketplace.
 
-<!-- :::image type="content" source="media/data-quality-profile.png" alt-text="Screenshot showing an example of a data quality profile score report." lightbox="media/data-quality-profile.png"::: -->
-
 You can report on such items as:
 
 - Completeness: Indicates the percentage of data that isn't blank or null.

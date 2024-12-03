@@ -68,27 +68,7 @@ To meet this need, the marketing team creates aggregated data products from the 
 
 ### Should all sensitive data always be given its own data landing zone?
 
-No. Only the most restricted data requiring specific protections, like just-in-time access, or customer-managed keys, requires its own landing zone. For other scenarios, other data protection features in Azure provide a highly secure environment for your data. This protection includes row-level security, column-level security, and encrypted columns.
-
-### Deployment templates
-
-To deploy the architectures, use the data management landing zone and the data landing zone reference implementation templates in the following GitHub repositories:
-
-- [Data management landing zone template](https://github.com/Azure/data-management-zone)
-- [Data landing zone template](https://github.com/Azure/data-landing-zone)
-
-Use the following templates to deploy other Data applications and data products in the Lamna data landing zones:
-
-|Name  |Data landing zone  |Type  |Template  |
-|---------|---------|---------|---------|
-|Patients     |Patients         |Data application         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Health records     |Patients         |Data application         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Providers     |Operations         |Data application         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Tokenized patients     |Operations         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-|Aggregated patient data     |Marketing         |Data product         |[Data product batch template](https://github.com/Azure/data-product-batch)         |
-
-> [!IMPORTANT]
-> Not everything in the reference implementation templates will need to be deployed to meet the needs of Lamna. Some level of customization will be required for the templates. Services that aren't needed should be removed from the templates prior to deployment.
+No. Only the most restricted data requiring specific protections, like just-in-time access or customer-managed keys, requires its own landing zone. For other scenarios, other data protection features in Azure provide a highly secure environment for your data. This includes row-level security, column-level security, and encrypted columns.
 
 ## Next steps
 

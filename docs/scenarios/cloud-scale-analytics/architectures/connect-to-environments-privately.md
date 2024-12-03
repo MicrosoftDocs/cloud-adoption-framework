@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 The reference architecture is secure by design. It uses a multilayered security approach to mitigate common data exfiltration risks raised by customers. You can use certain features on a network, identity, data, and service layer to define specific access controls and expose only required data to your users. Even if some of these security mechanisms fail, the features help keep data within the enterprise-scale platform secure.
 
-Network features such as private endpoints and disabled public network access can greatly reduce the attack surface of a data platform within an organization. Even with these features enabled, you need to take extra precautions to successfully connect to services such as Azure storage accounts, Azure Synapse workspaces, Azure Purview, or Azure Machine Learning from the public internet.
+Network features such as private endpoints and disabled public network access can greatly reduce the attack surface of a data platform within an organization. Even with these features enabled, you need to take extra precautions to successfully connect to services such as Azure storage accounts, Azure Synapse workspaces, or Azure Machine Learning from the public internet.
 
 This document describes the most common options for connecting to services inside a data management landing zone or data landing zone in a simple and secure way.
 
@@ -88,13 +88,13 @@ To learn why we recommend this network setup, see [Network architecture consider
 
 ## Use point-to-site connections
 
-Alternatively, you can connect users to the virtual network by using point-to-site connections. An Azure-native solution to this approach is to set up a VPN gateway to allow VPN connections between users and the VPN gateway over an encrypted tunnel. After you establish the connection, users can start connecting privately to services that are hosted on the virtual network inside the Azure tenant. These services include Azure storage accounts, Azure Synapse Analytics, and Azure Purview.
+Alternatively, you can connect users to the virtual network by using point-to-site connections. An Azure-native solution to this approach is to set up a VPN gateway to allow VPN connections between users and the VPN gateway over an encrypted tunnel. After you establish the connection, users can start connecting privately to services that are hosted on the virtual network inside the Azure tenant.
 
 We recommend that you set up the VPN gateway in the hub virtual network of the hub-and-spoke architecture. For detailed, step-by-step guidance on setting up a VPN gateway, see [Tutorial: Create a gateway portal](/azure/vpn-gateway/tutorial-create-gateway-portal).
 
 ## Use site-to-site connections
 
-If users are already connected to the on-premises network environment and connectivity should be extended to Azure, you can use site-to-site connections to connect the on-premises and Azure connectivity hub. Like a VPN tunnel connection, the site-to-site connection lets you extend the connectivity to the Azure environment. Doing so allows users who are connected to the corporate network to connect privately to services that are hosted on the virtual network inside the Azure tenant. These services include Azure Storage accounts, Azure Synapse, and Azure Purview.
+If users are already connected to the on-premises network environment and connectivity should be extended to Azure, you can use site-to-site connections to connect the on-premises and Azure connectivity hub. Like a VPN tunnel connection, the site-to-site connection lets you extend the connectivity to the Azure environment. Doing so allows users who are connected to the corporate network to connect privately to services that are hosted on the virtual network inside the Azure tenant.
 
 The recommended, Azure-native approach to such connectivity is the use of ExpressRoute. We recommend that you set up an ExpressRoute gateway in the hub virtual network of the hub-and-spoke architecture. For detailed, step-by-step guidance on setting up ExpressRoute connectivity, see [Tutorial: Create and modify peering for an ExpressRoute circuit by using the Azure portal](/azure/expressroute/expressroute-howto-routing-portal-resource-manager).
 

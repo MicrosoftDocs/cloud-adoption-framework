@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
-## Introduction to cloud-scale analytics
+# Introduction to cloud-scale analytics
 
 Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The main purpose of an Azure landing zone is to ensure that, when an application or workload lands on Azure, the required infrastructure is already in place. Before you deploy your cloud-scale analytics landing zone, you must have already worked through the [cloud adoption framework](/azure/cloud-adoption-framework/) to deploy an [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) with platform landing zones.
 
