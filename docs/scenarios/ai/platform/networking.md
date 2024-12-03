@@ -19,10 +19,10 @@ Configuring virtual networks refers to setting up and managing private and secur
 
 | AI platform | Virtual network recommendations |
 | --- | --- |
-| Azure AI Foundry | Configure the [managed network](/azure/ai-studio/how-to/configure-managed-network) and use [private endpoints](/azure/ai-studio/how-to/configure-private-link)|
-| Azure OpenAI | Restrict access to select [virtual networks](/azure/ai-services/cognitive-services-virtual-networks#scenarios) or use [private endpoints](/azure/ai-services/cognitive-services-virtual-networks#use-private-endpoints) |
-| Azure Machine Learning | Create a [secure workspace](/azure/machine-learning/tutorial-create-secure-workspace-vnet) with a virtual network. [Plan for network isolation](/azure/machine-learning/how-to-network-isolation-planning). Follow the [security best practices](/azure/machine-learning/concept-enterprise-security) for Azure Machine Learning |
-| Azure AI services | Restrict access to select [virtual networks](/azure/ai-services/cognitive-services-virtual-networks#scenarios) or use [private endpoints](/azure/ai-services/cognitive-services-virtual-networks#use-private-endpoints) |
+| Azure AI Foundry | Configure the [managed virtual network](/azure/ai-studio/how-to/configure-managed-network) and use [private endpoints](/azure/ai-studio/how-to/configure-private-link). If needed, connect the managed virtual network to [on-premises resources](/azure/ai-studio/how-to/access-on-premises-resources). |
+| Azure OpenAI | Restrict access to select [virtual networks](/azure/ai-services/cognitive-services-virtual-networks#scenarios) or use [private endpoints](/azure/ai-services/cognitive-services-virtual-networks#use-private-endpoints). |
+| Azure Machine Learning | Create a [secure workspace](/azure/machine-learning/tutorial-create-secure-workspace-vnet) with a virtual network. [Plan for network isolation](/azure/machine-learning/how-to-network-isolation-planning). Follow the [security best practices](/azure/machine-learning/concept-enterprise-security) for Azure Machine Learning. |
+| Azure AI services | Restrict access to select [virtual networks](/azure/ai-services/cognitive-services-virtual-networks#scenarios) or use [private endpoints](/azure/ai-services/cognitive-services-virtual-networks#use-private-endpoints). |
 
 [Azure AI Foundry](/azure/ai-studio/how-to/configure-managed-network) and [Azure Machine Learning](/azure/machine-learning/how-to-managed-network) deploy to Microsoft-managed virtual networks and deploy required dependent services. The managed virtual networks use private endpoints to access supporting Azure services like Azure Storage, Azure Key Vault, and Azure Container Registry. Use the links to view the network architectures of these services so you can best configure your virtual network.
 
