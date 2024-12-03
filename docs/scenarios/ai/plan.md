@@ -85,6 +85,7 @@ Responsible AI adoption requires incorporating ethical frameworks and regulatory
     | [AI impact assessment template](https://www.microsoft.com/ai/tools-practices)| Evaluate potential social, economic, and ethical impacts of AI initiatives.|
     | [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/) | Design AI systems that prioritize user well-being and foster positive interactions. |
     | [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/) | Assess and advance your organization's maturity in implementing responsible AI practices.|
+    | [Responsible AI for workload teams](/azure/well-architected/ai/responsible-ai) | Recommendations for workload teams to implement responsible AI when building workloads in Azure. |
 
 - *Start the AI governance process.* Responsible AI adoption involves creating governance policies to guide AI projects and monitor AI system behaviors. Start by identifying organizational risks specific to your AI initiatives. Document governance policies that outline responsibilities, compliance requirements, and ethical standards. See the article on Govern AI for details on this process.
     > [!div class="nextstepaction"]
