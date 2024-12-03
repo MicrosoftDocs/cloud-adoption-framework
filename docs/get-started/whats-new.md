@@ -21,7 +21,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 - [Monitor a cloud environment](../manage/monitor/monitoring.md): This month, we retired outdated content on cloud monitoring and introduced a new overview that provides comprehensive guidance in a simplified format. Explore the importance of monitoring, the key components of a monitoring strategy, and the tools and services you can use to monitor your cloud environment effectively.
 - [Well-architected considerations for AI workloads on Azure infrastructure (IaaS)](../scenarios/ai/infrastructure/well-architected.md): Explore the importance of well-architected AI solutions and how to apply the Azure Well-Architected Framework to your AI workloads. Find guidance on reliability, security, cost optimization, operational excellence, and performance efficiency.
 
-##### Secure methodology refresh
+#### Secure methodology refresh
 
 This month, we made significant updates to the Secure methodology. The Secure methodology provides guidance on how to secure your cloud environment and protect your data. The methodology includes the following articles:
 
@@ -34,7 +34,7 @@ This month, we made significant updates to the Secure methodology. The Secure me
 - [Securely govern your cloud estate](../secure/govern.md): Find guidance on the key considerations for securely governing your cloud estate and the tools and services you can use to securely govern your cloud environment.
 - [Manage your cloud estate with enhanced security](../secure/manage.md): Explore the importance of managing your cloud estate with enhanced security and the key considerations for managing your cloud estate securely.
 
-##### SAP and Power Platform
+#### SAP and Power Platform
 
 We introduced new articles that provide guidance on integrating SAP and Power Platform. Learn how to extend an SAP landing zone to support Power Platform, understand the architecture workflow, and explore the fundamentals of SAP and Power Platform integration.
 
