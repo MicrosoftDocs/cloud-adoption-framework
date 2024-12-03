@@ -62,7 +62,7 @@ Domain name system (DNS) is a critical design topic in the overall Azure landing
   
   - InfiniBand connections are possible only between VMs that are allocated within the same [placement group](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups). For more information, see [Enable InfiniBand](/azure/virtual-machines/workloads/hpc/enable-infiniband). To learn how to set up MPI, see [Set up Message Passing Interface for HPC](/azure/virtual-machines/workloads/hpc/setup-mpi).
 
-  :::image type="content" alt-text="Diagram that shows InfiniBand connection between VMs." source="../media/infiniband.png" lightbox="../media/infiniband.png":::
+  :::image type="content" alt-text="Diagram that shows InfiniBand connection between VMs." source="/media/infiniband.png" lightbox="/media/infiniband.png":::
 
 - **Azure ExpressRoute:** ExpressRoute connections don't use the public internet, and they provide more reliability, faster speeds, and lower latencies than typical internet connections. For point-to-site VPN and site-to-site VPN, you can connect on-premises devices or networks to a virtual network by using any combination of these VPN options and ExpressRoute.
 
@@ -112,7 +112,7 @@ The following section provides key recommendations for encrypting networks betwe
 
 ### Design considerations and recommendations
 
-- Traffic performance is an important consideration when you enable encryption. IPsec tunnels encrypt internet traffic by default. Any extra encryption or decryption can negatively affect performance. When you use ExpressRoute, traffic isn't encrypted by default. You need to determine whether you should encrypt HPC traffic. For more information about network encryption options in enterprise-scale landing zones, see [network topology](../../../ready/azure-best-practices/define-an-azure-network-topology.md) and [connectivity](../../../ready/azure-best-practices/connectivity-to-azure.md) to understand.
+- Traffic performance is an important consideration when you enable encryption. IPsec tunnels encrypt internet traffic by default. Any extra encryption or decryption can negatively affect performance. When you use ExpressRoute, traffic isn't encrypted by default. You need to determine whether you should encrypt HPC traffic. For more information about network encryption options in enterprise-scale landing zones, see [network topology](../../ready/azure-best-practices/define-an-azure-network-topology.md) and [connectivity](../../ready/azure-best-practices/connectivity-to-azure.md) to understand.
 
 - Traffic isn't currently encrypted when Azure ExpressRoute is used to configure private peering.
 
@@ -128,7 +128,7 @@ Key recommendations for encrypting networks between on-premises and Azure, and a
   - The virtual network contains the right address space.
   - Proper planning for subnet configuration happens in advance.
 
-It's up to the customer to determine whether HPC traffic should be encrypted. Explore [network topology and connectivity](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) to understand network encryption options in enterprise-scale landing zones.
+It's up to the customer to determine whether HPC traffic should be encrypted. Explore [network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md) to understand network encryption options in enterprise-scale landing zones.
 
 It's vital to plan for IP address needs in Azure to help ensure that:
 
@@ -156,8 +156,6 @@ Both HPC in the Cloud Only and HPC Cloud Hybrid deployment model have their own 
   - Functions
 
 MPI environments are dedicated because they have unique requirements that need low-latency communications between nodes. The nodes connect via high-speed interconnect and aren't amenable to sharing with other workloads. MPI applications use the entire high-performance interconnects by way of pass-through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre that's also accessed via the high-speed interconnect.
-
-:::image type="content" alt-text="Diagram that shows InfiniBand." source="../media/infiniband.png" lightbox="../media/infiniband.png":::
 
 ## Next steps
 
