@@ -62,7 +62,7 @@ Domain name system (DNS) is a critical design topic in the overall Azure landing
   
   - InfiniBand connections are possible only between VMs that are allocated within the same [placement group](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups). For more information, see [Enable InfiniBand](/azure/virtual-machines/workloads/hpc/enable-infiniband). To learn how to set up MPI, see [Set up Message Passing Interface for HPC](/azure/virtual-machines/workloads/hpc/setup-mpi).
 
-  :::image type="content" alt-text="Diagram that shows InfiniBand connection between VMs." source="/media/infiniband.png" lightbox="/media/infiniband.png":::
+  :::image type="content" alt-text="Diagram that shows InfiniBand connection between VMs." source="media/infiniband.png" lightbox="/media/infiniband.png":::
 
 - **Azure ExpressRoute:** ExpressRoute connections don't use the public internet, and they provide more reliability, faster speeds, and lower latencies than typical internet connections. For point-to-site VPN and site-to-site VPN, you can connect on-premises devices or networks to a virtual network by using any combination of these VPN options and ExpressRoute.
 
@@ -161,10 +161,9 @@ MPI environments are dedicated because they have unique requirements that need l
 
 The following articles provide guidance for each step in the cloud adoption journey for HPC environments.
 
-- [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
-- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
-- [Management for Azure HPC in energy](./management.md)
-- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
+- [Azure Billing and Microsoft Entra tenants for energy HPC](../../../templates/scenarios/alz-azure-billing-active-directory-tenant.md)
+- [Identity and access management for Azure HPC in energy](identity-access-management.md)
+- [Platform automation and DevOps for Azure HPC in energy](../../ready/landing-zone/design-area/platform-automation-devops.md)
 - [Resource organization for HPC in the energy industry](./resource-organization.md)
 - [Governance for HPC in energy industries](./security-governance-compliance.md)
 - [Security for Azure HPC in energy](./security.md)
