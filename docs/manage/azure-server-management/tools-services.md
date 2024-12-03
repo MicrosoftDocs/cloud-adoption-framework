@@ -47,6 +47,8 @@ For more information, see the [complete Azure Site Recovery replication matrix](
 
 For your file-server data, another service to consider is [Azure File Sync](/azure/storage/file-sync/file-sync-planning). This service helps you centralize your organization's file shares in Azure Files, while preserving the flexibility, performance, and compatibility of an on-premises file server. To use this service, follow the instructions for deploying Azure File Sync.
 
+An efficient and easy-to-use web-based user interface is [Azure Business Continuity Center](/azure/business-continuity-center/business-continuity-center-overview). This console enables you to manage your backup and disaster recovery at scale from a single place across various environments and solutions.
+
 ## Monitor
 
 [Azure Monitor](/azure/azure-monitor/overview) provides a view into various resources, like applications, containers, and virtual machines. It also collects data from several sources:
