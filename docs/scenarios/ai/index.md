@@ -1,6 +1,6 @@
 ---
 title: AI on Azure
-description: Learn how Microsoft recommends adopting Artificial Intelligence (AI) in your organization with the Microsoft Cloud Adoption Framework.
+description: Learn how Microsoft recommends adopting Artificial Intelligence (AI) in your organization with the Microsoft Cloud Adoption Framework
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
