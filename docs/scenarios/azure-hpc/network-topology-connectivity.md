@@ -155,13 +155,13 @@ Both HPC in the Cloud Only and HPC Cloud Hybrid deployment model have their own 
   - KS containers
   - Functions
 
-MPI environments are dedicated because they have unique requirements with a need for low-latency communications between nodes. The nodes connect via high-speed interconnect and aren't amenable to sharing with other workloads. MPI applications use the entire high-performance interconnects by way of pass-through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre that's also accessed via the high-speed interconnect.
+MPI environments are dedicated because they have unique requirements that need low-latency communications between nodes. The nodes connect via high-speed interconnect and aren't amenable to sharing with other workloads. MPI applications use the entire high-performance interconnects by way of pass-through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre that's also accessed via the high-speed interconnect.
 
 :::image type="content" alt-text="Diagram that shows InfiniBand." source="../media/infiniband.png" lightbox="../media/infiniband.png":::
 
 ## Next steps
 
-The following articles provide guidance for each step in the cloud adoption journey for energy HPC environments.
+The following articles provide guidance for each step in the cloud adoption journey for HPC environments.
 
 - [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
 - [Identity and access management for Azure HPC in energy](./identity-access-management.md)
