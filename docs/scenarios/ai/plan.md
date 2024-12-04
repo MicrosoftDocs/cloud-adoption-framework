@@ -1,6 +1,6 @@
 ---
 title: AI Plan - Recommendations for organizations planning AI adoption
-description: Learn the process to plan for AI adoption with best practices and recommendations
+description: Learn the process to plan for AI adoption with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
