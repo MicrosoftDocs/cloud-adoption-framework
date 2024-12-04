@@ -5,7 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.custom: think-tank
-ms.date: 12/04/2024
+ms.date: 12/05/2024
 ---
 
 # Network topology and connectivity for Azure HPC
@@ -78,7 +78,7 @@ Use a network topology that's based on a virtual WAN if your organization plans 
 
 - Deploy resources across several Azure regions and connect your global locations to both Azure and on-premises environments.
 
-- Fully integrate software-defined WAN deployments with Azure.
+- Integrate software-defined WAN deployments fully with Azure.
 
 - Deploy up to 2,000 VM workloads across all virtual networks connected to one virtual WAN hub.
 
@@ -92,7 +92,7 @@ Organizations use Azure Virtual WAN to meet large-scale interconnectivity requir
 
 - Requires full control and granularity to manually configure your Azure network.
 
-- Uses local and global virtual network peering to provide connectivity. Local and global virtual network peering are the preferred approaches to help ensure connectivity between landing zones for HPC deployments across multiple Azure regions.
+- Uses local and global virtual network peering to provide connectivity.
   
 Local and global virtual network peering provide connectivity and are the preferred approaches to help ensure connectivity between landing zones for HPC deployments across multiple Azure regions. Document your network topology and firewall rules. Network security groups (NSGs) are often implemented with considerable complexity. Use application security groups when it makes sense to label traffic at a greater granularity than virtual networks can provide. Understand NSG prioritization rules and which rules take precedence over others.
 
@@ -116,11 +116,7 @@ The following section provides key recommendations for encrypting networks betwe
 
 - Consider traffic performance when you enable encryption. IPsec tunnels encrypt internet traffic by default. Any extra encryption or decryption can negatively affect performance. When you use ExpressRoute, traffic isn't encrypted by default. Determine whether you should encrypt HPC traffic. For more information about network encryption options in enterprise-scale landing zones, see [network topology](../../ready/azure-best-practices/define-an-azure-network-topology.md) and [connectivity](../../ready/azure-best-practices/connectivity-to-azure.md).
 
-- Encrypt traffic when you use ExpressRoute to configure private peering because it isn't currently encrypted.
-
-- Skip encrypting traffic over ExpressRoute for HPC deployments because IPsec tunnels already encrypt internet traffic by default, and encryption or decryption could negatively affect the traffic's performance.
-
-Key recommendations for encrypting networks between on-premises and Azure, and across Azure regions:
+The following recommendations are for encrypting networks between on-premises and Azure, and across Azure regions:
 
 - Determine whether HPC traffic should be encrypted. For more information, see [Network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md).
 
@@ -129,14 +125,6 @@ Key recommendations for encrypting networks between on-premises and Azure, and a
   - The IP address space doesn't overlap across on-premises locations and Azure regions.
   - The virtual network contains the right address space.
   - Proper planning for subnet configuration happens in advance.
-
-The customer must determine whether to encrypt HPC traffic. For more information, see [Network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md).
-
-It's important to plan for IP address needs in Azure to help ensure that:
-
-- The IP address space doesn't overlap across on-premises locations and Azure regions.
-- The virtual network contains the right address space.
-- Proper planning for subnet configuration happens in advance.
 
 ## Define and throughput latency bandwidth network requirements
 
@@ -163,9 +151,7 @@ MPI environments are dedicated because they have unique requirements that need l
 
 The following articles provide guidance for each step in the cloud adoption journey for HPC environments.
 
-- [Azure Billing and Microsoft Entra tenants for energy HPC](../../../templates/scenarios/alz-azure-billing-active-directory-tenant.md)
-- [Identity and access management for Azure HPC in energy](identity-access-management.md)
-- [Platform automation and DevOps for Azure HPC in energy](../../ready/landing-zone/design-area/platform-automation-devops.md)
+- [Azure Billing and Microsoft Entra tenants for energy HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/azure-billing-active-directory-tenant)
 - [Resource organization for HPC in the energy industry](./resource-organization.md)
 - [Governance for HPC in energy industries](../../../templates/scenarios/alz-security-governance-compliance.md)
 - [Security for Azure HPC in energy](./security.md)
