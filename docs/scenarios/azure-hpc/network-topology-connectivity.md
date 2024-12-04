@@ -40,7 +40,7 @@ It's crucial that you plan for IP addressing in Azure to help ensure that:
 
 ## DNS and name resolution for on-premises and Azure resources
 
-Domain name system (DNS) is a crucial design topic in the overall Azure landing zone architecture. Some organizations might want to use their existing investments in DNS. Other organizations might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities. The following recommendations apply when a virtual machine's DNS or virtual name doesn't change during migration.
+Domain name system (DNS) is a crucial design element in the overall Azure landing zone architecture. Some organizations might want to use their existing investments in DNS. Other organizations might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities. The following recommendations apply when a virtual machine's DNS or virtual name doesn't change during migration.
 
 ### Design considerations and recommendations
 
@@ -48,7 +48,7 @@ Domain name system (DNS) is a crucial design topic in the overall Azure landing 
 
 - Use different DNS zones to distinguish environments from each other. These environments include sandbox, development, preproduction, and production. The exception is for HPC deployments that have their own virtual network, which might not require private DNS zones.
 
-- DNS support is mandatory when you use HPC cache so that they can access storage and other resources.
+- DNS support is mandatory when you use HPC Cache so that they can access storage and other resources.
 
 - DNS and name resolution are crucial in the finance sector when you use resource location and service records. We recommend that you use the DNS resolution that the Microsoft Entra Domain Services domain controller provides. For more information, see [Deploy Microsoft Entra Domain Services in an Azure virtual network](/azure/architecture/reference-architectures/identity/adds-extend-domain).
 
@@ -122,7 +122,7 @@ The following section provides key recommendations for encrypting networks betwe
 
 Key recommendations for encrypting networks between on-premises and Azure, and across Azure regions:
 
-- Determine whether HPC traffic should be encrypted. Explore network topology and connectivity to understand network encryption options in enterprise-scale landing zones.
+- Determine whether HPC traffic should be encrypted. For more information, see [Network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md).
 
 - Plan for IP addressing in Azure to help ensure that:
 
@@ -140,7 +140,7 @@ It's important to plan for IP address needs in Azure to help ensure that:
 
 ## Define and throughput latency bandwidth network requirements
 
-Both HPC in the Cloud Only and HPC Cloud Hybrid deployment model have their own networking and connectivity latency and throughput needs. These needs depend on how you submit and run the manufacturing workflow and workload jobs on-premises versus the cloud. Users can submit HPC jobs in many deployment modes from on-premises or the cloud.
+HPC in the Cloud Only and HPC Cloud Hybrid deployment models each have their own networking and connectivity latency and throughput needs. These needs depend on how you submit and run the manufacturing workflow and workload jobs on-premises versus the cloud. Users can submit HPC jobs in many deployment modes from on-premises or the cloud.
 
 - Single jobs
   - On-premises to Azure connectivity considerations if you use remote visualization desktop
