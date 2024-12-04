@@ -66,7 +66,7 @@ The following diagram provides a high-level overview of the scenario.
 
 [![Diagram of overview of scenario 1 with secured Virtual WAN hub with default route propagation.](./media/eslz-overview-scenario-1.png)](./media/eslz-overview-scenario-1.png#lightbox)
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/example-architectures/eslz-overview-scenario-1.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-1.vsdx) of this architecture.*
 
 ### Architectural components
 
@@ -80,7 +80,7 @@ Implement this scenario with:
 
 [![Diagram of scenario 1 with secured Virtual WAN hub with default route propagation.](./media/eslz-net-scenario-1.png)](./media/eslz-net-scenario-1.png#lightbox)
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/example-architectures/eslz-net-scenario-1.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-1.vsdx) of this architecture.*
 
 ### Considerations
 
@@ -125,7 +125,7 @@ The following diagram provides a high-level overview of the scenario.
 
 [![Diagram of overview of scenario 2 with third-party NVA in hub Azure Virtual Network inspecting all network traffic.](./media/eslz-overview-scenario-2.png)](./media/eslz-overview-scenario-2.png#lightbox)
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/example-architectures/eslz-overview-scenario-2.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-2.vsdx) of this architecture.*
 
 ### Architectural components
 
@@ -139,7 +139,7 @@ You must disable ExpressRoute Global Reach in this scenario. The third-party NVA
 
 [![Diagram of scenario 2 with third-party NVA in hub Azure Virtual Network inspecting all network traffic.](./media/eslz-net-scenario-2.png)](./media/eslz-net-scenario-2.png#lightbox)
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/example-architectures/eslz-net-scenario-2.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-2.vsdx) of this architecture.*
 
 ### Considerations
 
@@ -169,7 +169,7 @@ The following diagram provides a high-level overview of the scenario.
 
 [![Diagram of overview of scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA.](./media/eslz-overview-scenario-3.png)](./media/eslz-overview-scenario-3.png#lightbox)
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/example-architectures/eslz-overview-scenario-3.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-3.vsdx) of this architecture.*
 
 ### Architectural components
 
@@ -182,7 +182,7 @@ Implement this scenario with:
 
 [![Diagram of scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA.](./media/eslz-net-scenario-3.png)](./media/eslz-net-scenario-3.png#lightbox)
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/example-architectures/eslz-net-scenario-3.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-3.vsdx) of this architecture.*
 
 ### Considerations
 
@@ -212,7 +212,7 @@ The following diagram provides a high-level overview of the scenario.
 
 [![Diagram of overview of scenario 4 with a third-party N V A in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-overview-scenario-4.png)](./media/eslz-overview-scenario-4.png#lightbox)
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/example-architectures/eslz-overview-scenario-4.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-4.vsdx) of this architecture.*
 
 ### Architectural components
 
@@ -225,7 +225,7 @@ Implement this scenario with:
 
 [![Diagram of scenario 4 with a third-party NVA in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-net-scenario-4.png)](./media/eslz-net-scenario-4.png#lightbox)
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/example-architectures/eslz-net-scenario-4.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-4.vsdx) of this architecture.*
 
 ### Considerations
 
