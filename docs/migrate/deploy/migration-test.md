@@ -14,7 +14,7 @@ After you replicate or stage your workloads and ensure that supporting services 
 - **Architecture**: Test your architecture to ensure that it works with the replicated or staged resources.
 - **Management routines**: Test your management plan for the migrated resources to ensure that it's functional.
 
-Unlike [business testing](../release/business-test.md), migration testing focuses on IT activities.
+Unlike [business testing](../release/business-test.md), migration testing focuses on IT activities. 
 
 As you identify problems, you can add them to your [remediation plan](../deploy/remediate.md). After you address all the problems, you can proceed to the workload release.
 
@@ -35,7 +35,7 @@ To do tests, you need:
   
   Alternatively, your isolated network might have a test domain controller in it. Peer the network to allow for replication of Active Directory traffic. You can take a snapshot of the domain controller in Azure, and then delete the peer for testing purposes to isolate the network. You can seize any necessary roles, and then restore the state when you complete testing to avoid making changes to the live identity provider.
 
-Your migration tool should have instructions for running a test migration and cleaning it up after you run your testing plan.
+Your migration tool should be able to perform a test migration, and clean up the test materials. For an example of such a test migration process that would work in Azure Migrate, see the [Test migrations for VMware agentless migrations](/azure/migrate/vmware/how-to-test-replicating-virtual-machines#changing-test-migration-virtual-network-and-subnet-of-a-replicating-machine-agentless-vmware-migration). This gives a starting point for understanding how the tools can help you with test migrations.
 
 > [!TIP]
 > You can also use this testing environment for [business testing](../release/business-test.md).
