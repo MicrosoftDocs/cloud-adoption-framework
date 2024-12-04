@@ -3,21 +3,21 @@ title: Understand the roles and responsibilities for cloud-scale analytics in Az
 description: Learn about the roles and responsibilities for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 05/07/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Roles and Responsibilities
 
-Once you've defined your cloud-scale analytics strategy, you need to organize teams to successfully deliver on it. This article describes some of the roles and responsibilities you should consider for cloud-scale analytics. You can map these roles and responsilbites to the various teams we've discussed in previous articles.
+After you've defined your cloud-scale analytics strategy, you need to organize teams to successfully deliver on it. This article describes some of the roles and responsibilities you should consider for cloud-scale analytics. You can map these roles and responsibilities to the various teams we've discussed in previous articles.
 
 > [!IMPORTANT]
 > This article highlights potential roles and responsibilities, but it isn't an complete list. Consider this article's guidance and then alter it for what works within your organization. If you're a small organization, you might not resource these roles, but that shouldn't prevent you from deploying a cloud-scale analytics platform. If you're a large organization, you might decide to streamline and consolidate roles.
 
 ## Roles
 
-A cloud-scale analytics deployment involves multiple roles. The following table describes each role, job title and responsibilities.
+A cloud-scale analytics deployment involves multiple roles. The following table describes each role, job title, and responsibilities.
 
 | Role | Other Job Title | Responsibilities | Skills | Applies to: |
 |-------------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
@@ -54,7 +54,7 @@ A cloud-scale analytics deployment involves multiple areas of responsibility. Th
 
 | Areas of Responsibility                                                   | Data Owner | Data Product Owner | Data Analyst | Data Scientist | Data Governance Manager | Data Steward | Solution Architect | Platform Ops | Security Architect | Security Engineer | DataOps Engineer | Data Solution Architect | Data Modeling Architect | Data Engineer |
 |---------------------------------------------------------------------------|------------|--------------------|--------------|----------------|-------------------------|--------------|--------------------|--------------|--------------------|-------------------|------------------|-------------------------|-------------------------|---------------|
-| Responsible for data model architecture for zone(s) in the data platform  |            |                    |              |                |                         |              |                    | R            |                    |                   | R                | A                       | R                       | R             |
+| Responsible for data model architecture for zones in the data platform  |            |                    |              |                |                         |              |                    | R            |                    |                   | R                | A                       | R                       | R             |
 | Drive architectural approval for overall continuity of the data platform |            |                    |              |                |                         |              |                    |              |                    |                   | R                | A                       | R                       |               |
 | Own source data loaded to data platform                                   | A          |                    |              |                |                         | R            |                    |              |                    |                   |                  |                         |                         |               |
 | Manage source data loaded to data platform                                | A          |                    |              |                |                         | R            |                    |              |                    |                   |                  |                         |                         | R             |
@@ -96,7 +96,7 @@ A cloud-scale analytics deployment involves multiple areas of responsibility. Th
 
 | Areas of Responsibility                                                                      | Data Owner | Data Product Owner | Data Analyst | Data Scientist | Data Governance Manager | Data Steward | Solution Architect | Platform Ops | Security Architect | Security Engineer | DataOps Engineer | Data Solution Architect | Data Modeling Architect | Data Engineer |
 |----------------------------------------------------------------------------------------------|------------|--------------------|--------------|----------------|-------------------------|--------------|--------------------|--------------|--------------------|-------------------|------------------|-------------------------|-------------------------|---------------|
-| Manage stakeholder comms once architecture is approved                                      |            |                    |              |                |                         |              | A                  |              |                    |                   |                  |                         |                         |               |
+| Manage stakeholder comms after architecture is approved                                      |            |                    |              |                |                         |              | A                  |              |                    |                   |                  |                         |                         |               |
 | Gauge reusability for future projects                                                       | R          | R                  |              |                |                         |              | R                  | R            |                    |                   | R                | A                       | R                       | R             |
 | Business team training                                                       |            |                    |              |                |                         |              |                    |              |                    |                   |                  |                         |                         |               |
 | Infrastructure team support                                                | R          | R                  | R            | R              | R                       | R            |                    | A            |                    | R                 | R                |                         |                         | R             |
