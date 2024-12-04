@@ -137,7 +137,7 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 |`accountName`    | True       | String        | Name of the Microsoft Purview account         |
 |`dataSourceName` | True       | String        | Name of the data source         |
 
-### Use the Microsft Purview REST API for registration
+### Use the Microsoft Purview REST API for registration
 
 The following examples show how to use the Microsoft Purview REST API to register data sources with payloads:
 

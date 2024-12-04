@@ -36,7 +36,7 @@ The following diagram doesn't represent all Azure services. The diagram is simpl
 
 ### Data management landing zone
 
-A key requirement for a cloud-scale analytics implementation is a data management landing zone. This subscription contains resources that are shared across all landing zones, including shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalogue have been deployed as services at the tenant level.
+A key requirement for a cloud-scale analytics implementation is a data management landing zone. This subscription contains resources that are shared across all landing zones, including shared networking components like a firewall or private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalog have been deployed as services at the tenant level.
 
 Relecloud created a data management landing zone when they deployed the data analytics solution for the operations group. When the billing group joins the platform, they use the same data management landing zone to share common resources with the operations group.
 

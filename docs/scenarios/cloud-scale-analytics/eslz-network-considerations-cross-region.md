@@ -55,7 +55,7 @@ Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="ic
 > [!NOTE]
 > When accessing a private endpoint across a peered network, you will only ever be charged for the private endpoint itself and not for the VNet peering. You can read the official statement in [FAQ: How will billing work when accessing a private endpoint from a peered network?](https://azure.microsoft.com/pricing/details/private-link/).
 
-With this network design, you're charged for your Private Endpoints (per hour) and all ingress and egress traffic sent through them. You also have to pay a [data transfer cost](https://azure.microsoft.com/pricing/details/bandwidth/) for traffic between regions. However, you will not be charged any Global virtual network Peering ingress and egress costs and it has noteworthy cost benefits compared to the [traditional spoke-hub-hub-spoke option.](#traditional-spoke-hub-hub-spoke-design-not-recommended).
+With this network design, you're charged for your Private Endpoints (per hour) and all ingress and egress traffic sent through them. You also have to pay a [data transfer cost](https://azure.microsoft.com/pricing/details/bandwidth/) for traffic between regions. However, you won't be charged any Global virtual network Peering ingress and egress costs and it has noteworthy cost benefits compared to the [traditional spoke-hub-hub-spoke option.](#traditional-spoke-hub-hub-spoke-design-not-recommended).
 
 Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
@@ -98,7 +98,7 @@ Summary: :::image type="icon" source="./media/minus-icon.png":::
 
 In the traditional spoke-hub-hub-spoke design, you're charged your two storage accounts' Private Endpoints (per hour) and all ingress and egress traffic sent through them. You're also charged for the ingress and egress traffic of one local virtual network peering and the global virtual network peering between your connectivity hubs. However, you aren't charged for the first virtual network peering, as we explained in the previous note.
 
-Your central network virtual appliances also incurs significant costs if you choose this network design. This cost is because you either have to purchase extra licenses to scale the appliances based on demand or pay the charge per processed gigabyte, as with Azure Firewall.
+Your central network virtual appliances also incur significant costs if you choose this network design. This cost is because you either have to purchase extra licenses to scale the appliances based on demand or pay the charge per processed gigabyte, as with Azure Firewall.
 
 Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png"::::::image type="icon" source="./media/minus-icon.png":::
 

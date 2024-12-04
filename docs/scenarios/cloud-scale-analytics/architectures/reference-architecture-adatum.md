@@ -34,7 +34,7 @@ In this reference architecture, we deploy a data management landing zone, which 
 
 ### Data management landing zone
 
-A critical concept for every cloud-scale analytics is having one data management landing zone. This subscription contains resources shared across all of the landing zones and includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalogue are deployed as services at tenant level.
+A critical concept for every cloud-scale analytics is having one data management landing zone. This subscription contains resources shared across all of the landing zones and includes shared networking components like a firewall and private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalog are deployed as services at tenant level.
 
 ### Data applications
 

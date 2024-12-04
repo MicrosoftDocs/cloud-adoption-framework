@@ -28,7 +28,7 @@ Lamna will implement cloud-scale analytics as their solution for a cloud-based a
 
 ### Data management landing zone
 
-A critical concept for every cloud-scale analytics implementation is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalogue have been deployed as services at tenant level.
+A critical concept for every cloud-scale analytics implementation is having one data management landing zone. This subscription contains resources that will be shared across all of the landing zones. This includes shared networking components, like a firewall and private DNS zones. It also includes resources for data and cloud governance. Microsoft Purview and Databricks Unity Catalog have been deployed as services at tenant level.
 
 ### Patient data landing zone
 
