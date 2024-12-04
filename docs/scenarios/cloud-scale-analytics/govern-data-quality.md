@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 Data quality is a management function of cloud-scale analytics. It resides in the data management landing zone and is a core part of governance.
 
-## Data Quality Considerations
+## Data quality considerations
 
 Data quality is the responsibility of every individual who creates and consumes data products. Creators should adhere to the global and domain rules, while consumers should report data inconsistencies to the owning data domain via a feedback loop.
 
@@ -20,7 +20,7 @@ Because data quality affects all the data provided to the board, it should start
 
 However, being proactive still requires you to have data quality experts who can clean buckets of data that require remediation. Avoid pushing this work to a central team and instead target the data domain, with specific data knowledge, for cleansing the data.
 
-### Data Quality Metrics
+### Data quality metrics
 
 Data quality metrics are key to assessing and increasing the quality of your data products. At a global and domain level, you need to decide upon your quality metrics. At a minimum, we recommend the following metrics:
 
@@ -33,7 +33,7 @@ Data quality metrics are key to assessing and increasing the quality of your dat
 | Accuracy = % of unaltered values | Measures successful reproduction of the intended values across multiple systems. For example, if an invoice itemizes a SKU and extended price that differs from the original order, the invoice line item is inaccurate. |
 | Linkage = % of well-integrated data | Measures successful association to its companion reference details in another system. For example, if an invoice itemizes an incorrect SKU or product description, the invoice line item isn't linkable. |
 
-### Data Profiling
+### Data profiling
 
 Data profiling examines data products that are registered in the data catalog and collects statistics and information about that data. To provide summary and trend views about the data quality over time, store this data in your metadata repository against the data product.
 
@@ -52,7 +52,7 @@ You can report on such items as:
 - Uniqueness: Indicates the percentage of data that isn't duplicated.
 - Consistency: Indicates data where data integrity is maintained.
 
-## Data Quality Recommendations
+## Data quality recommendations
 
 To implement data quality, you need to use both human and computational power as follows:
 
@@ -70,7 +70,7 @@ To implement data quality, you need to use both human and computational power as
 > [!TIP]
 > Define data quality rules at both a global and domain level. Doing so allows the business to define its standards for every created data product and allows data domains to create additional rules related to their domain.
 
-## Data Quality Solutions
+## Data quality solutions
 
 We recommend evaluating Microsoft Purview Data Quality as a solution for assessing and managing data quality, which is crucial for reliable AI-driven insights and decision-making. It includes:
 
@@ -85,7 +85,7 @@ If your organization decides to implement Azure Databricks to manipulate data, t
 
 You can also choose from partners, open-source, and custom options for a data quality solution.
 
-## Data Quality Summary
+## Data quality summary
 
 Fixing data quality can have serious consequences for a business. It can lead to business units interpreting data products in different ways. This misinterpretation can prove costly to the business if decisions are based on data products with lower data quality. Fixing data products with missing attributes can be an expensive task and could require full reloads of data from several periods.
 
@@ -93,7 +93,7 @@ Validate data quality early and put processes in place to proactively address po
 
 You can use tooling as a free choice, but ensure it includes expectations (rules), data metrics, profiling, and the ability to secure the expectations so that you can implement global and domain-based expectations.
 
-## Next Steps
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Data lifecycle management?](govern-lifecycle.md)
