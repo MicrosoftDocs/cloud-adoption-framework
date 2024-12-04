@@ -43,7 +43,7 @@ AI networking refers to the design and implementation of network infrastructure 
 
 - *Activate Azure DDoS Protection for internet-facing AI workloads.* [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) safeguards your AI services from potential disruptions and downtime caused by distributed denial of service attacks. Enable Azure DDoS protection at the virtual network level to defend against traffic floods targeting internet-facing applications.
 
-- *Connect to on-premises data.* For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection.
+- *Connect with on-premises networks.* Use a jumpbox and Azure Bastion to secure operational access to AI workloads. If needed, some services, like Azure AI Foundry, can [access on-premises resources](/azure/ai-studio/how-to/access-on-premises-resources). For organizations transferring large amounts of data from on-premises sources to cloud environments, use a high-bandwidth connection.
 
     - *Consider Azure ExpressRoute.* Azure [ExpressRoute](/azure/expressroute/expressroute-introduction) is ideal for high data volumes, real-time processing, or workloads that require consistent performance. It has [FastPath](/azure/expressroute/about-fastpath) feature that improves data path performance.
 
@@ -72,7 +72,7 @@ An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is 
 
 ### Build an AI environment
 
-If you don't use an Azure landing zone, follow the recommendations in this article to build your AI environment. The following diagram shows a baseline resource hierarchy. It segments internal AI workloads and internet-facing AI workloads, as described in [establish AI governance](#establish-ai-governance). Internal workloads use policy to deny online access from customers. This separation safeguards internal data from exposure to external users. AI development uses a jumpbox to manage AI resources and data.
+If you don't use an Azure landing zone, follow the recommendations in this article to build your AI environment. The following diagram shows a baseline resource hierarchy. It segments internal AI workloads and internet-facing AI workloads, as described in [establish AI governance](#establish-ai-governance). Internal workloads use policy to deny online access from customers. This separation safeguards internal data from exposure to external users. AI development should use a jumpbox to manage AI resources and data.
 
 :::image type="content" source="./images/baseline-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/baseline-resource-hierarchy.svg" border="false":::
 *Figure 3. Baseline resource hierarchy for AI workloads.*

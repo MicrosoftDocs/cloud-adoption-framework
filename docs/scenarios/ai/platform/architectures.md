@@ -26,6 +26,15 @@ The Azure Architecture Center offers reference architectures and guides to help 
 | [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops) | Guide| Any |
 | [Developing RAG solutions](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide) | Guides| Any |
 | [Proxy Azure OpenAI usage](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) | Guide| Any |
+| [Application design](/azure/well-architected/ai/application-design) | Design area | Any |
+| [Application platform](/azure/well-architected/ai/application-platform)| Design area | Any |
+| [Training data design](/azure/well-architected/ai/training-data-design) | Design area | Any |
+| [Grounding data design](/azure/well-architected/ai/grounding-data-design) | Design area | Any |
+| [Data platform](/azure/well-architected/ai/data-platform) | Design area | Any |
+| [MLOps and GenAIOps](/azure/well-architected/ai/mlops-genaiops) | Design area | Any |
+| [Operations](/azure/well-architected/ai/operations) | Design area | Any |
+| [Test and evaluate](/azure/well-architected/ai/test) | Design area | Any |
+| [Responsible AI](/azure/well-architected/ai/responsible-ai) | Design area | Any |
 
 ## Nongenerative AI architectures and guides
 
