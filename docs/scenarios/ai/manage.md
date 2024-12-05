@@ -1,6 +1,6 @@
 ---
 title: Manage AI – Recommendations for managing AI
-description: Learn the process to manage AI workloads in Azure with best practices and recommendations
+description: Learn the process to manage AI workloads in Azure with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
