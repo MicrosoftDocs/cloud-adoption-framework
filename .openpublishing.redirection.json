@@ -2296,6 +2296,21 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/azure-hpc/energy/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {   
          "source_path": "docs/scenarios/azure-hpc/manufacturing/platform-automation-devops.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
          "redirect_document_id": false
