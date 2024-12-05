@@ -24,7 +24,7 @@ The following diagram shows a conceptual reference architecture for the connecti
 
 Consider the following network design considerations for Azure Arc-enabled servers.
 
-- **Define the agent's connectivity method:** Review your existing infrastructure and security requirements. Decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go directly over the internet, through a proxy server, or you can [implement Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you are implementing Azure Arc over the internet with or without a proxy, you can also use a feature called [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway) (Public Preview), which helps to reduce the the overall number of endpoint URLs that the proxy needs to allow.
+- **Define the agent's connectivity method:** Review your existing infrastructure and security requirements. Decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go directly over the internet, through a proxy server, or you can [implement Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you are implementing Azure Arc over the internet with or without a proxy, you can also use a feature called [Azure Arc Gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway) (Public Preview), which helps to reduce the the overall number of endpoint URLs that the proxy needs to allow.
 
 - **Manage access to Azure service tags:** Create an automated process to keep the firewall and proxy network rules updated according to the [connected machine agent network requirements](/azure/azure-arc/servers/network-requirements).
 - **Secure your network connectivity to Azure Arc:** Configure the machine operating system to use Transport Layer Security (TLS) version 1.2. We don't recommend older versions because of known vulnerabilities.
@@ -67,7 +67,7 @@ The Azure Arc Gateway  (Public Preview) is a service provided by Azure that redu
 
 Right now, the Azure Arc Gateway service does not work with Private Link, and it does not work with Expressroute peering as it must be accessed over the internet. 
 
-The latest updated information is published here: [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway)
+The latest updated information is published here: [Azure Arc Gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway)
 
 #### Private Link
 
