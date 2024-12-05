@@ -152,9 +152,9 @@ MPI environments are dedicated because they have unique requirements that need l
 The following articles provide guidance for each step in the cloud adoption journey for HPC environments.
 
 - [Azure Billing and Microsoft Entra tenants for energy HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/azure-billing-active-directory-tenant)
-- [Resource organization for HPC in the energy industry](./resource-organization.md)
-- [Governance for HPC in energy industries](../../../templates/scenarios/alz-security-governance-compliance.md)
-- [Security for Azure HPC in energy](./security.md)
-- [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
-- [Storage for HPC energy environments](./storage.md)
+- [Resource organization for HPC in the energy industry](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/resource-organization)
+- [Governance for HPC in energy industries](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/security-governance-compliance)
+- [Security for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/security)
+- [Compute large-scale HPC application workloads in Azure VMs](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/compute)
+- [Storage for HPC energy environments](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/storage)
 - [Azure high-performance computing (HPC) landing zone accelerator](azure-hpc-landing-zone-accelerator.md)
