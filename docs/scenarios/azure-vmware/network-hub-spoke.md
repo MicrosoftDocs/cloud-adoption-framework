@@ -3,7 +3,7 @@ title: Manage traffic natively from Azure VMware Solution
 description: Direct egress and ingress traffic from Azure VMware Solution
 author: sablair
 ms.author: martinek
-ms.date: 02/14/2023
+ms.date: 11/25/2024
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank
 ---
@@ -116,6 +116,8 @@ By using NFS datastores backed by Azure NetApp Files, you can expand your storag
 -  Ultra & ErGw3AZ SKU is required for bypassing the gateway port speed limits
 -  Read traffic ingresses and write traffic is egresses over the Expressroute. Egress traffic over Expressroute circuits bypasses the gateway and go directly to the edge router
 -  Ingress/Egress charges are suppressed from AVS, however there's an egress charge if data is going across peered VNETs.
+-  Use a dedicated ExpressRoute Gateway for Azure Netapp Files, do not used a shared/centralized ExpressRoute Gateway.
+-  Don't place a firewall or NVA in the data path between Azure NetApp Files and Azure VMware Solution.
 - Only NFS v3 is supported today.
 
 If you’re seeing unexpected latency, make sure your AVS Private cloud, and ANF deployment are pinned to the same AZ (Azure Availability Zones). For high availability, create ANF volumes in separate AZs and enable `Cross Zone Replication`
