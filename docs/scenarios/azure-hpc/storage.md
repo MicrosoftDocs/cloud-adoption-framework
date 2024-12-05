@@ -92,7 +92,7 @@ To decide which storage solution to use, consider the following application requ
 - File sizes and number
 - Job runtime
 - Associated costs
-- Affinity for on-premisess versus Azure storage location
+- Affinity for on-premises versus Azure storage location
 
 ## Design recommendations
 
