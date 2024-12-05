@@ -1,6 +1,6 @@
 ---
 title: AI Strategy - Recommendations for organizations developing an AI adoption strategy
-description: Learn the process to develop a strategy for AI adoption with best practices and recommendations.
+description: Learn the process to develop a strategy for AI adoption with best practices and recommendations
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
