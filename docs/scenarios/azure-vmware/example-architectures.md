@@ -210,7 +210,7 @@ This scenario is ideal if:
 
 The following diagram provides a high-level overview of the scenario.
 
-[![Diagram of overview of scenario 4 with a third-party N V A in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-overview-scenario-4.png)](./media/eslz-overview-scenario-4.png#lightbox)
+[![Diagram of overview of scenario 4 with a third-party NVA in the hub virtual network inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-overview-scenario-4.png)](./media/eslz-overview-scenario-4.png#lightbox)
 
 *Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-4.vsdx) of this architecture.*
 
@@ -223,7 +223,7 @@ Implement this scenario with:
 - Your third-party NVAs in your Azure Virtual Network hub to provide outbound internet to Azure VMware Solution.
 - ExpressRoute for connectivity between on-premises datacenters and Azure VMware Solution.
 
-[![Diagram of scenario 4 with a third-party NVA in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-net-scenario-4.png)](./media/eslz-net-scenario-4.png#lightbox)
+[![Diagram of scenario 4 with a third-party NVA in the hub virtual network inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-net-scenario-4.png)](./media/eslz-net-scenario-4.png#lightbox)
 
 *Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-4.vsdx) of this architecture.*
 
