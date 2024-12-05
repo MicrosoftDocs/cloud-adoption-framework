@@ -24,7 +24,7 @@ The following diagram shows a conceptual reference architecture for the connecti
 
 Consider the following network design considerations for Azure Arc-enabled servers.
 
-- **Define the agent's connectivity method:** Review your existing infrastructure and security requirements. Decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go directly over the internet, through a proxy server, or you can [implement Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you are implementing Azure Arc over the internet with or without a proxy, you can also use a feature called [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway) (Public Preview), which helps to reduce the the overall number of endpoints that the proxy needs to allow.
+- **Define the agent's connectivity method:** Review your existing infrastructure and security requirements. Decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go directly over the internet, through a proxy server, or you can [implement Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you are implementing Azure Arc over the internet with or without a proxy, you can also use a feature called [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway) (Public Preview), which helps to reduce the the overall number of endpoint URLs that the proxy needs to allow.
 
 - **Manage access to Azure service tags:** Create an automated process to keep the firewall and proxy network rules updated according to the [connected machine agent network requirements](/azure/azure-arc/servers/network-requirements).
 - **Secure your network connectivity to Azure Arc:** Configure the machine operating system to use Transport Layer Security (TLS) version 1.2. We don't recommend older versions because of known vulnerabilities.
@@ -40,9 +40,8 @@ Consider the following network design recommendations for Azure Arc-enabled serv
 You can use Azure Arc-enabled servers to connect hybrid machines via:
 
 - A direct connection, optionally from behind a firewall or a proxy server.
--   Additionally, while using the internet, you can choose to use the [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway) to reduce the number of endpoints that the proxy must allow.
-
-  OR 
+-   Additionally, while using the internet, you can choose to use the Azure Arc Gateway service to reduce the number of endpoint URLs that the proxy must allow.
+    OR 
   
 - Private Link.
 
@@ -60,7 +59,15 @@ If you use a firewall or a proxy server to restrict outbound connectivity, make 
 
 If you deploy extensions on your Azure Arc-enabled servers, every extension connects to its own endpoint or endpoints, and you must also allow all corresponding URLs in the firewall or proxy. Add these endpoints to ensure granular secured network traffic and to meet the principle of least privilege.
 
-To reduce the total number of URLs required in the firewall or proxy, determine if the [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway) would be of benefit.
+To reduce the total number of URLs required in the firewall or proxy, determine if the Azure Arc Gateway service would be of benefit.
+
+#### Azure Arc Gateway
+
+The Azure Arc Gateway  (Public Preview) is a service provided by Azure that reduces the total number of outbound HTTPS endpoints that your proxy needs to allow for Azure Arc to work. It eliminates the need for most wildcards endpoints (Some wildcard endpoints are still required) and reduces the total number of endpoints required to 7 for Azure Arc. It has the abililty to work with some extension endpoints so you do not need to create more URL exclusions in your proxy.
+
+Right now, the Azure Arc Gateway service does not work with Private Link, and it does not work with Expressroute peering as it must be accessed over the internet. 
+
+The latest updated information is published here: [Azure Arc Gateway](https://learn.microsoft.com/en-us/azure/azure-arc/servers/arc-gateway)
 
 #### Private Link
 
