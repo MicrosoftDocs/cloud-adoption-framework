@@ -1,9 +1,9 @@
 ---
-title: Develop a Cloud Adoption Strategy
+title: Develop a Cloud adoption strategy
 description: Learn how to develop a cloud adoption strategy to migrate or innovate in the cloud, in alignment with your business goals.
 ms.author: tozimmergren
 author: Zimmergren
-ms.topic: overview
+ms.topic: conceptual
 ms.date: 11/21/2024
 ---
 
@@ -15,7 +15,7 @@ Establishing a cloud strategy involves understanding the specific needs and obje
 
 The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework (CAF) Strategy methodology. Organizations typically mature in iterations – consider the CAF Strategy guide an iterative supplement to your cloud strategy and come back to re-assess and iterate regularly.
 
-:::image type="content" source="media/placeholder-1.png" alt-text="Diagram showing flow.":::
+:::image type="content" source="media/placeholder-1.png" alt-text="Diagram showing how to best consume the CAF Strategy guidance.":::
 
 Whether you're an existing cloud customer looking to mature in new areas or if you’re new to the cloud, this guidance will help you establish a clear mission, goals, measurable results, and to inform your strategy about key considerations from a strategic perspective for your cloud investments.
 
