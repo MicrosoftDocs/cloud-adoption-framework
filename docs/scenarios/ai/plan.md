@@ -1,5 +1,5 @@
 ---
-title: AI Plan - Recommendations for organizations planning AI adoption
+title: AI Plan - Process to plan for AI adoption
 description: Learn the process to plan for AI adoption with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Plan - Recommendations for organizations planning AI adoption
+# AI Plan - Process to plan for AI adoption
 
 This article outlines the organizational process for planning AI adoption. An AI adoption plan details the steps an organization must take to integrate AI into its operations. This plan ensures alignment between AI initiatives and business goals. It helps organizations allocate resources, develop skills, and deploy technology for effective AI adoption.
 
