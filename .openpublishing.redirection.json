@@ -2311,12 +2311,12 @@
          "redirect_document_id": false
       },
       {
-         "source_path": " docs/strategy/business-outcomes/engagement-outcomes.md",
+         "source_path": "docs/strategy/business-outcomes/engagement-outcomes.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy",
          "redirect_document_id": false
       },
       {
-         "source_path": " docs/strategy/business-outcomes/fiscal-outcomes.md",
+         "source_path": "docs/strategy/business-outcomes/fiscal-outcomes.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
          "redirect_document_id": false
       },
@@ -2386,7 +2386,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": " docs/strategy/technical-considerations/index.md",
+         "source_path": "docs/strategy/technical-considerations/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
          "redirect_document_id": false
       }
