@@ -29987,7 +29987,7 @@
 				<v:textBlock v:margins="rect(4,4,4,4)" v:verticalAlign="0"/>
 				<v:textRect cx="116.719" cy="974.875" width="233.44" height="31.5"/>
 				<rect x="0" y="959.125" width="233.437" height="31.5" class="st34"/>
-				<text x="6.55" y="972.13" class="st35" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Some of the following services can connect. You can to <tspan
+				<text x="6.55" y="972.13" class="st35" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Some of the following services can connect. You can <tspan
 							x="22.05" dy="1.2em" class="st5">start with one and connect to others if needed.</tspan></text>			</g>
 		</a>
 		<g id="group1213-384" transform="translate(436.683,-391.75)" v:mID="1213" v:groupContext="group">

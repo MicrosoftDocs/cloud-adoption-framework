@@ -4,7 +4,7 @@ description: Learn about the identity and access management design area, which p
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 02/26/2024
+ms.date: 11/28/2024
 ---
 
 # Identity and access management design area
