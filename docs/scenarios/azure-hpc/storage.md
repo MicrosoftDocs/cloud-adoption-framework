@@ -132,7 +132,7 @@ Consider the types of traffic that your HPC environment generates and processes.
 - Average file sizes and counts
 - Random versus sequential access patterns
 
-## Data locality
+### Data locality
 
 This category accounts for the location of the data. Locality awareness helps you determine whether you can use copying, caching, or synchronization as your data-movement strategy. Check the following locality items in advance:
 
@@ -141,7 +141,7 @@ This category accounts for the location of the data. Locality awareness helps yo
 - If HPC workloads in Azure need to be coordinated with source-data modification timelines
 - If sensitive or Health Insurance Portability and Accountability Act data is included
 
-## Performance requirements
+### Performance requirements
 
 Performance requirements for storage solutions are typically summarized as follows:
 
@@ -152,7 +152,7 @@ Performance requirements for storage solutions are typically summarized as follo
 
 Every factor affects performance, so these numbers serve as a guide for the expected results of a specific solution. For instance, an HPC workload might include extensive file creation and deletion as part of the workflow. Those operations could affect the overall throughput.
 
-## Access methods
+### Access methods
 
 Account for the client access protocol required and be clear about what features of the protocol you need. There are different versions of NFS and SMB.
 
@@ -162,7 +162,7 @@ Consider the following requirements:
 - Expected protocol features, such as access control lists or encryption
 - Parallel file system solution
 
-## Total capacity requirement
+### Total capacity requirement
 
 Storage capacity in Azure is the next consideration. It helps to inform the overall cost of the solution. If you plan to store a large amount of data for a long time, you might want to consider tiering as part of the storage solution. Tiering combines lower-cost storage options with higher-cost, higher-performance storage in a hot tier. Consider the following capacity requirements:
 
@@ -171,7 +171,7 @@ Storage capacity in Azure is the next consideration. It helps to inform the over
 - Total warm-tier capacity required
 - Total cold-tier capacity required
 
-## Authentication and authorization method
+### Authentication and authorization method
 
 For authentication and authorization requirements, such as using an LDAP server or Windows Server Active Directory, make sure to include the necessary supporting systems in your architecture. If you need to support capabilities like UID or GID mapping to Windows Server Active Directory users, confirm that the storage solution supports that capability.
 
@@ -181,11 +181,11 @@ Consider the following network requirements:
 - Directory (LDAP or Windows Server Active Directory)
 - UID or GID mapping to Windows Server Active Directory users or not
 
-## Roll-your-own parallel file system
+### Roll-your-own parallel file system
 
 Similar to NFS, you can create a multi-node BeeGFS or Lustre file system. The performance of these systems is mostly dependent on the type of VMs that you choose. You can use images found in Azure Marketplace for [BeeGFS](https://azuremarketplace.microsoft.com/marketplace/apps/beegfs.beegfs-ubuntu-free) or a Lustre implementation by DDN called [Whamcloud](https://whamcloud.com/). If you use non-Microsoft images from vendors such as [BeeGFS](https://www.beegfs.io/content/) or DDN, you can purchase their support services. You can use BeeGFS and Lustre under their GPL licenses without extra charges, aside from the costs for machines and disks. These tools are easy to roll out by using [Azure HPC scripts](https://github.com/Azure/azurehpc/tree/master/examples) with either ephemeral local disks for scratch or Azure Premium SSD or Azure Ultra Disk Storage for persistent storage.
 
-## Cray ClusterStor
+### Cray ClusterStor
 
 It's a challenge for larger workloads to replicate the *bare-metal* performance of large compute clusters with large Lustre environments. Other challenges include achieving high throughput in terms of TBps and potentially handling PBs of storage. You can now run these workloads by using the Cray ClusterStor in Azure solution. This approach is a pure bare-metal Lustre deployment that's placed in the relevant Azure datacenter. Parallel file systems such as BeeGFS and Lustre provide the highest performance because of their architecture. But that architecture and the use of these technologies has a high management price.
 
