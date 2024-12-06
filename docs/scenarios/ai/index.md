@@ -22,9 +22,9 @@ AI provides automation that enhances individual efficiency and optimize business
 
 AI should meet the specific needs of your organization. Start with [AI Strategy](./strategy.md) to identify where AI adds value. Evaluate whether you should build solutions with Azure PaaS or IaaS services, or purchase a Microsoft Copilot SaaS solution. Use [AI Plan](./plan.md) to execute on your AI strategy and move toward production.
 
-To ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish an AI foundation in Azure.
+To ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish an AI foundation in Azure. If you decided to ***buy*** a Microsoft Copilot SaaS solution, skip to the Ready AI guidance.
 
-If you decided to ***buy*** a Microsoft Copilot SaaS solution, skip to the Ready AI guidance. No matter what technology you adopt, you must establish organizational processes to [Govern AI](./govern.md), [Manage AI](./manage.md), and [Secure AI](./secure.md).
+No matter what technology you adopt, everyone must establish processes to [Govern AI](./govern.md), [Manage AI](./manage.md), and [Secure AI](./secure.md).
 
 | AI adoption step | Description | Applicable to build (PaaS or IaaS) or buy (SaaS)? |
 |---|---|---|
