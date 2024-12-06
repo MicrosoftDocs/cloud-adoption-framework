@@ -42,7 +42,7 @@ In Azure HPC clusters, compute nodes are virtual machines (VMs) that you can qui
 
 - **One set of data to many compute nodes.** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Though they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
 
-- **Many sets of data to many compute nodes.** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Though they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
+- **Many sets of data to many compute nodes.** In this scenario, there are many data sources on the network that all the compute nodes access for working data. Though they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
 
 ## HPC design recommendations
 
@@ -74,7 +74,11 @@ Parallel file systems such as Lustre are used for HPC energy workloads that requ
 
 An orchestrated parallel file service, such as Azure Managed Lustre, works for 50,000 or more cores, with read/write rates up to 500 GBps and 2.5-PB storage. For more information, see [Parallel virtual file systems on Microsoft Azure](https://techcommunity.microsoft.com/t5/azure-global/parallel-virtual-file-systems-on-microsoft-azure-part-1-overview/ba-p/306487).
 
-- Azure NetApp Files and local disks are typically used to handle the more latency and IOPS-sensitive workloads, like seismic interpretation, model preparation, and visualization. Consider using Azure NetApp Files for workloads of up to 4,000 cores, with a throughput up to 6.5 GiBps, and workloads that benefit from or require multiprotocol (NFS/SMB) access to the same data set.
+## HPC components
+
+The following are components of an HPC workload.
+
+- Azure NetApp Files and local disks are typically used to handle the more latency and IOPS-sensitive workloads, like seismic interpretation, model preparation, and visualization. Consider using Azure NetApp Files for workloads of up to 4,000 cores, with a throughput up to 6.5 GiBps, and workloads that benefit from or require multiprotocol NFS and Server Message Block (SMB) access to the same data set.
 
 - Managed Lustre provides faster and higher capacity storage for HPC workloads. This solution works for medium to large workloads and can support 50,000 or more cores, with throughput up to 500 GBps, and storage capacity up to 2.5 PiB.
 
@@ -82,17 +86,7 @@ An orchestrated parallel file service, such as Azure Managed Lustre, works for 5
 
 - Oil and gas energy workloads might require you to transfer large data sizes and volumes between on-premises systems and the cloud. Offline migration uses device-based services like Azure Data Box. Online migration uses network-based services like Azure ExpressRoute.
 
-## Finance considerations
-
-To decide which storage solution to use, consider the following application requirements:
-
-- Latency
-- IOPS
-- Throughput
-- File sizes and number
-- Job runtime
-- Associated costs
-- Affinity for on-premises versus Azure storage location
+The following table provides a comparison of Blob Storage, Azure Files, Managed Lustre, and Azure NetApp Files.
 
 ## Finance design recommendations
 
@@ -110,19 +104,19 @@ To decide which storage solution to use, consider the following application requ
 
 - Use [Azure NetApp Files](/azure/azure-netapp-files) for ReadWriteMany (unique) or write-once, read-once applications. It provides the following benefits:
 
-  - A wide range of file protocols, such as NFSv3, NFSv4.1, and SMB3.
+  - A wide range of file protocols, such as NFSv3, NFSv4.1, and SMB3
 
-  - Performance that's comparable with on-premises performance, with multiple tiers (Ultra, Premium, Standard).
+  - Performance that's comparable with on-premises performance, with multiple tiers (Ultra, Premium, Standard)
 
-  - Deploys in minutes and provides a wide range of tiers and flexibility.
+  - Deploys in minutes and provides a wide range of tiers and flexibility
 
-  - Flexible capacity pool types and performance, where the QoS per volume is automatically assigned based on the tier of the pool and the volume quota.
+  - Flexible capacity pool types and performance, where the QoS per volume is automatically assigned based on the tier of the pool and the volume quota
 
 The following table provides a comparison of Blob Storage, Azure Files, Managed Lustre, and Azure NetApp Files.
 
 |Category |Blob Storage | Azure Files | Managed Lustre | Azure NetApp Files |
 |--|--|--|--|--|
-| Use cases | Best suited for large-scale read-heavy sequential access workloads where data is ingested once and modified minimally. <br><br> Low total cost of ownership (TCO), if there's light maintenance. | A highly available service that's best suited for random-access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support. The built-in CSI driver allows you to easily use it from VM-based platforms and container platforms like Azure Container Instances and Azure Kubernetes Service (AKS). | Managed Lustre is a fully managed parallel file system that's best suited for medium to large HPC workloads. <br><br> Enables HPC applications in the cloud without breaking application compatibility by providing familiar Lustre parallel file system functionality, behaviors, and performance. This service helps secure long-term application investments. | A fully managed file service in the cloud, powered by NetApp, that has advanced management capabilities. <br><br> Azure NetApp Files is suited for workloads that require random access. It provides broad protocol support and improved data protection. |
+| Use cases | Best suited for large-scale read-heavy sequential access workloads where data is ingested once and modified minimally. <br><br> Low total cost of ownership, if there's light maintenance. <br><br> Some example scenarios include large scale analytical data, throughput sensitive high-performance computing, backup and archive, autonomous driving, media rendering, and genomic sequencing.| A highly available service that's best suited for random-access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support. The built-in CSI driver allows you to easily use it from VM-based platforms and container platforms like Azure Container Instances and Azure Kubernetes Service (AKS). <br><br> Some example scenarios are: Shared files, databases, home directories, traditional applications, ERP, CMS, NAS migrations that don't require advanced management, and custom applications that require scale-out file storage. | Managed Lustre is a fully managed parallel file system that's best suited for medium to large HPC workloads. <br><br> Enables HPC applications in the cloud without breaking application compatibility by providing familiar Lustre parallel file system functionality, behaviors, and performance. This service helps secure long-term application investments. | A fully managed file service in the cloud, powered by NetApp, that has advanced management capabilities. <br><br> Azure NetApp Files is suited for workloads that require random access. It provides broad protocol support and improved data protection. <br><br> Some example scenarios are: On-premises enterprise NAS migration that requires rich management capabilities, latency sensitive workloads like SAP HANA, latency-sensitive or IOPS intensive high-performance compute, or workloads that require simultaneous multi-protocol access. |
 | Available protocols | NFS 3.0 <br><br>REST <br><br> Azure Data Lake Storage  | SMB <br><br> NFS 4.1 <br><br>(No interoperability between either protocol) | Lustre | NFS 3.0 and 4.1 <br><br> SMB <br><br><br> |
 | Key features | Integrated with Azure HPC Cache for low-latency workloads. <br><br> Integrated management, including lifecycle management, immutable blobs, data failover, and metadata index. | Zonally redundant for high availability. <br><br> Consistent single-digit millisecond latency. <br><br> Predictable performance and cost that scales with capacity. | High storage capacity up to 2.5 PB. <br><br> Low latency, about 2 ms. <br><br> Create new clusters in minutes. <br><br> Supports containerized workloads with AKS. | Extremely low latency, as low as submillisecond. <br><br> Rich NetApp ONTAP management capability, like SnapMirror Cloud. <br><br> Consistent hybrid cloud experience. |
 | Performance (per volume) | As much as 20,000 IOPS. As much as 100 GiBps throughput. | As much as 100,000 IOPS. As much as 80 GiBps throughput. | As much as 100,000 IOPS. As much as 500 GiBps throughput. | As much as 460,000 IOPS. As much as 36 GiBps throughput. |
@@ -191,16 +185,6 @@ Consider the following network requirements:
 - Directory (LDAP or Windows Server Active Directory)
 - UID or GID mapping to Windows Server Active Directory users or not
 
-## Common Azure storage solutions comparison
-
-| Category | Blob Storage | Azure Files| Managed Lustre | Azure NetApp Files |
-|--|--|--|--|--|
-| Use cases | Blob Storage is best suited for large-scale, read-heavy sequential access workloads where data is ingested one time with few or no further modifications. <br><br> Blob Storage provides the lowest TCO, if there's little or no maintenance. <br><br> Some example scenarios include large scale analytical data, throughput sensitive high-performance computing, backup and archive, autonomous driving, media rendering, and genomic sequencing. | Azure Files is a highly available service that's best suited for random access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support. You can easily use it from container platforms like Container Instance (ACI) and AKS with the built-in CSI driver, and VM-based platforms. <br><br> Some example scenarios are: Shared files, databases, home directories, traditional applications, ERP, CMS, NAS migrations that don't require advanced management, and custom applications requiring scale-out file storage. | Managed Lustre is a fully managed parallel file system best suited for medium to large HPC workloads. <br><br> Enables HPC applications in the cloud without breaking application compatibility by providing familiar Lustre parallel file system functionality, behaviors, and performance, securing long-term application investments. | Fully managed file service in the cloud, powered by NetApp, with advanced management capabilities. <br><br> NetApp Files is suited for workloads that require random access and provides broad protocol support and data protection capabilities. <br><br> Some example scenarios are: On-premises enterprise NAS migration that requires rich management capabilities, latency sensitive workloads like SAP HANA, latency-sensitive or IOPS intensive high-performance compute, or workloads that require simultaneous multi-protocol access. |
-| Available protocols | NFS 3.0 <br><br> REST <br><br> Data Lake Storage Gen2 | SMB <br><br> NFS 4.1 <br><br> (No interoperability between either protocol) | Lustre | NFS 3.0 and 4.1 <br><br> SMB |
-| Key features | Integrated with HPC cache for low-latency workloads. <br><br> Integrated management, including lifecycle, immutable blobs, data failover, and metadata index. | Zonally redundant for high availability. <br><br> Consistent single-digit millisecond latency. <br><br> Predictable performance and cost that scales with capacity. | High storage capacity up to 2.5 PB. <br><br> Low latency, about 2 ms. <br><br> Spin up new clusters in minutes. <br><br> Supports containerized workloads with AKS. | Extremely low latency (as low as sub-ms). <br><br> Rich NetApp ONTAP management capability such as SnapMirror in cloud. <br><br> Consistent hybrid cloud experience. |
-| Performance (Per volume) | Up to 20,000 IOPS, up to 100 GiB/s throughput. | Up to 100,000 IOPS, up to 80 GiB/s throughput. | Up to 100,000 IOPS, up to 500 GiB/s throughput. | Up to 460,000 IOPS, up to 36 GiB/s throughput. |
-| Pricing | [Blob Storage pricing](https://azure.microsoft.com/pricing/details/storage/blobs/) | [Azure Files pricing](https://azure.microsoft.com/pricing/details/storage/files/) | [Managed Lustre pricing](https://azure.microsoft.com/pricing/details/managed-lustre) | [Azure NetApp Files pricing](https://azure.microsoft.com/pricing/details/netapp/) |
-
 ## Roll-your-own parallel file system
 
 Similar to NFS, you can create a multi-node BeeGFS or Lustre file system. The performance of these systems is mostly dependent on the type of VMs that you choose. You can use images found in Azure Marketplace for [BeeGFS](https://azuremarketplace.microsoft.com/marketplace/apps/beegfs.beegfs-ubuntu-free) or a Lustre implementation by DDN called [Whamcloud](https://whamcloud.com/). If you use non-Microsoft images from vendors such as [BeeGFS](https://www.beegfs.io/content/) or DDN, you can purchase their support services. You can use BeeGFS and Lustre under their GPL licenses without extra charges, aside from the costs for machines and disks. These tools are easy to roll out by using [Azure HPC scripts](https://github.com/Azure/azurehpc/tree/master/examples) with either ephemeral local disks for scratch or Azure Premium SSD or Azure Ultra Disk Storage for persistent storage.
@@ -213,13 +197,9 @@ It's a challenge for larger workloads to replicate the *bare-metal* performance 
 
 The following articles provide guidance to help you at various points during your cloud adoption journey.
 
-- [Azure Billing and Microsoft Entra tenants for energy HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/azure-billing-active-directory-tenant)
+- [Introduction to the Azure high-performance computing (HPC) scenario](/azure/cloud-adoption-framework/scenarios/azure-hpc/)
 - [Identity and access management for Azure HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/identity-access-management)
-- [Management for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/management)
-- [Network topology and connectivity for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/network-topology-connectivity)
-- [Platform automation and DevOps for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/platform-automation-devops)
-- [Resource organization for HPC in the energy industry](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/resource-organization)
-- [Governance for HPC in energy industries](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/security-governance-compliance)
-- [Security for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/security)
-- [Compute large-scale HPC application workloads in Azure VMs](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/compute)
+- [Network topology and connectivity for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity)
+- [Resource organization for HPC in the energy industry](/azure/cloud-adoption-framework/scenarios/azure-hpc/resource-organization)
+- [Compute large-scale HPC application workloads in Azure VMs](/azure/cloud-adoption-framework/scenarios/azure-hpc/compute)
 - [Azure high-performance computing (HPC) landing zone accelerator](/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelerator)
