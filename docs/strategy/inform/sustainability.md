@@ -1,5 +1,5 @@
 ---
-title: Sustainability
+title: Sustainability considerations in your cloud strategy
 description: Learn how to infuse sustainability into your strategy and how to use Azure to drive your sustainability efforts.
 ms.author: tozimmergren
 author: Zimmergren
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 11/21/2024
 ---
 
-# Sustainability
+# Sustainability considerations in your cloud strategy
 
 Sustainability continues to gain importance as a performance indicator for organizations. As the sustainability transformation is making its mark on companies across industries, adding pressure from new types of stakeholders and challenging existing profit pools while creating opportunities to open new ones, companies are increasingly forced to respond effectively with new types of solutions and tech-enabled approaches.
 
@@ -59,7 +59,7 @@ Consider some of the benefits of using the cloud in combination with and to driv
 - *Microsoft Sustainability Manager*: Use the data intelligence and comprehensive, integrated and automated sustainability management capabilities with the [Microsoft Sustainability Manager](/industry/sustainability/sustainability-manager-overview).
 - *Azure carbon optimization*: Measure and minimize the carbon impact of your Azure resources with [Azure carbon optimization](/azure/carbon-optimization/overview).
 - *Emissions savings estimator for Microsoft Cloud*: Define your on-premises infrastructure workloads in this tool, then use the information to report your current on-premises footprint and comparable Azure footprint. See the [emissions savings estimator for Microsoft Cloud](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html).
-- *Emissions Impact Dashboard (EID)*: Evaluate your carbon emissions, and emissions you've already saved, related to using Microsoft Azure and Microsoft 365 cloud services. The [emissions impact dashboard](/sustainability/emissions-impact-dashboard) helps you make targeted decisions.
+- *Emissions Impact Dashboard (EID)*: Evaluate your carbon emissions, and emissions you've already saved, related to using Microsoft Azure and Microsoft 365 cloud services. The [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) helps you make targeted decisions.
 
 **Relevant resources:**
 

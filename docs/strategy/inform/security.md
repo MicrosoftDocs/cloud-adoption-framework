@@ -1,5 +1,5 @@
 ---
-title: Security
+title: Security considerations in your cloud strategy
 description: Learn how to design your cloud infrastructure with security in mind to protect your data and applications from unauthorized access, data breaches, and other security threats.
 ms.author: tozimmergren
 author: Zimmergren
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 11/21/2024
 ---
 
-# Security
+# Security considerations in your cloud strategy
 
 A well-designed security strategy is critical to successful cloud adoption. Organizations coming from traditional on-premises environments should evaluate their cloud expertise with specific attention to cloud security. Managing security in the cloud may require significant changes to the structure of your security team and your approach to security overall.
 

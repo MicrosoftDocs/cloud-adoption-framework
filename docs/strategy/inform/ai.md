@@ -1,13 +1,13 @@
 ---
-title: Artificial Intelligence
-description: Integrate AI into your cloud platform to use advanced analytics, machine learning, and automation to optimize operations and drive business growth. 
+title: AI considerations in your cloud strategy
+description: Learn about considerations for integrating Artificial Intelligence (AI) into your cloud adoption strategy. 
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 11/21/2024
 ---
 
-# Artificial Intelligence
+# AI considerations in your cloud strategy
 
 AI is revolutionizing cloud adoption strategies by enhancing efficiency, scalability, and innovation. Integrate AI into your cloud platform to use advanced analytics, machine learning, and automation to optimize operations and drive business growth.
 
@@ -43,8 +43,6 @@ Assess your organizational AI readiness to explore your team’s or organization
 - *Assess your AI readiness*: Use the [Technical Assessment for Generative AI in Azure](/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/) to determine your current level of readiness for adopting generative AI and identify areas of improvement.
 
 ## Responsible and trusted AI
-
-> Tobias editorial note: Retire the old page (https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/responsible-ai) and redirect to this content (CAF Strategy -> Inform your strategy -> AI)
 
 The six key principles for responsible AI at Microsoft include fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Use these principles to create responsible and trustworthy AI as you integrate it into mainstream products and services throughout your AI adoption journey.
 

@@ -1,5 +1,5 @@
 ---
-title: Financial efficiency
+title: Financial efficiency considerations in your cloud strategy
 description: Learn how to optimize costs associated with cloud services and ensure that your organization is getting the best value for its investment.
 ms.author: tozimmergren
 author: Zimmergren
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 11/21/2024
 ---
 
-# Financial efficiency
+# Financial efficiency considerations in your cloud strategy
 
 In your cloud adoption strategy, consider financial efficiency, which is the effective management and optimization of costs associated with the usage of cloud services. It also involves strategic decisions ensuring that the organization is getting the best value for its investment, while minimizing unnecessary expenses.
 

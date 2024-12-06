@@ -1,5 +1,5 @@
 ---
-title: Multicloud
+title: Multicloud considerations in your cloud strategy
 description: Learn how to design your cloud infrastructure with multicloud in mind to support different business functions or provide high availability for critical systems.
 ms.author: tozimmergren
 author: Zimmergren
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 11/21/2024
 ---
 
-# Multicloud
+# Multicloud considerations in your cloud strategy
 
 - What
   - Multicloud is a deliberate strategy of using different public clouds, for example to support different business functions, or to provide high availability for critical systems.
