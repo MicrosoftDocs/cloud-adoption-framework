@@ -16,15 +16,15 @@ This AI guidance provides a roadmap for [startups](https://www.microsoft.com/sta
 
 ## Why adopt AI?
 
-AI provides automation that enhances individual efficiency and optimize business processes. AI frees you to focus on what matters most.
+AI enables automation that boosts individual productivity and optimizes business processes. AI frees you to focus on what matters most to your organization.
 
 ## How to adopt AI
 
-AI should meet the specific needs of your organization. Start with [AI Strategy](./strategy.md) to identify where AI adds value. Evaluate whether you should build solutions with Azure PaaS or IaaS services, or purchase a Microsoft Copilot SaaS solution. Use [AI Plan](./plan.md) to execute on your AI strategy and move toward production.
+Tailor AI adopt to meet the specific needs of your organization. Begin with [AI Strategy](./strategy.md) to identify areas where AI can add value. Next, decide whether to build AI solutions using Azure PaaS or IaaS services or to purchase a Microsoft Copilot SaaS solution for each use case. Implement your strategy using the [AI Plan](./plan.md) to move AI use cases toward production.
 
-To ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish an AI foundation in Azure. If you decided to ***buy*** a Microsoft Copilot SaaS solution, skip to the Ready AI guidance.
+If you choose to ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish an AI foundation in Azure. If you opt to ***buy*** a Microsoft Copilot SaaS solution, skip to the Ready AI guidance.
 
-No matter what technology you adopt, everyone must establish processes to [Govern AI](./govern.md), [Manage AI](./manage.md), and [Secure AI](./secure.md).
+Regardless of the technology you adopt, establish processes to [Govern AI](./govern.md), [Manage AI](./manage.md), and [Secure AI](./secure.md) to ensure ongoing success.
 
 | AI adoption step | Description | Applicable to build (PaaS or IaaS) or buy (SaaS)? |
 |---|---|---|
