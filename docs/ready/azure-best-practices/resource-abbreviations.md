@@ -89,6 +89,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
 | Azure Arc private link scope | `Microsoft.HybridCompute/privateLinkScopes` | `pls` |
+| Azure Arc gateway | `Microsoft.HybridCompute/gateways` | `arcgw` |
 | Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
 | Communication Services | `Microsoft.Communication/communicationServices` | `acs` |
