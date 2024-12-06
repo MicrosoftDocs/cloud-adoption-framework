@@ -37,7 +37,7 @@ You must establish processes to [Govern AI](./govern.md), [Manage AI](./manage.m
 
 ## AI checklists
 
-Use the AI checklists as your roadmap for adopting and maintaining AI. There are two checklists available: one for startups and one for enterprises. The enterprise checklist provides the most comprehensive guidance. It helps you prepare your organization to adopt AI at scale. For a quicker path to AI adoption, use the startup checklist. As your organization grows, consult the enterprise checklist to support your expanding AI needs.
+Use the AI checklists as your roadmap for adopting and maintaining AI. The enterprise checklist prepare yours organization to adopt AI at scale. The startup checklist helps you move toward production faster but still get governance, management, and security best practices.
 
 | AI adoption phase | Startup checklist | Enterprise checklist |
 |---|---|---|
