@@ -1,5 +1,5 @@
 ---
-title: Regulated Industries
+title: Regulated industries considerations in your cloud strategy
 description: Learn about the unique challenges and requirements for regulatory compliance in regulated industries.
 ms.author: tozimmergren
 author: Zimmergren
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 11/21/2024
 ---
 
-# Regulated Industries
+# Regulated industries considerations in your cloud strategy
 
 Organizations in regulated industries, such as energy, finance, healthcare, or governments, have unique challenges and requirements for regulatory compliance.
 

@@ -213,7 +213,7 @@ These files were updated to include considerations for [Azure Arc-enabled VMware
 We updated these articles to provide the latest guidance on Azure carbon optimization:
 
 - [Sustainability considerations in cloud management](../manage/considerations/sustainability.md)
-- [Sustainability outcomes and benefits for business](../strategy/business-outcomes/sustainability.md)
+- [Sustainability considerations in your cloud strategy](../strategy/inform/sustainability.md)
 
 #### Hybrid/Azure Arc retirement
 

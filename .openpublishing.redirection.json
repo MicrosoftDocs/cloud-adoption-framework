@@ -2077,12 +2077,12 @@
       },
       {
          "source_path": "docs/innovate/best-practices/trusted-ai.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/innovate/best-practices/predict.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
          "redirect_document_id": false
       },
       {
@@ -2266,7 +2266,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/strategy/business-outcames/sustainability.md",
+         "source_path": "docs/strategy/business-outcomes/sustainability.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/sustainability",
          "redirect_document_id": false
       },
