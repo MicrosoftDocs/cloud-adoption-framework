@@ -20,7 +20,7 @@ AI enables automation. This automation might boost individual productivity and o
 
 ## How to adopt AI
 
-Customize your AI adoption approach to match your organization's unique needs. Begin with [AI Strategy](./strategy.md) to identify areas where AI can deliver value. Next, decide whether to build AI solutions using Azure PaaS or IaaS services or to purchase a Microsoft Copilot SaaS solution for each use case. Implement your strategy using the [AI Plan](./plan.md) to transition identified use cases into production.
+Customize your AI adoption approach to match your organization's unique needs. Begin with [AI Strategy](./strategy.md) to identify areas where AI can deliver value and whether to build (PaaS and Iaas) or buy (SaaS) AI solutions. Implement your strategy using the [AI Plan](./plan.md) to transition identified use cases into production.
 
 If you choose to ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish an AI foundation in Azure. If you opt to ***buy*** a Microsoft Copilot SaaS solution, skip the Ready AI guidance.
 
