@@ -1,5 +1,5 @@
 items:
-  - name: Overview AI on Azure
+  - name: Overview AI 
     href: index.md
   - name: AI Strategy
     href: strategy.md
