@@ -1,13 +1,13 @@
 ---
-title: Manage AI – Recommendations for managing AI
-description: Learn the process to manage AI workloads in Azure with best practices and recommendations.
+title: Manage AI – Process to manage AI
+description: Learn the process to manage AI with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# Manage AI – Recommendations for managing AI
+# Manage AI – Process to manage AI
 
 This article outlines the organizational process for managing AI workloads. It provides recommendations for managing AI workloads from development, deployment, and operations. Effective AI management requires a structured approach from development through deployment and ongoing operations. Businesses need standardized practices and regular monitoring to prevent issues such as data and model drift, ensuring AI remains accurate and reliable over time.
 
