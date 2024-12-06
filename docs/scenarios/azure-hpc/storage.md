@@ -22,11 +22,11 @@ The following are the factors you need to consider and identify about your appli
 - Cost associated
 - Affinity for storage location – on-premises versus Azure
 
-For more information, see [Understand factors that influence HPC storage selection in Azure](https://learn.microsoft.com/training/modules/hpc-storage-considerations/).
+For more information, see [Understand factors that influence HPC storage selection in Azure](/training/modules/hpc-storage-considerations/).
 
 The following diagram shows a decision tree that's for a specific HPC storage system choice.
 
-:::image type="content" alt-text="Diagram that shows a decision tree of considerations when you choose a storage solution." source="../media/storage-selection-flow.png" lightbox="../media/storage-selection-flow.png":::
+:::image type="content" alt-text="Diagram that shows a decision tree of considerations when you choose a storage solution." source="media/storage-selection-flow.png" lightbox="/media/storage-selection-flow.png":::
 
 ## HPC considerations
 
@@ -213,13 +213,13 @@ It's a challenge for larger workloads to replicate the "bare-metal" performance 
 
 The following articles provide guidance to help you at various points during your cloud adoption journey.
 
-- [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
-- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
-- [Management for Azure HPC in energy](./management.md)
-- [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
-- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
-- [Resource organization for HPC in the energy industry](./resource-organization.md)
-- [Governance for HPC in energy industries](./security-governance-compliance.md)
-- [Security for Azure HPC in energy](./security.md)
-- [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
-- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure Billing and Microsoft Entra tenants for energy HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/azure-billing-active-directory-tenant)
+- [Identity and access management for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/identity-access-management)
+- [Management for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/management)
+- [Network topology and connectivity for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/network-topology-connectivity)
+- [Platform automation and DevOps for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/platform-automation-devops)
+- [Resource organization for HPC in the energy industry](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/resource-organization)
+- [Governance for HPC in energy industries](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/security-governance-compliance)
+- [Security for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/security)
+- [Compute large-scale HPC application workloads in Azure VMs](/azure/cloud-adoption-framework/scenarios/azure-hpc/energy/compute)
+- [Azure high-performance computing (HPC) landing zone accelerator](/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelerator)
