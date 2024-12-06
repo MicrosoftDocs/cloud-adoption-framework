@@ -107,17 +107,20 @@ Based on your PoC, assign a delivery timeline for your AI opportunities. Create 
 
 ## Next step
 
-The rest of this guidance focuses on building AI workloads in Azure by using PaaS and IaaS solutions. To be successful in Azure, you must first establish your AI foundation in AI Ready.
+To ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish your AI foundation. If you're ***buying*** a Microsoft Copilot SaaS solution, skip to the [Govern AI](./govern.md) guidance to establish organizational governance for AI.
 
 > [!div class="nextstepaction"]
-> [AI Ready](ready.md)
+> [AI Ready (only for AI PaaS and IaaS adoption)](ready.md)
+
+> [!div class="nextstepaction"]
+> [Govern AI (for AI SaaS, PaaS, and IaaS adoption)](ready.md)
 
 For more information about adopting a Microsoft Copilot solution, see these resources:
 
 | Category                    | Copilot solution     |
 |-----------------------------|--------------------------------|
 | Enterprise productivity     | [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)                 |
-| Low-code platform           | [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)                   |
+| SaaS platform           | [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)                   |
 | Role-based | [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot) <br> [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction) <br> [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service) <br> [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance) |
 | In-product Copilots         | [GitHub](https://azure.microsoft.com//products/github/copilot) <br> [Power Apps](https://www.microsoft.com/power-platform/products/power-apps) <br> [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=&country=us) <br> [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai) <br> [Power Automate](https://www.microsoft.com/power-platform/products/power-automate) <br> [Azure](https://azure.microsoft.com/products/copilot/) |
 | Browser-based      | [Copilot (free)](https://copilot.microsoft.com/) <br> [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) |
