@@ -2269,6 +2269,126 @@
          "source_path": "docs/strategy/business-outcames/sustainability.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/sustainability",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/achieve-more.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/balance-competing-priorities.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/balance-the-portfolio.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/building-devops-practice.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/agility-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/business-outcome-template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/data-democratization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/data-innovations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/engagement-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/fiscal-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/okr.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/mission-objectives",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/performance-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/reach-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/cloud-accounting.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/cloud-migration-business-case.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/mission-objectives",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/communication.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/digital-transformation-timeline.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/finance-vocabulary-terms.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/financial-considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/global-markets.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/learning-metrics.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/technical-considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
       }
    ]
 }
