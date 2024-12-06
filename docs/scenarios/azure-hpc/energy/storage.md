@@ -71,12 +71,12 @@ Energy MPI workloads have unique requirements with the need for low latency comm
 
 Parallel file systems such as Lustre are used for HPC energy workloads that require access to large files, simultaneous access from multiple compute nodes, and massive amounts of data. The implementation of parallel file systems makes it easy to scale in terms of capability and performance. Such file systems take advantage of RDMA transfers with large bandwidth and reduced CPU usage. The parallel file system is usually used as scratch space and intended for work that requires optimized I/O. Examples include workload setup, pre-processing, running, and post-processing.
 
-Using an orchestrated parallel file service, such as Azure Managed Lustre, works for 50,000 or more cores, with read/write rates up to 500 GB/s, and 2.5 PB storage.
+Using an orchestrated parallel file service, such as Azure Managed Lustre, works for 50,000 or more cores, with read/write rates up to 500 GB/s, and up to 12.5 PB storage upon request.
 
 For more information on Parallel Virtual file system on Azure, see [Parallel Virtual File Systems on Microsoft Azure - Part 1: Overview - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-global/parallel-virtual-file-systems-on-microsoft-azure-part-1-overview/ba-p/306487).
 
  - Azure NetApp Files and local disks are typically used to handle the more latency/IOPS sensitive workloads, like seismic interpretation, model preparation, and visualization. Consider using  for workloads of up to 4,000 cores, with a throughput up to 6.5 GiB/s, and workloads that benefit from our require multiprotocol (NFS/SMB) access to the same data set.
- - Azure Managed Lustre provides faster and higher capacity storage for HPC workloads. This solution works for medium to very large workloads and can support 50,000 or more cores, with throughput up to 500 GB/s, and storage capacity up to 2.5 PiB.
+ - Azure Managed Lustre provides faster and higher capacity storage for HPC workloads. This solution works for medium to very large workloads and can support 50,000 or more cores, with throughput up to 500 GB/s, and storage capacity up to 12.5 PB upon request.
  - Standard or Premium Blob is a cost effective being the lowest cost cloud offering. This service provides exabyte scale, high throughput, low latency access where necessary, familiar file system and multi-protocol access (REST, HDFS, NFS). You can make use of the NFS v3.0 at the blob service endpoint for high throughput and read heavy workloads.  You can optimize costs by moving to cooler tiers with the ability to perform lifecycle management with last update/ last access time, intelligent tiering with customizable policies.
  - The Oil and Gas energy workloads may also require large data size and volumes transfer mechanism from on-premises to Cloud and vice versa that can be achieved by
      - Offline - device based migration (DataBox)
