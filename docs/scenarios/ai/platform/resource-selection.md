@@ -9,14 +9,14 @@ ms.topic: conceptual
 
 # Resource selection recommendations for AI workloads on Azure
 
-This article offers resource selection recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Studio, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
+This article offers resource selection recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
 
 Making informed AI resource choices enables organizations to achieve better performance, scalability, and cost-effectiveness when managing AI workloads. The following table provides an overview of the primary Azure AI PaaS solutions and important decision criteria.
 
 | AI platform | AI type | Description | Skills required |
 |---------|------------|---------| --- |
 | Azure OpenAI | Generative AI | Platform for accessing OpenAI models | Developer and data science skills |
-| Azure AI Studio | Generative AI | Platform for prompt engineering and deploy generative AI endpoints | Developer and data science skills |
+| Azure AI Foundry | Generative AI | Platform for prompt engineering and deploy generative AI endpoints | Developer and data science skills |
 | Azure AI services | Analytical AI | Platform for consuming prebuilt machine learning models | Developer skills |
 | Azure Machine Learning | Machine learning | Platform for training and deploying machine learning models | Developer skills and advanced data science skills |
 
@@ -28,9 +28,9 @@ Generative AI requires the combination of different resources to process and gen
 
 In a typical RAG workload, (1) the workload receives the user query. (2) An orchestrator, such as Prompt flow, Semantic Kernel, or LangChain, manages the data flow. (3) A search and retrieval mechanism finds the appropriate (4) grounding data to send to the generative AI endpoint. (5) A generative AI model endpoint generates a response based on the user query and grounding data. Use the following recommendations as framework to build generative RAG workloads.
 
-- *Choose a generative AI platform.* Use Azure OpenAI or Azure AI Studio to deploy and manage generative AI models. [Azure OpenAI Service](/azure/ai-services/openai/overview) provides access to [OpenAI models](/azure/ai-services/openai/concepts/models) private networking, and content filtering. [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) offers a code-first platform for developing AI workloads. It has built-in tools for building and deploying applications. It also features a large model catalog, prompt flow, fine-tuning, content safety filters, and more.
+- *Choose a generative AI platform.* Use Azure OpenAI or Azure AI Foundry to deploy and manage generative AI models. [Azure OpenAI Service](/azure/ai-services/openai/overview) provides access to [OpenAI models](/azure/ai-services/openai/concepts/models) private networking, and content filtering. [Azure AI Foundry](/azure/ai-studio/what-is-ai-studio) offers a code-first platform for developing AI workloads. It has built-in tools for building and deploying applications. It also features a large model catalog, prompt flow, fine-tuning, content safety filters, and more.
 
-- *Choose the appropriate AI compute type.* Azure AI Studio requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for prompt flow, creating indexes, and opening Visual Studio Code (Web or Desktop) within the studio. Choose a compute type based on your performance and budget needs.
+- *Choose the appropriate AI compute type.* Azure AI Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for prompt flow, creating indexes, and opening Visual Studio Code (Web or Desktop) within the studio. Choose a compute type based on your performance and budget needs.
 
 - *Pick an orchestrator.* Popular orchestrators for generative AI include [Semantic Kernel](/semantic-kernel/overview/), [Prompt flow](https://microsoft.github.io/promptflow/index.html), and [LangChain](https://python.langchain.com/v0.2/docs/integrations/platforms/microsoft/). Semantic Kernel integrates with Azure services. LangChain provides extensibility beyond Microsoft's ecosystem.
 

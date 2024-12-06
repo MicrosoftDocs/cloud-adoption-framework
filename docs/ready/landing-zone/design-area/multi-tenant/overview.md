@@ -3,7 +3,7 @@ title: Azure landing zones and multiple Microsoft Entra tenants
 description: Learn how multiple Microsoft Entra tenants work within the context of Azure landing zones and the benefits of using a single tenant.
 author: jtracey93
 ms.author: jatracey
-ms.date: 01/16/2023
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -73,9 +73,9 @@ Microsoft Entra ID provides controls that help mitigate this problem on a techni
 
 >[!IMPORTANT]
 > Multiple Microsoft Entra tenants **are not the recommended** approach for most customers. A single Microsoft Entra tenant, typically the corporate Microsoft Entra tenant, is recommended for most customers because it provides the necessary separation requirements.
-> 
+>
 > For more information, see:
-> 
+>
 > - [Define Microsoft Entra tenants](../azure-ad-define.md)
 > - [Testing approach for Azure landing zones](../../../enterprise-scale/testing-approach.md)
 > - [Introduction to delegated administration and isolated environments](/azure/active-directory/fundamentals/secure-with-azure-ad-introduction)
