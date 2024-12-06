@@ -16,24 +16,24 @@ This AI guidance provides a roadmap for [startups](https://www.microsoft.com/sta
 
 ## Why adopt AI?
 
-AI enables automation that boosts individual productivity and optimizes business processes. AI frees you to focus on what matters most to your organization.
+AI enables automation that boosts individual productivity and optimizes business processes. It allows you to focus on priorities that drive your organization forward.
 
 ## How to adopt AI
 
-Tailor AI adopt to meet the specific needs of your organization. Begin with [AI Strategy](./strategy.md) to identify areas where AI can add value. Next, decide whether to build AI solutions using Azure PaaS or IaaS services or to purchase a Microsoft Copilot SaaS solution for each use case. Implement your strategy using the [AI Plan](./plan.md) to move AI use cases toward production.
+Customize your AI adoption approach to match your organization's unique needs. Begin with [AI Strategy](./strategy.md) to identify areas where AI can deliver value. Next, decide whether to build AI solutions using Azure PaaS or IaaS services or to purchase a Microsoft Copilot SaaS solution for each use case. Implement your strategy using the [AI Plan](./plan.md) to transition identified use cases into production.
 
-If you choose to ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish an AI foundation in Azure. If you opt to ***buy*** a Microsoft Copilot SaaS solution, skip to the Ready AI guidance.
+If you choose to ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish an AI foundation in Azure. If you opt to ***buy*** a Microsoft Copilot SaaS solution, skip the Ready AI guidance.
 
-Regardless of the technology you adopt, establish processes to [Govern AI](./govern.md), [Manage AI](./manage.md), and [Secure AI](./secure.md) to ensure ongoing success.
+Regardless of the technology you adopt, you must establish processes to [Govern AI](./govern.md), [Manage AI](./manage.md), and [Secure AI](./secure.md) to maintain and sustain trustworthy AI.
 
 | AI adoption step | Description | Applicable to build (PaaS or IaaS) or buy (SaaS)? |
 |---|---|---|
-| AI Strategy | Guidance to pick the right AI solutions. | For build and buy scenarios |
-| AI Plan | Guidance to execute AI adoption. | For build and buy scenarios |
-| AI Ready | Guidance build AI workloads in Azure environment. | *Build only scenarios* |
-| Govern AI | Guidance to control AI. | For build and buy scenarios |
-| Manage AI | Guidance to maintain AI. | For build and buy scenarios |
-| Secure AI | Guidance to secure AI. | For build and buy scenarios |
+| AI Strategy | Guidance to pick the right AI solutions. | For build and buy |
+| AI Plan | Guidance to execute AI adoption. | For build and buy |
+| AI Ready | Guidance build AI workloads in Azure environment. | *Build only* |
+| Govern AI | Guidance to control AI. | For build and buy |
+| Manage AI | Guidance to maintain AI. | For build and buy |
+| Secure AI | Guidance to secure AI. | For build and buy |
 
 ## AI checklists
 
