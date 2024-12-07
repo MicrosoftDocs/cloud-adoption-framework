@@ -55,9 +55,9 @@ All the partners in the program adhere to ALZ best-practices. We vet partners to
 
 ## Option 2 - Partner offers
 
-We have a self-discovery process you can use to find a partner. [The Azure Customer Enablement Offers page](https://azure.microsoft.com/partners/) is a marketplace of offers from certified Azure partners.
+We have a self-discovery process you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) is a marketplace of offers from certified Azure partners.
 
-Each offer comes from Azure Advanced Specialization Partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters the marketplace.
+Each offer comes from Azure Advanced specialization partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters the marketplace.
 
 Advanced specialization partners demonstrate deep technical knowledge, proven success, and ethical business practices. Azure Expert MSPs also meet these criteria but must additionally pass a time- and cost-intensive auditing process.
 
