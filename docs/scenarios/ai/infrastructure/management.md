@@ -1,6 +1,6 @@
 ---
 title: Management recommendations for AI workloads on Azure infrastructure (IaaS)
-description: Learn how to manage AI workloads on Azure infrastructure (IaaS)
+description: Learn how to manage AI workloads on Azure infrastructure (IaaS).
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024
