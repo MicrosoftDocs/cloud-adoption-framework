@@ -1,6 +1,6 @@
 ---
 title: Establish an AI Center of Excellence
-description: Learn how to establish an AI Center of Excellence (AI CoE) to drive AI adoption on Azure in your organization.
+description: Learn how to establish an AI Center of Excellence (AI CoE) to drive AI adoption on Azure in your organization
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 11/01/2024
