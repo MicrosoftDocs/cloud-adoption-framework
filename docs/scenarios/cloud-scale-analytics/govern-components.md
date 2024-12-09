@@ -3,7 +3,7 @@ title: Data governance processes
 description: Understand data governance processes
 author: mboswell
 ms.author: mboswell
-ms.date: 09/26/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -15,8 +15,8 @@ There are four categories of data governance processes.
 |Process category|  Processes|
 |--|--|
 |**Data discovery processes, to understand the data landscape** | A data and data entity discovery, mapping and cataloging process <br> A data profiling discovery process to determine the quality of data <br> A sensitive data discovery and governance classification process <br> A data maintenance discovery process for CRUD analysis, such as from log files, to understand usage and maintenance of data such as master data across the enterprise |
-|**Data governance definition processes** | Create and maintain a common business vocabulary in a business glossary define data entities, including master data, data attributes names, data integrity rules and valid formats <br> Define reference data to standardize code sets across the enterprise <br> Define data governance classifications schemes to label data to determine how to govern it <br> Define data governance policies and rules to govern data entity and document lifecycles <br> Define success metrics and threshold |
-|**Data governance policy and rule enforcement processes** | A process to automate application and enforcement of data governance policies and rules <br> A process to manually apply and enforce policies and rules <br> Event-driven, on-demand and timer-driven (batch) data governance processes published as services that can be invoked to govern: <br> Data ingestion - cataloging, classification, owner assignment, and storing <br> Data quality <br> Data access security <br> Data privacy <br> Data usage, for example, including sharing and to ensure licensed data is only used for approved purposes <br> Data maintenance, such as master data <br> Data retention <br> Master data and reference data synchronization |
+|**Data governance definition processes** | Create and maintain a common business vocabulary in a business glossary define data entities, including master data, data attributes names, data integrity rules, and valid formats <br> Define reference data to standardize code sets across the enterprise <br> Define data governance classifications schemes to label data to determine how to govern it <br> Define data governance policies and rules to govern data entity and document lifecycles <br> Define success metrics and threshold |
+|**Data governance policy and rule enforcement processes** | A process to automate application and enforcement of data governance policies and rules <br> A process to manually apply and enforce policies and rules <br> Event-driven, on-demand, and timer-driven (batch) data governance processes published as services that can be invoked to govern: <br> Data ingestion - cataloging, classification, owner assignment, and storing <br> Data quality <br> Data access security <br> Data privacy <br> Data usage, for example, including sharing and to ensure licensed data is only used for approved purposes <br> Data maintenance, such as master data <br> Data retention <br> Master data and reference data synchronization |
 | **Monitoring processes** | Monitor and audit data usage activity, data quality, data access security, data privacy, data maintenance, and data retention <br> Monitor policy rule violation detection and resolution |
 
 The common business vocabulary should be defined in a business glossary within a data catalog.
@@ -35,9 +35,11 @@ Integration of the catalog business glossary with other technologies is then nee
 - Data virtualization tools
 - Software development tools
 
-A good practice to create a common business vocabulary is to create a data concept model. The model is a top-down approach that identifies data concepts that can be used as data entities in a common business vocabulary. It's then possible to assign a different data governance working group to each data concept (entity) or group of related data concepts (subject area). Different working groups are assigned to govern different data entities across the landscape.
+A good practice for creating a common business vocabulary is to develop a data concept model. This model uses a top-down approach to identify data concepts that can be used as data entities in a common business vocabulary. Different data governance working groups can then be assigned to each data concept (entity) or group of related data concepts (subject area). These working groups are responsible for governing different data entities across the landscape.
 
-When you build a common business vocabulary, you can use data catalog software to automatically discover what data exists across multiple data stores. It helps identify all the attributes associated with specific data entities. This is a bottom-up approach. By using a top-down approach of a data concept model to get you started, and a bottom-up automated data discovery approach to identify the attributes of a data entity, it's possible for multiple working groups to incrementally build up a common business vocabulary quickly.
+When building a common business vocabulary, you can use data catalog software to automatically discover what data exists across multiple data stores. This software helps identify all the attributes associated with specific data entities, which is a bottom-up approach.
+
+Multiple working groups can incrementally build a common business vocabulary quickly by combining the top-down approach of a data concept model with the bottom-up approach of automated data discovery.
 
 Using a data catalog for automated data discovery enables the mapping of disparate data to a common vocabulary. The data catalog can help you understand where the data for each particular data entity in the business glossary is located across the enterprise.
 
@@ -60,7 +62,7 @@ The [data confidentiality classification scheme](./govern-requirements.md#data-c
 
 Govern data by combining this classification scheme with policies and rules. Use each of the five levels to label data, such as sensitive personal data. By creating rules for sensitive personal data, and attaching these rules to a policy, you create a policy for sensitive personal data. You can attach the policy to the sensitive personal data label and then attach the sensitive personal data label to the data. In this way, all data labeled as sensitive personal data is subject to the same policies and rules. This process is known as **tag-based policy management**. It's flexible because an individual rule or a policy can be independently changed. All data labeled sensitive personal data is governed by the new rules. Equally, a sensitive personal data label can be detached from data and a confidential label used instead. In this case, the data instantly becomes governed by a new set of policies and rules associated with the confidential label.
 
-Once you define policies and rules in a data catalog for each class in a data governance classification scheme, they can be passed to other technologies from a data catalog, via APIs, for them to enforce. Instead, a common data management platform that can connect to multiple data stores could potentially enforce them.
+After you define policies and rules in a data catalog for each class in a data governance classification scheme, they can be passed to other technologies from a data catalog, via APIs, for them to enforce. Instead, a common data management platform that can connect to multiple data stores could potentially enforce them.
 
 It should then be possible to monitor data quality, privacy, access security, usage, maintenance, and retention of specific data entities throughout their lifecycle.
 

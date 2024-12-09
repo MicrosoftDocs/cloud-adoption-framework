@@ -3,7 +3,7 @@ title: What is a data mesh?
 description: Learn about data mesh in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 09/30/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -14,9 +14,9 @@ Data mesh is an architectural pattern for implementing enterprise data platforms
 
 ## Background
 
-The need for analytics isn't new. Organizations have always needed to analyze business performance, and have done so by using computers since their introduction. Around the 1980s, organizations started to build data warehousing solutions by using databases specifically for decision support. These data warehousing solutions served organizations well for a long time.
+The demand for analytics isn't a recent development. Organizations consistently needed to evaluate business performance and utilized computers for this purpose since their inception. Around the 1980s, organizations started to build data warehousing solutions by using databases specifically for decision support. These data warehousing solutions served organizations well for a long time.
 
-However, as business changes and generates more diverse data, data warehousing solutions that use relational databases might not always be the best solution. In the 2000s, big data became a common term. Businesses adopted new solutions that allow analysis of large volumes of diverse data that could be generated with great velocity. This includes technology, like data lakes, and scale-out solutions that analyze large quantities of data.
+However, as business changes and generates more diverse data, data warehousing solutions that use relational databases might not always be the best solution. In the 2000s, big data became a common term. Businesses adopted new solutions that allow analysis of large volumes of diverse data that could be generated with great velocity. These solutions include technology, like data lakes, and scale-out solutions that analyze large quantities of data.
 
 In recent years, many organizations successfully use modern architectural and analytical patterns that combine data warehousing technologies and more recent big data technologies.
 
