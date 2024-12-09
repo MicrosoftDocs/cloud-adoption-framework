@@ -1,5 +1,5 @@
 ---
-title: AI Ready – Recommendations for organizations building AI workloads in Azure
+title: AI Ready – Process to build AI workloads in Azure
 description: Learn the process to build AI workloads in Azure with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Ready – Recommendations for organizations building AI workloads in Azure
+# AI Ready – Process to build AI workloads in Azure
 
 This article outlines the organizational process for building AI workloads in Azure. The article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It focuses on AI-specific guidance for region selection, resource organization, and networking.
 

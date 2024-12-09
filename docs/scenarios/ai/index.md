@@ -1,28 +1,30 @@
 ---
-title: AI on Azure
-description: Learn how Microsoft recommends adopting Artificial Intelligence (AI) in your organization with the Microsoft Cloud Adoption Framework
+title: AI adoption
+description: Learn how Microsoft recommends adopting generative AI, nongenerative AI, and machine learning.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI on Azure
+# AI adoption
 
-This AI guidance provides a structured approach for integrating AI into your organization using Azure. The guidance is relevant for organizations of any size and industry. It covers both generative and nongenerative AI adoption guidance. It is your roadmap for AI adoption and a central hub to find the resources you need.
+This AI guidance provides a roadmap for [startups](https://www.microsoft.com/startups) and enterprises to adopt and maintain AI. It provides best practices that cover AI technology decisions (build vs. buy), skill development, team organization, and processes to govern, manage, and secure AI.
 
 :::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/ai-adoption-process.svg" border="false":::
-*Figure 1. How to use the AI adoption guidance for Azure.*
+*Figure 1. How to use the AI adoption guidance.*
 
 ## Why adopt AI?
 
-AI adoption is foundational to optimizing operations for individuals and organizations. Effective AI adoption uses governance, security, and management best practices to build trustworthy AI workloads. It enhances individual efficiency by automating routine tasks and providing creative insights. AI automates business processes, ranging from adaptive user experiences to business forecasting. These use cases allow businesses and employees to focus on customers and work that matters most. You have options to adopt AI the way that best helps your organization. Microsoft has AI services for different skill set, budgets, and data needs. You can decide what works best based on your goals. This guidance helps you navigate these decisions.
+AI adoption is foundational to improving operations for individuals and organizations. Effective AI adoption uses governance, security, and management best practices to build trustworthy AI workloads. It enhances individual efficiency. It automates routine tasks and provides creative insights. AI automates business processes. These business processes include adaptive user experiences and business forecasting. These use cases allow businesses and employees to focus on customers and the work that matters most. Your organization can adopt AI in ways that best fit your needs. Microsoft provides AI services for different skill set, budgets, and data requirements. You can decide what aligns best with your goals. This guidance helps you navigate these decisions.
 
 ## How to adopt AI
 
+Start by identifying the need for AI in your organization. Look at common and essential workflows, tasks, and processes in your business. Evaluate if there are opportunities to automate with AI. Ensure you have a general direction. At that point, you're ready to adopt AI.
+
 AI adoption is a sequential process. This guidance divides AI adoption into six steps. If you're new to AI adoption, complete all six steps. As you define new AI use cases for your organization, revisit the AI Strategy, AI Plan, and AI Ready. Govern AI, Manage AI, and Secure AI are continuous processes. You need to iterate through these processes to ensure your AI workloads remain secure, cost-effective, and trustworthy.
 
-- *AI Strategy*: Guidance on how to choose the right AI technology for your business and ground AI adoption in responsible AI principles.
+- *AI Strategy*: Guidance on how to identify the need for AI and then choose the right AI technology for your business and ground AI adoption in responsible AI principles.
 - *AI Plan*: Guidance to assess and find the AI skills needed and how to prioritize use cases to bring to production.
 - *AI Ready*: Guidance to establish a governed and secure Azure environment for your AI workloads and data.
 - *Govern AI*: The process to control your AI workloads and models by establishing guardrails to ensure compliance and responsible AI use.
