@@ -55,7 +55,7 @@ Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="ic
 > [!NOTE]
 > When accessing a private endpoint across a peered network, you will only ever be charged for the private endpoint itself and not for the VNet peering. You can read the official statement in [FAQ: How will billing work when accessing a private endpoint from a peered network?](https://azure.microsoft.com/pricing/details/private-link/).
 
-With this network design, you're charged for your Private Endpoints (per hour) and all ingress and egress traffic sent through them. You also have to pay a [data transfer cost](https://azure.microsoft.com/pricing/details/bandwidth/) for traffic between regions. However, you won't be charged any Global virtual network Peering ingress and egress costs and it has noteworthy cost benefits compared to the [traditional spoke-hub-hub-spoke option.](#traditional-spoke-hub-hub-spoke-design-not-recommended).
+With this network design, you're charged for your Private Endpoints (per hour) and all ingress and egress traffic sent through them. You also have to pay a [data transfer cost](https://azure.microsoft.com/pricing/details/bandwidth/) for traffic between regions. However, you won't be charged any Global virtual network Peering ingress and egress costs and it has noteworthy cost benefits compared to the [traditional spoke-hub-hub-spoke option](#traditional-spoke-hub-hub-spoke-design-not-recommended).
 
 Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 

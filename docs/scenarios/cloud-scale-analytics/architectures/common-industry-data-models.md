@@ -16,7 +16,7 @@ The Common Data Model defines a common language for business entities. Over time
 
 The following poster shows some elements of the [standard entities](https://github.com/microsoft/CDM/tree/master/schemaDocuments/core/applicationCommon) available in the Common Data Model. You can also [download your own copy](https://aka.ms/cdmposter) of the CDM poster.
 
-:::image type="content" source="../media/cdm-entities-v1.png" alt-text="Diagram showing the Cmmon Data Model poster." lightbox="../media/cdm-entities-v1.png":::
+:::image type="content" source="../media/cdm-entities-v1.png" alt-text="Diagram showing the Common Data Model poster." lightbox="../media/cdm-entities-v1.png":::
 
 For more information, see:
 

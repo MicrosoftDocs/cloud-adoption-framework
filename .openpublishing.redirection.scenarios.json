@@ -472,27 +472,27 @@
     },
     {
       "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/tutorial-evaluate-scenario.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architecture",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architecture",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/tutorial-create-data-product-batch.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architecture",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/tutorial-set-up-data-product-batch.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architecture",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/cleanup-instructions.md",
-      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architecture",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
       "redirect_document_id": false
     },
     {

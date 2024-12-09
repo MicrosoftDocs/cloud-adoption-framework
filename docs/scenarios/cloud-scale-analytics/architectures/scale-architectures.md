@@ -32,7 +32,7 @@ Each large organization has thousands of data consumers. A complicated process l
 
 ## Methods for scaling
 
-:::image type="content" source="../images/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones." lightbox="../media/high-level-design-multiple-landing-zones.png" border="false" :::
+:::image type="content" source="../images/high-level-design-multiple-landing-zones.png" alt-text="Diagram of data management landing zone and multiple data landing zones." lightbox="../images/high-level-design-multiple-landing-zones.png" border="false" :::
 
 Cloud-scale analytics addresses scaling challenges by using two core concepts:
 

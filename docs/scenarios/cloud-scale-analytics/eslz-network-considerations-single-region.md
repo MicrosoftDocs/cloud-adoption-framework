@@ -112,7 +112,7 @@ If you need to enforce other network policies within the data platform, use Netw
 
 Hub and spoke network architecture design is the most obvious option, and one that many enterprises have adopted. In it, network transitivity is set up in the Connectivity Hub to access data in Storage Account A from VM B. Data traverses two virtual network peerings ((2) and (5)) and a network virtual appliance hosted inside the Connectivity Hub ((3) and (4)). Then the data is loaded by the virtual machine (6) and stored back into Storage Account B (8).
 
-:::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Hub and Spoke Architecture" lightbox="./images/network-options-hub-and-spoke.png":::
+:::image type="content" source="./images/network-options-hub-and-spoke.png" alt-text="Diagram showing a Hub and Spoke Architecture." lightbox="./images/network-options-hub-and-spoke.png":::
 
 *Figure 3: Hub and Spoke Architecture.*
 

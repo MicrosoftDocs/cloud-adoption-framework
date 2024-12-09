@@ -20,7 +20,7 @@ Data product distribution and usage have two dimensions: technical concerns and 
 
 The two dimensions involve different roles. Generally, you should rely on application owners or data engineers for technical concerns and product owners or business representatives for business concerns.
 
-## Data contracts principals
+## Data contracts principles
 
 Data contracts are similar to service contracts or data delivery contracts.
 
