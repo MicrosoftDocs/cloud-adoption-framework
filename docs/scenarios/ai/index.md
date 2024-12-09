@@ -1,6 +1,6 @@
 ---
 title: AI adoption
-description: Learn how Microsoft recommends adopting generative AI, nongenerative AI, and machine learning
+description: Learn the process to adopt generative AI and nongenerative AI for startups and enterprises.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 11/01/2024
