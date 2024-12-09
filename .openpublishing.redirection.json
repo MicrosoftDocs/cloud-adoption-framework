@@ -2246,6 +2246,21 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/azure-hpc/energy/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {   
          "source_path": "docs/secure/security-best-practices-introduction.md",
          "redirect_url": "/security/zero-trust/deploy/infrastructure",
          "redirect_document_id": false
