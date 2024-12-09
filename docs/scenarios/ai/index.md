@@ -16,7 +16,7 @@ This AI guidance provides a roadmap for [startups](https://www.microsoft.com/sta
 
 ## Why adopt AI?
 
-AI enables automation. This automation might boost individual productivity and optimize business processes. It allows you to focus on priorities that drive your organization forward.
+AI improves efficiency through automation. This automation can boost individual productivity, and it can optimize a range of business processes. A successful AI implementation allows you to focus on priorities that drive your organization forward.
 
 ## How to adopt AI
 
@@ -37,7 +37,7 @@ You must establish processes to [Govern AI](./govern.md), [Manage AI](./manage.m
 
 ## AI checklists
 
-Use the AI checklists as your roadmap for adopting and maintaining AI. The enterprise checklist prepare your organization to adopt AI at scale. The startup checklist helps you move toward production faster but still get governance, management, and security best practices.
+Use the AI checklists as your roadmap for adopting and maintaining AI. The enterprise checklist prepares your organization to adopt AI at scale. The startup checklist helps you move toward production faster but still get governance, management, and security best practices.
 
 | AI adoption phase | Startup checklist | Enterprise checklist |
 |---|---|---|
