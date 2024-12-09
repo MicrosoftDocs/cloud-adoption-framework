@@ -9,7 +9,7 @@ ms.custom: think-tank, e2e-azure-vmware
 ---
 
 
-# Example architectures for **Azure VMware Solutions**
+# Example architectures for Azure VMware Solutions
 
 
 
@@ -44,7 +44,7 @@ Key points about the networking scenarios:
 - You can use L4-L7 load balancer NVAs in Azure VMware Solution.
 - You can use NSX-T Data Center Firewall for any of these scenarios.
 
-The following sections outline architectural patterns for Azure VMware Solution private clouds. This list is not exhaustive. For more information, see [Azure VMware Solution networking and interconnectivity concepts](/azure/azure-vmware/concepts-networking).
+The following sections outline architectural patterns for Azure VMware Solution private clouds. This list isn't exhaustive. For more information, see [Azure VMware Solution networking and interconnectivity concepts](/azure/azure-vmware/concepts-networking).
 
 ## Secured Virtual WAN hub with default route propagation
 
@@ -60,11 +60,13 @@ This scenario is ideal if:
 
 For this scenario, consume Azure VMware Solution like a platform as a service (PaaS) offering. In this scenario, you don't own the public IP addresses. Add public-facing L4 and L7 inbound services if needed. You might or might not already have ExpressRoute connectivity between on-premises datacenters and Azure.
 
-### High level overview
+### High-level overview
 
 The following diagram provides a high-level overview of the scenario.
 
 [![Diagram of overview of scenario 1 with secured Virtual WAN hub with default route propagation.](./media/eslz-overview-scenario-1.png)](./media/eslz-overview-scenario-1.png#lightbox)
+
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-1.vsdx) of this architecture.*
 
 ### Architectural components
 
@@ -77,6 +79,8 @@ Implement this scenario with:
 - EXR, VPN, or SD-WAN for connectivity between on-premises datacenters and Azure VMware Solution
 
 [![Diagram of scenario 1 with secured Virtual WAN hub with default route propagation.](./media/eslz-net-scenario-1.png)](./media/eslz-net-scenario-1.png#lightbox)
+
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-1.vsdx) of this architecture.*
 
 ### Considerations
 
@@ -115,11 +119,13 @@ This scenario is ideal if:
 
 This scenario assumes you have ExpressRoute connectivity between on-premises datacenters and Azure.
 
-### High level overview
+### High-level overview
 
 The following diagram provides a high-level overview of the scenario.
 
 [![Diagram of overview of scenario 2 with third-party NVA in hub Azure Virtual Network inspecting all network traffic.](./media/eslz-overview-scenario-2.png)](./media/eslz-overview-scenario-2.png#lightbox)
+
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-2.vsdx) of this architecture.*
 
 ### Architectural components
 
@@ -133,13 +139,14 @@ You must disable ExpressRoute Global Reach in this scenario. The third-party NVA
 
 [![Diagram of scenario 2 with third-party NVA in hub Azure Virtual Network inspecting all network traffic.](./media/eslz-net-scenario-2.png)](./media/eslz-net-scenario-2.png#lightbox)
 
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-2.vsdx) of this architecture.*
+
 ### Considerations
 
 - Never configure ExpressRoute Global Reach for this scenario, because it lets Azure VMware Solution traffic flow directly between Microsoft Enterprise Edge (MSEE) ExpressRoute routers, skipping the hub virtual network.
-- Azure Route Server must be deployed in your hub VNet and BGP-peered with the NVAs in the transit VNet. Configure Azure Route Server to allow [branch-to-branch](/azure/route-server/quickstart-configure-route-server-portal#configure-route-exchange) connectivity.
+- Azure Route Server must be deployed in your hub virtual network and BGP-peered with the NVAs in the transit virtual network. Configure Azure Route Server to allow [branch-to-branch](/azure/route-server/quickstart-configure-route-server-portal#configure-route-exchange) connectivity.
 - Custom route tables and user-defined routes are used to route traffic to/from Azure VMware Solution to the third-party firewall NVAs' load balancer. All HA modes (active/active and active/standby) are supported, with guaranteed routing symmetry.
 - If you need high availability for NVAs, consult your NVA vendor documentation and [deploy highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha?tabs=cli).
-
 
 ## Egress from Azure VMware Solution with or without NSX-T or NVA
 
@@ -156,11 +163,13 @@ This scenario is ideal if:
 
 All traffic from Azure VMware Solution to Azure Virtual Network, from Azure VMware Solution to the internet, and from Azure VMware Solution to on-premises data centers gets funneled through the NSX-T Data Center Tier-0/Tier-1 gateways or the NVAs.
 
-### High level overview
+### High-level overview
 
 The following diagram provides a high-level overview of the scenario.
 
 [![Diagram of overview of scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA.](./media/eslz-overview-scenario-3.png)](./media/eslz-overview-scenario-3.png#lightbox)
+
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-3.vsdx) of this architecture.*
 
 ### Architectural components
 
@@ -172,6 +181,8 @@ Implement this scenario with:
 - Internet breakout from Azure VMware Solution.
 
 [![Diagram of scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA.](./media/eslz-net-scenario-3.png)](./media/eslz-net-scenario-3.png#lightbox)
+
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-3.vsdx) of this architecture.*
 
 ### Considerations
 
@@ -190,31 +201,35 @@ This scenario has the following customer profile, architectural components, and 
 
 This scenario is ideal if:
 
-- You want Azure VMware Solution internet egress using your third-party NVA in Azure VNet hub and you want to inspect traffic between Azure VMware Solution and Azure Virtual Network.
+- You want Azure VMware Solution internet egress using your third-party NVA in Azure virtual network hub and you want to inspect traffic between Azure VMware Solution and Azure Virtual Network.
 - You want to inspect traffic between on-premises datacenters and Azure by using your on-premises third-party NVA.
 - You need multiple public IP addresses for inbound services and need a block of predefined IP addresses in Azure. In this scenario, you don't own the public IPs.
 - You need fine-grained control over firewalls outside the Azure VMware Solution private cloud.
 
-### High level overview
+### High-level overview
 
 The following diagram provides a high-level overview of the scenario.
 
-[![Diagram of overview of scenario 4 with a third-party N V A in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-overview-scenario-4.png)](./media/eslz-overview-scenario-4.png#lightbox)
+[![Diagram of overview of scenario 4 with a third-party NVA in the hub virtual network inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-overview-scenario-4.png)](./media/eslz-overview-scenario-4.png#lightbox)
+
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-4.vsdx) of this architecture.*
 
 ### Architectural components
 
 Implement this scenario with:
 
-- Third-party NVAs active-active or active-standby hosted in a VNet for firewalls and other networking functions.
+- Third-party NVAs active-active or active-standby hosted in a virtual network for firewalls and other networking functions.
 - [Azure Route Server](/azure/route-server/overview) to exchange routes between Azure VMware Solution, on-premises datacenters, and virtual networks.
 - Your third-party NVAs in your Azure Virtual Network hub to provide outbound internet to Azure VMware Solution.
 - ExpressRoute for connectivity between on-premises datacenters and Azure VMware Solution.
 
-[![Diagram of scenario 4 with a third-party N V A in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-net-scenario-4.png)](./media/eslz-net-scenario-4.png#lightbox)
+[![Diagram of scenario 4 with a third-party NVA in the hub virtual network inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-net-scenario-4.png)](./media/eslz-net-scenario-4.png#lightbox)
+
+*Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-4.vsdx) of this architecture.*
 
 ### Considerations
 
-- In this design, outbound public IP addresses reside with NVAs in the Azure VNet.
+- In this design, outbound public IP addresses reside with NVAs in the Azure virtual network.
 - Third-party NVAs in the virtual network hub BGP are peered with Azure Route Server ([ECMP](/azure/route-server/route-server-faq#if-azure-route-server-receives-the-same-route-from-more-than-one-nva-how-does-it-handle-them)) and [advertise the default route](/azure/route-server/vmware-solution-default-route)) `0.0.0.0/0` to Azure VMware Solution.
 - The default route `0.0.0.0/0` is also advertised on-premises via Global Reach. Implement a route filter on-premises to prevent default route `0.0.0.0/0` learning.
 - Traffic between Azure VMware Solution and your on-premises network flows through the ExpressRoute Global Reach, as described in [Peer on-premises environments to Azure VMware Solution](/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud). Traffic inspection between on-premises and Azure VMware Solution is performed by your on-premises third-party NVA, not your third-party NVAs in Azure Virtual Network hub.

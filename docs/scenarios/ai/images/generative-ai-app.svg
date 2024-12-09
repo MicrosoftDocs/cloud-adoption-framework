@@ -378,14 +378,14 @@
 			</g>
 			<g id="shape2111-97" v:mID="2111" v:groupContext="shape" transform="translate(7.65626,-18.0795)">
 				<title>Sheet.2111</title>
-				<desc>Azure AI Studio</desc>
+				<desc>Azure AI Foundry</desc>
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(30000):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="52.4219" cy="481.788" width="104.85" height="18.9232"/>
 				<rect x="0" y="472.327" width="104.844" height="18.9232" class="st22"/>
-				<text x="15.04" y="485.39" class="st23" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure AI Studio</text>			</g>
+				<text x="10.47" y="485.39" class="st23" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure AI Foundry</text>			</g>
 		</g>
 		<g id="group2112-100" transform="translate(605.726,-105.765)" v:mID="2112" v:groupContext="group">
 			<v:userDefs>
