@@ -1,5 +1,5 @@
 ---
-title: AI Plan - Recommendations for organizations planning AI adoption
+title: AI Plan - Process to plan for AI adoption
 description: Learn the process to plan for AI adoption with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.topic: conceptual
 ---
 
-# AI Plan - Recommendations for organizations planning AI adoption
+# AI Plan - Process to plan for AI adoption
 
 This article outlines the organizational process for planning AI adoption. An AI adoption plan details the steps an organization must take to integrate AI into its operations. This plan ensures alignment between AI initiatives and business goals. It helps organizations allocate resources, develop skills, and deploy technology for effective AI adoption.
 
@@ -28,7 +28,7 @@ In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), y
 
 Acquiring AI skills requires organizations to assess their current talent pool and determine whether to upskill, recruit, or partner with external experts. Assess your current talent pool to identify needs for upskilling, recruiting, or external partnerships. Building a skilled AI team ensures you can adapt to challenges and handle various AI projects. AI constantly evolves, so maintaining a culture of continuous learning supports innovation and keeps skills current.
 
-- *Learn AI skills.* Use the [Microsoft Learn](/) platform for free AI [training](/training/), [certifications](/credentials/), and [product guidance](/docs/). Set certification goals, such as [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/). There are learning resources for other subjects on the platform, so filter the results to return AI-specific results.
+- *Learn AI skills.* Use the [AI learning hub](/ai/) platform for free AI training, certifications, and product guidance. Set certification goals, such as earning [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) certifications.
 
 - *Recruit AI professionals.* For expertise beyond your internal capabilities, recruit AI professionals experienced in model development, generative AI, or AI ethics. These professionals are in high-demand. Consider collaborating with educational institutions to access fresh talent. Make sure to update job descriptions to reflect evolving AI needs, and offer competitive compensation. Create an attractive employer brand. Showcase your organization’s commitment to innovation and technological advancement, making your brand appealing to AI professionals.
 
@@ -107,17 +107,10 @@ Based on your PoC, assign a delivery timeline for your AI opportunities. Create 
 
 ## Next step
 
-The rest of this guidance focuses on building AI workloads in Azure by using PaaS and IaaS solutions. To be successful in Azure, you must first establish your AI foundation in AI Ready.
+To ***build*** AI workloads with Azure PaaS or IaaS services, follow the [AI Ready](./ready.md) guidance to establish your AI foundation. If you decided to ***buy*** a Microsoft Copilot SaaS solution, skip to the [Govern AI](./govern.md) guidance to establish organizational governance for AI.
 
 > [!div class="nextstepaction"]
-> [AI Ready](ready.md)
+> [AI Ready (only for AI PaaS and IaaS adoption)](ready.md)
 
-For more information about adopting a Microsoft Copilot solution, see these resources:
-
-| Category                    | Copilot solution     |
-|-----------------------------|--------------------------------|
-| Enterprise productivity     | [Copilot for Microsoft 365](/copilot/microsoft-365/microsoft-365-copilot-overview)                 |
-| Low-code platform           | [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions)                   |
-| Role-based | [Microsoft Copilot for Security](/copilot/security/microsoft-security-copilot) <br> [Microsoft 365 Copilot for Sales](/microsoft-sales-copilot/introduction) <br> [Microsoft 365 Copilot for Service](/microsoft-copilot-service/about-microsoft-copilot-for-service) <br> [Microsoft 365 Copilot for Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance) |
-| In-product Copilots         | [GitHub](https://azure.microsoft.com//products/github/copilot) <br> [Power Apps](https://www.microsoft.com/power-platform/products/power-apps) <br> [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=&country=us) <br> [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai) <br> [Power Automate](https://www.microsoft.com/power-platform/products/power-automate) <br> [Azure](https://azure.microsoft.com/products/copilot/) |
-| Browser-based      | [Copilot (free)](https://copilot.microsoft.com/) <br> [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) |
+> [!div class="nextstepaction"]
+> [Govern AI (for AI SaaS, PaaS, and IaaS adoption)](ready.md)

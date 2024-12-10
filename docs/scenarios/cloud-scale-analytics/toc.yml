@@ -69,7 +69,7 @@ items:
     - name: Authentication
       href: ./secure-authentication.md
     - name: Authorization
-      href: ./secure-analytics-role-based-access-control.md
+      href: ./secure-authorization.md
     - name: Data privacy
       href: ./secure-data-privacy.md
 
@@ -155,27 +155,10 @@ items:
       - name: Financial institution scenario for data mesh
         href: ./architectures/data-mesh-scenario.md
 
-    - name: Deployment templates
-      href: ./architectures/deployment-templates.md
-    - name: Solution accelerators
-      href: architectures/solution-accelerators.md
     - name: Connecting to environments privately
       href: ./architectures/connect-to-environments-privately.md
     - name: Frequently asked questions
       href: ./architectures/frequently-asked-questions.md
-
-  - name: Tutorials
-    items:
-    - name: Evaluate an enterprise data scenario
-      href: ../cloud-scale-analytics/tutorials/tutorial-evaluate-scenario.md
-    - name: Create a data landing zone
-      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md
-    - name: Create a data product batch
-      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-product-batch.md
-    - name: Set up a data product batch
-      href: ../cloud-scale-analytics/tutorials/tutorial-set-up-data-product-batch.md
-    - name: Clean up resources
-      href: ../cloud-scale-analytics/tutorials/cleanup-instructions.md
 
   - name: Best practices
     items:
@@ -193,16 +176,8 @@ items:
           href: best-practices/data-lake-zones.md
         - name: Data lake key considerations
           href: ./best-practices/data-lake-key-considerations.md
-      - name: Azure Databricks implementation
-        href: ./best-practices/azure-databricks-implementation.md
       - name: Azure Synapse Analytics implementation
         href: ./best-practices/azure-synapse-analytics-implementation.md
-      - name: Microsoft Purview implementation
-        items:
-        - name: Readiness checklist
-          href: ./best-practices/purview-checklist.md
-        - name: Deployment best practices
-          href: ./best-practices/purview-deployment.md
       - name: Azure Machine Learning implementation
         items:
         - name: Implementation

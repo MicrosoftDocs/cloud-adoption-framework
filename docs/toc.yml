@@ -11,7 +11,7 @@ items:
     items:
     - name: Overview
       href: scenarios/index.md
-    - name: AI on Azure
+    - name: AI adoption
       href: scenarios/ai/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md

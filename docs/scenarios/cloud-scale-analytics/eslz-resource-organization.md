@@ -3,7 +3,7 @@ title: Resource organization for enterprise-scale cloud-scale analytics
 description: Learn how this enterprise-scale scenario can improve management group and subscription organization for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/16/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---

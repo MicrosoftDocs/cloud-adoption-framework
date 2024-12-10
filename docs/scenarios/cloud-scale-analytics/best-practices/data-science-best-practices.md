@@ -51,7 +51,7 @@ For real-time and streaming use cases, deployments should be tested on a downsiz
 
 Next, you can deploy models to the service you want. This deployment compute target is the only one that's generally available and recommended for production workloads in an AKS cluster. This step is more necessary if graphics processing unit (GPU) or field-programmable gate array support is required. Other native deployment options that support these hardware requirements aren't currently available in Azure Machine Learning.
 
-Azure Machine Learning requires one-to-one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. Once that limitation is mitigated, we recommended deploying central AKS clusters as shared resources and attach them to their respective workspaces.
+Azure Machine Learning requires one-to-one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. After that limitation is mitigated, we recommended deploying central AKS clusters as shared resources and attach them to their respective workspaces.
 
 Another central test AKS instance should be hosted if stress tests should be done before you move a model to the production AKS. The test environment should provide the same compute resource as the production environment to ensure that the results are as similar as possible to the production environment.
 

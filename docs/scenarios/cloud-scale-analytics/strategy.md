@@ -1,9 +1,9 @@
 ---
 title: Integrate cloud-scale analytics into your cloud adoption strategy
 description: Understand how to integrate cloud-scale analytics into your cloud adoption strategy.
-author: martinekuan
-ms.author: martinek
-ms.date: 06/22/2021
+author: mboswell
+ms.author: mboswell
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -14,11 +14,11 @@ Create a single, centralized cloud adoption strategy for your organization using
 
 This article contains considerations for cloud-scale analytics scenarios that affect your broader strategy.
 
-Before implementing cloud-scale analytics, have a plan in place for your data strategy. You can start small with a single use-case, or you can have a much larger set of use-cases that will require prioritization. Having a strategy helps you establish your processes and spark initial conversations about pillars you need to focus on.
+Before implementing cloud-scale analytics, have a plan in place for your data strategy. You can start small with a single use case, or you can have a larger set of use cases that require prioritization. Having a strategy helps you establish your processes and spark initial conversations about pillars you need to focus on.
 
 ## Prioritize business outcomes for your data strategy
 
-Having a successful data strategy gives you a competitive advantage. You should always align your data strategy with your desired business outcomes. Most business outcomes can be classified in one of the following four categories:
+Having a successful data strategy gives you a competitive advantage. You should always align your data strategy with your desired business outcomes. Most business outcomes can be classified into one of the following four categories:
 
 - **Empower your employees:** Provide your workforce with real-time knowledge of customers, devices, and machines. This knowledge helps them efficiently collaborate to meet customer or business needs with agility.
 
@@ -28,7 +28,7 @@ Having a successful data strategy gives you a competitive advantage. You should 
 
 - **Transform your products and development life cycle:** Gather telemetry data about your services and offerings. Use the telemetry data to prioritize a release or create a new feature, and to evaluate effectiveness and adoption continuously.
 
-After you've prioritized your business outcomes, examine your current projects and long-term strategic initiatives and classify them accordingly. Consider combining the four categories of business outcomes in a matrix format that's based on complexity and impact. Also consider adding architectural pillars to help you dive deeper into your scenario.
+After prioritizing your business outcomes, examine your current projects and long-term strategic initiatives and classify them accordingly. Consider combining the four categories of business outcomes in a matrix format that's based on complexity and impact. Also, consider adding architectural pillars to help you dive deeper into your scenario.
 
 ## Unlock strategic value
 
@@ -44,7 +44,7 @@ Cloud-scale analytics are aligned with [innovation-focused motivations](../../st
 - Transformation of products or services
 - Market disruption with new products or services
 
-The following diagram contains key themes that help you realize these motivations in your own strategy. Carefully analyze these themes and how they contribute to a coherent data strategy. Also consider how they can unlock your data's strategic value, enables consistent business growth.
+The following diagram contains key themes that help you realize these motivations in your own strategy. Carefully analyze these themes and how they contribute to a coherent data strategy. Also, consider how they can unlock your data's strategic value and enable consistent business growth.
 
 ![Diagram that shows the key themes of increasing efficiencies, data democratization, and governance.](./images/key-themes.png)
 
@@ -54,11 +54,11 @@ Creating your strategy is one step. Executing your strategy at an enterprise sca
 
 ### Increasing efficiencies
 
-The agility of the cloud requires organizations to adapt quickly and bring efficiencies to all areas of business. According to the [report on emerging risks by Gartner](https://www.gartner.com/en/newsroom/press-releases/2018-10-24-gartner-survey-shows-digitalization-misconceptions-threaten-organizations-as-the-top-emerging-risk-in-3q19), despite organizations continuing to focus on and invest in digital initiatives, two-thirds of these organizations demonstrate enterprise weaknesses and fail to deliver upon expectations, even though they continue to focus on and invest in digital initiatives,
+The agility of the cloud requires organizations to adapt quickly and bring efficiencies to all areas of business. According to the [report on emerging risks by Gartner](https://www.gartner.com/en/newsroom/press-releases/2018-10-24-gartner-survey-shows-digitalization-misconceptions-threaten-organizations-as-the-top-emerging-risk-in-3q19), despite organizations continuing to focus on and invest in digital initiatives, two-thirds of these organizations demonstrate enterprise weaknesses and fail to deliver upon expectations, even though they continue to focus on and invest in digital initiatives.
 
 ## Operationalize data management
 
-Many organizations have slowly been decentralizing central IT to enable agility. Organizations want to innovate quickly, and having access to enterprise-wide unified data in self-serve manner helps them meet challenging business requirements.
+Many organizations have slowly been decentralizing central IT to enable agility. Organizations want to innovate quickly, and having access to enterprise-wide unified data in a self-serve manner helps them meet challenging business requirements.
 
 There are many reasons why businesses fail to tap into the full potential of their data. It might be because business functions work in silos, where each team is using different tools and standards for data analysis. Or it might be because of a failure to link key performance indicators to overall business goals.
 
@@ -68,9 +68,9 @@ Data democratization helps you deliver value back to business and achieve challe
 - Distribute your data across domains to enable ownership and bring data closer to users.
 - Deploy self-service data products to drive insights and business value.
 
-For data governance, you must strike a proper balance in the decentralized world of a data democratization. If you enforce governance too strictly, you can stifle innovation. However, if you don't have at least some core principles and processes in place, you're likely to end up with data silos. These silos can damage your organization's reputation and potential revenues. A holistic data governance approach is fundamental for you to unlock the strategic value of your data in a consistent manner.
+For data governance, you must strike a proper balance in the decentralized world of data democratization. If you enforce governance too strictly, you can stifle innovation. However, if you don't have at least some core principles and processes in place, you're likely to end up with data silos. These silos can damage your organization's reputation and potential revenues. A holistic data governance approach is fundamental for you to unlock the strategic value of your data in a consistent manner.
 
-The absence of a well-thought-out data strategy leads to a need to just "get going" and quickly start providing value to your organization. Address current business problems by acting on the previously mentioned key themes or using them as strategic principles within a framework. Using these key themes can also help you create a holistic data strategy that is iterative with validation, yet still provide timely results. Business and technology leaders must develop the strategies and mindset required to generate value from data and quickly scale in a simplified, structured manner
+The absence of a well-thought-out data strategy leads to a need to just "get going" and quickly start providing value to your organization. Address current business problems by acting on the previously mentioned key themes or using them as strategic principles within a framework. Using these key themes can also help you create a holistic data strategy that is iterative with validation, yet still provides timely results. Business and technology leaders must develop the strategies and mindset required to generate value from data and quickly scale in a simplified, structured manner.
 
 For more information, see [What is data governance?](./govern.md).
 
@@ -110,11 +110,11 @@ Multiple teams across the organization successfully deliver on critical business
 
 ### Level 4
 
-At Level 4, the entire organization uses frameworks, standards enterprise, and a data-driven culture. Automation, data-driven feedback loops, and centers of excellence around analytics or automation can be observed in action.
+At Level 4, the entire organization uses frameworks, standards, enterprise, and a data-driven culture. Automation, data-driven feedback loops, and centers of excellence around analytics or automation can be observed in action.
 
 ## Develop business-aligned objectives
 
-Identifying priorities in line with the business vision and keeping a "think big, start small, and act fast" ideology are keys for success. Picking up the right use case doesn't always need to be a long-haul, difficult vetting process. It could be an ongoing problem in any business unit where there's enough data to validate its return on investment, more appetite, and easy buy-in. Things can move quickly, and that's where most of the organization can be struggling to get started.
+Identifying priorities in line with the business vision and keeping a "think big, start small, and act fast" ideology are keys to success. Picking up the right use case doesn't always need to be a long-haul, difficult vetting process. It could be an ongoing problem in any business unit where there's enough data to validate its return on investment, more appetite, and easy buy-in. Things can move quickly, and that's where most of the organization can be struggling to get started.
 
 ## Understand data attributes
 
@@ -122,7 +122,7 @@ To build a strong data strategy, you need to understand how data works. Knowing 
 
 Data travels fast, but its velocity can't defy the laws of physics. Data must conform to the laws of the land and the industry that created it.
 
-Data doesn't change on its own, but it's prone to changes and accidental loss unless you put measures in place to mitigate such challenges. Put anti-corruption measures for controls, databases, and storage in place so you can deal with unforeseen changes. Also ensure you have set up monitoring, audits, alerts, and downstream processes.
+Data doesn't change on its own, but it's prone to changes and accidental loss unless you put measures in place to mitigate such challenges. Put anti-corruption measures for controls, databases, and storage in place so you can deal with unforeseen changes. Also, ensure you set up monitoring, audits, alerts, and downstream processes.
 
 On its own, data doesn't produce any insights or yield any value. To gain insights or extract value, you must put most or all of your data through four discrete steps:
 
@@ -147,15 +147,15 @@ Architectural constructs govern the speed at which you can process data. Constru
 
 ## Define your data strategy
 
-Using data as a competitive advantage for building better products and higher-value services is nothing new. But the volume, velocity, and variety of data that cloud computing has enabled is.
+Using data as a competitive advantage for building better products and higher-value services is not a new concept. However, the volume, velocity, and variety of data enabled by cloud computing are unprecedented.
 
-The design of a modern data analytics platform in the cloud consists of security, governance, monitoring, on-demand scaling, data operations, and self-service. Understanding of the interplay between these facets is what distinguishes a great data strategy from a good one. Use tools like the Cloud Adoption Framework to ensure architectural cohesiveness, integrity, and best practices.
+The design of a modern data analytics platform in the cloud consists of security, governance, monitoring, on-demand scaling, data operations, and self-service. Understanding the interplay between these facets is what distinguishes a great data strategy from a good one. Use tools like the Cloud Adoption Framework to ensure architectural cohesiveness, integrity, and best practices.
 
 To be effective, your data strategy must contain provisions for data governance. The following diagram shows the main stages of a data life cycle, focusing on data governance as its focus:
 
 ![Diagram of a data life cycle.](./images/data-management-and-quality.png)
 
-The following sections describe considerations you should use while deciding on design principles data strategy's layers. Focus on delivering business outcomes and value from your data.
+The following sections describe considerations you should use while deciding on design principles for your data strategy's layers. Focus on delivering business outcomes and value from your data.
 
 ### Data ingestion
 
@@ -173,7 +173,7 @@ Choose the right storage for your workload. Even if you don't get storage exactl
 
 ### Data processing
 
-Your data processing needs will vary with each workload. Most large-scale data processing contains elements of both real-time and batch processing. Most enterprises also have elements of time series processing requirements and a need to process free-form text for enterprise search capabilities.
+Your data processing needs vary with each workload. Most large-scale data processing contains elements of both real-time and batch processing. Most enterprises also have elements of time series processing requirements and a need to process free-form text for enterprise search capabilities.
 
 Online transaction processing (OLTP) provides the most popular organizational processing requirements. Some workloads need specialized processing like high-performance computing (HPC), sometimes called "big compute." These workloads solve complex mathematical tasks using many CPU or GPU-based computers.
 
@@ -193,9 +193,9 @@ We put our principles and responsible AI into practice by developing resources a
 
 We've also developed a set of tools to help others understand, protect, and control AI at every stage of innovation. These tools are a result of multidisciplinary collaboration efforts to strengthen and accelerate responsible AI. Collaboration has spanned software engineering and development, social sciences, user research, law, and policy.
 
-To improve collaboration, we open-sourced many tools like InterpretML and Fairlearn. Others can contribute to and build upon these open source tools. We also democratized tools through Azure Machine Learning.
+To improve collaboration, we open-sourced many tools like InterpretML and Fairlearn. Others can contribute to and build upon these open-source tools. We also democratized tools through Azure Machine Learning.
 
-The pivot to becoming a data-driven organization is fundamental to delivering competitive advantage in the new normal. We want to help our customers' shift from an application-only approach to an application and data-led approach. An approach focusing on applications and data helps create an end-to-end data strategy that ensures repeatability and scalability across current and future use cases that affect business outcomes.
+The pivot to becoming a data-driven organization is fundamental to delivering competitive advantage in the new normal. We want to help our customers shift from an application-only approach to an application and data-led approach. An approach focusing on applications and data helps create an end-to-end data strategy that ensures repeatability and scalability across current and future use cases that affect business outcomes.
 
 ![Diagram of unlocking digital innovation.](./images/data-strategy-innovation.png)
 
@@ -208,7 +208,7 @@ Communication is one of the most important parts of this framework. Your organiz
 Engagement is essential between the following two groups:
 
 - Team members who design and implement the data strategy
-- Team members who contribute to, consume, and exploit the data (such as business units that will make decisions and build outcomes based upon the data)
+- Team members who contribute to, consume, and exploit the data (such as business units that make decisions and build outcomes based upon the data)
 
 To put it another way, data strategies and associated data platforms that are built without user engagement risk challenges in relevance and adoption.
 
@@ -223,7 +223,7 @@ For more information, see [Develop a plan for cloud-scale analytics](./plan.md).
 
 When you deliver data products against the success criteria in a standardized and structured way, that delivery validates your iterative framework. Additionally, using your learning to continuously innovate helps you build business confidence and widen data strategy goals. This process provides clearer and faster adoption across your organization.
 
-The same applies for your data platform. When you have a setup where multiple teams operate fairly autonomously, you should drive towards a mesh. Getting there's an iterative process. In many cases, it requires significant changes to your organizational setup, readiness, and business alignment
+The same applies to your data platform. When you have a setup where multiple teams operate fairly autonomously, you should drive towards a mesh. Getting there's an iterative process. In many cases, it requires significant changes to your organizational setup, readiness, and business alignment.
 
 ## Next steps
 

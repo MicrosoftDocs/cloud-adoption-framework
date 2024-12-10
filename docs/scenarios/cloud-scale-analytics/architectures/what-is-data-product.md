@@ -3,7 +3,7 @@ title: What is a data product?
 description: Learn about the data mesh approach, which adopts the concept of data as a product. Learn how to create effective data products and use them in your design.
 author: sasever
 ms.author: sasever
-ms.date: 08/06/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 Every application creates and stores data either temporarily or permanently. Many applications also create and save data for operational management purposes, such as error logging and health monitoring. To consume and process the data that these applications produce, centralized data teams use extract, transform, and load (ETL) processes. Application operation teams often have other data processing flows for data like application health data and KPI status monitoring data.
 
-For data integration, a traditional waterfall approach in which teams follow a specific order of phases isn't ideal. It can lead to knowledge gaps, ownership problems, and communication conflicts that affect your data's quality, timeliness, and value for users. Application teams are responsible for application performance and success. When they use a waterfall approach, they make changes to downstream processes that other teams own. Sometimes these changes can affect other areas. For example, a minor upstream change might drastically alter a KPI's trend. These conflicts can affect your ability to make critical decisions.
+For data integration, a traditional waterfall approach, in which teams follow a specific order of phases, isn't ideal. It can lead to knowledge gaps, ownership problems, and communication conflicts that affect your data's quality, timeliness, and value for users. Application teams are responsible for application performance and success. When they use a waterfall approach, they make changes to downstream processes that other teams own. Sometimes these changes can affect other areas. For example, a minor upstream change might drastically alter a KPI's trend. These conflicts can affect your ability to make critical decisions.
 
 ## Data as a product
 
@@ -47,14 +47,6 @@ Ensure that your data products have the common characteristics that are describe
 The following diagram shows an example data application logical layout in a domain and landing zone.
 
 :::image type="content" source="../media/logical-data-application-options-in-adlz.png" alt-text="Diagram that shows a possible data application logical layout in a domain and landing zone." lightbox="../media/logical-data-application-options-in-adlz.png":::
-
-## Data product and data application guidance for Azure
-
-You can position approaches for your data application environment within Azure data landing zones if your domain application teams use a shared platform and a shared set of services.
-
-:::image type="content" source="../media/data-application-options-in-adlz.png" alt-text="Diagram that shows the data-application-rg resource group from Data Applications Context and the shared-application-rg resource group from Core Services Context." lightbox="../media/data-application-options-in-adlz.png":::
-
-For data application pattern templates for Azure data landing zones, see [Sample data applications](../../data-management/architectures/data-landing-zone-data-products.md#sample-data-applications).
 
 ## Next step
 

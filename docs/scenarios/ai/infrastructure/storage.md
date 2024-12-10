@@ -1,6 +1,6 @@
 ---
 title: Storage recommendations for AI workloads on Azure infrastructure (IaaS)
-description: Learn how to select storage for AI workloads on Azure infrastructure (IaaS)
+description: Learn how to select storage for AI workloads on Azure infrastructure (IaaS).
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 11/01/2024

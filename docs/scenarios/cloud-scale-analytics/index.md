@@ -1,14 +1,14 @@
 ---
-title: Cloud-scale analytics for regulated industries - Microsoft Cloud Adoption Framework for Azure
+title: Cloud-scale analytics - Microsoft Cloud Adoption Framework for Azure
 description: Gain an overview of an end-to-end scenario for cloud-scale analytics, with a focus on Azure implementation.
 author: mboswell
 ms.author: mboswell
-ms.date: 09/30/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank, build-2023, build-2023-dataai
 ---
 
-# Cloud-scale analytics for regulated industries
+# Cloud-scale analytics
 
 With larger, more sophisticated forms of cloud adoption, your journey to the cloud becomes more complex. Azure cloud-scale analytics is a scalable, repeatable framework that meets your organization's unique needs for building modern data platforms.
 
@@ -21,7 +21,7 @@ Cloud-scale analytics has the following goals:
 - Drive a default approach to enforce data governance and security
 - Drive teams to consistently prioritize business outcomes instead of focusing just on the underlying technology.
 
-Cloud-scale analytics builds upon Microsoft's cloud adoption framework and requires understanding of [landing zones](../../ready/landing-zone/index.md). If you don't already have an implementation of Azure landing zones, consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
+Cloud-scale analytics builds upon Microsoft's cloud adoption framework and requires an understanding of [landing zones](../../ready/landing-zone/index.md). If you don't already have an implementation of Azure landing zones, consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
 Reference architectures allow you to begin with a small footprint and grow over time, adapting the scenario to your use cases.
 
@@ -72,21 +72,12 @@ These architectures standardize best practices and minimize deployment bottlenec
 
 For more information, see: [Architectures Overview](../cloud-scale-analytics/architectures/overview-architectures.md)
 
-## Deployment templates
-
-This section includes many reference templates that can be deployed.
-
-[!INCLUDE [deployment-templates-table](../cloud-scale-analytics/includes/deployment-templates-table.md)]
-
-For more information, see [Deployment templates](./architectures/deployment-templates.md).
-
 ## Best practices
 
 The following advanced, level-300+ articles in the **cloud-scale analytics** table of contents can help central IT teams deploy tools and manage processes for data management and governance:
 
 - [Data ingestion for cloud-scale analytics](best-practices/data-ingestion.md)
 - [Data lake storage for cloud-scale analytics](best-practices/data-lake-overview.md)
-- [Use Azure Databricks within cloud-scale analytics](best-practices/azure-databricks-implementation.md)
 - [Use Azure Synapse Analytics for cloud-scale analytics](best-practices/azure-synapse-analytics-implementation.md)
 
 ## Featured Azure products
