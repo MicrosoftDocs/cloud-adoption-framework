@@ -1,5 +1,5 @@
 ---
-title: Motivations – why are you moving to or expanding in the cloud?
+title: Motivations – why move to or expand in the cloud?
 description: Use the Cloud Adoption Framework for Azure to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 ms.author: tozimmergren
 author: Zimmergren
@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article aims to help you understand and define motivations for your cloud adoption strategy. This is crucial for IT decision-makers and executives as it ensures alignment with strategic business objectives, maximizes return on investment, and facilitates informed decision-making.
 
-:::image type="content" source="media/placeholder-3.png" alt-text="Diagram showing when to define motivations in your cloud strategy flow.":::
+:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram showing the phase for defining motivations for your cloud adoption strategy.":::
 
 Clear motivations help prioritize initiatives, streamline resource allocation, and mitigate risks by addressing specific business needs such as reducing operational costs, enhancing security, and driving innovation.  
 

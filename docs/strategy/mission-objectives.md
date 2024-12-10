@@ -1,6 +1,6 @@
 ---
 title: Cloud adoption strategy mission and objectives
-description: Learn how to define your mission and objectives to drive your cloud adoption strategy.
+description: Learn how to define your mission and objectives, and how to measure success with your cloud adoption strategy.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
@@ -10,6 +10,8 @@ ms.date: 11/21/2024
 # Mission and objectives
 
 Defining your mission and objectives is crucial for a successful cloud adoption strategy. A *clear mission* provides direction and purpose, while *specific objectives* outline the steps needed to achieve that mission. A mission is only of value when it is actionable, objectives can be effectively executed against, and the results are measurable.  
+
+:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram showing the phase for defining mission and objectives for your cloud adoption strategy.":::
 
 Making use of frameworks such as Objectives and Key Results (OKRs) ensures that missions can be broken down into actionable next steps to drive accountability and align your cloud adoption strategy with your organization's overall strategic objectives to ensure coherence and focus.
 

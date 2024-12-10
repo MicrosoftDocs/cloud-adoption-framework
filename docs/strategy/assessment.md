@@ -11,7 +11,7 @@ ms.date: 11/21/2024
 
 This article outlines the process to assess your existing cloud adoption strategy to inform your organization about your current cloud maturity.
 
-:::image type="content" source="media/placeholder-2.png" alt-text="Diagram showing flow at assess.":::
+:::image type="content" source="./media/caf-strategy-assess.svg" alt-text="Diagram showing the phase for assessing your cloud adoption strategy.":::
 
 Every cloud journey is unique and should be aligned with your business goals. Optimization of both the cloud adoption strategy and your execution is key when migrating or innovating in the cloud. With multiple cloud services and pathways available, choosing the right solution requires the right level of understanding.
 
