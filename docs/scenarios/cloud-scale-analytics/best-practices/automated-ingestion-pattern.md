@@ -3,7 +3,7 @@ title: Data agnostic ingestion engine
 description: Learn how automated ingestion frameworks support cloud-scale analytics in Azure.
 author: dmarz
 ms.author: damarzol
-ms.date: 04/03/2022
+ms.date: 12/03/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -56,7 +56,7 @@ In the provisioning workflow stage, you validate and persist data collected in t
 
 *Figure 4: Registration workflow.*
 
-Once ingestion requests are approved, the workflow uses the Azure Purview REST API to insert the sources into Azure Purview.
+After ingestion requests are approved, the workflow uses the Microsoft Purview REST API to insert the sources into Microsoft Purview.
 
 ### Detailed workflow for onboarding data products
 
@@ -71,14 +71,14 @@ Figure 5 shows the detailed registration process for automating the ingestion of
 - Data application teams should indicate if data is **sensitive (Personal data)** This classification drives the process during which data lake folders are created to ingest raw, enriched and curated data. The source names raw and enriched data and the data product names curated data.
 - Service principal and security groups are created for ingesting and giving access to a dataset.
 - An ingestion job is created in the data landing zone Data Factory metastore.
-- An API inserts the data definition into Azure Purview.
+- An API inserts the data definition into Microsoft Purview.
 - Subject to the validation of the data source and approval by the ops team, details are published to a Data Factory metastore.
 
 ## Ingestion scheduling
 
 Within Azure Data Factory, [metadata-driven copy tasks](/azure/data-factory/copy-data-tool-metadata-driven) provide functionality that enables orchestration pipelines to be driven by rows within a Control Table stored in Azure SQL Database. You can use the Copy Data Tool to pre-create metadata-driven pipelines. 
 
-Once a pipeline has been created, your provisioning workflow adds entries to the Control Table to support ingestion from sources identified by the data asset registration metadata. The Azure Data Factory pipelines and the Azure SQL Database containing your Control Table metastore can both exist within each data landing zone to create new data sources and ingest them into data landing zones.
+After a pipeline has been created, your provisioning workflow adds entries to the Control Table to support ingestion from sources identified by the data asset registration metadata. The Azure Data Factory pipelines and the Azure SQL Database containing your Control Table metastore can both exist within each data landing zone to create new data sources and ingest them into data landing zones.
 
 :::image type="content" source="../images/ingestion-step-3-orchestration.png" alt-text="Diagram of scheduling of data asset ingestion":::
 
@@ -116,11 +116,11 @@ Operational metadata can be used to track:
 - Source metadata changes.
 - Business functions that depend on data products.
 
-## Use the Azure Purview REST API to discover data
+## Use the Microsoft Purview REST API to discover data
 
-Azure Purview REST APIs should be used to register data during the initial ingestion. You can use the APIs to submit data to your data catalog soon after it's ingested.
+Microsoft Purview REST APIs should be used to register data during the initial ingestion. You can use the APIs to submit data to your data catalog soon after it's ingested.
 
-For more information, see [how to use Azure Purview REST APIs](/azure/purview/tutorial-using-rest-apis).
+For more information, see [how to use Microsoft Purview REST APIs](/azure/purview/tutorial-using-rest-apis).
 
 ### Register data sources
 
@@ -134,12 +134,12 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
-|`accountName`    | True       | String        | Name of the Azure Purview account         |
+|`accountName`    | True       | String        | Name of the Microsoft Purview account         |
 |`dataSourceName` | True       | String        | Name of the data source         |
 
-### Use the Azure Purview REST API for registration
+### Use the Microsoft Purview REST API for registration
 
-The following examples show how to use the Azure Purview REST API to register data sources with payloads:
+The following examples show how to use the Microsoft Purview REST API to register data sources with payloads:
 
 **Register an Azure Data Lake Storage Gen2 data source:**
 
@@ -180,11 +180,11 @@ The following examples show how to use the Azure Purview REST API to register da
 ```
 
 > [!NOTE]
-> The `<collection-name>`is a current collection that exists in an Azure Purview account.
+> The `<collection-name>`is a current collection that exists in an Microsoft Purview account.
 
 ### Create a scan
 
-[Learn how you can create credentials](/azure/purview/manage-credentials) to authenticate sources in Azure Purview before setting up and running a scan.
+[Learn how you can create credentials](/azure/purview/manage-credentials) to authenticate sources in Microsoft Purview before setting up and running a scan.
 
 Use the following API call to scan data sources:
 
@@ -196,13 +196,13 @@ PUT https://{accountName}.scan.purview.azure.com/datasources/{dataSourceName}/sc
 
 |Name  |Required  |Type  |Description  |
 |---------|---------|---------|---------|
-|`accountName`    | True        | String        | Name of the Azure Purview account         |
+|`accountName`    | True        | String        | Name of the Microsoft Purview account         |
 |`dataSourceName` | True        | String        | Name of the data source         |
 |`newScanName`    | True        | String        | Name of the new scan         |
 
-### Use the Azure Purview REST API for scanning
+### Use the Microsoft Purview REST API for scanning
 
-The following examples show how you can use the Azure Purview REST API to scan data sources with payloads:
+The following examples show how you can use the Microsoft Purview REST API to scan data sources with payloads:
 
 **Scan an Azure Data Lake Storage Gen2 data source:**
 
