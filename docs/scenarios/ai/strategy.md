@@ -39,13 +39,7 @@ Use the following AI decision tree to narrow down options for each AI use case. 
 
 Microsoft offers various Copilot generative AI services that enhance individual efficiency. These Copilots allow you to purchase software as a service (SaaS) for AI capabilities across your business or for specific users. SaaS products generally require minimal technical skills.
 
-- *Microsoft 365 Copilot* uses enterprise data in Microsoft Graph. You can [categorize your data](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot#step-1-deploy-or-validate-your-data-protection) with sensitivity labels.
-- *Role-based Copilots* have different data-connection and plug-in options to ingest data.
-- Most *in-product Copilots* don’t require extra data preparation.
-- *Extending Micorosoft 365 Copilot* allows you to add more data via Microsoft Graph or declarative agents that can pull from different data sources.
-- *Copilot Studio* automates much of the data processing needed to create custom copilots for various business applications.
-
-Use the links in the following table for more information.
+For data readiness, *Microsoft 365 Copilot* uses enterprise data in Microsoft Graph. You can [categorize your data](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot#step-1-deploy-or-validate-your-data-protection) with sensitivity labels. *Role-based Copilots* have different data-connection and plug-in options to ingest data. Most *in-product Copilots* don’t require extra data preparation. *Extending Micorosoft 365 Copilot* allows you to add more data via Microsoft Graph or declarative agents that can pull from different data sources. *Copilot Studio* automates much of the data processing needed to create custom copilots for various business applications. Use the links in the following table for more information.
 
 | Microsoft Copilots | Description | User| Data needed | Skills required | Main cost factors |
 |-------|----|-----|----|-----|------|
@@ -65,7 +59,7 @@ Microsoft provides various platform-as-a-service (PaaS) options for building AI 
 | Build RAG applications with code-first platform | [Azure AI Foundry](/azure/ai-studio/what-is-ai-studio) <br>or<br> [Azure OpenAI](/azure/ai-services/openai/overview) | Yes | Selecting models, orchestrating dataflow, chunking data, enriching chunks, choosing indexing, understanding query types (full-text, vector, hybrid), understanding filters and facets, performing reranking, engineering prompt flow, deploying endpoints, and consuming endpoints in apps | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
 | Fine-tune generative AI models | [Azure AI Foundry](/azure/ai-studio/what-is-ai-studio) | Yes | Preprocessing data, splitting data into training and validation data, validating models, configuring other parameters, improving models, deploying models, and consuming endpoints in apps | Compute, number of tokens in and out, AI services consumed, storage, and data transfer |
 | Train and inference machine learning models by using your own data | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) <br>or<br> [Microsoft Fabric](/fabric/get-started/microsoft-fabric-overview) | Yes | Preprocessing data, training models by using code or automation, improving models, deploying machine learning models, and consuming endpoints in apps | Compute, storage, and data transfer |
-| Consume analytical AI models in applications | [Azure AI services](/azure/ai-services/what-are-ai-services) | Yes | Picking the right AI model, securing endpoints, consuming endpoints in apps, and fine-tuning as needed | Use of model endpoints consumed, storage, data transfer, compute (if you train custom models) |
+| Consume nongenerative AI models in applications | [Azure AI services](/azure/ai-services/what-are-ai-services) | Yes | Picking the right AI model, securing endpoints, consuming endpoints in apps, and fine-tuning as needed | Use of model endpoints consumed, storage, data transfer, compute (if you train custom models) |
 
 ### Bring your own models with infrastructure services (IaaS)
 
