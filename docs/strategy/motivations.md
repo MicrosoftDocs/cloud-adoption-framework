@@ -1,5 +1,5 @@
 ---
-title: Motivations – why move to or expand in the cloud?
+title: Motivations – why are you moving to or expanding in the cloud?
 description: Use the Cloud Adoption Framework for Azure to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 ms.author: tozimmergren
 author: Zimmergren

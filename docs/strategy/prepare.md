@@ -44,6 +44,7 @@ If your organization has these strategies in place already, ensure the adoption 
 
 ### Recommendations
 
+
 - _Regularly review strategy alignment_: Ensure you regularly check-in with business, digital, and IT-leaders to keep your cloud initiatives aligned with evolving goals.
 - _Agile feedback loops_: Use agile practices to gather feedback from key stakeholders and leaders, and quickly revisit and adapt your strategies to meet changing needs.
 
