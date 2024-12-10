@@ -55,7 +55,7 @@ There are two primary migration paths:
 
 | Offline Migration | Online Migration |
 |---|---|
-| One-time direct copy of the database | Initial copy of the database followed by changed data capture during migration |
+| One-time direct copy of the database | Initial copy of the database followed by change data capture during migration |
 | Requires affected application to be offline during migration | Application can stay online during migration
 | **Tools used** : Data Box, DataPump, RMAN | **Tools used**: DataGuard, RMAN, GoldenGate |
 
