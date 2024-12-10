@@ -2389,6 +2389,26 @@
          "source_path": "docs/strategy/technical-considerations/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/define-security-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/security",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/define-sovereignty-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/industries",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/partner-alignment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/share-your-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
       }
    ]
 }
