@@ -3,7 +3,7 @@ title: Policies in cloud-scale analytics
 description: Learn about Azure policies in cloud-scale analytics. Azure policies help your organization govern resources as needed.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 12/15/2021
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -20,7 +20,7 @@ The [Start with Cloud Adoption Framework enterprise-scale landing zones](../../r
 
 ![Diagram that shows how Azure governance works.](./images/azure-governance.png)
 
-Azure Policy is important when ensuring security and compliance within cloud-scale analytics . It helps to enforce standards and to assess compliance at scale. Policies can be used to evaluate resources in Azure and compare them to the wanted properties. Several policies, or business rules, can be grouped into an initiative. Individual policies or initiatives can be assigned to different scopes in Azure. These scopes might be management groups, subscriptions, resource groups, or individual resources. The assignment applies to all resources within the scope, and subscopes can be excluded with exceptions if necessary.
+Azure Policy is important when ensuring security and compliance within cloud-scale analytics. It helps to enforce standards and to assess compliance at scale. Policies can be used to evaluate resources in Azure and compare them to the wanted properties. Several policies, or business rules, can be grouped into an initiative. Individual policies or initiatives can be assigned to different scopes in Azure. These scopes might be management groups, subscriptions, resource groups, or individual resources. The assignment applies to all resources within the scope, and subscopes can be excluded with exceptions if necessary.
 
 ## Design considerations
 
@@ -34,23 +34,19 @@ Azure policies in cloud-scale analytics were developed with the following design
 
 ## Azure policies for cloud-scale analytics
 
-[Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Cloud-scale analytics comes with a set of pre-created policies to help you implement any required guardrails in your environment.
+[Implementing custom policies](/azure/governance/policy/tutorials/create-and-manage) allows you to do more with Azure Policy. Cloud-scale analytics comes with a set of precreated policies to help you implement any required guardrails in your environment.
 
-Azure Policy should be the core instrument of the Azure (Data) Platform team to ensure compliance of resources within the Data management landing zone, data landing zones as well as other landing zones within the organization's tenant. This platform feature should be used to introduce guardrails and enforce adherence to the overall approved service configuration within the respective management group scope. The platform teams can use Azure Policy to, for example, enforce private endpoints for any storage accounts that are being hosted within the data platform environment or enforce TLS 1.2 encryption in transit for any connections being made to the storage accounts. When done right, this will prohibit any data application teams from hosting services in an incompliant state within the respective tenant scope.
+Azure Policy should be the core instrument of the Azure (Data) Platform team to ensure compliance of resources within the Data management landing zone, data landing zones, and other landing zones within the organization's tenant. This platform feature should be used to introduce guardrails and enforce adherence to the overall approved service configuration within the respective management group scope. The platform teams can use Azure Policy to, for example, enforce private endpoints for any storage accounts that are being hosted within the data platform environment or enforce TLS 1.2 encryption in transit for any connections being made to the storage accounts. When done right, this policy prohibits any data application teams from hosting services in an incompliant state within the respective tenant scope.
 
 The responsible IT teams should use this platform feature to address their security and compliance concerns and open up for a self-service approach within (Data) Landing Zones.
 
 Cloud-scale analytics contains custom policies related to **resource and cost management, authentication, encryption, network isolation, logging, resilience, and more**.
-
-> [!NOTE]
-> The policies provided are not applied by default during deployment. They should be viewed as guidance only, and can be applied depending on business requirements. Policies should always be applied to the highest level possible. In most cases, this is a [management group](/azure/governance/management-groups/overview). All of the policies are available in our GitHub repository.
 
 - [All services](#all-services)
 - [Storage](#storage)
 - [Key Vault](#key-vault)
 - [Azure Data Factory](#azure-data-factory)
 - [Azure Synapse Analytics](#azure-synapse-analytics)
-- [Azure Purview](#azure-purview)
 - [Azure Databricks](#azure-databricks)
 - [Azure IoT Hub](#azure-iot-hub)
 - [Azure Event Hubs](#azure-event-hubs)
@@ -76,7 +72,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Power BI](#power-bi)
 
 > [!NOTE]
-> The policies provided below are not applied by default during deployment. They should be viewed as guidance-only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview). All the policies are available in our GitHub repository.
+> The policies should be viewed as guidance-only and can be applied depending on business requirements. Policies should always be applied to the highest level possible and in most cases this will be a [management group](/azure/governance/management-groups/overview).
 
 ## All services
 
@@ -126,7 +122,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 |---------|---------|---------|
 |Append-DataFactory-IdentityType|Authentication|Enforces use of system assigned identity for data factory.|
 |Deny-DataFactory-ApiVersion|Resource Management|Denies old API version for data factory V1.|
-|Deny-DataFactory-IntegrationRuntimeManagedVirtualNetwork|Network Isolation|Denies Integration Runtimes that are not connected to the Managed Virtual Network.|
+|Deny-DataFactory-IntegrationRuntimeManagedVirtualNetwork|Network Isolation|Denies Integration Runtimes that aren't connected to the Managed Virtual Network.|
 |Deny-DataFactory-LinkedServicesConnectionStringType|Authentication|Denies non Key Vault stored secrets for linked services.|
 |Deny-DataFactory-ManagedPrivateEndpoints|Network Isolation|Denies external private endpoints for linked services.|
 |Deny-DataFactory-PublicNetworkAccess|Network Isolation|Denies public access to data factory.|
@@ -137,41 +133,35 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-Synapse-LinkedAccessCheckOnTargetResource|Network Isolation|Enforce [LinkedAccessCheckOnTargetResource](/dotnet/api/microsoft.azure.management.synapse.models.managedvirtualnetworksettings.linkedaccesscheckontargetresource) in managed vnet settings when Synapse Workspace is created.|
+|Append-Synapse-LinkedAccessCheckOnTargetResource|Network Isolation|Enforce [LinkedAccessCheckOnTargetResource](/dotnet/api/microsoft.azure.management.synapse.models.managedvirtualnetworksettings.linkedaccesscheckontargetresource) in managed virtual network settings when Synapse Workspace is created.|
 |Append-Synapse-Purview|Network Isolation|Enforce connection between central purview instance and Synapse Workspace.|
-|Append-SynapseSpark-ComputeIsolation|Resource Management|When a Synapse Spark Pool is created without compute isolation then this will add it.|
+|Append-SynapseSpark-ComputeIsolation|Resource Management|When a Synapse Spark Pool is created without compute isolation then this adds it.|
 |Append-SynapseSpark-DefaultSparkLogFolder|Logging|When a Synapse Spark Pool is created without logging then this will add it.|
-|Append-SynapseSpark-SessionLevelPackages|Resource Management|When a Synapse Spark Pool is created without session level packages then this will add it.|
+|Append-SynapseSpark-SessionLevelPackages|Resource Management|When a Synapse Spark Pool is created without session level packages then this adds it.|
 |Audit-Synapse-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Synapse.|
 |Deny-Synapse-AllowedAadTenantIdsForLinking|Network Isolation||
-|Deny-Synapse-Firewall|Network Isolation|Setup firewall of Synapse.|
-|Deny-Synapse-ManagedVirtualNetwork|Network Isolation|When a Synapse Workspace is created without managed virtual network then this will add it.|
+|Deny-Synapse-Firewall|Network Isolation|Set up firewall of Synapse.|
+|Deny-Synapse-ManagedVirtualNetwork|Network Isolation|When a Synapse Workspace is created without managed virtual network then this adds it.|
 |Deny-Synapse-PreventDataExfiltration|Network Isolation|Enforced prevention of data exfiltration for Synapse managed virtual network.|
 |Deny-SynapsePrivateLinkHub|Network Isolation|Denies Synapse Private Link Hub.|
 |Deny-SynapseSpark-AutoPause|Resource Management|Enforces auto pause for Synapse Spark Pools.|
 |Deny-SynapseSpark-AutoScale|Resource Management|Enforces auto scale for Synapse Spark Pools.|
 |Deny-SynapseSql-Sku|Resource Management|Denies certain Synapse SQL Pool SKUs.|
 |Deploy-SynapseSql-AuditingSettings|Logging|Send auditing logs for Synapse SQL pools to log analytics.|
-|Deploy-SynapseSql-MetadataSynch|Resource Management|Setup metadata sync for Synapse SQL pools.|
+|Deploy-SynapseSql-MetadataSynch|Resource Management|Set up metadata sync for Synapse SQL pools.|
 |Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse SQL pool security alert policy.|
 |Deploy-SynapseSql-TransparentDataEncryption|Encryption|Deploy Synapse SQL transparent data encryption.|
 |Deploy-SynapseSql-VulnerabilityAssessment|Logging|Deploy Synapse SQL pool vulnerability assessments.|
-
-## Azure Purview
-
-|Policy name  |Policy area  |Description  |
-|---------|---------|---------|
-|Deny-Purview|Resource Management|Restrict deployment of Purview accounts to avoid proliferation.|
 
 ## Azure Databricks
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 |Append-Databricks-PublicIp|Network Isolation|Enforces no public access on Databricks workspaces.|
-|Deny-Databricks-Sku|Resource Management|Deny non-premium Databricks SKU.|
-|Deny-Databricks-VirtualNetwork|Network Isolation|Deny non-virtual network deployment for databricks.|
+|Deny-Databricks-Sku|Resource Management|Deny nonpremium Databricks SKU.|
+|Deny-Databricks-VirtualNetwork|Network Isolation|Deny nonvirtual network deployment for databricks.|
 
-Additional policies that are applied in the Databricks workspace through cluster policies:
+Other policies that are applied in the Databricks workspace through cluster policies:
 
 |Cluster policy name |Policy area  |
 |---------|---------|
@@ -179,7 +169,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Restrict cluster size and VM types|Resource Management|
 |Enforce Cost Tagging|Resource Management|
 |Enforce Autoscale|Resource Management|
-|Enforce AutoPause|Resource Management|
+|Enforce Auto-Pause|Resource Management|
 |Restrict DBUs per hour|Resource Management|
 |Deny public SSH|Authentication|
 |Cluster credential passthrough enabled|Authentication|
@@ -261,7 +251,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-MachineLearning-PublicAccessWhenBehindVnet|Network Isolation|Deny public access behind vnet for machine learning workspaces.|
+|Append-MachineLearning-PublicAccessWhenBehindVnet|Network Isolation|Deny public access behind virtual network for machine learning workspaces.|
 |Audit-MachineLearning-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for machine learning.|
 |Deny-MachineLearning-HbiWorkspace|Network Isolation|Enforce high business impact machine learning workspaces across the environment.|
 |Deny-MachineLearningAks|Resource Management|Deny AKS creation (not attaching) in machine learning.|
@@ -370,7 +360,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Deny-Cache-NonSslPort|Network Isolation|Enforces turning off the non-SSL port for Redis Cache.|
 |Deny-Cache-PublicNetworkAccess|Network Isolation|Enforces no public network access for Redis Cache.|
 |Deny-Cache-Sku|Resource Management|Enforces certain SkKUs for Redis Cache.|
-|Deny-Cache-VnetInjection|Network Isolation|Enforces use of private endpoints and denies vnet injection for Redis Cache.|
+|Deny-Cache-VnetInjection|Network Isolation|Enforces use of private endpoints and denies virtual network injection for Redis Cache.|
 
 ## Container instances
 

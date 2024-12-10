@@ -3,23 +3,22 @@ title: Review your environment for Azure landing zones for cloud-scale analytics
 description: Learn about how cloud-scale analytics affects your Azure landing zone design.
 author: mboswell
 ms.author: mboswell
-ms.date: 12/15/2021
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Azure landing zones for cloud-scale analytics
 
-In response to the need of frictionless governance and platform to actionable insights to the business, cloud-scale analytics represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
+In response to the need for frictionless governance and a platform for actionable insights to the business, cloud-scale analytics represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
-The pattern relies upon distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, cloud-scale analytics includes the following capabilities:
+The pattern relies upon the distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, cloud-scale analytics includes the following capabilities:
 
 - Storage
-- Data lineage
-- Data classification
+- Data governance
 - Data ingestion
-- Data Quality
-- Access Provisioning
+- Data quality
+- Access provisioning
 - Networking
 - Encryption
 - Resiliency
@@ -28,7 +27,7 @@ The pattern relies upon distribution of the data and its pipelines across domain
 > [!NOTE]
 > Cloud-scale analytics builds on the [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md) and should be considered a supplement to it.
 
-Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework whilst applying our Well-Architected framework lens. Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
+Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework while applying our Well-Architected framework lens. The Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
 
 Cloud-scale analytics paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular while supporting autonomy and innovation.
 
@@ -43,32 +42,17 @@ To learn more, see:
 
 ## Data management landing zone
 
-At the heart of cloud-scale analytics, is its management capability. This capability is enabled through the data management landing zone.
+At the heart of cloud-scale analytics is its management capability. This capability is enabled through the data management landing zone.
 
-:::image type="content" source="./images/data-management-overview-1.png" alt-text="Diagram of a Data management overview." lightbox="./images/data-management-overview-1.png":::
-
-The **Data management landing zone** is a subscription that governs the platform and supports the following capabilities:
-
-- [Data catalog](architectures/data-management-landing-zone.md#data-catalog)
-- [Data quality](architectures/data-management-landing-zone.md#data-quality-management)
-- [Data modeling repository](architectures/data-management-landing-zone.md#data-modeling-repository)
-- [Master data management](architectures/data-management-landing-zone.md#master-data-management)
-- [API catalog](architectures/data-management-landing-zone.md#api-catalog)
-- [Data sharing and contracts](../cloud-scale-analytics/govern-data-quality.md)
-- [Data privacy for cloud-scale analytics in Azure](secure-data-privacy.md)
-- [Provision security for cloud-scale analytics in Azure](security-provisioning.md)
-
-For more information, see [Overview of the cloud-scale analytics data management landing zone](architectures/data-management-landing-zone.md).
+For more information, see [Data management landing zone](architectures/data-management-landing-zone.md).
 
 ## Data landing zone
 
-**Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domain(s). These subscriptions within cloud-scale analytics represent primary business groups, integrators, and enablers. These groups own, operate, and often provide innate understanding for the source systems.
-
-:::image type="content" source="./images/data-landing-zone-overview.png" alt-text="Diagram of a data landing zone" lightbox="./images/data-landing-zone-overview.png":::
+**Data landing zones** are subscriptions that host multiple analytics and AI solutions relevant to their respective domain or domains. These subscriptions within cloud-scale analytics represent primary business groups, integrators, and enablers. These groups own, operate, and often provide an innate understanding of the source systems.
 
 A few important points to keep in mind about data landing zones:
 
-- Automated Ingestion capabilities can exist in each data landing zone. These capabilities allow subject matter experts to pull in external data sources into the data landing zone.
+- Automated ingestion capabilities can exist in each data landing zone. These capabilities allow subject matter experts to pull in external data sources into the data landing zone.
 - A data landing zone is instantiated based on its core architecture. It includes key capabilities to host an analytics platform.
 - A data landing zone can contain multiple [data products](#data-products).
 
@@ -83,7 +67,7 @@ Data products manage, organize, and make sense of the data within and across dom
 For more information, see [cloud-scale analytics data products in Azure](architectures/data-landing-zone-data-products.md).
 
 > [!IMPORTANT]
-> When ingesting data from operational systems into a read data source. Apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it. This drives reusability of the data product and allow other domains to consume, subject to access, for there use cases as opposed to having multiple extractions from the same operational system.
+> When ingesting data from operational systems into a read data source, apart from data quality checks and other applied data, the data should avoid having other data transformations applied to it. This drives reusability of the data product and allows other domains to consume, subject to access, for their use cases as opposed to having multiple extractions from the same operational system.
 
 ## Operational excellence
 
@@ -93,7 +77,7 @@ For more information, see [Organize Operations](organize.md).
 
 ## Other design considerations
 
-To get started with the data management and data management landing zones you need to make sure that you have the underpinning architectural components to enable a successful deployment:
+To get started with the data management and data management landing zones, you need to make sure that you have the underpinning architectural components to enable a successful deployment.
 
 - [Enterprise enrollment and Microsoft Entra tenants for cloud-scale analytics](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
 
