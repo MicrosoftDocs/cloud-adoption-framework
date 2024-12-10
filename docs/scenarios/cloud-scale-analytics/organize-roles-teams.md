@@ -3,7 +3,7 @@ title: Understand the roles and teams for cloud-scale analytics in Azure
 description: Learn about the roles and teams for Cloud-scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 08/06/2021
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -14,14 +14,14 @@ For Cloud-scale analytics, we recommend moving teams like ingest, processing, an
 
 ![Overview of Cloud-scale analytics teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
-Within scale analytics we identify the following teams:
+Within scale analytics, we identify the following teams:
 
 - Platform ops
 - Data platform ops
 - Data landing zone ops
 - Data Application teams
 
-Each of these teams aligns to a particular part of Cloud-scale analytics and whilst the details below give you an overview of the team functions, it's advisable to combine this with guidance in [Roles and Responsibilities](organize-roles-responsibilities.md) and [Understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md).
+Each team focuses on a specific aspect of Cloud-scale analytics. For a comprehensive understanding of team functions, refer to the [Roles and Responsibilities](organize-roles-responsibilities.md) and [Understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md) guides.
 
 ## Data landing zone teams
 
@@ -42,11 +42,11 @@ The data landing zone group consists of three teams:
 
 ### Decide between a central or business data office
 
-Depending on your organization's size and structure, a data landing zone group can be assembled in different ways. For example, if you create one data landing zone where the business already has its own set of data engineers, program managers, and solution architects, like a business data office. You can provision a data landing zone and allow the business data office to operate the landing zone based on governance from your central platform group.
+Depending on your organization's size and structure, a data landing zone group can be assembled in various ways. For instance, if you establish a data landing zone where the business already has its own data engineers, program managers, and solution architects, such as a business data office, you can provision the data landing zone. Then, you can allow the business data office to operate the data landing zone under the governance of your central platform group.
 
-Another option is for when a data landing zone's business doesn't have a business data office to build out their data applications (which create data products). In this scenario, the central data office can consider itself a consultancy that shifts people from the bench to work on the data landing zone. Those resources should be embedded into the business to collect and execute on use cases with Scrum or agile methods. Once completed, they would return to the central data office.
+Another option is when a business doesn't have a data office to build out their data applications. In this scenario, the central data office can act as a consultancy, assigning staff to work on the data landing zone. These resources should be embedded within the business to collect and execute use cases using Scrum or agile methods. After the work is completed, they would return to the central data office.
 
-Individuals should work within multidisciplinary teams in both of these scenarios, sharing goals and diverse experience, skills, and approaches that support more effective outcomes than if everyone is in a silo.
+Individuals should work within multidisciplinary teams in both scenarios, sharing goals and diverse experiences, skills, and approaches. This collaboration supports more effective outcomes than working in silos.
 
 > [!NOTE]
 > In the scenario where only one data landing zone is deployed, it's common for businesses to overlap in one data landing zone. This could create crossover functions where data application teams are sourced from central and business data offices. However, data landing zone operations functions to be located in the central data office for this scenario.
@@ -91,7 +91,7 @@ There are many data governance roles and responsibilities related to people. The
 
 :::image type="content" source="./images/data-governance-review-board.png" alt-text="Diagram of the structure of how to organize data governance.":::
 
-The goal is for businesses to organize governance in a way that allows them to divide and conquer when governing data throughout its lifecycle across a hybrid computing environment. One way is to have multiple working groups reporting to a data governance control board, with each working group responsible for a particular data domain or entity, for example, the customer, or a data subject area that consists of multiple data entities.
+The goal is for businesses to organize governance in a way that enables them to effectively manage data throughout its lifecycle across a hybrid computing environment. One approach is to have multiple working groups reporting to a data governance control board, with each group responsible for a specific data domain or entity, such as customer data, or a data subject area that includes multiple data entities.
 
 ## Other groups
 

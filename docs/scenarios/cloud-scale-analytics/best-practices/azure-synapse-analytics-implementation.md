@@ -3,7 +3,7 @@ title: Use Azure Synapse Analytics with cloud-scale analytics
 description: Learn how to use Azure Synapse Analytics with cloud-scale analytics.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/24/2022
+ms.date: 12/03/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -29,7 +29,7 @@ You might need extra Azure Synapse Analytics workspaces if your data product nee
 
 ## Azure Synapse Analytics setup
 
-The first step in the deployment Azure Synapse Analytics is to set up an Azure Synapse workspace which is [connected to an Azure Purview account](/azure/synapse-analytics/catalog-and-governance/quickstart-connect-azure-purview).
+The first step in the deployment Azure Synapse Analytics is to set up an Azure Synapse workspace which is [connected to an Microsoft Purview account](/azure/synapse-analytics/catalog-and-governance/quickstart-connect-azure-purview).
 
 ### Azure Synapse Analytics networking
 
@@ -61,6 +61,3 @@ When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake
 
 Refer to [Azure Synapse Analytics data access control](data-lake-access.md#azure-synapse-analytics-data-access-control) for recommendations on how to set up data access.
 
-## Next steps
-
-- [Azure Purview readiness checklist for cloud-scale analytics](purview-checklist.md)
