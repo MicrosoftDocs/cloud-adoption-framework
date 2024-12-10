@@ -25,10 +25,6 @@ There are two options to find an ALZ partner (*see image*).
 
 The easiest option to find an ALZ partner is through Azure Migrate and Modernize.
 
-### How to find an Azure Migrate and Modernize partner
-
-Take 5 minutes to [fill out the Azure Migrate and Modernize form](https://azure.microsoft.com/migration/migration-modernization-program/#program-form). Someone from the team will help you find the right partner.
-
 ### What to expect from an Azure Migrate and Modernize partner
 
 All the partners in the program adhere to ALZ best-practices. We vet partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
@@ -55,9 +51,9 @@ All the partners in the program adhere to ALZ best-practices. We vet partners to
 
 ## Option 2 - Partner offers
 
-We have a self-discovery process you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) is a marketplace of offers from certified Azure partners.
+We have a self-discovery process you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about working with certified Azure partners.
 
-Each offer comes from Azure Advanced specialization partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters the marketplace.
+Offers come from Azure Advanced specialization partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters Azure Marketplace.
 
 Advanced specialization partners demonstrate deep technical knowledge, proven success, and ethical business practices. Azure Expert MSPs also meet these criteria but must additionally pass a time- and cost-intensive auditing process.
 
