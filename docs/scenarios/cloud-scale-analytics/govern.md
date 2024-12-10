@@ -3,7 +3,7 @@ title: Data governance overview
 description: Understand the concepts of data governance in the cloud and the data governance maturity model.
 author: mboswell
 ms.author: mboswell
-ms.date: 09/26/2024
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -34,7 +34,7 @@ Master data entities are important because their data is widely shared. Master d
 
 You can create pipelines that create trusted data assets by using the common vocabulary data entities from your data catalog. You can then publish these assets in a data marketplace to share.
 
-The key takeaway is that you can use available data governance methods to get your data under control. Once your data is trusted, you can use the data to drive value. How well you organize and coordinate your data governance determines your level of success.
+The key takeaway is that you can use available data governance methods to get your data under control. After your data is trusted, you can use the data to drive value. How well you organize and coordinate your data governance determines your level of success.
 
 ## Data governance maturity model
 
@@ -94,7 +94,7 @@ The data governance maturity model describes the maturity of your ability to cov
 
 ## Data governance maturity summary
 
-Once you determine where you currently stand in the governance maturity model, meet with your key stakeholders to map out a strategy to increase your maturity. Start by defining your requirements, technology, data quality, metadata, data sharing, and master data strategy.
+After you determine where you currently stand in the governance maturity model, meet with your key stakeholders to map out a strategy to increase your maturity. Start by defining your requirements, technology, data quality, metadata, data sharing, and master data strategy.
 
 ## Next steps
 
