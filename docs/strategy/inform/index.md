@@ -13,7 +13,6 @@ When you have defined your motivations, mission, and goals, you're ready to star
 
 :::image type="content" source="../media/caf-strategy-inform-strategy.svg" alt-text="Diagram showing the phase for informing your cloud adoption strategy.":::
 
-
 ## Next steps
 
 > [!div class="nextstepaction"]
