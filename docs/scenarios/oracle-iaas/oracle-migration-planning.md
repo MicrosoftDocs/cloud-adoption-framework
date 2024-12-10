@@ -96,7 +96,7 @@ The following section describes the migration process in more detail. The steps 
 
 - **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Available regions](/azure/oracle/oracle-db/database-overview#available-regions).
 
-- **Consider using Oracle Zero Downtime Migration** for the migration process. Evaluate the migration strategies to determine the most suitable approach for your specific migration requirements. For more information, see [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/).
+- **Consider using Oracle Zero Downtime Migration** for the migration process. Evaluate the migration strategies to determine the most suitable approach for your specific migration requirements. For more information, see [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/) (ZDM).
 ZDM offers the ability to either choose logical or physical migrations scenarios. The following whitepaper will provide you with further instructions: [ZDM migration](https://www.oracle.com/a/otn/docs/database/zdm-physical-migration-to-oracle-at-azure.pdf).
 
 >! Note: If you choose Autonomous Database Service (ADB-S), please keep in mind, that only logical migration scenarios are supported. 
