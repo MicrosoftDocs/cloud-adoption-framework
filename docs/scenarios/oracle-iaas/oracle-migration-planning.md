@@ -28,7 +28,7 @@ Migrating Oracle workloads involves transitioning both databases and application
 
 ## The Oracle migration process
 
-You should continually reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of service for your workload. For example, for all scenarios mentioned above, please ensure that sufficient bandwidth is available for your migration. We highly encourage you to review the needed bandwidth while conducting a Proof-of-Concept.
+You should continually reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of service for your workload. For example, for all scenarios mentioned above, please ensure that sufficient bandwidth is available for your migration. We highly encourage you to review the bandwidth needed while conducting a Proof-of-Concept.
 
 If you move your workload to Oracle on Azure Virtual Machines, ensure that the virtual machine (VM) sizes meet your requirements. For more information, see [Capacity planning for migrating Oracle workloads to Azure landing zones](./oracle-capacity-planning.md).
 
