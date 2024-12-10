@@ -51,7 +51,7 @@ This equally applies to your application. If you cannot accept a disruption in y
 
 - **Determine your tooling for migrating your workload to Oracle on Azure virtual machines**:
 
-There are two paths to migrate: 
+There are two primary migration paths:
 
 | Offline Migration | Online Migration |
 |---|---|
