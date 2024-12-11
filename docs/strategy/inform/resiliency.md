@@ -35,7 +35,7 @@ Documenting and understanding shared responsibility is crucial in your cloud ado
 
 Ensuring system reliability on Azure is a shared responsibility between the customer and the cloud provider. Microsoft manages the *reliability of the cloud platform*, while customers and partners are *responsible for the reliability of their cloud applications and infrastructure deployments*.
 
-:::image type="content" source="../media/placeholder-5.svg" alt-text="Diagram showing responsibility metrics.":::
+:::image type="content" source="../media/shared-responsibility-resiliency.svg" alt-text="Diagram showing the shared responsibility matrix for resiliency.":::
 
 ## Empower your cloud adoption strategy
 
