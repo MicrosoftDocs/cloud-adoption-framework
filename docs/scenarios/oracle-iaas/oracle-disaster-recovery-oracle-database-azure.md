@@ -10,9 +10,8 @@ ms.custom: e2e-oracle
 
 # Business continuity and disaster recovery considerations for Oracle Database@Azure
 
-This article expands on considerations and recommendations that are defined in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). It incorporates [Oracle Maximum Availability Architecture](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) (MAA)  principles for Exadata Database Services on Oracle Database@Azure.
-
-The first step to building a resilient architecture for your Oracle databases running on Oracle Database@Azure is to identify the availability requirements for the solution. It's essential to establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including both planned and unplanned events. The RTO defines the maximum downtime that an application can tolerate after a disaster. The RPO specifies the maximum data loss that an application can tolerate. This exercise is a critical prerequisite to be addressed before starting BCDR design. Once the requirements of your solution are established, you can proceed to design your Oracle Database@Azure environment to align with your specified RTO and RPO. 
+This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations outlined in the [Azure landing zone design area](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md), incorporating [Oracle Maximum Availability Architecture](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) (MAA) principles for Exadata Database Services on Oracle Database@Azure.
+The first step to building a resilient architecture for your Oracle databases running on Oracle Database@Azure is to identify the availability requirements for the solution. It's essential to establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including both planned and unplanned events. The RTO defines the maximum downtime that an application/business can tolerate after a disruption. The RPO specifies the maximum duration of data loss that an application/business can tolerate. This exercise is a critical prerequisite to be addressed before starting BCDR design. Once the requirements of your solution are established, you can proceed to design your Oracle Database@Azure environment to align with your specified RTO and RPO. 
 
 ## Design considerations
 
@@ -37,9 +36,9 @@ The first step to building a resilient architecture for your Oracle databases ru
 
 - The service has 99.95% Availability and Manageability Service Level Agreement(SLA). For detailed information, refer to [Oracle PaaS and IaaS Public Cloud Services Pillar Document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf). 
 
-- Oracle Database@Azure offers three main backup options: 
+- Here are the three backup options available for Oracle Database@Azure: 
 
-  - **Automatic Backup**: This option includes two integrated solutions, OCI Object Storage and Autonomous Recovery Service, which are managed via the OCI portal. 
+  - **OCI Managed Backup**: This option includes two integrated solutions, OCI Object Storage and Autonomous Recovery Service, which are managed via the OCI portal. 
 
     Autonomous Recovery Service is designed for enterprise-level mission-critical workloads requiring stringent RTO/ RPO and offers 99.9% Availability [SLA](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf). 
     
@@ -47,7 +46,7 @@ The first step to building a resilient architecture for your Oracle databases ru
     
     These solutions enable automatic scheduling and management of database backups with a predefined retention period. For details, refer to [manage database backup and recovery documentation](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-managing-db-backup-and-recovery.html).  
 
-  - **Manual Backup**: Oracle Database@Azure can be configured to stream database backups to Azure Storage services, including Blob, Azure Files (via private endpoints), and Azure NetApp Files (ANF). 
+  - **Self-managed Backup**: Oracle Database@Azure can be configured to stream database backups to Azure Storage services, including Blob, Azure Files (via private endpoints), and Azure NetApp Files (ANF). 
 
     This option requires manual configuration and ongoing maintenance. 
   
@@ -135,10 +134,10 @@ This setup provides **protection** against full **regional outages**.
 
 ### Backup Recommendations
 
-- If backups are the only solution for BCDR requirements, take into consideration that RTO will be higher compared to replication scenarios, as it depends on database size and backup methods used. 
+- In case you're considering backups as the only solution for BCDR requirements, keep in mind that RTO will be higher compared to replication scenarios, as it depends on database size and backup methods used. 
 
 - To comply with regulations requiring data and backups to stay in Azure, these solutions are the options: 
-  - Use Autonomous Recovery Service in Azure. During backup configuration, select “[Store backup in the same cloud provider as the database](https://docs.oracle.com/en/cloud/paas/recovery-service/dbrsu/azure-multicloud-recoveryservice.html)”. 
+  - Use Autonomous Recovery Service in Azure. During backup policy configuration, select “[Store backup in the same cloud provider as the database](https://docs.oracle.com/en/cloud/paas/recovery-service/dbrsu/azure-multicloud-recoveryservice.html)”. 
 
     ![A picture of ARS policy configuration for cloud provider selection for Oracle Database@Azure Azure landing zone accelerator.](./media/ARS_cloud_provider_selection.png)
 
