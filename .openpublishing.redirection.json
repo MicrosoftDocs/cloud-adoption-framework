@@ -2409,6 +2409,11 @@
          "source_path": "docs/strategy/share-your-strategy.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/team/cloud-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/define-your-team",
+         "redirect_document_id": false
       }
    ]
 }

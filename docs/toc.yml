@@ -84,8 +84,6 @@ items:
       items:
       - name: Align your organization
         href: get-started/org-alignment.md
-      - name: Build a cloud strategy team
-        href: get-started/team/cloud-strategy.md
       - name: Build a cloud adoption team
         href: get-started/team/cloud-adoption.md
       - name: Build a cloud governance team
