@@ -55,7 +55,7 @@ All the partners in the program adhere to ALZ best-practices. We vet partners to
 
 ## Option 2 - Partner offers
 
-We have a self-discovery process you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about working with certified Azure partners.
+We have a self-discovery process you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about working with certified Azure partners and links to the offers.
 
 Offers come from Azure advanced specialization partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters Azure Marketplace.
 
@@ -67,17 +67,17 @@ This flexibility creates value for you and allows you to find an offer that meet
 
 ### How to find partner offers
 
-The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about both Azure advanced specialization partners and MSPs. 
+The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about both Azure advanced specialization partners and Azure Expert MSPs. 
 
-In the **Azure advanced speciailization partners** section, there's a list of links for specific types of migrations. Available offers are listed on the resulting pages.
+In the **Azure advanced specialization partners** section, there's a list of links for specific types of migrations. Available offers are listed on the resulting pages.
 
-In the **MSP** section, select **Find an Azure Expert Managed Service Provider** to go to a similar list of available offers.  
+In the **Azure Expert MSPs** section, select **Find an Azure Expert Managed Service Provider** to go to a similar list of available offers.  
 
 Each tile or square on these offer pages represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. The link at the bottom of each tile takes you to the partner offers.
 
 - You can filter the results by expanding the categories in the **Filters** section on the left side of the page. You can use the search box to filter that list. You can also filter by location. 
 
-- Look for landing zone offers. Not every tile on the page will be a landing zone offer. Select **Contact me** to fill out a contact form. Select anywhere else in the tile to see the details about the partner's offerings. The partner's technology specializations are listed in the tile. If there are more than one, there's a blue number next the the technology. Hover over the blue number to see the full list. 
+- Look for landing zone offers. Not every tile on the page will be a landing zone offer. Select **Contact me** to fill out a contact form. Select anywhere else in the tile to see the details about the partner's offerings. The partner's technology specializations are listed in the tile. If there are more than one, there's a blue number next to the technology. Hover over the blue number to see the full list. 
 
 1. *Meet potential partners* – Use the **Contact me** button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
