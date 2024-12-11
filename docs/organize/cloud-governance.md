@@ -100,6 +100,6 @@ Every company is unique, and so are their governance needs. Choose the level of 
 
 As cloud governance matures, teams are empowered to adopt the cloud at faster paces. Continued cloud adoption efforts tend to trigger maturity in IT operations. Either develop a cloud operations team, or sync with your cloud operations team to ensure governance is a part of operations development.
 
-Learn more about starting a [cloud governance team](../get-started/team/cloud-governance.md) or a [cloud operations team](../get-started/team/cloud-operations.md).
+Learn more about starting a [cloud governance team](../get-started/team/cloud-governance.md).
 
 After you've established an [initial cloud governance foundation](../govern/initial-foundation.md), use these best practices in [Governance foundation improvements](../govern/foundation-improvements.md) to get ahead of your adoption plan and prevent risks.

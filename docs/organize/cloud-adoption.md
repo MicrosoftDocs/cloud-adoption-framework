@@ -75,5 +75,4 @@ Learn more about the function of a [cloud center of excellence](./cloud-center-o
 
 ## Next steps
 
-- [Build a cloud adoption team](../get-started/team/cloud-adoption.md)
 - Align cloud adoption efforts with [cloud governance functions](./cloud-governance.md) to accelerate adoption and implement best practices, while reducing business and technical risks.
