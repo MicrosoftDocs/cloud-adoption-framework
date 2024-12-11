@@ -78,15 +78,6 @@ items:
       - name: Ensure consistent performance
         href: get-started/performance.md
 
-    - name: Establish teams
-      items:
-      - name: Align your organization
-        href: get-started/org-alignment.md
-      - name: Build a cloud strategy team
-        href: get-started/team/cloud-strategy.md
-      - name: Build a cloud operations team
-        href: get-started/team/cloud-operations.md
-
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
 

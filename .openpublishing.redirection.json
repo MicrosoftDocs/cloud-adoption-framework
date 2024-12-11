@@ -2279,6 +2279,16 @@
          "source_path": "docs/get-started/team/cloud-adoption.md",
          "redirect_url": "/azure/cloud-adoption-framework/organize/cloud-adoption",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/team/cloud-operations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/organize/cloud-operations",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/org-alignment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/organize",
+         "redirect_document_id": false
       }
    ]
 }
