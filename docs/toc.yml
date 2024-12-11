@@ -124,10 +124,6 @@ items:
           href: strategy/inform/security.md
         - name: Sustainability
           href: strategy/inform/sustainability.md
-        - name: Regulated industries
-          href: strategy/inform/industries.md
-        - name: Multicloud
-          href: strategy/inform/multicloud.md
 
   - name: Plan
     items:

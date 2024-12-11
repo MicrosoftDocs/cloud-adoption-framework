@@ -37,7 +37,10 @@ Use the cloud adoption strategy checklist to see all the tasks for each cloud st
 |---------------------|-------------------|----------------------|
 | Assess your cloud adoption strategy | <li> [Assess your strategy](./assessment.md) |  <li> [Assess your strategy](./assessment.md) |
 | Define your motivations | <li> [Define your motivations](./motivations.md#define-your-motivations) | <li> [Define your motivations](./motivations.md#define-your-motivations) <br><li> [Classify your motivations](./motivations.md#classify-motivations) |
-
+| Define mission and objectives | <li> [Define your mission and objectives](./mission-objectives.md#define-your-mission-and-objectives) <br><li> [Measuring success](./mission-objectives.md#measuring-success) | <li> [Define your mission and objectives](./mission-objectives.md#define-your-mission-and-objectives) <br><li> [Measuring success](./mission-objectives.md#measuring-success) |
+| Define strategy team | <li> [Define your team](./define-your-team.md) | <li> [Define your team](./define-your-team.md) |
+| Prepare your organization | <li> [Leadership and executive buy-in](./prepare.md#leadership-and-executive-buy-in)  | <li> [Leadership and executive buy-in](./prepare.md#leadership-and-executive-buy-in) <br><li> [Align organizational strategies](./prepare.md#align-organizational-strategies) <br><li> [Understand your operating model's readiness](./prepare.md#understand-your-operating-models-readiness-for-cloud) <br><li> [Shift from a project model to product model](./prepare.md#shift-from-a-project-model-to-product-model) <br><li> [Identify and define partner relationships](./prepare.md#identify-and-define-partner-relationships) |
+| Inform your strategy | <li> [AI](./inform/ai.md) <br><li> [Security](./inform/security.md) | <li> [Financial efficiency](./inform/financial-efficiency.md) <br><li> [AI](./inform/ai.md) <br><li> [Resiliency](./inform/resiliency.md) <br><li> [Security](./inform/security.md) <br><li> [Sustainability](./inform/sustainability.md) |
 
 ## Next steps
 
