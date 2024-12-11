@@ -25,6 +25,8 @@ There are two options to find an ALZ partner (*see image*).
 
 The easiest option to find an ALZ partner is through Azure Migrate and Modernize.
 
+Take 5 minutes to [fill out the Azure Migrate and Modernize form](https://azure.microsoft.com/migration/migration-modernization-program/#program-form). Someone from the team will help you find the right partner.
+
 ### What to expect from an Azure Migrate and Modernize partner
 
 All the partners in the program adhere to ALZ best-practices. We vet partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
@@ -65,13 +67,17 @@ This flexibility creates value for you and allows you to find an offer that meet
 
 The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about both Azure advanced specialization partners and MSPs. 
 
-In the **Azure advanced speciailization partners** section, there's a list of links for specific types of migrations. Available offers are listed on the resulting pages. Each tile or square on the page represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. The link at the bottom of each tile takes you to the partner offers.
+In the **Azure advanced speciailization partners** section, there's a list of links for specific types of migrations. Available offers are listed on the resulting pages.
+
+In the **MSP** section, select **Find an Azure Expert Managed Service Provider** to go to a similar list of available offers.  
+
+Each tile or square on these offer pages represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. The link at the bottom of each tile takes you to the partner offers.
 
 - You can filter the results by expanding the categories in the **Filters** section on the left side of the page. You can use the search box to filter that list. You can also filter by location. 
 
-- Look for landing zone offers. Not every tile on the page will be a landing zone offer, and some partners have more than one offer aligned to the Ready methodology. Select the offer links at the bottom of the tile to see the offer. Selecting the partner’s name or logo takes you to an overview of the partner.
+- Look for landing zone offers. Not every tile on the page will be a landing zone offer. Select **Contact me** to fill out a contact form. Select anywhere else in the tile to see the details about the partner's offerings. The partner's technology specializations are listed in the tile. If there are more than one, there's a blue number next the the technology. Hover over the blue number to see the full list. 
 
-1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
+1. *Meet potential partners* – Use the **Contact me** button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
 1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of Azure Migrate and Modernize. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
 
@@ -84,7 +90,7 @@ Partner offers are vetted and approved for the marketplace. They follow CAF prin
 ## Links to find a landing zone partner
 
 - Option 1 - [Azure Migrate and Modernize](https://azure.microsoft.com/migration/migration-modernization-program/#program-form)
-- Option 2 - [Partner offers](https://www.microsoft.com/azure/partners/practices/enable-customers-for-success/directory)
+- Option 2 - [Find an Azure partner](https://azure.microsoft.com/partners/)
 
 ## Next steps
 
