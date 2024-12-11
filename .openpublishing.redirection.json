@@ -2259,6 +2259,16 @@
          "source_path": "docs/get-started/team/cloud-governance.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/resources/migration-with-enterprise-scaffold.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/resources/azure-scaffold.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready",
+         "redirect_document_id": false
       }
    ]
 }
