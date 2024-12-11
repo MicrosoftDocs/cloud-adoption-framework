@@ -53,7 +53,7 @@ All the partners in the program adhere to ALZ best-practices. We vet partners to
 
 We have a self-discovery process you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about working with certified Azure partners.
 
-Offers come from Azure Advanced specialization partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters Azure Marketplace.
+Offers come from Azure advanced specialization partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters Azure Marketplace.
 
 Advanced specialization partners demonstrate deep technical knowledge, proven success, and ethical business practices. Azure Expert MSPs also meet these criteria but must additionally pass a time- and cost-intensive auditing process.
 
@@ -63,13 +63,13 @@ This flexibility creates value for you and allows you to find an offer that meet
 
 ### How to find partner offers
 
-To find a landing zone offer from a partner, follow these steps:
+The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about both Azure advanced specialization partners and MSPs. 
 
-1. *Find landing zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. The link at the bottom of each tile takes you to the partner offers.
+In the **Azure advanced speciailization partners** section, there's a list of links for specific types of migrations. Available offers are listed on the resulting pages. Each tile or square on the page represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. The link at the bottom of each tile takes you to the partner offers.
 
-    - *Filter results* - In the "Cloud Adoption Framework Methodology" dropdown, select the "Ready" box. In the "Regions" dropdown, select your region. With these filters, you'll only see offers aligned to the Ready methodology in your region.
+- You can filter the results by expanding the categories in the **Filters** section on the left side of the page. You can use the search box to filter that list. You can also filter by location. 
 
-    - *Look for landing zone offers* – Scan the links at the bottom of the tiles. Find and select landing zone offers. Not every tile on the page will be a landing zone offer, and some partners have more than one offer aligned to the Ready methodology. Select the offer links at the bottom of the tile to see the offer. Selecting the partner’s name or logo takes you to an overview of the partner.
+- Look for landing zone offers. Not every tile on the page will be a landing zone offer, and some partners have more than one offer aligned to the Ready methodology. Select the offer links at the bottom of the tile to see the offer. Selecting the partner’s name or logo takes you to an overview of the partner.
 
 1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
