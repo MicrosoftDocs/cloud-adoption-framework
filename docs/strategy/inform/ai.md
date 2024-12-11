@@ -4,7 +4,8 @@ description: Learn about considerations for integrating Artificial Intelligence 
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # AI considerations in your cloud strategy

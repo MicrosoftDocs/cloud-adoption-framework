@@ -4,7 +4,7 @@ description: Learn how to inform your cloud strategy to align your cloud adoptio
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ---
 
 # Inform your strategy

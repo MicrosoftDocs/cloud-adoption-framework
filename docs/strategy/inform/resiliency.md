@@ -4,7 +4,7 @@ description: Learn about the importance of resiliency and to plan for the unexpe
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ---
 
 # Resiliency considerations in your cloud strategy

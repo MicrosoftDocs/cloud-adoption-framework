@@ -4,7 +4,7 @@ description: Learn how to optimize costs associated with cloud services and ensu
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ---
 
 # Financial efficiency considerations in your cloud strategy

@@ -4,7 +4,7 @@ description: Learn how to define your mission and objectives, and how to measure
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ---
 
 # Mission and objectives
