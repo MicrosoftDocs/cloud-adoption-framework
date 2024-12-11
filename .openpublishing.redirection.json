@@ -2269,6 +2269,11 @@
          "source_path": "docs/resources/azure-scaffold.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure",
+         "redirect_document_id": false
       }
    ]
 }

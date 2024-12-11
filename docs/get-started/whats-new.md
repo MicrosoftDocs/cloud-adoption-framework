@@ -248,7 +248,6 @@ We made updates to reflect the deprecation of Azure Blueprint.
 - [Govern antipatterns](../antipatterns/govern-antipatterns.md)
 - [Resource consistency decision guide](../decision-guides/resource-consistency/index.md)
 - [Get started: Document foundational alignment decisions](../get-started/cloud-concepts.md)
-- [Get started: Secure the enterprise environment](../get-started/security.md)
 - [Innovate methodology and maturity modeling](../innovate/best-practices/ci-cd.md)
 - [Operational compliance in Azure](../manage/azure-management-guide/operational-compliance.md)
 - [Understand the functions of a central IT team](../organize/central-it.md)
