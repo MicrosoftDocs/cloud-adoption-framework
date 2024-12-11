@@ -33,12 +33,6 @@ Consider the importance of mapping AI to your business objectives. While there a
 - *Define an AI technology strategy*: Select the right tools and platforms for your AI use cases. Learn how to decide whether to buy or build your own AI solutions. For more information, see [Recommendations for organizations developing an AI adoption strategy](../../scenarios/ai/strategy.md).
 - *Inform your organization and decision makers about adopting AI*: Dive into the [Cloud Adoption Framework guidance for adopting AI on Azure](../../scenarios/ai/index.md) – it will guide you through all the methodologies of the framework to teach you how to be successful with AI on Azure, and help you inform your cloud adoption strategy with the right considerations for AI.
 
-## Assess your organizational AI readiness
-
-Assess your organizational AI readiness to explore your team’s or organization's maturity level to develop, run, and maintain Azure AI solutions in production. Use the learnings from this self-service assessment to inform your strategy about gaps and recommended actions for your business.
-
-> Tobias note: Add more information about the assessment and what results it yields.
-
 **Recommendations:**
 
 - *Assess your AI readiness*: Use the [Technical Assessment for Generative AI in Azure](/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/) to determine your current level of readiness for adopting generative AI and identify areas of improvement.

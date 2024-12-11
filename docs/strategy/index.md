@@ -21,13 +21,13 @@ Whether you're an existing cloud customer looking to mature in new areas or if y
 
 ## Why do you need a cloud adoption strategy?
 
-A cloud strategy is important for business success because:
+A cloud strategy is important for business success:
 
-- Cloud is a means to an end: It's a tool that should serve as a way to achieve business success. Therefore, cloud adoption should be aligned with business objectives, measured for effectiveness, and subject to continuous improvement.  
-
-- A solid, ongoing strategy is important: Without a well-defined and continuously evolving cloud strategy, organizations may face unexpected costs, siloed work environments, and failure to realize the expected value of cloud investments.
-
-- It aligns the organization: By creating and publishing a strategy with input from stakeholders, you can align the interests of business units across the organization and ensure that every team is supportive and benefits from cloud adoption.
+- _Realize value_: A well-defined cloud strategy helps organizations realize the full value of their cloud investments, ensuring financial efficiency, cost optimization, and business agility.
+- _Ensures business-driven decisions_: Align cloud adoption with business goals to maximize value and support measurable outcomes.
+- _Drives cross-functional teams alignment_: Fosters collaboration among business, IT, and finance to achieve unified goals.
+- _Mitigates modernization risks_: Provides a roadmap to safely re-architect legacy systems and integrate cloud technologies.
+- _Enabled continuous strategy improvement_: With a well-defined and continuously evolving cloud strategy, organizations might better address challenges like unexpected costs, siloed work environments, and failure to realize the expected value of cloud investments.
 
 ## Cloud strategy checklist
 
