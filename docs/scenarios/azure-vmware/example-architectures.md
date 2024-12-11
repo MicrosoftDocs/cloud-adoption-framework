@@ -13,9 +13,9 @@ ms.custom: think-tank, e2e-azure-vmware
 When you establish an Azure VMware Solution landing zone, you must first design and implement networking capabilities. Azure networking products and services support several networking scenarios. This article describes the four most common networking scenarios.
 
 - **Scenario 1:** Secured Virtual WAN hub that has routing intent
-- **Scenario 2:** Use an NVA in Azure Virtual Network to inspect all network traffic
-- **Scenario 3:** Egress from Azure VMware Solution with or without NSX-T or NVA
-- **Scenario 4:** Non-Microsoft firewall solutions in a hub virtual network that has Route Server
+- **Scenario 2:** An NVA in Azure Virtual Network inspects all network traffic
+- **Scenario 3:** Outbound traffic from Azure VMware Solution with or without NSX-T or NVAs
+- **Scenario 4:** Non-Microsoft firewall solutions in a hub virtual network that has Azure Route Server
 
 To choose an appropriate architecture and plan to structure your services, evaluate your organization's workloads, governance, and requirements.
 
@@ -30,7 +30,7 @@ Review the following considerations and key requirements before you choose your 
 - Network virtual appliance (NVA) usage in the current architecture
 - Azure VMware Solution connectivity to either a standard hub virtual network or Azure Virtual WAN hub
 - Azure ExpressRoute connectivity from on-premises datacenters to Azure VMware Solution
-- Whether you should use ExpressRoute Global Reach
+- Use of ExpressRoute Global Reach
 - Traffic inspection requirements for:
   - Internet access to Azure VMware Solution applications
   - Azure VMware Solution access to the internet
@@ -42,23 +42,23 @@ The following table describes recommendations and considerations based on Azure 
 
 | Scenario | Traffic inspection requirements | Recommended solution design | Considerations |
 |----------|---------------------------------|-----------------------------|----------------|
-| 1        | - From the internet <br>- To the internet | Use a Virtual WAN secured hub with default gateway propagation.<br><br> For HTTP or HTTPS traffic, use Azure Application Gateway. For non-HTTP or HTTPS traffic, use Azure Firewall.<br><br> Deploy a secured Virtual WAN hub that has routing intent. | Global Reach isn't effective for on-premises filtering because it bypasses the Virtual WAN hubs. |
-| 2        | - From the internet<br>- To the internet<br>- To the on-premises datacenter<br>- To Azure Virtual Network | Use non-Microsoft firewall NVA solutions in your hub virtual network with Azure Route Server.<br><br> Don't use Global Reach.<br><br> For HTTP or HTTPS traffic, use Application Gateway. For non-HTTP or HTTPS traffic, use a non-Microsoft firewall NVA on Azure. | Choose this option if you want to use your existing NVA and centralize all traffic inspection in your hub virtual network. |
+| 1        | - From the internet <br>- To the internet | Use a Virtual WAN secured hub with default gateway propagation.<br><br> Use Azure Application Gateway for HTTP or HTTPS traffic. Use Azure Firewall for non-HTTP or HTTPS traffic. <br><br> Deploy a secured Virtual WAN hub that has routing intent. | Global Reach isn't effective for on-premises filtering because it bypasses the Virtual WAN hubs. |
+| 2        | - From the internet<br>- To the internet<br>- To the on-premises datacenter<br>- To Azure Virtual Network | Use non-Microsoft firewall NVA solutions in your hub virtual network that has Route Server.<br><br> Don't use Global Reach.<br><br> Use Application Gateway for HTTP or HTTPS traffic. Use a non-Microsoft firewall NVA on Azure for non-HTTP or HTTPS traffic. | Choose this option if you want to use your existing NVA and centralize all traffic inspection in your hub virtual network. |
 | 3        | - From the internet <br>- To the internet <br>- To the on-premises datacenter <br>- To Azure Virtual Network <br>- Within Azure VMware Solution| Use NSX-T Data Center or a non-Microsoft NVA firewall in Azure VMware Solution. <br><br> Use Application Gateway for HTTPS traffic. Use Azure Firewall for non-HTTPS traffic. <br><br> Deploy the secured Virtual WAN hub, and enable a public IP address in Azure VMware Solution. | Choose this option if you need to inspect traffic from two or more Azure VMware Solution private clouds. <br><br> Use this option to take advantage of NSX-T-native features. You can also combine this option with NVAs that run on Azure VMware Solution. |
-| 4       | - From the internet <br>- To the internet <br>- To the on-premises datacenter <br>- To Azure Virtual Network | Use non-Microsoft firewall solutions in a hub virtual network that has Route Server. <br><br> For HTTP or HTTPS traffic, use Application Gateway. For non-HTTP or HTTPS traffic, use a non-Microsoft firewall NVA on Azure. <br><br> Use an on-premises non-Microsoft firewall NVA. <br><br> Deploy non-Microsoft firewall solutions in a hub virtual network that has Route Server. | Choose this option to advertise the `0.0.0.0/0` route from an NVA in your Azure hub virtual network to Azure VMware Solution.|
+| 4       | - From the internet <br>- To the internet <br>- To the on-premises datacenter <br>- To Azure Virtual Network | Use non-Microsoft firewall solutions in a hub virtual network that has Route Server. <br><br> Use Application Gateway for HTTP or HTTPS traffic. Use a non-Microsoft firewall NVA on Azure for non-HTTP or HTTPS traffic. <br><br> Use an on-premises non-Microsoft firewall NVA. <br><br> Deploy non-Microsoft firewall solutions in a hub virtual network that has Route Server. | Choose this option to advertise the `0.0.0.0/0` route from an NVA in your Azure hub virtual network to Azure VMware Solution.|
 
 Consider these key points about the networking scenarios:
 
 - All scenarios have similar ingress patterns via Application Gateway and Azure Firewall.
 
 - You can use Layer 4 to Layer 7 load balancer solutions in Azure VMware Solution.
-- You can use NSX-T Data Center Firewall for any of these scenarios.
+- You can use the NSX-T Distributed Firewall for any of these scenarios.
 
 The following sections outline architectural patterns for Azure VMware Solution private clouds. For more information, see [Azure VMware Solution networking and interconnectivity concepts](/azure/azure-vmware/concepts-networking).
 
 ## Scenario 1: Secured Virtual WAN hub that has routing intent
 
-This scenario involves the following customer profile, architectural components, and considerations.
+This scenario involves the following architectural components and considerations.
 
 ### When to use this scenario
 
@@ -73,7 +73,7 @@ Other considerations include:
 
 - In this scenario, you can own the public IP addresses. For more information, see [Custom IP address prefix (BYOIP)](/azure/virtual-network/ip-services/custom-ip-address-prefix).
 
-- You can add public-facing Level 4 or Level 7 inbound services if needed.
+- You can add public-facing L4 or L7 inbound services if needed.
 - You might or might not already have ExpressRoute connectivity between on-premises datacenters and Azure.
 
 ### Overview
@@ -90,8 +90,8 @@ This scenario consists of the following components:
 
 - Azure Firewall in a secured Virtual WAN hub for firewalls
 
-- Application Gateway for Level 7 load balancing and Web Application Firewall (WAF)
-- Level 4 destination network address translation (DNAT) with Azure Firewall to translate and filter network ingress traffic
+- Application Gateway for L7 load balancing and Web Application Firewall (WAF)
+- L4 destination network address translation (DNAT) with Azure Firewall to translate and filter network ingress traffic
 - Outbound internet via Azure Firewall in your Virtual WAN hub
 - EXR, VPN, or SD-WAN for connectivity between on-premises datacenters and Azure VMware Solution
 
@@ -122,9 +122,9 @@ To enable Azure VMware Solution to inspect on-premises traffic via Azure Firewal
 1. Remove the Global Reach connection between Azure VMware Solution and on-premises.
 1. Open a support case with Microsoft Support to [enable ExpressRoute-to-ExpressRoute transit connectivity via a Firewall appliance in the hub with private routing policies](/azure/virtual-wan/how-to-routing-policies#expressroute).
 
-## Scenario 2: Use an NVA in Azure Virtual Network to inspect all network traffic
+## Scenario 2: An NVA in Azure Virtual Network inspects all network traffic
 
-This scenario involves the following customer profile, architectural components, and considerations.
+This scenario involves the following architectural components and considerations.
 
 ### When to use this scenario
 
@@ -139,7 +139,7 @@ Use this scenario if:
 - You need fine-grained control over firewalls that are outside the Azure VMware Solution private cloud.
 - You need multiple public IP addresses for inbound services and need a block of predefined IP addresses in Azure. In this scenario, you don't own the public IP addresses.
 
-This scenario assumes you have ExpressRoute connectivity between on-premises datacenters and Azure.
+This scenario assumes that you have ExpressRoute connectivity between on-premises datacenters and Azure.
 
 ### Overview
 
@@ -156,7 +156,7 @@ This scenario consists of the following components:
 - Non-Microsoft firewall NVAs that are hosted in a virtual network to provide traffic inspection and other networking functions.
 
 - [Route Server](/azure/route-server/overview) to route traffic between Azure VMware Solution, on-premises datacenters, and virtual networks.
-- Application Gateway to provide Level 7 HTTP or HTTPS load balancing.
+- Application Gateway to provide L7 HTTP or HTTPS load balancing.
 
 You must disable ExpressRoute Global Reach in this scenario. The non-Microsoft NVAs provide outbound internet access to Azure VMware Solution.
 
@@ -172,9 +172,9 @@ You must disable ExpressRoute Global Reach in this scenario. The non-Microsoft N
 - Use custom route tables and user-defined routes to route traffic in both directions between Azure VMware Solution and the non-Microsoft firewall NVAs' load balancer. This setup supports all high-availability modes, including active/active and active/standby, and helps ensure routing symmetry.
 - If you need high availability for NVAs, see your NVA vendor documentation and [deploy highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
 
-## Scenario 3: Egress from Azure VMware Solution with or without NSX-T or NVA
+## Scenario 3: Outbound traffic from Azure VMware Solution with or without NSX-T or NVAs
 
-This scenario involves the following customer profile, architectural components, and considerations.
+This scenario involves the following architectural components and considerations.
 
 ### When to use this scenario
 
@@ -184,7 +184,7 @@ Use this scenario if:
 
 - You need a bring-your-own-license (BYOL) NVA within Azure VMware Solution for traffic inspection.
 - You might or might not already have ExpressRoute connectivity between on-premises datacenters and Azure.
-- You need inbound HTTP, HTTPS, or Level-4 services.
+- You need inbound HTTP, HTTPS, or L4 services.
 
 All traffic from Azure VMware Solution to Azure Virtual Network, from Azure VMware Solution to the internet, and from Azure VMware Solution to on-premises datacenters gets funneled through the NSX-T Data Center Tier-0 or Tier-1 gateways or the NVAs.
 
@@ -192,7 +192,7 @@ All traffic from Azure VMware Solution to Azure Virtual Network, from Azure VMwa
 
 The following diagram provides a high-level overview of scenario 3.
 
-:::image type="content" source="./media/eslz-overview-scenario-3.png" alt-text="Diagram that shows an overview of scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA." lightbox="./media/eslz-overview-scenario-3.png" border="false":::
+:::image type="content" source="./media/eslz-overview-scenario-3.png" alt-text="Diagram that shows an overview of scenario 3 with outbound traffic from Azure VMware Solution with or without NSX-T Data Center or NVAs." lightbox="./media/eslz-overview-scenario-3.png" border="false":::
 
 *Download a [Visio file](https://arch-center.azureedge.net/eslz-overview-scenario-3.vsdx) of this architecture.*
 
@@ -200,9 +200,9 @@ The following diagram provides a high-level overview of scenario 3.
 
 This scenario consists of the following components:
 
-- An NSX distributed firewall (DFW) or an NVA behind tier-1 in Azure VMware Solution.
-- Application Gateway to provide Level-7 load balancing.
-- Level-4 DNAT via Azure Firewall.
+- An NSX distributed firewall or an NVA behind tier-1 in Azure VMware Solution.
+- Application Gateway to provide L7 load balancing.
+- L4 DNAT via Azure Firewall.
 - Internet breakout from Azure VMware Solution.
 
 :::image type="content" source="./media/eslz-net-scenario-3.png" alt-text="Diagram that shows scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA." lightbox="./media/eslz-net-scenario-3.png" border="false":::
@@ -213,13 +213,13 @@ This scenario consists of the following components:
 
 Enable internet access on the Azure portal. For this scenario, an outbound IP address can change and isn't deterministic. Public IP addresses reside outside the NVA. The NVA in Azure VMware Solution still has private IP addresses and doesn't determine the outbound public IP address.
 
-The NVA is BYOL. It's your responsibility to bring a license and implement high availability for the NVA.
+The NVA is BYOL, which means that you bring a license and implement high availability for the NVA.
 
-See the VMware documentation for NVA placement options and for information about the VMware limitation of up to eight virtual network interface cards (NICs) on a VM. For more information, see [Firewall integration in Azure VMware Solution](https://techcommunity.microsoft.com/t5/azure-migration-and/firewall-integration-in-azure-vmware-solution/ba-p/2254961).
+See the VMware documentation for NVA placement options and for information about the VMware limitation of up to eight virtual network interface cards on a VM. For more information, see [Firewall integration in Azure VMware Solution](https://techcommunity.microsoft.com/t5/azure-migration-and/firewall-integration-in-azure-vmware-solution/ba-p/2254961).
 
 ## Scenario 4: Non-Microsoft firewall solutions in a hub virtual network with Route Server
 
-This scenario has the following customer profile, architectural components, and considerations:
+This scenario involves the following architectural components and considerations.
 
 ### When to use this scenario
 
