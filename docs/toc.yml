@@ -112,6 +112,8 @@ items:
       href: strategy/prepare.md
     - name: Inform your strategy
       items:
+        - name: Overview
+          href: strategy/inform/index.md
         - name: Financial efficiency
           href: strategy/inform/financial-efficiency.md
         - name: AI

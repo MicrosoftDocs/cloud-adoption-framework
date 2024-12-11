@@ -33,13 +33,11 @@ A cloud strategy is important for business success because:
 
 Use the cloud adoption strategy checklist to see all the tasks for each cloud strategy step. Use the links to quickly navigate to the guidance you need.
 
-| Cloud strategy step                 | Startup checklist                                                        | Enterprise checklist                                                                                                                                           |
-|-------------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Define your cloud strategy team     | - bullet one <br>- bullet two                                            | - bullet one <br>- bullet two                                                                                                                                  |
-| Assess your cloud adoption strategy | - Assess                                                                 | - Assess                                                                                                                                                       |
-| Motivations                         | - Define your motivations                                                | - define each of these                                                                                                                                         |
-| Inform your strategy                | - Financial <br>- Security <br>- AI                                      | - Financial <br>- Resiliency <br>- AI <br> - Sustainability <br>- Security <br>- Regulated industries <br> - Multicloud                                        |
-| Manage organizational alignment     | - Shifting from project to product models <br>- Communicate the strategy | - Leadership and executive buy-in <br>- Shifting from project to product models <br>- Communicate the strategy <br>- Identify and define partner relationships |
+| Cloud strategy step | Startup checklist | Enterprise checklist |
+|---------------------|-------------------|----------------------|
+| Assess your cloud adoption strategy | <li> [Assess your strategy](./assessment.md) |  <li> [Assess your strategy](./assessment.md) |
+| Define your motivations | <li> [Define your motivations](./motivations.md#define-your-motivations) | <li> [Define your motivations](./motivations.md#define-your-motivations) <br><li> [Classify your motivations](./motivations.md#classify-motivations) |
+
 
 ## Next steps
 

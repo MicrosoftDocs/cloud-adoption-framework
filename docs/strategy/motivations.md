@@ -48,7 +48,7 @@ Use these examples to guide your decision making and inform your strategy.
 - _Compliance empowerment_: Apply policies to make compliance a feature of solutions you develop as opposed to an assessment that needs to be passed after the fact.
 - _Cost flexibility_: Use the pay-as-you-go cost model to easily drive short-term innovative projects and Proof-of Concept (PoC) solutions without the need to own anything when you shut it down.
 
-## Enhance agility and efficiency
+### Enhance agility and efficiency
 
 - _Profitability improvement potential_: Accelerate business growth and optimize investments with operational efficiency opportunities, cloud innovation, enhanced security, flexibility, and scalability.
 - _Multicloud opportunities_: Support multicloud strategies with Azure integration.
