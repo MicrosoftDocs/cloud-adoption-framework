@@ -73,25 +73,10 @@ items:
         href: get-started/operational-excellence.md
       - name: Manage cloud costs
         href: get-started/manage-costs.md
-      - name: Secure the enterprise environment
-        href: get-started/security.md
       - name: Improve reliability
         href: get-started/reliability.md
       - name: Ensure consistent performance
         href: get-started/performance.md
-
-    - name: Establish teams
-      items:
-      - name: Align your organization
-        href: get-started/org-alignment.md
-      - name: Build a cloud strategy team
-        href: get-started/team/cloud-strategy.md
-      - name: Build a cloud adoption team
-        href: get-started/team/cloud-adoption.md
-      - name: Build a cloud governance team
-        href: get-started/team/cloud-governance.md
-      - name: Build a cloud operations team
-        href: get-started/team/cloud-operations.md
 
     - name: Antipatterns to avoid
       href: antipatterns/antipatterns-to-avoid.md
@@ -1035,7 +1020,5 @@ items:
       items:
       - name: Cloud operating model
         href: resources/cloud-operating-model.md
-      - name: Azure enterprise scaffold
-        href: resources/azure-scaffold.md
       - name: Virtual datacenter boundary security
         href: resources/networking-vdc.md
