@@ -41,23 +41,23 @@ The answers to these questions will help you define your mission statement for y
 
 Objectives should be clear and inspiring goals that are aligned with the mission statement. For example:  
 
-- _Objective_: "Utilize advanced security offerings to protect your assets.”
-- _Compliance_: "Utilize advanced compliance offerings to audit your assets."
-- _Datacenter modernization_: "Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities."
+- _Objective 1_: "Security: Utilize advanced security offerings to protect your assets.”
+- _Objective 2_: "Compliance: Utilize advanced compliance offerings to audit your assets."
+- _Objective 3_: "Datacenter modernization: Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities."
 
 ### Recommendations for defining mission and objectives
 
 To define your mission and objectives, consider the following recommendations.
 
-- _Meet with and involve key stakeholders across the organization_: Ensure that the business and departmental mission and objectives are clearly represented and understood. This might include problem statements the cloud is intended to address.
+- _Meet with and involve key stakeholders across the organization_. Ensure that the business and departmental mission and objectives are clearly represented and understood. This might include problem statements the cloud is intended to address.
 
-- _Define and align cloud adoption objectives and key results_: Clearly define, refine and align the cloud objectives based on the organization's mission and objectives.
+- _Define and align cloud adoption objectives and key results_. Clearly define, refine and align the cloud objectives based on the organization's mission and objectives.
 
-- _Define Key Results for objectives_: Once objectives are defined and aligned, establish specific key results to achieve the objectives, including KPIs, to measure progress.
+- _Define Key Results for objectives_. Once objectives are defined and aligned, establish specific key results to achieve the objectives, including KPIs, to measure progress.
 
-- _Establish accountability_: Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
+- _Establish accountability_. Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
 
-- _Prioritize clarity_: Ensure that your objectives, key results and accountability are clear, concise, accessible and easy to understand for everyone.
+- _Prioritize clarity_. Ensure that your objectives, key results and accountability are clear, concise, accessible and easy to understand for everyone.
 
 ## Measuring success
 
@@ -69,11 +69,11 @@ These metrics should provide insights into your progress against each key result
 
 Use these guidelines when defining metrics to measure your success.
 
-- _Define KPIs_: Set clear metrics you can measure against each related key result.
+- _Define KPIs_. Set clear metrics you can measure against each related key result.
 
-- _Review regularly_: Schedule and perform regular reviews to assess progress.
+- _Review regularly_. Schedule and perform regular reviews to assess progress.
 
-- _Be agile_: Cloud innovation rapidly changes the technical landscape and the opportunities to apply clever solutions. Be prepared to iterate and adjust your strategy and ways to measure progress.
+- _Be agile_. Cloud innovation rapidly changes the technical landscape and the opportunities to apply clever solutions. Be prepared to iterate and adjust your strategy and ways to measure progress.
 
 ## Example objectives and success metrics
 

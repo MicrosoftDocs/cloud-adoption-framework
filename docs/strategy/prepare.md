@@ -22,7 +22,9 @@ If you don't have leadership buy-in for your adoption strategies and plans, it c
 ### Recommendations for leadership buy-in
 
 - _Align leadership with strategic goals_: Help your leadership better understand and justify the investments into adoption projects, ensuring they’re fully aware of the benefits, challenges, and risks.
+
 - _Obtain the required resources_: Adoption projects often require significant investments in technology, talent, and time. Secure leadership buy-in to obtain the necessary resources for your projects.
+
 - _Communicate leadership buy-in_: Change can be challenging for many employees as digital transformation and adoption projects accelerate. Reduce resistance to change by ensuring leadership buy-in is promoted and communicated to the organization, enhancing employee adaptability.
 
 ## Align organizational strategies
@@ -67,8 +69,11 @@ It's important that leadership identify and acknowledge their current limitation
 ### Recommendations for understanding your operating model's readiness for cloud
 
 - _Understand the current operating model_: Evaluate the organization's current capabilities and structures either through a workshop with leadership or through a third party and benchmark your organization's current operating models' readiness for cloud.
+
 - _Identify gaps_: Based on the benchmark, hold a workshop with leadership to identify the readiness gaps for cloud and the strategic objectives and determine how the cloud adoption strategy needs to be aligned.
+
 - _Ensure all key stakeholders are informed_: Ensure all key stakeholders are informed and aligned on the gaps and the risks regarding cloud adoption and ensure these are suitably addressed during the planning stage (link to CAF plan).
+
 - _Continuously review_: Continue to conduct benchmarks and workshops with leadership to continually review readiness along the journey so that progress can be measured, and the strategy can be adapted iteratively.  
 
 ## Shift from a project model to product model
@@ -119,9 +124,15 @@ Follow these recommendations to start shifting from a project to a product deliv
 
 ## Identify and define partner relationships
 
-- Identify the key partners that help you execute your strategy. You should include your cloud provider and providers of critical line-of-business applications and other infrastructure that is necessary for success.
-- Treat your cloud provider and key ISVs as part of an integrated partnership that can help you deliver your strategy, rather than as a supplier that's accountable for delivering to a contract.  
-- Set up a regular cadence with stakeholders from partner organizations and understand how they contribute to meeting KPIs and KRs, as well as other opportunities for collaboration.
+Organizations moving or expanding their footprint in cloud might need to rely on both internal and external partners. These partners can help you execute your cloud adoption strategy and provide the necessary expertise and resources to ensure success.
+
+Consider the following:
+
+- _Identify key partners_. Identify the key partners that help you execute your strategy. You should include your cloud provider and providers of critical line-of-business applications and other infrastructure that is necessary for success.
+
+- _Promote integrated partnerships_. Treat your cloud provider and key ISVs as part of an integrated partnership that can help you deliver your strategy, rather than as a supplier that's accountable for delivering to a contract.  
+
+- _Regularly meet_. Set up a regular cadence with stakeholders from partner organizations and understand how they contribute to meeting KPIs and KRs, as well as other opportunities for collaboration.
 
 ## Next steps
 
