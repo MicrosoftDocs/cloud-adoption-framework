@@ -73,7 +73,7 @@ This flexibility creates value for you and allows you to find an offer that meet
 
    In the **Azure Expert MSPs** section, select **Find an Azure Expert Managed Service Provider** to go to a similar list of available offers.  
 
-   Each tile or square on these offer pages represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. Seletcting a tile takes you to the partner offer. (There's also a button for contacting the partner. See the next step.)
+   Each tile or square on these offer pages represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. Selecting a tile takes you to the partner offer. (There's also a button for contacting the partner. See the next step.)
 
    - You can filter the results by expanding the categories in the **Filters** section on the left side of the page. You can use the search box to filter that list. You can also filter the results by location. 
 
