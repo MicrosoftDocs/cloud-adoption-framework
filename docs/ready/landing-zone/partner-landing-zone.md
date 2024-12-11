@@ -55,7 +55,7 @@ All the partners in the program adhere to ALZ best-practices. We vet partners to
 
 ## Option 2 - Partner offers
 
-We have a self-discovery process you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about working with certified Azure partners and links to the offers.
+We have a self-discovery process that you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about working with certified Azure partners and links to the offers.
 
 Offers come from Azure advanced specialization partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters Azure Marketplace.
 
