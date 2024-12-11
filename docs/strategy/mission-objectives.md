@@ -1,15 +1,17 @@
 ---
 title: Cloud adoption strategy mission and objectives
-description: Learn how to define your mission and objectives to drive your cloud adoption strategy.
+description: Learn how to define your mission and objectives, and how to measure success with your cloud adoption strategy.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ---
 
 # Mission and objectives
 
-Defining your mission and objectives is crucial for a successful cloud adoption strategy. A *clear mission* provides direction and purpose, while *specific objectives* outline the steps needed to achieve that mission. A mission is only of value when it is actionable, objectives can be effectively executed against, and the results are measurable.  
+Defining your mission and objectives is crucial for a successful cloud adoption strategy. A _clear mission_ provides direction and purpose, while _specific objectives_ outline the steps needed to achieve that mission. A mission is only of value when it is actionable, objectives can be effectively executed against, and the results are measurable.  
+
+:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram showing the phase for defining mission and objectives for your cloud adoption strategy.":::
 
 Making use of frameworks such as Objectives and Key Results (OKRs) ensures that missions can be broken down into actionable next steps to drive accountability and align your cloud adoption strategy with your organization's overall strategic objectives to ensure coherence and focus.
 
@@ -21,29 +23,41 @@ Making use of frameworks such as Objectives and Key Results (OKRs) ensures that 
 
 Your cloud adoption strategy should provide clarity on the role of the cloud within your organization, and how and when it will be applied to support the objectives and desired outcomes of the business-, digital-, and IT strategies.
 
-A **mission** statement helps you anchor your objectives and key results to your organization's overall business mission.
+### Mission statement
+
+A mission statement helps you anchor your objectives and key results to your organization's overall business mission.
 
 To help you derive a statement for your business, consider answering these initial questions:
 
-- *Why*: Why are you moving to or expanding in the cloud?
-- *What*: What are your workplace objectives?
-- *How*: How do you intend to measure success?
+- _Why_: Why are you moving to or expanding in the cloud?
+- _What_: What are your workplace objectives?
+- _How_: How do you intend to measure success?
 
 The answers to these questions will help you define your mission statement for your cloud strategy, for example:
 
-- *Mission statement*: “Empower our organization to innovate, scale, and deliver secure, high-quality services by using cloud technologies aligned with our business and IT goals”.
+- _Mission statement_: “Empower our organization to innovate, scale, and deliver secure, high-quality services by using cloud technologies aligned with our business and IT goals”.
 
-**Objectives** should be clear and inspiring goals that are aligned with the mission statement. For example:  
+### Objectives
 
-- *Objective*: "Utilize advanced security offerings to protect your assets.”
+Objectives should be clear and inspiring goals that are aligned with the mission statement. For example:  
+
+- _Objective 1_: "Security: Utilize advanced security offerings to protect your assets.”
+- _Objective 2_: "Compliance: Utilize advanced compliance offerings to audit your assets."
+- _Objective 3_: "Datacenter modernization: Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities."
+
+### Recommendations for defining mission and objectives
 
 To define your mission and objectives, consider the following recommendations.
 
-- **Meet with and involve key stakeholders across the organization**: Ensure that the business and departmental mission and objectives are clearly represented and understood. This might include problem statements the cloud is intended to address.
-- **Define and align cloud adoption objectives and key results**: Clearly define, refine and align the cloud objectives based on the organization's mission and objectives.
-- **Define Key Results for objectives**: Once objectives are defined and aligned, establish specific key results to achieve the objectives, including KPIs, to measure progress.
-- **Establish accountability**: Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
-- **Prioritize clarity**: Ensure that your objectives, key results and accountability are clear, concise, accessible and easy to understand for everyone.
+- _Meet with and involve key stakeholders across the organization_. Ensure that the business and departmental mission and objectives are clearly represented and understood. This might include problem statements the cloud is intended to address.
+
+- _Define and align cloud adoption objectives and key results_. Clearly define, refine and align the cloud objectives based on the organization's mission and objectives.
+
+- _Define Key Results for objectives_. Once objectives are defined and aligned, establish specific key results to achieve the objectives, including KPIs, to measure progress.
+
+- _Establish accountability_. Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
+
+- _Prioritize clarity_. Ensure that your objectives, key results and accountability are clear, concise, accessible and easy to understand for everyone.
 
 ## Measuring success
 
@@ -51,11 +65,15 @@ To understand if you are on track and will meet your objectives, you need to be 
 
 These metrics should provide insights into your progress against each key result and highlight any areas for improvement.  
 
-**Recommendations**: Use these guidelines when defining metrics to measure your success.
+### Recommendations for measuring success
 
-- *Define KPIs*: Set clear metrics you can measure against each related key result.
-- *Review regularly*: Schedule and perform regular reviews to assess progress.
-- *Be agile*: Cloud innovation rapidly changes the technical landscape and the opportunities to apply clever solutions. Be prepared to iterate and adjust your strategy and ways to measure progress.
+Use these guidelines when defining metrics to measure your success.
+
+- _Define KPIs_. Set clear metrics you can measure against each related key result.
+
+- _Review regularly_. Schedule and perform regular reviews to assess progress.
+
+- _Be agile_. Cloud innovation rapidly changes the technical landscape and the opportunities to apply clever solutions. Be prepared to iterate and adjust your strategy and ways to measure progress.
 
 ## Example objectives and success metrics
 

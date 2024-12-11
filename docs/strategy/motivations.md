@@ -3,7 +3,7 @@ title: Motivations – why are you moving to or expanding in the cloud?
 description: Use the Cloud Adoption Framework for Azure to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 ms.author: tozimmergren
 author: Zimmergren
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ms.topic: conceptual
 ---
 
@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article aims to help you understand and define motivations for your cloud adoption strategy. This is crucial for IT decision-makers and executives as it ensures alignment with strategic business objectives, maximizes return on investment, and facilitates informed decision-making.
 
-:::image type="content" source="media/placeholder-3.png" alt-text="Diagram showing when to define motivations in your cloud strategy flow.":::
+:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram showing the phase for defining motivations for your cloud adoption strategy.":::
 
 Clear motivations help prioritize initiatives, streamline resource allocation, and mitigate risks by addressing specific business needs such as reducing operational costs, enhancing security, and driving innovation.  
 
@@ -48,7 +48,7 @@ Use these examples to guide your decision making and inform your strategy.
 - _Compliance empowerment_: Apply policies to make compliance a feature of solutions you develop as opposed to an assessment that needs to be passed after the fact.
 - _Cost flexibility_: Use the pay-as-you-go cost model to easily drive short-term innovative projects and Proof-of Concept (PoC) solutions without the need to own anything when you shut it down.
 
-## Enhance agility and efficiency
+### Enhance agility and efficiency
 
 - _Profitability improvement potential_: Accelerate business growth and optimize investments with operational efficiency opportunities, cloud innovation, enhanced security, flexibility, and scalability.
 - _Multicloud opportunities_: Support multicloud strategies with Azure integration.
