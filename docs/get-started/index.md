@@ -21,7 +21,6 @@ Each of the following links takes you to questions that are typically asked when
 - [Align foundational concepts to onboard a person, project, or team](#align-foundation)
 - [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption)
 - [Improve controls to ensure proper operations of the cloud](#improve-controls)
-- [Establish teams to support adoption and operations](#establish-teams)
 
 ## Cloud adoption scenarios
 
