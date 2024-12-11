@@ -88,8 +88,6 @@ items:
         href: get-started/team/cloud-strategy.md
       - name: Build a cloud adoption team
         href: get-started/team/cloud-adoption.md
-      - name: Build a cloud governance team
-        href: get-started/team/cloud-governance.md
       - name: Build a cloud operations team
         href: get-started/team/cloud-operations.md
 
