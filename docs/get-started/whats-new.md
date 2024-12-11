@@ -257,7 +257,6 @@ We made updates to reflect the deprecation of Azure Blueprint.
 - [Track costs across business units, environments, or projects](../ready/azure-best-practices/track-costs.md)
 - [Azure governance design area](../ready/landing-zone/design-area/governance.md)
 - [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md)  
-- [Azure enterprise scaffold](../resources/migration-with-enterprise-scaffold.md)
 - [Tools and templates](../resources/tools-templates.md)
 - [Data domains](../scenarios/cloud-scale-analytics/architectures/data-domains.md)
 - [Self-serve data platforms](../scenarios/cloud-scale-analytics/architectures/self-serve-data-platforms.md)
