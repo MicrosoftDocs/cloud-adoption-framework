@@ -25,6 +25,8 @@ There are two options to find an ALZ partner (*see image*).
 
 The easiest option to find an ALZ partner is through Azure Migrate and Modernize.
 
+### How to find an Azure Migrate and Modernize partner
+
 Take 5 minutes to [fill out the Azure Migrate and Modernize form](https://azure.microsoft.com/migration/migration-modernization-program/#program-form). Someone from the team will help you find the right partner.
 
 ### What to expect from an Azure Migrate and Modernize partner
