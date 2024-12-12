@@ -10,3 +10,8 @@ ms.date: 12/11/2024
 # Suggested cloud functions
 
 TODO. This article is a placeholder for upcoming consolidated content from CAF Organize.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Aligning responsibilities across teams](./raci-alignment.md)
