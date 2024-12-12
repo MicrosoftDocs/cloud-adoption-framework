@@ -1,5 +1,5 @@
 ---
-title: Define your cloud strategy team
+title: Define Your Cloud Strategy Team
 description: Learn how to define your cloud strategy team to align your cloud adoption efforts with your business goals.
 ms.author: tozimmergren
 author: Zimmergren
