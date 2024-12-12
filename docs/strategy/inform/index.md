@@ -15,10 +15,10 @@ When you have defined your motivations, mission, and goals, you're ready to star
 
 ## Strategic considerations
 
-Use these sections to learn more about important considerations and recommendations across various common cloud adoption strategy motivations and use cases.
+Use these sections to learn more about important considerations and recommendations across various common cloud adoption strategy motivations and use cases, helping you achieve the relevant business outcomes.
 
 > [!TIP]
-> Are you missing a specific topic or strategic consideration? Let us know using the feedback tool at the top or bottom of the page. Please include a justification for why that topic would be a suitable addition to the guidance.
+> Are you missing a specific topic or strategic consideration? Let us know using the feedback tool on the page. Include a justification for why your suggested topic would be a suitable addition to the guidance.
 
 | Strategic consideration | Description |
 | --- | --- |
