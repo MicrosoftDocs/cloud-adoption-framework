@@ -104,6 +104,67 @@ To learn more, see [Build a cloud governance team](../../govern/build-cloud-gove
 
 ## Cloud Center of Excellence (CCoE) functions
 
+A cloud center of excellence (CCoE) is a function that helps organizations balance speed and stability while they pursue this objective.
+
+Without a CCoE, organizations often struggle to balance the need for speed and agility with the need for stability and governance. The CCoE helps organizations achieve this balance by providing a centralized function that can help teams across the organization adopt cloud technologies in a consistent and secure manner.
+
+The following image is an analogy of this change. Without a CCoE, IT tends to focus on providing control and central responsibility, acting like the stoplights at an intersection. With a successful CCoE, ITs role resembles a roundabout at an intersection where the focus is on freedom and delegated responsibility.
+
+![Conceptual art showing the difference between traditional IT and a Center of Excellence](../media/ccoe-paradigm-shift.png)
+
+Both approaches are valid; they offer alternative ways to responsibility and management. A CCoE model can fit within the technology strategy if you want to establish a self-service model that allows business units to make their own decisions while adhering to a set of guidelines and established, repeatable processes.
+
+### Roles
+
+Typically, the following roles provide CCoE functions:
+
+- IT leadership
+- IT managers
+- Business stakeholders
+- Finance executives
+- Operations executives
+- Business product owners
+
+### Responsibilities
+
+Ideally, the CCoE delivers on the following tasks.
+
+- Build a modern IT organization with agile approaches to capture and implement business requirements.
+- Use reusable deployment packages aligned with security, compliance, and management policies.
+- Maintain a functional cloud platform in alignment with operational procedures.
+- Review and approve the use of cloud-native tools.
+- Standardize and automate commonly needed platform components and solutions over time.
+
+### Enable CCoE success
+
+Before you proceed with this model, consider the company's tolerance for a growth mindset and IT's comfort level with releasing central responsibilities. As mentioned earlier, a CCoE exchanges control for agility and speed.
+
+This type of change takes time, experimentation, and negotiation. There will be bumps and set backs during the process, but if the team stays diligent and isn't discouraged from experimentation, there's a high probability of success in improving agility, speed, and reliability. One of the biggest success factors is support from leadership and key stakeholders.
+
+### CCoE key stakeholders
+
+IT leadership is the first and most obvious stakeholder. IT managers play an important part, but implementing this model requires the support of the CIO and other executive-level IT leaders.
+
+Less obvious is the need for business stakeholders. Business agility and time to market are primary motivations for forming a CCoE. As such, the key stakeholders have a vested interest in these areas. Examples of business stakeholders include line-of-business leaders, finance executives, operations executives, and business product owners.
+
+### Support from IT stakeholders
+
+Support from IT stakeholders should include the following activities:
+
+- _Support the vision_: A successful CCoE effort requires a great deal of negotiation with existing IT team members.
+
+  When done well, all of IT contributes to the solution and feels comfortable with the change. Occasionally, some members of the existing IT team might want to hold on to control mechanisms. When such situations occur, support for the CCoE by IT stakeholders is vital to the success of the CCoE. IT stakeholders need to encourage and reinforce the overall goals of the CCoE to resolve blocks to proper negotiation. On rare occasions, IT stakeholders might even need to step in and break up a deadlock or a tied vote to maintain the progress of the CCoE.
+
+- _Maintain focus_: A CCoE can be a significant commitment for any resource-constrained IT team.
+
+  Removing strong architects from short-term projects to focus on long-term gains can create difficulty for team members who aren't part of the CCoE. IT leadership and IT stakeholders need to stay focused on the _goal of the CCoE_. The support of IT leaders and IT stakeholders can deprioritize the disruptions of day-to-day operations in favor of CCoE duties.
+
+- _Create a buffer_: The CCoE team experiments with new approaches.
+
+  Some new approaches won't align well with existing operations or technical constraints. The CCoE team might experience pressure or recourse from other teams when experiments fail. It's important to encourage and buffer the CCoE team from the consequences of "fast fail" learning opportunities. It's equally important to hold the team accountable to a growth mindset to ensure that they learn from those experiments and find better solutions.
+
+
+
 ## Cloud platform functions
 
 ## Cloud security functions
