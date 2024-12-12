@@ -14,10 +14,10 @@ For larger companies and enterprises, it's common to have a variety of teams and
 - For _startups and smaller_ organizations, some of these functions might be combined or handled by a single team.
 - For _enterprises and large_ organizations, these functions might be split into multiple teams or departments.
 
-The following suggested cloud functions are based on the Cloud Adoption Framework for Azure. These functions are typically involved in a cloud adoption journey, but the specific functions and roles can vary depending on the organization.
-
 > [!NOTE]
 > Some suggested functions might only be relevant in later stages of the cloud adoption journey. Come back to this list as you progress through the cloud adoption methodologies in the Cloud Adoption Framework.
+
+The following suggested cloud functions are based on the Cloud Adoption Framework for Azure. These functions are typically involved in a cloud adoption journey, but the specific functions and roles can vary depending on the organization.
 
 ## Cloud strategy functions
 
@@ -41,7 +41,7 @@ Typically, the following roles provide cloud strategy functions. When you define
 - _Primary focus_. Validate and maintain alignment between business priorities and cloud adoption efforts.
 - _Secondary focus_. Focus on change management across the adoption efforts.
 
-Ideally, the cloud strategy team delivers on the following tasks and allocates sufficient time for planning.
+Ideally, the cloud strategy team delivers on the following tasks.
 
 Typical responsibilities include:
 
@@ -68,12 +68,35 @@ Typically, the following roles provide cloud adoption functions. When you define
 
 - _Primary focus_. Implement the technical solutions outlined in the cloud adoption plan.
 
-Ideally, the cloud adoption team delivers on the following tasks and allocates sufficient time for implementation.
+Ideally, the cloud adoption team delivers on the following tasks.
 
 - Define and implement the [cloud adoption plan](../../plan/index.md).
 - Review and drive [modernization](../../modernize/index.md) and [migration](../../migrate/index.md) efforts.
 
 ## Cloud governance functions
+
+A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance.
+
+### Roles
+
+Typically, the following roles provide cloud governance functions:
+
+- IT
+- Finance
+- Operations
+- Security
+- Compliance
+
+### Responsibilities
+
+Ideally, the cloud governance team delivers on the following tasks.
+
+- Engage stakeholders.
+- Assess cloud risks.
+- Develop and update governance policies.
+- Monitor and review governance.
+
+To learn more, see [Build a cloud governance team](../../govern/build-cloud-governance-team.md) in the Govern methodology.
 
 ## Central IT functions
 
