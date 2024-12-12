@@ -80,7 +80,7 @@ Also consider these other factors:
 
 The following diagram provides a high-level overview of scenario 1.
 
-:::image type="content" source="./media/eslz-overview-scenario-1.png" alt-text="Diagram that shows an overview of scenario 1 with a secured Virtual WAN hub with default route propagation." lightbox="./media/eslz-overview-scenario-1.png" border="false":::
+:::image type="content" source="./media/eslz-overview-scenario-1.png" alt-text="Diagram that shows an overview of scenario 1 with a secured Virtual WAN hub that has routing intent." lightbox="./media/eslz-overview-scenario-1.png" border="false":::
 
 *Download a [PowerPoint file](https://arch-center.azureedge.net/eslz-overview-scenario-1.pptx) of this architecture.*
 
@@ -95,7 +95,7 @@ This scenario consists of the following components:
 - Outbound internet via Azure Firewall in your Virtual WAN hub
 - EXR, VPN, or SD-WAN for connectivity between on-premises datacenters and Azure VMware Solution
 
-:::image type="content" source="./media/eslz-net-scenario-1.png" alt-text="Diagram that shows scenario 1 with a secured Virtual WAN hub that has default route propagation." lightbox="./media/eslz-net-scenario-1.png" border="false":::
+:::image type="content" source="./media/eslz-net-scenario-1.png" alt-text="Diagram that shows scenario 1 with a secured Virtual WAN hub that has routing intent." lightbox="./media/eslz-net-scenario-1.png" border="false":::
 
 *Download a [Visio file](https://arch-center.azureedge.net/eslz-net-scenario-1.vsdx) of this architecture.*
 
