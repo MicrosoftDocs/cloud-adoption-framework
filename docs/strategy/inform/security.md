@@ -61,4 +61,4 @@ Consider the following recommendations:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Sustainability](sustainability.md)
+> [Sustainability considerations](sustainability.md)
