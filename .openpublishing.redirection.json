@@ -2291,41 +2291,6 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/get-started/team/cloud-governance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern",
-         "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/resources/migration-with-enterprise-scaffold.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready",
-         "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/resources/azure-scaffold.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready",
-         "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/get-started/security.md",
-         "redirect_url": "/azure/cloud-adoption-framework/secure",
-         "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/get-started/team/cloud-adoption.md",
-         "redirect_url": "/azure/cloud-adoption-framework/organize/cloud-adoption",
-         "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/get-started/team/cloud-operations.md",
-         "redirect_url": "/azure/cloud-adoption-framework/organize/cloud-operations",
-         "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/get-started/org-alignment.md",
-         "redirect_url": "/azure/cloud-adoption-framework/organize",
-         "redirect_document_id": false
-      },
-      {
          "source_path": "docs/strategy/cloud-adoption-strategy-evaluator.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/assessment",
          "redirect_document_id": false
