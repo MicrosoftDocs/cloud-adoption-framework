@@ -1,11 +1,10 @@
 ---
 title: Aligning responsibilities across teams
-description: Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties.
-author: martinekuan
-ms.author: martinek
-ms.date: 12/29/2021
+description: Learn to align cloud adoption responsibilities across teams by developing a cross-functional RACI matrix.
+ms.author: tozimmergren
+author: Zimmergren
 ms.topic: conceptual
-ms.custom: internal, UpdateFrequency3
+ms.date: 12/11/2024
 ---
 
 # Align responsibilities across teams

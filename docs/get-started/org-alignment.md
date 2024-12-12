@@ -60,7 +60,7 @@ To help create balance across cloud adoption efforts, we recommend that you star
 
 ![Diagram of cloud adoption with cloud governance counterbalance](../_images/ready/org-ready-best-practice.png)
 
-This proven approach is considered a minimum viable product (MVP), because it might not be sustainable. Each team wears many hats, as outlined in the [RACI (responsible, accountable, consulted, and informed) charts](../organize/raci-alignment.md).
+This proven approach is considered a minimum viable product (MVP), because it might not be sustainable. Each team wears many hats, as outlined in the [RACI (responsible, accountable, consulted, and informed) charts](../strategy/prepare/raci-alignment.md).
 
 As adoption needs grow, so does the need to create balance and structure. To meet those needs, companies often follow a process of maturing their organizational structures.
 
@@ -76,7 +76,7 @@ Watch this video to get an overview of common team structures at various stages 
 
 ## Step 5: Align RACI charts
 
-At each level of maturity, accountability for various cloud functions shifts to new teams. This shifting of accountability enables faster migration and innovation cycles by removing and automating barriers to change. To align assignments properly, the [RACI alignment](../organize/raci-alignment.md) article shows a RACI chart for each organizational structure.
+At each level of maturity, accountability for various cloud functions shifts to new teams. This shifting of accountability enables faster migration and innovation cycles by removing and automating barriers to change. To align assignments properly, the [RACI alignment](../strategy/prepare/raci-alignment.md) article shows a RACI chart for each organizational structure.
 
 ## Additional information
 

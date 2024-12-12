@@ -75,6 +75,6 @@ Additional support from existing IT staff may be needed. IT can be a valuable co
 
 Adoption is great, but ungoverned adoption can produce unexpected results. Align with the [cloud governance team](./cloud-governance.md) to accelerates adoption and best practices, while reducing business and technical risks.
 
-These two teams create balance across cloud adoption efforts, but is considered an MVP because it may not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](./raci-alignment.md).
+These two teams create balance across cloud adoption efforts, but is considered an MVP because it may not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](../strategy/prepare/raci-alignment.md).
 
 Learn more about [organizational antipatterns: silos and fiefdoms](./fiefdoms-silos.md).

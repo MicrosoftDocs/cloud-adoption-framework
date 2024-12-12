@@ -37,7 +37,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 - Determine whether the team aligns better with the Migrate methodology or the Innovate methodology.
 - Each methodology has a four-step onboarding experience to help the team understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you're most likely to need in early iterations.
-- Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Update your company's [RACI template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
+- Align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed (RACI)* parties. Update your company's [RACI template](../../strategy/prepare/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
 
 **Guidance to support deliverable completion:**
 
@@ -137,6 +137,6 @@ The cloud adoption factory approach looks at the processes behind adoption effor
 
 Cloud adoption is a great goal, but ungoverned adoption can produce unexpected results. To accelerate adoption and best practices, as you're reducing business and technical risks, align cloud adoption with [cloud governance functions](../../organize/cloud-governance.md).
 
-Aligning with the cloud governance team creates balance across cloud adoption efforts, but this is considered a minimum viable product (MVP), because it might not be sustainable. Each team is wearing many hats, as outlined in the [RACI charts](../../organize/raci-alignment.md).
+Aligning with the cloud governance team creates balance across cloud adoption efforts, but this is considered a minimum viable product (MVP), because it might not be sustainable. Each team is wearing many hats, as outlined in the [RACI charts](../../strategy/prepare/raci-alignment.md).
 
 Learn more about overcoming [silos and fiefdoms](../../organize/fiefdoms-silos.md).

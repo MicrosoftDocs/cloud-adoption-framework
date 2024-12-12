@@ -38,7 +38,7 @@ Azure Arc-enabled Kubernetes agents play a critical role in the hybrid operation
 
 Define administrative, operations, and developer roles within your organization that are responsible for day-to-day operations in your hybrid clusters. Mapping each team to actions and responsibilities determines Azure role-based access control (RBAC) roles and Kubernetes ClusterRoleBinding and RoleBinding.
 
-Consider using a [RACI](../../../organize/raci-alignment.md) matrix to support this effort and build controls into the management scope hierarchy that you define based on resource consistency and inventory management guidance.
+Consider using a [RACI](../../../strategy/prepare/raci-alignment.md) matrix to support this effort and build controls into the management scope hierarchy that you define based on resource consistency and inventory management guidance.
 
 For more information, see [Identity and access management for Azure Arc-enabled Kubernetes](./eslz-arc-kubernetes-identity-access-management.md).
 

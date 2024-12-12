@@ -107,7 +107,14 @@ items:
     - name: Define strategy team
       href: strategy/define-your-team.md
     - name: Prepare your organization
-      href: strategy/prepare.md
+      items:
+        - name: Overview
+          href: strategy/index.md
+        - name: Suggested cloud functions
+          href: strategy/prepare/suggested-cloud-functions.md
+        - name: Align the RACI matrix
+          href: strategy/prepare/raci-alignment.md
+
     - name: Inform your strategy
       items:
         - name: Overview
@@ -918,8 +925,6 @@ items:
 
     - name: Mature teams structure
       href: organize/organization-structures.md
-    - name: Align the RACI matrix
-      href: organize/raci-alignment.md
     - name: Building technical skills
       href: organize/suggested-skills.md
     - name: Creating a cost-conscious organization
