@@ -25,7 +25,7 @@ As a worldwide cloud provider, Microsoft prioritizes security above all other co
 
 The extent to which you prioritize security over other concerns, like reliability, performance, and costs, depends on many factors. You define these factors when you create your overall adoption strategy. Regardless of your priorities, you should understand the pillars of the Microsoft Secure Future Initiative to help focus on key areas of your cloud estate's security that you want to strengthen.
 
-## Adopt Zero Trust
+## Adopt a Zero Trust strategy
 
 The Zero Trust principles create the foundation of the Microsoft security strategy. Zero Trust is a cloud-ready security strategy that consists of three main principles:
 
@@ -36,7 +36,7 @@ The Zero Trust principles create the foundation of the Microsoft security strate
 
 The Zero Trust principles guide your decisions when you design, implement, and operate a cloud estate. They provide a clear reference point to check against, which helps ensure that your choices don't compromise security.
 
-Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview) to streamline the integration of the Zero Trust approach into your security strategy. The Zero Trust guidance:
+Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview) to streamline the integration of a Zero Trust approach into your security strategy. The Zero Trust guidance:
 
 - Provides a tightly focused and structured [adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview) that aligns with the adoption journey phases of the Cloud Adoption Framework for Azure. Use this guidance to align your overall cloud adoption with the Zero Trust approach.
 
@@ -47,7 +47,7 @@ Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview
 
 Microsoft offers workshops to help decision makers and architects apply best practices to their cloud adoption. The Chief Information Security Officer (CISO) workshop focuses on a thorough approach to modernize cybersecurity practices from the perspective of the CISO and other senior leadership roles.
 
-The Microsoft Cybersecurity Reference Architecture (MCRA) workshop focuses on applying architectural best practices to your cloud environment designs. The Zero Trust principles create the foundation for the guidance in the CISO and MCRA workshops. The workshops also align to Microsoft best practices across the Cloud Adoption Framework, Azure Well-Architected Framework, and Zero Trust security recommendations.
+The Microsoft Cybersecurity Reference Architecture (MCRA) workshop focuses on how to apply architectural best practices to your cloud environment designs. The Zero Trust principles create the foundation for the guidance in the CISO and MCRA workshops. The workshops also align to Microsoft best practices across the Cloud Adoption Framework, Azure Well-Architected Framework, and Zero Trust security recommendations.
 
 Consider the following recommendations:
 
