@@ -9,7 +9,9 @@ ms.date: 12/11/2024
 
 # Prepare your organization for cloud adoption
 
-> TODO: Summarize the content of the section and link to the articles from here.
+Prepare your organization for cloud adoption to avoid known risks and challenges. Ensure organizational alignment, explore suggested cloud functions across teams, and see what a typical Responsible, Accountable, Consulted, Informed (RACI) matrix can look like.
+
+:::image type="content" source="../media/caf-strategy-prepare-organization.svg" alt-text="Diagram showing the phase for preparing your organization for your cloud adoption strategy.":::
 
 ## Next steps
 
