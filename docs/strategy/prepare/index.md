@@ -1,6 +1,6 @@
 ---
 title: Prepare your organization for cloud adoption
-description: Learn how to prepare your organization for cloud adoption by aligning leadership, strategies, and operating models.
+description: Learn how to prepare for organizational alignment, what the recommended cloud functions are, and how to align responsibilities across teams.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
