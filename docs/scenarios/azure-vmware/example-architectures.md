@@ -80,7 +80,7 @@ Also consider these other factors:
 
 The following diagram provides a high-level overview of scenario 1.
 
-:::image type="content" source="./media/eslz-overview-scenario-1.svg" alt-text="Diagram that shows an overview of scenario 1 with a secured Virtual WAN hub with default route propagation." lightbox="./media/eslz-overview-scenario-1.svg" border="false":::
+:::image type="content" source="./media/eslz-overview-scenario-1.png" alt-text="Diagram that shows an overview of scenario 1 with a secured Virtual WAN hub with default route propagation." lightbox="./media/eslz-overview-scenario-1.png" border="false":::
 
 *Download a [PowerPoint file](https://arch-center.azureedge.net/eslz-overview-scenario-1.pptx) of this architecture.*
 
