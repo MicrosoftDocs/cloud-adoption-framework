@@ -33,7 +33,7 @@ These baseline functions help you identify risks related to current and future r
 ## Preparation
 
 - Review the [Govern methodology](../govern/index.md).
-- Take the [governance benchmark assessment](../govern/benchmark.md).
+- Take the [governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e/).
 - [Introduction to security in Azure](/training/modules/protect-against-security-threats-azure/): Learn the basic concepts to protect your infrastructure and data in the cloud. Understand what responsibilities are yours and what Azure handles for you.
 - Understand how to work across groups to [manage cost](./cost-conscious-organization.md).
 
