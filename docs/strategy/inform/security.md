@@ -1,29 +1,29 @@
 ---
-title: Security Considerations in your Cloud Strategy
-description: Learn how to design your cloud infrastructure with security in mind to protect your data and applications from unauthorized access, data breaches, and other security threats.
+title: Security Considerations for Your Cloud Strategy
+description: Learn how to design your cloud infrastructure with security in mind to protect your data and applications from unauthorized access and data breaches.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 12/13/2024
 ---
 
-# Security considerations in your cloud strategy
+# Security considerations for your cloud strategy
 
 You need a well-designed security strategy for a successful cloud adoption. If your organization uses traditional on-premises environments, you should evaluate your cloud expertise and specifically focus on cloud security. To manage security in the cloud, you might need to make significant changes to the structure of your security team and your overall security approach.
 
-Potential changes to your organization might introduce stress and conflict. Ensure that your management teams provide support and present the changes as a necessary but positive evolution for the organization.
+Potential changes to your organization might introduce stress and conflict. For a successful cloud adoption, ensure that your management teams provide support and clearly present changes to other teams.
 
 ## Common challenges
 
-- **Mindset evolution:** On-premises security is typically a narrowly focused practice handled by a small team that might consist of engineers and operations administrators. Cloud security requires participation from across the organization, and the scope of security teams expands significantly. An on-premises environment's attack surface is primarily at the perimeter. In a cloud environment, every resource is a potential attack vector, so security teams need to adapt their approach accordingly.
+**Evolve your mindset.** On-premises security is typically a narrowly focused practice that a small team of engineers and operations administrators might handle. Cloud security requires participation from across the organization, and the scope of security teams expands significantly. An on-premises environment's attack surface is primarily at the perimeter. In a cloud environment, every resource is a potential attack vector, so security teams need to adapt their approach accordingly.
 
-- **Changes to teams and roles:** Cloud security, especially for larger organizations, involves specialized roles. To ensure that you don't have gaps in your security management, you might need to add new teams or reorganize existing teams.
+**Adjust teams and roles.** Cloud security, especially for large organizations, involves specialized roles. To ensure that you don't have gaps in your security management, you might need to add new teams or reorganize existing teams.
 
-## The Secure Future Initiative (SFI)
+## Microsoft Secure Future Initiative
 
-Microsoft recognizes that operating as a worldwide cloud provider requires that security is paramount to all other concerns and can't be compromised. For this reason, Microsoft developed the [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative) as the overall approach to building and maintaining its products.
+As a worldwide cloud provider, Microsoft prioritizes security above all other concerns and recognizes the critical need to prevent security breaches. The [Microsoft Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative) addresses these concerns as the overall approach to building and maintaining Microsoft products.
 
-The extent to which you prioritize security over other concerns, like reliability, performance, and costs, depends on many factors. You define these factors when you create your overall adoption strategy. Regardless of your priorities, you should understand the pillars of the SFI to help focus on key areas of your cloud estate's security that you want to strengthen.
+The extent to which you prioritize security over other concerns, like reliability, performance, and costs, depends on many factors. You define these factors when you create your overall adoption strategy. Regardless of your priorities, you should understand the pillars of the Microsoft Secure Future Initiative to help focus on key areas of your cloud estate's security that you want to strengthen.
 
 ## Adopt Zero Trust
 

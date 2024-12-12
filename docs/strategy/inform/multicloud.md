@@ -4,7 +4,7 @@ description: Learn how to design your cloud infrastructure with multicloud in mi
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ---
 
 # Multicloud considerations in your cloud strategy

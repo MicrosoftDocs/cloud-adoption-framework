@@ -4,7 +4,8 @@ description: Learn about considerations for integrating Artificial Intelligence 
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # AI considerations in your cloud strategy
@@ -29,18 +30,10 @@ Consider the importance of mapping AI to your business objectives. While there a
 **Recommendations:**
 
 - *Evaluate AI for your business objectives*: Document where you can utilize generative and nongenerative AI capabilities to enhance the efficiency and outcomes of your desired business objectives.
+
 - *Define an AI technology strategy*: Select the right tools and platforms for your AI use cases. Learn how to decide whether to buy or build your own AI solutions. For more information, see [Recommendations for organizations developing an AI adoption strategy](../../scenarios/ai/strategy.md).
+
 - *Inform your organization and decision makers about adopting AI*: Dive into the [Cloud Adoption Framework guidance for adopting AI on Azure](../../scenarios/ai/index.md) – it will guide you through all the methodologies of the framework to teach you how to be successful with AI on Azure, and help you inform your cloud adoption strategy with the right considerations for AI.
-
-## Assess your organizational AI readiness
-
-Assess your organizational AI readiness to explore your team’s or organization's maturity level to develop, run, and maintain Azure AI solutions in production. Use the learnings from this self-service assessment to inform your strategy about gaps and recommended actions for your business.
-
-> Tobias note: Add more information about the assessment and what results it yields.
-
-**Recommendations:**
-
-- *Assess your AI readiness*: Use the [Technical Assessment for Generative AI in Azure](/assessments/443670b4-11d1-4dd7-8128-b2bdb7a2bf2f/) to determine your current level of readiness for adopting generative AI and identify areas of improvement.
 
 ## Responsible and trusted AI
 
@@ -72,15 +65,16 @@ Incorporating responsible AI helps to mitigate the following risks:
 
 Incorporate responsible AI principles throughout your AI adoption journey, from strategy and planning to implementation. Ensure that you apply these principles when you secure, manage, and govern your AI initiatives.
 
-:::image type="content" source="../media/responsible-ai.png" alt-text="Diagram showing the responsible AI workflow.":::
-
 **Recommendations for your strategy:**
 
 Follow these recommendations to inform your cloud adoption strategy of AI considerations.
 
-- *Responsible AI in your adoption AI adoption*: Incorporate ethical frameworks and regulatory practices into your AI implementation plan. To learn more, see [AI Plan - Recommendations for organizations planning AI adoption](../../scenarios/ai/plan.md#implement-responsible-ai).
+- *Responsible AI in your AI adoption*: Incorporate ethical frameworks and regulatory practices into your AI implementation plan. To learn more, see [AI Plan - Recommendations for organizations planning AI adoption](../../scenarios/ai/plan.md#implement-responsible-ai).
+
 - *Learn about the transparency notes for Azure services*: To understand the responsible use of Microsoft-related AI services, see how Microsoft promotes [responsible use of AI with Azure AI services](/azure/ai-services/responsible-use-of-ai-overview). Use this information in your cloud adoption strategy so you can inform your stakeholders, partners and customers about the responsible adoption of AI technologies.
+
 - *Explore Microsoft Azure AI Content Safety*: Discover how to detect harmful user-generated and AI-generated content in applications and services and inform your strategy about these capabilities. For more information, see [Azure AI Content Safety documentation](/azure/ai-services/content-safety/).
+
 - *Learn about inclusive AI design*: Use the [Inclusive AI design guidelines](https://inclusive.microsoft.design/tools-and-activities/InPursuitofInclusiveAI.pdf) to help you make informed decisions about designing AI that is inclusive and accessible to everyone.
 
 ## Next steps

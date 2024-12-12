@@ -4,18 +4,22 @@ description:  Learn how to assess your existing cloud adoption strategy to infor
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ---
 
 # Assess your cloud adoption strategy
 
 This article outlines the process to assess your existing cloud adoption strategy to inform your organization about your current cloud maturity.
 
-:::image type="content" source="media/placeholder-2.png" alt-text="Diagram showing flow at assess.":::
+:::image type="content" source="./media/caf-strategy-assess.svg" alt-text="Diagram showing the phase for assessing your cloud adoption strategy.":::
 
 Every cloud journey is unique and should be aligned with your business goals. Optimization of both the cloud adoption strategy and your execution is key when migrating or innovating in the cloud. With multiple cloud services and pathways available, choosing the right solution requires the right level of understanding.
 
-The Cloud Adoption Framework offers the [Cloud Adoption Strategy Evaluator](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) to help assess your *current* cloud strategy posture. This tool provides recommendations based on cloud economics principles, aiding in building a strong business case for successful cloud adoption.
+## Assessment review tool
+
+Assess your *current* cloud strategy posture with the [Cloud Adoption Strategy Evaluator](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) assessment tool.
+
+:::image type="content" source="./media/cloud-adoption-strategy-evaluator-assessment.png" alt-text="A screenshot of the Cloud Adoption Strategy Evaluator assessment":::
 
 Follow these steps to assess and document your cloud adoption maturity:
 
@@ -27,4 +31,4 @@ Follow these steps to assess and document your cloud adoption maturity:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Why are you moving to or expanding in the cloud?](motivations.md)
+> [Motivations - Why are you moving to or expanding in the cloud?](motivations.md)

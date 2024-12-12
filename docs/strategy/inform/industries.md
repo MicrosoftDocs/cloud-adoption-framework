@@ -4,7 +4,7 @@ description: Learn about the unique challenges and requirements for regulatory c
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 11/21/2024
+ms.date: 12/11/2024
 ---
 
 # Regulated industries considerations in your cloud strategy
