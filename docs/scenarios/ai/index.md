@@ -16,7 +16,7 @@ This AI guidance provides a roadmap for [startups](https://www.microsoft.com/sta
 
 ## Why adopt AI?
 
-AI improves efficiency through automation. This automation can boost individual productivity, and it can optimize a range of business processes. A successful AI implementation allows you to focus on priorities that drive your organization forward.
+AI frees you to focus on your top priorities. AI offers automation and autonomous agents that improve individual efficiency, boost productivity, and optimize a range of business processes. 
 
 ## How to adopt AI
 
