@@ -9,32 +9,32 @@ ms.date: 12/11/2024
 
 # Define your cloud strategy team
 
-This article outlines the process to define your cloud strategy team. A cloud strategy team or function defines the motivations and business objectives for cloud adoption and transformation projects. These functions validate and maintain alignment between business priorities and cloud adoption efforts.
+This article outlines the process for defining your cloud strategy team. A cloud strategy team or function defines the motivations and business objectives for cloud adoption and transformation projects. These functions validate and maintain alignment between business priorities and cloud adoption efforts.
 
-:::image type="content" source="./media/caf-strategy-team.svg" alt-text="Diagram showing the phase for defining your cloud adoption strategy team.":::
+:::image type="content" source="./media/caf-strategy-team.svg" alt-text="Diagram that shows where defining your cloud adoption strategy team fits in among the cloud strategy phases.":::
 
-Establishing a _motivation-driven strategy_ helps map and align the initiatives with the desired business objectives. The cloud strategy team will help facilitate the alignment between the business and the adoption initiatives.
+Establishing a _motivation-driven strategy_ helps you map and align the initiatives with the desired business objectives. The cloud strategy team helps facilitate the alignment between the business and the adoption initiatives.
 
 ## Why do I need a cloud strategy team?
 
-Consider these reasons to establish a cloud strategy team:
+Consider these reasons for establishing a cloud strategy team:
 
-- _Align business and IT objectives_. Ensure your cloud initiatives are purpose-driven, tied to your motivations, and address specific business needs and priorities.
-- _Improve strategic decision-making_: Brings diverse perspectives to evaluate cloud capabilities and select solutions aligned with organizational goals.
-- _Accelerates cloud transformation_: Streamline the adoption process by creating a cohesive roadmap and clear ownership of initiatives.
-- _Reduces operational risks_: Identifies and mitigates potential challenges in security, compliance, and governance.
-- _Enhances innovation and flexibility_: Fosters a collaborative environment that encourages innovative uses of cloud technology, increasing responsiveness to market changes.
+- _Align business and IT objectives_. Ensure that your cloud initiatives are purpose-driven, are tied to your motivations, and address specific business needs and priorities.
+- _Improve strategic decision making_. Bring diverse perspectives to evaluate cloud capabilities and select solutions that are aligned with organizational goals.
+- _Accelerate cloud transformation_. Streamline the adoption process by creating a cohesive roadmap and clear ownership of initiatives.
+- _Reduce operational risks_. Identify and mitigate potential challenges in security, compliance, and governance.
+- _Enhance innovation and flexibility_. Foster a collaborative environment that encourages innovative uses of cloud technology and increases responsiveness to market changes.
 
 ## Recommended functions
 
-To be successful with implementing a cloud strategy team and help your business realize value with your cloud investments, consider having the following functions in your cloud strategy team. You can start small and expand the team over time – start by consulting stakeholders from across the organization and add more functions to your adoption strategy team as necessary.
+To be successful with implementing a cloud strategy team and help your business realize value with your cloud investments, consider including the following functions in your cloud strategy team. You can start small and expand the team over time. Start by consulting stakeholders from across the organization and add more functions to your adoption strategy team as necessary.
 
-Here’s a list of typical functions and how they’re relevant for a cloud adoption strategy:
+Here's a list of typical functions and how they're relevant for a cloud adoption strategy:
 
 - _Central IT_. Helps manage operational efficiency, optimizes IT resources, prepares the technical platforms, and ensures the scalability and availability of cloud services.
 - _Business decision makers (BDM)_. Ensures that cloud strategies drive business value and align with revenue generation, customer engagement, and operational goals.
 - _IT decision makers (ITDM)_. Bridges the gap between technology and business. Helps balance technological feasibility with business needs and ensure that new solutions align with existing IT frameworks and capabilities.  
-- _Lead architects_. Translates the business objectives into technical architectures, ensuring that cloud solutions are secure, scalable, reliable, and adaptable.
+- _Lead architects_. Translates the business objectives into technical architectures that ensure cloud solutions are secure, scalable, reliable, and adaptable.
 - _Cloud security teams_. Representatives from your security teams help ensure you protect your data end systems, ensuring new initiatives follow security standards and reduce the risks associated with cloud adoption.
 - _Compliance teams_. Minimizes legal and compliance risks. Ensures that all cloud practices meet regulatory and organizational compliance standards.
 - _Financial teams_. Consider having representatives from financial teams to help inform the IT and Business Decision Makers about the opportunities and risks of cloud investments.
