@@ -55,9 +55,9 @@ All the partners in the program adhere to ALZ best-practices. We vet partners to
 
 ## Option 2 - Partner offers
 
-We have a self-discovery process you can use to find a partner. [The Azure Customer Enablement Offers page](https://www.microsoft.com/azure/partners/practices/enable-customers-for-success/directory) is a marketplace of offers from certified Azure partners.
+We have a self-discovery process that you can use to find a partner. The [Find an Azure partner](https://azure.microsoft.com/partners/) page provides information about working with certified Azure partners and links to the offers.
 
-Each offer comes from Azure Advanced Specialization Partners or Azure Expert Managed Services Providers (MSPs). Microsoft also vets and approves each offer before it enters the marketplace.
+Offers come from Azure advanced specialization partners and Azure Expert Managed Services Providers (MSPs). Microsoft vets and approves each offer before it enters Azure Marketplace.
 
 Advanced specialization partners demonstrate deep technical knowledge, proven success, and ethical business practices. Azure Expert MSPs also meet these criteria but must additionally pass a time- and cost-intensive auditing process.
 
@@ -67,15 +67,19 @@ This flexibility creates value for you and allows you to find an offer that meet
 
 ### How to find partner offers
 
-To find a landing zone offer from a partner, follow these steps:
+1. Go to the [Find an Azure partner](https://azure.microsoft.com/partners/) page. This page provides information about both Azure advanced specialization partners and Azure Expert MSPs. 
 
-1. *Find landing zone offers* - The Azure Customer Enablement Offers link takes you to a page filled with available offers. Each tile or square on the page represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. The link at the bottom of each tile takes you to the partner offers.
+   In the **Azure advanced specialization partners** section, there's a list of links for specific types of migrations. Available offers are listed on the resulting pages.
 
-    - *Filter results* - In the "Cloud Adoption Framework Methodology" dropdown, select the "Ready" box. In the "Regions" dropdown, select your region. With these filters, you'll only see offers aligned to the Ready methodology in your region.
+   In the **Azure Expert MSPs** section, select **Find an Azure Expert Managed Service Provider** to go to a similar list of available offers.  
 
-    - *Look for landing zone offers* – Scan the links at the bottom of the tiles. Find and select landing zone offers. Not every tile on the page will be a landing zone offer, and some partners have more than one offer aligned to the Ready methodology. Select the offer links at the bottom of the tile to see the offer. Selecting the partner’s name or logo takes you to an overview of the partner.
+   Each tile or square on these offer pages represents a different offer. Some partners have multiple offers, so you might see a partner appear more than once. Selecting a tile takes you to the partner offer. (There's also a button for contacting the partner. See the next step.)
 
-1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
+   - You can filter the results by expanding the categories in the **Filters** section on the left side of the page. You can use the search box to filter that list. You can also filter the results by location. 
+
+   - Look for landing zone offers. Not every tile on the page will be a landing zone offer. Select **Contact me** to fill out a contact form. (See the next step.) Select anywhere else in the tile to see the details about the partner's offerings. The partner's technology specializations are listed in the tile. If there are more than one, there's a blue number next to the technology. Hover over the blue number to see the full list. 
+
+1. *Meet potential partners* – Use the **Contact me** button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
 1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of Azure Migrate and Modernize. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
 
@@ -88,7 +92,7 @@ Partner offers are vetted and approved for the marketplace. They follow CAF prin
 ## Links to find a landing zone partner
 
 - Option 1 - [Azure Migrate and Modernize](https://azure.microsoft.com/migration/migration-modernization-program/#program-form)
-- Option 2 - [Partner offers](https://www.microsoft.com/azure/partners/practices/enable-customers-for-success/directory)
+- Option 2 - [Find an Azure partner](https://azure.microsoft.com/partners/)
 
 ## Next steps
 

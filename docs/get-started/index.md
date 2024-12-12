@@ -21,7 +21,6 @@ Each of the following links takes you to questions that are typically asked when
 - [Align foundational concepts to onboard a person, project, or team](#align-foundation)
 - [Adopt the cloud to deliver business and technical outcomes sooner](#accelerate-adoption)
 - [Improve controls to ensure proper operations of the cloud](#improve-controls)
-- [Establish teams to support adoption and operations](#establish-teams)
 
 ## Cloud adoption scenarios
 
@@ -67,18 +66,6 @@ As your cloud adoption journey progresses, a solid operating model can help ensu
 | ----- | ----------- |
 | [How do we deliver operational excellence during cloud transformation?](./operational-excellence.md)                   | The steps in this guide can help the strategy team lead the organizational change management required to consistently ensure operational excellence. |
 | [How do we manage enterprise costs?](./manage-costs.md)                                          | This guide can help you start optimizing enterprise costs and manage cost across the environment.                                                                           |
-| [How do we consistently secure the enterprise cloud environment?](./security.md)             | This guide helps apply security controls across the enterprise to minimize vulnerabilities and accelerate incident response.                                       |
 | [How do we apply the right controls to improve reliability?](./reliability.md)                   | This guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
 | [How do we ensure performance across the enterprise?](./performance.md)                               | This guide can help you establish processes for maintaining performance across the enterprise.                               |
 
-## Establish teams
-
-Depending on your adoption strategy and operating model, you might need to establish a few teams. This section helps you get those new teams started.
-
-| Guide | Description |
-| ----- | ----------- |
-| [How do we align our organization?](./org-alignment.md)                               | This guide can help you establish an appropriately staffed organizational structure.                               |
-| [Do I need a cloud strategy team?](./team/cloud-strategy.md)     | This team ensures that cloud adoption efforts progress in alignment with business outcomes.                                |
-| [What does a cloud adoption team do?](./team/cloud-adoption.md)     | This team implements technical solutions outlined in the plan, and in accordance with governance requirements.             |
-| [How do I build a cloud governance team?](./team/cloud-governance.md) | This team ensures that risks and risk tolerance are properly evaluated and managed.                                         |
-| [How does a cloud operations team work?](./team/cloud-operations.md) | This team focuses on monitoring, repairing, and the remediation of issues related to traditional IT operations and assets. |

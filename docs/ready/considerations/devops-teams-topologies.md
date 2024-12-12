@@ -62,7 +62,7 @@ The following sections contain design recommendations to guide you as you design
 
 ### Align team topologies with your cloud operating model
 
-Make sure you align your team topologies with your desired [cloud operating model](../../get-started/org-alignment.md).
+Make sure you align your team topologies with your desired cloud operating model.
 
 Establish a core process for [operational fitness reviews](../../manage/operational-fitness-review.md) so you fully understand the problems that can result from your team structures.
 
