@@ -144,8 +144,6 @@ Portfolio hierarchy complexity informs organizational structures and methodologi
 
 - Use the previous steps to evaluate the [portfolio hierarchy accountability guidance](../resources/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities, if any, might need to be delivered by dedicated organizations or virtual teams.
 
-- Apply the portfolio hierarchy accountability guidance to the RACI (responsible, accountable, consulted, and informed) diagram using [Get started: Align your organization](./org-alignment.md).
-
 <br>
 
 | Accountable team | Responsible and supporting teams |
