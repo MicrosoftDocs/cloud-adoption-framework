@@ -185,20 +185,7 @@ Continuous improvement of the adoption team's ability to migrate workloads.
 
 ## Step 9: Hand off production workloads to cloud governance
 
-Governance is a key factor to the long-term success of any migration effort. Speed to migration and business impact is important. But speed without governance can be dangerous. Your organization needs to make decisions about governance that align to your adoption patterns and your governance and compliance needs.
-
-- [Governance approach](../govern/index.md): This methodology outlines a process for thinking about your corporate policy and processes. After determining your approach, you can build the disciplines required to enable governance across your enterprise cloud adoption efforts.
-- [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the disciplines needed to create a governance minimum viable product (MVP) that serves as the foundation for all adoption.
-- [Governance Benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e): Identify gaps in your organization's current state of governance. Get a personalized benchmark report and curated guidance on how to get started.
-
-**Deliverables:**
-
-- Deploy an initial governance foundation.
-- Complete a Governance Benchmark assessment to plan for future improvements.
-- Timeline risk:
-  - Improvement of policies and governance implementation can add one to four weeks per discipline.
-
-<br>
+[Governance](../govern/index.md) is a key factor to the long-term success of any migration effort. Speed to migration and business impact is important. But speed without governance can be dangerous. Your organization needs to make decisions about governance that align to your adoption patterns and your governance and compliance needs.
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -241,7 +228,7 @@ The Cloud Adoption Framework is a lifecycle solution that helps you begin a migr
 | Cloud adoption team | Use the [migration model](../migrate/migration-considerations/index.md) to learn about moving toward a migration factory that provides efficient ongoing migration capabilities. |
 | Cloud strategy team | Iteratively improve the [Strategy methodology](../strategy/index.md) and the [Plan methodology](../plan/index.md) along with the adoption plan. Review these overviews and continue iterating on your business and technical strategies. |
 | Cloud platform team | Revisit the [Ready methodology](../ready/index.md) to continue to advance the overall cloud platform that supports migration or other adoption efforts. |
-| Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes, policies, and disciplines. |
+| Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes and policies. |
 | Cloud operations team | Build on the [Manage methodology](../manage/index.md) to provide richer operations in Azure. |
 
 If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [Strategic Migration Assessment and Readiness Tool (SMART)](/assessments/Strategic-Migration-Assessment/). The answers you provide help identify which guidance aligns best with your current needs.
