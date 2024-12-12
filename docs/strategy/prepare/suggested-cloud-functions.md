@@ -66,8 +66,6 @@ Typically, the following roles provide cloud adoption functions. When you define
 
 ### Responsibilities
 
-- _Primary focus_. Implement the technical solutions outlined in the cloud adoption plan.
-
 Ideally, the cloud adoption team delivers on the following tasks.
 
 - Define and implement the [cloud adoption plan](../../plan/index.md).
@@ -104,7 +102,7 @@ To learn more, see [Build a cloud governance team](../../govern/build-cloud-gove
 
 ## Cloud Center of Excellence (CCoE) functions
 
-A cloud center of excellence (CCoE) is a function that helps organizations balance speed and stability while they pursue this objective.
+A cloud center of excellence (CCoE) is a function that helps organizations balance speed and stability while they pursue business and technical agility.
 
 Without a CCoE, organizations often struggle to balance the need for speed and agility with the need for stability and governance. The CCoE helps organizations achieve this balance by providing a centralized function that can help teams across the organization adopt cloud technologies in a consistent and secure manner.
 
