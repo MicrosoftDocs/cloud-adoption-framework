@@ -49,7 +49,29 @@ Typical responsibilities include:
 - Review and [inform your strategy](../inform/index.md) on business outcomes and financial models in alignment with business objectives.
 - Develop and maintain a [cloud adoption strategy](../index.md) and roadmap
 
-## Cloud adoption functions
+## Cloud adoption/migration functions
+
+The primary need from any cloud adoption function is the timely, high-quality implementation of the technical solutions outlined in the adoption plan. These solutions should align with governance requirements and business outcomes, and should take advantage of technology, tools, and automation solutions that are available to the team.
+
+### Roles
+
+Typically, the following roles provide cloud adoption functions. When you define your cloud adoption team, be sure it includes a diverse set of skills and experiences to ensure that all aspects of the cloud adoption journey are covered:
+
+- Infrastructure implementers
+- DevOps engineers
+- Application developers
+- Data scientists
+- Data or application platform specialists
+- Solution architects
+
+### Responsibilities
+
+- _Primary focus_. Implement the technical solutions outlined in the cloud adoption plan.
+
+Ideally, the cloud adoption team delivers on the following tasks and allocates sufficient time for implementation.
+
+- Define and implement the [cloud adoption plan](../../plan/index.md).
+- Review and drive [modernization](../../modernize/index.md) and [migration](../../migrate/index.md) efforts.
 
 ## Cloud governance functions
 
