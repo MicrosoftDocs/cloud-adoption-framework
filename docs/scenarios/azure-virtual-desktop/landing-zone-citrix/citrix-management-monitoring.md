@@ -2,7 +2,7 @@
 title: Management baseline for Citrix on Azure
 description: Learn how the management baseline can improve management and monitoring of Citrix on Azure.
 author: BenMartinBaur
-ms.author: martinek
+ms.author: bebaur
 ms.date: 01/06/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
