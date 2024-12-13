@@ -39,7 +39,7 @@ Consider the importance of mapping AI to your business objectives. There are man
 
 ## Responsible and trusted AI
 
-The six key principles for responsible AI at Microsoft include fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Use these principles to create responsible and trustworthy AI as you integrate it into mainstream products and services throughout your AI adoption.
+The six key principles for responsible AI at Microsoft include fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Apply these principles to create responsible and trustworthy AI as you integrate it into mainstream products and services throughout your AI adoption.
 
 ### Responsible AI principles
 
@@ -50,7 +50,7 @@ Six key principles define responsible AI:
 - *Fairness*. AI systems should treat everyone equally and provide the same recommendations to all individuals. Fairness in AI systems prevents discrimination based on personal characteristics.
 - *Reliability and safety*. AI systems must operate reliably, safely, and consistently under various conditions to help build trust.
 - *Privacy and security*. AI systems should respect privacy and maintain security by protecting private and confidential information. They should also resist attacks and attempts to corrupt or compromise the system.
-- *Inclusiveness*. AI systems should empower and engage everyone. Inclusive design practices can help AI system developers understand and address potential exclusion barriers in a product or service. Inclusiveness fosters innovation and helps design experiences that benefit everyone.
+- *Inclusiveness*. AI systems should empower and engage everyone. Inclusive design practices can help AI system developers understand and address potential exclusion barriers in a product or service. Inclusiveness fosters innovation and helps you design experiences that benefit everyone.
 - *Transparency*. AI systems should be transparent and understandable. AI systems can inform decisions that can deeply affect people's lives, so it's crucial for individuals to understand how the system makes these decisions.
 - *Accountability*. AI systems and their developers should be accountable and answerable.
 
