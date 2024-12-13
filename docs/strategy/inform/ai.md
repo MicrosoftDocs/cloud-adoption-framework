@@ -1,5 +1,5 @@
 ---
-title: AI considerations in your cloud strategy
+title: AI Considerations for Your Cloud Strategy
 description: Learn about considerations for integrating Artificial Intelligence (AI) into your cloud adoption strategy. 
 ms.author: tozimmergren
 author: Zimmergren
@@ -8,7 +8,7 @@ ms.date: 12/11/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# AI considerations in your cloud strategy
+# AI considerations for your cloud strategy
 
 AI is revolutionizing cloud adoption strategies by enhancing efficiency, scalability, and innovation. Integrate AI into your cloud platform to use advanced analytics, machine learning, and automation to optimize operations and drive business growth.
 
