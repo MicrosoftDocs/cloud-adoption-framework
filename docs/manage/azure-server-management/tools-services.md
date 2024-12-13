@@ -78,8 +78,6 @@ These services are essential to supporting ongoing operations:
 
 Adopting and moving to the cloud creates new management challenges. It requires a different mindset as you shift from an operational management burden to monitoring and governance. The Cloud Adoption Framework starts with [governance](../../govern/index.md). The framework explains how to migrate to the cloud, what the journey will look like, and who should be involved.
 
-The governance design for standard organizations often differs from governance design for complex enterprises. To learn more about governance best practices for a standard organization, see the [standard enterprise governance guide](../../govern/guides/standard/index.md). To learn more about governance best practices for a complex enterprise, see the [governance guide for complex enterprises](../../govern/guides/complex/index.md).
-
 ## Billing information
 
 To learn about pricing for Azure management services, go to these pages:
