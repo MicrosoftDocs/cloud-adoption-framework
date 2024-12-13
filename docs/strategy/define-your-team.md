@@ -27,16 +27,16 @@ Consider these reasons for establishing a cloud strategy team:
 
 ## Recommended functions
 
-To be successful with implementing a cloud strategy team and help your business realize value with your cloud investments, consider including the following functions in your cloud strategy team. You can start small and expand the team over time. Start by consulting stakeholders from across the organization and add more functions to your adoption strategy team as necessary.
+To successfully implement a cloud strategy team and help your business realize value from your cloud investments, consider including the following functions in your cloud strategy team. You can start small and expand the team over time. Start by consulting stakeholders from across the organization and add more functions to your adoption strategy team as necessary.
 
-Here's a list of typical functions and how they're relevant for a cloud adoption strategy:
+Here's a list of typical functions and their relevance for a cloud adoption strategy:
 
 - _Central IT_ helps manage operational efficiency, optimizes IT resources, prepares the technical platforms, and ensures the scalability and availability of cloud services.
 - _Business decision makers (BDM)_ ensure that cloud strategies drive business value and align with revenue generation, customer engagement, and operational goals.
 - _IT decision makers (ITDM)_ bridge the gap between technology and business. They help balance technological feasibility with business needs and ensure that new solutions align with existing IT frameworks and capabilities.  
 - _Lead architects_ translate the business objectives into technical architectures that ensure cloud solutions are secure, scalable, reliable, and adaptable.
 - _Representatives from cloud security teams_ help ensure that you protect your data end systems. They ensure that new initiatives follow security standards to reduce the risks that are associated with cloud adoption.
-- _Compliance teams_ minimize legal and compliance risks. They ensure that all cloud practices meet regulatory and organizational compliance standards.
+- _Compliance teams_ minimize legal and compliance risks. They help ensure that all cloud practices meet regulatory and organizational compliance standards.
 - _Financial teams_. Consider including representatives from financial teams to help inform the IT and business decision makers about the opportunities and risks of cloud investments.
 - _Executives_ provide top-down support and strategic oversight. Including someone from your leadership team or executive stakeholders can help drive organizational commitments to ensure that cloud adoption aligns with the company’s overall mission and strategic objectives.
 
@@ -55,13 +55,13 @@ Your cloud strategy team should continuously seek input from across the business
 
 - _Start small and expand_. Define the core members of the initial team. Core members at this stage typically include IT, finance, and security. Seek input from other functions as necessary for the first iterations of your strategy.
 
-- _Define the role of your strategy team_. Ensure that you map your business requirements and objectives to the operational responsibility of the cloud adoption strategy team. Having a clear accountability structure in place helps when you communicate organizational changes or invest in new initiatives to enhance your cloud maturity.
+- _Define the role of your strategy team_. Ensure that you map your business requirements and objectives to the operational responsibility of the cloud adoption strategy team. A clear accountability structure helps when you communicate organizational changes or invest in new initiatives to enhance your cloud maturity.
 
 - _Review the strategy team memberships_. Regularly review the strategy team to ensure that you have representation across the business and that you have the right stakeholders and collaborators involved. Doing so helps uncover both opportunities and risks. Both should be fairly represented as the strategy evolves.
 
 - _Iterate on your strategy_. Create an initial strategy draft with your core team, consulting with business leaders and stakeholders. Use the first iteration to explore business goals that you can achieve through cloud adoption. When you have executive support to proceed, expand the scope and detail of your strategy team as necessary.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Prepare your organization for cloud adoption](./prepare.md)
