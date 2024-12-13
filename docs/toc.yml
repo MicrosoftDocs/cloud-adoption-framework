@@ -923,34 +923,6 @@ items:
         href: organize/cloud-automation.md
       - name: Cloud data functions
         href: organize/cloud-data.md
-      - name: Cloud security functions
-        items:
-        - name: Cloud security team functions
-          href: organize/cloud-security.md
-        - name: Policy and standards
-          href: organize/cloud-security-policy-standards.md
-        - name: Security operations center (SOC)
-          href: organize/cloud-security-operations-center.md
-        - name: Security architecture
-          href: organize/cloud-security-architecture.md
-        - name: Security compliance management
-          href: organize/cloud-security-compliance-management.md
-        - name: People security
-          href: organize/cloud-security-people.md
-        - name: Application security and DevSecOps
-          href: organize/cloud-security-application-security-devsecops.md
-        - name: Data security
-          href: organize/cloud-security-data-security.md
-        - name: Infrastructure and endpoint security
-          href: organize/cloud-security-infrastructure-endpoint.md
-        - name: Identity and keys
-          href: organize/cloud-security-identity-keys.md
-        - name: Threat intelligence
-          href: organize/cloud-security-threat-intelligence.md
-        - name: Posture management
-          href: organize/cloud-security-posture-management.md
-        - name: Incident preparation
-          href: organize/cloud-security-incident-preparation.md
 
     - name: Mature teams structure
       href: organize/organization-structures.md

@@ -120,9 +120,7 @@ Discussing planned innovations with the governance team helps you avoid many blo
 
 These links help the adoption team understand the approach of the cloud governance team:
 
-- [Governance approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then you can build the disciplines required to deliver on governance across your cloud enterprise efforts.
-- [Definition of corporate policy](../govern/corporate-policy.md): Identify and mitigate business risks.
-
+- [Governance approach](../govern/index.md): This methodology outlines a process for managing risk and establishing guardrails across the Azure environment.
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -231,5 +229,5 @@ The following teams can use these next steps to continue to advance the maturity
 | Cloud&nbsp;adoption&nbsp;team | [Process improvements](../innovate/considerations/index.md) provide insight about approaches to deliver on innovations that affect customers and drive recurring adoption. |
 | Cloud&nbsp;strategy&nbsp;team | The [Strategy methodology](../strategy/index.md) and the [Plan methodology](../plan/index.md) are iterative processes that evolve with the adoption plan. Return to these overview pages and continue to iterate on your business and technical strategies. |
 | Cloud&nbsp;platform&nbsp;team | Revisit the [Ready methodology](../ready/index.md) to continue to advance the overall cloud platform that supports migration or other adoption efforts. |
-| Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes, policies, and disciplines. |
+| Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes and policies. |
 | Cloud&nbsp;operations&nbsp;team | Build on the [Manage methodology](../manage/index.md) to provide richer operations in Azure. |

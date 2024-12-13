@@ -56,9 +56,7 @@ The [cloud adoption team](./cloud-adoption.md) is at the center of all adoption 
 
 ## Cloud governance team
 
-Generally, the [cloud governance team](./cloud-governance.md) is responsible for cost management across the entire cloud-adoption effort. As outlined in the [Cost Management discipline](../govern/cost-management/index.md) topic of the Govern methodology of the Cloud Adoption Framework, cost management is the first of the Five Disciplines of Cloud Governance. Those articles outline a-series of deeper responsibilities for the cloud governance team.
-
-This effort focuses on the following activities that are related to the development of a cost-conscious organization:
+Generally, the [cloud governance team](./cloud-governance.md) establishes guardrails for cost management across the cloud. This effort focuses on the following activities that are related to the development of a cost-conscious organization:
 
 - **Visibility:** The cloud governance team works as a peer of the cloud strategy team to plan cloud-adoption budgets. These two teams also work together to regularly review actual expenses. The cloud governance team is responsible for ensuring consistent, reliable cost reporting and performance telemetry.
 

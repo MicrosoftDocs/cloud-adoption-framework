@@ -16,7 +16,7 @@ These identity management systems play an important role. They help designing an
 
 ## Managed identity
 
-At creation, the Microsoft Entra ID system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). By granting this identity access to Azure resources, you can enable applications on your server are able to use it to access Azure resources (for example, to request secrets from a Key Vault). You should:
+At creation, the Microsoft Entra ID system-assigned identity can only be used to update the status of the Azure Arc-enabled servers, for example, the 'last seen' heartbeat. Grant identity access to Azure resources to enable applications on your server to access Azure resources, for example, to request secrets from a Key Vault. You should:
 
 - Consider which legitimate use-cases exist for server applications to [obtain access tokens](/azure/azure-arc/servers/managed-identity-authentication) and access Azure resources, while also planning for access control of these resources.
 - Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or [Hybrid Agent Extensions Applications group](/azure/azure-arc/servers/agent-overview#windows-agent-installation-details) on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
@@ -26,7 +26,7 @@ At creation, the Microsoft Entra ID system-assigned identity can only be used to
 
 Following the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle), users, groups, or applications assigned with roles like "contributor" or "owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions, effectively delegating root or administrator access on Azure Arc-enabled servers. These roles should be used with caution, to limit the possible blast radius or eventually replaced by custom roles.
 
-To limit the privilege of a user and only allow them to onboard servers to Azure, the Azure Connected Machine Onboarding role is suitable. This role can only be used to onboard servers and cannot re-onboard or delete the server resource. Make sure to review the [Azure Arc-enabled servers security overview](/azure/azure-arc/servers/security-overview) for more information about access controls.
+To limit the privilege of a user and only allow them to onboard servers to Azure, the Azure Connected Machine Onboarding role is suitable. This role can only be used to onboard servers and can't re-onboard or delete the server resource. Make sure to review the [Azure Arc-enabled servers security overview](/azure/azure-arc/servers/security-overview) for more information about access controls.
 
 Also consider the sensitive data that might be sent to the Azure Monitor Log Analytics workspace--the same RBAC principle should be applied to the data itself. Read access to Azure Arc-enabled servers can provide access to log data collected by the Log Analytics agent, stored in the associated Log Analytics workspace. Review how to implement granular Log Analytics workspace access in the [designing your Azure Monitor Logs deployment documentation](/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
 
