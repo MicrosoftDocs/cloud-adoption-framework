@@ -27,7 +27,7 @@ Follow these steps to assess and document your cloud adoption maturity:
 
 1. **Identify gaps:** Discover gaps that you might have in your current cloud adoption strategy and document them.
 1. **Get guidance:** Define action points based on the gaps that you identify. Educate your business about potential action points and information that you must implement in your new or updated cloud strategy. Use guidance from the assessment to discover how to address gaps.
-1. **Iterate plans:** Do this assessment iteratively as your cloud adoption strategy matures. Iterate and refine as necessary across the lifecycle of your cloud footprint.
+1. **Iterate plans:** Do this assessment iteratively as your cloud adoption strategy matures. Iterate and refine as necessary across the life cycle of your cloud footprint.
 
 ## Next step
 
