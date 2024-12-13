@@ -20,7 +20,7 @@ Consider the importance of mapping AI to your business objectives. There are man
 
 - *Improved efficiency and agility*. Automate repetitive tasks to save time and reduce operational costs.
 - *Enhanced decision making*. Get data-driven insights to support more accurate and timely decisions.
-- *Improved customer experience*. Get personalized interactions and improved satisfaction and loyalty.
+- *Improved customer experience*. Get personalized interactions and improved customer satisfaction and loyalty.
 - *Scalability and financial efficiency*. Expand your capabilities without proportional increases in cost.
 - *Innovation*. Unlock new products, services, and business models.
 - *More value from data*. Extract new value from your existing data.
@@ -71,9 +71,9 @@ Incorporate responsible AI principles throughout your AI adoption journey, from 
 
 Follow these recommendations to inform your cloud adoption strategy of AI considerations.
 
-- *Incorporate responsible AI in your AI adoption*: Incorporate ethical frameworks and regulatory practices into your AI implementation plan. To learn more, see [AI Plan - Recommendations for organizations planning AI adoption](../../scenarios/ai/plan.md#implement-responsible-ai).
+- *Incorporate responsible AI into your AI adoption*: Incorporate ethical frameworks and regulatory practices into your AI implementation plan. To learn more, see [AI Plan - Recommendations for organizations planning AI adoption](../../scenarios/ai/plan.md#implement-responsible-ai).
 
-- *Learn about the transparency notes for Azure services*: To understand the responsible use of Microsoft-related AI services, see how Microsoft promotes [responsible use of AI with Azure AI services](/azure/ai-services/responsible-use-of-ai-overview). Use this information in your cloud adoption strategy so you can inform your stakeholders, partners, and customers about the responsible adoption of AI technologies.
+- *Learn about the transparency notes for Azure services*: To understand the responsible use of Microsoft-related AI services, see how Microsoft promotes [responsible use of AI with Azure AI services](/azure/ai-services/responsible-use-of-ai-overview). Use this information in your cloud adoption strategy so that you can inform your stakeholders, partners, and customers about the responsible adoption of AI technologies.
 
 - *Learn about Microsoft Azure AI Content Safety*: Learn how to detect harmful user-generated and AI-generated content in applications and services and inform your strategy about these capabilities. For more information, see [Azure AI Content Safety documentation](/azure/ai-services/content-safety/).
 
