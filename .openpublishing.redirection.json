@@ -2289,6 +2289,71 @@
          "source_path": "docs/get-started/org-alignment.md",
          "redirect_url": "/azure/cloud-adoption-framework/organize",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-application-security-devsecops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-architecture.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-compliance-management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-data-security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-identity-keys.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-incident-preparation.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-infrastructure-endpoint.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-operations-center.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-people.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-policy-standards.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-posture-management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-threat-intelligence.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
+         "redirect_document_id": false
       }
    ]
 }
