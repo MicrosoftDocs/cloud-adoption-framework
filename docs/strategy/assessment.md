@@ -1,34 +1,35 @@
 ---
-title: Assess your cloud adoption strategy
-description:  Learn how to assess your existing cloud adoption strategy to inform your organization about your current cloud maturity.
+title: Assess Your Cloud Adoption Strategy
+description: Learn how to assess your existing cloud adoption strategy so that you can identify gaps in your strategy and take action to improve.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 12/12/2024
 ---
 
 # Assess your cloud adoption strategy
 
-This article outlines the process to assess your existing cloud adoption strategy to inform your organization about your current cloud maturity.
+This article outlines a process that you can use to assess your existing cloud adoption strategy. Use the feedback from your assessment to inform your organization of your current cloud maturity, identify gaps in your strategy, and take action to improve.
 
-:::image type="content" source="./media/caf-strategy-assess.svg" alt-text="Diagram showing the phase for assessing your cloud adoption strategy.":::
+:::image type="content" source="./media/caf-strategy-assess.svg" alt-text="Diagram that shows the phase for assessing your cloud adoption strategy." border="false":::
 
-Every cloud journey is unique and should be aligned with your business goals. Optimization of both the cloud adoption strategy and your execution is key when migrating or innovating in the cloud. With multiple cloud services and pathways available, choosing the right solution requires the right level of understanding.
+Every cloud journey is unique, and you should align your strategy with your business goals. You must optimize your cloud adoption strategy and your plan to implement your strategy when you migrate or innovate in the cloud. You can choose between several cloud services and pathways for cloud adoption. Understand your options so that you can choose the right solution for your organization.
 
 ## Assessment review tool
 
-Assess your *current* cloud strategy posture with the [Cloud Adoption Strategy Evaluator](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) assessment tool.
+To assess your current cloud strategy posture, use the [Cloud Adoption Strategy Evaluator](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) assessment tool. 
 
-:::image type="content" source="./media/cloud-adoption-strategy-evaluator-assessment.png" alt-text="A screenshot of the Cloud Adoption Strategy Evaluator assessment":::
+:::image type="content" source="./media/cloud-adoption-strategy-evaluator-assessment.png" alt-text="A screenshot that shows the Cloud Adoption Strategy Evaluator assessment.":::
 
 Follow these steps to assess and document your cloud adoption maturity:
 
-1. *Assess*: Use the [Cloud Adoption Strategy Evaluator](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/).
-1. *Identify gaps*: Discover any gaps you might have in your current cloud adoption strategy and document them.
-1. *Guidance*: Use the identified gaps to educate your business on potential action points and information you need to bring into your new or updated cloud strategy. Use the guidance provided to discover how you can address any gaps.
-1. *Iterate*: Do this assessment iteratively as your cloud adoption strategy matures. Iterate and refine as necessary across the lifecycle of your cloud footprint.
+1. **Assess maturity:** Use the [Cloud Adoption Strategy Evaluator assessment](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/).
 
-## Next steps
+1. **Identify gaps:** Discover gaps that you might have in your current cloud adoption strategy and document them.
+1. **Get guidance:** Define action points based on the gaps that you identify. Educate your business about potential action points and information that you must implement in your new or updated cloud strategy. Use guidance from the assessment to discover how to address gaps.
+1. **Iterate plans:** Do this assessment iteratively as your cloud adoption strategy matures. Iterate and refine as necessary across the life cycle of your cloud footprint.
+
+## Next step
 
 > [!div class="nextstepaction"]
-> [Motivations - Why are you moving to or expanding in the cloud?](motivations.md)
+> [Determine your motivations to move to or expand in the cloud](motivations.md)
