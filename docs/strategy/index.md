@@ -19,7 +19,7 @@ The journey to successfully maturing in the cloud, or to expanding your footprin
 
 Organizations typically mature in iterations. Consider the Cloud Adoption Framework Strategy guide an iterative supplement to your cloud adoption strategy. Revisit the guide to reassess and iterate regularly.
 
-Whether you're an existing cloud customer that wants to mature your cloud environment or you're new to the cloud, this guidance helps you establish a clear mission, goals, and measurable results. It also provides strategic insights to help you make informed decisions about your cloud investments.
+Whether you're an existing cloud customer who wants to mature your cloud environment or you're new to the cloud, this guidance helps you establish a clear mission, goals, and measurable results. It also provides strategic insights to help you make informed decisions about your cloud investments.
 
 ## Benefits of a cloud adoption strategy
 
