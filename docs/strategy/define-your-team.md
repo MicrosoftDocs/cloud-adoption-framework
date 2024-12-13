@@ -35,7 +35,7 @@ Here's a list of typical functions and how they're relevant for a cloud adoption
 - _Business decision makers (BDM)_ ensure that cloud strategies drive business value and align with revenue generation, customer engagement, and operational goals.
 - _IT decision makers (ITDM)_ bridge the gap between technology and business. They help balance technological feasibility with business needs and ensure that new solutions align with existing IT frameworks and capabilities.  
 - _Lead architects_ translate the business objectives into technical architectures that ensure cloud solutions are secure, scalable, reliable, and adaptable.
-- _Cloud security teams_. Representatives from your security teams help ensure that you protect your data end systems. They ensure that new initiatives follow security standards to reduce the risks that are associated with cloud adoption.
+- _Representatives from cloud security teams_ help ensure that you protect your data end systems. They ensure that new initiatives follow security standards to reduce the risks that are associated with cloud adoption.
 - _Compliance teams_ minimize legal and compliance risks. They ensure that all cloud practices meet regulatory and organizational compliance standards.
 - _Financial teams_. Consider including representatives from financial teams to help inform the IT and business decision makers about the opportunities and risks of cloud investments.
 - _Executives_ provide top-down support and strategic oversight. Including someone from your leadership team or executive stakeholders can help drive organizational commitments to ensure that cloud adoption aligns with the company’s overall mission and strategic objectives.
@@ -46,7 +46,7 @@ Your cloud strategy team should continuously seek input from across the business
 
 - _Finance leadership_ guides budgeting, cost management, and financial planning. They help maximize the return on cloud investments by ensuring financial efficiency and compliance with corporate financial policies.
 - _Marketing_ shapes brand reputation and customer engagement strategies. They ensure that cloud capabilities support customer acquisition, retention, and digital marketing initiatives to enhance overall brand value.
-- _Sales_ drives revenue growth and improves customer relationships. They aligns cloud solutions with sales goals to help streamline sales processes, boost efficiency, and improve customer lifetime value.
+- _Sales_ drives revenue growth and improves customer relationships. They align cloud solutions with sales goals to help streamline sales processes, boost efficiency, and improve customer lifetime value.
 - _Human resources (HR)_ provides insights and support that directly influence the success and sustainability of the transformation. If you have recruitment, re-skilling, or workforce planning requirements because of new areas for innovation, HR is a crucial partner.
 - _Executive leadership_ helps you meet market growth requirements and environmental sustainability metrics. 
 - _Sustainability leads_ drive sustainability as a strategy throughout the business. Sustainability is aligned with the company's commitments.
@@ -55,11 +55,11 @@ Your cloud strategy team should continuously seek input from across the business
 
 - _Start small and expand_. Define the core members of the initial team. Core members at this stage typically include IT, finance, and security. Seek input from other functions as necessary for the first iterations of your strategy.
 
-- _Define the role of your strategy team_. Ensure you map your business requirements and objectives to the operational responsibility of the cloud adoption strategy team. Having a clear accountability structure in place will help when you communicate organizational changes or invest in new initiatives to enhance your cloud maturity.
+- _Define the role of your strategy team_. Ensure that you map your business requirements and objectives to the operational responsibility of the cloud adoption strategy team. Having a clear accountability structure in place helps when you communicate organizational changes or invest in new initiatives to enhance your cloud maturity.
 
-- _Review the strategy team memberships_. Make a habit to regularly review the strategy team and ensure you’ve got representation across the business, ensuring you’ve got the right stakeholders and collaborators involved over time. This will help uncover both opportunities and risks, and both should be fairly represented as the strategy evolves.
+- _Review the strategy team memberships_. Regularly review the strategy team to ensure that you have representation across the business and that you have the right stakeholders and collaborators involved. Doing so helps uncover both opportunities and risks. Both should be fairly represented as the strategy evolves.
 
-- _Iterate on your strategy_. Create an initial strategy draft with your core team in consultation with business leaders and stakeholders. Use the first iteration to explore business goals that can be achieved through cloud adoption. Once you have executive support to proceed, expand the scope and detail of your strategy team as necessary.
+- _Iterate on your strategy_. Create an initial strategy draft with your core team, consulting with business leaders and stakeholders. Use the first iteration to explore business goals that you can achieve through cloud adoption. When you have executive support to proceed, expand the scope and detail of your strategy team as necessary.
 
 ## Next steps
 
