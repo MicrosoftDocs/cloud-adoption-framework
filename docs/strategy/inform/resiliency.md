@@ -56,20 +56,20 @@ Here are a few examples of the importance of resiliency in a cloud adoption stra
 | *Configuration issues* | Deployment errors or misconfigurations. | Treat configuration changes as code changes by using infrastructure as code (IaC). Use continuous integration/continuous deployment (CI/CD) pipelines, canary deployments, and rollback mechanisms to minimize the impact of faulty updates or deployments. |
 | *Demand spikes or overload* | Performance degradation during peak usage or spikes in traffic. | Use elastic scalability to ensure that systems automatically scale to handle an increased demand without disruption to service. |
 | *Compliance failures* | Breaches of regulatory standards. | Adopt compliance tools like Microsoft Purview, and use Azure Policy to enforce compliance requirements. |
-| *Natural disasters* | Datacenter outages caused by earthquakes, floods, or storms. | Plan for failover, high availability, and disaster recovery by using availability zones, multiple regions, or even multi-cloud approaches. |
+| *Natural disasters* | Datacenter outages caused by earthquakes, floods, or storms. | Plan for failover, high availability, and disaster recovery by using availability zones, multiple regions, or even multicloud approaches. |
 
 **Recommendations**
 
-Follow these recommendations to inform your cloud adoption strategy of resilience considerations. 
+Follow these recommendations to inform your cloud adoption strategy of resilience considerations.
 
 - *Perform a business impact analysis (BIA)*: Define the criticality of various systems and applications to help prioritize resource and recovery efforts. Perform this analysis iteratively throughout your cloud adoption.
-- *Perform a risk assessment*: Identify potential threats and vulnerabilities that could impact your cloud infrastructure and use this to build mitigation strategies and inform your resilience and reliability plans.
+- *Perform a risk assessment*: Identify potential threats and vulnerabilities that could affect your cloud infrastructure and use them to build mitigation strategies and inform your resilience and reliability plans.
 - *Complete a cost-benefit analysis*: Map out and understand how investments in your cloud adoption are aligned with business continuity requirements and SLAs.
-- *Understand shared responsibility*: Ensure your strategy team includes details about the shared responsibility model in the cloud, including what it means for reliability. For more information, see [reliability requirements](/azure/reliability/overview#reliability-requirements).
-- *Understand Azure reliability*: Use the [Azure reliability documentation](/azure/reliability/overview) to build a better understanding of how reliability and resiliency works in Azure.
-- *Understand Azure services reliability capabilities*: Explore the [Azure service reliability guides](/azure/reliability/overview-reliability-guidance) to inform your adoption strategy about reliability capabilities for specific Azure services.
-- *Understand recovery objectives*: Build an understanding of [Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO)](/azure/reliability/overview#rto-and-rpo-) as part of your cloud adoption strategy to understand downtime and data loss limits for your systems.
-- *Define realistic reliability targets*: Set realistic expectations with your internal stakeholders about reliability and use contractual agreements to communicate those expectations to customers. See Azure Well-Architected Framework's [Recommendations for defining reliability targets](/azure/well-architected/reliability/metrics).
+- *Understand shared responsibility*: Ensure that your strategy team includes details about the shared responsibility model in the cloud, including how it affects reliability. For more information, see [reliability requirements](/azure/reliability/overview#reliability-requirements).
+- *Understand Azure reliability*: Use the [Azure reliability documentation](/azure/reliability/overview) to gain a better understanding of how reliability and resiliency work in Azure.
+- *Understand the reliability capabilities of Azure services*: Review the [Azure service reliability guides](/azure/reliability/overview-reliability-guidance) to inform your adoption strategy about reliability capabilities for specific Azure services.
+- *Understand recovery objectives*: Learn about [Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO)](/azure/reliability/overview#rto-and-rpo-) as part of your cloud adoption strategy to understand downtime and data loss limits for your systems.
+- *Define realistic reliability targets*: Set realistic expectations with your internal stakeholders about reliability, and use contractual agreements to communicate those expectations to customers. See the Azure Well-Architected Framework [Recommendations for defining reliability targets](/azure/well-architected/reliability/metrics).
 
 ## Next steps
 
