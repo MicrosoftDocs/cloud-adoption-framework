@@ -14,7 +14,7 @@ This design area creates a foundation for security across your Azure, hybrid, an
 
 ## Design area review
 
-**Involved roles or functions:** This design area is led by [cloud security](../../../organize/cloud-security.md), specifically the [security architects within that team](../../../organize/cloud-security-architecture.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) are required to review networking and identity decisions. The collective roles might be required to define and implement the technical requirements coming from this exercise. More advanced security guardrails might also need support from [cloud governance](../../../organize/cloud-governance.md).
+**Involved roles or functions:** This design area is led by [cloud security](../../../secure/teams-roles.md), specifically the [security architects within that team](../../../secure/teams-roles.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) are required to review networking and identity decisions. The collective roles might be required to define and implement the technical requirements coming from this exercise. More advanced security guardrails might also need support from [cloud governance](../../../organize/cloud-governance.md).
 
 **Scope:** The goal of this exercise is to understand security requirements and implement them consistently across all workloads in your cloud platform. The primary scope of this exercise focuses on security operations tooling and access control. This scope includes Zero Trust and advanced network security.
 

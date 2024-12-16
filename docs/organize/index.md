@@ -44,7 +44,7 @@ This list contains the functions required to succeed at cloud adoption and longe
 - [Cloud platform](./cloud-platform.md): Operate and mature the platform.
 - [Cloud automation](./cloud-automation.md): Accelerate adoption and innovation.
 - [Cloud data](./cloud-data.md): Manage data and enable analytics solutions.
-- [Cloud security](./cloud-security.md): Manage information security risk.
+- [Cloud security](../secure/teams-roles.md): Manage information security risk.
 
 To some degree, each of these functions are delivered in every cloud adoption effort. The delivery is either explicit or follows a defined team structure.
 

@@ -133,4 +133,4 @@ When you originate default routes in Azure, special care must be taken to avoid 
 - For more information on internet connectivity for Azure VMware Solution, see [Internet connectivity design considerations](/azure/azure-vmware/concepts-design-public-internet-access).
 
   > [!div class="nextstepaction"]
-  > [Example architectures for Azure VMware Solutions](./example-architectures.md)
+  > [Example architectures for Azure VMware Solution](./example-architectures.md)

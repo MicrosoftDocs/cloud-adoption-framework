@@ -2,7 +2,7 @@
 title: Resource organization considerations for Citrix on Azure
 description: Learn about the resource organization design area and how to apply it to your Citrix on Azure implementation.
 author: BenMartinBaur
-ms.author: martinek
+ms.author: bebaur
 ms.date: 02/06/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
