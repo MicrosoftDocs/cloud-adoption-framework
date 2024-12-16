@@ -1,6 +1,6 @@
 ---
 title: Resiliency Considerations for Your Cloud Strategy
-description: Learn about the importance of resiliency and to plan for the unexpected in your cloud adoption strategy.
+description: Learn about the importance of resiliency and how to plan for the unexpected in your cloud adoption strategy.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.date: 12/11/2024
 
 # Resiliency considerations for your cloud strategy
 
-Resiliency is the ability of your infrastructure to maintain functionality and availability despite disruptions or failures. It's a cornerstone of any successful cloud adoption strategy. Design your cloud infrastructure with resiliency in mind to minimize the impact of disruptions. Doing so helps you to maintain continuity and reliability for your business operations.
+Resiliency is the ability of your infrastructure to maintain functionality and availability despite disruptions or failures. It's a cornerstone of any successful cloud adoption strategy. Design your cloud infrastructure with resiliency in mind to minimize the impact of disruptions. Doing so helps you to maintain continuity and reliability in your business operations.
 
 Consider that the more tightly integrated your business is with your technology, the more important the resiliency of that technology is.
 
