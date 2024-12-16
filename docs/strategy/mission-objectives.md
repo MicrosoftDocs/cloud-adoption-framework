@@ -1,104 +1,105 @@
 ---
-title: Cloud adoption strategy mission and objectives
-description: Learn how to define your mission and objectives, and how to measure success with your cloud adoption strategy.
+title: Define Your Cloud Adoption Strategy Mission and Objectives
+description: Learn about recommendations for defining your mission and objectives to provide direction and purpose for your cloud adoption.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 12/13/2024
 ---
 
-# Mission and objectives
+# Define your mission and objectives
 
-Defining your mission and objectives is crucial for a successful cloud adoption strategy. A _clear mission_ provides direction and purpose, while _specific objectives_ outline the steps needed to achieve that mission. A mission is only of value when it is actionable, objectives can be effectively executed against, and the results are measurable.  
+For a successful cloud adoption, you must define your mission and objectives. A clear mission provides direction and purpose. The objectives outline the steps that you take to achieve that mission. A mission is only valuable if you can take action on it, achieve objectives effectively, and measure the results.  
 
-:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram showing the phase for defining mission and objectives for your cloud adoption strategy.":::
+:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram that shows the phase for defining mission and objectives for your cloud adoption strategy." border="false":::
 
-Making use of frameworks such as Objectives and Key Results (OKRs) ensures that missions can be broken down into actionable next steps to drive accountability and align your cloud adoption strategy with your organization's overall strategic objectives to ensure coherence and focus.
+You can use frameworks, such as objectives and key results (OKRs), to break your mission down into actionable steps. Frameworks can help you drive accountability and align your cloud adoption strategy with your organization's overall strategic objectives to ensure coherence and focus.
 
 > [!NOTE]
-> In the following section, we're using OKRs to show examples of how your cloud adoption strategy can break down objectives into measurable key results. However, you can use this guidance and these examples with any methodology or framework for defining and measuring your business goals.
-> To learn more about OKRs, see [What are OKRs (Objectives and Key Results)](https://www.microsoft.com/microsoft-viva/what-is-okr-objective-key-results).
+> The following section uses OKRs to show examples of how you can break down your cloud adoption strategy objectives into measurable key results. But you can use this guidance and these examples with any methodology or framework when you define and measure your business goals.
+>
+> For more information, see [What are OKRs?](https://www.microsoft.com/microsoft-viva/what-is-okr-objective-key-results).
 
 ## Define your mission and objectives
 
-Your cloud adoption strategy should provide clarity on the role of the cloud within your organization, and how and when it will be applied to support the objectives and desired outcomes of the business-, digital-, and IT strategies.
+Your cloud adoption strategy should clarify the role of the cloud within your organization. It should also define how and when you apply the cloud to support the objectives and desired outcomes of your business, digital, and IT strategies.
 
 ### Mission statement
 
-A mission statement helps you anchor your objectives and key results to your organization's overall business mission.
+A mission statement helps you align your objectives and key results to your organization's overall business mission.
 
-To help you derive a statement for your business, consider answering these initial questions:
+To help you derive a statement for your business, consider these initial questions:
 
-- _Why_: Why are you moving to or expanding in the cloud?
-- _What_: What are your workplace objectives?
-- _How_: How do you intend to measure success?
+- **Why:** Why are you moving to or expanding in the cloud?
+- **What:** What are your workplace objectives?
+- **How:** How do you intend to measure success?
 
-The answers to these questions will help you define your mission statement for your cloud strategy, for example:
+Use the answers to these questions to help define your mission statement for your cloud strategy. For example:
 
-- _Mission statement_: “Empower our organization to innovate, scale, and deliver secure, high-quality services by using cloud technologies aligned with our business and IT goals”.
+- **Mission statement:** "Use cloud technologies that align with our business and IT goals to empower our organization to innovate, scale, and deliver secure, high-quality services."
 
 ### Objectives
 
-Objectives should be clear and inspiring goals that are aligned with the mission statement. For example:  
+Ensure that your objectives include clear and inspiring goals that align with the mission statement. For example:
 
-- _Objective 1_: "Security: Utilize advanced security offerings to protect your assets.”
-- _Objective 2_: "Compliance: Utilize advanced compliance offerings to audit your assets."
-- _Objective 3_: "Datacenter modernization: Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities."
+- **Objective for security:** "Use advanced security offerings to protect your assets."
+- **Objective for compliance:** "Use advanced compliance offerings to audit your assets."
+- **Objective for datacenter modernization:** "Modernize infrastructure with reduced hardware and staffing. To upgrade the datacenter, migrate to Azure for enhanced capabilities."
 
-### Recommendations for defining mission and objectives
+### Recommendations to define your mission and objectives
 
 To define your mission and objectives, consider the following recommendations.
 
-- _Meet with and involve key stakeholders across the organization_. Ensure that the business and departmental mission and objectives are clearly represented and understood. This might include problem statements the cloud is intended to address.
+- **Meet with and involve key stakeholders across your organization.** Ensure that you clearly represent the business and departmental mission and objectives and that all stakeholders understand them. You might include problem statements that a cloud adoption addresses.
 
-- _Define and align cloud adoption objectives and key results_. Clearly define, refine and align the cloud objectives based on the organization's mission and objectives.
+- **Define and align cloud adoption objectives and key results.** Clearly define, refine, and align the cloud objectives based on your organization's mission and objectives.
 
-- _Define Key Results for objectives_. Once objectives are defined and aligned, establish specific key results to achieve the objectives, including KPIs, to measure progress.
+- **Define key results for objectives.** After you define and align objectives, establish specific key results to achieve the objectives, including key performance indicators (KPIs), to measure progress.
 
-- _Establish accountability_. Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
+- **Establish accountability.** Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
 
-- _Prioritize clarity_. Ensure that your objectives, key results and accountability are clear, concise, accessible and easy to understand for everyone.
+- **Prioritize clarity.** Ensure that your objectives, key results, and accountability are clear, concise, accessible and easy to understand for everyone.
 
-## Measuring success
+## Measure success
 
-To understand if you are on track and will meet your objectives, you need to be able to effectively measure and track your key results. Establish key performance indicators (KPIs) or other ways to reflect progress on your mission and objectives.
+To understand if you're on track to meet your objectives, you must be able to effectively measure and track your key results. Establish KPIs or other ways to gauge progress on your mission and objectives.
 
-These metrics should provide insights into your progress against each key result and highlight any areas for improvement.  
+These metrics should provide insights into your progress against each key result and highlight areas for improvement.  
 
-### Recommendations for measuring success
+### Recommendations to measure success
 
-Use these guidelines when defining metrics to measure your success.
+To measure your success, use these guidelines when you define metrics.
 
-- _Define KPIs_. Set clear metrics you can measure against each related key result.
+- **Define KPIs.** Set clear metrics that you can measure against each related key result.
 
-- _Review regularly_. Schedule and perform regular reviews to assess progress.
+- **Review regularly.** Schedule and perform regular reviews to assess progress.
 
-- _Be agile_. Cloud innovation rapidly changes the technical landscape and the opportunities to apply clever solutions. Be prepared to iterate and adjust your strategy and ways to measure progress.
+- **Be agile.** Iterate and adjust your strategy and ways to measure progress. Cloud innovation rapidly changes the technical landscape and the opportunities to apply clever solutions.
 
 ## Example objectives and success metrics
 
-| **Motivation** | **Objective** | **Key Result** | **Success metrics / KPI** |
+| Motivation | Objective | Key result | Success metrics or KPIs |
 |-----|-----|-----|-----|
-| Reduce business risk | **Security**: Utilize advanced security offerings to protect your assets. | Achieve a 35% reduction in security incidents within the next 12-month period. | Track incident reports and response times. |
-| Reduce business risk | **Security**: Utilize advanced security offerings to protect your assets. | Implement data encryption across all platforms within the next 6-month period. | Audit encryption coverage and effectiveness monthly. |
-| Reduce business risk | **Compliance**: Utilize advanced compliance offerings to audit your assets. | Achieve a 35% reduction in compliance audit findings within the next 12-month period. | Track compliance audit results and remediation activities. |
-| Reduce business risk | **Reliability**: Improve the availability of cloud-based applications | Achieve a 50% reduction in P1 incidents within the next quarter. | SLA compliance, incident tickets logged, helpdesk call volumes |
-| Enhance agility and efficiency | **Investments**: Optimize investments through cloud scalability and agility. | Reduce IT infrastructure spend by 20% through resource optimization in the cloud within the next 12-month period. | Analyze cost management and resource utilization reports. |
-| Enhance agility and efficiency | **Investments**: Optimize investments through cloud scalability and agility. | Identify savings opportunities with automated cost monitoring. | Track cost anomalies and corrective actions taken. |
-| Reduce business risk | **Sustainability**: Achieve carbon savings and enhance green IT compliance. | Reduce carbon footprint by 20% through optimized cloud operations. | Monitor emissions reports for your deployed Azure infrastructure. |
-| Reduce business risk | **Data**: Ensure data integrity | Achieve 100% compliance with data retention and security policies | Percentage of data audits passed without incidents |
-| Accelerate innovation | **AI**: Access cutting-edge AI capabilities for transformative solutions. | Launch two new AI-driven products within 18 months. | Monitor product development times and market feedback. |
-| Accelerate innovation | **AI**: Access cutting-edge AI capabilities for transformative solutions. | Implement AI-driven analytics to improve decision-making by 45%. | Evaluate data accuracy and decision-making speed improvements. |
-| Accelerate innovation | **AI**: Access cutting-edge AI capabilities for transformative solutions. | Decrease customer ticket response times by deploying a new AI-based customer support system within the next 12 months. | Monitor Customer Satisfaction (CSAT) and ticket resolution times. |
-| Accelerate innovation | **Security**: Utilize advanced security offerings to protect your assets. | Increase security automation to cover 80% of threat detection. | Track automated vs. manual threat detections. |
-| Accelerate innovation | **Data**: Enhance data accessibility | Increase data accessibility for 90% of teams by Q3 | Percentage of teams with self-service access to key data. |
-| Enhance agility and efficiency | **Rapid prototyping**: Quickly prototype and access services like AI and RPA. | Reduce time-to-market for new services by 20% within the next 12-month period. | Compare launch timelines before and after cloud adoption. |
-| Enhance agility and efficiency | **Developer velocity**: Give engineering teams the ability to create and manage dev/test environments | Create a self-service process to automatically deploy compliant dev environments | Time from request to environment ready; time spent by admin teams servicing requests; security compliance of dev environments |
-| Enhance agility and efficiency | **Datacenter modernization**: Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities. | Increase datacenter efficiency by 25% by using virtualization in the cloud. | Evaluate resource utilization and operational costs, and continuously right-size. |
-| Enhance agility and efficiency | **Datacenter modernization**: Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities. | Transition to a serverless architecture for 45% of new applications in the next 12-month period. | Evaluate deployment speed and resource utilization. |
-| Enhance agility and efficiency | **Data**: Decouple data services from application architecture | Provision independent, scalable data services for 75% of development teams by Q3. | Percentage of applications utilizing decoupled data services. |
+| Reduce business risk | **Security:** Use advanced security offerings to protect your assets. | Achieve a 35% reduction in security incidents within the next 12-month period. | Track incident reports and response times. |
+| Reduce business risk | **Security:** Use advanced security offerings to protect your assets. | Implement data encryption across all platforms within the next 6-month period. | Audit encryption coverage and effectiveness monthly. |
+| Reduce business risk | **Compliance:** Use advanced compliance offerings to audit your assets. | Achieve a 35% reduction in compliance audit findings within the next 12-month period. | Track compliance audit results and remediation activities. |
+| Reduce business risk | **Reliability:** Improve the availability of cloud-based applications. | Achieve a 50% reduction in P1 incidents within the next quarter. | Track service-level agreement compliance, incident tickets logged, and help desk call volumes. |
+| Enhance agility and efficiency | **Investments:** Optimize investments through cloud scalability and agility. | Reduce IT infrastructure spend by 20% through resource optimization in the cloud within the next 12-month period. | Analyze cost management and resource usage reports. |
+| Enhance agility and efficiency | **Investments:** Optimize investments through cloud scalability and agility. | Use automated cost monitoring to identify savings opportunities. | Track cost anomalies and corrective actions that you take. |
+| Reduce business risk | **Sustainability:** Achieve carbon savings and enhance green IT compliance. | Reduce carbon footprint by 20% through optimized cloud operations. | Monitor emissions reports for your deployed Azure infrastructure. |
+| Reduce business risk | **Data:** Ensure data integrity. | Achieve 100% compliance with data retention and security policies. | Track the percentage of data audits that pass without incidents. |
+| Accelerate innovation | **AI:** Access cutting-edge AI capabilities for transformative solutions. | Launch two new AI-driven products within the next 18-month period. | Monitor product development times and market feedback. |
+| Accelerate innovation | **AI:** Access cutting-edge AI capabilities for transformative solutions. | Implement AI-driven analytics to improve decision-making by 45%. | Evaluate data accuracy and decision-making speed improvements. |
+| Accelerate innovation | **AI:** Access cutting-edge AI capabilities for transformative solutions. | Decrease customer ticket response times by deploying a new AI-based customer support system within the next 12-month period. | Monitor customer satisfaction (CSAT) and ticket resolution times. |
+| Accelerate innovation | **Security:** Use advanced security offerings to protect your assets. | Increase security automation to cover 80% of threat detection. | Track automated versus manual threat detections. |
+| Accelerate innovation | **Data:** Enhance data accessibility. | Increase data accessibility for 90% of teams by Q3. | Track the percentage of teams that have self-service access to key data. |
+| Enhance agility and efficiency | **Rapid prototyping:** Quickly prototype and access services like AI and robotic process automation. | Reduce time-to-market for new services by 20% within the next 12-month period. | Compare launch timelines before and after cloud adoption. |
+| Enhance agility and efficiency | **Developer velocity:** Give engineering teams the ability to create and manage dev/test environments. | Create a self-service process to automatically deploy compliant dev environments. | Monitor the time from the request to environment readiness, the time that admin teams spend servicing requests, and the security compliance of dev environments. |
+| Enhance agility and efficiency | **Datacenter modernization:** Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities. | Increase datacenter efficiency by 25% by using virtualization in the cloud. | Evaluate resource usage and operational costs, and continuously rightsize. |
+| Enhance agility and efficiency | **Datacenter modernization:** Modernize infrastructure with reduced hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities. | Transition to a serverless architecture for 45% of new applications in the next 12-month period. | Evaluate deployment speed and resource usage. |
+| Enhance agility and efficiency | **Data:** Decouple data services from the application architecture. | Provision independent, scalable data services for 75% of development teams by Q3. | Track the percentage of applications that use decoupled data services. |
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Define your team for cloud adoption](define-your-team.md)
