@@ -34,7 +34,7 @@ Use a cloud adoption strategy to help you:
 
 ## Cloud adoption strategy checklist
 
-The following checklist provides an overview of the tasks for each cloud adoption strategy step. Focus on the startup tasks if you're new to the cloud. Focus on the enterprise tasks if you already use the cloud and want to mature your cloud environment. Some tasks correspond to both scenarios.
+The following checklist provides an overview of the tasks for each cloud adoption strategy step. Focus on the startup tasks if your organization is smaller and might have fewer resources. Focus on the enterprise tasks if your organization is larger and has extensive resources. Some tasks correspond to both scenarios.
 
 | Cloud adoption strategy step | Startup tasks | Enterprise tasks |
 |---------------------|-------------------|----------------------|
