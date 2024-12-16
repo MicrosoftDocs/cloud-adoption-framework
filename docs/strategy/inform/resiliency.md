@@ -9,7 +9,7 @@ ms.date: 12/11/2024
 
 # Resiliency considerations for your cloud strategy
 
-Resiliency is the ability of your infrastructure to maintain functionality and availability despite disruptions or failures. It's a cornerstone of any successful cloud adoption strategy. Design your cloud infrastructure with resiliency in mind to minimize the impact of disruptions, which helps you to maintain continuity and reliability for your business operations.
+Resiliency is the ability of your infrastructure to maintain functionality and availability despite disruptions or failures. It's a cornerstone of any successful cloud adoption strategy. Design your cloud infrastructure with resiliency in mind to minimize the impact of disruptions. Doing so helps you to maintain continuity and reliability for your business operations.
 
 Consider that the more tightly integrated your business is with your technology, the more important the resiliency of that technology is.
 
@@ -21,9 +21,9 @@ In a modern landscape where downtime can lead to significant financial losses an
 
 Resilieny is about ensuring that your cloud infrastructure and applications are robust enough to handle these challenges, minimize downtime, and preserve the integrity of your services and data.  
 
-Typically, not all systems require the same level of resiliency in your business. You might consider allowing flexibility in the resiliency levels within your business so you can focus on resiliency investments where it matters most.
+Typically, not all systems in your business require the same level of resiliency. You might consider allowing flexibility in the resiliency levels within your business so you can focus on resiliency investments where it matters most.
 
-Resilience also enables your organization to maintain business continuity, meet regulatory requirements, and enhance customer trust by helping to ensure that critical applications and services remain available when the unexpected happens.
+Resiliency also enables your organization to maintain business continuity, meet regulatory requirements, and enhance customer trust by helping to ensure that critical applications and services remain available when the unexpected happens.
 
 ## Understand the shared responsibility model
 
@@ -43,7 +43,7 @@ Integrating resiliency into your cloud adoption strategy provides quality contro
 
 It can also facilitate the agile deployment of services by enabling your organization to quickly adjust to market demands while maintaining robust security and compliance postures.  
 
-Ultimately, resiliency is an essential component of your cloud adoption strategy in driving quality and innovation, and supporting long-term business objectives.
+Ultimately, resiliency is an essential component of your cloud adoption strategy because it drives quality and innovation and supports long-term business objectives.
 
 ## Resiliency scenario examples
 
@@ -71,7 +71,7 @@ Follow these recommendations to inform your cloud adoption strategy of resilienc
 - *Understand recovery objectives*: Learn about [recovery time objectives (RTO) and recovery point objectives (RPO)](/azure/reliability/overview#rto-and-rpo-) as part of your cloud adoption strategy to understand downtime and data loss limits for your systems.
 - *Define realistic reliability targets*: Set realistic expectations with your internal stakeholders about reliability, and use contractual agreements to communicate those expectations to customers. See the Azure Well-Architected Framework [Recommendations for defining reliability targets](/azure/well-architected/reliability/metrics).
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [AI](ai.md)
