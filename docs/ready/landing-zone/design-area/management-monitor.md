@@ -43,13 +43,13 @@ The following subsets of Azure components have one or more alerts defined:
 - Azure Virtual Machine
 - Azure Storage account
 
-For more information, see [Alert details](https://aka.ms/alz/monitor/alertdetails).
+For more information, see [Alert details](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/Getting-started/Alerts-Details/).
 
 To ensure that your organization's resources are properly monitored and secured, you also need to properly configure alerts and implement appropriate processes to respond to alerts. Configure action groups with the appropriate notification channels and test the alerts to ensure that they work as expected. In accordance with the Cloud Adoption Framework principle of subscription democratization, configure at least one action group for each subscription so that relevant staff is notified of alerts. As a minimum form of notification, the action group should include an email notification channel. If you use Azure Monitor alert processing rules to route alerts to one or more action groups, note that service health alerts don't support alert processing rules. Configure service health alerts directly with the action group.
 
 In accordance with [Azure landing zone principles for policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance#why-use-dine-and-modify-policies), a framework solution is available that provides an easy way to scale alerting by using Azure Policy. These policies use the *DeployIfNotExists* effect to deploy relevant alert rules, alert processing rules, and action groups when you create a resource in your Azure landing zone environment, in both platform services and landing zones.
 
-Azure Policy provides a default baseline configuration, but you can configure the policies to suit your needs. If you require alerting on different metrics than what the repository provides, the solution provides a framework for you to develop your own policies for deploying alert rules. For more information, see the [Azure Monitor baseline alerts (AMBA) contributor guide](https://aka.ms/amba/contributing) and [Introduction to an Azure Monitor deployment](https://aka.ms/amba/alz/deploy). The solution is integrated into the Azure landing zone installation experience, so new implementations of Azure landing zone offer you the opportunity to set up baseline alerting at installation time.
+Azure Policy provides a default baseline configuration, but you can configure the policies to suit your needs. If you require alerting on different metrics than what the repository provides, the solution provides a framework for you to develop your own policies for deploying alert rules. For more information, see the [Azure Monitor baseline alerts (AMBA) contributor guide](https://aka.ms/amba/contributing) and [Introduction to an Azure Monitor deployment](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/HowTo/deploy/Introduction-to-deploying-the-ALZ-Pattern/). The solution is integrated into the Azure landing zone installation experience, so new implementations of Azure landing zone offer you the opportunity to set up baseline alerting at installation time.
 
 Deploy alerts via policies to provide flexibility and scalability, and to ensure that alerts are deployed inside and outside the Azure landing zone scope. Alerts are only deployed when the corresponding resources are created, which avoids unnecessary cost and ensures updated alerts configurations at deployment time. This function coincides with the Azure landing zone principle of policy-driven governance.
 
@@ -99,6 +99,6 @@ For more information, see [Testing approach for Azure landing zones](/azure/clou
 
 ## Next steps
 
-- [Introduction to deploying Azure Monitor](https://aka.ms/amba/alz/deploy)
+- [Introduction to deploying Azure Monitor](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/HowTo/deploy/Introduction-to-deploying-the-ALZ-Pattern/)
 
 - [Business continuity and disaster recovery](management-business-continuity-disaster-recovery.md)

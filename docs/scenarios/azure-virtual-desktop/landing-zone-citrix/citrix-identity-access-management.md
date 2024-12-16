@@ -2,7 +2,7 @@
 title: Identity and access management for Citrix on Azure
 description: Learn how to use Azure role-based access control for identity and access management in your Citrix virtual desktop infrastructure.
 author: BenMartinBaur
-ms.author: martinek
+ms.author: bebaur
 ms.date: 01/06/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd

@@ -2,7 +2,7 @@
 title: Security, governance, and compliance for Azure Virtual Desktop infrastructure
 description: Learn key design considerations and recommendations for security and governance in Azure Virtual Desktop.
 author: nataliakon
-ms.author: nataliak
+ms.author: tozimmergren
 ms.date: 05/02/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
