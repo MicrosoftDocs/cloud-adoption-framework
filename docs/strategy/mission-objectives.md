@@ -1,6 +1,6 @@
 ---
 title: Define Your Cloud Adoption Strategy Mission and Objectives
-description: Learn about recommendations about how to define your mission and objectives to provide direction and purpose for your cloud adoption.
+description: Learn about recommendations for defining your mission and objectives to provide direction and purpose for your cloud adoption.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
@@ -18,7 +18,7 @@ You can use frameworks, such as objectives and key results (OKRs), to break your
 > [!NOTE]
 > The following section uses OKRs to show examples of how you can break down your cloud adoption strategy objectives into measurable key results. But you can use this guidance and these examples with any methodology or framework when you define and measure your business goals.
 >
-> For more information, see [What are OKRs](https://www.microsoft.com/microsoft-viva/what-is-okr-objective-key-results).
+> For more information, see [What are OKRs?](https://www.microsoft.com/microsoft-viva/what-is-okr-objective-key-results).
 
 ## Define your mission and objectives
 
@@ -26,7 +26,7 @@ Your cloud adoption strategy should clarify the role of the cloud within your or
 
 ### Mission statement
 
-A mission statement helps you anchor your objectives and key results to your organization's overall business mission.
+A mission statement helps you align your objectives and key results to your organization's overall business mission.
 
 To help you derive a statement for your business, consider these initial questions:
 
@@ -42,9 +42,9 @@ Use the answers to these questions to help define your mission statement for you
 
 Ensure that your objectives include clear and inspiring goals that align with the mission statement. For example:
 
-- **Objective 1:** "Security: Use advanced security offerings to protect your assets.”
-- **Objective 2:** "Compliance: Use advanced compliance offerings to audit your assets."
-- **Objective 3:** "Datacenter modernization: Modernize infrastructure with reduced hardware and staffing. To upgrade the datacenter, migrate to Azure for enhanced capabilities."
+- **Objective for security:** "Use advanced security offerings to protect your assets."
+- **Objective for compliance:** "Use advanced compliance offerings to audit your assets."
+- **Objective for datacenter modernization:** "Modernize infrastructure with reduced hardware and staffing. To upgrade the datacenter, migrate to Azure for enhanced capabilities."
 
 ### Recommendations to define your mission and objectives
 
@@ -52,13 +52,13 @@ To define your mission and objectives, consider the following recommendations.
 
 - **Meet with and involve key stakeholders across your organization.** Ensure that you clearly represent the business and departmental mission and objectives and that all stakeholders understand them. You might include problem statements that a cloud adoption addresses.
 
-- **Define and align cloud adoption objectives and key results.** Clearly define, refine and align the cloud objectives based on the organization's mission and objectives.
+- **Define and align cloud adoption objectives and key results.** Clearly define, refine, and align the cloud objectives based on your organization's mission and objectives.
 
-- **Define key results for objectives.** Once objectives are defined and aligned, establish specific key results to achieve the objectives, including key performance indicators (KPIs), to measure progress.
+- **Define key results for objectives.** After you define and align objectives, establish specific key results to achieve the objectives, including key performance indicators (KPIs), to measure progress.
 
 - **Establish accountability.** Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
 
-- **Prioritize clarity.** Ensure that your objectives, key results and accountability are clear, concise, accessible and easy to understand for everyone.
+- **Prioritize clarity.** Ensure that your objectives, key results, and accountability are clear, concise, accessible and easy to understand for everyone.
 
 ## Measure success
 
@@ -83,7 +83,7 @@ To measure your success, use these guidelines when you define metrics.
 | Reduce business risk | **Security:** Use advanced security offerings to protect your assets. | Achieve a 35% reduction in security incidents within the next 12-month period. | Track incident reports and response times. |
 | Reduce business risk | **Security:** Use advanced security offerings to protect your assets. | Implement data encryption across all platforms within the next 6-month period. | Audit encryption coverage and effectiveness monthly. |
 | Reduce business risk | **Compliance:** Use advanced compliance offerings to audit your assets. | Achieve a 35% reduction in compliance audit findings within the next 12-month period. | Track compliance audit results and remediation activities. |
-| Reduce business risk | **Reliability:** Improve the availability of cloud-based applications | Achieve a 50% reduction in P1 incidents within the next quarter. | Track service-level agreement compliance, incident tickets logged, help desk call volumes. |
+| Reduce business risk | **Reliability:** Improve the availability of cloud-based applications. | Achieve a 50% reduction in P1 incidents within the next quarter. | Track service-level agreement compliance, incident tickets logged, and help desk call volumes. |
 | Enhance agility and efficiency | **Investments:** Optimize investments through cloud scalability and agility. | Reduce IT infrastructure spend by 20% through resource optimization in the cloud within the next 12-month period. | Analyze cost management and resource usage reports. |
 | Enhance agility and efficiency | **Investments:** Optimize investments through cloud scalability and agility. | Use automated cost monitoring to identify savings opportunities. | Track cost anomalies and corrective actions that you take. |
 | Reduce business risk | **Sustainability:** Achieve carbon savings and enhance green IT compliance. | Reduce carbon footprint by 20% through optimized cloud operations. | Monitor emissions reports for your deployed Azure infrastructure. |
