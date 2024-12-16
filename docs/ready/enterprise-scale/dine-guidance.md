@@ -3,7 +3,7 @@ title: Adopt policy-driven guardrails
 description: Understand how to adopt policy-driven guardrails in the Azure landing zone.
 author: jtracey93
 ms.author: jatracey
-ms.date: 12/01/2021
+ms.date: 12/16/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -58,7 +58,7 @@ If you're still certain that your organization can't use DINE or Modify policies
 >  
 > For more information, see phase [2](#phase-2-enable-dine-and-modify-policies-on-a-specific-policy-or-reduced-scope) and phase [3](#phase-3-enable-dine-and-modify-policies-everywhere).
 
-Support for Resource Selectors are also applicable for policy-driven governance to ensure Safe Deployment Practices (SDP) is being adhered to. Resource Selectors bring the functionality of gradual roll out of policy assignments based on factors like resource location, resource type, or whether the resource has a location. [More can be found in this document](/azure/governance/policy/concepts/assignment-structure#resource-selectors-preview).
+Support for [Resource Selectors](/azure/governance/policy/concepts/assignment-structure#resource-selectors) are also applicable for policy-driven governance to ensure Safe Deployment Practices (SDP) is being adhered to. Resource Selectors bring the functionality of gradual roll out of policy assignments based on factors like resource location, resource type, or whether the resource has a location. [More can be found in this document](/azure/governance/policy/concepts/assignment-structure#resource-selectors-preview).
 
 ### Approach overview
 
