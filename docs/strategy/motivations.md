@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 The purpose of this article is to help you understand and define motivations for your cloud adoption strategy. These motivations are crucial for IT decision-makers and executives because they help ensure alignment with strategic business objectives, maximize return on investment, and facilitate informed decision making.
 
-:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram that shows the phase for defining motivations for your cloud adoption strategy.":::
+:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram that shows the phase for defining motivations for your cloud adoption strategy." lightbox="./media/caf-strategy-motivations-objectives.svg":::
 
 Clear motivations help prioritize initiatives, streamline resource allocation, and mitigate risks by addressing specific business needs. These needs can include reducing operational costs, enhancing security, and driving innovation.  
 
