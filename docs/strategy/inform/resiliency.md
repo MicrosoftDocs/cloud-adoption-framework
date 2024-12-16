@@ -9,7 +9,7 @@ ms.date: 12/11/2024
 
 # Resiliency considerations for your cloud strategy
 
-Resiliency is the ability of your infrastructure to maintain functionality and availability despite disruptions or failures. It's a cornerstone of any successful cloud adoption strategy. Design your cloud infrastructure with resilience in mind to minimize the impact of disruptions, which helps you to maintain continuity and reliability for your business operations.
+Resiliency is the ability of your infrastructure to maintain functionality and availability despite disruptions or failures. It's a cornerstone of any successful cloud adoption strategy. Design your cloud infrastructure with resiliency to minimize the impact of disruptions, which helps you to maintain continuity and reliability for your business operations.
 
 Consider that the more tightly integrated your business is with your technology, the more important the resiliency of that technology is.
 
@@ -63,7 +63,7 @@ Here are a few examples of the importance of resiliency in a cloud adoption stra
 Follow these recommendations to inform your cloud adoption strategy of resiliency considerations.
 
 - *Perform a business impact analysis (BIA)*: Define the criticality of various systems and applications to help prioritize resource and recovery efforts. Perform this analysis iteratively throughout your cloud adoption.
-- *Perform a risk assessment*: Identify potential threats and vulnerabilities that could affect your cloud infrastructure and use them to build mitigation strategies and inform your resilience and reliability plans.
+- *Perform a risk assessment*: Identify potential threats and vulnerabilities that could affect your cloud infrastructure and use them to build mitigation strategies and inform your resiliency and reliability plans.
 - *Complete a cost-benefit analysis*: Map out and understand how investments in your cloud adoption are aligned with business continuity requirements and SLAs.
 - *Understand shared responsibility*: Ensure that your strategy team includes details about the shared responsibility model in the cloud, including how it affects reliability. For more information, see [Reliability requirements](/azure/reliability/overview#reliability-requirements).
 - *Understand Azure reliability*: Use the [Azure reliability documentation](/azure/reliability/overview) to gain a better understanding of how reliability and resiliency work in Azure.
