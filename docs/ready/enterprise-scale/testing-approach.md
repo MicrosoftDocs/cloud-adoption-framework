@@ -13,7 +13,7 @@ ms.custom: think-tank
 > [!NOTE]
  > This article only applies to Microsoft Azure and not to any other Microsoft Cloud offerings such as Microsoft 365 or Microsoft Dynamics 365.
 
-Some organizations might want to test their Azure landing zones platform deployment for Azure Policy definitions and assignments, role-based access control (RBAC) custom roles and assignments, and so on. The tests can be completed via automation by using Azure Resource Manager templates (ARM templates), [Terraform](http://aka.ms/alz/tf), [Bicep](https://aka.ms/alz/bicep), or manually via the Azure portal. This guidance provides an approach that can be used to test changes and their impact in an Azure landing zones platform deployment.
+Some organizations might want to test their Azure landing zones platform deployment for Azure Policy definitions and assignments, role-based access control (RBAC) custom roles and assignments, and so on. The tests can be completed via automation by using Azure Resource Manager templates (ARM templates), [Terraform](https://aka.ms/alz/tf), [Bicep](https://aka.ms/alz/bicep), or manually via the Azure portal. This guidance provides an approach that can be used to test changes and their impact in an Azure landing zones platform deployment.
 
 This article can also be used with the [Platform automation and DevOps critical design area](../landing-zone/design-area/platform-automation-devops.md) guidance as it relates to the PlatformOps and Central functions teams and tasks.
 
