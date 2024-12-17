@@ -69,7 +69,7 @@ Motivations for adopting and expanding your cloud footprint can vary. The follow
 
 - **Rapid prototyping:** Quickly prototype and access services like AI and robotic process automation.
 
-- **Simplified operations:** Use consistent tooling and platforms across your estate to improve visibility and enable collaborative work across technical disciplines.
+- **Simplified operations:** Use consistent tooling and platforms across your workloads to improve visibility and enable collaborative work across technical disciplines.
 
 - **Decoupled data services:** Use decoupled data services, which are independent and scalable. These services free application architecture from data dependencies and enable agility in application development.
 
