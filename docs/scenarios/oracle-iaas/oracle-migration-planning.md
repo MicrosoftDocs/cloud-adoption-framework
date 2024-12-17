@@ -1,10 +1,10 @@
 ---
-title: Migration planning for Oracle on Azure
+title: Migration Planning for Oracle on Azure
 description: Learn how to migrate your existing Oracle workloads to the cloud as part of the cloud adoption process.
 author: jessiehaessler
 ms.author: jhaessler
 ms.reviewer: tozimmergren
-ms.date: 04/26/2024
+ms.date: 01/02/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
@@ -13,31 +13,31 @@ ms.custom: e2e-oracle
 
 As part of your cloud adoption journey, you must migrate your existing workloads to the cloud. Oracle workloads are similar to other workloads and require a methodical approach to ensure a successful migration. For more information about migration methodology, see [Cloud migration in the Cloud Adoption Framework](../../migrate/index.md). This article describes unique constraints and considerations that are specific to Oracle workloads.
 
-## The Oracle migration scenarios
+## Oracle migration scenarios
 
-Migrating Oracle workloads involves transitioning both databases and applications. This article specifically discusses the lift-and-shift approach for application and database migrations, which involves deploying Oracle applications on Azure Virtual Machines (VMs). For database migration, several options are available. This article provides specific guidance applying to [Oracle Database@Azure](/azure/oracle/oracle-db/database-overview)
+Oracle workload migration requires you to transition databases and applications. This article specifically discusses the lift-and-shift approach for application and database migrations, which includes deploying Oracle applications on Azure Virtual Machines. For database migration, several options are available. This article provides specific guidance that applies to [Oracle Database@Azure](/azure/oracle/oracle-db/database-overview).
 
-- **Applications on Azure Virtual Machines:** Run Oracle enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure. 
+- **Applications on Azure Virtual Machines:** Run Oracle enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure.
 
-- **Oracle Standard Edition or Enterprise Edition Databases on Azure Virtual Machines:** In this scenario you deploy your Oracle Database on a Virtual Machine. There are several options available from self-managed to managed Databases. If you prefer a managed database solution, please review [Tessell](https://azuremarketplace.microsoft.com/marketplace/apps/tessellinc1655919615020.tessell_database_service?tab=overview).
+- **Oracle Standard Edition or Enterprise Edition Databases on Azure Virtual Machines:** In this scenario, you deploy your Oracle Database on a Virtual Machine. There are several options available from self-managed to managed Databases. If you prefer a managed database solution,  review [Tessell](https://azuremarketplace.microsoft.com/marketplace/apps/tessellinc1655919615020.tessell_database_service?tab=overview).
 
 - **Oracle Database@Azure:** Oracle Database@Azure is an Oracle database service running on Oracle Cloud Infrastructure (OCI), colocated in Microsoft data centers.
 
-> Note!
-> for supported operating systems for your specific Database version, please visit [supported databases and operating systems](https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=366138251488223&id=742060.1&_afrWindowMode=0&_adf.ctrl-state=cgm96remu_193).
+> [!NOTE]
+> For supported operating systems for your specific database version, visit [supported databases and OSs](https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=366138251488223&id=742060.1&_afrWindowMode=0&_adf.ctrl-state=cgm96remu_193).
 
 ## The Oracle migration process
 
-You should continually reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of service for your workload. For example, for all scenarios mentioned above, please ensure that sufficient bandwidth is available for your migration. We highly encourage you to review the bandwidth needed while conducting a Proof-of-Concept.
+You should continually reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of service for your workload. For example, for all scenarios mentioned previously,  ensure that sufficient bandwidth is available for your migration. We highly encourage you to review the bandwidth needed while conducting a Proof-of-Concept.
 
 If you move your workload to Oracle on Azure Virtual Machines, ensure that the virtual machine (VM) sizes meet your requirements. For more information, see [Capacity planning for migrating Oracle workloads to Azure landing zones](./oracle-capacity-planning.md).
 
 Review the migration resources to define your Oracle to Azure migration process. You can also:
 
-- **Verify Azure subscription quota limits**: Ensure that the quota limits in your Azure subscription accommodate the target VM sizes that you choose if you migrate to Oracle on Azure Virtual Machines.
+- **Verify Azure subscription quota limits**: Ensure that the capacity limit in your Azure subscription accommodate the target VM sizes that you choose if you migrate to Oracle on Azure Virtual Machines.
 
->Note!
-> If you host your workload on Oracle Database@Azure and need a quota increase, please consult your Oracle contact person. 
+> [!NOTE]
+> If you host your workload on Oracle Database@Azure and need a quota increase,  consult your Oracle contact person.
 
 - **Identify a deployment model**: Automate the deployment of solution components as much as possible by using infrastructure as code (IaaS), continuous integration and continuous delivery (CI/CD) pipelines, and other DevOps practices.
 
@@ -45,9 +45,9 @@ Review the migration resources to define your Oracle to Azure migration process.
 
 - **Identify data capacity**: Identify the amount of data to migrate and assess the current available network connectivity capacity from on-premises environments to Azure. Use this information to determine if you can copy the data directly from on-premises environments to Azure. You might need a physical data transfer appliance like [Azure Data Box](/azure/databox/data-box-overview) for the initial data load.
 
-- **Determine availability requirements**: Determine the workload availability requirements because they might affect the migration tools that you can use.
-Thereby please define your maximum acceptable downtime. These metric will help you to define your migration tooling and approach.
-This equally applies to your application. If you cannot accept a disruption in your day-to-day operations, you will need to perform an online migration.
+- **Determine availability requirements**: Determine the workload availability requirements because they might affect the migration tools that you can use. Define your maximum acceptable downtime. This metric helps you define your migration tooling and approach.
+
+This consideration equally applies to your application. If you can't accept a disruption in your day-to-day operations, you need to perform an online migration.
 
 - **Determine your tooling for migrating your workload to Oracle on Azure virtual machines**:
 
@@ -59,18 +59,18 @@ There are two primary migration paths:
 | Requires affected application to be offline during migration | Application can stay online during migration
 | **Tools used** : Data Box, DataPump, RMAN | **Tools used**: DataGuard, RMAN, GoldenGate |
 
->! Note:
+> [!NOTE]
 If you decide to perform an online migration, make sure that you configure firewall rules to allow for data transfer.
 
 ## Oracle migration workload-specific activities
 
 The following section describes the migration process in more detail. The steps aren't necessarily sequential. You can perform some steps in parallel.
 
-- **Assess the source and destination system versions**: Assess whether the on-premises operating system (OS) versions, application versions, and database versions are the same on on-premise and on Azure.
+- **Assess the source and destination system versions**: Assess whether the on-premises operating system (OS) versions, application versions, and database versions are the same on on-premises and on Azure.
 
   - If you need to update one or more resources, update them before migration to avoid complicating the migration process.
   
-  - If your on-premises database runs on a big-endian OS, such as Oracle Solaris, IBM Advanced Interactive eXecutive, or Hewlett Packard Unix, the database migration process includes an endian conversion. Azure supports only little-endian operating systems. This limitation reduces the number of available tools for the migration. Specifically, you can't use Oracle Data Guard or any other file copy method. Migration methods that are compatible with endian conversion include Oracle Data Pump Export or Import, Oracle cross-platform transportable tablespaces (XTTS), or data replication utilities such as Oracle GoldenGate, Quest SharePlex, and Striim.
+  - If your on-premises database runs on a big-endian OS, such as Oracle Solaris, IBM Advanced Interactive eXecutive, or Hewlett Packard Unix, the database migration process includes an endian conversion. Azure supports only little-endian OSs. This limitation reduces the number of available tools for the migration. Specifically, you can't use Oracle Data Guard or any other file copy method. Migration methods that are compatible with endian conversion include Oracle Data Pump Export or Import, Oracle cross-platform transportable tablespaces (XTTS), or data replication utilities such as Oracle GoldenGate, Quest SharePlex, and Striim.
   
   - You can modernize or migrate on-premises application servers depending on requirements and compatibility. For more information, see [Cloud adoption scenarios](../index.md).
 
@@ -78,7 +78,7 @@ The following section describes the migration process in more detail. The steps 
 
   - Use Oracle Recovery Manager (RMAN) to back up and then restore the entire database in Azure. Perform an endian conversion through XTTS if necessary. The result is a database that's a point-in-time copy of the on-premises source database. For more information, see [Transporting data across platforms](https://docs.oracle.com/en/database/oracle/oracle-database/23/admin/transporting-data.html#GUID-FE3003B9-605A-4269-B167-005AC778C870).
   
-  - Use Oracle Data Guard to synchronize the newly restored database in Azure with the source database if both sources are little-endian format. You can't use Data Guard if the migration involves big-endian to little-endian conversion. Instead, use a SQL-based data replication utility such as Oracle GoldenGate, Quest SharePlex, or Striim to synchronize the newly restored database in Azure with the source database.
+  - Use Oracle Data Guard to synchronize the newly restored database in Azure with the source database if both sources are little-endian format. You can't use Data Guard if the migration includes big-endian to little-endian conversion. Instead, use a SQL-based data replication utility such as Oracle GoldenGate, Quest SharePlex, or Striim to synchronize the newly restored database in Azure with the source database.
   
   - After you synchronize the target database in Azure with the source on-premises database, you can schedule a *cutover*. A cutover shuts down the source on-premises database and flushes the last few transactions to the target database in Azure. Then you can open the target database in Azure as the new source database. A cutover can take as little as a few minutes, depending on the sync method that you use.
   
@@ -97,18 +97,20 @@ The following section describes the migration process in more detail. The steps 
 - **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Available regions](/azure/oracle/oracle-db/database-overview#available-regions).
 
 - **Consider using Oracle Zero Downtime Migration** for the migration process. Evaluate the migration strategies to determine the most suitable approach for your specific migration requirements. For more information, see [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/) (ZDM).
-ZDM offers the ability to either choose logical or physical migrations scenarios. The following whitepaper will provide you with further instructions: [ZDM migration](https://www.oracle.com/a/otn/docs/database/zdm-physical-migration-to-oracle-at-azure.pdf).
+ZDM offers the ability to either choose logical or physical migrations scenarios. The following whitepaper provides you with further instructions: [ZDM migration](https://www.oracle.com/a/otn/docs/database/zdm-physical-migration-to-oracle-at-azure.pdf).
 
->! Note: If you choose Autonomous Database Service (ADB-S), please keep in mind, that only logical migration scenarios are supported. 
+> [!NOTE]
+> If you choose Autonomous Database Service (ADB-S), keep in mind that only logical migration scenarios are supported.
 
-## Additional Guidance
+## Other guidance
+
 Use the following section to help you to choose the right migration option for your requirements and data sizes.
 
-### ExpressRoute based Migration Duration Reference
+### ExpressRoute-based migration duration reference
 
-The following table only serves as a baseline. It does not take into account other production workloads that run through the same ExpressRoute connection. 
+The following table only serves as a baseline. It doesn't take into account other production workloads that run through the same ExpressRoute connection.
 
-VMWare may need more bandwidth than indicated. Please properly assess your bandwidth needs during your Proof-of-Concept phase. If support is needed, always feel free to reach out to your local contact persons, to receive support as needed.
+VMware might need more bandwidth than indicated. Properly assess your bandwidth needs during your Proof-of-Concept phase. If support is needed, always feel free to reach out to your local contact persons, to receive support as needed.
 
 | Data size   | Bandwidth of 1 Gpbs  | Bandwidth of 10 Gbps  |
 |-------------|-------------|-------------|
@@ -127,4 +129,5 @@ If you plan to use ExpressRoute for your migration, ensure its [resilience meets
 > [!div class="nextstepaction"]
 > [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure)
 >
+> [!div class="nextstepaction"]
 > [Oracle on Azure IaaS landing zone accelerator](oracle-landing-zone-accelerator.md)
