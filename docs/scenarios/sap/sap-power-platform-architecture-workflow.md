@@ -40,7 +40,7 @@ To effectively integrate SAP with Microsoft Power Platform, select the appropria
 
 You need to consider several factors when you select a connector for working with transactional data via the SAP ERP or SAP OData connectors. The decision might depend on the interfaces already available in your SAP system. First, check whether your SAP system exposes RFC/BAPI or OData services. For simplicity, choose the method you're most familiar with. SAP often provides both options for external connectivity.
 
-If your system lacks RFC or OData services for the specific use case, your choice depends on connectivity requirements and what's easier to implement: API Management for OData services or an on-premises gateway for the SAP ERP connector. In general, we recommend that you expose an existing SAP OData service, or develop one if there isn't one, because of its modern architecture and flexibility. See the [SAP Business Accelerator Hub](https://api.sap.com/) to check for existing OData services.
+If your system lacks RFC or OData services for the specific use case, your choice depends on connectivity requirements and what's easier to implement: API Management for OData services or an on-premises gateway for the SAP ERP connector. In general, we recommend that you expose an existing SAP OData service, or develop one if there isn't one, because of its modern architecture and flexibility. See the [SAP Business Accelerator Hub](https://api.sap.com) to check for existing OData services.
 
 To help you implement the best solution for your scenario, the next article in this series provides detailed instructions and links to resources for setting up these connectivity options.
 
