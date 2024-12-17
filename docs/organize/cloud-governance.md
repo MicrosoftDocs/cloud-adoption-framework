@@ -33,7 +33,7 @@ These baseline functions help you identify risks related to current and future r
 ## Preparation
 
 - Review the [Govern methodology](../govern/index.md).
-- Take the [governance benchmark assessment](../govern/benchmark.md).
+- Take the [governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e/).
 - [Introduction to security in Azure](/training/modules/protect-against-security-threats-azure/): Learn the basic concepts to protect your infrastructure and data in the cloud. Understand what responsibilities are yours and what Azure handles for you.
 - Understand how to work across groups to [manage cost](./cost-conscious-organization.md).
 
@@ -70,7 +70,7 @@ As adoption scales, the cloud governance team may struggle to keep pace with inn
 
 ## Next steps
 
-Some large organizations have dedicated teams that focus on IT governance. These teams specialize in risk management across the IT portfolio. When those teams exist, the following maturity models can be accelerated quickly. But the IT governance team is encouraged to review the cloud governance model to understand how governance shifts slightly in the cloud. Key articles include extending corporate policy to the cloud and the Five Disciplines of Cloud Governance.
+Some large organizations have dedicated teams that focus on IT governance. These teams specialize in risk management across the IT portfolio. When those teams exist, the following maturity models can be accelerated quickly. But the IT governance team is encouraged to review the cloud governance model to understand how governance shifts slightly in the cloud.
 
 **No governance:** Organizations often move into the cloud with no clear plans for governance. Before long, concerns around security, cost, scale, and operations begin to trigger conversations about the need for a governance model and people to staff the processes associated with that model. Starting those conversations before they become concerns is always a good first step to overcome the antipattern of *no governance*. The section on defining corporate policy can help facilitate those conversations.
 
@@ -78,7 +78,7 @@ Some large organizations have dedicated teams that focus on IT governance. These
 
 **Voluntary governance:** There tend to be brave souls in every enterprise. Those gallant few who are willing to jump in and help the team learn from their mistakes. Often this is how governance starts, especially in smaller companies. These brave souls volunteer time to fix some issues and push cloud adoption teams toward a consistent well-managed set of best practices.
 
-The efforts of these individuals are much better than "no governance" or "governance blocked" scenarios. While their efforts should be commended, this approach should not be confused with governance. Proper governance requires more than sporadic support to drive consistency, which is the goal of any good governance approach. The guidance in the Five Disciplines of Cloud Governance can help develop this discipline.
+The efforts of these individuals are much better than "no governance" or "governance blocked" scenarios. While their efforts should be commended, this approach should not be confused with governance. Proper governance requires more than sporadic support to drive consistency, which is the goal of any good governance approach.
 
 **Cloud custodian:** This moniker has become a badge of honor for many cloud architects who specialize in early stage governance. When governance practices first start out, the results appear similar to those of governance volunteers. But there is one fundamental difference. A cloud custodian has a plan in mind. At this stage of maturity, the team is spending time cleaning up the messes made by the cloud architects who came before them. But the cloud custodian aligns that effort to well structured corporate policy. They also use governance tools, like those outlined in the governance MVP.
 
@@ -100,6 +100,6 @@ Every company is unique, and so are their governance needs. Choose the level of 
 
 As cloud governance matures, teams are empowered to adopt the cloud at faster paces. Continued cloud adoption efforts tend to trigger maturity in IT operations. Either develop a cloud operations team, or sync with your cloud operations team to ensure governance is a part of operations development.
 
-Learn more about starting a [cloud governance team](../get-started/team/cloud-governance.md) or a [cloud operations team](../get-started/team/cloud-operations.md).
+Learn more about starting a [cloud governance team](../get-started/team/cloud-governance.md).
 
 After you've established an [initial cloud governance foundation](../govern/initial-foundation.md), use these best practices in [Governance foundation improvements](../govern/foundation-improvements.md) to get ahead of your adoption plan and prevent risks.

@@ -113,5 +113,4 @@ The mature creative approach of Contoso's central IT team provides a solution th
 
 Learn more about:
 
-- [Building a cloud operations team](../get-started/team/cloud-operations.md)
 - [Cloud operations functions](./cloud-operations.md)

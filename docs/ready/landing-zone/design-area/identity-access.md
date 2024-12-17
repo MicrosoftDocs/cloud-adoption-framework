@@ -31,7 +31,7 @@ Many of the fundamental concepts of identity and access management are the same 
 
 - [Cloud platform functions](../../../organize/cloud-platform.md)
 - [Cloud center of excellence functions](../../../organize/cloud-center-of-excellence.md)
-- [Cloud security team functions](../../../organize/cloud-security.md)
+- [Cloud security team functions](../../../secure/teams-roles.md)
 
 **Scope:** The goal of this design area is to help you evaluate options for your identity and access foundation. When you design your identity strategy, you should perform the following tasks:
 
