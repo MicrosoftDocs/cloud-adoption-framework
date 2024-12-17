@@ -102,7 +102,7 @@ ZDM offers the ability to either choose logical or physical migrations scenarios
 >! Note: If you choose Autonomous Database Service (ADB-S), please keep in mind, that only logical migration scenarios are supported. 
 
 ## Additional Guidance
-In order to equip you sufficiently, you can use the following section which helps you to choose the right migration option for your requirements and data sizes.
+Use the following section to help you to choose the right migration option for your requirements and data sizes.
 
 ### ExpressRoute based Migration Duration Reference
 
