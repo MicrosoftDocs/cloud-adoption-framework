@@ -2354,6 +2354,11 @@
          "source_path": "docs/organize/cloud-security.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/enterprise-enrollment-oracle.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
+         "redirect_document_id": false
+      }      
    ]
 }
