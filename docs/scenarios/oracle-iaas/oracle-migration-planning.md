@@ -15,7 +15,7 @@ As part of your cloud adoption journey, you must migrate your existing workloads
 
 ## The Oracle migration scenarios
 
-Migrating Oracle workloads involves transitioning both databases and applications. This article specifically discusses the lift-and-shift approach for application and database migrations, which involves deploying Oracle applications on Azure Virtual Machines (VMs). For database migration, several options are available. This article provides specific guidance applying to [Oracle Database@Azure](#oracle@azure-database-guidance)
+Migrating Oracle workloads involves transitioning both databases and applications. This article specifically discusses the lift-and-shift approach for application and database migrations, which involves deploying Oracle applications on Azure Virtual Machines (VMs). For database migration, several options are available. This article provides specific guidance applying to [Oracle Database@Azure](/azure/oracle/oracle-db/database-overview)
 
 - **Applications on Azure Virtual Machines:** Run Oracle enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure. 
 
