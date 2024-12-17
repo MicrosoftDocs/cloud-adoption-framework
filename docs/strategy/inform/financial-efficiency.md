@@ -1,5 +1,5 @@
 ---
-title: Financial efficiency considerations for your cloud adoption strategy
+title: Financial Efficiency Considerations for Your Cloud Adoption Strategy
 description: Learn how to optimize costs that are associated with cloud services and ensure that your organization gets the best value for its investment.
 ms.author: tozimmergren
 author: Zimmergren
@@ -17,9 +17,9 @@ Cloud adoption helps drive business growth, expand market share, and increase re
 
 Traditionally, organizations have used a Capital Expenditures (CapEx) model to manage their IT budgets. This approach requires a significant upfront investment in hardware and equipment. Organizations record that investment as an asset on the balance sheet.
 
-But when you move to the cloud, IT spending shifts toward an Operating Expenses (OpEx), or revenue-based, model. OpEx covers ongoing operational costs, such as periodic payments for services like Azure. The charges reflect actual usage and maintenance needs rather than fixed equipment costs. Use this model so that your organization can adjust costs based on actual usage, which promotes financial agility and efficiency.
+But when you move to the cloud, IT spending shifts toward an Operating Expenses (OpEx), or revenue-based, model. OpEx includes ongoing operational costs, such as periodic payments for services like Azure. The charges reflect actual usage and maintenance needs rather than fixed equipment costs. Use this model so that your organization can adjust costs based on actual usage, which promotes financial agility and efficiency.
 
-Also consider these other factors when you shift to an OpEx model:
+Also consider the following factors when you shift to an OpEx model:
 
 - **Immediate tax deductions:** Review immediate tax deductions instead of depreciation to improve your cash flow.
 
@@ -35,7 +35,7 @@ To implement financial efficiency in cloud adoption, you must effectively manage
 
 - Gain a clear understanding of cloud usage and associated costs.
 - Quantify the business value of cloud initiatives.
-- Strategically optimize spending to align with organizational goals and avoid unnecessary expenditures.
+- Optimize spending strategically to align with organizational goals and avoid unnecessary expenditures.
 
 Proper financial management plays a crucial role in this process. It helps prevent cost overruns and align spending with actual operational needs. It also helps ensure that every dollar that you invest in the cloud directly contributes to achieving business objectives. Effective financial management safeguards against inefficiencies and reinforces strategic alignment across teams.
 
@@ -45,7 +45,7 @@ Implement financial operations to find the right balance between innovation and 
 
 ### Recommendations
 
-Consider these financial efficiency considerations for your cloud adoption strategy.
+Consider the following financial efficiency considerations for your cloud adoption strategy.
 
 - **Inform others about CapEx to OpEx:** Educate your business teams and leadership about the shift from a traditional CapEx cost structure to a more flexible OpEx pricing model. Discuss how the new model improves agility and efficiency. For more information, see [The shift from the CapEx to OpEx model](/training/modules/get-started-with-finops/1-introduction).
 
@@ -57,4 +57,4 @@ Consider these financial efficiency considerations for your cloud adoption strat
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Resiliency](resiliency.md)
+> [Resiliency considerations](resiliency.md)
