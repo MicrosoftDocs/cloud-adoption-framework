@@ -31,7 +31,7 @@ Motivations for adopting and expanding your cloud footprint can vary. The follow
 
 - **Resiliency:** Increase redundancy and resilience through cloud capabilities, including multiregion deployments.
 
-- **Business continuity:** Use the capabilities of the cloud for high availability and uptime guarantees. Establish disaster recovery (DR) routines with reliable backup and recovery solutions.
+- **Business continuity:** Use the capabilities of the cloud for high availability and uptime guarantees. Establish disaster recovery (DR) routines by using reliable backup and recovery solutions.
 
 - **Datacenter modernization:** Modernize infrastructure by reducing hardware and staffing. Upgrade by migrating to Azure for enhanced capabilities.
 
