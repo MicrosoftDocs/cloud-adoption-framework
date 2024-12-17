@@ -21,7 +21,7 @@ Migrating Oracle workloads involves transitioning both databases and application
 
 - Oracle Standard Edition or Enterprise Edition Databases on Azure Virtual Machines. Thereby you deploy your Oracle Database on a Virtual Machine. There are several options available from self-managed to managed Databases. If you prefer a managed database solution, please review [Tessell](https://azuremarketplace.microsoft.com/marketplace/apps/tessellinc1655919615020.tessell_database_service?tab=overview).
 
-- Oracle Database@Azure: Oracle Database@Azure is an Oracle database service running on Oracle Cloud Infrastructure (OCI), colocated in Microsoft data centers.
+- **Oracle Database@Azure:** Oracle Database@Azure is an Oracle database service running on Oracle Cloud Infrastructure (OCI), colocated in Microsoft data centers.
 
 > Note!
 > for supported operating systems for your specific Database version, please visit [supported databases and operating systems](https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=366138251488223&id=742060.1&_afrWindowMode=0&_adf.ctrl-state=cgm96remu_193).
