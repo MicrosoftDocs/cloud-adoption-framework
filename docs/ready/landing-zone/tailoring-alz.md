@@ -3,7 +3,7 @@ title: Tailor the Azure landing zone architecture
 description: Understand how to tailor the Azure landing zone architecture to meet your business requirements.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/03/2023
+ms.date: 12/16/2024
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5
 ---
@@ -120,7 +120,7 @@ Consider the following points when you think about tailoring your implementation
   
   For example, a new compliance requirement like PCI is required for only a subset of application workloads and doesn't need to apply to all workloads.
 - Only create new archetypes in the highlighted areas shown in the preceding diagrams.
-- Avoid going beyond a hierarchy depth of four layers to avoid complexity and unnecessary exclusions. Expand archetypes horizontally instead of vertically in the hierarchy.
+- Avoid going beyond a hierarchy depth of **four** layers to avoid complexity and unnecessary exclusions. Expand archetypes horizontally instead of vertically in the hierarchy.
 - Don't create archetypes for environments like development, test, and production.
   
   For more information, see [How do we handle dev/test/production workload landing zones in the Azure landing zones conceptual architecture?](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)

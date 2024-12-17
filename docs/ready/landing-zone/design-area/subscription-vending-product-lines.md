@@ -3,7 +3,7 @@ title: Establish common subscription vending product lines
 description: Learn about the benefits of offering different subscription vending product lines to give application teams the flexibility to deliver their workloads and services effectively.
 author: jtracey93
 ms.author: jatracey
-ms.date: 06/06/2024
+ms.date: 12/16/2024
 ms.topic: conceptual
 ---
 
