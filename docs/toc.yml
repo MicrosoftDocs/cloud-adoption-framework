@@ -85,13 +85,13 @@ items:
     items:
     - name: Overview
       href: strategy/index.md
-    - name: Assess cloud adoption strategy
+    - name: Assess your cloud adoption strategy
       href: strategy/assessment.md
-    - name: Motivations
+    - name: Determine your motivations
       href: strategy/motivations.md
-    - name: Mission and objectives
+    - name: Define your mission and objectives
       href: strategy/mission-objectives.md
-    - name: Define strategy team
+    - name: Define your strategy team
       href: strategy/define-your-team.md
     - name: Prepare your organization
       items:

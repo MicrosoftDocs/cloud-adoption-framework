@@ -1,17 +1,17 @@
 ---
-title: Inform your strategy
-description: Learn how to inform your cloud strategy to align your cloud adoption efforts with your business goals.
+title: Inform Your Cloud Adoption Strategy
+description: Learn about considerations that you can use to inform your cloud strategy to align your cloud adoption efforts with your business goals.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 12/12/2024
 ---
 
-# Inform your strategy
+# Inform your cloud adoption strategy
 
-When you have defined your motivations, mission, and goals, you're ready to start guiding your strategy.
+After you complete the first four steps of your strategy, you can factor in other considerations to inform your cloud adoption strategy. These considerations include financial efficiency, AI, resiliency, security, and sustainability.
 
-:::image type="content" source="../media/caf-strategy-inform-strategy.svg" alt-text="Diagram showing the phase for informing your cloud adoption strategy.":::
+:::image type="content" source="../media/caf-strategy-inform-strategy.svg" alt-text="Diagram that shows the phase for informing your cloud adoption strategy." border="false":::
 
 ## Strategic considerations
 
@@ -22,13 +22,13 @@ Use these sections to learn more about important considerations and recommendati
 
 | Strategic consideration | Description |
 | --- | --- |
-| [Financial efficiency](./financial-efficiency.md) | Consider financial efficiency in your cloud adoption strategy, which is the effective management and optimization of costs associated with the usage of cloud services.<br><br> It also involves strategic decisions ensuring that the organization is getting the best value for its investment, while minimizing unnecessary expenses. |
+| [Financial efficiency](./financial-efficiency.md) | Consider financial efficiency in your cloud adoption strategy. Financial efficiency measures how well you manage and optimize the costs that are associated with cloud service usage. To efficiently manage finances, you must make strategic decisions to help ensure that your organization gets the best value for its investment, while minimizing unnecessary expenses. |
 | [AI](./ai.md) | AI is revolutionizing cloud adoption strategies by enhancing efficiency, scalability, and innovation. Integrate AI into your cloud platform to use advanced analytics, machine learning, and automation to optimize operations and drive business growth. |
-| [Resiliency](./resiliency.md) | Resilience is the ability of your infrastructure to maintain functionality and availability despite disruptions or failures and is a cornerstone of any successful cloud adoption strategy. Design your cloud infrastructure with resilience in mind to minimize the impact of disruptions, maintaining continuity and reliability for your business operations. |
-| [Security](./security.md) | A well-designed security strategy is critical to successful cloud adoption. Organizations coming from traditional on-premises environments should evaluate their cloud expertise with specific attention to cloud security. Managing security in the cloud may require significant changes to the structure of your security team and your approach to security overall. |
-| [Sustainability](./sustainability.md) | As the sustainability transformation is making its mark on companies across industries, adding pressure from new types of stakeholders and challenging existing profit pools while creating opportunities to open new ones, companies are increasingly forced to respond effectively with new types of solutions and tech-enabled approaches. |
+| [Resiliency](./resiliency.md) | Resiliency is the ability of your infrastructure to maintain functionality and availability despite disruptions or failures. Resiliency is a cornerstone of any successful cloud adoption strategy. Design your cloud infrastructure with resiliency in mind to minimize the effect of disruptions, which helps maintain continuity and reliability for your business operations. |
+| [Security](./security.md) | You must have a well-designed security strategy for a successful cloud adoption. If your organization has traditional on-premises environments, you should evaluate your cloud expertise and specifically focus on cloud security. To manage security in the cloud, you might need to make significant changes to the structure of your security team and your overall security approach. |
+| [Sustainability](./sustainability.md) | Sustainability continues to gain importance and influence companies across industries. This increasing focus on sustainability adds pressure from new types of stakeholders and challenges existing profit pools, while also creating opportunities for new profit avenues. Companies must respond effectively with innovative solutions and tech-enabled approaches. |
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Financial efficiency](financial-efficiency.md)
+> [Financial efficiency considerations](financial-efficiency.md)
