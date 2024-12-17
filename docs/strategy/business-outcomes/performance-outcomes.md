@@ -38,7 +38,7 @@ Azure Site Recovery makes it simple to test disaster recovery by replicating app
 
 ## Next steps
 
-Learn how to use the business outcome template.
+Learn more about sustainability outcomes.
 
 > [!div class="nextstepaction"]
-> [Use the business outcome template](./business-outcome-template.md)
+> [Sustainability outcomes](./sustainability.md)
