@@ -92,7 +92,7 @@ The following section describes the migration process in more detail. The steps 
   
   For more information about Oracle licensing on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
 
-## For Oracle Database@Azure specifically, make sure to:
+## Oracle Database@Azure migration guidance
 
 - **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Available regions](/azure/oracle/oracle-db/database-overview#available-regions).
 
