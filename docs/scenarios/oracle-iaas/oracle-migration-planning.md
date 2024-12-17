@@ -106,7 +106,7 @@ In order to equip you sufficiently, you can use the following section which help
 
 ### ExpressRoute based Migration Duration Reference
 
-Please note that the following table only serves as a baseline. It does not take into account other production workloads that run through the same ExpressRoute connection. 
+The following table only serves as a baseline. It does not take into account other production workloads that run through the same ExpressRoute connection. 
 
 VMWare may need more bandwidth than indicated. Please properly assess your bandwidth needs during your Proof-of-Concept phase. If support is needed, always feel free to reach out to your local contact persons, to receive support as needed.
 
