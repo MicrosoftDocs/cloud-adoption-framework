@@ -120,7 +120,7 @@ VMWare may need more bandwidth than indicated. Please properly assess your bandw
 | 200 TB | 21 days | 2 days |
 | 500 TB | 53 days | 5 days |
 
-Whenever you plan to use ExpressRoute for your migration, ensure the resiliency of it. Therefore review [ExpressRoute Circuit Risiliency] (https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/)
+If you plan to use ExpressRoute for your migration, ensure its [resilience meets your requirements] (https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/)
 
 ## Next steps
 
