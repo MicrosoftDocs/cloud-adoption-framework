@@ -20,7 +20,7 @@ AI frees you to focus on your top priorities. AI offers automation and autonomou
 
 ## How to adopt AI
 
-Develop and [AI Strategy](./strategy.md) to identify use cases and determine whether to build (PaaS and Iaas) or buy (SaaS) AI solutions for each use case. Develop an [AI Plan](./plan.md) to move AI use cases into production. If you ***build*** AI solutions with Azure PaaS or IaaS services, you must also get [AI Ready](./ready.md). ***Buying*** Microsoft Copilot SaaS solutions doesn't require this step. All AI adoption efforts must establish processes to [Govern AI](./govern.md), [Manage AI](./manage.md), and [Secure AI](./secure.md).
+Develop an [AI Strategy](./strategy.md) to identify use cases and determine whether to build (PaaS and Iaas) or buy (SaaS) AI solutions for each use case. Develop an [AI Plan](./plan.md) to move AI use cases into production. If you ***build*** AI solutions with Azure PaaS or IaaS services, you must also get [AI Ready](./ready.md). ***Buying*** Microsoft Copilot SaaS solutions doesn't require this step. All AI adoption efforts must establish processes to [Govern AI](./govern.md), [Manage AI](./manage.md), and [Secure AI](./secure.md).
 
 | AI adoption step | Description | Applicable to build (PaaS or IaaS) or buy (SaaS)? |
 |---|---|---|
