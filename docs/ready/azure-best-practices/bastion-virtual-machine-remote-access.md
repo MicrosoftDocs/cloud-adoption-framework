@@ -38,7 +38,7 @@ The choice of which remote access solution is most appropriate depends on factor
   - Azure Bastion can be deployed in any spoke virtual network connected in a Virtual WAN, for accessing Virtual Machines, in its own or, other virtual networks that are connected to the same Virtual WAN, via its associated hubs, through Virtual WAN virtual network connections; providing [routing](/azure/virtual-wan/about-virtual-hub-routing) is configured correctly.
   - Azure [Bastion Developer](/azure/bastion/quickstart-developer-sku) is a free, zero-configuration, always-on SKU of the Azure Bastion service. Unlike the standard SKU, the Developer Bastion SKU is not a dedicated resource but it operates as part of a shared pool and currently doesn't support VNet peering.
   - Azure Bastion Standard SKU requires a dedicated subnet (AzureBastionSubnet) while the Developer SKU does not.
-  
+
 > [!TIP]
 > Azure Bastion IP based connection also allows for connectivity to on-premises based machines, providing there is hybrid connectivity established between the Azure Bastion resource and the machine you are wanting to connect to. See, [Connect to a VM via specified private IP address through the portal](/azure/bastion/connect-ip-address)
 

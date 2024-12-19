@@ -383,7 +383,7 @@ items:
               - name: Private Link and DNS integration at scale
                 href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
               - name: DNS for on-premises and Azure resources
-                href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md                
+                href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
             - name: Azure Virtual Network Manager in Azure landing zones
               href: ready/azure-best-practices/azure-virtual-network-manager.md
 
