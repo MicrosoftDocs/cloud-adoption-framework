@@ -9,85 +9,22 @@ items:
     items: 
     - name: Azure landing zone for HPC
       href: ready.md
-    - name: Energy
+    - name: Design areas
       items:
-      - name: Design areas
-        items:
-        - name: Billing and Active Directory tenant
-          href: energy/azure-billing-active-directory-tenant.md
-        - name: Identity and access management
-          href: energy/identity-access-management.md
-        - name: Network topology and connectivity
-          href: energy/network-topology-connectivity.md
-        - name: Compute
-          href: energy/compute.md
-        - name: Storage
-          href: energy/storage.md
-        - name: Resource organization
-          href: energy/resource-organization.md
-        - name: Security
-          href: energy/security.md
-        - name: Management
-          href: energy/management.md
-        - name: Governance
-          href: energy/security-governance-compliance.md
-        - name: Platform automation and DevOps
-          href: energy/platform-automation-devops.md
-    - name: Finance  
-      items:
-      - name: Design areas
-        items:
-        - name: Billing and Active Directory tenant
-          href: finance/azure-billing-active-directory-tenant.md
-        - name: Identity and access management
-          href: finance/identity-access-management.md
-        - name: Network topology and connectivity
-          href: finance/network-topology-connectivity.md
-        - name: Compute
-          href: finance/compute.md
-        - name: Storage
-          href: finance/storage.md
-        - name: Resource organization
-          href: finance/resource-organization.md
-        - name: Security
-          href: finance/security.md
-        - name: Management
-          href: finance/management.md
-        - name: Governance
-          href: finance/security-governance-compliance.md
-        - name: Platform automation and DevOps
-          href: finance/platform-automation-devops.md
-    - name: Manufacturing  
-      items:
-      - name: Design areas
-        items:
-        - name: Billing and Active Directory tenant
-          href: manufacturing/azure-billing-active-directory-tenant.md
-        - name: Identity and access management
-          href: manufacturing/identity-access-management.md
-        - name: Network topology and connectivity
-          href: manufacturing/network-topology-connectivity.md
-        - name: Compute
-          href: manufacturing/compute.md
-        - name: Storage
-          href: manufacturing/storage.md
-        - name: Resource organization
-          href: manufacturing/resource-organization.md
-        - name: Security
-          href: manufacturing/security.md
-        - name: Management
-          href: manufacturing/management.md
-        - name: Governance
-          href: manufacturing/security-governance-compliance.md
-        - name: Platform automation and DevOps
-          href: manufacturing/platform-automation-devops.md
+      - name: Identity and access management
+        href: identity-access-management.md
+      - name: Network topology and connectivity
+        href: network-topology-connectivity.md
+      - name: Compute
+        href: compute.md
+      - name: Storage
+        href: storage.md
+      - name: Resource organization
+        href: resource-organization.md
     - name: Implementation options
       items:
       - name: HPC landing zone accelerator
         href: azure-hpc-landing-zone-accelerator.md
-      - name: Compute manufacturing architecture
-        href: /azure/architecture/industries/manufacturing/compute-manufacturing-overview
-        maintainContext: true
       - name: Condition monitoring architecture
         href: /azure/architecture/solution-ideas/articles/condition-monitoring
         maintainContext: true
@@ -114,12 +51,6 @@ items:
     items:
     - name: Overview
       href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
-    - name: Energy example architecture
-      href: energy/compute.md#hpc-reference-architecture
-    - name: Finance example architecture
-      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance
-    - name: Manufacturing example architecture
-      href: azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-manufacturing
     - name: 3D video rendering
       href: /azure/architecture/example-scenario/infrastructure/video-rendering
       maintainContext: true
