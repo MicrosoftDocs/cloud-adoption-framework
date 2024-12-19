@@ -99,8 +99,8 @@ items:
           href: strategy/prepare/index.md
         - name: Organizational alignment
           href: strategy/prepare/organizational-alignment.md
-        - name: Suggested cloud adoption functions
-          href: strategy/prepare/suggested-cloud-functions.md
+        - name: Required cloud functions
+          href: strategy/prepare/required-cloud-functions.md
         - name: Align the RACI matrix
           href: strategy/prepare/raci-alignment.md
 

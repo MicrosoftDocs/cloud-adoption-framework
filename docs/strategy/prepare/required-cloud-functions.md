@@ -1,13 +1,13 @@
 ---
-title: Suggested cloud adoption functions
-description: Learn about suggested cloud functions for a successful cloud adoption journey and how to align responsibilities across them.
+title: Required cloud functions
+description: Learn about required cloud functions for a successful cloud adoption journey and how to align responsibilities across them.
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 12/11/2024
 ---
 
-# Suggested cloud adoption functions
+# Required cloud functions
 
 For larger companies and enterprises, it's common to have a variety of teams and functions that are involved in the cloud adoption journey. These teams and functions are typically responsible for different aspects of the cloud adoption journey, and they work together to ensure that the cloud adoption projects are successful, from strategy to delivery.
 

@@ -135,4 +135,4 @@ Consider the following:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Suggested cloud functions](./suggested-cloud-functions.md)
+> [Required cloud functions](./required-cloud-functions.md)
