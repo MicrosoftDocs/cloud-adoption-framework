@@ -161,11 +161,48 @@ Support from IT stakeholders should include the following activities:
 
   Some new approaches won't align well with existing operations or technical constraints. The CCoE team might experience pressure or recourse from other teams when experiments fail. It's important to encourage and buffer the CCoE team from the consequences of "fast fail" learning opportunities. It's equally important to hold the team accountable to a growth mindset to ensure that they learn from those experiments and find better solutions.
 
-
-
 ## Cloud platform functions
 
+The cloud platform manages the technical platform and ensures operational readiness for cloud environments. The team size and composition vary based on organizational needs, cloud maturity, and scale.
+
+- _In startups and smaller organizations_, multiple roles might be combined into one position. For example, a cloud platform engineer might handle architecture, operations, and security.
+
+- _In larger organizations and enterprises_, these roles are typically distinct with clear boundaries and rules for collaboration. For example, a cloud architect might design the platform, while a cloud operations engineer might manage the day-to-day operations.
+
+### Roles
+
+The cloud platform function typically includes roles responsible for designing, building, and maintaining the organization's cloud platform. These roles ensure the platform is scalable, secure, and meets the needs of various teams, including developers, operations, and business stakeholders. Here are roles commonly found within the cloud platform function:
+
+- Cloud platform engineers
+- Cloud architects
+- DevOps engineers
+- Cloud operations engineers (CloudOps)
+- Cloud security engineers
+- Infrastructure engineers
+- Site Reliability Engineers (SREs)
+- Cloud governance specialists
+- Platform support engineers
+- Cloud data engineers
+
+### Responsibilities
+
+Ideally, the cloud platform function delivers on the following tasks.
+
+- [Define and implement the platform architecture](../../ready/index.md).
+- [Set up and maintain cloud environments, accounts, or subscriptions](../../ready/azure-setup-guide/index.md).
+- Automate provisioning and configuration management.
+- Ensure infrastructure scalability and [reliability](/azure/well-architected/reliability/).
+- Implement [monitoring and logging solutions](../../manage/monitor/monitoring.md).
+- Manage [Infrastructure as Code (IaC)](../../ready/considerations/infrastructure-as-code.md) templates.
+- Continuously improve the platform.
+- Suggest self-service solutions.
+- Ensure solutions meet existing [governance and compliance](../../govern/document-cloud-governance-policies.md) requirements, often in alignment with the cloud governance function.
+
 ## Cloud security functions
+
+### Roles
+
+### Responsibilities
 
 ## Next steps
 
