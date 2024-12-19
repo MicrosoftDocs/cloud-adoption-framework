@@ -80,7 +80,7 @@ The Govern methodology within the Cloud Adoption Framework provides a narrative 
 
 - [Incremental improvements to expand cost management](../../govern/guides/complex/cost-management-improvement.md#changes-to-the-policy-statements). Example of corporate policies governing DoD to meet cost management requirements.
 
-The preceding examples are basic samples to help you develop a DoD for your landing zones. You can get sample policies for each of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md).
+The preceding examples are basic samples to help you develop a DoD for your landing zones.
 
 ## Azure tools and features to support landing zone TDD
 

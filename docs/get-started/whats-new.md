@@ -251,8 +251,6 @@ We made updates to reflect the deprecation of Azure Blueprint.
 - [Innovate methodology and maturity modeling](../innovate/best-practices/ci-cd.md)
 - [Operational compliance in Azure](../manage/azure-management-guide/operational-compliance.md)
 - [Understand the functions of a central IT team](../organize/central-it.md)
-- [Function of cloud infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md)
-- [Function of cloud security posture management](../organize/cloud-security-posture-management.md)  
 - [Track costs across business units, environments, or projects](../ready/azure-best-practices/track-costs.md)
 - [Azure governance design area](../ready/landing-zone/design-area/governance.md)
 - [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md)  
