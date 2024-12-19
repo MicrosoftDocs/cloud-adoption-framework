@@ -36,6 +36,12 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
   - For DNS queries generated in the Azure virtual network to resolve on-premises DNS names such as `corporate.contoso.com`, the DNS query is forwarded to the IP address of on-premises DNS servers specified in the rule set. 
   - For DNS queries generated in the on-premises network to resolve DNS records in Azure Private DNS Zones, you can configure on-premises DNS servers with conditional forwarders pointing to DNS Private Resolver service's inbound endpoint IP address in Azure, to forward the request to the Azure Private DNS zone (for example, `azure.contoso.com`).
 
+- Create two dedicated subnets for DNS Private Resolver in the HUb Virtual Network, one for inbound endpoints and one for outbound endpoints. Both subnets should have a minimum size of /28. If you deploy the DNS Resolver 
+  alongside your ExpressRoute Gateway etc. you must ensure that resolution of public FQDNs is permitted and replies with a valid response via a DNS Forwarding Ruleset Rule to the targeted DNS server. As some Azure services rely upon the ability to resolve public DNS names to function. See more [here](/azure/dns/private-resolver-endpoints-rulesets#rules)
+  - Inbound Endpoints: maximum five, used to receive inbound resolution requests from clients within your internal private network (Azure or On-Premises).
+  - Outbound Endpoints: maximum five, used to forward resolution requests to destinations within your internal private network (Azure or On-Premises), that cannot be resolved by Azure DNS Private Zones. 
+  - Create an appropriate Ruleset to permit DNS Forwarding to on premises.
+
 - Special workloads that require and deploy their own DNS (such as Red Hat OpenShift) should use their preferred DNS solution.
 
 - Create the Azure Private DNS zones within a global connectivity subscription. The Azure Private DNS zones that should be created include the zones required for accessing Azure PaaS services via a [private endpoint](/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration) (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net`).
