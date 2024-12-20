@@ -16,7 +16,7 @@ Watch the following video to learn more.
 
 <!-- markdownlint-disable MD034 -->
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMBdw]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c03f6a4d-d578-4ae8-bae0-a4d5e121808d]
 
 <!-- markdownlint-enable MD034 -->
 

@@ -1,5 +1,5 @@
 ---
-title: Common Data Model 
+title: Common Data Model
 description: Learn about Common Data Model.
 author: mboswell
 ms.author: mboswell
