@@ -40,7 +40,7 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
     - If you deploy the DNS Resolver alongside your ExpressRoute Gateway etc. you must ensure that resolution of public FQDNs is permitted and replies with a valid response via a DNS Forwarding Ruleset Rule to the targeted DNS server. As some Azure services rely upon the ability to resolve public DNS names to function. See more [here](/azure/dns/private-resolver-endpoints-rulesets#rules)
   - Inbound Endpoints: maximum five, used to receive inbound resolution requests from clients within your internal private network (Azure or On-Premises).
   - Outbound Endpoints: maximum five, used to forward resolution requests to destinations within your internal private network (Azure or On-Premises), that cannot be resolved by Azure DNS Private Zones. 
-  - Create an appropriate Ruleset to permit DNS Forwarding to on premises.
+  - Create an appropriate Ruleset to permit DNS Forwarding to on-premises DNS domains and namespaces
 
 - Special workloads that require and deploy their own DNS (such as Red Hat OpenShift) should use their preferred DNS solution.
 
