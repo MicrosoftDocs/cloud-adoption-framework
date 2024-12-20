@@ -1,6 +1,6 @@
 ---
 title: Azure API Management Landing Zone Accelerator
-description: Learn how the Azure API Management landing zone accelerator, which is an open-source collection of Bicep templates, can help you deploy an environment capable of hosting API Management. 
+description: Learn how the Azure API Management landing zone accelerator, which is an open-source collection of Bicep templates, can help you deploy an environment capable of hosting API Management.
 author: aarthiem
 ms.author: aamurugan
 ms.reviewer: tozimmergren
