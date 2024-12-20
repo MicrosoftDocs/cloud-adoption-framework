@@ -16,7 +16,7 @@ As adoption needs grow, so does the need for balance and structure. Watch this v
 
 <!-- markdownlint-disable MD034 -->
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wvTS]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=de4d064d-240a-41b0-a358-e8bae3891140]
 
 <!-- markdownlint-enable MD034 -->
 
