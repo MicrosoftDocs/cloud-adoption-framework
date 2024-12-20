@@ -19,7 +19,7 @@ Following best practices for the Cloud Adoption Framework allows your organizati
 
 <br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tyzr]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=29c05e49-fe39-41b0-be7d-c89219f87529]
 
 <!-- markdownlint-enable MD034 -->
 
