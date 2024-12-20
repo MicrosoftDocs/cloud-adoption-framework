@@ -44,7 +44,7 @@ The choice of which remote access solution is most appropriate depends on factor
 
 ## Design recommendations
 
-- For production workloads, deploy Bastion Premium or Standard SKU, while for Sandbox and Test environments Bastion Developer SKU can be used in [selected regions](azure/bastion/quickstart-developer-sku)
+- For production workloads, deploy Bastion Premium or Standard SKU, while for Sandbox and Test environments Bastion Developer SKU can be used in [selected regions](/azure/bastion/quickstart-developer-sku)
 - Use existing ExpressRoute or VPN connectivity to provide remote access to Azure VMs that are accessible from on-premises via ExpressRoute or VPN connections.
 - In a Virtual WAN-based network topology where remote access to Virtual Machines over the internet is required:
   - Azure Bastion can be deployed in each spoke virtual network of the respective VMs.
