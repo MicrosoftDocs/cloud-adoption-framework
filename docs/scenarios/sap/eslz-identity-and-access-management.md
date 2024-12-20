@@ -60,9 +60,9 @@ Here are common administration and management activities of SAP on Azure:
 
 - Consider provisioning users from [SuccessFactors](/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) into Microsoft Entra ID, with optional write-back of email address to SuccessFactors.
 
-- Migrate your SAP Identity Management (IDM) solution to Microsoft Entra ID Governance.
-
 ## Design recommendations
+
+- [Migrate](/entra/id-governance/scenarios/migrate-from-sap-idm) your SAP Identity Management (IDM) solution to Microsoft Entra ID Governance.
 
 - Implement SSO by using Windows AD, Microsoft Entra ID, or AD FS, depending on the access type, so that the end users can connect to SAP applications without a user ID and password once the central identity provider successfully authenticates them.
   - Implement SSO to SAP SaaS applications like [SAP Analytics Cloud](/azure/active-directory/saas-apps/sapboc-tutorial), [SAP Business Technology Platform (BTP)](/azure/active-directory/saas-apps/sap-hana-cloud-platform-tutorial), [Business by design](/azure/active-directory/saas-apps/sapbusinessbydesign-tutorial), [SAP Qualtrics](/azure/active-directory/saas-apps/qualtrics-tutorial) and [SAP C4C](/azure/active-directory/saas-apps/sap-customer-cloud-tutorial) with Microsoft Entra ID using SAML.
@@ -72,9 +72,9 @@ Here are common administration and management activities of SAP on Azure:
   - Implement [SSO by using OAuth for SAP NetWeaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial#configure-sap-netweaver-for-oauth) to allow third-party or custom applications to access SAP NetWeaver OData services.
   - Implement [SSO to SAP HANA](/azure/active-directory/saas-apps/saphana-tutorial)
 
-- Consider Microsoft Entra ID an identity provider for SAP systems hosted on RISE. For more information, see [Integrating the Service with Microsoft Entra ID](https://help.sap.com/docs/identity-authentication/identity-authentication/integrating-service-with-microsoft-azure-ad).
-- For applications that access SAP, you might want to use [principal propagation to establish SSO](https://github.com/azuredevcollege/SAP/blob/master/sap-oauth-saml-flow/README.md).
+- Implement Microsoft Entra ID as identity provider for SAP systems hosted on RISE. For more information, see [Integrating the Service with Microsoft Entra ID](https://help.sap.com/docs/identity-authentication/identity-authentication/integrating-service-with-microsoft-azure-ad).
+- For applications that access SAP, use [principal propagation to establish SSO](https://github.com/azuredevcollege/SAP/blob/master/sap-oauth-saml-flow/README.md).
 
-- If you're using SAP BTP services or SaaS solutions that require SAP Identity Authentication Service (IAS), [consider implementing SSO between SAP Cloud Identity Authentication Services and Microsoft Entra ID](/entra/fundamentals/scenario-azure-first-sap-identity-integration) to access those SAP services. This integration lets SAP IAS act as a proxy identity provider and forwards authentication requests to Microsoft Entra ID as the central user store and identity provider.
+- If you're using SAP BTP services or SaaS solutions that require SAP Cloud Identity Service, Identity Authentication (IAS), [use implementing SSO between SAP Cloud Identity Authentication Services and Microsoft Entra ID](/entra/fundamentals/scenario-azure-first-sap-identity-integration) to access those SAP services. This integration lets SAP IAS act as a proxy identity provider and forwards authentication requests to Microsoft Entra ID as the central user store and identity provider.
 
-- If you're using SAP SuccessFactors, consider using the Microsoft Entra ID [automated user provisioning](/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial). With this integration, as you add new employees to SAP SuccessFactors, you can automatically create their user accounts in Microsoft Entra ID. Optionally, you can create user accounts in Microsoft 365 or other SaaS applications that are supported by Microsoft Entra ID. Use write-back of the email address to SAP SuccessFactors.
+- If you're using SAP SuccessFactors, use Microsoft Entra ID [automated user provisioning](/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial). With this integration, as you add new employees to SAP SuccessFactors, you can automatically create their user accounts in Microsoft Entra ID. Optionally, you can create user accounts in Microsoft 365 or other SaaS applications that are supported by Microsoft Entra ID. Use write-back of the email address to SAP SuccessFactors.
