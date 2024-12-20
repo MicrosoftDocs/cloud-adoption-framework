@@ -80,7 +80,7 @@ Watch this short video of how Azure Migrate and Modernize can help you:
 
 <br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4D1vH]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=e9fc08e0-f374-4828-a4ba-6ebcc2a3972d]
 
 <!-- markdownlint-enable MD034 -->
 
