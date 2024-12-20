@@ -1,5 +1,5 @@
 ---
-title: Plan for virtual machine remote access
+title: Bastion for virtual machine remote access
 description: Plan for virtual machine remote access
 author: sitarant
 ms.author: sitarant
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: think-tank
 ---
 
-# Plan for virtual machine remote access
+# Bastion for virtual machine remote access
 
 This article describes the recommended guidance for providing remote access to virtual machines (VMs) deployed within an Azure landing zones architecture.
 
