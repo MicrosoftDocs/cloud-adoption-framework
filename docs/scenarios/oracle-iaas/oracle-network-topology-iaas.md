@@ -15,7 +15,7 @@ This article builds on several considerations and recommendations defined in [Az
 
 ## Prioritize security for Oracle workloads
 
-As with most production databases, securing an Oracle workload is essential. The database must remain private and have no public endpoints. Only authorized cloud services such as a business application or web front-end services should control access to the data. A select few authorized individuals can manage any production database by using a secured service. For more information, see [Plan for VM remote access](../../ready/azure-best-practices/plan-for-virtual-machine-remote-access.md).
+As with most production databases, securing an Oracle workload is essential. The database must remain private and have no public endpoints. Only authorized cloud services such as a business application or web front-end services should control access to the data. A select few authorized individuals can manage any production database by using a secured service. For more information, see [Plan for VM remote access](../../ready/azure-best-practices/bastion-virtual-machine-remote-access.md).
 
 ## High-level network design
 
