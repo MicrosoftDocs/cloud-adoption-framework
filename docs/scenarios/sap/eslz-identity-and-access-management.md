@@ -45,7 +45,7 @@ Here are common administration and management activities of SAP on Azure:
 
 - Secure Remote Function Call (RFC) connections between SAP systems with secure network communications (SNC) by using appropriate protection levels, like quality of protection (QoP). SNC protection generates some performance overhead. To protect RFC communication between application servers of the same SAP system, SAP recommends using network security instead of SNC. The following Azure services support SNC-protected RFC connections to an SAP target system: Providers of Azure Monitor for SAP Solutions, the self-hosted integration runtime in Azure Data Factory, and the on-premises data gateway in case of Power BI, Power Apps, Power Automate, Azure Analysis Services, and Azure Logic Apps. SNC is required to configure single sign-on (SSO) in these cases.
 
-### SAP User governance and provisioning
+### SAP user governance and provisioning
 
 - Consider that a migration to Azure might be an opportunity to review and realign identity and access management processes. Review the processes in your SAP landscape and the processes at your enterprise level:
   - Review the SAP dormant user lockout policies.
@@ -56,7 +56,7 @@ Here are common administration and management activities of SAP on Azure:
 
 - Consider Microsoft Entra provisioning service to automatically provision and deprovision users and groups to [SAP Analytics Cloud](/azure/active-directory/saas-apps/sap-analytics-cloud-provisioning-tutorial), [SAP Identity Authentication](/azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial) and more SAP services.
 
-- Consider provisioning users from [SuccessFactors](/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) into Microsoft Entra ID, with optional write-back of email address to SuccessFactors.
+- Consider provisioning users from [SuccessFactors](/entra/identity/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) into Microsoft Entra ID, with optional write-back of email address to SuccessFactors.
 
 ## Design recommendations
 
