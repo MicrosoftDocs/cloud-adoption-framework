@@ -15,10 +15,10 @@ After you complete the first four steps of your strategy, you can factor in othe
 
 ## Strategic considerations
 
-Use these sections to learn more about important considerations and recommendations across various common cloud adoption strategy motivations and use cases, helping you achieve the relevant business outcomes.
+The following table describes important considerations and recommendations for common cloud adoption strategy motivations and use cases.
 
-> [!TIP]
-> Are you missing a specific topic or strategic consideration? Let us know using the feedback tool on the page. Include a justification for why your suggested topic would be a suitable addition to the guidance.
+> [!NOTE]
+> If you think that a specific topic or strategic consideration should be added to the existing list of considerations, use the feedback tool in the upper-right corner of the page to offer suggestions. Include a justification about why you want to add that topic to the guidance.
 
 | Strategic consideration | Description |
 | --- | --- |
