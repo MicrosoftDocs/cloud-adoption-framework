@@ -24,7 +24,7 @@ Evaluate the attributes of your HPC environment in terms of an [asset-driven](..
 
 When planning cloud adoption for your HPC environment, review the Azure DevOps [strategy and plan template](../../plan/template.md#align-the-cloud-adoption-plan) to align your tasks and organize objectives through epics, features, and user stories.
 
-Also plan your [HPC network topology](../azure-hpc/energy/network-topology-connectivity.md) to follow best practices surrounding networking and connectivity for Azure HPC deployments.
+Also plan your [HPC network topology](network-topology-connectivity.md) to follow best practices surrounding networking and connectivity for Azure HPC deployments.
 
 For skilling your IT teams on adopting Azure HPC services, [identify gaps](../../plan/adapt-roles-skills-processes.md#identify-gaps) when forming your digital transformation.
 

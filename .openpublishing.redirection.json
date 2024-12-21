@@ -1,6 +1,21 @@
 {
    "redirections": [
       {
+         "source_path": "docs/scenarios/azure-hpc/energy/azure-billing-active-directory-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/azure-billing-active-directory-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/azure-billing-active-directory-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/manage/hybrid/server/best-practices/arc-vm-extension-mma.md",
          "redirect_url": "/azure/azure-arc/servers/manage-vm-extensions-template",
          "redirect_document_id": false
@@ -2231,6 +2246,21 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/azure-hpc/energy/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {   
          "source_path": "docs/secure/security-best-practices-introduction.md",
          "redirect_url": "/security/zero-trust/deploy/infrastructure",
          "redirect_document_id": false
@@ -2356,6 +2386,96 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/azure-hpc/energy/management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/platform-automation-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/platform-automation-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {   
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/platform-automation-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/security-governance-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/security-governance-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/security-governance-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      },
+     {
          "source_path": "docs/scenarios/oracle-iaas/enterprise-enrollment-oracle.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
          "redirect_document_id": false
