@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: e2e-oracle
 --- 
 
-# Business continuity and disaster recovery considerations for Oracle Database@Azure-Exadata Database Service
+# Business continuity and disaster recovery considerations for Oracle Database@Azure
 
 This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations outlined in the [Azure landing zone design area](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md), incorporating [Oracle Maximum Availability Architecture](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) (MAA) principles for Oracle Database@Azure-Exadata Database Services.
 
