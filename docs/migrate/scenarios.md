@@ -20,6 +20,14 @@ Specific migration scenarios require different approaches and tools. This articl
 | [Assess AWS instances for migration to Azure](/azure/migrate/tutorial-assess-aws) | Learn how to assess AWS instances for migration to Azure using the Azure Migrate: Discovery and assessment tool. |
 | [Migrate AWS instances](/azure/migrate/tutorial-migrate-aws-virtual-machines) | Complete a tutorial to learn how to discover and assess AWS virtual machines (VMs), and then migrate them to Azure VMs using the Azure Migrate: Discovery and assessment tool and the Migration and modernization tool. |
 
+## Google Cloud Platform (GCP)
+
+| Link | Description |
+|---|---|
+| [Discover GCP instances](/azure/migrate/tutorial-discover-gcp) | Complete a tutorial to learn how to discover Google Cloud Platform (GCP) instances using the [Azure Migrate: Discovery and assessment tool](/azure/migrate/migrate-services-overview). |
+| [Assess GCP instances for migration to Azure](/azure/migrate/tutorial-assess-gcp) | Learn how to assess GCP instances for migration to Azure using the Azure Migrate: Discovery and assessment tool. |
+| [Migrate GCP instances](/azure/migrate/tutorial-migrate-gcp-virtual-machines) | Complete a tutorial to learn how to discover and assess GCP virtual machines (VMs), and then migrate them to Azure VMs using the Azure Migrate: Discovery and assessment tool and the Migration and modernization tool. |
+
 ## Containers
 
 | Link | Description |
