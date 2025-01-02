@@ -19,7 +19,7 @@ If a system supports a key process or is critical to your business operations, a
 
 In a modern landscape where downtime can lead to significant financial losses and damage to reputation, resiliencey is a necessity for many organizations. Whether it's caused by natural disasters, cyberattacks, or system failures, disruption can happen unexpectedly at any time.
 
-Resilieny is about ensuring that your cloud infrastructure and applications are robust enough to handle these challenges, minimize downtime, and preserve the integrity of your services and data.  
+Resiliency is about ensuring that your cloud infrastructure and applications are robust enough to handle these challenges, minimize downtime, and preserve the integrity of your services and data.  
 
 Typically, not all systems in your business require the same level of resiliency. You might consider allowing flexibility in the resiliency levels within your business so you can focus on resiliency investments where it matters most.
 
