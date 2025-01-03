@@ -1,5 +1,5 @@
 ---
-title: Introduction to cloud-scale analytics
+title: Introduction to Cloud-Scale Analytics
 description: Learn about cloud-scale analytics for Azure.
 author: mboswell
 ms.author: mboswell
