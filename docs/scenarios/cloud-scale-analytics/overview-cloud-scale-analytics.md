@@ -1,6 +1,6 @@
 ---
 title: Introduction to Cloud-Scale Analytics
-description: Learn about cloud-scale analytics for Azure.
+description: Learn about building and operationalizing landing zones to host and run cloud-scale analytics workloads.
 author: mboswell
 ms.author: mboswell
 ms.date: 11/27/2024
@@ -10,27 +10,27 @@ ms.custom: e2e-data-management, think-tank
 
 # Introduction to cloud-scale analytics
 
-Cloud-scale analytics builds upon Azure landing zones for ease of deployment and governance. The main purpose of an Azure landing zone is to ensure that, when an application or workload lands on Azure, the required infrastructure is already in place. Before you deploy your cloud-scale analytics landing zone, you must have already worked through the [cloud adoption framework](/azure/cloud-adoption-framework/) to deploy an [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) with platform landing zones.
+Cloud-scale analytics builds upon Azure landing zones to simplify deployment and governance. The main purpose of an Azure landing zone is to ensure that, when you deploy an application or workload on Azure, the required infrastructure is already in place. Before you deploy your cloud-scale analytics landing zone, you need to work through the [Cloud Adoption Framework](/azure/cloud-adoption-framework/) to deploy an [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) that has platform landing zones.
 
-For sovereign workloads, Microsoft has the [Sovereign Landing Zone (SLZ)](/industry/sovereignty/slz-overview), which is a variant of the enterprise-scale Azure Landing Zone intended for organizations that need advanced sovereign controls. Cloud-scale analytics can be deployed against this variant of Azure Landing Zone.
+For sovereign workloads, Microsoft provides the [Sovereign Landing Zone (SLZ)](/industry/sovereignty/slz-overview), which is a variant of the enterprise-scale Azure landing zone. The SLZ is intended for organizations that need advanced sovereign controls. Cloud-scale analytics can be deployed against this Azure landing zone variant.
 
-Cloud-scale analytics involves deploying to application landing zones. These zones typically reside under the landing zone management group, with policies filtering down to the sample templates provided by Microsoft.
+Cloud-scale analytics involves deploying to application landing zones. These zones typically reside under the landing zone management group. Policies filter down to the sample templates that Microsoft provides.
 
-Microsoft provides sample templates to get you started, which you can use for your data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments.
+You can use these sample templates for your data lakehouse and [data mesh](architectures/what-is-data-mesh.md) deployments.
 
 ## Cloud-scale analytics evaluation
 
-Often, a business seeks clarity or prescriptive guidance before it starts to carve out the technical details for a specific use case, project, or end-to-end cloud-scale analytics. As a business formulates its overall data strategy, it can be challenging to ensure that it considers all the strategic and required principles in the scope of the current use.
+Often, a business seeks clarity or prescriptive guidance before it starts to define the technical details for a specific use case or project, or for end-to-end cloud-scale analytics. As a business formulates its overall data strategy, it can be challenging to ensure that all the required and strategic principles in the scope of the current use are taken into account.
 
-To speed up the delivery of this end-to-end insights journey, while keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns with the key themes discussed in [Develop a plan for cloud-scale analytics](../data-management/plan.md).
+To speed up the delivery of this end-to-end insights implementation, while keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns with the key themes that are discussed in [Develop a plan for cloud-scale analytics](../data-management/plan.md).
 
-Cloud-scale analytics builds on top of the Microsoft Cloud Adoption Framework, while applying the Microsoft Azure Well-Architected Framework lens. The Microsoft Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architecture, and platform templates. It's based on real-world learnings from some of our most challenging, sophisticated, and complex environments.
+Cloud-scale analytics builds on the Cloud Adoption Framework and applies the principles of the Azure Well-Architected Framework. The Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architectures, and platform templates. It's based on real-world experiences from some of our most challenging, sophisticated, and complex environments.
 
-Cloud-scale analytics paves the way for customers to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of security, governance, and compliance. They're scalable and modular, while supporting autonomy and innovation.
+Cloud-scale analytics prepares the way for you to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of enhanded security, governance, and compliance. Landing zones are scalable and modular, but they support autonomy and innovation.
 
 ## History of data architecture
 
-In the late 1980s, data warehouse generation 1 was introduced, which combined disparate data sources from across the enterprise. In the late 2000s came Gen2, with the introduction of big data ecosystems like Hadoop and data lake. The mid-2010s brought the cloud data platform. It was similar to previous generations, but with the introduction of streaming data ingestion, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
+In the late 1980s, data warehouse generation 1 was introduced. It combined disparate data sources from across the enterprise. In the late 2000s, generation 2 emerged, with the introduction of big data ecosystems like Hadoop and data lake. The mid-2010s brought the cloud data platform. It was similar to previous generations, but with the introduction of streaming data ingestion, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
 
 In spite of these advances, many organizations still use the centralized monolithic platform, generation 1. This system works well, up to a point. However, bottlenecks can occur because of interdependent processes, tightly coupled components, and hyperspecialized teams. Extract, transform, and load (ETL) jobs can become prominent and slow down delivery timelines.
 
