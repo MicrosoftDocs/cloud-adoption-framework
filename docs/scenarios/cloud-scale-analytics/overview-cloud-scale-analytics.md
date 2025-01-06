@@ -26,7 +26,7 @@ To speed up the delivery of this end-to-end insights implementation, while keepi
 
 Cloud-scale analytics builds on the Cloud Adoption Framework and applies the principles of the Azure Well-Architected Framework. The Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architectures, and platform templates. It's based on real-world experiences from some of our most challenging, sophisticated, and complex environments.
 
-Cloud-scale analytics prepares the way for you to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of enhanded security, governance, and compliance. Landing zones are scalable and modular, but they support autonomy and innovation.
+Cloud-scale analytics prepares the way for you to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of enhanced security, governance, and compliance. Landing zones are scalable and modular, but they support autonomy and innovation.
 
 ## History of data architecture
 
@@ -76,81 +76,81 @@ Organizations that have data spread across a hybrid multicloud and distributed-d
 
 ## Secure your analytics estate
 
-Another major driver for data governance is data protection. Data protection can help you be compliant with regulatory legislation and can prevent data breaches. Data privacy and the growing number of data breaches have made data protection a top priority in the boardroom. These breaches highlight the risk to sensitive data, such as personally identifiable customer data. The consequences of data privacy violation or a data security breach are many and can include:
+Another major driver for data governance is data protection. Data protection can help you ensure compliance with regulatory legislation and can prevent data breaches. Data privacy and the growing number of data breaches have made data protection a top priority. Data breaches highlight the risk to sensitive data, such as personally identifiable customer data. The consequences of data privacy violation or a data security breach can include:
 
-- Loss or serious damage to brand image
-- Loss of customer confidence and market share
-- Fall in share price, which impacts stakeholder return on investment and executive salary
-- Major financial penalties because of audit or compliance failure
-- Legal action
-- The domino effect of the breach, for example, customers might fall victim to identity theft
+- Serious damage to brand image.
+- Loss of customer confidence and market share.
+- Fall in share price, which affects stakeholder return on investment and executive salaries.
+- Significant financial penalties because of audit or compliance failures.
+- Legal action.
+- Secondary effects of the breach, for example, customers might fall victim to identity theft.
 
-In most cases, publicly quoted companies must declare these breaches. If breaches occur, customers are more likely to blame the company first, rather than the hacker. The customer might boycott the company for several months or might never return.
+In most cases, publicly quoted companies must declare breaches. If breaches occur, customers are likely to blame the company rather than the hacker. Customers might boycott the company for several months or might never return.
 
-Failure to comply with regulatory legislation on data privacy can result in significant financial penalties. Governing your data help you avoid such risks.
+Failure to comply with regulatory legislation on data privacy can result in significant financial penalties. Governing your data helps you avoid these risks.
 
 ## Operating model and benefits
 
-Adopting a modern data strategy platform doesn't only change the technology that your organization uses, but also how it operates.
+Adopting a modern data strategy platform doesn't just change the technology that your organization uses. It also changes how the organization operates.
 
-Cloud-scale analytics provides prescribed guidance to help you consider how to organize and skill your people and teams, including:
+Cloud-scale analytics provides guidance to help you organize and train your people and teams, including:
 
-- Persona, role, and responsibility definitions
-- Suggested structures for agile, vertical, and cross-domain teams
-- Skilling resources, including Azure data and AI certifications via Microsoft Learn
+- Persona, role, and responsibility definitions.
+- Suggested structures for agile, vertical, and cross-domain teams.
+- Training resources, including Azure data and AI certifications via Microsoft Learn.
 
-It's also important to engage your end users throughout the modernization process, and as you continue to evolve your platform and onboard new use cases.
+It's also important to engage your end users throughout the modernization process and as you continue to evolve your platform and onboard new use cases.
 
 ## Architectures
 
-Azure landing zones represent the strategic design path and target technical state for your environment. They allow ease of deployment and governance to provide greater agility and compliance. Azure landing zones also ensure that when a new application or workload lands in your environment, the proper infrastructure is already in place. Azure data management and data landing zones, integrated with Microsoft software-as-service governance and analytics solutions, are designed with these same foundational principles in mind and, when combined with the other elements of cloud-scale analytics, can help to enable:
+Azure landing zones represent the strategic design path and target technical state for your environment. They make deployment and governance easier to improve agility and compliance. They also ensure that, when a new application or workload is added to your environment, the proper infrastructure is already in place. Azure data management and data landing zones, integrated with Microsoft software as a service (SaaS) governance and analytics solutions, are designed with these foundational principles in mind and, when combined with the other elements of cloud-scale analytics, can help to enable:
 
-- Self-service
-- Scalability
-- Fast start
-- Security
-- Privacy
-- Optimized operations
+- Self-service.
+- Scalability.
+- A fast start.
+- Security.
+- Privacy.
+- Optimized operations.
 
 ### Data management landing zone
 
-The data management landing zone provides the foundation for your platform's centralized data governance and management across your organization. It also facilitates communication to ingest data from your entire digital estate, including multicloud and hybrid infrastructure.
+The data management landing zone provides the foundation for your platform's centralized data governance and management across your organization. It also facilitates communication to ingest data from your entire digital estate, including multicloud and hybrid infrastructures.
 
 The data management landing zone supports numerous other data management and governance capabilities, such as:
 
-- Data catalog
-- Data quality management
-- Data classification
-- Data lineage
-- Data modeling repository
-- API catalog
-- Data sharing and contracts
+- Data catalogs.
+- Data quality management.
+- Data classification.
+- Data lineage.
+- Data modeling repositories.
+- API catalogs.
+- Data sharing and contracts.
 
 > [!TIP]
-> If you're using partner solutions for data catalog, data quality management, or data lineage capabilities, they should reside in the data management landing zone. Alternatively, Microsoft Purview can be deployed as a software-as-a-service solution, connecting to both the data management landing zone and the data landing zones.
+> If you use partner solutions for data catalog, data quality management, or data lineage capabilities, they should reside in the data management landing zone. Alternatively, you can deploy Microsoft Purview as a SaaS solution, connecting to both the data management landing zone and the data landing zones.
 
 ### Data landing zones
 
 Data landing zones bring data closer to users and enable self-service while maintaining common management and governance via connection to the data management landing zone.
 
-They host standard services like networking, monitoring, data ingestion and processing, as well as customizations like data products and visualizations.
+They host standard services like networking, monitoring, and data ingestion and processing, in addition to customizations like data products and visualizations.
 
 Data landing zones are key to enabling your platform's scalability. Depending on your organization's size and needs, you can start with one or multiple landing zones.
 
-As you decide between single and multiple landing zones, consider regional dependencies and data residency requirements. For example, are there local laws or regulations that require data to stay in a specific location?
+When you decide between single and multiple landing zones, consider regional dependencies and data residency requirements. For example, are there local laws or regulations that require data to stay in a specific location?
 
-Regardless of your initial decision, you can add or remove data landing zones as needed. If you're starting with a single landing zone, we recommend that you plan to extend to multiple landing zones to avoid future needs for migration.
+Regardless of your initial decision, you can add or remove data landing zones as needed. If you start with a single landing zone, we recommend that you plan to extend to multiple landing zones to avoid future needs for migration.
 
 > [!NOTE]
-> Where Microsoft Fabric has been deployed, the data landing zone hosts non-software-as-service solutions such as data lakes and other Azure data services.
+> Where Microsoft Fabric is deployed, the data landing zone hosts non-SaaS solutions like data lakes and other Azure data services.
 
 For more information about landing zones, see [Azure landing zones for cloud-scale analytics](../data-management/ready.md).
 
 ## Conclusion
 
-After you've read this documentation set, in particular the governance, security, operating, and best practices sections, we recommend you set up a proof-of-concept environment by using the deployment templates. These templates, along with architecture guidance, give you hands-on experience with some of the Azure and Microsoft software-as-a-service technologies. For more information, see the [Getting started checklist](architectures/data-mesh-checklist.md).
+After you read this documentation set, in particular the governance, security, operating, and best practices sections, we recommend that you set up a proof-of-concept environment by using the deployment templates. These templates, along with architecture guidance, give you hands-on experience with some of the Azure and Microsoft SaaS technologies. For more information, see the [Getting started checklist](architectures/data-mesh-checklist.md).
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Integrate cloud-scale analytics into your cloud adoption strategy](../data-management/strategy.md)
