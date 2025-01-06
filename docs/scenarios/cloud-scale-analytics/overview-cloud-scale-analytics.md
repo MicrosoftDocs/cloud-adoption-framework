@@ -48,7 +48,7 @@ You can support any data platform and scenario to create an end-to-end cloud-sca
 
 One of the first steps is to activate your data strategy to meet your challenges by iteratively building a scalable and agile modern data platform.
 
-Instead of being overwhelmed with service tickets and trying to meet competing business needs, when you implement a modern data platform, you can to play a more consultative role because you can free up your time to focus on more valuable work. You provide lines of business with the platform and systems to self-serve data and analytics needs.
+Instead of being overwhelmed with service tickets and trying to meet competing business needs, when you implement a modern data platform, you can play a more consultative role because you can free up your time to focus on more valuable work. You provide lines of business with the platform and systems to self-serve data and analytics needs.
 
 Following are recommended areas of initial focus:
 
