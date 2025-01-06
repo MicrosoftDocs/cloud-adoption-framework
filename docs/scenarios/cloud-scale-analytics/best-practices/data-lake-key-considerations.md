@@ -23,7 +23,7 @@ Azure Storage offers various access tiers that you can use to store blob object 
 - Use an **archive tier** to store rarely accessed data. This tier stores data for at least 180 days. Access to this data can have flexible latency requirements, which means that it can take hours to retrieve data.
 
 > [!IMPORTANT]
-> The online access tiers don't have reliability, security, operational excellence, or performance efficiency trade-offs. Therefore, you should base your decision on the cost for each blob. Consider your workload access data size, operational interactions, and the time before the blob is deleted. Select the appropriate tier for each blob based on [these factors](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob). For more information, see [Plan and manage costs for Azure Blob Storage ](/azure/storage/common/storage-plan-manage-costs).
+> The online access tiers (hot, cool, and cold) don't have reliability, security, operational excellence, or performance efficiency trade-offs. Therefore, you should base your decision on the cost for each blob. Consider your workload access data size, operational interactions, and the time before the blob is deleted. Select the appropriate tier for each blob based on [these factors](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob). For more information, see [Plan and manage costs for Azure Blob Storage ](/azure/storage/common/storage-plan-manage-costs).
 
 Consider the following factors when you use access tiers:
 
@@ -37,7 +37,7 @@ Consider the following factors when you use access tiers:
 
 For more information, see [Access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
-> [!CAUTION]
+> [!IMPORTANT]
 > For cloud-scale analytics, use a custom microservice to implement [lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md). Carefully consider the impact of moving user-discoverable data to cool storage. Move only sections of your data lake to the cool tier for well-understood workloads.
 
 ## Data lake connectivity
@@ -87,7 +87,7 @@ All other failed anonymous requests aren't logged.
 > [!IMPORTANT]
 > Set your default monitoring policy to audit storage and send logs to your enterprise-scale management subscription.
 
-## Recommended data lake zone security
+## Data lake zone security
 
 We recommend the following security patterns for data lake zones:
 
@@ -100,4 +100,4 @@ For more information, see [Access control model in Data Lake Storage](/azure/sto
 
 ## Next step
 
-- [Use Azure Databricks within cloud-scale analytics in Azure](./azure-databricks-implementation.md)
+- [The ingest process with cloud-scale analytics in Azure](data-ingestion.md)
