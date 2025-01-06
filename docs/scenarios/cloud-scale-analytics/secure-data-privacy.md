@@ -1,6 +1,6 @@
 ---
 title: Data Privacy for Cloud-Scale Analytics in Azure
-description: Learn about to use cloud-scale analytics to determine the optimal data-access patterns that suit your requirements while safeguarding personal data at multiple levels.
+description: Learn about how to use cloud-scale analytics to determine the optimal data-access patterns that suit your requirements while safeguarding personal data at multiple levels.
 author: mboswell
 ms.author: mboswell
 ms.date: 1/6/2025
@@ -52,7 +52,7 @@ In addition to defining policies for locations and allowed Azure services, consi
 
 For key management, you can use platform-managed or customer-managed encryption keys. For more information, see [Overview of key management in Azure](/azure/security/fundamentals/key-management) and [How to choose the right key management solution](/azure/security/fundamentals/key-management-choose).
 
-For more information about encryption options, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [data encryption models](/azure/security/fundamentals/encryption-models).
+For more information about encryption options, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Data encryption models](/azure/security/fundamentals/encryption-models).
 
 You can use the [Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol to protect data that travels between cloud services and customers. For more information, see [Encryption of data in transit](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit).
 
@@ -76,11 +76,11 @@ Use Microsoft Purview to centrally manage, secure, and control the following are
 - Insights about protection and compliance
 - Policies for data protection reporting
 
-For more information about managing read or modify access with Microsoft Purview, see [Concepts for Microsoft Purview data owner policies](/purview/concept-policies-data-owner).
+For more information about how to use Microsoft Purview to manage read or modify access, see [Concepts for Microsoft Purview data owner policies](/purview/concept-policies-data-owner).
 
 Whether you decide to implement Microsoft Purview or another data governance solution, use Microsoft Entra ID groups to apply policies to data products.
 
-Use the data governance solution's REST API to onboard a new dataset. Your data application teams create data products and register them in the data governance solution to help identify sensitive data. The data governance solution imports the definition and denies all access to data until your teams set up its access policies.
+Use the data governance solution's REST API to onboard a new dataset. Your data application teams create data products and register them in the data governance solution to help identify sensitive data. The data governance solution imports the definition and denies all access to the data until your teams set up its access policies.
 
 ## Use data-protection patterns
 
@@ -90,7 +90,7 @@ To protect sensitive data, choose a data-protection pattern based on the data, s
 
 The pipeline for every data product that has a sensitive personal-data classification creates two copies. The pipeline classifies the first as confidential or below. This copy doesn't include the sensitive personal-data columns. It's created under the confidential-or-below folder for the data product. The other copy is created in the sensitive personal-data folder. This copy includes the sensitive data. Each folder is assigned a Microsoft Entra ID reader and a Microsoft Entra ID writer security group.
 
-If you use Microsoft Purview, you can register both versions of the data product and use policies to secure the data.
+If you use Microsoft Purview, you can register both versions of the data product and use policies to help secure the data.
 
 The multiple copies pattern separates sensitive personal data and confidential-or-below data. But if you grant a user access to sensitive personal data, they can query all rows. Your organization might need to consider other solutions that provide row-level security to filter rows.
 
