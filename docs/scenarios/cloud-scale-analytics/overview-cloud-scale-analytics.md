@@ -22,15 +22,15 @@ You can use these sample templates for your data lakehouse and [data mesh](archi
 
 Often, a business seeks clarity or prescriptive guidance before it starts to define the technical details for a specific use case or project, or for end-to-end cloud-scale analytics. As a business formulates its overall data strategy, it can be challenging to ensure that all the required and strategic principles in the scope of the current use are taken into account.
 
-To speed up the delivery of this end-to-end insights implementation, while keeping these challenges in mind, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns with the key themes that are discussed in [Develop a plan for cloud-scale analytics](../data-management/plan.md).
+To speed up the delivery of this end-to-end insights implementation, while taking these challenges into account, Microsoft has developed a prescriptive scenario for cloud-scale analytics. It aligns with the key themes that are discussed in [Develop a plan for cloud-scale analytics](../data-management/plan.md).
 
-Cloud-scale analytics builds on the Cloud Adoption Framework and applies the principles of the Azure Well-Architected Framework. The Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architectures, and platform templates. It's based on real-world experiences from some of our most challenging, sophisticated, and complex environments.
+Cloud-scale analytics builds on the Cloud Adoption Framework and applies the principles of the Azure Well-Architected Framework. The Cloud Adoption Framework provides prescriptive guidance and best practices on cloud operating models, reference architectures, and platform templates. This guidance is based on real-world experiences from some of our most challenging, sophisticated, and complex environments.
 
-Cloud-scale analytics prepares the way for you to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of enhanced security, governance, and compliance. Landing zones are scalable and modular, but they support autonomy and innovation.
+Cloud-scale analytics helps you to prepare to build and operationalize landing zones to host and run analytics workloads. You build the landing zones on the foundations of enhanced security, governance, and compliance. Landing zones are scalable and modular, but they support autonomy and innovation.
 
 ## History of data architecture
 
-In the late 1980s, data warehouse generation 1 was introduced. It combined disparate data sources from across the enterprise. In the late 2000s, generation 2 emerged, with the introduction of big data ecosystems like Hadoop and data lake. The mid-2010s brought the cloud data platform. Streaming data ingestion, like Kappa or Lambda architectures, were introduced. In the early 2020s, data lakehouses, data meshes, data fabrics, and data-centric operational patterns were introduced.
+In the late 1980s, data warehouse generation 1 was introduced. This model combines disparate data sources from across the enterprise. In the late 2000s, generation 2 emerged, with the introduction of big data ecosystems like Hadoop and data lake. The mid-2010s brought the cloud data platform: streaming data ingestion, like Kappa or Lambda architectures, were introduced. In the early 2020s, data lakehouses, data meshes, data fabrics, and data-centric operational patterns were introduced.
 
 In spite of these advances, many organizations still use the centralized monolithic platform: generation 1. This system works well, up to a point. However, bottlenecks can occur because of interdependent processes, tightly coupled components, and hyperspecialized teams. Extract, transform, and load (ETL) jobs can become prominent and slow down delivery timelines.
 
@@ -48,15 +48,15 @@ You can support any data platform and scenario to create an end-to-end cloud-sca
 
 One of the first steps is to activate your data strategy to meet your challenges by iteratively building a scalable and agile modern data platform.
 
-Instead of being overwhelmed with service tickets and trying to meet competing business needs, with a modern data platform, you to play a more consultative role by freeing up your time to focus on more valuable work. You provide lines of business with the platform and systems to self-serve data and analytics needs.
+Instead of being overwhelmed with service tickets and trying to meet competing business needs, when you implement a modern data platform, you can to play a more consultative role because you can free up your time to focus on more valuable work. You provide lines of business with the platform and systems to self-serve data and analytics needs.
 
 Following are recommended areas of initial focus:
 
 - Improve data quality, facilitate trust, and gain insights to make data-driven business decisions.
-- Seamlessly implement holistic data, management, and analytics at scale, across your organization.
+- Implement holistic data, management, and analytics at scale, across your organization.
 - Establish robust data governance that enables self-service and flexibility for lines of business.
 - Maintain security and legal compliance in a fully integrated environment.
-- Quickly create the foundation for advanced analytics capabilities, with an out-of-the-box solution of well-architected, repeatable, modular patterns.
+- Quickly create the foundation for advanced analytics capabilities by using an out-of-the-box solution of well-architected, repeatable, modular patterns.
 
 ## Govern your analytics estate
 
@@ -93,7 +93,7 @@ Failure to comply with regulatory legislation on data privacy can result in sign
 
 Adopting a modern data strategy platform doesn't just change the technology that your organization uses. It also changes how the organization operates.
 
-Cloud-scale analytics provides guidance to help you organize and train your people and teams, including:
+Cloud-scale analytics provides guidance to help you organize and train your employees, including:
 
 - Persona, role, and responsibility definitions.
 - Suggested structures for agile, vertical, and cross-domain teams.
