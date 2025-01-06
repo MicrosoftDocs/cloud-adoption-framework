@@ -52,9 +52,9 @@ Here are common administration and management activities of SAP on Azure:
   - Review the SAP user password policy and align it with Microsoft Entra ID.
   - Review the leavers, movers, and starters (LMS) procedures and align them with Microsoft Entra ID. If you're using SAP Human Capital Management (HCM), SAP HCM likely drives the LMS process.
 
-- Consider using [SAP principal propagation](/power-platform/sap/connect/entra-id-apim-oauth) to forward an Microsoft identity to your SAP landscape.
+- Consider using [SAP principal propagation](/power-platform/sap/connect/entra-id-apim-oauth) to forward a Microsoft identity to your SAP landscape.
 
-- Consider Microsoft Entra provisioning service to automatically provision and deprovision users and groups to [SAP Analytics Cloud](/azure/active-directory/saas-apps/sap-analytics-cloud-provisioning-tutorial), [SAP Identity Authentication](/azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial) and more SAP services.
+- Consider Microsoft Entra provisioning service to automatically provision and deprovision users and groups to [SAP Analytics Cloud](/azure/active-directory/saas-apps/sap-analytics-cloud-provisioning-tutorial), [SAP Identity Authentication](/azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial), and more SAP services.
 
 - Consider provisioning users from [SuccessFactors](/entra/identity/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) into Microsoft Entra ID, with optional write-back of email address to SuccessFactors.
 
