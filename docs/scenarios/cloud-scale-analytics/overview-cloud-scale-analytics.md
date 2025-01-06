@@ -30,27 +30,27 @@ Cloud-scale analytics prepares the way for you to build and operationalize landi
 
 ## History of data architecture
 
-In the late 1980s, data warehouse generation 1 was introduced. It combined disparate data sources from across the enterprise. In the late 2000s, generation 2 emerged, with the introduction of big data ecosystems like Hadoop and data lake. The mid-2010s brought the cloud data platform. It was similar to previous generations, but with the introduction of streaming data ingestion, like kappa or lambda architectures. The early 2020s introduced the concepts of the data lakehouse, data mesh, data fabric, and data-centric operational patterns.
+In the late 1980s, data warehouse generation 1 was introduced. It combined disparate data sources from across the enterprise. In the late 2000s, generation 2 emerged, with the introduction of big data ecosystems like Hadoop and data lake. The mid-2010s brought the cloud data platform. Streaming data ingestion, like Kappa or Lambda architectures, were introduced. In the early 2020s, data lakehouses, data meshes, data fabrics, and data-centric operational patterns were introduced.
 
-In spite of these advances, many organizations still use the centralized monolithic platform, generation 1. This system works well, up to a point. However, bottlenecks can occur because of interdependent processes, tightly coupled components, and hyperspecialized teams. Extract, transform, and load (ETL) jobs can become prominent and slow down delivery timelines.
+In spite of these advances, many organizations still use the centralized monolithic platform: generation 1. This system works well, up to a point. However, bottlenecks can occur because of interdependent processes, tightly coupled components, and hyperspecialized teams. Extract, transform, and load (ETL) jobs can become prominent and slow down delivery timelines.
 
-Data warehouse and data lake are still valuable and play an important role in your overall architecture. In the documentation that follows, we've highlighted some of the challenges that can occur when using these traditional practices to scale. These challenges are especially relevant in a complex organization, where data sources, requirements, teams, and outputs change.
+Data warehouse and data lake are still valuable and play an important role in your overall architecture. The following documentation highlights some of the challenges that can occur when you use these traditional practices for scaling. These challenges are especially relevant in a complex organization, where data sources, requirements, teams, and outputs change.
 
 ## Moving to cloud-scale analytics
 
 Your current analytical data architecture and operating model can include data warehouse, data lake, and data lakehouse structures, data fabric, or data mesh.
 
-Each data model has its own merits and challenges. Cloud-scale analytics helps you work from your current setup to shift your approach to data management so that it can evolve with your infrastructure.
+Each data model has its own merits and challenges. Cloud-scale analytics helps you shift your current approach to data management so that it can evolve with your infrastructure.
 
 You can support any data platform and scenario to create an end-to-end cloud-scale analytics framework that serves as your foundation and allows for scaling.
 
 ## Modern data platform and desired outcomes
 
-One of the first focus areas is to activate your data strategy to meet your challenges by iteratively building a scalable and agile modern data platform.
+One of the first steps is to activate your data strategy to meet your challenges by iteratively building a scalable and agile modern data platform.
 
-Instead of being overwhelmed with service tickets and trying to meet competing business needs, a modern data platform enables you to play a more consultative role by freeing up your time to focus on more valuable work. You provide lines of business with the platform and systems to self-serve data and analytics needs.
+Instead of being overwhelmed with service tickets and trying to meet competing business needs, with a modern data platform, you to play a more consultative role by freeing up your time to focus on more valuable work. You provide lines of business with the platform and systems to self-serve data and analytics needs.
 
-Recommended areas of initial focus are:
+Following are recommended areas of initial focus:
 
 - Improve data quality, facilitate trust, and gain insights to make data-driven business decisions.
 - Seamlessly implement holistic data, management, and analytics at scale, across your organization.
@@ -60,19 +60,19 @@ Recommended areas of initial focus are:
 
 ## Govern your analytics estate
 
-A second consideration is to determine how the organization implements data governance.
+A second consideration is to determine how your organization will implement data governance.
 
-Data governance is how you ensure that the data you use in your business operations, reports, and analysis is discoverable, accurate, trusted, and can be protected.
+Data governance is the process of ensuring that the data you use in your business operations, reports, and analysis is discoverable, accurate, and trusted, and that it can be protected.
 
-For many companies, the expectation is that data and AI will drive a competitive advantage. As a result, executives are eager to sponsor AI initiatives in their determination to become data-driven. However, for AI to become effective, the data it's using must be trusted. Otherwise, decision accuracy can be compromised, decisions might be delayed, or actions might be missed, which can affect the bottom line. Companies don't want the quality of their data to be garbage in, garbage out. At first, it might seem simple to fix data quality until you look at the effect that digital transformation has had on data.
+For many companies, the expectation is that data and AI will drive a competitive advantage. As a result, executives are eager to sponsor AI initiatives in their determination to become data driven. However, for AI to be effective, the data it's using must be trusted. Otherwise, decision accuracy can be compromised, decisions might be delayed, or actions might be missed, which can affect the outcome. Companies don't want the quality of their data to be poor. Until you review the effect that digital transformation has had on data, it might seem simple to fix data quality.
 
-With data spread out across a hybrid multicloud and a distributed-data landscape, organizations struggle to find where their data is and to govern it. The ungoverned data can have a considerable effect on the business. Poor data quality impacts business operations because data errors cause process errors and delays. Poor data quality also affects business decision-making and the ability to remain compliant. Ensuring data quality at the source is often preferred because fixing quality issues in the analytical system can be more complex and costly than applying data quality rules early in the ingestion phase. To help track and govern data activity, data governance must include:
+Organizations that have data spread across a hybrid multicloud and distributed-data landscape struggle to find where their data is and to govern it. Ungoverned data can have a considerable effect on business. Poor data quality affects business operations because data errors cause process errors and delays. Poor data quality also affects business decision-making and the ability to remain compliant. Ensuring data quality at the source is often preferred because fixing quality issues in the analytical system can be more complex and costly than applying data quality rules early in the ingestion phase. To help you track and govern data activity, data governance must include:
 
-- Data discovery
-- Data quality
-- Policy creation
-- Data sharing
-- Metadata
+- Data discovery.
+- Data quality.
+- Policy creation.
+- Data sharing.
+- Metadata.
 
 ## Secure your analytics estate
 
