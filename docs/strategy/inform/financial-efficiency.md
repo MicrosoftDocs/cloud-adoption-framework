@@ -29,7 +29,7 @@ Also consider the following factors when you shift to an OpEx model:
 
 You can use an OpEx model to allocate charges or provide real-time application costs to business departments. Also consider changes to the commercial relationship between IT and application owners. Determine whether you want to fund the cost to run applications centrally or through a chargeback or showback mechanism.
 
-## Establish best practices with financial operations
+## Establish best practices with financial operations (FinOps)
 
 To implement financial efficiency in cloud adoption, you must effectively manage and optimize cloud investments to ensure that they deliver maximum business value. During this process, you must:
 

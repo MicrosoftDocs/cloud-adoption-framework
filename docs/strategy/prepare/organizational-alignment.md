@@ -1,5 +1,5 @@
 ---
-title: Prepare your organization for cloud adoption
+title: Prepare for organizational alignment
 description: Learn how to prepare your organization for cloud adoption by aligning leadership, strategies, and operating models.
 ms.author: tozimmergren
 author: Zimmergren
@@ -7,11 +7,9 @@ ms.topic: conceptual
 ms.date: 12/11/2024
 ---
 
-# Prepare your organization for cloud adoption
+# Prepare for organizational alignment
 
 Organizational alignment is important to ensure a collective buy-in to the strategies you're planning to execute on. To ensure you have the required support throughout your cloud adoption journey, consider getting a few key stakeholders involved early on, and expand your leadership buy-in as you iterate on your strategy execution.
-
-:::image type="content" source="./media/caf-strategy-prepare-organization.svg" alt-text="Diagram showing the phase for preparing your organization for your cloud adoption strategy.":::
 
 ## Leadership and executive buy-in
 
@@ -137,4 +135,4 @@ Consider the following:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Inform your strategy](./inform/index.md)
+> [Required cloud functions](./required-cloud-functions.md)

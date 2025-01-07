@@ -36,7 +36,7 @@ Establish coordination with your organization IT leaders and research teams to i
 
 Align responsibilities for your HPC environment by developing a cross-team matrix to identify responsibility, accountability, consultancy, and informed parties.
 
-For more information, see [Align responsibilities across teams.](../../organize/raci-alignment.md)
+For more information, see [Align responsibilities across teams.](../../strategy/prepare/raci-alignment.md)
 
 ## Next steps
 

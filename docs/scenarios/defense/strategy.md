@@ -47,7 +47,7 @@ For more information, see:
 
 - [Balancing priorities](../../strategy/balance-competing-priorities.md)
 - [Strategy resources](../../resources/tools-templates.md#strategy)
-- [RACI alignment](../../organize/raci-alignment.md)
+- [RACI alignment](../../strategy/prepare/raci-alignment.md)
 - [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)
 
 ## Next step
