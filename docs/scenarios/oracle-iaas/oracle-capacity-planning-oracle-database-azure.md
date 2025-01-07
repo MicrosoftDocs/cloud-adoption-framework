@@ -72,5 +72,6 @@ In this article, we cover following areas of capacity considerations while deplo
 ## Next steps
 
 - [Migration planning for Oracle on Azure](./oracle-migration-planning.md)
-- /azure/virtual-machines/workloads/oracle/oracle-migration-oracle-database-at-azure
+- [Migrate an Oracle database to OD@A Exadata Database Service](https://learn.microsoft.com/azure/architecture/databases/idea/migrate-oracle-odaa-exadata)
+ 
  

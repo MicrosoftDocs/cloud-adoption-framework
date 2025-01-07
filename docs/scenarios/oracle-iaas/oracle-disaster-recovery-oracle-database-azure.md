@@ -93,7 +93,7 @@ It's recommended to configure at least two Oracle Database@Azure-Exadata Databas
 - For a regional BCDR strategy, it's recommended to implement a secondary Oracle Database@Azure-Exadata Database Service deployment with a standby database located in a different region where the service is available.  
 This setup provides **protection** against full **regional outages**.
 
-- Configure Data Guard to replicate asynchronously for regional disaster recovery based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network latency test results](https://learn.microsoft.com/azure/networking/azure-network-latency?tabs=Americas%2CWestUS). 
+- Configure Data Guard to replicate asynchronously for regional disaster recovery based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network latency test results](https://learn.microsoft.com/azure/networking/azure-network-latency). 
 
   **Note** that automated data guard only allow Maximum Performance mode(ASYNC) configuration for cross region deployments.
 
