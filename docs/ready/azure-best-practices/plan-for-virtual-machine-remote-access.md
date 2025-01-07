@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: think-tank
 ---
 
-# Bastion for virtual machine remote access
+# Use Azure Bastion for virtual machine remote access
 
 This article describes the recommended guidance for providing remote access to virtual machines (VMs) deployed within an Azure landing zones architecture.
 
