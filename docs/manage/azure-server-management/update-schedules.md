@@ -12,7 +12,7 @@ ms.custom: internal
 
 You can manage update schedules by using the Azure portal or the new PowerShell cmdlet modules.
 
-To create an update schedule via the Azure portal, see [Schedule an update deployment](/azure/update-manager/scheduled-patching#schedule-recurring-updates-on-a-single-vm).
+To create an update schedule via the Azure portal, see [Schedule recurring updates on a single VM](/azure/update-manager/scheduled-patching#schedule-recurring-updates-on-a-single-vm).
 
 The `Az.Automation` module now supports configuring Update Management by using Azure PowerShell. The [`New-AzAutomationUpdateManagementAzureQuery`](/powershell/module/az.automation/new-azautomationupdatemanagementazurequery) cmdlet allows you to use tags, location, and saved searches to configure update schedules for a flexible group of machines.
 
