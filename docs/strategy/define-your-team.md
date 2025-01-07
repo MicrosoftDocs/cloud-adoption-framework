@@ -64,4 +64,4 @@ Your cloud strategy team should continuously seek input from across the business
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prepare your organization for cloud adoption](./prepare.md)
+> [Prepare your organization for cloud adoption](./prepare/index.md)
