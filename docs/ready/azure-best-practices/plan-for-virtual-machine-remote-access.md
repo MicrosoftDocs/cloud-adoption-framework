@@ -1,5 +1,5 @@
 ---
-title: Bastion for virtual machine remote access
+title: Use Azure Bastion for virtual machine remote access
 description: Plan for virtual machine remote access
 author: sitarant
 ms.author: sitarant
