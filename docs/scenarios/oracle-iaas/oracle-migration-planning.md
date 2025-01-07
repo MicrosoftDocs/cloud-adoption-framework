@@ -4,14 +4,14 @@ description: Learn how to migrate your existing Oracle workloads to the cloud as
 author: jessiehaessler
 ms.author: jhaessler
 ms.reviewer: tozimmergren
-ms.date: 01/02/2025
+ms.date: 01/06/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
 # Migrate Oracle workloads to Azure
 
-As part of your cloud adoption journey, you must migrate your existing workloads to the cloud. Oracle workloads are similar to other workloads and require a methodical approach to ensure a successful migration. For more information about migration methodology, see [Cloud migration in the Cloud Adoption Framework](../../migrate/index.md). This article describes unique constraints and considerations that are specific to Oracle workloads.
+As part of your cloud adoption journey, you must migrate your existing workloads to the cloud. Oracle workloads are similar to other workloads and require a methodical approach to help ensure a successful migration. For more information about migration methodology, see [Cloud migration in the Cloud Adoption Framework for Azure](../../migrate/index.md). This article describes unique constraints and considerations that are specific to Oracle workloads.
 
 ## Oracle migration scenarios
 
@@ -39,7 +39,7 @@ Review the migration resources to define your Oracle to Azure migration process.
 > [!NOTE]
 > If you host your workload on Oracle Database@Azure and need a quota increase, consult your Oracle contact.
 
-- **Identify a deployment model:** Automate the deployment of solution components as much as possible by using infrastructure as code (IaaS), continuous integration and continuous delivery (CI/CD) pipelines, and other DevOps practices.
+- **Identify a deployment model:** Automate the deployment of solution components as much as possible by using infrastructure as code (IaaS), continuous integration and continuous delivery pipelines, and other DevOps practices.
 
 - **Determine application dependencies:** Ensure that migration activities are as least disruptive as possible.
 
@@ -55,9 +55,9 @@ There are two primary migration paths:
 
 | Offline migration | Online migration |
 |---|---|
-| One-time direct copy of the database | Initial copy of the database followed by change data capture during migration |
-| Requires te affected application to be offline during migration | Application can stay online during migration
-| **Tools used** : Data Box, DataPump, Oracle Recovery Manager (RMAN) | **Tools used:** DataGuard, Oracle Recovery Manager (RMAN), GoldenGate |
+| One-time direct copy of the database. | Initial copy of the database followed by change data capture during migration. |
+| Requires the affected application to be offline during migration. | Application can stay online during migration. |
+| **Tools used:** Data Box, DataPump, Oracle Recovery Manager (RMAN) | **Tools used:** DataGuard, Oracle Recovery Manager (RMAN), GoldenGate |
 
 > [!NOTE]
 > If you decide to perform an online migration, make sure that you configure firewall rules to allow data transfer.
@@ -68,13 +68,13 @@ The following section describes the migration process in more detail. The steps 
 
 - **Assess the source and destination system versions:** Assess whether the on-premises operating system (OS) versions, application versions, and database versions are the same on on-premises and on Azure.
 
-  - If you need to update one or more resources, update them before migration to avoid complicating the migration process.
+  - If you need to update one or more resources, update them before migration to simplify the migration process.
   
-  - If your on-premises database runs on a big-endian OS, such as Oracle Solaris, IBM Advanced Interactive eXecutive, or Hewlett Packard Unix, the database migration process includes an endian conversion. Azure supports only little-endian OSs. This limitation reduces the number of available tools for the migration. Specifically, you can't use Oracle Data Guard or any other file copy method. Migration methods that are compatible with endian conversion include Oracle Data Pump Export or Import, Oracle cross-platform transportable tablespaces (XTTS), or data replication utilities such as Oracle GoldenGate, Quest SharePlex, and Striim.
+  - If your on-premises database runs on a big-endian OS, such as Oracle Solaris, IBM Advanced Interactive eXecutive, or Hewlett Packard Unix, the database migration process includes an endian conversion. Azure supports only little-endian OSs. This limitation reduces the number of available tools for the migration. Specifically, you can't use Oracle Data Guard or any other file copy method. Migration methods that are compatible with endian conversion include Oracle Data Pump Export or Oracle Data Pump Import, Oracle cross-platform transportable tablespaces (XTTS), or data replication utilities such as Oracle GoldenGate, Quest SharePlex, and Striim.
   
   - You can modernize or migrate on-premises application servers depending on requirements and compatibility. For more information, see [Cloud adoption scenarios](../index.md).
 
-- **Assess the workload availability requirements during the migration process:** If you need to minimize workload downtime, then migration methods such as Data Pump Export or Import might not suit your workload. In that case, you can follow this four-step process:
+- **Assess the workload availability requirements during the migration process:** If you need to minimize workload downtime, then migration methods such as Data Pump Export or Data Pump Import might not suit your workload. In that case, follow this four-step process:
 
   - Use RMAN to back up and then restore the entire database in Azure. Perform an endian conversion through XTTS if necessary. The result is a database that's a point-in-time copy of the on-premises source database. For more information, see [Transporting data across platforms](https://docs.oracle.com/en/database/oracle/oracle-database/23/admin/transporting-data.html#GUID-FE3003B9-605A-4269-B167-005AC778C870).
   
@@ -107,7 +107,7 @@ Use the following section to help you to choose the right migration option for y
 
 ### ExpressRoute-based migration duration reference
 
-The following table only serves as a baseline. It doesn't take into account other production workloads that run through the same ExpressRoute connection.
+The following table only serves as a baseline. It doesn't consider other production workloads that run through the same Azure ExpressRoute connection.
 
 VMware might need more bandwidth than indicated. Properly assess your bandwidth needs during your PoC phase. If support is needed, reach out to your local contact persons to receive support.
 
@@ -121,7 +121,7 @@ VMware might need more bandwidth than indicated. Properly assess your bandwidth 
 | 200 TB | 21 days | 2 days |
 | 500 TB | 53 days | 5 days |
 
-If you plan to use ExpressRoute for your migration, ensure its [resilience meets your requirements] (https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/).
+If you plan to use ExpressRoute for your migration, ensure that its [resilience meets your requirements] (https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/).
 
 ## Next steps
 
