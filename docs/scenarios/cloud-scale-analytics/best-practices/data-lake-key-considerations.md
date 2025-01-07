@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
-# Azure Data Lake Storage key considerations
+# Key considerations for Azure Data Lake Storage
 
 Azure Storage offers a variety of storage options for your data. This article provides considerations to help you choose the appropriate access tier so that you can balance cost and performance. It also describes the lifecycle management of Storage, including features and best practices to help you use the access tiers effectively.
 
@@ -23,7 +23,7 @@ Azure Storage offers various access tiers that you can use to store blob object 
 - Use an **archive tier** to store rarely accessed data. This tier stores data for at least 180 days. Access to this data can have flexible latency requirements, which means that it can take hours to retrieve data.
 
 > [!IMPORTANT]
-> The online access tiers (hot, cool, and cold) don't have reliability, security, operational excellence, or performance efficiency trade-offs. Therefore, you should base your decision on the cost for each blob. Consider your workload access data size, operational interactions, and the time before the blob is deleted. Select the appropriate tier for each blob based on [these factors](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob). For more information, see [Plan and manage costs for Azure Blob Storage ](/azure/storage/common/storage-plan-manage-costs).
+> The online access tiers (hot, cool, and cold) don't have reliability, security, operational excellence, or performance efficiency trade-offs. Therefore, you should base your decision on the cost for each blob. Consider your workload access data size, operational interactions, and the time before the blob is deleted. [Select the appropriate tier](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob) for each blob based on these factors. For more information, see [Plan and manage costs for Azure Blob Storage ](/azure/storage/common/storage-plan-manage-costs).
 
 Consider the following factors when you use access tiers:
 
@@ -31,14 +31,14 @@ Consider the following factors when you use access tiers:
 
 - Set the hot, cool, and archive tiers at the blob level during upload or after upload.
 
-- Data in the cool and cold tiers have slightly lower availability but offer similar features as the hot tier, such as high durability, retrieval latency, and throughput. For data in the cool or cold tiers, lower availability and higher access costs are acceptable trade-offs for reduced storage costs compared to the hot tier.
+- Data in the cool and cold tiers has slightly lower availability, but these tiers offer features that are similar to those of the hot tier, such as high durability, retrieval latency, and throughput. For data in the cool or cold tiers, lower availability and higher access costs are acceptable trade-offs for reduced storage costs compared to the hot tier.
 
-- Archive storage stores data offline and offers the lowest storage costs. But it also has the highest data rehydration and access costs.
+- Archive storage stores data offline and offers the lowest storage costs. But it also incurs the highest data rehydration and access costs.
 
 For more information, see [Access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
 > [!IMPORTANT]
-> For cloud-scale analytics, use a custom microservice to implement [lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md). Carefully consider the impact of moving user-discoverable data to cool storage. Move only sections of your data lake to the cool tier for well-understood workloads.
+> For cloud-scale analytics, use a custom microservice to implement [lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md). Carefully consider the impact of moving user-discoverable data to cool storage. Move sections of your data lake to the cool tier only for well-understood workloads.
 
 ## Data lake connectivity
 
@@ -51,7 +51,7 @@ For more information, see [Private endpoints](../eslz-network-topology-and-conne
 
 ## Soft delete for containers
 
-Soft delete for containers helps protect your data from accidental or malicious deletion. If you enable container soft delete for your storage account, Storage retains deleted containers and their contents for a specified length of time. During the data-retention period, you can restore previously deleted containers. This action also restores blobs that were within that container when it was deleted.
+Soft delete for containers helps protect your data from accidental or malicious deletion. If you enable container soft delete for your storage account, Storage retains deleted containers and their contents for a specified length of time. During the data-retention period, you can restore previously deleted containers. This action also restores blobs that were in that container when it was deleted.
 
 Enable the following data-protection features to enhance end-to-end blob data protection:
 
@@ -60,7 +60,7 @@ Enable the following data-protection features to enhance end-to-end blob data pr
 - Use blob soft delete to restore a deleted blob or version. For more information, see [Enable and manage soft delete for blobs](/azure/storage/blobs/soft-delete-blob-enable).
 
 > [!WARNING]
-> After you delete a storage account, you can't undo it. Container soft delete doesn't protect against storage account deletion, only against the deletion of containers within an account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
+> After you delete a storage account, you can't undo the deletion. Container soft delete doesn't protect against storage account deletion, only against the deletion of containers within an account. To protect a storage account from deletion, configure a lock on the storage account resource. For more information, see [Lock resources to prevent unexpected changes](/azure/azure-resource-manager/management/lock-resources).
 
 ## Monitoring
 
@@ -75,14 +75,14 @@ Log entries are created only for requests against the service endpoint. The foll
 - Requests that use a shared access signature (SAS) or OAuth, including failed and successful requests
 - Requests to analytics data, like classic log data in the `$logs` container and class metric data in the `$metric` tables
 
-Requests, such as log creation or deletion, that the storage service makes aren't logged. The following types of anonymous requests are logged:
+Requests made by the storage service itself, like log creation or deletion, aren't logged. The following types of anonymous requests are logged:
 
 - Successful requests
 - Server errors
 - Time out errors for both client and server
 - Failed HTTP GET requests that have the error code 304 (`Not Modified`)
 
-All other failed anonymous requests aren't logged.
+Other failed anonymous requests aren't logged.
 
 > [!IMPORTANT]
 > Set your default monitoring policy to audit storage and send logs to your enterprise-scale management subscription.
@@ -91,9 +91,9 @@ All other failed anonymous requests aren't logged.
 
 We recommend the following security patterns for data lake zones:
 
-- **Raw usage** allows access to data by using security principal names (SPNs). We recommend that you use managed identities.
+- **Raw usage** allows access to data by using security principal names (SPNs) only. We recommend that you use managed identities.
 
-- **Enriched usage** allows access to data by using SPNs. We recommend that you use managed identities.
+- **Enriched usage** allows access to data by using SPNs only. We recommend that you use managed identities.
 - **Curated usage** allows access to data by using SPNs and user principal names (UPNs).
 
 For more information, see [Access control model in Data Lake Storage](/azure/storage/blobs/data-lake-storage-access-control-model).
