@@ -41,8 +41,10 @@ items:
         href: oracle-landing-zone-accelerator.md
   - name: Migrate your Oracle workloads
     items: 
-    - name: Capacity planning
+    - name: Capacity planning for Oracle workloads on Azure Virtual Machines
       href: oracle-capacity-planning.md
+    - name: Capacity planning for Oracle Database@Azure
+      href: oracle-capacity-planning-oracle-database-azure.md
     - name: Migration planning
       href: oracle-migration-planning.md
   - name: Reference

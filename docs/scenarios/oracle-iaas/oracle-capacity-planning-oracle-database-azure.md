@@ -72,3 +72,5 @@ In this article, we cover following areas of capacity considerations while deplo
 ## Next steps
 
 - [Migration planning for Oracle on Azure](./oracle-migration-planning.md)
+- /azure/virtual-machines/workloads/oracle/oracle-migration-oracle-database-at-azure
+ 
