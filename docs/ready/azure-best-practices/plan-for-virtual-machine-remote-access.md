@@ -31,17 +31,17 @@ The choice of which remote access solution is most appropriate depends on factor
 - Azure Bastion with Kerberos authentication requires that both the domain controllers and Azure Bastion be located in the same virtual network. For more information, see [Azure Bastion Kerberos authentication](/azure/bastion/kerberos-authentication-portal).
 - Azure Bastion can be used in [Azure Virtual WAN topology](./virtual-wan-network-topology.md) however there are some limitations:
   - Azure Bastion cannot be deployed inside of a Virtual WAN virtual hub.
-  - Azure Bastion must use the `Premium` or `Standard` SKU and also the `IP based connection` feature must be enabled on the Azure Bastion resource, see the [Azure Bastion IP based connection documentation](/azure/bastion/connect-ip-address)
+  - Azure Bastion must use the Premium or Standard SKU and also the *IP based connection* feature must be enabled on the Azure Bastion resource, see the [Azure Bastion IP based connection documentation](/azure/bastion/connect-ip-address)
   - Azure Bastion can be deployed in any spoke virtual network connected in a Virtual WAN, for accessing Virtual Machines, in its own or, other virtual networks that are connected to the same Virtual WAN, via its associated hubs, through Virtual WAN virtual network connections; providing [routing](/azure/virtual-wan/about-virtual-hub-routing) is configured correctly. For example, Bastion can be deployed using the [virtual hub extension pattern](/azure/architecture/networking/guide/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
   - Azure Bastion Standard SKU requires a dedicated subnet (AzureBastionSubnet) while the Developer SKU does not.
 - Azure [Bastion Developer](/azure/bastion/quickstart-developer-sku) is a free, zero-configuration, always-on SKU of the Azure Bastion service. Unlike the standard SKU, the Developer Bastion SKU is not a dedicated resource but it operates as part of a shared pool and currently doesn't support VNet peering.
 
 > [!TIP]
-> Azure Bastion IP based connection also allows for connectivity to on-premises based machines, providing there is hybrid connectivity established between the Azure Bastion resource and the machine you are wanting to connect to. See, [Connect to a VM via specified private IP address through the portal](/azure/bastion/connect-ip-address)
+> Azure Bastion IP based connection also allows for connectivity to on-premises based machines, providing there is hybrid connectivity established between the Azure Bastion resource and the machine you are wanting to connect to. See, [Connect to a VM via specified private IP address](/azure/bastion/connect-ip-address).
 
 ## Design recommendations
 
-- For production workloads, deploy Bastion Premium or Standard SKU, while for Sandbox and Test environments Bastion Developer SKU can be used in [selected regions](/azure/bastion/quickstart-developer-sku)
+- For production workloads, deploy Bastion Premium or Standard SKU, while for sandbox and test environments Bastion Developer SKU can be used in [selected regions](/azure/bastion/quickstart-developer-sku).
 - Use existing ExpressRoute or VPN connectivity to provide remote access to Azure VMs that are accessible from on-premises via ExpressRoute or VPN connections.
 - In a Virtual WAN-based network topology where remote access to Virtual Machines over the internet is required:
   - Azure Bastion can be deployed in each spoke virtual network of the respective VMs.
