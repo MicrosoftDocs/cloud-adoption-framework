@@ -1,6 +1,6 @@
 ---
 title: Private Link and DNS integration at scale
-description: Private Link and DNS integration at scale
+description: Learn how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub and spoke network architectures.
 author: JefferyMitchell
 ms.author: tozimmergren
 ms.date: 10/25/2023
@@ -16,12 +16,12 @@ This article describes how to integrate Azure Private Link for PaaS services wit
 
 Many customers build their network infrastructure in Azure using the hub and spoke network architecture, where:
 
-- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) deploy in the **hub** virtual network (VNet).
-- **Spoke** VNets consume the shared services by way of VNet peering.
+- Networking shared services (such as network virtual appliances, ExpressRoute/VPN gateways, or DNS servers) deploy in the **hub** virtual network.
+- **Spoke** VNets consume the shared services by way of virtual network peering.
 
-In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (*a spoke*) connected to the *hub* VNet. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks by way of ExpressRoute or VPN.
+In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a virtual network (*a spoke*) connected to the *hub* virtual network. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks by way of ExpressRoute or VPN.
 
-A central network virtual appliance (NVA), such as Azure Firewall, provides Internet-outbound connectivity. Additionally, that device, such as with [Azure Firewall DNS proxy](/azure/firewall/dns-details), or another service in or adjacent to the hub is typically used to customize DNS forwarding.
+A central network virtual appliance (NVA), such as Azure Firewall, provides Internet-outbound connectivity. Additionally, that device, such as with [Azure Firewall DNS proxy](/azure/firewall/dns-details), or another service in or near the hub is typically used to customize DNS forwarding.
 
 Many application teams build their solutions using a combination of Azure IaaS and PaaS resources. Some Azure PaaS services (such as SQL Managed Instance) can be deployed in customer VNets. As a result, traffic stays private within the Azure network and is fully routable from on-premises.
 
@@ -35,7 +35,7 @@ This article also describes how application teams can ensure that services autom
 
 ## Private Link and DNS integration in hub and spoke network architectures
 
-Private DNS zones are typically hosted centrally in the same Azure subscription where the hub VNet deploys. This central hosting practice is driven by [cross-premises DNS name resolution][link-4] and other needs for central DNS resolution such as Active Directory. In most cases, only networking and identity administrators have permissions to manage DNS records in the zones.
+Private DNS zones are typically hosted centrally in the same Azure subscription where the hub virtual network deploys. This central hosting practice is driven by [cross-premises DNS name resolution][link-4] and other needs for central DNS resolution such as Active Directory. In most cases, only networking and identity administrators have permissions to manage DNS records in the zones.
 
 Application teams have permissions to create Azure resource in their own subscription. They don't have any permissions in the central networking connectivity subscription, which includes managing DNS records in the private DNS zones. This access limitation means they don't have the ability to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
 
@@ -45,24 +45,24 @@ The following diagram shows a typical high-level architecture for enterprise env
 
 From the previous diagram, it's important to highlight that:
 
-- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the Private DNS Resolver hosted in the hub VNet.
-- The Private DNS Resolver hosted in the hub VNet use the Azure-provided DNS (168.63.129.16) as a forwarder.
-- The hub VNet must be linked to the Private DNS zone names for Azure services (such as `privatelink.blob.core.windows.net`, as shown in the diagram).
-- All Azure VNets use Private DNS Resolver hosted in the hub VNet
+- On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the Private DNS Resolver hosted in the hub virtual network.
+- The Private DNS Resolver hosted in the hub virtual network use the Azure-provided DNS (168.63.129.16) as a forwarder.
+- The hub virtual network must be linked to the Private DNS zone names for Azure services (such as `privatelink.blob.core.windows.net`, as shown in the diagram).
+- All Azure VNets use Private DNS Resolver hosted in the hub virtual network
 - As the Private DNS Resolver isn't authoritative for customer's corporate domains, as it's just a forwarder, (for example, Active Directory domain names), it should have outbound endpoint forwarders to the customer's corporate domains, pointing to the on-premises DNS Servers (172.16.1.10 and 172.16.1.11) or DNS servers deployed in Azure that are authoritative for such zones.
 
 > [!NOTE] 
 > You can deploy a DNS Private Resolver in your hub virtual network alongside your ExpressRoute Gateway. However, you must ensure that resolution of public FQDNs is permitted and replies with a valid response via a DNS forwarding ruleset rule to the targeted DNS server. As some Azure services rely upon the ability to resolve public DNS names to function. To learn more about DNS forwarding rules in Azure Private Resolver, see [DNS forwarding ruleset rules](/azure/dns/private-resolver-endpoints-rulesets#rules).
 
-While the previous diagram depicts a single hub and spoke architecture, customers might need to extend their Azure footprint across multiple regions to address resiliency, proximity or data residency requirements, several scenarios have emerged where the same Private-Link-enabled PaaS instance must be accessed through multiple Private Endpoints.
+While the previous diagram depicts a single hub and spoke architecture, customers might need to extend their Azure footprint across multiple regions to address resiliency, proximity, or data residency requirements, several scenarios have emerged where the same Private-Link-enabled PaaS instance must be accessed through multiple Private Endpoints.
 
 :::image type="content" source="./media/private-link-example-central-dns-multi-regions.png" alt-text="A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources in multi region." lightbox="./media/private-link-example-central-dns-multi-regions.png":::
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution deployed in the hub (one per region) where name resolution for Private Link resources is done via Azure Private DNS.
 
-It is recommended to deploy multiple regional private endpoints associated to the PaaS instance, one in each region where clients exist, enable per-region Private Link and Private DNS Zones. When working with PaaS services with built-in DR capabilities (geo-redundant storage accounts, SQL DB failover groups, etc.), multiple region Private Endpoints are mandatory.
+It's recommended to deploy multiple regional private endpoints associated to the PaaS instance, one in each region where clients exist, enable per-region Private Link and Private DNS Zones. When working with PaaS services with built-in DR capabilities (geo-redundant storage accounts, SQL DB failover groups, etc.), multiple region Private Endpoints are mandatory.
 
-This scenario requires manual maintenance/updates of the Private Link DNS record set in every region as there is currently no automated lifecycle management for these.
+This scenario requires manual maintenance/updates of the Private Link DNS record set in every region as there's currently no automated lifecycle management for these.
 
 For other use cases, a single global Private Endpoint can be deployed, making accessible to all clients by adding routing from the relevant regions to the single Private Endpoint in a single region. 
 
@@ -75,7 +75,7 @@ There are two conditions that must be true for application teams to create any r
 - DNS records must follow the lifecycle of the private endpoint, in that, it's automatically removed when the private endpoint is deleted.
 
 > [!NOTE]
-> If [FQDNs in network rules based on DNS resolution is needed to be used in Azure Firewall and Firewall policy](/azure/firewall/fqdn-filtering-network-rules) (This capability allows you to filter outbound traffic with any TCP/UDP protocol -including NTP, SSH, RDP, and more-). You must enable Azure Firewall DNS Proxy to use FQDNs in your network rules, then those spoke VNets are forced to change their DNS setting from custom DNS server to Azure Firewall DNS Proxy. Changing the DNS settings of a spoke VNet requires reboot of all VMs inside that VNet.
+> If [FQDNs in network rules based on DNS resolution is needed to be used in Azure Firewall and Firewall policy](/azure/firewall/fqdn-filtering-network-rules) (This capability allows you to filter outbound traffic with any TCP/UDP protocol -including NTP, SSH, RDP, and more-). You must enable Azure Firewall DNS Proxy to use FQDNs in your network rules, then those spoke VNets are forced to change their DNS setting from custom DNS server to Azure Firewall DNS Proxy. Changing the DNS settings of a spoke virtual network requires reboot of all VMs inside that virtual network.
 
 The following sections describe how application teams enable these conditions by using [Azure Policy][link-10]. The example uses Azure Storage as the Azure service that application teams need to deploy. But the same principle applies to most [Azure services that support Private Link][link-2].
 
@@ -170,7 +170,7 @@ In addition to the private DNS zones, you also need to [create a set of custom A
 
     The following policy examples show two approaches for identifying which `privateDNSZoneGroup` is created on a Private Endpoint.
 
-    The [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) relies on the `groupId` while the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) when `groupId` will clash (collide) with another resource.
+    The [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) relies on the `groupId` while the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) when `groupId` clashes (collide) with another resource.
 
     For example, the `groupId` **SQL** is used for both Cosmos DB and Synapse Analytics. If both resource types deploy and the [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) has been assigned to create the `privateDNSZoneGroup` on the Private Endpoint entry, it's created and mapped to the incorrect Private DNS Zone, of either Cosmos DB or Synapse Analytics. It then might toggle between each of the zones due to the clashing `groupId` that the first policy looks for in its policy rule.
 
@@ -445,7 +445,7 @@ After the platform team deploys the platform infrastructure components (private 
 
    ![A screenshot that shows the Resources tab for selecting the target subresource.][image-10]
 
-6. In the **Configuration** section, after selecting your VNet and subnet, be sure that **Integrate with private DNS zone** is set to **No**. Otherwise, the Azure portal prevents you from creating the private endpoint.  Azure Policy won't allow you to create a private DNS zone with the `privatelink` prefix.
+6. In the **Configuration** section, after selecting your virtual network and subnet, be sure that **Integrate with private DNS zone** is set to **No**. Otherwise, the Azure portal prevents you from creating the private endpoint.  Azure Policy won't allow you to create a private DNS zone with the `privatelink` prefix.
 
    ![A screenshot that shows the Configuration tab for setting the integrate with private DNS zone option to no.][image-11]
 
@@ -461,11 +461,11 @@ After the platform team deploys the platform infrastructure components (private 
 
     ![A screenshot that shows the activity log for the resource group and the private endpoint.][image-13]
 
-11. If the central networking team goes to the `privatelink.blob.core.windows.net` private DNS zone, they'll confirm that the DNS record is there for the private endpoint you created, and both the name and IP address match the values within the private endpoint.
+11. If the central networking team goes to the `privatelink.blob.core.windows.net` private DNS zone, they confirm that the DNS record is there for the private endpoint you created, and both the name and IP address match the values within the private endpoint.
 
     ![A screenshot that shows the private DNS zone and where to confirm that the DNS record exists.][image-14]
 
-At this point, application teams can use the storage account through a private endpoint from any VNet in the hub and spoke network environment and from on-premises. The DNS record has been automatically recorded in the private DNS zone.
+At this point, application teams can use the storage account through a private endpoint from any virtual network in the hub and spoke network environment and from on-premises. The DNS record has been automatically recorded in the private DNS zone.
 
 If an application owner deletes the private endpoint, the corresponding records in the private DNS zone are automatically removed.
 
@@ -475,7 +475,7 @@ Review [DNS for on-premises and Azure resources](./dns-for-on-premises-and-azure
 Review [Use Azure Bastion for virtual machine remote access](./plan-for-virtual-machine-remote-access.md).
 
 > [!IMPORTANT]
-> This article outlines DNS and Private link integration at scale using DINE (DeployIfNotExists) policies assigned to the Management Group. Which means there is no need to handle the DNS integration in code when creating Private Endpoints with this approach, as it is handled by the policies. It is also unlikely that the application teams have RBAC access to the centralized Private DNS Zones also.
+> This article outlines DNS and Private link integration at scale using DINE (DeployIfNotExists) policies assigned to the Management Group. Which means there's no need to handle the DNS integration in code when creating Private Endpoints with this approach, as it's handled by the policies. It's also unlikely that the application teams have RBAC access to the centralized Private DNS Zones also.
 
 Below are helpful links to review when creating Private Endpoint with Bicep and HashiCorp Terraform.
 >

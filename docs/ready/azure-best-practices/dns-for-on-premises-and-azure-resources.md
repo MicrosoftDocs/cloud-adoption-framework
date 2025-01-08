@@ -14,7 +14,7 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
 
 **Design considerations:**
 
-- You can use Azure DNS Private Resolver service in conjunction with Azure Private DNS Zones for cross-premises name resolution.
+- You can use Azure DNS Private Resolver service with Azure Private DNS Zones for cross-premises name resolution.
 
 - You might require the use of existing DNS solutions across on-premises and Azure.
 
@@ -24,9 +24,9 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
 
 **Design recommendations:**
 
-- For environments where name resolution in Azure is all that's required, use Azure Private DNS zones for resolution. Create a delegated zone for name resolution (such as `azure.contoso.com`). Enable auto-registration for Azure Private DNS zone to automatically manage the lifecycle of the DNS records for the virtual machines deployed within a virtual network.
+- For environments where only name resolution in Azure is required, use Azure Private DNS zones for resolution. Create a delegated zone for name resolution (such as `azure.contoso.com`). Enable auto-registration for Azure Private DNS zone to automatically manage the lifecycle of the DNS records for the virtual machines deployed within a virtual network.
 
-- For environments where name resolution across Azure and on-premises is required, it is recommended to use DNS Private Resolver service along with Azure Private DNS Zones. It offers many benefits over virtual machines based DNS solution, including cost reduction, built-in high availability, scalability, and flexibility.
+- For environments where name resolution across Azure and on-premises is required, it's recommended to use DNS Private Resolver service along with Azure Private DNS Zones. It offers many benefits over virtual machines based DNS solution, including cost reduction, built-in high availability, scalability, and flexibility.
 
   If you need to use existing DNS infrastructure (for example, Active Directory integrated DNS), ensure that the DNS server role is deployed onto at least two VMs and configure DNS settings in virtual networks to use those custom DNS servers.
   
@@ -37,9 +37,9 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
   - For DNS queries generated in the on-premises network to resolve DNS records in Azure Private DNS Zones, you can configure on-premises DNS servers with conditional forwarders pointing to DNS Private Resolver service's inbound endpoint IP address in Azure, to forward the request to the Azure Private DNS zone (for example, `azure.contoso.com`).
 
 - Create two dedicated subnets for DNS Private Resolver in the hub virtual network, in the connectivity subscription. One subnet for inbound endpoints and one subnet for outbound endpoints. Both subnets should have a minimum size of `/28`.
-    - If you deploy the DNS resolver alongside your ExpressRoute Gateway you must ensure that resolution of public FQDNs is permitted and replies with a valid response via a DNS forwarding ruleset rule to the targeted DNS server. As some Azure services rely upon the ability to resolve public DNS names to function. To learn more about DNS forwarding rules in Azure Private Resolver, see [DNS forwarding ruleset rules](/azure/dns/private-resolver-endpoints-rulesets#rules).
+    - If you deploy the DNS resolver alongside your ExpressRoute Gateway, you must ensure that resolution of public FQDNs is permitted and replies with a valid response via a DNS forwarding ruleset rule to the targeted DNS server. As some Azure services rely upon the ability to resolve public DNS names to function. To learn more about DNS forwarding rules in Azure Private Resolver, see [DNS forwarding ruleset rules](/azure/dns/private-resolver-endpoints-rulesets#rules).
   - Inbound Endpoints: maximum five, used to receive inbound resolution requests from clients within your internal private network (Azure or on-premises).
-  - Outbound Endpoints: maximum five, used to forward resolution requests to destinations within your internal private network (Azure or on-premises), that cannot be resolved by Azure DNS Private Zones.
+  - Outbound Endpoints: maximum five, used to forward resolution requests to destinations within your internal private network (Azure or on-premises), that can't be resolved by Azure DNS Private Zones.
   - Create an appropriate ruleset to permit DNS forwarding to on-premises DNS domains and namespaces.
 
 - Special workloads that require and deploy their own DNS (such as Red Hat OpenShift) should use their preferred DNS solution.
