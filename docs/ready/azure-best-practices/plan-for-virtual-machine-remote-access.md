@@ -1,5 +1,5 @@
 ---
-title: Use Azure Bastion for virtual machine remote access
+title: Use Azure Bastion for Virtual Machine Remote Access
 description: Learn about design and planning considerations for using Azure Bastion to enable secure remote access to virtual machines in Azure.
 author: sitarant
 ms.author: sitarant
@@ -16,7 +16,7 @@ Azure offers different technologies that work together to facilitate secure, rem
 - [Azure Bastion](/azure/bastion/bastion-overview), a platform as a service (PaaS) solution, for accessing VMs through a browser or currently in preview through the native SSH/RDP client on Windows workstations
 - [Just in time (JIT)](/azure/defender-for-cloud/just-in-time-access-overview) access provided through Microsoft Defender for Cloud
 - Hybrid connectivity options, such as Azure ExpressRoute and VPNs
-- Public IP attached directly to the virtual machine (VM) or through a NAT rule via an Azure public load balancer
+- Public IP attached directly to the VM or through a NAT rule via an Azure public load balancer
 
 The choice of which remote access solution is most appropriate depends on factors like scale, topology, and security requirements.
 

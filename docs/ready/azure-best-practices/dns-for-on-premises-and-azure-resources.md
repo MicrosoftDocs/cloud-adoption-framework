@@ -1,5 +1,5 @@
 ---
-title: DNS for on-premises and Azure
+title: DNS for On-Premises and Azure
 description: Examine key design considerations and recommendations surrounding DNS for on-premises and Microsoft Azure.
 author: sitarant
 ms.author: sitarant
@@ -14,7 +14,7 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
 
 **Design considerations:**
 
-- You can use Azure DNS Private Resolver service with Azure Private DNS Zones for cross-premises name resolution.
+- You can use Azure DNS Private Resolver with Azure Private DNS zones for cross-premises name resolution.
 
 - You might require the use of existing DNS solutions across on-premises and Azure.
 
