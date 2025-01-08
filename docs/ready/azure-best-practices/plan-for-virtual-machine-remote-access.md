@@ -10,10 +10,9 @@ ms.custom: think-tank
 
 # Use Azure Bastion for virtual machine remote access
 
-This article describes the recommended guidance for providing remote access to virtual machines (VMs) deployed within an Azure landing zones architecture.
+The choice of which remote access solution is most appropriate depends on factors like scale, topology, and security requirements. This article describes the recommended guidance for providing remote access to virtual machines (VMs) deployed within an Azure landing zones architecture, focussing on Azure Bastion for remote access.
 
-Azure offers different technologies for providing remote access to VMs:
-
+Azure offers different technologies that work together to facilitate secure, remote access to virtual machines:
 - [Azure Bastion](/azure/bastion/bastion-overview), a platform as a service (PaaS) solution, for accessing VMs through a browser or currently in preview through the native SSH/RDP client on Windows workstations
 - [Just in time (JIT)](/azure/defender-for-cloud/just-in-time-access-overview) access provided through Microsoft Defender for Cloud
 - Hybrid connectivity options, such as Azure ExpressRoute and VPNs
@@ -25,9 +24,7 @@ The choice of which remote access solution is most appropriate depends on factor
 
 - When available, you can use existing hybrid connectivity to Azure virtual networks via ExpressRoute or S2S/P2S VPN connections to provide remote access from on-premises to Windows and Linux Azure VMs.
 - NSGs can be used to secure SSH/RDP connections to Azure VMs.
-- JIT allows remote SSH/RDP access over the internet without having to deploy any other infrastructure.
-- There are some [availability limitations](/azure/defender-for-cloud/just-in-time-access-usage) with JIT access.
-  - JIT access can't be used for VMs protected by Azure firewalls controlled by Azure Firewall Manager.
+- JIT allows remote SSH/RDP access over the internet without having to deploy any other infrastructure for supported VMs: VMs deployed through Azure Resource Manager, VMs deployed with classic deployment models, VMs protected by Azure Firewalls on the same VNET as the VM, VMs protected by Azure Firewalls controlled by Azure Firewall Manager.
 - [Azure Bastion](/azure/bastion/bastion-overview) provides an extra layer of control. It enables secure and seamless RDP/SSH connectivity to your VMs directly from the Azure portal or [native client](/azure/bastion/connect-native-client-windows) in preview over a secure TLS channel. Azure Bastion also negates the need for hybrid connectivity.
 - Consider the appropriate Azure Bastion SKU to use based on your requirements as described in [About Azure Bastion configuration settings](/azure/bastion/configuration-settings).
 - Review the [Azure Bastion FAQ](/answers/products/) for answers to common questions you might have about the service.
