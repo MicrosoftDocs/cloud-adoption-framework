@@ -372,18 +372,18 @@ items:
                 href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
               - name: Plan for landing zone network segmentation
                 href: ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md
+              - name: Use Bastion for Virtual Machine remote access
+                href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
               - name: Define network encryption requirements
                 href: ready/azure-best-practices/define-network-encryption-requirements.md
               - name: Plan for traffic inspection
                 href: ready/azure-best-practices/plan-for-traffic-inspection.md
-            - name: Resources
+            - name: DNS
               items:
               - name: Private Link and DNS integration at scale
                 href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
               - name: DNS for on-premises and Azure resources
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
-              - name: Plan for virtual machine remote access
-                href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
             - name: Azure Virtual Network Manager in Azure landing zones
               href: ready/azure-best-practices/azure-virtual-network-manager.md
 
