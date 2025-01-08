@@ -54,7 +54,7 @@ From the previous diagram, it's important to highlight that:
 > [!NOTE] 
 > You can deploy a DNS Private Resolver in your hub virtual network alongside your ExpressRoute Gateway. However, you must ensure that resolution of public FQDNs is permitted and replies with a valid response via a DNS forwarding ruleset rule to the targeted DNS server. As some Azure services rely upon the ability to resolve public DNS names to function. To learn more about DNS forwarding rules in Azure Private Resolver, see [DNS forwarding ruleset rules](/azure/dns/private-resolver-endpoints-rulesets#rules).
 
-While the previous diagram depicts a single hub and spoke architecture, customers might need to extend their Azure footprint across multiple regions to address resiliency, proximity or data residency requirements, several scenarios have emerged where the same Private-Link-enabled PaaS instance must be accessed through multiple Private Endpoints (PE's).
+While the previous diagram depicts a single hub and spoke architecture, customers might need to extend their Azure footprint across multiple regions to address resiliency, proximity or data residency requirements, several scenarios have emerged where the same Private-Link-enabled PaaS instance must be accessed through multiple Private Endpoints.
 
 :::image type="content" source="./media/private-link-example-central-dns-multi-regions.png" alt-text="A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources in multi region." lightbox="./media/private-link-example-central-dns-multi-regions.png":::
 
@@ -472,7 +472,7 @@ If an application owner deletes the private endpoint, the corresponding records 
 ## Next steps
 
 Review [DNS for on-premises and Azure resources](./dns-for-on-premises-and-azure-resources.md).
-Review [Bastion virtual machine remote access](./plan-for-virtual-machine-remote-access.md).
+Review [Use Azure Bastion for virtual machine remote access](./plan-for-virtual-machine-remote-access.md).
 
 > [!IMPORTANT]
 > This article outlines DNS and Private link integration at scale using DINE (DeployIfNotExists) policies assigned to the Management Group. Which means there is no need to handle the DNS integration in code when creating Private Endpoints with this approach, as it is handled by the policies. It is also unlikely that the application teams have RBAC access to the centralized Private DNS Zones also.

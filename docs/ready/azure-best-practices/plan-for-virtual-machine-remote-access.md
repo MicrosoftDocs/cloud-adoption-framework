@@ -10,7 +10,7 @@ ms.custom: think-tank
 
 # Use Azure Bastion for virtual machine remote access
 
-The choice of which remote access solution is most appropriate depends on factors like scale, topology, and security requirements. This article describes the recommended guidance for providing remote access to virtual machines (VMs) deployed within an Azure landing zones architecture, focussing on Azure Bastion for remote access.
+The choice of which remote access solution is most appropriate depends on factors like scale, topology, and security requirements. This article describes the recommended guidance for providing remote access to virtual machines (VMs) deployed within an Azure landing zones architecture, focusing on Azure Bastion for remote access.
 
 Azure offers different technologies that work together to facilitate secure, remote access to virtual machines:
 - [Azure Bastion](/azure/bastion/bastion-overview), a platform as a service (PaaS) solution, for accessing VMs through a browser or currently in preview through the native SSH/RDP client on Windows workstations
