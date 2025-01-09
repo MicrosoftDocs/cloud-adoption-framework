@@ -3,7 +3,7 @@ title: Private Link and DNS Integration at Scale
 description: Learn how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub-and-spoke network architectures.
 author: JefferyMitchell
 ms.author: tozimmergren
-ms.date: 10/25/2023
+ms.date: 01/10/2025
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency2
 ---
@@ -27,7 +27,7 @@ Many application teams build their solutions by using a combination of Azure Iaa
 
 But some Azure PaaS services (such as Azure Storage or Azure Cosmos DB) can't be deployed in a customer's virtual networks and are accessible over their public endpoint. In some cases, this configuration causes a contention with a customer's security policies. Corporate traffic might not allow the deployment or access of corporate resources (such as a SQL database) over public endpoints.
 
-[Azure Private Link][link-1] supports access to a [list of Azure services][link-2] over private endpoints, but it requires that you register those private endpoint records in a corresponding [private DNS zone][link-3].
+[Private Link][link-1] supports access to a [list of Azure services][link-2] over private endpoints, but it requires that you register those private endpoint records in a corresponding [private DNS zone][link-3].
 
 This article describes how application teams can deploy Azure PaaS services in their subscriptions that are only accessible over private endpoints.
 
@@ -61,7 +61,7 @@ The following diagram shows a typical high-level architecture for enterprise env
 
 :::image type="content" source="./media/private-link-example-central-dns-multi-regions.png" alt-text="A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources in multiple regions." lightbox="./media/private-link-example-central-dns-multi-regions.png" border="false":::
 
-You should deploy multiple regional private endpoints associated to the PaaS instance, one in each region where clients exist. Enable Private Link and Private DNS zones for each region. When you work with PaaS services that have built-in disaster-recovery capabilities, such as geo-redundant storage accounts and SQL database failover groups, you must have private endpoints in multiple regions.
+You should deploy multiple regional private endpoints associated to the PaaS instance, one in each region where clients exist. Enable Private Link and Private DNS zones for each region. When you work with PaaS services that have built-in disaster recovery capabilities, such as geo-redundant storage accounts and SQL database failover groups, you must have private endpoints in multiple regions.
 
 This scenario requires manual maintenance and updates of the Private Link DNS record set in every region because there's currently no automated lifecycle management for these.
 
@@ -69,7 +69,7 @@ For other use cases, a single global private endpoint can be deployed, making it
 
 To enable resolution, and therefore connectivity, from on-premises networks to the `privatelink` private DNS zone and private endpoints, provision the appropriate DNS configuration, such as conditional forwarders, in the DNS infrastructure.
 
-There are two conditions that must be true for application teams to create any required Azure PaaS resources in their subscription:
+Two conditions that must be true for application teams to create any required Azure PaaS resources in their subscription:
 
 - Central networking or central platform teams must ensure that application teams can only deploy and access Azure PaaS services via private endpoints.
 
@@ -81,7 +81,7 @@ There are two conditions that must be true for application teams to create any r
 
 The following sections describe how application teams enable these conditions by using [Azure Policy][link-10]. The example uses Azure Storage as the Azure service that application teams need to deploy. But the same principle applies to most [Azure services that support Private Link][link-2].
 
-## Configuration required by the platform team
+## Platform team configuration requirements
 
 The platform team configuration requirements include creating the private DNS zones, setting up policy definitions, deploying policies, and setting up the policy assignments.
 
@@ -93,21 +93,23 @@ In this case, **Storage account with blob** is the example. It translates to cre
 
 ![A screenshot that shows the private DNS zone in the connectivity subscription.][image-2]
 
-### Policy definitions
+### Create policy definitions
 
 In addition to the private DNS zones, you also need to [create a set of custom Azure Policy definitions][link-5]. These definitions enforce the use of private endpoints and automate creating the DNS record in the DNS zone that you create:
 
-1. `Deny` public endpoint for PaaS services policy.
+1. The `Deny` public endpoint for PaaS services policy.
 
-   This policy prevents users from creating Azure PaaS services with public endpoints and gives them an error message if they don't select the private endpoint when creating the resource.
+   This policy prevents users from creating Azure PaaS services with public endpoints.
 
    ![A screenshot that shows the public endpoint for all networks option selected.][image-3]
+
+   Users receive an error message if they don't select the private endpoint when they create the resource.
 
    ![A screenshot that shows the error message that results from picking a public endpoint.][image-4]
 
    ![A screenshot that shows the full error details from picking a public endpoint.][image-5]
 
-   The exact policy rule might differ between PaaS services. For Azure Storage accounts, look at the **networkAcls.defaultAction** property that defines whether requests from public networks are allowed or not. In this case, set a condition to deny creating the **Microsoft.Storage/storageAccounts** resource type if the property **networkAcls.defaultAction** isn't `Deny`. The following policy definition shows the behavior:
+   The exact policy rule might differ between PaaS services. For Azure Storage accounts, the **networkAcls.defaultAction** property defines whether requests from public networks are allowed or not. In this case, set a condition to deny creating the **Microsoft.Storage/storageAccounts** resource type if the property **networkAcls.defaultAction** isn't `Deny`. The following policy definition shows the behavior:
 
    ```json
    {
@@ -170,20 +172,20 @@ In addition to the private DNS zones, you also need to [create a set of custom A
 
 3. `DeployIfNotExists` policy to automatically create the required DNS record in the central private DNS zone.
 
-    The following policy examples show two approaches for identifying which `privateDNSZoneGroup` is created on a Private Endpoint.
+    The following policy examples show two approaches for identifying which `privateDNSZoneGroup` is created on a private endpoint.
 
-    The [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) relies on the `groupId` while the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) when `groupId` clashes (collide) with another resource.
+    The [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) relies on the `groupId` while the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) when `groupId` clashes or collides with another resource.
 
-    For example, the `groupId` **SQL** is used for both Cosmos DB and Synapse Analytics. If both resource types deploy and the [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) has been assigned to create the `privateDNSZoneGroup` on the Private Endpoint entry, it's created and mapped to the incorrect Private DNS Zone, of either Cosmos DB or Synapse Analytics. It then might toggle between each of the zones due to the clashing `groupId` that the first policy looks for in its policy rule.
+    For example, the `groupId` **SQL** is used for both Azure Cosmos DB and Azure Synapse Analytics. If both resource types deploy and the [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) has been assigned to create the `privateDNSZoneGroup` on the private endpoint entry, it's created and mapped to the incorrect private DNS zone, of either Azure Cosmos DB or Azure Synapse Analytics. It then might toggle between each of the zones because of the clashing `groupId` that the first policy looks for in its policy rule.
 
-    For a list of Private-link resources `groupId`, see the subresources column in [What is a private endpoint?][link-14].
+    For a list of the `groupId` for Private Link resources, see the subresources column in [What is a private endpoint?][link-14].
 
 > [!TIP]
-> Azure Policy built-in definitions are constantly being added, deleted, and updated. It's highly recommended to use built-in policies versus managing your own policies (where available). Use the [AzPolicyAdvertizer][link-12] to find existing built-in policies that have the following name of 'xxx ... to use private DNS zones'. In addition, Azure Landing Zones (ALZ) has a policy initiative, [Configure Azure PaaS services to use private DNS zones][link-13], that contains built-in policies as well and periodically updated. If a built-in policy isn't available for your situation, consider creating an issue on the `azure-policy` feedback site [Azure Governance · Community][link-15] following the [New built-in Policy Proposals process on the Azure Policy GitHub repo.][link-16]
+> Azure Policy built-in definitions are constantly being added, deleted, and updated. It's highly recommended to use built-in policies versus managing your own policies (where available). Use the [AzPolicyAdvertizer][link-12] to find existing built-in policies that have the following name of 'xxx ... to use private DNS zones'. In addition, Azure Landing Zones (ALZ) has a policy initiative, [Configure Azure PaaS services to use private DNS zones][link-13], that contains built-in policies that are periodically updated. If a built-in policy isn't available for your situation, consider creating an idea on the `azure-policy` feedback site [Azure Governance Community][link-15] by following the [built-in policy proposals process on the Azure Policy GitHub repo][link-16].
 
-#### First `DeployIfNotExists` Policy - Matching on `groupId` only
+#### DeployIfNotExists policy for groupId only
 
-This policy triggers if you create a private endpoint resource with a service-specific `groupId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. It then triggers a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which associates the private endpoint with the private DNS zone. In the example, the `groupId` for Azure Storage blobs is `blob`. For more information on the `groupId` for other Azure services, see [Azure Private Endpoint DNS configuration][link-4], under the **Subresource** column. When the policy finds the `groupId` in the private endpoint, it deploys a `privateDNSZoneGroup` within the private endpoint, and links it to the private DNS zone resource ID that's specified as the parameter. In the example, the private DNS zone resource ID is:
+This policy triggers if you create a private endpoint resource that has a service-specific `groupId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. It then triggers a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which associates the private endpoint with the private DNS zone. In the example, the `groupId` for Azure Storage blobs is `blob`. For more information about the `groupId` for other Azure services, see the *Subresource* column in [Azure private endpoint DNS configuration][link-4]. When the policy finds the `groupId` in the private endpoint, it deploys a `privateDNSZoneGroup` within the private endpoint, and links it to the private DNS zone resource ID that's specified as the parameter. In the example, the private DNS zone resource ID is:
 
    `/subscriptions/<subscription-id>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net`
 
@@ -282,11 +284,11 @@ This policy triggers if you create a private endpoint resource with a service-sp
    }
    ```
 
-#### Second `DeployIfNotExists` Policy - Matching on `groupId` & `privateLinkServiceId`
+#### DeployIfNotExists policy for groupId and privateLinkServiceId
 
 This policy triggers if you create a private endpoint resource with a service-specific `groupId` and  `privateLinkServiceId`. The `groupId` is the ID of the group obtained from the remote resource (service) that this private endpoint should connect to. The `privateLinkServiceId` is the resource ID of the remote resource (service) this private endpoint should connect to. Then, trigger a deployment of a [`privateDNSZoneGroup`][link-6] within the private endpoint, which associates the private endpoint with the private DNS zone.
 
-In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privateLinkServiceId` must contain `Microsoft.DocumentDb/databaseAccounts`. For more information on the `groupId` and `privateLinkServiceId` for other Azure services, see [Azure Private Endpoint DNS configuration][link-4], under the **Subresource** column. When the policy finds `groupId` and `privateLinkServiceId` in the private endpoint, it deploys a `privateDNSZoneGroup` within the private endpoint. And it's linked to the private DNS zone resource ID that's specified as the parameter. The following policy definition shows the private DNS zone resource ID:
+In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privateLinkServiceId` must contain `Microsoft.DocumentDb/databaseAccounts`. For more information about the `groupId` and `privateLinkServiceId` for other Azure services, see the *Subresource* column in [Azure private endpoint DNS configuration][link-4]. When the policy finds `groupId` and `privateLinkServiceId` in the private endpoint, it deploys a `privateDNSZoneGroup` within the private endpoint. And it's linked to the private DNS zone resource ID that's specified as the parameter. The following policy definition shows the private DNS zone resource ID:
 
    `/subscriptions/<subscription-id>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/privateDnsZones/privatelink.documents.azure.com`
 
@@ -418,22 +420,23 @@ In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privat
 After policy definitions are deployed, [assign the policies][link-7] at the desired scope in your management group hierarchy. Ensure that the policy assignments target the Azure subscriptions the application teams use to deploy PaaS services with private endpoint access exclusively.
 
 > [!IMPORTANT]
-> In addition to [assigning the roleDefinition][link-11] defined in the policy, remember to assign the [Private DNS Zone Contributor role][link-8] role in the subscription and resource group where the private DNS zones are hosted to the [managed identity created by the `DeployIfNotExists` policy assignment][link-9] that will be responsible to create and manage the private endpoint DNS record in the private DNS zone. This is because the private endpoint is located in the application owner Azure subscription, while the private DNS zone is located in a different subscription (such as central connectivity subscription).
+> In addition to [assigning the roleDefinition][link-11] defined in the policy, assign the [Private DNS Zone Contributor role][link-8] to the [managed identity created by the `DeployIfNotExists` policy assignment][link-9]. This role should be assigned in the subscription and resource group where the private DNS zones are hosted. The managed identity creates and manages the private endpoint DNS record in the private DNS zone. This configuration is necessary because the private endpoint is located in the application owner Azure subscription, while the private DNS zone is located in a different subscription, such as a central connectivity subscription.
 
 After the platform team finishes the configuration:
 
-* The applications teams' Azure subscriptions are ready for the team to then create Azure PaaS services with private endpoint access exclusively.
-* The team must ensure the DNS records for private endpoints are automatically registered (and removed once a private endpoint is deleted) from the corresponding private DNS zones.
+* The applications teams' Azure subscriptions are ready for the team to create Azure PaaS services that have exclusive private endpoint access.
 
-## Application owner experience
+* The team must ensure that the DNS records for private endpoints are automatically registered to the corresponding private DNS zones, and that the DNS records are removed after a private endpoint is deleted.
 
-After the platform team deploys the platform infrastructure components (private DNS zones and policies), the application owner has the following experience when they try to deploy an Azure PaaS service into the Azure subscription. This experience is the same whether they do their activities through the Azure portal or other clients, such as PowerShell or CLI, since Azure policies govern their subscriptions.
+## Application owner deploys an Azure PaaS service
+
+After the platform team deploys the platform infrastructure components (private DNS zones and policies), the application owner does the following steps when they try to deploy an Azure PaaS service into the Azure subscription. These steps are the same whether they do their activities through the Azure portal or other clients, such as PowerShell or CLI, because Azure policies govern their subscriptions.
 
 1. Create a storage account through the Azure portal. In the **Basics** tab, choose the settings you want, provide a name for your storage account, and select **Next**.
 
    ![A screenshot that shows the Basics tab and options for creating your storage account in the Azure portal.][image-7]
 
-2. In the networking tab, select **Private endpoint**. If you select an option other than **Private endpoint**, the Azure portal won't allow you to create the storage account in the **Review + create** section of the deployment wizard. The policy prevents you from creating this service if the public endpoint is enabled.
+2. In the networking tab, select **Private endpoint**. If you select an option other than **Private endpoint**, the Azure portal doesn't allow you to create the storage account in the **Review + create** section of the deployment wizard. The policy prevents you from creating this service if the public endpoint is enabled.
 
    ![A screenshot that shows the Networking tab and the private endpoints option.][image-8]
 
@@ -459,7 +462,7 @@ After the platform team deploys the platform infrastructure components (private 
 
    ![A screenshot that shows where to review the private endpoint, FQDN, and private IP.][image-12]
 
-10. Check the activity log for the resource group where the private endpoint was created. Or you can check the activity log of the private endpoint itself. You'll notice that after a few minutes, a `DeployIfNotExist` policy action runs and that configures the DNS zone group on the private endpoint:
+10. Check the activity log for the resource group where the private endpoint was created. Or you can check the activity log of the private endpoint itself. After a few minutes, a `DeployIfNotExist` policy action runs and that configures the DNS zone group on the private endpoint:
 
     ![A screenshot that shows the activity log for the resource group and the private endpoint.][image-13]
 
@@ -471,23 +474,20 @@ At this point, application teams can use the storage account through a private e
 
 If an application owner deletes the private endpoint, the corresponding records in the private DNS zone are automatically removed.
 
+> [!IMPORTANT]
+> You can still create private endpoints in your infrastructure as code tooling. But if you use the `DeployIfNotExists` (DINE) policy approach in this article, you shouldn't integrate DNS in your code. The DINE policies that have the required RBAC to the private DNS zones manage the DNS integration.
+
 ## Next steps
 
-Review [DNS for on-premises and Azure resources](./dns-for-on-premises-and-azure-resources.md).
-Review [Use Azure Bastion for virtual machine remote access](./plan-for-virtual-machine-remote-access.md).
+- [DNS for on-premises and Azure resources](./dns-for-on-premises-and-azure-resources.md)
+- [Use Azure Bastion for virtual machine remote access](./plan-for-virtual-machine-remote-access.md)
+- [Quickstart: Create a private endpoint by using Bicep](/azure/private-link/create-private-endpoint-bicep).
+- Create a private endpoint by using HashiCorp Terraform [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) in Terrafrom Registry.
 
-> [!IMPORTANT]
-> This article outlines DNS and Private link integration at scale using DINE (DeployIfNotExists) policies assigned to the Management Group. Which means there's no need to handle the DNS integration in code when creating Private Endpoints with this approach, as it's handled by the policies. It's also unlikely that the application teams have RBAC access to the centralized Private DNS Zones also.
 
-Below are helpful links to review when creating Private Endpoint with Bicep and HashiCorp Terraform.
->
-> For Private Endpoint creation with Infrastructure-as-Code:
->
-> - [Quickstart Create a private endpoint using Bicep](/azure/private-link/create-private-endpoint-bicep?tabs=CLI).
->
-> - Create a private endpoint using HashiCorp Terraform [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) in Terrafrom Registry.
->
-> You can still create private endpoints in your Infrastructure-as-Code tooling however, if using the DINE policy approach as outlined in this article you should leave the DNS integration side out of your code and let the DINE policies that have the required RBAC to the Private DNS Zones handle this instead.
+
+
+
 
 [link-1]: /azure/private-link/private-link-overview
 [link-2]: /azure/private-link/availability
