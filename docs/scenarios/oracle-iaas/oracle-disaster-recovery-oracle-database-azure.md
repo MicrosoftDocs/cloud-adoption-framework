@@ -43,13 +43,13 @@ The first step to building a resilient architecture for your Oracle databases ru
 
     OCI Object storage is appropriate for workloads with less stringent recovery time and recovery point objectives, offering a general-purpose backup solution.
 
-    These solutions enable automatic scheduling and management of database backups with a predefined retention period. For details, refer to [manage database backup and recovery documentation](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-managing-db-backup-and-recovery.html).
+    These solutions enable automatic scheduling and management of database backups with a predefined retention period. For more information, see [Manage Database Backup and Recovery on Oracle Exadata Database Service on Dedicated Infrastructure](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-managing-db-backup-and-recovery.html).
 
   - **Self-managed Backup**: Oracle Database@Azure-Exadata Database Service can be configured to stream database backups to Azure Storage services, including Blob, Azure Files (via private endpoints), and Azure NetApp Files (ANF).
 
     This option requires manual configuration and ongoing maintenance.
   
-    **Note** that currently using private endpoints with  Oracle Database@Azure require [deploying a local NVA](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101) into Oracle Database@Azure virtual network. For details refer to the [network Planning](https://learn.microsoft.com/azure/oracle/oracle-db/oracle-database-network-plan).
+    **Note** that currently using private endpoints with  Oracle Database@Azure require [deploying a local NVA](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101) into Oracle Database@Azure virtual network. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan).
 
   - **Third-Party Backup Solutions**: Third-party backup solutions available on Azure Marketplace, such as [Commvault](https://documentation.commvault.com/2024e/essential/oracle_database_at_azure.html), can also be utilized to manage and store database backups.
 
@@ -91,7 +91,7 @@ It's recommended to configure at least two Oracle Database@Azure-Exadata Databas
 - For a regional BCDR strategy, it's recommended to implement a secondary Oracle Database@Azure-Exadata Database Service deployment with a standby database located in a different region where the service is available.  
 This setup provides **protection** against full **regional outages**.
 
-- Configure Data Guard to replicate asynchronously for regional disaster recovery based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network latency test results](https://learn.microsoft.com/azure/networking/azure-network-latency).
+- Configure Data Guard to replicate asynchronously for regional disaster recovery based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network latency test results](/azure/networking/azure-network-latency).
 
   **Note** that automated data guard only allow Maximum Performance mode(ASYNC) configuration for cross region deployments.
 
