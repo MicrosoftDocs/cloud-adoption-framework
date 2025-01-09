@@ -12,15 +12,15 @@ ms.custom: e2e-oracle
 
 This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations outlined in the [Azure landing zone design area](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md), incorporating [Oracle Maximum Availability Architecture](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) (MAA) principles for Oracle Database@Azure-Exadata Database Services.
 
-The first step to building a resilient architecture for your Oracle databases running on Oracle Database@Azure is to identify the availability requirements for the solution. It's essential to establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including both planned and unplanned events. The RTO defines the maximum downtime that an application/business can tolerate after a disruption. The RPO specifies the maximum duration of data loss that an application/business can tolerate. This exercise is a critical prerequisite to be addressed before starting BCDR design. Once the requirements of your solution are established, you can proceed to design your Oracle Database@Azure environment to align with your specified RTO and RPO.
+The first step to building a resilient architecture for your Oracle databases running on Oracle Database@Azure is to identify the availability requirements for the solution. It's essential to establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including both planned and unplanned events. The RTO defines the maximum downtime that an application/business can tolerate after a disruption. The RPO specifies the maximum duration of data loss that an application/business can tolerate. This exercise is a critical prerequisite to be addressed before starting BCDR design. Once the requirements of your solution are established, you can proceed to design your Oracle Database@Azure environment to align with your specified RTO and RPO. To learn more, see Azure Well-Architected Framework's guidelines on [designing a disaster recovery strategy](https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery)
 
 ## Design considerations
 
-- The service is available in two different availability zones within a region, ensuring service reliability and disaster recovery(DR). To verify the deployment location of your Oracle Database@Azure-Exadata Database Service, check your Virtual Machine(VM) Cluster in the Azure portal.
+- The service is available in two different availability zones within a region, ensuring service reliability and disaster recovery (DR). To verify the deployment location of your Oracle Database@Azure-Exadata Database Service, check your Virtual Machine(VM) Cluster in the Azure portal.
 
 - The Oracle Database@Azure-Exadata Database Service and its core components are limited to the availability zone in which you create the instance. The service isn't multi-zonal and doesn't span multiple regions. To achieve multi-zonal or multi-regional resiliency, you can deploy new Oracle Database@Azure-Exadata Database Service instances to target availability zones or regions.
 
-- The Oracle Database@Azure-Exadata Database Service provides native Oracle technologies, such as Real Application Clusters (RAC) and Data Guard, for high availability and Disaster Recovery(DR) respectively.
+- The Oracle Database@Azure-Exadata Database Service provides native Oracle technologies, such as Real Application Clusters (RAC) and Data Guard, for high availability and disaster recovery respectively.
 
   Both Data Guard and Active Data Guard are supported for DR architecture.
 
@@ -93,7 +93,7 @@ This setup provides **protection** against full **regional outages**.
 
 - Configure Data Guard to replicate asynchronously for regional disaster recovery based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network latency test results](/azure/networking/azure-network-latency).
 
-  **Note** that automated data guard only allow Maximum Performance mode(ASYNC) configuration for cross region deployments.
+  **Note** that automated data guard only allow Maximum Performance mode (ASYNC) configuration for cross region deployments.
 
   ![A diagram of multi-region BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/gold-cross-region.png)
 

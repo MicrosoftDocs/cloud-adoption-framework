@@ -27,16 +27,16 @@ In this article, we cover following areas of capacity considerations while deplo
 - Oracle Database@Azure requires a delegated subnet and must be delegated to `Oracle.Database/networkAttachments` before​ cluster deployment.
 - You can create a maximum of one (1) Oracle Database@Azure delegated subnet per virtual network.
 - You can assign multiple Oracle Database@Azure VMs Clusters to the same delegated subnet. Plan for sufficient IP address ranges accordingly to accommodate the required number of VM clusters. For example, if you expect to deploy two VM clusters in the same subnet, ensure that your subnet has enough IP addresses to support all two clusters. See [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
-- You can assign Oracle Database@Azure VM clusters to different virtual network in same or different subscription. For example, a VM cluster is assigned to a development subscription while infrastructure and VM cluster are from production subscriptions. This helps reduce the need to set up separate infrastructure resources just for the development subscription.
+- You can assign Oracle Database@Azure VM clusters to different virtual network in same or different subscriptions. For example, a VM cluster is assigned to a development subscription while infrastructure and VM cluster are from production subscriptions. This helps reduce the need to set up separate infrastructure resources just for the development subscription.
     To assign Oracle Database@Azure VM Cluster to a virtual network from a separate Azure subscription, ensure that both subscriptions are under the same billing account. See [Link Oracle Database@Azure to multiple Azure subscriptions](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription).
 - If you have plans to increase the number of VM clusters, ensure the CIDRs of the client subnet are properly allocated to prevent IP address conflicts, and maintain network segmentation. See [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip) for details on IP CIDRs for each subnet.
-- Oracle Database@Azure backup subnets can be optionally provided during VM cluster creation. Backup subnets are created in the OCI and don't need to be present in Azure virtual network.
+- Oracle Database@Azure backup subnets can be optionally provided during VM cluster creation. Backup subnets are created in Oracle Cloud Infrastructure (OCI) and don't need to be present in Azure virtual network.
   - Preassign backup subnet CIDRs to avoid any IP address conflicts, ensuring smooth network operations and preventing potential connectivity issues.
 
 ## Capacity consideration for Oracle Database@Azure Infrastructure
 
 - Oracle Database@Azure allows provisioning of an infrastructure to start with two databases and three storage servers known as quarter rack. Before provisioning, ensure that all necessary prerequisites are met, such as network configurations and resource allocations.
-- Additional database and/or storage servers can be added independently. Up to a maximum of 32 database servers and 64 storage servers are allowed to be added. For detail Infrastructure configuration, see [Oracle Database@Azure Service Scaling Options](https://docs.oracle.com/en-us/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3).
+- Additional database and/or storage servers can be added independently. Up to a maximum of 32 database servers and 64 storage servers are allowed to be added. For more information, see [Oracle Database@Azure Service Scaling Options](https://docs.oracle.com/en-us/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3).
 - Oracle Database@Azure Infrastructure can be scaled up or down based on the workload requirements.
   - Scale an Oracle Database@Azure Infrastructure via the Azure Console, API, SDK, or Terraform. The scaling process is done online without any downtime to the service and might take up to a few hours to complete. Ensure that you monitor the process to confirm successful scaling.
   - After adding additional database or storage servers to your Oracle Database@Azure infrastructure, add the newly provisioned capacity to the VM clusters.
@@ -44,11 +44,11 @@ In this article, we cover following areas of capacity considerations while deplo
 ## Capacity consideration for Oracle Database@Azure VM Cluster
 
 - A maximum of eight (8) VM clusters can be created in the same Oracle Database@Azure Infrastructure.
-- Each VM in the VM clusters has a minimum of two OCPU and 30 GB of memory allocation  Both OCPU and memory allocation can be adjusted independently during initial VM cluster setup or afterward according to the workload requirement.
+- Each VM in the VM clusters has a minimum of two Oracle CPU (OCPU) and 30 GB of memory allocation. Both can be adjusted independently during initial VM cluster setup or afterward according to the workload requirement.
 - When provisioning a VM Cluster, you can choose to start with either a single-node VM or a multi-node VM cluster. By default, a multi-node VM cluster is selected during the creation process.
 - Single node VM cluster can't be used for high-availability (HA) configurations. We recommend a minimum of 2 VMs per VM Cluster to provide high availability.
 - The VM cluster can be scaled up or down based on the workload requirements.
-  - You can adjust the number of OCPU and memory for an Oracle Database@Azure VM cluster instance symmetrically across all nodes up to the infrastructure limits using OCI console/API/SDK/Terraform.
+  - You can adjust the number of OCPU and memory for an Oracle Database@Azure VM cluster instance symmetrically across all nodes up to the infrastructure limits using the OCI console, API, SDK, or Terraform.
   - Once an Oracle Database@Azure VM cluster instance has been provisioned, it's possible to scale the processing power down to zero, effectively shutting down the VM cluster. During this period, only the infrastructure costs are incurred until the system is scaled up again. This feature is advantageous for cost-saving on test/development systems when they aren't in use.
 
 ## Capacity consideration for Oracle Database@Azure Storage
