@@ -68,7 +68,7 @@ It's recommended to configure at least two Oracle Database@Azure-Exadata Databas
 
   Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach might introduce additional time for scaling operations and their reflection at the database level.  
 
-  ![A diagram of multi-zone BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/cross_az_DG.png)
+  ![A diagram of multi-zone BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/cross-az.svg)
 
 - You can configure Data Guard redo transport mode according to your application services and RPO requirements as such:  
 
@@ -82,7 +82,7 @@ It's recommended to configure at least two Oracle Database@Azure-Exadata Databas
 
   For this setup, extra virtual machines running Oracle Data Guard Observers are required to enable Oracle Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, automating the failover process.
 
-  ![A diagram of Fast start Failover architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/fsfo_cross_AZ.png)
+  ![A diagram of Fast start Failover architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/fsfo_cross_AZ.svg)
 
   If you require a symmetrical disaster recovery architecture in the event of a failover, it's advisable to position an observer instance at the location where the secondary Oracle Database@Azure-Exadata Database Service deployment is configured.
 
@@ -95,7 +95,7 @@ This setup provides **protection** against full **regional outages**.
 
   **Note** that automated data guard only allow Maximum Performance mode (ASYNC) configuration for cross region deployments.
 
-  ![A diagram of multi-region BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/gold-cross-region.png)
+  ![A diagram of multi-region BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/gold-cross-region.svg)
 
 - Multi-zone and multi-region BCDR recommendations focus on database service resiliency. To ensure overall workload resiliency, consider using Azure services and features such as Azure Virtual Machine Scale Sets, Azure Site Recovery and Azure Front Door to design robust architecture across availability zones or regions.
 
@@ -109,7 +109,7 @@ This setup provides **protection** against full **regional outages**.
 
   A remote standby database on an Oracle Database@Azure-Exadata Database Service, located in a different region, addresses regional disaster recovery requirements.
 
-  ![A diagram of local and remote standby BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/local_standby.png)
+  ![A diagram of local and remote standby BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/local-standby.svg)
 
   This architecture is ideal for mission-critical workloads and requires a minimum of three Oracle Database@Azure-Exadata Database Service deployments.  
 
@@ -121,7 +121,7 @@ This setup provides **protection** against full **regional outages**.
 
   If there's a certain requirement to implement zero data loss replication at any distance, this can be achieved using Data Guard Far Sync configuration. This approach involves placing a [far sync instance](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/creating-oracle-data-guard-far-sync-instance.html) closer to the primary Oracle Database@Azure-Exadata Database Service deployment, essentially in another AZ within the same region, to synchronously send the redo logs. The far sync instance then transfers these logs asynchronously to the standby database running in the secondary Oracle Database@Azure-Exadata Database Service deployment in another region. This setup effectively achieves a zero data loss replication between regions.
 
-  ![A diagram of far sync BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/far-sync.png)
+  ![A diagram of far sync BCDR architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/far-sync.svg)
 
   If you’re looking for a symmetrical DR architecture in case of a failover, a far sync instance should be placed in a separate AZ where the secondary Oracle Database@Azure-Exadata Database Service deployment is configured.
 
