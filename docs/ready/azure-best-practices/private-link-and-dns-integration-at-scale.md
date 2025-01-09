@@ -41,9 +41,9 @@ Application teams have permissions to create Azure resource in their own subscri
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution and name resolution for Private Link resources via Azure Private DNS:
 
-![A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources.][image-1]
+:::image type="content" source="./media/private-link-example-central-dns.png" alt-text="A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources." lightbox="./media/private-link-example-central-dns.png" border="false":::
 
-From the previous diagram, it's important to highlight that:
+In the previous diagram, it's important to highlight that:
 
 - On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the DNS private resolver hosted in the hub virtual network.
 
@@ -475,14 +475,14 @@ At this point, application teams can use the storage account through a private e
 If an application owner deletes the private endpoint, the corresponding records in the private DNS zone are automatically removed.
 
 > [!IMPORTANT]
-> You can still create private endpoints in your infrastructure as code tooling. But if you use the `DeployIfNotExists` (DINE) policy approach in this article, you shouldn't integrate DNS in your code. The DINE policies that have the required RBAC to the private DNS zones manage the DNS integration.
+> You can still create private endpoints in your infrastructure as code tooling. But if you use the `DeployIfNotExists` policy approach in this article, you shouldn't integrate DNS in your code. The `DeployIfNotExists` policies that have the required RBAC to the private DNS zones manage the DNS integration.
 
 ## Next steps
 
 - [DNS for on-premises and Azure resources](./dns-for-on-premises-and-azure-resources.md)
 - [Use Azure Bastion for virtual machine remote access](./plan-for-virtual-machine-remote-access.md)
 - [Quickstart: Create a private endpoint by using Bicep](/azure/private-link/create-private-endpoint-bicep).
-- Create a private endpoint by using HashiCorp Terraform [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) in Terrafrom Registry.
+- Create a private endpoint by using the [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) resource in the Terraform Registry.
 
 
 
@@ -505,7 +505,6 @@ If an application owner deletes the private endpoint, the corresponding records 
 [link-14]: /azure/private-link/private-endpoint-overview#private-link-resource
 [link-15]: https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0
 [link-16]: https://github.com/Azure/azure-policy#new-built-in-policy-proposals
-[image-1]: ./media/private-link-example-central-dns.png
 [image-2]: ./media/create-private-dns-zones.jpg
 [image-3]: ./media/create-storage-account-blob.jpg
 [image-4]: ./media/validation.jpg
