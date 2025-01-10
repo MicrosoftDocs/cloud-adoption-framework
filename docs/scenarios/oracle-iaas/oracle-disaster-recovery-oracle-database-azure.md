@@ -132,49 +132,43 @@ This setup provides **protection** against full **regional outages**.
 
 ### Backup recommendations
 
-- In case you're considering backups as the only solution for BCDR requirements, keep in mind that RTO will be higher compared to replication scenarios, as it depends on database size and backup methods used.
+In case you're considering backups as the only solution for BCDR requirements, keep in mind that RTO will be higher compared to replication scenarios, as it depends on database size and backup methods used.
 
-- To meet organizational requirements mandating that data and backups remain in Azure, these solutions are the options:
-  - Use Autonomous Recovery Service in Azure. During backup policy configuration, select “[Store backup in the same cloud provider as the database](https://docs.oracle.com/en/cloud/paas/recovery-service/dbrsu/azure-multicloud-recoveryservice.html)”.
+- **Backup data within Azure**: To meet organizational requirements mandating that data and backups remain in Azure, here are a few solutions:
+  - **Use Autonomous Recovery Service in Azure**: During backup policy configuration, select “[Store backup in the same cloud provider as the database](https://docs.oracle.com/en/cloud/paas/recovery-service/dbrsu/azure-multicloud-recoveryservice.html)”.
 
     ![A picture of ARS policy configuration for cloud provider selection for OracleDB@Azure Azure landing zone accelerator.](./media/ARS_cloud_provider_selection.png)
 
-  - Utilize Azure Storage Services like Blob, AzureFiles, and Azure NetApp Files to mount storage as NFS points on the database server and stream RMAN backups to Azure storage.
+  - **Use Azure Storage services**: Use Azure Storage Services like Blob, AzureFiles, and Azure NetApp Files to mount storage as NFS points on the database server and stream RMAN backups to Azure storage.
 
-- If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Azure Storage.
+- **Long-term backup retention**: If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Azure Storage.
 
-- When backups are configured to Azure Storage services,  
-
-  - Use Cron jobs at the database node level to schedule backups at certain times based on your backup strategy.
-
-  - Use  Azure's underlying storage replication features like ZRS and GRS for the replication of the backups.
+- **Azure Storage backup configurations**: When backups are configured to Azure Storage services, consider these recommendations:
+  - **Schedule with Cron jobs**: Use Cron jobs at the database node level to schedule backups at certain times based on your backup strategy.
+  - **Replicate backups**: Use  Azure's underlying storage replication features like ZRS and GRS for the replication of backups.
 
 - Manually back up Oracle Exadata Database virtual machines to restore critical files if there are accidental deletions or corruptions. For more information, see [Exadata Cloud Compute Node Backup and Restore Operations (Doc ID 2809393.1)](https://support.oracle.com/knowledge/Oracle%20Cloud/2809393_1.html).  
 
 ## Other Recommendations
 
-- If it's necessary to keep data exclusively within Azure, consider the following options:
-  - Ensure Data Guard traffic is routed through the Azure network.  
-  - Select a database backup solution that aligns with your specific backup strategy.
-  
-    Available options are Autonomous Recovery Services in Azure, self-managed RMAN backup to Azure Storage, or third-party backup solutions within Azure.
+- **Keeping data within Azure**: If it's necessary to keep data exclusively within Azure, ensure that Data Guard traffic is routed through the Azure network.
 
-- Test failover and switchover operations to help ensure that they work in a real disaster scenario. Use [Oracle Fast Start Failover](https://www.oracle.com/technical-resources/articles/smiley-fsfo.html) to automate failover operations when possible to minimize errors. Use [Application Continuity](https://docs.oracle.com/en/database/oracle/oracle-database/19/racad/ensuring-application-continuity.html#GUID-C1EF6BDA-5F90-448F-A1E2-DC15AD5CFE75) to seamlessly mask the outage at the application layer.  
+- **Test disaster recovery**: Test failover and switchover operations to help ensure that they work in a real disaster scenario.
+  - Use [Oracle Fast Start Failover](https://www.oracle.com/technical-resources/articles/smiley-fsfo.html) to automate failover operations when possible to minimize errors.
+  - Use [Application Continuity](https://docs.oracle.com/en/database/oracle/oracle-database/19/racad/ensuring-application-continuity.html#GUID-C1EF6BDA-5F90-448F-A1E2-DC15AD5CFE75) to seamlessly mask the outage at the application layer.
 
-- For active-active environments, consider using [Oracle GoldenGate](https://www.oracle.com/integration/goldengate/) for real-time data integration and replication capabilities. It requires application-level awareness to handle conflict resolution effectively.
+- **Real-time data and replication**: For active-active environments, consider using [Oracle GoldenGate](https://www.oracle.com/integration/goldengate/) for real-time data integration and replication capabilities. It requires application-level awareness to handle conflict resolution effectively.
 
-  **Note**  that Oracle GoldenGate isn't included in the solution, so you might incur licensing costs.
+  > [!NOTE]
+  > Oracle GoldenGate isn't included in the solution and might incur additional licensing costs. See [OCI GoldenGate Pricing](https://www.oracle.com/integration/goldengate/pricing/).
 
-- To minimize interruptions for your workload, schedule planned maintenance during off-peak hours, and when applicable utilize rolling manner updates to ensure a seamless process.
+- **Minimize interruptions**: To minimize interruptions for your workload, schedule planned maintenance during off-peak hours, and when applicable utilize rolling manner updates to ensure a seamless process.
 
-- Use infrastructure as code (IaC) to deploy the initial Oracle Exadata Database instance and virtual machine clusters. For more information about OracleDB@Azure automation, see [QuickStart Oracle Database@Azure with Terraform or OpenTofu Modules](https://docs.oracle.com/en/learn/dbazure-terraform/index.html#introduction).
-
-  When you want to install them individually use the bottom links for each module.
-
-  - [OracleDB@Azure - Azure Verified Module for Oracle Exadata Infrastructure](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudexadatainfrastructure/azurerm/latest)
-  - [OracleDB@Azure - Azure Verified Module for Oracle Exadata VM Cluster](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudvmcluster/azurerm/latest)  
-
-- Use IaC to deploy databases in OCI control plane. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
+- **Use infrastructure as code (IaC)**: For more reliable infrastructure automation, deploy the initial Oracle Exadata Database instance and virtual machine clusters using IaC. For more information about OracleDB@Azure automation, see [QuickStart Oracle Database@Azure with Terraform or OpenTofu Modules](https://docs.oracle.com/en/learn/dbazure-terraform/index.html#introduction).
+  - Use Azure Verified Module (AVM) to deploy Oracle Exadata Database instances and virtual machine clusters. For more information, see:
+    - [OracleDB@Azure - Azure Verified Module for Oracle Exadata Infrastructure](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudexadatainfrastructure/azurerm/latest)
+    - [OracleDB@Azure - Azure Verified Module for Oracle Exadata VM Cluster](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudvmcluster/azurerm/latest)  
+  - Use IaC to deploy databases in the OCI control plane. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
 
 ## Next steps
 
