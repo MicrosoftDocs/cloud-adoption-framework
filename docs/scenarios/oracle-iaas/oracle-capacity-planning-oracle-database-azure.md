@@ -17,7 +17,7 @@ This article provides guidance on capacity planning for Oracle Database@Azure us
 > [!NOTE]
 > For Oracle Database@Azure sizing, [reach out to your local Oracle sales team](https://www.oracle.com/cloud/azure/oracle-database-at-azure/) for sizing guidance.
 
-## Capacity consideration virtual network and subnet
+## Capacity considerations for virtual network and subnet
 
 - OracleDB@Azure requires a delegated subnet and must be delegated to `Oracle.Database/networkAttachments` before​ cluster deployment.
 - You can create a maximum of one (1) OracleDB@Azure delegated subnet per virtual network.
@@ -36,7 +36,7 @@ This article provides guidance on capacity planning for Oracle Database@Azure us
   - Scale Oracle Exadata Infrastructure via the Azure Console, API, SDK, or Terraform. The scaling process is done online without any downtime to the service and might take up to a few hours to complete. Ensure that you monitor the process to confirm successful scaling.
   - After adding additional database or storage servers to your Oracle Database@Azure infrastructure, add the newly provisioned capacity to the VM clusters.
 
-## Capacity consideration Oracle Exadata VM Cluster
+## Capacity consideration for Oracle Exadata VM Cluster
 
 - A maximum of eight (8) VM clusters can be created in the same Oracle Exadata Infrastructure.
 - Each VM in the Oracle Exadata VM Cluster has a minimum of two Oracle CPU (OCPU) and 30 GB of memory allocation. Both can be adjusted independently during initial VM cluster setup or afterward according to the workload requirement.
