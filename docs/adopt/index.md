@@ -17,7 +17,7 @@ The Adopt methodology shows you how to migrate, modernize, innovate, and relocat
 
 ## Migrate
 
-Migration entails moving workloads to the cloud or between clouds. You can choose from various types of migrations. The [the migration guidance](../migrate/index.md) helps you choose the migration strategy that best aligns with your objectives.
+Migration entails moving workloads to the cloud or between clouds. You can choose from various types of migrations. The [migration guidance](../migrate/index.md) helps you choose the migration strategy that best aligns with your objectives.
 
 - ***Goals:*** Meet business demands, exit an on-premises environment, and align with Azure Well-Architected Framework principles.
 
