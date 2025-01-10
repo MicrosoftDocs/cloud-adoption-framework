@@ -18,7 +18,7 @@ To learn more, see Azure Well-Architected Framework's guidelines on [designing a
 
 ## Design considerations
 
-- Make the service available in multiple availability zones: The service is available in two different availability zones within a region, ensuring service reliability and disaster recovery (DR). To verify the deployment location of your Oracle Exadata Database service, check your virtual machine (VM) Cluster in the Azure portal.
+- The service is available in two different availability zones within a region, ensuring service reliability and disaster recovery (DR). To verify the deployment location of your Oracle Exadata Database service, check your virtual machine (VM) Cluster in the Azure portal.
 
 - Oracle Exadata Database and its core components are limited to the availability zone in which you create the instance. The service isn't multi-zonal and doesn't span multiple regions. To achieve multi-zonal or multi-regional resiliency, you can deploy new Oracle Exadata Database instances to target availability zones or regions.
 
