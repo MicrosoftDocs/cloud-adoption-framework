@@ -37,7 +37,7 @@ Consider the following network design recommendations for Azure Arc-enabled serv
 
 ### Define an Azure Arc agent connectivity method
 
-Review your existing infrastructure and security requirements. Decide how the Connected Machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go over the internet, through a proxy server, or via [Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you are implementing Azure Arc over the internet with or without a proxy, you can also use a (currently public preview) feature called [Azure Arc Gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway), which helps to reduce the overall number of endpoints that the proxy needs to allow.
+First, review your existing infrastructure and security requirements. Then, decide how the Connected Machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go over the internet, through a proxy server, or via [Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you are implementing Azure Arc over the internet with or without a proxy, you can also use a (currently public preview) feature called [Azure Arc Gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway), which helps to reduce the overall number of endpoints that the proxy needs to allow.
 
 #### Direct connection
 
