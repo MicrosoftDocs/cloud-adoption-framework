@@ -16,9 +16,9 @@ In this article
 2.	Design recommendations
 3.	Next steps
 
-This article builds on the information found in [Identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Use this information to examine design considerations and recommendations for identity and access management that's specific to the deployment of Oracle Exadata Database@Azure. Identity requirements for Oracle Exadata Database@Azure vary according to its implementation in Azure. The information provided in this article is based on the most common scenarios. 
+This article builds on the information found in [Identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Use this information to examine design considerations and recommendations for identity and access management that's specific to the deployment of Oracle Database@Azure - Exadata. Identity requirements for Oracle Database@Azure - Exadata vary according to its implementation in Azure. The information provided in this article is based on the most common scenarios. 
 
-Oracle Exadata Database@Azure is a multicloud solution where Oracle Exadata runs directly within an Azure data center, using Azure infrastructure. This offering, jointly provided by Microsoft and Oracle Cloud Infrastructure (OCI), requires managing identities and RBAC across both platforms. This guide outlines best practices for identity and access management to create consistent deployment patterns for Oracle Database@Azure. 
+Oracle Database@Azure - Exadata is a multicloud solution where Oracle Exadata runs directly within an Azure data center, using Azure infrastructure. This offering, jointly provided by Microsoft and Oracle Cloud Infrastructure (OCI), requires managing identities and RBAC across both platforms. This guide outlines best practices for identity and access management to create consistent deployment patterns for Oracle Database@Azure. 
 
 
 ## Design considerations
