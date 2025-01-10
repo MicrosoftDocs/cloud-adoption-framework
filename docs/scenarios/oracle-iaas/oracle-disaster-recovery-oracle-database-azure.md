@@ -106,29 +106,31 @@ This setup provides **protection** against full **regional outages**.
 
 #### Local and Remote Standby
 
-  To address specific requirements for robust service availability and resilience against regional outages, implementing multiple standby databases is a recommended approach for mission-critical workloads.
+To address requirements for robust service availability and resilience against regional outages, implementing multiple standby databases is a recommended approach for mission-critical workloads.
 
-  A local standby database on an Oracle Exadata Database deployment resides in a different availability zone (AZ) within the same region. This setup provides a viable solution for latency-sensitive applications by addressing zero data loss failover requirements through SYNC Data Guard replication, ensuring service availability without impacting application throughput or overall response time.
+A local standby database on an Oracle Exadata Database deployment resides in a different availability zone within the same region. This setup provides a viable solution for latency-sensitive applications by addressing zero data loss failover requirements through SYNC Data Guard replication, ensuring service availability without impacting application throughput or overall response time.
 
-  A remote standby database on an Oracle Exadata Database located in a different region addresses regional disaster recovery requirements.
+A remote standby database on an Oracle Exadata Database located in a different region addresses regional disaster recovery requirements.
 
-  ![A diagram of local and remote standby BCDR architecture for OracleDB@Azure Azure landing zone accelerator.](./media/local-standby.svg)
+![A diagram of local and remote standby BCDR architecture for OracleDB@Azure Azure landing zone accelerator.](./media/local-standby.svg)
 
-  This architecture is ideal for mission-critical workloads and requires a minimum of three Oracle Exadata Database deployments.  
+This architecture is ideal for mission-critical workloads and requires a minimum of three Oracle Exadata Database deployments.
 
-  **Note** that if a symmetrical configuration is required if there is a failover scenario, an additional standby database on Oracle Exadata Database should be placed in the secondary region, within a different availability zone.
-
-  **Note**  that this setup requires manual Data Guard replication configuration.
+> [!NOTE]
+> If a symmetrical configuration is required if there is a failover scenario, an additional standby database on Oracle Exadata Database should be placed in the secondary region, within a different availability zone.
+>
+> This setup requires manual Data Guard replication configuration.
 
 #### Far Sync Architecture
 
-  If there's a certain requirement to implement zero data loss replication at any distance, this can be achieved using Data Guard Far Sync configuration. This approach involves placing a [far sync instance](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/creating-oracle-data-guard-far-sync-instance.html) closer to the primary Oracle Exadata Database deployment, essentially in another AZ within the same region, to synchronously send the redo logs. The far sync instance then transfers these logs asynchronously to the standby database running in the secondary Oracle Exadata Database deployment in another region. This setup effectively achieves a zero data loss replication between regions.
+If there's a requirement to implement **zero data loss replication** at any distance, this can be achieved using Data Guard Far Sync configuration. This approach involves placing a [far sync instance](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/creating-oracle-data-guard-far-sync-instance.html) closer to the primary Oracle Exadata Database deployment, essentially in another availability zone within the same region, to synchronously send the redo logs. The far sync instance then transfers these logs asynchronously to the standby database running in the secondary Oracle Exadata Database deployment in another region. This setup effectively achieves a zero data loss replication between regions.
 
-  ![A diagram of far sync BCDR architecture for OracleDB@Azure Azure landing zone accelerator.](./media/far-sync.svg)
+![A diagram of far sync BCDR architecture for OracleDB@Azure Azure landing zone accelerator.](./media/far-sync.svg)
 
-  If you’re looking for a symmetrical DR architecture if there is a failover, a far sync instance should be placed in a separate AZ where the secondary Oracle Exadata Database deployment is configured.
+If you’re looking for a symmetrical DR architecture if there is a failover, a far sync instance should be placed in a separate availability zone where the secondary Oracle Exadata Database deployment is configured.
 
-  **Note** that the far sync configuration requires an Active Data Guard (ADG) license and must be manually configured.
+> [!NOTE]
+> The far sync configuration requires an Active Data Guard (ADG) license and must be manually configured.
 
 ### Backup recommendations
 
