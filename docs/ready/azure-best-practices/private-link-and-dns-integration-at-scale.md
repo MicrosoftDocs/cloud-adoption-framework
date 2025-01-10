@@ -16,16 +16,16 @@ This article describes how to integrate Azure Private Link for platform as a ser
 
 Many customers build their network infrastructure in Azure using the hub-and-spoke network architecture, where:
 
-- Networking shared services (such as network virtual appliances (NVAs), ExpressRoute/VPN gateways, or DNS servers) deploy in the **hub** virtual network.
+- Networking shared services, such as network virtual appliances (NVAs), ExpressRoute/VPN gateways, or DNS servers, deploy in the **hub** virtual network.
 - **Spoke** virtual networks consume the shared services via virtual network peering.
 
-In hub-and-spoke network architectures, application owners typically have an Azure subscription, which includes a virtual network (*a spoke*) connected to the *hub* virtual network. In this architecture, they can deploy their virtual machines and have private connectivity to other virtual networks or to on-premises networks via ExpressRoute or VPN.
+In hub-and-spoke network architectures, application owners typically have an Azure subscription, which includes a virtual network (*a spoke*) that's connected to the *hub* virtual network. In this architecture, they can deploy their virtual machines and have private connectivity to other virtual networks or to on-premises networks via ExpressRoute or VPN.
 
-A central NVA, such as Azure Firewall, provides internet-outbound connectivity. Additionally, that device, such as with [Azure Firewall DNS proxy](/azure/firewall/dns-details), or another service in or near the hub is typically used to customize DNS forwarding.
+A central NVA, like Azure Firewall, provides internet-outbound connectivity. Additionally, that device, combined with another service, like an [Azure Firewall DNS proxy](/azure/firewall/dns-details), that's in or near the hub is typically used to customize DNS forwarding.
 
-Many application teams build their solutions by using a combination of Azure IaaS and PaaS resources. Some Azure PaaS services (such as Azure SQL Managed Instance) can be deployed in customer virtual networks. As a result, traffic stays private within the Azure network and is fully routable from on-premises.
+Many application teams build their solutions by using a combination of Azure IaaS and PaaS resources. Some Azure PaaS services, such as Azure SQL Managed Instance, can be deployed in customer virtual networks. As a result, traffic stays private within the Azure network and is fully routable from on-premises.
 
-But some Azure PaaS services (such as Azure Storage or Azure Cosmos DB) can't be deployed in a customer's virtual networks and are accessible over their public endpoint. In some cases, this configuration causes a contention with a customer's security policies. Corporate traffic might not allow the deployment or access of corporate resources (such as a SQL database) over public endpoints.
+But some Azure PaaS services, such as Azure Storage or Azure Cosmos DB, can't be deployed in a customer's virtual networks and are accessible over their public endpoint. In some cases, this configuration causes a contention with a customer's security policies. Corporate traffic might not allow the deployment or access of corporate resources, such as a SQL database, over public endpoints.
 
 [Private Link][link-1] supports access to a [list of Azure services][link-2] over private endpoints, but it requires that you register those private endpoint records in a corresponding [private DNS zone][link-3].
 
@@ -37,7 +37,7 @@ This article also describes how application teams can ensure that services autom
 
 Private DNS zones are typically hosted centrally in the same Azure subscription where the hub virtual network deploys. This central hosting practice is driven by [cross-premises DNS name resolution][link-4] and other needs for central DNS resolution such as Windows Server Active Directory. In most cases, only networking and identity administrators have permissions to manage DNS records in the zones.
 
-Application teams have permissions to create Azure resource in their own subscription. They don't have any permissions in the central networking connectivity subscription, which includes managing DNS records in the private DNS zones. This access limitation means they don't have the ability to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
+Application teams have permissions to create Azure resource in their own subscription. They don't have any permissions in the central networking connectivity subscription, which includes managing DNS records in the private DNS zones. This access limitation means that they don't have the ability to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution and name resolution for Private Link resources via Azure Private DNS:
 
@@ -48,8 +48,8 @@ In the previous diagram, it's important to highlight that:
 - On-premises DNS servers have conditional forwarders configured for each private endpoint public DNS zone, pointing to the DNS private resolver hosted in the hub virtual network.
 
 - The DNS private resolver hosted in the hub virtual network uses the Azure-provided DNS (168.63.129.16) as a forwarder.
-- The hub virtual network must be linked to the Private DNS zone names for Azure services (such as `privatelink.blob.core.windows.net`, as shown in the diagram).
-- All Azure virtual networks use the DNS private resolver hosted in the hub virtual network
+- The hub virtual network must be linked to the Private DNS zone names for Azure services, such as `privatelink.blob.core.windows.net`, as shown in the diagram.
+- All Azure virtual networks use the DNS private resolver that's hosted in the hub virtual network.
 - The DNS private resolver isn't authoritative for customer's corporate domains, like Active Directory domain names, because it's just a forwarder. The DNS private resolver should have outbound endpoint forwarders to the customer's corporate domains, pointing to the on-premises DNS servers (172.16.1.10 and 172.16.1.11) or DNS servers deployed in Azure that are authoritative for such zones.
 
 > [!NOTE] 
@@ -174,14 +174,14 @@ In addition to the private DNS zones, you also need to [create a set of custom A
 
     The following policy examples show two approaches for identifying which `privateDNSZoneGroup` is created on a private endpoint.
 
-    The [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) relies on the `groupId` while the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#second-deployifnotexists-policy---matching-on-groupid--privatelinkserviceid) when `groupId` clashes or collides with another resource.
+    The [first policy](#deployifnotexists-policy-for-groupid-only) relies on the `groupId` while the [second policy](#deployifnotexists-policy-for-groupid-and-privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#deployifnotexists-policy-for-groupid-and-privatelinkserviceid) when `groupId` clashes or collides with another resource.
 
-    For example, the `groupId` **SQL** is used for both Azure Cosmos DB and Azure Synapse Analytics. If both resource types deploy and the [first policy](#first-deployifnotexists-policy---matching-on-groupid-only) has been assigned to create the `privateDNSZoneGroup` on the private endpoint entry, it's created and mapped to the incorrect private DNS zone, of either Azure Cosmos DB or Azure Synapse Analytics. It then might toggle between each of the zones because of the clashing `groupId` that the first policy looks for in its policy rule.
+    For example, the `groupId` **SQL** is used for both Azure Cosmos DB and Azure Synapse Analytics. If both resource types deploy and the [first policy](#deployifnotexists-policy-for-groupid-only) has been assigned to create the `privateDNSZoneGroup` on the private endpoint entry, it's created and mapped to the incorrect private DNS zone, of either Azure Cosmos DB or Azure Synapse Analytics. It then might toggle between each of the zones because of the clashing `groupId` that the first policy looks for in its policy rule.
 
     For a list of the `groupId` for Private Link resources, see the subresources column in [What is a private endpoint?][link-14].
 
 > [!TIP]
-> Azure Policy built-in definitions are constantly being added, deleted, and updated. It's highly recommended to use built-in policies versus managing your own policies (where available). Use the [AzPolicyAdvertizer][link-12] to find existing built-in policies that have the following name of 'xxx ... to use private DNS zones'. In addition, Azure Landing Zones (ALZ) has a policy initiative, [Configure Azure PaaS services to use private DNS zones][link-13], that contains built-in policies that are periodically updated. If a built-in policy isn't available for your situation, consider creating an idea on the `azure-policy` feedback site [Azure Governance Community][link-15] by following the [built-in policy proposals process on the Azure Policy GitHub repo][link-16].
+> Azure Policy built-in definitions are constantly being added, deleted, and updated. You should use built-in policies instead of managing your own policies, where available. Use the [AzPolicyAdvertizer][link-12] to find existing built-in policies that have the following name of 'xxx ... to use private DNS zones'. In addition, Azure Landing Zones (ALZ) has a policy initiative, [Configure Azure PaaS services to use private DNS zones][link-13], that contains built-in policies that are periodically updated. If a built-in policy isn't available for your situation, consider creating an idea on the `azure-policy` feedback site [Azure Governance Community][link-15] by following the [built-in policy proposals process on the Azure Policy GitHub repo][link-16].
 
 #### DeployIfNotExists policy for groupId only
 
@@ -450,7 +450,7 @@ After the platform team deploys the platform infrastructure components (private 
 
    ![A screenshot that shows the Resources tab for selecting the target subresource.][image-10]
 
-6. In the **Configuration** section, after selecting your virtual network and subnet, be sure that **Integrate with private DNS zone** is set to **No**. Otherwise, the Azure portal prevents you from creating the private endpoint.  Azure Policy won't allow you to create a private DNS zone with the `privatelink` prefix.
+6. In the **Configuration** section, after selecting your virtual network and subnet, be sure that **Integrate with private DNS zone** is set to **No**. Otherwise, the Azure portal prevents you from creating the private endpoint. Azure Policy won't allow you to create a private DNS zone with the `privatelink` prefix.
 
    ![A screenshot that shows the Configuration tab for setting the integrate with private DNS zone option to no.][image-11]
 
@@ -462,11 +462,11 @@ After the platform team deploys the platform infrastructure components (private 
 
    ![A screenshot that shows where to review the private endpoint, FQDN, and private IP.][image-12]
 
-10. Check the activity log for the resource group where the private endpoint was created. Or you can check the activity log of the private endpoint itself. After a few minutes, a `DeployIfNotExist` policy action runs and that configures the DNS zone group on the private endpoint:
+10. Check the activity log for the resource group where the private endpoint was created. Or you can check the activity log of the private endpoint itself. After a few minutes, a `DeployIfNotExist` policy action runs, which configures the DNS zone group on the private endpoint:
 
     ![A screenshot that shows the activity log for the resource group and the private endpoint.][image-13]
 
-11. If the central networking team goes to the `privatelink.blob.core.windows.net` private DNS zone, they confirm that the DNS record is there for the private endpoint you created, and both the name and IP address match the values within the private endpoint.
+11. If the central networking team goes to the `privatelink.blob.core.windows.net` private DNS zone, they confirm that the DNS record is there for the private endpoint that you created, and both the name and IP address match the values within the private endpoint.
 
     ![A screenshot that shows the private DNS zone and where to confirm that the DNS record exists.][image-14]
 
