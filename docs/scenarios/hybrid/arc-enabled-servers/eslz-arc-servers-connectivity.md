@@ -56,10 +56,10 @@ If you deploy extensions on your Azure Arc-enabled servers, every extension conn
 To reduce the total number of URLs required in the firewall or proxy, determine if the Azure Arc Gateway service would be of benefit.
 
 #### Azure Arc Gateway
-The Azure Arc Gateway (Public Preview) is a service provided by Azure that reduces the total number of outbound HTTPS endpoints that your proxy needs to allow for Azure Arc to work. It eliminates the need for most wildcards endpoints (Some wildcard endpoints are still required) and reduces the total number of endpoints required to 8 for Azure Arc. It has the abililty to work with some extension endpoints so you do not need to create more URL exclusions in your proxy.
-Right now, the Azure Arc Gateway service does not work with Private Link, and it does not work with Expressroute peering as it must be accessed over the internet. 
 
-The latest updated information is published here: [Azure Arc Gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway)
+The [Azure Arc Gateway (Public Preview)](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway) reduces the total number of outbound HTTPS endpoints that your proxy needs to allow for Azure Arc to work. It eliminates the need for most wildcards endpoints and reduces the total number of endpoints required to eight. It can work with some extension endpoints, so you don't need to create more URL exclusions in your proxy.
+
+Right now, the Azure Arc Gateway service does not work with Private Link or with Expressroute peering, since you must access the Azure Arc Gateway service over the internet. 
 
 #### Private Link
 
