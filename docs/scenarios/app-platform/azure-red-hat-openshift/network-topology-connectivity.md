@@ -58,7 +58,7 @@ Use incoming (ingress) controllers to expose applications running in the Azure R
 - [Ingress controllers](https://docs.openshift.com/container-platform/latest/networking/ingress-operator.html) provide application-level routing with only a slight increase in complexity.
 - Azure Red Hat OpenShift creates a generic DNS entry that simplifies access to exposed applications in the cluster. An example DNS entry is `*.apps.<cluster-ID>.<region>.aroapp.io`. It's useful for a private cluster to route traffic for the application.
 - Azure Red Hat OpenShift offers a built-in [Ingress controller and routes](https://docs.openshift.com/container-platform/latest/networking/configuring_ingress_cluster_traffic/configuring-ingress-cluster-traffic-ingress-controller.html).
-- You can use Azure Red Hat OpenShift ingress with [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door).
+- You can use Azure Red Hat OpenShift ingress with [Azure Front Door](/azure/openshift/howto-secure-openshift-with-front-door). **Note** that using Application Gateway with Azure Red Hat Openshift ingress controllers defined as backend settings is **NOT** supported due to service chaining.  Follow the design guidance in this article.
 - Align your configuration with the egress filtering design to avoid asymmetric routing. UDRs potentially might cause asymmetric routing.
 - If your scenario requires [TLS termination](https://docs.openshift.com/container-platform/latest/networking/ingress-operator.html), consider how you'll manage TLS certificates.
 
