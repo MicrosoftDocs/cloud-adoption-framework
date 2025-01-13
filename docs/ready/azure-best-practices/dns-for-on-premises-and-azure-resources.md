@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 Domain Name System (DNS) is a critical design topic in the overall landing zone architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
 
-### Design considerations
+## Design considerations
 
 - You can use Azure DNS Private Resolver with Azure Private DNS zones for cross-premises name resolution.
 
