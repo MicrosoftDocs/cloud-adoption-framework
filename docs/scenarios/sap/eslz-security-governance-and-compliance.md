@@ -52,7 +52,10 @@ Enable Microsoft Defender for Cloud Standard for SAP on Azure subscriptions to:
 
 - Delegate an SAP admin custom role with [just-in-time access](/azure/security-center/just-in-time-explained).
 
-- Use the dedicated Microsoft Defender for Endpoint configuration for SAP hosts running on [Linux](/defender-endpoint/mde-linux-deployment-on-sap) and [Windows](/defender-endpoint/mde-sap-windows-server) to ensure that the SAP landscape is secure and SAP server performance is optimized.
+- Use the dedicated Microsoft Defender for Endpoint configuration for SAP hosts running on Linux and Windows to ensure that the SAP landscape is secure and SAP server performance is optimized. For more information use below references:
+
+  - [Microsoft Defender for Endpoint on Linux for SAP](/defender-endpoint/mde-linux-deployment-on-sap)
+  - [Microsoft Defender for Endpoint on Windows Server with SAP](/defender-endpoint/mde-sap-windows-server)
 
 The following screenshot shows the workload protection dashboard in the Azure portal:
 
@@ -245,4 +248,5 @@ The following recommendations are for various compliance and governance scenario
 - [Best practices in migrating SAP applications to Azure, part 1](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
 - [SAP on Azure: designing for efficiency and operations](https://azure.microsoft.com/blog/sap-on-azure-designing-for-efficiency-operations/)
 - [Azure Virtual Machines planning and implementation for SAP NetWeaver](/azure/virtual-machines/workloads/sap/planning-guide)
--
+- [Configure Microsoft Defender for Endpoint on Windows Server with SAP](/defender-endpoint/mde-sap-windows-server)
+- [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](defender-endpoint/mde-linux-deployment-on-sapand)
