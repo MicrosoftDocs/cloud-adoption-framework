@@ -35,7 +35,7 @@ Consider the following network design recommendations for Azure Arc-enabled serv
 
 ### Define an Azure Arc agent connectivity method
 
-First review your existing infrastructure and security requirements. Then decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go over the internet, through a proxy server, or via [Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you implement Azure Arc over the internet with or without a proxy, you can also use a feature that's currently in public preview called [Azure Arc Gateway](/azure/azure-arc/servers/arc-gateway). This feature helps reduce the overall number of endpoints that the proxy needs to allow.
+First review your existing infrastructure and security requirements. Then decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go over the internet, through a proxy server, or via [Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you implement Azure Arc over the internet with or without a proxy, you can also use a feature that's currently in public preview called [Azure Arc Gateway](/azure/azure-arc/servers/arc-gateway). This feature helps reduce the overall number of endpoints that the proxy needs to allow access to.
 
 #### Direct connection
 
@@ -51,7 +51,7 @@ If you use a firewall or a proxy server to restrict outbound connectivity, make 
 
 If you deploy extensions on your Azure Arc-enabled servers, every extension connects to its own endpoint or endpoints, and you must also allow all corresponding URLs in the firewall or proxy. Add these endpoints to ensure granular secured network traffic and to meet the principle of least privilege.
 
-To reduce the total number of URLs that are required in the firewall or proxy, determine if the Azure Arc Gateway service would be of benefit.
+To reduce the total number of URLs that are required in the firewall or proxy, determine if the Azure Arc Gateway service would be beneficial.
 
 #### Azure Arc Gateway
 
@@ -66,7 +66,7 @@ To ensure that all traffic from your Azure Arc agents remains on your network, u
 - Azure Arc Private Link Scope encompasses all Azure Arc clients under the same Domain Name System (DNS) scope. You can't have some Azure Arc clients that use private endpoints and some that use public endpoints when they share a DNS server. But you can implement workarounds like [DNS policies](/windows-server/networking/dns/deploy/dns-policies-overview).
 
 - Your Azure Arc clients can have all private endpoints in a primary region. If they don't, you need to configure DNS so that the same private endpoint names resolve to different IP addresses. For example, you might use [selectively replicated DNS partitions for Windows Server Active Directory-integrated DNS](/troubleshoot/windows-server/networking/create-apply-custom-application-directory-partition). If you use the same private endpoints for all your Azure Arc clients, you must have the ability to route traffic from all your networks to the private endpoints.
-- You must do extra steps to use private endpoints for any Azure services that extension software components that you deploy via Azure Arc access. These services include Log Analytics workspaces, Azure Automation accounts, Azure Key Vault, and Azure Storage.
+- To use private endpoints for any Azure services that extension software components you deploy via Azure Arc access, you must do extra steps. These services include Log Analytics workspaces, Azure Automation accounts, Azure Key Vault, and Azure Storage.
 - Connectivity to Microsoft Entra ID uses public endpoints, so clients require some internet access.
 - If you use Azure ExpressRoute for private connectivity, consider reviewing the resiliency best practices for [circuits](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/), [gateways](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteGateways/), [connections](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/connections/), and [ExpressRoute Direct](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRoutePorts/).
 
