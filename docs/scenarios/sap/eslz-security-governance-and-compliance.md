@@ -52,15 +52,27 @@ Enable Microsoft Defender for Cloud Standard for SAP on Azure subscriptions to:
 
 - Delegate an SAP admin custom role with [just-in-time access](/azure/security-center/just-in-time-explained).
 
-When you enable Microsoft Defender for Cloud Standard for SAP, make sure to exclude the SAP database servers from any policy that installs endpoint protection.
+- Use the dedicated Microsoft Defender for Endpoint configuration for SAP hosts running on Linux and Windows to ensure that the SAP landscape is secure and SAP server performance is optimized. For more information use below references:
+
+  - [Microsoft Defender for Endpoint on Linux for SAP](/defender-endpoint/mde-linux-deployment-on-sap)
+  - [Microsoft Defender for Endpoint on Windows Server with SAP](/defender-endpoint/mde-sap-windows-server)
 
 The following screenshot shows the workload protection dashboard in the Azure portal:
 
 ![Workload protection dashboard](./media/defender-cloud-dashboard.png)
 
-### Enable Microsoft Sentinel
+### Enable Microsoft Sentinel and the Sentinel for SAP solution
 
 [Microsoft Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+
+The [Microsoft Sentinel solution for SAP](/azure/sentinel/sap/solution-overview) provides the following benefits:
+
+- The solution is heavily influenced by [Microsoft's own experience](https://www.microsoft.com/insidetrack/blog/protecting-microsofts-sap-workload-with-microsoft-sentinel/) in securing its own SAP systems.
+- It provides [proven built-in detection rules](/azure/sentinel/sap/sap-solution-security-content#built-in-analytics-rules), [playbooks for automated actions](/azure/sentinel/sap/sap-solution-security-content#available-playbooks) for SAP security and [workbooks](/azure/sentinel/sap/sap-solution-security-content#built-in-workbooks) to visualize the achieved coverage based on popular frameworks such as NIST, SOX, etc.
+- It detects and enables response to security threats across the entire SAP stack (AS ABAP, AS JAVA, and SAP Business Technology Platform).
+- It integrates with Microsoft Unified Security Operations Platform to provide a unified view of security alerts and incidents across all Microsoft Defender products, Microsoft Sentinel, and Microsoft Security Copilot.
+
+Find additional design considerations on [this article](sap-lza-sentinel-for-sap.md).
 
 ### Secure authentication
 
@@ -68,7 +80,7 @@ Single sign-on (SSO) is the foundation for integrating SAP and Microsoft product
 
 You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for DIAG (SAP GUI), RFC, and SPNEGO for HTTPS.
 
-Microsoft Entra ID with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform.
+Microsoft Entra ID with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform. Find more details on the [identity and access management section](eslz-identity-and-access-management.md).
 
 ### Harden operating systems
 
@@ -236,4 +248,5 @@ The following recommendations are for various compliance and governance scenario
 - [Best practices in migrating SAP applications to Azure, part 1](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
 - [SAP on Azure: designing for efficiency and operations](https://azure.microsoft.com/blog/sap-on-azure-designing-for-efficiency-operations/)
 - [Azure Virtual Machines planning and implementation for SAP NetWeaver](/azure/virtual-machines/workloads/sap/planning-guide)
--
+- [Configure Microsoft Defender for Endpoint on Windows Server with SAP](/defender-endpoint/mde-sap-windows-server)
+- [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](/defender-endpoint/mde-linux-deployment-on-sap)
