@@ -22,7 +22,7 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
 
 - Familiarize yourself with [Azure Private DNS zone limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-dns-limits).
 
-### Design recommendations
+## Design recommendations
 
 - For environments where only name resolution in Azure is required, use Azure Private DNS zones for resolution. Create a delegated zone for name resolution, such as `azure.contoso.com`. Enable auto-registration for the Azure Private DNS zone to automatically manage the lifecycle of the DNS records for the virtual machines that are deployed within a virtual network.
 
