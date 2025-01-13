@@ -4,7 +4,7 @@ description: Learn how to prepare for organizational alignment, what the recomme
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 01/13/2025
 ---
 
 # Prepare your organization for cloud adoption
@@ -12,6 +12,21 @@ ms.date: 12/11/2024
 Prepare your organization for cloud adoption to avoid known risks and challenges. Ensure organizational alignment, explore suggested cloud functions across teams, and see what a typical Responsible, Accountable, Consulted, Informed (RACI) matrix can look like.
 
 :::image type="content" source="../media/caf-strategy-prepare-organization.svg" alt-text="Diagram showing the phase for preparing your organization for your cloud adoption strategy.":::
+
+## Prepare for cloud adoption
+
+Whether you're a cloud-mature organization or just getting started, organizational alignment and preparation is crucial for successful cloud adoption and big new initiatives.
+
+The following table describes important considerations and recommendations to prepare your organization for cloud adoption.
+
+> [!NOTE]
+> If you think that a specific topic or strategic consideration should be added to the existing list of considerations, use the feedback tool in the upper-right corner of the page to offer suggestions. Include a justification about why you want to add that topic to the guidance.
+
+| Activity | Description |
+| --- | --- |
+| [Organizational alignment](./organizational-alignment.md) | Understand the importance of leadership and executive buy-in, align organizational strategies, understanding your operating models, shift to a product-model, and identify partner relationships. |
+| [Required cloud functions](./required-cloud-functions.md) | Explore the recommended cloud functions across teams, including business, IT, finance, and security. Discover the importance of a Center of Excellence and take that into account for your cloud adoption strategy. |
+| [RACI alignment](./raci-alignment.md) | Learn to align cloud adoption responsibilities across teams by developing a cross-functional RACI matrix. |
 
 ## Next steps
 
