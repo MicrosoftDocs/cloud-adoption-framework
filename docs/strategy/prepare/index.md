@@ -19,9 +19,6 @@ Whether you're a cloud-mature organization or just getting started, organization
 
 The following table describes important considerations and recommendations to prepare your organization for cloud adoption.
 
-> [!NOTE]
-> If you think that a specific topic or strategic consideration should be added to the existing list of considerations, use the feedback tool in the upper-right corner of the page to offer suggestions. Include a justification about why you want to add that topic to the guidance.
-
 | Activity | Description |
 | --- | --- |
 | [Organizational alignment](./organizational-alignment.md) | Understand the importance of leadership and executive buy-in, align organizational strategies, understanding your operating models, shift to a product-model, and identify partner relationships. |
