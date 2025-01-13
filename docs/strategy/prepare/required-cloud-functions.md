@@ -9,7 +9,7 @@ ms.date: 12/11/2024
 
 # Required cloud functions
 
-For larger companies and enterprises, it's common to have a variety of teams and functions that are involved in the cloud adoption journey. These teams and functions are typically responsible for different aspects of the cloud adoption journey, and they work together to ensure that the cloud adoption projects are successful, from strategy to delivery.
+For larger companies and enterprises, it's common to have various teams and functions that are involved in the cloud adoption journey. These teams and functions are typically responsible for different aspects of the cloud adoption journey, and they work together to ensure that the cloud adoption projects are successful, from strategy to delivery.
 
 - For _startups and smaller_ organizations, some of these functions might be combined or handled by a single team.
 - For _enterprises and large_ organizations, these functions might be split into multiple teams or departments.
@@ -23,7 +23,7 @@ The following suggested cloud functions are based on the Cloud Adoption Framewor
 
 A cloud strategy team defines motivations and business outcomes for cloud adoption. This team is responsible for ensuring that the cloud adoption strategy is aligned with the business strategy and that the cloud adoption efforts are focused on achieving the desired business outcomes.
 
-### Roles
+**Roles:**
 
 Typically, the following roles provide cloud strategy functions. When you define your cloud strategy team, be sure it includes a diverse set of skills and experiences to ensure that all aspects of the cloud adoption journey are covered:
 
@@ -36,7 +36,7 @@ Typically, the following roles provide cloud strategy functions. When you define
 - Application groups
 - Project managers
 
-### Responsibilities
+**Responsibilities:**
 
 - _Primary focus_. Validate and maintain alignment between business priorities and cloud adoption efforts.
 - _Secondary focus_. Focus on change management across the adoption efforts.
@@ -53,7 +53,7 @@ Typical responsibilities include:
 
 The primary need from any cloud adoption function is the timely, high-quality implementation of the technical solutions outlined in the adoption plan. These solutions should align with governance requirements and business outcomes, and should take advantage of technology, tools, and automation solutions that are available to the team.
 
-### Roles
+**Roles:**
 
 Typically, the following roles provide cloud adoption functions. When you define your cloud adoption team, be sure it includes a diverse set of skills and experiences to ensure that all aspects of the cloud adoption journey are covered:
 
@@ -64,7 +64,7 @@ Typically, the following roles provide cloud adoption functions. When you define
 - Data or application platform specialists
 - Solution architects
 
-### Responsibilities
+**Responsibilities:**
 
 Ideally, the cloud adoption team delivers on the following tasks.
 
@@ -75,7 +75,7 @@ Ideally, the cloud adoption team delivers on the following tasks.
 
 A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance.
 
-### Roles
+**Roles:**
 
 Typically, the following roles provide cloud governance functions:
 
@@ -85,7 +85,7 @@ Typically, the following roles provide cloud governance functions:
 - Security
 - Compliance
 
-### Responsibilities
+**Responsibilities:**
 
 Ideally, the cloud governance team delivers on the following tasks.
 
@@ -94,11 +94,43 @@ Ideally, the cloud governance team delivers on the following tasks.
 - Develop and update governance policies.
 - Monitor and review governance.
 
-To learn more, see [Build a cloud governance team](../../govern/build-cloud-governance-team.md) in the Govern methodology.
+To learn more, see [Build a cloud governance team](../../govern/build-cloud-governance-team.md) in the CAF Govern methodology.
 
 ## Central IT functions
 
-## Cloud operations functions
+> TBD.
+
+## Cloud operations functions (CloudOps)
+
+An operations team manages day-to-day operations in the cloud, ensuring reliability and performance. The operations team also focuses on monitoring, repairing, and remediation of issues related to traditional IT operations and assets.
+
+It's common for the cloud operations team to get involved with determining workload criticality, impact of disruptions, or performance degradations. Similarly, they also establish business-approved cost and performance commitments.
+
+**Roles:**
+
+The skills needed to provide cloud operations functions can typically be provided by:
+
+- IT operations
+- Cloud infrastructure specialists
+- Cloud service providers
+- Cloud-managed service providers
+- Application-specific operations teams
+- Business applications operations teams
+- DevOps teams
+
+**Responsibilities:**
+
+The cloud operations team is responsible for ensuring that the cloud environment is operational, secure, and compliant. The cloud operations team also gets involved in delivering maximum workload performance and minimum business interruptions with an agreed-upon operations budget.
+
+Ideally, the cloud operations team delivers on the following tasks.
+
+- Monitor and manage cloud resources.
+- Handle incidents and troubleshoot performance issues.
+- Manage cloud resources and services.
+- Proactively configure changes to minimize operational disruptions.
+- Oversee backup, recovery, and disaster recovery processes.
+- Manage [Service Level Objectives (SLOs)](/azure/well-architected/reliability/metrics#set-availability-objectives), Service Level Agreements (SLAs), and operational KPIs.
+- Collaborate with DevOps teams for CI/CD pipeline integration.
 
 ## Cloud Center of Excellence (CCoE) functions
 
@@ -106,13 +138,13 @@ A cloud center of excellence (CCoE) is a function that helps organizations balan
 
 Without a CCoE, organizations often struggle to balance the need for speed and agility with the need for stability and governance. The CCoE helps organizations achieve this balance by providing a centralized function that can help teams across the organization adopt cloud technologies in a consistent and secure manner.
 
-The following image is an analogy of this change. Without a CCoE, IT tends to focus on providing control and central responsibility, acting like the stoplights at an intersection. With a successful CCoE, ITs role resembles a roundabout at an intersection where the focus is on freedom and delegated responsibility.
+The following image is an analogy of this change. Without a CCoE, IT tends to focus on providing control and central responsibility, acting like the stoplights at an intersection. With a successful CCoE, IT's role resembles a roundabout at an intersection where the focus is on freedom and delegated responsibility.
 
 ![Conceptual art showing the difference between traditional IT and a Center of Excellence](../media/ccoe-paradigm-shift.png)
 
 Both approaches are valid; they offer alternative ways to responsibility and management. A CCoE model can fit within the technology strategy if you want to establish a self-service model that allows business units to make their own decisions while adhering to a set of guidelines and established, repeatable processes.
 
-### Roles
+**Roles:**
 
 Typically, the following roles provide CCoE functions:
 
@@ -123,7 +155,7 @@ Typically, the following roles provide CCoE functions:
 - Operations executives
 - Business product owners
 
-### Responsibilities
+**Responsibilities:**
 
 Ideally, the CCoE delivers on the following tasks.
 
@@ -169,7 +201,7 @@ The cloud platform manages the technical platform and ensures operational readin
 
 - _In larger organizations and enterprises_, these roles are typically distinct with clear boundaries and rules for collaboration. For example, a cloud architect might design the platform, while a cloud operations engineer might manage the day-to-day operations.
 
-### Roles
+**Roles:**
 
 The cloud platform function typically includes roles responsible for designing, building, and maintaining the organization's cloud platform. These roles ensure the platform is scalable, secure, and meets the needs of various teams, including developers, operations, and business stakeholders. Here are roles commonly found within the cloud platform function:
 
@@ -184,7 +216,7 @@ The cloud platform function typically includes roles responsible for designing, 
 - Platform support engineers
 - Cloud data engineers
 
-### Responsibilities
+**Responsibilities:**
 
 Ideally, the cloud platform function delivers on the following tasks.
 
@@ -200,9 +232,9 @@ Ideally, the cloud platform function delivers on the following tasks.
 
 ## Cloud security functions
 
-### Roles
+**Roles:**
 
-### Responsibilities
+**Responsibilities:**
 
 ## Next steps
 
