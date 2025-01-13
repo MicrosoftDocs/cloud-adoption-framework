@@ -249,4 +249,4 @@ The following recommendations are for various compliance and governance scenario
 - [SAP on Azure: designing for efficiency and operations](https://azure.microsoft.com/blog/sap-on-azure-designing-for-efficiency-operations/)
 - [Azure Virtual Machines planning and implementation for SAP NetWeaver](/azure/virtual-machines/workloads/sap/planning-guide)
 - [Configure Microsoft Defender for Endpoint on Windows Server with SAP](/defender-endpoint/mde-sap-windows-server)
-- [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](defender-endpoint/mde-linux-deployment-on-sapand)
+- [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](/defender-endpoint/mde-linux-deployment-on-sap)
