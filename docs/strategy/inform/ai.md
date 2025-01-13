@@ -4,7 +4,7 @@ description: Learn about considerations for integrating AI into your cloud adopt
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 01/13/2025
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -25,11 +25,7 @@ Consider the importance of mapping AI to your business objectives. There are man
 - *Innovation*. Unlock new products, services, and business models.
 - *More value from data*. Extract new value from your existing data.
 
-<!--
-> Tobias note: Potentially ensure that this list maps directly to the motivations+objectives+KR table, putting those examples to use.
---> 
-
-**Recommendations**
+**Recommendations:**
 
 - *Evaluate AI for your business objectives*: Document where you can use generative and nongenerative AI capabilities to enhance the efficiency and outcomes of your desired business objectives.
 
@@ -67,7 +63,7 @@ Incorporating responsible AI helps to mitigate the following risks:
 
 Incorporate responsible AI principles throughout your AI adoption journey, from strategy and planning to implementation. Ensure that you apply these principles when you secure, manage, and govern your AI initiatives.
 
-**Recommendations for your strategy:**
+**Recommendations:**
 
 Follow these recommendations to inform your cloud adoption strategy of AI considerations.
 

@@ -4,7 +4,7 @@ description: Learn how to incorporate sustainability into your cloud strategy. U
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/17/2024
+ms.date: 01/13/2025
 ---
 
 # Sustainability considerations in your cloud strategy
@@ -12,6 +12,7 @@ ms.date: 12/17/2024
 Sustainability is an increasingly important performance indicator for organizations. As sustainability becomes a crucial part of organizations' operations across industries, it adds pressure from new types of stakeholders, challenges existing profit pools, and creates opportunities to open new profit pools. Organizations must respond effectively with new types of solutions and technology-enabled approaches.
 
 This transformation is good for business. Research from multiple sources indicates that sustainability front-runners:
+
 - Have a lower cost of capital.
 - Deliver superior equity market returns.
 - Can access new markets more easily by creating new types of products and services.
@@ -33,6 +34,13 @@ A sustainable business model helps you build a good reputation. It can also buil
 
 Sustainability is crucial to help ensure long-term success as a player in a dynamic business space. Moving your organization toward a green business model can attract talented employees who have an active interest in sustainability.
 
+**Recommendations:**
+
+Consider these recommendations to incorporate sustainability in favor of your corporate brand.
+
+- **Make sustainability a part of your mission statement.** Consider adding sustainability and environmental responsibility to your mission statement. Align brand values with your business's activities and practices.
+- **Share sustainability reports.** Make your sustainability commitments and the progress you make toward them transparent by publicly sharing annual sustainability reports. For more information, see the [2024 environmental sustainability report](https://www.microsoft.com/corporate-responsibility/sustainability/report) from Microsoft.
+
 ## Incorporate sustainability into your cloud strategy
 
 Consider some of the benefits of using the cloud in combination with and to drive your sustainability efforts:
@@ -46,19 +54,19 @@ Consider some of the benefits of using the cloud in combination with and to driv
 - Improve brand trust by driving sustainability and green IT practices.
 - Achieve sustainable outcomes by combining financial efficiency and cost optimization. Cost optimization often represents a greater sustainability posture.
 
-### Recommendations for making your cloud strategy more sustainable
+**Recommendations:**
+
+Consider these recommendations to make your cloud strategy more sustainable.
 
 - **Build green teams.** Establish goals and metrics for teams that own sustainability in your organization. Metrics can include greenhouse gas emissions, carbon footprint data, water use, and energy consumption. Consider gamification that motivates teams to find the most sustainable solutions.
-- **Make sustainability a part of your mission statement.** Consider adding sustainability and environmental responsibility to your mission statement. Align brand values with your business's activities and practices.
 - **Understand your emissions by scope.** Evaluate your end-to-end supply chain to ensure that you account for [Scope 3 emissions](/industry/sustainability/calculate-scope3). Read [Greenhouse gas emissions](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) to help you understand what factors contribute to your organization's emissions.
-- **Share sustainability reports.** Make your sustainability commitments and the progress you make toward them transparent by publicly sharing annual sustainability reports. For more information, see the [2024 environmental sustainability report](https://www.microsoft.com/corporate-responsibility/sustainability/report) from Microsoft.
 - **Track and control carbon emissions.** Use the [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) to track carbon emissions. The dashboard can help you gather information about your organization's emissions that justifies a datacenter migration to the cloud.
 - **Educate your workload teams.** Use the Azure Well-Architected Framework [sustainable workload guidance](/azure/architecture/framework/sustainability/) to help teams understand the best practices for enhancing workloads while reducing the environmental footprint.
 - **Consider gamification.** Introduce gamification and create friendly competition between teams that motivates them to find the most sustainable solutions. Track records like the Software Carbon Intensity specification to promote green initiatives and workloads.
 
-### Azure-specific recommendations <!-- or Azure facilitation-->
+### Azure-specific recommendations
 
-<!--TBD Tobias note: Potentially convert this to a table and add before recommendations?-->
+Consider these Azure-specific recommendations to help you drive sustainability efforts.
 
 - **Microsoft Cloud for Sustainability:** Accelerate progress toward sustainability and business growth by bringing together environmental, social, and governance capabilities. These capabilities are available across the Microsoft cloud portfolio and with solutions from global partners. For more information, see [What is Microsoft Cloud for Sustainability?](/industry/sustainability/overview).
 - **Microsoft Sustainability Manager:** Use the data intelligence and comprehensive, integrated, and automated sustainability management capabilities that [Microsoft Sustainability Manager](/industry/sustainability/sustainability-manager-overview) provides.
