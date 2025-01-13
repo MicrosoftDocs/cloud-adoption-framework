@@ -44,7 +44,7 @@ This article provides guidance on capacity planning for Oracle Database@Azure us
 ## Capacity consideration for Exadata VM Cluster
 
 - A maximum of eight (8) VM clusters can be created in the same Exadata Infrastructure.
-- Each VM in the Exadata VM Cluster has a minimum of two Oracle CPU (OCPU) and 30 GB of memory allocation. Both can be adjusted independently during initial VM cluster setup or afterward according to the workload requirement.
+- Each VM in the Exadata VM Cluster has a minimum of two Oracle CPU (OCPU) or eight Elastic CPU(ECPU) and 30 GB of memory allocation. Both can be adjusted independently during initial VM cluster setup or afterward according to the workload requirement.
 - When provisioning a VM Cluster, you can choose to start with either a single-node or a multi-node VM cluster. By default, a multi-node VM cluster is selected during the creation process.
 - Single node cluster can't be used for high-availability (HA) configurations. We recommend a minimum of 2 VMs per Exadata VM Cluster to provide high availability.
 - The VM cluster can be scaled up or down based on the workload requirements.
