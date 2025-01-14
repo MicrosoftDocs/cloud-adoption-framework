@@ -31,7 +31,7 @@ The following list provides examples of naming components that are useful when y
 | **Organization** | Top-level name of the organization, normally utilized as the top management group or, in smaller organizations, part of the naming convention. Example: `contoso` |
 | **Business unit or department** | Top-level division of your company that owns the subscription or the workload that the resource belongs to. In smaller organizations, this component might represent a single corporate, top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
 | **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
-| **Project, application, or service name** | Name of a project, application, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
+| **Workload, application, or project** | Name of a project, application, or workload that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
 | **Region** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
 | **Instance** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. Examples, `01`, `001` |
@@ -106,51 +106,51 @@ The following examples are intended to provide visualization of a naming convent
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Virtual machine** | Resource group | *vm-\<workload/application>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` <li> `vm-sharepoint-dev-001` |
-| **Web app** | Global | *app-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `app-navigator-prod-001.azurewebsites.net` <li> `app-accountlookup-dev-001.azurewebsites.net` |
-| **Function app** | Global | *func-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `func-navigator-prod-001.azurewebsites.net` <li> `func-accountlookup-dev-001.azurewebsites.net` |
+| **Virtual machine** | Resource group | *vm-\<Workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` <li> `vm-sharepoint-dev-001` |
+| **Web app** | Global | *app-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `app-navigator-prod-001.azurewebsites.net` <li> `app-accountlookup-dev-001.azurewebsites.net` |
+| **Function app** | Global | *func-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `func-navigator-prod-001.azurewebsites.net` <li> `func-accountlookup-dev-001.azurewebsites.net` |
 
 ### Example names: Databases
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Azure SQL database** | Azure SQL Server | *sqldb-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `sqldb-users-prod` <li> `sqldb-users-dev` |
-| **Azure Cosmos DB database** | Global | *cosmos-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `cosmos-navigator-prod` <li> `cosmos-emissions-dev` |
-| **Azure Cache for Redis instance** | Global | *redis-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `redis-navigator-prod` <li> `redis-emissions-dev` |
+| **Azure SQL database** | Azure SQL Server | *sqldb-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `sqldb-users-prod` <li> `sqldb-users-dev` |
+| **Azure Cosmos DB database** | Global | *cosmos-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `cosmos-navigator-prod` <li> `cosmos-emissions-dev` |
+| **Azure Cache for Redis instance** | Global | *redis-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `redis-navigator-prod` <li> `redis-emissions-dev` |
   
 ### Example names: Storage
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Storage account (general use)** | Global | *st\<project,&nbsp;app&nbsp;or&nbsp;service>\<###>* <br><br> <li> `stnavigatordata001` <li> `stemissionsoutput001` |
-| **Azure StorSimple** | Global | *ssimp\<project,&nbsp;app&nbsp;or&nbsp;service>\<environment>* <br><br> <li> `ssimpnavigatorprod` <li> `ssimpemissionsdev` |
-| **Azure Container Registry** | Global | *cr\<project,&nbsp;app&nbsp;or&nbsp;service>\<environment>\<###>* <br><br> <li> `crnavigatorprod001` |
+| **Storage account (general use)** | Global | *st\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<###>* <br><br> <li> `stnavigatordata001` <li> `stemissionsoutput001` |
+| **Azure StorSimple** | Global | *ssimp\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<environment>* <br><br> <li> `ssimpnavigatorprod` <li> `ssimpemissionsdev` |
+| **Azure Container Registry** | Global | *cr\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<environment>\<###>* <br><br> <li> `crnavigatorprod001` |
 
 ### Example names: AI and machine learning
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Azure AI Search** | Global | *srch-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `srch-navigator-prod` <li> `srch-emissions-dev` |
-| **Azure OpenAI Service** | Resource group | *oai-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `oai-navigator-prod` <li> `oai-emissions-dev` |
-| **Azure Machine Learning workspace** | Resource group | *mlw-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `mlw-navigator-prod` <li> `mlw-emissions-dev` |
+| **Azure AI Search** | Global | *srch-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `srch-navigator-prod` <li> `srch-emissions-dev` |
+| **Azure OpenAI Service** | Resource group | *oai-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `oai-navigator-prod` <li> `oai-emissions-dev` |
+| **Azure Machine Learning workspace** | Resource group | *mlw-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `mlw-navigator-prod` <li> `mlw-emissions-dev` |
 
 ### Example names: Analytics and IoT
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
 | **Azure Analysis Services** | Global | *as\<app name>\<environment>* <br><br> <li> `asnavigatorprod` <li> `asemissionsdev` |
-| **Azure Data Factory** | Global | *adf-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
-| **Azure Synapse Analytics workspaces** | Resource group | *synw-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `synw-navigator-prod` <li> `synw-emissions-dev` |
-| **Data Lake Storage account** | Global | *dls\<project,&nbsp;app&nbsp;or&nbsp;service>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |
-| **IoT hub** | Global | *iot-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `iot-navigator-prod` <li> `iot-emissions-dev` |
+| **Azure Data Factory** | Global | *adf-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
+| **Azure Synapse Analytics workspaces** | Resource group | *synw-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `synw-navigator-prod` <li> `synw-emissions-dev` |
+| **Data Lake Storage account** | Global | *dls\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |
+| **IoT hub** | Global | *iot-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `iot-navigator-prod` <li> `iot-emissions-dev` |
 
 ### Example names: Integration
 
 | Asset type | Scope | Format and Examples|
 |--|--|--|
-| **Service Bus namespace** | Global | *sbns-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>.servicebus.windows.net* <br><br> <li> `sbns-navigator-prod.servicebus.windows.net` <li> `sbns-emissions-dev.servicebus.windows.net` |
-| **Service Bus queue** | Service Bus | *sbq-\<project,&nbsp;app&nbsp;or&nbsp;service>* <br><br> <li> `sbq-navigator` |
-| **Service Bus topic** | Service Bus | *sbt-\<project,&nbsp;app&nbsp;or&nbsp;service>* <br><br> <li> `sbt-navigator` |
+| **Service Bus namespace** | Global | *sbns-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>.servicebus.windows.net* <br><br> <li> `sbns-navigator-prod.servicebus.windows.net` <li> `sbns-emissions-dev.servicebus.windows.net` |
+| **Service Bus queue** | Service Bus | *sbq-\<workload,&nbsp;application,&nbsp;or&nbsp;project>* <br><br> <li> `sbq-navigator` |
+| **Service Bus topic** | Service Bus | *sbt-\<workload,&nbsp;application,&nbsp;or&nbsp;project>* <br><br> <li> `sbt-navigator` |
 
 ## Relevant resources
 
