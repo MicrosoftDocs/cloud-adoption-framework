@@ -67,6 +67,13 @@ When you construct your naming convention, identify the key pieces of informatio
 
 You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits.
 
+**Relevant resources:**
+
+- [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
+- [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
+- [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names)
+- [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool)
+
 <!-- docutune:ignored "(?-i)[a-z]+(?=[\\-])" -->
 
 ## Example names
@@ -150,13 +157,6 @@ The following examples are intended to provide visualization of a naming convent
 | **Service Bus namespace** | Global | *sbns-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>.servicebus.windows.net* <br><br> <li> `sbns-navigator-prod.servicebus.windows.net` <li> `sbns-emissions-dev.servicebus.windows.net` |
 | **Service Bus queue** | Service Bus | *sbq-\<workload,&nbsp;application,&nbsp;or&nbsp;project>* <br><br> <li> `sbq-navigator` |
 | **Service Bus topic** | Service Bus | *sbt-\<workload,&nbsp;application,&nbsp;or&nbsp;project>* <br><br> <li> `sbt-navigator` |
-
-## Relevant resources
-
-- [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
-- [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
-- [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names)
-- [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool)
 
 ## Next step
 
