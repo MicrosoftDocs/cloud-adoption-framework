@@ -28,7 +28,7 @@ The following list provides examples of naming components that are useful when y
 
 | Naming component | Description |
 |--|--|
-| **Organization** | Top-level name of the organization, normally utilized as the top management group or, in smaller organizations, part of the naming convention. Example: `contoso`
+| **Organization** | Top-level name of the organization, normally utilized as the top management group or, in smaller organizations, part of the naming convention. Example: `contoso` |
 | **Business unit or department** | Top-level division of your company that owns the subscription or the workload that the resource belongs to. In smaller organizations, this component might represent a single corporate, top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
 | **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
 | **Project, application, or service name** | Name of a project, application, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
