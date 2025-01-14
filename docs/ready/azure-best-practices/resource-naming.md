@@ -5,7 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 01/14/2025
 ms.topic: conceptual
-ms.custom: internal, readiness, fasttrack-edit
 ---
 
 # Define your naming convention
@@ -14,17 +13,7 @@ A good name for a resource helps you to quickly identify its type, its associate
 
 ![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
-*Diagram 1: Components of an Azure resource name.*
-
-Breakdown of the components in the example:
-
-| Component | Description |
-|--|--|
-| pip | The resource type, as per [abbreviations for resource types](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations). |
-| sharepoint | The application or service name. |
-| prod | The operating environment this resource is deployed in. |
-| westus | The Azure region where the resource is deployed. |
-| 001 | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. |
+*Diagram 1: Examples of components in an Azure resource name.*
 
 > [!NOTE]
 > Consider that not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you are working with.
@@ -44,7 +33,7 @@ The following list provides examples of naming components that are useful when y
 | **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
 | **Project, application, or service name** | Name of a project, application, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
-| **Location** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
+| **Region** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
 | **VM role** | Identifier of the purpose of the VM. Examples: `db` (database), `ws` (web server), `ps` (print server) |
 | **Instance** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. Examples, `01`, `001` |
 
@@ -57,7 +46,7 @@ In addition to defining the naming components, you must also consider the order 
 
 ### Scope
 
-All Azure resource types have a scope that defines the level of that resource. Also, A resource must have a unique name within its scope.
+All Azure resource types have a scope that defines the level of that resource. Also, a resource must have a unique name within its scope.
 
 For example, a virtual network has the scope of a resource group, which means that there can be only one network named `vnet-prod-westus-001` in a specific resource group. Other resource groups can also have virtual networks named `vnet-prod-westus-001`, but each resource group can have only one with that name. Subnets are scoped to virtual networks, so each subnet within a virtual network must have a distinct name.
 
@@ -80,28 +69,16 @@ When you construct your naming convention, identify the key pieces of informatio
 
 You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits. For example, a VM name in Azure can be longer than the OS naming restrictions. Keeping Azure VM names shorter than the naming restrictions of the OS helps create consistency, improve communication when discussing resources, and reduce confusion when you're working in the Azure portal while being signed in to the VM itself.
 
-| Naming component | Description |
-|--|--|
-| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often used as a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). <br/> Examples: `rg`, `vm` |
-| **Business unit** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. <br/> Examples: `fin`, `mktg`, `product`, `it`, `corp` |
-| **Application or service name** | Name of the application, workload, or service that the resource is a part of. <br/> Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
-| **Subscription purpose** | Summary description of the purpose of the subscription that contains the resource. Often broken down by environment or specific workloads. <br/> Examples: `prod`, `shared`, `client` |
-| **Environment** | The stage of the development lifecycle for the workload that the resource supports. <br/> Examples: `prod`, `dev`, `qa`, `stage`, `test` |
-| **Region** | The Azure region where the resource is deployed. <br/> Examples: `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
-
-> [!NOTE]
-> When you're ready to name your resources and assets, review [Recommended abbreviations for Azure resource types](./resource-abbreviations.md).
-
-The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For more examples, see the [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
-
-> [!NOTE]
-> The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization.  
-
 <!-- docutune:ignored "(?-i)[a-z]+(?=[\\-])" -->
 
 ## Example names
 
 Consider these examples when you define your naming convention. The examples are based on the naming components and considerations that are described in this article.
+
+> [!NOTE]
+> The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization.  
+>
+> For more examples, see the [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
 
 ### Example names: General
 
