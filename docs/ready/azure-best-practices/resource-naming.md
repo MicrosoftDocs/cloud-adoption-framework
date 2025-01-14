@@ -13,7 +13,7 @@ A good name for a resource helps you to quickly identify its type, its associate
 
 ![Diagram that shows the components of an Azure resource name.](./media/naming-convention-example.svg)
 
-*Diagram 1: Examples of components in an Azure resource name.*
+*Diagram 1: Example of components in an Azure resource name.*
 
 > [!NOTE]
 > Consider that not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you are working with.
@@ -31,7 +31,7 @@ The following list provides examples of naming components that are useful when y
 | **Organization** | Top-level name of the organization, normally utilized as the top management group or, in smaller organizations, part of the naming convention. Example: `contoso` |
 | **Business unit or department** | Top-level division of your company that owns the subscription or the workload that the resource belongs to. In smaller organizations, this component might represent a single corporate, top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
 | **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
-| **Workload, application, or project** | Name of a project, application, or workload that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
+| **Workload, application, or project** | Name of a workload, application, or project that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
 | **Region** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
 | **Instance** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. Examples, `01`, `001` |
