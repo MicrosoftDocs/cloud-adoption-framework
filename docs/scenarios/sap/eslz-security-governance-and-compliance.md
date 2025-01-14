@@ -61,7 +61,7 @@ The following screenshot shows the workload protection dashboard in the Azure po
 
 ![Workload protection dashboard](./media/defender-cloud-dashboard.png)
 
-### Enable Microsoft Sentinel and the Sentinel for SAP solution
+### Enable Microsoft Sentinel Solution for SAP
 
 [Microsoft Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
