@@ -35,7 +35,7 @@ Consider the following network design recommendations for Azure Arc–enabled se
 
 ### Define an Azure Arc agent connectivity method
 
-First review your existing infrastructure and security requirements. Then decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go over the internet, through a proxy server, or via [Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you implement Azure Arc over the internet with or without a proxy, you can also use a feature that's currently in public preview called [Azure Arc Gateway](/azure/azure-arc/servers/arc-gateway). This feature helps reduce the overall number of endpoints that the proxy needs to allow access to.
+First review your existing infrastructure and security requirements. Then decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud provider. This connection can go over the internet, through a proxy server, or via [Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. If you implement Azure Arc over the internet with or without a proxy, you can also use a feature that's currently in public preview called [Azure Arc gateway](/azure/azure-arc/servers/arc-gateway). This feature helps reduce the overall number of endpoints that the proxy needs to allow access to.
 
 #### Direct connection
 
@@ -51,13 +51,13 @@ If you use a firewall or a proxy server to restrict outbound connectivity, make 
 
 If you deploy extensions on your Azure Arc–enabled servers, every extension connects to its own endpoint or endpoints, and you must also allow all corresponding URLs in the firewall or proxy. Add these endpoints to ensure granular secured network traffic and to meet the principle of least privilege.
 
-To reduce the total number of URLs that are required in the firewall or proxy, determine whether the Azure Arc Gateway service would be beneficial.
+To reduce the total number of URLs that are required in the firewall or proxy, determine whether the Azure Arc gateway service would be beneficial.
 
-#### Azure Arc Gateway
+#### Azure Arc gateway
 
-[Azure Arc Gateway (public preview)](/azure/azure-arc/servers/arc-gateway) reduces the total number of outbound HTTPS endpoints that your proxy needs for Azure Arc to work. It eliminates the need for most wildcard endpoints and reduces the total number of required endpoints to eight. It can work with some extension endpoints, so you don't need to create more URL exclusions in your proxy.
+[Azure Arc gateway (public preview)](/azure/azure-arc/servers/arc-gateway) reduces the total number of outbound HTTPS endpoints that your proxy needs for Azure Arc to work. It eliminates the need for most wildcard endpoints and reduces the total number of required endpoints to eight. It can work with some extension endpoints, so you don't need to create more URL exclusions in your proxy.
 
-The Azure Arc Gateway service doesn't currently work with Private Link or with Azure ExpressRoute peering because you must access the Azure Arc Gateway service over the internet.
+The Azure Arc gateway service doesn't currently work with Private Link or with Azure ExpressRoute peering because you must access the Azure Arc gateway service over the internet.
 
 #### Private Link
 
