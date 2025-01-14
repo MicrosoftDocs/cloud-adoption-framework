@@ -153,7 +153,14 @@ The following examples are intended to provide visualization of a naming convent
 
 ## Relevant resources
 
-- Azure Naming Tool
-- Naming rules and restrictions for Azure resources
-- Recommended abbreviations for Azure resource types
-- Computer names
+- [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
+- [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
+- [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names)
+- [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool)
+
+## Next step
+
+A good next step is to look at recommended abbreviations for Azure resources. Abbreviations can help you keep resource names within length limits and make them easier to read.
+
+> [!div class="nextstepaction"]
+> [Abbreviations for resource types](./resource-abbreviations.md)
