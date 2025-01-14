@@ -88,7 +88,7 @@ For more information about your hybrid cloud adoption journey, see the following
 - [Connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites)
 - [Network configuration for the Private Link connectivity method](/azure/azure-arc/servers/private-link-security#network-configuration)
 - [Use Private Link to connect servers to Azure Arc](/azure/azure-arc/servers/private-link-security#how-it-works)
-- [Plan an at-scale deployment of Azure Arc–enable servers](/azure/azure-arc/servers/plan-at-scale-deployment)
+- [Plan an at-scale deployment of Azure Arc–enabled servers](/azure/azure-arc/servers/plan-at-scale-deployment)
 - [Private Link setup](/azure/azure-arc/servers/private-link-security#planning-your-private-link-setup)
 - [Troubleshoot Azure connected machine agent connection problems](/azure/azure-arc/servers/troubleshoot-agent-onboard)
 - [Training: Bring Azure innovation to your hybrid environments with Azure Arc](/training/paths/manage-hybrid-infrastructure-with-azure-arc/)
