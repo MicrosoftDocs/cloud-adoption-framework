@@ -34,7 +34,6 @@ The following list provides examples of naming components that are useful when y
 | **Project, application, or service name** | Name of a project, application, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
 | **Region** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
-| **VM role** | Identifier of the purpose of the VM. Examples: `db` (database), `ws` (web server), `ps` (print server) |
 | **Instance** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. Examples, `01`, `001` |
 
 > [!NOTE]
@@ -103,11 +102,11 @@ The following examples are intended to provide visualization of a naming convent
 | **Route table** | Resource group | *rt-\<route&nbsp;table&nbsp;name>* <br><br> <li> `rt-navigator` <li> `rt-sharepoint` |
 | **DNS label** | Global | *\<DNS&nbsp;A&nbsp;record&nbsp;for&nbsp;VM>.\<region>.cloudapp.azure.com* <br><br> <li> `dc1.westus.cloudapp.azure.com` <li> `web1.eastus2.cloudapp.azure.com` |
 
-### Example names: Compute and Web
+### Example names: Compute and web
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Virtual machine** | Resource group | *vm-\<vm&nbsp;role>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` |
+| **Virtual machine** | Resource group | *\<workload/application>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` <li> `vm-sharepoint-dev-001` |
 | **Web app** | Global | *app-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `app-navigator-prod-001.azurewebsites.net` <li> `app-accountlookup-dev-001.azurewebsites.net` |
 | **Function app** | Global | *func-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `func-navigator-prod-001.azurewebsites.net` <li> `func-accountlookup-dev-001.azurewebsites.net` |
 
