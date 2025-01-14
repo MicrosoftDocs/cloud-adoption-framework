@@ -58,21 +58,16 @@ Azure naming rules vary depending on the resource type. When you define a naming
 
 For example, resource names have length limits. We recommend that you keep the length of naming components short to prevent exceeding resource name length limits.
 
-> [!NOTE]
-> Balancing the context of a name with its scope and length limit is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
->
-> If you're working with virtual machines (VM) in Azure, we recommend keeping names consistent even though VM names in Azure can be longer than the allowed NetBIOS name of the VM. For more information and for other restrictions, see [Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
-
 When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types.
 
 You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits.
 
-**Relevant resources:**
+**Recommendations:**
 
-- [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
-- [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
-- [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names)
-- [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool)
+- **Understand naming rules and restrictions**: Balancing the context of a name with its scope and length limit is important when developing your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
+- **Use recommended resource abbreviations**: Abbreviations can help you keep resource names within length limits and make them easier to read. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md).
+- **Consider naming consistency for VMs**: If you're working with VMs in Azure, we recommend keeping names consistent even though VM names in Azure can be longer than the allowed NetBIOS name of the VM. For more information and for other restrictions, see [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
+- **Use the Azure Naming Tool**: The Azure Naming Tool is a tool that helps you generate names for Azure resources based on a naming convention. For more information, see [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
 
 <!-- docutune:ignored "(?-i)[a-z]+(?=[\\-])" -->
 
