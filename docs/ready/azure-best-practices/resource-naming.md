@@ -44,13 +44,27 @@ In addition to defining the naming components, you must also consider the order 
 
 All Azure resource types have a scope that defines the level of that resource. Also, a resource must have a unique name within its scope.
 
-For example, a virtual network has the scope of a resource group, which means that there can be only one network named `vnet-prod-westus-001` in a specific resource group. Other resource groups can also have virtual networks named `vnet-prod-westus-001`, but each resource group can have only one with that name. Subnets are scoped to virtual networks, so each subnet within a virtual network must have a distinct name.
+Scope levels for Azure resource names:
 
-Some resource names have a global scope, such as a name for a Platform as a Service (PaaS) that has a public endpoint or a virtual machine DNS label. A resource in a global scope must have a name that's unique across the entire Azure platform.
+- **Global**: Unique across all of Azure.
+
+  *Example: Name of PaaS resources with public IP endpoints across all of Azure, because that name is the initial default public DNS name.*
+
+- **Resource group**: Unique within the resource group.
+
+  *Example: All virtual networks in a resource group must have a unique name for routing within that resource group.*
+
+- **Resource**: Unique within the parent resource.
+
+  *Example: All subnets within a virtual network must have unique names to avoid segment overlap.*
 
 ![Diagram that shows the scope levels for Azure resource names.](../../_images/ready/resource-naming-scope.png)
 
 *Diagram 2: Scope levels for Azure resource names.*
+
+For example, a virtual network has the scope of a resource group, which means that there can be only one network named `vnet-prod-westus-001` in a specific resource group. Other resource groups can also have virtual networks named `vnet-prod-westus-001`, but each resource group can have only one with that name. Subnets are scoped to virtual networks, so each subnet within a virtual network must have a distinct name.
+
+Some resource names have a global scope, such as a name for a Platform as a Service (PaaS) that has a public endpoint or a virtual machine DNS label. A resource in a global scope must have a name that's unique across the entire Azure platform.
 
 ### Azure naming rules
 
