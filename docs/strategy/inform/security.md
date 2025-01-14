@@ -4,7 +4,7 @@ description: Learn how to design your cloud infrastructure with security in mind
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/13/2024
+ms.date: 01/13/2025
 ---
 
 # Security considerations for your cloud strategy
@@ -18,6 +18,12 @@ Potential changes to your organization might introduce stress and conflict. For 
 **Evolve your mindset.** On-premises security is typically a narrowly focused practice that a small team of engineers and operations administrators might handle. Cloud security requires participation from across the organization, and the scope of security teams expands significantly. An on-premises environment's attack surface is primarily at the perimeter. In a cloud environment, every resource is a potential attack vector, so security teams need to adapt their approach accordingly.
 
 **Adjust teams and roles.** Cloud security, especially for large organizations, involves specialized roles. To ensure that you don't have gaps in your security management, you might need to add new teams or reorganize existing teams.
+
+**Recommendations:**
+
+- **Introduce security conversations early.** Start security conversations with the right stakeholders early in your cloud adoption process. This approach helps ensure that you can prepare for organizational alignment early on.
+- **Understand modern security teams, roles, and functions.** Review the Cloud Adoption Framework guidance about [security teams, roles, and functions](../../secure/teams-roles.md). This guidance describes how to implement end-to-end security.
+- **Embrace the Cloud Adoption Framework Secure methodology.** Use the [Cloud Adoption Framework Secure methodology](../../secure/overview.md) to apply Microsoft security best practices at each stage of your cloud adoption journey. The guidance for each phase includes several security approaches, including security posture modernization, incident preparation and response, security sustainment, and the Confidentiality, Integrity, and Availability (CIA) Triad.
 
 ## Understand the Microsoft Secure Future Initiative
 
@@ -43,19 +49,18 @@ Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview
 - Explains how [Azure](/security/zero-trust/azure-infrastructure-overview), [Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust), and [AI services](/security/zero-trust/copilots/apply-zero-trust-copilots-overview) can help you align your cloud estate to the Zero Trust principles.
 - Provides guidance about aligning your [development practices](/security/zero-trust/develop/overview) to the Zero Trust principles.
 
+**Recommendations:**
+
+- **Adopt Zero Trust.** Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview) to implement Zero Trust principles, which help drive a security-first mindset.
+
 ## Use the CISO and MCRA workshops
 
 Microsoft offers workshops to help decision makers and architects apply best practices to their cloud adoption. The Chief Information Security Officer (CISO) workshop focuses on a thorough approach to modernize cybersecurity practices from the perspective of the CISO and other senior leadership roles.
 
 The Microsoft Cybersecurity Reference Architecture (MCRA) workshop focuses on how to apply architectural best practices to your cloud environment designs. The Zero Trust principles create the foundation for the guidance in the CISO and MCRA workshops. The workshops also align to Microsoft best practices across the Cloud Adoption Framework, Azure Well-Architected Framework, and Zero Trust security recommendations.
 
-Consider the following recommendations:
+**Recommendations:**
 
-- **Introduce security conversations early.** Start security conversations with the right stakeholders early in your cloud adoption process. This approach helps ensure that you can prepare for organizational alignment early on.
-
-- **Understand modern security teams, roles, and functions.** Review the Cloud Adoption Framework guidance about [security teams, roles, and functions](../../secure/teams-roles.md). This guidance describes how to implement end-to-end security.
-- **Embrace the Cloud Adoption Framework Secure methodology.** Use the [Cloud Adoption Framework Secure methodology](../../secure/overview.md) to apply Microsoft security best practices at each stage of your cloud adoption journey. The guidance for each phase includes several security approaches, including security posture modernization, incident preparation and response, security sustainment, and the Confidentiality, Integrity, and Availability (CIA) Triad.
-- **Adopt Zero Trust.** Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview) to implement Zero Trust principles, which help drive a security-first mindset.
 - **Consult with team leaders about the CISO and MCRA workshops.** Consider investing in one or more [Microsoft-led workshops](/security/adoption/adoption#microsoft-led-workshops). Take advantage of the CISO and MCRA workshops in particular. For Microsoft-led workshop material, see [Security adoption resources](/security/adoption/adoption).
 
 ## Next step

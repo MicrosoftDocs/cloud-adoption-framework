@@ -17,7 +17,7 @@ You identified the motivations and business objectives to support your organizat
 
 If you don't have leadership buy-in for your adoption strategies and plans, it can result in several significant risks.
 
-### Recommendations for leadership buy-in
+**Recommendations:**
 
 - _Align leadership with strategic goals_: Help your leadership better understand and justify the investments into adoption projects, ensuring they’re fully aware of the benefits, challenges, and risks.
 
@@ -29,20 +29,20 @@ If you don't have leadership buy-in for your adoption strategies and plans, it c
 
 If you already have existing organizational strategies, the alignment between your business, digital, IT, and adoption strategies is crucial for a successful cloud adoption initiative, whether you've already got a footprint in the cloud or not.
 
-The _business strategy_ typically defines the organization's high-level mission and goals, market positioning, and competitive approach. This typically aims to drive revenue growth, customer satisfaction, and cost efficiency.  
+The **business strategy** typically defines the organization's high-level mission and goals, market positioning, and competitive approach. This typically aims to drive revenue growth, customer satisfaction, and cost efficiency.  
 
-The _digital strategy_ typically defines how technology transforms your business processes, customer interactions and offerings to enable digital growth and innovation.
+The **digital strategy** typically defines how technology transforms your business processes, customer interactions and offerings to enable digital growth and innovation.
 
-The _IT strategy_ typically defines how technology infrastructure and resources support your business goals, focusing on operational efficiency, security, and modernization.
+The **IT strategy** typically defines how technology infrastructure and resources support your business goals, focusing on operational efficiency, security, and modernization.
 
-If your organization has these strategies in place already, ensure the adoption strategy supports the goals of existing organizational strategies and missions. Even if some of these strategies aren't in place, having a conversation with key business or IT stakeholders regarding the ambitions or objectives in these areas is important to drive strategy alignment.  This alignment can help to:
+If your organization has these strategies in place already, ensure the adoption strategy supports the goals of existing organizational strategies and missions. Even if some of these strategies aren't in place, having a conversation with key business or IT stakeholders regarding the ambitions or objectives in these areas is important to drive strategy alignment. This alignment can help to:
 
 - Complement your technology roadmap and infrastructure modernization initiatives.
 - Allow IT to better support both business and digital goals more effectively.
 - Support the goals and objectives, such as agility, growth, cost efficiency, and customer experience and satisfaction.
 - Help accelerate your initiatives like data-driven insights, product innovation, or digital customer experiences.
 
-### Recommendations for aligning organizational strategies
+**Recommendations:**
 
 - _Regularly review strategy alignment_: Ensure you regularly check-in with business, digital, and IT-leaders to keep your cloud initiatives aligned with evolving goals.
 
@@ -57,14 +57,12 @@ An organization's operating model is essentially how an organization structures 
 Understanding your organization’s current operating model plays a crucial role in developing your cloud adoption strategy:
 
 - _Organizational capabilities and processes_: Organizations with traditional support, technical change, security, finance, and architecture capabilities might have significant difficulty in keeping up with the continuous change and scale brought on by cloud services. The adoption strategy in this case needs to factor in the evolution of these capabilities to effectively support and enable cloud.
-
 - _Organizational culture_: Highly regulated or risk adverse organizations might have a dominant command and control and noncollaborative culture. Cloud might introduce much resistance to change in the ways of working. The cloud adoption strategy needs to factor in how address the organization's culture needs to enable the benefits of cloud.
-
 - _Roles and skills_: Organizations that are primarily on-premises might lack expertise in cloud architecture, DevOps, and cloud-native security practices. The cloud adoption strategy need to factor in the training and skilling plan to address the adequate adoption and enablement of cloud services.
 
 It's important that leadership identify and acknowledge their current limitations across their existing operating model for the cloud adoption strategy to provide suitable attention and resourcing for the plan the cloud journey.
 
-### Recommendations for understanding your operating model's readiness for cloud
+**Recommendations:**
 
 - _Understand the current operating model_: Evaluate the organization's current capabilities and structures either through a workshop with leadership or through a third party and benchmark your organization's current operating models' readiness for cloud.
 
@@ -106,7 +104,7 @@ This shift is a fundamental change in how business' structure, develop, and mana
 
 The project-to-product delivery model shift directly informs the cloud adoption strategy by redefining how the organization plans, executes, and maintains its cloud initiatives. It ensures the principles of continuous improvement, customer-centricity, and collaboration are embedded. This ensures that cloud investments provide lasting, strategic value rather than short-term, one-off results.
 
-### Recommendations for shifting from a project to product delivery model
+**Recommendations:**
 
 Follow these recommendations to start shifting from a project to a product delivery model.
 

@@ -4,7 +4,7 @@ description: Learn how to optimize costs that are associated with cloud services
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/17/2024
+ms.date: 01/13/2025
 ---
 
 # Financial efficiency considerations for your cloud adoption strategy
@@ -29,6 +29,14 @@ Also consider the following factors when you shift to an OpEx model:
 
 You can use an OpEx model to allocate charges or provide real-time application costs to business departments. Also consider changes to the commercial relationship between IT and application owners. Determine whether you want to fund the cost to run applications centrally or through a chargeback or showback mechanism.
 
+**Recommendations:**
+
+Consider the following recommendations when shifting from a CapEx model to an OpEx model:
+
+- **Inform others about CapEx to OpEx:** Educate your business teams and leadership about the shift from a traditional CapEx cost structure to a more flexible OpEx pricing model. Discuss how the new model improves agility and efficiency. For more information, see [The shift from the CapEx to OpEx model](/training/modules/get-started-with-finops/1-introduction).
+- **Implement budget management:** Establish budgets for the top-spending platform services on the cloud to control cloud costs in the initial stages of cloud adoption. This approach helps platform teams and budget managers detect unanticipated changes.
+- **Maximize your return on investment:** Understand the cost-to-benefit ratio, and ensure that the cloud services you plan to use directly contribute to business objectives. Explore the [Azure total cost of ownership calculator](https://azure.microsoft.com/pricing/tco/calculator/), [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/), and [Microsoft Cost Management](https://azure.microsoft.com/products/cost-management).
+
 ## Establish best practices with financial operations (FinOps)
 
 To implement financial efficiency in cloud adoption, you must effectively manage and optimize cloud investments to ensure that they deliver maximum business value. During this process, you must:
@@ -43,14 +51,10 @@ Embrace financial operations to cultivate a culture of financial responsibility 
 
 Implement financial operations to find the right balance between innovation and cost effectiveness. A proper balance helps you make your cloud adoption a strategic advantage rather than a financial burden.
 
-### Recommendations
+**Recommendations:**
 
 Consider the following financial efficiency considerations for your cloud adoption strategy.
 
-- **Inform others about CapEx to OpEx:** Educate your business teams and leadership about the shift from a traditional CapEx cost structure to a more flexible OpEx pricing model. Discuss how the new model improves agility and efficiency. For more information, see [The shift from the CapEx to OpEx model](/training/modules/get-started-with-finops/1-introduction).
-
-- **Implement budget management:** Establish budgets for the top-spending platform services on the cloud to control cloud costs in the initial stages of cloud adoption. This approach helps platform teams and budget managers detect unanticipated changes.
-- **Maximize your return on investment:** Understand the cost-to-benefit ratio, and ensure that the cloud services you plan to use directly contribute to business objectives. Explore the [Azure total cost of ownership calculator](https://azure.microsoft.com/pricing/tco/calculator/), [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/), and [Microsoft Cost Management](https://azure.microsoft.com/products/cost-management).
 - **Explore the FinOps Framework:** Check out the [FinOps Framework](/cloud-computing/finops/) for best practices to maximize cloud business value.
 - **Assess your financial posture:** Use the [FinOps Review assessment](/assessments/ad1c0f6b-396b-44a4-924b-7a4c778a13d3/) to get recommendations for maximizing cloud business value.
 

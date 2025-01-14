@@ -4,7 +4,7 @@ description: Learn about the importance of resiliency and how to plan for the un
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 01/13/2025
 ---
 
 # Resiliency considerations for your cloud strategy
@@ -58,7 +58,7 @@ Here are a few examples of the importance of resiliency in a cloud adoption stra
 | *Compliance failures* | Breaches of regulatory standards. | Adopt compliance tools like Microsoft Purview, and use Azure Policy to enforce compliance requirements. |
 | *Natural disasters* | Datacenter outages caused by earthquakes, floods, or storms. | Plan for failover, high availability, and disaster recovery by using availability zones, multiple regions, or even multicloud approaches. |
 
-**Recommendations**
+## Recommendations
 
 Follow these recommendations to inform your cloud adoption strategy of resiliency considerations.
 
