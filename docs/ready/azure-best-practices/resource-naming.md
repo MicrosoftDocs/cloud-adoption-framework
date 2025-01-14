@@ -120,7 +120,7 @@ The following examples are intended to provide visualization of a naming convent
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Virtual machine** | Resource group | *vm-\<Workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` <li> `vm-sharepoint-dev-001` |
+| **Virtual machine** | Resource group | *vm-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` <li> `vm-sharepoint-dev-001` |
 | **Web app** | Global | *app-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `app-navigator-prod-001.azurewebsites.net` <li> `app-accountlookup-dev-001.azurewebsites.net` |
 | **Function app** | Global | *func-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `func-navigator-prod-001.azurewebsites.net` <li> `func-accountlookup-dev-001.azurewebsites.net` |
 
