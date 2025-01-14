@@ -51,13 +51,13 @@ If you use a firewall or a proxy server to restrict outbound connectivity, make 
 
 If you deploy extensions on your Azure Arc-enabled servers, every extension connects to its own endpoint or endpoints, and you must also allow all corresponding URLs in the firewall or proxy. Add these endpoints to ensure granular secured network traffic and to meet the principle of least privilege.
 
-To reduce the total number of URLs that are required in the firewall or proxy, determine if the Azure Arc Gateway service would be beneficial.
+To reduce the total number of URLs that are required in the firewall or proxy, determine whether the Azure Arc Gateway service would be beneficial.
 
 #### Azure Arc Gateway
 
-The [Azure Arc Gateway (public preview)](/azure/azure-arc/servers/arc-gateway) reduces the total number of outbound HTTPS endpoints that your proxy needs for Azure Arc to work. It eliminates the need for most wildcard endpoints and reduces the total number of required endpoints to eight. It can work with some extension endpoints, so you don't need to create more URL exclusions in your proxy.
+[Azure Arc Gateway (public preview)](/azure/azure-arc/servers/arc-gateway) reduces the total number of outbound HTTPS endpoints that your proxy needs for Azure Arc to work. It eliminates the need for most wildcard endpoints and reduces the total number of required endpoints to eight. It can work with some extension endpoints, so you don't need to create more URL exclusions in your proxy.
 
-The Azure Arc Gateway service doesn't currently work with Private Link or with Expressroute peering because you must access the Azure Arc Gateway service over the internet.
+The Azure Arc Gateway service doesn't currently work with Private Link or with Azure ExpressRoute peering because you must access the Azure Arc Gateway service over the internet.
 
 #### Private Link
 
@@ -68,7 +68,7 @@ To ensure that all traffic from your Azure Arc agents remains on your network, u
 - Your Azure Arc clients can have all private endpoints in a primary region. If they don't, you need to configure DNS so that the same private endpoint names resolve to different IP addresses. For example, you might use [selectively replicated DNS partitions for Windows Server Active Directory-integrated DNS](/troubleshoot/windows-server/networking/create-apply-custom-application-directory-partition). If you use the same private endpoints for all your Azure Arc clients, you must have the ability to route traffic from all your networks to the private endpoints.
 - To use private endpoints for any Azure services that are accessed by extension software components that you deploy via Azure Arc, you must do extra steps. These services include Log Analytics workspaces, Azure Automation accounts, Azure Key Vault, and Azure Storage.
 - Connectivity to Microsoft Entra ID uses public endpoints, so clients require some internet access.
-- If you use Azure ExpressRoute for private connectivity, consider reviewing the resiliency best practices for [circuits](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/), [gateways](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteGateways/), [connections](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/connections/), and [ExpressRoute Direct](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRoutePorts/).
+- If you use ExpressRoute for private connectivity, consider reviewing the resiliency best practices for [circuits](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteCircuits/), [gateways](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRouteGateways/), [connections](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/connections/), and [ExpressRoute Direct](https://azure.github.io/Azure-Proactive-Resiliency-Library-v2/azure-resources/Network/expressRoutePorts/).
 
 Because of these challenges, we recommend that you evaluate if you need Private Link for your Azure Arc implementation. Public endpoints encrypt traffic. Depending on how you use Azure Arc for servers, you might limit traffic to management and metadata traffic. To address security concerns, implement [local agent security controls](/azure/azure-arc/servers/security-overview#local-agent-security-controls).
 
