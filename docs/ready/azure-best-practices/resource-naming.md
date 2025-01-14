@@ -65,9 +65,9 @@ For example, resource names have length limits. We recommend that you keep the l
 > [!NOTE]
 > Balancing the context of a name with its scope and length limit is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
 
-When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types. The following list provides examples of information that are useful when you construct resource names.
+When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types.
 
-You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits. For example, a VM name in Azure can be longer than the OS naming restrictions. Keeping Azure VM names shorter than the naming restrictions of the OS helps create consistency, improve communication when discussing resources, and reduce confusion when you're working in the Azure portal while being signed in to the VM itself.
+You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits.
 
 <!-- docutune:ignored "(?-i)[a-z]+(?=[\\-])" -->
 
@@ -75,10 +75,7 @@ You can abbreviate resource names and naming components as a strategy to reduce 
 
 Consider these examples when you define your naming convention. The examples are based on the naming components and considerations that are described in this article.
 
-> [!NOTE]
-> The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization.  
->
-> For more examples, see the [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
+The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization. For more examples, see the [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
 
 ### Example names: General
 
@@ -155,3 +152,10 @@ Consider these examples when you define your naming convention. The examples are
 | **Service Bus namespace** | Global | *sbns-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>.servicebus.windows.net* <br><br> <li> `sbns-navigator-prod.servicebus.windows.net` <li> `sbns-emissions-dev.servicebus.windows.net` |
 | **Service Bus queue** | Service Bus | *sbq-\<project,&nbsp;app&nbsp;or&nbsp;service>* <br><br> <li> `sbq-navigator` |
 | **Service Bus topic** | Service Bus | *sbt-\<project,&nbsp;app&nbsp;or&nbsp;service>* <br><br> <li> `sbt-navigator` |
+
+## Relevant resources
+
+- Azure Naming Tool
+- Naming rules and restrictions for Azure resources
+- Recommended abbreviations for Azure resource types
+- Computer names
