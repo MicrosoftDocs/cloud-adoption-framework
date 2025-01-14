@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 A good name for a resource helps you to quickly identify its type, its associated workload, its environment, and the Azure region where it runs. To do so, names should follow a consistent format—a *naming convention*—that is composed of important information about each resource. The information in the names ideally includes whatever you need to identify specific instances of resources. For example, a public IP address (PIP) for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
 
-![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
+![Diagram that shows the components of an Azure resource name.](./media/naming-convention-example.svg)
 
 *Diagram 1: Examples of components in an Azure resource name.*
 
@@ -35,9 +35,6 @@ The following list provides examples of naming components that are useful when y
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
 | **Region** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
 | **Instance** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. Examples, `01`, `001` |
-
-> [!NOTE]
-> Although virtual machine (VM) names in Azure can be longer than the allowed NetBIOS name of the VM, we recommend that you keep them consistent. For more information and for other restrictions, see [Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
 
 ## Naming considerations
 
@@ -63,6 +60,8 @@ For example, resource names have length limits. We recommend that you keep the l
 
 > [!NOTE]
 > Balancing the context of a name with its scope and length limit is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
+>
+> If you're working with virtual machines (VM) in Azure, we recommend keeping names consistent even though VM names in Azure can be longer than the allowed NetBIOS name of the VM. For more information and for other restrictions, see [Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
 
 When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types.
 
