@@ -61,7 +61,7 @@ The Azure Arc gateway service doesn't currently work with Private Link or with A
 
 #### Private Link
 
-To ensure that all traffic from your Azure Arc agents remains on your network, use an Azure Arc-enabled server with Azure Arc Private Link Scope. This configuration provides security advantages. The traffic doesn't traverse the internet, and you don't need to open as many outbound exceptions on your datacenter firewall. But Private Link imposes many management challenges and increases the overall complexity and cost, especially for global organizations. Consider the following challenges:
+To ensure that all traffic from your Azure Arc agents remains on your network, use an Azure Arc-enabled server that has Azure Arc Private Link Scope. This configuration provides security advantages. The traffic doesn't traverse the internet, and you don't need to open as many outbound exceptions on your datacenter firewall. But Private Link imposes many management challenges and increases the overall complexity and cost, especially for global organizations. Consider the following challenges:
 
 - Azure Arc Private Link Scope encompasses all Azure Arc clients under the same Domain Name System (DNS) scope. You can't have some Azure Arc clients that use private endpoints and some that use public endpoints when they share a DNS server. But you can implement workarounds like [DNS policies](/windows-server/networking/dns/deploy/dns-policies-overview).
 
