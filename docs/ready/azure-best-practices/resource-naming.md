@@ -68,13 +68,12 @@ Some resource names have a global scope, such as a name for a Platform as a Serv
 
 ### Azure naming rules
 
-Azure naming rules vary depending on the resource type. When you define a naming convention, it's important to understand Azure naming rules for the resource type to avoid confusion and delay deployments.
+Azure naming rules vary depending on the resource type. It's important to understand naming rules for each resource type to avoid confusion and delays.
 
-For example, resource names have length limits. We recommend that you keep the length of naming components short to prevent exceeding resource name length limits.
+For example, resource names for different resource types might have different length limits. We recommend that you keep the length of naming components short or abbreviating names to prevent exceeding resource name length limits.
 
 When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types.
 
-You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits.
 
 **Recommendations:**
 
