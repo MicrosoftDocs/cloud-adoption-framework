@@ -1,25 +1,39 @@
 ---
 title: Define your naming convention
 description: Learn about the considerations for naming your Azure resources and assets, and review example names for resources and assets in Azure.
-author: martinekuan
-ms.author: ssumner
-ms.date: 09/28/2022
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 01/14/2025
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
 # Define your naming convention
 
-A good name for a resource helps you to quickly identify its type, its associated workload, its environment, and the Azure region where it runs. To do so, names should follow a consistent format—a *naming convention*—that is composed of important information about each resource. The information in the names ideally includes whatever you need to identify specific instances of resources. For example, a public IP address (PIP) for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`. 
+A good name for a resource helps you to quickly identify its type, its associated workload, its environment, and the Azure region where it runs. To do so, names should follow a consistent format—a *naming convention*—that is composed of important information about each resource. The information in the names ideally includes whatever you need to identify specific instances of resources. For example, a public IP address (PIP) for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
 
 ![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
 *Diagram 1: Components of an Azure resource name.*
 
+Breakdown of the components in the example:
 
-### Recommended naming components
+| Component | Description |
+|--|--|
+| pip | The resource type, as per [abbreviations for resource types](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations). |
+| sharepoint | The application or service name. |
+| prod | The operating environment this resource is deployed in. |
+| westus | The Azure region where the resource is deployed. |
+| 001 | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. |
 
-When you construct your naming convention, identify the key pieces of information that you want to capture in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. Establish a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource. 
+> [!NOTE]
+> Consider that not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you are working with.
+>
+> To learn more, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
+
+## Recommended naming components
+
+When you construct your naming convention, identify the key pieces of information that you want to capture in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. Establish a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource.
 
 The following list provides examples of naming components that are useful when you construct resource names:
 
@@ -36,9 +50,8 @@ The following list provides examples of naming components that are useful when y
 
 > [!NOTE]
 > Although virtual machine (VM) names in Azure can be longer than the allowed NetBIOS name of the VM, we recommend that you keep them consistent. For more information and for other restrictions, see [Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
-> 
 
-## Naming considerations 
+## Naming considerations
 
 In addition to defining the naming components, you must also consider the order in which the naming components are listed and what type of delimiters (if any) should appear between components. Also take into account the different naming rules that are associated with resources types.
 
@@ -56,7 +69,7 @@ Some resource names have a global scope, such as a name for a Platform as a Serv
 
 ### Azure naming rules
 
-Azure naming rules vary depending on the resource type. When you define a naming convention, it's important to understand Azure naming rules for the resource type to avoid confusion and delay deployments. 
+Azure naming rules vary depending on the resource type. When you define a naming convention, it's important to understand Azure naming rules for the resource type to avoid confusion and delay deployments.
 
 For example, resource names have length limits. We recommend that you keep the length of naming components short to prevent exceeding resource name length limits.
 
@@ -79,23 +92,16 @@ You can abbreviate resource names and naming components as a strategy to reduce 
 > [!NOTE]
 > When you're ready to name your resources and assets, review [Recommended abbreviations for Azure resource types](./resource-abbreviations.md).
 
-The following section provides example names for common Azure resource types in an enterprise cloud deployment.
-
-> [!NOTE]
-> Some of these example names use a three-digit padding scheme (`###`), such as `mktg-prod-001`.
->
-> Padding improves readability and sorting of assets when those assets are managed in a configuration management database (CMDB), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
->
-> Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches that might iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and run time.
->
-> Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than showing which approach is superior. Before choosing a numbering scheme, with or without padding, evaluate what will affect long-term operations more: CMDB and asset management solutions or code-based inventory management. Then, consistently follow the padding option that best fits your operational needs.
-
 The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For more examples, see the [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
 
 > [!NOTE]
 > The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization.  
 
 <!-- docutune:ignored "(?-i)[a-z]+(?=[\\-])" -->
+
+## Example names
+
+Consider these examples when you define your naming convention. The examples are based on the naming components and considerations that are described in this article.
 
 ### Example names: General
 
