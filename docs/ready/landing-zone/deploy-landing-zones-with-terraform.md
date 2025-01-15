@@ -67,10 +67,9 @@ In the case that you have selected the local filesystem option, you can run terr
 
 Depending on the scenario and the configuration, you will have a set of resources deployed.
 
-Governance resources in teh form of management groups and Azure Policy.
+Governance resources in the form of management groups and Azure Policy.
 Centralized logging and monitoring resources to support the platform.
-
-Also connectivity resources with your selected architecture, either a Virtual WAN or a Hub and Spoke Virtual Network topology.
+Finally, connectivity resources with your selected architecture, either a Virtual WAN or a Hub and Spoke Virtual Network topology.
 
 ### Configuration
 
