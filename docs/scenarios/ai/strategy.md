@@ -75,23 +75,23 @@ For organizations needing more control and customization, Microsoft offers infra
 
 ## Define an AI data strategy
 
-For each AI use case, you should define an AI data strategy that outlines data collection, storage, and usage practices aligning with regulatory, ethical, and operational standards. Tailoring the strategy to each specific use case ensures reliable AI outputs and promotes data security and privacy. If needed, you can consolidate these individual strategies into a broader summary data strategy for your organization.
+For each AI use case, you should define an AI data strategy. The data strategy should outline data collection, storage, and usage practices aligning with regulatory, ethical, and operational standards. Tailor the strategy to each use case to ensure reliable AI outputs and promote data security and privacy. If needed, you can consolidate these individual strategies into a broader summary data strategy for your organization.
 
-- *Establish data governance.* Define data governance principles specific to the AI use case to ensure workloads are transparent, accountable, and compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage relevant to the use case.
+- *Establish data governance.* Define data governance principles for each AI use case to ensure workloads are compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage relevant to the use case.
 
-- *Plan the data lifecycle.* Specify how you collect, store, process, and retire data for this particular AI use case. Include retention and disposal policies, and use version control to maintain accuracy during updates.
+- *Plan the data lifecycle.* Specify how you collect, store, process, and retire data for each AI use case. Include retention and disposal policies, and use version control to maintain accuracy during updates.
 
 - *Set up AI fairness and bias controls.* Develop processes to detect and address bias in the data used for this AI use case. Use tools like Fairlearn to ensure models provide fair and equitable outcomes, especially when working with sensitive data attributes.
 
 - *Promote collaboration between AI and data teams.* Align AI development with data engineering efforts to ensure models are built using high-quality, well-managed data. Establish a unified pipeline for AI model training and data updates.
 
-- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for this AI workload. Use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
+- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for this AI workload. Plan to use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
 
 - *Incorporate data management automation.* Plan to use AI and machine learning to automate tasks like tagging, cataloging, and data quality checks. Automation improves accuracy and allows teams to focus on strategic efforts.
 
 - *Plan for continuous monitoring and evaluation.* Establish regular audits of data and model outputs to ensure ongoing data quality, performance, and fairness. Monitor AI models and data pipelines to identify any shifts that might impact reliability or compliance.
 
- For more information, see [example AI strategy](#example-ai-strategy).
+ For an example data strategy aligned to different use cases, see the [example AI strategy](#example-ai-strategy).
 
 ## Define a responsible AI strategy
 
