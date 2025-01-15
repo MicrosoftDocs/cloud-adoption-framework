@@ -3,7 +3,7 @@ title: Adopt responsible and trusted AI principles
 description: Learn about the importance of responsible AI principles when you adopt AI on Azure to ensure an ethical and effective implementation in your organization.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 09/23/2024
+ms.date: 01/15/2025
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
