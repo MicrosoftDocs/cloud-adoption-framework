@@ -3,7 +3,7 @@ title: Automation
 description: Overview of Azure Landing Zone and platform services automation considerations and recommendations.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 06/27/2022
+ms.date: 01/15/2025
 ms.topic: conceptual
 ms.custom: internal
 ---
