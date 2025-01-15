@@ -108,17 +108,9 @@ If an Azure landing zone custom policy initiative is completely updated, and is 
 
 For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/alz/custompolicyupdate).
 
-## Update steps for Terraform module deployments
+## Update steps for Terraform Azure Verified Modules for Platform Landing Zones
 
-If you use the [Azure landing zones Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) to manage your Azure landing zone deployment, this section provides resources for updating Azure landing zone custom policies and initiatives.
-
-### Detect updates with Terraform
-
-Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In the Terraform module, you can also see changes to policies on the [releases](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases) page. For an example, see [policy updates for v2.3.0](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.3.0).
-
-### Update with Terraform
-
-The Azure landing zone Terraform module provides update guidance for deploying breaking changes. Follow the upgrade guidance for your version at [upgrade guides](https://aka.ms/alz/tf/upgrade).
+If you're using [the Terraform module](https://aka.ms/alz/tf/module) please see the [update guide](https://aka.ms/alz/tf/update).
 
 ## Update steps for Bicep module deployments
 
