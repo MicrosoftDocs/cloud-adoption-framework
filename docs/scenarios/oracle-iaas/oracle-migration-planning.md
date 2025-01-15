@@ -39,7 +39,7 @@ Review the migration resources to define your Oracle to Azure migration process.
 > [!NOTE]
 > If you host your workload on Oracle Database@Azure and need a quota increase, consult your Oracle contact.
 
-- **Identify a deployment model:** Automate the deployment of solution components as much as possible by using infrastructure as code (IaaS), continuous integration and continuous delivery pipelines, and other DevOps practices.
+- **Identify a deployment model:** Automate the deployment of solution components as much as possible by using infrastructure as code, continuous integration and continuous delivery pipelines, and other DevOps practices.
 
 - **Determine application dependencies:** Ensure that migration activities are as non-disruptive as possible.
 
