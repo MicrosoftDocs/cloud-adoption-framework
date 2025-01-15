@@ -13,9 +13,10 @@ ms.custom: devx-track-terraform
 Azure provides native services for building your Azure landing zones. Other tools can also help with this effort.
 One tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
-Deployment of resources to application landing zones is outside the scope of the article. Decisions on the deployment method and tooling are for the team that's responsible for the application.
+> [!NOTE]
+> Deployment of resources to application landing zones is outside the scope of the article. Decisions on the deployment method and tooling are for the team that's responsible for the application.
 
-[Azure Verified Modules for Platform Landing Zones (ALZ)][alz_tf_docs] provides a rapid implementation of the platform resources that you need to manage [Azure landing zones][msdocs_alz_architecture] at scale by using Terraform.
+[Terraform Azure Verified Modules for Platform Landing Zones (ALZ)][alz_tf_docs] provides a rapid implementation of the platform resources that you need to manage [Azure landing zones][msdocs_alz_architecture] at scale by using Terraform.
 The solution is designed to simplify the deployment of the management group hierarchy, policies, and resources in the connectivity and management subscriptions.
 
 ## Importance of using Azure Verified Modules
@@ -34,8 +35,8 @@ Deploying the module from the Terraform Registry provides:
 ## The Accelerator
 
 For most customers we recommend using the [accelerator][accelerator_docs].
-The accelerator is an end-to-end automation solution to deploy your Azure Platform Landing Zones.
-The process includes a bootstrap phase, which ensures you start right with our best practices.
+The accelerator is an end-to-end automation solution to deploy your Azure Platform Landing Zones (ALZ).
+The process includes a [bootstrap phase](#bootstrap-phase), which ensures you start right with our best practices.
 
 The following [scenarios][accelerator_scenarios] are supported:
 
