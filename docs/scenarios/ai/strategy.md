@@ -65,7 +65,7 @@ Microsoft provides various platform-as-a-service (PaaS) options for building AI 
 
 ### Bring your own models with infrastructure services (IaaS)
 
-For organizations needing more control and customization, Microsoft offers infrastructure-as-a-service (IaaS) solutions. While Azure AI platforms (PaaS) are preferred for AI workloads, [Azure Virtual Machines through CycleCloud](./infrastructure/cycle-cloud.md) and [Azure Kubernetes Service](/azure/aks/gpu-cluster) provides access to GPUs and CPUs for advanced AI needs. This setup allows you to bring your own models to Azure. Refer to the relevant [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
+For organizations needing more control and customization, Microsoft offers infrastructure-as-a-service (IaaS) solutions. While Azure platforms (PaaS) are preferred for AI workloads, [Azure Virtual Machines through CycleCloud](./infrastructure/cycle-cloud.md) and [Azure Kubernetes Service](/azure/aks/gpu-cluster) provides access to GPUs and CPUs for advanced AI needs. This setup allows you to bring your own models to Azure. Refer to the relevant [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|----|-------------| ---------| ---- |
