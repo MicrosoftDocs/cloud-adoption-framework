@@ -15,15 +15,17 @@ This article outlines the process to prepare your organization for AI adoption. 
 
 ## Identify AI use cases
 
-AI supports two main goals: enhancing individual efficiency and improving business processes. Generative AI fosters productivity and enhances customer experiences, while nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value. For more information, see [example AI use cases](#example-ai-use-cases).
+AI enhances individual efficiency and improves business processes. Generative AI fosters productivity and enhances customer experiences. Nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks.
+
+With this understanding, identify areas across your business where AI could add value. To ensure your AI strategy aligns with business objectives, identify the specific requirements for each potential use case. For more information, see [example AI use cases](#example-ai-use-cases).
 
 - *Look for automation opportunities.* Identify processes suitable for automation to improve efficiency and reduce operational costs. Focus on repetitive tasks, data-heavy operations, or areas with high error rates where AI can have a significant effect.
 
-- *Conduct an assessment.* Gather input from various departments to identify challenges and inefficiencies that AI could address. Document current workflows to find areas where AI can automate tasks or provide insights.
+- *Conduct an internal assessment.* Gather input from various departments to identify challenges and inefficiencies that AI could address. Document workflows and gather input from stakeholders to uncover opportunities for automation, insight generation, or improved decision-making.
 
-- *Explore industry use cases.* Use the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for insights on problems AI can solve. Research how other businesses use AI. Stay informed about emerging AI technologies and applications relevant to your industry.
+- *Explore industry use cases.* Research how similar organizations or industries use AI to solve problems or enhance operations. Use tools like the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for inspiration and to evaluate which approaches might suit your needs.
 
-- *Set AI targets.* For each use case, define a goal (general purpose), objective (desired outcome), and success metric (quantifiable measure) to guide your AI adoption. Clear AI targets drive you toward the right AI solution and help you measure and achieve value faster.
+- *Set AI targets.* For each identified use case, clearly define the goal (general purpose), objective (desired outcome), and success metric (quantifiable measure). These elements will serve as benchmarks to guide your AI adoption and measure its impact.
 
  For more information, see [example AI strategy](#example-ai-strategy).
 
