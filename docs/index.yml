@@ -240,11 +240,6 @@ additionalContent:
       items:
 
         # Card
-        - title: FastTrack for Azure
-          summary: Get support from Microsoft engineers.
-          url: https://azure.microsoft.com/programs/azure-fasttrack/
-
-        # Card
         - title: Azure Migrate and Modernize
           summary: Get support migrating workloads to the cloud.
           url: https://azure.microsoft.com/migration/migration-modernization-program/
