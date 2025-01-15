@@ -15,9 +15,7 @@ This article outlines the process to prepare your organization for AI adoption. 
 
 ## Identify AI use cases
 
-AI enhances individual efficiency and improves business processes. Generative AI fosters productivity and enhances customer experiences. Nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks.
-
-With this understanding, identify areas across your business where AI could add value. To ensure your AI strategy aligns with business objectives, identify the specific requirements for each potential use case. For more information, see [example AI use cases](#example-ai-use-cases).
+AI enhances individual efficiency and improves business processes. Generative AI fosters productivity and enhances customer experiences. Nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value. For more information, see [example AI use cases](#example-ai-use-cases).
 
 - *Look for automation opportunities.* Identify processes suitable for automation to improve efficiency and reduce operational costs. Focus on repetitive tasks, data-heavy operations, or areas with high error rates where AI can have a significant effect.
 
@@ -31,9 +29,11 @@ With this understanding, identify areas across your business where AI could add 
 
 ## Define an AI technology strategy
 
-An AI technology strategy involves selecting the right tools and platforms for your generative and nongenerative AI use cases. You need to pick AI solutions that align with your skill set, data readiness, and budget. Microsoft has various AI solutions to align with different needs. There are software-as-a-service (SaaS), platform-as-a-service (PaaS), and infrastructure-as-a-service (IaaS) options. The service model you choose affects the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft.
+AAn AI technology strategy focuses on selecting the most suitable tools and platforms for your generative and nongenerative AI use cases. Choose AI solutions that align with your organization's skill sets, data readiness, and budget constraints.
 
-Use the following AI decision tree to narrow down options for each AI use case. Review all the options before making your initial decision. When you identify an AI service, confirm that the service is a good fit. Use the following guidance to validate the skills needed, data needed, and cost factors to ensure success.
+Microsoft offers a range of options, including software-as-a-service (SaaS), platform-as-a-service (PaaS), and infrastructure-as-a-service (IaaS), each with varying levels of customization and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft.
+
+To guide your decision, use the AI decision tree to evaluate options for each use case. Assess each potential service for compatibility with your requirements, including technical skills, data needs, and cost considerations. Ensure that the selected service aligns with your defined use case requirements and provides the scalability and support needed for success.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
@@ -52,7 +52,7 @@ In terms of data needed, *Microsoft 365 Copilot* uses enterprise data in Microso
 | Extensibility tools for Microsoft 365 Copilot | [Customize](/microsoft-365-copilot/extensibility/) (extend) Microsoft 365 Copilot with more data (knowledge) via [Microsoft Graph connectors](/microsoft-365-copilot/extensibility/overview-graph-connector) or capabilities (skills) via declarative agents. <br><br>To build declarative agents, use extensibility tools such as [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) (SaaS development), [agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder), [Teams toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents) in VS Code (pro-code option), and [Sharepoint](/microsoft-365-copilot/extensibility/build-declarative-agents). | Business and individual | Yes | Data management, general IT, or developer skills | [Microsoft 365 Copilot license](/microsoft-365-copilot/extensibility/faq#license-questions) |
 | Copilot Studio | Use [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to build test, and deploy agents in a SaaS authoring environment. | Developer | Yes | Using a platform to connect data sources, map out prompts, and deploy copilots to various locations | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
 
-### Build AI workloads with Azure AI platforms (PaaS)
+### Build AI workloads with Azure platforms (PaaS)
 
 Microsoft provides various platform-as-a-service (PaaS) options for building AI workloads. The platform you choose depends on your AI goals, required skills, and data needs. Azure offers platforms suitable for different expertise levels, from beginner-friendly tools to advanced options for experienced developers and data scientists. Review the [pricing pages](https://azure.microsoft.com/products/) and use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to estimate casts.
 
