@@ -53,18 +53,10 @@ The following [scenarios][accelerator_scenarios] are supported:
 
 The following resources are deployed, we support both Azure DevOps and GitHub as source control.
 If you use another provider, or don't want to use source control, you can deploy to the local filesystem.
-The following resources are deployed:
 
-- DevOps resources (Azure DevOps or GitHub)
-  - Repository
-  - Pipelines
-  - Workload Identity Federation (OpenID Connect) authentication
+The bootstrap deploys your DevOps resources (Azure DevOps or GitHub), including repositories, pipelines, and the identities required to run the pipelines.
 
-- Azure resources
-  - Private runners using containers
-  - Private state file storage
-  - Dedicated virtual network
-  - Private DNS zones to support private endpoints
+Supporting this are several Azure resources that host the Terraform state file and the supporting compute and networking resources.
 
 ### Deploying the Platform
 
@@ -73,26 +65,12 @@ In the case that you have selected the local filesystem option, you can run terr
 
 #### Resources Deployed
 
-Depending on the scenario and the configuration, the following resources can be deployed:
+Depending on the scenario and the configuration, you will have a set of resources deployed.
 
-- Governance resources
-  - Management groups
-  - Policy assignments
-  - Policy definitions
-  - Policy set definitions
-  - Role assignments
-- Management resources
-  - Log Analytics workspace
-  - Automation account
-  - Azure Monitor Data Collection Rules
-  - Azure Monitor User Assigned Managed Identity
-- Connectivity resources
-  - Hub networks
-  - Azure Firewall
-  - Virtual network gateways
-  - Virtual WAN
-  - Private DNS zones
-  - DDoS protection plan
+Governance resources in teh form of management groups and Azure Policy.
+Centralized logging and monitoring resources to support the platform.
+
+ALso connectivity resources with your selected architecture, either a Virtual WAN or a Hub and Spoke Virtual Network topology.
 
 ### Configuration
 
