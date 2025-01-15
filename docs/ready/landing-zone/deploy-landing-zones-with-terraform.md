@@ -36,7 +36,8 @@ Deploying the module from the Terraform Registry provides:
 
 For most customers we recommend using the [accelerator][accelerator_docs].
 The accelerator is an end-to-end automation solution to deploy your Azure Platform Landing Zones (ALZ).
-The process includes a [bootstrap phase](#bootstrap-phase), which ensures you start right with our best practices.
+It is based on the [ALZ PowerShell Module][alz_pwsh_module] and uses Terraform to bootstrap the environment.
+The [bootstrap phase](#bootstrap-phase), ensures you start right with our best practices.
 
 The following [scenarios][accelerator_scenarios] are supported:
 
@@ -109,6 +110,7 @@ Please refer to the [getting started][alz_tf_getting_started] guide for more inf
 [accelerator_scenarios]: https://azure.github.io/Azure-Landing-Zones/accelerator/startermodules/terraform-platform-landing-zone/scenarios/ "Accelerator supported scenarios."
 [accelerator_user_guide]: https://azure.github.io/Azure-Landing-Zones/accelerator/userguide/ "Accelerator user guide."
 
+[alz_pwsh_module]: https://www.powershellgallery.com/packages/ALZ "Azure Landing Zones PowerShell Module."
 [alz_tf_docs]: https://aka.ms/alz/tf "Azure Verified Modules for Platform Landing Zones Terraform docs."
 [alz_tf_getting_started]: https://azure.github.io/Azure-Landing-Zones/terraform/gettingStarted/ "(advanced) Getting started with Azure Verified Modules for Platform Landing Zones."
 
