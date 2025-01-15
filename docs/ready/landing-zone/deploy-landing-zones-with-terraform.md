@@ -60,7 +60,7 @@ Supporting this are several Azure resources that host the Terraform state file a
 
 ### Deploying the Platform
 
-After the bootstrap, you will have a ci/cd pipeline that will deploy the scenario you selected.
+After the bootstrap, you will have a CI/CD pipeline that will deploy the scenario you selected.
 In the case that you have selected the local filesystem option, you can run terraform apply manually.
 
 #### Resources Deployed
@@ -70,7 +70,7 @@ Depending on the scenario and the configuration, you will have a set of resource
 Governance resources in teh form of management groups and Azure Policy.
 Centralized logging and monitoring resources to support the platform.
 
-ALso connectivity resources with your selected architecture, either a Virtual WAN or a Hub and Spoke Virtual Network topology.
+Also connectivity resources with your selected architecture, either a Virtual WAN or a Hub and Spoke Virtual Network topology.
 
 ### Configuration
 
