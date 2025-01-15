@@ -49,9 +49,7 @@ Review the migration resources to define your Oracle to Azure migration process.
 
 This consideration equally applies to your application. If you can't accept a disruption in your day-to-day operations, you need to perform an online migration.
 
-- **Determine your tooling for migrating your workload to Oracle on Azure virtual machines:**
-
-There are two primary migration paths:
+- **Determine your tooling for migrating your workload to Oracle on Azure virtual machines:** The two primary migration paths are offline and online.
 
 | Offline migration | Online migration |
 |---|---|
