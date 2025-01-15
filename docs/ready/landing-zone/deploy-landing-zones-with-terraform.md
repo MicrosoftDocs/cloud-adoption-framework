@@ -96,7 +96,7 @@ Depending on the scenario and the configuration, the following resources can be 
 
 The accelerator is highly configurable, please refer to the [user guide][accelerator_user_guide] for further information.
 
-### Advanced Scenarios
+## Advanced Scenarios
 
 If you are an advanced user, you can compose your own architecture from the AVM modules.
 Please refer to the [getting started][alz_tf_getting_started] guide for more information.
