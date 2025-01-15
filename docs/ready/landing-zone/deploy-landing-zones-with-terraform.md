@@ -51,7 +51,7 @@ The following [scenarios][accelerator_scenarios] are supported:
 
 ### Bootstrap phase
 
-The following resources are deployed, we support both Azure DevOps and GitHub as source control.
+We support both Azure DevOps and GitHub as source control.
 If you use another provider, or don't want to use source control, you can deploy to the local filesystem.
 
 The bootstrap deploys your DevOps resources (Azure DevOps or GitHub), including repositories, pipelines, and the identities required to run the pipelines.
