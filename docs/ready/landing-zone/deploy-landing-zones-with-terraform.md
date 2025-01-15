@@ -36,7 +36,7 @@ Deploying the module from the Terraform Registry provides:
 
 For most customers we recommend using the [accelerator][accelerator_docs].
 The accelerator is an end-to-end automation solution to deploy your Azure Platform Landing Zones.
-The process includes a bootstrap phase, which ensures you start right with our best practices.
+The process includes a [bootstrap phase](#bootstrap-phase), which ensures you start right with our best practices.
 
 The following [scenarios][accelerator_scenarios] are supported:
 
