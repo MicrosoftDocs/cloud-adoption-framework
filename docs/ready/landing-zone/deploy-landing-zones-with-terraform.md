@@ -3,7 +3,7 @@ title: Deploy Azure landing zones by using Terraform
 description: Learn which of the two Terraform approaches is more suited to your scenario when you're deploying Azure landing zones.
 author: matt-FFFFFF
 ms.author: mawhi
-ms.date: 02/03/2023
+ms.date: 01/15/2025
 ms.topic: conceptual
 ms.custom: devx-track-terraform
 ---
