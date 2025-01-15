@@ -17,11 +17,11 @@ Use this guidance to ensure resource organization and segmentation across:
 - Management group hierarchies
 - Subscriptions
 - Resource groups
-- Landing zones
+- Landing zones (LZs)
 
 ## Design considerations
 
-The sections outline key factors to consider when planning your organization's Azure Virtual Desktop structure.
+The sections outline key factors to consider when planning your organization's Azure Virtual Desktop (AVD) structure.
 
 ### Number of virtual machines
 
@@ -45,12 +45,12 @@ We generally recommend storing all resources in the same Azure region as your Az
 
 - Deploy session hosts in Azure regions closest to your users to reduces network connectivity and latency and improve performance.
 - Ensure compliance with regional regulations and data residency requirements when selecting a region
-- Running applications in session hosts located far from services (e.g., session hosts in Central India reaching services in Central US) often increase application latency. Placing session hosts closer to the required resources may reduces this risk (e.g., Central US in this example).
-- Avoid mixing session hosts from different Azure regions (e.g., Central India and Central US) in the same host pool as you can't assign users to a session host in a specific Azure Region. Create separate session hosts for each Azure Region instead.
+- Running applications in session hosts located far from services (for example, session hosts in Central India reaching services in Central US) often increase application latency. Placing session hosts closer to the required resources may reduce this risk (Central US in this example).
+- Avoid mixing session hosts from different Azure regions (for example, Central India and Central US) in the same host pool as you can't assign users to a session host in a specific Azure Region. Create separate session hosts for each Azure Region instead.
 
 ## Design recommendations
 
-This sections offer guidance on managing groups, naming , and tagging in Azure Virtual Desktop.
+These sections offer guidance on managing groups, naming, and tagging in Azure Virtual Desktop.
 
 ### Management settings scope
 
@@ -60,12 +60,12 @@ Azure provides four levels of management: management groups, subscriptions, reso
 - **Resource groups** are logical containers for deploying and managing Azure resources like Azure Virtual Desktop, virtual machines, and storage.
 - **Resources** are instances of services created within a resource group, such as Azure Virtual Desktop.
 
-Below is an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
+The following is an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
 - Components
-    - Azure Virtual Desktop Service Objects: Create a resource group for Azure Virtual Desktop Service Objects from Host Pool VMs.  Service objects like Workspaces, Host Pools and Application Groups.
+    - Azure Virtual Desktop Service Objects: Create a resource group for Azure Virtual Desktop Service Objects from Host Pool VMs. Service objects like Workspaces, Host Pools, and Application Groups.
     - Networking: Typically created as part of the Cloud Adoption Framework Landing Zone.
     - Storage: If not already created as part of Cloud Adoption Framework, create a resource group for storage accounts.
-    - Session hosts compute: Create a Resource Group for virtual machines, disks, and network interfaces as these have a different lifecycle from Azure Virtual Desktop Service Objects.
+    - Session hosts compute: Create a Resource Group for virtual machines, disks, and network interfaces as these resources have a different lifecycle from Azure Virtual Desktop Service Objects.
     - Shared Resources: Create a Resource Group for shared resources such as custom VM images, this encourages self-service so you could have a subscription for each business line, for instance.
 - Basic Structure:
     - Subscription AVD-Shared-Resources
