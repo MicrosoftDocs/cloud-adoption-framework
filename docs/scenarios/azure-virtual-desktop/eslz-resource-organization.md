@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
 ---
 
-# Resource organization considerations for Azure Virtual Desktop
+# Management group and subscription organization for Azure Virtual Desktop
 
 The structure of your resource storage directly impacts how you implement resource management and governance. This article provides key considerations and recommendations for designing an organization's structure.
 
