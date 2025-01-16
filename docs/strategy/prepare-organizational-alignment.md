@@ -133,4 +133,4 @@ Consider the following:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Required cloud functions](./required-cloud-functions.md)
+> [Inform your cloud adoption strategy](./inform/index.md)
