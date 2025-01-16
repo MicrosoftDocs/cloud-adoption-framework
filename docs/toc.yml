@@ -93,18 +93,8 @@ items:
       href: strategy/mission-objectives.md
     - name: Define your strategy team
       href: strategy/define-your-team.md
-
     - name: Prepare your organization
-      items:
-        - name: Overview
-          href: strategy/prepare/index.md
-        - name: Organizational alignment
-          href: strategy/prepare/organizational-alignment.md
-        - name: Required cloud functions
-          href: strategy/prepare/required-cloud-functions.md
-        - name: Align the RACI matrix
-          href: strategy/prepare/raci-alignment.md
-
+      href: strategy/prepare-organizational-alignment.md
     - name: Inform your strategy
       items:
         - name: Overview
