@@ -15,23 +15,25 @@ This article outlines the process to prepare your organization for AI adoption. 
 
 ## Identify AI use cases
 
-AI supports two main goals: enhancing individual efficiency and improving business processes. Generative AI fosters productivity and enhances customer experiences, while nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value. For more information, see [example AI use cases](#example-ai-use-cases).
+AI enhances individual efficiency and improves business processes. Generative AI fosters productivity and enhances customer experiences. Nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value. For more information, see [example AI use cases](#example-ai-use-cases).
 
 - *Look for automation opportunities.* Identify processes suitable for automation to improve efficiency and reduce operational costs. Focus on repetitive tasks, data-heavy operations, or areas with high error rates where AI can have a significant effect.
 
-- *Conduct an assessment.* Gather input from various departments to identify challenges and inefficiencies that AI could address. Document current workflows to find areas where AI can automate tasks or provide insights.
+- *Conduct an internal assessment.* Gather input from various departments to identify challenges and inefficiencies that AI could address. Document workflows and gather input from stakeholders to uncover opportunities for automation, insight generation, or improved decision-making.
 
-- *Explore industry use cases.* Use the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for insights on problems AI can solve. Research how other businesses use AI. Stay informed about emerging AI technologies and applications relevant to your industry.
+- *Explore industry use cases.* Research how similar organizations or industries use AI to solve problems or enhance operations. Use tools like the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for inspiration and to evaluate which approaches might suit your needs.
 
-- *Set AI targets.* For each use case, define a goal (general purpose), objective (desired outcome), and success metric (quantifiable measure) to guide your AI adoption. Clear AI targets drive you toward the right AI solution and help you measure and achieve value faster.
+- *Set AI targets.* For each identified use case, clearly define the goal (general purpose), objective (desired outcome), and success metric (quantifiable measure). These elements will serve as benchmarks to guide your AI adoption and measure its impact.
 
  For more information, see [example AI strategy](#example-ai-strategy).
 
 ## Define an AI technology strategy
 
-An AI technology strategy involves selecting the right tools and platforms for your generative and nongenerative AI use cases. You need to pick AI solutions that align with your skill set, data readiness, and budget. Microsoft has various AI solutions to align with different needs. There are software-as-a-service (SaaS), platform-as-a-service (PaaS), and infrastructure-as-a-service (IaaS) options. The service model you choose affects the [AI shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft.
+AAn AI technology strategy focuses on selecting the most suitable tools and platforms for your generative and nongenerative AI use cases. Choose AI solutions that align with your organization's skill sets, data readiness, and budget constraints.
 
-Use the following AI decision tree to narrow down options for each AI use case. Review all the options before making your initial decision. When you identify an AI service, confirm that the service is a good fit. Use the following guidance to validate the skills needed, data needed, and cost factors to ensure success.
+Microsoft offers a range of options, including software-as-a-service (SaaS), platform-as-a-service (PaaS), and infrastructure-as-a-service (IaaS), each with varying levels of customization and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft.
+
+To guide your decision, use the AI decision tree to evaluate options for each use case. Assess each potential service for compatibility with your requirements, including technical skills, data needs, and cost considerations. Ensure that the selected service aligns with your defined use case requirements and provides the scalability and support needed for success.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
@@ -50,7 +52,7 @@ In terms of data needed, *Microsoft 365 Copilot* uses enterprise data in Microso
 | Extensibility tools for Microsoft 365 Copilot | [Customize](/microsoft-365-copilot/extensibility/) (extend) Microsoft 365 Copilot with more data (knowledge) via [Microsoft Graph connectors](/microsoft-365-copilot/extensibility/overview-graph-connector) or capabilities (skills) via declarative agents. <br><br>To build declarative agents, use extensibility tools such as [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) (SaaS development), [agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder), [Teams toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents) in VS Code (pro-code option), and [Sharepoint](/microsoft-365-copilot/extensibility/build-declarative-agents). | Business and individual | Yes | Data management, general IT, or developer skills | [Microsoft 365 Copilot license](/microsoft-365-copilot/extensibility/faq#license-questions) |
 | Copilot Studio | Use [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to build test, and deploy agents in a SaaS authoring environment. | Developer | Yes | Using a platform to connect data sources, map out prompts, and deploy copilots to various locations | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
 
-### Build AI workloads with Azure AI platforms (PaaS)
+### Build AI workloads with Azure platforms (PaaS)
 
 Microsoft provides various platform-as-a-service (PaaS) options for building AI workloads. The platform you choose depends on your AI goals, required skills, and data needs. Azure offers platforms suitable for different expertise levels, from beginner-friendly tools to advanced options for experienced developers and data scientists. Review the [pricing pages](https://azure.microsoft.com/products/) and use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to estimate casts.
 
@@ -63,7 +65,7 @@ Microsoft provides various platform-as-a-service (PaaS) options for building AI 
 
 ### Bring your own models with infrastructure services (IaaS)
 
-For organizations needing more control and customization, Microsoft offers infrastructure-as-a-service (IaaS) solutions. While Azure AI platforms (PaaS) are preferred for AI workloads, [Azure Virtual Machines through CycleCloud](./infrastructure/cycle-cloud.md) and [Azure Kubernetes Service](/azure/aks/gpu-cluster) provides access to GPUs and CPUs for advanced AI needs. This setup allows you to bring your own models to Azure. Refer to the relevant [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
+For organizations needing more control and customization, Microsoft offers infrastructure-as-a-service (IaaS) solutions. While Azure platforms (PaaS) are preferred for AI workloads, [Azure Virtual Machines through CycleCloud](./infrastructure/cycle-cloud.md) and [Azure Kubernetes Service](/azure/aks/gpu-cluster) provides access to GPUs and CPUs for advanced AI needs. This setup allows you to bring your own models to Azure. Refer to the relevant [pricing pages](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|----|-------------| ---------| ---- |
@@ -73,23 +75,23 @@ For organizations needing more control and customization, Microsoft offers infra
 
 ## Define an AI data strategy
 
-For each AI use case, you should define an AI data strategy that outlines data collection, storage, and usage practices aligning with regulatory, ethical, and operational standards. Tailoring the strategy to each specific use case ensures reliable AI outputs and promotes data security and privacy. If needed, you can consolidate these individual strategies into a broader summary data strategy for your organization.
+For each AI use case, you should define an AI data strategy. The data strategy should outline data collection, storage, and usage practices aligning with regulatory, ethical, and operational standards. Tailor the strategy to each use case to ensure reliable AI outputs and promote data security and privacy. If needed, you can consolidate these individual strategies into a broader summary data strategy for your organization.
 
-- *Establish data governance.* Define data governance principles specific to the AI use case to ensure workloads are transparent, accountable, and compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage relevant to the use case.
+- *Establish data governance.* Define data governance principles for each AI use case to ensure workloads are compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage relevant to the use case.
 
-- *Plan the data lifecycle.* Specify how you collect, store, process, and retire data for this particular AI use case. Include retention and disposal policies, and use version control to maintain accuracy during updates.
+- *Plan the data lifecycle.* Specify how you collect, store, process, and retire data for each AI use case. Include retention and disposal policies, and use version control to maintain accuracy during updates.
 
 - *Set up AI fairness and bias controls.* Develop processes to detect and address bias in the data used for this AI use case. Use tools like Fairlearn to ensure models provide fair and equitable outcomes, especially when working with sensitive data attributes.
 
 - *Promote collaboration between AI and data teams.* Align AI development with data engineering efforts to ensure models are built using high-quality, well-managed data. Establish a unified pipeline for AI model training and data updates.
 
-- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for this AI workload. Use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
+- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for this AI workload. Plan to use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
 
 - *Incorporate data management automation.* Plan to use AI and machine learning to automate tasks like tagging, cataloging, and data quality checks. Automation improves accuracy and allows teams to focus on strategic efforts.
 
 - *Plan for continuous monitoring and evaluation.* Establish regular audits of data and model outputs to ensure ongoing data quality, performance, and fairness. Monitor AI models and data pipelines to identify any shifts that might impact reliability or compliance.
 
- For more information, see [example AI strategy](#example-ai-strategy).
+ For an example data strategy aligned to different use cases, see the [example AI strategy](#example-ai-strategy).
 
 ## Define a responsible AI strategy
 
