@@ -138,7 +138,6 @@ In case you're considering backups as the only solution for BCDR requirements, k
 
 - **Backup data within Azure**: To meet organizational requirements mandating that data and backups remain in Azure, here are a few solutions:
   - **Use Autonomous Recovery Service(ARS) in Azure**: During backup policy configuration, select “[Store backup in the same cloud provider as the database](https://docs.oracle.com/en/cloud/paas/recovery-service/dbrsu/azure-multicloud-recoveryservice.html)” to use the ARS in Azure.
-
   - **Use Azure Storage services**: Use Azure Storage Services like Blob, Azure Files, and Azure NetApp Files to mount storage as NFS points on the database server and stream RMAN backups to Azure storage.
 
 - **Long-term backup retention**: If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Azure Storage.
