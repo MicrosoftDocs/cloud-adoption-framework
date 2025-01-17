@@ -87,7 +87,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
 ![A diagram of Fast start Failover architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/fsfo_cross_AZ.svg)
 
-    - If you require a symmetrical disaster recovery architecture if there is a failover, it's advisable to position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
+  - If you require a symmetrical disaster recovery architecture if there is a failover, it's advisable to position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
 
 ### Multi-region BCDR
 
