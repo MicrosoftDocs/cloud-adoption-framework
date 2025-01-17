@@ -877,6 +877,8 @@ items:
 
     - name: Mature teams structure
       href: organize/organization-structures.md
+    - name: Align the RACI matrix
+      href: organize/raci-alignment.md
     - name: Building technical skills
       href: organize/suggested-skills.md
     - name: Creating a cost-conscious organization

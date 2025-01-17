@@ -2481,11 +2481,6 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/organize/raci-alignment.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/prepare/raci-alignment",
-         "redirect_document_id": false
-      },
-      {
          "source_path": "docs/organize/cloud-security-application-security-devsecops.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
          "redirect_document_id": false
