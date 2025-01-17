@@ -83,5 +83,7 @@ Consider these Azure-specific recommendations to help you drive sustainability e
 
 ## Next step
 
+When you've informed your strategy about all required and vital aspects for your cloud adoption initiatives, you're ready to move on to the planning phase.
+
 > [!div class="nextstepaction"]
-> [Regulated industries](industries.md)
+> [Plan methodology - Microsoft Cloud Adoption Framework for Azure](../../plan/index.md)
