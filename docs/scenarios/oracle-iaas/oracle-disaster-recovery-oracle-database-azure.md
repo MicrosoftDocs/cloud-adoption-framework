@@ -39,7 +39,7 @@ To learn more, see Azure Well-Architected Framework's guidelines on [designing a
 
 - Here are the three **backup options** available for Oracle Exadata Database@Azure:
 
-  - **OCI Managed Backup**: This option includes two integrated solutions, Autonomous Recovery Service and OCI Object Storage which are managed via the OCI portal.
+  - **OCI Managed Backup**: This option includes two integrated solutions, Autonomous Recovery Service and OCI Object Storage which are managed via the OCI console.
 
     Autonomous Recovery Service is designed for enterprise-level mission-critical workloads requiring stringent RTO/RPO and offers availability through Service Level Agreement (SLA). For more information, see [Oracle PaaS and IaaS Public Cloud Services Pillar Document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf).
 
@@ -85,7 +85,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
     For this setup, extra virtual machines running Oracle Data Guard Observers are required to enable Oracle Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, automating the failover process.
 
-![A diagram of Fast start Failover architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/fsfo_cross_AZ.svg)
+![A diagram of Fast start Failover architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/fsfo.svg)
 
   - If you require a symmetrical disaster recovery architecture if there is a failover, it's advisable to position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
 
