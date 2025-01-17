@@ -3,7 +3,7 @@ title: Landing zone implementation options
 description: Determine which landing zone implementation option best fits your requirements.
 author: martinekuan
 ms.author: martinek
-ms.date: 01/15/2025
+ms.date: 01/17/2025
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -49,7 +49,7 @@ Here are some implementation options for landing zones keeping in mind the devel
 | Enterprise-scale for small enterprises| This reference implementation is meant for organizations that don't have a large IT team and do not require fine grained administration delegation models. | [![Dta-button]][DTA-small-enterprises]</br>[Readme](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) |
 | Enterprise-scale for Azure Government|Reference implementation that can be deployed to Azure Government Cloud. | [![Dta-button]][DTA-AzureGov] </br>[Readme](https://github.com/Azure/Enterprise-Scale#readme)|
 | [CAF enterprise-scale landing zone (Azure China 21Vianet regions)](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#do-it-yourself-deployment-instructions-for-enterprise-scale-using-azure-powershell) | Reference implementation that can be deployed to Azure clouds in China. | [![Dta-button]][DTA-21Vianet] </br> [Deploy](https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md) |
-| [Terraform Azure Verified Modules for Platform Landing Zones](deploy-landing-zones-with-terraform.md) | Deploys an enterprise-ready platform foundation using Terraform. Use this option when managing your platform using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. Shared services, network connectivity, and application workloads can be integrated into your deployment or managed independently. |[Docs](https://aka.ms/alz/tf) |
+| [Terraform Azure Verified Modules for Platform Landing Zones](deploy-landing-zones-with-terraform.md) | Deploys an enterprise-ready platform foundation by using Terraform. Use this option when you manage your platform by using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. You can integrate shared services, network connectivity, and application workloads into your deployment or manage them independently. |[Docs](https://aka.ms/alz/tf) |
 | [Microsoft Cloud for Sovereignty](/industry/sovereignty/cloud-for-sovereignty) | A sovereign landing zone uses the same code base as the Azure landing zone Bicep approach but has more orchestration and deployment automation capabilities. It also has Azure Policy initiatives and assignments to help meet sovereignty requirements for public-sector customers, partners, and independent software vendors (ISVs). | [Readme](/industry/sovereignty/) |
 
 ### Customize approach

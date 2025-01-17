@@ -3,7 +3,7 @@ title: Update Azure landing zone custom policies
 description: Use this guidance to update already-deployed Azure landing zone custom policies and policy initiatives.
 author: DaFitRobsta
 ms.author: Rolightn
-ms.date: 01/15/2025
+ms.date: 01/17/2025
 ms.topic: conceptual
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
@@ -110,7 +110,7 @@ For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/a
 
 ## Update steps for Terraform Azure Verified Modules for Platform Landing Zones
 
-If you're using [the Terraform module](https://aka.ms/alz/tf/module) please see the [update guide](https://aka.ms/alz/tf/update).
+If you use [the Terraform module](https://aka.ms/alz/tf/module), see the [update guide](https://aka.ms/alz/tf/update).
 
 ## Update steps for Bicep module deployments
 
@@ -126,4 +126,4 @@ ALZ-Bicep provides generic guidance for updating Azure landing zone custom polic
 
 ## Next steps
 
-Regardless of whether you use the Azure portal, Bicep, or Terraform to manage your Azure landing zone infrastructure, you need to manage policy changes over time. Use the flow in this article as a starting point to develop processes around policy management for your Azure landing zone implementation.
+Whether you use the Azure portal, Bicep, or Terraform to manage your Azure landing zone infrastructure, you need to manage policy changes over time. Use the flow in this article as a starting point to develop processes around policy management for your Azure landing zone implementation.

@@ -4,7 +4,7 @@ description: Learn how to transition existing Azure environments with a single s
 author: jtracey93
 ms.author: jatracey
 ms.reviewer: tozimmergren
-ms.date: 01/15/2025
+ms.date: 01/17/2025
 ms.topic: conceptual
 ---
 
