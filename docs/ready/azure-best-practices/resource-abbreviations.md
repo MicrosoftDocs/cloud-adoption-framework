@@ -153,6 +153,9 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | App Configuration store | `Microsoft.AppConfiguration/configurationStores` | `appcs` |
+| Dev Centers  | `Microsoft.DevCenter/devcenters` | `dctr` |
+| Dev Box Network Connection | `Microsoft.DevCenter/networkconnections` | `nc` |
+| Dev Center projects | `Microsoft.DevCenter/projects` | `dcprj` |
 | Maps account | `Microsoft.Maps/accounts` | `map` |
 | SignalR | `Microsoft.SignalRService/SignalR` | `sigr` |
 | WebPubSub | `Microsoft.SignalRService/webPubSub` | `wps` |
