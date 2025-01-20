@@ -49,7 +49,7 @@ Azure offerings support your efforts to optimize building management.
 
 - **Store data:** Store data in Azure Data Lake.
 
-- **Create virtual replicas of physical retail spaces:** Create digital models of stores using Azure Spatial Anchors and Azure Digital Twins. These models offer insights that drive optimized operations, reduced costs, and breakthrough customer experiences.
+- **Create virtual replicas of physical retail spaces:** Create digital models of stores using Azure Digital Twins. These models offer insights that drive optimized operations, reduced costs, and breakthrough customer experiences.
 
 - **Visualize customer and store data:** Integrate with Power BI to visualize customer preference, store performance, equipment maintenance, and advertising data in real time.
 
