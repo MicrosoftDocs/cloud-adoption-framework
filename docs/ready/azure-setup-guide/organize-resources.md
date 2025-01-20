@@ -35,21 +35,11 @@ Azure provides four levels of management: management groups, subscriptions, reso
 
 You can apply management settings, such as policies and role-based access control, at any management level. The level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy applies to all resource groups and resources in that subscription.
 
-Usually, it makes sense to apply critical settings at higher levels and project-specific requirements at lower levels. For example, to make sure that all resources for your organization deploy to certain regions, apply a policy to the subscription that specifies the allowed regions. The allowed locations are automatically enforced when users in your organization add new resource groups and resources.
-
-Managing a few subscriptions independently is easy. However, for a larger number of subscriptions, consider creating a management group hierarchy to simplify management of subscriptions and resources. For more information, see [Organize and manage multiple Azure subscriptions](../azure-best-practices/organize-subscriptions.md).
-
-Work with people in the following roles as you plan your organizational compliance strategy:
-
-- Security and compliance
-- IT administration
-- Enterprise architecture
-- Networking
-- Finance
-- Procurement
+Start with applying critical settings at higher levels and project-specific requirements at lower levels. For example, to make sure that all resources for your organization deploy to certain regions, apply a policy to the subscription that specifies the allowed regions. The allowed locations are automatically enforced when users in your organization add new resource groups and resources.
 
 > [!TIP]
-> To learn about management group design considerations and recommendations, see the Azure landing zone design area for [Management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
+> Use management groups to organize and govern your Azure subscriptions. As the number of your subscriptions increases, management groups provide critical structure to your Azure environment and make it easier to manage your subscriptions.
+> To learn more, see [Management groups design considerations and recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
 
 ::: zone target="docs"
 
