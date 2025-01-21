@@ -1,6 +1,6 @@
 ---
-title: Capacity planning for Oracle workloads on Azure Virtual Machines
-description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Azure IaaS.
+title: Capacity Planning for Oracle Workloads on Azure Virtual Machines
+description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Azure infrastructure as a service.
 author: Jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
@@ -19,7 +19,6 @@ Capacity planning helps you select the appropriate infrastructure for Oracle arc
 ## Capacity planning considerations
 
 Capacity planning for Oracle workloads on Azure infrastructure as a service (IaaS) is a process that requires a deep understanding of the workload requirements and the available Azure resources.
-
 
 ### Overall performance considerations
 
