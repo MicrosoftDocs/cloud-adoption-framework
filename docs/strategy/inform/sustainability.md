@@ -4,7 +4,7 @@ description: Learn how to incorporate sustainability into your cloud strategy. U
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 01/13/2025
+ms.date: 01/21/2025
 ---
 
 # Sustainability considerations in your cloud strategy
@@ -20,11 +20,8 @@ This transformation is good for business. Research from multiple sources indicat
 
 > [!NOTE]
 > Did you know that by transitioning workloads to Microsoft Azure, you can run solutions that are **up to 98%** more carbon efficient and **up to 93%** more energy efficient than on-premises options, depending on specific server usage, renewable energy purchases, and other factors?
-> For more information, see [The carbon 
-benefits of  
-cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf).
-
-Migrating to Azure can make your workload [up to 98% more carbon efficient](https://azure.microsoft.com/explore/global-infrastructure/sustainability/#carbon-benefits) than a traditional on-premises data center. Microsoft leads in many areas of sustainability, including operating as carbon-neutral since 2012 and committing to be carbon-negative by 2030.
+>
+> For more information, see [The carbon benefits of cloud computing](https://download.microsoft.com/download/7/3/9/739BC4AD-A855-436E-961D-9C95EB51DAF9/Microsoft_Cloud_Carbon_Study_2018.pdf).
 
 ## Sustainability for your organization's brand
 
@@ -38,8 +35,8 @@ Sustainability is crucial to help ensure long-term success as a player in a dyna
 
 Consider these recommendations to incorporate sustainability in favor of your corporate brand.
 
-- **Make sustainability a part of your mission statement.** Consider adding sustainability and environmental responsibility to your mission statement. Align brand values with your business's activities and practices.
-- **Share sustainability reports.** Make your sustainability commitments and the progress you make toward them transparent by publicly sharing annual sustainability reports. For more information, see the [2024 environmental sustainability report](https://www.microsoft.com/corporate-responsibility/sustainability/report) from Microsoft.
+- _Make sustainability a part of your mission statement._ Consider adding sustainability and environmental responsibility to your mission statement. Align brand values with your business's activities and practices.
+- _Share sustainability reports._ Make your sustainability commitments and the progress you make toward them transparent by publicly sharing annual sustainability reports. For more information, see the [2024 environmental sustainability report](https://www.microsoft.com/corporate-responsibility/sustainability/report) from Microsoft.
 
 ## Incorporate sustainability into your cloud strategy
 
@@ -58,21 +55,25 @@ Consider some of the benefits of using the cloud in combination with and to driv
 
 Consider these recommendations to make your cloud strategy more sustainable.
 
-- **Build green teams.** Establish goals and metrics for teams that own sustainability in your organization. Metrics can include greenhouse gas emissions, carbon footprint data, water use, and energy consumption. Consider gamification that motivates teams to find the most sustainable solutions.
-- **Understand your emissions by scope.** Evaluate your end-to-end supply chain to ensure that you account for [Scope 3 emissions](/industry/sustainability/calculate-scope3). Read [Greenhouse gas emissions](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) to help you understand what factors contribute to your organization's emissions.
-- **Track and control carbon emissions.** Use the [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) to track carbon emissions. The dashboard can help you gather information about your organization's emissions that justifies a datacenter migration to the cloud.
-- **Educate your workload teams.** Use the Azure Well-Architected Framework [sustainable workload guidance](/azure/architecture/framework/sustainability/) to help teams understand the best practices for enhancing workloads while reducing the environmental footprint.
-- **Consider gamification.** Introduce gamification and create friendly competition between teams that motivates them to find the most sustainable solutions. Track records like the Software Carbon Intensity specification to promote green initiatives and workloads.
+- _Build green teams._ Establish goals and metrics for teams that own sustainability in your organization. Metrics can include greenhouse gas emissions, carbon footprint data, water use, and energy consumption. Consider gamification that motivates teams to find the most sustainable solutions.
+- _Understand your emissions by scope._ Evaluate your end-to-end supply chain to ensure that you account for [Scope 3 emissions](/industry/sustainability/calculate-scope3). Read [Greenhouse gas emissions](https://microsoft.github.io/Sustainability-Resources/greenhouse-gas-emissions/) to help you understand what factors contribute to your organization's emissions.
+- _Educate your workload teams._ Use the Azure Well-Architected Framework [sustainable workload guidance](/azure/architecture/framework/sustainability/) to help teams understand the best practices for enhancing workloads while reducing the environmental footprint.
+- _Consider gamification._ Introduce gamification and create friendly competition between teams that motivates them to find the most sustainable solutions. Track records like the Software Carbon Intensity specification to promote green initiatives and workloads.
+- _Incorporate AI to accelerate your sustainability efforts_. Learn how AI can help transform your organization's sustainability efforts. For more information, see [Accelerating Sustainability with AI: Innovations for a Better Future](https://aka.ms/AcceleratingSustainabilitywithAI2025).
 
-### Azure-specific recommendations
+### Azure facilitation
 
 Consider these Azure-specific recommendations to help you drive sustainability efforts.
 
-- **Microsoft Cloud for Sustainability:** Accelerate progress toward sustainability and business growth by bringing together environmental, social, and governance capabilities. These capabilities are available across the Microsoft cloud portfolio and with solutions from global partners. For more information, see [What is Microsoft Cloud for Sustainability?](/industry/sustainability/overview).
-- **Microsoft Sustainability Manager:** Use the data intelligence and comprehensive, integrated, and automated sustainability management capabilities that [Microsoft Sustainability Manager](/industry/sustainability/sustainability-manager-overview) provides.
-- **Azure carbon optimization:** Measure and minimize the carbon impact of your Azure resources by using [Azure carbon optimization](/azure/carbon-optimization/overview).
-- **Emissions savings estimator for Microsoft Cloud:** Use this tool to define your on-premises infrastructure workloads. Then, use that information to report your current on-premises footprint and comparable Azure footprint. For more information, see the [emissions savings estimator for Microsoft Cloud](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html).
-- **Emissions impact dashboard:** Evaluate your carbon emissions, and emissions that you've already saved, that are associated with using Microsoft Azure and Microsoft 365 cloud services. The [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) can help you make targeted decisions.
+- _Microsoft Cloud for Sustainability:_ Accelerate progress toward sustainability and business growth by bringing together environmental, social, and governance capabilities. These capabilities are available across the Microsoft cloud portfolio and with solutions from global partners. For more information, see [What is Microsoft Cloud for Sustainability?](/industry/sustainability/overview).
+
+- _Microsoft Sustainability Manager:_ Use the data intelligence and comprehensive, integrated, and automated sustainability management capabilities that [Microsoft Sustainability Manager](/industry/sustainability/sustainability-manager-overview) provides.
+
+- _Azure carbon optimization:_ Measure and minimize the carbon impact of your Azure resources by using [Azure carbon optimization](/azure/carbon-optimization/overview).
+
+- _Emissions savings estimator for Microsoft Cloud:_ Use this tool to define your on-premises infrastructure workloads. Then, use that information to report your current on-premises footprint and comparable Azure footprint. For more information, see the [emissions savings estimator for Microsoft Cloud](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html).
+
+- _Emissions impact dashboard:_ Evaluate your carbon emissions, and emissions that you saved that are associated with using Microsoft Azure and Microsoft 365 cloud services. The [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) can help you make targeted decisions.
 
 ## Related resources
 
@@ -83,7 +84,7 @@ Consider these Azure-specific recommendations to help you drive sustainability e
 
 ## Next step
 
-When you've informed your strategy about all required and vital aspects for your cloud adoption initiatives, you're ready to move on to the planning phase.
+After informing your strategy about the vital aspects of your cloud adoption initiatives, you're ready to move on to the planning phase.
 
 > [!div class="nextstepaction"]
 > [Plan methodology - Microsoft Cloud Adoption Framework for Azure](../../plan/index.md)

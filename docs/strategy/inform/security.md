@@ -21,9 +21,10 @@ Potential changes to your organization might introduce stress and conflict. For 
 
 **Recommendations:**
 
-- **Introduce security conversations early.** Start security conversations with the right stakeholders early in your cloud adoption process. This approach helps ensure that you can prepare for organizational alignment early on.
-- **Understand modern security teams, roles, and functions.** Review the Cloud Adoption Framework guidance about [security teams, roles, and functions](../../secure/teams-roles.md). This guidance describes how to implement end-to-end security.
-- **Embrace the Cloud Adoption Framework Secure methodology.** Use the [Cloud Adoption Framework Secure methodology](../../secure/overview.md) to apply Microsoft security best practices at each stage of your cloud adoption journey. The guidance for each phase includes several security approaches, including security posture modernization, incident preparation and response, security sustainment, and the Confidentiality, Integrity, and Availability (CIA) Triad.
+- _Introduce security conversations early._ Start security conversations with the right stakeholders early in your cloud adoption process. This approach helps ensure that you can prepare for organizational alignment early on.
+
+- _Understand modern security teams, roles, and functions._ Review the Cloud Adoption Framework guidance about [security teams, roles, and functions](../../secure/teams-roles.md). This guidance describes how to implement end-to-end security.
+- _Embrace the Cloud Adoption Framework Secure methodology._ Use the [Cloud Adoption Framework Secure methodology](../../secure/overview.md) to apply Microsoft security best practices at each stage of your cloud adoption journey. The guidance for each phase includes several security approaches, including security posture modernization, incident preparation and response, security sustainment, and the Confidentiality, Integrity, and Availability (CIA) Triad.
 
 ## Understand the Microsoft Secure Future Initiative
 
@@ -51,7 +52,7 @@ Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview
 
 **Recommendations:**
 
-- **Adopt Zero Trust.** Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview) to implement Zero Trust principles, which help drive a security-first mindset.
+- _Adopt Zero Trust._ Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview) to implement Zero Trust principles, which help drive a security-first mindset.
 
 ## Use the CISO and MCRA workshops
 
@@ -61,7 +62,7 @@ The Microsoft Cybersecurity Reference Architecture (MCRA) workshop focuses on ho
 
 **Recommendations:**
 
-- **Consult with team leaders about the CISO and MCRA workshops.** Consider investing in one or more [Microsoft-led workshops](/security/adoption/adoption#microsoft-led-workshops). Take advantage of the CISO and MCRA workshops in particular. For Microsoft-led workshop material, see [Security adoption resources](/security/adoption/adoption).
+- _Consult with team leaders about the CISO and MCRA workshops._ Consider investing in one or more [Microsoft-led workshops](/security/adoption/adoption#microsoft-led-workshops). Take advantage of the CISO and MCRA workshops in particular. For Microsoft-led workshop material, see [Security adoption resources](/security/adoption/adoption).
 
 ## Next step
 
