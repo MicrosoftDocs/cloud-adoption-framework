@@ -53,8 +53,6 @@ Mixed reality solutions represent the next step for ambient user experiences. Th
 
 Mixed reality experiences are increasingly common among remote workforces. Their use is growing even faster in industries that require collaboration or specialty skills that aren't readily available in the local market. Situations that require centralized implementation support of a complex product for a remote labor force are fertile ground for augmented reality. In these scenarios, the central support team and remote employees might use augmented reality to work on, troubleshoot, and install the product.
 
-For example, consider the case of spatial anchors. Spatial anchors allow you to create mixed reality experiences with objects that persist in their respective locations across devices over time. Through spatial anchors, you can capture, record, and persist a specific behavior, providing an ambient experience the next time a user operates within that augmented environment. [Azure Spatial Anchors](/azure/spatial-anchors/overview) is a service that moves this logic to the cloud, allowing digital experiences to be shared across interactive devices and even across solutions.
-
 ## Integrated reality
 
 Beyond mobile reality, or even mixed reality, lies integrated reality. Integrated reality aims to remove the digital experience entirely. All around us are devices with compute and connectivity capabilities. These devices can be used to collect data from the immediate surroundings without the customer having to ever touch a phone, laptop, or VR device.
