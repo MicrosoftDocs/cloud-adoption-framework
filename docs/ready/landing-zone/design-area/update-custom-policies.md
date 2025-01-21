@@ -3,7 +3,7 @@ title: Update Azure landing zone custom policies
 description: Use this guidance to update already-deployed Azure landing zone custom policies and policy initiatives.
 author: DaFitRobsta
 ms.author: Rolightn
-ms.date: 11/15/2022
+ms.date: 01/17/2025
 ms.topic: conceptual
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
@@ -108,17 +108,9 @@ If an Azure landing zone custom policy initiative is completely updated, and is 
 
 For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/alz/custompolicyupdate).
 
-## Update steps for Terraform module deployments
+## Update steps for Terraform Azure Verified Modules for Platform Landing Zones
 
-If you use the [Azure landing zones Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) to manage your Azure landing zone deployment, this section provides resources for updating Azure landing zone custom policies and initiatives.
-
-### Detect updates with Terraform
-
-Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In the Terraform module, you can also see changes to policies on the [releases](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases) page. For an example, see [policy updates for v2.3.0](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.3.0).
-
-### Update with Terraform
-
-The Azure landing zone Terraform module provides update guidance for deploying breaking changes. Follow the upgrade guidance for your version at [upgrade guides](https://aka.ms/alz/tf/upgrade).
+If you use [the Terraform module](https://aka.ms/alz/tf/module), see the [update guide](https://aka.ms/alz/tf/update).
 
 ## Update steps for Bicep module deployments
 
@@ -134,4 +126,4 @@ ALZ-Bicep provides generic guidance for updating Azure landing zone custom polic
 
 ## Next steps
 
-Regardless of whether you use the Azure portal, Bicep, or Terraform to manage your Azure landing zone infrastructure, you need to manage policy changes over time. Use the flow in this article as a starting point to develop processes around policy management for your Azure landing zone implementation.
+Whether you use the Azure portal, Bicep, or Terraform to manage your Azure landing zone infrastructure, you need to manage policy changes over time. Use the flow in this article as a starting point to develop processes around policy management for your Azure landing zone implementation.
