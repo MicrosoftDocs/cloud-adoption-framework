@@ -76,7 +76,7 @@ If an Azure landing zone custom policy initiative is fully superseded by a built
 
 ## Update steps for Terraform Azure Verified Modules for Platform Landing Zones module deployments
 
-If you use [the Terraform module](https://aka.ms/alz/tf/module), see [Update guide](https://aka.ms/alz/tf/update).
+If you use [the Terraform module](https://aka.ms/alz/tf/module), see the [update guide](https://aka.ms/alz/tf/update).
 
 ### Migration steps for Azure landing zone Terraform module
 

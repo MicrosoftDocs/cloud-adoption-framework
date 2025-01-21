@@ -36,10 +36,10 @@ We recommend that most customers use the [Azure landing zone accelerator][accele
 
 The following [scenarios][accelerator_scenarios] are supported:
 
-- Multi-region hub and spoke virtual network with Azure Firewall
-- Multi-region virtual WAN with Azure Firewall
-- Multi-region hub and spoke virtual network with network virtual appliance (NVA)
-- Multi-region virtual WAN with network virtual appliance (NVA)
+- Multiple-region hub and spoke virtual network with Azure Firewall
+- Multiple-region virtual WAN with Azure Firewall
+- Multiple-region hub and spoke virtual network with network virtual appliance (NVA)
+- Multiple-region virtual WAN with NVA
 - Management groups for policy and management resources only
 - Single-region hub and spoke virtual network with Azure Firewall
 - Single-region virtual WAN with Azure Firewall
@@ -56,7 +56,7 @@ After the bootstrap, you have a continuous integration and continuous delivery p
 
 #### Deployed resources
 
-Based on the scenario and configuration, a set of resources will be deployed, including:
+Based on the scenario and configuration, a set of resources are deployed, including:
 
 - Governance resources, such as management groups and Azure Policy.
 
