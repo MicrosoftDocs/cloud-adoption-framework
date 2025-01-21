@@ -15,14 +15,13 @@ Cloud adoption helps drive business growth, expand market share, and increase re
 
 ## Shift from a CapEx model to an OpEx model
 
-Traditionally, organizations have used a Capital Expenditures (CapEx) model to manage their IT budgets. This approach requires a significant upfront investment in hardware and equipment. Organizations record that investment as an asset on the balance sheet.
+Traditionally, organizations used a Capital Expenditures (CapEx) model to manage their IT budgets. This approach requires a significant upfront investment in hardware and equipment. Organizations record that investment as an asset on the balance sheet.
 
 But when you move to the cloud, IT spending shifts toward an Operating Expenses (OpEx), or revenue-based, model. OpEx includes ongoing operational costs, such as periodic payments for services like Azure. The charges reflect actual usage and maintenance needs rather than fixed equipment costs. Use this model so that your organization can adjust costs based on actual usage, which promotes financial agility and efficiency.
 
 Also consider the following factors when you shift to an OpEx model:
 
-- **Immediate tax deductions:** Review immediate tax deductions instead of depreciation to improve your cash flow.
-
+- **Immediate tax deductions:** To improve your cash flow, review immediate tax deductions instead of depreciation.
 - **Accounting changes:** Be aware of any necessary changes in your accounting practices.
 - **Maintenance contracts:** Review and adjust your maintenance contracts as needed.
 - **Budget allocation:** Instead of a one-time annual budget allocation, take advantage of cloud flexibility by constantly reviewing and adjusting your budgets. This approach requires combined efforts across IT and financial teams.
@@ -33,9 +32,11 @@ You can use an OpEx model to allocate charges or provide real-time application c
 
 Consider the following recommendations when shifting from a CapEx model to an OpEx model:
 
-- **Inform others about CapEx to OpEx:** Educate your business teams and leadership about the shift from a traditional CapEx cost structure to a more flexible OpEx pricing model. Discuss how the new model improves agility and efficiency. For more information, see [The shift from the CapEx to OpEx model](/training/modules/get-started-with-finops/1-introduction).
-- **Implement budget management:** Establish budgets for the top-spending platform services on the cloud to control cloud costs in the initial stages of cloud adoption. This approach helps platform teams and budget managers detect unanticipated changes.
-- **Maximize your return on investment:** Understand the cost-to-benefit ratio, and ensure that the cloud services you plan to use directly contribute to business objectives. Explore the [Azure total cost of ownership calculator](https://azure.microsoft.com/pricing/tco/calculator/), [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/), and [Microsoft Cost Management](https://azure.microsoft.com/products/cost-management).
+- _Inform others about CapEx to OpEx:_ Educate your business teams and leadership about the shift from a traditional CapEx cost structure to a more flexible OpEx pricing model. Discuss how the new model improves agility and efficiency. For more information, see [The shift from the CapEx to OpEx model](/training/modules/get-started-with-finops/1-introduction).
+
+- _Implement budget management:_ Establish budgets for the top-spending platform services on the cloud to control cloud costs in the initial stages of cloud adoption. This approach helps platform teams and budget managers detect unanticipated changes.
+
+- _Maximize your return on investment:_ Understand the cost-to-benefit ratio, and ensure that the cloud services you plan to use directly contribute to business objectives. Explore the [Azure total cost of ownership calculator](https://azure.microsoft.com/pricing/tco/calculator/), [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/), and [Microsoft Cost Management](https://azure.microsoft.com/products/cost-management).
 
 ## Establish best practices with financial operations (FinOps)
 
@@ -55,8 +56,9 @@ Implement financial operations to find the right balance between innovation and 
 
 Consider the following financial efficiency considerations for your cloud adoption strategy.
 
-- **Explore the FinOps Framework:** Check out the [FinOps Framework](/cloud-computing/finops/) for best practices to maximize cloud business value.
-- **Assess your financial posture:** Use the [FinOps Review assessment](/assessments/ad1c0f6b-396b-44a4-924b-7a4c778a13d3/) to get recommendations for maximizing cloud business value.
+- _Explore the FinOps Framework:_ Check out the [FinOps Framework](/cloud-computing/finops/) for best practices to maximize cloud business value.
+
+- _Assess your financial posture:_ Use the [FinOps Review assessment](/assessments/ad1c0f6b-396b-44a4-924b-7a4c778a13d3/) to get recommendations for maximizing cloud business value.
 
 ## Next step
 
