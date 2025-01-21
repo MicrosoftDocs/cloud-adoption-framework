@@ -63,4 +63,4 @@ Consider the following financial efficiency considerations for your cloud adopti
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Resiliency considerations](resiliency.md)
+> [AI considerations](./ai.md)

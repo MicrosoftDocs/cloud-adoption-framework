@@ -81,4 +81,4 @@ Follow these recommendations to inform your cloud adoption strategy of AI consid
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Security](security.md)
+> [Resiliency considerations](./resiliency.md)
