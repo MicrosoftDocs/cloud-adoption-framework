@@ -24,6 +24,7 @@ Consider the importance of mapping AI to your business objectives. There are man
 - *Scalability and financial efficiency*. Expand your capabilities without proportional increases in cost.
 - *Innovation*. Unlock new products, services, and business models.
 - *More value from data*. Extract new value from your existing data.
+- *Accelerate sustainability with AI*. Use AI to enhance the ability to predict and optimize complex systems, accelerate the development and deployment of sustainable solutions, and empower your workforce to learn and achieve more.
 
 **Recommendations:**
 
@@ -32,6 +33,8 @@ Consider the importance of mapping AI to your business objectives. There are man
 - *Define an AI technology strategy*: Select the right tools and platforms for your AI use cases. Learn how to decide whether to buy or build your own AI solutions. For more information, see [Recommendations for organizations developing an AI adoption strategy](../../scenarios/ai/strategy.md).
 
 - *Inform your organization and decision makers about adopting AI*: Familiarize yourself with the [Cloud Adoption Framework guidance for adopting AI on Azure](../../scenarios/ai/index.md). This guidance describes all the methodologies of the framework to teach you how to be successful with AI on Azure and help you inform your cloud adoption strategy with the right considerations for AI.
+
+- *Educate your leadership about AI transformations for sustainability*: Learn how AI can help transform your organization's sustainability efforts. For more information, see [AI Transformations for Sustainability](https://blogs.microsoft.com/on-the-issues/2025/01/16/ai-transformations-for-sustainability/).
 
 ## Responsible and trusted AI
 
