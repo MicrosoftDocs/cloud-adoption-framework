@@ -28,12 +28,10 @@ Azure provides four levels of management: management groups, subscriptions, reso
 
 - **Resources** are instances of services you can create in a resource group, such as virtual machines, storage, and SQL databases.
 
-** TO REVIEW: IMO it looks somewhat out of place that we have a note about avoiding placing resource groups and resources in different region without first saying this was possible on the first place. IMO we should either remove this completely, or add a note stating that such a configuration is possible but not recommendded.
 
-**
 
   > [!NOTE]
-  > To minimize the effect of regional outages, we recommend that you place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
+  > To understand and minimize the effect of regional outages, see [Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions).
 
 ### Management settings scope
 
@@ -55,11 +53,10 @@ To create a management group, subscription, or resource group, sign in to the [A
 
 - To create a *subscription* to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
 
-**TO REVIEW: Looks a bit strange that we have a call out indicating subscriptions can be created programatically, but the same thing can be said about the other levels, even [management groups](https://learn.microsoft.com/en-us/azure/governance/management-groups/create-management-group-powershell). Can we get rid of it and just add a note add the top saying that applies to all levels?
 
-**
   > [!NOTE]
-  > You can also create subscriptions programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription).
+  > You can also create resources programmatically. For examples, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription) and [Create a management group with Azure PowerShell
+](/azure/governance/management-groups/create-management-group-powershell) .
 
 - To create a *resource group* to hold resources that share the same permissions and policies:
 
