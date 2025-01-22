@@ -14,15 +14,17 @@ items:
         - name: Network topology and connectivity for Oracle on Azure virtual machines
           href: oracle-network-topology-iaas.md
         - name: Network topology and connectivity for Oracle Database@Azure
-          href: oracle-network-getting-started.md
-            - name: Core Network Design
-              href: oracle-network-core-design.md
-            - name: Application Connectivity Design
-              href: application-connectivity-design.md
-            - name: BCDR Connectivity Design
-              href: bcdr-connectivity-design.md
-            - name: Migration Connectivity Design
-              href: migration-connectivity-design.md   
+          items:
+          - name: Getting started
+            href: oracle-network-getting-started.md
+          - name: Core Network Design
+            href: oracle-network-core-design.md
+          - name: Application Connectivity Design
+            href: application-connectivity-design.md
+          - name: BCDR Connectivity Design
+            href: bcdr-connectivity-design.md
+          - name: Migration Connectivity Design
+            href: migration-connectivity-design.md   
       - name: Identity and access management for Oracle Database@Azure
         href: oracle-iam-odaa.md
       - name: Security
@@ -44,7 +46,6 @@ items:
         - name: Business continuity and disaster recovery for Oracle Database@Azure
           href: oracle-disaster-recovery-oracle-database-azure.md
       - name: Resource organization
-        items:
         - name: Resource organization for Oracle Database@Azure
           href: oracle-resource-org-odaa.md
     - name: Implementation options
