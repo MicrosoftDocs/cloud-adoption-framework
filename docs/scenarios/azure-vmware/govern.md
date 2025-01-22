@@ -20,7 +20,7 @@ To extend your governance approach across the Azure VMware Solution, evaluate an
 
 Azure VMware Solution is an Azure service built with VMware products that delivers vSphere clusters, in a single-tenant private cloud environment. It's accessible for users and applications from on-premises vSphere solutions and Azure-based environments or resources. The VMware technology stack in Azure Cloud runs with a highly secure set of compute, storage, and networking technologies.
 
-A required ExpressRoute circuit can connect to Azure Cloud Services with a dedicated private and redundant Layer 3 network fiber connection that supports bandwidth up to 10 Gbps.
+A required ExpressRoute circuit can connect to Azure cloud services with a dedicated private and redundant Layer 3 network fiber connection that supports bandwidth up to 10 Gbps.
 
 All provisioned private clouds have vCenter Server, ESXi, vSAN, and NSX-T Data Center, so you can migrate workloads from your on-premises vSphere environments, deploy new virtual machines (VMs), and consume Azure services from your private clouds.
 
