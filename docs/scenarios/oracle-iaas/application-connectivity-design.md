@@ -1,3 +1,13 @@
+---
+title: Network topology and connectivity for Oracle Database@Azure - Application Connectivity Design
+description: Learn about connecting an application tier to Oracle Database@Azure.
+author: moisesjgomez
+ms.author: mgomezcortez
+ms.date: 04/26/2024
+ms.topic: conceptual
+ms.custom: e2e-oracle
+---
+
 # Application Connectivity Design for Oracle Database@Azure - Exadata Database Service
 
 Building on the core network concepts for Oracle Database@Azure - Exadata Database Service, this article offers best practices for configuring and managing Azure networking to connect your application tier to Oracle Database@Azure - Exadata Database Service.

@@ -1,3 +1,13 @@
+---
+title: Network topology and connectivity for Oracle Database@Azure - Migration Connectivity Design
+description: Learn about key migration connectivity design considerations and recommendations for Oracle Database@Azure.
+author: moisesjgomez
+ms.author: mgomezcortez
+ms.date: 04/26/2024
+ms.topic: conceptual
+ms.custom: e2e-oracle
+---
+
 # Oracle Database@Azure - Exadata Database Service migration connectivity design
 
 Preparing for a successful Oracle Database@Azure - Exadata Database Service migration often involves establishing secure, high-bandwidth connectivity between your current source environment and Azure. This document outlines foundational networking connectivity strategies for migration. For comprehensive migration steps and methodologies, refer to the [Migration Documentation](./oracle-migration-planning.md).

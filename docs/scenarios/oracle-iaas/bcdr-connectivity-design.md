@@ -1,3 +1,13 @@
+---
+title: Network topology and connectivity for Oracle Database@Azure - BCDR Connectivity Design
+description: Learn about Oracle Database@Azure BCDR connectivity design.
+author: moisesjgomez
+ms.author: mgomezcortez
+ms.date: 04/26/2024
+ms.topic: conceptual
+ms.custom: e2e-oracle
+---
+
 # BCDR Connectivity Design for Oracle Database@Azure - Exadata Database Service
 
 This document focuses on high availability (HA) and disaster recovery (DR) connectivity considerations for Oracle Database@Azure - Exadata Database Service deployments. It begins by addressing within-region redundancy, then expands to cross-region architectures to ensure your environments remain resilient and meet low RPO/RTO requirements.

@@ -1,3 +1,13 @@
+---
+title: Network topology and connectivity for Oracle Database@Azure
+description: Learn about key design considerations and recommendations for Oracle Database@Azure network topology and connectivity.
+author: moisesjgomez
+ms.author: mgomezcortez
+ms.date: 01/17/2025
+ms.topic: conceptual
+ms.custom: e2e-oracle
+---
+
 # Prepare for network connectivity for Oracle Database@Azure - Exadata Database Service
 
 Before adoption begins, create a landing zone to host the workloads that you plan to build in or migrate to Azure. This section of the framework guides you through how to establish connectivity within your landing zone. This article builds upon the CAF [Network Landing Zone](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) design principles.
