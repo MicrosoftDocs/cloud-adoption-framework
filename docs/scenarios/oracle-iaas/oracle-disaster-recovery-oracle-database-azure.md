@@ -72,7 +72,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
   - Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach might introduce additional time for scaling operations and their reflection at the database level.
 
-  ![A diagram of multi-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator.](./media/cross-az.svg)
+  :::image type="content" source="./media/cross-availability-zones.svg" alt-text="A diagram of multi-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
 
 - **Data Guard redo transport mode:** Configure Data Guard redo transport mode according to your application services and RPO requirements:
 
@@ -87,7 +87,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
     For this setup, extra virtual machines running Oracle Data Guard Observers are required to enable Oracle Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, automating the failover process.
 
-![A diagram of Fast start Failover architecture for Oracle Database@Azure Azure landing zone accelerator.](./media/fsfo.svg)
+:::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of Fast start Failover architecture for Oracle Database@Azure Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
 
   - If you require a symmetrical disaster recovery architecture if there's a failover, it's advisable to position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
 

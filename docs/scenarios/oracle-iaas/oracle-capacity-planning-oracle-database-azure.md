@@ -15,7 +15,7 @@ Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud In
 This article provides guidance on capacity planning for Oracle Database@Azure by using Exadata Database Service. It includes considerations and recommendations to help you plan this process.
 
 > [!NOTE]
-> For Oracle Database@Azure sizing, [reach out to your local Oracle sales team](https://www.oracle.com/cloud/azure/oracle-database-at-azure/)..
+> For Oracle Database@Azure sizing, [reach out to your local Oracle sales team](https://www.oracle.com/cloud/azure/oracle-database-at-azure/).
 
 ## Capacity considerations for virtual network and subnet
 
