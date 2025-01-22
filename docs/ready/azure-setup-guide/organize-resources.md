@@ -53,11 +53,6 @@ To create a management group, subscription, or resource group, sign in to the [A
 
 - To create a *subscription* to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
 
-
-  > [!NOTE]
-  > You can also create resources programmatically. For examples, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription) and [Create a management group with Azure PowerShell
-](/azure/governance/management-groups/create-management-group-powershell) .
-
 - To create a *resource group* to hold resources that share the same permissions and policies:
 
   1. Go to [Create a resource group](https://portal.azure.com/#create/Microsoft.ResourceGroup).
@@ -66,6 +61,11 @@ To create a management group, subscription, or resource group, sign in to the [A
      1. For **Resource group**, enter a name for the new resource group.
      1. For **Region**, select a region in which to locate the resource group.
   1. Select **Review + create**, and after the review passes, select **Create**.
+
+  > [!NOTE]
+  > You can also create resources programmatically. For examples, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription) and [Create a management group with Azure PowerShell
+](/azure/governance/management-groups/create-management-group-powershell) .
+
 
 ::: zone-end
 
