@@ -10,7 +10,7 @@ ms.custom: AQC
 
 # Organize your Azure resources effectively
 
-Organize your cloud-based resources to secure, manage, and track costs that are related to your workloads. To organize your resources, define a management group hierarchy, consider and follow a naming convention, and apply resource tagging.
+Organize your cloud-based resources to secure, manage, and track costs related to your workloads. To organize your resources, define a management group hierarchy, consider and follow a naming convention, and apply resource tagging.
 
 <!-- markdownlint-disable MD024 -->
 
@@ -20,20 +20,24 @@ Azure provides four levels of management: management groups, subscriptions, reso
 
 :::image type="content" alt-text="Diagram that shows the relationship of management hierarchy levels." source="./media/organize-resources/scope-levels.png":::
 
-- **Management groups** help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions that are applied to the management group.
+- **Management groups** help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
 
-- **Subscriptions** logically associate user accounts with the resources that they create. Each subscription has limits or quotas on the amount of resources that it can create and use. Organizations can use subscriptions to manage costs and the resources created by users, teams, and projects.
+- **Subscriptions** logically associate user accounts with the resources they create. Each subscription has limits or quotas on the amount of resources it can create and use. Organizations can use subscriptions to manage costs and the resources created by users, teams, and projects.
 
 - **Resource groups** are logical containers where you can deploy and manage Azure resources like virtual machines, web apps, databases, and storage accounts.
 
-- **Resources** are instances of services that you can create in a resource group, such as virtual machines, storage, and SQL databases.
+- **Resources** are instances of services you can create in a resource group, such as virtual machines, storage, and SQL databases.
+
+** TO REVIEW: IMO it looks somewhat out of place that we have a note about avoiding placing resource groups and resources in different region without first saying this was possible on the first place. IMO we should either remove this completely, or add a note stating that such a configuration is possible but not recommendded.
+
+**
 
   > [!NOTE]
   > To minimize the effect of regional outages, we recommend that you place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 ### Management settings scope
 
-You can apply management settings, such as policies and role-based access control, at any management level. The level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy applies to all resource groups and resources in that subscription.
+You can apply management settings, such as policies and role-based access control, at any management level. The level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy applies to all resource groups and resources in that subscription, unless explicitly excluded.
 
 Start with applying critical settings at higher levels and project-specific requirements at lower levels. For example, to make sure that all resources for your organization deploy to certain regions, apply a policy to the subscription that specifies the allowed regions. The allowed locations are automatically enforced when users in your organization add new resource groups and resources.
 
@@ -51,6 +55,9 @@ To create a management group, subscription, or resource group, sign in to the [A
 
 - To create a *subscription* to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
 
+**TO REVIEW: Looks a bit strange that we have a call out indicating subscriptions can be created programatically, but the same thing can be said about the other levels, even [management groups](https://learn.microsoft.com/en-us/azure/governance/management-groups/create-management-group-powershell). Can we get rid of it and just add a note add the top saying that applies to all levels?
+
+**
   > [!NOTE]
   > You can also create subscriptions programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription).
 
