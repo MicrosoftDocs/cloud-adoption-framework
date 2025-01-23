@@ -16,7 +16,7 @@ items:
         - name: Network topology and connectivity for Oracle Database@Azure
           items:
           - name: Getting started
-            href: oracle-network-getting-started.md
+            href: oracle-network-topology-odaa.md
           - name: Core Network Design
             href: oracle-network-core-design.md
           - name: Application Connectivity Design
