@@ -29,7 +29,7 @@ AI enhances individual efficiency and improves business processes. Generative AI
 
 ## Define an AI technology strategy
 
-AAn AI technology strategy focuses on selecting the most suitable tools and platforms for your generative and nongenerative AI use cases. Choose AI solutions that align with your organization's skill sets, data readiness, and budget constraints.
+An AI technology strategy focuses on selecting the most suitable tools and platforms for your generative and nongenerative AI use cases. Choose AI solutions that align with your organization's skill sets, data readiness, and budget constraints.
 
 Microsoft offers a range of options, including software-as-a-service (SaaS), platform-as-a-service (PaaS), and infrastructure-as-a-service (IaaS), each with varying levels of customization and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai) between you and Microsoft.
 
