@@ -56,5 +56,5 @@ Consider the following recommendations when you design your security for Oracle 
 ## Next steps
 
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
-- [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
+- [Network topology and connectivity for Oracle Database@Azure](network-getting-started.md)
 - [Business continuity and disaster recovery (BCDR) for Oracle Database@Azure](oracle-disaster-recovery-odaa.md)
