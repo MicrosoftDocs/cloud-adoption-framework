@@ -46,7 +46,8 @@ items:
         - name: Business continuity and disaster recovery for Oracle Database@Azure
           href: oracle-disaster-recovery-oracle-database-azure.md
       - name: Resource organization
-        - name: "Resource organization for Oracle Database@Azure"
+        items:
+        - name: Resource organization for Oracle Database@Azure
           href: oracle-resource-org-odaa.md
     - name: Implementation options
       items:
