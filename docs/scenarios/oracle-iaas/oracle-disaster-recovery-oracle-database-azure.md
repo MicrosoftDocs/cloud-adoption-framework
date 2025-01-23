@@ -10,7 +10,7 @@ ms.custom: e2e-oracle
 
 # Business continuity and disaster recovery considerations for Oracle Database@Azure
 
-This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). It incorporates the [Oracle maximum availability architecture (MAA)](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) principles for Oracle Database@Azure by using Oracle Exadata Database Service.
+This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). It incorporates the [Oracle Maximum Availability architecture (MAA)](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) principles for Oracle Database@Azure by using Oracle Exadata Database Service.
 
 The first step to building a resilient architecture for your Oracle databases that run on Oracle Database@Azure is to identify the availability requirements for the solution. It's crucial to establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including planned and unplanned events. The RTO defines the maximum downtime that an application or business can tolerate after a disruption. The RPO specifies the maximum duration of data loss that an application or business can tolerate. You should address this prerequisite before you start your BCDR design. After you establish the requirements of your solution, you can design your Oracle Database@Azure environment to align with your RTO and RPO.
 
@@ -60,28 +60,26 @@ The multi-zone BCDR architecture is recommended for customers that require a zer
 
 This solution includes a secondary Oracle Exadata Database@Azure deployment in a different availability zone within the same region. To ensure resilience against database, cluster, or availability zone failures, implement a standby database located in the secondary instance. This setup provides protection against site-level failures.  
 
-- **Maintain a symmetric standby instance:** It's recommended to maintain a symmetric standby instance with resources equivalent to the primary database to ensure consistent performance during switchover and failover operations.
-
-  - Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach might introduce additional time for scaling operations and their reflection at the database level.
+- **Maintain a symmetric standby instance:** It's recommended to maintain a symmetric standby instance with resources equivalent to the primary database to ensure consistent performance during switchover and failover operations. Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach might introduce additional time for scaling operations and their reflection at the database level.
 
   :::image type="content" source="./media/cross-availability-zones.svg" alt-text="A diagram of multi-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
 
 - **Data Guard redo transport mode:** Configure Data Guard redo transport mode according to your application services and RPO requirements:
 
-  - **Data integrity and zero data loss:** When data integrity and zero data loss are the highest priorities, use Maximum Availability Mode (SYNC). This mode synchronously replicates data to the standby database, which ensures = 0.
+  - **Data integrity and zero data loss:** When data integrity and zero data loss are the highest priorities, use Maximum Availability Mode (SYNC). This mode synchronously replicates data to the standby database, which ensures that no data is lost.
   
-  - **System performance:** When system performance is critical and a small degree of data loss is acceptable, use Maximum Performance Mode (ASYNC). This mode uses asynchronous replication, resulting in RPO > 0 (near zero).
+  - **System performance:** When system performance is critical and a small degree of data loss is acceptable, use Maximum Performance Mode (ASYNC). This mode uses asynchronous replication, which results in a RPO that's slightly greater than zero (or is near zero).
 
 - **Automate failover operations:** Use [Oracle Data Guard Fast-Start Failover](https://www.oracle.com/technical-resources/articles/smiley-fsfo.html) to automate failover operation to minimize RTO and reduce errors.
 
   > [!NOTE]
   > Fast-Start Failover isn't a managed service and requires manual configuration.
 
-    For this setup, extra VMs that run Oracle Data Guard Observers are required to enable Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, which automates the failover process.
+For this setup, extra VMs that run Oracle Data Guard Observers are required to enable Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, which automates the failover process.
 
 :::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of the Fast-Start Failover architecture for Oracle Database@Azure Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
 
-  - If you require a symmetrical DR architecture if there's a failover, it's advisable to position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
+If you require a symmetrical DR architecture if there's a failover, it's advisable to position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
 
 ### Multiregion BCDR
 
@@ -92,7 +90,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
   > [!NOTE]
   > Automated Data Guard only allows the Maximum Performance mode (ASYNC) configuration for cross-region deployments.
 
-  :::image type="content" source="./media/gold-cross-region.svg" alt-text="A diagram of multiregion BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/gold-cross-region.svg" border="false":::
+:::image type="content" source="./media/gold-cross-region.svg" alt-text="A diagram of multiregion BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/gold-cross-region.svg" border="false":::
 
 - Multi-zone and multiregion BCDR recommendations focus on database service resiliency. To ensure overall workload resiliency, consider using Azure services and features such as Azure Virtual Machine Scale Sets, Azure Site Recovery and Azure Front Door to design robust architecture across availability zones or regions.
 
@@ -115,16 +113,16 @@ This architecture is ideal for mission-critical workloads and requires a minimum
 >
 > This setup requires manual Data Guard replication configuration.
 
-#### Data Guard far sync architecture
+#### Data Guard Far Sync architecture
 
 You can meet the requirement to implement zero data loss replication at any distance by using the Data Guard Far Sync configuration. This approach includes placing a [far sync instance](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/creating-oracle-data-guard-far-sync-instance.html) closer to the primary Oracle Exadata Database@Azure deployment, essentially in another availability zone within the same region, to synchronously send the redo logs. The far sync instance then transfers these logs asynchronously to the standby database that runs in the secondary Oracle Exadata Database@Azure deployment in another region. This setup effectively results in zero data loss replication between regions.
 
-:::image type="content" source="./media/far-sync.svg" alt-text="A diagram of far sync BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/far-sync.svg" border="false":::
+:::image type="content" source="./media/far-sync.svg" alt-text="A diagram of Far Sync BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/far-sync.svg" border="false":::
 
 If you look for a symmetrical DR architecture if there's a failover, place a far sync instance in a separate availability zone where the secondary Oracle Exadata Database@Azure deployment is configured.
 
 > [!NOTE]
-> The far sync architecture requires an Active Data Guard license and must be manually configured.
+> The Far Sync architecture requires an Active Data Guard license and must be manually configured.
 
 ### Backup recommendations
 

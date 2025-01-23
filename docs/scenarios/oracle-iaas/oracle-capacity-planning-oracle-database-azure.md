@@ -25,24 +25,20 @@ This article provides guidance on capacity planning for Oracle Database@Azure by
 
 - You can assign multiple Exadata VM clusters to the same delegated subnet. Plan for sufficient IP address ranges to accommodate the required number of VM clusters. For example, if you expect to deploy two VM clusters in the same subnet, ensure that your subnet has enough IP addresses to support both clusters. For more information, see [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
-- You can assign Exadata VM clusters to different virtual networks in the same subscription or in different subscriptions. For example, a VM cluster is assigned to a development subscription while Oracle Exadata Infrastructure and another Exadata VM Cluster resource are from production subscriptions. This approach minimizes the need to establish separate infrastructure resources just for the development subscription.
-
-  - To assign an Exadata VM cluster to a virtual network from a separate Azure subscription, ensure that both subscriptions are under the same billing account. For more information, see [Link Oracle Database@Azure to multiple Azure subscriptions](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription).
+- You can assign Exadata VM clusters to different virtual networks in the same subscription or in different subscriptions. For example, a VM cluster is assigned to a development subscription while Oracle Exadata Infrastructure and another Exadata VM Cluster resource are from production subscriptions. This approach minimizes the need to establish separate infrastructure resources just for the development subscription. To assign an Exadata VM cluster to a virtual network from a separate Azure subscription, ensure that both subscriptions are under the same billing account. For more information, see [Link Oracle Database@Azure to multiple Azure subscriptions](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription).
 
     > [!NOTE]
     > By default, Oracle Database@Azure service can use up to five delegated subnets. If extra subnet capacity is required, you can request a service limit increase. For more information, see [Delegated subnet limits](/azure/oracle/oracle-db/oracle-database-delegated-subnet-limits).
 
 - If you plan to increase the number of VM clusters, ensure that the classless inter-domain routing (CIDRs) of the client subnet are properly allocated to prevent IP address conflicts and maintain network segmentation. For more information, see [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
-- Oracle Exadata Database@Azure backup subnets can be optionally provided during VM cluster creation. Backup subnets are created in OCI and don't need to be present in Azure virtual network.
-
-  - Preassign backup subnet CIDRs to avoid IP address conflicts. This approach helps ensure smooth network operations and prevents potential connectivity problems.
+- Oracle Exadata Database@Azure backup subnets can be optionally provided during VM cluster creation. Backup subnets are created in OCI and don't need to be present in Azure virtual network. Preassign backup subnet CIDRs to avoid IP address conflicts. This approach helps ensure smooth network operations and prevents potential connectivity problems.
 
 ## Capacity considerations for Exadata Infrastructure
 
 - Oracle Exadata Database@Azure allows provisioning of an infrastructure to start with two databases and three storage servers, referred to as a *quarter rack*. Before provisioning, ensure that all necessary prerequisites are met, such as network configurations and resource allocations. For more information, see [Provisioning Exadata Infrastructure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-infrastructure.html).
 
-- You can add extra database and storage servers independently. You can add up to a maximum of 32 database servers and 64 storage servers. For more information, see [Oracle Database@Azure Service Scaling Options](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3).
+- You can add extra database and storage servers independently. You can add up to a maximum of 32 database servers and 64 storage servers. For more information, see [Oracle Database@Azure Service scaling options](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3).
 
 - You can scale up or scale down Exadata Infrastructure based on the workload requirements.
 
@@ -95,4 +91,4 @@ Consider the following storage configuration settings:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Migration planning for Oracle on Azure](./oracle-migration-planning.md)
+> [Migrate Oracle workloads to Azure](./oracle-migration-planning.md)
