@@ -67,7 +67,7 @@ Consider the following capacity limitations for Exadata VM Cluster.
   
   - After you provision an Exadata VM Cluster instance, it's possible to scale down the processing power to zero. This action effectively shuts down the VM cluster. During this period, only the infrastructure costs are incurred until the system is scaled up again. This feature helps you save costs on test and development systems when they aren't in use.
 
-## Capacity consideration for storage
+## Capacity considerations for storage
 
 The storage space inside the Oracle Exadata Database@Azure storage servers is configured for use by Oracle Automatic Storage Management (ASM) when you provision the Exadata VM cluster. By default, the following ASM disk groups are created:
 

@@ -85,7 +85,7 @@ If you require a symmetrical DR architecture if there's a failover, you should p
 
 - For a multiregional BCDR strategy, implement a secondary Oracle Exadata Database@Azure deployment with a standby database located in a different region where the service is available. This setup provides protection against full regional outages.
 
-- Configure Data Guard to replicate asynchronously for regional DR that's based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network latency test results](/azure/networking/azure-network-latency).
+- Configure Data Guard to replicate asynchronously for regional DR that's based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network round-trip latency statistics](/azure/networking/azure-network-latency).
 
   > [!NOTE]
   > Automated Data Guard only allows the Maximum Performance mode (ASYNC) configuration for cross-region deployments.
@@ -142,7 +142,7 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
   
   - **Replicate backups:** Use Azure's underlying storage replication features like zone-redundant storage and geo-redundant storage to replicate backups.
 
-- Manually back up Oracle Exadata Database@Azure VMs to restore critical files if there are accidental deletions or corruptions. For more information, see [Oracle Exadata Cloud Compute node backup and restore operations (document ID 2809393.1)](https://support.oracle.com/knowledge/Oracle%20Cloud/2809393_1.html).  
+- **Back up and restore operations:** Manually back up Oracle Exadata Database@Azure VMs to restore critical files if there are accidental deletions or corruptions. For more information, see [Oracle Exadata Cloud Compute node backup and restore operations (document ID 2809393.1)](https://support.oracle.com/knowledge/Oracle%20Cloud/2809393_1.html).  
 
 ## Other recommendations
 
