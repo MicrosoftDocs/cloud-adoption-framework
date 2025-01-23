@@ -18,7 +18,7 @@ items:
           - name: Getting started
             href: oracle-network-topology-odaa.md
           - name: Core Network Design
-            href: oracle-network-core-design.md
+            href: core-network-design.md
           - name: Application Connectivity Design
             href: application-connectivity-design.md
           - name: BCDR Connectivity Design
