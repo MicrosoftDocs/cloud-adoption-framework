@@ -17,11 +17,11 @@ Following the guidance, this article further explains key design considerations 
 
 ## Monitor Oracle databases on Azure Virtual Machines landing zone accelerator
 
-The first step of monitoring is to set up general Azure Virtual Machine monitoring and define threshold for the metrics. After you configure the general Azure Virtual Machine monitoring, the next step is to set up Oracle specified monitoring adapted to your environment.
+The first step of monitoring is to set up general Azure Virtual Machine monitoring and define threshold for the metrics. After you configure the general Azure Virtual Machine and managed Disk monitoring, the next step is to set up Oracle specified monitoring adapted to your environment.
 
 ### Log monitoring by Azure monitor
 
-Oracle workload on Azure Virtual Machines landing zone accelerator, you need to monitor Virtual Machine and Oracle Database on Azure Virtual Machine. Azure Monitor provides numerous ways to monitor log of the Virtual Machine and Oracle workload.
+Oracle workload on Azure Virtual Machines landing zone accelerator, you need to monitor Virtual Machine, attached managed Disks or applied storage account, such as Azure NetApp Files as well as Oracle Database on Azure Virtual Machine. Azure Monitor provides numerous ways to monitor log of the Virtual Machine and managed disks for your Oracle workload.
 
 The first step of monitoring for you is to set up general Azure Virtual Machine monitoring.
 
@@ -33,29 +33,52 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
     If you're storing Oracle database files in Azure managed disks, you should monitor the performance related metrics for managed disks. Suitable managed disk SKUs for Oracle databases are Premium SSD, Premium SSD v2, and Ultra disk.
     Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative IOPS and throughput of data disks when disk striping technologies are used such as Oracle Automatic Storage Management (classic deployment model) or Linux Logical Volume Manager (LVM).
 
-    ### Azure managed disk metrics
+    > [!NOTE]
+    > Whenever you provision a virtual machine with NVMe storage, the maximum throughput per disk which can be provisioned is 1200 Mbps. If you need higher throughput keep in mind to provision the number of disks, which achieves your performance numbers and stripe these disks to RAID-0. The blocksize for NVMe virtual machines that provides the best performance is 128 KB.
 
-    The Oracle administrator should monitor disk performance metrics related to IO like the following metrics:
+### Azure virtual machine and managed disk metrics
 
-    - OS Disk IOPS Consumed Percentage
-    - Data Disk IOPS Consumed Percentage
-    - Data Disk Read Bytes/Sec
-    - Data Disk Write Bytes/Sec
-    - Disk Queue Depth
+The Oracle administrator should monitor disk performance metrics related to IO like the following metrics:
 
-    While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks are detailed in the technical specifications for the individual VM SKUs. For more information about VM specifications, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
+| Name                                           | Threshold(s) (Severity) | 
+| ---------------------------------------------- | ----------------------- | 
+| Percentage CPU > 95                            | 95 (2)                  | 
+| Percentage CPU >= 85                           | 85 (1)                  | 
+| Percentage CPU >= 75                           | 75 (2)                  | 
+| VmAvailabilityMetric < 1                       | < 1 (0)                 | 
+| OS Disk Bandwidth Consumed Percentage > 95     | 95 (0)                  | 
+| OS Disk Bandwidth Consumed Percentage > 90     | 90 (1)                  | 
+| Available Memory Bytes < 500000000             | < 500000000 (1)         | 
+| VM cached Bandwidth Consumed Percentage > 95   | 95 (2)                  | 
+| VM cached Bandwidth Consumed Percentage > 85   | 85 (2)                  | 
+| VM cached Bandwidth Consumed Percentage > 75   | 75 (2)                  | 
+| VM uncached Bandwidth Consumed Percentage > 95 | 95 (2)                  | 
+| VM uncached Bandwidth Consumed Percentage > 85 | 85 (2)                  | 
+| VM uncached Bandwidth Consumed Percentage > 75 | 75 (2)                  | 
+| Data Disk IOPS Consumed Percentage > 95        | 95 (2)                  | 
+| Data Disk IOPS Consumed Percentage > 85        | 85 (2)                  | 
+| Data Disk IOPS Consumed Percentage > 75        | 75 (2)                  | 
+| OS Disk Bandwidth Consumed Percentage > 95     | 95 (2)                  | 
+| OS Disk Bandwidth Consumed Percentage > 85     | 85 (2)                  |  
+| OS Disk Bandwidth Consumed Percentage > 75     | 75 (2)                  | 
+| VolumeConsumedSizePercentage per Lun >= 95     | \>=95 (0)               | 
+| VolumeConsumedSizePercentage >= 90             | \>=90 (2)               |  
+| UnhealthyHostCount >=1                         | \>=1 (0)                |   
 
-    Selecting the appropriate VM SKU, use the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the Virtual Machine max uncached disk throughput, the Virtual Machine IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling could happen at the disk level.
 
-    For more information about Disk performance related metrics, see [Disk metrics - Azure Virtual Machines](/azure/virtual-machines/disks-metrics).
+ While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks are detailed in the technical specifications for the individual VM SKUs. For more information about VM specifications, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
-5. Monitor Azure NetApp Files (ANF) metrics. If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput, and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
+Selecting the appropriate VM SKU, use the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the Virtual Machine max uncached disk throughput, the Virtual Machine IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling could happen at the virtual machine and disk level.
 
-    - [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)
+For more information about Disk performance related metrics, see [Disk metrics - Azure Virtual Machines](/azure/virtual-machines/disks-metrics).
 
-    - [Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics)
+1. Monitor Azure NetApp Files (ANF) metrics. If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput, and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
 
-    While monitoring ANF metrics, it's also important to monitor the Virtual Machine’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative Virtual Machines IO throughput limits on any Virtual Machine instance type. Instead, ANF is only restricted by the network bandwidth on the database Virtual Machine series. The Virtual Machine limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
+ - [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)
+
+ - [Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics)
+
+While monitoring ANF metrics, it's also important to monitor the Virtual Machine’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative Virtual Machines IO throughput limits on any Virtual Machine instance type. Instead, ANF is only restricted by the network bandwidth on the database Virtual Machine series. The Virtual Machine limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
 
 ### Configure the alerts for Azure virtual machine metrics
 
@@ -63,15 +86,7 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
 
     Recently, an initiative developed as an easy way to deploy alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://aka.ms/amba/alz/wiki) as a common set of Azure resources/services that are configured in a similar way across organizations.
 
-2. The following disk related metrics should also be monitored. If thresholds are exceeded, it's recommended that an alert is issued.  
-
-    | **Alert Rule Name** | **Condition** |
-    |---|---|
-    | OS Disk IOPS Consumed Percentage | OS Disk IOPS Consumed Percentage > 95 |
-    | Data Disk IOPS Consumed Percentage | Data Disk IOPS Consumed Percentage > 95 |
-    | Data Disk Read Bytes/Second | Adjust to system performance trends|
-    | Data Disk Write Bytes/Second | Adjust to system performance trends|
-    | Disk Queue Depth | Adjust to system performance trends |
+2. Managed disk related metrics should also be monitored. If thresholds are exceeded, it's recommended that an alert is issued.  
   
 ### Monitor related Azure services
 
@@ -83,7 +98,7 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
 | Azure Backup |Azure Backup can be monitored and can be set the alert.| [Monitor at scale by using Azure monitor](/azure/backup/backup-azure-monitoring-use-azuremonitor) <br> Monitor the Oracle database “alert log” file on the database VM for lines starting with the following format:<br> status – AzBackup – script – version: message <br> - where: status = “INFO”, “WARN”, or “FAIL” <br> - AzBackup (boilerplate text) <br> - script = “pre-script" or “post-script"<br> - version = version number in decimal format <br> message = free-format text <br>Example:  INFO - AzBackup pre-script v1.02: BEGIN BACKUP |
 |Azure database Virtual Machine |Database “alert log” file, OS console messages file | - Database “alert log” file is typically located in the subdirectory “$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace” on the database Virtual Machine<br> - OS console log located at “/var/log/messages” |
 
-### Oracle workload monitoring by Oracle Enterprise Manager cloud control
+### Oracle workload monitoring by Oracle Enterprise Manager Cloud Control
 
 Oracle Enterprise Manager is an Oracle integrated enterprise management product. It provides the monitoring features of events, incidents, metrics against the target Oracle workloads.
 
@@ -99,7 +114,7 @@ Utilize Azure Monitor to collect telemetry data and gain insights into the healt
 
 |Approach & Option |Description |URL  |
 |:---------------|:---------------|:-------------|
-|AWR(Automatic Workload Repository)  |AWR provides the monitoring features to collect, process, and maintain performance statistics for problem detection and self-tuning. This monitoring helps you to realize historical analytics and identify the problems. |[Gathering database statistics](https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/gathering-database-statistics.html#GUID-9D3A3890-8E68-48C5-84D0-DB0A8D93C53A)|
+|AWR (Automatic Workload Repository)  |AWR provides the monitoring features to collect, process, and maintain performance statistics for problem detection and self-tuning. This monitoring helps you to realize historical analytics and identify the problems. |[Gathering database statistics](https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/gathering-database-statistics.html#GUID-9D3A3890-8E68-48C5-84D0-DB0A8D93C53A)|
 |Statspack |Statspack gathers Oracle database instance statistics even in environments where AWR and ADDM aren't running. Statspack includes the summary and details of database statistics, and wait events, system statistics, etc. For more information, see the following links.  |[Performance tuning with STATSPACK, part I](https://www.oracle.com/technetwork/database/performance/statspack-129989.pdf) <br>  [Performance tuning with STATSPACK, part II](https://www.oracle.com/technetwork/database/performance/statspack-tuning-otn-new-128500.pdf) |
 |Oracle Enterprise Manager Diagnostics and Tuning  |The Oracle Diagnostics Pack provides automatic performance diagnostic and advanced system monitoring functionality. The Oracle Tuning Pack provides database administrators with expert performance management for the Oracle environment, including SQL tuning and storage optimizations. |[Diagnostics and Tuning packs](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/performance.html)  |
 
