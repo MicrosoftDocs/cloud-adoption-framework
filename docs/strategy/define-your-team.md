@@ -45,11 +45,11 @@ Here's a list of typical functions and their relevance for a cloud adoption stra
 Your cloud strategy team should continuously seek input from across the business. Consider ensuring alignment and seeking input from these additional teams and personas:
 
 - _Finance leadership_ guides budgeting, cost management, and financial planning. They help maximize the return on cloud investments by ensuring financial efficiency and compliance with corporate financial policies.
-- _Marketing_ shapes brand reputation and customer engagement strategies. They ensure that cloud capabilities support customer acquisition, retention, and digital marketing initiatives to enhance overall brand value.
-- _Sales_ drives revenue growth and improves customer relationships. They align cloud solutions with sales goals to help streamline sales processes, boost efficiency, and improve customer lifetime value.
+- _Marketing_ shapes brand reputation and customer engagement strategies. They ensure that cloud capabilities support customer acquisition, retention, and digital marketing initiatives to enhance overall brand image.
+- _Sales_ drives revenue growth and builds customer relationships. They align cloud solutions with sales goals to help streamline sales processes, boost efficiency, and improve customer lifetime value.
 - _Human resources (HR)_ provides insights and support that directly influence the success and sustainability of the transformation. If you have recruitment, re-skilling, or workforce planning requirements because of new areas for innovation, HR is a crucial partner.
 - _Executive leadership_ helps you meet market growth requirements and environmental sustainability metrics. 
-- _Sustainability leads_ drive sustainability as a strategy throughout the business. Sustainability is aligned with the company's commitments.
+- _Sustainability leads_ drive sustainability as part of the cloud strategy throughout the business, ensuring sustainability is aligned with the company's environmental commitments.
 
 ## Recommendations for defining your cloud strategy team
 
