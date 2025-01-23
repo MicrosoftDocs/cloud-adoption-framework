@@ -65,7 +65,7 @@ Consider the following capacity limitations for Exadata VM Cluster.
 
   - You can adjust the number of OCPUs and the memory allocation for an Exadata VM Cluster instance symmetrically across all nodes up to the infrastructure limits by using the OCI console, API, SDK, or Terraform.
   
-  - After an Exadata VM Cluster instance has been provisioned, it's possible to scale down the processing power to zero. This action effectively shuts down the VM cluster. During this period, only the infrastructure costs are incurred until the system is scaled up again. This feature helps you save costs on test and development systems when they aren't in use.
+  - After you provision an Exadata VM Cluster instance, it's possible to scale down the processing power to zero. This action effectively shuts down the VM cluster. During this period, only the infrastructure costs are incurred until the system is scaled up again. This feature helps you save costs on test and development systems when they aren't in use.
 
 ## Capacity consideration for storage
 
