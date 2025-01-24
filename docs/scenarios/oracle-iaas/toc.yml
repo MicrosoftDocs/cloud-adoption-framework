@@ -18,7 +18,7 @@ items:
           - name: Getting started
             href: oracle-network-topology-odaa.md
           - name: Core Network Design
-            href: oracle-network-core-design.md
+            href: core-network-design.md
           - name: Application Connectivity Design
             href: application-connectivity-design.md
           - name: BCDR Connectivity Design
@@ -46,7 +46,8 @@ items:
         - name: Business continuity and disaster recovery for Oracle Database@Azure
           href: oracle-disaster-recovery-oracle-database-azure.md
       - name: Resource organization
-        - name: "Resource organization for Oracle Database@Azure"
+        items:
+        - name: Resource organization for Oracle Database@Azure
           href: oracle-resource-org-odaa.md
     - name: Implementation options
       items:
