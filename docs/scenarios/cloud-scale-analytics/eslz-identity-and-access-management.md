@@ -1,9 +1,9 @@
 ---
-title: Identity and access management for cloud-scale analytics
+title: Identity and Access Management for Cloud-Scale Analytics
 description: Learn how this scenario can improve identity and access management for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/27/2024
+ms.date: 01/24/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -32,7 +32,7 @@ These two first role assignments enable self-service deployment of data services
 
 To also enable self-service use of other shared resources within the data landing zone, few extra role assignments are required. If access to a Databricks environment is required, organizations should use the [SCIM Synch from Microsoft Entra ID](/azure/databricks/administration-guide/users-groups/scim/aad) to provide access. This is important because this mechanism automatically syncs users and groups from Microsoft Entra ID to the Databricks data plane and also automatically removes access rights when an individual leaves the organization or business. Within Azure Databricks, the data application teams should be given `Can Restart` access rights to a predefined cluster to be able to run workloads within the workspace.
 
-Individual teams require access to the Microsoft Purview account to discover data assets within the respective data landing zones. In addition, the teams will in most cases require the option to edit cataloged data assets that they're owning in order to provide extra details such as contact details of data owners and experts as well as more granular details about what columns within a dataset describe and what information they're including.
+Individual teams require access to the Microsoft Purview account to discover data assets within the respective data landing zones. In addition, the teams in most cases require the option to edit cataloged data assets that they're owning in order to provide extra details such as contact details of data owners and experts as well as more granular details about what columns within a dataset describe and what information they're including.
 
 ### Summary of role based access control requirements
 
@@ -84,7 +84,7 @@ For automation purposes of deploying data landing zones, you need these roles:
 :::row-end:::
 
 > [!NOTE]
-> The number of role assignments can be reduced in a production scenario. The `Network Contributor` role assignment is only required to set up the virtual network peering between the data management landing zone and the data landing zone. Without this consideration, DNS resolution doesn't work. Inbound and outbound traffic is dropped because there is no line of sight to the Azure Firewall.
+> The number of role assignments can be reduced in a production scenario. The `Network Contributor` role assignment is only required to set up the virtual network peering between the data management landing zone and the data landing zone. Without this consideration, DNS resolution doesn't work. Inbound and outbound traffic is dropped because there's no line of sight to the Azure Firewall.
 >
 > The `Private DNS Zone Contributor` is also not required if the deployment of DNS A-records of the private endpoints is automated through Azure policies with `deployIfNotExists` effect. The same is true for the `User Access Administrator` because the deployment can be automated using `deployIfNotExists` policies.
 
