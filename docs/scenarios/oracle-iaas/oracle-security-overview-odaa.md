@@ -23,12 +23,12 @@ For more information, see [Security guide for Oracle Exadata Database Service on
 
 Consider the following guidance when you design your security guidelines for Oracle Exadata Database@Azure:
 
-- Oracle Database@Azure is a collocated solution that is deployed in Azure virtual networks and datacenters.  
-Managing Oracle Exadata Database@Azure resources involves the integration of two cloud platforms, with each governed by the security principles of Azure and Oracle Cloud Infrastructure(OCI). The Azure control plane manages the provisioning of the infrastructure, Virtual Machine(VM) Cluster, and network connectivity. The OCI control plane handles database management and individual node management. 
+- Oracle Database@Azure is an Oracle database service running on Oracle Cloud Infrastructure (OCI), colocated in Microsoft data centers.  
+Managing Oracle Exadata Database@Azure resources involves the integration of two cloud platforms, with each governed by the security principles of Azure and Oracle Cloud Infrastructure(OCI). The Azure control plane manages the provisioning of the infrastructure, Virtual Machine(VM) Cluster, and network connectivity. The OCI console handles database management and individual node management. 
 
-- The Oracle Database@Azure service is integrated into Azure virtual networks through subnet delegation and is deployed using private subnets.
+- The Oracle Database@Azure service is integrated into Azure virtual networks through subnet delegation.
 
-    **Note** that Azure [default outbound access](/azure/virtual-network/ip-services/default-outbound-access) isn't applicable to Oracle Exadata Database@Azure.
+    **Note** that Oracle Exadata Database@Azure does not have inbound or outbound Internet access by default.
 
 - Oracle Database@Azure client subnet currently doesn't support network security groups (NSGs).
 
@@ -50,10 +50,8 @@ Managing Oracle Exadata Database@Azure resources involves the integration of two
 Consider the following recommendations when you design your security principles for Oracle Exadata Database@Azure:
 
 - Segment infrastructure access from data services access, especially when different teams access multiple databases on the same infrastructure for various reasons. Deploy VM clusters in a different virtual network for achieving network and management isolation at the workload level.
-
 - Use NSG rules to limit the source IP address range, which secures the data plane and virtual network access. To prevent unauthorized access, only open the necessary ports that you require for secure communication and apply [Principle of least privilege](https://learn.microsoft.com/entra/identity-platform/secure-least-privileged-access). You can configure NSG rules on OCI.
-
-- Configure network address translation (NAT) or use Azure Firewall or third party NVAs as a proxy if you require outbound internet access. Ensure that data in transit is always encrypted.
+- Configure network address translation (NAT) or use Azure Firewall or third party NVAs as a proxy if you require outbound internet access. 
 - Key Management recommendations:
     - Oracle Exadata Database@Azure has a built-in integration OCI Vault.  
     If you choose OCI Vault to store the master encryption keys, keep in mind that the keys will be stored outside of Azure, in OCI.  
