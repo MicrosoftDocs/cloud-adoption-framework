@@ -2462,7 +2462,7 @@
       },
       {
          "source_path": "docs/strategy/define-sovereignty-strategy.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/industries",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/resiliency",
          "redirect_document_id": false
       },
       {
@@ -2786,7 +2786,7 @@
       },
       {
          "source_path": "docs/strategy/define-sovereignty-strategy.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/industries",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/resiliency",
          "redirect_document_id": false
       },
       {
