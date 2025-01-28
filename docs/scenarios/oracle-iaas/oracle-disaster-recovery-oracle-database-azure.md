@@ -26,7 +26,7 @@ For more information, see the Microsoft Azure Well-Architected Framework's guide
 
 - Oracle Exadata Database@Azure provides HA against database instance and hardware-level failures by default. This architecture aligns with the [MAA silver level](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-91572193-DF8E-4D7A-AF65-7A803B89E840). Planned maintenance operations can be conducted in a rolling manner. However, a default single-zone architecture has zero fault tolerance against site or regional failures.
 
-- The solution provides automated Data Guard configuration for DR. This setup helps protect from site failures by requiring another Oracle Exadata Database@Azure deployment in a different availability zone or region. Automated Data Guard supports only single standby replication. If multiple standby deployments are required, manual Data Guard replication configuration is necessary.
+- The solution provides automated Data Guard configuration for DR. This setup helps protect from site failures by requiring another Oracle Exadata Database@Azure deployment in a different availability zone or region.
 
 - Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. By default, the primary route for this connectivity is through Azure.
 
@@ -60,15 +60,15 @@ The multiple-zone BCDR architecture is recommended for customers who require a z
 
 This solution includes a secondary Oracle Exadata Database@Azure deployment in a different availability zone within the same region. To ensure resilience against database, cluster, or availability zone failures, implement a standby database located in the secondary instance. This setup provides protection against site-level failures.  
 
-- **Maintain a symmetric standby instance:** You should maintain a symmetric standby instance with resources equivalent to the primary database to ensure consistent performance during switchover and failover operations. Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach might add extra time for scaling operations and their reflection at the database level.
-
-  :::image type="content" source="./media/cross-availability-zones.svg" alt-text="A diagram of multiple-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
-
 - **Data Guard redo transport mode:** Configure Data Guard redo transport mode according to your application services and RPO requirements:
 
   - **Data integrity and zero data loss:** When data integrity and zero data loss are the highest priorities, use Maximum Availability Mode (SYNC). This mode synchronously replicates data to the standby database, which ensures that no data is lost.
   
   - **System performance:** When system performance is critical and a small degree of data loss is acceptable, use Maximum Performance Mode (ASYNC). This mode uses asynchronous replication, which results in an RPO that's slightly greater than zero (or is near zero).
+
+- **Maintain a symmetric standby instance:** You should maintain a symmetric standby instance with resources equivalent to the primary database to ensure consistent performance during switchover and failover operations. Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach might add extra time for scaling operations and their reflection at the database level.
+
+  :::image type="content" source="./media/cross-availability-zones.svg" alt-text="A diagram of multiple-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
 
 - **Automate failover operations:** Use [Oracle Data Guard Fast-Start Failover](https://www.oracle.com/technical-resources/articles/smiley-fsfo.html) to automate failover operation to minimize RTO and reduce errors.
 
@@ -111,7 +111,6 @@ This architecture is ideal for mission-critical workloads and requires a minimum
 > [!NOTE]
 > If a symmetrical configuration is required because of a failover scenario, place an extra standby database on Oracle Exadata Database@Azure in the secondary region, within a different availability zone.
 >
-> This setup requires manual Data Guard replication configuration.
 
 #### Data Guard Far Sync architecture
 
@@ -134,7 +133,7 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
   
   - **Use Storage services:** Use Storage services like Blob Storage, Azure Files, and Azure NetApp Files to mount storage as network file system points on the database server and stream Oracle Recovery Manager (RMAN) backups to Storage.
 
-- **Long-term backup retention:** If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Storage.
+- **Long-term backup retention:** If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Azure Storage.
 
 - **Storage backup configurations:** When backups are configured to Storage services, consider the following recommendations:
 
