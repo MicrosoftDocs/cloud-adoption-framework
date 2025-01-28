@@ -34,7 +34,7 @@ Managing Oracle Exadata Database@Azure resources involves the integration of two
 
 - The Oracle Exadata Database@Azure solution uses a predefined list of TCP ports which are defined [here](https://docs.public.content.oci.oraclecloud.com/en-us/iaas/exadatacloud/doc/ecs-security-guide.html#ECSCM-GUID-93DD9F98-AC6F-4538-AE78-13399C1C02A7). The ports are inaccessible from the other subnets by default (which are currently handled by the NSGs within OCI). 
 
-- The Oracle Exadata Database@Azure service enables data-at-rest encryption by default. This encryption is applied at the database layer, securing both the CDB$ROOT and PDBs, and is implemented using the Transparent Data Encryption (TDE) feature.  
+- The Oracle Exadata Database@Azure service enables data-at-rest encryption by default. This encryption is applied at the database layer, securing both the container (CDB$ROOT) and pluggable databases (PDBs), and is implemented using the Transparent Data Encryption (TDE) feature.  
 
 - By default, the database is encrypted by using Oracle-managed encryption keys, which utilize AES-128 encryption and are stored locally in a wallet within the file system of the VM cluster. For detailed information, refer to [here](https://docs.oracle.com/en-us/iaas/exadatacloud/doc/exa-conf-db-features.html#GUID-A7949087-DF56-4EF0-A32B-9465BBC7EE0F).
 
@@ -47,14 +47,14 @@ Managing Oracle Exadata Database@Azure resources involves the integration of two
 
 ## Design recommendations
 
-Consider the following recommendations when you design your security principles for Oracle Exadata Database@Azure:
+Consider the following security recommendations when designing your Oracle Exadata Database@Azure deployment:
 
 - Segment infrastructure access from data services access, especially when different teams access multiple databases on the same infrastructure for various reasons. Deploy VM clusters in a different virtual network for achieving network and management isolation at the workload level.
-- Use NSG rules to limit the source IP address range, which secures the data plane and virtual network access. To prevent unauthorized access, only open the necessary ports that you require for secure communication and apply [Principle of least privilege](https://learn.microsoft.com/entra/identity-platform/secure-least-privileged-access). You can configure NSG rules on OCI.
-- Configure network address translation (NAT) or use Azure Firewall or third party NVAs as a proxy if you require outbound internet access. 
+- Use NSG rules to limit the source IP address range, which secures the data plane and virtual network access. To prevent unauthorized access, only open the necessary ports that you require for secure communication and apply [Principle of least privilege](/entra/identity-platform/secure-least-privileged-access). You can configure NSG rules on OCI.
+- Configure network address translation (NAT) or use Azure Firewall or third party Network Virtaul Appliances as a proxy if you require outbound internet access. 
 - Key Management recommendations:
     - Oracle Exadata Database@Azure has a built-in integration OCI Vault.  
-    If you choose OCI Vault to store the master encryption keys, keep in mind that the keys will be stored outside of Azure, in OCI.  
+    If you choose to store the master encryption keys in OCI Vault, keep in mind that the keys will be stored in OCI, outside of Azure.  
     - If there's a requirement to keep all data and services within Azure, use Oracle Key Vault (OKV). 
     
         OKV doesn’t have built-in integration with the Oracle Exadata Database@Azure solution. [Deploying OKV on Azure](https://docs.oracle.com/en/solutions/deploy-key-vault-database-at-azure/index.html) isn't offered as a managed service. Customers are responsible for installation, database integration on Oracle Exadata Database@Azure and ensuring high availability of the solution. For provisioning details, refer to [Creating Oracle Key Vault Image in Microsoft Azure](https://docs.oracle.com/en/database/oracle/key-vault/21.9/okvag/using_okv_as_oci_vm_compute_instance.html#GUID-E8154AEB-2964-4698-AE6E-64A108C06D11).  
