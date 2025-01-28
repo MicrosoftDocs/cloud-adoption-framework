@@ -16,7 +16,7 @@ This article builds on considerations and recommendations about Azure landing zo
 
 ## Data landing zone design
 
-Cloud-scale analytics supports an access control model using Microsoft Entra identities. The model uses Azure role-based access control (Azure RBAC) and access control lists.
+Cloud-scale analytics supports an access control model by using Microsoft Entra identities. The model uses Azure role-based access control (Azure RBAC) and access control lists.
 
 Review the Azure administration and management activities that your teams perform. Evaluate your cloud-scale analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
 
