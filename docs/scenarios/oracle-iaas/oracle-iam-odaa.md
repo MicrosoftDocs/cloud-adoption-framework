@@ -11,25 +11,21 @@ ms.custom: e2e-oracle
 
 # Enterprise-scale identity and access management for Oracle Database@Azure
 
-In this article
-1.	Design considerations
-2.	Design recommendations
-3.	Next steps
+Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud Infrastructure (OCI) and is colocated in Azure datacenters at Microsoft. This joint offering from Microsoft and Oracle requires you to plan and manage resources across both cloud platforms.
 
-This article builds on the information found in [Identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Use this information to examine design considerations and recommendations for identity and access management that's specific to the deployment of Oracle Database@Azure - Exadata. Identity requirements for Oracle Database@Azure - Exadata vary according to its implementation in Azure. The information provided in this article is based on the most common scenarios. 
+This article builds on the information found in [Identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access). Use this information to examine design considerations and recommendations for identity and access management that's specific to the deployment of Oracle Exadata Database@Azure. Identity requirements for Oracle Exadata Database@Azure vary according to its implementation in Azure. The information provided in this article is based on the most common scenarios. 
 
-Oracle Database@Azure - Exadata is a multicloud solution where Oracle Exadata runs directly within an Azure data center, using Azure infrastructure. This offering, jointly provided by Microsoft and Oracle Cloud Infrastructure (OCI), requires managing identities and RBAC across both platforms. This guide outlines best practices for identity and access management to create consistent deployment patterns for Oracle Database@Azure. 
+Oracle Exadata Database@Azure is a multicloud solution where Oracle Exadata runs directly within an Azure data center, using Azure infrastructure. This offering, jointly provided by Microsoft and Oracle Cloud Infrastructure (OCI), requires managing identities and RBAC across both platforms. This guide outlines best practices for identity and access management to create consistent deployment patterns for Oracle Database@Azure. 
 
-
-## Design considerations
+Oracle Exadata Database@Azure is a multicloud solution where Oracle Exadata runs directly within an Azure data center, using Azure infrastructure. This offering, jointly provided by Microsoft and Oracle Cloud Infrastructure (OCI), requires managing identities and role-based access control (RBAC) across both platforms. This guide outlines best practices for identity and access management to create consistent deployment patterns for Oracle Database@Azure. 
 
 Consider the following identity and access management recommendations for Oracle Database@Azure:
 
 - Accept and enable the Oracle Database@Azure [private offer](/marketplace/private-offers-overview) on Azure Marketplace for your subscription. You need contributor access to the subscription to deploy the Oracle Database@Azure service. For more information, see [Set Up Identity Federation](https://docs.oracle.com/iaas/Content/database-at-azure/oaaonboard-task-8.htm#oaaonboard_task_8). If you aligned your operational model with Azure landing zone principles, the individual application development team that requires Oracle Database@Azure services manages the process. There might be parts of the process that a centralized platform team needs to handle if you run a more traditional model.
-- When deploying the initial Oracle Database@Azure - Exadata instance, certain default groups are automatically created within Microsoft Entra ID and the corresponding OCI tenant. Some of these groups are replicated to OCI, where policies are defined. These groups are used to manage the various actions required for Oracle Database@Azure services. For more information, see [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles).
-- Custom Oracle Database@Azure - Exadata group names can be assigned but require manual setup. Policies are created for [specific group names](/azure/oracle/oracle-db/oracle-database-groups-roles). If you change the group name, you also need to change the policy statement in OCI.
+- When deploying the initial Oracle Exadata Database@Azure instance, certain default groups are automatically created within Microsoft Entra ID and the corresponding OCI tenant. Some of these groups are replicated to OCI, where policies are defined. These groups are used to manage the various actions required for Oracle Database@Azure services. For more information, see [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles).
+- Custom Oracle Exadata Database@Azure group names can be assigned but require manual setup. Policies are created for [specific group names](/azure/oracle/oracle-db/oracle-database-groups-roles). If you change the group name, you also need to change the policy statement in OCI.
 - Contact the OCI administrator to establish other groups and roles within the OCI tenant to enhance the granularity of access permissions. OCI provides control over who can create and manage Oracle Database@Azure resources.
-- There are two predefined roles for Oracle Database@Azure for infrastructure and cluster administration: [odbaa-exa-infra-administrator and odbaa-vm-cluster-administrator](/azure/oracle/oracle-db/oracle-database-groups-roles#groups-and-roles-in-azure). These roles can be assigned to groups. By default, these roles are assigned to the odbaa-exa-infra-administrators and odbaa-vm-cluster-administrators groups respectively.
+- Accept and enable the Oracle Database@Azure [private offer](/marketplace/private-offers-overview) on Azure Marketplace for your subscription. You must have the Contributor role on the subscription to deploy the Oracle Database@Azure service. For more information, see [Set Up Identity Federation](https://docs.oracle.com/iaas/Content/database-at-azure/oaaonboard-task-8.htm#oaaonboard_task_8). If you aligned your operational model with Azure landing zone principles, the individual application development team that requires Oracle Database@Azure services manages the process. There might be parts of the process that a centralized platform team needs to handle if you run a more traditional model.
 - For architectures with multiple clusters, RBAC group permissions are applied to all clusters in the subscription. To specify RBAC to individual clusters separately, create customized group names and policies in OCI and Azure for each cluster.
 - Federation to third party identity providers or Microsoft Active Directory is supported. 
 - For security recommendations beyond federation of identity and RBAC, refer to [Security guidelines for Oracle Database@Azure](./oracle-security-overview-odaa.md).
@@ -43,6 +39,6 @@ Consider the following identity and access management recommendations for Oracle
 - Ensure Entra Id based users are secure. Follow [Identity Management access and best practices](/azure/security/fundamentals/identity-management-best-practices). When securing your entra ID based users, enable [identity protection](/entra/id-protection/overview-identity-protection). Validate by using the [security checklist](/azure/security/fundamentals/steps-secure-identity) for Identity & access management
 - Enable [Entra ID Audit Logging](/entra/identity/monitoring-health/concept-audit-logs) to monitor access related events.
 
-## Next steps
-
+- Use Azure RBAC to control user access to Oracle Database@Azure resources. Follow the principle of least privilege (PoLP) when assigning users to Database@Azure roles.
+- Ensure Entra ID-based users are secure. Follow [Identity Management access and best practices](/azure/security/fundamentals/identity-management-best-practices). When securing your Entra ID-based users, enable [identity protection](/entra/id-protection/overview-identity-protection). Validate by using the [security checklist](/azure/security/fundamentals/steps-secure-identity) for Identity & access management
 - [Security guidelines for Oracle Database@Azure](./oracle-security-overview-odaa.md)
