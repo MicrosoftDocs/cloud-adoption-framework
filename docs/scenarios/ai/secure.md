@@ -23,7 +23,7 @@ Assessing AI security risks involves identifying and evaluating potential vulner
 
 - *Identify data risks.* Use enterprise-wide tools like [Microsoft Purview Insider Risk Management](/purview/insider-risk-management) to assess insider risk and maintain data security throughout the business. Across all AI workloads, classify and prioritize risks based on the sensitivity of the data that they process, store, or transmit.
 
-- *Red-team AI models.* Conduct red-team testing against [generative AI models](/azure/ai-services/openai/concepts/red-teaming) and nongenerative models to assess their vulnerability to attacks. Follow these recommendations for red teaming AI:
+- *Red team AI models.* Conduct red team testing against [generative AI models](/azure/ai-services/openai/concepts/red-teaming) and nongenerative models to assess their vulnerability to attacks. Follow these recommendations for red teaming AI:
 
   - *Assess system capabilities and application context.* Identify what the AI system can do and where it is applied to target real-world vulnerabilities effectively. Work backward from potential impacts to design meaningful attack strategies.  
   
