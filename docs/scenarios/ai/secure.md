@@ -39,7 +39,7 @@ Assessing AI security risks involves identifying and evaluating potential vulner
   
   - *Secure both traditional and AI-specific threats.* Address conventional security vulnerabilities alongside AI risks like prompt injections and data exfiltration. Strengthen both system-level and model-specific defenses.  
 
-For more information, see [Lessons from red teaming 100 generative AI products](https://airedteamwhitepapers.blob.core.windows.net/lessonswhitepaper/MS_AIRT_Lessons_eBook.pdf).
+For more information, see [Lessons from red teaming 100 generative AI products](https://aka.ms/AIRTLessonsPaper).
 
 ## Implement AI security controls
 
