@@ -31,7 +31,7 @@ Assessing AI security risks involves identifying and evaluating potential vulner
   
   - *Distinguish red teaming from benchmarking.* AI red teaming uncovers unknown risks. Benchmarking assesses known vulnerabilities. Focus on testing AI in real-world scenarios rather than relying solely on predefined evaluation metrics.  
   
-  - *Automate to expand risk coverage.* Use tools like PyRIT to test AI systems at scale but maintain human oversight.
+  - *Automate to expand risk coverage.* Use tools like [PyRIT](https://github.com/Azure/PyRIT/tree/main#python-risk-identification-tool-for-generative-ai-pyrit) to test AI systems at scale but maintain human oversight.
   
   - *Prioritize human judgment in AI red teaming.* Automation aids testing, but humans provide necessary context for evaluating nuanced risks like bias, emotional responses, and cultural implications.  
   
