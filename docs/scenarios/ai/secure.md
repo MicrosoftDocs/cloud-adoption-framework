@@ -35,7 +35,7 @@ Assessing AI security risks involves identifying and evaluating potential vulner
   
   - *Prioritize human judgment in AI red teaming.* Automation aids testing, but humans provide necessary context for evaluating nuanced risks like bias, emotional responses, and cultural implications.  
   
-  - *Develop reliable methods to measure AI harms.* RAI failures are complex and subjective. Use structured guidelines and scenario-based assessments to evaluate and mitigate unintended harms.  
+  - *Develop reliable methods to measure responsible AI failures.* Responsible AI failures occur when AI systems violate the principles of responsible AI. Unlike security vulnerabilities, these failures are harder to define and measure due to their subjective, social, and ethical implications. Use structured guidelines and scenario-based assessments to evaluate and mitigate harmful outputs.  
   
   - *Secure both traditional and AI-specific threats.* Address conventional security vulnerabilities alongside AI risks like prompt injections and data exfiltration. Strengthen both system-level and model-specific defenses.  
 
