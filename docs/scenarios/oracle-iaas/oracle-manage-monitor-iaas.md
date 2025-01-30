@@ -23,7 +23,7 @@ The first step of monitoring is to set up general Azure Virtual Machine monitori
 
 Oracle workload on Azure Virtual Machines landing zone accelerator, you need to monitor Virtual Machine, attached managed Disks or applied storage account, such as Azure NetApp Files as well as Oracle Database on Azure Virtual Machine. Azure Monitor provides numerous ways to monitor log of the Virtual Machine and managed disks for your Oracle workload.
 
-The first step of monitoring for you is to set up general Azure Virtual Machine monitoring.
+The first step of monitoring for you is to set up general Azure Virtual Machine and Managed disk monitoring.
 
 1. Enable Virtual Machine [insights](/azure/azure-monitor/vm/vminsights-enable-portal)
 2. Deploy AMA (Azure Monitoring Agent) and configure [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) (Data Collection Rule)
@@ -42,7 +42,7 @@ The Oracle administrator should monitor disk performance metrics related to IO l
 
 | Name                                           | Threshold(s) (Severity) | 
 | ---------------------------------------------- | ----------------------- | 
-| Percentage CPU > 95                            | 95 (2)                  | 
+| Percentage CPU > 95                            | 95 (1)                  | 
 | Percentage CPU >= 85                           | 85 (1)                  | 
 | Percentage CPU >= 75                           | 75 (2)                  | 
 | VmAvailabilityMetric < 1                       | < 1 (0)                 | 
@@ -58,12 +58,16 @@ The Oracle administrator should monitor disk performance metrics related to IO l
 | Data Disk IOPS Consumed Percentage > 95        | 95 (2)                  | 
 | Data Disk IOPS Consumed Percentage > 85        | 85 (2)                  | 
 | Data Disk IOPS Consumed Percentage > 75        | 75 (2)                  | 
+| Data Disk Read Bytes > 95     | 95 (1)                  | 
+| Data Disk Read Bytes > 85     | 85 (2)                  | 
+| Data Disk Read Bytes > 75     | 75 (2)                  | 
+| Data Disk Write Bytes > 95     | 95 (1)                  | 
+| Data Disk Write Bytes > 85     | 85 (2)                  | 
+| Data Disk Write Bytes > 75     | 75 (2)                  | 
 | OS Disk Bandwidth Consumed Percentage > 95     | 95 (2)                  | 
 | OS Disk Bandwidth Consumed Percentage > 85     | 85 (2)                  |  
 | OS Disk Bandwidth Consumed Percentage > 75     | 75 (2)                  | 
-| VolumeConsumedSizePercentage per Lun >= 95     | \>=95 (0)               | 
-| VolumeConsumedSizePercentage >= 90             | \>=90 (2)               |  
-| UnhealthyHostCount >=1                         | \>=1 (0)                |   
+
 
 
  While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks are detailed in the technical specifications for the individual VM SKUs. For more information about VM specifications, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
@@ -72,7 +76,10 @@ Selecting the appropriate VM SKU, use the table and column **Max uncached disk t
 
 For more information about Disk performance related metrics, see [Disk metrics - Azure Virtual Machines](/azure/virtual-machines/disks-metrics).
 
-1. Monitor Azure NetApp Files (ANF) metrics. If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput, and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
+
+**Monitor Azure NetApp Files (ANF) metrics**
+
+If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput, and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
 
  - [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)
 
