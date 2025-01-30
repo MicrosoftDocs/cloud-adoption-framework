@@ -1,78 +1,84 @@
 ---
-title: Authorization for cloud-scale analytics in Azure
+title: Authorization for Cloud-Scale Analytics in Azure
 description: Learn about data management and role-based access control for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/27/2024
+ms.date: 02/01/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Authorization for cloud-scale analytics in Azure
 
-Authorization is the act of granting an authenticated party permission to perform an action. The key principle of **access control** is giving users only the amount of access they need to do their jobs and only allowing certain actions at a particular scope. Role-based security corresponds to access control and is used by many organizations to control access based on defined roles or job functions versus individual users. Users are then assigned one or more security roles, each of which is given authorized permissions to perform specific tasks.
+Authorization is the act of granting an authenticated party permission to perform an action. The key principle of *access control* is to give users only the amount of access that they need to do their jobs and to only allow certain actions at a particular scope. Role-based security corresponds to access control. Many organizations use role-based security to control access based on defined roles or job functions instead of individual users. Users are assigned one or more security roles, and each role is given authorized permissions to perform specific tasks.
 
-When you use Microsoft Entra ID as the centralized identity provider, authorization to access data services, and storage can be granted per user or per application and is based on a Microsoft Entra identity.
+Microsoft Entra ID is a centralized identity provider that grants authorization to access data services and storage for each user or for each application based on a Microsoft Entra identity.
 
 ## Data service authorization
 
-**Azure Role-Based Access Control (RBAC)** and **Access Control Lists (ACLs)** play crucial roles in managing access and ensuring security. Azure RBAC and ACLs both require the user (or application) to have an identity in Microsoft Entra ID. In cloud-scale analytics, RBAC is effective for databases and Azure Data Lake Storage, while ACLs are used primarily in Azure Data Lake Storage to provide fine-grained access control at the file and directory levels. ACLs complement RBAC by offering more detailed permissions within the storage hierarchy.
+Azure role-based access control (RBAC) and access-control lists (ACLs) play crucial roles in managing access and ensuring security. Azure RBAC and ACLs both require the user or application to have an identity in Microsoft Entra ID. In cloud-scale analytics, RBAC is effective for databases and Azure Data Lake Storage. ACLs are used primarily in Data Lake Storage to provide fine-grained access control at the file and directory levels. ACLs complement RBAC by providing more detailed permissions within the storage hierarchy.
 
-Azure RBAC offers built-in roles like “Owner,” “Contributor,” and “Reader,” but you can also create custom roles tailored to specific needs. The following built-in roles are fundamental for all Azure resource types, including Azure data services:
+Azure RBAC provides built-in roles like *Owner*, *Contributor*, and *Reader*, but you can also create custom roles for specific needs. The following built-in roles are fundamental for all Azure resource types, including Azure data services:
 
 | Role | Description |
 |---|---|
 | **Owner** | This role has full access to the resource and can manage everything about the resource, including the right to grant access to it. |
 | **Contributor** | This role can manage the resource but can't grant access to it. |
-| **Reader** | This role can view the resource and information about it (except for sensitive information like access keys or secrets), but they can't make any changes to the resource. |
+| **Reader** | This role can view the resource and information, except for sensitive information like access keys or secrets, about the resource. They can't make any changes to the resource. |
 
 > [!NOTE]
-> Some services have specific RBAC roles like Storage Blob Data Contributor or Data Factory Contributor, which means that specific RBAC roles should be used for these services. RBAC is an additive model where adding role assignments is an active permission. RBAC also supports *deny* assignments that take precedence over *role* assignments.
+> Some services have specific RBAC roles like *Storage Blob Data Contributor* or *Data Factory Contributor*, so you should use these roles for these services. RBAC is an additive model in which adding role assignments is an active permission. RBAC also supports *deny* assignments that take precedence over *role* assignments.
 
 > [!TIP]
-> When planning an access control strategy, it is recommended to grant users only the amount of access they need to perform their jobs and only allow certain actions at a particular scope.
+> When you plan an access control strategy, we recommend that you grant users only the amount of access that they need to perform their jobs. You should also only allow certain actions at a particular scope.
 
-### Access control in Azure Databases
+### Access control in Azure databases
 
-RBAC in Azure databases revolves around roles, scopes, and permissions. Azure provides several built-in roles tailored for database management, such as SQL Server Contributor, which allows management of SQL servers and databases, and SQL DB Contributor, which permits management of SQL databases but not the server itself. Additionally, custom roles can be created with specific permissions to meet unique requirements.
+RBAC in Azure databases revolves around roles, scopes, and permissions. Azure provides several built-in roles for database management. One of those roles is *SQL Server Contributor*, which enables the management of SQL servers and databases. Another role is *SQL DB Contributor*, which permits the management of SQL databases but not of the server itself. Additionally, you can create custom roles that have specific permissions to meet unique requirements.
 
-Roles can be assigned at different scopes, including the subscription level, where roles apply to all resources within the subscription; the resource group level, where roles apply to all resources within the specified resource group; and the resource level, where roles can be assigned directly to individual databases or servers, providing precise control. Permissions define the actions a role can perform, such as read, write, delete, or manage security settings, and these permissions are grouped into roles to simplify management.
+You can assign roles at different scopes, including:
 
-In **Azure SQL Database**, roles can be assigned to users, groups, or applications to control access. For example, a database administrator might be assigned the "SQL Server Contributor" role to manage the server and databases. Roles like "SQL DB Contributor" allow users to create, update, and delete databases, while the "SQL Security Manager" role focuses on security configurations.
+- At the subscription level, where roles apply to all resources within the subscription.
+- At the resource group level, where roles apply to all resources within the specified resource group.
+- At the resource level, where you can assign roles directly to individual databases or servers. This approach gives you precise control. 
 
-For **Azure Cosmos DB**, roles can be assigned to manage access to Cosmos DB accounts, databases, and containers. Built-in roles like "Cosmos DB Account Reader" and "Cosmos DB Account Contributor" provide varying levels of access.
+Permissions define the actions that a role can perform, such as read, write, delete, or manage security settings. These permissions are grouped into roles to simplify management.
 
-In **Azure Database for MySQL, PostgreSQL, and MariaDB**, you can assign roles to manage database servers and individual databases. Roles like "Contributor" and "Reader" can be used to control access.
+In **Azure SQL Database**, you can assign roles to users, groups, or applications to control access. For example, a database administrator might be assigned the *SQL Server Contributor* role to manage the server and databases. Roles like *SQL DB Contributor* allow users to create, update, and delete databases, while the *SQL Security Manager* role focuses on security configurations.
 
-For more information, see [Azure built-in roles for Databases](/azure/role-based-access-control/built-in-roles/databases).
+In **Azure Cosmos DB**, you can assign roles to manage access to Azure Cosmos DB accounts, databases, and containers. Built-in roles like *Cosmos DB Account Reader* and *Cosmos DB Account Contributor* provide varying levels of access.
 
-### Access control in Azure Data Lake Storage
+In **Azure Database for MySQL**, **Azure Database for PostgreSQL**, and **Azure Database for MariaDB**, you can assign roles to manage database servers and individual databases. You can use roles like *Contributor* and *Reader* to control access.
 
-Azure RBAC lets you grant "coarse-grained" access to storage account data, such as read or write access to all of the data in a storage account. ACLs let you grant "fine-grained" access, such as write access to a specific directory or file.
+For more information, see [Azure built-in roles for databases](/azure/role-based-access-control/built-in-roles/databases).
 
-In many scenarios, RBAC and ACLs are used together to provide comprehensive access control in ADLS. RBAC can be used to manage high-level access to data, ensuring that only authorized users can access the service itself. ACLs can then be applied within the storage account to control access to specific files and directories, providing an extra layer of security.
+### Access control in Data Lake Storage
 
-Azure Attribute-based access control (ABAC) builds on Azure RBAC by adding role assignment conditions based on attributes in the context of specific actions. It essentially allows you to refine RBAC role assignments by adding conditions. For example, you can grant read or write access to all data objects in a storage account that have a specific tag.
+Azure RBAC lets you grant coarse-grained access to storage account data, such as read or write access to all of the data in a storage account. ACLs let you grant fine-grained access, such as write access to a specific directory or file.
+
+In many scenarios, you can use RBAC and ACLs together to provide comprehensive access control in Data Lake Storage. You can use RBAC to manage high-level access to data, which helps ensure that only authorized users can access the service. Then you can apply ACLs within the storage account to control access to specific files and directories, which improves security.
+
+Azure attribute-based access control (ABAC) builds on Azure RBAC by adding role assignment conditions based on attributes in the context of specific actions. It essentially allows you to refine RBAC role assignments by adding conditions. For example, you can grant read or write access to all data objects in a storage account that have a specific tag.
 
 The following roles permit a security principal to access data in a storage account.
 
 | Role | Description |
 |---|---|
-| **Storage Blob Data Owner** | Full access to Blob storage containers and data. This access permits the security principal to set the owner of an item and to modify the ACLs of all items. |
-| **Storage Blob Data Contributor** | Read, write, and delete access to Blob storage containers and blobs. This access doesn't permit the security principal to set the ownership of an item, but it can modify the ACL of items owned by the security principal. |
-| **Storage Blob Data Reader** | Read and list Blob storage containers and blobs. |
+| **Storage Blob Data Owner** | This role gives full access to blob storage containers and data. This access permits the security principal to set the owner of an item and to modify the ACLs of all items. |
+| **Storage Blob Data Contributor** | This role gives read, write, and delete access to blob storage containers and blobs. This access doesn't permit the security principal to set the ownership of an item, but it can modify the ACL of items that the security principal owns. |
+| **Storage Blob Data Reader** | This role can read and list blob storage containers and blobs. |
 
-Roles such as Owner, Contributor, Reader, and Storage Account Contributor permit a security principal to manage a storage account but don't provide access to the data within that account. However, these roles (excluding Reader) can obtain access to the storage keys, which can be used in various client tools to access the data. For more information, see [Access control model in Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-access-control-model).
+Roles such as *Owner*, *Contributor*, *Reader*, and *Storage Account Contributor* permit a security principal to manage a storage account, but they don't provide access to the data within that account. However, these roles, excluding *Reader*, can obtain access to the storage keys, which can be used in various client tools to access the data. For more information, see [Access control model in Data Lake Storage](/azure/storage/blobs/data-lake-storage-access-control-model).
 
 ### Access control in Azure Databricks
 
-Azure Databricks comes with access control systems designed for managing access within the Databricks environment, focusing on securable objects and data governance. The three main access control systems within Azure Databricks are:
+Azure Databricks provides access control systems for managing access within the Azure Databricks environment. These systems focus on securable objects and data governance. The three main access control systems within Azure Databricks are:
 
-- **Access control lists**: used to configure permission to access workspace objects such as notebooks. For more information, see [Access control lists](/azure/databricks/security/auth/access-control/).
-- **Account role-based access control**: used to configure permission to use account-level objects such as service principals and groups.
-- **Unity Catalog**: used to secure and govern data objects.
+- **Access control lists**, which you can use to configure permission to access workspace objects such as notebooks. For more information, see [Access control lists](/azure/databricks/security/auth/access-control/).
+- **Account RBAC**, which you can use to configure permission to use account-level objects such as service principals and groups.
+- **Unity Catalog**, which you can use to secure and govern data objects.
 
-In addition to access control on objects, there are built-in roles on the Azure Databricks platform. Users, service principals, and groups can be assigned roles. For more information, see [Databricks admin roles](/azure/databricks/security/auth/#access-control-overview).
+In addition to access control on objects, Azure Databricks provides built-in roles on the platform. You can assign roles to users, service principals, and groups. For more information, see [Admin roles and workspace entitlements](/azure/databricks/security/auth/#admin-roles-and-workspace-entitlements).
 
 ## Best practices for authorization in cloud-scale analytics
 
