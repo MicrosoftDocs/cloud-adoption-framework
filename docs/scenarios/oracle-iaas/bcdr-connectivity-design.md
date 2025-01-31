@@ -47,7 +47,7 @@ To deploy a redundant network setup across regions, traffic can be configured in
 - **Networking options for BCDR:** Network connectivity between the primary and standby Oracle Database@Azure instances can be established via both Azure Networking and OCI Networking, with the default route being through Azure.
 - **Egress costs:** Egress costs between VNets should be accounted for when replicating data.
 - **Availability Zones:** Ensure that the two Oracle Database@Azure - Exadata Database Service deployments span different Availability Zones to isolate failures at the AZ level.
-- **Data Guard Configuration:** For DR, Data Guard should be configured for optimal performance to ensure close to Zero RPO and minimal RTO. Refer to [BCDR](./oracle-disaster-recovery-oracle-database-azure.md) for more details.
+- **Data Guard configuration:** For DR, Data Guard should be configured to minimize your RTO and RPO targets and optimize performance. Refer to [BCDR](./oracle-disaster-recovery-oracle-database-azure.md) for more details.
 - **Synchronous Replication:** Configure Data Guard in synchronous mode for optimal performance and near-zero RPO/RTO within the same region. Refer to the [BCDR](./oracle-disaster-recovery-oracle-database-azure.md) documentation for more details.
 - Supported network topologies are
   - vWAN based connectivity
