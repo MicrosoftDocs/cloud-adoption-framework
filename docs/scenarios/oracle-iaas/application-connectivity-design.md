@@ -14,7 +14,7 @@ Building on the core network concepts for Oracle Database@Azure - Exadata Databa
 
 There are two main scenarios for locating the application tier in an architecture design.
 
-1. Colocated in the same VNet: Application and database tiers reside within a single VNet.
+1. Colocated in the same virtual network (VNet): Application and database tiers reside within a single VNet.
 2. Deployed in a separate VNet and connected via VNet peering: Application and database tiers reside in distinct VNets connected via peering.
 
 The following diagrams represent the 2 options:
