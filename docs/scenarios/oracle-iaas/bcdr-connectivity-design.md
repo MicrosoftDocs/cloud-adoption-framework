@@ -21,7 +21,7 @@ Network connectivity between primary and standby Oracle Database@Azure - Exadata
 
 **Redundancy within the same region**
 
-For within-region redundancy, two separate Oracle Database@Azure - Exadata Database Service deployments and two separate VNets are required—each aligned with a different Availability Zone.
+For single region redundancy, two separate Oracle Database@Azure - Exadata Database Service deployments and two separate VNets are required—each aligned with a different Availability Zone.
 
 The following diagram illustrates a within-region redundant setup, using two Oracle Database@Azure - Exadata Database Service deployments in separate VNets to span multiple Availability Zones:
 
