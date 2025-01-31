@@ -32,7 +32,7 @@ When designing your network topology for Oracle Database@Azure - Exadata Databas
 - **Split DNS Model:** ODAA follows a split DNS model. DNS must be configured on both Azure and Oracle Cloud Infrastructure (OCI). Refer to [Oracle Database@Azure - Exadata Database Service DNS Setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513) for further information.
 - **Private DNS Naming Rules:** When default DNS settings are used in creating VM clusters, the Private DNS Zone will automatically be named based on the VNet and Subnet selected for the VM Cluster. The name of this zone will be "oci" + the first 10 alphabetic characters of the VNet and Subnet names. For example, VNet "vnet-exadata-prod" + Subnet "snet-exadata-prod" will output ocisnetexadata.ocivnetexadata.oraclevcn.com.
 
-## Design Recommendations
+## Design recommendations
 
 - **Plan Virtual Network Configuration:** Ensure your virtual network is configured prior to VM cluster creation and determine workload topology based on the following documentation across application, BCDR, and migration connectivity.
 - **Minimize NVAs:** Minimize the use of NVAs in the network path, as each extra hop introduces latency that can degrade database performance. Use NVAs only when required, such as for traffic inspection or compliance purposes, and ensure their placement is optimized to reduce unnecessary routing.
