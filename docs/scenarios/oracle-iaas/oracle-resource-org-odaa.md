@@ -52,7 +52,7 @@ Based on the subscription considerations, these are the recommended actions:
 
 ### Implementing a Multi-Subscription Setup for Oracle Database@Azure
 
-Set up a multi-subscription architecture for Oracle Database@Azure, where various environments (Production, Development, Unit Testing, System Integration Testing, and Disaster Recovery) are managed across different Azure subscriptions within the same Tenant.
+Set up a multi-subscription architecture for Oracle Database@Azure, where various environments (Production, Development, Unit Testing, System Integration Testing (SIT), and Disaster Recovery) are managed across different Azure subscriptions within the same tenant.
 
 :::image type="content" source="media/multi-subscription-odaa.png" alt-text="Diagram illustrates a multi-subscription setup for Oracle Database@Azure." border="false" lightbox="media/multi-subscription-odaa.png":::
 
