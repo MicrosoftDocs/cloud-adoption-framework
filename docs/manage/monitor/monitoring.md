@@ -102,7 +102,7 @@ Azure has many services that support the different [types of monitoring](#types-
 | [Microsoft Cost Management](/azure/cost-management-billing/costs/overview-cost-management) | Cost Management is a suite of tools that you can use to analyze, monitor, and optimize your Microsoft Cloud costs. Cost Management is available to anyone that has access to a billing account, subscription, resource group, or management group. | Cost | Cloud architect |
 | [Azure Service Health](/azure/service-health/overview) | Service Health provides a health status of the services that your Azure resources rely on. It can inform you of any service outages and provide a personalized view of the health of your Azure services and regions.  | Infrastructure | Cloud provider |
 
-## Reference table for monitoring guidance
+## Reference for monitoring Azure services
 
 The following table provides links to the monitoring guidance for nearly every Azure service.
 
