@@ -31,7 +31,7 @@ Figure 1: CoLocating Database and Application Tier in the Same VNet
 
 Figure 2: Database and Application Tier in Peered VNets
 
-The colocated option offers simpler management and no extra peering costs, but may be less flexible if multiple teams or applications need separate networks. The peered VNet approach introduces VNet peering costs and slightly more complexity, but provides better isolation, independent scalability, and governance boundaries. This can heighten security posture as well by providing more granular control over the involved resources from an Identity and Access Management (IAM) perspective along with enhanced network segmentation.
+The colocated option offers simpler management and no extra peering costs, but may be less flexible if multiple teams or applications need separate networks. The peered VNet approach introduces VNet peering costs and slightly more complexity, but provides better isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over the involved resources and through enhanced network segmentation.
 
 In a full mesh pattern, each application VNet is directly peered to the database VNet, and both connect to a Hub network for shared services like firewalls or DNS. This design ensures low-latency direct communication while still enabling centralized traffic inspection and management. The following diagram depicts this scenario:
 
