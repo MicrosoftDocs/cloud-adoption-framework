@@ -106,7 +106,7 @@ Azure has many services that support the different [types of monitoring](#types-
 
 The following table provides links to the monitoring guidance for nearly every Azure service.
 
-| Azure service | Guidance to monitor the Azure service | Monitoring data definitions (where available) |
+| Azure service | Guidance to monitor the Azure service | Monitoring data definitions <br>(where available) |
 |---------------|---------------------------------------|---------------------------------------------------|
 | Azure AI Agent service | [Management center overview](/azure/ai-studio/concepts/management-center) | |
 | Azure AI Foundry | [Management center overview](/azure/ai-studio/concepts/management-center) | |
