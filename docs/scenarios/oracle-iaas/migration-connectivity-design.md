@@ -37,6 +37,6 @@ Design Recommendations
 - **Prefer ExpressRoute Over VPN:** For on-premises to Oracle Database@Azure - Exadata Database Service connectivity, ExpressRoute is recommended due to its dedicated bandwidth, predictable performance, lower latency, and higher level of security.
 - **Capacity Planning:** Confirm that your chosen ExpressRoute circuit has sufficient bandwidth headroom for the migration phase. Ensure this doesn't affect other workloads and if necessary, utilize bandwidth limiting.
 
-Next Steps
+## Next Steps
 
 With your network connectivity planned and established, proceed to the [Migration Documentation](./oracle-migration-planning.md) to begin or refine your migration strategy.
