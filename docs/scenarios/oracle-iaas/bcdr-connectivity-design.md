@@ -56,7 +56,7 @@ To deploy a redundant network setup across regions, traffic can be configured in
 
 - **Minimize Network Virtual Appliances (NVAs):** Minimize the use of NVAs in the network path, as each additional hop introduces latency that can degrade Data Guard replication performance.
 - **Availability Zones:** Ensure that the two Oracle Database@Azure - Exadata Database Service deployments span different Availability Zones to isolate failures at the AZ level.
-- **Plan for Costs and Growth:** Analyze ingress and egress costs, future growth, and potential changes to your network architecture. Align your design with your business continuity goals and budget constraints.
+- **Plan for costs and growth:** Analyze ingress and egress costs, future growth expectations, and potential changes to your network architecture. Align your design with your business continuity goals and budget constraints.
 - **Asynchronous replication for cross-region DR:** Due to higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode tolerates increased latency without significantly impacting production performance, while still providing a robust DR capability
 
 ## Next Steps
