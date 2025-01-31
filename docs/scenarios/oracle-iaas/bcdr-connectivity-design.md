@@ -10,7 +10,7 @@ ms.custom: e2e-oracle
 
 # BCDR Connectivity Design for Oracle Database@Azure - Exadata Database Service
 
-This document focuses on high availability (HA) and disaster recovery (DR) connectivity considerations for Oracle Database@Azure - Exadata Database Service deployments. It begins by addressing within-region redundancy, then expands to cross-region architectures to ensure your environments remain resilient and meet low Recovery Point Objective (RPO) and Recovery Time Objective (RTO) requirements.
+This article focuses on high availability (HA) and disaster recovery (DR) connectivity considerations for Oracle Database@Azure - Exadata Database Service deployments. It begins by addressing single region redundancy, then expands to cross-region architectures to ensure your environments remain resilient and meet low Recovery Point Objective (RPO) and Recovery Time Objective (RTO) requirements.
 
 The key requirements that must be addressed include:
 
@@ -23,10 +23,10 @@ Network connectivity between primary and standby Oracle Database@Azure - Exadata
 
 For single region redundancy, two separate Oracle Database@Azure - Exadata Database Service deployments and two separate VNets are required—each aligned with a different Availability Zone.
 
-The following diagram illustrates a within-region redundant setup, using two Oracle Database@Azure - Exadata Database Service deployments in separate VNets to span multiple Availability Zones:
+The following diagram illustrates a single region redundant setup, using two Oracle Database@Azure - Exadata Database Service deployments in separate VNets to span multiple Availability Zones:
 
 ![In-Region Redundancy](./media/multi-availability-zone.png)
-Figure 1: In-Region Redundancy for Oracle Database@Azure - Exadata Database Service
+Figure 1: Single region redundancy for Oracle Database@Azure - Exadata Database Service
 
 > **Note:** Data Guard uses the underlying Azure Network. Data replication is via peered Azure VNet within the Azure region and does not leverage the Oracle Cloud Infrastructure (OCI) network. Data egress charges apply.
 
@@ -47,7 +47,7 @@ To deploy a redundant network setup across regions, traffic can be configured in
 - **Networking options for BCDR:** Network connectivity between the primary and standby Oracle Database@Azure instances can be established via both Azure Networking and OCI Networking, with the default route being through Azure.
 - **Egress costs:** Egress costs between VNets should be accounted for when replicating data.
 - **Availability Zones:** Ensure that the two Oracle Database@Azure - Exadata Database Service deployments span different Availability Zones to isolate failures at the AZ level.
-- **Data Guard Configuration:** For DR, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. Refer to [BCDR](./oracle-disaster-recovery-oracle-database-azure.md) for more details.
+- **Data Guard configuration:** For DR, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. Refer to [BCDR](./oracle-disaster-recovery-oracle-database-azure.md) for more details.
 - Supported network topologies are
   - vWAN based connectivity
   - Peering with Hub network
@@ -61,4 +61,4 @@ To deploy a redundant network setup across regions, traffic can be configured in
 
 ## Next Steps
 
-Following, you must consider the connection from your Oracle Database on-premises to your Oracle Database@Azure - Exadata Database Service. This is to prepare for your migration. Review the next chapter about [Migration Connectivity Design](./migration-connectivity-design.md).
+To prepare for your migration, you'll need to consider the connection from your Oracle Database on-premises to your Oracle Database@Azure - Exadata Database Service. Review the next article that focuses on the [migration connectivity design](./migration-connectivity-design.md).
