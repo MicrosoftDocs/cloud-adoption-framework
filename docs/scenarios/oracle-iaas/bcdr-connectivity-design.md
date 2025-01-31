@@ -15,7 +15,7 @@ This document focuses on high availability (HA) and disaster recovery (DR) conne
 The key requirements that must be addressed include:
 
 - Low latency: Minimizing latency for database traffic for optimal performance.
-- Business Continuity and disaster recovery (BCDR): Availability of Oracle Database@Azure - Exadata Database Service and related applications is the key to ensure business operations are intact with low Recovery Point Objective (RPO)/ Recovery Time Objective (RTO).
+- Business continuity and disaster recovery (BCDR): High availability of your Oracle Database@Azure - Exadata Database Service and related applications is critical for maintaining business operations with low Recovery Point Objective (RPO) and Recovery Time Objective (RTO).
 
 Network connectivity between primary and standby Oracle Database@Azure - Exadata Database Service instances can be established via both Azure Networking and OCI Networking, with the default route being through Azure.  This document will primarily focus on architecting for networking within Azure. For in-depth guidance on BCDR, refer to the [BCDR](./oracle-disaster-recovery-oracle-database-azure.md) documentation.
 
