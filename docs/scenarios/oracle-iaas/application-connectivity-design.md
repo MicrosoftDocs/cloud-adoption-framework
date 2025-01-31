@@ -59,6 +59,6 @@ This pattern ensures direct connectivity from database and application VNets and
 - **Optimize for Smaller Workload Scopes:** Colocate applications and databases in the same virtual network if you have a limited number of Oracle databases serving a small application portfolio managed by a single team. This reduces latency and simplifies the network design.
 - **Separate for Complex Environments:** For larger or more complex environments, treat **Oracle Database@Azure - Exadata Database Service as a dedicated service**, deploying in one or more dedicated subscriptions to manage multiple databases for different applications and teams. Deploy application solutions in separate subscriptions and use virtual network peering to connect the application networks to the database networks. This approach enables independent management of application and database resources while maintaining secure and performant connectivity.
 
-**Next Steps**
+## Next Steps
 
 Now that you understand how to connect your application tier to Oracle Database@Azure - Exadata Database Service, proceed to the [BCDR Connectivity Design](./bcdr-connectivity-design.md) guidance. This helps you establish the required network foundations and best practices needed to support BCDR strategies.
