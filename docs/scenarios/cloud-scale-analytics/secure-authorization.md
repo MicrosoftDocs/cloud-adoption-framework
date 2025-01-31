@@ -58,7 +58,7 @@ Azure RBAC lets you grant coarse-grained access to storage account data, such as
 
 In many scenarios, you can use RBAC and ACLs together to provide comprehensive access control in Data Lake Storage. You can use RBAC to manage high-level access to data, which helps ensure that only authorized users can access the service. Then you can apply ACLs within the storage account to control access to specific files and directories, which improves security.
 
-Azure attribute-based access control (ABAC) builds on Azure RBAC by adding role assignment conditions based on attributes in the context of specific actions. It essentially allows you to refine RBAC role assignments by adding conditions. For example, you can grant read or write access to all data objects in a storage account that have a specific tag.
+Azure attribute-based access control builds on Azure RBAC by adding role assignment conditions based on attributes in the context of specific actions. It essentially allows you to refine RBAC role assignments by adding conditions. For example, you can grant read or write access to all data objects in a storage account that have a specific tag.
 
 The following roles permit a security principal to access data in a storage account.
 
@@ -109,7 +109,9 @@ Implementing effective RBAC is crucial for maintaining security and manageabilit
 Cloud-scale analytics environments typically contain polyglot storage solutions, including PostgreSQL, MySQL, SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
 - **Use Microsoft Entra groups instead of individual user accounts.** We recommend that you use Microsoft Entra groups to secure database objects instead of individual Microsoft Entra user accounts. Use Microsoft Entra groups to authenticate users and protect database objects. Similar to the data lake pattern, you can use your data application onboarding to create these groups.
+
 - **Use built-in roles to manage access.** Create custom roles only if you need to meet specific requirements or if built-in roles grant too many permissions.
+
 - **Refrain from assigning permissions to individual users.** Use roles, like database or server roles, consistently instead. Roles help with reporting and troubleshooting permissions. Azure RBAC only supports permission assignment via roles.
 
 > [!NOTE]
@@ -120,11 +122,17 @@ Cloud-scale analytics environments typically contain polyglot storage solutions,
 In modern data environments, secure and efficient access control is paramount. Data Lake Storage provides robust mechanisms to manage access through ACLs. This section outlines the best practices for implementing RBAC in Data Lake Storage and applying ACLs, Microsoft Entra security groups, and the principle of least privilege to maintain a more secure and manageable data lake environment. Additionally, it highlights the importance of aligning ACLs with data partitioning schemes and using Unity Catalog for Azure Databricks users to help ensure comprehensive security and governance.
 
 - **Use ACLs for fine-grained access control.** ACLs play an important role in defining access at a granular level. In Data Lake Storage, ACLs work with security principals to manage fine-grained access to files and directories.
+
 - **Apply ACLs at the file and folder levels.** To control access to data in the data lake, we recommend that you use ACLs at the level of files and folders. Data Lake Storage also adopts an ACL model that's similar to the Portable Operating System Interface (POSIX). POSIX is a group of standards for operating systems. One standard defines a simple but powerful permission structure for accessing files and folders. POSIX is widely used for network file shares and Unix computers.
+
 - **Use Microsoft Entra security groups as the assigned principal in an ACL entry.** Resist the opportunity to directly assign individual users or service principals. Using this structure allows you to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. Instead, you can just add or remove users and service principals from the appropriate Microsoft Entra security group.
+
 - **Assign access to Microsoft Entra groups and manage membership of groups for ongoing access management.** For more information, see [Access control model in Data Lake Storage](/azure/storage/blobs/data-lake-storage-access-control-model).
+
 - **Apply the principle of least privilege to ACLs.** In most cases, users should only have **read** permission to the files and folders that they need in the data lake. Data users shouldn't have access to the storage account container.
+
 - **Align ACLs with data partitioning schemes.** ACLs and data partition design must align to help ensure effective data access control. For more information, see [Data lake partitioning](../cloud-scale-analytics/architectures/data-standardization.md#data-lake-partitioning).
+
 - **For Azure Databricks users, exclusively control access to data objects with Unity Catalog.** Granting direct storage-level access to external location storage in Data Lake Storage doesn't honor any permissions granted or audits maintained by Unity Catalog. Direct access bypasses auditing, lineage, and other security and monitoring features of Unity Catalog, including access control and permissions. Therefore, you shouldn't give Azure Databricks users direct storage-level access to Unity Catalog managed tables and volumes.
 
 ## Next step
