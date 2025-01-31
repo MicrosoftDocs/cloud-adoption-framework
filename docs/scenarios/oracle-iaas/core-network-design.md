@@ -36,7 +36,7 @@ When designing your network topology for Oracle Database@Azure - Exadata Databas
 
 - **Plan Virtual Network Configuration:** Ensure your virtual network is configured prior to VM cluster creation and determine workload topology based on the following documentation across application, BCDR, and migration connectivity.
 - **Minimize NVAs:** Minimize the use of NVAs in the network path, as each extra hop introduces latency that can degrade database performance. Use NVAs only when required, such as for traffic inspection or compliance purposes, and ensure their placement is optimized to reduce unnecessary routing.
-- **Optimize for Bandwidth and Latency:** Optimize bandwidth and latency by colocating resources interacting with Oracle Database@Azure – Exadata Database Service within the same availability zone.
+- **Optimize for bandwidth and latency:** Optimize bandwidth and latency by colocating resources interacting with Oracle Database@Azure – Exadata Database Service within the same availability zone.
 - **Configure NSGs:** Configure NSGs on the Oracle subnet through OCI to enable connectivity with source and destination networks.
 - **Use unique DNS Names:** When using the default DNS settings, ensure that the first 10 characters of the VNet+Subnet names for any Exadata environments are unique. If not, a DNS resolver won't be able to distinguish between the environments.
 
