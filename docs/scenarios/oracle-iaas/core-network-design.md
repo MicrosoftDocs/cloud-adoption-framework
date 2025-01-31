@@ -12,7 +12,7 @@ ms.custom: e2e-oracle
 
 Understanding the core networking concepts of Oracle Database@Azure - Exadata Database Service is foundational for successful adoption. Unlike most Azure services, Oracle Database@Azure has a unique architecture hosted within an Azure Data Center with out-of-the-box connectivity to the Oracle Cloud Infrastructure (OCI) Control Plane. This document outlines key design considerations and recommendations for configuring and managing network connectivity to support Oracle Database@Azure - Exadata Database Service workloads effectively.
 
-The following diagram illustrates the core networking architecture and relationship between Azure VNets and Oracle Cloud Infrastructure (OCI) Virtual Cloud Networks (VCNs) for Oracle Database@Azure - Exadata Database Service.
+The following diagram illustrates the core networking architecture and relationship between Azure virtual networks (VNets) and Oracle Cloud Infrastructure (OCI) Virtual Cloud Networks (VCNs) for Oracle Database@Azure - Exadata Database Service.
 
 ![Core Network Design](./media/basic-vnet-integration.png)
 
