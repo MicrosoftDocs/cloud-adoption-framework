@@ -40,7 +40,7 @@ When designing your network topology for Oracle Database@Azure - Exadata Databas
 - **Configure NSGs:** Configure NSGs on the Oracle subnet through OCI to enable connectivity with source and destination networks.
 - **Ensure Unique DNS Names:** If using default DNS settings, ensure that the first 10 characters of the VNet+Subnet names for any Exadata environments are unique. If not, a DNS resolver won't be able to distinguish between the environments.
 
-**Further Guidance**
+**Additional guidance**
 
 Beyond the core network design concepts for Oracle Database@Azure - Exadata Database Service, also consider the connectivity requirements for your applications, other Azure services (such as Blob Storage, Azure Netapp Files), on-premises environments, and your BCDR configuration.
 
