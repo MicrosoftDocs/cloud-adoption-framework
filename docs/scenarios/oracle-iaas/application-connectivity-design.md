@@ -43,8 +43,8 @@ This pattern ensures direct connectivity from database and application VNets and
 
 **Design Considerations**
 
-- **Cost Implications:** Colocating the Database and Application tiers in the same VNet incurs no extra network costs.
-- **Connectivity Options:** When colocating the Database and Application tiers in the same VNet isn't an option, VNet peering between VNets or traversing through a Hub VNet (Standard VNet or VWAN Hub) are options.
+- **Cost factors:** Colocating the Database and Application tiers in the same VNet incurs no extra network costs.
+- **Connectivity options:** When colocating the Database and Application tiers in the same VNet isn't an option, peering between VNets or traversing through a Hub VNet (Standard VNet or VWAN Hub) are options.
 - **Known limitations:** Due to a current limitation on connectivity from Oracle Database@Azure to Private Endpoints and serverless applications like Azure Functions, connectivity to these services requires an intermediate hop through a routing device like Azure Firewall or a third party Network Virtual Appliance (NVA).
 - **Availability Zone validation:** If deploying the application tier in a separate subscription from the subscription hosting Oracle Database@Azure – Exadata Database Service, Logical Availability Zones may differ from Physical Availability Zones across subscriptions. To validate the correct Availability Zones, use the following command, replacing `eastus` with your desired region:
 
