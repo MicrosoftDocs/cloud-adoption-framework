@@ -55,7 +55,7 @@ This pattern ensures direct connectivity from database and application VNets and
 
 **Design recommendations**
 
-- **Optimize for Bandwidth and Latency:** Colocate workload-related resources within the same availability zones to minimize latency and maximize throughput.
+- **Optimize for bandwidth and latency:** Colocate workload-related resources within the same availability zones to minimize latency and maximize throughput.
 - **Optimize for smaller workload scopes:** Colocate applications and databases in the same virtual network if you have a limited number of Oracle databases serving a small application portfolio managed by a single team. This reduces latency and simplifies the network design.
 - **Separate for Complex Environments:** For larger or more complex environments, treat **Oracle Database@Azure - Exadata Database Service as a dedicated service**, deploying in one or more dedicated subscriptions to manage multiple databases for different applications and teams. Deploy application solutions in separate subscriptions and use virtual network peering to connect the application networks to the database networks. This approach enables independent management of application and database resources while maintaining secure and performant connectivity.
 
