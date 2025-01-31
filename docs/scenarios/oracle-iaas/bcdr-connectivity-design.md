@@ -28,7 +28,7 @@ The following diagram illustrates a within-region redundant setup, using two Ora
 ![In-Region Redundancy](./media/multi-availability-zone.png)
 Figure 1: In-Region Redundancy for Oracle Database@Azure - Exadata Database Service
 
-> **Note:** Data Guard uses the underlying Azure Network. Data replication is via peered Azure VNet within the Azure region and does not leverage the Oracle Cloud Infrastructure (OCI) network. Data ingress/egress charges apply.
+> **Note:** Data Guard uses the underlying Azure Network. Data replication is via peered Azure VNet within the Azure region and does not leverage the Oracle Cloud Infrastructure (OCI) network. Data egress charges apply.
 
 **Redundancy across regions**
 
