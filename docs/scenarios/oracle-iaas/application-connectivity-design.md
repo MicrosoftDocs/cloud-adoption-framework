@@ -53,7 +53,7 @@ This pattern ensures direct connectivity from database and application VNets and
     --query 'value' | jq '.[] | .availabilityZoneMappings | .[]? | select(.physicalZone | contains("eastus"))'
   ```
 
-**Design Recommendations**
+**Design recommendations**
 
 - **Optimize for Bandwidth and Latency:** Colocate workload-related resources within the same availability zones to minimize latency and maximize throughput.
 - **Optimize for Smaller Workload Scopes:** Colocate applications and databases in the same virtual network if you have a limited number of Oracle databases serving a small application portfolio managed by a single team. This reduces latency and simplifies the network design.
