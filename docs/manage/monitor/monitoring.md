@@ -193,7 +193,7 @@ Azure has many services that support the different [types of monitoring](#types-
 | Azure Service Fabric | [Monitor Azure Service Fabric](/azure/service-fabric/monitor-service-fabric) | [Monitoring data reference for Azure Service Fabric](/azure/service-fabric/monitor-service-fabric-reference) |
 | Azure SignalR Service | [Monitor Azure SignalR Service](/azure/azure-signalr/monitor-signalr) | [Monitoring data reference for Azure SignalR Service](/azure/azure-signalr/monitor-signalr-reference) |
 | Azure Site Recovery | [Monitor Azure Site Recovery](/azure/site-recovery/monitor-site-recovery) | [Monitoring data reference for Azure Site Recovery](/azure/site-recovery/monitor-site-recovery-reference) |
-| Azure Sphere | [Overview Monitor Azure Sphere resources](/azure-sphere/deployment/az-monitor-overview?view=azure-sphere-integrated) | [Monitor Azure Sphere data reference](/azure-sphere/deployment/az-monitor-data) |
+| Azure Sphere | [Overview Monitor Azure Sphere resources](/azure-sphere/deployment/az-monitor-overview) | [Monitor Azure Sphere data reference](/azure-sphere/deployment/az-monitor-data) |
 | Azure Spot Virtual Machines | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) | [Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) |
 | Azure SQL Database | [Monitor Azure SQL Database](/azure/azure-sql/database/monitoring-sql-database-azure-monitor) | |
 | Azure SQL Edge | [Troubleshoot Azure SQL Edge deployments](/azure/azure-sql-edge/troubleshoot) | |
@@ -213,15 +213,15 @@ Azure has many services that support the different [types of monitoring](#types-
 | Azure VPN Gateway | [Monitor Azure VPN Gateway](/azure/vpn-gateway/monitor-vpn-gateway) | [Monitoring data reference for Azure VPN Gateway](/azure/vpn-gateway/monitor-vpn-gateway-reference) |
 | Azure Web Application Firewall | [Web Application Firewall + Azure Front Door](/azure/web-application-firewall/afds/waf-front-door-monitor)<br><br> [Web Application Firewall + Application Gateway](/azure/web-application-firewall/ag/application-gateway-waf-metrics) | |
 | Azure Web PubSub | [Monitor Azure Web PubSub](/azure/azure-web-pubsub/howto-azure-monitor) | [Monitoring Azure Web PubSub data reference](/azure/azure-web-pubsub/howto-monitor-data-reference) |
-| Data Factory in Microsoft Fabric | [Monitor Data Factory](/azure/fabric/data-factory/monitor-data-factory) | |
+| Data Factory in Microsoft Fabric | [Monitor Data Factory](/fabric/data-factory/monitor-data-factory) | |
 | Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | |
-| Microsoft Entra Domain Services | [Check the health of Microsoft Entra Domain Services](/azure/entra/identity/domain-services/check-health) | |
-| Microsoft Entra External ID | [Azure Monitor in external tenants](/azure/entra/external-id/customers/how-to-azure-monitor) | |
-| Microsoft Entra ID | [What is Microsoft Entra monitoring and health?](/azure/entra/identity/monitoring-health/overview-monitoring-health) | |
+| Microsoft Entra Domain Services | [Check the health of Microsoft Entra Domain Services](/entra/identity/domain-services/check-health) | |
+| Microsoft Entra External ID | [Azure Monitor in external tenants](/entra/external-id/customers/how-to-azure-monitor) | |
+| Microsoft Entra ID | [What is Microsoft Entra monitoring and health?](/entra/identity/monitoring-health/overview-monitoring-health) | |
 | Microsoft Sentinel | [Auditing and health monitoring in Microsoft Sentinel](/azure/sentinel/health-audit) | |
 | Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | |
-| Microsoft Entra Domain Services | [Check the health of Microsoft Entra Domain Services](/azure/entra/identity/domain-services/check-health) | |
-| Microsoft Entra External ID | [Azure Monitor in external tenants](/azure/entra/external-id/customers/how-to-azure-monitor) | |
-| Microsoft Entra ID | [What is Microsoft Entra monitoring and health?](/azure/entra/identity/monitoring-health/overview-monitoring-health) | |
+| Microsoft Entra Domain Services | [Check the health of Microsoft Entra Domain Services](/entra/identity/domain-services/check-health) | |
+| Microsoft Entra External ID | [Azure Monitor in external tenants](/entra/external-id/customers/how-to-azure-monitor) | |
+| Microsoft Entra ID | [What is Microsoft Entra monitoring and health?](/entra/identity/monitoring-health/overview-monitoring-health) | |
 | Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | |
 | Multicloud connector enabled by Azure Arc | [View multicloud inventory with the multicloud connector enabled by Azure Arc](/azure/azure-arc/multicloud-connector/view-multicloud-inventory) | |
