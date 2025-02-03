@@ -91,7 +91,7 @@ While monitoring ANF metrics, it is also important to monitor the Virtual Machin
 
 1. Alerts in Azure Monitor help identify unhealthy resources. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules for common metrics. This initial set includes metrics such as CPU percentage and available memory. For more information, refer to [Enable recommended alert rules for Azure VM](/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). Additionally, you can configure Advanced [metric alert rules](/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you require situational monitoring.
 
-    Recently, an initiative developed as an easy way to deploy alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://aka.ms/amba/alz/wiki) as a common set of Azure resources/services that are configured in a similar way across organizations.
+    Recently, an initiative was developed to simplify the deployment of alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://aka.ms/amba/alz/wiki), which serves as a common set of Azure resources and services configured similarly across organizations.
 
 2. Managed disk related metrics should also be monitored. If thresholds are exceeded, it's recommended that an alert is issued.  
   
