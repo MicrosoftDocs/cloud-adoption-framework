@@ -41,9 +41,9 @@ This guidance is designed to help you develop a cloud adoption strategy that ali
 
 1. **Assess your cloud adoption strategy.** Evaluate your organization's readiness for cloud adoption.
 1. **Define your motivations.** Identify the reasons for adopting cloud technologies.
-1. **Define your mission and objectives.** Establish a clear mission and measurable objectives for your cloud adoption strategy.
-1. **Define your strategy team.** Identify the team members who
-1. **Prepare your organization.** Align your organization with your cloud adoption strategy.
+1. **Define your mission and objectives.** Establish a clear mission and measurable objectives for your cloud motivations.
+1. **Define your strategy team.** Identify the individuals and teams who will help you build and execute your strategy.
+1. **Prepare your organization.** Get leadership and executive buy-in, align your organizational strategies, understand your operating model's readiness for cloud, and consider a shift to a product model.
 1. **Inform your strategy.** Discover strategic considerations for important cloud strategy areas, such as financial efficiency, AI, resiliency, security, and sustainability.
 
 Use the following checklist to guide you through the cloud adoption strategy steps.

@@ -20,7 +20,7 @@ You can use frameworks, such as objectives and key results (OKRs), to break your
 >
 > For more information, see [What are OKRs?](https://www.microsoft.com/microsoft-viva/what-is-okr-objective-key-results).
 
-## Define your mission and objectives
+## Mission statement and objectives
 
 Your cloud adoption strategy should clarify the role of the cloud within your organization. It should also define how and when you apply the cloud to support the objectives and desired outcomes of your business, digital, and IT strategies.
 
@@ -46,19 +46,19 @@ Ensure that your objectives include clear and inspiring goals that align with th
 - **Objective for compliance:** "Use advanced compliance offerings to audit your assets."
 - **Objective for datacenter modernization:** "Modernize infrastructure with reduced hardware and staffing. To upgrade the datacenter, migrate to Azure for enhanced capabilities."
 
-### Recommendations to define your mission and objectives
+**Recommendations:**
 
 To define your mission and objectives, consider the following recommendations.
 
-- **Meet with and involve key stakeholders across your organization.** Ensure that you clearly represent the business and departmental mission and objectives and that all stakeholders understand them. You might include problem statements that a cloud adoption addresses.
+- _Meet with and involve key stakeholders across your organization._ Ensure that you clearly represent the business and departmental mission and objectives and that all stakeholders understand them. You might include problem statements that a cloud adoption addresses.
 
-- **Define and align cloud adoption objectives and key results.** Clearly define, refine, and align the cloud objectives with your organization's mission and objectives.
+- _Define and align cloud adoption objectives and key results._ Clearly define, refine, and align the cloud objectives with your organization's mission and objectives.
 
-- **Define key results for objectives.** After you define and align objectives, establish specific key results to achieve the objectives, including key performance indicators (KPIs), to measure progress.
+- _Define key results for objectives._ After you define and align objectives, establish specific key results to achieve the objectives, including key performance indicators (KPIs), to measure progress.
 
-- **Establish accountability.** Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
+- _Establish accountability._ Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
 
-- **Prioritize clarity.** Ensure that your objectives, key results, and accountability are clear, concise, accessible and easy to understand for everyone.
+- _Prioritize clarity._ Ensure that your objectives, key results, and accountability are clear, concise, accessible and easy to understand for everyone.
 
 ## Measure success
 
@@ -66,15 +66,15 @@ To understand if you're on track to meet your objectives, you must be able to ef
 
 These metrics should provide insights into your progress against each key result and highlight areas for improvement.  
 
-### Recommendations to measure success
+**Recommendations:**
 
 To measure your success, use these guidelines when you define metrics.
 
-- **Define KPIs.** Set clear metrics that you can measure against each related key result.
+- _Define KPIs._ Set clear metrics that you can measure against each related key result.
 
-- **Review regularly.** Schedule and perform regular reviews to assess progress.
+- _Review regularly._ Schedule and perform regular reviews to assess progress.
 
-- **Be agile.** Iterate and adjust your strategy and ways to measure progress. Cloud innovation rapidly changes the technical landscape and the opportunities to apply clever solutions.
+- _Be agile._ Iterate and adjust your strategy and ways to measure progress. Cloud innovation rapidly changes the technical landscape and the opportunities to apply clever solutions.
 
 ## Example objectives and success metrics
 
