@@ -4,7 +4,7 @@ description: Learn about considerations for integrating AI into your cloud adopt
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 01/13/2025
+ms.date: 02/03/2025
 ms.collection: ce-skilling-ai-copilot
 ---
 

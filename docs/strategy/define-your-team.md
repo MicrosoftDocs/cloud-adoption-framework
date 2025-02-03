@@ -4,7 +4,7 @@ description: Learn how to define your cloud strategy team to align your cloud ad
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 02/03/2025
 ---
 
 # Define your cloud strategy team

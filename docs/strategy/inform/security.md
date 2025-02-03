@@ -4,7 +4,7 @@ description: Learn how to design your cloud infrastructure with security in mind
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 01/13/2025
+ms.date: 02/03/2025
 ---
 
 # Security considerations for your cloud strategy

@@ -4,7 +4,7 @@ description: Learn how to assess your existing cloud adoption strategy so that y
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/12/2024
+ms.date: 02/03/2025
 ---
 
 # Assess your cloud adoption strategy

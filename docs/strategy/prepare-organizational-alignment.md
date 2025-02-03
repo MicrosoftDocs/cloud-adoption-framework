@@ -4,7 +4,7 @@ description: Learn how to prepare your organization for cloud adoption by aligni
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 02/03/2025
 ---
 
 # Prepare for organizational alignment

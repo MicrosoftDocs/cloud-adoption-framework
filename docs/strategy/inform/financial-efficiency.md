@@ -4,7 +4,7 @@ description: Learn how to optimize costs that are associated with cloud services
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 01/13/2025
+ms.date: 02/03/2025
 ---
 
 # Financial efficiency considerations for your cloud adoption strategy

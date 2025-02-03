@@ -4,7 +4,7 @@ description: Learn about considerations that you can use to inform your cloud st
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/12/2024
+ms.date: 02/03/2025
 ---
 
 # Inform your cloud adoption strategy

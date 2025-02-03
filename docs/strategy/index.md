@@ -4,7 +4,7 @@ description: Learn how to develop a cloud adoption strategy to migrate or innova
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/13/2024
+ms.date: 02/03/2025
 ---
 
 # Develop a cloud adoption strategy

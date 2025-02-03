@@ -4,7 +4,7 @@ description: Learn about recommendations for defining your mission and objective
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/13/2024
+ms.date: 02/03/2025
 ---
 
 # Define your mission and objectives
