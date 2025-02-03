@@ -43,13 +43,13 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Enable [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and use [traffic analytics](/azure/network-watcher/traffic-analytics) to gain insights into ingress and egress traffic flows. Enable flow logs on all critical virtual networks and subnets in your subscriptions, for example virtual networks and subnets that contain Windows Server Active Directory domain controllers or critical data stores. Additionally, you can use flow logs to detect and investigate potential security incidents, compliance and monitoring, and to optimize usage.
 
+- Plan and migrate your current NSG flow logs configuration to virtual network flow logs using the [migration guide](/azure/network-watcher/nsg-flow-logs-migrate).
+
 - Use NSGs to selectively allow connectivity between landing zones.
 
 - For Virtual WAN topologies, route traffic across landing zones via Azure Firewall if your organization requires filtering and logging capabilities for traffic flowing across landing zones.
 
 - If your organization decides to implement forced tunneling (advertise default route) to on-premises, we recommend incorporating the following **outbound** NSG rules to deny egress traffic from VNets directly to the internet should the BGP session drop.
-
-- Plan and migrate your current NSG flow logs configuration to virtual network flow logs using the [migration guide](/azure/network-watcher/nsg-flow-logs-migrate).
 
 > [!NOTE]
 > Rule priorities will need to be adjusted based on your existing NSG rule set.
