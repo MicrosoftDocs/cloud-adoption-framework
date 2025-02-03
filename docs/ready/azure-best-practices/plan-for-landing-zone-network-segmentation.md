@@ -22,9 +22,12 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - [Application security groups (ASGs)](/azure/virtual-network/application-security-groups) don't span or provide protection across virtual networks.
 
-- Use [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) to inspect traffic that flows through a network point with an NSG attached.
+- Use [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) to inspect traffic that flows through virtual networks. Virtual network flow logs provide capabilities that are similar to NSG flow logs but cover a wider range of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
 
-- [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provide capabilities that are similar to NSG flow logs but cover a wider range of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
+- [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) is used to inspect traffic that flows through a network point with an NSG attached.
+
+> [!NOTE]
+> On September 30, 2027, network security group (NSG) flow logs will be retired. As part of this retirement, you'll no longer be able to create new NSG flow logs starting June 30, 2025. We recommend [migrating to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs. After the retirement date, traffic analytics enabled with NSG flow logs will no longer be supported, and existing NSG flow logs resources in your subscriptions will be deleted. However, NSG flow logs records won't be deleted and will continue to follow their respective retention policies. For more information, see the [official announcement](https://azure.microsoft.com/updates?id=Azure-NSG-flow-logs-Retirement).
 
 ## Design recommendations
 
@@ -34,7 +37,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - The application team should use application security groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
 
-    [ ![Diagram that shows how application security group works.](./media/azure-asg.png) ](./media/azure-asg.png#lightbox)
+    [![Diagram that shows how application security group works.](./media/azure-asg.png)](./media/azure-asg.png#lightbox)
 
 - Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 
