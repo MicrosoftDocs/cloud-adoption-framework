@@ -85,7 +85,7 @@ If the database files are stored in Azure NetApp Files (ANF) volumes, monitor AN
 
  - [Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics)
 
-While monitoring ANF metrics, it's also important to monitor the Virtual Machine’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative Virtual Machines IO throughput limits on any Virtual Machine instance type. Instead, ANF is only restricted by the network bandwidth on the database Virtual Machine series. The Virtual Machine limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
+While monitoring ANF metrics, it is also important to monitor the Virtual Machine’s network bandwidth to ensure its limit is not exceeded. Since ANF volumes are mounted over the network using the NFS protocol, they are not restricted by the cumulative I/O throughput limits of any Virtual Machine instance type. Instead, ANF is only limited by the network bandwidth of the database Virtual Machine series. The specific limit for NFS-mounted storage is detailed in the column named “Max network bandwidth (Mbps)”.  For examples, see the VM series technical specification [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
 
 ### Configure the alerts for Azure virtual machine metrics
 
