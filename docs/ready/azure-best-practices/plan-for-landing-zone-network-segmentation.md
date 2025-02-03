@@ -49,6 +49,8 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - If your organization decides to implement forced tunneling (advertise default route) to on-premises, we recommend incorporating the following **outbound** NSG rules to deny egress traffic from VNets directly to the internet should the BGP session drop.
 
+- Plan and migrate your current NSG flow logs configuration to virtual network flow logs using the [migration guide](/azure/network-watcher/nsg-flow-logs-migrate).
+
 > [!NOTE]
 > Rule priorities will need to be adjusted based on your existing NSG rule set.
 
