@@ -38,7 +38,7 @@ The first step is to set up general Azure Virtual Machine and Managed disk monit
 
 ### Azure virtual machine and managed disk metrics
 
-The Oracle administrator should monitor disk performance metrics related to IO like the following metrics:
+The Oracle administrator should monitor disk performance metrics related to I/O, such as the following:
 
 | Name                                           | Threshold(s) (Severity) | 
 | ---------------------------------------------- | ----------------------- | 
