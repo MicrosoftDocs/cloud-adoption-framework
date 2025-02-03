@@ -4,7 +4,7 @@ description: Learn how to define your cloud strategy team to align your cloud ad
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 12/11/2024
+ms.date: 02/03/2025
 ---
 
 # Define your cloud strategy team
@@ -51,7 +51,7 @@ Your cloud strategy team should continuously seek input from across the business
 - _Executive leadership_ helps you meet market growth requirements and environmental sustainability metrics. 
 - _Sustainability leads_ drive sustainability as part of the cloud strategy throughout the business, ensuring sustainability is aligned with the company's environmental commitments.
 
-## Recommendations for defining your cloud strategy team
+## Recommendations
 
 - _Start small and expand_. Define the core members of the initial team. Core members at this stage typically include IT, finance, and security. Seek input from other functions as necessary for the first iterations of your strategy.
 

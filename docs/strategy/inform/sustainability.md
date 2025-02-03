@@ -4,7 +4,7 @@ description: Learn how to incorporate sustainability into your cloud strategy. U
 ms.author: tozimmergren
 author: Zimmergren
 ms.topic: conceptual
-ms.date: 01/21/2025
+ms.date: 02/03/2025
 ---
 
 # Sustainability considerations in your cloud strategy
