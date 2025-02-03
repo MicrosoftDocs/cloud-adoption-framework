@@ -85,6 +85,5 @@ Cloud strategy team members must allocate time to plan and develop the cloud str
 
 ## Next steps
 
-- Start a [cloud strategy team](../get-started/team/cloud-strategy.md).
 - Align your strategy with the [cloud adoption functions](./cloud-adoption.md) by creating a [cloud adoption team](../get-started/team/cloud-adoption.md).
 - Use the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) to align responsibilities across teams.
