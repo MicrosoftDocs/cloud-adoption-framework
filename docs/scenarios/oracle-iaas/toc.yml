@@ -1,5 +1,5 @@
 items:
-  - name: Oracle migration—Microsoft cloud adoption
+  - name: Oracle migration — Microsoft Cloud Adoption Framework for Azure
     href: index.md 
   - name: Strategic impact
     href: oracle-landing-zone-strategy.md
@@ -41,8 +41,10 @@ items:
         href: oracle-landing-zone-accelerator.md
   - name: Migrate your Oracle workloads
     items: 
-    - name: Capacity planning
+    - name: Capacity planning for Oracle workloads on Azure Virtual Machines
       href: oracle-capacity-planning.md
+    - name: Capacity planning for Oracle Database@Azure
+      href: oracle-capacity-planning-oracle-database-azure.md
     - name: Migration planning
       href: oracle-migration-planning.md
   - name: Reference

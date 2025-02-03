@@ -101,3 +101,129 @@ Azure has many services that support the different [types of monitoring](#types-
 | [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender) | Defender XDR includes Microsoft security solutions that are native to the Azure platform, client and server Microsoft operating systems, and applications including Office 365, Exchange Online, and SharePoint in Microsoft 365. Each security solution uses AI and machine learning to correlate telemetry and determine if investigations are necessary. When they detect unacceptable behavior, they take action to prevent disruption.  | Security | Security engineer |
 | [Microsoft Cost Management](/azure/cost-management-billing/costs/overview-cost-management) | Cost Management is a suite of tools that you can use to analyze, monitor, and optimize your Microsoft Cloud costs. Cost Management is available to anyone that has access to a billing account, subscription, resource group, or management group. | Cost | Cloud architect |
 | [Azure Service Health](/azure/service-health/overview) | Service Health provides a health status of the services that your Azure resources rely on. It can inform you of any service outages and provide a personalized view of the health of your Azure services and regions.  | Infrastructure | Cloud provider |
+
+## Reference for monitoring Azure services
+
+The following table provides links to the monitoring guidance for nearly every Azure service.
+
+| Azure service | Guidance to monitor the Azure service | Monitoring data definitions <br>(where available) | Monitor deployments<br>(select services) |
+|---------------|---------------------------------------|---------------------------------------------------| ------------------- |
+| Azure AI Agent service | [Management center overview](/azure/ai-studio/concepts/management-center) | | [How to enable tracing in Azure AI Agents](/azure/ai-services/agents/concepts/tracing) |
+| Azure AI Foundry | [Management center overview](/azure/ai-studio/concepts/management-center) | | [Monitor your Generative AI Applications](/azure/ai-studio/how-to/monitor-applications) |
+| Azure AI Search | [Monitor Azure AI Search](/azure/search/monitor-azure-cognitive-search) | | [Monitor queries](/azure/search/search-monitor-queries) |
+| Azure AI services | [Enable diagnostic logging Azure AI services](/azure/ai-services/diagnostic-logging) | | |
+| Azure AI Video Indexer | [Monitor Azure AI Video Indexer](/azure/azure-video-indexer/monitor-video-indexer) | [Monitoring Azure AI Video Indexer data reference](/azure/azure-video-indexer/monitor-video-indexer-data-reference) | |
+| Azure Analysis Services | [Monitor Azure Analysis Services](/azure/analysis-services/monitor-analysis-services) | [Monitoring data reference for Azure Analysis Services](/azure/analysis-services/monitor-analysis-services-reference) | |
+| Azure API for FHIR | [Enable diagnostic logging in Azure API for FHIR](/azure/healthcare-apis/azure-api-for-fhir/enable-diagnostic-logging) | | |
+| Azure API Management | [Monitor Azure API Management](/azure/api-management/monitor-api-management) | [Monitoring data reference for Azure API Management](/azure/api-management/monitor-api-management-reference) | [Observability in Azure API Management](/azure/api-management/observability)<br><br>[Monitor your APIs](/azure/api-management/api-management-log-to-eventhub-sample) |
+| Azure App Configuration | [Monitor Azure App Configuration](/azure/azure-app-configuration/monitor-app-configuration) | [Monitoring Azure App Configuration data reference](/azure/azure-app-configuration/monitor-app-configuration-reference) |
+| Azure App Service | [Monitor Azure App Service](/azure/app-service/monitor-app-service) | [Azure App Service monitoring data reference](/azure/app-service/monitor-app-service-reference) | [Monitor App Service instances by using Health Check](/azure/app-service/monitor-instances-health-check)<br><br>[Azure App Service diagnostics overview](/azure/app-service/overview-diagnostics)|
+| Azure Application Gateway | [Monitor Azure Application Gateway](/azure/application-gateway/monitor-application-gateway) | [Monitoring data reference for Azure Application Gateway](/azure/application-gateway/monitor-application-gateway-reference) | [Application Gateway health probes overview](/azure/application-gateway/application-gateway-probe-overview)<br><br>[Application Gateway - Backend health](/azure/application-gateway/application-gateway-backend-health) |
+| Azure Arc resource bridge | [Azure Arc resource bridge maintenance operations](/azure/azure-arc/resource-bridge/maintenance) | | |
+| Azure Arc site manager | [How to configure Azure Monitor alerts for a site](/azure/azure-arc/site-manager/how-to-configure-monitor-site) | | |
+| Azure Arc-enabled data services | [Azure Data Studio dashboards for Azure Arc](/azure/azure-arc/data/azure-data-studio-dashboards) | | |
+| Azure Arc-enabled Kubernetes | [Enable monitoring for Azure Kubernetes Service (AKS) cluster](/azure/azure-monitor/containers/kubernetes-monitoring-enable) | | |
+| Azure Arc-enabled servers | [Monitor a hybrid machine with Azure Monitor VM insights](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) | | |
+| Azure Archive Storage | [Monitor Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage) | [Monitoring data reference for Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage-reference) | |
+| Azure Automation | [Forward Azure Automation job data to Azure Monitor logs](/azure/automation/automation-manage-send-joblogs-log-analytics) | | |
+| Azure Backup | [Monitoring and reporting solutions for Azure Backup](/azure/backup/monitoring-and-alerts-overview) | | |
+| Azure Batch | [Monitor Azure Batch](/azure/batch/monitor-batch) | [Monitoring data reference for Azure Batch](/azure/batch/monitor-batch-reference) | |
+| Azure Blob Storage | [Monitor Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage) | [Monitoring data reference for Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage-reference) | [Best practices for monitoring Azure Blob Storage](/azure/storage/blobs/blob-storage-monitoring-scenarios)<br><br>[Monitoring your storage service with Azure Monitor Storage insights](/azure/storage/common/storage-insights-overview) |
+| Azure Cache for Redis | [Monitor Azure Cache for Redis](/azure/azure-cache-for-redis/monitor-cache) | [Monitoring data reference for Azure Cache for Redis](/azure/azure-cache-for-redis/monitor-cache-reference) | [Azure Monitor insights for Azure Cache for Redis](/azure/azure-cache-for-redis/cache-insights-overview) |
+| Azure Chaos Studio | [Set up Azure monitor for a Chaos Studio experiment](/azure/chaos-studio/chaos-studio-set-up-azure-monitor) | | |
+| Azure Communication Services | [Monitor SMS](/azure/communication-services/concepts/analytics/enable-logging)<br> [Monitor Voice and video](/azure/communication-services/concepts/analytics/enable-logging)<br> [Monitor Chat](/azure/communication-services/concepts/analytics/enable-logging)<br>[Monitor Phone calling](/azure/communication-services/concepts/analytics/enable-logging)<br> [Monitor Email](/azure/communication-services/concepts/analytics/enable-logging) | | |
+| Azure confidential ledger | [Verify Azure Confidential Ledger write transaction receipts](/azure/confidential-ledger/verify-write-transaction-receipts) | | |
+| Azure Container Apps | [Monitor Azure Container Apps](/azure/container-apps/observability) | [Monitor Azure Container Apps metrics](/azure/container-apps/metrics) | [Application logging in Azure Container Apps](/azure/container-apps/logging)|
+| Azure Container Instances | [Monitor Azure Container Instances](/azure/container-instances/monitor-azure-container-instances) | [Monitoring data reference for Container Instances](/azure/container-instances/monitor-azure-container-instances-reference) | [Configure liveness probes](/azure/container-instances/container-instances-liveness-probe)|
+| Azure Container Registry | [Monitor Azure Container Registry](/azure/container-registry/monitor-container-registry) | [Monitoring Data Reference for Azure Container Registry](/azure/container-registry/monitor-container-registry-reference) | |
+| Azure Container Storage | [Enable monitoring for Azure Container Storage](/azure/storage/container-storage/enable-monitoring) | | |
+| Azure Cosmos DB | [Monitor Azure Cosmos DB](/azure/cosmos-db/monitor) | [Monitoring data reference for Azure Cosmos DB](/azure/cosmos-db/monitor-reference) | [Azure Cosmos DB insights](/azure/cosmos-db/insights-overview)<br><br>[Query execution metrics](/azure/cosmos-db/nosql/query-metrics-performance)<br><br>[Index metrics](/azure/cosmos-db/nosql/index-metrics) |
+| Azure CycleCloud | [Monitor Azure CycleCloud](/azure/cyclecloud/concepts/monitoring) | | |
+| Azure Data Box | [Track and log Azure Data Box, Azure Data Box Heavy events for import order](/azure/databox/data-box-logs) | | |
+| Azure Data Explorer | [Monitor Azure Data Explorer](/azure/data-explorer/monitor-data-explorer) | [Monitoring data reference for Azure Data Explorer](/azure/data-explorer/monitor-data-explorer-reference) | |
+| Azure Data Lake Storage | [Monitor Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage) | [Monitoring data reference for Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage-reference) | |
+| Azure Database for MySQL | [Monitoring - Azure Database for MySQL](/azure/mysql/flexible-server/concepts-monitoring) | | [Best practices for monitoring](/azure/mysql/flexible-server/concept-monitoring-best-practices) |
+| Azure Database for PostgreSQL | [Monitoring and metrics - Azure Database for PostgreSQL](/azure/postgresql/flexible-server/concepts-monitoring) | | [Intelligent tuning](/azure/postgresql/flexible-server/concepts-intelligent-tuning) [Monitor performance with query store](/azure/postgresql/flexible-server/concepts-query-store)|
+| Azure Databricks | [Configure diagnostic log delivery for Azure Databricks](/azure/databricks/admin/account-settings/audit-log-delivery) | | |
+| Azure DDoS Protection | [Monitor Azure DDoS Protection](/azure/ddos-protection/monitor-ddos-protection) | [Monitor Azure DDoS Protection monitoring data reference](/azure/ddos-protection/monitor-ddos-protection-reference) | |
+| Azure Dedicated Host | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) | [Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
+| Azure Dedicated HSM | [Monitoring options - Azure Dedicated HSM](/azure/dedicated-hsm/monitoring) | | |
+| Azure DevTest Labs | [Activity logs - Azure DevTest Labs](/azure/devtest-labs/activity-logs) | | |
+| Azure Digital Twins | [Monitor your instance  in Azure Digital Twins](/azure/digital-twins/how-to-monitor) | | |
+| Azure Disk Storage | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) | [Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
+| Azure DNS | [Metrics and alerts](/azure/dns/dns-alerts-metrics) | | |
+| Azure Elastic SAN | [Metrics for Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-metrics) | | |
+| Azure Event Grid | [Enable diagnostic logs for Event Grid resources](/azure/event-grid/enable-diagnostic-logs-topic) | [Monitor data reference (push delivery)](/azure/event-grid/monitor-push-reference) | |
+| Azure Event Hubs | [Monitor Azure Event Hubs](/azure/event-hubs/monitor-event-hubs) | [Monitoring data reference for Azure Event Hubs](/azure/event-hubs/monitor-event-hubs-reference) | |
+| Azure ExpressRoute | [Monitor Azure ExpressRoute](/azure/expressroute/monitor-expressroute) | [Monitoring data reference for Azure ExpressRoute](/azure/expressroute/monitor-expressroute-reference) | |
+| Azure Files | [Monitor Azure Files using Azure Monitor](/azure/storage/files/storage-files-monitoring) | [Monitoring data reference for Azure Files](/azure/storage/files/storage-files-monitoring-reference) | |
+| Azure Firewall | [Monitor Azure Firewall](/azure/firewall/monitor-firewall) | [Monitoring data reference for Azure Firewall](/azure/firewall/monitor-firewall-reference) | |
+| Azure Front Door | [Monitor Azure Front Door](/azure/frontdoor/monitor-front-door) | [Monitoring data reference for Azure Front Door](/azure/frontdoor/monitor-front-door-reference) | |
+| Azure Functions | [Monitor Azure Functions](/azure/azure-functions/monitor-functions) | [Monitoring data reference for Azure Functions](/azure/azure-functions/monitor-functions-reference) | [Monitor executions in Azure Functions](/azure/azure-functions/functions-monitoring) |
+| Azure FXT Edge Filer | [Monitor the Azure FXT Edge Filer](/azure/fxt-edge-filer/monitor) | | |
+| Azure HDInsight | [Monitor Azure HDInsight](/azure/hdinsight/monitor-hdinsight) | [Monitoring data reference for Azure HDInsight](/azure/hdinsight/monitor-hdinsight-reference) | |
+| Azure Health Data Services | [Logging for Azure Health Data Services](/azure/healthcare-apis/logging) | | |
+| Azure HPC Cache | [Azure HPC Cache metrics and monitoring](/azure/hpc-cache/metrics) | | |
+| Azure IoT | [Manage your IoT solution](/azure/iot/iot-overview-solution-management) | | |
+| Azure IoT Central | [Manage and monitor IoT Central](/azure/iot-central/core/howto-manage-and-monitor-iot-central) | | |
+| Azure IoT Edge | [Tutorial - Azure Monitor workbooks for IoT Edge](/azure/iot-edge/tutorial-monitor-with-workbooks) | | |
+| Azure IoT Hub | [Monitor Azure IoT Hub](/azure/iot-hub/monitor-iot-hub) | [Monitoring data reference for Azure IoT Hub](/azure/iot-hub/monitor-iot-hub-reference) | |
+| Azure IoT Operations | [Deploy observability resources](/azure/iot-operations/configure-observability-monitoring/howto-configure-observability) | | |
+| Azure Key Vault | [Monitor Azure Key Vault](/azure/key-vault/general/monitor-key-vault) | [Monitoring data reference for Azure Key Vault](/azure/key-vault/general/monitor-key-vault-reference) | |
+| Azure Kubernetes Service (AKS) | [Monitor Azure Kubernetes Service (AKS)](/azure/aks/monitor-aks) | [Monitoring data reference for Azure Kubernetes Service](/azure/aks/monitor-aks-reference) | [Full stack monitoring](/azure/azure-monitor/containers/monitor-kubernetes)|
+| Azure Lab Services | [Track usage of a lab in Azure Lab Services](/azure/lab-services/tutorial-track-usage) | | |
+| Azure Lighthouse | [Monitor delegated resources at scale](/azure/lighthouse/how-to/monitor-at-scale) | | |
+| Azure Load Balancer | [Monitor Azure Load Balancer](/azure/load-balancer/monitor-load-balancer) | [Monitoring data reference for Azure Load Balancer](/azure/load-balancer/monitor-load-balancer-reference) | |
+| Azure Load Testing | [Monitoring Azure Load Testing](/azure/load-testing/monitor-load-testing) | [Monitor Azure Load Testing data reference](/azure/load-testing/monitor-load-testing-reference) | |
+| Azure Local | [Overview of Azure Local monitoring](/azure/azure-local/concepts/monitoring-overview) | | |
+| Azure Logic Apps | [Monitor Azure Logic Apps](/azure/logic-apps/monitor-logic-apps-overview) | [Monitoring data reference for Azure Logic Apps](/azure/logic-apps/monitor-logic-apps-reference) | |
+| Azure Machine Learning | [Monitor Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning) | [Azure Machine Learning monitoring data reference](/azure/machine-learning/monitor-azure-machine-learning-reference) |
+| Azure Managed Grafana | [Monitor an Azure Managed Grafana instance with logs](/azure/managed-grafana/how-to-monitor-managed-grafana-workspace) | | |
+| Azure Managed Instance for Apache Cassandra | [Monitor Azure Managed Instance for Apache Cassandra](/azure/managed-instance-apache-cassandra/monitor-clusters) | | |
+| Azure Managed Lustre | [Monitor Azure Managed Lustre](/azure/azure-managed-lustre/monitor-file-system) | [Monitoring data reference for Azure Managed Lustre](/azure/azure-managed-lustre/monitor-file-system-reference) | |
+| Azure NAT Gateway | [Monitor Azure NAT Gateway](/azure/nat-gateway/monitor-nat-gateway) | [Monitoring data reference for Azure NAT Gateway](/azure/nat-gateway/monitor-nat-gateway-reference) | |
+| Azure NetApp Files | [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files) | [Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics) | |
+| Azure Notification Hubs | [Monitor Azure Notification Hubs](/azure/notification-hubs/monitor-notification-hubs) | [Monitoring data reference for Azure Notification Hubs](/azure/notification-hubs/monitor-notification-hubs-reference) | |
+| Azure OpenAI Service | [Monitor Azure OpenAI Service](/azure/ai-services/openai/how-to/monitor-openai) | | |
+| Azure Operator Nexus | [Azure Operator Nexus: observability using Azure Monitor](/azure/operator-nexus/concepts-observability) | | |
+| Azure Private 5G Core | [Monitor Azure Private 5G Core with Azure Monitor platform metrics](/azure/private-5g-core/monitor-private-5g-core-with-platform-metrics)<br><br>[Monitor with correlated metrics in Azure portal](/azure/private-5g-core/ran-insights-monitor-with-correlated-metrics-concepts) | | |
+| Azure Private Link | [Monitor Azure Private Link](/azure/private-link/monitor-private-link) | [Monitoring data reference for Azure Private Link](/azure/private-link/monitor-private-link-reference) | |
+| Azure Power BI Embedded | [Monitor Power BI Embedded](/power-bi/developer/embedded/monitor-power-bi-embedded) | [Monitoring data reference for Power BI Embedded](/power-bi/developer/embedded/monitor-power-bi-embedded-reference) | |
+| Azure Queue Storage | [Monitor Azure Queue Storage](/azure/storage/queues/monitor-queue-storage) | [Monitoring data reference for Azure Queue Storage](/azure/storage/queues/monitor-queue-storage-reference) | |
+| Azure Red Hat OpenShift | [Monitor Azure Red Hat OpenShift](/azure/azure-monitor/containers/kubernetes-monitoring-enable) | | |
+| Azure Service Bus | [Monitor Azure Service Bus](/azure/service-bus-messaging/monitor-service-bus) | [Monitoring data reference for Azure Service Bus](/azure/service-bus-messaging/monitor-service-bus-reference) | |
+| Azure Service Fabric | [Monitor Azure Service Fabric](/azure/service-fabric/monitor-service-fabric) | [Monitoring data reference for Azure Service Fabric](/azure/service-fabric/monitor-service-fabric-reference) | |
+| Azure SignalR Service | [Monitor Azure SignalR Service](/azure/azure-signalr/monitor-signalr) | [Monitoring data reference for Azure SignalR Service](/azure/azure-signalr/monitor-signalr-reference) | |
+| Azure Site Recovery | [Monitor Azure Site Recovery](/azure/site-recovery/monitor-site-recovery) | [Monitoring data reference for Azure Site Recovery](/azure/site-recovery/monitor-site-recovery-reference) | |
+| Azure Sphere | [Overview Monitor Azure Sphere resources](/azure-sphere/deployment/az-monitor-overview) | [Monitor Azure Sphere data reference](/azure-sphere/deployment/az-monitor-data) | |
+| Azure Spot Virtual Machines | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) | [Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
+| Azure SQL Database | [Monitor Azure SQL Database](/azure/azure-sql/database/monitoring-sql-database-azure-monitor) | | [Tune applications and databases for performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance) |
+| Azure SQL Edge | [Troubleshoot Azure SQL Edge deployments](/azure/azure-sql-edge/troubleshoot) | | |
+| Azure SQL Managed Instance | [Monitor Azure SQL Managed Instance](/azure/azure-sql/managed-instance/monitoring-sql-managed-instance-azure-monitor) | | [Tune applications and databases for performance in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/performance-guidance) |
+| Azure Stack Edge | [Enable Azure Monitor on Azure Stack Edge Pro GPU device](/azure/databox-online/azure-stack-edge-gpu-enable-azure-monitor) | | |
+| Azure Stack Hub | [Monitor health and alerts in Azure Stack Hub](/azure-stack/operator/azure-stack-monitor-health) | | |
+| Azure Static Web Apps | [Monitor Azure Static Web Apps](/azure/static-web-apps/monitor) | [Supported metrics for managed Functions in Azure Static Web Apps](/azure/static-web-apps/metrics) | |
+| Azure Synapse Analytics | [Monitor Azure Synapse Analytics](/azure/synapse-analytics/monitor-synapse-analytics) | [Monitoring data reference for Azure Synapse Analytics](/azure/synapse-analytics/monitor-synapse-analytics-reference) | |
+| Azure Table Storage | [Monitor Azure Table Storage](/azure/storage/tables/monitor-table-storage) | [Monitoring data reference for Azure Table Storage](/azure/storage/tables/monitor-table-storage-reference) | |
+| Azure Update Manager | [Create alerts in Azure Update Manager](/azure/update-manager/manage-alerts) | | |
+| Azure Virtual Machine Scale Sets | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) | | |
+| Azure Virtual Network | [Monitor Azure Virtual Network](/azure/virtual-network/monitor-virtual-network) | [Monitoring data reference for Azure Virtual Network](/azure/virtual-network/monitor-virtual-network-reference) | |
+| Azure Virtual WAN | [Monitor Azure Virtual WAN](/azure/virtual-wan/monitor-virtual-wan) | [Monitoring data reference for Azure Virtual WAN](/azure/virtual-wan/monitor-virtual-wan-reference) | |
+| Azure VMware Solution | [Monitor and protect VMs with Azure native services](/azure/azure-vmware/integrate-azure-native-services) | | |
+| Azure Virtual Desktop | [Monitor Azure Virtual Desktop](/azure/virtual-desktop/insights) | | |
+| Azure Virtual Machines | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) | [Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | [VM Watch](/azure/virtual-machines/azure-vm-watch)<br><br>[Availability monitoring](/azure/virtual-machines/flash-overview) |
+| Azure VPN Gateway | [Monitor Azure VPN Gateway](/azure/vpn-gateway/monitor-vpn-gateway) | [Monitoring data reference for Azure VPN Gateway](/azure/vpn-gateway/monitor-vpn-gateway-reference) | |
+| Azure Web Application Firewall | [Web Application Firewall + Azure Front Door](/azure/web-application-firewall/afds/waf-front-door-monitor)<br><br> [Web Application Firewall + Application Gateway](/azure/web-application-firewall/ag/application-gateway-waf-metrics) | | |
+| Azure Web PubSub | [Monitor Azure Web PubSub](/azure/azure-web-pubsub/howto-azure-monitor) | [Monitoring Azure Web PubSub data reference](/azure/azure-web-pubsub/howto-monitor-data-reference) | |
+| Data Factory in Microsoft Fabric | [Monitor Data Factory](/fabric/data-factory/monitor-data-factory) | | |
+| Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | | |
+| Microsoft Entra Domain Services | [Check the health of Microsoft Entra Domain Services](/entra/identity/domain-services/check-health) | | |
+| Microsoft Entra External ID | [Azure Monitor in external tenants](/entra/external-id/customers/how-to-azure-monitor) | | |
+| Microsoft Entra ID | [What is Microsoft Entra monitoring and health?](/entra/identity/monitoring-health/overview-monitoring-health) | | |
+| Microsoft Sentinel | [Auditing and health monitoring in Microsoft Sentinel](/azure/sentinel/health-audit) | | |
+| Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | | |
+| Microsoft Entra Domain Services | [Check the health of Microsoft Entra Domain Services](/entra/identity/domain-services/check-health) | | |
+| Microsoft Entra External ID | [Azure Monitor in external tenants](/entra/external-id/customers/how-to-azure-monitor) | | |
+| Microsoft Entra ID | [What is Microsoft Entra monitoring and health?](/entra/identity/monitoring-health/overview-monitoring-health) | | |
+| Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | | |
+| Multicloud connector enabled by Azure Arc | [View multicloud inventory with the multicloud connector enabled by Azure Arc](/azure/azure-arc/multicloud-connector/view-multicloud-inventory) | | |
