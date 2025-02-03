@@ -23,7 +23,7 @@ The first step of monitoring is to set up general Azure Virtual Machine monitori
 
 To monitor an Oracle workload on the Azure Virtual Machines landing zone accelerator, you need to monitor Virtual Machine, attached managed Disks or applied storage account, such as Azure NetApp Files as well as Oracle Database on Azure Virtual Machine. Azure Monitor provides numerous ways to monitor log of the Virtual Machine and managed disks for your Oracle workload.
 
-The first step of monitoring for you is to set up general Azure Virtual Machine and Managed disk monitoring.
+The first step is to set up general Azure Virtual Machine and Managed disk monitoring.
 
 1. Enable Virtual Machine [insights](/azure/azure-monitor/vm/vminsights-enable-portal)
 2. Deploy AMA (Azure Monitoring Agent) and configure [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) (Data Collection Rule)
