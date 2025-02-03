@@ -24,11 +24,12 @@ For more information, see [Security guide for Oracle Exadata Database Service on
 Consider the following guidance when you design your security guidelines for Oracle Exadata Database@Azure:
 
 - Oracle Database@Azure is an Oracle database service running on Oracle Cloud Infrastructure (OCI), colocated in Microsoft data centers.  
-Managing Oracle Exadata Database@Azure resources involves the integration of two cloud platforms, with each governed by the security principles of Azure and Oracle Cloud Infrastructure(OCI). The Azure control plane manages the provisioning of the infrastructure, Virtual Machine(VM) Cluster, and network connectivity. The OCI console handles database management and individual node management. 
+Managing Oracle Exadata Database@Azure resources involves the integration of the Azure and OCI cloud platforms, each governed by their respective security best practices. The Azure control plane manages the provisioning of the infrastructure, including virtual machine(VM) cluster, and network connectivity. The OCI console handles database management and individual node management. 
 
 - The Oracle Database@Azure service is integrated into Azure virtual networks through subnet delegation.
 
-    **Note** that Oracle Exadata Database@Azure does not have inbound or outbound Internet access by default.
+    > [!NOTE]
+    > Oracle Exadata Database@Azure does not have inbound or outbound internet access by default.
 
 - Oracle Database@Azure client subnet currently doesn't support network security groups (NSGs).
 
@@ -51,16 +52,17 @@ Consider the following security recommendations when designing your Oracle Exada
 
 - Segment infrastructure access from data services access, especially when different teams access multiple databases on the same infrastructure for various reasons. Deploy VM clusters in a different virtual network for achieving network and management isolation at the workload level.
 - Use NSG rules to limit the source IP address range, which secures the data plane and virtual network access. To prevent unauthorized access, only open the necessary ports that you require for secure communication and apply [Principle of least privilege](/entra/identity-platform/secure-least-privileged-access). You can configure NSG rules on OCI.
-- Configure network address translation (NAT) or use Azure Firewall or third party Network Virtaul Appliances as a proxy if you require outbound internet access. 
+- If you require outbound internet access, consider configuring network address translation (NAT) or use as a proxy like Azure Firewall or third-party network virtaul appliance. 
 - Key Management recommendations:
-    - Oracle Exadata Database@Azure has a built-in integration OCI Vault.  
+    - Oracle Exadata Database@Azure has a built-in integration with OCI Vault.  
     If you choose to store the master encryption keys in OCI Vault, keep in mind that the keys will be stored in OCI, outside of Azure.  
     - If there's a requirement to keep all data and services within Azure, use Oracle Key Vault (OKV). 
     
         OKV doesn’t have built-in integration with the Oracle Exadata Database@Azure solution. [Deploying OKV on Azure](https://docs.oracle.com/en/solutions/deploy-key-vault-database-at-azure/index.html) isn't offered as a managed service. Customers are responsible for installation, database integration on Oracle Exadata Database@Azure and ensuring high availability of the solution. For provisioning details, refer to [Creating Oracle Key Vault Image in Microsoft Azure](https://docs.oracle.com/en/database/oracle/key-vault/21.9/okvag/using_okv_as_oci_vm_compute_instance.html#GUID-E8154AEB-2964-4698-AE6E-64A108C06D11).  
     To ensure encryption key availability, create a multi-master OKV deployment. For robust high availability, it's recommended to deploy a multi-master OKV cluster with four nodes spanning at least two availability zones or regions. For multi-master architecture details, refer to [Oracle Key Vault Multi-Master Cluster Concepts](https://docs.oracle.com/en/database/oracle/key-vault/21.9/okvag/multimaster_concepts.html#GUID-E1A92D83-760F-470F-877F-D769169C6ABC).  
     - If you're targeting a hybrid architecture that spans on-premises or other cloud platforms, use Oracle Key Vault as the solution is supported across these environments.  
-    **Note** that OKV requires separate licensing.  
+         > [!NOTE]
+        > OKV requires separate licensing.   
     -    If you haven't yet finalized your key management platform or are conducting a PoC or pilot, it's recommended to start with a wallet stored locally in the software keystore. 
    
          The process of transitioning to a keystore depends on the key management platform you choose. 
