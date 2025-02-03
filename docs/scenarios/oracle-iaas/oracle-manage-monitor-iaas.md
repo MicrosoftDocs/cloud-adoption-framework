@@ -79,7 +79,7 @@ For more information about Disk performance related metrics, see [Disk metrics -
 
 **Monitor Azure NetApp Files (ANF) metrics**
 
-If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput, and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
+If the database files are stored in Azure NetApp Files (ANF) volumes, monitor ANF allocated storage, actual storage usage, volume IOPS, throughput, and latency. For detailed information on how to monitor Azure NetApp Files and related performance metrics, refer to the following articles:
 
  - [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)
 
