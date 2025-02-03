@@ -1,6 +1,6 @@
 ---
 title: Authorization for Cloud-Scale Analytics in Azure
-description: Learn about data management and role-based access control for cloud-scale analytics in Azure.
+description: Learn about the best practices, including data management and role-based access control, for authorization in cloud-scale analytics environments in Azure.
 author: mboswell
 ms.author: mboswell
 ms.date: 01/31/2025
@@ -42,7 +42,7 @@ You can assign roles at different scopes, including:
 - At the resource group level, where roles apply to all resources within the specified resource group.
 - At the resource level, where you can assign roles directly to individual databases or servers. This approach gives you precise control. 
 
-Permissions define the actions that a role can perform, such as read, write, delete, or manage security settings. These permissions are grouped into roles to simplify management.
+Permissions define the actions that a role can perform, such as read, write, delete, or security settings management. These permissions are grouped into roles to simplify management.
 
 In **Azure SQL Database**, you can assign roles to users, groups, or applications to control access. For example, a database administrator might be assigned the *SQL Server Contributor* role to manage the server and databases. Roles like *SQL DB Contributor* allow users to create, update, and delete databases, while the *SQL Security Manager* role focuses on security configurations.
 
@@ -54,7 +54,7 @@ For more information, see [Azure built-in roles for databases](/azure/role-based
 
 ### Access control in Data Lake Storage
 
-Azure RBAC lets you grant coarse-grained access to storage account data, such as read or write access to all of the data in a storage account. ACLs let you grant fine-grained access, such as write access to a specific directory or file.
+Azure RBAC lets you grant coarse-grained access, such as read or write access, to all storage account data. ACLs let you grant fine-grained access, such as write access to a specific directory or file.
 
 In many scenarios, you can use RBAC and ACLs together to provide comprehensive access control in Data Lake Storage. You can use RBAC to manage high-level access to data, which helps ensure that only authorized users can access the service. Then you can apply ACLs within the storage account to control access to specific files and directories, which improves security.
 
@@ -106,7 +106,7 @@ The following best practices can help you get started with RBAC:
 
 Implementing effective RBAC is crucial for maintaining security and manageability in your analytics environment. This section provides best practices for using Microsoft Entra groups and built-in roles and for avoiding direct user permissions to help ensure a streamlined and secure access management process.
 
-Cloud-scale analytics environments typically contain polyglot storage solutions, including PostgreSQL, MySQL, SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+Cloud-scale analytics environments typically contain multiple types of storage solutions, including PostgreSQL, MySQL, SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
 - **Use Microsoft Entra groups instead of individual user accounts.** We recommend that you use Microsoft Entra groups to secure database objects instead of individual Microsoft Entra user accounts. Use Microsoft Entra groups to authenticate users and protect database objects. Similar to the data lake pattern, you can use your data application onboarding to create these groups.
 
@@ -125,7 +125,7 @@ In modern data environments, secure and efficient access control is paramount. D
 
 - **Apply ACLs at the file and folder levels.** To control access to data in the data lake, we recommend that you use ACLs at the level of files and folders. Data Lake Storage also adopts an ACL model that's similar to the Portable Operating System Interface (POSIX). POSIX is a group of standards for operating systems. One standard defines a simple but powerful permission structure for accessing files and folders. POSIX is widely used for network file shares and Unix computers.
 
-- **Use Microsoft Entra security groups as the assigned principal in an ACL entry.** Resist the opportunity to directly assign individual users or service principals. Using this structure allows you to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. Instead, you can just add or remove users and service principals from the appropriate Microsoft Entra security group.
+- **Use Microsoft Entra security groups as the assigned principal in an ACL entry.** Instead of directly assigning individual users or service principals, use this approach to add and remove users or service principals without the need to reapply ACLs to an entire directory structure. You can just add or remove users and service principals from the appropriate Microsoft Entra security group.
 
 - **Assign access to Microsoft Entra groups and manage membership of groups for ongoing access management.** For more information, see [Access control model in Data Lake Storage](/azure/storage/blobs/data-lake-storage-access-control-model).
 
