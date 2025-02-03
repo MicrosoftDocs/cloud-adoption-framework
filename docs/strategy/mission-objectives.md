@@ -31,7 +31,7 @@ A mission statement helps you align your objectives and key results to your orga
 To help you derive a statement for your business, consider these initial questions:
 
 - **Why:** Why are you moving to or expanding in the cloud?
-- **What:** What are your workplace objectives?
+- **What:** What are your business objectives?
 - **How:** How do you intend to measure success?
 
 Use the answers to these questions to help define your mission statement for your cloud strategy. For example:
@@ -52,7 +52,7 @@ To define your mission and objectives, consider the following recommendations.
 
 - **Meet with and involve key stakeholders across your organization.** Ensure that you clearly represent the business and departmental mission and objectives and that all stakeholders understand them. You might include problem statements that a cloud adoption addresses.
 
-- **Define and align cloud adoption objectives and key results.** Clearly define, refine, and align the cloud objectives based on your organization's mission and objectives.
+- **Define and align cloud adoption objectives and key results.** Clearly define, refine, and align the cloud objectives with your organization's mission and objectives.
 
 - **Define key results for objectives.** After you define and align objectives, establish specific key results to achieve the objectives, including key performance indicators (KPIs), to measure progress.
 

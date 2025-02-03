@@ -35,7 +35,7 @@ Here's a list of typical functions and their relevance for a cloud adoption stra
 - _Business decision makers (BDM)_ ensure that cloud strategies drive business value and align with revenue generation, customer engagement, and operational goals.
 - _IT decision makers (ITDM)_ bridge the gap between technology and business. They help balance technological feasibility with business needs and ensure that new solutions align with existing IT frameworks and capabilities.  
 - _Lead architects_ translate the business objectives into technical architectures that ensure cloud solutions are secure, scalable, reliable, and adaptable.
-- _Representatives from cloud security teams_ help ensure that you protect your data end systems. They ensure that new initiatives follow security standards to reduce the risks that are associated with cloud adoption.
+- _Cloud security teams_ help ensure that you protect your data end systems. They ensure that new initiatives follow security standards to reduce the risks that are associated with cloud adoption.
 - _Compliance teams_ minimize legal and compliance risks. They help ensure that all cloud practices meet regulatory and organizational compliance standards.
 - _Financial teams_. Consider including representatives from financial teams to help inform the IT and business decision makers about the opportunities and risks of cloud investments.
 - _Executives_ provide top-down support and strategic oversight. Including someone from your leadership team or executive stakeholders can help drive organizational commitments to ensure that cloud adoption aligns with the company’s overall mission and strategic objectives.
@@ -45,11 +45,11 @@ Here's a list of typical functions and their relevance for a cloud adoption stra
 Your cloud strategy team should continuously seek input from across the business. Consider ensuring alignment and seeking input from these additional teams and personas:
 
 - _Finance leadership_ guides budgeting, cost management, and financial planning. They help maximize the return on cloud investments by ensuring financial efficiency and compliance with corporate financial policies.
-- _Marketing_ shapes brand reputation and customer engagement strategies. They ensure that cloud capabilities support customer acquisition, retention, and digital marketing initiatives to enhance overall brand value.
-- _Sales_ drives revenue growth and improves customer relationships. They align cloud solutions with sales goals to help streamline sales processes, boost efficiency, and improve customer lifetime value.
+- _Marketing_ shapes brand reputation and customer engagement strategies. They ensure that cloud capabilities support customer acquisition, retention, and digital marketing initiatives to enhance overall brand image.
+- _Sales_ drives revenue growth and builds customer relationships. They align cloud solutions with sales goals to help streamline sales processes, boost efficiency, and improve customer lifetime value.
 - _Human resources (HR)_ provides insights and support that directly influence the success and sustainability of the transformation. If you have recruitment, re-skilling, or workforce planning requirements because of new areas for innovation, HR is a crucial partner.
 - _Executive leadership_ helps you meet market growth requirements and environmental sustainability metrics. 
-- _Sustainability leads_ drive sustainability as a strategy throughout the business. Sustainability is aligned with the company's commitments.
+- _Sustainability leads_ drive sustainability as part of the cloud strategy throughout the business, ensuring sustainability is aligned with the company's environmental commitments.
 
 ## Recommendations for defining your cloud strategy team
 

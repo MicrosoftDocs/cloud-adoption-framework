@@ -57,8 +57,8 @@ An organization's operating model is essentially how an organization structures 
 Understanding your organization’s current operating model plays a crucial role in developing your cloud adoption strategy:
 
 - _Organizational capabilities and processes_: Organizations with traditional support, technical change, security, finance, and architecture capabilities might have significant difficulty in keeping up with the continuous change and scale brought on by cloud services. The adoption strategy in this case needs to factor in the evolution of these capabilities to effectively support and enable cloud.
-- _Organizational culture_: Highly regulated or risk adverse organizations might have a dominant command and control and noncollaborative culture. Cloud might introduce much resistance to change in the ways of working. The cloud adoption strategy needs to factor in how address the organization's culture needs to enable the benefits of cloud.
-- _Roles and skills_: Organizations that are primarily on-premises might lack expertise in cloud architecture, DevOps, and cloud-native security practices. The cloud adoption strategy need to factor in the training and skilling plan to address the adequate adoption and enablement of cloud services.
+- _Organizational culture_: Highly regulated or risk-adverse organizations might have a non-collaborative and command and control culture. Cloud might introduce resistance to change in the ways of working. The cloud adoption strategy needs to factor in how to address the organization's culture needs to enable the benefits of cloud.
+- _Roles and skills_: Organizations that are primarily on-premises might lack expertise in cloud architecture, DevOps, and cloud-native security practices. The cloud adoption strategy needs to factor in the training and skilling plan to address the adequate adoption and enablement of cloud services.
 
 It's important that leadership identify and acknowledge their current limitations across their existing operating model for the cloud adoption strategy to provide suitable attention and resourcing for the plan the cloud journey.
 
@@ -76,9 +76,9 @@ It's important that leadership identify and acknowledge their current limitation
 
 Organizations moving or expanding their footprint in cloud who are wanting to ensure they can broadly scale their cloud services at speed might need to shift from a traditional project delivery model to a product delivery model for operations.
 
-This shift is a fundamental change in how business' structure, develop, and manage IT and technology investments as part of a cloud adoption strategy  
+This shift is a fundamental change in how business' structure, develop, and manage IT and technology investments as part of a cloud adoption strategy.
 
-- _A project model_: Task driven against a clearly defined scope, clear start and end time frames, and a budget typically focused on CAPEX. Once projects are complete, the ownership often shifts to another team for operations and maintenance.
+- _A project model_: Task-driven against a clearly defined scope, clear start and end time frames, and a budget typically focused on CAPEX. Once projects are complete, the ownership often shifts to another team for operations and maintenance.
 
 - _A product model_: Focuses on solutions as continuously evolving assets which require ongoing value delivery. It's an outcome-driven model with cross functional teams taking end to end ownership of development, operations, and governance. This model enables more responsive and scalable value delivery.  
 
