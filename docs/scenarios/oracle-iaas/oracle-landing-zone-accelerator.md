@@ -40,7 +40,6 @@ For guidelines to create your landing zone, see these articles:
 - [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-security-guideline-landing-zone.md)
 - [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-disaster-recovery-oracle-landing-zone.md)
 - [Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator](./oracle-manage-monitor-workload.md)
-- [Governance and compliance for Oracle on Azure Virtual Machines landing zone accelerator](./governance-compliance-oracle-landing-zone.md)
 
 ## Example conceptual reference architecture
 
