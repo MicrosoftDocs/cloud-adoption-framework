@@ -107,7 +107,7 @@ While monitoring ANF metrics, it is also important to monitor the Virtual Machin
 
 ### Oracle workload monitoring by Oracle Enterprise Manager Cloud Control
 
-Oracle Enterprise Manager is an Oracle integrated enterprise management product. It provides the monitoring features of events, incidents, metrics against the target Oracle workloads.
+Oracle Enterprise Manager is an Oracle integrated enterprise management product. It offers monitoring of events, incidents, and metrics related to target Oracle workloads.
 
 - [Manual](https://docs.oracle.com/en/enterprise-manager/index.html)
 - [Download](https://www.oracle.com/enterprise-manager/downloads/cloud-control-downloads.html)
