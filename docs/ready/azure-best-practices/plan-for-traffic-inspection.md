@@ -33,7 +33,7 @@ This section explores key considerations and recommended approaches for capturin
 
 ## Design recommendations
 
-- Prefer [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) over [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). Virtual network flow logs:
+- Use [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and migrate from existing [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) configuration. Virtual network guidance:
 
   - Plan and migrate your current NSG flow logs configuration to virtual network flow logs using the [migration guide](/azure/network-watcher/nsg-flow-logs-migrate).
 
