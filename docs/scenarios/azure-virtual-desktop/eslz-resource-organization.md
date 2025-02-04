@@ -41,9 +41,8 @@ Deploy all resources to the same Azure region as your Azure Virtual Desktop depl
 - **Storage** (for FSLogix user profiles)
 - **Other resources**: Azure Compute Galleries, Key Vaults, and images.
 
-- Deploy session hosts in Azure regions closest to your users to reduce network latency and improve performance.
-- Ensure compliance with regional regulations and data residency requirements when selecting a region
-- Running applications in session hosts located far from services (for example, session hosts in Central India reaching services in Central US) often increase application latency. Placing session hosts closer to the required resources may reduce this risk (Central US in this example).
+- Deploy session hosts in Azure regions closest to users and required resources to reduce network and application latency, improving overall performance. For example, session hosts in Central India reaching services in Central US often increase application latency, so placing them closer to the required resources helps mitigate this risk.
+- Ensure compliance with regional regulations and data residency requirements when selecting a region.
 - Avoid mixing session hosts from different Azure regions (for example, Central India and Central US) in the same host pool as you can't assign users to a session host in a specific Azure Region. Create separate session hosts for each Azure Region instead.
 
 ## Design recommendations
