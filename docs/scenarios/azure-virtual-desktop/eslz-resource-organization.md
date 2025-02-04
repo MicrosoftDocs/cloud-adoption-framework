@@ -21,7 +21,7 @@ Use this guidance to ensure resource organization and segmentation across:
 
 ## Design considerations
 
-The sections outline key factors to consider when planning your organization's Azure Virtual Desktop (AVD) structure.
+These sections outline key considerations for organizing your AVD resources.
 
 ### Number of virtual machines
 
@@ -110,3 +110,4 @@ Learn about management and monitoring for an Azure Virtual Desktop enterprise-sc
 
 > [!div class="nextstepaction"]
 > [Management and monitoring](./eslz-management-and-monitoring.md)
+e
