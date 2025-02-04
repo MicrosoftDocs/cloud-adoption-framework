@@ -32,7 +32,7 @@ How many Azure Virtual Desktop virtual machines (VMs) does your organization req
 
 ### Regions for host deployment
 
-Which regions should you choose for deploying hosts?
+Which region do you choose for deploying hosts?
 
 Deploy all resources to the same Azure region as your Azure Virtual Desktop deployment. The main resources involved are:
 - **Metadata (Services Objects)**: Host Pools, Application Groups, and Workspaces.
@@ -40,8 +40,6 @@ Deploy all resources to the same Azure region as your Azure Virtual Desktop depl
 - **VNets** (the VNet where the Session Hosts are directly connected)
 - **Storage** (for FSLogix user profiles)
 - **Other resources**: Azure Compute Galleries, Key Vaults, and images.
-
-### Other considerations
 
 - Deploy session hosts in Azure regions closest to your users to reduce network latency and improve performance.
 - Ensure compliance with regional regulations and data residency requirements when selecting a region
