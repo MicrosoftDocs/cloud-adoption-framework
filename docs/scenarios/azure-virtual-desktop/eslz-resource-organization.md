@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-avd
 
 # Management group and subscription organization for Azure Virtual Desktop
 
-The structure of your resource storage directly impacts how you implement resource management and governance. This article provides key considerations and recommendations for designing an organization's structure.
+Resource organization affects how you manage and govern your Azure Virtual Desktop (AVD) resources. This article provides key considerations and recommendations for designing an organization's structure.
 
 Use this guidance to ensure resource organization and segmentation across:
 
