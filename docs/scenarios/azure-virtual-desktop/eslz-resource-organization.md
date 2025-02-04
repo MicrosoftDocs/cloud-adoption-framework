@@ -69,7 +69,7 @@ The following is an example of the recommended structure and resource groups to 
     - Networking: Typically created as part of your Azure landing zone.
     - Storage: Create a resource group for storage accounts, if not already created as part of your Azure landing zone.
     - Session hosts compute: Create a Resource Group for virtual machines, disks, and network interfaces as these resources have a different lifecycle from Azure Virtual Desktop Service Objects.
-    - Shared Resources: Create a Resource Group for shared resources such as custom VM images, this encourages self-service so you could have a subscription for each business line, for instance.
+    - Shared Resources: Create a Resource Group for shared resources such as custom VM images. It encourages self-service so you could have a subscription for each business line, for instance.
 - Basic Structure:
     - Subscription AVD-Shared-Resources
         - rg-avd-<_Azure-Region_>-shared-resources
