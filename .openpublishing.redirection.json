@@ -2644,10 +2644,6 @@
          "source_path": "docs/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
          "redirect_document_id": false
-      }
-   ]
-}
-
       },
       {
          "source_path": "docs/strategy/cloud-adoption-strategy-evaluator.md",
@@ -2807,6 +2803,11 @@
       {
          "source_path": "docs/get-started/team/cloud-strategy.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/define-your-team",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/strategy-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
          "redirect_document_id": false
       }
    ]
