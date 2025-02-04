@@ -2644,6 +2644,11 @@
          "source_path": "docs/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
          "redirect_document_id": false
+       },
+       {
+         "source_path": "docs/antipatterns/govern-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/antipatterns/strategy-antipatterns.md",
