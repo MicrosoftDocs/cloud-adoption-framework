@@ -104,6 +104,7 @@ Common uses for tags include:
 - **Cost optimization**: Tags can be used to allocate resources to specific teams who are responsible for the costs. In [Microsoft Cost Management](/azure/cost-management-billing/), you can filter reports by cost center tag to track charges by team or department.
 
 ## Next steps
+
 Learn more about Azure Virtual Desktop organization and management, see:
 - [Azure Virtual Desktop resource organization](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
 - [Organize your Azure resources effectively](../../ready/azure-setup-guide/organize-resources.md)
