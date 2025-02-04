@@ -28,7 +28,7 @@ These sections outline key considerations for organizing your AVD resources.
 How many Azure Virtual Desktop virtual machines (VMs) does your organization require?
 
 - Avoid deploying more than 5,000 VMs in a single region. You can accommodate extra user sessions by increasing individual session host VM resources.
-- For enterprise environments exceeding 5,000 VMs per subscription per region, create multiple Azure subscriptions using a [hub-spoke architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology), and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Or you can deploy VMs in the same subscription but across different regions to increase the number of VMs.
+- For [enterprise environments](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) exceeding 5,000 VMs per subscription per region, create multiple Azure subscriptions using a [hub-spoke architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, deploy VMs within the same subscription but across different regions to increase the number of VMs.
 
 ### Regions for host deployment
 
