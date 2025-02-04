@@ -1,68 +1,68 @@
 ---
-title: Data management landing zone overview
+title: Data Management Landing Zone Overview
 description: Gain an overview of data management landing zone in Azure
 author: mboswell
 ms.author: mboswell
-ms.date: 11/27/2024
+ms.date: 02/04/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Data management landing zone
 
-The data management landing zone is a management function central to cloud-scale analytics. It's responsible for the governance of your analytics platform.
+A data management landing zone is a management function central to cloud-scale analytics. It's responsible for the governance of your analytics platform.
 
 :::image type="content" source="../images/data-management-overview.png" alt-text="Diagram of data management landing zone overview." lightbox="../images/data-management-overview.png":::
 
-Your data management landing zone is a separate subscription that has the same standard Azure landing zone services. It allows data governance of your data through crawlers, which connect to your data lakes and polyglot storage in your data landing zones. Virtual network peering connects your data management landing zone to your data landing zones and connectivity subscription.
+Your data management landing zone is a separate subscription that has the same standard Azure landing zone services. It provides data governance of your data through crawlers, which connect to your data lakes and polyglot storage in your data landing zones. Virtual network peering connects your data management landing zone to your data landing zones and connectivity subscription.
 
-This architecture is a starting point, and you can modify it to fit your specific business and technical requirements when planning your data management landing zone implementation.
+This architecture is a starting point. You can modify it to fit your specific business and technical requirements when you plan your data management landing zone implementation.
 
 > [!NOTE]
-> Polyglot persistence is a storage term that describes your choice between different data storage/data store technologies to support your various data types and their storage needs. Essentially, polyglot persistence is the concept that an application can use more than one core database or storage technology.
+> Polyglot persistence refers to the practice of using multiple data storage or data store technologies to support your data types and their storage needs. Polyglot persistence means that an application can use more than one core database or storage technology.
 
 > [!IMPORTANT]
-> Your data management landing zone must be deployed as a separate subscription under a management group with the appropriate governance. You can then control governance across your organization. The [Azure landing zone accelerator](../../../ready/landing-zone/index.md) illustrates how you should approach Azure landing zones.
+> You must deploy your data management landing zone as a separate subscription under a management group that has the appropriate governance. You can then control governance across your organization. The [Azure landing zone accelerator](../../../ready/landing-zone/index.md) illustrates how you should approach Azure landing zones.
 
 ## Data governance
 
-Cloud Scale Analytics suggests using Microsoft Purview. Alternatively, Microsoft Partner solutions can be deployed to manage specific data governance functions. Key functions to consider in your architecture include a global data catalog, master data management, data sharing and contracts, API catalog, data quality management, and a data modeling repository.
+The Azure cloud-scale analytics framework suggests that you use Microsoft Purview. Alternatively, you can deploy Microsoft partner solutions to manage specific data governance functions. Key functions to consider in your architecture include a global data catalog, primary data management, data sharing and contracts, an API catalog, data quality management, and a data modeling repository.
 
-Microsoft partner data governance products that need deployment in a subscription should be deployed to the Data Governance resource group within the data management landing zone.
+If you have Microsoft partner data governance products that require deployment in a subscription, deploy them to the Data Governance resource group within the data management landing zone.
 
 ### Data catalog
 
 [!INCLUDE [data-catalog](../../cloud-scale-analytics/includes/data-catalog.md)]
 
-### Master data management
+### Primary data management
 
-Master data management control resides in the data management landing zone. [Master data management in data mesh](../../cloud-scale-analytics/architectures/data-mesh-master-data-management.md) contains specific considerations you should call out for data mesh.
+Primary data management control resides in the data management landing zone. For specific considerations for data mesh, see [Primary data management in data mesh](../../cloud-scale-analytics/architectures/data-mesh-master-data-management.md).
 
-Many master data management solutions fully integrate with Microsoft Entra ID. This integration allows you to secure your data and provide different views for different user groups.
+Many primary data management solutions fully integrate with Microsoft Entra ID. You can help secure your data and provide different views for different user groups.
 
-For more information, see [Master data management system](../govern-master-data.md).
+For more information, see [Primary data management system](../govern-master-data.md).
 
 ### Data sharing and contracts
 
-Cloud-scale analytics uses [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Microsoft Purview policies](../secure-data-privacy.md) to control access to data sharing. Even so, you might still require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone.
+Cloud-scale analytics uses [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Microsoft Purview policies](../secure-data-privacy.md) to control access to data sharing. In addition to those features, you might require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone.
 
-Your contracts should provide information on data validation, models, and security policies.
+Your contracts should provide information about data validation, models, and security policies.
 
 For more information, see [Data contracts](../../cloud-scale-analytics/architectures/data-contracts.md).
 
 ### API catalog
 
-Your data application teams create various APIs for their data applications. These APIs can be difficult to discover across your organization. Placing an API catalog in your data management landing zone can solve this problem.
+Your data application teams create various APIs for their data applications. These APIs can be difficult to discover across your organization. To solve this problem, place an API catalog in your data management landing zone.
 
-An API catalog can help standardize your documentation and offers a place for internal collaboration on APIs. It also can drive consumption, publishing, and governance controls across your organization.
+An API catalog can help standardize your documentation and provide a place for internal collaboration on APIs. It can also drive consumption, publishing, and governance controls across your organization.
 
 ### Data quality management
 
 Continue with your current solution.
 
-Manage data quality as close to the data source as possible to prevent quality issues from spreading across your analytics and AI systems. By integrating quality metrics and validation into your data processes, you align the quality management with the teams most familiar with the data, ensuring a deeper understanding and better handling of the data assets.
+Manage data quality at the data source to prevent problems from spreading across your analytics and AI systems. Integrate quality metrics and validation into your data processes so that teams that are most familiar with the data handle quality management. This approach helps ensure that your team has a deeper understanding and better handling of the data assets.
 
-Data lineage also provides data quality confidence, and you should provide it for all data products.
+Provide data lineage for all data products to improve data quality confidence.
 
 For more information on data quality management, see [Data quality](../../cloud-scale-analytics/govern-data-quality.md).
 
