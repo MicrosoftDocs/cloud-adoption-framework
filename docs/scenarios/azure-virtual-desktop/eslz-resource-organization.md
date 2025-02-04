@@ -81,11 +81,11 @@ A consistent naming standard helps organize resources, streamline management, en
 - Business details should include the organizational information to identify teams. Use the resource's short name along with the names of the business owners who are responsible for the resource costs.
 - Operational details should include the information helpful for IT teams to identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
-A well-structured naming system allows for rapid resource identification for both management and accounting purposes. Consistency across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT naming standards or to create separate, unique conventions for the cloud. [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) outlines how patterns can support governance practices. 
+A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. [Develop naming strategy for Azure resources](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) 
 
 ### Resource tags
 
-Resource tags help evaluate regulatory compliance by logically categorizing Azure resources.
+Resource tags help evaluate regulatory compliance by logically categorizing Azure resources. [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) outlines how patterns can support governance practices.
 
 Each tag consists of a name and a value. You can use them to provide context about the associated workload, application, operational requirements, or ownership. For example, you can apply the tag name _environment_ with the value _production_ to categorize all production resources.
 
