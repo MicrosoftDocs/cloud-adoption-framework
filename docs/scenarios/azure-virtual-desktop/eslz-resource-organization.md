@@ -28,7 +28,7 @@ These sections outline key considerations for organizing your AVD resources.
 How many Azure Virtual Desktop virtual machines (VMs) does your organization require?
 
 - Avoid deploying more than 5,000 VMs in a single region. You can accommodate extra user sessions by increasing individual session host VM resources.
-- For [enterprise environments](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) exceeding 5,000 VMs per subscription per region, create multiple Azure subscriptions using a [hub-spoke architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, deploy VMs within the same subscription but across different regions to increase the number of VMs.
+- For [enterprise environments](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) exceeding 5,000 VMs per subscription per region, create multiple Azure subscriptions using a [hub-spoke architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, deploy VMs within the same subscription but across different regions to increase the number of VMs.
 
 ### Regions for host deployment
 
@@ -81,7 +81,7 @@ A consistent naming standard helps organize resources, streamline management, en
 - Business details should include the organizational information to identify teams. Use the resource's short name along with the names of the business owners who are responsible for the resource costs.
 - Operational details should include the information helpful for IT teams to identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
-A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. [Develop naming strategy for Azure resources](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) 
+A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. [Develop naming strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) 
 
 ### Resource tags
 
