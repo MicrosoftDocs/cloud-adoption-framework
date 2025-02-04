@@ -66,7 +66,7 @@ The following is an example of the recommended structure and resource groups to 
 :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD Shared Resources subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
 - Components
     - Azure Virtual Desktop Service Objects: Create a resource group for Azure Virtual Desktop Service Objects from Host Pool VMs. Service objects like Workspaces, Host Pools, and Application Groups.
-    - Networking: Typically created as part of the Cloud Adoption Framework Landing Zone.
+    - Networking: Typically created as part of your Azure landing zone.
     - Storage: Create a resource group for storage accounts, if not already created as part of your Azure landing zone.
     - Session hosts compute: Create a Resource Group for virtual machines, disks, and network interfaces as these resources have a different lifecycle from Azure Virtual Desktop Service Objects.
     - Shared Resources: Create a Resource Group for shared resources such as custom VM images, this encourages self-service so you could have a subscription for each business line, for instance.
