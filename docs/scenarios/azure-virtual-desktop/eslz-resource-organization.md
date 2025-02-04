@@ -106,6 +106,7 @@ Common uses for tags include:
 ## Next steps
 
 Learn more about Azure Virtual Desktop organization and management, see:
+
 - [Azure Virtual Desktop resource organization](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
 - [Organize your Azure resources effectively](../../ready/azure-setup-guide/organize-resources.md)
 - [Naming and tagging in Azure](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
