@@ -79,7 +79,6 @@ The following is an example of the recommended structure and resource groups to 
         - rg-avd-<_Azure-Region_>-<_Workload_>-network
         - rg-avd-<_Azure-Region_>-<_Workload_>-storage
 
-:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD Shared Resources subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
 
 :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD Service Objects and compute subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png":::
 
