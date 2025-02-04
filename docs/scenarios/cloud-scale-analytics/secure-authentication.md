@@ -20,13 +20,13 @@ If your data services don't support Microsoft Entra ID, you should perform authe
 
 Authentication scenarios for cloud-scale analytics are:
 
-- **User authentication.** In this scenario, users authenticate through Microsoft Entra ID by using their credentials.
-- **Service-to-service authentication.** In this scenario, Azure resources authenticate by using managed identities, which are automatically managed by Azure.
-- **Application-to-service authentication.** In this scenario, applications authenticate by using service principals.
+- **User authentication.** In this scenario, Microsoft Entra ID authenticates users by using their credentials.
+- **Service-to-service authentication.** In this scenario, Azure resources authenticate services by using managed identities, which are automatically managed by Azure.
+- **Application-to-service authentication.** In this scenario, applications authenticate services by using service principals.
 
 ## Authentication scenarios
 
-The following sections describe each of the authentication scenarios, user authentication, service-to-service authentication, and application-to-service authentication.
+The following sections describe each of the authentication scenarios: user authentication, service-to-service authentication, and application-to-service authentication.
 
 ### User authentication
 
@@ -39,22 +39,22 @@ Azure Data Lake Storage, Azure SQL Database, Azure Synapse Analytics, and Azure 
 
 ### Service-to-service authentication
 
-When a service accesses another service without human interaction, it must present a valid identity. This identity proves the service's authenticity and allows the accessed service to determine the permitted actions.
+When a service accesses another service without human interaction, it must present a valid identity. This identity proves the service's authenticity and allows the service that it accesses to determine what actions are permitted.
 
 In service-to-service authentication scenarios, we recommend that you use managed identities for authenticating Azure services. Managed identities for Azure resources allow for authentication to any service that supports Microsoft Entra authentication without any explicit credentials. For more information, see [What are managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
 
-Managed identities are service principals that can only be used with Azure resources. For example, you can create a managed identity for an Azure Data Factory instance. This managed identity is registered with Microsoft Entra ID as an object and represents the Data Factory instance. You can then use this identity to authenticate to any service, such as Data Lake Storage, without any credentials in the code. Azure manages the credentials that the service instance uses. The identity can grant authorization to Azure service resources, such as a folder in Data Lake Storage. When you delete this Data Factory instance, Azure cleans up the identity in Microsoft Entra ID.
+Managed identities are service principals that can only be used with Azure resources. For example, you can create a managed identity for an Azure Data Factory instance. Microsoft Entra ID registers this managed identity as an object that represents the Data Factory instance. You can then use this identity to authenticate to any service, such as Data Lake Storage, without any credentials in the code. Azure manages the credentials that the service instance uses. The identity can authenticate Azure service resources, such as a folder in Data Lake Storage. When you delete the Data Factory instance, Azure deletes the identity in Microsoft Entra ID.
 
 #### Benefits of using managed identities
 
-You should use managed identities to authenticate an Azure service to another Azure service or resource. Managed identities provide the following benefits:
+Use managed identities to authenticate an Azure service to another Azure service or resource. Managed identities provide the following benefits:
 
 - A managed identity represents the service for which it's created. It doesn't represent an interactive user.
 - Managed identity credentials are maintained, managed, and stored in Microsoft Entra ID. There's no password for a user to keep.
 - When you use managed identities, the client services don't use passwords.
 - The system-assigned managed identity is deleted when the service instance is deleted.
 
-These benefits mean that the credential is better protected and security compromise is less likely.
+These benefits mean that credentials are better protected and security compromise is less likely.
 
 ### Application-to-service authentication
 
@@ -76,17 +76,17 @@ An Azure service principal is the alternative option for applications and servic
 
 ## Best practices for authentication in cloud-scale analytics
 
-In cloud-scale analytics, implementing robust and secure authentication practices is paramount. Best practices for authentication apply to various layers, including databases, storage, and analytics services. By using Microsoft Entra ID, organizations can improve security by using features such as multifactor authentication and conditional access policies.
+In cloud-scale analytics, implementing robust and secure authentication practices is paramount. Best practices for authentication apply to various layers of a solution, including databases, storage, and analytics services. By using Microsoft Entra ID, organizations can improve security by using features such as multifactor authentication and conditional access policies.
 
 |Layer|Service|Recommendation|
 |-------------|----------|----------|
-|Databases|- SQL Database<br>- >SQL Managed Instance<br>- Azure Synapse Analytics<br>- Azure Database for MySQL<br>- Azure Database for PostgreSQL|Use Microsoft Entra ID for authentication with databases such as [Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication), [Azure SQL](/azure/azure-sql/database/authentication-aad-overview), and [Azure Database for MySQL](/azure/mysql/flexible-server/concepts-azure-ad-authentication). |
+|Databases|- SQL Database<br>- SQL Managed Instance<br>- Azure Synapse Analytics<br>- Azure Database for MySQL<br>- Azure Database for PostgreSQL|Use Microsoft Entra ID for authentication with databases such as [Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication), [Azure SQL](/azure/azure-sql/database/authentication-aad-overview), and [Azure Database for MySQL](/azure/mysql/flexible-server/concepts-azure-ad-authentication). |
 |Storage|Data Lake Storage|Use Microsoft Entra ID for authentication for security principals, such as user, group, and service principals or managed identities, with Data Lake Storage instead of a shared key or shared access signatures. This approach helps improve security because it supports multifactor authentication and conditional access policies.|
 |Storage|Data Lake Storage from Azure Databricks|Connect to Data Lake Storage by using [Unity Catalog](/azure/databricks/connect/unity-catalog/) instead of direct storage-level access by creating a [storage credential that uses a managed identity](/azure/databricks/connect/unity-catalog/storage-credentials#create-a-storage-credential-using-a-managed-identity) and an [external location](/azure/databricks/connect/unity-catalog/external-locations).|
 |Analytics|Azure Databricks|Use the System for Cross-domain Identity Management to [sync users and groups from Microsoft Entra ID](/azure/databricks/admin/users-groups/scim/). To access Azure Databricks resources by using REST APIs, [use OAuth with an Azure Databricks service principal](/azure/databricks/dev-tools/auth/#what-authentication-approach-should-i-choose).|
 
 > [!IMPORTANT]
-> Giving Azure Databricks users direct storage-level access to Data Lake Storage bypasses Unity Catalog's permissions, audits, and security features, including access control and monitoring. To better secure and govern data, access to data that's stored in Data Lake Storage for Azure Databricks workspace users should be managed through Unity Catalog.
+> Giving Azure Databricks users direct storage-level access to Data Lake Storage bypasses Unity Catalog's permissions, audits, and security features, including access control and monitoring. To better secure and govern data, Unity Catalog should manage access to data that's stored in Data Lake Storage for Azure Databricks workspace users.
 
 ## Next step
 
