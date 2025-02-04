@@ -85,6 +85,7 @@ The following is an example of the recommended structure and resource groups to 
 ### Naming standards
 
 A consistent naming standard helps organize resources, streamline management, enable cost tracking, and ensure effective governance. Your naming strategy should include business and operational details in resource names.
+
 - Business details should include the organizational information to identify teams. Use the resource's short name along with the names of the business owners who are responsible for the resource costs.
 - Operational details should include the information helpful for IT teams to identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
