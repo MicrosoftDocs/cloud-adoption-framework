@@ -2650,5 +2650,11 @@
          "redirect_url": "/azure/cloud-adoption-framework/govern",
          "redirect_document_id": false
        }
+      },
+      {
+         "source_path": "docs/antipatterns/strategy-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      }
    ]
 }
