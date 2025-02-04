@@ -1,12 +1,11 @@
 ---
 title: Tools and templates
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
-author: martinekuan
-ms.author: martinek
-ms.date: 05/07/2024
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 02/04/2025
 ms.topic: article
 ms.subservice: caf-general
-ms.custom: internal, UpdateFrequency5
 ---
 
 # Tools and templates
@@ -19,7 +18,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 |----------|-------------|
 | [Cloud Adoption Strategy Evaluator assessment](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) | Assess your cloud adoption strategy and get recommendations on building and advancing your cloud business case. |
 | [Cloud Journey Tracker assessment](/assessments/cloud-journey-tracker/) | Identify your cloud adoption path based on the needs of your business. |
-| [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions as you implement your cloud adoption strategy and plan. |
 
 ## Plan
 
@@ -27,7 +25,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 |----------|-------------|
 | [Strategic Migration Assessment and Readiness Tool assessment](/assessments/Strategic-Migration-Assessment/) | Take the Strategic Migration Assessment and Readiness Tool (SMART) assessment to help you prepare for your Microsoft Azure migration in areas like business planning, training, security, and governance. |
 | [Cloud Journey Tracker assessment](/assessments/cloud-journey-tracker/) | Identify your cloud adoption path based on the needs of your business. |
-| [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document your decisions as you implement your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize your processes. Use a template to deploy a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards). |
 | [Use the Strategy-Plan-Ready-Govern Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize your processes. Use a template to deploy a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards). |
 
