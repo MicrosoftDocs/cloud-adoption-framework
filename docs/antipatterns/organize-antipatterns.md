@@ -32,8 +32,8 @@ A corporation manages its IT department as a cost center responsible to the chie
 
 Instead of managing your IT department as a cost center, consider one of these approaches:
 
-- [Chargeback](../strategy/cloud-accounting.md#chargeback): Business units treat IT costs like operating expenses in their budgets.
-- [Showback or awareness-back](../strategy/cloud-accounting.md#showback-or-awareness-back): IT functions as an agent. In reports back to the business, IT attributes any direct costs to relevant business units.
+- Chargeback: Business units treat IT costs like operating expenses in their budgets.
+- Showback or awareness-back: IT functions as an agent. In reports back to the business, IT attributes any direct costs to relevant business units.
 
 Use the cloud as a tool to increase cost and business transparency. For instance, implement a [Cost Management discipline](../govern/cost-management/index.md) to increase cost transparency. Then you'll be more aware of the cost of different business units. You'll view the IT department as an enabler for those units.
 
