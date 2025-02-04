@@ -86,7 +86,7 @@ A well-structured naming system allows for rapid resource identification for bot
 
 ### Resource tags
 
-Resource tags can help evaluate regulatory compliance by logically organizing Azure resources into categories.
+Resource tags help evaluate regulatory compliance by logically categorizing Azure resources.
 
 Each tag consists of a name and a value. You can use them to provide context about the associated workload, application, operational requirements, or ownership. For example, you can apply the tag name _environment_ with the value _production_ to categorize all production resources.
 
