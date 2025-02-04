@@ -62,6 +62,8 @@ Azure provides four levels of management: management groups, subscriptions, reso
 - **Resources** are instances of services created within a resource group, such as Azure Virtual Desktop.
 
 The following is an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
+
+:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD Shared Resources subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
 - Components
     - Azure Virtual Desktop Service Objects: Create a resource group for Azure Virtual Desktop Service Objects from Host Pool VMs. Service objects like Workspaces, Host Pools, and Application Groups.
     - Networking: Typically created as part of the Cloud Adoption Framework Landing Zone.
