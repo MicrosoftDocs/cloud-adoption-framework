@@ -54,11 +54,6 @@ These sections offer guidance on managing groups, naming, and tagging in Azure V
 
 Azure provides four levels of management: management groups, subscriptions, resource groups, and resources. You can apply management settings like policies and role-based access control at any management level. 
 
-- **Management groups** allow you enforce access controls, policies, and compliance across multiple subscriptions. All subscriptions in a management group automatically inherit the controls you apply to the management group they're in. Create management groups under the root-level management group to represent workload types (archetypes) you host. Also, create management groups based on security, compliance, connectivity, and feature needs. If you use this grouping structure, you can apply a set of Azure policies at the management group level for all workloads that require the same security, compliance, connectivity, and feature settings.
-- **Subscriptions** logically associate user accounts with the resources they create. Each subscription has [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) or quotas the resources it can hold. Be mindful of subscription quotas and resource limits during workload design. Organizations can use subscriptions to manage costs and the resources that users, teams, and projects create. Subscriptions provide a clear management boundary for governance and isolation.
-- **Resource groups** are logical containers for deploying and managing Azure resources like Azure Virtual Desktop, virtual machines, and storage.
-- **Resources** are instances of services created within a resource group, such as Azure Virtual Desktop.
-
 The following is an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
 
 :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD Shared Resources subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
