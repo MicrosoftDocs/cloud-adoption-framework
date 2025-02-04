@@ -34,7 +34,7 @@ How many Azure Virtual Desktop virtual machines (VMs) does your organization req
 
 Which regions should you choose for deploying hosts?
 
-We generally recommend storing all resources in the same Azure region as your Azure Virtual Desktop deployment. The main resources involved are:
+Deploy all resources to the same Azure region as your Azure Virtual Desktop deployment. The main resources involved are:
 - **Metadata (Services Objects)**: Host Pools, Application Groups, and Workspaces.
 - **Session Hosts (Virtual Desktops) compute**: Virtual machines, disks, and network interfaces.
 - **VNets** (the VNet where the Session Hosts are directly connected)
