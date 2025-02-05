@@ -46,16 +46,16 @@ The Oracle administrator should monitor disk performance metrics related to I/O,
 | Percentage CPU >= 85                           | 85 (1)                  | 
 | Percentage CPU >= 75                           | 75 (2)                  | 
 | VmAvailabilityMetric < 1                       | < 1 (0)                 | 
-| OS Disk Bandwidth Consumed Percentage > 95     | 95 (0)                  | 
+| OS Disk Bandwidth Consumed Percentage > 95     | 95 (1)                  | 
 | OS Disk Bandwidth Consumed Percentage > 90     | 90 (1)                  | 
 | Available Memory Bytes < 500000000             | < 500000000 (1)         | 
-| VM cached Bandwidth Consumed Percentage > 95   | 95 (2)                  | 
+| VM cached Bandwidth Consumed Percentage > 95   | 95 (1)                  | 
 | VM cached Bandwidth Consumed Percentage > 85   | 85 (2)                  | 
 | VM cached Bandwidth Consumed Percentage > 75   | 75 (2)                  | 
-| VM uncached Bandwidth Consumed Percentage > 95 | 95 (2)                  | 
+| VM uncached Bandwidth Consumed Percentage > 95 | 95 (1)                  | 
 | VM uncached Bandwidth Consumed Percentage > 85 | 85 (2)                  | 
 | VM uncached Bandwidth Consumed Percentage > 75 | 75 (2)                  | 
-| Data Disk IOPS Consumed Percentage > 95        | 95 (2)                  | 
+| Data Disk IOPS Consumed Percentage > 95        | 95 (1)                  | 
 | Data Disk IOPS Consumed Percentage > 85        | 85 (2)                  | 
 | Data Disk IOPS Consumed Percentage > 75        | 75 (2)                  | 
 | Data Disk Read Bytes > 95     | 95 (1)                  | 
@@ -64,11 +64,8 @@ The Oracle administrator should monitor disk performance metrics related to I/O,
 | Data Disk Writes Bytes > 95     | 95 (1)                  | 
 | Data Disk Writes Bytes > 85     | 85 (2)                  | 
 | Data Disk Writes Bytes > 75     | 75 (2)                  | 
-| OS Disk Bandwidth Consumed Percentage > 95     | 95 (2)                  | 
-| OS Disk Bandwidth Consumed Percentage > 85     | 85 (2)                  |  
-| OS Disk Bandwidth Consumed Percentage > 75     | 75 (2)                  | 
 
-
+ In Severity please note that '0' has the highest severity while '2' has a lower severity.
 
 When monitoring disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. The specific limits for managed disks are detailed in the technical specifications for each VM SKU. For more information about VM specifications, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
@@ -103,7 +100,7 @@ While monitoring ANF metrics, it's also important to monitor the Virtual Machine
 |:-----------------|:-------------------|:-------------|
 |Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. | [Azure virtual network overview](/azure/virtual-network/virtual-networks-overview) <br> [Monitoring Azure virtual network data reference](/azure/virtual-network/monitor-virtual-network-reference)
 | Azure Backup |Azure Backup can be monitored and can be set the alert.| [Monitor at scale by using Azure monitor](/azure/backup/backup-azure-monitoring-use-azuremonitor) <br> Monitor the Oracle database "alert log" file on the database VM for lines starting with the following format:<br> status – AzBackup – script – version: message <br> - where: status = “INFO”, “WARN”, or “FAIL” <br> - AzBackup (boilerplate text) <br> - script = “pre-script" or “post-script"<br> - version = version number in decimal format <br> message = free-format text <br>Example:  INFO - AzBackup pre-script v1.02: BEGIN BACKUP |
-|Azure database Virtual Machine |Database "alert log" file, OS console messages file | - Database "alert log" file is typically located in the subdirectory "$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace" on the database Virtual Machine<br> - OS console log located at "/var/log/messages" |
+|Oracle database on a Virtual Machine |Database "alert log" file, OS console messages file | - Database "alert log" file is typically located in the subdirectory "$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace" on the database Virtual Machine<br> - OS console log located at "/var/log/messages" |
 
 ### Oracle workload monitoring by Oracle Enterprise Manager Cloud Control
 
