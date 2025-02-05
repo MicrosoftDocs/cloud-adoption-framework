@@ -48,6 +48,11 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 - [Organize your Azure resources effectively](../ready/azure-setup-guide/organize-resources.md): Find updated links for management group design, subscription considerations, and tagging strategy. Updates emphasize the importance of applying critical settings at higher levels and project-specific requirements at lower levels, and include additional details on naming conventions and resource tagging to enhance resource identification and management.
 - [Review product migration scenarios](../migrate/scenarios.md): Explore the new Google Cloud Platform scenario for migrating virtual machines to Azure.
 
+#### AI Adoption updates
+
+- [AI Governance for PaaS workloads](../scenarios/ai/platform/governance.md): Learn how to control the models you allow across Azure and deployed in Azure AI Foundry.
+- [Secure AI](../scenarios/ai/secure.md): Learn how to conduct red team testing on generative AI and nongenerative AI models.
+
 #### Oracle updates
 
 - [Business continuity and disaster recovery considerations for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure.md): We added new design considerations and recommendations for multiple-zone and multiregional BCDR architectures, extended BCDR scenarios, backup recommendations, and introduced additional best practices for maintaining data resilience and automating failover operations.
