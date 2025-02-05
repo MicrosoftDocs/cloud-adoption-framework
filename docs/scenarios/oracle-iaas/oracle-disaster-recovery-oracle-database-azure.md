@@ -28,7 +28,7 @@ For more information, see the Microsoft Azure Well-Architected Framework's guide
 
 - The solution provides automated Data Guard configuration for DR. This setup helps protect from site failures by requiring another Oracle Exadata Database@Azure deployment in a different availability zone or region.
 
-- Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. By default, the primary route for this connectivity is through Azure. For details refer to [BCDR Connectivity Design](./bcdr-connectivity-design.md)
+- Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. By default, the primary route for this connectivity is through Azure. 
 
 - The three backup options available for Oracle Exadata Database@Azure are:
 
@@ -145,7 +145,7 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
 
 ## Other recommendations
 
-- **Keep data within Azure:** If it's necessary to keep data exclusively within Azure, [route Data Guard traffic through the Azure network](./bcdr-connectivity-design.md) and configure backups to stay in Azure.
+- **Keep data within Azure:** If it's necessary to keep data exclusively within Azure, route Data Guard traffic through the Azure network and configure backups to stay in Azure.
 
 - **Test DR:** Test failover and switchover operations to help ensure that they work in a real disaster scenario.
 
