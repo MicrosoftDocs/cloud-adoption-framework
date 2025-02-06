@@ -64,5 +64,5 @@ Establish a multiple subscription architecture for Oracle Database@Azure, where 
 ## Next steps
 
 - For more information about how to plan and design networking, see [Network topology and connectivity for Oracle Database@Azure](/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-network-topology-odaa).
-- For more information about how to enhance security, see [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative).
-- For more information about isolation best practices, see [Securing multitenant architectures](/entra/architecture/secure-multiple-tenants).
+- For more information about how to enhance security, see [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative).
+- For more information about isolation best practices, see [Resource isolation with multiple tenants](/entra/architecture/secure-multiple-tenants).

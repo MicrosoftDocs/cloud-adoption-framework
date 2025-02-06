@@ -22,7 +22,7 @@ The client subnet in the OCI VCN maps to the Oracle Database delegated subnet in
 
 When you design your network topology for Oracle Database@Azure - Exadata Database Service, consider the following Oracle-specific factors:
 
-- **Availability zone selection:** Oracle Database@Azure - Exadata Database Service services are deployed into subscription-specific availability zones, which affects latency and resilience. The physical datacenter might differ between subscriptions. For more information, see [Logical and physical availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
+- **Availability zone selection:** Oracle Database@Azure - Exadata Database Service services are deployed into subscription-specific availability zones, which affects latency and resilience. The physical datacenter might differ between subscriptions. For more information, see [Physical and logical availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
 
 - **Inherited region and availability zone settings:** When you deploy an Exadata Infrastructure instance, the region and availability zones are effectively mapped to it, and any virtual machine (VM) clusters created within the Exadata Infrastructure Instance inherit the same settings.
 
@@ -32,11 +32,11 @@ When you design your network topology for Oracle Database@Azure - Exadata Databa
 
 - **Subnet sizing:** Define subnet sizes according to Oracle’s SKU specifications, which differ based on the chosen instance type. For more information about sizing guidelines, see [Plan for IP address space for Oracle Database@Azure - Exadata Database Service](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
-- **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments. For more information, see [Network planning for Oracle Database@Azure - Exadata Database Service](/azure/oracle/oracle-db/oracle-database-network-plan).
+- **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan).
 
 - **Azure network security group limitation:** Network security groups (NSGs) on the Oracle Database delegated subnet must be configured through OCI. For more information, see [Create an NSG](https://docs.oracle.com/iaas/Content/Network/Concepts/create-nsg.htm).
 
-- **Split DNS model:** Oracle Database@Azure follows a split DNS model. DNS must be configured on both Azure and OCI. For more information, see [Oracle Database@Azure - Exadata Database Service DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513).
+- **Split DNS model:** Oracle Database@Azure follows a split DNS model. DNS must be configured on both Azure and OCI. For more information, see [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513).
 
 - **Private DNS naming rules:** When default DNS settings are used to create VM clusters, the private DNS zone will automatically be named based on the virtual network and subnet that's chosen for the VM cluster. The name of this zone will be "oci" + the first 10 alphabetic characters of the virtual network and subnet names. For example, virtual network "vnet-exadata-prod" + subnet "snet-exadata-prod" will output ocisnetexadat.ocivnetexadat.oraclevcn.com.
 
@@ -58,4 +58,4 @@ Beyond the core network design concepts for Oracle Database@Azure - Exadata Data
 
 ## Next step
 
-Proceed to the [Application connectivity design](./application-connectivity-design.md) guidance to learn how to connect your applications to Oracle Database@Azure - Exadata Database Service efficiently and securely.
+Proceed to the [Application connectivity design](application-connectivity-design.md) guidance to learn how to connect your applications to Oracle Database@Azure - Exadata Database Service efficiently and securely.

@@ -10,7 +10,7 @@ ms.custom: e2e-oracle
 
 # Network Topology and Connectivity for Oracle Database@Azure - Migration connectivity design
 
-Preparing for a successful Oracle Database@Azure - Exadata Database Service migration often requires you to establish secure, high-bandwidth connectivity between your current source environment and Azure. This article describes foundational networking connectivity strategies for migration. For more information about comprehensive migration steps and methodologies, see[Migration documentation](./oracle-migration-planning.md).
+Preparing for a successful Oracle Database@Azure - Exadata Database Service migration often requires you to establish secure, high-bandwidth connectivity between your current source environment and Azure. This article describes foundational networking connectivity strategies for migration. For more information about comprehensive migration steps and methodologies, see [Migrate Oracle workloads to Azure](./oracle-migration-planning.md).
 
 The following architecture diagram describes the connectivity between Oracle Database@Azure - Exadata Database Service and an on-premises or other source site:
 
@@ -43,4 +43,4 @@ The following diagram includes Azure NetApp Files and doesn't require an interme
 
 ## Next step
 
-After you plan and establish your network connectivity, proceed to the [Migration documentation](./oracle-migration-planning.md) to begin or refine your migration strategy.
+After you plan and establish your network connectivity, proceed to the [Migrate Oracle workloads to Azure](./oracle-migration-planning.md) to begin or refine your migration strategy.

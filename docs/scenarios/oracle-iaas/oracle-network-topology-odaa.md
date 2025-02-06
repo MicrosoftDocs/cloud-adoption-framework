@@ -24,4 +24,4 @@ The following articles help guide you through the process of how to create a net
 
 ## Next step
 
-Start with the [Core network design](./core-network-design.md) guidance, which introduces foundational networking principles and constraints for Oracle Database@Azure - Exadata Database Service. Complete this step before you explore application connectivity, BCDR, or migration scenarios.
+Start with the [Core network design](core-network-design.md) guidance, which introduces foundational networking principles and constraints for Oracle Database@Azure - Exadata Database Service. Complete this step before you explore application connectivity, BCDR, or migration scenarios.
