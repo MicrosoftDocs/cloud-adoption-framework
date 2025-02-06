@@ -58,7 +58,7 @@ Review the following *recommendations* for platform management and monitoring of
 - Use to following [Azure Monitor baseline alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/specialized/avs/) to provide warnings if the cluster nears dangerous values for disk, CPU, or RAM usage:
 
 | Name                              | Threshold(s) (Severity) | Signal Type        | Frequency       | # Alert Rules |
-|-----------------------------------|-------------------------|--------------------|-----------------|---------------|
+| :--------------------------------- | ----------------------: | :----------------- | :--------------- | ------------: |
 | CPU - Percentage CPU (%)             | 80 (2)                  | EffectiveCpuAverage| Every 5 minutes | 1             |
 | CPU - Percentage CPU (%) (Critical)  | 95 (0)                  | EffectiveCpuAverage| Every 5 minutes | 1             |
 | Memory - Average Memory Usage (%)          | 80 (2)                  | UsageAverage       | Every 5 minutes | 1             |
