@@ -104,7 +104,7 @@ Azure has many services that support the different [types of monitoring](#types-
 
 ## Reference for monitoring Azure services
 
-The following table provides links to the monitoring guidance for nearly every Azure service.
+The table provides links to the monitoring guidance for nearly every Azure service. It lists the Azure services in alphabetical order.
 
 | Azure service | Guidance to monitor the Azure service | Monitor deployments<br>(select services) |
 |---------------|---------------------------------------| ------------------- |
