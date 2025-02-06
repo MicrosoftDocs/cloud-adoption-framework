@@ -35,23 +35,23 @@ When you plan the number of AVD virtual machines (VMs) that your organization ne
 
 Deploy all resources to the same Azure region as your AVD deployment. The main resources include:
 
-- **Metadata (or service objects)** like host pools, application groups, and workspaces.
+- Metadata (or service objects) like host pools, application groups, and workspaces.
 
-- **Session hosts (or virtual desktops) compute resources** like VMs, disks, and network interfaces.
+- Session hosts (or virtual desktops) compute resources like VMs, disks, and network interfaces.
 
-- **Virtual network** where the session hosts are directly connected.
+- Virtual network where the session hosts are directly connected.
 
-- **Storage** for FSLogix user profiles.
+- Storage for FSLogix user profiles.
 
-- **Other resources** like Azure compute galleries, key vaults, and images.
+- Other resources like Azure compute galleries, key vaults, and images.
 
 To manage regions for host deployment:
 
-- Deploy session hosts in Azure regions that are closest to users and necessary resources. This approach minimizes network and application latency, which enhances overall performance. For example, session hosts in central India that reach services in the central US often increase application latency, so placing them closer to the required resources helps mitigate this risk.
+- Deploy session hosts in Azure regions that are closest to users and necessary resources. This approach minimizes network and application latency, which enhances overall performance. For example, session hosts in central India that reach services in the central US often increase application latency. Placing them closer to the required resources helps mitigate this risk.
 
 - Ensure compliance with regional regulations and data residency requirements when you choose a region.
 
-- Avoid mixing session hosts from different Azure regions. For example, central India and central US in the same host pool because you can't assign users to a session host in a specific Azure Region. Create separate session hosts for each Azure region instead.
+- Avoid mixing session hosts from different Azure regions. For example, don't mix central India and central US in the same host pool because you can't assign users to a session host in a specific Azure region. Instead, create separate session hosts for each Azure region.
 
 ## Design recommendations
 
@@ -77,16 +77,16 @@ The following image shows an example of the recommended structure and resource g
 
 - **Shared resources:** Create a resource group for shared resources such as custom VM images. This approach promotes self-service. For example, you can have a subscription for each business line.
 
-- Basic structure:
-  - Subscription AVD-shared-resources
-    - rg-avd-<_Azure-Region_>-shared-resources
-  - Subscription AVD landing zone
-    - rg-avd-<_Azure-Region_>-<_Workload_>-service-objects
-    - rg-avd-<_Azure-Region_>-<_Workload_>-pool-compute
-    - rg-avd-<_Azure-Region_>-<_Workload_>-network
-    - rg-avd-<_Azure-Region_>-<_Workload_>-storage
+  - Basic structure:
+    - Subscription AVD-shared-resources
+      - rg-avd-<_Azure-Region_>-shared-resources
+    - Subscription AVD landing zone
+      - rg-avd-<_Azure-Region_>-<_Workload_>-service-objects
+      - rg-avd-<_Azure-Region_>-<_Workload_>-pool-compute
+      - rg-avd-<_Azure-Region_>-<_Workload_>-network
+      - rg-avd-<_Azure-Region_>-<_Workload_>-storage
 
-:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD service objects and compute subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png":::
+  :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD service objects and compute subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png":::
 
 ### Naming standards
 
