@@ -16,7 +16,7 @@ You must address the following key requirements:
 
 - **Low latency:** Minimize latency for database traffic for optimal performance.
 
-- **Business continuity and disaster recovery (BCDR):** HA of your Oracle Database@Azure - Exadata Database Service and related applications is crucial to maintain business operations that have low RTO or RPO requirements.
+- **Business continuity and disaster recovery (BCDR):** HA of your Oracle Database@Azure - Exadata Database Service and related applications is crucial to maintain business operations that have low RTO or RPO.
 
 Network connectivity between primary and standby Oracle Database@Azure - Exadata Database Service instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. The default route for this connectivity is through Azure. This article focuses on architecting for networking within Azure. For more information, see [BCDR for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
 
@@ -37,15 +37,11 @@ The following diagram illustrates a single-region redundant setup that uses two 
 
 To deploy a redundant network setup across regions, you can configure traffic in Azure or OCI. The following patterns provide guidance for scenarios when traffic must remain within Azure.
 
-**Hub-and-spoke topology:**
-
-:::image type="content" source="./media/hub-spoke-multiple-region.svg" alt-text="Diagram that shows a hub-and-spoke topology." lightbox="./media/hub-spoke-multiple-region.svg" border="false":::
+:::image type="content" source="./media/hub-spoke-multiple-region.svg" alt-text="Diagram that shows a hub-and-spoke topology." border="false" lightbox="./media/hub-spoke-multiple-region.svg":::
 
 *Figure 2: The previous diagram shows a hub-and-spoke topology.*
 
-**Virtual WAN:**
-
-:::image type="content" source="./media/virtual-wan-multiple-region.svg" alt-text="Diagram that shows the Virtual WAN topology." lightbox="./media/virtual-wan-multiple-region.svg" border="false":::
+:::image type="content" source="./media/virtual-wan-multiple-region.svg" alt-text="Diagram that shows the Virtual WAN topology." border="false" lightbox="./media/virtual-wan-multiple-region.svg":::
 
 *Figure 3: The previous diagram shows the Virtual WAN topology.*
 
@@ -57,7 +53,7 @@ To deploy a redundant network setup across regions, you can configure traffic in
 
 - **Availability zones:** Ensure that the two Oracle Database@Azure - Exadata Database Service deployments span different availability zones to isolate failures at the availability zone level.
 
-- **Data Guard configuration:** For DR, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. For more information, see [BCDR](./oracle-disaster-recovery-oracle-database-azure.md).
+- **Data Guard configuration:** For DR, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. For more information, see [BCDR considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
 
 - Supported network topologies are Virtual Wan-based connectivity and peering with a hub network.
 

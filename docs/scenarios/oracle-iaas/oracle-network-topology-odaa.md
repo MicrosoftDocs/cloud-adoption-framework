@@ -18,9 +18,8 @@ The following articles help guide you through the process of how to create a net
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Core network design             | Understand the foundational networking concepts for Oracle Database@Azure - Exadata Database Service.                                                        |
 | Application connectivity design | Guidance on how to connect your application tier to Oracle Database@Azure - Exadata Database Service.                                                            |
-| BCDR connectivity design        | Strategies for how to establish within-region and cross-region redundancy                                                                                        |
+| BCDR connectivity design        | Strategies for how to establish within-region and cross-region redundancy.                                                                                        |
 | Migration connectivity design   | Approaches and best practices for how to integrate your current source environment with Oracle Database@Azure - Exadata Database Service for migration scenarios. |
-|                                 |                                                                                                                                                              |
 
 ## Next step
 

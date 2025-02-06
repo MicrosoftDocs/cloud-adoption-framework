@@ -16,9 +16,9 @@ This article builds on the core network concepts for Oracle Database@Azure - Exa
 
 The following two main scenarios are used to locate the application tier in an architecture design.
 
-1. **Colocated in the same virtual network:** Application and database tiers reside within a single virtual network.
+- **Colocated in the same virtual network:** Application and database tiers reside within a single virtual network.
 
-1. **Deployed in a separate virtual network and connected via virtual network peering:** Application and database tiers reside in distinct virtual networks that are connected via peering.
+- **Deployed in a separate virtual network and connected via virtual network peering:** Application and database tiers reside in distinct virtual networks that are connected via peering.
 
 The colocated approach provides simpler management and no extra peering costs, but might be less flexible if multiple teams or applications need separate networks.
 

@@ -39,7 +39,7 @@ Consider the following factors when you design the subscription setup for Oracle
 
 ### Subscription design recommendations
 
-The following recommendations are based on the subscription design recommendations.
+The following recommendations are based on the subscription design considerations.
 
 - **Use a multiple subscription architecture:** Design a subscription model where each environment, such as production, development, testing, and DR, is isolated in its own Azure subscription. This approach provides insights into cost tracking, security, and workload management.
 

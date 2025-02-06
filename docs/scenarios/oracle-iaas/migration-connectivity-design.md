@@ -19,7 +19,7 @@ The following architecture diagram describes the connectivity between Oracle Dat
 *Figure 1: The previous diagram shows connectivity to Oracle Database@Azure - Exadata Database Service from on-premises environments or other sources.*
 
 > [!NOTE]
-> Because of limitations on connectivity from Oracle Database@Azure - Exadata Database Service to Private Endpoints, connectivity to a Private Endpoint requires an intermediate hop through a routing device such as a network virtual appliance (NVA). This appliance can be a Hub NVA such as an Azure Firewall or non-Microsoft NVA. Or for nonproduction environments, a dedicated [virtual machine used for IP address forwarding](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101).
+> Because of limitations on connectivity from Oracle Database@Azure - Exadata Database Service to Private Endpoints, connectivity to a Private Endpoint requires an intermediate hop through a routing device such as a network virtual appliance (NVA). This appliance can be a Hub NVA such as an Azure Firewall or non-Microsoft NVA. For nonproduction environments, a dedicated [virtual machine can used for IP address forwarding](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101).
 
 The following diagram includes Azure NetApp Files and doesn't require an intermediate hop for connectivity.
 
@@ -39,8 +39,8 @@ The following diagram includes Azure NetApp Files and doesn't require an interme
 
 - **Prefer ExpressRoute over VPN:** For on-premises to Oracle Database@Azure - Exadata Database Service connectivity, we recommend ExpressRoute because of its dedicated bandwidth, predictable performance, lower latency, and higher levels of security.
 
-- **Capacity planning:** Confirm that your chosen ExpressRoute circuit has sufficient bandwidth headroom for the migration phase. Ensure that this doesn't affect other workloads. If necessary, use bandwidth limiting.
+- **Capacity planning:** Confirm that your chosen ExpressRoute circuit has sufficient bandwidth headroom for the migration phase. Ensure that your choice doesn't affect other workloads. If necessary, use bandwidth limiting.
 
 ## Next step
 
-After you plan and establish your network connectivity, proceed to the [Migrate Oracle workloads to Azure](./oracle-migration-planning.md) to begin or refine your migration strategy.
+After you plan and establish your network connectivity, proceed to [Migrate Oracle workloads to Azure](./oracle-migration-planning.md) to begin or refine your migration strategy.

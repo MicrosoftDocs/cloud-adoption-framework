@@ -10,7 +10,7 @@ ms.custom: e2e-oracle
 
 # Network Topology and Connectivity for Oracle Database@Azure - Core network design
 
-Understanding the core networking concepts of Oracle Database@Azure - Exadata Database Service is foundational for successful adoption. Unlike most Azure services, Oracle Database@Azure has a unique architecture. It's hosted within an Azure Data Center with out-of-the-box connectivity to the Oracle Cloud Infrastructure (OCI) Control Plane. This article covers key design considerations and recommendations for how to configure and manage network connectivity to support Oracle Database@Azure - Exadata Database Service workloads effectively.
+Understanding the core networking concepts of Oracle Database@Azure - Exadata Database Service is foundational for successful adoption. Unlike most Azure services, Oracle Database@Azure has a unique architecture. It's hosted within an Azure datacenter with out-of-the-box connectivity to the Oracle Cloud Infrastructure (OCI) Control Plane. This article covers key design considerations and recommendations for how to configure and manage network connectivity to support Oracle Database@Azure - Exadata Database Service workloads effectively.
 
 The following diagram illustrates the core networking architecture and relationship between Azure virtual networks and Oracle Cloud Infrastructure (OCI) Virtual Cloud Networks (VCNs) for Oracle Database@Azure - Exadata Database Service.
 
@@ -22,7 +22,7 @@ The client subnet in the OCI VCN maps to the Oracle Database delegated subnet in
 
 When you design your network topology for Oracle Database@Azure - Exadata Database Service, consider the following Oracle-specific factors:
 
-- **Availability zone selection:** Oracle Database@Azure - Exadata Database Service services are deployed into subscription-specific availability zones, which affects latency and resilience. The physical datacenter might differ between subscriptions. For more information, see [Physical and logical availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
+- **Availability zone selection:** Oracle Database@Azure - Exadata Database Service services are deployed into subscription-specific availability zones. This deployment affects latency and resilience. The physical datacenter might differ between subscriptions. For more information, see [Physical and logical availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
 
 - **Inherited region and availability zone settings:** When you deploy an Exadata Infrastructure instance, the region and availability zones are effectively mapped to it, and any virtual machine (VM) clusters created within the Exadata Infrastructure Instance inherit the same settings.
 
@@ -38,7 +38,7 @@ When you design your network topology for Oracle Database@Azure - Exadata Databa
 
 - **Split DNS model:** Oracle Database@Azure follows a split DNS model. DNS must be configured on both Azure and OCI. For more information, see [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513).
 
-- **Private DNS naming rules:** When default DNS settings are used to create VM clusters, the private DNS zone will automatically be named based on the virtual network and subnet that's chosen for the VM cluster. The name of this zone will be "oci" + the first 10 alphabetic characters of the virtual network and subnet names. For example, virtual network "vnet-exadata-prod" + subnet "snet-exadata-prod" will output ocisnetexadat.ocivnetexadat.oraclevcn.com.
+- **Private DNS naming rules:** When default DNS settings are used to create VM clusters, the private DNS zone will automatically be named based on the virtual network and subnet that you choose for the VM cluster. The name of this zone will be "oci" + the first 10 alphabetic characters of the virtual network and subnet names. For example, virtual network "vnet-exadata-prod" + subnet "snet-exadata-prod" will output ocisnetexadat.ocivnetexadat.oraclevcn.com.
 
 ## Design recommendations
 
@@ -50,7 +50,7 @@ When you design your network topology for Oracle Database@Azure - Exadata Databa
 
 - **Configure NSGs:** Configure NSGs on the Oracle subnet through OCI to enable connectivity with source and destination networks.
 
-- **Use unique DNS names:** When you use the default DNS settings, ensure that the first 10 characters of the virtual network and subnet names for any Exadata environments are unique. If not, a DNS resolver won't be able to distinguish between the environments.
+- **Use unique DNS names:** When you use the default DNS settings, ensure that the first 10 characters of the virtual network and subnet names for any Exadata environments are unique. If not, a DNS resolver can't distinguish between the environments.
 
 ### Other guidance
 
