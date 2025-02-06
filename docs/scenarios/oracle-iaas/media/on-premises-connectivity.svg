@@ -307,57 +307,57 @@
 				<!-- Unsupported Record: EmfPlusRecordTypeSetPixelOffsetMode  -->
 				<svg viewBox="-0.70833 -0.70968 205.18 333.08" height="46.9198" preserveAspectRatio="none" width="28.9583" x="0"
 						y="916.08">
-					<clipPath id="mfid19">
-						<rect x="-0.70833" y="-0.70968" width="205.18" height="333.08" id="mfid20"/>
+					<clipPath id="mfid1">
+						<rect x="-0.70833" y="-0.70968" width="205.18" height="333.08" id="mfid2"/>
 					</clipPath>
-					<g clip-path="url(#mfid19)">
-						<mask id="mfid21">
+					<g clip-path="url(#mfid1)">
+						<mask id="mfid3">
 							<rect width="205" height="333" fill="white" stroke="none"/>
 						</mask>
-						<mask id="mfid22" fill="white" stroke="none">
+						<mask id="mfid4" fill="white" stroke="none">
 							<g>
-								<g mask="url(#mfid21)">
-									<use xlink:href="#mfid20"/>
+								<g mask="url(#mfid3)">
+									<use xlink:href="#mfid2"/>
 								</g>
 							</g>
 						</mask>
 						<defs>
-							<path id="mfid23" d="M0,0 L312420,0 L312420,507490 L0,507490 Z"/>
+							<path id="mfid5" d="M0,0 L312420,0 L312420,507490 L0,507490 Z"/>
 						</defs>
-						<mask id="mfid24">
-							<use xlink:href="#mfid23" fill-rule="evenodd" fill="white" stroke="none"
+						<mask id="mfid6">
+							<use xlink:href="#mfid5" fill-rule="evenodd" fill="white" stroke="none"
 									transform="matrix(0.00065617, 0, 0, 0.00065617, 0, 0)"/>
 						</mask>
-						<mask id="mfid25" fill="white" stroke="none">
-							<g mask="url(#mfid22)">
-								<g mask="url(#mfid24)">
-									<use xlink:href="#mfid20"/>
+						<mask id="mfid7" fill="white" stroke="none">
+							<g mask="url(#mfid4)">
+								<g mask="url(#mfid6)">
+									<use xlink:href="#mfid2"/>
 								</g>
 							</g>
 						</mask>
 						<defs>
 							<!-- Unsupported Record: EmfPlusRecordTypeSetPixelOffsetMode  -->
-							<svg viewBox="-0.51104 -0.51185 80.949 131.95" height="131" id="mfid26" width="80">
-								<clipPath id="mfid27">
-									<rect x="-0.51104" y="-0.51185" width="80.949" height="131.95" id="mfid28"/>
+							<svg viewBox="-0.51104 -0.51185 80.949 131.95" height="131" id="mfid8" width="80">
+								<clipPath id="mfid9">
+									<rect x="-0.51104" y="-0.51185" width="80.949" height="131.95" id="mfid10"/>
 								</clipPath>
-								<g clip-path="url(#mfid27)">
-									<mask id="mfid29">
+								<g clip-path="url(#mfid9)">
+									<mask id="mfid11">
 										<rect width="81" height="132" fill="white" stroke="none"/>
 									</mask>
-									<mask id="mfid30" fill="white" stroke="none">
+									<mask id="mfid12" fill="white" stroke="none">
 										<g>
-											<g mask="url(#mfid29)">
-												<use xlink:href="#mfid28"/>
+											<g mask="url(#mfid11)">
+												<use xlink:href="#mfid10"/>
 											</g>
 										</g>
 									</mask>
 									<!-- GetDC -->
-									<mask id="mfid31" fill-rule="evenodd" fill="white" stroke="none">
+									<mask id="mfid13" fill-rule="evenodd" fill="white" stroke="none">
 										<rect x="0" y="0" width="81" height="132"/>
 									</mask>
 									<!-- Released DC -->
-									<linearGradient id="mfid32" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1024" y2="0"
+									<linearGradient id="mfid14" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1024" y2="0"
 											spreadMethod="reflect"
 											gradientTransform="matrix(0.000000000000028502, 465.46, -465.46, 0.000000000000028502, 140210, -476640)">
 										<stop offset="0" stop-color="#5ea0ef"/>
@@ -367,22 +367,22 @@
 										<stop offset="1" stop-color="#0078d4"/>
 									</linearGradient>
 									<defs>
-										<path id="mfid33"
+										<path id="mfid15"
 												d="M280420,-460750 L280420,-15888 C280420,-7113.2 273310,0.00057627 264530,0.00057627 L15888,-0.000000012098 C7113.2,-0.0000000023476 -0.00057627,-7113.2 -0.00057627,-15888 L0,-460750 C-0.0000000079312,-469520 7113.2,-476640 15888,-476640 L264370,-476640 C273150,-476640 280260,-469520 280260,-460750 L280420,-460750 Z"/>
 									</defs>
-									<g mask="url(#mfid30)">
+									<g mask="url(#mfid12)">
 										<g transform="matrix(0.00026247, 0, 0, 0.00026247, 3.75, 128.85)">
-											<g fill="url(#mfid32)">
-												<use xlink:href="#mfid33" fill-rule="evenodd" stroke="none"/>
+											<g fill="url(#mfid14)">
+												<use xlink:href="#mfid15" fill-rule="evenodd" stroke="none"/>
 												<defs>
-													<path id="mfid34"
+													<path id="mfid16"
 															d="M0.0046913,-0.45592 L0.055774,-0.45592 C0.058107,-0.45593 0.060025,-0.45409 0.060118,-0.45175 L0.060118,-0.38799 C0.060118,-0.38559 0.058173,-0.38364 0.055774,-0.38364 L0.0046913,-0.38364 C0.0022302,-0.38364 0.00018229,-0.38553 0.000000000071984,-0.38799 L0,-0.45245 C0.00056473,-0.45456 0.0025095,-0.456 0.0046913,-0.45592 Z M0.091567,-0.45592 L0.14126,-0.45592 C0.14359,-0.45593 0.14551,-0.45409 0.1456,-0.45175 L0.1456,-0.38799 C0.1456,-0.38559 0.14366,-0.38364 0.14126,-0.38364 L0.092262,-0.38364 C0.089931,-0.38374 0.08809,-0.38566 0.088092,-0.38799 L0.088092,-0.45245 C0.088092,-0.45475 0.089959,-0.45662 0.092262,-0.45662 L0.091567,-0.45592 Z M0.17931,-0.45592 L0.2297,-0.45592 C0.23207,-0.45593 0.23404,-0.45411 0.23422,-0.45175 L0.23422,-0.38799 C0.23412,-0.38556 0.23213,-0.38364 0.2297,-0.38364 L0.18001,-0.38364 C0.17761,-0.38364 0.17566,-0.38559 0.17566,-0.38799 L0.17566,-0.45245 C0.17576,-0.45478 0.17767,-0.45662 0.18001,-0.45662 L0.17931,-0.45592 Z M0.0039963,-0.33916 L0.055079,-0.33916 C0.057478,-0.33916 0.059423,-0.33722 0.059423,-0.33482 L0.059423,-0.27053 C0.05943,-0.26807 0.057534,-0.26602 0.055079,-0.26584 L0.0046913,-0.26584 C0.0021004,-0.26584 0.000000000071986,-0.26794 0.000000000071985,-0.27053 L0,-0.33482 C0.00018229,-0.33727 0.0022302,-0.33917 0.0046913,-0.33916 L0.0039963,-0.33916 Z M0.090872,-0.33916 L0.14057,-0.33916 C0.14296,-0.33916 0.14491,-0.33722 0.14491,-0.33482 L0.14491,-0.27053 C0.14492,-0.26807 0.14302,-0.26602 0.14057,-0.26584 L0.092262,-0.26584 C0.089835,-0.26603 0.087992,-0.2681 0.088092,-0.27053 L0.088092,-0.33482 C0.08809,-0.33715 0.089931,-0.33907 0.092262,-0.33916 L0.090872,-0.33916 Z M0.17862,-0.33916 L0.2297,-0.33916 C0.23213,-0.33917 0.23412,-0.33725 0.23422,-0.33482 L0.23422,-0.27053 C0.23422,-0.26801 0.23222,-0.26593 0.2297,-0.26584 L0.18001,-0.26584 C0.17755,-0.26602 0.17566,-0.26807 0.17566,-0.27053 L0.17566,-0.33482 C0.17566,-0.33722 0.17761,-0.33916 0.18001,-0.33916 L0.17862,-0.33916 Z M0.0033013,-0.22205 L0.054384,-0.22205 C0.056783,-0.22205 0.058728,-0.22011 0.058728,-0.21771 L0.058728,-0.15342 C0.058728,-0.15102 0.056783,-0.14908 0.054384,-0.14908 L0.0046913,-0.14908 C0.0022302,-0.14907 0.00018229,-0.15097 0.000000000071986,-0.15342 L0,-0.21893 C0.0007387,-0.22086 0.0026213,-0.22212 0.0046913,-0.22205 L0.0033013,-0.22205 Z M0.090177,-0.22205 L0.13987,-0.22205 C0.14199,-0.22296 0.14444,-0.22197 0.14534,-0.21985 C0.14537,-0.21978 0.1454,-0.2197 0.14543,-0.21962 L0.14543,-0.15533 C0.14543,-0.15294 0.14349,-0.15099 0.14109,-0.15099 L0.088961,-0.15099 C0.08663,-0.15108 0.084789,-0.153 0.084791,-0.15533 L0.084791,-0.21962 C0.085092,-0.222 0.087266,-0.22369 0.089646,-0.22339 C0.090646,-0.22326 0.091571,-0.22279 0.092262,-0.22205 L0.090177,-0.22205 Z M0.090177,-0.10512 L0.13987,-0.10512 C0.1422,-0.10512 0.14412,-0.10328 0.14421,-0.10095 L0.14421,-0.0043438 C0.14421,-0.0019448 0.14227,0.00000000015755 0.13987,0.00000000015756 L0.092262,0.0000000000000013231 C0.089931,-0.0009331 0.08809,-0.002011 0.088092,-0.0043438 L0.088092,-0.10095 C0.088092,-0.10325 0.089959,-0.10512 0.092262,-0.10512 L0.090177,-0.10512 Z M0.17792,-0.22205 L0.2297,-0.22205 C0.23213,-0.22206 0.23412,-0.22014 0.23422,-0.21771 L0.23422,-0.15342 C0.23412,-0.151 0.23213,-0.14908 0.2297,-0.14908 L0.18001,-0.14908 C0.17761,-0.14908 0.17566,-0.15102 0.17566,-0.15342 L0.17566,-0.21893 C0.17627,-0.22081 0.17803,-0.22207 0.18001,-0.22205 L0.17792,-0.22205 Z"/>
 												</defs>
 											</g>
 										</g>
 										<g transform="matrix(240, 0, 0, 240, 12.424, 126.06)">
 											<g fill="#f2f2f2">
-												<use xlink:href="#mfid34" fill-rule="evenodd" stroke="none"/>
+												<use xlink:href="#mfid16" fill-rule="evenodd" stroke="none"/>
 											</g>
 										</g>
 									</g>
@@ -390,16 +390,16 @@
 							</svg>
 						</defs>
 						<!-- Unsupported Record: EmfPlusRecordTypeSetObject Obj_ImageAttributes -->
-						<g mask="url(#mfid25)">
+						<g mask="url(#mfid7)">
 							<g transform="matrix(2.5016, 0, 0, 2.5046, 1.2784, 1.282)">
-								<clipPath id="mfid35">
+								<clipPath id="mfid17">
 									<rect x="-0.51104" y="-0.51185" width="81.949" height="132.95"/>
 								</clipPath>
-								<use xlink:href="#mfid26" clip-path="url(#mfid35)"
+								<use xlink:href="#mfid8" clip-path="url(#mfid17)"
 										transform="matrix(1, 0, 0, 1, -0.00000047578, -0.00000058743)"/>
 							</g>
 						</g>
-						<mask id="mfid36">
+						<mask id="mfid18">
 							<rect width="205" height="333" fill="white" stroke="none"/>
 						</mask>
 					</g>
@@ -1182,14 +1182,14 @@
 		</g>
 		<g id="shape1099-168" v:mID="1099" v:groupContext="shape" transform="translate(798.987,-193.5)">
 			<title>Sheet.1099</title>
-			<desc>Private Endpoint</desc>
+			<desc>Private endpoint</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(37000):26"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="65.25" cy="950.906" width="130.5" height="24.1875"/>
 			<rect x="0" y="938.812" width="130.5" height="24.1875" class="st3"/>
-			<text x="14.47" y="955.11" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Private Endpoint</text>		</g>
+			<text x="14.35" y="955.11" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Private endpoint</text>		</g>
 		<g id="shape1130-171" v:mID="1130" v:groupContext="shape" v:layerMember="0" transform="translate(873.9,-229.5)">
 			<title>Dynamic connector.1417</title>
 			<v:userDefs>
@@ -1204,7 +1204,7 @@
 				<v:ud v:nameU="visNavOrder" v:val="VT0(48000):26"/>
 			</v:userDefs>
 			<title>Storage Accounts.1418</title>
-			<desc>Storage Account</desc>
+			<desc>Storage account</desc>
 			<g id="shape1132-175" v:mID="1132" v:groupContext="shape">
 				<title>Sheet.1132</title>
 				<v:userDefs>
@@ -1243,7 +1243,7 @@
 				<v:textBlock v:margins="rect(0,0,0,0)"/>
 				<v:textRect cx="28.8" cy="979.802" width="72" height="33.6033"/>
 				<text x="4.83" y="975.6" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Storage <tspan
-							x="3.42" dy="1.2em" class="st22">Account</tspan></text>			</g>
+							x="4.38" dy="1.2em" class="st22">account</tspan></text>			</g>
 		</g>
 		<g id="shape1138-190" v:mID="1138" v:groupContext="shape" transform="translate(732.332,-146.939)">
 			<title>Rounded Rectangle.1223</title>
