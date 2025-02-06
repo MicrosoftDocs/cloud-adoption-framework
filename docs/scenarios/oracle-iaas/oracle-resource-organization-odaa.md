@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for how to or
 author: sihbher
 ms.author: gereyeso
 ms.reviewer: gereyeso
-ms.date: 02/10/2025
+ms.date: 02/08/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
@@ -19,9 +19,12 @@ This article expands on considerations and recommendations described in the [Azu
 
 ### Naming and tagging conventions
 
-When you name Oracle Database@Azure resources, use the [Azure general naming conventions](../../ready/azure-best-practices/naming-and-tagging.md) as a baseline. Consider the resource constraints when you define conventions for Oracle Database@Azure. Some resource types, like virtual machine (VM) clusters, have specific naming constraints, such as [character limits and allowed characters](/azure/oracle/oracle-db/provision-oracle-database). For more information, see: 
-- [Azure resource naming](../../ready/azure-best-practices/resource-naming.md) 
+When you name Oracle Database@Azure resources, use the [Azure general naming conventions](../../ready/azure-best-practices/naming-and-tagging.md) as a baseline. Consider the resource constraints when you define conventions for Oracle Database@Azure. Some resource types, like virtual machine (VM) clusters, have specific naming constraints, such as [character limits and allowed characters](/azure/oracle/oracle-db/provision-oracle-database). For more information, see:
+
+- [Azure resource naming](../../ready/azure-best-practices/resource-naming.md)
+
 - [Develop your naming and tagging strategy for Azure resources](../../ready/azure-best-practices/naming-and-tagging.md)
+
 - [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources)
 
 ### Security and isolation best practices
@@ -53,7 +56,6 @@ The following recommendations are based on the subscription design consideration
 Establish a multiple subscription architecture for Oracle Database@Azure, where various environments, such as production, development, unit testing, system integration testing (SIT), and DR, are managed across different Azure subscriptions within the same tenant. The following diagram shows a multiple subscription setup for Oracle Database@Azure.
 
 :::image type="content" source="./media/multiple-subscription-odaa.svg" alt-text="Diagram that illustrates a multiple subscription setup for Oracle Database@Azure." border="false" lightbox="./media/multiple-subscription-odaa.svg":::
-
 
 #### Key points
 

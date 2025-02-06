@@ -3,16 +3,16 @@ title: Network Topology and Connectivity for Oracle Database@Azure - Core Networ
 description: Learn about Oracle Database@Azure core network concepts, key design considerations, and effective implementation practices for seamless integration.
 author: moisesjgomez
 ms.author: mgomezcortez
-ms.date: 02/10/2025
+ms.date: 02/08/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
 # Network topology and connectivity for Oracle Database@Azure - Core network design
 
-Understanding the core networking concepts of Oracle Database@Azure - Exadata Database Service is foundational for successful adoption. Unlike most Azure services, Oracle Database@Azure has a unique architecture. It's hosted within an Azure datacenter and provides default connectivity to the Oracle Cloud Infrastructure (OCI) control plane. This article covers key design considerations and recommendations for how to configure and manage network connectivity to support Oracle Database@Azure - Exadata Database Service workloads effectively.
+Understanding the core networking concepts of Oracle Exadata Database@Azure is foundational for successful adoption. Unlike most Azure services, Oracle Database@Azure has a unique architecture. It's hosted within an Azure datacenter and provides default connectivity to the Oracle Cloud Infrastructure (OCI) control plane. This article covers key design considerations and recommendations for how to configure and manage network connectivity to support Oracle Exadata Database@Azure workloads effectively.
 
-The following diagram illustrates the core networking architecture and relationship between Azure virtual networks and OCI virtual cloud networks (VCNs) for Oracle Database@Azure - Exadata Database Service.
+The following diagram illustrates the core networking architecture and relationship between Azure virtual networks and OCI virtual cloud networks (VCNs) for Oracle Exadata Database@Azure.
 
 :::image type="content" source="./media/basic-virtual-network-integration.svg" alt-text="Diagram that shows the core network design." border="false" lightbox="./media/basic-virtual-network-integration.svg":::
 
@@ -20,17 +20,17 @@ The client subnet in the OCI VCN maps to the Oracle Database delegated subnet in
 
 ## Design considerations
 
-When you design your network topology for Oracle Database@Azure - Exadata Database Service, consider the following Oracle-specific factors:
+When you design your network topology for Oracle Exadata Database@Azure, consider the following Oracle-specific factors:
 
-- **Availability zone selection:** Deploy Oracle Database@Azure - Exadata Database Service services into subscription-specific availability zones. This deployment affects latency and resilience. The physical datacenter might differ between subscriptions. For more information, see [Physical and logical availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
+- **Availability zone selection:** Deploy Oracle Exadata Database@Azure services into subscription-specific availability zones. This deployment affects latency and resilience. The physical datacenter might differ between subscriptions. For more information, see [Physical and logical availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
 
 - **Inherited region and availability zone settings:** When you deploy an Exadata Infrastructure instance, the region and availability zones are effectively mapped to it, and any virtual machine (VM) clusters created within the Exadata Infrastructure instance inherit the same settings.
 
-- **VM cluster limits:** Each Oracle Database@Azure - Exadata Database Service SKU can include up to [eight VM clusters](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-B0820870-D946-4879-85BF-C95FF25979CF). Ensure that your virtual network is configured before VM cluster creation, and decide whether to connect clusters to the same virtual network or separate virtual networks.
+- **VM cluster limits:** Each Oracle Exadata Database@Azure SKU can include up to [eight VM clusters](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-B0820870-D946-4879-85BF-C95FF25979CF). Ensure that your virtual network is configured before VM cluster creation, and decide whether to connect clusters to the same virtual network or separate virtual networks.
 
 - **Internet access requirements:** Exadata has no direct internet access by default. If internet access is required, like for patching or outbound dependencies, you must configure it.
 
-- **Subnet sizing:** Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. For more information about sizing guidelines, see [Plan for IP address space for Oracle Database@Azure - Exadata Database Service](/azure/oracle/oracle-db/oracle-database-plan-ip).
+- **Subnet sizing:** Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. For more information about sizing guidelines, see [Plan for IP address space for Oracle Exadata Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
 - **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan).
 
@@ -54,8 +54,8 @@ When you design your network topology for Oracle Database@Azure - Exadata Databa
 
 ### Other guidance
 
-Beyond the core network design concepts for Oracle Database@Azure - Exadata Database Service, also consider the connectivity requirements for your applications, other Azure services (like Azure Blob Storage or Azure NetApp Files), on-premises environments, and your BCDR configuration.
+Beyond the core network design concepts for Oracle Exadata Database@Azure, also consider the connectivity requirements for your applications, other Azure services (like Azure Blob Storage or Azure NetApp Files), on-premises environments, and your BCDR configuration.
 
 ## Next step
 
-Proceed to the [application connectivity design](application-connectivity-design.md) guidance to learn how to connect your applications to Oracle Database@Azure - Exadata Database Service efficiently and securely.
+Proceed to the [application connectivity design](application-connectivity-design.md) guidance to learn how to connect your applications to Oracle Exadata Database@Azure efficiently and securely.
