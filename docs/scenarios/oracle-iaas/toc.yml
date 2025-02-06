@@ -17,13 +17,13 @@ items:
           items:
           - name: Getting started
             href: oracle-network-topology-odaa.md
-          - name: Core Network Design
+          - name: Core network design
             href: core-network-design.md
-          - name: Application Connectivity Design
+          - name: Application connectivity design
             href: application-connectivity-design.md
-          - name: BCDR Connectivity Design
+          - name: BCDR connectivity design
             href: bcdr-connectivity-design.md
-          - name: Migration Connectivity Design
+          - name: Migration connectivity design
             href: migration-connectivity-design.md   
       - name: Identity and access management for Oracle Database@Azure
         href: oracle-iam-odaa.md
@@ -48,7 +48,7 @@ items:
       - name: Resource organization
         items:
         - name: Resource organization for Oracle Database@Azure
-          href: oracle-resource-org-odaa.md
+          href: oracle-resource-organization-odaa.md
     - name: Implementation options
       items:
       - name: Oracle on Azure IaaS landing zone accelerator
