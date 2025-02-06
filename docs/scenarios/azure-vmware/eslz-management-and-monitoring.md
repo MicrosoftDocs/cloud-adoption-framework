@@ -22,7 +22,7 @@ As you plan your management and monitoring environment for Azure VMware Solution
 
 ## Platform management and monitoring
 
-Review the following *considerations* for platform management and monitoring of Azure VMware Solution. These considerations are based on [Azure Monitor baseline alerts (AMBA)](https://azure.github.io/azure-monitor-baseline-alerts/welcome/) guidance. Azure Monitor baseline alerts (AMBA) is a structured approach across multiple Azure resources and patterns to create alerts for timely resolution of issue across health, performance and security.
+Review the following *considerations* for platform management and monitoring of Azure VMware Solution. These considerations are included in the [Azure Monitor baseline alerts (AMBA)](https://azure.github.io/azure-monitor-baseline-alerts/welcome/). Azure Monitor baseline alerts (AMBA) are a structured approach across multiple Azure resources and patterns to create alerts for resolution of issue across health, performance, and security.
 
 ### Azure tooling considerations
 
@@ -55,7 +55,7 @@ Review the following *recommendations* for platform management and monitoring of
 
 - Configure [Azure Service Health to send alerts](/azure/service-health/resource-health-alert-monitor-guide) for service issues, planned maintenance, and other events that could impact Azure VMware Solution and other services. These notifications are sent to Action Groups, which can be used to send email, SMS, push notifications, and voice calls to addresses of your choice. Actions can also trigger Azure and third-party systems, including Azure Functions, Logic Apps, Automation Runbooks, Event Hubs, and Webhooks. 
 - Monitor baseline performance of Azure VMware Solution infrastructure through [Azure Monitor Metrics](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities). These metrics can be queried and filtered from the Azure portal, queried via REST API, or directed to Log Analytics, Azure Storage, Event Hubs, or [Partner Integrations](/azure/azure-monitor/partners).
-- Refer to following [Azure Monitor baseline alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/specialized/avs/) to understand metrics and logs to be monitored and deployed for Azure VMware Solution:
+- Use to following [Azure Monitor baseline alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/specialized/avs/) to provide warnings if the cluster nears dangerous values for disk, CPU, or RAM usage:
 
 | Name                              | Threshold(s) (Severity) | Signal Type        | Frequency       | # Alert Rules |
 |-----------------------------------|-------------------------|--------------------|-----------------|---------------|
