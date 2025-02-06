@@ -25,7 +25,7 @@ The following sections describe key considerations for how to organize your AVD 
 
 ### Number of virtual machines
 
-When you plan the number of AVD virtual machines (VMs) that your organization needs, consider the following:
+When you plan the number of AVD virtual machines (VMs) that your organization needs, consider the following factors:
 
 - Avoid deploying more the 5,000 VMs in a single region because it can create performance bottlenecks, hit subscription limits, and make you less resilient. You can accommodate extra user sessions by increasing individual session host VM resources.
 
