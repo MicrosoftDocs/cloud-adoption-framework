@@ -3,7 +3,7 @@ title: Govern Azure VMware Solution
 description: Learn about how to extend your governance approach across the Azure VMware Solution.
 author: mpvenables
 ms.author: martinek
-ms.date: 04/22/2022
+ms.date: 01/28/2025
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware
 ---
@@ -103,8 +103,7 @@ For more recommendations about security, governance, and overall design, includi
 For more information on how to expand your hybrid governance, see:
 
 - [Save costs with Azure VMware Solution](/azure/azure-vmware/reserved-instance)
-- [How to secure your private cloud environment](/azure/vmware-cloudsimple/private-cloud-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [Using Microsoft Entra ID as an identify provider for vCenter on CloudSimple Private Cloud](/azure/vmware-cloudsimple/azure-ad)
+- [Security recommendations for Azure VMware Solution](/azure/azure-vmware/security-recommendations)
 - [Security Control V2: Asset Management](/security/benchmark/azure/security-controls-v2-asset-management)
 
 ### Azure VMware infrastructure hybridity
