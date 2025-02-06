@@ -53,7 +53,7 @@ The following diagram shows an Azure Virtual WAN topology.
 
 - **Data Guard configuration:** For DR within the same region or availability zone, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. For more information, see [BCDR considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
 
-- Supported network topologies are Virtual WAN-based connectivity and peering with a hub network.
+- **Supported network topologies:** Use Virtual WAN-based connectivity and peering with a hub network.
 
 ## Design recommendations
 
