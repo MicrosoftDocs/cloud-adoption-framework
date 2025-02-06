@@ -104,9 +104,9 @@ Azure has many services that support the different [types of monitoring](#types-
 
 ## Reference for monitoring Azure services
 
-The table provides links to the monitoring guidance for nearly every Azure service. It lists the Azure services in alphabetical order.
+The table lists Azure services in alphabetical order and includes links to their monitoring guidance for nearly every service.
 
-| Azure service | Guidance to monitor the Azure service | Monitor deployments<br>(select services) |
+| Azure service | Monitoring guidance | Deployment monitoring<br>(select services) |
 |---------------|---------------------------------------| ------------------- |
 | Azure AI Agent service | [Management center overview](/azure/ai-studio/concepts/management-center) | [How to enable tracing in Azure AI Agents](/azure/ai-services/agents/concepts/tracing) |
 | Azure AI Foundry | [Management center overview](/azure/ai-studio/concepts/management-center) | [Monitor your Generative AI Applications](/azure/ai-studio/how-to/monitor-applications)<br><br>[Evaluation and monitoring metrics for generative AI](/azure/ai-studio/concepts/evaluation-metrics-built-in)<br><br>[Use Risks & Safety monitoring](/azure/ai-services/openai/how-to/risks-safety-monitor)<br><br>[Monitor prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety)<br><br>[Run evaluations online](/azure/ai-studio/how-to/online-evaluation)<br><br>[View evaluation results in Azure AI Foundry portal](/azure/ai-studio/how-to/evaluate-results)<br><br>[Visualize your traces](/azure/ai-studio/how-to/develop/visualize-traces) |
