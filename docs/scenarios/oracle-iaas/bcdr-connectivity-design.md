@@ -38,6 +38,7 @@ To deploy a redundant network setup across regions, you can configure traffic in
 
 :::image type="content" source="./media/hub-spoke-multiple-region.svg" alt-text="Diagram that shows a hub-and-spoke topology." border="false" lightbox="./media/hub-spoke-multiple-region.svg":::
 
+The following diagram shows an Azure Virtual WAN topology.
 
 :::image type="content" source="./media/virtual-wan-multiple-region.svg" alt-text="Diagram that shows the Virtual WAN topology." border="false" lightbox="./media/virtual-wan-multiple-region.svg":::
 
