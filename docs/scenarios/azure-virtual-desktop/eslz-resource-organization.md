@@ -25,7 +25,7 @@ The following sections describe key considerations for how to organize your AVD 
 
 ### Number of virtual machines
 
-Determine how many AVD virtual machines (VMs) your organization requires.
+When you plan the number of AVD virtual machines (VMs) that your organization needs, consider the following:
 
 - Avoid deploying more the 5,000 VMs in a single region because it can create performance bottlenecks, hit subscription limits, and make you less resilient. You can accommodate extra user sessions by increasing individual session host VM resources.
 
@@ -61,7 +61,7 @@ The following sections provide guidance on how to manage groups, naming, and tag
 
 The four levels of management that Azure provides are management groups, subscriptions, resource groups, and resources. You can apply management settings like policies and role-based access control at any management level.
 
-The following is an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
+The following image shows an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
 
 :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD shared resources subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
 
@@ -75,7 +75,7 @@ The following is an example of the recommended structure and resource groups to 
 
 - **Session hosts compute:** Create a resource group for VMs, disks, and network interfaces. These resources have a different lifecycle from AVD service objects.
 
-- **Shared resources:** Create a resource group for shared resources such as custom VM images. This approach promotes self-service. For example, you csan have a subscription for each business line.
+- **Shared resources:** Create a resource group for shared resources such as custom VM images. This approach promotes self-service. For example, you can have a subscription for each business line.
 
 - Basic structure:
   - Subscription AVD-shared-resources
@@ -94,13 +94,13 @@ A consistent naming standard helps organize resources, streamline management, en
 
 - Business details should include the organizational information to identify teams. Use the resource's short name and the names of the business owners who are responsible for the resource costs.
 
-- Operational details should include the information that's helpful for IT teams to identify the workload, application, environment, criticality, and other information that's useful for managing resources.
+- Operational details should include information that helps IT teams identify the workload, application, environment, criticality, and other relevant aspects necessary for managing resources.
 
 A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. For more information, see [Develop naming strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
 ### Resource tags
 
-Resource tags help evaluate regulatory compliance by logically categorizing Azure resources.For more information about how patterns can support governance practices, see [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging).
+Resource tags help evaluate regulatory compliance by logically categorizing Azure resources. For more information about how patterns can support governance practices, see [Govern overview](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging).
 
 Each tag consists of a name and a value. You can use tags to provide context about the associated workload, application, operational requirements, or ownership. For example, you can apply the tag name _environment_ with the value _production_ to categorize all production resources.
 
@@ -116,13 +116,13 @@ Common uses for tags include:
 
 For more information about AVD organization and management, see:
 
-- [AVD resource organization](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
+- [AVD for the enterprise](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
 - [Organize your Azure resources effectively](../../ready/azure-setup-guide/organize-resources.md)
-- [Naming and tagging in Azure](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+- [Resource naming and tagging decision guide](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
 
 ## Next step
 
 Learn more about management and monitoring for an AVD enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Management and monitoring](./eslz-management-and-monitoring.md)
+> [Management baseline considerations for an AVD](./eslz-management-and-monitoring.md)
