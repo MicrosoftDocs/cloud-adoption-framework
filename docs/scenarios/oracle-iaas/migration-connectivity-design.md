@@ -8,24 +8,22 @@ ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
-# Network Topology and Connectivity for Oracle Database@Azure - Migration connectivity design
+# Network topology and connectivity for Oracle Database@Azure - Migration connectivity design
 
-Preparing for a successful Oracle Database@Azure - Exadata Database Service migration often requires you to establish secure, high-bandwidth connectivity between your current source environment and Azure. This article describes foundational networking connectivity strategies for migration. For more information about comprehensive migration steps and methodologies, see [Migrate Oracle workloads to Azure](./oracle-migration-planning.md).
+Preparing for a successful Oracle Database@Azure - Exadata Database Service migration often requires that you establish secure, high-bandwidth connectivity between your current source environment and Azure. This article describes foundational networking connectivity strategies for migration. For more information about comprehensive migration steps and methodologies, see [Migrate Oracle workloads to Azure](./oracle-migration-planning.md).
 
-The following architecture diagram describes the connectivity between Oracle Database@Azure - Exadata Database Service and an on-premises or other source site:
+The following diagram shows the connectivity between Oracle Exadata Database@Azure and an on-premises network. You can also connect Oracle Exadata Database@Azure to other source sites.
 
 :::image type="content" source="./media/on-premises-connectivity.svg" alt-text="Diagram that shows connectivity to Oracle Database@Azure - Exadata Database Service from on-premises environments or other sources." border="false" lightbox="./media/on-premises-connectivity.svg":::
 
-*Figure 1: The previous diagram shows connectivity to Oracle Database@Azure - Exadata Database Service from on-premises environments or other sources.*
 
 > [!NOTE]
-> Because of limitations on connectivity from Oracle Database@Azure - Exadata Database Service to Private Endpoints, connectivity to a Private Endpoint requires an intermediate hop through a routing device such as a network virtual appliance (NVA). This appliance can be a Hub NVA such as an Azure Firewall or non-Microsoft NVA. For nonproduction environments, a dedicated [virtual machine can used for IP address forwarding](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101).
+> Because of connectivity limitations from Oracle Database@Azure - Exadata Database Service to private endpoints, connectivity to a private endpoint requires an intermediate hop through a routing device such as a network virtual appliance (NVA). This appliance can be a hub NVA such as an Azure firewall or non-Microsoft NVA. For nonproduction environments, a dedicated [virtual machine can be used for IP address forwarding](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101).
 
-The following diagram includes Azure NetApp Files and doesn't require an intermediate hop for connectivity.
+The following diagram shows connectivity to Azure NetApp Files and other sources. This configuration doesn't require an intermediate hop for connectivity.
 
 :::image type="content" source="./media/migration-azure-netapp-files.svg" alt-text="Diagram that shows connectivity to other sources and Azure NetApp Files." border="false" lightbox="./media/migration-azure-netapp-files.svg":::
 
-*Figure 2: The previous diagram shows connectivity to other sources and Azure NetApp Files.*
 
 ## Design considerations
 
@@ -33,7 +31,7 @@ The following diagram includes Azure NetApp Files and doesn't require an interme
 
 - **Connectivity options:** Both Azure ExpressRoute and VPN tunnels can be used to connect on-premises environments to Oracle Database@Azure - Exadata Database Service. ExpressRoute provides more predictable performance and lower latency.
 
-- **Shared connectivity effects:** If the same ExpressRoute or VPN connection is used by other services, ensure that increased migration traffic doesn't negatively affect their performance.
+- **Shared connectivity effects:** If the same ExpressRoute or VPN connection is used by multiple services, ensure that increased migration traffic doesn't negatively affect their performance.
 
 ## Design recommendations
 

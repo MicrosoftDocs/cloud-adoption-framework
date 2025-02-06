@@ -14,29 +14,26 @@ This article builds on the core network concepts for Oracle Database@Azure - Exa
 
 ## Locate application tiers
 
-The following two main scenarios are used to locate the application tier in an architecture design.
+Use one of the following methods to position the application tier in an architecture design.
 
-- **Colocated in the same virtual network:** Application and database tiers reside within a single virtual network.
+- **Colocate in the same virtual network:** Place application and database tiers in a single virtual network.
 
-- **Deployed in a separate virtual network and connected via virtual network peering:** Application and database tiers reside in distinct virtual networks that are connected via peering.
+- **Deploy in a separate virtual network and connect via virtual network peering:** Place application and database tiers in distinct virtual networks that connect via peering.
 
-The colocated approach provides simpler management and no extra peering costs, but might be less flexible if multiple teams or applications need separate networks.
+The colocated approach provides simpler management and no extra peering costs, but might be less flexible if multiple teams or applications need separate networks. The following diagram shows the database and application tiers colocated in the same virtual network.
 
 :::image type="content" source="./media/same-virtual-network.svg" alt-text="Diagram that shows the colocation of the database and application tiers in the same virtual network." border="false" lightbox="./media/same-virtual-network.svg":::
 
-*Figure 1: The previous diagram shows the colocation of the database and application tiers in the same virtual network.*
 
-The peered virtual network approach adds virtual network peering costs and more complexity, but provides better isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over the resources and through enhanced network segmentation.
+The peered virtual network approach adds virtual network peering costs and more complexity, but provides better isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over the resources and enhanced network segmentation. The following diagram shows the database and application tiers in directly peered virtual networks.
 
 :::image type="content" source="./media/separate-virtual-network.svg" alt-text="Diagram that shows directly peered virtual networks." border="false" lightbox="./media/separate-virtual-network.svg":::
 
-*Figure 2: The previous diagram shows the database and application tiers in directly peered virtual networks.*
 
-In a full mesh pattern, each application virtual network is directly peered to the database virtual network, and both connect to a hub network for shared services like firewalls or DNS. This design helps ensure low-latency direct communication while enabling centralized traffic inspection and management.
+In a full mesh pattern, each application virtual network is directly peered to the database virtual network. Application and database virtual networks connect to a hub network for shared services like firewalls or Domain Name System (DNS). This design helps ensure low-latency direct communication while enabling centralized traffic inspection and management. The following diagram shows a full mesh pattern among database, application, and hub virtual networks.
 
-:::image type="content" source="./media/separate-virtual-network-integrated.svg" alt-text="Diagram that shows the full mesh pattern between the database, application, and hub virtual network." border="false" lightbox="./media/separate-virtual-network-integrated.svg":::
+:::image type="content" source="./media/separate-virtual-network-integrated.svg" alt-text="Diagram that shows the full mesh pattern among the database, application, and hub virtual networks." border="false" lightbox="./media/separate-virtual-network-integrated.svg":::
 
-*Figure 3: The previous diagram shows the full mesh pattern between the database, application, and hub virtual network.*
 
 This pattern helps ensure direct connectivity from database and application virtual networks and protection from other networks.
 
@@ -44,9 +41,9 @@ This pattern helps ensure direct connectivity from database and application virt
 
 - **Cost factors:** Colocating the database and application tiers in the same virtual network incurs no extra network costs.
 
-- **Connectivity options:** When you can't colocate the database and application tiers in the same virtual network, peering between virtual networks or traversing through a hub virtual network, like the standard virtual network or Virtual WAN hub, are options.
+- **Connectivity options:** When you can't colocate the database and application tiers in the same virtual network, you can peer between virtual networks or traverse through a hub virtual network, like a standard virtual network or Azure Virtual WAN hub.
 
-- **Known limitations:** Because of connectivity limitations from Oracle Database@Azure to Private Endpoints and serverless applications like Azure Functions, connectivity to these services requires an intermediate hop through a routing device like Azure Firewall or a non-Microsoft network virtual appliance.
+- **Known limitations:** Because of connectivity limitations from Oracle Database@Azure to private endpoints and serverless applications like Azure Functions, connectivity to these services requires an intermediate hop through a routing device like Azure Firewall or a non-Microsoft network virtual appliance.
 
 - **Availability zone validation:** If you deploy the application tier in a separate subscription from the subscription that hosts Oracle Database@Azure – Exadata Database Service, logical availability zones might differ from physical availability zones across subscriptions. To validate the correct availability zones, use the following command and replace `eastus` with your desired region:
 

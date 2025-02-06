@@ -23,9 +23,9 @@ When you name Oracle Database@Azure resources, use the [Azure general naming con
 
 ### Security and isolation best practices
 
-To enhance security and management in multiple subscription architectures, implement [best practices for isolation architectures](/entra/architecture/secure-best-practices). These practices include strategies for logical isolation, least privilege access, and network segmentation. These measures are relevant for Oracle Database@Azure deployments that include multiple environments, such as production, development, and disaster recovery (DR).
+To enhance security and management in multiple subscription architectures, implement [best practices for isolation architectures](/entra/architecture/secure-best-practices). These practices include strategies for logical isolation, least privilege access, and network segmentation. These measures are relevant for Oracle Database@Azure deployments that include multiple environments, such as production, development, and disaster recovery (DR) environments.
 
-### Subscription design considerations for Oracle Database@Azure
+### Subscription design considerations
 
 Consider the following factors when you design the subscription setup for Oracle Database@Azure.
 
@@ -43,15 +43,14 @@ The following recommendations are based on the subscription design consideration
 
 - **Use a multiple subscription architecture:** Design a subscription model where each environment, such as production, development, testing, and DR, is isolated in its own Azure subscription. This approach provides insights into cost tracking, security, and workload management.
 
-- **Monitor billing across subscriptions:** Regularly review costs by using Microsoft Cost Management tools and ensure that the billing account configuration matches across all subscriptions. Cost Management tools can provide insights into overall expenses, but charges related to the Oracle Account resource in the primary subscription (with the private offer) are consolidated under that subscription. This means that individual per-subscription billing isn't itemized in Azure. For independent charges, refer to OCI for cost tracking and invoicing.
+- **Monitor billing across subscriptions:** Regularly review costs by using Microsoft Cost Management tools and ensure that the billing account configuration matches across all subscriptions. Cost Management tools can provide insights into overall expenses, but charges related to the Oracle account resource in the primary subscription (with the private offer) are consolidated under that subscription. Therefore, individual per-subscription billing isn't itemized in Azure. For independent charges, refer to OCI for cost tracking and invoicing.
 
-### Implement a multiple subscription setup for Oracle Database@Azure
+### Implement a multiple subscription setup
 
-Establish a multiple subscription architecture for Oracle Database@Azure, where various environments, such as production, development, unit testing, system integration testing (SIT), and DR, are managed across different Azure subscriptions within the same tenant.
+Establish a multiple subscription architecture for Oracle Database@Azure, where various environments, such as production, development, unit testing, system integration testing (SIT), and DR, are managed across different Azure subscriptions within the same tenant. The following diagram shows a multiple subscription setup for Oracle Database@Azure.
 
 :::image type="content" source="./media/multiple-subscription-odaa.svg" alt-text="Diagram that illustrates a multiple subscription setup for Oracle Database@Azure." border="false" lightbox="./media/multiple-subscription-odaa.svg":::
 
-*Figure 1. The previous diagram illustrates a multiple subscription setup for Oracle Database@Azure.*
 
 #### Key points
 

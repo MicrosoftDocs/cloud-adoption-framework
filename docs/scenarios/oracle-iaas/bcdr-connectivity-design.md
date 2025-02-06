@@ -28,22 +28,19 @@ The following diagram illustrates a single-region redundant setup that uses two 
 
 :::image type="content" source="./media/multiple-availability-zone.svg" alt-text="Diagram that shows in-region redundancy for Oracle Database@Azure - Exadata Database Service." border="false" lightbox="./media/multiple-availability-zone.svg":::
 
-*Figure 1: The previous diagram shows a single-region redundant setup for Oracle Database@Azure - Exadata Database Service.*
 
 > [!NOTE]
 > Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Data egress charges apply.
 
 ## Redundancy across regions
 
-To deploy a redundant network setup across regions, you can configure traffic in Azure or OCI. The following patterns provide guidance for scenarios when traffic must remain within Azure.
+To deploy a redundant network setup across regions, you can configure traffic in Azure or OCI. The following patterns provide guidance for scenarios when traffic must remain within Azure. The following diagram shows a hub-and-spoke topology.
 
 :::image type="content" source="./media/hub-spoke-multiple-region.svg" alt-text="Diagram that shows a hub-and-spoke topology." border="false" lightbox="./media/hub-spoke-multiple-region.svg":::
 
-*Figure 2: The previous diagram shows a hub-and-spoke topology.*
 
 :::image type="content" source="./media/virtual-wan-multiple-region.svg" alt-text="Diagram that shows the Virtual WAN topology." border="false" lightbox="./media/virtual-wan-multiple-region.svg":::
 
-*Figure 3: The previous diagram shows the Virtual WAN topology.*
 
 ## Design considerations
 
@@ -53,20 +50,19 @@ To deploy a redundant network setup across regions, you can configure traffic in
 
 - **Availability zones:** Ensure that the two Oracle Database@Azure - Exadata Database Service deployments span different availability zones to isolate failures at the availability zone level.
 
-- **Data Guard configuration:** For DR, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. For more information, see [BCDR considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
+- **Data Guard configuration:** For DR within the same region or availability zone, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. For more information, see [BCDR considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
 
 - Supported network topologies are Virtual Wan-based connectivity and peering with a hub network.
 
 ## Design recommendations
 
-- **Minimize network virtual appliances (NVAs):** Minimize the use of NVAs in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
+- **Network virtual appliances (NVAs):** Minimize the use of NVAs in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
 
-- **Availability zones:** Ensure that the two Oracle Database@Azure - Exadata Database Service deployments span different availability zones to isolate failures at the availability zone level.
 
-- **Plan for costs and growth:** Evaluate ingress and egress costs, future growth expectations, and potential changes to your network architecture. Align your design with your business continuity goals and budget constraints.
+- **Costs and growth:** Evaluate ingress and egress costs, future growth expectations, and potential changes to your network architecture. Align your design with your business continuity goals and budget constraints.
 
-- **Asynchronous replication for cross-region DR:** Because of higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance. It also provides robust disaster recovery (DR) capabilities.
+- **Asynchronous replication for cross-region DR:** Because of higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance. It also provides robust DR capabilities.
 
 ## Next step
 
-To prepare for your migration, consider the connection from your Oracle Database on-premises to your Oracle Database@Azure - Exadata Database Service. For more information, see [Migration connectivity design](./migration-connectivity-design.md).
+To prepare for your migration, consider the connection from Oracle Database on-premises to Oracle Database@Azure - Exadata Database Service. For more information, see [Migration connectivity design](./migration-connectivity-design.md).
