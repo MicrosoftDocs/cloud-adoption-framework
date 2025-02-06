@@ -1,6 +1,6 @@
 ---
 title: Network Topology and Connectivity for Oracle Database@Azure - BCDR Connectivity Design
-description: Learn about key considerations and detailed recommendations for Oracle Database@Azure BCDR connectivity design, including best practices, optimization, and implementation guidance.
+description: Learn about considerations and recommendations for Oracle Database@Azure BCDR connectivity design, including best practices, optimization, and guidance.
 author: moisesjgomez
 ms.author: mgomezcortez
 ms.date: 02/10/2025
@@ -53,7 +53,7 @@ The following diagram shows an Azure Virtual WAN topology.
 
 - **Data Guard configuration:** For DR within the same region or availability zone, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. For more information, see [BCDR considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
 
-- Supported network topologies are Virtual Wan-based connectivity and peering with a hub network.
+- Supported network topologies are Virtual WAN-based connectivity and peering with a hub network.
 
 ## Design recommendations
 

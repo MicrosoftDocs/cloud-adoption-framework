@@ -14,7 +14,7 @@ Before you begin cloud adoption, create a landing zone to host the workloads tha
 
 The following articles help guide you through the process of how to create a network connectivity and topology for your landing zone to support cloud adoption specific to Oracle Database@Azure - Exadata Database Service.
 
-| **Design area**                 | **Objective**                                                                                                                                                |
+| Design area                 | Objective                                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Core network design             | Understand the foundational networking concepts for Oracle Database@Azure - Exadata Database Service.                                                        |
 | Application connectivity design | Guidance on how to connect your application tier to Oracle Database@Azure - Exadata Database Service.                                                            |
