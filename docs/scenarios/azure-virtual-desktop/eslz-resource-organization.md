@@ -1,5 +1,5 @@
 ---
-title: Design Guidance for Azure Virtual Desktop
+title: Resource organization considerations for Azure Virtual Desktop
 description: Learn about the resource organization design area and how to apply it to your Azure Virtual Desktop implementation effectively.
 author: martinekuan
 ms.author: martinek
@@ -8,9 +8,9 @@ ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
 ---
 
-# Design guidance for Azure Virtual Desktop
+# Resource organization considerations for Azure Virtual Desktop
 
-Resource organization affects how you manage and govern your Azure Virtual Desktop (AVD) resources. This article provides key considerations and recommendations for designing an organization's structure.
+Resource organization affects how you manage and govern your Azure Virtual Desktop resources. This article provides key considerations and recommendations for designing an organization's structure.
 
 Use this guidance to ensure resource organization and segmentation across:
 
@@ -21,11 +21,11 @@ Use this guidance to ensure resource organization and segmentation across:
 
 ## Design considerations
 
-The following sections describe key considerations for how to organize your AVD resources.
+The following sections describe key considerations for how to organize your Azure Virtual Desktop resources.
 
 ### Number of virtual machines
 
-When you plan the number of AVD virtual machines (VMs) that your organization needs, consider the following factors:
+When you plan the number of Azure Virtual Desktop virtual machines (VMs) that your organization needs, consider the following factors:
 
 - Avoid deploying more the 5,000 VMs in a single region because it can create performance bottlenecks, hit subscription limits, and make you less resilient. You can accommodate extra user sessions by increasing individual session host VM resources.
 
@@ -33,7 +33,7 @@ When you plan the number of AVD virtual machines (VMs) that your organization ne
 
 ### Regions for host deployment
 
-Deploy all resources to the same Azure region as your AVD deployment. The main resources include:
+Deploy all resources to the same Azure region as your Azure Virtual Desktop deployment. The main resources include:
 
 - Metadata (or service objects) like host pools, application groups, and workspaces.
 
@@ -55,7 +55,7 @@ To manage regions for host deployment:
 
 ## Design recommendations
 
-The following sections provide guidance on how to manage groups, naming, and tagging in AVD.
+The following sections provide guidance on how to manage groups, naming, and tagging in Azure Virtual Desktop.
 
 ### Management settings scope
 
@@ -63,30 +63,30 @@ The four levels of management that Azure provides are management groups, subscri
 
 The following image shows an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
 
-:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD shared resources subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
+:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the Azure Virtual Desktop shared resources subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
 
 #### Components
 
-- **AVD service objects:** Create a resource group for AVD service objects from the host pool VMs. Service objects include workspaces, host pools, and application groups.
+- **Azure Virtual Desktop service objects:** Create a resource group for Azure Virtual Desktop service objects from the host pool VMs. Service objects include workspaces, host pools, and application groups.
 
 - **Networking:** Typically created as part of your Azure landing zone.
 
 - **Storage:** Create a resource group for storage accounts, if it's not already created as part of your Azure landing zone.
 
-- **Session hosts compute:** Create a resource group for VMs, disks, and network interfaces. These resources have a different lifecycle from AVD service objects.
+- **Session hosts compute:** Create a resource group for VMs, disks, and network interfaces. These resources have a different lifecycle from Azure Virtual Desktop service objects.
 
 - **Shared resources:** Create a resource group for shared resources such as custom VM images. This approach promotes self-service. For example, you can have a subscription for each business line.
 
   - Basic structure:
-    - Subscription AVD-shared-resources
+    - Subscription Azure Virtual Desktop-shared-resources
       - rg-avd-<_Azure-Region_>-shared-resources
-    - Subscription AVD landing zone
+    - Subscription Azure Virtual Desktop landing zone
       - rg-avd-<_Azure-Region_>-<_Workload_>-service-objects
       - rg-avd-<_Azure-Region_>-<_Workload_>-pool-compute
       - rg-avd-<_Azure-Region_>-<_Workload_>-network
       - rg-avd-<_Azure-Region_>-<_Workload_>-storage
 
-  :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD service objects and compute subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png":::
+  :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the Azure Virtual Desktop service objects and compute subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png":::
 
 ### Naming standards
 
@@ -114,15 +114,15 @@ Common uses for tags include:
 
 ## Related resources
 
-For more information about AVD organization and management, see:
+For more information about Azure Virtual Desktop organization and management, see:
 
-- [AVD for the enterprise](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
+- [Azure Virtual Desktop for the enterprise](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
 - [Organize your Azure resources effectively](../../ready/azure-setup-guide/organize-resources.md)
 - [Resource naming and tagging decision guide](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
 
 ## Next step
 
-Learn more about management and monitoring for an AVD enterprise-scale scenario.
+Learn more about management and monitoring for an Azure Virtual Desktop enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Management baseline considerations for an AVD](./eslz-management-and-monitoring.md)
+> [Management baseline considerations for an Azure Virtual Desktop](./eslz-management-and-monitoring.md)
