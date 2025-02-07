@@ -438,7 +438,7 @@
       {
          "source_path": "docs/getting-started/migrate.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md",
