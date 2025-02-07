@@ -90,7 +90,7 @@ While monitoring ANF metrics, it's also important to monitor the VMs network ban
 
 1. Alerts in Azure Monitor help identify unhealthy resources. When you create a new VM, you can enable a set of recommended alert rules for common metrics. This initial set includes metrics such as CPU percentage and available memory. For more information, see [Enable recommended alert rules for Azure VM](/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). Additionally, you can configure advanced [metric alert rules](/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you require situational monitoring.
 
- Microsoft Azure offers [AMBA (Azure Monitor Baseline Alerts)](https://azure.github.io/azure-monitor-baseline-alerts/welcome/). It refers to a feature that helps in monitoring and alerting based on predefined baseline metrics. These alerts are designed to notify users about unusual or critical changes in their Azure resources, performance, or security posture.
+Consider using [Azure Monitor Baseline Alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/Overview/ALZ-Pattern/), which serves as a best practice collection of alerts for resources commonly deployed in Azure landing zones.
  
 1. Managed disk related metrics should also be monitored. If thresholds are exceeded, it's recommended that an alert is issued.  
   
