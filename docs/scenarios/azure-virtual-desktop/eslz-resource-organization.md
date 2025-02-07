@@ -63,13 +63,13 @@ The four levels of management that Azure provides are management groups, subscri
 
 The following image shows an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
 
-:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the Azure Virtual Desktop shared resources subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
+:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-1.png" alt-text="Screenshot that shows the Azure Virtual Desktop shared resources subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-1.png":::
 
 #### Components
 
 - **Azure Virtual Desktop service objects:** Create a resource group for Azure Virtual Desktop service objects from the host pool VMs. Service objects include workspaces, host pools, and application groups.
 
-- **Networking:** Typically created as part of your Azure landing zone.
+- **Networking:** Networking is typically created as part of your Azure landing zone.
 
 - **Storage:** Create a resource group for storage accounts, if it's not already created as part of your Azure landing zone.
 
@@ -86,7 +86,7 @@ The following image shows an example of the recommended structure and resource g
       - rg-avd-<_Azure-Region_>-<_Workload_>-network
       - rg-avd-<_Azure-Region_>-<_Workload_>-storage
 
-  :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the Azure Virtual Desktop service objects and compute subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png":::
+  :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png" alt-text="Screenshot that shows the Azure Virtual Desktop service objects and compute subscription." border="false" lightbox="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png":::
 
 ### Naming standards
 
