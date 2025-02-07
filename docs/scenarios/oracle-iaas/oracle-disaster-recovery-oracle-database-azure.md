@@ -168,7 +168,7 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
 
     - [Oracle Database@Azure - Azure Verified Modules for Oracle Exadata VM Cluster](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudvmcluster/azurerm/latest)
 
-  - Use IaC to deploy databases in the OCI console. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
+  - Use Infrastructure as Code (IaC) to deploy databases in the OCI console. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
 
 ## Related resources
 
