@@ -69,7 +69,7 @@ The Oracle administrator should monitor disk performance metrics related to I/O,
 
 When monitoring disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. The specific limits for managed disks are detailed in the technical specifications for each VM SKU. For more information about VM specifications, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
-When selecting the appropriate VM SKU, refer to the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide higher combined IOPS and throughput. If the database IO requirements during peak load exceed the Virtual Machine's maximum uncached disk throughput, the Virtual Machine's IO operations may be throttled. Additionally, if there's insufficient IOPS and/or storage throughput per disk, throttling could occur at both the virtual machine and disk levels.
+When selecting the appropriate VM SKU, refer to the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide higher combined IOPS and throughput. If the database I/O requirements during peak load exceed the Virtual Machine's maximum uncached disk throughput, the Virtual Machine's I/O operations may be throttled. Additionally, if there's insufficient IOPS or storage throughput per disk, throttling could occur at both the virtual machine and disk levels.
 
 For more information about Disk performance related metrics, see [Disk metrics - Azure Virtual Machines](/azure/virtual-machines/disks-metrics).
 
