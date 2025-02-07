@@ -10,7 +10,7 @@ ms.custom: UpdateFrequency2
 
 # Sustainability alignment in cloud management
 
-Introducing sustainability in your cloud management and operations help drive carbon awareness in your teams and ultimately work toward achieving your goals set up for your [sustainability outcomes](../../strategy/business-outcomes/sustainability.md).
+Introducing sustainability in your cloud management and operations help drive carbon awareness in your teams and ultimately work toward achieving your goals set up for your [Sustainability considerations](../../strategy/inform/sustainability.md).
 
 ## Monitoring carbon emissions
 

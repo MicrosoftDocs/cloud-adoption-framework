@@ -972,7 +972,7 @@
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/governance-complaince-oracle-landing-zone.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
           "redirect_document_id": false
       },
       {
@@ -2092,12 +2092,12 @@
       },
       {
          "source_path": "docs/innovate/best-practices/trusted-ai.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/innovate/best-practices/predict.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
          "redirect_document_id": false
       },
       {
@@ -2321,6 +2321,166 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/strategy/cloud-adoption-strategy-evaluator.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/assessment",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/responsible-ai.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/sustainability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/sustainability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/achieve-more.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/balance-competing-priorities.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/balance-the-portfolio.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/building-devops-practice.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/agility-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/business-outcome-template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/data-democratization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/data-innovations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/engagement-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/fiscal-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/okr.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/mission-objectives",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/performance-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/reach-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/cloud-accounting.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/cloud-migration-business-case.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/mission-objectives",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/communication.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/digital-transformation-timeline.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/finance-vocabulary-terms.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/financial-considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/global-markets.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/learning-metrics.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/technical-considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/define-security-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/security",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/define-sovereignty-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/resiliency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/partner-alignment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/share-your-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/team/cloud-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/define-your-team",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/organize/cloud-security-application-security-devsecops.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
          "redirect_document_id": false
@@ -2479,6 +2639,21 @@
          "source_path": "docs/scenarios/oracle-iaas/enterprise-enrollment-oracle.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
          "redirect_document_id": false
-      }      
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
+         "redirect_document_id": false
+       },
+       {
+         "source_path": "docs/antipatterns/govern-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/strategy-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      }
    ]
 }

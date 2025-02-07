@@ -93,7 +93,7 @@ A combination of hybrid and multicloud environments is the most common scenario 
 
 Initiating a cross-team effort to increase your cloud readiness with innovative cloud practices and technologies is the first step toward implementing a single enterprise control plane. You can consistently protect and monitor resources, standardize governance and security, and manage your operational processes in on-premises, multicloud, and edge environments. Consider a hybrid and multicloud environment to manage your overall digital estate if you're planning a hybrid strategy by design for the next 12 months or longer.
 
-Work with your [cloud strategy team](../../get-started/team/cloud-strategy.md) to build the necessary skill levels and processes to prepare the move to an enterprise control plane across a hybrid, multicloud, and edge environment that encourages greater accountability within IT teams, empowers developer teams, and extends Azure services to any infrastructure, anywhere.
+Work with your [cloud strategy team](../../strategy/define-your-team.md) to build the necessary skill levels and processes to prepare the move to an enterprise control plane across a hybrid, multicloud, and edge environment that encourages greater accountability within IT teams, empowers developer teams, and extends Azure services to any infrastructure, anywhere.
 
 ## Unified operations motivations
 
