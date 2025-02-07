@@ -86,7 +86,7 @@ The following image shows an example of the recommended structure and resource g
       - rg-avd-<_Azure-Region_>-<_Workload_>-network
       - rg-avd-<_Azure-Region_>-<_Workload_>-storage
 
-  :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD service objects and compute subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png":::
+  :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png" alt-text="Screenshot that shows the AVD service objects and compute subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png":::
 
 ### Naming standards
 
