@@ -36,11 +36,11 @@ The first step is to set up general VM and managed disk monitoring.
     Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative IOPS and throughput of data disks when disk striping technologies are used such as Oracle Automatic Storage Management (classic deployment model) or Linux Logical Volume Manager (LVM).
 
     > [!NOTE]
-    > When provisioning a virtual machine with NVMe storage, the maximum throughput per disk is 1,200 Mbps. If higher throughput is required, consider provisioning multiple disks to meet your performance needs and configure them in a RAID-0 array. For optimal performance, use a block size of 128 KB for NVMe storage.
+    > You can choose NVMe-based storage when required by your workload. NVMe (Non-Volatile Memory Express) is a high-performance storage protocol designed for flash storage, offering low latency and high throughput. For most workloads utilizing an Oracle Database hosted on a compute node with NVMe storage, a block size of 128k is recommended. The block size refers to the amount of data read or written in a single I/O operation. It plays a critical role in determining storage performance, throughput, and latency. Keep in mind that the maximum throughput you can configure depends on the data size and disk type which you provision.
 
 ### Azure virtual machine and managed disk metrics
 
-The Oracle administrator should monitor disk performance metrics, such as the following:
+The Oracle administrator should monitor performance metrics, such as the following:
 
 | Name                                           | Thresholds (Severity) | 
 | ---------------------------------------------- | ----------------------- | 
