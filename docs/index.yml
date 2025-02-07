@@ -57,8 +57,6 @@ productDirectory:
       links:
         - url: ./get-started/index.md
           text: Get started
-        - url: ./get-started/migrate.md
-          text: Accelerate migration
         - url: ./get-started/operational-excellence.md
           text: Deliver operational excellence
         - url: ./antipatterns/antipatterns-to-avoid.md
