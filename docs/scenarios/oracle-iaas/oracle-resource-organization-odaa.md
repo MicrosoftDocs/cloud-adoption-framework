@@ -6,7 +6,7 @@ ms.author: gereyeso
 ms.reviewer: gereyeso
 ms.date: 02/08/2025
 ms.topic: conceptual
-ms.custom: e2e-oracle
+ms.custom: e2e-oracle, references_regions
 ---
 
 # Resource organization for Oracle Database@Azure
