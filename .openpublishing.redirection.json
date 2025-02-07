@@ -297,7 +297,7 @@
       },
       {
          "source_path": "docs/infrastructure/virtual-machines/basic-workload.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
          "redirect_document_id": false
       },
       {
@@ -437,7 +437,7 @@
       },
       {
          "source_path": "docs/getting-started/migrate.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
          "redirect_document_id": true
       },
       {
@@ -2654,6 +2654,11 @@
          "source_path": "docs/antipatterns/strategy-antipatterns.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/get-started/migrate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }      
    ]
 }
