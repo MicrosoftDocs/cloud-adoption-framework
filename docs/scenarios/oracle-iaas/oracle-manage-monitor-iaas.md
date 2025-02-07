@@ -22,10 +22,9 @@ The first step of monitoring is to set up general Azure virtual machine (VM) mon
 ### Log monitoring by Azure monitor
 
 <<<<<<< HEAD
-To monitor an Oracle workload on the [Azure Virtual Machines landing zone accelerator](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-landing-zone-accelerator), you need to monitor Virtual Machine, attached managed Disks, or applied storage account, such as Azure NetApp Files and Oracle Database on Azure Virtual Machine. Therefore Azure Monitor provides numerous ways to monitor log of the Virtual Machine and managed disks for your Oracle workload.
-=======
+To monitor an Oracle workload on the [Azure Virtual Machines landing zone accelerator](/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-landing-zone-accelerator), you need to monitor Virtual Machine, attached managed Disks, or applied storage account, such as Azure NetApp Files and Oracle Database on Azure Virtual Machine. Therefore Azure Monitor provides numerous ways to monitor log of the Virtual Machine and managed disks for your Oracle workload.
+
 To monitor an Oracle workload on the Azure Virtual Machines landing zone accelerator, you need to monitor the VM, the attached managed disks, or applied storage accounts such as Azure NetApp Files and Oracle Database on Azure Virtual Machine. Azure Monitor provides numerous ways to monitor logs of the VM and managed disks for your Oracle workload.
->>>>>>> 79e551e5f29782095491e03593c77199384ca7a9
 
 The first step is to set up general VM and managed disk monitoring.
 
