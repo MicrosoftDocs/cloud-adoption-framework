@@ -34,7 +34,7 @@ The first step is to set up general Azure Virtual Machine and Managed disk monit
     Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative IOPS and throughput of data disks when disk striping technologies are used such as Oracle Automatic Storage Management (classic deployment model) or Linux Logical Volume Manager (LVM).
 
     > [!NOTE]
-    > When provisioning a virtual machine with NVMe storage, the maximum throughput per disk is 1,200 Mbps. If you require higher throughput, consider provisioning multiple disks to meet your performance needs and configure them in a RAID-0 array. For optimal performance, use a block size of 128 KB for NVMe virtual machines.
+    > When provisioning a virtual machine with NVMe storage, the maximum throughput per disk is 1,200 Mbps. If higher throughput is required, consider provisioning multiple disks to meet your performance needs and configure them in a RAID-0 array. For optimal performance, use a block size of 128 KB for NVMe storage.
 
 ### Azure virtual machine and managed disk metrics
 
