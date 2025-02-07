@@ -21,7 +21,7 @@ The first step of monitoring is to set up general Azure Virtual Machine monitori
 
 ### Log monitoring by Azure monitor
 
-To monitor an Oracle workload on the Azure Virtual Machines landing zone accelerator, you need to monitor Virtual Machine, attached managed Disks, or applied storage account, such as Azure NetApp Files and Oracle Database on Azure Virtual Machine. Azure Monitor provides numerous ways to monitor log of the Virtual Machine and managed disks for your Oracle workload.
+To monitor an Oracle workload on the [Azure Virtual Machines landing zone accelerator](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-landing-zone-accelerator), you need to monitor Virtual Machine, attached managed Disks, or applied storage account, such as Azure NetApp Files and Oracle Database on Azure Virtual Machine. Therefore Azure Monitor provides numerous ways to monitor log of the Virtual Machine and managed disks for your Oracle workload.
 
 The first step is to set up general Azure Virtual Machine and Managed disk monitoring.
 
@@ -38,7 +38,7 @@ The first step is to set up general Azure Virtual Machine and Managed disk monit
 
 ### Azure virtual machine and managed disk metrics
 
-The Oracle administrator should monitor disk performance metrics related to I/O, such as the following:
+The Oracle administrator should monitor disk performance metrics, such as the following:
 
 | Name                                           | Thresholds (Severity) | 
 | ---------------------------------------------- | ----------------------- | 
@@ -88,9 +88,9 @@ While monitoring ANF metrics, it's also important to monitor the Virtual Machine
 
 1. Alerts in Azure Monitor help identify unhealthy resources. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules for common metrics. This initial set includes metrics such as CPU percentage and available memory. For more information, see [Enable recommended alert rules for Azure VM](/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). Additionally, you can configure Advanced [metric alert rules](/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you require situational monitoring.
 
-    Recently, an initiative was developed to simplify the deployment of alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://aka.ms/amba/alz/wiki), which serves as a common set of Azure resources and services configured similarly across organizations.
-
-2. Managed disk related metrics should also be monitored. If thresholds are exceeded, it's recommended that an alert is issued.  
+ Microsoft Azure offers [AMBA (Azure Monitor Baseline Alerts)](https://azure.github.io/azure-monitor-baseline-alerts/welcome/). It refers to a feature that helps in monitoring and alerting based on predefined baseline metrics. These alerts are designed to notify users about unusual or critical changes in their Azure resources, performance, or security posture.
+ 
+1. Managed disk related metrics should also be monitored. If thresholds are exceeded, it's recommended that an alert is issued.  
   
 ### Monitor related Azure services
 
