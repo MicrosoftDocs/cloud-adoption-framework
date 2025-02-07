@@ -21,6 +21,4 @@ The following articles help guide you through the process of how to create a net
 | [Business continuity and disaster recovery (BCDR) connectivity design](bcdr-connectivity-design.md)        | Strategies for how to establish in-region and cross-region redundancy.                                                                                        |
 | [Migration connectivity design](migration-connectivity-design.md)   | Approaches and best practices for how to integrate your current source environment with Oracle Exadata Database@Azure for migration scenarios. |
 
-## Next step
-
 Start with the [core network design](core-network-design.md) guidance, which introduces foundational networking principles and constraints for Oracle Exadata Database@Azure. Complete this step before you explore application connectivity, BCDR, or migration scenarios.
