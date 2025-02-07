@@ -59,4 +59,4 @@ This pattern helps ensure direct connectivity from database and application virt
 
 ## Next step
 
-Now that you understand how to connect your application tier to Oracle Exadata Database@Azure, see the [BCDR connectivity design](./bcdr-connectivity-design.md) guidance. This guidance helps you establish the required network foundations and best practices needed to support business continuity and disaster recovery strategies.
+Now that you understand how to connect your application tier to Oracle Exadata Database@Azure, see the [BCDR connectivity design](./business-continuity-disaster-recovery-connectivity-design.md) guidance. This guidance helps you establish the required network foundations and best practices needed to support business continuity and disaster recovery strategies.

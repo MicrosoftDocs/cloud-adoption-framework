@@ -22,7 +22,7 @@ items:
           - name: Application connectivity design
             href: application-connectivity-design.md
           - name: BCDR connectivity design
-            href: bcdr-connectivity-design.md
+            href: business-continuity-disaster-recovery-connectivity-design.md
           - name: Migration connectivity design
             href: migration-connectivity-design.md   
       - name: Identity and access management for Oracle Database@Azure
@@ -48,7 +48,7 @@ items:
       - name: Resource organization
         items:
         - name: Resource organization for Oracle Database@Azure
-          href: oracle-resource-organization-odaa.md
+          href: oracle-resource-organization-oracle-database-azure.md
     - name: Implementation options
       items:
       - name: Oracle on Azure IaaS landing zone accelerator
