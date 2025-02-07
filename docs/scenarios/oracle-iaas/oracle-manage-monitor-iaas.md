@@ -21,7 +21,6 @@ The first step of monitoring is to set up general Azure virtual machine (VM) mon
 
 ### Log monitoring by Azure monitor
 
-<<<<<<< HEAD
 To monitor an Oracle workload on the [Azure Virtual Machines landing zone accelerator](/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-landing-zone-accelerator), you need to monitor Virtual Machine, attached managed Disks, or applied storage account, such as Azure NetApp Files and Oracle Database on Azure Virtual Machine. Therefore Azure Monitor provides numerous ways to monitor log of the Virtual Machine and managed disks for your Oracle workload.
 
 To monitor an Oracle workload on the Azure Virtual Machines landing zone accelerator, you need to monitor the VM, the attached managed disks, or applied storage accounts such as Azure NetApp Files and Oracle Database on Azure Virtual Machine. Azure Monitor provides numerous ways to monitor logs of the VM and managed disks for your Oracle workload.
@@ -80,7 +79,6 @@ For more information about disk performance related metrics, see [Disk metrics -
 **Monitor Azure NetApp Files (ANF) metrics**
 
 If the database files are stored in Azure NetApp Files (ANF) volumes, monitor ANF allocated storage, storage usage, volume IOPS, throughput, and latency. For detailed information on how to monitor Azure NetApp Files and related performance metrics, see [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files) and [Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics).
-
 
 
 While monitoring ANF metrics, it's also important to monitor the VMs network bandwidth to ensure its limit isn't exceeded. Since ANF volumes are mounted over the network using the NFS protocol, they aren't restricted by the cumulative I/O throughput limits of any VM instance type. Instead, ANF is only limited by the network bandwidth of the database VM series. The specific limit for NFS-mounted storage is detailed in the column named "Max network bandwidth (Mbps)". For examples, see the VM series technical specification [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
