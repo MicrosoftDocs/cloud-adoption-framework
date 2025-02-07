@@ -17,7 +17,7 @@ Following the guidance, this article further explains key design considerations 
 
 ## Monitor Oracle databases on Azure Virtual Machines landing zone accelerator
 
-The first step of monitoring is to set up general Azure Virtual Machine monitoring and define threshold for the metrics. After you configure the general Azure Virtual Machine and managed Disk monitoring, the next step is to set up Oracle specified monitoring adapted to your environment.
+The first step of monitoring is to set up general Azure virtual machine (VM) monitoring and define threshold for the metrics. After you configure the general VM and managed disk monitoring, the next step is to set up Oracle monitoring specifically tailored to your environment.
 
 ### Log monitoring by Azure monitor
 
