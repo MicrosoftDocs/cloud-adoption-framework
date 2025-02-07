@@ -27,19 +27,19 @@ The following sections describe key considerations for how to organize your Azur
 
 When you plan the number of Azure Virtual Desktop virtual machines (VMs) that your organization needs, consider the following factors:
 
-- Avoid deploying more the 5,000 VMs in a single region because it can create performance bottlenecks, hit subscription limits, and make you less resilient. You can accommodate extra user sessions by increasing individual session host VM resources.
+- Avoid deploying more the 5,000 VMs in a single region because it can create performance bottlenecks, exceed subscription limits, and decrease resiliency. You can accommodate extra user sessions by increasing individual session host VM resources.
 
-- For [enterprise environments](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) that exceed 5,000 VMs per subscription per region, create multiple Azure subscriptions by using a [hub-and-spoke architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, deploy VMs within the same subscription but across different regions to increase the number of VMs.
+- For [enterprise environments](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) that exceed 5,000 VMs per subscription in each region, create multiple Azure subscriptions by using a [hub-and-spoke architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, deploy VMs within the same subscription but across different regions to increase the number of VMs.
 
 ### Regions for host deployment
 
 Deploy all resources to the same Azure region as your Azure Virtual Desktop deployment. The main resources include:
 
-- Metadata (or service objects) like host pools, application groups, and workspaces.
+- Metadata or service objects like host pools, application groups, and workspaces.
 
-- Session hosts (or virtual desktops) compute resources like VMs, disks, and network interfaces.
+- Session host or virtual desktop compute resources like VMs, disks, and network interfaces.
 
-- Virtual network where the session hosts are directly connected.
+- Virtual networks that directly connect to session hosts.
 
 - Storage for FSLogix user profiles.
 
@@ -96,7 +96,7 @@ A consistent naming standard helps organize resources, streamline management, en
 
 - Operational details should include information that helps IT teams identify the workload, application, environment, criticality, and other relevant aspects necessary for managing resources.
 
-A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. For more information, see [Develop naming strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. For more information, see [Develop a naming strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
 ### Resource tags
 
