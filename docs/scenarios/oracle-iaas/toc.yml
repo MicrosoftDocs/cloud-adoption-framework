@@ -31,8 +31,8 @@ items:
         items:
           - name: Security overview for Oracle on Azure virtual machines
             href: oracle-security-overview-iaas.md
-          - name: Security overview for Oracle Database@Azure
-            href: oracle-security-overview-odaa.md
+          - name: Security overview for Oracle Exadata Database@Azure
+            href: oracle-security-overview-exadata.md
       - name: Management
         items: 
         - name: Management and monitoring for Oracle workloads on Azure Virtual Machines

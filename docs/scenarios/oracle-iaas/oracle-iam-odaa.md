@@ -27,7 +27,7 @@ Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud In
 
 - For architectures that have multiple clusters, RBAC group permissions are applied to all clusters in the subscription. To assign RBAC to individual clusters separately, create customized group names and policies in OCI and Azure for each cluster.
 
-- Federation to non-Microsoft identity providers or Microsoft Active Directory is supported. For more information about security recommendations beyond federation of identity and RBAC, see [Security guidelines for Oracle Database@Azure](./oracle-security-overview-odaa.md).
+- Federation to non-Microsoft identity providers or Microsoft Active Directory is supported. For more information about security recommendations beyond federation of identity and RBAC, see [Security guidelines for Oracle Exadata Database@Azure](./oracle-security-overview-exadata.md).
 
 ## Design recommendations
 
@@ -46,4 +46,4 @@ Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud In
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Security guidelines for Oracle Database@Azure](./oracle-security-overview-odaa.md)
+> [Security guidelines for Oracle Exadata Database@Azure](./oracle-security-overview-exadata.md)
