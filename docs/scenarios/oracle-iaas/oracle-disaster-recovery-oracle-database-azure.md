@@ -173,5 +173,5 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
 ## Related resources
 
 - [Identity and access management for Oracle Database@Azure](./oracle-iam-odaa.md)
-- [Security guidelines for Oracle Exadata Database@Azure](./oracle-security-overview-exadata.md)
+- [Security guidelines for Oracle Database@Azure](./oracle-security-overview-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](./oracle-network-topology-odaa.md)
