@@ -40,7 +40,7 @@ For more information, see the Microsoft Azure Well-Architected Framework's guide
 
     These solutions enable automatic scheduling and management of database backups with a predefined retention period. For more information, see [Manage database backup and recovery on Exadata Database Service on Oracle dedicated infrastructure](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-managing-db-backup-and-recovery.html).
 
-  - **Self-managed backup:** You can configure Oracle Exadata Database@Azure to stream database backups to Azure Storage services, including Azure Blob Storage and Azure Files (via private endpoints), and Azure NetApp Files.
+  - **Self-managed backup:** You can configure Oracle Exadata Database@Azure to stream database backups to Azure Storage services, including Azure Blob Storage, Azure Files (via private endpoints), and Azure NetApp Files.
 
     This option requires manual configuration and ongoing maintenance.
   
@@ -60,7 +60,7 @@ The multiple-zone BCDR architecture is recommended for customers who require a z
 
 This solution includes a secondary Oracle Exadata Database@Azure deployment in a different availability zone within the same region. To ensure resilience against database, cluster, or availability zone failures, implement a standby database located in the secondary instance. This setup provides protection against site-level failures.  
 
-:::image type="content" source="./media/cross-availability-zones.svg" alt-text="A diagram of multiple-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
+:::image type="content" source="./media/cross-availability-zones.svg" alt-text="Diagram that shows a multiple-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
 
 - **Data Guard redo transport mode:** Configure Data Guard redo transport mode according to your application services and RPO requirements:
 
@@ -77,7 +77,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
     For this setup, extra VMs that run Oracle Data Guard Observers are required to enable Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, which automates the failover process.
 
-:::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of the Fast-Start Failover architecture for Oracle Database@Azure Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
+  :::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of the Fast-Start Failover architecture for Oracle Database@Azure Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
 
   If you require a symmetrical DR architecture if there's a failover, you should position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
 
@@ -109,7 +109,7 @@ A remote standby database on an Oracle Exadata Database@Azure instance that's lo
 This architecture is ideal for mission-critical workloads and requires a minimum of three Oracle Exadata Database@Azure deployments.
 
 > [!NOTE]
-> If a symmetrical configuration is required because of a failover scenario, an additional standby database on Oracle Exadata Database@Azure should be placed in the secondary region, within a different availability zone. 
+> If a symmetrical configuration is required because of a failover scenario, place an extra standby database on Oracle Exadata Database@Azure in the secondary region, within a different availability zone. 
 >
 
 #### Data Guard Far Sync architecture
@@ -131,11 +131,11 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
 
   - **Use Autonomous Recovery Service (ARS) in Azure:** During backup policy configuration, choose to [store backup data in the same cloud provider as the database](https://docs.oracle.com/en/cloud/paas/recovery-service/dbrsu/azure-multicloud-recoveryservice.html) to use the ARS in Azure.
   
-  - **Use Azure Storage services:** Use Azure Storage services like Azure Blob Storage, Azure Files, and Azure NetApp Files to mount storage as network file system(NFS) points on the database server and stream Oracle Recovery Manager (RMAN) backups to Azure Storage.
+  - **Use Storage services:** Use Storage services like Blob Storage, Azure Files, and Azure NetApp Files to mount storage as network file system (NFS) points on the database server and stream Oracle Recovery Manager (RMAN) backups to Storage.
 
 - **Long-term backup retention:** If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Azure Storage.
 
-- **Storage backup configurations:** When backups are configured to Azure Storage services, consider the following recommendations:
+- **Storage backup configurations:** When backups are configured to Storage services, consider the following recommendations:
 
   - **Schedule with cron jobs:** Use cron jobs at the database-node level to schedule backups at specific times based on your backup strategy.
   
@@ -168,7 +168,7 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
 
     - [Oracle Database@Azure - Azure Verified Modules for Oracle Exadata VM Cluster](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudvmcluster/azurerm/latest)
 
-  - Use Infrastructure as Code (IaC) to deploy databases in the OCI console. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
+  - Use IaC to deploy databases in the OCI console. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
 
 ## Related resources
 

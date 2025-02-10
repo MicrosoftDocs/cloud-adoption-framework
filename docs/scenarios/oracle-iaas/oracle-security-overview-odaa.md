@@ -15,7 +15,7 @@ This article builds on considerations and recommendations in the [Azure security
 
 ## Overview
 
-Most databases contain sensitive data that requires a highly secure architecture beyond database-level protections. A defense-in-depth strategy consists of multiple defense mechanisms to ensure comprehensive security. This approach prevents the reliance on a single type of security, such as network defenses. The defense mechanisms include strong authentication and authorization frameworks, network security, encryption of data at rest, and encryption of data in transit. You can use this multilayered strategy to help secure Oracle workloads effectively.
+Most databases contain sensitive data that requires a highly secure architecture beyond database-level protections. A defense-in-depth strategy consists of multiple defense mechanisms to ensure comprehensive security. This approach prevents the reliance on a single type of security, such as network defenses. Defense mechanisms include strong authentication and authorization frameworks, network security, encryption of data at rest, and encryption of data in transit. You can use this multilayered strategy to help secure Oracle workloads effectively.
 
 For more information, see [Security guide for Oracle Exadata Database@Azure on dedicated infrastructure](https://docs.oracle.com/en/engineered-systems/exadata-cloud-service/ecscm/ecs-security-guide.html#GUID-EBDA0EB5-734A-4AD2-A740-8C174B1FFE3B) and [Exadata security controls](https://www.oracle.com/a/ocom/docs/engineered-systems/exadata/exadata-cloud-service-security.pdf).
 
@@ -32,7 +32,7 @@ Consider the following guidance when you design security measures for Oracle Exa
     > [!NOTE]
     > Oracle Exadata Database@Azure doesn't have inbound or outbound internet access by default.
 
-- A Oracle Database@Azure client subnet doesn't support network security groups (NSGs).
+- An Oracle Database@Azure client subnet doesn't support network security groups (NSGs).
 
 - The Oracle Exadata Database@Azure solution uses a predefined list of [Transmission Control Protocol (TCP) ports](https://docs.public.content.oci.oraclecloud.com/en-us/iaas/exadatacloud/doc/ecs-security-guide.html#ECSCM-GUID-93DD9F98-AC6F-4538-AE78-13399C1C02A7). By default, these ports are inaccessible from other subnets because they're managed by the NSGs within OCI. 
 
@@ -49,10 +49,10 @@ Consider the following guidance when you design security measures for Oracle Exa
 
 Consider the following security recommendations when you design your Oracle Exadata Database@Azure deployment:
 
-- Separate infrastructure access and data services access, especially when different teams access multiple databases on the same infrastructure for various reasons. Deploy VM clusters in a different virtual network to achieve network and management isolation at the workload level.
+- Separate infrastructure access and data services access, especially when different teams access multiple databases on the same infrastructure for various reasons. To achieve network and management isolation at the workload level, deploy VM clusters in a different virtual network.
 - Use NSG rules to limit the source IP address range, which helps secure the data plane and virtual network access. To prevent unauthorized access, only open the necessary ports that you require for secure communication, and apply the [principle of least privilege](/entra/identity-platform/secure-least-privileged-access). You can configure NSG rules on OCI.
 - Configure network address translation (NAT) or use a proxy like Azure Firewall or a non-Microsoft network virtual appliance if you require outbound internet access. 
-- Key management recommendations:
+- Consider the following key management recommendations:
     - Oracle Exadata Database@Azure has built-in integration with OCI Vault. If you store primary encryption keys in OCI Vault, the keys are also stored in OCI, outside of Azure.  
     - If you need to keep all data and services within Azure, use Oracle Key Vault. 
     
