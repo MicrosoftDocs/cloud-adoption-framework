@@ -58,8 +58,6 @@ items:
 
       - name: Accelerate adoption
         items:
-        - name: Accelerate migration
-          href: get-started/migrate.md
         - name: Build new products and services
           href: get-started/innovate.md
         - name: Unblock environment design and configuration

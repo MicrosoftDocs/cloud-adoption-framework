@@ -50,6 +50,8 @@ Azure DevOps and GitHub are both supported as source control. If you use another
 
 The bootstrap deploys your DevOps resources (Azure DevOps or GitHub), including repositories, pipelines, and the identities that are required to run the pipelines. Several Azure resources that host the Terraform state file and the supporting compute and networking resources support this.
 
+For more information, see [Phase 2 - Bootstrap][accelerator_bootstrap] in the [User guide][accelerator_user_guide].
+
 ### Deploy the platform
 
 After the bootstrap, you have a continuous integration and continuous delivery pipeline that deploys the scenario that you chose. If you select the local filesystem option, you can run `terraform apply` manually.
@@ -77,6 +79,7 @@ If you're an advanced user, you can compose your own architecture from the Azure
 [accelerator_docs]: https://azure.github.io/Azure-Landing-Zones/accelerator/ "Accelerator documentation."
 [accelerator_scenarios]: https://azure.github.io/Azure-Landing-Zones/accelerator/startermodules/terraform-platform-landing-zone/scenarios/ "Accelerator supported scenarios."
 [accelerator_user_guide]: https://azure.github.io/Azure-Landing-Zones/accelerator/userguide/ "Accelerator user guide."
+[accelerator_bootstrap]: https://azure.github.io/Azure-Landing-Zones/accelerator/userguide/2_start/ "Accelerator Phase 2 - Bootstrap"
 [alz_pwsh_module]: https://www.powershellgallery.com/packages/ALZ "Azure Landing Zones PowerShell Module."
 [alz_tf_docs]: https://aka.ms/alz/tf "Azure Verified Modules for Platform Landing Zones Terraform docs."
 [alz_tf_getting_started]: https://azure.github.io/Azure-Landing-Zones/terraform/gettingStarted/ "(Advanced) Getting started with Azure Verified Modules for Platform Landing Zones."

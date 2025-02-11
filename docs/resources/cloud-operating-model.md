@@ -21,6 +21,5 @@ The Microsoft Cloud Adoption Framework for Azure, is designed to help you unders
 
 For an approach that's similar to the COM, begin with one of the following:
 
-- [Get started: Accelerate migration](../get-started/migrate.md)
 - [Get started: Build and innovate in the cloud](../get-started/innovate.md)
 - [Enable success with a sound operating model](../get-started/enable.md)
