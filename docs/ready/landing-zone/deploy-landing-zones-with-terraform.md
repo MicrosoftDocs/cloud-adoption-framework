@@ -50,6 +50,8 @@ Azure DevOps and GitHub are both supported as source control. If you use another
 
 The bootstrap deploys your DevOps resources (Azure DevOps or GitHub), including repositories, pipelines, and the identities that are required to run the pipelines. Several Azure resources that host the Terraform state file and the supporting compute and networking resources support this.
 
+For more information, see [Phase 2](https://azure.github.io/Azure-Landing-Zones/accelerator/userguide/2_start/) of the user guide.
+
 ### Deploy the platform
 
 After the bootstrap, you have a continuous integration and continuous delivery pipeline that deploys the scenario that you chose. If you select the local filesystem option, you can run `terraform apply` manually.
