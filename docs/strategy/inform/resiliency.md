@@ -66,10 +66,10 @@ Follow these recommendations to inform your cloud adoption strategy of resilienc
 
 - *Perform a risk assessment*: Identify potential threats and vulnerabilities that could affect your cloud infrastructure and use them to build mitigation strategies and inform your resiliency and reliability plans.
 - *Complete a cost-benefit analysis*: Map out and understand how investments in your cloud adoption are aligned with business continuity requirements and SLAs.
-- *Understand shared responsibility*: Ensure that your strategy team includes details about the shared responsibility model in the cloud, including how it affects reliability. For more information, see [Reliability requirements](/azure/reliability/overview#reliability-requirements).
+- *Understand business continuity, high availability, and disaster recovery*: Operationalize these concepts as part of your cloud adoption strategy and to understand downtime and data loss limits for your systems. For more information, see [What are business continuity, high availability, and disaster recovery?](/azure/reliability/concept-business-continuity-high-availability-disaster-recovery).
+- *Understand shared responsibility*: Ensure that your strategy team includes details about the shared responsibility model in the cloud, including how it affects reliability. For more information, see [Shared responsibility for reliability](/azure/reliability/concept-shared-responsibility).
 - *Understand Azure reliability*: Use the [Azure reliability documentation](/azure/reliability/overview) to gain a better understanding of how reliability and resiliency work in Azure.
 - *Understand the reliability capabilities of Azure services*: Review the [Azure service reliability guides](/azure/reliability/overview-reliability-guidance) to inform your adoption strategy about reliability capabilities for specific Azure services.
-- *Understand recovery objectives*: Learn about [recovery time objectives (RTO) and recovery point objectives (RPO)](/azure/reliability/overview#rto-and-rpo-) as part of your cloud adoption strategy to understand downtime and data loss limits for your systems.
 - *Define realistic reliability targets*: Set realistic expectations with your internal stakeholders about reliability, and use contractual agreements to communicate those expectations to customers. See the Azure Well-Architected Framework [Recommendations for defining reliability targets](/azure/well-architected/reliability/metrics).
 
 ## Next step
