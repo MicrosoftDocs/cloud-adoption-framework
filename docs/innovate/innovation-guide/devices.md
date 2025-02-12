@@ -128,37 +128,6 @@ To use location intelligence:
 
 ::: zone-end
 
-## [Spatial experiences](#tab/spatial)
-
-Azure Spatial Anchors enables developers to work with mixed-reality platforms to perceive spaces, designate precise points of interest, and recall those points of interest from supported devices.
-
-**Add context to the real world:** Give your users a better understanding of their data, where they need it, and when they need it by placing and connecting your digital content to physical points of interest.
-
-**Share holograms across devices:** Accelerate decisions and results by bringing 3D to your team and customers on the device of their choice. Spatial Anchors makes it easy for people in the same space to participate in multiuser, mixed-reality applications.
-
-**Engaging experiences:** Connect spatial anchors by creating relationships between them, and deliver a user experience that might include two or more points of interest that a user must interact with to complete a task. Your application can let a user place a virtual artifact in the real world. In an industrial setting, a user could receive contextual information about a machine by pointing a supported device camera at it.
-
-Azure Spatial Anchors is composed of a managed service and client SDKs for supported device platforms.
-
-::: zone target="docs"
-
-### Learn more
-
-- [Azure Spatial Anchors](/azure/spatial-anchors/overview)
-
-::: zone-end
-
-::: zone target="chromeless"
-
-### Action
-
-To use Azure Spatial Anchors:
-
-1. Go to **Spatial Anchors accounts**.
-2. Select **Create Spatial Anchors account**.
-
-::: zone-end
-
 ## [Azure Remote Rendering](#tab/RemoteRender)
 
 Render high-quality interactive 3D content in the cloud and stream it to your devices in real time. Rendering workloads are heavily used for special effects (VFX) in the media and entertainment industry. Rendering is also used in many other industries, such as advertising, retail, oil and gas, and manufacturing.

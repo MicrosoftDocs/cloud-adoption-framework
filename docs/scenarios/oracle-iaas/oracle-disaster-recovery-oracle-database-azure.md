@@ -1,69 +1,177 @@
 ---
-title: Business continuity and disaster recovery considerations for Oracle Database@Azure
+title: Business Continuity and Disaster Recovery for Oracle Database@Azure Using Exadata Database Service
 description: Learn about business continuity and disaster recovery (BCDR) for Oracle Database@Azure and how to build a resilient architecture for your workload environment.
-author: jfaurskov
-ms.author: janfaurs
-ms.date: 08/01/2024
+author: gkayali
+ms.author: guherk
+ms.date: 01/25/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 --- 
 
 # Business continuity and disaster recovery considerations for Oracle Database@Azure
 
-This article expands on considerations and recommendations that are defined in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md).
+This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). It incorporates the [Oracle Maximum Availability Architecture (MAA)](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) principles for Oracle Database@Azure by using Oracle Exadata Database Service.
 
-The first step to building a resilient architecture for your workload environment is to identify the availability requirements for your solution. You need to determine the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failure. The RTO defines the maximum downtime that an application can tolerate after an incident. The RPO specifies the maximum data loss that an application can tolerate because of a disaster. After you determine your solution’s requirements, you can design your architecture to meet your RTO and RPO.
+The first step to building a resilient architecture for your Oracle databases that run on Oracle Database@Azure is to identify the availability requirements for the solution. It's crucial to establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including planned and unplanned events. The RTO defines the maximum downtime that an application or business can tolerate after a disruption. The RPO specifies the maximum duration of data loss that an application or business can tolerate. You should address this prerequisite before you start your BCDR design. After you establish the requirements of your solution, you can design your Oracle Database@Azure environment to align with your RTO and RPO.
+
+For more information, see the Microsoft Azure Well-Architected Framework's guidelines about how to [design a DR strategy](/azure/well-architected/reliability/disaster-recovery).
 
 ## Design considerations
 
-- Colocate Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure in Azure datacenters and place the datacenters in one Azure availability zone. Availability zones are specific to a subscription. For example, availability zone 1 in a subscription might not represent the same physical datacenter as availability zone 1 in a different subscription. For more information, see [What are availability zones](/azure/reliability/availability-zones-overview#physical-and-logical-availability-zones).
+- The Oracle Exadata Database@Azure service is available in two different availability zones within a region. This availability helps ensure service reliability and DR. To verify the deployment location of your Oracle Exadata Database@Azure, check your virtual machine (VM) cluster in the Azure portal.
 
-- The Oracle Database@Azure solution provides native Oracle technologies, such as Real Application Clusters (RAC) and automated Data Guard, for high availability and DR.
+- Oracle Exadata Database@Azure and its core components are limited to the availability zone in which you create the instance. The service doesn't cover multiple zones or span multiple regions. To achieve multiple-zone or multiregional resiliency, you can deploy new Oracle Exadata Database@Azure instances to target availability zones or regions.
 
-- The solution includes an automated Data Guard configuration for the initial standby database, also known as the _first secondary_. You must manually configure any extra Data Guard replicas.
+- Oracle Exadata Database@Azure provides native Oracle technologies, such as Oracle Real Application Clusters for high availability (HA) and Oracle Data Guard for DR. Data Guard and Active Data Guard are supported for DR architecture.
 
-- For active-active environments, consider using [Oracle GoldenGate](https://www.oracle.com/integration/goldengate/) for real-time data integration and replication capabilities. This approach helps ensure high availability and data consistency across your systems. This tool supports a wide range of databases and platforms so that you can seamlessly move and transform data. Use Oracle GoldenGate to minimize downtime during migrations and upgrades, which enhances your DR strategies. Oracle GoldenGate isn't included in the solution, so you might incur licensing costs.
+- Oracle Exadata Database@Azure provides HA against database instance and hardware-level failures by default. This architecture aligns with the [MAA silver level](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-91572193-DF8E-4D7A-AF65-7A803B89E840). Planned maintenance operations can be conducted in a rolling manner. However, a default single-zone architecture has zero fault tolerance against site or regional failures.
 
-- The Oracle Database@Azure solution and its core components are limited to the subscription and region in which you create the instance. The service isn't multi-zonal and doesn't span multiple regions. To achieve multi-zonal or multi-regional resiliency, you can deploy new instances to target availability zones or target regions.
+- The solution provides automated Data Guard configuration for DR. This setup helps protect from site failures by requiring another Oracle Exadata Database@Azure deployment in a different availability zone or region.
 
-- Oracle Database@Azure uses redundant Oracle Cloud Infrastructure (OCI) Object Storage to integrate automatic database backups. Oracle Database Autonomous Recovery Service provides protection for Oracle databases that you deploy on Exadata.
+- Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. By default, the primary route for this connectivity is through Azure. 
+
+- The three backup options available for Oracle Exadata Database@Azure are:
+
+  - **OCI-managed backup:** This option includes two integrated solutions, which are Oracle Database Autonomous Recovery Service and Oracle Cloud Infrastructure Object Storage. These solutions are managed via the OCI console.
+
+    Autonomous Recovery Service is designed for enterprise-level mission-critical workloads that have stringent RTO and RPO requirements. It provides availability through service-level agreements. For more information, see [Oracle platform as a service and infrastructure as a service public cloud services pillar document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf).
+
+    OCI Object Storage is a general-purpose backup solution that's suitable for workloads that have less stringent RTO or RPO requirements.
+
+    These solutions enable automatic scheduling and management of database backups with a predefined retention period. For more information, see [Manage database backup and recovery on Exadata Database Service on Oracle dedicated infrastructure](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-managing-db-backup-and-recovery.html).
+
+  - **Self-managed backup:** You can configure Oracle Exadata Database@Azure to stream database backups to Azure Storage services, including Azure Blob Storage, Azure Files (via private endpoints), and Azure NetApp Files.
+
+    This option requires manual configuration and ongoing maintenance.
+  
+    Using private endpoints with Oracle Database@Azure requires an intermediate hop through a routing device such as a network virtual appliance (NVA). This appliance can be a hub NVA such as Azure Firewall or a non-Microsoft NVA. For nonproduction environments, it can be a dedicated VM that's used for IP address forwarding like in [Deploy a local NVA](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101). For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan).
+
+  - **Non-Microsoft backup solutions:** You can use non-Microsoft backup solutions that are available in Azure Marketplace, such as [Commvault](https://documentation.commvault.com/2024e/essential/oracle_database_at_azure.html), to manage and store database backups.
 
 ## Design recommendations
 
-Consider these BCDR considerations for Oracle Database@Azure.
+To build a resilient architecture that's tailored to your specific requirements, consider the following BCDR recommendations for Oracle Exadata Database@Azure.
 
-### Cross-availability zone BCDR
+You should configure at least two Oracle Exadata Database@Azure instances with Data Guard to help protect against single-site failures. This setup aligns with the [MAA gold standard](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-7A38AFBF-0184-46EA-ACB1-1188BBAA2B67).
 
-To ensure high availability and DR protection against failures of databases, database clusters, or availability zones, use Oracle RAC on Oracle Database@Azure and a symmetric standby database that's located in another zone. This configuration can help you achieve datacenter resiliency for database services.
+### Multiple-zone BCDR
 
-For optimal performance, place application services that are dependent on the database in the same availability zone as the database. If the application services are in a different subscription than the database services, you should apply the [appropriate code](/azure/reliability/availability-zones-overview#physical-and-logical-availability-zones). Use the `availabilityZoneMappings` property to identify the physical availability zone where you should colocate your services.
+The multiple-zone BCDR architecture is recommended for customers who require a zero or near-zero RPO with multiple-zone redundancy while meeting single-region data residency requirements.
 
-- You can configure Data Guard in Maximum Availability mode with SYNC transport or Max Performance mode with ASYNC transport according to your application services and RPO requirements.
+This solution includes a secondary Oracle Exadata Database@Azure deployment in a different availability zone within the same region. To ensure resilience against database, cluster, or availability zone failures, implement a standby database located in the secondary instance. This setup provides protection against site-level failures.  
 
-  - We recommend that you use Maximum Availability mode (SYNC) for environments where data integrity and zero data loss are the most important factors.
+:::image type="content" source="./media/cross-availability-zones.svg" alt-text="Diagram that shows a multiple-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
 
-  - We recommend that you use Maximum Performance mode (ASYNC) for environments where performance is critical, and the environment can tolerate some data loss.
+- **Data Guard redo transport mode:** Configure Data Guard redo transport mode according to your application services and RPO requirements:
 
-### Cross-region BCDR
-
-- Configure Data Guard in Maximum Performance mode for regional BCDR based on your application capabilities and network latency between regions. For more information, see [Azure network latency test results](/azure/networking/azure-network-latency).
-
-- The combination of cross-availability zone and cross-region BCDR operations aligns with the _Gold_ level of the [Oracle Maximum Availability Architecture reference architectures](https://docs.oracle.com/en/database/oracle/oracle-database/19/haiad/). The Gold level architecture provides protection from a complete regional failure.
-
-- Cross-availability zone and cross-region BCDR recommendations focus on resiliency for the Oracle Database@Azure service. To help ensure resiliency for your application services, you can use Azure Virtual Machine Scale Sets, Azure Site Recovery, Azure Front Door, or other features or services that enable application service availability across availability zones or regions.
-
-- We recommend that you use managed backups and store backup data in OCI Object Storage.
-
-## Other considerations
-
-- Use infrastructure as code (IaC) to deploy the initial Oracle Database@Azure instance and virtual machine clusters.
-
-- Use IaC to deploy databases in OCI. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
+  - **Data integrity and zero data loss:** When data integrity and zero data loss are the highest priorities, use Maximum Availability Mode (SYNC). This mode synchronously replicates data to the standby database, which ensures that no data is lost.
   
-- Use test failover and switchback operations to help ensure that they work in a real disaster scenario. Automate failover and switchback operations when possible to minimize errors.
+  - **System performance:** When system performance is critical and a small degree of data loss is acceptable, use Maximum Performance Mode (ASYNC). This mode uses asynchronous replication, which results in an RPO that's slightly greater than zero (or is near zero).
 
-## Next steps
+- **Maintain a symmetric standby instance:** You should maintain a symmetric standby instance with resources equivalent to the primary database to ensure consistent performance during switchover and failover operations. Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach might add extra time for scaling operations and their reflection at the database level.
 
-- [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
-- [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)
-- [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
+- **Automate failover operations:** Use [Oracle Data Guard Fast-Start Failover](https://www.oracle.com/technical-resources/articles/smiley-fsfo.html) to automate failover operation to minimize RTO and reduce errors.
+
+  > [!NOTE]
+  > Fast-Start Failover isn't a managed service and requires manual configuration.
+
+    For this setup, extra VMs that run Oracle Data Guard Observers are required to enable Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, which automates the failover process.
+
+  :::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of the Fast-Start Failover architecture for Oracle Database@Azure Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
+
+  If you require a symmetrical DR architecture if there's a failover, you should position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
+
+### Multiregional BCDR
+
+- For a multiregional BCDR strategy, implement a secondary Oracle Exadata Database@Azure deployment with a standby database located in a different region where the service is available. This setup provides protection against full regional outages.
+
+- Configure Data Guard to replicate asynchronously for regional DR that's based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network round-trip latency statistics](/azure/networking/azure-network-latency).
+
+  > [!NOTE]
+  > Automated Data Guard only allows the Maximum Performance Mode (ASYNC) configuration for cross-region deployments.
+
+:::image type="content" source="./media/gold-cross-region.svg" alt-text="A diagram of multiregional BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/gold-cross-region.svg" border="false":::
+
+- Multiple-zone and multiregional BCDR recommendations focus on database service resiliency. To help ensure overall workload resiliency, consider using Azure services and features such as Azure Virtual Machine Scale Sets, Azure Site Recovery, and Azure Front Door to design robust architecture across availability zones or regions.
+
+### Extended BCDR scenarios
+
+#### Local and remote standby databases
+
+To address requirements for robust service availability and resilience against regional outages, we recommend that you implement multiple standby databases for mission-critical workloads.
+
+A local standby database on an Oracle Exadata Database@Azure deployment resides in a different availability zone within the same region. This setup provides a viable solution for latency-sensitive applications by addressing zero data loss failover requirements through SYNC Data Guard replication. This strategy helps ensure service availability without affecting application throughput or overall response time.
+
+A remote standby database on an Oracle Exadata Database@Azure instance that's located in a different region addresses regional DR requirements.
+
+:::image type="content" source="./media/local-standby.svg" alt-text="A diagram of local and remote standby BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/local-standby.svg" border="false":::
+
+This architecture is ideal for mission-critical workloads and requires a minimum of three Oracle Exadata Database@Azure deployments.
+
+> [!NOTE]
+> If a symmetrical configuration is required because of a failover scenario, place an extra standby database on Oracle Exadata Database@Azure in the secondary region, within a different availability zone. 
+>
+
+#### Data Guard Far Sync architecture
+
+You can meet the requirement to implement zero data loss replication at any distance by using the Data Guard Far Sync configuration. This approach includes placing a [far sync instance](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/creating-oracle-data-guard-far-sync-instance.html) closer to the primary Oracle Exadata Database@Azure deployment, essentially in another availability zone within the same region, to synchronously send the redo logs. The far sync instance then transfers these logs asynchronously to the standby database that runs in the secondary Oracle Exadata Database@Azure deployment in another region. This setup effectively results in zero data loss replication between regions.
+
+:::image type="content" source="./media/far-sync.svg" alt-text="A diagram of Far Sync BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/far-sync.svg" border="false":::
+
+If you look for a symmetrical DR architecture if there's a failover, place a far sync instance in a separate availability zone where the secondary Oracle Exadata Database@Azure deployment is configured.
+
+> [!NOTE]
+> The Far Sync architecture requires an Active Data Guard license and must be manually configured.
+
+### Backup recommendations
+
+If you plan to use backups as your only solution for BCDR requirements, keep in mind that RTO is higher compared to replication scenarios because it's based on database size and the backup methods that you use.
+
+- **Back up data within Azure:** To meet organizational requirements that mandate data and backups remain in Azure, consider the following solutions:
+
+  - **Use Autonomous Recovery Service (ARS) in Azure:** During backup policy configuration, choose to [store backup data in the same cloud provider as the database](https://docs.oracle.com/en/cloud/paas/recovery-service/dbrsu/azure-multicloud-recoveryservice.html) to use the ARS in Azure.
+  
+  - **Use Storage services:** Use Storage services like Blob Storage, Azure Files, and Azure NetApp Files to mount storage as network file system (NFS) points on the database server and stream Oracle Recovery Manager (RMAN) backups to Storage.
+
+- **Long-term backup retention:** If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Azure Storage.
+
+- **Storage backup configurations:** When backups are configured to Storage services, consider the following recommendations:
+
+  - **Schedule with cron jobs:** Use cron jobs at the database-node level to schedule backups at specific times based on your backup strategy.
+  
+  - **Replicate backups:** Use underlying storage replication features from Azure like zone-redundant storage and geo-redundant storage to replicate backups.
+
+- **Back up and restore operations:** Manually back up Oracle Exadata Database@Azure VMs to restore critical files if there are accidental deletions or corruptions. For more information, see [Oracle Exadata Cloud Compute node backup and restore operations (document ID 2809393.1)](https://support.oracle.com/knowledge/Oracle%20Cloud/2809393_1.html).  
+
+## Other recommendations
+
+- **Keep data within Azure:** If it's necessary to keep data exclusively within Azure, route Data Guard traffic through the Azure network and configure backups to stay in Azure.
+
+- **Test DR:** Test failover and switchover operations to help ensure that they work in a real disaster scenario.
+
+  - Use [Oracle Fast-Start Failover](https://www.oracle.com/technical-resources/articles/smiley-fsfo.html) to automate failover operations when possible to minimize errors.
+  
+  - Use [Oracle Application Continuity](https://docs.oracle.com/en/database/oracle/oracle-database/19/racad/ensuring-application-continuity.html#GUID-C1EF6BDA-5F90-448F-A1E2-DC15AD5CFE75) to seamlessly mask the outage at the application layer.
+
+- **Real-time data and replication:** For active-active environments, consider using [Oracle GoldenGate](https://www.oracle.com/integration/goldengate/) for real-time data integration and replication capabilities. It requires application-level awareness to handle conflict resolution effectively.
+
+  > [!NOTE]
+  > GoldenGate isn't included in this solution and might incur extra licensing costs.
+
+- **Minimize interruptions:** To minimize interruptions for your workload, schedule planned maintenance during off-peak hours. When you can, use rolling manner updates to ensure a seamless process.
+
+- **Use infrastructure as code (IaC):** For more reliable infrastructure automation, deploy the initial Oracle Exadata Database@Azure instance and VM clusters by using IaC. For more information about Oracle Database@Azure automation, see [QuickStart Oracle Database@Azure with Terraform or OpenTofu modules](https://docs.oracle.com/en/learn/dbazure-terraform/index.html).
+
+  - Use Azure Verified Modules to deploy Oracle Exadata Database@Azure instances and VM clusters. For more information, see the following resources:
+  
+    - [Oracle Database@Azure - Azure Verified Modules for Oracle Exadata Infrastructure](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudexadatainfrastructure/azurerm/latest)
+
+    - [Oracle Database@Azure - Azure Verified Modules for Oracle Exadata VM Cluster](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudvmcluster/azurerm/latest)
+
+  - Use IaC to deploy databases in the OCI console. You can use IaC to replicate the same deployment to a DR site and minimize the risk of human error.
+
+## Related resources
+
+- [Identity and access management for Oracle Database@Azure](./oracle-iam-odaa.md)
+- [Security guidelines for Oracle Database@Azure](./oracle-security-overview-odaa.md)
+- [Network topology and connectivity for Oracle Database@Azure](./oracle-network-topology-odaa.md)

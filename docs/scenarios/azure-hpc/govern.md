@@ -36,7 +36,7 @@ Ensure the five disciplines of cloud governance are implemented:
 
 For HPC governance examples, organizations in the manufacturing or automotive space often rely on additional compliance and regulation standards like [Trusted Information Security Assessment Exchange (TISAX).](/azure/compliance/offerings/offering-tisax) Following the TISAX standard ensures HPC cloud solutions with strong information security and data protection.
 
-Banking organizations will also have [data security considerations](/azure/architecture/industries/finance/risk-grid-banking-overview#data-security-considerations-for-risk-grid-computing) that include conducting security risk assessments before placing workloads in the cloud. Risk grid computing also follows both Microsoft Azure ExpressRoute and VPN Gateway as the thousands of ingested documents typically live in on-premises locations.
+Banking organizations will also have data security considerations that include conducting security risk assessments before placing workloads in the cloud. Risk grid computing also follows both Microsoft Azure ExpressRoute and VPN Gateway as the thousands of ingested documents typically live in on-premises locations.
 
 
 ## Next steps

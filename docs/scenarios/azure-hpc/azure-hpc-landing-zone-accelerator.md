@@ -31,44 +31,16 @@ The approach to landing zones of the HPC landing zone accelerator provides the f
 - An implementation that includes:
   - A deployable reference capable of creating the environment for your HPC deployment
   - A Microsoft-approved HPC reference implementation to test the deployed environment
+ 
+ ## Design guidelines for energy, manufacturing, and finance
 
-## Design guidelines for energy, manufacturing, and finance
+The architectures of landing zones vary by business sector, in addition to varying by organization. This section lists articles that provide guidelines for creating your landing zone:
 
-The architectures of landing zones vary by business sector, in addition to varying by organization. This section lists articles by sector that provide guidelines for creating your landing zone:
-
-- Energy (Oil and Gas)
-  - [Azure Billing and Microsoft Entra tenants for energy HPC](./energy/azure-billing-active-directory-tenant.md)
-  - [Identity and access management for Azure HPC in energy](./energy/identity-access-management.md)
-  - [Management for Azure HPC in energy](./energy/management.md)
-  - [Network topology and connectivity for Azure HPC in energy](./energy/network-topology-connectivity.md)
-  - [Platform automation and DevOps for Azure HPC in energy](./energy/platform-automation-devops.md)
-  - [Resource organization for HPC in the energy industry](./energy/resource-organization.md)
-  - [Governance for HPC in energy industries](./energy/security-governance-compliance.md)
-  - [Security for Azure HPC in energy](./energy/security.md)
-  - [Compute large-scale HPC application workloads in Azure VMs](./energy/compute.md)
-  - [Storage for HPC energy environments](./energy/storage.md)
-
-- Manufacturing
-  - [Manufacturing HPC Azure billing and Active Directory tenants](./manufacturing/azure-billing-active-directory-tenant.md)
-  - [Azure identity and access management for HPC in manufacturing](./manufacturing/identity-access-management.md)
-  - [Management for HPC in the manufacturing industry](./manufacturing/management.md)
-  - [Manufacturing HPC network topology and connectivity](./manufacturing/network-topology-connectivity.md)
-  - [Platform automation and DevOps for Azure HPC in the manufacturing industry](./manufacturing/platform-automation-devops.md)
-  - [Manufacturing HPC resource organization](./manufacturing/resource-organization.md)
-  - [Azure governance for manufacturing HPC](./manufacturing/security-governance-compliance.md)
-  - [Security for HPC in manufacturing industries](./manufacturing/security.md)
-  - [Manufacturing HPC storage](./manufacturing/storage.md)
-  
-- Finance
-  - [Azure billing offers and Active Directory tenants for finance HPC](./finance/azure-billing-active-directory-tenant.md)
-  - [Finance HPC Azure identity and access management](./finance/identity-access-management.md)
-  - [Management for HPC in the finance sector](./finance/management.md)
-  - [Network topology and connectivity for HPC in the finance sector](./finance/network-topology-connectivity.md)
-  - [Platform automation and DevOps for HPC in the finance sector](./finance/platform-automation-devops.md)
-  - [Resource organization for Azure HPC in the finance sector](./finance/resource-organization.md)
-  - [Governance for finance HPC](./finance/security-governance-compliance.md)
-  - [Security for HPC in the finance sector](./finance/security.md)
-  - [Storage for HPC in the finance sector](./finance/storage.md)
+  - [Identity and access management for Azure HPC](identity-access-management.md)
+  - [Network topology and connectivity for Azure HPC](network-topology-connectivity.md)
+  - [Resource organization for HPC](resource-organization.md)
+  - [Compute large-scale HPC application workloads in Azure VMs](compute.md)
+  - [Storage for HPC environments](storage.md)
 
 ### Design Guidelines for choosing HPC compute for AI workloads
 
@@ -106,4 +78,4 @@ The HPC landing zone accelerator is available on GitHub: [Azure HPC OnDemand Pla
 
 ## Next steps
 
-For considerations and recommendations for your HPC landing zone accelerator architecture, review the critical design areas of the HPC landing zone accelerator in [Azure Identity and Access Management](./energy/identity-access-management.md).
+For considerations and recommendations for your HPC landing zone accelerator architecture, review the critical design areas of the HPC landing zone accelerator in [Azure Identity and Access Management](identity-access-management.md).

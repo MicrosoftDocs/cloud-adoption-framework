@@ -11,10 +11,9 @@ metadata:
   services: cloud-adoption-framework
   author: Zimmergren
   ms.author: tozimmergren
-  ms.date: 04/12/2024
+  ms.date: 02/04/2025
   ms.topic: hub-page
   ms.subservice: caf-general
-  ms.custom: UpdateFrequency3
 # Maximum of 8 items
 
 highlightedContent:
@@ -58,8 +57,6 @@ productDirectory:
       links:
         - url: ./get-started/index.md
           text: Get started
-        - url: ./get-started/migrate.md
-          text: Accelerate migration
         - url: ./get-started/operational-excellence.md
           text: Deliver operational excellence
         - url: ./antipatterns/antipatterns-to-avoid.md
@@ -69,14 +66,16 @@ productDirectory:
     - title: Strategy
       imageSrc: ./_images/icons/strategy.png
       links:
+        - url: ./strategy/index.md
+          text: Overview
+        - url: ./strategy/index.md#cloud-adoption-strategy-checklist
+          text: Checklist
         - url: ./strategy/motivations.md
-          text: Motivations
-        - url: ./strategy/business-outcomes/index.md
-          text: Business outcomes
-        - url: ./strategy/financial-considerations/index.md
-          text: Financial considerations
-        - url: ./strategy/technical-considerations/index.md
-          text: Technical considerations
+          text: Determine your motivations
+        - url: ./strategy/mission-objectives.md
+          text: Define your mission and objectives
+        - url: ./strategy/inform/index.md
+          text: Inform your strategy
 
     # Card
     - title: Plan
@@ -238,11 +237,6 @@ additionalContent:
     - title: Find help  # < 60 chars (optional)
       summary: Microsoft has dedicated resources to help unblock your cloud adoption journey.  # < 160 chars (optional)
       items:
-
-        # Card
-        - title: FastTrack for Azure
-          summary: Get support from Microsoft engineers.
-          url: https://azure.microsoft.com/programs/azure-fasttrack/
 
         # Card
         - title: Azure Migrate and Modernize

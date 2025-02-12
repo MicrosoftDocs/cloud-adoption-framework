@@ -16,7 +16,7 @@ As adoption needs grow, so does the need for balance and structure. Watch this v
 
 <!-- markdownlint-disable MD034 -->
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wvTS]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=de4d064d-240a-41b0-a358-e8bae3891140]
 
 <!-- markdownlint-enable MD034 -->
 
@@ -55,7 +55,7 @@ We recommend that you have two teams to create balance across cloud adoption eff
 - **Cloud adoption team:** This team is accountable for technical solutions, business alignment, project management, and operations for solutions that are adopted.
 - **Cloud governance team:** To balance the cloud adoption team, a cloud governance team is dedicated to ensuring excellence in the solutions that are adopted. The cloud governance team is accountable for platform maturity, platform operations, governance, and automation.
 
-This proven approach is considered an MVP because it might not be sustainable. Each team is wearing many hats, as outlined in the [responsible, accountable, consulted, informed (RACI) charts](./raci-alignment.md).
+This proven approach is considered an MVP because it might not be sustainable. Each team is wearing many hats, as outlined in the [responsible, accountable, consulted, informed (RACI) charts](../organize/raci-alignment.md).
 
 The following sections describe a fully staffed, proven organizational structure, along with approaches to aligning the appropriate structure to your organization.
 
@@ -95,7 +95,7 @@ The primary difference between this structure and the central IT team structure 
 
 ## Next steps
 
-After aligning to a certain stage of organizational structure maturity, you can use [RACI charts](./raci-alignment.md) to align accountability and responsibility across each team.
+After aligning to a certain stage of organizational structure maturity, you can use [RACI charts](../organize/raci-alignment.md) to align accountability and responsibility across each team.
 
 > [!div class="nextstepaction"]
-> [Align the appropriate RACI chart](./raci-alignment.md)
+> [Align the appropriate RACI chart](../organize/raci-alignment.md)

@@ -30,7 +30,7 @@ items:
           href: eslz-network-considerations-cross-region.md   
         - name: Limiting cross tenant endpoint connections
           href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
-      - name: Resource organization
+      - name: Resource organization considerations for Azure Virtual Desktop
         href: ./eslz-resource-organization.md
       - name: Governance and security disciplines
         href: ./eslz-security-governance-and-compliance.md

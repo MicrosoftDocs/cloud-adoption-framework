@@ -17,7 +17,7 @@ Learn how to enable server management services on a single VM for evaluation.
 
 It's simple to onboard Azure server management services to individual virtual machines in the Azure portal. You can familiarize yourself with these services before you onboard them. When you select a VM instance, all the solutions on the list of [management tools and services](./tools-services.md) appear on the **Operations** or **Monitoring** menu. You select a solution and follow the wizard to onboard it.
 
-![Screenshot of virtual machine settings in the Azure portal](./media/onboarding-single-vm.png)
+:::image type="content" source="./media/onboarding-single-vm.png" alt-text="Screenshot of virtual machine settings in the Azure portal." lightbox="./media/onboarding-single-vm.png":::
 
 ## Related resources
 

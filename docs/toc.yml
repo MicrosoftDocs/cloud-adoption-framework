@@ -58,8 +58,6 @@ items:
 
       - name: Accelerate adoption
         items:
-        - name: Accelerate migration
-          href: get-started/migrate.md
         - name: Build new products and services
           href: get-started/innovate.md
         - name: Unblock environment design and configuration
@@ -85,80 +83,31 @@ items:
     items:
     - name: Overview
       href: strategy/index.md
-    - name: Assess cloud adoption strategy
-      href: strategy/cloud-adoption-strategy-evaluator.md
-    - name: Motivations
+    - name: Assess your cloud adoption strategy
+      href: strategy/assessment.md
+    - name: Determine your motivations
       href: strategy/motivations.md
-    - name: Business outcomes
+    - name: Define your mission and objectives
+      href: strategy/mission-objectives.md
+    - name: Define your strategy team
+      href: strategy/define-your-team.md
+    - name: Prepare your organization
+      href: strategy/prepare-organizational-alignment.md
+    - name: Inform your strategy
       items:
-      - name: Overview
-        href: strategy/business-outcomes/index.md
-      - name: Data innovation
-        href: strategy/business-outcomes/data-innovations.md
-      - name: Data democratization
-        href: strategy/business-outcomes/data-democratization.md
-      - name: Fiscal outcomes
-        href: strategy/business-outcomes/fiscal-outcomes.md
-      - name: Agility outcomes
-        href: strategy/business-outcomes/agility-outcomes.md
-      - name: Global reach outcomes
-        href: strategy/business-outcomes/reach-outcomes.md
-      - name: Customer engagement outcomes
-        href: strategy/business-outcomes/engagement-outcomes.md
-      - name: Performance outcomes
-        href: strategy/business-outcomes/performance-outcomes.md
-      - name: Sustainability outcomes
-        href: strategy/business-outcomes/sustainability.md
-      - name: Business outcome template
-        href: strategy/business-outcomes/business-outcome-template.md
-      - name: Align technical efforts to outcome metrics
-        href: strategy/learning-metrics.md
-      - name: Objectives and key results
-        href: strategy/business-outcomes/okr.md
-    - name: Financial considerations
-      items:
-      - name: Overview
-        href: strategy/financial-considerations/index.md
-      - name: Common finance vocabulary terms
-        href: strategy/finance-vocabulary-terms.md
-      - name: Understand cloud accounting
-        href: strategy/cloud-accounting.md
-    - name: Technical considerations
-      items:
-      - name: Overview
-        href: strategy/technical-considerations/index.md
-      - name: Achieve more with your investment
-        href: strategy/achieve-more.md
-      - name: Align your partner strategy
-        href: strategy/partner-alignment.md
-    - name: Build a digital transformation timeline
-      href: strategy/digital-transformation-timeline.md
-    - name: Create a business case
-      href: strategy/cloud-migration-business-case.md
-    - name: Building your devops practice
-      href: strategy/building-devops-practice.md
-    - name: Share your strategy
-      href: strategy/share-your-strategy.md
-    - name: Additional considerations
-      items:
-      - name: Balance competing priorities
-        href: strategy/balance-competing-priorities.md
-      - name: Balance the portfolio
-        href: strategy/balance-the-portfolio.md
-      - name: Global markets
-        href: strategy/global-markets.md
-      - name: Define a sovereignty strategy
-        href: strategy/define-sovereignty-strategy.md
-      - name: Define security strategy
-        href: strategy/define-security-strategy.md
-      - name: Adopt responsible and trusted AI principles
-        href: strategy/responsible-ai.md
-      - name: Accelerate cloud adoption with GitHub
-        href: scenarios/github-velocity/index.md
-    - name: Skills relevant to strategy
-      href: strategy/suggested-skills.md
-    - name: Strategy antipatterns
-      href: antipatterns/strategy-antipatterns.md
+        - name: Overview
+          href: strategy/inform/index.md
+        - name: Financial efficiency
+          href: strategy/inform/financial-efficiency.md
+        - name: AI
+          href: strategy/inform/ai.md
+        - name: Resiliency
+          href: strategy/inform/resiliency.md
+        - name: Security
+          href: strategy/inform/security.md
+        - name: Sustainability
+          href: strategy/inform/sustainability.md
+
   - name: Plan
     items:
     - name: Overview
@@ -372,18 +321,18 @@ items:
                 href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
               - name: Plan for landing zone network segmentation
                 href: ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md
+              - name: Use Azure Bastion for virtual machine remote access
+                href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
               - name: Define network encryption requirements
                 href: ready/azure-best-practices/define-network-encryption-requirements.md
               - name: Plan for traffic inspection
                 href: ready/azure-best-practices/plan-for-traffic-inspection.md
-            - name: Resources
+            - name: DNS
               items:
               - name: Private Link and DNS integration at scale
                 href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
               - name: DNS for on-premises and Azure resources
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
-              - name: Plan for virtual machine remote access
-                href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
             - name: Azure Virtual Network Manager in Azure landing zones
               href: ready/azure-best-practices/azure-virtual-network-manager.md
 

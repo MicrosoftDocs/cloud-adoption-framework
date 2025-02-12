@@ -1,6 +1,21 @@
 {
    "redirections": [
       {
+         "source_path": "docs/scenarios/azure-hpc/energy/azure-billing-active-directory-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/azure-billing-active-directory-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/azure-billing-active-directory-tenant.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/manage/hybrid/server/best-practices/arc-vm-extension-mma.md",
          "redirect_url": "/azure/azure-arc/servers/manage-vm-extensions-template",
          "redirect_document_id": false
@@ -282,7 +297,7 @@
       },
       {
          "source_path": "docs/infrastructure/virtual-machines/basic-workload.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
          "redirect_document_id": false
       },
       {
@@ -422,8 +437,8 @@
       },
       {
          "source_path": "docs/getting-started/migrate.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
-         "redirect_document_id": true
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md",
@@ -957,7 +972,7 @@
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/governance-complaince-oracle-landing-zone.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
           "redirect_document_id": false
       },
       {
@@ -2077,12 +2092,12 @@
       },
       {
          "source_path": "docs/innovate/best-practices/trusted-ai.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/innovate/best-practices/predict.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/responsible-ai",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
          "redirect_document_id": false
       },
       {
@@ -2231,6 +2246,21 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/azure-hpc/energy/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/storage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/storage",
+         "redirect_document_id": false
+      },
+      {   
          "source_path": "docs/secure/security-best-practices-introduction.md",
          "redirect_url": "/security/zero-trust/deploy/infrastructure",
          "redirect_document_id": false
@@ -2288,6 +2318,166 @@
       {
          "source_path": "docs/get-started/org-alignment.md",
          "redirect_url": "/azure/cloud-adoption-framework/organize",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/cloud-adoption-strategy-evaluator.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/assessment",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/responsible-ai.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/ai",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/sustainability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/sustainability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/achieve-more.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/balance-competing-priorities.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/balance-the-portfolio.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/building-devops-practice.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/agility-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/business-outcome-template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/data-democratization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/data-innovations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/engagement-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/fiscal-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/okr.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/mission-objectives",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/performance-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/business-outcomes/reach-outcomes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/cloud-accounting.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/cloud-migration-business-case.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/mission-objectives",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/communication.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/digital-transformation-timeline.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/finance-vocabulary-terms.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/financial-considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/global-markets.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/learning-metrics.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/technical-considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/define-security-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/security",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/define-sovereignty-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/resiliency",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/partner-alignment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/share-your-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/team/cloud-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/define-your-team",
          "redirect_document_id": false
       },
       {
@@ -2354,6 +2544,121 @@
          "source_path": "docs/organize/cloud-security.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/teams-roles",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/platform-automation-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/platform-automation-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {   
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/platform-automation-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/security-governance-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/security-governance-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/security-governance-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/energy/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/finance/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/azure-hpc/manufacturing/compute.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/compute",
+         "redirect_document_id": false
+      },
+     {
+         "source_path": "docs/scenarios/oracle-iaas/enterprise-enrollment-oracle.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
+         "redirect_document_id": false
+       },
+       {
+         "source_path": "docs/antipatterns/govern-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/strategy-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/migrate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }      
    ]
 }
