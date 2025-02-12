@@ -42,7 +42,7 @@ The following articles provide guidelines for creating your Azure VMware Solutio
 
 The following architecture diagram is an example that shows design areas and best practices.
 
-[![Azure VMware Solution landing zone accelerator architecture](./media/azure-vmware-eslz-architecture.png)](./media/azure-vmware-eslz-architecture.png#lightbox)
+:::image type="content" source="./media/enterprise-scale-architecture-azure-vmware-solution.svg" alt-text="Diagram that shows the Azure VMware Solution landing zone accelerator architecture." lightbox="./media/enterprise-scale-architecture-azure-vmware-solution.svg" border="false":::
 
 ## Deploy Azure VMware Solution resources and dependent services
 
