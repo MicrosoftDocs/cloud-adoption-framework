@@ -11,7 +11,7 @@ ms.custom: e2e-oracle
 
 # Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator
 
-This article describes how to successfully manage and monitor Oracle on Azure Virtual Machines landing zone accelerator. This enterprise-scale scenario outlines important recommendations for the design of your environment. For more information, see [Azure enterprise-scale landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
+This article describes how to successfully manage and monitor Oracle on Azure Virtual Machines landing zone accelerator. This enterprise-scale scenario outlines important recommendations for the design of your environment. For more information, see [Management for Azure environments](../../ready/landing-zone/design-area/management.md).
 
 This article describes key design considerations and best practices for how to manage your Oracle workload deployments on Virtual Machines landing zone accelerator. Because Oracle is a mission-critical and high-performance workload, you should include the guidance on the Azure landing zone design areas in your planning. To ensure the health of your mission-critical workloads, it's crucial to monitor Oracle workloads on Virtual Machines for failures and abnormalities.
 
@@ -38,7 +38,9 @@ The first step is to set up general VM and managed disk monitoring.
     Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative input/output operations per second (IOPS) and throughput of data disks when disk striping technologies are used, such as Oracle Automatic Storage Management or Linux Logical Volume Manager.
 
     > [!NOTE]
-    > You can choose Non-Volatile Memory Express (NVMe)-based storage when required by your workload. NVMe is a high-performance storage protocol designed for flash storage, which provides low latency and high throughput. For most workloads that use an Oracle Database that's hosted on a compute node with NVMe storage, a block size of 128k is recommended. The block size refers to the amount of data that's read or written in a single input output (I/O) operation. It plays a crucial role in how to determine storage performance, throughput, and latency. Keep in mind that the maximum throughput you can configure depends on the data size and disk type that you provision.
+    > You can choose Non-Volatile Memory Express (NVMe)-based storage when required by your workload. NVMe is a high-performance storage protocol designed for flash storage, which provides low latency and high throughput. For most workloads that use an Oracle Database that's hosted on a compute node with NVMe storage, a block size of 128k is recommended.
+    >
+    > The block size refers to the amount of data that's read or written in a single input output (I/O) operation. It plays a crucial role in how to determine storage performance, throughput, and latency. Keep in mind that the maximum throughput you can configure depends on the data size and disk type that you provision.
 
 ### Azure VM and managed disk metrics
 
@@ -70,7 +72,7 @@ The following table lists the performance metrics that Oracle administrator shou
 | Data disk writes bytes > 75                     | 75 (2)                |
 
 > [!NOTE]
-> In the Severity category, '0' has the highest severity and '2' has a lower severity.
+> In the **Severity** category, **0** has the highest severity and **2** has a lower severity.
 
 When you monitor disk metrics, it's important to ensure that you don't exceed the database VM limits. The specific limits for managed disks are detailed in the technical specifications for each VM SKU. For more information, see [Sizes for VMs in Azure](/azure/virtual-machines/sizes).
 
@@ -88,7 +90,7 @@ When you monitor Azure NetApp File metrics, it's also important to monitor the V
 
 Alerts in Azure Monitor can help identify unhealthy resources. When you create a new VM, you can enable a set of recommended alert rules for common metrics. This initial set includes metrics such as CPU percentage and available memory. For more information, see [Enable recommended alert rules for VMs](/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). You can also configure [advanced metric alert rules](/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you require situational monitoring.
 
-Consider using [Azure Monitor baseline alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/Overview/ALZ-Pattern/), which serves as a best practice collection of alerts for resources commonly deployed in Azure landing zones.
+Consider using [Azure Monitor Baseline Alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/Overview/ALZ-Pattern/), which serves as a best practice collection of alerts for resources commonly deployed in Azure landing zones.
 
 You should monitor managed disk-related metrics. If thresholds are exceeded, you should issue an alert.  
   
@@ -98,17 +100,17 @@ You should monitor managed disk-related metrics. If thresholds are exceeded, you
 
 |Azure Services |Description |URL |
 |:---|:---|:---|
-|Azure Virtual Network|Oracle database on Virtual Machines landing zone accelerator uses Virtual Network for availability set, availability zone, high availability, and business continuity and disaster recovery (BCDR) by using Oracle Data Guard and Golden Gate.| [Virtual Network overview](/azure/virtual-network/virtual-networks-overview) <br> [Monitoring Azure virtual network data reference](/azure/virtual-network/monitor-virtual-network-reference).
-|Azure Backup|Monitor Azure Backup and set an alert.| [Monitor at scale by using Azure monitor](/azure/backup/backup-azure-monitoring-use-azuremonitor) <br> Monitor the Oracle database alert log file on the database VM for lines that start with the following format:<br> status – AzBackup – script – version: message <br> - where: status = “INFO”, “WARN”, or “FAIL” <br> - AzBackup (boilerplate text) <br> - script = “pre-script" or “post-script" <br> - version = version number in decimal format <br> message = free-format text <br>Example: INFO - AzBackup pre-script v1.02: BEGIN BACKUP |
-|Oracle database on a VM|Database alert log file, OS console messages file.| - The database alert log file is typically located in the subdirectory `$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace` on the database VM. <br><br> - OS console logs are located at `/var/log/messages`. |
+|Azure Virtual Network|Oracle database on Virtual Machines landing zone accelerator uses Virtual Network for availability set, availability zone, high availability, and business continuity and disaster recovery (BCDR) by using Oracle Data Guard and Golden Gate.| - [Virtual Network overview](/azure/virtual-network/virtual-networks-overview) <br><br> - [Monitoring Azure virtual network data reference](/azure/virtual-network/monitor-virtual-network-reference).
+|Azure Backup|Monitor Azure Backup and set an alert. Monitor the Oracle database alert log file on the database VM for lines that start with the following format:<br> status – AzBackup – script – version: message <br> - where: status = “INFO”, “WARN”, or “FAIL” <br> - AzBackup (boilerplate text) <br> - script = “pre-script" or “post-script" <br> - version = version number in decimal format <br> message = free-format text <br>Example: INFO - AzBackup pre-script v1.02: BEGIN BACKUP | [Monitor at scale by using Azure monitor](/azure/backup/backup-azure-monitoring-use-azuremonitor) |
+|Oracle database on a VM|Database alert log file and the OS console messages file.| - The database alert log file is typically located in the subdirectory `$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace` on the database VM. <br><br> - OS console logs are located at `/var/log/messages`. |
 
 ### Oracle workload monitoring by Oracle Enterprise Manager Cloud Control
 
 Oracle Enterprise Manager is an Oracle integrated enterprise management product. It provides monitoring of events, incidents, and metrics related to target Oracle workloads.
 
-- [Manual](https://docs.oracle.com/en/enterprise-manager/index.html)
-- [Download](https://www.oracle.com/enterprise-manager/downloads/cloud-control-downloads.html)
-- [Download](https://blogs.oracle.com/observability/post/monitoring-best-practices-white-paper-for-enterprise-manager-13c-now-available)
+- [Enterprise Manager Cloud Control](https://docs.oracle.com/en/enterprise-manager/index.html)
+- [Oracle Enterprise Manager downloads](https://www.oracle.com/enterprise-manager/downloads/cloud-control-downloads.html)
+- [Monitoring best practices white paper for Enterprise Manager](https://blogs.oracle.com/observability/post/monitoring-best-practices-white-paper-for-enterprise-manager-13c-now-available)
 
 ### Azure Monitor and alerts
 
@@ -124,7 +126,7 @@ Use Azure Monitor to collect telemetry data and gain insights into the health, p
 
 ## Next steps
 
-- [Strategic effects of Oracle on Azure landing zone accelerator](oracle-landing-zone-strategy.md)  
-- [Plan for Oracle on Azure landing zone accelerator](oracle-landing-zone-plan.md)  
-- [Oracle on Azure landing zone accelerator](introduction-oracle-landing-zone.md)
+- [Strategic impact of Oracle on Azure landing zone accelerator](oracle-landing-zone-strategy.md)  
+- [Plan for Oracle on Azure](oracle-landing-zone-plan.md)  
+- [Introduction to Oracle on Azure adoption scenarios](introduction-oracle-landing-zone.md)
 - [BCDR for Oracle on Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
