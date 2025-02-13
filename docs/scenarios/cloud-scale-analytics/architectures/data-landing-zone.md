@@ -3,7 +3,7 @@ title: Data Landing Zones
 description: Learn about cloud-scale analytics architecture data landing zones in Azure that connect to your data management landing zone via virtual network peering or private endpoints.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/15/2025
+ms.date: 02/14/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -127,7 +127,7 @@ Partner data publishers need to land data in your platform so that your data app
 The data application teams request the storage blobs. These requests get approved by the data landing zone operations team. Data should be deleted from its source storage blob after being ingested into the raw data storage.
 
 > [!IMPORTANT]
-> Since Azure Storage blobs are provisioned on an *as-needed* basis, you should initially deploy an empty storage services resource group in each data landing zone.
+> Because Azure Storage blobs are provisioned on an *as-needed* basis, you should initially deploy an empty storage services resource group in each data landing zone.
 
 ### Data ingestion
 
@@ -140,7 +140,7 @@ Deploy an Azure SQL Database instance to hold metadata that Azure Data Factory u
 - Azure Data Factory metastore credentials.
 - Service principal credentials for your automated ingestion process.
 
-For more information, see [How automated ingestion frameworks support cloud-scale analytics in Azure](../best-practices/automated-ingestion-pattern.md).
+For more information, see [Data agnostic ingestion engine](../best-practices/automated-ingestion-pattern.md).
 
 The following table describes services in this resource group.
 
@@ -175,8 +175,6 @@ Your data application resource group includes all the services required to make 
 
 > [!TIP]
 > If you decide not to implement a data-agnostic engine for single ingestion from operational sources, or if complex connections aren't supported in your data-agnostic engine, develop a source-aligned [data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md).
-
-For more information about how to onboard data products, see [Cloud-scale analytics data applications in Azure](./data-landing-zone-data-products.md).
 
 ## Reporting and visualization
 
