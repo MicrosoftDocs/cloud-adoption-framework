@@ -70,7 +70,6 @@
         "digital-estate/**/*.md": "caf-methodology-plan",
         "get-started/**/*.md": "caf-get-started",
         "govern/**/*.md": "caf-methodology-govern",
-        "industry/retail/**/*.md": "caf-scenario-retail",
         "infrastructure/mainframe-migration/**/*.md": "caf-methodology-adopt",
         "innovate/**/*.md": "caf-methodology-adopt-innovate",
         "manage/**/*.md": "caf-methodology-manage",
