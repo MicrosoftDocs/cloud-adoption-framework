@@ -3,7 +3,7 @@ title: Commit to modernization
 description: Learn how to gain commitment to cloud modernization plan.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 09/07/2022
+ms.date: 02/04/2025
 ms.topic: conceptual
 ms.custom: internal
 keywords: effort, impact, balance, modern, cloud modernization, cloud adoption framework
@@ -15,11 +15,6 @@ Modernization requires commitment. It takes time and money to modernize. Creatin
 
 - *Technical Leads* - Technical leads need to own the modernization roadmap and present it to the business leads for investment.
 - *Business leads* - Business leads should review the modernization roadmap, understand the ROI, and approve the modernization.
-
-For more information, see:
-
-- [Business conversations](../../strategy/business-outcomes/index.md)
-- [Business outcomes template](../../strategy/business-outcomes/business-outcome-template.md)
 
 Here are steps you can follow to prepare for and gain modernization commitment.
 

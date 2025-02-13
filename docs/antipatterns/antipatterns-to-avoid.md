@@ -17,8 +17,6 @@ The following table lists antipatterns and the methodologies, or cloud adoption 
 
 | Methodology | Antipattern | Reference |
 | ------------- |-------------| -----|
-| Strategy | Inadequate motivation | [Antipattern: Adopt the cloud without establishing goals](./strategy-antipatterns.md#antipattern-adopt-the-cloud-without-establishing-goals) |
-| Strategy | Misaligned motivation | [Antipattern: Fail to communicate motivations](./strategy-antipatterns.md#antipattern-fail-to-communicate-motivations) |
 | Plan | Wrong cloud operating model | [Antipattern: Choose the wrong cloud operating model](./plan-antipatterns.md#antipattern-choose-the-wrong-cloud-operating-model) |
 | Plan | Wrong service model | [Antipattern: Choose the wrong service model](./plan-antipatterns.md#antipattern-choose-the-wrong-service-model) |
 | Plan | Replacement instead of modernization | [Antipattern: Replace architecture](./plan-antipatterns.md#antipattern-replace-architecture) |
@@ -36,5 +34,4 @@ The following table lists antipatterns and the methodologies, or cloud adoption 
 
 ## Next steps
 
-- [Cloud strategy antipatterns](./strategy-antipatterns.md)
 - [Cloud adoption plan antipatterns](./plan-antipatterns.md)
