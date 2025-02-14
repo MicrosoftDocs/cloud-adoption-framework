@@ -22,7 +22,7 @@ The following table shows the structure of a typical Azure subscription associat
 | Layer | Required | Resource groups |
 |---|---|---|
 | [Platform services layer](#platform-services) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
-| [Core services](#core-services) | Yes | <ul> <li> [Storage](#storage) </li> <li> [Shared integration runtimes (IRs)](#shared-ir) </li> <li> [Management](#management) </li> <li> [External storage](#external-storage) </li> <li> [Data ingestion](#data-ingestion) </li> <li> [Shared applications](#shared-applications) </li> </ul> |
+| [Core services](#core-services) | Yes | <ul> <li> [Storage](#storage) </li> <li> [Shared integration runtimes (IRs)](#shared-irs) </li> <li> [Management](#management) </li> <li> [External storage](#external-storage) </li> <li> [Data ingestion](#data-ingestion) </li> <li> [Shared applications](#shared-applications) </li> </ul> |
 | [Data application](#data-application) | Optional | <ul> <li> [Data application](#data-application-resource-group) (one or more) </li> </ul> |
 | [Reporting and visualization](#reporting-and-visualization) | Optional | <ul> <li> [Reporting and visualization](#reporting-and-visualization) </li> </ul> |
 
