@@ -4,7 +4,7 @@ description: Learn how to manage and monitor Oracle workloads on Azure Virtual M
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
-ms.date: 02/13/2025
+ms.date: 02/14/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
@@ -100,7 +100,7 @@ You should monitor managed disk-related metrics. If thresholds are exceeded, you
 |:---|:---|:---|
 |Azure Virtual Network|Oracle database on Virtual Machines landing zone accelerator uses Virtual Network for availability set, availability zone, high availability, and business continuity and disaster recovery (BCDR) by using Oracle Data Guard and GoldenGate.| - [Virtual Network overview](/azure/virtual-network/virtual-networks-overview) <br><br> - [Monitoring Azure virtual network data reference](/azure/virtual-network/monitor-virtual-network-reference)
 |Azure Backup|Monitor Backup and set an alert. Monitor the Oracle database alert log file on the database VM for lines that start with the following format: <br><br> `status – AzBackup – script – version: message` <br> Where: <br> - status = "INFO," "WARN," or "FAIL" <br> - AzBackup (boilerplate text) <br> - script = "pre-script" or "post-script"<br> - version = version number in decimal format <br> - message = free-format text <br><br> Example: `INFO - AzBackup pre-script v1.02: BEGIN BACKUP` | [Monitor at scale by using Azure Monitor Logs](/azure/backup/backup-azure-monitoring-use-azuremonitor) |
-|Oracle database on a VM|Database alert log file and the OS console messages file.| - The database alert log file is typically located in the subdirectory `$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace` on the database VM. <br><br> - OS console logs are located at `/var/log/messages`. |
+|Oracle database on a VM|Database alert log file and the OS console messages file. <br><br> - The database alert log file is typically located in the subdirectory `$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace` on the database VM. <br><br> - OS console logs are located at `/var/log/messages`.| [Create an Oracle Database in an Azure VM](/azure/virtual-machines/workloads/oracle/oracle-database-quick-create) |
 
 ### Oracle workload monitoring by Oracle Enterprise Manager Cloud Control
 
