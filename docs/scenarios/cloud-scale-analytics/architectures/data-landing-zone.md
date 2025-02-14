@@ -122,7 +122,7 @@ For more information, see [Azure Pipelines agents](/azure/devops/pipelines/agent
 
 ### External storage
 
-Partner data publishers need to land data in your platform so that your data application teams can pull it into their data lakes. You can also have internal or external data sources that can't support the connectivity or authentication requirements enforced across the rest of the data landing zones. The recommended approach is to use a separate storage account to receive data. Then use a shared integration runtime or similar ingestion process to bring it into your processing pipeline. The following diagram shows how your upload ingest storage resource group lets you provision blob stores for these use cases.
+Partner data publishers need to land data in your platform so that your data application teams can pull it into their data lakes. You can also have internal or external data sources that can't support the connectivity or authentication requirements enforced across the rest of the data landing zones. The recommended approach is to use a separate storage account to receive data. Then use a shared integration runtime or similar ingestion process to bring it into your processing pipeline.
 
 The data application teams request the storage blobs. These requests get approved by the data landing zone operations team. Data should be deleted from its source storage blob after it's ingested into the raw data storage.
 
@@ -148,7 +148,7 @@ The following table describes services in this resource group.
 |---------|----------|------------|
 | Azure Data Factory | Yes | Azure Data Factory is your orchestration engine for data-agnostic ingestion. |
 | Azure SQL Database | Yes | SQL Database is the metastore for Azure Data Factory. |
-| Azure Event Hubs or Azure IoT Hub | Optional | Event Hubs or IoT Hub can provide real-time streaming to Event Hubs, plus batch and streaming processing via an Azure Databricks engineering workspace. |
+| Azure Event Hubs or Azure IoT Hub | Optional | Event Hubs or IoT Hub can provide real-time streaming to event hubs, plus batch and streaming processing via an Azure Databricks engineering workspace. |
 | Azure Databricks | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with your data-agnostic ingestion engine. |
 | Azure Synapse | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with the data-agnostic ingestion engine. |
 
