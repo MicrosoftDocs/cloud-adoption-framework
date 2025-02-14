@@ -93,7 +93,7 @@ Azure Data Factory and Azure Synapse Analytics pipelines use IRs to securely acc
 
 To enable the shared resource group:
 
-- Create at least one Azure Data Factory instance in your data landing zone's shared IR group. Use it only for linking the shared self-hosted IR, not for data pipelines.
+- Create at least one Azure Data Factory instance in your data landing zone's shared integration resource group. Use it only for linking the shared self-hosted IR, not for data pipelines.
 
 - [Create and configure a self-hosted IR](/azure/data-factory/create-self-hosted-integration-runtime) on the VM.
 
