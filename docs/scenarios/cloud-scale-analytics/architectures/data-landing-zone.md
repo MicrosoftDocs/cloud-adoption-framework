@@ -22,7 +22,7 @@ The following table shows the structure of a typical Azure subscription associat
 | Layer | Required | Resource groups |
 |---|---|---|
 | [Platform services layer](#platform-services) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
-| [Core services](#core-services) | Yes | <ul> <li> [Storage](#storage) </li> <li> [Shared integration runtimes](#shared-integration-runtimes) </li> <li> [Management](#management) </li> <li> [External storage](#external-storage) </li> <li> [Data ingestion](#data-ingestion) </li> <li> [Shared applications](#shared-applications) </li> </ul> |
+| [Core services](#core-services) | Yes | <ul> <li> [Storage](#storage) </li> <li> [Shared integration runtimes (IRs)](#shared-integration-runtimes) </li> <li> [Management](#management) </li> <li> [External storage](#external-storage) </li> <li> [Data ingestion](#data-ingestion) </li> <li> [Shared applications](#shared-applications) </li> </ul> |
 | [Data application](#data-application) | Optional | <ul> <li> [Data application](#data-application-resource-group) (one or more) </li> </ul> |
 | [Reporting and visualization](#reporting-and-visualization) | Optional | <ul> <li> [Reporting and visualization](#reporting-and-visualization) </li> </ul> |
 
@@ -64,7 +64,7 @@ The core services layer includes foundational services required to enable your d
 | Resource group | Required | Description |
 |----------------|----------|-------------|
 | `storage-rg` | Yes | Data lake services |
-| `runtimes-rg` | Yes | Shared integration runtimes |
+| `runtimes-rg` | Yes | Shared IRs |
 | `mgmt-rg` | Yes | CI/CD agents |
 | `external-data-rg` | Yes | External data storage |
 | `data-ingestion-rg` | Optional | Shared data ingestion services |
@@ -87,32 +87,32 @@ For more information, see:
 - [Key considerations for Data Lake Storage](../best-practices/data-lake-key-considerations.md)
 - [Access control and data lake configurations in Data Lake Storage](../best-practices/data-lake-access.md)
 
-### Shared integration runtimes
+### Shared IRs
 
-Azure Data Factory and Azure Synapse Analytics pipelines use integration runtimes (IR) to securely access data sources in peered or isolated networks. Shared IRs should be deployed to a virtual machine (VM) or Azure Virtual Machine Scale Sets in the shared IR resource group.
+Azure Data Factory and Azure Synapse Analytics pipelines use IRs to securely access data sources in peered or isolated networks. Shared IRs should be deployed to a virtual machine (VM) or Azure Virtual Machine Scale Sets in the shared IR resource group.
 
 To enable the shared resource group:
 
 - Create at least one Azure Data Factory instance in your data landing zone's shared IR group. Use it only for linking the shared self-hosted IR, not for data pipelines.
 
-- [Create and configure a self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime) on the VM.
+- [Create and configure a self-hosted IR](/azure/data-factory/create-self-hosted-integration-runtime) on the VM.
 
-- Associate the self-hosted integration runtime with Azure data factories in your data landing zones.
+- Associate the self-hosted IR with Azure data factories in your data landing zones.
 
-- Use PowerShell scripts to [periodically update the self-hosted integration runtime](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
+- Use PowerShell scripts to [periodically update the self-hosted IR](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
 
 > [!NOTE]
-> The deployment describes a single VM deployment that has a self-hosted integration runtime. You can associate a self-hosted integration runtime with multiple VMs on-premises or in Azure. These machines are called nodes. You can have up to four nodes associated with a self-hosted integration runtime. The benefits of having multiple nodes include:
+> The deployment describes a single VM deployment that has a self-hosted IR. You can associate a self-hosted IR with multiple VMs on-premises or in Azure. These machines are called nodes. You can have up to four nodes associated with a self-hosted IR. The benefits of having multiple nodes include:
 >
-> - Higher availability of the self-hosted integration runtime so that it's no longer the single point of failure in your data application or in the orchestration of cloud data integration.
+> - Higher availability of the self-hosted IR so that it's no longer the single point of failure in your data application or in the orchestration of cloud data integration.
 >
 > - Improved performance and throughput during data movement between on-premises and cloud data services. For more information, see [Copy activity performance and scalability guide](/azure/data-factory/copy-activity-performance).
 >
-> You can associate multiple nodes by installing the self-hosted integration runtime software from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=39717). Then register it by using either of the authentication keys obtained from the **New-AzDataFactoryV2IntegrationRuntimeKey** cmdlet, as described in the [tutorial](/azure/data-factory/tutorial-hybrid-copy-powershell).
+> You can associate multiple nodes by installing the self-hosted IR software from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=39717). Then register it by using either of the authentication keys obtained from the **New-AzDataFactoryV2IntegrationRuntimeKey** cmdlet, as described in the [tutorial](/azure/data-factory/tutorial-hybrid-copy-powershell).
 >
 > For more information, see [Azure Data Factory high availability and scalability](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
 
-Make sure to deploy shared integration runtimes as close to the data source as possible. You can deploy the integration runtimes in a data landing zone, into non-Microsoft clouds, or into a private cloud if the VM has connectivity to the required data sources.
+Make sure to deploy shared IRs as close to the data source as possible. You can deploy the IRs in a data landing zone, into non-Microsoft clouds, or into a private cloud if the VM has connectivity to the required data sources.
 
 ### Management
 
@@ -122,7 +122,7 @@ For more information, see [Azure Pipelines agents](/azure/devops/pipelines/agent
 
 ### External storage
 
-Partner data publishers need to land data in your platform so that your data application teams can pull it into their data lakes. You can also have internal or external data sources that can't support the connectivity or authentication requirements enforced across the rest of the data landing zones. The recommended approach is to use a separate storage account to receive data. Then use a shared integration runtime or similar ingestion process to bring it into your processing pipeline.
+Partner data publishers need to land data in your platform so that your data application teams can pull it into their data lakes. You can also have internal or external data sources that can't support the connectivity or authentication requirements enforced across the rest of the data landing zones. The recommended approach is to use a separate storage account to receive data. Then use a shared IR or similar ingestion process to bring it into your processing pipeline.
 
 The data application teams request the storage blobs. These requests get approved by the data landing zone operations team. Data should be deleted from its source storage blob after it's ingested into the raw data storage.
 
