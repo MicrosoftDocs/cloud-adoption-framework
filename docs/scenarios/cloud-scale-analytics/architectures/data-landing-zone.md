@@ -31,7 +31,7 @@ The following table shows the structure of a typical Azure subscription associat
 
 ## Data landing zone architecture
 
-The following data landing zone architecture illustrates the layers, their resource groups, and the services that each resource group contains. The architecture provides an overview of all groups and roles associated with your data landing zone and the extent of their access to your control and data planes. The architecture also illustrates how each layer aligns with the Operational Model responsibilities.
+The following data landing zone architecture illustrates the layers, their resource groups, and the services that each resource group contains. The architecture provides an overview of all groups and roles associated with your data landing zone and the extent of their access to your control and data planes. The architecture also illustrates how each layer aligns with the operating model responsibilities.
 
 :::image type="content" source="../images/data-landing-zone.png" alt-text="Diagram of the data landing zone architecture." border="false" lightbox="../images/data-landing-zone.png":::
 
