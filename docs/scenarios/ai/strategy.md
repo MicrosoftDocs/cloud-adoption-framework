@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # AI Strategy - Process to develop an AI strategy
 
-This article outlines the process to prepare your organization for AI adoption. You learn how to select the right AI solutions, prepare your data, and ground your approach in responsible AI principles. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success. As a first step, create an [AI center of excellence](./center-of-excellence.md) (AI CoE) or appoint an AI lead to oversee your AI adoption.
+This article outlines the process to prepare your organization for AI adoption. You learn how to select the right AI solutions, prepare your data, and ground your approach in responsible AI principles. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success.
 
 :::image type="content" source="./images/ai-strategy.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/ai-strategy.svg" border="false":::
 
