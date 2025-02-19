@@ -1,25 +1,25 @@
 ---
 title: Data Management Landing Zone Overview
-description: Gain an overview of data management landing zone in Azure
+description: Learn how to use a data management landing zone to govern your analytics platform, including data governance, lifecycle management, and metadata registration.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/04/2025
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Data management landing zone
 
-A data management landing zone is a management function central to cloud-scale analytics. It's responsible for the governance of your analytics platform.
+A data management landing zone is esential for cloud-scale analytics. It oversees the governance of your entire analytics platform.
 
-:::image type="content" source="../images/data-management-overview.png" alt-text="Diagram of data management landing zone overview." lightbox="../images/data-management-overview.png":::
+:::image type="content" source="../images/data-management-overview.png" alt-text="Diagram of data management landing zone overview." lightbox="../images/data-management-overview.png" border="false":::
 
-Your data management landing zone is a separate subscription that has the same standard Azure landing zone services. It provides data governance of your data through crawlers, which connect to your data lakes and polyglot storage in your data landing zones. Virtual network peering connects your data management landing zone to your data landing zones and connectivity subscription.
+Your data management landing zone is a separate subscription that has the same standard Azure landing zone services. It provides data governance through crawlers, which connect to your data lakes and polyglot storage in your data landing zones. Virtual network peering connects your data management landing zone to your data landing zones and connectivity subscription.
 
 This architecture is a starting point. You can modify it to fit your specific business and technical requirements when you plan your data management landing zone implementation.
 
 > [!NOTE]
-> Polyglot persistence refers to the practice of using multiple data storage or data store technologies to support your data types and their storage needs. Polyglot persistence means that an application can use more than one core database or storage technology.
+> *Polyglot persistence* refers to the practice of using multiple data storage or data store technologies to support your data types and their storage needs. Polyglot persistence means that an application can use more than one core database or storage technology.
 
 > [!IMPORTANT]
 > You must deploy your data management landing zone as a separate subscription under a management group that has the appropriate governance. You can then control governance across your organization. The [Azure landing zone accelerator](../../../ready/landing-zone/index.md) illustrates how you should approach Azure landing zones.
@@ -64,41 +64,42 @@ Manage data quality at the data source to prevent problems from spreading across
 
 Provide data lineage for all data products to improve data quality confidence.
 
-For more information on data quality management, see [Data quality](../../cloud-scale-analytics/govern-data-quality.md).
+For more information about data quality management, see [Data quality](../../cloud-scale-analytics/govern-data-quality.md).
 
 ### Data modeling repository
 
-You should capture and store entity relationship models in a central location within your data management landing zone, providing data consumers a single place to find conceptual diagrams.
+Store entity relationship models centrally within your data management landing zone so that data consumers can easily find conceptual diagrams.
 
-Many customers use [ER Studio](https://erstudio.com/) and [OrbusInfinity](https://www.orbussoftware.com/orbusinfinity) to model their data products before ingestion.
+Use tools like [ER/Studio](https://erstudio.com/) and [OrbusInfinity](https://www.orbussoftware.com/orbusinfinity) to model your data products before ingestion.
 
 ## Service layer
 
-Your organization might decide to create many automation services to augment cloud-scale analytics capabilities. These automation services drive conformity and onboarding solutions for your analytics state.
+Your organization might create several automation services to augment cloud-scale analytics capabilities. These automation services drive conformity and onboarding solutions for your analytics state.
 
-If you decide to build these automation services, you should have a user interface that acts as both a data marketplace and an operation console. This interface should rely on an underlying metadata store such as [Metadata standards](../../cloud-scale-analytics/govern-metadata-standards.md).
+If you build these automation services, you should have a user interface that serves as both a data marketplace and an operation console. This interface should rely on an underlying metadata store, such as [metadata standards](../../cloud-scale-analytics/govern-metadata-standards.md).
 
 Your data marketplace or operations console calls a middle tier of microservices to facilitate onboarding, metadata registration, security provisioning, data lifecycle, and observability.
 
-You can provision the **service layer** resource group to host your metadata store.
+You can provision the service layer resource group to host your metadata store.
 
 > [!IMPORTANT]
-> None of these automation services are products, and they don't illustrate any roadmap item. They are listed to help you consider which items you might want to automate.
+> The following automation services aren't actual products that you can purchase. And they don't represent future releases or updates. Use the following list to help you consider which items to automate.
 
-| Service                        | Service Scope                    |
+| Type of service                        | Service scope                    |
 |--------------------------------|-----------------------------------|
-| Data landing zone provisioning | This service creates a new data landing zone. It's unlikely to have high usage, but is included for end-to-end onboarding solution completeness. For more information, see [Provision the cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md)                                        |
-| Data product onboarding        | This service creates and amends resource groups that pertain to an onboarded tenant. It also contains capabilities to upgrade and downgrade SKUs and to activate and deactivate resource groups for any onboarded tenant or service. It creates a new data landing zone DevOps. For more information, see [Provision the cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md) |
-| Data agnostic ingestion        | This microservice creates new data sources for ingestion into your data landing zones by communicating with an Azure Data Factory SQL Database metastore in each data landing zone. For more information, see [How automated ingestion frameworks support cloud-scale analytics in Azure](../best-practices/automated-ingestion-pattern.md) |
-| Metadata                       | This service exposes and creates metadata for the platform. For more information, see [Metadata standards](../../cloud-scale-analytics/govern-metadata-standards.md) |
-| Access provisioning            | This service creates access packages, access policies, and asset access approval processes (manual or automatic) using SPN/UPN. It can also expose an API to provide a list of subscription requests (assets) that users submitted in the past 90 days. For more information, see [Data access management](../security-provisioning.md)         |
-| Data lifecycle                 | This service is responsible for maintaining your data lifecycle based on metadata. This maintenance can include moving data to cold storage and deleting records that no longer need to be retained. For more information, see [Data lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md)                                                                                              |
-| Data domain onboarding         | ONLY APPLICABLE TO DATA MESH. This service captures metadata pertaining to new domains and onboards the new domains as needed. It can also create, update, activate, and deactivate any domain or service line you might build into a microservice. For more information, see [Provision the cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md) |
+| Data landing zone provisioning | This service creates a new data landing zone. This service is infrequently used, but it ensures end-to-end onboarding solution completeness. For more information, see [Provision cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md).                                        |
+| Data product onboarding        | This service creates and amends resource groups that pertain to an onboarded tenant. It also contains capabilities to upgrade and downgrade SKUs and to activate and deactivate resource groups for onboarded tenants or services. This service also creates a new data landing zone for DevOps purposes. For more information, see [Provision cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md). |
+| Data agnostic ingestion        | This microservice creates new data sources for ingestion into your data landing zones. To manage this process, it communicates with an Azure Data Factory and Azure SQL Database metastore that's located in each data landing zone. For more information, see [How automated ingestion frameworks support cloud-scale analytics in Azure](../best-practices/automated-ingestion-pattern.md). |
+| Metadata                       | This service exposes and creates metadata for the platform. For more information, see [Metadata standards](../../cloud-scale-analytics/govern-metadata-standards.md). |
+| Access provisioning            | This service creates access packages, access policies, and manual or automatic asset access approval processes via a service principal name or user principal name. It can also expose an API to provide a list of subscription requests (or assets) that users submit in the past 90 days. For more information, see [Data access management](../security-provisioning.md).         |
+| Data lifecycle                 | This service helps maintain your data lifecycle based on metadata. This maintenance can include moving data to cold storage and deleting outdated records. For more information, see [Data lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md).                                                                                              |
+| Data domain onboarding         | This service is only applicable to data mesh. This service captures new domain metadata and onboards the new domains as needed. It can also create, update, activate, and deactivate domain or service lines that you build into a microservice. For more information, see [Provision cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md). |
 
 ## Azure Container Registry
 
-Your data management landing zone hosts an Azure Container Registry. The Azure Container Registry allows your data platform operations to deploy standard containers for use in data science projects that your data application teams consume.
+Your data management landing zone hosts an Azure Container Registry instance. Your data platform operations can use Container Registry to deploy standard containers for data science projects that your data application teams consume.
 
-## Next steps
+## Next step
+
 > [!div class="nextstepaction"]
 > [Overview of the data landing zone](./data-landing-zone.md)
