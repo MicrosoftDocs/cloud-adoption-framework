@@ -10,7 +10,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data management landing zone
 
-A data management landing zone is esential for cloud-scale analytics. It oversees the governance of your entire analytics platform.
+A data management landing zone is essential for cloud-scale analytics. It oversees the governance of your entire analytics platform.
 
 :::image type="content" source="../images/data-management-overview.svg" alt-text="Diagram of data management landing zone overview." lightbox="../images/data-management-overview.svg" border="false":::
 
@@ -26,7 +26,16 @@ This architecture is a starting point. You can modify it to fit your specific bu
 
 ## Data governance
 
-The Azure cloud-scale analytics framework suggests that you use Microsoft Purview. Alternatively, you can deploy non-Microsoft solutions to manage specific data governance functions. Key functions to consider in your architecture include a global data catalog, primary data management, data sharing and contracts, an API catalog, data quality management, and a data modeling repository.
+The Azure cloud-scale analytics framework suggests that you use Microsoft Purview. Alternatively, you can deploy non-Microsoft solutions to manage specific data governance functions.
+
+Consider the following key functions in your architecture:
+
+- A global data catalog
+- Primary data management
+- Data sharing and contracts
+- An API catalog
+- Data quality management
+- A data modeling repository
 
 If you have partner data governance products that require deployment in a subscription, deploy them to the data governance resource group within the data management landing zone.
 
@@ -52,7 +61,7 @@ An API catalog standardizes your documentation, facilitates internal collaborati
 
 ### Data quality management
 
-Use your existing data quality management practices. Manage data quality at the data source to prevent problems from spreading across your analytics and AI systems.
+Use your existing data quality management practices. To prevent problems from spreading across your analytics and AI systems, manage data quality at the data source.
 
 Integrate quality metrics and validation into your data processes so that teams that are most familiar with the data handle quality management. This approach helps ensure that your team has a deeper understanding and better handling of the data assets. Provide data lineage for all data products to improve data quality confidence.
 
@@ -79,7 +88,7 @@ Your data marketplace or operations console calls a middle tier of microservices
 | Data product onboarding        | This service creates and amends resource groups that pertain to an onboarded tenant. It also contains capabilities to upgrade and downgrade SKUs and to activate and deactivate resource groups for onboarded tenants or services. This service also creates a new data landing zone for DevOps purposes. For more information, see [Provision cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md). |
 | Data agnostic ingestion        | This microservice creates new data sources for ingestion into your data landing zones. To manage this process, it communicates with an Azure Data Factory and Azure SQL Database metastore that's located in each data landing zone. For more information, see [How automated ingestion frameworks support cloud-scale analytics in Azure](../best-practices/automated-ingestion-pattern.md). |
 | Metadata                       | This service exposes and creates metadata for the platform. For more information, see [Metadata standards](../../cloud-scale-analytics/govern-metadata-standards.md). |
-| Access provisioning            | This service creates access packages, access policies, and manual or automatic asset access approval processes via a service principal name or user principal name. It can also expose an API to provide a list of subscription requests (or assets) that users submit in the last 90 days. For more information, see [Data access management](../../cloud-scale-analytics/secure.md).         |
+| Access provisioning            | This service uses a service principal name or user principal name to create access packages, access policies, and manual or automatic asset access approval processes. It can also expose an API to provide a list of subscription requests (or assets) that users submit in the last 90 days. For more information, see [Data access management](../../cloud-scale-analytics/secure.md).         |
 | Data lifecycle                 | This service helps maintain your data lifecycle based on metadata. This maintenance can include moving data to cold storage and deleting outdated records. For more information, see [Data lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md).                                                                                              |
 | Data domain onboarding         | This service is only applicable to data mesh. This service captures new domain metadata and onboards the new domains as needed. It can also create, update, activate, and deactivate domain or service lines that you build into a microservice. For more information, see [Provision cloud-scale analytics](../../cloud-scale-analytics/manage-provision-platform.md). |
 
