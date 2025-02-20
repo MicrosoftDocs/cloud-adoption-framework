@@ -10,11 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Single-region data landing zone connectivity
 
-In a single-region setup, the data management landing zone, data landing zones, and all associated services are established in the same region. Also, all landing zones reside in the same connectivity hub subscription. This subscription hosts shared network resources, such as a network virtual appliance (like Azure Firewall), an Azure ExpressRoute gateway, a virtual private network gateway, a hub virtual network, or a virtual WAN hub.
+In a single-region setup, the data management landing zone, data landing zones, and all related services are established in the same region. Also, all landing zones reside in the same connectivity hub subscription. This subscription hosts shared network resources, such as a network virtual appliance (like Azure Firewall), an Azure ExpressRoute gateway, a virtual private network gateway, a hub virtual network, or a virtual WAN hub.
 
 :::image type="content" source="./media/single-region-connectivity.png" alt-text="Diagram that shows single-region connectivity." lightbox="./media/single-region-connectivity.png":::
 
-Based on the current capabilities of Azure networking services, we recommend that you use a meshed network architecture. Set up virtual network peering between:
+Based on the current capabilities of Azure networking services, we recommend that you use a meshed network architecture. Establish virtual network peering between:
 
 - The connectivity hub and the data management zone
 - The connectivity hub and each data landing zone
@@ -42,7 +42,7 @@ Each design option is analyzed with the following cross-data landing zone use-ca
 
 ## Meshed network architecture (Recommended)
 
-Use a network mesh architecture when you adopt cloud-scale analytics. To implement a network mesh architecture, in addition to the existing hub-and-spoke network design set up in your tenant, you need to do two things:
+Use a network mesh architecture when you adopt cloud-scale analytics. To implement a network mesh architecture, in addition to the existing hub-and-spoke network design setup in your tenant, you need to do two things:
 
 - Add virtual network peerings between all data landing zone virtual networks.
 - Add virtual network peerings between your data management landing zone and all data landing zones.
@@ -64,9 +64,9 @@ In this design, data application teams can deploy private endpoints themselves. 
 
 Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
 
-### Service management in meshed network architecture
+### Service management in a meshed network architecture
 
-In a meshed network architecture design, no network virtual appliance acts as a single point of failure or throttling. The absence of datasets being sent through the connectivity hub reduces your central Azure platform team's overhead, assuming that you don't need to scale out that virtual appliance.
+In a meshed network architecture design, no network virtual appliance serves as a single point of failure or throttling. The absence of datasets being sent through the connectivity hub reduces your central Azure platform team's overhead, assuming that you don't need to scale out that virtual appliance.
 
 This implies that the central Azure platform team can no longer inspect and log all traffic that's sent between data landing zones. However, cloud-scale analytics is a coherent platform that spans multiple subscriptions. This capability allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
@@ -247,7 +247,7 @@ Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="i
 
 ### Service management in connectivity hub architecture
 
-This design, while similar to the [meshed network architecture](#meshed-network-architecture-recommended), has no network virtual appliance that acts as a single point of failure or throttles throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the connectivity hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
+This design, while similar to the [meshed network architecture](#meshed-network-architecture-recommended), has no network virtual appliance that serves as a single point of failure or throttles throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the connectivity hub, because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform spanning multiple subscriptions, which allows for scale and overcomes platform-level limitations, so that isn't a disadvantage.
 
 With all resources hosted in a single subscription, traffic isn't inspected in the central connectivity hub. You can still capture network logs by using NSG flow logs, and you can consolidate and store other application and service level logs by using service-specific diagnostic settings. You can capture all of these logs at scale by using Azure policies.
 
