@@ -3,7 +3,7 @@ title: Management groups
 description: Learn about the resource organization and management group design considerations and recommendations.
 author: martinekuan
 ms.author: martinek
-ms.date: 06/22/2022
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -78,7 +78,7 @@ The following example shows a management group structure. The management groups 
 |---|---|
 |**Intermediate root management group**| This management group is directly under the tenant root group. The organization provides this management group with a prefix so that they don't have to use the root group. The organization can move existing Azure subscriptions into the hierarchy. This approach also sets up future scenarios. This management group is a parent to all the other management groups created by the Azure landing zone accelerator.|
 |**Platform**| This management group contains all the platform child management groups, like management, connectivity, and identity. |
-|**Management**| This management group contains a dedicated subscription for management, monitoring, and security. This subscription hosts an Azure Monitor Logs workspace, including associated solutions and an Azure Automation account. |
+|**Management**| This management group contains a dedicated subscription for management, monitoring, and security. This subscription hosts an Azure Monitor Logs workspace, including associated solutions. |
 |**Connectivity**| This management group contains a dedicated subscription for connectivity. This subscription hosts the Azure networking resources, like Azure Virtual WAN, Azure Firewall, and Azure DNS private zones, that the platform requires.<br><br>You can use various resource groups to contain resources, such as virtual networks, firewall instances, and virtual network gateways, that are deployed in different regions. Some large deployments might have subscription quota restrictions for connectivity resources. You can create dedicated subscriptions in each region for their connectivity resources. |
 |**Identity**| This management group contains a dedicated subscription for identity. This subscription is a placeholder for Active Directory Domain Services (AD DS) virtual machines (VMs) or Microsoft Entra Domain Services. You can use various resource groups to contain resources, such as virtual networks and VMs, that are deployed in different regions. <br><br> The subscription also enables AuthN or AuthZ for workloads within the landing zones. Assign specific Azure policies to harden and manage the resources in the identity subscription. Some large deployments might have subscription quota restrictions for connectivity resources. You can create dedicated subscriptions in each region for their connectivity resources. |
 |**Landing zones**| The parent management group that contains all the landing zone child management groups. It has workload-agnostic Azure policies assigned to ensure that workloads are secure and compliant. |
