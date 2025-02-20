@@ -68,7 +68,7 @@ Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="ic
 
 In a meshed network architecture design, no NVA serves as a single point of failure or throttling. The absence of datasets being sent through the connectivity hub reduces your central Azure platform team's overhead, as long as you don't need to scale out that virtual appliance.
 
-As a result, the central Azure platform team can no longer inspect and log all traffic that's sent between data landing zones. However, cloud-scale analytics is a coherent platform that spans multiple subscriptions. This capability allows for scale and overcomes platform-level limitations.
+This implies that the central Azure platform team can no longer inspect and log all traffic that's sent between data landing zones. However, cloud-scale analytics is a coherent platform that spans multiple subscriptions. This capability allows for scale and overcomes platform-level limitations.
 
 With all resources hosted in a single subscription, your central Azure platform team no longer inspects all data in the central connectivity hub, either. You can still capture network logs by using network security group (NSG) flow logs. You can consolidate and store other application and service-level logs by using service-specific diagnostic settings.
 
@@ -130,7 +130,7 @@ Another benefit of this design is that traffic is routed through a central NVA, 
 
 One downside of this design is that your central Azure platform team has to manually manage route tables. This requirement helps ensure transitivity between spokes, which enables data asset sharing across multiple data landing zones. Route management can become complex and error-prone over time, so you must consider it from the start.
 
-Another downside to this network setup is the way your central NVA is set up. The NVA functions as a single point of failure and can cause serious downtime inside the data platform if a failure occurs. As dataset sizes increase in a data platform and the number of cross-data landing zone use cases increases, more traffic is sent through the central NVA.
+Another downside to this network setup is how your central NVA is set up. The NVA functions as a single point of failure and can cause serious downtime inside the data platform if a failure occurs. As dataset sizes increase in a data platform and the number of cross-data landing zone use cases increases, more traffic is sent through the central NVA.
 
 Over time, this situation can result in gigabytes or even terabytes of data being sent through the central instance. Because the bandwidth of existing NVAs is often limited to just a one- or two-digit gigabyte throughput, the central NVA can become a bottleneck that severely limits traffic flow between data landing zones and limits data asset shareability.
 
@@ -153,7 +153,7 @@ Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="i
 
 ### Bandwidth and latency in a traditional hub-and-spoke architecture
 
-This network design has serious bandwidth limitations. The central NVA becomes a critical bottleneck as your platform grows, which limits cross-data landing zone use cases and dataset sharing. It also likely creates multiple copies of datasets over time.
+This network design has serious bandwidth limitations. The central NVA becomes a critical bottleneck as your platform grows, which limits cross-data landing zone use cases and dataset sharing. It can also create multiple copies of datasets over time.
 
 This design also heavily affects latency, which becomes especially critical in real-time analytics scenarios.
 
@@ -222,7 +222,7 @@ Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="ic
 
 ### Private endpoint projection architecture summary
 
-The exponential growth of private endpoints in this network architecture can cause you to lose track of which private endpoints are used for what purpose and in which location. You're also limited by access management problems and DNS layer complexities. Because of these problems, we can't recommend this network design for cross-data landing zone use cases.
+The exponential growth of private endpoints in this network architecture can cause you to lose track of which private endpoints are used for what purpose and in which location. You're also limited by access management problems and DNS layer complexities. Because of these problems, we don't recommend this network design for cross-data landing zone use cases.
 
 ## Private endpoints in connectivity hub architecture (Not recommended)
 
@@ -245,7 +245,7 @@ Summary: :::image type="icon" source="./media/minus-icon.png"::::::image type="i
 
 ### Service management in the connectivity hub architecture
 
-This design is similar to the [meshed network architecture](#meshed-network-architecture-recommended) but has no NVA that serves as a single point of failure or throttles throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the connectivity hub because there's no need to scale out the virtual appliance. As a result, the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform that spans multiple subscriptions, which allows for scale and overcomes platform-level limitations.
+This design is similar to the [meshed network architecture](#meshed-network-architecture-recommended) but has no NVA that serves as a single point of failure or throttles throughput. It also reduces management overhead for your central Azure platform team by not sending datasets through the connectivity hub because there's no need to scale out the virtual appliance. This implies that the central Azure platform team can no longer inspect and log all traffic sent between data landing zones. However, cloud-scale analytics is a coherent platform that spans multiple subscriptions, which allows for scale and overcomes platform-level limitations.
 
 With all resources hosted in a single subscription, traffic isn't inspected in the central connectivity hub. You can still capture network logs by using NSG flow logs, and you can consolidate and store other application and service-level logs by using service-specific diagnostic settings. You can capture all these logs at scale by using Azure policies.
 
