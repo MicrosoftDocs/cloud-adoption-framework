@@ -54,7 +54,7 @@ An API catalog standardizes your documentation, facilitates internal collaborati
 
 Use your existing data quality management practices. Manage data quality at the data source to prevent problems from spreading across your analytics and AI systems.
 
-Integrate quality metrics and validation into your data processes so that teams that are most familiar with the data handle quality management. This approach helps ensure that your team has a deeper understanding and better handling of the data assets. Provide data lineage for all data products to improve data quality confidence.
+Integrate quality metrics and validation into your data processes so that the teams most familiar with the data handle quality management. This approach helps ensure that your team has a deeper understanding and better handling of the data assets. Provide data lineage for all data products to improve data quality confidence.
 
 For more information, see [Data quality](../../cloud-scale-analytics/govern-data-quality.md).
 
