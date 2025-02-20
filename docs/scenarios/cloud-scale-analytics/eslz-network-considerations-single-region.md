@@ -36,7 +36,7 @@ Each design pattern is evaluated by using the following criteria:
 Each design option is analyzed with the following cross-data landing zone use-case in mind.
 
 > [!NOTE]
-> *Virtual machine B (VM) hosted in data landing zone B loads a dataset from storage account A that's hosted in data landing zone A. Then VM B processes that dataset and stores it in storage account B, which is hosted in data landing zone B.*
+> The virtual machine B (VM) that's hosted in data landing zone B loads a dataset from storage account A that's hosted in data landing zone A. Then VM B processes that dataset and stores it in storage account B, which is hosted in data landing zone B.
 
 [!INCLUDE [network-important](includes/network-important.md)]
 
