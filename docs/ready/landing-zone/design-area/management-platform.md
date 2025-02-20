@@ -3,7 +3,7 @@ title: Inventory and visibility considerations
 description: Learn how to manage inventory and visibility in your Azure platform services.
 author: martinekuan
 ms.author: martinek
-ms.date: 05/07/2024
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -41,6 +41,8 @@ Operational requirements|<ul> <li>Operational dashboards with native tools such 
 
 - Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally, except where Azure role-based access control (Azure RBAC), data sovereignty requirements, and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams and drives reports about change management, service health, configuration, and most other aspects of IT operations. Focusing on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
+  - Application teams can deploy their own Log Analytics Workspaces in their own subscriptions, alongside the central platform team workspace that they may have limited access to, to store logs and metrics in that are specifc to their workloads requirements.
+
 - Export logs to Azure Storage if your log retention requirements exceed seven years. Use immutable storage with a write-once, read-many policy to make data non-erasable and non-modifiable for a user-specified interval.
 
 - Use Azure Policy for access control and compliance reporting. Azure Policy lets you enforce organization-wide settings to ensure consistent policy adherence and fast violation detection. For more information, see [Understand Azure Policy effects](/azure/governance/policy/concepts/effects).
@@ -72,7 +74,7 @@ The Azure landing zone accelerator includes opinionated configuration to deploy 
 
 The Azure landing zone accelerator deployment includes key management and monitoring tools like:
 
-- A Log Analytics workspace and Automation account
+- A Log Analytics workspace
 - Microsoft Defender for Cloud monitoring
 - Diagnostic settings for activity logs, virtual machines, and platform as a service (PaaS) resources sent to Log Analytics
 
@@ -85,6 +87,8 @@ This emphasis doesn't prevent use of the same workspace for VM-based application
 In this model, application teams benefit from the use of existing platform infrastructure as it reduces their management overhead.
 
 For non-compute resources, like web apps or Azure Cosmos DB databases, your application teams can use their own Log Analytics workspaces. They can then route diagnostics and metrics to those workspaces.
+
+Application teams may also decide to duplicate some of the logs that are available in the central platform team Log Analytics Workspace for operational efficiencies witin their team. This is also a supported approach within the Azure landing zone architecture and guidance.
 
 ## Next step
 
