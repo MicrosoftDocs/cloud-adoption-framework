@@ -3,7 +3,7 @@ title: Azure landing zone frequently asked questions (FAQ)
 description: The Azure landing zone frequently asked questions (FAQ) provide answers to common questions asked about the Azure landing zone architecture.
 author: jtracey93
 ms.author: tozimmergren
-ms.date: 04/14/2023
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency2, devx-track-terraform
 ---
@@ -84,7 +84,7 @@ For more information, see [Manage application development environments in Azure 
 
 When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deployment metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
 
-The region selector on the **Deployment location** tab is also used to select which Azure region any region-specific resources should be stored, such as a Log Analytics workspace and an automation account, if required.
+The region selector on the **Deployment location** tab is also used to select which Azure region any region-specific resources should be stored, such as a Log Analytics workspace etc., if required.
 
 If you deploy a networking topology on the **Network topology and connectivity** tab, you need to select an Azure region to deploy the networking resources to. This region can be different from the region selected on the **Deployment location** tab.
 
