@@ -2761,7 +2761,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/manage/azure-server-management.md",
+         "source_path": "docs/manage/azure-server-management/index.md",
          "redirect_url": "/azure/azure-monitor/best-practices-vm",
          "redirect_document_id": false
       },
