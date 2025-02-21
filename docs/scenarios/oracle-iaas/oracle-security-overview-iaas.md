@@ -32,7 +32,6 @@ Identity management is a fundamental framework that governs access to important 
   | --- | --- |
   |E-Business Suite (EBS)|[Enable SSO for EBS R12.2](https://docs.oracle.com/cd/E26401_01/doc.122/e22952/T156458T580814.htm)|
   |JD Edwards (JDE)|[Set up JDE SSO](https://docs.oracle.com/cd/E24705_01/doc.91/e24258/sso_thru_oam.htm#EOTSC00408)|
-  |PeopleSoft|[Enable SSO for PeopleSoft](https://docs.oracle.com/en/solutions/sso-peoplesoft-azure-ad/configure-oracle-peoplesoft1.html#GUID-470A312A-7F22-4688-AE95-80F164371875)|
   |Hyperion|[Oracle support doc #2144637.1](https://support.oracle.com/knowledge/Enterprise%20Performance%20Management%20and%20Business%20Intelligence/2144637_1.html)|
   |Siebel|[Oracle support doc #2664515.1](https://support.oracle.com/knowledge/Siebel/2664515_1.html)|
 
