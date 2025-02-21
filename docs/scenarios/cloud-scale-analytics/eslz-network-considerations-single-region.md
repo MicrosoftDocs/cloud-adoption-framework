@@ -16,10 +16,10 @@ In a single-region setup, the data management landing zone, data landing zones, 
 
 Based on the capabilities of Azure networking services, we recommend that you use a meshed network architecture. Establish virtual network peering between:
 
-- The connectivity hub and the data management zone
-- The connectivity hub and each data landing zone
-- The data management zone and each data landing zone
-- Each data landing zone
+- The connectivity hub and the data management zone.
+- The connectivity hub and each data landing zone.
+- The data management zone and each data landing zone.
+- Each data landing zone.
 
 This article describes the pros and cons of each network architecture option for cloud-scale analytics.
 
@@ -63,6 +63,8 @@ In a meshed network architecture design, data application teams need only two th
 In this design, data application teams can deploy private endpoints themselves. If they have the necessary access rights to connect private endpoints to a subnet in a given spoke, they can set up the necessary connectivity without extra support.
 
 Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png"::::::image type="icon" source="./media/plus-icon.png":::
+
+The plus icon indicates the pros and cons of each scenario.
 
 ### Service management in a meshed network architecture
 
