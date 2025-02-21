@@ -91,7 +91,6 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ::: zone target="chromeless"
 
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -122,13 +121,6 @@ To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 
 Azure Monitor Agent (AMA) collects monitoring data from the guest operating system of Azure and hybrid virtual machines and delivers it to Azure Monitor for use by features, insights, and other services such as Microsoft Sentinel and Microsoft Defender for Cloud.
 
-::: zone target="chromeless"
-
-
-::: zone-end
-
-::: zone target="docs"
-
 ### Learn more
 
 To learn more, see the [Azure Monitor Agent overview](/azure/azure-monitor/agents/azure-monitor-agent-overview).
@@ -136,4 +128,3 @@ To learn more, see the [Azure Monitor Agent overview](/azure/azure-monitor/agent
 ## Microsoft Cloud for Sovereignty transparency logs
 
 If you're using Microsoft Cloud for Sovereignty, you can use [transparency logs](/industry/sovereignty/transparency-logs) to understand when Microsoft engineers access your resources. These logs help with sovereignty compliance and other regulatory requirements.
-
