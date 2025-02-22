@@ -21,6 +21,9 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [Azure NAT Gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
+> [!NOTE]
+> As of Novemeber 2024, all Firewall deployments must include a [Management NIC](/azure/networking/firewall/azure-firewall-management-nic) to separate management and data traffic. Previously required only for Forced Tunneling, the Management NIC is now mandatory for upcoming Firewall features. To avoid service disruption, ensure your firewall is deployed or updated with this feature enabled. For existing firewalls, stop and restart the firewall to enable the Management NIC without redeployment. This process may cause temporary downtime.
+
 ## Design recommendations
 
 - Use Azure NAT Gateway for direct outbound connectivity to the internet. A NAT gateway is a fully managed, highly resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
@@ -38,6 +41,12 @@ This article lists considerations and recommendations for inbound and outbound c
   - Non-HTTP/S inbound connections.
   - East-west traffic filtering, if your organization requires it.
 
+- Deploy Azure Firewall with the Managament NIC enabled
+
+  - Ensure the AzureFirewallManagementSubnet is created in advance to avoid deployment issues when using an existing virtual network., with a minimum subnet size of /26
+  - Assign a public IP address to the Management NIC. This IP facilitates the firewall's operational tasks, including updates and management communications.
+  - By default, Azure associates a system-provided route table to the AzureFirewallManagementSubnet. This table includes a default route to the internet and Propagate gateway routes must be disabled.
+
 - Use [Azure Firewall Premium](/azure/firewall/premium-features) for advanced firewall capabilities, such as:
 
   - Transport Layer Security (TLS) inspection.
@@ -45,11 +54,17 @@ This article lists considerations and recommendations for inbound and outbound c
   - URL filtering.
   - Web categories.
 
+> [!NOTE]
+> For Standard and Premium firewall versions, the Firewall Management NIC must be manually enabled during the create process. All Basic Firewall versions and all Secured Hub firewalls always have a Management NIC enabled.
+
 - [Azure Firewall Manager](/azure/firewall-manager/overview) supports both [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) and regular virtual networks. Use Firewall Manager with Virtual WAN to deploy and manage Azure firewalls across Virtual WAN hubs or in hub virtual networks.
 
 - If you use multiple IP addresses and ranges consistently in Azure Firewall rules, set up [IP Groups](/azure/firewall/ip-groups) in Azure Firewall. You can use the IP groups in Azure Firewall DNAT, network, and application rules for multiple firewalls across Azure regions and subscriptions.
 
 - If you use a custom [user defined route](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) (UDR) to manage outbound connectivity to Azure platform as a service (PaaS) services, specify a [service tag](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) as the address prefix. Service tags update underlying IP addresses automatically to include changes, and reduce the overhead of managing Azure prefixes in a route table.
+
+> [!NOTE]
+> Avoid associating customer route tables with AzureFirewallManagementSubnet. Associating custom route tables with the management subnet can lead to misconfigurations and potential service disruptions. If you do associate a route table, then ensure it has a default route to the Internet to avoid service disruptions.
 
 - Create a global Azure Firewall policy to govern security posture across the global network environment. Assign the policy to all Azure Firewall instances.
 
