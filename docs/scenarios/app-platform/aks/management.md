@@ -87,7 +87,8 @@ Consider the following factors:
 - Consistently create backups for applications and data.
   - A non-stateful service can be replicated efficiently.
   - If you need to store *state* in the cluster, back up the data frequently in the paired region. One consideration is that properly storing *state* in the cluster can be complicated.
-
+  - Use Azure Backup to schedule backups for your containerized applications and data in Azure Kubernetes Service (AKS). Recovery points are stored offsite and can be used during a regional disaster scenario. For more information, see [What is Azure Kubernetes Service backup?](/azure/backup/azure-kubernetes-service-backup-overview).
+   
 - Cluster update and maintenance.
   - Always keep your cluster up to date.
   - Be aware of the release and deprecation process.
