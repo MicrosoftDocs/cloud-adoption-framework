@@ -22,7 +22,7 @@ This article lists considerations and recommendations for inbound and outbound c
 - Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [Azure NAT Gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 > [!NOTE]
-> As of Novemeber 2024, all Firewall deployments must include a [Management NIC](/azure/networking/firewall/azure-firewall-management-nic) to separate management and data traffic. Previously required only for Forced Tunneling, the Management NIC is now mandatory for upcoming Firewall features. To avoid service disruption, ensure your firewall is deployed or updated with this feature enabled. For existing firewalls, stop and restart the firewall to enable the Management NIC without redeployment. This process may cause temporary downtime.
+> As of Novemeber 2024, all Firewall deployments must include a [Management NIC](/azure/networking/firewall/azure-firewall-management-nic) to separate management and data traffic. Previously required only for Forced Tunneling, the Management NIC is now mandatory for upcoming Firewall features. To avoid service disruption, ensure your firewall is deployed or updated with this feature enabled. For existing firewalls, follow the guidance mentioned in [this article](/azure/firewall/management-nic#enable-the-management-nic-on-existing-firewalls).
 
 ## Design recommendations
 
@@ -45,7 +45,7 @@ This article lists considerations and recommendations for inbound and outbound c
 
   - Ensure the AzureFirewallManagementSubnet is created in advance to avoid deployment issues when using an existing virtual network., with a minimum subnet size of /26
   - Assign a public IP address to the Management NIC. This IP facilitates the firewall's operational tasks, including updates and management communications.
-  - By default, Azure associates a system-provided route table to the AzureFirewallManagementSubnet. This table includes a default route to the internet and Propagate gateway routes must be disabled.
+  - By default, Azure associates a system-provided route table to the AzureFirewallManagementSubnet. This table includes a default route to the internet and *Propagate gateway routes* must be disabled.
 
 - Use [Azure Firewall Premium](/azure/firewall/premium-features) for advanced firewall capabilities, such as:
 
