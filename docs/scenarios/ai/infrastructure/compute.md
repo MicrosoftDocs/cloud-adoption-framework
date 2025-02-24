@@ -15,8 +15,8 @@ AI workloads require specialized virtual machines (VMs) to handle high computati
 
 | AI phase             | Virtual Machine Image  | Generative AI | Nongenerative AI (complex models)  | Nongenerative AI (small models)  |
 |----------------------|------------------------|----------------------------|------------------------------------|----------------------------------|
-| Training AI models   | [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | [Memory-optimized](https://azure.microsoft.com/services/virtual-machines/memory-optimized/) (CPU) |
-| Inferencing AI models| [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science/)     | GPU (NC or ND family)  | GPU (NC or ND family) | [Compute-optimized](https://azure.microsoft.com/services/virtual-machines/compute-optimized/) (CPU) |
+| Training AI models   | [Data Science Virtual Machines](/azure/machine-learning/data-science-virtual-machine/overview/)     | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | GPU (prefer ND-family. Alternatively use NC family with ethernet-interconnected VMs) | [Memory-optimized](/azure/virtual-machines/sizes/memory-optimized/m-family) (CPU) |
+| Inferencing AI models| [Data Science Virtual Machines](/azure/machine-learning/data-science-virtual-machine/overview/)     | GPU (NC or ND family)  | GPU (NC or ND family) | [Compute-optimized](/azure/virtual-machines/sizes/compute-optimized/f-family) (CPU) |
 
 ## Pick the right virtual machine image
 
@@ -30,7 +30,7 @@ Choose a suitable virtual machine image, such as the Data Science Virtual Machin
 
 Selecting an appropriate virtual machine size aligns with your AI model complexity, data size, and cost constraints. Matching hardware to training or inferencing needs maximizes efficiency and prevents underutilization or overload.
 
-- *Narrow your virtual machine options.* Choose the latest virtual machine SKUs for optimal training and inference times. For training, select SKUs that support RDMA and GPU interconnects for high-speed data transfer between GPUs. For inference, avoid SKUs with InfiniBand, which is unnecessary. Examples include the [ND MI300X v5 series](/azure/virtual-machines/sizes/gpu-accelerated/nd-mi300x-v5-series), [ND H100 v5 series](/azure/virtual-machines/nd-h100-v5-series), [NDm A100 v4-series](/azure/virtual-machines/ndm-a100-v4-series), and [ND A100 v4-series](/azure/virtual-machines/nda100-v4-series).
+- *Narrow your virtual machine options.* Choose the latest virtual machine SKUs for optimal training and inference times. For training, select SKUs that support RDMA and GPU interconnects for high-speed data transfer between GPUs. For inference, avoid SKUs with InfiniBand, which is unnecessary. Examples include the [ND H200 v5](/azure/virtual-machines/sizes/gpu-accelerated/nd-h200-v5-series), [ND MI300X v5 series](/azure/virtual-machines/sizes/gpu-accelerated/nd-mi300x-v5-series), [ND H100 v5 series](/azure/virtual-machines/nd-h100-v5-series), [NDm A100 v4-series](/azure/virtual-machines/ndm-a100-v4-series), and [ND A100 v4-series](/azure/virtual-machines/nda100-v4-series).
 
 - *Check virtual machine pricing.* Use the [Linux](https://azure.microsoft.com/pricing/details/virtual-machines/linux/) and [Windows](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) VM pricing pages for a general cost overview. For a detailed estimate, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
 
