@@ -147,10 +147,6 @@ The following diagram shows an example DevOps framework with Azure DevOps toolch
 
 ![Diagram of DevOps framework with Azure DevOps toolchain selection.](./media/devops-toolchain-azure-devops.png)
 
-The following diagram shows an example DevOps framework with Azure DevOps and GitHub toolchain selection:
-
-![Diagram of DevOps framework with Azure DevOps and GitHub toolchain selection.](./media/devops-toolchain-github.png)
-
 ## Next step
 
 > [!div class="nextstepaction"]
