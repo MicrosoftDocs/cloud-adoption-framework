@@ -22,10 +22,10 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - [Application security groups (ASGs)](/azure/virtual-network/application-security-groups) don't span or provide protection across virtual networks.
 
-- Use [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) to inspect traffic that flows through virtual networks. Virtual network flow logs provide capabilities that are similar to [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) **(retiring on September 30, 2027)** but cover a wider range of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
+- Use [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) to inspect traffic that flows through virtual networks. Virtual network flow logs provide capabilities that are similar to [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) but cover a wider range of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
 
 > [!NOTE]
-> On September 30, 2027, network security group (NSG) flow logs will be retired. As part of this retirement, you'll no longer be able to create new NSG flow logs starting June 30, 2025. We recommend [migrating to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs. After the retirement date, traffic analytics enabled with NSG flow logs will no longer be supported, and existing NSG flow logs resources in your subscriptions will be deleted. However, NSG flow logs records won't be deleted and will continue to follow their respective retention policies. For more information, see the [official announcement](https://azure.microsoft.com/updates?id=Azure-NSG-flow-logs-Retirement).
+> On September 30, 2027, network security group (NSG) flow logs will be retired. As part of this retirement, you'll no longer be able to create new NSG flow logs starting June 30, 2025. We recommend [migrating to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs. After the retirement date, traffic analytics enabled with NSG flow logs will no longer be supported, and existing NSG flow logs resources in your subscriptions will be deleted. However, NSG flow logs records won't be deleted and will continue to follow their respective retention policies. For more information, see the [retirement notice](https://azure.microsoft.com/updates?id=Azure-NSG-flow-logs-Retirement).
 
 ## Design recommendations
 
@@ -41,7 +41,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Enable [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and use [traffic analytics](/azure/network-watcher/traffic-analytics) to gain insights into ingress and egress traffic flows. Enable flow logs on all critical virtual networks and subnets in your subscriptions, for example virtual networks and subnets that contain Windows Server Active Directory domain controllers or critical data stores. Additionally, you can use flow logs to detect and investigate potential security incidents, compliance and monitoring, and to optimize usage.
 
-- Plan and migrate your current NSG flow logs configuration to virtual network flow logs using the [migration guide](/azure/network-watcher/nsg-flow-logs-migrate).
+- Plan and migrate your current NSG flow logs configuration to virtual network flow logs. See [Migrate NSG flow logs](/azure/network-watcher/nsg-flow-logs-migrate).
 
 - Use NSGs to selectively allow connectivity between landing zones.
 
