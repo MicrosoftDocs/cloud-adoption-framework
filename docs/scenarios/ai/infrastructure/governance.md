@@ -61,7 +61,7 @@ Operational governance ensures consistent monitoring and management of AI worklo
 
 - *Deploy monitoring agents.* Ensure that Azure Monitor agents are deployed by default for virtual machines, Azure Virtual Machine Scale Sets, and Azure Arc connected servers. Connect them to a central Log Analytics workspace within the management subscription.
 
-- *Configure alerts.* Enable [recommended alert rules](https://azure.microsoft.com/services/monitor/autoscale) to receive notifications of metric deviations.
+- *Configure alerts.* Enable [recommended alert rules](/azure/azure-monitor/best-practices-vm) to receive notifications of metric deviations.
 
 - *Use a CI/CD pipeline.* Implement [continuous integration and continuous delivery (CI/CD)](/azure/cloud-adoption-framework/ready/considerations/devops-principles-and-practices#define-your-devops-framework) to automate code testing and deployment to different environments.
 
