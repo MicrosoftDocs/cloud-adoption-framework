@@ -2767,7 +2767,7 @@
       },
       {
          "source_path": "docs/manage/azure-server-management/common-policies.md",
-         "redirect_url": "/azure/governance/policy/samples/built-in-policies#general",
+         "redirect_url": "/azure/governance/policy/samples/built-in-policies",
          "redirect_document_id": false
       },
       {
