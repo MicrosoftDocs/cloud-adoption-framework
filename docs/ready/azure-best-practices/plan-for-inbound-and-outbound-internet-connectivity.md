@@ -22,7 +22,7 @@ This article lists considerations and recommendations for inbound and outbound c
 - Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [Azure NAT Gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 > [!NOTE]
-> As of Novemeber 2024, all Firewall deployments must include a [Management NIC](/azure/firewall/management-nic) to separate management and data traffic. Previously required only for Forced Tunneling, the Management NIC is now mandatory for upcoming Firewall features. To avoid service disruption, ensure your firewall is deployed or updated with this feature enabled. For existing firewalls, follow the guidance mentioned in [this article](/azure/firewall/management-nic#enable-the-management-nic-on-existing-firewalls).
+> As of Novemeber 2024, all Azure Firewall deployments must include a [Management NIC](/azure/firewall/management-nic) to separate management and data traffic. Previously required only for Forced Tunneling, the Management NIC is now mandatory for upcoming Firewall features. To avoid service disruption, ensure your firewall is deployed or updated with this feature enabled. For existing firewalls, see [Enable the Management NIC on existing firewalls](/azure/firewall/management-nic#enable-the-management-nic-on-existing-firewalls).
 
 ## Design recommendations
 
@@ -64,7 +64,7 @@ This article lists considerations and recommendations for inbound and outbound c
 - If you use a custom [user defined route](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) (UDR) to manage outbound connectivity to Azure platform as a service (PaaS) services, specify a [service tag](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) as the address prefix. Service tags update underlying IP addresses automatically to include changes, and reduce the overhead of managing Azure prefixes in a route table.
 
 > [!NOTE]
-> Avoid associating customer route tables with AzureFirewallManagementSubnet. Associating custom route tables with the management subnet can lead to misconfigurations and potential service disruptions. If you do associate a route table, then ensure it has a default route to the Internet to avoid service disruptions.
+> Avoid associating customer route tables with AzureFirewallManagementSubnet. Associating custom route tables with the management subnet can lead to misconfigurations and potential service disruptions. If you do associate a route table, ensure it has a default route to the Internet to avoid service disruptions.
 
 - Create a global Azure Firewall policy to govern security posture across the global network environment. Assign the policy to all Azure Firewall instances.
 
