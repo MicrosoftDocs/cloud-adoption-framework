@@ -2759,7 +2759,71 @@
          "source_path": "docs/industry/retail/strategy.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy",
          "redirect_document_id": false
-      }     
-
-   ]
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/index.md",
+         "redirect_url": "/azure/azure-monitor/best-practices-vm",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/common-policies.md",
+         "redirect_url": "/azure/governance/policy/samples/built-in-policies#general",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/enable-tracking-alerting.md",
+         "redirect_url": "/azure/automation/change-tracking/guidance-migration-log-analytics-monitoring-agent",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/guest-configuration-policy.md",
+         "redirect_url": "/azure/governance/machine-configuration/how-to/develop-custom-package/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/onboard-at-scale.md",
+         "redirect_url": "/azure/virtual-machines/updates-maintenance-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/onboarding-automation.md",
+         "redirect_url": "/azure/virtual-machines/updates-maintenance-overview",
+         "redirect_document_id": false
+      },
+       {
+         "source_path": "docs/manage/azure-server-management/onboarding-overview.md",
+         "redirect_url": "/azure/virtual-machines/updates-maintenance-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/onboard-single-vm.md",
+         "redirect_url": "/azure/virtual-machines/updates-maintenance-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/ongoing-management-overview.md",
+         "redirect_url": "/azure/virtual-machines/updates-maintenance-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/prerequisites.md",
+         "redirect_url": "/azure/azure-monitor/logs/workspace-design",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/setup-alerts.md",
+         "redirect_url": "/azure/azure-monitor/alerts/alerts-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/tools-services.md",
+         "redirect_url": "/azure/virtual-machines/updates-maintenance-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-server-management/update-schedules.md",
+         "redirect_url": "/azure/update-manager/scheduled-patching#schedule-recurring-updates-on-a-single-vm",
+         "redirect_document_id": false
+      }
+   ]    
 }
