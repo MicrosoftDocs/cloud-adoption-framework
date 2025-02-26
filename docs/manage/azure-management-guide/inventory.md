@@ -91,7 +91,6 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ::: zone target="chromeless"
 
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -122,46 +121,10 @@ To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 
 Azure Monitor Agent (AMA) collects monitoring data from the guest operating system of Azure and hybrid virtual machines and delivers it to Azure Monitor for use by features, insights, and other services such as Microsoft Sentinel and Microsoft Defender for Cloud.
 
-::: zone target="chromeless"
-
-
-::: zone-end
-
-::: zone target="docs"
-
 ### Learn more
 
 To learn more, see the [Azure Monitor Agent overview](/azure/azure-monitor/agents/azure-monitor-agent-overview).
 
-## Onboard solutions
-
-::: zone-end
-::: zone target="chromeless"
-
-## [Onboard solutions](#tab/Configure-solutions)
-
-::: zone-end
-
-To enable solutions, you need to configure the Log Analytics workspace. Onboarded Azure VMs and on-premises servers get the solutions from the Log Analytics workspaces they're connected to.
-
-There are two approaches to onboarding:
-
-- [Single VM](../azure-server-management/onboard-single-vm.md)
-- [Entire subscription](../azure-server-management/onboard-at-scale.md)
-
-Each article guides you through a series of steps to onboard these solutions:
-
-- Azure Update Manager
-- Change Tracking and Inventory in Azure Automation
-- Azure activity log
-- Azure Log Analytics Agent Health
-- Antimalware assessment
-- Azure Monitor for VMs
-- Microsoft Defender for Cloud
-
-Each of the previous steps helps establish inventory and visibility.
-
 ## Microsoft Cloud for Sovereignty transparency logs
 
 If you're using Microsoft Cloud for Sovereignty, you can use [transparency logs](/industry/sovereignty/transparency-logs) to understand when Microsoft engineers access your resources. These logs help with sovereignty compliance and other regulatory requirements.
-

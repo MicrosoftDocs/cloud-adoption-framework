@@ -21,7 +21,7 @@ The [Manage methodology](../../manage/index.md) of the Cloud Adoption Framework 
 
 ## Prerequisite: Establish a management baseline
 
-A management baseline establishes the foundation for operations management. It represents the minimum set of tools and processes that should be applied to every asset in a cloud environment. For high-level information, see [Cloud management disciplines](../../manage/considerations/discipline.md) and [Overview of Azure server management services](../../manage/azure-server-management/index.md). The disciplines and guidance can be applied to any landing zone to improve initial operations.
+A management baseline establishes the foundation for operations management. It represents the minimum set of tools and processes that should be applied to every asset in a cloud environment. For high-level information, see [Cloud management disciplines](../../manage/considerations/discipline.md). The disciplines and guidance can be applied to any landing zone to improve initial operations.
 
 An effective management baseline encompasses three areas:
 
@@ -76,7 +76,6 @@ Workload specialization means to invest in ongoing operations of a specific work
 The following links provide best practices for improving landing zone operations.
 
 - [Establish operational management practices in the cloud](../../manage/best-practices.md): This section of the Cloud Adoption Framework guides you through various transitions into operational management in the cloud.
-- [Azure server management](../../manage/azure-server-management/index.md): An onboarding guide to incorporating the cloud-native tools and services needed to manage operations.
 - [Hybrid monitoring](../../manage/monitor/monitoring.md): Many customers have already made a substantial investment in System Center Operations Manager. For those customers, this guide to hybrid monitoring can help them compare and contrast the cloud-native reporting tools with Operations Manager tooling. This comparison makes it easier to decide which tools to use for operational management.
 - [Centralize management operations](../../manage/centralize-operations.md): Use Azure Lighthouse to centralize operations management across multiple Azure tenants.
 - [Establish an operational fitness review](../../manage/operational-fitness-review.md): Review an environment for operational fitness.

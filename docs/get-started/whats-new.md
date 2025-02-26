@@ -312,7 +312,6 @@ These files were updated to include considerations for [Azure Arc-enabled VMware
 
 - [Hybrid and multicloud migration](../scenarios/hybrid/migrate.md)
 - [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md)
-- [Azure Policy machine configuration extension](../manage/azure-server-management/guest-configuration-policy.md)
 
 ## June 2024
 
