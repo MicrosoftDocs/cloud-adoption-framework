@@ -3,7 +3,7 @@ title: Get help building a landing zone
 description: How to get help building a landing zone and what to expect.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 09/15/2022
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal
 ---

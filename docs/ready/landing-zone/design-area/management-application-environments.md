@@ -3,7 +3,7 @@ title: Manage application development environments in Azure landing zones
 description: Learn how to manage your organization's application environments in Azure landing zones by placing subscriptions in the appropriate management groups.
 author: brsteph
 ms.author: brsteph
-ms.date: 12/06/2023
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal
 ---
