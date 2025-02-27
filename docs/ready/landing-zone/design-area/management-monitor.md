@@ -3,7 +3,7 @@ title: Monitor Azure platform landing zone components
 description: Learn how to deploy baseline monitoring for your Azure platform services to ensure availability, reliability, security, and scalability.
 author: Jfaurskov
 ms.author: janfaurs
-ms.date: 09/11/2023
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---

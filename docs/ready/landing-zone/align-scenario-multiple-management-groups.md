@@ -4,7 +4,7 @@ description: Learn how to transition existing Azure environments comprised of si
 author: sebassem
 ms.author: sebassem
 ms.reviewer: tozimmergren
-ms.date: 09/18/2023
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.service: caf
 ---

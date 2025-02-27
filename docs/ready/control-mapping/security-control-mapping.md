@@ -3,7 +3,7 @@ title: Security control mapping with Azure landing zones
 description: Learn about security control mapping with Azure landing zones for regional and other regulatory compliance.
 author: Tshah2808
 ms.author: tanshah
-ms.date: 09/06/2022
+ms.date: 02/27/2025
 ms.topic: conceptual
 ---
 
