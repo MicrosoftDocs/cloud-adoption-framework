@@ -34,7 +34,7 @@ AI deployment management is about defining who can deploy AI resources and who g
     :::image type="content" source="./images/workload-team-ai-management.svg" alt-text="Diagram showing workload-team management of AI workloads." lightbox="./images/workload-team-ai-management.svg" border="false":::
     *Figure 1. Workload-team management of AI resources.*
 
-- *Use a shared management of AI resources increased AI governance.* In a shared AI management approach, a central team manages AI resources for all AI workloads. This team deploys core AI resources and configures security and governance that all workload teams use. Use this approach if you want a single team to control AI deployments and governance across your workloads.
+- *Use central AI team management for increased AI governance.* In this approach, a single team manages AI resources for all AI workloads. This team deploys core AI resources and configures security and governance that all workload teams use. Use this approach if you want a single team to control AI deployments and governance across your workloads.
 
     :::image type="content" source="./images/central-ai-management.svg" alt-text="Diagram showing shared management of AI workloads." lightbox="./images/central-ai-management.svg" border="false":::
     *Figure 2. Central AI team management of AI resources.*
