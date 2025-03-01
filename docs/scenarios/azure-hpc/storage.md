@@ -42,7 +42,7 @@ In Azure HPC clusters, you can create compute nodes as virtual machines (VMs) to
 
 When running jobs, compute nodes must perform read and write operations on a shared data source. Nodes access this data source in a range of scenarios that lie between the following two extremes:
 
-- **One set of data to many compute nodes.** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Though they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
+- **One data source to many compute nodes.** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Although they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
 
 - **Many data sources to many compute nodes.** In this scenario, there are many data sources on the network that all the compute nodes access for working data. Although they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
 
