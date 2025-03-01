@@ -108,7 +108,7 @@ Consider the following network requirements:
 
 Choose the solution that's best suited for your unique I/O and capacity requirements.
 
-- Consider using [Standard or Premium Blob Storage](/azure/storage/blobs/storage-blobs-introduction) for high-throughput, low-latency storage. It provides the following benefits:
+- **For high-throughput, low-latency storage**, consider using [Standard or Premium Blob Storage](/azure/storage/blobs/storage-blobs-introduction). Standard or Premium Blob Storage provides the following benefits:
 
   - It provides exabyte-scale, high-throughput, low-latency access, a familiar file system, and multi-protocol access, including REST, HDFS, NFS.
 
