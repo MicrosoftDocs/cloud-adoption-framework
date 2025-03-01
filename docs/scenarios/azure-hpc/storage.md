@@ -113,7 +113,7 @@ Choose the solution that's best suited for your unique I/O and capacity requirem
 
   - It supports NFS 3.0 at the blob service endpoint for high-throughput, read-heavy workloads.
 
-  - You can optimize costs by moving data to cooler storage tiers. This optimization is possible through lifecycle management that's based on the last update or access time and intelligent tiering with customizable policies.
+  - Supports cost optimization by allowing you to move data to cooler storage tiers. This optimization is possible through lifecycle management that's based on the last update or access time and intelligent tiering with customizable policies.
 
 -  **For ReadWriteMany (unique) or write-once, read-once applications**, consider using [Azure NetApp Files](/azure/azure-netapp-files). Azure NetApp Files provides the following benefits:
 
