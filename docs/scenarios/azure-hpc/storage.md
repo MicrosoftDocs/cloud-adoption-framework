@@ -114,7 +114,7 @@ Choose the solution that's best suited for your unique I/O and capacity requirem
 
   - Blob storage is cost effective.
 
-  - You can mount Blob Storage as a file system by using [BlobFuse](/azure/storage/blobs/storage-how-to-mount-container-linux). Doing so makes it easy to allow multiple nodes to mount the same container for read-only scenarios.
+  -  Supports the ability to mount Blob Storage as a file system by using [BlobFuse](/azure/storage/blobs/storage-how-to-mount-container-linux). Doing so makes it easy to allow multiple nodes to mount the same container for read-only scenarios.
 
   - It supports NFS 3.0 at the blob service endpoint for high-throughput, read-heavy workloads.
 
