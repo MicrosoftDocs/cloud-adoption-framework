@@ -115,7 +115,7 @@ Choose the solution that's best suited for your unique I/O and capacity requirem
 
   - You can optimize costs by moving data to cooler storage tiers. This optimization is possible through lifecycle management that's based on the last update or access time and intelligent tiering with customizable policies.
 
-- Consider using [Azure NetApp Files](/azure/azure-netapp-files) for ReadWriteMany (unique) or write-once, read-once applications. It provides the following benefits:
+-  **For ReadWriteMany (unique) or write-once, read-once applications**, consider using [Azure NetApp Files](/azure/azure-netapp-files). Azure NetApp Files provides the following benefits:
 
   - A wide range of file protocols, such as NFSv3, NFSv4.1, and SMB3
 
