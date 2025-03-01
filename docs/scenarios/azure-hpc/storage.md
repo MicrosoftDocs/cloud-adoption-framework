@@ -132,9 +132,9 @@ Choose the solution that's best suited for your unique I/O and capacity requirem
 
 ### Network File System
 
-Network File System (NFS) is often used to provide access to shared storage locations. A server VM that uses NFS shares its local file system. In Azure, this file system is stored on one or more virtual hard disks (VHDs) that are hosted in Azure Storage. Clients can then mount the server's shared files and access the shared location directly.
+Network File System (NFS) is often used to provide access to shared storage locations over TCP/IP networks. A server VM that uses NFS shares its local file system. In Azure, this file system is stored on one or more virtual hard disks (VHDs) that are hosted in Azure Storage. Clients can then mount the server's shared files and access the shared location directly.
 
-NFS is often used for home directories and project spaces that require access across all nodes. It can provide a space for research groups that share data. In general, the throughput workloads are horizontally scalable with little dependency between individual tasks. Job schedulers divide the work across nodes and coordinate the activity. NFS is the typical shared storage across the nodes which is accessed via TCP/IP networks.
+NFS is often used for home directories and project spaces that require access across all nodes. It can provide a space for research groups that share data. In general, the throughput workloads are horizontally scalable with little dependency between individual tasks. Job schedulers divide the work across nodes and coordinate the activity. 
 
 NFS has the advantage of being easy to set up and maintain and is supported on both Linux and Windows operating systems. Multiple NFS servers can be used to spread storage across a network, but individual files are only accessible through a single server.
 
