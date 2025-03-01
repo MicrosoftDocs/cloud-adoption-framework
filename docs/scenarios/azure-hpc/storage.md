@@ -39,7 +39,7 @@ In Azure HPC clusters, compute nodes are virtual machines (VMs) that you can qui
 
 - **One set of data to many compute nodes.** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Though they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
 
-- **Many sets of data to many compute nodes.** In this scenario, there are many data sources on the network that all the compute nodes access for working data. Though they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
+- **Many data sources to many compute nodes.** In this scenario, there are many data sources on the network that all the compute nodes access for working data. Although they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
 
 ### Distribution of workload traffic
 
