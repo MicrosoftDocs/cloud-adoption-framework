@@ -35,7 +35,12 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 
 - HPC uses parallel processing and massive scalability to quickly and reliability perform large and complicated computing tasks that aren't practical or cost-effective to handle with traditional computing techniques.
 
-In Azure HPC clusters, compute nodes are virtual machines (VMs) that you can quickly create to perform jobs that are assigned to the cluster. These nodes distribute computation tasks across the cluster. This distribution helps achieve the high-performance parallel processing that's required to solve complex HPC problems. Compute nodes need to perform read and write operations on shared working storage when they run jobs. Nodes access this storage in a range of scenarios that lie between the following two extremes:
+
+###  Compute node distribution in HPC clusters
+
+In Azure HPC clusters, you can create compute nodes as virtual machines (VMs) to perform jobs that are assigned to a cluster. To help achieve the high-performance parallel processing that's required to solve complex HPC problems, the compute nodes distribute those jobs across the cluster. 
+
+When running jobs, compute nodes must perform read and write operations on a shared data source. Nodes access this data source in a range of scenarios that lie between the following two extremes:
 
 - **One set of data to many compute nodes.** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Though they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
 
