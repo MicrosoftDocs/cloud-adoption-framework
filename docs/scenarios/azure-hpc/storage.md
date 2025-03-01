@@ -33,7 +33,7 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 
 Large-scale batch and HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance input/output (I/O) requirements and massive scalability needs of [HPC](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
 
-HPC solves complex problems which aren't practical or cost-effective to handle with traditional computing techniques. HPC solves these problems through a combination of parallel processing and massive scalability to perform large and complicated computing tasks quickly, efficiently, and reliably.
+- HPC uses parallel processing and massive scalability to quickly and reliability perform large and complicated computing tasks that aren't practical or cost-effective to handle with traditional computing techniques.
 
 In Azure HPC clusters, compute nodes are virtual machines (VMs) that you can quickly create to perform jobs that are assigned to the cluster. These nodes distribute computation tasks across the cluster. This distribution helps achieve the high-performance parallel processing that's required to solve complex HPC problems. Compute nodes need to perform read and write operations on shared working storage when they run jobs. Nodes access this storage in a range of scenarios that lie between the following two extremes:
 
