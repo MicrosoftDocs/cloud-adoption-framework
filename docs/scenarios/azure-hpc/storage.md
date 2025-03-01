@@ -29,9 +29,9 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 :::image type="content" source="media/storage-selection-flow.png" alt-text="Diagram that shows a decision tree of considerations when you choose a storage solution." lightbox="media/storage-selection-flow.png" border="false":::
 
 ## HPC considerations
-- [Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale. Azure supports several approaches for managing the speed and capacity of HPC applications.
+- [Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale.
 
-- Large-scale batch and HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance input/output (I/O) requirements and massive scalability needs of [HPC](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
+- The high-performance input/output (I/O) requirements and massive scalability needs of [HPC](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
 
 - HPC uses parallel processing and massive scalability to quickly and reliability perform large and complicated computing tasks that aren't practical or cost-effective to handle with traditional computing techniques.
 
@@ -112,7 +112,7 @@ Choose the solution that's best suited for your unique I/O and capacity requirem
 
   - Provides exabyte-scale, high-throughput, low-latency access, a familiar file system, and multi-protocol access, including REST, HDFS, NFS.
 
-  - Blob storage is cost effective.
+  - Blob storage is cost effective, since it is designed to handle petabytes of data, while offering features like lifecycle management, which facilitate the archival and deletion of data to lower storage costs over time. 
 
   -  Supports the ability to mount Blob Storage as a file system by using [BlobFuse](/azure/storage/blobs/storage-how-to-mount-container-linux). Doing so makes it easy to allow multiple nodes to mount the same container for read-only scenarios.
 
