@@ -155,7 +155,7 @@ Similar to NFS, you can create a multi-node BeeGFS or Lustre file system. The pe
 
 ## HPC components
 
-- Azure NetApp Files and local disks are typically used to handle the more latency and IOPS-sensitive workloads. Consider using Azure NetApp Files for workloads of up to 4,000 cores, with a throughput up to 12.8 GiBps, and workloads that benefit from or require multiprotocol NFS and Server Message Block (SMB) access to the same data set.
+- Azure NetApp Files and local disks are typically used to handle the latency-sensitive and IOPS-sensitive workloads. Consider using Azure NetApp Files for workloads of up to 4,000 cores, with a throughput up to 12.8 GiBps, and workloads that benefit from or require multiprotocol NFS and Server Message Block (SMB) access to the same data source.
 
 - Managed Lustre provides faster and higher capacity storage for HPC workloads. This solution works for medium to large workloads and can support 50,000 or more cores, with throughput up to 500 GBps, and storage capacity up to 2.5 PiB.
 
