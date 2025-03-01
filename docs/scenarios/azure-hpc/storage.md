@@ -29,7 +29,7 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 :::image type="content" source="media/storage-selection-flow.png" alt-text="Diagram that shows a decision tree of considerations when you choose a storage solution." lightbox="media/storage-selection-flow.png" border="false":::
 
 ## HPC considerations
-[Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale. Azure supports several approaches for managing the speed and capacity of HPC applications.
+- [Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale. Azure supports several approaches for managing the speed and capacity of HPC applications.
 
 - Large-scale batch and HPC workloads have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance input/output (I/O) requirements and massive scalability needs of [HPC](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
 
