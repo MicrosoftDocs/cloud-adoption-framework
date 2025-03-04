@@ -17,7 +17,7 @@ This article explains how to plan, configure, and optimize monitoring across Azu
 
 Your monitoring scope defines your monitoring responsibilities. In a cloud environment, you share monitoring responsibilities, which differ by workload. Understand your monitoring responsibilities, so you have coverage across every monitoring area for each workload. The following table shows what you must monitor based on each workload type. Infrastructure services (IaaS) and platform services (PaaS) operate within a cloud environment like Azure. Software services (SaaS) refer to solutions such as Microsoft 365.
 
-| Monitoring areas    | On-premises monitoring | IaaS monitoring (Azure) | PaaS monitoring (Azure) | SaaS monitoring (Microsoft) |
+| Monitoring areas    | On-premises monitoring | IaaS monitoring | PaaS monitoring | SaaS monitoring |
 |---------------------|------------------------|-----------------|-----------------|-----------------|
 | Service health      | X                      | X               | X               | X               |
 | Security            | X                      | X               | X               | X               |
