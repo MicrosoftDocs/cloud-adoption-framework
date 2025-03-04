@@ -23,6 +23,8 @@ AI enhances individual efficiency and improves business processes. Generative AI
 
 - *Explore industry use cases.* Research how similar organizations or industries use AI to solve problems or enhance operations. Use tools like the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for inspiration and to evaluate which approaches might suit your needs.
 
+- *Use customer feedback.* Customer feedback can reveal use cases that would have an impact on customer satisfaction when automated with AI.
+
 - *Set AI targets.* For each identified use case, clearly define the goal (general purpose), objective (desired outcome), and success metric (quantifiable measure). These elements will serve as benchmarks to guide your AI adoption and measure its impact.
 
  For more information, see [example AI strategy](#example-ai-strategy).
