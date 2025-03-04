@@ -2382,7 +2382,7 @@
       },
       {
          "source_path": "docs/strategy/business-outcomes/fiscal-outcomes.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/cost-efficiency",
          "redirect_document_id": false
       },
       {
@@ -2407,7 +2407,7 @@
       },
       {
          "source_path": "docs/strategy/cloud-accounting.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/cost-efficiency",
          "redirect_document_id": false
       },
       {
@@ -2427,12 +2427,12 @@
       },
       {
          "source_path": "docs/strategy/finance-vocabulary-terms.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/cost-efficiency",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/strategy/financial-considerations/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/financial-efficiency",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/cost-efficiency",
          "redirect_document_id": false
       },
       {
@@ -2824,6 +2824,11 @@
          "source_path": "docs/manage/azure-server-management/update-schedules.md",
          "redirect_url": "/azure/update-manager/scheduled-patching#schedule-recurring-updates-on-a-single-vm",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/strategy/inform/financial-efficiency.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/cost-efficiency",
+         "redirect_document_id": true
       }
    ]    
 }

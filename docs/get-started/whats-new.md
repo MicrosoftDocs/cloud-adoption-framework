@@ -59,7 +59,7 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 - [Define your strategy team](../strategy/define-your-team.md): Learn about the key roles and responsibilities of a cloud strategy team and how to build a cross-functional team to drive your cloud adoption strategy.
 - [Prepare your organization](../strategy/prepare-organizational-alignment.md): Learn how to align your cloud adoption strategy with your organization's goals and objectives.
   - [Inform your cloud adoption strategy](../strategy/inform/index.md): Learn about the importance of informing your cloud adoption strategy and how to gather information, assess your current state, and define your future state.
-  - [Financial efficiency considerations](../strategy/inform/financial-efficiency.md): Learn about the importance of financial efficiency and how to optimize costs in your cloud adoption strategy.
+  - [Cost efficiency considerations](../strategy/inform/cost-efficiency.md): Learn about the importance of financial efficiency and how to optimize costs in your cloud adoption strategy.
   - [AI considerations](../strategy/inform/ai.md): Learn about considerations for integrating AI into your cloud adoption strategy. Use analytics, machine learning, and automation to optimize operations.
   - [Resiliency considerations](../strategy/inform/resiliency.md): Explore guidance on improving your infrastructure5's ability to maintain functionality and availability despite disruptions or failures.
   - [Security considerations](../strategy/inform/security.md): Learn how to design your cloud infrastructure with security in mind to protect your data and applications from unauthorized access and data breaches.

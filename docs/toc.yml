@@ -95,8 +95,8 @@ items:
       items:
         - name: Overview
           href: strategy/inform/index.md
-        - name: Financial efficiency
-          href: strategy/inform/financial-efficiency.md
+        - name: Cost efficiency
+          href: strategy/inform/cost-efficiency.md
         - name: AI
           href: strategy/inform/ai.md
         - name: Resiliency
