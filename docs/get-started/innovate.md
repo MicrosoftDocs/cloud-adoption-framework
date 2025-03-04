@@ -138,7 +138,6 @@ Define the plan for long-term operational responsibilities for the planned innov
 
 **Guidance to support deliverable completion:**
 
-- [Expand the management baseline](../manage/best-practices.md): This section of the Cloud Adoption Framework guides you through various transitions into operational management in the cloud.
 - [Get specific with advanced operations](../manage/design-principles.md): Discover ways to go beyond your management baseline.
 - If advanced operations are required to support your operations needs, evaluate the [business commitments](../manage/considerations/business-alignment.md) to determine operational responsibilities for both teams.
 
