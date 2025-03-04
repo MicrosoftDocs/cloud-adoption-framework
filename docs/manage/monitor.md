@@ -177,8 +177,8 @@ Visualize monitoring data refers to creating dashboards and reports that present
 
 Azure has many services that support the different that you need in your cloud environment. Each service targets one or more. Combine services to provide the features that you need for a comprehensive monitoring environment.
 
-| Category                      | Tool                                                                 | Description                                                                                                                                            |
-|-------------------------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Category                      | Tool                                                                 | Description                                                                                   |
+|-------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Multi-environment monitoring  | [Azure Monitor](/azure/azure-monitor)                                | Serves as the central platform that collects telemetry from cloud and on‑premises environments. It monitors resource performance and operational state. |
 | Multi-environment extension   | [Azure Arc](/azure/azure-arc/overview)                               | Extends Azure management, including monitoring and governance, to on‑premises, multicloud, and edge environments.                                        |
 | Service health monitoring     | [Azure Service Health](/azure/service-health/overview)               | Provides real‑time status and personalized information about service issues, planned maintenance, and other changes affecting your Azure services and regions. |
