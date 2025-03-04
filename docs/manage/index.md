@@ -24,5 +24,3 @@ The cloud architect serves as the thought leader and facilitator to bring these 
 Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for operations and management of deployment solutions. Within this framework, these specialists are referred to frequently as *cloud operations*, or collectively as the *cloud operations team*.
 
 If you want to follow this guide from beginning to end, this content aids in developing a robust cloud operations strategy. The guidance walks you through the theory and implementation of such a strategy.
-
-You can also apply the methodology to [establish clear business commitments](./considerations/business-alignment.md).
