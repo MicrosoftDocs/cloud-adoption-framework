@@ -175,7 +175,7 @@ Visualize monitoring data refers to creating dashboards and reports that present
 
 ## Azure monitoring tools
 
-Azure has many services that support the different that you need in your cloud environment. Each service targets one or more. Combine services to provide the features that you need for a comprehensive monitoring environment.
+Here's a table of all the Azure services and tools referenced in this article.
 
 | Category                      | Tool                                                                 | Description                                                                                   |
 |-------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
