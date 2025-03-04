@@ -11,7 +11,7 @@ ms.custom: UpdateFrequency2
 
 # Monitor your Azure cloud estate
 
-This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments. Monitoring your Azure environment means collecting and analyzing data from all cloud workloads and central services. It helps you find issues before they cause disruptions, spot performance bottlenecks, and keep digital resources secure. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
+This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments. Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
 
 ## Understand your monitoring scope
 
@@ -124,7 +124,7 @@ Monitoring data means overseeing data governance, protection, and usage across A
 
 ### Monitor code and runtime
 
-At the workload level, you need to gather telemetry (application logs, metrics, and traces) on your application code and execution to identify issues and optimize performance. Real-time insights into application behavior enable prescriptive troubleshooting and refinement. 
+At the workload level, you need to gather telemetry (application logs, metrics, and traces) on your application code and execution to identify issues and optimize performance. Real-time insights into application behavior enable prescriptive troubleshooting and refinement.
 
 For workloads in Azure, use [Application Insights](/azure/azure-monitor/app/app-insights-overview) to collect runtime telemetry (instrumentation), so you can identify performance bottlenecks and errors. Application Insights enables you to monitor your live web applications, detect performance anomalies, and gain insights into user interactions, helping you continuously improve performance and usability. For workload-specific code and run monitoring guidance, see the Well-Architected Framework:
 
