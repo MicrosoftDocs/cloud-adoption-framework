@@ -544,6 +544,11 @@
       "source_path": "docs/manage/monitor/monitoring.md",
       "redirect_url": "/azure/cloud-adoption-framework/manage/monitor",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/manage/best-practices.md",
+      "redirect_url": "/azure/cloud-adoption-framework/manage/",
+      "redirect_document_id": false
     }
   ]
 }
