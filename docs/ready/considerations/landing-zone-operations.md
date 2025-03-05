@@ -75,7 +75,6 @@ Workload specialization means to invest in ongoing operations of a specific work
 
 The following links provide best practices for improving landing zone operations.
 
-- [Establish operational management practices in the cloud](../../manage/best-practices.md): This section of the Cloud Adoption Framework guides you through various transitions into operational management in the cloud.
 - [Hybrid monitoring](../../manage/monitor/monitoring.md): Many customers have already made a substantial investment in System Center Operations Manager. For those customers, this guide to hybrid monitoring can help them compare and contrast the cloud-native reporting tools with Operations Manager tooling. This comparison makes it easier to decide which tools to use for operational management.
 - [Centralize management operations](../../manage/centralize-operations.md): Use Azure Lighthouse to centralize operations management across multiple Azure tenants.
 - [Establish an operational fitness review](../../manage/operational-fitness-review.md): Review an environment for operational fitness.

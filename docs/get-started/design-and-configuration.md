@@ -135,7 +135,6 @@ Migrating to the cloud without understanding ongoing operations is risky. In par
 
 - [Establish a management baseline](../manage/index.md)
 - [Define business commitments](../manage/considerations/business-alignment.md)
-- [Expand the management baseline](../manage/best-practices.md)
 - [Get specific with advanced operations](../manage/design-principles.md)
 
 <br>

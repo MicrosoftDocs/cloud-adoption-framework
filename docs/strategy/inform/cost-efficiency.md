@@ -1,5 +1,5 @@
 ---
-title: Financial Efficiency Considerations for Your Cloud Adoption Strategy
+title: Cost efficiency considerations for your cloud adoption strategy
 description: Learn how to optimize costs that are associated with cloud services and ensure that your organization gets the best value for its investment.
 ms.author: tozimmergren
 author: Zimmergren
@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.date: 02/03/2025
 ---
 
-# Financial efficiency considerations for your cloud adoption strategy
+# Cost efficiency considerations for your cloud adoption strategy
 
-Financial efficiency in your cloud adoption means that you effectively manage and optimize costs that are associated with cloud service usage. Financial efficiency involves strategic decisions to help ensure that your organization gets the best value for your investment and minimizes unnecessary expenses.
+Cost efficiency in your cloud adoption means that you effectively manage and optimize costs that are associated with cloud service usage. Cost efficiency involves strategic decisions to help ensure that your organization gets the best value for your investment and minimizes unnecessary expenses.
 
-Cloud adoption helps drive business growth, expand market share, and increase revenue. Implement financial efficiency to help optimize your cloud adoption journey.
+Cloud adoption helps drive business growth, expand market share, and increase revenue. Implement cost efficiency to help optimize your cloud adoption journey.
 
 ## Shift from a CapEx model to an OpEx model
 
@@ -38,9 +38,9 @@ Consider the following recommendations when shifting from a CapEx model to an Op
 
 - _Maximize your return on investment:_ Understand the cost-to-benefit ratio, and ensure that the cloud services you plan to use directly contribute to business objectives. Explore the [Azure total cost of ownership calculator](https://azure.microsoft.com/pricing/tco/calculator/), [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/), and [Microsoft Cost Management](https://azure.microsoft.com/products/cost-management).
 
-## Establish best practices with financial operations (FinOps)
+## Establish best practices with the FinOps framework
 
-To implement financial efficiency in cloud adoption, you must effectively manage and optimize cloud investments to ensure that they deliver maximum business value. During this process, you must:
+To implement cost efficiency in cloud adoption, you must effectively manage and optimize cloud investments to ensure that they deliver maximum business value. During this process, you must:
 
 - Gain a clear understanding of cloud usage and associated costs.
 - Quantify the business value of cloud initiatives.
@@ -48,13 +48,13 @@ To implement financial efficiency in cloud adoption, you must effectively manage
 
 Proper financial management plays a crucial role in this process. It helps prevent cost overruns and align spending with actual operational needs. It also helps ensure that every dollar that you invest in the cloud directly contributes to achieving business objectives. Effective financial management safeguards against inefficiencies and reinforces strategic alignment across teams.
 
-Embrace financial operations to cultivate a culture of financial responsibility that emphasizes accountability and data-driven decision making. Essential practices empower this culture, such as accurate forecasting, strategic budgeting, and real-time cost tracking. Financial operations also encourage collaboration between finance, operations, and engineering teams to ensure shared ownership of cloud spending and outcomes.
+Embrace FinOps to cultivate a culture of financial responsibility that emphasizes accountability and data-driven decision making. Essential practices empower this culture, such as accurate forecasting, strategic budgeting, and real-time cost tracking. FinOps also encourage collaboration between finance, operations, and engineering teams to ensure shared ownership of cloud spending and outcomes.
 
-Implement financial operations to find the right balance between innovation and cost effectiveness. A proper balance helps you make your cloud adoption a strategic advantage rather than a financial burden.
+Implement FinOps to find the right balance between innovation and cost effectiveness. A proper balance helps you make your cloud adoption a strategic advantage rather than a financial burden.
 
 **Recommendations:**
 
-Consider the following financial efficiency considerations for your cloud adoption strategy.
+Consider the following cost efficiency considerations for your cloud adoption strategy.
 
 - _Explore the FinOps Framework:_ Check out the [FinOps Framework](/cloud-computing/finops/) for best practices to maximize cloud business value.
 
