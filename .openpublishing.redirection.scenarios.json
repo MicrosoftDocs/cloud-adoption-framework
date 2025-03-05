@@ -539,6 +539,16 @@
       "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/purview-deployment.md",
       "redirect_url": "/purview/data-catalog-get-started",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/manage/monitor/monitoring.md",
+      "redirect_url": "/azure/cloud-adoption-framework/manage/monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/manage/best-practices.md",
+      "redirect_url": "/azure/cloud-adoption-framework/manage/",
+      "redirect_document_id": false
     }
   ]
 }
