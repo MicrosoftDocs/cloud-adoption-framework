@@ -89,6 +89,22 @@ For each AI use case, you should define an AI data strategy. The data strategy s
 
  For an example data strategy aligned to different use cases, see the [example AI strategy](#example-ai-strategy).
 
+## Define a Data Pipeline
+
+A data pipeline is the backbone of AI systems, enabling the flow of data from source to consumption. Key stages include:
+
+- *Data Ingestion:* Identify and integrate data sources (e.g. databases, APIs, IoT devices, third-party data, Azure Data Factory for data ingestion)
+
+- *Data Storage:* Choose appropriate storage solutions based on data type and volume: (Structured Data, Unstructured Data, Real-time data)
+
+- *Data Processing:* Use ETL (Extract, Transform, Load) or ELT pipelines to clean, transform and prepare data. Leverage Shortcuts or Mirroring features in Microsoft Fabric.
+
+- *Data Quality Assurance:* Implement automated checks for data quality (e.g. anomaly detection, validation rules). Monitor data pipelines for failures or inconsistencies.
+
+- *Data Versioniong:* Track changes to datasets to ensure reproducibility and traceability.
+
+- *Real-Time and Batch Processing:* Enable real-time data processing for time-sensitive applications (e.g. fraud detection). Use batch processing for large-scale data analysis. 
+
 ## Define a responsible AI strategy
 
 For each AI use case, you should define a responsible AI strategy that outlines your role in ensuring AI solutions remain trustworthy and beneficial for all users. Responsibilities might vary depending on the technology adopted in each case. If necessary, create a broader summary responsible AI strategy that encompasses overarching principles derived from individual use cases.
