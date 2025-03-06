@@ -32,17 +32,14 @@ Your monitoring scope defines your monitoring responsibilities. In a cloud envir
 
 ## Plan your monitoring strategy
 
-A monitoring strategy outlines your oversight requirements across every environment. You need a clear plan to unify visibility and support operational maturity. You need to detect, diagnose, and prevent issues with structured insight into your entire system. Here's how:
+A monitoring strategy outlines your oversight requirements across every environment. The goal of monitoring is to detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. Here's how:
 
-1. ***Align with your cloud operating model.*** Establish a central monitoring baseline policy for common resource types, informed by the CISO, SOC, or compliance teams. Beyond this baseline, define workload team monitoring responsibilities based on your chosen operating model: centralized, decentralized, or hybrid.
+1. ***Choose a monitoring approach.*** Define monitoring responsibilities based on your chosen operating model: centralized or shared. Pick the approach that's best for you.
 
-| Option| Definition| Best for | Pros | Cons |
-|------|--------|------|--------|---------|
-| Centralized monitoring| One dedicated team centrally monitors all workloads, manages monitoring tools, sets alerts, and maintains dashboards. | Organizations new to cloud or with fewer workloads. | Consistent standards for data collection and alerting. Easier to enforce compliance and governance. Efficient cost control through centralized tooling.| Slower incident response (less workload-specific context). Less ownership from workload teams. Can become a bottleneck as complexity grows. |
-| Decentralized monitoring| Each workload or DevOps team monitors its own workloads end-to-end, including both infrastructure and software.| Organizations with strong DevOps maturity, automation, and independent workload teams. | Fast, context-aware incident response. Increased ownership and accountability of workload teams. Tailored monitoring solutions to specific workloads.| Risk of duplicated effort, tool proliferation, and higher costs. Potential inconsistency in data standards and compliance. Requires high maturity in DevOps skills and tooling. |
-| Hybrid monitoring | Central team defines monitoring standards, provides tools, oversees governance, and monitors shared infrastructure. Workload teams handle application-specific monitoring and operational incidents. | Organizations balancing standardization with agility, typically medium-to-large enterprises. | Centralized governance with decentralized flexibility. Clear division of responsibilities reduces duplication. Combines fast incident response with consistent standards and compliance. | Requires clear responsibility definitions and coordination. |
-
-1. ***Establish your monitoring roadmap.*** Create a roadmap that addresses three progressive levels of operational maturity: detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. This roadmap clarifies how you should grow your monitoring capabilities so you can prioritize improvements, allocate resources effectively, and maintain consistent reliability.
+    | Monitoring approach | Definition| Best for | Pros | Cons |
+    |------|--------|------|--------|---------|
+    | Centralized monitoring| One team centrally manages all monitoring tasks. | New cloud users or fewer workloads. | Consistent standards, easier compliance, efficient cost control. | Slower response, less workload-specific context, potential bottlenecks. |
+    | Shared monitoring | Central team defines monitoring standards, provides tools, oversees governance, and monitors shared services. Workload teams handle workload monitoring and operational incidents. | Medium-to-large enterprises. | Combines governance with flexibility, clear responsibilities, fast response. | Requires clear definitions and coordination. |
 
 1. ***Identify what you need to monitor.*** Take a thorough inventory of your entire environment, including Azure, other clouds, edge deployments, and on-premises systems. Use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter) to gather a baseline resource list. This comprehensive approach helps you detect coverage gaps and ensures that you capture critical data from all relevant sources. Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
 
@@ -56,7 +53,7 @@ A monitoring strategy outlines your oversight requirements across every environm
 
 1. ***Assign monitoring responsibilities.*** You have two primary responsibilities: monitor your entire cloud estate and monitor each workload. Define baseline monitoring requirements, specify the data you must capture, and clarify who owns each monitoring task. These steps help you avoid overlooked issues, streamline response efforts, and foster consistent practices across your organization.
 
-1. ***Test and refine your monitoring approach.***Verify that you capture the correct data and trigger alerts at the right thresholds. Adjust data collection and reliability targets based on new findings. Iterative improvements help you adapt to shifting business needs, monitoring gaps, and maintain optimal system performance.
+1. ***Test and refine your monitoring approach.*** Verify that you capture the correct data and trigger alerts at the right thresholds. Adjust data collection and reliability targets based on new findings. Iterative improvements help you adapt to shifting business needs, monitoring gaps, and maintain optimal system performance.
 
 ## Design a monitoring solution
 
