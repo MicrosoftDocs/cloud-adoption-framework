@@ -17,22 +17,30 @@ This article explains how to plan, configure, and optimize monitoring across Azu
 
 Your monitoring scope defines your monitoring responsibilities. In a cloud environment, you share monitoring responsibilities, which differ by workload. Understand your monitoring responsibilities, so you have coverage across every monitoring area for each workload. The following table shows what you must monitor based on each workload type. Infrastructure services (IaaS) and platform services (PaaS) operate within a cloud environment like Azure. Software services (SaaS) refer to solutions such as Microsoft 365.
 
-| Monitoring areas    | On-premises monitoring | IaaS monitoring | PaaS monitoring | SaaS monitoring |
+| Monitoring areas| On-premises monitoring | IaaS monitoring | PaaS monitoring | SaaS monitoring |
 |---------------------|------------------------|-----------------|-----------------|-----------------|
-| Service health      | X                      | X               | X               | X               |
-| Security            | X                      | X               | X               | X               |
-| Compliance          | X                      | X               | X               | X               |
-| Cost                | X                      | X               | X               | X               |
-| Data                | X                      | X               | X               | X               |
-| Code and runtime    | X                      | X               | X               |                 |
-| Cloud resources     | X                      | X               | X               |                 |
-| Operating system    | X                      | X               |                 |                 |
-| Virtualization layer| X                      | X               |                 |                 |
-| Physical hardware   | X                      |                 |                 |                 |
+| Service health| X| X | X | X |
+| Security| X| X | X | X |
+| Compliance| X| X | X | X |
+| Cost| X| X | X | X |
+| Data| X| X | X | X |
+| Code and runtime| X| X | X | |
+| Cloud resources | X| X | X | |
+| Operating system| X| X | | |
+| Virtualization layer| X| X | | |
+| Physical hardware | X| | | |
 
 ## Plan your monitoring strategy
 
 A monitoring strategy outlines your oversight requirements across every environment. You need a clear plan to unify visibility and support operational maturity. You need to detect, diagnose, and prevent issues with structured insight into your entire system. Here's how:
+
+1. ***Align with your cloud operating model.*** Establish a central monitoring baseline policy for common resource types, informed by the CISO, SOC, or compliance teams. Beyond this baseline, define workload team monitoring responsibilities based on your chosen operating model: centralized, decentralized, or hybrid.
+
+| Option| Definition| Best for | Pros | Cons |
+|------|--------|------|--------|---------|
+| Centralized monitoring| One dedicated team centrally monitors all workloads, manages monitoring tools, sets alerts, and maintains dashboards. | Organizations new to cloud or with fewer workloads. | Consistent standards for data collection and alerting. Easier to enforce compliance and governance. Efficient cost control through centralized tooling.| Slower incident response (less workload-specific context). Less ownership from workload teams. Can become a bottleneck as complexity grows. |
+| Decentralized monitoring| Each workload or DevOps team monitors its own workloads end-to-end, including both infrastructure and software.| Organizations with strong DevOps maturity, automation, and independent workload teams. | Fast, context-aware incident response. Increased ownership and accountability of workload teams. Tailored monitoring solutions to specific workloads.| Risk of duplicated effort, tool proliferation, and higher costs. Potential inconsistency in data standards and compliance. Requires high maturity in DevOps skills and tooling. |
+| Hybrid monitoring | Central team defines monitoring standards, provides tools, oversees governance, and monitors shared infrastructure. Workload teams handle application-specific monitoring and operational incidents. | Organizations balancing standardization with agility, typically medium-to-large enterprises. | Centralized governance with decentralized flexibility. Clear division of responsibilities reduces duplication. Combines fast incident response with consistent standards and compliance. | Requires clear responsibility definitions and coordination. |
 
 1. ***Establish your monitoring roadmap.*** Create a roadmap that addresses three progressive levels of operational maturity: detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. This roadmap clarifies how you should grow your monitoring capabilities so you can prioritize improvements, allocate resources effectively, and maintain consistent reliability.
 
@@ -48,7 +56,7 @@ A monitoring strategy outlines your oversight requirements across every environm
 
 1. ***Assign monitoring responsibilities.*** You have two primary responsibilities: monitor your entire cloud estate and monitor each workload. Define baseline monitoring requirements, specify the data you must capture, and clarify who owns each monitoring task. These steps help you avoid overlooked issues, streamline response efforts, and foster consistent practices across your organization.
 
-1. ***Test and refine your monitoring approach.***  Verify that you capture the correct data and trigger alerts at the right thresholds. Adjust data collection and reliability targets based on new findings. Iterative improvements help you adapt to shifting business needs, monitoring gaps, and maintain optimal system performance.
+1. ***Test and refine your monitoring approach.***Verify that you capture the correct data and trigger alerts at the right thresholds. Adjust data collection and reliability targets based on new findings. Iterative improvements help you adapt to shifting business needs, monitoring gaps, and maintain optimal system performance.
 
 ## Design a monitoring solution
 
@@ -62,9 +70,9 @@ Designing a monitoring solution refers to creating a system for collecting and s
 
 1. ***Automate monitoring.*** You want an automated way to enforce your monitoring policies in larger environments.
 
-    - *Use Azure Policy.* Enforce what you collect and where you send it with Azure Policy. You can start with [built-in monitoring policies](/azure/azure-monitor/essentials/diagnostic-settings-policy) to enforce diagnostic settings. You can build custom policies as needed. You can also use Azure Policy to manage [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-associations#azure-policy) and [install the Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-policy) on virtual machines. Use Azure Policy to define your [Azure Monitor alert baseline](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-monitor) in an Azure landing zone.
+- *Use Azure Policy.* Enforce what you collect and where you send it with Azure Policy. You can start with [built-in monitoring policies](/azure/azure-monitor/essentials/diagnostic-settings-policy) to enforce diagnostic settings. You can build custom policies as needed. You can also use Azure Policy to manage [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-associations#azure-policy) and [install the Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-policy) on virtual machines. Use Azure Policy to define your [Azure Monitor alert baseline](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-monitor) in an Azure landing zone.
 
-    - *Use infrastructure as code (IaC).* Use [infrastructure as code](/azure/azure-monitor/resource-manager-samples) to configure and deploy Azure Monitor resources at scale. This method is the professional way to manage your resources.
+- *Use infrastructure as code (IaC).* Use [infrastructure as code](/azure/azure-monitor/resource-manager-samples) to configure and deploy Azure Monitor resources at scale. This method is the professional way to manage your resources.
 
 1. ***Optimize monitoring spend.*** First estimate the cost of your monitoring solution. When you have enough data, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate the cost of the collection long term and adjust the collection settings to meet your budget. Over time, conduct regular reviews the monitoring data you collect and store. What you collect, where you store it, and how long you store it affects the cost. Adjust storage retention periods to optimize cost without stopping the collection of certain monitoring data. To optimize costs further, stop collecting unhelpful logs. For more cost optimization tips, see [Cost optimization in Azure Monitor](/azure/azure-monitor/best-practices-cost).
 
@@ -147,11 +155,11 @@ Monitoring cloud resources covers watching control-plane activity, resource logs
 
 1. ***Monitor workload resources.*** For workload-specific cloud resource monitoring guidance, see the Well-Architected Framework:
 
-| Workload monitoring area  | Well-Architected Framework guidance |
+| Workload monitoring area| Well-Architected Framework guidance |
 |-------------------------|------------------------------------------------------------------------------------------------|
-| Azure services monitoring     | [Azure Service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Operational Excellence section*) |
-| Reliability             | [Recommendations for designing a reliable monitoring and alerting strategy](/azure/well-architected/reliability/monitoring-alerting-strategy) |
-| Performance efficiency  | [Recommendations for defining performance targets](/azure/well-architected/performance-efficiency/performance-targets)<br>[Collect workload performance data](/azure/well-architected/performance-efficiency/collect-performance-data) |
+| Azure services monitoring | [Azure Service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Operational Excellence section*) |
+| Reliability | [Recommendations for designing a reliable monitoring and alerting strategy](/azure/well-architected/reliability/monitoring-alerting-strategy) |
+| Performance efficiency| [Recommendations for defining performance targets](/azure/well-architected/performance-efficiency/performance-targets)<br>[Collect workload performance data](/azure/well-architected/performance-efficiency/collect-performance-data) |
 
 ## Configure alerting
 
@@ -161,7 +169,7 @@ Configuring alerting means setting up notifications based on performance thresho
 
 1. ***Define the severity of the alert.*** Have a system in place to categorize the severity of each alert. Apply a higher severity to resources that are critical to business operations, such as shared services and line of business workloads. Use a lower severity for other resources.
 
-1. ***Notify stakeholders.***  Identify who should receive a notification when an alert triggers. A decentralized approach routes relevant alerts to the right people. Start with a flexible method that alerts stakeholders when a resource approaches anomalous behavior. Configure at least one action group for each subscription. This approach ensures relevant personnel receive alerts. Include an email notification channel as a minimum requirement. Notify operations teams about lower-severity alerts and notify management about high-severity alerts. For more information, see [customize alerts with Azure Logic Apps](/azure/azure-monitor/alerts/alerts-logic-apps) and integrate with [IT service management product (ITSM)](/azure/azure-monitor/alerts/itsmc-overview).
+1. ***Notify stakeholders.***Identify who should receive a notification when an alert triggers. A decentralized approach routes relevant alerts to the right people. Start with a flexible method that alerts stakeholders when a resource approaches anomalous behavior. Configure at least one action group for each subscription. This approach ensures relevant personnel receive alerts. Include an email notification channel as a minimum requirement. Notify operations teams about lower-severity alerts and notify management about high-severity alerts. For more information, see [customize alerts with Azure Logic Apps](/azure/azure-monitor/alerts/alerts-logic-apps) and integrate with [IT service management product (ITSM)](/azure/azure-monitor/alerts/itsmc-overview).
 
 1. ***Select notification channels.*** Effective notification strategies enhance response times and mitigate potential impacts. Use email notification as a baseline and add SMS or integrate with incident management systems, as needed.
 
@@ -177,40 +185,40 @@ Visualize monitoring data refers to creating dashboards and reports that present
 
 Here's a table of all the Azure services and tools referenced in this article.
 
-| Category                      | Tool                                                                 | Description                                                                                   |
+| Category| Tool | Description |
 |-------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| Multi-environment monitoring  | [Azure Monitor](/azure/azure-monitor)                                | Serves as the central platform that collects telemetry from cloud and on‑premises environments. It monitors resource performance and operational state. |
-| Multi-environment extension   | [Azure Arc](/azure/azure-arc/overview)                               | Extends Azure management, including monitoring and governance, to on‑premises, multicloud, and edge environments.                                        |
-| Service health monitoring     | [Azure Service Health](/azure/service-health/overview)               | Provides real‑time status and personalized information about service issues, planned maintenance, and other changes affecting your Azure services and regions. |
-| Service health monitoring     | [Azure Resource Health](/azure/service-health/resource-health-overview) | Tracks the health of individual cloud resources and records issues over time for troubleshooting and reporting.                                         |
-| Security monitoring           | [Microsoft Entra monitoring](/entra/identity/monitoring-health/overview-monitoring-health) | Tracks identity interactions, sign‑in health, and audits changes to user accounts to safeguard access.                                                  |
-| Security monitoring           | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Protects your cloud resources with threat detection, vulnerability assessments, and security recommendations.                                           |
-| Security monitoring           | [Microsoft Sentinel](/azure/sentinel/overview)                       | Acts as a cloud‑native SIEM and SOAR solution that analyzes security telemetry and automates responses to threats.                                      |
-| Compliance monitoring         | [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance) | Enforces organizational standards and audits resource compliance at‑scale through automated assessments.                                                |
-| Compliance monitoring         | [Microsoft Purview Compliance Manager](/purview/compliance-manager) | Assesses regulatory compliance and provides insights and recommendations to reduce risk.                                                                |
-| Cost monitoring               | [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) | Estimates the cost of Azure services and helps plan and optimize your monitoring spend.                                                                 |
-| Cost monitoring               | [Azure Cost Management](/azure/cost-management-billing/costs/overview-cost-management) | Monitors and manages cloud spending while providing insights to optimize resource usage and costs.                                                      |
-| Data monitoring               | [Microsoft Purview](/purview/purview)                          | Governs and protects enterprise data by offering discovery, classification, and risk management capabilities.                                           |
-| Code and runtime monitoring   | [Application Insights](/azure/azure-monitor/app/app-insights-overview) | Monitors application performance with telemetry on code execution, performance, and usage to pinpoint issues.                                           |
-| Cloud resource monitoring     | [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) | Enables querying and exploration of your Azure resources, offering visibility across your cloud estate.                                                 |
-| Cloud resource monitoring     | [Network Watcher](/azure/network-watcher/network-watcher-overview)   | Monitors and diagnoses network performance and connectivity for Azure virtual networks and related resources.                                           |
-| Cloud resource monitoring     | [Connection Monitor](/azure/network-watcher/network-watcher-overview#connection-monitor) | Provides insights into connectivity across Azure, on‑premises, and multicloud environments.                                                            |
-| Cloud resource monitoring     | [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-policy) | Installs on virtual machines to collect telemetry from operating systems and applications.                                                              |
-| Cloud resource monitoring     | [Azure Activity Logs](/azure/azure-monitor/essentials/activity-log)   | Records control‑plane operations such as resource creation, updates, or deletions across Azure subscriptions.                                           |
-| Cloud resource monitoring     | [Azure Resource Logs](/azure/azure-monitor/essentials/resource-logs) | Captures diagnostic data from individual Azure services for troubleshooting and performance analysis.                                                   |
-| Cloud resource monitoring     | [Azure Monitor Metrics](/azure/azure-monitor/essentials/data-platform-metrics) | Collects time‑series performance data from Azure services to track resource health and performance.                                                     |
-| Cloud resource monitoring     | [Metrics explorer](/azure/azure-monitor/essentials/analyze-metrics)   | Visualizes and analyzes collected metrics data, supporting trend analysis and troubleshooting.                                                          |
-| Monitoring data storage       | [Azure Log Analytics workspace](/azure/azure-monitor/logs/data-retention-configure) | Stores and enables querying of collected log data for detailed analysis and long‑term retention.                                                        |
-| Monitoring data storage       | [Azure Storage account](/azure/storage/common/storage-account-overview) | Provides secure, scalable storage used for long‑term retention of logs and monitoring data.                                                             |
-| Monitoring data storage       | [Azure Event Hubs](/azure/event-hubs/event-hubs-about)               | Ingests large volumes of telemetry and event data, supporting integration with SIEM and other analytics platforms.                                       |
-| Monitoring data storage       | [Azure Data Explorer](/azure/data-explorer/ingest-data-no-code?tabs=diagnostic-metrics) | Offers fast, interactive analysis of large volumes of telemetry data, supporting real‑time analytics.                                                   |
-| Monitoring data configuration | [Infrastructure as Code for Azure Monitor](/azure/azure-monitor/resource-manager-samples) | Deploys and manages Azure Monitor resources at scale using code, ensuring consistent configuration across environments.                                  |
-| Monitoring data configuration | [Diagnostic settings in Azure Monitor](/azure/azure-monitor/essentials/diagnostic-settings#destinations) | Routes monitoring data (logs and metrics) to destinations like Log Analytics, storage accounts, or Event Hubs.                                             |
-| Monitoring data configuration | [Data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) | Standardizes the collection and ingestion of monitoring data across your environment.                                                                   |
-| Alerting                      | [Azure Monitor alerts](/azure/azure-monitor/alerts/alerts-overview)   | Notifies you when defined thresholds for metrics or log data are breached, allowing you to react promptly to issues.                                     |
-| Visualization                 | [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-create-workbook) | Enables creation of interactive reports and custom dashboards to analyze monitoring data in detail.                                                     |
-| Visualization                 | [Azure portal dashboards](/azure/azure-portal/azure-portal-dashboards) | Displays key monitoring data in customizable dashboards for at‑a‑glance insights.                                                                        |
-| Visualization                 | [Managed Grafana](/azure/managed-grafana/overview)                   | Offers hosted Grafana for visualizing monitoring data, integrating with Azure Monitor for custom dashboards.                                             |
+| Multi-environment monitoring| [Azure Monitor](/azure/azure-monitor)| Serves as the central platform that collects telemetry from cloud and on‑premises environments. It monitors resource performance and operational state. |
+| Multi-environment extension | [Azure Arc](/azure/azure-arc/overview) | Extends Azure management, including monitoring and governance, to on‑premises, multicloud, and edge environments.|
+| Service health monitoring | [Azure Service Health](/azure/service-health/overview) | Provides real‑time status and personalized information about service issues, planned maintenance, and other changes affecting your Azure services and regions. |
+| Service health monitoring | [Azure Resource Health](/azure/service-health/resource-health-overview) | Tracks the health of individual cloud resources and records issues over time for troubleshooting and reporting. |
+| Security monitoring | [Microsoft Entra monitoring](/entra/identity/monitoring-health/overview-monitoring-health) | Tracks identity interactions, sign‑in health, and audits changes to user accounts to safeguard access.|
+| Security monitoring | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Protects your cloud resources with threat detection, vulnerability assessments, and security recommendations. |
+| Security monitoring | [Microsoft Sentinel](/azure/sentinel/overview) | Acts as a cloud‑native SIEM and SOAR solution that analyzes security telemetry and automates responses to threats.|
+| Compliance monitoring | [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance) | Enforces organizational standards and audits resource compliance at‑scale through automated assessments.|
+| Compliance monitoring | [Microsoft Purview Compliance Manager](/purview/compliance-manager) | Assesses regulatory compliance and provides insights and recommendations to reduce risk.|
+| Cost monitoring | [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) | Estimates the cost of Azure services and helps plan and optimize your monitoring spend. |
+| Cost monitoring | [Azure Cost Management](/azure/cost-management-billing/costs/overview-cost-management) | Monitors and manages cloud spending while providing insights to optimize resource usage and costs.|
+| Data monitoring | [Microsoft Purview](/purview/purview)| Governs and protects enterprise data by offering discovery, classification, and risk management capabilities. |
+| Code and runtime monitoring | [Application Insights](/azure/azure-monitor/app/app-insights-overview) | Monitors application performance with telemetry on code execution, performance, and usage to pinpoint issues. |
+| Cloud resource monitoring | [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) | Enables querying and exploration of your Azure resources, offering visibility across your cloud estate. |
+| Cloud resource monitoring | [Network Watcher](/azure/network-watcher/network-watcher-overview) | Monitors and diagnoses network performance and connectivity for Azure virtual networks and related resources. |
+| Cloud resource monitoring | [Connection Monitor](/azure/network-watcher/network-watcher-overview#connection-monitor) | Provides insights into connectivity across Azure, on‑premises, and multicloud environments.|
+| Cloud resource monitoring | [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-policy) | Installs on virtual machines to collect telemetry from operating systems and applications.|
+| Cloud resource monitoring | [Azure Activity Logs](/azure/azure-monitor/essentials/activity-log) | Records control‑plane operations such as resource creation, updates, or deletions across Azure subscriptions. |
+| Cloud resource monitoring | [Azure Resource Logs](/azure/azure-monitor/essentials/resource-logs) | Captures diagnostic data from individual Azure services for troubleshooting and performance analysis. |
+| Cloud resource monitoring | [Azure Monitor Metrics](/azure/azure-monitor/essentials/data-platform-metrics) | Collects time‑series performance data from Azure services to track resource health and performance. |
+| Cloud resource monitoring | [Metrics explorer](/azure/azure-monitor/essentials/analyze-metrics) | Visualizes and analyzes collected metrics data, supporting trend analysis and troubleshooting.|
+| Monitoring data storage | [Azure Log Analytics workspace](/azure/azure-monitor/logs/data-retention-configure) | Stores and enables querying of collected log data for detailed analysis and long‑term retention.|
+| Monitoring data storage | [Azure Storage account](/azure/storage/common/storage-account-overview) | Provides secure, scalable storage used for long‑term retention of logs and monitoring data. |
+| Monitoring data storage | [Azure Event Hubs](/azure/event-hubs/event-hubs-about) | Ingests large volumes of telemetry and event data, supporting integration with SIEM and other analytics platforms. |
+| Monitoring data storage | [Azure Data Explorer](/azure/data-explorer/ingest-data-no-code?tabs=diagnostic-metrics) | Offers fast, interactive analysis of large volumes of telemetry data, supporting real‑time analytics. |
+| Monitoring data configuration | [Infrastructure as Code for Azure Monitor](/azure/azure-monitor/resource-manager-samples) | Deploys and manages Azure Monitor resources at scale using code, ensuring consistent configuration across environments.|
+| Monitoring data configuration | [Diagnostic settings in Azure Monitor](/azure/azure-monitor/essentials/diagnostic-settings#destinations) | Routes monitoring data (logs and metrics) to destinations like Log Analytics, storage accounts, or Event Hubs. |
+| Monitoring data configuration | [Data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) | Standardizes the collection and ingestion of monitoring data across your environment. |
+| Alerting| [Azure Monitor alerts](/azure/azure-monitor/alerts/alerts-overview) | Notifies you when defined thresholds for metrics or log data are breached, allowing you to react promptly to issues. |
+| Visualization | [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-create-workbook) | Enables creation of interactive reports and custom dashboards to analyze monitoring data in detail. |
+| Visualization | [Azure portal dashboards](/azure/azure-portal/azure-portal-dashboards) | Displays key monitoring data in customizable dashboards for at‑a‑glance insights.|
+| Visualization | [Managed Grafana](/azure/managed-grafana/overview) | Offers hosted Grafana for visualizing monitoring data, integrating with Azure Monitor for custom dashboards. |
 
 ## Azure services monitoring documentation
 
@@ -220,7 +228,7 @@ The table provides a near complete list of the monitoring articles for every Azu
 |---------------|---------------------------------------| ------------------- |
 | Azure AI Agent service | [Management center overview](/azure/ai-studio/concepts/management-center) | [How to enable tracing in Azure AI Agents](/azure/ai-services/agents/concepts/tracing) |
 | Azure AI Foundry | [Management center overview](/azure/ai-studio/concepts/management-center) | [Monitor your Generative AI Applications](/azure/ai-studio/how-to/monitor-applications)<br><br>[Evaluation and monitoring metrics for generative AI](/azure/ai-studio/concepts/evaluation-metrics-built-in)<br><br>[Use Risks & Safety monitoring](/azure/ai-services/openai/how-to/risks-safety-monitor)<br><br>[Monitor prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety)<br><br>[Run evaluations online](/azure/ai-studio/how-to/online-evaluation)<br><br>[View evaluation results in Azure AI Foundry portal](/azure/ai-studio/how-to/evaluate-results)<br><br>[Visualize your traces](/azure/ai-studio/how-to/develop/visualize-traces) |
-| Azure AI Search | [Monitor Azure AI Search](/azure/search/monitor-azure-cognitive-search) | [Monitor queries](/azure/search/search-monitor-queries)<br><br>[Analyze performance in Azure AI Search](/azure/search/search-performance-analysis)<br><br>[Collect telemetry data for search traffic analytics](/azure/search/search-traffic-analytics)<br><br>[Visualize Azure AI Search Logs and Metrics with Power BI](/azure/search/search-monitor-logs-powerbi)   |
+| Azure AI Search | [Monitor Azure AI Search](/azure/search/monitor-azure-cognitive-search) | [Monitor queries](/azure/search/search-monitor-queries)<br><br>[Analyze performance in Azure AI Search](/azure/search/search-performance-analysis)<br><br>[Collect telemetry data for search traffic analytics](/azure/search/search-traffic-analytics)<br><br>[Visualize Azure AI Search Logs and Metrics with Power BI](/azure/search/search-monitor-logs-powerbi) |
 | Azure AI services | [Enable diagnostic logging Azure AI services](/azure/ai-services/diagnostic-logging) | |
 | Azure AI Video Indexer | [Monitor Azure AI Video Indexer](/azure/azure-video-indexer/monitor-video-indexer)<br><br>[Monitoring Azure AI Video Indexer data reference](/azure/azure-video-indexer/monitor-video-indexer-data-reference) | |
 | Azure Analysis Services | [Monitor Azure Analysis Services](/azure/analysis-services/monitor-analysis-services)<br><br>[Monitoring data reference for Azure Analysis Services](/azure/analysis-services/monitor-analysis-services-reference) | |
@@ -259,7 +267,7 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Dedicated Host | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)<br><br>[Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
 | Azure Dedicated HSM | [Monitoring options - Azure Dedicated HSM](/azure/dedicated-hsm/monitoring) | |
 | Azure DevTest Labs | [Activity logs - Azure DevTest Labs](/azure/devtest-labs/activity-logs) | |
-| Azure Digital Twins | [Monitor your instance  in Azure Digital Twins](/azure/digital-twins/how-to-monitor) | |
+| Azure Digital Twins | [Monitor your instancein Azure Digital Twins](/azure/digital-twins/how-to-monitor) | |
 | Azure Disk Storage | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)<br><br>[Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
 | Azure DNS | [Metrics and alerts](/azure/dns/dns-alerts-metrics) | |
 | Azure Elastic SAN | [Metrics for Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-metrics) | |
