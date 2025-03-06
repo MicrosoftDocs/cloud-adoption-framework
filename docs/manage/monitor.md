@@ -76,9 +76,9 @@ Configuring monitoring involves setting up the tools and parameters for collecti
 
 Monitoring service availability focuses on detecting service outages, disruptions, and resource issues in your cloud environment. You want real-time visibility into potential problems to maintain consistent operations. Monitoring service health is the bare minimum for monitoring you cloud estate. Here's how:
 
-1. ***Monitor underlying service health.*** You need to be aware of any underlying outages to the cloud services and regions you’re using. Use [Azure Service Health](/azure/service-health/service-health-portal-update)to receive free alerts about service issues, planned maintenance, and other changes affecting your Azure services and regions.
+1. ***Monitor underlying service health.*** You need to be aware of any underlying outages to the cloud services and regions you’re using. Use [Azure Service Health](/azure/service-health/service-health-portal-update) to receive free alerts about service issues, planned maintenance, and other changes affecting your Azure services and regions.
 
-1. ***Monitor underlying resource health.*** You need a way to diagnose and resolve underlying issues in your cloud resources. You also need a history of these outages so you can report any service level agreement (SLA) breaches. Use [Azure Resource Health](/azure/service-health/resource-health-overview)to monitor the health of your individual cloud resources.
+1. ***Monitor underlying resource health.*** You need a way to diagnose and resolve underlying issues in your cloud resources. You also need a history of these outages so you can report any service level agreement (SLA) breaches. Use [Azure Resource Health](/azure/service-health/resource-health-overview) to monitor the health of your individual cloud resources.
 
 ### Monitor security
 
@@ -100,7 +100,7 @@ Monitoring compliance verifies alignment with governance requirements and indust
 
 1. ***Monitor data compliance.*** You need to automatically assess and manage compliance across your multicloud environment, simplifying compliance and reducing risk. Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) to assess and manage compliance across multicloud environments.
 
-1. ***Monitor workload compliance.*** For workload compliance monitoring, see the Well-Architected Framework’s [recommendations for establishing a security baseline](/azure/well-architected/security/establish-baseline)
+1. ***Monitor workload compliance.*** For workload compliance monitoring, see the Well-Architected Framework’s [recommendations for establishing a security baseline](/azure/well-architected/security/establish-baseline).
 
 ### Monitor costs
 
