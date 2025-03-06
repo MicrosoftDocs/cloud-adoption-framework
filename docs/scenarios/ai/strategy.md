@@ -73,37 +73,28 @@ For organizations needing more control and customization, Microsoft offers infra
 
 For each AI use case, you should define an AI data strategy. The data strategy should outline data collection, storage, and usage practices aligning with regulatory, ethical, and operational standards. Tailor the strategy to each use case to ensure reliable AI outputs and promote data security and privacy. If needed, you can consolidate these individual strategies into a broader summary data strategy for your organization.
 
-- *Establish data governance.* Define data governance principles for each AI use case to ensure workloads are compliant with legal and ethical standards. Include categorization of data based on sensitivity and policies to control access, usage, and storage relevant to the use case.
+- *Establish data governance.* Specify how you collect, store, process, version, and retire data for each AI use case. Include retention and disposal policies, and use version control to maintain accuracy during updates. 
 
-- *Plan the data lifecycle.* Specify how you collect, store, process, and retire data for each AI use case. Include retention and disposal policies, and use version control to maintain accuracy during updates.
+- *Plan the data lifecycle.* Define guidelines for collecting, storing, processing, versioning, and retiring data. Include recommendations for retention and disposal policies, emphasizing version control to maintain data accuracy.
 
-- *Set up AI fairness and bias controls.* Develop processes to detect and address bias in the data used for this AI use case. Use tools like Fairlearn to ensure models provide fair and equitable outcomes, especially when working with sensitive data attributes.
+    - *Data collection:* Identify data sources such as databases, APIs, IoT devices, third-party data, or Azure Data Factory for ingestion.
 
-- *Promote collaboration between AI and data teams.* Align AI development with data engineering efforts to ensure models are built using high-quality, well-managed data. Establish a unified pipeline for AI model training and data updates.
+    - *Data storage:* Recommend storage solutions appropriate to different types and volumes of data, including structured, unstructured, and real-time data..
 
-- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for this AI workload. Plan to use flexible architectures to scale with demand and consider cloud-based infrastructures for efficient resource management.
+    - *Data process:* Use ETL (Extract, Transform, Load) or ELT pipelines to clean, transform and prepare data. Tools such as Shortcuts or Mirroring in Microsoft Fabric can streamline these processes.
 
-- *Incorporate data management automation.* Plan to use AI and machine learning to automate tasks like tagging, cataloging, and data quality checks. Automation improves accuracy and allows teams to focus on strategic efforts.
+- *Set up AI fairness and bias controls.* Establish clear procedures to identify and mitigate bias in AI data. Leverage tools like Fairlearn to ensure models produce fair and equitable outcomes, particularly for sensitive data attributes.
 
-- *Plan for continuous monitoring and evaluation.* Establish regular audits of data and model outputs to ensure ongoing data quality, performance, and fairness. Monitor AI models and data pipelines to identify any shifts that might impact reliability or compliance.
+- *Promote collaboration between AI and data teams.* Align AI development with data engineering efforts to ensure models are built using high-quality, well-managed data. 
 
- For an example data strategy aligned to different use cases, see the [example AI strategy](#example-ai-strategy).
+- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for this AI workload. Choose flexible architectures capable of scaling according to demand. Consider cloud-based infrastructure to manage resources efficiently.
 
-## Define a Data Pipeline
+- *Incorporate data management automation.* Utilize AI and machine learning for tasks such as tagging, cataloging, and conducting data quality checks. Automation enhances accuracy and allows teams to focus on strategic goals.
 
-A data pipeline is the backbone of AI systems, enabling the flow of data from source to consumption. Key stages include:
+- *Plan for continuous monitoring and evaluation.* Establish regular audits of data and model outputs to ensure ongoing data quality, performance, and fairness. Monitor AI models and data pipelines to identify any shifts that might impact reliability or compliance. Implement automated data quality checks, including anomaly detection and validation rules. Regularly monitor data pipelines for failures or inconsistencies.
 
-- *Data Ingestion:* Identify and integrate data sources (e.g. databases, APIs, IoT devices, third-party data, Azure Data Factory for data ingestion)
+ For more information, see the [example AI strategy](#example-ai-strategy) and [Data landing zones](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-landing-zone).
 
-- *Data Storage:* Choose appropriate storage solutions based on data type and volume: (Structured Data, Unstructured Data, Real-time data)
-
-- *Data Processing:* Use ETL (Extract, Transform, Load) or ELT pipelines to clean, transform and prepare data. Leverage Shortcuts or Mirroring features in Microsoft Fabric.
-
-- *Data Quality Assurance:* Implement automated checks for data quality (e.g. anomaly detection, validation rules). Monitor data pipelines for failures or inconsistencies.
-
-- *Data Versioniong:* Track changes to datasets to ensure reproducibility and traceability.
-
-- *Real-Time and Batch Processing:* Enable real-time data processing for time-sensitive applications (e.g. fraud detection). Use batch processing for large-scale data analysis. 
 
 ## Define a responsible AI strategy
 
