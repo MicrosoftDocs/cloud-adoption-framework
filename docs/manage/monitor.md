@@ -38,10 +38,10 @@ A monitoring strategy outlines your requirements across every environment. The g
 
 1. ***Choose a monitoring approach.*** There are two recommended monitoring approaches: centralized or shared. Pick the approach that's best for you.
 
-    | Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
-    |---------------------|----------------------------|---------|------|-----|
-    | Centralized monitoring| All monitoring tasks are managed centrally.| Smaller organizations or those new to cloud environments. | Consistent standards, easier compliance enforcement, and simplified cost control.| Slower response times, reduced workload-specific context, and potential for operational bottlenecks.|
-    | Shared management | Centrally monitor overall cloud health, security, compliance, cost, data, and shared services. Define workload monitoring baselines. Help manage major incidents. <br><br>At the workload, monitor applications to meet baseline requirements and all operational needs. Handle day-to-day operational issues.| Medium-to-large enterprises with diverse workloads. | Balances centralized governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions, ongoing coordination, and might introduce complexity in handoffs.|
+| Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
+|---------------------|----------------------------|---------|------|-----|
+| Centralized monitoring| All monitoring tasks are managed centrally.| Smaller organizations or those new to cloud environments. | Consistent standards, easier compliance enforcement, and simplified cost control.| Slower response times, reduced workload-specific context, and potential for operational bottlenecks.|
+| Shared management | Centrally monitor overall cloud health, security, compliance, cost, data, and shared services. Define workload monitoring baselines. <br><br>Workload teams baseline monitoring requirements. Configure monitoring to meet all workload needs. | Medium-to-large enterprises with diverse workloads. | Balances centralized governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions, ongoing coordination, and might introduce complexity in handoffs.|
 
 For share management monitoring, define the responsibilities and scope of central and workload monitoring. See [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
 
@@ -221,18 +221,6 @@ Here's a table of all the Azure services and tools referenced in this article.
 | Visualization | [Azure portal dashboards](/azure/azure-portal/azure-portal-dashboards) | Displays key monitoring data in customizable dashboards for at‑a‑glance insights.|
 | Visualization | [Managed Grafana](/azure/managed-grafana/overview) | Offers hosted Grafana for visualizing monitoring data, integrating with Azure Monitor for custom dashboards. |
 
-## Example shared management monitoring responsibilities
-
-| Monitoring area | Centralized monitoring responsibilities | Workload monitoring responsibilities|
-|-----------------|-----------------------------------------|-------------------------------------|
-| Service health monitoring | Monitor overall cloud platform health, service outages, and maintenance.<br><br>Set baseline alerts for Azure Service Health.<br><br>Ensure SLA reporting.| Monitor specific application or workload resource health.<br><br>Respond to workload-specific service alerts. |
-| Security monitoring | Define security standards and governance.<br><br>Monitor identity and network security centrally using tools like Defender for Cloud and Sentinel.<br><br>Perform enterprise-wide threat detection and investigations. | Implement workload-specific security monitoring.<br><br>Respond to workload-specific security threats and remediate security incidents.|
-| Compliance monitoring | Establish central compliance and governance policies using tools like Azure Policy and Purview Compliance Manager.<br><br>Perform enterprise-wide audits and compliance assessments. | Ensure workload-specific compliance with central policies.<br><br>Remediate compliance issues detected within the workload. |
-| Cost monitoring | Manage centralized cost monitoring tools like Azure Cost Management.<br><br>Set budgets, configure cost alerts, and provide enterprise-wide cost reporting. | Monitor and optimize workload-specific spending.<br><br>Comply with central cost guidelines, proactively manage budgets, and remediate cost anomalies.|
-| Data monitoring | Govern data visibility, data classification, protection policies, and compliance using centralized tools like Microsoft Purview.<br><br>Ensure consistent data standards across environments. | Implement workload-specific data monitoring to meet governance and protection standards.<br><br>Ensure correct data classification and optimize data performance.|
-| Code and runtime monitoring | Define baseline application monitoring standards and tooling such as Application Insights.<br><br>Provide guidance for collecting application logs, metrics, and traces. | Implement workload-specific application telemetry and logging.<br><br>Identify performance bottlenecks and remediate application-specific issues. |
-| Cloud resource monitoring | Monitor shared services and manage centralized monitoring data.<br><br>Set standard resource-monitoring rules, dashboards, and retention policies. | Configure and manage workload-specific resource logs, metrics, and monitoring dashboards.<br><br>Resolve operational issues specific to the workload. |
-
 ## Azure services monitoring documentation
 
 The table provides a near complete list of the monitoring articles for every Azure service in alphabetical order.
@@ -358,3 +346,15 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Microsoft Entra ID | [What is Microsoft Entra monitoring and health?](/entra/identity/monitoring-health/overview-monitoring-health) | |
 | Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | |
 | Multicloud connector enabled by Azure Arc | [View multicloud inventory with the multicloud connector enabled by Azure Arc](/azure/azure-arc/multicloud-connector/view-multicloud-inventory) | |
+
+## Example shared management monitoring responsibilities
+
+| Monitoring area | Centralized monitoring responsibilities | Workload monitoring responsibilities|
+|-----------------|-----------------------------------------|-------------------------------------|
+| Service health monitoring | Monitor overall cloud platform health, service outages, and maintenance.<br><br>Set baseline alerts for Azure Service Health.<br><br>Ensure SLA reporting.| Monitor specific application or workload resource health.<br><br>Respond to workload-specific service alerts. |
+| Security monitoring | Define security standards and governance.<br><br>Monitor identity and network security centrally using tools like Defender for Cloud and Sentinel.<br><br>Perform enterprise-wide threat detection and investigations. | Implement workload-specific security monitoring.<br><br>Respond to workload-specific security threats and remediate security incidents.|
+| Compliance monitoring | Establish central compliance and governance policies using tools like Azure Policy and Purview Compliance Manager.<br><br>Perform enterprise-wide audits and compliance assessments. | Ensure workload-specific compliance with central policies.<br><br>Remediate compliance issues detected within the workload. |
+| Cost monitoring | Manage centralized cost monitoring tools like Azure Cost Management.<br><br>Set budgets, configure cost alerts, and provide enterprise-wide cost reporting. | Monitor and optimize workload-specific spending.<br><br>Comply with central cost guidelines, proactively manage budgets, and remediate cost anomalies.|
+| Data monitoring | Govern data visibility, data classification, protection policies, and compliance using centralized tools like Microsoft Purview.<br><br>Ensure consistent data standards across environments. | Implement workload-specific data monitoring to meet governance and protection standards.<br><br>Ensure correct data classification and optimize data performance.|
+| Code and runtime monitoring | Define baseline application monitoring standards and tooling such as Application Insights.<br><br>Provide guidance for collecting application logs, metrics, and traces. | Implement workload-specific application telemetry and logging.<br><br>Identify performance bottlenecks and remediate application-specific issues. |
+| Cloud resource monitoring | Monitor shared services and manage centralized monitoring data.<br><br>Set standard resource-monitoring rules, dashboards, and retention policies. | Configure and manage workload-specific resource logs, metrics, and monitoring dashboards.<br><br>Resolve operational issues specific to the workload. |
