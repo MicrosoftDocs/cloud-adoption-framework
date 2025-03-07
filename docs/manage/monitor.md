@@ -38,12 +38,14 @@ A monitoring strategy outlines your requirements across every environment. The g
 
 1. ***Choose a monitoring approach.*** There are two recommended monitoring approaches: centralized or shared. Pick the approach that's best for you.
 
-| Monitoring approach | Definition| Best for | Pros | Cons |
-|------|--------|------|--------|---------|
-| Centralized | One team centrally manages all monitoring tasks. | New cloud users or fewer workloads. | Consistent standards, easier compliance, efficient cost control. | Slower response, less workload-specific context, potential bottlenecks. |
-| Shared management | Centrally define monitoring standards, provide tools, oversees governance, monitors shared services, assists with large operational issues. Workload is responsiblehandle workload monitoring and minor operational incidents. | Medium-to-large enterprises. | Combines governance with flexibility, clear responsibilities, fast response. | Requires clear definitions and coordination. |
+Below is the updated table that defines the location, responsibilities, and scope without referring to a team:
 
-Define the responsibilities of central and workload monitoring. For an example, see [Example of shared monitoring responsibilities]
+| Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
+|---------------------|----------------------------|---------|------|-----|
+| Centralized monitoring| All monitoring tasks are managed centrally.<br><br>This includes establishing monitoring standards, configuring alerts, overseeing resource monitoring, and handling incident response for every workload. | Smaller organizations or those new to cloud environments. | Consistent standards, easier compliance enforcement, and simplified cost control.| Slower response times, reduced workload-specific context, and potential for operational bottlenecks.|
+| Shared management | Monitoring responsibilities are split between centralized processes and workload-specific processes.<br><br>Central functions define standards, provide tools, oversee shared infrastructure, and manage major incidents. <br><br>Workload-specific functions monitor applications and handle day-to-day operational issues.| Medium-to-large enterprises with diverse workloads. | Balances centralized governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions, ongoing coordination, and might introduce complexity in handoffs.|
+
+For share management monitoring, define the responsibilities and scope of central and workload monitoring. See [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
 
 1. ***Identify what you need to monitor.*** Take a thorough inventory of your Azure estate. Include other clouds, edge deployments, and on-premises systems as needed. For Azure, use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter) to gather a baseline resource list. This comprehensive approach helps you detect coverage gaps and ensures that you capture critical data from all relevant sources. Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
 
