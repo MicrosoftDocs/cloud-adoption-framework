@@ -154,11 +154,11 @@ Monitoring cloud resources covers watching control-plane activity, resource logs
 
 1. ***Monitor workload resources.*** For workload-specific cloud resource monitoring guidance, see the Well-Architected Framework:
 
-| Workload monitoring area| Well-Architected Framework guidance |
-|-------------------------|------------------------------------------------------------------------------------------------|
-| Azure services monitoring | [Azure Service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Operational Excellence section*) |
-| Reliability | [Recommendations for designing a reliable monitoring and alerting strategy](/azure/well-architected/reliability/monitoring-alerting-strategy) |
-| Performance efficiency| [Recommendations for defining performance targets](/azure/well-architected/performance-efficiency/performance-targets)<br>[Collect workload performance data](/azure/well-architected/performance-efficiency/collect-performance-data) |
+    | Workload monitoring area| Well-Architected Framework guidance |
+    |-------------------------|------------------------------------------------------------------------------------------------|
+    | Azure services monitoring | [Azure Service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Operational Excellence section*) |
+    | Reliability | [Design a reliable monitoring and alerting strategy](/azure/well-architected/reliability/monitoring-alerting-strategy) |
+    | Performance efficiency| [Define performance targets](/azure/well-architected/performance-efficiency/performance-targets)<br>[Collect workload performance data](/azure/well-architected/performance-efficiency/collect-performance-data) |
 
 ## Configure alerting
 
