@@ -180,8 +180,6 @@ Visualize monitoring data refers to creating dashboards and reports that present
 
 ## Azure monitoring tools
 
-Here's a table of all the Azure services and tools referenced in this article.
-
 | Category| Tool | Description |
 |-------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Multi-environment monitoring| [Azure Monitor](/azure/azure-monitor)| Serves as the central platform that collects telemetry from cloud and on‑premises environments. It monitors resource performance and operational state. |
