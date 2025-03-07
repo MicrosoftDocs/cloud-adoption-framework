@@ -40,10 +40,10 @@ A monitoring strategy outlines your requirements across every environment. The g
 
     | Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
     |---------------------|----------------------------|---------|------|-----|
-    | Centralized monitoring| All monitoring tasks are managed centrally.| Smaller organizations or new to cloud. | Simplified governance and cost control.| Potential for operational bottlenecks.|
+    | Centralized | All monitoring tasks are managed centrally.| Smaller organizations or new to cloud. | Simplified governance and cost control.| Potential for operational bottlenecks.|
     | Shared management | Centrally monitor health, security, compliance, cost, data, and shared services. <br><br>Workload teams monitor workloads. | Medium-to-large enterprises with diverse workloads. | Balances governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions and ongoing coordination.|
 
-    For share management monitoring responsibilities, see [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
+    For shared management monitoring responsibilities, see [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
 
 1. ***Identify what you need to monitor.*** Take a thorough inventory of your Azure estate. Include other clouds, edge deployments, and on-premises systems as needed. For Azure, use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter) to gather a baseline resource list. This comprehensive approach helps you detect coverage gaps and ensures that you capture critical data from all relevant sources. Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
 
