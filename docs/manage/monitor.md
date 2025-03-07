@@ -38,12 +38,10 @@ A monitoring strategy outlines your requirements across every environment. The g
 
 1. ***Choose a monitoring approach.*** There are two recommended monitoring approaches: centralized or shared. Pick the approach that's best for you.
 
-Below is the updated table that defines the location, responsibilities, and scope without referring to a team:
-
-| Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
-|---------------------|----------------------------|---------|------|-----|
-| Centralized monitoring| All monitoring tasks are managed centrally.<br><br>This includes establishing monitoring standards, configuring alerts, overseeing resource monitoring, and handling incident response for every workload. | Smaller organizations or those new to cloud environments. | Consistent standards, easier compliance enforcement, and simplified cost control.| Slower response times, reduced workload-specific context, and potential for operational bottlenecks.|
-| Shared management | Monitoring responsibilities are split between centralized processes and workload-specific processes.<br><br>Central functions define standards, provide tools, oversee shared infrastructure, and manage major incidents. <br><br>Workload-specific functions monitor applications and handle day-to-day operational issues.| Medium-to-large enterprises with diverse workloads. | Balances centralized governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions, ongoing coordination, and might introduce complexity in handoffs.|
+    | Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
+    |---------------------|----------------------------|---------|------|-----|
+    | Centralized monitoring| All monitoring tasks are managed centrally.| Smaller organizations or those new to cloud environments. | Consistent standards, easier compliance enforcement, and simplified cost control.| Slower response times, reduced workload-specific context, and potential for operational bottlenecks.|
+    | Shared management | Centrally monitor overall cloud health, security, compliance, cost, data, and shared services. Define workload monitoring baselines. Help manage major incidents. <br><br>At the workload, monitor applications to meet baseline requirements and all operational needs. Handle day-to-day operational issues.| Medium-to-large enterprises with diverse workloads. | Balances centralized governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions, ongoing coordination, and might introduce complexity in handoffs.|
 
 For share management monitoring, define the responsibilities and scope of central and workload monitoring. See [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
 
@@ -233,8 +231,7 @@ Here's a table of all the Azure services and tools referenced in this article.
 | Cost monitoring | Manage centralized cost monitoring tools like Azure Cost Management.<br><br>Set budgets, configure cost alerts, and provide enterprise-wide cost reporting. | Monitor and optimize workload-specific spending.<br><br>Comply with central cost guidelines, proactively manage budgets, and remediate cost anomalies.|
 | Data monitoring | Govern data visibility, data classification, protection policies, and compliance using centralized tools like Microsoft Purview.<br><br>Ensure consistent data standards across environments. | Implement workload-specific data monitoring to meet governance and protection standards.<br><br>Ensure correct data classification and optimize data performance.|
 | Code and runtime monitoring | Define baseline application monitoring standards and tooling such as Application Insights.<br><br>Provide guidance for collecting application logs, metrics, and traces. | Implement workload-specific application telemetry and logging.<br><br>Identify performance bottlenecks and remediate application-specific issues. |
-| Cloud resource monitoring | Monitor shared infrastructure and manage centralized logs such as Azure Activity Logs and Azure Monitor Metrics.<br><br>Set standard resource-monitoring rules, dashboards, and retention policies. | Configure and manage workload-specific resource logs, metrics, and monitoring dashboards.<br><br>Resolve operational issues specific to the workload. |
-
+| Cloud resource monitoring | Monitor shared services and manage centralized monitoring data.<br><br>Set standard resource-monitoring rules, dashboards, and retention policies. | Configure and manage workload-specific resource logs, metrics, and monitoring dashboards.<br><br>Resolve operational issues specific to the workload. |
 
 ## Azure services monitoring documentation
 
