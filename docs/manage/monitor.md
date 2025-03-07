@@ -11,11 +11,13 @@ ms.custom: UpdateFrequency2
 
 # Monitor your Azure cloud estate
 
-This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments. Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
+This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments.
+
+Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
 
 ## Understand your monitoring scope
 
-Your monitoring scope defines your monitoring responsibilities. In a cloud environment, you share monitoring responsibilities, which differ by workload. Understand your monitoring responsibilities, so you have coverage across every monitoring area for each workload. The following table shows what you must monitor based on each workload type. Infrastructure services (IaaS) and platform services (PaaS) operate within a cloud environment like Azure. Software services (SaaS) refer to solutions such as Microsoft 365.
+Your monitoring scope defines your monitoring responsibilities. In a cloud environment, you share monitoring responsibilities, which differ by workload. The following table shows what you must monitor based on each workload type. Infrastructure services (IaaS) and platform services (PaaS) operate within Azure.
 
 | Monitoring areas| On-premises monitoring | IaaS monitoring | PaaS monitoring | SaaS monitoring |
 |---------------------|------------------------|-----------------|-----------------|-----------------|
@@ -32,16 +34,18 @@ Your monitoring scope defines your monitoring responsibilities. In a cloud envir
 
 ## Plan your monitoring strategy
 
-A monitoring strategy outlines your oversight requirements across every environment. The goal of monitoring is to detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. Here's how:
+A monitoring strategy outlines your requirements across every environment. The goal of monitoring is to detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. Here's how:
 
-1. ***Choose a monitoring approach.*** Define monitoring responsibilities based on your chosen operating model: centralized or shared. Pick the approach that's best for you.
+1. ***Choose a monitoring approach.*** There are two recommended monitoring approaches: centralized or shared. Pick the approach that's best for you.
 
     | Monitoring approach | Definition| Best for | Pros | Cons |
     |------|--------|------|--------|---------|
-    | Centralized monitoring| One team centrally manages all monitoring tasks. | New cloud users or fewer workloads. | Consistent standards, easier compliance, efficient cost control. | Slower response, less workload-specific context, potential bottlenecks. |
-    | Shared monitoring | Central team defines monitoring standards, provides tools, oversees governance, and monitors shared services. Workload teams handle workload monitoring and operational incidents. | Medium-to-large enterprises. | Combines governance with flexibility, clear responsibilities, fast response. | Requires clear definitions and coordination. |
+    | Centralized | One team centrally manages all monitoring tasks. | New cloud users or fewer workloads. | Consistent standards, easier compliance, efficient cost control. | Slower response, less workload-specific context, potential bottlenecks. |
+    | Shared management | Centrally define monitoring standards, provide tools, oversees governance, monitors shared services, assists with large operational issues. Workload is responsible  handle workload monitoring and minor operational incidents. | Medium-to-large enterprises. | Combines governance with flexibility, clear responsibilities, fast response. | Requires clear definitions and coordination. |
 
-1. ***Identify what you need to monitor.*** Take a thorough inventory of your entire environment, including Azure, other clouds, edge deployments, and on-premises systems. Use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter) to gather a baseline resource list. This comprehensive approach helps you detect coverage gaps and ensures that you capture critical data from all relevant sources. Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
+    Define the responsibilities of central and workload monitoring. For an example, see [Example of shared monitoring responsibilities]
+
+1. ***Identify what you need to monitor.*** Take a thorough inventory of your Azure estate. Include other clouds, edge deployments, and on-premises systems as needed. For Azure, use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter) to gather a baseline resource list. This comprehensive approach helps you detect coverage gaps and ensures that you capture critical data from all relevant sources. Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
 
 1. ***Define reliability targets.*** Establish uptime service level objectives (SLOs), service level indicators (SLIs), and error budgets for each workload. Include nonfunctional requirements such as recovery time objective (RTO) and recovery point objective (RPO). Clear targets provide benchmarks for measuring operational success and guiding improvement efforts.
 
@@ -216,6 +220,19 @@ Here's a table of all the Azure services and tools referenced in this article.
 | Visualization | [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-create-workbook) | Enables creation of interactive reports and custom dashboards to analyze monitoring data in detail. |
 | Visualization | [Azure portal dashboards](/azure/azure-portal/azure-portal-dashboards) | Displays key monitoring data in customizable dashboards for at‑a‑glance insights.|
 | Visualization | [Managed Grafana](/azure/managed-grafana/overview) | Offers hosted Grafana for visualizing monitoring data, integrating with Azure Monitor for custom dashboards. |
+
+## Example shared management monitoring responsibilities
+
+| Monitoring area             | Centralized monitoring responsibilities                                                                                                                                                 | Workload monitoring responsibilities                                                                                                                                     |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Service health monitoring   | Monitor overall cloud platform health, service outages, and maintenance.<br><br>Set baseline alerts for Azure Service Health.<br><br>Ensure SLA reporting.                              | Monitor specific application or workload resource health.<br><br>Respond to workload-specific service alerts.                                                             |
+| Security monitoring         | Define security standards and governance.<br><br>Monitor identity and network security centrally using tools like Defender for Cloud and Sentinel.<br><br>Perform enterprise-wide threat detection and investigations. | Implement workload-specific security monitoring.<br><br>Respond to workload-specific security threats and remediate security incidents.                                    |
+| Compliance monitoring       | Establish central compliance and governance policies using tools like Azure Policy and Purview Compliance Manager.<br><br>Perform enterprise-wide audits and compliance assessments.     | Ensure workload-specific compliance with central policies.<br><br>Remediate compliance issues detected within the workload.                                               |
+| Cost monitoring             | Manage centralized cost monitoring tools like Azure Cost Management.<br><br>Set budgets, configure cost alerts, and provide enterprise-wide cost reporting.                             | Monitor and optimize workload-specific spending.<br><br>Comply with central cost guidelines, proactively manage budgets, and remediate cost anomalies.                    |
+| Data monitoring             | Govern data visibility, data classification, protection policies, and compliance using centralized tools like Microsoft Purview.<br><br>Ensure consistent data standards across environments. | Implement workload-specific data monitoring to meet governance and protection standards.<br><br>Ensure correct data classification and optimize data performance.          |
+| Code and runtime monitoring | Define baseline application monitoring standards and tooling such as Application Insights.<br><br>Provide guidance for collecting application logs, metrics, and traces.                 | Implement workload-specific application telemetry and logging.<br><br>Identify performance bottlenecks and remediate application-specific issues.                         |
+| Cloud resource monitoring   | Monitor shared infrastructure and manage centralized logs such as Azure Activity Logs and Azure Monitor Metrics.<br><br>Set standard resource-monitoring rules, dashboards, and retention policies. | Configure and manage workload-specific resource logs, metrics, and monitoring dashboards.<br><br>Resolve operational issues specific to the workload.                     |
+
 
 ## Azure services monitoring documentation
 
