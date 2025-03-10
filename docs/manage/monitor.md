@@ -36,20 +36,20 @@ Your monitoring scope defines your monitoring responsibilities. In a cloud envir
 
 A monitoring strategy outlines your requirements across every environment. The goal of monitoring is to detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. Here's how:
 
-1. ***Define your monitoring approach.*** Clarify monitoring responsibilities for your cloud estate and workloads. Set baseline requirements, identify necessary data, and assign clear ownership. Choose a centralized or shared management model based on your organization's size and complexity to streamline incident response and ensure consistent monitoring.
+1. ***Define your monitoring approach.*** Choose a centralized or shared management model based on your organization's size and complexity to streamline incident response and ensure consistent monitoring.
 
     | Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
     |---------------------|----------------------------|---------|------|-----|
-    | Centralized | All monitoring tasks are managed centrally.| Smaller organizations or new to cloud. | Simplified governance and cost control.| Potential for operational bottlenecks.|
-    | Shared management | Centrally monitor health, security, compliance, cost, data, and shared services. <br><br>Workload teams monitor workloads. | Medium-to-large enterprises with diverse workloads. | Balances governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions and ongoing coordination.|
+    | Centralized | All monitoring tasks are managed centrally.| Startups or small cloud footprint. | Simplified governance and cost control.| Potential for operational bottlenecks.|
+    | Shared management | Centrally monitor health, security, compliance, cost, data, and shared services. <br><br>Workload teams monitor workloads. | Enterprises with multiple workloads. | Balances governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions and ongoing coordination.|
 
     For shared management monitoring responsibilities, see [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
 
 1. ***Identify what you need to monitor.*** Take a thorough inventory of your Azure estate. Include other clouds, edge deployments, and on-premises systems as needed. Use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter). Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
 
-1. ***Define data collection requirements.*** Determine which metrics and logs you must collect for compliance, security, and effective issue diagnosis. Meet regulatory compliance requirements first, then comply with internal governance rules. If you don't know what to collect, gather all available logs and metrics to avoid data gaps. When you have enough data, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate the cost of the collection long term and adjust the collection settings to meet your budget. Refer to the [complete list of Azure monitoring documentation links](#azure-services-monitoring-documentation) for guidance on every Azure service.
+1. ***Define data collection requirements.*** Determine which metrics and logs you must collect for compliance, security, and effective issue diagnosis. Meet regulatory compliance requirements and all internal governance rules. If you don't know what to collect, gather all available logs and metrics to avoid data gaps. This is a short-term solution that isn't cost efficient. When you have enough data, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate the cost of the collection long term and adjust the collection settings to meet your budget. Refer to the [complete list of Azure monitoring documentation links](#azure-services-monitoring-documentation) to learn more about what you should collect on every Azure service and how to configure it.
 
-1. ***Define data retention requirements.*** Decide how long you must keep monitoring data to meet auditing and compliance needs. Abide by internal governance policies to store logs for the necessary duration. Proper retention policies enable historical analyses, support regulatory compliance, and preserve data for security investigations.
+1. ***Define data retention requirements.*** Decide how long you must keep monitoring data to meet auditing and compliance needs. Proper retention policies enable historical analyses, support regulatory compliance, and preserve data for security investigations.
 
 1. ***Define alert requirements.*** Determine which critical events must trigger alerts, such as resource outages, performance threshold breaches, or security anomalies. Categorize alerts by severity, outline response actions, and specify escalation paths so urgent events reach the right teams. Use [Azure Monitor alerts](/azure/azure-monitor/alerts/alerts-overview) to configure alert rules, notifications, and action groups. Proactive alerts ensure fast responses and minimize downtime.
 
@@ -67,11 +67,11 @@ Designing a monitoring solution refers to creating a system for collecting and s
 
 1. ***Automate monitoring.*** You want an automated way to enforce your monitoring policies in larger environments.
 
-    - *Use Azure Policy.* Enforce what you collect and where you send it with Azure Policy. You can start with [built-in monitoring policies](/azure/azure-monitor/essentials/diagnostic-settings-policy) to enforce diagnostic settings. You can build custom policies as needed. You can also use Azure Policy to manage [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-associations#azure-policy) and [install the Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-policy) on virtual machines. Use Azure Policy to define your [Azure Monitor alert baseline](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-monitor) in an Azure landing zone.
+    - *Use Azure Policy.* Enforce what you collect and where you send it with Azure Policy. Use Azure Policy to manage [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-associations#azure-policy). For diagnostic settings, use [built-in monitoring policies](/azure/azure-monitor/essentials/diagnostic-settings-policy) and build custom policies as needed. Enforce the [install of the Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-policy) on all virtual machines. If you're an Azure landing zone user, use Azure Policy to define your [Azure Monitor alert baseline](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-monitor).
 
     - *Use infrastructure as code (IaC).* Use [infrastructure as code](/azure/azure-monitor/resource-manager-samples) to configure and deploy Azure Monitor resources at scale. This method is the professional way to manage your resources.
 
-1. ***Optimize monitoring spend.*** Conduct regular reviews the monitoring data you collect and store. What you collect, where you store it, and how long you store it affects the cost. Adjust storage retention periods to optimize cost without stopping the collection of certain monitoring data. To optimize costs further, stop collecting unhelpful logs. For more cost optimization tips, see [Cost optimization in Azure Monitor](/azure/azure-monitor/best-practices-cost).
+1. ***Optimize monitoring spend.*** Conduct regular reviews of the monitoring data you collect and store. What you collect, where you store it, and how long you store it affects the cost. Adjust storage retention periods to optimize cost without stopping the collection of certain monitoring data. To optimize costs further, stop collecting unhelpful logs. For more cost optimization tips, see [Cost optimization in Azure Monitor](/azure/azure-monitor/best-practices-cost).
 
 ## Configure monitoring
 
@@ -117,7 +117,7 @@ Monitoring costs refers to tracking and controlling your cloud spending across A
 
 1. ***Review cloud spend regularly.*** Incorporate cost reviews into your regular operational cadence. Regular assessments allow for the timely identification of spending patterns and the opportunity to adjust resource usage to optimize costs.
 
-1. ***Monitor workload costs.*** For workload cost monitoring, see the Well-Architected Framework recommendations for [collecting and reviewing cost data](/azure/well-architected/cost-optimization/collect-review-cost-data) and [optimizing component costs](/azure/well-architected/cost-optimization/optimize-component-costs)
+1. ***Monitor workload costs.*** For workload cost monitoring, see the Well-Architected Framework recommendations for [collecting and reviewing cost data](/azure/well-architected/cost-optimization/collect-review-cost-data) and [optimizing component costs](/azure/well-architected/cost-optimization/optimize-component-costs).
 
 ### Monitor data
 
@@ -129,9 +129,7 @@ Monitoring data means overseeing data governance, protection, and usage across A
 
 ### Monitor code and runtime
 
-At the workload level, you need to gather telemetry (application logs, metrics, and traces) on your application code and execution to identify issues and optimize performance. Real-time insights into application behavior enable prescriptive troubleshooting and refinement.
-
-For workloads in Azure, use [Application Insights](/azure/azure-monitor/app/app-insights-overview) to collect runtime telemetry (instrumentation), so you can identify performance bottlenecks and errors. Application Insights enables you to monitor your live web applications, detect performance anomalies, and gain insights into user interactions, helping you continuously improve performance and usability. For workload-specific code and run monitoring guidance, see the Well-Architected Framework:
+At the workload level, you need to gather telemetry (application logs, metrics, and traces) on your application code and execution to identify issues and optimize performance. For workloads in Azure, use [Application Insights](/azure/azure-monitor/app/app-insights-overview) to collect runtime telemetry (instrumentation), so you can identify performance bottlenecks and errors. For workload-specific code and run monitoring guidance, see the Well-Architected Framework:
 
 | Workload monitoring area | Well-Architected Framework guidance |
 |--------------------------|-------------------------------------|
