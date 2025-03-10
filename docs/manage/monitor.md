@@ -129,9 +129,7 @@ Monitoring data means overseeing data governance, protection, and usage across A
 
 ### Monitor code and runtime
 
-At the workload level, you need to gather telemetry (application logs, metrics, and traces) on your application code and execution to identify issues and optimize performance. Real-time insights into application behavior enable prescriptive troubleshooting and refinement.
-
-For workloads in Azure, use [Application Insights](/azure/azure-monitor/app/app-insights-overview) to collect runtime telemetry (instrumentation), so you can identify performance bottlenecks and errors. Application Insights enables you to monitor your live web applications, detect performance anomalies, and gain insights into user interactions, helping you continuously improve performance and usability. For workload-specific code and run monitoring guidance, see the Well-Architected Framework:
+At the workload level, you need to gather telemetry (application logs, metrics, and traces) on your application code and execution to identify issues and optimize performance. For workloads in Azure, use [Application Insights](/azure/azure-monitor/app/app-insights-overview) to collect runtime telemetry (instrumentation), so you can identify performance bottlenecks and errors. For workload-specific code and run monitoring guidance, see the Well-Architected Framework:
 
 | Workload monitoring area | Well-Architected Framework guidance |
 |--------------------------|-------------------------------------|
