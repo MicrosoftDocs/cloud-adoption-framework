@@ -36,7 +36,7 @@ Your monitoring scope defines your monitoring responsibilities. In a cloud envir
 
 A monitoring strategy outlines your requirements across every environment. The goal of monitoring is to detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. Here's how:
 
-1. ***Define your monitoring approach.*** Clarify monitoring responsibilities for your cloud estate and workloads. Set baseline requirements, identify necessary data, and assign clear ownership. Choose a centralized or shared management model based on your organization's size and complexity to streamline incident response and ensure consistent monitoring.
+1. ***Define your monitoring approach.*** Choose a centralized or shared management model based on your organization's size and complexity to streamline incident response and ensure consistent monitoring.
 
     | Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
     |---------------------|----------------------------|---------|------|-----|
