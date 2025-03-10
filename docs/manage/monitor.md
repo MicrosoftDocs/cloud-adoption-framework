@@ -40,8 +40,8 @@ A monitoring strategy outlines your requirements across every environment. The g
 
     | Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
     |---------------------|----------------------------|---------|------|-----|
-    | Centralized | All monitoring tasks are managed centrally.| Smaller organizations or new to cloud. | Simplified governance and cost control.| Potential for operational bottlenecks.|
-    | Shared management | Centrally monitor health, security, compliance, cost, data, and shared services. <br><br>Workload teams monitor workloads. | Medium-to-large enterprises with diverse workloads. | Balances governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions and ongoing coordination.|
+    | Centralized | All monitoring tasks are managed centrally.| Startups or small cloud footprint. | Simplified governance and cost control.| Potential for operational bottlenecks.|
+    | Shared management | Centrally monitor health, security, compliance, cost, data, and shared services. <br><br>Workload teams monitor workloads. | Enterprises with multiple workloads. | Balances governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions and ongoing coordination.|
 
     For shared management monitoring responsibilities, see [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
 
