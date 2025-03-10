@@ -117,7 +117,7 @@ Monitoring costs refers to tracking and controlling your cloud spending across A
 
 1. ***Review cloud spend regularly.*** Incorporate cost reviews into your regular operational cadence. Regular assessments allow for the timely identification of spending patterns and the opportunity to adjust resource usage to optimize costs.
 
-1. ***Monitor workload costs.*** For workload cost monitoring, see the Well-Architected Framework recommendations for [collecting and reviewing cost data](/azure/well-architected/cost-optimization/collect-review-cost-data) and [optimizing component costs](/azure/well-architected/cost-optimization/optimize-component-costs)
+1. ***Monitor workload costs.*** For workload cost monitoring, see the Well-Architected Framework recommendations for [collecting and reviewing cost data](/azure/well-architected/cost-optimization/collect-review-cost-data) and [optimizing component costs](/azure/well-architected/cost-optimization/optimize-component-costs).
 
 ### Monitor data
 
