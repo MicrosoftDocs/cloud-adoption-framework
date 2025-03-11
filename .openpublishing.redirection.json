@@ -2829,6 +2829,11 @@
          "source_path": "docs/strategy/inform/financial-efficiency.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/cost-efficiency",
          "redirect_document_id": true
+      },
+     {
+      "source_path": "docs/manage/infrastructure-as-code-updates.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates",
+      "redirect_document_id": true
       }
-   ]    
+   ]   
 }
