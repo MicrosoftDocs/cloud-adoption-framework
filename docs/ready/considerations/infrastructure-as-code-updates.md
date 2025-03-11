@@ -14,7 +14,7 @@ This article describes the benefits of using infrastructure as code (IaC) to upd
 
 IaC can manage the whole life cycle, and it excels at managing the resources that it deploys. Organizations should plan to deploy their Azure landing zones with IaC. It requires planning to align existing non-IaC resources with IaC resources that are backed with state management. You need to map the existing resources to the desired state.
 
-For more information, see [Keep your Azure landing zone up to date](../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md).
+For more information, see [Keep your Azure landing zone up to date](../landing-zone/design-area/keep-azure-landing-zone-up-to-date.md).
 
 ## How infrastructure as code works
 
@@ -61,7 +61,7 @@ Due to the programmatic nature of the deployments, infrastructure as code reduce
 
 Infrastructure as code deployments are backed by a definition file, so you can use source control to manage the versions of your definitions. Depending on the method of IaC that you use, you can reference the deployments in Azure for Bicep or your state file for Terraform to review the history of previous deployments.
 
-When you use source control practices, it creates a new branch of your IaC to add changes and revisions. The branch's history in your source control system captures the iterations and changes. You can use it to deploy changes to a test environment until you’re ready to merge and deploy the changes to production. For more information, see [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md). Throughout this cycle, the deployment records capture the version that's used and the resources that are deployed, which provides a highly visible history.
+When you use source control practices, it creates a new branch of your IaC to add changes and revisions. The branch's history in your source control system captures the iterations and changes. You can use it to deploy changes to a test environment until you’re ready to merge and deploy the changes to production. For more information, see [Testing approach for Azure landing zones](../enterprise-scale/testing-approach.md). Throughout this cycle, the deployment records capture the version that's used and the resources that are deployed, which provides a highly visible history.
 
 Use these testing methods with Bicep for general testing purposes. With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.  
 
@@ -89,10 +89,8 @@ If you use IaC to manage your landing zone or other resources, you should only m
 
 Review general automation and security practices in the following articles:
 
-- [Security Baseline discipline overview](../govern/security-baseline/index.md)
-- [Identity Baseline discipline overview](../govern/identity-baseline/index.md)
-- [Operational compliance recommendations](../ready/landing-zone/design-area/management-operational-compliance.md#operational-compliance-recommendations)
-- [Platform automation design recommendations](../ready/considerations/automation.md#platform-automation-design-recommendation)
+- [Operational compliance recommendations](../landing-zone/design-area/management-operational-compliance.md#operational-compliance-recommendations)
+- [Platform automation design recommendations](./automation.md#platform-automation-design-recommendation)
 
 ## Next steps
 

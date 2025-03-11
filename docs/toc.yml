@@ -476,6 +476,8 @@ items:
           href: ready/considerations/sandbox-environments.md
         - name: Landing zone regions
           href: ready/considerations/regions.md
+        - name: Use infrastructure as code to update Azure landing zones
+          href: ready/considerations/infrastructure-as-code-updates.md
         - name: Policy management
           items:
           - name: Advanced Azure Policy management
@@ -755,10 +757,6 @@ items:
         href: manage/azure-management-guide/platform-specialization.md
       - name: Workload specialization
         href: manage/azure-management-guide/workload-specialization.md
-    - name: How to update ALZ
-      items:
-      - name: Use infrastructure as code to update Azure landing zones
-        href: manage/infrastructure-as-code-updates.md
 
     - name: Management considerations
       items:
