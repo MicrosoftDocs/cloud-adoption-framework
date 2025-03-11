@@ -4,7 +4,7 @@ description: Learn how the Azure API Management landing zone accelerator, which 
 author: aarthiem
 ms.author: aamurugan
 ms.reviewer: tozimmergren
-ms.date: 11/14/2024
+ms.date: 03/11/2025
 ms.topic: conceptual
 ms.custom: devx-track-bicep
 ms.collection: ce-skilling-ai-copilot
