@@ -106,13 +106,9 @@ Managing code and runtime are workload responsibilities. Have your workload team
 
 ## Manage cloud resources
 
-Managing cloud resources means managing, governing, and maintaining oversight of all services, deployments, and infrastructure across your Azure estate. Effective control ensures resources align with your organization's standards, security policies, and compliance requirements.
+Managing cloud resources involves governance, oversight, and maintenance of all Azure services, deployments, and infrastructure. Establish clear deployment protocols and proactive drift detection strategies to maintain consistency across environments. Follow these recommendations:
 
-### Manage deployments
-
-Standardizing deployment creates repeatable, consistent processes for creating new services and delivering software and infrastructure changes. Standardized deployments reduce errors and accelerate delivery.
-
-#### Manage portal-based deployments
+### Manage portal-based deployments
 
 Define protocols and limits for portal-based deployments to minimize the potential for production problems. Here’s how:
 
@@ -136,7 +132,7 @@ Define protocols and limits for portal-based deployments to minimize the potenti
     | [Terraform](/azure/developer/terraform/) | Multicloud solution, broader community support |
     | [ARM](/azure/azure-resource-manager/templates/) templates | Full control, comfortable with JSON |
 
-#### Manage code-based deployments
+### Manage code-based deployments
 
 Adopt code-based deployments to automate and control complex or large-scale changes. Here’s how:
 
@@ -178,7 +174,7 @@ Manage configuration drift by identifying and correcting discrepancies between y
 
 	- ***Rollback to last-known-good configuration.*** Develop clear rollback strategies that use automated procedures within your CI/CD pipeline. Utilize your last-known-good configuration to quickly revert undesired changes and minimize downtime.
 
-	- ***Minimize portal-driven changes.*** Minimize non-IaC changes to emergency scenarios only. Enforce strict access controls such as Privileged Identity Management. Promptly update IaC files if manual adjustments are necessary to preserve the accuracy of your desired configuration.S
+	- ***Minimize portal-driven changes.*** Minimize non-IaC changes to emergency scenarios only. Enforce strict access controls such as Privileged Identity Management. Promptly update IaC files if manual adjustments are necessary to preserve the accuracy of your desired configuration.
 
 ## Control operating systems
 
