@@ -14,7 +14,7 @@ This article explains how to effectively manage your Azure cloud estate to ensur
 
 ## Identify your control scope
 
-Your administrative responsibilities depend on the deployment model you choose. Determine your control scope clearly for each deployment model to make informed management decisions for your cloud estate. Infrastructure (IaaS) and Platform services (PaaS) provide distinct administrative responsibilities within Azure compared to on-premises environments and Software services (SaaS). Use this table to clearly identify your responsibilities in each deployment model.
+Determine your control scope clearly for each deployment model to make informed management decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) provide distinct administrative responsibilities within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
 
 | Administration areas   | On-premises control scope | IaaS control scope (Azure) | PaaS control scope (Azure) | SaaS control scope |
 |------------------------|---------------------------|----------------------------|----------------------------|--------------------|
