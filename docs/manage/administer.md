@@ -45,6 +45,8 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 1. ***Standardize the post-deployment process.*** Implement monitoring and validation steps to confirm successful changes. Include a clear rollback strategy to quickly restore service if a change introduces problems.
 
+1. ***Prevent and detect unauthorized change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like ([Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action)), ([Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists)). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
+
 ## Manage security
 
 Identity is your security perimeter. Use a standardized platform to verify identities, restrict permissions, and maintain secure resource configurations. Follow these steps:
@@ -57,7 +59,9 @@ Identity is your security perimeter. Use a standardized platform to verify ident
 
 1. ***Manage authentication.*** Ensure users adopt strong authentication through multi-factor authentication (MFA) and use [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks). Always require [conditional access](/entra/identity/conditional-access/overview) to enforce authentication based on user identity, device health, and access context. Configure [self-service password reset](/entra/identity/authentication/concept-sspr-howitworks) and [eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy).
 
-1. ***Control workload security.*** For workload security recommendations, see the Well-Architected Framework's [security checklist](/azure/well-architected/security/checklist#checklist).
+1. ***Manage security information.*** Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and even management (SIEM) and security orchestration, automation, and response (SOAR).
+
+1. ***Control workload security.*** For workload security recommendations, see the Well-Architected Framework's [security checklist](/azure/well-architected/security/checklist#checklist) and [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*)
 
 ## Manage compliance
 
@@ -96,7 +100,7 @@ For more information, see [Enforce data governance](/azure/cloud-adoption-framew
 
 Managing costs in cloud operations means tracking spending actively both centrally and per workload. Cost control should provide visibility into expenditures and encourage responsible spending. Follow these steps:
 
-1. ***Manage and review costs.*** You must [monitor cloud costs](/azure/cloud-adoption-framework/manage/monitor#monitor-costs). Azure lacks a subscription-wide mechanism to cap spending at a certain threshold. Some services, like [Azure Log Analytics workspace](/azure/azure-monitor/logs/daily-cap), have spending caps. Your cost monitoring strategy serves as your primary tool for managing expenses.
+1. ***Manage and review costs.*** Use Microsoft Cost Management tools to [monitor cloud costs](/azure/cloud-adoption-framework/manage/monitor#monitor-costs). Azure lacks a subscription-wide mechanism to cap spending at a certain threshold. Some services, like [Azure Log Analytics workspace](/azure/azure-monitor/logs/daily-cap), have spending caps. Your cost monitoring strategy serves as your primary tool for managing expenses.
 
 1. ***Manage workload costs.*** Grant billing access to workload teams. Have these teams use the Well-Architected Framework's Cost Optimization [checklist](/azure/well-architected/cost-optimization/checklist#checklist).
 
@@ -155,7 +159,7 @@ Adopt code-based deployments to automate and control complex or large-scale chan
     | Require code reviews             | Ensure someone other than the author reviews every pull request          |
     | Enforce code coverage thresholds | Ensure a minimum percentage of code passes automated tests for all pull requests |
     | Use validation pipelines         | Configure branch protection rules to run a validation pipeline for pull requests |
-    
+
 1. ***Require workload team onboarding checks.*** Verify that new codebases and teams align with business goals, standards, and best practices. Use a checklist to confirm code repository structure, naming standards, coding standards, and CI/CD pipeline configurations.
 
 ### Manage configuration drift
@@ -168,7 +172,7 @@ Manage configuration drift by identifying and correcting discrepancies between y
 
     - ***Store desired and last-known-good configurations.*** Save your desired configuration file in a version-controlled repository. This file shows the original, intended configuration. Maintain a last-known-good configuration as a reliable rollback reference and drift detection baseline.
 
-    - ***Detect configuration drift before deployment.*** Preview potential changes before deployment using [Terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan), [Bicep what-if](/azure/azure-resource-manager/bicep/deploy-what-if?tabs=azure-powershell%2CCLI), or [ARM template what-if](/azure/azure-resource-manager/templates/deploy-what-if?tabs=azure-powershell). Investigate discrepancies thoroughly to ensure proposed changes align with the desired state.
+    - ***Detect configuration drift before deployment.*** Preview potential changes before deployment using [Terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan), [Bicep what-if](/azure/azure-resource-manager/bicep/deploy-what-if?tabs=azure-powershell%2CCLI), or [ARM template what-if](/azure/azure-resource-manager/templates/deploy-what-if). Investigate discrepancies thoroughly to ensure proposed changes align with the desired state.
 
 	- ***Detect drift post deployment.*** Regularly compare live environments with desired configurations through regular drift checks. Integrate these checks into your CI/CD pipelines or conduct them manually to maintain consistency.
 
@@ -176,12 +180,53 @@ Manage configuration drift by identifying and correcting discrepancies between y
 
 	- ***Minimize portal-driven changes.*** Minimize non-IaC changes to emergency scenarios only. Enforce strict access controls such as Privileged Identity Management. Promptly update IaC files if manual adjustments are necessary to preserve the accuracy of your desired configuration.
 
-## Control operating systems
+## Manage operating systems
 
-Where you use virtual machines, you need to also control the operating system. Follow these steps:
+Where you use virtual machines, you need to also manage the operating system. Follow these steps:
 
 1. ***Automate virtual machine maintenance.*** In Azure, use [automation tools](/azure/virtual-machines/infrastructure-automation) to create and manage Azure virtual machines. Use [Azure Machine Configuration](/azure/governance/machine-configuration/overview) to audit or configure operating system settings as code for machines running in Azure and hybrid.
 
-1. ***Update operating systems.****You need to [manage guest updates and host maintenance](/azure/virtual-machines/updates-maintenance-overview) to ensure the operating systems are up to date for security purposes.
+1. ***Update operating systems.** You need to [manage guest updates and host maintenance](/azure/virtual-machines/updates-maintenance-overview) to ensure the operating systems are up to date for security purposes.
 
 1. ***Monitor in-guest operations.*** Use the [Azure Change Tracking and Inventory service](/azure/automation/change-tracking/overview-monitoring-agent) to enhance the auditing and governance for in-guest operations. It monitors changes and provides detailed inventory logs for servers across Azure, on-premises, and other cloud environments.
+
+## Azure management tools
+
+| Category                                    | Tool                                                                 | Description                                                    |
+|---------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------|
+| Manage security | [Azure security baselines](/security/benchmark/azure/security-baselines-overview) | Provides guidance on available security capabilities and optimal security configurations |
+| Manage security | [Well Architected Framework's security pillar](/azure/well-architected/security/) | Security guidance for workload design |
+| Manage security | [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*)| Security configuration recommendations for Azure services |
+| Manage security                             | [Microsoft Entra ID](/entra/fundamentals/whatis)                     | Provides unified identity management                         |
+| Manage security                             | [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) | Aligns resource configurations with security standards         |
+| Manage security | [Microsoft Sentinel](/azure/sentinel/overview) | Provides security information and even management (SIEM) and security orchestration, automation, and response (SOAR) |
+| Manage security                             | [Azure RBAC](/azure/role-based-access-control/overview)               | Grants secure access with role-based assignments               |
+| Manage security                             | [Azure ABAC](/azure/role-based-access-control/conditions-overview)      | Grants secure access based on attribute conditions             |
+| Manage security                             | [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) | Manages access workflows and identity lifecycle           |
+| Manage security                             | [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) | Offers just-in-time privileged access                     |
+| Manage security                             | [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) | Enforces strong multi-factor authentication                |
+| Manage security                             | [Conditional Access](/entra/identity/conditional-access/overview)      | Enforces context-based authentication                        |
+| Manage security                             | [Self-service password reset](/entra/identity/authentication/concept-sspr-howitworks) | Allows secure user password resets                        |
+| Manage compliance                           | [Azure Policy](/azure/governance/policy/samples/built-in-policies)       | Enforces standards and secures resource configurations          |
+| Manage data                                 | [Microsoft Purview](/purview/data-governance-overview)                  | Governs and classifies sensitive data                          |
+| Manage data                           | [Azure Policy](/azure/governance/policy/samples/built-in-policies)       | Prevents or audits unintended modifications or deletions of resources           |
+| Manage data                                 | [Resource locks](/azure/azure-resource-manager/management/lock-resources) | Prevents unintended modifications or deletions                 |
+| Manage costs | [Monitor costs](/azure/cloud-adoption-framework/manage/monitor#monitor-costs) | Monitoring is essential to managing cloud costs |
+| Manage cloud resources | [Azure Policy](/azure/governance/policy/samples/built-in-policies) | Enforces, audits, or prevents modifications to cloud resources          |
+| Manage cloud resources (portal deployments) | [ARM template export](/azure/azure-resource-manager/templates/export-template-portal) | Exports resource configurations as IaC templates         |
+| Manage cloud resources (portal deployments) | [Azure Monitor alerts](/azure/azure-monitor/alerts/alerts-create-log-alert-rule) | Notifies stakeholders of resource changes                |
+| Manage cloud resources (code deployments)   | [Bicep](/azure/azure-resource-manager/bicep/modules)                   | Manages infrastructure as code for Azure resources             |
+| Manage cloud resources (code deployments)   | [Bicep deployment stacks](/azure/azure-resource-manager/bicep/deployment-stacks?tabs=azure-powershell) | Supports version-controlled deployments and prevents unauthorized changes |
+| Manage cloud resources (code deployments)   | [Terraform](/azure/developer/terraform/)                               | Manages multicloud infrastructure as code                      |
+| Manage cloud resources (code deployments)   | [ARM templates](/azure/azure-resource-manager/templates/)                | Defines and deploys Azure resources with templates               |
+| Manage cloud resources (code deployments)   | [ARM Template specs](/azure/azure-resource-manager/templates/template-specs) | Versions and manages ARM templates for consistency              |
+| Manage cloud resources (code deployments)   | [GitHub Actions](https://docs.github.com/actions)                      | Automates build, test, and deployment pipelines                  |
+| Manage cloud resources (code deployments)   | [Azure Pipelines](/azure/devops/pipelines/)                            | Automates build and deployment processes                        |
+| Manage drift | [Azure Policy](/azure/governance/policy/samples/built-in-policies) | Enforces, audits, or prevents modifications to cloud resources          |
+| Manage drift                                | [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) | Detects and explains configuration changes                     |
+| Manage drift                                | [Bicep what-if](/azure/azure-resource-manager/bicep/deploy-what-if?tabs=azure-powershell%2CCLI) | Previews potential configuration changes                       |
+| Manage drift                                | [Terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan) | Previews potential changes before Terraform deployment           |
+| Manage drift | [ARM template what-if](/azure/azure-resource-manager/templates/deploy-what-if) | Previews potential configuration changes |
+| Manage operating systems                    | [Azure Machine Configuration](/azure/governance/machine-configuration/overview) | Audits and configures operating system settings as code         |
+| Manage operating systems                    | [Azure Change Tracking and Inventory service](/azure/automation/change-tracking/overview-monitoring-agent) | Monitors and logs changes for operating systems                |
+| Manage operating systems                    | [Azure automation tools](/azure/virtual-machines/infrastructure-automation) | Automates virtual machine maintenance                           |
