@@ -10,7 +10,7 @@ ms.date: 12/06/2024
 
 # Storage for Azure HPC workloads
 
-Storage access is a crucial factor to consider when you plan for high-performance computing (HPC) workload performance. Large-scale HPC workloads in certain environments can create demands for data storage and access that exceed the capabilities of traditional cloud file systems. This article provides recommendations to help you choose the correct storage for your Azure HPC workloads. 
+Storage access is a crucial factor to consider when you plan for high-performance computing (HPC) workload performance. Large-scale HPC workloads in certain environments can create demands for data storage and access that exceed the capabilities of traditional cloud file systems. This article provides recommendations to help you choose the correct storage for your Azure HPC workloads.
 
 Consider the following factors related to your application requirements to help decide which storage solution to use:
 
@@ -29,16 +29,16 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 :::image type="content" source="media/storage-selection-flow.png" alt-text="Diagram that shows a decision tree of considerations when you choose a storage solution." lightbox="media/storage-selection-flow.png" border="false":::
 
 ## HPC considerations
+
 - [Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale.
 
 - The high-performance input/output (I/O) requirements and massive scalability needs of [HPC](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
 
 - HPC uses parallel processing and massive scalability to quickly and reliability perform large and complicated computing tasks that aren't practical or cost-effective to handle with traditional computing techniques.
 
+### Compute node distribution in HPC clusters
 
-###  Compute node distribution in HPC clusters
-
-In Azure HPC clusters, you can create compute nodes as virtual machines (VMs) to perform jobs that are assigned to a cluster. To help achieve the high-performance parallel processing that's required to solve complex HPC problems, the compute nodes distribute those jobs across the cluster. 
+In Azure HPC clusters, you can create compute nodes as virtual machines (VMs) to perform jobs that are assigned to a cluster. To help achieve the high-performance parallel processing that's required to solve complex HPC problems, the compute nodes distribute those jobs across the cluster.
 
 When running jobs, compute nodes must perform read and write operations on a shared data source. Nodes access this data source in a range of scenarios that lie between the following two extremes:
 
@@ -112,15 +112,15 @@ Choose the solution that's best suited for your unique I/O and capacity requirem
 
   - Provides exabyte-scale, high-throughput, low-latency access, a familiar file system, and multi-protocol access, including REST, HDFS, NFS.
 
-  - Blob storage is cost effective, since it is designed to handle petabytes of data, while offering features like lifecycle management, which facilitate the archival and deletion of data to lower storage costs over time. 
+  - Blob storage is cost effective, since it is designed to handle petabytes of data, while offering features like lifecycle management, which facilitate the archival and deletion of data to lower storage costs over time.
 
-  -  Supports the ability to mount Blob Storage as a file system by using [BlobFuse](/azure/storage/blobs/storage-how-to-mount-container-linux). Doing so makes it easy to allow multiple nodes to mount the same container for read-only scenarios.
+  - Supports the ability to mount Blob Storage as a file system by using [BlobFuse](/azure/storage/blobs/storage-how-to-mount-container-linux). Doing so makes it easy to allow multiple nodes to mount the same container for read-only scenarios.
 
   - Supports NFS 3.0 at the blob service endpoint for high-throughput, read-heavy workloads.
 
   - Supports cost optimization by allowing you to move data to cooler storage tiers. This optimization is possible through lifecycle management that's based on the last update or access time and intelligent tiering with customizable policies.
 
--  **For ReadWriteMany (unique) or write-once, read-once applications**, consider using [Azure NetApp Files](/azure/azure-netapp-files). Azure NetApp Files provides the following benefits:
+- **For ReadWriteMany (unique) or write-once, read-once applications**, consider using [Azure NetApp Files](/azure/azure-netapp-files). Azure NetApp Files provides the following benefits:
 
   - A wide range of file protocols, such as NFSv3, NFSv4.1, and SMB3
 
