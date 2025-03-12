@@ -10,11 +10,11 @@ ms.custom: UpdateFrequency2
 
 # Administer your Azure cloud estate
 
-This article outlines how to administer your Azure estate. Administration is about controlling operational activities to maintain the health of your entire Azure estate. Poor administrative control creates operational, security, and cost-management issues that weaken your cloud's alignment with business objectives.
+This article explains how to effectively manage your Azure cloud estate to ensure operational health. Strong administrative control prevents operational disruptions, enhances security, optimizes cost management, and strengthens alignment with business objectives.
 
-## Understand your control scope
+## Identify your control scope
 
-Your administration responsibilities and scope of control varies by workload type. These administration responsibilities affect the decisions you make to manage your cloud estate. Infrastructure services (IaaS) and platform services (PaaS) operate within Azure and are distinct from the control scope for on-premises and software services (SaaS).
+Your administrative responsibilities depend on the deployment model you choose. Determine your control scope clearly for each deployment model to make informed management decisions for your cloud estate. Infrastructure (IaaS) and Platform services (PaaS) provide distinct administrative responsibilities within Azure compared to on-premises environments and Software services (SaaS). Use this table to clearly identify your responsibilities in each deployment model.
 
 | Administration areas   | On-premises control scope | IaaS control scope (Azure) | PaaS control scope (Azure) | SaaS control scope |
 |------------------------|---------------------------|----------------------------|----------------------------|--------------------|
@@ -49,13 +49,13 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 Identity is your security perimeter. Verify the identity of all users and devices before granting access to resources. You need a common identity and access management platform to enforce secure authentication and authorization across all identities.
 
-1. ***Control identities.*** Use [Microsoft Entra ID](/azure/entra/fundamentals/whatis) as your identity and access management platform to manage all three identity types. Apply role-based access control (RBAC) in [Microsoft Entra ID](/azure/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/azure/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, identity lifecycle management, and [enable just-in-time access](/azure/entra/id-governance/privileged-identity-management/pim-configure) (Privileged Identity Management) to important resources.
+1. ***Control identities.*** Use [Microsoft Entra ID](/entra/fundamentals/whatis) as your identity and access management platform to manage all three identity types. Apply role-based access control (RBAC) in [Microsoft Entra ID](/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, identity lifecycle management, and [enable just-in-time access](/entra/id-governance/privileged-identity-management/pim-configure) (Privileged Identity Management) to important resources.
 
 1. ***Control access.*** Use Azure [role-based access control](/azure/role-based-access-control/overview) (RBAC) and [attribute-based access control](/azure/role-based-access-control/conditions-overview) (ABAC) to grant the least permission to accomplish the job. Prefers role assignments based on [groups](/azure/role-based-access-control/overview#groups) to limit management overhead. Apply the permission at the smallest [scope](/azure/role-based-access-control/role-assignments-steps#step-3-identify-the-needed-scope) needed. Applying permissions at too broad of a scope can lead to elevated permissions. Most users only need access to subscriptions, resource groups, or resources.
 
-1. ***Control resource configurations.*** Use [infrastructure as code](/azure/devops/deliver/what-is-infrastructure-as-code) (IaC) to ensure consistent and reproducible configuration of resources. Then use Azure Policy to enforce organizational standards and assess compliance. Then use [Azure Policy](/azure/governance/policy/samples/built-in-policies) to enforce secure configurations of specific Azure services. Reference the [Security baselines](/azure/security/benchmark/azure/security-baselines-overview) for guidance on available security capabilities and optimal security configurations. As an add-on feature, use security policies in [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) to align with common security standards.
+1. ***Control resource configurations.*** Use [infrastructure as code](/devops/deliver/what-is-infrastructure-as-code) (IaC) to ensure consistent and reproducible configuration of resources. Then use Azure Policy to enforce organizational standards and assess compliance. Then use [Azure Policy](/azure/governance/policy/samples/built-in-policies) to enforce secure configurations of specific Azure services. Reference the [Security baselines](/azure/security/benchmark/azure/security-baselines-overview) for guidance on available security capabilities and optimal security configurations. As an add-on feature, use security policies in [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) to align with common security standards.
 
-1. ***Control authentication.*** Enable [Microsoft Entra multifactor authentication (MFA)](/azure/entra/identity/authentication/concept-mfa-howitworks). Configure[self-service password reset](/azure/entra/identity/authentication/concept-sspr-howitworks) and [eliminate weak passwords](/azure/entra/identity/authentication/concept-password-ban-bad-combined-policy). Use [conditional access](/azure/entra/identity/conditional-access/overview) policies to grant or block user and [device identities](/azure/entra/identity/devices/overview) access to cloud services.
+1. ***Control authentication.*** Enable [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks). Configure[self-service password reset](/entra/identity/authentication/concept-sspr-howitworks) and [eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy). Use [conditional access](/entra/identity/conditional-access/overview) policies to grant or block user and [device identities](/entra/identity/devices/overview) access to cloud services.
 
 ## Control compliance
 
@@ -71,7 +71,7 @@ For more information, see [Enforcing compliance in Azure](/azure/cloud-adoption-
 
 Controlling data in cloud operations means actively managing data by classifying, segmenting, restricting access, and protecting against deletion. Controlling data proves important because it secures sensitive information, supports compliance, and ensures data remains reliable during changes.
 
-1. ***Discover and classify data.*** Identify and categorize data based on sensitivity and importance. This classification establishes a baseline for applying tailored controls to various data types. Use [Microsoft Purview](/azure/purview/data-governance-overview) for data governance. For more information, see [Data sources that connect to Microsoft Purview Data Map.](/azure/purview/microsoft-purview-connector-overview#azure)
+1. ***Discover and classify data.*** Identify and categorize data based on sensitivity and importance. This classification establishes a baseline for applying tailored controls to various data types. Use [Microsoft Purview](purview/data-governance-overview) for data governance. For more information, see [Data sources that connect to Microsoft Purview Data Map.](/purview/microsoft-purview-connector-overview#azure)
 
 1. ***Control data residency.*** If you have data residency requirements, select regions within your [geography](/azure/reliability/regions-overview#understand-azure-regions-and-geographies), such as the United States or Europe. Verify any exceptions, since [certain Azure services](https://azure.microsoft.com/explore/global-infrastructure/data-residency#select-your-geography) might store data outside your selected region. Lastly, regularly review your Azure data residency settings and compliance requirements to maintain full control over your customer data.
 
@@ -114,7 +114,7 @@ Define protocols and limits for portal-based deployments to minimize the potenti
 
 1. ***Restrict portal permissions.*** Limit who can deploy from the portal using role-based access control (RBAC). Assign read-only permissions by default and elevate access only when necessary.
 
-    - ***Grant just-in-time access.*** Use [Privileged Identity Management (PIM)](/azure/entra/id-governance/privileged-identity-management/pim-getting-started) to access Azure and Microsoft Entra resources. Require approvals from multiple individuals or groups in a sequential manner for PIM activations. Only use privileged roles (“A0” super admin roles) for emergencies.
+    - ***Grant just-in-time access.*** Use [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-getting-started) to access Azure and Microsoft Entra resources. Require approvals from multiple individuals or groups in a sequential manner for PIM activations. Only use privileged roles (“A0” super admin roles) for emergencies.
 
     - ***Structure RBAC based on the operating model.*** Design your RBAC policies around different operational teams. For example, have policies for different support levels, security operations, platform, networking, and workloads.
 
@@ -132,11 +132,11 @@ Define protocols and limits for portal-based deployments to minimize the potenti
 
 Adopt code-based deployments to automate and control complex or large-scale changes. Here’s how:
 
-1. ***Standardize tooling.*** Use a consistent toolset to minimize context switching. Choose developer tools (VS Code, Visual Studio), a code repository (GitHub, [Azure DevOps](/azure/devops/get-started/?view=azure-devops)), a CI/CD pipeline ([GitHub Actions](https://docs.github.com/actions), [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)), and an IaC solution ([Bicep](/azure/azure-resource-manager/bicep/modules), [Terraform](/azure/developer/terraform/), or [ARM](/azure/azure-resource-manager/templates/) templates) that work together.
+1. ***Standardize tooling.*** Use a consistent toolset to minimize context switching. Choose developer tools (VS Code, Visual Studio), a code repository (GitHub, [Azure DevOps](/azure/devops/get-started/)), a CI/CD pipeline ([GitHub Actions](https://docs.github.com/actions), [Azure Pipelines](/azure/devops/pipelines/)), and an IaC solution ([Bicep](/azure/azure-resource-manager/bicep/modules), [Terraform](/azure/developer/terraform/), or [ARM](/azure/azure-resource-manager/templates/) templates) that work together.
 
 1. ***Use version control.*** Maintain a single source of truth for your code. Use version control to reduce configuration drift and simplify rollback procedures.
 
-1. ***Use deployment pipelines.*** A [CI/CD pipeline](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops) automates the build process, runs tests, and scans code for quality and security issues with each pull request. Use [GitHub Actions](https://docs.github.com/actions) or [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops) to build and deploy application code and IaC files. Enforce precommit hooks and automated scans to catch unauthorized or high-risk changes early.
+1. ***Use deployment pipelines.*** A [CI/CD pipeline](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture) automates the build process, runs tests, and scans code for quality and security issues with each pull request. Use [GitHub Actions](https://docs.github.com/actions) or [Azure Pipelines](/azure/devops/pipelines/) to build and deploy application code and IaC files. Enforce precommit hooks and automated scans to catch unauthorized or high-risk changes early.
 
 1. ***Test deployments.*** Your CI/CD pipelines should stage approvals to test deployments before promoting changes. Follow a sequence that includes development, build verifications, integration tests, performance tests, user acceptance testing (UAT), staging, canary releases, preproduction, and production.
 
