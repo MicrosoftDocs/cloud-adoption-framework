@@ -1,6 +1,6 @@
 ---
 title: Cloud management overview
-description: Use the Cloud Adoption Framework for Azure to learn how to develop the business and technical approaches you need for effective cloud management.
+description: Learn how to use the Cloud Adoption Framework for Azure to build effective business and technical strategies for cloud management
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 10/17/2019
@@ -8,19 +8,17 @@ ms.topic: conceptual
 ms.custom: internal
 ---
 
-# Cloud management in the Cloud Adoption Framework
+# Cloud management overview
 
-The guidance in the manage section of the Cloud Adoption Framework serves two purposes:
+The Cloud Adoption Framework (CAF) Manage methodology offers a structured approach to cloud operations in Azure. Cloud operations include maintaining, managing, and optimizing your cloud environment.
 
-- Provides examples of actionable operations management approaches that represent common experiences often encountered by customers.
-- Helps you create personalized management solutions based on business commitments.
+Organizations of any size or industry can apply this methodology. The CAF Manage methodology helps you address critical aspects of cloud operations, ensuring the health and performance of your entire cloud environment.
 
-This content is intended for use by the cloud operations team. It's also relevant to cloud architects who need to develop a strong foundation in cloud operations or cloud design principles.
+## Why is cloud management important?
 
-The content in the Cloud Adoption Framework affects the business, technology, and culture of enterprises. This section of the Cloud Adoption Framework interacts heavily with IT operations, IT governance, finance, line-of-business leaders, networking, identity, and cloud adoption teams. Various dependencies on these personnel require a facilitative approach by the cloud architects who are using this guidance. Facilitation with these teams is seldom a one-time effort.
+Effective cloud management maintains business continuity while controlling costs in your Azure environment. Proper management reduces downtime, strengthens security, simplifies change management, and speeds incident response.
 
-The cloud architect serves as the thought leader and facilitator to bring these audiences together. The content in this collection of guides is designed to help the cloud architect facilitate the right conversation, with the right audience, to drive necessary decisions. Business transformation that's empowered by the cloud depends on the cloud architect to help guide decisions throughout the business and IT.
+## Next step
 
-Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for operations and management of deployment solutions. Within this framework, these specialists are referred to frequently as *cloud operations*, or collectively as the *cloud operations team*.
-
-If you want to follow this guide from beginning to end, this content aids in developing a robust cloud operations strategy. The guidance walks you through the theory and implementation of such a strategy.
+> [!div class="nextstepaction"]
+> [Administer your Azure cloud estate](./administer.md)
