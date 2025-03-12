@@ -1,6 +1,6 @@
 ---
 title: Administer your Azure cloud estate
-description: Learn how to administer your Azure cloud estate and provide control over your operations and business alignment.
+description: Learn how to administer your Azure cloud estate and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 03/14/2025
@@ -10,13 +10,13 @@ ms.custom: UpdateFrequency2
 
 # Administer your Azure cloud estate
 
-This article explains how to effectively manage your Azure cloud estate to ensure operational health. Strong administrative control prevents operational disruptions, enhances security, optimizes cost management, and strengthens alignment with business objectives.
+This article explains how to effectively manage your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives. Follow these best practices:
 
-## Identify your control scope
+## Identify your management scope
 
-Determine your control scope clearly for each deployment model to make informed management decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) provide distinct administrative responsibilities within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
+Determine your management scope clearly for each deployment model to make informed management decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) provide distinct management responsibilities within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
 
-| Administration areas   | On-premises control scope | IaaS control scope (Azure) | PaaS control scope (Azure) | SaaS control scope |
+| Administration areas   | On-premises scope | IaaS scope (Azure) | PaaS scope (Azure) | SaaS scope |
 |------------------------|---------------------------|----------------------------|----------------------------|--------------------|
 | Data                   | X                         | X                          | X                          | X                  |
 | Code and runtime       | X                         | X                          | X                          |                    |
@@ -25,7 +25,7 @@ Determine your control scope clearly for each deployment model to make informed 
 | Virtualization layer   | X                         |                            |                            |                    |
 | Physical hardware      | X                         |                            |                            |                    |
 
-## Control change
+## Manage change
 
 Change is the most common source of problems in the cloud. As a result, you need a change management approach that tracks changes and their approvals. It should also detect unapproved changes and revert them to a desired state. Here’s how:
 
@@ -41,31 +41,31 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 1. ***Standardize approval clearly.*** Define approval criteria and authority required at each risk level. Specify who must review each change, whether it's a single approver or a review board, and clarify how reviewers must provide and resolve feedback.
 
-1. ***Standardize the deployment process.*** Clearly outline the procedures for building, testing, and deploying approved changes to production. For details, see [Control deployments](#control-deployments).
+1. ***Standardize the deployment process.*** Clearly outline the procedures for building, testing, and deploying approved changes to production. For details, see [Control deployments](#manage-deployments).
 
 1. ***Standardize the post-deployment process.*** Implement monitoring and validation steps to confirm successful changes. Include a clear rollback strategy to quickly restore service if a change introduces problems.
 
-## Control security
+## Manage security
 
 Identity is your security perimeter. Use a standardized platform to verify identities, restrict permissions, and maintain secure resource configurations. Here's how:
 
-1. ***Control identities.*** Use [Microsoft Entra ID](/entra/fundamentals/whatis) as your unified identity management solution. Clearly define permissions by applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, and identity lifecycle management. Enable [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to grant just-in-time privileged access. This strategy reduces unnecessary elevated access. Manage all three identity types (user, application, device) consistently to ensure proper authentication and authorization.
+1. ***Manage identities.*** Use [Microsoft Entra ID](/entra/fundamentals/whatis) as your unified identity management solution. Clearly define permissions by applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, and identity lifecycle management. Enable [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to grant just-in-time privileged access. This strategy reduces unnecessary elevated access. Manage all three identity types (user, application, device) consistently to ensure proper authentication and authorization.
 
-1. ***Control access.*** Use Azure [role-based access control](/azure/role-based-access-control/overview) (RBAC) and [attribute-based access control](/azure/role-based-access-control/conditions-overview) (ABAC) to grant the least permission to accomplish the job. Prefer role assignments based on [groups](/azure/role-based-access-control/overview#groups) to limit management overhead. Grant permissions at the lowest required [scope](/azure/role-based-access-control/role-assignments-steps#step-3-identify-the-needed-scope), such as subscriptions, resource groups, or individual resources. Avoid overly broad permission scopes to prevent unintended privilege escalation. Assign only the necessary permissions for each user’s role.
+1. ***Manage access.*** Use Azure [role-based access control](/azure/role-based-access-control/overview) (RBAC) and [attribute-based access control](/azure/role-based-access-control/conditions-overview) (ABAC) to grant the least permission to accomplish the job. Prefer role assignments based on [groups](/azure/role-based-access-control/overview#groups) to limit management overhead. Grant permissions at the lowest required [scope](/azure/role-based-access-control/role-assignments-steps#step-3-identify-the-needed-scope), such as subscriptions, resource groups, or individual resources. Avoid overly broad permission scopes to prevent unintended privilege escalation. Assign only the necessary permissions for each user’s role.
 
-1. ***Control resource configurations.*** Use [infrastructure as code](/devops/deliver/what-is-infrastructure-as-code) (IaC) to ensure consistent and reproducible configuration of resources. Then use Azure Policy to enforce organizational standards and assess compliance. Then use [Azure Policy](/azure/governance/policy/samples/built-in-policies) to enforce secure configurations of specific Azure services. Reference the [Security baselines](/security/benchmark/azure/security-baselines-overview) for guidance on available security capabilities and optimal security configurations. As an add-on feature, use security policies in [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) to align with common security standards.
+1. ***Manage resource configurations.*** Use [infrastructure as code](/devops/deliver/what-is-infrastructure-as-code) (IaC) to ensure consistent and reproducible configuration of resources. Then use Azure Policy to enforce organizational standards and assess compliance. Then use [Azure Policy](/azure/governance/policy/samples/built-in-policies) to enforce secure configurations of specific Azure services. Reference the [Security baselines](/security/benchmark/azure/security-baselines-overview) for guidance on available security capabilities and optimal security configurations. As an add-on feature, use security policies in [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) to align with common security standards.
 
-1. ***Control authentication.*** Ensure users adopt strong authentication through multi-factor authentication (MFA) and use [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks). Always require [conditional access](/entra/identity/conditional-access/overview) to enforce authentication based on user identity, device health, and access context. Configure [self-service password reset](/entra/identity/authentication/concept-sspr-howitworks) and [eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy).
+1. ***Manage authentication.*** Ensure users adopt strong authentication through multi-factor authentication (MFA) and use [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks). Always require [conditional access](/entra/identity/conditional-access/overview) to enforce authentication based on user identity, device health, and access context. Configure [self-service password reset](/entra/identity/authentication/concept-sspr-howitworks) and [eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy).
 
 1. ***Control workload security.*** For workload security recommendations, see the Well-Architected Framework's [security checklist](/azure/well-architected/security/checklist#checklist).
 
-## Control compliance
+## Manage compliance
 
 Compliance management ensures that Azure operations remain aligned with established governance policies and regulatory standards. This practice reduces risk by safeguarding the environment from potential violations and misconfigurations.
 
 1. ***Understand your governance policies.*** Governance policies define the high-level constraints that your teams must follow to remain compliant. Review your organization’s policies and map each requirement to your operational processes. If you don’t have governance policies, first [document governance policies](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
 
-1. ***Control compliance.*** Enforcing compliance ensures your environment remains aligned with both organizational and regulatory standards. See the following table for policy recommendations.
+1. ***Manage compliance.*** Enforcing compliance ensures your environment remains aligned with both organizational and regulatory standards. See the following table for policy recommendations.
 
     | Recommendation | Details |
     |----------------|---------|
@@ -74,9 +74,9 @@ Compliance management ensures that Azure operations remain aligned with establis
 
 For more information, see [Enforcing compliance in Azure](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically).
 
-## Control data
+## Manage data
 
-Controlling data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. Effective data control safeguards sensitive information, maintains compliance, and ensures data reliability during operational changes.
+Managing data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. Effective data control safeguards sensitive information, maintains compliance, and ensures data reliability during operational changes.
 
 1. ***Discover and classify data.*** Identify and categorize data according to sensitivity and importance. This classification guides tailored controls for each data type.. Use [Microsoft Purview](/purview/data-governance-overview) for data governance. For more information, see [Data sources that connect to Microsoft Purview Data Map.](/purview/microsoft-purview-connector-overview#azure)
 
@@ -88,31 +88,31 @@ Controlling data in cloud operations involves actively classifying, segmenting, 
 
 1. ***Protect data from deletion.*** Use features such as soft delete, data versioning, and immutability where available. Implement database versioning and prepare rollback procedures. Utilize Azure Policy to explicitly deny datastore deletions ([Deny](/azure/governance/policy/concepts/effect-deny) or [DenyAction](/azure/governance/policy/concepts/effect-deny-action)) or audit ([Audit](/azure/governance/policy/concepts/effect-audit) or [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists)) any changes. If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes. Only use [resource locks](/azure/azure-resource-manager/management/lock-resources) strictly to prevent unintended modifications or deletions of critical data. Avoid using resource locks to protect configurations, as resource locks complicate IaC deployments
 
-1. ***Control workload data.*** See the Well-Architected Framework’s recommendations on [Data classification](/azure/well-architected/security/data-classification).
+1. ***Manage workload data.*** See the Well-Architected Framework’s recommendations on [Data classification](/azure/well-architected/security/data-classification).
 
 For more information, see [Enforce data governance](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-data-governance).
 
-## Control costs
+## Manage costs
 
-Controlling costs in cloud operations means tracking spending actively both centrally and per workload. Cost control should provide visibility into expenditures and encourage responsible spending. Here’s how
+Managing costs in cloud operations means tracking spending actively both centrally and per workload. Cost control should provide visibility into expenditures and encourage responsible spending. Here’s how
 
-1. ***Monitor and review costs.*** You must [monitor cloud costs](/azure/cloud-adoption-framework/manage/monitor#monitor-costs). Azure lacks a subscription-wide mechanism to cap spending at a certain threshold. Some services, like [Azure Log Analytics workspace](/azure/azure-monitor/logs/daily-cap), have spending caps. Your cost monitoring strategy serves as your primary tool for managing expenses.
+1. ***Manage and review costs.*** You must [monitor cloud costs](/azure/cloud-adoption-framework/manage/monitor#monitor-costs). Azure lacks a subscription-wide mechanism to cap spending at a certain threshold. Some services, like [Azure Log Analytics workspace](/azure/azure-monitor/logs/daily-cap), have spending caps. Your cost monitoring strategy serves as your primary tool for managing expenses.
 
-1. ***Control workload costs.*** Grant billing access to workload teams. Have these teams use the Well-Architected Framework’s Cost Optimization [checklist](/azure/well-architected/cost-optimization/checklist#checklist).
+1. ***Manage workload costs.*** Grant billing access to workload teams. Have these teams use the Well-Architected Framework’s Cost Optimization [checklist](/azure/well-architected/cost-optimization/checklist#checklist).
 
-## Control code and runtime
+## Manage code and runtime
 
-Controlling code and runtime are workload responsibilities. Have your workload teams use the Well-Architected Framework’s [Operational Excellence checklist](/azure/well-architected/operational-excellence/checklist#checklist), which outlines 12 recommendations to control code and runtime.
+Managing code and runtime are workload responsibilities. Have your workload teams use the Well-Architected Framework’s [Operational Excellence checklist](/azure/well-architected/operational-excellence/checklist#checklist), which outlines 12 recommendations to control code and runtime.
 
-## Control cloud resources
+## Manage cloud resources
 
-Controlling cloud resources means managing, governing, and maintaining oversight of all services, deployments, and infrastructure across your Azure estate. Effective control ensures resources align with your organization's standards, security policies, and compliance requirements.
+Managing cloud resources means managing, governing, and maintaining oversight of all services, deployments, and infrastructure across your Azure estate. Effective control ensures resources align with your organization's standards, security policies, and compliance requirements.
 
-### Control deployments
+### Manage deployments
 
 Standardizing deployment creates repeatable, consistent processes for creating new services and delivering software and infrastructure changes. Standardized deployments reduce errors and accelerate delivery.
 
-#### Control portal-based deployments
+#### Manage portal-based deployments
 
 Define protocols and limits for portal-based deployments to minimize the potential for production problems. Here’s how:
 
@@ -130,13 +130,13 @@ Define protocols and limits for portal-based deployments to minimize the potenti
 
 1. ***Use version-controlled templates.*** Limit portal use to emergency scenarios if employing IaC deployments. Portal changes result in configuration drift from IaC templates. Replicate all portal-based changes immediately in version-controlled IaC templates, such as [Bicep](/azure/azure-resource-manager/bicep/modules), [Terraform](/azure/developer/terraform/), or [ARM](/azure/azure-resource-manager/templates/) templates. Regularly export Azure resource configurations and store them as IaC to maintain production environments aligned with approved, traceable configurations. For example, export configurations as [Bicep](/azure/azure-resource-manager/templates/export-template-portal), [Terraform](/azure/developer/terraform/azure-export-for-terraform/export-terraform-overview), or [ARM templates](/azure/azure-resource-manager/templates/export-template-portal). You can export Azure resource configurations into Bicep or ARM templates. Consider [template specs](/azure/azure-resource-manager/templates/template-specs) if using ARM templates.
 
-| Tool | Use Case |
-|------|----------|
-| [Bicep](/azure/azure-resource-manager/bicep/modules) | Manageable, readable Azure-specific IaC |
-| [Terraform](/azure/developer/terraform/) | Multicloud solution, broader community support |
-| [ARM](/azure/azure-resource-manager/templates/) templates | Full control, comfortable with JSON |
+    | Tool | Use Case |
+    |------|----------|
+    | [Bicep](/azure/azure-resource-manager/bicep/modules) | Manageable, readable Azure-specific IaC |
+    | [Terraform](/azure/developer/terraform/) | Multicloud solution, broader community support |
+    | [ARM](/azure/azure-resource-manager/templates/) templates | Full control, comfortable with JSON |
 
-#### Control code-based deployments
+#### Manage code-based deployments
 
 Adopt code-based deployments to automate and control complex or large-scale changes. Here’s how:
 
@@ -152,19 +152,19 @@ Adopt code-based deployments to automate and control complex or large-scale chan
 
 1. ***Apply code repository best practices.*** Following these standards reduces errors, streamlines code reviews, and avoids integration issues. For high-priority production environments:
 
-| Requirement                      | Description                                                              |
-|----------------------------------|--------------------------------------------------------------------------|
-| Disable direct pushes            | Block direct commits to the main branch                                  |
-| Require pull requests            | Require all changes to pass through a pull request                       |
-| Require code reviews             | Ensure someone other than the author reviews every pull request          |
-| Enforce code coverage thresholds | Ensure a minimum percentage of code passes automated tests for all pull requests |
-| Use validation pipelines         | Configure branch protection rules to run a validation pipeline for pull requests |
+    | Requirement                      | Description                                                              |
+    |----------------------------------|--------------------------------------------------------------------------|
+    | Disable direct pushes            | Block direct commits to the main branch                                  |
+    | Require pull requests            | Require all changes to pass through a pull request                       |
+    | Require code reviews             | Ensure someone other than the author reviews every pull request          |
+    | Enforce code coverage thresholds | Ensure a minimum percentage of code passes automated tests for all pull requests |
+    | Use validation pipelines         | Configure branch protection rules to run a validation pipeline for pull requests |
+    
+1. ***Require workload team onboarding checks.*** Verify that new codebases and teams align with business goals, standards, and best practices. Use a checklist to confirm code repository structure, naming standards, coding standards, and CI/CD pipeline configurations.
 
-1.***Require workload team onboarding checks.*** Verify that new codebases and teams align with business goals, standards, and best practices. Use a checklist to confirm code repository structure, naming standards, coding standards, and CI/CD pipeline configurations.
+### Manage configuration drift
 
-### Control configuration drift
-
-Control configuration drift by identifying and correcting discrepancies between your intended configuration and the live environment. Follow these best practices:
+Manage configuration drift by identifying and correcting discrepancies between your intended configuration and the live environment. Follow these best practices:
 
 1. ***Prevent and detect change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like ([Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action)), ([Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists)). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
 
