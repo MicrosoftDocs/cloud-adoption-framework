@@ -1,6 +1,6 @@
 ---
 title: Cloud management overview
-description: Learn how to use the Cloud Adoption Framework for Azure to build effective business and technical strategies for cloud management
+description: Learn how to use the Cloud Adoption Framework for Azure to build effective business and technical strategies for cloud management.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 03/14/2025
