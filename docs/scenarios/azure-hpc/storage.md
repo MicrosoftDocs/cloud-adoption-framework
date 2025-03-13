@@ -22,7 +22,7 @@ Consider the following factors related to your application requirements to help 
 - Cost
 - Storage location (on-premises versus Azure)
 
-For more information, see [Understand factors that influence HPC storage selection in Azure](/training/modules/hpc-storage-considerations/).
+For more information, see [Understand factors that influence HPC storage selection in Azure](/training/modules/hpc-storage-considerations).
 
 The following diagram shows a decision tree that's for a specific HPC storage system choice.
 
@@ -34,13 +34,13 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 
 - The high-performance input/output (I/O) requirements and massive scalability needs of [HPC](https://azure.microsoft.com/solutions/high-performance-computing/) introduce unique challenges for data storage and access.
 
-- HPC uses parallel processing and massive scalability to quickly and reliability perform large and complicated computing tasks that aren't practical or cost-effective to handle by using traditional computing techniques.
+- HPC uses parallel processing and massive scalability to quickly and reliably perform large and complicated computing tasks that aren't practical or cost-effective to handle by using traditional computing techniques.
 
 ### Compute node distribution in HPC clusters
 
 In Azure HPC clusters, you can create compute nodes as virtual machines (VMs) to perform jobs that are assigned to a cluster. To help achieve the high-performance parallel processing that's required to solve complex HPC problems, the compute nodes distribute those jobs across the cluster.
 
-When you run jobs, compute nodes must perform read and write operations on a shared data source. Nodes access this data source in a range of scenarios that lie between the following two extremes.
+When you run jobs, compute nodes must perform read and write operations on a shared data source. Nodes access this data source in a range of scenarios that lie between the two following extremes.
 
 - **One data source to many compute nodes:** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Despite their structural simplicity, the I/O capacity of the storage location limits the I/O operations.
 
@@ -53,7 +53,7 @@ Consider the types of traffic that your HPC environment generates and processes.
 - Single stream versus multiple streams
 - Ratio of read traffic to write traffic
 - Average file sizes and file count
-- Random versus sequential access patterns
+- Random access patterns versus sequential access patterns
 
 ### Data locality
 
@@ -66,24 +66,26 @@ This category considers the location of the data. Locality awareness helps you d
 
 ### Performance requirements
 
-Performance requirements for storage solutions are typically summarized as follows:
+Performance requirements for storage solutions are typically summarized as:
 
-- Single-stream throughput
-- Multi-stream throughput
-- Expected maximum IOPS
-- Average latency
+- Single-stream throughput.
+- Multi-stream throughput.
+- Expected maximum IOPS.
+- Average latency.
 
-Every factor affects performance, so these numbers serve as a guide for the expected results of a specific solution. For instance, an HPC workload might include extensive file creation and deletion as part of the workflow. Those operations could affect the overall throughput.
+Each factor affects performance, so these numbers serve as a guide for the expected results of a specific solution. For instance, an HPC workload might include extensive file creation and deletion as part of the workflow. Those operations could affect the overall throughput.
 
 ### Access methods
 
-Account for the client access protocol required and be clear about what features of the protocol you need. There are different versions of network file system (NFS) and server message block (SMB).
+Consider the client access protocol that you need and specify the required features. There are different versions of network file system (NFS) and server message block (SMB).
 
 Consider the following requirements:
 
-- Whether NFS or SMB versions are required
-- Expected protocol features, such as access control lists or encryption
-- Parallel file system solution
+- Whether NFS or SMB versions are required.
+
+- The protocol features you require, such as access control lists or encryption.
+
+- Whether a parallel file system solution is required.
 
 ### Total capacity requirement
 
@@ -148,9 +150,9 @@ In a scenario where dozens of clients attempt to work on data stored on a single
 
 Parallel file systems distribute block-level storage across multiple networked storage nodes. File data is spread among these nodes, which means that file data is spread among multiple storage devices. This distribution pools any individual storage I/O requests across multiple storage nodes that are accessible through a common namespace.
 
-Multiple storage devices and multiple paths to data are used to provide a high degree of parallelism. This approach reduces the number of bottlenecks imposed by accessing only a single node at a time. However, parallel I/O can be difficult to coordinate and optimize if working directly at the level of the API or POSIX I/O interface. By introducing intermediate data access and coordination layers, parallel file systems provide application developers a high-level interface between the application layer and the I/O layer.
+Multiple storage devices and multiple paths to data are used to provide a high degree of parallelism. This approach reduces the number of bottlenecks imposed by accessing only a single node at a time. However, parallel I/O can be difficult to coordinate and optimize if working directly at the level of the API or POSIX I/O interface. Parallel file systems provide application developers with a high-level interface between the application layer and the I/O layer through the use of intermediate data access and coordination layers.
 
-Tightly coupled workloads that leverage the Messaging Passing Interface (MPI) might have unique requirements with the need for low-latency communications between nodes. The nodes are connected via high-speed interconnect and aren't easily adaptable for sharing with other workloads. MPI applications use the entire high-performance interconnects via Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like [Lustre](https://www.lustre.org/) that's also accessed via the high-speed interconnect.
+Tightly coupled workloads that use the Messaging Passing Interface (MPI) might have unique requirements with the need for low-latency communications between nodes. The nodes are connected via high-speed interconnect and aren't easily adaptable for sharing with other workloads. MPI applications use the entire high-performance interconnects via Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like [Lustre](https://www.lustre.org/) that's also accessed via the high-speed interconnect.
 
 Parallel file systems such as Lustre are used for HPC workloads that require access to large files, simultaneous access from multiple compute nodes, and massive amounts of data. The implementation of parallel file systems makes it easy to scale in terms of capability and performance. These file systems take advantage of remote direct memory access transfers with large bandwidth and reduced CPU usage. The parallel file system is often used as scratch space and intended for work that requires optimized I/O.
 
@@ -170,12 +172,12 @@ Similar to NFS, you can create a multi-node BeeGFS or Lustre file system. The pe
 
 The following table provides a comparison of Blob Storage, Azure Files, Managed Lustre, and Azure NetApp Files.
 
-|Category |Blob Storage | Azure Files | Managed Lustre | Azure NetApp Files |
+| Category | Blob Storage | Azure Files | Managed Lustre | Azure NetApp Files |
 |--|--|--|--|--|
-| Use cases | Best suited for large-scale read-heavy sequential access workloads where data is ingested once and modified minimally. <br><br> Low total cost of ownership, if there's light maintenance. <br><br> Some example scenarios include large scale analytical data, throughput sensitive high-performance computing, backup and archive, autonomous driving, media rendering, and genomic sequencing.| A highly available service that's best suited for random-access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support. The built-in CSI driver allows you to easily use it from VM-based platforms and container platforms like Azure Container Instances and Azure Kubernetes Service (AKS). <br><br> Some example scenarios include shared files, databases, home directories, traditional applications, ERP, CMS, NAS migrations that don't require advanced management, and custom applications that require scale-out file storage. | Managed Lustre is a fully managed parallel file system that's best suited for medium to large HPC workloads. <br><br> Enables HPC applications in the cloud without breaking application compatibility by providing familiar Lustre parallel file system functionality, behaviors, and performance. This service helps secure long-term application investments. | A fully managed file service in the cloud, powered by NetApp, that has advanced management capabilities. <br><br> Azure NetApp Files is suited for workloads that require random access. It provides broad protocol support and improved data protection. <br><br> Some example scenarios include on-premises enterprise NAS migration that requires rich management capabilities, latency sensitive workloads like SAP HANA, latency-sensitive or IOPS intensive high-performance compute, or workloads that require simultaneous multi-protocol access. |
-| Available protocols | NFS 3.0 <br><br>REST <br><br> Azure Data Lake Storage  | SMB <br><br> NFS 4.1 <br><br>(No interoperability between either protocol) | Lustre | NFS 3.0 and 4.1 <br><br> SMB <br><br><br> |
+| Use cases | Best suited for large-scale, read-heavy sequential access workloads where data is ingested once and modified minimally. <br><br> Low total cost of ownership with light maintenance. <br><br> Example scenarios include large-scale analytical data, throughput-sensitive high-performance computing, backup and archive, autonomous driving, media rendering, and genomic sequencing. | A highly available service best suited for random-access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support. The built-in CSI driver allows easy use from VM-based platforms and container platforms like Azure Container Instances and Azure Kubernetes Service (AKS). <br><br> Example scenarios include shared files, databases, home directories, traditional applications, ERP, CMS, NAS migrations that don't require advanced management, and custom applications that require scale-out file storage. | Managed Lustre is a fully managed parallel file system best suited for medium to large HPC workloads. <br><br> Enables HPC applications in the cloud without breaking application compatibility by providing familiar Lustre parallel file system functionality, behaviors, and performance. This service helps secure long-term application investments. | A fully managed file service in the cloud, powered by NetApp, that has advanced management capabilities. <br><br> Azure NetApp Files is suited for workloads that require random access. It provides broad protocol support and improved data protection. <br><br> Example scenarios include on-premises enterprise NAS migration that requires rich management capabilities, latency-sensitive workloads like SAP HANA, latency-sensitive or IOPS-intensive high-performance compute, or workloads that require simultaneous multi-protocol access. |
+| Available protocols | NFS 3.0 <br><br> REST <br><br> Azure Data Lake Storage | SMB <br><br> NFS 4.1 <br><br> (No interoperability between either protocol) | Lustre | NFS 3.0 and 4.1 <br><br> SMB |
 | Key features | Integrated management, including lifecycle management, immutable blobs, data failover, and metadata index. | Zone redundancy support for high availability. <br><br> Consistent single-digit millisecond latency. <br><br> Predictable performance and cost that scales with capacity. | High storage capacity up to 2.5 PB. <br><br> Low latency, about 2 ms. <br><br> Create new clusters in minutes. <br><br> Supports containerized workloads with AKS. | Extremely low latency, as low as a submillisecond. <br><br> Rich NetApp ONTAP management capability, like SnapMirror Cloud. <br><br> Consistent hybrid cloud experience. |
-| Performance (per volume) | As much as 40,000 IOPS. As much as 60-Gbps ingress throughput and 200-Gbps egress. | As much as 100,000 IOPS. As much as 80 GiBps throughput. | As much as 100,000 IOPS. As much as 500 GiBps throughput. | As much as 460,000 IOPS. As much as 12.8 GiBps throughput. |
+| Performance (per volume) | As much as 40,000 IOPS. <br><br> As much as 60-Gbps ingress throughput and 200-Gbps egress. | As much as 100,000 IOPS. <br><br> As much as 80 GiBps throughput. | As much as 100,000 IOPS. <br><br> As much as 500 GiBps throughput. | As much as 460,000 IOPS. <br><br> As much as 12.8 GiBps throughput. |
 | Scale | As much as 5 PiB for a single volume. <br><br> As much as roughly 4.75 TiB for a single file. <br><br> No minimum capacity requirements. | As much as 100 TiB for a single volume. <br><br> As much as 4 TiB for a single file. <br><br> 100-GiB minimum capacity. | As much as 2.5 PiB for a single volume. <br><br> AMLFS aligns with [Lustre's file limit specifications](https://doc.lustre.org/lustre_manual.xhtml#idm139831582679776), and supports a maximum file size of up to 32 PB. <br><br> 4-TiB minimum capacity. | As much as 1,024 TiB for a single volume. <br><br> As much as 16 TiB for a single file. <br><br> Consistent hybrid cloud experience. |
 | Pricing | [Blob Storage pricing](https://azure.microsoft.com/pricing/details/storage/blobs) | [Azure Files pricing](https://azure.microsoft.com/pricing/details/storage/files) | [Managed Lustre pricing](https://azure.microsoft.com/pricing/details/managed-lustre) | [Azure NetApp Files pricing](https://azure.microsoft.com/pricing/details/netapp) |
 
@@ -183,9 +185,9 @@ The following table provides a comparison of Blob Storage, Azure Files, Managed 
 
 The following articles provide guidance to help you at various points during your cloud adoption journey.
 
-- [Introduction to the Azure high-performance computing (HPC) scenario](/azure/cloud-adoption-framework/scenarios/azure-hpc/)
+- [Introduction to the Azure HPC scenario](/azure/cloud-adoption-framework/scenarios/azure-hpc/)
 - [Identity and access management for Azure HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/identity-access-management)
-- [Network topology and connectivity for Azure HPC in energy](/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity)
-- [Resource organization for HPC in the energy industry](/azure/cloud-adoption-framework/scenarios/azure-hpc/resource-organization)
+- [Network topology and connectivity for Azure HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/network-topology-connectivity)
+- [Resource organization for Azure HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/resource-organization)
 - [Compute large-scale HPC application workloads in Azure VMs](/azure/cloud-adoption-framework/scenarios/azure-hpc/compute)
-- [Azure high-performance computing (HPC) landing zone accelerator](/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelerator)
+- [Azure HPC landing zone accelerator](/azure/cloud-adoption-framework/scenarios/azure-hpc/azure-hpc-landing-zone-accelerator)
