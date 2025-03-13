@@ -1,26 +1,33 @@
 ---
 title: Cloud management overview
-description: Use the Cloud Adoption Framework for Azure to learn how to develop the business and technical approaches you need for effective cloud management.
+description: Learn how to use the Cloud Adoption Framework for Azure to build effective business and technical strategies for cloud management.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 10/17/2019
+ms.date: 03/14/2025
 ms.topic: conceptual
 ms.custom: internal
 ---
 
-# Cloud management in the Cloud Adoption Framework
+# Cloud management overview
 
-The guidance in the manage section of the Cloud Adoption Framework serves two purposes:
+The Cloud Adoption Framework's (CAF) Manage methodology offers a structured approach to cloud operations in Azure. Cloud operations include maintaining, managing, and optimizing your cloud environment. 
 
-- Provides examples of actionable operations management approaches that represent common experiences often encountered by customers.
-- Helps you create personalized management solutions based on business commitments.
+Organizations of any size or industry can apply this methodology. The CAF Manage methodology helps you address critical aspects of cloud operations, ensuring the health and performance of your entire cloud environment.
 
-This content is intended for use by the cloud operations team. It's also relevant to cloud architects who need to develop a strong foundation in cloud operations or cloud design principles.
+## Why is cloud management important?
 
-The content in the Cloud Adoption Framework affects the business, technology, and culture of enterprises. This section of the Cloud Adoption Framework interacts heavily with IT operations, IT governance, finance, line-of-business leaders, networking, identity, and cloud adoption teams. Various dependencies on these personnel require a facilitative approach by the cloud architects who are using this guidance. Facilitation with these teams is seldom a one-time effort.
+Effective cloud management maintains business continuity while controlling costs in your Azure environment. Proper management reduces downtime, strengthens security, simplifies change management, and speeds incident response.
 
-The cloud architect serves as the thought leader and facilitator to bring these audiences together. The content in this collection of guides is designed to help the cloud architect facilitate the right conversation, with the right audience, to drive necessary decisions. Business transformation that's empowered by the cloud depends on the cloud architect to help guide decisions throughout the business and IT.
+## Cloud management checklist
 
-Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for operations and management of deployment solutions. Within this framework, these specialists are referred to frequently as *cloud operations*, or collectively as the *cloud operations team*.
+Use the cloud management checklist to see all the tasks for each cloud management step. Use the links to quickly navigate to the guidance you need.
 
-If you want to follow this guide from beginning to end, this content aids in developing a robust cloud operations strategy. The guidance walks you through the theory and implementation of such a strategy.
+| Cloud management step | Cloud management tasks | Resources |
+| --------------------  | --------------------   | --------- |
+| Administer Azure | &#9744; [Identify your management scope](./administer.md#identify-your-management-scope)<br>&#9744; [Manage change](./administer.md#manage-change)<br>&#9744; [Manage security](./administer.md#manage-security)<br>&#9744; [Manage compliance](./administer.md#manage-compliance)<br>&#9744; [Manage data](./administer.md#manage-data)<br>&#9744; [Manage costs](./administer.md#manage-costs)<br>&#9744; [Manage code and runtime](./administer.md#manage-code-and-runtime)<br>&#9744; [Manage portal-based deployments](./administer.md#manage-portal-based-deployments)<br>&#9744; [Manage code-based deployments](./administer.md#manage-code-based-deployments)<br>&#9744; [Manage configuration drift](./administer.md#manage-configuration-drift)<br>&#9744; [Manage operating systems](./administer.md#manage-operating-systems) | &#9744; [Azure management tools](./administer.md#azure-management-tools)<br> |
+| Monitor Azure | ☐ [Identify your monitoring scope](./monitor.md#identify-your-monitoring-scope)<br>☐ [Plan your monitoring strategy](./monitor.md#plan-your-monitoring-strategy)<br>☐ [Design a monitoring solution](./monitor.md#design-a-monitoring-solution)<br>☐ [Monitor service health](./monitor.md#monitor-service-health)<br>☐ [Monitor security](./monitor.md#monitor-security)<br>☐ [Monitor compliance](./monitor.md#monitor-compliance)<br>☐ [Monitor costs](./monitor.md#monitor-costs)<br>☐ [Monitor data](./monitor.md#monitor-data)<br>☐ [Monitor code and runtime](./monitor.md#monitor-code-and-runtime)<br>☐ [Monitor cloud resources](./monitor.md#monitor-cloud-resources)<br>☐ [Configure alerting](./monitor.md#configure-alerting)<br>☐ [Visualize monitoring data](./monitor.md#visualize-monitoring-data) | ☐ [Azure monitoring tools](./monitor.md#azure-monitoring-tools)<br>☐ [Azure monitoring reference](./monitor.md#azure-services-monitoring-documentation)<br>☐ [Shared management monitoring responsibilities](./monitor.md#example-shared-management-monitoring-responsibilities)<br> |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Administer your Azure cloud estate](./administer.md)
