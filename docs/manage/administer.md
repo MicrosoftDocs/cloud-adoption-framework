@@ -14,7 +14,7 @@ This article explains how to effectively manage your Azure cloud estate to ensur
 
 ## Identify your management scope
 
-Determine your management scope clearly for each deployment model to make informed management decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) provide distinct management responsibilities within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
+Determine your management scope clearly for each deployment model to make informed management decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) operate within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
 
 | Administration areas   | On-premises scope | IaaS scope (Azure) | PaaS scope (Azure) | SaaS scope |
 |------------------------|---------------------------|----------------------------|----------------------------|--------------------|
