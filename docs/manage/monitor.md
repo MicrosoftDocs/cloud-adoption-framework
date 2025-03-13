@@ -260,7 +260,7 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Dedicated Host | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)<br><br>[Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
 | Azure Dedicated HSM | [Monitoring options - Azure Dedicated HSM](/azure/dedicated-hsm/monitoring) | |
 | Azure DevTest Labs | [Activity logs - Azure DevTest Labs](/azure/devtest-labs/activity-logs) | |
-| Azure Digital Twins | [Monitor your instancein Azure Digital Twins](/azure/digital-twins/how-to-monitor) | |
+| Azure Digital Twins | [Monitor your instance in Azure Digital Twins](/azure/digital-twins/how-to-monitor) | |
 | Azure Disk Storage | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)<br><br>[Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
 | Azure DNS | [Metrics and alerts](/azure/dns/dns-alerts-metrics) | |
 | Azure Elastic SAN | [Metrics for Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-metrics) | |
