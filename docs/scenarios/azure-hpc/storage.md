@@ -60,11 +60,8 @@ Consider the types of traffic that your HPC environment generates and processes.
 This category considers the location of the data. Locality awareness helps you determine whether you can use copying, caching, or synchronization as your data-movement strategy. Check the following locality items in advance:
 
 - If source data is on-premises, in Azure, or both
-
 - If results data is on-premises, in Azure, or both
-
 - If HPC workloads in Azure need to be coordinated with source-data modification timelines
-
 - If sensitive or Health Insurance Portability and Accountability Act data is included
 
 ### Performance requirements
@@ -85,9 +82,7 @@ Consider the client access protocol that you need and specify the required featu
 Consider the following requirements:
 
 - Whether NFS or SMB versions are required
-
 - The protocol features you require, such as access control lists or encryption
-
 - Whether a parallel file system solution is required
 
 ### Total capacity requirement
@@ -106,9 +101,7 @@ For authentication and authorization requirements, such as using a lightweight d
 Consider the following network requirements:
 
 - Local requirements (UID or GID on the file server only)
-
 - Directory requirements (LDAP or Windows Server Active Directory)
-
 - Whether UID or GID mapping to Windows Server Active Directory users is needed
 
 ## HPC design recommendations
