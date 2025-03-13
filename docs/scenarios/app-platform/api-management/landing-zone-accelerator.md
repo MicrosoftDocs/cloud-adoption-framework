@@ -4,7 +4,7 @@ description: Learn how the Azure API Management landing zone accelerator, which 
 author: aarthiem
 ms.author: aamurugan
 ms.reviewer: tozimmergren
-ms.date: 03/11/2025
+ms.date: 03/13/2025
 ms.topic: conceptual
 ms.custom: devx-track-bicep
 ms.collection: ce-skilling-ai-copilot
@@ -74,7 +74,7 @@ The generative AI gateway sample code describes how to provision and interact wi
 
 Use the deployment guide to deploy private Azure OpenAI endpoints and an opinionated set of policies in API Management to manage traffic to these endpoints. Test the policies by sending requests to the gateway. You should use the provided policy fragments or modify the solution to include your own custom policies.
 
-[![Diagram that shows generative AI resources governance through API Management.](./media/landing-zone-accelerator/api-management-workload-ai.png)](./media/landing-zone-accelerator/api-management-workload-ai.png#lightbox)
+[![Diagram that shows generative AI resources governance through API Management.](./media/landing-zone-accelerator/api-management-workload-ai1.png)](./media/landing-zone-accelerator/api-management-workload-ai1.png#lightbox)
 
 The recommended approach for an enterprise implementation is to begin with an Azure landing zone to help ensure that scalability, governance, and security are aligned with Cloud Adoption Framework best practices. If you plan to start your baseline integration with Azure OpenAI within an Azure landing zone, follow the steps in [Azure OpenAI baseline in an application landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
 
