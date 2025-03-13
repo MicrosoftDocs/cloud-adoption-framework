@@ -17,10 +17,10 @@ Consider the following factors related to your application requirements to help 
 - Latency
 - Input and output operations per second (IOPS)
 - Throughput
-- File sizes and count
+- File sizes and file count
 - Job runtime
 - Cost
-- Storage location – on-premises versus Azure
+- Storage location (on-premises versus Azure)
 
 For more information, see [Understand factors that influence HPC storage selection in Azure](/training/modules/hpc-storage-considerations/).
 
@@ -32,19 +32,19 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 
 - [Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale.
 
-- The high-performance input/output (I/O) requirements and massive scalability needs of [HPC](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
+- The high-performance input/output (I/O) requirements and massive scalability needs of [HPC](https://azure.microsoft.com/solutions/high-performance-computing/) introduce unique challenges for data storage and access.
 
-- HPC uses parallel processing and massive scalability to quickly and reliability perform large and complicated computing tasks that aren't practical or cost-effective to handle with traditional computing techniques.
+- HPC uses parallel processing and massive scalability to quickly and reliability perform large and complicated computing tasks that aren't practical or cost-effective to handle by using traditional computing techniques.
 
 ### Compute node distribution in HPC clusters
 
 In Azure HPC clusters, you can create compute nodes as virtual machines (VMs) to perform jobs that are assigned to a cluster. To help achieve the high-performance parallel processing that's required to solve complex HPC problems, the compute nodes distribute those jobs across the cluster.
 
-When you run jobs, compute nodes must perform read and write operations on a shared data source. Nodes access this data source in a range of scenarios that lie between the following two extremes:
+When you run jobs, compute nodes must perform read and write operations on a shared data source. Nodes access this data source in a range of scenarios that lie between the following two extremes.
 
-- **One data source to many compute nodes.** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Although they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
+- **One data source to many compute nodes:** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Despite their structural simplicity, the I/O capacity of the storage location limits the I/O operations.
 
-- **Many data sources to many compute nodes.** In this scenario, there are many data sources on the network that all the compute nodes access for working data. Although they're structurally simple, the I/O capacity of the storage location limits the I/O operations.
+- **Many data sources to many compute nodes:** In this scenario, there are many data sources on the network that all the compute nodes access for working data. Despite their structural simplicity, the I/O capacity of the storage location limits the I/O operations.
 
 ### Distribution of workload traffic
 
@@ -52,12 +52,12 @@ Consider the types of traffic that your HPC environment generates and processes.
 
 - Single stream versus multiple streams
 - Ratio of read traffic to write traffic
-- Average file sizes and counts
+- Average file sizes and file count
 - Random versus sequential access patterns
 
 ### Data locality
 
-This category accounts for the location of the data. Locality awareness helps you determine whether you can use copying, caching, or synchronization as your data-movement strategy. Check the following locality items in advance:
+This category considers the location of the data. Locality awareness helps you determine whether you can use copying, caching, or synchronization as your data-movement strategy. Check the following locality items in advance:
 
 - If source data is on-premises, in Azure, or both
 - If results data is on-premises, in Azure, or both
@@ -87,7 +87,7 @@ Consider the following requirements:
 
 ### Total capacity requirement
 
-Storage capacity in Azure is the next consideration. It helps to inform the overall cost of the solution. If you plan to store a large amount of data for a long time, you might want to consider tiering as part of the storage solution. Tiering combines lower-cost storage options with higher-cost, higher-performance storage in a hot tier. Consider the following capacity requirements:
+The storage capacity in Azure affects the overall cost of the solution. If you plan to store a large amount of data for a long time, you might want to consider tiering as part of the storage solution. Tiering combines lower-cost storage options with higher-cost, higher-performance storage in a hot tier. Consider the following capacity requirements:
 
 - Total capacity required
 - Total hot-tier capacity required
@@ -106,15 +106,15 @@ Consider the following network requirements:
 
 ## HPC design recommendations
 
-Choose the solution that's best suited for your unique I/O and capacity requirements.
+Choose the solution that's best suited for both your unique I/O and capacity requirements.
 
 - **For high-throughput, low-latency storage**, consider using [Standard or Premium Blob Storage](/azure/storage/blobs/storage-blobs-introduction). Standard or Premium Blob Storage provides the following benefits:
 
-  - Provides exabyte-scale, high-throughput, low-latency access, a familiar file system, and multi-protocol access, including REST, HDFS, NFS.
+  - Provides exabyte-scale, high-throughput, low-latency access, a familiar file system, and multi-protocol access, including REST, HDFS, and NFS.
 
-  - Blob storage is cost effective, since it's designed to handle petabytes of data, while offering features like lifecycle management, which facilitate the archival and deletion of data to lower storage costs over time.
+  - Optimizes costs by handling petabytes of data and employing lifecycle management features that streamline data archival and deletion. This approach reduces storage expenses over time.
 
-  - Supports the ability to mount Blob Storage as a file system by using [BlobFuse](/azure/storage/blobs/storage-how-to-mount-container-linux). Doing so makes it easy to allow multiple nodes to mount the same container for read-only scenarios.
+  - Supports the ability to mount Blob Storage as a file system by using [BlobFuse](/azure/storage/blobs/storage-how-to-mount-container-linux). This method makes it easier for multiple nodes to mount the same container for read-only scenarios.
 
   - Supports NFS 3.0 at the blob service endpoint for high-throughput, read-heavy workloads.
 
@@ -130,15 +130,15 @@ Choose the solution that's best suited for your unique I/O and capacity requirem
 
   - Flexible capacity pool types and performance, where the QoS per volume is automatically assigned based on the tier of the pool and the volume quota
 
-### Network File System
+### NFS
 
-Network File System (NFS) is often used to provide access to shared storage locations over TCP/IP networks. A server VM that uses NFS shares its local file system. In Azure, this file system is stored on one or more virtual hard disks (VHDs) that are hosted in Azure Storage. Clients can then mount the server's shared files and access the shared location directly.
+NFS is often used to provide access to shared storage locations over Transmission Control Protocol or Internet Protocol networks. A server VM that uses NFS shares its local file system. In Azure, this file system is stored on one or more virtual hard disks that are hosted in Azure Storage. Clients can then mount the server's shared files and access the shared location directly.
 
-NFS is often used for home directories and project spaces that require access across all nodes. It can provide a space for research groups that share data. In general, the throughput workloads are horizontally scalable with little dependency between individual tasks. Job schedulers divide the work across nodes and coordinate the activity. 
+NFS is often used for home directories and project spaces that require access across all nodes. It can provide a space for research groups that share data. In general, the throughput workloads are horizontally scalable with little dependency between individual tasks. Job schedulers divide the work across nodes and coordinate the activity.
 
 NFS has the advantage of being easy to set up and maintain and is supported on both Linux and Windows operating systems. Multiple NFS servers can be used to spread storage across a network, but individual files are only accessible through a single server.
 
-For low-scale workloads, consider running NFS on the head node by using a [storage](/azure/virtual-machines/sizes-storage)-optimized VM that has large ephemeral disks or D-series VMs with Azure Premium Storage, depending on your requirements. This solution suits workloads that have 500 cores or fewer.
+For low-scale workloads, consider running NFS on the head node by using a [storage-optimized VM](/azure/virtual-machines/sizes-storage) that has large ephemeral disks or D-series VMs with Azure Premium Storage, depending on your requirements. This solution suits workloads that have 500 cores or fewer.
 
 In HPC scenarios, the file server can often serve as a bottleneck that throttles overall performance. Attempts to access uncached data from a single NFS server at rates higher than the documented per-VM maximum IOPS and throughput results in throttling.
 
@@ -160,7 +160,7 @@ Similar to NFS, you can create a multi-node BeeGFS or Lustre file system. The pe
 
 ## HPC components
 
-- Azure NetApp Files and local disks are typically used to handle the latency-sensitive and IOPS-sensitive workloads. Consider using Azure NetApp Files for workloads of up to 4,000 cores, with a throughput up to 12.8 GiBps, and workloads that benefit from or require multiprotocol NFS and Server Message Block (SMB) access to the same data source.
+- Azure NetApp Files and local disks are typically used to handle the latency-sensitive and IOPS-sensitive workloads. Consider using Azure NetApp Files for workloads of up to 4,000 cores, with a throughput up to 12.8 GiBps, and workloads that benefit from or require multiprotocol NFS and SMB access to the same data source.
 
 - Managed Lustre provides faster and higher capacity storage for HPC workloads. This solution works for medium to large workloads and can support 50,000 or more cores, with throughput up to 500 GBps, and storage capacity up to 2.5 PiB.
 
