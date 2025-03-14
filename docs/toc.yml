@@ -69,8 +69,6 @@ items:
         href: get-started/operational-excellence.md
       - name: Manage cloud costs
         href: get-started/manage-costs.md
-      - name: Improve reliability
-        href: get-started/reliability.md
       - name: Ensure consistent performance
         href: get-started/performance.md
 
