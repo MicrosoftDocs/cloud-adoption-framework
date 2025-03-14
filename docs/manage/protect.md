@@ -109,7 +109,7 @@ Managing the reliability of your cloud resources requires redundancy (duplicatio
 
     | Use case   | Formula | Variables |
     | --- | --- | --- |
-    | Single-region uptime estimate | N = S1 \* S2 \* … \* S*n*    | **N** is the composite SLA of all Azure services on the failure path within a single region.<br>**S** represents the SLA uptime percentage of an Azure service.<br>**n** is the total number of Azure services included in the calculation.<br><br>If you load-balancing component (LB) that distributes requests across two different Azure services within the same region, use this formula N = LB \* (1 - [(1 - S1) \* (1 - S2)]). For example, Application Gateway (LB) in front of Azure App Service (S2) and Azure Container Apps (S3).  |
+    | Single-region uptime estimate | N = S1 \* S2 \* … \* S*n*    | **N** is the composite SLA of all Azure services on the failure path within a single region.<br>**S** represents the SLA uptime percentage of an Azure service.<br>**n** is the total number of Azure services included in the calculation.<br><br>If you service component (SC) that distributes requests across two different Azure services within the same region, you need to account for this increased resiliency and estimate the uptime of  use this formula N = SC \* (1 - [(1 - S1) \* (1 - S2)]). For example, Application Gateway (LB) in front of Azure App Service (S2) and Azure Container Apps (S3).  |
     | Multi-region uptime estimate | M = 1 - (1 - N)^Regions  | **M** is the multi-region uptime estimate.<br>**N** is the composite SLA of the single region.<br>**Regions** is the number of regions.                                                                                                                                                           |
 
 1. ***Adjust service tiers.*** Before changing your architecture, see if different service tiers (SKUs) help you align with your reliability requirements. SKUs can have different uptime estimates, such as Azure Managed Disks.
@@ -140,8 +140,7 @@ Managing the reliability of your cloud resources requires redundancy (duplicatio
 
 | Workload reliability | Guidance |
 | ---| --- |
-| Reliability pillar | - [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>- [Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>- [Using availability zones and regions](/azure/well-architected/reliability/regions-availability-zones)
-
+| Reliability pillar | - [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>- [Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>- [Using availability zones and regions](/azure/well-architected/reliability/regions-availability-zones)|
 |Service guide| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)|
 
 For more information, see [Redundancy.](/azure/reliability/concept-redundancy-replication-backup#redundancy)
@@ -152,9 +151,9 @@ Recovering from failure outlines a strategy to restore services quickly after an
 
 1. ***Prepare for failures.*** Your data reliability, code and runtime reliability, and cloud resource reliability are the foundation of your business continuity plan. Differentiate recovery procedures between high, medium, and low priority workloads. Depending on your workload, you can use a tool to help business continuity. For example, [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) is for on-premises and virtual-machine based server workloads.
 
-1. ***Test and document recovery plan.*** Regularly test failover and failback processes to ensure workloads can meet RTO and RPO goals. Make sure to [document these steps](#_Document_operational_procedures) so you have something to follow during an incident. If you use a recovery tool like Azure Site Recovery, make sure it consistently meets your RTO.
+1. ***Test and document recovery plan.*** Regularly test failover and failback processes to ensure workloads can meet RTO and RPO goals. Make sure to document these steps so you have something to follow during an incident. If you use a recovery tool like Azure Site Recovery, make sure it consistently meets your RTO.
 
-1. ***Detect failures.*** Embrace a proactive approach to outage detection, even if it may result in an increase in false positives. Prioritize customer experience and minimize outage impact over the potential increase in false positives. Ensure that the proactive approach helps maintain customer trust by minimizing the impact of outages.
+1. ***Detect failures.*** Embrace a proactive approach to outage detection, even if it results in an increase in false positives. Prioritize customer experience and minimize outage impact over the potential increase in false positives. Ensure that the proactive approach helps maintain customer trust by minimizing the impact of outages.
 
 	- ***Monitor failures.*** Deploy systems that can automatically detect potential service outages within one minute. Use [Azure Service Health](/azure/service-health/overview) and [Azure Resources Health](/azure/service-health/resource-health-overview) and use Azure Monitor alerts to notify the right people. You can also integrate these alerts within Azure DevOps or ITSM tools.
 
@@ -171,7 +170,7 @@ Recovering from failure outlines a strategy to restore services quickly after an
 | Reliability pillar | [Designing a disaster recovery strategy](/azure/well-architected/reliability/disaster-recovery) | 
 | Service guide | [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*) |
 
-## Azure reliability tools
+### Azure reliability tools
 
 | Use case                        | Solution                                                                                                                   |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -190,25 +189,27 @@ Recovering from failure outlines a strategy to restore services quickly after an
 
 ## Manage security
 
-Managing cloud security is about protecting your environment from security risks and enforcing confidentiality, integrity, and availability. Follow these recommendations:
+Managing cloud security is about protecting your environment from security risks and enforcing confidentiality, integrity, and availability. Establish your security 
 
-### Manage security fundamentals
+### Manage security cont
 
-You need a systematic way to evaluate and address threats to your cloud estate. Establish an iterative security process and use [CAF Secure](/azure/cloud-adoption-framework/secure/overview) as your core security guidance.
+Establish an iterative security process to detect threats to your cloud estate. Follow these steps:
 
-1. ***Standardize security tooling.*** Use security tools to detect security threats, fix vulnerabilities, investigate issues, secure data, harden cloud resources, and enforce compliance at scale. Find the [Azure security tools](#_Azure_security_tools) that facilitate security.
+1. ***Standardize security tooling.*** Use security tools to detect security threats, fix vulnerabilities, investigate issues, secure data, harden cloud resources, and enforce compliance at scale. Find the [Azure security tools](#azure-security-tools) that facilitate security.
 
-1. ***Baseline your environment.*** Document the normal state of your cloud estate. [Monitor security](/azure/cloud-adoption-framework/manage/monitor#monitor-security) and document network traffic patterns and user behaviors. Use [Azure security baselines](/azure/security/benchmark/azure/security-baselines-overview) and Azure Service guides to develop baseline configurations for services. This baseline makes it easier to detect anomalies and potential security weaknesses.
+1. ***Baseline your environment.*** Document the normal state of your cloud estate. [Monitor security](/azure/cloud-adoption-framework/manage/monitor#monitor-security) and document network traffic patterns and user behaviors. Use [Azure security baselines](/azure/benchmark/azure/security-baselines-overview) and Azure Service guides to develop baseline configurations for services. This baseline makes it easier to detect anomalies and potential security weaknesses.
 
-1. ***Apply security controls.*** Implement security measures, such as access controls, encryption, and multi-factor authentication, strengthens the environment and reduces the probability of compromise. For more information, see [Manage security](#_Control_security).
+1. ***Apply security controls.*** Implement security measures, such as access controls, encryption, and multi-factor authentication, strengthens the environment and reduces the probability of compromise. For more information, see [Manage security](./administer.md#manage-security).
 
 1. ***Assign security responsibilities.*** Assign responsibility for monitoring the security of the entire cloud estate. Regular monitoring and comparison against the baseline allow for the quick identification of incidents, such as unauthorized access or unusual data transfers. Continuous updates and periodic audits ensure that the baseline remains relevant and effective in mitigating emerging threats.
 
+For more information, see [CAF Secure](/azure/cloud-adoption-framework/secure/overview).
+
 ### Manage security incidents
 
-You need a process and tools to recover from security incidents, such as ransomware, denial of service, or threat actor intrusion. Here’s how.
+Adopt a process and tools to recover from security incidents, such as ransomware, denial of service, or threat actor intrusion. Follow these steps:
 
-- ***Prepare for incidents.*** Create an incident response plan that defines roles for investigation, mitigation, and communications. Test the efficacy of that plan regularly. Evaluate vulnerability management solutions, threat detection systems, and infrastructure monitoring tools. Harden your infrastructure to reduce attack surfaces and develop workload-based recovery strategies. For more information, see [Incident response overview](/azure/security/operations/incident-response-overview) and [Incident response playbooks](/azure/security/operations/incident-response-playbooks).
+1. ***Prepare for incidents.*** Create an incident response plan that defines roles for investigation, mitigation, and communications. Test the efficacy of that plan regularly. Evaluate vulnerability management solutions, threat detection systems, and infrastructure monitoring tools. Harden your infrastructure to reduce attack surfaces and develop workload-based recovery strategies. For more information, see [Incident response overview](/azure/operations/incident-response-overview) and [Incident response playbooks](/azure/operations/incident-response-playbooks).
 
 1. ***Detect incidents.*** Use security information and event management (SIEM) tool, like [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal), to consolidate security data. Use Microsoft Sentinel’s [security orchestration, automation, and response capabilities (SOAR)](/azure/sentinel/automation/automation) to automate security tasks. Incorporate [threat intelligence feeds](/azure/sentinel/understand-threat-intelligence) into your SIEM understand adversarial tools and techniques and how they might apply to your cloud estate.
 
@@ -218,17 +219,17 @@ You need a process and tools to recover from security incidents, such as ransomw
 
 For more information, see [Manage incident response (CAF Secure)](/azure/cloud-adoption-framework/secure/manage#managing-incident-preparedness-and-response).
 
-## Azure security tools
+### Azure security tools
 
 | Security capability              | Microsoft solution                                                                 |
 |----------------------------------|------------------------------------------------------------------------------------|
-| Identity and access management   | [Microsoft Entra ID](/azure/entra/fundamentals/whatis)                             |
+| Identity and access management   | [Microsoft Entra ID](/azure/fundamentals/whatis)                             |
 | Role-based access control        | [Azure role-based access control](/azure/role-based-access-control/overview)       |
 | Threat detection                 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) |
 | Security information management  | [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal)                   |
-| Data security and governance     | [Microsoft Purview](/azure/purview/purview)                                        |
-| Cloud resource security          | [Azure security baselines](/azure/security/benchmark/azure/security-baselines-overview) |
+| Data security and governance     | [Microsoft Purview](/purview/purview)                                        |
+| Cloud resource security          | [Azure security baselines](/azure/benchmark/azure/security-baselines-overview) |
 | Cloud governance                 | [Azure Policy](/azure/governance/policy/overview)                                  |
-| Endpoint security                | [Microsoft Defender for Endpoint](/azure/defender-endpoint/microsoft-defender-endpoint) |
+| Endpoint security                | [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) |
 | Network security                 | [Azure Network Watcher](/azure/network-watcher/network-watcher-overview)           |
 | Industrial security              | [Microsoft Defender for IoT](/azure/defender-for-iot/)                             |
