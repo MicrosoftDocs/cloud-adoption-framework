@@ -2889,6 +2889,61 @@
          "source_path": "docs/manage/considerations/discipline.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/index",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/impact.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/protect#manage-reliability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/inventory.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor#plan-your-monitoring-strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/operational-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-compliance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/platform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/protect.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/protect",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/sustainability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/sustainability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/workload.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/design-principles.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/mlops-machine-learning.md",
+         "redirect_url": "/azure/architecture/ai-ml/guide/machine-learning-operations-v2",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/operational-fitness-review.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
       }
    ]   
 }
