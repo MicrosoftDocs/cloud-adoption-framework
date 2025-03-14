@@ -780,8 +780,6 @@ items:
         href: manage/considerations/sustainability.md
     - name: Advanced management and system design
       href: manage/design-principles.md
-    - name: Manage antipatterns
-      href: antipatterns/manage-antipatterns.md
 
   - name: Secure
     items:
