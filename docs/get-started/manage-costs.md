@@ -128,7 +128,7 @@ Innovation and development of new products require a much deeper degree of archi
 
 ## Step 6: Implement sound operations
 
-Establishing a solid management baseline will help you collect data and create operational alerts. This effort can aid in detecting opportunities to optimize costs. It will create a balance between resiliency and cost optimization. Understand how to [manage your Azure cloud estate](../manage/index.md).
+Understand how to [manage your Azure cloud estate](../manage/index.md). This effort can aid in detecting opportunities to optimize costs. It will create a balance between resiliency and cost optimization.
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
