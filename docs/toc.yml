@@ -729,20 +729,12 @@ items:
       href: manage/administer.md  
     - name: Monitor your Azure cloud estate
       href: manage/monitor.md
+    - name: Protect your Azure cloud estate
+      href: manage/protect.md
     - name: Centralize management operations
       href: manage/centralize-operations.md
     - name: Establish an operational fitness review
       href: manage/operational-fitness-review.md
-    - name: Improving platform or workload reliability
-      items:
-      - name: Reliability checklist for Azure services
-        href: /azure/architecture/checklist/resiliency-per-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Failure mode analysis
-        href: /azure/architecture/resiliency/failure-mode-analysis?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Recover from a region wide service disruption
-        href: /azure/architecture/resiliency/recovery-loss-azure-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Recover from data corruption or accidental deletion
-        href: /azure/architecture/framework/resiliency/data-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     - name: Azure Management Guide
       items:
       - name: Before you start
