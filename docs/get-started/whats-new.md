@@ -28,7 +28,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md): We added information on application teams and their responsibilities for inventory and visibility, including the use of Azure Monitor Agent and Log Analytics workspaces.
 - [Management and monitoring for Azure VMware Solution](../scenarios/azure-vmware/eslz-management-and-monitoring.md): We added references to Azure Monitor baselines alerts (AMBA).
-- [Monitor a cloud environment](../manage/monitor/monitoring.md): We restructured the table providing listed guidance on monitoring for Azure services to be more consistent and easier to read.
 - [Plan for inbound and outbound internet connectivity](../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md): We made updates to include guidance on ensuring that Management NIC is enabled with all Azure Firewall deployments.
 - [Resource organization considerations for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-resource-organization.md): We added guidance on naming and tagging standards and introduced sections on the scope of management settings, components, naming standards, and resource tags.
 
@@ -71,7 +70,6 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 - [DNS for on-premises and Azure resources](../ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md): Explore new design considerations and recommendations emphasizing the use of Azure DNS Private Resolver with Azure Private DNS zones and detailed guidance on deploying DNS infrastructure.
 - [Governance disciplines for SAP on Azure](../scenarios/sap/eslz-security-governance-and-compliance.md): Explore new guidance for using Microsoft Defender for Endpoint on Linux and Windows for SAP hosts and new sections on the Microsoft Sentinel solution for SAP. We also added enhanced recommendations for secure authentication with Microsoft Entra ID and links to more detailed design considerations and identity management sections.
 - [Identity and access management for SAP on Azure](../scenarios/sap/eslz-identity-and-access-management.md): Learn about securing Network File System (NFS) communication and Remote Function Call (RFC) connections, as well as SAP user governance and provisioning. Explore new recommendations for implementing single sign-on (SSO) with various SAP applications using Microsoft Entra ID.
-- [Monitor a cloud environment](../manage/monitor/monitoring.md): We added a new reference table providing links to monitoring guidance for various Azure services and resources. This table helps you quickly find the monitoring guidance you need for your specific Azure resources.
 - [Network topology and connectivity for Azure Arc-enabled servers](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md): Explore new guidance on Azure Arc Gateway including instructions for defining agent connectivity methods.
 - [Organize your Azure resources effectively](../ready/azure-setup-guide/organize-resources.md): Find updated links for management group design, subscription considerations, and tagging strategy. Updates emphasize the importance of applying critical settings at higher levels and project-specific requirements at lower levels, and include additional details on naming conventions and resource tagging to enhance resource identification and management.
 - [Review product migration scenarios](../migrate/scenarios.md): Explore the new Google Cloud Platform scenario for migrating virtual machines to Azure.
@@ -162,7 +160,6 @@ We made security updates to the following Cloud Scale Analytics articles:
 
 ### New articles
 
-- [Monitor a cloud environment](../manage/monitor/monitoring.md): This month, we retired outdated content on cloud monitoring and introduced a new overview that provides comprehensive guidance in a simplified format. Explore the importance of monitoring, the key components of a monitoring strategy, and the tools and services you can use to monitor your cloud environment effectively.
 - [Well-architected considerations for AI workloads on Azure infrastructure (IaaS)](../scenarios/ai/infrastructure/well-architected.md): Explore the importance of well-architected AI solutions and how to apply the Azure Well-Architected Framework to your AI workloads. Find guidance on reliability, security, cost optimization, operational excellence, and performance efficiency.
 
 #### Secure methodology refresh
@@ -256,7 +253,6 @@ We introduced new articles that provide guidance on integrating SAP and Power Pl
   - [Azure Well-Architected Framework for data workloads](../scenarios/cloud-scale-analytics/well-architected-framework.md)
 
 - [Enterprise-scale support for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md): We made updates to the baseline architecture and guidance for Azure Virtual Desktop in the enterprise-scale landing zone.
-- [Inventory and visibility in Azure](../manage/azure-management-guide/inventory.md): We made updates to the guidance for Azure Monitor Agent.
 - [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md): We reviewed the Azure Update Manager guidance and refreshed the architecture diagram.
 
 ## September 2024
@@ -276,7 +272,6 @@ We reviewed and made updates to the following articles to reflect the latest pro
 We made updates to the following articles for clarity and accessibility:
 
 - [Adopt responsible and trusted AI principles](../strategy/responsible-ai.md)
-- [Business commitment in cloud management](../manage/considerations/commitment.md)
 - [Migrate Oracle workloads to Azure](../scenarios/oracle-iaas/oracle-migration-planning.md)
 - [Network connectivity for Azure Arc-enabled servers](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md)
 - [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
@@ -288,7 +283,6 @@ We made updates to the following articles for clarity and accessibility:
 
 - [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
 - [Landing zone identity and access management](../ready/landing-zone/design-area/identity-access-landing-zones.md): Find new guidance about built-in and custom RBAC roles, least-privelage access, and conditions.
-- [Business commitment in cloud management](../manage/considerations/commitment.md): We updated the service-level agreement references to service-level objective references.
 - [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Explore new updates about network security group rules and Oracle Data Safe.
 - [Business continuity and disaster recovery for an SAP migration](../scenarios/sap/eslz-business-continuity-and-disaster-recovery.md): Learn about the benefits of using Azure Backup to back up databases that have SAP HANA System Replication enabled.
 
@@ -355,7 +349,6 @@ These files were updated to include considerations for [Azure Arc-enabled VMware
 
 We updated these articles to provide the latest guidance on Azure carbon optimization:
 
-- [Sustainability considerations in cloud management](../manage/considerations/sustainability.md)
 - [Sustainability considerations in your cloud strategy](../strategy/inform/sustainability.md)
 
 #### Hybrid/Azure Arc retirement
@@ -391,7 +384,6 @@ We made updates to reflect the deprecation of Azure Blueprint.
 - [Resource consistency decision guide](../decision-guides/resource-consistency/index.md)
 - [Get started: Document foundational alignment decisions](../get-started/cloud-concepts.md)
 - [Innovate methodology and maturity modeling](../innovate/best-practices/ci-cd.md)
-- [Operational compliance in Azure](../manage/azure-management-guide/operational-compliance.md)
 - [Understand the functions of a central IT team](../organize/central-it.md)
 - [Track costs across business units, environments, or projects](../ready/azure-best-practices/track-costs.md)
 - [Azure governance design area](../ready/landing-zone/design-area/governance.md)
