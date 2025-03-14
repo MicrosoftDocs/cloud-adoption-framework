@@ -134,14 +134,7 @@ Define the plan for long-term operational responsibilities for the planned innov
 **Deliverables:**
 
 - Complete the [Microsoft Azure Architecture Review](/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
-- Adjust the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
-
-**Guidance to support deliverable completion:**
-
-- [Get specific with advanced operations](../manage/design-principles.md): Discover ways to go beyond your management baseline.
-- If advanced operations are required to support your operations needs, evaluate the [business commitments](../manage/considerations/business-alignment.md) to determine operational responsibilities for both teams.
-
-<br>
+- Understand how to [Manage your Azure cloud estate](../manage/index.md)
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
