@@ -729,49 +729,10 @@ items:
       href: manage/monitor.md
     - name: Protect your Azure cloud estate
       href: manage/protect.md
-    - name: Centralize management operations
-      href: manage/centralize-operations.md
-    - name: Establish an operational fitness review
-      href: manage/operational-fitness-review.md
-    - name: Azure Management Guide
-      items:
-      - name: Inventory and visibility
-        href: manage/azure-management-guide/inventory.md
-      - name: Operational compliance
-        href: manage/azure-management-guide/operational-compliance.md
-      - name: Enhanced baseline
-        href: manage/azure-management-guide/enhanced-baseline.md
-      - name: Platform specialization
-        href: manage/azure-management-guide/platform-specialization.md
-      - name: Workload specialization
-        href: manage/azure-management-guide/workload-specialization.md
-
-    - name: Management considerations
-      items:
-      - name: Overview
-        href: manage/considerations/index.md
-      - name: Business alignment
-        href: manage/considerations/business-alignment.md
-      - name: Define criticality
-        href: manage/considerations/criticality.md
-      - name: Understand business impact
-        href: manage/considerations/impact.md
-      - name: Establish business commitments
-        href: manage/considerations/commitment.md
-      - name: Management disciplines
-        href: manage/considerations/discipline.md
-      - name: Inventory and visibility
-        href: manage/considerations/inventory.md
-      - name: Operational compliance
-        href: manage/considerations/operational-compliance.md
-      - name: Platform operations
-        href: manage/considerations/platform.md
-      - name: Workload operations
-        href: manage/considerations/workload.md
-      - name: Sustainability alignment
-        href: manage/considerations/sustainability.md
-    - name: Advanced management and system design
-      href: manage/design-principles.md
+    - name: Platform specialization
+      href: manage/azure-management-guide/platform-specialization.md
+    - name: Workload specialization
+      href: manage/azure-management-guide/workload-specialization.md
 
   - name: Secure
     items:
