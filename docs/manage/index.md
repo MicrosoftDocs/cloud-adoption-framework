@@ -10,7 +10,7 @@ ms.custom: internal
 
 # Cloud management overview
 
-The Cloud Adoption Framework's (CAF) Manage methodology offers a structured approach to cloud operations in Azure. Cloud operations include maintaining, managing, and optimizing your cloud environment. 
+The Cloud Adoption Framework's (CAF) Manage methodology offers a structured approach to cloud operations in Azure. Cloud operations include maintaining, managing, and optimizing your cloud environment.
 
 Organizations of any size or industry can apply this methodology. The CAF Manage methodology helps you address critical aspects of cloud operations, ensuring the health and performance of your entire cloud environment.
 

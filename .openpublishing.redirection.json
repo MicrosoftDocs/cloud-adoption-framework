@@ -2834,6 +2834,116 @@
       "source_path": "docs/manage/infrastructure-as-code-updates.md",
       "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates",
       "redirect_document_id": true
+      },
+      {
+       "source_path": "docs/get-started/reliability.md",
+       "redirect_url": "/azure/cloud-adoption-framework/manage/protect#manage-reliability",
+       "redirect_document_id": false
+       },
+      {
+         "source_path": "docs/manage/azure-management-guide/enhanced-baseline.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-management-guide/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-management-guide/inventory.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor#plan-your-monitoring-strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-management-guide/operational-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-compliance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-management-guide/protect-recover.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/protect",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/centralize-operations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/business-alignment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/protect#manage-reliability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/commitment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/protect#manage-reliability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/criticality.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/protect#manage-reliability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/discipline.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/impact.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/protect#manage-reliability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/inventory.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor#plan-your-monitoring-strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/operational-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-compliance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/platform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/protect.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/protect",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/sustainability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/sustainability",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/considerations/workload.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/design-principles.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/mlops-machine-learning.md",
+         "redirect_url": "/azure/architecture/ai-ml/guide/machine-learning-operations-v2",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/operational-fitness-review.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/index",
+         "redirect_document_id": false
       }
    ]   
 }
