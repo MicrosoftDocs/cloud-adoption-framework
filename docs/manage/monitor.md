@@ -15,9 +15,9 @@ This article explains how to plan, configure, and optimize monitoring across Azu
 
 Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
 
-## Understand your monitoring scope
+## Identify your monitoring scope
 
-Your monitoring scope defines your monitoring responsibilities. In a cloud environment, you share monitoring responsibilities, which differ by workload. The following table shows what you must monitor based on each workload type. Infrastructure services (IaaS) and platform services (PaaS) operate within Azure.
+Determine your monitoring scope clearly for each deployment model to make informed monitoring decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) operate within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
 
 | Monitoring areas| On-premises monitoring | IaaS monitoring (Azure) | PaaS monitoring (Azure) | SaaS monitoring |
 |---------------------|------------------------|-----------------|-----------------|-----------------|
@@ -260,7 +260,7 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Dedicated Host | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)<br><br>[Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
 | Azure Dedicated HSM | [Monitoring options - Azure Dedicated HSM](/azure/dedicated-hsm/monitoring) | |
 | Azure DevTest Labs | [Activity logs - Azure DevTest Labs](/azure/devtest-labs/activity-logs) | |
-| Azure Digital Twins | [Monitor your instancein Azure Digital Twins](/azure/digital-twins/how-to-monitor) | |
+| Azure Digital Twins | [Monitor your instance in Azure Digital Twins](/azure/digital-twins/how-to-monitor) | |
 | Azure Disk Storage | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)<br><br>[Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
 | Azure DNS | [Metrics and alerts](/azure/dns/dns-alerts-metrics) | |
 | Azure Elastic SAN | [Metrics for Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-metrics) | |
