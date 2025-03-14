@@ -19,7 +19,7 @@ These assessment data points can help other teams understand which workloads mig
 
 ## Data sensitivity
 
-[Data classification](../../govern/policy-compliance/data-classification.md) is based on how a data leak affects a business or customers. Governance and security teams use data sensitivity or data classification as an indicator of security risks. During assessment, the cloud adoption team should evaluate the data classification for each workload that's targeted for migration and share that classification with supporting teams. Workloads that deal strictly in *public data* might not have any influence on supporting teams. As data becomes highly confidential, both governance and security teams likely have a vested interest in participating in the workload assessment.
+Data classification is based on how a data leak affects a business or customers. Governance and security teams use data sensitivity or data classification as an indicator of security risks. During assessment, the cloud adoption team should evaluate the data classification for each workload that's targeted for migration and share that classification with supporting teams. Workloads that deal strictly in *public data* might not have any influence on supporting teams. As data becomes highly confidential, both governance and security teams likely have a vested interest in participating in the workload assessment.
 
 Work with your security and governance teams as early as possible to define:
 
@@ -51,9 +51,9 @@ In addition to data and mission criticality, consider classifications that are s
 
 ## Capture classifications
 
-To apply the data classification labels to specific workloads in your migration tracking tools, see [What is data classification](../../govern/policy-compliance/data-classification.md). 
+To apply the data classification labels to specific workloads in your migration tracking tools.
 
-You should also determine the criticality of workloads by using the guidance for [business criticality in cloud management](../../manage/considerations/criticality.md#criticality-scale). You can use the operations management workbook or other tools for planning.
+You should also determine the criticality of workloads by using the guidance for [define reliability requirements](../../manage/protect.md#define-reliability-requirements).
 
 ## Next step
 
