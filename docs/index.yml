@@ -148,6 +148,8 @@ productDirectory:
           text: Administer your Azure cloud estate
         - url: ./manage/monitor.md
           text: Monitor your Azure cloud estate
+        - url: ./manage/protect.md
+          text: Protect your Azure cloud estate
 
     # Card
     - title: Govern
