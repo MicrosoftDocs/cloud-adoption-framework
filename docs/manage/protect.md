@@ -105,12 +105,23 @@ Managing the reliability of your cloud resources requires redundancy (duplicatio
 | Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP) or Azure Traffic Manager for non-HTTP traffic. | [Reliable web app pattern architecture guidance](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#architecture-guidance)  |
 | Low               | Single region & availability zones | Across availability zones | Azure Application Gateway  | Add Azure Load Balancer for virtual machines<br>[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
 
-1. ***Estimate the uptime of your current architecture.*** For each workload, calculate the composite SLA. Only include in your formulas the services that could cause the workload to fail. First, gather the [Microsoft SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services) for every service on the failure path of your workload. Then, plug those numbers into the correct formula. If your calculations meet your uptime SLO, then you’re all set. If they don’t align, then you need to adjust.
+1. ***Estimate the uptime of your current architecture.*** For each workload, calculate the composite SLA. Only include in your formulas the services that could cause the workload to fail.
 
-    | Use case   | Formula | Variables |
-    | --- | --- | --- |
-    | Single-region uptime estimate | N = S1 \* S2 \* … \* S*n*    | **N** is the composite SLA of all Azure services on the failure path within a single region.<br>**S** represents the SLA uptime percentage of an Azure service.<br>**n** is the total number of Azure services included in the calculation.<br><br>If you service component (SC) that distributes requests across two different Azure services within the same region, you need to account for this increased resiliency and estimate the uptime of  use this formula N = SC \* (1 - [(1 - S1) \* (1 - S2)]). For example, Application Gateway (LB) in front of Azure App Service (S2) and Azure Container Apps (S3).  |
-    | Multi-region uptime estimate | M = 1 - (1 - N)^Regions  | **M** is the multi-region uptime estimate.<br>**N** is the composite SLA of the single region.<br>**Regions** is the number of regions.                                                                                                                                                           |
+    1. Gather the [Microsoft uptime SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services) for every service on the critical path of your workload.
+
+    1. If you have no independent critical paths, calculate single-region composite SLA by multiplying the uptime percentages of each relevant service. If you have independent critical paths, move to step 3.
+
+    1. When two Azure services provide independent critical paths, apply the independent critical paths formula.
+
+    1. For multi-region applications, input the single-region composite SLA (N) into the multi-region uptime formula.
+
+    1. Verify your calculated uptime against your uptime SLO. Adjust your service tiers (SKUs) or architecture redundancy if the composite SLA doesn't meet your requirements.
+
+| Use case | Formula | Explanation | Example |
+|-----|------|--------|--------|
+| Single-region uptime estimate   | N = U1 × U2 × U3 × … × U*n*  | **N**: Composite SLA of Azure services on a single-region critical path.<br>**U**: SLA uptime percentage of each Azure service.<br>**n**: Total number of Azure services.     | N = 99.99% (web app) × 99.95% (database) × 99.99% (cache)   |
+| Independent critical paths estimate | 1 - [(1 - Ui1) × (1 - Ui2)] | **Ui**: SLA uptime percentage for Azure services providing independent critical paths.  | N = 99.99% (web app) × (1 - [(1 - 99.95% [database]) × (1 - 99.99% [cache])])  |
+| Multi-region uptime estimate    | M = 1 - (1 - N)^Regions   | **M**: Multi-region uptime estimate.<br>**N**: Single-region composite SLA.<br>**Regions**: Number of regions deployed. | If N = 99.95% and Regions = 2, M = 1 - (1 - 99.95%)² = 99.999975%  |
 
 1. ***Adjust service tiers.*** Before changing your architecture, see if different service tiers (SKUs) help you align with your reliability requirements. SKUs can have different uptime estimates, such as Azure Managed Disks.
 
