@@ -737,14 +737,10 @@ items:
       href: manage/operational-fitness-review.md
     - name: Azure Management Guide
       items:
-      - name: Before you start
-        href: manage/azure-management-guide/index.md
       - name: Inventory and visibility
         href: manage/azure-management-guide/inventory.md
       - name: Operational compliance
         href: manage/azure-management-guide/operational-compliance.md
-      - name: Protect and recover
-        href: manage/azure-management-guide/protect-recover.md
       - name: Enhanced baseline
         href: manage/azure-management-guide/enhanced-baseline.md
       - name: Platform specialization
@@ -770,8 +766,6 @@ items:
         href: manage/considerations/inventory.md
       - name: Operational compliance
         href: manage/considerations/operational-compliance.md
-      - name: Protect and recovery
-        href: manage/considerations/protect.md
       - name: Platform operations
         href: manage/considerations/platform.md
       - name: Workload operations
