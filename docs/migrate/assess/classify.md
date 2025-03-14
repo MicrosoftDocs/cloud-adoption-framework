@@ -31,7 +31,7 @@ Work with your security and governance teams as early as possible to define:
 
 ## Mission criticality
 
-[Workload criticality](../../manage/considerations/criticality.md) is based on how significantly an outage affects a business. This data point helps operations management and security teams evaluate risks that involve outages and breaches. During assessment, the cloud adoption team should evaluate mission criticality for each workload that's targeted for migration and share that classification with supporting teams. *Low* or *unsupported* workloads are likely to have little influence on the supporting teams. However, as workloads approach *mission-critical* or *unit-critical* classifications, their operational dependencies become more visible.
+[Workload criticality](../../manage/protect.md#manage-reliability) is based on how significantly an outage affects a business. This data point helps operations management and security teams evaluate risks that involve outages and breaches. During assessment, the cloud adoption team should evaluate mission criticality for each workload that's targeted for migration and share that classification with supporting teams. *Low* or *unsupported* workloads are likely to have little influence on the supporting teams. However, as workloads approach *mission-critical* or *unit-critical* classifications, their operational dependencies become more visible.
 
 Work with your security and operations teams as early as possible to define:
 
