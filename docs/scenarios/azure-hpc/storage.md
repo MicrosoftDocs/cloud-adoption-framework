@@ -42,9 +42,9 @@ In Azure HPC clusters, you can create compute nodes as virtual machines (VMs) to
 
 When you run jobs, compute nodes must perform read and write operations on a shared data source. Nodes access this data source in a range of scenarios that lie between the two following extremes.
 
-- **One data source to many compute nodes:** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Despite their structural simplicity, the I/O capacity of the storage location limits the I/O operations.
+- **One data source to many compute nodes:** In this scenario, there's a single data source on the network that all the compute nodes access for working data. Though the compute nodes are structurally simple, the I/O capacity of the storage location limits the I/O operations.
 
-- **Many data sources to many compute nodes:** In this scenario, there are many data sources on the network that all the compute nodes access for working data. Despite their structural simplicity, the I/O capacity of the storage location limits the I/O operations.
+- **Many data sources to many compute nodes:** In this scenario, there are many data sources on the network that all the compute nodes access for working data. Despite the structural simplicity of the compute nodes, the I/O capacity of the storage location limits the I/O operations.
 
 ### Workload traffic distribution
 
@@ -148,7 +148,7 @@ In a scenario where multiple clients try to work on data that's stored on a sing
 
 Parallel file systems distribute block-level storage across multiple networked storage nodes. File data is spread among these nodes, which means that the data is spread among multiple storage devices. This distribution pools any individual storage I/O requests across multiple storage nodes that are accessible through a common namespace.
 
-Multiple storage devices and multiple paths to data are used to provide a high degree of parallelism. This approach reduces the number of bottlenecks imposed by accessing only a single node at a time. However, parallel I/O can be difficult to coordinate and optimize if working directly at the level of the API or POSIX I/O interface. Parallel file systems provide application developers with a high-level interface between the application layer and the I/O layer via intermediate data access and coordination layers.
+Multiple storage devices and multiple paths to data are used to provide a high degree of parallelism. This approach reduces the number of bottlenecks imposed by accessing only a single node at a time. However, parallel I/O can be difficult to coordinate and optimize if you work directly at the level of the API or POSIX I/O interface. Parallel file systems provide application developers with a high-level interface between the application layer and the I/O layer via intermediate data access and coordination layers.
 
 Tightly coupled workloads that use the Message Passing Interface (MPI) might have unique requirements for low-latency communications between nodes. The nodes connect via high-speed interconnect and aren't easily adaptable for sharing with other workloads. MPI applications use the entire high-performance interconnects via passthrough mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like [Lustre](https://www.lustre.org/) that's also accessed via the high-speed interconnect.
 
