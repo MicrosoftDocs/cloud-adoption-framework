@@ -1,3 +1,13 @@
+---
+title: Protect your Azure cloud estate
+description: Learn how to ensure the reliability and security your Azure cloud estate as part of your cloud operations.
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 03/17/2025
+ms.topic: conceptual
+ms.custom: UpdateFrequency2
+---
+
 # Protect your cloud estate
 
 This article explains how to manage reliability and security to protect the availability of your Azure cloud estate. Reliability ensures continuous operation with minimal downtime, while security implements safeguards to ensure confidentiality, availability, and integrity. Both are essential for successful cloud operations. Follow these best practices:
@@ -8,11 +18,11 @@ Use redundancy, replication, and backup as essential strategies to guard against
 
 *Table 1. Example of workload priority and reliability requirements.*
 
-| Priority                 | Business impact                                                     | Minimum uptime SLO | Max downtime per month | Architecture redundancy                          | Load balancing                 | Data replication and backups                                      | Example scenario                                                                                                                                                                                                                             |
-|--------------------------|---------------------------------------------------------------------|--------------------|------------------------|--------------------------------------------------|--------------------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| High (mission-critical)  | Immediate and severe effects on company reputation or revenue.      | 99.99%             | 4.32 minutes           | Multi-region & Multiple availability zones in each region | Active-active                  | Synchronous, cross-region data replication & backups for recovery | [Mission-critical baseline](https://learn.microsoft.com/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-intro)                                                                                   |
-| Medium                   | Measurable effects on company reputation or revenue.                | 99.9%              | 43.20 minutes          | Multiple region & Multiple availability zones in each region | Active-passive                 | Asynchronous, cross-region data replication & backups for recovery | [Reliable web app pattern](https://learn.microsoft.com/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance)                                                                                          |
-| Low                      | No effect on company reputation, processes, or profits.             | 99%                | 7.20 hours             | Single region & Multiple availability zones      | Availability zone redundancy   | Synchronous data replication across availability zones & backups for recovery | [App Service baseline](https://learn.microsoft.com/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](https://learn.microsoft.com/azure/architecture/virtual-machines/baseline) |
+| Priority   | Business impact  | Minimum uptime SLO | Max downtime per month | Architecture redundancy  | Load balancing  | Data replication and backups  | Example scenario     |
+|---|---|---|---|----|---|---|---|
+| High (mission-critical)  | Immediate and severe effects on company reputation or revenue.   | 99.99%       | 4.32 minutes     | Multi-region & Multiple availability zones in each region | Active-active | Synchronous, cross-region data replication & backups for recovery | [Mission-critical baseline](https://learn.microsoft.com/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-intro)  |
+| Medium       | Measurable effects on company reputation or revenue.   | 99.9%  | 43.20 minutes | Multiple region & Multiple availability zones in each region | Active-passive     | Asynchronous, cross-region data replication & backups for recovery | [Reliable web app pattern](https://learn.microsoft.com/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) |
+| Low       | No effect on company reputation, processes, or profits.    | 99%       | 7.20 hours    | Single region & Multiple availability zones   | Availability zone redundancy   | Synchronous data replication across availability zones & backups for recovery | [App Service baseline](https://learn.microsoft.com/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](https://learn.microsoft.com/azure/architecture/virtual-machines/baseline) |
 
 ### Identify reliability responsibilities
 
@@ -23,7 +33,7 @@ Determine your responsibility for reliability for each deployment model to make 
 | Data               |      ✔️      |      ✔️       |      ✔️       |  ✔️  |
 | Code and runtime   |      ✔️      |      ✔️       |      ✔️       |      |
 | Cloud resources    |      ✔️      |      ✔️       |      ✔️       |      |
-| Physical hardware  |      ✔️      |              |              |      |
+| Physical hardware  |      ✔️      |               |                |      |
 
 ### Prioritize workloads
 
