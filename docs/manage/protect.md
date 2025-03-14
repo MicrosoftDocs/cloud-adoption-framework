@@ -213,7 +213,7 @@ Manage your security controls to detect threats to your cloud estate. Follow the
 
 1. ***Standardize security tooling.*** Use standardized tools to detect threats, fix vulnerabilities, investigate issues, secure data, harden resources, and enforce compliance at scale. Refer to [Azure security tools](#azure-security-tools).
 
-1. ***Baseline your environment.*** Document the normal state of your cloud estate. [Monitor security](/azure/cloud-adoption-framework/manage/monitor#monitor-security) and document network traffic patterns and user behaviors. Use [Azure security baselines](/azure/benchmark/azure/security-baselines-overview) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) to develop baseline configurations for services. This baseline makes it easier to detect anomalies and potential security weaknesses.
+1. ***Baseline your environment.*** Document the normal state of your cloud estate. [Monitor security](/azure/cloud-adoption-framework/manage/monitor#monitor-security) and document network traffic patterns and user behaviors. Use [Azure security baselines](/benchmark/azure/security-baselines-overview) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) to develop baseline configurations for services. This baseline makes it easier to detect anomalies and potential security weaknesses.
 
 1. ***Apply security controls.*** Implement security measures, such as access controls, encryption, and multi-factor authentication, strengthens the environment and reduces the probability of compromise. For more information, see [Manage security](./administer.md#manage-security).
 
@@ -225,7 +225,7 @@ For more information, see [CAF Secure](/azure/cloud-adoption-framework/secure/ov
 
 Adopt a process and tools to recover from security incidents, such as ransomware, denial of service, or threat actor intrusion. Follow these steps:
 
-1. ***Prepare for incidents.*** Develop an incident response plan that clearly defines roles for investigation, mitigation, and communication. Regularly test the effectiveness of your plan. Evaluate and implement vulnerability management tools, threat detection systems, and infrastructure monitoring solutions. Reduce your attack surface through infrastructure hardening and create workload-specific recovery strategies. See [Incident response overview](/azure/operations/incident-response-overview) and [Incident response playbooks](/azure/operations/incident-response-playbooks).
+1. ***Prepare for incidents.*** Develop an incident response plan that clearly defines roles for investigation, mitigation, and communication. Regularly test the effectiveness of your plan. Evaluate and implement vulnerability management tools, threat detection systems, and infrastructure monitoring solutions. Reduce your attack surface through infrastructure hardening and create workload-specific recovery strategies. See [Incident response overview](/operations/incident-response-overview) and [Incident response playbooks](/operations/incident-response-playbooks).
 
 1. ***Detect incidents.*** Use security information and event management (SIEM) tool, like [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal), to centralize your security data. Use Microsoft Sentinel’s [security orchestration, automation, and response capabilities (SOAR)](/azure/sentinel/automation/automation) to automate routine security tasks. Integrate [threat intelligence feeds](/azure/sentinel/understand-threat-intelligence) into your SIEM to gain insights into adversary tactics relevant to your cloud environment. Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to regularly scan Azure for vulnerabilities. Microsoft Defender [integrates](/azure/sentinel/best-practices) with Microsoft Sentinel to provide a unified view of security events.
 
@@ -239,12 +239,12 @@ For more information, see [Manage incident response (CAF Secure)](/azure/cloud-a
 
 | Security capability              | Microsoft solution                                                                 |
 |----------------------------------|------------------------------------------------------------------------------------|
-| Identity and access management   | [Microsoft Entra ID](/azure/fundamentals/whatis)                             |
+| Identity and access management   | [Microsoft Entra ID](/fundamentals/whatis)                             |
 | Role-based access control        | [Azure role-based access control](/azure/role-based-access-control/overview)       |
 | Threat detection                 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) |
 | Security information management  | [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal)                   |
 | Data security and governance     | [Microsoft Purview](/purview/purview)                                        |
-| Cloud resource security          | [Azure security baselines](/azure/benchmark/azure/security-baselines-overview) |
+| Cloud resource security          | [Azure security baselines](/benchmark/azure/security-baselines-overview) |
 | Cloud governance                 | [Azure Policy](/azure/governance/policy/overview)                                  |
 | Endpoint security                | [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) |
 | Network security                 | [Azure Network Watcher](/azure/network-watcher/network-watcher-overview)           |
