@@ -2836,7 +2836,7 @@
       "redirect_document_id": true
       },
       {
-       "source_path": "docs/get-started/reliability.md with URL /azure/cloud-adoption-framework/get-started/reliability",
+       "source_path": "docs/get-started/reliability.md",
        "redirect_url": "/azure/cloud-adoption-framework/manage/protect#manage-reliability",
        "redirect_document_id": false
        },
