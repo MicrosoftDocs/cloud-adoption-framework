@@ -23,7 +23,7 @@ Organize your cloud-based resources so that your IT team can easily work with th
   - [Alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Automate cost governance](../../govern/enforce-cloud-governance-policies.md#automate-cost-governance)
 
-- **Operations management**: Ensure that the operations management team has visibility into business commitments and service-level agreements (SLAs) for ongoing operations. c
+- **Operations management**: Ensure that the operations management team has visibility into business commitments and service-level agreements (SLAs) for ongoing operations.
 
 - **Security**: Classify data and determine the security impact to prepare for breaches or other security problems. Create tags for [data classification](../../govern/policy-compliance/data-classification.md) to ensure that your operation is secure.
 
