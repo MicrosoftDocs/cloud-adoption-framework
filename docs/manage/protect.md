@@ -12,7 +12,7 @@ ms.custom: UpdateFrequency2
 
 This article provides best practices for maintaining the reliability and security of your Azure cloud estate. Reliability ensures your cloud services remain operational with minimal downtime. Security safeguards the confidentiality, integrity, and availability of your resources. Both reliability and security are critical for successful cloud operations.
 
-## Managing reliability
+## Manage reliability
 
 Reliability management involves using redundancy, replication, and defined recovery strategies to minimize downtime and protect your business. *Table 1* provides an example of three workload priorities, reliability requirements (uptime SLO, max downtime, redundancy, load balancing, replication), and example scenarios that align with service-level objectives (SLOs)
 
