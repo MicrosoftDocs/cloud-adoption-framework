@@ -13,7 +13,7 @@ ms.custom: UpdateFrequency2
 
 This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments.
 
-Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
+Monitoring your Azure cloud estate involves continuously observing and analyzing your cloud resources and applications' performance, health, and security. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
 
 ## Identify your monitoring scope
 
@@ -71,7 +71,7 @@ Designing a monitoring solution refers to creating a system for collecting and s
 
     - *Use infrastructure as code (IaC).* Use [infrastructure as code](/azure/azure-monitor/resource-manager-samples) to configure and deploy Azure Monitor resources at scale. This method is the professional way to manage your resources.
 
-1. ***Optimize monitoring spend.*** Conduct regular reviews of the monitoring data you collect and store. What you collect, where you store it, and how long you store it affects the cost. Adjust storage retention periods to optimize cost without stopping the collection of certain monitoring data. To optimize costs further, stop collecting unhelpful logs. For more cost optimization tips, see [Cost optimization in Azure Monitor](/azure/azure-monitor/best-practices-cost).
+1. ***Optimize monitoring spend.*** Conduct regular reviews of the monitoring data you collect and store. What you collect, where you store it, and how long you store it affects the cost. Adjust storage retention periods to optimize cost without stopping the collection of specific monitoring data. To optimize costs further, stop collecting unhelpful logs. For more tips on cost optimization, see [Cost optimization in Azure Monitor](/azure/azure-monitor/best-practices-cost).
 
 ## Configure monitoring
 
@@ -79,7 +79,7 @@ Configuring monitoring involves setting up the tools and parameters for collecti
 
 ### Monitor service health
 
-Monitoring service availability focuses on detecting service outages, disruptions, and resource issues in your cloud environment. You want real-time visibility into potential problems to maintain consistent operations. Monitoring service health is the bare minimum for monitoring you cloud estate. Here's how:
+Monitoring service availability focuses on detecting service outages, disruptions, and resource issues in your cloud environment. You want real-time visibility into potential problems to maintain consistent operations. Monitoring service health is the bare minimum for monitoring your cloud estate. Here's how:
 
 1. ***Monitor underlying service health.*** You need to be aware of any underlying outages to the cloud services and regions you’re using. Use [Azure Service Health](/azure/service-health/service-health-portal-update) to receive free alerts about service issues, planned maintenance, and other changes affecting your Azure services and regions.
 
@@ -91,7 +91,7 @@ Monitoring security involves tracking identity interactions, vulnerabilities, an
 
 1. ***Monitor identity.*** You need to understand user interactions, detect potential risky sign-ins, troubleshoot sign-in issues, and audit identity changes to ensure the security and health of your environment. Configure [Microsoft Entra monitoring](/entra/identity/monitoring-health/overview-monitoring-health) and collect the logs you need to meet your security and compliance requirements.
 
-1. ***Monitor security vulnerabilities.*** You need a single security monitoring solution to detect security vulnerabilities across your various environments. For example, use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to monitor security vulnerabilities in Azure, other public clouds, edge devices, and on-premises private networks. Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and even management (SIEM) and security orchestration, automation, and response (SOAR). Microsoft Sentinel relies on the Log Analytics platform so you have some key symbiosis.
+1. ***Monitor security vulnerabilities.*** You need a single security monitoring solution to detect security vulnerabilities across your various environments. For example, use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to monitor security vulnerabilities in Azure, other public clouds, edge devices, and on-premises private networks. Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and event management (SIEM) and security orchestration, automation, and response (SOAR). Microsoft Sentinel relies on the Log Analytics platform so you have some key symbiosis.
 
 1. ***Monitor network activity.*** You need to monitor network traffic within your cloud and networks outside of your cloud. Network monitoring helps you troubleshoot performance issues and maintain network security. Use Network Watcher to monitor Azure virtual networks (using [flow logs](/azure/network-watcher/network-watcher-overview#flow-logs') and [traffic analytics](/azure/network-watcher/network-watcher-overview#traffic-analytics)). Use [Connection monitor](/azure/network-watcher/network-watcher-overview#connection-monitor) for multicloud and on-premises network monitoring.
 
@@ -142,11 +142,11 @@ At the workload level, you need to gather telemetry (application logs, metrics, 
 
 Monitoring cloud resources covers watching control-plane activity, resource logs, and performance metrics across Azure. You want detailed visibility into resource usage and changes to maintain security, compliance, and operational excellence. Here's how:
 
-1. ***Monitor control plane activities.*** You need know who created, updated, and deleted resources in your cloud environment. In Azure, you want to monitor control plane activities in across your subscriptions. Azure automatically captures control-plane events for each subscription, called [Azure Activity Logs](/azure/azure-monitor/essentials/activity-log). [Create a diagnostic setting](/azure/azure-monitor/essentials/activity-log) to send these Activity Logs to the right destination
+1. ***Monitor control plane activities.*** You need to know who created, updated, and deleted resources in your cloud environment. In Azure, you want to monitor control plane activities in across your subscriptions. Azure automatically captures control-plane events for each subscription, called [Azure Activity Logs](/azure/azure-monitor/essentials/activity-log). [Create a diagnostic setting](/azure/azure-monitor/essentials/activity-log) to send these Activity Logs to the right destination
 
 1. ***Collect cloud resource logs.*** You need to collect log data for each cloud resource to assess its health and troubleshoot effectively. Different services have different types of logs. In Azure, you must configure [Azure resource logs](/azure/azure-monitor/essentials/resource-logs) on every service to collect them. If you don't know what to collect, gather all available logs and metrics to avoid data gaps and optimize cost later. To optimize cost, adjust the retention period and eliminate certain logs from collection if unneeded. The logs you collect and how long you keep them should balance cost with compliance, security, and business continuity (root cause analysis). For more information, see [Azure Monitor cost optimization best practices](/azure/azure-monitor/best-practices-cost)
 
-1. ***Collect resource metrics.*** You need visibility into the health and performance of your cloud resources. You need time-series data to get point-in time data to troubleshoot issues. In Azure, every service automatically generates [Azure Monitor Metrics](/azure/azure-monitor/essentials/data-platform-metrics). Analyze these metrics in [metrics explorer](/azure/azure-monitor/essentials/analyze-metrics) and set up alert rules against them. Check the [default retention period](/azure/azure-monitor/essentials/data-platform-metrics#retention-of-metrics) for Azure Monitor Metrics. If you need to retain metrics for a longer period, create a [diagnostic setting](/azure/azure-monitor/essentials/diagnostic-settings-policy) to store in a Log Analytics workspace for analysis and correlation with log data. Where generally available, use [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) to configure central monitoring data collection.
+1. ***Collect resource metrics.*** You need visibility into the health and performance of your cloud resources. You need time-series data to get point-in-time data to troubleshoot issues. In Azure, every service automatically generates [Azure Monitor Metrics](/azure/azure-monitor/essentials/data-platform-metrics). Analyze these metrics in [metrics explorer](/azure/azure-monitor/essentials/analyze-metrics) and set up alert rules against them. Check the [default retention period](/azure/azure-monitor/essentials/data-platform-metrics#retention-of-metrics) for Azure Monitor Metrics. If you need to retain metrics for a longer period, create a [diagnostic setting](/azure/azure-monitor/essentials/diagnostic-settings-policy) to store in a Log Analytics workspace for analysis and correlation with log data. Where generally available, use [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) to configure central monitoring data collection.
 
 1. ***Monitor workload resources.*** For workload-specific cloud resource monitoring guidance, see the Well-Architected Framework:
 
