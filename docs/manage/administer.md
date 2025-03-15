@@ -45,7 +45,7 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 1. ***Standardize the post-deployment process.*** Implement monitoring and validation steps to confirm successful changes. Include a clear rollback strategy to quickly restore service if a change introduces problems.
 
-1. ***Prevent and detect unauthorized change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like ([Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action)), ([Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists)). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
+1. ***Prevent and detect unauthorized change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like [Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action), [Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
 
 ## Manage security
 
@@ -61,7 +61,7 @@ Identity is your security perimeter. Use a standardized platform to verify ident
 
 1. ***Manage security information.*** Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and even management (SIEM) and security orchestration, automation, and response (SOAR).
 
-1. ***Control workload security.*** For workload security recommendations, see the Well-Architected Framework's [security checklist](/azure/well-architected/security/checklist#checklist) and [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*)
+1. ***Control workload security.*** For workload security recommendations, see the Well-Architected Framework's [security checklist](/azure/well-architected/security/checklist#checklist) and [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*).
 
 ## Manage compliance
 
@@ -90,7 +90,7 @@ Managing data in cloud operations involves actively classifying, segmenting, sec
 
 1. ***Enforce access control.*** Implement robust access controls, such as Azure RBAC and ABAC, to ensure only authorized personnel access sensitive data based on defined classifications.
 
-1. ***Protect data from deletion.*** Use features such as soft delete, data versioning, and immutability where available. Implement database versioning and prepare rollback procedures. Utilize Azure Policy to explicitly deny datastore deletions ([Deny](/azure/governance/policy/concepts/effect-deny) or [DenyAction](/azure/governance/policy/concepts/effect-deny-action)) or audit ([Audit](/azure/governance/policy/concepts/effect-audit) or [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists)) any changes. If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes. Only use [resource locks](/azure/azure-resource-manager/management/lock-resources) strictly to prevent unintended modifications or deletions of critical data. Avoid using resource locks to protect configurations, as resource locks complicate IaC deployments
+1. ***Protect data from deletion.*** Use features such as soft delete, data versioning, and immutability where available. Implement database versioning and prepare rollback procedures. Use Azure Policy to deny datastore deletions with [Deny](/azure/governance/policy/concepts/effect-deny) and [DenyAction](/azure/governance/policy/concepts/effect-deny-action) effects or audit changes with [Audit](/azure/governance/policy/concepts/effect-audit) and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists) any changes. If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes. Only use [resource locks](/azure/azure-resource-manager/management/lock-resources) strictly to prevent unintended modifications or deletions of critical data. Avoid using resource locks to protect configurations, as resource locks complicate IaC deployments.
 
 1. ***Manage workload data.*** See the Well-Architected Framework's recommendations on [Data classification](/azure/well-architected/security/data-classification).
 
