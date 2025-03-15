@@ -29,9 +29,9 @@ This section explores key recommendations to deliver highly secure internal netw
 
 ## Design recommendations
 
-- Delegate subnet creation to the landing zone owner. This will enable them to define how to segment workloads across subnets (for example, a single large subnet, multitier application, or network-injected application). The platform team can use Azure Policy to ensure that an NSG with specific rules (such as deny inbound SSH or RDP from internet, or allow/block traffic across landing zones) is always associated with subnets that have deny-only policies.
+- Delegate subnet creation to the landing zone owner. This will enable them to define how to segment workloads across subnets (for example, a single large subnet, multitier application, or network-injected application). The platform team can use Azure Policy to ensure that an NSG with specific rules (such as deny inbound SSH or RDP from the internet, or allow/block traffic across landing zones) is always associated with subnets that have deny-only policies.
 
-- Use NSGs to help protect traffic across subnets, as well as east/west traffic across the platform (traffic between landing zones).
+- Use NSGs to help protect traffic across subnets and east/west traffic across the platform (traffic between landing zones).
 
 - The application team should use application security groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
 
@@ -58,4 +58,4 @@ This section explores key recommendations to deliver highly secure internal netw
   | 110 | `DenyInternet` | `Any` | `Internet` | `Any` | `Deny` | Deny traffic directly to the internet if the `0.0.0.0/0` route is withdrawn from the routes advertised (for example, due to an outage or misconfiguration). |
 
 > [!CAUTION]
-> Azure PaaS services that can be injected into a virtual network maybe not compatible with forced tunneling. Control plane operations may still require direct connectivity to specific public IP addresses for the service to operate correctly. It's recommended to check the specific service documentation for networking requirements and eventually exempt the service subnet from the default route propagation. [Service Tags in UDR](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) can be used to bypass default route and redirect control plane traffic only, if the specific service tag is available.
+> Azure PaaS services that can be injected into a virtual network may not be compatible with forced tunneling. Control plane operations may still require direct connectivity to specific public IP addresses for the service to operate correctly. It's recommended to check the specific service documentation for networking requirements and eventually exempt the service subnet from the default route propagation. [Service Tags in UDR](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) can be used to bypass default route and redirect control plane traffic only, if the specific service tag is available.
