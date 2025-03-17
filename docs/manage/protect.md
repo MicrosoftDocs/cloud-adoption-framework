@@ -123,11 +123,10 @@ Managing the reliability of your cloud resources often requires architecture red
     1. Compare your calculated uptime with your uptime SLO. Adjust service tiers or architecture redundancy if necessary.
 
     | Use case | Formula | Variables | Example | Explanation |
-    |-----|------|--------|--------|
-    | Single-region uptime estimate   | N = U1 × U2 × U3 × … × U*n*  | **N**: Composite SLA of Azure services on a single-region critical path.<br>**U**: SLA uptime percentage of each Azure service.<br>**n**: Total number of Azure services.     | N = 99.99% (app) × 99.95% (database) × 99.99% (cache) | Simple workload with app (99.99%), database (99.95%), and cache (99.99%) in a single critical path.
-    | Independent critical paths estimate | 1 - [(1 - U2) × (1 - U3)] | **U**: SLA uptime percentage for Azure services providing independent critical paths.  | N = 99.99% (app) ×
-***(1 - [(1 - 99.95% database) × (1 - 99.99% cache)])***  | Workload with two independent critical paths; either database or cache can fail without total downtime.|
-    | Multi-region uptime estimate    | M = 1 - (1 - N)^R   | **M**: Multi-region uptime estimate.<br>**N**: Single-region composite SLA.<br>**R**: Number of regions used. | If N = 99.95% and R = 2, then M = 1 - (1 - 99.95%)² | Workload deployed in two regions. |
+    |-----|------|--------|--------| --- |
+    | Single-region uptime estimate   | N = U1 × U2 × U3 × … × U*n*  | **N**: Composite SLA of Azure services on a single-region critical path.<br>**U**: SLA uptime percentage of each Azure service.<br>**n**: Total number of Azure services.     | N = 99.99% (app) × 99.95% (database) × 99.9% (cache) | Simple workload with app (99.99%), database (99.95%), and cache (99.9%) in a single critical path.|
+    | Independent critical paths estimate | 1 - [(1 - U2) × (1 - U3)] | **U**: SLA uptime percentage for Azure services providing independent critical paths.  | N = 99.99% (app) × ***(1 - [(1 - 99.95% database) × (1 - 99.9% cache)])***  | Two independent critical paths. Either database (99.95%) or cache (99.9%) can fail without downtime.|
+    | Multi-region uptime estimate    | M = 1 - (1 - N)^R   | **M**: Multi-region uptime estimate.<br>**N**: Single-region composite SLA.<br>**R**: Number of regions used. | If N = 99.95% and R = 2, then M = 1 - (1 - 99.95%)^2 | Workload deployed in two regions. |
 
 1. ***Adjust service tiers.*** Before modifying architectures, evaluate whether different Azure service tiers (SKUs) can meet your reliability requirements. Some Azure service tiers can have different uptime SLAs, such as Azure Managed Disks.
 
