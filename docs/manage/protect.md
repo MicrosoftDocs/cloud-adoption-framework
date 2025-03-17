@@ -190,18 +190,11 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 | Use case                        | Solution                                                                                                                   |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| PaaS data replication and backup| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)      |
-| Quick reference:                |                                                                                                                            |
-|                                 | [Azure Cosmos DB](/azure/well-architected/service-guides/cosmos-db)                                                        |
-|                                 | [Azure SQL Database](/azure/well-architected/service-guides/azure-sql-database-well-architected-framework#azure-sql-database-and-reliability) |
-|                                 | [Azure Blob Storage](/azure/well-architected/service-guides/azure-blob-storage)                                            |
-|                                 | [Azure Files](/azure/well-architected/service-guides/azure-files)                                                          |
-| IaaS data backup and restore    | [Azure Backup](/azure/backup/backup-overview)                                                                              |
-| IaaS business continuity        | [Azure Site Recovery](/azure/site-recovery/azure-to-azure-tutorial-enable-replication)                                     |
-| Multi-region load balancer      | [Azure Front Door](/azure/frontdoor/front-door-overview) (HTTP)                                                            |
-|                                 | [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (non-HTTP)                                        |
-| Multi-availability zone load balancer | [Azure Application Gateway](/azure/application-gateway/overview) (HTTP)                                               |
-|                                 | [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) (non-HTTP)                                              |
+| Data replication, backup, and business continuity| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)<br><br>Quick reference:<br>[Azure Cosmos DB](/azure/well-architected/service-guides/cosmos-db)<br>[Azure SQL Database](/azure/well-architected/service-guides/azure-sql-database-well-architected-framework#azure-sql-database-and-reliability)<br>[Azure Blob Storage](/azure/well-architected/service-guides/azure-blob-storage)<br>[Azure Files](/azure/well-architected/service-guides/azure-files)                                                          |
+| Data backup    | [Azure Backup](/azure/backup/backup-overview)                                                                              |
+| Business continuity (IaaS)        | [Azure Site Recovery](/azure/site-recovery/azure-to-azure-tutorial-enable-replication)                                     |
+| Multi-region load balancer      | [Azure Front Door](/azure/frontdoor/front-door-overview) (HTTP)<br>[Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (non-HTTP)                                        |
+| Multi-availability zone load balancer | [Azure Application Gateway](/azure/application-gateway/overview) (HTTP)<br>[Azure Load Balancer](/azure/load-balancer/load-balancer-overview) (non-HTTP)                                              |
 
 ## Manage security
 
