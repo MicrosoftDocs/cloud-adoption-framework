@@ -49,7 +49,7 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 ## Manage security
 
-Identity is your security perimeter. Use a standardized platform to verify identities, restrict permissions, and maintain secure resource configurations. Follow these steps:
+Identity is your security perimeter. You must verify identities, restrict permissions, and maintain secure resource configurations. Follow these steps:
 
 1. ***Manage identities.*** Use [Microsoft Entra ID](/entra/fundamentals/whatis) as your unified identity management solution. Clearly define permissions by applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, and identity lifecycle management. Enable [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to grant just-in-time privileged access. This strategy reduces unnecessary elevated access. Manage all three identity types (user, application, device) consistently to ensure proper authentication and authorization.
 
@@ -65,7 +65,7 @@ Identity is your security perimeter. Use a standardized platform to verify ident
 
 ## Manage compliance
 
-Compliance management ensures that Azure operations remain aligned with established governance policies and regulatory standards. This practice reduces risk by safeguarding the environment from potential violations and misconfigurations.
+Compliance management ensures that Azure operations remain aligned with established governance policies and regulatory standards. You must reduce risk by safeguarding the environment from potential violations and misconfigurations. Follow these steps:
 
 1. ***Understand your governance policies.*** Governance policies define the high-level constraints that your teams must follow to remain compliant. Review your organization's policies and map each requirement to your operational processes. If you don't have governance policies, first [document governance policies](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
 
@@ -80,7 +80,7 @@ For more information, see [Enforcing compliance in Azure](/azure/cloud-adoption-
 
 ## Manage data
 
-Managing data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. Effective data control safeguards sensitive information, maintains compliance, and ensures data reliability during operational changes.
+Managing data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. You must safeguard sensitive information, maintains compliance, and ensures data reliability during operational changes. Follow these steps:
 
 1. ***Discover and classify data.*** Identify and categorize data according to sensitivity and importance. This classification guides tailored controls for each data type. Use [Microsoft Purview](/purview/data-governance-overview) for data governance. For more information, see [Data sources that connect to Microsoft Purview Data Map](/purview/microsoft-purview-connector-overview#azure).
 
