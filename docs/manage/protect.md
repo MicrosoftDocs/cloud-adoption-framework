@@ -61,7 +61,7 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 ### Manage data reliability
 
-Data reliability involves data replication (replicas) and backups (point in time copies) to maintain availability and consistency. Your approach must align with the workload’s defined RTO and RPO. Follow these steps:
+Data reliability involves data replication (replicas) and backups (point in time copies) to maintain availability and consistency. See *Table 2* for examples of workload priority aligned with data reliability targets.
 
 *Table 2. Workload priority with example data reliability configurations.*
 
@@ -70,6 +70,8 @@ Data reliability involves data replication (replicas) and backups (point in time
 | High              | 99.99%     | Multi-region synchronous data replication<br>Synchronous data replication across availability zones | High frequency, cross-region backups. Frequency should support RTO and RPO. | [Mission-critical data platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-data-platform) |
 | Medium            | 99.9%      | Multi-region asynchronous data replication<br>Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Database and storage solution in the Reliable Web App pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#pick-the-right-azure-services)<br>Sample resources:<br>Azure SQL Database [zone redundancy](/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview), [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview), and [native backups](/azure/azure-sql/database/automated-backups-overview)<br>Azure Storage [read-access geo-zone-redundant storage (RA-GZRS)](/azure/storage/common/storage-redundancy) |
 | Low               | 99%        | Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Data resiliency in baseline web app with zone redundancy](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant#blob-storage) |
+
+Your approach must align the data reliability configurations with the RTO and RPO requirements of your workloads. Follow these steps:
 
 1. ***Manage data replication.*** Replicate your data synchronously or asynchronously according to your workload’s RTO and RPO requirements.
 
@@ -106,7 +108,7 @@ Managing the reliability of your cloud resources often requires architecture red
 | Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Reliable web app pattern architecture guidance](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#architecture-guidance)  |
 | Low               | Single region & availability zones | Across availability zones | Azure Application Gateway<br><br>Add Azure Load Balancer for virtual machines  |[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
 
-Implement these adjustments based on your workload's reliability requirements. Follow these steps:
+Your approach must implement architecture redundancy to meet the reliability requirements of your workloads. Follow these steps:
 
 1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path). Follow these steps:
 
