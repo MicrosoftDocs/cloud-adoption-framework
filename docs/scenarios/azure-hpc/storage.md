@@ -28,7 +28,7 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 
 :::image type="content" source="media/storage-selection-flow.svg" alt-text="Diagram that shows a decision tree of considerations when you choose a storage solution." lightbox="media/storage-selection-flow.svg" border="false":::
 
-*Download a [Visio file](https://archcenter.blob.core.windows.net/cdn/storage-selection-flow) of this architecture.*
+*Download a [Visio file](https://archcenter.blob.core.windows.net/cdn/storage-selection-flow.vsdx) of this architecture.
 
 ## HPC considerations
 
