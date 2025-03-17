@@ -88,8 +88,8 @@ Most commonly, customers require the ability to deliver consistency within their
 - **Inventory and visibility:** Account for, and ensure reporting for all assets, and collect and monitor your inventory's run state in enterprise-grade environments.
 - **Optimized operations:** Track, patch, and optimize supported resources and minimize business interruption risks from configuration drift or vulnerabilities from inconsistent patch management.
 - **Protection and recovery:** Backup, business continuity, and disaster recovery best practices reduce the duration and impact of unpreventable outages.
-- **Platform operations**: Specialized operations for common technology platforms such as SQL databases, virtual desktops, and SAP (for medium to high criticality workloads).
-- **Workload operations**: Specialized operations (for high priority/mission-critical workloads) with greater operations requirements.
+- **Platform operations:** Specialized operations for common technology platforms such as SQL databases, virtual desktops, and SAP (for medium to high criticality workloads).
+- **Workload operations:** Specialized operations (for high priority/mission-critical workloads) with greater operations requirements.
 
 Platform and workload operations both run an equivalent *iterative process* to improve system design, automate remediation, scale changes with a service catalog, and continuously improve system design, automation, and scale.
 
