@@ -85,16 +85,11 @@ Your approach must align the data reliability configurations with the RTO and RP
 
 1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Choose backup solutions that align with your RTO and RPO goals. Prefer Azure’s built-in solutions, such as Azure Cosmos DB and Azure SQL Database native backups. For other cases, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup).
 
-1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework:
-
-    | Workload reliability | Details | 
-    |----------------------|---------|
-    |Reliability pillar | [Data partitioning](/azure/well-architected/reliability/partition-data) |
-    | Service guide | [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*) |
+1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework [Data partitioning guide](/azure/well-architected/reliability/partition-data) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
 ### Manage code and runtime reliability
 
-Code and runtime are workload responsibilities. Follow the Well-Architected Framework’s [Recommendations for self-healing and self-preservation.](/azure/well-architected/reliability/self-preservation)
+Code and runtime are workload responsibilities. Follow the Well-Architected Framework’s [self-healing and self-preservation guide](/azure/well-architected/reliability/self-preservation).
 
 ### Manage cloud resources reliability
 
