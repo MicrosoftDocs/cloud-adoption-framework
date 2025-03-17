@@ -37,10 +37,6 @@ Reliability responsibilities vary by deployment model. Clarify your responsibili
 
 For more information, see [Shared responsibility for reliability](/azure/reliability/concept-shared-responsibility) .
 
-### Prioritize workloads
-
-The priority determines your reliability requirements, such as uptime SLOs and recovery objectives. Assign a priority to all workloads across your cloud estate. Base the priority of workloads on their business value (revenue and reputation) and any regulatory compliance requirements. Meeting reliability requirements requires financial and time investments, so ensure the priorities align with the invest Classify workloads as high, medium, or low priority. Use medium priority as a default when you’re unclear to quickly identify higher priority workloads. Regularly review and maintain this list to ensure alignment to the business and environment/cost efficiency.
-
 ### Define reliability requirements
 
 Clearly defined reliability requirements are critical for uptime targets, recovery, and data loss tolerance. Follow these steps to define reliability requirements:
