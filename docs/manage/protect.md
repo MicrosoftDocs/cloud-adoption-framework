@@ -170,7 +170,7 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 	1. ***Collect service level indicators (SLIs).*** Track performance by defining and gathering metrics that serve as SLIs. Ensure your teams use these metrics to measure workload performance against your service level objectives (SLOs).
 
-1. ***Respond to failures.*** Align your recovery response to the [workload priority](#prioritize-workloads). Implement failover procedures to reroute requests to redundant infrastructure and data replicas immediately. Once systems stabilize, resolve the root cause, synchronize data, and execute failback procedures. For more information, see [Failover and failback.](/azure/reliability/concept-failover-failback)
+1. ***Respond to failures.*** Align your recovery response to the workload priority. Implement failover procedures to reroute requests to redundant infrastructure and data replicas immediately. Once systems stabilize, resolve the root cause, synchronize data, and execute failback procedures. For more information, see [Failover and failback.](/azure/reliability/concept-failover-failback)
 
 1. ***Analyze failures.***  Identify the root causes of the issues and then address the problem. Document any lessons and make the necessary changes.
 
