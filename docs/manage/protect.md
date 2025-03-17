@@ -100,7 +100,7 @@ Code and runtime are workload responsibilities. Follow the Well-Architected Fram
 
 ### Manage cloud resources reliability
 
-Managing the reliability of your cloud resources often requires architecture redundancy (duplicate service instances) and an effective load-balancing strategy. Implement these adjustments based on your workload's reliability requirements. See *Table 3* for examples of architecture redundancy aligned with workload priority. Follow these steps:
+Managing the reliability of your cloud resources often requires architecture redundancy (duplicate service instances) and an effective load-balancing strategy. See *Table 3* for examples of architecture redundancy aligned with workload priority.
 
 *Table 3. Workload priority and architecture redundancy examples.*
 
@@ -109,6 +109,8 @@ Managing the reliability of your cloud resources often requires architecture red
 | High              | Two regions & availability zones | Active-active           | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Mission-critical baseline application platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-app-platform#global-load-balancer)     |
 | Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Reliable web app pattern architecture guidance](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#architecture-guidance)  |
 | Low               | Single region & availability zones | Across availability zones | Azure Application Gateway<br><br>Add Azure Load Balancer for virtual machines  |[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
+
+Implement these adjustments based on your workload's reliability requirements. Follow these steps:
 
 1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path). Follow these steps:
 
