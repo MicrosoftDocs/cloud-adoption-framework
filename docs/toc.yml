@@ -721,6 +721,8 @@ items:
     items:
     - name: Overview
       href: manage/index.md
+    - name: Ready your Azure cloud operations
+      href: manage/ready.md  
     - name: Administer your Azure cloud estate
       href: manage/administer.md  
     - name: Monitor your Azure cloud estate
