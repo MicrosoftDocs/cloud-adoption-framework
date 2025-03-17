@@ -138,7 +138,7 @@ Define protocols and limits for portal deployments to minimize the potential for
 
 ### Manage code deployments
 
-Adopt best practices to automate and control complex or large-scale changes via code. Follow these steps:
+Adopt best practices to automate and control changes to code and infrastructure. Follow these steps:
 
 1. ***Standardize tooling.*** Use a consistent toolset to minimize context switching. Choose developer tools (VS Code, Visual Studio), a code repository (GitHub, [Azure DevOps](/azure/devops/get-started/)), a CI/CD pipeline ([GitHub Actions](https://docs.github.com/actions), [Azure Pipelines](/azure/devops/pipelines/)), and an IaC solution ([Bicep](/azure/azure-resource-manager/bicep/modules), [Terraform](/azure/developer/terraform/), or [ARM](/azure/azure-resource-manager/templates/) templates) that work together.
 
