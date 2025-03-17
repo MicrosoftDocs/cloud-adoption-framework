@@ -112,11 +112,11 @@ Managing code and runtime are workload responsibilities. Have your workload team
 
 Managing cloud resources involves governance, oversight, and maintenance of all Azure services, deployments, and infrastructure. Establish clear deployment protocols and proactive drift detection strategies to maintain consistency across environments. Follow these recommendations:
 
-### Manage portal-based deployments
+### Manage portal deployments
 
-Define protocols and limits for portal-based deployments to minimize the potential for production problems. Follow these steps:
+Define protocols and limits for portal deployments to minimize the potential for production problems. Follow these steps:
 
-1. ***Define portal deployment policy.*** Ensure significant portal-based changes adhere to established change management processes. Use portal deployments primarily for rapid prototyping, troubleshooting, or minor adjustments in development and testing environments. Avoid unstructured portal changes because these changes lead to drift, misconfigurations, and compliance issues. Instead, rely on version-controlled infrastructure-as-code (IaC) templates for consistency. For more information, see [code-based deployments](#manage-code-based-deployments).
+1. ***Define portal deployment policy.*** Ensure significant portal-based changes adhere to established change management processes. Use portal deployments primarily for rapid prototyping, troubleshooting, or minor adjustments in development and testing environments. Avoid unstructured portal changes because these changes lead to drift, misconfigurations, and compliance issues. Instead, rely on version-controlled infrastructure-as-code (IaC) templates for consistency. For more information, see [code deployments](#manage-code-deployments).
 
 1. ***Differentiate environments.*** Limit portal-based changes strictly to nonproduction environments. Allow rapid prototyping exclusively in dedicated development or testing environments and enforce stringent controls in production.
 
@@ -136,9 +136,9 @@ Define protocols and limits for portal-based deployments to minimize the potenti
     | [Terraform](/azure/developer/terraform/) | Multicloud solution, broader community support |
     | [ARM templates](/azure/azure-resource-manager/templates/) | Full control, comfortable with JSON |
 
-### Manage code-based deployments
+### Manage code deployments
 
-Adopt code-based deployments to automate and control complex or large-scale changes. Follow these steps:
+Adopt best practices to automate and control complex or large-scale changes via code. Follow these steps:
 
 1. ***Standardize tooling.*** Use a consistent toolset to minimize context switching. Choose developer tools (VS Code, Visual Studio), a code repository (GitHub, [Azure DevOps](/azure/devops/get-started/)), a CI/CD pipeline ([GitHub Actions](https://docs.github.com/actions), [Azure Pipelines](/azure/devops/pipelines/)), and an IaC solution ([Bicep](/azure/azure-resource-manager/bicep/modules), [Terraform](/azure/developer/terraform/), or [ARM](/azure/azure-resource-manager/templates/) templates) that work together.
 
