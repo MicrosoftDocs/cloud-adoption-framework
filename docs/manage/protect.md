@@ -174,12 +174,7 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 1. ***Analyze failures.***  Identify the root causes of the issues and then address the problem. Document any lessons and make the necessary changes.
 
-1. ***Manage workload failures.*** For workload disaster recovery, see the Well-Architected Framework:
-
-| Workload reliability | Details |
-| --- | --- |
-| Reliability pillar | [Designing a disaster recovery strategy](/azure/well-architected/reliability/disaster-recovery) | 
-| Service guide | [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*) |
+1. ***Manage workload failures.*** For workload disaster recovery, see the Well-Architected Framework's [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
 ### Azure reliability tools
 
