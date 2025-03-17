@@ -18,11 +18,11 @@ The Manage methodology is about operational efficiency. Operational efficiency i
 
 In a defense context, the technical and non-technical aspects of operations are equally important. The following recommendations address both:
 
-## Create resource baselines
+## Establish cloud management
 
 There are several strategies defense organizations can adopt to improve operations. Technical teams need to know what cloud resources they have (inventory) and know what each resource is doing (visibility). Visibility requires baselines. Baselines make cloud resources measurable, which is critical to security and modernization. Operations teams need to create baselines so that progress and regression can be measured.
 
-For more information, see [resource baselines](../../manage/azure-management-guide/inventory.md).
+For more information, see [Cloud management overview](../../manage/index.md).
 
 ## Choose a product owner
 
@@ -38,11 +38,7 @@ Azure allows operations teams to easily generate both reports. Security teams ca
 
 If contracts are a component of defense operations, foster contract relationships that require and incentivize transparency. Fixed-price contracts, for example, minimize mission-owner visibility. While they limit the risk of overrunning the budget, they offer little visibility into the daily operations of the environment supporting the mission. Mission owners should be able to review costs. Costs are transparent. They identify priorities, reveal security concerns, and help with business forecasts.
 
-For more information, see:
-
-- [Management guide](../../manage/azure-management-guide/index.md)
-- [Management considerations](../../manage/considerations/index.md)
-- [Service health](/azure/service-health/service-health-overview)
+For more information, see [Monitor your Azure cloud estate](../../manage/monitor.md).
 
 ## Next step
 

@@ -17,20 +17,20 @@ Monitoring your Azure cloud estate involves continuously observing and analyzing
 
 ## Identify your monitoring scope
 
-Determine your monitoring scope clearly for each deployment model to make informed monitoring decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) operate within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
+Monitoring responsibilities vary by deployment model. Use the following table to identify your monitoring responsibilities for infrastructure (IaaS), platform (PaaS), software (SaaS), and on-premises deployments.
 
-| Monitoring areas| On-premises monitoring | IaaS monitoring (Azure) | PaaS monitoring (Azure) | SaaS monitoring |
-|---------------------|------------------------|-----------------|-----------------|-----------------|
-| Service health| X| X | X | X |
-| Security| X| X | X | X |
-| Compliance| X| X | X | X |
-| Cost| X| X | X | X |
-| Data| X| X | X | X |
-| Code and runtime| X| X | X | |
-| Cloud resources | X| X | X | |
-| Operating system| X| X | | |
-| Virtualization layer| X| X | | |
-| Physical hardware | X| | | |
+| Monitoring areas    | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
+|---------------------|------------------------|-------------------------|-------------------------|-----------------|
+| Service health      | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Security            | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Compliance          | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Cost                | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Data                | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Code and runtime    | ✔️                     | ✔️                      | ✔️                      |                 |
+| Cloud resources     | ✔️                     | ✔️                      | ✔️                      |                 |
+| Operating system    | ✔️                     | ✔️                      |                         |                 |
+| Virtualization layer| ✔️                     | ✔️                      |                         |                 |
+| Physical hardware   | ✔️                     |                         |                         |                 |
 
 ## Plan your monitoring strategy
 
@@ -43,7 +43,7 @@ A monitoring strategy outlines your requirements across every environment. The g
     | Centralized | All monitoring tasks are managed centrally.| Startups or small cloud footprint. | Simplified governance and cost control.| Potential for operational bottlenecks.|
     | Shared management | Centrally monitor health, security, compliance, cost, data, and shared services. <br><br>Workload teams monitor workloads. | Enterprises with multiple workloads. | Balances governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions and ongoing coordination.|
 
-    For shared management monitoring responsibilities, see [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
+    For shared management monitoring responsibilities, see an example [Shared management monitoring responsibilities](#shared-management-monitoring-responsibilities).
 
 1. ***Identify what you need to monitor.*** Take a thorough inventory of your Azure estate. Include other clouds, edge deployments, and on-premises systems as needed. Use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter). Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
 
@@ -339,7 +339,7 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | |
 | Multicloud connector enabled by Azure Arc | [View multicloud inventory with the multicloud connector enabled by Azure Arc](/azure/azure-arc/multicloud-connector/view-multicloud-inventory) | |
 
-## Example shared management monitoring responsibilities
+## Shared management monitoring responsibilities
 
 | Monitoring area | Centralized monitoring responsibilities | Workload monitoring responsibilities|
 |-----------------|-----------------------------------------|-------------------------------------|

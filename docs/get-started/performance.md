@@ -20,42 +20,20 @@ The first step in this guide helps the operations team get started. The subseque
 
 ## Step 1: Establish operations management requirements
 
-The operations management baseline, outlined in the Microsoft Cloud Adoption Framework for Azure, provides a set of controls and cloud-native operations tools to ensure consistent operations. Expanding that baseline with automation tooling provides performance monitoring and automation to meet consistent performance requirements across the portfolio.
-
-**Deliverables:**
-
-- Enhance the management baseline to include automated remediation tasks related to deviations from performance expectations.
-- When workload-specific data patterns or architecture changes are needed to meet performance requirements, use workload-specific operations to provide greater performance controls.
-- Document operational decisions across the IT portfolio in the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx). Focus on including performance automation decisions in the `Operational Compliance` section of the `Baseline` tab.
-
-**Guidance to support deliverable completion:**
-
-- The [enhanced management baseline](../manage/azure-management-guide/enhanced-baseline.md) article outlines examples of using tools like Azure Automation to add performance-related enhancements. This approach can aid in maintaining consistent performance through basic modifications to the size and scale of supporting assets.
-- [Workload-specific operations](../manage/azure-management-guide/platform-specialization.md) uses the Microsoft Azure Well-Architected Review to provide guidance on automation for a specific workload. This approach to performance management is particularly useful when workload-specific data should drive operational actions.
-- The preceding guidance assumes that an existing implementation of a [management baseline](../manage/considerations/discipline.md) supports the full portfolio of workloads.
-
-> [!NOTE]
-> Various decisions throughout the cloud adoption lifecycle can have a direct impact on performance. The following steps help outline the partnerships and supporting efforts required to deliver performance across the IT portfolio.
-
-<br>
+Understand how to [manage your Azure cloud estate](../manage/index.md).
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
 | <li> Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
-## Step 2: Consistent application of the management baseline
+## Step 2: Administer your Azure estate
 
-As the management baseline is improved, it's important to ensure that those improvements carry through to the Resource Consistency governance discipline. Doing so ensures the application of the enhanced baseline in all managed environments.
-
-**Deliverable:**
-
-Ensure proper application of the enhanced management baseline for all affected systems.
+[Administer](../manage/administer.md) your Azure cloud estate.
 
 **Guidance to support deliverable completion:**
 
 - Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for `criticality`.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
-- If you're new to the Cost Management discipline, consider following the [article about Cost Management discipline improvements](../govern/guides/complex/cost-management-improvement.md), with a focus on the [Implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-best-practices) section.
 
 <br>
 

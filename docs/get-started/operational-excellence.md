@@ -111,4 +111,4 @@ Operational excellence requires a disciplined approach to reliability, performan
 - **Cost optimization:** Continuously optimize operating costs by using the getting started guide on [managing enterprise costs](./manage-costs.md)
 - **Security:** Reduce risk by integrating enterprise security across the portfolio by using the getting started guide on [implementing security across the portfolio](./security.md).
 - **Performance management:** Ensure IT asset performance supports business processes by using the getting started guide on [performance management across the enterprise](./performance.md).
-- **Reliability:** Improve reliability and reduce business disruptions by using the getting started guide on [implementing controls to create reliability](./reliability.md).
+- **Reliability:** Improve reliability and reduce business disruptions by using the getting started guide on [managing reliability reliability](../manage/protect.md#manage-reliability).

@@ -48,10 +48,10 @@ Many teams and individuals are responsible for supporting different functions. B
 |  | Decentralized ops | Centralized ops | Enterprise ops | Distributed ops |
 |--|--|--|--|--|
 | **Business alignment** | [Workload team](../organize/cloud-adoption.md) | [Central cloud strategy](../organize/cloud-strategy.md) | [CCoE](../organize/cloud-center-of-excellence.md) | Variable - [form a broad cloud strategy team?](../get-started/team/cloud-strategy.md) |
-| **[Cloud operations](../organize/cloud-operations.md)** | [Workload team](../organize/cloud-adoption.md) | [Central IT](../organize/central-it.md) | [CCoE](../organize/cloud-center-of-excellence.md) | Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [Business commitments](../manage/considerations/commitment.md) |
+| **[Cloud operations](../organize/cloud-operations.md)** | [Workload team](../organize/cloud-adoption.md) | [Central IT](../organize/central-it.md) | [CCoE](../organize/cloud-center-of-excellence.md) | [Assess cloud management](../manage/index.md) |
 | **[Cloud governance](../organize/cloud-governance.md)** | [Workload team](../organize/cloud-adoption.md) | [Central IT](../organize/central-it.md) | [CCoE](../organize/cloud-center-of-excellence.md) | [Multiple layers of governance](../govern/guides/complex/multiple-layers-of-governance.md) |
 | **[Cloud security](../secure/teams-roles.md)** | [Workload team](../organize/cloud-adoption.md) | [Security operations center (SOC) / DevSecOps function](../secure/teams-roles.md) | [CCoE](../organize/cloud-center-of-excellence.md) + [SOC](../secure/teams-roles.md) | Mixed - see [Define a security strategy](../strategy/define-security-strategy.md) |
-| **[Cloud automation and DevOps](../organize/cloud-automation.md)** | [Workload team](../organize/cloud-adoption.md) | [Central IT](../organize/central-it.md) or N/A | [CCoE](../organize/cloud-center-of-excellence.md) | Based on portfolio analysis - see [Business alignment](../manage/considerations/business-alignment.md) and [Business commitments](../manage/considerations/commitment.md) |
+| **[Cloud automation and DevOps](../organize/cloud-automation.md)** | [Workload team](../organize/cloud-adoption.md) | [Central IT](../organize/central-it.md) or N/A | [CCoE](../organize/cloud-center-of-excellence.md) | [Assess cloud management](../manage/index.md)  |
 
 ### Accelerate operating model implementation in Azure
 
@@ -61,7 +61,7 @@ The following table outlines ways to accelerate your operating model implementat
 
 |  | Decentralized ops | Centralized ops | Enterprise ops | Distributed ops |
 |--|--|--|--|--|
-| **Starting point** | [Azure Well-Architected Framework (WAF)](/azure/architecture/framework/) | Azure landing zones: [start-small options](../ready/landing-zone/implementation-options.md) | Azure landing zones: [CAF enterprise-scale](../ready/enterprise-scale/implementation.md) | [Business alignment](../manage/considerations/business-alignment.md) |
+| **Starting point** | [Azure Well-Architected Framework (WAF)](/azure/architecture/framework/) | Azure landing zones: [start-small options](../ready/landing-zone/implementation-options.md) | Azure landing zones: [CAF enterprise-scale](../ready/enterprise-scale/implementation.md) | [Manage Azure cloud estate](../manage/index.md)  |
 | **Iterations** | A focus on workloads lets the team iterate within WAF. | The start-small option requires more iteration on each methodology but can be done as cloud adoption efforts mature. | As illustrated by the reference implementations, future iterations typically focus on minor configuration additions. | Review the [Azure landing zone implementation options](../ready/landing-zone/implementation-options.md) to start with the option that best meets your operations baseline. Follow the iteration path defined in that option's design principles. |
 
 ## Decentralized operations
@@ -184,7 +184,7 @@ While heavily discouraged, this operations approach might be required for some o
 - **Distinct advantage**: Integrate common operating model elements from each business unit. This approach creates a vehicle to group operating units into a hierarchy that helps them mature operations using consistent repeatable processes.
 - **Distinct disadvantage**: Consistency and standardization across multiple operating models is difficult to maintain for extended periods. This operational approach requires deep awareness of the portfolio and how various segments of the technology portfolio operate.
 - **Risk**: Lack of commitment to a primary operating model could lead to confusion across teams. Use this operating model when there's no way to align to a single operating model.
-- **Guidance**: Start with a thorough review of the portfolio, which uses the approach outlined in the [business alignment](../manage/considerations/business-alignment.md) articles. Try to group the portfolio by the state operating model (decentralized, centralized, or enterprise).
+- **Guidance**: Start with a thorough review of the portfolio. Try to group the portfolio by the state operating model (decentralized, centralized, or enterprise).
 - Develop a management group hierarchy that reflects the operating model groupings. This arrangement includes other organizational patterns for region, business unit, or other criteria that map the workload clusters from least common to most common buckets.
 - Evaluate the alignment of workloads to operating models to find the most relevant operating model cluster to start with. Follow the guidance that's mapped to the operating model for all workloads under the node and management group hierarchy.
 - Use Govern and Manage methodologies to find common corporate policies, including required operational management practices at various points of the hierarchy. Apply common Azure policies to automate the shared corporate policies.

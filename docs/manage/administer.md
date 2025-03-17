@@ -10,20 +10,20 @@ ms.custom: UpdateFrequency2
 
 # Administer your Azure cloud estate
 
-This article explains how to effectively manage your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives. Follow these best practices:
+This article explains how to administer your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives. Follow these best practices:
 
 ## Identify your management scope
 
-Determine your management scope clearly for each deployment model to make informed management decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) operate within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
+Management responsibilities vary by deployment model. Use the following table to identify your management responsibilities for infrastructure (IaaS), platform (PaaS), software (SaaS), and on-premises deployments.
 
-| Administration areas   | On-premises scope | IaaS scope (Azure) | PaaS scope (Azure) | SaaS scope |
-|------------------------|---------------------------|----------------------------|----------------------------|--------------------|
-| Data                   | X                         | X                          | X                          | X                  |
-| Code and runtime       | X                         | X                          | X                          |                    |
-| Cloud resources        | X                         | X                          | X                          |                    |
-| Operating system       | X                         | X                          |                            |                    |
-| Virtualization layer   | X                         |                            |                            |                    |
-| Physical hardware      | X                         |                            |                            |                    |
+| Administration areas   | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
+|------------------------|-------------------|--------------------|--------------------|------------|
+| Data                   | ✔️                | ✔️                 | ✔️                 | ✔️         |
+| Code and runtime       | ✔️                | ✔️                 | ✔️                 |            |
+| Cloud resources        | ✔️                | ✔️                 | ✔️                 |            |
+| Operating system       | ✔️                | ✔️                 |                    |            |
+| Virtualization layer   | ✔️                |                    |                    |            |
+| Physical hardware      | ✔️                |                    |                    |            |
 
 ## Manage change
 
@@ -45,11 +45,11 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 1. ***Standardize the post-deployment process.*** Implement monitoring and validation steps to confirm successful changes. Include a clear rollback strategy to quickly restore service if a change introduces problems.
 
-1. ***Prevent and detect unauthorized change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like ([Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action)), ([Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists)). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
+1. ***Prevent and detect unauthorized change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like [Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action), [Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
 
 ## Manage security
 
-Identity is your security perimeter. Use a standardized platform to verify identities, restrict permissions, and maintain secure resource configurations. Follow these steps:
+Identity is your security perimeter. You must verify identities, restrict permissions, and maintain secure resource configurations. Follow these steps:
 
 1. ***Manage identities.*** Use [Microsoft Entra ID](/entra/fundamentals/whatis) as your unified identity management solution. Clearly define permissions by applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, and identity lifecycle management. Enable [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to grant just-in-time privileged access. This strategy reduces unnecessary elevated access. Manage all three identity types (user, application, device) consistently to ensure proper authentication and authorization.
 
@@ -61,11 +61,11 @@ Identity is your security perimeter. Use a standardized platform to verify ident
 
 1. ***Manage security information.*** Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and even management (SIEM) and security orchestration, automation, and response (SOAR).
 
-1. ***Control workload security.*** For workload security recommendations, see the Well-Architected Framework's [security checklist](/azure/well-architected/security/checklist#checklist) and [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*)
+1. ***Control workload security.*** For workload security recommendations, see the Well-Architected Framework's [security checklist](/azure/well-architected/security/checklist#checklist) and [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*).
 
 ## Manage compliance
 
-Compliance management ensures that Azure operations remain aligned with established governance policies and regulatory standards. This practice reduces risk by safeguarding the environment from potential violations and misconfigurations.
+Compliance management ensures that Azure operations remain aligned with established governance policies and regulatory standards. You must reduce risk by safeguarding the environment from potential violations and misconfigurations. Follow these steps:
 
 1. ***Understand your governance policies.*** Governance policies define the high-level constraints that your teams must follow to remain compliant. Review your organization's policies and map each requirement to your operational processes. If you don't have governance policies, first [document governance policies](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
 
@@ -80,7 +80,7 @@ For more information, see [Enforcing compliance in Azure](/azure/cloud-adoption-
 
 ## Manage data
 
-Managing data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. Effective data control safeguards sensitive information, maintains compliance, and ensures data reliability during operational changes.
+Managing data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. You must safeguard sensitive information, maintains compliance, and ensures data reliability during operational changes. Follow these steps:
 
 1. ***Discover and classify data.*** Identify and categorize data according to sensitivity and importance. This classification guides tailored controls for each data type. Use [Microsoft Purview](/purview/data-governance-overview) for data governance. For more information, see [Data sources that connect to Microsoft Purview Data Map](/purview/microsoft-purview-connector-overview#azure).
 
@@ -88,9 +88,9 @@ Managing data in cloud operations involves actively classifying, segmenting, sec
 
 1. ***Isolate internal (“Corp”) and internet-facing (“Online”) workloads.*** Use management groups to separate internal and external workloads. Internal workloads typically require connectivity or hybrid connectivity to your corporate network. External workloads usually don't require corporate network connectivity and might need direct inbound or outbound internet access. For an example, review the "Corp" (internal) and "Online" (internet-facing) management groups in [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-groups-in-the-azure-landing-zone-accelerator-and-alz-bicep-repository).
 
-1. ***Enforce access control.*** Implement robust access controls, such as Azure RBAC and ABAC, to ensure only authorized personnel access sensitive data based on defined classifications.
+1. ***Enforce access control.*** Implement robust access controls, such as [Azure RBAC](/azure/role-based-access-control/overview) and [Azure ABAC](/azure/role-based-access-control/conditions-overview), to ensure only authorized personnel access sensitive data based on defined classifications.
 
-1. ***Protect data from deletion.*** Use features such as soft delete, data versioning, and immutability where available. Implement database versioning and prepare rollback procedures. Utilize Azure Policy to explicitly deny datastore deletions ([Deny](/azure/governance/policy/concepts/effect-deny) or [DenyAction](/azure/governance/policy/concepts/effect-deny-action)) or audit ([Audit](/azure/governance/policy/concepts/effect-audit) or [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists)) any changes. If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes. Only use [resource locks](/azure/azure-resource-manager/management/lock-resources) strictly to prevent unintended modifications or deletions of critical data. Avoid using resource locks to protect configurations, as resource locks complicate IaC deployments
+1. ***Protect data from deletion.*** Use features such as soft delete, data versioning, and immutability where available. Implement database versioning and prepare rollback procedures. Use Azure Policy to deny datastore deletions with [Deny](/azure/governance/policy/concepts/effect-deny) and [DenyAction](/azure/governance/policy/concepts/effect-deny-action) effects or audit changes with [Audit](/azure/governance/policy/concepts/effect-audit) and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists) any changes. If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes. Only use [resource locks](/azure/azure-resource-manager/management/lock-resources) strictly to prevent unintended modifications or deletions of critical data. Avoid using resource locks to protect configurations, as resource locks complicate IaC deployments.
 
 1. ***Manage workload data.*** See the Well-Architected Framework's recommendations on [Data classification](/azure/well-architected/security/data-classification).
 
@@ -112,11 +112,11 @@ Managing code and runtime are workload responsibilities. Have your workload team
 
 Managing cloud resources involves governance, oversight, and maintenance of all Azure services, deployments, and infrastructure. Establish clear deployment protocols and proactive drift detection strategies to maintain consistency across environments. Follow these recommendations:
 
-### Manage portal-based deployments
+### Manage portal deployments
 
-Define protocols and limits for portal-based deployments to minimize the potential for production problems. Follow these steps:
+Define protocols and limits for portal deployments to minimize the potential for production problems. Follow these steps:
 
-1. ***Define portal deployment policy.*** Ensure significant portal-based changes adhere to established change management processes. Use portal deployments primarily for rapid prototyping, troubleshooting, or minor adjustments in development and testing environments. Avoid unstructured portal changes because these changes lead to drift, misconfigurations, and compliance issues. Instead, rely on version-controlled infrastructure-as-code (IaC) templates for consistency. For more information, see [code-based deployments](#manage-code-based-deployments).
+1. ***Define portal deployment policy.*** Ensure significant portal-based changes adhere to established change management processes. Use portal deployments primarily for rapid prototyping, troubleshooting, or minor adjustments in development and testing environments. Avoid unstructured portal changes because these changes lead to drift, misconfigurations, and compliance issues. Instead, rely on version-controlled infrastructure-as-code (IaC) templates for consistency. For more information, see [manage code deployments](#manage-code-deployments).
 
 1. ***Differentiate environments.*** Limit portal-based changes strictly to nonproduction environments. Allow rapid prototyping exclusively in dedicated development or testing environments and enforce stringent controls in production.
 
@@ -136,9 +136,9 @@ Define protocols and limits for portal-based deployments to minimize the potenti
     | [Terraform](/azure/developer/terraform/) | Multicloud solution, broader community support |
     | [ARM templates](/azure/azure-resource-manager/templates/) | Full control, comfortable with JSON |
 
-### Manage code-based deployments
+### Manage code deployments
 
-Adopt code-based deployments to automate and control complex or large-scale changes. Follow these steps:
+Adopt best practices to automate and control changes to code and infrastructure. Follow these steps:
 
 1. ***Standardize tooling.*** Use a consistent toolset to minimize context switching. Choose developer tools (VS Code, Visual Studio), a code repository (GitHub, [Azure DevOps](/azure/devops/get-started/)), a CI/CD pipeline ([GitHub Actions](https://docs.github.com/actions), [Azure Pipelines](/azure/devops/pipelines/)), and an IaC solution ([Bicep](/azure/azure-resource-manager/bicep/modules), [Terraform](/azure/developer/terraform/), or [ARM](/azure/azure-resource-manager/templates/) templates) that work together.
 
@@ -166,7 +166,7 @@ Adopt code-based deployments to automate and control complex or large-scale chan
 
 Manage configuration drift by identifying and correcting discrepancies between your intended configuration and the live environment. Follow these best practices:
 
-1. ***Prevent and detect change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like ([Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action)), ([Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists)). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
+1. ***Prevent and detect change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like [Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action), [Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
 
 1. ***Detect IaC configuration drift.*** Drift occurs when someone updates the IaC file (intentional, unintentional) or makes a change in the Azure portal. Regularly compare the live environment with your desired configuration to detect drift:
 
@@ -186,7 +186,7 @@ Where you use virtual machines, you need to also manage the operating system. Fo
 
 1. ***Automate virtual machine maintenance.*** In Azure, use [automation tools](/azure/virtual-machines/infrastructure-automation) to create and manage Azure virtual machines. Use [Azure Machine Configuration](/azure/governance/machine-configuration/overview) to audit or configure operating system settings as code for machines running in Azure and hybrid.
 
-1. ***Update operating systems.** You need to [manage guest updates and host maintenance](/azure/virtual-machines/updates-maintenance-overview) to ensure the operating systems are up to date for security purposes.
+1. ***Update operating systems.*** You need to [manage guest updates and host maintenance](/azure/virtual-machines/updates-maintenance-overview) to ensure the operating systems are up to date for security purposes.
 
 1. ***Monitor in-guest operations.*** Use the [Azure Change Tracking and Inventory service](/azure/automation/change-tracking/overview-monitoring-agent) to enhance the auditing and governance for in-guest operations. It monitors changes and provides detailed inventory logs for servers across Azure, on-premises, and other cloud environments.
 
