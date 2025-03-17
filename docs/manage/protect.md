@@ -67,7 +67,7 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 Data reliability involves data replication (replicas) and backups (point in time copies) to maintain availability and consistency. Your approach must align with the workload’s defined RTO and RPO. Follow these steps:
 
-*Table 3. Workload priority with example data reliability configurations.*
+*Table 2. Workload priority with example data reliability configurations.*
 
 | Workload priority | Uptime SLO | Data replication | Data backups | Example scenario |
 |-------------------|------------|------------------|--------------|------------------|
@@ -100,15 +100,15 @@ Code and runtime are workload responsibilities. Follow the Well-Architected Fram
 
 ### Manage cloud resources reliability
 
-Managing the reliability of your cloud resources often requires architecture redundancy (duplicate service instances) and an effective load-balancing strategy. Implement these adjustments based on your workload's reliability requirements. See *Table 2* for examples of architecture redundancy aligned with workload priority.
+Managing the reliability of your cloud resources often requires architecture redundancy (duplicate service instances) and an effective load-balancing strategy. Implement these adjustments based on your workload's reliability requirements. See *Table 3* for examples of architecture redundancy aligned with workload priority.
 
-*Table 2. Workload priority and architecture redundancy examples.*
+*Table 3. Workload priority and architecture redundancy examples.*
 
 | Workload priority | Architecture redundancy         | Load balancing approach | Azure load balancing solution     | Example scenario      |
 |-------------------|---------------------------------|-------------------------|-----------------------------------|-----------------------|
-| High              | Two regions & availability zones | Active-active           | Azure Front Door (HTTP) or Azure Traffic Manager for non-HTTP traffic. | [Mission-critical baseline application platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-app-platform#global-load-balancer)     |
-| Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP) or Azure Traffic Manager for non-HTTP traffic. | [Reliable web app pattern architecture guidance](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#architecture-guidance)  |
-| Low               | Single region & availability zones | Across availability zones | Azure Application Gateway  | Add Azure Load Balancer for virtual machines<br>[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
+| High              | Two regions & availability zones | Active-active           | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Mission-critical baseline application platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-app-platform#global-load-balancer)     |
+| Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Reliable web app pattern architecture guidance](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#architecture-guidance)  |
+| Low               | Single region & availability zones | Across availability zones | Azure Application Gateway<br><br>Add Azure Load Balancer for virtual machines  |[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
 
 1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path).
 
@@ -144,7 +144,7 @@ Managing the reliability of your cloud resources often requires architecture red
 
 	1. ***Use multiple regions.***  Multiple regions are often necessary to meet uptime SLOs. Use global load balancers (Azure Front Door or Traffic Manager) for traffic distribution. Note that multi-region architectures require careful data consistency management.
 
-1. ***Manage architecture redundancy.*** Decide how to use redundancy: You can use architecture redundancy as part of daily operations (active). Or you can use architecture redundancy in disaster recovery scenarios (passive). For examples, see *Table 2.*
+1. ***Manage architecture redundancy.*** Decide how to use redundancy: You can use architecture redundancy as part of daily operations (active). Or you can use architecture redundancy in disaster recovery scenarios (passive). For examples, see *Table 3.*
 
 	1. ***Load balance across availability zones.*** Use all availability actively. Many Azure PaaS services manage load balancing across availability zones automatically. IaaS workloads must use an [internal load balancer](/azure/load-balancer/quickstart-load-balancer-standard-internal-portal) to load balance across availability zones.
 
