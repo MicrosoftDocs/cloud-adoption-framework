@@ -136,13 +136,13 @@ Implement these adjustments based on your workload's reliability requirements. F
 
 	1. ***Use multiple availability zones.*** Configure your workloads to use multiple availability zones. How availability zones improve your uptime can be difficult to estimate. Only a select number of services have uptime SLAs that account for availability zones. Where SLAs account for availability zones, use them in your uptime estimates. See the following table for some examples.
 
-    | Azure service type | Azure services with Availability Zone SLAs |
-    |--------------------|-------------------------------------------|
-    | Compute Platform | App Service,<br>Azure Kubernetes Service,<br>Virtual Machines |
-    | Datastore | Azure Service Bus,<br>Azure Storage Accounts,<br>Azure Cache for Redis,<br>Azure Files Premium Tier |
-    | Database | Azure Cosmos DB,<br>Azure SQL Database,<br>Azure Database for MySQL,<br>Azure Database for PostgreSQL,<br>Azure Managed Instance for Apache Cassandra |
-    | Load Balancer | Application Gateway |
-    | Security | Azure Firewall |
+        | Azure service type | Azure services with Availability Zone SLAs |
+        |--------------------|-------------------------------------------|
+        | Compute Platform | App Service,<br>Azure Kubernetes Service,<br>Virtual Machines |
+        | Datastore | Azure Service Bus,<br>Azure Storage Accounts,<br>Azure Cache for Redis,<br>Azure Files Premium Tier |
+        | Database | Azure Cosmos DB,<br>Azure SQL Database,<br>Azure Database for MySQL,<br>Azure Database for PostgreSQL,<br>Azure Managed Instance for Apache Cassandra |
+        | Load Balancer | Application Gateway |
+        | Security | Azure Firewall |
 
 	1. ***Use multiple regions.***  Multiple regions are often necessary to meet uptime SLOs. Use global load balancers (Azure Front Door or Traffic Manager) for traffic distribution. Note that multi-region architectures require careful data consistency management.
 
