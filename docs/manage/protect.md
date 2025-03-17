@@ -145,7 +145,7 @@ Your approach must implement architecture redundancy to meet the reliability req
 
 	1. ***Load balance across regions.*** Determine whether multi-region workloads should run active-active or active-passive based on reliability needs.
 
-1. ***Manage service configurations.*** Consistently apply configurations across redundant instances of Azure resources, so the resources behave in the same way. Use [infrastructure as code](./administer.md#manage-code-based-deployments) to maintain consistency. For more information, see [Duplicate resource configuration](/azure/reliability/concept-redundancy-replication-backup#duplicate-resource-configuration).
+1. ***Manage service configurations.*** Consistently apply configurations across redundant instances of Azure resources, so the resources behave in the same way. Use [infrastructure as code](./administer.md#manage-code-deployments) to maintain consistency. For more information, see [Duplicate resource configuration](/azure/reliability/concept-redundancy-replication-backup#duplicate-resource-configuration).
 
 1. ***Design workload reliability.*** For workload reliability design, see the Well-Architected Framework:
 
