@@ -145,7 +145,7 @@ Your approach must implement architecture redundancy to meet the reliability req
 
 	1. ***Load balance across regions.*** Determine whether multi-region workloads should run active-active or active-passive based on reliability needs.
 
-1. ***Manage service configurations.*** Consistently apply configurations across redundant instances of Azure resources, so the resources behave in the same way. Use [infrastructure as code](./administer.md#manage-code-based-deployments) to maintain consistency. For more information, see [Duplicate resource configuration](/azure/reliability/concept-redundancy-replication-backup#duplicate-resource-configuration).
+1. ***Manage service configurations.*** Consistently apply configurations across redundant instances of Azure resources, so the resources behave in the same way. Use [infrastructure as code](./administer.md#manage-code-deployments) to maintain consistency. For more information, see [Duplicate resource configuration](/azure/reliability/concept-redundancy-replication-backup#duplicate-resource-configuration).
 
 1. ***Design workload reliability.*** For workload reliability design, see the Well-Architected Framework:
 
@@ -176,7 +176,7 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 1. ***Manage workload failures.*** For workload disaster recovery, see the Well-Architected Framework's [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
-### Azure reliability tools
+## Azure reliability tools
 
 | Use case                        | Solution                                                                                                                   |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -218,7 +218,7 @@ Adopt a process and tools to recover from security incidents, such as ransomware
 
 For more information, see [Manage incident response (CAF Secure)](/azure/cloud-adoption-framework/secure/manage#managing-incident-preparedness-and-response).
 
-### Azure security tools
+## Azure security tools
 
 | Security capability              | Microsoft solution                                                                 |
 |----------------------------------|------------------------------------------------------------------------------------|
