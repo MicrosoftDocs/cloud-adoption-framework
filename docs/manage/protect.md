@@ -26,7 +26,7 @@ Reliability management involves using redundancy, replication, and defined recov
 
 ### Identify reliability responsibilities
 
-Reliability responsibilities vary by deployment model. Clarify your responsibilities to effectively manage reliability across Infrastructure (IaaS), Platform (PaaS), Software (SaaS), and on-premises solutions.
+Reliability responsibilities vary by deployment model. Use the following table to identify your management responsibilities for infrastructure (IaaS), platform (PaaS), software (SaaS), and on-premises deployments.
 
 | Responsibility     | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
 |--------------------|:-----------:|:------------:|:------------:|:----:|
