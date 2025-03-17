@@ -35,7 +35,7 @@ Reliability responsibilities vary by deployment model. Clarify your responsibili
 | Cloud resources    |      ✔️      |      ✔️       |      ✔️       |      |
 | Physical hardware  |      ✔️      |               |                |      |
 
-For more information, see [Shared responsibility for reliability](/azure/reliability/concept-shared-responsibility) .
+For more information, see [Shared responsibility for reliability](/azure/reliability/concept-shared-responsibility).
 
 ### Define reliability requirements
 
