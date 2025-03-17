@@ -134,7 +134,7 @@ Implement these adjustments based on your workload's reliability requirements. F
 
 1. ***Add architecture redundancy.***  If your current uptime estimate falls short of your SLO, increase redundancy:
 
-	1. ***Use multiple availability zones.*** Configure your workloads to use multiple availability zones. How availability zones improve your uptime can be difficult to estimate. Only a select number of services have uptime SLAs that account for availability zones. See the following table for some examples. Where SLAs account for availability zones, use them in your uptime estimates.
+	1. ***Use multiple availability zones.*** Configure your workloads to use multiple availability zones. How availability zones improve your uptime can be difficult to estimate. Only a select number of services have uptime SLAs that account for availability zones. Where SLAs account for availability zones, use them in your uptime estimates. See the following table for some examples.
 
     | Azure service type | Azure services with Availability Zone SLAs |
     |--------------------|-------------------------------------------|
