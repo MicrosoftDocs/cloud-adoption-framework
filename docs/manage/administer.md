@@ -116,7 +116,7 @@ Managing cloud resources involves governance, oversight, and maintenance of all 
 
 Define protocols and limits for portal deployments to minimize the potential for production problems. Follow these steps:
 
-1. ***Define portal deployment policy.*** Ensure significant portal-based changes adhere to established change management processes. Use portal deployments primarily for rapid prototyping, troubleshooting, or minor adjustments in development and testing environments. Avoid unstructured portal changes because these changes lead to drift, misconfigurations, and compliance issues. Instead, rely on version-controlled infrastructure-as-code (IaC) templates for consistency. For more information, see [code deployments](#manage-code-deployments).
+1. ***Define portal deployment policy.*** Ensure significant portal-based changes adhere to established change management processes. Use portal deployments primarily for rapid prototyping, troubleshooting, or minor adjustments in development and testing environments. Avoid unstructured portal changes because these changes lead to drift, misconfigurations, and compliance issues. Instead, rely on version-controlled infrastructure-as-code (IaC) templates for consistency. For more information, see [manage code deployments](#manage-code-deployments).
 
 1. ***Differentiate environments.*** Limit portal-based changes strictly to nonproduction environments. Allow rapid prototyping exclusively in dedicated development or testing environments and enforce stringent controls in production.
 
