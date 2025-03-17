@@ -100,7 +100,7 @@ Code and runtime are workload responsibilities. Follow the Well-Architected Fram
 
 ### Manage cloud resources reliability
 
-Managing the reliability of your cloud resources often requires architecture redundancy (duplicate service instances) and an effective load-balancing strategy. Implement these adjustments based on your workload's reliability requirements. See *Table 3* for examples of architecture redundancy aligned with workload priority.
+Managing the reliability of your cloud resources often requires architecture redundancy (duplicate service instances) and an effective load-balancing strategy. Implement these adjustments based on your workload's reliability requirements. See *Table 3* for examples of architecture redundancy aligned with workload priority. Follow these steps:
 
 *Table 3. Workload priority and architecture redundancy examples.*
 
@@ -110,23 +110,24 @@ Managing the reliability of your cloud resources often requires architecture red
 | Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Reliable web app pattern architecture guidance](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#architecture-guidance)  |
 | Low               | Single region & availability zones | Across availability zones | Azure Application Gateway<br><br>Add Azure Load Balancer for virtual machines  |[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
 
-1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path).
+1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path). Follow these steps:
 
     1. Gather the [Microsoft uptime SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services) for every service on the critical path of your workload.
 
     1. If you have no independent critical paths, calculate single-region composite SLA by multiplying the uptime percentages of each relevant service. If you have independent critical paths, move to step 3 before calculating.
 
-    1. When two Azure services provide independent critical paths, apply the independent critical paths formula.
+    1. When two Azure services provide independent critical paths, apply the independent critical paths formula to those services.
 
     1. For multi-region applications, input the single-region composite SLA (N) into the multi-region uptime formula.
 
     1. Compare your calculated uptime with your uptime SLO. Adjust service tiers or architecture redundancy if necessary.
 
-    | Use case | Formula | Explanation | Example |
+    | Use case | Formula | Variables | Example | Explanation |
     |-----|------|--------|--------|
-    | Single-region uptime estimate   | N = U1 × U2 × U3 × … × U*n*  | **N**: Composite SLA of Azure services on a single-region critical path.<br>**U**: SLA uptime percentage of each Azure service.<br>**n**: Total number of Azure services.     | N = 99.99% (web app) × 99.95% (database) × 99.99% (cache)   |
-    | Independent critical paths estimate | 1 - [(1 - Ui1) × (1 - Ui2)] | **Ui**: SLA uptime percentage for Azure services providing independent critical paths.  | N = 99.99% (web app) × (1 - [(1 - 99.95% [database]) × (1 - 99.99% [cache])])  |
-    | Multi-region uptime estimate    | M = 1 - (1 - N)^Regions   | **M**: Multi-region uptime estimate.<br>**N**: Single-region composite SLA.<br>**Regions**: Number of regions deployed. | If N = 99.95% and Regions = 2, M = 1 - (1 - 99.95%)² = 99.999975%  |
+    | Single-region uptime estimate   | N = U1 × U2 × U3 × … × U*n*  | **N**: Composite SLA of Azure services on a single-region critical path.<br>**U**: SLA uptime percentage of each Azure service.<br>**n**: Total number of Azure services.     | N = 99.99% (app) × 99.95% (database) × 99.99% (cache) | Simple workload with app (99.99%), database (99.95%), and cache (99.99%) in a single critical path.
+    | Independent critical paths estimate | 1 - [(1 - U2) × (1 - U3)] | **U**: SLA uptime percentage for Azure services providing independent critical paths.  | N = 99.99% (app) ×
+***(1 - [(1 - 99.95% database) × (1 - 99.99% cache)])***  | Workload with two independent critical paths; either database or cache can fail without total downtime.|
+    | Multi-region uptime estimate    | M = 1 - (1 - N)^R   | **M**: Multi-region uptime estimate.<br>**N**: Single-region composite SLA.<br>**R**: Number of regions used. | If N = 99.95% and R = 2, then M = 1 - (1 - 99.95%)² | Workload deployed in two regions. |
 
 1. ***Adjust service tiers.*** Before modifying architectures, evaluate whether different Azure service tiers (SKUs) can meet your reliability requirements. Some Azure service tiers can have different uptime SLAs, such as Azure Managed Disks.
 
@@ -154,10 +155,10 @@ Managing the reliability of your cloud resources often requires architecture red
 
 1. ***Design workload reliability.*** For workload reliability design, see the Well-Architected Framework:
 
-| Workload reliability | Guidance |
-| ---| --- |
-| Reliability pillar | - [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>- [Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>- [Using availability zones and regions](/azure/well-architected/reliability/regions-availability-zones)|
-|Service guide| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)|
+    | Workload reliability | Guidance |
+    | ---| --- |
+    | Reliability pillar | - [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>- [Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>- [Using availability zones and regions](/azure/well-architected/reliability/regions-availability-zones)|
+    |Service guide| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)|
 
 For more information, see [Redundancy](/azure/reliability/concept-redundancy-replication-backup#redundancy).
 
