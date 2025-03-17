@@ -79,7 +79,7 @@ Data reliability involves data replication (replicas) and backups (point in time
 
     | Data distribution                  | Data replication                  | Load balancing configuration                        |
     |------------------------------------------|-----------------------|--------------------------------------|
-    | Across availability zones       | Synchronous (near real-time) | PaaS services handle this natively   |
+    | Across availability zones       | Synchronous (near real-time) | Most PaaS services handle cross-zone load balancing natively   |
     | Across regions (active-active) | Synchronous           | Active-active load balancing         |
     | Across regions (active-passive) | Asynchronous (periodic) | Active-passive configuration         |
 
@@ -144,7 +144,7 @@ Implement these adjustments based on your workload's reliability requirements. F
         | Load Balancer | Application Gateway |
         | Security | Azure Firewall |
 
-	1. ***Use multiple regions.***  Multiple regions are often necessary to meet uptime SLOs. Use global load balancers (Azure Front Door or Traffic Manager) for traffic distribution. Note that multi-region architectures require careful data consistency management.
+	1. ***Use multiple regions.***  Multiple regions are often necessary to meet uptime SLOs. Use global load balancers (Azure Front Door or Traffic Manager) for traffic distribution. Multi-region architectures require careful data consistency management.
 
 1. ***Manage architecture redundancy.*** Decide how to use redundancy: You can use architecture redundancy as part of daily operations (active). Or you can use architecture redundancy in disaster recovery scenarios (passive). For examples, see *Table 3.*
 
@@ -173,13 +173,13 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 1. ***Detect failures.*** Adopt a proactive approach to identifying outages quickly, even if this method increases false positives. Prioritize customer experience by minimizing downtime and maintaining user trust.
 
-	- ***Monitor failures.*** Monitor workloads to detect outages within one minute. Use [Azure Service Health](/azure/service-health/overview) and [Azure Resources Health](/azure/service-health/resource-health-overview) and use [Azure Monitor alerts](./monitor.md#configure-alerting) to notify relevant teams. Integrate these alerts with Azure DevOps or IT Service Management (ITSM) tools.
+	1. ***Monitor failures.*** Monitor workloads to detect outages within one minute. Use [Azure Service Health](/azure/service-health/overview) and [Azure Resources Health](/azure/service-health/resource-health-overview) and use [Azure Monitor alerts](./monitor.md#configure-alerting) to notify relevant teams. Integrate these alerts with Azure DevOps or IT Service Management (ITSM) tools.
 
-	- ***Collect service level indicators (SLIs).*** rack performance by defining and gathering metrics that serve as SLIs. Ensure your teams use these metrics to measure workload performance against your service level objectives (SLOs).
+	1. ***Collect service level indicators (SLIs).*** Track performance by defining and gathering metrics that serve as SLIs. Ensure your teams use these metrics to measure workload performance against your service level objectives (SLOs).
 
 1. ***Respond to failures.*** Align your recovery response to the [workload priority](#prioritize-workloads). Implement failover procedures to reroute requests to redundant infrastructure and data replicas immediately. Once systems stabilize, resolve the root cause, synchronize data, and execute failback procedures. For more information, see [Failover and failback.](/azure/reliability/concept-failover-failback)
 
-1. ***Analyze failures.***  Identify the root causes of the issues and then address the problem. Document any lessons learned and implement necessary changes.
+1. ***Analyze failures.***  Identify the root causes of the issues and then address the problem. Document any lessons and make the necessary changes.
 
 1. ***Manage workload failures.*** For workload disaster recovery, see the Well-Architected Framework:
 
@@ -210,7 +210,7 @@ Manage your security controls to detect threats to your cloud estate. Follow the
 
 1. ***Baseline your environment.*** Document the normal state of your cloud estate. [Monitor security](/azure/cloud-adoption-framework/manage/monitor#monitor-security) and document network traffic patterns and user behaviors. Use [Azure security baselines](/security/benchmark/azure/security-baselines-overview) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) to develop baseline configurations for services. This baseline makes it easier to detect anomalies and potential security weaknesses.
 
-1. ***Apply security controls.*** Implement security measures, such as access controls, encryption, and multi-factor authentication, strengthens the environment and reduces the probability of compromise. For more information, see [Manage security](./administer.md#manage-security).
+1. ***Apply security controls.*** Implement security measures, such as access controls, encryption, and multifactor authentication, strengthens the environment and reduces the probability of compromise. For more information, see [Manage security](./administer.md#manage-security).
 
 1. ***Assign security responsibilities.*** Designate responsibility for security monitoring across your cloud environment. Regular monitoring and comparisons to the baseline enable quick identification of incidents, such as unauthorized access or unusual data transfers. Regular updates and audits keep your security baseline effective against evolving threats.
 
