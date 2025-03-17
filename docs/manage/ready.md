@@ -1,5 +1,5 @@
 ---
-title: Ready your Azure cloud operations
+title: Ready Azure cloud estate management
 description: Learn how to ready your Azure cloud operations and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
 ms.author: ssumner
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
 
-# Ready your Azure cloud operations
+# Ready Azure cloud estate management
 
 This article outlines the process to prepare for managing your Azure cloud estate. Organizations achieve successful cloud operations by having the right people, well-defined team structures, and efficient processes. Clear roles and responsibilities create ownership for governance, security, and other critical areas.
 
-## Understand cloud operations
+## Understand cloud management responsibilities
 
 Managing your Azure involves centralized tasks and workload tasks. Centralized tasks support you entire Azure cloud estate. Workload tasks address a single workload. Use *Table 1* to ensure your operations account for essential cloud operations tasks
 
@@ -23,7 +23,7 @@ Managing your Azure involves centralized tasks and workload tasks. Centralized t
 | Compliance                               | - Define [operational procedures](#document-operational-procedures) like change management and incident response<br>- Create [governance policies](/azure/cloud-adoption-framework/govern/)<br>- Apply [Azure Policy definitions](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically) to management groups and subscriptions. | - Follow operational procedures<br>- Align workload with governance policies. |
 | Security                                 | - Manage identities in Microsoft Entra ID<br>- Manage access to workload subscriptions | - Secure [workload](/azure/well-architected/security/checklist#checklist) |
 | Resource management                      | - Define [resource hierarchy](/azure/azure-resource-manager/management/overview#understand-scope)<br>- Create subscriptions for workloads<br>- Define naming convention<br>- Manage hub virtual network<br>- Manage on-premises connectivity<br>- Configure virtual network peering | - Manage subscriptions [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) and [access](/azure/role-based-access-control/overview)<br>- Manage resources groups and Azure resources<br>- Consume shared services |
-| Deployment                               | - [Build CI/CD pipeline](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops) framework and tools.<br>- Define [Bicep, ARM & Terraform IaC templates](/azure/templates/) | - Use CI/CD pipelines and IaC for [workload deployments](/azure/well-architected/operational-excellence/workload-supply-chain) |
+| Deployment                               | - [Build CI/CD pipeline](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture) framework and tools.<br>- Define [Bicep, ARM & Terraform IaC templates](/azure/templates/) | - Use CI/CD pipelines and IaC for [workload deployments](/azure/well-architected/operational-excellence/workload-supply-chain) |
 | Development                              | - Standardize developer tools | - Formalize [software development](/azure/well-architected/operational-excellence/formalize-development-practices) |
 | Monitoring                               | - Monitor and alert on centralized responsibilities<br>- Define baseline monitoring data for workloads.<br>- Define monitoring data storage solution. | - Monitor [workload](/azure/well-architected/operational-excellence/observability) |
 | Cost                                     | - Define workload budgets<br>- Monitor [cloud spend](/azure/cloud-adoption-framework/manage/monitor#monitor-costs)<br>- Allocate costs | - Manage workload [cost optimization](/azure/well-architected/cost-optimization/) |
@@ -59,7 +59,7 @@ You need to define operational procedures for change, disaster recovery, and dai
 
 1. ***Define change management procedures.*** Change is the major cause of failure in the cloud. Develop a change management process. See [Manage change](./administer.md#manage-change).
 1. ***Define deployment procedures (release management).*** Standardize deployments, releases, and promotion between environments to maintain configurations. See [Manage deployments](./administer.md#manage-cloud-resources).
-1. ***Define disaster recovery and business continuity procedures.*** Develop a standardized plan to manage failure. See [Manage disaster recovery](#_Manage_disaster_recovery).
+1. ***Define disaster recovery and business continuity procedures.*** Develop a standardized plan to manage failure. See [Manage disaster recovery and business continuity](./protect.md#manage-business-continuity).
 1. ***Define additional procedures.*** As needed, define processes for service requests, patches, and configuration management. Maintain these processes in documentation so that every stakeholder understands how to initiate or execute each activity.
 
 ### Document operational guides
@@ -107,12 +107,12 @@ Improving operations is about finding ways to optimize your Azure cloud estate. 
 
 1. ***Train for operations.*** Bookmark key operational resources. Encourage continuous learning to keep your cloud operations dynamic and up to date. Provide sandbox environments for hands-on learning.
 
-    | Action                  | Description                                                                                                           |
-    |-------------------------|-----------------------------------------------------------------------------------------------------------------------|
-    | Get credentials         | Set goals for [Microsoft credentials](/azure/credentials/), like applied skills and Microsoft Certifications to build expertise. |
-    | Use operational resources | See [Azure operational resources](#azure-operational-resources).                                                    |
-    | Use product documentation | Use [Microsoft Learn](/azure/) to find guidance on [Azure services](/azure/?product=popular).                        |
-    | Get hands-on practice   | Encourage hands-on practice in non-production sandbox environments.                                                   |
+    | Action   | Description  |
+    |---|---|
+    | Get credentials | Set goals for [Microsoft credentials](/credentials/), like applied skills and Microsoft Certifications to build expertise. |
+    | Use operational resources | See [Azure operational resources](#azure-operational-resources). |
+    | Use product documentation | Use [Microsoft Learn](/azure/) to find guidance on [Azure services](/azure/?product=popular). |
+    | Get hands-on practice | Encourage hands-on practice in non-production sandbox environments. |
 
 1. ***Review operations to improve.*** Conduct regular reviews of operational health, governance, security, cost, compliance, data. For example, hold weekly ops review meetings to go over key metrics, recent incidents, changes deployed, and upcoming risks. This discipline of reviewing processes on a set cadence allows teams to continuously improve and ensure procedures remain effective​.
 
@@ -124,7 +124,7 @@ Improving operations is about finding ways to optimize your Azure cloud estate. 
 | Deployment and development | [Azure Architecture Center](/azure/architecture/)                                  | Solutions for different use cases                        |
 | All workload tasks     | [Well-Architected Framework](/azure/well-architected/)                                | Foundational guidance for workload tasks                 |
 | Deployment             | [Bicep, ARM & Terraform templates](/azure/templates/)                                 | IaC templates for every Azure resource                   |
-| Security               | [Microsoft Entra RBAC](/azure/entra/identity/role-based-access-control/custom-overview)| Best practices to control access to identity resources   |
+| Security               | [Microsoft Entra RBAC](/entra/identity/role-based-access-control/custom-overview)| Best practices to control access to identity resources   |
 | Security               | [Azure RBAC](/azure/role-based-access-control/overview)                               | Role based access control for Azure resources            |
 | Resource management    | [Abbreviations for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) | Azure resource abbreviations for many Azure resources    |
 | Resource management    | [Azure naming rules](/azure/azure-resource-manager/management/resource-name-rules#microsoftnetwork) | Naming rules for all Azure resources                     |
