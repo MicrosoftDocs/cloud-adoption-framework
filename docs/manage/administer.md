@@ -10,7 +10,7 @@ ms.custom: UpdateFrequency2
 
 # Administer your Azure cloud estate
 
-This article explains how to effectively manage your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives. Follow these best practices:
+This article explains how to administer your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives. Follow these best practices:
 
 ## Identify your management scope
 
