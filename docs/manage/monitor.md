@@ -17,7 +17,7 @@ Monitoring your Azure cloud estate involves continuously observing and analyzing
 
 ## Identify your monitoring scope
 
-Monitoring responsibilities vary by deployment model. Identify your responsibilities to manage reliability across infrastructure (IaaS), platform (PaaS), software (SaaS), and on-premises deployments. Use this table to identify your responsibilities in each deployment model.
+Monitoring responsibilities vary by deployment model. Use the following table to identify your monitoring responsibilities for infrastructure (IaaS), platform (PaaS), software (SaaS), and on-premises deployments.
 
 | Monitoring areas    | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
 |---------------------|------------------------|-------------------------|-------------------------|-----------------|
