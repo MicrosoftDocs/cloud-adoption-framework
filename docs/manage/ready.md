@@ -3,7 +3,7 @@ title: Ready Azure cloud estate management
 description: Learn how to ready your Azure cloud operations and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/19/2025
+ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
@@ -12,15 +12,17 @@ ms.custom: UpdateFrequency2
 
 This article outlines the process to prepare for managing your Azure cloud estate. Organizations achieve successful cloud operations by having the right people, well-defined team structures, and efficient processes. Clear roles and responsibilities create ownership for governance, security, and other critical areas.
 
-## Understand cloud management responsibilities
+:::image type="content" source="./media/caf-manage-ready.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-ready.svg" border="false":::
 
-Managing your Azure involves centralized tasks and workload tasks. Centralized tasks support you entire Azure cloud estate. Workload tasks address a single workload. Use *Table 1* to ensure your operations account for essential cloud operations tasks
+## Identify your management responsibilities
 
-*Table 1. Primary cloud operations responsibilities and tasks*
+Managing your Azure involves centralized tasks and workload tasks. Centralized responsibilities support your entire Azure cloud estate. Workload tasks address a single workload. Use *Table 1* to ensure your operations account for essential cloud operations tasks
 
-| Cloud operations areas of responsibility | Central tasks | Workload tasks |
-|----------------------------------------------|-----------------------|--------------------|
-| Compliance                               | - Define [operational procedures](#document-operational-procedures) like change management and incident response<br>- Create [governance policies](/azure/cloud-adoption-framework/govern/)<br>- Apply [Azure Policy definitions](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically) to management groups and subscriptions. | - Follow operational procedures<br>- Align workload with governance policies. |
+*Table 1. Primary cloud management responsibilities and tasks*
+
+| Cloud management areas | Centralized responsibilities | Workload responsibilities |
+|------|----|-----|
+| Compliance                               | - Define [operational procedures](#document-operational-procedures)<br>- Enforce [governance policies](/azure/cloud-adoption-framework/govern/)<br>- Apply [Azure Policy definitions](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically) to management groups and subscriptions. | - Follow operational procedures<br>- Align workload with governance policies. |
 | Security                                 | - Manage identities in Microsoft Entra ID<br>- Manage access to workload subscriptions | - Secure [workload](/azure/well-architected/security/checklist#checklist) |
 | Resource management                      | - Define [resource hierarchy](/azure/azure-resource-manager/management/overview#understand-scope)<br>- Create subscriptions for workloads<br>- Define naming convention<br>- Manage hub virtual network<br>- Manage on-premises connectivity<br>- Configure virtual network peering | - Manage subscriptions [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) and [access](/azure/role-based-access-control/overview)<br>- Manage resources groups and Azure resources<br>- Consume shared services |
 | Deployment                               | - [Build CI/CD pipeline](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture) framework and tools.<br>- Define [Bicep, ARM & Terraform IaC templates](/azure/templates/) | - Use CI/CD pipelines and IaC for [workload deployments](/azure/well-architected/operational-excellence/workload-supply-chain) |

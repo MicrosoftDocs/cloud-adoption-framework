@@ -1,22 +1,20 @@
 ---
 title: Cloud management overview
-description: Learn how to use the Cloud Adoption Framework for Azure to build effective business and technical strategies for cloud management.
+description: Learn Microsoft's four-step iterative process for managing your Azure cloud estate and establishing cloud operations.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/14/2025
+ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: internal
 ---
 
 # Cloud management overview
 
-The Cloud Adoption Framework's (CAF) Manage methodology offers a structured approach to cloud operations in Azure. Cloud operations include maintaining, managing, and optimizing your cloud environment.
+Effective cloud management ensures the cloud meets business objectives and minimizes the effects of incidents. The Manage methodology is Microsoft's four-step, iterative process to manage your Azure cloud estate: Ready, Administer, Monitor, Protect (RAMP).
+
+:::image type="content" source="./media/caf-manage-process.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-process.svg" border="false":::
 
 Organizations of any size or industry can apply this methodology. The CAF Manage methodology helps you address critical aspects of cloud operations, ensuring the health and performance of your entire cloud environment.
-
-## Why is cloud management important?
-
-Effective cloud management maintains business continuity while controlling costs in your Azure environment. Proper management reduces downtime, strengthens security, simplifies change management, and speeds incident response.
 
 ## Cloud management checklist
 
@@ -31,4 +29,4 @@ Use the cloud management checklist to see all the tasks for each cloud managemen
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Administer your Azure cloud estate](./administer.md)
+> [Ready your Azure cloud operations](./administer.md)

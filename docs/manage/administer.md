@@ -3,7 +3,7 @@ title: Administer your Azure cloud estate
 description: Learn how to administer your Azure cloud estate and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/14/2025
+ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
@@ -11,6 +11,8 @@ ms.custom: UpdateFrequency2
 # Administer your Azure cloud estate
 
 This article explains how to administer your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives. Follow these best practices:
+
+:::image type="content" source="./media/caf-manage-administer.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-administer.svg" border="false":::
 
 ## Identify your management scope
 

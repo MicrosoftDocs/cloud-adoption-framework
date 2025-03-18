@@ -3,7 +3,7 @@ title: Monitor your Azure cloud estate
 description: Learn how to monitor your Azure cloud estate, workloads, other cloud environments, on-premises, and edge environment.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/05/2025
+ms.date: 04/01/2025
 ms.topic: conceptual
 products: azure-monitor
 ms.custom: UpdateFrequency2
@@ -12,6 +12,8 @@ ms.custom: UpdateFrequency2
 # Monitor your Azure cloud estate
 
 This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments.
+
+:::image type="content" source="./media/caf-manage-monitor.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-monitor.svg" border="false":::
 
 Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
 
