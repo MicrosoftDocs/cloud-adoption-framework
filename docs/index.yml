@@ -144,6 +144,8 @@ productDirectory:
     - title: Manage
       imageSrc: ./_images/icons/manage.png
       links:
+        - url: ./manage/ready.md
+          text: Ready your Azure cloud operations
         - url: ./manage/administer.md
           text: Administer your Azure cloud estate
         - url: ./manage/monitor.md
