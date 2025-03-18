@@ -192,7 +192,7 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 Use an iterative security process to identify and mitigate threats in your cloud environment. Follow these steps:
 
-### Manage security controls
+### Manage security operations
 
 Manage your security controls to detect threats to your cloud estate. Follow these steps:
 

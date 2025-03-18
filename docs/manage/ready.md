@@ -16,20 +16,20 @@ This article outlines the process to prepare for managing your Azure cloud estat
 
 ## Identify your management responsibilities
 
-Managing your Azure involves centralized tasks and workload tasks. Centralized responsibilities support your entire Azure cloud estate. Workload tasks address a single workload. Use *Table 1* to ensure your operations account for essential cloud operations tasks
+Managing your Azure involves centralized tasks and workload tasks. Central (or *platform*) responsibilities support your entire cloud estate. Workload tasks address a single workload. Use *Table 1* to ensure your operations account for essential cloud operations tasks.
 
 *Table 1. Primary cloud management responsibilities*
 
-| Cloud management areas | Centralized responsibilities | Workload responsibilities |
+| Cloud management areas | Central responsibilities | Workload responsibilities |
 |------|----|-----|
-| Compliance                               | - Define [operational procedures](#document-operational-procedures)<br>- Enforce [governance policies](/azure/cloud-adoption-framework/govern/)<br>- Apply [Azure Policy definitions](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically) to management groups and subscriptions. | - Follow operational procedures<br>- Align workload with governance policies. |
-| Security                                 | - Manage identities in Microsoft Entra ID<br>- Manage access to workload subscriptions | - Secure [workload](/azure/well-architected/security/checklist#checklist) |
-| Resource management                      | - Define [resource hierarchy](/azure/azure-resource-manager/management/overview#understand-scope)<br>- Create subscriptions for workloads<br>- Define naming convention<br>- Manage hub virtual network<br>- Manage on-premises connectivity<br>- Configure virtual network peering | - Manage subscriptions [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) and [access](/azure/role-based-access-control/overview)<br>- Manage resources groups and Azure resources<br>- Consume shared services |
-| Deployment                               | - [Define CI/CD pipeline](/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture) framework and tools.<br>- Define [Bicep, ARM & Terraform IaC templates](/azure/templates/) | - Use CI/CD pipelines and IaC for [workload deployments](/azure/well-architected/operational-excellence/workload-supply-chain) |
-| Development                              | - Standardize developer tools | - Formalize [software development](/azure/well-architected/operational-excellence/formalize-development-practices) |
-| Monitoring                               | - Monitor and alert on centralized responsibilities<br>- Define baseline monitoring data for workloads.<br>- Define monitoring data storage solution. | - Monitor [workload](/azure/well-architected/operational-excellence/observability) |
-| Cost                                     | - Define workload budgets<br>- Monitor [cloud spend](/azure/cloud-adoption-framework/manage/monitor#monitor-costs)<br>- Allocate costs | - Manage workload [cost optimization](/azure/well-architected/cost-optimization/) |
-| Reliability                              | - Prioritize workloads<br>- Create reliability requirements (uptime, RTO, RPO)<br>- Define recovery procedures | - Design [workload to meet reliability requirements](/azure/well-architected/reliability/checklist#checklist) |
+| Compliance                               | ▪ Define [operational procedures](#document-operational-procedures).<br>- Enforce [governance policies](/azure/cloud-adoption-framework/govern/).<br>-Monitor for noncompliance and remediate or escalate as required. | - Follow operational procedures.<br>- Align design with governance policies. |
+| Security                                 | - Manage organization-wide [security operations](./protect.md#manage-security-operations)<br>- Manage identities in [Microsoft Entra ID](/entra/identity/)<br>- Grant [access](/azure/role-based-access-control/overview) to Azure subscriptions<br>- Define and maintain security baselines via Azure Policy and Microsoft Defender for Cloud<br>- Oversee threat protection and incident response integration with Microsoft Sentinel | - Implement [secure workload design](/azure/well-architected/security/checklist#checklist)<br>- Respond to workload-specific security alerts and incidents<br>- Continuously assess vulnerabilities within the workload. |
+| Resource management                      | - Define and maintain [resource hierarchy](/azure/azure-resource-manager/management/overview#understand-scope).<br>- Create workload subscriptions as requested.<br>- Define [naming strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).<br>- Define [network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology).<br>- Configure shared networking (VNET peering, on-premises connectivity).<br>- Manage cross-workload or shared resources/services.<br>- Monitor subscription [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) and handle requests for quota increases.| - Manage workload-specific subscriptions (if delegated).<br>- Manage resource groups and resources for each workload.<br>- Adhere to and apply naming and tagging standards.<br>- Manage application-level resource utilization, ensuring resources remain within subscription quotas. |
+| Deployment                               | - Standardize and govern [CI/CD pipelines and tools](./administer.md#manage-code-deployments) (Azure DevOps, GitHub Actions).<br>- Define reference infrastructure-as-code templates ([Bicep, Terraform, ARM templates](/azure/templates/))<br>- Provide central best practices for pipeline security (code scanning, secrets management). | - central CI/CD framework and IaC templates for [workload deployments](/azure/well-architected/operational-excellence/workload-supply-chain).<br> - Implement workload-specific deployment tasks (configure app settings, database).<br>- Adapt reference templates to workload needs while respecting central guidelines. |
+| Development                              | - Provide and enforce standardized development toolchains and frameworks to accelerate consistency (coding standards, DevOps best practices).<br>- Maintain internal repositories or package feeds for shared libraries or modules. | - Adopt and adapt standard toolchains for [workload development](/azure/well-architected/operational-excellence/formalize-development-practices).<br>- Own the application lifecycle and incorporate best practices (unit testing, integration testing).<br>- Manage continuous improvement for the workload’s code base. |
+| Monitoring                               | - Plan [monitoring strategy](./monitor.md#plan-your-monitoring-strategy).<br>- [Alert](./monitor.md#configure-alerting) on centralized responsibilities<br>- Define baseline monitoring data for workloads. | - Monitor [workload](/azure/well-architected/operational-excellence/observability)<br>- Extend or fine-tune central alerts to capture workload-specific conditions.<br>- Investigate and remediate workload-level incidents based on alerts and logs. |
+| Cost                                     | - Allocate cloud budgets<br>- Monitor [cloud spend](/azure/cloud-adoption-framework/manage/monitor#monitor-costs)<br>- Allocate costs | - Maintain workload budgets<br>- [Cost optimize](/azure/well-architected/cost-optimization/) design |
+| Reliability                              | - Define reliability requirements <br>- Define recovery procedures<br>-Support incidents | - Meet [reliability requirements](/azure/well-architected/reliability/checklist#checklist) |
 | Performance                              | - Monitor performance of shared services<br>- Monitor hub network performance | - Optimize [workload performance](/azure/well-architected/performance-efficiency/checklist#checklist) |
 
 ## Establish your cloud operations
@@ -44,12 +44,14 @@ With an understanding of essential tasks required in cloud operation. You now ne
 | Shared management   | A team handles central tasks. Workload teams manage workload tasks. | Clouds with diverse workloads. | The approach balances governance with workload agility. | The approach requires clear role definitions and ongoing coordination. |
 
 1. ***Establish cloud estate operations.*** You need a cloud operations team that can cover all the essential cloud estate tasks. Use *Table 1* to define those operations within the context of your organization. Use *Table 1* to develop a skills matrix to acquire the right personnel.
+
 1. ***Establish workload operations.*** You need a cloud operations team that can cover all the essential workload tasks. Use *Table 1* to get a high-level view of those tasks and develop a skills matrix to acquire the right personnel.
 
     - ***Conduct an Azure Well-Architected Review.*** Use the [Well-Architected Assessment tool](/azure/well-architected/what-is-well-architected-framework#assessment) to regularly reassess each workload. Focus on the Operational Excellence pillar.
-    - ***Use the Azure Well-Architected Framework.*** Use the recommendations in the [Operational excellence ](/azure/well-architected/operational-excellence/) pillar implement your workload responsibilities.
+    
+    - ***Use the Azure Well-Architected Framework.*** Use the [Operational excellence](/azure/well-architected/operational-excellence/) pillar to guide your workload management responsibilities.
 
-1. ***Assign responsibility.***** Assign named owners for every cloud operational responsibility. In a shared management model, each workload team is responsible for all workload tasks.
+1. ***Assign responsibility.*** Assign named owners for every cloud operational responsibility. In a shared management model, each workload team is responsible for all workload tasks.
 
 ## Document your cloud operations
 
@@ -60,8 +62,11 @@ Document your cloud operations. This documentation helps everyone respond in cri
 You need to define operational procedures for change, disaster recovery, and daily maintenance tasks that you can’t automate. Follow these steps:
 
 1. ***Define change management procedures.*** Change is the major cause of failure in the cloud. Develop a change management process. See [Manage change](./administer.md#manage-change).
+
 1. ***Define deployment procedures (release management).*** Standardize deployments, releases, and promotion between environments to maintain configurations. See [Manage deployments](./administer.md#manage-cloud-resources).
+
 1. ***Define disaster recovery and business continuity procedures.*** Develop a standardized plan to manage failure. See [Manage disaster recovery and business continuity](./protect.md#manage-business-continuity).
+
 1. ***Define additional procedures.*** As needed, define processes for service requests, patches, and configuration management. Maintain these processes in documentation so that every stakeholder understands how to initiate or execute each activity.
 
 ### Document operational guides
@@ -69,8 +74,11 @@ You need to define operational procedures for change, disaster recovery, and dai
 Prepare step-by-step guides (runbooks or playbooks) for all key operational activities. This preparation ensures consistent execution, even when different people perform the work. It also reduces resolution time under pressure by providing pre-approved steps.
 
 1. ***Define daily tasks.*** Create a manual that explains daily tasks, such as requesting elevated privileges, and reviewing logs. Define standard operating procedures for monitoring, which metrics to watch, alert thresholds, dashboard layouts for each system.
+
 1. ***Create a library of Azure-centric runbooks.*** Include runbooks that address scenarios such as high CPU usage web app, failover and failback using your global load balancer, backup restore, and isolating resources and collecting Azure Activity Logs.
+
 1. ***Store these runbooks in a central repository.*** Use means on-call engineers can quickly access or trigger them when an incident arises.
+
 1. ***Implement operations programmatically.*** Use infrastructure as code as part of a runbook for provisioning common resources. This approach ensures they are built to spec every time.
 
 ### Document tools and solutions
@@ -122,9 +130,9 @@ Improving operations is about finding ways to optimize your Azure cloud estate. 
 
 | Category               | Operational resource                                                                 | Description                                              |
 |------------------------|---------------------------------------------------------------------------------------|----------------------------------------------------------|
-| All                    | [Azure Advisor](/azure/advisor/advisor-overview)                                      | A digital assistant that helps you follow best practices in Azure. |
-| Deployment and development | [Azure Architecture Center](/azure/architecture/)                                  | Solutions for different use cases                        |
-| All workload tasks     | [Well-Architected Framework](/azure/well-architected/)                                | Foundational guidance for workload tasks                 |
+| Monitor                    | [Azure Advisor](/azure/advisor/advisor-overview)                                      | A digital assistant that helps you follow best practices in Azure. |
+|  | [Azure Architecture Center](/azure/architecture/)                                  | Solutions for different use cases                        |
+| Workload design        | [Well-Architected Framework](/azure/well-architected/)                                | Foundational guidance for workload tasks                 |
 | Deployment             | [Bicep, ARM & Terraform templates](/azure/templates/)                                 | IaC templates for every Azure resource                   |
 | Security               | [Microsoft Entra RBAC](/entra/identity/role-based-access-control/custom-overview)| Best practices to control access to identity resources   |
 | Security               | [Azure RBAC](/azure/role-based-access-control/overview)                               | Role based access control for Azure resources            |
