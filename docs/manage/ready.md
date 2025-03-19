@@ -131,7 +131,7 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
     | Operations training   | Description  |
     |---|---|
     | Get credentials | Set goals for [Microsoft credentials](/credentials/), like applied skills and Microsoft Certifications to build expertise. |
-    | Use operational resources | See [Azure operational resources](#azure-operational-resources). |
+    | Use operational resources | See [Azure management resources](#azure-management-resources). |
     | Use product documentation | Use [Microsoft Learn](/azure/) to find guidance on [Azure services](/azure/?product=popular). |
     | Get hands-on practice | Encourage hands-on practice in nonproduction sandbox environments. |
 
