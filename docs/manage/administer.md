@@ -112,7 +112,7 @@ Managing code and runtime are workload responsibilities. Have your workload team
 
 ## Manage cloud resources
 
-Managing cloud resources involves governance, oversight, and maintenance of all Azure services, deployments, and infrastructure. Establish clear deployment protocols and proactive drift detection strategies to maintain consistency across environments. Follow these recommendations:
+This section provides guidance on managing [portal deployments](#manage-portal-deployments), [code deployments](#manage-code-deployments), [configuration drift](#manage-configuration-drift), and [resource sprawl](#manage-resource-sprawl).
 
 ### Manage portal deployments
 
