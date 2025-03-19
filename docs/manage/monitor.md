@@ -36,18 +36,18 @@ Monitoring responsibilities vary by deployment model. Use the following table to
 
 A monitoring strategy outlines your requirements across every environment. The goal of monitoring is to detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. Here's how:
 
-1. ***Define your monitoring approach.*** Choose a centralized or shared management model based on your organization's size and complexity to streamline incident response and ensure consistent monitoring.
+1. ***Define your monitoring approach.*** Choose a centralized or shared management model based on your organization's size and complexity.
 
     | Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
     |---------------------|----------------------------|---------|------|-----|
-    | Centralized | All monitoring tasks are managed centrally.| Startups or small cloud footprint. | Simplified governance and cost control.| Potential for operational bottlenecks.|
+    | Centralized | Manage all monitoring tasks centrally.| Startups or small cloud footprint. | Simplified governance and cost control.| Potential for operational bottlenecks.|
     | Shared management | Centrally monitor health, security, compliance, cost, data, and shared services. <br><br>Workload teams monitor workloads. | Enterprises with multiple workloads. | Balances governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions and ongoing coordination.|
 
     For shared management monitoring responsibilities, see an example [Shared management monitoring responsibilities](#shared-management-monitoring-responsibilities).
 
 1. ***Identify what you need to monitor.*** Take a thorough inventory of your Azure estate. Include other clouds, edge deployments, and on-premises systems as needed. Use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter). Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
 
-1. ***Define data collection requirements.*** Determine which metrics and logs you must collect for compliance, security, and effective issue diagnosis. Meet regulatory compliance requirements and all internal governance rules. If you don't know what to collect, gather all available logs and metrics to avoid data gaps. This is a short-term solution that isn't cost efficient. When you have enough data, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate the cost of the collection long term and adjust the collection settings to meet your budget. Refer to the [complete list of Azure monitoring documentation links](#azure-services-monitoring-documentation) to learn more about what you should collect on every Azure service and how to configure it.
+1. ***Define data collection requirements.*** Determine which metrics and logs you must collect for compliance, security, and effective issue diagnosis. Meet regulatory compliance requirements and all internal governance rules. If you don't know what to collect, gather all available logs and metrics to avoid data gaps. It's a short-term solution that isn't cost efficient. When you have enough data, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate the cost of the collection long term and adjust the collection settings to meet your budget. Refer to the [complete list of Azure monitoring documentation links](#azure-services-monitoring-documentation) to learn more about what you should collect on every Azure service and how to configure it.
 
 1. ***Define data retention requirements.*** Decide how long you must keep monitoring data to meet auditing and compliance needs. Proper retention policies enable historical analyses, support regulatory compliance, and preserve data for security investigations.
 

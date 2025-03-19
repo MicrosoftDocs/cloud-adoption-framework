@@ -10,9 +10,9 @@ ms.custom: internal
 
 # Cloud management overview
 
-Effective cloud management ensures your Azure cloud environment aligns with business objectives and minimizes the impact of incidents. The Cloud Adoption Framework (CAF) Manage methodology outlines the **RAMP** (Ready, Administer, Monitor, Protect) framework and provides clear steps for managing your Azure cloud estate.
+Effective cloud management ensures your Azure cloud estate aligns with business objectives and minimizes the effects of incidents. The Cloud Adoption Framework's (CAF) Manage methodology outlines the **RAMP** (Ready, Administer, Monitor, Protect) framework and provides clear steps for managing your Azure cloud estate.
 
-The CAF Manage RAMP framework supports organizations ranging from large enterprises to startups. It guides you through the process of establishing cloud operations and maintaining the your Azure environment.
+The CAF Manage RAMP framework supports organizations ranging from large enterprises to startups. It guides you through the process of establishing cloud operations and maintaining your Azure estate.
 
 :::image type="content" source="./media/caf-manage-process.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-process.svg" border="false":::
 
