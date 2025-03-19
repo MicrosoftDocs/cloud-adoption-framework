@@ -182,6 +182,18 @@ Manage configuration drift by identifying and correcting discrepancies between y
 
 	- ***Minimize portal-driven changes.*** Minimize non-IaC changes to emergency scenarios only. Enforce strict access controls such as Privileged Identity Management. Promptly update IaC files if manual adjustments are necessary to preserve the accuracy of your desired configuration.
 
+### Manage resource sprawl
+
+Resource sprawl refers to the uncontrolled proliferation of cloud resources, leading to increased costs, security vulnerabilities, and management complexities. Follow these steps:
+
+1. ***Implement governance policies.*** Use Azure Policy to enforce policies for [resource provisioning] and [tagging](/azure/azure-resource-manager/management/tag-policies) across your organization. ​Have a clear [naming strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) to help with visibility.
+
+1. ***Organize resources.*** Organize resources hierarchically using management groups and subscriptions to align with your organizational structure. This approach enhances visibility and control over resource allocation. Refer to [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) for proven structure.
+
+1. ***Limit deployment permissions.*** Follow role-based access control (RBAC) best practices in [Azure RBAC](/azure/role-based-access-control/best-practices) and [Microsoft Entra RBAC](/entra/identity/role-based-access-control/best-practices) to ensure that users have appropriate permissions. Use reader roles to reduce the risk of unauthorized resource creation.
+
+1. ***Conduct regular audits.*** ​Use [Azure Advisor](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) to find unused or underutilized Azure resources. Use [Cost Management](/azure/cost-management-billing/costs/reporting-get-started) reporting to analyze your cloud spend and remove orphaned resources incurring charges. Not all Azure resources incur charges. Write queries in [Azure Resource Graph](/azure/governance/resource-graph/samples/starter) to inventory of all resources.
+
 ## Manage operating systems
 
 Where you use virtual machines, you need to also manage the operating system. Follow these steps:
