@@ -358,3 +358,11 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Data monitoring | Govern data visibility, data classification, protection policies, and compliance using centralized tools like Microsoft Purview.<br><br>Ensure consistent data standards across environments. | Implement workload-specific data monitoring to meet governance and protection standards.<br><br>Ensure correct data classification and optimize data performance.|
 | Code and runtime monitoring | Define baseline application monitoring standards and tooling such as Application Insights.<br><br>Provide guidance for collecting application logs, metrics, and traces. | Implement workload-specific application telemetry and logging.<br><br>Identify performance bottlenecks and remediate application-specific issues. |
 | Cloud resource monitoring | Monitor shared services and manage centralized monitoring data.<br><br>Set standard resource-monitoring rules, dashboards, and retention policies. | Configure and manage workload-specific resource logs, metrics, and monitoring dashboards.<br><br>Resolve operational issues specific to the workload. |
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Protect your Azure cloud operations](./protect.md)
+
+> [!div class="nextstepaction"]
+> [CAF Manage checklist](./index.md#cloud-management-checklist)

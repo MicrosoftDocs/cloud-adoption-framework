@@ -253,7 +253,10 @@ Where you use virtual machines, you need to also manage the operating system. Fo
 | Manage operating systems                    | [Azure Change Tracking and Inventory service](/azure/automation/change-tracking/overview-monitoring-agent) | Monitors and logs changes for operating systems                |
 | Manage operating systems                    | [Automation tools](/azure/virtual-machines/infrastructure-automation) | Automates virtual machine maintenance                           |
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Monitor your Azure cloud estate](./monitor.md)
+
+> [!div class="nextstepaction"]
+> [CAF Manage checklist](./index.md#cloud-management-checklist)

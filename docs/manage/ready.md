@@ -168,3 +168,6 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
 
 > [!div class="nextstepaction"]
 > [Administer your Azure cloud estate](./administer.md)
+
+> [!div class="nextstepaction"]
+> [CAF Manage checklist](./index.md#cloud-management-checklist)
