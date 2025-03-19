@@ -135,9 +135,9 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
     | Use product documentation | Use [Microsoft Learn](/azure/) to find guidance on [Azure services](/azure/?product=popular). |
     | Get hands-on practice | Encourage hands-on practice in nonproduction sandbox environments. |
 
-## Azure operational resources
+## Azure management resources
 
-| Category  | Operational resource  | Description   |
+| Category  | Management resource  | Description   |
 |---|---|---|
 | Compliance | [CAF Govern](../govern/index.md) | Microsoft's cloud governance framework |
 | Security| [Manage security operations](./protect.md#manage-security-operations)| Guidance to manage security operations  |
