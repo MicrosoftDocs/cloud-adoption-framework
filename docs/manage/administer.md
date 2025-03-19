@@ -112,7 +112,12 @@ Managing code and runtime are workload responsibilities. Have your workload team
 
 ## Manage cloud resources
 
-This section provides guidance on managing [portal deployments](#manage-portal-deployments), [code deployments](#manage-code-deployments), [configuration drift](#manage-configuration-drift), and [resource sprawl](#manage-resource-sprawl).
+Establish clear deployment protocols and proactive drift and sprawl detection strategies to maintain consistency across environments This section covers:
+
+- [Portal deployments](#manage-portal-deployments)
+- [Code deployments](#manage-code-deployments)
+- [Configuration drift](#manage-configuration-drift)
+- [Resource sprawl](#manage-resource-sprawl).
 
 ### Manage portal deployments
 
