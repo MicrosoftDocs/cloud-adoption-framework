@@ -77,7 +77,15 @@ Designing a monitoring solution refers to creating a system for collecting and s
 
 ## Configure monitoring
 
-Configuring monitoring involves setting up the tools and parameters for collecting insights across your Azure environment. Proper configuration provides proactive issue detection and alignment with prescriptive governance in your cloud estate. Here's how:
+Set up the tools and parameters for collecting insights across your Azure environment. Proper configuration provides proactive issue detection and alignment with prescriptive governance in your cloud estate. This section shows you how to:
+
+- [Monitor service health](./monitor.md#monitor-service-health)
+- [Monitor security](./monitor.md#monitor-security)
+- [Monitor compliance](./monitor.md#monitor-compliance)
+- [Monitor costs](./monitor.md#monitor-costs)
+- [Monitor data](./monitor.md#monitor-data)
+- [Monitor code and runtime](./monitor.md#monitor-code-and-runtime)
+- [Monitor cloud resources](./monitor.md#monitor-cloud-resources)
 
 ### Monitor service health
 
