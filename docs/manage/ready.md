@@ -1,5 +1,5 @@
 ---
-title: Ready Azure cloud estate management
+title: Ready your Azure cloud operations
 description: Learn how to ready your Azure cloud operations and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
 ms.author: ssumner
@@ -8,9 +8,9 @@ ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
 
-# Ready Azure cloud estate management
+# Ready your Azure cloud operations
 
-This article outlines the process to prepare for managing your Azure cloud estate. Organizations achieve successful cloud operations by having the right people, well-defined team structures, and efficient processes. Clear roles and responsibilities create ownership for governance, security, and other critical areas.
+This article helps you establish and maintain effective operations for managing your Azure cloud estate. Successful cloud operations require clearly defined responsibilities and processes for every cloud management area.
 
 :::image type="content" source="./media/caf-manage-ready.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-ready.svg" border="false":::
 
@@ -163,3 +163,8 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
 | Reliability | [Manage cloud resource reliability](./protect.md#manage-cloud-resources-reliability) | Guidance to maintain resource reliability |
 | Reliability | [Manage security incidents](./protect.md#manage-security-incidents) | Recommendations to respond to security incidents |
 | Performance | [Workload performance efficiency](/azure/well-architected/performance-efficiency/checklist) | Workload guidance for performance efficiency |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Administer your Azure cloud estate](./administer.md)
