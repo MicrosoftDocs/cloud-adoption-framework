@@ -235,3 +235,7 @@ For more information, see [Manage incident response (CAF Secure)](/azure/cloud-a
 | Network security                 | [Azure Network Watcher](/azure/network-watcher/network-watcher-overview)           |
 | Industrial security              | [Microsoft Defender for IoT](/azure/defender-for-iot/)                             |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Protect your Azure cloud estate](./protect.md)

@@ -252,3 +252,8 @@ Where you use virtual machines, you need to also manage the operating system. Fo
 | Manage operating systems                    | [Azure Machine Configuration](/azure/governance/machine-configuration/overview) | Audits and configures operating system settings as code         |
 | Manage operating systems                    | [Azure Change Tracking and Inventory service](/azure/automation/change-tracking/overview-monitoring-agent) | Monitors and logs changes for operating systems                |
 | Manage operating systems                    | [Automation tools](/azure/virtual-machines/infrastructure-automation) | Automates virtual machine maintenance                           |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Monitor your Azure cloud estate](./monitor.md)

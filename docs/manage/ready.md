@@ -16,7 +16,7 @@ This article helps you establish and maintain effective operations for managing 
 
 ## Identify your management responsibilities
 
-Effectively managing your Azure environment involves central (platform-wide) responsibilities and workload responsibilities. Central responsibilities support your entire Azure cloud estate. Workload responsibilities focus on individual applications or services. Use *Table 1* to ensure your operations account for essential cloud operations responsibilities.
+Effectively managing your Azure environment involves central (platform-wide) responsibilities and workload responsibilities. Central responsibilities support your entire Azure cloud estate. Workload responsibilities focus on an individual workload. Use *Table 1* to ensure your operations account for essential cloud operations responsibilities.
 
 *Table 1. Primary cloud management responsibilities*
 
