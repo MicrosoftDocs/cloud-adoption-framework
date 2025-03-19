@@ -92,7 +92,7 @@ Create detailed step-by-step guides (runbooks or playbooks) for key operational 
 
 ### Document tools and solutions
 
-Adopt standardized tools and processes for cloud operations throughout your organization. Ensure teams use Azure Monitor, ticketing system, infrastructure-as-code (IaC) [templates]((/azure/templates/) ), and deployment pipelines (GitHub Actions or Azure Pipelines). This approach promotes consistency, reduces redundancy, and enhances cross-team support capabilities.
+Adopt standardized tools and processes for cloud operations throughout your organization. Ensure teams use Azure Monitor, ticketing system, infrastructure-as-code (IaC) [templates](/azure/templates/), and deployment pipelines (GitHub Actions or Azure Pipelines). This approach promotes consistency, reduces redundancy, and enhances cross-team support capabilities.
 
 | Area | Example benefits |
 |-----|----|
