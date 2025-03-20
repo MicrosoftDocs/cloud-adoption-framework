@@ -3,7 +3,7 @@ title: Protect your Azure cloud estate
 description: Learn how to ensure the reliability and security your Azure cloud estate as part of your cloud operations.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/17/2025
+ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
@@ -11,6 +11,8 @@ ms.custom: UpdateFrequency2
 # Protect your cloud estate
 
 This article provides best practices for maintaining the reliability and security of your Azure cloud estate. Reliability ensures your cloud services remain operational with minimal downtime. Security safeguards the confidentiality, integrity, and availability of your resources. Both reliability and security are critical for successful cloud operations.
+
+:::image type="content" source="./media/caf-manage-protect.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-protect.svg" border="false":::
 
 ## Manage reliability
 
@@ -190,7 +192,7 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 Use an iterative security process to identify and mitigate threats in your cloud environment. Follow these steps:
 
-### Manage security controls
+### Manage security operations
 
 Manage your security controls to detect threats to your cloud estate. Follow these steps:
 
@@ -232,3 +234,8 @@ For more information, see [Manage incident response (CAF Secure)](/azure/cloud-a
 | Endpoint security                | [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) |
 | Network security                 | [Azure Network Watcher](/azure/network-watcher/network-watcher-overview)           |
 | Industrial security              | [Microsoft Defender for IoT](/azure/defender-for-iot/)                             |
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [CAF Manage checklist](./index.md#cloud-management-checklist)

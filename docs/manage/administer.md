@@ -3,14 +3,16 @@ title: Administer your Azure cloud estate
 description: Learn how to administer your Azure cloud estate and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/14/2025
+ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
 
 # Administer your Azure cloud estate
 
-This article explains how to administer your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives. Follow these best practices:
+This article explains how to administer your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives.
+
+:::image type="content" source="./media/caf-manage-administer.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-administer.svg" border="false":::
 
 ## Identify your management scope
 
@@ -31,7 +33,7 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 1. ***Develop a change request process.*** Use a formal system, such as a ticketing tool, pull request (GitHub or Azure DevOps), or designated forms. The change request process must capture key details like the type of change, requester identity, target environment, scope, and the reason. Keep separate procedures for routine service requests like password resets.
 
-1. ***Assess the risk associated with the change.*** Assign clear risk categories (high, medium, low) to balance deployment speed with risk management. Evaluate each change according to criteria like downtime tolerance (error budget) and workload criticality. Use the following table as an example to help determine the appropriate approval workflow:
+1. ***Assess the risk associated with the change.*** Assign clear risk categories (high, medium, low) to balance deployment speed with risk management. Evaluate each change according to criteria like downtime tolerance (error budget) and workload criticality. To help determine the appropriate approval workflow, use the following table as an example:
 
     |Risk level|Downtime allowance|Workload criticality|Approval process|Example changes|
     |---|---|---|---|---|
@@ -43,7 +45,7 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 1. ***Standardize the deployment process.*** Clearly outline the procedures for building, testing, and deploying approved changes to production. For details, see [Manage cloud resources](#manage-cloud-resources).
 
-1. ***Standardize the post-deployment process.*** Implement monitoring and validation steps to confirm successful changes. Include a clear rollback strategy to quickly restore service if a change introduces problems.
+1. ***Standardize the post-deployment process.*** To confirm successful changes, implement monitoring and validation steps. Include a clear rollback strategy to quickly restore service if a change introduces problems.
 
 1. ***Prevent and detect unauthorized change.*** Use [Change Analysis](/azure/governance/resource-graph/changes/resource-graph-changes) to detect configuration changes and explain their underlying causes. Use Azure Policy to deny and audit changes using effects like [Deny](/azure/governance/policy/concepts/effect-deny), [DenyAction](/azure/governance/policy/concepts/effect-deny-action), [Audit](/azure/governance/policy/concepts/effect-audit), and [auditIfNotExists](/azure/governance/policy/concepts/effect-audit-if-not-exists). If you use Bicep, consider using [Bicep deployment stacks](/azure/azure-resource-manager/bicep/quickstart-create-deployment-stacks-template-specs) to prevent unauthorized changes.
 
@@ -53,7 +55,7 @@ Identity is your security perimeter. You must verify identities, restrict permis
 
 1. ***Manage identities.*** Use [Microsoft Entra ID](/entra/fundamentals/whatis) as your unified identity management solution. Clearly define permissions by applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, and identity lifecycle management. Enable [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to grant just-in-time privileged access. This strategy reduces unnecessary elevated access. Manage all three identity types (user, application, device) consistently to ensure proper authentication and authorization.
 
-1. ***Manage access.*** Use Azure [role-based access control](/azure/role-based-access-control/overview) (RBAC) and [attribute-based access control](/azure/role-based-access-control/conditions-overview) (ABAC) to grant the least permission to accomplish the job. Prefer role assignments based on [groups](/azure/role-based-access-control/overview#groups) to limit management overhead. Grant permissions at the lowest required [scope](/azure/role-based-access-control/role-assignments-steps#step-3-identify-the-needed-scope), such as subscriptions, resource groups, or individual resources. Avoid overly broad permission scopes to prevent unintended privilege escalation. Assign only the necessary permissions for each user's role.
+1. ***Manage access.*** Use Azure [role-based access control](/azure/role-based-access-control/overview) (RBAC) and [attribute-based access control](/azure/role-based-access-control/conditions-overview) (ABAC) to grant the least permission to accomplish the job. To limit management overhead, prefer role assignments based on [groups](/azure/role-based-access-control/overview#groups). Grant permissions at the lowest required [scope](/azure/role-based-access-control/role-assignments-steps#step-3-identify-the-needed-scope), such as subscriptions, resource groups, or individual resources. Avoid overly broad permission scopes to prevent unintended privilege escalation. Assign only the necessary permissions for each user's role.
 
 1. ***Manage resource configurations.*** Use [infrastructure as code](/devops/deliver/what-is-infrastructure-as-code) (IaC) to ensure consistent and reproducible configuration of resources. Then use Azure Policy to enforce organizational standards and assess compliance. Then use [Azure Policy](/azure/governance/policy/samples/built-in-policies) to enforce secure configurations of specific Azure services. Reference the [Security baselines](/security/benchmark/azure/security-baselines-overview) for guidance on available security capabilities and optimal security configurations. As an add-on feature, use security policies in [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) to align with common security standards.
 
@@ -110,7 +112,12 @@ Managing code and runtime are workload responsibilities. Have your workload team
 
 ## Manage cloud resources
 
-Managing cloud resources involves governance, oversight, and maintenance of all Azure services, deployments, and infrastructure. Establish clear deployment protocols and proactive drift detection strategies to maintain consistency across environments. Follow these recommendations:
+Establish clear deployment protocols and proactive drift and sprawl detection strategies to maintain consistency across environments This section covers:
+
+- [Portal deployments](#manage-portal-deployments)
+- [Code deployments](#manage-code-deployments)
+- [Configuration drift](#manage-configuration-drift)
+- [Resource sprawl](#manage-resource-sprawl).
 
 ### Manage portal deployments
 
@@ -180,6 +187,18 @@ Manage configuration drift by identifying and correcting discrepancies between y
 
 	- ***Minimize portal-driven changes.*** Minimize non-IaC changes to emergency scenarios only. Enforce strict access controls such as Privileged Identity Management. Promptly update IaC files if manual adjustments are necessary to preserve the accuracy of your desired configuration.
 
+### Manage resource sprawl
+
+Resource sprawl describes the uncontrolled growth of cloud resources. This growth increases costs, security risks, and management complexity. Follow these steps:
+
+1. ***Implement governance policies.*** Use [Azure Policy](/azure/governance/policy/overview) to enforce standards for [resource provisioning](./administer.md#manage-cloud-resources) and [tagging](/azure/azure-resource-manager/management/tag-policies) across your organization. Create a clear [naming strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) for easier resource visibility.
+
+2. ***Organize resources effectively.*** Structure resources hierarchically with management groups and subscriptions aligned to your organization's needs. This structure improves visibility and resource management. Refer to the [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) guidance for proven best practices.
+
+3. ***Restrict deployment permissions.*** Implement role-based access control (RBAC) best practices outlined in [Azure RBAC](/azure/role-based-access-control/best-practices) and [Microsoft Entra RBAC](/entra/identity/role-based-access-control/best-practices). Assign appropriate permissions to users. Use reader roles to minimize unauthorized resource creation risks.
+
+4. ***Conduct regular audits.*** Use [Azure Advisor](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) to identify unused or underutilized Azure resources. Use [Cost Management](/azure/cost-management-billing/costs/reporting-get-started) to analyze your cloud spending and remove orphaned resources causing unnecessary costs. Keep in mind not all Azure resources incur charges. Run queries in [Azure Resource Graph](/azure/governance/resource-graph/samples/starter) to maintain an accurate resource inventory.
+
 ## Manage operating systems
 
 Where you use virtual machines, you need to also manage the operating system. Follow these steps:
@@ -233,3 +252,11 @@ Where you use virtual machines, you need to also manage the operating system. Fo
 | Manage operating systems                    | [Azure Machine Configuration](/azure/governance/machine-configuration/overview) | Audits and configures operating system settings as code         |
 | Manage operating systems                    | [Azure Change Tracking and Inventory service](/azure/automation/change-tracking/overview-monitoring-agent) | Monitors and logs changes for operating systems                |
 | Manage operating systems                    | [Automation tools](/azure/virtual-machines/infrastructure-automation) | Automates virtual machine maintenance                           |
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Monitor your Azure cloud estate](./monitor.md)
+
+> [!div class="nextstepaction"]
+> [CAF Manage checklist](./index.md#cloud-management-checklist)

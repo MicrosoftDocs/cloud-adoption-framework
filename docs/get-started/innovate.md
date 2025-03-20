@@ -177,7 +177,7 @@ The Innovate methodology provides guidance on the tools and product management a
   - Technology-based experiences.
   - Integration of physical products and technology by using IoT.
   - Ambient intelligence: integration of nonintrusive technology into an environment.
-  - Azure Cognitive Services: big data, AI, machine learning, and predictive solutions.
+  - Azure AI services: big data, AI, machine learning, and predictive solutions.
 
 **Guidance to support deliverable completion:**
 
