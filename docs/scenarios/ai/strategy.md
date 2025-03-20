@@ -15,7 +15,7 @@ This article outlines the process to prepare your organization for AI adoption. 
 
 ## Identify AI use cases
 
-AI enhances individual efficiency and improves business processes. Generative AI fosters productivity and enhances customer experiences. Nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value. For more information, see [example AI use cases](#example-ai-use-cases).
+AI enhances individual efficiency and improves business processes. Generative AI fosters productivity and enhances customer experiences. Nongenerative AI, such as machine learning, is ideal for analyzing structured data and automating repetitive tasks. With this understanding, identify areas across your business where AI could add value. For more information, see [generative AI use cases](#generative-ai-use-cases) and [nongenerative AI use cases](#nongenerative-ai-use-cases).
 
 - *Look for automation opportunities.* Identify processes suitable for automation to improve efficiency and reduce operational costs. Focus on repetitive tasks, data-heavy operations, or areas with high error rates where AI can have a significant effect.
 
@@ -79,13 +79,13 @@ Create a data strategy tailored to your AI use cases. Identify acceptable data s
 
 - *Plan the data lifecycle.* Develop clear guidelines for managing data throughout its lifecycle:
 
-    - *Data collection:* Identify data sources such as databases, APIs, IoT devices, third-party data, or Azure Data Factory for ingestion. Maintain [data lineage](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-lineage) with [Microsoft Fabric](/fabric/governance/lineage) or [Microsoft Purview](/purview/concept-data-lineage).
-
-    - *Data storage:* Recommend storage solutions aligned with data type and scale, including structured, unstructured, and real-time scenarios.
-
-    - *Data processing:* Use ETL (Extract, Transform, Load) or ELT pipelines to ensure data quality and readiness. Utilize tools like [One Lake shortcuts](/fabric/onelake/onelake-shortcuts) or [Mirroring](/fabric/database/mirrored-database/overview) in Microsoft Fabric.
-
-    - *Data auditing.* Implement regular audits to identify and mitigate bias within AI datasets. Use tools in the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to analyze and audit data and model outputs.
+  - *Data collection:* Identify data sources such as databases, APIs, IoT devices, third-party data, or Azure Data Factory for ingestion. Maintain [data lineage](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-lineage) with [Microsoft Fabric](/fabric/governance/lineage) or [Microsoft Purview](/purview/concept-data-lineage).
+  
+  - *Data storage:* Recommend storage solutions aligned with data type and scale, including structured, unstructured, and real-time scenarios.
+  
+  - *Data processing:* Use ETL (Extract, Transform, Load) or ELT pipelines to ensure data quality and readiness. Utilize tools like [One Lake shortcuts](/fabric/onelake/onelake-shortcuts) or [Mirroring](/fabric/database/mirrored-database/overview) in Microsoft Fabric.
+  
+  - - *Data auditing.* Implement regular audits to identify and mitigate bias within AI datasets. Use tools in the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to analyze and audit data and model outputs.
 
 ## Define a responsible AI strategy
 
