@@ -2944,6 +2944,16 @@
          "source_path": "docs/manage/operational-fitness-review.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/index",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-management-guide/platform-specialization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-management-guide/workload-specialization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready",
+         "redirect_document_id": false
       }
    ]   
 }
