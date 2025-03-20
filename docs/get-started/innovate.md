@@ -134,15 +134,7 @@ Define the plan for long-term operational responsibilities for the planned innov
 **Deliverables:**
 
 - Complete the [Microsoft Azure Architecture Review](/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
-- Adjust the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
-
-**Guidance to support deliverable completion:**
-
-- [Expand the management baseline](../manage/best-practices.md): This section of the Cloud Adoption Framework guides you through various transitions into operational management in the cloud.
-- [Get specific with advanced operations](../manage/design-principles.md): Discover ways to go beyond your management baseline.
-- If advanced operations are required to support your operations needs, evaluate the [business commitments](../manage/considerations/business-alignment.md) to determine operational responsibilities for both teams.
-
-<br>
+- Understand how to [Manage your Azure cloud estate](../manage/index.md)
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -185,7 +177,7 @@ The Innovate methodology provides guidance on the tools and product management a
   - Technology-based experiences.
   - Integration of physical products and technology by using IoT.
   - Ambient intelligence: integration of nonintrusive technology into an environment.
-  - Azure Cognitive Services: big data, AI, machine learning, and predictive solutions.
+  - Azure AI services: big data, AI, machine learning, and predictive solutions.
 
 **Guidance to support deliverable completion:**
 

@@ -32,7 +32,7 @@ To make sure that you have the necessary commitment and organization for your mi
 | Project Sponsor | Defines the scope of the migration to determine what resources are moved and the benefit of moving each resource. Provides decision-making ownership for migration tooling purchases, for the overall workload architecture, and for release activities. |
 | Project Manager | Drives a project plan for the migration scope. Drives testing processes. Organizes status updates to stakeholders. |
 | Organizational Change Manager | Helps the project team communicate changes to the organization. Works with different functions to make sure that the right team members are involved and that the correct organizational changes occur to support the migration. |
-| Licensing Specialist | Provides licensing insight and financial operations management to ensure that the project is properly licensed and uses existing licensed resources. |
+| Licensing Specialist | Provides licensing insight and FinOps management to ensure that the project is properly licensed and uses existing licensed resources. |
 | Workload Business Owner | Provides decision-making ownership for the workload assessment, architecture, and migration processes. Acts as an owner for the business value of the workload in Azure. |
 
 ## Cloud adoption function roles

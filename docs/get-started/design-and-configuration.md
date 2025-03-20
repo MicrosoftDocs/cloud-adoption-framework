@@ -124,21 +124,8 @@ Migrating to the cloud without understanding ongoing operations is risky. In par
 
 **Deliverables:**
 
-- Deploy a management baseline.
-- Complete the operations management workbook.
+- Understand how to [manage your Azure cloud estate](../manage/index.md).
 - Identify any workloads that require a Microsoft Azure Well-Architected Review assessment.
-- Timeline risks:
-  - Review the workbook: estimate one hour per application owner.
-  - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
-
-**Guidance to support deliverable completion:**
-
-- [Establish a management baseline](../manage/index.md)
-- [Define business commitments](../manage/considerations/business-alignment.md)
-- [Expand the management baseline](../manage/best-practices.md)
-- [Get specific with advanced operations](../manage/design-principles.md)
-
-<br>
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
 | --- | --- | --- |

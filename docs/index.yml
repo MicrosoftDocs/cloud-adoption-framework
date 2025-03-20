@@ -144,14 +144,14 @@ productDirectory:
     - title: Manage
       imageSrc: ./_images/icons/manage.png
       links:
-        - url: ./manage/considerations/business-alignment.md
-          text: Business commitments
-        - url: ./manage/azure-management-guide/index.md
-          text: Management baseline
-        - url: ./manage/best-practices.md
-          text: Expand the baseline
-        - url: ./manage/design-principles.md
-          text: Advance operations and design principles
+        - url: ./manage/ready.md
+          text: Ready your Azure cloud operations
+        - url: ./manage/administer.md
+          text: Administer your Azure cloud estate
+        - url: ./manage/monitor.md
+          text: Monitor your Azure cloud estate
+        - url: ./manage/protect.md
+          text: Protect your Azure cloud estate
 
     # Card
     - title: Govern

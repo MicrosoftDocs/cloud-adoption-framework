@@ -32,7 +32,7 @@ In a full mesh pattern, each application virtual network is directly peered to t
 
 :::image type="content" source="./media/separate-virtual-network-integrated.svg" alt-text="Diagram that shows the full mesh pattern among the database, application, and hub virtual networks." border="false" lightbox="./media/separate-virtual-network-integrated.svg":::
 
-This pattern helps ensure direct connectivity from database and application virtual networks and protection from other networks.
+This pattern helps ensure direct connectivity from the database and application virtual networks and protection from other networks.
 
 ## Design considerations
 

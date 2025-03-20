@@ -65,6 +65,6 @@ As your cloud adoption journey progresses, a solid operating model can help ensu
 | ----- | ----------- |
 | [How do we deliver operational excellence during cloud transformation?](./operational-excellence.md)                   | The steps in this guide can help the strategy team lead the organizational change management required to consistently ensure operational excellence. |
 | [How do we manage enterprise costs?](./manage-costs.md)                                          | This guide can help you start optimizing enterprise costs and manage cost across the environment.                                                                           |
-| [How do we apply the right controls to improve reliability?](./reliability.md)                   | This guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
+| [How do we apply the right controls to improve reliability?](../manage/protect.md#manage-reliability)                   | This guidance helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
 | [How do we ensure performance across the enterprise?](./performance.md)                               | This guide can help you establish processes for maintaining performance across the enterprise.                               |
 

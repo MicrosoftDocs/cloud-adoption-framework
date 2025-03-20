@@ -128,17 +128,7 @@ Innovation and development of new products require a much deeper degree of archi
 
 ## Step 6: Implement sound operations
 
-Establishing a solid management baseline will help you collect data and create operational alerts. This effort can aid in detecting opportunities to optimize costs. It will create a balance between resiliency and cost optimization.
-
-**Deliverables:**
-
-- Monitor your enterprise environment for ongoing recommendations to optimize costs, aligned to the criticality and resiliency classifications of each workload.
-
-**Guidance to support deliverable completion:**
-
-- [Create business alignment](../manage/considerations/business-alignment.md) to gain clarity regarding criticality and appetite for resiliency investments.
-
-<br>
+Understand how to [manage your Azure cloud estate](../manage/index.md). This effort can aid in detecting opportunities to optimize costs. It will create a balance between resiliency and cost optimization.
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
