@@ -121,7 +121,7 @@ Monitoring costs refers to tracking and controlling your cloud spending across A
 
 1. ***Understand service pricing.*** Make sure you understand the pricing of the services and features you’re using. You want to avoid surprises at the billing period. Use the [Azure pricing](https://azure.microsoft.com/pricing/) information.
 
-1. ***Monitor cloud spend.*** You should use the available tools to monitor costs across your environments. For Azure spend, use Azure Cost Management to [set budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget), get [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), trigger [alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) for cost anomalies, and [analyze costs](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
+1. ***Monitor cloud spend.*** You should use the available tools to monitor costs across your environments. For Azure spend, use Microsoft Cost Management to [set budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget), get [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), trigger [alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) for cost anomalies, and [analyze costs](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 
 1. ***Review cloud spend regularly.*** Incorporate cost reviews into your regular operational cadence. Regular assessments allow for the timely identification of spending patterns and the opportunity to adjust resource usage to optimize costs.
 
