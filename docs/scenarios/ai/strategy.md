@@ -71,21 +71,21 @@ For organizations needing more control and customization, Microsoft offers infra
 
 ## Define an AI data strategy
 
-For each AI use case, you should define an AI data strategy. The data strategy should outline data collection, storage, and usage practices aligning with regulatory, ethical, and operational standards. Tailor the strategy to each use case to ensure reliable AI outputs and promote data security and privacy. If needed, you can consolidate these individual strategies into a broader summary data strategy for your organization.
+Create a data strategy tailored to your AI use cases. Identify acceptable data sources, workload types (internal vs. external), and implement guidelines ensuring the responsible use of AI. Follow these steps:
 
-- *Establish data governance.* Specify how you collect, store, process, version, and retire data for each AI use case. Include retention and disposal policies, and use version control to maintain accuracy during updates. Use [Microsoft Purview](/purview/data-governance-overview) to govern data. Reference the [Data management landing zone](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-management-landing-zone) for architecture guidance.
+- *Establish data governance.* Restrict internet-facing ("Online") workloads to public data only. Allow internal ("Corporate") workloads to utilize business data while maintaining defined data access boundaries. Use [Microsoft Purview](/purview/data-governance-overview) to govern data. Reference the [Data management landing zone](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-management-landing-zone) for architecture guidance.
 
-- *Prepare for data scalability.* Forecast the volume, velocity, and variety of data needed for this AI workload. Choose flexible architectures capable of scaling according to demand. For an architecture, see [Data landing zone](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-landing-zone).
+- *Prepare for data scalability.* Anticipate the volume, velocity, and variety of data required. Choose flexible architectures capable of scaling according to demand. For an architecture, see [Data landing zone](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-landing-zone).
 
-- *Plan the data lifecycle.* Define guidelines for collecting, storing, processing, and auditing data:
+- *Plan the data lifecycle.* Develop clear guidelines for managing data throughout its lifecycle:
 
     - *Data collection:* Identify data sources such as databases, APIs, IoT devices, third-party data, or Azure Data Factory for ingestion. Maintain [data lineage](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-lineage) with [Microsoft Fabric](/fabric/governance/lineage) or [Microsoft Purview](/purview/concept-data-lineage).
 
-    - *Data storage:* Recommend storage solutions appropriate to different types and volumes of data, including structured, unstructured, and real-time data. Include recommendations for retention and disposal policies, emphasizing version control to maintain data accuracy.
+    - *Data storage:* Recommend storage solutions aligned with data type and scale, including structured, unstructured, and real-time scenarios.
 
-    - *Data processing:* Use ETL (Extract, Transform, Load) or ELT pipelines to clean, transform, and prepare data. Tools such as [One Lake shortcuts](/fabric/onelake/onelake-shortcuts) or [Mirroring](/fabric/database/mirrored-database/overview) in Microsoft Fabric can streamline these processes.
+    - *Data processing:* Use ETL (Extract, Transform, Load) or ELT pipelines to ensure data quality and readiness. Utilize tools like [One Lake shortcuts](/fabric/onelake/onelake-shortcuts) or [Mirroring](/fabric/database/mirrored-database/overview) in Microsoft Fabric.
 
-    - *Data auditing.* Establish procedures to identify and mitigate bias in AI data. Use tools in the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to analyze and audit data and model outputs.
+    - *Data auditing.* Implement regular audits to identify and mitigate bias within AI datasets. Use tools in the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to analyze and audit data and model outputs.
 
 ## Define a responsible AI strategy
 
