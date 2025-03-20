@@ -105,28 +105,32 @@ For each AI use case, you should define a responsible AI strategy that outlines 
 
  For more information, see [example AI strategy](#example-ai-strategy).
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [AI Plan](plan.md)
-
-### Example AI use cases
+## Example AI use cases
 
 These examples highlight various generative and nongenerative AI applications. While not exhaustive, they provide insights into how AI can be applied to different areas of your business.
 
-| Generative AI| Nongenerative AI |
-| --- | ---|
-| Autonomous agents: Develop AI systems that perform tasks independently, such as virtual assistants managing schedules or customer inquiries.| Image recognition: Utilize AI to identify and classify objects within images or videos, useful in security or quality control systems.|
-| Marketing: Automatically create social media posts and email newsletters. | Prediction: Forecast trends or optimize operations based on historical data. |
-| E-commerce platforms: Generate personalized product recommendations and tailored shopping experiences. | Process automation: Automate routine tasks and workflows that don't require content generation, such as customer service bots. |
-| Product design: Quickly create multiple variations of product prototypes or design elements. | Data analysis: Uncover patterns in structured data for insights and data-driven decisions. |
-| Software development: Automate repetitive code generation, such as CRUD operations. | Model simulation: Simulate complex workloads (fluid dynamics, finite element analysis) to predict behavior and optimize designs or processes. |
-| Educational platforms: Generate personalized study materials for students. | Anomaly detection: Identify unusual patterns in data. You can use this strategy for fraud detection or equipment failure prediction, for example. |
-| Customer service: Provide context-based responses through AI-driven chatbots. | Recommendation: Offer personalized recommendations based on user behavior, commonly used in e-commerce and streaming services. |
-| Advertising agencies: Create targeted ad variations for different audience segments. | Optimization: Improve efficiency by solving complex problems (supply chain optimization, resource allocation). |
-| Health and wellness apps: Generate customized workout routines and meal plans. | Sentiment analysis: Analyze text from social media or customer reviews to gauge public sentiment and enhance the customer experience. |
+| AI type         | Use case                | Description                                                                                                                                                                             |
+|-----------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Generative AI   | Autonomous agents       | Create AI systems. They perform tasks on their own. Virtual assistants manage schedules and customer inquiries.                                                                        |
+| Generative AI   | Marketing               | Automatically create social media posts and email newsletters.                                                                                                                          |
+| Generative AI   | E-commerce platforms    | Generate personalized product recommendations. They also create tailored shopping experiences.                                                                                          |
+| Generative AI   | Product design          | Quickly create multiple variations of product prototypes. They also create different design elements.                                                                                   |
+| Generative AI   | Software development    | Automate repetitive code generation. The system generates CRUD operations.                                                                                                               |
+| Generative AI   | Educational platforms   | Generate personalized study materials. They create content for students.                                                                                                                 |
+| Generative AI   | Customer service        | Provide context-based responses using AI-driven chatbots.                                                                                                                               |
+| Generative AI   | Advertising agencies    | Create targeted ad variations. They address different audience segments.                                                                                                                |
+| Generative AI   | Health and wellness apps| Generate customized workout routines and meal plans.                                                                                                                                   |
+| Nongenerative AI| Image recognition       | Identify and classify objects in images or videos. This approach supports security systems and quality control systems.                                                                    |
+| Nongenerative AI| Prediction              | Forecast trends or optimize operations based on historical data.                                                                                                                         |
+| Nongenerative AI| Process automation      | Automate routine tasks and workflows. They do not need content generation. Customer service bots illustrate this approach.                                                                 |
+| Nongenerative AI| Data analysis           | Uncover patterns in structured data. This process provides insights and supports data-driven decisions.                                                                                   |
+| Nongenerative AI| Model simulation        | Simulate complex workloads. The method predicts behavior and optimizes designs or processes. Fluid dynamics and finite element analysis serve as examples.                               |
+| Nongenerative AI| Anomaly detection       | Identify unusual patterns in data. This strategy applies to fraud detection and equipment failure prediction.                                                                             |
+| Nongenerative AI| Recommendation          | Offer personalized recommendations based on user behavior. The system applies this approach in e-commerce and streaming services.                                                         |
+| Nongenerative AI| Optimization            | Solve complex problems to improve efficiency. The approach optimizes supply chains and allocates resources.                                                                              |
+| Nongenerative AI| Sentiment analysis      | Analyze text from social media or customer reviews to gauge public sentiment. This analysis enhances the customer experience.                                                             |
 
-### Example AI strategy
+## Example AI strategy
 
 This example AI strategy is based on a fictional company, Contoso. Contoso operates a customer-facing e-commerce platform and employs sales representatives who need tools to forecast business data. The company also manages product development and inventory for production. Its sales channels include both private companies and highly regulated public sector agencies.
 
@@ -137,3 +141,8 @@ This example AI strategy is based on a fictional company, Contoso. Contoso opera
 | **Inventory management and product purchasing** | Automate business process | Reduce costs | Shorter shelf life of inventory | Machine learning, training models | Azure Machine Learning | Historical inventory and sales data | Machine learning and app development | Estimated usage | Establish governance for sales data and detect and address biases in data. | Assign AI accountability and comply with financial regulations. |
 | **Daily work across company** | Enhance individual productivity | Improve employee experience | Increased employee satisfaction | SaaS generative AI | Microsoft 365 Copilot | OneDrive data | General IT | Subscription costs | Implement data governance for employee data and ensure data privacy. | Assign AI accountability and utilize built-in responsible AI features. |
 | **E-commerce app for regulated industry chat feature** | Automate business process | Increase sales | Increased sales | IaaS generative AI model training | Azure Virtual Machines | Domain-specific training data | Cloud infrastructure and app development | Infrastructure and software | Define governance for regulated data and plan lifecycle with compliance measures. | Assign AI accountability and adhere to industry regulations. |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [AI Plan](plan.md)
