@@ -19,13 +19,13 @@ AI enhances individual efficiency and improves business processes. Generative AI
 
 - *Look for automation opportunities.* Identify processes suitable for automation to improve efficiency and reduce operational costs. Focus on repetitive tasks, data-heavy operations, or areas with high error rates where AI can have a significant effect.
 
+- *Gather customer feedback.* Use customer feedback to uncover use cases that would have an impact on customer satisfaction when automated with AI.
+
 - *Conduct an internal assessment.* Gather input from various departments to identify challenges and inefficiencies that AI could address. Document workflows and gather input from stakeholders to uncover opportunities for automation, insight generation, or improved decision-making.
 
 - *Explore industry use cases.* Research how similar organizations or industries use AI to solve problems or enhance operations. Use tools like the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for inspiration and to evaluate which approaches might suit your needs.
 
-- *Set AI targets.* For each identified use case, clearly define the goal (general purpose), objective (desired outcome), and success metric (quantifiable measure). These elements serve as benchmarks to guide your AI adoption and measure its impact.
-
- For more information, see [example AI strategy](#example-ai-strategy).
+- *Set AI targets.* For each identified use case, clearly define the goal (general purpose), objective (desired outcome), and success metric (quantifiable measure). These elements will serve as benchmarks to guide your AI adoption and measure its impact. For more information, see [example AI strategy](#example-ai-strategy).
 
 ## Define an AI technology strategy
 
