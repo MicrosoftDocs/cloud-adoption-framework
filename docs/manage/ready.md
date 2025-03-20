@@ -38,10 +38,10 @@ Use the responsibilities outlined in *Table 1* to build an effective operational
 
 1. ***Define your cloud operations model.*** Choose a centralized or shared management model based on your organization's size and maturity, outlined in the following table:
 
-| Operations approach | Responsibilities and scope | Best for | Pros | Cons |
-|---------------------|----------------------------|----------|------|------|
-| Centralized         | A single team manages all tasks. | Startups or small cloud footprint. | Simplifies cloud management. | Risks creating bottlenecks. |
-| Shared management   | Separate central (platform) and workload teams | Organizations with diverse workloads. | Balances governance and agility. | Requires clear assignment of responsibility |
+    | Operations approach | Responsibilities and scope | Best for | Pros | Cons |
+    |---------------------|----------------------------|----------|------|------|
+    | Centralized         | A single team manages all tasks. | Startups or small cloud footprint. | Simplifies cloud management. | Risks creating bottlenecks. |
+    | Shared management   | Separate central (platform) and workload teams | Organizations with diverse workloads. | Balances governance and agility. | Requires clear assignment of responsibility |
 
 1. ***Establish central responsibilities.*** Form a dedicated team to handle central management tasks. Develop a skills matrix from Table 1 to identify required expertise.
 
@@ -71,7 +71,7 @@ Define operational procedures for managing change, disaster recovery, and routin
 
 ### Document operational guides
 
-Create detailed step-by-step guides (runbooks or playbooks) for key operational tasks. This preparation ensures consistent execution, improves efficiency, and shortens resolution times during critical events
+Create detailed step-by-step guides (runbooks or playbooks) for key operational tasks. This preparation ensures consistent execution, improves efficiency, and shortens resolution times during critical events.
 
 1. ***Define daily tasks.*** Prepare manuals covering daily responsibilities, such as privilege escalation requests and log reviews. Establish standard operating procedures (SOPs) for monitoring metrics, alert thresholds, and dashboards for each system.
 
@@ -164,7 +164,7 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
 | Reliability | [Manage security incidents](./protect.md#manage-security-incidents) | Recommendations to respond to security incidents |
 | Performance | [Workload performance efficiency](/azure/well-architected/performance-efficiency/checklist) | Workload guidance for performance efficiency |
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Administer your Azure cloud estate](./administer.md)
