@@ -197,7 +197,7 @@ Resource sprawl describes the uncontrolled growth of cloud resources. This growt
 
 3. ***Restrict deployment permissions.*** Implement role-based access control (RBAC) best practices outlined in [Azure RBAC](/azure/role-based-access-control/best-practices) and [Microsoft Entra RBAC](/entra/identity/role-based-access-control/best-practices). Assign appropriate permissions to users. Use reader roles to minimize unauthorized resource creation risks.
 
-4. ***Conduct regular audits.*** USe [Azure Advisor](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) to identify unused or underutilized Azure resources. Use [Cost Management](/azure/cost-management-billing/costs/reporting-get-started) to analyze your cloud spending and remove orphaned resources causing unnecessary costs. Keep in mind not all Azure resources incur charges. Run queries in [Azure Resource Graph](/azure/governance/resource-graph/samples/starter) to maintain an accurate resource inventory.
+4. ***Conduct regular audits.*** Use [Azure Advisor](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) to identify unused or underutilized Azure resources. Use [Cost Management](/azure/cost-management-billing/costs/reporting-get-started) to analyze your cloud spending and remove orphaned resources causing unnecessary costs. Keep in mind not all Azure resources incur charges. Run queries in [Azure Resource Graph](/azure/governance/resource-graph/samples/starter) to maintain an accurate resource inventory.
 
 ## Manage operating systems
 
