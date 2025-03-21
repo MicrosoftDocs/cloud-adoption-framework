@@ -12,7 +12,7 @@ ms.custom: UpdateFrequency2
 
 This article explains how to administer your Azure cloud estate to ensure operational health. You need strong administrative control over your cloud operations to ensure the cloud aligns with your business objectives.
 
-:::image type="content" source="./media/caf-manage-administer.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-administer.svg" border="false":::
+:::image type="content" source="./media/caf-manage-administer.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)" lightbox="./media/caf-manage-administer.svg" border="false":::
 
 ## Identify your management scope
 
