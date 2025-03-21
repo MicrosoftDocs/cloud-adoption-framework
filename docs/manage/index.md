@@ -13,7 +13,7 @@ Effective cloud management ensures your Azure cloud estate aligns with business 
 
 The CAF Manage RAMP process supports organizations ranging from large enterprises to startups. It guides you through the process of establishing cloud operations and maintaining your Azure estate.
 
-:::image type="content" source="./media/caf-manage-process.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-process.svg" border="false":::
+:::image type="content" source="./media/caf-manage-process.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)" lightbox="./media/caf-manage-process.svg" border="false":::
 
 ## Cloud management checklist
 
