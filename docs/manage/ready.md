@@ -12,7 +12,7 @@ ms.custom: UpdateFrequency2
 
 This article helps you establish and maintain effective operations for managing your Azure cloud estate. Successful cloud operations require clearly defined responsibilities and processes for every cloud management area.
 
-:::image type="content" source="./media/caf-manage-ready.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)" lightbox="./media/caf-manage-ready.svg" border="false":::
+:::image type="content" source="./media/caf-manage-ready.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-ready.svg" border="false":::
 
 ## Identify your management responsibilities
 
