@@ -108,34 +108,6 @@ This example AI strategy is based on a fictional company, Contoso. Contoso opera
 | **Daily work across company** | Enhance individual productivity | Improve employee experience | Increased employee satisfaction | SaaS generative AI | Microsoft 365 Copilot | OneDrive data | General IT | Subscription costs | Implement data governance for employee data and ensure data privacy. | Assign AI accountability and utilize built-in responsible AI features. |
 | **E-commerce app for regulated industry chat feature** | Automate business process | Increase sales | Increased sales | IaaS generative AI model training | Azure Virtual Machines | Domain-specific training data | Cloud infrastructure and app development | Infrastructure and software | Define governance for regulated data and plan lifecycle with compliance measures. | Assign AI accountability and adhere to industry regulations. |
 
-### Generative AI use cases
-
-| Example use case  | Description  |
-|-----|-----|
-| Autonomous agents       | Create AI systems. They perform tasks on their own. Virtual assistants manage schedules and customer inquiries.  |
-| Marketing               | Automatically create social media posts and email newsletters.  |
-| E-commerce platforms    | Generate personalized product recommendations. They also create tailored shopping experiences.    |
-| Product design          | Quickly create multiple variations of product prototypes. They also create different design elements.  |
-| Software development    | Automate repetitive code generation. The system generates CRUD operations.  |
-| Educational platforms   | Generate personalized study materials. They create content for students.   |
-| Customer service        | Provide context-based responses using AI-driven chatbots.   |
-| Advertising agencies    | Create targeted ad variations. They address different audience segments. |
-| Health and wellness apps| Generate customized workout routines and meal plans.  |
-
-### Nongenerative AI use cases
-
-| Example use case   | Description |
-|--------------------|------------------|
-| Image recognition  | Identify and classify objects in images or videos. This approach supports security systems and quality control systems. |
-| Prediction         | Forecast trends or optimize operations based on historical data. |
-| Process automation | Automate routine tasks and workflows. They don't need content generation. Customer service bots illustrate this approach.      |
-| Data analysis      | Uncover patterns in structured data. This process provides insights and supports data-driven decisions.   |
-| Model simulation   | Simulate complex workloads. The method predicts behavior and optimizes designs or processes. Fluid dynamics and finite element analysis serve as examples. |
-| Anomaly detection  | Identify unusual patterns in data. This strategy applies to fraud detection and equipment failure prediction.  |
-| Recommendation     | Offer personalized recommendations based on user behavior. The system applies this approach in e-commerce and streaming services.  |
-| Optimization       | Solve complex problems for improved efficiency. The approach optimizes supply chains and allocates resources.     |
-| Sentiment analysis | Analyze text from social media or customer reviews for public sentiment. This analysis enhances the customer experience. |
-
 ## Next step
 
 > [!div class="nextstepaction"]
