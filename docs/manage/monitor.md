@@ -13,7 +13,7 @@ ms.custom: UpdateFrequency2
 
 This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments. Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications.
 
-:::image type="content" source="./media/caf-manage-monitor.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-monitor.svg" border="false":::
+:::image type="content" source="./media/caf-manage-monitor.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)" lightbox="./media/caf-manage-monitor.svg" border="false":::
 
 ## Identify your monitoring scope
 
