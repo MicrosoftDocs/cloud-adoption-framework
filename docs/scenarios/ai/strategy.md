@@ -82,7 +82,7 @@ Create a data strategy tailored to your AI use cases. Identify acceptable data s
   
   - *Data processing:* Use ETL (Extract, Transform, Load) or ELT pipelines to ensure data quality and readiness. Utilize tools like [One Lake shortcuts](/fabric/onelake/onelake-shortcuts) or [Mirroring](/fabric/database/mirrored-database/overview) in Microsoft Fabric.
   
-  - - *Data auditing.* Implement regular audits to identify and mitigate bias within AI datasets. Use tools in the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) for analyzing and auditing data and model outputs.
+  - *Data auditing.* Implement regular audits to identify and mitigate bias within AI datasets. Use tools in the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) for analyzing and auditing data and model outputs.
 
 ## Define a responsible AI strategy
 
