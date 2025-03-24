@@ -12,7 +12,7 @@ ms.custom: UpdateFrequency2
 
 This article provides best practices for maintaining the reliability and security of your Azure cloud estate. Reliability ensures your cloud services remain operational with minimal downtime. Security safeguards the confidentiality, integrity, and availability of your resources. Both reliability and security are critical for successful cloud operations.
 
-:::image type="content" source="./media/caf-manage-protect.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)" lightbox="./media/caf-manage-protect.svg" border="false":::
+:::image type="content" source="./media/caf-manage-protect.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-protect.svg" border="false":::
 
 ## Manage reliability
 
