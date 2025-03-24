@@ -76,7 +76,7 @@ Create a data strategy tailored to your AI use cases. Identify acceptable data s
 
 - *Plan the data lifecycle.* Develop clear guidelines for managing data throughout its lifecycle:
 
-  - *Data collection:* Identify data sources such as databases, APIs, IoT devices, third-party data, or Azure Data Factory for ingestion. Maintain [data lineage](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-lineage) with [Microsoft Fabric](/fabric/governance/lineage) or [Microsoft Purview](/purview/concept-data-lineage).
+  - *Data collection:* Identify data sources such as databases, APIs, internet-of-things (IoT) devices, third-party data, or Azure Data Factory for ingestion. Maintain [data lineage](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/govern-lineage) with [Microsoft Fabric](/fabric/governance/lineage) or [Microsoft Purview](/purview/concept-data-lineage).
   
   - *Data storage:* Recommend storage solutions aligned with data type and scale, including structured, unstructured, and real-time scenarios.
   
