@@ -29,7 +29,7 @@ AI enhances individual efficiency and improves business processes. Generative AI
 
 ## Define an AI technology strategy
 
-Select AI technologies that align closely with your organization's skills, available data, and budget. Microsoft offers software-as-a-service (SaaS), platform-as-a-service (PaaS), and infrastructure-as-a-service (IaaS). These services provide different levels of customization and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai). To guide your decision, use the following AI decision tree and guidance.
+Select AI technologies that align closely with your organization's skills, available data, and budget. Microsoft offers software as a service (SaaS), platform as a service (PaaS), and infrastructure as a service (IaaS). These services provide different levels of customization and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai). To guide your decision, use the following AI decision tree and guidance.
 
 :::image type="content" source="./images/ai-decision-tree.svg" alt-text="Diagram that shows Microsoft and Azure services and decision points that indicate each service." border="false":::
 
