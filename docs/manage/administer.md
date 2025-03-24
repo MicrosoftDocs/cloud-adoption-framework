@@ -117,7 +117,7 @@ Establish clear deployment protocols and proactive drift and sprawl detection st
 - [Portal deployments](#manage-portal-deployments)
 - [Code deployments](#manage-code-deployments)
 - [Configuration drift](#manage-configuration-drift)
-- [Resource sprawl](#manage-resource-sprawl).
+- [Resource sprawl](#manage-resource-sprawl)
 
 ### Manage portal deployments
 
