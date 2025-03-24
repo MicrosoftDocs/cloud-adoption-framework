@@ -25,7 +25,7 @@ AI enhances individual efficiency and improves business processes. Generative AI
 
 - *Explore industry use cases.* Research how similar organizations or industries use AI to solve problems or enhance operations. Use tools like the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for inspiration and to evaluate which approaches might suit your needs.
 
-- *Set AI targets.* For each identified use case, clearly define the goal (general purpose), objective (desired outcome), and success metric (quantifiable measure). These elements will serve as benchmarks to guide your AI adoption and measure its impact. For more information, see [example AI strategy](#example-ai-strategy).
+- *Set AI targets.* For each identified use case, clearly define the goal (general purpose), objective (desired outcome), and success metric (quantifiable measure). These elements serve as benchmarks to guide your AI adoption and measure success. For more information, see [example AI strategy](#example-ai-strategy).
 
 ## Define an AI technology strategy
 
@@ -35,7 +35,7 @@ Select AI technologies that align closely with your organization's skills, avail
 
 ### Buy AI with software services (SaaS)
 
-Microsoft provides SaaS generative AI solutions known as Copilots, designed to enhance productivity with minimal technical expertise required. Refer to the detailed table below for more information.
+Microsoft provides SaaS generative AI solutions known as Copilots, designed to enhance productivity with minimal technical expertise required. See the following table for more information.
 
 | Microsoft Copilots | Description | User| Data needed | Skills required | Main cost factors |
 |-------|----|-----|----|-----|------|
@@ -48,7 +48,7 @@ Microsoft provides SaaS generative AI solutions known as Copilots, designed to e
 
 ### Build AI workloads with Azure platforms (PaaS)
 
-Azure provides multiple PaaS options tailored to your AI goals, skill sets, and data needs. These platforms cater to various levels of technical expertise. Review the [pricing pages](https://azure.microsoft.com/products/) and use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) for cost estimates.
+Azure provides multiple PaaS options tailored to your AI goals, skill set, and data needs. These platforms cater to various levels of technical expertise. Review the [pricing pages](https://azure.microsoft.com/products/) and use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) for cost estimates.
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|----|-------------| ---------| ---- |
@@ -70,7 +70,7 @@ For greater customization and control, use Azure's IaaS solutions such as [Azure
 
 Create a data strategy tailored to your AI use cases. Identify acceptable data sources, workload types (internal vs. external), and implement guidelines ensuring the responsible use of AI. Follow these steps:
 
-- *Establish data governance.* Restrict internet-facing ("Online") workloads to public data only. Allow internal ("Corporate") workloads to utilize business data while maintaining defined data access boundaries. Use [Microsoft Purview](/purview/data-governance-overview) to govern data. Reference the [Data management landing zone](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-management-landing-zone) for architecture guidance.
+- *Establish data governance.* Restrict internet-facing ("Online") workloads to public data only. Allow internal ("Corporate") workloads to use business data and maintain defined data access boundaries. Use [Microsoft Purview](/purview/data-governance-overview) to govern data. Reference the [Data management landing zone](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-management-landing-zone) for architecture guidance.
 
 - *Prepare for data scalability.* Anticipate the volume, velocity, and variety of data required. Choose flexible architectures capable of scaling according to demand. For an architecture, see [Data landing zone](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/data-landing-zone).
 
@@ -82,7 +82,7 @@ Create a data strategy tailored to your AI use cases. Identify acceptable data s
   
   - *Data processing:* Use ETL (Extract, Transform, Load) or ELT pipelines to ensure data quality and readiness. Utilize tools like [One Lake shortcuts](/fabric/onelake/onelake-shortcuts) or [Mirroring](/fabric/database/mirrored-database/overview) in Microsoft Fabric.
   
-  - - *Data auditing.* Implement regular audits to identify and mitigate bias within AI datasets. Use tools in the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to analyze and audit data and model outputs.
+  - - *Data auditing.* Implement regular audits to identify and mitigate bias within AI datasets. Use tools in the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) for analyzing and auditing data and model outputs.
 
 ## Define a responsible AI strategy
 
@@ -122,19 +122,19 @@ This example AI strategy is based on a fictional company, Contoso. Contoso opera
 | Advertising agencies    | Create targeted ad variations. They address different audience segments. |
 | Health and wellness apps| Generate customized workout routines and meal plans.  |
 
-### Nongenerative AI Use Cases
+### Nongenerative AI use cases
 
 | Example use case   | Description |
 |--------------------|------------------|
 | Image recognition  | Identify and classify objects in images or videos. This approach supports security systems and quality control systems. |
 | Prediction         | Forecast trends or optimize operations based on historical data. |
-| Process automation | Automate routine tasks and workflows. They do not need content generation. Customer service bots illustrate this approach.      |
+| Process automation | Automate routine tasks and workflows. They don't need content generation. Customer service bots illustrate this approach.      |
 | Data analysis      | Uncover patterns in structured data. This process provides insights and supports data-driven decisions.   |
 | Model simulation   | Simulate complex workloads. The method predicts behavior and optimizes designs or processes. Fluid dynamics and finite element analysis serve as examples. |
 | Anomaly detection  | Identify unusual patterns in data. This strategy applies to fraud detection and equipment failure prediction.  |
 | Recommendation     | Offer personalized recommendations based on user behavior. The system applies this approach in e-commerce and streaming services.  |
-| Optimization       | Solve complex problems to improve efficiency. The approach optimizes supply chains and allocates resources.     |
-| Sentiment analysis | Analyze text from social media or customer reviews to gauge public sentiment. This analysis enhances the customer experience. |
+| Optimization       | Solve complex problems for improved efficiency. The approach optimizes supply chains and allocates resources.     |
+| Sentiment analysis | Analyze text from social media or customer reviews for public sentiment. This analysis enhances the customer experience. |
 
 ## Next step
 
