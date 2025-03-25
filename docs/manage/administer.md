@@ -117,7 +117,7 @@ Establish clear deployment protocols and proactive drift and sprawl detection st
 - [Portal deployments](#manage-portal-deployments)
 - [Code deployments](#manage-code-deployments)
 - [Configuration drift](#manage-configuration-drift)
-- [Resource sprawl](#manage-resource-sprawl).
+- [Resource sprawl](#manage-resource-sprawl)
 
 ### Manage portal deployments
 
@@ -181,7 +181,7 @@ Manage configuration drift by identifying and correcting discrepancies between y
 
     - ***Detect configuration drift before deployment.*** Preview potential changes before deployment using [Terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan), [Bicep what-if](/azure/azure-resource-manager/bicep/deploy-what-if?tabs=azure-powershell%2CCLI), or [ARM template what-if](/azure/azure-resource-manager/templates/deploy-what-if). Investigate discrepancies thoroughly to ensure proposed changes align with the desired state.
 
-	- ***Detect drift post deployment.*** Regularly compare live environments with desired configurations through regular drift checks. Integrate these checks into your CI/CD pipelines or conduct them manually to maintain consistency.
+	- ***Detect drift post deployment.*** Regularly compare live environments with desired configurations through regular drift checks. Integrate these checks into your CI/CD pipelines or conduct them manually to maintain consistency. See an example with [Azure Policy and Azure Pipelines](/azure/governance/policy/tutorials/policy-devops-pipelines).
 
 	- ***Rollback to last-known-good configuration.*** Develop clear rollback strategies that use automated procedures within your CI/CD pipeline. Utilize your last-known-good configuration to quickly revert undesired changes and minimize downtime.
 
