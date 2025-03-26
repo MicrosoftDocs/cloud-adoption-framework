@@ -42,7 +42,7 @@ All cloud hosting and environment decisions require you to understand the portfo
 
 **Deliverables:**
 
-- In your initial decision documentation, record the location and status of the portfolio documentation and who is responsible for managing it.
+- In your initial decision document, record the location and status of the portfolio documentation and who is responsible for managing it.
 
 **Guidance to support deliverable completion:**
 
@@ -66,7 +66,7 @@ Some organizations can use a single workload and its supporting assets to host t
 
 **Deliverables:**
 
-- In your [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx), record all relevant hierarchy needs.
+- In your initial decision document, record all relevant hierarchy needs.
 
 **Guidance to support deliverable completion:**
 
