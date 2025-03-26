@@ -91,7 +91,7 @@ Build responsible AI into your implementation plan from the start. Apply ethical
 
 1. *Start AI management.* Use AI operations frameworks like GenAIOps or MLOps. These frameworks include deployment tracking, performance monitoring, and cost control. See [Manage AI](./manage.md) for details.
 
-1. *Start AI security.* Protect AI systems with regular security assessments. Address threats such as adversarial inputs and data breaches. See [Secure AI](./secure.md) for details on this process.
+1. *Start AI security.* Protect AI systems with regular security assessments. Address threats such as adversarial inputs and data breaches. See [Secure AI](./secure.md) for details.
 
 ## Estimate delivery timelines
 
