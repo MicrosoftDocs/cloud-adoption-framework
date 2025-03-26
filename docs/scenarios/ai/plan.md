@@ -26,13 +26,13 @@ In your [technology strategy](./strategy.md#define-an-ai-technology-strategy), y
 
 ## Acquire AI skills
 
-Acquiring AI skills requires organizations to assess their current talent pool and determine whether to upskill, recruit, or partner with external experts. Assess your current talent pool to identify needs for upskilling, recruiting, or external partnerships. Building a skilled AI team ensures you can adapt to challenges and handle various AI projects. AI constantly evolves, so maintaining a culture of continuous learning supports innovation and keeps skills current.
+Start by assessing your current talent pool, then decide whether to upskill existing staff, recruit new talent, or engage external experts. A skilled team helps you manage AI projects, adapt to change, and drive innovation. Because AI evolves rapidly, foster a culture of continuous learning.
 
-- *Learn AI skills.* Use the [AI learning hub](/ai/) platform for free AI training, certifications, and product guidance. For Azure, set certification goals, such as earning [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) certifications.
+- *Learn AI skills.* Use the [AI learning hub](/ai/) platform for free AI training, certifications, and product guidance. For Azure, set certification goals, such as [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) certifications.
 
-- *Recruit AI professionals.* For expertise beyond your internal capabilities, recruit AI professionals experienced in model development, generative AI, or AI ethics. These professionals are in high-demand. Consider collaborating with educational institutions. Make sure to update job descriptions to reflect evolving AI needs, and offer competitive compensation. Create an attractive employer brand. Showcase your organization’s commitment to innovation and technological advancement, making your brand appealing to AI professionals.
+- *Recruit AI professionals.* Hire experts in model development, generative AI, or AI ethics to fill gaps beyond internal capacity. Update job descriptions to reflect evolving skill needs. Build an employer brand that emphasizes innovation and technical leadership. Partner with universities to access emerging talent.
 
-- *Use Microsoft partners to acquire AI skills.* Use the [Microsoft partners marketplace](https://partner.microsoft.com//partnership/find-a-partner) to address skill shortages and meet time constraints. Microsoft partners provide AI, data, and Azure expertise across various industries.
+- *Use Microsoft partners to acquire AI skills.* Use the [Microsoft partners marketplace](https://partner.microsoft.com//partnership/find-a-partner) to access AI, data, and Azure expertise. Partners can fill skill gaps quickly and support projects across industries.
 
 ## Access AI resources
 
