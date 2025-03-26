@@ -67,9 +67,9 @@ If you plan to build an AI agent or workload, create a proof of concept (PoC) to
 - *Get started.* Microsoft has step-by-step guidance for POCs on its various AI services. Use the following table to find the right get started guide.
 
     | AI type  | Get started guide |
-    |----------|--------------|
-    | Generative AI | Azure PaaS: [Azure AI Foundry](/azure/ai-studio/quickstarts/get-started-playground) and [Azure OpenAI](/azure/ai-services/openai/assistants-quickstart)<br><br>Microsoft Copilot: [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started)   |
-    | Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day?)         |
+    |----------|-------------------|
+    | Generative AI | Azure PaaS: [Azure AI Foundry](/azure/ai-studio/quickstarts/get-started-playground) and [Azure OpenAI](/azure/ai-services/openai/assistants-quickstart)<br><br>Microsoft Copilots: [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) and [Microsoft 365 Copilot extensibility](/microsoft-365-copilot/extensibility/decision-guide)   |
+    | Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day)         |
     | Analytical AI | Azure AI services: [Azure AI Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Azure AI Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence Studio](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), [Face service](/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library), [Azure AI Language](/azure/ai-services/language-service/overview#available-features), [Azure AI Speech](/azure/ai-services/speech-service/overview#get-started), [Azure AI Translator](/azure/ai-services/translator/translator-overview#translator-features-and-development-options), [Azure AI Vision](/azure/ai-services/computer-vision/overview#get-started)<br>*Each feature of this AI service has its own guide.* |
 
 1. *Reprioritize based on results.* Use the PoC to reprioritize your use cases. If the POC reveals major challenges, shift to more practical opportunities.
