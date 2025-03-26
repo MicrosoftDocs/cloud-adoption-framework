@@ -64,7 +64,7 @@ If you plan to build an AI agent or workload, create a proof of concept (PoC) to
 
 1. *Choose the right use case.* Select a high-value project from your AI shortlist that matches your AI maturity. If you're building an AI app, start with an internal, non-customer-facing project to limit risk and test your approach. Use A/B testing to validate the solution and gather baseline data.
 
-- *Get started.* Microsoft has step-by-step guidance for POCs on its various AI services. Use the following table to find the right get started guide.
+1. *Get started.* Microsoft has step-by-step guidance for POCs on its various AI services. Use the following table to find the right get started guide.
 
     | AI type  | Get started guide |
     |----------|-------------------|
