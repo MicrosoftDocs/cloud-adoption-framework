@@ -58,10 +58,10 @@ AI resources support critical business functions and can become targets for misu
 - *Apply workload-specific security controls.* AI workloads on PaaS and IaaS have different risks and controls. Use tailored guidance for AI on Azure platform services (PaaS) and AI on Azure infrastructure (IaaS):
 
     > [!div class="nextstepaction"]
-    > [Security for Azure platforms (PaaS)](./platform/security.md)
+    > [AI Security on Azure platforms (PaaS)](./platform/security.md)
 
     > [!div class="nextstepaction"]
-    > [Security for Azure infrastructure (IaaS)](./infrastructure/security.md)
+    > [AI Security on Azure infrastructure (IaaS)](./infrastructure/security.md)
 
 ### Secure AI data
 
@@ -88,6 +88,14 @@ AI systems can fail or get attacked without warning, so organizations must monit
 - *Monitor AI risks.* AI workloads can introduce hidden or fast-changing risks that static reviews miss. Automate the detection and remediation of generative AI risks. Use [AI security posture management](/azure/defender-for-cloud/ai-security-posture) in Microsoft Defender for Cloud to automate detection and remediation of generative AI risks.
 
 - *Monitor for AI security incidents.* Undetected incidents can lead to data loss, model compromise, or service disruption. Build and test an incident response plan focused on AI, and continuously monitor for indicators of compromise to trigger rapid mitigation.
+
+- *Apply workload-specific monitoring.* AI workloads on PaaS and IaaS have different monitoring needs. Use guidance for AI on Azure PaaS and AI on Azure IaaS:
+
+    > [!div class="nextstepaction"]
+    > [AI Monitoring on Azure platforms (PaaS)](./platform/management.md#)
+
+    > [!div class="nextstepaction"]
+    > [AI monitoring on Azure infrastructure (IaaS)](./infrastructure/security.md)
 
 ## Next steps
 
