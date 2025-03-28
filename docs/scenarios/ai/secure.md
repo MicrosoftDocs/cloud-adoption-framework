@@ -81,7 +81,7 @@ AI data includes sensitive information that attackers can exfiltrate, manipulate
 
 - *Train employees on AI-specific risks.* Misuse and misconfiguration often stem from human error. Deliver role-based training on AI security, data handling, and threat awareness for all AI project teams.
 
-## Monitor AI security controls
+## Monitor AI security
 
 AI systems can fail or get attacked without warning, so organizations must monitor for quick detection and response. Automate monitoring and response using AI-specific tools to reduce risk and maintain operational integrity.
 
