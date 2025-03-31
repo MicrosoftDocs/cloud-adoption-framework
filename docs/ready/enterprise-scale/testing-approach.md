@@ -39,14 +39,14 @@ The platform resources in scope for this article and this testing approach are:
 
 | Product or service | Resource provider and type |
 | :--------------- | :------------------------ |
-| Management groups | Microsoft.Management/managementGroups |
-| Management groups subscription association | Microsoft.Management/managementGroups/subscriptions |
-| Policy definitions | Microsoft.Authorization/policyDefinitions |
-| Policy initiative definitions or policy set definitions | Microsoft.Authorization/policySetDefinitions |
-| Policy assignments | Microsoft.Authorization/policyAssignments |
-| RBAC role definitions | Microsoft.Authorization/roleDefinitions |
-| RBAC role assignments | Microsoft.Authorization/roleAssignments |
-| Subscriptions | Microsoft.Subscription/aliases |
+| Management groups | `Microsoft.Management/managementGroups` |
+| Management groups subscription association | `Microsoft.Management/managementGroups/subscriptions` |
+| Policy definitions | `Microsoft.Authorization/policyDefinitions` |
+| Policy initiative definitions or policy set definitions | `Microsoft.Authorization/policySetDefinitions` |
+| Policy assignments | `Microsoft.Authorization/policyAssignments` |
+| RBAC role definitions | `Microsoft.Authorization/roleDefinitions` |
+| RBAC role assignments | `Microsoft.Authorization/roleAssignments` |
+| Subscriptions | `Microsoft.Subscription/aliases` |
 
 ## Example scenarios and outcomes
 
