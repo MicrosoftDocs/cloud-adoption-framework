@@ -27,7 +27,9 @@ This guidance is most suited to organizations with robust change management proc
 ## Platform definition
 
 > [!IMPORTANT]
- > This guidance is not for development environments or test environments that will be used by application or service owners known as landing zones, workloads, applications, or services. These are placed and handled within the production environment Azure landing zones management group hierarchy and associated governance (RBAC and Azure Policy). For guidance on development, test, user acceptance testing (UAT), and production environments for application workloads and teams see [Manage application development environments in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments).
+ > This guidance is not for development environments or test environments that will be used by application or service owners known as landing zones, workloads, applications, or services. These are placed and handled within the production environment Azure landing zones management group hierarchy and associated governance (RBAC and Azure Policy). 
+ >
+ > For guidance on development, test, user acceptance testing (UAT), and production environments for application workloads and teams see [Manage application development environments in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments).
  >
  > This guidance is only for platform level testing and changes in the context of Azure landing zones.
 
