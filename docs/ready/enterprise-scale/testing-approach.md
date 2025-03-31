@@ -17,17 +17,17 @@ Some organizations might want to test their Azure landing zones platform deploym
 
 This article can also be used with the [Platform automation and DevOps critical design area](../landing-zone/design-area/platform-automation-devops.md) guidance as it relates to the PlatformOps and Central functions teams and tasks. Furthermore, it can be combined with the guidance in [Adopt policy-driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance) for techniques on rolling out policy changes to an Azure landing zones deployment.
 
-This guidance is most suited to organizations with robust change management processes governing changes to the production environment management group hierarchy. The *canary* management group hierarchy can be independently used to author and test deployments before you deploy them into the production environment.
+This guidance is most suited to organizations with robust change management processes governing changes to the production management group hierarchy. The *canary* management group hierarchy can be independently used to author and test deployments before you deploy them into the production environment.
 
 > [!NOTE]
  > The term *canary* is used to avoid confusion with development environments or test environments. This name is used for illustration purposes only. You might define any name you deem as appropriate for your canary Azure landing zones environment.
  >
- > Similarly, the term *production environment/hierarchy* is used throughout this guidance to refer to the ALZ management group hierarchy your organization might have in place that contains the Azure subscriptions and resources for your workloads.
+ > Similarly, the term *production environment/hierarchy* is used throughout this guidance to refer to the Azure landing zones management group hierarchy your organization might have in place that contains the Azure subscriptions and resources for your workloads.
 
 ## Platform definition
 
 > [!IMPORTANT]
- > This guidance is not for development environments or test environments that will be used by application or service owners known as landing zones, workloads, applications, or services. These are placed and handled within the production environment ALZ management group hierarchy and associated governance (RBAC and Azure Policy). For guidance on development, test, user acceptance testing (UAT), and production environments for application workloads and teams see [Manage application development environments in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments).
+ > This guidance is not for development environments or test environments that will be used by application or service owners known as landing zones, workloads, applications, or services. These are placed and handled within the production environment Azure landing zones management group hierarchy and associated governance (RBAC and Azure Policy). For guidance on development, test, user acceptance testing (UAT), and production environments for application workloads and teams see [Manage application development environments in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments).
  >
  > This guidance is only for platform level testing and changes in the context of Azure landing zones.
 
@@ -61,12 +61,12 @@ A similar scenario might be a change to the Azure RBAC role assignments and Micr
 
 *Figure 1: Canary management group hierarchy.*
 
-As the diagram shows, the entire Azure landing zones production environment management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The IDs must be unique within a single Microsoft Entra tenant.
+As the diagram shows, the entire Azure landing zones production management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The IDs must be unique within a single Microsoft Entra tenant.
 
 > [!NOTE]
- > The canary environment management group display names can be the same as the production environment management group display names. This might cause confusion for users. Because of this, we recommend to append the name "canary" to the display names, as well as to their IDs.
+ > The canary management group display names can be the same as the production management group display names. This might cause confusion for users. Because of this, we recommend to append the name "canary" to the display names and to their IDs.
 
-The canary environment management group hierarchy is then used to simplify testing of the following resource types:
+The canary management group hierarchy is then used to simplify testing of the following resource types:
 
 - Management groups
   - Subscription placement
@@ -78,15 +78,15 @@ The canary environment management group hierarchy is then used to simplify testi
   - Initiatives, also known as set definitions
   - Assignments
 
-## What if you don't want to deploy the entire canary environment management group hierarchy?
+## What if you don't want to deploy the entire canary management group hierarchy?
 
-If you don't want to deploy the entire canary environment management group hierarchy, you can test platform resources within the production environment hierarchy by using [sandbox subscriptions](../considerations/sandbox-environments.md) as shown in the diagram.
+If you don't want to deploy the entire canary management group hierarchy, you can test platform resources within the production environment hierarchy by using [sandbox subscriptions](../considerations/sandbox-environments.md) as shown in the diagram.
 
 [![Diagram of the testing approach that uses sandboxes.](./media/canary-sandboxes.png)](./media/canary-sandboxes.png#lightbox)
 
 *Figure 2: Azure landing zones management group hierarchy highlighting sandboxes.*
 
-To test Azure Policy and RBAC in this scenario, you need a single Azure subscription with the Owner RBAC role assigned to the identity you wish to complete the testing as, for example, User Account, Service Principal, or Managed Service Identity. This configuration will allow you to author, assign, and remediate Azure Policy definitions and assignments within the scope of the sandbox subscription only.
+To test Azure Policy and RBAC in this scenario, you need a single Azure subscription with the Owner RBAC role assigned to the identity you wish to complete the testing as, for example, User Account, Service Principal, or Managed Service Identity. This configuration allows you to author, assign, and remediate Azure Policy definitions and assignments within the scope of the sandbox subscription only.
 
 This sandbox approach can also be used for RBAC testing within the subscription, for example, if you're developing a new custom RBAC role to grant permissions for a particular use case. This testing can all be done in the sandbox subscription and tested before you create and assign roles higher up in the hierarchy.
 
@@ -96,14 +96,14 @@ However, this approach doesn't allow you to test with the inheritance of RBAC an
 
 ## Implementation guidance
 
-Below is guidance on how to implement and use the canary management group hierarchy for Azure landing zones alongside a production environment ALZ management group hierarchy.
+Below is guidance on how to implement and use the canary management group hierarchy for Azure landing zones alongside a production environment Azure landing zones management group hierarchy.
 
 >[!WARNING]
  > If you are using the portal to deploy and manage your Azure landing zones environment today, it might be difficult to adopt and use the canary approach efficiently due to a high risk of both the production and canary environments getting out-of-sync often and therefore not providing a replica-like hierarchy and environment of production.
  >
  > Consider moving to an Infrastructure-as-Code deployment approach for Azure landing zones, as listed above, if you are in this scenario. Or be aware of the potential risks of configuration drift between canary and production and proceed with care. You should review [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) for more information.
 
-1. Use separate Microsoft Entra service principals (SPNs) or Managed Service Identities (MSIs) that are granted permissions over the relevant production environment or canary environment ALZ management group hierarchy.
+1. Use separate Microsoft Entra service principals (SPNs) or Managed Service Identities (MSIs) that are granted permissions over the relevant production environment or canary environment Azure landing zones management group hierarchy.
    - This guidance follows the principle of least privilege (PoLP)
 2. Use separate folders within a git repository, branches, or repositories to hold the Infrastructure-as-Code for the production environment and canary environment Azure landing zones deployments.
    - Using the relevant Microsoft Entra service principals (SPNs) or Managed Service Identities (MSIs) as part of the CI/CD pipelines depending on which hierarchy is being deployed.
@@ -111,12 +111,12 @@ Below is guidance on how to implement and use the canary management group hierar
    - Consider reducing the number of approvers and checks for the canary environment to fail-fast.
 4. Use the same Azure Pipelines or GitHub actions that use environment variables to change which hierarchy is being deployed. Another option is to clone the pipelines and amend the hard-coded settings to define which hierarchy is being deployed.
    - Using [Azure Pipelines DevOps templates](/azure/devops/pipelines/process/templates) or [GitHub Actions Workflow Templates](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization) will help you adhere to the *don't repeat yourself (DRY)* principle.
-5. Have a set of canary subscriptions under a separate billing account, for example an EA Account or MCA invoice section, that can be moved around the canary management group hierarchy as needed.
+5. Have a set of canary subscriptions under a separate billing account, for example an Enterprise Agreement (EA) Account or Microsoft Customer Agreement (MCA) invoice section, that can be moved around the canary management group hierarchy as needed.
    - It might be beneficial to have a set of resources always deployed into the canary environment subscriptions to speed up testing and validation of changes to the canary environment.
-6. Have a set of example application workload architectures that you can deploy into the canary subscriptions in the canary environment to test the Azure Policy and RBAC changes against. This will help you to validate the changes before you deploy and promote the changes into production.
+6. Have a set of example application workload architectures that you can deploy into the canary subscriptions in the canary environment to test the Azure Policy and RBAC changes against. This helps you to validate the changes before you deploy and promote the changes into production.
    - These example workloads can be deployed using the same Infrastructure-as-Code templates that is used to deploy the production application workloads. This will help you to ensure that the canary environment is in sync with the production environment and that the changes you're testing are valid and applicable to the production environment.
    - You should continuously review and update the example workloads to ensure that they are relevant and up to date with the latest architecture and design patterns in your organization.
-   - If you provide reference architectures to your application teams, consider deploying these into the canary environment as well. This will help you to validate the changes against the reference architectures and ensure that they are applicable to the production environment.
+   - If you provide reference architectures to your application teams, consider deploying these into the canary environment as well. This helps you to validate the changes against the reference architectures and ensure that they are applicable to the production environment.
 7. Send all Azure activity logs for all Azure subscriptions, including any canary environment subscriptions, to the production environment Azure Log Analytics workspace as per the [Azure landing zones design recommendations](../landing-zone/design-area/management.md).
    - This helps your security and operations teams to monitor the canary environment for any changes or issues that might arise from the testing of the Azure Policy and RBAC changes to the production environment.
 
@@ -135,7 +135,7 @@ Considerations to take into account when you use a single Microsoft Entra tenant
   - In a single Microsoft Entra tenant, you can use the different Microsoft Entra groups for both production environments and canary Azure landing zones environments, with the same users, assigned to their relevant management group hierarchy within the same Microsoft Entra tenant.
 - Increased or duplicated Microsoft Entra ID licensing costs because of multiple identities across different Microsoft Entra tenants.
   - This point is especially relevant to customers who use Microsoft Entra ID P1 or P2 features.
-- RBAC changes will be more complex in both canary environments and production environments, as it's likely that the users and groups aren't identical across both Microsoft Entra tenants.
+- RBAC changes are more complex in both canary environments and production environments, as it's likely that the users and groups aren't identical across both Microsoft Entra tenants.
   - Furthermore, the users and groups IDs won't be the same across Microsoft Entra tenants because of them being globally unique.
 - Reduces complexity and management overhead caused by managing multiple Microsoft Entra tenants.
   - Privileged users that must maintain access and sign in to separate tenants to perform testing might make changes to the production environment accidentally, instead of making changes to the canary environment and vice versa.
@@ -144,11 +144,11 @@ Considerations to take into account when you use a single Microsoft Entra tenant
 - Reduces friction and the time required to implement changes to the Azure landing zones deployment.
 
 ## Next steps
-Once you have a canary environment in place, you can start to test the Azure Policy and RBAC changes before you deploy them into your production ALZ management group hierarchy.
+Once you have a canary environment in place, you can start to test the Azure Policy and RBAC changes before you deploy them into your production Azure landing zones management group hierarchy.
 
-When you have tested changes to Azure Policies in the canary environment, you can then promote them to the production environment following the same approach as documented in the [Adopt policy-driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance) guidance. This is done by using the [enforcement mode feature of policy assignments](/azure/governance/policy/concepts/assignment-structure#enforcement-mode). Using the approach documented in this guidance allows you to proceed through an additional testing phase before you enforce the Azure Policy in the production environment in its desired effect which will help you build confidence in the Azure Policy changes you are making.
+When you have tested changes to Azure Policies in the canary environment, you can then promote them to the production environment following the same approach as documented in the [Adopt policy-driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance) guidance. This is done by using the [enforcement mode feature of policy assignments](/azure/governance/policy/concepts/assignment-structure#enforcement-mode). Using the approach documented in this guidance allows you to proceed through an extra testing phase before you enforce the Azure Policy in the production environment in its desired effect which will help you build confidence in the Azure Policy changes you are making.
 
-You may also wish to review snadbox environments for your application teams to use for development and testing of their workloads. This is a separate concept to the canary environment and is used to provide a safe environment for application teams to develop and test their workloads before they are deployed into production.
+You can also review sandbox environments for your application teams to use for development and testing of their workloads. This is a separate concept to the canary environment and is used to provide a safe environment for application teams to develop and test their workloads before they are deployed into production.
 
 > [!div class="nextstepaction"]
 > [Implement landing zone sandbox environments](../considerations/sandbox-environments.md)
