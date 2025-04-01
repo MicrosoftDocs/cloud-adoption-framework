@@ -2,7 +2,7 @@
 title: Cloud Adoption Framework enterprise-scale landing zones in Azure
 description: Review options you can use to implement the Cloud Adoption Framework for Azure enterprise-scale architecture.
 author: JefferyMitchell
-ms.author: martinek
+ms.author: tozimmergren
 ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: think-tank

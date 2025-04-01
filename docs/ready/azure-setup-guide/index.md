@@ -2,7 +2,7 @@
 title: Azure setup guide overview
 description: Get an overview of the Azure setup guide, which gives you step-by-step guidance to set up Azure effectively for your organization.
 author: timleyden
-ms.author: martinek
+ms.author: tozimmergren
 ms.date: 09/03/2021
 ms.topic: conceptual
 ms.custom: think-tank, fasttrack-edit, AQC, setup

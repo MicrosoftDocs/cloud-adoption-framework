@@ -1,8 +1,8 @@
 ---
 title: Ambient experience for device interaction
 description: Learn about Azure tools for device interaction and ambient experiences that augment customers' natural surroundings and behaviors.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.custom: internal

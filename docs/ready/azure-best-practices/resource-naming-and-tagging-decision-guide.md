@@ -1,8 +1,8 @@
 ---
 title: Resource naming and tagging decision guide
 description: Learn about naming and tagging approaches when organizing cloud-based resources as part of the Cloud Adoption Framework for Azure.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 10/17/2022
 ms.topic: conceptual
 ms.custom: internal

@@ -2,7 +2,7 @@
 title: Perimeter networks
 description: Learn about perimeter networks, and see how to use Azure components to set up effective perimeter networks for your organization.
 author: tracsman
-ms.author: martinek
+ms.author: tozimmergren
 ms.date: 01/18/2023
 ms.topic: conceptual
 ms.custom: think-tank, virtual-network

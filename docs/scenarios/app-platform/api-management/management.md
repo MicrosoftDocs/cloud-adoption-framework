@@ -1,8 +1,8 @@
 ---
 title: Operations management considerations for Azure API Management
 description: Learn about design considerations and recommendations for operations management in the Azure API Management landing zone accelerator
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 04/12/2022
 ms.topic: conceptual
 ms.custom: internal
