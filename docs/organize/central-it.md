@@ -1,8 +1,8 @@
 ---
 title: Understand the functions of a central IT team
 description: Understand the function of a central IT team, including the source, scope, deliverables, and risks.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3

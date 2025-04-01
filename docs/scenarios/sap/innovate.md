@@ -2,7 +2,7 @@
 title: Innovate with SAP and Azure
 description: Innovate with SAP and Azure
 author: PmeshramPM
-ms.author: martinek
+ms.author: tozimmergren
 ms.date: 07/01/2010
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap

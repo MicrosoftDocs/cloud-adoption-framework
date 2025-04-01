@@ -2,7 +2,7 @@
 title: Security considerations for the App Service landing zone accelerator
 description: Learn about design considerations and recommendations for security in the Azure App Service landing zone accelerator.
 author: motasem13
-ms.author: martinek
+ms.author: tozimmergren
 ms.date: 01/09/2023
 ms.topic: conceptual
 ms.custom: internal

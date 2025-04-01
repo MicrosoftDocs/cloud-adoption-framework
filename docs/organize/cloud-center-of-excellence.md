@@ -1,8 +1,8 @@
 ---
 title: Cloud center of excellence (CCoE) functions
 description: Understand the functions of a cloud center of excellence (CCoE), including the source, scope, and deliverables.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 09/19/2022
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3

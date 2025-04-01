@@ -1,8 +1,8 @@
 ---
 title: Building a cost-conscious organization
 description: Use the Cloud Adoption Framework for Azure to learn best practices for building a cost-conscious organization.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 09/10/2019
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3

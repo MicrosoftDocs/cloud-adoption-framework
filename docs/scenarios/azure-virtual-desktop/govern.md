@@ -1,8 +1,8 @@
 ---
 title: Governing an Azure Virtual Desktop environment
 description: Explore governance best practice for Azure Virtual Desktop
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd

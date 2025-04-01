@@ -2,7 +2,7 @@
 title: Plan for IP addressing
 description: Examine important design considerations and recommendations to ensure IP address space doesn't overlap across on-premises locations and Azure regions.
 author: JefferyMitchell
-ms.author: martinek
+ms.author: tozimmergren
 ms.date: 12/07/2021
 ms.topic: conceptual
 ms.custom: think-tank
