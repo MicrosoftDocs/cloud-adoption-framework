@@ -133,14 +133,13 @@ Below is guidance on how to implement and use the canary management group hierar
 
 Considerations to take into account when you use a single Microsoft Entra tenant are:
 
-- Follows [Azure landing zones design recommendations](../landing-zone/design-area/azure-billing-microsoft-entra-tenant.md) for Microsoft Entra tenants.
-  - In a single Microsoft Entra tenant, you can use the different Microsoft Entra groups for both production environments and canary Azure landing zones environments, with the same users, assigned to their relevant management group hierarchy within the same Microsoft Entra tenant.
-- Increased or duplicated Microsoft Entra ID licensing costs because of multiple identities across different Microsoft Entra tenants.
-  - This point is especially relevant to customers who use Microsoft Entra ID P1 or P2 features.
-- RBAC changes are more complex in both canary environments and production environments, as it's likely that the users and groups aren't identical across both Microsoft Entra tenants.
-  - Furthermore, the users and groups IDs won't be the same across Microsoft Entra tenants because of them being globally unique.
+- Using a single tenant follows [Azure landing zones design recommendations](../landing-zone/design-area/azure-billing-microsoft-entra-tenant.md) for Microsoft Entra tenants.
+  - In a single Microsoft Entra tenant, you can use the different Microsoft Entra groups for both production and canary Azure landing zones environments with the same users assigned to their relevant management group hierarchy.
+- Increased or duplicated Microsoft Entra ID licensing costs because of multiple identities across different Microsoft Entra tenants. This is particularly relevant to customers who use Microsoft Entra ID P1 or P2 features.
+- RBAC changes are more complex in both canary and production environments, as it's likely that the users and groups aren't identical across both Microsoft Entra tenants.
+  - Consider that the users and groups IDs won't be the same across Microsoft Entra tenants since they are globally unique.
 - Reduces complexity and management overhead caused by managing multiple Microsoft Entra tenants.
-  - Privileged users that must maintain access and sign in to separate tenants to perform testing might make changes to the production environment accidentally, instead of making changes to the canary environment and vice versa.
+  - Privileged users that must maintain access and sign in to separate tenants to perform testing might make accidental changes to the production environment instead of the canary environment, as an example.
 - Reduces the likelihood of configuration drift and deployment failures.
 - Doesn't require extra security and break-glass or emergency access processes to be created.
 - Reduces friction and the time required to implement changes to the Azure landing zones deployment.
