@@ -145,13 +145,13 @@ productDirectory:
       imageSrc: ./_images/icons/manage.png
       links:
         - url: ./manage/ready.md
-          text: Ready your Azure cloud operations
+          text: Ready Azure operations
         - url: ./manage/administer.md
-          text: Administer your Azure cloud estate
+          text: Administer Azure
         - url: ./manage/monitor.md
-          text: Monitor your Azure cloud estate
+          text: Monitor Azure
         - url: ./manage/protect.md
-          text: Protect your Azure cloud estate
+          text: Protect Azure
 
     # Card
     - title: Govern
