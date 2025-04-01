@@ -80,9 +80,9 @@ The canary management group hierarchy is then used to simplify testing of the fo
   - Initiatives, also known as set definitions
   - Assignments
 
-## What if you don't want to deploy the entire canary management group hierarchy?
+## What if you don't want to deploy the canary management group hierarchy?
 
-If you don't want to deploy the entire canary management group hierarchy, you can test platform resources within the production environment hierarchy by using [sandbox subscriptions](../considerations/sandbox-environments.md) as shown in the diagram.
+If you don't want to deploy the canary management group hierarchy, you can test platform resources within the production environment hierarchy by using [sandbox subscriptions](../considerations/sandbox-environments.md) as shown in the diagram.
 
 [![Diagram of the testing approach that uses sandboxes.](./media/canary-sandboxes.png)](./media/canary-sandboxes.png#lightbox)
 
@@ -105,10 +105,10 @@ Below is guidance on how to implement and use the canary management group hierar
  >
  > Consider moving to an Infrastructure as Code (IaC) deployment approach for Azure landing zones, as listed above, if you're in this scenario. Or be aware of the potential risks of configuration drift between canary and production and proceed with care. For more information, see [Use IaC to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates).
 
-1. Use separate Microsoft Entra service principals (SPNs) or Managed Service Identities (MSIs) that are granted permissions over the relevant production environment or canary environment Azure landing zones management group hierarchy.
+1. Use separate Microsoft Entra service principals (SPNs) or Managed Identities (MIs) that are granted permissions over the relevant production environment or canary environment Azure landing zones management group hierarchy.
    - This guidance follows the principle of least privilege (PoLP)
 2. Use separate folders within a git repository, branches, or repositories to hold the IaC for the production environment and canary environment Azure landing zones deployments.
-   - Using the relevant Microsoft Entra service principals (SPNs) or Managed Service Identities (MSIs) as part of the CI/CD pipelines depending on which hierarchy is being deployed.
+   - Using the relevant Microsoft Entra service principals (SPNs) or Managed Identities (MIs) as part of the CI/CD pipelines depending on which hierarchy is being deployed.
 3. Implement git branch policies or security for the canary environment as you have in place for the production environment.
    - Consider reducing the number of approvers and checks for the canary environment to fail-fast.
 4. Use the same Azure Pipelines or GitHub actions that use environment variables to change which hierarchy is being deployed. Another option is to clone the pipelines and amend the hard-coded settings to define which hierarchy is being deployed.
