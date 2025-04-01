@@ -1,7 +1,7 @@
 ---
 title: Cloud adoption antipatterns
 description: Learn about antipatterns that block the adoption, innovation, and realization of cloud goals in businesses. View resources on overcoming common antipatterns.
-author: lpassig
+author: Zimmergren
 ms.author: tozimmergren
 ms.date: 2/19/2021
 ms.topic: conceptual

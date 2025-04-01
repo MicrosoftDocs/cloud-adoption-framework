@@ -2,7 +2,7 @@
 title: Identity and access management considerations for the App Service landing zone accelerator
 description: Learn about design considerations and recommendations for identity and access management in the Azure App Service landing zone accelerator.
 author: motasem13
-ms.author: tozimmergren
+ms.author: mohamad
 ms.date: 01/06/2023
 ms.topic: conceptual
 ms.custom: internal

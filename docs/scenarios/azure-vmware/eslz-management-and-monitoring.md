@@ -2,7 +2,7 @@
 title: Management and monitoring for Azure VMware Solution
 description: Learn how to improve management and monitoring of Azure VMware Solution with this enterprise-scale scenario.
 author: Prasad3017
-ms.author: tozimmergren
+ms.author: pgandham
 ms.date: 08/04/2022
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank

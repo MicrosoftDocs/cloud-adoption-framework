@@ -2,7 +2,7 @@
 title: Enterprise-scale network topology and connectivity for Azure VMware Solution
 description: Examine key design considerations and best practices around networking and connectivity for Azure and Azure VMware Solution deployments.
 author: rodrigosantosms
-ms.author: tozimmergren
+ms.author: rosanto
 ms.date: 10/17/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware
