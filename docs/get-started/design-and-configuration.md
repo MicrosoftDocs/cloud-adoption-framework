@@ -22,7 +22,7 @@ A clear and concise business strategy helps the cloud platform team understand w
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations, desired business outcomes, and high-level business justification.
+- Document your cloud adoption strategy, including motivations, desired business outcomes, and high-level business justifications.
 
 **Guidance to support deliverable completion:**
 
@@ -47,7 +47,7 @@ The output of the digital estate assessment provides the cloud platform team wit
 - Raw data on the existing inventory.
 - Quantitative analysis of the existing inventory to refine the business justification.
 - Qualitative analysis of the first 10 workloads.
-- Updated business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
+- Updated business justification in adoption strategies and plan documents.
 
 **Guidance to support deliverable completion:**
 

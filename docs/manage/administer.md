@@ -20,10 +20,13 @@ Management responsibilities vary by deployment model. Use the following table to
 
 | Administration areas   | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
 |------------------------|-------------------|--------------------|--------------------|------------|
-| Data                   | ✔️                | ✔️                 | ✔️                 | ✔️         |
-| Code and runtime       | ✔️                | ✔️                 | ✔️                 |            |
-| Cloud resources        | ✔️                | ✔️                 | ✔️                 |            |
-| Operating system       | ✔️                | ✔️                 |                    |            |
+| [Change](#manage-change)                 | ✔️                | ✔️                 | ✔️                 | ✔️         |
+| [Security](#manage-security)               | ✔️                | ✔️                 | ✔️                 | ✔️         |
+| [Compliance](#manage-compliance)             | ✔️                | ✔️                 | ✔️                 | ✔️         |
+| [Data](#manage-data)                   | ✔️                | ✔️                 | ✔️                 | ✔️         |
+| [Code and runtime](#manage-code-and-runtime)       | ✔️                | ✔️                 | ✔️                 |            |
+| [Cloud resources](#manage-cloud-resources)        | ✔️                | ✔️                 | ✔️                 |            |
+| [Operating system](#manage-operating-systems)       | ✔️                | ✔️                 |                    |            |
 | Virtualization layer   | ✔️                |                    |                    |            |
 | Physical hardware      | ✔️                |                    |                    |            |
 

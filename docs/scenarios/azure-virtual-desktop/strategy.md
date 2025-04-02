@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-avd
 
 # Strategic benefits of a virtual desktop
 
-When you plan your organization's move to the cloud, a best practice is to create a single, centralized strategy by using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
+When you plan your organization's move to the cloud, a best practice is to create a single, centralized strategy by using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework.
 
 The guidance in this article can help to expose several considerations about virtual desktops that could affect your strategy.
 
@@ -34,7 +34,7 @@ You can support realization of these outcomes by virtualizing desktops in the cl
 
 Azure Virtual Desktop is a business-critical platform for many organizations. When Azure Virtual Desktop is foundational to an organization's business processes, services throughout the organization's cloud portfolio depend on it. The adoption plan for Azure Virtual Desktop can directly and indirectly affect cloud adoption for all related workloads. While Azure Virtual Desktop isn't typically an organization's first platform in the cloud, it can be the most important. Understanding the strategy for migrating to Azure Virtual Desktop and how to achieve the outcomes that you want in the future is critical to the success of all your plans for cloud adoption.
 
-This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx), and other resources from the Cloud Adoption Framework, to capture the strategic impact of adopting Azure Virtual Desktop.
+This article uses resources from the Cloud Adoption Framework to capture the strategic impact of adopting Azure Virtual Desktop.
 
 ## Reasons to move to Azure Virtual Desktop
 
