@@ -1,7 +1,8 @@
 ---
 title: Administer your Azure cloud estate
 description: Learn how to administer your Azure cloud estate and manage your cloud operations to ensure business alignment.
-author: "stephen-sumner", "Zimmergren"
+author: stephen-sumner
+author: Zimmergren
 ms.author: ssumner
 ms.date: 04/01/2025
 ms.topic: conceptual
@@ -216,7 +217,7 @@ Proximity	Provide lower latency to end users.
 
 - ***Manage relocation projects.*** Small teams should relocate one workload at a time. Larger teams should relocate multiple workloads in bulk to gain efficiency.
 
-For 
+For more information, see
 
 ## Manage operating systems
 
