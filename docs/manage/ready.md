@@ -79,10 +79,10 @@ Create detailed step-by-step guides (runbooks or playbooks) for key operational 
 
     | Scenario | Example |
     |----------|-------------|
-    | High CPU usage | [Azure App Service](/azure/app-service/manage-scale-up) |
-    | Failover and failback | [Azure Site Recovery](/azure/site-recovery/failover-failback-overview-modernized) |
-    | Blue/green deployments | [Azure Front Door](/azure/frontdoor/blue-green-deployment) |
-    | Backup restoration | [Azure Blob Storage](/azure/storage/common/storage-disaster-recovery-guidance) and [Azure Cosmos DB](/azure/cosmos-db/restore-account-continuous-backup) |
+    | High CPU usage | [Manage scale up in Azure App Service](/azure/app-service/manage-scale-up) |
+    | Failover and failback | [Failover and failback in Azure Site Recovery](/azure/site-recovery/failover-failback-overview-modernized) |
+    | Blue/green deployments | [Blue/green deployment in Azure Front Door](/azure/frontdoor/blue-green-deployment) |
+    | Backup restoration | Backup restore in [Azure Blob Storage](/azure/storage/common/storage-disaster-recovery-guidance) and [Azure Cosmos DB](/azure/cosmos-db/restore-account-continuous-backup) |
 
 1. ***Store these runbooks in a central repository.*** Maintain runbooks in a central repository accessible by on-call engineers for immediate use during incidents.
 
@@ -92,7 +92,7 @@ Create detailed step-by-step guides (runbooks or playbooks) for key operational 
 
 ### Document tools and solutions
 
-Adopt standardized tools and processes for cloud operations throughout your organization. Ensure teams use Azure Monitor, ticketing system, infrastructure-as-code (IaC) [templates](/azure/templates/), and deployment pipelines (GitHub Actions or Azure Pipelines). This approach promotes consistency, reduces redundancy, and enhances cross-team support capabilities.
+Clear documentation ensures consistency, reduces operational risks, and enhances team efficiency. Create and maintain comprehensive documentation for cloud tools. Regularly update documentation to reflect current practices and ensure easy accessibility for all team members.
 
 | Area | Example benefits |
 |-----|----|
@@ -102,23 +102,19 @@ Adopt standardized tools and processes for cloud operations throughout your orga
 
 ## Manage your cloud operations
 
-Standardize tools, automate routine tasks, and align support coverage to simplify daily cloud operations. Clear processes minimize confusion and accelerate incident resolution. Ensure teams adopt unified monitoring, ticketing, and Infrastructure-as-Code practices. Follow these operational guidelines:
+Effective cloud management optimizes operational efficiency, reduces downtime, and clarifies roles and responsibilities. Standardize your cloud operations through automation and structured support processes. Follow these operational guidelines:
 
-### Manage cloud support
+- ***Provide continuous cloud support.*** Establish 24/7 support coverage through either global teams adopting a follow-the-sun model or structured on-call rotations. Define responsibilities clearly to ensure timely response and resolution of critical incidents. Configure automated [alerts](/azure/cloud-adoption-framework/manage/monitor#configure-alerting) to notify designated support personnel immediately.
 
-Provide continuous support for critical incidents by establishing 24/7 coverage. Meet service level agreements with clearly assigned responsibilities. Implement either a follow-the-sun model across global teams or maintain a structured on-call schedule. Configure [alerts](/azure/cloud-adoption-framework/manage/monitor#configure-alerting) to notify the on-call engineer or team whenever an alert triggers.
+- ***Automate repetitive work.*** Use Azure automation capabilities to minimize manual processes and reduce operational overhead. Automate routine activities to eliminate errors, streamline workflows, and enable teams to concentrate on strategic priorities.
 
-### Manage repetitive work
-
-Automate repetitive operational tasks to eliminate manual errors and reduce operational burden. Use Azure services for handling routine work, allowing your team to focus on strategic tasks.
-
-| Use Case            | Examples                                                                                       |
-|---------------------|------------------------------------------------------------------------------------------------|
-| Automation          | Automate workflows in Azure Boards or ITSM system. Templates for "Change Request" and "Incident" work items. |
-| Incident response   | To autogenerate incident tickets with standard fields populated, integrate Azure Monitor and Azure Service Health with ticketing system. |
-| Change management   | Use [Azure Logic Apps](/azure/logic-apps/logic-apps-overview) to autoapprove low-risk changes or autoremediate certain incidents. |
-| Compliance          | Use Azure Policy to enforce and monitor cloud compliance.                                       |
-| Security            | Use Microsoft Defender for Cloud and Microsoft Sentinel to automate security threat detection and response. Use Microsoft Entra ID Governance to review permissions and automate permissions management. |
+    | Use Case            | Examples                                                                                       |
+    |---------------------|------------------------------------------------------------------------------------------------|
+    | Automation          | Automate workflows in Azure Boards or ITSM system. Templates for "Change Request" and "Incident" work items. |
+    | Incident response   | To autogenerate incident tickets with standard fields populated, integrate Azure Monitor and Azure Service Health with ticketing system. |
+    | Change management   | Use [Azure Logic Apps](/azure/logic-apps/logic-apps-overview) to autoapprove low-risk changes or autoremediate certain incidents. |
+    | Compliance          | Use Azure Policy to enforce and monitor cloud compliance.                                       |
+    | Security            | Use Microsoft Defender for Cloud and Microsoft Sentinel to automate security threat detection and response. Use Microsoft Entra ID Governance to review permissions and automate permissions management. |
 
 ## Improve operations
 
@@ -126,7 +122,7 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
 
 1. ***Review operations to improve.*** Follow best practices to [monitor](./monitor.md#configure-monitoring) the health, compliance, security, costs, data, and cloud resources. Conduct weekly operational reviews to discuss key metrics, recent incidents, deployed changes, and anticipated risks. Actively address [resource sprawl](./administer.md#manage-resource-sprawl) and [technical debt](/azure/well-architected/performance-efficiency/continuous-performance-optimize#address-technical-debt).
 
-1. ***Train for operations.*** Foster ongoing skill development by prioritizing essential learning resources. Maintain dynamic cloud operations through practical training environments.
+1. ***Train for operations.*** Foster ongoing skill development by prioritizing essential learning resources. Maintain dynamic cloud operations through practical training environments. The following table provides resource for operations training.
 
     | Operations training   | Description  |
     |---|---|
