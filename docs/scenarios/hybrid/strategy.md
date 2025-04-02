@@ -10,7 +10,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Strategic considerations of hybrid and multicloud operations
 
-Best practices encourage customers to create a single centralized cloud adoption strategy by using the [Cloud Adoption Framework for Azure Strategy methodology](../../strategy/index.md). If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article introduces some technical considerations about hybrid and multicloud operations that might affect your strategy.
+Best practices encourage customers to create a single centralized cloud adoption strategy by using the [Cloud Adoption Framework for Azure Strategy methodology](../../strategy/index.md). This article introduces some technical considerations about hybrid and multicloud operations that might affect your strategy.
 
 ## Common motivations for a hybrid and multicloud scenario
 
