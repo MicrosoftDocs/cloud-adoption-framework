@@ -1,7 +1,7 @@
 ---
 title: Administer your Azure cloud estate
 description: Learn how to administer your Azure cloud estate and manage your cloud operations to ensure business alignment.
-author: stephen-sumner
+author: "stephen-sumner", "Zimmergren"
 ms.author: ssumner
 ms.date: 04/01/2025
 ms.topic: conceptual
@@ -201,6 +201,22 @@ Resource sprawl describes the uncontrolled growth of cloud resources. This growt
 3. ***Restrict deployment permissions.*** Implement role-based access control (RBAC) best practices outlined in [Azure RBAC](/azure/role-based-access-control/best-practices) and [Microsoft Entra RBAC](/entra/identity/role-based-access-control/best-practices). Assign appropriate permissions to users. Use reader roles to minimize unauthorized resource creation risks.
 
 4. ***Conduct regular audits.*** Use [Azure Advisor](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) to identify unused or underutilized Azure resources. Use [Cost Management](/azure/cost-management-billing/costs/reporting-get-started) to analyze your cloud spending and remove orphaned resources causing unnecessary costs. Keep in mind not all Azure resources incur charges. Run queries in [Azure Resource Graph](/azure/governance/resource-graph/samples/starter) to maintain an accurate resource inventory.
+
+### Manage relocation
+
+Relocation is the process of moving a workload or workload component in Azure to a different Azure region. Relocation adds flexibility that can help you optimize cost and performance throughout the lifecycle of your workloads.you should review your region choice to see if a different region might be a better fit.
+
+- ***Understand relocation drivers.*** Business developments Respond to business changes and expand your global footprint.
+Compliance	Meet data sovereignty and residency requirements.
+Proximity	Provide lower latency to end users.
+
+- ***Manage relocation risks.*** Find out the acceptable times when the workload can be offline for relocation. Recognize which internal users or external customers the relocation might affect. Understand and communicate any downtime or changes to stakeholders and end users. Ensure the relocation adheres to organizational policies and industry regulations.
+
+- ***Manage relocation costs.*** Move data once and review the [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth). Avoid duplicating services or environments for extended periods of time. Avoid extended duplication of services. Compare regional pricing for Azure services. Account for third-party support costs.
+
+- ***Manage relocation projects.*** Small teams should relocate one workload at a time. Larger teams should relocate multiple workloads in bulk to gain efficiency.
+
+For 
 
 ## Manage operating systems
 
