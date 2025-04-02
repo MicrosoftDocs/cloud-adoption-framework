@@ -30,7 +30,7 @@ A clear business strategy is the foundation for any digital transformation and o
 
 **Deliverables:**
 
-- Record motivations, outcomes, and business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
+- Record motivations, outcomes, and business justification in your adoption strategy and plan documents.
 - Ensure learning metrics are well understood and included in the business outcomes section. Those metrics guide operational excellence activities and reporting within IT.
 
 **Guidance to support deliverable completion:**
@@ -52,7 +52,7 @@ Organizational change management is an iterative approach to subtly realign peop
 
 **Deliverables:**
 
-- Update the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to reflect change that's needed to achieve the desired strategy. The changes recorded can include:
+- Update your adoption strategy and plan documents to reflect change that's needed to achieve the desired strategy. The changes recorded can include:
 
   - An assessment of the existing digital estate.
   - A cloud adoption plan that reflects the required changes and the work involved.
