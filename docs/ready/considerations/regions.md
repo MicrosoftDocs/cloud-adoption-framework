@@ -142,7 +142,7 @@ To host your workloads, you can then use virtual network peering to connect appl
 You might occasionally need to move your entire Azure estate to a different region. For example, suppose you deployed your landing zone and workloads into an Azure region in a neighboring country or region, and then a new Azure region launches in your home country or region. You might elect to move all of your workloads to the new region to improve the communication latency, or to comply with data residency requirements.
 
 > [!NOTE]
-> This article provides information about migrating the landing zone components of your estate. For more information, see [Relocate cloud workloads](../../relocate/index.md).
+> This article provides information about migrating the landing zone components of your estate. For more information, see [Relocate cloud workloads](../../manage/administer.md#manage-relocation).
 
 ### Global landing zone configuration
 
