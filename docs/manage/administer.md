@@ -18,17 +18,18 @@ This article explains how to administer your Azure cloud estate to ensure operat
 
 Management responsibilities vary by deployment model. Use the following table to identify your management responsibilities for infrastructure (IaaS), platform (PaaS), software (SaaS), and on-premises deployments.
 
-| Administration areas   | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
-|------------------------|-------------------|--------------------|--------------------|------------|
-| [Change](#manage-change)                 | ✔️                | ✔️                 | ✔️                 | ✔️         |
-| [Security](#manage-security)               | ✔️                | ✔️                 | ✔️                 | ✔️         |
-| [Compliance](#manage-compliance)             | ✔️                | ✔️                 | ✔️                 | ✔️         |
-| [Data](#manage-data)                   | ✔️                | ✔️                 | ✔️                 | ✔️         |
-| [Code and runtime](#manage-code-and-runtime)       | ✔️                | ✔️                 | ✔️                 |            |
-| [Cloud resources](#manage-cloud-resources)        | ✔️                | ✔️                 | ✔️                 |            |
-| [Operating system](#manage-operating-systems)       | ✔️                | ✔️                 |                    |            |
-| Virtualization layer   | ✔️                |                    |                    |            |
-| Physical hardware      | ✔️                |                    |                    |            |
+| Administration areas                         | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS       |
+|----------------------------------------------|-------------|--------------|--------------|------------|
+| [Change](#manage-change)                     | ✔️          | ✔️           | ✔️           | ✔️         |
+| [Security](#manage-security)                 | ✔️          | ✔️           | ✔️           | ✔️         |
+| [Compliance](#manage-compliance)             | ✔️          | ✔️           | ✔️           | ✔️         |
+| [Data](#manage-data)                         | ✔️          | ✔️           | ✔️           | ✔️         |
+| [Code and runtime](#manage-code-and-runtime) | ✔️          | ✔️           | ✔️           |            |
+| [Cloud resources](#manage-cloud-resources)   | ✔️          | ✔️           | ✔️           |            |
+| [Relocation](#manage-relocation)             | ✔️          | ✔️           | ✔️           |            |
+| [Operating system](#manage-operating-systems)| ✔️          | ✔️           |              |            |
+| Virtualization layer                         | ✔️          |              |              |            |
+| Physical hardware                            | ✔️          |              |              |            |
 
 ## Manage change
 
@@ -202,7 +203,7 @@ Resource sprawl describes the uncontrolled growth of cloud resources. This growt
 
 4. ***Conduct regular audits.*** Use [Azure Advisor](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) to identify unused or underutilized Azure resources. Use [Cost Management](/azure/cost-management-billing/costs/reporting-get-started) to analyze your cloud spending and remove orphaned resources causing unnecessary costs. Keep in mind not all Azure resources incur charges. Run queries in [Azure Resource Graph](/azure/governance/resource-graph/samples/starter) to maintain an accurate resource inventory.
 
-### Manage relocation
+## Manage relocation
 
 Periodically evaluate your current Azure regions to determine if relocating workloads elsewhere improves efficiency, reduces costs, or enhances performance.
 
