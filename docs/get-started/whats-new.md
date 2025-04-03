@@ -27,10 +27,10 @@ This month, we made significant updates to the Manage methodology. The Manage me
 
 ### Updated articles
 
-- [AI Plan - Process to plan for AI adoption](./scenarios/ai/plan.md): We made adjustments to the AI maturity level table, and modifications to various sections such as "Acquire AI skills," "Access AI resources," "Prioritize AI use cases," and "Create an AI proof of concept."
-- [AI Strategy - Process to develop an AI strategy](./scenarios/ai/strategy.md): We reorganized and streamlined the AI technology strategy, extensibility tools for Microsoft 365 Copilot, and responsible AI strategy sections. Additionally, new content was added to highlight the use of Microsoft Fabric and Azure services in various AI applications.
-- [Secure AI – Process to secure AI](./scenarios/ai/secure.md): We made minor updates to align this article with the NIST Cybersecurity Framework and the Microsoft Security Reference Architecture.
-- [Storage for Azure HPC Workloads](./scenarios/azure-hpc/storage.md): We made adjustments for clarity, additional details and considerations were added, including new sections on compute node distribution, design recommendations and HPC components.
+- [AI Plan - Process to plan for AI adoption](../scenarios/ai/plan.md): We made adjustments to the AI maturity level table, and modifications to various sections such as "Acquire AI skills," "Access AI resources," "Prioritize AI use cases," and "Create an AI proof of concept."
+- [AI Strategy - Process to develop an AI strategy](../scenarios/ai/strategy.md): We reorganized and streamlined the AI technology strategy, extensibility tools for Microsoft 365 Copilot, and responsible AI strategy sections. New content was added to highlight the use of Microsoft Fabric and Azure services in various AI applications.
+- [Secure AI – Process to secure AI](../scenarios/ai/secure.md): We made minor updates to align this article with the NIST Cybersecurity Framework and the Microsoft Security Reference Architecture.
+- [Storage for Azure HPC Workloads](../scenarios/azure-hpc/storage.md): We made adjustments for clarity and details and considerations were added, including new sections on compute node distribution, design recommendations and HPC components.
 
 ## February 2025
 
