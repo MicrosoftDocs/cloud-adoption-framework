@@ -2957,32 +2957,32 @@
       },
       {
          "source_path": "docs/relocate/cutover.md",
-         "redirect_url": "/azure/cloud-adoption-framework/administer#manage-relocation",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/relocate/evaluate.md",
-         "redirect_url": "/azure/cloud-adoption-framework/administer#manage-relocation",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/relocate/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/administer#manage-relocation",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/relocate/initiate.md",
-         "redirect_url": "/azure/cloud-adoption-framework/administer#manage-relocation",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/relocate/migrate.md",
-         "redirect_url": "/azure/cloud-adoption-framework/administer#manage-relocation",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/relocate/select.md",
-         "redirect_url": "/azure/cloud-adoption-framework/administer#manage-relocation",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
          "redirect_document_id": false
       }
    ]   
