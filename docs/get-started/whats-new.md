@@ -18,7 +18,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Manage methodology refresh
 
-This month, we made significant updates to the Manage methodology. The Manage methodology provides guidance on how to manage your cloud environment and optimize your cloud operations. Our updates to the methodology include the following articles:
+This month, we made significant updates to the Manage methodology. The Manage methodology provides guidance on how to manage your cloud environment and optimize your cloud operations. Some highlights of our updates to the methodology include:
 
 - [Ready your Azure cloud operations](../manage/ready.md): Learn how to prepare your Azure cloud operations for success. Learn how to establish defined responsibilities and processes for every cloud management area.
 - [Administer your Azure cloud estate](../manage/administer.md): Explore new guidance on managing resource sprawl and detailed steps to implement governance policies, organize resources, restrict deployment permissions, and conduct regular audits.
