@@ -206,7 +206,7 @@ Resource sprawl describes the uncontrolled growth of cloud resources. This growt
 
 Periodically evaluate your current Azure regions to determine if relocating workloads elsewhere improves efficiency, reduces costs, or enhances performance.
 
-- ***Understand relocation drivers.*** Before approving relocation, identify the reasons driving the move. Recognize common drivers such as business expansion, regulatory compliance requirements, and proximity to end users.
+- ***Understand relocation drivers.*** Understanding relocation drivers ensures each relocation has valid business justification, given relocation involves risk and cost. Common business justifications for relocation include business expansion, regulatory compliance requirements, and proximity to end users.
 
 - ***Manage relocation risks.*** Managing relocation risks prevents disruption and maintains compliance. Define acceptable downtime windows, communicate impacts to stakeholders, and ensure adherence to organizational policies and industry regulations.
 
