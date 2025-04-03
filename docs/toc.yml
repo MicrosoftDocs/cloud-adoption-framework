@@ -705,7 +705,7 @@ items:
 
   - name: Manage
     items:
-    - name: Overview
+    - name: Checklist
       href: manage/index.md
     - name: Ready Azure operations
       href: manage/ready.md  
