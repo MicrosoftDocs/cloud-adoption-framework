@@ -122,7 +122,7 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
 
 1. ***Review operations to improve.*** Follow best practices to [monitor](./monitor.md#configure-monitoring) the health, compliance, security, costs, data, and cloud resources. Conduct weekly operational reviews to discuss key metrics, recent incidents, deployed changes, and anticipated risks. Actively address [resource sprawl](./administer.md#manage-resource-sprawl) and [technical debt](/azure/well-architected/performance-efficiency/continuous-performance-optimize#address-technical-debt).
 
-1. ***Train for operations.*** Foster ongoing skill development by prioritizing essential learning resources. Maintain dynamic cloud operations through practical training environments. The following table provides resource for operations training.
+1. ***Train for operations.*** Foster ongoing skill development by prioritizing essential learning resources. Maintain dynamic cloud operations through practical training environments. The following table provides resources for operations training.
 
     | Operations training   | Description  |
     |---|---|
