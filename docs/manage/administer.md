@@ -204,7 +204,7 @@ Resource sprawl describes the uncontrolled growth of cloud resources. This growt
 
 ### Manage relocation
 
-Periodically evaluate your current Azure regions to determine if relocating workloads elsewhere improves efficiency, reduce costs, or enhance performance.
+Periodically evaluate your current Azure regions to determine if relocating workloads elsewhere improves efficiency, reduces costs, or enhances performance.
 
 - ***Understand relocation drivers.*** Before approving relocation, identify the reasons driving the move. Recognize common drivers such as business expansion, regulatory compliance requirements, and proximity to end users.
 
