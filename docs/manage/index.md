@@ -1,5 +1,5 @@
 ---
-title: Cloud management overview
+title: Azure cloud management checklist
 description: Understand Microsoft's four-step iterative RAMP process for effectively managing your Azure cloud environment and establishing reliable cloud operations
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 04/01/2025
 ms.topic: conceptual
 ---
 
-# Cloud management overview
+# Azure cloud management checklist
 
 Effective cloud management ensures your Azure cloud estate aligns with business objectives and minimizes the effects of incidents. The Cloud Adoption Framework's (CAF) Manage methodology outlines the **RAMP** (Ready, Administer, Monitor, Protect) process and provides clear steps for managing your Azure cloud estate.
 
