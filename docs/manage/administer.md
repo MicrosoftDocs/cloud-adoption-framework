@@ -214,7 +214,6 @@ Periodically evaluate your current Azure regions to determine if relocating work
 
 - ***Manage relocation projects.*** Small teams should migrate workloads one at a time with focused execution. Large teams should relocate multiple workloads simultaneously to achieve efficiency through coordinated planning.
 
-
 ## Manage operating systems
 
 Where you use virtual machines, you need to also manage the operating system. Follow these steps:
