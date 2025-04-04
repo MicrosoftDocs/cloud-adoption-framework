@@ -6,6 +6,10 @@ ms.author: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.custom: devx-track-extended-java, linux-related-content
+ms.collection: 
+ - migration
+ - aws-to-azure
+ - gcp-to-azure
 ---
 
 # Review product migration scenarios
