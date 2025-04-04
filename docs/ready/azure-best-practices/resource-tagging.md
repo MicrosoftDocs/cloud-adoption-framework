@@ -1,8 +1,8 @@
 ---
 title: Define your tagging strategy
 description: Learn about recommendations for tagging your Azure resources and assets and how to define your tagging strategy.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 12/28/2021
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit

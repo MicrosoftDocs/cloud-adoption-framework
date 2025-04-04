@@ -1,8 +1,8 @@
 ---
 title: Qualitative and quantitative data feedback
 description: Learn how to use Azure tools to collect quantitative and qualitative feedback on web apps and APIs hosted in GitHub.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.custom: internal, fasttrack-edit, AQC

@@ -1,8 +1,8 @@
 ---
 title: Resource organization considerations for AKS
 description: AKS guidelines for resource organization
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks
