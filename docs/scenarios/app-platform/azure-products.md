@@ -1,8 +1,8 @@
 ---
 title: Azure products supporting the modern application platforms scenario
 description: A number of Azure products can support the modern application platform scenario depending on specific application and operations needs.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

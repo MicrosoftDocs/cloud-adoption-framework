@@ -1,8 +1,8 @@
 ---
 title: Unified operations for hybrid, multicloud, and edge
 description: Implement effective controls for consistently operations management across hybrid, multicloud, and edge deployments.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 09/06/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

@@ -1,8 +1,8 @@
 ---
 title: Introduction to hybrid and multicloud
 description: Learn about hybrid and multicloud.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 10/19/2021
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

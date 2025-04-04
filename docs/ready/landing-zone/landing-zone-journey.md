@@ -1,8 +1,8 @@
 ---
 title: Journey toward the target architecture
 description: Learn how to deploy and scale out a cloud environment to ultimately implement the target architecture for Azure landing zones.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: internal

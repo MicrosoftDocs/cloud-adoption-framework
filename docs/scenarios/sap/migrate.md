@@ -2,7 +2,7 @@
 title: Migrate an SAP platform to Azure
 description: Understand how to migrate an SAP platform to Azure.
 author: deepakonics
-ms.author: martinek
+ms.author: deepakus
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
