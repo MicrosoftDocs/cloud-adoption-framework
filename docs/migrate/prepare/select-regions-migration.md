@@ -6,6 +6,10 @@ ms.author: jodowns
 ms.reviewer: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual
+ms.collection: 
+ - migration
+ - aws-to-azure
+ - gcp-to-azure
 ---
 
 # Select Azure regions for a migration
