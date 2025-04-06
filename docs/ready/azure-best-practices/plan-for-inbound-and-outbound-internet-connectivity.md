@@ -22,7 +22,7 @@ This article lists considerations and recommendations for inbound and outbound c
 - Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [Azure NAT Gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 > [!NOTE]
-> As of November 2024, all Azure Firewall deployments must include a [Management NIC](/azure/firewall/management-nic) to separate management and data traffic. Previously required only for Forced Tunneling, the Management NIC is now mandatory for upcoming Firewall features. To avoid service disruption, ensure your firewall is deployed or updated with this feature enabled. For existing firewalls, see [Enable the Management NIC on existing firewalls](/azure/firewall/management-nic#enable-the-management-nic-on-existing-firewalls).
+> The *Azure Firewall Management NIC* was originally required only for forced tunneling. However, this requirement has been updated to support new Azure Firewall features that depend on the management NIC. The Azure Firewall documentation reflects this change. To take advantage of these upcoming features, ensure that your Azure Firewall is deployed with the management NIC *enabled*. For more information, see [Azure Firewall Management NIC](/azure/firewall/management-nic).
 
 ## Design recommendations
 
