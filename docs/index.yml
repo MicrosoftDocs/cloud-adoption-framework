@@ -145,7 +145,7 @@ productDirectory:
       imageSrc: ./_images/icons/manage.png
       links:
         - url: ./manage/ready.md
-          text: Ready Azure operations
+          text: Ready operations
         - url: ./manage/administer.md
           text: Administer Azure
         - url: ./manage/monitor.md
