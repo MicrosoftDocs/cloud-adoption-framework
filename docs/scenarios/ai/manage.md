@@ -45,7 +45,7 @@ Use AI resource sharing to reduce management overhead, but only under controlled
 
 - *Share AI resources only within a single workload.* Sharing AI endpoints works best when one team manages multiple applications within the same workload. These applications must share identical governance rules, content filters, and AI model configurations. Resource sharing in this scenario reduces overhead and simplifies deployment.
 
-- *Understand Azure subscription and region quota limits.* Shared AI resource usage can trigger service rate limits or quota ceilings. Understand [Azure’s subscription quota limitations](/azure/resource-manager/management/azure-subscription-service-limits) to avoid unexpected service disruptions.
+- *Understand Azure subscription and region quota limits.* Shared AI resource usage can trigger service rate limits or quota ceilings. Understand [Azure’s subscription quota limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) to avoid unexpected service disruptions.
 
 - *Be cautious about sharing AI endpoints when requirements differ.* Carefully consider endpoint sharing across workloads with varying governance requirements, distinct content filtering needs (input/output), or different AI models. Using the incorrect AI model or misaligned governance settings can increase complexity, governance risk, and costs.
 
