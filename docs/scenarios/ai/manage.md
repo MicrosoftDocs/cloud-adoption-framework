@@ -3,7 +3,7 @@ title: Manage AI – Process to manage AI
 description: Learn the process to manage AI with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 11/01/2024
+ms.date: 04/09/2025
 ms.topic: conceptual
 ---
 
@@ -39,7 +39,7 @@ AI deployment management is about defining who can deploy AI resources and who g
     :::image type="content" source="./images/central-ai-management.svg" alt-text="Diagram showing shared management of AI workloads." lightbox="./images/central-ai-management.svg" border="false":::
     *Figure 2. Central AI team management of AI resources.*
 
-## Manage AI Resource Sharing
+## Manage AI resource sharing
 
 Use AI resource sharing to reduce management overhead, but only under controlled conditions.
 
