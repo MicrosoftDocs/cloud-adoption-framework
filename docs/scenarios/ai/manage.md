@@ -47,7 +47,6 @@ Use AI resource sharing to reduce management overhead, but only under controlled
 
 - *Understand Azure subscription and region quota limits.* Shared AI resource usage can trigger service rate limits or quota ceilings. Understand [Azure’s subscription quota limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) to avoid unexpected service disruptions.
 
-- *Be cautious about sharing AI endpoints when requirements differ.* Carefully consider endpoint sharing across workloads with varying governance requirements, distinct content filtering needs (input/output), or different AI models. Using the incorrect AI model or misaligned governance settings can increase complexity, governance risk, and costs.
 
 - *Consider how to allocate costs across teams when sharing AI resources.* If your organization tracks costs by workload, team or business unit (chargeback scenarios), create separate AI service instances for each billing boundary. For example, when using Azure AI Foundry, set up one hub per project. This practice provides accurate cost tracking, simplifies governance, and clearly aligns resources to organizational boundaries.
 
