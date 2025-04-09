@@ -15,7 +15,13 @@ Effective management of AI workloads on Azure involves overseeing deployment, mo
 
 ## Manage AI deployments
 
-Managing AI deployments helps workload teams move from proof-of-concept stages to production environments with consistent configurations that improve security and compliance across teams. Azure offers tools like Azure AI Foundry [hubs and projects](/azure/ai-studio/concepts/ai-resources) to enforce governance and security. Azure Machine Learning has similar capabilities with its [hub workspaces](/azure/machine-learning/concept-hub-workspace). For more information, see [Manage AI deployments](../manage.md#manage-ai-deployment).
+Managing AI deployments ensures consistent configurations across environments to enhance security, compliance, and operational efficiency for workloads.
+
+- *Find the best region.* Map each model's latency, throughput, and compliance requirements. Check the Azure region [product availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table) table to confirm support for required hardware, features, and data-residency rules. Deploy to the region that meets those requirements to ensure performance and regulatory alignment.
+
+- *Use AI hubs to manage deployments.* Azure offers tools like Azure AI Foundry [hubs and projects](/azure/ai-studio/concepts/ai-resources) to enforce governance and security. Azure Machine Learning has similar capabilities with its [hub workspaces](/azure/machine-learning/concept-hub-workspace). Use a hub per billing boundary to allocate costs across different teams. For more information, see [Manage AI deployments](../manage.md#manage-ai-deployment).
+
+- *Manage multiple deployments.* Use Azure API Management as a unified gateway for your AI endpoints when onboarding multiple applications or teams. Apply this approach to enforce consistent security, scalability, rate limiting, token quotas, and centralized monitoring across your AI services. For more information, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide).
 
 ## Manage AI models
 
@@ -54,16 +60,6 @@ High-quality data is the foundation of accurate AI models. Tracking model drift 
 ## Manage business continuity
 
 Implement multi-region deployments to ensure high availability and resiliency for both generative and nongenerative AI systems For more information, see multi-region deployment in [Azure AI Foundry](/azure/ai-studio/how-to/disaster-recovery#plan-for-multi-regional-deployment), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning#plan-for-multi-regional-deployment), and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery).
-
-## Manage AI resource sharing
-
-Sharing AI resources across projects is efficient and cost-effective. To make it work well, teams need clear planning and coordination.
-
-- *Multiple projects sharing a single hub and resources.* Sharing a single Azure AI Services resource across multiple projects is a cost-effective approach, as teams can leverage shared services like AI Search under a fixed cost per resource. To make this work smoothly, it’s important to align early on how costs will be tracked and divided. Teams should agree on a model, such as splitting costs equally or estimating usage-based shares and document this to ensure transparency. While this setup minimizes spend, it does introduce complexity in tracking, so having a consistent cost allocation method is key for long-term success.
-
-- *AI Services resource and regional considerations.* When creating an Azure AI Services resource, it's essential to consider which region best supports the features your project needs. Different regions offer different feature sets, so a one-size-fits-all approach might not work. Before deploying, identify your service requirements and verify that your chosen region supports them. Matching your workload to regional capabilities ensures both performance and functionality. Use [Availability by Region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table).
-
-- *Using API Management (APIM) to Centralize AI Resources.* To streamline access and governance across teams, consider placing your AI services behind APIM. This allows you to expose multiple AI endpoints through a single, consistent interface, making it easier to manage security, traffic, and usage. With APIM, you can apply policies for authentication, throttling, or routing to specific projects, creating a more structured and scalable approach as adoption grows. Centralizing access in this way simplifies operations and supports better visibility and control as your AI footprint expands. For more information, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide).
 
 ## Next step
 
