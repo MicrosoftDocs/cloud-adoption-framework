@@ -5,6 +5,8 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual
+ms.collection: 
+ - migration
 ---
 
 # Skills and support resources relevant to migration projects
