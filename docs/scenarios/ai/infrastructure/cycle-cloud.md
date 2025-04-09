@@ -3,7 +3,7 @@ title: Implementation option for AI on Azure infrastructure
 description: Discover how to build AI workloads on Azure IaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
 ms.author: rajanaki
-ms.date: 11/01/2024
+ms.date: 04/09/2025
 ms.topic: conceptual
 ---
 

@@ -3,7 +3,7 @@ title: Compute recommendations for AI workloads on Azure infrastructure (IaaS)
 description: Learn how to select compute for AI workloads on Azure infrastructure (IaaS).
 author: stephen-sumner
 ms.author: rajanaki
-ms.date: 11/01/2024
+ms.date: 04/09/2025
 ms.topic: conceptual
 ---
 
