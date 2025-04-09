@@ -7,8 +7,6 @@ ms.date: 04/05/2024
 ms.topic: conceptual
 ms.collection: 
  - migration
- - aws-to-azure
- - gcp-to-azure
 ---
 
 # Prepare for management activities
