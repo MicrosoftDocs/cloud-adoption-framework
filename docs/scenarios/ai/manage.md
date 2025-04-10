@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Manage AI – Process to manage AI
 
-This article outlines the organizational process for managing AI workloads. It provides recommendations for managing AI workloads from development, deployment, and operations. Effective AI management requires a structured approach from development through deployment and ongoing operations. Businesses need standardized practices and regular monitoring to prevent issues such as data and model drift, ensuring AI remains accurate and reliable over time.
+This article outlines the organizational process for managing AI workloads. It provides recommendations for managing AI workloads from development, deployment, and operations.
 
 :::image type="content" source="./images/manage-ai.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/manage-ai.svg" border="false":::
 

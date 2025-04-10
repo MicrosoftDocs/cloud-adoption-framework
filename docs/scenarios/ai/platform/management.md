@@ -11,8 +11,6 @@ ms.topic: conceptual
 
 This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
 
-Effective management of AI workloads on Azure involves overseeing deployment, model performance, operations, data, and disaster recovery to support your AI workloads. Proper management helps ensure that AI workloads are reliable, trustworthy, and secure throughout their lifecycle.
-
 ## Manage AI deployments
 
 Managing AI deployments ensures consistent configurations across environments to enhance security, compliance, and operational efficiency for workloads.
