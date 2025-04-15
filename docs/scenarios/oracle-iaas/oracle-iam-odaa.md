@@ -33,7 +33,7 @@ Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud In
 
 - [Implement federation between Azure and OCI](https://docs.oracle.com/iaas/Content/Identity/tutorials/azure_ad/lifecycle_azure/01-config-azure-template.htm#config-azure-template), including single sign-on and replication of users and groups.
 
-- Configure federation between Microsoft Entra ID and OCI to enable users to sign in to OCI with their Microsoft Entra ID credentials. For more information, see [Steps to onboard Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database#steps-to-onboard-oracle-databaseazure)).
+- Configure federation between Microsoft Entra ID and OCI to enable users to sign in to OCI with their Microsoft Entra ID credentials. For more information, see [Steps to onboard Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database#steps-to-onboard-oracle-databaseazure).
 
 - When you provision a new account and tenant, an Admin user role is created in OCI. Avoid using this Admin identity for day-to-day operations. Instead, use Microsoft Entra administrator groups to provide elevated access for the relevant individuals.
 
