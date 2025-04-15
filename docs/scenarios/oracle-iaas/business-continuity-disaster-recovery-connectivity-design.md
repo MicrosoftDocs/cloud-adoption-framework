@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
-# Network topology and connectivity for Oracle Database@Azure - BCDR connectivity design
+# Network topology and connectivity for Oracle Exadata Database@Azure - BCDR connectivity design
 
 This article focuses on high availability (HA) and disaster recovery (DR) connectivity considerations for Oracle Exadata Database@Azure deployments. It begins by addressing single-region redundancy, then expands to cross-region architectures to help ensure that your environments remain resilient and meet low recovery point objective (RPO) and recovery time objective (RTO) requirements.
 
@@ -29,7 +29,7 @@ The following diagram illustrates a single-region redundant setup that uses two 
 :::image type="content" source="./media/multiple-availability-zone.svg" alt-text="Diagram that shows in-region redundancy for Oracle Exadata Database@Azure." border="false" lightbox="./media/multiple-availability-zone.svg":::
 
 > [!NOTE]
-> Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Data egress charges apply.
+> Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Virtual Network peering costs apply.
 
 ## Redundancy across regions
 
