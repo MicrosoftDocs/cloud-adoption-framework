@@ -25,7 +25,7 @@ You should onboard all modern applications that need to sign in users as enterpr
 
 You should register Azure applications running in secondary tenant subscriptions with the primary tenant. The primary tenant is where users and licenses are. Registering applications in the primary tenant allows users to sign in with the same identity they use for Microsoft 365. This configuration offers the most seamless experience and lets you apply the same zero trust policy baseline to all application access.
 
-The location of the application infrastructure (virtual machines, databases, web apps) has not effect on the tenant you can use for user sign-in. The team managing the primary tenant is responsible for app registrations and enterprise applications. They're also responsible for conditional access policies applied to applications hosted in the primary tenant and any secondary tenants.
+The location of the application infrastructure (virtual machines, databases, web apps) has not effect on the tenant you can use for user sign-in. The team managing the primary tenant is responsible for app registrations and enterprise applications. They're also responsible for Conditional Access policies applied to applications hosted in the primary tenant and any secondary tenants.
 
 **App registrations.** You register web applications and APIs the organization use with the primary tenant. The app registration creates an [application object](/azure/active-directory/develop/app-objects-and-service-principals?tabs=browser#application-object) in Microsoft Entra ID. The application object represents the application definition. The application definition includes an application manifest, token claims configuration, app role definitions, and client secrets. Activities involved in primary tenant app registrations include:
 
@@ -47,7 +47,7 @@ The location of the application infrastructure (virtual machines, databases, web
 - Granting [consent](/azure/active-directory/manage-apps/user-admin-consent-overview) for API permissions
 - Deploying and managing [Microsoft Entra application proxy](/azure/active-directory/app-proxy/what-is-application-proxy) for on-premises applications
 
-**Conditional access policies.** Conditional Access policies enforce zero trust policies for accessing resources protected by Microsoft Entra ID. When you register applications in the primary tenant, the primary tenant administrator [controls which policies apply](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) during user sign-in.
+**Conditional Access policies.** Conditional Access policies enforce zero trust policies for accessing resources protected by Microsoft Entra ID. When you register applications in the primary tenant, the primary tenant administrator [controls which policies apply](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) during user sign-in.
 
 ### Secondary tenant application management
 

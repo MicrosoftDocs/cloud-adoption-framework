@@ -53,7 +53,7 @@ The following sections review each pillar and provide considerations and recomme
 
 ## Secure identity
 
-For information about deployment objectives for securing identity, see [Securing identity with Zero Trust](/security/zero-trust/deploy/identity). To implement these deployment objectives, you can apply identity federation, conditional access, identity governance, and real-time data operations.
+For information about deployment objectives for securing identity, see [Securing identity with Zero Trust](/security/zero-trust/deploy/identity). To implement these deployment objectives, you can apply identity federation, Conditional Access, identity governance, and real-time data operations.
 
 #### Identity considerations
 
@@ -66,7 +66,7 @@ For information about deployment objectives for securing identity, see [Securing
 
 - Develop a plan for managing identities in Microsoft Entra ID that go beyond Azure resources. For example, you can use:
   - Federation with on-premises identity systems.
-  - Conditional access policies.
+  - Conditional Access policies.
   - User, device, location, or behavior information for authorization.
 
 - Deploy your Azure landing zone with separate subscriptions for identity resources, like domain controllers, so you can better secure access to resources.

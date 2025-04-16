@@ -62,7 +62,7 @@ The following table summarizes identity scenarios that Azure Virtual Desktop cur
 - Segregate session host virtual machines into Active Directory organizational units for each host pool to make it easier to manage policies and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - Use a solution like Local Administrator Password Solution (LAPS) to frequently rotate local administrator passwords on Azure Virtual Desktop session hosts. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
 - For users, assign the Desktop Virtualization User built-in role to security groups to grant access to Azure Virtual Desktop application groups. For more information, see [Delegated access in Azure Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
-- Create conditional access policies for Azure Virtual Desktop. These policies can enforce multifactor authentication based on conditions like risky sign-ins to increase your organization's security posture. For more information, see [Enable Microsoft Entra multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
+- Create Conditional Access policies for Azure Virtual Desktop. These policies can enforce multifactor authentication based on conditions like risky sign-ins to increase your organization's security posture. For more information, see [Enable Microsoft Entra multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 - Configure AD FS to enable single sign-on for users on the corporate network.
 
 ## Next steps

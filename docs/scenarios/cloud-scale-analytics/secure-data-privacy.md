@@ -38,7 +38,7 @@ For restricted data, you should host data in a dedicated data landing zone under
 > [!NOTE]
 > You can put sensitive personal data and confidential-or-below data in the same data landing zone but different storage accounts. But this practice might complicate the solution on the networking layer, for example with network security groups.
 
-A deployed data governance solution should limit who can search for restricted data in the catalog. Consider implementing Microsoft Entra ID conditional access for all data assets and services. To enhance security, apply just-in-time access for restricted data.
+A deployed data governance solution should limit who can search for restricted data in the catalog. Consider implementing Microsoft Entra ID Conditional Access for all data assets and services. To enhance security, apply just-in-time access for restricted data.
 
 ## Consider encryption requirements
 

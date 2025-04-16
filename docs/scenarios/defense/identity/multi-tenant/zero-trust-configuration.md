@@ -83,7 +83,7 @@ You should implement the following recommendations in all Microsoft Entra tenant
 - Microsoft authenticator
 - Windows Hello for Business
 
-**Establish baseline conditional access policies.** Conditional access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Microsoft Entra tenants. Use identity, device, application, and risk conditions within your policy set. Exclude [Emergency Access accounts](/azure/active-directory/roles/security-emergency-access) from your Conditional Access policies.
+**Establish baseline Conditional Access policies.** Conditional Access baseline varies by organization and requirements. Establish a core set of Conditional Access policies for all Microsoft Entra tenants. Use identity, device, application, and risk conditions within your policy set. Exclude [Emergency Access accounts](/azure/active-directory/roles/security-emergency-access) from your Conditional Access policies.
 
 [Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) helps organizations detect, investigate, and remediate [identity-based risks](/entra/id-protection/concept-identity-protection-risks). To protect risky sign-ins and users, create Conditional Access policies with risk conditions. Use separate policies for risky users and risky sign-ins. Increase applied controls with risk level for each risk type. To [balance user productivity with security](/entra/id-protection/howto-identity-protection-configure-risk-policies#choosing-acceptable-risk-levels), avoid using the **Block** control in risk-based policies. 
 
