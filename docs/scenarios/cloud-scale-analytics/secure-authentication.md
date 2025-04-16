@@ -14,7 +14,7 @@ Authentication is the process of verifying the identity of a user or application
 
 Any data lake solution should use and integrate with an existing directory service. For most organizations, the directory service for all identity-related services is Microsoft Entra ID. It's the primary and centralized database for all service and user accounts.
 
-In the cloud, Microsoft Entra ID is a centralized identity provider and the preferred source for identity management. Delegate authentication and authorization to Microsoft Entra ID to use capabilities such as conditional access policies that require a user to be in a specific location. Microsoft Entra ID also supports multifactor authentication, which increases the level of access security. You should configure data services by integrating Microsoft Entra ID whenever possible.
+In the cloud, Microsoft Entra ID is a centralized identity provider and the preferred source for identity management. Delegate authentication and authorization to Microsoft Entra ID to use capabilities such as Conditional Access policies that require a user to be in a specific location. Microsoft Entra ID also supports multifactor authentication, which increases the level of access security. You should configure data services by integrating Microsoft Entra ID whenever possible.
 
 If your data services don't support Microsoft Entra ID, you should perform authentication by using an access key or token. You should store the access key in a key management store, such as Azure Key Vault.
 
@@ -76,12 +76,12 @@ An Azure service principal is the alternative option for applications and servic
 
 ## Best practices for authentication in cloud-scale analytics
 
-In cloud-scale analytics, implementing robust and secure authentication practices is paramount. Best practices for authentication apply to various layers of a solution, including databases, storage, and analytics services. By using Microsoft Entra ID, organizations can improve security by using features such as multifactor authentication and conditional access policies.
+In cloud-scale analytics, implementing robust and secure authentication practices is paramount. Best practices for authentication apply to various layers of a solution, including databases, storage, and analytics services. By using Microsoft Entra ID, organizations can improve security by using features such as multifactor authentication and Conditional Access policies.
 
 |Layer|Service|Recommendation|
 |-------------|----------|----------|
 |Databases|- SQL Database<br><br>- SQL Managed Instance<br><br>- Azure Synapse Analytics<br><br>- Azure Database for MySQL<br><br>- Azure Database for PostgreSQL|Use Microsoft Entra ID for authentication with databases such as [Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication), [Azure SQL](/azure/azure-sql/database/authentication-aad-overview), and [Azure Database for MySQL](/azure/mysql/flexible-server/concepts-azure-ad-authentication). |
-|Storage|Data Lake Storage|Use Microsoft Entra ID for authentication for security principals, such as user, group, and service principals or managed identities, with Data Lake Storage instead of a shared key or shared access signatures. This approach helps improve security because it supports multifactor authentication and conditional access policies.|
+|Storage|Data Lake Storage|Use Microsoft Entra ID for authentication for security principals, such as user, group, and service principals or managed identities, with Data Lake Storage instead of a shared key or shared access signatures. This approach helps improve security because it supports multifactor authentication and Conditional Access policies.|
 |Storage|Data Lake Storage from Azure Databricks|Connect to Data Lake Storage by using [Unity Catalog](/azure/databricks/connect/unity-catalog/) instead of direct storage-level access by creating a [storage credential that uses a managed identity](/azure/databricks/connect/unity-catalog/storage-credentials#create-a-storage-credential-using-a-managed-identity) and an [external location](/azure/databricks/connect/unity-catalog/external-locations).|
 |Analytics|Azure Databricks|Use the System for Cross-domain Identity Management to [sync users and groups from Microsoft Entra ID](/azure/databricks/admin/users-groups/scim/). To access Azure Databricks resources by using REST APIs, [use OAuth with an Azure Databricks service principal](/azure/databricks/dev-tools/auth/#what-authentication-approach-should-i-choose).|
 
