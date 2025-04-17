@@ -10,7 +10,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Integrate cloud-scale analytics into your cloud adoption strategy
 
-Create a single, centralized cloud adoption strategy for your organization using the [Strategy methodology in Azure's Cloud Adoption Framework](../../strategy/index.md). If you haven't already recorded your cloud adoption strategy, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to do so.
+Create a single, centralized cloud adoption strategy for your organization using the [Strategy methodology in Azure's Cloud Adoption Framework](../../strategy/index.md).
 
 This article contains considerations for cloud-scale analytics scenarios that affect your broader strategy.
 

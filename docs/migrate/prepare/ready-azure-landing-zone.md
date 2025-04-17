@@ -6,6 +6,8 @@ ms.author: bstephenson
 ms.reviewer: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual
+ms.collection: 
+ - migration
 ---
 
 # Prepare your landing zone for migration

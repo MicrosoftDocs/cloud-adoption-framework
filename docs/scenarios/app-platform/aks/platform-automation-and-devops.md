@@ -1,8 +1,8 @@
 ---
 title: Platform automation and DevOps for Azure Kubernetes Service (AKS)
 description: Learn more about design recommendations and considerations for Azure Kubernetes Service (AKS) platform automation and DevOps.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

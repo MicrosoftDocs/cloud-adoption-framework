@@ -29,7 +29,7 @@ For any administrator or highly privileged accounts in Active Directory, we reco
 
 ## Azure DevOps role-based access considerations
 
-Manage security in Azure DevOps with security groups, policies, and settings at the organization/collection, project, or object level. To integrate with an identity provider such as Microsoft Entra ID, consider creating [conditional access policies to enforce multifactor authentication for all users](/azure/devops/organizations/accounts/change-application-access-policies). The policies allow access to your Azure DevOps organization and more granular restrictions around IP address, type of device used for access, and device compliance.
+Manage security in Azure DevOps with security groups, policies, and settings at the organization/collection, project, or object level. To integrate with an identity provider such as Microsoft Entra ID, consider creating [Conditional Access policies to enforce multifactor authentication for all users](/azure/devops/organizations/accounts/change-application-access-policies). The policies allow access to your Azure DevOps organization and more granular restrictions around IP address, type of device used for access, and device compliance.
 
 For most team members in your Platform team that manage your Azure Landing Zones, the *Basic* access level and *Contributor* default security group should provide sufficient access. The Contributor security group allows them to edit the Azure Landing Zone templates in your repository and the CI/CD pipelines that validate and deploy them.
 

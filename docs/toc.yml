@@ -685,20 +685,6 @@ items:
             href: innovate/considerations/devices.md
           - name: Predict and influence
             href: innovate/considerations/predict.md
-    - name: Relocate
-      items:
-      - name: Overview
-        href: relocate/index.md
-      - name: Initiate
-        href: relocate/initiate.md
-      - name: Evaluate
-        href: relocate/evaluate.md
-      - name: Select
-        href: relocate/select.md
-      - name: Migrate
-        href: relocate/migrate.md
-      - name: Cutover
-        href: relocate/cutover.md
                 
 
   - name: Govern
@@ -719,18 +705,16 @@ items:
 
   - name: Manage
     items:
-    - name: Overview
+    - name: Checklist
       href: manage/index.md
-    - name: Administer your Azure cloud estate
+    - name: Ready operations
+      href: manage/ready.md  
+    - name: Administer Azure
       href: manage/administer.md  
-    - name: Monitor your Azure cloud estate
+    - name: Monitor Azure
       href: manage/monitor.md
-    - name: Protect your Azure cloud estate
+    - name: Protect Azure
       href: manage/protect.md
-    - name: Platform specialization
-      href: manage/azure-management-guide/platform-specialization.md
-    - name: Workload specialization
-      href: manage/azure-management-guide/workload-specialization.md
 
   - name: Secure
     items:

@@ -1,7 +1,7 @@
 ---
 title: Enterprise-Scale Example Architectures for Connectivity to Azure VMware Solution
 description: Learn about four scenarios that you can use to implement networking and connectivity for Azure VMware Solution deployments.
-author: sablair
+author: sblair01
 ms.author: lrivallain
 ms.date: 12/12/2024
 ms.topic: conceptual

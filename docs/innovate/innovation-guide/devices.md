@@ -2,7 +2,7 @@
 title: Ubiquitous computing and device management
 description: Learn about ubiquitous computing and Azure's framework for building immersive and effective business solutions through connected devices and perceptive edge devices.
 author: umarmohamedusman
-ms.author: martinek
+ms.author: umarm
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.custom: think-tank, fasttrack-new, AQC

@@ -2,7 +2,7 @@
 title: Plan for inbound and outbound internet connectivity
 description: Explore recommended connectivity models for inbound and outbound connectivity to and from the public internet.
 author: sebassem
-ms.author: martinek
+ms.author: sebassem
 ms.date: 06/22/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
@@ -17,12 +17,12 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - Azure native network security services such as [Azure Firewall](/azure/firewall/overview), [Azure Web Application Firewall (WAF) on Azure Application Gateway](/azure/web-application-firewall/ag/ag-overview), and [Azure Front Door](/azure/frontdoor/front-door-overview) are fully managed. You don't incur the operational and management costs and complexity of infrastructure deployments at scale.
 
-- If your organization prefers to use non-Azure network virtual appliance (NVAs), or for situations where native services don't satisfy specific requirements, the Azure landing zone architecture is fully compatible with partner NVAs.
+- If your organization prefers to use non-Azure network virtual appliance (NVAs) or in situations where native services don't satisfy specific requirements, the Azure landing zone architecture is fully compatible with partner NVAs.
 
 - Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [Azure NAT Gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 > [!NOTE]
-> As of Novemeber 2024, all Azure Firewall deployments must include a [Management NIC](/azure/firewall/management-nic) to separate management and data traffic. Previously required only for Forced Tunneling, the Management NIC is now mandatory for upcoming Firewall features. To avoid service disruption, ensure your firewall is deployed or updated with this feature enabled. For existing firewalls, see [Enable the Management NIC on existing firewalls](/azure/firewall/management-nic#enable-the-management-nic-on-existing-firewalls).
+> The *Azure Firewall Management NIC* was originally required only for forced tunneling. However, this requirement has been updated to support new Azure Firewall features that depend on the management NIC. The Azure Firewall documentation reflects this change. To take advantage of these upcoming features, ensure that your Azure Firewall is deployed with the management NIC *enabled*. For more information, see [Azure Firewall Management NIC](/azure/firewall/management-nic).
 
 ## Design recommendations
 
@@ -33,7 +33,7 @@ This article lists considerations and recommendations for inbound and outbound c
     - Dynamic or large workloads sending traffic to the internet.
     - Static and predictable public IP addresses for outbound connectivity. NAT gateway can be associated with up to 16 public IP addresses or a /28 public IP prefix.
     - Mitigation of issues with SNAT port exhaustion commonly experienced with [Load balancer outbound rules](/azure/load-balancer/troubleshoot-outbound-connection#use-a-nat-gateway-for-outbound-connectivity-to-the-internet), [Azure Firewall](/azure/firewall/integrate-with-nat-gateway), or [Azure App Services](/azure/app-service/networking/nat-gateway-integration).
-    - Security and privacy of resources within your network. Only outbound and return traffic can pass through NAT gateway.
+    - Security and privacy of resources within your network. Only outbound and return traffic can pass through the NAT gateway.
 
 - Use Azure Firewall to govern:
 
@@ -41,9 +41,9 @@ This article lists considerations and recommendations for inbound and outbound c
   - Non-HTTP/S inbound connections.
   - East-west traffic filtering, if your organization requires it.
 
-- Deploy Azure Firewall with the Managament NIC enabled
+- Deploy Azure Firewall with the Management NIC enabled
 
-  - Ensure the AzureFirewallManagementSubnet is created in advance to avoid deployment issues when using an existing virtual network., with a minimum subnet size of /26
+  - Ensure the AzureFirewallManagementSubnet is created in advance to avoid deployment issues when using an existing virtual network, with a minimum subnet size of /26
   - Assign a public IP address to the Management NIC. This IP facilitates the firewall's operational tasks, including updates and management communications.
   - By default, Azure associates a system-provided route table to the AzureFirewallManagementSubnet. This table includes a default route to the internet and *Propagate gateway routes* must be disabled.
 
@@ -76,7 +76,7 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - To use Azure Front Door and Azure Application Gateway to help protect HTTP/S applications, use WAF policies in Azure Front Door. Lock down Azure Application Gateway to receive traffic only from Azure Front Door.
 
-- If you need partner NVAs for inbound HTTP/S connections, deploy them within a landing-zone virtual network, together with the applications that they protect and expose to the internet.
+- If you need partner NVAs for inbound HTTP/S connections, deploy them within a landing-zone virtual network, together with the applications they protect and expose to the internet.
 
 - For outbound access, don't use Azure's default internet outbound access for any scenario. Issues experienced with default outbound access include:
 
@@ -100,4 +100,4 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - Use [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) protection plans to help protect the public endpoints you host within your virtual networks.
 
-- Don't try to replicate on-premises perimeter network concepts and architectures into Azure. Although Azure has similar security capabilities, the implementation and architecture are adapted to the cloud.
+- Don't try to replicate on-premises perimeter network concepts and architectures into Azure. Although Azure has similar security capabilities, its implementation and architecture have been adapted to the cloud.

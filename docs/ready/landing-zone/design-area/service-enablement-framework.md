@@ -1,8 +1,8 @@
 ---
 title: Service enablement framework
 description: Learn about adopting a service enablement framework. Achieving the right level of security and governance is an important part of your cloud adoption journey.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 02/27/2025
 ms.topic: conceptual
@@ -32,7 +32,7 @@ The following tables provide a framework to assess the enterprise security readi
 |--|--|
 | Authentication and access control | - Are all control plane operations governed by Microsoft Entra ID? Is there a nested control plane, such as with AKS? <br/> - What methods exist to provide access to the data plane? <br/> - Does the data plane integrate with Microsoft Entra ID? <br/> - Does authentication between Azure services use managed identities or service principals? <br/> - How are any applicable keys or shared access signatures managed? <br/> - How can access be revoked? |
 | Segregation of duties | Does the service separate control plane and data plane operations within Microsoft Entra ID? |
-| Multifactor authentication and conditional access | Is multifactor authentication enforced for user-to-service interactions? |
+| Multifactor authentication and Conditional Access | Is multifactor authentication enforced for user-to-service interactions? |
 
 ## Governance
 

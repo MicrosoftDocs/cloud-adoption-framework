@@ -3,13 +3,13 @@ title: Manage AI – Process to manage AI
 description: Learn the process to manage AI with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 11/01/2024
+ms.date: 04/09/2025
 ms.topic: conceptual
 ---
 
 # Manage AI – Process to manage AI
 
-This article outlines the organizational process for managing AI workloads. It provides recommendations for managing AI workloads from development, deployment, and operations. Effective AI management requires a structured approach from development through deployment and ongoing operations. Businesses need standardized practices and regular monitoring to prevent issues such as data and model drift, ensuring AI remains accurate and reliable over time.
+This article outlines the organizational process for managing AI workloads. It provides recommendations for managing AI workloads from development, deployment, and operations.
 
 :::image type="content" source="./images/manage-ai.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/manage-ai.svg" border="false":::
 
@@ -39,13 +39,15 @@ AI deployment management is about defining who can deploy AI resources and who g
     :::image type="content" source="./images/central-ai-management.svg" alt-text="Diagram showing shared management of AI workloads." lightbox="./images/central-ai-management.svg" border="false":::
     *Figure 2. Central AI team management of AI resources.*
 
-## Manage AI endpoint sharing
+## Manage AI resource sharing
 
-Sharing AI endpoints across workloads can streamline management, but it requires careful consideration of governance and model requirements. Businesses should only share endpoints within a single workload with consistent needs, as shared usage across differing needs can complicate governance and increase costs.
+Use AI resource sharing to reduce management overhead, but only under controlled conditions.
 
-- *Avoid sharing AI endpoints when governance and model needs vary.* Workloads that require different content filter settings, such as governance on input and output, shouldn't share an endpoint. Also, don’t share a single AI endpoint if a different AI model would provide a more cost-effective way to meet workload requirements.
+- *Share AI resources only within a single workload.* Sharing AI endpoints works best when one team manages multiple applications within the same workload. These applications must share identical governance rules, content filters, and AI model configurations. Resource sharing in this scenario reduces overhead and simplifies deployment.
 
-- *Share AI endpoints only within a single workload.* Sharing an AI endpoint works best when a workload team has multiple applications as part of the same workload. AI endpoint sharing provides the least amount of management overhead and simplifies deployment. These applications must share the same governance needs and AI model needs. Sharing endpoints can cause you to hit rate limits and quota limitations. Most Azure services have limits per subscription. Within a subscription, each region has quota limits.
+- *Understand Azure subscription and region quota limits.* Shared AI resource usage can trigger service rate limits or quota ceilings. Understand [Azure’s subscription quota limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits) to avoid unexpected service disruptions.
+
+- *Consider how to allocate costs across teams when sharing AI resources.* If your organization tracks costs by workload, team or business unit (chargeback scenarios), create separate AI service instances for each billing boundary. For example, when using Azure AI Foundry, set up one hub per project. This practice provides accurate cost tracking, simplifies governance, and clearly aligns resources to organizational boundaries.
 
 ## Manage AI models
 
@@ -59,7 +61,7 @@ AI model management involves setting governance structures, continuous monitorin
 
 - *Identify root causes of performance issues.* Pinpoint the source of the issue when a drop in performance or accuracy is detected by monitoring the AI. Ensure that you have visibility into each stage of the interaction to isolate the problem and implement corrective actions more quickly. For example, if a customer service chatbot generates inaccurate responses, monitoring should help you determine whether the error is in the prompt crafting or the model's understanding of context. Use built-in tools like Azure Monitor and Application Insights to proactively identify performance bottlenecks and anomalies.
 
-- *Track model retirement.* Track retirement for pretrained models to prevent performance issues as vendor support ends. For instance, a generative AI model might be deprecated, so you'd need to update it to maintain functionality. [Azure AI Foundry portal](https://ai.azure.com/) shows the model retirement date for all deployments.
+- *Track model retirement.* Track retirement for pretrained models to prevent performance issues as vendor support ends. For instance, a generative AI model might be deprecated, so you'd need to update it to maintain functionality. [Azure AI Foundry portal](https://ai.azure.com?cid=learnDocs) shows the model retirement date for all deployments.
 
 - *Retrain AI models as needed.* Account for models degrading over time because of changes in data. Schedule regular retraining based on model performance or business needs to ensure that the AI system stays relevant. Retraining can be expensive, so assess the initial training cost and use that cost to evaluate how frequently you should retrain AI models. Maintain version control for models and ensure a rollback mechanism for underperforming versions.
 

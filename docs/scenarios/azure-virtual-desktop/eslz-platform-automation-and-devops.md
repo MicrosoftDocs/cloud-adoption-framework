@@ -1,8 +1,8 @@
 ---
 title: Platform automation and DevOps for Azure Virtual Desktop
 description: Learn how this design area can improve platform automation and DevOps for Azure Virtual Desktop.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 02/22/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd

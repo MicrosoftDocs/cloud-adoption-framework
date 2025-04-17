@@ -1,8 +1,8 @@
 ---
 title: Understand cloud migration functions
 description: Understand cloud migration functions.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3

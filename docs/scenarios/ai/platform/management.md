@@ -3,7 +3,7 @@ title: Management recommendations for AI workloads on Azure
 description: Learn how to manage AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: rajanaki
-ms.date: 11/01/2024
+ms.date: 04/09/2025
 ms.topic: conceptual
 ---
 
@@ -11,11 +11,15 @@ ms.topic: conceptual
 
 This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
 
-Effective management of AI workloads on Azure involves overseeing deployment, model performance, operations, data, and disaster recovery to support your AI workloads. Proper management helps ensure that AI workloads are reliable, trustworthy, and secure throughout their lifecycle.
-
 ## Manage AI deployments
 
-Managing AI deployments helps workload teams move from proof-of-concept stages to production environments with consistent configurations that improve security and compliance across teams. Azure offers tools like Azure AI Foundry [hubs and projects](/azure/ai-studio/concepts/ai-resources) to enforce governance and security. Azure Machine Learning has similar capabilities with its [hub workspaces](/azure/machine-learning/concept-hub-workspace). For more information, see [Manage AI deployments](../manage.md#manage-ai-deployment).
+Managing AI deployments ensures consistent configurations across environments to enhance security, compliance, and operational efficiency for workloads.
+
+- *Find the best region.* Map each model's latency, throughput, and compliance requirements. Check the Azure region [product availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table) table to confirm support for required hardware, features, and data-residency rules. Deploy to the region that meets those requirements to ensure performance and regulatory alignment.
+
+- *Use AI hubs to manage deployments.* Azure offers tools like Azure AI Foundry [hubs and projects](/azure/ai-studio/concepts/ai-resources) to enforce governance and security. Azure Machine Learning has similar capabilities with its [hub workspaces](/azure/machine-learning/concept-hub-workspace). Use a hub per billing boundary to allocate costs across different teams. For more information, see [Manage AI deployments](../manage.md#manage-ai-deployment).
+
+- *Manage multiple deployments.* Use Azure API Management as a unified gateway for your AI endpoints when onboarding multiple applications or teams. Apply this approach to enforce consistent security, scalability, rate limiting, token quotas, and centralized monitoring across your AI services. For more information, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide).
 
 ## Manage AI models
 

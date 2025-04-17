@@ -2,7 +2,7 @@
 title: The strategic impact of SAP in the cloud
 description: Understand the strategic impact of SAP in the cloud.
 author: JefferyMitchell
-ms.author: martinek
+ms.author: jemitche
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 SAP products form a mission-critical platform for many organizations. When these products are foundational to an organization's business processes, the dependencies on SAP can be seen throughout the portfolio. The cloud adoption plan for this platform can directly and indirectly impact cloud adoption for all related workloads. While SAP isn't typically the first platform that an organization moves to the cloud, it can be the most important. Understanding the strategy for an SAP cloud migration and future-state innovation targets is critical to the success of all other cloud adoption plans.
 
-This article uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources from the Cloud Adoption Framework to capture the strategic impact of SAP cloud adoption.
+Resources from the Cloud Adoption Framework can help you capture the strategic impact of SAP cloud adoption.
 
 ## Reasons to move an SAP platform to the cloud
 

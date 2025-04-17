@@ -1,8 +1,8 @@
 ---
 title: Govern modern application platform solutions
 description: Extend governance practices to modern application platform instances
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

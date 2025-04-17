@@ -1,8 +1,8 @@
 ---
 title: Enterprise enrollment design area for Azure Virtual Desktop
 description: Explore the enterprise enrollment design area and how to apply it to an Azure Virtual Desktop implementation
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 06/18/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd

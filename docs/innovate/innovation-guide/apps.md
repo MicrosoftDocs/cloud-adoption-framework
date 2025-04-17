@@ -2,7 +2,7 @@
 title: Build applications and engage using app services
 description: Build cloud-native applications and easily modernize your existing web and API apps. Learn about Azure App Service, Azure DevOps, and Visual Studio App Center.
 author: billyclaymyersmsft
-ms.author: martinek
+ms.author: wimyers
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.custom: think-tank, fasttrack-edit, AQC, linux-related-content
@@ -39,17 +39,17 @@ To configure or monitor Azure App Service deployments:
 
 ::: zone-end
 
-### Azure Cognitive Services
+### Azure AI services
 
-With Azure Cognitive Services, you can infuse advanced intelligence directly into your application through a set of APIs that let you take advantage of Microsoft-supported AI and machine learning algorithms.
+With AI services, you can infuse advanced intelligence directly into your application through a set of APIs that let you take advantage of Microsoft-supported AI and machine learning algorithms.
 
 <!-- markdownlint-disable MD024 -->
 
 #### Action
 
-To configure or monitor Azure Cognitive Services deployments:
+To configure or monitor AI services deployments:
 
-1. Go to **Cognitive Services**.
+1. Go to **AI services**.
 2. Configure a new service: select **Add** and follow the prompts.
 3. Manage existing services: select the desired service from the list of hosted services.
 
