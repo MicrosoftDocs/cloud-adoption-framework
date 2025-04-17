@@ -72,7 +72,7 @@ Review the [identity and access management design area](../../../ready/landing-z
 - Avoid direct user assignment to Azure RBAC roles, since it's difficult to govern access management.
 - Decentralize and delegate access management responsibility and audit assignments by assigning security group owners.
 - Enable periodic [access reviews](/azure/active-directory/privileged-identity-management/pim-create-azure-ad-roles-and-resource-roles-review) in Microsoft Entra ID to remove users that no longer need access to the Kubernetes clusters.
-- Create [conditional access policies](/azure/active-directory/conditional-access/howto-conditional-access-policy-azure-management) when using Azure RBAC for cluster management to enforce various conditions to meet security and governance policies.
+- Create [Conditional Access policies](/azure/active-directory/conditional-access/howto-conditional-access-policy-azure-management) when using Azure RBAC for cluster management to enforce various conditions to meet security and governance policies.
   
 ## Role based access controls
 
@@ -94,7 +94,7 @@ For more information on your hybrid and multicloud cloud journey, see the follow
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
 - Review [Manage hybrid and multicloud environments](../manage.md).
-- Review [common conditional access policies](/azure/active-directory/conditional-access/plan-conditional-access) to apply when using Azure RBAC for Azure Arc-enabled Kubernetes cluster.
+- Review [common Conditional Access policies](/azure/active-directory/conditional-access/plan-conditional-access) to apply when using Azure RBAC for Azure Arc-enabled Kubernetes cluster.
 - [Resource organization](./eslz-arc-kubernetes-resource-organization.md) can help you plan and apply governance and security using Azure RBAC.
 - Learn how to [Integrate Microsoft Entra ID with Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/azure-rbac).
 - Learn how to [Access your cluster securely](/azure/azure-arc/kubernetes/conceptual-cluster-connect) from anywhere using Cluster connect.
