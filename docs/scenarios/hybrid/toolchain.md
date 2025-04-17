@@ -3,7 +3,7 @@ title: Introduction to Azure hybrid and multicloud products
 description: Introduce the Azure products that help enable hybrid and multicloud solutions.
 author: martinekuan
 ms.author: martinek
-ms.date: 01/11/2021
+ms.date: 04/17/2025
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
 ---
@@ -38,6 +38,9 @@ This article series helps to integrate these tools into relevant processes that 
   - [Azure API Management gateway](/azure/api-management/how-to-deploy-self-hosted-gateway-azure-arc?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 - [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an Azure Arc service that simplifies hybrid IT management by integrating Azure's security, governance, and management features with VMware vSphere infrastructure.
 - [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) lets System Center users manage their VMM environment and VMs through the Azure portal, integrating Azure's security, governance, and management features across both platforms.
+
+>[!NOTE]
+>For guidance on choosing the right Azure Arc service for your virtual machines, see [Choose the right Azure Arc service for machines](../choose-service.md).
 
 ## Deploy hybrid and multicloud solutions
 
