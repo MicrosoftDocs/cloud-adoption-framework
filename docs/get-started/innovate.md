@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Build new products and services in the cloud'
 description: Learn about the Innovate methodology as an approach to guide the development of new cloud products and services.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 04/22/2021
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
@@ -20,7 +20,7 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations and desired business outcomes.
+- Document and record motivations and desired business outcomes.
 
 **Guidance to support deliverable completion:**
 
@@ -40,11 +40,11 @@ In this first pass at building the business case, evaluate the initial high-leve
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record the business justification.
+- Document and record business justifications.
 
 **Guidance to support deliverable completion:**
 
-- [Business justification](../strategy/cloud-migration-business-case.md): Before you evaluate each opportunity to innovate in the cloud, complete a high-level business justification to establish stakeholder alignment for the overall adoption plan.
+- [Define your missions and objectives](../strategy/mission-objectives.md): Before you evaluate each opportunity to innovate in the cloud, complete a high-level business justification to establish stakeholder alignment for the overall adoption plan. 
 - [Business value consensus](../innovate/business-value.md): Quantifying the value of an innovation can be difficult early in the process. The exercise in this article can aid in evaluating alignment on the business value of a specific innovation effort.
 
 <br>
@@ -64,7 +64,7 @@ In most enterprises, innovation can be accelerated through the use of existing a
   - Quantitative analysis on any supporting inventory required to support the planned innovation.
   - Qualitative analysis of any supporting workloads required to deliver the innovation.
 - Calculate the cost of new inventory required to support the innovation effort.
-- Update the business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) with refined calculations.
+- Update the business justification in your adoption strategy and plan documents with refined calculations.
 
 **Guidance to support deliverable completion:**
 
@@ -177,7 +177,7 @@ The Innovate methodology provides guidance on the tools and product management a
   - Technology-based experiences.
   - Integration of physical products and technology by using IoT.
   - Ambient intelligence: integration of nonintrusive technology into an environment.
-  - Azure Cognitive Services: big data, AI, machine learning, and predictive solutions.
+  - Azure AI services: big data, AI, machine learning, and predictive solutions.
 
 **Guidance to support deliverable completion:**
 

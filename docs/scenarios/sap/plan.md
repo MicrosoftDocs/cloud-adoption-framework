@@ -2,7 +2,7 @@
 title: Plan for SAP cloud adoption in Azure
 description: Understand how to plan SAP cloud adoption in Azure.
 author: JefferyMitchell
-ms.author: martinek
+ms.author: jemitche
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 As discussed in the SAP [strategy](./strategy.md) article, the returns from SAP cloud adoption can be very high, but so can the risk of missed expectations. Developing a clear financial plan that's based on your digital estate will ensure greater accuracy in the expectations that you set. The same financial planning exercises will provide the cloud adoption team with the data needed to plan technical activities.
 
-The [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for SAP cloud adoption.
+Resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for SAP cloud adoption.
 
 ## SAP digital estate planning
 
@@ -76,7 +76,7 @@ You can use the [Azure DevOps web interface](/azure/devops/project/navigation/) 
 
 Once you have a general work plan, you can begin aligning team members and estimating the work.
 
-This project's team members could be SAP or Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine the skills that the team will need to acquire. Then, map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. The Cloud Adoption Framework [building a skills readiness plan](../../plan/adapt-roles-skills-processes.md) article and [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) can help your team to track and address skilling gaps to create stronger cross-functional collaboration in each sprint.
+This project's team members could be SAP or Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine the skills that the team will need to acquire. Then, map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. The Cloud Adoption Framework [building a skills readiness plan](../../plan/adapt-roles-skills-processes.md).
 
 ## Next step: Review your environment or Azure landing zone for an SAP enterprise-scale migration
 

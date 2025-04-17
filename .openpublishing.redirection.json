@@ -2944,6 +2944,46 @@
          "source_path": "docs/manage/operational-fitness-review.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/index",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-management-guide/platform-specialization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/azure-management-guide/workload-specialization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/relocate/cutover.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/relocate/evaluate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/relocate/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/relocate/initiate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/relocate/migrate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/relocate/select.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
+         "redirect_document_id": false
       }
    ]   
 }

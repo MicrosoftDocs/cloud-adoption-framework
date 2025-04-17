@@ -132,7 +132,7 @@ To ensure the consistent implementation of encryption and access controls, it's 
 
 - **Strong encryption:** Enable encryption on data stores when possible and consider managing your own keys. Your cloud provider might offer encryption at rest for the storage that your data store is hosted on, and give you the option of enabling database encryption like [transparent data encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview) in Azure SQL Database. Apply the extra layer of encryption when possible.
 
-- **Access controls:** Apply RBAC, conditional access controls, just-in-time access, and just-enough-access to all data stores. Standardize the practice of reviewing permissions regularly. Restrict write access to configuration systems, which allows changes only through a designated automation account. This account applies modifications after thorough review processes, typically as part of Azure Pipelines.
+- **Access controls:** Apply RBAC, Conditional Access controls, just-in-time access, and just-enough-access to all data stores. Standardize the practice of reviewing permissions regularly. Restrict write access to configuration systems, which allows changes only through a designated automation account. This account applies modifications after thorough review processes, typically as part of Azure Pipelines.
 
 - **Standards adoption:** The organization might develop a standard that requires all emails that contain sensitive information to be encrypted by using [Microsoft Purview Information Protection](/purview/information-protection). This requirement ensures that sensitive data is protected during transmission and only accessible by authorized recipients.
 
@@ -142,7 +142,7 @@ To ensure the consistent implementation of encryption and access controls, it's 
 
 - **Azure encryption:** Azure provides encryption for services like Azure SQL Database, Azure Cosmos DB, and Azure Data Lake. The supported encryption models include server-side encryption with service-managed keys, customer-managed keys in Azure Key Vault, and customer-managed keys on customer-controlled hardware. Client-side encryption models support data encryption by an application before it's sent to Azure. For more information, see [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
 
-- **Access control management:** Formerly known as Azure Active Directory, [Microsoft Entra ID](/entra/fundamentals/whatis) provides comprehensive identity and access management capabilities. It supports multifactor authentication, conditional access policies, and single sign-on to ensure that only authorized users can access sensitive data.
+- **Access control management:** Formerly known as Azure Active Directory, [Microsoft Entra ID](/entra/fundamentals/whatis) provides comprehensive identity and access management capabilities. It supports multifactor authentication, Conditional Access policies, and single sign-on to ensure that only authorized users can access sensitive data.
 
   - [Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) uses advanced machine learning to identify sign-in risks and unusual user behavior to block, challenge, limit, or grant access. It helps prevent identity compromise, protects against credential theft, and provides insights into your identity security posture.
 

@@ -3,7 +3,7 @@ title: Protect your Azure cloud estate
 description: Learn how to ensure the reliability and security your Azure cloud estate as part of your cloud operations.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/17/2025
+ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
@@ -11,6 +11,8 @@ ms.custom: UpdateFrequency2
 # Protect your cloud estate
 
 This article provides best practices for maintaining the reliability and security of your Azure cloud estate. Reliability ensures your cloud services remain operational with minimal downtime. Security safeguards the confidentiality, integrity, and availability of your resources. Both reliability and security are critical for successful cloud operations.
+
+:::image type="content" source="./media/caf-manage-protect.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-protect.svg" border="false":::
 
 ## Manage reliability
 
@@ -26,7 +28,7 @@ Reliability management involves using redundancy, replication, and defined recov
 
 ### Identify reliability responsibilities
 
-Reliability responsibilities vary by deployment model. Clarify your responsibilities to effectively manage reliability across Infrastructure (IaaS), Platform (PaaS), Software (SaaS), and on-premises solutions.
+Reliability responsibilities vary by deployment model. Use the following table to identify your management responsibilities for infrastructure (IaaS), platform (PaaS), software (SaaS), and on-premises deployments.
 
 | Responsibility     | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
 |--------------------|:-----------:|:------------:|:------------:|:----:|
@@ -35,11 +37,7 @@ Reliability responsibilities vary by deployment model. Clarify your responsibili
 | Cloud resources    |      ✔️      |      ✔️       |      ✔️       |      |
 | Physical hardware  |      ✔️      |               |                |      |
 
-For more information, see [Shared responsibility for reliability](/azure/reliability/concept-shared-responsibility) .
-
-### Prioritize workloads
-
-The priority determines your reliability requirements, such as uptime SLOs and recovery objectives. Assign a priority to all workloads across your cloud estate. Base the priority of workloads on their business value (revenue and reputation) and any regulatory compliance requirements. Meeting reliability requirements requires financial and time investments, so ensure the priorities align with the invest Classify workloads as high, medium, or low priority. Use medium priority as a default when you’re unclear to quickly identify higher priority workloads. Regularly review and maintain this list to ensure alignment to the business and environment/cost efficiency.
+For more information, see [Shared responsibility for reliability](/azure/reliability/concept-shared-responsibility).
 
 ### Define reliability requirements
 
@@ -65,21 +63,23 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 ### Manage data reliability
 
-Data reliability involves data replication (replicas) and backups (point in time copies) to maintain availability and consistency. Your approach must align with the workload’s defined RTO and RPO. Follow these steps:
+Data reliability involves data replication (replicas) and backups (point in time copies) to maintain availability and consistency. See *Table 2* for examples of workload priority aligned with data reliability targets.
 
-*Table 3. Workload priority with example data reliability configurations.*
+*Table 2. Workload priority with example data reliability configurations.*
 
 | Workload priority | Uptime SLO | Data replication | Data backups | Example scenario |
 |-------------------|------------|------------------|--------------|------------------|
-| High              | 99.99%     | Multi-region synchronous data replication<br>Synchronous data replication across availability zones | High frequency, cross-region backups. Frequency should support RTO and RPO. | [Mission-critical data platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-data-platform) |
-| Medium            | 99.9%      | Multi-region asynchronous data replication<br>Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Database and storage solution in the Reliable Web App pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#pick-the-right-azure-services)<br>Sample resources:<br>Azure SQL Database [zone redundancy](/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview), [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview), and [native backups](/azure/azure-sql/database/automated-backups-overview)<br>Azure Storage [read-access geo-zone-redundant storage (RA-GZRS)](/azure/storage/common/storage-redundancy) |
+| High              | 99.99%     | Synchronous data replication across regions<br><br>Synchronous data replication across availability zones | High frequency, cross-region backups. Frequency should support RTO and RPO. | [Mission-critical data platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-data-platform) |
+| Medium            | 99.9%      | Synchronous data replication across regions<br><br>Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Database and storage solution in the Reliable Web App pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#pick-the-right-azure-services)|
 | Low               | 99%        | Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Data resiliency in baseline web app with zone redundancy](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant#blob-storage) |
+
+Your approach must align the data reliability configurations with the RTO and RPO requirements of your workloads. Follow these steps:
 
 1. ***Manage data replication.*** Replicate your data synchronously or asynchronously according to your workload’s RTO and RPO requirements.
 
     | Data distribution                  | Data replication                  | Load balancing configuration                        |
     |------------------------------------------|-----------------------|--------------------------------------|
-    | Across availability zones       | Synchronous (near real-time) | PaaS services handle this natively   |
+    | Across availability zones       | Synchronous (near real-time) | Most PaaS services handle cross-zone load balancing natively   |
     | Across regions (active-active) | Synchronous           | Active-active load balancing         |
     | Across regions (active-passive) | Asynchronous (periodic) | Active-passive configuration         |
 
@@ -87,77 +87,74 @@ Data reliability involves data replication (replicas) and backups (point in time
 
 1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Choose backup solutions that align with your RTO and RPO goals. Prefer Azure’s built-in solutions, such as Azure Cosmos DB and Azure SQL Database native backups. For other cases, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup).
 
-1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework:
-
-    | Workload reliability | Details | 
-    |----------------------|---------|
-    |Reliability pillar | [Data partitioning](/azure/well-architected/reliability/partition-data) |
-    | Service guide | [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*) |
+1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework [Data partitioning guide](/azure/well-architected/reliability/partition-data) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
 ### Manage code and runtime reliability
 
-Code and runtime are workload responsibilities. Follow the Well-Architected Framework’s [Recommendations for self-healing and self-preservation.](/azure/well-architected/reliability/self-preservation)
+Code and runtime are workload responsibilities. Follow the Well-Architected Framework’s [self-healing and self-preservation guide](/azure/well-architected/reliability/self-preservation).
 
 ### Manage cloud resources reliability
 
-Managing the reliability of your cloud resources often requires architecture redundancy (duplicate service instances) and an effective load-balancing strategy. Implement these adjustments based on your workload's reliability requirements. See *Table 2* for examples of architecture redundancy aligned with workload priority.
+Managing the reliability of your cloud resources often requires architecture redundancy (duplicate service instances) and an effective load-balancing strategy. See *Table 3* for examples of architecture redundancy aligned with workload priority.
 
-*Table 2. Workload priority and architecture redundancy examples.*
+*Table 3. Workload priority and architecture redundancy examples.*
 
 | Workload priority | Architecture redundancy         | Load balancing approach | Azure load balancing solution     | Example scenario      |
 |-------------------|---------------------------------|-------------------------|-----------------------------------|-----------------------|
-| High              | Two regions & availability zones | Active-active           | Azure Front Door (HTTP) or Azure Traffic Manager for non-HTTP traffic. | [Mission-critical baseline application platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-app-platform#global-load-balancer)     |
-| Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP) or Azure Traffic Manager for non-HTTP traffic. | [Reliable web app pattern architecture guidance](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#architecture-guidance)  |
-| Low               | Single region & availability zones | Across availability zones | Azure Application Gateway  | Add Azure Load Balancer for virtual machines<br>[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
+| High              | Two regions & availability zones | Active-active           | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Mission-critical baseline application platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-app-platform#global-load-balancer)     |
+| Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Reliable web app pattern architecture guidance](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#architecture-guidance)  |
+| Low               | Single region & availability zones | Across availability zones | Azure Application Gateway<br><br>Add Azure Load Balancer for virtual machines  |[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
 
-1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path).
+Your approach must implement architecture redundancy to meet the reliability requirements of your workloads. Follow these steps:
+
+1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path). Follow these steps:
 
     1. Gather the [Microsoft uptime SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services) for every service on the critical path of your workload.
 
     1. If you have no independent critical paths, calculate single-region composite SLA by multiplying the uptime percentages of each relevant service. If you have independent critical paths, move to step 3 before calculating.
 
-    1. When two Azure services provide independent critical paths, apply the independent critical paths formula.
+    1. When two Azure services provide independent critical paths, apply the independent critical paths formula to those services.
 
     1. For multi-region applications, input the single-region composite SLA (N) into the multi-region uptime formula.
 
     1. Compare your calculated uptime with your uptime SLO. Adjust service tiers or architecture redundancy if necessary.
 
-    | Use case | Formula | Explanation | Example |
-    |-----|------|--------|--------|
-    | Single-region uptime estimate   | N = U1 × U2 × U3 × … × U*n*  | **N**: Composite SLA of Azure services on a single-region critical path.<br>**U**: SLA uptime percentage of each Azure service.<br>**n**: Total number of Azure services.     | N = 99.99% (web app) × 99.95% (database) × 99.99% (cache)   |
-    | Independent critical paths estimate | 1 - [(1 - Ui1) × (1 - Ui2)] | **Ui**: SLA uptime percentage for Azure services providing independent critical paths.  | N = 99.99% (web app) × (1 - [(1 - 99.95% [database]) × (1 - 99.99% [cache])])  |
-    | Multi-region uptime estimate    | M = 1 - (1 - N)^Regions   | **M**: Multi-region uptime estimate.<br>**N**: Single-region composite SLA.<br>**Regions**: Number of regions deployed. | If N = 99.95% and Regions = 2, M = 1 - (1 - 99.95%)² = 99.999975%  |
+    | Use case | Formula | Variables | Example | Explanation |
+    |-----|------|--------|--------| --- |
+    | Single-region uptime estimate   | N = S1 × S2 × S3 × … × U*n*  | **N**: Composite SLA of Azure services on a single-region critical path.<br>**S**: SLA uptime percentage of each Azure service.<br>**n**: Total number of Azure services on critical path.     | N = 99.99% (app) × 99.95% (database) × 99.9% (cache) | Simple workload with app (99.99%), database (99.95%), and cache (99.9%) in a single critical path.|
+    | Independent critical paths estimate | S1 x 1 - [(1 - S2) × (1 - S3)] | **S**: SLA uptime percentage for Azure services providing independent critical paths.  | 99.99% (app) × ***(1 - [(1 - 99.95% database) × (1 - 99.9% cache)])***  | Two independent critical paths. Either database (99.95%) or cache (99.9%) can fail without downtime.|
+    | Multi-region uptime estimate    | M = 1 - (1 - N)^R   | **M**: Multi-region uptime estimate.<br>**N**: Single-region composite SLA.<br>**R**: Number of regions used. | If N = 99.95% and R = 2, then M = 1 - (1 - 99.95%)^2 | Workload deployed in two regions. |
 
 1. ***Adjust service tiers.*** Before modifying architectures, evaluate whether different Azure service tiers (SKUs) can meet your reliability requirements. Some Azure service tiers can have different uptime SLAs, such as Azure Managed Disks.
 
 1. ***Add architecture redundancy.***  If your current uptime estimate falls short of your SLO, increase redundancy:
 
-	1. ***Use multiple availability zones.*** Configure your workloads to use multiple availability zones. How availability zones improve your uptime can be difficult to estimate. Only a select number of services have uptime SLAs that account for availability zones. See the following table for some examples. Where SLAs account for availability zones, use them in your uptime estimates.
+	1. ***Use multiple availability zones.*** Configure your workloads to use multiple availability zones. How availability zones improve your uptime can be difficult to estimate. Only a select number of services have uptime SLAs that account for availability zones. Where SLAs account for availability zones, use them in your uptime estimates. See the following table for some examples.
 
-    | Azure service type | Azure services with Availability Zone SLAs |
-    |--------------------|-------------------------------------------|
-    | Compute Platform | App Service,<br>Azure Kubernetes Service,<br>Virtual Machines |
-    | Datastore | Azure Service Bus,<br>Azure Storage Accounts,<br>Azure Cache for Redis,<br>Azure Files Premium Tier |
-    | Database | Azure Cosmos DB,<br>Azure SQL Database,<br>Azure Database for MySQL,<br>Azure Database for PostgreSQL,<br>Azure Managed Instance for Apache Cassandra |
-    | Load Balancer | Application Gateway |
-    | Security | Azure Firewall |
+        | Azure service type | Azure services with Availability Zone SLAs |
+        |--------------------|-------------------------------------------|
+        | Compute Platform | App Service<br>Azure Kubernetes Service<br>Virtual Machines |
+        | Datastore | Azure Service Bus<br>Azure Storage Accounts<br>Azure Cache for Redis<br>Azure Files Premium Tier |
+        | Database | Azure Cosmos DB<br>Azure SQL Database<br>Azure Database for MySQL<br>Azure Database for PostgreSQL<br>Azure Managed Instance for Apache Cassandra |
+        | Load Balancer | Application Gateway |
+        | Security | Azure Firewall |
 
-	1. ***Use multiple regions.***  Multiple regions are often necessary to meet uptime SLOs. Use global load balancers (Azure Front Door or Traffic Manager) for traffic distribution. Note that multi-region architectures require careful data consistency management.
+	1. ***Use multiple regions.***  Multiple regions are often necessary to meet uptime SLOs. Use global load balancers (Azure Front Door or Traffic Manager) for traffic distribution. Multi-region architectures require careful data consistency management.
 
-1. ***Manage architecture redundancy.*** Decide how to use redundancy: You can use architecture redundancy as part of daily operations (active). Or you can use architecture redundancy in disaster recovery scenarios (passive). For examples, see *Table 2.*
+1. ***Manage architecture redundancy.*** Decide how to use redundancy: You can use architecture redundancy as part of daily operations (active). Or you can use architecture redundancy in disaster recovery scenarios (passive). For examples, see *Table 3.*
 
 	1. ***Load balance across availability zones.*** Use all availability actively. Many Azure PaaS services manage load balancing across availability zones automatically. IaaS workloads must use an [internal load balancer](/azure/load-balancer/quickstart-load-balancer-standard-internal-portal) to load balance across availability zones.
 
 	1. ***Load balance across regions.*** Determine whether multi-region workloads should run active-active or active-passive based on reliability needs.
 
-1. ***Manage service configurations.*** Consistently apply configurations across redundant instances of Azure resources, so the resources behave in the same way. Use [infrastructure as code](./administer.md#manage-code-based-deployments) to maintain consistency. For more information, see [Duplicate resource configuration](/azure/reliability/concept-redundancy-replication-backup#duplicate-resource-configuration).
+1. ***Manage service configurations.*** Consistently apply configurations across redundant instances of Azure resources, so the resources behave in the same way. Use [infrastructure as code](./administer.md#manage-code-deployments) to maintain consistency. For more information, see [Duplicate resource configuration](/azure/reliability/concept-redundancy-replication-backup#duplicate-resource-configuration).
 
 1. ***Design workload reliability.*** For workload reliability design, see the Well-Architected Framework:
 
-| Workload reliability | Guidance |
-| ---| --- |
-| Reliability pillar | - [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>- [Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>- [Using availability zones and regions](/azure/well-architected/reliability/regions-availability-zones)|
-|Service guide| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)|
+    | Workload reliability | Guidance |
+    | ---| --- |
+    | Reliability pillar | [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>[Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>[Using availability zones and regions](/azure/well-architected/reliability/regions-availability-zones)|
+    |Service guide| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)|
 
 For more information, see [Redundancy](/azure/reliability/concept-redundancy-replication-backup#redundancy).
 
@@ -171,43 +168,31 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 1. ***Detect failures.*** Adopt a proactive approach to identifying outages quickly, even if this method increases false positives. Prioritize customer experience by minimizing downtime and maintaining user trust.
 
-	- ***Monitor failures.*** Monitor workloads to detect outages within one minute. Use [Azure Service Health](/azure/service-health/overview) and [Azure Resources Health](/azure/service-health/resource-health-overview) and use [Azure Monitor alerts](./monitor.md#configure-alerting) to notify relevant teams. Integrate these alerts with Azure DevOps or IT Service Management (ITSM) tools.
+	1. ***Monitor failures.*** Monitor workloads to detect outages within one minute. Use [Azure Service Health](/azure/service-health/overview) and [Azure Resources Health](/azure/service-health/resource-health-overview) and use [Azure Monitor alerts](./monitor.md#configure-alerting) to notify relevant teams. Integrate these alerts with Azure DevOps or IT Service Management (ITSM) tools.
 
-	- ***Collect service level indicators (SLIs).*** rack performance by defining and gathering metrics that serve as SLIs. Ensure your teams use these metrics to measure workload performance against your service level objectives (SLOs).
+	1. ***Collect service level indicators (SLIs).*** Track performance by defining and gathering metrics that serve as SLIs. Ensure your teams use these metrics to measure workload performance against your service level objectives (SLOs).
 
-1. ***Respond to failures.*** Align your recovery response to the [workload priority](#prioritize-workloads). Implement failover procedures to reroute requests to redundant infrastructure and data replicas immediately. Once systems stabilize, resolve the root cause, synchronize data, and execute failback procedures. For more information, see [Failover and failback.](/azure/reliability/concept-failover-failback)
+1. ***Respond to failures.*** Align your recovery response to the workload priority. Implement failover procedures to reroute requests to redundant infrastructure and data replicas immediately. Once systems stabilize, resolve the root cause, synchronize data, and execute failback procedures. For more information, see [Failover and failback](/azure/reliability/concept-failover-failback).
 
-1. ***Analyze failures.***  Identify the root causes of the issues and then address the problem. Document any lessons learned and implement necessary changes.
+1. ***Analyze failures.***  Identify the root causes of the issues and then address the problem. Document any lessons and make the necessary changes.
 
-1. ***Manage workload failures.*** For workload disaster recovery, see the Well-Architected Framework:
+1. ***Manage workload failures.*** For workload disaster recovery, see the Well-Architected Framework's [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
-| Workload reliability | Details |
-| --- | --- |
-| Reliability pillar | [Designing a disaster recovery strategy](/azure/well-architected/reliability/disaster-recovery) | 
-| Service guide | [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*) |
-
-### Azure reliability tools
+## Azure reliability tools
 
 | Use case                        | Solution                                                                                                                   |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| PaaS data replication and backup| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)      |
-| Quick reference:                |                                                                                                                            |
-|                                 | [Azure Cosmos DB](/azure/well-architected/service-guides/cosmos-db)                                                        |
-|                                 | [Azure SQL Database](/azure/well-architected/service-guides/azure-sql-database-well-architected-framework#azure-sql-database-and-reliability) |
-|                                 | [Azure Blob Storage](/azure/well-architected/service-guides/azure-blob-storage)                                            |
-|                                 | [Azure Files](/azure/well-architected/service-guides/azure-files)                                                          |
-| IaaS data backup and restore    | [Azure Backup](/azure/backup/backup-overview)                                                                              |
-| IaaS business continuity        | [Azure Site Recovery](/azure/site-recovery/azure-to-azure-tutorial-enable-replication)                                     |
-| Multi-region load balancer      | [Azure Front Door](/azure/frontdoor/front-door-overview) (HTTP)                                                            |
-|                                 | [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (non-HTTP)                                        |
-| Multi-availability zone load balancer | [Azure Application Gateway](/azure/application-gateway/overview) (HTTP)                                               |
-|                                 | [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) (non-HTTP)                                              |
+| Data replication, backup, and business continuity| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)<br><br>Quick reference:<br>[Azure Cosmos DB](/azure/well-architected/service-guides/cosmos-db)<br>[Azure SQL Database](/azure/well-architected/service-guides/azure-sql-database-well-architected-framework#azure-sql-database-and-reliability)<br>[Azure Blob Storage](/azure/well-architected/service-guides/azure-blob-storage)<br>[Azure Files](/azure/well-architected/service-guides/azure-files)                                                          |
+| Data backup    | [Azure Backup](/azure/backup/backup-overview)                                                                              |
+| Business continuity (IaaS)        | [Azure Site Recovery](/azure/site-recovery/azure-to-azure-tutorial-enable-replication)                                     |
+| Multi-region load balancer      | [Azure Front Door](/azure/frontdoor/front-door-overview) (HTTP)<br>[Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (non-HTTP)                                        |
+| Multi-availability zone load balancer | [Azure Application Gateway](/azure/application-gateway/overview) (HTTP)<br>[Azure Load Balancer](/azure/load-balancer/load-balancer-overview) (non-HTTP)                                              |
 
 ## Manage security
 
 Use an iterative security process to identify and mitigate threats in your cloud environment. Follow these steps:
 
-### Manage security controls
+### Manage security operations
 
 Manage your security controls to detect threats to your cloud estate. Follow these steps:
 
@@ -215,7 +200,7 @@ Manage your security controls to detect threats to your cloud estate. Follow the
 
 1. ***Baseline your environment.*** Document the normal state of your cloud estate. [Monitor security](/azure/cloud-adoption-framework/manage/monitor#monitor-security) and document network traffic patterns and user behaviors. Use [Azure security baselines](/security/benchmark/azure/security-baselines-overview) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) to develop baseline configurations for services. This baseline makes it easier to detect anomalies and potential security weaknesses.
 
-1. ***Apply security controls.*** Implement security measures, such as access controls, encryption, and multi-factor authentication, strengthens the environment and reduces the probability of compromise. For more information, see [Manage security](./administer.md#manage-security).
+1. ***Apply security controls.*** Implement security measures, such as access controls, encryption, and multifactor authentication, strengthens the environment and reduces the probability of compromise. For more information, see [Manage security](./administer.md#manage-security).
 
 1. ***Assign security responsibilities.*** Designate responsibility for security monitoring across your cloud environment. Regular monitoring and comparisons to the baseline enable quick identification of incidents, such as unauthorized access or unusual data transfers. Regular updates and audits keep your security baseline effective against evolving threats.
 
@@ -235,7 +220,7 @@ Adopt a process and tools to recover from security incidents, such as ransomware
 
 For more information, see [Manage incident response (CAF Secure)](/azure/cloud-adoption-framework/secure/manage#managing-incident-preparedness-and-response).
 
-### Azure security tools
+## Azure security tools
 
 | Security capability              | Microsoft solution                                                                 |
 |----------------------------------|------------------------------------------------------------------------------------|
@@ -249,3 +234,8 @@ For more information, see [Manage incident response (CAF Secure)](/azure/cloud-a
 | Endpoint security                | [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) |
 | Network security                 | [Azure Network Watcher](/azure/network-watcher/network-watcher-overview)           |
 | Industrial security              | [Microsoft Defender for IoT](/azure/defender-for-iot/)                             |
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [CAF Manage checklist](./index.md#cloud-management-checklist)

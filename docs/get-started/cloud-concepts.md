@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Document foundational alignment decisions'
 description: Understand and document initial decisions required to drive the cloud adoption journey.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 05/06/2024
 ms.topic: conceptual
@@ -17,8 +17,6 @@ Cloud adoption provides numerous business, technical, and organizational benefit
 > The links in this article lead to multiple areas of the Cloud Adoption Framework documentation. Bookmarking this article can make it easier for you to find this checklist again after you explore different articles the checklist recommends.
 
 ## Before you begin
-
-As you work through this guide, use the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) to record each foundational decision you make. The template helps you clarify the configuration of your cloud environment and the reasons behind each decision. Having this information in one place enables you to rapidly onboard team members participating in your cloud adoption lifecycle.
 
 If you have an environment running in Azure, you can use [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) to accelerate your documentation. The visualizer provides insight into Azure role-based access control (RBAC), infrastructure as code (IaC) such as Terraform or Bicep, policies, and subscriptions. The visualizer also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
 
@@ -44,7 +42,7 @@ All cloud hosting and environment decisions require you to understand the portfo
 
 **Deliverables:**
 
-- In your [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx), record the location and status of the portfolio documentation and who is responsible for managing it.
+- In your initial decision document, record the location and status of the portfolio documentation and who is responsible for managing it.
 
 **Guidance to support deliverable completion:**
 
@@ -68,7 +66,7 @@ Some organizations can use a single workload and its supporting assets to host t
 
 **Deliverables:**
 
-- In your [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx), record all relevant hierarchy needs.
+- In your initial decision document, record all relevant hierarchy needs.
 
 **Guidance to support deliverable completion:**
 
@@ -86,7 +84,7 @@ All existing workloads and assets should be suitably named and tagged following 
 
 **Deliverables:**
 
-- In your [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx), record the location and status of your naming and tagging conventions workbook and who is responsible for managing it.
+- In your initial decision document, record the location and status of your naming and tagging conventions workbook and who is responsible for managing it.
 
 **Guidance to support deliverable completion:**
 
@@ -108,7 +106,7 @@ You must create a resource organization design to ensure consistent alignment wi
 
 **Deliverables:**
 
-- In your [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx), map Azure products to the aligned level of the portfolio hierarchy.
+- In your initial decision document, map Azure products to the aligned level of the portfolio hierarchy.
 
 **Guidance to support deliverable completion:**
 

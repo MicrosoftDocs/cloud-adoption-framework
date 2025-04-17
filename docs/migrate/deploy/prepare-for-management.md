@@ -5,6 +5,8 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/05/2024
 ms.topic: conceptual
+ms.collection: 
+ - migration
 ---
 
 # Prepare for management activities

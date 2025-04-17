@@ -1,8 +1,8 @@
 ---
 title: Building technical skills
 description: Use the Cloud Adoption Framework for Azure to learn how to help your organization develop the necessary skills to structure teams to meet the desired outcomes.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 09/10/2019
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3

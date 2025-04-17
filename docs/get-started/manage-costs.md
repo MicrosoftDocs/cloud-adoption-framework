@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Manage cloud costs'
 description: Learn the basics of managing costs associated with cloud adoption.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
@@ -20,7 +20,7 @@ Strategic decisions directly affect cost controls, rippling through the adoption
 
 **Deliverables:**
 
-- Record motivations, outcomes, and business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
+- Record motivations, outcomes, and business justification in your adoption strategy and plan documents.
 - Create your first budget by using Microsoft Cost Management.
 
 **Guidance to support deliverable completion:**

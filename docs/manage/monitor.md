@@ -3,7 +3,7 @@ title: Monitor your Azure cloud estate
 description: Learn how to monitor your Azure cloud estate, workloads, other cloud environments, on-premises, and edge environment.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/05/2025
+ms.date: 04/01/2025
 ms.topic: conceptual
 products: azure-monitor
 ms.custom: UpdateFrequency2
@@ -11,43 +11,43 @@ ms.custom: UpdateFrequency2
 
 # Monitor your Azure cloud estate
 
-This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments.
+This article explains how to plan, configure, and optimize monitoring across Azure while integrating data from other clouds, on-premises, and edge environments. Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications.
 
-Monitoring your Azure cloud estate involves continuously observing and analyzing the performance, health, and security of your cloud resources and applications. A strong monitoring strategy includes proactive monitoring to catch problems early and reactive monitoring to trigger alerts and automate responses when unexpected events occur.
+:::image type="content" source="./media/caf-manage-monitor.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-monitor.svg" border="false":::
 
 ## Identify your monitoring scope
 
-Determine your monitoring scope clearly for each deployment model to make informed monitoring decisions for your cloud estate. Infrastructure (IaaS) and platform services (PaaS) operate within Azure. Compare these responsibilities with on-premises environments and software services (SaaS). Use this table to identify your responsibilities in each deployment model.
+Monitoring responsibilities vary by deployment model. Use the following table to identify your monitoring responsibilities for infrastructure (IaaS), platform (PaaS), software (SaaS), and on-premises deployments.
 
-| Monitoring areas| On-premises monitoring | IaaS monitoring (Azure) | PaaS monitoring (Azure) | SaaS monitoring |
-|---------------------|------------------------|-----------------|-----------------|-----------------|
-| Service health| X| X | X | X |
-| Security| X| X | X | X |
-| Compliance| X| X | X | X |
-| Cost| X| X | X | X |
-| Data| X| X | X | X |
-| Code and runtime| X| X | X | |
-| Cloud resources | X| X | X | |
-| Operating system| X| X | | |
-| Virtualization layer| X| X | | |
-| Physical hardware | X| | | |
+| Monitoring areas    | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
+|---------------------|------------------------|-------------------------|-------------------------|-----------------|
+| Service health      | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Security            | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Compliance          | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Cost                | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Data                | ✔️                     | ✔️                      | ✔️                      | ✔️              |
+| Code and runtime    | ✔️                     | ✔️                      | ✔️                      |                 |
+| Cloud resources     | ✔️                     | ✔️                      | ✔️                      |                 |
+| Operating system    | ✔️                     | ✔️                      |                         |                 |
+| Virtualization layer| ✔️                     | ✔️                      |                         |                 |
+| Physical hardware   | ✔️                     |                         |                         |                 |
 
 ## Plan your monitoring strategy
 
 A monitoring strategy outlines your requirements across every environment. The goal of monitoring is to detect and respond to issues in real time, diagnose current or past issues, and predict and prevent future issues. Here's how:
 
-1. ***Define your monitoring approach.*** Choose a centralized or shared management model based on your organization's size and complexity to streamline incident response and ensure consistent monitoring.
+1. ***Define your monitoring approach.*** Choose a centralized or shared management model based on your organization's size and complexity.
 
     | Monitoring approach | Responsibilities and scope | Best for| Pros | Cons|
     |---------------------|----------------------------|---------|------|-----|
-    | Centralized | All monitoring tasks are managed centrally.| Startups or small cloud footprint. | Simplified governance and cost control.| Potential for operational bottlenecks.|
+    | Centralized | Manage all monitoring tasks centrally.| Startups or small cloud footprint. | Simplified governance and cost control.| Potential for operational bottlenecks.|
     | Shared management | Centrally monitor health, security, compliance, cost, data, and shared services. <br><br>Workload teams monitor workloads. | Enterprises with multiple workloads. | Balances governance with workload-level agility. <br><br>Improves response speed and accountability. | Requires clear role definitions and ongoing coordination.|
 
-    For shared management monitoring responsibilities, see [Example of shared management monitoring responsibilities](#example-shared-management-monitoring-responsibilities).
+    For shared management monitoring responsibilities, see an example [Shared management monitoring responsibilities](#shared-management-monitoring-responsibilities).
 
 1. ***Identify what you need to monitor.*** Take a thorough inventory of your Azure estate. Include other clouds, edge deployments, and on-premises systems as needed. Use [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) to locate all Azure resources. Start with the sample [queries](/azure/governance/resource-graph/samples/starter). Use [Azure Arc](/azure/azure-arc/overview) to bring monitoring data from on-premises, other clouds, or edge locations into Azure.
 
-1. ***Define data collection requirements.*** Determine which metrics and logs you must collect for compliance, security, and effective issue diagnosis. Meet regulatory compliance requirements and all internal governance rules. If you don't know what to collect, gather all available logs and metrics to avoid data gaps. This is a short-term solution that isn't cost efficient. When you have enough data, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate the cost of the collection long term and adjust the collection settings to meet your budget. Refer to the [complete list of Azure monitoring documentation links](#azure-services-monitoring-documentation) to learn more about what you should collect on every Azure service and how to configure it.
+1. ***Define data collection requirements.*** Determine which metrics and logs you must collect for compliance, security, and effective issue diagnosis. Meet regulatory compliance requirements and all internal governance rules. If you don't know what to collect, gather all available logs and metrics to avoid data gaps. It's a short-term solution that isn't cost efficient. When you have enough data, use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate the cost of the collection long term and adjust the collection settings to meet your budget. Refer to the [complete list of Azure monitoring documentation links](#azure-services-monitoring-documentation) to learn more about what you should collect on every Azure service and how to configure it.
 
 1. ***Define data retention requirements.*** Decide how long you must keep monitoring data to meet auditing and compliance needs. Proper retention policies enable historical analyses, support regulatory compliance, and preserve data for security investigations.
 
@@ -75,7 +75,15 @@ Designing a monitoring solution refers to creating a system for collecting and s
 
 ## Configure monitoring
 
-Configuring monitoring involves setting up the tools and parameters for collecting insights across your Azure environment. Proper configuration provides proactive issue detection and alignment with prescriptive governance in your cloud estate. Here's how:
+Set up the tools and parameters for collecting insights across your Azure environment. Proper configuration provides proactive issue detection and alignment with prescriptive governance in your cloud estate. This section shows you how to:
+
+- [Monitor service health](./monitor.md#monitor-service-health)
+- [Monitor security](./monitor.md#monitor-security)
+- [Monitor compliance](./monitor.md#monitor-compliance)
+- [Monitor costs](./monitor.md#monitor-costs)
+- [Monitor data](./monitor.md#monitor-data)
+- [Monitor code and runtime](./monitor.md#monitor-code-and-runtime)
+- [Monitor cloud resources](./monitor.md#monitor-cloud-resources)
 
 ### Monitor service health
 
@@ -113,7 +121,7 @@ Monitoring costs refers to tracking and controlling your cloud spending across A
 
 1. ***Understand service pricing.*** Make sure you understand the pricing of the services and features you’re using. You want to avoid surprises at the billing period. Use the [Azure pricing](https://azure.microsoft.com/pricing/) information.
 
-1. ***Monitor cloud spend.*** You should use the available tools to monitor costs across your environments. For Azure spend, use Azure Cost Management to [set budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget), get [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), trigger [alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) for cost anomalies, and [analyze costs](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
+1. ***Monitor cloud spend.*** You should use the available tools to monitor costs across your environments. For Azure spend, use Microsoft Cost Management to [set budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget), get [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), trigger [alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) for cost anomalies, and [analyze costs](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 
 1. ***Review cloud spend regularly.*** Incorporate cost reviews into your regular operational cadence. Regular assessments allow for the timely identification of spending patterns and the opportunity to adjust resource usage to optimize costs.
 
@@ -190,7 +198,7 @@ Visualize monitoring data refers to creating dashboards and reports that present
 | Compliance monitoring | [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance) | Enforces organizational standards and audits resource compliance at‑scale through automated assessments.|
 | Compliance monitoring | [Microsoft Purview Compliance Manager](/purview/compliance-manager) | Assesses regulatory compliance and provides insights and recommendations to reduce risk.|
 | Cost monitoring | [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) | Estimates the cost of Azure services and helps plan and optimize your monitoring spend. |
-| Cost monitoring | [Azure Cost Management](/azure/cost-management-billing/costs/overview-cost-management) | Monitors and manages cloud spending while providing insights to optimize resource usage and costs.|
+| Cost monitoring | [Microsoft Cost Management](/azure/cost-management-billing/costs/overview-cost-management) | Monitors and manages cloud spending while providing insights to optimize resource usage and costs.|
 | Data monitoring | [Microsoft Purview](/purview/purview)| Governs and protects enterprise data by offering discovery, classification, and risk management capabilities. |
 | Code and runtime monitoring | [Application Insights](/azure/azure-monitor/app/app-insights-overview) | Monitors application performance with telemetry on code execution, performance, and usage to pinpoint issues. |
 | Cloud resource monitoring | [Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal) | Enables querying and exploration of your Azure resources, offering visibility across your cloud estate. |
@@ -339,14 +347,22 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Microsoft Dev Box | [Monitoring Microsoft Dev Box data reference](/azure/dev-box/monitor-dev-box-reference) | |
 | Multicloud connector enabled by Azure Arc | [View multicloud inventory with the multicloud connector enabled by Azure Arc](/azure/azure-arc/multicloud-connector/view-multicloud-inventory) | |
 
-## Example shared management monitoring responsibilities
+## Shared management monitoring responsibilities
 
 | Monitoring area | Centralized monitoring responsibilities | Workload monitoring responsibilities|
 |-----------------|-----------------------------------------|-------------------------------------|
 | Service health monitoring | Monitor overall cloud platform health, service outages, and maintenance.<br><br>Set baseline alerts for Azure Service Health.<br><br>Ensure SLA reporting.| Monitor specific application or workload resource health.<br><br>Respond to workload-specific service alerts. |
 | Security monitoring | Define security standards and governance.<br><br>Monitor identity and network security centrally using tools like Defender for Cloud and Sentinel.<br><br>Perform enterprise-wide threat detection and investigations. | Implement workload-specific security monitoring.<br><br>Respond to workload-specific security threats and remediate security incidents.|
 | Compliance monitoring | Establish central compliance and governance policies using tools like Azure Policy and Purview Compliance Manager.<br><br>Perform enterprise-wide audits and compliance assessments. | Ensure workload-specific compliance with central policies.<br><br>Remediate compliance issues detected within the workload. |
-| Cost monitoring | Manage centralized cost monitoring tools like Azure Cost Management.<br><br>Set budgets, configure cost alerts, and provide enterprise-wide cost reporting. | Monitor and optimize workload-specific spending.<br><br>Comply with central cost guidelines, proactively manage budgets, and remediate cost anomalies.|
+| Cost monitoring | Manage centralized cost monitoring tools like Microsoft Cost Management.<br><br>Set budgets, configure cost alerts, and provide enterprise-wide cost reporting. | Monitor and optimize workload-specific spending.<br><br>Comply with central cost guidelines, proactively manage budgets, and remediate cost anomalies.|
 | Data monitoring | Govern data visibility, data classification, protection policies, and compliance using centralized tools like Microsoft Purview.<br><br>Ensure consistent data standards across environments. | Implement workload-specific data monitoring to meet governance and protection standards.<br><br>Ensure correct data classification and optimize data performance.|
 | Code and runtime monitoring | Define baseline application monitoring standards and tooling such as Application Insights.<br><br>Provide guidance for collecting application logs, metrics, and traces. | Implement workload-specific application telemetry and logging.<br><br>Identify performance bottlenecks and remediate application-specific issues. |
 | Cloud resource monitoring | Monitor shared services and manage centralized monitoring data.<br><br>Set standard resource-monitoring rules, dashboards, and retention policies. | Configure and manage workload-specific resource logs, metrics, and monitoring dashboards.<br><br>Resolve operational issues specific to the workload. |
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Protect your Azure cloud operations](./protect.md)
+
+> [!div class="nextstepaction"]
+> [CAF Manage checklist](./index.md#cloud-management-checklist)

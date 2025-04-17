@@ -1,8 +1,8 @@
 ---
 title: Network topology and connectivity considerations for Azure API Management
 description: Learn about design considerations and recommendations for network topology and connectivity in the Azure API Management landing zone accelerator
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 04/12/2022
 ms.topic: conceptual
 ms.custom: internal

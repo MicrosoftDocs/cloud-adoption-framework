@@ -34,7 +34,7 @@ For information about the platform design, see:
   - Application-specific attacks.
   - Unsolicited and potentially malicious internet traffic.
 
-- **Identity management**. Use Microsoft Entra features, such as managed identities, single sign-on, strong authentications, managed identities, and conditional access to provide authentication and authorization through Microsoft Entra ID.
+- **Identity management**. Use Microsoft Entra features, such as managed identities, single sign-on, strong authentications, managed identities, and Conditional Access to provide authentication and authorization through Microsoft Entra ID.
 
 - **Security monitoring**. The system should have monitoring tools to detect threats and measure compliance by using the organization goals and the Azure Security Benchmark controls. These tools should be integrated with central security information and event management (SIEM) systems to get a holistic view of the security posture.
 
@@ -92,7 +92,7 @@ Use Azure DNS to host DNS domains. Protect DNS zones and records from bad actors
 
 ### Identity as the perimeter
 
-Azure provides identity controls through Microsoft Entra ID. The application has many features, such as single sign-on, strong authentications, managed identities, and conditional access. For information about the design choices for the architecture, see [Identity considerations for the Azure Spring Apps landing zone accelerator](./identity-and-access-management.md).
+Azure provides identity controls through Microsoft Entra ID. The application has many features, such as single sign-on, strong authentications, managed identities, and Conditional Access. For information about the design choices for the architecture, see [Identity considerations for the Azure Spring Apps landing zone accelerator](./identity-and-access-management.md).
 
 The following section describes the security aspects of those choices.
 
@@ -116,7 +116,7 @@ These Microsoft Entra features are recommended:
 
 - **Strong authentication controls**. Microsoft Entra ID supports strong authentication controls through multifactor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius if there's a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Microsoft Entra ID](/azure/active-directory/authentication/concept-authentication-passwordless).
 
-- **Conditional access to resources**. Azure Spring Apps supports [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions to include user sign-ins from certain IP ranges that need to sign in by using MFA. These [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Microsoft Entra ID to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources.
+- **Conditional Access to resources**. Azure Spring Apps supports [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions to include user sign-ins from certain IP ranges that need to sign in by using MFA. These [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Microsoft Entra ID to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources.
 
 - **Privileged access**. Implement [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
 

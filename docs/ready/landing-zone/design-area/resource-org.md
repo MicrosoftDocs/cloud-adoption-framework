@@ -1,8 +1,8 @@
 ---
 title: Resource organization design area overview
 description: See an overview of the resource organization design area for cloud deployments.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5

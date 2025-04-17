@@ -5,6 +5,8 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/09/2024
 ms.topic: conceptual
+ms.collection: 
+ - migration
 ---
 
 # Design workload architecture before migration

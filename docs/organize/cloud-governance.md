@@ -1,8 +1,8 @@
 ---
 title: Understand cloud governance functions
 description: Understand the function of a cloud governance team, including the source, the scope, and the deliverable.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3

@@ -87,7 +87,7 @@ Microsoft Entra ID isn't just for Microsoft applications and services. Microsoft
 
 **Microsoft Entra ID Governance.** [Microsoft Entra ID Governance](/azure/active-directory/governance/identity-governance-overview) is a Microsoft Entra feature. It helps you manage user access and automate the access lifecycle. It ensures that users have appropriate and timely access to applications and resources.
 
-**Conditional access.** Conditional access allows you to use attributes to fine-grained authorization for applications. You can define access policies based on various factors. These factors include user attributes, credential strength, application attributes, user and sign-in risk, device health, and location. For more information, see [zero trust security](/azure/security/fundamentals/zero-trust).
+**Conditional Access.** Conditional Access allows you to use attributes to fine-grained authorization for applications. You can define access policies based on various factors. These factors include user attributes, credential strength, application attributes, user and sign-in risk, device health, and location. For more information, see [zero trust security](/azure/security/fundamentals/zero-trust).
 
 ## Devices
 
@@ -97,7 +97,7 @@ Microsoft Entra ID provides secure and seamless access to Microsoft services thr
 
 **Microsoft Entra joined devices.** When users sign into a Microsoft Entra joined device, a device-bound key is unlocked using a PIN or gesture. Post validation, Microsoft Entra ID issues a [primary refresh token (PRT)](/azure/active-directory/devices/concept-primary-refresh-token) to the device. This PRT facilitates single sign-on access to Microsoft Entra ID protected services like Microsoft Teams.
 
-Microsoft Entra joined devices enrolled in Microsoft Endpoint Manager (Intune) can use device compliance as a grant control within [conditional access](/azure/active-directory/conditional-access/overview).
+Microsoft Entra joined devices enrolled in Microsoft Endpoint Manager (Intune) can use device compliance as a grant control within [Conditional Access](/azure/active-directory/conditional-access/overview).
 
 **Microsoft Entra hybrid joined devices.** [Microsoft Entra hybrid join](/azure/active-directory/devices/howto-hybrid-azure-ad-join) allows Windows devices to be simultaneously connected to both Active Directory Domain Services and Microsoft Entra ID. These devices first authenticate users against Active Directory, and then they retrieve a primary refresh token from Microsoft Entra ID.
 
