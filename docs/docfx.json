@@ -90,7 +90,7 @@
         "scenarios/cloud-scale-analytics/**/*.md": "caf-scenario-analytics",
         "scenarios/defense/**/*.md": "caf-scenario-defense",
         "scenarios/hybrid/**/*.md": "caf-scenario-hybrid",
-        "scenarios/oracle-iaas/**/*.md": "caf-scenario-oracle",
+        "scenarios/oracle-on-azure/**/*.md": "caf-scenario-oracle",
         "scenarios/sap/**/*.md": "caf-scenario-sap",
         "scenarios/azure-virtual-desktop/**/*.md": "caf-scenario-virtual-desktop",
         "secure/**/*.md": "caf-methodology-secure",

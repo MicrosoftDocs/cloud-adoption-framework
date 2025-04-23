@@ -26,7 +26,7 @@ Consider these key topics before you deploy Oracle Database@Azure and Exadata Da
 - Make a list of key stakeholders that you need to notify when an alert is triggered.
 - Review monitoring metrics with database administrators to align expectations.
 
-For more information, see [Plan for Oracle on Azure adoption](/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-landing-zone-plan).
+For more information, see [Plan for Oracle on Azure adoption](/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-landing-zone-plan).
 
 ## Design recommendations
 

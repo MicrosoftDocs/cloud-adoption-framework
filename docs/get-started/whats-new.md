@@ -36,11 +36,11 @@ This month, we made significant updates to the Manage methodology. The Manage me
 
 ### New articles
 
-- [Network topology and connectivity for Oracle Database@Azure - Application connectivity design](../scenarios/oracle-iaas/application-connectivity-design.md): Learn how to establish direct connectivity between database and application virtual machines (VMs) in Oracle IaaS environments. Explore the importance of secure and efficient network configurations to ensure seamless communication and optimal performance.
-- [Network topology and connectivity for Oracle Database@Azure - BCDR connectivity design](../scenarios/oracle-iaas/business-continuity-disaster-recovery-connectivity-design.md): Explore comprehensive guidance on designing network connectivity for high availability and disaster recovery of Oracle Exadata Database@Azure deployments. Learn about redundancy strategies both within a single region and across multiple regions, emphasizing the use of Azure and OCI networking, availability zones, and Data Guard configurations.
-- [Network topology and connectivity for Oracle Database@Azure - Core network design](../scenarios/oracle-iaas/core-network-design.md): Find essential guidance on designing the core network for Oracle Exadata Database@Azure, including key networking concepts, like the unique architecture of Oracle Database@Azure, and design considerations such as availability zone selection, subnet sizing, and network security group configuration.
-- [Network topology and connectivity for Oracle Database@Azure - Migration connectivity design](../scenarios/oracle-iaas/migration-connectivity-design.md): Learn how to design connectivity solutions for Oracle Infrastructure as a Service (IaaS) migration scenarios. Explore best practices for ensuring secure, reliable, and efficient network architectures to facilitate the migration process.
-- [Resource organization for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-resource-organization-oracle-database-azure.md): Learn best practices for naming and tagging conventions, security and isolation architectures, and subscription design. Explore how to use a multiple subscription architecture to isolate different environments such as production, development, and testing.
+- [Network topology and connectivity for Oracle Database@Azure - Application connectivity design](../scenarios/oracle-on-azure/application-connectivity-design.md): Learn how to establish direct connectivity between database and application virtual machines (VMs) in Oracle IaaS environments. Explore the importance of secure and efficient network configurations to ensure seamless communication and optimal performance.
+- [Network topology and connectivity for Oracle Database@Azure - BCDR connectivity design](../scenarios/oracle-on-azure/business-continuity-disaster-recovery-connectivity-design.md): Explore comprehensive guidance on designing network connectivity for high availability and disaster recovery of Oracle Exadata Database@Azure deployments. Learn about redundancy strategies both within a single region and across multiple regions, emphasizing the use of Azure and OCI networking, availability zones, and Data Guard configurations.
+- [Network topology and connectivity for Oracle Database@Azure - Core network design](../scenarios/oracle-on-azure/core-network-design.md): Find essential guidance on designing the core network for Oracle Exadata Database@Azure, including key networking concepts, like the unique architecture of Oracle Database@Azure, and design considerations such as availability zone selection, subnet sizing, and network security group configuration.
+- [Network topology and connectivity for Oracle Database@Azure - Migration connectivity design](../scenarios/oracle-on-azure/migration-connectivity-design.md): Learn how to design connectivity solutions for Oracle Infrastructure as a Service (IaaS) migration scenarios. Explore best practices for ensuring secure, reliable, and efficient network architectures to facilitate the migration process.
+- [Resource organization for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-resource-organization-oracle-database-azure.md): Learn best practices for naming and tagging conventions, security and isolation architectures, and subscription design. Explore how to use a multiple subscription architecture to isolate different environments such as production, development, and testing.
 
 ### Updated articles
 
@@ -56,14 +56,14 @@ We made updates to these articles to reflect the latest guidance on migrating to
 
 #### Oracle updates
 
-- [Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator](../scenarios/oracle-iaas/oracle-manage-monitor-iaas.md): We made updates to refresh the content and improve clarity. This article provides guidance on managing and monitoring Oracle workloads on Azure Virtual Machines, including best practices for performance optimization, security, and compliance.
-- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): We added detailed descriptions of the integration between Azure and Oracle Cloud Infrastructure (OCI) for managing Oracle Exadata Database@Azure resources. We also added design considerations such as: The need for network security groups (NSGs) and network address translation (NAT) configurations; Guidelines for storing and managing encryption keys and database backups; Recommendations for the deployment and management of non-Microsoft and Oracle agents.
+- [Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator](../scenarios/oracle-on-azure/oracle-manage-monitor-iaas.md): We made updates to refresh the content and improve clarity. This article provides guidance on managing and monitoring Oracle workloads on Azure Virtual Machines, including best practices for performance optimization, security, and compliance.
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-security-overview-odaa.md): We added detailed descriptions of the integration between Azure and Oracle Cloud Infrastructure (OCI) for managing Oracle Exadata Database@Azure resources. We also added design considerations such as: The need for network security groups (NSGs) and network address translation (NAT) configurations; Guidelines for storing and managing encryption keys and database backups; Recommendations for the deployment and management of non-Microsoft and Oracle agents.
 
 ## January 2025
 
 ### New articles
 
-- [Capacity Planning for Oracle Database@Azure Using Exadata Database Service](../scenarios/oracle-iaas/oracle-capacity-planning-oracle-database-azure.md): Learn how to plan for capacity when migrating Oracle Database to Azure using Exadata Database Service. Explore key considerations for capacity planning, including workload analysis, performance tuning, and resource allocation. Recommendations include planning for sufficient IP address ranges, scaling infrastructure based on workload requirements, and understanding storage configuration impacts.
+- [Capacity Planning for Oracle Database@Azure Using Exadata Database Service](../scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure.md): Learn how to plan for capacity when migrating Oracle Database to Azure using Exadata Database Service. Explore key considerations for capacity planning, including workload analysis, performance tuning, and resource allocation. Recommendations include planning for sufficient IP address ranges, scaling infrastructure based on workload requirements, and understanding storage configuration impacts.
 
 #### Strategy methodology refresh
 
@@ -99,9 +99,9 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 
 #### Oracle updates
 
-- [Business continuity and disaster recovery considerations for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure.md): We added new design considerations and recommendations for multiple-zone and multiregional BCDR architectures, extended BCDR scenarios, backup recommendations, and introduced additional best practices for maintaining data resilience and automating failover operations.
-- [Identity and access management for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-iam-odaa.md): Explore new sections covering considerations for private offers, default group creation, custom group names, federation with non-Microsoft identity providers, and enhanced RBAC permissions.
-- [Migration Planning for Oracle on Azure](../scenarios/oracle-iaas/oracle-migration-planning.md):  We introduced new sections on Oracle Database@Azure migration, online and offline migration paths, and an ExpressRoute-based migration duration reference table.
+- [Business continuity and disaster recovery considerations for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure.md): We added new design considerations and recommendations for multiple-zone and multiregional BCDR architectures, extended BCDR scenarios, backup recommendations, and introduced additional best practices for maintaining data resilience and automating failover operations.
+- [Identity and access management for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-iam-odaa.md): Explore new sections covering considerations for private offers, default group creation, custom group names, federation with non-Microsoft identity providers, and enhanced RBAC permissions.
+- [Migration Planning for Oracle on Azure](../scenarios/oracle-on-azure/oracle-migration-planning.md):  We introduced new sections on Oracle Database@Azure migration, online and offline migration paths, and an ExpressRoute-based migration duration reference table.
 
 #### Azure Landing Zone updates
 
@@ -204,7 +204,7 @@ We introduced new articles that provide guidance on integrating SAP and Power Pl
 ### Updated articles
 
 - [Azure API Management landing zone accelerator](../scenarios/app-platform/api-management/landing-zone-accelerator.md): Find new guidance on generative AI gateway scenarios and how to use them in your API Management landing zone as well as new architecture examples.
-- [Introduction to Oracle on Azure adoption scenarios](../scenarios/oracle-iaas/index.md): Explore new guidance on multi-region design for Oracle workloads on Azure, enhancing availability, scalability, and disaster recovery.
+- [Introduction to Oracle on Azure adoption scenarios](../scenarios/oracle-on-azure/index.md): Explore new guidance on multi-region design for Oracle workloads on Azure, enhancing availability, scalability, and disaster recovery.
 
 ## October 2024
 
@@ -290,10 +290,10 @@ We reviewed and made updates to the following articles to reflect the latest pro
 We made updates to the following articles for clarity and accessibility:
 
 - [Adopt responsible and trusted AI principles](../strategy/responsible-ai.md)
-- [Migrate Oracle workloads to Azure](../scenarios/oracle-iaas/oracle-migration-planning.md)
+- [Migrate Oracle workloads to Azure](../scenarios/oracle-on-azure/oracle-migration-planning.md)
 - [Network connectivity for Azure Arc-enabled servers](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md)
 - [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
-- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md)
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-security-overview-odaa.md)
 
 ## August 2024
 
@@ -301,14 +301,14 @@ We made updates to the following articles for clarity and accessibility:
 
 - [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
 - [Landing zone identity and access management](../ready/landing-zone/design-area/identity-access-landing-zones.md): Find new guidance about built-in and custom RBAC roles, least-privelage access, and conditions.
-- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Explore new updates about network security group rules and Oracle Data Safe.
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-security-overview-odaa.md): Explore new updates about network security group rules and Oracle Data Safe.
 - [Business continuity and disaster recovery for an SAP migration](../scenarios/sap/eslz-business-continuity-and-disaster-recovery.md): Learn about the benefits of using Azure Backup to back up databases that have SAP HANA System Replication enabled.
 
 We made updates to the following articles for clarity:
 - [Network considerations for Azure VMware Solution dual-region deployments](../scenarios/azure-vmware/eslz-dual-region-network-topology.md)
 - [What is a data product?](../scenarios/cloud-scale-analytics/architectures/what-is-data-product.md)
 - [Cloud adoption scenarios](../scenarios/index.md)
-- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-iaas/oracle-landing-zone-accelerator.md)
+- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md)
 - [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
 
 ## July 2024
@@ -331,10 +331,10 @@ This month, we introduced new articles that have guidance for Red Hat Enterprise
 
 #### Oracle
 
-- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-iaas/oracle-landing-zone-accelerator.md): Learn how you can use the Oracle on Azure IaaS landing zone accelerator to automate the deployment of an environment capable of hosting Oracle on Azure IaaS Virtual Machines. See how the landing zone accelerator can be adapted to produce an architecture that fits your scenario and puts your organization on a path to sustainable scale.
-- [Manage and monitor Oracle Database@Azure](../scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure.md): Explore best practices for management and monitoring Oracle Exadata Database Service on a Dedicated Infrastructure with Oracle Database@Azure. Learn about key design considerations for health and metrics monitoring.
-- [Business continuity and disaster recovery for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure.md): Learn about business continuity and disaster recovery for Oracle Database@Azure and how to build a resilient architecture for your workload environment. Discover how you can design your architecture to meet the recovery time objective (RTO) and recovery point objective (RPO) of your solution.
-- [Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator](../scenarios/oracle-iaas/oracle-disaster-recovery-iaas.md): Find significant updates that reflect new guidance including the deprecation of availability sets and new recommendations for Virtual Machine Scale Sets flexible orchestration.
+- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md): Learn how you can use the Oracle on Azure IaaS landing zone accelerator to automate the deployment of an environment capable of hosting Oracle on Azure IaaS Virtual Machines. See how the landing zone accelerator can be adapted to produce an architecture that fits your scenario and puts your organization on a path to sustainable scale.
+- [Manage and monitor Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-manage-monitor-oracle-database-azure.md): Explore best practices for management and monitoring Oracle Exadata Database Service on a Dedicated Infrastructure with Oracle Database@Azure. Learn about key design considerations for health and metrics monitoring.
+- [Business continuity and disaster recovery for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure.md): Learn about business continuity and disaster recovery for Oracle Database@Azure and how to build a resilient architecture for your workload environment. Discover how you can design your architecture to meet the recovery time objective (RTO) and recovery point objective (RPO) of your solution.
+- [Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator](../scenarios/oracle-on-azure/oracle-disaster-recovery-iaas.md): Find significant updates that reflect new guidance including the deprecation of availability sets and new recommendations for Virtual Machine Scale Sets flexible orchestration.
 
 ### Updated articles
 
@@ -386,11 +386,11 @@ This month, we introduced a new article related to Azure Virtual Network Manager
 
 Explore new articles on Oracle Database@Azure.
 
-- [Introduction to the Oracle on Azure adoption scenario](../scenarios/oracle-iaas/index.md): Learn how to set up and manage Oracle workloads within your Azure landing zone. Learn about specific architectural strategies and implementations for Oracle database systems on Azure.
-- [Identity and access management for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-iam-odaa.md): Learn key tactics for proper identity and access management for Oracle Database@Azure. Deploy your initial Oracle Database@Azure instance to create specific groups within Microsoft Entra ID and in the corresponding tenant. Learn how to use Microsoft Entra administrator groups and how to establish other groups and roles to enhance the granularity of access permissions.
-- [Network topology and connectivity for Oracle on Azure Virtual Machines](../scenarios/oracle-iaas/oracle-network-topology-iaas.md): Learn about network topology and connectivity considerations for running Oracle on Azure Virtual Machines. Explore the importance of security for Oracle workloads, and receive a high-level network design with various recommendations.
-- [Network topology and connectivity for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-network-topology-odaa.md): Learn how to set up network topologies and connectivity for Oracle Database@Azure. Explore options for physical placement, learn about the use of virtual machine clusters, and learn the importance of private subnets. See how to configure network security groups and why you should use Azure Firewall to protect your Oracle Database@Azure instance.
-- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Receive design considerations and recommendations for implementing security measures for Oracle Database@Azure. See the importance of a defense-in-depth strategy, which layers multiple defense mechanisms for comprehensive security. This strategy includes strong authentication and authorization frameworks, network security, and encryption of data.
+- [Introduction to the Oracle on Azure adoption scenario](../scenarios/oracle-on-azure/index.md): Learn how to set up and manage Oracle workloads within your Azure landing zone. Learn about specific architectural strategies and implementations for Oracle database systems on Azure.
+- [Identity and access management for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-iam-odaa.md): Learn key tactics for proper identity and access management for Oracle Database@Azure. Deploy your initial Oracle Database@Azure instance to create specific groups within Microsoft Entra ID and in the corresponding tenant. Learn how to use Microsoft Entra administrator groups and how to establish other groups and roles to enhance the granularity of access permissions.
+- [Network topology and connectivity for Oracle on Azure Virtual Machines](../scenarios/oracle-on-azure/oracle-network-topology-iaas.md): Learn about network topology and connectivity considerations for running Oracle on Azure Virtual Machines. Explore the importance of security for Oracle workloads, and receive a high-level network design with various recommendations.
+- [Network topology and connectivity for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-network-topology-odaa.md): Learn how to set up network topologies and connectivity for Oracle Database@Azure. Explore options for physical placement, learn about the use of virtual machine clusters, and learn the importance of private subnets. See how to configure network security groups and why you should use Azure Firewall to protect your Oracle Database@Azure instance.
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-security-overview-odaa.md): Receive design considerations and recommendations for implementing security measures for Oracle Database@Azure. See the importance of a defense-in-depth strategy, which layers multiple defense mechanisms for comprehensive security. This strategy includes strong authentication and authorization frameworks, network security, and encryption of data.
 
 ### Updated articles
 
@@ -415,10 +415,10 @@ We made updates to reflect the deprecation of Azure Blueprint.
 
 We updated articles to include guidance on Oracle Database@Azure.
 
-- [Capacity planning for Oracle on Azure](../scenarios/oracle-iaas/oracle-capacity-planning.md)  
-- [Plan for Oracle on Azure adoption](../scenarios/oracle-iaas/oracle-landing-zone-plan.md)  
-- [Strategic impact of Oracle on Azure](../scenarios/oracle-iaas/oracle-landing-zone-strategy.md)  
-- [Migration planning for Oracle on Azure](../scenarios/oracle-iaas/oracle-migration-planning.md)
+- [Capacity planning for Oracle on Azure](../scenarios/oracle-on-azure/oracle-capacity-planning.md)  
+- [Plan for Oracle on Azure adoption](../scenarios/oracle-on-azure/oracle-landing-zone-plan.md)  
+- [Strategic impact of Oracle on Azure](../scenarios/oracle-on-azure/oracle-landing-zone-strategy.md)  
+- [Migration planning for Oracle on Azure](../scenarios/oracle-on-azure/oracle-migration-planning.md)
 
 #### Azure landing zone multiregion updates
 

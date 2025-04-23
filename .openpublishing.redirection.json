@@ -972,32 +972,32 @@
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/governance-complaince-oracle-landing-zone.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure",
           "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/introduction-oracle-landing-zone.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/index",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/index",
           "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/oracle-network-topology.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-network-topology-iaas",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-network-topology-iaas",
           "redirect_document_id": true
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/oracle-disaster-recovery-oracle-landing-zone.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-disaster-recovery-iaas",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-disaster-recovery-iaas",
           "redirect_document_id": true
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/oracle-security-guideline-landing-zone.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-security-overview-iaas",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-security-overview-iaas",
           "redirect_document_id": true
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-workload.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-manage-monitor-iaas",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-manage-monitor-iaas",
           "redirect_document_id": true
       },
       {
@@ -1717,7 +1717,7 @@
       },
       {
         "source_path": "docs/scenarios/oracle-iaas/manage-resources-oracle-landing-zone.md",
-        "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/index",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/index",
         "redirect_document_id": false   
       },
       {
@@ -2012,7 +2012,7 @@
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-odaa.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-manage-monitor-oracle-database-azure",
          "redirect_document_id": false
       },
       {
@@ -2637,12 +2637,12 @@
       },
      {
          "source_path": "docs/scenarios/oracle-iaas/enterprise-enrollment-oracle.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure",
          "redirect_document_id": false
        },
        {
@@ -2983,6 +2983,116 @@
       {
          "source_path": "docs/relocate/select.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-relocation",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/application-connectivity-design.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/application-connectivity-design",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/business-continuity-disaster-recovery-connectivity-design.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/business-continuity-disaster-recovery-connectivity-design",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/core-network-design.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/core-network-design",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/manage-identity-access-azure-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/manage-identity-access-azure-landing-zone",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/migration-connectivity-design.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/migration-connectivity-design",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-capacity-planning-oracle-database-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-capacity-planning.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-capacity-planning",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-disaster-recovery-iaas.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-disaster-recovery-iaas",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-disaster-recovery-oracle-database-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-iam-odaa.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-iam-odaa",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-landing-zone-accelerator.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-landing-zone-accelerator",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-landing-zone-plan.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-landing-zone-plan",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-landing-zone-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-landing-zone-strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-iaas.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-manage-monitor-iaas",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-manage-monitor-oracle-database-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-manage-monitor-oracle-database-azure",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-migration-planning.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-migration-planning",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-network-topology-iaas.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-network-topology-iaas",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-network-topology-odaa.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-network-topology-odaa",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-resource-organization-oracle-database-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-resource-organization-oracle-database-azure",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-security-overview-iaas.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-security-overview-iaas",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-security-overview-odaa.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-security-overview-odaa",
          "redirect_document_id": false
       }
    ]   
