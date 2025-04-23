@@ -51,4 +51,4 @@ The Oracle database subnet should include an NSG that allows the following traff
 
 ## Next step
 
-[Security overview for Oracle on Azure virtual machines](oracle-security-overviewe-iaas.md)
+[Security overview for Oracle on Azure virtual machines](oracle-security-overview-iaas.md)
