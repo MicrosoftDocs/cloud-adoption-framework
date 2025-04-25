@@ -126,4 +126,4 @@ Use Azure Monitor to collect telemetry data and gain insights into the health, p
 
 - [Strategic impact of Oracle on Azure landing zone accelerator](oracle-landing-zone-strategy.md)  
 - [Plan for Oracle on Azure](oracle-landing-zone-plan.md)  
-- [Business continuity and disaster recovery considerations for Oracle Database@Azure](oracle-disaster-recovery-oracle-database-azure.md)
+- [Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-iaas.md)

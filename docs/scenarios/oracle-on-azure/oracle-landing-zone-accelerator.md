@@ -36,10 +36,10 @@ The landing zone accelerator provides these assets to support your project:
 
 For guidelines to create your landing zone, see these articles:
 
-- [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-network-topology-odaa.md)
-- [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-security-overview-odaa.md)
-- [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-disaster-recovery-oracle-database-azure.md)
-- [Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator](./oracle-manage-monitor-oracle-database-azure.md)
+- [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-network-topology-iaas.md)
+- [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-security-overview-iaas.md)
+- [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-disaster-recovery-iaas.md)
+- [Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator](./oracle-manage-monitor-iaas.md)
 
 ## Example conceptual reference architecture
 
