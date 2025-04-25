@@ -117,7 +117,7 @@ Your approach must implement architecture redundancy to meet the reliability req
 
     1. If you have two or more critical paths, use the independent-path formula: N = S<sub>1</sub> x 1 - [(1 - S<sub>2</sub>) × (1 - S<sub>3</sub>)].
     
-    1. Complex workloads often combine both formula types. Example: N = S<sub>1</sub> × S<sub>2</sub> × S<sub>3</sub> × S<sub>4</sub> x 1 - [(1 - S<sub>5</sub>) × (1 - S<sub>6</sub>)].
+    1. Complex workloads often combine both formula types. Example: N = S<sub>1</sub> × S<sub>2</sub> × S<sub>3</sub> × (S<sub>4</sub> x 1 - [(1 - S<sub>5</sub>) × (1 - S<sub>6</sub>)]).
 
     1. For multi-region applications, use the formula for the multi-region formula: M = 1 - (1 - N)^R
 
