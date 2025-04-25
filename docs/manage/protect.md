@@ -32,9 +32,9 @@ Reliability responsibilities vary by deployment model. Use the following table t
 
 | Responsibility     | On-premises | IaaS (Azure) | PaaS (Azure) | SaaS |
 |--------------------|:-----------:|:------------:|:------------:|:----:|
-| Data               |      ✔️      |      ✔️       |      ✔️       |  ✔️  |
-| Code and runtime   |      ✔️      |      ✔️       |      ✔️       |      |
-| Cloud resources    |      ✔️      |      ✔️       |      ✔️       |      |
+| [Data](#manage-data-reliability)               |      ✔️      |      ✔️       |      ✔️       |  ✔️  |
+| [Code and runtime](#manage-code-and-runtime-reliability)   |      ✔️      |      ✔️       |      ✔️       |      |
+| [Cloud resources](#manage-cloud-resources-reliability)    |      ✔️      |      ✔️       |      ✔️       |      |
 | Physical hardware  |      ✔️      |               |                |      |
 
 For more information, see [Shared responsibility for reliability](/azure/reliability/concept-shared-responsibility).
@@ -45,7 +45,7 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 1. ***Prioritize workloads.*** Assign high, medium (default), or low priorities to workloads based on business criticality and financial investment levels. Regularly review priorities to maintain alignment with business goals.
 
-1. ***Assign uptime service level objective (SLO) to all workloads.*** Establish uptime targets according to workload priority. Higher-priority workloads require stricter uptime goals. Your SLO influences your architecture, data management strategies, recovery processes, and costs.
+1. ***Assign uptime service level objective (SLO) to all workloads.*** Your SLO influences your architecture, data management strategies, recovery processes, and costs. Establish uptime targets according to workload priority. Higher-priority workloads require stricter uptime goals.
 
 1. ***Identify service level indicators (SLIs).*** Use SLIs to measure uptime performance against your SLO. Examples include [service health monitoring](./monitor.md#monitor-service-health) and [error rates](./monitor.md#monitor-code-and-runtime).
 
@@ -57,7 +57,7 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 	1. ***Test your recovery time.*** Track the average time it takes to recover during failover tests and live failures. The time it takes you to recover from failure must be less than your RTO.
 
-1. ***Define recovery point objectives (RPO) for all workloads.*** Determine how much data loss your business can tolerate. This objective influences how frequently you replicate and back up your data.
+1. ***Define recovery point objectives (RPO) for all workloads.*** Your RPO influences how frequently you replicate and back up your data. Determine how much data loss your business can tolerate.
 
 1. ***Define workload reliability targets.*** For workload reliability targets, see the Well-Architected Framework’s [Recommendations for defining reliability targets.](/azure/well-architected/reliability/metrics)
 
@@ -73,7 +73,7 @@ Data reliability involves data replication (replicas) and backups (point in time
 | Medium            | 99.9%      | Synchronous data replication across regions<br><br>Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Database and storage solution in the Reliable Web App pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance#pick-the-right-azure-services)|
 | Low               | 99%        | Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Data resiliency in baseline web app with zone redundancy](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant#blob-storage) |
 
-Your approach must align the data reliability configurations with the RTO and RPO requirements of your workloads. Follow these steps:
+You must align data reliability configurations with the RTO and RPO requirements of your workloads. To make that alignment, follow these steps:
 
 1. ***Manage data replication.*** Replicate your data synchronously or asynchronously according to your workload’s RTO and RPO requirements.
 
@@ -85,13 +85,13 @@ Your approach must align the data reliability configurations with the RTO and RP
 
     For more information, see [Replication: Redundancy for data](/azure/reliability/concept-redundancy-replication-backup#replication-redundancy-for-data).
 
-1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Choose backup solutions that align with your RTO and RPO goals. Prefer Azure’s built-in solutions, such as Azure Cosmos DB and Azure SQL Database native backups. For other cases, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup).
+1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Prefer backup solutions built-in to your Azure service, such as native backup features in Azure Cosmos DB and Azure SQL Database. Where native backups are unavailable, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup).
 
 1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework [Data partitioning guide](/azure/well-architected/reliability/partition-data) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
 ### Manage code and runtime reliability
 
-Code and runtime are workload responsibilities. Follow the Well-Architected Framework’s [self-healing and self-preservation guide](/azure/well-architected/reliability/self-preservation).
+Code and runtime reliability is a workload responsibility. Follow the Well-Architected Framework’s [self-healing and self-preservation guide](/azure/well-architected/reliability/self-preservation).
 
 ### Manage cloud resources reliability
 
@@ -107,23 +107,27 @@ Managing the reliability of your cloud resources often requires architecture red
 
 Your approach must implement architecture redundancy to meet the reliability requirements of your workloads. Follow these steps:
 
-1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path). Follow these steps:
+1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path).
 
-    1. Gather the [Microsoft uptime SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services) for every service on the critical path of your workload.
+    1. List every service in the workload’s critical path. Collect each service’s [Microsoft uptime SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services) from the official document.
+    
+    1. Decide whether the workload includes independent critical paths. An independent path can fail and the workload remains available.
 
-    1. If you have no independent critical paths, calculate single-region composite SLA by multiplying the uptime percentages of each relevant service. If you have independent critical paths, move to step 3 before calculating.
+    1. If you have one critical path, use the single-region formula: N = S<sub>1</sub> × S<sub>2</sub> × S<sub>3</sub> × … × S<sub>n</sub>.
 
-    1. When two Azure services provide independent critical paths, apply the independent critical paths formula to those services.
+    1. If you have two or more critical paths, use the independent-path formula: N = S<sub>1</sub> x 1 - [(1 - S<sub>2</sub>) × (1 - S<sub>3</sub>)].
+    
+    1. Complex workloads often combine both formula types. Example: N = S<sub>1</sub> × S<sub>2</sub> × S<sub>3</sub> × S<sub>4</sub> x 1 - [(1 - S<sub>5</sub>) × (1 - S<sub>6</sub>)].
 
-    1. For multi-region applications, input the single-region composite SLA (N) into the multi-region uptime formula.
+    1. For multi-region applications, use the formula for the multi-region formula: M = 1 - (1 - N)^R
 
-    1. Compare your calculated uptime with your uptime SLO. Adjust service tiers or architecture redundancy if necessary.
+    1. Compare your calculated uptime with your uptime SLO. A deficit requires higher-tier SLAs or additional redundancy. Recalculate after each change. Stop after the calculated uptime exceeds the SLO.
 
     | Use case | Formula | Variables | Example | Explanation |
     |-----|------|--------|--------| --- |
-    | Single-region uptime estimate   | N = S1 × S2 × S3 × … × U*n*  | **N**: Composite SLA of Azure services on a single-region critical path.<br>**S**: SLA uptime percentage of each Azure service.<br>**n**: Total number of Azure services on critical path.     | N = 99.99% (app) × 99.95% (database) × 99.9% (cache) | Simple workload with app (99.99%), database (99.95%), and cache (99.9%) in a single critical path.|
-    | Independent critical paths estimate | S1 x 1 - [(1 - S2) × (1 - S3)] | **S**: SLA uptime percentage for Azure services providing independent critical paths.  | 99.99% (app) × ***(1 - [(1 - 99.95% database) × (1 - 99.9% cache)])***  | Two independent critical paths. Either database (99.95%) or cache (99.9%) can fail without downtime.|
-    | Multi-region uptime estimate    | M = 1 - (1 - N)^R   | **M**: Multi-region uptime estimate.<br>**N**: Single-region composite SLA.<br>**R**: Number of regions used. | If N = 99.95% and R = 2, then M = 1 - (1 - 99.95%)^2 | Workload deployed in two regions. |
+    | Single-region   | N = S<sub>1</sub> × S<sub>2</sub> × S<sub>3</sub> × … × S<sub>n</sub>  | **N** = Composite SLA.<br>**S** = SLA of the Azure service.<br>**n** = number of services on critical path.     | N = 99.99% (app) × 99.95% (database) × 99.9% (cache) | Simple workload with app (99.99%), database (99.95%), and cache (99.9%) in a single critical path.|
+    | Independent paths | S<sub>1</sub> x 1 - [(1 - S<sub>2</sub>) × (1 - S<sub>3</sub>)] | **S** = SLA of the Azure service.  | 99.99% (app) × (1 - [(1 - 99.95% database) × (1 - 99.9% cache)])  | In the app, either the database (99.95%) or cache (99.9%) can fail without causing downtime.|
+    | Multi-region    | M = 1 - (1 - N)^R   | **M** = Multi-region SLA.<br>**N** = Single-region SLA.<br>**R** = Number of regions. | If N = 99.95% and R = 2, then M = 1 - (1 - 99.95%)^2 | Workload deployed in two regions. |
 
 1. ***Adjust service tiers.*** Before modifying architectures, evaluate whether different Azure service tiers (SKUs) can meet your reliability requirements. Some Azure service tiers can have different uptime SLAs, such as Azure Managed Disks.
 
@@ -234,6 +238,7 @@ For more information, see [Manage incident response (CAF Secure)](/azure/cloud-a
 | Endpoint security                | [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) |
 | Network security                 | [Azure Network Watcher](/azure/network-watcher/network-watcher-overview)           |
 | Industrial security              | [Microsoft Defender for IoT](/azure/defender-for-iot/)                             |
+| Data backup security             | [Azure Backup security](/azure/backup/security-overview) |
 
 ## Next steps
 
