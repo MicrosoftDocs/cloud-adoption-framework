@@ -55,7 +55,7 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 	1. ***Estimate the RTO.*** Divide your annual allowable downtime by the estimated number of failures. If you estimate four failures per year, then your RTO must be 13 minutes or less (52 minutes / 4 failures = 13-minute RTO).
 
-	1. ***Test your recovery time.*** Track the average time it takes to recover during failover tests and live failures. The time it takes you to recover from failure must be less than your RTO. If your business continuity solution takes hours to
+	1. ***Test your recovery time.*** Track the average time it takes to recover during failover tests and live failures. The time it takes you to recover from failure must be less than your RTO.
 
 1. ***Define recovery point objectives (RPO) for all workloads.*** Determine how much data loss your business can tolerate. This objective influences how frequently you replicate and back up your data.
 
