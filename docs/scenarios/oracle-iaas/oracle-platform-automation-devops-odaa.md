@@ -55,4 +55,4 @@ This documentation provides design considerations and recommendations for deploy
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Security guidelines for Oracle Database@Azure](./oracle-security-overview-odaa.md)
+> [Capacity planning for Oracle Database@Azure](./Capacity planning for Oracle Database@Azure)
