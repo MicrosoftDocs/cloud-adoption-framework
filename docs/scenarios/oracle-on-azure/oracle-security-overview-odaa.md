@@ -76,4 +76,4 @@ Consider the following security recommendations when you design your Oracle Exad
 
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
-- [Business continuity and disaster recovery for Oracle Database@Azure](oracle-disaster-recovery-odaa.md)
+- [Business continuity and disaster recovery for Oracle Database@Azure](oracle-disaster-recovery-oracle-database-azure.md)

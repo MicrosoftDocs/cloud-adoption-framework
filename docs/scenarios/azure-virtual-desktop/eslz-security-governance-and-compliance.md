@@ -16,7 +16,7 @@ Review the following sections to find recommended security controls and governan
 
 ## Identity
 
-- Secure user access to Azure Virtual Desktop by establishing [Microsoft Entra Conditional Access Policy](/azure/active-directory/conditional-access/overview) with [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool. Consider your users' locations, devices, and sign in behaviors, and add [extra controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) as needed based their access patterns. For more information on enabling Azure multifactor authentication for Azure Virtual Desktop, see [Enable Azure multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
+- Secure user access to Azure Virtual Desktop by establishing [Microsoft Entra Conditional Access Policy](/azure/active-directory/conditional-access/overview) with [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool. Consider your users' locations, devices, and sign in behaviors, and add extra controls as needed based on their access patterns. For more information on enabling Azure multifactor authentication for Azure Virtual Desktop, see [Enable Azure multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 
 - Assign the *least privilege* required by defining administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview). To limit access to high privilege roles within your Azure Virtual Desktop landing zone, consider integration with Azure Privileged Identity Management (PIM). Maintaining knowledge of which team is responsible for each particular administrative area helps you determine Azure role-based access control (RBAC) roles and configuration.
 
@@ -119,7 +119,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 ## Resource consistency
 
-- [Use Intune for Azure Virtual Desktop personal session hosts](/mem/intune/fundamentals/azure-virtual-desktop) to apply existing or create new configurations and secure your VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
+- [Use Intune for Azure Virtual Desktop personal session hosts](/mem/intune/fundamentals/azure-virtual-desktop) to apply existing or create new configurations and secure your VMs with compliance policy and Conditional Access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
 - [Multi-session session hosts management with Intune](/mem/intune/fundamentals/azure-virtual-desktop-multi-session) allows you to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Intune admin center, just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), can use both device-based configuration targeted to devices or user-based configuration targeted to users.
 

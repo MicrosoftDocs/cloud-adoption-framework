@@ -58,7 +58,7 @@ During the Ready phase, preparing for your workloads from a confidentiality stan
 
 - *Multifactor authentication (MFA).* Implement MFA to add an extra layer of security.
 
-- *Conditional access controls.* Conditional access controls provide additional security by enforcing policies based on specific conditions. Policies can include enforcing MFA, blocking access based on geography, and many other scenarios. When you choose an IAM platform, be sure that conditional access is supported and that the implementation meets your requirements.
+- *Conditional Access controls.* Conditional Access controls provide additional security by enforcing policies based on specific conditions. Policies can include enforcing MFA, blocking access based on geography, and many other scenarios. When you choose an IAM platform, be sure that Conditional Access is supported and that the implementation meets your requirements.
 
 ### Azure facilitation
  

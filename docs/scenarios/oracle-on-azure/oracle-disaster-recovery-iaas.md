@@ -197,4 +197,4 @@ Business continuity requires an integrated approach that includes all components
 
 Learn about design considerations for Oracle on Virtual Machines landing zone accelerator security in an enterprise-scale scenario.
 
-[Security guidelines for Oracle on Virtual Machines landing zone accelerator](./oracle-security-guideline-landing-zone.md)
+[Security guidelines for Oracle on Virtual Machines landing zone accelerator](./oracle-security-overview-iaas.md)
