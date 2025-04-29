@@ -3,7 +3,7 @@ title: AI architecture guidance to build AI workloads on Azure
 description: Learn to find AI architectures and guides to build AI workloads with Azure AI platform services (PaaS).
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 11/01/2024
+ms.date: 04/29/2025
 ms.topic: conceptual
 ---
 
