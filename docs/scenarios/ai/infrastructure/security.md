@@ -3,7 +3,7 @@ title: Security recommendations for AI workloads on Azure infrastructure (IaaS)
 description: Learn how to secure AI workloads on Azure infrastructure (IaaS).
 author: stephen-sumner
 ms.author: rajanaki
-ms.date: 11/01/2024
+ms.date: 04/30/2025
 ms.topic: conceptual
 ---
 
@@ -29,9 +29,9 @@ Securing networks involves setting up private endpoints, Network Security Groups
 
 - *Implement Network Security Groups (NSGs).* NSGs can be complex. Ensure you have a clear understanding of the NSG rules and their implications when setting up your Azure infrastructure for AI workloads.
 
-- *Use Application Security Groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups).
+  - *Understand NSG prioritization rules*. [NSG](/azure/virtual-network/network-security-groups-overview) rules have a priority order. Understand this order to avoid conflicts and ensure the smooth running of your AI workloads.
 
-- *Understand NSG prioritization rules*. [NSG](/azure/virtual-network/network-security-groups-overview) rules have a priority order. Understand this order to avoid conflicts and ensure the smooth running of your AI workloads.
+- *Use Application Security Groups*. If you need to label traffic at a greater granularity than what virtual networks provide, consider using [Application Security Groups](/azure/virtual-network/application-security-groups).
 
 - *Use a network firewall.* If you’re using a hub-spoke topology, deploy a [network firewall](/azure/networking/fundamentals/networking-overview#firewall) to inspect and filter network traffic between the spokes.
 
@@ -43,7 +43,7 @@ Securing data includes encrypting data at rest and in transit, along with protec
 
 - *Encrypt data*: Encrypt data at rest and in transit using strong encryption technologies between each service in the architecture.
 
-- *Protect secrets*: Protect secrets by storing them in a key vault or a hardware security module and routinely rotate them.
+- *Protect secrets*: Protect secrets by storing them in a key vault or a [hardware security module](/azure/key-vault/managed-hsm/overview) and routinely rotate them.
 
 ## Secure access
 
