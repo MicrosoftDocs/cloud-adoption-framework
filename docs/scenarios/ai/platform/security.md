@@ -3,7 +3,7 @@ title: Security recommendations for AI workloads on Azure
 description: Learn how to secure AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 11/01/2024
+ms.date: 04/30/2025
 ms.topic: conceptual
 ---
 
@@ -29,7 +29,7 @@ Securing AI resources means applying security baselines and best practices to pr
 
 Securing AI models refers to implementing threat protection, monitoring for prompt injection risks, verifying model integrity, and centralizing governance. These practices ensure that AI models remain safe from malicious manipulation, maintain their reliability, and provide accurate results.
 
-- *Implement threat protection for all AI models.* Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/ai-threat-protection) to protect AI models from threats like prompt injection attacks and model manipulation. This tool provides continuous monitoring of AI workloads, helping to detect and prevent emerging threats. Implementing this protection across all workloads ensures a consistent security posture throughout the organization.
+- *Implement threat protection for all AI models.* Use Microsoft Defender for Cloud's [AI threat protection (preview)](/azure/defender-for-cloud/ai-threat-protection) to protect AI models from threats like prompt injection attacks and model manipulation. This tool provides continuous monitoring of AI workloads, helping to detect and prevent emerging threats. Implementing this protection across all workloads ensures a consistent security posture throughout the organization.
 
 - *Monitor outputs and apply prompt shielding.* Regularly inspect the data returned by AI models to detect and mitigate risks associated with malicious or unpredictable user prompts. Implement [Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) to scan text for the risk of a user input attack on generative Al models.
 
@@ -49,7 +49,7 @@ Securing AI access includes establishing authentication and authorization contro
 
 - *Use Conditional Access Policies.* Implement [risk-based Conditional Access policies](/entra/id-protection/howto-identity-protection-configure-risk-policies) that respond to unusual sign-in activity or suspicious behavior. Use signals like user location, device state, and sign-in behavior to trigger extra verification steps. Require MFA for accessing critical AI resources to enhance security. Restrict access to AI infrastructure based on geographic locations or trusted IP ranges. Ensure that only compliant devices (those meeting security requirements) can access AI resources.
 
-- *Configure least privilege access.* Configure least privilege access by implementing role-based access control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine-tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access necessary to perform their tasks. Regularly review and adjust permissions to prevent privilege creep. For example,
+- *Configure least privilege access.* Configure least privilege access by implementing role-based access control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine-tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access necessary to perform their tasks. Regularly review and adjust permissions to prevent privilege creep. Refer to the below table for an example of permissions for different roles:
 
     | Role              | Example permissions             |
     |-------------------|-------------------------|
@@ -61,6 +61,8 @@ Securing AI access includes establishing authentication and authorization contro
 
 - *Secure external access to AI model endpoints.* Require clients to authenticate using Microsoft Entra ID when accessing AI model endpoints. Consider using Azure API Management as an AI gateway in front of AI model endpoints to enforce access policies, control usage, and provide monitoring capabilities.
 
+- *Utilize the Azure AI Foundry Management Center.* Use the management center to manage access to AI resources, view and manage quotas, and govern access to comply with organizational standards.
+
 ## Secure AI execution
 
 Securing AI execution involves safeguarding the processes by which AI agents, such as [virtual assistants](/azure/ai-services/openai/how-to/assistant) or [autonomous agents](/azure/cosmos-db/ai-agents), run code in response to user requests. Isolate the execution environments, conduct code reviews, and set resource limits. These measures help ensure that these executions don't compromise system stability or security. These practices prevent malicious activities and protect the integrity of the systems in which AI agents operate, allowing them to function reliably within a secure framework.
@@ -71,7 +73,7 @@ Securing AI execution involves safeguarding the processes by which AI agents, su
 
 - *Implement resource limits.* Set resource limits (CPU, memory, disk usage) for code execution environments to prevent any single execution from consuming excessive resources and potentially disrupting other services. Define execution timeouts to ensure that long-running or potentially stuck processes are terminated automatically.
 
-For more information, see [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant) , [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions?tabs=python) , and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
+For more information, see [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant) , [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions) , and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
 
 ## Next step
 
