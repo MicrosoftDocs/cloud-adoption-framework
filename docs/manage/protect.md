@@ -87,7 +87,6 @@ You must align data reliability configurations with the RTO and RPO requirements
 
 1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Prefer backup solutions built-in to your Azure service, such as native backup features in Azure Cosmos DB and Azure SQL Database. Where native backups are unavailable, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup) and [Azure Business Continuity Center](/azure/business-continuity-center/business-continuity-center-overview).
 
-   **Manage business continuity and disaster recovery**:  [Azure Business Continuity Center](/azure/business-continuity-center/business-continuity-center-overview) also allows to streamline backup and disaster recovery management with a unified web interface for configuring backups, setting protection policies, monitoring operations, and reviewing configurations across diverse environments.
 
 1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework [Data partitioning guide](/azure/well-architected/reliability/partition-data) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
