@@ -116,7 +116,7 @@ Managing code and runtime are workload responsibilities. Have your workload team
 
 ## Manage cloud resources
 
-Establish clear deployment protocols and proactive drift and sprawl detection strategies to maintain consistency across environments This section covers:
+Establish clear deployment protocols and proactive drift and sprawl detection strategies to maintain consistency across environments. This section covers:
 
 - [Portal deployments](#manage-portal-deployments)
 - [Code deployments](#manage-code-deployments)
