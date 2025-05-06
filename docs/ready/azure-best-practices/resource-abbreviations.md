@@ -235,7 +235,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw` |
 | NAT gateway | `Microsoft.Network/natGateways` | `ng` |
 | Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic`|
-| Network security perimeter (NSP) | `Microsoft.Network/networkSecurityPerimeters` | `nsp`|
+| Network security perimeter | `Microsoft.Network/networkSecurityPerimeters` | `nsp`|
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
 | Network Watcher | `Microsoft.Network/networkWatchers` | `nw` |
