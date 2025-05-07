@@ -4,7 +4,7 @@ items:
     pdf_name: Microsoft Cloud Adoption Framework for Azure
   - name: About
     items:
-    - name: What is CAF?
+    - name: What is the Cloud Adoption Framework?
       href: overview.md
     - name: What's new
       href: get-started/whats-new.md
