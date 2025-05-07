@@ -14,6 +14,19 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## April 2025
+
+### Updated articles
+
+- [Administer your Azure cloud estate](../manage/administer.md): We added guidance on managing workload relocations, including drivers, risks, costs, and projects.
+- [Manage AI – Process to manage AI](../scenarios/ai/manage.md): We made updates to the "AI endpoint sharing" section, now the "Ai resource sharing" section.
+- [Management recommendations for AI workloads on Azure](../scenarios/ai/platform/management.md): We added guidance for managing AI deployments, including finding the best region, using AI hubs, and managing multiple deployments.
+- [Protect your Azure cloud estate](../manage/protect.md): We made updates for clarity and refreshed the content to reflect the latest Azure services and best practices for protecting your cloud estate.
+- [Ready your Azure cloud operations](../manage/ready.md): We made significant updates for clarity and accuracy.
+- [Resource selection recommendations for AI workloads on Azure](../scenarios/ai/platform/resource-selection.md): We made updates to separate and clarify the guidance on selecting nongenerative AI platforms to provide more details on the differences between Azure AI services and Azure Machine Learning.
+- [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md): We made significant updates to Azure Landing Zone canary guidance to improve the clarity and usability of the content based on customer feedback.
+- [What is an Azure landing zone?](../ready/landing-zone/index.md): We added a conceptual architecture diagram to differentiate between platform and application landing zones.
+
 ## March 2025
 
 ### Manage methodology refresh
@@ -437,76 +450,5 @@ We updated articles to provide recommendations for multiregion deployments in Az
 #### DevOps updates
 
 - [DevOps considerations](../ready/considerations/devops-principles-and-practices.md): The DevOps technologies list was updated to include bootstrapping and infrastructure as code (IaC) tools.
-
-## April 2024
-
-### New articles
-
-This month, we completely refreshed articles related to the Migrate and Govern methodologies in the Cloud Adoption Framework. We also added a few articles about Azure landing zones in the Ready methodology. Take a look to make sure you're applying the relevant recommendations.
-
-#### Migrate methodology refresh
-
-Explore dozens of new and updated articles to guide you through the migration process.
-
-- **Prepare to migrate your workload**
-    - [Migrate overview](../migrate/index.md): Learn about the Migrate methodology and how to apply it as you move your workloads to Azure.
-    - [Migration preparation checklist](../migrate/prepare/index.md): Follow the checklist to plan for migration and to ensure that you have the right resources and tools in place.
-    - [Prepare your landing zone for migration](../migrate/prepare/ready-azure-landing-zone.md): Make sure you understand what you need to do after an Azure landing zone deployment to ensure that the technical environment supports migrations.
-    - [Prepare tools and initial migration backlog](../migrate/prepare/tools-backlog.md): Prepare the tools and initial migration backlog that you need to support a migration to Azure.
-    - [Select Azure regions for a migration](../migrate/prepare/select-regions-migration.md): Choose the Azure regions that best meet your requirements for a migration.
-    - [Align roles and responsibilities](../migrate/prepare/roles-responsibilities.md): Ensure clarity and coverage of essential functions for the migration to Azure by aligning roles and responsibilities across the departments in your organization.
-    - [Get support resources and improve skills for migration projects](../migrate/prepare/skills-support.md): Make sure that your team has the right skills and resources to support a migration to Azure.
-
-- **Assess your readiness**
-    - [Migration assessment checklist](../migrate/assess/index.md): Follow the checklist to assess your workload's readiness for migration to the cloud.
-    - [Classify workloads for a migration](../migrate/assess/classify.md): Conduct a premigration assessment to classify your workloads based on the data sensitivity.
-    - [Evaluate workload readiness](../migrate/assess/evaluate.md): Understand how to adjust your workload to prepare it for migration to the cloud. Learn how to validate all assets and associated dependencies.
-    - [Design workload architecture before migration](../migrate/assess/architect.md): Use the Cloud Adoption Framework to define the cloud architecture of a workload before you begin migration.
-
-- **Prepare for deployment**
-    - [Migration deployment checklist](../migrate/deploy/index.md): Follow the checklist to prepare for the deploy phase of migrating a workload to Azure.
-    - [Deploy supporting services for migration projects](../migrate/deploy/deploy-supporting-services.md): Deploy the supporting services that your workloads need as you migrate them to Azure.
-    - [Remediate assets prior to migration](../migrate/deploy/remediate.md): Before the migration, remediate assets that you determine to be incompatible with your chosen cloud provider prior.
-    - [Replicate assets in a cloud migration](../migrate/deploy/replicate.md): Make sure that you understand the role of replication in the migration process and how to plan for the prerequisites and risks of replication activities. 
-    - [Prepare for management activities](../migrate/deploy/prepare-for-management.md): Prepare to carry out management activities after a workload migration is complete. 
-    - [Test your migration deployment in Azure](../migrate/deploy/migration-test.md): Perform migration testing in Azure to ensure that your architecture works with the replicated or staged resources.
-
-- **Complete a migration to Azure**
-    - [Migration release checklist](../migrate/release/index.md): Follow the checklist to release a workload to production after a migration to Azure.
-    - [Change communication](../migrate/release/change-communication.md): Communicate changes to your organization before, during, and after a migration to Azure.
-    - [Perform business testing during a migration](../migrate/release/business-test.md): Perform business testing during a migration to ensure that your workloads are functioning as expected.
-    - [Complete the migration to Azure](../migrate/release/complete-migration.md): Complete final steps in the migration to Azure.
-    - [Optimize cost after migration](../migrate/release/optimize-cost-after-migration.md): Optimize costs to ensure that you're getting the most value from your cloud resources.
-    - [Build a growth mindset by conducting retrospectives](../migrate/release/retrospective.md): Use retrospectives to build a growth mindset in your team and to improve your migration process.
-
-- **Explore relevant migration scenarios**
-    - [Review product migration scenarios](../migrate/scenarios.md): Review the migration scenarios that are available for your product.
-
-#### Govern methodology refresh
-
-We overhauled our collection of articles in the Govern methodology, making the concepts easier to consume and understand as you set up cloud governance in your organization.
-
-- [Govern overview](../govern/index.md): Learn about the Govern methodology and follow the checklist to apply the methodology in your organization.
-- [Improve landing zone governance](../ready/considerations/landing-zone-governance.md): Improve the governance of your landing zones by following the best practices in this article.
-- [Build a cloud governance team](../govern/build-cloud-governance-team.md): Create a team that works to ensure the success of cloud governance in your organization.
-- [Assess cloud risks](../govern/assess-cloud-risks.md): Assess, prioritize, and document cloud risks.
-- [Document cloud governance policies](../govern/document-cloud-governance-policies.md): Define and document what should or shouldn't be done in your cloud environment.
-- [Enforce cloud governance policies](../govern/enforce-cloud-governance-policies.md): Apply controls and procedures to align cloud use to the cloud governance policies.
-- [Monitor cloud governance](../govern/monitor-cloud-governance.md): Measure how well your cloud environment complies with your cloud governance policies.
-
-#### Ready methodology
-
-Find new articles about Azure landing zones in the Ready methodology.
-
-- [Keep your Azure landing zone up to date](../ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date.md): Make sure that your Azure landing zones are current to maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases.
-- [Migrate Azure landing zone custom policies to Azure built-in policies](../ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md): Migrate your deprecated Azure landing zone custom policies to Azure built-in policies.
-- [Update Azure landing zone custom policies](../ready/landing-zone/design-area/update-custom-policies.md): Update your Azure landing zone custom policies to ensure that they're current and compliant with the latest Azure policies.
-
-### Updated articles
-
-- [Cloud adoption scenarios](../scenarios/index.md): Extensive revisions help you find scenarios that are relevant to your organization's cloud adoption journey.
-- [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): Find updates about the data-collection and alert-processing rules.
-- [Zero Trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): Review a new multitenant architecture diagram and information about Microsoft Entra ID Protection.
-- [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md): Explore updates related to ExpressRoute.
 
 <!-- docutune:ignoreNextStep -->
