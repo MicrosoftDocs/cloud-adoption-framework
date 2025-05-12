@@ -3,7 +3,7 @@ items:
     href: index.md
   - name: Best practices
     items:
-      - name: Zero trust
+      - name: Zero Trust
         href: /security/zero-trust/zero-trust-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Compliance
         href: /azure/compliance/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
@@ -11,11 +11,11 @@ items:
         href: /azure/azure-government/azure-secure-isolation-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Trusted internet connection
         href: /azure/azure-government/compliance/compliance-tic?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
-      - name: Multi-tenant organizations
+      - name: Multitenant organizations
         items:
           - name: Identity essentials
             href: ./identity/multi-tenant/essentials.md
-          - name: Zero trust configurations
+          - name: Zero Trust configurations
             href: ./identity/multi-tenant/zero-trust-configuration.md
           - name: Management operations
             href: ./identity/multi-tenant/manage-operations.md
