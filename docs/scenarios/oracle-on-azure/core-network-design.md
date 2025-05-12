@@ -20,7 +20,7 @@ The client subnet in the OCI VCN maps to the Oracle Database delegated subnet in
 
 ## Design considerations
 
-When you design your network topology for Oracle Exadata Database@Azure, consider the following Oracle-specific factors:
+When you design your network topology for Oracle Exadata Database@Azure, consider the following factors:
 
 - **Availability zone selection:** Deploy Oracle Exadata Database@Azure services into subscription-specific availability zones. This deployment affects latency and resilience. The physical datacenter might differ between subscriptions. For more information, see [Physical and logical availability zones](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones).
 
