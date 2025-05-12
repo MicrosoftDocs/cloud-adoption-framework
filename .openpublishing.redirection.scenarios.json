@@ -549,6 +549,51 @@
       "source_path": "docs/manage/best-practices.md",
       "redirect_url": "/azure/cloud-adoption-framework/manage/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/adopt.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/govern.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/manage.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/organize.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/secure.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/strategy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
     }
   ]
 }

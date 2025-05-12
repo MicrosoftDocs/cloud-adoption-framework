@@ -693,8 +693,6 @@ items:
       href: scenarios/sap/index.md
     - name: Virtual desktops
       href: scenarios/azure-virtual-desktop/index.md
-    - name: Defense
-      href: scenarios/defense/index.md
 
   - name: Resources
     items:
