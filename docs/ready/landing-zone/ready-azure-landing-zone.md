@@ -187,8 +187,3 @@ Consider these additional resources to prepare for migration:
 - [Create an adequate plan for Azure billing](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md)
 - [Ensure that you have proper organizational alignment](../../plan/initial-org-alignment.md) and [a plan to manage it](../../organize/index.md)
 - [Develop naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md)
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Prepare tools and an initial migration backlog](./tools-backlog.md)
