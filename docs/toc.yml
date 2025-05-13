@@ -139,6 +139,8 @@ items:
           href: ready/landing-zone/design-principles.md
         - name: Journey to the target architecture
           href: ready/landing-zone/landing-zone-journey.md
+        - name: Prepare your landing zone for migration
+          href: ready/landing-zone/ready-azure-landing-zone.md
         - name: Design areas
           href: ready/landing-zone/design-areas.md
           items:
@@ -468,8 +470,6 @@ items:
           items:
             - name: Overview
               href: migrate/prepare/index.md
-            - name: Prepare your landing zone for migration
-              href: migrate/prepare/ready-azure-landing-zone.md
             - name: Prepare tools and backlog
               href: migrate/prepare/tools-backlog.md
             - name: Select migration regions
