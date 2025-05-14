@@ -24,7 +24,7 @@ The colocated approach provides simpler management and no extra peering costs, b
 
 :::image type="content" source="./media/same-virtual-network.svg" alt-text="Diagram that shows the colocation of the database and application tiers in the same virtual network." border="false" lightbox="./media/same-virtual-network.svg":::
 
-The peered virtual network approach adds virtual network peering costs and more complexity, but provides better isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over the resources and enhanced network segmentation. The following diagram shows the database and application tiers in directly peered virtual networks.
+The peered virtual network approach adds virtual network peering costs and more complexity, but provides enhanced isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over the resources and enhanced network segmentation. The following diagram shows the database and application tiers in directly peered virtual networks.
 
 :::image type="content" source="./media/separate-virtual-network.svg" alt-text="Diagram that shows directly peered virtual networks." border="false" lightbox="./media/separate-virtual-network.svg":::
 
@@ -36,11 +36,7 @@ This pattern helps ensure direct connectivity from the database and application 
 
 ## Design considerations
 
-- **Cost factors:** Colocating the database and application tiers in the same virtual network incurs no extra network costs.
-
-- **Connectivity options:** When you can't colocate the database and application tiers in the same virtual network, you can peer between virtual networks or traverse through a hub virtual network, like a standard virtual network or Azure Virtual WAN hub.
-
-- **Known limitations:** Because of connectivity limitations from Oracle Database@Azure to private endpoints and serverless applications like Azure Functions, connectivity to these services requires an intermediate hop through a routing device like Azure Firewall or a non-Microsoft network virtual appliance.
+- **Connectivity options:** There are two main options for achieving optimal performance between the application and database tiers: deploying them in the same virtual network or in peered virtual networks. Both options offer comparable latency and throughput when resources are deployed in the same physical availability zone. The choice between them depends more on management scope, team boundaries, and network segmentation requirements than on performance.
 
 - **Availability zone validation:** If you deploy the application tier in a separate subscription from the subscription that hosts Oracle Database@Azure – Exadata Database Service, logical availability zones might differ from physical availability zones across subscriptions. To validate the correct availability zones, use the following command and replace `eastus` with your desired region:
 
@@ -56,6 +52,8 @@ This pattern helps ensure direct connectivity from the database and application 
 - **Optimize for smaller workload scopes:** Colocate applications and databases in the same virtual network if you have a limited number of Oracle databases that serve a small application portfolio that a single team manages. This approach reduces latency and simplifies the network design.
 
 - **Use segmentation for complex environments:** For larger or more complex environments, treat Oracle Exadata Database@Azure as a dedicated service by deploying it in one or more dedicated subscriptions to manage multiple databases for different applications and teams. Deploy application solutions in separate subscriptions and use virtual network peering to connect the application networks to the database networks. This approach enables independent management of application and database resources while helping to maintain secure and performant connectivity.
+
+- **Use Private Endpoints for secure connectivity:** When application workloads require secure access to Oracle Database@Azure, use Private Endpoints.
 
 ## Next step
 

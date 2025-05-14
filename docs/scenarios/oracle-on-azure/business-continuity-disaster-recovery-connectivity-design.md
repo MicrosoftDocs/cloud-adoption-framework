@@ -33,13 +33,11 @@ The following diagram illustrates a single-region redundant setup that uses two 
 
 ## Redundancy across regions
 
-To deploy a redundant network setup across regions, you can configure traffic in Azure or OCI. The following patterns provide guidance for scenarios when traffic must remain within Azure. The following diagram shows a hub-and-spoke topology.
+To achieve cross-region redundancy with Oracle Database@Azure, deploy your primary and standby Exadata infrastructures in separate virtual networks in different Azure regions. You can establish direct connectivity using Global VNet Peering, which enables low-latency, high-throughput replication between regions.
 
-:::image type="content" source="./media/hub-spoke-multiple-region.svg" alt-text="Diagram that shows a hub-and-spoke topology." border="false" lightbox="./media/hub-spoke-multiple-region.svg":::
+The following diagram shows the recommended cross-region configuration using Global VNet Peering:
 
-The following diagram shows an Azure Virtual WAN topology.
-
-:::image type="content" source="./media/virtual-wan-multiple-region.svg" alt-text="Diagram that shows the Virtual WAN topology." border="false" lightbox="./media/virtual-wan-multiple-region.svg":::
+:::image type="content" source="./media/multi-region-dataguard.png" alt-text="Diagram that shows Oracle Database@Azure deployed in two regions connected via Global VNet Peering." border="false" lightbox="./media/multi-region-dataguard.png":::
 
 ## Design considerations
 
@@ -49,13 +47,9 @@ The following diagram shows an Azure Virtual WAN topology.
 
 - **Availability zones:** Ensure that the two Oracle Exadata Database@Azure deployments span different availability zones to isolate failures at the availability zone level.
 
-- **Data Guard configuration:** For DR within the same region or availability zone, Data Guard should be enabled and configured in synchronous mode to minimize your RTO and RPO targets and optimize performance. For more information, see [BCDR considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
-
-- **Supported network topologies:** Use Virtual WAN-based connectivity and peering with a hub network.
-
 ## Design recommendations
 
-- **Network virtual appliances (NVAs):** Minimize the use of NVAs in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
+- **Network virtual appliances (NVAs):** Minimize the use of NVAs, or other appliances, in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
 
 - **Costs and growth:** Evaluate ingress and egress costs, future growth expectations, and potential changes to your network architecture. Align your design with your business continuity goals and budget constraints.
 
