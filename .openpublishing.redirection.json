@@ -3094,6 +3094,11 @@
          "source_path": "docs/scenarios/oracle-iaas/oracle-security-overview-odaa.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-security-overview-odaa",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/prepare/ready-azure-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/ready-azure-landing-zone",
+         "redirect_document_id": true
       }
    ]   
 }
