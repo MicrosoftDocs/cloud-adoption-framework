@@ -21,7 +21,7 @@ If you didn't use an Azure landing zone reference implementation, you still need
 This article describes the tasks you must perform for your existing Azure landing zone after it's deployed. Some tasks focus on automated deployments. It's noted if a task isn't relevant for manually deployed and managed environments.
 
 > [!NOTE]
-> Complete the review of the [ALZ design areas](./design-areas.md) before continuing.
+> Prior to completing the tasks detailed on this page, please ensure you have implemented your Azure landing zone and reviewed both the [design areas](./design-areas.md) and also the [design principles](./design-principles.md) before continuing.
 
 ## Establish hybrid connectivity
 
