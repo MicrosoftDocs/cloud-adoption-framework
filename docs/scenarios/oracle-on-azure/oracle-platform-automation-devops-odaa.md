@@ -59,10 +59,10 @@ This documentation provides design considerations and recommendations for deploy
   - Pluggable Database (PDB) 
   - Data Guard
 
-- Idempotency issues can occur when using Oracle Terraform to update Oracle Exadata Database@Azure infrastructure properties that are not updatable in Azure.  Use [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your Terraform configuration to avoid these issues.
+- Idempotency issues can occur when using Oracle Terraform to update Oracle Exadata Database@Azure infrastructure properties that are not updatable in Azure. To avoid idempotency issues use the Terraform [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your code.
  
 > [!NOTE]
-> Failing to use ignore_changes on Azure Terraform can cause Terraform to attempt updates on non-updatable properties, which can lead to unintended consequences such as:
+> Failing to use ```ignore_changes``` on Azure Terraform can cause Terraform to attempt updates on non updatable properties, which can lead to unintended consequences such as:
 > - Terraform trying to modify existing resources
 > - Destruction and recreation of infrastructure or clusters
 > 
