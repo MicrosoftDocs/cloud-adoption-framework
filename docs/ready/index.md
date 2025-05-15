@@ -18,7 +18,7 @@ A landing zone is an environment for hosting your Azure resources. An [Azure lan
 
 There are [two types of landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones):
 
-- Platform landing zone: A subscription that provides shared services (identity, connectivity, management) to applications in application landing zones
+- Platform landing zone: A subscription that provides shared services (identity, connectivity, management) to applications in application landing zones.
 
 - Application landing zone: A subscription for hosting an application or workload.
 
