@@ -594,6 +594,26 @@
       "source_path": "docs/scenarios/defense/strategy.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/identity/multi-tenant/essentials.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/identity/multi-tenant/manage-operations.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/identity/multi-tenant/security-operations.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/identity/multi-tenant/zero-trust-configuration.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
     }
   ]
 }
