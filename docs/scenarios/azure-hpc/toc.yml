@@ -25,9 +25,6 @@ items:
       items:
       - name: HPC landing zone accelerator
         href: azure-hpc-landing-zone-accelerator.md
-      - name: Condition monitoring architecture
-        href: /azure/architecture/solution-ideas/articles/condition-monitoring
-        maintainContext: true
       - name: Video rendering architecture
         href: /azure/architecture/example-scenario/infrastructure/video-rendering
         maintainContext: true
