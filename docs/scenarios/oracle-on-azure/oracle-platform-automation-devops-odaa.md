@@ -46,9 +46,9 @@ This documentation provides design considerations and recommendations for deploy
 
 - Deploy Oracle Database@Azure federation and infrastructure using Terraform Infrastructure as Code (IaC).
 
-- Use the [Terraform Template to setup SSO Federation between OCI & Azure](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/az-oci-sso-federation) Oracle Terraform template to configure Identity Federation and single sign-On (SSO) to the OCI cloud. 
+- To configure Identity Federation and single sign-On (SSO) to the OCI cloud use the [Terraform Template to setup SSO Federation between OCI & Azure](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/az-oci-sso-federation) Oracle Terraform template. 
 
-- To ensure that Oracle Exadata Database@Azure infrastructure deployments adhere to Azure Well Architected Framework best practices for reliability and security, use [Azure Verified Modules (AVMs)](https://aka.ms/avm) for deployment. Oracle has created a Terraform template to deploy the Exadata infrastructure, Exadata cluster, Azure Virtual Network with delegated subnet, and the database home and CDB/PDB. You can find the template here: [Quickstart OracleDB@Azure (Exadata) with Azure Verified Modules (AzAPI) and OCI LZ Modules](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/avm-oci-exadata-quickstart).
+- To ensure that Oracle Exadata Database@Azure infrastructure deployments adhere to Azure Well Architected Framework best practices for reliability and security, use [Azure Verified Modules (AVMs)](https://aka.ms/avm) for deployment. Oracle created a Terraform template to deploy the Exadata infrastructure, Exadata cluster, Azure Virtual Network with delegated subnet, and the database home and CDB/PDB. You can find the template here: [Quickstart OracleDB@Azure (Exadata) with Azure Verified Modules (AzAPI) and OCI LZ Modules](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/avm-oci-exadata-quickstart).
 
 
 - Reach out to Oracle to for assistance in deploy Oracle related services using infrastructure as code:
@@ -59,10 +59,10 @@ This documentation provides design considerations and recommendations for deploy
   - Pluggable Database (PDB) 
   - Data Guard
 
-- If you experience idempotency issues when using Azure Terraform to update Oracle Exadata Database@Azure infrastructure modifying properties that are not supported by Azure, you should use the [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your Terraform configuration.
+- Idempotency issues can occur when using Oracle Terraform to update Oracle Exadata Database@Azure infrastructure properties that are not updatable in Azure.  Use [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your Terraform configuration to avoid these issues.
  
 > [!NOTE]
-> Failing to use ignore_changes may cause Terraform to attempt updates on unsupported properties, which can lead to unintended consequences such as:
+> Failing to use ignore_changes on Azure Terraform can cause Terraform to attempt updates on non-updatable properties, which can lead to unintended consequences such as:
 > - Terraform trying to modify existing resources
 > - Destruction and recreation of infrastructure or clusters
 > 
