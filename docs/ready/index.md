@@ -24,7 +24,7 @@ There are two steps to designing and deploying a landing zone:
 
 - Reference architecture: A specific design that illustrates resource deployment to one or more Azure subscriptions, which meet the requirements of the landing zone.
 
-- Reference implementation: Artifacts that deploy Azure resources into the landing zone subscription(s), according to the reference architecture. Many [landing zones accelerators](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach) offer multiple deployment options. The most common is a ready-made infrastructure as code (IaC) template. Accelerators automate and accelerate the deployment of a reference implementation, using IaC technology such as ARM, Bicep, Terraform, and others.
+- Reference implementation: Artifacts that deploy Azure resources into the landing zone subscription(s), according to the reference architecture. There are many [platform and application landing zone deployment options](/azure/architecture/landing-zones/landing-zone-deploy). These deployment options automate and accelerate the deployment of a reference implementation, using IaC technology such as ARM, Bicep, Terraform, and others.
 
 ## Landing zone journey
 
