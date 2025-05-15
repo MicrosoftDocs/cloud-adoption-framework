@@ -31,7 +31,6 @@ Your organization's cloud adoption effort should support long-term strategic goa
 - [Modern application platform](../scenarios/app-platform/index.md)
 - [SAP](../scenarios/sap/index.md)
 - [Desktop virtualization](../scenarios/azure-virtual-desktop/index.md)
-- [Defense](../scenarios/defense/index.md)
 
 ## Cloud adoption antipatterns
 
