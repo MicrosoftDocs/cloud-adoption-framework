@@ -27,7 +27,7 @@ This documentation provides design considerations and recommendations for deploy
     | [azurerm](https://registry.terraform.io/providers/hashicorp/azurerm/latest) | The AzureRM provider is used to manage resources in Microsoft Azure, enabling the creation, updating, and deletion of Azure services using Terraform configurations.
     | [azapi](https://registry.terraform.io/providers/hashicorp/azurerm/latest) | The AzAPI provider is a thin layer on top of the Azure ARM REST APIs, enabling management of any Azure resource type using any API version. It can be used independently or alongside the AzureRM provider to utilize the latest Azure functionalities including previews.
     | [azuread](https://registry.terraform.io/providers/hashicorp/azuread/latest) | The AzureAD provider is used to manage users, groups, service principals, and applications in Azure Active Directory using the Microsoft Graph API. 
-    | [oci](https://registry.terraform.io/providers/oracle/oci/latest) | The Oracle oci Terraform provider allows users to manage Oracle Cloud Infrastructure (OCI) resources using Terraform. It supports various OCI services and can be used with Terraform Cloud and OCI Resource Manager for automated deployment and operations.
+    | [oci](https://registry.terraform.io/providers/oracle/oci/latest) | The Oracle Cloud Infrastructure (OCI) Terraform provider allows users to manage Oracle Cloud Infrastructure (OCI) resources using Terraform. It supports various OCI services and can be used with Terraform Cloud and OCI Resource Manager for automated deployment and operations.
 
 - [Azure Verified Modules (AVM)](https://aka.ms/avm) are available for Oracle Database@Azure Exadata infrastructure and cluster. AVM modules are designed to streamline the deployment and management of Azure resources, ensuring compliance with Microsoft's well-architected framework (WAF), which emphasizes reliability and security by default. Available Azure Verified Modules:
 
@@ -51,7 +51,7 @@ This documentation provides design considerations and recommendations for deploy
 - To ensure that Oracle Exadata Database@Azure infrastructure deployments adhere to Azure Well Architected Framework best practices for reliability and security, use [Azure Verified Modules (AVMs)](https://aka.ms/avm) for deployment. Oracle created a Terraform template to deploy the Exadata infrastructure, Exadata cluster, Azure Virtual Network with delegated subnet, and the database home and CDB/PDB. You can find the template here: [Quickstart OracleDB@Azure (Exadata) with Azure Verified Modules (AzAPI) and OCI LZ Modules](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/avm-oci-exadata-quickstart).
 
 
-- Reach out to Oracle to for assistance in deploy Oracle related services using infrastructure as code:
+- Reach out to Oracle for assistance in deploying the following services using infrastructure as code:
   - Oracle Database Autonomous Recovery Service
   - Oracle Cloud Infrastructure Network Security Groups
   - Oracle Cloud Infrastructure Domain Name System (DNS) Zones
@@ -59,14 +59,14 @@ This documentation provides design considerations and recommendations for deploy
   - Pluggable Database (PDB) 
   - Data Guard
 
-- Idempotency issues can occur when using Oracle Terraform to update Oracle Exadata Database@Azure infrastructure properties that are not updatable in Azure. To avoid idempotency issues use the Terraform [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your code.
+- Idempotency issues can occur when using Oracle Terraform to update Oracle Exadata Database@Azure infrastructure properties that aren't updatable in Azure. To avoid idempotency issues use the Terraform [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your code.
  
 > [!NOTE]
 > Failing to use ```ignore_changes``` on Azure Terraform can cause Terraform to attempt updates on non updatable properties, which can lead to unintended consequences such as:
 > - Terraform trying to modify existing resources
 > - Destruction and recreation of infrastructure or clusters
 > 
-> To prevent these disruptions, configure ```ignore_changes``` for any properties that are not manageable through Azure.
+> To prevent these disruptions, configure ```ignore_changes``` for any properties that aren't manageable through Azure.
 
 ## Next step
 
