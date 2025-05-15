@@ -20,7 +20,7 @@ This documentation provides design considerations and recommendations for deploy
 
 - Terraform modules and providers are available to deploy Oracle Database@Azure Exadata infrastructure and to configure Federated identity with Oracle Cloud Infrastructure.
 
-- There are multiple Terraform providers and options for deploying Oracle Database@Azure Exadata: In some cases, multiple providers provide the same Infrastructure as Code (IaC) capability. For example, an Oracle Database@Azure Exadata cluster can be deployed using [azapi](/azure/templates/oracle.database/cloudvmclusters?pivots=deployment-language-terraform) or [azurerm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/oracle_exadata_infrastructure). For a more detailed description of the provider options see [Announcing expanded Terraform support for Oracle Database@Azure](https://blogs.oracle.com/cloud-infrastructure/post/azurerm-avm-oracle-database-at-azure). Oracle Database@Azure related Terraform providers:
+- There are multiple Terraform providers and options for deploying Oracle Database@Azure Exadata. In some cases, multiple providers provide the same Infrastructure as Code (IaC) capability. For example, an Oracle Database@Azure Exadata cluster can be deployed using [azapi](/azure/templates/oracle.database/cloudvmclusters?pivots=deployment-language-terraform) or [azurerm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/oracle_exadata_infrastructure). For a more detailed description of the provider options see [Announcing expanded Terraform support for Oracle Database@Azure](https://blogs.oracle.com/cloud-infrastructure/post/azurerm-avm-oracle-database-at-azure). Oracle Database@Azure related Terraform providers:
 
     | Provider | Description
     | - | - |
@@ -50,7 +50,23 @@ This documentation provides design considerations and recommendations for deploy
 
 - To ensure that Oracle Exadata Database@Azure infrastructure deployments adhere to Azure Well Architected Framework best practices for reliability and security, use [Azure Verified Modules (AVMs)](https://aka.ms/avm) for deployment. Oracle has created a Terraform template to deploy the Exadata infrastructure, Exadata cluster, Azure Virtual Network with delegated subnet, and the database home and CDB/PDB. You can find the template here: [Quickstart OracleDB@Azure (Exadata) with Azure Verified Modules (AzAPI) and OCI LZ Modules](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/avm-oci-exadata-quickstart).
 
-- If you encounter idempotency issues with Azure Terraform while updating Oracle Exadata Database@Azure infrastructure to modify properties not available in Azure, use the Terraform [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in the Azure Terraform.
+
+- Reach out to Oracle to for assistance in deploy Oracle related services using infrastructure as code:
+  - Oracle Database Autonomous Recovery Service
+  - Oracle Cloud Infrastructure Network Security Groups
+  - Oracle Cloud Infrastructure Domain Name System (DNS) Zones
+  - Container Database (CDB) 
+  - Pluggable Database (PDB) 
+  - Data Guard
+
+- If you experience idempotency issues when using Azure Terraform to update Oracle Exadata Database@Azure infrastructure modifying properties that are not supported by Azure, you should use the [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your Terraform configuration.
+ 
+> [!NOTE]
+> Failing to use ignore_changes may cause Terraform to attempt updates on unsupported properties, which can lead to unintended consequences such as:
+> - Terraform trying to modify existing resources
+> - Destruction and recreation of infrastructure or clusters
+> 
+> To prevent these disruptions, configure ```ignore_changes``` for any properties that are not manageable through Azure.
 
 ## Next step
 
