@@ -827,6 +827,8 @@ items:
         href: /training/
       - name: Assessments to personalize guidance
         href: /assessments/
+      - name: App Modernization Guidance for Azure
+        href: /azure/app-modernization-guidance
 
     - name: Archived resources
       items:
