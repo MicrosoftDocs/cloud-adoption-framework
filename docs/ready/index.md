@@ -3,7 +3,7 @@ title: Prepare for cloud adoption
 description: Learn how to create a landing zone to host the workloads that you plan to build in the cloud or migrate to the cloud.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 09/15/2023
+ms.date: 05/15/2025
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -14,17 +14,19 @@ Before adoption can begin, you create a landing zone to host the workloads that 
 
 ## Landing zone concepts
 
-A landing zone helps you plan for and design an Azure deployment. It conceptualizes a designated area for placement and integration of resources. There are [two types of landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones):
+A landing zone is an environment for hosting your Azure resources. An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point to build your Azure environment. It provides a predefined setup for platform resources and application resources. If an Azure landing zone does not meet your requirements, follow the recommendations to create a custom environment.
 
-- Platform landing zone: Provides centralized, foundational services for workloads and applications. These  services support your workloads and include networking, identity access management, policies, and monitoring. This foundation enables migration, modernization, and innovation in Azure.
+There are [two types of landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones):
 
-- Application landing zone: provides services specific to an application or workload. A workload deployed to an application landing zone integrates with and is dependent upon services provided by the platform landing zone.
+- Platform landing zone: A subscription that provides shared services (identity, connectivity, management) to applications in application landing zones
+
+- Application landing zone: A subscription for hosting an application or workload.
 
 There are two steps to designing and deploying a landing zone:
 
-- Reference architecture: A specific design that illustrates resource deployment to one or more Azure subscriptions, which meet the requirements of the landing zone.
+- Reference architecture: A specific design that illustrates resource deployment to one or more Azure subscriptions.
 
-- Reference implementation: There are many [platform and application landing zone deployment options](/azure/architecture/landing-zones/landing-zone-deploy) to implement a reference architecture in Azure. These deployment options automate and accelerate the deployment of a reference implementation. They use infrastructure as code (IaC), such as ARM templates, Bicep, and Terraform. You can tweak the IaC to align with your reference architecture as needed.
+- Reference implementation: A deployment in Azure that translates your reference architecture into reality. Several [prebuilt deployment options](/azure/architecture/landing-zones/landing-zone-deploy) for platform and application landing zones exist to simplify implementation. These deployment options use infrastructure as code (IaC) technologies, such as ARM templates, Bicep, or Terraform. You can adjust this IaC to meet your specific reference architecture needs.
 
 ## Landing zone journey
 
