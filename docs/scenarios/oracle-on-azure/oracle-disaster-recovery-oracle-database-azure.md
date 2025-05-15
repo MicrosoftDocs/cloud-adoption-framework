@@ -133,7 +133,9 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
   
   - **Use Storage services:** Use Storage services like Blob Storage, Azure Files, and Azure NetApp Files to mount storage as network file system (NFS) points on the database server and stream Oracle Recovery Manager (RMAN) backups to Storage.
 
-- **Long-term backup retention:** If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Azure Storage.
+- **Long-term backup retention:** If your organization requires long-term backup retention, there are two solutions available:
+  - you can configure self-managed RMAN backups to Azure Storage.
+  - you can use ARS long term backup feature. Note that this feature uses OCI object storage as a destination even though the ARS service is being used in Azure.
 
 - **Storage backup configurations:** When backups are configured to Storage services, consider the following recommendations:
 
