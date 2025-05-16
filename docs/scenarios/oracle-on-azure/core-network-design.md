@@ -26,13 +26,13 @@ When you design your network topology for Oracle Exadata Database@Azure, conside
 
 - **VM cluster limits:** Each Oracle Exadata Database@Azure SKU can include up to [eight VM clusters](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-B0820870-D946-4879-85BF-C95FF25979CF). Ensure that your virtual network is configured before VM cluster creation, and decide whether to connect clusters to the same virtual network or separate virtual networks.
 
-- **Internet access requirements:** Exadata has no direct internet access by default. If internet access is required, like for patching or outbound dependencies, you must configure it.
+- **Internet access requirements:** Oracle Exadata Database@Azure has no direct internet access by default. If internet access is required, like for patching or outbound dependencies, you must configure it.
 
 - **Subnet sizing:** Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. For more information about sizing guidelines, see [Plan for IP address space for Oracle Exadata Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
 - **NSG configuration options:** Network Security Groups (NSGs) can be applied from either Azure or OCI. If you prefer to manage network security policies in Azure, consider allowing all traffic from OCI-side NSGs and enforcing restrictions using NSGs on the Azure-delegated subnet.
 
-- **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan).
+- **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments across Availability Zones or Regions. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan). Also, only 5 Oracle-delegated subnets in total may be created in a region. 
 
 - **Split Domain Name System (DNS) model:** Oracle Database@Azure follows a split DNS model. DNS must be configured on both Azure and OCI. For more information, see [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513).
 

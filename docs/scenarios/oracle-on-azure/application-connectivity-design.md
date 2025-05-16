@@ -38,7 +38,7 @@ This pattern helps ensure direct connectivity from the database and application 
 
 - **Connectivity options:** There are two main options for achieving optimal performance between the application and database tiers: deploying them in the same virtual network or in peered virtual networks. Both options offer comparable latency and throughput when resources are deployed in the same physical availability zone. The choice between them depends more on management scope, team boundaries, and network segmentation requirements than on performance.
 
-- **Availability zone validation:** If you deploy the application tier in a separate subscription from the subscription that hosts Oracle Database@Azure – Exadata Database Service, logical availability zones might differ from physical availability zones across subscriptions. To validate the correct availability zones, use the following command and replace `eastus` with your desired region:
+- **Availability zone placement:** If you deploy the application tier in a separate subscription from the subscription that hosts Oracle Database@Azure – Exadata Database Service, logical availability zones might differ from physical availability zones across subscriptions. To validate the correct availability zones, use the following command and replace `eastus` with your desired region:
 
   ```bash
   az rest --method get --uri '/subscriptions/{subscriptionId}/locations?api-version=2022-12-01' \
@@ -47,7 +47,7 @@ This pattern helps ensure direct connectivity from the database and application 
 
 ## Design recommendations
 
-- **Optimize for bandwidth and latency:** Colocate workload-related resources within the same availability zones to minimize latency and maximize throughput.
+- **Optimize for bandwidth and latency:** Colocate workload-related resources within the same physical availability zones to minimize latency and maximize throughput.
 
 - **Optimize for smaller workload scopes:** Colocate applications and databases in the same virtual network if you have a limited number of Oracle databases that serve a small application portfolio that a single team manages. This approach reduces latency and simplifies the network design.
 

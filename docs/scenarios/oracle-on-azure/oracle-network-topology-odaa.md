@@ -12,7 +12,7 @@ ms.custom: e2e-oracle
 
 Before you begin cloud adoption, create a landing zone to host the workloads that you plan to build in or migrate to Azure. This section of the framework guides you through how to establish connectivity within your landing zone. This article builds on the Cloud Adoption Framework for Azure [network landing zone](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) design principles.
 
-The following articles help guide you through the process of how to create a network connectivity and topology for your landing zone to support cloud adoption specific to Oracle Exadata Database@Azure.
+The following articles help guide you through the process of how to create a network connectivity and topology for your landing zone to support cloud adoption for Oracle Exadata Database@Azure.
 
 | Design area                 | Objective                                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
