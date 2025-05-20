@@ -64,6 +64,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
 | Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh` |
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
+| Event Grid namespace | `Microsoft.EventGrid/namespaces` | `evgns` |
 | Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
 | Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
