@@ -137,12 +137,6 @@ The HC-series VMs are optimized for HPC applications that use intensive computat
 
 ## Next steps
 
-For more information about applications that support the use cases in this article, see the following resources:
-
-- [Virtual machine series](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
-- [Azure HPC certification.github.io](https://github.com/AzureHPC-Certification/AzureHPC-Certification.github.io/).
-- [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). This standalone reference architecture might not be compliant with the Azure landing zone paradigm.
-
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting manufacturing HPC environments for the cloud.
 
 - [Identity and access management](./identity-access-management.md)
