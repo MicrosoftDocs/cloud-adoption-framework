@@ -74,7 +74,11 @@ The following conceptual reference architecture is an example that shows design 
 
 ## Obtain the HPC landing zone accelerator
 
-The HPC landing zone accelerator is available on GitHub: [Azure HPC OnDemand Platform Accelerator](https://azure.github.io/az-hop/)
+The HPC landing zone accelerator is available in the marketplace, and can also be deployed using the Azure CLI. 
+- To deploy via the marketplace, refer to the following guide: [Quickstart - Deploy Azure CycleCloud Workspace for Slurm using the Marketplace](/azure/cyclecloud/qs-deploy-ccws?view=cyclecloud-8)
+- To deploy via the CLI, refer to the following guide: [How to deploy a CycleCloud Workspace for Slurm environment using the CLI](/azure/cyclecloud/how-to/ccws/deploy-with-cli?view=cyclecloud-8)
+
+To learn more about this accelerator solution, you can review its documentation in [What is Azure CycleCloud Workspace for Slurm?](/azure/cyclecloud/overview-ccws?view=cyclecloud-8) 
 
 ## Next steps
 
