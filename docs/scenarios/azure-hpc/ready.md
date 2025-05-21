@@ -1,6 +1,6 @@
 ---
 title: Azure landing zone for HPC
-description: See the effect of an HPC scenario on Azure landing zone design. Understand the differences between Azure Batch and Azure HPC OnDemand Platform (AzHop).
+description: See the effect of an HPC scenario on Azure landing zone design. Understand the differences between Azure Batch and Azure CycleCloud Workspace for Slurm
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 11/10/2022
@@ -34,7 +34,7 @@ As you can see from these questions, the deployment model varies depending on yo
 
 ## Azure landing zone acceleration for HPC
 
-[Azure Batch](/azure/batch/batch-technical-overview) and [Azure CycleCloud](/azure/cyclecloud/overview) are both Azure provided 1st party service while **Azure HPC OnDemand Platform** ([AzHOP](https://azure.github.io/az-hop/)) is an automation built on top of Azure Cycle Cloud which delivers an end-to-end deployment mechanism for a complete HPC cluster solution in Azure.
+[Azure Batch](/azure/batch/batch-technical-overview) and [Azure CycleCloud](/azure/cyclecloud/overview) are both Azure provided 1st party service while [Azure CycleCloud Workspace for Slurm](/azure/cyclecloud/overview-ccws?view=cyclecloud-8) is an Azure Marketplace solution template that allows users to easily create, configure, and deploy pre-defined Slurm clusters with CycleCloud on Azure, without requiring any prior knowledge of Azure or Slurm. 
 
 ### Azure Batch
 
@@ -53,16 +53,16 @@ As you can see from these questions, the deployment model varies depending on yo
 - It provides a rich, declarative, templating format to construct complete HPC environments on Azure.
 - It integrates with Azure services such as Azure Monitor and Microsoft Cost Management tools.
 
-### AzHop
+### Azure CycleCloud Workspace for Slurm
 
-- AzHop provides an end-to-end deployment mechanism for a base HPC infrastructure on Azure utilizing CycleCloud to orchestrate jobs.
+- Azure CycleCloud Workspace for Slurm provides an end-to-end deployment mechanism for a base HPC infrastructure on Azure utilizing CycleCloud to orchestrate jobs.
 - It delivers a complete HPC cluster solution that's ready for users to run applications on and that's easy for HPC administrators to deploy and manage.
-- AzHop uses various applications built-in that you can use "as is," or you can easily customize and extend to meet any unmet requirements.
-- It includes an **Open OnDemand** portal for unified user access, remote shell access, remote visualization access, job submission, file access, and more.
-- It uses **Active Directory** for user authentication and domain control.
-- It uses **OpenPBS** or Simple Linux Utility for Resource Management (**SLURM**) as a job scheduler.
+- It includes an integration with **Open OnDemand** for unified user access, remote shell access, job submission, file access, and more.
+- It uses Simple Linux Utility for Resource Management (**SLURM**) as a job scheduler.
 - Dynamic resource provisioning and autoscaling are done by **CycleCloud** preconfigured job queues and integrated health checks to quickly avoid nonoptimal nodes.
-- **Azure NetApp Files** delivers a shared file system for the home directory and applications.
+- It can deploy or use an existing **Azure NetApp Files** for a shared file system for the home directory and applications.
+- It can deploy or use an existing **Azure Managed Lustre** for a shared file system for the application data.
+- The deployed cluster is pre-configured with **PMix** v4, **Pyxi**s, and **enroot** to support containerized AI/HPC Slurm jobs.
 
 ### Comparison chart
 
