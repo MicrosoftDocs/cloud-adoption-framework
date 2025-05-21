@@ -119,7 +119,7 @@ Azure Machine Learning offers asset management, orchestration, and automation se
 
 ### Process
 
-- Standardize on a code template for code reuse and to accelerate ramp-up time on a new project or when a new team member joins the project. Use [Azure Machine Learning pipelines](/azure/machine-learning/concept-ml-pipelines), [job submission scripts](/python/api/azureml-core/azureml.core.scriptrun), and [CI/CD pipelines](/azure/machine-learning/how-to-github-actions-machine-learning) as a basis for new templates.
+- Standardize on a code template for code reuse and to accelerate ramp-up time on a new project or when a new team member joins the project. Use [Azure Machine Learning pipelines](/azure/machine-learning/concept-ml-pipelines), [job submission scripts](/python/api/azureml-core/azureml.core.scriptrun?view=azure-ml-py), and [CI/CD pipelines](/azure/machine-learning/how-to-github-actions-machine-learning) as a basis for new templates.
 
 - Use version control. Jobs that are submitted from a Git-backed folder [automatically track repo metadata](/azure/machine-learning/concept-train-model-git-integration) with the job in Azure Machine Learning for reproducibility.
 
@@ -145,7 +145,7 @@ Azure Machine Learning offers asset management, orchestration, and automation se
 
 - When production data access is available only in production, use [Azure RBAC](/azure/role-based-access-control/resource-provider-operations#microsoftmachinelearningservices) and [custom roles](/azure/machine-learning/how-to-assign-roles) to give a select number of machine learning practitioners read access. Some roles might need to read the data for related data exploration. Alternatively, make a data copy available in nonproduction environments.
 
-- Agree on naming conventions and tags for Azure Machine Learning [experiments](/python/api/azureml-core/azureml.core.experiment.experiment) to differentiate retraining baseline machine learning pipelines from experimental work.
+- Agree on naming conventions and tags for Azure Machine Learning [experiments](/python/api/azureml-core/azureml.core.experiment.experiment?view=azure-ml-py) to differentiate retraining baseline machine learning pipelines from experimental work.
 
 ### Technology
 
@@ -207,7 +207,7 @@ To maximize code reuse, review the following intellectual property at the beginn
 
 Any project retrospective should include an action item to determine whether elements of the project can be shared and generalized for broader reuse. The list of assets the organization can share and reuse expands over time.
 
-To help with sharing and discovery, many organizations have introduced shared repositories to organize code snippets and machine learning artifacts. Artifacts in Azure Machine Learning, including [datasets](/azure/machine-learning/how-to-create-register-datasets), [models](/azure/machine-learning/how-to-create-register-datasets), [environments](/python/api/azureml-core/azureml.core.environment(class)), and [pipelines](/python/api/azureml-pipeline-core/azureml.pipeline.core.pipeline(class)), can be defined as code, so you can share them efficiently across projects and workspaces.
+To help with sharing and discovery, many organizations have introduced shared repositories to organize code snippets and machine learning artifacts. Artifacts in Azure Machine Learning, including [datasets](/azure/machine-learning/how-to-create-register-datasets), [models](/azure/machine-learning/how-to-create-register-datasets), [environments](/python/api/azureml-core/azureml.core.environment%28class%29?view=azure-ml-py), and [pipelines](/python/api/azureml-pipeline-core/azureml.pipeline.core.pipeline%28class%29?view=azure-ml-py), can be defined as code, so you can share them efficiently across projects and workspaces.
 
 #### Project templates
 

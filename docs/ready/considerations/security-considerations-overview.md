@@ -60,7 +60,7 @@ Never hard-code secrets in code or auxiliary documentation in your repositories.
 
 Platform and development teams often have elevated privileges on the Azure platform, or on other services such as Azure DevOps and GitHub. This access greatly increases the potential attack surface. Implement guardrails to secure any endpoints and workstations you use to develop and deploy code.
 
-Use hardened [secure admin workstations (SAWs)](https://www.microsoft.com/insidetrack/protecting-high-risk-environments-with-secure-admin-workstations) to deploy any changes to high-risk and production environments. For more information, see [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).
+Use hardened [secure admin workstations (SAWs)](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/secure-administrative-workstations/258424) to deploy any changes to high-risk and production environments. For more information, see [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).
 
 ## Do security scanning and testing
 
