@@ -1,9 +1,9 @@
 ---
 title: Develop your naming and tagging strategy for Azure resources
 description: Read an overview of resource naming and tagging strategy for enterprise cloud adoption efforts.
-author: Zimmergren
-ms.author: tozimmergren
-ms.date: 12/22/2021
+author: Paul Grimley
+ms.author: paulgr
+ms.date: 05/21/2025
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit, UpdateFrequency3
 ---
@@ -40,6 +40,9 @@ A naming and tagging strategy includes business and operational details as compo
 - The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
 
 - The operational side ensures that names and tags include necessary information. IT teams use this information to identify the workload, application, environment, criticality, and other information useful for managing resources.
+
+## Mission Critical Workload Labeling
+To help more easily identify and manage mission critical resources within your Azure environment, it is important to apply labeling to those resources to focus on assessing any resiliency gaps and improvements that can be made to help you minimise downtime of your mission-critical workload in the unlikely event of an outage. Working with Microsoft using tags to help define a mission-critical workload will allow for targetted outcomes for only the key resources. See [Label mission-critical workloads](https://learn.microsoft.com/en-gb/azure/azure-resource-manager/management/tag-mission-critical-workload) for more details.
 
 ## Next steps
 
