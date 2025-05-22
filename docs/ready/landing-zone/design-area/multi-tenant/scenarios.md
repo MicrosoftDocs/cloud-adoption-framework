@@ -45,15 +45,15 @@ Another scenario is when organizations require [Azure Government (US Government)
 >
 > - [Azure Government Identity](/azure/azure-government/documentation-government-plan-identity#identity-scenarios-for-subscription-administration-in-azure-government)
 > - [Azure China Cross-border connectivity and interoperability](/azure/china/overview-connectivity-and-interoperability)
-> - [Microsoft Entra authentication & national/regional clouds](/azure/active-directory/develop/authentication-national-cloud)
+> - [Microsoft Entra authentication & national/regional clouds](/entra/identity-platform/authentication-national-cloud)
 
-Like in the previous scenarios, if your organization has a regulatory or country/region compliance framework to comply with, you might not require multiple Microsoft Entra tenants as the default approach. Most organizations can comply with the frameworks within a single Microsoft Entra tenant by using features, such as [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Administrative units](/azure/active-directory/roles/administrative-units).
+Like in the previous scenarios, if your organization has a regulatory or country/region compliance framework to comply with, you might not require multiple Microsoft Entra tenants as the default approach. Most organizations can comply with the frameworks within a single Microsoft Entra tenant by using features, such as [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) and [Administrative units](/entra/identity/role-based-access-control/administrative-units).
 
 ## Business unit or organizational isolation and autonomy requirements
 
 Some organizations might have complex internal structures across multiple business units, or they might require a high level of isolation and autonomy between parts of their organization.
 
-When this scenario occurs, and the tools and guidance in [Resource isolation in a single tenant](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant) can't provide the required level of isolation, you might have to deploy, manage, and operate multiple Microsoft Entra tenants.
+When this scenario occurs, and the tools and guidance in [Resource isolation in a single tenant](/entra/architecture/secure-single-tenant) can't provide the required level of isolation, you might have to deploy, manage, and operate multiple Microsoft Entra tenants.
 
 In scenarios like this, it’s more common that there are no centralized functions that are responsible for deploying, managing, and operating these multiple tenants. Instead, they're handed over in full to the separated business unit or part of the organization to run and manage. A centralized architecture, strategy, or CCoE style team might still provide guidance and recommendations on best practices that must be configured in the separate Microsoft Entra tenant.
 
@@ -62,7 +62,7 @@ In scenarios like this, it’s more common that there are no centralized functio
 > 
 > Some organizations have cloud infrastructure and development teams that use Azure. The organizations rely on an identity team that has control over the corporate Microsoft Entra tenant for service principal creation or group creation and management. If there isn’t an agreed RACI, there’s often a lack of process and understanding between the teams, which leads to friction between the teams and across the organization. Some organizations believe that multiple Microsoft Entra tenants is the only way to overcome this challenge.
 > 
-> But multiple Microsoft Entra tenants creates challenges for end users, increases complexity in securing, managing, and governing multiple tenants, and potentially increases licensing costs. Licenses, such as Microsoft Entra ID P1 or P2, don't span multiple Microsoft Entra tenants. Sometimes, [Microsoft Entra B2B](/azure/active-directory/external-identities/what-is-b2b) usage can alleviate licensing duplication for some features and services. If you plan to use Microsoft Entra B2B in your deployment, review each feature and service's licensing terms and supportability for Microsoft Entra B2B eligibility.
+> But multiple Microsoft Entra tenants creates challenges for end users, increases complexity in securing, managing, and governing multiple tenants, and potentially increases licensing costs. Licenses, such as Microsoft Entra ID P1 or P2, don't span multiple Microsoft Entra tenants. Sometimes, [Microsoft Entra B2B](/entra/external-id/what-is-b2b) usage can alleviate licensing duplication for some features and services. If you plan to use Microsoft Entra B2B in your deployment, review each feature and service's licensing terms and supportability for Microsoft Entra B2B eligibility.
 > 
 > Organizations in this situation should resolve the operational challenges to ensure that teams can work together in a single Microsoft Entra tenant rather than create multiple Microsoft Entra tenants as a workaround.
 

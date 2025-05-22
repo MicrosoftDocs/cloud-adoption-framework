@@ -60,7 +60,7 @@ The following architecture diagram highlights the security checks that run in th
 
 - [GitHub Actions](https://docs.github.com/actions/learn-github-actions) are custom workflows that provide CI/CD capabilities directly in repositories. Computers named runners host these CI/CD jobs.
 
-- [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis) is a multitenant, cloud-based identity service that controls access to Azure and other cloud applications like Microsoft 365 and GitHub.
+- [Microsoft Entra ID](/entra/fundamentals/whatis) is a multitenant, cloud-based identity service that controls access to Azure and other cloud applications like Microsoft 365 and GitHub.
 
 - [Azure App Service](https://azure.microsoft.com/services/app-service/) provides a framework for building, deploying, and scaling web apps. This platform offers built-in infrastructure maintenance, security patching, and scaling.
 

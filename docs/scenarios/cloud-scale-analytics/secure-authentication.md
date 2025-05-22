@@ -41,7 +41,7 @@ Azure Data Lake Storage, Azure SQL Database, Azure Synapse Analytics, and Azure 
 
 When a service accesses another service without human interaction, it must present a valid identity. This identity proves the service's authenticity and allows the service that it accesses to determine what actions are permitted.
 
-In service-to-service authentication scenarios, we recommend that you use managed identities for authenticating Azure services. Managed identities for Azure resources allow for authentication to any service that supports Microsoft Entra authentication without any explicit credentials. For more information, see [What are managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
+In service-to-service authentication scenarios, we recommend that you use managed identities for authenticating Azure services. Managed identities for Azure resources allow for authentication to any service that supports Microsoft Entra authentication without any explicit credentials. For more information, see [What are managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview).
 
 Managed identities are service principals that can only be used with Azure resources. For example, you can create a managed identity for an Azure Data Factory instance. Microsoft Entra ID registers this managed identity as an object that represents the Data Factory instance. You can then use this identity to authenticate to any service, such as Data Lake Storage, without any credentials in the code. Azure manages the credentials that the service instance uses. The identity can authenticate Azure service resources, such as a folder in Data Lake Storage. When you delete the Data Factory instance, Azure deletes the identity in Microsoft Entra ID.
 
@@ -60,7 +60,7 @@ These benefits mean that credentials are better protected and security compromis
 
 Another access scenario is when an application, such as a mobile or web application, accesses an Azure service. The application must present its identity, which must then be verified.
 
-An Azure service principal is the alternative option for applications and services that don't support managed identities to authenticate to Azure resources. A service principal is an identity that's created specifically for applications, hosted services, and automated tools to access Azure resources. The roles assigned to the service principal control its access. For security reasons, we recommend that you use service principals with automated tools or applications instead of allowing them to sign in with a user identity. For more information, see [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals).
+An Azure service principal is the alternative option for applications and services that don't support managed identities to authenticate to Azure resources. A service principal is an identity that's created specifically for applications, hosted services, and automated tools to access Azure resources. The roles assigned to the service principal control its access. For security reasons, we recommend that you use service principals with automated tools or applications instead of allowing them to sign in with a user identity. For more information, see [Application and service principal objects in Microsoft Entra ID](/entra/identity-platform/app-objects-and-service-principals).
 
 #### Differences between managed identities and service principals
 

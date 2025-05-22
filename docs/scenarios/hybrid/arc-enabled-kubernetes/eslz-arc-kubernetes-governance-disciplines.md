@@ -109,7 +109,7 @@ You should apply the same RBAC principle to the sensitive data that is sent to t
 
 Integrating with Microsoft Entra ID also lets you access advanced security capabilities, which you should use to configure:
 
-- [Conditional Access with Microsoft Entra ID](/azure/azure-arc/kubernetes/azure-rbac#use-conditional-access-with-azure-ad). You can find more information on Conditional Access can be found in the [Conditional Access overview](/azure/active-directory/conditional-access/overview).
+- [Conditional Access with Microsoft Entra ID](/azure/azure-arc/kubernetes/azure-rbac#use-conditional-access-with-azure-ad). You can find more information on Conditional Access can be found in the [Conditional Access overview](/entra/identity/conditional-access/overview).
 - [Just-In-Time (JIT)](/azure/azure-arc/kubernetes/azure-rbac#configure-just-in-time-cluster-access-with-azure-ad) access rules for tasks that need elevated permissions. Having standing access for some users to sensitive information or critical network configuration settings in Kubernetes creates a potential pathway to compromised accounts or internal threat activities. Privileged access management can help you protect your organization from breaches and helps you meet compliance best practices by limiting standing access to sensitive data or access to critical configuration settings.
 
 ### Secret and certificate management

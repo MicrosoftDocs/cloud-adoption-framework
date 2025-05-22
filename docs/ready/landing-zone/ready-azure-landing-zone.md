@@ -65,7 +65,7 @@ If you implement the [enterprise-scale architecture for small enterprises](https
 
 ### Microsoft Entra Connect
 
-Many organizations already have Microsoft Entra Connect to populate Microsoft 365 services, like Exchange Online. If your organization doesn't have Microsoft Entra Connect, you might need to [install it](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) and deploy it after your landing zone deployment so you can replicate identities.
+Many organizations already have Microsoft Entra Connect to populate Microsoft 365 services, like Exchange Online. If your organization doesn't have Microsoft Entra Connect, you might need to [install it](/entra/identity/hybrid/connect/how-to-connect-install-roadmap) and deploy it after your landing zone deployment so you can replicate identities.
 
 ## Enable hybrid DNS
 
