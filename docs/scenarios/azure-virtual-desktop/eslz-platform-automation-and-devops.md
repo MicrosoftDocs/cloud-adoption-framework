@@ -175,7 +175,7 @@ For more information, see the [Azure Compute Gallery service overview](/azure/vi
 
 - For universal applications installed in your gold image, use the Packer method described earlier in this article.
 - **App Attach** is the supported method for dynamically delivering applications to users in Azure Virtual Desktop. App Attach allows applications to be containerized or presented via a virtual disk and attached at user logon, reducing the size and complexity of the base image. This approach improves flexibility, simplifies updates, and supports modern DevOps practices.
-- You can use CI/CD pipelines to automate the packaging and delivery of applications used with App Attach. For packaging guidance, see the [CI/CD overview for application packaging](/windows/msix/desktop/cicd-overview).
+- Use CI/CD pipelines to automate the packaging and delivery of applications used with App Attach. For packaging guidance, see the [CI/CD overview for application packaging](/windows/msix/desktop/cicd-overview).
 
 ### Deploy languages in Azure Virtual Desktop images
 
