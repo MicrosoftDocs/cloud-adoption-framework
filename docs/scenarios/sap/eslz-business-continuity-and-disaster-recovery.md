@@ -172,6 +172,8 @@ For more information, see [SAP HANA database system with replication enabled](/a
 
 Azure Backup also supports SAP ASE (Sybase) database backups on Azure VMs, ensuring secure storage with [Immutability](/azure/backup/backup-azure-immutable-vault-concept?), [Soft Delete](/azure/backup/backup-azure-security-feature-cloud), [Multi-user Authorization](/azure/backup/multi-user-authorization-concept), and [CMK](/azure/backup/encryption-at-rest-with-cmk) in a managed vault. Data is isolated for protection, with 15-minute log backups enabling Point-In-Time recovery. Restore options include Alternate Location, Original Location, or as Files. Cost-effective policies optimize storage, while [Multi-SID](/azure/backup/sap-ase-backup-support-matrix#support-for-multiple-sap-ase-instances-on-a-single-host) and [Cross Subscription Restore](/azure/backup/sap-ase-database-about#cross-subscription-restore-for-sap-ase-sybase-database) enhance flexibility. Learn about [SAP ASE (Sybase) database backup](/azure/backup/sap-ase-database-about).
 
+Moreover, Azure Business Continuity Center enables [protection](/azure/backup/sap-ase-database-backup-tutorial), [monitoring](/azure/business-continuity-center/tutorial-monitor-operate), and [alert configuration](/azure/business-continuity-center/tutorial-monitor-alerts-metrics) for SAP ASE backups. Learn about [Azure Business Continuity Center](/azure/business-continuity-center/business-continuity-center-overview).
+
 ### Design recommendations for backup and restore
 
 - You can use Azure Backup to back up the SAP application server and central services VMs.
