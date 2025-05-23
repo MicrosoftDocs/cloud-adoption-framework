@@ -2,8 +2,8 @@
 title: Enforce cloud governance policies
 description: Learn to enforce cloud governance policies in Azure environments. Use automated and manual approaches to ensure compliance and maintain cloud governance.
 author: larzstridh
-ms.author: larzstridh
-ms.date: 04/05/2024
+ms.author: pnp
+ms.date: 05/22/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---

@@ -2,8 +2,8 @@
 title: Monitor cloud governance
 description: Learn to monitor cloud governance to measure compliance over time. Automate monitoring and alerting for rapid remediation of noncompliance.
 author: larzstridh
-ms.author: larzstridh
-ms.date: 04/05/2024
+ms.author: pnp
+ms.date: 05/22/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
