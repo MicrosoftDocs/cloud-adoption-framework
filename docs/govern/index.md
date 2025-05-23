@@ -1,8 +1,8 @@
 ---
 title: Govern overview
 description: Learn to establish, maintain, and automate cloud governance in Azure. Mitigate risks and streamline cloud use.
-author: stephen-sumner
-ms.author: ssumner
+author: larzstridh
+ms.author: larzstridh
 ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
