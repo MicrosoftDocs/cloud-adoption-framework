@@ -1,9 +1,9 @@
 ---
 title: Document cloud governance policies
 description: Learn to document effective cloud governance policies. Create a cloud governance framework to mitigate risks and define standards for cloud use.
-author: stephen-sumner
-ms.author: ssumner
-ms.date: 04/05/2024
+author: larzstridh
+ms.author: pnp
+ms.date: 05/22/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
