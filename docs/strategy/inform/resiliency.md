@@ -1,7 +1,7 @@
 ---
 title: Resiliency Considerations for Your Cloud Strategy
 description: Learn about the importance of resiliency and how to plan for the unexpected in your cloud adoption strategy.
-ms.author: tozimmergren
+ms.author: pnp
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 02/03/2025

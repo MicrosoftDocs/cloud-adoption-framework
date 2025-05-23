@@ -2,7 +2,7 @@
 title: Connectivity to Azure
 description: Examine key design considerations and recommendations surrounding network topologies for connecting on-premises to Azure.
 author: JefferyMitchell
-ms.author: jemitche
+ms.author: pnp
 ms.date: 10/28/2021
 ms.topic: conceptual
 ms.custom: think-tank

@@ -2,7 +2,7 @@
 title: Migrate workloads for modern application platforms
 description: Reduce cloud platform dependency and potentially reduce infrastructure footprint by migrating multiple web applications to a container solution
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 10/23/2023
 ms.topic: conceptual
 ms.custom: e2e-aks, UpdateFrequency2

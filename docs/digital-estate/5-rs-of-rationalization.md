@@ -2,7 +2,7 @@
 title: Cloud rationalization
 description: Learn about cloud rationalization, which is the process of evaluating assets to determine the best way to migrate or modernize each asset in the cloud.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 03/01/2023
 ms.topic: conceptual
 ms.custom: internal

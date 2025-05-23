@@ -2,7 +2,7 @@
 title: Review your environment for Azure landing zones for cloud-scale analytics
 description: Learn about how cloud-scale analytics affects your Azure landing zone design.
 author: mboswell
-ms.author: mboswell
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

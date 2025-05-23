@@ -2,7 +2,7 @@
 title: Platform automation and DevOps design area
 description: Learn how platform automation and DevOps evaluate opportunities to modernize your approach to environmental deployment with infrastructure as code options.
 author: alguadam
-ms.author: alguadam
+ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5

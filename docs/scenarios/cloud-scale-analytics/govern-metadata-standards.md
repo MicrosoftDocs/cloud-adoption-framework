@@ -2,7 +2,7 @@
 title: Metadata standards
 description: Learn about metadata standards
 author: PietheinStrengholt
-ms.author: pstrengholt
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

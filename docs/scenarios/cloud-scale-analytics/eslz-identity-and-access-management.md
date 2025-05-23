@@ -2,7 +2,7 @@
 title: Identity and Access Management for Cloud-Scale Analytics
 description: Learn how this scenario can improve identity and access management for cloud-scale analytics in Azure.
 author: mboswell
-ms.author: mboswell
+ms.author: pnp
 ms.date: 01/29/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

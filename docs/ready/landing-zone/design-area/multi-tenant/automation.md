@@ -2,7 +2,7 @@
 title: Automate Azure landing zones across multiple tenants
 description: Learn about the automation considerations and recommendations when handling multiple Microsoft Entra tenants alongside Azure landing zones.
 author: jtracey93
-ms.author: jatracey
+ms.author: pnp
 ms.date: 01/07/2025
 ms.topic: conceptual
 ms.custom: think-tank

@@ -2,7 +2,7 @@
 title: Align roles and responsibilities
 description: Align roles and responsibilities to ensure clarity and coverage of essential functions when migrating to Azure.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.collection: 

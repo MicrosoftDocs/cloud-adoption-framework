@@ -2,7 +2,7 @@
 title: Manage modern application platform solutions
 description: Learn how to manage modern application platform clusters.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

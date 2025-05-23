@@ -2,7 +2,7 @@
 title: Enterprise-scale support for Azure Virtual Desktop
 description: Learn how enterprise-scale support for the Azure Virtual Desktop construction set can accelerate your adoption of Azure Virtual Desktop.
 author: wahidsaleemi
-ms.author: tozimmergren
+ms.author: pnp
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual

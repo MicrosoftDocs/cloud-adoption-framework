@@ -2,7 +2,7 @@
 title: Improve landing zone governance
 description: Improve landing zone governance. To improve landing zone governance, discover a list of landing zone best practices and examples.
 author: asudbring
-ms.author: allensu
+ms.author: pnp
 ms.date: 06/29/2022
 ms.topic: conceptual
 ms.custom: internal

@@ -2,7 +2,7 @@
 title: Networking for the Azure Container Apps - Landing Zone Accelerator
 description: Learn about network considerations Azure Container Apps.
 author: craigshoemaker
-ms.author: cshoe
+ms.author: pnp
 ms.date: 10/06/2023
 ms.topic: conceptual
 ---

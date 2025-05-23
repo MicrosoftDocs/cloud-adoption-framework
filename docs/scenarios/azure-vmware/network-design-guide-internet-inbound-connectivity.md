@@ -2,7 +2,7 @@
 title: 'Azure VMware Solution network design guide: Inbound internet connectivity'
 description: Learn how to design inbound internet connectivity for Azure VMware Solution. This article is part of the Azure VMware Solution network design guide.
 author: fguerri
-ms.author: fguerri
+ms.author: pnp
 ms.date: 09/20/2023
 ms.topic: conceptual
 ms.service: caf

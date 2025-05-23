@@ -2,7 +2,7 @@
 title: Complete the migration to Azure
 description: Use the Cloud Adoption Framework for Azure to understand the common tasks and standard prerequisites for promoting a migrated resource to production.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.collection: 

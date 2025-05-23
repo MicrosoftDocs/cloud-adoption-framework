@@ -2,7 +2,7 @@
 title: Select Azure regions
 description: Learn about cloud platform regions. Understand factors like availability zones, paired regions, and data residency that affect region selection in Azure.
 author: johndowns
-ms.author: jodowns
+ms.author: pnp
 ms.date: 10/23/2023
 ms.topic: conceptual
 ---

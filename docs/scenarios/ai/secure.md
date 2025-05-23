@@ -1,7 +1,7 @@
 ---
 title: Secure AI – Process to secure AI
 description: Learn the process to secure AI with best practices and recommendations.
-ms.author: ssumner
+ms.author: pnp
 author: stephen-sumner
 ms.date: 04/09/2025
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Scenario-specific enterprise-scale landing zones in Azure
 description: Find technology-specific Azure enterprise-scale landing zone scenarios.
 author: mosabami
-ms.author: aayodeji
+ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: think-tank

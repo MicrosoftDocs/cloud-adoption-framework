@@ -2,7 +2,7 @@
 title: Manage identity and access for Oracle on Azure Virtual Machines landing zone
 description: Learn how to manage identity and access for Oracle on Azure Virtual Machines landing zone.
 author: jjaygbay1
-ms.author: jacobjaygbay
+ms.author: pnp
 ms.reviewer: ramakoni
 ms.date: 08/31/2023
 ms.topic: conceptual

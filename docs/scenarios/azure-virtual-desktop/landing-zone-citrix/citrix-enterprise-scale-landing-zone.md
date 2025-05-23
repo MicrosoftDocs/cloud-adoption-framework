@@ -2,7 +2,7 @@
 title: Enterprise-scale support for Citrix on Azure
 description: Learn about a reference implementation of a Citrix Cloud and Azure landing zone accelerator environment.
 author: BenMartinBaur
-ms.author: wasaleem
+ms.author: pnp
 ms.date: 02/08/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd

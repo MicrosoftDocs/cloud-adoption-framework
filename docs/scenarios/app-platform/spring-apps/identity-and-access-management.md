@@ -2,7 +2,7 @@
 title: Identity and access management for the Azure Spring Apps landing zone accelerator
 description: Learn how to ensure that the deployed Azure Spring app and the related resources of the workload are secure and only accessible by authorized users.
 author: pagewriter-msft
-ms.author: prwilk
+ms.author: pnp
 ms.date: 03/01/2023
 ms.topic: conceptual
 ---

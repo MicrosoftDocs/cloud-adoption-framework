@@ -2,7 +2,7 @@
 title: Replicate assets in a cloud migration
 description: Learn about the role of replication in the migration process and how to plan for the prerequisites and risks of replication activities.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/05/2024
 ms.topic: conceptual
 ms.collection: 

@@ -2,7 +2,7 @@
 title: Well-architected considerations for AI workloads on Azure infrastructure (IaaS)
 description: Learn how to design AI workloads on Azure infrastructure (IaaS).
 author: stephen-sumner
-ms.author: rajanaki
+ms.author: pnp
 ms.date: 03/11/2025
 ms.topic: conceptual
 ---

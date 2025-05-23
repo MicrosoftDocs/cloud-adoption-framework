@@ -2,7 +2,7 @@
 title: Business Continuity and Disaster Recovery for Oracle Database@Azure Using Exadata Database Service
 description: Learn about business continuity and disaster recovery (BCDR) for Oracle Database@Azure and how to build a resilient architecture for your workload environment.
 author: gkayali
-ms.author: guherk
+ms.author: pnp
 ms.date: 01/25/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle

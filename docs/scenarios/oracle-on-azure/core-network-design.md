@@ -2,7 +2,7 @@
 title: Network Topology and Connectivity for Oracle Database@Azure - Core Network Design
 description: Learn about Oracle Database@Azure core network concepts, key design considerations, and effective implementation practices for seamless integration.
 author: moisesjgomez
-ms.author: mgomezcortez
+ms.author: pnp
 ms.date: 02/08/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle

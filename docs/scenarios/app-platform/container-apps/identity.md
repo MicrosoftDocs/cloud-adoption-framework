@@ -2,7 +2,7 @@
 title: Identity management in Azure Container Apps - Landing Zone Accelerator
 description: Manage user identity in Azure Container Apps
 author: craigshoemaker
-ms.author: cshoe
+ms.author: pnp
 ms.date: 11/01/2023
 ms.topic: conceptual
 ---

@@ -2,7 +2,7 @@
 title: The ingest process with cloud-scale analytics in Azure
 description: Understand the ingest process with cloud-scale analytics in Azure.
 author: mboswell
-ms.author: mboswell
+ms.author: pnp
 ms.date: 12/03/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

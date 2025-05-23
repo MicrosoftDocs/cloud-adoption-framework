@@ -2,7 +2,7 @@
 title: Network Topology and Connectivity for Oracle Database@Azure - Migration Connectivity Design
 description: Learn about key migration connectivity design considerations and detailed recommendations for Oracle Database@Azure, including best practices.
 author: moisesjgomez
-ms.author: mgomezcortez
+ms.author: pnp
 ms.date: 02/08/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle

@@ -2,7 +2,7 @@
 title: Oracle on Azure IaaS landing zone accelerator
 description: Learn how to use the Oracle on Azure landing zone accelerator to automate the deployment of environments that can host Oracle on Azure virtual machines.
 author: jfaurskov
-ms.author: janfaurs
+ms.author: pnp
 ms.date: 08/02/2024
 ms.topic: conceptual
 ms.custom: e2e-oracle

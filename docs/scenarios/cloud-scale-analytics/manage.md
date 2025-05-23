@@ -2,7 +2,7 @@
 title: DevOps automation for cloud-scale analytics in Azure
 description: Learn about DevOps automation for cloud-scale analytics in Azure.
 author: abdale
-ms.author: hamoodaleem
+ms.author: pnp
 ms.date: 02/17/2022
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

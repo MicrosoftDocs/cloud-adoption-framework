@@ -2,7 +2,7 @@
 title: Migration release checklist
 description: Use the Cloud Adoption Framework for Azure to prepare your migrated workload and assets to be promoted to production.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.collection: 

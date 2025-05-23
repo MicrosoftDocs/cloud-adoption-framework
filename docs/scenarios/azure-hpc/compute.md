@@ -2,7 +2,7 @@
 title: Compute Large-Scale HPC Application Workloads in Azure Virtual Machines
 description: Learn about the ideal Azure VM instances for large-scale HPC application workloads, use cases, reference architecture, and design considerations and recommendations.
 author: Rajani-Janaki-Ram
-ms.author: rajanaki
+ms.author: pnp
 ms.topic: conceptual
 ms.custom: think-tank
 ms.date: 11/14/2024

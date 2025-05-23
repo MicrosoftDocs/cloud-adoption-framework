@@ -2,7 +2,7 @@
 title: Environments
 description: Design area guidance for multistage environments.
 author: elbatane
-ms.author: elbatane
+ms.author: pnp
 ms.date: 06/17/2022
 ms.topic: conceptual
 ms.custom: internal

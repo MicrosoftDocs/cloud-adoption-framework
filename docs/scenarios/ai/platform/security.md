@@ -2,7 +2,7 @@
 title: Security recommendations for AI workloads on Azure
 description: Learn how to secure AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/30/2025
 ms.topic: conceptual
 ---

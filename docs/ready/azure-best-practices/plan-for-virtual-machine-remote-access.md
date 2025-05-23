@@ -2,7 +2,7 @@
 title: Use Azure Bastion for Virtual Machine Remote Access
 description: Learn about design and planning considerations for using Azure Bastion to enable secure remote access to virtual machines in Azure.
 author: sitarant
-ms.author: sitarant
+ms.author: pnp
 ms.date: 01/10/2025
 ms.topic: conceptual
 ms.custom: think-tank

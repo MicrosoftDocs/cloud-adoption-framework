@@ -2,7 +2,7 @@
 title: 'Azure VMware Solution network design guide: Connectivity with on-premises sites'
 description: Learn how to design Azure VMware Solution network connectivity with on-premises sites. Considerations include throughput and latency.
 author: fguerri
-ms.author: fguerri
+ms.author: pnp
 ms.date: 09/20/2023
 ms.topic: conceptual
 ms.service: caf

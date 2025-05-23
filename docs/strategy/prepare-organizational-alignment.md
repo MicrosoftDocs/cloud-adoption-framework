@@ -1,7 +1,7 @@
 ---
 title: Prepare for organizational alignment
 description: Learn how to prepare your organization for cloud adoption by aligning leadership, strategies, and operating models.
-ms.author: tozimmergren
+ms.author: pnp
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 02/03/2025

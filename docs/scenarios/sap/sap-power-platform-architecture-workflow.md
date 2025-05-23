@@ -2,7 +2,7 @@
 title: SAP and Power Platform Architecture Workflow
 description: View an architecture workflow for integrations of SAP and Microsoft Power Platform and learn about security considerations.
 author: mimergel
-ms.author: mimergel
+ms.author: pnp
 ms.date: 10/30/2024
 ms.topic: conceptual
 ms.custom: e2e-sap

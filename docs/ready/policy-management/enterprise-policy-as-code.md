@@ -2,7 +2,7 @@
 title: Advanced Azure Policy management
 description: Learn how to manage Azure Policy at scale by using the Enterprise Policy as Code (EPAC) open-source project and integrating IaC into your environment.
 author: anwather
-ms.author: anwather
+ms.author: pnp
 ms.date: 01/04/2023
 ms.topic: conceptual
 ms.custom: internal

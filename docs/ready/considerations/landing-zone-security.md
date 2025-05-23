@@ -2,7 +2,7 @@
 title: Improve landing zone security
 description: Improve landing zone security.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 06/21/2022
 ms.topic: conceptual
 ms.custom: internal

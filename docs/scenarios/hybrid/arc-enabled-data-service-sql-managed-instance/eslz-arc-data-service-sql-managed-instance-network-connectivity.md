@@ -2,7 +2,7 @@
 title: Network connectivity for Azure Arc-enabled SQL Managed Instance
 description: Understand the design considerations and recommendations for network connectivity in Azure Arc-enabled SQL Managed Instance
 author: welasco
-ms.author: vsantana
+ms.author: pnp
 ms.date: 09/26/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

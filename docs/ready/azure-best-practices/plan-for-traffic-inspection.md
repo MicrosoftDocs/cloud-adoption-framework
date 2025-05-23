@@ -2,7 +2,7 @@
 title: Plan for traffic inspection
 description: Capturing and analyzing network traffic in Azure.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 07/31/2024
 ms.topic: conceptual
 ms.custom: think-tank

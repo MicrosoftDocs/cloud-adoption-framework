@@ -2,7 +2,7 @@
 title: Prepare for connectivity for Azure VMware Solution
 description: Learn about architectures, solutions, and guides that can help you explore the various networking capabilities for Azure VMware Solution
 author: sblair01
-ms.author: sablair
+ms.author: pnp
 ms.date: 05/31/2023
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank

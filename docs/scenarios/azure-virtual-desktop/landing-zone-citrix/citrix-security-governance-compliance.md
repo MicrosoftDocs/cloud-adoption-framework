@@ -2,7 +2,7 @@
 title: Security governance and compliance for Citrix on Azure
 description: Learn about key design considerations and recommendations for security governance and compliance in Citrix on Azure infrastructure.
 author: BenMartinBaur
-ms.author: bebaur
+ms.author: pnp
 ms.date: 09/17/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd

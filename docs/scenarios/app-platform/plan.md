@@ -2,7 +2,7 @@
 title: Plan for modern application platforms
 description: Develop a plan for cloud adoption with a focus on modern application platform data points and activities.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

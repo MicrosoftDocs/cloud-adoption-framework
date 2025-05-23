@@ -2,7 +2,7 @@
 title: Manage budgets, costs, and quota for Azure Machine Learning at organizational scale
 description: Best practices in optimizing costs, managing budgets, and sharing quota with Azure Machine Learning.
 author: emychy
-ms.author: deeikele
+ms.author: pnp
 ms.date: 05/24/2021
 ms.topic: conceptual
 ms.custom: internal

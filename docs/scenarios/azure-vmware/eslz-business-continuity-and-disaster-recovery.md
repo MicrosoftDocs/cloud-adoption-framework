@@ -2,7 +2,7 @@
 title: Enterprise-scale BCDR for Azure VMware Solution
 description: Use this enterprise-scale scenario to improve business continuity and disaster recovery (BCDR) for Azure VMware Solution.
 author: sonmitt
-ms.author: soniyamittal
+ms.author: pnp
 ms.date: 10/18/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware

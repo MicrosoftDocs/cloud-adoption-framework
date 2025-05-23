@@ -2,7 +2,7 @@
 title: Abbreviation recommendations for Azure resources
 description: Abbreviation recommendations for Azure resources
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 05/23/2025
 ms.reviewer: ssumner
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Azure Machine Learning as a data product for cloud-scale analytics
 description: Learn about Azure Machine Learning as a data product for cloud-scale analytics.
 author: abdale
-ms.author: deeikele
+ms.author: pnp
 ms.date: 12/15/2021
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

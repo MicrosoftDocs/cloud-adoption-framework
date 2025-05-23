@@ -2,7 +2,7 @@
 title: Identity and access management considerations for AKS
 description: This article provides design considerations and recommendations for identity and access management when you use Azure Kubernetes Service.
 author: xuhongl
-ms.author: xuhliu
+ms.author: pnp
 ms.date: 11/21/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

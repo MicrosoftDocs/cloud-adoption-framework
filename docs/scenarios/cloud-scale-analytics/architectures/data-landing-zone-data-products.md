@@ -2,7 +2,7 @@
 title: Cloud-scale analytics data products in Azure
 description: Learn about cloud-scale analytics data products in Azure.
 author: sasever
-ms.author: sasever
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management

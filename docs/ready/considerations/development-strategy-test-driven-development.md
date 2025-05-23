@@ -2,7 +2,7 @@
 title: Test-driven development for Azure Landing Zones
 description: Test-driven development for Azure Landing Zones.
 author: elbatane
-ms.author: elbatane
+ms.author: pnp
 ms.date: 06/28/2022
 ms.topic: conceptual
 ms.custom: internal

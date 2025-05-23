@@ -2,7 +2,7 @@
 title: Cloud adoption plan antipatterns
 description: Learn how to avoid ineffective cloud adoption solutions by avoiding common antipatterns.
 author: mahia127
-ms.author: matheile
+ms.author: pnp
 ms.date: 08/29/2022
 ms.topic: conceptual
 ms.subservice: caf-methodology-plan

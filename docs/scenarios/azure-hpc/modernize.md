@@ -2,7 +2,7 @@
 title: Modernize for Azure high-performance computing (HPC) adoption
 description: This is HPC scenario's impact on cloud adoption strategy.
 author: Rajani-Janaki-Ram
-ms.author: rajanaki
+ms.author: pnp
 ms.date: 10/03/2022
 ms.topic: conceptual
 ms.custom: think-tank

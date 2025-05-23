@@ -2,7 +2,7 @@
 title: Protect your Azure cloud estate
 description: Learn how to ensure the reliability and security your Azure cloud estate as part of your cloud operations.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2

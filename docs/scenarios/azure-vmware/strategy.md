@@ -2,7 +2,7 @@
 title: Strategy for Azure VMware Solution adoption
 description: Learn about technical considerations of Azure VMware Solution that might affect your strategy.
 author: mhenry
-ms.author: jaalmond
+ms.author: pnp
 ms.date: 04/21/2022
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank

@@ -2,7 +2,7 @@
 title: Azure cloud management checklist
 description: Understand Microsoft's four-step iterative RAMP process for effectively managing your Azure cloud environment and establishing reliable cloud operations
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ---

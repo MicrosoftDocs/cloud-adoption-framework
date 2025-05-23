@@ -2,7 +2,7 @@
 title: Ready methodology for hybrid and multicloud strategy
 description: Learn how to prepare your environment for a hybrid and multicloud scenario with Azure landing zones.
 author: likamrat
-ms.author: likamrat
+ms.author: pnp
 ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

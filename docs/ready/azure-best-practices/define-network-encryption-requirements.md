@@ -2,7 +2,7 @@
 title: Define network encryption requirements
 description: Examine key design considerations and recommendations surrounding network encryption between on-premises and Azure.
 author: JefferyMitchell
-ms.author: jemitche
+ms.author: pnp
 ms.date: 07/31/2024
 ms.topic: conceptual
 ms.custom: think-tank

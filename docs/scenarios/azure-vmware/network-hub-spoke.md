@@ -2,7 +2,7 @@
 title: Manage traffic natively from Azure VMware Solution
 description: Direct egress and ingress traffic from Azure VMware Solution
 author: sblair01
-ms.author: sablair
+ms.author: pnp
 ms.date: 11/25/2024
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank

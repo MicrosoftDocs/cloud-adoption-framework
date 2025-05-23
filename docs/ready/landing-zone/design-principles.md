@@ -2,7 +2,7 @@
 title: Azure landing zone design principles
 description: Learn about the design principles that influence the design areas for enterprise-scale landing zone implementations.
 author: jtracey93
-ms.author: jatracey
+ms.author: pnp
 ms.date: 09/27/2024
 ms.topic: conceptual
 ms.custom: think-tank

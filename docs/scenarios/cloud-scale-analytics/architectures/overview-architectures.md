@@ -2,7 +2,7 @@
 title: Architectures overview
 description: Learn about cloud-scale analytics architectures in Azure.
 author: mboswell
-ms.author: mboswell
+ms.author: pnp
 ms.date: 03/24/2022
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

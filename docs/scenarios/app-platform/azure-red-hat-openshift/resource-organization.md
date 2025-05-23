@@ -2,7 +2,7 @@
 title: Resource organization considerations for Azure Red Hat OpenShift
 description: Review guidelines for resource organization in Azure Red Hat OpenShift
 author: rotorr
-ms.author: rolandotorio
+ms.author: pnp
 ms.date: 08/19/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-ARO, linux-related-content

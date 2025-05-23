@@ -2,7 +2,7 @@
 title: AI Strategy - Process to develop an AI strategy
 description: Learn the process to develop a strategy for AI adoption with best practices and recommendations.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ---

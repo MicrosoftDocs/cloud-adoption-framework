@@ -2,7 +2,7 @@
 title: Plan for Oracle on Azure adoption
 description: Learn how to create a cloud adoption workload migration plan for Oracle on Azure.
 author: jfaurskov
-ms.author: janfaurs
+ms.author: pnp
 ms.date: 04/26/2024
 ms.topic: conceptual
 ms.custom: e2e-oracle

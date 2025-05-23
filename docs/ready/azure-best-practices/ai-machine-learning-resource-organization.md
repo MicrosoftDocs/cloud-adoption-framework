@@ -2,7 +2,7 @@
 title: Organize and set up Azure Machine Learning environments
 description: Learn about the considerations and decision points that affect how you plan for and create an Azure Machine Learning workspace.
 author: denniseik
-ms.author: deeikele
+ms.author: pnp
 ms.date: 08/29/2022
 ms.topic: conceptual
 ms.custom: think-tank

@@ -2,7 +2,7 @@
 title: Incorporate Zero Trust practices in your landing zone
 description: Learn how to incorporate Zero Trust-specific deployment objectives in your landing zone design areas, including specific guidance for each design area.
 author: brsteph
-ms.author: bstephenson
+ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual
 ---

@@ -2,7 +2,7 @@
 title: Data application reference patterns
 description: Learn about Data application reference patterns for cloud-scale analytics
 author: mboswell
-ms.author: mboswell
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

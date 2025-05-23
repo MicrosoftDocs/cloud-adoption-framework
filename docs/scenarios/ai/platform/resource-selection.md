@@ -2,7 +2,7 @@
 title: Resource selection recommendations for AI workloads on Azure
 description: Organizations learn to select the right resources for Azure AI workloads with recommendations and best practices.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 03/27/2025
 ms.topic: conceptual
 ---

@@ -2,7 +2,7 @@
 title: Frequently asked questions about cloud-scale analytics
 description: Explore frequently asked questions about cloud-scale analytics.
 author: abdale
-ms.author: hamoodaleem
+ms.author: pnp
 ms.date: 02/28/2022
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

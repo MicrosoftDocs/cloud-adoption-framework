@@ -2,7 +2,7 @@
 title: Manage and Monitor Oracle Workloads on Azure Virtual Machines Landing Zone Accelerator
 description: Learn how to manage and monitor Oracle workloads on Azure Virtual Machines by using the landing zone accelerator. Optimize the health and performance of your deployments.
 author: jjaygbay1
-ms.author: jacobjaygbay
+ms.author: pnp
 ms.reviewer: ramakoni
 ms.date: 02/14/2025
 ms.topic: conceptual

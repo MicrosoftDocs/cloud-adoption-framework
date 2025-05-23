@@ -2,7 +2,7 @@
 title: Machine learning enterprise security
 description: This article provides best practices when planning or managing a secure Azure Machine Learning deployment.
 author: jhirono
-ms.author: jhirono
+ms.author: pnp
 ms.date: 08/29/2023
 ms.topic: conceptual
 ms.custom: internal

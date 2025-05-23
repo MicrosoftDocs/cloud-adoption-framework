@@ -2,7 +2,7 @@
 title: Network Topology and Connectivity for Oracle Database@Azure - Getting Started
 description: Learn about key design considerations and recommendations for Oracle Database@Azure network topology and connectivity for your landing zone.
 author: moisesjgomez
-ms.author: mgomezcortez
+ms.author: pnp
 ms.date: 02/08/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle

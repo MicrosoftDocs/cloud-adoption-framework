@@ -2,7 +2,7 @@
 title: Data agnostic ingestion engine
 description: Learn how automated ingestion frameworks support cloud-scale analytics in Azure.
 author: dmarz
-ms.author: damarzol
+ms.author: pnp
 ms.date: 12/03/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

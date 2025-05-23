@@ -2,7 +2,7 @@
 title: Cost governance for Azure Arc-enabled SQL Managed Instance
 description: Learn design considerations and recommendations on cost governance for Azure Arc-enabled SQL Managed Instance.
 author: mrhoads
-ms.author: mirhoads
+ms.author: pnp
 ms.date: 09/22/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

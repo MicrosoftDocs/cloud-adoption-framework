@@ -2,7 +2,7 @@
 title: Adopt policy-driven guardrails
 description: Understand how to adopt policy-driven guardrails in the Azure landing zone.
 author: jtracey93
-ms.author: jatracey
+ms.author: pnp
 ms.date: 12/16/2024
 ms.topic: conceptual
 ms.custom: think-tank

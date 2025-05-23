@@ -2,7 +2,7 @@
 title: Provision cloud-scale analytics platform
 description: Learn how to provision cloud-scale analytics by deploying landing zones and DevOps services.
 author: abdale
-ms.author: hamoodaleem
+ms.author: pnp
 ms.date: 07/15/2021
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

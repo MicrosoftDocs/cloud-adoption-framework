@@ -2,7 +2,7 @@
 title: Requirements for governing data
 description: Learn about requirements for governing data
 author: mboswell
-ms.author: mboswell
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

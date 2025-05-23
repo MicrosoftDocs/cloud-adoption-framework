@@ -2,7 +2,7 @@
 title: Identity and access management for Azure Virtual Desktop
 description: Learn how to use Azure role-based access control for identity and access management in your virtual desktop infrastructure.
 author: wahidsaleemi
-ms.author: wasaleem
+ms.author: pnp
 ms.date: 02/22/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd

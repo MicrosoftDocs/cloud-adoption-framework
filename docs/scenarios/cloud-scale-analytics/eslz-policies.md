@@ -2,7 +2,7 @@
 title: Policies in cloud-scale analytics
 description: Learn about Azure policies in cloud-scale analytics. Azure policies help your organization govern resources as needed.
 author: abdale
-ms.author: hamoodaleem
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

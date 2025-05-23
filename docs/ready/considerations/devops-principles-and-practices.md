@@ -2,7 +2,7 @@
 title: DevOps considerations
 description: Design area guidance for DevOps considerations in Azure Landing Zones.
 author: alguadam
-ms.author: alguadam
+ms.author: pnp
 ms.date: 06/24/2022
 ms.topic: conceptual
 ms.custom: internal

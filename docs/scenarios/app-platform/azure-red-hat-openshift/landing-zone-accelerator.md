@@ -2,7 +2,7 @@
 title: Azure Red Hat OpenShift landing zone accelerator
 description: Learn how to deploy Azure Red Hat OpenShift landing zone accelerator.
 author: UmarMohamedUsman
-ms.author: umarm
+ms.author: pnp
 ms.date: 08/17/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-ARO, linux-related-content

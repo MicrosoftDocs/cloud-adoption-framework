@@ -2,7 +2,7 @@
 title: Landing zone regions
 description: Overview of how Azure landing zones use regions and how to add or move regions.
 author: johndowns
-ms.author: jodowns
+ms.author: pnp
 ms.date: 05/21/2024
 ms.topic: conceptual
 ms.custom: internal

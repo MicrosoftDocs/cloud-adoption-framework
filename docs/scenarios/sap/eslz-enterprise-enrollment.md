@@ -2,7 +2,7 @@
 title: Enterprise enrollment considerations for SAP
 description: SAP guidelines for enterprise enrollment
 author: PmeshramPM
-ms.author: pameshra
+ms.author: pnp
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap

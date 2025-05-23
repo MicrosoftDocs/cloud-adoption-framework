@@ -2,7 +2,7 @@
 title: Identity and access management considerations for Red Hat Enterprise Linux on Azure
 author: hannah-leland
 description: Learn about key design considerations and recommendations for identity and access in Red Hat Enterprise Linux on Azure infrastructure.
-ms.author: temandin
+ms.author: pnp
 ms.date: 7/24/2024
 ms.topic: conceptual
 ---

@@ -2,7 +2,7 @@
 title: Identity and access management for Azure Arc-enabled Kubernetes
 description: Learn how to implement identity and access management for Azure Arc-enabled Kubernetes.
 author: chintalavr
-ms.author: vchintala
+ms.author: pnp
 ms.date: 04/27/2021
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

@@ -2,7 +2,7 @@
 title: Use a Dual-Region Azure VMware Solution Design That Doesn't Have Global Reach
 description: Learn how to configure network connectivity when you deploy Azure VMware Solution private clouds in two Azure regions with secure Virtual WAN without Global Reach.
 author: jasonmedina
-ms.author: jasonmedina
+ms.author: pnp
 ms.date: 10/16/2024
 ms.topic: conceptual
 ms.service: caf

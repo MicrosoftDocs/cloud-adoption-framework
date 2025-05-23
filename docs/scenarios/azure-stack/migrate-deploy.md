@@ -2,7 +2,7 @@
 title: Deploy workloads to Azure Stack Hub
 description: Learn to deploy workloads in your datacenter using Azure Stack Hub.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/19/2020
 ms.topic: conceptual
 ms.custom: internal

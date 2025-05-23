@@ -2,7 +2,7 @@
 title: Resource Organization for Oracle Database@Azure
 description: Learn about design considerations and recommendations for how to organize resources and optimize deployments in Oracle Database@Azure.
 author: sihbher
-ms.author: gereyeso
+ms.author: pnp
 ms.reviewer: gereyeso
 ms.date: 02/08/2025
 ms.topic: conceptual

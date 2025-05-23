@@ -2,7 +2,7 @@
 title: Data Privacy for Cloud-Scale Analytics in Azure
 description: Learn about how to use cloud-scale analytics to determine the optimal data-access patterns that suit your requirements while safeguarding personal data at multiple levels.
 author: mboswell
-ms.author: mboswell
+ms.author: pnp
 ms.date: 1/6/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

@@ -2,7 +2,7 @@
 title: Security considerations for the Azure Integration Services landing zone accelerator
 description: Learn about design considerations and recommendations for security in the Azure Integration Services landing zone accelerator.
 author: claytonsiemens77
-ms.author: csiemens
+ms.author: pnp
 ms.date: 03/15/2023
 ms.topic: conceptual
 ---

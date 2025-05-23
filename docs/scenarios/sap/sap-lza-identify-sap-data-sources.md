@@ -2,7 +2,7 @@
 title: Identify SAP data sources
 description: Learn how to identify SAP applications and connectors to integrate SAP data with Azure data services.
 author: PmeshramPM
-ms.author: pameshra
+ms.author: pnp
 ms.date: 01/16/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
