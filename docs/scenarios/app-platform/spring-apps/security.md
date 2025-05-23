@@ -106,19 +106,19 @@ These Microsoft Entra features are recommended:
 
 - **Application identities**. The application might need to access other Azure services. For example, if it wants to retrieve secrets from Azure Key Vault.
 
-  Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) with Azure Spring Apps so the application can authenticate itself to other services by using Microsoft Entra ID. Avoid using service principals for this purpose. The managed identities authentication process doesn't use credentials that are hardcoded in source code or configuration files.
+  Use [managed identities](/entra/identity/managed-identities-azure-resources/overview) with Azure Spring Apps so the application can authenticate itself to other services by using Microsoft Entra ID. Avoid using service principals for this purpose. The managed identities authentication process doesn't use credentials that are hardcoded in source code or configuration files.
 
-  If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Microsoft Entra ID to create a [service principal](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) with restricted permissions at the resource level.
+  If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Microsoft Entra ID to create a [service principal](/entra/identity-platform/howto-authenticate-service-principal-powershell) with restricted permissions at the resource level.
 
   In both cases, Key Vault can be used with Azure-managed identities. A runtime component, such as an Azure function, can be used to retrieve the secrets from Key Vault. For more information, see [Authentication in Azure Key Vault](/azure/key-vault/general/authentication).
 
-- **Microsoft Entra single sign-on (SSO)**. [Microsoft Entra SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended to authenticate access to the application from other applications or devices that run in the cloud or on-premises. SSO provides identity management to internal and external users, such as partners or vendors.
+- **Microsoft Entra single sign-on (SSO)**. [Microsoft Entra SSO](/entra/identity/enterprise-apps/what-is-single-sign-on) is recommended to authenticate access to the application from other applications or devices that run in the cloud or on-premises. SSO provides identity management to internal and external users, such as partners or vendors.
 
-- **Strong authentication controls**. Microsoft Entra ID supports strong authentication controls through multifactor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius if there's a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Microsoft Entra ID](/azure/active-directory/authentication/concept-authentication-passwordless).
+- **Strong authentication controls**. Microsoft Entra ID supports strong authentication controls through multifactor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius if there's a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA](/entra/identity/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless).
 
-- **Conditional Access to resources**. Azure Spring Apps supports [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions to include user sign-ins from certain IP ranges that need to sign in by using MFA. These [Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Microsoft Entra ID to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources.
+- **Conditional Access to resources**. Azure Spring Apps supports [Microsoft Entra Conditional Access](/entra/identity/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions to include user sign-ins from certain IP ranges that need to sign in by using MFA. These [Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Microsoft Entra ID to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources.
 
-- **Privileged access**. Implement [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
+- **Privileged access**. Implement [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
 
 #### Data controls
 
@@ -152,8 +152,8 @@ Azure Spring Apps is integrated with Microsoft Entra ID, which can track sign-in
 
 For more information, see:
 
-- [Audit activity reports in Microsoft Entra ID](/azure/active-directory/reports-monitoring/concept-audit-logs)
-- [View Microsoft Entra risky sign-ins](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk)
+- [Audit activity reports in Microsoft Entra ID](/entra/identity/monitoring-health/concept-audit-logs)
+- [View Microsoft Entra risky sign-ins](/entra/id-protection/howto-identity-protection-investigate-risk)
 - [Monitor users' identity and access activity in Microsoft Defender for Cloud](/azure/security-center/security-center-identity-access)
 - [Alerts in Microsoft Defender for Cloud's threat intelligence protection module](/azure/security-center/alerts-reference)
 

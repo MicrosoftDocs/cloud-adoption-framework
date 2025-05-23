@@ -89,7 +89,7 @@ We recommend [using a single Microsoft Entra tenant](./design-area/multi-tenant/
 
 - If you need to [separate the corporate Microsoft Entra tenant from the SaaS Microsoft Entra tenant](isv-landing-zone.md) to improve security and create clear boundaries between the product and business operations.
 
-- If conflicting regulations apply, and you need separate Microsoft Entra tenants for different regulatory regimes. For example, regulations might have clearance and nationality requirements that need complete isolation between [Microsoft Entra tenants or data residency requirements that require separate tenants](/azure/active-directory/fundamentals/data-residency). Common scenarios include an ISV that needs to deploy isolated instances of a SaaS solution or a multinational organization that needs to deploy isolated instances of the same solution.
+- If conflicting regulations apply, and you need separate Microsoft Entra tenants for different regulatory regimes. For example, regulations might have clearance and nationality requirements that need complete isolation between [Microsoft Entra tenants or data residency requirements that require separate tenants](/entra/fundamentals/data-residency). Common scenarios include an ISV that needs to deploy isolated instances of a SaaS solution or a multinational organization that needs to deploy isolated instances of the same solution.
 
 When you collaborate across multiple Microsoft Entra tenants, you need to carefully plan for significant challenges and needs. Create only the minimum number of Microsoft Entra tenants that you need to meet operational or regulatory requirements. You can use management groups and Azure role-based access control (RBAC) to govern the access to subscriptions and resources under a single tenant, as described in the next section.
 
@@ -147,7 +147,7 @@ If regulations conflict for connectivity and also identity and security, you can
 - [Azure landing zones and multiple Microsoft Entra tenants](./design-area/multi-tenant/overview.md)
 - [ISV considerations for Azure landing zones](isv-landing-zone.md)
 - [Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework)
-- [Microsoft Entra ID and data residency](/azure/active-directory/fundamentals/data-residency)
+- [Microsoft Entra ID and data residency](/entra/fundamentals/data-residency)
 - [Overview of the security pillar](/industry/well-architected/security)
 - [Recommendations for identity and access management](/azure/well-architected/security/design-identity)
 - [Tailor the Azure landing zone architecture to meet requirements](tailoring-alz.md)

@@ -83,7 +83,7 @@ Review the critical design areas to make complete considerations and recommendat
 
 ## Recommended content
 
-- [Microsoft Entra identity and access management operations reference guide](/azure/active-directory/fundamentals/active-directory-ops-guide-iam)
+- [Microsoft Entra identity and access management operations reference guide](/entra/architecture/ops-guide-iam)
 
 - [Azure identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
 

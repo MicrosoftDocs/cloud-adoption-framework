@@ -524,8 +524,8 @@ Learn more about the Azure capabilities discussed in this document.
 [virtual-network-peering]: /azure/virtual-network/virtual-network-peering-overview
 [UDR]: /azure/virtual-network/virtual-networks-udr-overview
 [RBAC]: /azure/role-based-access-control/overview
-[multi-factor-authentication]: /azure/active-directory/authentication/concept-mfa-howitworks
-[azure-ad]: /azure/active-directory/fundamentals/active-directory-whatis
+[multi-factor-authentication]: /entra/identity/authentication/concept-mfa-howitworks
+[azure-ad]: /entra/fundamentals/whatis
 [VPN]: /azure/vpn-gateway/vpn-gateway-about-vpngateways
 [ExR]: /azure/expressroute/expressroute-introduction
 [ExRD]: /azure/expressroute/expressroute-erdirect-about

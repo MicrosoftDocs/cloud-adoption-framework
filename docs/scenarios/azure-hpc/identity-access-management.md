@@ -12,7 +12,7 @@ ms.date: 11/15/2024
 
 This article builds on considerations and recommendations that are described in the article [Azure identity and access management design](../../ready/landing-zone/design-area/identity-access.md). It can help you examine design considerations for identity and access management that are specific to the deployment, on Azure, of HPC applications.
 
-[Microsoft Entra Domain Services](/azure/active-directory-domain-services/overview) provides managed domain services like domain join and Group Policy. It also provides access to legacy authentication protocols like lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Microsoft Entra Domain Services integrates with your existing Microsoft Entra tenant. This integration enables users to sign in to services and applications connected to the managed domain by using their existing credentials in Microsoft Entra ID. You can also use existing groups and user accounts to help secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for hybrid environments.
+[Microsoft Entra Domain Services](/entra/identity/domain-services/overview) provides managed domain services like domain join and Group Policy. It also provides access to legacy authentication protocols like lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Microsoft Entra Domain Services integrates with your existing Microsoft Entra tenant. This integration enables users to sign in to services and applications connected to the managed domain by using their existing credentials in Microsoft Entra ID. You can also use existing groups and user accounts to help secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for hybrid environments.
 
 For more information, see [design recommendations for platform access](../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
@@ -62,7 +62,7 @@ Two common deployment types in oil and gas industry workloads are *cloud only* a
 
 Both the cloud only and hybrid cloud models might have their own unique identity and access needs that affect the type of Active Directory solution to adopt.
 
-Workloads in the cloud only deployment model use Microsoft Entra ID for Azure service fabric authentication, while the HPC hybrid cloud model uses the [Microsoft Entra hybrid identity solution](/azure/active-directory/hybrid/choose-ad-authn) for authentication. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy Active Directory support through Microsoft Entra Domain Services.
+Workloads in the cloud only deployment model use Microsoft Entra ID for Azure service fabric authentication, while the HPC hybrid cloud model uses the [Microsoft Entra hybrid identity solution](/entra/identity/hybrid/connect/choose-ad-authn) for authentication. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy Active Directory support through Microsoft Entra Domain Services.
 
 ### Design considerations for the manufacturing industry 
 

@@ -54,7 +54,7 @@ Azure Resource Manager requires the client to specify an identifier for both the
 
 Once you understand how Azure Resource Manager works, you can learn how to associate an Azure subscription with the Azure Resource Manager controls. Before Azure Resource Manager can execute any resource management request, review the following a set of controls.
 
-The first control is that a validated user must make a request. Also, Azure Resource Manager must have a trusted relationship with [Microsoft Entra ID](/azure/active-directory/) to provide user identity functionality.
+The first control is that a validated user must make a request. Also, Azure Resource Manager must have a trusted relationship with [Microsoft Entra ID](/entra/fundamentals/how-subscriptions-associated-directory) to provide user identity functionality.
 
 ![Diagram of Microsoft Entra ID.](../_images/get-started/design/governance-1-16.png)
 

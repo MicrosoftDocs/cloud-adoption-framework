@@ -31,7 +31,7 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 - Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments and trigger remediation tasks to bring existing Azure resources into a compliant state.
 
-- Consider using [the Microsoft Entra entitlement management feature](/azure/active-directory/governance/entitlement-management-overview) to automate Azure access request workflows, access assignments, reviews, and expiration.
+- Consider using [the Microsoft Entra entitlement management feature](/entra/id-governance/entitlement-management-overview) to automate Azure access request workflows, access assignments, reviews, and expiration.
 
 - Use [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
@@ -123,11 +123,11 @@ Change advisory review boards can hinder your organization's innovation and busi
 
 - Notify the appropriate people when suspicious sign-in events occur.
 
-- Consider using [Microsoft Entra reports](/azure/active-directory/reports-monitoring/overview-reports) to govern activity.
+- Consider using [Microsoft Entra reports](/entra/identity/monitoring-health/overview-monitoring-health) to govern activity.
 
 - Consider sending Microsoft Entra ID logs to the central Azure Monitor Logs workspace for the platform.
 
-- Explore Microsoft Entra ID Governance features, like [access reviews](/azure/active-directory/governance/access-reviews-overview) and [entitlement management](/azure/active-directory/governance/entitlement-management-overview).
+- Explore Microsoft Entra ID Governance features, like [access reviews](/entra/id-governance/access-reviews-overview) and [entitlement management](/entra/id-governance/entitlement-management-overview).
 
 ### Non-Microsoft tooling
 

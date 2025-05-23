@@ -48,12 +48,12 @@ The following diagram shows a reference architecture that demonstrates the roles
 - **Server onboarding and administration**
   - Use security groups to assign local administrator rights to the identified users or service accounts on the servers to onboard to Azure Arc at scale.
   - Use [Microsoft Entra service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to onboard servers to Azure Arc. Consider using multiple Microsoft Entra service principals in a decentralized operating model, where servers are managed by different IT teams.
-  - Use a short-lived Microsoft Entra service principal [client secrets](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret).
+  - Use a short-lived Microsoft Entra service principal [client secrets](/entra/identity-platform/howto-create-service-principal-portal).
   - Assign the [Azure Connected Machine Onboarding](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) role at the resource group level.
   - Use Microsoft Entra security groups and grant the [Hybrid Server Resource Administrator](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites) role. Grant the role to teams and individuals that will manage Azure Arc-enabled server resources in Azure.
 - **Microsoft Entra ID protected resource access**
   - Use [managed identities](/azure/azure-arc/servers/managed-identity-authentication) for applications running on your on-premises servers (and other cloud environments) to provide access to cloud resources protected by Microsoft Entra ID.
-  - Restrict access to managed identities to [allow applications](/azure/active-directory/develop/v2-permissions-and-consent) that are authorized using Microsoft Entra application permissions.
+  - Restrict access to managed identities to [allow applications](/entra/identity-platform/permissions-consent-overview) that are authorized using Microsoft Entra application permissions.
   - Use [`Hybrid agent extension applications`](/azure/azure-arc/servers/security-overview#using-a-managed-identity-with-azure-arc-enabled-servers) local security group on Windows or the *himds* group on Linux to grant access to users to request Azure resource access tokens from the Azure Arc-enabled servers.
 
 ## Next steps
