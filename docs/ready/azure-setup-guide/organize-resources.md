@@ -99,7 +99,7 @@ A good naming standard helps to identify resources in the Azure portal, on a bil
 
 - Business details should include the organizational information required to identify teams. For example a business unit, such as `fin`, `mktg`, or `corp` might be used.
 - Follow the guidance for [abbreviations for resource types](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations).
-- Use a consistent naming convention for all resources. For example, use a prefix that identifies the subscription or resource group, workload type, the environment the resource is deploy in, and the Azure region.
+- Use a consistent naming convention for all resources. For example, use a prefix that identifies the subscription or resource group, workload type, the environment the resource is deployed in, and the Azure region.
 - Operational details in resource names should include information that IT and workload teams need. Include details that identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
 To learn more about naming Azure standards and recommendations, see [Develop your naming and tagging strategy for Azure resources](../azure-best-practices/naming-and-tagging.md).

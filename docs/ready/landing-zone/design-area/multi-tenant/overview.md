@@ -17,7 +17,7 @@ Azure landing zones are built on [management groups](/azure/governance/managemen
 
 These resources are deployed within a single Microsoft Entra tenant. Management groups and most other Azure resources, like Azure Policy, only support operating within a single Microsoft Entra tenant. An Azure subscription relies on a Microsoft Entra tenant to authenticate users, services, and devices against Azure Resource Manager (ARM) to control plane operations and some Azure services, like Azure Storage, for data plane operations.
 
-Multiple subscriptions can rely on the same Microsoft Entra tenant. Each subscription can only rely on a single Microsoft Entra tenant. For more information, see [Add an existing Azure subscription to your tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
+Multiple subscriptions can rely on the same Microsoft Entra tenant. Each subscription can only rely on a single Microsoft Entra tenant. For more information, see [Add an existing Azure subscription to your tenant](/entra/fundamentals/how-subscriptions-associated-directory).
 
 [![Diagram of a single Microsoft Entra tenant with Azure landing zones deployed.](media/contoso-single-tenant.png)](media/contoso-single-tenant.png#lightbox)
 
@@ -32,7 +32,6 @@ Your organization might be required to use multiple Microsoft Entra tenants for 
 >
 > It focuses on [the platform rather than applications](../../index.md#platform-landing-zones-vs-application-landing-zones) that are built on top of the platform in tenants. For information about multiple Microsoft Entra tenants and application architecture, see:
 >
-> - [Multitenant apps in Microsoft Entra ID](/azure/active-directory/develop/application-model#multi-tenant-apps)
 > - [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
 
 <a name='why-a-single-azure-active-directory-tenant-is-sufficient'></a>
@@ -43,7 +42,7 @@ There are reasons you might require multiple Microsoft Entra tenants, but it's i
 
 Use your existing corporate Microsoft Entra tenant for Azure subscriptions for the best productivity and collaboration experience across the platform.
 
-Within a single tenant, development teams and application owners can have the least privileged roles to create non-production instances of Azure resources and trusted apps, test apps, test users and groups, and test policies for those objects. For more information about how to delegate administration with a single tenant, see [Resource isolation in a single tenant](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant).
+Within a single tenant, development teams and application owners can have the least privileged roles to create non-production instances of Azure resources and trusted apps, test apps, test users and groups, and test policies for those objects. For more information about how to delegate administration with a single tenant, see [Resource isolation in a single tenant](/entra/architecture/secure-single-tenant).
 
 Only create more Microsoft Entra tenants when there are requirements that can't be met by using the corporate Microsoft Entra tenant.
 
@@ -55,7 +54,7 @@ With Microsoft 365, the corporate Microsoft Entra tenant is generally the first 
 
 When you create a new Microsoft Entra tenant, it requires extra work to provision, manage, secure, and govern the identities. You must also establish the required policies and procedures. Collaboration is best in a single Microsoft Entra tenant. Moving to a multitenant model creates a boundary, which can result in user friction, management overhead, and increase the attack surface area, which can cause a security risk and complicates product scenarios and limitations. Some examples include:
 
-- **Multiple identities for users and administrators for each tenant** – If [Microsoft Entra B2B](/azure/active-directory/external-identities/what-is-b2b) isn’t used, the user has multiple sets of credentials to manage. For more information, see [Considerations and recommendations for multitenant Azure landing zone scenarios](considerations-recommendations.md).
+- **Multiple identities for users and administrators for each tenant** – If [Microsoft Entra B2B](/entra/external-id/what-is-b2b) isn’t used, the user has multiple sets of credentials to manage. For more information, see [Considerations and recommendations for multitenant Azure landing zone scenarios](considerations-recommendations.md).
 - **Azure services limitations in supporting multiple Microsoft Entra tenants** – Azure workloads that only support identities homed in the tenant to which it's bound to. For more information, see [Azure products and services Microsoft Entra integration](considerations-recommendations.md#azure-products-and-services-azure-active-directory-integration).
 - **No centralized configuration or management for Microsoft Entra tenants** – Multiple security policies, management policies, configuration, portals, APIs, and JML (joiners, movers, and leavers) processes.
 - **Billing and licensing complexities and potential requirement for license duplication for Microsoft Entra ID P1 or P2 licenses** - For more information, see [Considerations and recommendations for multitenant Azure landing zone scenarios](considerations-recommendations.md).
@@ -63,7 +62,7 @@ When you create a new Microsoft Entra tenant, it requires extra work to provisio
 Organizations need to be clear about why they're deviating from the corporate Microsoft Entra tenant model to ensure the extra overhead and complexity is justified in meeting the requirements. There are examples of these instances in the [scenarios article](scenarios.md).
 
 >[!IMPORTANT]
-> Use [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to protect privileged roles within Microsoft Entra ID and Azure.
+> Use [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to protect privileged roles within Microsoft Entra ID and Azure.
 
 The ownership of privileged roles across internal teams and departments can provide a challenge as the Identity team and the Azure team are often in different teams, departments, and organization structures.
 
@@ -78,8 +77,8 @@ Microsoft Entra ID provides controls that help mitigate this problem on a techni
 >
 > - [Define Microsoft Entra tenants](../azure-ad-define.md)
 > - [Testing approach for Azure landing zones](../../../enterprise-scale/testing-approach.md)
-> - [Introduction to delegated administration and isolated environments](/azure/active-directory/fundamentals/secure-with-azure-ad-introduction)
-> - [Resource isolation in a single tenant](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant)
+> - [Introduction to delegated administration and isolated environments](/entra/architecture/secure-introduction)
+> - [Resource isolation in a single tenant](/entra/architecture/secure-single-tenant)
 > - [Your Microsoft 365 for enterprise tenants](/microsoft-365/solutions/tenant-management-tenants)
 
 ## Next steps

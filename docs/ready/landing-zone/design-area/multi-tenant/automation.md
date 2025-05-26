@@ -49,7 +49,7 @@ In this approach, the primary objective is to keep each Microsoft Entra tenant i
 In this approach, there are more components to manage that are duplicated per a Microsoft Entra tenant. Some organizations might have regulatory compliance controls enforced on them that mandates this type of segregation and isolation.
 
 >[!NOTE]
-> If your organization only allows the use of managed identities for platform automation, you must use this approach or an approach that logs into each tenant individually. Managed identities don't support cross-tenant scenarios in a generally available state today. For more information, see [this FAQ](/azure/active-directory/managed-identities-azure-resources/managed-identities-faq#can-i-use-a-managed-identity-to-access-a-resource-in-a-different-directorytenant).
+> If your organization only allows the use of managed identities for platform automation, you must use this approach or an approach that logs into each tenant individually. Managed identities don't support cross-tenant scenarios in a generally available state today. For more information, see [this FAQ](/entra/identity/managed-identities-azure-resources/managed-identities-faq#can-i-use-a-managed-identity-to-access-a-resource-in-a-different-directorytenant).
 > 
 > However, this is now available in public preview for User-Assigned Managed Identites by configuring a trust between itself and an Entra ID multitenant application. See more information on configuring this in [Configure an application to trust a managed identity (preview)](/entra/workload-id/workload-identity-federation-config-app-trust-managed-identity). This may now make [Approach 2 – Shared application registration (multitenant) with multiple service principals](#approach-2--shared-application-registration-multitenant-with-multiple-service-principals) a viable option for your deployment.
 
@@ -64,14 +64,14 @@ Microsoft Entra B2B and/or Azure Lighthouse can be used, but this option questio
 In this approach, an application registration is created in the managing Microsoft Entra tenant. In every Microsoft Entra tenant that you want to manage, a service principal name (SPN) is created in that tenant, based on the application registration. This action allows the workers running the pipeline tasks and steps to sign in to any of the Microsoft Entra tenants with a single set of credentials.
 
 >[!TIP]
-> For information about the relationship between application registrations and enterprise applications (service principles), see [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals).
+> For information about the relationship between application registrations and enterprise applications (service principles), see [Application and service principal objects in Microsoft Entra ID](/entra/identity-platform/app-objects-and-service-principals).
 
 :::image type="content" source="media/automation-approach-2.png" alt-text="Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed using the shared application registration (multitenant) with multiple service principals automation approach." lightbox="media/automation-approach-2.png":::
 
 >[!IMPORTANT]
 > In this approach, the single application registration and the associated enterprise applications (service principals) should be monitored for any abnormal activity in your security information and event management (SIEM) tooling because this is a highly privileged account. It should send alerts and potentially automatically take action, depending on the alert severity.
 
-In the previous example, a single app registration is in the `contoso.onmicrosoft.com` Microsoft Entra tenant, and an enterprise application is in each of the Microsoft Entra tenants that's linked to the app registration. This setup allows a pipeline to authenticate and authorize to all the Microsoft Entra tenants by using the single app registration. For more information, see [Making your application multitenant](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant) and [Grant tenant-wide admin consent to an application](/entra/identity/enterprise-apps/grant-admin-consent).
+In the previous example, a single app registration is in the `contoso.onmicrosoft.com` Microsoft Entra tenant, and an enterprise application is in each of the Microsoft Entra tenants that's linked to the app registration. This setup allows a pipeline to authenticate and authorize to all the Microsoft Entra tenants by using the single app registration. For more information, see [Making your application multitenant](/entra/identity-platform/howto-convert-app-to-be-multi-tenant) and [Grant tenant-wide admin consent to an application](/entra/identity/enterprise-apps/grant-admin-consent).
 
 >[!TIP]
 > User Assigned Managed Identites, in public preview, can now support multitenant scenarios by configuring a trust between itself and an Entra ID multitenant application. See more information on configuring this in [Configure an application to trust a managed identity (preview)](/entra/workload-id/workload-identity-federation-config-app-trust-managed-identity).

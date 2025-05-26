@@ -26,11 +26,11 @@ Azure Virtual Desktop provides custom Azure roles that are designed for each fun
   > [!NOTE]
   > Azure Virtual Desktop does not support B2B or Microsoft accounts.
 - The account used for domain join can't have multifactor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
-- Azure Virtual Desktop requires a hosting strategy for domain services. Choose either [AD DS or Microsoft Entra Domain Services](/azure/active-directory-domain-services/compare-identity-solutions).
-- [Microsoft Entra Domain Services](/azure/active-directory-domain-services/) is a supported option, but there are limitations:
-  - You must [enable password hash synchronization](/azure/active-directory-domain-services/tutorial-configure-password-hash-sync).
+- Azure Virtual Desktop requires a hosting strategy for domain services. Choose either [AD DS or Microsoft Entra Domain Services](/entra/identity/domain-services/compare-identity-solutions).
+- [Microsoft Entra Domain Services](/entra/identity/domain-services//) is a supported option, but there are limitations:
+  - You must [enable password hash synchronization](/entra/identity/domain-services/tutorial-configure-password-hash-sync).
   - You can't use hybrid join for Azure Virtual Desktop VMs to enable Microsoft Entra seamless single sign-on for Microsoft 365 services.  
-  For more information, see [Frequently asked questions (FAQ) about Microsoft Entra Domain Services](/azure/active-directory-domain-services/faqs).
+  For more information, see [Frequently asked questions (FAQ) about Microsoft Entra Domain Services](/entra/identity/domain-services//faqs).
 - When joining to a Microsoft Entra Domain Services domain, the account must be part of the Microsoft Entra DC administrators group and the account password must work in Microsoft Entra Domain Services. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - When specifying an organizational unit, use the distinguished name without quotation marks.
 - Follow the principle of least privilege by assigning the minimum permissions needed for authorized tasks.
@@ -56,7 +56,7 @@ The following table summarizes identity scenarios that Azure Virtual Desktop cur
 
 ## Design recommendations
 
-- Use Microsoft Entra Connect to synchronize all identities to a single Microsoft Entra tenant. For more information, see [What is Microsoft Entra Connect?](/azure/active-directory/hybrid/whatis-azure-ad-connect).
+- Use Microsoft Entra Connect to synchronize all identities to a single Microsoft Entra tenant. For more information, see [What is Microsoft Entra Connect?](/entra/identity/hybrid/connect/whatis-azure-ad-connect).
 - Ensure that Azure Virtual Desktop session hosts can communicate with Microsoft Entra Domain Services or AD DS.
 - Use the Kerberos Key Distribution Center proxy solution to proxy smart-card authentication traffic and to enable remote sign-in. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - Segregate session host virtual machines into Active Directory organizational units for each host pool to make it easier to manage policies and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).

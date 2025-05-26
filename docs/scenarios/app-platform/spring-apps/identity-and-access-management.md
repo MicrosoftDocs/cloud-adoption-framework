@@ -53,11 +53,11 @@ As the workload owner, follow these best practices to ensure that the applicatio
 
 ### Managed identities
 
-Use managed identities for the application so that it's authenticated through Microsoft Entra ID. Not all services support this feature of Microsoft Entra ID. For more information, see [Azure services that support Microsoft Entra authentication](/azure/active-directory/managed-identities-azure-resources/services-azure-active-directory-support).
+Use managed identities for the application so that it's authenticated through Microsoft Entra ID. Not all services support this feature of Microsoft Entra ID. For more information, see [Azure services that support Microsoft Entra authentication](/entra/identity/managed-identities-azure-resources/managed-identities-status).
 
-Decide which type of [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) is appropriate for your use case. Consider the tradeoffs with ease of management. For example, if the application needs to access multiple resources, user-assigned managed identities are recommended. But if you want permissions tied to the application lifecycle, system-managed identities might be better suited.
+Decide which type of [managed identity](/entra/identity/managed-identities-azure-resources/overview#managed-identity-types) is appropriate for your use case. Consider the tradeoffs with ease of management. For example, if the application needs to access multiple resources, user-assigned managed identities are recommended. But if you want permissions tied to the application lifecycle, system-managed identities might be better suited.
 
-For more information, see [Choose system or user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities).
+For more information, see [Choose system or user-assigned managed identities](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities).
 
 Use built-in Azure RBAC roles to simplify the management of required permissions for a managed identity.
 
