@@ -2,7 +2,7 @@
 title: Define Microsoft Entra tenants
 description: Understand how to set up Microsoft Entra tenants.
 author: jtracey93
-ms.author: pnp
+ms.author: jatracey
 ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5

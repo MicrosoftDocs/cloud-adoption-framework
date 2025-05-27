@@ -2,7 +2,7 @@
 title: Azure governance design area
 description: Explore the design area for governing your Azure environment to establish tooling to support cloud governance, compliance auditing, and automated guardrails.
 author: paulgrimley
-ms.author: pnp
+ms.author: paulgr
 ms.reviewer: ssumner
 ms.date: 05/07/2024
 ms.topic: conceptual

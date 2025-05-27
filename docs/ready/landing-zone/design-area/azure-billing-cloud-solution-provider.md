@@ -2,7 +2,7 @@
 title: Cloud Solution Provider service
 description: Learn how to understand Cloud Solution Provider (CSP) service agreements and Microsoft Entra tenants.
 author: jtracey93
-ms.author: pnp
+ms.author: jatracey
 ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5
