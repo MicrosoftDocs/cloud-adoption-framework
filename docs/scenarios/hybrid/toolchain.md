@@ -1,8 +1,8 @@
 ---
 title: Introduction to Azure hybrid and multicloud products
 description: Introduce the Azure products that help enable hybrid and multicloud solutions.
-author: martinekuan
-ms.author: martinek
+author: lpassig
+ms.author: tozimmergren
 ms.date: 01/11/2021
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
@@ -39,10 +39,13 @@ This article series helps to integrate these tools into relevant processes that 
 - [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an Azure Arc service that simplifies hybrid IT management by integrating Azure's security, governance, and management features with VMware vSphere infrastructure.
 - [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) lets System Center users manage their VMM environment and VMs through the Azure portal, integrating Azure's security, governance, and management features across both platforms.
 
+>[!NOTE]
+>For guidance on choosing the right Azure Arc service for your physical and virtual machines, see [Choose the right Azure Arc service for machines](/azure/azure-arc/choose-service).
+
 ## Deploy hybrid and multicloud solutions
 
-- [Azure Stack HCI (20h2)](/azure-stack/hci/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is a hyperconverged infrastructure (HCI) cluster solution that hosts virtualized Windows and Linux operating system workloads and their storage in a hybrid on-premises environment. A cluster consists of 2 to 16 physical nodes.
-- [Azure Kubernetes Service (AKS) on Azure Stack HCI](/azure-stack/aks-hci/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an implementation of AKS, which automates running containerized applications at scale on Azure Stack HCI.
+- [Azure Local (20h2)](/azure-stack/hci/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is a hyperconverged infrastructure (HCI) cluster solution that hosts virtualized Windows and Linux operating system workloads and their storage in a hybrid on-premises environment. A cluster consists of 2 to 16 physical nodes.
+- [Azure Kubernetes Service (AKS) on Azure Local](/azure-stack/aks-hci/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an implementation of AKS, which automates running containerized applications at scale on Azure Local.
 - [Azure Kubernetes Service](/azure/aks/intro-kubernetes?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) makes it simple to deploy a managed Kubernetes cluster in Azure.
 - [Azure IoT Edge](/azure/iot-edge/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) deploys cloud-based solutions to the edge of your local environment, with full support from Azure to manage those devices and the IoT data they produce.
 

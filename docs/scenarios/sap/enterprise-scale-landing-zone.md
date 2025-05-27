@@ -125,6 +125,14 @@ When you set up your availability zones, use zone-redundant services for your in
 
 For more information about the availability zone architecture for SAP on Azure, see [SAP HA availability zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
+It is important to ensure all Azure resources used in your workload are set up with Zone-redundant or across availability zones for zonal components. In order to assist in the process assign [Azure Policy Initiative for Zone Resilience](/azure/governance/policy/samples/built-in-initiatives#resilience) to intermediate Management Group. This ensures “start resilient & stay resilient” approach. The Zone Resilient built-in policies aim to:
+
+- Deliver clear and actionable information that assists in the design, planning, and automation of AZ-resilient deployments.
+- Detect: Audit subscriptions for non-compliance of these policies.
+- Prevent configurations using the Deny effect for resources that do not adhere to zone resiliency standards.
+
+Compliance to this initiative can be checked at the end of the Implementation process. More information of the Azure Policy Initiative for Zone Resilience can be found here.
+
 #### Azure NetApp Files and Azure Files
 
 Azure NetApp Files and Azure Files with Network File System (NFS) and Server Message Block (SMB) provide high-availability file share requirements for SAP Central Services, a shared SAP mount, and a global transport directory.

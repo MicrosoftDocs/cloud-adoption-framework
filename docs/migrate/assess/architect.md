@@ -5,6 +5,8 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/09/2024
 ms.topic: conceptual
+ms.collection: 
+ - migration
 ---
 
 # Design workload architecture before migration
@@ -28,7 +30,7 @@ The following assumptions are typical for any migration effort:
 
 ### Design architecture for a landing zone
 
-In the [Ready phase](../../ready/index.md) of the Cloud Adoption Framework, your organization deployed shared platform services as part of adopting [Azure landing zones](../../ready/landing-zone/index.md). In [Ready your landing zone for migration](../prepare/ready-azure-landing-zone.md), you prepared the landing zone to receive migrated workloads.
+In the [Ready phase](../../ready/index.md) of the Cloud Adoption Framework, your organization deployed shared platform services as part of adopting [Azure landing zones](../../ready/landing-zone/index.md). In [Ready your landing zone for migration](../../ready/landing-zone/ready-azure-landing-zone.md), you prepared the landing zone to receive migrated workloads.
 
 Based on this planning, you can assume that the following migration components are in place:
 
@@ -68,7 +70,7 @@ As you finish your architecture design, revisit your cloud estimate to make sure
 
 If you're familiar with traditional IT procurement processes, estimating resources in the cloud might seem foreign. When you adopt cloud technologies, acquisition shifts from a rigid, structured capital expense model to a fluid operating expense model. Planning a migration to the cloud often is the first time an organization or IT team encounters this change.
 
-In the traditional capital expense model, an IT team attempts to combine buying power for multiple workloads across various programs. This approach centralizes a pool of shared IT assets that can support each of those solutions. In the operating expense cloud model, costs can be directly attributed to the support needs of individual workloads, teams, or business units. It gives an organization a more direct attribution of costs to internal customers and the business objectives that they support. This more dynamic approach to financial management is often called *financial operations (FinOps)*. Although FinOps isn't an Azure-specific consideration, it can be helpful to have an expanded understanding of FinOps. For more information, see [What is FinOps?](/azure/cost-management-billing/finops/overview-finops).
+In the traditional capital expense model, an IT team attempts to combine buying power for multiple workloads across various programs. This approach centralizes a pool of shared IT assets that can support each of those solutions. In the operating expense cloud model, costs can be directly attributed to the support needs of individual workloads, teams, or business units. It gives an organization a more direct attribution of costs to internal customers and the business objectives that they support. This more dynamic approach to financial management is often called FinOps. Although FinOps isn't an Azure-specific consideration, it can be helpful to have an expanded understanding of FinOps. For more information, see [What is FinOps?](/azure/cost-management-billing/finops/overview-finops).
 
 When you design your workload architecture for migration, you can use the [pricing calculator](https://azure.microsoft.com/pricing/calculator/) with your assessment information to understand the price of the entire workload.
 

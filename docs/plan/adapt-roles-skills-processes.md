@@ -1,8 +1,8 @@
 ---
 title: Adapt roles, skills, and processes for the cloud
 description: Use the Cloud Adoption Framework for Azure to learn to adapt your existing roles, skills, and processes as your organization makes the shift to cloud computing.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 07/01/2019
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2

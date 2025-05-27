@@ -1,12 +1,11 @@
 ---
 title: Tools and templates
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
-author: martinekuan
-ms.author: martinek
-ms.date: 05/07/2024
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 02/04/2025
 ms.topic: article
 ms.subservice: caf-general
-ms.custom: internal, UpdateFrequency5
 ---
 
 # Tools and templates
@@ -19,7 +18,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 |----------|-------------|
 | [Cloud Adoption Strategy Evaluator assessment](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) | Assess your cloud adoption strategy and get recommendations on building and advancing your cloud business case. |
 | [Cloud Journey Tracker assessment](/assessments/cloud-journey-tracker/) | Identify your cloud adoption path based on the needs of your business. |
-| [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions as you implement your cloud adoption strategy and plan. |
 
 ## Plan
 
@@ -27,7 +25,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 |----------|-------------|
 | [Strategic Migration Assessment and Readiness Tool assessment](/assessments/Strategic-Migration-Assessment/) | Take the Strategic Migration Assessment and Readiness Tool (SMART) assessment to help you prepare for your Microsoft Azure migration in areas like business planning, training, security, and governance. |
 | [Cloud Journey Tracker assessment](/assessments/cloud-journey-tracker/) | Identify your cloud adoption path based on the needs of your business. |
-| [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document your decisions as you implement your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize your processes. Use a template to deploy a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards). |
 | [Use the Strategy-Plan-Ready-Govern Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize your processes. Use a template to deploy a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards). |
 
@@ -48,13 +45,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 | Resource | Description |
 |----------|-------------|
 | [Governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e/) | Identify gaps between your current state and business priorities. Find resources to help you address what's missing. |
-| [Governance discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/governance-discipline-template.docx) | Define your basic set of governance processes used to enforce each governance discipline. |
-| [Cost Management discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/cost-management-discipline-template.docx) | Define your policy statements and design guidance to mature the cloud governance in your organization. This template focuses on cost management. |
-| [Deployment Acceleration discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/deployment-acceleration-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. This template focuses on deployment acceleration. |
-| [Identity Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/identity-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. This template focuses on identity requirements. |
-| [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/resource-consistency-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. This template focuses on resource consistency. |
-| [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/security-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase maturity of the cloud governance in your organization. This template focuses on the security baseline. |
-| [Azure Security Benchmark](/security/benchmark/azure/overview) | The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. |
 | [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) | The Azure Governance Visualizer is a PowerShell script that iterates through Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities, such as Azure Policy and Azure role-based access control (RBAC). The visualizer shows your hierarchy map from the collected data to create a tenant summary and build granular scope insights about your management groups and subscriptions. |
 | [Azure Governance Visualizer accelerator](https://github.com/Azure/Azure-Governance-Visualizer-Accelerator) | The Azure Governance Visualizer accelerator speeds up the adoption and deployment of the Azure Governance Visualizer script into your environment. |
 | [Microsoft Product Placemat for CMMC L3](https://www.microsoft.com/download/details.aspx?id=102536) | The Microsoft Product Placemat for CMMC Level 3 (Preview) is an interactive view representing how Microsoft cloud products and services satisfy requirements for cybersecurity maturity model certification practices. |

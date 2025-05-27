@@ -1,5 +1,35 @@
 {
   "redirections": [
+    {
+      "source_path_from_root": "/docs/scenarios/azure-hpc/energy/resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/resource-organization",
+      "redirect_document_id": false
+     },
+     {
+      "source_path_from_root": "/docs/scenarios/azure-hpc/finance/resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/resource-organization",
+      "redirect_document_id": false
+     },
+     {
+      "source_path_from_root": "/docs/scenarios/azure-hpc/manufacturing/resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/resource-organization",
+      "redirect_document_id": false
+     },
+     {
+      "source_path_from_root": "/docs/scenarios/azure-hpc/energy/identity-access-management.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/identity-access-management",
+      "redirect_document_id": false
+     },
+     {
+      "source_path_from_root": "/docs/scenarios/azure-hpc/finance/identity-access-management.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/identity-access-management",
+      "redirect_document_id": false
+     },
+     {
+      "source_path_from_root": "/docs/scenarios/azure-hpc/manufacturing/identity-access-management.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-hpc/identity-access-management",
+      "redirect_document_id": false
+     },
      {
       "source_path_from_root": "/docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-data-mesh.md",
       "redirect_url": "/docs/scenarios/cloud-scale-analytics/architectures/data-mesh-scenario",
@@ -243,7 +273,7 @@
     {
       "source_path": "docs/scenarios/data-management/secure.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/data-management/security-provisioning.md",
@@ -318,7 +348,7 @@
     {
       "source_path": "docs/scenarios/data-management/best-practices/sap-data-ingestion.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/aks/azure-products.md",
@@ -439,6 +469,151 @@
       "source_path": "docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-relecloud.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/reference-architecture-multizone",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/security-provisioning.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/sap/sap-lza-choose-azure-connectors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-lake-access.md",
+      "redirect_url": "/azure/storage/blobs/data-lake-storage-access-control-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/secure-analytics-role-based-access-control.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/secure-authorization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/deployment-templates.md",
+      "redirect_url": "/azure/architecture/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/solution-accelerators.md",
+      "redirect_url": "/azure/architecture/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/tutorial-evaluate-scenario.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/tutorial-create-data-product-batch.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/tutorial-set-up-data-product-batch.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/tutorials/cleanup-instructions.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/overview-architectures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/azure-databricks-implementation.md",
+      "redirect_url": "/azure/databricks/getting-started/best-practices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/purview-checklist.md",
+      "redirect_url": "/purview/data-catalog-best-practices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/purview-deployment.md",
+      "redirect_url": "/purview/data-catalog-get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/manage/monitor/monitoring.md",
+      "redirect_url": "/azure/cloud-adoption-framework/manage/monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/manage/best-practices.md",
+      "redirect_url": "/azure/cloud-adoption-framework/manage/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/adopt.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/govern.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/manage.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/organize.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/secure.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/strategy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/identity/multi-tenant/essentials.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/identity/multi-tenant/manage-operations.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/identity/multi-tenant/security-operations.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/defense/identity/multi-tenant/zero-trust-configuration.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
+      "redirect_document_id": false
     }
   ]
 }

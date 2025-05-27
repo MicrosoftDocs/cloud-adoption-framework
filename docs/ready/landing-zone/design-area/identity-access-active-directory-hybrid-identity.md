@@ -4,7 +4,7 @@ description: Learn about considerations and recommendations to design and implem
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 05/23/2024
+ms.date: 11/28/2024
 ---
 
 # Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones
@@ -53,7 +53,7 @@ Your organization might already have longstanding AD DS directories that you int
 
 - Evaluate scenarios that set up guests, customers, or partners so that they can access resources. Determine whether these scenarios involve [Microsoft Entra B2B](/entra/external-id/what-is-b2b) or [Microsoft Entra External ID for customers](/entra/external-id/customers/overview-customers-ciam). For more information, see [Microsoft Entra External ID](/entra/external-id/external-identities-overview).
 
-- Don't use [Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy) for intranet access because it adds latency to the user experience. For more information, see [Microsoft Entra application proxy planning](/entra/identity/app-proxy/conceptual-deployment-plan) and [Microsoft Entra application proxy security considerations](/entra/identity/app-proxy/application-proxy-security).
+- Don't use [Microsoft Entra application proxy](/entra/identity/app-proxy/overview-what-is-app-proxy) for intranet access because it adds latency to the user experience. For more information, see [Microsoft Entra application proxy planning](/entra/identity/app-proxy/conceptual-deployment-plan) and [Microsoft Entra application proxy security considerations](/entra/identity/app-proxy/application-proxy-security).
 
 - Consider various methods that you can use to [integrate on-premises Active Directory with Azure](/azure/architecture/reference-architectures/identity) to meet your organizational requirements.
 
@@ -80,13 +80,13 @@ To implement Microsoft directory services, familiarize administrators with the f
 
 - [Domain Services](/entra/identity/domain-services/overview) is an Azure-managed service that you can use to create a new managed Active Directory domain that's hosted in Azure. The domain can have a trust relationship with existing domains and can synchronize identities from Microsoft Entra ID. Administrators don't have direct access to the domain controllers and aren't responsible for patching and other maintenance operations.
 
-- When you deploy Domain Services or integrate on-premises environments into Azure, use locations with [availability zones](/azure/availability-zones/az-overview) for increased availability when possible. Also consider deploying across multiple Azure regions for increased resiliency.
+- When you deploy Domain Services or integrate on-premises environments into Azure, use [regions with availability zones](/azure/reliability/availability-zones-region-support) for increased availability when possible. Also consider deploying across multiple Azure regions for increased resiliency.
 
 After you configure AD DS or Domain Services, you can use the same method as on-premises computers to domain join Azure VMs and file shares. For more information, see [Compare Microsoft directory-based services](/entra/identity/domain-services/compare-identity-solutions).
 
 ### Microsoft Entra ID and AD DS recommendations
 
-- Use [Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy) to access applications that use on-premises authentication remotely through Microsoft Entra ID. This feature provides secure remote access to on-premises web applications. Microsoft Entra application proxy doesn't require a VPN or any changes to the network infrastructure. However, it's deployed as a single instance into Microsoft Entra ID, so application owners and the platform or identity teams must collaborate to ensure that the application is configured correctly.
+- Use [Microsoft Entra application proxy](/entra/identity/app-proxy/overview-what-is-app-proxy) to access applications that use on-premises authentication remotely through Microsoft Entra ID. This feature provides secure remote access to on-premises web applications. Microsoft Entra application proxy doesn't require a VPN or any changes to the network infrastructure. However, it's deployed as a single instance into Microsoft Entra ID, so application owners and the platform or identity teams must collaborate to ensure that the application is configured correctly.
 
 - Evaluate the compatibility of workloads for AD DS on Windows Server and Domain Services. For more information, see [Common use cases and scenarios](/entra/identity/domain-services/scenarios).
 

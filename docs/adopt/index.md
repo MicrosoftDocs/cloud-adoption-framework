@@ -1,6 +1,6 @@
 ---
 title: How to adopt the cloud
-description: The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure.
+description: The Adopt methodology shows you how to migrate, modernize, and innovate in Azure.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 02/14/2024
@@ -11,13 +11,13 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 # Cloud adoption
 
-The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure. These four processes align to different phases in the cloud adoption journey. Each phase has distinct goals, solutions, and benefits. This article provides an overview of each process, so you can find the right guidance.
+The Adopt methodology shows you how to migrate, modernize, and innovate in Azure. Each path has distinct goals, solutions, and benefits. This article provides an overview of each path, so you can find the right guidance.
 
 :::image type="content" source="../_images/adopt/modernization-strategy-flowchart.png" alt-text="Diagram that shows possible choices for modernizing an application. Depending on your needs, you can retire, rebuild, rearchitect, replace, rehost, or replatform each application." border="false":::
 
 ## Migrate
 
-Migration entails moving workloads to the cloud or between clouds. You can choose from various types of migrations. The [the migration guidance](../migrate/index.md) helps you choose the migration strategy that best aligns with your objectives.
+Migration entails moving workloads to the cloud or between clouds. You can choose from various types of migrations. The [migration guidance](../migrate/index.md) helps you choose the migration strategy that best aligns with your objectives.
 
 - ***Goals:*** Meet business demands, exit an on-premises environment, and align with Azure Well-Architected Framework principles.
 
@@ -62,18 +62,6 @@ Application innovation can improve your company's market position and unlock new
 - ***Replacing***: Replace the application with SaaS or low-code solutions.
 
 For more information, see [Innovate](../innovate/index.md).
-
-## Relocate
-
-Relocation is when you move an Azure workload to a different region in Azure. You can relocate a workload anytime after migration. Relocation evaluations should be a regular part of your workload lifecycle so your workload evolves with your business needs.
-
-- ***Goals:*** Respond to business changes and expand your global footprint, meet data sovereignty and residency requirements, and provide lower latency to end users.
-
-- ***Solutions:*** Adopt the location, services, and capabilities of a new Azure region.
-
-- ***Key benefits:*** Respond to business changes, expand global footprint, meet data sovereignty and residency requirements, provide lower latency to end users.
-
-For more information, see [Relocate](../relocate/index.md).
 
 ## Next steps
 

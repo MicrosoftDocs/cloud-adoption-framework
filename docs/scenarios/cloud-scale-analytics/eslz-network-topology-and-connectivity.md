@@ -3,7 +3,7 @@ title: Network topology and connectivity for cloud-scale analytics landing zones
 description: Learn about the network topology and connectivity for cloud-scale analytics landing zones in Azure.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 03/04/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -14,22 +14,23 @@ This article has design considerations and guidelines for networking and connect
 
 Since data management and data landing zones are important, you should also include the guidance for the Azure landing zone design areas in your design.
 
-This section outlines gives a high level overview of the networking pattern with further links to deploying in both single and multiple azure regions.
+This section outlines gives a high level overview of the networking pattern with further links to deploying in both single and multiple Azure regions.
 
 Cloud-scale analytics promises the possibility to easily share and access datasets across multiple data domains and data landing Zones without critical bandwidth or latency limitations and without creating multiple copies of the same dataset. To deliver on that promise, different network designs have to be considered, evaluated, and tested to make sure that these are compatible with the existing hub and spoke and vWAN deployments of corporations.
 
 :::image type="content" source="images/networking-overview.png" alt-text="Networking overview" lightbox="images/networking-overview.png":::
+
 *Figure 1: Networking overview for cloud-scale analytics.*
 
 [!INCLUDE [network-important](../cloud-scale-analytics/includes/network-important.md)]
 
 ## Data management landing zone networking
 
-You can connect virtual networks to each other with virtual network peering. These virtual networks can be in the same or different regions, and are also known as global VNet peering. After peering the virtual networks, resources in both virtual networks communicate with each other. This communication has the same latency and bandwidth as if the resources were in the same virtual network.
+You can connect virtual networks to each other with virtual network peering. These virtual networks can be in the same or different regions, and are also known as global virtual network peering. After peering the virtual networks, resources in both virtual networks communicate with each other. This communication has the same latency and bandwidth as if the resources were in the same virtual network.
 
 The data management landing zone connects to the Azure networking management subscription using virtual network peering. The virtual network peering then connects to on-premises resources using ExpressRoute circuits and third-party clouds.
 
-Data management landing zone services that support Azure Private Link are injected into the data management landing zone virtual network. For example, Azure Purview supports Private Link.
+Data management landing zone services that support Azure Private Link are injected into the data management landing zone virtual network.
 
 ## Data management landing zone to data landing zone
 
@@ -40,7 +41,7 @@ For every new data landing zone, you should create a virtual network peering fro
 
 ## Data landing zones to data landing zones
 
-There are options on how to make this connectivity and depending on if you have a single or multiple region deployment it is recommended that you consider the guidance in:
+There are options on how to make this connectivity and depending on if you have a single or multiple region deployments it's recommended that you consider the guidance in:
 
 - [Single-region data landing zone Connectivity](../cloud-scale-analytics/eslz-network-considerations-single-region.md)
 - [Cross-region data landing zone connectivity](../cloud-scale-analytics/eslz-network-considerations-cross-region.md)
@@ -60,7 +61,7 @@ Cloud-scale analytics uses [Private Link](/azure/private-link/private-link-servi
 
 For the current list of supported products, see [Private Link resources](/azure/private-link/private-endpoint-overview#private-link-resource).
 
-If you are planning on implementing cross tenant private endpoints, it's recommend that you review [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md).
+If you're planning on implementing cross tenant private endpoints, it's recommended that you review [Limit cross-tenant private endpoint connections in Azure](../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md).
 
 > [!CAUTION]
 > By design, cloud-scale analytics networking uses private endpoints where available to connect to PaaS services.

@@ -1,8 +1,8 @@
 ---
 title: Ambient experience for device interaction
 description: Learn about Azure tools for device interaction and ambient experiences that augment customers' natural surroundings and behaviors.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.custom: internal
@@ -31,7 +31,7 @@ In Azure, you commonly use the following tools to accelerate digital invention a
 | Category | Tools |
 |---|---|
 | Mobile experiences | <li> Azure App Service <li> Power Apps <li> Power Automate <li> Intune |
-| Mixed reality | <li> Unity <li> Azure Spatial Anchors <li> HoloLens |
+| Mixed reality | <li> Unity <li> HoloLens |
 | Integrated reality | <li> Azure IoT Hub <li> Azure Sphere <li> Azure Kinect DK |
 | Adjusted reality | <li> IoT cloud to device <li> Azure Digital Twins + HoloLens |
 
@@ -56,7 +56,6 @@ Below you'll find articles to help you get started with each of the tools in thi
 ### Mixed reality
 
 - [Develop mixed reality experiences with Unity](/windows/mixed-reality/develop/unity/unity-development-overview)
-- [Quickstarts to add Azure Spatial Anchors to a mixed reality solution](/azure/spatial-anchors/)
 
 ### Integrated reality and IoT
 

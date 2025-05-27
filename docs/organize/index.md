@@ -1,8 +1,8 @@
 ---
 title: Manage organization alignment
 description: Learn how to establish and maintain your organization's alignment by using the Cloud Adoption Framework for Azure.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 01/07/2022
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
@@ -19,7 +19,7 @@ The following exercises will help guide the process of creating a landing zone t
 | <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Structure type](#structure-type): Define the type of organizational structure that best fits your operating model. |
 | <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Cloud functions](#understand-required-cloud-functions): Understand the cloud functionality required to adopt and operate the cloud. |
 | <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Mature team structures](./organization-structures.md): Define the teams that can provide various cloud functions. |
-| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [RACI matrix](./raci-alignment.md): Use the provided RACI matrix to map roles to each team for functions of the cloud operating model. This matrix includes responsibility, accountability, consulted, and informed roles. |
+| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [RACI matrix](../organize/raci-alignment.md): Use the provided RACI matrix to map roles to each team for functions of the cloud operating model. This matrix includes responsibility, accountability, consulted, and informed roles. |
 
 ## Structure type
 
@@ -44,7 +44,7 @@ This list contains the functions required to succeed at cloud adoption and longe
 - [Cloud platform](./cloud-platform.md): Operate and mature the platform.
 - [Cloud automation](./cloud-automation.md): Accelerate adoption and innovation.
 - [Cloud data](./cloud-data.md): Manage data and enable analytics solutions.
-- [Cloud security](./cloud-security.md): Manage information security risk.
+- [Cloud security](../secure/teams-roles.md): Manage information security risk.
 
 To some degree, each of these functions are delivered in every cloud adoption effort. The delivery is either explicit or follows a defined team structure.
 

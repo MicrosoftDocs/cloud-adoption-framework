@@ -1,8 +1,8 @@
 ---
 title: Ambient user experiences with interactive devices
 description: Learn about advanced approaches for ambient user experiences using interactive devices, rather than applications, for digital innovation.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.custom: internal
@@ -52,8 +52,6 @@ Mixed reality solutions represent the next step for ambient user experiences. Th
 > If a virtual reality (VR) device is required and it's not already part of a customer's immediate surroundings or natural behaviors, augmented or virtual reality is more of an alternative digital experience and less of an ambient experience.
 
 Mixed reality experiences are increasingly common among remote workforces. Their use is growing even faster in industries that require collaboration or specialty skills that aren't readily available in the local market. Situations that require centralized implementation support of a complex product for a remote labor force are fertile ground for augmented reality. In these scenarios, the central support team and remote employees might use augmented reality to work on, troubleshoot, and install the product.
-
-For example, consider the case of spatial anchors. Spatial anchors allow you to create mixed reality experiences with objects that persist in their respective locations across devices over time. Through spatial anchors, you can capture, record, and persist a specific behavior, providing an ambient experience the next time a user operates within that augmented environment. [Azure Spatial Anchors](/azure/spatial-anchors/overview) is a service that moves this logic to the cloud, allowing digital experiences to be shared across interactive devices and even across solutions.
 
 ## Integrated reality
 

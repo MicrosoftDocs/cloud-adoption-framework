@@ -2,7 +2,7 @@
 title: Ubiquitous computing and device management
 description: Learn about ubiquitous computing and Azure's framework for building immersive and effective business solutions through connected devices and perceptive edge devices.
 author: umarmohamedusman
-ms.author: martinek
+ms.author: umarm
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.custom: think-tank, fasttrack-new, AQC
@@ -125,37 +125,6 @@ To use location intelligence:
 
 1. Go to **Azure Maps Accounts**.
 2. Select **Create Azure Maps accounts**.
-
-::: zone-end
-
-## [Spatial experiences](#tab/spatial)
-
-Azure Spatial Anchors enables developers to work with mixed-reality platforms to perceive spaces, designate precise points of interest, and recall those points of interest from supported devices.
-
-**Add context to the real world:** Give your users a better understanding of their data, where they need it, and when they need it by placing and connecting your digital content to physical points of interest.
-
-**Share holograms across devices:** Accelerate decisions and results by bringing 3D to your team and customers on the device of their choice. Spatial Anchors makes it easy for people in the same space to participate in multiuser, mixed-reality applications.
-
-**Engaging experiences:** Connect spatial anchors by creating relationships between them, and deliver a user experience that might include two or more points of interest that a user must interact with to complete a task. Your application can let a user place a virtual artifact in the real world. In an industrial setting, a user could receive contextual information about a machine by pointing a supported device camera at it.
-
-Azure Spatial Anchors is composed of a managed service and client SDKs for supported device platforms.
-
-::: zone target="docs"
-
-### Learn more
-
-- [Azure Spatial Anchors](/azure/spatial-anchors/overview)
-
-::: zone-end
-
-::: zone target="chromeless"
-
-### Action
-
-To use Azure Spatial Anchors:
-
-1. Go to **Spatial Anchors accounts**.
-2. Select **Create Spatial Anchors account**.
 
 ::: zone-end
 

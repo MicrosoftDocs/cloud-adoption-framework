@@ -1,9 +1,9 @@
 ---
 title: Azure workload management and monitoring
 description: Get design area guidance for managing and monitoring workloads in an Azure landing zone.
-author: martinekuan
-ms.author: martinek
-ms.date: 01/04/2022
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -34,7 +34,7 @@ To plan for workload management and monitoring, consider the following factors:
   - A traffic-light model to represent health.
   - How to respond to failures across workload components.
 
-For more information, see [Cloud monitoring guide: Monitoring strategy for cloud deployment models](../../../manage/monitor/cloud-models-monitor-overview.md).
+For more information, see [Monitoring in a cloud environment](../../../manage/monitor/monitoring.md).
 
 ## Workload management and monitoring recommendations
 

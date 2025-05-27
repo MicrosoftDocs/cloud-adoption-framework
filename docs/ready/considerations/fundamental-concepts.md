@@ -1,8 +1,8 @@
 ---
 title: Azure fundamental concepts
 description: Use the Cloud Adoption Framework for Azure to learn fundamental concepts and terms used in Azure and how the concepts relate to one another.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 09/16/2022
 ms.topic: conceptual
 ms.custom: internal
@@ -77,9 +77,9 @@ The following resources provide detailed information about the concepts discusse
 - [Resource access management in Azure](../../get-started/how-azure-resource-manager-works.md)
 - [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview)
 - [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview)
-- [What is Microsoft Entra ID?](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Associate or add an Azure subscription to your Microsoft Entra tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
-- [Topologies for Microsoft Entra Connect](/azure/active-directory/hybrid/plan-connect-topologies)
+- [What is Microsoft Entra ID?](/entra/fundamentals/whatis)
+- [Associate or add an Azure subscription to your Microsoft Entra tenant](/entra/fundamentals/how-subscriptions-associated-directory)
+- [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies)
 - [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
 
 ## Next steps

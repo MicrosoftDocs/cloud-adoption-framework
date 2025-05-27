@@ -1,10 +1,10 @@
 ---
 title: Service enablement framework
 description: Learn about adopting a service enablement framework. Achieving the right level of security and governance is an important part of your cloud adoption journey.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 01/04/2022
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, engagement-fy23, UpdateFrequency.5
 ---
@@ -32,7 +32,7 @@ The following tables provide a framework to assess the enterprise security readi
 |--|--|
 | Authentication and access control | - Are all control plane operations governed by Microsoft Entra ID? Is there a nested control plane, such as with AKS? <br/> - What methods exist to provide access to the data plane? <br/> - Does the data plane integrate with Microsoft Entra ID? <br/> - Does authentication between Azure services use managed identities or service principals? <br/> - How are any applicable keys or shared access signatures managed? <br/> - How can access be revoked? |
 | Segregation of duties | Does the service separate control plane and data plane operations within Microsoft Entra ID? |
-| Multifactor authentication and conditional access | Is multifactor authentication enforced for user-to-service interactions? |
+| Multifactor authentication and Conditional Access | Is multifactor authentication enforced for user-to-service interactions? |
 
 ## Governance
 
@@ -49,6 +49,7 @@ The following tables provide a framework to assess the enterprise security readi
 | Monitoring | Does the service integrate with Azure Monitor? |
 | Backup management | - Which workload data needs to be backed up? <br/> - How are backups captured? <br/> - How frequently can backups be taken? <br/> - How long can backups be kept for? <br/> - Are backups encrypted? <br/> - Is backup encryption done with Microsoft-managed keys or customer-managed keys? |
 | Disaster recovery | - How can the service be used in a regionally redundant fashion? <br/> - What are the achievable recovery time and recovery point goals? |
+| Business continuity management | - Which solution can be used  to manage  the business continuity operations across all subscriptions?  <br/> - Which workloads can be managed?  <br/> - How to identify protected and unprotected resources/items?  <br/> - How to configure protection for a workload and recover them?  <br/> - Can the security level be reviewed and modified for the protected items?  <br/> - How can the protection jobs, alerts, and metrics be monitored?  <br/> - Is there a way to generate summarized reports for workload protection across all subscriptions? |
 | SKU | - What SKUs are available? How do they differ? <br/> - Are there any features related to security for the Premium SKU? |
 | Capacity management | - How is capacity monitored? <br/> - What is the unit of horizontal scale? |
 | Patch and update management | - Does the service require active updating, or do updates happen automatically? <br/> - How frequently are updates applied? Can they be automated? |

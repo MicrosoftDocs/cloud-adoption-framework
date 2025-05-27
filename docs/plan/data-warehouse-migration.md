@@ -1,8 +1,8 @@
 ---
 title: Plan a data warehouse migration
 description: Learn best practices for data warehouse migration, the core data warehouse migration process steps, and the tasks within each step.
-author: v-hanki
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 06/24/2020
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency2, build-2023, build-2023-dataai

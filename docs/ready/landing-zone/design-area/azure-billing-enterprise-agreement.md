@@ -3,7 +3,7 @@ title: Azure Enterprise Agreement enrollment design area guidance
 description: Understand the Enterprise Agreement enrollments and Microsoft Entra tenants design area.
 author: jtracey93
 ms.author: jatracey
-ms.date: 05/16/2023
+ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5
 ---
@@ -40,7 +40,7 @@ Enterprise Agreement enrollment represents the commercial relationship between M
 
 When your organization uses an Enterprise Agreement enrollment for Azure subscriptions, it's important to understand the various authentication and authorization boundaries and the relationship between these boundaries.
 
-There is an inherent trust relationship between Azure subscriptions and a Microsoft Entra tenant, which is described further in [Associate or add an Azure subscription to your Microsoft Entra tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory). An Enterprise Agreement enrollment can also use a Microsoft Entra tenant as an identity provider, depending on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment and which option was selected when the enrollment account owner was created. However, apart from the account owner, Enterprise Agreement enrollment roles don't provide access to Microsoft Entra ID or the Azure subscriptions within that enrollment.
+There is an inherent trust relationship between Azure subscriptions and a Microsoft Entra tenant, which is described further in [Associate or add an Azure subscription to your Microsoft Entra tenant](/entra/fundamentals/how-subscriptions-associated-directory). An Enterprise Agreement enrollment can also use a Microsoft Entra tenant as an identity provider, depending on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment and which option was selected when the enrollment account owner was created. However, apart from the account owner, Enterprise Agreement enrollment roles don't provide access to Microsoft Entra ID or the Azure subscriptions within that enrollment.
 
 For example, a finance user is granted an Enterprise Administrator role on the Enterprise Agreement enrollment. They're a standard user without elevated permissions or roles assigned to them in Microsoft Entra ID or on any Azure management group, subscription, resource group, or resource. The finance user can only perform the roles listed at [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and can't access the Azure subscriptions on the enrollment. The only Enterprise Agreement role with access to Azure subscriptions is the account owner because this permission was granted when the subscription was created.
 
@@ -64,6 +64,8 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Review [Programmatically create Azure Enterprise Agreement subscriptions with the latest APIs](/azure/cost-management-billing/manage/programmatically-create-subscription-enterprise-agreement?tabs=rest#limitations-of-azure-enterprise-subscription-creation-api) for more information about Enterprise Agreement subscription limitations.
 
+> [!WARNING]
+> You will not be able to create new subscriptions or transfer existing subscriptions from an enrollment account if the associated UPN is deleted from Microsoft Entra ID.
 ## Design recommendations
 
 - Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
@@ -86,10 +88,10 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important Enterprise Agreement prompts to this account.
 
-- Don't move or rename an Enterprise Agreement account in Microsoft Entra ID.
+- Don't move, rename or delete the Entra ID user associated to EA enrollment account.
 
 - Periodically audit the Cost Management blade in the Azure portal to review who has access, and when possible, avoid using a Microsoft account.
 
 - [Enable both **DA View Charges** and **AO View Charges** on every Enterprise Agreement enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Cost Management data.
 
-- Any user that has permissions upon an enrollment to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles), must be protected with multifactor authentication as any other privileged account should be as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)
+- Any user that has permissions upon an enrollment to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles), must be protected with multifactor authentication as any other privileged account should be as documented [here](/entra/identity/role-based-access-control/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)

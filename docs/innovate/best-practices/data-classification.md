@@ -1,8 +1,8 @@
 ---
 title: Classify your organization's data
 description: Use data classification to determine and assign value to your organization's data and provide a common starting point for governance.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.custom: internal

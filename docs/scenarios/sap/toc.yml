@@ -18,7 +18,7 @@ items:
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
-      - name: Resource organization
+      - name: Resource organization considerations for Azure Virtual Desktop
         href: eslz-resource-organization.md
       - name: Governance disciplines
         href: eslz-security-governance-and-compliance.md
@@ -28,14 +28,15 @@ items:
         href: eslz-business-continuity-and-disaster-recovery.md
       - name: Deployment options
         href: eslz-platform-automation-and-devops.md
-      - name: Security 
-        items: 
-        - name: SQL Server database security for SAP on Azure
+      - name: Security with SAP and Azure
+        items:
+        - name: Database security
           href: sap-lza-database-security.md
-        - name: Microsoft Sentinel for SAP on Azure
+        - name: Sentinel for SAP
           href: sap-lza-sentinel-for-sap.md
-        - name: Security operations for SAP on Azure
-          href: sap-lza-security-operations.md  
+        - name: Security operations
+          href: sap-lza-security-operations.md
+    - name: SAP and data
     - name: Implementation options
       items:
       - name: Start small and expand with SAP HANA scale-up on Linux
@@ -54,10 +55,19 @@ items:
         href: sap-lza-choose-azure-connectors.md
       - name: Performance and troubleshooting for SAP data extraction
         href: sap-lza-data-extraction-performance-troubleshooting.md
-      - name: Data integration security
+      - name: SAP data integration with Azure - Security
         href: sap-lza-data-integration-security.md
-      - name: SAP data integration architecture
+      - name: SAP data integration with Azure - Generic architecture
         href: sap-lza-data-example-architecture.md
+    - name: SAP and Microsoft Power Platform
+      items:
+      - name: Extend SAP with Power Platform
+        href: sap-power-platform-fundamental.md
+      - name: SAP and Power Platform architecture workflow
+        href: sap-power-platform-architecture-workflow.md
+      - name: Extend an SAP landing zone to support Power Platform
+        href: sap-power-platform-extend-landing-zone.md
+        
     href: innovate.md
   - name: Manage SAP platform and workloads
     href: manage.md
@@ -353,37 +363,37 @@ items:
     - name: Integrate Microsoft Entra ID with SAP applications
       items:
       - name: Provision users from SAP SuccessFactors to Active Directory
-        href: /azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-successfactors-inbound-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Provision users from SAP SuccessFactors to Microsoft Entra ID
-        href: /azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Write-back users from Microsoft Entra ID to SAP SuccessFactors
-        href: /azure/active-directory/saas-apps/sap-successfactors-writeback-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-successfactors-writeback-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Provision users to SAP Cloud Platform Identity Authentication
-        href: /azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Cloud Platform Identity Authentication
-        href: /azure/active-directory/saas-apps/sap-hana-cloud-platform-identity-authentication-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-hana-cloud-platform-identity-authentication-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP SuccessFactors
-        href: /azure/active-directory/saas-apps/successfactors-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/successfactors-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Analytics Cloud
-        href: /azure/active-directory/saas-apps/sapboc-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /en-us/entra/identity/saas-apps/sapboc-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Fiori
-        href: /azure/active-directory/saas-apps/sap-fiori-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-fiori-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Qualtrics
-        href: /azure/active-directory/saas-apps/qualtrics-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/qualtrics-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Ariba
-        href: /azure/active-directory/saas-apps/ariba-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/ariba-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Concur Travel and Expense
-        href: /azure/active-directory/saas-apps/concur-travel-and-expense-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/concur-travel-and-expense-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Cloud Platform
-        href: /azure/active-directory/saas-apps/sap-hana-cloud-platform-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-hana-cloud-platform-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP NetWeaver
-        href: /azure/active-directory/saas-apps/sap-netweaver-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-netweaver-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Business ByDesign
-        href: /azure/active-directory/saas-apps/sapbusinessbydesign-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sapbusinessbydesign-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP HANA
-        href: /azure/active-directory/saas-apps/saphana-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/saphana-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Configure SSO with SAP Cloud for Customer
-        href: /azure/active-directory/saas-apps/sap-customer-cloud-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
+        href: /entra/identity/saas-apps/sap-customer-cloud-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
     - name: Azure services integration into SAP
       items:
       - name: Use SAP HANA in Power BI Desktop

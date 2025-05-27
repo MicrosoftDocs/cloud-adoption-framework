@@ -1,9 +1,9 @@
 ---
 title: What is a data mesh?
 description: Learn about data mesh in Azure.
-author: simonlid
-ms.author: simonlid
-ms.date: 03/12/2023
+author: mboswell
+ms.author: mboswell
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -14,13 +14,11 @@ Data mesh is an architectural pattern for implementing enterprise data platforms
 
 ## Background
 
-The need for analytics isn't new. Organizations have always needed to analyze business performance, and have done so by using computers since their introduction. Around the 1980s, organizations started to build data warehousing solutions by using databases specifically for decision support. These data warehousing solutions served organizations well for a long time.
+The demand for analytics isn't a recent development. Organizations consistently needed to evaluate business performance and utilized computers for this purpose since their inception. Around the 1980s, organizations started to build data warehousing solutions by using databases specifically for decision support. These data warehousing solutions served organizations well for a long time.
 
-However, as business changes and generates more diverse data, data warehousing solutions that use relational databases might not always be the best solution. In the 2000s, big data became a common term. Businesses adopted new solutions that allow analysis of large volumes of diverse data that could be generated with great velocity. This includes technology, like data lakes, and scale-out solutions that analyze large quantities of data.
+However, as business changes and generates more diverse data, data warehousing solutions that use relational databases might not always be the best solution. In the 2000s, big data became a common term. Businesses adopted new solutions that allow analysis of large volumes of diverse data that could be generated with great velocity. These solutions include technology, like data lakes, and scale-out solutions that analyze large quantities of data.
 
 In recent years, many organizations successfully use modern architectural and analytical patterns that combine data warehousing technologies and more recent big data technologies.
-
-:::image type="content" source="../media/azure-analytics-end-to-end.png" alt-text="Diagram of architecture." lightbox="../media/azure-analytics-end-to-end.png":::
 
 However, some organizations encounter issues when deploying analytical solutions that use analytical patterns. These solutions are commonly still implemented as monolithic solutions, where a single team is the platform provider and the team is doing data integration. Smaller organizations and organizations that have a high degree of centralization from a team setup perspective can use a single team. However, a larger organization using only a single team often creates a bottleneck. This bottleneck causes a huge backlog, which results in parts of an organization waiting for data integration services and analytical solutions.
 
@@ -30,7 +28,7 @@ The recent switch to using microservices as an application development pattern i
 
 A single team handling all data ingestion on a single platform in a large organization can also be problematic. One team rarely has experts for every data source. Most organizations are decentralized and distributed from a business perspective. Different business units and departments handle different parts of the business operation, so data experts are typically spread out across various sectors.
 
-A new architectural pattern called data mesh was introduced recently to solve these problems. Data mesh's goal is to let distributed teams work with and share information in a decentralized and agile manner.
+A pattern called data mesh was introduced to solve these problems. Data mesh's goal is to let distributed teams work with and share information in a decentralized and agile manner.
 
 Data mesh is a technical pattern that also requires organizational change. The benefits of a data mesh approach are achieved by implementing multi-disciplinary teams that publish and consume data products.
 
@@ -81,7 +79,7 @@ You can successfully implement your self-serve platform by adopting the practice
 
 ## Federated governance
 
-When you adopt a self-serve distributed data platform, you must place an increased emphasis on governance. Lack of governance leads to silos and data duplication across your data domains. Federate your governance, as people who understand the governance need exist within your domain aligned teams and amongst data owners.
+When you adopt a self-serve distributed data platform, you must place an increased emphasis on governance. Lack of governance leads to silos and data duplication across your data domains. Federate your governance, as people who understand the governance need exist within your domain aligned teams and among data owners.
 
 To create your federated governance, implement automated policies around both platform and data needs. Use a high degree of automation for testing and monitoring. Adopt a code-first implementation strategy to handle standards, policies, data products, and platform deployment as code.
 
@@ -93,6 +91,7 @@ Data mesh can be an effective way to implement enterprise data platforms, but it
 
 When using data mesh, take special care when implementing your governance so you don't create silos. Always keep product thinking for data at the core of your implementation to ensure success.
 
-## Next Steps
+## Next steps
 
-[Data domains](data-domains.md)
+> [!div class="nextstepaction"]
+> [Data domains](data-domains.md)

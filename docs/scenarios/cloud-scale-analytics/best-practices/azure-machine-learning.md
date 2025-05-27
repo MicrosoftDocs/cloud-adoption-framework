@@ -70,7 +70,7 @@ For each default resource configuration in an data landing zone, an Azure Machin
 
 ### Integration with data landing zone core services
 
-The data landing zone comes with a default set of services that are deployed in the [core services layer](../architectures/data-landing-zone.md#core-services-layer). These core services can be configured when Azure Machine Learning is deployed in data landing zone.
+The data landing zone comes with a default set of services that are deployed in the [platform services layer](../architectures/data-landing-zone.md#platform-services). These core services can be configured when Azure Machine Learning is deployed in data landing zone.
 
 - Connect Azure Synapse Analytics or Databricks workspaces as linked services to integrate data and process big data.
 

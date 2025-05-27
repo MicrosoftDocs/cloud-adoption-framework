@@ -1,8 +1,8 @@
 ---
 title: Best practices for digital inventions
 description: Start browsing best practices for using the Cloud Adoption Framework in Azure and Innovate methodology to create a toolchain for digital invention.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.custom: internal
@@ -17,7 +17,7 @@ Azure can help accelerate the development of each area of digital invention. Thi
 
 There are many combinations of cloud-based tools for digital invention and innovation within Azure. The following image shows an overview of how different digital invention tools align to each type of innovation.
 
-![Diagram that shows the Cloud Adoption Framework innovate toolchain.](../../_images/innovate/innovate-toolchain.png)
+[ ![Diagram that shows the Cloud Adoption Framework innovate toolchain.](../../_images/innovate/innovate-toolchain.png) ](../../_images/innovate/innovate-toolchain.png#lightbox)
 
 ## Toolchain
 

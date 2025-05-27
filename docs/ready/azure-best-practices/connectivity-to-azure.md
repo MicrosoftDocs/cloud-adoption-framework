@@ -2,7 +2,7 @@
 title: Connectivity to Azure
 description: Examine key design considerations and recommendations surrounding network topologies for connecting on-premises to Azure.
 author: JefferyMitchell
-ms.author: martinek
+ms.author: jemitche
 ms.date: 10/28/2021
 ms.topic: conceptual
 ms.custom: think-tank
@@ -50,7 +50,7 @@ This section expands on the network topology to consider recommended models for 
 
 - When low latency is required, or throughput from on-premises to Azure must be greater than 10 Gbps, enable [FastPath](/azure/expressroute/about-fastpath) to bypass the ExpressRoute gateway from the data path.
 
-- Use VPN gateways to connect branches or remote locations to Azure. For higher resilience, deploy [zone-redundant gateways](/azure/vpn-gateway/about-zone-redundant-vnet-gateways) (where available).
+- Use VPN gateways to connect branches or remote locations to Azure. For higher resilience, deploy [zone-redundant gateways](/azure/vpn-gateway/about-zone-redundant-vnet-gateways). See the [retirement announcement](https://azure.microsoft.com/updates?id=vpngw1-5-non-az-skus-will-be-retired-on-30-september-2026) of VpnGw1–5 (non-availability zones SKUs) for more information on new, existing deployments, pricing and migration guidance.
 
 - Use ExpressRoute [Global Reach](/azure/expressroute/expressroute-global-reach) to connect large offices, regional headquarters, or datacenters connected to Azure via ExpressRoute.
 

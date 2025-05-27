@@ -6,6 +6,8 @@ ms.author: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.custom: devx-track-extended-java, linux-related-content
+ms.collection: 
+ - migration
 ---
 
 # Review product migration scenarios
@@ -19,6 +21,14 @@ Specific migration scenarios require different approaches and tools. This articl
 | [Discover AWS instances](/azure/migrate/tutorial-discover-aws) | Complete a tutorial to learn how to discover Amazon Web Services (AWS) instances using the [Azure Migrate: Discovery and assessment tool](/azure/migrate/migrate-services-overview#azure-migrate-discovery-and-assessment-tool>). |
 | [Assess AWS instances for migration to Azure](/azure/migrate/tutorial-assess-aws) | Learn how to assess AWS instances for migration to Azure using the Azure Migrate: Discovery and assessment tool. |
 | [Migrate AWS instances](/azure/migrate/tutorial-migrate-aws-virtual-machines) | Complete a tutorial to learn how to discover and assess AWS virtual machines (VMs), and then migrate them to Azure VMs using the Azure Migrate: Discovery and assessment tool and the Migration and modernization tool. |
+
+## Google Cloud Platform (GCP)
+
+| Link | Description |
+|---|---|
+| [Discover GCP instances](/azure/migrate/tutorial-discover-gcp) | Complete a tutorial to learn how to discover GCP instances by using the [Azure Migrate Discovery and assessment tool](/azure/migrate/migrate-services-overview). |
+| [Assess GCP instances for migration to Azure](/azure/migrate/tutorial-assess-gcp) | Learn how to assess GCP instances for migration to Azure by using the Azure Migrate Discovery and assessment tool. |
+| [Migrate GCP instances](/azure/migrate/tutorial-migrate-gcp-virtual-machines) | Complete a tutorial to learn how to discover and assess GCP VMs, and then migrate them to Azure VMs by using the Azure Migrate Discovery and assessment tool and the Azure Migrate Migration and modernization tool. |
 
 ## Containers
 
@@ -160,11 +170,11 @@ Specific migration scenarios require different approaches and tools. This articl
 | [SAP on Azure migration](https://azure.microsoft.com/solutions/sap/migration/) | Learn how to migrate your SAP estate to Azure, with resources to support your journey at every step. |
 | [Migrate from SAP ASE to Azure SQL](/azure/azure-sql/migration-guides/database/sap-ase-to-sql-database) | Learn how to migrate your SAP Adaptive Server Enterprise (ASE) databases to Azure SQL Database by using SSMA for SAP ASE. |
 
-## Azure Stack HCI
+## Azure Local
 
 | Link | Description |
 |---|---|
-| [Overview of an Azure Migrate-based migration for Azure Stack HCI](/azure-stack/hci/migrate/migration-azure-migrate-hci-overview) | Get an overview of how to migrate Hyper-V VMs to your Azure Stack HCI cluster by using Azure Migrate. |
+| [Overview of an Azure Migrate-based migration for Azure Local](/azure-stack/hci/migrate/migration-azure-migrate-hci-overview) | Get an overview of how to migrate Hyper-V VMs to your Azure Local instance by using Azure Migrate. |
 
 ### Azure Synapse Analytics
 

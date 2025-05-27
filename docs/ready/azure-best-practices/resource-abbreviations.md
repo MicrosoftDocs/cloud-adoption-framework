@@ -3,7 +3,7 @@ title: Abbreviation recommendations for Azure resources
 description: Abbreviation recommendations for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 05/07/2024
+ms.date: 05/23/2025
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit
@@ -23,9 +23,10 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AI Search | `Microsoft.Search/searchServices` | `srch` |
-| Azure AI services | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `ais` |
-| Azure AI Studio hub | `Microsoft.MachineLearningServices/workspaces` (kind: `Hub`) | `hub` |
-| Azure AI Studio project | `Microsoft.MachineLearningServices/workspaces` (kind: `Project`) | `proj` |
+| Azure AI services (multi-service account) | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `ais` |
+| Azure AI Foundry | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `aif` |
+| Azure AI Foundry hub | `Microsoft.MachineLearningServices/workspaces` (kind: `Hub`) | `hub` |
+| Azure AI Foundry project | `Microsoft.CognitiveServices/accounts/projects` (kind: `AIServices`) | `proj` |
 | Azure AI Video Indexer | `Microsoft.VideoIndexer/accounts` | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` (kind: `OpenAI`) | `oai` |
@@ -63,6 +64,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
 | Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh` |
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
+| Event Grid namespace | `Microsoft.EventGrid/namespaces` | `evgns` |
 | Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
 | Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
@@ -88,6 +90,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
+| Azure Arc private link scope | `Microsoft.HybridCompute/privateLinkScopes` | `pls` |
+| Azure Arc gateway | `Microsoft.HybridCompute/gateways` | `arcgw` |
 | Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
 | Communication Services | `Microsoft.Communication/communicationServices` | `acs` |
@@ -187,6 +191,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Blueprint (planned for deprecation) | `Microsoft.Blueprint/blueprints` | `bp` |
 | Blueprint assignment (planned for deprecation) | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
+| Deployment scripts | `Microsoft.Resources/deploymentScripts` | `script` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
@@ -220,6 +225,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
+| ExpressRoute direct | `Microsoft.Network/expressRoutePorts` | `erd` |
 | ExpressRoute gateway | `Microsoft.Network/virtualNetworkGateways` | `ergw` |
 | Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `afd` |
 | Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
@@ -232,6 +238,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw` |
 | NAT gateway | `Microsoft.Network/natGateways` | `ng` |
 | Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic`|
+| Network security perimeter | `Microsoft.Network/networkSecurityPerimeters` | `nsp`|
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
 | Network Watcher | `Microsoft.Network/networkWatchers` | `nw` |

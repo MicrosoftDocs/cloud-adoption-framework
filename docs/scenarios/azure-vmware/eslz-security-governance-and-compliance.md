@@ -2,7 +2,7 @@
 title: Security, governance, and compliance disciplines for Azure VMware Solution
 description: Understand security, governance, and compliance considerations for Azure VMware Solution, and design recommendations and best practices to mitigate risks.
 author: Mahesh-MSFT
-ms.author: martinek
+ms.author: maksh
 ms.date: 04/21/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware
@@ -20,9 +20,9 @@ Consider the following factors when deciding which systems, users, or devices ca
 
 - **Limits on permanent access:** Azure VMware Solution uses the Contributor role in the Azure resource group that hosts the Azure VMware Solution private cloud. Limit permanent access to prevent intentional or unintentional contributor rights abuse. Use a privileged account management solution to audit and limit the time usage of highly privileged accounts.
 
-  Create a Microsoft Entra ID privileged access group within Azure Privileged Identity Management (PIM) to manage Microsoft Entra user and service principal accounts. Use this group to create and manage the Azure VMware Solution cluster with time-bound, justification-based access. For more information, see [Assign eligible owners and members for privileged access groups](/azure/active-directory/privileged-identity-management/groups-assign-member-owner).
+  Create a Microsoft Entra ID privileged access group within Azure Privileged Identity Management (PIM) to manage Microsoft Entra user and service principal accounts. Use this group to create and manage the Azure VMware Solution cluster with time-bound, justification-based access. For more information, see [Assign eligible owners and members for privileged access groups](/entra/id-governance/privileged-identity-management/groups-assign-member-owner).
 
-  Use Microsoft Entra PIM audit history reports for Azure VMware Solution administrative activities, operations, and assignments. You can archive the reports in Azure Storage for long-term audit retention needs. For more information, see [View audit report for privileged access group assignments in Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/groups-audit).
+  Use Microsoft Entra PIM audit history reports for Azure VMware Solution administrative activities, operations, and assignments. You can archive the reports in Azure Storage for long-term audit retention needs. For more information, see [View audit report for privileged access group assignments in Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/groups-audit).
 
 - **Centralized identity management:** Azure VMware Solution provides cloud administrator and network administrator credentials for configuring the VMware private cloud environment. These administrative accounts are visible to all contributors that have role-based access control (RBAC) access to Azure VMware Solution.
 
@@ -163,9 +163,7 @@ Consider and implement the following recommendations when planning for Azure VMw
 
 - **Data retention and residency requirements:** Azure VMware Solution doesn't support retention or extraction of data stored in clusters. Deleting a cluster terminates all running workloads and components, and destroys all cluster data and configuration settings, including public IP addresses. This data can't be recovered.
 
-   Azure VMware Solution doesn't guarantee that all metadata and configuration data for running the service exists only in the deployed geographical region. If your data residency requirements require all data to exist in the deployed region, contact Azure VMware Solution support for assistance.
-
-- **Data processing:** Read and understand the legal terms when you sign up. Pay attention to the [VMware data processing agreement for Microsoft Azure VMware Solution customers transferred for L3 support](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/privacy/vmware-data-processing-agreement.pdf). If a support issue needs VMware support, Microsoft shares professional service data and associated personal data with VMware. From that point on, Microsoft and VMware act as two independent data processors.
+- **Data processing:** Read and understand the legal terms when you sign up. Pay attention to the [VMware data processing agreement for Microsoft Azure VMware Solution customers transferred for L3 support](https://www.vmware.com/docs/vmware-product-guide-july-v1-2021). If a support issue needs VMware support, Microsoft shares professional service data and associated personal data with VMware. From that point on, Microsoft and VMware act as two independent data processors.
 
 ## Next steps
 

@@ -23,7 +23,6 @@ The following table provides an overview of the articles that describe the activ
 
 |Activity|Description|Responsible roles|
 |---|---|---|
-|[Prepare your landing zone for migration](./ready-azure-landing-zone.md)|Learn the components that your landing zone needs to support migration activities.|<li>Landing zone architect|
 |[Prepare tools and an initial migration backlog](./tools-backlog.md)|Learn how to prepare the right tools and build a migration backlog from your digital estate planning.|<li>Project sponsor<br><li> Migration architect<br><li>Project manager|
 |[Select Azure regions for a migration](./select-regions-migration.md)|Learn how to plan for and select the Azure cloud regions for your workload migration to Azure. Find suggested actions for assessment, migration, and other processes.|<li>Migration architect<br><li>Landing zone architect<br><li>Cloud operations manager|
 |[Align roles and responsibilities](./roles-responsibilities.md)|Learn about the roles and functions that you need for a migration project.|<li>Project manager<br><li>Stakeholder|

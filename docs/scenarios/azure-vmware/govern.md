@@ -1,9 +1,9 @@
 ---
 title: Govern Azure VMware Solution
 description: Learn about how to extend your governance approach across the Azure VMware Solution.
-author: mpvenables
-ms.author: martinek
-ms.date: 04/22/2022
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 01/28/2025
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware
 ---
@@ -20,7 +20,7 @@ To extend your governance approach across the Azure VMware Solution, evaluate an
 
 Azure VMware Solution is an Azure service built with VMware products that delivers vSphere clusters, in a single-tenant private cloud environment. It's accessible for users and applications from on-premises vSphere solutions and Azure-based environments or resources. The VMware technology stack in Azure Cloud runs with a highly secure set of compute, storage, and networking technologies.
 
-A required ExpressRoute circuit can connect to Azure Cloud Services with a dedicated private and redundant Layer 3 network fiber connection that supports bandwidth up to 100 Gbps. The Azure VMware Solution also requires an Azure virtual network (VNet) to connect.
+A required ExpressRoute circuit can connect to Azure cloud services with a dedicated private and redundant Layer 3 network fiber connection that supports bandwidth up to 10 Gbps.
 
 All provisioned private clouds have vCenter Server, ESXi, vSAN, and NSX-T Data Center, so you can migrate workloads from your on-premises vSphere environments, deploy new virtual machines (VMs), and consume Azure services from your private clouds.
 
@@ -86,13 +86,13 @@ These are the main focus areas of governance in an initial Azure VMware Solution
 - [An introduction to Azure Automation](/azure/automation/automation-intro)
 - [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 - [Perform actions using Azure Backup Center](/azure/backup/backup-center-overview)
-- [Understand roles in Microsoft Entra ID](/azure/active-directory/roles/concept-understand-roles)
-- [What is Microsoft Entra Privileged Identity Management?](/azure/active-directory/privileged-identity-management/pim-configure)
+- [Understand roles in Microsoft Entra ID](/entra/identity/role-based-access-control/concept-understand-roles)
+- [What is Microsoft Entra Privileged Identity Management?](/entra/id-governance/privileged-identity-management/pim-configure)
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
 - [Extended security updates](/lifecycle/faq/extended-security-updates)
 - [Security alerts and incidents in Microsoft Defender for Cloud](/azure/security-center/security-center-alerts-overview)
-- [Identity governance and administration solutions](/azure/active-directory/governance/identity-governance-overview)
+- [Identity governance and administration solutions](/entra/id-governance/identity-governance-overview)
 
 We recommend you implement an Azure VMware Solution that's secure, and that includes solid governance in your environment for the whole lifecycle. This will help your organization meet compliance requirements, and explore recommended design elements during your implementation.
 
@@ -103,8 +103,7 @@ For more recommendations about security, governance, and overall design, includi
 For more information on how to expand your hybrid governance, see:
 
 - [Save costs with Azure VMware Solution](/azure/azure-vmware/reserved-instance)
-- [How to secure your private cloud environment](/azure/vmware-cloudsimple/private-cloud-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [Using Microsoft Entra ID as an identify provider for vCenter on CloudSimple Private Cloud](/azure/vmware-cloudsimple/azure-ad)
+- [Security recommendations for Azure VMware Solution](/azure/azure-vmware/security-recommendations)
 - [Security Control V2: Asset Management](/security/benchmark/azure/security-controls-v2-asset-management)
 
 ### Azure VMware infrastructure hybridity

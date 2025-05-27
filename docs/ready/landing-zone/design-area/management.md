@@ -1,9 +1,9 @@
 ---
 title: Management for Azure environments
 description: Learn about some design considerations and recommendations for managing your Azure environment.
-author: martinekuan
-ms.author: martinek
-ms.date: 08/30/2022
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 products: azure-monitor
@@ -15,7 +15,7 @@ This design area establishes a foundation for operations management across your 
 
 ## Design area review
 
-**Involved roles or functions:** This design area is led by [central IT](../../../organize/cloud-security.md) or [cloud operations](../../../organize/cloud-operations.md), specifically the [security architects within that team](../../../organize/cloud-security-architecture.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) will likely be required to define and implement the technical requirements coming from this exercise. More advanced operations guardrails might also require support from [cloud governance](../../../organize/cloud-governance.md).
+**Involved roles or functions:** This design area is led by [central IT](../../../organize/central-it.md) or [cloud operations](../../../organize/cloud-operations.md), specifically the [security architects within that team](../../../secure/teams-roles.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) will likely be required to define and implement the technical requirements coming from this exercise. More advanced operations guardrails might also require support from [cloud governance](../../../organize/cloud-governance.md).
 
 **Scope:** The goal of this exercise is to understand operations management requirements and implement those requirements consistently across all workloads in your cloud platform. The primary scope of this exercise focuses on operations tooling. You'll use operations tooling to manage the collective portfolio of workloads with a set of common tools and processes. This initial set of operations tooling is also referred to as your operations baseline.
 
@@ -37,7 +37,7 @@ Use the following operations items to evaluate which operations management tooli
 |-|-|
 |[**Inventory & visibility**](./management-platform.md)|As cloud environments are implemented and scaled out, management controls that span the environment become increasingly important. <br> No matter the services that are running on top of the landing zone, the management of fundamental elements of the platform is necessary to ensure stable, ongoing operations. <br> These management tools should scale as the environments do. <br> They can include a mix of first-party and third-party tools, depending on your existing investments.|
 |[**Operational Compliance**](./management-operational-compliance.md)|Requirements for patching and managing configuration drift. <br>Requirements for automatic or centralize resource optimization and sizing. <br>Requirements for workloads that should only be optimized or resized by the assigned workload teams. <br>Processes for ensuring completion of their regular optimization efforts.|
-|[**Protect & Recover**](./management-business-continuity-disaster-recovery.md)| Your organization needs to design suitable, platform-level capabilities that application workloads can depend on for a basic level of business continuity and disaster recovery.  <br>  Specifically, these application workloads have requirements related to [recover time objective (RTO)](../../../manage/considerations/protect.md#recovery-time-objectives-rto) and [recovery point objective (RPO)](../../../manage/considerations/protect.md#recovery-point-objectives-rpo). Be sure that you capture disaster recovery (DR) requirements to identify and address needs for advanced operations.|
+|[**Protect & Recover**](./management-business-continuity-disaster-recovery.md)| Your organization needs to design suitable, platform-level capabilities that application workloads can depend on for a basic level of business continuity and disaster recovery.  <br>  Specifically, these application workloads have requirements related to [recover time objective (RTO) and recovery point objective (RPO)](../../../manage/protect.md#define-reliability-requirements). Be sure that you capture disaster recovery (DR) requirements to identify and address needs for advanced operations.|
 
 ### Advanced operations
 

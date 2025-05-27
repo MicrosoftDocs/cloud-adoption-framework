@@ -1,110 +1,128 @@
 ---
-title: Design guidance for Azure Virtual Desktop
-description: Learn about the resource organization design area and how to apply it to your Azure Virtual Desktop implementation.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/19/2022
+title: Resource organization considerations for Azure Virtual Desktop
+description: Learn about the resource organization design area and how to apply it to your Azure Virtual Desktop implementation effectively.
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 02/07/2025
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
 ---
 
 # Resource organization considerations for Azure Virtual Desktop
 
-The structure of your resource storage directly determines your options for implementing resource management and governance. This article contains considerations and recommendations to help you design an organization's structure.
+Resource organization affects how you manage and govern your Azure Virtual Desktop resources. This article provides key considerations and recommendations for designing an organization's structure.
 
-Use the guidance this section provides to ensure resource organization and segmentation across:
+Use this guidance to ensure resource organization and segmentation across:
 
-- Management group hierarchies
-- Subscriptions
-- Resource groups
-- Landing zones
-
-Consider using tagging strategies to help organize your resources.
+- Management group hierarchies.
+- Subscriptions.
+- Resource groups.
+- Landing zones.
 
 ## Design considerations
 
-The following sections list things you should consider when planning your organization's Azure Virtual Desktop structure.
+The following sections describe key considerations for organizing your Azure Virtual Desktop resources.
 
 ### Number of virtual machines
 
-How many Azure Virtual Desktop virtual machines (VMs) does your organization require?
+When you plan the number of Azure Virtual Desktop virtual machines (VMs) that your organization needs, consider the following factors:
 
-Don't deploy more than 5,000 VMs in a single region. You can accommodate extra user sessions by increasing individual session host VM resources.
+- Avoid deploying more than 5,000 VMs in a single region because it can create performance bottlenecks, exceed subscription limits, and decrease resiliency. You can accommodate extra user sessions by increasing individual session host VM resources.
 
-If you instead manage an enterprise environment with over 5,000 VMs per subscription in a single region, you should create multiple Azure subscriptions. Place these subscriptions in a hub-spoke architecture, and connect them through virtual network peering. You can increase the number of VMs by deploying VMs in a different region of the same subscription.
+- For [enterprise environments](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) that exceed 5,000 VMs per subscription in each region, create multiple Azure subscriptions by using a [hub-and-spoke architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, VMs can be deployed within the same subscription but across different regions to increase the number of VMs.
 
 ### Regions for host deployment
 
-When you deploy hosts, which regions should you choose?
+Deploy all resources to the same Azure region as your Azure Virtual Desktop deployment. The main resources include:
 
-We generally recommend that you store all resources in the same Azure Region as your deployment of Azure Virtual Desktop. The main resources involved are:
+- Metadata or service objects like host pools, application groups, and workspaces.
 
-- Metadata (Services Objects), such as Host Pools, Application Groups, and Workspaces
-- Session Hosts (Virtual Desktops) compute, such as virtual machines, disks, and network interfaces.
-- VNets (the VNet where the Session Hosts are directly connected)
-- Storage (for FSLogix user profiles)
-- Other resources, such as Azure Compute Galleries, Key Vaults, or images.
+- Session host or virtual desktop compute resources like VMs, disks, and network interfaces.
 
-### Other considerations
+- Virtual networks that directly connect to session hosts.
 
-- Deploying session hosts to the Azure regions closest to your users reduces network connectivity and latency issues and can improve performance.
-- Always consider regional compliance and data residency requirements before you choose a specific region.
-- If you run applications in session hosts in one Azure Region (like Central India) and they need to reach services in another Azure Region (like Central US), application latency often increases. If your session hosts are instead closer to the Azure Region with needed resources (in our current example, Central US), application latency is much less likely to increase.
-- Since you can't assign users to a session host in a specific Azure Region, don't mix session hosts located in different Azure Regions (for example, Central India and Central US) in the same host pool. Create separate session hosts for each Azure Region instead.
+- Storage for FSLogix user profiles.
+
+- Other resources like Azure compute galleries, key vaults, and images.
+
+To manage regions for host deployment:
+
+- Deploy session hosts in Azure regions that are closest to users and necessary resources. This approach minimizes network and application latency, which enhances overall performance. For example, session hosts in central India that reach services in the central US often increase application latency. Placing them closer to the required resources helps mitigate this risk.
+
+- Ensure compliance with regional regulations and data residency requirements when you choose a region.
+
+- Avoid mixing session hosts from different Azure regions. For example, don't mix central India and central US in the same host pool because you can't assign users to a session host in a specific Azure region. Instead, create separate session hosts for each Azure region.
 
 ## Design recommendations
 
-The following sections offer recommendations for labeling and organizing resources in Azure Virtual Desktop.
+The following sections provide guidance on how to manage groups, naming, and tagging in Azure Virtual Desktop.
 
-### Naming and tagging
+### Management settings scope
 
-Naming and tagging standards help you organize resources and simplify resource management, cost tracking, and governance.
+The four levels of management that Azure provides are management groups, subscriptions, resource groups, and resources. You can apply management settings like policies and role-based access control at any management level.
 
-Maintain consistency across resources to help you identify any deviation from agreed-upon policies. [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) describes how one of the following patterns is helpful for deploying governance practices. Similar patterns are available for using tags to evaluate regulatory compliance.
+The following image shows an example of the recommended structure and resource groups to create and use as administrative domains and for lifecycle management in each Azure region.
 
-A standardized naming convention is your starting point for organizing cloud-hosted resources. Properly structured naming systems allow rapid resource identification for both management and accounting purposes. If you follow existing IT naming conventions in other parts of your organization, consider whether to align your cloud naming conventions with them or make your cloud naming conventions unique and separate.
+:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-1.png" alt-text="Screenshot that shows the Azure Virtual Desktop shared resources subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-1.png":::
 
-### Management groups and subscriptions
+#### Components
 
-Group resources logically in management groups so you can target policy and initiative assignments with Azure Policy.
+- **Azure Virtual Desktop service objects:** Create a resource group for Azure Virtual Desktop service objects from the host pool VMs. Service objects include workspaces, host pools, and application groups.
 
-Create management groups under your root-level management group to represent the types of workloads (archetypes) you host, and management groups based on their security, compliance, connectivity, and feature needs. If you use this grouping structure, you can apply a set of Azure policies at the management group level for all workloads that require the same security, compliance, connectivity, and feature settings.
+- **Networking:** Networking is typically created as part of your Azure landing zone.
 
-Subscriptions serve as a scale unit so component workloads can scale within your platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Remember to consider subscription resource limits during your workload design sessions.
+- **Storage:** Create a resource group for storage accounts, if it's not already created as part of your Azure landing zone.
 
-Subscriptions provide a management boundary for governance and isolation, which clearly separates concerns. The following diagrams show the structure and Resource Groups we recommend you create and use as administrative domains and lifecycle purposes for each Azure Region you deploy.
+- **Session hosts compute:** Create a resource group for VMs, disks, and network interfaces. These resources have a different lifecycle from Azure Virtual Desktop service objects.
 
-```text
-    - Azure Virtual Desktop Service Objects:  Create a Resource Group for Azure Virtual Desktop Service Objects from Host Pool VMs.  Service objects like Workspaces, Host Pools and Application Groups.  
-    - Networking:  Generally created as part of the Cloud Adoption Framework Landing zone
-    - Storage:  If not already created as part of Cloud Adoption Framework, create a resource group for storage accounts
-    - Session hosts compute: Create a Resource Group for Virtual Machines, Disks and Network Interfaces. These have a different life cycle than the Azure Virtual Desktop Service Objects. 
-    - Shared Resources:  Create a Resource Group for shared resources like custom VM images, this encourages self-service so you could have a subscription for each business line, for instance.
-    
-    - Basic Structure:
-        - Subscription (AVD-Shared-Resources)
-            - rg-<Azure-Region>-avd-shared-resources
-        - Subscription (AVD)
-            - rg-<Azure-Region>-avd-<Workload>-service-objects
-            - rg-<Azure-Region>-avd-<Workload>-network
-            - rg-<Azure-Region>-avd-<Workload>-pool-compute
-            - rg-<Azure-Region>-avd-<Workload>-storage
-```
+- **Shared resources:** Create a resource group for shared resources such as custom VM images. This approach promotes self-service. For example, you can have a subscription for each business line.
 
-Below is an example from the recommended structure above for the Azure Virtual Desktop resources already deployed.
+  - Basic structure:
+    - Subscription Azure Virtual Desktop-shared-resources
+      - rg-avd-<_Azure-Region_>-shared-resources
+    - Subscription Azure Virtual Desktop landing zone
+      - rg-avd-<_Azure-Region_>-<_Workload_>-service-objects
+      - rg-avd-<_Azure-Region_>-<_Workload_>-pool-compute
+      - rg-avd-<_Azure-Region_>-<_Workload_>-network
+      - rg-avd-<_Azure-Region_>-<_Workload_>-storage
 
-:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD Shared Resources subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
+  :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png" alt-text="Screenshot that shows the AVD service objects and compute subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png":::
 
-:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD Service Objects and compute subscription.":::
+### Naming standards
 
-## Additional guidance and examples 
+A consistent naming standard helps organize resources, streamline management, enable cost tracking, and ensure effective governance. Your naming strategy should include business and operational details in resource names.
 
-- [Azure Virtual Desktop resource organization](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
-- [Naming and tagging in Azure](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+- Business details should include the organizational information to identify teams. Use the resource's short name and the names of the business owners who are responsible for the resource costs.
 
-## Next steps
+- Operational details should include information that helps IT teams identify the workload, application, environment, criticality, and other relevant aspects necessary for managing resources.
 
-Learn about management and monitoring for an Azure Virtual Desktop enterprise-scale scenario.
+A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. For more information, see [Develop a naming strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+
+### Resource tags
+
+Resource tags help evaluate regulatory compliance by logically categorizing Azure resources. For more information about how patterns can support governance practices, see [Govern overview](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging).
+
+Each tag consists of a name and a value. You can use tags to provide context about the associated workload, application, operational requirements, or ownership. For example, you can apply the tag name _environment_ with the value _production_ to categorize all production resources.
+
+Common uses for tags include:
+
+- **Metadata and documentation:** Tags like _ProjectOwner_ help administrators easily view resource details.
+
+- **Automation:** Tags like _ShutdownTime_ or _DeprovisionDate_ can trigger actions through scripts.
+
+- **Cost optimization:** You can use tags to allocate resources to specific teams who are responsible for the costs. In [Microsoft Cost Management](/azure/cost-management-billing/), you can filter reports by the cost center tag to track charges by team or department.
+
+## Related resources
+
+For more information about Azure Virtual Desktop organization and management, see:
+
+- [Azure Virtual Desktop for the enterprise](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
+- [Organize your Azure resources effectively](../../ready/azure-setup-guide/organize-resources.md)
+- [Resource naming and tagging decision guide](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+
+## Next step
+
+Learn more about management and monitoring for an Azure Virtual Desktop enterprise-scale scenario.
 
 > [!div class="nextstepaction"]
-> [Management and monitoring](./eslz-management-and-monitoring.md)
+> [Management baseline considerations for an Azure Virtual Desktop](./eslz-management-and-monitoring.md)

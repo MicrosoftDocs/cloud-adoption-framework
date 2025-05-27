@@ -2,8 +2,8 @@
 title: Transition an existing Azure environment to the Azure landing zone conceptual architecture
 description: Learn how to onboard existing environments and move resources to the Azure landing zone conceptual architecture.
 author: JefferyMitchell
-ms.author: martinek
-ms.date: 10/22/2021
+ms.author: jemitche
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: think-tank, csu
 --- 

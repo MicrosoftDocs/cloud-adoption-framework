@@ -1,8 +1,8 @@
 ---
 title: Rationalize the digital estate
 description: Use cloud rationalization to evaluate your digital assets and determine the best approach to hosting them in the cloud.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.custom: internal
@@ -16,7 +16,7 @@ Watch the following video to get a quick overview about completing a comprehensi
 
 <!-- markdownlint-disable MD034 -->
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWDpel]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=99e648a7-c864-47fb-af49-9a38be9e1eb1]
 
 <!-- markdownlint-enable MD034 -->
 

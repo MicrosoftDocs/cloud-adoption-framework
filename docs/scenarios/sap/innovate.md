@@ -2,7 +2,7 @@
 title: Innovate with SAP and Azure
 description: Innovate with SAP and Azure
 author: PmeshramPM
-ms.author: martinek
+ms.author: pameshra
 ms.date: 07/01/2010
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
@@ -28,6 +28,8 @@ To extend your SAP data platform, use cloud native tools in Azure:
 Learn more about ways you can [build applications](../../innovate/best-practices/apps.md) to extend your SAP platform.
 
 Extend the capabilities of SAP through new applications as:
+
+- Microsoft Power Platform enables low-code and no-code development and makes it easy to innovate by using SAP data. Achieve deeper integration with SAP Business Technology Platform, extend and integrate events between SAP S/4HANA and Azure, and benefit from simplified administration and provisioning. For more information, see [Microsoft Power Platform with SAP](./sap-power-platform-fundamental.md).
 
 - Citizen developers, to empower business teams from sales, payroll, finance, and so on. To extend SAP by creating their own Power Apps and Power Automate solutions using the **SAP ERP** connector.
 - Intelligent experiences, to build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into your modern applications with speech, text, vision, and chat bots.

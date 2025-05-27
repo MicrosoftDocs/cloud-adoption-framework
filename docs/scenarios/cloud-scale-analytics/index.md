@@ -3,7 +3,7 @@ title: Cloud-scale analytics - Microsoft Cloud Adoption Framework for Azure
 description: Gain an overview of an end-to-end scenario for cloud-scale analytics, with a focus on Azure implementation.
 author: mboswell
 ms.author: mboswell
-ms.date: 4/1/2022
+ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank, build-2023, build-2023-dataai
 ---
@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank, build-2023, build-2023-dataai
 
 With larger, more sophisticated forms of cloud adoption, your journey to the cloud becomes more complex. Azure cloud-scale analytics is a scalable, repeatable framework that meets your organization's unique needs for building modern data platforms.
 
-Cloud-scale analytics covers both technical and non-technical considerations for analytics and governance in the cloud. This guidance strives to support hybrid and multicloud adoption by being cloud agnostic, but the included technical implementation examples focus on Azure products.
+Cloud-scale analytics covers both technical and nontechnical considerations for analytics and governance in the cloud. This guidance strives to support hybrid and multicloud adoption by being cloud agnostic, but the included technical implementation examples focus on Azure products.
 
 Cloud-scale analytics has the following goals:
 
@@ -21,7 +21,7 @@ Cloud-scale analytics has the following goals:
 - Drive a default approach to enforce data governance and security
 - Drive teams to consistently prioritize business outcomes instead of focusing just on the underlying technology.
 
-Cloud-scale analytics builds upon Microsoft's cloud adoption framework and requires understanding of [landing zones](../../ready/landing-zone/index.md). If you don't already have an implementation of Azure landing zones, consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
+Cloud-scale analytics builds upon Microsoft's cloud adoption framework and requires an understanding of [landing zones](../../ready/landing-zone/index.md). If you don't already have an implementation of Azure landing zones, consult your cloud teams about how to meet prerequisites. For more information, see [Ensure the environment is prepared for the cloud adoption plan](../../ready/index.md).
 
 Reference architectures allow you to begin with a small footprint and grow over time, adapting the scenario to your use cases.
 
@@ -66,30 +66,11 @@ Cloud-scale analytics has two key architectural concepts:
 
 - The data landing zone
 - The data management landing zone
+- Integration with software-as-a-service solutions such as Microsoft Fabric and Microsoft Purview 
 
 These architectures standardize best practices and minimize deployment bottlenecks for your development teams, and can accelerate the deployment of common cloud-scale analytics solutions. You can adopt their guidance for lakehouse and data mesh architectures. That guidance highlights the capabilities you need for a well-governed analytics platform that scales to your needs.
 
-The following diagram provides an overview of a data platform that contains a central data management landing zone and multiple data landing zones.
-
-:::image type="content" source="./images/data-landing-zone-index.png" alt-text="Diagram of a high-level design containing both a data management landing zone and data landing zones.":::
-
-You can start with a single landing zone and scale to multiple landing zones, and govern all of them from the data management landing zone.
-
 For more information, see: [Architectures Overview](../cloud-scale-analytics/architectures/overview-architectures.md)
-
-## Deployment templates
-
-This section includes many reference templates that can be deployed.
-
-[!INCLUDE [deployment-templates-table](../cloud-scale-analytics/includes/deployment-templates-table.md)]
-
-For more information, see [Deployment templates](./architectures/deployment-templates.md).
-
-## Solution accelerators
-
-Solution Accelerators are open-source projects on GitHub. These repositories contain resources and information that simplify and accelerate your ability to solve problems using technology.
-
-For more information, see [Solution accelerators](../cloud-scale-analytics/architectures/solution-accelerators.md).
 
 ## Best practices
 
@@ -97,10 +78,7 @@ The following advanced, level-300+ articles in the **cloud-scale analytics** tab
 
 - [Data ingestion for cloud-scale analytics](best-practices/data-ingestion.md)
 - [Data lake storage for cloud-scale analytics](best-practices/data-lake-overview.md)
-- [Use Azure Databricks within cloud-scale analytics](best-practices/azure-databricks-implementation.md)
 - [Use Azure Synapse Analytics for cloud-scale analytics](best-practices/azure-synapse-analytics-implementation.md)
-- [Azure Purview readiness checklist for cloud-scale analytics](best-practices/purview-checklist.md)
-- [Azure Machine Learning as a data product for cloud-scale analytics](best-practices/data-science-best-practices.md)
 
 ## Featured Azure products
 
@@ -112,9 +90,7 @@ The following common customer journeys support cloud-scale analytics:
 
 - **Prepare your environment.** Use the [Prepare your environment](./plan.md) articles as resources. Establish processes and approaches that support the entire portfolio of workloads across your data estate.
 
-- **Improve controls across your data estate.** Focus on the [Govern your data estate](./govern.md) and [Secure your data estate](./secure.md) articles to integrate cloud-scale analytics into your existing operations.
-
-- **Influence changes to individual workloads.** As your cloud-scale analytics processes improve, your central data governance teams will find requirements that depend on knowledge of the architecture behind individual workloads. Use the [Architecture](../cloud-scale-analytics/architectures/overview-architectures.md) articles to understand how you can use the scenarios within for your use case.
+- **Influence changes to individual workloads.** As your cloud-scale analytics processes improve, your central data governance teams find requirements that depend on knowledge of the architecture behind individual workloads. Use the [Architecture](../cloud-scale-analytics/architectures/overview-architectures.md) articles to understand how you can use the scenarios within for your use case.
 
 - **Optimize individual workloads and workload teams.** Start with the [Azure Well-Architected Framework](./well-architected-framework.md) guidance to integrate cloud-scale analytics strategies into individual workloads. This guidance describes best practices and architectures that central IT and governance teams should use to accelerate individual workload development.
 

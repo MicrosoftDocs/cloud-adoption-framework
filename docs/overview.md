@@ -1,8 +1,8 @@
 ---
 title: Microsoft Cloud Adoption Framework for Azure documentation
 description: Get tools, guidance, and narratives to help shape strategies and drive desired business outcomes during your cloud adoption journey.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/26/2022
 ms.topic: conceptual
 ms.subservice: caf-general
@@ -19,7 +19,7 @@ Following best practices for the Cloud Adoption Framework allows your organizati
 
 <br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tyzr]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=29c05e49-fe39-41b0-be7d-c89219f87529]
 
 <!-- markdownlint-enable MD034 -->
 
@@ -29,13 +29,13 @@ The Cloud Adoption Framework brings together cloud adoption best practices from 
 |--|--|--|--|
 | <br> ![Strategy icon](./_images/icons/strategy.png) | <br> [Strategy](./strategy/index.md): Define business justification and expected adoption outcomes. | <br> ![Plan icon](./_images/icons/plan.png) | <br> [Plan](./plan/index.md): Align actionable adoption plans to business outcomes. |
 | <br> ![Ready icon](./_images/icons/ready.png)       | <br> [Ready](./ready/index.md): Prepare your cloud environment for planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | <br> [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |
-| <br> ![Innovate icon](./_images/icons/innovate.png) | <br> [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Secure icon](./_images/icons/security.png) | <br> [Secure](./secure/index.md): Improve security over time. |
+| <br> ![Innovate icon](./_images/icons/innovate.png) | <br> [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Secure icon](./_images/icons/security.png) | <br> [Secure](./secure/overview.md): Improve security over time. |
 | <br> ![Manage icon](./_images/icons/manage.png)     | <br> [Manage](./manage/index.md): Manage operations for cloud and hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | <br> [Govern](./govern/index.md): Govern your environment and workloads. |
 | <br> ![Organize icon](./_images/icons/organize.png) | <br> [Organize](./organize/index.md): Align the teams and roles supporting your organization's cloud adoption efforts. |
 
 ## Understand the lifecycle
 
-Each methodology listed above is part of a broad cloud adoption lifecycle. The Cloud Adoption Framework supports you throughout each phase of your cloud adoption journey. The following diagram outlines how the framework uses methodologies as approaches to overcoming common blockers.
+Each methodology is part of a broad cloud adoption lifecycle. The Cloud Adoption Framework supports you throughout each phase of your cloud adoption journey. The following diagram outlines how the framework uses methodologies as approaches to overcoming common blockers.
 
 :::image type="content" source="./_images/caf-overview-graphic.png" alt-text="Diagram showing an overview of Microsoft's Cloud Adoption Framework.":::
 

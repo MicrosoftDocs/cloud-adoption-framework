@@ -132,7 +132,7 @@ Review the critical design areas to make complete considerations and recommendat
 
 - [What is Microsoft Defender for Cloud?](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
-- [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview)
+- [What are managed identities for Azure resources?](/entra/identity/managed-identities-azure-resources/overview)
 
 - [Authenticate access to Azure resources with managed identities in Azure Logic Apps](/azure/logic-apps/create-managed-service-identity?tabs=standard)
 

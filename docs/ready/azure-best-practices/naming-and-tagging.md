@@ -1,9 +1,9 @@
 ---
 title: Develop your naming and tagging strategy for Azure resources
 description: Read an overview of resource naming and tagging strategy for enterprise cloud adoption efforts.
-author: martinekuan
-ms.author: martinek
-ms.date: 12/22/2021
+author: paulgrimley
+ms.author: paulgr
+ms.date: 05/22/2025
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit, UpdateFrequency3
 ---
@@ -17,6 +17,7 @@ Define your naming and tagging strategy as early as possible. Use the following 
 - [Define your naming convention](./resource-naming.md)
 - [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
 - [Define your tagging strategy](./resource-tagging.md)
+- [Label mission-critical workloads](/azure/azure-resource-manager/management/tag-mission-critical-workload)
 - [Resource naming and tagging decision guide](./resource-naming-and-tagging-decision-guide.md)
 - [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
 

@@ -5,6 +5,8 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual
+ms.collection: 
+ - migration
 ---
 
 # Optimize cost after migration
@@ -27,7 +29,7 @@ After you migrate to Azure, you have new tools available to manage your resource
 |Azure Reserved Virtual Machine Instances|Reserved instances let you commit to resources in Azure that run frequently. Consider reserving instances for workloads that are always active.|<li>[Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)<br><li>[Azure virtual machine (VM) sizing for maximum reservation usage](/partner-center/azure-usage)|
 |Azure savings plans|Azure savings plans provide savings up to 65% compared to pay-as-you-go pricing when you commit to spending a fixed hourly amount on compute services for one or three years.|<li>[Azure savings plans recommendations](/azure/cost-management-billing/savings-plan/purchase-recommendations)|
 |Cost management|You can use Microsoft Cost Management to monitor and manage the costs of the environment.|<li>[Cost Management](/azure/cost-management-billing/cost-management-billing-overview)<br><li>[Reservation recommendations in Advisor](/azure/cost-management-billing/reservations/reserved-instance-purchase-recommendations#recommendations-in-azure-advisor)|
-|Financial operations documentation|Financial operations is a discipline that combines financial management principles with cloud engineering and operations to provide organizations with a better understanding of their cloud spending.|<br><li>[What is financial operations?](/azure/cost-management-billing/finops/overview-finops)|
+|The FinOps framework|FinOps is a discipline that combines financial management principles with cloud engineering and operations to provide organizations with a better understanding of their cloud spending.|<br><li>[What is FinOps?](/azure/cost-management-billing/finops/overview-finops)|
 
 ## Decommission retired assets
 

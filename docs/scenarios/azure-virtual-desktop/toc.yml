@@ -21,7 +21,7 @@ items:
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: eslz-network-topology-and-connectivity.md
-      - name: Resource organization
+      - name: Resource organization considerations for Azure Virtual Desktop
         href: eslz-resource-organization.md
       - name: Management and monitoring
         href: eslz-management-and-monitoring.md

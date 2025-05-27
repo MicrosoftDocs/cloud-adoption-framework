@@ -3,37 +3,36 @@ title: Security design in Azure
 description: Learn about design area guidance to establish a foundation for security in Azure, hybrid, or multicloud environments.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 06/21/2022
+ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
 
 # Design area: Security
 
-This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Secure methodology](../../../secure/index.md) of the Cloud Adoption Framework.
+This design area creates a foundation for security across your Azure, hybrid, and multicloud environments. You can enhance this foundation later with security guidance outlined in the [Secure methodology](../../../secure/overview.md) of the Cloud Adoption Framework.
 
 ## Design area review
 
-**Involved roles or functions:** This design area is led by [cloud security](../../../organize/cloud-security.md), specifically the [security architects within that team](../../../organize/cloud-security-architecture.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) are required to review networking and identity decisions. The collective roles might be required to define and implement the technical requirements coming from this exercise. More advanced security guardrails might also need support from [cloud governance](../../../organize/cloud-governance.md).
+**Involved roles or functions:** This design area is led by [cloud security](../../../secure/teams-roles.md), specifically the [security architects within that team](../../../secure/teams-roles.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) are required to review networking and identity decisions. The collective roles might be required to define and implement the technical requirements coming from this exercise. More advanced security guardrails might also need support from [cloud governance](../../../organize/cloud-governance.md).
 
 **Scope:** The goal of this exercise is to understand security requirements and implement them consistently across all workloads in your cloud platform. The primary scope of this exercise focuses on security operations tooling and access control. This scope includes Zero Trust and advanced network security.
 
-**Out of scope:** This exercise focuses on the foundation for a modern security operations center in the cloud. To streamline the conversation, this exercise doesn't address some of the disciplines in the [CAF Secure methodology](../../../secure/index.md). Security operations, asset protection, and innovation security will build on your Azure landing zone deployment. However, they're out of scope for this design area discussion.
+**Out of scope:** This exercise focuses on the foundation for a modern security operations center in the cloud. To streamline the conversation, this exercise doesn't address some of the disciplines in the [CAF Secure methodology](../../../secure/overview.md). Security operations, asset protection, and innovation security will build on your Azure landing zone deployment. However, they're out of scope for this design area discussion.
 
 ## Design area overview
 
 Security is a core consideration for all customers, in every environment. When designing and implementing an Azure landing zone, security should be a consideration throughout the process.
 
-The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/index.md) of the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
+The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/overview.md) of the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
 
 **New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
 
 **Existing (brownfield) cloud environment:** Consider using the following [Microsoft Entra](https://www.microsoft.com/security/business/microsoft-entra) identity and access services if you are interested in applying the principles from security design area to existing Azure environments:
 
-- Make use of Microsoft's [top 10 Azure security best practices](../../../secure/security-top-10.md). This guidance summarizes field-proven guidance from Microsoft cloud solution architects (CSAs) as well as Microsoft Partners.
-- Deploy [Microsoft Entra Connect cloud sync](/azure/active-directory/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Microsoft Entra ID-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Microsoft Entra multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [Microsoft Entra Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to further protect these identities
-- Consider [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) to provided secure authentication to your cloud apps and Azure resources.
-- Implement [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
+- Deploy [Microsoft Entra Connect cloud sync](/entra/identity/hybrid/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Microsoft Entra ID-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [Microsoft Entra Password Protection](/entra/identity/authentication/concept-password-ban-bad-on-premises) to further protect these identities
+- Consider [Microsoft Entra Conditional Access](/entra/identity/conditional-access/policy-all-users-mfa-strength) to provided secure authentication to your cloud apps and Azure resources.
+- Implement [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
 - Make use of the recommendations, alerting, and remediation capabilities of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Your security team can also integrate Microsoft Defender for Cloud into [Microsoft Sentinel](/azure/sentinel/overview) if they need a more robust, centrally managed hybrid and multicloud Security Information Event Management (SIEM)/Security Orchestration and Response (SOAR) solution.
 
 The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains a number of Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice security guidance integrated within them.
@@ -65,13 +64,13 @@ An organization must have visibility into what's happening within their technica
 | Security logs |- Data retention periods for audit data. Microsoft Entra ID P1 or P2 reports have a 30-day retention period. <br> - Long-term archiving of logs like Azure activity logs, virtual machine (VM) logs, and platform as a service (PaaS) logs.|
 | Security controls| - Baseline security configuration via Azure in-guest VM policy. <br> - Consider how your security controls will align with governance guardrails. |
 | Vulnerability management | - Emergency patching for critical vulnerabilities. <br> - Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
-| Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](../../../secure/security-operations.md). |
+| Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](../../../secure/overview.md). |
 | Encryption and keys | - Who requires access to keys in the environment? <br> - Who will be responsible for managing the keys? <br> - Explore [encryption and keys further](./encryption-and-keys.md). |
 | Attestation | - Will you use Trusted Launch for your VMs, and do you need attestation of the integrity of the entire boot chain of your VM (UEFI, OS, system, and drivers)? <br> - Do you want to take advantage of confidential disk encryption for your confidential VMs? <br> - Do your workloads require attestation that they're running inside a trusted environment? |
 
 ### Security operations design recommendations
 
-- Use [Microsoft Entra ID reporting capabilities](/azure/active-directory/reports-monitoring/concept-audit-logs) to generate access control audit reports.
+- Use [Microsoft Entra ID reporting capabilities](/entra/identity/monitoring-health/concept-audit-logs) to generate access control audit reports.
 
 - Export Azure activity logs to Azure Monitor Logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
 
@@ -114,7 +113,7 @@ For Zero Trust access with identities, you should consider:
 - Who should receive the notifications when privileged roles are activated?
 - Who should have access to the audit history?
 
-For more information, see [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure).
+For more information, see [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure).
 
 Implementing Zero Trust can go beyond just identity and access management. You should consider if your organization needs to implement Zero Trust practices across multiple pillars, such as infrastructure, data, and networking. For more information, see [Incorporate Zero Trust practices in your landing zone](security-zero-trust.md)
 
@@ -128,7 +127,7 @@ Implementing Zero Trust can go beyond just identity and access management. You s
 
 - Align your security requirements with Azure platform roadmaps to stay current with newly released security controls.
 
-- Implement a [zero-trust approach for access](../../../secure/access-control.md) to the Azure platform where appropriate.
+- Implement a [zero-trust approach for access](/security/zero-trust/deploy/identity) to the Azure platform where appropriate.
 
 ## Security in the Azure landing zone accelerator
 
@@ -159,4 +158,4 @@ Policies for online and corporate-connected landing zones:
 Learn how to secure privileged access for hybrid and cloud deployments in Microsoft Entra ID.
 
 > [!div class="nextstepaction"]
-> [Secure privileged access](/azure/active-directory/roles/security-planning)
+> [Secure privileged access](/entra/identity/role-based-access-control/security-planning)

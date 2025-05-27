@@ -1,232 +1,186 @@
 ---
-title: Data landing zones
-description: Learn about cloud-scale analytics architecture data landing zones in Azure.
+title: Data Landing Zones
+description: Learn about cloud-scale analytics architecture data landing zones in Azure that connect to your data management landing zone via virtual network peering or private endpoints.
 author: mboswell
 ms.author: mboswell
-ms.date: 04/11/2022
+ms.date: 02/14/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Data landing zones
 
-Data landing zones are connected to your [data management landing zone](./data-management-landing-zone.md) by virtual network (VNet) peering. Each data landing zone is considered a [landing zone](../../../ready/landing-zone/index.md) related to Azure landing zone architecture.
+Data landing zones are connected to your [data management landing zone](./data-management-landing-zone.md) by virtual network peering or private endpoints. Each data landing zone is considered a [landing zone](../../../ready/landing-zone/index.md) related to Azure landing zone architecture.
 
 > [!IMPORTANT]
-> Before provisioning a data landing zone, make sure your DevOps and CI/CD operating model is in place and a data management landing zone is deployed.
->
+> Before you provision a data landing zone, ensure that your DevOps and continuous integration and continuous delivery (CI/CD) operating model is in place and that a data management landing zone is deployed.
 
-Each data landing zone has several layers that enable agility for the service data integrations and data products it contains. You can deploy a new data landing zone with a standard set of services that let the data landing zone begin ingesting and analyzing data.
+Each data landing zone has several layers that enable agility for the service data integrations and data applications it contains. You can deploy a new data landing zone with a standard set of services that allow the data landing zone to ingest and analyze data.
 
-Your Azure subscription associated with your data landing zone has the following structure:
+The following table shows the structure of a typical Azure subscription associated with a data landing zone.
 
-| Layer | Required |Resource groups |
+| Layer | Required | Resource groups |
 |---|---|---|
-|[Core services](#core-services-layer) | Yes |<ul><li>[Network](#networking) <li> [Monitoring for Azure Databricks workspaces](#azure-databricks-workspaces-monitoring) <li>[Hive metastore for Azure Databricks](#hive-metastore-for-azure-databricks) <li> [Data lake services](#data-lake-services) <li> [Upload ingest storage](#upload-ingest-storage) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared integration runtimes](#shared-integration-runtimes) <li> [CI/CD Agents](#cicd-agents) <li> [Data agnostic ingestion](#data-agnostic-ingestion) <li> [Shared Databricks](#shared-databricks) <li> [Shared Azure Synapse Analytics](#shared-azure-synapse-analytics) |
-|[Data application](#data-application)     |Optional         |<ul><li>[Data application](#data-product-resource-group) (1 or more)</li></ul>         |
-|[Visualization](#visualization)    |Optional         |<ul><li>[Reporting and visualization](#visualization)</li></ul>         |
+| [Platform services layer](#platform-services) | Yes | <ul> <li> [Network](#networking) </li> <li> [Security](#security-and-monitoring) </li> </ul> |
+| [Core services](#core-services) | Yes | <ul> <li> [Storage](#storage) </li> <li> [Shared integration runtimes (IRs)](#shared-irs) </li> <li> [Management](#management) </li> <li> [External storage](#external-storage) </li> <li> [Data ingestion](#data-ingestion) </li> <li> [Shared applications](#shared-applications) </li> </ul> |
+| [Data application](#data-application) | Optional | <ul> <li> [Data application](#data-application-resource-group) (one or more) </li> </ul> |
+| [Reporting and visualization](#reporting-and-visualization) | Optional | <ul> <li> [Reporting and visualization](#reporting-and-visualization) </li> </ul> |
 
 > [!NOTE]
-> A data application produces one or more data products.
+> The core services layer is marked as required, but not all resource groups and services included in this article might be necessary for your data landing zone.
 
 ## Data landing zone architecture
 
-Data landing zone architecture illustrates the layers, their resource groups, and services each resource group contains. The architecture also provides an overview of all groups and roles associated with your data landing zone, plus the extent of their access to your control and data planes.
+The following data landing zone architecture illustrates the layers, their resource groups, and the services that each resource group contains. The architecture provides an overview of all groups and roles associated with your data landing zone and the extent of their access to your control and data planes. The architecture also illustrates how each layer aligns with the operating model responsibilities.
 
-:::image type="content" source="../images/data-landing-zone-2.png" alt-text="Diagram of the data landing zone architecture." lightbox="../images/data-landing-zone-2.png":::
+:::image type="content" source="../images/data-landing-zone.png" alt-text="Diagram of the data landing zone architecture." border="false" lightbox="../images/data-landing-zone.png":::
 
- > [!TIP]
-> Before you deploy a data landing zone, make sure you [consider the number of initial data landing zones you want to deploy](../../cloud-scale-analytics/architectures/scale-architectures.md).
+> [!TIP]
+> Before you deploy a data landing zone, make sure to [consider the number of initial data landing zones that you want to deploy](../../cloud-scale-analytics/architectures/scale-architectures.md).
 
-Use this architecture as a starting point. Download the [Visio file](https://www.microsoft.com/download/details.aspx?id=104215) and modify it to fit your specific business and technical requirements when planning your data landing zone implementation.
+## Platform services
 
-## Core services layer
+The platform services layer includes services required to enable connectivity and observability to your data landing zone within the context of cloud-scale analytics. The following table lists the recommended resource groups.
 
-The core services layer includes all services required to enable your data landing zone within the context of cloud-scale analytics. The following table lists the resource groups that provide the standard suite of available services in every data landing zone you deploy.
-
-| Resource Group              | Required | Description             |
-|-----------------------------|----------|-------------------------|
-|  `network-rg`               | Yes      | Networking              |
-|  `databricks-monitoring-rg` | Optional | Monitoring for Azure Databricks workspaces |
-|  `hive-rg`                  | Optional | Hive metastore for Azure Databricks   |
-|  `storage-rg`               | Yes      | Data lakes services     |
-|  `external-data-rg`         | Yes      | Upload ingest storage   |
-|  `runtimes-rg`              | Yes      | Shared integration runtimes |
-|  `mgmt-rg`                  | Yes      | CI/CD Agents |
-|  `metadata-ingestion-rg`    | Optional | Data agnostic ingestion |
-|  `databricks-monitoring-rg` | Optional | Log analytics workspace for databricks workspaces in landing zone|
-|  `shared-synapse-rg`        | Optional | Shared Azure Synapse |
-|  `shared-databricks-rg`     | Optional | Shared Azure Databricks workspace |
+| Resource group | Required | Description |
+|----------------|----------|-------------|
+| `network-rg` | Yes | Networking |
+| `security-rg` | Yes | Security and monitoring |
 
 ### Networking
 
-:::image type="content" source="../images/data-landing-zone-network-rg.png" alt-text="Diagram of a data landing zone network resource group.":::
+The network resource group contains connectivity services, including [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview), [network security groups](/azure/virtual-network/network-security-groups-overview), and [route tables](/azure/virtual-network/virtual-networks-udr-overview). All these services are deployed into a single resource group.
 
-The network resource group contains core components, including Azure [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), [network security groups](/azure/virtual-network/network-security-groups-overview) (NSG), and a virtual network. All of these services are deployed into a single resource group.
+The virtual network of your data landing zone is [automatically peered with your data management landing zone's virtual network](../eslz-network-topology-and-connectivity.md) and your [connectivity subscription's virtual network](../../../ready/landing-zone/index.md).
 
-The virtual network of your data landing zone is [automatically peered with your data management landing zone's VNet](../eslz-network-topology-and-connectivity.md) and your [connectivity subscription's VNet](../../../ready/landing-zone/index.md).
+### Security and monitoring
 
-### Azure Databricks workspaces monitoring
+The security and monitoring resource group includes [Azure Monitor](/azure/azure-monitor/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to collect service telemetry, define monitoring criteria and alerts, and apply policies and scanning to services.
 
-This resource group is optional and only deploys with Azure Databricks.
+## Core services
 
-:::image type="content" source="../images/data-landing-zone-monitoring-rg.png" alt-text="Diagram of data landing zone monitoring resource group.":::
+The core services layer includes foundational services required to enable your data landing zone within the context of cloud-scale analytics. The following table lists the resource groups that provide the standard suite of available services in every data landing zone that you deploy.
 
-The Azure landing zone pattern recommends that you send all logs to a central Log Analytics workspace. However, each data landing zone also includes a monitoring resource group to capture Spark logs from Databricks. Each resource group contains a shared Log Analytics workspace and Azure Key Vault to store Log Analytics keys.
+| Resource group | Required | Description |
+|----------------|----------|-------------|
+| `storage-rg` | Yes | Data lake services |
+| `runtimes-rg` | Yes | Shared IRs |
+| `mgmt-rg` | Yes | CI/CD agents |
+| `external-data-rg` | Yes | External data storage |
+| `data-ingestion-rg` | Optional | Shared data ingestion services |
+| `shared-applications-rg` | Optional | Shared applications (Azure Synapse Analytics or Azure Databricks) |
 
-> [!IMPORTANT]
-> Only use the Log Analytics workspace in your Databricks monitoring resource group to capture Azure Databricks Spark logs.
+### Storage
 
-For more information, see [Monitoring Azure Databricks](/azure/architecture/databricks-monitoring/).
-
-### Hive metastore for Azure Databricks
-
-This resource group is optional and should only be deployed with Azure Databricks.
-
-The Hive metastore for Azure Databricks provisions an Azure Database for MySQL database and a key vault. All Azure Databricks workspaces in your data landing zone use this metastore as their external Apache Hive metastore.
-
-For more information, see [External Apache Hive metastore](/azure/databricks/data/metastores/external-hive-metastore).
-
-### Data lake services
-
-:::image type="content" source="../images/data-landing-zone-data-lake-services-rg.png" alt-text="Diagram of data landing zone data lake services resource group.":::
-
-As shown in the previous diagram, three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts are provisioned in a single data lake services resource group. Data transformed at different stages is saved in one of your data landing zone's data lakes. The data is available for consumption by your analytics, data science, and visualization teams.
+The previous diagram shows three [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) accounts provisioned in a single data lake services resource group. Data transformed at different stages is saved in one of your data landing zone's data lakes. The data is available for consumption by your analytics, data science, and visualization teams.
 
 [!INCLUDE [data-lake-layers](../../cloud-scale-analytics/includes/data-lake-layers.md)]
 
 > [!NOTE]
-> In the previous diagram, each data landing zone has three data lakes. However, depending on your requirements, you might want to consolidate your raw, enriched and curated layers into one storage account, and maintain another storage account called 'development' for data consumers to bring in other useful data products.
+> In the previous diagram, each data landing zone has three data lake storage accounts. Depending on your requirements, you can choose to consolidate your raw, enriched, and curated layers into one storage account and maintain another storage account called *workspace* for data consumers to bring in other useful data products.
 
 For more information, see:
 
 - [Overview of Azure Data Lake Storage for cloud-scale analytics](../best-practices/data-lake-overview.md)
-- [Data Standardization](../../cloud-scale-analytics/architectures/data-standardization.md)
-- [Provision Azure Data Lake Storage Gen2 accounts for each data landing zone](../../cloud-scale-analytics/best-practices/data-lake-zones.md)
-- [Key considerations for Azure Data Lake Storage](../best-practices/data-lake-key-considerations.md)
-- [Access control and data lake configurations in Azure Data Lake Storage](../best-practices/data-lake-access.md)
+- [Data standardization](../../cloud-scale-analytics/architectures/data-standardization.md)
+- [Data lake zones and containers](../../cloud-scale-analytics/best-practices/data-lake-zones.md)
+- [Key considerations for Data Lake Storage](../best-practices/data-lake-key-considerations.md)
+- [Access control and data lake configurations in Data Lake Storage](../best-practices/data-lake-access.md)
 
-### Upload ingest storage
+### Shared IRs
 
-Third-party data publishers need to land data in your platform so your data application teams can pull it into their data lakes. As seen in the following diagram, your upload ingest storage resource group lets you provision blob stores for third-parties.
+Azure Data Factory and Azure Synapse Analytics pipelines use IRs to securely access data sources in peered or isolated networks. Shared IRs should be deployed to a virtual machine (VM) or Azure Virtual Machine Scale Sets in the shared IR resource group.
 
-![Diagram of upload ingest storage service.](../images/data-landing-zone-ingest-storage.png)
+To enable the shared resource group:
 
-Your data application teams request these storage blobs. Their requests are then approved by your data landing zone operations team. Data should be removed from its source storage blob once it's been pulled from the storage blob into raw.
+- Create at least one Azure Data Factory instance in your data landing zone's shared integration resource group. Use it only for linking the shared self-hosted IR, not for data pipelines.
 
-> [!IMPORTANT]
-> Since Azure Storage blobs are provisioned on an *as-needed* basis, you should initially deploy an empty storage services resource group in each data landing zone.
+- [Create and configure a self-hosted IR](/azure/data-factory/create-self-hosted-integration-runtime) on the VM.
 
-### Shared integration runtimes
+- Associate the self-hosted IR with Azure data factories in your data landing zones.
 
-Deploy a virtual machine with self-hosted integration runtimes into your data landing zone. Host it in the shared integration resource group. This deployment lets you rapidly onboard data products to your data landing zone.
-
-:::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
-
-To enable the resource group:
-
-- Create at least one Azure Data Factory in your data landing zone's shared integration resource group. Use it only for linking the shared self-hosted integration runtime, not for data pipelines.
-- [Create and configure a self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime) on the virtual machine.
-- Associate the self-hosted integration runtime with Azure data factories in your data landing zone(s).
-- Set up Azure Automation to [periodically update the self hosted integration runtime](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
+- Use PowerShell scripts to [periodically update the self-hosted IR](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
 
 > [!NOTE]
-> The above deployment provides a single virtual machine deployment with self hosted integration runtimes. You can associate a self-hosted integration runtime with multiple on-premises machines or virtual machines in Azure. These machines are called nodes. You can have up to four nodes associated with a self-hosted integration runtime. The benefits of having multiple nodes on on-premises machines that have a gateway installed for a logical gateway are:
+> The deployment describes a single VM deployment that has a self-hosted IR. You can associate a self-hosted IR with multiple VMs on-premises or in Azure. These machines are called nodes. You can have up to four nodes associated with a self-hosted IR. The benefits of having multiple nodes include:
 >
-> - Higher availability of the self-hosted integration runtime so that it's no longer the single point of failure in your big data solution or cloud data integration. This availability helps ensure continuity when you use up to four nodes.
-> - Improved performance and throughput during data movement between on-premises and cloud data stores. Get more information on [performance comparisons](/azure/data-factory/copy-activity-performance).
+> - Higher availability of the self-hosted IR so that it's no longer the single point of failure in your data application or in the orchestration of cloud data integration.
 >
-> You can associate multiple nodes by installing the self-hosted integration runtime software from [Download Center](https://www.microsoft.com/download/details.aspx?id=39717). Then, register it by using either of the authentication keys that were obtained from the **New-AzDataFactoryV2IntegrationRuntimeKey** cmdlet, as described in the [tutorial](/azure/data-factory/tutorial-hybrid-copy-powershell).
+> - Improved performance and throughput during data movement between on-premises and cloud data services. For more information, see [Copy activity performance and scalability guide](/azure/data-factory/copy-activity-performance).
 >
-> Futher information is detailed in [Azure Datafactory High availability and scalability](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
+> You can associate multiple nodes by installing the self-hosted IR software from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=39717). Then register it by using either of the authentication keys obtained from the **New-AzDataFactoryV2IntegrationRuntimeKey** cmdlet, as described in the [tutorial](/azure/data-factory/tutorial-hybrid-copy-powershell).
+>
+> For more information, see [Azure Data Factory high availability and scalability](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
+
+Make sure to deploy shared IRs as close to the data source as possible. You can deploy the IRs in a data landing zone, into non-Microsoft clouds, or into a private cloud if the VM has connectivity to the required data sources.
+
+### Management
+
+CI/CD agents run on VMs and help deploy artifacts from the source code repository, including data applications and changes to the data landing zone.
+
+For more information, see [Azure Pipelines agents](/azure/devops/pipelines/agents/agents).
+
+### External storage
+
+Partner data publishers need to land data in your platform so that your data application teams can pull it into their data lakes. You can also have internal or external data sources that can't support the connectivity or authentication requirements enforced across the rest of the data landing zones. The recommended approach is to use a separate storage account to receive data. Then use a shared IR or similar ingestion process to bring it into your processing pipeline.
+
+The data application teams request the storage blobs. These requests get approved by the data landing zone operations team. Data should be deleted from its source storage blob after it's ingested into the raw data storage.
 
 > [!IMPORTANT]
-> Deploy shared integration runtimes as close to the data source as possible. Their deployment does not restrict your deployment of integration runtimes in a data landing zone or into third-party clouds. Instead, it provides a fallback for cloud native, in-region data sources.
+> Because Azure Storage blobs are provisioned on an *as-needed* basis, you should initially deploy an empty storage services resource group in each data landing zone.
 
-### CI/CD Agents
+### Data ingestion
 
-CI/CD Agents help you deploy data applications and changes to the data landing zone.
+This resource group is optional and doesn't prevent you from deploying your landing zone. It applies if you have, or are developing, a data-agnostic ingestion engine that automatically ingests data based on registered metadata. This feature includes connection strings, paths for data transfer, and ingestion schedules.
 
-For more information, see [Azure Pipeline agents](/azure/devops/pipelines/agents/agents).
+The ingestion and processing resource group has key services for this kind of framework.
 
-### Data agnostic ingestion
+Deploy an Azure SQL Database instance to hold metadata that Azure Data Factory uses. Provision an Azure key vault to store secrets related to automated ingestion services. These secrets can include:
 
-:::image type="content" source="../images/data-landing-zone-ingest-processing-rg.png" alt-text="Diagram of Data landing zone ingest and processing resource group.":::
+- Azure Data Factory metastore credentials.
+- Service principal credentials for your automated ingestion process.
 
-This resource group is optional, and doesn't prohibit you from deploying your landing zone. 
+For more information, see [Data agnostic ingestion engine](../best-practices/automated-ingestion-pattern.md).
 
-This resource group applies if you have (or are developing) a data agnostic ingestion engine for automatically ingesting data based on registering metadata (including connection strings, path to copy data from and to, and ingestion schedule. The ingestion and processing resource group has key services for this kind of framework.
+The following table describes services in this resource group.
 
-Deploy an Azure SQL Database instance to hold metadata used by Azure Data Factory. Provision an Azure Key Vault to store secrets relating to automated ingestion services. These secrets can include:
+| Service | Required | Guidelines |
+|---------|----------|------------|
+| Azure Data Factory | Yes | Azure Data Factory is your orchestration engine for data-agnostic ingestion. |
+| Azure SQL Database | Yes | SQL Database is the metastore for Azure Data Factory. |
+| Azure Event Hubs or Azure IoT Hub | Optional | Event Hubs or IoT Hub can provide real-time streaming to event hubs, plus batch and streaming processing via an Azure Databricks engineering workspace. |
+| Azure Databricks | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with your data-agnostic ingestion engine. |
+| Azure Synapse | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with the data-agnostic ingestion engine. |
 
-- Azure Data Factory metastore credentials
-- Service principal credentials for your automated ingestion process
+### Shared applications
 
-For more information, see [How automated ingestion frameworks support cloud-scale analytics in Azure](../best-practices/automated-ingestion-pattern.md).
+Use this optional resource group when you need to have a set of shared services made available to all the teams building data applications in this data landing zone. Use cases include:
 
-Services included in this resource group include:
+- An Azure Databricks workspace used as a shared metastore for all other Databricks workspaces created in the same data landing zone or region.
 
-|Service | Required | Guidelines |
-|---|---|---|
-|Azure Data Factory | Yes | Azure data factory is your orchestration engine for data agnostic ingestion. |
-|Azure SQL DB | Yes | Azure SQL DB is the metastore for Azure Data Factory. |
-|Event Hubs or IoT Hub | Optional | Event Hubs or IoT Hub can provide real-time streaming to Event Hubs, plus batch and streaming processing via a Databricks engineering workspace. |
-| Azure Databricks | Optional | You can deploy Azure Databricks or Azure Synapse Spark for use with your data agnostic ingestion engine. |
-| Azure Synapse | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with the data agnostic ingestion engine. |
+- A shared Azure Synapse Analytics instance that uses serverless SQL pools to enable users to query across isolated storage accounts.
 
-### Shared Databricks
+> [!NOTE]
+> Azure Databricks uses Unity Catalog to govern access and visibility to metastores across Databricks workspaces. Unity Catalog is enabled at a tenant level, but metastores are aligned with Azure regions. This setup means that all Unity Catalog-enabled Databricks workspaces in a given Azure region must register with the same metastore. For more information, see [Unity Catalog best practices](/azure/databricks/data-governance/unity-catalog/best-practices).
 
-This resource group is optional and only deploys with Azure Databricks. Everyone in your data landing zone can use a Databricks workspace.
-
-Azure Databricks is a key consumer of the Azure Data Lake Storage service. Atomic file operations are optimized for Spark analytic engines. This optimization speeds up the completion of Spark jobs that Azure Databricks service issues.
-
-:::image type="content" source="../images/data-landing-zone-shared-databricks-rg.png" alt-text="Diagram of data landing zone shared databricks resource group.":::
-
-> [!IMPORTANT]
-> An Azure Databricks workspace called the Azure Databricks (analytics) workspace is provisioned for all data scientists and DataOps, as shown in the shared products resource group.
->
-> You can configure this workspace to connect to your Azure Data Lake using either Microsoft Entra passthrough or table access control. Depending on your use case, you can configure conditional access as another security measure.
-
-Follow cloud-scale analytics best practices to integrate Azure Databricks:
-
-- [Secure access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md)
-- [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md)
-
-The Azure landing zone pattern recommends that you send all logs to a central Log Analytics workspace. However, each data landing zone also contains a monitoring resource group to capture Spark logs from Databricks.
-
-### Shared Azure Synapse Analytics
-
-This resource group is optional.
-
-During your initial setup of a data landing zone, a single Azure Synapse Analytics workspace is deployed for use by all data analysts and scientists in your shared products resource group.
-
-You can set up more synapse workspaces for data products if cost management and recharge are required. Your data application teams might make use of dedicated Azure Synapse Analytics workspaces to create dedicated Azure SQL Database pools as a read data store used by your visualization layer.
-
-> [!IMPORTANT]
-> Prevent the use of your shared Azure Synapse workspace for data product creation by locking down the workspace to only allow SQL On-demand queries. It is there for exploitative purposes only.
+To integrate Azure Databricks, follow cloud-scale analytics best practices. For more information, see [Secure access to Azure Data Lake Gen2 from Azure Databricks](https://github.com/hurtn/datalake-ADLS-access-patterns-with-Databricks/blob/master/readme.md) and [Azure Databricks best practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md).
 
 ## Data application
 
-Each data landing zone can have multiple data products. You can create these data products by ingesting data from source. You can also create data products from other data products within the same data landing zone or from other data landing zones. Data product creation of the data products is subject to data steward approval.
+Each data landing zone can have multiple data applications. You can create these applications by ingesting data from various sources. You can also create data applications from other data applications within the same data landing zone or from other data landing zones. The creation of data applications is subject to data steward approval.
 
-### Data product resource group
+### Data application resource group
 
-Your data product resource group product includes all the services required to make that data product. For example, an Azure Database is required for MySQL, which is used by a visualization tool. Data must be ingested and transformed before it lands into that MySQL database. In this case, you can deploy Azure Database for MySQL and an Azure Data Factory into the data product resource group.
-
-> [!TIP]
-> If you choose not to implement a data agnostics engine for ingesting once from operational sources, or if complex connections aren't facilitated in your data agnostics engine, create a source aligned data application. For more information, see [Data applications (source-aligned)](../../cloud-scale-analytics/architectures/data-application-source-aligned.md)
-
-For more information on how to onboard data products, see [Cloud-scale analytics data products in Azure](./data-landing-zone-data-products.md).
-
-## Visualization
-
-An empty visualization resource group is created for every data landing zone. Fill this resource group with services you need to implement your visualization solution. Using your existing VNet lets your solution connect to data products.
-
-This resource group can host virtual machines for third-party visualization services.
+Your data application resource group includes all the services required to make the data application. For example, an Azure Database is required for MySQL, which is used by a visualization tool. Data must be ingested and transformed before it goes into that MySQL database. In this case, you can deploy Azure Database for MySQL and Azure Data Factory into the data application resource group.
 
 > [!TIP]
-> Due to licensing costs, it might be more economical to deploy third-party visualization products into your data management landing zone, and for those products to connect across data landing zones to pull data back.
+> If you decide not to implement a data-agnostic engine for single ingestion from operational sources, or if complex connections aren't supported in your data-agnostic engine, develop a source-aligned [data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md).
 
-## Next steps
+## Reporting and visualization
 
-- [Cloud-scale analytics data products in Azure](data-landing-zone-data-products.md)
+You can use visualization and reporting tools within Fabric workspaces, which are similar to Power BI workspaces. This feature allows you to avoid deploying unique resources within your data landing zone. You can include a resource group to deploy Fabric capacity, VMs for data gateways, or other necessary data services to deliver your data application to the user.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Cloud-scale analytics data products in Azure](data-landing-zone-data-products.md)

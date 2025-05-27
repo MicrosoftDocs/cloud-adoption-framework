@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Environment design and configuration'
 description: Get started with unblocking the design and configuration of your cloud environment.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
@@ -22,7 +22,7 @@ A clear and concise business strategy helps the cloud platform team understand w
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations, desired business outcomes, and high-level business justification.
+- Document your cloud adoption strategy, including motivations, desired business outcomes, and high-level business justifications.
 
 **Guidance to support deliverable completion:**
 
@@ -47,7 +47,7 @@ The output of the digital estate assessment provides the cloud platform team wit
 - Raw data on the existing inventory.
 - Quantitative analysis of the existing inventory to refine the business justification.
 - Qualitative analysis of the first 10 workloads.
-- Updated business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
+- Updated business justification in adoption strategies and plan documents.
 
 **Guidance to support deliverable completion:**
 
@@ -112,28 +112,11 @@ Initially, the cloud adoption team needs a landing zone that can support the req
 
 ## Step 5: Deploy an initial governance foundation
 
-Governance is a key factor to the long-term success of any migration effort. Speed to migration and business impact is important. But speed without governance can be dangerous. Your organization needs to make decisions about governance that align to your adoption patterns and your governance and compliance needs.
+[Governance](../govern/index.md) is a key factor to the long-term success of any migration effort. Speed to migration and business impact is important. But speed without governance can be dangerous. Your organization needs to make decisions about governance that align to your adoption patterns and your governance and compliance needs.
 
-As those decisions are made, they feed back into the parallel efforts of the cloud platform team.
-
-**Deliverables:**
-
-- Deploy an initial governance foundation.
-- Complete a governance benchmark to plan for future improvements.
-- Timeline risks:
-  - Improvement of policies and governance implementation can add one to four weeks per discipline.
-
-**Guidance to support deliverable completion:**
-
-- [Governance approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then build the disciplines required to deliver on governance across your cloud enterprise adoption efforts.
-- [Governance benchmark tool](../govern/benchmark.md): Find gaps in your current state so that you can plan for the future.
-- [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the governance disciplines that are required to create a governance minimum viable product (MVP) to serve as the foundation for all adoption.
-
-<br>
-
-| Accountable team | Responsible and supporting teams | Consulted teams |
-| --- | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team | <li> Cloud platform team |
+| Accountable team | Responsible and supporting teams |
+| --- | --- |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team |
 
 ## Step 6: Implement an operations baseline
 
@@ -141,21 +124,8 @@ Migrating to the cloud without understanding ongoing operations is risky. In par
 
 **Deliverables:**
 
-- Deploy a management baseline.
-- Complete the operations management workbook.
+- Understand how to [manage your Azure cloud estate](../manage/index.md).
 - Identify any workloads that require a Microsoft Azure Well-Architected Review assessment.
-- Timeline risks:
-  - Review the workbook: estimate one hour per application owner.
-  - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
-
-**Guidance to support deliverable completion:**
-
-- [Establish a management baseline](../manage/index.md)
-- [Define business commitments](../manage/considerations/business-alignment.md)
-- [Expand the management baseline](../manage/best-practices.md)
-- [Get specific with advanced operations](../manage/design-principles.md)
-
-<br>
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
 | --- | --- | --- |

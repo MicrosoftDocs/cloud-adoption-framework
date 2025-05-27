@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Build new products and services in the cloud'
 description: Learn about the Innovate methodology as an approach to guide the development of new cloud products and services.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 04/22/2021
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
@@ -20,13 +20,13 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations and desired business outcomes.
+- Document and record motivations and desired business outcomes.
 
 **Guidance to support deliverable completion:**
 
 - [Motivations](../strategy/motivations.md): The first step to strategic alignment is to gain agreement on the motivations that drive the innovation effort. Start by understanding and categorizing motivations and common themes from stakeholders across business and IT.
 - [Business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, it's possible to capture the desired business outcomes. This information provides clear metrics that you can use to measure the overall transformation.
-- [Balancing the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that *require* rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure that those investments can produce the desired return on investment. Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [Get started: Accelerate migration](./migrate.md).
+- [Balancing the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that *require* rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure that those investments can produce the desired return on investment. Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [CAF Migrate](./../migrate/index.md).
 
 <br>
 
@@ -40,11 +40,11 @@ In this first pass at building the business case, evaluate the initial high-leve
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record the business justification.
+- Document and record business justifications.
 
 **Guidance to support deliverable completion:**
 
-- [Business justification](../strategy/cloud-migration-business-case.md): Before you evaluate each opportunity to innovate in the cloud, complete a high-level business justification to establish stakeholder alignment for the overall adoption plan.
+- [Define your missions and objectives](../strategy/mission-objectives.md): Before you evaluate each opportunity to innovate in the cloud, complete a high-level business justification to establish stakeholder alignment for the overall adoption plan. 
 - [Business value consensus](../innovate/business-value.md): Quantifying the value of an innovation can be difficult early in the process. The exercise in this article can aid in evaluating alignment on the business value of a specific innovation effort.
 
 <br>
@@ -64,7 +64,7 @@ In most enterprises, innovation can be accelerated through the use of existing a
   - Quantitative analysis on any supporting inventory required to support the planned innovation.
   - Qualitative analysis of any supporting workloads required to deliver the innovation.
 - Calculate the cost of new inventory required to support the innovation effort.
-- Update the business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) with refined calculations.
+- Update the business justification in your adoption strategy and plan documents with refined calculations.
 
 **Guidance to support deliverable completion:**
 
@@ -120,9 +120,7 @@ Discussing planned innovations with the governance team helps you avoid many blo
 
 These links help the adoption team understand the approach of the cloud governance team:
 
-- [Governance approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then you can build the disciplines required to deliver on governance across your cloud enterprise efforts.
-- [Definition of corporate policy](../govern/corporate-policy.md): Identify and mitigate business risks.
-
+- [Governance approach](../govern/index.md): This methodology outlines a process for managing risk and establishing guardrails across the Azure environment.
 <br>
 
 | Accountable team | Responsible and supporting teams |
@@ -136,15 +134,7 @@ Define the plan for long-term operational responsibilities for the planned innov
 **Deliverables:**
 
 - Complete the [Microsoft Azure Architecture Review](/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
-- Adjust the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
-
-**Guidance to support deliverable completion:**
-
-- [Expand the management baseline](../manage/best-practices.md): This section of the Cloud Adoption Framework guides you through various transitions into operational management in the cloud.
-- [Get specific with advanced operations](../manage/design-principles.md): Discover ways to go beyond your management baseline.
-- If advanced operations are required to support your operations needs, evaluate the [business commitments](../manage/considerations/business-alignment.md) to determine operational responsibilities for both teams.
-
-<br>
+- Understand how to [Manage your Azure cloud estate](../manage/index.md)
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -187,7 +177,7 @@ The Innovate methodology provides guidance on the tools and product management a
   - Technology-based experiences.
   - Integration of physical products and technology by using IoT.
   - Ambient intelligence: integration of nonintrusive technology into an environment.
-  - Azure Cognitive Services: big data, AI, machine learning, and predictive solutions.
+  - Azure AI services: big data, AI, machine learning, and predictive solutions.
 
 **Guidance to support deliverable completion:**
 
@@ -231,5 +221,5 @@ The following teams can use these next steps to continue to advance the maturity
 | Cloud&nbsp;adoption&nbsp;team | [Process improvements](../innovate/considerations/index.md) provide insight about approaches to deliver on innovations that affect customers and drive recurring adoption. |
 | Cloud&nbsp;strategy&nbsp;team | The [Strategy methodology](../strategy/index.md) and the [Plan methodology](../plan/index.md) are iterative processes that evolve with the adoption plan. Return to these overview pages and continue to iterate on your business and technical strategies. |
 | Cloud&nbsp;platform&nbsp;team | Revisit the [Ready methodology](../ready/index.md) to continue to advance the overall cloud platform that supports migration or other adoption efforts. |
-| Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes, policies, and disciplines. |
+| Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes and policies. |
 | Cloud&nbsp;operations&nbsp;team | Build on the [Manage methodology](../manage/index.md) to provide richer operations in Azure. |

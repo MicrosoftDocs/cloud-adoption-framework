@@ -1,47 +1,32 @@
 ---
-title: Cloud management
-description: Use the Cloud Adoption Framework for Azure to learn how to develop the business and technical approaches you need for effective cloud management.
-author: martinekuan
-ms.author: martinek
-ms.date: 10/17/2019
+title: Azure cloud management checklist
+description: Understand Microsoft's four-step iterative RAMP process for effectively managing your Azure cloud environment and establishing reliable cloud operations
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 04/01/2025
 ms.topic: conceptual
-ms.custom: internal
 ---
 
-# Cloud management in the Cloud Adoption Framework
+# Azure cloud management checklist
 
-Delivering on a [cloud strategy](../strategy/index.md) requires solid planning, readiness, and adoption. But it's the ongoing operation of the digital assets that delivers tangible business outcomes. Without a plan for reliable, well-managed operations of the cloud solutions, those efforts will yield little value. The following exercises help develop the business and technical approaches needed to provide cloud management that powers ongoing operations.
+Effective cloud management ensures your Azure cloud estate aligns with business objectives and minimizes the effects of incidents. The Cloud Adoption Framework's (CAF) Manage methodology outlines the **RAMP** (Ready, Administer, Monitor, Protect) process and provides clear steps for managing your Azure cloud estate.
 
-## Get started
+The CAF Manage RAMP process supports organizations ranging from large enterprises to startups. It guides you through the process of establishing cloud operations and maintaining your Azure estate.
 
-To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following exercises:
+:::image type="content" source="./media/caf-manage-process.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-process.svg" border="false":::
 
-| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
-|--|--|
-| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Define business commitments](./considerations/business-alignment.md): Document supported workloads to establish operational commitments with the business and agree on cloud management investments for each workload. |
-| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Establish a management baseline](./azure-management-guide/index.md): Define the criticality classifications, cloud management tools, and processes required to deliver your minimum commitment to operations management. |
-| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Expand the management baseline](./best-practices.md): Based on business commitments and operations decisions, make use of the included best practices to implement the required cloud management tooling. |
-| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Advanced operations and design principles](./design-principles.md): Platforms or workloads that require a higher level of business commitment might require a deeper architecture review to deliver on resiliency and reliability commitments. |
+## Cloud management checklist
 
-The preceding steps create actionable approaches to deliver on the Manage methodology of the Cloud Adoption Framework.
+Use the cloud management checklist to review tasks associated with each step of the CAF Manage RAMP process. Navigate quickly to detailed guidance through provided links.
 
-![Manage methodology of the Cloud Adoption Framework](../_images/manage/caf-manage.png)
+| Cloud management step (RAMP) | Cloud management tasks | Resources |
+| --------------------  | --------------------   | --------- |
+| Ready operations | &#9744; [Identify your management responsibilities](./ready.md#identify-your-management-responsibilities)<br>&#9744; [Establish your cloud operations](./ready.md#establish-your-cloud-operations)<br>&#9744; [Document your cloud operations](./ready.md#document-your-cloud-operations) <br>&#9744; [Manage your cloud operations](./ready.md#manage-your-cloud-operations)<br>&#9744; [Improve operations](./ready.md#improve-operations) | &#9744; [Azure management resources](./ready.md#azure-management-resources) |
+| Administer Azure | &#9744; [Identify management scope](./administer.md#identify-your-management-scope)<br>&#9744; [Manage change](./administer.md#manage-change)<br>&#9744; [Manage security](./administer.md#manage-security)<br>&#9744; [Manage compliance](./administer.md#manage-compliance)<br>&#9744; [Manage data](./administer.md#manage-data)<br>&#9744; [Manage costs](./administer.md#manage-costs)<br>&#9744; [Manage code and runtime](./administer.md#manage-code-and-runtime)<br>&#9744; [Manage cloud resources](./administer.md#manage-portal-deployments)<br>&#9744; [Manage code deployments](./administer.md#manage-code-deployments)<br>&#9744; [Manage drift](./administer.md#manage-configuration-drift)<br>&#9744; [Manage resource sprawl](./administer.md#manage-resource-sprawl)<br>&#9744; [Manage operating systems](./administer.md#manage-operating-systems) | &#9744; [Azure management tools](./administer.md#azure-management-tools)<br> |
+| Monitor Azure | &#9744; [Identify monitoring scope](./monitor.md#identify-your-monitoring-scope)<br>&#9744; [Plan strategy](./monitor.md#plan-your-monitoring-strategy)<br>&#9744; [Design solution](./monitor.md#design-a-monitoring-solution)<br>&#9744; [Monitor service health](./monitor.md#monitor-service-health)<br>&#9744; [Monitor security](./monitor.md#monitor-security)<br>&#9744; [Monitor compliance](./monitor.md#monitor-compliance)<br>&#9744; [Monitor costs](./monitor.md#monitor-costs)<br>&#9744; [Monitor data](./monitor.md#monitor-data)<br>&#9744; [Monitor code and runtime](./monitor.md#monitor-code-and-runtime)<br>&#9744; [Monitor cloud resources](./monitor.md#monitor-cloud-resources)<br>&#9744; [Configure alerting](./monitor.md#configure-alerting)<br>&#9744; [Visualize monitoring data](./monitor.md#visualize-monitoring-data) | &#9744; [Azure monitoring tools](./monitor.md#azure-monitoring-tools)<br>&#9744; [Monitoring reference](./monitor.md#azure-services-monitoring-documentation)<br>&#9744; [Monitoring responsibilities](./monitor.md#shared-management-monitoring-responsibilities)<br> |
+| Protect Azure | &#9744; [Identify reliability responsibilities](./protect.md#identify-reliability-responsibilities)<br>&#9744; [Define reliability requirements](./protect.md#define-reliability-requirements)<br>&#9744; [Manage data reliability](./protect.md#manage-data-reliability)<br>&#9744; [Manage code reliability](./protect.md#manage-code-and-runtime-reliability)<br>&#9744; [Manage resource reliability](./protect.md#manage-cloud-resources-reliability)<br>&#9744; [Manage business continuity](./protect.md#manage-business-continuity)<br>&#9744; [Manage security controls](./protect.md#manage-security-operations)<br>&#9744; [Manage security incidents](./protect.md#manage-security-incidents) | &#9744; [Azure reliability tools](./protect.md#azure-reliability-tools)<br>&#9744; [Azure security tools](./protect.md#azure-security-tools) |
 
-As discussed in the [business alignment](./considerations/business-alignment.md) article, not all workloads are mission critical. Within any portfolio are various degrees of operational management needs. Business alignment efforts aid in capturing the business impact and negotiating management costs with the business, to ensure the most appropriate operational management processes and tools.
+## Next step
 
-The guidance in the manage section of the Cloud Adoption Framework serves two purposes:
-
-- Provides examples of actionable operations management approaches that represent common experiences often encountered by customers.
-- Helps you create personalized management solutions based on business commitments.
-
-This content is intended for use by the cloud operations team. It's also relevant to cloud architects who need to develop a strong foundation in cloud operations or cloud design principles.
-
-The content in the Cloud Adoption Framework affects the business, technology, and culture of enterprises. This section of the Cloud Adoption Framework interacts heavily with IT operations, IT governance, finance, line-of-business leaders, networking, identity, and cloud adoption teams. Various dependencies on these personnel require a facilitative approach by the cloud architects who are using this guidance. Facilitation with these teams is seldom a one-time effort.
-
-The cloud architect serves as the thought leader and facilitator to bring these audiences together. The content in this collection of guides is designed to help the cloud architect facilitate the right conversation, with the right audience, to drive necessary decisions. Business transformation that's empowered by the cloud depends on the cloud architect to help guide decisions throughout the business and IT.
-
-Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for operations and management of deployment solutions. Within this framework, these specialists are referred to frequently as *cloud operations*, or collectively as the *cloud operations team*.
-
-If you want to follow this guide from beginning to end, this content aids in developing a robust cloud operations strategy. The guidance walks you through the theory and implementation of such a strategy.
-
-You can also apply the methodology to [establish clear business commitments](./considerations/business-alignment.md).
+> [!div class="nextstepaction"]
+> [Ready your Azure cloud operations](./ready.md)

@@ -28,7 +28,7 @@ Develop a data science template for your organization with the following guideli
 
 ### Real-time
 
-- Include an Azure Data Factory or Azure Synapse deployment in templates and Azure Cognitive Services.
+- Include an Azure Data Factory or Azure Synapse deployment in templates and Azure AI services.
 - The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
 
 ### Considerations for an initial setup
@@ -43,7 +43,7 @@ Templates should be deployed on a per-project basis after they've been set up. E
 
 The same access rights typically apply to different types of artifacts. It's important to separate development from production to prevent the deletion of production pipelines or endpoints within a workspace. Along with the template, a process needs to be built to give data product teams the option to request new environments.
 
-We recommend setting up different AI services like Azure Cognitive Services on a per-project basis. By setting up different AI services on a per-project basis, deployments occur for each data product resource group. This policy creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by the wrong teams.
+We recommend setting up different AI services like Azure AI services on a per-project basis. By setting up different AI services on a per-project basis, deployments occur for each data product resource group. This policy creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by the wrong teams.
 
 ### Streaming scenario
 
@@ -51,7 +51,7 @@ For real-time and streaming use cases, deployments should be tested on a downsiz
 
 Next, you can deploy models to the service you want. This deployment compute target is the only one that's generally available and recommended for production workloads in an AKS cluster. This step is more necessary if graphics processing unit (GPU) or field-programmable gate array support is required. Other native deployment options that support these hardware requirements aren't currently available in Azure Machine Learning.
 
-Azure Machine Learning requires one-to-one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. Once that limitation is mitigated, we recommended deploying central AKS clusters as shared resources and attach them to their respective workspaces.
+Azure Machine Learning requires one-to-one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. After that limitation is mitigated, we recommended deploying central AKS clusters as shared resources and attach them to their respective workspaces.
 
 Another central test AKS instance should be hosted if stress tests should be done before you move a model to the production AKS. The test environment should provide the same compute resource as the production environment to ensure that the results are as similar as possible to the production environment.
 

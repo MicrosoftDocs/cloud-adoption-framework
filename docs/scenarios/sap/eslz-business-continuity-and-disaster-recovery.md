@@ -155,6 +155,7 @@ Although backup and restore isn't typically considered an adequate high availabi
 - Back up SAP application servers and VMs, disks, or VM snapshots.
 - Back up an SAP HANA system with replication enabled.
 - Back up SAP HANA database instance snapshots.
+- Back up SAP ASE (Sybase) database.
 
 If you back up and restore on-premises, you need to bring these capabilities to SAP systems in Azure. If you like your current solution, check whether your backup vendor supports Azure deployments or whether it has a software as a service (SaaS) solution for Azure.
 
@@ -168,6 +169,8 @@ You can also use Azure Backup to back up databases that have SAP HANA system rep
 - A HANA-consistent, snapshot-based approach that integrates with Backint for SAP HANA. You can use Backup as a single product for your entire HANA landscape and for any database size.  
 
 For more information, see [SAP HANA database system with replication enabled](/azure/backup/sap-hana-database-about#back-up-a-hana-system-with-replication-enabled) and [SAP HANA instance snapshot backup](/azure/backup/sap-hana-database-about#back-up-database-instance-snapshots).
+
+Azure Backup also supports SAP ASE (Sybase) database backups on Azure VMs, ensuring secure storage with [Immutability](/azure/backup/backup-azure-immutable-vault-concept?), [Soft Delete](/azure/backup/backup-azure-security-feature-cloud), [Multi-user Authorization](/azure/backup/multi-user-authorization-concept), and [CMK](/azure/backup/encryption-at-rest-with-cmk) in a managed vault. Data is isolated for protection, with 15-minute log backups enabling Point-In-Time recovery. Restore options include Alternate Location, Original Location, or as Files. Cost-effective policies optimize storage, while [Multi-SID](/azure/backup/sap-ase-backup-support-matrix#support-for-multiple-sap-ase-instances-on-a-single-host) and [Cross Subscription Restore](/azure/backup/sap-ase-database-about#cross-subscription-restore-for-sap-ase-sybase-database) enhance flexibility. Learn about [SAP ASE (Sybase) database backup](/azure/backup/sap-ase-database-about).
 
 ### Design recommendations for backup and restore
 
@@ -211,7 +214,7 @@ Most organizations use both regions for operating SAP systems. Organizations tha
 
 When you choose a disaster recovery region, be sure to have ExpressRoute connectivity to that region. If you have multiple ExpressRoute circuits connecting to Azure, at least one of those circuits must connect to the primary Azure region. The others should connect to the disaster recovery region. This type of architecture connects you to the Azure network in a different geographic or geopolitical area and helps protect your connection if a catastrophe affects one of the Azure regions.
 
-Some organizations use a combination high availability and disaster recovery architecture, which groups high availability with disaster recovery in the same Azure region. But grouping high availability with disaster recovery isn't ideal. [Azure availability zones](/azure/availability-zones/az-overview) support this architecture. The distance between availability zones within one Azure region isn't as large as the distance between two Azure regions, so a natural disaster could jeopardize the application services in the region where it occurs. You also need to consider the latency between SAP application servers and database servers. According to [SAP note 1100926](https://launchpad.support.sap.com/#/notes/1100926), a roundtrip time of less than or equal to 0.3 ms is a good value, and a time of less than or equal to 0.7 ms is a moderate value. So for zones with high latencies, have operational procedures to ensure that SAP application servers and database servers always run in the same zone. Organizations choose this architecture for the following reasons:
+Some organizations use a combination high availability and disaster recovery architecture, which groups high availability with disaster recovery in the same Azure region. But grouping high availability with disaster recovery isn't ideal. [Azure availability zones](/azure/reliability/availability-zones-overview) support this architecture. The distance between availability zones within one Azure region isn't as large as the distance between two Azure regions, so a natural disaster could jeopardize the application services in the region where it occurs. You also need to consider the latency between SAP application servers and database servers. According to [SAP note 1100926](https://launchpad.support.sap.com/#/notes/1100926), a roundtrip time of less than or equal to 0.3 ms is a good value, and a time of less than or equal to 0.7 ms is a moderate value. So for zones with high latencies, have operational procedures to ensure that SAP application servers and database servers always run in the same zone. Organizations choose this architecture for the following reasons:
 
 - Compliance is sufficient with configurations that support smaller distances between production deployment and a disaster recovery target.
 

@@ -1,8 +1,8 @@
 ---
 title: How does Azure work?
 description: Learn the basics about the internal structure and functioning of the Azure cloud platform and cloud virtualization.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 01/20/2022
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
@@ -16,7 +16,7 @@ Azure is Microsoft's public cloud platform. Azure offers a large collection of s
 
 <br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2ixGo]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=fe87c0af-e4b6-4138-96ee-22435d39b113]
 
 <!-- markdownlint-enable MD034 -->
 

@@ -1,25 +1,18 @@
 ---
 author: mboswell
 ms.author: mboswell
-ms.date: 03/15/2022
+ms.date: 11/11/2024
 ms.topic: include
 ms.custom: e2e-data-management, think-tank
 ---
 
-The data catalog registers and maintains the data information in a centralized place and makes it available for the organization. It ensures that enterprises avoid duplicate data products caused by redundant data ingestion by different project teams.
+A data catalog registers and maintains data information in a centralized place so that it's available for your organization. It minimizes the chance of different project teams ingesting redundant data, which prevents duplicate data products. We recommend that you create a data catalog service to define the metadata of data products that you store across data landing zones. 
 
-We recommend you provision a data catalog service to define the metadata of the data products stored across the data landing zones.
+Cloud-scale analytics relies on [Microsoft Purview](/azure/purview/overview) to register enterprise data sources, classify them, ensure data quality, and provide highly secure, self-service access.
 
-Cloud-scale analytics relies on [Microsoft Purview](/azure/purview/overview) to serve as:
+Microsoft Purview is a tenant-based service that can communicate with each data landing zone. It creates a managed virtual network and deploys it to your data landing zone region. You can deploy Azure managed virtual network integration runtimes (IR) within these managed virtual networks in any available Microsoft Purview region. The managed virtual network IR can then use private endpoints to securely connect to and scan the supported data sources. This approach helps isolate and secure the data integration process. For more information, see [Use managed virtual networks with your Microsoft Purview account](/purview/catalog-managed-vnet).
 
-- A system of registration
-- A discovery for enterprise data sources
-- A data classification engine
-- A policy store
-- An API for registering and reading data information
-- A compliance dashboard hub
-
-Because the data catalog is part of the data management landing zone, it can communicate with each data landing zone via its virtual network (VNet) peering and self-hosted integration runtimes. Discovery of data products in on-premises stores and other public clouds is achieved by more deployments of self-hosted integration runtimes.
+If you use Azure Databricks, we recommend using [Azure Databricks Unity Catalog](/azure/databricks/data-governance/unity-catalog/azure-managed-identities) in addition to Microsoft Purview. Unity Catalog provides centralized access control, auditing, lineage, and data discovery capabilities across Databricks workspaces. For more information, see [Unity Catalog best practices](/azure/databricks/data-governance/unity-catalog/best-practices).
 
 > [!NOTE]
-> Although this documentation focuses primarily on using Microsoft Purview for data catalog capabilities and data classification, enterprises might have invested in other products, such as Alation, Okera, or Collibra. If this is the case, work with your vendor to apply the principles described for a data management landing zone as nearby as possible. Be aware that some custom integration might be required.
+> This article focuses on using Microsoft Purview for governance, but your enterprise might have investments in other products, such as Alation, Okera, or Collibra. These solutions are subscription-based. We recommend that you deploy them to the data management landing zone. They might require custom integration.

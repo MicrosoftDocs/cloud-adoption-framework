@@ -40,7 +40,7 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 ### Point-in-time restore
 
-- Define your targets for [recovery point objective](../../../manage/considerations/protect.md#recovery-point-objectives-rpo) (RPO) and [recovery time objective](../../../manage/considerations/protect.md#recovery-time-objectives-rto) (RTO).
+- Define your targets for [recovery point objective (RPO) and recovery time objective (RTO)](../../../manage/protect.md#define-reliability-requirements).
 
 - Determine how long you want to retain and restore your backups within the supported retention limits.
 

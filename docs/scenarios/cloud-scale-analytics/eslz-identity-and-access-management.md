@@ -1,42 +1,48 @@
 ---
-title: Identity and access management for cloud-scale analytics
+title: Identity and Access Management for Cloud-Scale Analytics
 description: Learn how this scenario can improve identity and access management for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 11/25/2021
+ms.date: 01/29/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
 
 # Identity and access management
 
-This article examines design considerations and recommendations for identity and access management. It focuses on the deployment of a cloud-scale analytics platform on Microsoft Azure. Since cloud-scale analytics is a mission-critical element, the guidance on the Azure landing zone design areas should also be included in your design.
+This article outlines design considerations and recommendations for identity and access management. It focuses on the deployment of a cloud-scale analytics platform on Microsoft Azure. Because cloud-scale analytics is a mission-critical component, you should follow the guidance about Azure landing zone design areas when you design your solution.
 
-This article builds on considerations and recommendations about Azure landing zones. For more information, see [Identity and access management](../../ready/landing-zone/design-area/identity-access.md).
+This article builds on considerations and recommendations about Azure landing zones. For more information, see [Identity and access management design area](../../ready/landing-zone/design-area/identity-access.md).
 
 ## Data landing zone design
 
-Cloud-scale analytics supports an access control model using Microsoft Entra identities. The model uses both Azure role-based access control (Azure RBAC) and access control lists (ACLs).
+Cloud-scale analytics supports an access control model by using Microsoft Entra identities. The model uses Azure role-based access control (Azure RBAC) and access control lists.
 
-Review the Azure administration and management activities your teams perform. Consider your cloud-scale analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
+Review the Azure administration and management activities that your teams perform. Evaluate your cloud-scale analytics on Azure. Determine the best possible distribution of responsibilities within your organization.
 
 ## Role assignments
 
-In order to develop, deliver, and serve data products autonomously within the data platform, data application teams require few access rights within the Azure environment. Before going through the respective RBAC requirements, it must be highlighted that different access models should be used for the development and higher environments. Also, security groups should be used wherever possible to reduce the number of role assignments and to simplify the management and review process of RBAC rights. This is critical, due to the [limited number of role assignments that can be created per subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits).
+To develop, deliver, and serve data products autonomously within the data platform, data application teams require several access rights within the Azure environment. It's important to note that you should use different access models for development and higher environments. Use security groups when possible to reduce the number of role assignments and to simplify the management and review process of RBAC rights. This step is crucial because of the [limited number of role assignments that you can create for each subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits).
 
-The development environment should be allowed to be accessed by the development team and their respective user identities to enable them to iterate more quickly, learn about certain capabilities within Azure services and troubleshoot issues effectively. Access to a development environment will help when developing or enhancing the infrastructure as code (IaC) and other code artifacts. Once an implementation within the development environment works as expected, it can be rolled out continuously to the higher environments. Higher environments, such as test and prod, should be locked off for the data application team. Only a service principal should have access to these environments and therefore all deployments must be executed through the service principal identity by using CI/CD pipelines. To summarize, in the development environment access rights should be provided to a service principal AND user identities and in higher environments access rights should only be provided to a service principal identity.
+The development environment should be accessible to the development team and their respective user identities. This access enables them to iterate more quickly, learn about certain capabilities within Azure services, and troubleshoot problems effectively. Access to a development environment can help you develop or enhance infrastructure as code and other code artifacts.
 
-To be able to create resources and role assignments between resources within the data application resource group(s), `Contributor` and `User Access Administrator` rights must be provided. This will allow the teams to create and control services within their environment within the [boundaries of Azure Policy](eslz-policies.md). Cloud-scale analytics recommends the usage of private endpoints to overcome the data exfiltration risk and as other connectivity options should be blocked by the Azure platform team via policies, data application teams will require access rights to the shared virtual network of a data landing zone to be able to successfully set up the required network connectivity for the services they're planning to use. To follow the least privilege principle, overcome conflicts between different data application teams and have a clear separation of teams, cloud-scale analytics proposes to create a dedicated subnet per data application team and create a `Network Contributor` role assignment to that subnet (child resource scope). This role assignment allows the teams to join the subnet using private endpoints.
+After you confirm that an implementation works as expected in the development environment, it can be rolled out continuously to higher environments. Higher environments, such as testing and production, should be locked off for the data application team. Only a service principal should have access to these environments. As such, all deployments must be run through the service principal identity by using continuous integration and continuous delivery (CI/CD) pipelines. In the development environment, provide access rights to both a service principal and user identities. In higher environments, restrict access rights to the service principal identity only.
 
-These two first role assignments will enable self-service deployment of data services within these environments. To address the cost management concern, organizations should add a cost center tag to the resource groups to enable cross-charging and distributed cost ownership. This raises awareness within the teams and enforces them to make the right decisions with respect to required SKUs and service tiers.
+To create resources and role assignments between resources within the data application resource groups, you must provide `Contributor` and `User Access Administrator` rights. These rights allow the teams to create and control services in their environment within the [boundaries of Azure Policy](eslz-policies.md). 
 
-To also enable self-service use of other shared resources within the data landing zone, few extra role assignments are required. If access to a Databricks environment is required, organizations should use the [SCIM Synch from Microsoft Entra ID](/azure/databricks/administration-guide/users-groups/scim/aad) to provide access. This is important, as this mechanism automatically synchs users and groups from Microsoft Entra ID to the Databricks data plane and also automatically removes access rights when an individual leaves the organization or business. This couldn't be the case, if separate user accounts are used in Azure Databricks. Data application teams should be added to the Databricks workspace in the `shared-product-rg` and in the `shared-integration-rg`. Within Azure Databricks, the data application teams should be given `Can Restart` access rights to a predefined cluster to be able to run workloads within the workspace.
+To reduce the risk of data exfiltration, it's cloud-analytics best practices to use private endpoints. The Azure platform team blocks other connectivity options via policies, so data application teams need access rights to the shared virtual network of a data landing zone. This access is essential for setting up the necessary network connectivity for the services that they plan to use. 
 
-Individual teams will require access to the central Purview account to discover data assets within the respective data landing zones. Therefore, the teams will have to be added as `Data Reader` to the Purview top-level collection. In addition, the teams will in most cases require the option to edit cataloged data assets that they're owning in order to provide extra details such as contact details of data owners and experts as well as more granular details about what columns within a dataset describe and what information they're including.
+To follow the principle of least privilege, avoid conflicts between different data application teams and have a clear separation of teams. It's cloud-scale analytics best practices to create a dedicated subnet for each data application team and create a `Network Contributor` role assignment for that subnet, or child resource scope. This role assignment allows the teams to join the subnet by using private endpoints.
 
-### Summary of role based access control requirements
+These first two role assignments enable the self-service deployment of data services within these environments. To address cost management concerns, organizations should add a cost center tag to the resource groups to enable cross-charging and distributed cost ownership. This approach raises awareness within the teams and helps ensure that they make informed decisions about required SKUs and service tiers.
 
-For automation purposes of deploying data landing zones, you need these roles:
+To enable self-service use of other shared resources within the data landing zone, a few extra role assignments are required. If access to an Azure Databricks environment is required, organizations should use [SCIM sync from Microsoft Entra ID](/azure/databricks/administration-guide/users-groups/scim/aad) to provide access. This synchronization mechanism is important because it automatically synchronizes users and groups from Microsoft Entra ID to the Azure Databricks data plane. It also automatically removes access rights when an individual leaves the organization or business. In Azure Databricks, give the data application teams `Can Restart` access rights to a predefined cluster so that they can run workloads within the workspace.
+
+Individual teams require access to the Microsoft Purview account to discover data assets within their respective data landing zones. Teams often need to edit cataloged data assets that they own to provide extra details like the contact information of data owners and experts. Teams also require the ability to provide more granular information about what each column in a dataset describes and includes.
+
+### Summary of RBAC requirements
+
+To automate the deployment of data landing zones, the following roles are required:
 
 :::row:::
     :::column span="1":::
@@ -65,7 +71,7 @@ For automation purposes of deploying data landing zones, you need these roles:
         [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor)
     :::column-end:::
     :::column span="3":::
-        In order to set up virtual network peering between the data landing zone network and the data management landing zone network, the service principal needs `Network Contributor` access rights on the resource group of the remote virtual network.
+        To set up virtual network peering between the data landing zone network and the data management landing zone network, the service principal needs `Network Contributor` access rights on the resource group of the remote virtual network.
     :::column-end:::
     :::column span="2":::
         (Resource group scope) `/subscriptions/{{dataManagement}subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -84,13 +90,13 @@ For automation purposes of deploying data landing zones, you need these roles:
 :::row-end:::
 
 > [!NOTE]
-> The number of role assignments can be reduced in a production scenario. The `Network Contributor` role assignment is only required to set up the virtual network peering between the data management landing zone and the data landing zone. Without this consideration, DNS resolution doesn't work. Inbound and outbound traffic is dropped because there is no line of sight to the Azure Firewall.
+> In a production scenario, you can reduce the number of role assignments. The `Network Contributor` role is only required to set up the virtual network peering between the data management landing zone and the data landing zone. Without this role, DNS resolution fails. Also, inbound and outbound traffic is dropped because there's no line of sight to Azure Firewall.
 >
-> The `Private DNS Zone Contributor` is also not required if the deployment of DNS A-records of the private endpoints is automated through Azure policies with `deployIfNotExists` effect. The same is true for the `User Access Administrator` because the deployment can be automated using `deployIfNotExists` policies.
+> The `Private DNS Zone Contributor` role isn't required if the deployment of DNS A-records for the private endpoints is automated through Azure policies with the `deployIfNotExists` effect. The same is true for the `User Access Administrator` role because you can automate the deployment by using `deployIfNotExists` policies.
 
 ### Role assignments for data products
 
-The following role assignments are required for deploying a data product within a data landing zone:
+The following role assignments are required to deploy a data product within a data landing zone:
 
 :::row:::
     :::column span="1":::
@@ -119,7 +125,7 @@ The following role assignments are required for deploying a data product within 
         [Contributor](/azure/role-based-access-control/built-in-roles#contributor)
     :::column-end:::
     :::column span="3":::
-        Deploy all data-integration-streaming services into a single resource group within the data landing zone subscription. The service principal requires a `Contributor` role-assignment on that resource group.
+        Deploy all data integration streaming services into a single resource group within the data landing zone subscription. The service principal requires a `Contributor` role assignment on that resource group.
     :::column-end:::
     :::column span="2":::
         (Resource group scope)  `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}`
@@ -130,37 +136,26 @@ The following role assignments are required for deploying a data product within 
         [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor)
     :::column-end:::
     :::column span="3":::
-        In order to deploy private endpoints to the specified Private Link subnet, which was created during the data landing zone deployment, the service principal requires `Network Contributor` access on that subnet.
+        To deploy private endpoints to the specified Azure Private Link subnet that was created during the data landing zone deployment, the service principal requires `Network Contributor` access on that subnet.
     :::column-end:::
     :::column span="2":::
-        (Child-resource scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName} /providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}"`
+        (Child resource scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName} /providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}"`
     :::column-end:::
 :::row-end:::
 
 ## Access to other resources
 
-Outside of Azure, Data Product and Data Integration teams will also require access to a repository to store code artifacts, collaborate effectively and roll out updates and changes consistently via CI/CD to higher environments. In addition, a project board should be provided to allow for agile development, sprint planning, tracking of tasks and as well as user feedback and feature requests.
+Outside of Azure, data application teams require access to a repository to store code artifacts, collaborate effectively, and roll out updates and changes consistently to higher environments via CI/CD. You should provide a project board to allow for agile development, sprint planning, task tracking, and managing user feedback and feature requests.
 
-Lastly, the CI/CD automation will require setting up a connection to Azure, which is done in most services via service principles. Hence, teams will require access to a service principle to achieve automation within their project.
+To automate CI/CD, establish a connection to Azure. This process is done in most services via service principals. Because of this requirement, teams must have access to a service principal to achieve automation in their project.
 
-## Managing access to data
+## Manage access to data
 
-Managing access to data should be done using Microsoft Entra groups. Add user principle names or service principal names to the Microsoft Entra groups. Add the groups to the services and grant permissions to the group. This approach allows for fine-grained access control.
+Manage access to data by using Microsoft Entra groups. Add user principal names or service principal names to the Microsoft Entra groups. Then add those groups to the services and grant permissions to the group. This approach allows for fine-grained access control.
 
-For data products in Azure data lakes, consider using access control lists (ACLs). For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). Using Microsoft Entra passthrough with access control lists is supported by most native Azure services, including Azure Machine Learning, Azure Synapse SQL Serverless, Apache Spark for Azure Synapse and Azure Databricks.
+For more information about how to drive security for data management landing zones and data landing zones that manage your data estate, see [Authentication for cloud-scale analytics in Azure](./secure-authentication.md).
 
-Other polyglot storage is likely to be used in cloud-scale analytics. Examples include Azure Database for PostgreSQL, Azure Database for MySQL, Azure SQL Database, SQL Managed Instance, and Azure Synapse SQL Dedicated Pools. They could be used by data application teams to store data products.
+## Next step
 
-- [Use Microsoft Entra ID for authentication with Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication)
-- [Use Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview) with Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics
-- [Use Microsoft Entra ID for authenticating with Azure Database for MySQL](/azure/mysql/concepts-azure-ad-authentication)
-
-We recommend that you use Microsoft Entra groups to secure database objects instead of individual Microsoft Entra user accounts. These Microsoft Entra groups are used to authenticate users and help protect database objects. Similar to the data lake pattern, you could use your domain or data products onboarding to create these groups within your Microsoft Entra service.
-
-This approach also gives a single management location and allows reviewing access rights inside the Azure Graph.
-
-For more information on how to drive security for data management landing zones and data landing zones managing your data estate, see [Provision security for cloud-scale analytics in Azure](./security-provisioning.md).
-
-## Next steps
-
-- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
+> [!div class="nextstepaction"]
+> [Networking overview](./eslz-network-topology-and-connectivity.md)

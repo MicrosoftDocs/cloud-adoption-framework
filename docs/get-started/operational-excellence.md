@@ -1,8 +1,8 @@
 ---
 title: 'Get started: Deliver operational excellence'
 description: Learn the basics of operational excellence during digital transformation.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
@@ -30,7 +30,7 @@ A clear business strategy is the foundation for any digital transformation and o
 
 **Deliverables:**
 
-- Record motivations, outcomes, and business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
+- Record motivations, outcomes, and business justification in your adoption strategy and plan documents.
 - Ensure learning metrics are well understood and included in the business outcomes section. Those metrics guide operational excellence activities and reporting within IT.
 
 **Guidance to support deliverable completion:**
@@ -52,7 +52,7 @@ Organizational change management is an iterative approach to subtly realign peop
 
 **Deliverables:**
 
-- Update the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to reflect change that's needed to achieve the desired strategy. The changes recorded can include:
+- Update your adoption strategy and plan documents to reflect change that's needed to achieve the desired strategy. The changes recorded can include:
 
   - An assessment of the existing digital estate.
   - A cloud adoption plan that reflects the required changes and the work involved.
@@ -111,4 +111,4 @@ Operational excellence requires a disciplined approach to reliability, performan
 - **Cost optimization:** Continuously optimize operating costs by using the getting started guide on [managing enterprise costs](./manage-costs.md)
 - **Security:** Reduce risk by integrating enterprise security across the portfolio by using the getting started guide on [implementing security across the portfolio](./security.md).
 - **Performance management:** Ensure IT asset performance supports business processes by using the getting started guide on [performance management across the enterprise](./performance.md).
-- **Reliability:** Improve reliability and reduce business disruptions by using the getting started guide on [implementing controls to create reliability](./reliability.md).
+- **Reliability:** Improve reliability and reduce business disruptions by using the getting started guide on [managing reliability reliability](../manage/protect.md#manage-reliability).

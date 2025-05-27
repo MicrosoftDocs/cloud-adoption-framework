@@ -1,8 +1,8 @@
 ---
 title: The build-measure-learn feedback loop
 description: Create customer partnerships by using the build-measure-learn feedback loop to build with customer empathy and measure impact on customers.
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 03/18/2021
 ms.topic: conceptual
 ms.custom: internal

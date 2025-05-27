@@ -1,8 +1,8 @@
 ---
 title: Manage an Azure Virtual Desktop environment
 description: Explore management best practices for Azure Virtual Desktop
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
@@ -30,9 +30,7 @@ These basic questions will shape how to best integrate Azure Virtual Desktop int
 
 ## Operations baseline
 
-Implementing an operations baseline provides centralized access to the tools required to operate and manage all assets in your cloud environment. If you don't have an operations baseline for your assets, you can implement the [operations baseline defined in the Manage methodology](../../manage/azure-server-management/index.md).
-
-Your operations baseline should include tools and configurations to provide visibility, monitoring, operational compliance, optimization, and protection/recovery.
+Implementing an operations baseline provides centralized access to the tools required to operate and manage all assets in your cloud environment. Your operations baseline should include tools and configurations to provide visibility, monitoring, operational compliance, optimization, and protection/recovery.
 
 ![Operations management baseline](../../_images/manage/management-baseline.png)
 

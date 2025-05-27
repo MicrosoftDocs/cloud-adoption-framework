@@ -23,17 +23,21 @@ This section explores key considerations and recommended approaches for capturin
 *Azure Network Watcher* has multiple tools you should consider if you're using infrastructure as a service (IaaS) solutions:
 
 - *Packet capture:* Network Watcher lets you create temporary capture packet sessions on traffic headed to and from a virtual machine. Each packet capture session has a time limit. When the session ends, packet capture creates a `pcap` file that you can download and analyze. Network Watcher packet capture can't give you continuous port mirroring with these time constraints. For more information, see [Packet capture overview](/azure/network-watcher/network-watcher-packet-capture-overview).
-  
-- *Network security group (NSG) flow logs:* NSG flow logs capture information about IP traffic flowing through your NSGs. Network Watcher stores NSG flow logs as JSON files in Azure Storage account. You can export the NSG flow logs to an external tool for analysis. For more information, see NSG flow logs [overview](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) and [data analysis options](/azure/network-watcher/network-watcher-visualize-nsg-flow-logs-power-bi).
 
-- *Virtual network flow logs:* [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) provide similar capabilities compared to NSG flow logs. You can use virtual network flow logs to log information about Layer 3 traffic that flows through a virtual network. Azure Storage receives flow data from virtual network flow logs. You can access the data and export it to any visualization tool, security information and event management solution, or intrusion detection system.
+- *Virtual network flow logs:* [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) operate at Layer 4 and record all IP flows going through a virtual network. Azure Storage receives flow data from virtual network flow logs or a Log Analytics Workspace through [traffic analytics](/azure/network-watcher/traffic-analytics). You can access the data and export it to any visualization tool, security information and event management solution, or intrusion detection system. For more information, see [data analysis options](/azure/network-watcher/flow-logs-read?tabs=vnet).
+
+
+> [!NOTE]
+> On September 30, 2027, network security group (NSG) flow logs will be retired. As part of this retirement, you'll no longer be able to create new NSG flow logs starting June 30, 2025. We recommend [migrating to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs. After the retirement date, traffic analytics enabled with NSG flow logs will no longer be supported, and existing NSG flow logs resources in your subscriptions will be deleted. However, NSG flow logs records won't be deleted and will continue to follow their respective retention policies. For more information, see the [retirement notice](https://azure.microsoft.com/updates?id=Azure-NSG-flow-logs-Retirement).
 
 ## Design recommendations
 
-- Prefer [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) over [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). Virtual network flow logs:
+- Use [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and migrate from existing [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) configuration. Virtual network benefits and guidance:
+
+  - Plan and migrate your current NSG flow logs configuration to virtual network flow logs. See [Migrate NSG flow logs](/azure/network-watcher/nsg-flow-logs-migrate).
 
   - Simplify the scope of traffic monitoring. You can enable logging at the virtual network level so that you don't need to enable multiple-level flow logging to cover both subnet and NIC levels.
-  
+
   - Add visibility for scenarios where you can't use NSG flow logs because of platform restrictions on NSG deployments.
   - Provide extra details about the [Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) status and the presence of [Azure Virtual Network Manager security admin rules](/azure/virtual-network-manager/concept-virtual-network-flow-logs).
 

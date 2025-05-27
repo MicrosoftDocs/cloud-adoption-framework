@@ -3,7 +3,7 @@ title: Subscription vending
 description: Subscription vending
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 06/06/2023
+ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -106,13 +106,13 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-re
 - [Resource organization design area overview](./resource-org.md)
 - [Create Azure subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
 
-**Set up identity and role-based access controls (RBACs).** Managing access to resources within an Azure subscription is critical for maintaining a secure and compliant environment. To control access, it's essential to set up identity and RBACs. This setup involves designating a subscription owner, creating Microsoft Entra groups to manage access, and establishing automation accounts to deploy workloads.
+**Set up identity and role-based access controls (RBACs).** Managing access to resources within an Azure subscription is critical for maintaining a secure and compliant environment. To control access, it's essential to set up identity and RBACs. This setup involves designating a subscription owner, creating Microsoft Entra groups to manage access, and establishing automation identities to deploy workloads.
 
 - *Designate a subscription owner.* The subscription vending automation needs to designate a subscription owner at creation. The subscription request should capture this information at intake. Subscription owners can only be users or service principals in the selected subscription directory. You can't select guest directory users. If you select a service principal, enter its App ID.
 
-- *Create Microsoft Entra groups.* In addition to the subscription owner, you should ensure the vending process uses your Microsoft Entra group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
+- *Create Microsoft Entra groups.* In addition to the subscription owner, you should ensure the vending process uses your Microsoft Entra group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
-- *Establish workload identities.* Workload identities (service principles) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather workload identity needs at intake. Your vending process should create these identities and assign appropriate subscription access. It's important to note that the workload identity can't use PIM and receives standing access to resources. We recommend you use managed identities to avoid the need to manage secrets. For more information, see [the identity design area](./identity-access.md).
+- *Establish workload identities.* Workload identities (service principals) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather workload identity needs at intake. Your vending process should create these identities and assign appropriate subscription access. It's important to note that the workload identity can't use PIM and receives standing access to resources. We recommend you use managed identities to avoid the need to manage secrets. For more information, see [the identity design area](./identity-access.md).
 
 **Hand off to application team.** After the platform team creates the subscription, they should hand off the subscription to the application team.
 
