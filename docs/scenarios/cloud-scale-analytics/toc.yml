@@ -128,8 +128,6 @@ items:
         href: architectures/data-domains.md
       - name: Data mesh products
         href: architectures/what-is-data-product.md
-      - name: Data Contracts
-        href: architectures/data-contracts.md
       - name: Self-serve data platforms
         href: architectures/self-serve-data-platforms.md
       - name: Data marketplace
