@@ -2,7 +2,7 @@
 title: Cloud-scale analytics - Microsoft Cloud Adoption Framework for Azure
 description: Gain an overview of an end-to-end scenario for cloud-scale analytics, with a focus on Azure implementation.
 author: mboswell
-ms.author: pnp
+ms.author: mboswell
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank, build-2023, build-2023-dataai

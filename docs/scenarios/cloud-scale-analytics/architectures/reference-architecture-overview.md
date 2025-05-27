@@ -2,7 +2,7 @@
 title: Overview of reference architectures for cloud-scale analytics in Azure
 description: Understand various reference architectures for cloud-scale analytics in Azure.
 author: AnalyticJeremy
-ms.author: pnp
+ms.author: jepeach
 ms.date: 11/25/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management

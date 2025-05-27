@@ -2,7 +2,7 @@
 title: Automation for Azure Arc-enabled Kubernetes
 description: Understand the design considerations and recommendations for automation of Arc-enabled Kubernetes
 author: mrhoads
-ms.author: pnp
+ms.author: mirhoads
 ms.date: 04/29/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid

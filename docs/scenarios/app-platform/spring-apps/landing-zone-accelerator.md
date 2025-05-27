@@ -2,7 +2,7 @@
 title: Azure Spring Apps landing zone accelerator
 description: Learn about the Azure Spring Apps landing zone accelerator set, which is an open source collection of Terraform templates.
 author: pagewriter-msft
-ms.author: pnp
+ms.author: prwilk
 ms.date: 03/01/2023
 ms.topic: conceptual
 ms.custom: devx-track-terraform

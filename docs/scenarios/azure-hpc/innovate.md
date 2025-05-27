@@ -2,7 +2,7 @@
 title: Innovate with Azure high-performance computing (HPC)
 description: This is the HPC scenario's impact on empowering innovation.
 author: Rajani-Janaki-Ram
-ms.author: pnp
+ms.author: rajanaki
 ms.date: 10/25/2022
 ms.topic: conceptual
 ms.custom: think-tank

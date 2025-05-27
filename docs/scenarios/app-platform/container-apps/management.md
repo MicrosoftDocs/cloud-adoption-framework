@@ -2,7 +2,7 @@
 title: Management and operations for the Azure Container Apps Landing Zone Accelerator
 description: Learn how to use the features of Container Apps to keep your apps stable and error free.
 author: craigshoemaker
-ms.author: pnp
+ms.author: cshoe
 ms.date: 10/06/2023
 ms.topic: conceptual
 ---

@@ -2,7 +2,7 @@
 title: Business continuity and disaster recovery for Azure Virtual Desktop
 description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for an Azure Virtual Desktop environment.
 author: igorpag
-ms.author: pnp
+ms.author: igorpag
 ms.date: 08/24/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd

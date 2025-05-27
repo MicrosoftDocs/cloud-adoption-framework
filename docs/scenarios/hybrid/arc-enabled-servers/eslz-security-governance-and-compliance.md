@@ -2,7 +2,7 @@
 title: Governance, security, and compliance baseline for Azure Arc-enabled servers
 description: Expand Azure governance, security, and compliance baseline for deployment on Azure Arc-enabled servers.
 author: MatthewGrimshaw
-ms.author: pnp
+ms.author: matgri
 ms.date: 06/10/2021
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

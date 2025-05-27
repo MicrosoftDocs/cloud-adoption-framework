@@ -2,7 +2,7 @@
 title: Authorization for Cloud-Scale Analytics in Azure
 description: Learn about the best practices, including data management and role-based access control, for authorization in cloud-scale analytics environments in Azure.
 author: mboswell
-ms.author: pnp
+ms.author: mboswell
 ms.date: 01/31/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

@@ -2,7 +2,7 @@
 title: Tailor the Azure landing zone architecture
 description: Understand how to tailor the Azure landing zone architecture to meet your business requirements.
 author: jtracey93
-ms.author: pnp
+ms.author: jatracey
 ms.date: 12/16/2024
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5

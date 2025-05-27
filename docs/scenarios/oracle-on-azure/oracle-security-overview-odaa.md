@@ -2,7 +2,7 @@
 title: Security Guidelines for Oracle Database@Azure
 description: Learn about best practices for applying multiple defense mechanisms to ensure comprehensive security for Oracle Database@Azure workloads.
 author: basimolimajeed
-ms.author: pnp
+ms.author: bamajeed
 ms.reviewer: janfaurs
 ms.date: 02/10/2025
 ms.topic: conceptual

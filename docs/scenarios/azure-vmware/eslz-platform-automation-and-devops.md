@@ -2,7 +2,7 @@
 title: Enterprise-scale platform automation for Azure VMware Solution
 description: Learn about considerations for the initial deployment of Azure VMware Solution, and find guidance for operational automation.
 author: ScottHolden
-ms.author: pnp
+ms.author: scholden
 ms.date: 04/21/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware

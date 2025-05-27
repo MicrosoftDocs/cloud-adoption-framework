@@ -2,7 +2,7 @@
 title: Independent software vendor (ISV) considerations for Azure landing zones
 description: Discuss Independent Software Vendor (ISV) specific considerations for Azure landing zones.
 author: arsenvlad
-ms.author: pnp
+ms.author: arsenv
 ms.date: 07/30/2024
 ms.topic: conceptual
 ms.custom: internal

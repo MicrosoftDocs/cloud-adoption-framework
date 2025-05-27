@@ -2,7 +2,7 @@
 title: Resource organization for Azure Arc-enabled kubernetes
 description: Learn how to organize resources when working with Azure Arc-enabled Kubernetes.
 author: lanicolas
-ms.author: pnp
+ms.author: lanicola
 ms.date: 04/28/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid

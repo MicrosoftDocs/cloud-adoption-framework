@@ -2,7 +2,7 @@
 title: Cloud-scale analytics data applications (source-aligned)
 description: Learn about cloud-scale analytics data applications (source-aligned) in Azure.
 author: mboswell
-ms.author: pnp
+ms.author: mboswell
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

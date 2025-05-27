@@ -2,7 +2,7 @@
 title: Azure Data Lake Storage
 description: Use Azure Data Lake Storage for cloud-scale analytics.
 author: mboswell
-ms.author: pnp
+ms.author: mboswell
 ms.date: 10/10/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

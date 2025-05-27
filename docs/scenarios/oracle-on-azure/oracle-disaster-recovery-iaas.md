@@ -2,7 +2,7 @@
 title: Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator
 description: Learn about business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
-ms.author: pnp
+ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 07/05/2024
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Security for Azure Red Hat OpenShift
 description: Learn how to implement security for Azure Red Hat OpenShift deployments.
 author: UmarMohamedUsman
-ms.author: pnp
+ms.author: umarm
 ms.date: 11/17/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aro, linux-related-content

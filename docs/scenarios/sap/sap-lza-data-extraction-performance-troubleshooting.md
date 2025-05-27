@@ -2,7 +2,7 @@
 title: Performance and troubleshooting for SAP data extraction
 description: Learn about performance and troubleshooting for SAP data extraction with Azure connectors.
 author: PmeshramPM
-ms.author: pnp
+ms.author: pameshra
 ms.date: 07/04/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap

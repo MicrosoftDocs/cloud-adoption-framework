@@ -2,7 +2,7 @@
 title: Security considerations for the Azure Spring Apps landing zone accelerator
 description: Learn how to create a workload that's capable of detecting, preventing, and responding to security vulnerabilities in Azure Spring Apps.
 author: pagewriter-msft
-ms.author: pnp
+ms.author: prwilk
 ms.date: 03/01/2023
 ms.topic: conceptual
 ---

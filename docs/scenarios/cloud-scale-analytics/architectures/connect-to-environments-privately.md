@@ -2,7 +2,7 @@
 title: Network topology and connectivity for connecting to environments privately
 description: Learn about the network topology for connecting to environments privately.
 author: marvinbuss
-ms.author: pnp
+ms.author: mabuss
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

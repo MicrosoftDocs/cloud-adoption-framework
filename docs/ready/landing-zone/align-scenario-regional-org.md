@@ -2,7 +2,7 @@
 title: Scenario- Transition a regional organization environment to the Azure landing zone conceptual architecture
 description: Learn how to transition existing regional Azure environments comprised of multiple management groups into the Azure landing zone conceptual architecture.
 author: sebassem
-ms.author: pnp
+ms.author: sebassem
 ms.reviewer: tozimmergren
 ms.date: 02/27/2025
 ms.topic: conceptual

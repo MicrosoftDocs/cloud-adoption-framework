@@ -2,7 +2,7 @@
 title: Plan for Azure VMware Solution
 description: Learn about business and technical considerations for architectural design, evaluation, and deployment of Azure VMware Solution
 author: mhenry
-ms.author: pnp
+ms.author: jaalmond
 ms.date: 04/21/2022
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank

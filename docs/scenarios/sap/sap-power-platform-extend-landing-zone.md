@@ -2,7 +2,7 @@
 title: Extend an SAP Landing Zone to Support Power Platform
 description: Learn how to implement the integration of SAP with Microsoft Power Platform by extending your SAP landing zone.
 author: shekhag
-ms.author: pnp
+ms.author: shegupt
 ms.date: 10/30/2024
 ms.topic: conceptual
 ms.custom: e2e-sap

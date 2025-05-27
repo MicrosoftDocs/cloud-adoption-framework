@@ -2,7 +2,7 @@
 title: Data contracts
 description: Data contracts in a data mesh
 author: PietheinStrengholt
-ms.author: pnp
+ms.author: pstrengholt
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

@@ -2,7 +2,7 @@
 title: Business continuity and disaster recovery for an SAP migration
 description: Learn how to incorporate principles that address business continuity and disaster recovery (BCDR) for SAP migrations on Azure.
 author: PmeshramPM
-ms.author: pnp
+ms.author: pameshra
 ms.date: 08/13/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap

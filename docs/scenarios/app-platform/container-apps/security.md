@@ -2,7 +2,7 @@
 title: Security considerations for the Azure Container Apps landing zone accelerator
 description: Learn how to secure apps in Azure Container Apps.
 author: craigshoemaker
-ms.author: pnp
+ms.author: cshoe
 ms.date: 10/06/2023
 ms.topic: conceptual
 ---

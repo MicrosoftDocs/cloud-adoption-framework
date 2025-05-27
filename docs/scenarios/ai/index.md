@@ -2,7 +2,7 @@
 title: AI adoption
 description: Discover how startups and enterprises can effectively adopt generative and nongenerative AI
 author: stephen-sumner
-ms.author: pnp
+ms.author: ssumner
 ms.date: 04/09/2025
 ms.topic: conceptual
 ---

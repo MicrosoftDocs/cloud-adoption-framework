@@ -2,7 +2,7 @@
 title: Deploy a sandbox for Azure Arc-enabled SQL Managed Instance
 description: Learn how to deploy Azure landing zone Azure Arc-enabled data services sandbox to accelerate your adoption of hybrid or multicloud architectures.
 author: likamrat
-ms.author: pnp
+ms.author: likamrat
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Organize data operations team members for Cloud-scale analytics in Azure
 description: Learn how to organize data operations team members for Cloud-scale analytics in Azure.
 author: abdale
-ms.author: pnp
+ms.author: hamoodaleem
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

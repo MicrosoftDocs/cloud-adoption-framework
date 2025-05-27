@@ -2,7 +2,7 @@
 title: Establish Cross-Tenant Network Connectivity for Azure VMware Solution SDDCs
 description: Learn how to use Azure Virtual WAN and NVAs to establish network connectivity for Azure VMware Solution SDDCs in a cross-tenant environment.
 author: Mahesh-MSFT
-ms.author: pnp
+ms.author: maksh
 ms.date: 10/16/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware

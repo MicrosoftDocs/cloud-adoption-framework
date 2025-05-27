@@ -2,7 +2,7 @@
 title: Adatum Corporation scenario for cloud-scale analytics in Azure
 description: Learn about the Adatum Corporation scenario for cloud-scale analytics in Azure.
 author: mboswell
-ms.author: pnp
+ms.author: mboswell
 ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management

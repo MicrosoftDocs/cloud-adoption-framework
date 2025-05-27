@@ -2,7 +2,7 @@
 title: Network topology and connectivity for the Azure Spring Apps landing zone accelerator
 description: Learn about the network topology and connectivity for a Spring Boot workload. Learn the best practices for subnetting, ingress, and egress controls.
 author: pagewriter-msft
-ms.author: pnp
+ms.author: prwilk
 ms.date: 03/01/2023
 ms.topic: conceptual
 ---

@@ -2,7 +2,7 @@
 title: Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes
 description: Expand Azure governance, security, and compliance baseline for deployment on Azure Arc-enabled Kubernetes.
 author: lanicolas
-ms.author: pnp
+ms.author: lanicola
 ms.date: 04/29/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid

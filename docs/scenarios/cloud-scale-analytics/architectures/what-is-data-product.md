@@ -2,7 +2,7 @@
 title: What is a data product?
 description: Learn about the data mesh approach, which adopts the concept of data as a product. Learn how to create effective data products and use them in your design.
 author: sasever
-ms.author: pnp
+ms.author: sasever
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

@@ -2,7 +2,7 @@
 title: Cost governance for Azure Arc-enabled servers
 description: Understand the design considerations and recommendations for cost management and governance of Azure Arc-enabled servers
 author: sebassem
-ms.author: pnp
+ms.author: sebassem
 ms.date: 10/18/2021
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

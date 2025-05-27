@@ -2,7 +2,7 @@
 title: Single-Region Data Landing Zone Connectivity
 description: Learn about single-region data landing zone connectivity for cloud-scale analytics in Azure, including service management, costs, and bandwidth considerations.
 author: marvinbuss
-ms.author: pnp
+ms.author: mabuss
 ms.date: 02/21/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

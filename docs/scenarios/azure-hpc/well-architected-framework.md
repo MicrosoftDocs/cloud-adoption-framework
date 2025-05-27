@@ -2,7 +2,7 @@
 title: The Azure Well-Architected Framework for HPC
 description: Learn how to use the Azure Well-Architected Framework architecture principles to design and optimize workloads running in your high-performance computing (HPC) scenario.
 author: Rajani-Janaki-Ram
-ms.author: pnp
+ms.author: rajanaki
 ms.date: 04/02/2024
 ms.topic: conceptual
 ms.custom: think-tank

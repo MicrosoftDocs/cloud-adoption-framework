@@ -2,7 +2,7 @@
 title: Network connectivity for Azure Arc-enabled Kubernetes
 description: Understand the design considerations and recommendations for network connectivity in Arc-enabled Kubernetes.
 author: chintalavr
-ms.author: pnp
+ms.author: vchintala
 ms.date: 04/27/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-hybrid

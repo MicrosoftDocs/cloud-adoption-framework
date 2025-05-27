@@ -2,7 +2,7 @@
 title: Network considerations for Azure VMware Solution dual-region deployments
 description: Learn how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions for disaster resilience purposes.
 author: fguerri
-ms.author: pnp
+ms.author: fguerri
 ms.date: 02/09/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware

@@ -2,7 +2,7 @@
 title: Storage for Azure HPC Workloads
 description: Learn how to use Azure Storage for high-performance computing (HPC) workloads in energy environments, the finance sector, and for manufacturing.
 author: Rajani-Janaki-Ram
-ms.author: pnp
+ms.author: rajanaki
 ms.topic: conceptual
 ms.custom: think-tank
 ms.date: 12/06/2024

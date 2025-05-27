@@ -2,7 +2,7 @@
 title: Network Connectivity for Azure Arc-enabled Servers
 description: Learn about design considerations and recommendations for network connectivity of Azure Arc-enabled servers to manage physical servers and virtual machines.
 author: Welasco
-ms.author: pnp
+ms.author: vsantana
 ms.date: 09/06/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-hybrid

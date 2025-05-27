@@ -2,7 +2,7 @@
 title: Develop your naming and tagging strategy for Azure resources
 description: Read an overview of resource naming and tagging strategy for enterprise cloud adoption efforts.
 author: paulgrimley
-ms.author: pnp
+ms.author: paulgr
 ms.date: 05/22/2025
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit, UpdateFrequency3

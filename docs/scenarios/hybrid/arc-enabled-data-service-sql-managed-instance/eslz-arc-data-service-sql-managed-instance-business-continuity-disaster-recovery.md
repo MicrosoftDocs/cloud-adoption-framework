@@ -2,7 +2,7 @@
 title: Azure Arc-enabled SQL Managed Instance business continuity
 description: Learn how to implement business continuity and disaster recovery for Azure Arc-enabled SQL Managed Instance.
 author: sebassem
-ms.author: pnp
+ms.author: sebassem
 ms.date: 09/07/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

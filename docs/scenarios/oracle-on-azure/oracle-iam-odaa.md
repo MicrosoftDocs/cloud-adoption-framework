@@ -2,7 +2,7 @@
 title: Identity and Access Management for Oracle Database@Azure
 description: Learn how to design your identity and access management approach for Oracle Database@Azure by focusing on security measures, user access, and system integration best practices.
 author: sihbher
-ms.author: pnp
+ms.author: gereyeso
 ms.reviewer: janfaurs
 ms.date: 01/31/2025
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: SAP and Power Platform Fundamentals
 description: Learn how to extend SAP with Microsoft Power Platform to create better end-to-end business solutions.
 author: mimergel
-ms.author: pnp
+ms.author: mimergel
 ms.date: 10/30/2024
 ms.topic: conceptual
 ms.custom: e2e-sap

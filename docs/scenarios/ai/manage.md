@@ -2,7 +2,7 @@
 title: Manage AI – Process to manage AI
 description: Learn the process to manage AI with best practices and recommendations.
 author: stephen-sumner
-ms.author: pnp
+ms.author: ssumner
 ms.date: 04/09/2025
 ms.topic: conceptual
 ---

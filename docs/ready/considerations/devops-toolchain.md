@@ -2,7 +2,7 @@
 title: DevOps toolchain
 description: Guidance to help you choose a DevOps tooling stack.
 author: elanzel
-ms.author: pnp
+ms.author: elanzelm
 ms.date: 06/24/2022
 ms.topic: conceptual
 ms.custom: internal

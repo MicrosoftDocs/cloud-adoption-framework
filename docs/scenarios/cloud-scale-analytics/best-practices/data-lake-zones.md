@@ -2,7 +2,7 @@
 title: Data lake zones and containers
 description: Learn about the three Azure Data Lake Storage Gen2 accounts that can be provisioned for each data landing zone.
 author: mboswell
-ms.author: pnp
+ms.author: mboswell
 ms.date: 10/10/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

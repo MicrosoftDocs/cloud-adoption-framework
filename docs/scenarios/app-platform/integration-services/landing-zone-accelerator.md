@@ -2,7 +2,7 @@
 title: Azure Integration Services landing zone accelerator
 description: The Azure Integration Services landing zone accelerator consist of a collection of ARM templates that you can use to automate the deployment of all of the resources needed for an enterprise-ready integration platform.
 author: claytonsiemens77
-ms.author: pnp
+ms.author: csiemens
 ms.date: 03/10/2023
 ms.topic: conceptual
 ---

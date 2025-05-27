@@ -2,7 +2,7 @@
 title: Multiple data zones for cloud-scale analytics in Azure
 description: See how Relecloud, a fictional cloud provider company, implements multiple landing zones for cloud-scale analytics in Azure.
 author: mboswell
-ms.author: pnp
+ms.author: mboswell
 ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management

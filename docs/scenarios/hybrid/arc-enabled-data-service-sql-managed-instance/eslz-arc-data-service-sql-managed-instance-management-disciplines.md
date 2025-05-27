@@ -2,7 +2,7 @@
 title: Management and monitoring for Azure Arc-enabled SQL Managed Instance
 description: Learn about design considerations and recommendations for the management and monitoring of  Azure Arc-enabled SQL Managed Instance.
 author: mrhoads
-ms.author: pnp
+ms.author: mirhoads
 ms.date: 09/07/2022
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

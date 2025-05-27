@@ -2,7 +2,7 @@
 title: Operations baseline guidance for Azure Red Hat OpenShift
 description: Learn about design considerations and recommendations for Azure Red Hat OpenShift baseline operations.
 author: SriniPadala
-ms.author: pnp
+ms.author: srpadala
 ms.date: 08/19/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aro, linux-related-content

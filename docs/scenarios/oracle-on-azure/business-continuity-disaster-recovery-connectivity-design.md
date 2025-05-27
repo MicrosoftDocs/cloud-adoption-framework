@@ -2,7 +2,7 @@
 title: Network Topology and Connectivity for Oracle Database@Azure - BCDR Connectivity Design
 description: Learn about considerations and recommendations for Oracle Database@Azure BCDR connectivity design, including best practices, optimization, and guidance.
 author: moisesjgomez
-ms.author: pnp
+ms.author: mgomezcortez
 ms.date: 02/08/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle

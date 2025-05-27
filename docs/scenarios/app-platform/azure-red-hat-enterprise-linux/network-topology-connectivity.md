@@ -2,7 +2,7 @@
 title: Network topology and connectivity considerations for Red Hat Enterprise Linux
 description: Learn about key design considerations and recommendations for network topology and connectivity in RHEL on Azure infrastructure.
 author: humblejay
-ms.author: pnp
+ms.author: kupole
 ms.date: 07/24/2024
 ms.topic: conceptual
 ms.custom: e2e-alz
