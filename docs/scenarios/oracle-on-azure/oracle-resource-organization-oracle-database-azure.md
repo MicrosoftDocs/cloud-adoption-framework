@@ -13,7 +13,7 @@ ms.custom: e2e-oracle, references_regions
 
 Oracle Database@Azure is an Oracle database service that's colocated in Microsoft datacenters and runs on Oracle Cloud Infrastructure (OCI).
 
-This article expands on considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/resource-org.md). It incorporates best practices for organizing resources to create consistent deployment patterns for Oracle Exadata Database Services on Oracle Database@Azure.
+This article expands on considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/resource-org.md). It incorporates best practices for organizing resources to create consistent deployment patterns for Oracle Exadata Database Services on Oracle Database@Azure and Oracle Autonomous Database Services on Oracle Database@Azure.
 
 ## Design considerations
 
@@ -33,19 +33,35 @@ To enhance security and management in multiple subscription architectures, imple
 
 ### Subscription design considerations
 
-Consider the following factors when you design the subscription setup for Oracle Database@Azure.
+Consider the following factors when you design the subscription setup for Oracle Exadata Database@Azure.
 
-- **Primary subscription:** During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all Oracle Database@Azure deployments.
+- **Primary subscription:** During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Exadata Database@Azure and forms the foundation for all Oracle Exadata Database@Azure deployments. 
 
 - **Secondary subscriptions:** When you expand into secondary subscriptions, VM clusters in these subscriptions default to the same availability zone that you chose in the primary subscription. Align application services with the availability zone of the VM cluster to help ensure performance, high availability, and redundancy.
 
 - **Resource groups:** Within each subscription, resources such as VM clusters, virtual networks, and supporting infrastructure can be organized into different resource groups. This setup allows for the logical separation and management of resources. And it enables flexibility in how infrastructure components are deployed and maintained.
+
+Consider the following factors when you design the subscription setup for Oracle Autonomous Database@Azure. 
+
+- Primary subscription: During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all Oracle Database@Azure deployments. 
+
+- Secondary subscriptions: When you expand into secondary subscriptions, VM clusters in these subscriptions default to the same availability zone that you chose in the primary subscription. Align application services with the availability zone of the VM cluster to help ensure performance, high availability, and redundancy. 
+
+- Resource groups: Within each subscription, resources such as VM clusters, virtual networks, and supporting infrastructure can be organized into different resource groups. This setup allows for the logical separation and management of resources. And it enables flexibility in how infrastructure components are deployed and maintained. 
 
 ## Design recommendations
 
 ### Subscription design recommendations
 
 The following recommendations are based on the subscription design considerations.
+
+- **Permissions:** Provisioning  Oracle Exadata Database@Azure and Oracle Autonomous Database@Azure subscription use must have the proper permissions and please check your required permissions before provisioning. 
+
+- **Resource registration:** Oracle Exadata Database@Azure and Oracle Autonomous Database@Azure run on Azure as a bare metal service. Please ensure your register necessary resources as documented in [step 4 of this document](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm). 
+  - Oracle.Database
+  - Microsoft.BareMetal/BareMetalConnections/read
+  - Microsoft.BareMetal/BareMetalConnections/write
+  - Microsoft.BareMetal/BareMetalConnections/delete
 
 - **Use a multiple subscription architecture:** Design a subscription model where each environment, such as production, development, testing, and DR, is isolated in its own Azure subscription. This approach provides insights into cost tracking, security, and workload management.
 
@@ -65,8 +81,10 @@ Establish a multiple subscription architecture for Oracle Database@Azure, where 
 
 - **Exadata infrastructure:** Configure the [Exadata infrastructure to be shared across multiple environments](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription#use-multiple-azure-subscriptions-with-oracle-databaseazure), such as production, development, unit testing, and SIT. This central infrastructure serves different workloads and subscriptions that are specific to Oracle Database@Azure. This setup isolates each environment within its own Azure subscription, which provides a clear separation for security, networking, cost allocation, and management purposes tailored to Oracle Database@Azure deployments.
 
+- **Autonomous Infrastructure:** Configuration for multiple subscription is not required. [Please refer onboarding documentation for more details](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-autonomous-database-services.html)
+
 ## Next steps
 
-- For more information about how to plan and design networking, see [Network topology and connectivity for Oracle Database@Azure](/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-network-topology-odaa).
+- For more information about how to plan and design networking, see [Network topology and connectivity for Oracle Database@Azure](/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-network-topology-odaa).
 - For more information about how to enhance security, see [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative).
 - For more information about isolation best practices, see [Resource isolation with multiple tenants](/entra/architecture/secure-multiple-tenants).
