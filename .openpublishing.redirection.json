@@ -3104,6 +3104,16 @@
          "source_path": "docs/migrate/prepare/ready-azure-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/ready-azure-landing-zone",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/resources/networking-vdc.md",
+         "redirect_url": "/azure/architecture/networking/architecture/hub-spoke",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/resources/cloud-operating-model.md",
+         "redirect_url": "/azure/cloud-adoption-framework/operating-model/",
+         "redirect_document_id": false
       }
    ]   
 }
