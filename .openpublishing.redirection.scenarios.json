@@ -614,16 +614,6 @@
       "source_path": "docs/scenarios/defense/identity/multi-tenant/zero-trust-configuration.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/resources/networking-vdc.md",
-      "redirect_url": "/azure/architecture/networking/architecture/hub-spoke",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/resources/cloud-operating-model.md",
-      "redirect_url": "/azure/architecture/networking/architecture/hub-spoke",
-      "redirect_document_id": false
     }
   ]
 }
