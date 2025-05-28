@@ -2,7 +2,7 @@
 title: Review product migration scenarios
 description: Get an overview of product migration scenarios that demonstrate how you can migrate to Azure for various applications and services.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.custom: devx-track-extended-java, linux-related-content

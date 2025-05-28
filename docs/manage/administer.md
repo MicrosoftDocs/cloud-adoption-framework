@@ -2,7 +2,7 @@
 title: Administer your Azure cloud estate
 description: Learn how to administer your Azure cloud estate and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2

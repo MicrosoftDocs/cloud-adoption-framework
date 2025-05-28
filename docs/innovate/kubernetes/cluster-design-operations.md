@@ -2,7 +2,7 @@
 title: Cluster design and operations
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design, network design, and operations.
 author: sabbour
-ms.author: asabbour
+ms.author: pnp
 ms.date: 04/02/2021
 ms.topic: conceptual
 ms.custom: think-tank

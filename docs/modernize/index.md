@@ -2,7 +2,7 @@
 title: Modernize in the cloud
 description: Modernize in cloud and maximize value. Modernization is a critical approach to cloud adoption that increases efficiency and exceed objectives.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 10/4/2022
 ms.topic: conceptual
 ms.custom: internal

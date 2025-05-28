@@ -2,7 +2,7 @@
 title: Operating model terminology
 description: Learn the terminology associated with operating models. The terminology helps you understand how an operating model fits into the bigger theme of corporate planning.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 08/14/2020
 ms.topic: conceptual
 ms.custom: internal, operating-model, UpdateFrequency2

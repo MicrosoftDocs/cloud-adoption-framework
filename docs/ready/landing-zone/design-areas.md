@@ -2,7 +2,7 @@
 title: Azure landing zone design areas
 description: Learn how to evaluate a set of standard considerations that are used to define all Azure landing zones.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.reviewer: tozimmergren
 ms.date: 09/27/2024
 ms.topic: conceptual

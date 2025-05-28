@@ -2,7 +2,7 @@
 title: Microsoft Cloud Adoption Framework for Azure documentation
 description: Get tools, guidance, and narratives to help shape strategies and drive desired business outcomes during your cloud adoption journey.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/26/2022
 ms.topic: conceptual
 ms.subservice: caf-general

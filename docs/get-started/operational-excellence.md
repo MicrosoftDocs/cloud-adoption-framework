@@ -2,7 +2,7 @@
 title: 'Get started: Deliver operational excellence'
 description: Learn the basics of operational excellence during digital transformation.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3

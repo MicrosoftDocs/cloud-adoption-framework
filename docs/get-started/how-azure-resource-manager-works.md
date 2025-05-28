@@ -2,7 +2,7 @@
 title: How Azure Resource Manager works
 description: Understand fundamental Azure concepts like Azure Resource Manager, subscriptions, resource groups, and resources and how resources are deployed in Azure.
 author: alexbuckgit
-ms.author: robbag
+ms.author: pnp
 ms.date: 10/05/2022
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3, devx-track-arm-template

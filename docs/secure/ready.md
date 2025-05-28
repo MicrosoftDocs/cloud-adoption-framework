@@ -2,7 +2,7 @@
 title: Prepare Your Secure Cloud Estate
 description: Learn how to adopt security best practices during your cloud estate setup phase. Prepare for incident preparedness, confidentiality, availability, and more. 
 author: claytonsiemens77
-ms.author: csiemens
+ms.author: pnp
 ms.date: 11/01/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
