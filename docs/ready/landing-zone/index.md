@@ -60,11 +60,9 @@ This accelerator is a ready-made deployment experience. The Azure landing zone p
 
 If you plan to manage your environment with the Azure portal, use the Azure Platform Landing Zones Portal Accelerator. Deploying the Azure Landing Zone Portal Accelerator requires permissions to create resources at the tenant (`/`) scope. To grant these permissions, follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
 
-[![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
-
 ### Application landing zone accelerators
 
-Application landing zone accelerators help you deploy application landing zones. Use the list of available application landing zone accelerators in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) and deploy the accelerator that matches your scenario.
+Application landing zone accelerators help you deploy application landing zones. Use the list of available application landing zone accelerators in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) and deploy the accelerator that matches your scenario. Make sure you have reviewed and completed the [prerequisites](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-ALZ-Pre-requisites) before deploying Azure Landing Zones.
 
 <!-- markdownlint-disable MD034 -->
 
