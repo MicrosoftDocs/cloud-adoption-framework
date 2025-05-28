@@ -2,7 +2,7 @@
 title: Considerations and recommendations for multitenant Azure landing zone scenarios
 description: Learn about the considerations and recommendations when handling multiple Microsoft Entra tenants with Azure landing zones.
 author: jtracey93
-ms.author: pnp
+ms.author: jatracey
 ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank

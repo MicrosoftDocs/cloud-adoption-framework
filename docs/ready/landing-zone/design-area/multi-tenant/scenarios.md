@@ -2,7 +2,7 @@
 title: Scenarios for multiple Microsoft Entra tenants
 description: Learn about the scenarios for multiple Microsoft Entra tenants, and learn when they're required in Azure landing zones.
 author: jtracey93
-ms.author: pnp
+ms.author: jatracey
 ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: think-tank

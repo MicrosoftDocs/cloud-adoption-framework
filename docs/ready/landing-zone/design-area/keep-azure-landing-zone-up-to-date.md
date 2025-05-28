@@ -2,7 +2,7 @@
 title: Keep your Azure landing zone up to date
 description: Learn best practices for keeping your Azure landing zones up to date.
 author: Jfaurskov
-ms.author: pnp
+ms.author: Janfaurs
 ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
