@@ -829,10 +829,3 @@ items:
         href: /assessments/
       - name: App Modernization Guidance for Azure
         href: /azure/app-modernization-guidance
-
-    - name: Archived resources
-      items:
-      - name: Cloud operating model
-        href: resources/cloud-operating-model.md
-      - name: Virtual datacenter boundary security
-        href: resources/networking-vdc.md

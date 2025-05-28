@@ -16,7 +16,7 @@ Cloud adoption best practices encourage customers to create a single, centralize
 
 Common motivations for choosing Azure VMware Solution are:
 
-- **Business needs:** To accelerate the migration of VMware vSphere-based workloads, support your [total cost of ownership (TCO) reduction](https://azure.microsoft.com/pricing/tco/calculator/), and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
+- **Business needs:** To accelerate the migration of VMware vSphere-based workloads and rapidly expand capacity. This includes your need to reduce costs, complexity, and risk associated with larger-scale migration projects.
 - **IT needs:** To create business continuity, deploy disaster recovery solutions, and scale traditional on-premises VMware vSphere environments, with little to no change to applications (including VDI environments where modernization of VDI is not needed). Some additional IT needs are discussed below.
   - ***Retain the same IP address***: In lift and shift migrations, very often IP address are reassigned. This may result in either application configuration change or application not working at all. Azure VMware Solution provides ability to retain IP address after migration.
   - ***Retain the same MAC address***: Some software(s)/application(s) running in on-premise environment tie their licensing requirements with server/computer's MAC address. Change in MAC addresses after migration of these server(s)/computer(s) may result in non-compliance to licensing requirements. Azure VMware Solution provides ability to retain same MAC address.
