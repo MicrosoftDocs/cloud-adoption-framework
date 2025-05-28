@@ -2,7 +2,7 @@
 title: Resource consistency decision guide
 description: Understand the importance of your cloud estate's resource consistency and the factors that drive requirements for resource consistency.
 author: doodlemania2
-ms.author: dermar
+ms.author: pnp
 ms.date: 05/06/2024
 ms.topic: conceptual
 ms.subservice: caf-general

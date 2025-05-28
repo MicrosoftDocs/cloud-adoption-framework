@@ -2,7 +2,7 @@
 title: Management groups
 description: Learn about the resource organization and management group design considerations and recommendations.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5

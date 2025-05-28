@@ -2,7 +2,7 @@
 title: Modernize databases in the cloud
 description: Adopt database PaaS and infrastructure-as-a-service (IaaS) solutions to modernize any databases. Find the implementation guidance that gives you right balance of control and productivity
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 09/02/2022
 ms.topic: conceptual
 keywords: collect data, migrate data, data migration, data modernization

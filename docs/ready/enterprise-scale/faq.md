@@ -2,7 +2,7 @@
 title: Azure landing zone frequently asked questions (FAQ)
 description: The Azure landing zone frequently asked questions (FAQ) provide answers to common questions asked about the Azure landing zone architecture.
 author: jtracey93
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency2, devx-track-terraform

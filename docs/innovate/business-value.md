@@ -2,7 +2,7 @@
 title: Build business value through innovation
 description: Use the Cloud Adoption Framework for Azure to learn about business value, and how to build consensus around the definition of business value across stakeholders.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.custom: internal

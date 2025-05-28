@@ -2,7 +2,7 @@
 title: Commit to modernization
 description: Learn how to gain commitment to cloud modernization plan.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 02/04/2025
 ms.topic: conceptual
 ms.custom: internal

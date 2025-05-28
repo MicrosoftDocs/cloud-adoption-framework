@@ -2,7 +2,7 @@
 title: Innovate methodology and maturity modeling
 description: Learn about Azure tools that use the Innovate methodology to remove friction and empower adoption incrementally as hypotheses mature through the maturity model.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal

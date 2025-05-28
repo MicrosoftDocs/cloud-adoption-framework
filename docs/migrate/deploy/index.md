@@ -2,7 +2,7 @@
 title: Migration deployment checklist
 description: Get an overview of the articles that explain the various activities that might be involved in the deploy phase for migrating a workload in Azure.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/05/2024
 ms.topic: conceptual
 ms.collection: 

@@ -2,7 +2,7 @@
 title: Infrastructure as Code
 description: Infrastructure as Code for Azure Landing Zones
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/22/2023
 ms.topic: conceptual
 ms.custom: internal

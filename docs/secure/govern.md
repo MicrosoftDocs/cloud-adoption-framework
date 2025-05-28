@@ -2,7 +2,7 @@
 title: Securely Govern Your Cloud Estate
 description: Learn how to adopt security best practices in your cloud estate’s Governance phase to significantly improve your overall security posture.
 author: claytonsiemens77
-ms.author: csiemens
+ms.author: pnp
 ms.date: 10/21/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2

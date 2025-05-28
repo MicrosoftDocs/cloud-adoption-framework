@@ -2,7 +2,7 @@
 title: Migrate end-user desktops to Azure Virtual Desktop
 description: Use the Cloud Adoption Framework best practices to migrate end-user desktops to Azure Virtual Desktop.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 07/19/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
