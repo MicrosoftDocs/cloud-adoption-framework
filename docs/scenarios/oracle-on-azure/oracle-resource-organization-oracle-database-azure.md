@@ -11,9 +11,11 @@ ms.custom: e2e-oracle, references_regions
 
 # Resource organization for Oracle Database@Azure
 
-Oracle Database@Azure is an Oracle database service that's colocated in Microsoft datacenters and runs on Oracle Cloud Infrastructure (OCI).
+Oracle Database@Azure is an Oracle database service that's colocated in Microsoft datacenters and runs on Oracle Cloud Infrastructure (OCI). Two service offerings are currently available:
+1. **Oracle Exadata Database@Azure**: Dedicated Exadata racks that you provision and operate inside your Azure subscriptions.
+2. **Oracle Autonomous Database@Azure:** Fully managed, self‑driving Autonomous Databases running on shared Exadata infrastructure.
 
-This article expands on considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/resource-org.md). It incorporates best practices for organizing resources to create consistent deployment patterns for Oracle Exadata Database Services on Oracle Database@Azure and Oracle Autonomous Database Services on Oracle Database@Azure.
+This article expands on considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/resource-org.md). It incorporates best practices for organizing resources to create consistent deployment patterns for Oracle Database@Azure Services.
 
 ## Design considerations
 
@@ -27,27 +29,34 @@ When you name Oracle Database@Azure resources, use the [Azure general naming con
 
 - [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources)
 
+**Oracle Autonomous Database@Azure–specific constraints:** Oracle Autonomous Database@Azure instance names can contain only letters and numbers, have a maximum length of 30 characters, and can't include spaces. Consider using a consistent naming pattern that clearly identifies the environment, application, and purpose of each Oracle Autonomous Database@Azure instance. For example:
+- **adb-eus-erp-prod:** An Autonomous Database (adb) in East US (eus) for ERP applications in production (prod).
+- **adb-cac-hr-dr:** An Autonomous Database in Canada Central (cac) for HR applications in disaster recovery (dr).
+- **adb-auea-bi-qa:** An Autonomous Database in Australia East (auea) for Business Intelligence in quality assurance (qa). 
+
+
 ### Security and isolation best practices
 
 To enhance security and management in multiple subscription architectures, implement [best practices for isolation architectures](/entra/architecture/secure-best-practices). These practices include strategies for logical isolation, least privilege access, and network segmentation. These measures are relevant for Oracle Database@Azure deployments that include multiple environments, such as production, development, and disaster recovery (DR) environments.
+
+**Oracle Autonomous Database@Azure note:** Because Oracle Autonomous Database@Azure instances are provisioned as individual PaaS resources, apply Azure Policy at the resource‑group scope to ensure that public‑network access is disabled and private endpoints are enforced.
+
 
 ### Subscription design considerations
 
 Consider the following factors when you design the subscription setup for Oracle Exadata Database@Azure.
 
-- **Primary subscription:** During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Exadata Database@Azure and forms the foundation for all Oracle Exadata Database@Azure deployments. 
+- **Primary subscription:** During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all Oracle Database@Azure deployments.
+  - **Onboarding permissions and resource providers:** See the Onboarding permissions table in the [Oracle documentation](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm#oaaprereq_1_permissions__onboarding-permissions-table-title) for the minimum Azure and OCI roles required and resource providers should be registered before you begin Oracle Database@Azure onboarding.
+  - **Resource registration:** Oracle Database@Azure run on Azure as a bare metal service. Make sure you registered this resource providers
+    - Oracle.Database
+    - Microsoft.BareMetal/BareMetalConnections/read
+    - Microsoft.BareMetal/BareMetalConnections/write
+    - Microsoft.BareMetal/BareMetalConnections/delete
 
-- **Secondary subscriptions:** When you expand into secondary subscriptions, VM clusters in these subscriptions default to the same availability zone that you chose in the primary subscription. Align application services with the availability zone of the VM cluster to help ensure performance, high availability, and redundancy.
+- **Secondary subscriptions:** When you expand into secondary subscriptions, Oracle Exadata Database@Azure VM clusters in these subscriptions default to the same availability zone that you chose in the primary subscription. Align application services with the availability zone of the VM cluster to help ensure performance, high availability, and redundancy.
 
-- **Resource groups:** Within each subscription, resources such as VM clusters, virtual networks, and supporting infrastructure can be organized into different resource groups. This setup allows for the logical separation and management of resources. And it enables flexibility in how infrastructure components are deployed and maintained.
-
-Consider the following factors when you design the subscription setup for Oracle Autonomous Database@Azure. 
-
-- Primary subscription: During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all Oracle Database@Azure deployments. 
-
-- Secondary subscriptions: When you expand into secondary subscriptions, VM clusters in these subscriptions default to the same availability zone that you chose in the primary subscription. Align application services with the availability zone of the VM cluster to help ensure performance, high availability, and redundancy. 
-
-- Resource groups: Within each subscription, resources such as VM clusters, virtual networks, and supporting infrastructure can be organized into different resource groups. This setup allows for the logical separation and management of resources. And it enables flexibility in how infrastructure components are deployed and maintained. 
+- **Resource groups:** Within each subscription, resources such as  Oracle Exadata Database@Azure VM clusters, virtual networks, and supporting infrastructure can be organized into different resource groups. This setup allows for the logical separation and management of resources. And it enables flexibility in how infrastructure components are deployed and maintained.
 
 ## Design recommendations
 
@@ -67,9 +76,12 @@ The following recommendations are based on the subscription design consideration
 
 - **Monitor billing across subscriptions:** Regularly review costs by using Microsoft Cost Management tools and ensure that the billing account configuration matches across all subscriptions. Cost Management tools can provide insights into overall expenses, but charges related to the Oracle account resource in the primary subscription (with the private offer) are consolidated under that subscription. Therefore, individual per-subscription billing isn't itemized in Azure. For independent charges, refer to OCI for cost tracking and invoicing.
 
+**Production workload isolation for Oracle Autonomous Database@Azure:** For mission‑critical workloads that run on Oracle Autonomous Database@Azure, consider separating each major application into its own production subscription to minimize blast radius and simplify role‑based access control (RBAC).
+
 ### Implement a multiple subscription setup
 
 Establish a multiple subscription architecture for Oracle Database@Azure, where various environments, such as production, development, unit testing, system integration testing (SIT), and DR, are managed across different Azure subscriptions within the same tenant. The following diagram shows a multiple subscription setup for Oracle Database@Azure.
+
 
 :::image type="content" source="./media/multiple-subscription-oracle-database-azure.svg" alt-text="Diagram that illustrates a multiple subscription setup for Oracle Database@Azure." border="false" lightbox="./media/multiple-subscription-oracle-database-azure.svg":::
 
@@ -79,12 +91,15 @@ Establish a multiple subscription architecture for Oracle Database@Azure, where 
 
   For example, if you deploy an Oracle database in zone 1 of subscription A and a related client application in zone 1 of subscription B, the application might experience unexpected latency if the zones map to physically distant locations. To prevent this latency, [review Azure documentation](/azure/reliability/availability-zones-overview?tabs=azure-cli#physical-and-logical-availability-zones) to understand the zone mappings for each subscription and ensure that applications and databases are deployed in zones with the intended geographical and network proximity. This alignment helps maintain predictable performance for client applications.
 
-- **Exadata infrastructure:** Configure the [Exadata infrastructure to be shared across multiple environments](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription#use-multiple-azure-subscriptions-with-oracle-databaseazure), such as production, development, unit testing, and SIT. This central infrastructure serves different workloads and subscriptions that are specific to Oracle Database@Azure. This setup isolates each environment within its own Azure subscription, which provides a clear separation for security, networking, cost allocation, and management purposes tailored to Oracle Database@Azure deployments.
+- **Oracle Exadata Database@Azure infrastructure:** Configure the [Exadata infrastructure to be shared across multiple environments](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription#use-multiple-azure-subscriptions-with-oracle-databaseazure), such as production, development, unit testing, and SIT. This central infrastructure serves different workloads and subscriptions that are specific to Oracle Database@Azure. This setup isolates each environment within its own Azure subscription, which provides a clear separation for security, networking, cost allocation, and management purposes tailored to Oracle Database@Azure deployments.
 
-- **Autonomous Infrastructure:** Configuration for multiple subscription is not required. [Please refer onboarding documentation for more details](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-autonomous-database-services.html)
+
+- **Oracle Autonomous Database@Azure resource structure:** When multiple Oracle Autonomous Database@Azure instances share a subscription, align them to separate resource groups and use Azure Policy to prevent the creation of public endpoints. This arrangement simplifies lifecycle operations and supports granular RBAC assignments.
+  - **Infrastructure:** Configuration for multiple subscription is not required. [Please refer onboarding documentation for more details](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-autonomous-database-services.html)
 
 ## Next steps
 
+- For more information about how to [manage resources in Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-manage-autonomous-database-resources)
 - For more information about how to plan and design networking, see [Network topology and connectivity for Oracle Database@Azure](/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-network-topology-odaa).
 - For more information about how to enhance security, see [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative).
 - For more information about isolation best practices, see [Resource isolation with multiple tenants](/entra/architecture/secure-multiple-tenants).
