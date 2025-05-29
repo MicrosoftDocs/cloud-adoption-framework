@@ -6,6 +6,7 @@ ms.author: pnp
 ms.date: 05/15/2025
 ms.topic: conceptual
 ms.custom: internal
+ms.update-cycle: 1095-days
 ---
 
 # Prepare for cloud adoption

@@ -7,6 +7,7 @@ ms.date: 02/14/2024
 ms.topic: conceptual
 ms.custom: internal
 keywords: cloud adoption, cloud framework, cloud adoption framework
+ms.update-cycle: 1095-days
 ---
 
 # Cloud adoption
