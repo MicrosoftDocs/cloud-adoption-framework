@@ -80,6 +80,21 @@ additionalContent:
           summary: Manage your entire Azure environment.
           url: ./manage/index.md
 
+    - title: Workload design and implementation 
+      summary: Use the Well-Architected Framework and Azure Architecture Center.  # < 160 chars (optional)
+      items: 
+
+        # Card
+        - title: Well-Architected Framework
+          summary: Design workloads the right way.
+          url: https://learn.microsoft.com/azure/architecture/framework/
+
+        # Card
+        - title: Azure Architecture Center
+          summary: Build using a catalog of Azure architectures.
+          url: https://learn.microsoft.com/azure/architecture/
+
+
     - title: Find help  # < 60 chars (optional)
       summary: Microsoft has dedicated resources to support your Azure adoption journey.  # < 160 chars (optional)
       items:
