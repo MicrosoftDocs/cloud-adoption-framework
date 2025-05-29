@@ -3126,7 +3126,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/plan/app-dynamics.md",
+         "source_path": "docs/digital-estate/app-dynamics.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/",
          "redirect_document_id": false
       }
