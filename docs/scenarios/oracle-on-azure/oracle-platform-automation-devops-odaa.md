@@ -25,7 +25,7 @@ This documentation provides design considerations and recommendations for deploy
     | Provider | Description
     | - | - |
     | [azurerm](https://registry.terraform.io/providers/hashicorp/azurerm/latest) | The AzureRM provider is used to manage resources in Microsoft Azure, enabling the creation, updating, and deletion of Azure services using Terraform configurations.
-    | [azapi](https://registry.terraform.io/providers/hashicorp/azurerm/latest) | The AzAPI provider is a thin layer on top of the Azure ARM REST APIs, enabling management of any Azure resource type using any API version. It can be used independently or alongside the AzureRM provider to utilize the latest Azure functionalities including previews.
+    | [azapi](https://registry.terraform.io/providers/Azure/azapi/latest/docs) | The AzAPI provider is a thin layer on top of the Azure ARM REST APIs, enabling management of any Azure resource type using any API version. It can be used independently or alongside the AzureRM provider to utilize the latest Azure functionalities including previews.
     | [azuread](https://registry.terraform.io/providers/hashicorp/azuread/latest) | The AzureAD provider is used to manage users, groups, service principals, and applications in Azure Active Directory using the Microsoft Graph API. 
     | [oci](https://registry.terraform.io/providers/oracle/oci/latest) | The Oracle Cloud Infrastructure (OCI) Terraform provider allows users to manage Oracle Cloud Infrastructure (OCI) resources using Terraform. It supports various OCI services and can be used with Terraform Cloud and OCI Resource Manager for automated deployment and operations.
 
