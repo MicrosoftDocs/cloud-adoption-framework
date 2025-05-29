@@ -26,7 +26,9 @@ When you design your network topology for Oracle Exadata Database@Azure, conside
 
 - **VM cluster limits:** Each Oracle Exadata Database@Azure SKU can include up to [eight VM clusters](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-B0820870-D946-4879-85BF-C95FF25979CF). Ensure that your virtual network is configured before VM cluster creation, and decide whether to connect clusters to the same virtual network or separate virtual networks.
 
-- **Internet access requirements:** Oracle Exadata Database@Azure has no direct internet access by default. If internet access is required, like for patching or outbound dependencies, you must configure it.
+- **Scheduled patching:** Scheduled patching for Oracle Exadata Database@Azure is delivered through the OCI control plane and does **not** require direct internet access. This reduces the need for outbound connectivity in typical maintenance scenarios.
+
+- **Internet access requirements:** Oracle Exadata Database@Azure has no direct internet access by default. If internet access is required—for example, for one-off patching, outbound telemetry, or downloading packages—it must be explicitly configured.
 
 - **Subnet sizing:** Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. For more information about sizing guidelines, see [Plan for IP address space for Oracle Exadata Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
