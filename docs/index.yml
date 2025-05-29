@@ -22,15 +22,20 @@ highlightedContent:
 
   items:
 
-      # Card
-    - title: Learn about the Framework
-      itemType: overview
+    # Card
+    - title: Cloud Adoption Framework
+      itemType: get-started
       url: ./overview.md
 
     # Card
-    - title: Explore adoption scenarios 
-      itemType: overview
+    - title: Azure adoption scenarios 
+      itemType: learn
       url: ./scenarios/index.md
+
+    # Card
+    - title: AI adoption framework
+      itemType: how-to-guide
+      url: ./scenarios/ai/
 
 # productDirectory section (optional)
 
@@ -67,7 +72,6 @@ productDirectory:
           text: Azure setup guide
         - url: ./ready/landing-zone.md
           text: Azure landing zone
-
 
     # Card
     - title: Adopt
