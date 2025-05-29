@@ -23,14 +23,14 @@ highlightedContent:
   items:
 
     # Card
-    - title: Cloud Adoption Framework
+    - title: Cloud Adoption Framework overview
       itemType: get-started
       url: ./overview.md
     
     # Card
     - title: AI adoption
       itemType: how-to-guide
-      url: ./scenarios/ai/index.md    # Card
+      url: ./scenarios/ai/index.md    
     - title: Common adoption scenarios 
       itemType: overview
       url: ./scenarios/index.md
@@ -85,7 +85,7 @@ additionalContent:
       items:
 
         # Card
-        - title: 🌟 Azure Innovate & Azure Migrate and Modernize
+        - title: Azure Innovate & Azure Migrate and Modernize
           summary: Accelerate your cloud and AI adoption with experts from Microsoft.
           url: https://azure.microsoft.com/en-us/solutions/migration/migrate-modernize-innovate/
 
