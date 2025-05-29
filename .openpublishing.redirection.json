@@ -3114,6 +3114,21 @@
          "source_path": "docs/resources/cloud-operating-model.md",
          "redirect_url": "/azure/cloud-adoption-framework/operating-model/",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/data-warehouse-migration.md",
+         "redirect_url": "/fabric/data-warehouse/migration-assistant",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/app-dynamics.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
       }
    ]   
 }
