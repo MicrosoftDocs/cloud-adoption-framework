@@ -40,8 +40,8 @@ highlightedContent:
 # productDirectory section (optional)
 
 productDirectory:
-  title: Cloud Adoption Framework guidance # < 60 chars (optional)
-  summary: Find guidance for each phase of your cloud adoption journey. # < 160 chars (optional)
+  title: Cloud Adoption Framework methodologies # < 60 chars (optional)
+  summary: Use the methodologies to support your Azure adoption journey. # < 160 chars (optional)
   items:
 
     # Card
@@ -118,7 +118,7 @@ additionalContent:
   # Supports up to 3 sections
   sections:
     - title: Find help  # < 60 chars (optional)
-      summary: Microsoft has dedicated resources to help unblock your cloud adoption journey.  # < 160 chars (optional)
+      summary: Microsoft has dedicated resources to support your Azure adoption journey.  # < 160 chars (optional)
       items:
 
         # Card
