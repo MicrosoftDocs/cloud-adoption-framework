@@ -47,37 +47,37 @@ additionalContent:
 
         # Card
         - title: 📋 Strategy
-          summary: Define motivations and business outcomes to build cloud adoption strategy.
+          summary: Prepare your business for Azure.
           url: ./strategy/index.md
 
         # Card
         - title: 📅 Plan
-          summary: Create actionable cloud adoption plan with skills readiness planning.
+          summary: Prepare people and processes for Azure adoption.
           url: ./plan/index.md
 
         # Card
         - title: 🛠️ Ready
-          summary: Prepare Azure environment with landing zones and setup guidance.
+          summary: Prepare your Azure environment for workloads.
           url: ./ready/index.md
 
         # Card
         - title: 🚀 Adopt
-          summary: Migrate, modernize, and innovate workloads in the cloud.
+          summary: Migrate, modernize, and innovate in Azure.
           url: ./migrate/index.md
 
         # Card
         - title: 🔐 Govern
-          summary: Establish governance practices and policies for cloud resources.
+          summary: Govern your Azure estate.
           url: ./govern/index.md
 
         # Card
         - title: 🛡️ Secure
-          summary: Implement security controls and best practices across your environment.
+          summary: Secure your Azure estate.
           url: ./secure/overview.md
 
         # Card
         - title: ⚙️ Manage
-          summary: Monitor and manage cloud operations for optimal performance.
+          summary: Manage your Azure estate.
           url: ./manage/index.md
 
     - title: Find help  # < 60 chars (optional)
