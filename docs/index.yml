@@ -30,86 +30,10 @@ highlightedContent:
     # Card
     - title: AI adoption
       itemType: how-to-guide
-      url: ./scenarios/ai/index.md
-
-    # Card
+      url: ./scenarios/ai/index.md    # Card
     - title: Common adoption scenarios 
       itemType: overview
       url: ./scenarios/index.md
-
-# productDirectory section (optional)
-
-productDirectory:
-  title: Cloud Adoption Framework methodologies # < 60 chars (optional)
-  summary: Use the methodologies to support your Azure adoption journey. # < 160 chars (optional)
-  items:
-
-    # Card
-    - title: Strategy
-      imageSrc: ./_images/icons/strategy.png
-      links:
-        - url: ./strategy/index.md
-          text: Overview
-        - url: ./strategy/index.md#cloud-adoption-strategy-checklist
-          text: Checklist
-
-    # Card
-    - title: Plan
-      imageSrc: ./_images/icons/plan.png
-      links:
-        - url: ./plan/index.md
-          text: Overview
-        - url: ./plan/suggested-skills.md
-          text: Skills readiness plan
-
-    # Card
-    - title: Ready
-      imageSrc: ./_images/icons/ready.png
-      links:
-        - url: ./ready/index.md
-          text: Overview
-        - url: ./ready/azure-setup-guide/index.md
-          text: Azure setup guide
-        - url: ./ready/landing-zone/index.md
-          text: Azure landing zone
-
-    # Card
-    - title: Adopt
-      imageSrc: ./_images/icons/migrate.png
-      links:
-        - url: ./migrate/index.md
-          text: Migrate
-        - url: ./modernize/index.md
-          text: Modernize
-        - url: ./innovate/index.md
-          text: Innovate (cloud-native)
-
-    # Card
-    - title: Govern
-      imageSrc: ./_images/icons/govern.png
-      links:
-        - url: ./govern/index.md
-          text: Overview
-        - url: ./govern/index.md#cloud-governance-checklist
-          text: Checklist
-
-    # Card
-    - title: Secure
-      imageSrc: ./_images/icons/secure.png
-      links:
-        - url: ./secure/overview.md
-          text: Overview
-        - url: ./secure/overview.md#cloud-security-checklist
-          text: Checklist
-
-    # Card
-    - title: Manage
-      imageSrc: ./_images/icons/manage.png
-      links:
-        - url: ./manage/index.md
-          text: Overview
-        - url: ./manage/index.md#cloud-management-checklist
-          text: Checklist
 
 # Card with summary style
 
@@ -117,12 +41,51 @@ additionalContent:
 
   # Supports up to 3 sections
   sections:
+    - title: Cloud Adoption Framework methodologies  # < 60 chars (optional)
+      summary: Use the methodologies to support your Azure adoption journey.  # < 160 chars (optional)
+      items:
+
+        # Card
+        - title: 📋 Strategy
+          summary: Define motivations and business outcomes to build cloud adoption strategy.
+          url: ./strategy/index.md
+
+        # Card
+        - title: 📅 Plan
+          summary: Create actionable cloud adoption plan with skills readiness planning.
+          url: ./plan/index.md
+
+        # Card
+        - title: 🛠️ Ready
+          summary: Prepare Azure environment with landing zones and setup guidance.
+          url: ./ready/index.md
+
+        # Card
+        - title: 🚀 Adopt
+          summary: Migrate, modernize, and innovate workloads in the cloud.
+          url: ./migrate/index.md
+
+        # Card
+        - title: 🔐 Govern
+          summary: Establish governance practices and policies for cloud resources.
+          url: ./govern/index.md
+
+        # Card
+        - title: 🛡️ Secure
+          summary: Implement security controls and best practices across your environment.
+          url: ./secure/overview.md
+
+        # Card
+        - title: ⚙️ Manage
+          summary: Monitor and manage cloud operations for optimal performance.
+          url: ./manage/index.md
+
     - title: Find help  # < 60 chars (optional)
       summary: Microsoft has dedicated resources to support your Azure adoption journey.  # < 160 chars (optional)
       items:
 
         # Card
-        - title: Azure Innovate & Azure Migrate and Modernize
+        - title: 🌟 Azure Innovate & Azure Migrate and Modernize
           summary: Accelerate your cloud and AI adoption with experts from Microsoft.
           url: https://azure.microsoft.com/en-us/solutions/migration/migrate-modernize-innovate/
 
