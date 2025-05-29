@@ -28,12 +28,12 @@ highlightedContent:
       url: ./overview.md
     
     # Card
-    - title: AI adoption roadmap
+    - title: AI adoption
       itemType: how-to-guide
       url: ./scenarios/ai/
 
     # Card
-    - title: Azure adoption scenarios 
+    - title: Other adoption scenarios 
       itemType: overview
       url: ./scenarios/index.md
 
