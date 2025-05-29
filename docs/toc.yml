@@ -783,37 +783,6 @@ items:
 
     - name: Tools and templates
       href: resources/tools-templates.md
-    
-    - name: Decision guides
-      items:
-      - name: Overview
-        href: decision-guides/index.md
-      - name: Identity
-        items:
-        - name: Identity decision guide
-          href: decision-guides/identity/index.md
-        - name: Azure role-based access control
-          href: ready/considerations/roles.md
-      - name: Networking
-        items:
-        - name: Hub and spoke network topology
-          href: ready/azure-best-practices/hub-spoke-network-topology.md
-        - name: Perimeter networks
-          href: ready/azure-best-practices/perimeter-networks.md
-      - name: Resource consistency
-        href: decision-guides/resource-consistency/index.md
-      - name: Logging and reporting
-        href: decision-guides/logging-and-reporting/index.md
-      - name: AI + machine learning
-        items:
-        - name: Organize and set up Azure Machine Learning
-          href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
-        - name: Best practices for enterprise security
-          href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
-        - name: Manage budget, cost, and quota with Azure
-          href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
-        - name: Machine learning operations
-          href: ready/azure-best-practices/ai-machine-learning-mlops.md
 
     - name: Additional resources
       items:

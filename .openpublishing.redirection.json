@@ -926,6 +926,96 @@
          "redirect_document_id": false 
       },
       {
+         "source_path": "docs/decision-guides/resource-consistency/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer#manage-cloud-resources",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/ai-machine-learning-resource-organization.md",
+         "redirect_url": "/azure/machine-learning/quickstart-create-resources",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/ai-machine-learning-enterprise-security.md",
+         "redirect_url": "/azure/machine-learning/concept-enterprise-security",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/optimize-ai-machine-learning-cost.md",
+         "redirect_url": "/azure/machine-learning/concept-plan-manage-cost",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/ai-machine-learning-mlops.md",
+         "redirect_url": "/azure/architecture/ai-ml/guide/machine-learning-operations-v2",
+         "redirect_document_id": false 
+      },       
+      {
+         "source_path": "docs/decision-guides/logging-and-reporting/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/monitor",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/hub-spoke-network-topology.md",
+         "redirect_url": "/azure/architecture/networking/architecture/hub-spoke",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/perimeter-networks.md",
+         "redirect_url": "/azure/architecture/networking/architecture/hub-spoke",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/ready/considerations/roles.md",
+         "redirect_url": "/azure/role-based-access-control/overview",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/decision-guides/index.md",
+         "redirect_url": "/azure/architecture/guide/technology-choices/technology-choices-overview",
+         "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/decision-guides/identity/index.md",
+         "redirect_url": "/azure/architecture/identity/identity-start-here",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/scenarios/azure-stack/index.md",
+         "redirect_url": "/azure-stack/",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/scenarios/azure-stack/govern.md",
+         "redirect_url": "/azure-stack/",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/scenarios/azure-stack/manage.md",
+         "redirect_url": "/azure-stack/",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/scenarios/azure-stack/migrate-assess.md",
+         "redirect_url": "/azure-stack/",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/scenarios/azure-stack/migrate-deploy.md",
+         "redirect_url": "/azure-stack/",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/scenarios/azure-stack/plan.md",
+         "redirect_url": "/azure-stack/",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/scenarios/azure-stack/ready.md",
+         "redirect_url": "/azure-stack/",
+         "redirect_document_id": false   
+      },
+      {
          "source_path": "docs/decision-guides/encryption/index.md",
          "redirect_url": "/azure/well-architected/security/design-storage-encryption",
          "redirect_document_id": false   
