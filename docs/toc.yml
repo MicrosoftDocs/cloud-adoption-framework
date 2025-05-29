@@ -58,8 +58,6 @@ items:
           href: digital-estate/rationalize.md
         - name: Align cost models to forecast costs
           href: digital-estate/calculate.md
-        - name: Measure business outcomes with AppDynamics
-          href: digital-estate/app-dynamics.md
       - name: Initial organization alignment
         href: plan/initial-org-alignment.md
       - name: Skills readiness plan
@@ -74,8 +72,6 @@ items:
           href: plan/plan-intro.md
         - name: Prerequisites
           href: plan/prerequisites.md
-        - name: Deploy the template to Azure DevOps
-          href: plan/template.md
         - name: Define and prioritize workloads
           href: plan/workloads.md
         - name: Align assets to workloads
@@ -86,9 +82,6 @@ items:
           href: plan/iteration-paths.md
         - name: Estimate timelines
           href: plan/timelines.md
-
-      - name: Plan a data warehouse migration
-        href: plan/data-warehouse-migration.md
 
       - name: Strategic Migration Assessment and Readiness Tool (SMART)
         href: plan/smart-assessment.md
