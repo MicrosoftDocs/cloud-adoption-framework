@@ -26,16 +26,16 @@ highlightedContent:
     - title: Cloud Adoption Framework
       itemType: get-started
       url: ./overview.md
+    
+    # Card
+    - title: AI adoption roadmap
+      itemType: how-to-guide
+      url: ./scenarios/ai/
 
     # Card
     - title: Azure adoption scenarios 
       itemType: overview
       url: ./scenarios/index.md
-
-    # Card
-    - title: AI adoption roadmap
-      itemType: how-to-guide
-      url: ./scenarios/ai/
 
 # productDirectory section (optional)
 
