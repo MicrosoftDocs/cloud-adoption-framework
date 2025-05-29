@@ -32,16 +32,6 @@ highlightedContent:
       itemType: overview
       url: ./scenarios/index.md
 
-    # Card
-    - title: Get tools and templates
-      itemType: download
-      url: ./resources/tools-templates.md
-
-    # Card
-    - title: Find out what's new
-      itemType: whats-new
-      url: ./get-started/whats-new.md
-
 # productDirectory section (optional)
 
 productDirectory:
