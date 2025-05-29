@@ -22,6 +22,11 @@ highlightedContent:
 
   items:
 
+      # Card
+    - title: Learn about the Framework
+      itemType: overview
+      url: ./overview.md
+
     # Card
     - title: Explore scenarios 
       itemType: overview
@@ -36,11 +41,6 @@ highlightedContent:
     - title: Find out what's new
       itemType: whats-new
       url: ./get-started/whats-new.md
-
-    # Card
-    - title: Learn about the Framework
-      itemType: overview
-      url: ./overview.md
 
 # productDirectory section (optional)
 
