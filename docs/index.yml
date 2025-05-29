@@ -28,7 +28,7 @@ highlightedContent:
       url: ./overview.md
 
     # Card
-    - title: Explore scenarios 
+    - title: Explore adoption scenarios 
       itemType: overview
       url: ./scenarios/index.md
 
@@ -50,19 +50,6 @@ productDirectory:
   items:
 
     # Card
-    - title: Get started
-
-      # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./_images/icons/get-started.png
-      links:
-        - url: ./get-started/index.md
-          text: Get started
-        - url: ./get-started/operational-excellence.md
-          text: Deliver operational excellence
-        - url: ./antipatterns/antipatterns-to-avoid.md
-          text: Antipatterns to avoid
-
-    # Card
     - title: Strategy
       imageSrc: ./_images/icons/strategy.png
       links:
@@ -70,21 +57,13 @@ productDirectory:
           text: Overview
         - url: ./strategy/index.md#cloud-adoption-strategy-checklist
           text: Checklist
-        - url: ./strategy/motivations.md
-          text: Determine your motivations
-        - url: ./strategy/mission-objectives.md
-          text: Define your mission and objectives
-        - url: ./strategy/inform/index.md
-          text: Inform your strategy
 
     # Card
     - title: Plan
       imageSrc: ./_images/icons/plan.png
       links:
-        - url: ./digital-estate/rationalize.md
-          text: Rationalize your digital estate
-        - url: ./plan/initial-org-alignment.md
-          text: Organizational alignment
+        - url: ./plan/index.md
+          text: Overview
         - url: ./plan/suggested-skills.md
           text: Skills readiness plan
 
@@ -92,64 +71,24 @@ productDirectory:
     - title: Ready
       imageSrc: ./_images/icons/ready.png
       links:
-        - url: ./operating-model/index.md
-          text: Operating model alignment
-        - url: ./ready/landing-zone/index.md
-          text: Azure landing zone conceptual architecture
-        - url: ./ready/landing-zone/design-areas.md
-          text: Azure landing zone design areas
-        - url: ./ready/landing-zone/implementation-options.md
-          text: Implementation options
+        - url: ./ready/index.md
+          text: Overview
+        - url: ./ready/azure-setup-guide.md
+          text: Azure setup guide
+        - url: ./ready/landing-zone.md
+          text: Azure landing zone
+
 
     # Card
-    - title: Migrate
+    - title: Adopt
       imageSrc: ./_images/icons/migrate.png
       links:
         - url: ./migrate/index.md
-          text: Overview
-        - url: ./migrate/index.md#cloud-migration-checklist
-          text: Checklist
-        - url: ./migrate/scenarios.md
-          text: Product migration scenarios
-
-    # Card
-    - title: Innovate
-      imageSrc: ./_images/icons/innovate.png
-      links:
-        - url: ./innovate/business-value.md
-          text: Business value consensus
-        - url: ./innovate/considerations/build.md
-          text: Build your first MVP
-        - url: ./innovate/considerations/measure.md
-          text: Measure for customer impact
-        - url: ./innovate/considerations/invention.md
-          text: Expand digital inventions
-
-    # Card
-    - title: Secure
-      imageSrc: ./_images/icons/secure.png
-      links:
-        - url: ./secure/overview.md
-          text: Overview
-        - url: ./secure/plan.md
-          text: Plan for a Secure Cloud Adoption
-        - url: ./secure/strategy.md
-          text: Integrate Security Into Your Cloud Adoption Strategy
-        - url: ./secure/ready.md
-          text: Prepare Your Secure Cloud Estate
-
-    # Card
-    - title: Manage
-      imageSrc: ./_images/icons/manage.png
-      links:
-        - url: ./manage/ready.md
-          text: Ready operations
-        - url: ./manage/administer.md
-          text: Administer Azure
-        - url: ./manage/monitor.md
-          text: Monitor Azure
-        - url: ./manage/protect.md
-          text: Protect Azure
+          text: Migrate
+        - url: ./modernize/index.md
+          text: Modernize
+        - url: ./innovate/index.md
+          text: Innovate (cloud-native)
 
     # Card
     - title: Govern
@@ -158,6 +97,24 @@ productDirectory:
         - url: ./govern/index.md
           text: Overview
         - url: ./govern/index.md#cloud-governance-checklist
+          text: Checklist
+
+    # Card
+    - title: Secure
+      imageSrc: ./_images/icons/secure.png
+      links:
+        - url: ./secure/overview.md
+          text: Overview
+        - url: ./secure/overview#cloud-security-checklist
+          text: Checklist
+
+    # Card
+    - title: Manage
+      imageSrc: ./_images/icons/manage.png
+      links:
+        - url: ./manage/index.md
+          text: Overview
+        - url: ./manage/#cloud-management-checklist
           text: Checklist
 
 # conceptualContent section (optional)
