@@ -136,5 +136,29 @@ additionalContent:
           summary: Find a partner to help you get started.
           url: https://aka.ms/adopt/findapartner
 
+
+    - title: Cloud Adoption Framework methodologies  # < 60 chars (optional)
+      summary: Guidance to be successful in Azure.  # < 160 chars (optional)
+      items:
+
+        # Card
+        - title: Strategy
+          summary: Prepare business for cloud adoption.
+          url: ./strategy/index.md
+
+        # Card
+        - title: Plan
+          summary: Prepare people and processes for cloud adoption.
+          url: ./plan/index.md
+
+        # Card
+        - title: Ready
+          summary: Prepare your Azure environment.
+          url: ./ready/index.md
+
+
+
+
   # footer (optional)
   footer: "Why the Microsoft Cloud Adoption Framework for Azure is right for your business. [https://aka.ms/adopt](https://azure.microsoft.com/cloud-adoption-framework)"
+
