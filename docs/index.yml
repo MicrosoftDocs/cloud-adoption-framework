@@ -67,17 +67,17 @@ additionalContent:
 
         # Card
         - title: 🔐 Govern
-          summary: Govern your Azure estate.
+          summary: Govern your entire Azure environment.
           url: ./govern/index.md
 
         # Card
         - title: 🛡️ Secure
-          summary: Secure your Azure estate.
+          summary: Secure your entire Azure environment.
           url: ./secure/overview.md
 
         # Card
         - title: ⚙️ Manage
-          summary: Manage your Azure estate.
+          summary: Manage your entire Azure environment.
           url: ./manage/index.md
 
     - title: Find help  # < 60 chars (optional)
