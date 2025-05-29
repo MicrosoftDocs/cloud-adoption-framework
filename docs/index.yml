@@ -87,8 +87,6 @@ productDirectory:
           text: Organizational alignment
         - url: ./plan/suggested-skills.md
           text: Skills readiness plan
-        - url: ./plan/template.md
-          text: DevOps cloud adoption plan
 
     # Card
     - title: Ready
