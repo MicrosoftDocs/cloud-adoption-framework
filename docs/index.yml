@@ -30,10 +30,10 @@ highlightedContent:
     # Card
     - title: AI adoption
       itemType: how-to-guide
-      url: ./scenarios/ai/
+      url: ./scenarios/ai/index.md
 
     # Card
-    - title: Other adoption scenarios 
+    - title: Common adoption scenarios 
       itemType: overview
       url: ./scenarios/index.md
 
@@ -68,9 +68,9 @@ productDirectory:
       links:
         - url: ./ready/index.md
           text: Overview
-        - url: ./ready/azure-setup-guide.md
+        - url: ./ready/azure-setup-guide/index.md
           text: Azure setup guide
-        - url: ./ready/landing-zone.md
+        - url: ./ready/landing-zone/index.md
           text: Azure landing zone
 
     # Card
@@ -108,7 +108,7 @@ productDirectory:
       links:
         - url: ./manage/index.md
           text: Overview
-        - url: ./manage/#cloud-management-checklist
+        - url: ./manage/index.md#cloud-management-checklist
           text: Checklist
 
 # Card with summary style
