@@ -29,7 +29,7 @@ highlightedContent:
 
     # Card
     - title: Azure adoption scenarios 
-      itemType: learn
+      itemType: overview
       url: ./scenarios/index.md
 
     # Card
