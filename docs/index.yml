@@ -99,7 +99,7 @@ productDirectory:
       links:
         - url: ./secure/overview.md
           text: Overview
-        - url: ./secure/overview#cloud-security-checklist
+        - url: ./secure/overview.md#cloud-security-checklist
           text: Checklist
 
     # Card
