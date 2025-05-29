@@ -80,8 +80,8 @@ additionalContent:
           summary: Manage your entire Azure environment.
           url: ./manage/index.md
 
-    - title: Workload design and implementation 
-      summary: Use the Well-Architected Framework and Azure Architecture Center.  # < 160 chars (optional)
+    - title: Workload design guidance
+      summary: Use the Well-Architected Framework and Azure Architecture Center to build Azure solutions.  # < 160 chars (optional)
       items: 
 
         # Card
