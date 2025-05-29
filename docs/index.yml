@@ -33,7 +33,7 @@ highlightedContent:
       url: ./scenarios/index.md
 
     # Card
-    - title: AI adoption framework
+    - title: AI adoption roadmap
       itemType: how-to-guide
       url: ./scenarios/ai/
 
