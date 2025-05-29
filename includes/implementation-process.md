@@ -8,7 +8,7 @@ The following decisions come from teams outside of the cloud governance team. Th
 ### Identity Baseline
 
 Identity Baseline is the fundamental starting point for all governance. Before attempting to apply governance, identity must be established. The established identity strategy will then be enforced by the governance solutions.
-In this governance guide, the Identity Management team implements the [Directory Synchronization](~/decision-guides/identity/index.md#directory-synchronization) pattern:
+In this governance guide, the Identity Management team implements the Directory Synchronization pattern:
 
 - RBAC will be provided by Microsoft Entra ID, using the directory synchronization or "same sign-on" that was implemented during company's migration to Microsoft 365. For implementation guidance, see [Reference Architecture for Microsoft Entra Integration](/azure/architecture/reference-architectures/identity/azure-ad).
 - The Microsoft Entra tenant will also govern authentication and access for assets deployed to Azure.

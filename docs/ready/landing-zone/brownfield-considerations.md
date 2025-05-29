@@ -45,7 +45,7 @@ Like Azure security, [Azure governance](./design-area/governance.md) isn't a "on
 
 It's true that refactoring an already established [Azure virtual network (VNet) infrastructure](./design-area/network-topology-and-connectivity.md) can be a heavy lift for many businesses. That said, consider incorporating the following guidance into your network design, implementation, and maintenance efforts:
 
-- Review our best practices for planning, deploying, and maintaining [Azure VNet hub and spoke topologies](../azure-best-practices/hub-spoke-network-topology.md)
+- Review our best practices for planning, deploying, and maintaining [Azure VNet hub and spoke topologies](/azure/architecture/networking/architecture/hub-spoke)
 - Consider [Azure Virtual Network Manager (Preview)](/azure/virtual-network-manager/overview) to centralize network security group (NSG) security rules across multiple VNets
 - [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) unifies networking, security, and routing to help businesses build hybrid cloud architectures safer and quicker
 - Access Azure data services privately with [Azure Private Link](/azure/private-link/private-link-overview). The Private Link service ensures your users and applications communicate with key Azure services by using the Azure backbone network and private IP addresses instead of over the public Internet

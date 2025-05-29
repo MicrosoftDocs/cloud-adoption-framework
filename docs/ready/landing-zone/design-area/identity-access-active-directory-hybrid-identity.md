@@ -19,8 +19,6 @@ Cloud-based identity management is an iterative process. You might start with a 
 
 Adjust your identity solution over time depending on your workload authentication requirements and other needs, such as changes to your organizational identity strategy and security requirements or integration with other directory services. When you evaluate Windows Server Active Directory solutions, understand the differences between Microsoft Entra ID, Domain Services, and AD DS on Windows Server.
 
-For more information, see [Identity decision guide](../../../decision-guides/identity/index.md).
-
 ## Identity and access management services in Azure landing zones
 
 The platform team is responsible for the administration of identity and access management. Identity and access management services are fundamental to organizational security. Your organization can use Microsoft Entra ID to control administrative access and protect platform resources. This approach prevents users outside of the platform team from making changes to the configuration or to the security principals contained within Microsoft Entra ID.
@@ -43,7 +41,7 @@ Your organization might already have longstanding AD DS directories that you int
 
 ### Hybrid identity recommendations
 
-- To determine your identity solution requirements, document the authentication provider that each application uses. Use the [identity decision guide](../../../decision-guides/identity/index.md) to select the right services for your organization. For more information, see [Compare Active Directory to Microsoft Entra ID](/entra/fundamentals/compare).
+- To determine your identity solution requirements, document the authentication provider that each application uses. Use the [identity architecture design](/azure/architecture/identity/identity-start-here) to select the right services for your organization. For more information, see [Compare Active Directory to Microsoft Entra ID](/entra/fundamentals/compare).
 
 - You might use [Domain Services](/entra/identity/domain-services/overview) for applications that rely on domain services and use older protocols. Existing AD DS domains sometimes support backward compatibility and allow legacy protocols, which can negatively affect security. Instead of extending an on-premises domain, consider using Domain Services to create a new domain that doesn't allow legacy protocols. Use the new domain as the directory service for cloud-hosted applications.
 

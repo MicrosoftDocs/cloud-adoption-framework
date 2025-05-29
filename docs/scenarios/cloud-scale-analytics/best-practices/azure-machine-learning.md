@@ -57,8 +57,6 @@ You can deploy the number of machine learning workspaces that your workloads req
 
 - When multiple environments are needed for dev, staging, and production workspaces in a data landing zone, we recommend avoiding data duplication by having each environment land in the same production data landing zone.
 
-- See [Organize and set up Azure Machine Learning environments](../../../ready/azure-best-practices/ai-machine-learning-resource-organization.md) to learn more about how to organize and set up Azure Machine Learning resources.
-
 For each default resource configuration in an data landing zone, an Azure Machine Learning service is deployed in a dedicated resource group with the following configurations and dependent resources:
 
 - Azure Key Vault
@@ -139,13 +137,3 @@ Cloud-scale analytics data landing zones outline reference implementation for re
 ## Next steps
 
 Use the [Data Product Analytics](https://github.com/Azure/data-product-analytics) template and guidance to deploy Azure Machine Learning, and reference [Azure Machine Learning documentation and tutorials](/azure/machine-learning/) to get started with building your solutions.
-
-Continue to the following four Cloud Adoption Framework articles to learn more about Azure Machine Learning deployment and management best practices for enterprises:
-
-- [Organize and set up Azure Machine Learning environments](../../../ready/azure-best-practices/ai-machine-learning-resource-organization.md): When planning an Azure Machine Learning deployment, how do team structures, environments, or the geography of resources affect how workspaces are set up?
-
-- [Azure Machine Learning best practices for enterprise security](../../../ready/azure-best-practices/ai-machine-learning-enterprise-security.md): Learn how to secure your environment and resources with Azure Machine Learning.
-
-- [Manage budgets, costs, and quota for Azure Machine Learning at organizational scale](../../../ready/azure-best-practices/optimize-ai-machine-learning-cost.md): Organizations face many management and optimization challenges when managing workload, team, and user compute costs incurred from Azure Machine Learning.
-
-- [Machine learning DevOps guide](../../../ready/azure-best-practices/ai-machine-learning-mlops.md): Machine learning DevOps is an organizational change that relies on a combination of people, process, and technology to deliver machine learning solutions in a robust, scalable, reliable, and automated way. This guide summarizes best practices and information for enterprises to use Azure Machine Learning to adopt machine learning DevOps.
