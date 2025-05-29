@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 
 title: Microsoft Cloud Adoption Framework for Azure
-summary: Proven guidance and best practices that help you confidently adopt the cloud and achieve business outcomes.
+summary: Proven guidance to be successful in Azure.
 brand: azure
 
 metadata:
 
   title: Microsoft Cloud Adoption Framework for Azure
-  description: Proven guidance and best practices that help you confidently adopt the cloud and achieve business outcomes.
+  description: Proven guidance to be successful in Azure.
   services: cloud-adoption-framework
-  author: Zimmergren
+  author: stephen-sumner
   ms.author: pnp
-  ms.date: 02/04/2025
+  ms.date: 06/01/2025
   ms.topic: hub-page
   ms.subservice: caf-general
 # Maximum of 8 items
@@ -122,41 +122,9 @@ additionalContent:
       items:
 
         # Card
-        - title: Azure Migrate and Modernize
-          summary: Get support migrating workloads to the cloud.
-          url: https://azure.microsoft.com/migration/migration-modernization-program/
-
-        # Card
-        - title: Partner-led Workshops
-          summary: Obtain best practices on Cloud Adoption Framework from certified partners.
-          url: https://www.microsoft.com/azure/partners/ammp-w/events/?utm_source=MS+Docs&utm_medium=landing+page&utm_id=Docs
-
-        # Card
-        - title: Find a partner
-          summary: Find a partner to help you get started.
-          url: https://aka.ms/adopt/findapartner
-
-
-    - title: Cloud Adoption Framework methodologies  # < 60 chars (optional)
-      summary: Guidance to be successful in Azure.  # < 160 chars (optional)
-      items:
-
-        # Card
-        - title: Strategy
-          summary: Prepare business for cloud adoption.
-          url: ./strategy/index.md
-
-        # Card
-        - title: Plan
-          summary: Prepare people and processes for cloud adoption.
-          url: ./plan/index.md
-
-        # Card
-        - title: Ready
-          summary: Prepare your Azure environment.
-          url: ./ready/index.md
-
-
+        - title: Azure Innovate & Azure Migrate and Modernize
+          summary: Accelerate your cloud and AI adoption with experts from Microsoft.
+          url: https://azure.microsoft.com/en-us/solutions/migration/migrate-modernize-innovate/
 
 
   # footer (optional)
