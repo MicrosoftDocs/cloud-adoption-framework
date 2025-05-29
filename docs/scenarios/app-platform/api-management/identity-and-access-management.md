@@ -2,7 +2,7 @@
 title: Identity and access management considerations for Azure API Management
 description: Learn about design considerations and recommendations for identity and access management in the Azure API Management landing zone accelerator
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/12/2022
 ms.topic: conceptual
 ms.custom: internal

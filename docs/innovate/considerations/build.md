@@ -2,7 +2,7 @@
 title: Build with customer empathy
 description: Learn to create solutions that drive cloud innovation based on customer empathy and a deep understanding of the customer's experience.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 12/05/2022
 ms.topic: conceptual
 ms.custom: internal

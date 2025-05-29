@@ -2,7 +2,7 @@
 title:  Azure billing offers and Active Directory tenant considerations for AKS
 description: AKS guidelines for Azure billing offers and Active Directory tenants
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

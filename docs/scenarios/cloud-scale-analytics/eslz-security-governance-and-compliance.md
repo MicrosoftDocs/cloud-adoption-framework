@@ -2,7 +2,7 @@
 title: Security, governance, and compliance for enterprise-scale cloud-scale analytics
 description: Learn how to improve security, governance, and compliance for enterprise-scale cloud-scale analytics in Azure.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

@@ -2,7 +2,7 @@
 title: Landing Zone Accelerator for Microsoft Azure VMware Solution
 description: Learn how the Microsoft Azure VMware Solution landing zone accelerator can speed adoption of Microsoft Azure VMware Solution.
 author: pgandham
-ms.author: tozimmergren
+ms.author: pnp
 ms.reviewer: tozimmergren
 ms.date: 01/20/2025
 ms.topic: conceptual

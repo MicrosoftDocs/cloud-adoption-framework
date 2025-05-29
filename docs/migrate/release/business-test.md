@@ -2,7 +2,7 @@
 title: Perform business testing during a migration
 description: Learn how business testing, or user acceptance testing (UAT), is used to validate that solution performance is in line with expectations.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ---

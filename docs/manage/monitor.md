@@ -2,7 +2,7 @@
 title: Monitor your Azure cloud estate
 description: Learn how to monitor your Azure cloud estate, workloads, other cloud environments, on-premises, and edge environment.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 products: azure-monitor

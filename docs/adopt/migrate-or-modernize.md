@@ -3,7 +3,7 @@
 title: Migrate or modernize first?
 description: Learn if you should migrate existing applications first or modernize them before migrating to the cloud.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 02/14/2024
 ms.topic: conceptual
 ms.custom: internal

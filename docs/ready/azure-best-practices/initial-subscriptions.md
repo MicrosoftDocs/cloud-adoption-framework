@@ -2,7 +2,7 @@
 title: Create your initial Azure subscriptions
 description: Begin your Azure adoption by creating your initial subscriptions.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/11/2022
 ms.topic: conceptual
 ms.custom: internal
