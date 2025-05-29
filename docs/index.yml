@@ -57,7 +57,7 @@ additionalContent:
 
         # Card
         - title: 🛠️ Ready
-          summary: Prepare your Azure environment for workloads.
+          summary: Prepare your Azure environment and landing zone for workloads.
           url: ./ready/index.md
 
         # Card
