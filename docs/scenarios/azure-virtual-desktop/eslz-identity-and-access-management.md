@@ -33,8 +33,8 @@ SSO using Microsoft Entra ID also provides a seamless experience for Microsoft E
   - An Active Directory domain using [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) or [Microsoft Entra Domain Services](/entra/identity/domain-services/overview), offering flexibility in configuration.
   > [!NOTE]
   > Azure Virtual Desktop does **not** support B2B or Microsoft accounts.
-- **Domain join account requirements**: The account used for domain join can not have multifactor authentication or other interactive prompts. Additional requirements apply, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
-- **Hosting strategy**: Choose either [AD DS or Microsoft Entra Domain Services](/entra/identity/domain-services/compare-identity-solutions) based on your needs.
+- **Domain join account requirements**: The account used for domain join cannot have multifactor authentication or other interactive prompts. More requirements apply, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
+- **Hosting strategy**: Choose either [Active Directory Domain Services or Microsoft Entra Domain Services](/entra/identity/domain-services/compare-identity-solutions) based on your needs.
 - [**Microsoft Entra Domain Services**](/entra/identity/domain-services//): This is a supported option, but with limitations:
   - You must [enable password hash synchronization](/entra/identity/domain-services/tutorial-configure-password-hash-sync).
   - Hybrid join for Azure Virtual Desktop VMs isn't supported, which means you can't enable seamless SSO for Microsoft 365 services.
@@ -46,7 +46,7 @@ SSO using Microsoft Entra ID also provides a seamless experience for Microsoft E
 - **Smart card authentication**: Requires a direct connection (line of sight) with an Active Directory domain controller for Kerberos authentication. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 - **Windows Hello for Business**: Requires the hybrid certificate trust model to be compatible with Azure Virtual Desktop. For more information, see [Microsoft Entra hybrid joined certificate trust deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
 - **Kerberos-based sign-in**: For Windows Hello for Business or smart cards authentication, the initiating client must be able to communicate with the domain controller. For more information, see [Supported authentication methods](/azure/virtual-desktop/authentication).
-- **Single sign-o with Active Directory Federation Services**: SSO can improve user experience, but it requires additional configuration and is only supported using Active Directory Federation Services (AD FS). For more information, see [Configure AD FS single sign-on for Azure Virtual Desktop](/azure/virtual-desktop/configure-adfs-sso).
+- **Single sign-o with Active Directory Federation Services**: SSO can improve user experience, but it requires other configuration and is only supported using Active Directory Federation Services (AD FS). For more information, see [Configure Active Directory Federation Service single sign-on for Azure Virtual Desktop](/azure/virtual-desktop/configure-adfs-sso).
 
 ### Supported identity scenarios
 
@@ -71,7 +71,7 @@ The following table summarizes identity scenarios that Azure Virtual Desktop cur
 - **Secure local admin accounts**: Use a solution like Local Administrator Password Solution (LAPS) to frequently rotate local administrator passwords on Azure Virtual Desktop session hosts. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
 - **Assign access with role-based access control**: Grant user access to Azure Virtual Desktop application groups by assigning the Desktop Virtualization User built-in role to appropriate security groups. For more information, see [Delegated access in Azure Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
 - **Implement conditional access**: Create Conditional Access policies for Azure Virtual Desktop to enforce multifactor authentication based on conditions like risky sign-ins to increase your organization's security posture. For more information, see [Enable Microsoft Entra multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
-- **Enable single sign-on with Active Directory Federation Services**: Configure AD FS to enable single sign-on for users on the corporate network.
+- **Enable single sign-on with Active Directory Federation Services**: Configure Active Directory Federation Service (AD FS) to enable single sign-on for users on the corporate network.
 
 ## Next steps
 
