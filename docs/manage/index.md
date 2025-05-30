@@ -5,6 +5,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
+ms.update-cycle: 1095-days
 ---
 
 # Azure cloud management checklist

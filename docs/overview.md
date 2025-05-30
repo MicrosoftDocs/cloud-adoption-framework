@@ -7,6 +7,7 @@ ms.date: 05/26/2022
 ms.topic: conceptual
 ms.subservice: caf-general
 ms.custom: internal, homepage, UpdateFrequency3
+ms.update-cycle: 1095-days
 ---
 
 # What is the Microsoft Cloud Adoption Framework for Azure?
