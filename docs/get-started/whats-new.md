@@ -411,7 +411,6 @@ Explore new articles on Oracle Database@Azure.
 
 We made updates to reflect the deprecation of Azure Blueprint.
 
-- [Resource consistency decision guide](../decision-guides/resource-consistency/index.md)
 - [Get started: Document foundational alignment decisions](../get-started/cloud-concepts.md)
 - [Innovate methodology and maturity modeling](../innovate/best-practices/ci-cd.md)
 - [Understand the functions of a central IT team](../organize/central-it.md)
