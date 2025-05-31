@@ -64,20 +64,13 @@ The following recommendations are based on the subscription design consideration
 
 - **Permissions checklist:** Before you begin onboarding **Oracle Database@Azure**, make sure the identity you’ll use can perform the following actions.
 
-  1. **Azure subscription**
+   **Azure subscription**
      - Register the required resource providers.
      - Create an **Oracle Account** resource.
      - Create or manage VNets, delegated subnets, route tables and NSGs.
      - Assign RBAC permissions as needed.
 
      *Proposed role:* **Owner** (or **Contributor** + **User Access Administrator**).
-
-  2. **OCI tenancy**
-     - Accept / purchase the private offer.
-     - Create Exadata infrastructure **or** Autonomous Database instances.
-     - Create networking objects (VCNs, subnets, DRGs) that relate to Azure.
-
-     *Proposed role:* **Tenancy Administrator** or a custom group that has the same privileges.
 
   **For the complete persona-by-task policy matrix, refer to *Onboarding permissions* in the [documentation for Oracle](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm#oaaprereq_1_permissions__onboarding-permissions-table-title)**
 
