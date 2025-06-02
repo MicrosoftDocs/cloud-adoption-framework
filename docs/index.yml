@@ -30,7 +30,10 @@ highlightedContent:
     # Card
     - title: AI adoption
       itemType: how-to-guide
-      url: ./scenarios/ai/index.md    
+      url: ./scenarios/ai/index.md
+    - title: Azure landing zone
+      itemType: how-to-guide
+      url: ./ready/landing-zone/index.md    
     - title: Common adoption scenarios 
       itemType: overview
       url: ./scenarios/index.md
