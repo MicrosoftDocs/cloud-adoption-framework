@@ -46,11 +46,12 @@ Consider the following factors when you design the subscription setup for Oracle
 
 - **Primary subscription:** During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all Oracle Database@Azure deployments.
   - **Onboarding permissions and resource providers:** See the Onboarding permissions table in the [Oracle documentation](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm#oaaprereq_1_permissions__onboarding-permissions-table-title) for the minimum Azure and OCI roles required.
-  - **Resource registration:** Oracle Database@Azure run on Azure as a bare metal service. Resource providers should be registered before you begin Oracle Database@Azure onboarding. Make sure you registered this resource providers
+  - **Resource registration:** Oracle Database@Azure run on Azure as a bare metal service. Make sure you registered these resource providers as documented in [step 4 of this document](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm) before you begin Oracle Database@Azure onboarding. 
     - Oracle.Database
     - Microsoft.BareMetal/BareMetalConnections/read
     - Microsoft.BareMetal/BareMetalConnections/write
     - Microsoft.BareMetal/BareMetalConnections/delete
+
 
 - **Secondary subscriptions:** When you expand into secondary subscriptions, Oracle Exadata Database@Azure VM clusters in these subscriptions default to the same availability zone that you chose in the primary subscription. Align application services with the availability zone of the VM cluster to help ensure performance, high availability, and redundancy.
 
@@ -74,12 +75,6 @@ The following recommendations are based on the subscription design consideration
 
   **For the complete persona-by-task policy matrix, refer to *Onboarding permissions* in the [documentation for Oracle](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm#oaaprereq_1_permissions__onboarding-permissions-table-title)**
 
-
-- **Resource registration:** Oracle Database@Azure runs on Azure as a bare metal service. Please ensure your register necessary resources as documented in [step 4 of this document](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm). 
-  - Oracle.Database
-  - Microsoft.BareMetal/BareMetalConnections/read
-  - Microsoft.BareMetal/BareMetalConnections/write
-  - Microsoft.BareMetal/BareMetalConnections/delete
 
 - **Use a multiple subscription architecture:** Design a subscription model where each environment, such as production, development, testing, and DR, is isolated in its own Azure subscription. This approach provides insights into cost tracking, security, and workload management.
 
