@@ -56,8 +56,6 @@ This solution is ideal for scenarios that require:
 - Non-Microsoft solutions for collaboration, authentication, or identity management.
 - Business-to-business or guest user access scenarios.
 
-This list doesn't cover all Citrix capabilities when deployed with Microsoft solutions. For more use cases and scenarios, see [Citrix Tech Zone – Enhancing Azure Virtual Desktop](https://community.citrix.com/tech-zone/learn/tech-briefs/windows-virtual-desktop-value-add).
-
 ## Next steps
 
 Review the key design considerations and recommendations for identity and access management, specifically for deploying Citrix on Azure:
