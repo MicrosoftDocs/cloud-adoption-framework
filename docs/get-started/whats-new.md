@@ -19,7 +19,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 ### Updated articles
 
 - [Prepare for cloud adoption](../ready/index.md): We refined the Azure Landing Zones concepts section to provide a more detailed summary of designing and deploying landing zones.
-- [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): We added abbreviations for Azure AI Foundry and Azure AI Foundry project.
+- [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): We updated abbreviations for Azure AI Foundry and Azure AI Foundry project with the updates to the resource provider.
 
 #### Defense scenario retirement
 
