@@ -42,7 +42,7 @@ To enhance security and management in multiple subscription architectures, imple
 
 ### Subscription design considerations
 
-Consider the following factors when you design the subscription setup for Oracle Exadata Database@Azure.
+Consider the following factors when you design the subscription setup for Oracle Database@Azure.
 
 - **Primary subscription:** During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all Oracle Database@Azure deployments.
   - **Onboarding permissions and resource providers:** See the Onboarding permissions table in the [Oracle documentation](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm#oaaprereq_1_permissions__onboarding-permissions-table-title) for the minimum Azure and OCI roles required.
