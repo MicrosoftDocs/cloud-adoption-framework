@@ -176,7 +176,6 @@ To learn more about management levels and organization, see:
 
 - [Management group design considerations and recommendations](../landing-zone/design-area/resource-org-management-groups.md)
 - [Subscription considerations and recommendations](../landing-zone/design-area/resource-org-subscriptions.md)
-- [Resource access management in Azure](../../get-started/how-azure-resource-manager-works.md)
 
 For more information about resource naming and tagging, see:
 

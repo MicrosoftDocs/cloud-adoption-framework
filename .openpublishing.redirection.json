@@ -706,6 +706,76 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/get-started/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-concepts.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/what-is-azure.md",
+         "redirect_url": "/azure/azure-resource-manager/management/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/considerations/fundamental-concepts.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/how-azure-resource-manager-works.md",
+         "redirect_url": "/azure/azure-resource-manager/management/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/resources/fundamental-concepts/hosting-hierarchy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/resources/fundamental-concepts/hierarchy-azure-tools.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/innovate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/design-and-configuration.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/enable.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/prepare-organizational-alignment",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/operational-excellence.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/manage-costs.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/performance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/antipatterns-to-avoid.md",
+         "redirect_url": "/azure/cloud-adoption-framework/antipatterns/plan-antipatterns",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/ready/enterprise-scale/design-principles.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-principles",
          "redirect_document_id": false

@@ -36,8 +36,6 @@ A cloud operating model is primarily driven by two factors:
 
 - Strategic priorities or [motivations](../strategy/motivations.md): Each operating model delivers the typical [strategic motivations for cloud adoption](../strategy/motivations.md). But some operating models simplify specific motivations.
 
-- [Portfolio scope](../resources/fundamental-concepts/hosting-hierarchy.md): The portfolio scope identifies the largest scope that a specific operating model design supports. For example, centralized operations are designed for a few landing zones. But the operating model decision might create operational risks for an organization. Operational risks result when trying to manage a large complex portfolio. These portfolios might require many landing zones or variable complexity in landing zone design.
-
 > [!IMPORTANT]
 > Adopting the cloud often triggers reflection on the current operating model and might lead to a shift from one common operating model to another. But cloud adoption isn't the only trigger. Business priorities and the scope of cloud adoption can change how the portfolio needs to be supported. Also, there could be other shifts in the most-appropriately aligned operating model. When the board, or other executive teams, develop 5 to 10 year business plans, those plans often include a requirement (explicit or implied) to adjust the operating model. Operating models are a good reference for guiding decisions. These models might change or need to be customized to meet your requirements and constraints.
 
