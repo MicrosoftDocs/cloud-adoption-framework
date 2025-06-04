@@ -1,20 +1,3 @@
-## Cloud Adoption Framework governance policies 
----
-title: "[Descriptive title that clearly states the customer outcome]"
-description: "[Brief description explaining what the customer will achieve after following this guidance]"
-author: stephen-sumner # Requried add your Github username
-ms.author: ssumner # Required: Add your Microsoft alias
-ms.date: 06/01/2025 # Required: Use the date you submit the article
-ms.topic: conceptual
----
-
-# [Article title - same as title in metadata]
-
-This article explains how to [*specific customer outcome*]. [Why this guidance is important (1-2 sentences)].
-
-<!-- optional image that helps visualize the rest of the guidance
-:::image type="content" source="./media/[image-filename].svg" alt-text="Diagram showing [description of diagram]." lightbox="./media/[image-filename].svg" border="false":::
--->
 
 ## [Prescriptive recommendation (logically first) (starts with a verb)]
 
@@ -34,33 +17,6 @@ This article explains how to [*specific customer outcome*]. [Why this guidance i
 
 1. **[Prescriptive recommendation 2 (starts with action verb)].** [*INSTRUCTIONS: Every recommendation must: Define why this recommendation is important in the context of this section (1 sentence). Explain how to implement/carry out this recommendation. If available indicate how Azure or other tools, services, features facilitate the implementation. Rely heavily on links to product docs to describe these tools, services, and features (1-3 sentences).*].
 
-1. <!-- add as many sequential recommendations as needed -->
-
-... 
-
-## <!-- add as many headers as needed
-
-### Add as many subheaders (###, ####) as needed -->
-
-... 
-
-
-## [Tools and resources section]
-<!-- optional section -->
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| [Tool category 1] | [Tool name with link] | [Brief description of how it supports the recommendations] |
-| [Tool category 2] | [Tool name with link] | [Brief description of implementation support] |
-
-## Next steps
-
-<!-- next step button 
-> [!div class="nextstepaction"]
-> [Next article](./next-article.md)
---->
-
-## Template guidance for authors
 
 ### Content structure requirements
 
