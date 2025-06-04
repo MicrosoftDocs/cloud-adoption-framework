@@ -20,7 +20,7 @@ Use one of the following methods to position the application tier in an architec
 
 - **Deploy in a separate virtual network and connect via virtual network peering:** Place application and database tiers in distinct virtual networks that connect via peering.
 
-The colocated approach provides simpler management and no extra peering costs, but might be less flexible if multiple teams or applications need separate networks. The following diagram shows the database and application tiers colocated in the same virtual network.
+The colocated approach provides simpler management and no extra peering costs, but may be less flexible if multiple teams or applications need separate networks. The following diagram shows the database and application tiers colocated in the same virtual network.
 
 :::image type="content" source="./media/same-virtual-network.svg" alt-text="Diagram that shows the colocation of the database and application tiers in the same virtual network." border="false" lightbox="./media/same-virtual-network.svg":::
 
@@ -52,8 +52,6 @@ This pattern helps ensure direct connectivity from the database and application 
 - **Optimize for smaller workload scopes:** Colocate applications and databases in the same virtual network if you have a limited number of Oracle databases that serve a small application portfolio that a single team manages. This approach reduces latency and simplifies the network design.
 
 - **Use segmentation for complex environments:** For larger or more complex environments, treat Oracle Exadata Database@Azure as a dedicated service by deploying it in one or more dedicated subscriptions to manage multiple databases for different applications and teams. Deploy application solutions in separate subscriptions and use virtual network peering to connect the application networks to the database networks. This approach enables independent management of application and database resources while helping to maintain secure and performant connectivity.
-
-- **Use Private Endpoints for secure connectivity:** When application workloads require secure access to Oracle Database@Azure, use Private Endpoints.
 
 ## Next step
 

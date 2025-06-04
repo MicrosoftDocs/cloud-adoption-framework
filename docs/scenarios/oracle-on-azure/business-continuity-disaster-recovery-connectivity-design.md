@@ -29,7 +29,7 @@ The following diagram illustrates a single-region redundant setup that uses two 
 :::image type="content" source="./media/multiple-availability-zone.svg" alt-text="Diagram that shows in-region redundancy for Oracle Exadata Database@Azure." border="false" lightbox="./media/multiple-availability-zone.svg":::
 
 > [!NOTE]
-> Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Data egress charges apply.
+> Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Virtual Network peering costs apply.
 
 ## Redundancy across regions
 
@@ -43,17 +43,13 @@ The following diagram shows the recommended cross-region configuration using Glo
 
 - **Networking options for BCDR:** You can establish network connectivity between the primary and standby Oracle Database@Azure instances via Azure networking and OCI networking. The default route for this connectivity is through Azure.
 
-- **Egress costs:** Consider egress costs between virtual networks when you replicate data.
-
 - **Availability zones:** Ensure that the two Oracle Exadata Database@Azure deployments span different availability zones to isolate failures at the availability zone level.
 
 ## Design recommendations
 
 - **Network virtual appliances (NVAs):** Minimize the use of NVAs, or other appliances, in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
 
-- **Costs and growth:** Evaluate ingress and egress costs, future growth expectations, and potential changes to your network architecture. Align your design with your business continuity goals and budget constraints.
-
-- **Asynchronous replication for cross-region DR:** Because of higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance. It also provides robust DR capabilities.
+- **Asynchronous replication for cross-region DR:** Because of higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance. 
 
 ## Next step
 

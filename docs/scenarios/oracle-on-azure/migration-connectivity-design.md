@@ -16,7 +16,7 @@ The following diagram illustrates how Oracle Exadata Database@Azure can connect 
 
 :::image type="content" source="./media/on-premises-connectivity.svg" alt-text="Diagram that shows connectivity to Oracle Exadata Database@Azure from on-premises environments or other sources." border="false" lightbox="./media/on-premises-connectivity.svg":::
 
-> **Note:** The virtual network in the diagram includes both a Storage Account and Azure NetApp Files for illustration purposes. In typical deployments, only one storage solution is used, depending on workload and storage requirements.
+> **Note:** The virtual network in the diagram includes both a Storage Account and Azure NetApp Files for illustration purposes. In typical deployments, generally one storage solution is used, depending on workload and migration requirements.
 
 ## Design considerations
 

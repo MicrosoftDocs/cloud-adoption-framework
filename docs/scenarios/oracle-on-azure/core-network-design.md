@@ -34,11 +34,11 @@ When you design your network topology for Oracle Exadata Database@Azure, conside
 
 - **NSG configuration options:** Network Security Groups (NSGs) can be applied from either Azure or OCI. If you prefer to manage network security policies in Azure, consider allowing all traffic from OCI-side NSGs and enforcing restrictions using NSGs on the Azure-delegated subnet.
 
-- **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments across Availability Zones or Regions. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan). Also, only 5 Oracle-delegated subnets in total may be created in a region. 
+- **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments across Availability Zones or Regions. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan). Also, only 5 Oracle-delegated subnets in total may be created in a region. If more are required, a support ticket may be raise with Oracle to increase the limit. 
 
 - **Split Domain Name System (DNS) model:** Oracle Database@Azure follows a split DNS model. DNS must be configured on both Azure and OCI. For more information, see [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513).
 
-- **Private DNS naming rules:** When default DNS settings are used to create VM clusters, the private DNS zone is automatically named based on the virtual network and subnet that you choose for the VM cluster. The name of this zone is "oci" plus the first 10 alphabetic characters of the virtual network and subnet names. For example, if the virtual network is "vnet-exadata-prod" and the subnet is "snet-exadata-prod", the private DNS zone name is *ocisnetexadat.ocivnetexadat.oraclevcn.com*.
+- **Private DNS Zone naming rules:** When default DNS settings are used to create VM clusters, the private DNS zone is automatically named based on the virtual network and subnet that you choose for the VM cluster. The name of this zone is "oci" plus the first 10 alphabetic characters of the virtual network and subnet names. For example, if the virtual network is "vnet-exadata-prod" and the subnet is "snet-exadata-prod", the private DNS zone name is *ocisnetexadat.ocivnetexadat.oraclevcn.com*.
 
 ## Design recommendations
 
