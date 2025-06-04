@@ -126,7 +126,7 @@ Other common uses for tags include:
 - **Workload name:** Name of the workload that a resource supports.
 - **Data classification:** Sensitivity of the data that a resource hosts.
 - **Cost center:** The accounting cost center or team associated with the resource. In [Microsoft Cost Management](/azure/cost-management-billing/), you can apply your cost center tag as a filter to report charges based on usage by team or department.
-- **Environment:** The environment in which the resource is deployed, such as, development, test, or production.
+- **Environment:** The environment in which the resource is deployed, such as development, test, or production.
 
 For more tagging recommendations and examples, see [Define your tagging strategy](../azure-best-practices/resource-tagging.md).
 
