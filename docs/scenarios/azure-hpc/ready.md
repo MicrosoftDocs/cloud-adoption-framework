@@ -47,7 +47,7 @@ As you can see from these questions, the deployment model varies depending on yo
 
 ### Azure CycleCloud
 
-- It supports various HPC schedulers, such as SLURM, OpenPBS, PBSPro, LSF, Grid Engine, and HTCondor12.
+- It supports various HPC schedulers, such as SLURM, OpenPBS, PBSPro, LSF, and Grid Engine.
 - It allows you to provision infrastructure for HPC systems, such as virtual machines, scale sets, network interfaces, and disks.
 - It automatically scales the infrastructure to run jobs efficiently at any scale based on job load, availability, and time requirements.
 - It provides a rich, declarative, templating format to construct complete HPC environments on Azure.
@@ -68,9 +68,8 @@ As you can see from these questions, the deployment model varies depending on yo
 
 |Feature | Azure Batch | Azure CycleCloud |
 |---------------|------------------------|------------------------|
-| Scheduler | Batch APIs and tools are available. You can also use cloud-native command-line scripts in the Azure portal. | You can use standard HPC schedulers such as **SLURM**, **OpenPBS**, **PBSPro**, **LSF**, **Grid Engine**, and **HTCondor**. Or you can extend Azure CycleCloud autoscaling plugins to work with your own scheduler.|
+| Scheduler | Batch APIs and tools are available. You can also use cloud-native command-line scripts in the Azure portal. | You can use standard HPC schedulers such as **SLURM**, **OpenPBS**, **PBSPro**, **LSF**, and **Grid Engine**. Or you can extend Azure CycleCloud autoscaling plugins to work with your own scheduler.|
 | Compute resources | Software as a service (SaaS) nodes – platform as a service (PaaS). |PaaS software – PaaS. |
-| Monitoring tools | Azure Monitor. | Azure Monitor and Grafana. |
 | Customization | You can use custom image pools, third-party images, or Batch API access. | You can use the comprehensive RESTful API to customize and extend functionality, deploy your own scheduler, and support existing workload managers. |
 | Integration | Azure Synapse Analytics pipelines, Azure Data Factory, and the Azure CLI. | A built-in CLI for Windows and Linux. |
 | User type | Developers. | Classic HPC administrators and users. |
