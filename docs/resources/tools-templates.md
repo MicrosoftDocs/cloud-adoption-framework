@@ -2,7 +2,7 @@
 title: Tools and templates
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/04/2025
 ms.topic: article
 ms.subservice: caf-general

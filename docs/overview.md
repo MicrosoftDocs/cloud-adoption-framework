@@ -2,11 +2,12 @@
 title: Microsoft Cloud Adoption Framework for Azure documentation
 description: Get tools, guidance, and narratives to help shape strategies and drive desired business outcomes during your cloud adoption journey.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/26/2022
 ms.topic: conceptual
 ms.subservice: caf-general
 ms.custom: internal, homepage, UpdateFrequency3
+ms.update-cycle: 1095-days
 ---
 
 # What is the Microsoft Cloud Adoption Framework for Azure?
@@ -71,11 +72,4 @@ Each section of the Cloud Adoption Framework represents a different facet of the
 
 ## Use the Microsoft Cloud Adoption Framework for Azure
 
-If your organization is new to Azure, begin by ensuring you [understand and document foundational alignment decisions](./get-started/cloud-concepts.md). When your enterprise's digital transformation involves the cloud, having an understanding of these fundamental concepts helps you during the cloud adoption process.
-
-## Next steps
-
-<!-- docutune:ignoreNextStep -->
-
-> [!div class="nextstepaction"]
-> [Get started](./get-started/index.md)
+If your organization is new to Azure, begin by ensuring you understand and document foundational alignment decisions. When your enterprise's digital transformation involves the cloud, having an understanding of these fundamental concepts helps you during the cloud adoption process.

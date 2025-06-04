@@ -1,11 +1,12 @@
 ---
 title: Prepare for cloud adoption
 description: Learn how to create a landing zone to host the workloads that you plan to build in the cloud or migrate to the cloud.
-author: Zimmergren
-ms.author: tozimmergren
-ms.date: 09/15/2023
+author: stephen-sumner
+ms.author: pnp
+ms.date: 05/15/2025
 ms.topic: conceptual
 ms.custom: internal
+ms.update-cycle: 1095-days
 ---
 
 # Prepare for cloud adoption
@@ -14,7 +15,19 @@ Before adoption can begin, you create a landing zone to host the workloads that 
 
 ## Landing zone concepts
 
-[!INCLUDE [Landing zone concepts](~/../architecture-center-pr/docs/landing-zones/includes/concepts.md)]
+A landing zone is an environment for hosting your Azure resources. An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point to build your Azure environment. It provides a predefined setup for platform resources and application resources. If an Azure landing zone does not meet your requirements, follow the recommendations to create a custom environment.
+
+There are [two types of landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones):
+
+- Platform landing zone: A subscription that provides shared services (identity, connectivity, management) to applications in application landing zones.
+
+- Application landing zone: A subscription for hosting an application or workload.
+
+There are two steps to designing and deploying a landing zone:
+
+- Reference architecture: A specific design that illustrates resource deployment to one or more Azure subscriptions.
+
+- Reference implementation: A deployment in Azure that translates your reference architecture into reality. Several [prebuilt deployment options](/azure/architecture/landing-zones/landing-zone-deploy) for platform and application landing zones exist to simplify implementation. These deployment options use infrastructure as code (IaC) technologies, such as ARM templates, Bicep, or Terraform. You can adjust this IaC to meet your specific reference architecture needs.
 
 ## Landing zone journey
 
@@ -42,4 +55,5 @@ The phases and processes are covered in more detail as you progress through the 
 
 ## Next steps
 
-Continue with cloud adoption and preparing your Azure environment for landing zones, by reviewing the [Azure setup guide](./azure-setup-guide/index.md).
+> [!div class="nextstepaction"]
+> [Azure setup guide](./azure-setup-guide/index.md)

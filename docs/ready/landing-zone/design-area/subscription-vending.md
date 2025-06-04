@@ -2,7 +2,7 @@
 title: Subscription vending
 description: Subscription vending
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
@@ -110,7 +110,7 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-re
 
 - *Designate a subscription owner.* The subscription vending automation needs to designate a subscription owner at creation. The subscription request should capture this information at intake. Subscription owners can only be users or service principals in the selected subscription directory. You can't select guest directory users. If you select a service principal, enter its App ID.
 
-- *Create Microsoft Entra groups.* In addition to the subscription owner, you should ensure the vending process uses your Microsoft Entra group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
+- *Create Microsoft Entra groups.* In addition to the subscription owner, you should ensure the vending process uses your Microsoft Entra group structure to manage access to the subscription. For elevated (for example, write) access, we recommend using [PIM for groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups). Automating this creation process shouldn't violate best practices such as limiting the number of subscription owners and using the minimum required level of access.
 
 - *Establish workload identities.* Workload identities (service principals) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather workload identity needs at intake. Your vending process should create these identities and assign appropriate subscription access. It's important to note that the workload identity can't use PIM and receives standing access to resources. We recommend you use managed identities to avoid the need to manage secrets. For more information, see [the identity design area](./identity-access.md).
 

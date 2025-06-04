@@ -16,17 +16,17 @@ Consider the following critical security areas whether you deploy environments t
 
 ## Restrict access to DevOps tooling
 
-Follow the principle of least privilege by using role-based access control (RBAC) through [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis). Give users and services the minimum amount of access to your DevOps platforms that they need to do their business functions. For more information, see the following articles:
+Follow the principle of least privilege by using role-based access control (RBAC) through [Microsoft Entra ID](/entra/fundamentals/whatis). Give users and services the minimum amount of access to your DevOps platforms that they need to do their business functions. For more information, see the following articles:
 
 - [Connect your organization to Microsoft Entra ID](/azure/devops/organizations/accounts/connect-organization-to-azure-ad)
-- [Microsoft Entra Single Sign-On (SSO) integration with GitHub Enterprise Cloud](/azure/active-directory/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
+- [Microsoft Entra Single Sign-On (SSO) integration with GitHub Enterprise Cloud](/entra/identity/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
 - [Azure DevOps security best practices](/azure/devops/organizations/security/security-best-practices)
 
 After you establish Microsoft Entra ID as your identity management plane, follow best practices to manage Azure DevOps role assignments with [Microsoft Entra group memberships](../../secure/govern.md). You can [assign Azure DevOps roles to Microsoft Entra groups](../../secure/govern.md), and adjust a user's Microsoft Entra membership to change or remove their Azure DevOps access.
 
-- Use Microsoft Entra ID [entitlement management](/azure/active-directory/governance/entitlement-management-overview) to create access packages that allow Microsoft Entra users time-bound access to required resources to complete their tasks.
+- Use Microsoft Entra ID [entitlement management](/entra/id-governance/entitlement-management-overview) to create access packages that allow Microsoft Entra users time-bound access to required resources to complete their tasks.
 
-- You can also use Microsoft Entra [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure#what-can-i-do-with-it) for just-in-time access to promote individuals to Azure DevOps Administrator roles for a period of time.
+- You can also use Microsoft Entra [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure#what-can-i-do-with-it) for just-in-time access to promote individuals to Azure DevOps Administrator roles for a period of time.
 
 Manage security in Azure DevOps by using security groups, policies, and settings at the Azure DevOps organization, project, or object level. Consider disabling permission inheritance in Azure DevOps if possible.
 
@@ -60,7 +60,7 @@ Never hard-code secrets in code or auxiliary documentation in your repositories.
 
 Platform and development teams often have elevated privileges on the Azure platform, or on other services such as Azure DevOps and GitHub. This access greatly increases the potential attack surface. Implement guardrails to secure any endpoints and workstations you use to develop and deploy code.
 
-Use hardened [secure admin workstations (SAWs)](https://www.microsoft.com/insidetrack/protecting-high-risk-environments-with-secure-admin-workstations) to deploy any changes to high-risk and production environments. For more information, see [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).
+Use hardened [secure admin workstations (SAWs)](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/secure-administrative-workstations/258424) to deploy any changes to high-risk and production environments. For more information, see [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).
 
 ## Do security scanning and testing
 

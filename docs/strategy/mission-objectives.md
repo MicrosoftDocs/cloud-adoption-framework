@@ -1,7 +1,7 @@
 ---
 title: Define Your Cloud Adoption Strategy Mission and Objectives
 description: Learn about recommendations for defining your mission and objectives to provide direction and purpose for your cloud adoption.
-ms.author: tozimmergren
+ms.author: pnp
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 02/03/2025
@@ -17,8 +17,6 @@ You can use frameworks, such as objectives and key results (OKRs), to break your
 
 > [!NOTE]
 > The following section uses OKRs to show examples of how you can break down your cloud adoption strategy objectives into measurable key results. But you can use this guidance and these examples with any methodology or framework when you define and measure your business goals.
->
-> For more information, see [What are OKRs?](https://www.microsoft.com/microsoft-viva/what-is-okr-objective-key-results).
 
 ## Mission statement and objectives
 

@@ -2,7 +2,7 @@
 title: Business alignment for cloud modernization
 description: Modernization is a business decision. It's important that your modernization efforts meet your business goals. Overview of the steps required for business alignment.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 09/12/2022
 ms.topic: conceptual
 ms.custom: internal

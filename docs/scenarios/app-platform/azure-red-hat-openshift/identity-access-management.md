@@ -2,7 +2,7 @@
 title: Identity and access management considerations for Azure Red Hat OpenShift
 description: Learn how to improve identity and access management for the Azure Red Hat OpenShift landing zone accelerator.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 08/18/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aro, linux-related-content
@@ -43,7 +43,7 @@ Use these design considerations and recommendations to create an identity and ac
   - Define the required RBAC roles in OpenShift that are scoped to either a local project scope or a cluster scope.
   - Use Azure Red Hat OpenShift to create role bindings that are tied to Microsoft Entra groups for SRE, SecOps, and developer access.
   - Use Azure Red Hat OpenShift with Microsoft Entra ID to [limit user rights](/azure/aks/azure-ad-rbac) and minimize the number of users who have administrator rights. Limiting user rights protects the configuration and secrets access.
-  - Give full access only as needed and just-in-time. Use [Privileged Identity Management in Microsoft Entra ID](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
+  - Give full access only as needed and just-in-time. Use [Privileged Identity Management in Microsoft Entra ID](/entra/id-governance/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
 - **Cluster workloads**
   - For applications that require access to sensitive information, use a service principal and the [Azure Key Vault Provider for Secret Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/) to mount secrets stored in Azure Key Vault to your pods.
 

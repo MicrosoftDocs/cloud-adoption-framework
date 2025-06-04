@@ -2,7 +2,7 @@
 title: Align cost models with the digital estate
 description: Learn about Azure pricing tools that can help you forecast and manage cloud spend with transparency and accuracy, to make the most of Azure and other clouds.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.custom: internal
@@ -15,8 +15,6 @@ After you've rationalized a digital estate, you can align it to equivalent costi
 Azure pricing tools help you manage cloud spend with transparency and accuracy, so you can make the most of Azure and other clouds. Providing the tools to monitor, allocate, and optimize cloud costs, empowers customers to accelerate future investments with confidence.
 
 - [Azure Migrate](/azure/migrate/migrate-services-overview): Azure Migrate is perhaps the most cost effective approach to cost model alignment. This tool allows for [digital estate inventory](./inventory.md), [limited rationalization](./rationalize.md), and cost calculations in one tool.
-
-- [Total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator/): Lower the total cost of ownership of your on-premises infrastructure with the Azure cloud platform. Use the Azure TCO calculator to estimate the cost savings you can realize by migrating your application workloads to Azure. Provide a brief description of your on-premises environment to get an instant report.
 
 - [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/): Estimate your expected monthly bill by using our pricing calculator. Track your actual account usage and bill at any time using the billing portal. Set up automatic email billing alerts to notify you if your spend goes above an amount you configure.
 

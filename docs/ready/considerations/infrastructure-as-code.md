@@ -2,7 +2,7 @@
 title: Infrastructure as Code
 description: Infrastructure as Code for Azure Landing Zones
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/22/2023
 ms.topic: conceptual
 ms.custom: internal
@@ -36,6 +36,8 @@ Review information about Azure Resource Manager templates (ARM templates).
 ### Bicep
 
 [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. In Bicep files, you define the infrastructure you intend to deploy and its properties. Compared to ARM templates, Bicep files are easier to read and write for a non-developer audience because they use a concise syntax.
+
+This sample Bicep code deploys an Azure Storage Account in the resource group's region. It applies Standard_LRS redundancy and the StorageV2 kind. The access tier is set to 'Hot' for frequent data access.
 
 ```bicep
 param location string = resourceGroup().location

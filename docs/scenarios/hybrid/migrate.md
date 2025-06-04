@@ -2,7 +2,7 @@
 title: Hybrid and multicloud migration
 description: Understand migration to a hybrid and multicloud environment.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

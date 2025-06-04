@@ -2,7 +2,7 @@
 title: Platform automation and DevOps for Azure API Management
 description: Learn about design considerations and recommendations for platform automation and DevOps in the Azure API Management landing zone accelerator
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/12/2022
 ms.topic: conceptual
 ms.custom: internal

@@ -2,7 +2,7 @@
 title: Migrate Azure landing zone custom policies to Azure built-in policies
 description: Learn how to use governance guidance to migrate previously deployed Azure landing zone policies to Azure built-in policies.
 author: Jfaurskov
-ms.author: Janfaurs
+ms.author: janfaurs
 ms.date: 01/17/2025
 ms.topic: conceptual
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2

@@ -2,7 +2,7 @@
 title: Security, governance, and compliance for Azure Virtual Desktop infrastructure
 description: Learn key design considerations and recommendations for security and governance in Azure Virtual Desktop.
 author: nataliakon
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/02/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
@@ -16,16 +16,16 @@ Review the following sections to find recommended security controls and governan
 
 ## Identity
 
-- Secure user access to Azure Virtual Desktop by establishing [Microsoft Entra Conditional Access Policy](/azure/active-directory/conditional-access/overview) with [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool. Consider your users' locations, devices, and sign in behaviors, and add extra controls as needed based on their access patterns. For more information on enabling Azure multifactor authentication for Azure Virtual Desktop, see [Enable Azure multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
+- Secure user access to Azure Virtual Desktop by establishing [Microsoft Entra Conditional Access policies requiring multifactor authentication](/entra/identity/conditional-access/policy-all-users-mfa-strength) or another [multifactor authentication tool](/entra/identity/authentication/how-to-authentication-external-method-manage). Consider your users' locations, devices, and sign in behaviors, and add extra controls as needed based on their access patterns. For more information on enabling Azure multifactor authentication for Azure Virtual Desktop, see [Enable Azure multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 
-- Assign the *least privilege* required by defining administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview). To limit access to high privilege roles within your Azure Virtual Desktop landing zone, consider integration with Azure Privileged Identity Management (PIM). Maintaining knowledge of which team is responsible for each particular administrative area helps you determine Azure role-based access control (RBAC) roles and configuration.
+- Assign the *least privilege* required by defining administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview). To limit access to high privilege roles within your Azure Virtual Desktop landing zone, consider integration with Privileged Identity Management (PIM). Maintaining knowledge of which team is responsible for each particular administrative area helps you determine Azure role-based access control (RBAC) roles and configuration.
 
-- Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Assign least privilege to the automation account and scope limited to Azure Virtual Desktop landing zone(s). You can use Azure Key Vault with Azure managed identities so that runtime environments (like an Azure Function) can retrieve automation credentials from the key vault.
+- Use [**Azure Managed Identity**](/entra/identity/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/entra/identity-platform/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Assign least privilege to the automation account and scope limited to Azure Virtual Desktop landing zone(s). You can use Azure Key Vault with Azure managed identities so that runtime environments (like an Azure Function) can retrieve automation credentials from the key vault.
 
 - Ensure that you collect user and administrator activity logging for Microsoft Entra ID and Azure Virtual Desktop landing zone(s). Monitor these logs with your Security Information and Event Management (SIEM) tool. You can collect logs from various sources, such as:
   - [Azure Activity Log](/azure/azure-monitor/essentials/activity-log)
-  - [Microsoft Entra Activity Log](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-  - [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis)
+  - [Microsoft Entra Activity Log](/entra/identity/monitoring-health/concept-log-monitoring-integration-options-considerations)
+  - [Microsoft Entra ID](/entra/fundamentals/whatis)
   - [Session hosts](/azure/azure-monitor/agents/agent-windows)
   - [Key Vault logs](/azure/key-vault/general/logging)
 

@@ -2,7 +2,7 @@
 title: Administer your Azure cloud estate
 description: Learn how to administer your Azure cloud estate and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
@@ -41,7 +41,7 @@ Change is the most common source of problems in the cloud. As a result, you need
 
     |Risk level|Downtime allowance|Workload criticality|Approval process|Example changes|
     |---|---|---|---|---|
-    |High|No downtime allowed|These changes affect mission-critical systems that require continuous availability with zero tolerance for any downtime.|Multiple senior engineer reviews, automated pipeline alerts, [fast canary release](/azure/well-architected/operational-excellence/safe-deployments#adopt-a-progressive-exposure-model), and active monitoring.| Critical infrastructure updates|
+    |High|No downtime allowed|These changes affect mission-critical systems that require continuous availability with zero tolerance for any downtime.|Multiple senior engineer reviews, automated pipeline alerts, [progressive exposure model](/azure/well-architected/operational-excellence/safe-deployments#adopt-a-progressive-exposure-model), and active monitoring.| Critical infrastructure updates|
     |Medium|Short downtime allowed|These changes affect important systems with limited tolerance for downtime.|Automated pipeline flags the change. Quick review by engineers if monitoring raises an alert.|Noncritical system updates, feature enhancements during short maintenance windows|
     |Low|Ample downtime allowed|These changes affect noncritical systems where extended downtime is acceptable without affecting overall operations.|Fully automated deployment via CI/CD runs predeployment tests and monitoring.|Routine updates, minor policy updates|
 

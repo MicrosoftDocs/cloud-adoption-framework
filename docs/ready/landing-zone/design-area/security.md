@@ -2,7 +2,7 @@
 title: Security design in Azure
 description: Learn about design area guidance to establish a foundation for security in Azure, hybrid, or multicloud environments.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
@@ -30,9 +30,9 @@ The security design area focuses on considerations and recommendations for landi
 
 **Existing (brownfield) cloud environment:** Consider using the following [Microsoft Entra](https://www.microsoft.com/security/business/microsoft-entra) identity and access services if you are interested in applying the principles from security design area to existing Azure environments:
 
-- Deploy [Microsoft Entra Connect cloud sync](/azure/active-directory/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Microsoft Entra ID-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Microsoft Entra multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [Microsoft Entra Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to further protect these identities
+- Deploy [Microsoft Entra Connect cloud sync](/entra/identity/hybrid/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Microsoft Entra ID-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [Microsoft Entra Password Protection](/entra/identity/authentication/concept-password-ban-bad-on-premises) to further protect these identities
 - Consider [Microsoft Entra Conditional Access](/entra/identity/conditional-access/policy-all-users-mfa-strength) to provided secure authentication to your cloud apps and Azure resources.
-- Implement [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
+- Implement [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
 - Make use of the recommendations, alerting, and remediation capabilities of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Your security team can also integrate Microsoft Defender for Cloud into [Microsoft Sentinel](/azure/sentinel/overview) if they need a more robust, centrally managed hybrid and multicloud Security Information Event Management (SIEM)/Security Orchestration and Response (SOAR) solution.
 
 The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains a number of Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice security guidance integrated within them.
@@ -70,7 +70,7 @@ An organization must have visibility into what's happening within their technica
 
 ### Security operations design recommendations
 
-- Use [Microsoft Entra ID reporting capabilities](/azure/active-directory/reports-monitoring/concept-audit-logs) to generate access control audit reports.
+- Use [Microsoft Entra ID reporting capabilities](/entra/identity/monitoring-health/concept-audit-logs) to generate access control audit reports.
 
 - Export Azure activity logs to Azure Monitor Logs for long-term data retention. Export to Azure Storage for long-term storage beyond two years, if necessary.
 
@@ -113,7 +113,7 @@ For Zero Trust access with identities, you should consider:
 - Who should receive the notifications when privileged roles are activated?
 - Who should have access to the audit history?
 
-For more information, see [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure).
+For more information, see [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure).
 
 Implementing Zero Trust can go beyond just identity and access management. You should consider if your organization needs to implement Zero Trust practices across multiple pillars, such as infrastructure, data, and networking. For more information, see [Incorporate Zero Trust practices in your landing zone](security-zero-trust.md)
 
@@ -158,4 +158,4 @@ Policies for online and corporate-connected landing zones:
 Learn how to secure privileged access for hybrid and cloud deployments in Microsoft Entra ID.
 
 > [!div class="nextstepaction"]
-> [Secure privileged access](/azure/active-directory/roles/security-planning)
+> [Secure privileged access](/entra/identity/role-based-access-control/security-planning)

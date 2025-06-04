@@ -2,7 +2,7 @@
 title: Govern Azure VMware Solution
 description: Learn about how to extend your governance approach across the Azure VMware Solution.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 01/28/2025
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware
@@ -86,13 +86,13 @@ These are the main focus areas of governance in an initial Azure VMware Solution
 - [An introduction to Azure Automation](/azure/automation/automation-intro)
 - [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 - [Perform actions using Azure Backup Center](/azure/backup/backup-center-overview)
-- [Understand roles in Microsoft Entra ID](/azure/active-directory/roles/concept-understand-roles)
-- [What is Microsoft Entra Privileged Identity Management?](/azure/active-directory/privileged-identity-management/pim-configure)
+- [Understand roles in Microsoft Entra ID](/entra/identity/role-based-access-control/concept-understand-roles)
+- [What is Microsoft Entra Privileged Identity Management?](/entra/id-governance/privileged-identity-management/pim-configure)
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
 - [Extended security updates](/lifecycle/faq/extended-security-updates)
 - [Security alerts and incidents in Microsoft Defender for Cloud](/azure/security-center/security-center-alerts-overview)
-- [Identity governance and administration solutions](/azure/active-directory/governance/identity-governance-overview)
+- [Identity governance and administration solutions](/entra/id-governance/identity-governance-overview)
 
 We recommend you implement an Azure VMware Solution that's secure, and that includes solid governance in your environment for the whole lifecycle. This will help your organization meet compliance requirements, and explore recommended design elements during your implementation.
 

@@ -2,7 +2,7 @@
 title: Organize your Azure resources effectively
 description: Understand best practices for effectively organizing your Azure resources to simplify resource management.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 01/20/2025
 ms.topic: conceptual
 ms.custom: AQC
@@ -99,7 +99,7 @@ A good naming standard helps to identify resources in the Azure portal, on a bil
 
 - Business details should include the organizational information required to identify teams. For example a business unit, such as `fin`, `mktg`, or `corp` might be used.
 - Follow the guidance for [abbreviations for resource types](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations).
-- Use a consistent naming convention for all resources. For example, use a prefix that identifies the subscription or resource group, workload type, the environment the resource is deploy in, and the Azure region.
+- Use a consistent naming convention for all resources. For example, use a prefix that identifies the subscription or resource group, workload type, the environment the resource is deployed in, and the Azure region.
 - Operational details in resource names should include information that IT and workload teams need. Include details that identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
 To learn more about naming Azure standards and recommendations, see [Develop your naming and tagging strategy for Azure resources](../azure-best-practices/naming-and-tagging.md).
@@ -126,7 +126,7 @@ Other common uses for tags include:
 - **Workload name:** Name of the workload that a resource supports.
 - **Data classification:** Sensitivity of the data that a resource hosts.
 - **Cost center:** The accounting cost center or team associated with the resource. In [Microsoft Cost Management](/azure/cost-management-billing/), you can apply your cost center tag as a filter to report charges based on usage by team or department.
-- **Environment:** The environment in which the resource is deployed, such as, development, test, or production.
+- **Environment:** The environment in which the resource is deployed, such as development, test, or production.
 
 For more tagging recommendations and examples, see [Define your tagging strategy](../azure-best-practices/resource-tagging.md).
 
@@ -176,7 +176,6 @@ To learn more about management levels and organization, see:
 
 - [Management group design considerations and recommendations](../landing-zone/design-area/resource-org-management-groups.md)
 - [Subscription considerations and recommendations](../landing-zone/design-area/resource-org-subscriptions.md)
-- [Resource access management in Azure](../../get-started/how-azure-resource-manager-works.md)
 
 For more information about resource naming and tagging, see:
 

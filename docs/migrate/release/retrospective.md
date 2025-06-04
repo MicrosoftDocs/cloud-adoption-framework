@@ -2,7 +2,7 @@
 title: Build a growth mindset with retrospectives
 description: Learn how retrospectives help build a growth mindset and empower teams to create sustainable growth.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ---

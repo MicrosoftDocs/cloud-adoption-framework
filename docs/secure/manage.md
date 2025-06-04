@@ -2,7 +2,7 @@
 title: Manage Your Cloud Estate with Enhanced Security
 description: Learn how to adopt security best practices during your cloud estate management phase. Manage incident preparedness and response, confidentiality, and more. 
 author: claytonsiemens77
-ms.author: csiemens
+ms.author: pnp
 ms.date: 10/16/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2

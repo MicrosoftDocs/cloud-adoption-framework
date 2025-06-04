@@ -2,7 +2,7 @@
 title: Test your migration deployment in Azure
 description: Learn how to perform migration testing in Azure to ensure that your architecture works with the replicated or staged resources.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/05/2024
 ms.topic: conceptual
 ms.collection: 

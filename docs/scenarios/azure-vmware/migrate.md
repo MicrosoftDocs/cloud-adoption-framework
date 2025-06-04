@@ -2,7 +2,7 @@
 title: Migrate workloads for Azure VMware Solution
 description: Review how you can migrate VMware workloads from your data center to Azure
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/22/2022
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank

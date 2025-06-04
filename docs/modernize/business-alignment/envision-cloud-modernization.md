@@ -2,7 +2,7 @@
 title: Envision cloud modernization possibilities
 description: Learn how understanding your cloud adoption motivations help you establish your approach to the modernization horizons, as part of your cloud adoption-related modernization plan.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 09/07/2022
 ms.topic: conceptual
 ms.custom: internal

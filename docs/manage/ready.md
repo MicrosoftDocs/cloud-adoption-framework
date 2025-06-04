@@ -2,7 +2,7 @@
 title: Ready your Azure cloud operations
 description: Learn how to ready your Azure cloud operations and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
@@ -43,7 +43,7 @@ Use the responsibilities outlined in *Table 1* to build an effective operational
     | Centralized         | A single team manages all tasks. | Startups or small cloud footprint. | Simplifies cloud management. | Risks creating bottlenecks. |
     | Shared management   | Separate central (platform) and workload teams | Organizations with diverse workloads. | Balances governance and agility. | Requires clear assignment of responsibility |
 
-1. ***Establish central responsibilities.*** Form a dedicated team to handle central management tasks. Develop a skills matrix from Table 1 to identify required expertise.
+1. ***Establish central responsibilities.*** Form a dedicated team to handle central management tasks. Develop a skills matrix from *Table 1* to identify required expertise.
 
 1. ***Establish workload responsibilities.*** Set up specialized teams for workload-specific tasks. Identify responsibilities using *Table 1* then recruit accordingly.
 

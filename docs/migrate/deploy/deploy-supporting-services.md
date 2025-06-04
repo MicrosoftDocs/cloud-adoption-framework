@@ -2,7 +2,7 @@
 title: Deploy supporting services for migration projects
 description: Learn how to deploy the supporting services required for your workloads when migrating to Azure with the Cloud Adoption Framework.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/05/2024
 ms.topic: conceptual
 ms.collection: 
@@ -17,7 +17,7 @@ You must place replicated or staged servers into virtual networks, and many work
 
 When you designed your [workload architecture](../assess/architect.md), you identified these services. Before you begin to migrate resources, *deploy* the services to ensure that you have everything ready for your workload to operate successfully.
 
-This article assumes that you prepared your shared platform solutions by [readying your landing zones for migrations](../prepare/ready-azure-landing-zone.md) and completed your workload architecture.
+This article assumes that you prepared your shared platform solutions by [readying your landing zones for migrations](../../ready/landing-zone/ready-azure-landing-zone.md) and completed your workload architecture.
 
 ## Plan for supporting service deployment
 

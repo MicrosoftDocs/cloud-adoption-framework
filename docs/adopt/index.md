@@ -2,11 +2,12 @@
 title: How to adopt the cloud
 description: The Adopt methodology shows you how to migrate, modernize, and innovate in Azure.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 02/14/2024
 ms.topic: conceptual
 ms.custom: internal
 keywords: cloud adoption, cloud framework, cloud adoption framework
+ms.update-cycle: 1095-days
 ---
 
 # Cloud adoption

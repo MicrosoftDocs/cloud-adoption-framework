@@ -1,10 +1,11 @@
 ---
 title: Inform Your Cloud Adoption Strategy
 description: Learn about considerations that you can use to inform your cloud strategy to align your cloud adoption efforts with your business goals.
-ms.author: tozimmergren
+ms.author: pnp
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 02/03/2025
+ms.update-cycle: 1095-days
 ---
 
 # Inform your cloud adoption strategy

@@ -2,7 +2,7 @@
 title: Understand cloud automation functions
 description: Understand cloud automation functions, including the source of the functionality, the scope, and the deliverable.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3

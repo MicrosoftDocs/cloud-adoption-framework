@@ -20,6 +20,9 @@ If you didn't use an Azure landing zone reference implementation, you still need
 
 This article describes the tasks you must perform for your existing Azure landing zone after it's deployed. Some tasks focus on automated deployments. It's noted if a task isn't relevant for manually deployed and managed environments.
 
+> [!NOTE]
+> Prior to completing the tasks detailed on this page, please ensure you have implemented your Azure landing zone and reviewed both the [design areas](./design-areas.md) and also the [design principles](./design-principles.md) before continuing.
+
 ## Establish hybrid connectivity
 
 During an Azure landing zone deployment, you can deploy a Connectivity subscription with a hub virtual network and network gateways, such as Azure VPN gateways, Azure ExpressRoute gateways, or both. After your Azure landing zone deployment, you must still configure hybrid connectivity from these gateways to connect to your existing datacenter appliances or your ExpressRoute circuit.
@@ -62,7 +65,7 @@ If you implement the [enterprise-scale architecture for small enterprises](https
 
 ### Microsoft Entra Connect
 
-Many organizations already have Microsoft Entra Connect to populate Microsoft 365 services, like Exchange Online. If your organization doesn't have Microsoft Entra Connect, you might need to [install it](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) and deploy it after your landing zone deployment so you can replicate identities.
+Many organizations already have Microsoft Entra Connect to populate Microsoft 365 services, like Exchange Online. If your organization doesn't have Microsoft Entra Connect, you might need to [install it](/entra/identity/hybrid/connect/how-to-connect-install-roadmap) and deploy it after your landing zone deployment so you can replicate identities.
 
 ## Enable hybrid DNS
 
@@ -184,8 +187,3 @@ Consider these additional resources to prepare for migration:
 - [Create an adequate plan for Azure billing](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md)
 - [Ensure that you have proper organizational alignment](../../plan/initial-org-alignment.md) and [a plan to manage it](../../organize/index.md)
 - [Develop naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md)
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Prepare tools and an initial migration backlog](./tools-backlog.md)

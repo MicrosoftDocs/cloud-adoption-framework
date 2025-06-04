@@ -2,7 +2,7 @@
 title: Protect your Azure cloud estate
 description: Learn how to ensure the reliability and security your Azure cloud estate as part of your cloud operations.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
@@ -49,9 +49,9 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 1. ***Identify service level indicators (SLIs).*** Use SLIs to measure uptime performance against your SLO. Examples include [service health monitoring](./monitor.md#monitor-service-health) and [error rates](./monitor.md#monitor-code-and-runtime).
 
-1. ***Assign a recovery time objective (RTO) to all workloads.*** The RTO defines the maximum acceptable downtime for your workload. RTO should be shorter than your annual downtime allowance. For example, an uptime SLO 99.99% requires less than 52 minutes of annual downtime (4.32 minutes per month). Follow these steps:
+1. ***Assign a recovery time objective (RTO) to all workloads.*** The RTO defines the maximum acceptable downtime for your workload. RTO should be shorter than your annual downtime allowance. For example, an uptime SLO 99.99% requires less than 52 minutes of annual downtime (4.32 minutes per month). To assign an RTO, follow these steps:
 
-	1. ***Estimate the number of failures.*** Estimate how often you think each workload might fail per year. For workloads with operational history, use your SLIs. For new workloads, perform a [failure mode analysis](/azure/well-architected/reliability/failure-mode-analysis) to get an accurate estimate.
+	1. ***Estimate the number of failures per year.*** For workloads with operational history, use your SLIs. For new workloads, perform a [failure mode analysis](/azure/well-architected/reliability/failure-mode-analysis) to get an accurate estimate.
 
 	1. ***Estimate the RTO.*** Divide your annual allowable downtime by the estimated number of failures. If you estimate four failures per year, then your RTO must be 13 minutes or less (52 minutes / 4 failures = 13-minute RTO).
 

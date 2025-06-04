@@ -37,10 +37,10 @@ Identity management is a fundamental framework that governs access to important 
 
 - **Operating system (OS) level security**: Oracle workloads can run on different variants of the Linux OS or Windows OS. Organizations can improve the security of their Windows and Linux virtual machines (VMs) in Azure by integrating them with Microsoft Entra ID. For more information, see:
 
-    - [Sign in to a Linux VM in Azure by using Microsoft Entra ID and OpenSSH](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux).
+    - [Sign in to a Linux VM in Azure by using Microsoft Entra ID and OpenSSH](/entra/identity/devices/howto-vm-sign-in-azure-ad-linux).
       - As of July 2023, Oracle Linux (OL) and Red Hat Enterprise Linux (RHEL) are 100% binary compatible, which means that any instructions related to RHEL are applicable to OL.
       - As of July 2023, IBM has ceased to openly share RHEL source code. It's possible that OL and RHEL might diverge in the future, which will invalidate the previous statement.
-    - [Sign in to a Windows VM in Azure by using Microsoft Entra ID](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows).
+    - [Sign in to a Windows VM in Azure by using Microsoft Entra ID](/entra/identity/devices/howto-vm-sign-in-azure-ad-windows).
 
 - **Azure Key Vault to store credentials**: Key Vault is a powerful tool for cloud applications and services that you can use to secure storage of secrets, such as passwords and database connection strings. You can use Key Vault to store credentials for both [Windows](/entra/identity/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad) and [Linux](/entra/identity/managed-identities-azure-resources/tutorial-linux-vm-access-nonaad) VMs in a centralized and secure manner, regardless of the OS.
 

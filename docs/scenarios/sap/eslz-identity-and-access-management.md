@@ -54,7 +54,7 @@ Here are common administration and management activities of SAP on Azure:
 
 - Consider using [SAP principal propagation](/power-platform/sap/connect/entra-id-apim-oauth) to forward a Microsoft identity to your SAP landscape.
 
-- Consider Microsoft Entra provisioning service to automatically provision and deprovision users and groups to [SAP Analytics Cloud](/azure/active-directory/saas-apps/sap-analytics-cloud-provisioning-tutorial), [SAP Identity Authentication](/azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial), and more SAP services.
+- Consider Microsoft Entra provisioning service to automatically provision and deprovision users and groups to [SAP Analytics Cloud](/entra/identity/saas-apps/sap-analytics-cloud-provisioning-tutorial), [SAP Identity Authentication](/entra/identity/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial), and more SAP services.
 
 - Consider provisioning users from [SuccessFactors](/entra/identity/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial) into Microsoft Entra ID, with optional write-back of email address to SuccessFactors.
 
@@ -63,16 +63,16 @@ Here are common administration and management activities of SAP on Azure:
 - [Migrate](/entra/id-governance/scenarios/migrate-from-sap-idm) your SAP Identity Management (IDM) solution to Microsoft Entra ID Governance.
 
 - Implement SSO by using Windows AD, Microsoft Entra ID, or AD FS, depending on the access type, so that the end users can connect to SAP applications without a user ID and password once the central identity provider successfully authenticates them.
-  - Implement SSO to SAP SaaS applications like [SAP Analytics Cloud](/azure/active-directory/saas-apps/sapboc-tutorial), [SAP Business Technology Platform (BTP)](/azure/active-directory/saas-apps/sap-hana-cloud-platform-tutorial), [Business by design](/azure/active-directory/saas-apps/sapbusinessbydesign-tutorial), [SAP Qualtrics](/azure/active-directory/saas-apps/qualtrics-tutorial) and [SAP C4C](/azure/active-directory/saas-apps/sap-customer-cloud-tutorial) with Microsoft Entra ID using SAML.
-  - Implement SSO to [SAP NetWeaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial)-based web applications like [SAP Fiori](/azure/active-directory/saas-apps/sap-fiori-tutorial) and SAP Web GUI by using SAML.
+  - Implement SSO to SAP SaaS applications like [SAP Analytics Cloud](/en-us/entra/identity/saas-apps/sapboc-tutorial), [SAP Business Technology Platform (BTP)](/entra/identity/saas-apps/sap-hana-cloud-platform-tutorial), [Business by design](/entra/identity/saas-apps/sapbusinessbydesign-tutorial), [SAP Qualtrics](/entra/identity/saas-apps/qualtrics-tutorial) and [SAP C4C](/entra/identity/saas-apps/sap-customer-cloud-tutorial) with Microsoft Entra ID using SAML.
+  - Implement SSO to [SAP NetWeaver](/entra/identity/saas-apps/sap-netweaver-tutorial)-based web applications like [SAP Fiori](/entra/identity/saas-apps/sap-fiori-tutorial) and SAP Web GUI by using SAML.
   - You can implement SSO to SAP GUI by using SAP NetWeaver SSO or a partner solution.
   - For SSO for SAP GUI and web browser access, implement SNC – Kerberos/SPNEGO (simple and protected GSSAPI negotiation mechanism) due to its ease of configuration and maintenance. For SSO with X.509 client certificates, consider the SAP Secure Login Server, which is a component of the SAP SSO solution.
-  - Implement [SSO by using OAuth for SAP NetWeaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial#configure-sap-netweaver-for-oauth) to allow third-party or custom applications to access SAP NetWeaver OData services.
-  - Implement [SSO to SAP HANA](/azure/active-directory/saas-apps/saphana-tutorial)
+  - Implement [SSO by using OAuth for SAP NetWeaver](/entra/identity/saas-apps/sap-netweaver-tutorial#configure-sap-netweaver-for-oauth) to allow third-party or custom applications to access SAP NetWeaver OData services.
+  - Implement [SSO to SAP HANA](/entra/identity/saas-apps/saphana-tutorial)
 
 - Implement Microsoft Entra ID as identity provider for SAP systems hosted on RISE. For more information, see [Integrating the Service with Microsoft Entra ID](https://help.sap.com/docs/identity-authentication/identity-authentication/integrating-service-with-microsoft-azure-ad).
 - For applications that access SAP, use [principal propagation to establish SSO](https://github.com/azuredevcollege/SAP/blob/master/sap-oauth-saml-flow/README.md).
 
 - If you're using SAP BTP services or SaaS solutions that require SAP Cloud Identity Service, Identity Authentication (IAS), [implement SSO between SAP Cloud Identity Authentication Services and Microsoft Entra ID](/entra/fundamentals/scenario-azure-first-sap-identity-integration) to access those SAP services. This integration lets SAP IAS act as a proxy identity provider and forwards authentication requests to Microsoft Entra ID as the central user store and identity provider.
 
-- If you're using SAP SuccessFactors, use Microsoft Entra ID [automated user provisioning](/azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial). With this integration, as you add new employees to SAP SuccessFactors, you can automatically create their user accounts in Microsoft Entra ID. Optionally, you can create user accounts in Microsoft 365 or other SaaS applications that are supported by Microsoft Entra ID. Use write-back of the email address to SAP SuccessFactors.
+- If you're using SAP SuccessFactors, use Microsoft Entra ID [automated user provisioning](/entra/identity/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial). With this integration, as you add new employees to SAP SuccessFactors, you can automatically create their user accounts in Microsoft Entra ID. Optionally, you can create user accounts in Microsoft 365 or other SaaS applications that are supported by Microsoft Entra ID. Use write-back of the email address to SAP SuccessFactors.

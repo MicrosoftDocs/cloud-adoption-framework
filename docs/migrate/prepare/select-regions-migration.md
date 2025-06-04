@@ -2,7 +2,7 @@
 title: Select Azure regions for a migration
 description: Learn how to select a cloud region for a workload migration to Azure. Find suggested actions for assessment, migration, and other processes.
 author: johndowns
-ms.author: jodowns
+ms.author: pnp
 ms.reviewer: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Stay current with Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to stay current and manage change in today's cloud cadence.
 author: jelledruyts
-ms.author: jelled
+ms.author: pnp
 ms.date: 11/04/2022
 ms.topic: conceptual
 ms.custom: think-tank, fasttrack-new, AQC, setup
