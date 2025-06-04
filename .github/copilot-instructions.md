@@ -1,76 +1,17 @@
-
-## [Prescriptive recommendation (logically first) (starts with a verb)]
-
-[*INSTRUCTIONS: *Define what this section is about (1 sentence). Explain why this section is important to the topic of this article, if it's not obvious (1 sentence). Define the end state or what the customer needs to do*]. For guidance, follow these steps:
-
-1. **[Prescriptive recommendation 1 (starts with action verb)].** [*INSTRUCTIONS: Every recommendation must: Define why this recommendation is important in the context of this section (1 sentence). Explain how to implement/carry out this recommendation. If available indicate how Azure or other tools, services, features facilitate the implementation. Rely heavily on links to product docs to describe these tools, services, and features (1-3 sentences).*].
-
-1. **[Prescriptive recommendation 2 (starts with action verb)].** [*INSTRUCTIONS: Every recommendation must: Define why this recommendation is important in the context of this section (1 sentence). Explain how to implement/carry out this recommendation. If available indicate how Azure or other tools, services, features facilitate the implementation. Rely heavily on links to product docs to describe these tools, services, and features (1-3 sentences).*].
-
-1. ... <!-- add as many sequential recommendations as needed -->
-
-## [Prescriptive recommendation (logically second) (starts with a verb)]
-
-[*INSTRUCTIONS: *Define what this section is about (1 sentence). Explain why this section is important to the topic of this article, if it's not obvious (1 sentence). Define the end state or what the customer needs to do*]. For guidance, follow these steps:
-
-1. **[Prescriptive recommendation 1 (starts with action verb)].** [*INSTRUCTIONS: Every recommendation must: Define why this recommendation is important in the context of this section (1 sentence). Explain how to implement/carry out this recommendation. If available indicate how Azure or other tools, services, features facilitate the implementation. Rely heavily on links to product docs to describe these tools, services, and features (1-3 sentences).*].
-
-1. **[Prescriptive recommendation 2 (starts with action verb)].** [*INSTRUCTIONS: Every recommendation must: Define why this recommendation is important in the context of this section (1 sentence). Explain how to implement/carry out this recommendation. If available indicate how Azure or other tools, services, features facilitate the implementation. Rely heavily on links to product docs to describe these tools, services, and features (1-3 sentences).*].
-
-
-### Content structure requirements
-
-**Article flow must be sequential and logical:**
-- Start with foundational concepts customers need first
-- Progress through intermediate steps that build on each other  
-- End with advanced guidance for mature implementations
-- Each section should clearly connect to the next step in the customer journey
-
-**Recommendation format (MUST follow this pattern):**
-- **[Clear, actionable recommendation].** [*Every recommendation must: Define why this recommendation is important in the context of this section (1 sentence). Explain how to implement/carry out this recommendation. If available indicate how Azure or other tools, services, features facilitate the implementation. Rely heavily on links to product docs to describe these tools, services, and features (1-3 sentences).*].
-
-### Content quality checklist
-
-Before submitting your content, verify:
-
-- [ ] **Proven guidance**: All recommendations based on successful customer engagements
-- [ ] **Recommendation-driven**: Every point follows the [Recommendation] + [Why] + [How] format
-- [ ] **Sequential**: Content follows logical customer journey progression  
-- [ ] **Prescriptive**: Provides clear "do this" guidance, not "consider this"
-- [ ] **Actionable**: Each recommendation includes specific implementation steps
-- [ ] **Required**: All content directly supports customer success outcomes
-- [ ] **Unique**: Content doesn't duplicate existing product documentation
-- [ ] **Clear**: Language is unambiguous and easy to understand
-- [ ] **Concise**: Content is brief and focused on essential guidance
-
-### Writing standards
-
-**Use action-oriented language:**
-- Start sections with action verbs (Implement, Configure, Deploy, Monitor)
-- Prefer the imperative mood ("Configure the policy" not "You should configure")
-- Include specific tools and methods in recommendations, relying on links for product truth.
-
-**Structure for clarity:**
-- Use numbered steps for sequential processes
-- Use bullet points for related but nonsequential items
-- As needed, include tables for decision matrices and comparison guidance
-- Add diagrams to illustrate complex processes or architectures
-
-**Link strategy:**
-- Link to authoritative Azure documentation for technical details
-- Link to other CAF articles for related guidance in the customer journey
-- Avoid excessive external links that require frequent validation
-
-### Examples: Common pitfalls to avoid
-
-**Don't write considerations or descriptive content:**
-- ❌ "Consider implementing monitoring for your resources"
-- ✅ "**Implement Azure Monitor alerts for all critical resources.** Alerts ensure rapid response to issues that impact business operations. Configure alerts for CPU utilization, memory usage, and application-specific metrics using Azure Monitor alert rules."
-
-**Don't provide unordered lists of options:**
-- ❌ "You can use Azure Policy, ARM templates, or Bicep for governance"
-- ✅ "**Use Azure Policy to enforce governance standards.** Azure Policy prevents configuration drift and ensures compliance. Start with built-in policy definitions for common requirements like allowed locations and required tags."
-
-**Don't create content without clear business value:**
-- ❌ "Azure offers many different storage options"
-- ✅ "**Select storage tiers based on access patterns.** Storage tiers optimize costs while meeting performance requirements. Use hot tier for frequently accessed data and cool tier for infrequently accessed data with lower cost requirements."
+## Cloud Adoption Framework governance policies 
+must be in alignment with product documentation on learn.microsoft.com
+must be a manual for customers to be successful in Azure.
+must serve as a framework and/or roadmap for customers to be successful in Azure.
+must account for business of all sizes, ranging from startups to large enterprises.
+must not contain content that's salesy 
+must not contain content that's emotional, false, or promissory.
+must be true
+must be accurate
+must use learn.microsoft.com as source of truth
+must not simply describe Microsoft products or Azure products or services.
+must provide recommendations to be successful in Azure.
+must have no spelling errors
+must have no grammatical errors
+must be concise
+must be prescriptive
+must be clear
