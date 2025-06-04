@@ -433,7 +433,7 @@
       {
          "source_path": "docs/getting-started/innovate.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/innovate/ai/conversational-ai.md",
@@ -463,7 +463,7 @@
       {
          "source_path": "docs/getting-started/what-is-azure.md",
          "redirect_url": "/azure/azure-resource-manager/management/overview",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/getting-started/index.yml",
@@ -653,12 +653,12 @@
       {
          "source_path": "docs/reference/fundamental-concepts/hierarchy-azure-tools.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/reference/fundamental-concepts/hosting-hierarchy.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/reference/migration-with-enterprise-scaffold.md",
