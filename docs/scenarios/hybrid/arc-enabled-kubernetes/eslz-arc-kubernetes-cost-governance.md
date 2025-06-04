@@ -168,5 +168,4 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 - Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - Experience Azure Arc-enabled Kubernetes automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
 - Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
-- Review the Cloud Adoption Framework [best practices and recommendations](../../../get-started/manage-costs.md) to efficiently manage your cloud costs.
 - See the [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

@@ -72,11 +72,4 @@ Each section of the Cloud Adoption Framework represents a different facet of the
 
 ## Use the Microsoft Cloud Adoption Framework for Azure
 
-If your organization is new to Azure, begin by ensuring you [understand and document foundational alignment decisions](./get-started/cloud-concepts.md). When your enterprise's digital transformation involves the cloud, having an understanding of these fundamental concepts helps you during the cloud adoption process.
-
-## Next steps
-
-<!-- docutune:ignoreNextStep -->
-
-> [!div class="nextstepaction"]
-> [Get started](./get-started/index.md)
+If your organization is new to Azure, begin by ensuring you understand and document foundational alignment decisions. When your enterprise's digital transformation involves the cloud, having an understanding of these fundamental concepts helps you during the cloud adoption process.
