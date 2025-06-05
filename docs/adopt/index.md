@@ -69,4 +69,10 @@ For more information, see [Innovate](../innovate/index.md).
 Follow the guidance that best meets your goals. If you're still considering cloud adoption, it's help to get a sense of what the cloud adoption journey looks like. The next article outlines the typical cloud adoption journey, showing what workloads you should migrate and the order you should migrate them.
 
 > [!div class="nextstepaction"]
-> [Cloud adoption journey](cloud-adoption.md)
+> [Migrate](../migrate/index.md)
+
+> [!div class="nextstepaction"]
+> [Modernize](../modernize/index.md)
+
+> [!div class="nextstepaction"]
+> [Innovate](../innovate/index.md)
