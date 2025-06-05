@@ -687,63 +687,63 @@ items:
     - name: Virtual desktops
       href: scenarios/azure-virtual-desktop/index.md
 
-    - name: Resources
+  - name: Resources
+    items:
+    - name: Organize
       items:
-      - name: Organize
+      - name: Managing organization alignment
+        href: organize/index.md
+      - name: Required cloud functions
         items:
-        - name: Managing organization alignment
-          href: organize/index.md
-        - name: Required cloud functions
-          items:
-          - name: Cloud strategy functions
-            href: organize/cloud-strategy.md
-          - name: Cloud adoption functions
-            href: organize/cloud-adoption.md
-          - name: Cloud governance functions
-            href: organize/cloud-governance.md
-          - name: Central IT functions
-            href: organize/central-it.md
-          - name: Cloud operations functions
-            href: organize/cloud-operations.md
-          - name: Cloud center of excellence functions
-            href: organize/cloud-center-of-excellence.md
-          - name: Cloud platform functions
-            href: organize/cloud-platform.md
-          - name: Cloud automation functions
-            href: organize/cloud-automation.md
-          - name: Cloud data functions
-            href: organize/cloud-data.md
+        - name: Cloud strategy functions
+          href: organize/cloud-strategy.md
+        - name: Cloud adoption functions
+          href: organize/cloud-adoption.md
+        - name: Cloud governance functions
+          href: organize/cloud-governance.md
+        - name: Central IT functions
+          href: organize/central-it.md
+        - name: Cloud operations functions
+          href: organize/cloud-operations.md
+        - name: Cloud center of excellence functions
+          href: organize/cloud-center-of-excellence.md
+        - name: Cloud platform functions
+          href: organize/cloud-platform.md
+        - name: Cloud automation functions
+          href: organize/cloud-automation.md
+        - name: Cloud data functions
+          href: organize/cloud-data.md
 
-        - name: Mature teams structure
-          href: organize/organization-structures.md
-        - name: Align the RACI matrix
-          href: organize/raci-alignment.md
-        - name: Building technical skills
-          href: organize/suggested-skills.md
-        - name: Creating a cost-conscious organization
-          href: organize/cost-conscious-organization.md
+      - name: Mature teams structure
+        href: organize/organization-structures.md
+      - name: Align the RACI matrix
+        href: organize/raci-alignment.md
+      - name: Building technical skills
+        href: organize/suggested-skills.md
+      - name: Creating a cost-conscious organization
+        href: organize/cost-conscious-organization.md
 
-        - name: Organize antipatterns
-          items:
-          - name: Organizational antipatterns
-            href: antipatterns/organize-antipatterns.md
-          - name: IT fiefdoms and IT silos
-            href: organize/fiefdoms-silos.md
-
-      - name: Tools and templates
-        href: resources/tools-templates.md
-
-      - name: Additional resources
+      - name: Organize antipatterns
         items:
-        - name: Azure Architecture Center for solution architecture
-          href: /azure/architecture/
-        - name: Microsoft Azure Well-Architected Framework for workload architecture
-          href: /azure/architecture/framework/
-        - name: Docs for product implementation
-          href: /
-        - name: Learn to develop skills
-          href: /training/
-        - name: Assessments to personalize guidance
-          href: /assessments/
-        - name: App Modernization Guidance for Azure
-          href: /azure/app-modernization-guidance
+        - name: Organizational antipatterns
+          href: antipatterns/organize-antipatterns.md
+        - name: IT fiefdoms and IT silos
+          href: organize/fiefdoms-silos.md
+
+    - name: Tools and templates
+      href: resources/tools-templates.md
+
+    - name: Additional resources
+      items:
+      - name: Azure Architecture Center for solution architecture
+        href: /azure/architecture/
+      - name: Microsoft Azure Well-Architected Framework for workload architecture
+        href: /azure/architecture/framework/
+      - name: Docs for product implementation
+        href: /
+      - name: Learn to develop skills
+        href: /training/
+      - name: Assessments to personalize guidance
+        href: /assessments/
+      - name: App Modernization Guidance for Azure
+        href: /azure/app-modernization-guidance
