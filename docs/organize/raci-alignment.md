@@ -18,8 +18,6 @@ Learn to align responsibilities across teams. Align responsibilities by developi
 - [Operational alignment](#operational-alignment)
 - [Cloud center of excellence (CCoE)](#cloud-center-of-excellence-ccoe)
 
-To track organizational structure decisions over time, download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).
-
 The examples in this article specify these RACI constructs:
 
 - The one team that is *accountable* for a function.
@@ -87,10 +85,3 @@ The last row of each table (except the first) contains a link to the most-aligne
 | Cloud automation team    | Consulted                             | Informed                              | Informed                              | Informed                                  | Consulted                                                                         | Responsible                                                                   | Responsible                                                                   | Accountable                                                                       |
 |                          |                                       |                                       |                                       |                                           |                                                                                   |                                                                               |                                                                               |                                                                                   |
 | Aligned cloud capability | [Cloud adoption](./cloud-adoption.md) | [Cloud strategy](./cloud-strategy.md) | [Cloud strategy](./cloud-strategy.md) | [Cloud operations](./cloud-operations.md) | [CCoE](./cloud-center-of-excellence.md) and [cloud governance](./cloud-governance.md) | [CCoE](./cloud-center-of-excellence.md) and [cloud platform](./cloud-platform.md) | [CCoE](./cloud-center-of-excellence.md) and [cloud platform](./cloud-platform.md) | [CCoE](./cloud-center-of-excellence.md) and [cloud automation](./cloud-automation.md) |
-
-## Next steps
-
-To track decisions about organization structure over time, download and modify the RACI template. Copy and modify the most closely aligned sample from the RACI matrices in this article.
-
-> [!div class="nextstepaction"]
-> [Download the RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)

@@ -142,7 +142,7 @@
       },
       {
          "source_path": "docs/get-started/help.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
@@ -427,13 +427,13 @@
       },
       {
          "source_path": "docs/getting-started/enable.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/enable",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/prepare-organizational-alignment",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/getting-started/innovate.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/innovate",
-         "redirect_document_id": true
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/innovate/ai/conversational-ai.md",
@@ -462,12 +462,12 @@
       },
       {
          "source_path": "docs/getting-started/what-is-azure.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/what-is-azure",
-         "redirect_document_id": true
+         "redirect_url": "/azure/azure-resource-manager/management/overview",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/getting-started/index.yml",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": true
       },
       {
@@ -482,12 +482,12 @@
       },
       {
          "source_path": "docs/get-started/blockers-overview.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/get-started/operating-model-overview.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
@@ -497,32 +497,32 @@
       },
       {
          "source_path": "docs/get-started/team-roadmap-overview.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/get-started/central-it.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/get-started/cloud-automation.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/get-started/cloud-center-of-excellence.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/get-started/cloud-migration.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/get-started/cloud-platform.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
          "redirect_document_id": false
       },
       {
@@ -652,13 +652,13 @@
       },
       {
          "source_path": "docs/reference/fundamental-concepts/hierarchy-azure-tools.md",
-         "redirect_url": "/azure/cloud-adoption-framework/resources/fundamental-concepts/hierarchy-azure-tools",
-         "redirect_document_id": true
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/reference/fundamental-concepts/hosting-hierarchy.md",
-         "redirect_url": "/azure/cloud-adoption-framework/resources/fundamental-concepts/hosting-hierarchy",
-         "redirect_document_id": true
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/reference/migration-with-enterprise-scaffold.md",
@@ -703,6 +703,76 @@
       {
          "source_path": "docs/secure/best-practices/end-to-end-governance.md",
          "redirect_url": "/azure/cloud-adoption-framework/secure/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-concepts.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/what-is-azure.md",
+         "redirect_url": "/azure/azure-resource-manager/management/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/considerations/fundamental-concepts.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/how-azure-resource-manager-works.md",
+         "redirect_url": "/azure/azure-resource-manager/management/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/resources/fundamental-concepts/hosting-hierarchy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/resources/fundamental-concepts/hierarchy-azure-tools.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/innovate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/design-and-configuration.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/enable.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/prepare-organizational-alignment",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/operational-excellence.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/manage-costs.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/performance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/administer",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/antipatterns-to-avoid.md",
+         "redirect_url": "/azure/cloud-adoption-framework/antipatterns/plan-antipatterns",
          "redirect_document_id": false
       },
       {
@@ -882,7 +952,7 @@
       },
       {
          "source_path": "docs/govern/resource-consistency/resource-access-management.md",
-         "redirect_url": "/azure/cloud-adoption-framework/get-started/how-azure-resource-manager-works",
+         "redirect_url": "/azure/azure-resource-manager/management/overview",
          "redirect_document_id": false
       },
       {
