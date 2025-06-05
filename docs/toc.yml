@@ -611,12 +611,12 @@ items:
             - name: Predict and influence
               href: innovate/considerations/predict.md
 
-    - name: Guides
-      items:
-      - name: Cloud adoption journey
-        href: adopt/cloud-adoption.md
-      - name: Migrate or modernize first? 
-        href: adopt/migrate-or-modernize.md
+      - name: Guides
+        items:
+        - name: Cloud adoption journey
+          href: adopt/cloud-adoption.md
+        - name: Migrate or modernize first? 
+          href: adopt/migrate-or-modernize.md
                   
 
     - name: Govern
