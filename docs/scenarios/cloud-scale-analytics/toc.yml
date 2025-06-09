@@ -192,8 +192,6 @@ items:
       href: /azure/storage/blobs/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure Cosmos DB
       href: /azure/cosmos-db/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
-    - name: Azure Database for MariaDB
-      href: /azure/mariadb/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure Database for MySQL
       href: /azure/mysql/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure Database for PostgreSQL
