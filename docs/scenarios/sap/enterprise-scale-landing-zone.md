@@ -131,7 +131,7 @@ It is important to ensure all Azure resources used in your workload are set up w
 - Detect: Audit subscriptions for non-compliance of these policies.
 - Prevent configurations using the Deny effect for resources that do not adhere to zone resiliency standards.
 
-Compliance to this initiative can be checked at the end of the Implementation process. More information of the Azure Policy Initiative for Zone Resilience can be found here.
+Compliance with this initiative can be checked at the end of the Implementation process. More information of the Azure Policy Initiative for Zone Resilience can be found here.
 
 #### Azure NetApp Files and Azure Files
 
