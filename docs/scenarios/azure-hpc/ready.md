@@ -3,7 +3,7 @@ title: Azure landing zone for HPC
 description: See the effect of an HPC scenario on Azure landing zone design. Understand the differences between Azure Batch and Azure CycleCloud Workspace for Slurm
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
-ms.date: 11/10/2022
+ms.date: 06/10/2025
 ms.topic: conceptual
 ms.custom: think-tank
 ---
