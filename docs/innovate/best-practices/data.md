@@ -40,7 +40,6 @@ In Azure, the following innovation tools are commonly used to accelerate digital
 - [Azure Cosmos DB](/azure/cosmos-db/)
 - [Azure Database for PostgreSQL](/azure/postgresql/)
 - [Azure Database for MySQL](/azure/mysql/)
-- [Azure Database for MariaDB](/azure/mariadb/)
 - [Azure Database for PostgreSQL hyperscale](/azure/postgresql/concepts-hyperscale-nodes)
 - [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction)
 - [Azure Database Migration Service](/azure/dms/)

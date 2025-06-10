@@ -451,10 +451,6 @@ items:
       items:
       - name: Overview
         href: adopt/index.md
-      - name: Cloud adoption journey
-        href: adopt/cloud-adoption.md
-      - name: Migrate or modernize first? 
-        href: adopt/migrate-or-modernize.md
       - name: Migrate
         items:
         - name: Overview
@@ -614,6 +610,13 @@ items:
               href: innovate/considerations/devices.md
             - name: Predict and influence
               href: innovate/considerations/predict.md
+
+      - name: Guides
+        items:
+        - name: Cloud adoption journey
+          href: adopt/cloud-adoption.md
+        - name: Migrate or modernize first? 
+          href: adopt/migrate-or-modernize.md
                   
 
     - name: Govern
@@ -689,50 +692,6 @@ items:
 
   - name: Resources
     items:
-
-    - name: Adoption journeys
-      items:
-      - name: Get started
-        items:
-        - name: Overview
-          href: get-started/index.md
-
-        - name: Foundational alignment
-          items:
-          - name: Document foundational alignment decisions
-            href: get-started/cloud-concepts.md
-          - name: How does Azure work?
-            href: get-started/what-is-azure.md
-          - name: Azure fundamental concepts
-            href: ready/considerations/fundamental-concepts.md
-          - name: How does Azure Resource Manager work?
-            href: get-started/how-azure-resource-manager-works.md        
-          - name: Portfolio hierarchy
-            href: resources/fundamental-concepts/hosting-hierarchy.md
-          - name: Azure hierarchy support
-            href: resources/fundamental-concepts/hierarchy-azure-tools.md
-
-        - name: Accelerate adoption
-          items:
-          - name: Build new products and services
-            href: get-started/innovate.md
-          - name: Unblock environment design and configuration
-            href: get-started/design-and-configuration.md
-
-      - name: Improve controls
-        items:
-        - name: Enable customer success
-          href: get-started/enable.md
-        - name: Deliver operational excellence
-          href: get-started/operational-excellence.md
-        - name: Manage cloud costs
-          href: get-started/manage-costs.md
-        - name: Ensure consistent performance
-          href: get-started/performance.md
-
-      - name: Antipatterns to avoid
-        href: antipatterns/antipatterns-to-avoid.md
-    
     - name: Organize
       items:
       - name: Managing organization alignment
