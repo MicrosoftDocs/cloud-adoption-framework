@@ -9,9 +9,7 @@ ms.topic: conceptual
 
 # Resource selection recommendations for AI workloads on Azure
 
-This article offers resource selection recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
-
-Making informed AI resource choices enables organizations to achieve better performance, scalability, and cost-effectiveness when managing AI workloads. The following table provides an overview of the primary Azure AI PaaS solutions and important decision criteria.
+This article offers resource selection recommendations for Azure AI platform-as-a-service (PaaS) solutions. Informed AI resource choices enables you to achieve better performance, scalability, and cost-effectiveness when building AI workloads. The following table provides an overview of the primary Azure AI PaaS solutions and important decision criteria.
 
 | AI services | AI type | Description | Skills required |
 |---------|------------|---------| --- |
