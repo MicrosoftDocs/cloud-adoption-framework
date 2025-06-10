@@ -28,7 +28,7 @@ Generative AI requires the combination of different resources to process and gen
 
 In a typical RAG workload, (1) the workload receives the user query. (2) An orchestrator, such as the Azure AI Foundry Agent Service, Semantic Kernel, or LangChain, manages the data flow. (3) A search and retrieval mechanism finds the appropriate (4) grounding data to send to the generative AI endpoint. (5) A generative AI model endpoint generates a response based on the user query and grounding data. Use the following recommendations as framework to build generative RAG workloads.
 
-- *Choose a generative AI platform.* Use Azure AI Foundry or Azure OpenAI to deploy and manage generative AI models. [Azure AI Foundry](/azure/ai-studio/what-is-ai-studio) offers a code-first platform for developing AI workloads. It has built-in tools for building and deploying and orchestrating applications. Use [Azure OpenAI Service](/azure/ai-services/openai/overview) if you only need access to [OpenAI models](/azure/ai-services/openai/concepts/models).
+- *Choose a generative AI platform.* Use Azure AI Foundry or Azure OpenAI to deploy and manage generative AI models. [Azure AI Foundry](/azure/ai-studio/what-is-ai-studio) offers a code-first platform for developing AI workloads. It has built-in tools for building, deploying, and orchestrating applications. Use [Azure OpenAI Service](/azure/ai-services/openai/overview) if you only need access to [OpenAI models](/azure/ai-services/openai/concepts/models).
 
 - *Choose the appropriate AI compute type.* Azure AI Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for certain capabilities. Choose a compute type based on your performance and budget needs.
 
