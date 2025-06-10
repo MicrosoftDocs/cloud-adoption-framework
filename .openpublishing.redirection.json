@@ -61,6 +61,31 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/app-platform/spring-apps/landing-zone-accelerator.md",
+         "redirect_url": "/azure/spring-apps/consumption-dedicated/overview-migration",
+         "redirect_document_id": false
+      },
+      {   
+         "source_path": "docs/scenarios/app-platform/spring-apps/identity-and-access-management.md",
+         "redirect_url": "/azure/spring-apps/consumption-dedicated/overview-migration",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/app-platform/spring-apps/network-topology-and-connectivity.md",
+         "redirect_url": "/azure/spring-apps/consumption-dedicated/overview-migration",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/app-platform/spring-apps/security.md",
+         "redirect_url": "/azure/spring-apps/consumption-dedicated/overview-migration",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/app-platform/spring-apps/management.md",
+         "redirect_url": "/azure/spring-apps/consumption-dedicated/overview-migration",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/manage/hybrid/server/best-practices/arm-template-windows.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
          "redirect_document_id": false
