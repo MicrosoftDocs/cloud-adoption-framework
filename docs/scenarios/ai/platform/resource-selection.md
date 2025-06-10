@@ -13,12 +13,12 @@ This article offers resource selection recommendations for organizations running
 
 Making informed AI resource choices enables organizations to achieve better performance, scalability, and cost-effectiveness when managing AI workloads. The following table provides an overview of the primary Azure AI PaaS solutions and important decision criteria.
 
-| AI platform | AI type | Description | Skills required |
+| AI services | AI type | Description | Skills required |
 |---------|------------|---------| --- |
-| Azure OpenAI | Generative AI | Platform for accessing OpenAI models | Developer and data science skills |
-| Azure AI Foundry | Generative AI | Platform for prompt engineering and deploy generative AI endpoints | Developer and data science skills |
-| Azure AI services | Analytical AI | Platform for consuming prebuilt machine learning models | Developer skills |
-| Azure Machine Learning | Machine learning | Platform for training and deploying machine learning models | Developer skills and advanced data science skills |
+| [Azure AI Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Generative AI & non-generative AI | A platform for building and deploying generative and non-generative AI applications | Developer and data science skills |
+| [Azure AI services](/azure/ai-services/what-are-ai-services) | Generative AI & non-generative AI | Various services that provide prebuilt generative and non-generative AI models | Developer skills |
+| [Azure OpenAI](/azure/ai-services/openai/) | Generative AI | A service for accessing OpenAI models | Developer and data science skills |
+| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2) | Machine learning | A service for training and deploying machine learning models | Developer skills and advanced data science skills |
 
 ## Select resources for generative AI workloads
 
