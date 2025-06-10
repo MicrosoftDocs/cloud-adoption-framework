@@ -48,7 +48,7 @@ In **Azure SQL Database**, you can assign roles to users, groups, or application
 
 In **Azure Cosmos DB**, you can assign roles to manage access to Azure Cosmos DB accounts, databases, and containers. Built-in roles like *Cosmos DB Account Reader* and *Cosmos DB Account Contributor* provide varying levels of access.
 
-In **Azure Database for MySQL**, **Azure Database for PostgreSQL**, and **Azure Database for MariaDB**, you can assign roles to manage database servers and individual databases. You can use roles like *Contributor* and *Reader* to control access.
+In **Azure Database for MySQL** and **Azure Database for PostgreSQL**, you can assign roles to manage database servers and individual databases. You can use roles like *Contributor* and *Reader* to control access.
 
 For more information, see [Azure built-in roles for databases](/azure/role-based-access-control/built-in-roles/databases).
 
