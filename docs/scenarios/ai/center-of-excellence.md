@@ -24,7 +24,7 @@ An AI CoE team helps ensure consistent AI adoption across your organization. To 
 
 1. **Determine the placement within your organization.** Proper organizational alignment ensures effective collaboration with existing teams and access to needed resources. AI emerges alongside or after other existing technologies and relies on cloud infrastructure, data, and governance. It commonly builds upon existing teams rather than being a standalone team. If you already operate a Cloud Center of Excellence (CCoE), integrate AI practices and expertise into that team. Only create a standalone AI team if current teams can't support AI adoption or if critical risks exist. The key is to avoid unnecessary complexity and ensure that AI adoption builds upon strong foundations rather than operating in isolation.
 
-1. **Define operating model.** Companies at an early stage of their AI journey benefit from a centralized CoE to consolidate expertise and foundational practices. Centralization at the onset accelerates AI adoption. As your AI adoption matures. you should move toward an [advisory approach](#evolve-ai-coe-operations) where the AI CoE supports AI use. A centralized model ensures control and consistency, while an advisory approach provides flexibility.
+1. **Define operating model.** Companies at an early stage of their AI journey benefit from a centralized CoE to consolidate expertise and foundational practices. Centralization at the onset accelerates AI adoption. As your AI adoption matures, you should move toward an [advisory approach](#evolve-ai-coe-operations) where the AI CoE supports AI use. A centralized model ensures control and consistency, while an advisory approach provides flexibility.
 
 ## Define the responsibilities of the AI CoE
 
