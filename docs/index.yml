@@ -66,7 +66,7 @@ additionalContent:
         # Card
         - title: 🚀 Adopt
           summary: Migrate, modernize, and innovate in Azure.
-          url: ./migrate/index.md
+          url: ./adopt/index.md
 
         # Card
         - title: 🔐 Govern
