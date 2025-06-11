@@ -10,7 +10,7 @@ ms.custom: think-tank
 
 # The Azure Well-Architected Framework for HPC
 
-The [plan for Azure high-performance computing (HPC)](./plan.md) outlines a process to rationalize your scenario, prioritize technical efforts, and identify workloads. For many of the workloads, it's important to adhere to a set of architectural principles. These principles help guide development and optimization of the workloads. The five architectural constructs are detailed in the [Azure Well-Architected Framework](/azure/architecture/framework/). This guidance provides a summary of how you can apply these principles to the management of your data workloads.
+The [plan for Azure high-performance computing (HPC)](./plan.md) outlines a process to rationalize your scenario, prioritize technical efforts, and identify workloads. For many of the workloads, it's important to adhere to a set of architectural principles. These principles help guide development and optimization of the workloads. The five architectural constructs are detailed in the [Azure Well-Architected Framework](/azure/well-architected/). This guidance provides a summary of how you can apply these principles to the management of your data workloads.
 
 ## Reliability
 
