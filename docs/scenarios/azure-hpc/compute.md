@@ -5,7 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.custom: think-tank
-ms.date: 11/14/2024
+ms.date: 06/11/2025
 ---
 
 # Compute large-scale HPC application workloads in Azure Virtual Machines
@@ -18,13 +18,13 @@ Big compute applications typically have the following characteristics:
 - Each task takes input, processes it, and produces output. The entire application runs for a finite amount of time.
 - The application doesn't need to run constantly, but it must be able to handle node failures and crashes.
 - Tasks can be independent or tightly coupled, which requires high-speed networking technologies like InfiniBand and remote direct memory access (RDMA) connectivity.
-- You can use compute-intensive virtual machine (VM) sizes such as H16r, H16mr, and A9. Your selection depends on the workload.
+- You can use the [high performance compute](/azure/virtual-machines/sizes/#tab/hpcsizelist), [GPU](/azure/virtual-machines/sizes/#tab/gpusizelist)/[FPGA](/azure/virtual-machines/sizes/#tab/fpgasizelist) accelerated compute, or the [compute optimized](/azure/virtual-machines/sizes/#tab/computesizelist) SKUs. Your selection depends on the workload.
 
 :::image type="content" source="./media/tasks.png" alt-text="Diagram that shows how a job queue moves from the client to the scheduler and the parallel and tightly coupled Azure tasks." lightbox="./media/tasks.png" border="false":::
 
 Azure provides a range of VM instances that are optimized for CPU-intensive and GPU-intensive workloads. These VMs can run in Azure Virtual Machine Scale Sets to provide resiliency and load balancing. Azure is also the only cloud platform that offers InfiniBand-enabled hardware. InfiniBand provides a significant performance advantage for tasks such as financial risk modeling, engineering stress analysis, and running reservoir simulation and seismic workloads. This advantage results in performance that approaches or exceeds current on-premises infrastructure performance.
 
-Azure provides various VM sizes for HPC and GPU-optimized computing. It's important to select a VM size that's appropriate for your workload. To find the best fit, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes) and [Virtual machines selector tool](https://azure.microsoft.com/pricing/vm-selector/).
+Azure provides various VM sizes for HPC and GPU-optimized computing. It's important to select a VM size that's appropriate for your workload. To find the best fit, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
 Keep in mind that not all Azure products are available in all regions. To see what's available in your area, see [Products available by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/).
 
@@ -40,7 +40,7 @@ When you design your HPC infrastructure, several tools and services are availabl
 
 - [Azure Batch](/azure/batch/) is a managed service for running large-scale HPC applications. Use Batch to configure a VM pool and upload the applications and data files. Then the Batch service configures the VMs, assigns tasks to the VMs, runs the tasks, and monitors progress. Batch can automatically scale VMs up and down in response to changing workloads. Batch also provides a job-scheduling functionality.
 
-- [Azure CycleCloud](/azure/cyclecloud/) is a tool for creating, managing, operating, and optimizing HPC and big compute clusters in Azure. Use Azure CycleCloud to dynamically configure HPC Azure clusters and orchestrate data and jobs for hybrid and cloud workflows. Azure CycleCloud provides the simplest way to manage HPC workloads by using a workload manager. Azure CycleCloud supports workload managers such as Grid Engine, Microsoft HPC Pack, HTCondor, LSF, PBS Pro, SLURM, and Symphony.
+- [Azure CycleCloud](/azure/cyclecloud/) is a tool for creating, managing, operating, and optimizing HPC and big compute clusters in Azure. Use Azure CycleCloud to dynamically configure HPC Azure clusters and orchestrate data and jobs for hybrid and cloud workflows. Azure CycleCloud provides the simplest way to manage HPC workloads by using a workload manager. Azure CycleCloud supports workload managers such as Grid Engine, Microsoft HPC Pack, LSF, PBS Pro, and SLURM.
 
 - [Azure Logic Apps](/azure/logic-apps/logic-apps-overview) is a specialized service for scheduling compute-intensive work to run on a managed pool of VMs. You can automatically scale compute resources to meet your jobs' needs.
 
@@ -54,9 +54,9 @@ Consider the following recommendations and use cases when you design an architec
 
 - Understand that reservoir and seismic workflows typically have similar requirements for compute and job scheduling.
 
-- Consider your network needs. Azure HPC provides HBv2 and HBv3-series VM sizes for memory-intensive seismic imaging and reservoir simulations.
+- Consider your network needs. Azure HPC provides HBv2, HBv3, HBv4, and HX-series VM sizes for memory-intensive seismic imaging and reservoir simulations.
 
-- Use HB-series VMs for memory bandwidth-bound applications and HC-series VMs for compute-bound reservoir simulations.
+- Use HX or HBv4 series VMs for memory bandwidth-bound applications and HBv3 or HBv2 series VMs for compute-bound reservoir simulations.
 
 - Use NV-series VMs for 3D reservoir modeling and visualizing seismic data.
 
@@ -64,7 +64,7 @@ Consider the following recommendations and use cases when you design an architec
 
    For data-intensive resin transfer molding (RTM) processing, the NDv4 VM size is the best option because it provides Non-Volatile Memory Express (NVMe) drives that have a cumulative capacity of 7 TB. 
    
-   To get the best possible performance on HB-series VMs with Message Passing Interface (MPI) workloads, do optimal process pinning to the processors' cores. For more information, see [Optimal MPI process placement for Azure HB-series VMs](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimal-mpi-process-placement-for-azure-hb-series-vms/ba-p/2450663). 
+   To get the best possible performance on HBv2, HBv3, HBv4, and HX series VMs with Message Passing Interface (MPI) workloads, do optimal process pinning to the processors' cores. For more information, see [scaling HPC applications](/azure/virtual-machines/compiling-scaling-applications). 
    
    NCv4-series VMs also provide dedicated tools to ensure the correct pinning of parallel application processes.
 
@@ -106,20 +106,20 @@ The following architecture is an example of how to use VMs in HPC for finance wo
 
 :::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="./media/hpc-finance-architecture-example.svg" lightbox="./media/hpc-finance-architecture-example.svg" border="false":::
 
-This workload uses HPC Pack HB-series compute nodes.
+This workload uses HPC Pack HB-series compute nodes. Note, HB-series SKUs have been retired, but a suitable alternative for the compute instances being used in this architecture are the HBv4-series. 
 
-The [HB-series VMs](/azure/virtual-machines/hb-series) are optimized for HPC applications, such as financial analysis, weather simulation, and silicon register-transfer level (RTL) modeling. HB VMs feature:
+The [HBv4-series VMs](/azure/virtual-machines/hbv4-series) are optimized for HPC applications, such as financial analysis, weather simulation, and silicon register-transfer level (RTL) modeling. HB VMs feature:
 
-- Up to 120 AMD EPYC™ 7003-series CPU cores.
-- 448 GB of RAM.
+- Up to 176 AMD EPYC™ 9V33X-series CPU cores.
+- 768 GB of RAM.
 - No hyperthreading.
 
-HB-series VMs also provide:
+HBv4-series VMs also provide:
 
-- 350 GB per second of memory bandwidth.
-- Up to 32 MB of L3 cache per core.
-- Up to 7 GB per second of block device solid-state drive (SSD) performance.
-- Clock frequencies of up to 3.675 GHz.
+- average of 1.2 TB/s of effective memory bandwidth.
+- 2304 MB L3 cache.
+- Up to 12 GB/s (reads) and 7 GB/s (writes) of block device SSD performance.
+- Clock frequencies of up to 3.7 GHz.
 
 For the HPC head node, the workload uses a different-sized VM. Specifically, it uses a D16s_v4 VM, a type of general-purpose product.
 
