@@ -35,7 +35,7 @@ SSO using Microsoft Entra ID also provides a seamless experience for Microsoft E
   > Azure Virtual Desktop does **not** support B2B or Microsoft accounts.
 - **Domain join account requirements**: The account used for domain join cannot have multifactor authentication or other interactive prompts. More requirements apply, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
 - **Hosting strategy**: Choose either [Active Directory Domain Services or Microsoft Entra Domain Services](/entra/identity/domain-services/compare-identity-solutions) based on your needs.
-- [**Microsoft Entra Domain Services**](/entra/identity/domain-services//): This is a supported option, but with limitations:
+- [**Microsoft Entra Domain Services**](/entra/identity/domain-services//): Microsoft Entra Domain Services is a supported option but has limitations:
   - You must [enable password hash synchronization](/entra/identity/domain-services/tutorial-configure-password-hash-sync).
   - Hybrid join for Azure Virtual Desktop VMs isn't supported, which means you can't enable seamless SSO for Microsoft 365 services.
   - For more information, see [Frequently asked questions (FAQ) about Microsoft Entra Domain Services](/entra/identity/domain-services//faqs).
