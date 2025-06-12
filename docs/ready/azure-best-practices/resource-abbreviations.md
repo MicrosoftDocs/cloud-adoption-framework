@@ -26,7 +26,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure AI services (multi-service account) | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `ais` |
 | Azure AI Foundry | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `aif` |
 | Azure AI Foundry hub | `Microsoft.MachineLearningServices/workspaces` (kind: `Hub`) | `hub` |
-| Azure AI Foundry project | `Microsoft.MachineLearningServices/workspaces` (kind: `Project`) | `proj` |
+| Azure AI Foundry project | `Microsoft.CognitiveServices/accounts/projects`<br>`Microsoft.MachineLearningServices/workspaces` (kind: `Project`) | `proj` |
 | Azure AI Video Indexer | `Microsoft.VideoIndexer/accounts` | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` (kind: `OpenAI`) | `oai` |
