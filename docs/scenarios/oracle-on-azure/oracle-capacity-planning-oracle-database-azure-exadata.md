@@ -1,6 +1,6 @@
 ---
 title: Capacity Planning for Oracle Database@Azure Using Exadata Database Service
-description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Oracle Database@Azure.
+description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Oracle Exadata Database@Azure.
 author: gkayali
 ms.author: guherk
 ms.date: 01/27/2025
