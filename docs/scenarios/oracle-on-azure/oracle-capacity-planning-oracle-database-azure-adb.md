@@ -12,14 +12,17 @@ ms.custom: e2e-oracle
 
 ## Storage & Compute Considerations
 
-- Each Oracle Autonomous Database@Azure is capable of scaling from two ECPU up to 512 ECPU. It should be noted that one OCPU is approximately equivalent to four ECPU. 
+- Each Oracle Autonomous Database@Azure is capable of scaling from two ECPU up to 512 ECPU. 
+
+    It should be noted that one CPU is equivalent to two ECPU.
+For more information, see [Compute Models in Autonomous Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-compute-models.html#GUID-7F4EE72A-ABE7-4FC9-B4BE-86802D9AD05A) 
 - Enabling Compute Auto Scaling permits the system to expand up to three times the specified ECPU count as demand increases. If workload necessities exceed three times the auto scaling ECPU, request extra ECPU by following the procedure from [Request Increased ECPU Limits](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-2C088312-BC30-468E-A15A-00740D2818F5). 
 - By default, Oracle Autonomous Database has Compute Auto Scaling enabled and Storage Auto Scaling disabled. 
-To check in Auto Scaling Manage Resource Allocation from the Azure and OCI portal. For more details on Compute Auto Scaling, see [Use Auto Scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html#GUID-27FAB1C1-B09F-4A7A-9FB9-5CB8110F7141). 
+To check in Auto Scaling Manage Resource Allocation from the Azure and OCI portal. For more information on Compute Auto Scaling, see [Use Auto Scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html#GUID-27FAB1C1-B09F-4A7A-9FB9-5CB8110F7141). 
 - Oracle Autonomous Database@Azure supports different workloads such as Data Warehouse, Transaction Processing, JSON, and APEX. 
 The Data Warehouse workload can scale storage from one TB to 384 TB, while other workloads can scale storage from 20 GB to 393216 GB. 
 Storage Auto Scaling can be enabled for automatic expansion up to three times the reserved storage. For details on Storage Auto Scaling, see [Use Auto Scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html#GUID-27FAB1C1-B09F-4A7A-9FB9-5CB8110F7141). 
-- Extra ECPU or storage can be requested after provisioning Oracle Autonomous Database@Azure. For more details, see [Request Increased Storage or ECPU Limits](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-2C088312-BC30-468E-A15A-00740D2818F5).
+- Extra ECPU or storage can be requested after provisioning Oracle Autonomous Database@Azure. For more information, see [Request Increased Storage or ECPU Limits](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-2C088312-BC30-468E-A15A-00740D2818F5).
 - ECPU and storage can be configured and scale separately from Azure or OCI console and adjusted later as needed. ECPU allocation and storage scaling are seamless.  
 - Shrinking the Autonomous Database storage space after provisioned can only be performed from OCI console. Conditions for shrinking the database storage are found under [Shrink Storage](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html#GUID-3EE6FBB5-58D5-477E-8EDE-0BDEAC99FA85). 
 - Schedule start and stop times for noncritical Oracle Autonomous Database@Azure workloads to save on operational costs when not in use. For details, see [Schedule Start and Stop Times for an Autonomous Database Instance](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-stop-start.html).
