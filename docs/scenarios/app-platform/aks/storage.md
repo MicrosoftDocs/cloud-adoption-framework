@@ -186,7 +186,8 @@ When designing for resiliency with Azure Container Storage, choose one of these 
 |Zone-redundant storage (ZRS)|Replicates data across two or more availability zones automatically to protect against zone failures.|Workloads requiring automatic data protection from zone-level failures without application-level replication.|
 |Multi-zone storage pools|Distributes storage capacity equally across availability zones, with each zone maintaining its own distinct storage resources.|Workloads with application-level replication (like Cassandra) that already manage their own data redundancy.|
 
-**Note**: You can't use both ZRS and multi-zone storage pools simultaneously as they serve similar purposes through different mechanisms. Implement regular [volume snapshots](/azure/storage/container-storage/volume-snapshot-restore) as part of your backup and disaster recovery strategy regardless of which approach you choose.
+>[!Note]
+> You can't use both ZRS and multi-zone storage pools simultaneously as they serve similar purposes through different mechanisms. Implement regular [volume snapshots](/azure/storage/container-storage/volume-snapshot-restore) as part of your backup and disaster recovery strategy regardless of which approach you choose.
 
 ### Azure disks
 
