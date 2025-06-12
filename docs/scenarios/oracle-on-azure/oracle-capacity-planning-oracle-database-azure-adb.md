@@ -10,13 +10,6 @@ ms.custom: e2e-oracle
 
 # Capacity planning for Oracle Autonomous Database@Azure
 
-Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud Infrastructure (OCI) and is colocated in Azure datacenters at Microsoft. This joint offering from Microsoft and Oracle requires you to plan and manage resources across both cloud platforms.
-
-This article covers Storage and Compute capacity considerations and recommendations when deploying Oracle Autonomous Database@Azure.  
-
-> [!NOTE]
-> For Oracle Autonomous Database@Azure sizing, [reach out to your local Oracle sales team](https://www.oracle.com/cloud/azure/oracle-database-at-azure/).
-
 ## Storage & Compute Considerations
 
 - Each Oracle Autonomous Database@Azure is capable of scaling from two ECPU up to 512 ECPU. It should be noted that one OCPU is approximately equivalent to four ECPU. 
