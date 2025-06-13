@@ -1,6 +1,6 @@
 Before selecting the "Create pull request" button:  
 
-1. Perform an GH Copilot review of your file before creating the PR. See steps here: https://learn.microsoft.com/en-us/help/contribute/patterns-practices-content/caf-contributions
+1. Perform an GH Copilot review of your content. See steps here: https://learn.microsoft.com/en-us/help/contribute/patterns-practices-content/caf-contributions
 
 1. Enter a meaningful title above^, using a prefix if necessary and keywords "New" or "Update" indicating the nature of changes.
 
