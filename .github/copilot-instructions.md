@@ -45,20 +45,20 @@ Review all the content to ensure it aligns with the following template
     },
     
 
-    Review all the content to verify that the content adheres to the template outlined above, ensuring consistency and clarity.
-    Review all the content to rewrite any sentence that begins with a gerund (a word ending in 'ing') so that it starts with a more direct and active structure.
-    Review all the content to update all product references to reflect the latest and most accurate information available on learn.microsoft.com/*.
-    Review all the content to ensure the content is prescriptive, actionable, and follows a logical sequence.
-    Review all the content to write all content in the present tense to maintain clarity and immediacy.
-    Review all the content to replace all em dashes with alternative punctuation or phrasing to improve readability.
-    Review all the content to add a specific noun after all demonstrative pronouns (this, that, these, those) to clarify the subject.
-    Review all the content to convert all passive voice constructions into active voice to make the content more direct and engaging.
-    Review all the content to remove all instances of 'consider' and 'may' phrases, replacing them with direct and actionable instructions.
-    Review all the content to replace any emotional or marketing language with precise and descriptive terminology.
-    Review all the content to ensure every section has a clear, prescriptive, and actionable title that reflects its content.
-    Review all the content to write an introduction for every section that explains what the section covers, why it is important, and what the customer needs to do to achieve the desired outcome.
-    Review all the content to replace every instance of 'leverage' or 'leverages' with 'use' or 'uses' for simplicity and clarity.
-    Review all the content to review all images to ensure their content aligns with the written guidance and supports the recommendations.
-    Review all the content to retain all tradeoffs in the content to help customers make informed decisions based on their specific needs.
-    Review all the content to if a 'Design Considerations' section exists, integrate each consideration into a relevant recommendation. If no relevant recommendation exists, convert the consideration into a recommendation and remove the 'Design Considerations' section.
-    Review all the content to ensure all the content aligns with documentation on learn.microsoft.com/*, ensuring consistency and accuracy across all references.
+Review all the content to verify that the content adheres to the template outlined above, ensuring consistency and clarity.
+Review all the content to rewrite any sentence that begins with a gerund (a word ending in 'ing') so that it starts with a more direct and active structure.
+Review all the content to update all product references to reflect the latest and most accurate information available on learn.microsoft.com/*.
+Review all the content to ensure the content is prescriptive, actionable, and follows a logical sequence.
+Review all the content to write all content in the present tense to maintain clarity and immediacy.
+Review all the content to replace all em dashes with alternative punctuation or phrasing to improve readability.
+Review all the content to add a specific noun after all demonstrative pronouns (this, that, these, those) to clarify the subject.
+Review all the content to convert all passive voice constructions into active voice to make the content more direct and engaging.
+Review all the content to remove all instances of 'consider' and 'may' phrases, replacing them with direct and actionable instructions.
+Review all the content to replace any emotional or marketing language with precise and descriptive terminology.
+Review all the content to ensure every section has a clear, prescriptive, and actionable title that reflects its content.
+Review all the content to write an introduction for every section that explains what the section covers, why it is important, and what the customer needs to do to achieve the desired outcome.
+Review all the content to replace every instance of 'leverage' or 'leverages' with 'use' or 'uses' for simplicity and clarity.
+Review all the content to review all images to ensure their content aligns with the written guidance and supports the recommendations.
+Review all the content to retain all tradeoffs in the content to help customers make informed decisions based on their specific needs.
+Review all the content to if a 'Design Considerations' section exists, integrate each consideration into a relevant recommendation. If no relevant recommendation exists, convert the consideration into a recommendation and remove the 'Design Considerations' section.
+Review all the content to ensure all the content aligns with documentation on learn.microsoft.com/*, ensuring consistency and accuracy across all references.
