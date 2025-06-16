@@ -50,12 +50,12 @@ additionalContent:
 
         # Card
         - title: 📋 Strategy
-          summary: Prepare your business for Azure.
+          summary: Define business justification and Azure adoption outcomes.
           url: ./strategy/index.md
 
         # Card
         - title: 📅 Plan
-          summary: Prepare people and processes for Azure adoption.
+          summary: Prepare people, processes, and technology for Azure adoption.
           url: ./plan/index.md
 
         # Card
