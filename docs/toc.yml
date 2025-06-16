@@ -27,12 +27,8 @@ items:
         href: strategy/prepare-organizational-alignment.md
       - name: Inform your strategy
         items:
-          - name: Overview
-            href: strategy/inform/index.md
           - name: Cost efficiency
             href: strategy/inform/cost-efficiency.md
-          - name: AI
-            href: strategy/inform/ai.md
           - name: Resiliency
             href: strategy/inform/resiliency.md
           - name: Security
