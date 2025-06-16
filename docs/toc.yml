@@ -727,21 +727,13 @@ items:
           href: antipatterns/organize-antipatterns.md
         - name: IT fiefdoms and IT silos
           href: organize/fiefdoms-silos.md
-
-    - name: Tools and templates
-      href: resources/tools-templates.md
+      
+      - name: Azure Architecture Center
+        href: /azure/architecture/
+      - name:  Well-Architected Framework
+        href: /azure/architecture/framework/
 
     - name: Additional resources
       items:
-      - name: Azure Architecture Center for solution architecture
-        href: /azure/architecture/
-      - name: Microsoft Azure Well-Architected Framework for workload architecture
-        href: /azure/architecture/framework/
-      - name: Docs for product implementation
-        href: /
-      - name: Learn to develop skills
-        href: /training/
-      - name: Assessments to personalize guidance
-        href: /assessments/
       - name: App Modernization Guidance for Azure
         href: /azure/app-modernization-guidance
