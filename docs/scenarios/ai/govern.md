@@ -1,6 +1,6 @@
 ---
 title: Govern AI – Process to govern AI
-description: Learn the process to govern AI with best practices and recommendations.
+description: Learn the process to govern AI with best practices and recommendations
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/30/2025

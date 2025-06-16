@@ -1,6 +1,6 @@
 ---
 title: Governance recommendations for AI workloads on Azure infrastructure (IaaS)
-description: Learn how to govern AI workloads on Azure infrastructure (IaaS).
+description: Learn how to govern AI workloads on Azure infrastructure (IaaS)
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 04/30/2025
