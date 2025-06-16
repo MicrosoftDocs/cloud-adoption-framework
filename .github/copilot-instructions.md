@@ -63,3 +63,4 @@ Review all the content to retain all tradeoffs in the content to help customers 
 Review all the content to if a 'Design Considerations' section exists, integrate each consideration into a relevant recommendation. If no relevant recommendation exists, convert the consideration into a recommendation and remove the 'Design Considerations' section.
 Review all the content to ensure all the content aligns with documentation on learn.microsoft.com/*, ensuring consistency and accuracy across all references.
 Review the alt text for all images to ensure it is descriptive and provides context for the image content, enhancing accessibility.
+Review all the content and prefer simple language and short sentences to improve readability and comprehension.
