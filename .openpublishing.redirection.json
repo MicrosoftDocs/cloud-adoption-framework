@@ -3324,11 +3324,6 @@
          "source_path": "docs/strategy/inform/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/#cloud-adoption-strategy-checklist",
          "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/resources/tools-templates.md",
-         "redirect_url": "/azure/cloud-adoption-framework/manage/",
-         "redirect_document_id": false
       }
    ]   
 }
