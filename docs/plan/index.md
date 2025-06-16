@@ -6,6 +6,7 @@ ms.author: pnp
 ms.date: 02/17/2022
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
+ms.update-cycle: 1095-days
 ---
 
 # Develop a cloud adoption plan

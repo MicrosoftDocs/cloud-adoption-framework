@@ -17,7 +17,7 @@ Organizations often use multiple Azure subscriptions to avoid per-subscription r
 
 ## Review fundamental concepts
 
-As you expand your Azure environment beyond your [initial subscriptions](./initial-subscriptions.md), it's important to understand Azure concepts such as accounts, tenants, directories, and subscriptions. For more information, see [Azure fundamental concepts](../considerations/fundamental-concepts.md).
+As you expand your Azure environment beyond your [initial subscriptions](./initial-subscriptions.md), it's important to understand Azure concepts such as accounts, tenants, directories, and subscriptions.
 
 Other considerations might necessitate additional subscriptions. Keep the following in mind as you expand your cloud estate.
 

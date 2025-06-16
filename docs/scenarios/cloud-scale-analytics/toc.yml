@@ -180,14 +180,6 @@ items:
         items:
         - name: Implementation
           href: best-practices/azure-machine-learning.md
-        - name: Organize and set up Azure Machine Learning environments
-          href: ../../ready/azure-best-practices/ai-machine-learning-resource-organization.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
-        - name: Best practices for enterprise security
-          href: ../../ready/azure-best-practices/ai-machine-learning-enterprise-security.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
-        - name: Budget, cost, and quota management with Azure Machine Learning
-          href: ../../ready/azure-best-practices/optimize-ai-machine-learning-cost.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
-        - name: Machine learning DevOps guide
-          href: ../../ready/azure-best-practices/ai-machine-learning-mlops.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
         - name: Data science best practices
           href: ./best-practices/data-science-best-practices.md
 
@@ -200,8 +192,6 @@ items:
       href: /azure/storage/blobs/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure Cosmos DB
       href: /azure/cosmos-db/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
-    - name: Azure Database for MariaDB
-      href: /azure/mariadb/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure Database for MySQL
       href: /azure/mysql/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure Database for PostgreSQL

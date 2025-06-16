@@ -5,6 +5,7 @@ ms.author: pnp
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 02/03/2025
+ms.update-cycle: 1095-days
 ---
 
 # Develop a cloud adoption strategy

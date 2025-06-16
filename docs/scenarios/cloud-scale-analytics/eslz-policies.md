@@ -58,7 +58,6 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Azure Machine Learning](#azure-machine-learning)
 - [Azure SQL Managed Instance](#azure-sql-managed-instance)
 - [Azure SQL Database](#azure-sql-database)
-- [Azure Database for MariaDB](#azure-database-for-mariadb)
 - [Azure Database for MySQL](#azure-database-for-mysql)
 - [Azure Database for PostgreSQL](#azure-database-for-postgresql)
 - [Azure AI Search](#azure-ai-search)
@@ -286,16 +285,6 @@ Other policies that are applied in the Databricks workspace through cluster poli
 |Deploy-Sql-TransparentDataEncryption|Encryption|Deploy SQL transparent data encryption.|
 |Deploy-Sql-VulnerabilityAssessment|Logging|Deploy SQL vulnerability assessments.|
 |Deploy-SqlDw-AuditingSettings|Logging|Deploy SQL DW auditing settings.|
-
-## Azure Database for MariaDB
-
-|Policy name  |Policy area  |Description  |
-|---------|---------|---------|
-|Append-MariaDb-MinimalTlsVersion|Encryption|Enforces minimal TLS version for MariaDB servers.|
-|Audit-MariaDb-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for MariaDB.|
-|Deny-MariaDb-PublicNetworkAccess|Network Isolation|Denies public network access for my MariaDB servers.|
-|Deny-MariaDb-StorageProfile|Resilience|Enforces geo-redundant database backup with minimum retention time in days.|
-|Deploy-MariaDb-SecurityAlertPolicies|Logging|Deploy SQL security alert policies for MariaDB|
 
 ## Azure Database for MySQL
 
