@@ -20,14 +20,13 @@ Microsoft experts in collaboration with partners and customers developed the Clo
 
 ## Who Should Use the Cloud Adoption Framework?
 
-This framework is designed for anyone aiming to succeed with Azure, regardless of organization size or cloud maturity. It supports:
+This framework is designed for anyone aiming to succeed with Azure, regardless of organization size or cloud maturity. It empowers decision-makers to make informed choices that impact people, processes, and technology.
+It supports:
 
 - **Startups** launching their business in Azure.
 - **Enterprises** scaling operations across global environments.
 - **New users** building foundational Azure skills.
 - **Existing customers** enhancing governance, security, and operational excellence.
-
-It empowers decision-makers to make informed choices that impact people, processes, and technology.
 
 ## How to Use the Cloud Adoption Framework
 
