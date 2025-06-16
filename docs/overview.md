@@ -30,10 +30,14 @@ While there are similarities with other cloud platforms, Azure has unique consid
 
 The framework is organized into key methodologies that guide you through each phase of your Azure adoption journey:
 
-1. **Strategy** – Define your business justification and desired outcomes for adopting Azure.
-2. **Plan** – Prepare your people, processes, and technology to execute your strategy.
-3. **Ready** – Build a secure, governed Azure environment and create landing zones for your workloads.
-4. **Adopt** – Migrate existing workloads to Azure (on-prem or from other clouds), modernize, or build new cloud-native solutions in Azure.
-5. **Govern, Secure, and Manage** – Continuously govern, secure, and manage your Azure environment to ensure long-term success.
+| Methodology | Description |
+|-------------|-------------|
+| 🚀 [**Strategy**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/) | Define your business justification and desired outcomes for adopting Azure. |
+| 📝 [**Plan**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/plan/) | Prepare your people, processes, and technology to execute your strategy. |
+| 🛠️ [**Ready**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/) | Build a secure, governed Azure environment and create landing zones for your workloads. |
+| 🌐 [**Adopt**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/adopt/) | Migrate existing workloads to Azure (on-prem or from other clouds), modernize, or build new cloud-native solutions in Azure. |
+| 🛡️ [**Govern**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/) | Establish governance practices to ensure compliance, manage risks, and maintain control over your Azure environment. |
+| 🔒 [**Secure**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/secure/) | Protect your Azure environment by implementing security best practices and addressing potential vulnerabilities. |
+| ⚙️ [**Manage**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/) | Continuously manage your Azure environment to ensure long-term health and operational excellence. |
 
 Each methodology builds on the previous one, helping you move from planning to execution with confidence.
