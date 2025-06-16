@@ -1,43 +1,49 @@
 ---
 title: Microsoft Cloud Adoption Framework for Azure documentation
-description: Get tools, guidance, and narratives to help shape strategies and drive desired business outcomes during your cloud adoption journey.
+description: Discover structured guidance to support every stage of your Azure cloud adoption journey.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 06/16/2025
+ms.date: 06/17/2025
 ms.topic: conceptual
 ms.subservice: caf-general
 ms.custom: internal, homepage, UpdateFrequency3
 ms.update-cycle: 1095-days
 ---
 
-# What is the Microsoft Cloud Adoption Framework for Azure?
+# What Is the Microsoft Cloud Adoption Framework for Azure?
 
-The Microsoft Cloud Adoption Framework for Azure is a comprehensive guide designed to help organizations succeed in their cloud journey. It offers end-to-end guidance across the entire lifecycle of cloud adoption, enabling faster and more informed decision-making.
+The **Microsoft Cloud Adoption Framework for Azure** is a comprehensive, end-to-end guide designed to help organizations successfully adopt cloud technologies. It provides structured guidance across every stage of the cloud journey, including strategy, planning, readiness, migration, governance, and operations. The framework offers actionable insights for aligning people, processes, and technology to achieve business goals in the cloud.
 
-Developed from real-world experiences by Microsoft experts, partners, and customers, the framework is a self-service resource available to all Azure users. It provides foundational guidance that every organization should follow, while also pointing to more specialized content as needed throughout your journey.
+## Why Use the Cloud Adoption Framework?
 
-## Who is the Cloud Adoption Framework for?
+Developed by Microsoft experts in collaboration with partners and customers, the Cloud Adoption Framework is based on real-world experiences. It serves as a self-service resource that:
 
-The Cloud Adoption Framework is for anyone seeking to succeed with Azure—whether you're just starting out or managing a large-scale cloud environment. It supports:
+- Offers foundational best practices for all Azure users  
+- Provides specialized guidance tailored to different stages and scenarios of cloud adoption  
+- Helps organizations transition from their current environment to Azure in a way that aligns with their strategic objectives  
 
-- Startups and enterprises alike
-- New Azure users learning best practices
-- Existing customers looking to mature their cloud capabilities
+## Who Should Use the Cloud Adoption Framework?
 
-While there are similarities with other cloud platforms, Azure has unique considerations. The framework helps you navigate those differences and adopt Azure in a way that aligns with your business goals.
+The framework is designed for a wide range of users, including:
+
+- **Startups and enterprises** beginning their cloud journey  
+- **New Azure users** seeking to learn best practices  
+- **Existing Azure customers** aiming to optimize and mature their cloud capabilities  
+
+It supports informed decision-making across people, processes, and technology, regardless of your organization’s size or cloud maturity level.
 
 ## How to Use the Cloud Adoption Framework
 
-The framework is organized into key methodologies that guide you through each phase of your Azure adoption journey:
+The framework is organized into key methodologies that guide you through each phase of your Azure adoption journey.:
 
 | Methodology | Description |
 |-------------|-------------|
-| 🚀 [**Strategy**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/) | Define your business justification and desired outcomes for adopting Azure. |
-| 📝 [**Plan**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/plan/) | Prepare your people, processes, and technology to execute your strategy. |
-| 🛠️ [**Ready**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/) | Build a secure, governed Azure environment and create landing zones for your workloads. |
-| 🌐 [**Adopt**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/adopt/) | Migrate existing workloads to Azure (on-prem or from other clouds), modernize, or build new cloud-native solutions in Azure. |
-| 🛡️ [**Govern**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/) | Establish governance practices to ensure compliance, manage risks, and maintain control over your Azure environment. |
-| 🔒 [**Secure**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/secure/) | Protect your Azure environment by implementing security best practices and addressing potential vulnerabilities. |
-| ⚙️ [**Manage**](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/) | Continuously manage your Azure environment to ensure long-term health and operational excellence. |
+| 🚀 [**Strategy**](/azure/cloud-adoption-framework/strategy/) | Define business justification and expected outcomes. |
+| 📝 [**Plan**](/azure/cloud-adoption-framework/plan/) | Align cloud adoption plans with business goals . |
+| 🛠️ [**Ready**](/azure/cloud-adoption-framework/ready/) | Prepare your Azure environment and landing zones. |
+| 🌐 [**Adopt**](/azure/cloud-adoption-framework/adopt/) | Migrate, modernize, and innovate in Azure. |
+| 🛡️ [**Govern**](/azure/cloud-adoption-framework/govern/) | Establish governance to manage risks. |
+| 🔒 [**Secure**](/azure/cloud-adoption-framework/secure/) | Protect your Azure environment. |
+| ⚙️ [**Manage**](/azure/cloud-adoption-framework/manage/) |  Operate and optimize your cloud environment. |
 
-Each methodology builds on the previous one, helping you move from planning to execution with confidence.
+The *Strategy*, *Plan*, *Ready*, and *Adopt* methodologies build upon one another to establish a solid foundation. *Govern*, *Secure*, and *Manage* are ongoing processes that begin during planning and evolve throughout your cloud journey.
