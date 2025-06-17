@@ -1,9 +1,9 @@
 ---
 title: Organize your Azure resources effectively
 description: Learn how to structure Azure resources using management hierarchies, naming conventions, and tags to streamline operations and cost management.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
-ms.date: 06/17/2025
+ms.date: 06/18/2025
 ms.topic: conceptual
 ms.custom: AQC
 ---
@@ -38,7 +38,9 @@ A management hierarchy defines governance boundaries and inheritance patterns fo
 
 2. **Create subscriptions for environment separation.** Establish separate Azure subscriptions for each application environment (development, testing, production) to ensure proper isolation and cost tracking. This subscription strategy prevents cross-environment resource dependencies and enables environment-specific policies. See [steps to create Azure subscriptions](/azure/cost-management-billing/manage/create-subscription). Use [programmatic subscription creation](/azure/cost-management-billing/manage/programmatically-create-subscription) as your Azure usage scales.
 
-3. **Use resource groups to manage lifecycle.** Place resources with shared lifecycles into the same [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to enable coordinated deployment and management operations. This resource grouping approach ensures that related components deploy, update, and delete together as a unit. See [steps to deploy resources](/azure/azure-resource-manager/management/manage-resources-portal#deploy-resources-to-a-resource-group) using infrastructure-as-code templates for consistency.
+3. **Group resources by lifecycle.** Place resources with shared lifecycles into the same [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to streamline deployment and management operations. Grouping resources ensures that related components deploy, update, and delete together as a cohesive unit. Use infrastructure-as-code templates to deploy resources consistently. See [steps to deploy resources](/azure/azure-resource-manager/management/manage-resources-portal#deploy-resources-to-a-resource-group). 
+
+4. **Align resource locations with the resource group.** Place resources in the same region as their resource group to optimize performance and simplify management. For details, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment). If resources span multiple regions within the same resource group, move them to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription) for better organization.
 
 ## Apply resource tags
 
