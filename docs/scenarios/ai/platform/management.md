@@ -1,6 +1,6 @@
 ---
 title: Management recommendations for AI workloads on Azure
-description: Learn how to manage AI workloads using Azure AI platform services (PaaS) with recommendations and best practices
+description: Learn how to manage AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 04/09/2025
