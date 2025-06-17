@@ -18,13 +18,11 @@ A naming convention provides standardized identification across Azure resources,
 
 1. **Understand the permanence of names.** You can't change the name of an Azure resource after you create it, so only put information in the name that won’t change. Use tags to capture all other information.
 
-1. **Follow Azure naming rules.** Azure names must follow three general principles:
+1. **Follow Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Azure names must follow three general principles:
 
-- Names need to be unique within the scope of the Azure resource (varies between resource).
-- Names need to meet length requirements (varies between resources).
-- Names can only contain valid characters (varies between resources).
-
-See [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules).
+    - Names need to be unique within the scope of the Azure resource (varies between resource).
+    - Names need to meet length requirements (varies between resources).
+    - Names can only contain valid characters (varies between resources).
 
 1. **Use abbreviations.** Use [resource type abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to maintain consistency across all Azure services.
 
