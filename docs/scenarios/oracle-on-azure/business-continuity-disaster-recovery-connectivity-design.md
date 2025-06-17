@@ -18,7 +18,7 @@ You must address the following key requirements:
 
 - **Business continuity and disaster recovery (BCDR):** HA of your Oracle Exadata Database@Azure and related applications is crucial to maintain business operations that have low RTO or RPO.
 
-Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. The default route for this connectivity is through Azure. This article focuses on architecting for networking within Azure to meet BCDR requirements. For more information on BCDR, see [BCDR for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
+Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. The default route for this connectivity is through Azure. This article focuses on architecting for networking within Azure to meet BCDR requirements. For more information, see [BCDR for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
 
 ## Redundancy within the same region
 
@@ -29,15 +29,15 @@ The following diagram illustrates a single-region redundant setup that uses two 
 :::image type="content" source="./media/multiple-availability-zone.svg" alt-text="Diagram that shows in-region redundancy for Oracle Exadata Database@Azure." border="false" lightbox="./media/multiple-availability-zone.svg":::
 
 > [!NOTE]
-> Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Virtual Network peering costs apply.
+> Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Virtual network peering costs apply.
 
 ## Redundancy across regions
 
-To achieve cross-region redundancy with Oracle Database@Azure, deploy your primary and standby Exadata infrastructures in separate virtual networks in different Azure regions. You can establish direct connectivity using Global VNet Peering, which enables low-latency, high-throughput replication between regions.
+To achieve cross-region redundancy with Oracle Database@Azure, deploy your primary and standby Exadata infrastructures in separate virtual networks in different Azure regions. You can establish direct connectivity by using global virtual network peering, which enables low-latency, high-throughput replication between regions.
 
-The following diagram shows the recommended cross-region configuration using Global VNet Peering:
+The following diagram shows the recommended cross-region configuration that uses global virtual network peering:
 
-:::image type="content" source="./media/cross-region-data-guard.svg" alt-text="Diagram that shows Oracle Database@Azure deployed in two regions connected via Global VNet Peering." border="false" lightbox="./media/cross-region-data-guard.svg":::
+:::image type="content" source="./media/cross-region-data-guard.svg" alt-text="Diagram that shows Oracle Database@Azure deployed in two regions connected via global virtual network peering." border="false" lightbox="./media/cross-region-data-guard.svg":::
 
 ## Design considerations
 
@@ -47,7 +47,7 @@ The following diagram shows the recommended cross-region configuration using Glo
 
 ## Design recommendations
 
-- **Network virtual appliances (NVAs):** Minimize the use of NVAs, or other appliances, in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
+- **Network virtual appliances (NVAs):** Minimize the use of NVAs and other appliances in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
 
 - **Asynchronous replication for cross-region DR:** Because of higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance. 
 

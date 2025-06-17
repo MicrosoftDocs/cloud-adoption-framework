@@ -26,19 +26,19 @@ When you design your network topology for Oracle Exadata Database@Azure, conside
 
 - **VM cluster limits:** Each Oracle Exadata Database@Azure SKU can include up to [eight VM clusters](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-B0820870-D946-4879-85BF-C95FF25979CF). Ensure that your virtual network is configured before VM cluster creation, and decide whether to connect clusters to the same virtual network or separate virtual networks.
 
-- **Scheduled patching:** Scheduled patching for Oracle Exadata Database@Azure is delivered through the OCI control plane and does **not** require direct internet access. This reduces the need for outbound connectivity in typical maintenance scenarios.
+- **Scheduled patching:** Scheduled patching for Oracle Exadata Database@Azure is delivered through the OCI control plane and doesn't require direct internet access. This method reduces the need for outbound connectivity in typical maintenance scenarios.
 
-- **Internet access requirements:** Oracle Exadata Database@Azure has no direct internet access by default. If internet access is required—for example, for one-off patching, outbound telemetry, or downloading packages—it must be explicitly configured.
+- **Internet access requirements:** Oracle Exadata Database@Azure has no direct internet access by default. If internet access is required for one-off patching, outbound telemetry, or downloading packages, it must be explicitly configured.
 
 - **Subnet sizing:** Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. For more information about sizing guidelines, see [Plan for IP address space for Oracle Exadata Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
-- **NSG configuration options:** Network Security Groups (NSGs) can be applied from either Azure or OCI. If you prefer to manage network security policies in Azure, consider allowing all traffic from OCI-side NSGs and enforcing restrictions using NSGs on the Azure-delegated subnet.
+- **NSG configuration options:** Network security groups (NSGs) can be applied from either Azure or OCI. If you prefer to manage network security policies in Azure, consider allowing all traffic from OCI-side NSGs and enforcing restrictions by using NSGs on the Azure-delegated subnet.
 
-- **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments across Availability Zones or Regions. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan). Also, only 5 Oracle-delegated subnets in total may be created in a region. If more are required, a support ticket may be raise with Oracle to increase the limit. 
+- **Delegated subnet limitation:** You can create only one Oracle Database@Azure delegated subnet for each virtual network. This constraint influences how you plan your virtual network layout, especially if you anticipate multiple database deployments across availability zones or regions. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan). Also, you can create up to five Oracle-delegated subnets in a region. If you need more subnets, submit a support ticket with Oracle to increase the limit.
 
 - **Split Domain Name System (DNS) model:** Oracle Database@Azure follows a split DNS model. DNS must be configured on both Azure and OCI. For more information, see [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513).
 
-- **Private DNS Zone naming rules:** When default DNS settings are used to create VM clusters, the private DNS zone is automatically named based on the virtual network and subnet that you choose for the VM cluster. The name of this zone is "oci" plus the first 10 alphabetic characters of the virtual network and subnet names. For example, if the virtual network is "vnet-exadata-prod" and the subnet is "snet-exadata-prod", the private DNS zone name is *ocisnetexadat.ocivnetexadat.oraclevcn.com*.
+- **Private DNS zone naming rules:** When default DNS settings are used to create VM clusters, the private DNS zone is automatically named based on the virtual network and subnet that you choose for the VM cluster. The name of this zone is "oci" plus the first 10 alphabetic characters of the virtual network and subnet names. For example, if the virtual network is "vnet-exadata-prod" and the subnet is "snet-exadata-prod", the private DNS zone name is *ocisnetexadat.ocivnetexadat.oraclevcn.com*.
 
 ## Design recommendations
 
@@ -48,7 +48,7 @@ When you design your network topology for Oracle Exadata Database@Azure, conside
 
 - **Optimize for bandwidth and latency:** Optimize bandwidth and latency by colocating resources that interact with Oracle Database@Azure – Exadata Database Service within the same availability zone.
 
-- **Configure NSGs:** Configure the OCI-side NSG to allow all traffic, and enforce access control using an NSG applied to the delegated subnet in Azure. Use least-privilege rules to explicitly allow required traffic from approved sources and deny all other inbound access.
+- **Configure NSGs:** Configure the OCI-side NSG to allow all traffic, and enforce access control by applying an NSG to the delegated subnet in Azure. Use least-privilege rules to explicitly allow required traffic from approved sources and deny all other inbound access.
 
 - **Use unique DNS names:** When you use the default DNS settings, ensure that the first 10 characters of the virtual network and subnet names for any Exadata environments are unique. If not, a DNS resolver can't distinguish between the environments.
 
