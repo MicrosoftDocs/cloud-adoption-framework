@@ -12,15 +12,11 @@ ms.custom: AQC
 
 Organize your cloud-based resources to secure, manage, and track costs related to your workloads. To organize your resources, define a management group hierarchy, consider and follow a naming convention, and apply resource tagging.
 
-<!-- markdownlint-disable MD024 -->
+## Create a resource management structure
 
-## Management levels and hierarchy
+1. **Understand Azure management levels.** Azure provides four levels of management: management groups, subscriptions, resource groups, and resources.
 
-Azure provides four levels of management: management groups, subscriptions, resource groups, and resources. The following diagram shows the relationship between these levels.
-
-:::image type="content" alt-text="Diagram that shows the relationship of management hierarchy levels." source="./media/organize-resources/scope-levels.png":::
-
-- **Management groups** help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
+- **Management groups** Management groups are containers that help you manage access, policy, and compliance across multiple subscriptions. Every subscription belongs to a management group. Subscriptions inherit the governance policies applied to the management group. For more information, see [What are Azure management groups?](/azure/governance/management-groups/overview)
 
 - **Subscriptions** logically associate user accounts with the resources they create. Each subscription has limits or quotas on the amount of resources it can create and use. Organizations can use subscriptions to manage costs and the resources created by users, teams, and projects.
 
@@ -28,28 +24,15 @@ Azure provides four levels of management: management groups, subscriptions, reso
 
 - **Resources** are instances of services you can create in a resource group, such as virtual machines, storage, and SQL databases.
 
-
-
-  > [!NOTE]
-  > To understand and minimize the effect of regional outages, see [Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions).
-
-### Management settings scope
-
-You can apply management settings, such as policies and role-based access control, at any management level. The level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy applies to all resource groups and resources in that subscription, unless explicitly excluded.
+1. **Understand Azure governance.** You can apply management settings, such as policies and role-based access control, at any management level. The level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy applies to all resource groups and resources in that subscription, unless explicitly excluded.
 
 Start with applying critical settings at higher levels and project-specific requirements at lower levels. For example, to make sure that all resources for your organization deploy to certain regions, apply a policy to the subscription that specifies the allowed regions. The allowed locations are automatically enforced when users in your organization add new resource groups and resources.
 
-> [!TIP]
 > Use management groups to organize and govern your Azure subscriptions. As the number of your subscriptions increases, management groups provide critical structure to your Azure environment and make it easier to manage your subscriptions.
-> To learn more, see [Management groups design considerations and recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
 
-::: zone target="docs"
+1. **Create a management structure**
 
-### Create a management structure
-
-To create a management group, subscription, or resource group, sign in to the [Azure portal](https://portal.azure.com).
-
-- To create a *management group* to help you manage multiple subscriptions, go to [Management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade) and select **Create**.
+- [Create a management group](/azure/governance/management-groups/create-management-group-portal)
 
 - To create a *subscription* to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
 
