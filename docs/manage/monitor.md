@@ -321,7 +321,6 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure SQL Managed Instance | [Monitor Azure SQL Managed Instance](/azure/azure-sql/managed-instance/monitoring-sql-managed-instance-azure-monitor) | [Tune applications and databases for performance in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/performance-guidance) |
 | Azure Stack Edge | [Enable Azure Monitor on Azure Stack Edge Pro GPU device](/azure/databox-online/azure-stack-edge-gpu-enable-azure-monitor) | |
 | Azure Stack Hub | [Monitor health and alerts in Azure Stack Hub](/azure-stack/operator/azure-stack-monitor-health) | |
-| Azure Static Web Apps | [Monitor Azure Static Web Apps](/azure/static-web-apps/monitor)<br><br>[Supported metrics for managed Functions in Azure Static Web Apps](/azure/static-web-apps/metrics) | |
 | Azure Synapse Analytics | [Monitor Azure Synapse Analytics](/azure/synapse-analytics/monitor-synapse-analytics)<br><br>[Monitoring data reference for Azure Synapse Analytics](/azure/synapse-analytics/monitor-synapse-analytics-reference) | |
 | Azure Table Storage | [Monitor Azure Table Storage](/azure/storage/tables/monitor-table-storage)<br><br>[Monitoring data reference for Azure Table Storage](/azure/storage/tables/monitor-table-storage-reference) | |
 | Azure Update Manager | [Create alerts in Azure Update Manager](/azure/update-manager/manage-alerts) | |

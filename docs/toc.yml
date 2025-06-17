@@ -27,12 +27,8 @@ items:
         href: strategy/prepare-organizational-alignment.md
       - name: Inform your strategy
         items:
-          - name: Overview
-            href: strategy/inform/index.md
           - name: Cost efficiency
             href: strategy/inform/cost-efficiency.md
-          - name: AI
-            href: strategy/inform/ai.md
           - name: Resiliency
             href: strategy/inform/resiliency.md
           - name: Security
@@ -634,20 +630,6 @@ items:
       - name: Monitor cloud governance
         href: govern/monitor-cloud-governance.md
 
-
-    - name: Manage
-      items:
-      - name: Checklist
-        href: manage/index.md
-      - name: Ready operations
-        href: manage/ready.md  
-      - name: Administer Azure
-        href: manage/administer.md  
-      - name: Monitor Azure
-        href: manage/monitor.md
-      - name: Protect Azure
-        href: manage/protect.md
-
     - name: Secure
       items:
       - name: Overview 
@@ -667,10 +649,21 @@ items:
       - name: Manage  
         href: secure/manage.md
 
+    - name: Manage
+      items:
+      - name: Checklist
+        href: manage/index.md
+      - name: Ready operations
+        href: manage/ready.md  
+      - name: Administer Azure
+        href: manage/administer.md  
+      - name: Monitor Azure
+        href: manage/monitor.md
+      - name: Protect Azure
+        href: manage/protect.md
+
   - name: Adoption scenarios
     items:
-    - name: Overview
-      href: scenarios/index.md
     - name: AI adoption
       href: scenarios/ai/index.md
     - name: Azure VMware Solution
@@ -692,6 +685,10 @@ items:
 
   - name: Resources
     items:
+    - name: Azure Architecture Center
+      href: /azure/architecture/
+    - name:  Well-Architected Framework
+      href: /azure/architecture/framework/
     - name: Organize
       items:
       - name: Managing organization alignment
@@ -732,21 +729,9 @@ items:
           href: antipatterns/organize-antipatterns.md
         - name: IT fiefdoms and IT silos
           href: organize/fiefdoms-silos.md
-
-    - name: Tools and templates
+    - name: Tools
       href: resources/tools-templates.md
-
     - name: Additional resources
       items:
-      - name: Azure Architecture Center for solution architecture
-        href: /azure/architecture/
-      - name: Microsoft Azure Well-Architected Framework for workload architecture
-        href: /azure/architecture/framework/
-      - name: Docs for product implementation
-        href: /
-      - name: Learn to develop skills
-        href: /training/
-      - name: Assessments to personalize guidance
-        href: /assessments/
       - name: App Modernization Guidance for Azure
         href: /azure/app-modernization-guidance

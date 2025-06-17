@@ -34,9 +34,9 @@ highlightedContent:
     - title: Azure landing zone
       itemType: how-to-guide
       url: ./ready/landing-zone/index.md    
-    - title: Common adoption scenarios 
+    - title: Adoption scenarios 
       itemType: overview
-      url: ./scenarios/index.md
+      url: ./overview.md#cloud-adoption-scenarios
 
 # Card with summary style
 
@@ -50,12 +50,12 @@ additionalContent:
 
         # Card
         - title: 📋 Strategy
-          summary: Prepare your business for Azure.
+          summary: Define business justification and Azure adoption outcomes.
           url: ./strategy/index.md
 
         # Card
         - title: 📅 Plan
-          summary: Prepare people and processes for Azure adoption.
+          summary: Prepare people, processes, and technology for Azure adoption.
           url: ./plan/index.md
 
         # Card

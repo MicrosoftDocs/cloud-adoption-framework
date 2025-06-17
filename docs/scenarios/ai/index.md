@@ -1,6 +1,6 @@
 ---
 title: AI adoption
-description: Discover how startups and enterprises can effectively adopt generative and nongenerative AI
+description: Discover how startups and enterprises can effectively adopt generative and nongenerative AI.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/09/2025
@@ -22,7 +22,7 @@ Use these AI checklists as a practical roadmap for adopting and managing AI. The
 
 | AI adoption step | Applicable AI technology | Startup checklist | Enterprise checklist |
 |---|---|---|---|
-| [AI Strategy](./strategy.md) | Copilots<br>Azure | &#9744; [Define an AI technology strategy](./strategy.md#define-an-ai-technology-strategy) | &#9744; [Identify AI use cases](./strategy.md#identify-ai-use-cases) <br> &#9744; [Define an AI technology strategy](./strategy.md#define-an-ai-technology-strategy) <br> &#9744; [Define an AI data strategy](./strategy.md#define-an-ai-data-strategy) <br> &#9744; [Define a responsible AI strategy](./strategy.md#define-a-responsible-ai-strategy) |
+| [AI Strategy](./strategy.md) | Copilots<br>Azure | &#9744; [Define an AI technology strategy](./strategy.md#define-an-ai-technology-strategy) | &#9744; [Identify AI use cases](./strategy.md#identify-ai-use-cases) <br> &#9744; [Define an AI technology strategy](./strategy.md#define-an-ai-technology-strategy) <br> &#9744; [Develop an AI data strategy](./strategy.md#develop-an-ai-data-strategy) <br> &#9744; [Develop a responsible AI strategy](./strategy.md#develop-a-responsible-ai-strategy) |
 | [AI Plan](./plan.md) | Copilots<br>Azure | &#9744; [Access AI resources](./plan.md#access-ai-resources) <br> &#9744; [Implement responsible AI](./plan.md#implement-responsible-ai) | &#9744; [Assess AI skills](./plan.md#assess-ai-skills) <br> &#9744; [Acquire AI skills](./plan.md#acquire-ai-skills) <br> &#9744; [Access AI resources](./plan.md#access-ai-resources) <br> &#9744; [Prioritize AI use cases](./plan.md#prioritize-ai-use-cases) <br> &#9744; [Create an AI proof of concept](./plan.md#create-an-ai-proof-of-concept) <br> &#9744; [Implement responsible AI](./plan.md#implement-responsible-ai) <br> &#9744; [Estimate delivery timelines](./plan.md#estimate-delivery-timelines) |
 | [AI Ready](./ready.md) | Azure | &#9744; [Build an AI environment](./ready.md#build-an-ai-environment) <br> &#9744; [Choose an architecture](./platform/architectures.md) <br> &#9744; [Use AI design areas](./platform/resource-selection.md) | &#9744; [Establish AI reliability](./ready.md#establish-ai-reliability) <br> &#9744; [Establish AI governance](./ready.md#establish-ai-governance) <br> &#9744; [Establish AI networking](./ready.md#establish-ai-networking) <br> &#9744; [Establish an AI foundation](./ready.md#use-azure-landing-zone) <br> &#9744; [Choose an architecture](./platform/architectures.md) <br> &#9744; [Use AI design areas](./platform/resource-selection.md) |
 | [Govern AI](./govern.md) | Copilots<br>Azure | &#9744; [Enforce AI governance policies](./govern.md#enforce-ai-governance-policies) | &#9744; [Assess AI organizational risks](./govern.md#assess-ai-organizational-risks) <br> &#9744; [Document AI governance policies](./govern.md#document-ai-governance-policies) <br> &#9744; [Enforce AI policies](./govern.md#enforce-ai-governance-policies) <br> &#9744; [Monitor AI organizational risks](./govern.md#monitor-ai-organizational-risks) |
