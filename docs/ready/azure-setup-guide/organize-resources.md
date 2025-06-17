@@ -38,9 +38,9 @@ A management hierarchy defines governance boundaries and inheritance patterns fo
 
 2. **Create subscriptions for environment separation.** Establish separate Azure subscriptions for each application environment (development, testing, production) to ensure proper isolation and cost tracking. This subscription strategy prevents cross-environment resource dependencies and enables environment-specific policies. See [steps to create Azure subscriptions](/azure/cost-management-billing/manage/create-subscription). Use [programmatic subscription creation](/azure/cost-management-billing/manage/programmatically-create-subscription) as your Azure usage scales.
 
-3. **Group resources by lifecycle.** Place resources with shared lifecycles into the same [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to enable coordinated deployment and management operations. This resource grouping approach ensures that related components deploy, update, and delete together as a unit. See [steps to deploy resources](/azure/azure-resource-manager/management/manage-resources-portal#deploy-resources-to-a-resource-group) using infrastructure-as-code templates for consistency.
+3. **Use resource groups to manage lifecycle.** Place resources with shared lifecycles into the same [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to enable coordinated deployment and management operations. This resource grouping approach ensures that related components deploy, update, and delete together as a unit. See [steps to deploy resources](/azure/azure-resource-manager/management/manage-resources-portal#deploy-resources-to-a-resource-group) using infrastructure-as-code templates for consistency.
 
-## Apply resource tags for metadata tracking
+## Apply resource tags
 
 Resource tags provide key-value metadata that enables resource identification, cost allocation, and operational tracking across your Azure environment. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. You must implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
 
