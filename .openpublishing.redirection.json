@@ -3318,17 +3318,17 @@
       {
          "source_path": "docs/strategy/inform/ai.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/ai/strategy",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/strategy/inform/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/#cloud-adoption-strategy-checklist",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/scenarios/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/overview#cloud-adoption-scenarios",
-         "redirect_document_id": true
+         "redirect_document_id": false
       } 
    ]   
 }
