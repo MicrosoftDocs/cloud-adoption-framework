@@ -43,9 +43,7 @@ The framework is organized into key methodologies that guide you through each ph
 
 ## Cloud adoption scenarios
 
-The Cloud Adoption Framework also provides structured guidance for adopting specific cloud technologies. These cloud adoption scenarios apply the framework’s principles to each use cases and offers actionable steps based on real-world experiences. Each scenario includes best practices to support your cloud journey and can be integrated into your overall cloud strategy.
-
-Use the overview pages linked below to explore each scenario in detail:
+The Cloud Adoption Framework also provides structured guidance for adopting specific cloud technologies. These cloud adoption scenarios apply the framework’s principles to each use cases and offers actionable steps based on real-world experiences. Each scenario includes best practices to support your cloud journey and can be integrated into your overall cloud strategy. Use the following table to find the correct scenario:
 
 | **Scenario** | **Description** |
 |--------------|-----------------|

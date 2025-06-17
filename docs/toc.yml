@@ -664,8 +664,6 @@ items:
 
   - name: Adoption scenarios
     items:
-    - name: Overview
-      href: scenarios/index.md
     - name: AI adoption
       href: scenarios/ai/index.md
     - name: Azure VMware Solution
