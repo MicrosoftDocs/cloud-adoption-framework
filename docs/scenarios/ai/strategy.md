@@ -48,7 +48,7 @@ Microsoft provides SaaS generative AI solutions, known as Copilots, to enhance p
 
 ### Build AI workloads with Azure platforms (PaaS)
 
-Azure provides multiple PaaS options tailored to your AI goals, skill set, and data needs. These platforms cater to various levels of technical expertise. Review the [pricing pages](https://azure.microsoft.com/products/) for each Azure services, and use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop cost estimates.
+Azure provides multiple PaaS options tailored to your AI goals, skill set, and data needs. These platforms cater to various levels of technical expertise. Review the [pricing pages](https://azure.microsoft.com/products/) for each Azure service, and use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to develop cost estimates.
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|----|-------------| ---------| ---- |
