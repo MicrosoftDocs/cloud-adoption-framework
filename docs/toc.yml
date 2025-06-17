@@ -689,6 +689,7 @@ items:
     items:
     - name: Tools
     - href: resources/tools-templates.md
+    - name: Organize
       items:
       - name: Managing organization alignment
         href: organize/index.md
