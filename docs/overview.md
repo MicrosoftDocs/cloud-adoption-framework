@@ -14,7 +14,7 @@ ms.update-cycle: 1095-days
 
 The Microsoft Cloud Adoption Framework for Azure is your step-by-step guide to success in the Azure. It helps you plan, build, and manage your Azure environment. It covers decisions about people, processes, and technology.
 
-## Why Use the Cloud Adoption Framework?
+## Why use the Cloud Adoption Framework?
 
 Microsoft created this framework based on real-world experience to help you be successful in Azure. It gives you a clear path to follow, no matter where you are in your cloud journey. You get guidance that fits your goals and helps you move or mature in Azure the right way.
 
