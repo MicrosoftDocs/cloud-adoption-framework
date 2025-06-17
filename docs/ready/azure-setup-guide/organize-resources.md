@@ -1,166 +1,69 @@
 ---
 title: Organize your Azure resources effectively
-description: Understand best practices for effectively organizing your Azure resources to simplify resource management.
+description: Learn how to structure Azure resources using management hierarchies, naming conventions, and tags to streamline operations and cost management.
 author: Zimmergren
 ms.author: pnp
-ms.date: 01/20/2025
+ms.date: 06/17/2025
 ms.topic: conceptual
 ms.custom: AQC
 ---
 
 # Organize your Azure resources effectively
 
-Organize your cloud-based resources to secure, manage, and track costs related to your workloads. To organize your resources, define a management group hierarchy, consider and follow a naming convention, and apply resource tagging.
+This article explains how to organize Azure resources for optimal security, management, and cost tracking. Proper resource organization enables consistent governance, simplified operations, and clear cost attribution across your workloads.
 
-## Create a resource management structure
+## Establish a consistent naming convention
 
-1. **Understand Azure management levels.** Azure provides four levels of management: management groups, subscriptions, resource groups, and resources.
+A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent naming reduces management overhead and prevents resource conflicts across teams. You must define a naming standard and use it consistently.
 
-- **Management groups** Management groups are containers that help you manage access, policy, and compliance across multiple subscriptions. Every subscription belongs to a management group. Subscriptions inherit the governance policies applied to the management group. For more information, see [What are Azure management groups?](/azure/governance/management-groups/overview)
+1. **Understand the permanence of names.** You cannot change the name of an Azure resource after you create it, so only put information in the name that won’t change. Use tags to capture all other information.
 
-- **Subscriptions** logically associate user accounts with the resources they create. Each subscription has limits or quotas on the amount of resources it can create and use. Organizations can use subscriptions to manage costs and the resources created by users, teams, and projects.
+1. **Follow Azure naming rules.** Azure names must follow three general principles:
 
-- **Resource groups** are logical containers where you can deploy and manage Azure resources like virtual machines, web apps, databases, and storage accounts.
+- Names need to be unique within the scope of the Azure resource (varies between resource).
+- Names need to meet length requirements (varies between resources).
+- Names can only contain valid characters (varies between resources).
 
-- **Resources** are instances of services you can create in a resource group, such as virtual machines, storage, and SQL databases.
+See [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules).
 
-1. **Understand Azure governance.** You can apply management settings, such as policies and role-based access control, at any management level. The level determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy applies to all resource groups and resources in that subscription, unless explicitly excluded.
+1. **Use abbreviations.** Use [resource type abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to maintain consistency across all Azure services.
 
-Start with applying critical settings at higher levels and project-specific requirements at lower levels. For example, to make sure that all resources for your organization deploy to certain regions, apply a policy to the subscription that specifies the allowed regions. The allowed locations are automatically enforced when users in your organization add new resource groups and resources.
+1. **Define a naming pattern.** For non-global resources structured format like `{abbreviation}{app name, service name, or purpose}{environment}{instance}` for all resources. A delimiter, like a `-` between elements can make name more readable, but not all resources all you to use special characters. Global resources cannot have the same name as any other Azure resource of the same type. If needed, use a four-digit, alphanumeric organization identifier, `{abbreviation}{workload}{organization identifier}{environment}`. For more examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
-> Use management groups to organize and govern your Azure subscriptions. As the number of your subscriptions increases, management groups provide critical structure to your Azure environment and make it easier to manage your subscriptions.
+## Build a management hierarchy
 
-1. **Create a management structure**
+A management hierarchy defines governance boundaries and inheritance patterns for Azure resources. Azure provides four management levels where policies, access controls, and budgets flow from higher to lower levels. You must structure this hierarchy to align with your organizational requirements and enable consistent governance across all resources.
 
-- [Create a management group](/azure/governance/management-groups/create-management-group-portal)
+1. **Create management groups for workload types.** Create [management groups](/azure/governance/management-groups/create-management-group-portal) that represent distinct workload categories such as corporate applications or internet-facing services. This workload-based structure enables targeted governance policies and simplifies compliance management. Each management group inherits settings from the [root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory) in your Microsoft Entra ID tenant. Use a functional name when you create the management group, such as "Workloads", "Platform", "Online", and "Corporate".
 
-- To create a *subscription* to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
+2. **Create subscriptions for environment separation.** Establish separate Azure subscriptions for each application environment (development, testing, production) to ensure proper isolation and cost tracking. This subscription strategy prevents cross-environment resource dependencies and enables environment-specific policies. See [steps to create Azure subscriptions](/azure/cost-management-billing/manage/create-subscription). Use [programmatic subscription creation](/azure/cost-management-billing/manage/programmatically-create-subscription) as your Azure usage scales.
 
-- To create a *resource group* to hold resources that share the same permissions and policies:
+3. **Group resources by lifecycle.** Place resources with shared lifecycles into the same [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to enable coordinated deployment and management operations. This resource grouping approach ensures that related components deploy, update, and delete together as a unit. See [steps to deploy resources](/azure/azure-resource-manager/management/manage-resources-portal#deploy-resources-to-a-resource-group) using infrastructure-as-code templates for consistency.
 
-  1. Go to [Create a resource group](https://portal.azure.com/#create/Microsoft.ResourceGroup).
-  1. In the **Create a resource group** form:
-     1. For **Subscription**, select the subscription in which to create the resource group.
-     1. For **Resource group**, enter a name for the new resource group.
-     1. For **Region**, select a region in which to locate the resource group.
-  1. Select **Review + create**, and after the review passes, select **Create**.
+## Apply resource tags for metadata tracking
 
-  > [!NOTE]
-  > You can also create resources programmatically. For examples, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription) and [Create a management group with Azure PowerShell
-](/azure/governance/management-groups/create-management-group-powershell) .
+Resource tags provide key-value metadata that enables resource identification, cost allocation, and operational tracking across your Azure environment. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. You must implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
 
+Tags are easier to search and manage than resource names. Use tags to capture all relevant information, such as the resource, application name, environment, department, and location. See the [steps to apply tags](/azure/azure-resource-manager/management/tag-resources-portal).
 
-::: zone-end
+| Key           | Value               |
+|---------------|---------------------|
+| Azure resource | `resource: storage account`<br>`resource: sql database` |
+| Application name | `app : training`<br>`app : webapp` |
+| Environment    | `env : dev`<br>`env : prod` |
+| Department     | `dept : finance`<br>`dept : sales` |
+| Location       | `region : eastus`<br>`region : westus` |
 
-::: zone target="chromeless"
+## Tool and resources
 
-### Actions
-
-To create a management group, subscription, or resource group, sign in to the [Azure portal](https://portal.azure.com).
-
-- To create a *management group* to help you manage multiple subscriptions, go to [Management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade) and select **Create**.
-
-- To create a *subscription* to associate users with resources, go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and select **Add**.
-
-  > [!NOTE]
-  > You can also create subscriptions programmatically. For more information, see [Programmatically create Azure subscriptions](/azure/cost-management-billing/manage/programmatically-create-subscription).
-
-- To create a *resource group* to hold resources that share the same permissions and policies:
-
-  1. Go to [Create a resource group](https://portal.azure.com/#create/Microsoft.ResourceGroup).
-  1. In the **Create a resource group** form:
-     1. For **Subscription**, select the subscription in which to create the resource group.
-     1. For **Resource group**, enter a name for the new resource group.
-     1. For **Region**, select a region in which to locate the resource group.
-  1. Select **Review + create**, and after the review passes, select **Create**.
-
-::: zone-end
-
-## Naming standards
-
-A good naming standard helps to identify resources in the Azure portal, on a billing statement, and in automation scripts. Your naming strategy should include business and operational details in resource names.
-
-- Business details should include the organizational information required to identify teams. For example a business unit, such as `fin`, `mktg`, or `corp` might be used.
-- Follow the guidance for [abbreviations for resource types](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations).
-- Use a consistent naming convention for all resources. For example, use a prefix that identifies the subscription or resource group, workload type, the environment the resource is deployed in, and the Azure region.
-- Operational details in resource names should include information that IT and workload teams need. Include details that identify the workload, application, environment, criticality, and other information that's useful for managing resources.
-
-To learn more about naming Azure standards and recommendations, see [Develop your naming and tagging strategy for Azure resources](../azure-best-practices/naming-and-tagging.md).
-
-::: zone target="docs"
-
-> [!NOTE]
->
-> - Avoid using special characters, such as hyphen and underscore (`-` and `_`), as the first or last characters in a name. Doing so can cause validation rules to fail.
-> - Names of tags are case-insensitive.
-
-::: zone-end
-
-## Resource tags
-
-Tags can quickly identify your resources and resource groups. You apply tags to your Azure resources to logically organize them by categories. Tags can include context about the resource's associated workload or application, operational requirements, and ownership information.
-
-Each tag consists of a name and a value. For example, you can apply the name *environment* and the value *production* to all the resources in production.
-
-After you apply tags, you can easily retrieve all the resources in your subscription that have that tag name and value. When you organize resources for billing or management, tags can help you retrieve related resources from different resource groups.
-
-Other common uses for tags include:
-
-- **Workload name:** Name of the workload that a resource supports.
-- **Data classification:** Sensitivity of the data that a resource hosts.
-- **Cost center:** The accounting cost center or team associated with the resource. In [Microsoft Cost Management](/azure/cost-management-billing/), you can apply your cost center tag as a filter to report charges based on usage by team or department.
-- **Environment:** The environment in which the resource is deployed, such as development, test, or production.
-
-For more tagging recommendations and examples, see [Define your tagging strategy](../azure-best-practices/resource-tagging.md).
-
-::: zone target="docs"
-
-### Apply a resource tag
-
-To apply one or more tags to a resource group:
-
-1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the resource group.
-1. Select **Assign tags** in the navigation at the top of the page.
-1. Enter the name and value for a tag under **Name** and **Value**.
-1. Enter more names and values or select **Save**.
-
-### Remove a resource tag
-
-To remove one or more tags from a resource group:
-
-1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the ellipses menu for the group, and then select **Edit tags**.
-1. Select the trash can icon for each tag that you want to remove.
-1. To save your changes, select **Save**.
-
-::: zone-end
-
-::: zone target="chromeless"
-
-### Action
-
-To apply one or more tags to a resource group:
-
-1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the resource group.
-1. Select **Assign tags** in the navigation at the top of the page.
-1. Enter the name and value for a tag under **Name** and **Value**.
-1. Enter more names and values or select **Save**.
-
-To remove one or more tags from a resource group:
-
-1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the ellipses menu for the group, and then select **Edit tags**.
-1. Select the trash can icon for each tag that you want to remove.
-1. To save your changes, select **Save**.
-
-::: zone-end
+| Category | Tool | Description |
+|----------|------|-------------|
+| Naming Strategy | [Resource abbreviations guide](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) | Provides standardized abbreviations for Azure resource types |
+| Management Groups | [Azure management groups](/azure/governance/management-groups/overview) | Enables hierarchical organization of subscriptions with inherited governance |
+| Resource Organization | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | Manages resource deployment and organization within subscriptions |
+| Tagging Strategy | [Azure resource tags](/azure/azure-resource-manager/management/tag-resources) | Supports metadata application for cost tracking and resource management |
 
 ## Next steps
 
-To learn more about management levels and organization, see:
-
-- [Management group design considerations and recommendations](../landing-zone/design-area/resource-org-management-groups.md)
-- [Subscription considerations and recommendations](../landing-zone/design-area/resource-org-subscriptions.md)
-
-For more information about resource naming and tagging, see:
-
-- [Define your tagging strategy](../azure-best-practices/resource-tagging.md)
-- [Use tags to organize your Azure resources and management hierarchy](/azure/azure-resource-manager/management/tag-resources)
+> [!div class="nextstepaction"]
+> [Management group design considerations and recommendations](../landing-zone/design-area/resource-org-management-groups.md)
