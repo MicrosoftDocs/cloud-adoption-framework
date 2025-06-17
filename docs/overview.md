@@ -41,3 +41,20 @@ The framework is organized into key methodologies that guide you through each ph
 | 🛡️ [**Govern**](/azure/cloud-adoption-framework/govern/) | Establish governance to manage risks. |
 | 🔒 [**Secure**](/azure/cloud-adoption-framework/secure/) | Protect your Azure environment. |
 | ⚙️ [**Manage**](/azure/cloud-adoption-framework/manage/) |  Operate and optimize your cloud environment. |
+
+## Cloud adoption scenarios
+
+The Cloud Adoption Framework also provides structured guidance for adopting specific cloud technologies. These cloud adoption scenarios apply the framework’s principles to each use cases and offers actionable steps based on real-world experiences. Each scenario includes best practices to support your cloud journey and can be integrated into your overall cloud strategy.
+
+Use the overview pages linked below to explore each scenario in detail:
+
+| **Scenario** | **Description** |
+|--------------|-----------------|
+| [AI Adoption on Azure](./ai/index.md) | Learn Microsoft’s recommended approach for adopting Artificial Intelligence (AI) using the Cloud Adoption Framework. |
+| [Azure VMware Solution](../scenarios/azure-vmware/index.md) | Migrate VMware workloads to a vSphere-based, single-tenant private cloud on Azure. Extend hybrid and multicloud capabilities while minimizing disruption and optimizing costs. |
+| [Cloud-Scale Analytics](./data-management/index.md) | Build scalable, secure, and discoverable data architectures across on-premises and multicloud environments. Enable self-service analytics, centralized governance, and advanced cloud services. |
+| [Hybrid and Multicloud](./hybrid/index.md) | Modernize on-premises investments and unify operations across cloud and edge. Enhance capabilities in analytics, AI, machine learning, and IoT. |
+| [Modern Application Platform](./app-platform/index.md) | Accelerate innovation with Kubernetes, containers, and PaaS services. Streamline operations and modernize legacy workloads across hybrid and multicloud environments. |
+| [Oracle on Azure](./oracle-on-azure/index.md) | Migrate and manage Oracle workloads using a structured framework. Align IT and business teams, prepare environments with Azure landing zones, and create repeatable migration processes. |
+| [SAP on Azure](./sap/index.md) | Use the Cloud Adoption Framework to migrate and manage SAP workloads. Align SAP and IT teams, prepare environments, and integrate cloud-native solutions into your SAP strategy. |
+| [Virtual Desktop](./azure-virtual-desktop/index.md) | Transition to Azure Virtual Desktop to modernize desktop environments. Improve productivity and manage virtual desktops at scale using enterprise-grade Azure services. |

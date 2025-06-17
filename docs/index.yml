@@ -34,9 +34,9 @@ highlightedContent:
     - title: Azure landing zone
       itemType: how-to-guide
       url: ./ready/landing-zone/index.md    
-    - title: Common adoption scenarios 
+    - title: Adoption scenarios 
       itemType: overview
-      url: ./scenarios/index.md
+      url: ./overview.md#cloud-adoption-scenarios
 
 # Card with summary style
 
