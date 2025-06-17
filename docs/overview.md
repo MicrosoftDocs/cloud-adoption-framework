@@ -45,7 +45,7 @@ The framework is organized into key methodologies that guide you through each ph
 
 The Cloud Adoption Framework also provides structured guidance for adopting specific cloud technologies. These cloud adoption scenarios apply the framework’s principles to each use cases and offers actionable steps based on real-world experiences. Each scenario includes best practices to support your cloud journey and can be integrated into your overall cloud strategy. Use the following table to find the correct scenario:
 
-| **Scenario** | **Description** |
+| CAF Scenario | Description |
 |--------------|-----------------|
 | [AI Adoption on Azure](./scenarios/ai/index.md) | How to use AI in Azure the right way |
 | [Azure VMware Solution](./scenarios/azure-vmware/index.md) | Move VMware workloads to Azure with minimal disruption. |
@@ -55,3 +55,4 @@ The Cloud Adoption Framework also provides structured guidance for adopting spec
 | [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | Migrate and manage Oracle workloads in Azure. |
 | [SAP on Azure](./scenarios/sap/index.md) | Run SAP in Azure with cloud-native tools. |
 | [Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | Move to Azure Virtual Desktop and manage desktops at scale |
+| [High-performance computing](./scenarios/azure-hpc/index.md) | Run high-performance computing workloads in Azure. 
