@@ -685,8 +685,10 @@ items:
 
   - name: Resources
     items:
-    - name: Tools
-      href: resources/tools-templates.md
+    - name: Azure Architecture Center
+      href: /azure/architecture/
+    - name:  Well-Architected Framework
+      href: /azure/architecture/framework/
     - name: Organize
       items:
       - name: Managing organization alignment
@@ -727,12 +729,8 @@ items:
           href: antipatterns/organize-antipatterns.md
         - name: IT fiefdoms and IT silos
           href: organize/fiefdoms-silos.md
-      
-    - name: Azure Architecture Center
-      href: /azure/architecture/
-    - name:  Well-Architected Framework
-      href: /azure/architecture/framework/
-
+    - name: Tools
+      href: resources/tools-templates.md
     - name: Additional resources
       items:
       - name: App Modernization Guidance for Azure
