@@ -16,7 +16,7 @@ This article explains how to organize Azure resources for optimal security, mana
 
 A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent naming reduces management overhead and prevents resource conflicts across teams. You must define a naming standard and use it consistently.
 
-1. **Understand the permanence of names.** You cannot change the name of an Azure resource after you create it, so only put information in the name that won’t change. Use tags to capture all other information.
+1. **Understand the permanence of names.** You can't change the name of an Azure resource after you create it, so only put information in the name that won’t change. Use tags to capture all other information.
 
 1. **Follow Azure naming rules.** Azure names must follow three general principles:
 
@@ -28,13 +28,13 @@ See [naming rules for every Azure resource](/azure/azure-resource-manager/manage
 
 1. **Use abbreviations.** Use [resource type abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to maintain consistency across all Azure services.
 
-1. **Define a naming pattern.** For non-global resources structured format like `{abbreviation}{app name, service name, or purpose}{environment}{instance}` for all resources. A delimiter, like a `-` between elements can make name more readable, but not all resources all you to use special characters. Global resources cannot have the same name as any other Azure resource of the same type. If needed, use a four-digit, alphanumeric organization identifier, `{abbreviation}{workload}{organization identifier}{environment}`. For more examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
+1. **Define a naming pattern.** For nonglobal resources structured format like `{abbreviation}{app name, service name, or purpose}{environment}{instance}` for all resources. A delimiter, like a `-` between elements can make name more readable, but not all resources all you to use special characters. Global resources can't have the same name as any other Azure resource of the same type. If needed, use a four-digit, alphanumeric organization identifier, `{abbreviation}{workload}{organization identifier}{environment}`. For more examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
 ## Build a management hierarchy
 
 A management hierarchy defines governance boundaries and inheritance patterns for Azure resources. Azure provides four management levels where policies, access controls, and budgets flow from higher to lower levels. You must structure this hierarchy to align with your organizational requirements and enable consistent governance across all resources.
 
-1. **Create management groups for workload types.** Create [management groups](/azure/governance/management-groups/create-management-group-portal) that represent distinct workload categories such as corporate applications or internet-facing services. This workload-based structure enables targeted governance policies and simplifies compliance management. Each management group inherits settings from the [root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory) in your Microsoft Entra ID tenant. Use a functional name when you create the management group, such as "Workloads", "Platform", "Online", and "Corporate".
+1. **Create management groups for workload types.** Create [management groups](/azure/governance/management-groups/create-management-group-portal) that represent distinct workload categories such as corporate applications or internet-facing services. This workload-based structure enables targeted governance policies and simplifies compliance management. Each management group inherits settings from the [root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory) in your Microsoft Entra ID tenant. Use a functional name when you create the management group, such as "Workloads", "Platform," "Online," and "Corporate."
 
 2. **Create subscriptions for environment separation.** Establish separate Azure subscriptions for each application environment (development, testing, production) to ensure proper isolation and cost tracking. This subscription strategy prevents cross-environment resource dependencies and enables environment-specific policies. See [steps to create Azure subscriptions](/azure/cost-management-billing/manage/create-subscription). Use [programmatic subscription creation](/azure/cost-management-billing/manage/programmatically-create-subscription) as your Azure usage scales.
 
