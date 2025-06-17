@@ -730,10 +730,10 @@ items:
         - name: IT fiefdoms and IT silos
           href: organize/fiefdoms-silos.md
       
-      - name: Azure Architecture Center
-        href: /azure/architecture/
-      - name:  Well-Architected Framework
-        href: /azure/architecture/framework/
+    - name: Azure Architecture Center
+      href: /azure/architecture/
+    - name:  Well-Architected Framework
+      href: /azure/architecture/framework/
 
     - name: Additional resources
       items:
