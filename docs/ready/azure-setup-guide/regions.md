@@ -73,4 +73,4 @@ For more workload design information, see [Regions and availability zones](/azur
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Manage access](../../)
+> [Manage access](./manage-access.md)
