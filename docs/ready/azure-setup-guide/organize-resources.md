@@ -16,7 +16,7 @@ This article explains how to organize Azure resources for optimal security, mana
 
 A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent naming reduces management overhead and prevents resource conflicts across teams. You must define a naming standard and use it consistently.
 
-1. **Understand the permanence of names.** You can't change the name of an Azure resource after you create it, so only put information in the name that won’t change. Use tags to capture all other information.
+1. **Define permanent names.** Azure resource names cannot be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
 
 1. **Follow Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Azure names must follow three general principles:
 
@@ -26,25 +26,25 @@ A naming convention provides standardized identification across Azure resources,
 
 1. **Use abbreviations.** Use [resource type abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to maintain consistency across all Azure services.
 
-1. **Define a naming pattern.** For nonglobal resources structured format like `{abbreviation}{app name, service name, or purpose}{environment}{instance}` for all resources. A delimiter, like a `-` between elements can make name more readable, but not all resources all you to use special characters. Global resources can't have the same name as any other Azure resource of the same type. If needed, use a four-digit, alphanumeric organization identifier, `{abbreviation}{workload}{organization identifier}{environment}`. For more examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
+1. **Define a naming pattern.** You need a standard naming pattern to facilitate resource management. For nonglobal resources, use a structured format like `{abbreviation}{app name, service name, or purpose}{environment}{instance}` for all resources. Tailor the formate to your specific needs. A delimiter, like a `-`, between elements can make name more readable, but not all resources allow you to use special characters. Global resources can't have the same name as any other Azure resource of the same type. If needed, use an alphanumeric organization identifier to add uniqueness to the name, such as `{abbreviation}{workload}{organization identifier}{environment}`. For more examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
 ## Build a management hierarchy
 
 A management hierarchy defines governance boundaries and inheritance patterns for Azure resources. Azure provides four management levels where policies, access controls, and budgets flow from higher to lower levels. You must structure this hierarchy to align with your organizational requirements and enable consistent governance across all resources.
 
-1. **Create management groups for workload types.** Create [management groups](/azure/governance/management-groups/create-management-group-portal) that represent distinct workload categories such as corporate applications or internet-facing services. This workload-based structure enables targeted governance policies and simplifies compliance management. Each management group inherits settings from the [root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory) in your Microsoft Entra ID tenant. Use a functional name when you create the management group, such as "Workloads", "Platform," "Online," and "Corporate."
+1. **Create management groups for workload types.** Establish [management groups](/azure/governance/management-groups/create-management-group-portal) for distinct workload categories like corporate applications or internet-facing services. This structure simplifies governance and compliance management. Use functional names such as "Workloads," "Platform," "Online," and "Corporate." Each management group inherits settings from the [root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory).
 
-2. **Create subscriptions for environment separation.** Establish separate Azure subscriptions for each application environment (development, testing, production) to ensure proper isolation and cost tracking. This subscription strategy prevents cross-environment resource dependencies and enables environment-specific policies. See [steps to create Azure subscriptions](/azure/cost-management-billing/manage/create-subscription). Use [programmatic subscription creation](/azure/cost-management-billing/manage/programmatically-create-subscription) as your Azure usage scales.
+2. **Create subscriptions for environment separation.** Separate Azure subscriptions for development, testing, and production environments to ensure isolation and cost tracking. This strategy prevents cross-environment dependencies and enables environment-specific policies. See [steps to create Azure subscriptions](/azure/cost-management-billing/manage/create-subscription) and [programmatic subscription creation](/azure/cost-management-billing/manage/programmatically-create-subscription).
 
-3. **Group resources by lifecycle.** Place resources with shared lifecycles into the same [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to streamline deployment and management operations. Grouping resources ensures that related components deploy, update, and delete together as a cohesive unit. Use infrastructure-as-code templates to deploy resources consistently. See [steps to deploy resources](/azure/azure-resource-manager/management/manage-resources-portal#deploy-resources-to-a-resource-group). 
+3. **Group resources by lifecycle.** Place resources with shared lifecycles into the same [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups). This approach streamlines deployment, updates, and deletions. Use infrastructure-as-code templates for consistent deployment. See [steps to deploy resources](/azure/azure-resource-manager/management/manage-resources-portal#deploy-resources-to-a-resource-group).
 
-4. **Align resource locations with the resource group.** Place resources in the same region as their resource group to optimize performance and simplify management. For details, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment). If resources span multiple regions within the same resource group, move them to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription) for better organization.
+4. **Align resource locations with the resource group.** Place resources in the same region as their resource group to optimize performance and simplify management. For details, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment). If resources span multiple regions, move them to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
 ## Apply resource tags
 
-Resource tags provide key-value metadata that enables resource identification, cost allocation, and operational tracking across your Azure environment. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. You must implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
+Resource tags provide key-value metadata for resource identification, cost allocation, and operational tracking. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. Implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
 
-Tags are easier to search and manage than resource names. Use tags to capture all relevant information, such as the resource, application name, environment, department, and location. See the [steps to apply tags](/azure/azure-resource-manager/management/tag-resources-portal).
+Tags simplify resource searches and management. Use tags to capture relevant information such as resource type, application name, environment, department, and location. See [steps to apply tags](/azure/azure-resource-manager/management/tag-resources-portal).
 
 | Key           | Value               |
 |---------------|---------------------|
@@ -54,7 +54,7 @@ Tags are easier to search and manage than resource names. Use tags to capture al
 | Department     | `dept : finance`<br>`dept : sales` |
 | Location       | `region : eastus`<br>`region : westus` |
 
-## Tool and resources
+## Tools and resources
 
 | Category | Tool | Description |
 |----------|------|-------------|
