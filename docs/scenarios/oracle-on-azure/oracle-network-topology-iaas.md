@@ -45,7 +45,7 @@ The Oracle database subnet should include an NSG that allows the following traff
 
 - If you use Azure Bastion to access the Oracle database server, make sure the **AzureBastionSubnet** includes an NSG that allows inbound traffic on port 443.
 
-- Configure proximity placement groups for Oracle application servers and Oracle database servers to minimize network latency.
+- If needed configure proximity placement groups for Oracle application servers and Oracle database servers to minimize network latency.
 
 - Use [accelerated networking](/azure/virtual-network/accelerated-networking-overview) to deploy all services.
 
