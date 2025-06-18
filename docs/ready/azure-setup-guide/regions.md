@@ -61,14 +61,16 @@ Relying on a single Azure region can limit your organization's ability to scale,
 
 For more workload design information, see [Regions and availability zones](/azure/well-architected/reliability/regions-availability-zones).
 
-## Use Azure tools to evaluate regional options
+## Use Azure tools and resources for region selection
 
-| Category | Tool | Description |
+| Category | Resource | Description |
 |----------|------|-------------|
+| Data residency | [Data residency for Azure geographies and regions](https://azure.microsoft.com//explore/global-infrastructure/data-residency/) | Details on data residency for each Azure geography and region |
+| Reliability workload design | [Regions and availability zones](/azure/well-architected/reliability/regions-availability-zones) | Design guidance for workloads using multiple regions and availability zones |
 | Regional Planning | [Azure Geo Map](https://azure.microsoft.com/global-infrastructure/geographies/) | Interactive map that displays Azure region locations, capabilities, and compliance certifications to support regional planning decisions |
-| Service Availability | [Products available by region](https://azure.microsoft.com/global-infrastructure/services/) | Comprehensive list of Azure services offered in each region to validate service availability for workload requirements |
+| Service availability | [Products available by region](https://azure.microsoft.com/global-infrastructure/services/) | Comprehensive list of Azure services offered in each region to validate service availability for workload requirements |
 | Cost Optimization | [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) | Cost comparison tool that evaluates regional pricing differences to optimize deployment expenses across regions |
-| Performance Testing | [Azure Latency Test](https://www.azurespeed.com/Azure/Latency) | Network performance tool that measures latency between your location and Azure regions to validate performance requirements |
+| Latency testing | [Azure latency test](https://www.azurespeed.com/Azure/Latency) | Network performance tool that measures latency between your location and Azure regions to validate performance requirements |
 
 ## Next steps
 
