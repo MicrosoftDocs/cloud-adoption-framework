@@ -3334,6 +3334,11 @@
          "source_path": "docs/ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging",
          "redirect_document_id": true
-      }  
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/naming-and-tagging.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": true
+      }   
    ]   
 }
