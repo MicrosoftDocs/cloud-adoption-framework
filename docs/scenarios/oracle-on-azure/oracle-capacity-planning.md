@@ -43,25 +43,29 @@ Capacity planning for Oracle workloads on Azure infrastructure as a service (Iaa
 
 After you determine the basic performance requirements for the database workload, consider the following recommendations for VM planning:
 
-- Use constrained cores if applicable. Constrained cores provide the memory and throughput capacity of a larger VM SKU with vCPU capacity of a smaller VM SKU. Constrained cores are preferable from an Oracle licensing cost perspective because Oracle licensing is based on processor cores. For more information about how Oracle licensing works on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf). For more information about constrained cores, see [Azure VM sizes](/azure/virtual-machines/sizes).
+- Use constrained cores if applicable. Constrained cores provide the memory and throughput capacity of a larger VM SKU with vCPU capacity of a smaller VM SKU. Constrained cores are preferable from an Oracle licensing cost perspective because Oracle licensing is based on processor cores. For more information about how Oracle licensing works on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf). See here for more information about [constrained core sizes](/azure/virtual-machines/constrained-vcpu?tabs=family-E).
 
-- Use memory-optimized VMs for Oracle workloads. Memory-optimized VMs have a higher memory to vCPU ratio than general purpose VMs. These VMs are preferred for Oracle workloads, which are typically memory intensive. For more information about memory-optimized VMs, see [Memory-optimized VM sizes](/azure/virtual-machines/sizes-memory).
+- Use memory-optimized VMs for Oracle workloads. Memory-optimized VMs have a higher memory to vCPU ratio than general purpose VMs. These VMs are preferred for Oracle workloads, which are typically memory intensive. For more information about memory-optimized VMs, see [M-series VM](/azure/virtual-machines/sizes/memory-optimized/m-family?tabs=mbsv3%2Cmsv3mm%2Cmsv3hm%2Cmsv2mm).
 
-- When you evaluate your overall architecture, include other VMs that are required for high availability, nonproduction environments, and more.
+> **Note**  
+> We recommend using the latest available VM SKUs to ensure optimal performance and compatibility. For example, the [Mdsv3](/azure/virtual-machines/sizes/memory-optimized/mdsv3-mm-series?tabs=sizebasic) offers a robust selection of memory-optimized options. The M-series includes both Medium Memory and High Memory variants, with the appropriate choice depending on the sizing assessment conducted in advance. Another example is the [Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series?tabs=sizebasic).
+
+- When you evaluate your overall architecture, include other VMs that are required for high availability, disaster recovery, non-production environments, and more.
 
 ### Storage considerations
 
 The performance and reliability of Oracle database workloads rely heavily on the design and configuration of the underlying storage infrastructure. Consider the following guidance for storage planning:
 
-- If you use managed disks, make sure to use Azure Premium SSD, Azure Premium SSD v2, or Azure Ultra Disk Storage for Oracle workloads. We don't recommend Azure Standard SSD or Azure Standard HDD for production Oracle workloads. For details about Premium v2 SSD and Ultra Disk Storage limitations, see [Azure managed disks](/azure/virtual-machines/disks-types).
+- When using managed disks, we recommend selecting the appropriate disk type based on workload requirements. Use Azure Premium SSD for operating system-related activities to ensure reliable performance. For non-OS operations, such as data disks, consider Azure Premium SSD v2 to take advantage of enhanced performance capabilities. Azure Ultra Disk Storage is also available for scenarios requiring extremely high throughput and low latency. Ultimately, the choice of storage should align with the specific throughput and data size requirements of your workload. 
+We don't recommend Azure Standard SSD or Azure Standard HDD for production Oracle workloads. For details about Premium v2 SSD and Ultra Disk Storage limitations, see [Azure managed disks](/azure/virtual-machines/disks-types).
 
 - Disk latency might be a concern depending on the characteristics of your workload. For more information about disk latency, see [Azure managed disk types](/azure/virtual-machines/disks-types#disk-type-comparison).
 
-- If you use Premium SSD, configure host caching to `ReadOnly` for all data disks and to `ReadWrite` for the OSDisk class. Host disk caching isn't supported for disks larger than 4,095 GB. To create volumes that are larger than a P50 parameter, or 4 TB, allocate multiple Premium SSD disks to build RAID-0 striped logical volumes. Use a volume manager such as Linux Logical Volume Manger version 2 (LVM2), or allocate multiple Premium SSD disks to build Oracle automatic storage management (ASM) disk groups to meet your desired capacity or required throughput.
+- For Premium SSD `ReadWrite` for the OSDisk class. Host disk caching isn't supported for disks larger than 4,095 GB. To create volumes that are larger than a P50 parameter, or 4 TB, allocate multiple Premium SSD disks to build RAID-0 striped logical volumes. Use a volume manager such as Linux Logical Volume Manger version 2 (LVM2), or allocate multiple Premium SSD disks to build Oracle automatic storage management (ASM) disk groups to meet your desired capacity or required throughput.
+
+- Premium SSD v1 is based on Azure’s original architecture, where disk I/O traverses the host’s network stack and shares bandwidth with other VM traffic, which may impact performance for data-intensive workloads. For improved performance and consistency, Premium SSD v2 leverages a Direct Drive architecture that minimizes reliance on the traditional network path and ultimately reduces latency. For more information about the differences between Premium SSD v1 and Premium SSD v2 please visit [differences between Premium SSD and Premium SSD v2](/azure/virtual-machines/disks-types#differences-between-premium-ssd-and-premium-ssd-v2).
 
 - When you use managed disks, the cumulative throughput of all disks attached to the VM and constrained by the VM SKU determine the disk throughput. For more information, see [Virtual machines and disk performance](/azure/virtual-machines/disks-performance#disk-io-capping).
-
-- When you use managed disks with a write-intensive workload, consider using Ultra Disk Storage for redo logs.
 
 - If throughput requirements exceed the maximum throughput of a single VM, consider using network storage such as [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) because the VM is constrained on network throughput, or egress, rather than disk throughput for such a configuration.
 
