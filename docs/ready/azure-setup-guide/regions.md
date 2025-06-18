@@ -15,7 +15,7 @@ This article helps you choose the Azure regions for your workloads to ensure com
 
 Understand your organization's data residency requirements and select Azure regions in geographic locations that satisfy these requirements. Determine which data sovereignty laws apply to your organization based on your customer locations and industry. Different industries have varying requirements for data storage and processing locations.
 
-## Optimize user proximity
+## Ensure proximity to users
 
 Users and services that access your Azure resources exist in various global locations. Proximity affects performance and user experience. Select regions close to your users and systems to minimize latency and maximize throughput. Follow these steps:
 
@@ -25,7 +25,7 @@ Users and services that access your Azure resources exist in various global loca
 
 1. **Evaluate latency requirements.** Review [Azure network round-trip latency statistics](/azure/networking/azure-network-latency) to understand expected performance between regions and other geographic areas.
 
-## Address reliability
+## Ensure reliability
 
 Reliability ensures workloads remain operational during unexpected events or failures. Use Azure's paired regions and availability zones to enhance resiliency and maintain high availability. Follow these steps:
 
