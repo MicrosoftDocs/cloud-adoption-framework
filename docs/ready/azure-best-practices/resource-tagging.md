@@ -1,22 +1,23 @@
 ---
 title: Define your tagging strategy
 description: Learn about recommendations for tagging your Azure resources and assets and how to define your tagging strategy.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
-ms.date: 12/28/2021
+ms.date: 06/19/2025
 ms.topic: conceptual
-ms.custom: internal, readiness, fasttrack-edit
 ---
 
 # Define your tagging strategy
 
-Tags are metadata elements that are attached to resources and are valid across all regions under your tenant. Tags consist of pairs of key-value strings. The values that you include in these pairs are based on the requirements of your business. When you incorporate your comprehensive naming and tagging policy, apply a consistent set of global tags for overall governance.
+This article shows you how to create an effective tagging strategy that supports cost management, governance, and automation across your Azure environment. Resource tags provide essential metadata that enables accurate cost tracking, automated policy enforcement, and operational oversight for all your Azure resources.
+
+Tags consist of key-value pairs (tag name: tag value) that you attach to Azure resources to categorize them according to your business and operational requirements. A comprehensive tagging strategy ensures consistent resource organization, improves visibility across your Azure environment, and supports automated management processes that scale with your organization's growth.
 
 ## Define your tagging requirements
 
 A clear tagging strategy ensures your resources align with business goals and operational needs. Resource tags provide the foundation for cost management, governance, and automation across your Azure environment. You must assess your specific requirements to create effective tagging standards. Here's how:
 
-1. **Evaluate existing policies.** Your Azure tagging approach must align with current organizational standards to maintain consistency. Inconsistent tagging creates confusion and reduces the effectiveness of resource management. Review your company's existing naming conventions and governance policies to ensure your Azure tags complement these established practices.
+1. **Evaluate existing policies.** Your Azure tagging approach must align with current organizational standards to maintain consistency. Inconsistent tagging creates confusion and reduces the effectiveness of resource management. To ensure your Azure tags complement these established practices, review your company's existing naming conventions and governance policies.
 
 2. **Determine cost allocation needs.** Tags support detailed cost tracking for chargeback or showback reporting across departments and business units. Identify whether you need granular cost allocation beyond the subscription level to support accurate billing and budget management. For more information, see [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance).
 
@@ -32,7 +33,7 @@ Tag consistency enables effective resource management and cost tracking across y
 
 1. **Do not add sensitive values to tags.** Tags store data as plain text and remain visible through cost reports, API responses, deployment histories, exported templates, and monitoring logs. Don't store sensitive values such as passwords, personal information, or confidential business data in resource tags.
 
-1. **Understand case sensitivity in tags.** Tag keys are case insensitive, but tag values are case-sensitive. Case sensitivity differences can create confusion when you filter resources or generate reports based on tag values. Apply consistent casing for tag values to ensure accurate resource management and reporting. Use lowercase for tag keys and maintain consistent capitalization for tag values. For example, `Environment: production` and `environment: production` represent the same tag. However, `environment: Production` and `environment: production` are different values that appear separately in cost reports and resource queries.
+1. **Understand case sensitivity in tags.** Tag names (keys) are case insensitive, but tag values are case-sensitive. Case sensitivity differences can create confusion when you filter resources or generate reports based on tag values. Apply consistent casing for tag values to ensure accurate resource management and reporting. Use lowercase for tag names (keys) and maintain consistent capitalization for tag values. For example, `Environment: production` and `environment: production` represent the same tag. However, `environment: Production` and `environment: production` are different values that appear separately in cost reports and resource queries.
 
 1. **Include tags that indicate region.** Multi-region Azure operations need clear regional visibility to support compliance, cost allocation, and operational management requirements. Add region-specific tags like "region: eastus" to maximize operational efficiency and enable accurate regional reporting across your deployments.
 
@@ -42,23 +43,23 @@ Tag consistency enables effective resource management and cost tracking across y
 
 Core tagging patterns provide proven frameworks for organizing Azure resources according to different business and operational needs. Multiple tagging approaches work together to support comprehensive resource management across your organization. You must implement foundational tagging patterns that align with your governance requirements and operational processes. Here's how:
 
-1. **Use functional tags for operational management.** Functional tags categorize resources by their technical role, environment, and deployment characteristics within your workloads. Operational teams need clear resource identification to support deployment automation, monitoring, and troubleshooting activities. Apply functional tags like application name, tier, environment, and region to enable effective resource organization and operational oversight.
+1. **Use functional tags for operational management.** Functional tags categorize resources by their technical role, environment, and deployment characteristics within your workloads. Operational teams need clear resource identification to support deployment automation, monitoring, and troubleshooting activities. To enable effective resource organization and operational oversight, apply functional tags like application name, tier, environment, and region.
 
-1. **Apply classification tags for governance and security.** Classification tags identify the sensitivity level, compliance requirements, and usage policies that apply to each resource. Security and compliance teams need clear resource classification to enforce appropriate protection measures and access controls. Implement classification tags such as data confidentiality levels and SLA requirements to support automated policy enforcement and compliance reporting.
+1. **Apply classification tags for governance and security.** Classification tags identify the sensitivity level, compliance requirements, and usage policies that apply to each resource. Security and compliance teams need clear resource classification to enforce appropriate protection measures and access controls. Implement classification tags such as data confidentiality levels and service level agreement (SLA) requirements to support automated policy enforcement and compliance reporting.
 
-1. **Implement accounting tags for cost management.** Accounting tags associate resources with specific organizational units, projects, or cost centers to enable accurate financial tracking and reporting. Finance teams need detailed cost attribution to support chargeback, showback, and budget management processes. Use accounting tags like department, program, and region to facilitate precise cost allocation and financial accountability. For more information, see [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance).
+1. **Implement accounting tags for cost management.** Accounting tags associate resources with specific organizational units, projects, or cost centers to enable accurate financial tracking and reporting. Finance teams need detailed cost attribution to support chargeback, showback, and budget management processes. Use accounting tags like department, program, and region for precise cost allocation. For more information, see [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance).
 
 1. **Establish purpose tags for business alignment.** Purpose tags connect resources to specific business functions, processes, and impact levels to support investment decisions and priority management. Business stakeholders need clear visibility into how IT resources support organizational objectives and revenue generation. Deploy purpose tags such as business process, business impact, and revenue impact to demonstrate IT value and guide resource optimization decisions.
 
 1. **Define ownership tags for accountability.** Ownership tags identify the business units and operational teams responsible for each resource to ensure clear accountability and effective communication. Resource management requires defined ownership to support incident response, change management, and lifecycle planning activities. Establish ownership tags including business unit and operations team to maintain clear responsibility boundaries and enable efficient resource governance.
 
-| Tag type | Examples | Description |
+| Tag type | Description | Examples |
 |--|--|--|
-| Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` <br> `region` = `eastus` <br> `region` = `uksouth` | Categorizes resources by their purposes within a workload, environment, and region they're deployed to, or other functionality and operational details |
-| Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by use and the policies that apply to it |
-| Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Associates a resource with specific groups within an organization for billing purposes.  |
-| Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
-| Ownership | *BusinessUnit* <br><br> <li> `Finance` <li> `Marketing` <li> `Product XYZ` <li> `Corp` <li> `Shared` *OpsTeam* <br><br> <li> `Central IT` <li> `Cloud operations` <li> `ControlCharts team` <li> `MSP-{Managed Service Provider name}` | Top-level division of your company that owns the subscription or workload that the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. Team accountable for day-to-day operations. |
+| Functional | Categorizes resources by their purposes within a workload, environment, and region they're deployed to, or other functionality and operational details | `app : catalogsearch1` <br> `tier : web` <br> `webserver : apache` <br> `env : prod` <br> `env : staging` <br> `env : dev` <br> `region : eastus` <br> `region : uksouth` |
+| Classification | Classifies a resource by use and the policies that apply to it | `confidentiality : private` <br> `sla : 24hours` |
+| Accounting | Associates a resource with specific groups within an organization for billing purposes. | `department : finance` <br> `program : business-initiative` <br> `region : northamerica` |
+| Purpose | Aligns resources to business functions to better support investment decisions. | `businessprocess : support` <br> `businessimpact : moderate` <br> `revenueimpact : high` |
+| Ownership | Owner or team accountable for subscription. | `businessunit : finance` <br> `businessunit : marketing` <br> `businessunit : product xyz` <br> `businessunit : corp` <br> `businessunit : shared` <br> `opsteam : central it` <br> `opsteam : cloud operations` <br> `opsteam : controlcharts team` <br> `opsteam : msp-contoso` |
 
 ## Use tags to support Microsoft assessments
 
@@ -68,20 +69,20 @@ For Microsoft to use during workload assessment, apply existing tags that accura
 
 Use the following tags to increase visibility into the usage of Azure resources.
 
-| Tag name | Description | Key: value examples |
+| Tag name | Description | Tag name: tag value examples |
 |--|--|--|
-| **Application name** | Added granularity, if the workload is subdivided across multiple applications or services. | *ApplicationName* <br><br> <li> `IssueTrackingSystem` |
-| **Approver name** | Person responsible for approving costs related to the resource. | *Approver* <br><br> <li> `chris@contoso.com` |
-| **Budget required/approved** | Money approved for the application, service, or workload. | *BudgetAmount* <br><br> <li> `$200,000` |
+| **Application name** | Added granularity, if the workload is subdivided across multiple applications or services. | *app* <br><br> <li> `IssueTrackingSystem` |
+| **Approver name** | Person responsible for approving costs related to the resource. | *approver* <br><br> <li> `chris@contoso.com` |
+| **Budget required/approved** | Money approved for the application, service, or workload. | *budget* <br><br> <li> `$200,000` |
 | **Cost center** | Accounting cost center associated with the resource. | *CostCenter* <br><br> <li> `55332` |
-| **Disaster recovery** | Business criticality of the application, workload, or service. | *DR* <br><br> <li> `Mission-critical` <li> `Critical` <li> `Essential` |
+| **Disaster recovery** | Business criticality of the application, workload, or service. | *criticality* <br><br> <li> `Mission-critical` <li> `Critical` <li> `Essential` |
 | **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | *EndDate* <br><br> <li> `2023-10-15` |
-| **Environment** | Deployment environment of the application, workload, or service. | *Env* <br><br> <li> `Prod` <li> `Dev` <li> `QA` <li> `Stage` <li> `Test` |
-| **Azure region** | Region where you create the resource. | *AzureRegion* <br><br> <li> `West Europe` <li> `UK South` <li> `East US` <li> `Japan East` <li> `Qatar Central` |
-| **Owner name** | Owner of the application, workload, or service. | *Owner* <br><br> <li> `jane@contoso.com` |
-| **Requester name** | User who requested the creation of the application. | *Requester* <br><br> <li> `john@contoso.com` |
-| **Service class** | Service-level agreement level of the application, workload, or service. | *ServiceClass* <br><br> <li> `Dev` <li> `Bronze` <li> `Silver` <li> `Gold` |
-| **Start date of the project** | Date when the application, workload, or service was first deployed. | *StartDate* <br><br> <li> `2020-10-15` |
+| **Environment** | Deployment environment of the application, workload, or service. | *environment* <br><br> <li> `Prod` <li> `Dev` <li> `QA` <li> `Stage` <li> `Test` |
+| **Azure region** | Region where you create the resource. | *region* <br><br> <li> `West Europe` <li> `UK South` <li> `East US` <li> `Japan East` <li> `Qatar Central` |
+| **Owner name** | Owner of the application, workload, or service. | *owner* <br><br> <li> `jane@contoso.com` |
+| **Requester name** | User who requested the creation of the application. | *requester* <br><br> <li> `john@contoso.com` |
+| **Service class** | Service-level agreement level of the application, workload, or service. | *service class* <br><br> <li> `Dev` <li> `Bronze` <li> `Silver` <li> `Gold` |
+| **Start date of the project** | Date when the application, workload, or service was first deployed. | *startdate* <br><br> <li> `2020-10-15` |
 
 ## Next step
 
