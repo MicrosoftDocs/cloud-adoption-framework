@@ -1,8 +1,8 @@
 ---
 title: Network topology and connectivity for Oracle on Azure Virtual Machines
 description: Learn about network topology and connectivity for Oracle on Azure Virtual Machines.
-author: jjaygbay1
-ms.author: jacobjaygbay
+author: jessiehaessler
+ms.author: jhaessler
 ms.reviewer: ramakoni
 ms.date: 05/2/2024
 ms.topic: conceptual

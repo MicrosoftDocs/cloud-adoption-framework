@@ -1,8 +1,8 @@
 ---
 title: Capacity Planning for Oracle Workloads on Azure Virtual Machines
 description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Azure infrastructure as a service.
-author: Jfaurskov
-ms.author: janfaurs
+author: jessiehaessler
+ms.author: jhaessler
 ms.date: 04/26/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency2, e2e-oracle
