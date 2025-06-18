@@ -26,11 +26,3 @@ Before you start building and deploying solutions by using Azure services, you n
 
 > [!div class="nextstepaction"]
 > [Organize your resources to simplify how you apply settings](./organize-resources.md)
-
-::: zone-end
-
-::: zone target="chromeless"
-
-This guide provides interactive steps that let you try features as they're introduced. To come back to where you left off, use the breadcrumb for navigation.
-
-::: zone-end

@@ -39,12 +39,12 @@ Consider deploying resources across multiple regions when your organization need
 
 | Scenario | Implementation |
 |----------|----------------|
-| **Ensure high availability and disaster recovery.** Deploy workloads across multiple regions to protect your services from regional outages and natural disasters. | Use Azure paired regions and services like Azure Site Recovery and geo-redundant storage (GRS) to enable failover and business continuity. |
+| **Ensure high availability and disaster recovery.** | Deploy workloads across multiple regions to protect your services from regional outages and natural disasters. Use Azure paired regions and services like Azure Site Recovery and geo-redundant storage (GRS) to enable failover and business continuity. |
 | **Support global users and distributed teams.** Deploy resources in multiple regions to reduce latency and improve performance when your users or teams span continents. | Use Azure Front Door or Traffic Manager to route users to the nearest regional instance for optimal performance. |
-| **Meet data residency and compliance requirements.** Deploy across multiple regions to store and process data within specific geographic boundaries as mandated by industries and jurisdictions. | Multi-region deployments allow you to comply with regulations while maintaining centralized management and control. |
-| **Scale beyond regional capacity limits.** Distribute workloads across regions to avoid resource quotas and capacity constraints that exist in each Azure region. | Multiple regions help you avoid hitting limits and support continued growth without service disruption. |
-| **Optimize for cost and resource efficiency.** Use regional pricing differences to reduce operational costs for your workloads. | Run noncritical workloads such as development, testing, or batch processing in lower-cost regions. Use the Azure Pricing Calculator to compare regional pricing. |
-| **Avoid capacity constraints.** Deploy workloads in alternate regions when you encounter temporary capacity limitations in your primary region. | Multiple regions provide flexibility to find available resources for your workloads when capacity issues arise. |
+| **Meet data residency and compliance requirements.** | Deploy across multiple regions to store and process data within specific geographic boundaries as mandated by industries and jurisdictions. Multiple regions allow you to comply with regulations while maintaining centralized management and control. |
+| **Scale beyond regional capacity limits.** | Distribute workloads across regions to avoid resource quotas and capacity constraints that exist in each Azure region. Multiple regions help you avoid hitting limits and support continued growth without service disruption. |
+| **Optimize for cost and resource efficiency.** | Use regional pricing differences to reduce operational costs for your workloads. Run non-critical workloads such as development, testing, or batch processing in lower-cost regions. Use the Azure Pricing Calculator to compare regional pricing. |
+| **Avoid capacity constraints.** | Deploy workloads in alternate regions when you encounter temporary capacity limitations in your primary region. Multiple regions provide flexibility to find available resources for your workloads when capacity issues arise. |
 
 For more information, see [Regions and availability zones](/azure/well-architected/reliability/regions-availability-zones).
 
