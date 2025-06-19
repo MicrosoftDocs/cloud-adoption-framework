@@ -39,7 +39,9 @@ Azure regions offer different service availability, pricing models, and infrastr
 
 1. **Select regions with availability zones.** Some Azure regions include availability zones while others don't. You need to check the [Azure regions list](/azure/reliability/regions-list#azure-regions-list-1) to identify regions with availability zones. Use this information to prioritize regions that meet your workload reliability requirements.
 
-1. **Understand region pairing implications.** Some Azure regions form pairs while others don't. Region pairing disaster recovery strategies and service replication capabilities. You should know whether your selected region form pairs to design appropriate reliability and backup strategies. For more information, see [Azure region pairs and nonpaired regions](/azure/reliability/regions-paired).
+1. **Understand region pairing implications.** Some Azure regions form pairs while others don't. Region pairing affects your disaster recovery strategies and service replication capabilities. You should know whether your selected region form pairs to design appropriate reliability and backup strategies. For more information, see [Azure region pairs and nonpaired regions](/azure/reliability/regions-paired).
+
+1. **Understand Azure region capacity constraints.** Azure regions are subject to quota and capacity limits. These limits can affect your ability to deploy workloads as planned. Review the [subscription constraints per region](/azure/azure-resource-manager/management/azure-subscription-service-limits). For capacity, sometimes capacity constraints can be addressed through quota increases. Use Azure CLI capabilities to check on capacity availability for your services where available. Contact Microsoft support if you anticipate high usage or need quota increases.
 
 ## Know when to use multiple regions
 
