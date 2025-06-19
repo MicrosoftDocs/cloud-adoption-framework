@@ -1,7 +1,7 @@
 ---
 title: Manage modern application platform solutions for optimal performance and reliability
 description: Learn how to establish operations management for containerized workloads and Azure Kubernetes Service clusters to ensure optimal performance, security, and cost efficiency.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 06/19/2025
 ms.topic: conceptual
