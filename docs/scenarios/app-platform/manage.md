@@ -1,109 +1,111 @@
 ---
-title: Manage modern application platform solutions
-description: Learn how to manage modern application platform clusters.
+title: Manage modern application platform solutions for optimal performance and reliability
+description: Learn how to establish operations management for containerized workloads and Azure Kubernetes Service clusters to ensure optimal performance, security, and cost efficiency.
 author: Zimmergren
 ms.author: pnp
-ms.date: 03/01/2021
+ms.date: 06/19/2025
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks
 ---
 
-# Manage modern application platform clusters
+# Manage modern application platform solutions for optimal performance and reliability
 
-The [Cloud Adoption Framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This guidance might still apply for organizations that have a mixture of infrastructure as a service (IaaS), platform as a service (PaaS), and containerized workloads. This article outlines what you need to integrate into your existing operations to prepare for container management. It also highlights the benefits of integrating Azure Kubernetes Service (AKS) into your container management strategy.
+This article helps you establish operations management for containerized workloads and Azure Kubernetes Service (AKS) clusters. Proper operations management ensures your modern application platforms deliver optimal performance, security, and cost efficiency while maintaining high availability for your business-critical applications.
 
-## Business alignment for operations management needs
+## Align your business needs with operations management
 
-Containers remove dependencies on several layers of infrastructure, leading to improved operations management capabilities. To realize these operational improvements, you might have to revise your overall cloud management strategy, starting with the business alignment.
+Containers improve resource utilization, enable faster deployments, and simplify scaling. Operations management must integrate container-specific practices with existing cloud strategies to achieve these benefits. Here's how:
 
-To establish proper operations management practices, you must understand how containers will be used in your cloud adoption plans and what benefits you want to realize from this shift to containerized workloads.
+1. **Define operations ownership.** Decide whether centralized teams manage container platforms while workload teams handle applications, or adopt a decentralized approach. Consider technology diversity, team expertise, business criticality, and security requirements.
 
-- Will you manage multiple technology solutions, such as containers, IaaS, and PaaS, in your cloud platform?
-- Will centralized teams support operations and management of the container or AKS platform? Does this accountability shift to the individual workload teams?
-- Will centralized teams support operations and management of the workloads running in each container or pod? Does this accountability shift to the individual workload teams?
-- Are you using containers for mission-critical workloads?
-- Are you only using containers for less-critical or utility workloads to reduce costs?
-- How important is the performance and reliability of your individual workloads?
-- Are the applications in your containers state-less? Do you need to persist state to protect and recover the workloads in the containers?
+1. **Evaluate state management.** Identify whether applications are stateless or require persistent data. Stateless apps simplify operations, while stateful apps need specialized storage and backup strategies.
 
-These basic questions will shape how to best integrate containers and AKS into your operations management strategy.
+## Implement platform operations
 
-## Operations baseline
+Platform operations extend your operations baseline with container-specific management capabilities. Platform operations provide the specialized tools and processes needed to manage AKS clusters and containerized workloads effectively. You need to implement platform operations unless containers represent your organization's first cloud deployment.
 
-Implementing an operations baseline provides centralized access to the tools required to operate and manage all assets in your cloud environment. Your operations baseline should include tools and configurations to provide visibility, monitoring, operational compliance, optimization, and protection/recovery.
+### Monitor inventory and ensure visibility
 
-![Operations management baseline](../../_images/manage/management-baseline.png)
+Container environments require specialized monitoring configurations to capture unique monitoring data. Standard operations tools must extend to support container-specific metrics and analysis. You need comprehensive visibility into cluster health, workload performance, and resource utilization to ensure optimal operations. Here's how:
 
-The operations baseline outlined in the articles above won't provide support for your containers or AKS platform. However, it will provide the tooling foundation that can be extended to support containers, such as Azure Monitor, Azure Backup, and other tools.
+1. **Deploy Azure Monitor for containers to collect comprehensive telemetry.** Azure Monitor for containers provides the foundation for container operations monitoring. This solution captures critical operational data that platform teams need for infrastructure management and workload teams require for application optimization. Configure [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview) to monitor these essential areas:
 
-If most of your portfolio in the cloud is hosted in containers, consider including the specialized platform operations in the next section into your operations baseline.
+- Cluster topology and resource utilization across regions
+- Node pool configurations, networking, and storage architectures
+- AKS version and node image compliance status
+- CPU, memory, and storage utilization at cluster and container levels
+- Workload behavior under normal and peak load conditions
+- Automated alerting for threshold breaches and health state changes
 
-## Platform operations
+1. **Configure standardized queries and dashboards for operational consistency.** Standardized monitoring approaches reduce operational complexity and ensure consistent visibility across teams. You must establish common monitoring patterns that both platform and workload teams can use effectively. Configure [Azure Monitor queries](/azure/azure-monitor/containers/container-insights-log-query) to create standardized dashboards and alerts that align with your operational model and service level agreements.
 
-Unless this implementation is your organization's first or only deployment to the cloud, you should have an operations baseline. This section identifies a few tools you might want to include to help manage container or AKS deployment.
+1. **Integrate application-specific metrics through Prometheus collection.** Application metrics provide insights that infrastructure monitoring can't capture. You need application-level monitoring to understand workload behavior and optimize performance effectively. Integrate with [Prometheus](/azure/azure-monitor/containers/container-insights-prometheus-integration) to collect custom application metrics and combine them with infrastructure data for comprehensive observability across your container platform.
 
-### Inventory and visibility
+1. **Extend monitoring coverage to hybrid and multicloud environments.** Consistent monitoring across all container platforms simplifies operations and reduces management overhead. You must maintain unified visibility regardless of where your containers run to ensure operational consistency. Extend monitoring to include AKS Engine on-premises, Azure Red Hat OpenShift, and Azure Arc-enabled Kubernetes clusters for comprehensive visibility across your entire container portfolio.
 
-Monitoring containers and AKS clusters use the tools, dashboards, and alerts included in your operations baseline. However, you might need to do more configuration to get the data from your containers into operations monitoring tools, like [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). See the [overview of Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) to gather the data needed to add container and AKS platform operations to your operations baseline.
+### Maintain operations compliance
 
-Once you've configured Azure Monitor to collect data on your containers, you can monitor the following areas as part of your centralized management processes:
+Operations compliance in containerized environments requires management at multiple levels: AKS clusters, node images, and node operating systems. Operations compliance ensures security, performance, and supportability through regular updates and patches. You must determine whether centralized teams or workload teams handle these responsibilities based on your operational model.
 
-- Identify clusters running in various regions, ideally tied to a service tree entry and identify key facts on those clusters
-  - Identify cluster node pool, networking, and storage topologies of those clusters
-  - Identify AKS version and node image version stratification.
-- Identify cluster node resource utilization (process, memory, and storage)
-- Identify containers that are running on the nodes and their contribution to node utilization
-- Understand the behavior of clusters under average and heaviest loads. This knowledge can help you identify capacity needs and determine the maximum load that the cluster can sustain.
-- Configure alerts to proactively notify you or record when CPU and memory utilization on nodes or containers exceed your thresholds, or when a health state change occurs in the cluster at the infrastructure or nodes health rollup.
-- Use [queries](/azure/azure-monitor/containers/container-insights-log-query) to create a common set of alerts, dashboards, and detailed perform detailed analysis
+Operations teams monitor usage patterns, resize resources to balance performance and cost, and apply patches to minimize security risks and configuration drift. The complexity of container operations requires clear ownership models and well-defined processes.
 
-This data will also support workload operations teams by providing detailed information about the workloads running on the containerized platform:
+1. **Evaluate operations ownership models for your environment.** Operations ownership affects update frequency, testing procedures, and incident response. You need to choose an ownership model that aligns with your team structure and business requirements. Consider these approaches:
+   - Workload team ownership provides granular control and faster updates but requires more team expertise
+   - Centralized ownership offers standardization and cost efficiency but reduces flexibility and responsiveness
 
-- Review the resource utilization of workloads running on the host that are unrelated to the standard processes that support the pod.
-- Integrate with [Prometheus](/azure/azure-monitor/containers/container-insights-prometheus-integration) to view application metrics.
-- Monitor container workloads deployed to AKS engine on-premises and AKS engine on Azure Stack.
-- Monitor container workloads deployed to Azure Red Hat OpenShift.
-- Monitor container workloads deployed to Azure Arc enabled Kubernetes (preview).
+2. **Implement systematic upgrade and maintenance procedures.** Regular maintenance prevents security vulnerabilities and ensures platform supportability. You must establish scheduled maintenance windows and testing procedures to minimize business impact. Follow these Azure-specific procedures:
+   - [Upgrade AKS clusters](/azure/aks/upgrade-cluster) using blue-green or rolling update strategies
+   - [Upgrade node images](/azure/aks/node-image-upgrade) to include latest security patches
+   - [Process node OS updates](/azure/aks/node-updates-kured) using automated tools like Kured
+   - Apply [patching and upgrade best practices](/azure/architecture/operator-guides/aks/aks-upgrade-practices) for enterprise environments
 
-### Operations compliance
+3. **Establish risk management procedures for multitenant clusters.** Multitenant clusters require careful coordination between teams and thorough testing procedures. You need contingency plans for workloads that can't support cluster upgrades and clear communication channels for maintenance activities. Test all upgrades in preproduction environments and maintain detailed rollback procedures.
 
-Patching, tuning, and sizing happens at a few different levels in a containerized environment. The operators may sit in a number of different teams, depending on your desired operations approach. To maintain operations compliance, an operator will monitor usage, resize assets to balance performance and cost, and patch the underlying systems to minimize risk and configuration drift. Central IT organizations tend to deliver these tasks as part of the operations baseline for IaaS and PaaS solutions.
+### Protect and recover workloads
 
-In a cluster environment in Azure, these tasks are performed at multiple levels: AKS cluster, node image, and node OS. All of these operations tasks become more dependent on an understanding and working relationship of the workloads running in the clusters or on individual node pools. The following statements will help evaluate what and if you want to do to operate your container environments.
+AKS nodes are ephemeral and designed for replacement rather than individual restoration. Recovery operations focus on workload redeployment and data restoration rather than infrastructure repair. You must design protection and recovery strategies that account for the ephemeral nature of container infrastructure while ensuring business continuity. Here's how:
 
-- If the sizing and patching of the AKS cluster, node image or node OS is delivered as part of the deployment pipeline for the application or is dependent on application architecture or configuration, then it's best to shift operational compliance to the workload team for granular control. Because workloads often take a dependency on orchestration features, this is the most common pattern as an unexpected AKS version change or node image change could be catastrophic to the workload or its runtime tooling.
-- For the less common centralized clusters, supporting a portfolio of workloads and a variety of applications, the centralized operations team may still be responsible for operational compliance tasks, the following guides will help deliver those tasks across your clusters. Executing these tasks on a recurring basis instills platform specific operations. There is notable risk in a central operations approach, and careful testing of upgrades in preproduction environments, clear and adhered to scheduled maintenance, and contingency plans for noncompliant workloads all need to be in place. One bad upgrade can be a single point of failure and likewise, one workload not able to upgrade can cause a cluster to fall out of support. Plan and manage multitenant clusters with due diligence.
+1. **Implement service level agreements and availability measures.** Service level agreements define your recovery objectives and determine your protection investments. You need to establish service level agreements (SLAs) that balance business requirements with operational costs. Consider these protection levels:
+   - Add an [uptime SLA to your cluster](/azure/aks/uptime-sla) for improved availability guarantees
+   - Implement [multiregion BCDR best practices](/azure/aks/operator-best-practices-multi-region) for mission-critical workloads
+   - Design appropriate redundancy and failover mechanisms based on workload criticality
 
-For both cluster types, follow the guidance on upgrades, node images, and node OS updates found below:
+2. **Establish data protection and state management procedures.** Data protection requirements vary significantly between stateless and stateful applications. You must identify applications that require persistent state and implement appropriate backup and recovery mechanisms. Follow these approaches:
+   - Use your existing operations baseline guidance for external state restoration
+   - Implement [storage best practices](/azure/aks/operator-best-practices-storage) for applications that require persistent state
+   - Establish procedures to [back up and restore persistent data](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) for stateful workloads
+   - Consider platform-specific tools like [Velero](https://github.com/vmware-tanzu/velero) for comprehensive backup and recovery
 
-- [Upgrade the AKS cluster](/azure/aks/upgrade-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [Upgrade the node image](/azure/aks/node-image-upgrade?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [Process node OS updates](/azure/aks/node-updates-kured?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [Patching and upgrade guidance](/azure/architecture/operator-guides/aks/aks-upgrade-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+3. **Standardize recovery toolchains across your portfolio.** Inconsistent recovery approaches increase operational complexity and costs. You must choose a standardized recovery approach for all containerized workloads to reduce management overhead. If applications can't conform to the standard recovery approach, shift the responsibility for alternative solutions to workload teams while providing clear guidance and support.
 
-### Protect and recover
+## Design workload operations
 
-AKS nodes are ephemeral in nature, and as such are not backed up in a way that can be individually restored. Recovering from an incident may involve redeploying workloads to a new node pool or a whole new cluster depending on the scope of the incident.
+Workload operations address the fundamental question of operations ownership in containerized environments. Organizations must decide whether to treat Kubernetes clusters as centrally managed technology platforms or as workload-specific tools managed by application teams. Both approaches offer distinct advantages and tradeoffs.
 
-- Choose to add an [uptime SLA to your cluster](/azure/aks/uptime-sla).
-- For higher SLAs, you may also want to consider [multiregion BCDR best practices](/azure/aks/operator-best-practices-multi-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) to provide additional protection.
-- Since clusters should not contain state, external state restoration is handled using existing operations baseline guidance. If you brought state into your clusters ensure your following the [operators best practice on storage](/azure/aks/operator-best-practices-storage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json), and have a strategy to [back and up restore this data](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) for a given workload. Use of tools like [Velero](https://github.com/vmware-tanzu/velero) is an example of platform specific operations, that extend your operations baseline.
-  - If your portfolio of applications inconsistently applies state, the central operations team shouldn't try to maintain both solutions. Instead, standardize on the desired-state toolchain for all containers, but shift the responsibility for alternative recovery solutions to workload operations teams. This approach allows design freedom for the developers, keeps central costs lower, and provides a cost-reduction incentive for workload teams to conform to the standard.
+Containers and AKS enable workload teams to implement application-specific operational processes and use specialized features that benefit their customers. Workload operations can extend your operations baseline and platform operations, or operate independently through decentralized approaches.
 
-## Workload operations
+Use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment) to define specific operational processes and tools for individual workloads. These tools help you establish workload-specific requirements for reliability, security, cost optimization, operational excellence, and performance efficiency.
 
-The platform operations section above illustrates a common conversation when managing AKS clusters. Are Kubernetes clusters a technology platform to be managed centrally? Or are they a workload tool that should be managed by the teams who own each of the workloads? That question is different for different organizations. The constant seen across most organizations is that containers and AKS are designed to give the workload teams more flexibility in how they want to operate each workload, and provide specific features for those workloads to use in their architecture to benefit the application's owners and customers.
+## Azure resources
 
-Workload operations can build on your existing operations baseline and platform-specific operations. You can also safely operate an AKS cluster using completely decentralized workload operations. In either case, when you need to elevate operations to focus on specific outcomes for a specific workload, you can use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment) to get very specific on the types of operational processes and tools to use for your workload.
+The following Azure tools and resources support the operations management recommendations in this article:
 
-## Next step: Your next migration iteration
+| Category | Tool | Description |
+|----------|------|-------------|
+| Monitoring and visibility | [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview) | Provides comprehensive monitoring of AKS clusters, nodes, and containers with built-in dashboards and alerting |
+| Monitoring and visibility | [Azure Monitor queries](/azure/azure-monitor/containers/container-insights-log-query) | Enables custom dashboards and detailed analysis of container performance and health metrics |
+| Monitoring and visibility | [Prometheus integration](/azure/azure-monitor/containers/container-insights-prometheus-integration) | Collects application-specific metrics and integrates with Azure Monitor for unified observability |
+| Operations compliance | [AKS cluster upgrade](/azure/aks/upgrade-cluster) | Provides automated and manual upgrade processes for AKS clusters with minimal downtime |
+| Operations compliance | [Node image upgrade](/azure/aks/node-image-upgrade) | Updates node images with latest security patches and operating system updates |
+| Operations compliance | [Node OS updates](/azure/aks/node-updates-kured) | Automates node operating system updates using tools like Kured for seamless maintenance |
+| Operations compliance | [Patching and upgrade guidance](/azure/architecture/operator-guides/aks/aks-upgrade-practices) | Provides enterprise best practices for AKS maintenance and upgrade procedures |
+| Protection and recovery | [AKS uptime SLA](/azure/aks/uptime-sla) | Offers financially backed service level agreements for improved cluster availability |
+| Protection and recovery | [Multiregion BCDR practices](/azure/aks/operator-best-practices-multi-region) | Implements business continuity and disaster recovery across multiple Azure regions |
+| Protection and recovery | [Storage best practices](/azure/aks/operator-best-practices-storage) | Provides guidance for persistent storage management and data protection in AKS |
+| Workload operations | [Azure Well-Architected Framework](/azure/architecture/framework/) | Defines operational excellence principles for individual workloads and applications |
+| Workload operations | [Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment) | Provides assessment tools for workload-specific operational requirements and optimization |
 
-Once the modern application platform migration is complete, the cloud adoption team can begin your next scenario-specific migration. Alternatively, if there are addition platforms to be migrated, this article series can be used again to guide your next modern application platform migration or deployment.
+## Next steps
 
-- [Strategy for modern application platforms](./strategy.md)
-- [Plan for modern application platforms](./plan.md)
-- [Review your environment or Azure landing zones](./ready.md)
-- [Migrate workloads to modern application platforms](./migrate.md)
-- [Innovate using modern application platform solutions](./innovate.md)
-- [Govern modern application platform solutions](./govern.md)
-- [Manage modern application platform solutions](./manage.md)
+> [!div class="nextstepaction"]
+> [Strategy for modern application platforms](./strategy.md)
