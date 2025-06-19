@@ -22,8 +22,7 @@ Review all the content to ensure it aligns with the following template. Keep all
 
     ## Each {heading} must be an imperative recommendation.
 
-    The first sentence must use a declarative sentence that doesn't start with a pronoun to explain this imperative recommendation in {heading} is important in the context of this article, but it must not with a gerund (verb ending in -ing) (1 sentence). The next sentence must descriptive states why this {heading} is important in the context of this {title} (1 sentence). The next sentence states what "You must" or "need to do" to reach the {goal} implied by the {heading} 
- (1 sentence). "Here's how:" Use numbered lists to enforce sequentially. 
+    The first sentence must use a declarative sentence that doesn't start with a pronoun to explain this imperative recommendation in {heading} is important in the context of this article, but it must not with a gerund (verb ending in -ing) (1 sentence). The next sentence must descriptive states why this {heading} is important in the context of this {title} (1 sentence). The next sentence states what "You must" or "need to do" to reach the {goal} implied by the {heading} (1 sentence). "Here's how:" Use numbered lists to enforce sequentially. 
 
     1. **Start with a {numbered imperative recommendation} that indicates how to reach the {goal}, which must be logically first compared to the of the numbered imperative recommendations.** This sentence must state what this {numbered imperative recommendation} is about and use a declarative sentence that doesn't start with a pronoun (1 sentence). This section must state why this {numbered imperative recommendation} is important and note any tradeoffs that are present (keep this section to 1 sentence). This section must explain how to follow this recommendation in Azure (keep this section to 1-3 sentences).
 
