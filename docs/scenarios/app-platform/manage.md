@@ -82,9 +82,7 @@ AKS nodes are ephemeral and designed for replacement rather than individual rest
 
 ## Design workload operations
 
-Containers and AKS enable workload teams to implement application-specific operational processes and use specialized features that benefit their customers. Workload operations provide application-specific optimizations that platform operations cannot address. Workload operations can extend your operations baseline and platform operations, or operate independently through decentralized approaches.
-
-Use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment) to define specific operational processes and tools for individual workloads. These assessment tools help you establish workload-specific requirements for reliability, security, cost optimization, operational excellence, and performance efficiency.
+Containers and AKS enable workload teams to implement application-specific operational processes and use specialized features that benefit their customers. Use the [Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review&mode=pre-assessment) to define specific operational processes and tools for individual workloads. These assessment tools help you establish workload-specific requirements for reliability, security, cost optimization, operational excellence, and performance efficiency.
 
 ## Azure resources
 
