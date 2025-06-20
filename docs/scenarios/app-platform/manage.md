@@ -30,12 +30,12 @@ Container environments require specialized monitoring configurations to capture 
 
 1. **Deploy Azure Monitor for containers to collect comprehensive telemetry.** Azure Monitor for containers provides the foundation for container operations monitoring. This solution captures critical operational data that platform teams need for infrastructure management and workload teams require for application optimization. Configure [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview) to monitor these essential areas:
 
-- Cluster topology and resource utilization across regions
-- Node pool configurations, networking, and storage architectures
-- AKS version and node image compliance status
-- CPU, memory, and storage utilization at cluster and container levels
-- Workload behavior under normal and peak load conditions
-- Automated alerting for threshold breaches and health state changes
+    - Cluster topology and resource utilization across regions
+    - Node pool configurations, networking, and storage architectures
+    - AKS version and node image compliance status
+    - CPU, memory, and storage utilization at cluster and container levels
+    - Workload behavior under normal and peak load conditions
+    - Automated alerting for threshold breaches and health state changes
 
 1. **Configure standardized queries and dashboards for operational consistency.** Standardized monitoring approaches reduce operational complexity and ensure consistent visibility across teams. You must establish common monitoring patterns that both platform and workload teams can use effectively. Configure [Azure Monitor queries](/azure/azure-monitor/containers/container-insights-log-query) to create standardized dashboards and alerts that align with your operational model and service level agreements.
 
@@ -50,10 +50,12 @@ Operations compliance in containerized environments requires management at multi
 Operations teams monitor usage patterns, resize resources to balance performance and cost, and apply patches to minimize security risks and configuration drift. The complexity of container operations requires clear ownership models and well-defined processes.
 
 1. **Evaluate operations ownership models for your environment.** Operations ownership affects update frequency, testing procedures, and incident response. You need to choose an ownership model that aligns with your team structure and business requirements. Consider these approaches:
+
    - Workload team ownership provides granular control and faster updates but requires more team expertise
    - Centralized ownership offers standardization and cost efficiency but reduces flexibility and responsiveness
 
 2. **Implement systematic upgrade and maintenance procedures.** Regular maintenance prevents security vulnerabilities and ensures platform supportability. You must establish scheduled maintenance windows and testing procedures to minimize business impact. Follow these Azure-specific procedures:
+
    - [Upgrade AKS clusters](/azure/aks/upgrade-cluster) using blue-green or rolling update strategies
    - [Upgrade node images](/azure/aks/node-image-upgrade) to include latest security patches
    - [Process node OS updates](/azure/aks/node-updates-kured) using automated tools like Kured
@@ -66,6 +68,7 @@ Operations teams monitor usage patterns, resize resources to balance performance
 AKS nodes are ephemeral and designed for replacement rather than individual restoration. Recovery operations focus on workload redeployment and data restoration rather than infrastructure repair. You must design protection and recovery strategies that account for the ephemeral nature of container infrastructure while ensuring business continuity. Here's how:
 
 1. **Implement service level agreements and availability measures.** Service level agreements define your recovery objectives and determine your protection investments. You need to establish service level agreements (SLAs) that balance business requirements with operational costs. Consider these protection levels:
+
    - Add an [uptime SLA to your cluster](/azure/aks/uptime-sla) for improved availability guarantees
    - Implement [multiregion BCDR best practices](/azure/aks/operator-best-practices-multi-region) for mission-critical workloads
    - Design appropriate redundancy and failover mechanisms based on workload criticality
