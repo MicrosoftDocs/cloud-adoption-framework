@@ -20,7 +20,7 @@ Platform operations provide the specialized tools and processes needed to manage
 
 2. **Deploy monitoring and observability foundations.** Comprehensive monitoring enables proactive issue detection and performance optimization. Monitoring foundations provide the data platform and workload teams need for effective operations. Install Azure Monitor for containers and configure Prometheus integration to capture both infrastructure and application metrics.
 
-3. **Implement automated maintenance procedures.** Automated maintenance reduces manual effort and ensures consistent update application across clusters. Automated procedures minimize security vulnerabilities and maintain platform supportability. Establish scheduled upgrade cycles for AKS clusters, node images, and operating system patches using Azure automation tools.
+3. **Implement automated maintenance procedures.** Automated maintenance reduces manual effort and ensures consistent update application across clusters. Automated procedures minimize security vulnerabilities and maintain platform supportability. Establish scheduled upgrade cycles for AKS clusters, node images, and operating system patches using Azure Automation tools.
 
 ### Monitor inventory and ensure visibility
 
