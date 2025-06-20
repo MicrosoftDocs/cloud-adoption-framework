@@ -9,22 +9,54 @@ ms.topic: conceptual
 
 # Define your naming convention
 
-A good name for a resource helps you to quickly identify its type, its associated workload, its environment, and the Azure region where it runs. To do so, names should follow a consistent format—a *naming convention*—that is composed of important information about each resource. The information in the names ideally includes whatever you need to identify specific instances of resources. For example, a public IP address (PIP) for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
+A well-defined naming and tagging conventions are the foundation of Azure cloud governance and security. They allow you to have a complete inventory of Azure resources. They help track and allocate Azure costs. They support incident response, helping you identify affected resources. You must define your naming and tagging strategy as early as possible.
 
-![Diagram that shows the components of an Azure resource name.](./media/naming-convention-example.svg)
+This article provides recommendations to define your naming convention. For tagging guidance, see [Define a tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
-*Diagram 1: Example of components in an Azure resource name.*
+## Why use a naming convention
 
-> [!NOTE]
-> Consider that not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you are working with.
->
-> To learn more, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
+A good name for a resource includes whatever you need to identify specific instances of an Azure resources. To do so, names should follow a consistent format, called a *naming convention*. A naming convention contains composed of important information about each resource.
+
+## Understand resource names in Azure
+
+1. **Understand name permanence.** Azure resource names cannot be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
+
+1. **Understand Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you are working with. Azure names must follow three general principles:
+
+    - Names need to be unique within the scope of the Azure resource (varies between resource).
+    - Names need to meet length requirements (varies between resources).
+    - Names can only contain valid characters (varies between resources).
+
+1. **Understand Azure name scope.** Azure resource names must be unique within their defined scope. Each resource type has a specific scope level that determines where the name must be unique. Understanding these scope levels ensures proper naming conventions and avoids conflicts.
+
+| Scope | Description | Example |
+|-------|-------------|---------|
+| **Global** | Unique across all of Azure. This scope applies to PaaS resources with public IP endpoints, as their names serve as the initial default public DNS name. | For example, a web app named `app-navigator-prod-001.azurewebsites.net` must be globally unique. |
+| **Resource group** | Unique within the resource group. Resources in the same group cannot share the same name, but identical names can exist in different resource groups. | For example, a virtual network named `vnet-prod-westus-001` can exist in multiple resource groups, but only once within a single group. |
+| **Resource** | Unique within the parent resource. Resources nested within another resource must have unique names to avoid conflicts. | For example, subnets within a virtual network must have unique names to prevent segment overlap. |
+
+![Diagram that shows the scope levels for Azure resource names.](../../_images/ready/resource-naming-scope.png)
+*Diagram 2: Scope levels for Azure resource names.*
+
+1. **Understand component delimiters.** For readability, many use hyphens as a component delimiter to separate naming components. However, not every Azure resource allows you to use hyphens, such as Azure Storage accounts.
+
+### Develop your naming convention
+
+When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types.
+
+1. **Standardize component order.** In addition to defining the naming components, you must also consider the order in which the naming components are listed.
+
+1. **Choose to use a delimiter or not.** To improve readability, use a special character like a hyphen `-` to separate names. However, not every resource in Azure allows you to use a delimiter. If you need absolute consistency across all Azure name, don't use special characters like hyphen in resource names. For many, the benefits of using a delimiter outweigh some inconsistency in the naming convention.
+
+1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) keep resource names within length limits.
+
+1. **Use the Azure Naming Tool**: The Azure Naming Tool is a tool that helps you generate names for Azure resources based on a naming convention. For more information, see [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
+
+1. **Consider naming consistency for VMs.** If you're working with VMs in Azure, we recommend keeping names consistent even though VM names in Azure can be longer than the allowed NetBIOS name of the VM. For more information and for other restrictions, see [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
 
 ## Recommended naming components
 
-When you construct your naming convention, identify the key pieces of information that you want to capture in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. Establish a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource.
-
-The following list provides examples of naming components that are useful when you construct resource names:
+When you construct your naming convention, identify the key pieces of information that you want to capture in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. Establish a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource. The following list provides examples of naming components that are useful when you construct resource names:
 
 | Naming component | Description |
 |--|--|
@@ -36,59 +68,9 @@ The following list provides examples of naming components that are useful when y
 | **Region** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
 | **Instance** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. Examples, `01`, `001` |
 
-## Naming considerations
-
-In addition to defining the naming components, you must also consider the order in which the naming components are listed and what type of delimiters (if any) should appear between components. Also take into account the different naming rules that are associated with resources types.
-
-### Scope
-
-All Azure resource types have a scope that defines the level of that resource. Also, a resource must have a unique name within its scope.
-
-Scope levels for Azure resource names:
-
-- **Global**: Unique across all of Azure.
-
-  *Example: Name of PaaS resources with public IP endpoints across all of Azure, because that name is the initial default public DNS name.*
-
-- **Resource group**: Unique within the resource group.
-
-  *Example: All virtual networks in a resource group must have a unique name for routing within that resource group.*
-
-- **Resource**: Unique within the parent resource.
-
-  *Example: All subnets within a virtual network must have unique names to avoid segment overlap.*
-
-![Diagram that shows the scope levels for Azure resource names.](../../_images/ready/resource-naming-scope.png)
-
-*Diagram 2: Scope levels for Azure resource names.*
-
-For example, a virtual network has the scope of a resource group, which means that there can be only one network named `vnet-prod-westus-001` in a specific resource group. Other resource groups can also have virtual networks named `vnet-prod-westus-001`, but each resource group can have only one with that name. Subnets are scoped to virtual networks, so each subnet within a virtual network must have a distinct name.
-
-Some resource names have a global scope, such as a name for a Platform as a Service (PaaS) that has a public endpoint or a virtual machine DNS label. A resource in a global scope must have a name that's unique across the entire Azure platform.
-
-### Azure naming rules
-
-Azure naming rules vary depending on the resource type. It's important to understand naming rules for each resource type to avoid confusion and delays.
-
-For example, resource names for different resource types might have different length limits. We recommend that you keep the length of naming components short or abbreviating names to prevent exceeding resource name length limits.
-
-When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types.
-
-
-**Recommendations:**
-
-- **Understand naming rules and restrictions**: Balancing the context of a name with its scope and length limit is important when developing your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
-- **Use recommended resource abbreviations**: Abbreviations can help you keep resource names within length limits and make them easier to read. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md).
-- **Consider naming consistency for VMs**: If you're working with VMs in Azure, we recommend keeping names consistent even though VM names in Azure can be longer than the allowed NetBIOS name of the VM. For more information and for other restrictions, see [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
-- **Use the Azure Naming Tool**: The Azure Naming Tool is a tool that helps you generate names for Azure resources based on a naming convention. For more information, see [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
-
-<!-- docutune:ignored "(?-i)[a-z]+(?=[\\-])" -->
-
 ## Example names
 
 Consider these examples when you define your naming convention. The examples are based on the naming components and considerations that are described in this article.
-
-The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization. For more examples, see the [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
 
 ### Example names: General
 

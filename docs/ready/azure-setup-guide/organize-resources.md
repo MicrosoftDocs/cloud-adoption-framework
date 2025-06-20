@@ -16,7 +16,7 @@ This article explains how to organize Azure resources for optimal security, mana
 
 A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent naming reduces management overhead and prevents resource conflicts across teams. You must define a naming standard and use it consistently.
 
-1. **Define permanent names.** Azure resource names cannot be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
+1. **Understand name permanence.** Azure resource names cannot be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
 
 1. **Follow Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Azure names must follow three general principles:
 
@@ -24,19 +24,17 @@ A naming convention provides standardized identification across Azure resources,
     - Names need to meet length requirements (varies between resources).
     - Names can only contain valid characters (varies between resources).
 
-1. **Use abbreviations.** Use [resource type abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to maintain consistency across all Azure services.
+1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) keep resource names within length limits.
 
-1. **Define a naming pattern.** You need a standard naming pattern to facilitate resource management. For nonglobal resources, use a structured format like `{abbreviation}{app name, service name, or purpose}{environment}{instance}` for all resources. Tailor the formate to your specific needs. A delimiter, like a `-`, between elements can make name more readable, but not all resources allow you to use special characters. Global resources can't have the same name as any other Azure resource of the same type. If needed, use an alphanumeric organization identifier to add uniqueness to the name, such as `{abbreviation}{workload}{organization identifier}{environment}`.
-
-For more examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
+1. **Define a naming convention.** You need a standardize way to name Azure resources. Tailor the naming convention to your specific needs. such as `{Azure resource abbreviation}{workload name, parent resource, or purpose}{environment}{region}{instance}`. Not every resource needs to include the same information. For example, management groups and subscriptions often contain department information while workload resources don't. Use a hyphen `-` between naming components to make the name more readable, but, note, not all Azure resources allow you to use a hyphen. For more information and examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
 ## Apply resource tags
 
-Resource tags provide key-value metadata for resource identification, cost allocation, and operational tracking. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. Implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
+Resource tags provide name-value metadata for resource identification, cost allocation, and operational tracking. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. Implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
 
 Tags simplify resource searches and management. Use tags to capture relevant information such as resource type, application name, environment, department, and location. See [steps to apply tags](/azure/azure-resource-manager/management/tag-resources-portal).
 
-| Key           | Value               |
+| Name           | Value               |
 |---------------|---------------------|
 | Azure resource | `resource: storage account`<br>`resource: sql database` |
 | Application name | `app : training`<br>`app : webapp` |

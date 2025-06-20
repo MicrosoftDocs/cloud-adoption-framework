@@ -9,9 +9,11 @@ ms.topic: conceptual
 
 # Define your tagging strategy
 
-This article shows you how to create an effective tagging strategy that supports cost management, governance, and automation across your Azure environment. Resource tags provide essential metadata that enables accurate cost tracking, automated policy enforcement, and operational oversight for all your Azure resources.
+This article shows you how to create an effective tagging strategy that supports cost management, governance, and automation across your Azure environment. For guidance on developing a tagging convention, see [Define you naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
-Tags consist of key-value pairs (tag name: tag value) that you attach to Azure resources to categorize them according to your business and operational requirements. A comprehensive tagging strategy ensures consistent resource organization, improves visibility across your Azure environment, and supports automated management processes that scale with your organization's growth.
+## Why use Azure resource tags?
+
+Azure resource tags provide essential metadata that enables accurate cost tracking, automated policy enforcement, and operational oversight for all your Azure resources. Tags consist of key-value pairs (tag name: tag value) that you attach to Azure resources to categorize them according to your business and operational requirements. A comprehensive tagging strategy ensures consistent resource organization, improves visibility across your Azure environment, and supports automated management processes that scale with your organization's growth.
 
 ## Define your tagging requirements
 
