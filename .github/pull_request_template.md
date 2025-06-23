@@ -1,18 +1,24 @@
-Before selecting the "Create pull request" button:  
+**DO A GITHUB COPILOT REVIEW OF YOUR ARTICLE**
 
-1. Perform an GH Copilot review of your content. See steps here: https://learn.microsoft.com/en-us/help/contribute/patterns-practices-content/caf-contributions
+1. In VS Code, Open the GitHub Copilot Chat.
+2. In the chat, ensure your .md file is added as part of the context.
+3. Ensure you're on "Agent" mode.
+4. Select model. Claude Sonnet 3.7+ works great.
+5. Enter prompt, "Improve this content."
+6. Review all the suggested changes and update for technical accuracy.
 
-1. Enter a meaningful title above^, using a prefix if necessary and keywords "New" or "Update" indicating the nature of changes.
+For more information, see [CAF contributions](https://learn.microsoft.com/en-us/help/contribute/patterns-practices-content/caf-contributions).
+
+
+<details><summary>Expand for more PR information.</summary>    
+
+ 1. Enter a meaningful title above^, using a prefix if necessary and keywords "New" or "Update" indicating the nature of changes.
 
 2. Describe the summary, scope, and intent of this PR:  
 [REPLACE-THIS-TEXT]  
 
 3. Insert links(s) to any related work item(s) or supporting detail:  
 [DELETE-OR-REPLACE-THIS-TEXT]   
-
-
-<details><summary>AFTER YOUR PR HAS BEEN CREATED, expand this section for tips and additional instructions.</summary>    
-      
 
 These are common guidelines for contributions across the repos managed by the Cloud Architecture Content Team (CACT). Some repositories may have additional specific requirements that are not listed here.   
 
