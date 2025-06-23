@@ -50,8 +50,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
-| Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
 | Azure Databricks Access Connector | `Microsoft.Databricks/workspaces/accessConnectors` | `dbac` |
+| Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
