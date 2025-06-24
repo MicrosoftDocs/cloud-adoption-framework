@@ -55,11 +55,12 @@ After you determine the basic performance requirements for the database workload
 
 The performance and reliability of Oracle database workloads rely heavily on the design and configuration of the underlying storage infrastructure. Consider the following guidance for storage planning:
 
-- Select the appropriate managed disk type based on workload requirements. Use Azure Premium SSD for operating system-related activities to ensure reliable performance. For data disks, consider Azure Premium SSD v2 for enhanced performance capabilities. Azure Ultra Disk Storage is suitable for workloads requiring extremely high throughput and low latency. Avoid using Azure Standard SSD or Azure Standard HDD for production Oracle workloads. For more details, see [Azure managed disks](/azure/virtual-machines/disks-types).
+- Select the appropriate managed disk type based on workload requirements. Use Azure Premium SSD for operating system-related activities to ensure reliable performance. For data disks, we recommend Azure Premium SSD v2 for enhanced performance capabilities. Azure Ultra Disk Storage is suitable for workloads requiring extremely high throughput and low latency. Avoid using Azure Standard SSD or Azure Standard HDD for production Oracle workloads. For more details, see [Azure managed disks](/azure/virtual-machines/disks-types).
+Further Storage options include [Azure Netapp Files](/azure/architecture/example-scenario/file-storage/oracle-azure-netapp-files) and [ESAN](/azure/storage/elastic-san/elastic-san-introduction). 
 
 - Disk latency might be a concern depending on the characteristics of your workload. For more information about disk latency, see [Azure managed disk types](/azure/virtual-machines/disks-types#disk-type-comparison).
 
-- Create volumes larger than 4 TB using multiple Premium SSD disks. Host disk caching isn't supported for disks larger than 4,095 GB. To build RAID-0 striped logical volumes or Oracle ASM disk groups, allocate multiple Premium SSD disks. Use tools like Linux Logical Volume Manager version 2 (LVM2) to meet capacity or throughput requirements.
+- If your OS-related activities require larger than 4 TB use multiple Premium SSD disks and stripe it to RAID-0. Host disk caching isn't supported for disks larger than 4,095 GB. 
 
 - Understand the differences between Premium SSD v1 and Premium SSD v2. Premium SSD v1 uses Azure’s original architecture, which shares bandwidth with other VM traffic and may impact performance. Premium SSD v2 leverages Direct Drive architecture for improved performance and reduced latency. For more details, see [differences between Premium SSD and Premium SSD v2](/azure/virtual-machines/disks-types#differences-between-premium-ssd-and-premium-ssd-v2).
 
