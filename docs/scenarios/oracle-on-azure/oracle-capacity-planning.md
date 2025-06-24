@@ -47,10 +47,9 @@ After you determine the basic performance requirements for the database workload
 
 - Use memory-optimized VMs for Oracle workloads. Memory-optimized VMs have a higher memory to vCPU ratio than general purpose VMs. These VMs are preferred for Oracle workloads, which are typically memory intensive. For more information about memory-optimized VMs, see [M-series VM](/azure/virtual-machines/sizes/memory-optimized/m-family?tabs=mbsv3%2Cmsv3mm%2Cmsv3hm%2Cmsv2mm).
 
-> **Note**  
-> We recommend using the latest available VM SKUs to ensure optimal performance and compatibility. For example, the [Mdsv3](/azure/virtual-machines/sizes/memory-optimized/mdsv3-mm-series?tabs=sizebasic) offers a robust selection of memory-optimized options. The M-series includes both Medium Memory and High Memory variants, with the appropriate choice depending on the sizing assessment conducted in advance. Another example is the [Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series?tabs=sizebasic).
+- Use the latest VM SKUs for improved performance and compatibility.** The latest VM SKUs, such as [Mdsv3](/azure/virtual-machines/sizes/memory-optimized/mdsv3-mm-series?tabs=sizebasic) and [Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series?tabs=sizebasic), provide robust memory-optimized options. Choose between Medium Memory and High Memory variants based on your sizing assessment.
 
-- When you evaluate your overall architecture, include other VMs that are required for high availability, disaster recovery, non-production environments, and more.
+- Include additional VMs for high availability and disaster recovery. Ensure your architecture accounts for VMs required for high availability, disaster recovery, and non-production environments to maintain operational resilience.
 
 ### Storage considerations
 
