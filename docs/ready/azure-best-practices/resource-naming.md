@@ -23,9 +23,9 @@ An Azure resource name is the identifier assigned to a specific instance of an A
 
 1. **Understand Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you're working with. Azure names must follow three general principles:
 
-    - Names need to be unique within the scope of the Azure resource (varies between resource).
-    - Names need to meet length requirements (varies between resources).
-    - Names can only contain valid characters (varies between resources).
+    - Names need to be unique within the scope of the Azure resource (varies by resource).
+    - Names need to meet length requirements (varies by resource).
+    - Names can only contain valid characters (varies by resource).
 
 1. **Understand Azure name scope.** Azure resource names must be unique within their defined scope. Each resource type has a specific scope level that determines where the name must be unique. Understanding these scope levels ensures proper naming conventions and avoids conflicts.
 
