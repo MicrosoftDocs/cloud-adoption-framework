@@ -59,7 +59,7 @@ The performance and reliability of Oracle database workloads rely heavily on the
 
 - Disk latency might be a concern depending on the characteristics of your workload. For more information about disk latency, see [Azure managed disk types](/azure/virtual-machines/disks-types#disk-type-comparison).
 
-- For Premium SSD `ReadWrite` for the OSDisk class. Host disk caching isn't supported for disks larger than 4,095 GB. To create volumes that are larger than a P50 parameter, or 4 TB, allocate multiple Premium SSD disks to build RAID-0 striped logical volumes. Use a volume manager such as Linux Logical Volume Manger version 2 (LVM2), or allocate multiple Premium SSD disks to build Oracle automatic storage management (ASM) disk groups to meet your desired capacity or required throughput.
+- Create volumes larger than 4 TB using multiple Premium SSD disks. Host disk caching isn't supported for disks larger than 4,095 GB. To build RAID-0 striped logical volumes or Oracle ASM disk groups, allocate multiple Premium SSD disks. Use tools like Linux Logical Volume Manager version 2 (LVM2) to meet capacity or throughput requirements.
 
 - Understand the differences between Premium SSD v1 and Premium SSD v2. Premium SSD v1 uses Azure’s original architecture, which shares bandwidth with other VM traffic and may impact performance. Premium SSD v2 leverages Direct Drive architecture for improved performance and reduced latency. For more details, see [differences between Premium SSD and Premium SSD v2](/azure/virtual-machines/disks-types#differences-between-premium-ssd-and-premium-ssd-v2).
 
