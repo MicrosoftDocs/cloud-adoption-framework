@@ -283,7 +283,7 @@
       {
          "source_path": "docs/ready/considerations/naming-and-tagging.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/ready/considerations/scaling-subscriptions.md",
@@ -863,7 +863,7 @@
       {
          "source_path": "docs/decision-guides/resource-tagging/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
-         "redirect_document_id": true   
+         "redirect_document_id": false   
       },
       {
          "source_path": "docs/ready/considerations/networking-options.md",
