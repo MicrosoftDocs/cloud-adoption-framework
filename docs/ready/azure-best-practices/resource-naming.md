@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Define your naming convention
 
-A well-defined naming and tagging conventions are the foundation of Azure cloud governance and security. They allow you to have a complete inventory of Azure resources. They help track and allocate Azure costs. They support incident response, helping you identify affected resources. You must define your naming and tagging strategy as early as possible. This article provides recommendations to define your naming convention. For tagging guidance, see [Define a tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
+A well-defined naming and tagging strategy forms the foundation of effective Azure cloud governance and security. These conventions enable you to maintain a  inventory of Azure resources, track and allocate costs, and respond to incidents by quickly identifying affected resources. Define your naming and tagging strategy early to ensure consistency and clarity across your environment. This article provides recommendations for creating a naming convention. For tagging guidance, see [Define a tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
 ## Why use a naming convention?
 
@@ -21,7 +21,7 @@ An Azure resource name is the identifier assigned to a specific instance of an A
 
 1. **Understand name permanence.** Azure resource names can't be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
 
-1. **Understand Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you're working with. Azure names must follow three general principles:
+1. **Understand Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Not all Azure resource names can follow the same patterns. Make sure you understand the limitations of the resource types you're working with. Azure names must follow three general principles:
 
     - Names need to be unique within the scope of the Azure resource (varies by resource).
     - Names need to meet length requirements (varies by resource).
