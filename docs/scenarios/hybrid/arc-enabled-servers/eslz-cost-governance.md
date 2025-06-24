@@ -59,7 +59,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 ### Governance
 
-- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](../../../ready/azure-best-practices/naming-and-tagging.md).
+- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 - Use least privilege Azure RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who onboards Azure Arc-enabled servers to avoid unnecessary costs.
 - Use least privilege Azure RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete, and re-onboard Azure connected machines.
 
