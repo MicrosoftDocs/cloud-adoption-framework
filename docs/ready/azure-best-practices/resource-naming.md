@@ -17,11 +17,11 @@ An Azure naming convention is a standardized format used to assign names to Azur
 
 ## Understand resource names in Azure
 
-An Azure resource name is the identifier assigned to a specific instance of an Azure resource, such as a web app, database, or storage account. To establish a consistent naming conventions, you need to understand how Azure works. Here's what you need to know:
+An Azure resource name is the identifier assigned to a specific instance of an Azure resource, such as a web app, database, or storage account. To establish a consistent naming convention, you need to understand how Azure works. Here's what you need to know:
 
-1. **Understand name permanence.** Azure resource names cannot be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
+1. **Understand name permanence.** Azure resource names can't be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
 
-1. **Understand Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you are working with. Azure names must follow three general principles:
+1. **Understand Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Not all Azure resources can follow the same patterns. Make sure you understand the limitations of the resource types you're working with. Azure names must follow three general principles:
 
     - Names need to be unique within the scope of the Azure resource (varies between resource).
     - Names need to meet length requirements (varies between resources).
@@ -32,7 +32,7 @@ An Azure resource name is the identifier assigned to a specific instance of an A
     | Scope | Description | Example |
     |-------|-------------|---------|
     | **Global** | Unique across all of Azure. This scope applies to PaaS resources with public IP endpoints, as their names serve as the initial default public DNS name. | For example, a web app named `app-navigator-prod-001.azurewebsites.net` must be globally unique. |
-    | **Resource group** | Unique within the resource group. Resources in the same group cannot share the same name, but identical names can exist in different resource groups. | For example, a virtual network named `vnet-prod-westus-001` can exist in multiple resource groups, but only once within a single group. |
+    | **Resource group** | Unique within the resource group. Resources in the same group can't share the same name, but identical names can exist in different resource groups. | For example, a virtual network named `vnet-prod-westus-001` can exist in multiple resource groups, but only once within a single resource group. |
     | **Resource** | Unique within the parent resource. Resources nested within another resource must have unique names to avoid conflicts. | For example, subnets within a virtual network must have unique names to prevent segment overlap. |
 
 ## Choose naming components
@@ -57,7 +57,7 @@ When you construct your naming convention, identify the key pieces of informatio
 
 1. **Choose to use a delimiter or not.** To improve readability, use a hyphen `-` to separate naming components. However, not every resource in Azure allows you to use a delimiter. If you need absolute consistency across all Azure name, don't use special characters like hyphen in resource names. For many, the benefits of using a delimiter outweigh some inconsistency in the naming convention.
 
-1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) keep resource names within length limits.
+1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to keep resource names within length limits.
 
 1. **Use the Azure Naming Tool**: The Azure Naming Tool is a tool that helps you generate names for Azure resources based on a naming convention. For more information, see [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
 
