@@ -282,7 +282,7 @@
       },
       {
          "source_path": "docs/ready/considerations/naming-and-tagging.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
          "redirect_document_id": true
       },
       {
@@ -862,7 +862,7 @@
       },
       {
          "source_path": "docs/decision-guides/resource-tagging/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
          "redirect_document_id": true   
       },
       {
