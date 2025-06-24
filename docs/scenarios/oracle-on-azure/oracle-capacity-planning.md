@@ -45,7 +45,7 @@ After you determine the basic performance requirements for the database workload
 
 - Use constrained cores to optimize Oracle licensing costs. Constrained cores provide the memory and throughput capacity of larger VM SKUs while limiting vCPU capacity to smaller VM SKUs. This configuration reduces Oracle licensing costs, as licensing is based on processor cores. For more details, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf) and [constrained core sizes](/azure/virtual-machines/constrained-vcpu?tabs=family-E).
 
-- Use memory-optimized VMs for Oracle workloads. Memory-optimized VMs have a higher memory to vCPU ratio than general purpose VMs. These VMs are preferred for Oracle workloads, which are typically memory intensive. For more information about memory-optimized VMs, see [M-series VM](/azure/virtual-machines/sizes/memory-optimized/m-family?tabs=mbsv3%2Cmsv3mm%2Cmsv3hm%2Cmsv2mm).
+- Select memory-optimized VMs for Oracle workloads. Memory-optimized VMs offer a higher memory-to-vCPU ratio compared to general-purpose VMs, making them ideal for memory-intensive Oracle workloads. For more information, see [M-series VM](/azure/virtual-machines/sizes/memory-optimized/m-family?tabs=mbsv3%2Cmsv3mm%2Cmsv3hm%2Cmsv2mm).
 
 - Use the latest VM SKUs for improved performance and compatibility.** The latest VM SKUs, such as [Mdsv3](/azure/virtual-machines/sizes/memory-optimized/mdsv3-mm-series?tabs=sizebasic) and [Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series?tabs=sizebasic), provide robust memory-optimized options. Choose between Medium Memory and High Memory variants based on your sizing assessment.
 
