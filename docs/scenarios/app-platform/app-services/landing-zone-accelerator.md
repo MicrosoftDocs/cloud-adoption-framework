@@ -27,15 +27,15 @@ A platform provides the shared services that support your App Service environmen
 
 The landing zone accelerator provides resources to support your App Service implementation:
 
-1. **Modular architecture components.** Customize environment variables to match your specific workload requirements without rebuilding the entire solution.
+1. **Tailor the modular architecture components.** Customize environment variables to match your specific workload requirements without rebuilding the entire solution.
 
-2. **Design guidelines for critical decisions.** Access expert guidance on key design areas that affect your implementation. The documentation clearly indicates which sections apply to multitenant App Service or App Service Environments.
+2. **Follow design guidelines.** Access expert guidance on key design areas that affect your implementation. The documentation clearly indicates which sections apply to multitenant App Service or App Service Environments.
 
-3. **Complete reference implementation.** Deploy a production-ready environment with:
-   - Infrastructure-as-code templates that create all necessary Azure resources
-   - A Microsoft-approved App Service reference application to validate your deployed environment
+3. **Deploy a reference implementation.** Deploy a production-ready environment with infrastructure-as-code templates that create all necessary Azure resources.
 
-:::image type="content" source="./media/app-service-landing-zone-accelerator.svg" alt-text="This Azure architecture diagram illustrates a secure, multitenant App Service Plan (Premium SKU) deployment using a hub-and-spoke network topology. Customers connect to the web application through Azure Front Door, which integrates with a Private Link Service for secure, private access. The web app is hosted in an App Service Environment v3 and is integrated into the virtual network via the Ingress Subnet. This subnet enables the app to  connect to backend resources. The backend resources include Azure Redis Cache, Azure Key Vault, Azure Container Registry, Azure SQL Database, and Azure OpenAI. The spoke virtual network contains the App Service Environment and supporting subnets like Private Link and DevOps. The hub virtual network hosts shared services. These services include Azure Bastion for secure RDP/SSH access, Azure Firewall for traffic control, Azure Monitor, Application Insights, and Microsoft Entra ID. Peering between the hub and spoke networks facilitates secure and efficient communication across the environment." lightbox="./media/app-service-landing-zone-accelerator.svg" border="false":::
+:::image type="complex" source="./media/app-service-landing-zone-accelerator.svg" alt-text="This Azure architecture diagram illustrates a secure, multitenant App Service Plan (Premium SKU) deployment using a hub-and-spoke network topology." lightbox="./media/app-service-landing-zone-accelerator.svg" border="false":::
+    Customers connect to the web application through Azure Front Door, which integrates with a Private Link Service for secure, private access. The web app is hosted in an App Service Environment v3 and is integrated into the virtual network via the Ingress Subnet. This subnet enables the app to  connect to backend resources. The backend resources include Azure Redis Cache, Azure Key Vault, Azure Container Registry, Azure SQL Database, and Azure OpenAI. The spoke virtual network contains the App Service Environment and supporting subnets like Private Link and DevOps. The hub virtual network hosts shared services. These services include Azure Bastion for secure RDP/SSH access, Azure Firewall for traffic control, Azure Monitor, Application Insights, and Microsoft Entra ID. Peering between the hub and spoke networks facilitates secure and efficient communication across the environment.
+:::image-end:::
 
 ## Apply design guidelines for each key area
 
