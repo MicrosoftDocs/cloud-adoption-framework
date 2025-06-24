@@ -21,7 +21,7 @@ The Azure App Service landing zone accelerator offers a flexible foundation that
 
 ## Implement a platform foundation
 
-A platform provides the shared services that support your App Service environment. These services handle network connectivity, security controls, identity management, and governance requirements. If you already have a foundation, you can build on it. If you don't have a platform foundation, start with the [Azure landing zone guidance](../../ready/landing-zone/index.md) to create your cloud foundation.
+A platform provides the shared services that support your App Service environment. These services handle network connectivity, security controls, identity management, and governance requirements. If you already have a foundation, you can build on it. If you don't have a platform foundation, start with the [Azure landing zone guidance](/azure/cloud-adoption-framework/ready/landing-zone/) to create your cloud foundation.
 
 ## Use the assets provided by the accelerator
 
