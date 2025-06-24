@@ -4,7 +4,7 @@ description: Learn about network topology and connectivity for Oracle on Azure V
 author: jessiehaessler
 ms.author: jhaessler
 ms.reviewer: ramakoni
-ms.date: 05/2/2024
+ms.date: 06/24/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---

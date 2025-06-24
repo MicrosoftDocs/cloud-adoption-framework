@@ -3,7 +3,7 @@ title: Security guidelines for Oracle on Azure Virtual Machines landing zone acc
 description: Learn about security guidelines for Oracle workloads on Azure Virtual Machines landing zone accelerator at every stage of their lifecycle.
 author: jessiehaessler
 ms.author: jhaessler
-ms.date: 04/04/2024
+ms.date: 06/24/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
