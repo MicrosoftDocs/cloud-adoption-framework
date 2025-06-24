@@ -191,18 +191,12 @@ items:
               href: ready/enterprise-scale/dine-guidance.md
             - name: Additional information
               items:
-              - name: Naming and tagging
-                href: ready/azure-best-practices/naming-and-tagging.md
               - name: Define your naming convention
                 href: ready/azure-best-practices/resource-naming.md
-              - name: Abbreviations for resource types
+              - name: Abbreviations for Azure resources
                 href: ready/azure-best-practices/resource-abbreviations.md
               - name: Define your tagging strategy
                 href: ready/azure-best-practices/resource-tagging.md
-              - name: Resource naming and tagging decision guide
-                href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
-              - name: Move resources
-                href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Design options for specific use cases
               items:
               - name: Create your initial subscriptions
