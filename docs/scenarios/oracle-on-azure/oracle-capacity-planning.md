@@ -63,7 +63,7 @@ The performance and reliability of Oracle database workloads rely heavily on the
 
 - Understand the differences between Premium SSD v1 and Premium SSD v2. Premium SSD v1 uses Azure’s original architecture, which shares bandwidth with other VM traffic and may impact performance. Premium SSD v2 leverages Direct Drive architecture for improved performance and reduced latency. For more details, see [differences between Premium SSD and Premium SSD v2](/azure/virtual-machines/disks-types#differences-between-premium-ssd-and-premium-ssd-v2).
 
-- When you use managed disks, the cumulative throughput of all disks attached to the VM and constrained by the VM SKU determine the disk throughput. For more information, see [Virtual machines and disk performance](/azure/virtual-machines/disks-performance#disk-io-capping).
+- Consider cumulative disk throughput when using managed disks. The cumulative throughput of all disks attached to the VM is constrained by the VM SKU. For more information, see [Virtual machines and disk performance](/azure/virtual-machines/disks-performance#disk-io-capping).
 
 - If throughput requirements exceed the maximum throughput of a single VM, consider using network storage such as [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) because the VM is constrained on network throughput, or egress, rather than disk throughput for such a configuration.
 
