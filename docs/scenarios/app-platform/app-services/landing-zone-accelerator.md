@@ -39,19 +39,14 @@ The landing zone accelerator provides resources to support your App Service impl
 
 ## Apply design guidelines for each key area
 
-Address these critical design areas when implementing your landing zone:
+Address these design areas when implementing your landing zone:
 
-1. [Identity and access management](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/identity-and-access-management) - Configure authentication, authorization, and secure resource access
-
-2. [Network topology and connectivity](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/network-topology-and-connectivity) - Design network segmentation, connectivity, and security controls
-
-3. [Security](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/security) - Implement application protection, secret management, and compliance requirements
-
-4. [Management](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/management) - Set up monitoring, diagnostics, and operational processes
-
-5. [Governance](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/governance) - Establish policies, cost management, and compliance controls
-
-6. [Platform automation and DevOps](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/platform-automation-and-devops) - Implement CI/CD pipelines and infrastructure automation
+- [Identity and access management](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/identity-and-access-management): Configure authentication, authorization, and secure resource access.
+- [Network topology and connectivity](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/network-topology-and-connectivity): Design network segmentation, connectivity, and security controls.
+- [Governance](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/governance): Establish policies, cost management, and compliance controls.
+- [Security](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/security): Implement application protection, secret management, and compliance requirements.
+- [Management](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/management): Set up monitoring, diagnostics, and operational processes.
+- [Platform automation and DevOps](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/platform-automation-and-devops): Implement CI/CD pipelines and infrastructure automation.
 
 ## Deploy the reference implementation
 
