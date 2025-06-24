@@ -55,8 +55,7 @@ After you determine the basic performance requirements for the database workload
 
 The performance and reliability of Oracle database workloads rely heavily on the design and configuration of the underlying storage infrastructure. Consider the following guidance for storage planning:
 
-- When using managed disks, we recommend selecting the appropriate disk type based on workload requirements. Use Azure Premium SSD for operating system-related activities to ensure reliable performance. For non-OS operations, such as data disks, consider Azure Premium SSD v2 to take advantage of enhanced performance capabilities. Azure Ultra Disk Storage is also available for scenarios requiring extremely high throughput and low latency. Ultimately, the choice of storage should align with the specific throughput and data size requirements of your workload. 
-We don't recommend Azure Standard SSD or Azure Standard HDD for production Oracle workloads. For details about Premium v2 SSD and Ultra Disk Storage limitations, see [Azure managed disks](/azure/virtual-machines/disks-types).
+- Select the appropriate managed disk type based on workload requirements. Use Azure Premium SSD for operating system-related activities to ensure reliable performance. For data disks, consider Azure Premium SSD v2 for enhanced performance capabilities. Azure Ultra Disk Storage is suitable for workloads requiring extremely high throughput and low latency. Avoid using Azure Standard SSD or Azure Standard HDD for production Oracle workloads. For more details, see [Azure managed disks](/azure/virtual-machines/disks-types).
 
 - Disk latency might be a concern depending on the characteristics of your workload. For more information about disk latency, see [Azure managed disk types](/azure/virtual-machines/disks-types#disk-type-comparison).
 
