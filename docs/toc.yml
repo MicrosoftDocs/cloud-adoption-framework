@@ -404,7 +404,7 @@ items:
             - name: Overview
               href: ready/considerations/landing-zone-governance.md
             - name: Naming and tagging standards
-              href: ready/azure-best-practices/naming-and-tagging.md
+              href: ready/azure-best-practices/resource-naming.md
             - name: Track costs across workloads
               href: ready/azure-best-practices/track-costs.md
             - name: Scale with multiple subscriptions
