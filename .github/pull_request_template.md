@@ -1,5 +1,4 @@
-**DO A GITHUB COPILOT REVIEW OF YOUR ARTICLE**
-For instructions, see [CAF contributions](https://learn.microsoft.com/en-us/help/contribute/patterns-practices-content/caf-contributions).
+**DO A GITHUB COPILOT REVIEW OF YOUR ARTICLE**. For instructions, see [CAF contributions](https://learn.microsoft.com/en-us/help/contribute/patterns-practices-content/caf-contributions).
 
 <details><summary>Expand for more PR information.</summary>    
 
