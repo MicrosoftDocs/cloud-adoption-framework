@@ -18,7 +18,7 @@ Big compute applications typically have the following characteristics:
 - Each task takes input, processes it, and produces output. The entire application runs for a finite amount of time.
 - The application doesn't need to run constantly, but it must be able to handle node failures and crashes.
 - Tasks can be independent or tightly coupled, which requires high-speed networking technologies like InfiniBand and remote direct memory access (RDMA) connectivity.
-- You can use [high performance compute](/azure/virtual-machines/sizes/#tab/hpcsizelist), [graphics processing unit (GPU)](/azure/virtual-machines/sizes/#tab/gpusizelist), [field-programmable gate array](/azure/virtual-machines/sizes/#tab/fpgasizelist) accelerated compute, or [compute-optimized SKUs](/azure/virtual-machines/sizes/#tab/computesizelist). Your selection depends on the workload.
+- You can use [high-performance compute](/azure/virtual-machines/sizes/#tab/hpcsizelist), [graphics processing unit (GPU) accelerated compute](/azure/virtual-machines/sizes/#tab/gpusizelist), [field-programmable gate array](/azure/virtual-machines/sizes/#tab/fpgasizelist) accelerated compute, or [compute-optimized SKUs](/azure/virtual-machines/sizes/#tab/computesizelist). Your selection depends on the workload.
 
 :::image type="content" source="./media/tasks.png" alt-text="Diagram that shows how a job queue moves from the client to the scheduler and the parallel and tightly coupled Azure tasks." lightbox="./media/tasks.png" border="false":::
 
