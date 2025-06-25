@@ -4,6 +4,7 @@ description: Learn how to establish an AI Center of Excellence (AI CoE) to drive
 author: stephen-sumner
 ms.author: pnp
 ms.date: 06/09/2025
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---

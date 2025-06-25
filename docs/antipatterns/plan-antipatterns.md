@@ -4,6 +4,7 @@ description: Learn how to avoid ineffective cloud adoption solutions by avoiding
 author: mahia127
 ms.author: pnp
 ms.date: 08/29/2022
+ms.update-cycle: 1825-days
 ms.topic: conceptual
 ms.subservice: caf-methodology-plan
 ms.custom: think-tank,UpdateFrequency5

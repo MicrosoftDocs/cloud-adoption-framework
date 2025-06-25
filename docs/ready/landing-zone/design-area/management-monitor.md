@@ -4,6 +4,7 @@ description: Learn how to deploy baseline monitoring for your Azure platform ser
 author: Jfaurskov
 ms.author: janfaurs
 ms.date: 02/27/2025
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---

@@ -4,6 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn best practices 
 author: Zimmergren
 ms.author: pnp
 ms.date: 09/10/2019
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---

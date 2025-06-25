@@ -4,6 +4,7 @@ description: Learn about recent updates to the Microsoft Cloud Adoption Framewor
 author: Zimmergren
 ms.author: pnp
 ms.date: 02/04/2025
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---

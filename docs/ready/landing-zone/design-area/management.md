@@ -4,6 +4,7 @@ description: Learn about some design considerations and recommendations for mana
 author: Zimmergren
 ms.author: pnp
 ms.date: 02/27/2025
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 products: azure-monitor

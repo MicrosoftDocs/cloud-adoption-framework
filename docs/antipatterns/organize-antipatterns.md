@@ -4,6 +4,7 @@ description: Avoid cloud adoption antipatterns that can emerge because of organi
 author: Zimmergren
 ms.author: pnp
 ms.date: 02/19/2021
+ms.update-cycle: 1825-days
 ms.topic: conceptual
 ms.subservice: caf-methodology-organize
 ms.custom: think-tank,UpdateFrequency5

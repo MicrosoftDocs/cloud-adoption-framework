@@ -4,6 +4,7 @@ description: Understand the function of a central IT team, including the source,
 author: Zimmergren
 ms.author: pnp
 ms.date: 05/07/2024
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---

@@ -4,6 +4,7 @@ description: Learn about encryption and key management as part of an Azure landi
 author: Zimmergren
 ms.author: pnp
 ms.date: 01/04/2022
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---

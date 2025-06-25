@@ -4,6 +4,7 @@ description: Understand how cloud adoption functions enable technical solutions 
 author: Zimmergren
 ms.author: pnp
 ms.date: 05/15/2020
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---

@@ -4,6 +4,7 @@ description: Learn about antipatterns that can block a growth mindset in organiz
 author: Zimmergren
 ms.author: pnp
 ms.date: 09/08/2022
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---

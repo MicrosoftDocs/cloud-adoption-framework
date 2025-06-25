@@ -4,6 +4,7 @@ description: Understand how to tailor the Azure landing zone architecture to mee
 author: jtracey93
 ms.author: jatracey
 ms.date: 12/16/2024
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5
 ---

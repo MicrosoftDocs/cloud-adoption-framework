@@ -4,6 +4,7 @@ description: Read an overview of resource naming and tagging strategy for enterp
 author: paulgrimley
 ms.author: paulgr
 ms.date: 05/22/2025
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit, UpdateFrequency3
 ---

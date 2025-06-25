@@ -4,6 +4,7 @@ description: Understand how cloud strategy functions provide alignment between b
 author: Zimmergren
 ms.author: pnp
 ms.date: 08/02/2022
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---

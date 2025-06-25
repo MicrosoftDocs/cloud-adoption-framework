@@ -4,10 +4,10 @@ description: Learn how to be successful in Azure with structured guidance to sup
 author: stephen-sumner
 ms.author: pnp
 ms.date: 06/17/2025
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.subservice: caf-general
 ms.custom: internal, homepage, UpdateFrequency3
-ms.update-cycle: 1095-days
 ---
 
 # What is the Microsoft Cloud Adoption Framework for Azure?
