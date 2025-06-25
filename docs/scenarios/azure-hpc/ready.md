@@ -60,7 +60,7 @@ As you can see from these questions, the deployment model varies depending on yo
 - It includes an integration with **Open OnDemand** for unified user access, remote shell access, job submission, and file access.
 - It uses Simple Linux Utility for Resource Management (**SLURM**) as a job scheduler.
 - Dynamic resource provisioning and autoscaling are done by **CycleCloud** preconfigured job queues and integrated health checks to quickly avoid nonoptimal nodes.
-- It can deploy or use an existing Azure NetApp Files for a shared file system for the home directory and applications.
+- It can deploy or use an existing Azure NetApp Files instance as a shared file system for the home directory and applications.
 - It can deploy or use an existing Azure Managed Lustre for a shared file system for the application data.
 - The deployed cluster is preconfigured with PMIx v4, Pyxis, and Enroot to support containerized AI and HPC Slurm jobs.
 
