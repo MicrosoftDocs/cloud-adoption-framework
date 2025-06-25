@@ -40,7 +40,7 @@ When you design your HPC infrastructure, several tools and services are availabl
 
 - [Azure Batch](/azure/batch/) is a managed service for running large-scale HPC applications. Use Batch to configure a VM pool and upload the applications and data files. Then the Batch service configures the VMs, assigns tasks to the VMs, runs the tasks, and monitors progress. Batch can automatically scale VMs up and down in response to changing workloads. Batch also provides a job-scheduling functionality.
 
-- [Azure CycleCloud](/azure/cyclecloud/) is a tool you can use to create, manage, operate, and optimize HPC and big compute clusters in Azure. Use Azure CycleCloud to dynamically configure HPC clusters and orchestrate data and jobs for hybrid and cloud workflows. It provides a simple way to manage HPC workloads using a workload manager. Azure CycleCloud supports workload managers such as Grid Engine, Microsoft HPC Pack, LSF, PBS Pro, and SLURM.
+- [Azure CycleCloud](/azure/cyclecloud/) is a tool that you can use to create, manage, operate, and optimize HPC and big compute clusters in Azure. Use Azure CycleCloud to dynamically configure HPC clusters and orchestrate data and jobs for hybrid and cloud workflows. It provides a simple way to manage HPC workloads by using a workload manager. Azure CycleCloud supports workload managers such as Grid Engine, Microsoft HPC Pack, LSF, PBS Pro, and SLURM.
 
 - [Azure Logic Apps](/azure/logic-apps/logic-apps-overview) is a specialized service for scheduling compute-intensive work to run on a managed pool of VMs. You can automatically scale compute resources to meet your jobs' needs.
 
@@ -56,7 +56,7 @@ Consider the following recommendations and use cases when you design an architec
 
 - Consider your network needs. Azure HPC provides HBv2, HBv3, HBv4, and HX-series VM sizes designed for memory-intensive seismic imaging and reservoir simulations.
 
-- Use HX- or HBv4-series VMs for memory bandwidth-bound applications, and HBv3- or HBv2-series VMs for compute-bound reservoir simulations.
+- Use HX-series or HBv4-series VMs for memory bandwidth-bound applications, and use HBv3-series or HBv2-series VMs for compute-bound reservoir simulations.
 
 - Use NV-series VMs for 3D reservoir modeling and visualizing seismic data.
 
@@ -64,7 +64,7 @@ Consider the following recommendations and use cases when you design an architec
 
    For data-intensive resin transfer molding (RTM) processing, the NDv4 VM size is the best option because it provides Non-Volatile Memory Express (NVMe) drives that have a cumulative capacity of 7 TB. 
 
-   To get the best possible performance on HBv2, HBv3, HBv4, and HX series VMs with Message Passing Interface workloads, do optimal process pinning to the processors' cores. For more information, see [Scaling HPC applications](/azure/virtual-machines/compiling-scaling-applications).
+   To get the best possible performance on HBv2, HBv3, HBv4, and HX-series VMs with Message Passing Interface workloads, do optimal process pinning to the processors' cores. For more information, see [Scale HPC applications](/azure/virtual-machines/compiling-scaling-applications).
 
    NCv4-series VMs also provide dedicated tools to ensure the correct pinning of parallel application processes.
 

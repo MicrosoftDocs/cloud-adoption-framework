@@ -1,6 +1,6 @@
 ---
 title: Azure Landing Zone for HPC
-description: Explore how HPC impacts Azure landing zone design and compare Azure Batch, CycleCloud, and Azure CycleCloud Workspace for Slurm to choose the right HPC solution.
+description: Explore how HPC impacts Azure landing zone design and compare Azure Batch and Azure CycleCloud Workspace for Slurm to choose the right HPC solution.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 06/10/2025
@@ -16,7 +16,7 @@ The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework fo
 
 As you prepare your environment for sustained cloud adoption, you can use an Azure landing zone conceptual architecture that represents a target end state. For HPC, there are multiple conceptual architecture references that are based on the three industries that the Cloud Adoption Framework currently addresses:
 
-- [Energy (oil and gas)](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-energy)
+- [Energy, such as oil and gas](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-energy)
 - [Finance](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance)
 - [Manufacturing](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-manufacturing)
 
@@ -34,7 +34,7 @@ As you can see from these questions, the deployment model varies depending on yo
 
 ## Azure landing zone acceleration for HPC
 
-[Azure Batch](/azure/batch/batch-technical-overview) and [Azure CycleCloud](/azure/cyclecloud/overview) are both Azure-provided first-party services. [Azure CycleCloud Workspace for Slurm](/azure/cyclecloud/overview-ccws?view=cyclecloud-8) is an Azure Marketplace solution template that allows users to easily create, configure, and deploy predefined Slurm clusters with CycleCloud on Azure without requiring any prior knowledge of Azure or Slurm.
+[Azure Batch](/azure/batch/batch-technical-overview) and [Azure CycleCloud](/azure/cyclecloud/overview) are both Azure-provided services. [Azure CycleCloud Workspace for Slurm](/azure/cyclecloud/overview-ccws) is an Azure Marketplace solution template that allows users to easily create, configure, and deploy predefined Slurm clusters with Azure CycleCloud without requiring any prior knowledge of Azure or Slurm.
 
 ### Azure Batch
 
@@ -55,7 +55,7 @@ As you can see from these questions, the deployment model varies depending on yo
 
 ### Azure CycleCloud Workspace for Slurm
 
-- Azure CycleCloud Workspace for Slurm provides an end-to-end deployment mechanism for base HPC infrastructure on Azure. It uses CycleCloud to orchestrate jobs across Slurm clusters efficiently.
+- Azure CycleCloud Workspace for Slurm provides an end-to-end deployment mechanism for base HPC infrastructure on Azure. It uses Azure CycleCloud to orchestrate jobs across Slurm clusters efficiently.
 - It delivers a complete HPC cluster solution that's ready for users to run applications on and that's easy for HPC administrators to deploy and manage.
 - It includes an integration with **Open OnDemand** for unified user access, remote shell access, job submission, and file access.
 - It uses Simple Linux Utility for Resource Management (**SLURM**) as a job scheduler.

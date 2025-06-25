@@ -41,7 +41,7 @@ The architectures of landing zones vary by business sector, in addition to varyi
   - [Compute large-scale HPC application workloads in Azure VMs](compute.md)
   - [Storage for HPC environments](storage.md)
 
-### Design Guidelines for choosing HPC compute for AI workloads
+### Design guidelines for choosing HPC compute for AI workloads
 
 Selecting the right SKU of GPU-optimized compute for AI workloads is important for optimizing performance and controlling costs. Microsoft provides many different SKUs that are optimized for workloads that benefit from more GPU power. There are several considerations when choosing the right SKU for AI workloads. Smaller workloads might only take advantage of a fraction of the CPU, GPU, and bandwidth of more powerful SKUs like NDv6. You might want to consider other compute SKUs such as NCv4 and NDv4 for smaller jobs. Consider the following factors when you choose the right SKU of GPU-optimized compute for AI workloads:
 
@@ -73,13 +73,13 @@ The following conceptual reference architecture is an example that shows design 
 
 ## Obtain the HPC landing zone accelerator
 
-The HPC landing zone accelerator is available in the Marketplace and can also be deployed by using the Azure CLI.
+To deploy the HPC landing zone accelerator, use the Azure Marketplace or the Azure CLI.
 
-- To deploy via the Azure Marketplace, see [Deploy Azure CycleCloud Workspace for Slurm by using Azure Marketplace](/azure/cyclecloud/qs-deploy-ccws?view=cyclecloud-8).
+- To deploy via the Azure Marketplace, see [Deploy an Azure CycleCloud Workspace for Slurm by using Azure Marketplace](/azure/cyclecloud/qs-deploy-ccws).
 
-- To deploy via the CLI, see [Deploy a CycleCloud Workspace for Slurm environment using the CLI](/azure/cyclecloud/how-to/ccws/deploy-with-cli?view=cyclecloud-8).
+- To deploy via the CLI, see [Deploy an Azure CycleCloud Workspace for Slurm environment by using the CLI](/azure/cyclecloud/how-to/ccws/deploy-with-cli).
 
-To learn more about this accelerator solution, see [Azure CycleCloud Workspace for Slurm](/azure/cyclecloud/overview-ccws?view=cyclecloud-8).
+To learn more about this accelerator solution, see [Azure CycleCloud Workspace for Slurm](/azure/cyclecloud/overview-ccws).
 
 ## Next steps
 
