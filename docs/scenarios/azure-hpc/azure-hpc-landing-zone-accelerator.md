@@ -1,5 +1,5 @@
 ---
-title: Azure high-performance computing (HPC) landing zone accelerator
+title: Azure High-Performance Computing (HPC) Landing Zone Accelerator
 description: The HPC landing zone accelerator is a set of open-source scripts and templates that help you create a deployment solution for customized HPC landing zones that adhere to best practices.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -43,7 +43,7 @@ The architectures of landing zones vary by business sector, in addition to varyi
 
 ### Design Guidelines for choosing HPC compute for AI workloads
 
-Choosing the right SKU of GPU optimized compute for AI workloads is important for optimizing performance and controlling costs. Microsoft offers many different SKUs that are optimized for workloads that benefit from more GPU power. There are several considerations when choosing the right SKU for AI workloads. Smaller workloads may only take advantage of a fraction of the CPU, GPU and bandwidth of more powerful SKUs like NDv6. You may want to consider other compute SKUs such as NCv4 and NDv4 for smaller jobs. Here are some considerations when choosing the right SKU of GPU optimized compute for AI workloads:
+Selecting the right SKU of GPU-optimized compute for AI workloads is important for optimizing performance and controlling costs. Microsoft provides many different SKUs that are optimized for workloads that benefit from more GPU power. There are several considerations when choosing the right SKU for AI workloads. Smaller workloads might only take advantage of a fraction of the CPU, GPU, and bandwidth of more powerful SKUs like NDv6. You might want to consider other compute SKUs such as NCv4 and NDv4 for smaller jobs. Consider the following factors when you choose the right SKU of GPU-optimized compute for AI workloads:
 
 - Checkpointing. Consider factors such as the checkpoint interval when running your machine learning models. This can impact the GPU performance during the training phase. Strike a balance between storage efficiency and maintaining smooth GPU operations. Monitor your GPU usage.
 - Inferencing. Inferencing requirements differ from training requirements, with a possible higher CPU load that can max out the CPU performance. Consider the inferencing requirements of your model when selecting a compute SKU. Monitor your CPU usage.
@@ -73,11 +73,13 @@ The following conceptual reference architecture is an example that shows design 
 
 ## Obtain the HPC landing zone accelerator
 
-The HPC landing zone accelerator is available in the marketplace, and can also be deployed using the Azure CLI. 
-- To deploy via the marketplace, refer to the following guide: [Quickstart - Deploy Azure CycleCloud Workspace for Slurm using the Marketplace](/azure/cyclecloud/qs-deploy-ccws?view=cyclecloud-8)
-- To deploy via the CLI, refer to the following guide: [How to deploy a CycleCloud Workspace for Slurm environment using the CLI](/azure/cyclecloud/how-to/ccws/deploy-with-cli?view=cyclecloud-8)
+The HPC landing zone accelerator is available in the Marketplace and can also be deployed by using the Azure CLI.
 
-To learn more about this accelerator solution, you can review its documentation in [What is Azure CycleCloud Workspace for Slurm?](/azure/cyclecloud/overview-ccws?view=cyclecloud-8) 
+- To deploy via the Azure Marketplace, see [Deploy Azure CycleCloud Workspace for Slurm by using Azure Marketplace](/azure/cyclecloud/qs-deploy-ccws?view=cyclecloud-8).
+
+- To deploy via the CLI, see [Deploy a CycleCloud Workspace for Slurm environment using the CLI](/azure/cyclecloud/how-to/ccws/deploy-with-cli?view=cyclecloud-8).
+
+To learn more about this accelerator solution, see [Azure CycleCloud Workspace for Slurm](/azure/cyclecloud/overview-ccws?view=cyclecloud-8).
 
 ## Next steps
 
