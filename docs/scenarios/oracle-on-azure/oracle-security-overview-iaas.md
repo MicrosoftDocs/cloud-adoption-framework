@@ -1,9 +1,9 @@
 ---
 title: Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator
 description: Learn about security guidelines for Oracle workloads on Azure Virtual Machines landing zone accelerator at every stage of their lifecycle.
-author: gkayali
-ms.author: guherk
-ms.date: 04/04/2024
+author: jessiehaessler
+ms.author: jhaessler
+ms.date: 06/24/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
@@ -93,8 +93,6 @@ In general, JIT access minimizes but doesn't eliminate exposure to risks by rest
 Azure Bastion is essentially a hardened jump box that helps prevent access from the open internet. However, there are [numerous limitations to Azure Bastion](/azure/bastion/bastion-faq) for you to consider.
 
 - **Use X-Windows and Virtual Networking Computing (VNC)**: Oracle database software usually requires that you use X-Windows because connectivity between the Linux VM in Azure and your desktop or laptop might traverse across firewalls and Azure NSGs. Because of this, you should use SSH port forwarding to tunnel the X-Windows or VNC connections through SSH. For an example that uses the `-L 5901:localhost:5901` parameter, see [Open a VNC client and test your deployment](https://docs.oracle.com/en/learn/ol-install-vnc/#open-a-vnc-client-and-test-your-deployment).
-
-- **Cross-cloud interconnect options**: Enable connectivity between Oracle database workloads that run in Azure and workloads in Oracle Cloud Infrastructure (OCI). You can create private links or pipelines between applications by using the Azure or OCI interconnect between specific regions in Azure and OCI. For more information, see [Set up a direct interconnection between Azure and Oracle Cloud Infrastructure](/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking). That article doesn't cover the creation of firewalls on either side of the Azure or OCI interconnect, which is generally a requirement for any ingress or egress across clouds. This approach employs [the Microsoft Zero Trust networking recommendations](https://www.microsoft.com/security/blog/2018/06/14/building-zero-trust-networks-with-microsoft-365/).
 
 ## Azure policy-based security
 
