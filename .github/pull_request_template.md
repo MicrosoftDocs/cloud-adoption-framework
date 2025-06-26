@@ -1,14 +1,4 @@
-**DO A GITHUB COPILOT REVIEW OF YOUR ARTICLE**
-
-1. In VS Code, Open the GitHub Copilot Chat.
-2. In the chat, ensure your .md file is added as part of the context.
-3. Ensure you're on "Agent" mode.
-4. Select model. Claude Sonnet 3.7+ works great.
-5. Enter prompt, "Improve this content."
-6. Review all the suggested changes and update for technical accuracy.
-
-For more information, see [CAF contributions](https://learn.microsoft.com/en-us/help/contribute/patterns-practices-content/caf-contributions).
-
+**DO A GITHUB COPILOT REVIEW OF YOUR ARTICLE**. For instructions, see [CAF contributions](https://learn.microsoft.com/en-us/help/contribute/patterns-practices-content/caf-contributions).
 
 <details><summary>Expand for more PR information.</summary>    
 

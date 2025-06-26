@@ -80,12 +80,12 @@ items:
         href: app-services/identity-and-access-management.md
       - name: Network topology and connectivity
         href: app-services/network-topology-and-connectivity.md
+      - name: Governance
+        href: app-services/governance.md
       - name: Security
         href: app-services/security.md
       - name: Management
         href: app-services/management.md
-      - name: Governance
-        href: app-services/governance.md
       - name: Platform automation and DevOps
         href: app-services/platform-automation-and-devops.md
     - name: Azure Red Hat Enterprise Linux (RHEL)
