@@ -3329,6 +3329,11 @@
          "source_path": "docs/scenarios/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/overview#cloud-adoption-scenarios",
          "redirect_document_id": false
-      } 
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/scale-subscriptions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions",
+         "redirect_document_id": true
+      }  
    ]   
 }

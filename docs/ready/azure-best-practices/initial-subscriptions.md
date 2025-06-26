@@ -53,6 +53,12 @@ As your cloud environment grows, your subscription strategy must evolve. Establi
 
 1. **Optimize cross-subscription networking costs in your architecture.** Efficient network design balances isolation with cost management. Minimize unnecessary data transfers between subscriptions while maintaining workload isolation and shared service access. This approach ensures cost efficiency without compromising your operational requirements.
 
+1. **Plan for Classic deployment model resource isolation.** Legacy resources created with the classic deployment model can't use Azure policies, role-based access control, resource grouping, or tags. Move these resources to dedicated subscriptions to avoid management complications and enable proper governance of modern resources. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+
+1. **Allow business needs to drive subscription creation.** Your Azure subscription strategy should evolve based on your organization’s priorities. As your business grows, specific needs, such as innovation, migration, cost control, operations, security, and governance, might justify creating more subscriptions.
+
+1. **Decide how to move resources between subscriptions.** Moving resources between subscriptions.** As your subscription model grows, you might decide that some resources belong in other subscriptions. Many types of resources can be moved between subscriptions. You can also use automated deployments to re-create resources in another subscription. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+
 ## Monitor and optimize your subscription design
 
 Ongoing monitoring and optimization ensure your subscription design continues to meet business needs. Regular reviews help identify improvements and prevent issues from escalating. Here's how:

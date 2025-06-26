@@ -98,6 +98,8 @@ items:
           href: ready/azure-setup-guide/index.md
         - name: Organize resources
           href: ready/azure-setup-guide/organize-resources.md
+        - name: Create your initial subscriptions
+          href: ready/azure-best-practices/initial-subscriptions.md
         - name: Select regions
           href: ready/azure-setup-guide/regions.md
         - name: Manage access
@@ -207,8 +209,6 @@ items:
               items:
               - name: Create your initial subscriptions
                 href: ready/azure-best-practices/initial-subscriptions.md
-              - name: Scale with multiple subscriptions
-                href: ready/azure-best-practices/scale-subscriptions.md
 
           - name: Network topology and connectivity
             items:
