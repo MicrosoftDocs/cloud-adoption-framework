@@ -26,7 +26,7 @@ A naming convention provides standardized identification across Azure resources,
 
 1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) keep resource names within length limits.
 
-1. **Define a naming convention.** You need a standardize way to name Azure resources. Tailor the naming convention to your specific needs. such as `{Azure resource abbreviation}{workload name, parent resource, or purpose}{environment}{region}{instance}`. Not every resource needs to include the same information. For example, management groups and subscriptions often contain department information while workload resources don't. Use a hyphen `-` between naming components to make the name more readable, but, note, not all Azure resources allow you to use a hyphen. For more information and examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
+1. **Define a naming convention.** You need a standardized way to name Azure resources. Tailor the naming convention to your specific needs. such as `{Azure resource abbreviation}{workload name, parent resource, or purpose}{environment}{region}{instance}`. Not every resource name needs to include the same information. For example, management groups and subscriptions often contain department information while workload resources don't. Use a hyphen `-` between naming components to make the name more readable, but, note, not all Azure resources allow you to use a hyphen. For more information and examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
 ## Apply resource tags
 
