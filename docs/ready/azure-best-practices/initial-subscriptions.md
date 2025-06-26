@@ -1,13 +1,13 @@
 ---
-title: Subscription best practices for all organizations
-description: Learn practical subscription design recommendations that help organizations of all sizes and Azure maturity levels succeed with their cloud adoption journey.
+title: Create and scale Azure subscriptions
+description: Learn to create your initial Azure subscriptions and scale your subscriptions as your Azure environment grows.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 06/25/2025
+ms.date: 06/26/2025
 ms.topic: conceptual
 ---
 
-# Subscription best practices
+# Create and scale Azure subscriptions
 
 This article helps you create your subscriptions the right way from day one. Subscriptions are the foundation for organizing, securing, and managing your cloud resources. A thoughtful setup now saves you time, money, and effort as your business grows.
 
