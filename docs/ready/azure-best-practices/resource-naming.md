@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Define your naming convention
 
-A well-defined naming and tagging strategy forms the foundation of effective Azure cloud governance and security. These conventions enable you to maintain a  inventory of Azure resources, track and allocate costs, and respond to incidents by quickly identifying affected resources. Define your naming and tagging strategy early to ensure consistency and clarity across your environment. This article provides recommendations for creating a naming convention. For tagging guidance, see [Define a tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
+A well-defined naming and tagging strategy forms the foundation of effective Azure cloud governance and security. These conventions enable you to maintain an inventory of Azure resources, track and allocate costs, and respond to incidents by quickly identifying affected resources. Define your naming and tagging strategy early to ensure consistency and clarity across your environment. This article provides recommendations for creating a naming convention. For tagging guidance, see [Define a tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
 ## Why use a naming convention?
 
