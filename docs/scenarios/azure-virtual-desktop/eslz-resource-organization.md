@@ -118,7 +118,7 @@ For more information about Azure Virtual Desktop organization and management, se
 
 - [Azure Virtual Desktop for the enterprise](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
 - [Organize your Azure resources effectively](../../ready/azure-setup-guide/organize-resources.md)
-- [Resource naming and tagging decision guide](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+- [Resource naming and tagging decision guide](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
 
 ## Next step
 

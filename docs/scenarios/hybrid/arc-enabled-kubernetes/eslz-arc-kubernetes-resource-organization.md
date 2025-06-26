@@ -24,7 +24,7 @@ Keep [Azure Resource Manager service limits](/azure/azure-resource-manager/manag
 
 After you've created a taxonomy and agreed on naming standards, you should apply necessary tags to your Azure Arc-enabled Kubernetes resources. Resource tags let you add metadata to a resource so you can quickly locate it and automate operational tasks, which is important for day-to-day operations.
 
-For detailed guidance on tagging, review the [Cloud Adoption Framework tagging strategy](../../../ready/azure-best-practices/naming-and-tagging.md). You can apply a tag either during cluster onboarding or once your cluster is registered in Azure (meaning your cluster has a resource ID and is part of a resource group within your subscription).
+For detailed guidance on tagging, review the [Cloud Adoption Framework tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging). You can apply a tag either during cluster onboarding or once your cluster is registered in Azure (meaning your cluster has a resource ID and is part of a resource group within your subscription).
 
 Once you've onboarded clusters to resource groups and added tags, you can use [Resource Graph](/azure/governance/resource-graph/overview) queries, view groupings based on resource groups, or organize and inventory your resources using tags. For Arc-enabled Kubernetes, it's a good practice to include a tag that reflects the "hosting platform" or "infrastructure type" for Azure Arc-enabled resources and their physical location.
 

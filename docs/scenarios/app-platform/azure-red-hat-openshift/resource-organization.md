@@ -70,7 +70,7 @@ For example, if you have public and private applications, separate them into dif
 
 ## Design recommendations
 
-- Define a [naming and tagging standard](../../../ready/azure-best-practices/naming-and-tagging.md) to apply to all container resources deployed to Azure. At a minimum, the standard should include:
+- Define a [naming and tagging standard](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) to apply to all container resources deployed to Azure. At a minimum, the standard should include:
   - **Workload names:** The workload or workloads each cluster supports.
   - **Cluster resources:** The elevation of cluster resource alignment from the preceding considerations.
   - **Host operator:** Which team is responsible for host operations.

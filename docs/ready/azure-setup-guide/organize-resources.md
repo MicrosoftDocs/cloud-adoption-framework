@@ -16,7 +16,7 @@ This article explains how to organize Azure resources for optimal security, mana
 
 A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent naming reduces management overhead and prevents resource conflicts across teams. You must define a naming standard and use it consistently.
 
-1. **Define permanent names.** Azure resource names cannot be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
+1. **Understand name permanence.** Azure resource names cannot be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
 
 1. **Follow Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Azure names must follow three general principles:
 
@@ -24,9 +24,25 @@ A naming convention provides standardized identification across Azure resources,
     - Names need to meet length requirements (varies between resources).
     - Names can only contain valid characters (varies between resources).
 
-1. **Use abbreviations.** Use [resource type abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to maintain consistency across all Azure services.
+1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to keep resource names within length limits.
 
-1. **Define a naming convention.** You need a standardize way to name Azure resources. Tailor the naming convention to your specific needs. such as `{Azure resource abbreviation}{workload name, parent resource, or purpose}{environment}{region}{instance}`. Not every resource needs to include the same information. For example, management groups and subscriptions often contain department information while workload resources don't. Use a hyphen `-` between naming components to make the name more readable, but, note, not all Azure resources allow you to use a hyphen. For more information and examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
+1. **Define a naming convention.** You need a standardized way to name Azure resources. Tailor the naming convention to your specific needs. such as `{Azure resource abbreviation}{workload name, parent resource, or purpose}{environment}{region}{instance}`. Not every resource name needs to include the same information. For example, management groups and subscriptions often contain department information while workload resources don't. Use a hyphen `-` between naming components to make the name more readable, but, note, not all Azure resources allow you to use a hyphen. For more information and examples, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
+
+## Apply resource tags
+
+Resource tags provide name-value metadata for resource identification, cost allocation, and operational tracking. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. Implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
+
+Tags simplify resource searches and management. Use tags to capture relevant information such as resource type, application name, environment, department, and location. See [steps to apply tags](/azure/azure-resource-manager/management/tag-resources-portal).
+
+| Name           | Value               |
+|---------------|---------------------|
+| Azure resource | `resource: storage account`<br>`resource: sql database` |
+| Application name | `app : training`<br>`app : webapp` |
+| Environment    | `env : dev`<br>`env : prod` |
+| Department     | `dept : finance`<br>`dept : sales` |
+| Location       | `region : eastus`<br>`region : westus` |
+
+For a mature tagging approach, see [Define your tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
 ## Build a management hierarchy
 
@@ -40,19 +56,7 @@ A management hierarchy defines governance boundaries and inheritance patterns fo
 
 1. **Align resource locations with the resource group.** Place resources in the same region as their resource group to optimize performance and simplify management. For details, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment). If resources span multiple regions, move them to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
-## Apply resource tags
-
-Resource tags provide key-value metadata for resource identification, cost allocation, and operational tracking. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. Implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
-
-Tags simplify resource searches and management. Use tags to capture relevant information such as resource type, application name, environment, department, and location. See [steps to apply tags](/azure/azure-resource-manager/management/tag-resources-portal).
-
-| Key           | Value               |
-|---------------|---------------------|
-| Azure resource | `resource: storage account`<br>`resource: sql database` |
-| Application name | `app : training`<br>`app : webapp` |
-| Environment    | `env : dev`<br>`env : prod` |
-| Department     | `dept : finance`<br>`dept : sales` |
-| Location       | `region : eastus`<br>`region : westus` |
+For a more mature resource hierarchy, see [Azure landing zone resource organization](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
 ## Tools and resources
 
