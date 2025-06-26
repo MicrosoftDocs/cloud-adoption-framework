@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Define your tagging strategy
 
-This article shows you how to create an effective tagging strategy that supports cost management, governance, and automation across your Azure environment. You tagging strategy should build on and complement your naming convention. [Define you naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) before developing a tagging strategy.
+This article shows you how to create an effective tagging strategy that supports cost management, governance, and automation across your Azure environment. Your tagging strategy should build on and complement your naming convention. [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) before developing a tagging strategy.
 
 ## Why use Azure resource tags?
 
@@ -57,7 +57,7 @@ Core tagging patterns provide proven frameworks for organizing Azure resources a
 
 | Tag type | Description | Examples |
 |--|--|--|
-| Functional | Categorizes resources by their purposes within a workload, environment, and region they're deployed to, or other functionality and operational details | `app : catalogsearch1` <br> `tier : web` <br> `webserver : apache` <br> `env : prod` <br> `env : staging` <br> `env : dev` <br> `region : eastus` <br> `region : uksouth` |
+| Functional | Categorizes resources by their technical role, environment, and deployment characteristics within your workloads or other functionality and operational details | `app : catalogsearch1` <br> `tier : web` <br> `webserver : apache` <br> `env : prod` <br> `env : staging` <br> `env : dev` <br> `region : eastus` <br> `region : uksouth` |
 | Classification | Classifies a resource by use and the policies that apply to it | `confidentiality : private` <br> `sla : 24hours` |
 | Accounting | Associates a resource with specific groups within an organization for billing purposes. | `department : finance` <br> `program : business-initiative` <br> `businesscenter : northamerica` |
 | Purpose | Aligns resources to business functions to better support investment decisions. | `businessprocess : support` <br> `businessimpact : moderate` <br> `revenueimpact : high` |
@@ -74,15 +74,12 @@ Use the following tags to increase visibility into the usage of Azure resources.
 | Tag name | Description | Tag name: tag value examples |
 |--|--|--|
 | **Application name** | Added granularity, if the workload is subdivided across multiple applications or services. | `app : issuetrackingsystem` |
-| **Approver name** | Person responsible for approving costs related to the resource. | `approver : chris@contoso.com` |
 | **Budget required/approved** | Money approved for the application, service, or workload. | `budget : $200,000` |
 | **Cost center** | Accounting cost center associated with the resource. | `costcenter : 55332` |
 | **Disaster recovery** | Business criticality of the application, workload, or service. | `criticality : mission-critical` <br> `criticality : critical` <br> `criticality : essential` |
 | **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | `enddate : 2023-10-15` |
 | **Environment** | Deployment environment of the application, workload, or service. | `environment : prod` <br> `environment : dev` <br> `environment : qa` <br> `environment : stage` <br> `environment : test` |
 | **Azure region** | Region where you create the resource. | `region : westeurope` <br> `region : uksouth` <br> `region : eastus` <br> `region : japaneast` <br> `region : qatarcentral` |
-| **Owner name** | Owner of the application, workload, or service. | `owner : jane@contoso.com` |
-| **Requester name** | User who requested the creation of the application. | `requester : john@contoso.com` |
 | **Service class** | Service-level agreement level of the application, workload, or service. | `serviceclass : dev` <br> `serviceclass : bronze` <br> `serviceclass : silver` <br> `serviceclass : gold` |
 | **Start date of the project** | Date when the application, workload, or service was first deployed. | `startdate : 2020-10-15` |
 
