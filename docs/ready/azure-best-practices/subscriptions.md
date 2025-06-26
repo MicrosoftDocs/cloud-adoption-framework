@@ -15,7 +15,7 @@ This article provides recommendations to help you plan and deploy your subscript
 
 Subscriptions provide boundaries for governance, security, and cost management that must align with your business requirements and operational model. You must establish clear principles before creating subscriptions to avoid redesign as your environment grows. Here's how:
 
-1. **Use management groups to govern subscriptions.** Management groups provide hierarchical organization and policy inheritance that simplifies governance at scale. Group related subscriptions together to apply consistent policies and access controls while maintaining flexibility for specific requirements within each group.
+1. **Use management groups to govern subscriptions.** Management groups provide hierarchical organization and policy inheritance that simplifies governance at scale. Use management groups to group related subscriptions and [enforce your cloud governance policies](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies#define-cloud-governance-policies) with Azure Policy. For a mature setup, see [Azure landing zone management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
 
 1. **Establish subscription creation and management processes.** Define clear processes for who can request new subscriptions, who approves them, and how they get created with proper configurations. Standardized processes ensure that all subscriptions meet your governance requirements while providing audit trails and accountability for subscription management activities.
 
@@ -31,21 +31,19 @@ Subscriptions provide boundaries for governance, security, and cost management t
 
 ## Govern your subscriptions
 
-Effective subscription governance ensures your cloud resources remain secure, compliant, and cost-effective throughout their lifecycle. Governance controls protect your organization from security risks and unexpected costs while enabling teams to work efficiently. You need to establish appropriate controls that balance central oversight with workload-specific requirements. Here's how:
+Effective subscription governance ensures your cloud resources remain secure, compliant, and cost-effective throughout their lifecycle. You need to decide what all standard subscriptions should look like, including Azure role-based access controls, policies, tags, and resources. Here's how:
 
-1. **Implement Azure Policy for consistent compliance across subscriptions.** Azure Policy provides automated enforcement of organizational standards and regulatory requirements. Create policy initiatives that apply baseline controls to all subscriptions while allowing appropriate customization for different workload types. This approach ensures all resources meet security and compliance requirements without restricting legitimate business activities.
+1. **Control resource deployments by default.** Use Use Azure Policy at the management group level to enforce governance policies. Start with the [General](/azure/governance/policy/samples/built-in-policies#general) definitions in Azure Policy, which, for example, let you block resources, locations, and deletions.
 
-2. **Delegate appropriate access controls to workload teams.** Role-based access control enables workload teams to manage their resources effectively while maintaining security boundaries. Assign built-in roles that provide the minimum permissions necessary for each team to perform their responsibilities. This delegation increases productivity and reduces bottlenecks while maintaining security through the principle of least privilege.
+1. **Apply Azure role-based access controls to subscription.** Role-based access control enables workload teams to manage their resources effectively while maintaining security boundaries. Assign Azure role-based access controls to subscriptions upon creation that provide workload teams the minimum permissions necessary to perform their responsibilities. Allow workload teams to grant access to resource groups and resources. For more information, see [Azure landing zone access controls](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones#general-recommendations).
 
-3. **Apply budgets and cost alerts to each subscription.** Microsoft Cost Management tools provide financial governance and prevent unexpected spending. Set appropriate [budget thresholds](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget) with automated alerts at defined intervals to notify you before costs exceed limits. These controls help teams manage their cloud spending responsibly while providing visibility to financial stakeholders.
+1. **Apply budgets and cost alerts to each subscription.** Microsoft Cost Management tools provide financial governance and prevent unexpected spending. Set appropriate [budget thresholds](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget) with automated alerts at defined intervals to notify you before costs exceed limits. These controls help teams manage their cloud spending responsibly while providing visibility to financial stakeholders.
 
-4. **Establish resource tagging standards for governance and cost allocation.** Consistent tagging enables accurate tracking and reporting across your environment. Define mandatory tags for ownership, cost center, environment, and application to support governance reporting and chargeback processes. This standardization improves visibility and accountability for all resources across your subscriptions. For more information, see [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
+1. **Establish resource tagging standards for governance and cost allocation.** Consistent tagging enables accurate tracking and reporting across your environment. Define mandatory tags for ownership, cost center, environment, and application to support governance reporting and chargeback processes. This standardization improves visibility and accountability for all resources across your subscriptions. For more information, see [Define your tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
 ## Scale your subscriptions
 
-As your cloud environment grows, your subscription creation process must evolve to support increasing workloads, teams, and complexity. Effective scaling requires clear processes, standardization, and automation to maintain governance while enabling business agility. You need to establish scalable patterns that support growth without compromising security or management. Here's how:
-
-1. **Define clear roles and workflows for subscription creation and approval.** Organizational responsibilities establish accountability for the subscription lifecycle process. Standardized workflows prevent unauthorized subscription creation, reduce management complexity, and ensure alignment with organizational standards and workload boundaries.
+As your cloud environment grows, your subscription creation process must evolve to support increasing workloads, teams, and complexity. You need to establish scalable patterns that support growth without compromising security or management. Here's how:
 
 1. **Use subscription templates with predefined configurations.** Templates provide consistency across your growing environment. These standardized configurations include policies, role assignments, tags, and baseline resources tailored to specific subscription types. Templates reduce configuration effort and enforce security and governance requirements from the start.
 
@@ -57,11 +55,11 @@ As your cloud environment grows, your subscription creation process must evolve 
 
 ## Monitor and optimize your subscription design
 
-Continuous monitoring and optimization ensure that your subscription design continues to meet business requirements and provides value over time. Regular evaluation helps identify opportunities for improvement and prevents small issues from becoming significant problems. You must establish monitoring and review processes that scale with your environment and provide actionable insights. Here's how:
+Ongoing monitoring and optimization ensure your subscription design continues to meet business needs. Regular reviews help identify improvements and prevent issues from escalating. Here's how:
 
-1. **Conduct regular subscription reviews.** Schedule quarterly or yearly reviews of your subscription structure to ensure it continues to align with business requirements and best practices. Regular reviews help identify consolidation opportunities, eliminate unused subscriptions, and optimize your overall Azure architecture for current and future needs.
+1. **Conduct regular access reviews.** Review subscription access quarterly or annually to ensure alignment with business needs. Use Microsoft Entra Privileged Identity Management (PIM) to manage and audit privileged access.
 
-1. **Plan for subscription lifecycle management.** Establish processes for decommissioning unused subscriptions, transferring resources between subscriptions when requirements change, and maintaining compliance throughout the subscription lifecycle. Proper lifecycle management prevents subscription sprawl and ensures that your environment remains organized and cost-effective over time.
+1. **Plan for subscription lifecycle management.** Define processes for decommissioning unused subscriptions, transferring resources, and maintaining compliance. Effective lifecycle management prevents sprawl and keeps your environment organized and cost-effective.
 
 ## Next steps
 
