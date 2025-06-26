@@ -55,6 +55,12 @@ Foundational tagging categories create a standardized approach for organizing Az
 
 1. **Define ownership tags for accountability.** Ownership tags identify the business units and operational teams responsible for each resource to ensure clear accountability and effective communication. Resource management requires defined ownership to support incident response, change management, and lifecycle planning activities. Establish ownership tags including business unit and operations team to maintain clear responsibility boundaries and enable efficient resource governance.
 
+## Use tags to support Microsoft assessments
+
+For Microsoft to use during workload assessment, apply existing tags that accurately identify the workload. If the workload doesn't already have tags, refer to the following examples to guide the creation of new tags. See [Label mission-critical workloads](/azure/azure-resource-manager/management/tag-mission-critical-workload)
+
+## Tag examples
+
 | Tag type | Examples |
 |--|--|
 | Functional | `app : catalogsearch1` <br> `tier : web` <br> `webserver : apache` <br> `env : prod` <br> `env : staging` <br> `env : dev` <br> `region : eastus` <br> `region : uksouth` |
@@ -62,10 +68,6 @@ Foundational tagging categories create a standardized approach for organizing Az
 | Accounting | `department : finance` <br> `program : business-initiative` <br> `businesscenter : northamerica`<br> `budget : $200,000` <br> `costcenter : 55332`|
 | Purpose | `businessprocess : support` <br> `businessimpact : moderate` <br> `revenueimpact : high` |
 | Ownership | `businessunit : finance` <br> `businessunit : marketing` <br> `businessunit : product xyz` <br> `businessunit : corp` <br> `businessunit : shared` <br> `opsteam : central it` <br> `opsteam : cloud operations` <br> `opsteam : controlcharts team` <br> `opsteam : msp-contoso` |
-
-## Use tags to support Microsoft assessments
-
-For Microsoft to use during workload assessment, apply existing tags that accurately identify the workload. If the workload doesn't already have tags, refer to the following examples to guide the creation of new tags. See [Label mission-critical workloads](/azure/azure-resource-manager/management/tag-mission-critical-workload)
 
 ## Next step
 
