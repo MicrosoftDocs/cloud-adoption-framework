@@ -59,7 +59,7 @@ As your cloud environment grows, your subscription strategy must evolve. Establi
 
 1. **Decide how to move resources between subscriptions.** Moving resources between subscriptions.** As your subscription model grows, you might decide that some resources belong in other subscriptions. Many types of resources can be moved between subscriptions. You can also use automated deployments to re-create resources in another subscription. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
-## Monitor and optimize your subscription design
+## Monitor subscriptions
 
 Ongoing monitoring and optimization ensure your subscription design continues to meet business needs. Regular reviews help identify improvements and prevent issues from escalating. Here's how:
 
