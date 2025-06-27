@@ -50,7 +50,7 @@ Transactional data assets are typically associated with an existing application,
 
 Analysis and AI/machine learning solutions can be more complex, requiring a more granular review of the outcomes delivered by each. Associate analysis and AI solutions with the business processes that consume their outputs, often creating an application-level mapping. For cross-application BI, AI, or machine learning solutions, create new workload names to map the data assets to the business processes they impact.
 
-Workloads identified in the digital estate assessment can be used throughout your adoption to drive business impact classification. Record the derived values using the [naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md) that apply to all Azure cloud adoption efforts.
+Workloads identified in the digital estate assessment can be used throughout your adoption to drive business impact classification. Record the derived values using the [naming and tagging standards](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) that apply to all Azure cloud adoption efforts.
 
 Identifying workloads will also help you gain a better understanding of the skills your teams need to be successful.
 
