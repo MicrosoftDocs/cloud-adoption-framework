@@ -1,5 +1,5 @@
 ---
-title: Network Topology and Connectivity for Oracle Database@Azure - Getting Started
+title: Network Topology and Connectivity for Oracle Database@Azure - Get Started
 description: Learn about key design considerations and recommendations for Oracle Database@Azure network topology and connectivity for your landing zone.
 author: moisesjgomez
 ms.author: mgomezcortez
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
-# Network topology and connectivity for Oracle Database@Azure - Getting started
+# Network topology and connectivity for Oracle Database@Azure - Get started
 
 Before you begin cloud adoption, create a landing zone to host the workloads that you plan to build in or migrate to Azure. This section of the framework guides you through how to establish connectivity within your landing zone. This article builds on the Cloud Adoption Framework for Azure [network landing zone](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) design principles.
 
-The following articles help guide you through the process of how to create a network connectivity and topology for your landing zone to support cloud adoption specific to Oracle Exadata Database@Azure.
+The following articles help guide you through the process of creating a network connectivity and topology for your landing zone to support cloud adoption for Oracle Exadata Database@Azure.
 
 | Design area                 | Objective                                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

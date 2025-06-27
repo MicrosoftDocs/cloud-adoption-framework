@@ -50,7 +50,7 @@ Consider the following guidance when you design security measures for Oracle Exa
 Consider the following security recommendations when you design your Oracle Exadata Database@Azure deployment:
 
 - Separate infrastructure access and data services access, especially when different teams access multiple databases on the same infrastructure for various reasons. To achieve network and management isolation at the workload level, deploy VM clusters in a different virtual network.
-- Use NSG rules to limit the source IP address range, which helps secure the data plane and virtual network access. To prevent unauthorized access, only open the necessary ports that you require for secure communication, and apply the [principle of least privilege](/entra/identity-platform/secure-least-privileged-access). You can configure NSG rules on OCI.
+- Use NSG rules to limit the source IP address range, which helps secure the data plane and virtual network access. To prevent unauthorized access, only open the ports that you require for secure communication, and apply the [principle of least privilege](/entra/identity-platform/secure-least-privileged-access).
 - Configure network address translation (NAT) or use a proxy like Azure Firewall or a non-Microsoft network virtual appliance if you require outbound internet access. 
 - Consider the following key management recommendations:
     - Oracle Exadata Database@Azure has built-in integration with OCI Vault. If you store primary encryption keys in OCI Vault, the keys are also stored in OCI, outside of Azure.  
