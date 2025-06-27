@@ -19,7 +19,7 @@ Before you create your first subscription, it's important to define the appropri
 
 1. **Establish subscription creation and management processes.** Define clear processes for who can request new subscriptions, approves them, and how you configure them (policy, access, budgets). Standardized processes ensure that all subscriptions meet your governance requirements while providing audit trails and accountability for subscription management activities.
 
-1. **Use subscriptions to separate workloads** Avoid placing multiple workload environments in the same subscription. Create separate subscriptions for production, nonproduction, and sandbox environments. Each environment requires distinct governance policies and access controls. This separation protects production workloads, supports innovation, and simplifies cost tracking, access control, and policy enforcement. For more information, see [Azure landing zone application environments](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments#environments-subscriptions-and-management-groups).
+1. **Use subscriptions to separate workloads.** Avoid placing multiple workload environments in the same subscription. Create separate subscriptions for production, nonproduction, and sandbox environments. Each environment requires distinct governance policies and access controls. This separation protects production workloads, supports innovation, and simplifies cost tracking, access control, and policy enforcement. For more information, see [Azure landing zone application environments](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments#environments-subscriptions-and-management-groups).
 
 ### Create your initial subscriptions
 
@@ -27,7 +27,7 @@ With policies in place, you're ready to create your first subscriptions. At a mi
 
 1. **Start with three core subscriptions to establish proper boundaries.** Create one production subscription for live workloads, one nonproduction subscription for development and testing, and one sandbox subscription for experimentation and learning. This structure provides essential separation while keeping management overhead low and costs predictable.
 
-1. **Use Azure Dev/Test pricing to optimize costs in non-production environments.** [Azure Dev/Test offers](https://azure.microsoft.com/pricing/dev-test/) provide significant cost savings for development, testing, and training activities. These pricing benefits help small organizations maximize their cloud investment while maintaining proper environment separation and governance practices.
+1. **Use Azure Dev/Test pricing to optimize costs in nonproduction environments.** [Azure Dev/Test offers](https://azure.microsoft.com/pricing/dev-test/) provide significant cost savings for development, testing, and training activities. These pricing benefits help small organizations maximize their cloud investment while maintaining proper environment separation and governance practices.
 
 ## Govern your subscriptions
 
@@ -57,7 +57,7 @@ As your cloud environment grows, your subscription strategy must evolve. Establi
 
 1. **Allow business needs to drive subscription creation.** Your Azure subscription strategy should evolve based on your organization’s priorities. As your business grows, specific needs, such as innovation, migration, cost control, operations, security, and governance, might justify creating more subscriptions.
 
-1. **Decide how to move resources between subscriptions.** Moving resources between subscriptions.** As your subscription model grows, you might decide that some resources belong in other subscriptions. Many types of resources can be moved between subscriptions. You can also use automated deployments to re-create resources in another subscription. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+1. **Decide how to move resources between subscriptions.** As your subscription model grows, you might decide that some resources belong in other subscriptions. Many types of resources can be moved between subscriptions. You can also use automated deployments to re-create resources in another subscription. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
 ## Monitor subscriptions
 
