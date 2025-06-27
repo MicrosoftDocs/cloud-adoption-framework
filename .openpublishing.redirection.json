@@ -282,8 +282,8 @@
       },
       {
          "source_path": "docs/ready/considerations/naming-and-tagging.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging",
-         "redirect_document_id": true
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/ready/considerations/scaling-subscriptions.md",
@@ -862,8 +862,8 @@
       },
       {
          "source_path": "docs/decision-guides/resource-tagging/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide",
-         "redirect_document_id": true   
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": false   
       },
       {
          "source_path": "docs/ready/considerations/networking-options.md",
@@ -3331,9 +3331,20 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/ready/azure-best-practices/naming-and-tagging.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/ready/azure-best-practices/scale-subscriptions.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#scale-your-subscriptions",
          "redirect_document_id": true
       }  
+
    ]   
 }
