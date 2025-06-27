@@ -15,7 +15,7 @@ This article helps you create your subscriptions the right way from day one. Sub
 
 Before you create your first subscription, it's important to define the appropriate way to deploy and manage them. Subscriptions help you manage access, costs, and security, so having a plan upfront helps you scale later. Here's how to get started:
 
-1. **Use management groups to govern subscriptions.** Management groups enable hierarchical organization and policy inheritance, simplifying governance at scale. Group related subscriptions and enforce governance policies using Azure Policy. For advanced scenarios, see [Azure landing zone management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
+1. **Use management groups to govern subscriptions.** Management groups enable hierarchical organization and policy inheritance, simplifying governance at scale. Group related subscriptions and enforce governance policies using Azure Policy. For advanced scenarios, see [Azure landing zone management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
 
 1. **Establish subscription creation and management processes.** Define clear processes for who can request new subscriptions, approves them, and how you configure them (policy, access, budgets). Standardized processes ensure that all subscriptions meet your governance requirements while providing audit trails and accountability for subscription management activities.
 
