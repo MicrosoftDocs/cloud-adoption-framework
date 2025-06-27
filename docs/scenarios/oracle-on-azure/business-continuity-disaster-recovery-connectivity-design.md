@@ -35,7 +35,7 @@ The following diagram illustrates a single-region redundant setup that uses two 
 
 To achieve cross-region redundancy with Oracle Database@Azure, deploy your primary and standby Exadata infrastructures in separate virtual networks in different Azure regions. You can establish direct connectivity by using global virtual network peering, which enables low-latency, high-throughput replication between regions.
 
-The following diagram shows the recommended cross-region configuration that uses global virtual network peering:
+The following diagram shows the recommended cross-region configuration that uses global virtual network peering.
 
 :::image type="content" source="./media/cross-region-data-guard.svg" alt-text="Diagram that shows Oracle Database@Azure deployed in two regions connected via global virtual network peering." border="false" lightbox="./media/cross-region-data-guard.svg":::
 

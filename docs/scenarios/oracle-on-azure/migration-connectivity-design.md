@@ -14,7 +14,7 @@ A successful Oracle Exadata Database@Azure migration depends on secure, high-ban
 
 The following diagram illustrates how Oracle Exadata Database@Azure can connect to on-premises networks and other source environments.
 
-:::image type="content" source="./media/on-premises-connectivity.svg" alt-text="Diagram that shows connectivity to Oracle Exadata Database@Azure from on-premises environments or other sources." border="false" lightbox="./media/on-premises-connectivity.svg":::
+:::image type="content" source="./media/migration.svg" alt-text="Diagram that shows connectivity to Oracle Exadata Database@Azure from on-premises environments or other sources." border="false" lightbox="./media/migration.svg":::
 
 > [!NOTE] 
 > The virtual network in the diagram includes both an Azure Storage account and Azure NetApp Files for illustration purposes. Deployments usually use only one storage solution depending on workload and migration requirements.
