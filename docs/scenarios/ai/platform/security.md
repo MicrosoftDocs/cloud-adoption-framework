@@ -1,5 +1,5 @@
 ---
-title: Security recommendations for AI workloads on Azure
+title: Secure Azure platform services (PaaS) for AI
 description: Learn how to secure AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 04/30/2025
 ms.topic: conceptual
 ---
 
-# Security recommendations for AI workloads on Azure
+# Secure Azure platform services (PaaS) for AI
 
 This article provides security recommendations for organizations that run AI workloads on Azure. These recommendations focus on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. The guidance covers both generative and nongenerative AI workloads.
 

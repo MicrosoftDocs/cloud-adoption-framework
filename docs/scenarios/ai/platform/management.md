@@ -1,15 +1,15 @@
 ---
-title: Management recommendations for AI workloads on Azure
+title: Manage Azure platform services (PaaS) for AI
 description: Learn how to manage AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
-ms.author: rajanaki
-ms.date: 04/09/2025
+ms.author: ssumner
+ms.date: 07/01/2025
 ms.topic: conceptual
 ---
 
-# Management recommendations for AI workloads on Azure
+# Manage Azure platform services (PaaS) for AI
 
-This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
+This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure platform-as-a-service (PaaS) solutions for AI, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
 
 ## Manage AI deployments
 

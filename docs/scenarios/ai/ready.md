@@ -1,17 +1,15 @@
 ---
-title: AI Ready – Process to build AI workloads in Azure
+title: AI Ready
 description: Learn the process to build AI workloads in Azure with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 04/09/2025
+ms.date: 07/01/2025
 ms.topic: conceptual
 ---
 
-# AI Ready – Process to build AI workloads in Azure
+# AI Ready
 
 This article outlines the organizational process for building AI workloads in Azure. The article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It focuses on AI-specific guidance for region selection, resource organization, and networking.
-
-:::image type="content" source="./images/ai-ready.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/ai-ready.svg" border="false":::
 
 ## Establish AI reliability
 

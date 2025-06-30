@@ -1,13 +1,13 @@
 ---
-title: Secure AI – Process to secure AI
+title: Secure AI
 description: Learn the process to secure AI with best practices and recommendations.
 ms.author: ssumner
 author: stephen-sumner
-ms.date: 04/09/2025
+ms.date: 07/01/2025
 ms.topic: conceptual
 ---
 
-# Secure AI – Process to secure AI
+# Secure AI
 
 This article helps you establish a security process for AI workloads in Azure. A secure AI environment supports business objectives and builds stakeholder confidence in AI solutions.
 

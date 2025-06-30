@@ -3,15 +3,13 @@ title: AI strategy
 description: Learn the process to develop a strategy for AI adoption with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 06/16/2025
+ms.date: 07/01/2025
 ms.topic: conceptual
 ---
 
 # AI strategy
 
 This article explains the process to prepare your organization for AI adoption. It describes how to select the right AI solutions, prepare your data, and ground your approach in responsible AI principles. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success.
-
-:::image type="content" source="./images/ai-strategy.svg" alt-text="Diagram showing the AI adoption process: AI Strategy, AI Plan, AI Ready, Govern AI, Manage AI, and Secure AI." lightbox="./images/ai-strategy.svg" border="false":::
 
 ## Identify AI use cases
 

@@ -1,5 +1,5 @@
 ---
-title: Networking recommendations for AI workloads on Azure
+title: Configure networking for Azure platform services (PaaS) for AI
 description: Learn networking for AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner

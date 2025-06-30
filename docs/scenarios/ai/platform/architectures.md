@@ -1,5 +1,5 @@
 ---
-title: AI architecture guidance to build AI workloads on Azure
+title: AI architecture guidance Azure platform services (PaaS)
 description: Learn to find AI architectures and guides to build AI workloads with Azure AI platform services (PaaS).
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 04/29/2025
 ms.topic: conceptual
 ---
 
-# AI architecture guidance to build AI workloads on Azure
+# AI architecture guidance Azure platform services (PaaS)
 
 This article offers architecture guidance for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
 

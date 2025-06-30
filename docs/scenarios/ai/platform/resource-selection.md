@@ -1,5 +1,5 @@
 ---
-title: Resource selection recommendations for AI workloads on Azure
+title: Select Azure platform services (PaaS) for AI
 description: Organizations learn to select the right resources for Azure AI workloads with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 03/27/2025
 ms.topic: conceptual
 ---
 
-# Resource selection recommendations for AI workloads on Azure
+# Select Azure platform services (PaaS) for AI
 
 This article offers resource selection recommendations for Azure AI platform-as-a-service (PaaS) solutions. Informed AI resource choices enables you to achieve better performance, scalability, and cost-effectiveness when building AI workloads. The following table provides an overview of the primary Azure AI PaaS solutions and important decision criteria.
 
