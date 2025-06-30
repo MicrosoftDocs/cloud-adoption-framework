@@ -47,10 +47,10 @@ items:
         href: infrastructure/well-architected.md
   - name: Govern AI
     href: govern.md
-  - name: Manage AI 
-    href: manage.md  
   - name: Secure AI
     href: secure.md
+  - name: Manage AI 
+    href: manage.md  
   - name: Additional resources
     items:
       - name: AI Center of Excellence
