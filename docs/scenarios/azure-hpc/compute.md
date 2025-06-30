@@ -5,7 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
 ms.custom: think-tank
-ms.date: 11/14/2024
+ms.date: 06/11/2025
 ---
 
 # Compute large-scale HPC application workloads in Azure Virtual Machines
@@ -18,13 +18,13 @@ Big compute applications typically have the following characteristics:
 - Each task takes input, processes it, and produces output. The entire application runs for a finite amount of time.
 - The application doesn't need to run constantly, but it must be able to handle node failures and crashes.
 - Tasks can be independent or tightly coupled, which requires high-speed networking technologies like InfiniBand and remote direct memory access (RDMA) connectivity.
-- You can use compute-intensive virtual machine (VM) sizes such as H16r, H16mr, and A9. Your selection depends on the workload.
+- You can use [high-performance compute](/azure/virtual-machines/sizes/high-performance-compute/hc-series), [graphics processing unit (GPU) accelerated compute](/azure/virtual-machines/sizes/gpu-accelerated/nv-family), [field-programmable gate array](/azure/virtual-machines/field-programmable-gate-arrays-attestation) accelerated compute, or [compute-optimized SKUs](/azure/virtual-machines/sizes/compute-optimized/fsv2-series). Your selection depends on the workload.
 
 :::image type="content" source="./media/tasks.png" alt-text="Diagram that shows how a job queue moves from the client to the scheduler and the parallel and tightly coupled Azure tasks." lightbox="./media/tasks.png" border="false":::
 
-Azure provides a range of VM instances that are optimized for CPU-intensive and GPU-intensive workloads. These VMs can run in Azure Virtual Machine Scale Sets to provide resiliency and load balancing. Azure is also the only cloud platform that offers InfiniBand-enabled hardware. InfiniBand provides a significant performance advantage for tasks such as financial risk modeling, engineering stress analysis, and running reservoir simulation and seismic workloads. This advantage results in performance that approaches or exceeds current on-premises infrastructure performance.
+Azure provides a range of virtual machine (VM) instances that are optimized for CPU-intensive and GPU-intensive workloads. These VMs can run in Azure Virtual Machine Scale Sets to provide resiliency and load balancing. Azure is also the only cloud platform that offers InfiniBand-enabled hardware. InfiniBand provides a significant performance advantage for tasks such as financial risk modeling, engineering stress analysis, and running reservoir simulation and seismic workloads. This advantage results in performance that approaches or exceeds current on-premises infrastructure performance.
 
-Azure provides various VM sizes for HPC and GPU-optimized computing. It's important to select a VM size that's appropriate for your workload. To find the best fit, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes) and [Virtual machines selector tool](https://azure.microsoft.com/pricing/vm-selector/).
+Azure provides various VM sizes for HPC and GPU-optimized computing. It's important to select a VM size that's appropriate for your workload. To find the best fit, see [Sizes for VMs in Azure](/azure/virtual-machines/sizes).
 
 Keep in mind that not all Azure products are available in all regions. To see what's available in your area, see [Products available by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/).
 
@@ -40,7 +40,7 @@ When you design your HPC infrastructure, several tools and services are availabl
 
 - [Azure Batch](/azure/batch/) is a managed service for running large-scale HPC applications. Use Batch to configure a VM pool and upload the applications and data files. Then the Batch service configures the VMs, assigns tasks to the VMs, runs the tasks, and monitors progress. Batch can automatically scale VMs up and down in response to changing workloads. Batch also provides a job-scheduling functionality.
 
-- [Azure CycleCloud](/azure/cyclecloud/) is a tool for creating, managing, operating, and optimizing HPC and big compute clusters in Azure. Use Azure CycleCloud to dynamically configure HPC Azure clusters and orchestrate data and jobs for hybrid and cloud workflows. Azure CycleCloud provides the simplest way to manage HPC workloads by using a workload manager. Azure CycleCloud supports workload managers such as Grid Engine, Microsoft HPC Pack, HTCondor, LSF, PBS Pro, SLURM, and Symphony.
+- [Azure CycleCloud](/azure/cyclecloud/) is a tool that you can use to create, manage, operate, and optimize HPC and big compute clusters in Azure. Use Azure CycleCloud to dynamically configure HPC clusters and orchestrate data and jobs for hybrid and cloud workflows. It provides a simple way to manage HPC workloads by using a workload manager. Azure CycleCloud supports workload managers such as Grid Engine, Microsoft HPC Pack, LSF, PBS Pro, and SLURM.
 
 - [Azure Logic Apps](/azure/logic-apps/logic-apps-overview) is a specialized service for scheduling compute-intensive work to run on a managed pool of VMs. You can automatically scale compute resources to meet your jobs' needs.
 
@@ -54,18 +54,18 @@ Consider the following recommendations and use cases when you design an architec
 
 - Understand that reservoir and seismic workflows typically have similar requirements for compute and job scheduling.
 
-- Consider your network needs. Azure HPC provides HBv2 and HBv3-series VM sizes for memory-intensive seismic imaging and reservoir simulations.
+- Consider your network needs. Azure HPC provides HBv2, HBv3, HBv4, and HX-series VM sizes designed for memory-intensive seismic imaging and reservoir simulations.
 
-- Use HB-series VMs for memory bandwidth-bound applications and HC-series VMs for compute-bound reservoir simulations.
+- Use HX-series or HBv4-series VMs for memory bandwidth-bound applications, and use HBv3-series or HBv2-series VMs for compute-bound reservoir simulations.
 
 - Use NV-series VMs for 3D reservoir modeling and visualizing seismic data.
 
 - Use NCv4-series VMs for GPU-accelerated seismic full-waveform inversion (FWI) analysis. 
 
    For data-intensive resin transfer molding (RTM) processing, the NDv4 VM size is the best option because it provides Non-Volatile Memory Express (NVMe) drives that have a cumulative capacity of 7 TB. 
-   
-   To get the best possible performance on HB-series VMs with Message Passing Interface (MPI) workloads, do optimal process pinning to the processors' cores. For more information, see [Optimal MPI process placement for Azure HB-series VMs](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimal-mpi-process-placement-for-azure-hb-series-vms/ba-p/2450663). 
-   
+
+   To get the best possible performance on HBv2, HBv3, HBv4, and HX-series VMs with Message Passing Interface workloads, do optimal process pinning to the processors' cores. For more information, see [Scale HPC applications](/azure/virtual-machines/compiling-scaling-applications).
+
    NCv4-series VMs also provide dedicated tools to ensure the correct pinning of parallel application processes.
 
 - Because of the complex architecture of NDv4-series VMs, pay attention when you configure the VMs to ensure that you launch the GPU-accelerated applications optimally. For more information, see [Azure scalable GPU VM](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-offers-the-most-scalable-gpu-vm-in-the-cloud-with-the-nd/ba-p/2524369).
@@ -106,20 +106,20 @@ The following architecture is an example of how to use VMs in HPC for finance wo
 
 :::image type="content" alt-text="Architecture diagram that shows a finance HPC workload that uses HPC Pack HB-series VMs." source="./media/hpc-finance-architecture-example.svg" lightbox="./media/hpc-finance-architecture-example.svg" border="false":::
 
-This workload uses HPC Pack HB-series compute nodes.
+This workload uses HPC Pack HB-series compute nodes. HB-series SKUs have been retired, but a suitable alternative for the compute instances used in this architecture is the HBv4-series VMs.
 
-The [HB-series VMs](/azure/virtual-machines/hb-series) are optimized for HPC applications, such as financial analysis, weather simulation, and silicon register-transfer level (RTL) modeling. HB VMs feature:
+The [HBv4-series VMs](/azure/virtual-machines/hbv4-series) are optimized for HPC applications such as financial analysis, weather simulation, and silicon register-transfer level modeling. HB VMs feature the following specifications:
 
-- Up to 120 AMD EPYC™ 7003-series CPU cores.
-- 448 GB of RAM.
-- No hyperthreading.
+- Up to 176 AMD EPYC™ 9V33X-series CPU cores  
+- 768 GB of RAM  
+- No hyperthreading  
 
-HB-series VMs also provide:
+HBv4-series VMs also provide the following performance metrics:
 
-- 350 GB per second of memory bandwidth.
-- Up to 32 MB of L3 cache per core.
-- Up to 7 GB per second of block device solid-state drive (SSD) performance.
-- Clock frequencies of up to 3.675 GHz.
+- An average of 1.2 terabytes per second of effective memory bandwidth  
+- 2,304 megabytes of L3 cache  
+- Up to 12 gigabytes per second (GB/s) read and 7 GB/s write speeds for block device SSD performance  
+- Clock frequencies of up to 3.7 gigahertz (GHz)
 
 For the HPC head node, the workload uses a different-sized VM. Specifically, it uses a D16s_v4 VM, a type of general-purpose product.
 
@@ -137,12 +137,6 @@ The HC-series VMs are optimized for HPC applications that use intensive computat
 
 ## Next steps
 
-For more information about applications that support the use cases in this article, see the following resources:
-
-- [Virtual machine series](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
-- [Azure HPC certification.github.io](https://github.com/AzureHPC-Certification/AzureHPC-Certification.github.io/).
-- [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). This standalone reference architecture might not be compliant with the Azure landing zone paradigm.
-
 The following articles provide guidance for various stages of the cloud adoption process. These resources can help you succeed in adopting manufacturing HPC environments for the cloud.
 
 - [Identity and access management](./identity-access-management.md)
@@ -150,4 +144,4 @@ The following articles provide guidance for various stages of the cloud adoption
 - [Resource organization](./resource-organization.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](./azure-hpc-landing-zone-accelerator.md)
-- [Spot virtual machines](/azure/architecture/guide/spot/spot-eviction)
+- [Spot VMs](/azure/architecture/guide/spot/spot-eviction)
