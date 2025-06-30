@@ -89,11 +89,11 @@ Regulatory compliance in AI requires organizations to follow industry standards 
 
 ## Govern AI data
 
-AI data governance involves policies for ensuring that data feeding into AI models is appropriate, compliant, and secure. Data governance protects privacy and intellectual property, which enhances AI outputs' reliability and quality. These measures help mitigate risks related to data misuse, and they align with regulatory and ethical standards.
+Data governance protects privacy and intellectual property, which enhances AI outputs' reliability and quality. These measures help mitigate risks related to data misuse, and they align with regulatory and ethical standards.
 
-- *Establish a process for cataloging data.* Use a tool like [Microsoft Purview](/purview/what-is-data-catalog) to implement a unified data catalog and classification system across your organization. Integrate these policies into your CI/CD pipelines for AI development.
+- *Use data governance tooling.* Use a tool like [Microsoft Purview](/purview/data-governance-overview) to scan, catalog, and classification data from system across your organization. Developers should use [Microsoft Purview SDKs](/purview/developer/microsoft-purview-sdk-documentation-overview) to enforce compliance policies and monitor data access and usage programmatically.
 
-- *Maintain data security boundaries.* Cataloging data helps ensure that you don't feed sensitive data into public-facing AI endpoints. When you create indexes from certain data sources, the indexing process can remove the security boundaries around data. Ensure that any data ingested into AI models is classified and vetted according to centralized standards.
+- *Maintain data security boundaries.* Cataloging data helps ensure that you don't feed sensitive data into public-facing AI endpoints. When you create indexes from certain data sources, the indexing process can remove the security boundaries around data. Ensure that any data you ingest into AI models is classified and vetted according to centralized standards.
 
 - *Prevent copyright infringement.* Use a content filtering system like [Protected material detection in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/protected-material) to filter out copyrighted material. If you're grounding, training, or fine-tuning an AI model, ensure that you use legally obtained and properly licensed data and implement safeguards to prevent the model from infringing on copyrights. Regularly review outputs for intellectual property compliance.
 
