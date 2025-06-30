@@ -11,20 +11,18 @@ items:
       href: ready.md
     - name: AI on Azure platforms (PaaS)
       items:
-      - name: AI architectures
+      - name: PaaS AI architectures
         href: platform/architectures.md
-      - name: AI design areas
-        items:
-          - name: Resource selection
-            href: platform/resource-selection.md
-          - name: Networking
-            href: platform/networking.md
-          - name: Governance
-            href: platform/governance.md
-          - name: Management
-            href: platform/management.md
-          - name: Security
-            href: platform/security.md
+      - name: PaaS AI resource selection
+        href: platform/resource-selection.md
+      - name: PaaS AI networking
+        href: platform/networking.md
+      - name: PaaS AI governance
+        href: platform/governance.md
+      - name: PaaS AI management
+        href: platform/management.md
+      - name: PaaS AI security
+        href: platform/security.md
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Implementation options
