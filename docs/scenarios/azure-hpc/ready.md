@@ -72,7 +72,7 @@ As you can see from these questions, the deployment model varies depending on yo
 | Compute resources | Software as a service (SaaS) nodes – platform as a service (PaaS). |PaaS software – PaaS. |
 | Monitoring tools | Azure Monitor. | Azure Monitor and Grafana. |
 | Customization | You can use custom image pools, third-party images, or Batch API access. | You can use the comprehensive RESTful API to customize and extend functionality, deploy your own scheduler, and support existing workload managers. |
-| Integration | Azure Synapse Analytics pipelines, Azure Data Factory, and the Azure CLI. | A built-in CLI for Windows and Linux. |
+| Integration | Azure Data Factory, and the Azure CLI. | A built-in CLI for Windows and Linux. |
 | User type | Developers. | Classic HPC administrators and users. |
 | Work type | Batches and workflows. | Tightly coupled workflows that use Message Passing Interface (MPI).|
 | Windows support | Provided. | Depends on the scheduler choice. |
