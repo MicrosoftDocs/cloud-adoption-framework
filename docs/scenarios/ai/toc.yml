@@ -11,7 +11,7 @@ items:
       href: ready.md
     - name: AI on Azure platforms (PaaS)
       items:
-      - name: PaaS AI architectures
+      - name: AI architectures
         href: platform/architectures.md
       - name: Resource selection
         href: platform/resource-selection.md
