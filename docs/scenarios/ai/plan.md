@@ -1,5 +1,5 @@
 ---
-title: AI Plan
+title: Plan for AI adoption
 description: Learn the process to plan for AI adoption with best practices and recommendations.
 author: stephen-sumner
 ms.author: ssumner
