@@ -58,7 +58,7 @@ Strategic prioritization ensures you focus resources on projects that deliver ma
 
 3. **Create a prioritized implementation roadmap with clear success criteria.** A structured roadmap provides clear direction for implementation teams and enables progress tracking against defined milestones. This roadmap helps manage stakeholder expectations and resource allocation. Select top-priority use cases and define specific success metrics, timelines, and resource requirements for each project.
 
-Validate concepts through proof of concepts
+## Validate concepts through proof of concepts
 
 Proof of concepts reduce implementation risk by validating technical feasibility and business value before full-scale development. PoCs help identify potential challenges and refine requirements in a controlled environment. You must create focused validation projects that test core assumptions and gather data for informed decision-making. Here's how:
 
@@ -74,7 +74,7 @@ Proof of concepts reduce implementation risk by validating technical feasibility
 
 3. **Use PoC results to refine your use case prioritization and implementation approach.** PoC insights reveal practical challenges and opportunities that inform future project planning and resource allocation. This feedback loop ensures your AI roadmap remains realistic and achievable. Document lessons learned, technical challenges, and business value demonstrated. Adjust your use case priorities based on proven feasibility and measured impact.
 
-Establish responsible AI practices
+## Establish responsible AI practices
 
 Responsible AI practices protect your organization from ethical, legal, and reputational risks while ensuring AI systems align with organizational values. Early integration of responsible AI principles prevents costly redesigns and builds stakeholder trust. You must embed ethical considerations, governance frameworks, and security measures into your implementation plan from the beginning. Here's how:
 
