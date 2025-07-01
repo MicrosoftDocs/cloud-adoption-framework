@@ -23,7 +23,7 @@ Consistent deployment configurations enhance security, compliance, and operation
 
 4. **Manage deployment resources centrally.** Centralized resource management provides consistent oversight and control across all AI deployments. Use the [Management center](/azure/ai-foundry/concepts/management-center) in Azure AI Foundry to configure Foundry projects, track resource utilization, and govern access. This approach ensures standardized resource allocation and cost control. Also [monitor costs in Azure AI Foundry](/azure/ai-foundry/concepts/management-center).
 
-5. **Use Azure API Management as a unified gateway for multiple deployments.** API Management provides consistent security, scalability, rate limiting, token quotas, and centralized monitoring when onboarding multiple applications or teams. This approach standardizes access patterns and reduces management overhead across your AI services. For more information, see [Access Azure OpenAI and other language models through a gateway](/azure/azure/architecture/ai-ml/guide/azure-openai-gateway-guide).
+5. **Use Azure API Management as a unified gateway for multiple deployments.** API Management provides consistent security, scalability, rate limiting, token quotas, and centralized monitoring when onboarding multiple applications or teams. This approach standardizes access patterns and reduces management overhead across your AI services. For more information, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide).
 
 ## Manage AI models
 
@@ -35,7 +35,7 @@ Model monitoring ensures outputs align with Responsible AI principles and mainta
 
 3. **Consider implementing a generative AI gateway for enhanced monitoring.** Azure API Management enables logging and monitoring capabilities that platforms don't provide natively, including source IP collection, input text tracking, and output text analysis. This approach provides comprehensive audit trails and monitoring data. For more information, see [Implement logging and monitoring for Azure OpenAI Service language models](/azure/architecture/ai-ml/openai/architecture/log-monitor-azure-openai).
 
-2. **Choose compute.** In Azure AI Foundry, compute resources support essential [model deployments]((/azure/ai-foundry/concepts/foundry-models-overview#model-deployment-managed-compute-and-serverless-api-deployments)) and [fine-tuning](/azure/ai-foundry/concepts/fine-tuning-overview#serverless-or-managed-compute). Standardize compute types, runtimes, and shutdown periods across compute instances, clusters, and serverless options.
+4. **Choose compute.** In Azure AI Foundry, compute resources support essential [model deployments](/azure/ai-foundry/concepts/foundry-models-overview#model-deployment-managed-compute-and-serverless-api-deployments) and [fine-tuning](/azure/ai-foundry/concepts/fine-tuning-overview#serverless-or-managed-compute). Standardize compute types, runtimes, and shutdown periods across compute instances, clusters, and serverless options.
 
 ## Manage AI data
 

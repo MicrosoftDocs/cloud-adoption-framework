@@ -81,12 +81,12 @@ The following articles provide best practices for adopting AI workloads using Az
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Platform Services | [Azure AI Foundry](https://learn.microsoft.com/azure/ai-foundry/what-is-azure-ai-foundry) | Unified platform for building and deploying generative and nongenerative AI applications |
-| Platform Services | [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/) | Access to OpenAI models with enterprise security and compliance |
-| Platform Services | [Azure Machine Learning](https://learn.microsoft.com/azure/machine-learning/overview-what-is-azure-machine-learning) | End-to-end machine learning lifecycle management platform |
-| Platform Services | [Azure AI Services](https://learn.microsoft.com/azure/ai-services/what-are-ai-services) | Prebuilt AI capabilities for vision, speech, language, and decision making |
-| Architecture Guidance | [Azure Architecture Center AI/ML](https://learn.microsoft.com/azure/architecture/ai-ml/) | Comprehensive collection of AI and machine learning architecture patterns |
-| Best Practices | [Well-Architected Framework AI Workloads](https://learn.microsoft.com/azure/well-architected/ai/get-started) | Design principles and recommendations for AI workloads on Azure |
+| Platform Services | [Azure AI Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Unified platform for building and deploying generative and nongenerative AI applications |
+| Platform Services | [Azure OpenAI](/azure/ai-services/openai/) | Access to OpenAI models with enterprise security and compliance |
+| Platform Services | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | End-to-end machine learning lifecycle management platform |
+| Platform Services | [Azure AI Services](/azure/ai-services/what-are-ai-services) | Prebuilt AI capabilities for vision, speech, language, and decision making |
+| Architecture Guidance | [Azure Architecture Center AI/ML](/azure/architecture/ai-ml/) | Comprehensive collection of AI and machine learning architecture patterns |
+| Best Practices | [Well-Architected Framework AI Workloads](/azure/well-architected/ai/get-started) | Design principles and recommendations for AI workloads on Azure |
 
 ## Next steps
 
