@@ -31,7 +31,7 @@ AI systems contain valuable assets that require strong protection against unauth
 
 Comprehensive security measures protect your AI investments and maintain stakeholder trust in your AI solutions. You must apply targeted controls to secure all components of your AI infrastructure. Here's how:
 
-1. **Create a complete AI asset inventory.** Unknown AI assets create security unguarded sides that attackers exploit to gain unauthorized access. A comprehensive inventory enables effective monitoring and rapid incident response for all AI components. Use [Azure Resource Graph Explorer](https://docs.microsoft.com/azure/governance/resource-graph/) to discover AI resources across subscriptions, implement [Microsoft Defender for Cloud](/azure/defender-for-cloud/identify-ai-workload-model) to identify generative AI workloads, and maintain this inventory through automated scanning and regular validation.
+1. **Create a complete AI asset inventory.** Unknown AI assets create security unguarded sides that attackers exploit to gain unauthorized access. A comprehensive inventory enables effective monitoring and rapid incident response for all AI components. Use [Azure Resource Graph Explorer](/azure/governance/resource-graph/) to discover AI resources across subscriptions, implement [Microsoft Defender for Cloud](/azure/defender-for-cloud/identify-ai-workload-model) to identify generative AI workloads, and maintain this inventory through automated scanning and regular validation.
 
 2. **Secure all AI communication channels.** Exposed communication paths between AI components allow data interception and system compromise. Properly secured channels prevent unauthorized access and protect sensitive information in transit. Implement [managed identities](/entra/identity/managed-identities-azure-resources/overview) for secure authentication without stored credentials, use [virtual networks](/azure/ai-foundry/agents/how-to/virtual-networks) to isolate AI communications, and deploy [Azure API Management](/azure/api-management/export-rest-mcp-server) to secure Model Context Protocol server endpoints.
 
@@ -67,7 +67,7 @@ AI systems face evolving threats that require continuous monitoring to prevent s
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Asset Discovery | [Azure Resource Graph Explorer](https://docs.microsoft.com/azure/governance/resource-graph/) | Discovers and inventories AI resources across Azure subscriptions |
+| Asset Discovery | [Azure Resource Graph Explorer](/azure/governance/resource-graph/) | Discovers and inventories AI resources across Azure subscriptions |
 | Security Monitoring | [Microsoft Defender for Cloud](/azure/defender-for-cloud/identify-ai-workload-model) | Identifies generative AI workloads and security risks |
 | Identity Management | [Managed Identities](/azure/active-directory/managed-identities-azure-resources/) | Secures AI service authentication without storing credentials |
 | Network Security | [Virtual Networks](/azure/ai-foundry/agents/how-to/virtual-networks) | Isolates AI communications and restricts network access |
