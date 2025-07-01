@@ -16,11 +16,11 @@ The Microsoft Cloud Adoption Framework for Azure is your step-by-step guide to s
 
 ## Why use the Cloud Adoption Framework?
 
-The framework provides guidance based on real-world experience to help you succeed in Azure. It gives you a roadmap to follow no matter where you are in your cloud journey. You get guidance you need, when you need it. It's integrated with the Well-Architected Framework and Azure Architecture Center to help you design and build solutions in Azure.
+The Cloud Adoption Framework provides guidance based on real-world experience to help you succeed in Azure. It gives you a roadmap to follow no matter where you are in your cloud journey. You get guidance you need, when you need it. It's integrated with the Well-Architected Framework and Azure Architecture Center to help you design and build solutions in Azure.
 
 ## Who should use the Cloud Adoption Framework?
 
-This framework is for anyone using Azure. Whether you're just starting or already running workloads in the cloud, it helps you make smart decisions. It supports:
+This Cloud Adoption Framework is for anyone using Azure. Whether you're just starting or already running workloads in the cloud, it helps you make smart decisions. It supports:
 
 - **Startups** launching a business in Azure.
 - **Enterprises** operating at a massive scale.
@@ -29,7 +29,7 @@ This framework is for anyone using Azure. Whether you're just starting or alread
 
 ## How to use the Cloud Adoption Framework
 
-The framework is organized into key methodologies that guide you through each phase of your Azure adoption journey. **Strategy**, **Plan**, **Ready**, and **Adopt** are foundational methodologies that help to migrate workloads to Azure or build them in Azure natively. **Govern**, **Secure**, and **Manage** are continuous methodologies that you establish early and evolve throughout your cloud lifecycle.
+The Cloud Adoption Framework organizes its guidance into methodologies that support each phase of your Azure journey. Four methodologies form a sequential path: **Strategy**, **Plan**, **Ready**, and **Adopt**. You complete these methodologies in order to establish your Azure foundation and deploy workloads. Three methodologies run continuously: **Govern**, **Secure**, and **Manage**. You implement these methodologies alongside the sequential ones and refine them as your Azure environment evolves.
 
 | CAF Methodology | Description |
 |-------------|-------------|
