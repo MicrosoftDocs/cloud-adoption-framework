@@ -9,9 +9,7 @@ ms.topic: conceptual
 
 # Secure Azure platform services (PaaS) for AI
 
-This article provides security recommendations for organizations that run AI workloads on Azure. These recommendations focus on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. The guidance covers both generative and nongenerative AI workloads.
-
-Organizations must protect AI resources from potential threats to maintain data integrity and compliance. Security baselines and well-architected frameworks help organizations safeguard their AI infrastructure against vulnerabilities.
+This article provides security recommendations for organizations that run AI workloads on Azure. These recommendations focus on Azure AI platform-as-a-service (PaaS) solutions. Organizations must protect AI resources from potential threats to maintain data integrity and compliance. Security baselines and well-architected frameworks help organizations safeguard their AI infrastructure against vulnerabilities.
 
 ## Secure AI resources
 
@@ -92,4 +90,4 @@ For more information, see [Azure AI Foundry Agent Service](/azure/ai-foundry/age
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Govern PaaS AI](../govern.md)
+> [Management](./management.md)

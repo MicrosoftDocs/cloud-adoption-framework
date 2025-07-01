@@ -27,12 +27,14 @@ Model governance controls ensure AI models produce safe, reliable, and ethical o
 
 2. **Enforce model restrictions.** Azure Policy allows you to control which AI models your organization can use. Apply [model-specific policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment) in Azure AI Foundry to ensure compliance with organizational standards and requirements.
 
-3. **Implement AI risk detection processes.** Use Defender for Cloud to [identify AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [assess risks](/azure/defender-for-cloud/explore-ai-risk) before deployment. Conduct regular [red team assessments](/azure/ai-services/openai/concepts/red-teaming) of generative AI models. Document all findings and update governance policies to address new risks. Here's how:
+3. **Implement AI risk detection processes.** Use Defender for Cloud to [identify AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [assess risks](/azure/defender-for-cloud/explore-ai-risk) before deployment. Conduct regular [red team assessments](/azure/ai-services/openai/concepts/red-teaming) of generative AI models. Document all findings and update governance policies to address new risks.
 
-    1. Enable Defender for Cloud AI workload discovery
-    2. Schedule regular red team assessments
-    3. Document and track identified risks
-    4. Update policies based on findings
+    | Step                          | Action                                                                                     | Description                                                                                       |
+    |-------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+    | Enable Defender for Cloud AI workload discovery | Use Defender for Cloud to identify AI workloads and assess risks before deployment. | This step ensures visibility into AI workloads and helps detect potential vulnerabilities early. |
+    | Schedule regular red team assessments | Conduct red team assessments of generative AI models periodically.                   | Regular assessments help identify weaknesses and improve the security posture of AI models.      |
+    | Document and track identified risks | Maintain a record of risks discovered during assessments.                             | Tracking risks ensures accountability and supports continuous improvement in governance policies.|
+    | Update policies based on findings | Revise governance policies to address newly identified risks.                          | Policy updates ensure that governance measures remain effective and aligned with current risks. |
 
 4. **Apply content safety controls across all models.** [Azure AI Content Safety](/azure/ai-services/content-safety/overview) provides filters that prevent harmful content generation. Consistent application maintains safety standards and reduces legal liability from inappropriate AI outputs.
 

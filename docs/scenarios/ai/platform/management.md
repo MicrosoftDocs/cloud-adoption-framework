@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Manage Azure platform services (PaaS) for AI
 
-This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure platform-as-a-service (PaaS) solutions for AI, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
+This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure platform-as-a-service (PaaS) solutions for AI.
 
 ## Manage AI deployments
 
@@ -58,4 +58,4 @@ Business continuity ensures AI services remain available during regional outages
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Security PaaS AI](../platform/security.md)
+> [Govern AI](../govern.md)

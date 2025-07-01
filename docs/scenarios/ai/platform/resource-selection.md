@@ -59,4 +59,4 @@ In a nongenerative AI workload: (1) The workload ingests data. (2) An optional d
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Networking PaaS AI](../platform/networking.md)
+> [Networking](../platform/networking.md)

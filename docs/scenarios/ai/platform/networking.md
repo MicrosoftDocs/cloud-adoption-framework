@@ -52,4 +52,4 @@ Network traffic control defines how data flows between AI services and external 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Governance for platform AI services](../platform/governance.md)
+> [Governance](../platform/governance.md)

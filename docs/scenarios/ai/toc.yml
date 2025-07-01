@@ -13,16 +13,16 @@ items:
       items:
       - name: PaaS AI architectures
         href: platform/architectures.md
-      - name: PaaS AI resource selection
+      - name: Resource selection
         href: platform/resource-selection.md
-      - name: PaaS AI networking
+      - name: Networking
         href: platform/networking.md
-      - name: PaaS AI governance
+      - name: Governance
         href: platform/governance.md
-      - name: PaaS AI management
-        href: platform/management.md
-      - name: PaaS AI security
+      - name: Security
         href: platform/security.md
+      - name: Management
+        href: platform/management.md
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Implementation options
