@@ -16,7 +16,7 @@ The Microsoft Cloud Adoption Framework for Azure is your step-by-step guide to s
 
 ## Why use the Cloud Adoption Framework?
 
-The Cloud Adoption Framework provides guidance based on real-world experience to help you succeed in Azure. It gives you a roadmap to follow no matter where you are in your cloud journey. You get guidance you need, when you need it. It's integrated with the Well-Architected Framework and Azure Architecture Center to help you design and build solutions in Azure.
+The Cloud Adoption Framework provides guidance based on real-world experience to help you succeed in Azure. It gives you a roadmap to follow no matter where you are in your cloud journey. You get guidance you need, when you need it. It integrates with the Well-Architected Framework and Azure Architecture Center to help you design and build solutions in Azure.
 
 ## Who should use the Cloud Adoption Framework?
 
@@ -34,7 +34,7 @@ The Cloud Adoption Framework organizes its guidance into methodologies that supp
 | CAF Methodology | Description |
 |-------------|-------------|
 | 🚀 [**Strategy**](/azure/cloud-adoption-framework/strategy/) | Define business justification and expected outcomes. |
-| 📝 [**Plan**](/azure/cloud-adoption-framework/plan/) | Align cloud adoption plans with business goals . |
+| 📝 [**Plan**](/azure/cloud-adoption-framework/plan/) | Align cloud adoption plans with business goals. |
 | 🛠️ [**Ready**](/azure/cloud-adoption-framework/ready/) | Prepare your Azure environment and landing zones. |
 | 🌐 [**Adopt**](/azure/cloud-adoption-framework/adopt/) | Migrate, modernize, and innovate in Azure. |
 | 🛡️ [**Govern**](/azure/cloud-adoption-framework/govern/) | Establish governance to manage risks. |
