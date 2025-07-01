@@ -21,11 +21,21 @@ Virtual networks establish secure communication boundaries for AI services and p
 
 ## Control network traffic
 
-Network traffic control determines how data flows between your AI services and external systems. Traffic restrictions prevent unauthorized data movement while ensuring AI operations function properly. You must implement traffic controls to protect sensitive AI data and maintain operational security. Here's how:
+Network traffic control defines how data flows between AI services and external systems. Proper traffic restrictions protect sensitive AI data and ensure secure operations. You must implement traffic controls to safeguard AI workloads and maintain operational security. Here's how:
 
-1. **Deploy secure access through jumpbox infrastructure**. Jumpbox access provides a controlled entry point into your AI network environment while maintaining strict security boundaries. This approach centralizes access control and prevents direct exposure of AI development resources to external networks. Use a jumpbox within your AI workload virtual network or through a connectivity hub virtual network and configure [Azure Bastion](/azure/bastion/bastion-overview) to provide secure RDP/SSH connectivity without exposing virtual machines to the public internet.
+1. **Deploy secure access using jumpbox infrastructure**. Jumpbox access provides a centralized entry point into your AI network environment while maintaining strict security boundaries. This configuration prevents direct exposure of AI resources to external networks while enabling secure access. Use a jumpbox within your AI workload virtual network or a connectivity hub virtual network, and configure [Azure Bastion](/azure/bastion/bastion-overview) for secure RDP/SSH connectivity without exposing virtual machines to the public internet.
 
-2. **Restrict outbound traffic to approved destinations**. Outbound traffic restrictions prevent data exfiltration while allowing necessary communication for AI model training and inference. These restrictions protect your AI models and training data from unauthorized external transmission while maintaining required connectivity for legitimate operations. Limit outbound traffic to approved services and fully qualified domain names (FQDNs) as documented for [Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention) and [Azure AI Foundry](/azure/ai-studio/how-to/configure-managed-network).
+2. **Restrict outbound traffic to approved destinations**. Outbound traffic restrictions prevent unauthorized data exfiltration while allowing necessary communication for AI model training and inference. This approach protects AI models and training data while maintaining connectivity for legitimate operations. Limit outbound traffic to approved services and fully qualified domain names (FQDNs) as documented for [Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention) and [Azure AI Foundry](/azure/ai-studio/how-to/configure-managed-network).
+
+3. **Prepare domain name resolution services**. Deploy Azure DNS infrastructure as part of your [Azure landing zone](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources) and configure [conditional forwarders](/azure/private-link/private-endpoint-dns) for appropriate zones. This setup ensures reliable name resolution for secure communication between AI workloads and external systems.
+
+4. **Configure network access controls**. Use [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) to define and enforce access policies for inbound and outbound traffic. These controls implement the principle of least privilege, ensuring only essential communication is permitted.
+
+5. **Use network monitoring services**. Monitor network performance and health using tools like Azure Monitor Network Insights and Azure Network Watcher. For advanced threat detection and response, integrate [Microsoft Sentinel](/azure/sentinel/overview) into your Azure network monitoring strategy.
+
+6. **Deploy Azure Firewall to secure outbound traffic**. [Azure Firewall](/azure/firewall/overview) enforces security policies for outgoing traffic before it reaches the internet. Use it to control and monitor outbound traffic, enable SNAT for private IP translation, and ensure secure and identifiable outbound communication.
+
+7. **Use Azure Web Application Firewall (WAF) for internet-facing workloads**. [Azure WAF](/azure/web-application-firewall/overview) protects AI workloads from common web vulnerabilities like SQL injections and cross-site scripting attacks. Configure Azure WAF on [Application Gateway](/azure/web-application-firewall/ag/ag-overview) to enhance security for workloads exposed to malicious web traffic.
 
 ## Azure resources
 
