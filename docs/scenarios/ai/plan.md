@@ -13,6 +13,8 @@ This article helps you create an AI adoption plan that transforms your organizat
 
 ## Assess AI skills
 
+Current capability assessment prevents resource misallocation and ensures realistic project planning aligned with organizational readiness. AI projects fail when organizations attempt implementations beyond their technical maturity or data availability. You must evaluate your skills, data assets, and infrastructure to establish a foundation for successful AI adoption. Here's how:
+
 1. **Measure your AI maturity level using the skills and data readiness framework.** The framework provides objective criteria to assess your organization's current AI capabilities. This measurement prevents overcommitting to projects beyond your current capabilities. Use the following table to assess your maturity:
 
    | AI maturity level | Skills required | Data readiness | Feasible AI use cases |
