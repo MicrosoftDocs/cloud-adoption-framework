@@ -40,7 +40,7 @@ Use well-designed, well-maintained data products and their interfaces to help av
 
 To fulfill data product serving requirements, your domain teams must acquire a new set of skills and use new tools and platforms.
 
-To build the data applications and produce or serve data products, fully equip your domain application teams. Your teams can use a familiar technology stack to build data products. They might also prefer to have their own Spark instance or pipeline engine. For example, a large domain that serves many data products might process and serve data products from their own Azure Synapse Analytics instance. Smaller organizations and smaller domains of large organizations might develop and run their data applications on a shared platform, such as a centrally located Azure Data Factory, Azure Synapse Analytics, or Azure Databricks instance.
+To build the data applications and produce or serve data products, fully equip your domain application teams. Your teams can use a familiar technology stack to build data products. They might also prefer to have their own Spark instance or pipeline engine. Smaller organizations and smaller domains of large organizations might develop and run their data applications on a shared platform, such as a centrally located Azure Data Factory or Azure Databricks instance.
 
 Ensure that your data products have the common characteristics that are described in this article, that your lineage repository reflects your data application lineage, and that you govern your implementation and access.
 
