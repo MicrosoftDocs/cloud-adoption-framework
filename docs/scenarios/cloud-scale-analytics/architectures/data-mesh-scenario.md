@@ -78,7 +78,7 @@ The following diagram illustrates what a data product might look like:
 
 :::image type="content" source="../images/data-mesh-product.png" alt-text="Diagram of a data domain containing a data product." lightbox="../images/data-mesh-product.png":::
 
-A pragmatic approach to building data products is to either align with the source, where the data originates, or with the consuming use case. In both cases, you need to provide an abstract view of the underlying (complex) application data model. You must try to hide the technical details and optimize for intensive data consumption. An Azure Synapse view or Parquet file, which logically groups data together, is an example of how a data product can be shared across various data domains.
+A pragmatic approach to building data products is to either align with the source, where the data originates, or with the consuming use case. In both cases, you need to provide an abstract view of the underlying (complex) application data model. You must try to hide the technical details and optimize for intensive data consumption. A Parquet file, which logically groups data together, is an example of how a data product can be shared across various data domains.
 
 Next, you need to work on data discoverability, provenance, usage, and lineage. A proven approach is to use a data governance service, like Microsoft Purview, to register all data. Data integration in cloud-scale analytics perfectly connects the dots because it allows building these data products as it simultaneously performs metadata registration.
 

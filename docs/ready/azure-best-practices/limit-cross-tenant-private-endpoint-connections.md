@@ -108,7 +108,7 @@ Instead, assign the policy to the top-level management group, and then use exemp
 
 ### Considerations for scenario one
 
-This policy blocks the ability to create private endpoints that are in a different subscription than the service itself. If these endpoints are required for certain use cases, use policy exemptions. Create more policies for Data Factory and Azure Synapse to make sure that managed private endpoints hosted on the managed virtual network can only connect to services hosted within your Microsoft Entra tenant.
+This policy blocks the ability to create private endpoints that are in a different subscription than the service itself. If these endpoints are required for certain use cases, use policy exemptions. Create more policies for Data Factory to make sure that managed private endpoints hosted on the managed virtual network can only connect to services hosted within your Microsoft Entra tenant.
 
 ## Deny connections from private endpoints created in other tenants
 
@@ -164,7 +164,7 @@ Also, assign the policy to the top-level management group and use exemptions whe
 
 ### Considerations for scenario two
 
-Azure Synapse Analytics and Azure Data Factory offer managed virtual networks and managed private endpoints. Because of these new capabilities, the policy blocks the secure and private usage of these services.
+Azure Data Factory offers managed virtual networks and managed private endpoints. Because of these new capabilities, the policy blocks the secure and private usage of these services.
 
 It's recommended that you use an **Audit** effect instead of a **Deny** effect in the policy definition you use in the [scenario two mitigation](#mitigation-for-scenario-two). This change helps you keep track of private endpoints being created in separate subscriptions and tenants. You can also use policy exemptions for the respective data platform scopes.
 
@@ -201,60 +201,6 @@ To overcome [scenario one](#deny-private-endpoints-linked-to-services-in-other-t
 This policy denies managed private endpoints that are linked to services, which are hosted outside the subscription of the Data Factory. You can change this policy to allow connections to services hosted in a set of subscriptions by adding a `list` parameter and by using the `"notIn": "[parameters('allowedSubscriptions')]"` construct. We recommend this change for the data platform scope inside the tenant or environments where services with managed virtual networks and managed private endpoints are extensively used.
 
 It's recommended that you assign this policy to the top-level management group and use exemptions where required. For the data platform, make these changes and assign the policy to the set of data platform subscriptions.
-
-#### Azure Synapse
-
-Azure Synapse also uses managed virtual networks. We recommend applying a similar policy to the Data Factory policy for [scenario one](#deny-private-endpoints-linked-to-services-in-other-tenants). Azure Synapse doesn't provide a policy alias for managed private endpoints. But there's a data exfiltration prevention feature, which can be enforced for workspaces using the following policy:
-
-```json
-"if": {
-    "allOf": [
-        {
-            "field": "type",
-            "equals": "Microsoft.Synapse/workspaces"
-        },
-        {
-            "anyOf": [
-                {
-                    "field": "Microsoft.Synapse/workspaces/managedVirtualNetworkSettings.preventDataExfiltration",
-                    "exists": false
-                },
-                {
-                    "field": "Microsoft.Synapse/workspaces/managedVirtualNetworkSettings.preventDataExfiltration",
-                    "notEquals": true
-                },
-                {
-                    "count": {
-                        "field": "Microsoft.Synapse/workspaces/managedVirtualNetworkSettings.allowedAadTenantIdsForLinking[*]",
-                        "where": {
-                            "field": "Microsoft.Synapse/workspaces/managedVirtualNetworkSettings.allowedAadTenantIdsForLinking[*]",
-                            "notEquals": "[subscription().tenantId]"
-                        }
-                    },
-                    "greaterOrEquals": 1
-                }
-            ]
-        }
-    ]
-},
-"then": {
-    "effect": "Deny"
-}
-```
-
-This policy enforces the use of the data exfiltration feature of Azure Synapse. With Azure Synapse, you can deny any private endpoint that's coming from a service that's hosted outside of the customer tenant. You can also deny any private endpoint hosted outside of a specified set of tenant IDs. This policy only allows creating managed private endpoints that are linked to services, which are hosted in the customer tenant.
-
-These policies are now available as built-in.
-
-- Azure Synapse workspaces should allow outbound data traffic only to approved targets.
-
-   Definition ID: `/providers/Microsoft.Authorization/policyDefinitions/3484ce98-c0c5-4c83-994b-c5ac24785218`
-
-- Azure Synapse managed private endpoints should only connect to resources in approved Microsoft Entra tenants.
-
-   Definition ID: `/providers/Microsoft.Authorization/policyDefinitions/3a003702-13d2-4679-941b-937e58c443f0`
-
-It's recommended that you assign the policy to the top-level management group and use exemptions where required.
 
 ## Next steps
 

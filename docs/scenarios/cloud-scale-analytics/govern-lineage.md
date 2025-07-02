@@ -16,7 +16,7 @@ A primary feature of any data catalog is its ability to show the lineage between
 
 Microsoft Purview Data Catalog connects with various data processing, storage, and analytics systems to extract lineage information. The goal is to represent the movement, transformation, and operational metadata from each data system.
 
-Azure Data Factory and Azure Synapse pipelines are recommended for ingestion solutions because they enable data lineage in Microsoft Purview. Alternate ingestion patterns should use the Apache Atlas API to update data lineage as part of their data processing.
+Azure Data Factory are recommended for ingestion solutions because they enable data lineage in Microsoft Purview. Alternate ingestion patterns should use the Apache Atlas API to update data lineage as part of their data processing.
 
 Microsoft Fabric supports lineage without requiring Microsoft Purview. If you require one place to view lineage, then we recommend setting Microsoft Purview to scan a Microsoft Fabric tenant as this setting automatically brings in metadata and lineage from Fabric items, including Power BI, into Microsoft Purview Data Catalog. For more information, see [Lineage in Fabric](/fabric/governance/lineage) and [How to get lineage from Microsoft Fabric items into Microsoft Purview](/purview/how-to-lineage-fabric).
 

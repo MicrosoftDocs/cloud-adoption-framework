@@ -81,7 +81,6 @@ Consider these examples when you define your naming convention. The examples are
 |--|--|--|
 | **Azure Analysis Services** | Global | *as\<app name>\<environment>* <br><br> <li> `asnavigatorprod` <li> `asemissionsdev` |
 | **Azure Data Factory** | Global | *adf-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
-| **Azure Synapse Analytics workspaces** | Resource group | *synw-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `synw-navigator-prod` <li> `synw-emissions-dev` |
 | **Data Lake Storage account** | Global | *dls\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |
 | **IoT hub** | Global | *iot-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `iot-navigator-prod` <li> `iot-emissions-dev` |
 
