@@ -24,11 +24,11 @@ Review all the content to ensure it aligns with the following markdown template.
 
     ## Add as many headings and sub headings as needed. But enforce this style and format throughout.
 
-    ## Azure resources [Review all the links and create a table of Azure tools and resources a table as follows]
+    ## Azure tools and resources [A collection of all  all the links in this article]
 
     | Category | Tool | Description |
     |----------|------|-------------|
-    | [Tool category 1] | [Tool or resource name with link] | [Brief description of how it supports the recommendations] |
+    | [Tool category 1] | [Tool or resource name with link that is present in this article] | [Brief description of how it supports the recommendations] |
 
     ## Next steps
     
