@@ -1,58 +1,58 @@
 ---
-title: Azure App Service landing zone accelerator
-description: The Azure App Service landing zone accelerator set is an open-source collection of Terraform templates that you can use to automate the deployment of an environment capable of hosting Azure App Service.
-author: Zimmergren
-ms.author: tozimmergren
-ms.date: 03/23/2022
+title: Deploy Azure App Service at scale with landing zone accelerator
+description: Implement Azure App Service with a landing zone accelerator that provides design guidance and reference implementations for scalable deployments.
+author: stephen-sumner
+ms.author: pnp
+ms.date: 06/24/2025
 ms.topic: conceptual
-ms.custom: internal, devx-track-terraform
 ---
 
-# Azure App Service landing zone accelerator
+# Deploy Azure App Service at scale with the landing zone accelerator
 
-The Azure App Service landing zone accelerator is an open-source collection of architectural guidance and reference implementation to accelerate deployment of Azure App Service at scale. It can provide a specific architectural approach and reference implementation via infrastructure as code templates to prepare your landing zones. The landing zones adhere to the architecture and best practices of the Cloud Adoption Framework.
+This article helps you accelerate Azure App Service deployments using architectural guidance and reference implementations. The landing zone accelerator provides infrastructure as code templates that prepare a scalable and secure environment for your app workloads, adhering to Cloud Adoption Framework best practices.
 
-The architectural approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using App Service. The reference implementation can be adapted to produce an architecture that fits **your** way and puts your organization on a path to sustainable scale.
+## Use a modular approach for flexible implementation
 
-The provided infrastructure-as-code template can be modified to fit your naming conventions, use existing resources (DevOps agent, key vault, and so on), and use different modes of App Service Environment v3.
+The Azure App Service landing zone accelerator offers a flexible foundation that works for both new implementations and existing App Service deployments. The modular architecture allows you to customize components based on your specific requirements. You need to evaluate your application needs and organizational constraints to create an effective landing zone. Here's how:
+
+1. **Determine your deployment type requirements.** Choose between multitenant App Service for cost-effectiveness or App Service Environment for complete isolation. The accelerator supports both deployment types with specific guidance for each scenario where needed.
+
+2. **Customize the infrastructure templates.** Adapt the provided infrastructure-as-code templates to match your organization's naming conventions, integrate with existing resources, and configure App Service Environment v3 modes based on your requirements.
 
 ## Implement a platform foundation
 
-Azure App Service landing zone accelerator assumes that a platform foundation that takes care of the shared services (network, security, identity, and governance) required to effectively construct and operationalize a landing zone has been successfully implemented. This isn't mandatory when implementing the Azure App Service landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have one, you can skip this step. For more information on this, review this article:
+A platform provides the shared services that support your App Service environment. These services handle network connectivity, security controls, identity management, and governance requirements. If you already have a foundation, you can build on it. If you don't have a platform foundation, start with the [Azure landing zone guidance](/azure/cloud-adoption-framework/ready/landing-zone/) to create your cloud foundation.
 
-- [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/index.md)
+## Use the assets provided by the accelerator
 
-## What Azure App Service landing zone accelerator provides
+The landing zone accelerator provides resources to support your App Service implementation:
 
-The landing zone accelerator approach provides these assets to support your project:
+1. **Tailor the modular architecture components.** Customize environment variables to match your specific workload requirements without rebuilding the entire solution.
 
-- A modular approach, so that you can customize environment variables
-- Design guidelines to aid in evaluating critical decisions. For guidance that is specific to multi-tenant App Service or App Service Environments, individual sections are listed, otherwise the guidance should apply to either deployment.
-- An implementation that includes:
-  - A deployable reference capable of creating the environment for your Azure App Service deployment
-  - A Microsoft-approved Azure App Service reference implementation to test the deployed environment
+2. **Follow design guidelines.** Access expert guidance on key design areas that affect your implementation. The documentation clearly indicates which sections apply to multitenant App Service or App Service Environments.
 
-## Design guidelines
+3. **Deploy a reference implementation.** Deploy a production-ready environment with infrastructure-as-code templates that create all necessary Azure resources.
 
-These articles provide guidelines for creating your landing zone:
+:::image type="complex" source="./media/app-service-landing-zone-accelerator.svg" alt-text="This Azure architecture diagram illustrates a secure, multitenant App Service Plan (Premium SKU) deployment using a hub-and-spoke network topology." lightbox="./media/app-service-landing-zone-accelerator.svg" border="false":::
+    Customers connect to the web application through Azure Front Door, which integrates with a Private Link Service for secure, private access. The web app is hosted in an App Service Environment v3 and is integrated into the virtual network via the Ingress Subnet. This subnet enables the app to  connect to backend resources. The backend resources include Azure Redis Cache, Azure Key Vault, Azure Container Registry, Azure SQL Database, and Azure OpenAI. The spoke virtual network contains the App Service Environment and supporting subnets like Private Link and DevOps. The hub virtual network hosts shared services. These services include Azure Bastion for secure RDP/SSH access, Azure Firewall for traffic control, Azure Monitor, Application Insights, and Microsoft Entra ID. Peering between the hub and spoke networks facilitates secure and efficient communication across the environment.
+:::image-end:::
 
-- [Identity and access management](./identity-and-access-management.md)
-- [Network topology and connectivity](./network-topology-and-connectivity.md)
-- [Security](./security.md)
-- [Management](./management.md)
-- [Governance](./governance.md)
-- [Platform automation and DevOps](./platform-automation-and-devops.md)
+## Apply design guidelines for each key area
 
-## Example conceptual reference architecture
+Address these design areas when implementing your landing zone:
 
-The following conceptual reference architecture is an example that shows design areas and best practices.
+- [Identity and access management](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/identity-and-access-management): Configure authentication, authorization, and secure resource access.
+- [Network topology and connectivity](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/network-topology-and-connectivity): Design network segmentation, connectivity, and security controls.
+- [Governance](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/governance): Establish policies, cost management, and compliance controls.
+- [Security](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/security): Implement application protection, secret management, and compliance requirements.
+- [Management](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/management): Set up monitoring, diagnostics, and operational processes.
+- [Platform automation and DevOps](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/platform-automation-and-devops): Implement CI/CD pipelines and infrastructure automation.
 
-[![Diagram that shows Azure App Service landing zone accelerator architecture.](./media/landing-zone-accelerator/reference-implementation.png)](./media/landing-zone-accelerator/reference-implementation.png#lightbox)
+## Deploy the reference implementation
 
-## Deploy Azure App Service landing zone accelerator
-
-The Azure App Service landing zone accelerator reference implementation with infrastructure-as-code templates is available on [GitHub](https://github.com/Azure/appservice-landing-zone-accelerator).
+Get started with the [Azure App Service landing zone accelerator reference implementation](https://github.com/Azure/appservice-landing-zone-accelerator) on GitHub. The repository contains infrastructure-as-code templates and detailed deployment instructions.
 
 ## Next steps
 
-- Review the critical design areas to make complete considerations and recommendations for your Azure App Service architecture. Start with [identity and access management](./identity-and-access-management.md).
+> [!div class="nextstepaction"]
+> [Identity and access management considerations](identity-and-access-management.md)

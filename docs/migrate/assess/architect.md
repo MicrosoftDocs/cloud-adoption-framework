@@ -2,7 +2,7 @@
 title: Design workload architecture before migration
 description: Learn how to use the Cloud Adoption Framework for Azure to define the intended cloud architecture of a workload before you begin migration.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/09/2024
 ms.topic: conceptual
 ms.collection: 
@@ -30,7 +30,7 @@ The following assumptions are typical for any migration effort:
 
 ### Design architecture for a landing zone
 
-In the [Ready phase](../../ready/index.md) of the Cloud Adoption Framework, your organization deployed shared platform services as part of adopting [Azure landing zones](../../ready/landing-zone/index.md). In [Ready your landing zone for migration](../prepare/ready-azure-landing-zone.md), you prepared the landing zone to receive migrated workloads.
+In the [Ready phase](../../ready/index.md) of the Cloud Adoption Framework, your organization deployed shared platform services as part of adopting [Azure landing zones](../../ready/landing-zone/index.md). In [Ready your landing zone for migration](../../ready/landing-zone/ready-azure-landing-zone.md), you prepared the landing zone to receive migrated workloads.
 
 Based on this planning, you can assume that the following migration components are in place:
 

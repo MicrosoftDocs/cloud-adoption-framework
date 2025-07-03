@@ -43,8 +43,6 @@ For more information, see the Microsoft Azure Well-Architected Framework's guide
   - **Self-managed backup:** You can configure Oracle Exadata Database@Azure to stream database backups to Azure Storage services, including Azure Blob Storage, Azure Files (via private endpoints), and Azure NetApp Files.
 
     This option requires manual configuration and ongoing maintenance.
-  
-    Using private endpoints with Oracle Database@Azure requires an intermediate hop through a routing device such as a network virtual appliance (NVA). This appliance can be a hub NVA such as Azure Firewall or a non-Microsoft NVA. For nonproduction environments, it can be a dedicated VM that's used for IP address forwarding like in [Deploy a local NVA](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/creating-a-local-network-virtual-appliance-in-azure-for-oracle-databaseazure/4218101). For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan).
 
   - **Non-Microsoft backup solutions:** You can use non-Microsoft backup solutions that are available in Azure Marketplace, such as [Commvault](https://documentation.commvault.com/2024e/essential/oracle_database_at_azure.html), to manage and store database backups.
 

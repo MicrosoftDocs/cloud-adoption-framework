@@ -2,7 +2,7 @@
 title: Inventory and visibility considerations
 description: Learn how to manage inventory and visibility in your Azure platform services.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
@@ -28,7 +28,7 @@ Consider the following items related to logging data to inform what types of dat
 |Application-centric platform monitoring <br>  |Include both hot and cold telemetry paths for metrics and logs, respectively. <br> Operating system metrics, such as performance counters and custom metrics. <br> Operating system logs, such as: <br> <ul> <li>Internet Information Services</li> <li>Event Tracing for Windows, and syslogs</li> <li>Resource health events</li> </ul>|
 |Security audit logging  |Aim to achieve a horizontal security lens across your organization's entire Azure estate. <br> <ul> <li>Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform</li> <li>Potential integration with software as a service (SaaS) offerings like ServiceNow</li> <li>Azure activity logs</li> <li>Microsoft Entra audit reports</li> <li>Azure diagnostic services, logs, and metrics, Azure Key Vault audit events, network security group (NSG) flow logs, and event logs</li> <li>Azure Monitor, Azure Network Watcher, Microsoft Defender for Cloud, and Microsoft Sentinel</li> </ul>|
  Azure data retention thresholds and archiving requirements|<ul> <li>The default retention period for Azure Monitor Logs is 30 days, with a maximum analytics retention of two years and archive of seven years.</li> <li>The default retention period for Microsoft Entra reports (premium) is 30 days.</li> <li>The default retention period for the Azure Activity logs and Application Insights logs is 90 days.</li> </ul>|
-Operational requirements|<ul> <li>Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling</li> <li>Use of centralized roles to control privileged activities</li> <li>Managed identities for Azure resources](/Azure/active-directory/managed-identities-Azure-resources/overview) for access to Azure services</li> <li>Resource locks to protect from editing and deleting resources</li> </ul>|
+Operational requirements|<ul> <li>Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling</li> <li>Use of centralized roles to control privileged activities</li> <li>Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview) for access to Azure services</li> <li>Resource locks to protect from editing and deleting resources</li> </ul>|
 
 ### Visibility considerations
 

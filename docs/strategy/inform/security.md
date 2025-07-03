@@ -1,7 +1,7 @@
 ---
 title: Security Considerations for Your Cloud Strategy
 description: Learn how to design your cloud infrastructure with security in mind to protect your data and applications from unauthorized access and data breaches.
-ms.author: tozimmergren
+ms.author: pnp
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 02/03/2025

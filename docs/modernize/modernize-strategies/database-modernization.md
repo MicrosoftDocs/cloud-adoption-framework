@@ -2,7 +2,7 @@
 title: Modernize databases in the cloud
 description: Adopt database PaaS and infrastructure-as-a-service (IaaS) solutions to modernize any databases. Find the implementation guidance that gives you right balance of control and productivity
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 09/02/2022
 ms.topic: conceptual
 keywords: collect data, migrate data, data migration, data modernization
@@ -34,7 +34,7 @@ There are two PaaS and one IaaS solution to choose from in each database categor
 
 - MySQL, MariaDB, or PostgreSQL on virtual machines (IaaS)
 - Azure Cosmos DB and Azure Managed Instance for Apache Casandra (PaaS)
-- Fully managed MySQL, MariaDB, and PostgreSQL databases (PaaS)
+- Fully managed MySQL and PostgreSQL databases (PaaS)
 
 Use the tables below to find implementation guidance on modernizing your database.
 
@@ -64,7 +64,6 @@ When you find the right solution, follow the implementation guidance to moderniz
 | *Balance control & productivity* | [Azure Managed Instance for Apache Cassandra](/azure/managed-instance-apache-cassandra/introduction)| <ul><li> Hybrid deployment </li> <li>Automated deployment & scaling for Apache Cassandra datacenters</li> <li>Automated patching</li> <li>Automated health checks</li> </ul> | [Apache Cassandra](/azure/managed-instance-apache-cassandra/dual-write-proxy-migration) |
 | *Most productivity* | [Azure Cosmos DB](/azure/cosmos-db/introduction) | <ul><li> A fully managed NoSQL database</li><li>Cost-efficiency</li><li>Support for MongoDB & Gremlin</ul> | [Azure Cosmos DB](/azure/cosmos-db/cosmosdb-migrationchoices) |
 | *Most productivity* | [Azure Database for MySQL](/azure/mysql/single-server/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul> | [Azure Database for MySQL](/azure/dms/tutorial-mysql-azure-mysql-offline-portal) <br><br> Using the [Azure Database Migration Service](/azure/dms/)|
-| *Most productivity* | [Azure Database for MariaDB](/azure/mariadb/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul> | [Azure Database for MariaDB](/azure/mariadb/howto-migrate-dump-restore) |
 | *Most productivity* | [Azure Database for PostgreSQL](/azure/postgresql/single-server/overview) | <ul><li>A fully managed SQL solution</li><li>Cost and performance efficiency</li></ul>| [Azure Database for PostgreSQL](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal)|
 
 ## Next steps

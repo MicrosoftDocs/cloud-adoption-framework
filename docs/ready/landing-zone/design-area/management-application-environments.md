@@ -2,7 +2,7 @@
 title: Manage application development environments in Azure landing zones
 description: Learn how to manage your organization's application environments in Azure landing zones by placing subscriptions in the appropriate management groups.
 author: brsteph
-ms.author: brsteph
+ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal
@@ -156,7 +156,7 @@ A workload with environmental subscriptions that use [App Service](/azure/app-se
 
 However, this feature can only be used with the app that's on the App Service plan, which can only live within a single subscription. If the platform operators mandate that the application owners use separate subscriptions for development, testing, and production environments, the application deployment lifecycle might be more difficult to manage.
 
-For this example, the best option is a single subscription for the application or service workload. Application owners can use Azure role-based access control (RBAC) with [PIM](/azure/active-directory/privileged-identity-management/pim-configure) at the resource group level for increased security.
+For this example, the best option is a single subscription for the application or service workload. Application owners can use Azure role-based access control (RBAC) with [PIM](/entra/id-governance/privileged-identity-management/pim-configure) at the resource group level for increased security.
 
 ## Next steps
 

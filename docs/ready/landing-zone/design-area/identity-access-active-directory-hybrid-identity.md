@@ -19,8 +19,6 @@ Cloud-based identity management is an iterative process. You might start with a 
 
 Adjust your identity solution over time depending on your workload authentication requirements and other needs, such as changes to your organizational identity strategy and security requirements or integration with other directory services. When you evaluate Windows Server Active Directory solutions, understand the differences between Microsoft Entra ID, Domain Services, and AD DS on Windows Server.
 
-For more information, see [Identity decision guide](../../../decision-guides/identity/index.md).
-
 ## Identity and access management services in Azure landing zones
 
 The platform team is responsible for the administration of identity and access management. Identity and access management services are fundamental to organizational security. Your organization can use Microsoft Entra ID to control administrative access and protect platform resources. This approach prevents users outside of the platform team from making changes to the configuration or to the security principals contained within Microsoft Entra ID.
@@ -43,7 +41,7 @@ Your organization might already have longstanding AD DS directories that you int
 
 ### Hybrid identity recommendations
 
-- To determine your identity solution requirements, document the authentication provider that each application uses. Use the [identity decision guide](../../../decision-guides/identity/index.md) to select the right services for your organization. For more information, see [Compare Active Directory to Microsoft Entra ID](/entra/fundamentals/compare).
+- To determine your identity solution requirements, document the authentication provider that each application uses. Use the [identity architecture design](/azure/architecture/identity/identity-start-here) to select the right services for your organization. For more information, see [Compare Active Directory to Microsoft Entra ID](/entra/fundamentals/compare).
 
 - You might use [Domain Services](/entra/identity/domain-services/overview) for applications that rely on domain services and use older protocols. Existing AD DS domains sometimes support backward compatibility and allow legacy protocols, which can negatively affect security. Instead of extending an on-premises domain, consider using Domain Services to create a new domain that doesn't allow legacy protocols. Use the new domain as the directory service for cloud-hosted applications.
 
@@ -53,7 +51,7 @@ Your organization might already have longstanding AD DS directories that you int
 
 - Evaluate scenarios that set up guests, customers, or partners so that they can access resources. Determine whether these scenarios involve [Microsoft Entra B2B](/entra/external-id/what-is-b2b) or [Microsoft Entra External ID for customers](/entra/external-id/customers/overview-customers-ciam). For more information, see [Microsoft Entra External ID](/entra/external-id/external-identities-overview).
 
-- Don't use [Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy) for intranet access because it adds latency to the user experience. For more information, see [Microsoft Entra application proxy planning](/entra/identity/app-proxy/conceptual-deployment-plan) and [Microsoft Entra application proxy security considerations](/entra/identity/app-proxy/application-proxy-security).
+- Don't use [Microsoft Entra application proxy](/entra/identity/app-proxy/overview-what-is-app-proxy) for intranet access because it adds latency to the user experience. For more information, see [Microsoft Entra application proxy planning](/entra/identity/app-proxy/conceptual-deployment-plan) and [Microsoft Entra application proxy security considerations](/entra/identity/app-proxy/application-proxy-security).
 
 - Consider various methods that you can use to [integrate on-premises Active Directory with Azure](/azure/architecture/reference-architectures/identity) to meet your organizational requirements.
 
@@ -86,7 +84,7 @@ After you configure AD DS or Domain Services, you can use the same method as on-
 
 ### Microsoft Entra ID and AD DS recommendations
 
-- Use [Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy) to access applications that use on-premises authentication remotely through Microsoft Entra ID. This feature provides secure remote access to on-premises web applications. Microsoft Entra application proxy doesn't require a VPN or any changes to the network infrastructure. However, it's deployed as a single instance into Microsoft Entra ID, so application owners and the platform or identity teams must collaborate to ensure that the application is configured correctly.
+- Use [Microsoft Entra application proxy](/entra/identity/app-proxy/overview-what-is-app-proxy) to access applications that use on-premises authentication remotely through Microsoft Entra ID. This feature provides secure remote access to on-premises web applications. Microsoft Entra application proxy doesn't require a VPN or any changes to the network infrastructure. However, it's deployed as a single instance into Microsoft Entra ID, so application owners and the platform or identity teams must collaborate to ensure that the application is configured correctly.
 
 - Evaluate the compatibility of workloads for AD DS on Windows Server and Domain Services. For more information, see [Common use cases and scenarios](/entra/identity/domain-services/scenarios).
 

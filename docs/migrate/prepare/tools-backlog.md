@@ -2,7 +2,7 @@
 title: Prepare tools and initial migration backlog
 description: Learn how to prepare an initial migration backlog and migration tools to help you migrate your workloads to Azure.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.collection: 

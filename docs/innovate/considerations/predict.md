@@ -2,7 +2,7 @@
 title: Predictive modeling to influence customer behavior
 description: Use predictive modeling to develop predictive capabilities through data, insights, patterns, predictions, and interactions.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.custom: internal

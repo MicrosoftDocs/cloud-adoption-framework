@@ -46,7 +46,7 @@ All keys related to your data application (source-aligned) should be contained i
 
 ## Azure Data Factory
 
-Deploy an Azure Data Factory to allow pipelines written by your data application team to take data from raw to enriched using developed pipelines. Use mapping data flows for transformations, and break out to use either Azure Databricks, Azure Synapse Spark, or Microsoft Fabric for complex transformations.
+Deploy an Azure Data Factory to allow pipelines written by your data application team to take data from raw to enriched using developed pipelines. Use mapping data flows for transformations, and break out to use either Azure Databricks or Microsoft Fabric for complex transformations.
 
 You should connect Azure Data Factory to the DevOps instance of your data application (source-aligned) repo. This connection allows CI/CD deployments.
 

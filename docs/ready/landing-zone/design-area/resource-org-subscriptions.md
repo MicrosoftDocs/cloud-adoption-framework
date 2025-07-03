@@ -2,7 +2,7 @@
 title: Subscription considerations and recommendations
 description: Learn about the critical role that subscriptions play as units of management, billing, and scale in Azure.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 11/28/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
@@ -85,7 +85,7 @@ Each Azure subscription is linked to a single Microsoft Entra tenant, which acts
 
 When any user has the required permissions, they can change the Microsoft Entra tenant that's linked to your Azure subscription. For more information, see:
 
-- [Associate or add an Azure subscription to your Microsoft Entra tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
+- [Associate or add an Azure subscription to your Microsoft Entra tenant](/entra/fundamentals/how-subscriptions-associated-directory)
 - [Transfer an Azure subscription to a different Microsoft Entra directory](/azure/role-based-access-control/transfer-subscription)
 
 > [!NOTE]
@@ -100,7 +100,7 @@ Configure your subscription policy by providing a list of [exempted users](/azur
 
 - Consider whether you should allow users that have [Visual Studio or MSDN Azure subscriptions](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) to transfer their subscription to or from your Microsoft Entra tenant.
 
-- Only users with the Microsoft Entra [Global Administrator role](/azure/active-directory/roles/permissions-reference#global-administrator) can configure tenant transfer settings. These users must have [elevated access](/azure/role-based-access-control/elevate-access-global-admin) to change the policy.
+- Only users with the Microsoft Entra [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator) can configure tenant transfer settings. These users must have [elevated access](/azure/role-based-access-control/elevate-access-global-admin) to change the policy.
 
   - You can only specify individual user accounts as [exempted users](/azure/cost-management-billing/manage/manage-azure-subscription-policy#exempted-users), not Microsoft Entra groups.
 

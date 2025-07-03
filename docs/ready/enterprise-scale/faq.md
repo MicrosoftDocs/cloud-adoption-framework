@@ -2,8 +2,8 @@
 title: Azure landing zone frequently asked questions (FAQ)
 description: The Azure landing zone frequently asked questions (FAQ) provide answers to common questions asked about the Azure landing zone architecture.
 author: jtracey93
-ms.author: tozimmergren
-ms.date: 02/20/2025
+ms.author: jatracey
+ms.date: 07/01/2025
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency2, devx-track-terraform
 ---
@@ -73,6 +73,10 @@ Review the following documentation sections:
 
 - [Transition existing Azure environments to the Azure landing zone conceptual architecture - "Policy" section](./transition.md#policies)
 - [Quickstart: Create a policy assignment to identify non-compliant resources - "Identify non-compliant resources" section](/azure/governance/policy/assign-policy-portal#identify-non-compliant-resources)
+
+## Do I need a dedicated or separate AI landing zone?
+
+No, you do not need a separate AI landing zone. Instead, you can use the existing Azure landing zone architecture to deploy AI workloads into. See the guidance and explanation in [AI in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones).
 
 <!-- IMPLEMENTATION -->
 

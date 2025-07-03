@@ -35,7 +35,7 @@ The simplest deployment pattern for building a data mesh architecture involves o
 
 :::image type="content" source="../media/domain-agnostic-infra-01.png" alt-text="A diagram that shows the simplest possible data mesh architecture, which is a single data management landing zone and a single data landing zone." lightbox="../media/domain-agnostic-infra-01.png":::
 
-In this model, all your functional data domains reside same data landing zone. A single subscription contains a standard set of services. Resource groups segregate different data domains and data products. Standard data services, like Azure Data Lake Store, Azure Logic Apps and Azure Synapse Analytics, apply to all domains.
+In this model, all your functional data domains reside same data landing zone. A single subscription contains a standard set of services. Resource groups segregate different data domains and data products. Standard data services, like Azure Data Lake Store and Azure Logic Apps, apply to all domains.
 
 All data domains follow data mesh principles: data follows domain ownership, and data is treated like products. The platform is fully self-service, though there are limited variations of services. All domains should strongly adhere and conform to the same data management principles.
 

@@ -3,7 +3,7 @@ title: Abbreviation recommendations for Azure resources
 description: Abbreviation recommendations for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 05/07/2024
+ms.date: 05/23/2025
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit
@@ -23,9 +23,11 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AI Search | `Microsoft.Search/searchServices` | `srch` |
-| Azure AI services | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `ais` |
+| Azure AI services (multi-service account) | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `ais` |
+| Azure AI Foundry account | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `aif` |
+| Azure AI Foundry account project | `Microsoft.CognitiveServices/accounts/projects` | `proj` |
 | Azure AI Foundry hub | `Microsoft.MachineLearningServices/workspaces` (kind: `Hub`) | `hub` |
-| Azure AI Foundry project | `Microsoft.MachineLearningServices/workspaces` (kind: `Project`) | `proj` |
+| Azure AI Foundry hub project | `Microsoft.MachineLearningServices/workspaces` (kind: `Project`) | `proj` |
 | Azure AI Video Indexer | `Microsoft.VideoIndexer/accounts` | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` (kind: `OpenAI`) | `oai` |
@@ -48,6 +50,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
+| Azure Databricks Access Connector | `Microsoft.Databricks/workspaces/accessConnectors` | `dbac` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
@@ -63,6 +66,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
 | Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh` |
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
+| Event Grid namespace | `Microsoft.EventGrid/namespaces` | `evgns` |
 | Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
 | Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
@@ -105,7 +109,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Proximity placement group | `Microsoft.Compute/proximityPlacementGroups` | `ppg` |
 | Restore point collection | `Microsoft.Compute/restorePointCollections` | `rpc` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap` |
-| Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
 | Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc` |
@@ -142,8 +145,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
 | Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
 | Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
-| MariaDB server | `Microsoft.DBforMariaDB/servers` | `maria` |
-| MariaDB database | `Microsoft.DBforMariaDB/servers/databases` | `mariadb` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb` |
@@ -189,6 +190,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Blueprint (planned for deprecation) | `Microsoft.Blueprint/blueprints` | `bp` |
 | Blueprint assignment (planned for deprecation) | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
+| Deployment scripts | `Microsoft.Resources/deploymentScripts` | `script` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
@@ -235,6 +237,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Local network gateway | `Microsoft.Network/localNetworkGateways` | `lgw` |
 | NAT gateway | `Microsoft.Network/natGateways` | `ng` |
 | Network interface (NIC) | `Microsoft.Network/networkInterfaces` | `nic`|
+| Network security perimeter | `Microsoft.Network/networkSecurityPerimeters` | `nsp`|
 | Network security group (NSG) | `Microsoft.Network/networkSecurityGroups` | `nsg` |
 | Network security group (NSG) security rules | `Microsoft.Network/networkSecurityGroups/securityRules` | `nsgsr` |
 | Network Watcher | `Microsoft.Network/networkWatchers` | `nw` |

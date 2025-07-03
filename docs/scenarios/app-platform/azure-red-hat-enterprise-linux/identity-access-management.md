@@ -108,7 +108,7 @@ Use the [Planning Identity Management guide](https://docs.redhat.com/documentati
 
 - Implement SSO by using Windows Server Active Directory, Microsoft Entra ID, or Active Directory Federation Services (AD FS). Choose your service based on your access type. Use SSO so that the users can connect to RHEL applications without a user ID and password after the central identity provider successfully authenticates them.
 
-- Use a solution, like Local Administrator Password Solution (LAPS), to frequently rotate local administrator passwords. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
+- Consider regularly rotating local administrator passwords. For Windows systems, Microsoft LAPS is a viable option. For RHEL, use automation tools or centralized identity platforms. Red Hat IdM or Microsoft Entra ID with SSH certificate-based access can streamline password management for domain-joined computers.
 
 ## Next steps
 

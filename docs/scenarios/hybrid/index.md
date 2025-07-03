@@ -2,7 +2,7 @@
 title: Introduction to hybrid and multicloud
 description: Learn about hybrid and multicloud.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 10/19/2021
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank

@@ -51,7 +51,7 @@ Many primary data management solutions fully integrate with Microsoft Entra ID, 
 
 ### Data sharing and contracts
 
-Cloud-scale analytics uses [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Microsoft Purview policies](../secure-data-privacy.md) to control access to data sharing. In addition to those features, you might require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone. Your contracts should provide information about data validation, models, and security policies. For more information, see [Data contracts](../../cloud-scale-analytics/architectures/data-contracts.md).
+Cloud-scale analytics uses [Microsoft Entra entitlement management](/entra/id-governance/entitlement-management-overview) or [Microsoft Purview policies](../secure-data-privacy.md) to control access to data sharing. In addition to those features, you might require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone. Your contracts should provide information about data validation, models, and security policies.
 
 ### API catalog
 

@@ -1,7 +1,7 @@
 ---
 title: Cost efficiency considerations for your cloud adoption strategy
 description: Learn how to optimize costs that are associated with cloud services and ensure that your organization gets the best value for its investment.
-ms.author: tozimmergren
+ms.author: pnp
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 02/03/2025
@@ -36,7 +36,7 @@ Consider the following recommendations when shifting from a CapEx model to an Op
 
 - _Implement budget management:_ Establish budgets for the top-spending platform services on the cloud to control cloud costs in the initial stages of cloud adoption. This approach helps platform teams and budget managers detect unanticipated changes.
 
-- _Maximize your return on investment:_ Understand the cost-to-benefit ratio, and ensure that the cloud services you plan to use directly contribute to business objectives. Explore the [Azure total cost of ownership calculator](https://azure.microsoft.com/pricing/tco/calculator/), [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/), and [Microsoft Cost Management](https://azure.microsoft.com/products/cost-management).
+- _Maximize your return on investment:_ Understand the cost-to-benefit ratio, and ensure that the cloud services you plan to use directly contribute to business objectives. Explore the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) and [Microsoft Cost Management](https://azure.microsoft.com/products/cost-management).
 
 ## Establish best practices with the FinOps framework
 

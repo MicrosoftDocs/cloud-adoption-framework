@@ -34,9 +34,6 @@
       - name: AVD
         tocHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/
         topicHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop
-      - name: Defense
-        tocHref: /azure/cloud-adoption-framework/scenarios/defense/
-        topicHref: /azure/cloud-adoption-framework/scenarios/defense
     - name: Get started
       tocHref: /azure/cloud-adoption-framework/get-started/
       topicHref: /azure/cloud-adoption-framework/get-started

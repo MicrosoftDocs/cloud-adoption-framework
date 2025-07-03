@@ -3,7 +3,7 @@ title: Governance recommendations for AI workloads on Azure infrastructure (IaaS
 description: Learn how to govern AI workloads on Azure infrastructure (IaaS).
 author: stephen-sumner
 ms.author: rajanaki
-ms.date: 11/01/2024
+ms.date: 04/30/2025
 ms.topic: conceptual
 ---
 
@@ -15,7 +15,7 @@ This article provides governance recommendations for organizations running AI wo
 
 Resource governance establishes rules and standards for managing Azure resources. By enforcing governance policies, organizations can ensure compliance, standardize resource use, and control costs, which support the responsible scaling of AI operations.
 
-- *Enforce tag usage.* Use Azure Policy to enforce rules like resource location, allowed SKUs, and mandatory tags. For example, create policies to restrict the deployment of certain high-cost VMs, helping to manage budgets effectively.
+- *Enforce tag usage.* Configure an [Azure Policy](/azure/governance/policy/tutorials/govern-tags) definition to enforce tagging on resources.
 
 - *Apply governance policies to ensure compliance and standardization.* Use Azure Policy to enforce rules such as resource location, allowed SKUs, and mandatory tags. For example, create policies to restrict the deployment of certain high-cost VMs to control the budget.
 
@@ -29,7 +29,7 @@ Resource governance establishes rules and standards for managing Azure resources
 
 Cost management monitors and controls expenses related to AI workloads on Azure. Effective cost management enables organizations to set budgets, track spending, and maintain financial sustainability for AI projects.
 
-- *Use tags to allocate costs.* Configure an Azure Policy definition to enforce tagging on resources. Use tags to categorize resources by project, cost center, environment, and owner for better management and billing.
+- *Use tags to allocate costs.* Use tags to categorize resources by project, cost center, environment, and owner for better management and billing.
 
 - *Use tag inheritance.* Use [tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance) in Cost Management to apply billing, resource group, and subscription tags to child resource usage records.
 
@@ -53,13 +53,13 @@ Security governance addresses the need for robust protection measures across AI 
 
 - *Implement distinct access controls for each environment.* Limit each deployment pipeline’s identity to its designated environment, reducing the risk of accidental deployments.
 
-- *Enable Azure Defender.* Activate Azure Defender for advanced threat protection. Azure Defender enhances security for workloads, including virtual machines, storage accounts, and databases, promoting a robust security posture for AI workloads.
+- *Enable Microsoft Defender for Cloud.* Activate Microsoft Defender for Cloud for advanced threat protection. It enhances security for workloads, including virtual machines, storage accounts, and databases, promoting a robust security posture for AI workloads.
 
 ### Operational governance
 
 Operational governance ensures consistent monitoring and management of AI workloads. By using tools for monitoring, alerting, and automated deployments, organizations can maintain system health, detect issues early, and improve operational efficiency, contributing to reliable and stable AI operations.
 
-- *Deploy monitoring agents.* Ensure that Azure Monitor agents are deployed by default for virtual machines, Azure Virtual Machine Scale Sets, and Azure Arc connected servers. Connect them to a central Log Analytics workspace within the management subscription.
+- *Deploy monitoring agents.* Ensure that Azure Monitor Agents are deployed by default for virtual machines, Azure Virtual Machine Scale Sets, and Azure Arc connected servers. Connect them to a central Log Analytics workspace within the management subscription.
 
 - *Configure alerts.* Enable [recommended alert rules](/azure/azure-monitor/best-practices-vm) to receive notifications of metric deviations.
 

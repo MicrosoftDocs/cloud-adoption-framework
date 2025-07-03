@@ -2,7 +2,7 @@
 title: Innovation tools to democratize data
 description: Learn about Azure Data Catalog and other data collection services that help you quickly test a hypothesis before expanding into broader, more costly digital inventions.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 09/07/2023
 ms.topic: conceptual
 ms.custom: internal
@@ -36,11 +36,9 @@ In Azure, the following innovation tools are commonly used to accelerate digital
 
 - [Power BI](/power-bi/)
 - [Azure Data Catalog](/azure/data-catalog/)
-- [Azure Synapse Analytics](/azure/synapse-analytics/)
 - [Azure Cosmos DB](/azure/cosmos-db/)
 - [Azure Database for PostgreSQL](/azure/postgresql/)
 - [Azure Database for MySQL](/azure/mysql/)
-- [Azure Database for MariaDB](/azure/mariadb/)
 - [Azure Database for PostgreSQL hyperscale](/azure/postgresql/concepts-hyperscale-nodes)
 - [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction)
 - [Azure Database Migration Service](/azure/dms/)
@@ -80,21 +78,14 @@ Below you'll find articles to help you get started with each of the tools in thi
 
 ### Centralize data
 
-- [Create and query an Azure Synapse Analytics SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-- [Best practices for loading data for data warehousing](/azure/synapse-analytics/sql/data-loading-best-practices)
 - [Visualize warehouse data with Power BI](/power-bi/connect-data/service-azure-sql-data-warehouse-with-direct-connect)
-- [Reference architecture for enterprise BI with Azure Synapse Analytics](/azure/architecture/reference-architectures/data/enterprise-bi-synapse)
 - [Manage enterprise big data with Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction)
 - [What is a data lake?](/azure/architecture/data-guide/scenarios/data-lake)
 
 ### Collect data
 
-- [Integrate cloud data sources with a SQL Analytics data warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-integrate)
-- [Load on-premises data into Azure Synapse Analytics](/sql/integration-services/load-data-to-sql-data-warehouse)
 - [Integrate data - Azure Data Factory to OLAP](/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud)
-- [Use Azure Stream Analytics with Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-integrate-azure-stream-analytics)
 - [Reference architecture for ingestion and analysis of new feeds](/azure/architecture/example-scenario/ai/news-feed-ingestion-and-near-real-time-analysis)
-- [Load data into Azure Synapse Analytics SQL pool](/azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw)
 
 ## Next steps
 

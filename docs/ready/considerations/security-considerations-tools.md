@@ -17,7 +17,7 @@ Microsoft keeps the underlying cloud infrastructure secure. You configure securi
 
 Once you decide which Azure Landing Zone templates to deploy, clone them into your own repository. Set up the CI/CD pipelines. For both GitHub and Azure DevOps, there are several authentication methods available, such as personal access tokens (PAT) and integrating with an identity provider, such as Microsoft Entra ID. For more information, see [Use personal access tokens](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate).
 
-We recommend that you integrate with Microsoft Entra ID to use all its capabilities. Integration helps streamline your role assignment process and identity lifecycle management. For more information, see [Connect your organization to Microsoft Entra ID](/azure/devops/organizations/accounts/connect-organization-to-azure-ad). If you're using GitHub, consider [integrating GitHub Enterprise with Microsoft Entra ID](/azure/active-directory/saas-apps/github-enterprise-cloud-enterprise-account-tutorial).
+We recommend that you integrate with Microsoft Entra ID to use all its capabilities. Integration helps streamline your role assignment process and identity lifecycle management. For more information, see [Connect your organization to Microsoft Entra ID](/azure/devops/organizations/accounts/connect-organization-to-azure-ad). If you're using GitHub, consider [integrating GitHub Enterprise with Microsoft Entra ID](/entra/identity/saas-apps/github-enterprise-cloud-enterprise-account-tutorial).
 
 ## General Design Considerations
 

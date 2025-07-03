@@ -37,7 +37,7 @@ While not a direct cost of Arc-enabled SQL MI, when you deploy an instance in th
 
 - **Azure Hybrid Benefit** For SQL Server, Azure Hybrid Benefits offers savings on both service tiers of Arc-enabled SQL MI.
 
-Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit). Also, [Dev/Test pricing](https://azure.microsoft.com/pricing/dev-test/) is available for both service tiers, though it's only for development use. Review the [cost management considerations](../../../ready/landing-zone/design-area/governance.md#cost-management-considerations) of Azure landing zones to understand broad cost-related considerations. Finally, consider using the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) and the [Total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/) to determine potential cost savings.
+Consider the combination of service tier needs, timeline for Arc-enabled SQL MI deployment(s), and whether your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit). Also, [Dev/Test pricing](https://azure.microsoft.com/pricing/dev-test/) is available for both service tiers, though it's only for development use. Review the [cost management considerations](../../../ready/landing-zone/design-area/governance.md#cost-management-considerations) of Azure landing zones to understand broad cost-related considerations. Finally, consider using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate cost.
 
 ## Design recommendations
 
@@ -88,5 +88,4 @@ For more information about your hybrid and multicloud journey, see the following
 - Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - Explore Azure Arc-enabled data services automated scenarios with [Azure Arc Jumpstart Project](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_data/).
 - Learn more about Azure Arc in the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
-- Review the Cloud Adoption Framework [best practices and recommendations](../../../get-started/manage-costs.md) to efficiently manage your cloud costs.
 - See the [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to the most common questions.

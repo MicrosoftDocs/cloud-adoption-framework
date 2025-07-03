@@ -2,15 +2,662 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
-  - name: About the Framework
-    href: overview.md
-  - name: What's new
-    href: get-started/whats-new.md
-
-  - name: Scenarios
+  - name: About
     items:
-    - name: Overview
-      href: scenarios/index.md
+    - name: What is the Cloud Adoption Framework?
+      href: overview.md
+    - name: What's new
+      href: get-started/whats-new.md
+
+  - name: Methodologies
+    items:
+    - name: Strategy
+      items:
+      - name: Overview
+        href: strategy/index.md
+      - name: Assess your cloud adoption strategy
+        href: strategy/assessment.md
+      - name: Determine your motivations
+        href: strategy/motivations.md
+      - name: Define your mission and objectives
+        href: strategy/mission-objectives.md
+      - name: Define your strategy team
+        href: strategy/define-your-team.md
+      - name: Prepare your organization
+        href: strategy/prepare-organizational-alignment.md
+      - name: Inform your strategy
+        items:
+          - name: Cost efficiency
+            href: strategy/inform/cost-efficiency.md
+          - name: Resiliency
+            href: strategy/inform/resiliency.md
+          - name: Security
+            href: strategy/inform/security.md
+          - name: Sustainability
+            href: strategy/inform/sustainability.md
+
+    - name: Plan
+      items:
+      - name: Overview
+        href: plan/index.md
+      - name: Digital estate
+        items:
+        - name: The five Rs of rationalization
+          href: digital-estate/5-rs-of-rationalization.md
+        - name: What is a digital estate?
+          href: digital-estate/index.md
+        - name: Digital estate planning
+          href: digital-estate/approach.md
+        - name: Gather inventory data
+          href: digital-estate/inventory.md
+        - name: Rationalize the digital estate
+          href: digital-estate/rationalize.md
+        - name: Align cost models to forecast costs
+          href: digital-estate/calculate.md
+      - name: Initial organization alignment
+        href: plan/initial-org-alignment.md
+      - name: Skills readiness plan
+        items:
+        - name: Build a readiness plan
+          href: plan/adapt-roles-skills-processes.md
+        - name: Map roles and skills
+          href: plan/suggested-skills.md
+      - name: Cloud adoption plan
+        items:
+        - name: Overview
+          href: plan/plan-intro.md
+        - name: Prerequisites
+          href: plan/prerequisites.md
+        - name: Define and prioritize workloads
+          href: plan/workloads.md
+        - name: Align assets to workloads
+          href: plan/assets.md
+        - name: Review rationalization decisions
+          href: plan/review-rationalization.md
+        - name: Establish iterations and release plans
+          href: plan/iteration-paths.md
+        - name: Estimate timelines
+          href: plan/timelines.md
+
+      - name: Strategic Migration Assessment and Readiness Tool (SMART)
+        href: plan/smart-assessment.md
+
+      - name: Sustainability considerations
+        href: plan/plan-sustainability.md
+        
+      - name: Plan antipatterns
+        href: antipatterns/plan-antipatterns.md
+
+    - name: Ready
+      items:
+      - name: Overview
+        href: ready/index.md
+      - name: Azure setup guide
+        items:
+        - name: Setup guide overview
+          href: ready/azure-setup-guide/index.md
+        - name: Organize resources
+          href: ready/azure-setup-guide/organize-resources.md
+        - name: Create your initial subscriptions
+          href: ready/azure-best-practices/initial-subscriptions.md
+        - name: Select regions
+          href: ready/azure-setup-guide/regions.md
+        - name: Manage access
+          href: ready/azure-setup-guide/manage-access.md
+        - name: Manage costs and billing
+          href: ready/azure-setup-guide/manage-costs.md
+        - name: Plan governance, security, and compliance
+          href: ready/azure-setup-guide/govern-org-compliance.md
+        - name: Monitoring and reporting
+          href: ready/azure-setup-guide/monitoring-reporting.md
+        - name: Stay current with Azure
+          href: ready/azure-setup-guide/staying-current.md
+      - name: Operating model
+        items:
+        - name: Overview
+          href: operating-model/index.md
+        - name: Define your operating model
+          href: operating-model/define.md
+        - name: Compare common cloud operating models
+          href: operating-model/compare.md
+        - name: Common operating model terms
+          href: operating-model/terms.md
+      - name: Azure landing zones
+        items:
+        - name: What is an Azure landing zone?
+          href: ready/landing-zone/index.md
+        - name: Design principles
+          href: ready/landing-zone/design-principles.md
+        - name: Journey to the target architecture
+          href: ready/landing-zone/landing-zone-journey.md
+        - name: Prepare your landing zone for migration
+          href: ready/landing-zone/ready-azure-landing-zone.md
+        - name: Design areas
+          href: ready/landing-zone/design-areas.md
+          items:
+          - name: Azure billing and Microsoft Entra tenant
+            items:
+            - name: Overview
+              href: ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md
+            - name: Enterprise Agreement
+              href: ready/landing-zone/design-area/azure-billing-enterprise-agreement.md
+            - name: Microsoft customer agreement
+              href: ready/landing-zone/design-area/azure-billing-microsoft-customer-agreement.md
+            - name: Cloud solution provider
+              href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
+            - name: Define a Microsoft Entra tenant
+              href: ready/landing-zone/design-area/azure-ad-define.md
+            - name: Handling Azure landing zones across multiple tenants
+              items:
+                - name: Overview
+                  href: ready/landing-zone/design-area/multi-tenant/overview.md
+                - name: Scenarios
+                  href: ready/landing-zone/design-area/multi-tenant/scenarios.md
+                - name: Considerations & recommendations
+                  items:
+                    - name: General
+                      href: ready/landing-zone/design-area/multi-tenant/considerations-recommendations.md
+                    - name: Automation
+                      href: ready/landing-zone/design-area/multi-tenant/automation.md
+                    - name: Canary environments
+                      href: ready/landing-zone/design-area/multi-tenant/canary.md
+                    - name: Azure Lighthouse
+                      href: ready/landing-zone/design-area/multi-tenant/lighthouse.md
+
+          - name: Identity and access management
+            items:
+            - name: Overview
+              href: ready/landing-zone/design-area/identity-access.md
+            - name: Hybrid identity with Active Directory and Microsoft Entra ID
+              href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
+            - name: Landing zone identity and access
+              href: ready/landing-zone/design-area/identity-access-landing-zones.md
+            - name: Application identity and access
+              href: ready/landing-zone/design-area/identity-access-application-access.md
+
+          - name: Resource organization
+            items:
+            - name: Overview
+              href: ready/landing-zone/design-area/resource-org.md
+            - name: Management groups
+              href: ready/landing-zone/design-area/resource-org-management-groups.md
+            - name: Subscriptions
+              href: ready/landing-zone/design-area/resource-org-subscriptions.md
+            - name: Application environments
+              href:  ready/landing-zone/design-area/management-application-environments.md
+            - name: Modify a landing zone to meet requirements across multiple locations
+              href: ready/landing-zone/landing-zone-multinational.md
+            - name: Tailoring the Azure landing zones architecture
+              href: ready/landing-zone/tailoring-alz.md
+            - name: Adopt policy-driven guardrails
+              href: ready/enterprise-scale/dine-guidance.md
+            - name: Additional information
+              items:
+              - name: Define your naming convention
+                href: ready/azure-best-practices/resource-naming.md
+              - name: Abbreviations for Azure resources
+                href: ready/azure-best-practices/resource-abbreviations.md
+              - name: Define your tagging strategy
+                href: ready/azure-best-practices/resource-tagging.md
+            - name: Design options for specific use cases
+              items:
+              - name: Create your initial subscriptions
+                href: ready/azure-best-practices/initial-subscriptions.md
+
+          - name: Network topology and connectivity
+            items:
+              - name: Overview
+                href: ready/landing-zone/design-area/network-topology-and-connectivity.md
+              - name: Topology
+                items:
+                - name: Define an Azure network topology
+                  href: ready/azure-best-practices/define-an-azure-network-topology.md
+                - name: Traditional Azure networking topology
+                  href: ready/azure-best-practices/traditional-azure-networking-topology.md
+                - name: Virtual WAN network topology (Microsoft-managed)
+                  href: ready/azure-best-practices/virtual-wan-network-topology.md
+                - name: Plan for IP addressing
+                  href: ready/azure-best-practices/plan-for-ip-addressing.md
+              - name: Connectivity
+                items:
+                - name: Connectivity to Azure
+                  href: ready/azure-best-practices/connectivity-to-azure.md
+                - name: Connectivity to Azure PaaS services
+                  href: ready/azure-best-practices/connectivity-to-azure-paas-services.md
+                - name: Limit cross-tenant private endpoint connections
+                  href: ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md
+                - name: Connectivity to other cloud providers
+                  href: ready/azure-best-practices/connectivity-to-other-providers.md
+                - name: Connectivity to Oracle Cloud Infrastructure
+                  href: ready/azure-best-practices/connectivity-to-other-providers-oci.md
+                - name: Plan for application delivery
+                  href: ready/azure-best-practices/plan-for-app-delivery.md
+              - name: Network security
+                items:
+                - name: Plan for inbound and outbound internet connectivity
+                  href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
+                - name: Plan for landing zone network segmentation
+                  href: ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md
+                - name: Use Azure Bastion for virtual machine remote access
+                  href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
+                - name: Define network encryption requirements
+                  href: ready/azure-best-practices/define-network-encryption-requirements.md
+                - name: Plan for traffic inspection
+                  href: ready/azure-best-practices/plan-for-traffic-inspection.md
+              - name: DNS
+                items:
+                - name: Private Link and DNS integration at scale
+                  href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
+                - name: DNS for on-premises and Azure resources
+                  href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
+              - name: Azure Virtual Network Manager in Azure landing zones
+                href: ready/azure-best-practices/azure-virtual-network-manager.md
+
+          - name: Security
+            items:
+            - name: Overview
+              href: ready/landing-zone/design-area/security.md
+            - name: Secure privileged access
+              href: /entra/identity/role-based-access-control/security-planning?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Encryption and keys
+              href: ready/landing-zone/design-area/encryption-and-keys.md
+            - name: Service enablement framework
+              href: ready/landing-zone/design-area/service-enablement-framework.md
+            - name: Security control mapping
+              href: ready\control-mapping\security-control-mapping.md
+            - name: Incorporate Zero Trust practices in your landing zone
+              href: ready/landing-zone/design-area/security-zero-trust.md
+              
+          - name: Management
+            items:
+            - name: Overview
+              href: ready/landing-zone/design-area/management.md
+            - name: Inventory and visibility
+              href: ready/landing-zone/design-area/management-platform.md
+            - name: Baseline monitoring
+              href: ready/landing-zone/design-area/management-monitor.md
+            - name: Protect and recover
+              href: ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md
+            - name: Operational compliance
+              href: ready/landing-zone/design-area/management-operational-compliance.md
+            - name: Workloads
+              href: ready/landing-zone/design-area/management-workloads.md
+
+          - name: Governance
+            items:
+            - name: Overview
+              href: ready/landing-zone/design-area/governance.md
+            - name: Track costs
+              href: ready/azure-best-practices/track-costs.md
+            - name: Optimize your cloud investment
+              href: /azure/cost-management-billing/costs/cost-mgt-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Create and manage budgets
+              href: /azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Export cost data
+              href: /azure/cost-management-billing/costs/tutorial-export-acm-data?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Optimize costs from recommendations
+              href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Monitor usage and spending
+              href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Keep Azure landing zones up to date
+              href: ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date.md
+            - name: Migrate Azure landing zone policies
+              href: ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md
+            - name: Update custom policies
+              href: ready/landing-zone/design-area/update-custom-policies.md
+
+          - name: Platform automation and DevOps
+            items:
+            - name: Overview
+              href: ready/landing-zone/design-area/platform-automation-devops.md
+            - name: Platform automation
+              items:
+              - name: Automation
+                href: ready/considerations/automation.md
+            - name: Subscription vending
+              href: ready/landing-zone/design-area/subscription-vending.md
+            - name: Common subscription vending product lines
+              href: ready/landing-zone/design-area/subscription-vending-product-lines.md
+            - name: DevOps
+              items:
+              - name: DevOps considerations
+                href: ready/considerations/devops-principles-and-practices.md
+              - name: Team topologies
+                href: ready/considerations/devops-teams-topologies.md
+            - name: Development strategy
+              items:
+              - name: Development lifecycle
+                href: ready/considerations/development-strategy-development-lifecycle.md
+              - name: Infrastructure as Code
+                href: ready/considerations/infrastructure-as-code.md
+              - name: Environments
+                href: ready/considerations/environments.md
+              - name: Test-driven development for Azure Landing Zones
+                href: ready/considerations/development-strategy-test-driven-development.md
+              - name: DevOps Toolchain considerations
+                href: ready/considerations/devops-toolchain.md
+            - name: Security considerations
+              items:
+              - name: Overview
+                href: ready/considerations/security-considerations-overview.md
+              - name: Role-based access control for DevOps Tools
+                href: ready/considerations/security-considerations-tools.md
+        - name: Implementation options
+          href: ready/landing-zone/implementation-options.md
+          items:
+          - name: Start with enterprise scale
+            items:
+            - name: Overview
+              href: ready/enterprise-scale/index.md
+            - name: Implement enterprise-scale landing zones
+              href: ready/enterprise-scale/implementation.md
+            - name: Scenario-specific enterprise-scale landing zones
+              href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
+
+          - name: Deploy Azure landing zones with Terraform
+            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
+          - name: ISV considerations for landing zones
+            href: ready/landing-zone/isv-landing-zone.md
+          - name: Sovereignty considerations and the sovereign landing zone
+            href: ready/landing-zone/sovereign-landing-zone.md
+          - name: Get landing zone help
+            href: ready/landing-zone/partner-landing-zone.md
+
+        - name: Align
+          items:
+          - name: Transition to the Azure landing zone conceptual architecture
+            href: ready/enterprise-scale/transition.md
+          - name: Alignment scenarios
+            items:
+              - name: Transition a single subscription with no management groups
+                href: ready/landing-zone/align-scenario-single-subscription.md
+              - name: Transition management groups
+                href: ready/landing-zone/align-scenario-multiple-management-groups.md
+              - name: Transition a regional organization environment
+                href: ready/landing-zone/align-scenario-regional-org.md
+          - name: Alignment approaches
+            items:
+              - name: Transition by duplicating a landing zone management group
+                href: ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md
+
+          - name: Brownfield landing zone considerations
+            href: ready/landing-zone/brownfield-considerations.md
+
+        - name: Enhance
+          items:
+          - name: Expand your landing zone
+            href: ready/considerations/index.md
+          - name: Testing approach for Azure landing zones
+            href: ready/enterprise-scale/testing-approach.md
+          - name: Landing zone sandbox environments
+            href: ready/considerations/sandbox-environments.md
+          - name: Landing zone regions
+            href: ready/considerations/regions.md
+          - name: Use infrastructure as code to update Azure landing zones
+            href: ready/considerations/infrastructure-as-code-updates.md
+          - name: Policy management
+            items:
+            - name: Advanced Azure Policy management
+              href: ready/policy-management/enterprise-policy-as-code.md
+          - name: Improve landing zone governance
+            items:
+            - name: Overview
+              href: ready/considerations/landing-zone-governance.md
+            - name: Naming and tagging standards
+              href: ready/azure-best-practices/resource-naming.md
+            - name: Track costs across workloads
+              href: ready/azure-best-practices/track-costs.md
+            - name: Scale with multiple subscriptions
+              href: ready/azure-best-practices/scale-subscriptions.md
+            - name: Organize subscriptions
+              href: ready/landing-zone/design-area/resource-org.md
+          - name: Improve landing zone security
+            items: 
+            - name: Overview
+              href: ready/considerations/landing-zone-security.md
+            - name: Onboard a subscription to Microsoft Defender for Cloud
+              href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Onboard Microsoft Sentinel
+              href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Implementing a secure hybrid network architecture in Azure
+              href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Azure identity management and access control security best practices
+              href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Azure network security best practices
+              href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+            - name: Azure operational security best practices
+              href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+
+        - name: Azure landing zones FAQ
+          href: ready/enterprise-scale/faq.md
+
+      - name: Skills relevant to ready and landing zones
+        href: ready/suggested-skills.md
+
+      - name: Ready antipatterns
+        href: antipatterns/ready-antipatterns.md
+
+    - name: Adopt
+      items:
+      - name: Overview
+        href: adopt/index.md
+      - name: Migrate
+        items:
+        - name: Overview
+          href: migrate/index.md
+        - name: Prepare
+          items:
+            - name: Overview
+              href: migrate/prepare/index.md
+            - name: Prepare tools and backlog
+              href: migrate/prepare/tools-backlog.md
+            - name: Select migration regions
+              href: migrate/prepare/select-regions-migration.md
+            - name: Align roles and responsibilities
+              href: migrate/prepare/roles-responsibilities.md
+            - name: Get support resources and improve skills
+              href: migrate/prepare/skills-support.md
+        - name: Assess
+          items:
+          - name: Overview
+            href: migrate/assess/index.md
+          - name: Classify workloads
+            href: migrate/assess/classify.md
+          - name: Evaluate workload readiness
+            href: migrate/assess/evaluate.md
+          - name: Architect workloads
+            href: migrate/assess/architect.md
+        - name: Deploy
+          items:
+            - name: Overview
+              href: migrate/deploy/index.md
+            - name: Deploy supporting services for migration projects
+              href: migrate/deploy/deploy-supporting-services.md
+            - name: Remediate assets
+              href: migrate/deploy/remediate.md
+            - name: Replicate assets
+              href: migrate/deploy/replicate.md
+            - name: Prepare for management
+              href: migrate/deploy/prepare-for-management.md
+            - name: Migration testing
+              href: migrate/deploy/migration-test.md
+        - name: Release
+          items:
+            - name: Overview 
+              href: migrate/release/index.md
+            - name: Change communication
+              href: migrate/release/change-communication.md
+            - name: Perform business testing
+              href: migrate/release/business-test.md
+            - name: Complete migration
+              href: migrate/release/complete-migration.md
+            - name: Optimize cost after migration
+              href: migrate/release/optimize-cost-after-migration.md
+            - name: Conduct retrospectives
+              href: migrate/release/retrospective.md
+        - name: Product migration guidance
+          href: migrate/scenarios.md
+
+      - name: Modernize
+        items:
+        - name: Overview  
+          href: modernize/index.md
+        - name: Business alignment
+          items:
+          - name: Overview
+            href: modernize/business-alignment/index.md
+          - name: Envision 
+            href: modernize/business-alignment/envision-cloud-modernization.md
+          - name: Evaluate
+            href: modernize/business-alignment/evaluate-modernization-options.md
+          - name: Commit
+            href: modernize/business-alignment/commit-to-modernization-plan.md      
+        - name: Modernization strategies
+          items:
+          - name: Overview
+            href: modernize/modernize-strategies/index.md
+          - name: Process modernization 
+            href: modernize/modernize-strategies/process-modernization.md
+          - name: Application modernization
+            href: modernize/modernize-strategies/application-modernization.md
+          - name: Database modernization
+            href: modernize/modernize-strategies/database-modernization.md
+
+      - name: Innovate
+        items:
+        - name: Overview
+          href: innovate/index.md
+        - name: Azure innovation guide
+          items:
+          - name: Innovation guide overview
+            href: innovate/innovation-guide/index.md
+          - name: Prepare for customer feedback
+            href: innovate/innovation-guide/adoption.md
+          - name: Democratize data
+            href: innovate/innovation-guide/data.md
+          - name: Engage customers through applications
+            href: innovate/innovation-guide/apps.md
+          - name: Empower adoption
+            href: innovate/innovation-guide/ci-cd.md
+          - name: Interact through devices
+            href: innovate/innovation-guide/devices.md
+
+        - name: Innovation scenarios
+          items:
+          - name: Kubernetes
+            items:
+            - name: Innovation with Kubernetes
+              href: innovate/kubernetes/index.md
+            - name: Application development and deployment
+              href: innovate/kubernetes/application-development.md
+            - name: Cluster design and operations
+              href: innovate/kubernetes/cluster-design-operations.md
+            - name: Cluster and application security
+              href: innovate/kubernetes/cluster-application-security.md
+
+        - name: Best practices
+          items:
+          - name: Overview and Azure toolchain
+            href: innovate/best-practices/index.md
+          - name: Democratize data
+            href: innovate/best-practices/data.md
+          - name: Engage via applications
+            href: innovate/best-practices/apps.md
+          - name: Empower adoption
+            href: innovate/best-practices/ci-cd.md
+          - name: Interact with devices
+            href: innovate/best-practices/devices.md
+
+        - name: Process improvements
+          items:
+          - name: Overview
+            href: innovate/considerations/index.md
+          - name: Business value consensus
+            href: innovate/business-value.md
+          - name: Customer adoption
+            items:
+            - name: Feedback loops
+              href: innovate/considerations/adoption.md
+            - name: Build with customer empathy
+              href: innovate/considerations/build.md
+            - name: Measure for customer impact
+              href: innovate/considerations/measure.md
+            - name: Learn with customers
+              href: innovate/considerations/learn.md
+            - name: Customer challenges and blockers
+              href: innovate/considerations/challenges.md
+          - name: Digital invention
+            items:
+            - name: Develop digital inventions
+              href: innovate/considerations/invention.md
+            - name: Democratize data
+              href: innovate/considerations/data.md
+            - name: Application development for innovative applications
+              href: innovate/considerations/apps.md
+            - name: Empower adoption
+              href: innovate/considerations/ci-cd.md
+            - name: Interact with devices
+              href: innovate/considerations/devices.md
+            - name: Predict and influence
+              href: innovate/considerations/predict.md
+
+      - name: Guides
+        items:
+        - name: Cloud adoption journey
+          href: adopt/cloud-adoption.md
+        - name: Migrate or modernize first? 
+          href: adopt/migrate-or-modernize.md
+                  
+
+    - name: Govern
+      items:
+      - name: Overview
+        href: govern/index.md
+      - name: Build a cloud governance team
+        href: govern/build-cloud-governance-team.md
+      - name: Assess cloud risks
+        href: govern/assess-cloud-risks.md
+      - name: Document cloud governance policies
+        href: govern/document-cloud-governance-policies.md
+      - name: Enforce cloud governance policies
+        href: govern/enforce-cloud-governance-policies.md
+      - name: Monitor cloud governance
+        href: govern/monitor-cloud-governance.md
+
+    - name: Secure
+      items:
+      - name: Overview 
+        href: secure/overview.md
+      - name: Teams and roles
+        href: secure/teams-roles.md
+      - name: Strategy
+        href: secure/strategy.md
+      - name: Plan
+        href: secure/plan.md
+      - name: Ready
+        href: secure/ready.md    
+      - name: Adopt 
+        href: secure/adopt.md
+      - name: Govern  
+        href: secure/govern.md
+      - name: Manage  
+        href: secure/manage.md
+
+    - name: Manage
+      items:
+      - name: Checklist
+        href: manage/index.md
+      - name: Ready operations
+        href: manage/ready.md  
+      - name: Administer Azure
+        href: manage/administer.md  
+      - name: Monitor Azure
+        href: manage/monitor.md
+      - name: Protect Azure
+        href: manage/protect.md
+
+  - name: Adoption scenarios
+    items:
     - name: AI adoption
       href: scenarios/ai/index.md
     - name: Azure VMware Solution
@@ -29,804 +676,56 @@ items:
       href: scenarios/sap/index.md
     - name: Virtual desktops
       href: scenarios/azure-virtual-desktop/index.md
-    - name: Defense
-      href: scenarios/defense/index.md
-
-  - name: Adoption journeys
-    items:
-    - name: Get started
-      items:
-      - name: Overview
-        href: get-started/index.md
-
-      - name: Foundational alignment
-        items:
-        - name: Document foundational alignment decisions
-          href: get-started/cloud-concepts.md
-        - name: How does Azure work?
-          href: get-started/what-is-azure.md
-        - name: Azure fundamental concepts
-          href: ready/considerations/fundamental-concepts.md
-        - name: How does Azure Resource Manager work?
-          href: get-started/how-azure-resource-manager-works.md        
-        - name: Portfolio hierarchy
-          href: resources/fundamental-concepts/hosting-hierarchy.md
-        - name: Azure hierarchy support
-          href: resources/fundamental-concepts/hierarchy-azure-tools.md
-
-      - name: Accelerate adoption
-        items:
-        - name: Build new products and services
-          href: get-started/innovate.md
-        - name: Unblock environment design and configuration
-          href: get-started/design-and-configuration.md
-
-    - name: Improve controls
-      items:
-      - name: Enable customer success
-        href: get-started/enable.md
-      - name: Deliver operational excellence
-        href: get-started/operational-excellence.md
-      - name: Manage cloud costs
-        href: get-started/manage-costs.md
-      - name: Ensure consistent performance
-        href: get-started/performance.md
-
-    - name: Antipatterns to avoid
-      href: antipatterns/antipatterns-to-avoid.md
-
-  - name: Strategy
-    items:
-    - name: Overview
-      href: strategy/index.md
-    - name: Assess your cloud adoption strategy
-      href: strategy/assessment.md
-    - name: Determine your motivations
-      href: strategy/motivations.md
-    - name: Define your mission and objectives
-      href: strategy/mission-objectives.md
-    - name: Define your strategy team
-      href: strategy/define-your-team.md
-    - name: Prepare your organization
-      href: strategy/prepare-organizational-alignment.md
-    - name: Inform your strategy
-      items:
-        - name: Overview
-          href: strategy/inform/index.md
-        - name: Cost efficiency
-          href: strategy/inform/cost-efficiency.md
-        - name: AI
-          href: strategy/inform/ai.md
-        - name: Resiliency
-          href: strategy/inform/resiliency.md
-        - name: Security
-          href: strategy/inform/security.md
-        - name: Sustainability
-          href: strategy/inform/sustainability.md
-
-  - name: Plan
-    items:
-    - name: Overview
-      href: plan/index.md
-    - name: Digital estate
-      items:
-      - name: The five Rs of rationalization
-        href: digital-estate/5-rs-of-rationalization.md
-      - name: What is a digital estate?
-        href: digital-estate/index.md
-      - name: Digital estate planning
-        href: digital-estate/approach.md
-      - name: Gather inventory data
-        href: digital-estate/inventory.md
-      - name: Rationalize the digital estate
-        href: digital-estate/rationalize.md
-      - name: Align cost models to forecast costs
-        href: digital-estate/calculate.md
-      - name: Measure business outcomes with AppDynamics
-        href: digital-estate/app-dynamics.md
-    - name: Initial organization alignment
-      href: plan/initial-org-alignment.md
-    - name: Skills readiness plan
-      items:
-      - name: Build a readiness plan
-        href: plan/adapt-roles-skills-processes.md
-      - name: Map roles and skills
-        href: plan/suggested-skills.md
-    - name: Cloud adoption plan
-      items:
-      - name: Overview
-        href: plan/plan-intro.md
-      - name: Prerequisites
-        href: plan/prerequisites.md
-      - name: Deploy the template to Azure DevOps
-        href: plan/template.md
-      - name: Define and prioritize workloads
-        href: plan/workloads.md
-      - name: Align assets to workloads
-        href: plan/assets.md
-      - name: Review rationalization decisions
-        href: plan/review-rationalization.md
-      - name: Establish iterations and release plans
-        href: plan/iteration-paths.md
-      - name: Estimate timelines
-        href: plan/timelines.md
-
-    - name: Plan a data warehouse migration
-      href: plan/data-warehouse-migration.md
-
-    - name: Strategic Migration Assessment and Readiness Tool (SMART)
-      href: plan/smart-assessment.md
-
-    - name: Sustainability considerations
-      href: plan/plan-sustainability.md
-      
-    - name: Plan antipatterns
-      href: antipatterns/plan-antipatterns.md
-
-  - name: Ready
-    items:
-    - name: Overview
-      href: ready/index.md
-    - name: Azure setup guide
-      items:
-      - name: Setup guide overview
-        href: ready/azure-setup-guide/index.md
-      - name: Organize resources
-        href: ready/azure-setup-guide/organize-resources.md
-      - name: Select regions
-        href: ready/azure-setup-guide/regions.md
-      - name: Manage access
-        href: ready/azure-setup-guide/manage-access.md
-      - name: Manage costs and billing
-        href: ready/azure-setup-guide/manage-costs.md
-      - name: Plan governance, security, and compliance
-        href: ready/azure-setup-guide/govern-org-compliance.md
-      - name: Monitoring and reporting
-        href: ready/azure-setup-guide/monitoring-reporting.md
-      - name: Stay current with Azure
-        href: ready/azure-setup-guide/staying-current.md
-    - name: Operating model
-      items:
-      - name: Overview
-        href: operating-model/index.md
-      - name: Define your operating model
-        href: operating-model/define.md
-      - name: Compare common cloud operating models
-        href: operating-model/compare.md
-      - name: Common operating model terms
-        href: operating-model/terms.md
-    - name: Azure landing zones
-      items:
-      - name: What is an Azure landing zone?
-        href: ready/landing-zone/index.md
-      - name: Design principles
-        href: ready/landing-zone/design-principles.md
-      - name: Journey to the target architecture
-        href: ready/landing-zone/landing-zone-journey.md
-      - name: Design areas
-        href: ready/landing-zone/design-areas.md
-        items:
-        - name: Azure billing and Microsoft Entra tenant
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md
-          - name: Enterprise Agreement
-            href: ready/landing-zone/design-area/azure-billing-enterprise-agreement.md
-          - name: Microsoft customer agreement
-            href: ready/landing-zone/design-area/azure-billing-microsoft-customer-agreement.md
-          - name: Cloud solution provider
-            href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
-          - name: Define a Microsoft Entra tenant
-            href: ready/landing-zone/design-area/azure-ad-define.md
-          - name: Handling Azure landing zones across multiple tenants
-            items:
-              - name: Overview
-                href: ready/landing-zone/design-area/multi-tenant/overview.md
-              - name: Scenarios
-                href: ready/landing-zone/design-area/multi-tenant/scenarios.md
-              - name: Considerations & recommendations
-                items:
-                  - name: General
-                    href: ready/landing-zone/design-area/multi-tenant/considerations-recommendations.md
-                  - name: Automation
-                    href: ready/landing-zone/design-area/multi-tenant/automation.md
-                  - name: Canary environments
-                    href: ready/landing-zone/design-area/multi-tenant/canary.md
-                  - name: Azure Lighthouse
-                    href: ready/landing-zone/design-area/multi-tenant/lighthouse.md
-
-        - name: Identity and access management
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/identity-access.md
-          - name: Hybrid identity with Active Directory and Microsoft Entra ID
-            href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
-          - name: Landing zone identity and access
-            href: ready/landing-zone/design-area/identity-access-landing-zones.md
-          - name: Application identity and access
-            href: ready/landing-zone/design-area/identity-access-application-access.md
-
-        - name: Resource organization
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/resource-org.md
-          - name: Management groups
-            href: ready/landing-zone/design-area/resource-org-management-groups.md
-          - name: Subscriptions
-            href: ready/landing-zone/design-area/resource-org-subscriptions.md
-          - name: Application environments
-            href:  ready/landing-zone/design-area/management-application-environments.md
-          - name: Modify a landing zone to meet requirements across multiple locations
-            href: ready/landing-zone/landing-zone-multinational.md
-          - name: Tailoring the Azure landing zones architecture
-            href: ready/landing-zone/tailoring-alz.md
-          - name: Adopt policy-driven guardrails
-            href: ready/enterprise-scale/dine-guidance.md
-          - name: Additional information
-            items:
-            - name: Naming and tagging
-              href: ready/azure-best-practices/naming-and-tagging.md
-            - name: Define your naming convention
-              href: ready/azure-best-practices/resource-naming.md
-            - name: Abbreviations for resource types
-              href: ready/azure-best-practices/resource-abbreviations.md
-            - name: Define your tagging strategy
-              href: ready/azure-best-practices/resource-tagging.md
-            - name: Resource naming and tagging decision guide
-              href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
-            - name: Move resources
-              href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Design options for specific use cases
-            items:
-            - name: Create your initial subscriptions
-              href: ready/azure-best-practices/initial-subscriptions.md
-            - name: Scale with multiple subscriptions
-              href: ready/azure-best-practices/scale-subscriptions.md
-
-        - name: Network topology and connectivity
-          items:
-            - name: Overview
-              href: ready/landing-zone/design-area/network-topology-and-connectivity.md
-            - name: Topology
-              items:
-              - name: Define an Azure network topology
-                href: ready/azure-best-practices/define-an-azure-network-topology.md
-              - name: Traditional Azure networking topology
-                href: ready/azure-best-practices/traditional-azure-networking-topology.md
-              - name: Virtual WAN network topology (Microsoft-managed)
-                href: ready/azure-best-practices/virtual-wan-network-topology.md
-              - name: Plan for IP addressing
-                href: ready/azure-best-practices/plan-for-ip-addressing.md
-            - name: Connectivity
-              items:
-              - name: Connectivity to Azure
-                href: ready/azure-best-practices/connectivity-to-azure.md
-              - name: Connectivity to Azure PaaS services
-                href: ready/azure-best-practices/connectivity-to-azure-paas-services.md
-              - name: Limit cross-tenant private endpoint connections
-                href: ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md
-              - name: Connectivity to other cloud providers
-                href: ready/azure-best-practices/connectivity-to-other-providers.md
-              - name: Connectivity to Oracle Cloud Infrastructure
-                href: ready/azure-best-practices/connectivity-to-other-providers-oci.md
-              - name: Plan for application delivery
-                href: ready/azure-best-practices/plan-for-app-delivery.md
-            - name: Network security
-              items:
-              - name: Plan for inbound and outbound internet connectivity
-                href: ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md
-              - name: Plan for landing zone network segmentation
-                href: ready/azure-best-practices/plan-for-landing-zone-network-segmentation.md
-              - name: Use Azure Bastion for virtual machine remote access
-                href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
-              - name: Define network encryption requirements
-                href: ready/azure-best-practices/define-network-encryption-requirements.md
-              - name: Plan for traffic inspection
-                href: ready/azure-best-practices/plan-for-traffic-inspection.md
-            - name: DNS
-              items:
-              - name: Private Link and DNS integration at scale
-                href: ready/azure-best-practices/private-link-and-dns-integration-at-scale.md
-              - name: DNS for on-premises and Azure resources
-                href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
-            - name: Azure Virtual Network Manager in Azure landing zones
-              href: ready/azure-best-practices/azure-virtual-network-manager.md
-
-        - name: Security
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/security.md
-          - name: Secure privileged access
-            href: /azure/active-directory/users-groups-roles/directory-admin-roles-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Encryption and keys
-            href: ready/landing-zone/design-area/encryption-and-keys.md
-          - name: Service enablement framework
-            href: ready/landing-zone/design-area/service-enablement-framework.md
-          - name: Security control mapping
-            href: ready\control-mapping\security-control-mapping.md
-          - name: Incorporate Zero Trust practices in your landing zone
-            href: ready/landing-zone/design-area/security-zero-trust.md
-            
-        - name: Management
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/management.md
-          - name: Inventory and visibility
-            href: ready/landing-zone/design-area/management-platform.md
-          - name: Baseline monitoring
-            href: ready/landing-zone/design-area/management-monitor.md
-          - name: Protect and recover
-            href: ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md
-          - name: Operational compliance
-            href: ready/landing-zone/design-area/management-operational-compliance.md
-          - name: Workloads
-            href: ready/landing-zone/design-area/management-workloads.md
-
-        - name: Governance
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/governance.md
-          - name: Track costs
-            href: ready/azure-best-practices/track-costs.md
-          - name: Optimize your cloud investment
-            href: /azure/cost-management-billing/costs/cost-mgt-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Create and manage budgets
-            href: /azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Export cost data
-            href: /azure/cost-management-billing/costs/tutorial-export-acm-data?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Optimize costs from recommendations
-            href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Monitor usage and spending
-            href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Keep Azure landing zones up to date
-            href: ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date.md
-          - name: Migrate Azure landing zone policies
-            href: ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md
-          - name: Update custom policies
-            href: ready/landing-zone/design-area/update-custom-policies.md
-
-        - name: Platform automation and DevOps
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/platform-automation-devops.md
-          - name: Platform automation
-            items:
-            - name: Automation
-              href: ready/considerations/automation.md
-          - name: Subscription vending
-            href: ready/landing-zone/design-area/subscription-vending.md
-          - name: Common subscription vending product lines
-            href: ready/landing-zone/design-area/subscription-vending-product-lines.md
-          - name: DevOps
-            items:
-            - name: DevOps considerations
-              href: ready/considerations/devops-principles-and-practices.md
-            - name: Team topologies
-              href: ready/considerations/devops-teams-topologies.md
-          - name: Development strategy
-            items:
-            - name: Development lifecycle
-              href: ready/considerations/development-strategy-development-lifecycle.md
-            - name: Infrastructure as Code
-              href: ready/considerations/infrastructure-as-code.md
-            - name: Environments
-              href: ready/considerations/environments.md
-            - name: Test-driven development for Azure Landing Zones
-              href: ready/considerations/development-strategy-test-driven-development.md
-            - name: DevOps Toolchain considerations
-              href: ready/considerations/devops-toolchain.md
-          - name: Security considerations
-            items:
-            - name: Overview
-              href: ready/considerations/security-considerations-overview.md
-            - name: Role-based access control for DevOps Tools
-              href: ready/considerations/security-considerations-tools.md
-      - name: Implementation options
-        href: ready/landing-zone/implementation-options.md
-        items:
-        - name: Start with enterprise scale
-          items:
-          - name: Overview
-            href: ready/enterprise-scale/index.md
-          - name: Implement enterprise-scale landing zones
-            href: ready/enterprise-scale/implementation.md
-          - name: Scenario-specific enterprise-scale landing zones
-            href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
-
-        - name: Deploy Azure landing zones with Terraform
-          href: ready/landing-zone/deploy-landing-zones-with-terraform.md
-        - name: ISV considerations for landing zones
-          href: ready/landing-zone/isv-landing-zone.md
-        - name: Sovereignty considerations and the sovereign landing zone
-          href: ready/landing-zone/sovereign-landing-zone.md
-        - name: Get landing zone help
-          href: ready/landing-zone/partner-landing-zone.md
-
-      - name: Align
-        items:
-        - name: Transition to the Azure landing zone conceptual architecture
-          href: ready/enterprise-scale/transition.md
-        - name: Alignment scenarios
-          items:
-            - name: Transition a single subscription with no management groups
-              href: ready/landing-zone/align-scenario-single-subscription.md
-            - name: Transition management groups
-              href: ready/landing-zone/align-scenario-multiple-management-groups.md
-            - name: Transition a regional organization environment
-              href: ready/landing-zone/align-scenario-regional-org.md
-        - name: Alignment approaches
-          items:
-            - name: Transition by duplicating a landing zone management group
-              href: ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md
-
-        - name: Brownfield landing zone considerations
-          href: ready/landing-zone/brownfield-considerations.md
-
-      - name: Enhance
-        items:
-        - name: Expand your landing zone
-          href: ready/considerations/index.md
-        - name: Testing approach for Azure landing zones
-          href: ready/enterprise-scale/testing-approach.md
-        - name: Landing zone sandbox environments
-          href: ready/considerations/sandbox-environments.md
-        - name: Landing zone regions
-          href: ready/considerations/regions.md
-        - name: Use infrastructure as code to update Azure landing zones
-          href: ready/considerations/infrastructure-as-code-updates.md
-        - name: Policy management
-          items:
-          - name: Advanced Azure Policy management
-            href: ready/policy-management/enterprise-policy-as-code.md
-        - name: Improve landing zone governance
-          items:
-          - name: Overview
-            href: ready/considerations/landing-zone-governance.md
-          - name: Naming and tagging standards
-            href: ready/azure-best-practices/naming-and-tagging.md
-          - name: Track costs across workloads
-            href: ready/azure-best-practices/track-costs.md
-          - name: Scale with multiple subscriptions
-            href: ready/azure-best-practices/scale-subscriptions.md
-          - name: Organize subscriptions
-            href: ready/landing-zone/design-area/resource-org.md
-        - name: Improve landing zone security
-          items: 
-          - name: Overview
-            href: ready/considerations/landing-zone-security.md
-          - name: Onboard a subscription to Microsoft Defender for Cloud
-            href: /azure/security-center/security-center-get-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Onboard Microsoft Sentinel
-            href: /azure/sentinel/quickstart-onboard?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Implementing a secure hybrid network architecture in Azure
-            href: /azure/architecture/reference-architectures/dmz/secure-vnet-dmz?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Azure identity management and access control security best practices
-            href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Azure network security best practices
-            href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Azure operational security best practices
-            href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-      - name: Azure landing zones FAQ
-        href: ready/enterprise-scale/faq.md
-
-    - name: Skills relevant to ready and landing zones
-      href: ready/suggested-skills.md
-
-    - name: Ready antipatterns
-      href: antipatterns/ready-antipatterns.md
-
-  - name: Adopt
-    items:
-    - name: Overview
-      href: adopt/index.md
-    - name: Cloud adoption journey
-      href: adopt/cloud-adoption.md
-    - name: Migrate or modernize first? 
-      href: adopt/migrate-or-modernize.md
-    - name: Migrate
-      items:
-      - name: Overview
-        href: migrate/index.md
-      - name: Prepare
-        items:
-          - name: Overview
-            href: migrate/prepare/index.md
-          - name: Prepare your landing zone for migration
-            href: migrate/prepare/ready-azure-landing-zone.md
-          - name: Prepare tools and backlog
-            href: migrate/prepare/tools-backlog.md
-          - name: Select migration regions
-            href: migrate/prepare/select-regions-migration.md
-          - name: Align roles and responsibilities
-            href: migrate/prepare/roles-responsibilities.md
-          - name: Get support resources and improve skills
-            href: migrate/prepare/skills-support.md
-      - name: Assess
-        items:
-        - name: Overview
-          href: migrate/assess/index.md
-        - name: Classify workloads
-          href: migrate/assess/classify.md
-        - name: Evaluate workload readiness
-          href: migrate/assess/evaluate.md
-        - name: Architect workloads
-          href: migrate/assess/architect.md
-      - name: Deploy
-        items:
-          - name: Overview
-            href: migrate/deploy/index.md
-          - name: Deploy supporting services for migration projects
-            href: migrate/deploy/deploy-supporting-services.md
-          - name: Remediate assets
-            href: migrate/deploy/remediate.md
-          - name: Replicate assets
-            href: migrate/deploy/replicate.md
-          - name: Prepare for management
-            href: migrate/deploy/prepare-for-management.md
-          - name: Migration testing
-            href: migrate/deploy/migration-test.md
-      - name: Release
-        items:
-          - name: Overview 
-            href: migrate/release/index.md
-          - name: Change communication
-            href: migrate/release/change-communication.md
-          - name: Perform business testing
-            href: migrate/release/business-test.md
-          - name: Complete migration
-            href: migrate/release/complete-migration.md
-          - name: Optimize cost after migration
-            href: migrate/release/optimize-cost-after-migration.md
-          - name: Conduct retrospectives
-            href: migrate/release/retrospective.md
-      - name: Product migration guidance
-        href: migrate/scenarios.md
-
-    - name: Modernize
-      items:
-      - name: Overview  
-        href: modernize/index.md
-      - name: Business alignment
-        items:
-        - name: Overview
-          href: modernize/business-alignment/index.md
-        - name: Envision 
-          href: modernize/business-alignment/envision-cloud-modernization.md
-        - name: Evaluate
-          href: modernize/business-alignment/evaluate-modernization-options.md
-        - name: Commit
-          href: modernize/business-alignment/commit-to-modernization-plan.md      
-      - name: Modernization strategies
-        items:
-        - name: Overview
-          href: modernize/modernize-strategies/index.md
-        - name: Process modernization 
-          href: modernize/modernize-strategies/process-modernization.md
-        - name: Application modernization
-          href: modernize/modernize-strategies/application-modernization.md
-        - name: Database modernization
-          href: modernize/modernize-strategies/database-modernization.md
-
-    - name: Innovate
-      items:
-      - name: Overview
-        href: innovate/index.md
-      - name: Azure innovation guide
-        items:
-        - name: Innovation guide overview
-          href: innovate/innovation-guide/index.md
-        - name: Prepare for customer feedback
-          href: innovate/innovation-guide/adoption.md
-        - name: Democratize data
-          href: innovate/innovation-guide/data.md
-        - name: Engage customers through applications
-          href: innovate/innovation-guide/apps.md
-        - name: Empower adoption
-          href: innovate/innovation-guide/ci-cd.md
-        - name: Interact through devices
-          href: innovate/innovation-guide/devices.md
-
-      - name: Innovation scenarios
-        items:
-        - name: Kubernetes
-          items:
-          - name: Innovation with Kubernetes
-            href: innovate/kubernetes/index.md
-          - name: Application development and deployment
-            href: innovate/kubernetes/application-development.md
-          - name: Cluster design and operations
-            href: innovate/kubernetes/cluster-design-operations.md
-          - name: Cluster and application security
-            href: innovate/kubernetes/cluster-application-security.md
-
-      - name: Best practices
-        items:
-        - name: Overview and Azure toolchain
-          href: innovate/best-practices/index.md
-        - name: Democratize data
-          href: innovate/best-practices/data.md
-        - name: Engage via applications
-          href: innovate/best-practices/apps.md
-        - name: Empower adoption
-          href: innovate/best-practices/ci-cd.md
-        - name: Interact with devices
-          href: innovate/best-practices/devices.md
-
-      - name: Process improvements
-        items:
-        - name: Overview
-          href: innovate/considerations/index.md
-        - name: Business value consensus
-          href: innovate/business-value.md
-        - name: Customer adoption
-          items:
-          - name: Feedback loops
-            href: innovate/considerations/adoption.md
-          - name: Build with customer empathy
-            href: innovate/considerations/build.md
-          - name: Measure for customer impact
-            href: innovate/considerations/measure.md
-          - name: Learn with customers
-            href: innovate/considerations/learn.md
-          - name: Customer challenges and blockers
-            href: innovate/considerations/challenges.md
-        - name: Digital invention
-          items:
-          - name: Develop digital inventions
-            href: innovate/considerations/invention.md
-          - name: Democratize data
-            href: innovate/considerations/data.md
-          - name: Application development for innovative applications
-            href: innovate/considerations/apps.md
-          - name: Empower adoption
-            href: innovate/considerations/ci-cd.md
-          - name: Interact with devices
-            href: innovate/considerations/devices.md
-          - name: Predict and influence
-            href: innovate/considerations/predict.md
-                
-
-  - name: Govern
-    items:
-    - name: Overview
-      href: govern/index.md
-    - name: Build a cloud governance team
-      href: govern/build-cloud-governance-team.md
-    - name: Assess cloud risks
-      href: govern/assess-cloud-risks.md
-    - name: Document cloud governance policies
-      href: govern/document-cloud-governance-policies.md
-    - name: Enforce cloud governance policies
-      href: govern/enforce-cloud-governance-policies.md
-    - name: Monitor cloud governance
-      href: govern/monitor-cloud-governance.md
-
-
-  - name: Manage
-    items:
-    - name: Checklist
-      href: manage/index.md
-    - name: Ready operations
-      href: manage/ready.md  
-    - name: Administer Azure
-      href: manage/administer.md  
-    - name: Monitor Azure
-      href: manage/monitor.md
-    - name: Protect Azure
-      href: manage/protect.md
-
-  - name: Secure
-    items:
-    - name: Overview 
-      href: secure/overview.md
-    - name: Teams and roles
-      href: secure/teams-roles.md
-    - name: Strategy
-      href: secure/strategy.md
-    - name: Plan
-      href: secure/plan.md
-    - name: Ready
-      href: secure/ready.md    
-    - name: Adopt 
-      href: secure/adopt.md
-    - name: Govern  
-      href: secure/govern.md
-    - name: Manage  
-      href: secure/manage.md
-  
-  - name: Organize
-    items:
-    - name: Managing organization alignment
-      href: organize/index.md
-    - name: Required cloud functions
-      items:
-      - name: Cloud strategy functions
-        href: organize/cloud-strategy.md
-      - name: Cloud adoption functions
-        href: organize/cloud-adoption.md
-      - name: Cloud governance functions
-        href: organize/cloud-governance.md
-      - name: Central IT functions
-        href: organize/central-it.md
-      - name: Cloud operations functions
-        href: organize/cloud-operations.md
-      - name: Cloud center of excellence functions
-        href: organize/cloud-center-of-excellence.md
-      - name: Cloud platform functions
-        href: organize/cloud-platform.md
-      - name: Cloud automation functions
-        href: organize/cloud-automation.md
-      - name: Cloud data functions
-        href: organize/cloud-data.md
-
-    - name: Mature teams structure
-      href: organize/organization-structures.md
-    - name: Align the RACI matrix
-      href: organize/raci-alignment.md
-    - name: Building technical skills
-      href: organize/suggested-skills.md
-    - name: Creating a cost-conscious organization
-      href: organize/cost-conscious-organization.md
-
-    - name: Organize antipatterns
-      items:
-      - name: Organizational antipatterns
-        href: antipatterns/organize-antipatterns.md
-      - name: IT fiefdoms and IT silos
-        href: organize/fiefdoms-silos.md
 
   - name: Resources
     items:
-    - name: Tools and templates
-      href: resources/tools-templates.md
-    - name: Decision guides
+    - name: Azure Architecture Center
+      href: /azure/architecture/
+    - name:  Well-Architected Framework
+      href: /azure/architecture/framework/
+    - name: Organize
       items:
-      - name: Overview
-        href: decision-guides/index.md
-      - name: Identity
+      - name: Managing organization alignment
+        href: organize/index.md
+      - name: Required cloud functions
         items:
-        - name: Identity decision guide
-          href: decision-guides/identity/index.md
-        - name: Azure role-based access control
-          href: ready/considerations/roles.md
-      - name: Networking
-        items:
-        - name: Hub and spoke network topology
-          href: ready/azure-best-practices/hub-spoke-network-topology.md
-        - name: Perimeter networks
-          href: ready/azure-best-practices/perimeter-networks.md
-      - name: Resource consistency
-        href: decision-guides/resource-consistency/index.md
-      - name: Logging and reporting
-        href: decision-guides/logging-and-reporting/index.md
-      - name: AI + machine learning
-        items:
-        - name: Organize and set up Azure Machine Learning
-          href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
-        - name: Best practices for enterprise security
-          href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
-        - name: Manage budget, cost, and quota with Azure
-          href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
-        - name: Machine learning operations
-          href: ready/azure-best-practices/ai-machine-learning-mlops.md
+        - name: Cloud strategy functions
+          href: organize/cloud-strategy.md
+        - name: Cloud adoption functions
+          href: organize/cloud-adoption.md
+        - name: Cloud governance functions
+          href: organize/cloud-governance.md
+        - name: Central IT functions
+          href: organize/central-it.md
+        - name: Cloud operations functions
+          href: organize/cloud-operations.md
+        - name: Cloud center of excellence functions
+          href: organize/cloud-center-of-excellence.md
+        - name: Cloud platform functions
+          href: organize/cloud-platform.md
+        - name: Cloud automation functions
+          href: organize/cloud-automation.md
+        - name: Cloud data functions
+          href: organize/cloud-data.md
 
+      - name: Mature teams structure
+        href: organize/organization-structures.md
+      - name: Align the RACI matrix
+        href: organize/raci-alignment.md
+      - name: Building technical skills
+        href: organize/suggested-skills.md
+      - name: Creating a cost-conscious organization
+        href: organize/cost-conscious-organization.md
+
+      - name: Organize antipatterns
+        items:
+        - name: Organizational antipatterns
+          href: antipatterns/organize-antipatterns.md
+        - name: IT fiefdoms and IT silos
+          href: organize/fiefdoms-silos.md
+    - name: Tools
+      href: resources/tools-templates.md
     - name: Additional resources
       items:
-      - name: Azure Architecture Center for solution architecture
-        href: /azure/architecture/
-      - name: Microsoft Azure Well-Architected Framework for workload architecture
-        href: /azure/architecture/framework/
-      - name: Docs for product implementation
-        href: /
-      - name: Learn to develop skills
-        href: /training/
-      - name: Assessments to personalize guidance
-        href: /assessments/
-
-    - name: Archived resources
-      items:
-      - name: Cloud operating model
-        href: resources/cloud-operating-model.md
-      - name: Virtual datacenter boundary security
-        href: resources/networking-vdc.md
+      - name: App Modernization Guidance for Azure
+        href: /azure/app-modernization-guidance

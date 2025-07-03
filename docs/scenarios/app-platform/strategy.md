@@ -2,7 +2,7 @@
 title: Strategy for modern application platform adoption
 description: Learn about the strategic impact of modern application platform adoption.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

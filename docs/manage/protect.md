@@ -2,7 +2,7 @@
 title: Protect your Azure cloud estate
 description: Learn how to ensure the reliability and security your Azure cloud estate as part of your cloud operations.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
@@ -49,9 +49,9 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 1. ***Identify service level indicators (SLIs).*** Use SLIs to measure uptime performance against your SLO. Examples include [service health monitoring](./monitor.md#monitor-service-health) and [error rates](./monitor.md#monitor-code-and-runtime).
 
-1. ***Assign a recovery time objective (RTO) to all workloads.*** The RTO defines the maximum acceptable downtime for your workload. RTO should be shorter than your annual downtime allowance. For example, an uptime SLO 99.99% requires less than 52 minutes of annual downtime (4.32 minutes per month). Follow these steps:
+1. ***Assign a recovery time objective (RTO) to all workloads.*** The RTO defines the maximum acceptable downtime for your workload. RTO should be shorter than your annual downtime allowance. For example, an uptime SLO 99.99% requires less than 52 minutes of annual downtime (4.32 minutes per month). To assign an RTO, follow these steps:
 
-	1. ***Estimate the number of failures.*** Estimate how often you think each workload might fail per year. For workloads with operational history, use your SLIs. For new workloads, perform a [failure mode analysis](/azure/well-architected/reliability/failure-mode-analysis) to get an accurate estimate.
+	1. ***Estimate the number of failures per year.*** For workloads with operational history, use your SLIs. For new workloads, perform a [failure mode analysis](/azure/well-architected/reliability/failure-mode-analysis) to get an accurate estimate.
 
 	1. ***Estimate the RTO.*** Divide your annual allowable downtime by the estimated number of failures. If you estimate four failures per year, then your RTO must be 13 minutes or less (52 minutes / 4 failures = 13-minute RTO).
 
@@ -85,7 +85,8 @@ You must align data reliability configurations with the RTO and RPO requirements
 
     For more information, see [Replication: Redundancy for data](/azure/reliability/concept-redundancy-replication-backup#replication-redundancy-for-data).
 
-1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Prefer backup solutions built-in to your Azure service, such as native backup features in Azure Cosmos DB and Azure SQL Database. Where native backups are unavailable, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup).
+1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Prefer backup solutions built-in to your Azure service, such as native backup features in Azure Cosmos DB and Azure SQL Database. Where native backups are unavailable, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup) and [Azure Business Continuity Center](/azure/business-continuity-center/business-continuity-center-overview).
+
 
 1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework [Data partitioning guide](/azure/well-architected/reliability/partition-data) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 

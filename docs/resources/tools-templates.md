@@ -1,11 +1,12 @@
 ---
 title: Tools and templates
-description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
+description: Find the tools that are available in the Cloud Adoption Framework to help with Azure adoption.
 author: Zimmergren
-ms.author: tozimmergren
-ms.date: 02/04/2025
+ms.author: pnp
+ms.date: 06/17/2025
 ms.topic: article
 ms.subservice: caf-general
+ms.update-cycle: 1095-days
 ---
 
 # Tools and templates
@@ -25,8 +26,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 |----------|-------------|
 | [Strategic Migration Assessment and Readiness Tool assessment](/assessments/Strategic-Migration-Assessment/) | Take the Strategic Migration Assessment and Readiness Tool (SMART) assessment to help you prepare for your Microsoft Azure migration in areas like business planning, training, security, and governance. |
 | [Cloud Journey Tracker assessment](/assessments/cloud-journey-tracker/) | Identify your cloud adoption path based on the needs of your business. |
-| [Cloud adoption plan generator](../plan/template.md) | Standardize your processes. Use a template to deploy a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards). |
-| [Use the Strategy-Plan-Ready-Govern Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize your processes. Use a template to deploy a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards). |
 
 ## Ready
 
@@ -44,48 +43,8 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 
 | Resource | Description |
 |----------|-------------|
-| [Governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e/) | Identify gaps between your current state and business priorities. Find resources to help you address what's missing. |
+| [Cloud governance assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e/) | Identify gaps between your current state and business priorities. Find resources to help you address what's missing. |
 | [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) | The Azure Governance Visualizer is a PowerShell script that iterates through Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities, such as Azure Policy and Azure role-based access control (RBAC). The visualizer shows your hierarchy map from the collected data to create a tenant summary and build granular scope insights about your management groups and subscriptions. |
 | [Azure Governance Visualizer accelerator](https://github.com/Azure/Azure-Governance-Visualizer-Accelerator) | The Azure Governance Visualizer accelerator speeds up the adoption and deployment of the Azure Governance Visualizer script into your environment. |
-| [Microsoft Product Placemat for CMMC L3](https://www.microsoft.com/download/details.aspx?id=102536) | The Microsoft Product Placemat for CMMC Level 3 (Preview) is an interactive view representing how Microsoft cloud products and services satisfy requirements for cybersecurity maturity model certification practices. |
 | [PSRule for Azure](https://azure.github.io/PSRule.Rules.Azure/) | PSRule for Azure is a set of tests and documentation to help you configure Azure solutions. You can use these tests to check your infrastructure as code (IaC) before or after deployment to Azure. PSRule for Azure includes tests that check how IaC is written and how Azure resources are configured. |
 | [AzAdvertizer](https://www.azadvertizer.net) | Use AzAdvertizer to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure RBAC role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and Microsoft API permissions.|
-
-## Migrate
-
-| Resource | Description |
-|----------|-------------|
-| [Datacenter migration discovery checklist](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/migrate/datacenter-migration-discovery-checklist.docx) | Use this checklist to identify workloads, servers, and other assets in your datacenter. Apply this information to help plan your migration.
-| [Migration templates](https://aka.ms/adopt/plan/generator) | The Azure DevOps generator includes several templates that you can use to help streamline your projects. Templates include [Azure Virtual Desktop](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [server migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration), and [Azure Kubernetes Service (AKS) deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
-
-## Innovate
-
-| Resource | Description |
-|----------|-------------|
-| [Knowledge mining](https://aka.ms/adopt/plan/generator) | The knowledge mining Azure DevOps project simplifies the process of accessing the latent insights in structured and unstructured data.
-| [Modern data warehouse](https://aka.ms/adopt/plan/generator) | Build your modern data warehouse by using this Azure DevOps project with links to assets, code, and learning material to help simplify your deployment. |
-| [Retail recommender](https://aka.ms/adopt/plan/generator) | Get end-to-end guidance to enable personalized customer experiences for retail scenarios by using Azure Synapse Analytics, Azure Machine Learning services, and other Azure big data services. For more information, see [Retail recommender solution accelerator](https://github.com/microsoft/Azure-Synapse-Retail-Recommender-Solution-Accelerator). |
-| [Modern IoT Azure](https://aka.ms/adopt/plan/generator) | Transform existing businesses and provide new businesses with growth opportunities by using connected sensors, devices, and intelligent operations. Use the [Azure IoT platform](https://azure.microsoft.com/overview/iot/?WT.mc_id=devops_userstory_service_iot-inproduct-devopsportal) to find the work items that you need to plan and implement your IoT solution. |
-| [Many models solution accelerator](https://github.com/microsoft/solution-accelerator-many-models) | In the real world, many problems are too complex to solve with a single machine learning model. You might predict sales for individual stores, build a predictive maintenance model for hundreds of oil wells, or tailor the customer experience to individual users. Build a model for each instance to improve results across machine learning problems. |
-| [Demand forecasting solution accelerator](https://github.com/microsoft/Azure-Synapse-Solution-Accelerator-Financial-Analytics-Customer-Revenue-Growth-Factor) | Get resources to build a solution that identifies the top factors for revenue growth from an e-commerce platform. This approach uses Azure Synapse Analytics and Machine Learning.|
-
-## Manage
-
-| Resource | Description |
-|----------|-------------|
-| [Microsoft Azure Well-Architected Review assessment](/assessments/azure-architecture-review/) | Define workload-specific architectures and options across your operations. |
-| [Best practices source code](https://github.com/microsoft/CloudAdoptionFramework/tree/main/manage/Automation-Best-Practices) | Accelerate the adoption of best practices for Azure server management services. Quickly enable operations management and establish an operations baseline. |
-| [Operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/manage/opsmanagementworkbook.xlsx) | Document decisions about operations management in the cloud. Have conversations with the business to ensure alignment regarding service-level agreements (SLAs), investment in resiliency, and budget allocation related to operations. |
-
-## Organize
-
-| Resource | Description |
-|----------|-------------|
-| [Cross-team RACI diagram](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/organize/raci-template.xlsx) | Download and personalize the responsible, accountable, consulted, and informed (RACI) spreadsheet template to track your decisions regarding organizational structure over time. |
-
-## Secure
-
-| Resource | Description |
-|----------|-------------|
-| [Deploy a STIG-compliant Windows virtual machine (VM)](/azure/azure-government/documentation-government-stig-windows-vm) | Use a portal to deploy a Security Technical Implementation Guides (STIG)-compliant Windows VM (preview) on Azure or Azure Government.
-| [Deploy a STIG-compliant Linux VM](/azure/azure-government/documentation-government-stig-linux-vm) | Use a portal to deploy a STIG-compliant Linux VM (preview) on Azure or Azure Government. |

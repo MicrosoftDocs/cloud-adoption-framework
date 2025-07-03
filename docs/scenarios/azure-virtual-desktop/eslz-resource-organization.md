@@ -2,7 +2,7 @@
 title: Resource organization considerations for Azure Virtual Desktop
 description: Learn about the resource organization design area and how to apply it to your Azure Virtual Desktop implementation effectively.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/07/2025
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
@@ -29,7 +29,7 @@ When you plan the number of Azure Virtual Desktop virtual machines (VMs) that yo
 
 - Avoid deploying more than 5,000 VMs in a single region because it can create performance bottlenecks, exceed subscription limits, and decrease resiliency. You can accommodate extra user sessions by increasing individual session host VM resources.
 
-- For [enterprise environments](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) that exceed 5,000 VMs per subscription in each region, create multiple Azure subscriptions by using a [hub-and-spoke architecture](/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, VMs can be deployed within the same subscription but across different regions to increase the number of VMs.
+- For [enterprise environments](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) that exceed 5,000 VMs per subscription in each region, create multiple Azure subscriptions by using a [hub-and-spoke architecture](/azure/architecture/networking/architecture/hub-spoke) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, VMs can be deployed within the same subscription but across different regions to increase the number of VMs.
 
 ### Regions for host deployment
 
@@ -118,7 +118,7 @@ For more information about Azure Virtual Desktop organization and management, se
 
 - [Azure Virtual Desktop for the enterprise](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
 - [Organize your Azure resources effectively](../../ready/azure-setup-guide/organize-resources.md)
-- [Resource naming and tagging decision guide](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+- [Resource naming and tagging decision guide](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
 
 ## Next step
 

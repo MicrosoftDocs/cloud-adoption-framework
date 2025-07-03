@@ -155,6 +155,7 @@ Although backup and restore isn't typically considered an adequate high availabi
 - Back up SAP application servers and VMs, disks, or VM snapshots.
 - Back up an SAP HANA system with replication enabled.
 - Back up SAP HANA database instance snapshots.
+- Back up SAP ASE (Sybase) database.
 
 If you back up and restore on-premises, you need to bring these capabilities to SAP systems in Azure. If you like your current solution, check whether your backup vendor supports Azure deployments or whether it has a software as a service (SaaS) solution for Azure.
 
@@ -168,6 +169,10 @@ You can also use Azure Backup to back up databases that have SAP HANA system rep
 - A HANA-consistent, snapshot-based approach that integrates with Backint for SAP HANA. You can use Backup as a single product for your entire HANA landscape and for any database size.  
 
 For more information, see [SAP HANA database system with replication enabled](/azure/backup/sap-hana-database-about#back-up-a-hana-system-with-replication-enabled) and [SAP HANA instance snapshot backup](/azure/backup/sap-hana-database-about#back-up-database-instance-snapshots).
+
+Azure Backup also supports SAP ASE (Sybase) database backups on Azure VMs, ensuring secure storage with [Immutability](/azure/backup/backup-azure-immutable-vault-concept?), [Soft Delete](/azure/backup/backup-azure-security-feature-cloud), [Multi-user Authorization](/azure/backup/multi-user-authorization-concept), and [CMK](/azure/backup/encryption-at-rest-with-cmk) in a managed vault. Data is isolated for protection, with 15-minute log backups enabling Point-In-Time recovery. Restore options include Alternate Location, Original Location, or as Files. Cost-effective policies optimize storage, while [Multi-SID](/azure/backup/sap-ase-backup-support-matrix#support-for-multiple-sap-ase-instances-on-a-single-host) and [Cross Subscription Restore](/azure/backup/sap-ase-database-about#cross-subscription-restore-for-sap-ase-sybase-database) enhance flexibility. Learn about [SAP ASE (Sybase) database backup](/azure/backup/sap-ase-database-about).
+
+Moreover, Azure Business Continuity Center enables [protection](/azure/backup/sap-ase-database-backup-tutorial), [monitoring](/azure/business-continuity-center/tutorial-monitor-operate), and [alert configuration](/azure/business-continuity-center/tutorial-monitor-alerts-metrics) for SAP ASE backups. Learn about [Azure Business Continuity Center](/azure/business-continuity-center/business-continuity-center-overview).
 
 ### Design recommendations for backup and restore
 

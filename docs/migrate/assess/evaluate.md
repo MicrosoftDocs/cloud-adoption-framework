@@ -2,7 +2,7 @@
 title: Evaluate workload readiness
 description: Understand how to evaluate the readiness of a workload to migrate to the cloud. Learn how to validate all assets and associated dependencies.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/05/2024
 ms.topic: conceptual
 ms.collection: 
@@ -69,7 +69,7 @@ As part of your server migration, you might also look at migrating SQL Server in
 
 - **Document RPOs and RTOs**: Document the recovery point objectives (RPOs) and the recovery time objectives (RTOs) of the current database deployment. Use this information to help you make decisions during [architecture activities](./architect.md).
 - **Document high-availability requirements**: Document high-availability configuration requirements. For more information about SQL Server requirements, see the [SQL Server high availability solutions guide](/sql/database-engine/sql-server-business-continuity-dr).
-- **Evaluate PaaS**: Evaluate platform as a service (PaaS) compatibility. The [Azure Database Migration Service guides](/data-migration/) map on-premises databases to compatible Azure PaaS solutions, like Azure Cosmos DB, Azure SQL Database, Azure Database for MySQL, Azure Database for PostgreSQL, or Azure Database for MariaDB.
+- **Evaluate PaaS**: Evaluate platform as a service (PaaS) compatibility. The [Azure Database Migration Service guides](/data-migration/) map on-premises databases to compatible Azure PaaS solutions, like Azure Cosmos DB, Azure SQL Database, Azure Database for MySQL, or Azure Database for PostgreSQL.
   - **PaaS compatibility without remediation**: When PaaS compatibility is an option without the need for any remediation, consult the team that's responsible for architecture activities. PaaS migrations can save time and reduce the total cost of ownership (TCO) of most cloud solutions.
   - **PaaS compatibility when remediation is required**: Consult the teams that are responsible for [architecture](../assess/architect.md) and [remediation](../deploy/remediate.md) activities. In many scenarios, the advantages of PaaS migrations for database solutions outweigh the increase in remediation time.
 - **Document size and rate of change**: Document the size and rate of change for each database that you plan to migrate.

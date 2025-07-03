@@ -1,10 +1,11 @@
 ---
 title: Develop a Cloud Adoption Strategy
 description: Learn how to develop a cloud adoption strategy to migrate or innovate in the cloud, in alignment with your business goals.
-ms.author: tozimmergren
+ms.author: pnp
 author: Zimmergren
 ms.topic: conceptual
 ms.date: 02/03/2025
+ms.update-cycle: 1095-days
 ---
 
 # Develop a cloud adoption strategy

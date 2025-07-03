@@ -2,7 +2,7 @@
 title: Connectivity to Oracle Cloud Infrastructure
 description: Evaluate key design considerations and recommendations surrounding different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture to Oracle Cloud Infrastructure (OCI).
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 06/01/2021
 ms.topic: conceptual
 ms.custom: think-tank

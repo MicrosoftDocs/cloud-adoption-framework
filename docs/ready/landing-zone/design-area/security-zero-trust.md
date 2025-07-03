@@ -2,7 +2,7 @@
 title: Incorporate Zero Trust practices in your landing zone
 description: Learn how to incorporate Zero Trust-specific deployment objectives in your landing zone design areas, including specific guidance for each design area.
 author: brsteph
-ms.author: bstephenson
+ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual
 ---
@@ -169,7 +169,7 @@ For information about deployment objectives for securing infrastructure, see [Se
 
 - Use the standard [Azure landing zone policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) to block noncompliant deployments and resources, and to enforce logging patterns.
 
-- Configure [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) in Microsoft Entra ID to provide just-in-time access to highly privileged roles.
+- Configure [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) in Microsoft Entra ID to provide just-in-time access to highly privileged roles.
 - Configure [just-in-time access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud for your landing zone to restrict access to virtual machines.
 - Create a plan to monitor and manage individual workloads that are deployed in Azure.
 

@@ -2,7 +2,7 @@
 title: Perform Your Cloud Adoption Securely
 description: Learn how to adopt security best practices in your cloud estate adoption phase so that your infrastructure is secure, compliant, and resilient from the start.
 author: claytonsiemens77
-ms.author: csiemens
+ms.author: pnp
 ms.date: 10/18/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2

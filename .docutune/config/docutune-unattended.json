@@ -1,36 +1,28 @@
 {
-  "baseConfiguration": "docutune-unattended-default.json",
-  "onboarding": {
-    "maxInFlightPullRequests": 20,
-    "maxInFlightFiles": 200
-  },
-  "pullRequest": {
-    "title": "[DO NOT MERGE] [PLEASE IGNORE] [DocuTune-Remediation] - Test of DocuTune scheduled execution in CAF",
-    "batchSize": 0,
-    "maxBatches": 100,
-    "body": "",
-    "newBranchNamePrefix": "",
-    "headRemote": "origin",
-    "draft": true,
-    "requestReview": true,
-    "signOff": false,
-    "properties": {
-      "pointOfContact": "@BryanLa"
+    "baseConfiguration": "docutune-unattended-default.json",
+    "onboarding": {
+        "maxInFlightPullRequests": 20,
+        "maxInFlightFiles": 200
     },
-    "sleepInterval": 15
-  },
-  "types": [
-    {
-      "name": "Default",
-      "command": "Fix",
-      "configType": "full",
-      "stopAt": 5
+    "pullRequest": {
+        "title": "[BULK] - DocuTune remediation - Content SFI",
+        "batchSize": 9,
+        "maxBatches": 100,
+        "groupByFolder": "docs/*",
+        "body": "Remediating articles to align with content SFI guidance related to sensitive terms with GUIDs, thumbprints, and secrets.",
+        "newBranchNamePrefix": "",
+        "headRemote": "origin",
+        "draft": false,
+        "requestReview": true,
+        "signOff": false,
+        "properties": {},
+        "sleepInterval": 15
     },
-    {
-      "name": "FlagBrokenLinks",
-      "base": "Default",
-      "configType": "links-only",
-      "stopAt": 10
-    }
-  ]
+    "types": [
+        {
+            "name": "Default",
+            "command": "Fix",
+            "configType": "full"
+        }
+    ]
 }

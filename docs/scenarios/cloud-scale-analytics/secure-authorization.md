@@ -48,7 +48,7 @@ In **Azure SQL Database**, you can assign roles to users, groups, or application
 
 In **Azure Cosmos DB**, you can assign roles to manage access to Azure Cosmos DB accounts, databases, and containers. Built-in roles like *Cosmos DB Account Reader* and *Cosmos DB Account Contributor* provide varying levels of access.
 
-In **Azure Database for MySQL**, **Azure Database for PostgreSQL**, and **Azure Database for MariaDB**, you can assign roles to manage database servers and individual databases. You can use roles like *Contributor* and *Reader* to control access.
+In **Azure Database for MySQL** and **Azure Database for PostgreSQL**, you can assign roles to manage database servers and individual databases. You can use roles like *Contributor* and *Reader* to control access.
 
 For more information, see [Azure built-in roles for databases](/azure/role-based-access-control/built-in-roles/databases).
 
@@ -106,16 +106,13 @@ The following best practices can help you get started with RBAC:
 
 Implementing effective RBAC is crucial for maintaining security and manageability in your analytics environment. This section provides best practices for using Microsoft Entra groups and built-in roles and for avoiding direct user permissions to help ensure a streamlined and secure access management process.
 
-Cloud-scale analytics environments typically contain multiple types of storage solutions, including PostgreSQL, MySQL, SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+Cloud-scale analytics environments typically contain multiple types of storage solutions, including PostgreSQL, MySQL, SQL Database, and Azure SQL Managed Instance.
 
 - **Use Microsoft Entra groups instead of individual user accounts.** We recommend that you use Microsoft Entra groups to secure database objects instead of individual Microsoft Entra user accounts. Use Microsoft Entra groups to authenticate users and protect database objects. Similar to the data lake pattern, you can use your data application onboarding to create these groups.
 
 - **Use built-in roles to manage access.** Create custom roles only if you need to meet specific requirements or if built-in roles grant too many permissions.
 
 - **Refrain from assigning permissions to individual users.** Use roles, like database or server roles, consistently instead. Roles help with reporting and troubleshooting permissions. Azure RBAC only supports permission assignment via roles.
-
-> [!NOTE]
-> Data applications can store sensitive data products in SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Data privacy for cloud-scale analytics in Azure](./secure-data-privacy.md).
 
 ### Data Lake Storage access control best practices
 

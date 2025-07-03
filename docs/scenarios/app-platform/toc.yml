@@ -80,12 +80,12 @@ items:
         href: app-services/identity-and-access-management.md
       - name: Network topology and connectivity
         href: app-services/network-topology-and-connectivity.md
+      - name: Governance
+        href: app-services/governance.md
       - name: Security
         href: app-services/security.md
       - name: Management
         href: app-services/management.md
-      - name: Governance
-        href: app-services/governance.md
       - name: Platform automation and DevOps
         href: app-services/platform-automation-and-devops.md
     - name: Azure Red Hat Enterprise Linux (RHEL)
@@ -124,18 +124,6 @@ items:
         href: azure-red-hat-openshift\operations.md
       - name: Platform automation 
         href: azure-red-hat-openshift\platform-automation-devops.md
-    - name: Azure Spring Apps
-      items:
-      - name: Azure Spring Apps landing zone accelerator
-        href: spring-apps\landing-zone-accelerator.md
-      - name: Identity and access management
-        href: spring-apps\identity-and-access-management.md
-      - name: Network topology and connectivity
-        href: spring-apps\network-topology-and-connectivity.md
-      - name: Security
-        href: spring-apps\security.md
-      - name: Monitoring operations
-        href: spring-apps\management.md
     - name: Azure Container Apps
       items:
         - name: Azure Container Apps landing zone accelerator

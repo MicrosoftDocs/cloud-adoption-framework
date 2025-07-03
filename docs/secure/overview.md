@@ -2,10 +2,11 @@
 title: Secure Overview
 description: Learn how to establish, maintain, and automate cloud security in Azure by using the Cloud Adoption Framework for Azure Secure methodology to provide a structured approach.
 author: claytonsiemens77
-ms.author: csiemens
+ms.author: pnp
 ms.date: 10/22/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
+ms.update-cycle: 1095-days
 ---
 
 # Secure overview

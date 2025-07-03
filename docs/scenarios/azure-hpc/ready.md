@@ -1,9 +1,9 @@
 ---
-title: Azure landing zone for HPC
-description: See the effect of an HPC scenario on Azure landing zone design. Understand the differences between Azure Batch and Azure HPC OnDemand Platform (AzHop).
+title: Azure Landing Zone for HPC
+description: Explore how HPC impacts Azure landing zone design and compare Azure Batch and Azure CycleCloud Workspace for Slurm to choose the right HPC solution.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
-ms.date: 11/10/2022
+ms.date: 06/10/2025
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -16,9 +16,9 @@ The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework fo
 
 As you prepare your environment for sustained cloud adoption, you can use an Azure landing zone conceptual architecture that represents a target end state. For HPC, there are multiple conceptual architecture references that are based on the three industries that the Cloud Adoption Framework currently addresses:
 
-- [Energy (oil and gas)](../azure-hpc/compute.md#reference-architecture-for-seismic-processing)
-- [Finance](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-energy)
-- [Manufacturing](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance)
+- [Energy, such as oil and gas](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-energy)
+- [Finance](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance)
+- [Manufacturing](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-manufacturing)
 
 Consider these architecture references as you develop a long-term vision for your landing zone. These references provide a starting point. Based on your organization's business requirements and the needs of your end users, you might need to modify them.
 
@@ -34,7 +34,7 @@ As you can see from these questions, the deployment model varies depending on yo
 
 ## Azure landing zone acceleration for HPC
 
-[Azure Batch](/azure/batch/batch-technical-overview) and [Azure CycleCloud](/azure/cyclecloud/overview) are both Azure provided 1st party service while **Azure HPC OnDemand Platform** ([AzHOP](https://azure.github.io/az-hop/)) is an automation built on top of Azure Cycle Cloud which delivers an end-to-end deployment mechanism for a complete HPC cluster solution in Azure.
+[Azure Batch](/azure/batch/batch-technical-overview) and [Azure CycleCloud](/azure/cyclecloud/overview) are both Azure-provided services. [Azure CycleCloud Workspace for Slurm](/azure/cyclecloud/overview-ccws) is an Azure Marketplace solution template that allows users to easily create, configure, and deploy predefined Slurm clusters with Azure CycleCloud without requiring any prior knowledge of Azure or Slurm.
 
 ### Azure Batch
 
@@ -47,32 +47,31 @@ As you can see from these questions, the deployment model varies depending on yo
 
 ### Azure CycleCloud
 
-- It supports various HPC schedulers, such as SLURM, OpenPBS, PBSPro, LSF, Grid Engine, and HTCondor12.
+- It supports various HPC schedulers, such as SLURM, OpenPBS, PBSPro, LSF, and Grid Engine.
 - It allows you to provision infrastructure for HPC systems, such as virtual machines, scale sets, network interfaces, and disks.
 - It automatically scales the infrastructure to run jobs efficiently at any scale based on job load, availability, and time requirements.
 - It provides a rich, declarative, templating format to construct complete HPC environments on Azure.
 - It integrates with Azure services such as Azure Monitor and Microsoft Cost Management tools.
 
-### AzHop
+### Azure CycleCloud Workspace for Slurm
 
-- AzHop provides an end-to-end deployment mechanism for a base HPC infrastructure on Azure utilizing CycleCloud to orchestrate jobs.
+- Azure CycleCloud Workspace for Slurm provides an end-to-end deployment mechanism for base HPC infrastructure on Azure. It uses Azure CycleCloud to orchestrate jobs across Slurm clusters efficiently.
 - It delivers a complete HPC cluster solution that's ready for users to run applications on and that's easy for HPC administrators to deploy and manage.
-- AzHop uses various applications built-in that you can use "as is," or you can easily customize and extend to meet any unmet requirements.
-- It includes an **Open OnDemand** portal for unified user access, remote shell access, remote visualization access, job submission, file access, and more.
-- It uses **Active Directory** for user authentication and domain control.
-- It uses **OpenPBS** or Simple Linux Utility for Resource Management (**SLURM**) as a job scheduler.
+- It includes an integration with **Open OnDemand** for unified user access, remote shell access, job submission, and file access.
+- It uses Simple Linux Utility for Resource Management (**SLURM**) as a job scheduler.
 - Dynamic resource provisioning and autoscaling are done by **CycleCloud** preconfigured job queues and integrated health checks to quickly avoid nonoptimal nodes.
-- **Azure NetApp Files** delivers a shared file system for the home directory and applications.
+- It can deploy or use an existing Azure NetApp Files instance as a shared file system for the home directory and applications.
+- It can deploy or use an existing Azure Managed Lustre for a shared file system for the application data.
+- The deployed cluster is preconfigured with PMIx v4, Pyxis, and Enroot to support containerized AI and HPC Slurm jobs.
 
 ### Comparison chart
 
 |Feature | Azure Batch | Azure CycleCloud |
 |---------------|------------------------|------------------------|
-| Scheduler | Batch APIs and tools are available. You can also use cloud-native command-line scripts in the Azure portal. | You can use standard HPC schedulers such as **SLURM**, **OpenPBS**, **PBSPro**, **LSF**, **Grid Engine**, and **HTCondor**. Or you can extend Azure CycleCloud autoscaling plugins to work with your own scheduler.|
+| Scheduler | Batch APIs and tools are available. You can also use cloud-native command-line scripts in the Azure portal. | You can use standard HPC schedulers such as SLURM, OpenPBS, PBSPro, LSF, and Grid Engine. Or you can extend Azure CycleCloud autoscaling plugins to work with your own scheduler. |
 | Compute resources | Software as a service (SaaS) nodes – platform as a service (PaaS). |PaaS software – PaaS. |
-| Monitoring tools | Azure Monitor. | Azure Monitor and Grafana. |
 | Customization | You can use custom image pools, third-party images, or Batch API access. | You can use the comprehensive RESTful API to customize and extend functionality, deploy your own scheduler, and support existing workload managers. |
-| Integration | Azure Synapse Analytics pipelines, Azure Data Factory, and the Azure CLI. | A built-in CLI for Windows and Linux. |
+| Integration | Azure Data Factory, and the Azure CLI. | A built-in CLI for Windows and Linux. |
 | User type | Developers. | Classic HPC administrators and users. |
 | Work type | Batches and workflows. | Tightly coupled workflows that use Message Passing Interface (MPI).|
 | Windows support | Provided. | Depends on the scheduler choice. |

@@ -2,7 +2,7 @@
 title: Application development and deployment
 description: Learn about site reliability engineering (SRE) by using Kubernetes in the Cloud Adoption Framework for application development and deployment.
 author: sabbour
-ms.author: asabbour
+ms.author: pnp
 ms.date: 04/02/2021
 ms.topic: conceptual
 ms.custom: think-tank

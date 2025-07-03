@@ -10,7 +10,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Resource organization for cloud-scale analytics
 
-To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy. Your strategy should include business and operational details as components of resource names and metadata tags. For more information, see [Develop your naming and tagging strategy for Azure resources](../../ready/azure-best-practices/naming-and-tagging.md).
+To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy. Your strategy should include business and operational details as components of resource names and metadata tags. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
 Cloud-scale analytics includes a data management landing zone subscription. This subscription has the standard services of an [enterprise-scale framework](../../ready/enterprise-scale/index.md). It's connected to the data landing zones and connectivity subscriptions by using virtual network peering. For more information on the subscriptions in cloud-scale analytics, see [data management landing zone](./architectures/data-management-landing-zone.md) and [data landing zone](./architectures/data-landing-zone.md).
 
