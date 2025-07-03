@@ -54,7 +54,7 @@ To fully deploy Oracle Exadata Database@Azure, both Azure and Oracle Cloud Infra
 
     | Template | Description |
     | - | - |
-    | [Terraform Template to setup SSO Federation between OCI & Azure](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/az-oci-sso-federation) | Configure Identity Federation and single sign-On (SSO) to the OCI cloud |
+    | [Terraform template to setup SSO Federation between OCI & Azure](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/az-oci-sso-federation) | Configure Identity Federation and single sign-on (SSO) to the OCI cloud |
     | [Quickstart OracleDB@Azure (Exadata) with Azure Verified Modules (AzAPI) and OCI LZ Modules](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates/avm-oci-exadata-quickstart) | Deploy an Oracle Database@Azure Exadata infrastructure and cluster including an Azure Resource Group (Optional), Azure VNet with a delegated subnet for OracleDB@Azure (AVM), Oracle Exadata Infrastructure (AVM), Oracle VM Cluster (AVM), Oracle Database Home (OCI), Oracle Container Database (OCI) and Oracle Pluggable Database (OCI) |
 
     For more information, see: [QuickStart Oracle Database@Azure with Terraform or OpenTofu Modules](https://docs.oracle.com/en/learn/dbazure-terraform/index.html). 
