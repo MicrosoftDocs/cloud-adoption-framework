@@ -10,7 +10,7 @@ ms.custom: internal
 
 # Brownfield landing zone considerations
 
-A brownfield deployment is an existing environment that requires modification to align to the Azure landing zone target architecture and best practices. When you need to resolve a brownfield deployment scenario, consider your existing Microsoft Azure environment as the place to start. This article summarizes guidance found elsewhere in the Cloud Adoption Framework Ready documentation For more information, see [Introduction to the Cloud Adoption Framework Ready methodology](/shows/azure-enablement/an-introduction-to-the-cloud-adoption-framework-ready-methodology).
+A brownfield deployment is an existing environment that requires modification to align to the Azure landing zone target architecture and best practices. When you need to resolve a brownfield deployment scenario, consider your existing Microsoft Azure environment as the place to start. This article summarizes guidance found elsewhere in the Cloud Adoption Framework Ready documentation. For more information, see [Introduction to the Cloud Adoption Framework Ready methodology](/shows/azure-enablement/an-introduction-to-the-cloud-adoption-framework-ready-methodology).
 
 ## Resource organization
 
@@ -28,7 +28,7 @@ To refine your existing Azure environment's [security posture](./design-area/sec
 
 - Deploy [Microsoft Entra Connect cloud sync](/entra/identity/hybrid/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Microsoft Entra ID-backed applications. Another benefit to configuring hybrid identity is you can enforce [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [Microsoft Entra Password Protection](/entra/identity/authentication/concept-password-ban-bad-on-premises) to further protect these identities
 - Provide secure authentication to your cloud apps and Azure resources by using [Microsoft Entra Conditional Access](/entra/identity/conditional-access/concept-conditional-access-policy-common).
-- Implement [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels. Also, study the [access control guidance](/security/zero-trust/deploy/identity).
+- Implement [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principals have current and correct authorization levels. Also, study the [access control guidance](/security/zero-trust/deploy/identity).
 - Make use of the recommendations, alerting, and remediation capabilities of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Your security team can also integrate Microsoft Defender for Cloud into [Microsoft Sentinel](/azure/sentinel/overview) if they need a more robust, centrally managed hybrid and multicloud Security Information Event Management (SIEM)/Security Orchestration and Response (SOAR) solution.
 
 ## Governance
