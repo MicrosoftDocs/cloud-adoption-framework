@@ -1,25 +1,43 @@
 ---
-title: Define a cloud adoption plan
-description: Use the Cloud Adoption Framework for Azure to learn how to guide technical efforts with a defined cloud adoption plan.
-author: Zimmergren
+title: Develop a cloud adoption plan
+description: Create an actionable cloud adoption plan that aligns your people, processes, and technology with your cloud strategy to ensure successful Azure adoption.
+author: ssumner
 ms.author: pnp
-ms.date: 02/17/2022
+ms.date: 07/15/2025
 ms.topic: conceptual
-ms.custom: internal, UpdateFrequency2
 ms.update-cycle: 1095-days
 ---
 
 # Develop a cloud adoption plan
 
-Cloud adoption plans convert the aspirational goals of a cloud adoption strategy into an actionable plan. Your collective cloud teams can use the cloud adoption plan to guide their technical efforts and align them with your organization's business strategy.
+A cloud adoption plan transforms your strategic vision into executable actions across your organization. This plan coordinates your organization to achieve your cloud objectives. You need a structured approach to ensure your cloud adoption efforts deliver expected business outcomes. Follow this guidance:
 
-Use the following exercises to help you document your organization's technology strategy. These exercises support cloud adoption efforts by capturing prioritized tasks. At the end of this process, your cloud adoption plan will map to the metrics and motivations defined in the cloud adoption strategy.
+1. **Define your adoption approach based on your workload portfolio.** Your workload portfolio determines whether you migrate existing applications, modernize current systems, or build cloud-native solutions. This approach selection impacts your timeline, resource allocation, and skill requirements. Assess each workload's complexity, dependencies, and business value to prioritize your adoption sequence.
 
-| |Exercises |
-|:---:|---|
-| **:::image type="icon" source="../_images/icons/1.png":::** | [Digital estate](../digital-estate/rationalize.md): Inventory and rationalize your digital estate based on assumptions that align your organization's motivations and business outcomes. |
-|**:::image type="icon" source="../_images/icons/2.png":::** | [Initial organizational alignment](./initial-org-alignment.md): Establish a plan for initial organizational alignment to support the adoption plan. |
-|**:::image type="icon" source="../_images/icons/3.png":::**| [Skills readiness plan](./adapt-roles-skills-processes.md): Create a plan for addressing skills readiness gaps within your organization. |
-|**:::image type="icon" source="../_images/icons/4.png":::**| [Cloud adoption plan](./plan-intro.md): Develop a cloud adoption plan to manage change across skills, the digital estate, and your organization. |
+2. **Establish your organizational readiness requirements.** Your teams need specific skills and capabilities to execute your cloud adoption plan successfully. This readiness includes technical competencies, governance frameworks, and change management processes. Create learning paths for your teams and identify any skill gaps that require external support or training.
 
-Rely on your defined strategic adoption documentation to track the outputs of each exercise as you build out your cloud adoption strategy. Also, learn about the [five Rs of cloud rationalization](../digital-estate/5-rs-of-rationalization.md) to help build your cloud adoption plan.
+3. **Create your adoption timeline with realistic milestones.** Your timeline balances business urgency with technical feasibility and organizational capacity. This schedule considers dependencies between workloads, resource availability, and risk tolerance. Build buffer time for unexpected challenges and ensure your milestones align with business objectives.
+
+4. **Plan your technology foundation and governance controls.** Your Azure environment requires proper architecture, security, and governance from the start. This foundation includes landing zones, identity management, and compliance frameworks. Establish these controls before you begin workload deployment to prevent technical debt and security risks.
+
+## Align your plan with business outcomes
+
+Business alignment ensures your cloud adoption efforts deliver measurable value to your organization. Your plan must connect technical activities to business metrics and stakeholder expectations. You need clear success criteria and regular review processes to maintain this alignment throughout your adoption journey.
+
+1. **Map technical deliverables to business objectives.** Your cloud adoption activities must directly support your organization's strategic goals. This mapping includes cost optimization targets, performance improvements, and innovation capabilities. Document these connections to maintain focus and demonstrate value to leadership.
+
+2. **Establish measurement and reporting mechanisms.** Your stakeholders need visibility into progress and outcomes throughout the adoption process. This reporting includes technical metrics, financial impact, and business value realization. Create dashboards and regular communications that keep all parties informed of your advancement.
+
+## Azure resources
+
+| Category | Tool | Description |
+|----------|------|-------------|
+| Planning | [Azure Migrate](https://azure.microsoft.com/services/azure-migrate/) | Assesses on-premises workloads and creates migration recommendations |
+| Assessment | [Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) | Evaluates workload readiness and identifies improvement opportunities |
+| Governance | [Azure Policy](https://azure.microsoft.com/services/azure-policy/) | Enforces organizational standards and compliance requirements |
+| Management | [Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/) | Automates resource deployment and configuration |
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Prepare your organization for Azure](./prepare-organization-cloud.md)
