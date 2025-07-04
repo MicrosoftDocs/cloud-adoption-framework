@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: pnp
-ms.date: 02/04/2025
+ms.date: 07/03/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -13,6 +13,34 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## June 2025
+
+### Updated articles
+
+- [Network Topology and Connectivity for Oracle Database@Azure - BCDR Connectivity Design](./scenarios/oracle-on-azure/business-continuity-disaster-recovery-connectivity-design.md): We replaced multiple complex topology options with a single, focused recommendation for Global VNet Peering for cross-region connectivity. We also clarified cost terminology and streamlined the design considerations.
+- [Network Topology and Connectivity for Oracle Database@Azure - Core Network Design](./scenarios/oracle-on-azure/core-network-design.md): We clarified patching processes, provided clearer NSG management recommendations, and added guidance about the five Oracle-delegated subnet limit per region.
+- [Network Topology and Connectivity for Oracle Database@Azure - Migration Connectivity Design](./scenarios/oracle-on-azure/migration-connectivity-design.md): We made updates to improve clarity and accuracy and refined the guidance about capacity planning and connectivity effects in the design considerations and recommendations sections.
+- [Create and scale Azure subscriptions](./ready/azure-best-practices/initial-subscriptions.md): We added comprehensive subscription life cycle management guidance that includes new sections on subscription policies, governance, scaling strategies with automation and templates, and ongoing monitoring.
+- [Define your naming convention](./ready/azure-best-practices/resource-naming.md): We made significant structural and content updates to explain the importance of naming conventions and understanding Azure resource names.
+- [Define your tagging strategy](./ready/azure-best-practices/resource-tagging.md): We added a comprehensive resource tagging approach that includes new sections about defining tagging requirements, implementing consistent tagging by using Azure policies and security considerations, and using foundational tagging categories.
+- [Organize your Azure resources effectively](./ready/azure-setup-guide/organize-resources.md): We reorganized the content and added links to best practices for resource tagging strategies and organization.
+- [Deploy Azure App Service at scale with landing zone accelerator](./scenarios/app-platform/app-services/landing-zone-accelerator.md): We added more detailed, process-oriented guidance and step-by-step recommendations for flexible implementation and customization. We also added a new architecture diagram that shows Azure Front Door and App Service Environment v3 integration.
+- [Microsoft Cloud Adoption Framework for Azure](.//overview.md): We streamlined this article to focus on why you should use the framework, who should use the framework, and how to use the framework. We also added a new section on cloud adoption scenarios.
+- [Azure High-Performance Computing (HPC) Landing Zone Accelerator](./scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md): We made updates to improve accuracy and added links to instructions on how to deploy the HPC landing zone accelerator.
+- [Compute Large-Scale HPC Application Workloads in Azure Virtual Machines](./scenarios/azure-hpc/compute.md): We made updates to improve accuracy, updated version numbers, and added links. We also consolidated the *Next steps* section.
+- [Azure Landing Zone for HPC](./scenarios/azure-hpc/ready.md): We updated links, made changes to improve accuracy, and updated AzHop references to Azure CycleCloud Workspace for Slurm.
+- [Capacity Planning for Oracle Workloads on Azure Virtual Machines](./scenarios/oracle-on-azure/oracle-capacity-planning.md): We made changes to reflect the latest Azure capabilities and best practices for Oracle workload capacity planning, with particular emphasis on newer VM series and storage technologies.
+- [Manage modern application platform solutions for optimal performance and reliability](./scenarios/app-platform/manage.md): We made significant changes to this article to provide a more practical and comprehensive approach to managing modern application platforms. We also clarified the implementation guidance and added specific Azure tooling recommendations.
+- [Select Azure regions](./ready/azure-setup-guide/regions.md): We updated the Azure region selection section with clearer decision-making criteria and reliability, capability, and cost considerations.
+- [Azure setup guide overview](./ready/azure-setup-guide/index.md): We removed Azure portal integration and interactive elements and replaced the checklist format with a comprehensive table that describes each Azure setup guide step.
+- [AI strategy](./scenarios/ai/strategy.md): We provided a more comprehensive and strategic approach to AI adoption by adding clearer implementation steps and enhanced guidance for data strategy and responsible AI practices.
+- [Identity and access management recommendations for Azure Virtual Desktop](./scenarios/azure-virtual-desktop/eslz-identity-and-access-management.md)  ([#eef0c090e](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/eef0c090e))
+- [Storage considerations for AKS](./scenarios/app-platform/aks/storage.md)  ([#655de9aab](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/655de9aab))
+- [Enterprise-scale support for Citrix on Azure](./scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md)  ([#a67136791](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/a67136791))
+- [Establish an AI Center of Excellence](./scenarios/ai/center-of-excellence.md)  ([#3cc8c7da9](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/3cc8c7da9))
+- [Select Azure platform services (PaaS) for AI](./scenarios/ai/platform/resource-selection.md)  ([#3cc8c7da9](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/3cc8c7da9))
+- [How to adopt the cloud](./adopt/index.md)  ([#1c5762d8d](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/1c5762d8d))
 
 ## May 2025
 
@@ -376,24 +404,5 @@ These files were updated to include considerations for [Azure Arc-enabled VMware
 
 - [Hybrid and multicloud migration](../scenarios/hybrid/migrate.md)
 - [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md)
-
-## June 2024
-
-### New articles
-
-- [Establish common subscription vending product lines](../ready/landing-zone/design-area/subscription-vending-product-lines.md): Give application teams the flexibility to deliver their workloads and services effectively by offering different subscription vending product lines. Implement subscription vending in your Azure landing zones to establish consistent scaling, security, and governance of Azure environments.
-
-### Updated articles
-
-- [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md): We updated this article to include Azure Arc-enabled VMware vSphere and Azure Arc-enabled System Center Virtual Machine Manager.
-- [Security, governance, and compliance disciplines for Azure VMware Solution](../scenarios/azure-vmware/eslz-security-governance-and-compliance.md): We updated this article to replace references to MMA, which is planned for deprecation. New guidance points to the Azure Monitor Agent.
-
-We updated these articles to provide the latest guidance on Azure carbon optimization:
-
-- [Sustainability considerations in your cloud strategy](../strategy/inform/sustainability.md)
-
-#### Hybrid/Azure Arc retirement
-
-We retired several articles in the Hybrid/Azure Arc scenario in the best practices area. The content was outdated and no longer relevant to the Cloud Adoption Framework.
 
 <!-- docutune:ignoreNextStep -->
