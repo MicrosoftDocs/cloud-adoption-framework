@@ -7,14 +7,13 @@ ms.date: 07/15/2025
 ms.topic: conceptual
 ---
 
-# Understand cloud migration best practices
+# Understand migration and modernization best practices
 
-This article outlines proven patterns that support successful Azure migrations. These patterns help you evaluate each workload and select the most effective migration approach. Follow these recommendations:
+This article provides proven patterns that enable you to make informed decisions about when to rehost versus modernize workloads during Azure migration. By applying these migration best practices, you minimize risks while maximizing business value from your cloud investments. Follow these recommendations:
 
 ## Know when to rehost then modernize
 
-A rehost is a like-for-like migration strategy. You move workloads to Azure with minimal changes, providing a fast and low-risk path to cloud adoption. This approach establishes a foundation for future modernization while minimizing business disruption. You must plan for both rehosting and modernization phases to achieve successful cloud adoption. 
-
+A rehost is a like-for-like migration strategy. You move workloads to Azure with minimal changes, providing a fast and low-risk path to cloud adoption. This approach establishes a foundation for future modernization while minimizing business disruption. You must plan for both rehosting and modernization phases to achieve successful cloud adoption.
 
 1. **Rehost workloads to minimize business disruption.** A like-for-like migration transfers workloads to Azure with the fewest possible changes, enabling rapid adoption and reducing migration complexity. This strategy allows your organization to realize immediate cloud benefits, such as improved scalability and availability, without requiring new application development skills. Use Azure Migrate or partner tools to assess dependencies and automate workload migrations from on-premises or other cloud platforms. Prioritize rehosting to establish baseline cloud operations and reduce the risk of deployment failures. Adopt new processes and practices more effectively by keeping workloads similar to their source environment. Plan to modernize workloads in Azure after rehosting, especially for large-scale datacenter transformations. Launch a cloud skills initiative in parallel to build team readiness for future modernization. See [Shared responsibility in the cloud](/azure/security/fundamentals/shared-responsibility).
 

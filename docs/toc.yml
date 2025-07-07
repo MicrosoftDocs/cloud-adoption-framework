@@ -38,13 +38,13 @@ items:
 
     - name: Plan
       items:
-      - name: Plan checklist
+      - name: Checklist
         href: plan/index.md
-      - name: Prepare your organization
+      - name: 1. Prepare your organization
         href: plan/prepare-organization-for-cloud.md
-      - name: Prepare your people
+      - name: 2. Prepare your people
         href: plan/prepare-people-for-cloud-adoption.md
-      - name: Plan migration (if needed)
+      - name: 3. Plan migration (if applicable)
         items: 
         - name: Understand migration and modernization best practices
           href: plan/understand-cloud-migration-modernization-best-practices.md
@@ -54,9 +54,9 @@ items:
           href: plan/select-cloud-migration-strategy.md
         - name : Assess workloads
           href: plan/assess-workloads-for-cloud-migration.md
-      - name: Plan your cloud environment
+      - name: 4. Plan your cloud environment
         href: plan/plan-your-cloud-environment.md
-      - name: Document your cloud adoption plan
+      - name: 5. Document your cloud adoption plan
         href: plan/document-cloud-adoption-plan.md
 
         
