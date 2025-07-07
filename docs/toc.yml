@@ -46,8 +46,6 @@ items:
         href: plan/prepare-people-for-cloud.md
       - name: 3. Plan migration (if applicable)
         items: 
-        - name: Migrate or modernize
-          href: plan/understand-cloud-migration-modernization-best-practices.md
         - name: Discover inventory
           href: plan/discover-existing-inventory.md
         - name: Select migration strategy
