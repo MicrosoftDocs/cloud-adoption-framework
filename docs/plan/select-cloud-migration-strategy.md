@@ -1,4 +1,13 @@
-# Plan your migration strategies
+---
+title: Select your cloud migration strategies
+description: Learn how to select the right cloud migration strategy for each workload based on business goals, technical requirements, and organizational readiness to maximize Azure adoption success.
+author: stephen-sumner
+ms.author: pnp
+ms.date: 07/15/2025
+ms.topic: conceptual
+---
+
+# Select your cloud migration strategies
 
 For each workload in your inventory, choose the most appropriate approach option: retire, retain, migrate as is (rehost), modernize (replatform, refactor, rearchitect), rebuild, and replace. Make this decision based on a knowledge of migration and modernization best practices. Selecting the appropriate migration strategy ensures that each workload aligns with business goals and maximizes cloud value. Follow these recommendations
 
@@ -101,4 +110,5 @@ Use the following table to map business goals to cloud adoption strategies, driv
 
 ## Next steps
 
-[Assess your workload](./assess-workload-for-cloud.md)
+> [!div class="nextstepaction"]
+> [Assess your workload](./assess-workloads-for-cloud-migration.md)

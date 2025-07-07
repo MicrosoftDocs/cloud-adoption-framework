@@ -2,7 +2,7 @@
 title: Prepare your organization for the cloud
 description: Learn how to Prepare your organization for the cloud. Plan for cloud governance, security, and management. Choose a cloud operating model that aligns with your organization's size, maturity, and regulatory requirements for successful Azure adoption.
 author: stephen-sumner
-ms.author: microsoft-alias
+ms.author: pnp
 ms.date: 07/15/2025
 ms.topic: conceptual
 ---
@@ -22,6 +22,8 @@ A defined set of responsibilities ensures that governance, security, and operati
 2. **Plan for cloud security.** Cloud security ensures security is part of every stage of the cloud lifecycle, from development to operations and continuous improvement. Security planning reduces risk and protects your organization's assets throughout the cloud adoption process. You must integrate security considerations into all aspects of your cloud operating model. See [Security Teams, Roles, and Functions](/azure/cloud-adoption-framework/secure/teams-roles).
 
 3. **Plan for cloud management.** Cloud operations maintain effective operations for managing your Azure cloud estate. Successful cloud operations require clearly defined responsibilities and processes for every cloud management area. You must establish these operational processes to ensure consistent service delivery and resource optimization. See [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) for a detailed list of responsibilities.
+
+4. **Plan for AI.** AI is a transformational technology that every organization needs to prepare for. Start by developing your [AI Strategy](/azure/cloud-adoption-framework/scenarios/ai/strategy) and [building an AI team](/azure/cloud-adoption-framework/scenarios/ai/center-of-excellence). Also review how to [govern AI](/azure/cloud-adoption-framework/scenarios/ai/govern), [secure AI](/azure/cloud-adoption-framework/scenarios/ai/secure), and [manage AI](/azure/cloud-adoption-framework/scenarios/ai/manage).
 
 ## Choose a cloud operating model
 
@@ -94,4 +96,4 @@ Clear accountability prevents duplication and ensures critical tasks are complet
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Prepare your people for Azure](./prepare-people-for-azure.md)
+> [Prepare your people for Azure](./skill-people-for-cloud.md)

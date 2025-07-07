@@ -1,5 +1,5 @@
 ---
-title: Discover your existing inventory
+title: Discover your existing workload inventory
 description: Learn how to create a comprehensive inventory of your technical assets to form the foundation of your cloud adoption plan and make informed migration decisions.
 author: stephen-sumner
 ms.author: pnp
@@ -7,7 +7,7 @@ ms.date: 07/15/2025
 ms.topic: conceptual
 ---
 
-# Discover your existing inventory
+# Discover your existing workload inventory
 
 This article helps you create a comprehensive inventory of your technical assets to form the foundation of your cloud adoption plan. An accurate inventory enables you to make informed decisions about each asset's future in the cloud.
 
@@ -42,7 +42,7 @@ Different environments require specific discovery approaches. The type of infras
 | Discovery | [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) | Provides automated discovery and migration planning for complex environments |
 | Code analysis | [Cloud Pilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) | Analyzes applications and provides cloud readiness assessments |
 | Code analysis | [AppCAT](/azure/migrate/appcat/overview) | Assesses application code compatibility with Azure services |
-| Code analysis | [CAST Highlight](https://azuremarketplace.microsoft.com/marketplace/apps/castsoftware.casthighlight) | Analyzes source code for cloud readiness and modernization opportunities |
+| Code analysis | [CAST Highlight](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cast.cast_highlight?tab=Overview) | Analyzes source code for cloud readiness and modernization opportunities |
 | Documentation | [Cloudockit](https://www.cloudockit.com/) | Generates architecture diagrams and documentation for cloud environments |
 
 ## Next steps

@@ -132,4 +132,4 @@ Database dependencies often determine the success of application migration. Shar
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Evaluate workload migration readiness](evaluate-workload-readiness.md)
+> [Estimate total cost of ownership](./estimate-total-cost-of-ownership.md)
