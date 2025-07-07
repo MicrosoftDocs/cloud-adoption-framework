@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: pnp
-ms.date: 07/03/2025
+ms.date: 07/07/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -19,28 +19,28 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 ### Updated articles
 
 - [Network Topology and Connectivity for Oracle Database@Azure - BCDR Connectivity Design](../scenarios/oracle-on-azure/business-continuity-disaster-recovery-connectivity-design.md): We replaced multiple complex topology options with a single, focused recommendation for global virtual network peering for cross-region connectivity. We also clarified cost terminology and streamlined the design considerations.
-- [Network Topology and Connectivity for Oracle Database@Azure - Core Network Design](../scenarios/oracle-on-azure/core-network-design.md): We clarified patching processes, provided clearer NSG management recommendations, and added guidance about the five Oracle-delegated subnet limit per region.
-- [Network Topology and Connectivity for Oracle Database@Azure - Migration Connectivity Design](../scenarios/oracle-on-azure/migration-connectivity-design.md): We made updates to improve clarity and accuracy and refined the guidance about capacity planning and connectivity effects in the design considerations and recommendations sections.
-- [Create and scale Azure subscriptions](../ready/azure-best-practices/initial-subscriptions.md): We added comprehensive subscription life cycle management guidance that includes new sections on subscription policies, governance, scaling strategies with automation and templates, and ongoing monitoring.
+- [Network topology and connectivity for Oracle Database@Azure - Core network design](../scenarios/oracle-on-azure/core-network-design.md): We clarified patching processes, provided clearer network security group management recommendations, and added guidance about the five Oracle-delegated subnet limit for each region.
+- [Network topology and connectivity for Oracle Database@Azure - Migration connectivity design](../scenarios/oracle-on-azure/migration-connectivity-design.md): We made updates to improve clarity and accuracy and refined the guidance about capacity planning and connectivity effects in the design considerations and recommendations sections.
+- [Create and scale Azure subscriptions](../ready/azure-best-practices/initial-subscriptions.md): We added comprehensive subscription life cycle management guidance that includes new sections about subscription policies, governance, scaling strategies with automation and templates, and ongoing monitoring.
 - [Define your naming convention](../ready/azure-best-practices/resource-naming.md): We made significant structural and content updates to explain the importance of naming conventions and understanding Azure resource names.
-- [Define your tagging strategy](../ready/azure-best-practices/resource-tagging.md): We added a comprehensive resource tagging approach that includes new sections about defining tagging requirements, implementing consistent tagging by using Azure policies and security considerations, and using foundational tagging categories.
+- [Define your tagging strategy](../ready/azure-best-practices/resource-tagging.md): We added a comprehensive resource tagging approach that includes new sections about how to define tagging requirements, implement consistent tagging by using Azure policies and security considerations, and apply foundational tagging categories.
 - [Organize your Azure resources effectively](../ready/azure-setup-guide/organize-resources.md): We reorganized the content and added links to best practices for resource tagging strategies and organization.
 - [Deploy Azure App Service at scale with landing zone accelerator](../scenarios/app-platform/app-services/landing-zone-accelerator.md): We added more detailed, process-oriented guidance and step-by-step recommendations for flexible implementation and customization. We also added a new architecture diagram that shows Azure Front Door and App Service Environment v3 integration.
 - [Microsoft Cloud Adoption Framework for Azure](../overview.md): We streamlined this article to focus on why you should use the framework, who should use the framework, and how to use the framework. We also added a new section on cloud adoption scenarios.
-- [Azure High-Performance Computing (HPC) Landing Zone Accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md): We made updates to improve accuracy and added links to instructions on how to deploy the HPC landing zone accelerator.
-- [Compute Large-Scale HPC Application Workloads in Azure Virtual Machines](../scenarios/azure-hpc/compute.md): We made updates to improve accuracy, updated version numbers, and added links. We also consolidated the *Next steps* section.
-- [Azure Landing Zone for HPC](../scenarios/azure-hpc/ready.md): We updated links, made changes to improve accuracy, and updated AzHop references to Azure CycleCloud Workspace for Slurm.
-- [Capacity Planning for Oracle Workloads on Azure Virtual Machines](../scenarios/oracle-on-azure/oracle-capacity-planning.md): We made changes to reflect the latest Azure capabilities and best practices for Oracle workload capacity planning, with particular emphasis on newer VM series and storage technologies.
+- [Azure high-performance computing (HPC) landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md): We made updates to improve accuracy and added links to instructions about how to deploy the HPC landing zone accelerator.
+- [Compute large-scale HPC application workloads in Azure virtual machines](../scenarios/azure-hpc/compute.md): We made updates to improve accuracy, updated version numbers, and added links. We also consolidated the *Next steps* section.
+- [Azure landing zone for HPC](../scenarios/azure-hpc/ready.md): We updated links, made changes to improve accuracy, and updated AzHop references to Azure CycleCloud Workspace for Slurm.
+- [Capacity planning for Oracle workloads on Azure virtual machines](../scenarios/oracle-on-azure/oracle-capacity-planning.md): We made changes to reflect the latest Azure capabilities and best practices for Oracle workload capacity planning, with specific emphasis on newer VM series and storage technologies.
 - [Manage modern application platform solutions for optimal performance and reliability](../scenarios/app-platform/manage.md): We made significant changes to this article to provide a more practical and comprehensive approach to managing modern application platforms. We also clarified the implementation guidance and added specific Azure tooling recommendations.
 - [Select Azure regions](../ready/azure-setup-guide/regions.md): We updated the Azure region selection section with clearer decision-making criteria and reliability, capability, and cost considerations.
-- [Azure setup guide overview](../ready/azure-setup-guide/index.md): We removed Azure portal integration and interactive elements and replaced the checklist format with a comprehensive table that describes each Azure setup guide step.
+- [Azure setup guide overview](../ready/azure-setup-guide/index.md): We removed Azure portal integration and interactive elements and replaced the checklist format with a comprehensive table that describes each step in the Azure setup guide.
 - [AI strategy](../scenarios/ai/strategy.md): We provided a more comprehensive and strategic approach to AI adoption by adding clearer implementation steps and enhanced guidance for data strategy and responsible AI practices.
 - [Identity and access management recommendations for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-identity-and-access-management.md): We added more comprehensive, actionable guidance for implementing identity and access management, including a new section for single sign-on and updated design considerations.
 - [Storage considerations for AKS](../scenarios/app-platform/aks/storage.md): We made updates to streamline the content and improve technical accuracy. We also added sections for Azure Container Storage.
 - [Enterprise-scale support for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md): We reorganized the content in this article and made minor edits.
 - [Establish an AI Center of Excellence](../scenarios/ai/center-of-excellence.md): We added specific steps, detailed role definitions, organizational integration recommendations, and maturity-based operational evolution to provide a more strategic approach to establishing and operating an AI Center of Excellence.
-- [Select Azure platform services (PaaS) for AI](../scenarios/ai/platform/resource-selection.md): We updated resource recommendations to include Azure AI Foundry Agent Service and streamlined the guidance to present Azure AI Foundry as the comprehensive solution and Azure OpenAI for specific model access needs.
-- [How to adopt the cloud](../adopt/index.md): We added links to next step guidance for a typical cloud adoption journey.
+- [Select Azure platform as a service (PaaS) solutions for AI](../scenarios/ai/platform/resource-selection.md): We updated resource recommendations to include Azure AI Foundry Agent Service and streamlined the guidance to present Azure AI Foundry as the comprehensive solution and Azure OpenAI for specific model access needs.
+- [How to adopt the cloud](../adopt/index.md): We added links to the **Next steps** section for a typical cloud adoption journey.
 
 ## May 2025
 
