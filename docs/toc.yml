@@ -38,52 +38,78 @@ items:
 
     - name: Plan
       items:
-      - name: Overview
+      - name: Cloud adoption planning checklist
         href: plan/index.md
-      - name: Digital estate
+      - name: Prepare your organization for cloud adoption
         items:
-        - name: The five Rs of rationalization
-          href: digital-estate/5-rs-of-rationalization.md
-        - name: What is a digital estate?
-          href: digital-estate/index.md
-        - name: Digital estate planning
-          href: digital-estate/approach.md
-        - name: Gather inventory data
-          href: digital-estate/inventory.md
-        - name: Rationalize the digital estate
-          href: digital-estate/rationalize.md
-        - name: Align cost models to forecast costs
-          href: digital-estate/calculate.md
-      - name: Initial organization alignment
-        href: plan/initial-org-alignment.md
-      - name: Skills readiness plan
-        items:
-        - name: Build a readiness plan
-          href: plan/adapt-roles-skills-processes.md
-        - name: Map roles and skills
-          href: plan/suggested-skills.md
-      - name: Cloud adoption plan
-        items:
-        - name: Overview
-          href: plan/plan-intro.md
-        - name: Prerequisites
-          href: plan/prerequisites.md
-        - name: Define and prioritize workloads
-          href: plan/workloads.md
-        - name: Align assets to workloads
-          href: plan/assets.md
-        - name: Review rationalization decisions
-          href: plan/review-rationalization.md
-        - name: Establish iterations and release plans
-          href: plan/iteration-paths.md
-        - name: Estimate timelines
-          href: plan/timelines.md
+        - name: Understand your cloud responsibilities
+          href: plan/understand-cloud-responsibilities.md
+        - name: Select your cloud operating model
+          href: plan/select-cloud-operating-model.md
+        - name: Prepare your people for Azure
+          href: plan/prepare-people-for-azure.md
+      - name: Plan to migrate workloads to the cloud
+        items: 
+        - name: Understand cloud migration best practices
+          href: plan/understand-cloud-migration-best-practices.md
+        - name: Discover your existing inventory
+          href: plan/discover-existing-inventory.md
+        - name: Select your cloud migration strategy
+          href: plan/select-cloud-migration-strategy.md
+        - name : Assess your workloads for migration
+          href: plan/assess-workloads-for-cloud-migration.md
+      - name: Plan your cloud environment
+        href: plan/plan-azure-environment.md
+      - name: Document your cloud adoption plan
+        href: plan/document-cloud-adoption-plan.md
 
-      - name: Strategic Migration Assessment and Readiness Tool (SMART)
-        href: plan/smart-assessment.md
-
-      - name: Sustainability considerations
-        href: plan/plan-sustainability.md
+        
+      - name: Guides
+        items:
+        - name: Shared management operating model
+          href: plan/shared-management-operating-model.md
+        - name: Strategic Migration Assessment and Readiness Tool (SMART)
+          href: plan/smart-assessment.md
+        - name: Other resources
+          items:
+          - name: Digital estate
+            items:
+            - name: The five Rs of rationalization
+              href: digital-estate/5-rs-of-rationalization.md
+            - name: What is a digital estate?
+              href: digital-estate/index.md
+            - name: Digital estate planning
+              href: digital-estate/approach.md
+            - name: Gather inventory data
+              href: digital-estate/inventory.md
+            - name: Rationalize the digital estate
+              href: digital-estate/rationalize.md
+            - name: Align cost models to forecast costs
+              href: digital-estate/calculate.md
+          - name: Initial organization alignment
+            href: plan/initial-org-alignment.md
+          - name: Skills readiness plan
+            items:
+            - name: Build a readiness plan
+              href: plan/adapt-roles-skills-processes.md
+            - name: Map roles and skills
+              href: plan/suggested-skills.md
+          - name: Cloud adoption plan
+            items:
+            - name: Overview
+              href: plan/plan-intro.md
+            - name: Prerequisites
+              href: plan/prerequisites.md
+            - name: Define and prioritize workloads
+              href: plan/workloads.md
+            - name: Align assets to workloads
+              href: plan/assets.md
+            - name: Review rationalization decisions
+              href: plan/review-rationalization.md
+            - name: Establish iterations and release plans
+              href: plan/iteration-paths.md
+            - name: Estimate timelines
+              href: plan/timelines.md
         
       - name: Plan antipatterns
         href: antipatterns/plan-antipatterns.md

@@ -30,3 +30,4 @@ A cloud adoption plan must align with your organization’s project management o
 
 By the end of the Plan phase, you have a cloud adoption roadmap that all stakeholders understand. You’ve made the big decisions: what goes to Azure, how it will go, when it will go, and who will do it. Now it’s time to get your Azure foundation ready.
 
+[CAF Ready](../ready/index.md)

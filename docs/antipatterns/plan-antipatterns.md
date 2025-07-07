@@ -61,10 +61,6 @@ Gradually modernize and adopt PaaS later, after the workload is already in the c
 
 Applications that are based on PaaS and software as a service (SaaS) are relatively easy to maintain. They usually require little effort from management. As a result, many companies redesign old, complex architecture landscapes by replacing them with SaaS and cloud-native concepts. This architecture change usually leads to major replacement projects. It's a complex, cost-intensive task to manage and execute these projects. Changing processes and the operating model also involves other substantial risks.
 
-### Example: Choose replacement over modernization
-
-A corporation has a large SAP environment. The IT department would like to replace this landscape, which is causing several performance and stability issues. After IT starts on a replacement project, the due diligence list for replacing the entire environment gets longer every day.
-
 ### Preferred outcome: Rationalize your digital estate
 
 Before you replace a large or complex application environment, consider incrementally improving your environment by modernizing instead. Relatively small changes to your application environment can have a huge impact on performance and reliability. For instance, changing the hosting platform to Azure can provide stability and quick results. Improved performance and reliability result, at a fraction of the estimated replacement cost.
