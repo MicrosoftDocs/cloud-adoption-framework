@@ -42,8 +42,6 @@ items:
         href: plan/index.md
       - name: Prepare your organization for cloud adoption
         items:
-        - name: Understand your cloud responsibilities
-          href: plan/understand-cloud-responsibilities.md
         - name: Select your cloud operating model
           href: plan/select-cloud-operating-model.md
         - name: Prepare your people for Azure
@@ -72,6 +70,8 @@ items:
           href: plan/smart-assessment.md
         - name: Other resources
           items:
+          - name: Plan antipatterns
+            href: antipatterns/plan-antipatterns.md
           - name: Digital estate
             items:
             - name: The five Rs of rationalization
@@ -110,9 +110,6 @@ items:
               href: plan/iteration-paths.md
             - name: Estimate timelines
               href: plan/timelines.md
-        
-      - name: Plan antipatterns
-        href: antipatterns/plan-antipatterns.md
 
     - name: Ready
       items:

@@ -11,35 +11,45 @@ ms.topic: conceptual
 
 This article helps you choose and implement a cloud operating model that distributes cloud responsibilities across your organization effectively. An operating model aligns cloud adoption with your organization's size, maturity, and regulatory requirements to accelerate success and reduce risk.
 
+## Plan you responsibilities for cloud adoption
+
+A defined set of responsibilities ensures that governance, security, and operations are consistently managed across your Azure environment. This responsibility clarity establishes accountability and maintains control in the cloud. You must assign individuals or teams to own and execute these responsibilities to support a secure, well-managed Azure environment. Follow this guidance:
+
+1. **Build a cloud governance team.** A cloud governance team assesses risks, documents cloud governance policies, and reports on cloud governance progress. This team establishes the foundation for consistent policy enforcement across your Azure environment. You must establish this team early in your cloud journey to ensure governance standards are in place before workloads are deployed. See [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team).
+
+2. **Plan for cloud security.** Cloud security ensures security is part of every stage of the cloud lifecycle, from development to operations and continuous improvement. Security planning reduces risk and protects your organization's assets throughout the cloud adoption process. You must integrate security considerations into all aspects of your cloud operating model. See [Security Teams, Roles, and Functions](/azure/cloud-adoption-framework/secure/teams-roles).
+
+3. **Plan for cloud management.** Cloud operations maintain effective operations for managing your Azure cloud estate. Successful cloud operations require clearly defined responsibilities and processes for every cloud management area. You must establish these operational processes to ensure consistent service delivery and resource optimization. See [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) for a detailed list of responsibilities.
+
 ## Understand operating models
 
 Operating models provide the structure for team collaboration and cloud responsibility management. This structure supports consistent governance, accelerates innovation, and reduces risk. Organizations must understand available models and how they evolve with organizational growth to select the best fit for their needs. Follow this guidance:
 
-1. **Learn the three primary operating models.** These models—centralized, shared management, and decentralized—offer different balances of control, agility, and scalability. Each model defines how responsibilities are distributed across teams and determines the level of autonomy each team has in cloud resource management.
+1. **Learn the three primary operating models.** These models—centralized, shared management, and decentralized—offer different balances of control, agility, and scalability. Each model defines how responsibilities are distributed across teams and determines the level of autonomy each team has in cloud resource management. Understanding these models helps you select the approach that best fits your organization's current state and future goals.
 
-2. **Expect operating models to evolve with organizational maturity.** Organizations often begin with a centralized model to establish foundational governance and later evolve to shared or decentralized models. This flexibility enables teams to scale cloud adoption while maintaining control and governance standards.
+2. **Expect operating models to evolve with organizational maturity.** Organizations often begin with a centralized model to establish foundational governance and later evolve to shared or decentralized models. This model evolution enables teams to scale cloud adoption while maintaining control and governance standards. You must plan for this evolution to ensure your operating model can adapt as your organization grows.
 
-3. **Allow for hybrid approaches when appropriate.** Mature teams that build modern applications can benefit from decentralized autonomy, even if the broader organization uses a centralized or shared model. This approach accelerates innovation while preserving governance standards across the organization.
+3. **Allow for hybrid approaches when appropriate.** Mature teams that build modern applications can benefit from decentralized autonomy, even if the broader organization uses a centralized or shared model. This hybrid approach accelerates innovation while preserving governance standards across the organization. You must evaluate team maturity levels to determine where hybrid approaches add value.
 
 ## Assess your organization's characteristics
 
 Organizational characteristics determine which operating model is most effective. A mismatch between model and context can create inefficiencies, compliance risks, or adoption delays. You must evaluate your current state to inform your model selection. Follow this guidance:
 
-1. **Evaluate your organization's size and structure.** Smaller organizations or startups often benefit from centralized control, while larger enterprises require distributed responsibilities to scale effectively. Consider your current team size, organizational complexity, and resource availability when you make this evaluation.
+1. **Evaluate your organization's size and structure.** Smaller organizations or startups often benefit from centralized control, while larger enterprises require distributed responsibilities to scale effectively. Organization size directly impacts the complexity of coordination and communication required for effective cloud management. You must consider your current team size, organizational complexity, and resource availability when you make this evaluation.
 
-2. **Assess your cloud maturity level.** Organizations new to cloud benefit from centralized governance to establish foundational practices. As maturity increases, shared or decentralized models support agility and innovation while maintaining necessary controls.
+2. **Assess your cloud maturity level.** Organizations new to cloud benefit from centralized governance to establish foundational practices. As maturity increases, shared or decentralized models support agility and innovation while maintaining necessary controls. Cloud maturity affects your ability to distribute responsibilities effectively without compromising governance. You must honestly assess your organization's current capabilities and experience level.
 
-3. **Identify regulatory and compliance requirements.** Highly regulated environments require centralized or shared governance to ensure consistent policy enforcement across all cloud resources and workloads.
+3. **Identify regulatory and compliance requirements.** Highly regulated environments require centralized or shared governance to ensure consistent policy enforcement across all cloud resources and workloads. Regulatory requirements often dictate specific controls and audit capabilities that influence your operating model choice. You must understand these requirements early to ensure your selected model supports compliance obligations.
 
 ## Choose an operating model
 
 Each operating model offers distinct advantages and tradeoffs based on your organizational needs. You must select the model that aligns with your current requirements and future goals. Follow this guidance:
 
-1. **Start with a centralized model if you're new to cloud or a small organization.** This model consolidates all cloud responsibilities (governance, security, operations) into a single team. It simplifies governance and standardization but can become a bottleneck as cloud usage scales. Transition to a shared responsibility model when your organization grows and requires more distributed management.
+1. **Start with a centralized model if you're new to cloud or a small organization.** This model consolidates all cloud responsibilities (governance, security, operations) into a single team. Centralized models simplify governance and standardization but can become a bottleneck as cloud usage scales. You must transition to a shared responsibility model when your organization grows and requires more distributed management.
 
-2. **Use a shared responsibility model for mid-size or enterprise organizations.** In this approach, a central platform team oversees shared services and governance controls, while individual workload teams manage their own operations within established guidelines. This setup encourages both agility and scalability but requires clear coordination and well-defined roles. For more information, see [Shared management operating model](./shared-management-operating-model.md).
+2. **Use a shared responsibility model for mid-size or enterprise organizations.** In this approach, a central platform team oversees shared services and governance controls, while individual workload teams manage their own operations within established guidelines. This model balances agility and scalability but requires clear coordination and well-defined roles. You must establish clear communication channels and governance processes to make this model effective. For more information, see [Shared management operating model](./shared-management-operating-model.md).
 
-3. **Use a decentralized model for highly autonomous teams.** This model gives each team full control over their cloud workloads, including governance, shared services, and operations. It maximizes speed and flexibility but increases the risk of inconsistent practices across teams. This model works best for organizations with mature cloud practices and strong technical expertise.
+3. **Use a decentralized model for highly autonomous teams.** This model gives each team full control over their cloud workloads, including governance, shared services, and operations. Decentralized models maximize speed and flexibility but increase the risk of inconsistent practices across teams. You must ensure teams have mature cloud practices and strong technical expertise before implementing this model.
 
 | Operating Model | Best For | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
@@ -51,32 +61,35 @@ Each operating model offers distinct advantages and tradeoffs based on your orga
 
 Executive alignment ensures that the operating model supports business priorities. Without this alignment, cloud adoption efforts can lack authority or direction. You must engage leadership early to validate and support your model. Follow this guidance:
 
-1. **Engage business and IT leadership.** Ensure that cloud strategy reflects input from all stakeholders, not just IT teams. This engagement creates buy-in and ensures the operating model aligns with business objectives.
+1. **Engage business and IT leadership.** Ensure that cloud strategy reflects input from all stakeholders, not just IT teams. This engagement creates buy-in and ensures the operating model aligns with business objectives. You must secure commitment from both business and technical leaders to ensure the model has the authority and resources needed for success.
 
-2. **Align the operating model with strategic goals.** Confirm that the model supports innovation, compliance, and operational efficiency requirements. This alignment ensures the model serves both current needs and future growth plans.
+2. **Align the operating model with strategic goals.** Confirm that the model supports innovation, compliance, and operational efficiency requirements. This alignment ensures the model serves both current needs and future growth plans. You must regularly review and validate this alignment as business priorities evolve.
 
 ## Include partner support in your model
 
 Strategic [partners](https://partner.microsoft.com/partnership/find-a-partner) can accelerate cloud adoption and improve operational outcomes. You must define how partners contribute to your operating model. Follow this guidance:
 
-1. **Identify trusted partners such as Expert MSPs.** These partners provide specialized expertise in governance, operations, and transformation that does not exist within your organization.
+1. **Identify trusted partners such as Expert MSPs.** These partners provide specialized expertise in governance, operations, and transformation that does not exist within your organization. Partner expertise can fill capability gaps and accelerate your cloud adoption timeline. You must evaluate partner capabilities and certifications to ensure they align with your specific needs.
 
-2. **Document partner roles in your model.** Clarify how partners support platform operations, workload management, and innovation initiatives to avoid confusion and overlap with internal teams.
+2. **Document partner roles in your model.** Clarify how partners support platform operations, workload management, and innovation initiatives to avoid confusion and overlap with internal teams. Clear role definition prevents duplication of effort and ensures accountability. You must establish clear boundaries and expectations for partner involvement.
 
 ## Document ownership and accountability
 
 Clear accountability prevents duplication and ensures critical tasks are completed. You must document a RACI (Responsible, Accountable, Consulted, Informed) matrix to clarify roles across teams. Follow this guidance:
 
-1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to prevent gaps in coverage and ensure all critical areas are managed effectively.
+1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to prevent gaps in coverage and ensure all critical areas are managed effectively. Responsibility mapping eliminates confusion about who handles specific tasks and decisions. You must ensure every critical function has an assigned owner and backup.
 
-2. **Communicate the RACI model to all stakeholders.** Ensure that all teams understand their roles and how they interact with others in the operating model. This communication prevents confusion and ensures smooth collaboration.
+2. **Communicate the RACI model to all stakeholders.** Ensure that all teams understand their roles and how they interact with others in the operating model. This communication prevents confusion and ensures smooth collaboration. You must provide training and documentation to help teams understand their responsibilities and dependencies.
 
 ## Azure tools and resources
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Partner Solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and Expert MSPs for specialized cloud expertise |
-| Operating Model Reference | [Shared management operating model](./shared-management-operating-model.md) | Provides detailed guidance on implementing the shared responsibility model for enterprise organizations |
+| Partner solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and expert MSPs for specialized cloud expertise. |
+| Operating model reference | [Shared management operating model](./shared-management-operating-model.md) | Provides detailed guidance on implementing the shared responsibility model for enterprise organizations. |
+| Governance | [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team) | Offers guidance on forming a team to assess risks, document policies, and enforce governance standards. |
+| Security | [Security teams, roles, and functions](/azure/cloud-adoption-framework/secure/teams-roles) | Details roles and responsibilities for integrating security into the cloud lifecycle. |
+| Operations | [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) | Provides a checklist for preparing operational processes to manage Azure environments effectively. |
 
 ## Next steps
 
