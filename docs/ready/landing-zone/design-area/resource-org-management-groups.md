@@ -1,9 +1,9 @@
 ---
 title: Management groups
 description: Learn about the resource organization and management group design considerations and recommendations.
-author: Zimmergren
-ms.author: pnp
-ms.date: 02/20/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 07/07/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -65,19 +65,17 @@ For more information, see [Management groups](/azure/governance/management-group
 
 <a id='management-groups-alz'></a>
 
-## Management groups in the Azure landing zone accelerator and ALZ-Bicep repository
+## Management groups in the Azure landing zone architecture
 
-The following example shows a management group structure. The management groups in this example are in the Azure landing zone accelerator and the [management groups module of the ALZ-Bicep repo](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/managementGroups).
+The following shows the Azure landing zones architecture management group hierarchy.
 
-> [!NOTE]
-> You can modify the management group hierarchy in the Azure landing zone bicep module by editing [managementGroups.bicep](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/managementGroups/managementGroups.bicep).
-
-![Diagram that shows the Azure landing zone accelerator management group structure.](./media/sub-organization.png)
+![Diagram that shows the Azure landing zone management group hierarchy.](./media/sub-organization.png)
 
 | Management group| Description |
 |---|---|
 |**Intermediate root management group**| This management group is directly under the tenant root group. The organization provides this management group with a prefix so that they don't have to use the root group. The organization can move existing Azure subscriptions into the hierarchy. This approach also sets up future scenarios. This management group is a parent to all the other management groups created by the Azure landing zone accelerator.|
 |**Platform**| This management group contains all the platform child management groups, like management, connectivity, and identity. |
+|**Security** | This management group contains a dedicated subscription for security/SIEM team tooling. This subscription hosts Microsoft Sentinel, syslog collectors, and other security/SIEM related tooling. |
 |**Management**| This management group contains a dedicated subscription for management, monitoring, and security. This subscription hosts an Azure Monitor Logs workspace, including associated solutions. |
 |**Connectivity**| This management group contains a dedicated subscription for connectivity. This subscription hosts the Azure networking resources, like Azure Virtual WAN, Azure Firewall, and Azure DNS private zones, that the platform requires.<br><br>You can use various resource groups to contain resources, such as virtual networks, firewall instances, and virtual network gateways, that are deployed in different regions. Some large deployments might have subscription quota restrictions for connectivity resources. You can create dedicated subscriptions in each region for their connectivity resources. |
 |**Identity**| This management group contains a dedicated subscription for identity. This subscription is a placeholder for Active Directory Domain Services (AD DS) virtual machines (VMs) or Microsoft Entra Domain Services. You can use various resource groups to contain resources, such as virtual networks and VMs, that are deployed in different regions. <br><br> The subscription also enables AuthN or AuthZ for workloads within the landing zones. Assign specific Azure policies to harden and manage the resources in the identity subscription. Some large deployments might have subscription quota restrictions for connectivity resources. You can create dedicated subscriptions in each region for their connectivity resources. |
@@ -92,16 +90,6 @@ The following example shows a management group structure. The management groups 
 > Some organizations need to add more management groups.
 >
 > If you want to change the management group hierarchy, see [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md).
-
-## Permissions for the Azure landing zone accelerator
-
-The Azure landing zone accelerator:
-
-- Requires a dedicated service principal name (SPN) to run management group operations, subscription management operations, and role assignments. Use an SPN to reduce the number of users that have elevated rights and follow least-privilege guidelines.
-
-- Requires the User Access Administrator role at the root management group scope to grant the SPN access at the root level. After the SPN has permissions, you can safely remove the User Access Administrator role. This approach ensures that only the SPN is connected to the User Access Administrator role.
-
-- Requires the Contributor role for the SPN previously mentioned at the root management group scope, which allows tenant-level operations. This permission level ensures that you can use the SPN to deploy and manage resources to any subscription within your organization.
 
 ## Next step
 
