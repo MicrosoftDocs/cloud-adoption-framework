@@ -31,7 +31,7 @@ Different environments require specific discovery approaches. The type of infras
 | AWS infrastructure | [Azure Migrate for physical servers](/azure/migrate/tutorial-discover-physical) | [Azure Migrate assessment](/azure/migrate/tutorial-discover-physical) | EC2 instances, RDS databases, EBS volumes |
 | GCP infrastructure | [Azure Migrate for physical servers](/azure/migrate/tutorial-discover-physical) | [Azure Migrate assessment](/azure/migrate/tutorial-discover-physical) | Compute Engine VMs, Cloud SQL, persistent disks |
 | AWS platform services | AWS Resource Explorer | Cloudockit, [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Lambda functions, Elastic Beanstalk, DynamoDB |
-| GCP platform services | GCP Cloud Asset Inventory | [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) | BigQuery, App Engine, Cloud Functions |
+| GCP platform services | GCP Cloud Asset Inventory | Cloudockit, [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) | BigQuery, App Engine, Cloud Functions |
 | Application code | CAST Highlight, CloudAtlas | [AppCAT](/azure/migrate/appcat/overview), Cloud Pilot, CAST Highlight | Source code repositories, custom applications, APIs |
 
 ## Azure resources
@@ -40,7 +40,7 @@ Different environments require specific discovery approaches. The type of infras
 |----------|------|-------------|
 | Discovery | [Azure Migrate](/azure/migrate/migrate-services-overview) | Discovers and assesses on-premises and cloud infrastructure for migration |
 | Discovery | [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) | Provides automated discovery and migration planning for complex environments |
-| Assessment | [Cloud Pilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) | Analyzes applications and provides cloud readiness assessments |
+| Code analysis | [Cloud Pilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) | Analyzes applications and provides cloud readiness assessments |
 | Code analysis | [AppCAT](/azure/migrate/appcat/overview) | Assesses application code compatibility with Azure services |
 | Code analysis | [CAST Highlight](https://azuremarketplace.microsoft.com/marketplace/apps/castsoftware.casthighlight) | Analyzes source code for cloud readiness and modernization opportunities |
 | Documentation | [Cloudockit](https://www.cloudockit.com/) | Generates architecture diagrams and documentation for cloud environments |
