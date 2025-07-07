@@ -47,7 +47,7 @@ items:
       - name: 3. Plan migration (if applicable)
         items: 
         - name: Discover inventory
-          href: plan/discover-existing-inventory.md
+          href: plan/discover-existing-workload-inventory.md
         - name: Select migration strategy
           href: plan/select-cloud-migration-strategy.md
         - name : Assess workloads
