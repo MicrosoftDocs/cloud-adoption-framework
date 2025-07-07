@@ -1,3 +1,12 @@
+---
+title: Plan your Azure environment for cost estimation
+description: Learn how to create accurate cost estimates for your Azure environment by documenting architectural decisions and service selections.
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 07/17/2023
+ms.topic: conceptual
+---
+
 # Plan your Azure environment for cost estimation
 
 This article defines how to create accurate cost estimates for your Azure environment by documenting architectural decisions and service selections. A basic architecture provides the context required to estimate costs with precision. This foundational understanding ensures that cost models reflect the actual scope of services, platform dependencies, and operational requirements. Without this clarity, cost estimates lack the specificity needed for planning and governance.
@@ -16,7 +25,7 @@ A workload architecture defines the Azure services, regions, and configurations 
 
 1. **Document workload requirements and configurations.** Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements.
 
-## Plan to use the right Azure services
+## Pick the right Azure services
 
 For platform and workload resources, outline the services you should use based on your requirements. Follow these recommendations:
 
@@ -26,15 +35,7 @@ For platform and workload resources, outline the services you should use based o
 
 3. **Plan to standardize service selection.** Define and enforce service selection standards to reduce support complexity and prevent cost sprawl. Standardization improves operational efficiency and simplifies governance. For guidance, see [CAF Govern](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
 
-## Plan for single region vs multiregion deployment
-
-A regional strategy defines the reliability and compliance posture of your workloads. For platform and workload resources, you must document whether workloads operate in a single region or across multiple regions and define their reliability requirements. Follow these recommendations:
-
-1. **Document regional strategy and reliability requirements.** Identify whether the workload operates in a single region or multiple regions. Define service level objectives (SLOs), recovery point objectives (RPOs), and recovery time objectives (RTOs). For more information, see [Manage reliability in Azure](/azure/cloud-adoption-framework/manage/protect#manage-reliability).
-
-2. **Ensure compliance with industry standards.** Validate that your architecture and backup configurations meet compliance requirements such as MARS-E.
-
-## Choose the service SKU/tier
+## Choose the best service SKU/tier
 
 Each Azure service offers multiple SKUs or tiers with different performance and availability characteristics. You must select the right SKU based on workload requirements. Follow these recommendations:
 
@@ -42,15 +43,23 @@ Each Azure service offers multiple SKUs or tiers with different performance and 
 
 2. **Ensure high availability for critical workloads.** Choose SKUs that support Availability Zones for Mission Critical and Business Critical workloads.
 
+## Choose single region or multiregion deployment
+
+A regional strategy defines the reliability and compliance posture of your workloads. For platform and workload resources, you must document whether workloads operate in a single region or across multiple regions and define their reliability requirements. Follow these recommendations:
+
+1. **Document regional strategy and reliability requirements.** Identify whether the workload operates in a single region or multiple regions. Define service level objectives (SLOs), recovery point objectives (RPOs), and recovery time objectives (RTOs). For more information, see [Manage reliability in Azure](/azure/cloud-adoption-framework/manage/protect#manage-reliability).
+
+2. **Ensure compliance with industry standards.** Validate that your architecture and backup configurations meet compliance requirements such as MARS-E.
+
 ## Estimate costs based on architecture
 
 A cost estimate provides the financial foundation for cloud adoption planning. Accurate cost estimation supports budgeting, governance, and business case development. You must estimate costs based on your defined architecture and continuously refine those estimates to align with actual usage and business goals. Follow these recommendations:
 
-1. **Use the Azure Pricing Calculator.** The [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) allows you to estimate costs for each service in your architecture. For existing workloads, use historical usage data to inform estimates. For new workloads, estimate based on projected usage and test deployments. This approach ensures that cost estimates reflect realistic consumption patterns and architectural decisions.
+1. **Use the Azure Pricing Calculator.** The [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) allows you to estimate costs for each service in your architecture. For existing workloads, use historical usage data to inform estimates. For new workloads, estimate based on projected usage and test deployments. This approach ensures that cost estimates reflect realistic consumption patterns and architectural decisions.
 
 2. **Use Azure Migrate for discovered inventory (migration only).** If you use Azure Migrate, you can [estimate costs](/azure/migrate/concepts-business-case-calculation?view=migrate) for all discovered on-premises workloads. This tool helps you understand the cost implications of migrating existing infrastructure to Azure. Use this data to inform migration planning and validate business case assumptions.
 
-3. **Reevaluate cost estimates when projections are too high or low.** Review the output of the Azure Pricing Calculator and compare it to your organization’s budget expectations. If the estimate significantly exceeds or falls below expectations, it may indicate architectural misalignment, incorrect service selections, or unrealistic usage assumptions. Identify the architectural elements contributing most to the estimated cost. Focus on high-cost services, premium SKUs, or multi-region deployments. Validate whether these choices are necessary to meet business, performance, or compliance requirements. Adjust the architecture to better align with cost and performance goals.
+3. **Reevaluate cost estimates when projections are too high or low.** Review the output of the Azure Pricing Calculator and compare it to your organization's budget expectations. If the estimate significantly exceeds or falls below expectations, it may indicate architectural misalignment, incorrect service selections, or unrealistic usage assumptions. Identify the architectural elements contributing most to the estimated cost. Focus on high-cost services, premium SKUs, or multi-region deployments. Validate whether these choices are necessary to meet business, performance, or compliance requirements. Adjust the architecture to better align with cost and performance goals.
 
 4. **Test workloads in Azure to validate assumptions.** Deploy representative workloads in a test environment to observe actual usage patterns and resource consumption. Use this data to refine your cost model and validate whether the selected services and configurations meet performance and budget expectations.
 

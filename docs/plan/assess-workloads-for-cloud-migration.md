@@ -1,9 +1,9 @@
 ---
 title: Assess your workloads for cloud migration
 description: Learn how to conduct thorough workload assessments to gather architecture, requirements, and cloud readiness information for successful Azure migration.
-author: github-username
-ms.author: microsoft-alias
-ms.date: 12/19/2024
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 07/15/2025
 ms.topic: conceptual
 ---
 

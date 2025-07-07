@@ -46,7 +46,7 @@ items:
         href: plan/prepare-people-for-cloud-adoption.md
       - name: 3. Plan migration (if applicable)
         items: 
-        - name: Understand migration and modernization best practices
+        - name: Migrate or modernize
           href: plan/understand-cloud-migration-modernization-best-practices.md
         - name: Discover inventory
           href: plan/discover-existing-inventory.md
@@ -54,8 +54,8 @@ items:
           href: plan/select-cloud-migration-strategy.md
         - name : Assess workloads
           href: plan/assess-workloads-for-cloud-migration.md
-      - name: 4. Plan your cloud environment
-        href: plan/plan-your-cloud-environment.md
+      - name: 4. Estimate cloud costs
+        href: plan/estimate-total-cost-of-ownership.md
       - name: 5. Document your cloud adoption plan
         href: plan/document-cloud-adoption-plan.md
 
