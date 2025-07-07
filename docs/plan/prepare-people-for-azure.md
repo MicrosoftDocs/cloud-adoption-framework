@@ -6,16 +6,11 @@ A successful Azure adoption depends on having the right skills in place across y
 
 A clear understanding of your team’s current capabilities and future requirements is essential to guide upskilling efforts. Different cloud adoption goals, such as migration, modernization, or building cloud-native solutions, require distinct skill sets. You must assess your team’s readiness across three dimensions:
 
-1. **Identify skills required to adopt Azure.** These are the foundational skills needed to begin using Azure securely and effectively. They include governance, security, identity, networking, and workload design.
+1. **Identify skills to adopt Azure.** These are the foundational skills needed to begin using Azure securely and effectively. They include Azure [governance](/azure/cloud-adoption-framework/govern/), [security](/azure/cloud-adoption-framework/secure/overview) ([identity and access management](/entra/fundamentals/introduction-identity-access-management), [networking](/azure/networking/foundations/network-foundations-overview)), [management](/azure/cloud-adoption-framework/manage/), and workload design ([cloud architecture](/azure/architecture/guide/[), and [Well-Architected Framework](/azure/well-architected/)).
 
-1. **Identify skills required for ongoing operations.** These include capabilities for managing, monitoring, and optimizing workloads in Azure. Teams need proficiency in automation, DevOps, infrastructure as code (IaC), and platform operations.
+1. **Identify skills for ongoing operations.** Effective cloud management ensures your Azure cloud estate aligns with business objectives and minimizes the effects of incidents. Use Cloud Adoption Framework's RAMP (Ready, Administer, Monitor, Protect) process to manage your Azure cloud estate. See [CAF Manage](/azure/cloud-adoption-framework/manage/). Use tools like Azure DevOps, GitHub, AI development assistance (GitHub Copilot), and infrastructure as code (Bicep, Terraform, and ARM templates).
 
-1. **Identify skills required for future cloud ambitions.** These are advanced skills aligned to your long-term goals, such as cloud-native development, AI-assisted development, and platform engineering.
-
-| Cloud Adoption Objective | Cloud Skills Requirement |
-|--------------------------|--------------------------|
-| Cloud adoption | Azure governance, security, management, cloud architecture, and Well-Architected Framework. |
-| Tools | Azure DevOps, GitHub, AI development assistance (GitHub Copilot), Infrastructure as code (Terraform, and Bicep). |
+1. **Identify skills for innovation.** These are skills aligned to your innovation goals, such as [AI development](../scenarios/ai/index.md) and [cloud-native development](../innovate/index.md), and platform engineering. For cloud-native guidance, see [CAF Innovate](../innovate/index.md).
 
 ## Close identified skill gaps
 
