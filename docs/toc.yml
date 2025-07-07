@@ -38,26 +38,26 @@ items:
 
     - name: Plan
       items:
-      - name: Cloud adoption planning checklist
+      - name: Plan checklist
         href: plan/index.md
-      - name: Prepare your organization for cloud adoption
+      - name: Prepare your organization for the cloud
         items:
-        - name: Select your cloud operating model
+        - name: Select cloud operating model
           href: plan/select-cloud-operating-model.md
-        - name: Prepare your people for Azure
-          href: plan/prepare-people-for-azure.md
-      - name: Plan to migrate workloads to the cloud
+        - name: Prepare people for cloud
+          href: plan/prepare-people-for-cloud-adoption.md
+      - name: Plan migration (if needed)
         items: 
         - name: Understand cloud migration best practices
           href: plan/understand-cloud-migration-best-practices.md
-        - name: Discover your existing inventory
+        - name: Discover inventory
           href: plan/discover-existing-inventory.md
-        - name: Select your cloud migration strategy
+        - name: Select migration strategy
           href: plan/select-cloud-migration-strategy.md
-        - name : Assess your workloads for migration
+        - name : Assess workloads
           href: plan/assess-workloads-for-cloud-migration.md
       - name: Plan your cloud environment
-        href: plan/plan-azure-environment.md
+        href: plan/plan-your-cloud-environment.md
       - name: Document your cloud adoption plan
         href: plan/document-cloud-adoption-plan.md
 
@@ -135,16 +135,7 @@ items:
           href: ready/azure-setup-guide/monitoring-reporting.md
         - name: Stay current with Azure
           href: ready/azure-setup-guide/staying-current.md
-      - name: Operating model
-        items:
-        - name: Overview
-          href: operating-model/index.md
-        - name: Define your operating model
-          href: operating-model/define.md
-        - name: Compare common cloud operating models
-          href: operating-model/compare.md
-        - name: Common operating model terms
-          href: operating-model/terms.md
+
       - name: Azure landing zones
         items:
         - name: What is an Azure landing zone?

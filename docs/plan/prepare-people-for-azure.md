@@ -1,4 +1,4 @@
-# Prepare your people for Azure
+# Prepare your people for cloud
 
 A successful Azure adoption depends on having the right skills in place across your organization to execute responsibilities. Once you define team roles and responsibilities, you must ensure your people have the capabilities to deliver on your cloud plan.
 
