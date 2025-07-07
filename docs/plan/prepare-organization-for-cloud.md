@@ -13,51 +13,49 @@ This article helps you choose and implement a cloud operating model that distrib
 
 Strategic priorities and portfolio scope determine your cloud operating model. Models vary in accountability structures, landing zone approaches, and operational focus. Organizations that select models that don't align with company goals experience increased time to market, misunderstandings about roles and responsibilities, and increased pressure on IT departments.
 
-## Plan for cloud governance, security, and management
+## Understand cloud governance, security, and management responsibilities
 
 A defined set of responsibilities ensures that governance, security, and operations are consistently managed across your Azure environment. This responsibility clarity establishes accountability and maintains control in the cloud. You must assign individuals or teams to own and execute these responsibilities to support a secure, well-managed Azure environment. Follow this guidance:
 
-1. **Build a cloud governance team.** A cloud governance team assesses risks, documents cloud governance policies, and reports on cloud governance progress. This team establishes the foundation for consistent policy enforcement across your Azure environment. You must establish this team early in your cloud journey to ensure governance standards are in place before workloads are deployed. See [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team).
+1. **Plan for cloud governance.** A cloud governance team assesses risks, documents cloud governance policies, and reports on cloud governance progress. This team establishes the foundation for consistent policy enforcement across your Azure environment. You must establish this team early in your cloud journey to ensure governance standards are in place before workloads are deployed. See [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team).
 
 2. **Plan for cloud security.** Cloud security ensures security is part of every stage of the cloud lifecycle, from development to operations and continuous improvement. Security planning reduces risk and protects your organization's assets throughout the cloud adoption process. You must integrate security considerations into all aspects of your cloud operating model. See [Security Teams, Roles, and Functions](/azure/cloud-adoption-framework/secure/teams-roles).
 
 3. **Plan for cloud management.** Cloud operations maintain effective operations for managing your Azure cloud estate. Successful cloud operations require clearly defined responsibilities and processes for every cloud management area. You must establish these operational processes to ensure consistent service delivery and resource optimization. See [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) for a detailed list of responsibilities.
 
-## Understand operating models
+## Choose a cloud operating model
 
-Operating models provide the structure for team collaboration and cloud responsibility management. This structure supports consistent governance, accelerates innovation, and reduces risk. Organizations must understand available models and how they evolve with organizational growth to select the best fit for their needs. Follow this guidance:
-
-1. **Learn the three primary operating models.** These models—centralized, shared management, and decentralized—offer different balances of control, agility, and scalability. Each model defines how responsibilities are distributed across teams and determines the level of autonomy each team has in cloud resource management. Understanding these models helps you select the approach that best fits your organization's current state and future goals.
-
-2. **Expect operating models to evolve with organizational maturity.** Organizations often begin with a centralized model to establish foundational governance and later evolve to shared or decentralized models. This model evolution enables teams to scale cloud adoption while maintaining control and governance standards. You must plan for this evolution to ensure your operating model can adapt as your organization grows.
-
-3. **Allow for hybrid approaches when appropriate.** Mature teams that build modern applications can benefit from decentralized autonomy, even if the broader organization uses a centralized or shared model. This hybrid approach accelerates innovation while preserving governance standards across the organization. You must evaluate team maturity levels to determine where hybrid approaches add value.
-
-## Assess your organization's characteristics
-
-Organizational characteristics determine which operating model is most effective. A mismatch between model and context can create inefficiencies, compliance risks, or adoption delays. You must evaluate your current state to inform your model selection. Follow this guidance:
-
-1. **Evaluate your organization's size and structure.** Smaller organizations or startups often benefit from centralized control, while larger enterprises require distributed responsibilities to scale effectively. Organization size directly impacts the complexity of coordination and communication required for effective cloud management. You must consider your current team size, organizational complexity, and resource availability when you make this evaluation.
-
-2. **Assess your cloud maturity level.** Organizations new to cloud benefit from centralized governance to establish foundational practices. As maturity increases, shared or decentralized models support agility and innovation while maintaining necessary controls. Cloud maturity affects your ability to distribute responsibilities effectively without compromising governance. You must honestly assess your organization's current capabilities and experience level.
-
-3. **Identify regulatory and compliance requirements.** Highly regulated environments require centralized or shared governance to ensure consistent policy enforcement across all cloud resources and workloads. Regulatory requirements often dictate specific controls and audit capabilities that influence your operating model choice. You must understand these requirements early to ensure your selected model supports compliance obligations.
-
-## Choose an operating model
-
-Each operating model offers distinct advantages and tradeoffs based on your organizational needs. You must select the model that aligns with your current requirements and future goals. Follow this guidance:
-
-1. **Start with a centralized model if you're new to cloud or a small organization.** This model consolidates all cloud responsibilities (governance, security, operations) into a single team. Centralized models simplify governance and standardization but can become a bottleneck as cloud usage scales. You must transition to a shared responsibility model when your organization grows and requires more distributed management.
-
-2. **Use a shared responsibility model for mid-size or enterprise organizations.** In this approach, a central platform team oversees shared services and governance controls, while individual workload teams manage their own operations within established guidelines. This model balances agility and scalability but requires clear coordination and well-defined roles. You must establish clear communication channels and governance processes to make this model effective. For more information, see [Shared management operating model](./shared-management-operating-model.md).
-
-3. **Use a decentralized model for highly autonomous teams.** This model gives each team full control over their cloud workloads, including governance, shared services, and operations. Decentralized models maximize speed and flexibility but increase the risk of inconsistent practices across teams. You must ensure teams have mature cloud practices and strong technical expertise before implementing this model.
+An operating model provides the structure for how teams collaborate and manage cloud responsibilities. This structure is essential to align cloud adoption with your organization's size, maturity, and regulatory requirements. There are three primary cloud operating models: centralized, shared management, and decentralized. Each model offers different balances of control, agility, and scalability. Each operating model offers distinct advantages and tradeoffs based on your organizational needs. You must select the model that aligns with your current requirements and future goals.
 
 | Operating Model | Best For | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
 | Centralized | Small organizations, new adopters, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
 | Shared Management | Mid-size or enterprise estates, hybrid or multi-cloud | Central platform team controls shared services and governance guardrails; workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
 | Decentralized | Tech-savvy startups, innovation programs | Each team owns every cloud task | High speed and autonomy | Weaker standardization, higher risk of gaps |
+
+### Understand cloud operating models
+
+Organizational characteristics determine which operating model is most effective. A mismatch between model and context can create inefficiencies, compliance risks, or adoption delays. You must evaluate your current state to inform your model selection.
+
+1. **Evaluate your organization's size and structure.** Organization size directly impacts the complexity of coordination and communication required for effective cloud management. Smaller organizations or startups often benefit from centralized control, while larger enterprises require share-management or decentralized responsibilities to scale effectively. You must consider your current team size, organizational complexity, and resource availability when you make this evaluation.
+
+1. **Assess your cloud maturity level.** Organizations new to cloud benefit from centralized governance to establish foundational practices. As maturity increases, shared or decentralized models support agility and innovation while maintaining necessary controls. Cloud maturity affects your ability to distribute responsibilities effectively without compromising governance. You must honestly assess your organization's current capabilities and experience level.
+
+1. **Identify regulatory and compliance requirements.** Highly regulated environments require centralized or shared-management governance to ensure consistent policy enforcement across all cloud resources and workloads. Regulatory requirements often dictate specific controls and audit capabilities that influence your operating model choice. You must understand these requirements early to ensure your selected model supports compliance obligations.
+
+1. **Expect operating models to evolve with organizational maturity.** Organizations often begin with a centralized model to establish foundational governance and later evolve to shared or decentralized models. This model evolution enables teams to scale cloud adoption while maintaining control and governance standards. You must plan for this evolution to ensure your operating model can adapt as your organization grows.
+
+1. **Allow for hybrid approaches when appropriate.** Mature teams that build modern applications can benefit from decentralized autonomy, even if the broader organization uses a centralized or shared model. This hybrid approach accelerates innovation while preserving governance standards across the organization. You must evaluate team maturity levels to determine where hybrid approaches add value.
+
+### Select a cloud operating model
+
+Each operating model offers distinct advantages and tradeoffs. You must select the model that aligns with your current needs and future goals.
+
+1. **Start with a centralized model if you're new to cloud or a small organization.** This model consolidates all cloud responsibilities (governance, security, operations) into a single team. Smaller organizations or startups often benefit from centralized control. Centralized models simplify governance and standardization but can become a bottleneck as cloud usage scales. You must transition to a shared responsibility model when your organization grows and requires more distributed management.
+
+2. **Mature toward a shared responsibility model.** In this approach, a central platform team oversees shared services and governance controls, while individual workload teams manage their own operations within established guidelines. Larger enterprises require shared-managmenet responsibilities to scale. This model balances agility and scalability but requires clear coordination and well-defined roles. You must establish clear communication channels and governance processes to make this model effective. For more information, see [Shared management operating model](./shared-management-operating-model.md).
+
+3. **Use a decentralized model for highly autonomous teams.** This model gives each team full control over their cloud workloads, including governance, shared services, and operations. Decentralized models maximize speed and flexibility but increase the risk of inconsistent practices across teams. You must ensure teams have mature cloud practices and strong technical expertise before implementing this model.
 
 ## Secure executive sponsorship
 
