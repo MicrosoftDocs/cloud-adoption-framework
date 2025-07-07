@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Prepare your people for the cloud
 
-A successful Azure adoption depends on having the right skills in place across your organization to execute responsibilities. Once you define team roles and responsibilities, you must ensure your people have the capabilities to deliver on your cloud plan.
+This article provides guidance to equip your team with the skills necessary for successful Azure adoption. Proper skill development accelerates cloud adoption, reduces implementation risks, and maximizes your return on cloud investments. Follow these recommendations to assess skill needs, develop capabilities, and create a culture of continuous learning that supports your cloud adoption journey.
 
-## Assess current and future skill needs
+## Assess cloud skills
 
 A clear understanding of your team’s current capabilities and future requirements is essential to guide upskilling efforts. Different cloud adoption goals, such as migration, modernization, or building cloud-native solutions, require distinct skill sets. You must assess your team’s readiness across three dimensions:
 
@@ -19,13 +19,13 @@ A clear understanding of your team’s current capabilities and future requireme
 
 2. **Identify skills for ongoing operations.** Effective cloud management ensures your Azure cloud estate aligns with business objectives and minimizes the effects of incidents. Use Cloud Adoption Framework's RAMP (Ready, Administer, Monitor, Protect) process to manage your Azure cloud estate. See [CAF Manage](/azure/cloud-adoption-framework/manage/). Use tools like Azure DevOps, GitHub, AI development assistance (GitHub Copilot), and infrastructure as code (Bicep, Terraform, and ARM templates).
 
-3. **Identify skills for innovation.** These are skills aligned to your innovation goals, such as [AI development](../scenarios/ai/index.md) and [cloud-native development](../innovate/index.md), and platform engineering.
+3. **Identify skills for innovation.** These are skills aligned to your innovation goals, such as [AI development](../scenarios/ai/plan.md#assess-ai-skills) and [cloud-native development](../innovate/index.md), and platform engineering.
 
 ## Close identified skill gaps
 
 Once you identify the gaps, take deliberate steps to close those gaps. Upskilling is essential to reduce risk, accelerate delivery, and improve confidence across teams.
 
-1. **Upskill your team using Microsoft Learn.** [Microsoft Learn](/azure/) provides role-based learning paths, [Applied Skills](/azure/credentials/applied-skills/), and certifications aligned to Azure roles. Encourage your team to pursue certifications such as Azure Administrator, Developer, Solutions Architect, or DevOps Engineer. Certifications validate skills and build confidence.
+1. **Upskill your team using Microsoft Learn.** [Microsoft Learn](/) contains Microsoft product [documentation](/docs), [personalized training](/plans/ai/), [credentials](/credentials/) like [Microsoft Applied Skills](/azure/credentials/applied-skills/) and [Microsoft certifications](/credentials/browse/?credential_types=certification) aligned to Azure roles. Encourage your team to pursue certifications such as Azure Administrator, Developer, Solutions Architect, or DevOps Engineer. Certifications validate skills and build confidence.
 
 2. **Use expert support to accelerate readiness.** [Microsoft](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/) experts or trusted [partners](https://partner.microsoft.com/partnership/find-a-partner) provide hands-on guidance, workshops, and architectural reviews. These engagements help teams gain practical experience and avoid common pitfalls.
 

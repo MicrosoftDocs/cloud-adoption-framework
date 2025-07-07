@@ -11,8 +11,6 @@ ms.topic: conceptual
 
 This article helps you choose and implement a cloud operating model that distributes cloud responsibilities across your organization effectively. An operating model aligns cloud adoption with your organization's size, maturity, and regulatory requirements to accelerate success and reduce risk.
 
-Strategic priorities and portfolio scope determine your cloud operating model. Models vary in accountability structures, landing zone approaches, and operational focus. Organizations that select models that don't align with company goals experience increased time to market, misunderstandings about roles and responsibilities, and increased pressure on IT departments.
-
 ## Plan to address your cloud responsibilities
 
 A defined set of responsibilities ensures that governance, security, and operations are consistently managed across your Azure environment. This responsibility clarity establishes accountability and maintains control in the cloud. You must assign individuals or teams to own and execute these responsibilities to support a secure, well-managed Azure environment. Follow this guidance:
@@ -27,7 +25,7 @@ A defined set of responsibilities ensures that governance, security, and operati
 
 ## Choose a cloud operating model
 
-An operating model provides the structure for how teams collaborate and manage cloud responsibilities. There are three primary cloud operating models: centralized, shared management, and decentralized. Each operating model offers distinct advantages and tradeoffs based on your organizational needs. You must select the model that aligns with your current requirements and future goals.
+An operating model defines how teams collaborate and manage cloud responsibilities. The three primary cloud operating models—centralized, shared management, and decentralized—each offer unique benefits and tradeoffs. Selecting the right model ensures alignment with organizational goals, reduces time to market, clarifies roles and responsibilities, and minimizes pressure on IT departments. You must choose a model that meets your current needs while supporting future growth and scalability.
 
 | Operating Model | Best For | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
