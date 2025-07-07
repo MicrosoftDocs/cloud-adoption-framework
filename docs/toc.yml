@@ -40,16 +40,14 @@ items:
       items:
       - name: Plan checklist
         href: plan/index.md
-      - name: Prepare your organization for the cloud
-        items:
-        - name: Select cloud operating model
-          href: plan/select-cloud-operating-model.md
-        - name: Prepare people for cloud
-          href: plan/prepare-people-for-cloud-adoption.md
+      - name: Prepare your organization
+        href: plan/prepare-organization-for-cloud.md
+      - name: Prepare your people
+        href: plan/prepare-people-for-cloud-adoption.md
       - name: Plan migration (if needed)
         items: 
-        - name: Understand cloud migration best practices
-          href: plan/understand-cloud-migration-best-practices.md
+        - name: Understand migration and modernization best practices
+          href: plan/understand-cloud-migration-modernization-best-practices.md
         - name: Discover inventory
           href: plan/discover-existing-inventory.md
         - name: Select migration strategy

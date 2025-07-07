@@ -1,19 +1,19 @@
 ---
-title: Select your cloud operating model
-description: Learn how to choose and implement a cloud operating model that aligns with your organization's size, maturity, and regulatory requirements for successful Azure adoption.
+title: Prepare your organization for the cloud
+description: Learn how to Prepare your organization for the cloud. Plan for cloud governance, security, and management. Choose a cloud operating model that aligns with your organization's size, maturity, and regulatory requirements for successful Azure adoption.
 author: stephen-sumner
 ms.author: microsoft-alias
 ms.date: 07/15/2025
 ms.topic: conceptual
 ---
 
-# Select your cloud operating model
+# Prepare your organization for the cloud
 
 This article helps you choose and implement a cloud operating model that distributes cloud responsibilities across your organization effectively. An operating model aligns cloud adoption with your organization's size, maturity, and regulatory requirements to accelerate success and reduce risk.
 
 Strategic priorities and portfolio scope determine your cloud operating model. Models vary in accountability structures, landing zone approaches, and operational focus. Organizations that select models that don't align with company goals experience increased time to market, misunderstandings about roles and responsibilities, and increased pressure on IT departments.
 
-## Plan you responsibilities for cloud adoption
+## Plan for cloud governance, security, and management
 
 A defined set of responsibilities ensures that governance, security, and operations are consistently managed across your Azure environment. This responsibility clarity establishes accountability and maintains control in the cloud. You must assign individuals or teams to own and execute these responsibilities to support a secure, well-managed Azure environment. Follow this guidance:
 
