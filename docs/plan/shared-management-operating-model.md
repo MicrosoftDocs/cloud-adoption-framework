@@ -7,13 +7,13 @@ ms.date: 10/05/2023
 ms.topic: conceptual
 ---
 
-# Shared Management Operating Model
+# Shared management operating model
 
 A shared management operating model enables organizations to scale cloud adoption while maintaining governance and agility. This model becomes more effective when platform teams adopt a product mindset, delivering reusable, self-service capabilities that accelerate workload team success. This approach aligns with the emerging industry trend of platform engineering, where internal platform teams build and operate shared services as products for the rest of the organization.
 
-## Adopt a Shared Management Model to Balance Agility and Control
+## Adopt a shared management model to balance agility and control
 
-A shared management model enables organizations to scale cloud adoption while maintaining governance and agility across hybrid and multi-cloud environments, even when traditional IT structures remain in place. This model is especially effective for customers who retain their on-premises estate while building a parallel cloud estate in Azure. You need to adopt this model to balance agility and control across both environments. Follow this guidance:
+A shared management model enables organizations to scale cloud adoption while maintaining governance and agility across hybrid and multi-cloud environments. This approach is particularly effective for customers who retain on-premises estates while building parallel cloud estates in Azure. You need to adopt this model to ensure consistency and control across both environments. Follow this guidance:
 
 1. **Establish a central platform team to manage shared cloud services and governance.** This team owns core capabilities such as Azure governance, subscription vending, hub networking, and developer tooling. Centralizing these services ensures consistency, security, and scalability across the cloud estate. In hybrid environments, this team should also coordinate with traditional IT to align governance practices.
 
@@ -23,7 +23,7 @@ A shared management model enables organizations to scale cloud adoption while ma
 
 4. **Establish service levels and metrics to govern cross-team collaboration.** Define expectations for request handling, support, and delivery timelines between platform, workload, and traditional IT teams. Use these metrics to continuously improve platform services and ensure alignment across hybrid operations.
 
-## Build Platform Capabilities as Internal Products
+## Build platform capabilities as internal products
 
 Platform engineering transforms shared services into discoverable, reusable, and supportable products. These products enable workload teams to adopt cloud services faster and more securely. Follow this guidance:
 
@@ -60,3 +60,8 @@ Effective platform teams require a mix of specialized skills and a manageable te
     - Infrastructure-as-Code tools such as Terraform and Bicep
     - GitHub Copilot and other AI-assisted development tools
     - Git-based workflows for version control and collaboration
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Choose a cloud operating model](./prepare-organization-for-cloud.md#choose-a-cloud-operating-model)

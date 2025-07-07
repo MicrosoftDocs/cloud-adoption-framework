@@ -1,3 +1,12 @@
+---
+title: 
+description: 
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 07/15/2025
+ms.topic: conceptual
+---
+
 # Document the cloud adoption plan
 
 A cloud adoption plan compiles all architectural, operational, and cost decisions into a single reference document. This plan guides the Ready and Adopt phases and ensures alignment across technical and business stakeholders. You must document plans for both migrated and cloud-native workloads, along with the people and process decisions that support adoption. Follow these recommendations:
