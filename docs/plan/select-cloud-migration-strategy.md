@@ -34,17 +34,17 @@ A rehost is a like-for-like migration strategy. You move workloads to Azure with
 
 ### Know when to modernize workloads during migration
 
-While modernizing as you migrate can yield long-term benefits, it also introduces additional complexity and risk. Only pursue modernization during migration when there is a compelling business reason to do so. For each potential modernization effort, be sure to perform a thorough cost-benefit and risk analysis before proceeding
+While modernizing as you migrate can yield long-term benefits, it also introduces additional complexity and risk. Only pursue modernization during migration when there is a compelling business reason to do so. For each potential modernization effort, be sure to perform a thorough cost-benefit and risk analysis before proceeding.
 
-1. **Modernize only when you have the skillset and time.** An attempt to modernize without the necessary Azure skills or time can delay migration and increase risk. If your team lacks experience or time, defer the workload to a later migration wave.
-
-1. **Modernize only after you understand service model effects.** A service model defines how your organization delivers and manages computing resources, such as on-premises, infrastructure as a service (IaaS), or platform as a service (PaaS). Many organizations assume that moving to PaaS always reduces costs compared to IaaS. This assumption can lead to premature modernization without proper vetting. Validate cost, skill, and process impacts before selecting a new service model. Review current workload requirements and compare them to Azure IaaS and PaaS capabilities. Analyze total cost of ownership for each service model, including operational, licensing, and support costs. Identify required skills and training for teams to operate and support the target service model. Plan for changes in engineering practices and delivery processes that the new service model introduces. Engage stakeholders to validate assumptions and align service model decisions with business objectives.
-
-1. **Modernize when you have corporate support.** Migration projects often present the best opportunity to secure funding for modernization efforts. Take advantage of this moment to align modernization activities with business priorities. Delaying modernization may result in running inefficient workloads in Azure and missing the chance to get stakeholder support later. This can lead to higher costs from inefficient code, unnecessary calls, and increased maintenance requirements.
+1. **Modernize when you have the skills and time.** An attempt to modernize without the necessary Azure skills or time can delay migration and increase risk. If your team lacks experience or time, defer the workload to a later migration wave.
 
 1. **Modernize when current technology is incompatible with Azure.** Legacy technologies, unsupported SDKs, or the need to adopt SaaS solutions may require modernization. Justify each effort with a clear business case.
 
-1. **Modernize when workloads have critical performance or reliability issues.** Rehosting won’t fix performance or architectural issues. If a workload is business-critical and underperforming, consider modernize during migration.
+1. **Modernize problematic workloads.** Rehosting won’t fix performance or architectural issues. If a workload is business-critical and underperforming, consider modernize during migration.
+
+1. **Modernize when a migration provides the best opportunity.** Migration projects often present the best opportunity to secure funding for modernization efforts. Take advantage of this moment to align modernization activities with business priorities. Delaying modernization may result in running inefficient workloads in Azure and missing the chance to get stakeholder support later. This can lead to higher costs from inefficient code, unnecessary calls, and increased maintenance requirements.
+
+1. **Modernize only after you understand operational effects.** Many organizations assume that moving to PaaS always reduces costs compared to IaaS. This assumption can lead to premature modernization without proper vetting. Validate cost, skill, and process impacts before modernizing. Review current workload requirements and compare them to Azure IaaS and PaaS capabilities. Analyze total cost of ownership for each service model, including operational, licensing, and support costs. 
 
 ## Select the appropriate migration strategy for each workload
 
