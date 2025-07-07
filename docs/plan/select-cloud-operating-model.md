@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article helps you choose and implement a cloud operating model that distributes cloud responsibilities across your organization effectively. An operating model aligns cloud adoption with your organization's size, maturity, and regulatory requirements to accelerate success and reduce risk.
 
+Strategic priorities and portfolio scope determine your cloud operating model. Models vary in accountability structures, landing zone approaches, and operational focus. Organizations that select models that don't align with company goals experience increased time to market, misunderstandings about roles and responsibilities, and increased pressure on IT departments.
+
 ## Plan you responsibilities for cloud adoption
 
 A defined set of responsibilities ensures that governance, security, and operations are consistently managed across your Azure environment. This responsibility clarity establishes accountability and maintains control in the cloud. You must assign individuals or teams to own and execute these responsibilities to support a secure, well-managed Azure environment. Follow this guidance:
