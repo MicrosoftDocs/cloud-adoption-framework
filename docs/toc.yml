@@ -43,7 +43,7 @@ items:
       - name: 1. Prepare your organization
         href: plan/prepare-organization-for-cloud.md
       - name: 2. Prepare your people
-        href: plan/prepare-people-for-cloud-adoption.md
+        href: plan/prepare-people-for-cloud.md
       - name: 3. Plan migration (if applicable)
         items: 
         - name: Migrate or modernize
