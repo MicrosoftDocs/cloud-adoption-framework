@@ -1,9 +1,9 @@
 ---
 title: Shared Management Operating Model
 description: Learn how to adopt a shared management operating model to balance agility and control in Azure as well as hybrid and multi-cloud environments.
-author: github-username
-ms.author: microsoft-alias
-ms.date: 10/05/2023
+author: stephen-sumner
+ms.author: pnp
+ms.date: 07/15/2025
 ms.topic: conceptual
 ---
 

@@ -53,7 +53,7 @@ A regional strategy defines the reliability and compliance posture of your workl
 
 A cost estimate provides the financial foundation for cloud adoption planning. Accurate cost estimation supports budgeting, governance, and business case development. You must estimate costs based on your defined architecture and continuously refine those estimates to align with actual usage and business goals. Follow these recommendations:
 
-1. **Use cost estimation tooling.** The [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) allows you to estimate costs for each service in your architecture. For existing workloads, use historical usage data to inform estimates. For new workloads, estimate based on projected usage and test deployments. This approach ensures that cost estimates reflect realistic consumption patterns and architectural decisions. If you use Azure Migrate, you can [estimate costs](/azure/migrate/concepts-business-case-calculation?view=migrate) for all discovered on-premises workloads. This tool helps you understand the cost implications of migrating existing infrastructure to Azure. Use this data to inform migration planning and validate business case assumptions.
+1. **Use cost estimation tooling.** The [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) allows you to estimate costs for each service in your architecture. For existing workloads, use historical usage data to inform estimates. For new workloads, estimate based on projected usage and test deployments. This approach ensures that cost estimates reflect realistic consumption patterns and architectural decisions. If you use Azure Migrate, you can [estimate costs](/azure/migrate/concepts-business-case-calculation) for all discovered on-premises workloads. This tool helps you understand the cost implications of migrating existing infrastructure to Azure. Use this data to inform migration planning and validate business case assumptions.
 
 2. **Estimate operational cost.** Identify required skills and training for teams to operate and support the target service model. Plan for changes in engineering practices and delivery processes that the new service model introduces. Engage stakeholders to validate assumptions and align service model decisions with business objectives.
 
@@ -65,4 +65,28 @@ A cost estimate provides the financial foundation for cloud adoption planning. A
 
 6. **Save cost estimates as a baseline.** Establish a cost baseline to compare estimated versus actual costs during and after deployment. This baseline supports cost governance, enables variance analysis, and informs future planning cycles.
 
-7. **Enter all this information into your plan.** It becomes the blueprint for the Ready and Adopt phases. Save and document the estimated cost as a baseline and reference point for estimated vs. actual cost later.
+## Document the cloud adoption plan
+
+A cloud adoption plan compiles all architectural, operational, and cost decisions into a single reference document. This plan guides the Ready and Adopt phases and ensures alignment across technical and business stakeholders. You must document plans for both migrated and cloud-native workloads, along with the people and process decisions that support adoption. Follow these recommendations:
+
+## Document organization and process decisions
+
+A complete cloud adoption plan includes the operating model, team responsibilities, and skilling plans. You must define how teams should operate, who is accountable for each function, and how skills will evolve to support cloud adoption. Ensure that both technical and business stakeholders review and approve the plan to establish shared ownership and alignment.
+
+## Document the plan for each workload
+
+- **Document plan for each workload you plan to migrate.** A migration plan defines how existing workloads transition to Azure. This plan includes an inventory of workloads, the treatment strategy for each workload (such as rehost, refactor, or replace), and the results of assessments that capture specifications, requirements, and dependencies. You must also define success metrics to evaluate the effectiveness of the migration. This documentation ensures that migration activities align with business goals and technical constraints.
+
+- **Document the plan for each workload you build cloud-native.** A cloud-native plan defines the workloads you intend to build directly in Azure using cloud-native services. This plan includes a list of planned workloads, architectural decisions, service selections, and success metrics. You must define how each workload supports business objectives and how it will be deployed and operated in Azure. This documentation ensures that cloud-native development aligns with platform capabilities and governance requirements.
+
+## Align with standards and frameworks
+
+A cloud adoption plan must align with your organization’s project management office (PMO) standards and integrate into existing governance and delivery frameworks. This alignment ensures consistency in planning, reporting, and risk management across all cloud initiatives. You must embed cloud adoption activities into enterprise project structures to ensure visibility, accountability, and control. Follow these recommendations:
+
+
+
+## Next step
+
+By the end of the Plan phase, you have a cloud adoption roadmap that all stakeholders understand. You’ve made the big decisions: what goes to Azure, how it will go, when it will go, and who will do it. Now it’s time to get your Azure foundation ready.
+
+[CAF Ready](../ready/index.md)

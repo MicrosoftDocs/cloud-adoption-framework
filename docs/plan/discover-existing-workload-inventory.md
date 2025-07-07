@@ -48,4 +48,4 @@ Different environments require specific discovery approaches. The type of infras
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Pick you migration strategy](./plan-migration-strategies.md)
+> [Pick your migration strategy](./select-cloud-migration-strategy.md)

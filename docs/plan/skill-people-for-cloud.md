@@ -25,7 +25,7 @@ A clear understanding of your team’s current capabilities and future requireme
 
 Once you identify the gaps, take deliberate steps to close those gaps. Upskilling is essential to reduce risk, accelerate delivery, and improve confidence across teams.
 
-1. **Upskill your team using Microsoft Learn.** [Microsoft Learn](/) contains Microsoft product [documentation](/docs), [personalized training](/plans/ai/), [credentials](/credentials/) like [Microsoft Applied Skills](/azure/credentials/applied-skills/) and [Microsoft certifications](/credentials/browse/?credential_types=certification) aligned to Azure roles. Encourage your team to pursue certifications such as Azure Administrator, Developer, Solutions Architect, or DevOps Engineer. Certifications validate skills and build confidence.
+1. **Upskill your team using Microsoft Learn.** [Microsoft Learn](/) contains Microsoft product [documentation](/docs), [personalized training](/plans/ai/), [credentials](/credentials/) like [Microsoft Applied Skills](/credentials/applied-skills/) and [Microsoft certifications](/credentials/browse/) aligned to Azure roles. Encourage your team to pursue certifications such as Azure Administrator, Developer, Solutions Architect, or DevOps Engineer. Certifications validate skills and build confidence.
 
 2. **Use expert support to accelerate readiness.** [Microsoft](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/) experts or trusted [partners](https://partner.microsoft.com/partnership/find-a-partner) provide hands-on guidance, workshops, and architectural reviews. These engagements help teams gain practical experience and avoid common pitfalls.
 
@@ -45,4 +45,4 @@ Cloud adoption is not a one-time event. You must create a culture of continuous 
 Cloud-native startups skip to:
 
 > [!div class="nextstepaction"]
-> [4. Estimate total cost of ownership](./plan-azure-environment-cost-estimation.md).
+> [4. Estimate total cost of ownership](./estimate-total-cost-of-ownership.md).
