@@ -69,7 +69,7 @@ For more information, see [Management groups](/azure/governance/management-group
 
 The following shows the Azure landing zones architecture management group hierarchy.
 
-![Diagram that shows the Azure landing zone management group hierarchy.](./media/sub-organization.png)
+:::image type="content" source="./media/sub-organization.png" alt-text="Diagram that shows the Azure landing zone management group hierarchy." lightbox="./media/sub-organization.png":::
 
 | Management group| Description |
 |---|---|
