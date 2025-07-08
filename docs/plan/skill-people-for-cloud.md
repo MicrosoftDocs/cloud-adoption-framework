@@ -40,9 +40,9 @@ Cloud adoption is not a one-time event. You must create a culture of continuous 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [3. Plan your migration to Azure](./discover-existing-inventory.md)
+> [3. Plan your migration to Azure](./discover-existing-workload-inventory.md)
 
-Cloud-native startups skip to:
+Cloud-native startups skip to step four:
 
 > [!div class="nextstepaction"]
 > [4. Estimate total cost of ownership](./estimate-total-cost-of-ownership.md).
