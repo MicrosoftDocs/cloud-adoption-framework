@@ -21,7 +21,7 @@ The architecture of your Azure environment includes your platform and all worklo
 
     - **Defer platform architecture for early-stage startups.** Startups or small teams can begin without implementing shared services, hybrid or multi-cloud connectivity, or on-premises identity management. Instead, implement a resource hierarchy to organize and govern resources. As your environment scales, incrementally adopt Azure landing zone components to support growth and governance.
 
-2. **Plan your workload (application) architecture.** A workload architecture defines the Azure services, regions, and configurations required to meet business and technical requirements. Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements. Use the [Azure Architecture Center](/azure/architecture/browse/) to get ideas. You can download most of the diagrams and tweak them to fit your needs.
+2. **Plan your workload (application) architecture.** A workload architecture defines the Azure services, regions, and configurations required to meet business and technical requirements. Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements. Use the [Azure Architecture Center](/azure/architecture/browse/) to get ideas.
 
 ## Select the appropriate Azure services
 
@@ -75,22 +75,22 @@ A cloud adoption plan compiles all architectural, operational, and cost decision
 
 ## Document organization and process decisions
 
-A complete cloud adoption plan includes the operating model, team responsibilities, and skilling plans. You must define how teams should operate, who is accountable for each function, and how skills will evolve to support cloud adoption. Ensure that both technical and business stakeholders review and approve the plan to establish shared ownership and alignment.
+A cloud adoption plan compiles all architectural, operational, and cost decisions into a single reference document. This plan guides the Ready and Adopt phases and ensures alignment across technical and business stakeholders. You must document plans for both migrated and cloud-native workloads, along with the people and process decisions that support adoption.
 
-## Document the plan for each workload
+1. **Document organization and people plans** A complete cloud adoption plan includes the operating model, team responsibilities, and skilling plans. You must define how teams should operate, who is accountable for each function, and how skills will evolve to support cloud adoption. Ensure that both technical and business stakeholders review and approve the plan to establish shared ownership and alignment.
 
-- **Document plan for each workload you plan to migrate.** A migration plan defines how existing workloads transition to Azure. This plan includes an inventory of workloads, the treatment strategy for each workload (such as rehost, refactor, or replace), and the results of assessments that capture specifications, requirements, and dependencies. You must also define success metrics to evaluate the effectiveness of the migration. This documentation ensures that migration activities align with business goals and technical constraints.
+2. **Document your migration plan (if applicable).** A migration plan includes an inventory of workloads, the migration strategy for each workload (retire, rehost, refactor, rearchitect, replace, retain), success metrics, the assessment results and needs per workload, and the target architecture (platform and workloads), and estimated cost total cost of ownership. This documentation ensures that migration activities align with business goals and technical constraints.
 
-- **Document the plan for each workload you build cloud-native.** A cloud-native plan defines the workloads you intend to build directly in Azure using cloud-native services. This plan includes a list of planned workloads, architectural decisions, service selections, and success metrics. You must define how each workload supports business objectives and how it will be deployed and operated in Azure. This documentation ensures that cloud-native development aligns with platform capabilities and governance requirements.
+3. **Document cloud-native plan (if applicable0).** A cloud-native adoption plan defines the workloads you intend to build in Azure using cloud-native services. This plan includes a list of planned workloads, success metrics, architecture (platform and workloads), and cost estimates. You must define how each workload supports business objectives and how it will be deployed and operated in Azure. This documentation ensures that cloud-native development aligns with platform capabilities and governance requirements.
 
-## Align with standards and frameworks
+4. **Use architecture diagrams.** Rather than list out all the architecture decisions you make, use architecture diagrams to document your platform and workload architectures. You can download the [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-architecture) and most of the diagrams in the [Azure Architecture Center](/azure/architecture/browse/). Modify these as needed and link to them in your cloud adoption plan.
 
-A cloud adoption plan must align with your organization’s project management office (PMO) standards and integrate into existing governance and delivery frameworks. This alignment ensures consistency in planning, reporting, and risk management across all cloud initiatives. You must embed cloud adoption activities into enterprise project structures to ensure visibility, accountability, and control. Follow these recommendations:
-
-
+5. **Align with standards and frameworks.** A cloud adoption plan must align with your organization’s project management office (PMO) standards and integrate into existing governance and delivery frameworks. This alignment ensures consistency in planning, reporting, and risk management across all cloud initiatives. You must embed cloud adoption activities into enterprise project structures to ensure visibility, accountability, and control.
 
 ## Next step
 
 By the end of the Plan phase, you have a cloud adoption roadmap that all stakeholders understand. You’ve made the big decisions: what goes to Azure, how it will go, when it will go, and who will do it. Now it’s time to get your Azure foundation ready.
 
 [CAF Ready](../ready/index.md)
+
+
