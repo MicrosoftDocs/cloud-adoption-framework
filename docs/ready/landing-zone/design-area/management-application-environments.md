@@ -102,13 +102,13 @@ For more information, see:
 
 Management groups for environments within archetypes can add management overhead and provide minimal value.
 
-:::image type="content" source="./media/management-groups.png" alt-text="Diagram that shows an example of an optimal management group hierarchy for the Azure landing zone architecture." lightbox="./media/management-groups.png":::
+:::image type="content" source="./media/sub-organization.png" alt-text="Diagram that shows an example of an optimal management group hierarchy." lightbox="./media/sub-organization.png":::
 
 The *landing zones* management group should have universal policies that enforce guardrails for both *corp* and *online* child management groups. *Corp* and *online* have unique policies that enforce company guidelines related to public and private-facing workloads.
 
 Many organizations create separate management groups for workload software development lifecycle (SDLC) environments to assign environmental policies and controls. In practice, this method creates more challenges for workload teams than it solves. SDLC environments shouldn't have different policies, so we don't recommend separate management groups.
 
-:::image type="content" source="./media/mg-environment-antipattern.svg" alt-text="Diagram that shows an example of a suboptimal management group hierarchy, with distinct management groups for different environments." lightbox="./media/mg-environment-antipattern.svg":::
+:::image type="content" source="./media/mg-environment-antipattern.png" alt-text="Diagram that shows an example of a suboptimal management group hierarchy, with distinct management groups for different environments." lightbox="./media/mg-environment-antipattern.png":::
 
 Application owners can change the topology or resource configuration of a workload to align to policies in multiple SDLC environments that it's promoted through. This method increases risk. Rules that are specific to each environment can result in a poor development experience for developer and quality assurance teams. Problems can also arise if an application has one set of guardrail policies that work in one environment, and the application is exposed to a different set of policies later in its promotion cycle. You might have to make adjustments to an application if controls change.
 
