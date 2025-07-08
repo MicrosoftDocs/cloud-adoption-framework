@@ -73,10 +73,6 @@ A cost estimate provides the financial foundation for cloud adoption planning. A
 
 A cloud adoption plan compiles all architectural, operational, and cost decisions into a single reference document. This plan guides the Ready and Adopt phases and ensures alignment across technical and business stakeholders. You must document plans for both migrated and cloud-native workloads, along with the people and process decisions that support adoption. Follow these recommendations:
 
-## Document organization and process decisions
-
-A cloud adoption plan compiles all architectural, operational, and cost decisions into a single reference document. This plan guides the Ready and Adopt phases and ensures alignment across technical and business stakeholders. You must document plans for both migrated and cloud-native workloads, along with the people and process decisions that support adoption.
-
 1. **Document organization and people plans** A complete cloud adoption plan includes the operating model, team responsibilities, and skilling plans. You must define how teams should operate, who is accountable for each function, and how skills will evolve to support cloud adoption. Ensure that both technical and business stakeholders review and approve the plan to establish shared ownership and alignment.
 
 2. **Document your migration plan (if applicable).** A migration plan includes an inventory of workloads, the migration strategy for each workload (retire, rehost, refactor, rearchitect, replace, retain), success metrics, the assessment results and needs per workload, and the target architecture (platform and workloads), and estimated cost total cost of ownership. This documentation ensures that migration activities align with business goals and technical constraints.
