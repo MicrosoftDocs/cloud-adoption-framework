@@ -1,65 +1,61 @@
 ---
-title: Management recommendations for AI workloads on Azure
+title: Manage Azure platform services (PaaS) for AI
 description: Learn how to manage AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
-ms.author: rajanaki
-ms.date: 04/09/2025
+ms.author: ssumner
+ms.date: 07/01/2025
 ms.topic: conceptual
 ---
 
-# Management recommendations for AI workloads on Azure
+# Manage Azure platform services (PaaS) for AI
 
-This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
+This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure platform-as-a-service (PaaS) solutions for AI.
 
 ## Manage AI deployments
 
-Managing AI deployments ensures consistent configurations across environments to enhance security, compliance, and operational efficiency for workloads.
+Consistent deployment configurations enhance security, compliance, and operational efficiency across all AI environments. Organizations that standardize their deployment approach reduce configuration drift and ensure reliable performance. You must implement systematic deployment practices that align with your business requirements. Here's how:
 
-- *Find the best region.* Map each model's latency, throughput, and compliance requirements. Check the Azure region [product availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table) table to confirm support for required hardware, features, and data-residency rules. Deploy to the region that meets those requirements to ensure performance and regulatory alignment.
+1. **Select the appropriate operating model for your organization.** Deployment models create logical boundaries such as data domains or business functions to ensure autonomy, governance, and cost tracking. Deploy an instance of Azure AI Foundry for each business unit because sharing a single instance across multiple business units limits cost tracking and creates resource constraints. Define a project per use case and use hub-based projects only when teams require shared resources. For more information, see [What type of Azure AI Foundry project do I need?](/azure/ai-foundry/what-is-azure-ai-foundry#project-types) and [AI Foundry resource types](/azure/ai-foundry/concepts/resource-types).
 
-- *Use AI hubs to manage deployments.* Azure offers tools like Azure AI Foundry [hubs and projects](/azure/ai-studio/concepts/ai-resources) to enforce governance and security. Azure Machine Learning has similar capabilities with its [hub workspaces](/azure/machine-learning/concept-hub-workspace). Use a hub per billing boundary to allocate costs across different teams. For more information, see [Manage AI deployments](../manage.md#manage-ai-deployment).
+2. **Deploy to regions that meet your requirements.** Model placement depends on specific latency, throughput, and compliance requirements that determine optimal performance. Check the Azure region [product availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table) table to confirm support for required hardware, features, and data-residency rules before deployment to ensure performance and regulatory alignment.
 
-- *Manage multiple deployments.* Use Azure API Management as a unified gateway for your AI endpoints when onboarding multiple applications or teams. Apply this approach to enforce consistent security, scalability, rate limiting, token quotas, and centralized monitoring across your AI services. For more information, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide).
+3. **Monitor AI deployment resources continuously.** Resource monitoring captures performance data and identifies issues before they affect users. Diagnostic settings capture logs and metrics for all key services including [Azure AI Foundry and Azure AI services](/azure/ai-services/diagnostic-logging). This monitoring provides visibility into system health and enables proactive issue resolution. See also [Azure Monitor Baseline Alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/artificial-intelligence/).
+
+4. **Manage deployment resources centrally.** Centralized resource management provides consistent oversight and control across all AI deployments. Use the [Management center](/azure/ai-foundry/concepts/management-center) in Azure AI Foundry to configure Foundry projects, track resource utilization, and govern access. This approach ensures standardized resource allocation and cost control. Also [monitor costs in Azure AI Foundry](/azure/ai-foundry/concepts/management-center).
+
+5. **Use Azure API Management as a unified gateway for multiple deployments.** API Management provides consistent security, scalability, rate limiting, token quotas, and centralized monitoring when onboarding multiple applications or teams. This approach standardizes access patterns and reduces management overhead across your AI services. For more information, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide).
 
 ## Manage AI models
 
-Managing AI models includes monitoring their outputs, performance, and alignment with Responsible AI principles. AI models can drift over time due to changing data, user behaviors, or other external factors. These changes can lead to inaccurate results or ethical concerns if not addressed.
+Model monitoring ensures outputs align with Responsible AI principles and maintain accuracy over time. AI models experience drift due to changing data, user behaviors, or external factors that can lead to inaccurate results or ethical concerns. You must implement continuous monitoring to detect and address these changes proactively. Here's how:
 
-- *Monitor model outputs.* Implement a monitoring and testing process to ensure that these workloads remain aligned with your responsible AI targets.
+1. **Monitor model outputs for quality and alignment.** Monitoring processes ensure workloads remain aligned with responsible AI targets and deliver expected results. Use Azure AI Foundry's [observability features](/azure/ai-foundry/concepts/observability) and [monitor applications](/azure/ai-foundry/how-to/monitor-applications). For Azure AI Foundry Agent Service, [monitor agent deployments](/azure/ai-services/agents/how-to/metrics).
 
-    - *Monitor generative AI.* For generative AI workloads, use Azure AI Foundry's built-in [evaluation](/azure/ai-studio/concepts/evaluation-metrics-built-in) and [manual](/azure/ai-studio/how-to/evaluate-prompts-playground) monitoring capabilities. If you're using prompt flow, [monitor prompt flow deployments](/azure/ai-studio/how-to/develop/trace-production-sdk). Also consider using [responsible AI tools](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to supplement model monitoring.
+2. **Track model performance metrics continuously.** Performance monitoring helps pinpoint issues when accuracy or response quality drops below acceptable thresholds. Monitor latency in response times and accuracy of vector search results through [tracing](/azure/ai-studio/how-to/develop/trace-local-sdk) in Azure AI Foundry.
 
-    - *Monitor nongenerative AI.* For nongenerative AI workloads, monitor data processing stages and model performance metrics to ensure predictions remain accurate and reliable. Enable [model monitoring](/azure/machine-learning/concept-model-monitoring) in Azure Machine Learning. For Azure AI services, enable monitoring for each AI service you use.
+3. **Consider implementing a generative AI gateway for enhanced monitoring.** Azure API Management enables logging and monitoring capabilities that platforms don't provide natively, including source IP collection, input text tracking, and output text analysis. This approach provides comprehensive audit trails and monitoring data. For more information, see [Implement logging and monitoring for Azure OpenAI Service language models](/azure/architecture/ai-ml/openai/architecture/log-monitor-azure-openai).
 
-- *Monitor model performance.* When a drop in performance or accuracy is detected, monitoring helps pinpoint the source of the issue. As with all workloads, use Azure Monitor and Application Insights to monitor the performance of AI workloads.
-
-    - *Monitor generative AI performance.* In generative AI, monitor latency in response times or the accuracy of vector search results to enhance user experiences. In Azure AI Foundry, [enable tracing](/azure/ai-studio/how-to/develop/trace-local-sdk) to collect trace data for each request, aggregated metrics, and user feedback.
-
-    - *Monitor nongenerative AI performance.* Capture [performance metrics](/azure/machine-learning/how-to-monitor-model-performance#set-up-model-performance-monitoring) of models deployed in Azure Machine Learning. For Azure AI services, enable [diagnostic logging](/azure/ai-services/diagnostic-logging) for each Azure AI service.
-
-- *Consider a generative AI gateway for monitoring.* A reverse proxy like Azure API Management allows you to implement logging and monitoring that aren't native to the platform. API Management allows you to collect source IPs, input text, and output text. For more information, see [Implement logging and monitoring for Azure OpenAI Service language models](/azure/architecture/ai-ml/openai/architecture/log-monitor-azure-openai).
-
-## Manage AI operations
-
-AI operations management involves standardizing compute resources and monitoring platform resources for Azure AI workloads. It ensures that teams use the correct compute resources efficiently and capture metrics and logs from platform resources.
-
-- *Monitor platform resources.* Use diagnostic settings to capture logs and metrics for all key services, such as Azure AI Foundry, [Azure Machine Learning](/azure/machine-learning/monitor-azure-machine-learning), and [Azure AI services](/azure/ai-services/diagnostic-logging). Specific services should capture audit logs and relevant service-specific logs. Implement custom monitoring alerts based on your architecture’s specific needs. Examples include alerts for container registries, Azure Machine Learning, and Azure OpenAI. Configure recommended monitoring alerts for each service in your AI architecture. For more information, see [Azure Monitor Baseline Alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/artificial-intelligence/). 
-
-- *Standardize compute management.* You need compute resources for certain actions like prompt flows and training models. A service like Machine Learning has different compute options, such as compute instances, clusters, and serverless options. Standardize the compute type, runtimes, and shutdown periods. For service-specific compute options, see [Azure AI Foundry](/azure/ai-studio/how-to/create-manage-compute) and [Machine Learning](/azure/machine-learning/how-to-create-attach-compute-studio).
+4. **Choose compute.** In Azure AI Foundry, compute resources support essential [model deployments](/azure/ai-foundry/concepts/foundry-models-overview#model-deployment-managed-compute-and-serverless-api-deployments) and [fine-tuning](/azure/ai-foundry/concepts/fine-tuning-overview#serverless-or-managed-compute). Standardize compute types, runtimes, and shutdown periods across compute instances, clusters, and serverless options.
 
 ## Manage AI data
 
-High-quality data is the foundation of accurate AI models. Tracking model drift helps maintain the relevance of AI predictions over time, and it allows organizations to adapt models as necessary to reflect current conditions.
+Data quality determines the accuracy and reliability of AI model outputs. Organizations that maintain high-quality data standards achieve better model performance and reduce the risk of biased or inaccurate results. You must implement systematic data management practices to ensure consistent model quality. Here's how:
 
-- *Monitor data drift.* Track accuracy and data drift continuously in generative and nongenerative AI to ensure that models remain relevant. Monitoring can alert you when model predictions or large language model responses deviate from expected behavior. This deviation indicates a need for retraining or adjustment. Set up custom alerts to detect performance thresholds. This approach enables early intervention when problems arise. Use [evaluations in Azure AI Foundry](/azure/ai-studio/concepts/evaluation-approach-gen-ai) and [metrics supported in Machine Learning](/azure/machine-learning/concept-model-monitoring).
+1. **Monitor data drift continuously.** Data drift detection identifies when input data patterns change from training baselines, which can degrade model performance over time. Track accuracy and data drift in both generative and nongenerative AI workloads to ensure models remain relevant and responsive to current conditions. Use [evaluations in Azure AI Foundry](/azure/ai-studio/concepts/evaluation-approach-gen-ai) to establish monitoring baselines and detection thresholds.
 
-- *Ensure quality data processing.* For [machine learning](/azure/architecture/data-science-process/lifecycle-modeling), training data must be formatted, clean, and ready for model consumption. For generative AI, grounding data needs to be in the correct format, and likely chunked, enriched, and embedded for AI model consumption. For more information, see [Guide to designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
+2. **Set up automated alerts for performance degradation.** Alert systems provide early warning when model performance drops below acceptable thresholds, enabling proactive intervention before issues affect users. Configure custom alerts to detect performance deviations and trigger remediation workflows when models require retraining or adjustment.
 
-## Manage business continuity
+3. **Ensure quality data processing standards.** Data preparation requirements differ between AI workload types but must maintain consistent quality standards across all implementations. For generative AI, structure grounding data in the correct format with appropriate chunking, enrichment, and embedding for optimal AI model consumption. For more information, see [Guide to designing and developing a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
 
-Implement multi-region deployments to ensure high availability and resiliency for both generative and nongenerative AI systems For more information, see multi-region deployment in [Azure AI Foundry](/azure/ai-studio/how-to/disaster-recovery#plan-for-multi-regional-deployment), [Azure Machine Learning](/azure/machine-learning/how-to-high-availability-machine-learning#plan-for-multi-regional-deployment), and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery).
+## Implement business continuity
+
+Business continuity ensures AI services remain available during regional outages or service disruptions. Service interruptions can affect critical business operations that depend on AI capabilities, making continuity planning essential for organizational resilience. You must implement multi-region deployment strategies to maintain service availability. Here's how:
+
+1. **Deploy AI services across multiple regions.** Multi-region deployments provide redundancy that maintains service availability when individual regions experience outages or capacity constraints. Implement multi-region deployment strategies for [Azure AI Foundry](/azure/ai-studio/how-to/disaster-recovery#plan-for-multi-regional-deployment) and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery) to ensure consistent service delivery.
+
+2. **Configure automated failover mechanisms.** Automated failover reduces recovery time and ensures continuous service delivery when primary regions become unavailable. Set up traffic routing and load balancing between regions to enable seamless transitions during service disruptions.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Security PaaS AI](../platform/security.md)
+> [Govern AI](../govern.md)

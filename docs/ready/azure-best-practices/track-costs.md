@@ -2,7 +2,7 @@
 title: Track costs across business units, environments, or projects
 description: Learn how to create tracking mechanisms to monitor costs using the Cloud Adoption Framework for Azure.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal
@@ -24,7 +24,7 @@ Assets, which are also known as resources, include all virtual machines, data so
 
 *Tagging* is an easy way to classify assets. Tagging associates metadata to an asset. That metadata can be used to classify the asset based on various data points. Tagging is a fundamental part of any well-managed environment, and it's necessary for establishing proper governance of any environment.
 
-The first step is to [develop naming and tagging standards](../azure-best-practices/naming-and-tagging.md). The second step is to ensure that the tagging standard is consistently applied by [establishing a governance MVP](../../govern/guides/complex/index.md).
+The first step is to develop a [naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) and [tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging). The second step is to ensure that the tagging standard is consistently applied by [automating cost governance](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance).
 
 When tags are used to classify assets as part of a cost management effort, companies often need the following tags: business unit, department, billing code, geography, environment, project, and workload or application categorization. [Microsoft Cost Management](/azure/cost-management-billing/), a tool for setting budgets and gaining visibility into cloud costs for Azure or AWS, can use these tags to create different views of cost data.
 

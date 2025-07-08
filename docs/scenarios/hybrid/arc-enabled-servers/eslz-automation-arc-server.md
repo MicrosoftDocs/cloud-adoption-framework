@@ -56,7 +56,7 @@ The following are general design recommendations for Azure Arc-enabled servers:
 ### Environment preparation
 
 - Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled servers and centralize management and monitoring of these resources.
-- Evaluate and develop an IT-aligned [tagging strategy](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
+- Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
 - Create a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to connect machines non-interactively using Azure PowerShell or from the Azure portal.
 
 ### Onboard Azure Arc-enabled servers

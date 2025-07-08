@@ -24,9 +24,10 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | AI Search | `Microsoft.Search/searchServices` | `srch` |
 | Azure AI services (multi-service account) | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `ais` |
-| Azure AI Foundry | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `aif` |
+| Azure AI Foundry account | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `aif` |
+| Azure AI Foundry account project | `Microsoft.CognitiveServices/accounts/projects` | `proj` |
 | Azure AI Foundry hub | `Microsoft.MachineLearningServices/workspaces` (kind: `Hub`) | `hub` |
-| Azure AI Foundry project | `Microsoft.CognitiveServices/accounts/projects` (kind: `AIServices`) | `proj` |
+| Azure AI Foundry hub project | `Microsoft.MachineLearningServices/workspaces` (kind: `Project`) | `proj` |
 | Azure AI Video Indexer | `Microsoft.VideoIndexer/accounts` | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` (kind: `OpenAI`) | `oai` |
@@ -49,6 +50,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
+| Azure Databricks Access Connector | `Microsoft.Databricks/workspaces/accessConnectors` | `dbac` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
@@ -107,7 +109,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Proximity placement group | `Microsoft.Compute/proximityPlacementGroups` | `ppg` |
 | Restore point collection | `Microsoft.Compute/restorePointCollections` | `rpc` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap` |
-| Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
 | Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc` |
@@ -144,8 +145,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
 | Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
 | Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
-| MariaDB server | `Microsoft.DBforMariaDB/servers` | `maria` |
-| MariaDB database | `Microsoft.DBforMariaDB/servers/databases` | `mariadb` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb` |

@@ -2,7 +2,7 @@
 title: Ready your Azure cloud operations
 description: Learn how to ready your Azure cloud operations and manage your cloud operations to ensure business alignment.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 ms.custom: UpdateFrequency2

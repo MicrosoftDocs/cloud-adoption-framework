@@ -3,7 +3,7 @@ title: Improve landing zone governance
 description: Improve landing zone governance. To improve landing zone governance, discover a list of landing zone best practices and examples.
 author: asudbring
 ms.author: allensu
-ms.date: 06/29/2022
+ms.date: 06/19/2025
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -16,7 +16,7 @@ As your cloud environment evolves over time, you need to evolve your cloud gover
 
 The following best practices provide examples of ways to improve landing zone governance:
 
-- [Naming and tagging standards](../azure-best-practices/naming-and-tagging.md): Ensure consistency in naming and tagging, which is the foundational data for establishing sound governance practices.
+- [Define a naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) and [tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging): Ensure consistency in naming and tagging, which is the foundational data for establishing sound governance practices.
 
 - [Track costs across workloads](../azure-best-practices/track-costs.md): Begin tracking costs in your first landing zone. Evaluate how you track costs across multiple workloads and roles.
 

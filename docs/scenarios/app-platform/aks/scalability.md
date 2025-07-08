@@ -2,7 +2,7 @@
 title: Scalability considerations for Azure Kubernetes Service environments
 description: Scalability considerations for AKS environments
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks

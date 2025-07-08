@@ -2,7 +2,7 @@
 title: Modernize your processes for the cloud
 description: Adopt a DevOps methodology to modernize your development and operations. Process modernization is essential to lowering the total cost of ownership of your workloads.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 09/28/2022
 ms.topic: conceptual
 ms.custom: internal

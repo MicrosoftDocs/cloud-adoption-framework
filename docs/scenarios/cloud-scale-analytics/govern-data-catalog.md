@@ -36,7 +36,7 @@ Data classifications are like subject tags. Microsoft Purview marks and identifi
 
 Microsoft Purview can scan and automatically classify documents. For example, if you have a file named `multiple.docx` and it has a national ID number in its content, Microsoft Purview adds a classification such as `EU National Identification Number` in the asset detail page.
 
-[Microsoft Defender for SQL](/azure/azure-sql/database/azure-defender-for-sql) is a feature available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. It includes functionality for discovering and classifying sensitive data, surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. Microsoft Defender for SQL provides a single goto location for enabling and managing these capabilities.
+[Microsoft Defender for SQL](/azure/azure-sql/database/azure-defender-for-sql) is a feature available for Azure SQL Database, and Azure SQL Managed Instance. It includes functionality for discovering and classifying sensitive data, surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. Microsoft Defender for SQL provides a single goto location for enabling and managing these capabilities.
 
 ## Next steps
 

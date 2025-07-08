@@ -46,7 +46,6 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Storage](#storage)
 - [Key Vault](#key-vault)
 - [Azure Data Factory](#azure-data-factory)
-- [Azure Synapse Analytics](#azure-synapse-analytics)
 - [Azure Databricks](#azure-databricks)
 - [Azure IoT Hub](#azure-iot-hub)
 - [Azure Event Hubs](#azure-event-hubs)
@@ -58,7 +57,6 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Azure Machine Learning](#azure-machine-learning)
 - [Azure SQL Managed Instance](#azure-sql-managed-instance)
 - [Azure SQL Database](#azure-sql-database)
-- [Azure Database for MariaDB](#azure-database-for-mariadb)
 - [Azure Database for MySQL](#azure-database-for-mysql)
 - [Azure Database for PostgreSQL](#azure-database-for-postgresql)
 - [Azure AI Search](#azure-ai-search)
@@ -128,30 +126,6 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 |Deny-DataFactory-PublicNetworkAccess|Network Isolation|Denies public access to data factory.|
 |Deploy-DataFactory-ManagedVirtualNetwork|Network Isolation|Deploy managed virtual network for data factory.|
 |Deploy-SelfHostedIntegrationRuntime-Sharing|Resilience|Share self-hosted integration runtime hosted in the Data Hub with Data Factories in the Data Nodes.|
-
-## Azure Synapse Analytics
-
-|Policy name  |Policy area  |Description  |
-|---------|---------|---------|
-|Append-Synapse-LinkedAccessCheckOnTargetResource|Network Isolation|Enforce [LinkedAccessCheckOnTargetResource](/dotnet/api/microsoft.azure.management.synapse.models.managedvirtualnetworksettings.linkedaccesscheckontargetresource) in managed virtual network settings when Synapse Workspace is created.|
-|Append-Synapse-Purview|Network Isolation|Enforce connection between central purview instance and Synapse Workspace.|
-|Append-SynapseSpark-ComputeIsolation|Resource Management|When a Synapse Spark Pool is created without compute isolation then this adds it.|
-|Append-SynapseSpark-DefaultSparkLogFolder|Logging|When a Synapse Spark Pool is created without logging then this will add it.|
-|Append-SynapseSpark-SessionLevelPackages|Resource Management|When a Synapse Spark Pool is created without session level packages then this adds it.|
-|Audit-Synapse-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Synapse.|
-|Deny-Synapse-AllowedAadTenantIdsForLinking|Network Isolation||
-|Deny-Synapse-Firewall|Network Isolation|Set up firewall of Synapse.|
-|Deny-Synapse-ManagedVirtualNetwork|Network Isolation|When a Synapse Workspace is created without managed virtual network then this adds it.|
-|Deny-Synapse-PreventDataExfiltration|Network Isolation|Enforced prevention of data exfiltration for Synapse managed virtual network.|
-|Deny-SynapsePrivateLinkHub|Network Isolation|Denies Synapse Private Link Hub.|
-|Deny-SynapseSpark-AutoPause|Resource Management|Enforces auto pause for Synapse Spark Pools.|
-|Deny-SynapseSpark-AutoScale|Resource Management|Enforces auto scale for Synapse Spark Pools.|
-|Deny-SynapseSql-Sku|Resource Management|Denies certain Synapse SQL Pool SKUs.|
-|Deploy-SynapseSql-AuditingSettings|Logging|Send auditing logs for Synapse SQL pools to log analytics.|
-|Deploy-SynapseSql-MetadataSynch|Resource Management|Set up metadata sync for Synapse SQL pools.|
-|Deploy-SynapseSql-SecurityAlertPolicies|Logging|Deploy Synapse SQL pool security alert policy.|
-|Deploy-SynapseSql-TransparentDataEncryption|Encryption|Deploy Synapse SQL transparent data encryption.|
-|Deploy-SynapseSql-VulnerabilityAssessment|Logging|Deploy Synapse SQL pool vulnerability assessments.|
 
 ## Azure Databricks
 
@@ -286,16 +260,6 @@ Other policies that are applied in the Databricks workspace through cluster poli
 |Deploy-Sql-TransparentDataEncryption|Encryption|Deploy SQL transparent data encryption.|
 |Deploy-Sql-VulnerabilityAssessment|Logging|Deploy SQL vulnerability assessments.|
 |Deploy-SqlDw-AuditingSettings|Logging|Deploy SQL DW auditing settings.|
-
-## Azure Database for MariaDB
-
-|Policy name  |Policy area  |Description  |
-|---------|---------|---------|
-|Append-MariaDb-MinimalTlsVersion|Encryption|Enforces minimal TLS version for MariaDB servers.|
-|Audit-MariaDb-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for MariaDB.|
-|Deny-MariaDb-PublicNetworkAccess|Network Isolation|Denies public network access for my MariaDB servers.|
-|Deny-MariaDb-StorageProfile|Resilience|Enforces geo-redundant database backup with minimum retention time in days.|
-|Deploy-MariaDb-SecurityAlertPolicies|Logging|Deploy SQL security alert policies for MariaDB|
 
 ## Azure Database for MySQL
 

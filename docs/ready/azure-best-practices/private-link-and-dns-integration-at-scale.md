@@ -176,8 +176,6 @@ In addition to the private DNS zones, you also need to [create a set of custom A
 
     The [first policy](#deployifnotexists-policy-for-groupid-only) relies on the `groupId` while the [second policy](#deployifnotexists-policy-for-groupid-and-privatelinkserviceid) uses both `privateLinkServiceId` and `groupID`. Use the [second policy](#deployifnotexists-policy-for-groupid-and-privatelinkserviceid) when `groupId` clashes or collides with another resource.
 
-    For example, the `groupId` **SQL** is used for both Azure Cosmos DB and Azure Synapse Analytics. If both resource types deploy and the [first policy](#deployifnotexists-policy-for-groupid-only) has been assigned to create the `privateDNSZoneGroup` on the private endpoint entry, it's created and mapped to the incorrect private DNS zone, of either Azure Cosmos DB or Azure Synapse Analytics. It then might toggle between each of the zones because of the clashing `groupId` that the first policy looks for in its policy rule.
-
     For a list of the `groupId` for Private Link resources, see the subresources column in [What is a private endpoint?][link-14].
 
 > [!TIP]

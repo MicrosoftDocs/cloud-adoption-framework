@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 
 title: Microsoft Cloud Adoption Framework for Azure
-summary: Proven guidance and best practices that help you confidently adopt the cloud and achieve business outcomes.
+summary: Proven guidance to be successful in Azure.
 brand: azure
 
 metadata:
 
   title: Microsoft Cloud Adoption Framework for Azure
-  description: Proven guidance and best practices that help you confidently adopt the cloud and achieve business outcomes.
+  description: Proven guidance to be successful in Azure.
   services: cloud-adoption-framework
-  author: Zimmergren
-  ms.author: tozimmergren
-  ms.date: 02/04/2025
+  author: stephen-sumner
+  ms.author: pnp
+  ms.date: 06/01/2025
   ms.topic: hub-page
   ms.subservice: caf-general
 # Maximum of 8 items
@@ -23,210 +23,20 @@ highlightedContent:
   items:
 
     # Card
-    - title: Explore scenarios 
-      itemType: overview
-      url: ./scenarios/index.md
-
-    # Card
-    - title: Get tools and templates
-      itemType: download
-      url: ./resources/tools-templates.md
-
-    # Card
-    - title: Find out what's new
-      itemType: whats-new
-      url: ./get-started/whats-new.md
-
-    # Card
-    - title: Learn about the Framework
-      itemType: overview
+    - title: Cloud Adoption Framework overview
+      itemType: get-started
       url: ./overview.md
-
-# productDirectory section (optional)
-
-productDirectory:
-  title: Cloud Adoption Framework guidance # < 60 chars (optional)
-  summary: Find guidance for each phase of your cloud adoption journey. # < 160 chars (optional)
-  items:
-
+    
     # Card
-    - title: Get started
-
-      # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./_images/icons/get-started.png
-      links:
-        - url: ./get-started/index.md
-          text: Get started
-        - url: ./get-started/operational-excellence.md
-          text: Deliver operational excellence
-        - url: ./antipatterns/antipatterns-to-avoid.md
-          text: Antipatterns to avoid
-
-    # Card
-    - title: Strategy
-      imageSrc: ./_images/icons/strategy.png
-      links:
-        - url: ./strategy/index.md
-          text: Overview
-        - url: ./strategy/index.md#cloud-adoption-strategy-checklist
-          text: Checklist
-        - url: ./strategy/motivations.md
-          text: Determine your motivations
-        - url: ./strategy/mission-objectives.md
-          text: Define your mission and objectives
-        - url: ./strategy/inform/index.md
-          text: Inform your strategy
-
-    # Card
-    - title: Plan
-      imageSrc: ./_images/icons/plan.png
-      links:
-        - url: ./digital-estate/rationalize.md
-          text: Rationalize your digital estate
-        - url: ./plan/initial-org-alignment.md
-          text: Organizational alignment
-        - url: ./plan/suggested-skills.md
-          text: Skills readiness plan
-        - url: ./plan/template.md
-          text: DevOps cloud adoption plan
-
-    # Card
-    - title: Ready
-      imageSrc: ./_images/icons/ready.png
-      links:
-        - url: ./operating-model/index.md
-          text: Operating model alignment
-        - url: ./ready/landing-zone/index.md
-          text: Azure landing zone conceptual architecture
-        - url: ./ready/landing-zone/design-areas.md
-          text: Azure landing zone design areas
-        - url: ./ready/landing-zone/implementation-options.md
-          text: Implementation options
-
-    # Card
-    - title: Migrate
-      imageSrc: ./_images/icons/migrate.png
-      links:
-        - url: ./migrate/index.md
-          text: Overview
-        - url: ./migrate/index.md#cloud-migration-checklist
-          text: Checklist
-        - url: ./migrate/scenarios.md
-          text: Product migration scenarios
-
-    # Card
-    - title: Innovate
-      imageSrc: ./_images/icons/innovate.png
-      links:
-        - url: ./innovate/business-value.md
-          text: Business value consensus
-        - url: ./innovate/considerations/build.md
-          text: Build your first MVP
-        - url: ./innovate/considerations/measure.md
-          text: Measure for customer impact
-        - url: ./innovate/considerations/invention.md
-          text: Expand digital inventions
-
-    # Card
-    - title: Secure
-      imageSrc: ./_images/icons/secure.png
-      links:
-        - url: ./secure/overview.md
-          text: Overview
-        - url: ./secure/plan.md
-          text: Plan for a Secure Cloud Adoption
-        - url: ./secure/strategy.md
-          text: Integrate Security Into Your Cloud Adoption Strategy
-        - url: ./secure/ready.md
-          text: Prepare Your Secure Cloud Estate
-
-    # Card
-    - title: Manage
-      imageSrc: ./_images/icons/manage.png
-      links:
-        - url: ./manage/ready.md
-          text: Ready operations
-        - url: ./manage/administer.md
-          text: Administer Azure
-        - url: ./manage/monitor.md
-          text: Monitor Azure
-        - url: ./manage/protect.md
-          text: Protect Azure
-
-    # Card
-    - title: Govern
-      imageSrc: ./_images/icons/govern.png
-      links:
-        - url: ./govern/index.md
-          text: Overview
-        - url: ./govern/index.md#cloud-governance-checklist
-          text: Checklist
-
-# conceptualContent section (optional)
-
-conceptualContent:
-
-# itemType: architecture, concept, deploy, download, get-started, how-to-guide, learn, overview, quickstart, reference, sample, tutorial, video, whats-new
-
-  title: Assessments # < 60 chars (optional)
-  summary: Plan your cloud journey with assessments that help you measure the difference between your current state and cloud adoption goals. Assessment results provide curated technical guidance to help you reach your goals. # < 160 Chars (optional)
-  items:
-
-     # Card
-    - title: Cloud Adoption Strategy Evaluator
-      links:
-        - url: /assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab
-          itemType: concept
-          text: Build and advance your cloud business case with the cloud adoption strategy assessment.
-
-    # Card
-    - title: App and Data Modernization Readiness
-      links:
-        - url: /assessments/?mode=pre-assessment&id=50adbf76-60fb-47ce-a787-f9d5f52f6a48
-          itemType: get-started
-          text: Take the first step in modernizing your workloads by taking this application and data modernization assessment.
-
-    # Card
-    - title: Strategic Migration Assessment and Readiness
-      links:
-        - url: /assessments/Strategic-Migration-Assessment/
-          itemType: deploy
-          text: Evaluate your cloud migration readiness by using the Strategic Migration and Readiness Assessment Tool (SMART).
-
-    # Card
-    - title: Cloud Governance
-      links:
-        - url: /assessments/b1891add-7646-4d60-a875-32a4ab26327e
-          itemType: quickstart
-          text: Assess your cloud governance approach and receive tailored recommendations for improvement.
-
-# tools section (optional)
-
-tools:
-  title: Build your skills with Microsoft Learn training
-
- # < 60 Chars (optional)
-  summary: Learn more about Azure and the Cloud Adoption Framework by completing these learning paths.
-  items:
-
-    # Card
-    - title: Microsoft Cloud Adoption Framework for Azure
-
-      # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./_images/learn-caf-logo.svg
-      url: /training/paths/cloud-adoption-framework/
-
-    # Card
-    - title: Azure Fundamentals
-      imageSrc: ./_images/learn-azure-fundamentals-logo.svg
-      url: /training/paths/az-900-describe-cloud-concepts/
-
-    # Card
-    - title: Learn the business value of Azure
-      imageSrc: ./_images/learn-business-value-of-azure-logo.svg
-      url: /training/modules/microsoft-cloud-adoption-framework-for-azure/
-
-# additionalContent section (optional)
+    - title: AI adoption
+      itemType: how-to-guide
+      url: ./scenarios/ai/index.md
+    - title: Azure landing zone
+      itemType: how-to-guide
+      url: ./ready/landing-zone/index.md    
+    - title: Adoption scenarios 
+      itemType: overview
+      url: ./overview.md#cloud-adoption-scenarios
 
 # Card with summary style
 
@@ -234,24 +44,70 @@ additionalContent:
 
   # Supports up to 3 sections
   sections:
-    - title: Find help  # < 60 chars (optional)
-      summary: Microsoft has dedicated resources to help unblock your cloud adoption journey.  # < 160 chars (optional)
+    - title: Cloud Adoption Framework methodologies  # < 60 chars (optional)
+      summary: Use the methodologies to support your Azure adoption journey.  # < 160 chars (optional)
       items:
 
         # Card
-        - title: Azure Migrate and Modernize
-          summary: Get support migrating workloads to the cloud.
-          url: https://azure.microsoft.com/migration/migration-modernization-program/
+        - title: 📋 Strategy
+          summary: Define business justification and Azure adoption outcomes.
+          url: ./strategy/index.md
 
         # Card
-        - title: Partner-led Workshops
-          summary: Obtain best practices on Cloud Adoption Framework from certified partners.
-          url: https://www.microsoft.com/azure/partners/ammp-w/events/?utm_source=MS+Docs&utm_medium=landing+page&utm_id=Docs
+        - title: 📅 Plan
+          summary: Prepare people, processes, and technology for Azure adoption.
+          url: ./plan/index.md
 
         # Card
-        - title: Find a partner
-          summary: Find a partner to help you get started.
-          url: https://aka.ms/adopt/findapartner
+        - title: 🛠️ Ready
+          summary: Prepare your Azure environment and landing zone for workloads.
+          url: ./ready/index.md
+
+        # Card
+        - title: 🚀 Adopt
+          summary: Migrate, modernize, and innovate in Azure.
+          url: ./adopt/index.md
+
+        # Card
+        - title: 🔐 Govern
+          summary: Govern your entire Azure environment.
+          url: ./govern/index.md
+
+        # Card
+        - title: 🛡️ Secure
+          summary: Secure your entire Azure environment.
+          url: ./secure/overview.md
+
+        # Card
+        - title: ⚙️ Manage
+          summary: Manage your entire Azure environment.
+          url: ./manage/index.md
+
+    - title: Workload design guidance
+      summary: Use the Well-Architected Framework and Azure Architecture Center to build Azure solutions.  # < 160 chars (optional)
+      items: 
+
+        # Card
+        - title: Well-Architected Framework
+          summary: Design workloads the right way.
+          url: https://learn.microsoft.com/azure/architecture/framework/
+
+        # Card
+        - title: Azure Architecture Center
+          summary: Build using a catalog of Azure architectures.
+          url: https://learn.microsoft.com/azure/architecture/
+
+
+    - title: Find help  # < 60 chars (optional)
+      summary: Microsoft has dedicated resources to support your Azure adoption journey.  # < 160 chars (optional)
+      items:
+
+        # Card
+        - title: Azure Innovate & Azure Migrate and Modernize
+          summary: Accelerate your cloud and AI adoption with experts from Microsoft.
+          url: https://azure.microsoft.com/en-us/solutions/migration/migrate-modernize-innovate/
+
 
   # footer (optional)
   footer: "Why the Microsoft Cloud Adoption Framework for Azure is right for your business. [https://aka.ms/adopt](https://azure.microsoft.com/cloud-adoption-framework)"
+

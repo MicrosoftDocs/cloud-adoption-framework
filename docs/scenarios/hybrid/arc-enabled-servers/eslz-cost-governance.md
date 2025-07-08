@@ -59,7 +59,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 ### Governance
 
-- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](../../../ready/azure-best-practices/naming-and-tagging.md).
+- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 - Use least privilege Azure RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who onboards Azure Arc-enabled servers to avoid unnecessary costs.
 - Use least privilege Azure RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete, and re-onboard Azure connected machines.
 
@@ -149,5 +149,4 @@ For more guidance for your hybrid cloud adoption journey, review the following r
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
-- Review the Cloud Adoption Framework [best practices and recommendations](../../../get-started/manage-costs.md) to efficiently manage your cloud costs.
 - Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

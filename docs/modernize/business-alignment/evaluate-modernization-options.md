@@ -2,7 +2,7 @@
 title: Evaluate cloud modernization readiness
 description: Learn how to evaluate your technical and financial cloud readiness to determine which workloads you want to modernize during cloud adoption.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 09/07/2022
 ms.topic: conceptual
 ms.custom: internal

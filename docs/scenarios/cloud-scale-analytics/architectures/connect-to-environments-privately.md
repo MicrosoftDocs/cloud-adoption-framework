@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 The reference architecture is secure by design. It uses a multilayered security approach to mitigate common data exfiltration risks raised by customers. You can use certain features on a network, identity, data, and service layer to define specific access controls and expose only required data to your users. Even if some of these security mechanisms fail, the features help keep data within the enterprise-scale platform secure.
 
-Network features such as private endpoints and disabled public network access can greatly reduce the attack surface of a data platform within an organization. Even with these features enabled, you need to take extra precautions to successfully connect to services such as Azure storage accounts, Azure Synapse workspaces, or Azure Machine Learning from the public internet.
+Network features such as private endpoints and disabled public network access can greatly reduce the attack surface of a data platform within an organization. Even with these features enabled, you need to take extra precautions to successfully connect to services such as Azure storage accounts or Azure Machine Learning from the public internet.
 
 This document describes the most common options for connecting to services inside a data management landing zone or data landing zone in a simple and secure way.
 
@@ -76,11 +76,7 @@ To connect to the VM by using Azure Bastion, follow these steps:
 
 1. Go to the `{prefix}-{environment}-product-synapse001` Azure Synapse workspace inside the `{prefix}-{environment}-shared-product` resource group for data exploration.
 
-    :::image type="content" source="../images/dev-shared-product-synapse.png" alt-text="Screenshot of the 'Synapse workspace' in the Azure portal." lightbox="../images/dev-shared-product-synapse.png" :::
-
 1. In the Azure Synapse workspace, load a sample dataset from the gallery (for example, the NYC Taxi dataset), and then select **New SQL Script** to query `TOP 100` rows.
-
-   :::image type="content" source="../images/new-sql-script.png" alt-text="Screenshot of the Synapse Analytics pane for connecting to a new SQL script." lightbox="../images/new-sql-script.png" :::
 
 If all the virtual networks are peered with each other, only a single jumpbox in one data landing zone is required to access services across all data landing zones and data management landing zones.
 

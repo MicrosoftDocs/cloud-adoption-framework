@@ -2,7 +2,7 @@
 title: Resource organization design area overview
 description: See an overview of the resource organization design area for cloud deployments.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
@@ -51,7 +51,7 @@ Also consider the following factors when you deploy your workload in multiple re
 
 - If your current environment uses management groups, see [Management groups](resource-org-management-groups.md). Use this guidance to help evaluate your implementation.
 - If you have existing subscriptions in your current environment, ensure that you use them effectively. Subscriptions act as policy and management boundaries and scale units. For more information, see [Subscriptions](resource-org-subscriptions.md).
-- If you have existing resources in your current environment, see [Naming and tagging](../../azure-best-practices/naming-and-tagging.md). Use this guidance to influence your tagging strategy and your naming conventions going forward.
+- If you have existing resources in your current environment, see [Define a naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) and [tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging). Use this guidance to influence your tagging strategy and your naming conventions going forward.
 - Use [Azure Policy](/azure/azure-resource-manager/management/tag-policies) to establish and enforce consistency with taxonomic tags.
 
 ## Design area overview

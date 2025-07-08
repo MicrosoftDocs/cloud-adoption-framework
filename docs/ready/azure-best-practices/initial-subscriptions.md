@@ -1,57 +1,73 @@
 ---
-title: Create your initial Azure subscriptions
-description: Begin your Azure adoption by creating your initial subscriptions.
-author: Zimmergren
-ms.author: tozimmergren
-ms.date: 05/11/2022
+title: Create and scale Azure subscriptions
+description: Learn to create your initial Azure subscriptions and scale your subscriptions as your Azure environment grows.
+author: stephen-sumner
+ms.author: pnp
+ms.date: 06/26/2025
 ms.topic: conceptual
-ms.custom: internal
 ---
 
-# Create your initial Azure subscriptions
+# Create and scale Azure subscriptions
 
-Begin your Azure adoption process by creating a set of subscriptions based on your organization's initial requirements.
+This article helps you create your subscriptions the right way from day one. Subscriptions are the foundation for organizing, securing, and managing your cloud resources. A thoughtful setup now saves you time, money, and effort as your business grows.
 
-> [!NOTE]
->
-> Use the Azure landing zone guidance for [resource organization](../landing-zone/design-area/resource-org.md) as a first step towards planning subscriptions within your Azure environment to ensure you consider environment scaling.
+## Start with subscription policies
 
-## Create subscriptions
+Before you create your first subscription, it's important to define the appropriate way to deploy and manage them. Subscriptions help you manage access, costs, and security, so having a plan upfront helps you scale later. Here's how to get started:
 
-Create two Azure subscriptions:
+1. **Use management groups to govern subscriptions.** Management groups enable hierarchical organization and policy inheritance, simplifying governance at scale. Group related subscriptions and enforce governance policies using Azure Policy. For advanced scenarios, see [Azure landing zone management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
 
-- A subscription that contains your production workloads.
-- A subscription that serves as your non-production environment, using an [Azure Dev/Test offer](https://azure.microsoft.com/pricing/dev-test/) for lower pricing.
+1. **Establish subscription creation and management processes.** Define clear processes for who can request new subscriptions, approves them, and how you configure them (policy, access, budgets). Standardized processes ensure that all subscriptions meet your governance requirements while providing audit trails and accountability for subscription management activities.
 
-![An initial subscription model showing keys next to boxes labeled **production** and **non-production.**](../../_images/ready/initial-subscription-model.png)
+1. **Use subscriptions to separate workloads.** Avoid placing multiple workload environments in the same subscription. Create separate subscriptions for production, nonproduction, and sandbox environments. Each environment requires distinct governance policies and access controls. This separation protects production workloads, supports innovation, and simplifies cost tracking, access control, and policy enforcement. For more information, see [Azure landing zone application environments](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments#environments-subscriptions-and-management-groups).
 
-*Figure 1: An initial subscription model with keys next to boxes labeled "production" and "nonproduction".*
+### Create your initial subscriptions
 
-A two-subscription approach offers many benefits:
+With policies in place, you're ready to create your first subscriptions. At a minimum, follow this guidance:
 
-- The use of separate subscriptions for production and non-production environments creates a boundary that makes resource management simpler and safer.
-- Azure Dev/Test subscription offerings are available for non-production workloads. These offerings provide discounted rates on Azure services and software licensing.
-- Production and non-production environments often have different sets of Azure policies. Placing each environment in its own subscription makes it simple for you to apply different policies to them at the subscription level.
-- You can place certain types of Azure resources in a non-production subscription for testing purposes. You can enable resource providers for these test resources in your non-production subscription without ever exposing them to your production environment.
-- You can use Azure dev/test subscriptions as isolated sandbox environments. These sandboxes allow administrators and developers to rapidly create and tear down entire sets of Azure resources and help with data protection and security concerns.
-- Acceptable cost thresholds often vary between production and non-production environments.
+1. **Start with three core subscriptions to establish proper boundaries.** Create one production subscription for live workloads, one nonproduction subscription for development and testing, and one sandbox subscription for experimentation and learning. This structure provides essential separation while keeping management overhead low and costs predictable.
 
-## Sandbox subscriptions
+1. **Use Azure Dev/Test pricing to optimize costs in nonproduction environments.** [Azure Dev/Test offers](https://azure.microsoft.com/pricing/dev-test/) provide significant cost savings for development, testing, and training activities. These pricing benefits help small organizations maximize their cloud investment while maintaining proper environment separation and governance practices.
 
-If you know your organization's cloud adoption strategy requires innovation, consider creating one or more [sandbox subscriptions](../considerations/sandbox-environments.md). In sandbox subscriptions, you can experiment with Azure capabilities and apply security policies to keep test subscriptions isolated from your production and non-production environments, Use an Azure Dev/Test offer to create these subscriptions.
+## Govern your subscriptions
 
-![Subscription model showing keys next to boxes labeled production, nonproduction, and sandboxes.](../../_images/ready/initial-subscription-model-with-sandboxes.png)
+Effective subscription governance ensures your cloud resources remain secure, compliant, and cost-effective throughout their lifecycle. You need to decide what all standard subscriptions should look like, including Azure role-based access controls, policies, tags, and resources. Here's how:
 
-- *Figure 2: A subscription model with sandbox subscriptions.*
+1. **Control resource deployments by default.** Use Azure Policy at the management group level for enforcing governance policies. Start with the [General](/azure/governance/policy/samples/built-in-policies#general) definitions in Azure Policy, which, for example, let you block resources, locations, and deletions. For more examples, see [Automated policy enforcement](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#enforce-cloud-governance-policies-automatically).
 
-## Shared services subscriptions
+1. **Apply Azure role-based access controls.** Role-based access control enables workload teams to manage their resources effectively while maintaining security boundaries. Assign Azure role-based access controls to subscriptions upon creation that provide workload teams the minimum permissions necessary to perform their responsibilities. Allow workload teams to grant access to resource groups and resources. For more information, see [Azure landing zone access controls](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones#general-recommendations).
 
-If your organization plans to host **more than 1,000 VMs or compute instances in the cloud within 24 months**, you should create another Azure subscription to host shared services. This strategy helps prepare you to support your end-state enterprise architecture.
+1. **Apply budgets and cost alerts to each subscription.** Microsoft Cost Management tools provide financial governance and prevent unexpected spending. Set appropriate [budget thresholds](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget) with automated alerts at defined intervals to notify you before costs exceed limits. These controls help teams manage their cloud spending responsibly while providing visibility to financial stakeholders.
 
-![An initial subscription model showing keys next to boxes labeled production, non-production and shared services.](../../_images/ready/initial-subscription-model-with-shared-services.png)
+1. **Establish resource tagging standards for governance and cost allocation.** Consistent tagging enables accurate tracking and reporting across your environment. Define mandatory tags for ownership, cost center, environment, and application to support governance reporting and chargeback processes. This standardization improves visibility and accountability for all resources across your subscriptions. For more information, see [Define your tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
-*Figure 3: A subscription model with shared services.*
+## Scale your subscriptions
+
+As your cloud environment grows, your subscription strategy must evolve. Establish scalable patterns that support growth without compromising governance. Here's how:
+
+1. **Use templates with predefined configurations.** Use infrastructure as code to ensure consistency and compliance by including policies, role assignments, tags, and baseline resources tailored to each subscription type. For examples, see [Azure landing zone Bicep templates](/azure/architecture/landing-zones/bicep/landing-zone-bicep#module-descriptions).
+
+1. **Automate subscription provisioning and management.** Automation tools eliminate manual errors and ensure compliance at scale. These tools streamline subscription creation, configuration, and governance while accelerating response to business needs. For more information, see [subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
+
+1. **Monitor subscription quotas and limits proactively.** Regular monitoring prevents unexpected service disruptions. Track resource usage against Azure subscription limits to identify when more subscriptions are needed before reaching critical thresholds. For details, see [Azure subscription limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits#general-limits).
+
+1. **Optimize cross-subscription networking costs in your architecture.** Efficient network design balances isolation with cost management. Minimize unnecessary data transfers between subscriptions while maintaining workload isolation and shared service access. This approach ensures cost efficiency without compromising your operational requirements.
+
+1. **Plan for Classic deployment model resource isolation.** Legacy resources created with the classic deployment model can't use Azure policies, role-based access control, resource grouping, or tags. Move these resources to dedicated subscriptions to avoid management complications and enable proper governance of modern resources. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+
+1. **Allow business needs to drive subscription creation.** Your Azure subscription strategy should evolve based on your organization’s priorities. As your business grows, specific needs, such as innovation, migration, cost control, operations, security, and governance, might justify creating more subscriptions.
+
+1. **Decide how to move resources between subscriptions.** As your subscription model grows, you might decide that some resources belong in other subscriptions. Many types of resources can be moved between subscriptions. You can also use automated deployments to re-create resources in another subscription. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+
+## Monitor subscriptions
+
+Ongoing monitoring and optimization ensure your subscription design continues to meet business needs. Regular reviews help identify improvements and prevent issues from escalating. Here's how:
+
+1. **Conduct regular access reviews.** Review subscription access quarterly or annually to ensure alignment with business needs. Use Microsoft Entra Privileged Identity Management (PIM) to manage and audit privileged access.
+
+1. **Plan for subscription lifecycle management.** Define processes for decommissioning unused subscriptions, transferring resources, and maintaining compliance. Effective lifecycle management prevents sprawl and keeps your environment organized and cost-effective.
 
 ## Next steps
 
-[Scale your Azure environment with additional subscriptions](./scale-subscriptions.md)
+> [!div class="nextstepaction"]
+> [Azure landing zone subscription guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions)

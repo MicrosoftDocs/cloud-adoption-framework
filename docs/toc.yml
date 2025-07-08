@@ -27,12 +27,8 @@ items:
         href: strategy/prepare-organizational-alignment.md
       - name: Inform your strategy
         items:
-          - name: Overview
-            href: strategy/inform/index.md
           - name: Cost efficiency
             href: strategy/inform/cost-efficiency.md
-          - name: AI
-            href: strategy/inform/ai.md
           - name: Resiliency
             href: strategy/inform/resiliency.md
           - name: Security
@@ -58,8 +54,6 @@ items:
           href: digital-estate/rationalize.md
         - name: Align cost models to forecast costs
           href: digital-estate/calculate.md
-        - name: Measure business outcomes with AppDynamics
-          href: digital-estate/app-dynamics.md
       - name: Initial organization alignment
         href: plan/initial-org-alignment.md
       - name: Skills readiness plan
@@ -74,8 +68,6 @@ items:
           href: plan/plan-intro.md
         - name: Prerequisites
           href: plan/prerequisites.md
-        - name: Deploy the template to Azure DevOps
-          href: plan/template.md
         - name: Define and prioritize workloads
           href: plan/workloads.md
         - name: Align assets to workloads
@@ -86,9 +78,6 @@ items:
           href: plan/iteration-paths.md
         - name: Estimate timelines
           href: plan/timelines.md
-
-      - name: Plan a data warehouse migration
-        href: plan/data-warehouse-migration.md
 
       - name: Strategic Migration Assessment and Readiness Tool (SMART)
         href: plan/smart-assessment.md
@@ -109,6 +98,8 @@ items:
           href: ready/azure-setup-guide/index.md
         - name: Organize resources
           href: ready/azure-setup-guide/organize-resources.md
+        - name: Create your initial subscriptions
+          href: ready/azure-best-practices/initial-subscriptions.md
         - name: Select regions
           href: ready/azure-setup-guide/regions.md
         - name: Manage access
@@ -202,24 +193,16 @@ items:
               href: ready/enterprise-scale/dine-guidance.md
             - name: Additional information
               items:
-              - name: Naming and tagging
-                href: ready/azure-best-practices/naming-and-tagging.md
               - name: Define your naming convention
                 href: ready/azure-best-practices/resource-naming.md
-              - name: Abbreviations for resource types
+              - name: Abbreviations for Azure resources
                 href: ready/azure-best-practices/resource-abbreviations.md
               - name: Define your tagging strategy
                 href: ready/azure-best-practices/resource-tagging.md
-              - name: Resource naming and tagging decision guide
-                href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
-              - name: Move resources
-                href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Design options for specific use cases
               items:
               - name: Create your initial subscriptions
                 href: ready/azure-best-practices/initial-subscriptions.md
-              - name: Scale with multiple subscriptions
-                href: ready/azure-best-practices/scale-subscriptions.md
 
           - name: Network topology and connectivity
             items:
@@ -421,7 +404,7 @@ items:
             - name: Overview
               href: ready/considerations/landing-zone-governance.md
             - name: Naming and tagging standards
-              href: ready/azure-best-practices/naming-and-tagging.md
+              href: ready/azure-best-practices/resource-naming.md
             - name: Track costs across workloads
               href: ready/azure-best-practices/track-costs.md
             - name: Scale with multiple subscriptions
@@ -458,10 +441,6 @@ items:
       items:
       - name: Overview
         href: adopt/index.md
-      - name: Cloud adoption journey
-        href: adopt/cloud-adoption.md
-      - name: Migrate or modernize first? 
-        href: adopt/migrate-or-modernize.md
       - name: Migrate
         items:
         - name: Overview
@@ -621,6 +600,13 @@ items:
               href: innovate/considerations/devices.md
             - name: Predict and influence
               href: innovate/considerations/predict.md
+
+      - name: Guides
+        items:
+        - name: Cloud adoption journey
+          href: adopt/cloud-adoption.md
+        - name: Migrate or modernize first? 
+          href: adopt/migrate-or-modernize.md
                   
 
     - name: Govern
@@ -637,20 +623,6 @@ items:
         href: govern/enforce-cloud-governance-policies.md
       - name: Monitor cloud governance
         href: govern/monitor-cloud-governance.md
-
-
-    - name: Manage
-      items:
-      - name: Checklist
-        href: manage/index.md
-      - name: Ready operations
-        href: manage/ready.md  
-      - name: Administer Azure
-        href: manage/administer.md  
-      - name: Monitor Azure
-        href: manage/monitor.md
-      - name: Protect Azure
-        href: manage/protect.md
 
     - name: Secure
       items:
@@ -671,10 +643,21 @@ items:
       - name: Manage  
         href: secure/manage.md
 
+    - name: Manage
+      items:
+      - name: Checklist
+        href: manage/index.md
+      - name: Ready operations
+        href: manage/ready.md  
+      - name: Administer Azure
+        href: manage/administer.md  
+      - name: Monitor Azure
+        href: manage/monitor.md
+      - name: Protect Azure
+        href: manage/protect.md
+
   - name: Adoption scenarios
     items:
-    - name: Overview
-      href: scenarios/index.md
     - name: AI adoption
       href: scenarios/ai/index.md
     - name: Azure VMware Solution
@@ -696,50 +679,10 @@ items:
 
   - name: Resources
     items:
-
-    - name: Adoption journeys
-      items:
-      - name: Get started
-        items:
-        - name: Overview
-          href: get-started/index.md
-
-        - name: Foundational alignment
-          items:
-          - name: Document foundational alignment decisions
-            href: get-started/cloud-concepts.md
-          - name: How does Azure work?
-            href: get-started/what-is-azure.md
-          - name: Azure fundamental concepts
-            href: ready/considerations/fundamental-concepts.md
-          - name: How does Azure Resource Manager work?
-            href: get-started/how-azure-resource-manager-works.md        
-          - name: Portfolio hierarchy
-            href: resources/fundamental-concepts/hosting-hierarchy.md
-          - name: Azure hierarchy support
-            href: resources/fundamental-concepts/hierarchy-azure-tools.md
-
-        - name: Accelerate adoption
-          items:
-          - name: Build new products and services
-            href: get-started/innovate.md
-          - name: Unblock environment design and configuration
-            href: get-started/design-and-configuration.md
-
-      - name: Improve controls
-        items:
-        - name: Enable customer success
-          href: get-started/enable.md
-        - name: Deliver operational excellence
-          href: get-started/operational-excellence.md
-        - name: Manage cloud costs
-          href: get-started/manage-costs.md
-        - name: Ensure consistent performance
-          href: get-started/performance.md
-
-      - name: Antipatterns to avoid
-        href: antipatterns/antipatterns-to-avoid.md
-    
+    - name: Azure Architecture Center
+      href: /azure/architecture/
+    - name:  Well-Architected Framework
+      href: /azure/architecture/framework/
     - name: Organize
       items:
       - name: Managing organization alignment
@@ -780,59 +723,9 @@ items:
           href: antipatterns/organize-antipatterns.md
         - name: IT fiefdoms and IT silos
           href: organize/fiefdoms-silos.md
-
-    - name: Tools and templates
+    - name: Tools
       href: resources/tools-templates.md
-    
-    - name: Decision guides
-      items:
-      - name: Overview
-        href: decision-guides/index.md
-      - name: Identity
-        items:
-        - name: Identity decision guide
-          href: decision-guides/identity/index.md
-        - name: Azure role-based access control
-          href: ready/considerations/roles.md
-      - name: Networking
-        items:
-        - name: Hub and spoke network topology
-          href: ready/azure-best-practices/hub-spoke-network-topology.md
-        - name: Perimeter networks
-          href: ready/azure-best-practices/perimeter-networks.md
-      - name: Resource consistency
-        href: decision-guides/resource-consistency/index.md
-      - name: Logging and reporting
-        href: decision-guides/logging-and-reporting/index.md
-      - name: AI + machine learning
-        items:
-        - name: Organize and set up Azure Machine Learning
-          href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
-        - name: Best practices for enterprise security
-          href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
-        - name: Manage budget, cost, and quota with Azure
-          href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
-        - name: Machine learning operations
-          href: ready/azure-best-practices/ai-machine-learning-mlops.md
-
     - name: Additional resources
       items:
-      - name: Azure Architecture Center for solution architecture
-        href: /azure/architecture/
-      - name: Microsoft Azure Well-Architected Framework for workload architecture
-        href: /azure/architecture/framework/
-      - name: Docs for product implementation
-        href: /
-      - name: Learn to develop skills
-        href: /training/
-      - name: Assessments to personalize guidance
-        href: /assessments/
       - name: App Modernization Guidance for Azure
         href: /azure/app-modernization-guidance
-
-    - name: Archived resources
-      items:
-      - name: Cloud operating model
-        href: resources/cloud-operating-model.md
-      - name: Virtual datacenter boundary security
-        href: resources/networking-vdc.md

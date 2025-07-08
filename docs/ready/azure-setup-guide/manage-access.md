@@ -2,7 +2,7 @@
 title: Manage access to your Azure environment with Azure role-based access control
 description: Learn how to set up access control for your Azure environment with Azure role-based access control.
 author: LijuKodicheraJayadevan
-ms.author: likj
+ms.author: pnp
 ms.date: 02/08/2022
 ms.topic: conceptual
 ms.custom: think-tank, fasttrack-edit, AQC, setup
@@ -19,8 +19,6 @@ When you plan your access control strategy, grant users the least privilege requ
 ![Diagram that shows Azure roles.](./media/manage-access/role-examples.png)
 
 When you plan your access control methodology, try to work with people in your organization. We recommend that you work with people in security and compliance, IT administration, and enterprise architecture.
-
-The Cloud Adoption Framework offers more guidance on using [Azure role-based access control](../considerations/roles.md) in your cloud adoption efforts.
 
 ::: zone target="chromeless"
 
@@ -72,9 +70,7 @@ To grant a user access to a subscription:
 
 ## Learn more
 
-To learn more, see:
+To learn more, see [What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
 
-- [What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
-- [Cloud Adoption Framework: Use Azure role-based access control](../considerations/roles.md)
 
 ::: zone-end

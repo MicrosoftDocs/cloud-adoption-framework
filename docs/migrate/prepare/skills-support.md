@@ -2,7 +2,7 @@
 title: Get support resources and improve skills for migration projects
 description: Learn about the available training resources and skills you need for successful migration to Azure with the Cloud Adoption Framework.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.collection: 

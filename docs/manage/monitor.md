@@ -2,7 +2,7 @@
 title: Monitor your Azure cloud estate
 description: Learn how to monitor your Azure cloud estate, workloads, other cloud environments, on-premises, and edge environment.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 04/01/2025
 ms.topic: conceptual
 products: azure-monitor
@@ -63,7 +63,7 @@ Designing a monitoring solution refers to creating a system for collecting and s
 
 1. ***Aim to centralize monitoring data.*** Prefer fewer locations for storing logs and metrics. Fewer locations make it easier to manage and correlate data. There are reasons to have multiple locations to store and analyze monitoring data. For example, security operations, data residency, data resiliency, and number of Azure tenants are all factors that could require you to store your monitoring data in multiple locations. For more information, see [Design a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design).
 
-1. ***Understand where to send monitoring data.*** Collect logs and metrics and store them in destinations that match your operational needs. Choose from theses primary Azure destinations: Azure Log Analytics workspace ([interactive and long-term storage](/azure/azure-monitor/logs/data-retention-configure)), Azure Storage account (long-term storage), Azure Event Hubs (third-party SIEM integration), [Azure Data Explorer](/azure/data-explorer/ingest-data-no-code?tabs=diagnostic-metrics), and a partner solution. Where generally available, use [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) to configure central monitoring data collection. Otherwise, use [diagnostic settings](/azure/azure-monitor/essentials/diagnostic-settings#destinations).
+1. ***Understand where to send monitoring data.*** Collect logs and metrics and store them in destinations that match your operational needs. Choose from these primary Azure destinations: Azure Log Analytics workspace ([interactive and long-term storage](/azure/azure-monitor/logs/data-retention-configure)), Azure Storage account (long-term storage), Azure Event Hubs (third-party SIEM integration), [Azure Data Explorer](/azure/data-explorer/ingest-data-no-code?tabs=diagnostic-metrics), and a partner solution. Where generally available, use [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) to configure central monitoring data collection. Otherwise, use [diagnostic settings](/azure/azure-monitor/essentials/diagnostic-settings#destinations).
 
 1. ***Automate monitoring.*** You want an automated way to enforce your monitoring policies in larger environments.
 
@@ -87,7 +87,7 @@ Set up the tools and parameters for collecting insights across your Azure enviro
 
 ### Monitor service health
 
-Monitoring service availability focuses on detecting service outages, disruptions, and resource issues in your cloud environment. You want real-time visibility into potential problems to maintain consistent operations. Monitoring service health is the bare minimum for monitoring you cloud estate. Here's how:
+Monitoring service availability focuses on detecting service outages, disruptions, and resource issues in your cloud environment. You want real-time visibility into potential problems to maintain consistent operations. Monitoring service health is the bare minimum for monitoring your cloud estate. Here's how:
 
 1. ***Monitor underlying service health.*** You need to be aware of any underlying outages to the cloud services and regions you’re using. Use [Azure Service Health](/azure/service-health/service-health-portal-update) to receive free alerts about service issues, planned maintenance, and other changes affecting your Azure services and regions.
 
@@ -99,7 +99,7 @@ Monitoring security involves tracking identity interactions, vulnerabilities, an
 
 1. ***Monitor identity.*** You need to understand user interactions, detect potential risky sign-ins, troubleshoot sign-in issues, and audit identity changes to ensure the security and health of your environment. Configure [Microsoft Entra monitoring](/entra/identity/monitoring-health/overview-monitoring-health) and collect the logs you need to meet your security and compliance requirements.
 
-1. ***Monitor security vulnerabilities.*** You need a single security monitoring solution to detect security vulnerabilities across your various environments. For example, use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to monitor security vulnerabilities in Azure, other public clouds, edge devices, and on-premises private networks. Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and even management (SIEM) and security orchestration, automation, and response (SOAR). Microsoft Sentinel relies on the Log Analytics platform so you have some key symbiosis.
+1. ***Monitor security vulnerabilities.*** You need a single security monitoring solution to detect security vulnerabilities across your various environments. For example, use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to monitor security vulnerabilities in Azure, other public clouds, edge devices, and on-premises private networks. Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and event management (SIEM) and security orchestration, automation, and response (SOAR). Microsoft Sentinel relies on the Log Analytics platform so you have some key symbiosis.
 
 1. ***Monitor network activity.*** You need to monitor network traffic within your cloud and networks outside of your cloud. Network monitoring helps you troubleshoot performance issues and maintain network security. Use Network Watcher to monitor Azure virtual networks (using [flow logs](/azure/network-watcher/network-watcher-overview#flow-logs') and [traffic analytics](/azure/network-watcher/network-watcher-overview#traffic-analytics)). Use [Connection monitor](/azure/network-watcher/network-watcher-overview#connection-monitor) for multicloud and on-premises network monitoring.
 
@@ -227,8 +227,8 @@ The table provides a near complete list of the monitoring articles for every Azu
 
 | Azure service | Monitoring guidance | Deployment monitoring<br>(select services) |
 |---------------|---------------------------------------| ------------------- |
-| Azure AI Agent service | [Management center overview](/azure/ai-studio/concepts/management-center) | [How to enable tracing in Azure AI Agents](/azure/ai-services/agents/concepts/tracing) |
-| Azure AI Foundry | [Management center overview](/azure/ai-studio/concepts/management-center) | [Monitor your Generative AI Applications](/azure/ai-studio/how-to/monitor-applications)<br><br>[Evaluation and monitoring metrics for generative AI](/azure/ai-studio/concepts/evaluation-metrics-built-in)<br><br>[Use Risks & Safety monitoring](/azure/ai-services/openai/how-to/risks-safety-monitor)<br><br>[Monitor prompt flow deployments](/azure/ai-studio/how-to/monitor-quality-safety)<br><br>[Run evaluations online](/azure/ai-studio/how-to/online-evaluation)<br><br>[View evaluation results in Azure AI Foundry portal](/azure/ai-studio/how-to/evaluate-results)<br><br>[Visualize your traces](/azure/ai-studio/how-to/develop/visualize-traces) |
+| Azure AI Foundry Agent Service | [Management center overview](/azure/ai-studio/concepts/management-center) | [How to enable tracing in Azure AI Agents](/azure/ai-services/agents/concepts/tracing) |
+| Azure AI Foundry | [Management center overview](/azure/ai-studio/concepts/management-center) | [Monitor your Generative AI Applications](/azure/ai-studio/how-to/monitor-applications)<br><br>[Evaluation and monitoring metrics for generative AI](/azure/ai-studio/concepts/evaluation-metrics-built-in)<br><br>[Use Risks & Safety monitoring](/azure/ai-services/openai/how-to/risks-safety-monitor)<br><br>[Run evaluations online](/azure/ai-studio/how-to/online-evaluation)<br><br>[View evaluation results in Azure AI Foundry portal](/azure/ai-studio/how-to/evaluate-results)<br><br>[Visualize your traces](/azure/ai-studio/how-to/develop/visualize-traces) |
 | Azure AI Search | [Monitor Azure AI Search](/azure/search/monitor-azure-cognitive-search) | [Monitor queries](/azure/search/search-monitor-queries)<br><br>[Analyze performance in Azure AI Search](/azure/search/search-performance-analysis)<br><br>[Collect telemetry data for search traffic analytics](/azure/search/search-traffic-analytics)<br><br>[Visualize Azure AI Search Logs and Metrics with Power BI](/azure/search/search-monitor-logs-powerbi) |
 | Azure AI services | [Enable diagnostic logging Azure AI services](/azure/ai-services/diagnostic-logging) | |
 | Azure AI Video Indexer | [Monitor Azure AI Video Indexer](/azure/azure-video-indexer/monitor-video-indexer)<br><br>[Monitoring Azure AI Video Indexer data reference](/azure/azure-video-indexer/monitor-video-indexer-data-reference) | |
@@ -317,12 +317,9 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Sphere | [Overview Monitor Azure Sphere resources](/azure-sphere/deployment/az-monitor-overview)<br><br>[Monitor Azure Sphere data reference](/azure-sphere/deployment/az-monitor-data) | |
 | Azure Spot Virtual Machines | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)<br><br>[Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
 | Azure SQL Database | [Monitor Azure SQL Database](/azure/azure-sql/database/monitoring-sql-database-azure-monitor)<br><br>[Monitoring data reference for Azure SQL Database](/azure/azure-sql/database/monitoring-sql-database-azure-monitor-reference) | [Monitor Azure SQL workloads with database watcher](/azure/azure-sql/database-watcher-overview)<br><br>[Tune applications and databases for performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance) |
-| Azure SQL Edge | [Troubleshoot Azure SQL Edge deployments](/azure/azure-sql-edge/troubleshoot) | |
 | Azure SQL Managed Instance | [Monitor Azure SQL Managed Instance](/azure/azure-sql/managed-instance/monitoring-sql-managed-instance-azure-monitor) | [Tune applications and databases for performance in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/performance-guidance) |
 | Azure Stack Edge | [Enable Azure Monitor on Azure Stack Edge Pro GPU device](/azure/databox-online/azure-stack-edge-gpu-enable-azure-monitor) | |
 | Azure Stack Hub | [Monitor health and alerts in Azure Stack Hub](/azure-stack/operator/azure-stack-monitor-health) | |
-| Azure Static Web Apps | [Monitor Azure Static Web Apps](/azure/static-web-apps/monitor)<br><br>[Supported metrics for managed Functions in Azure Static Web Apps](/azure/static-web-apps/metrics) | |
-| Azure Synapse Analytics | [Monitor Azure Synapse Analytics](/azure/synapse-analytics/monitor-synapse-analytics)<br><br>[Monitoring data reference for Azure Synapse Analytics](/azure/synapse-analytics/monitor-synapse-analytics-reference) | |
 | Azure Table Storage | [Monitor Azure Table Storage](/azure/storage/tables/monitor-table-storage)<br><br>[Monitoring data reference for Azure Table Storage](/azure/storage/tables/monitor-table-storage-reference) | |
 | Azure Update Manager | [Create alerts in Azure Update Manager](/azure/update-manager/manage-alerts) | |
 | Azure Virtual Machine Scale Sets | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) | [Application Insights for Azure VMs and virtual machine scale sets](/azure/azure-monitor/app/azure-vm-vmss-apps) |

@@ -2,7 +2,7 @@
 title: Ubiquitous computing and device management
 description: Learn about ubiquitous computing and Azure's framework for building immersive and effective business solutions through connected devices and perceptive edge devices.
 author: umarmohamedusman
-ms.author: umarm
+ms.author: pnp
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.custom: think-tank, fasttrack-new, AQC
@@ -20,11 +20,8 @@ Azure customers employ a continually expanding set of connected systems and devi
 > [!div class="checklist"]
 >
 > - Industrial assets
-> - [Microsoft HoloLens 2](/hololens/)
 > - [Azure Sphere](/azure-sphere/product-overview/what-is-azure-sphere)
-> - [Azure Kinect DK](/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
-> - [Azure SQL Edge](/azure/azure-sql-edge/overview)
 > - [IoT plug and play](/azure/iot-develop/overview-iot-plug-and-play)
 
 ## [Global scale IoT service](#tab/IoTHub)
@@ -103,7 +100,7 @@ To create Azure Digital Twins:
 
 In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence, powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
-**Azure Maps Data Service (preview):** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
+**Azure Maps Data Service:** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
 
 **Spatial operations:** Enhance your location intelligence with a library of common geospatial mathematical calculations, including geofencing, closest point, great circle distance, and buffers.
 
@@ -125,31 +122,5 @@ To use location intelligence:
 
 1. Go to **Azure Maps Accounts**.
 2. Select **Create Azure Maps accounts**.
-
-::: zone-end
-
-## [Azure Remote Rendering](#tab/RemoteRender)
-
-Render high-quality interactive 3D content in the cloud and stream it to your devices in real time. Rendering workloads are heavily used for special effects (VFX) in the media and entertainment industry. Rendering is also used in many other industries, such as advertising, retail, oil and gas, and manufacturing.
-
-The process of rendering is computationally intensive. There can be many frames or images to produce, and each image can take many hours to render. Rendering is therefore a perfect workload for batch processing that can use Azure and Azure Batch to run many renders in parallel.
-
-::: zone target="docs"
-
-### Learn more
-
-- [Azure Remote Rendering](/azure/remote-rendering/overview/about)
-- [Rendering using Azure](/azure/batch/batch-rendering-service)
-
-::: zone-end
-
-::: zone target="chromeless"
-
-### Action
-
-To use Remote Rendering:
-
-1. Go to **Batch Accounts**.
-2. Select **Create batch accounts**.
 
 ::: zone-end

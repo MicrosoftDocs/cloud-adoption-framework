@@ -78,7 +78,6 @@ The following advanced, level-300+ articles in the **cloud-scale analytics** tab
 
 - [Data ingestion for cloud-scale analytics](best-practices/data-ingestion.md)
 - [Data lake storage for cloud-scale analytics](best-practices/data-lake-overview.md)
-- [Use Azure Synapse Analytics for cloud-scale analytics](best-practices/azure-synapse-analytics-implementation.md)
 
 ## Featured Azure products
 

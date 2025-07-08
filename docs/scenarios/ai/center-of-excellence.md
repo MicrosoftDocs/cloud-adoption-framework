@@ -1,86 +1,61 @@
 ---
 title: Establish an AI Center of Excellence
 description: Learn how to establish an AI Center of Excellence (AI CoE) to drive AI adoption on Azure in your organization.
-author: Zimmergren
-ms.author: tozimmergren
-ms.date: 04/09/2025
+author: stephen-sumner
+ms.author: pnp
+ms.date: 06/09/2025
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
 # Establish an AI Center of Excellence
 
-An AI Center of Excellence (AI CoE) is a dedicated team or organizational structure that centralizes AI expertise, resources, and governance. It serves as the nerve center for AI initiatives, ensuring that your organization effectively uses AI to achieve business objectives. This guide provides a step-by-step approach to building a practical and impactful AI CoE.
+This article guides you through building an AI Center of Excellence (AI CoE) in your organization. An AI CoE serves as an internal team of experts who drive successful and valuable AI outcomes. The AI CoE prevents fragmented or ungoverned AI adoption. It establishes a strong foundation for AI initiatives and offers both business and technical consultation that supports successful AI integration.
 
-## What is an AI CoE?
+## Build the AI CoE team
 
-An AI CoE serves as a centralized hub for AI initiatives. It provides a structured approach to AI adoption and aligns AI workloads with business goals. The AI CoE also establishes development standards, oversees compliance and ethical concerns, and promotes an AI-driven mindset across the organization.
+An AI CoE team helps ensure consistent AI adoption across your organization. To be effective, the AI CoE  needs the right leadership, expertise, and organizational alignment. To build your team, follow these steps:
 
-## Why is an AI CoE important?
+1. **Secure executive sponsorship.** Executive sponsorship provides the budget, authority, and organizational credibility the AI CoE needs to succeed. Without executive backing, the AI CoE can't enforce standards or drive organizational change. Form a steering committee with business and IT leaders, establish monthly progress reviews with sponsors, and ensure the CoE has direct access to C-level decision makers.
 
-An AI CoE facilitates AI adoption by streamlining initiatives, reducing duplication, and focusing on projects with significant business results. It establishes governance structures to manage ethical and compliance issues, fosters collaboration, and enables knowledge sharing.
+1. **Appoint an AI CoE leader.** Assign a dedicated leader who drives AI initiatives and acts as the single point of contact for AI strategy execution. A clear leader ensures accountability, strategic alignment, and effective communication. Select someone with strong AI expertise, proven leadership skills, and the ability to influence stakeholders across all levels.
 
-## Define the AI CoE function
+1. **Assemble the AI CoE team.** Build a multidisciplinary team with advanced skills that supports enterprise AI adoption. A diverse team addresses both technical and business requirements while maintaining security and governance standards. Business leads identify relevant use cases, identify available data, and evaluate the model’s effectiveness. AI technical experts handle data management, model design, training, adaptation, and selection. Include senior data scientists, machine learning engineers, AI governance experts, AI security specialists, and AI operations professionals.
 
-The first step in building an AI CoE is to clearly define its role and objectives. The CoE should focus on operationalizing the following areas.
+1. **Determine the placement within your organization.** Proper organizational alignment ensures effective collaboration with existing teams and access to needed resources. AI emerges alongside or after other existing technologies and relies on cloud infrastructure, data, and governance. It commonly builds upon existing teams rather than being a standalone team. If you already operate a Cloud Center of Excellence (CCoE), integrate AI practices and expertise into that team. Only create a standalone AI team if current teams can't support AI adoption or if critical risks exist. The key is to avoid unnecessary complexity and ensure that AI adoption builds upon strong foundations rather than operating in isolation.
 
-The first step involves defining the AI CoE's role and objectives. Focus on operationalizing key areas:
+1. **Define operating model.** Companies at an early stage of their AI journey benefit from a centralized CoE to consolidate expertise and foundational practices. Centralization at the onset accelerates AI adoption. As your AI adoption matures, you should move toward an [advisory approach](#evolve-ai-coe-operations) where the AI CoE supports AI use. A centralized model ensures control and consistency, while an advisory approach provides flexibility.
 
-- *Business strategy:* Identify business goals that AI can support, prioritize use cases, and establish measurable KPIs to track success. Develop a roadmap to guide employee engagement with AI and foster skill development.
+## Define the responsibilities of the AI CoE
 
-- *Technology strategy:* Design an AI-ready platform and data architecture. Create a decision framework for building or purchasing AI tools and plan for scalable storage, compute, and application hosting.
+Clear responsibility creates accountability, close governance gaps, and support consistent execution of AI initiatives. Your AI CoE should fulfill core responsibilities to define its operations, especially at the beginning of your AI adoption journey. Use the following table to assign AI CoE responsibilities:
 
-- *AI development:* Develop customer-centric solutions and implement a process for building, testing, and deploying AI models across various business units. Ensure each model aligns with business needs and delivers tangible value.
+| Area of Focus | Responsibilities |
+|---------------|------------------|
+| **Define AI strategy** | Establish a clear AI strategy that aligns with business goals. The key to driving value lies not only in identifying use cases but also in ensuring the organizational fit. Work with business leaders to identify AI opportunities. Use the [AI decision tree](./strategy.md#define-an-ai-technology-strategy) to select the right AI solutions. Develop a [responsible AI strategy](./strategy.md#develop-a-responsible-ai-strategy) that guides ethical implementation. |
+| **Develop AI skills** | Build organizational AI capabilities through skills assessments and development programs. Assess current AI skills using [assess AI skills](./plan.md#assess-ai-skills). Implement [learning pathways](./plan.md#acquire-ai-skills) for upskilling employees. Provide hands-on experimentation opportunities to keep teams current. |
+| **Lead pilot projects** | Execute strategic pilot projects to validate AI approaches and demonstrate business value. Prioritize projects based on business impact and technical feasibility using [create an AI proof of concept](./plan.md#validate-concepts-through-proof-of-concepts). Use results to refine operational processes and improve CoE performance. |
+| **Define and enforce AI standards** | Develop [governance policies](./govern.md) and [security standards](./secure.md) for data quality and model lifecycle management. Document AI standards, integrate them into daily workflows, and monitor ethical AI use. Review models for bias and transparency. Conduct regular data security and compliance audits. |
+| **Create intake and prioritization workflow** | Implement processes to evaluate and prioritize AI project requests. Create a structured intake process to collect and assess project requests. Apply consistent criteria for business value, technical feasibility, and resource requirements. Maintain a prioritized AI initiative backlog. |
+| **Develop reusable assets** | Create compliance checklists and publish assets on an internal platform for reuse and knowledge sharing. |
+| **Measure and report outcomes** | Implement frameworks to track AI adoption progress and business impact. Define key performance indicators such as adoption rates, compliance levels, and project cycle times. Regularly report insights to leadership. Use performance data to drive continuous improvement. |
+| **Manage AI services** (optional) | Provide operational management and governance for deployed AI services and models. Deploy and govern AI services using [manage AI deployment](./manage.md#manage-ai-deployment). Monitor AI model performance and accuracy. Implement proper lifecycle management for AI deployments. Build and maintain a library of templates, code repositories, and compliance tools. Develop templates for common AI use cases. Maintain code repositories with proven patterns. |
 
-- *Cultural integration:* Establish a formal operating model to guide AI activities. Secure executive sponsorship to promote organizational commitment. Develop structured learning pathways to upskill employees and create governance policies that ensure ethical AI use and data security.
+## Evolve AI CoE operations
 
-- *Governance:* Implement controls and accountability structures to monitor AI ethics, data privacy, and security. Establish a governance model that enforces responsible AI use across the organization.
+As AI adoption matures, the AI CoE should evolve from a centralized control to more of an advisory team. This transition is only possible when you can embed AI governance into your platform operations. You need to recognize when the AI CoE should move from centralized control to an advisory role. For guidance, follow these steps:
 
-## Build a cross-functional team
+1. **Recognize organizational inflection points.** Monitor key indicators that signal when centralized control is hindering rather than helping AI adoption. Early recognition prevents organizational friction and ensures continuous delivery momentum. Watch for approval delays and knowledge bottlenecks where AI experts in the CoE can't support all teams. You might see growing friction where product teams and the CoE frequently debate priorities instead of focusing on value delivery.
 
-An AI CoE requires a diverse set of skills and expertise. Assemble a cross-functional team by assigning clear roles and responsibilities:
+1. **Embed AI delivery into platform operations.** Transfer AI delivery to the [platform teams](../../strategy/prepare-organizational-alignment.md#understand-your-operating-models-readiness-for-cloud). Platform teams enforce consistent governance, manage reliable deployments, and ensure secure delivery across all workloads. Embedding these functions scales standards to every team and maintains agility.
 
-| Role               | Responsibilities                                    | Key deliverables                                                  |
-|--------------------|-----------------------------------------------------|-------------------------------------------------------------------|
-| AI CoE Lead     | Sets the strategic direction of the CoE             | AI roadmap, leadership for AI initiatives                        |
-| AI Strategist   | Aligns AI strategy with business objectives         | AI strategy document, prioritized AI projects                    |
-| Business Analyst| Integrates AI solutions into business workflows     | Business case documentation, process improvement plans           |
-| Data Scientist  | Develops and tests AI models                        | AI models, data insights, and actionable recommendations          |
-| Data Engineer   | Manages data pipelines and infrastructure           | Data integration plan, data quality assurance reports             |
-| AI Engineer     | Deploys and maintains AI systems                    | AI system architecture, deployment schedules, and maintenance logs|
-| Chief Ethics Officer | Monitors AI ethical standards and compliance  | AI ethics review processes, risk assessment reports               |
-| Compliance Officer   | Ensures AI compliance with regulations       | Compliance documentation, regulatory reports                      |
-| MLOps Specialist     | Oversees AI model lifecycle management       | AI model pipeline, continuous improvement processes               |
+1. **Transition to an advisory model.** Replace the CoE gatekeeper model with a guiding body that sets guardrails instead of blocking work. Distribute AI expertise into product teams, platform teams, and enabling teams. Let frontline teams own delivery and implementation while forums provide policy and oversight. The CoE focuses on guidance and policy rather than direct control.
 
-## Define structure and operations
-
-Determine whether the AI CoE operates as an extension of an existing Cloud CoE or functions as a standalone team. Define workflows to ensure that AI projects align with business goals.
-
-- *Identify strategic opportunities:* Collaborate with business leaders to uncover AI use cases. Prioritize use cases with high business value and feasibility.
-
-- *Create an implementation roadmap:* Develop a timeline for AI adoption, specifying the necessary infrastructure, tools, and personnel.
-
-- *Enable professional and citizen developers:* Provide resources, training, and self-service tools. Set up a support system for ongoing learning and troubleshooting.
-
-- *Foster an AI-driven culture:* Develop a change management plan, encourage collaboration between teams, and recognize innovative AI-driven outcomes.
-
-- *Implement AI governance:* Set up frameworks to monitor ethical AI use, review models for bias and transparency, and regularly audit systems for data security and compliance.
-
-## Implement, monitor, and evolve
-
-After establishing the AI CoE, continuously monitor performance, make adjustments, and scale AI initiatives as needed:
-
-- *Monitor AI performance:* Track KPIs and business metrics related to AI initiatives. Use feedback loops to improve model accuracy.
-
-- *Iterate and scale:* Optimize AI processes based on lessons learned from pilot projects, and expand successful solutions to other business units or regions.
-
-- *Maintain compliance and ethics:* Conduct regular audits to ensure adherence to ethical standards and regulatory requirements. Update governance frameworks as necessary.
-
-- *Foster continuous learning:* Provide ongoing training programs and encourage experimentation to keep employees up-to-date on AI advancements.
+Shifting the CoE to an advisory role helps teams innovate rapidly while maintaining standards and security.
 
 ## Next step
 
-Use the AI adoption checklists to determine what your next step should be.
+Use the AI adoption checklists to determine your next step.
 
 > [!div class="nextstepaction"]
 > [AI checklists](index.md#ai-checklists)

@@ -2,7 +2,7 @@
 title: Review product migration scenarios
 description: Get an overview of product migration scenarios that demonstrate how you can migrate to Azure for various applications and services.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.custom: devx-track-extended-java, linux-related-content
@@ -175,14 +175,6 @@ Specific migration scenarios require different approaches and tools. This articl
 | Link | Description |
 |---|---|
 | [Overview of an Azure Migrate-based migration for Azure Local](/azure-stack/hci/migrate/migration-azure-migrate-hci-overview) | Get an overview of how to migrate Hyper-V VMs to your Azure Local instance by using Azure Migrate. |
-
-### Azure Synapse Analytics
-
-| Link | Description |
-|---|---|
-| [Design and performance considerations for Teradata migrations](/azure/synapse-analytics/migration-guides/teradata/1-design-performance-migration) | Learn how to migrate from Teradata to Azure Synapse Analytics. |
-| [Design and performance considerations for IBM Netezza migrations](/azure/synapse-analytics/migration-guides/netezza/1-design-performance-migration) | Learn how to migrate from IBM Netezza to Azure Synapse Analytics. |
-| [Design and performance considerations for Oracle migrations](/azure/synapse-analytics/migration-guides/oracle/1-design-performance-migration) | Learn how to migrate from Oracle to Azure Synapse Analytics. |
 
 ## Multitenant migration
 

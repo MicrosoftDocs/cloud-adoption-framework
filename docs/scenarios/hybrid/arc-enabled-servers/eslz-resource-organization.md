@@ -20,7 +20,7 @@ When designing this structure, be aware of [Azure Resource Manager service limit
 
 After you've created a taxonomy structure and agreed on naming standards, it's recommended to apply tags to the Azure Arc-enabled server resources. Once a server is registered in Azure, it can benefit from standard Azure constructs such as resource tags. A server registered in Azure means it has a resource ID and becomes part of the resource group within a subscription.
 
-Resource tags allow you to add metadata to a resource to quickly locate it and automate operational tasks. These actions are important to your day-to-day tasks as described in the [Cloud Adoption Framework tagging strategy](../../../ready/azure-best-practices/naming-and-tagging.md). Specifically for Azure Arc-enabled servers, it's a good practice to include a tag that reflects the "hosting platform" for Azure Arc-enabled resources and the physical "location".
+Resource tags allow you to add metadata to a resource to quickly locate it and automate operational tasks. These actions are important to your day-to-day tasks as described in the [Cloud Adoption Framework tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging). Specifically for Azure Arc-enabled servers, it's a good practice to include a tag that reflects the "hosting platform" for Azure Arc-enabled resources and the physical "location".
 
 The following image shows a conceptual reference for resource tagging for Azure Arc-enabled servers:
 

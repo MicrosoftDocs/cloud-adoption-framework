@@ -2,7 +2,7 @@
 title: Resource organization considerations for AKS
 description: AKS guidelines for resource organization
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aks
@@ -57,7 +57,7 @@ For example, if you have public and private applications, separate them into dif
 
 ## Design recommendations
 
-- Define a [naming and tagging standard](../../../ready/azure-best-practices/naming-and-tagging.md) to be applied to all container resources deployed to Azure. At a minimum, it should include:
+- Define a [naming and tagging standard](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) to be applied to all container resources deployed to Azure. At a minimum, it should include:
   - **Workload names:** Identify the workload or workloads supported by each cluster.
     - **Cluster resources:** Identify the elevation of cluster resource alignment from the preceding considerations.
     - **Host operator:** Identify which team is responsible for operations of the host.

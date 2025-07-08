@@ -2,7 +2,7 @@
 title: Introduction to the hybrid and multicloud scenario
 description: Learn about the hybrid and multicloud scenario.
 author: Zimmergren
-ms.author: tozimmergren
+ms.author: pnp
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
@@ -27,7 +27,6 @@ Delivery of the full journey requires certain key components, or guidance sets:
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
-| <br> :::image type="icon" source="../../_images/hybrid/cloud-journey.png"::: | <br> [Microsoft Cloud Adoption Framework for Azure](../../get-started/index.md): These articles walk through the smallest set of considerations and implementations of each CAF methodology. Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of hybrid and multicloud workloads across your portfolio. |
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-well-architected.png"::: | <br> [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/): These articles outline the considerations that each workload owner should make when their workloads need to be deployed across hybrid and multicloud environments. |
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-architectures.png"::: | <br> [Reference architectures](/azure/architecture/browse/): These reference solutions aid in accelerating deployment for a number of common hybrid and multicloud scenarios. |
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-best-practices.png"::: | <br> Best practices: These level 300+ articles help central IT teams onboard assets to a unified operations solution using Azure Arc, ARM templates, and other relevant Azure products. |
@@ -35,8 +34,6 @@ Delivery of the full journey requires certain key components, or guidance sets:
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-skills.png"::: | <br> [Learn modules](/training/azure/): Gain the hands-on skills required to implement, maintain, and support hybrid and multicloud solutions. |
 
 ## Common customer challenges and supporting guidance
-
-**Prepare for centralized operations of hybrid and multicloud:** Review the seven [Cloud Adoption Framework](../../get-started/index.md) articles in the table of contents to the right. Establish the processes and approaches required to support an entire portfolio of workloads across hybrid and multicloud environments.
 
 **Monitor assets across an existing hybrid and multicloud portfolio:** Focus on the unified operations, govern, and manage articles to integrate unified operations into your existing operations processes. Use the ready article to deploy those improvements across all of your cloud environments.
 

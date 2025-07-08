@@ -68,7 +68,7 @@ The core services layer includes foundational services required to enable your d
 | `mgmt-rg` | Yes | CI/CD agents |
 | `external-data-rg` | Yes | External data storage |
 | `data-ingestion-rg` | Optional | Shared data ingestion services |
-| `shared-applications-rg` | Optional | Shared applications (Azure Synapse Analytics or Azure Databricks) |
+| `shared-applications-rg` | Optional | Shared applications (Azure Databricks) |
 
 ### Storage
 
@@ -89,7 +89,7 @@ For more information, see:
 
 ### Shared IRs
 
-Azure Data Factory and Azure Synapse Analytics pipelines use IRs to securely access data sources in peered or isolated networks. Shared IRs should be deployed to a virtual machine (VM) or Azure Virtual Machine Scale Sets in the shared IR resource group.
+Azure Data Factory pipelines use IRs to securely access data sources in peered or isolated networks. Shared IRs should be deployed to a virtual machine (VM) or Azure Virtual Machine Scale Sets in the shared IR resource group.
 
 To enable the shared resource group:
 
@@ -149,16 +149,13 @@ The following table describes services in this resource group.
 | Azure Data Factory | Yes | Azure Data Factory is your orchestration engine for data-agnostic ingestion. |
 | Azure SQL Database | Yes | SQL Database is the metastore for Azure Data Factory. |
 | Azure Event Hubs or Azure IoT Hub | Optional | Event Hubs or IoT Hub can provide real-time streaming to event hubs, plus batch and streaming processing via an Azure Databricks engineering workspace. |
-| Azure Databricks | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with your data-agnostic ingestion engine. |
-| Azure Synapse | Optional | You can deploy Azure Databricks or Azure Synapse Spark to use with the data-agnostic ingestion engine. |
+| Azure Databricks | Optional | You can deploy Azure Databricks to use with your data-agnostic ingestion engine. |
 
 ### Shared applications
 
 Use this optional resource group when you need to have a set of shared services made available to all the teams building data applications in this data landing zone. Use cases include:
 
 - An Azure Databricks workspace used as a shared metastore for all other Databricks workspaces created in the same data landing zone or region.
-
-- A shared Azure Synapse Analytics instance that uses serverless SQL pools to enable users to query across isolated storage accounts.
 
 > [!NOTE]
 > Azure Databricks uses Unity Catalog to govern access and visibility to metastores across Databricks workspaces. Unity Catalog is enabled at a tenant level, but metastores are aligned with Azure regions. This setup means that all Unity Catalog-enabled Databricks workspaces in a given Azure region must register with the same metastore. For more information, see [Unity Catalog best practices](/azure/databricks/data-governance/unity-catalog/best-practices).

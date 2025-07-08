@@ -1,10 +1,10 @@
 ---
 title: Network topology and connectivity for Oracle on Azure Virtual Machines
 description: Learn about network topology and connectivity for Oracle on Azure Virtual Machines.
-author: jjaygbay1
-ms.author: jacobjaygbay
+author: jessiehaessler
+ms.author: jhaessler
 ms.reviewer: ramakoni
-ms.date: 05/2/2024
+ms.date: 06/24/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
@@ -45,7 +45,7 @@ The Oracle database subnet should include an NSG that allows the following traff
 
 - If you use Azure Bastion to access the Oracle database server, make sure the **AzureBastionSubnet** includes an NSG that allows inbound traffic on port 443.
 
-- Configure proximity placement groups for Oracle application servers and Oracle database servers to minimize network latency.
+- If needed configure proximity placement groups for Oracle application servers and Oracle database servers to minimize network latency.
 
 - Use [accelerated networking](/azure/virtual-network/accelerated-networking-overview) to deploy all services.
 
