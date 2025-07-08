@@ -83,10 +83,11 @@ A cloud adoption plan compiles all architectural, operational, and cost decision
 
 5. **Align with standards and frameworks.** A cloud adoption plan must align with your organization’s project management office (PMO) standards and integrate into existing governance and delivery frameworks. This alignment ensures consistency in planning, reporting, and risk management across all cloud initiatives. You must embed cloud adoption activities into enterprise project structures to ensure visibility, accountability, and control.
 
+6. **Estimate timelines.** Use the data you have and business drivers to estimate the timelines for each workload to be production ready in Azure. This estimate should be an approximation. Don't spend too much time on this because timelines change and should be adjusted regularly.
+
 ## Next step
 
 By the end of the Plan phase, you have a cloud adoption roadmap that all stakeholders understand. You’ve made the big decisions: what goes to Azure, how it will go, when it will go, and who will do it. Now it’s time to get your Azure foundation ready.
 
 [CAF Ready](../ready/index.md)
-
 
