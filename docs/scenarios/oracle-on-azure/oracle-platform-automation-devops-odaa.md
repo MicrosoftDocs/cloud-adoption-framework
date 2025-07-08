@@ -43,9 +43,7 @@ Terraform modules and providers are available to deploy Oracle Database@Azure Ex
 
 ## Use Terraform Templates from Oracle
 
-To fully deploy Oracle Database@Azure Exadata, both Azure and Oracle Cloud Infrastructure (OCI) Terraform is required. 
-
-1. **Use Oracle templates**. Oracle [templates](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates) integrate modules from Azure and OCI into a unified deployment, streamlining the provisioning process. The most commonly used templates:
+To fully deploy Oracle Database@Azure Exadata, both Azure and Oracle Cloud Infrastructure (OCI) Terraform is required. Use Oracle [templates](https://github.com/oci-landing-zones/terraform-oci-multicloud-azure/tree/main/templates) integrate modules from Azure and OCI into a unified deployment, streamlining the provisioning process. The most commonly used templates:
 
     | Template | Description |
     | - | - |
@@ -58,20 +56,16 @@ To fully deploy Oracle Database@Azure Exadata, both Azure and Oracle Cloud Infra
 
 Oracle Database@Azure Exadata infrastructure and VM clusters can be fully deployed using Azure Terraform providers or AVM modules. However, only some properties can be updated using Azure REST APIs and Azure Terraform providers or modules. When an interface isn't available, OCI Terraform may be required to update the resource. For example, scaling operations are only available through OCI Terraform. Updating resources using OCI Terraform may lead to Terraform idempotency issues when Azure Terraform is run again
 
-1. **Use Terraform ```ignore_changes```.** To avoid idempotency issues, use the Terraform [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your Azure Terraform code.
- 
-  > [!NOTE]
-  > Failing to use ```ignore_changes``` on Azure Terraform can cause Terraform to attempt updates on non updatable properties, which can lead to unintended consequences such as:
-  > - Terraform trying to modify existing resources
-  > - Destruction and recreation of infrastructure or clusters
-  > 
-  > To prevent these disruptions, configure ```ignore_changes``` for any properties that aren't manageable through Azure.
+To avoid idempotency issues, use the Terraform [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature in your Azure Terraform code. Failing to use ```ignore_changes``` on Azure Terraform can cause Terraform to attempt updates on non updatable properties, which can lead to unintended consequences such as:
+
+- Terraform trying to modify existing resources
+- Destruction and recreation of infrastructure or clusters
+
+To prevent these disruptions, configure ```ignore_changes``` for any properties that aren't manageable through Azure.
 
 ## Use the Oracle Cloud Infrastructure (OCI) Terraform provider to configure Exadata
 
-Oracle Cloud Infrastructure (OCI) Terraform is required to configure Exadata after the infrastructure is deployed.
-
-1. **Configure Exadata with the Oracle Cloud Infrastructure (OCI) Terraform provider.** To configure the Oracle components, use the [Oracle Cloud Infrastructure (OCI) Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest). Example Oracle components:
+Oracle Cloud Infrastructure (OCI) Terraform is required to configure Exadata after the infrastructure is deployed. To configure the Oracle components, use the [Oracle Cloud Infrastructure (OCI) Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest). Example Oracle components:
 
     - Oracle Database Autonomous Recovery Service
     - Oracle Cloud Infrastructure Network Security Groups
