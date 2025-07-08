@@ -9,13 +9,24 @@ ms.topic: conceptual
 
 # Select your cloud migration strategies
 
-For each workload in your inventory, choose the most appropriate approach option: retire, retain, migrate as is (rehost), modernize (replatform, refactor, rearchitect), rebuild, and replace. Make this decision based on a knowledge of migration and modernization best practices. Selecting the appropriate migration strategy ensures that each workload aligns with business goals and maximizes cloud value. Follow these recommendations
+For each workload in your inventory, choose the most appropriate approach option: retire, retain, migrate as is (rehost), modernize (replatform, refactor, rearchitect), rebuild, and replace. Make this decision based on a knowledge of migration and modernization best practices. Selecting the appropriate migration strategy ensures that each workload aligns with business goals and maximizes cloud value. Follow these recommendations:
+
+| Business goal | Cloud migration strategy | Drivers | Example Success Metrics |
+|--------------|------------------------|---------|------------------------|
+| Eliminate workloads of limited value | Retire | • Workload has limited current business value<br>• Migration cost outweighs business benefits | • Retire 100% of workloads identified as obsolete before migration |
+| Adopt cloud with minimal disruption | Rehost | • Low risk migration<br>• Short-term cloud adoption goals<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure | • Migrate 100% of Tier 1 workloads from AWS to Azure with no SLA degradation<br>• Decommission 30% of on-premises infrastructure post-migration |
+| Modernize workload with minimal investment | Replatform | • Simplified reliability<br>• Easier disaster recovery<br>• Offload operating system security<br>• Reduce licensing costs<br>• Moderate time-to-cloud with some benefits.  | • Reduce deployment lead times by 30% for migrated applications<br>• Reduce infrastructure and licensing costs by 25% within 12 months |
+| Code changes deliver short- or long-term value | Refactor | • Decrease cost of maintenance<br>• Reduce technical debt <br>• Use Azure SDKs<br>• Improve code performance<br>• Optimize code costs<br>• Apply cloud design patterns<br>• Instrument code for monitoring | • Improve application response time by 40% using Azure-native services<br>• Achieve 95% observability coverage through code instrumentation |
+| Meet business requirements better | Rearchitect | • Meet new business requirements<br>• Targeted scaling<br>• Service-oriented architecture<br>• Easier adoption of new technologies<br>• Mix technology stacks | • Support 2x user load with no performance degradation<br>• Integrate 3 new Azure-native services into existing architecture |
+| Modernizing critical workload isn't worth it | Rebuild | • Legacy system is too outdated or inflexible<br>• Accelerate innovation<br>• Build applications faster<br>• Reduce operational cost<br>• Need modern frameworks and tools | • Launch new cloud-native application in 3 months vs. 6 months on-prem<br>• Cut operational costs by 40% using PaaS services |
+| SaaS solution meets needs | Replace | • Simplify operations<br>• Focus development effort on strategic apps<br>• Little need for customization | • Transition CRM to SaaS with 99.9% uptime and no custom code<br>• Shift 30% of dev effort to competitive differentiators |
+| Maintain stability and avoid unnecessary change | Retain | • Workload is stable, compliant, and meets current/future needs<br>• No near-term driver to move<br>•Low ROI from migration. | • Maintain current SLA and compliance posture<br>• Manage on-premises workloads from Azure using Azure Arc |
 
 ## Define business goals for each workload
 
 Clear business goals ensure that each migration decision delivers measurable value and justifies the investment in cloud adoption. Each workload must align with specific business outcomes to support organizational objectives. You must define business goals before you select a migration strategy to ensure strategic alignment. Follow these recommendations:
 
-1. **Identify specific business goals for each workload.** Business goals drive the urgency and type of migration strategy you apply. Common goals include cost reduction, operational efficiency, compliance requirements, innovation acceleration, and business agility improvements. Document these goals to create a clear foundation for decision-making.
+1. **Identify specific business goals for each workload.** Business goals drive the urgency and type of migration strategy you apply. Common goals include operational efficiency, compliance requirements, innovation acceleration, and business agility improvements. Document these goals to create a clear foundation for decision-making.
 
 2. **Define measurable success metrics for each goal.** Quantifiable metrics demonstrate the business value of migration decisions. Use metrics such as SLA improvements, cost savings percentages, deployment frequency increases, or user experience enhancements. Avoid metrics that only measure infrastructure relocation or technical completion, as these don't reflect business value.
 
@@ -92,21 +103,6 @@ Clear communication ensures all stakeholders understand and support migration de
 3. **Establish regular communication between mandate owners and execution teams.** Ongoing communication between decision makers and implementers ensures plans remain viable as technical realities emerge. Schedule regular progress reviews to track migration progress, identify risks, and address technical issues. Use this feedback loop to adjust migration strategies when implementation challenges or new opportunities arise.
 
 4. **Review and update migration strategies based on evolving requirements.** Business priorities and technical insights change throughout the migration process, requiring strategy adjustments. Establish a regular review cycle to reassess workload treatment decisions against current business goals and technical capabilities. Update strategy mappings to reflect new priorities, lessons learned, and changing organizational needs.
-
-## Align strategies with business goals
-
-Use the following table to map business goals to cloud adoption strategies, drivers, and success metrics:
-
-| Business Goal | Cloud migration strategy | Strategy validation | Example success metric |
-|---------------|----------------|---------|--------------------------|
-| Eliminate low-value workloads | Retire | Limited business value, high migration cost | Retire 100% of obsolete workloads |
-| Migrate quickly with low risk | Rehost | Fast migration, low risk, exit datacenter | Migrate 100% of Tier 1 workloads with no SLA degradation |
-| Improve operational efficiency | Replatform | Faster updates, cost efficiency | Reduce deployment lead times by 30% |
-| Improve code quality | Refactor | Address technical debt, use Azure SDKs | Improve response time by 40% |
-| Modernize architecture | Rearchitect | Enable scalability, adopt new tech | Support 2x user load with no performance degradation |
-| Deliver new capabilities | Rebuild | Accelerate innovation, reduce ops cost | Launch new app in 3 months |
-| Simplify operations | Replace | SaaS meets needs, reduce dev effort | Transition CRM to SaaS with 99.9% uptime |
-| Maintain stability | Retain | Stable, compliant, no migration driver | Maintain SLA and manage with Azure Arc |
 
 ## Next steps
 
