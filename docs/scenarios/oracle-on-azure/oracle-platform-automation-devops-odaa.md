@@ -13,8 +13,7 @@ This article builds on the guidance in [Platform automation and DevOps](/azure/c
 
 Oracle Database@Azure Exadata is an Oracle database service that runs on Oracle Cloud Infrastructure (OCI) and is colocated in Azure datacenters at Microsoft. This service applies the strengths of both Oracle and Azure to provide a robust, scalable, and high-performance database solution.
 
-This documentation provides design considerations and recommendations for deploying Oracle Database@Azure Exadata.
-
+This documentation provides design recommendations for deploying Oracle Database@Azure Exadata.
 
 ## Deploy with Infrastructure as Code (IaC)
 
@@ -29,8 +28,6 @@ Terraform modules and providers are available to deploy Oracle Database@Azure Ex
     | [azuread](https://registry.terraform.io/providers/hashicorp/azuread/latest) | The AzureAD provider is used to manage users, groups, service principals, and applications in Azure Active Directory using the Microsoft Graph API. 
     | [oci](https://registry.terraform.io/providers/oracle/oci/latest) | The Oracle Cloud Infrastructure (OCI) Terraform provider allows users to manage Oracle Cloud Infrastructure (OCI) resources using Terraform. It supports various OCI services and can be used with Terraform Cloud and OCI Resource Manager for automated deployment and operations.
 
-
-
 ## Use Azure Verified Modules
 
 [Azure Verified Modules (AVM)](https://aka.ms/avm) are available for Oracle Database@Azure Exadata infrastructure and cluster. AVM modules are designed to streamline the deployment and management of Azure resources, ensuring compliance with Microsoft's [Well-architected Framework (WAF)](https://aka.ms/waf), which emphasize reliability and security by default. Oracle Database@Azure Exadata Azure Verified Modules.
@@ -43,8 +40,6 @@ Terraform modules and providers are available to deploy Oracle Database@Azure Ex
     | [avm-res-oracledatabase-cloudvmcluster](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudvmcluster/azurerm/latest) | Terraform | [Resource](https://azure.github.io/Azure-Verified-Modules/specs/shared/module-classifications/) | Deploys Oracle Database@Azure Exadata VM Cluster |
     | [avm-res-network-virtualnetwork](https://registry.terraform.io/modules/Azure/avm-res-network-virtualnetwork/azurerm/latest) | Terraform | [Resource](https://azure.github.io/Azure-Verified-Modules/specs/shared/module-classifications/) | Deploys an Azure Virtual Network with subnets. |
     | [avm-ptn-odaa](https://registry.terraform.io/modules/Azure/avm-ptn-odaa/azurerm/latest) | Terraform | [Pattern](https://azure.github.io/Azure-Verified-Modules/specs/shared/module-classifications/) | Deploys a Virtual Network with Oracle delegated subnet, Exadata infrastructure, and an Exadata Virtual Machine cluster |
-
-
 
 ## Use Terraform Templates from Oracle
 
@@ -88,4 +83,4 @@ Oracle Cloud Infrastructure (OCI) Terraform is required to configure Exadata aft
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Capacity planning for Oracle Database@Azure](./Capacity planning for Oracle Database@Azure)
+> [Capacity planning for Oracle Database@Azure](/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure)
