@@ -95,6 +95,9 @@ Another example is [Microsoft Cloud for Sovereignty](/industry/sovereignty/cloud
 
 ### Tailor platform landing zone archetypes
 
+> [!NOTE]
+> The scenario detailed in this section became part of the Azure landing zone architecture, by default, in July 2025. However, you can still tailor the platform landing zone archetypes to meet your requirements following the example scenario.
+
 You might also want to tailor the area highlighted in orange underneath the **Platform** management group. The zones in this area are known as *platform landing zones*.
 
 For example, you might have a dedicated SOC team that requires its own archetype to host its workloads. These workloads need to meet Azure Policy and RBAC assignment requirements different from those of the **Management** management group. 
