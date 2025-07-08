@@ -32,7 +32,7 @@ Terraform modules and providers are available to deploy Oracle Database@Azure Ex
 
 [Azure Verified Modules (AVM)](https://aka.ms/avm) are available for Oracle Database@Azure Exadata infrastructure and cluster. AVM modules are designed to streamline the deployment and management of Azure resources, ensuring compliance with Microsoft's [Well-architected Framework (WAF)](https://aka.ms/waf), which emphasize reliability and security by default. Oracle Database@Azure Exadata Azure Verified Modules.
 
-1. **Deploy Azure Infrastructure using Azure Verified Modules.** To ensure that Oracle Database@Azure Exadata infrastructure deployments adhere to Azure Well Architected Framework best practices for reliability and security, use [Azure Verified Modules (AVMs)](https://aka.ms/avm) for deployment.  Oracle Database@Azure Exadata Azure Verified Modules: 
+Deploy Azure Infrastructure using Azure Verified Modules. To ensure that Oracle Database@Azure Exadata infrastructure deployments adhere to Azure Well Architected Framework best practices for reliability and security, use [Azure Verified Modules (AVMs)](https://aka.ms/avm) for deployment.  Oracle Database@Azure Exadata Azure Verified Modules: 
 
     | Azure Verified Module (AVM) | Language | Module Class | Description
     | - | - | - | - |
