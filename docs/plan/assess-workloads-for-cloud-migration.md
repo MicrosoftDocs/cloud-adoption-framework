@@ -9,28 +9,11 @@ ms.topic: conceptual
 
 # Assess your workloads for cloud migration
 
-This article helps you conduct thorough workload assessments to collect the necessary information for successful migration decisions. A comprehensive assessment clarifies workload architecture, requirements, and cloud readiness before you migrate to Azure.
+This article helps you conduct thorough workload assessments to collect the necessary information for successful migration decisions. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases).
 
-## Use the right assessment tools for your workload type
+[!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
-Assessment tools provide automated discovery and evaluation capabilities that reduce manual effort and improve accuracy. Different workload types require different tools and approaches. You must select the appropriate tools based on your workload's current hosting environment and type. Follow this guidance:
-
-1. **Start with Azure Migrate for on-premises workloads.** Azure Migrate provides comprehensive discovery and assessment capabilities for servers, databases, and applications hosted on-premises. This tool integrates with Azure Arc for Arc-enabled servers and offers built-in compatibility checks for Azure services.
-
-2. **Use Azure Migrate for other cloud IaaS workloads.** Azure Migrate supports discovery and assessment of AWS EC2 instances and GCP Compute Engine resources. This tool provides sizing recommendations and cost estimates for migrating these workloads to Azure.
-
-3. **Apply specialized tools for PaaS workloads from other clouds.** PaaS workloads require different assessment approaches because they use cloud-specific services. Use AWS Resource Explorer or GCP Cloud Asset Inventory for discovery, then apply tools like Cloudockit or Azure service mapping guides to plan your migration strategy.
-
-4. **Use AppCAT for code assessment.** AppCAT provides detailed compatibility analysis for .NET and Java applications. This tool identifies deprecated APIs, unsupported SDKs, and configuration issues that could affect Azure migration.
-
-| Target | Discover | Assess | Example target |
-|--------|----------|--------|----------------|
-| On-premises | - Azure Migrate<br>- [Azure Arc](/azure/azure-arc/servers/scenario-migrate-to-azure) for Arc-enabled servers | [Azure Migrate](/azure/migrate/tutorial-discover-physical) | - Servers<br>- Databases<br>- Applications |
-| Other cloud – IaaS | [Azure Migrate](/azure/migrate/tutorial-discover-physical) | [Azure Migrate](/azure/migrate/tutorial-discover-physical) | - AWS EC2<br>- GCP Compute Engine |
-| Other cloud – PaaS | - AWS Resource Explorer<br>- GCP Cloud Asset Inventory | - Cloudockit<br>- [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics)<br>- [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) | - AWS Lambda, AWS Beanstalk<br>- GCP BigQuery, Google App Engine |
-| Code | - CAST Highlight<br>- CloudAtlas | - [AppCAT](/azure/migrate/appcat/overview)<br>- CAST Highlight<br>- Cloud Pilot | - GitHub<br>- Azure Repos<br>- GitLab |
-
-## Document workload architecture completely
+## Assess workload architecture
 
 Complete architectural documentation ensures visibility into workload components and dependencies. This visibility supports accurate migration planning and reduces risk by identifying potential issues before migration begins. You must collect and validate architectural data for each workload to ensure successful migration. Follow this guidance:
 
@@ -40,7 +23,7 @@ Complete architectural documentation ensures visibility into workload components
 
 3. **Capture architecture in a central repository.** Store architecture diagrams, component lists, and configuration data in a format that supports planning and validation. Use tools like Microsoft Visio, spreadsheets, or Azure DevOps wikis to maintain this information.
 
-### Understand each workload component in detail
+### Assess architecture component requirements
 
 Detailed component understanding ensures correct sizing and configuration in Azure. This knowledge prevents performance issues and compatibility problems after migration. You need to gather detailed specifications for each component to make informed migration decisions. Follow this guidance:
 
@@ -50,7 +33,7 @@ Detailed component understanding ensures correct sizing and configuration in Azu
 
 3. **Document security and identity configurations.** Capture authentication methods, access controls, and encryption settings to ensure compliance requirements are met in Azure. This information supports security planning and regulatory compliance.
 
-### Map internal dependencies accurately
+### Map internal dependencies
 
 Internal dependency mapping ensures that interconnected components migrate together without service disruptions. This step prevents broken integrations and supports accurate migration sequencing. You must identify and document all internal dependencies to maintain application functionality. Follow this guidance:
 
@@ -60,7 +43,7 @@ Internal dependency mapping ensures that interconnected components migrate toget
 
 3. **Document dependencies in a central repository.** Store dependency data in spreadsheets, architecture diagrams, or dependency mapping tools. Ensure the format supports migration planning and sequencing decisions across multiple teams.
 
-### Map external dependencies comprehensively
+### Map external dependencies
 
 External dependency mapping ensures that applications maintain connectivity and performance after migration. This step helps define move groups and migration order based on system interdependencies. You must identify and plan for all external dependencies to avoid service disruptions. Follow this guidance:
 
@@ -88,7 +71,7 @@ ISV integration validation ensures that third-party software continues to functi
 
 3. **Update the migration plan based on ISV findings.** Adjust timelines, budgets, or architecture based on ISV compatibility and licensing requirements. This adjustment prevents surprises during migration execution.
 
-## Assess application code for Azure compatibility
+## Assess application code
 
 Application code assessment reduces the risk of migration failure and helps you plan migration waves effectively. Code-level issues can prevent applications from running correctly in Azure. You need to determine if migrating to Azure breaks the application and identify required changes. Follow this guidance:
 
@@ -108,7 +91,7 @@ Framework and SDK compatibility ensures that your application runs reliably on A
 
 2. **Avoid unnecessary framework changes.** Only migrate to a new framework (such as .NET Framework to .NET Core) if there is a strong business justification. Framework changes require significant development effort and testing.
 
-## Assess database dependencies and integration
+## Assess databases
 
 Database dependencies often determine the success of application migration. Shared databases, cross-application dependencies, and integration patterns can complicate migration planning. You must assess the databases that support your applications and understand their dependencies. Follow this guidance:
 
@@ -118,7 +101,7 @@ Database dependencies often determine the success of application migration. Shar
 
 3. **Determine database migration strategy.** Decide whether to move the database as a shared instance or split it by workload. Shared databases can limit migration flexibility, while splitting databases increases complexity. Align the strategy with your migration wave planning.
 
-## Azure resources
+## Azure resources and tools
 
 | Category | Tool | Description |
 |----------|------|-------------|
@@ -128,6 +111,12 @@ Database dependencies often determine the success of application migration. Shar
 | Database Migration | [Data Migration Assistant](/sql/dma/dma-overview) | Assessment and migration tool for SQL Server databases |
 | Multi-cloud mapping | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Service comparison guide for AWS to Azure migration |
 | Multi-cloud mapping | [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) | Service comparison guide for GCP to Azure migration |
+| Azure Development | [.NET on Azure](/azure/dotnet/azure/intro#access-azure-services-from-net-applications) | Guidance for accessing Azure services from .NET applications |
+| Azure Development | [Java on Azure](/azure/developer/java/) | Resources for Java developers building on Azure |
+| Azure Development | [Python on Azure](/azure/developer/python/get-started#write-your-python-app) | Resources for Python developers building on Azure |
+| Azure Development | [JavaScript and Node.js on Azure](/azure/developer/javascript/core/what-is-azure-for-javascript-development#use-azure-client-libraries-with-javascript) | Guidance for JavaScript and Node.js development on Azure |
+| Azure Development | [Go on Azure](/azure/developer/go/overview) | Resources for Go developers building on Azure |
+| Cloud Adoption Framework | [Define reliability requirements](/azure/cloud-adoption-framework/manage/protect#define-reliability-requirements) | Guidance for defining reliability requirements for cloud workloads |
 
 ## Next steps
 

@@ -11,35 +11,39 @@ ms.topic: conceptual
 
 This article defines how to create accurate cost estimates for your Azure environment by documenting architectural decisions and service selections. A basic architecture provides the context required to estimate costs with precision. This foundational understanding ensures that cost models reflect the actual scope of services, platform dependencies, and operational requirements. Without this clarity, cost estimates lack the specificity needed for planning and governance.
 
-## Plan your platform architecture
+## Plan your architecture
 
-A platform architecture defines the shared services and centralized management capabilities that support all workloads in your Azure environment. This architecture is essential for estimating platform-level costs and planning for operational readiness. Follow these recommendations:
+The architecture of your Azure environment includes your platform and all workloads. You need to have a general architecture plan, which you can modify and refine later, to estimate the total cost of ownership in Azure. Follow this guidance.
 
-1. **Use an Azure landing zone as the foundation for your platform architecture.** Azure landing zones provide a scalable and secure foundation for enterprise environments. They include critical components such as identity, network, and governance controls. Use the guidance in [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
+1. **Plan your platform architecture.** A platform architecture defines the shared services and centralized management capabilities that support all workloads in your Azure environment. This architecture is essential for estimating platform-level costs and planning for operational readiness. Follow these recommendations:
 
-2. **Defer platform architecture for early-stage startups.** Startups or small teams can begin without implementing shared services, hybrid or multi-cloud connectivity, or on-premises identity management. Instead, implement a thoughtful resource hierarchy to organize and govern resources. As your environment scales, incrementally adopt Azure landing zone components to support growth and governance.
+    - **Use an Azure landing zone as the foundation for your platform architecture.** Azure landing zones provide a scalable and secure foundation for enterprise environments. They include critical components such as identity, network, and governance controls. Use the guidance in [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-## Plan your workload architecture
+    - **Defer platform architecture for early-stage startups.** Startups or small teams can begin without implementing shared services, hybrid or multi-cloud connectivity, or on-premises identity management. Instead, implement a resource hierarchy to organize and govern resources. As your environment scales, incrementally adopt Azure landing zone components to support growth and governance.
 
-A workload architecture defines the Azure services, regions, and configurations required to meet business and technical requirements. Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements.
+2. **Plan your workload (application) architecture.** A workload architecture defines the Azure services, regions, and configurations required to meet business and technical requirements. Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements. Use the [Azure Architecture Center](/azure/architecture/browse/) to get ideas. You can download most of the diagrams and tweak them to fit your needs.
 
-## Pick the right Azure services
+## Select the appropriate Azure services
 
-For platform and workload resources, outline the services you should use based on your requirements. Follow these recommendations:
+Azure offers hundreds of cloud services with different capabilities and pricing models. You need to choose the right services for your platform and workload requirements to create accurate cost estimates. Service selection directly impacts both initial and ongoing costs in your environment. Follow these recommendations:
 
-1. **Use the Azure Architecture Center and decision guides to select services.** Use the [Azure Architecture Center](/azure/architecture/browse/) and [Azure technology decision guides](/azure/architecture/guide/technology-choices/technology-choices-overview) to identify the most appropriate services for your scenario. For those migrating from other clouds, use the [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) or [GCP to Azure service mapping](/azure/architecture/gcp-professional/services).
+1. **Use decision guides to select optimal services.** Decision guides help you navigate the complexity of Azure's service catalog and identify cost-effective options for your specific requirements. Use [Azure technology decision guides](/azure/architecture/guide/technology-choices/technology-choices-overview) to evaluate and select appropriate services based on technical requirements.
 
-2. **Plan to prefer managed services.** Use Platform as a Service (PaaS) offerings unless infrastructure-level control is required.
+2. **Choose managed services for cloud-native workloads.** Managed services (PaaS offerings) provide reduced operational overhead compared to infrastructure services for security, reliability, and performance. Select platform as a service (PaaS) offerings for new workloads unless you require specific infrastructure-level control for performance, compliance, or compatibility reasons. This approach reduces operational costs and minimizes the need for infrastructure management. See [CAF Innovate](../innovate/index.md) for cloud-native guidance.
 
-3. **Plan to standardize service selection.** Define and enforce service selection standards to reduce support complexity and prevent cost sprawl. Standardization improves operational efficiency and simplifies governance. For guidance, see [CAF Govern](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
+3. **Align service selection with your migration strategy.** Your migration approach determines which Azure services best fit your workloads. For rehosting (like-for-like) migrations, select services that match your current environment. For replatforming adn rearchitecting efforts, identify appropriate PaaS solutions that best support your modernized architecture. If you are migrating from other cloud providers, use the [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) or [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) to find the right services.
+
+4. **Establish service selection standards.** Create consistent service selection guidelines across your organization to improve cost management and operational efficiency. Define and document standard service selections for common workload patterns to prevent unnecessary variation. These standards reduce support complexity, enable volume discounts, and simplify governance controls. For implementation guidance, see [CAF Govern](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
 
 ## Choose the right service tier
 
-Each Azure service offers multiple SKUs or tiers with different performance and availability characteristics. You must select the right SKU based on workload requirements. Follow these recommendations:
+Each Azure service offers multiple service tiers (or SKUs) with different performance and availability characteristics. You must select the right SKU based on workload requirements. Follow these recommendations:
 
-1. **Use historical data for migrated workloads.** For workloads you migrate, use performance and usage data gathered during the assessment phase to select the appropriate SKU.
+1. **Use historical data for migrated workloads.** For workloads you migrate, use the [architecture component requirements](./assess-workloads-for-cloud-migration.md#assess-architecture-component-requirements) you gathered during the assessment phase to select the appropriate SKU.
 
-2. **Ensure high availability for critical workloads.** Choose SKUs that support Availability Zones for Mission Critical and Business Critical workloads.
+2. **Use target metrics for new workloads.** For new workloads, use the estimated user base and tests to pick the right service tier.
+
+3. **Ensure high availability for critical workloads.** Choose service tiers that support Availability Zones for Mission Critical and Business Critical workloads.
 
 ## Choose single region or multiregion deployment
 

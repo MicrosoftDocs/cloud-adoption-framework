@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 A shared management operating model enables organizations to scale cloud adoption while maintaining governance and agility. This model becomes more effective when platform teams adopt a product mindset, delivering reusable, self-service capabilities that accelerate workload team success. This approach aligns with the emerging industry trend of platform engineering, where internal platform teams build and operate shared services as products for the rest of the organization.
 
-## Adopt a shared management model to balance agility and control
+## Adopt a shared management model
 
 A shared management model enables organizations to scale cloud adoption while maintaining governance and agility across hybrid and multi-cloud environments. This approach is particularly effective for customers who retain on-premises estates while building parallel cloud estates in Azure. You need to adopt this model to ensure consistency and control across both environments. Follow this guidance:
 
