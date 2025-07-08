@@ -47,9 +47,6 @@ You must follow Azure general naming conventions while accounting for Oracle Dat
 
 When you name Oracle Database@Azure resources, use the [Azure general naming conventions](../../ready/azure-best-practices/naming-and-tagging.md) as a baseline. Consider the resource constraints when you define conventions for Oracle Database@Azure. Some resource types, like virtual machine (VM) clusters, have specific naming constraints, such as [character limits and allowed characters](/azure/oracle/oracle-db/provision-oracle-database). For more information, see:
 
-- [Azure resource naming](../../ready/azure-best-practices/resource-naming.md)
-
-- [Develop your naming and tagging strategy for Azure resources](../../ready/azure-best-practices/naming-and-tagging.md)
 
 - [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources)
 
