@@ -80,7 +80,7 @@ Two areas of the hierarchy are highlighted. One is underneath **Landing Zones**,
 
 ### Tailor application landing zone archetypes
 
-Notice the area highlighted in blue underneath the **Landing Zones** management group. It's the *most common and safest place* in the hierarchy to add more archetypes to meet new or more requirements that can't be added as more policy assignments to an existing archetype by using the existing hierarchy.
+Notice the area highlighted in green underneath the **Landing Zones** management group. It's the *most common and safest place* in the hierarchy to add more archetypes to meet new or more requirements that can't be added as more policy assignments to an existing archetype by using the existing hierarchy.
 
 For example, you might have a new requirement to host a set of application workloads that need to meet payment card industry (PCI) compliance requirements. But this new requirement doesn't need to apply to all workloads across your entire estate.
 
