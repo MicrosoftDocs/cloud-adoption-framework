@@ -74,7 +74,7 @@ As mentioned, we provide common landing zone archetypes in [Azure landing zone c
 
 Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone conceptual architecture.
 
-![Diagram that shows Azure landing zone default hierarchy with tailoring areas highlighted.](media/alz-tailor-hierarchy-default.png)
+:::image type="content" source="./media/alz-tailor-hierarchy-default.png" alt-text="Diagram that shows Azure landing zone default hierarchy with tailoring areas highlighted." lightbox="./media/alz-tailor-hierarchy-default.png":::
 
 Two areas of the hierarchy are highlighted. One is underneath **Landing Zones**, and the other is underneath **Platform**.
 
@@ -107,7 +107,7 @@ Now you can place new or move existing Azure subscriptions into the new **Securi
 
 The following diagram shows a tailored Azure landing zone hierarchy. It uses examples from the preceding diagram.
 
-![Diagram that shows a tailored Azure landing zone hierarchy.](media/alz-tailor-hierarchy-2-additional.png)
+:::image type="content" source="./media/alz-tailor-hierarchy-2-additional.png" alt-text="Diagram that shows a tailored Azure landing zone hierarchy." lightbox="./media/alz-tailor-hierarchy-2-additional.png":::
 
 ## Points to consider
 
