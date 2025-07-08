@@ -1,47 +1,51 @@
 ---
-title: Resource Organization for Oracle Database@Azure
-description: Learn about design considerations and recommendations for how to organize resources and optimize deployments in Oracle Database@Azure.
+title: Organize Oracle Database@Azure resources for consistent deployments
+description: Establish consistent deployment patterns and optimize Azure subscriptions through effective Oracle Database@Azure resource organization strategies.
 author: sihbher
 ms.author: gereyeso
 ms.reviewer: gereyeso
-ms.date: 02/08/2025
+ms.date: 07/08/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle, references_regions
 ---
 
-# Resource organization for Oracle Database@Azure
+# Organize Oracle Database@Azure resources for consistent deployments
 
-This article helps you organize Oracle Database@Azure resources effectively to create consistent deployment patterns and optimize your Azure subscriptions.
+This article provides guidance to organize Oracle Database@Azure resources across Azure subscriptions and establish consistent deployment patterns. Proper resource organization reduces operational complexity and improves security posture for Oracle database workloads.
 
 Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud Infrastructure (OCI) hardware colocated in Microsoft datacenters. You can deploy two types of Oracle Database@Azure services:
 
 1. **Oracle Exadata Database@Azure**: Dedicated Exadata racks that you provision and operate inside your Azure subscriptions.
 2. **Oracle Autonomous Database@Azure**: Fully managed, self-driving Autonomous Databases that run on shared Exadata infrastructure.
-1. **Oracle Exadata Database@Azure**: Dedicated Exadata racks that you provision and operate inside your Azure subscriptions.
-2. **Oracle Autonomous Database@Azure:** Fully managed, self‑driving Autonomous Databases running on shared Exadata infrastructure.
 
-This article expands on considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/resource-org.md). It incorporates best practices for organizing resources to create consistent deployment patterns for Oracle Database@Azure Services.
+This article expands on considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/resource-org.md). These recommendations help you create consistent deployment patterns for Oracle Database@Azure services.
 
 
 ## Establish naming and tagging conventions
 
-Naming conventions provide consistency across Oracle Database@Azure resources and reduce management complexity. Standard naming patterns help teams identify resources quickly and maintain operational efficiency.
-
-You must follow Azure general naming conventions while accounting for Oracle Database@Azure-specific constraints. Here's how:
+Consistent naming conventions reduce management complexity and enable teams to identify Oracle Database@Azure resources quickly. These conventions provide operational efficiency and support governance policies across your deployment. You must implement standardized naming patterns that accommodate both Azure requirements and Oracle-specific constraints. Here's how:
 
 1. **Apply Azure baseline naming standards consistently.** The [Azure general naming conventions](../../ready/azure-best-practices/naming-and-tagging.md) establish patterns for resource identification and organization. These conventions work with Oracle Database@Azure resources but require adjustments for Oracle-specific limitations like character restrictions and length limits.
 
 2. **Account for Oracle Database@Azure resource constraints.** VM clusters and database instances have specific naming requirements that differ from standard Azure resources. Oracle Autonomous Database@Azure instance names accept only letters and numbers, limit names to 30 characters maximum, and prohibit spaces or special characters.
 
-3. **Create environment-specific naming patterns.** Use consistent patterns that identify the environment, application, and purpose of each Oracle Database@Azure instance. Examples include:
-
-  | Environment | Application Type | Azure Region | Example Name |
-  |-------------|------------------|--------------|--------------|
-  | Production | ERP applications | East US | adbeuserpprod |
-  | Disaster Recovery | HR applications | Canada Central | adbcachrdr |
-  | Quality Assurance | Business Intelligence | Australia East | adbaueabiqa |
+3. **Create environment-specific naming patterns.** Use consistent patterns that identify the environment, application, and purpose of each Oracle Database@Azure instance. This standardization simplifies resource management and improves operational visibility across your deployment.
 
 4. **Implement comprehensive tagging strategies.** Tags organize resources, track costs, and enforce governance policies across Oracle Database@Azure deployments. Apply tags for environment classification, cost center allocation, application ownership, and compliance requirements to maintain visibility and control.
+
+### Apply naming conventions for Oracle Database@Azure
+
+Oracle Database@Azure resources have specific naming constraints that require careful consideration. Virtual machine clusters have character limits and allowed character restrictions that differ from standard Azure resources. You must understand these constraints to create effective naming patterns. Use the [Azure general naming conventions](../../ready/azure-best-practices/naming-and-tagging.md) as your baseline and adapt them for Oracle Database@Azure requirements.
+
+Oracle Autonomous Database@Azure instance names can contain only letters and numbers, have a maximum length of 30 characters, and cannot include spaces. Create a consistent naming pattern that clearly identifies the environment, application, and purpose of each Oracle Autonomous Database@Azure instance:
+
+| Environment | Application Type | Azure Region | Example Name |
+|-------------|------------------|--------------|--------------|
+| Production | ERP applications | East US | adbeuserpprod |
+| Disaster Recovery | HR applications | Canada Central | adbcachrdr |
+| Quality Assurance | Business Intelligence | Australia East | adbaueabiqa |
+
+For more information about character limits and allowed characters, see [Provision Oracle Database@Azure](/azure/oracle/oracle-db/provision-oracle-database).
 
 ### Naming and tagging conventions
 
@@ -73,12 +77,16 @@ You must implement comprehensive isolation measures that protect both Oracle Dat
 
 For comprehensive guidance on isolation architectures, see [best practices for isolation architectures](/entra/architecture/secure-best-practices).
 
-To enhance security and management in multiple subscription architectures, implement [best practices for isolation architectures](/entra/architecture/secure-best-practices). These practices include strategies for logical isolation, least privilege access, and network segmentation. These measures are relevant for Oracle Database@Azure deployments that include multiple environments, such as production, development, and disaster recovery (DR) environments.
 
+## Use multiple subscription architecture
 
-## Subscription recommendations
+Multiple subscription architectures provide environment isolation and improve security posture for Oracle Database@Azure deployments. Each environment operates within its own Azure subscription boundary to create clear separation for security, networking, cost allocation, and management purposes. This isolation prevents cross-environment access and reduces the impact radius during security incidents or operational issues. You must design a subscription model where each environment receives its own Azure subscription. Here's how:
 
-These recommendations address subscription design requirements and provide actionable guidance for Oracle Database@Azure deployments.
+1. **Create environment-specific subscriptions.** Establish separate Azure subscriptions for production, development, testing, and disaster recovery environments. This subscription isolation prevents cross-environment access and reduces the impact radius during security incidents or operational issues.
+
+2. **Configure subscription billing alignment.** Ensure all subscriptions use the same billing account as the primary subscription to maintain consistent cost management and avoid billing complications across your Oracle Database@Azure deployment.
+
+3. **Plan for workload isolation in production.** For mission-critical workloads that use Oracle Autonomous Database@Azure, create separate production subscriptions for each major application to minimize impact radius and simplify role-based access control management.
 
 ### Verify onboarding permissions
 
@@ -140,22 +148,38 @@ The following diagram illustrates a multiple subscription setup for Oracle Exada
 
 2. **Configure shared Exadata infrastructure.** Oracle Exadata Database@Azure infrastructure can be [shared across multiple environments](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription#use-multiple-azure-subscriptions-with-oracle-databaseazure) including production, development, unit testing, and system integration testing. This shared infrastructure approach optimizes resource utilization while maintaining environment isolation through separate Azure subscriptions.
 
-Consider the following factors when you design the subscription setup for Oracle Database@Azure.
+Consider these factors when you design the subscription setup for Oracle Database@Azure:
 
 - **Primary subscription:** During onboarding, you choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all Oracle Database@Azure deployments.
   - **Onboarding permissions and resource providers:** See the Onboarding permissions table in the [Oracle documentation](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm#oaaprereq_1_permissions__onboarding-permissions-table-title) for the minimum Azure and OCI roles required.
-  - **Resource registration:** Oracle Database@Azure run on Azure as a bare metal service. Make sure you registered these resource providers as documented in [step 4 of this document](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm) before you begin Oracle Database@Azure onboarding. 
+  - **Resource registration:** Oracle Database@Azure operates on Azure as a bare metal service. Register these resource providers as documented in [Oracle prerequisites](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm) before you begin Oracle Database@Azure onboarding:
     - Oracle.Database
     - Microsoft.BareMetal/BareMetalConnections/read
     - Microsoft.BareMetal/BareMetalConnections/write
     - Microsoft.BareMetal/BareMetalConnections/delete
 
+- **Secondary subscriptions:** When you expand into secondary subscriptions, Oracle Exadata Database@Azure VM clusters in these subscriptions default to the same availability zone that you chose in the primary subscription. Align application services with the availability zone of the VM cluster to ensure performance, high availability, and redundancy.
 
-- **Secondary subscriptions:** When you expand into secondary subscriptions, Oracle Exadata Database@Azure VM clusters in these subscriptions default to the same availability zone that you chose in the primary subscription. Align application services with the availability zone of the VM cluster to help ensure performance, high availability, and redundancy.
+- **Resource groups:** Within each subscription, resources such as Oracle Exadata Database@Azure VM clusters, virtual networks, and supporting infrastructure can be organized into different resource groups. This setup allows for the logical separation and management of resources and enables flexibility in how infrastructure components are deployed and maintained.
 
-- **Resource groups:** Within each subscription, resources such as  Oracle Exadata Database@Azure VM clusters, virtual networks, and supporting infrastructure can be organized into different resource groups. This setup allows for the logical separation and management of resources. And it enables flexibility in how infrastructure components are deployed and maintained.
+## Azure resources
 
-## Design recommendations
+The following table lists Azure tools and resources that support Oracle Database@Azure resource organization recommendations:
+
+| Category | Tool | Description |
+|----------|------|-------------|
+| Resource Organization | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | Provides deployment and management capabilities for Oracle Database@Azure resources across multiple subscriptions |
+| Cost Management | [Microsoft Cost Management](/azure/cost-management-billing/costs/overview-cost-management) | Tracks expenses and usage patterns across Oracle Database@Azure deployments in multiple subscriptions |
+| Identity and Access | [Microsoft Entra ID](/entra/fundamentals/whatis) | Manages user identities and access permissions for Oracle Database@Azure resources |
+| Resource Tagging | [Azure Resource Tags](/azure/azure-resource-manager/management/tag-resources) | Organizes Oracle Database@Azure resources for cost allocation and governance |
+| Security Monitoring | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Provides unified security management for Oracle Database@Azure resources |
+| Network Security | [Azure Network Security Groups](/azure/virtual-network/network-security-groups-overview) | Controls network access to Oracle Database@Azure resources |
+| Monitoring and Alerts | [Microsoft Sentinel](/azure/sentinel/overview) | Delivers security information and event management for Oracle Database@Azure deployments |
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
 
 ### Subscription design recommendations
 
