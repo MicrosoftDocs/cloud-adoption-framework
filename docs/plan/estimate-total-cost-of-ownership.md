@@ -37,13 +37,13 @@ Azure offers hundreds of cloud services with different capabilities and pricing 
 
 ## Choose the right service tier
 
-Each Azure service offers multiple service tiers (or SKUs) with different performance and availability characteristics. You must select the right SKU based on workload requirements. Follow these recommendations:
+Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, and availability. Selecting the right tier is essential to meet workload-specific requirements and avoid over- or under-provisioning. You must evaluate both existing and new workloads to determine the most appropriate service tier.
 
-1. **Use historical data for migrated workloads.** For workloads you migrate, use the [architecture component requirements](./assess-workloads-for-cloud-migration.md#assess-architecture-component-requirements) you gathered during the assessment phase to select the appropriate SKU.
+1. **Use assessment data to select SKUs for migrated workloads.** Assessment data includes performance baselines, usage patterns, and architecture dependencies. This data helps you map existing workload characteristics to equivalent Azure SKUs. Use the [architecture component requirements](./assess-workloads-for-cloud-migration.md#assess-architecture-component-requirements) gathered during the assessment phase to guide SKU selection. This approach ensures continuity and minimizes performance regressions after migration.
 
-2. **Use target metrics for new workloads.** For new workloads, use the estimated user base and tests to pick the right service tier.
+2. **Use performance targets and usage estimates for new workloads.** New cloud-native workloads lack historical data, so you must define expected usage patterns and performance targets. Estimate user concurrency, transaction volumes, and latency requirements. Use these estimates to select a starting SKU, then validate it through performance testing and iterative scaling. This approach helps you right-size from the start and avoid unnecessary costs.
 
-3. **Ensure high availability for critical workloads.** Choose service tiers that support Availability Zones for Mission Critical and Business Critical workloads.
+3. **Select high-availability SKUs for critical workloads.** Mission-critical and business-critical workloads require high availability and fault tolerance. Choose service tiers that support Availability Zones or zone-redundant configurations. These tiers provide resilience against datacenter-level failures and meet enterprise availability SLAs. Review the service-specific availability options to ensure alignment with your workload’s recovery objectives.
 
 ## Choose single region or multiregion deployment
 
