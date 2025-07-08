@@ -63,8 +63,6 @@ items:
           href: plan/smart-assessment.md
         - name: Other resources
           items:
-          - name: Plan antipatterns
-            href: antipatterns/plan-antipatterns.md
           - name: Digital estate
             items:
             - name: The five Rs of rationalization
