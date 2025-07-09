@@ -8,15 +8,9 @@ ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
-# Business continuity and disaster recovery considerations for Oracle Autonomous Database@Azure
+# Business continuity and disaster recovery for Oracle Autonomous Database@Azure
 
-This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations described in the  [Azure landing zone design area](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery). It incorporates the  [Oracle Maximum Availability Architecture (MAA)](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) principles for Oracle Database@Azure by using Oracle Autonomous Database Service. 
-
-You must identify the availability requirements for your solution to build a resilient architecture for your Oracle databases that run on Oracle Database@Azure. Establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including planned and unplanned events. RTO defines the maximum downtime that an application or business can tolerate after a disruption. RPO specifies the maximum duration of data loss that an application or business can tolerate. Address these prerequisites before you start your BCDR design. After you establish your solution requirements, you can design your Oracle Database@Azure environment to align with your RTO and RPO targets. 
-
-For more information, see the Microsoft Azure Well-Architected Framework's guidelines about how to design a  [DR strategy](https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery). 
-
-## Design considerations
+## Platform Design Principles
 
 - The Oracle Autonomous Database@Azure service is a shared, serverless service that runs on Oracle Exadata Infrastructure within a region. The Exadata Infrastructure is built in a highly available setup by design which runs on a VM cluster and mirrored storage servers. 
 
@@ -78,7 +72,7 @@ For paired region mapping documentation, see:
 
 - Network connectivity between primary and standby Oracle Autonomous Database@Azure instances is handled through OCI managed network when establishing Autonomous Data Guard. 
 
-## Design Considerations - Backup/Restore
+## Backup and Recovery Guidelines
 - Oracle Autonomous Database@Azure offers two backup options:
 
     1. Automatic Backup: 

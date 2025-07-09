@@ -8,13 +8,7 @@ ms.topic: conceptual
 ms.custom: e2e-oracle
 --- 
 
-# Business continuity and disaster recovery considerations for Oracle Database@Azure
-
-This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). It incorporates the [Oracle Maximum Availability Architecture (MAA)](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) principles for Oracle Database@Azure by using Oracle Exadata Database Service.
-
-The first step to building a resilient architecture for your Oracle databases that run on Oracle Database@Azure is to identify the availability requirements for the solution. It's crucial to establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including planned and unplanned events. The RTO defines the maximum downtime that an application or business can tolerate after a disruption. The RPO specifies the maximum duration of data loss that an application or business can tolerate. You should address this prerequisite before you start your BCDR design. After you establish the requirements of your solution, you can design your Oracle Database@Azure environment to align with your RTO and RPO.
-
-For more information, see the Microsoft Azure Well-Architected Framework's guidelines about how to [design a DR strategy](/azure/well-architected/reliability/disaster-recovery).
+# Business continuity and disaster recovery considerations for Oracle Exadata Database@Azure
 
 ## Design considerations
 

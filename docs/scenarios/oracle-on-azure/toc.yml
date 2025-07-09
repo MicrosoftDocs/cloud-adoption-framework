@@ -42,7 +42,12 @@ items:
         - name: Business continuity and disaster recovery for Oracle on Azure virtual machines
           href: oracle-disaster-recovery-iaas.md
         - name: Business continuity and disaster recovery for Oracle Database@Azure
-          href: oracle-disaster-recovery-oracle-database-azure.md
+          href: bcdr-odaa.md
+          items:
+          - name: Business Continuity and Disaster Recovery for Oracle Exadata Database@Azure
+            href: oracle-disaster-recovery-oracle-database-azure-exadata.md
+          - name: Business Continuity and Disaster Recovery for Oracle Autonomous Database@Azure
+            href: oracle-disaster-recovery-oracle-database-azure-autonomous.md
       - name: Resource organization
         items:
         - name: Resource organization for Oracle Database@Azure
