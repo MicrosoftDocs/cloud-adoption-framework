@@ -48,11 +48,7 @@ Modernization during migration refers to replatforming, rearchitecting, or refac
 
 2. **Modernize workloads that require compatibility updates.** Legacy technologies, unsupported SDKs, or the need to adopt SaaS solutions may require modernization. Justify each effort with a clear business case.
 
-3. **Modernize problematic workloads.** Rehosting does not resolve underlying problems. If a workload is critical and underperforming, modernize it during migration to improve reliability and efficiency.
-
-4. **Modernize when migration enables funding and alignment.** Migration projects often unlock funding and stakeholder support. Use this opportunity to align modernization with business priorities. Delaying may result in inefficient workloads and missed opportunities.
-
-5. **Validate operational impacts before selecting PaaS services.** Moving to PaaS does not always reduce costs. Assess the total cost of ownership, including operational, licensing, and support costs. Compare IaaS and PaaS options against workload requirements to make informed decisions.
+3. **Modernize when migration enables funding and alignment.** Migration projects often unlock funding and stakeholder support. Use this opportunity to align modernization with business priorities. Delaying may result in inefficient workloads and missed opportunities.
 
 ## Select the appropriate migration strategy for each workload
 
@@ -60,7 +56,7 @@ The selection of migration strategies determines the success of your cloud adopt
 
 1. **Retire workloads that no longer provide business value.** Workloads become obsolete when the cost to migrate and operate them exceeds their business value. Validate this decision by confirming that the workload is obsolete and has no critical dependencies that would impact other systems.
 
-2. **Rehost workloads for fast, low-risk migration.** A rehost strategy moves workload components to the most similar Azure service with only necessary code changes. This approach provides low-risk, low-effort, and fast migration outcomes when timelines are short. Rehost minimizes disruption while building cloud operational capabilities. Commit to modernization post-migration and get clear commitment and resource allocation to avoid indefinite delays.
+2. **Rehost workloads for fast, low-risk migration.** A rehost strategy moves workload components to the most similar Azure service with only necessary code changes. This approach provides low-risk, low-effort, and fast migration outcomes when timelines are short. Rehost minimizes disruption while building cloud operational capabilities. Commit to modernization post-migration and get clear commitment and resource allocation to avoid indefinite delays. Don't rehost problematic workloads if you can avoid it. Rehosting does not resolve underlying problems. If a workload is critical and underperforming, modernize it during migration to improve reliability and efficiency.
 
     | Source and Azure Target | Examples | Like-for-like Mapping Guidance |
     |--------------------------|----------|--------------------------------|
@@ -68,7 +64,7 @@ The selection of migration strategies determines the success of your cloud adopt
     | Other cloud IaaS → Azure VMs | AWS EC2 → Azure Virtual Machines<br>GCP Compute Engine → Azure Virtual Machines | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
     | Other cloud PaaS → Azure PaaS | AWS Beanstalk → Azure App Service<br>GCP App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
 
-3. **Replatform workloads for operational efficiency (modernization).** A replatform strategy makes minimal changes to move a workload to a new hosting environment, typically adopting platform-as-a-service (PaaS). This approach reduces operational overhead of workload management but adds risk and potential delays to migration timelines. Replatform for reduced management overhead, faster updates, code portability, and improved resource efficiency. Implement replatform when the business value of the new environment justifies the investment. Some code refactoring or cloud design patterns might be necessary to take advantage of PaaS services.
+3. **Replatform workloads for operational efficiency (modernization).** A replatform strategy makes minimal changes to move a workload to a new hosting environment, typically adopting platform-as-a-service (PaaS). This approach reduces operational overhead of workload management but adds risk and potential delays to migration timelines. Replatform for reduced management overhead, faster updates, code portability, and improved resource efficiency. Implement replatform when the business value of the new environment justifies the investment. Some code refactoring or cloud design patterns might be necessary to take advantage of PaaS services. Validate operational impacts before selecting PaaS services. Moving to PaaS does not always reduce costs. Assess the total cost of ownership, including operational, licensing, and support costs. Compare IaaS and PaaS options against workload requirements to make informed decisions.
 
 4. **Refactor workloads to optimize code (modernization).** Refactor improves code without changing functionality or end-user experience, such as addressing technical debt or updating code frameworks. Refactor after the workload is stable in Azure to observe how the new environment changes code behavior. However, if migration presents a unique opportunity to resolve technical debt that might not occur later, align modernization activities with business priorities. Teams often introduce cloud design patterns, such as Retry and Circuit Breaker, during migration to take advantage of the cloud environment.
 
