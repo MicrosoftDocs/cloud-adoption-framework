@@ -54,9 +54,9 @@ For more information, see [Gather business details](./discover-existing-workload
 | SLAs (RTO/RPO)                 | Define service-level agreements, recovery point objectives (RPO), and recovery time objectives (RTO). Use this to guide backup, replication, and failover strategies |
 | Operating regions          | Specify regions where the workload is or must be hosted, considering data residency, compliance, and latency requirements |
 
-### Target Azure architecture
+### Target Azure architecture for the workload
 
-| Workload detail | Description |
+| Azure workload details | Description |
 | --- | --- |
 | Target architecture | A link to a diagram you created or sample architecture on Azure Architecture Center |
 | Azure services and SKUs | List the Azure services and SKUs required for the workload |
