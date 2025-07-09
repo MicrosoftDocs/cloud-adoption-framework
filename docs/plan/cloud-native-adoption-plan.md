@@ -1,6 +1,6 @@
 ---
 title: Cloud adoption plan template for migration
-description: Use this template to document your migration strategy, operating model, training plan, platform architecture, and workload details for successful Azure cloud adoption.
+description: Use this template to document your Azure adoption plan for cloud-native startups
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/15/2025

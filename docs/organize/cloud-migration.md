@@ -26,12 +26,6 @@ Regardless of the type or number of cloud migration teams, these teams generally
 
 The nucleus of all cloud adoption efforts is the cloud migration team. This team drives the technical changes that enable adoption. Depending on the objectives of the adoption effort, this team may include a diverse range of team members who handle a broad set of technical and business tasks.
 
-At a minimum, the team scope includes:
-
-- [Rationalization of the digital estate](../digital-estate/index.md)
-- Review, validation, and advancement of the [prioritized migration backlog](../migrate/migration-considerations/assess/release-iteration-backlog.md)
-- The execution of the [first workload](../digital-estate/rationalize.md#select-the-first-workload) as a learning opportunity.
-
 ## Deliverable
 
 The primary deliverable from any cloud migration team is the timely, high-quality implementation of the technical solutions outlined in the adoption plan, in alignment with governance requirements and business outcomes, using the technology, tools, and automation solutions that are available.

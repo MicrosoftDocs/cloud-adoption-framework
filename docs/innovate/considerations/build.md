@@ -52,8 +52,6 @@ During each iteration of a build-measure-learn feedback loop, your attempt to bu
 
 An MVP is the smallest unit of effort (invention, engineering, application development, or data architecture) required to create enough of a solution to learn *with the customer*. The goal of every MVP is to test some or all of the prior hypotheses and to receive feedback directly from the customer. The output isn't a beautiful application with all the features required to change your industry. The desired output of each iteration is a learning opportunity, a chance to more deeply test a hypothesis.
 
-*Timeboxing* is a standard way to make sure a product remains lean. For example, confirm that your development team thinks the solution can be created in a single iteration to allow for rapid testing. To better understand how to use velocity, iterations, and releases to define what minimal means, see [Planning velocity, iterations, release, and iteration paths](../../plan/iteration-paths.md).
-
 ### Reduce complexity and delay technical spikes
 
 The [disciplines of invention](./invention.md) described in [Innovate methodology](./index.md) explore the functionality that's often required to deliver a mature innovation or scale-ready MVP solution. Use these disciplines as a long-term guide for feature inclusion. Likewise, use them as a cautionary guide during early testing of customer value and empathy in your solution.

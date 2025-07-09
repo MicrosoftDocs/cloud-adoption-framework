@@ -36,7 +36,7 @@ We see similar motivations across businesses and industries. Some of the most co
 ## Step 2 - Identify workloads
 
 Identify the workloads you need to modernize to fulfill your modernization motivations.
-A [workload](../../plan/workloads.md) is a collection of IT assets (infrastructure, applications, and data) that support a business function. Data centers encourage you to manage IT assets separately.
+A workload is a collection of IT assets (infrastructure, applications, and data) that support a business function. Data centers encourage you to manage IT assets separately.
 
 The cloud lets you focus on workloads instead of separate IT assets. Modernizing infrastructure, applications, and data together as workloads lets you streamline your modernization processes. You can reuse these processes and apply them to each workload requiring the same modernization strategy.
 

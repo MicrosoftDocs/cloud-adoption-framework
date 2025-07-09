@@ -49,10 +49,6 @@ Tracking migration progress is equally important both to the migration team's mo
 
 Sometimes, prioritizing one workload over another might not seem logical or even beneficial to the cloud adoption team. Understanding the business priorities that drive workload prioritization decisions can help the team maintain critical motivation. It also helps the team make a stronger contribution during the prioritization decision-making process.
 
-### Core assumptions
-
-[Digital estate rationalization](../../digital-estate/rationalize.md) discusses the agility and time-saving impact of working from basic assumptions when you evaluate a digital estate. To fully realize those values, the cloud adoption team needs to understand the assumptions, and the reasons that assumptions were established. That knowledge better equips the team to challenge assumptions for effectiveness and savings.
-
 ### Capture the backlog
 
 Capture the backlog in a location that you can share with all members of the cloud adoption team. From a shared location, different team members can align their knowledge and work to the backlog, and you can keep the backlog current throughout the migration process.

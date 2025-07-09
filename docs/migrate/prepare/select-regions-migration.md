@@ -12,15 +12,6 @@ ms.collection:
 
 # Select Azure regions for a migration
 
-When you migrate an existing environment to Azure, you need to select an Azure region or set of regions to host the migrated components. Region selection involves the following high-level steps:
-
-- **Review the [core Azure region selection guidance](../../ready/azure-setup-guide/regions.md)** to understand how to select Azure regions that meet your requirements.
-- **Inventory and document the current state** of your environment.
-- **Implement a general approach** to your migration, including whether to run in a single region, use multiple availability zones, or use multiple regions.
-- **Assess process changes** that might be required.
-- **Plan a migration process**.
-- **Optimize and promote process changes**.
-
 This article provides guidance on how to choose Azure regions that meet your migration needs. If you haven't already, you might need to extend your [landing zone regions](/azure/cloud-adoption-framework/ready/considerations/regions) to support multi-region approaches.
 
 > [!NOTE]
@@ -80,8 +71,6 @@ When your team is comfortable with the baseline approach and readiness is aligne
 - **Complete general discovery**: Complete the table in [Document complexity](#document-your-scenario-complexity) to evaluate the complexity of your cloud adoption strategy.
 
 - **Analyze user profiles for each affected country or region**: It's important to understand general user routing early in the migration process. Changing global lease lines and adding connections like Azure ExpressRoute to a cloud datacenter can result in months of networking delays. Address user routing as early in the process as possible.
-
-- **Complete an initial digital estate rationalization**: If you introduce complexity into a migration strategy, complete an initial digital estate rationalization. For more information, see [What is a digital estate?](../../digital-estate/index.md).
 
 - **Use tagging for digital estate requirements**: Establish tagging policies to identify any workload that's affected by data sovereignty requirements. Ensure that required tags begin in digital estate rationalization and carry through to migrated assets.
 

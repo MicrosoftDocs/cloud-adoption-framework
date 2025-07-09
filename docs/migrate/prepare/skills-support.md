@@ -27,7 +27,6 @@ If you're still identifying what you need to migrate or modernize, these article
 | --- |--- |
 | [Balance the portfolio](../../strategy/balance-the-portfolio.md) | Learn how to help ensure balance and proper investment allocations across an application portfolio. |
 | [Create a business case](../../strategy/cloud-migration-business-case.md) | Learn how to create and understand the business case that drives a cloud migration effort. |
-| [Rationalize the digital estate](../../digital-estate/rationalize.md) | Learn about cloud rationalization and the process of evaluating assets to determine the best approach for hosting assets in the cloud. |
 
 ### Migration skilling resources
 
