@@ -71,17 +71,17 @@ Refactor improves code without changing functionality or end-user experience, su
 
 Rearchitect workloads to modernize architecture. Rearchitect redesigns how workload components interact, such as breaking out microservices from monolithic applications. This strategy requires code refactoring to support architectural changes. Rearchitect when you want service-oriented architecture, targeted scaling, easier tech adoption. Use the [Well-Architected Framework](/azure/well-architected/pillars) to guide your design. For an example, see [Modern Web App Pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance).
 
-### 6. **Replace (use SaaS alternative).** 
+### 6. **Replace (use SaaS alternative).**
 
 Replace workloads with SaaS solutions when customization needs are minimal. A replace strategy substitutes custom applications with commercial software-as-a-service (SaaS) solutions that meet business requirements. This approach eliminates development and maintenance overhead while providing proven functionality. Replace workloads when SaaS solutions offer comparable features, integration capabilities meet requirements, and total cost of ownership justifies the transition. Consider data migration complexity, user training needs, and process changes when you evaluate replacement options. Common replacement scenarios include CRM systems, HR platforms, and collaboration tools where SaaS maturity provides reliable alternatives to custom solutions.
 
-### 7. **Rebuild (build cloud-native).** 
+### 7. **Rebuild (build cloud-native).**
 
 Rebuild is the right strategy when legacy systems no longer meet business or technical needs and modernization isn’t viable. It involves creating a new solution from scratch using Azure-native services—maximizing scalability, reliability, and security. This approach allows you to reimagine the workload. Rather than replicating legacy functionality, you can redesign the solution to use Azure capabilities like PaaS, automation, and AI. Replace infrastructure services like DHCP with Azure-native alternatives, and deploy new instances of services like Active Directory Domain Controllers in Azure rather than migrating them.
 
-### 8. **Retain (keep as is).** 
+### 8. **Retain (keep as is).**
 
-A retain strategy keeps workloads in their current environment when they are stable, compliant, and meet all current and future business needs with no near-term driver to move. You must retain workloads that cannot be migrated due to regulatory constraints, technical dependencies, or business continuity requirements. Use Azure Arc to manage retained on-premises workloads from Azure, providing unified management capabilities. Shift workloads that cannot be migrated to another migration wave or revisit them later when constraints change.
+A retain strategy keeps workloads in their current environment when they are stable, compliant, and meet all current and future business needs with no near-term driver to move. You must retain workloads that cannot be migrated due to regulatory constraints, technical dependencies, or business continuity requirements. Use [Azure Arc](/azure/azure-arc/overview) to manage retained on-premises workloads from Azure, providing unified management capabilities. Consider a more modern on-premises solution like [Azure Local](/azure/azure-local/overview) to run your workloads and connect to Azure. Shift workloads that cannot be migrated to another migration wave or revisit them later when constraints change.
 
 ## Understand when to modernize during migration
 
