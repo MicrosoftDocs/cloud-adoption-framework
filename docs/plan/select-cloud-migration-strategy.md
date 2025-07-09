@@ -45,41 +45,44 @@ Retire workloads that no longer provide business value. Workloads become obsolet
 
 A rehost strategy enables fast and low-risk migration by moving workloads to Azure with minimal changes. A rehost is a like-for-like migration, which moves virtual machines to IaaS, IaaS to IaaS, and PaaS to PaaS.
 
-    - **Don't rehost problematic workloads.** Rehosting does not resolve existing performance, reliability, or architectural issues. Migrating such workloads without modernization can carry forward technical debt and require rework later. Instead, modernize these workloads during migration to address root causes.
+1. **Don't rehost problematic workloads.** Rehosting does not resolve existing performance, reliability, or architectural issues. Migrating such workloads without modernization can carry forward technical debt and require rework later. Instead, modernize these workloads during migration to address root causes.
 
-    - **Confirm that the workload will not require modernization within two years.** Rehosting is suitable only when you are confident that the workload will remain in its current state for at least two years. If modernization is likely, consider refactoring or rearchitecting instead to avoid duplicate effort.
+2. **Confirm that the workload will not require modernization within two years.** Rehosting is suitable only when you are confident that the workload will remain in its current state for at least two years. If modernization is likely, consider refactoring or rearchitecting instead to avoid duplicate effort.
 
-    - **Use rehost to build foundational cloud operations.** Rehosting helps teams gain experience with Azure operations, governance, and cost management. This early exposure supports broader cloud adoption goals and prepares teams for more complex modernization efforts.
+3. **Use rehost to build foundational cloud operations.** Rehosting helps teams gain experience with Azure operations, governance, and cost management. This early exposure supports broader cloud adoption goals and prepares teams for more complex modernization efforts.
 
-    | Workload type | Azure target | Examples | Like-for-like Mapping Guidance |
-    |--------------| --- | ----------|--------------------------------|
-    | On-premises | → Azure IaaS | On-premises servers → Azure Virtual Machines | [Technology decision guides](/azure/architecture/guide/technology-choices/compute-decision-tree) |
-    | Other cloud IaaS | → Azure IaaS | AWS EC2 → Azure Virtual Machines<br>GCP Compute Engine → Azure Virtual Machines | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
-    | Other cloud PaaS | → Azure PaaS | AWS Beanstalk → Azure App Service<br>GCP App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
+| Workload type | Azure target | Examples | Guidance |
+|--------------| --- | ----------|--------------------------------|
+| On-premises | → Azure IaaS | On-premises servers → Azure Virtual Machines | [Technology decision guides](/azure/architecture/guide/technology-choices/compute-decision-tree) |
+| Other cloud IaaS | → Azure IaaS | AWS EC2 → Azure Virtual Machines<br>GCP Compute Engine → Azure Virtual Machines | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
+| Other cloud PaaS | → Azure PaaS | AWS Beanstalk → Azure App Service<br>GCP App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
 
-### Modernize
-
-#### **Replatform (modernize hosting environment).**
+### Replatform (modernize hosting environment)
 
 A replatform strategy makes minimal changes to move a workload to a new hosting environment, typically adopting platform-as-a-service (PaaS). This approach reduces operational overhead of workload management but adds risk and potential delays to migration timelines. Replatform for reduced management overhead, faster updates, code portability, and improved resource efficiency. Implement replatform when the business value of the new environment justifies the investment. Some code refactoring or cloud design patterns might be necessary to take advantage of PaaS services. Validate operational impacts before selecting PaaS services. Moving to PaaS does not always reduce costs. Assess the total cost of ownership, including operational, licensing, and support costs. Compare IaaS and PaaS options against workload requirements to make informed decisions.
 
-#### 4. **Refactor (modernize code).** 
+| Workload type | Azure target | Examples   | Guidance |
+|------|-------|---| --- | --- |
+| On-premises |→ Azure PaaS        | VMs → Azure App Service<br>SQL Server on a VM → Azure SQL Database | Reliable web app pattern, [Database migration guides](/data-migration/)
+| Other cloud IaaS | → Azure PaaS    | AWS EC2 → Azure App Service<br>MySQL on AWS EC2 → Azure SQL Database | [Other cloud to Azure migration](/azure/migration/migrate-to-azure), [Database migration guides](/data-migration/)
+
+### Refactor (modernize code)
 
 Refactor improves code without changing functionality or end-user experience, such as addressing technical debt or updating code frameworks. Refactor after the workload is stable in Azure to observe how the new environment changes code behavior. However, if migration presents a unique opportunity to resolve technical debt that might not occur later, align modernization activities with business priorities. Teams often introduce cloud design patterns, such as Retry and Circuit Breaker, during migration to take advantage of the cloud environment.
 
-#### 5. **Rearchitect (modernize architecture and code).** 
+### Rearchitect (modernize architecture and code)
 
 Rearchitect workloads to modernize architecture. Rearchitect redesigns how workload components interact, such as breaking out microservices from monolithic applications. This strategy requires code refactoring to support architectural changes. Rearchitect when you want service-oriented architecture, targeted scaling, easier tech adoption. Use the [Well-Architected Framework](/azure/well-architected/pillars) to guide your design. For an example, see [Modern Web App Pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance).
 
-### 6. **Replace (use SaaS alternative).**
+### Replace (use SaaS alternative)
 
 Replace workloads with SaaS solutions when customization needs are minimal. A replace strategy substitutes custom applications with commercial software-as-a-service (SaaS) solutions that meet business requirements. This approach eliminates development and maintenance overhead while providing proven functionality. Replace workloads when SaaS solutions offer comparable features, integration capabilities meet requirements, and total cost of ownership justifies the transition. Consider data migration complexity, user training needs, and process changes when you evaluate replacement options. Common replacement scenarios include CRM systems, HR platforms, and collaboration tools where SaaS maturity provides reliable alternatives to custom solutions.
 
-### 7. **Rebuild (build cloud-native).**
+### Rebuild (build cloud-native)
 
 Rebuild is the right strategy when legacy systems no longer meet business or technical needs and modernization isn’t viable. It involves creating a new solution from scratch using Azure-native services—maximizing scalability, reliability, and security. This approach allows you to reimagine the workload. Rather than replicating legacy functionality, you can redesign the solution to use Azure capabilities like PaaS, automation, and AI. Replace infrastructure services like DHCP with Azure-native alternatives, and deploy new instances of services like Active Directory Domain Controllers in Azure rather than migrating them.
 
-### 8. **Retain (keep as is).**
+### Retain (keep as is)
 
 A retain strategy keeps workloads in their current environment when they are stable, compliant, and meet all current and future business needs with no near-term driver to move. You must retain workloads that cannot be migrated due to regulatory constraints, technical dependencies, or business continuity requirements. Use [Azure Arc](/azure/azure-arc/overview) to manage retained on-premises workloads from Azure, providing unified management capabilities. Consider a more modern on-premises solution like [Azure Local](/azure/azure-local/overview) to run your workloads and connect to Azure. Shift workloads that cannot be migrated to another migration wave or revisit them later when constraints change.
 
