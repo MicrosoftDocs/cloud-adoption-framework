@@ -59,15 +59,15 @@ A rehost strategy enables fast and low-risk migration by moving workloads to Azu
 
 ### Modernize
 
-#### **Replatform (move to a new hosting environment) (modernization).**
+#### **Replatform (modernize hosting environment).**
 
-Replatform workloads for operational efficiency. A replatform strategy makes minimal changes to move a workload to a new hosting environment, typically adopting platform-as-a-service (PaaS). This approach reduces operational overhead of workload management but adds risk and potential delays to migration timelines. Replatform for reduced management overhead, faster updates, code portability, and improved resource efficiency. Implement replatform when the business value of the new environment justifies the investment. Some code refactoring or cloud design patterns might be necessary to take advantage of PaaS services. Validate operational impacts before selecting PaaS services. Moving to PaaS does not always reduce costs. Assess the total cost of ownership, including operational, licensing, and support costs. Compare IaaS and PaaS options against workload requirements to make informed decisions.
+A replatform strategy makes minimal changes to move a workload to a new hosting environment, typically adopting platform-as-a-service (PaaS). This approach reduces operational overhead of workload management but adds risk and potential delays to migration timelines. Replatform for reduced management overhead, faster updates, code portability, and improved resource efficiency. Implement replatform when the business value of the new environment justifies the investment. Some code refactoring or cloud design patterns might be necessary to take advantage of PaaS services. Validate operational impacts before selecting PaaS services. Moving to PaaS does not always reduce costs. Assess the total cost of ownership, including operational, licensing, and support costs. Compare IaaS and PaaS options against workload requirements to make informed decisions.
 
-#### 4. **Refactor (improve code) (modernization).** 
+#### 4. **Refactor (modernize code).** 
 
 Refactor improves code without changing functionality or end-user experience, such as addressing technical debt or updating code frameworks. Refactor after the workload is stable in Azure to observe how the new environment changes code behavior. However, if migration presents a unique opportunity to resolve technical debt that might not occur later, align modernization activities with business priorities. Teams often introduce cloud design patterns, such as Retry and Circuit Breaker, during migration to take advantage of the cloud environment.
 
-#### 5. **Rearchitect (change architecture and code) (modernization).** 
+#### 5. **Rearchitect (modernize architecture and code).** 
 
 Rearchitect workloads to modernize architecture. Rearchitect redesigns how workload components interact, such as breaking out microservices from monolithic applications. This strategy requires code refactoring to support architectural changes. Rearchitect when you want service-oriented architecture, targeted scaling, easier tech adoption. Use the [Well-Architected Framework](/azure/well-architected/pillars) to guide your design. For an example, see [Modern Web App Pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance).
 
@@ -79,7 +79,9 @@ Replace workloads with SaaS solutions when customization needs are minimal. A re
 
 Rebuild is the right strategy when legacy systems no longer meet business or technical needs and modernization isn’t viable. It involves creating a new solution from scratch using Azure-native services—maximizing scalability, reliability, and security. This approach allows you to reimagine the workload. Rather than replicating legacy functionality, you can redesign the solution to use Azure capabilities like PaaS, automation, and AI. Replace infrastructure services like DHCP with Azure-native alternatives, and deploy new instances of services like Active Directory Domain Controllers in Azure rather than migrating them.
 
-### 8. **Retain (keep as is).** A retain strategy keeps workloads in their current environment when they are stable, compliant, and meet all current and future business needs with no near-term driver to move. You must retain workloads that cannot be migrated due to regulatory constraints, technical dependencies, or business continuity requirements. Use Azure Arc to manage retained on-premises workloads from Azure, providing unified management capabilities. Shift workloads that cannot be migrated to another migration wave or revisit them later when constraints change.
+### 8. **Retain (keep as is).** 
+
+A retain strategy keeps workloads in their current environment when they are stable, compliant, and meet all current and future business needs with no near-term driver to move. You must retain workloads that cannot be migrated due to regulatory constraints, technical dependencies, or business continuity requirements. Use Azure Arc to manage retained on-premises workloads from Azure, providing unified management capabilities. Shift workloads that cannot be migrated to another migration wave or revisit them later when constraints change.
 
 ## Understand when to modernize during migration
 
