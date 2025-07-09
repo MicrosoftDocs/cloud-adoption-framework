@@ -12,7 +12,7 @@ ms.custom: e2e-oracle
 
 ## Platform Design Principles
 
-- The Oracle Autonomous Database@Azure service is a shared, serverless service that runs on Oracle Exadata Infrastructure within a region. The Exadata Infrastructure is built in a highly available setup by design which runs on a VM cluster and mirrored storage servers. 
+- The Oracle Autonomous Database@Azure service is a shared, serverless service that runs on Oracle Exadata Infrastructure within a region. The Exadata Infrastructure is built in a highly available setup by design, which runs on a VM cluster and mirrored storage servers. 
 
 - Oracle Autonomous Database@Azure provides HA against database instance and hardware-level failures by default. This architecture aligns with the  [MAA silver level](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/oracle-maximum-availability-architecture-and-oracle-autonomous-database.html#GUID-80E31978-A2B5-4106-9CB8-C8DFD8AA9637). 
 
@@ -54,7 +54,7 @@ For details on cross-region disaster recovery setup, see:
 
 - Autonomous Data Guard supports Data Warehouse and Transaction Processing workload types. Autonomous Data Guard does not support JSON and APEX workload types.
 
-- Local and remote standby databases do not support read-only access.
+- Local and remote standby databases don't support read-only access.
 
 - For every Oracle Autonomous Database@Azure instance, you can create up to one local standby peer (in the same region as your primary instance) and one cross-region standby peer (in the paired region of your primary database instance).
 
