@@ -18,7 +18,7 @@ You must address the following key requirements:
 
 - **Business continuity and disaster recovery (BCDR):** HA of your Oracle Exadata Database@Azure and related applications is crucial to maintain business operations that have low RTO or RPO.
 
-Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. The default route for this connectivity is through Azure. This article focuses on architecting for networking within Azure to meet BCDR requirements. For more information, see [BCDR for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
+Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. The default route for this connectivity is through Azure. This article focuses on architecting for networking within Azure to meet BCDR requirements. For more information, see [BCDR for Oracle Database@Azure](./bcdr-odaa.md).
 
 ## Redundancy within the same region
 

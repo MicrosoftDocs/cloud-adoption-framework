@@ -62,7 +62,7 @@ For paired region mapping documentation, see:
 
 [Create Cross-Region Disaster Recovery](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#ODADB-GUID-18CEC6A2-9026-4BA4-ADA1-C79C2F8B8884) 
 
-- When your desired region is not within the paired regions, you can create a ticket to Oracle Support to enable the desired region for the standby database via Autonomous Data Guard.
+- When your desired region isn't within the paired regions, you can create a ticket to Oracle Support to enable the desired region for the standby database via Autonomous Data Guard.
 
 - When you add a new standby database, the primary database remains available for read/write operations. The primary database experiences no downtime.
 
@@ -81,23 +81,23 @@ For paired region mapping documentation, see:
 
         The backups are taken into a service managed bucket with no direct customer access. 
 
-        The backups are Automatically done by the service (60-day full, daily 		incremental, 5 mins archivelog, some optional retention control) 
+        The backups are Automatically done by the service (60-day full, daily 		incremental, 5-mins archivelog, some optional retention control) 
 
     2. Long-Term Backup: 
     
-        Using the long-term backup feature you can create a long-term backup as a one-time backup or as scheduled long-term backup. You select the retention period for long-term backups in the range of a minimum of 3 months up to a maximum of 10 years.  
+        Using the long-term backup feature you can create a long-term backup as a one-time backup or as scheduled long-term backup. You select the retention period for long-term backups in the range of a minimum of three months up to a maximum of 10 years.  
 
-- All backups taken and managed by Oracle in Oracle Autonomous Database@Azure are immutable. Immutable backups cannot be deleted or modified. 
+- All backups taken and managed by Oracle in Oracle Autonomous Database@Azure are immutable. Immutable backups can't be deleted or modified. 
 
 - Oracle Autonomous Database@Azure restores and recovers your database to a specified point-in-time or using a backup you select from a list of available backups.
 
-- When you enable cross-region backup replication to disaster recovery peer, backup replication to the remote region takes several minutes to several hours, depending on backup size. The service replicates backups from the last 7 days. After backup replication completes, you can view the replicated backups in the Backups section under Resources on the peer database. This capability allows you to initiate restore operations on a peer database.
+- When you enable cross-region backup replication to disaster recovery peer, backup replication to the remote region takes several minutes to several hours, depending on backup size. The service replicates backups from the last seven days. After backup replication completes, you can view the replicated backups in the Backups section under Resources on the peer database. This capability allows you to initiate restore operations on a peer database.
 
 - Oracle Autonomous Database@Azure creates scheduled long-term backups automatically according to the schedule you define: one-time, weekly, monthly, or yearly.
 
 - Autonomous Recovery Service for backups is currently not available for Oracle Autonomous Database@Azure.
 
-- The automatic backups will be stored within Oracle Object Storage by default, there is currently no option to store the backups within Azure. 
+- The automatic backups are stored within Oracle Object Storage by default, there's currently no option to store the backups within Azure. 
 
 - Oracle Autonomous Database@Azure also provides the option to use Transparent Application Continuity. Transparent Application Continuity (TAC) transparently tracks and records session and transactional state so the database session can be recovered following recoverable outages. By enabling TAC, the application can restore the session state after the database instance completes the failover to the standby instance. 
 
@@ -137,7 +137,7 @@ For other recommendations, see the Oracle documentation for backup/restore recom
 
 ## Note
 
-Oracle GoldenGate is not included in this solution and might incur additional licensing costs. 
+Oracle GoldenGate isn't included in this solution and might incur additional licensing costs. 
 
 ## Related resources
 
