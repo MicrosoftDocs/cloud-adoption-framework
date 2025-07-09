@@ -62,7 +62,7 @@ You can address IT silos through the following approaches. The best approach dep
 
 **Create virtual teams:** The [Organizational readiness](./index.md) section of the Cloud Adoption Framework describes a multilayered structure for integrating and defining four virtual teams. One benefit of this structure is cross-organization visibility and inclusion. Introducing a [cloud center of excellence](./cloud-center-of-excellence.md) creates a high-profile aspirational team that top engineers want to participate in. This change helps you create new cross-solution alignments that aren't bound by organizational-chart constraints. It also drives inclusion of top engineers who have been sheltered by IT silos.
 
-Introducing a [cloud strategy team](./cloud-strategy.md) creates immediate visibility on IT contributions regarding cloud adoption efforts. When IT silos fight for separation, this visibility can help motivate IT and business leaders to properly support those resistant team members. This process is a quick path to stakeholder engagement and support.
+Introducing a cloud strategy team creates immediate visibility on IT contributions regarding cloud adoption efforts. When IT silos fight for separation, this visibility can help motivate IT and business leaders to properly support those resistant team members. This process is a quick path to stakeholder engagement and support.
 
 **Consider experimentation and exposure:** Team members in an IT silo have likely been constrained to think a certain way for some time. Breaking the one-track mind is a first step to addressing resistance.
 
@@ -94,7 +94,7 @@ Stay focused on the goal, as opposed to a single component of the goal. Help acc
 
 **Partner with the business:** If the IT silo isn't blocking business outcomes, why do you care? There's no perfect solution or perfect IT vendor. Competition exists for a reason; each has its own benefits.
 
-Embrace diversity and include the business by supporting and aligning to a strong [cloud strategy team](./cloud-strategy.md). When an IT silo supports a solution that blocks business outcomes, it's easier to communicate that roadblock without the noise of technical squabbles. Supporting nonblocking IT silos shows how to partner for the desired business outcomes. These efforts earn more respect and greater support from the business when an IT silo presents a legitimate blocker.
+Embrace diversity and include the business by supporting and aligning to a strong cloud strategy team. When an IT silo supports a solution that blocks business outcomes, it's easier to communicate that roadblock without the noise of technical squabbles. Supporting nonblocking IT silos shows how to partner for the desired business outcomes. These efforts earn more respect and greater support from the business when an IT silo presents a legitimate blocker.
 
 ## IT fiefdoms
 
@@ -108,7 +108,7 @@ Generally, fiefdoms are the result of a line manager who fears loss of the team 
 
 IT fiefdoms can demonstrate growth by following the approaches to [addressing IT silo resistance](#address-resistance-from-it-silos). Before you try to address resistance from an IT fiefdom, we recommend that you treat the team like an IT silo first. If those types of approaches fail to yield any significant change, the resistant team might be suffering from an IT fiefdom antipattern. The root cause of IT fiefdoms is a little more complex to address, because that resistance tends to come from the direct line manager (or a leader higher up in the organization). Challenges that are IT silo-driven are typically easier to overcome.
 
-When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders must carefully consider insights from the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) before making decisions.
+When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders must carefully consider insights from the cloud strategy team, [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) before making decisions.
 
 > [!NOTE]
 > IT leaders should never take changes to the organizational chart lightly. They should also validate and analyze feedback from each of the supporting teams. But transformational efforts like cloud adoption tend to magnify underlying issues that have gone unnoticed or unaddressed long before this effort. When fiefdoms are preventing the company's success, leadership changes are a likely necessity.
@@ -124,7 +124,7 @@ When continued resistance from IT fiefdoms blocks cloud adoption efforts, it mig
 
 IT fiefdoms are sometimes a sign of systemic leadership issues. To overcome an IT fiefdom, IT leaders need the freedom to make changes to operations, responsibilities, and occasionally even the people who provide line management for specific teams. When those changes are required, it's wise to approach the changes with clear and defensible data points.
 
-Alignment with business stakeholders, business motivations, and business outcomes might be required to drive the necessary change. Partnership with the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) can provide the data points needed for a defensible position. When necessary, these teams should be involved in a group escalation to address challenges that can't be addressed with IT leadership alone.
+Alignment with business stakeholders, business motivations, and business outcomes might be required to drive the necessary change. Partnership with the cloud strategy team, [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) can provide the data points needed for a defensible position. When necessary, these teams should be involved in a group escalation to address challenges that can't be addressed with IT leadership alone.
 
 ## Next steps
 

@@ -63,8 +63,6 @@ For optimal collaboration and efficiency, we recommend that cloud adoption teams
 
 Additional support from existing IT staff may be needed. IT can be a valuable contributor to cloud adoption by becoming a cloud broker and a partner for innovation and business agility.
 
-- [Central IT team responsibilities](./central-it.md)
-
 ## What's next
 
 Adoption is great, but ungoverned adoption can produce unexpected results. Align with the [cloud governance team](./cloud-governance.md) to accelerate adoption and best practices, while reducing business and technical risks.

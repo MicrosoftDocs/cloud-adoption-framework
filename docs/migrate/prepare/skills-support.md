@@ -11,7 +11,7 @@ ms.collection:
 
 # Skills and support resources relevant to migration projects
 
-This article provides guidance on specific training resources to consider in preparation for your migration to Azure. It builds on the organizational skills that you learned during planning and preparing a migration journey. You might need to revisit the [planning migration articles](../../plan/index.md) to make the most of the materials in this article. For more information on organizing your training plans, see [Build technical skills](../../organize/suggested-skills.md).
+This article provides guidance on specific training resources to consider in preparation for your migration to Azure. It builds on the organizational skills that you learned during planning and preparing a migration journey. You might need to revisit the [planning migration articles](../../plan/index.md) to make the most of the materials in this article.
 
 ## Self-led learning resources
 

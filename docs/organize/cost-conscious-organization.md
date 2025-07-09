@@ -35,15 +35,15 @@ The following sections describe the roles that various teams play in developing 
 
 Building cost consciousness into cloud-adoption efforts starts at the leadership level. To be effective in the long term, the [cloud strategy team](./cloud-strategy.md) should include a member of the finance team. If your financial structure holds business managers accountable for solution costs, they should be invited to join the team as well. In addition to the core activities that are typically assigned to the cloud strategy team, all members of the cloud strategy team should also be responsible for:
 
-- **Visibility:** The cloud strategy team and [cloud governance team](./cloud-governance.md) need to know the actual costs of the cloud-adoption efforts. Given the executive-level view of this team, they should have access to multiple cost scopes to analyze spending decisions. Typically, an executive needs visibility into the total costs across all *cloud spend*. But as active members of the cloud strategy team, they should also be able to view costs per business unit or per billing unit to validate showback, chargeback, or other [cloud accounting models](../strategy/cloud-accounting.md).
+- **Visibility:** The cloud strategy team and cloud governance team need to know the actual costs of the cloud-adoption efforts. Given the executive-level view of this team, they should have access to multiple cost scopes to analyze spending decisions. Typically, an executive needs visibility into the total costs across all *cloud spend*. But as active members of the cloud strategy team, they should also be able to view costs per business unit or per billing unit to validate showback, chargeback, or other cloud accounting models.
 
-- **Accountability:** Budgets should be established between the cloud strategy, [cloud governance](./cloud-governance.md), and [cloud adoption](./cloud-adoption.md) teams based on expected adoption activities. When deviations from budget occur, the cloud strategy team and the cloud governance team must partner to quickly determine the best course of action to remediate the deviations.
+- **Accountability:** Budgets should be established between the cloud strategy, [cloud governance](./cloud-governance.md), and cloud adoption teams based on expected adoption activities. When deviations from budget occur, the cloud strategy team and the cloud governance team must partner to quickly determine the best course of action to remediate the deviations.
 
 - **Optimization:** During optimization efforts, the cloud strategy team can represent the investment and return value of specific workloads. If a workload has strategic value or financial impact on the business, cost-optimization efforts should be monitored closely. If there's no strategic impact on the organization and no inherent cost for poor performance of a workload, the cloud strategy team may approve over-optimization. To drive these decisions, the team must be able to view costs on a per-project scope.
 
 ## Cloud adoption team
 
-The [cloud adoption team](./cloud-adoption.md) is at the center of all adoption activities. So, they're the first line of defense against overspending. This team has an active role in all three phases of cost-consciousness.
+The cloud adoption teamis at the center of all adoption activities. So, they're the first line of defense against overspending. This team has an active role in all three phases of cost-consciousness.
 
 - **Visibility:**
 
