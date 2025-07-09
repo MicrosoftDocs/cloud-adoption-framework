@@ -1,7 +1,7 @@
 ---
 title: Cloud readiness antipatterns
 description: Avoid cloud adoption readiness antipatterns like using preview services, assuming built-in resiliency and availability, and assuming IT is ready for the cloud.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/19/2021
 ms.topic: conceptual
@@ -11,11 +11,11 @@ ms.custom: think-tank,UpdateFrequency5
 
 # Cloud readiness antipatterns
 
-Customers often experience antipatterns during the readiness phase of cloud adoption. These antipatterns can lead to unexpected downtime, disaster recovery problems, and availability issues.
+Organizations often experience antipatterns during the readiness phase of cloud adoption. These antipatterns can lead to unexpected downtime, disaster recovery problems, and availability issues.
 
 ## Antipattern: Assume released services are ready for production
 
-Because cloud computing is evolving rapidly, companies often release preview versions of new services. Customers tend to assume that they can use any available cloud service in a production environment. But, problems can result, for these reasons:
+Because cloud computing is evolving rapidly, organizations often release preview versions of new services. Organizations tend to assume that they can use any available cloud service in a production environment. But, problems can result, for these reasons:
 
 - Preview services usually don't provide uptime service-level agreements (SLAs).
 - New services often aren't as mature as cloud services that are already available.
@@ -37,7 +37,7 @@ Cloud computing often offers advantages over on-premises computing. Examples inc
 - **Increased resiliency:** Recovering after failure.
 - **Availability:** Running in a healthy state without significant downtime.
 
-Because most cloud services offer these advantages, many companies assume that all cloud services offer resiliency and high availability by default. In reality, these features are often only available at extra cost and with additional technical effort.
+Because most cloud services offer these advantages, many organizations assume that all cloud services offer resiliency and high availability by default. In reality, these features are often only available at extra cost and with additional technical effort.
 
 ### Example: Assume high availability
 
@@ -64,7 +64,7 @@ Engage in the essential process of *requirements engineering* when designing a c
 
 ## Antipattern: Become a cloud provider
 
-Some companies try to make their internal IT department a cloud provider. IT then becomes responsible for reference architectures. IT also needs to provide IaaS and PaaS to business units. Since this type of work isn't usually part of IT's core business, the resulting service offerings can lack usability, resiliency, efficiency, and security.
+Some organizations try to make their internal IT department a cloud provider. IT then becomes responsible for reference architectures. IT also needs to provide IaaS and PaaS to business units. Since this type of work isn't usually part of IT's core business, the resulting service offerings can lack usability, resiliency, efficiency, and security.
 
 ### Example: Provide monolithic managed cloud services
 
