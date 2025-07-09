@@ -23,11 +23,11 @@ Complete architectural documentation ensures visibility into workload components
 
 3. **Capture architecture in a central repository.** Store architecture diagrams, component lists, and configuration data in a format that supports planning and validation. Use tools like Microsoft Visio, spreadsheets, or Azure DevOps wikis to maintain this information.
 
-### Assess architecture component requirements
+### Assess workload components
 
 Detailed component understanding ensures correct sizing and configuration in Azure. This knowledge prevents performance issues and compatibility problems after migration. You need to gather detailed specifications for each component to make informed migration decisions. Follow this guidance:
 
-1. **Collect performance and configuration data.** Gather metrics such as CPU utilization, memory usage, IOPS, and throughput patterns. Record operating system type, version, VM size, storage type, and licensing details for accurate Azure sizing.
+1. **Collect performance and configuration data.** Gather metrics such as CPU utilization, memory usage, IOPS, and throughput for no less than a week to identify usage patterns. Record operating system type, version, VM size, storage type, and licensing details for accurate Azure sizing.
 
 2. **Identify unsupported technologies.** Review Azure documentation to confirm compatibility for all components. Flag any technologies that require modernization or replacement before migration can proceed.
 
@@ -63,15 +63,7 @@ Requirement gathering ensures that the target architecture meets compliance and 
 
 3. **Align architecture with requirements.** Ensure that Azure services and configurations meet documented constraints and expectations. This alignment prevents compliance issues and performance problems after migration.
 
-### Validate ISV integration with Azure
-
-ISV integration validation ensures that third-party software continues to function after migration. This step helps avoid unexpected costs or modernization needs during the migration process. You must confirm compatibility and licensing for all ISV components before migration. Follow this guidance:
-
-1. **Test ISV software in Azure.** Use test environments or vendor documentation to confirm compatibility. Identify any required updates or replacements before migration begins to avoid delays.
-
-2. **Review licensing and cost impacts.** Determine whether Azure Hybrid Benefit or other licensing models apply. Include licensing costs in your migration plan to ensure budget accuracy.
-
-3. **Update the migration plan based on ISV findings.** Adjust timelines, budgets, or architecture based on ISV compatibility and licensing requirements. This adjustment prevents surprises during migration execution.
+4. **Validate ISV integration with Azure.** ISV integration validation ensures that third-party software continues to function after migration. Use test environments or vendor documentation to confirm compatibility. Identify any required updates or replacements before migration begins to avoid delays. Determine whether Azure Hybrid Benefit or other licensing models apply. Include licensing costs in your migration plan to ensure budget accuracy. Adjust timelines, budgets, or architecture based on ISV compatibility and licensing requirements. This adjustment prevents surprises during migration execution.
 
 ## Assess application code
 
