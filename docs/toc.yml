@@ -55,13 +55,13 @@ items:
       - name: 4. Estimate cloud costs
         href: plan/estimate-total-cost-of-ownership.md
         
-      - name: Guides
+      - name: Cloud planning guides
         items:
         - name: Shared management operating model
           href: plan/shared-management-operating-model.md
         - name: Strategic Migration Assessment and Readiness Tool (SMART)
           href: plan/smart-assessment.md
-      - name: Templates
+      - name: Cloud planning templates
         items:
         - name: Cloud-native adoption plan
           href: plan/cloud-native-adoption-plan.md
