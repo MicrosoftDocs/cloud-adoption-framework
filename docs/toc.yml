@@ -59,8 +59,6 @@ items:
         items:
         - name: Shared management operating model
           href: plan/shared-management-operating-model.md
-        - name: Strategic Migration Assessment and Readiness Tool (SMART)
-          href: plan/smart-assessment.md
       - name: Cloud planning templates
         items:
         - name: Cloud-native adoption plan
