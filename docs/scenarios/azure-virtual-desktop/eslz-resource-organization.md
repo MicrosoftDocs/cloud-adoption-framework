@@ -79,12 +79,12 @@ The following image shows an example of the recommended structure and resource g
 
   - Basic structure:
     - Subscription Azure Virtual Desktop-shared-resources
-      - rg-avd-<_Azure-Region_>-shared-resources
+      - Rg-avd-<_Azure-Region_>-shared-resources
     - Subscription Azure Virtual Desktop landing zone
-      - rg-avd-<_Azure-Region_>-<_Workload_>-service-objects
-      - rg-avd-<_Azure-Region_>-<_Workload_>-pool-compute
-      - rg-avd-<_Azure-Region_>-<_Workload_>-network
-      - rg-avd-<_Azure-Region_>-<_Workload_>-storage
+      - Rg-avd-<_Azure-Region_>-<_Workload_>-service-objects
+      - Rg-avd-<_Azure-Region_>-<_Workload_>-pool-compute
+      - Rg-avd-<_Azure-Region_>-<_Workload_>-network
+      - Rg-avd-<_Azure-Region_>-<_Workload_>-storage
 
   :::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png" alt-text="Screenshot that shows the AVD service objects and compute subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/azure-virtual-desktop-resource-management-2.png":::
 
