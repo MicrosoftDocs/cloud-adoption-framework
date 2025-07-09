@@ -11,16 +11,16 @@ ms.topic: conceptual
 
 For each workload in your inventory, choose the most appropriate approach option: retire, retain, migrate as is (rehost), modernize (replatform, refactor, rearchitect), rebuild, and replace. Make this decision based on a knowledge of migration and modernization best practices. Selecting the appropriate migration strategy ensures that each workload aligns with business goals and maximizes cloud value.
 
-| Business drivers | Cloud migration strategy | Validation | Example Success Metrics |
-|--------------|------------------------|---------|------------------------|
-| Eliminate workloads of limited value | Retire | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits | • Retire 100% of workloads identified as obsolete before migration |
-| Adopt cloud with minimal disruption | Rehost | Workload is stable<br>• Workload is compatible with Azure<br>• Low risk migration<br>• Short-term cloud adoption goals<br>• No immediate need for modernization<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure | • Migrate 100% of Tier 1 workloads from AWS to Azure with no SLA degradation<br>• Decommission 30% of on-premises infrastructure post-migration |
-| Modernize workload with minimal investment | Replatform | • Simplify reliability and disaster recovery<br>• Reduce OS and licensing overhead<br>• Improve time-to-cloud with moderate investment  | • Reduce deployment lead times by 30% for migrated applications<br>• Reduce infrastructure and licensing costs by 25% within 12 months |
-| Code changes deliver short- or long-term value | Refactor | • Decrease cost of maintenance<br>• Reduce technical debt <br>• Use Azure SDKs<br>• Improve code performance<br>• Optimize code costs<br>• Apply cloud design patterns<br>• Instrument code for monitoring | • Improve application response time by 40% using Azure-native services<br>• Achieve 95% observability coverage through code instrumentation |
-| Meet business requirements better | Rearchitect | • Application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• Architecture must support future innovation<br>• Mix technology stacks | • Support 2x user load with no performance degradation<br>• Integrate 3 new Azure-native services into existing architecture |
-| Modernizing a critical workload isn't worth it | Rebuild | • Legacy system is too outdated or inflexible<br>• Accelerate innovation<br>• Build applications faster<br>• Reduce operational cost<br>• Need modern frameworks and tools | • Launch new cloud-native application in 3 months vs. 6 months on-prem<br>• Cut operational costs by 40% using PaaS services |
-| SaaS solution meets needs | Replace | • Simplify operations<br>• Internal development resources are better used elsewhere<br>• Little need for customization | • Transition CRM to SaaS with 99.9% uptime and no custom code<br>• Shift 30% of dev effort to competitive differentiators |
-| Maintain stability and avoid unnecessary change | Retain | • Workload is stable, compliant, and meets business needs<br>• No near-term driver to move<br>•Low ROI from migration | • Maintain current SLA and compliance posture<br>• Manage on-premises workloads from Azure using Azure Arc |
+| **Cloud migration strategy** | Business drivers | Ways to validate your migration strategy selection | Example success metrics |
+|------------------------|------------------|------------|------------------------|
+| **Retire** | Eliminate workloads of limited value | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits | • Retire 100% of workloads identified as obsolete before migration |
+| **Rehost** | Adopt cloud with minimal disruption | • Workload is stable<br>• Workload is compatible with Azure<br>• Low risk migration<br>• Short-term cloud adoption goals<br>• No immediate need for modernization<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure | • Migrate 100% of Tier 1 workloads from AWS to Azure with no SLA degradation<br>• Decommission 30% of on-premises infrastructure post-migration |
+| **Replatform** | Modernize workload with minimal investment | • Simplify reliability and disaster recovery<br>• Reduce OS and licensing overhead<br>• Improve time-to-cloud with moderate investment | • Reduce deployment lead times by 30% for migrated applications<br>• Reduce infrastructure and licensing costs by 25% within 12 months |
+| **Refactor** | Code changes deliver short- or long-term value | • Decrease cost of maintenance<br>• Reduce technical debt<br>• Use Azure SDKs<br>• Improve code performance<br>• Optimize code costs<br>• Apply cloud design patterns<br>• Instrument code for monitoring | • Improve application response time by 40% using Azure-native services<br>• Achieve 95% observability coverage through code instrumentation |
+| **Rearchitect** | Meet business requirements better | • Application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• Architecture must support future innovation<br>• Mix technology stacks | • Support 2x user load with no performance degradation<br>• Integrate 3 new Azure-native services into existing architecture |
+| **Rebuild** | Modernizing a critical workload is not worth it | • Legacy system is too outdated or inflexible<br>• Accelerate innovation<br>• Build applications faster<br>• Reduce operational cost<br>• Need modern frameworks and tools | • Launch new cloud-native application in 3 months vs. 6 months on-prem<br>• Cut operational costs by 40% using PaaS services |
+| **Replace** | SaaS solution meets needs | • Simplify operations<br>• Internal development resources are better used elsewhere<br>• Little need for customization | • Transition CRM to SaaS with 99.9% uptime and no custom code<br>• Shift 30% of dev effort to competitive differentiators |
+| **Retain** | Maintain stability and avoid unnecessary change | • Workload is stable, compliant, and meets business needs<br>• No near-term driver to move<br>• Low ROI from migration | • Maintain current SLA and compliance posture<br>• Manage on-premises workloads from Azure using Azure Arc |
 
 ## Define business goals for each workload
 
@@ -34,21 +34,12 @@ You must define business goals before selecting a migration strategy to ensure e
 3. **Define cloud principles to guide technology decisions.** Cloud principles help standardize decision-making across workloads and teams. Common principles include:
 
     - **Best of suite:** Use a single vendor for most services to simplify integration, reduce complexity, and streamline support (e.g., all Microsoft or all AWS).
+
     - **Best of breed:** Use the best tool for each job, even if it means mixing vendors, to maximize performance, flexibility, or innovation.
 
     These principles influence architectural decisions and vendor selection. You must document and socialize these principles to ensure consistency across the cloud estate.
 
 4. **Map each workload to a migration strategy based on business context.** Migration strategies, such as rehost, refactor, rearchitect, rebuild, or replace, must align with the workload’s business drivers. For example, select rehost for cost-driven migrations or refactor for innovation-focused goals. This mapping ensures each workload contributes to strategic outcomes and supports long-term cloud maturity.
-
-## Understand when to modernize during migration
-
-Modernization during migration refers to replatforming, rearchitecting, or refactoring workloads to maximize cloud value. Modernization can deliver long-term benefits but introduces complexity and risk to migration timelines. You must evaluate whether to modernize during migration or defer modernization to post-migration phases based on clear business justification. Follow these recommendations:
-
-1. **Modernize when your team has the required skills and time.** Attempting modernization without adequate expertise or time increases risk and delays. If your team lacks readiness, defer modernization to a later phase.
-
-2. **Modernize workloads that require compatibility updates.** Legacy technologies, unsupported SDKs, or the need to adopt SaaS solutions may require modernization. Justify each effort with a clear business case.
-
-3. **Modernize when migration enables funding and alignment.** Migration projects often unlock funding and stakeholder support. Use this opportunity to align modernization with business priorities. Delaying may result in inefficient workloads and missed opportunities.
 
 ## Select the appropriate migration strategy for each workload
 
@@ -75,6 +66,16 @@ The selection of migration strategies determines the success of your cloud adopt
 7. **Rebuild (reimagine) workloads using cloud-native technologies.** A rebuild strategy creates a new, cloud-native version of a workload using modern Azure services. This strategy is important when legacy systems no longer meet business or technical requirements and modernization is not cost-effective. You must rebuild when the workload is essential but the current system cannot support future needs or integrate effectively with Azure.
 
 8. **Retain workloads that meet current and future business needs.** A retain strategy keeps workloads in their current environment when they are stable, compliant, and meet all current and future business needs with no near-term driver to move. You must retain workloads that cannot be migrated due to regulatory constraints, technical dependencies, or business continuity requirements. Use Azure Arc to manage retained on-premises workloads from Azure, providing unified management capabilities. Shift workloads that cannot be migrated to another migration wave or revisit them later when constraints change.
+
+## Understand when to modernize during migration
+
+Modernization during migration refers to replatforming, rearchitecting, or refactoring workloads to maximize cloud value. Modernization can deliver long-term benefits but introduces complexity and risk to migration timelines. You must evaluate whether to modernize during migration or defer modernization to post-migration phases based on clear business justification. Follow these recommendations:
+
+1. **Modernize when your team has the required skills and time.** Attempting modernization without adequate expertise or time increases risk and delays. If your team lacks readiness, defer modernization to a later phase.
+
+2. **Modernize workloads that require compatibility updates.** Legacy technologies, unsupported SDKs, or the need to adopt SaaS solutions may require modernization. Justify each effort with a clear business case.
+
+3. **Modernize when migration enables funding and alignment.** Migration projects often unlock funding and stakeholder support. Use this opportunity to align modernization with business priorities. Delaying may result in inefficient workloads and missed opportunities.
 
 ## Communicate and align decisions with stakeholders
 
