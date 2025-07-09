@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article helps you conduct thorough workload assessments to collect the necessary information for successful migration decisions. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases).
 
+## Discovery and assessment tools
+
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
 ## Assess workload architecture
