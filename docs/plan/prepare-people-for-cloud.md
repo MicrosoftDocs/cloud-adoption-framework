@@ -21,13 +21,13 @@ A clear understanding of your team’s current capabilities and future requireme
 
 3. **Identify skills for innovation.** These are skills aligned to your innovation goals, such as [AI development](../scenarios/ai/plan.md#assess-ai-skills) and [cloud-native development](../innovate/index.md), and platform engineering.
 
-## Train your people
+## Close the skills gap
 
 A structured approach to skill development enables teams to meet cloud adoption requirements effectively. Strategic training investments reduce implementation risks, accelerate delivery timelines, and build confidence across your organization. You need to implement targeted learning programs that address the specific gaps identified in your assessment. Follow these recommendations:
 
 1. **Train your team using Microsoft Learn.** [Microsoft Learn](/) contains Microsoft product [documentation](/docs), [personalized training](/plans/ai/), [credentials](/credentials/) like [Microsoft Applied Skills](/credentials/applied-skills/) and [Microsoft certifications](/credentials/browse/) aligned to Azure roles. Encourage your team to pursue certifications such as Azure Administrator, Developer, Solutions Architect, or DevOps Engineer. Certifications validate skills and build confidence.
 
-2. **Use expert support to accelerate readiness.** [Microsoft](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/) experts or trusted [partners](https://partner.microsoft.com/partnership/find-a-partner) provide hands-on guidance, workshops, and architectural reviews. These engagements help teams gain practical experience and avoid common pitfalls.
+2. **Use expert support to accelerate readiness.** Expert guidance provides hands-on experience and reduces implementation risks when timelines are compressed. Microsoft specialists and trusted partners offer workshops, architectural reviews, and practical training that help teams avoid common pitfalls. You need to engage experts who can provide targeted support aligned to your specific cloud adoption goals. Contact [Microsoft](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/) specialists or find trusted [partners](https://partner.microsoft.com/partnership/find-a-partner) who can deliver workshops, conduct architectural reviews, and provide hands-on guidance tailored to your Azure adoption requirements.
 
 ## Sustain cloud skills across your organization
 

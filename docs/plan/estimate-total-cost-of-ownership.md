@@ -23,7 +23,9 @@ The architecture of your Azure environment includes your platform and all worklo
 
 2. **Plan your workload (application) architecture.** A workload architecture defines the Azure services, regions, and configurations required to meet business and technical requirements. Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements. Use the [Azure Architecture Center](/azure/architecture/browse/) to get ideas.
 
-## Select the appropriate Azure services
+3. **Align architecture with requirements.** Ensure that Azure services and configurations meet documented constraints and expectations. This alignment prevents compliance issues and performance problems after migration.
+
+### Select the appropriate Azure services
 
 Azure offers hundreds of cloud services with different capabilities and pricing models. You need to choose the right services for your platform and workload requirements to create accurate cost estimates. Service selection directly impacts both initial and ongoing costs in your environment. Follow these recommendations:
 
@@ -35,7 +37,7 @@ Azure offers hundreds of cloud services with different capabilities and pricing 
 
 4. **Establish service selection standards.** Create consistent service selection guidelines across your organization to improve cost management and operational efficiency. Define and document standard service selections for common workload patterns to prevent unnecessary variation. These standards reduce support complexity, enable volume discounts, and simplify governance controls. For implementation guidance, see [CAF Govern](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
 
-## Choose the right service tier
+### Choose the right service tier
 
 Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, and availability. Selecting the right tier is essential to meet workload-specific requirements and avoid over- or under-provisioning. You must evaluate both existing and new workloads to determine the most appropriate service tier.
 
@@ -45,7 +47,7 @@ Each Azure service offers multiple service tiers (also known as SKUs) that provi
 
 3. **Select high-availability SKUs for critical workloads.** Mission-critical and business-critical workloads require high availability and fault tolerance. Choose service tiers that support Availability Zones or zone-redundant configurations. These tiers provide resilience against datacenter-level failures and meet enterprise availability SLAs. Review the service-specific availability options to ensure alignment with your workload’s recovery objectives.
 
-## Choose single region or multiregion deployment
+### Choose single region or multiregion deployment
 
 A regional strategy defines the reliability and compliance posture of your workloads. For platform and workload resources, you must document whether workloads operate in a single region or across multiple regions and define their reliability requirements. Follow these recommendations:
 
@@ -91,7 +93,6 @@ By the end of the Plan phase, you have a cloud adoption roadmap that all stakeho
 
 [CAF Ready](../ready/index.md)
 
-
 ## Startup
 
 Operating model: Centralized
@@ -102,10 +103,3 @@ Operating model responsibilities: Centralized team handles all governance, secur
 | Workload name | Workload description | Target architecture | Estimated cost |
 | --- | --- | --- | --- |
 | Ecommerce app | Ecommerce web app | [Baseline web app](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) | $$$ |
-
-## Enterprise cloud adoption plan
-
-Operating model: Shared management
-Cloud Maturity: Intermediate to Advanced
-Cloud estate: Hybrid and Multi-cloud
-Compliance needs: High (financial, healthcare)
