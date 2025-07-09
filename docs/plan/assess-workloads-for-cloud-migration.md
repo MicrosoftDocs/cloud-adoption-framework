@@ -33,7 +33,7 @@ A complete understanding of each workload component is essential for accurate si
 
 2. **Collect at least one week of performance and configuration data.** Performance metrics such as CPU utilization, memory usage, IOPS, and throughput reveal usage patterns and peak demands. Configuration data includes operating system type and version, VM size, storage type, and licensing details. This information is critical for selecting the correct Azure VM sizes and storage configurations.
 
-3. **Identify unsupported or deprecated technologies.** Azure does not support all legacy technologies. Review the Azure documentation to confirm compatibility for each component. Flag any unsupported technologies that require modernization or replacement before migration. This step prevents delays and ensures workload readiness.
+3. **Identify unsupported or deprecated technologies.** Azure does not support all legacy technologies, including certain operating systems, middleware, and application frameworks. Identify any components that are unsupported, deprecated, or nearing end of support, such as operating systems that will soon lose vendor support. For each flagged component, document the required changes, such as upgrading the OS, replacing middleware, or replatforming applications.
 
 4. **Document all security and identity configurations.** Security settings must be preserved or enhanced in Azure to maintain compliance and prevent vulnerabilities. You need to inventory all identities and document encryption and network security configurations to support secure migration.
 
