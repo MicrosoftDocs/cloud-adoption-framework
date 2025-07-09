@@ -97,11 +97,11 @@ Framework and SDK compatibility ensures that applications run reliably in Azure.
 
 Database dependencies often determine the success of application migration. Shared databases, cross-application dependencies, and integration patterns can complicate migration planning. You must assess the databases that support your applications and understand their dependencies. Follow this guidance:
 
-1. **Identify all databases used by the application.** Document the database engines, versions, and hosting models (on-premises, IaaS, PaaS). Use tools like Azure Migrate or Data Migration Assistant to gather this information systematically.
+1. **Identify all databases used by the application.** Create a complete inventory of all databases used by the application. Include database engine types (e.g., SQL Server, MySQL), versions, and hosting models (e.g., on-premises, IaaS, PaaS). Use tools such as Azure Migrate or Data Migration Assistant to gather this information systematically. Specify whether the database is self-hosted, hosted on virtual machines, or delivered as a managed service. This information helps determine migration readiness and target platform compatibility.
 
-2. **Map inbound and outbound dependencies.** Identify all applications and services that read from or write to the database. This assessment includes APIs, batch jobs, reporting tools, and third-party integrations that affect migration planning.
+2. **Map inbound and outbound dependencies.** A clear view of how data flows into and out of each database is critical for sequencing migrations and avoiding service disruptions. Dependencies often span multiple applications, services, and external systems. Include internal applications, APIs, batch jobs, reporting tools, and third-party integrations. Specify whether the dependency is read-only, write-only, or bidirectional. This detail helps prioritize workloads and identify potential migration blockers.
 
-3. **Determine database migration strategy.** Decide whether to move the database as a shared instance or split it by workload. Shared databases can limit migration flexibility, while splitting databases increases complexity. Align the strategy with your migration wave planning.
+3. **Determine database migration strategy.** Decide whether to move the database as a shared instance or split it by workload. Shared databases simplify management but can delay migration if multiple applications depend on them. Splitting databases enables independent migration but requires careful coordination and testing. Ensure that the database migration plan supports the sequencing of application moves and minimizes downtime or service disruption.
 
 ## Azure resources and tools
 
