@@ -25,13 +25,15 @@ Complete architectural documentation ensures visibility into workload components
 
 ### Assess workload components
 
-Detailed component understanding ensures correct sizing and configuration in Azure. This knowledge prevents performance issues and compatibility problems after migration. You need to gather detailed specifications for each component to make informed migration decisions. Follow this guidance:
+A complete understanding of each workload component is essential for accurate sizing and configuration in Azure. This assessment ensures performance consistency, avoids compatibility issues, and supports informed migration decisions. You must collect detailed specifications and operational data for each component to plan a successful migration.
 
-1. **Collect performance and configuration data.** Gather metrics such as CPU utilization, memory usage, IOPS, and throughput for no less than a week to identify usage patterns. Record operating system type, version, VM size, storage type, and licensing details for accurate Azure sizing.
+1. **Use service management or CMDB systems to gather baseline data.** Service management tools and configuration management databases (CMDBs) provide authoritative data on workload components. These systems accelerate migration planning when they contain current and complete information. Validate the accuracy of this data before using it to inform migration decisions.
 
-2. **Identify unsupported technologies.** Review Azure documentation to confirm compatibility for all components. Flag any technologies that require modernization or replacement before migration can proceed.
+2. **Collect at least one week of performance and configuration data.** Performance metrics such as CPU utilization, memory usage, IOPS, and throughput reveal usage patterns and peak demands. Configuration data includes operating system type and version, VM size, storage type, and licensing details. This information is critical for selecting the correct Azure VM sizes and storage configurations.
 
-3. **Document security and identity configurations.** Security documentation captures authentication methods, access controls, and encryption settings to ensure Azure meets compliance requirements. This documentation prevents security gaps and compliance violations during migration. You need to inventory all identities used by servers, applications, and databases before migration begins.
+3. **Identify unsupported or deprecated technologies.** Azure does not support all legacy technologies. Review the Azure documentation to confirm compatibility for each component. Flag any unsupported technologies that require modernization or replacement before migration. This step prevents delays and ensures workload readiness.
+
+4. **Document all security and identity configurations.** Security settings must be preserved or enhanced in Azure to maintain compliance and prevent vulnerabilities. You need to inventory all identities and document encryption and network security configurations to support secure migration.
 
     | Security Component | Action | Purpose |
     |-------------------|---------|----------|
