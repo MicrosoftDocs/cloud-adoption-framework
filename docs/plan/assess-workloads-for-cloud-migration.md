@@ -43,7 +43,7 @@ A complete understanding of each workload component is essential for accurate si
     | Encryption documentation | Document current encryption methods for data at rest and in transit | Map these requirements to Azure encryption services to maintain security standards |
     | Network security configuration | Capture network security rules, firewall configurations, and access control lists | Use this information to design Azure network security groups and access policies |
 
-### Map dependencies
+### Map internal and external dependencies
 
 A complete dependency map ensures that applications maintain connectivity and performance after migration. Dependency mapping enables accurate migration sequencing and prevents service disruptions caused by broken integrations. You must identify and document all internal and external dependencies to define move groups and migration order effectively.
 
@@ -57,7 +57,7 @@ A complete dependency map ensures that applications maintain connectivity and pe
 
 5. **Document all dependencies in a central repository.** Store dependency data in a format that supports cross-team collaboration and migration planning, such as spreadsheets, architecture diagrams, or dependency mapping tools. Ensure the repository is accessible and regularly updated to reflect changes during the migration process.
 
-### Gather requirements
+### Gather workload requirements
 
 A complete understanding of regulatory and operational requirements ensures that your Azure architecture complies with legal obligations and meets business expectations. This understanding supports region selection, backup planning, and service-level alignment. You must document all constraints to design compliant and resilient Azure solutions.
 
@@ -73,19 +73,21 @@ A complete understanding of regulatory and operational requirements ensures that
 
 ## Assess application code
 
-Application code assessment reduces the risk of migration failure and helps you plan migration waves effectively. Code-level issues can prevent applications from running correctly in Azure. You need to determine if migrating to Azure breaks the application and identify required changes. Follow this guidance:
+An application code assessment identifies compatibility issues and modernization opportunities that can impact migration success. This assessment is essential to ensure applications run reliably in Azure and to plan migration waves effectively. You must assess application code to detect blockers early, reduce the risk of migration failure, and inform target architecture decisions.
 
 ### Use automated tools to assess application code
 
-Automated tools provide fast and consistent analysis of application code across different languages and frameworks. This assessment identifies compatibility issues and modernization opportunities without manual code review. You should use automated tools to evaluate application readiness and identify potential blockers. Follow this guidance:
+Automated tools provide consistent and scalable analysis of application code across multiple languages and frameworks. These tools help identify Azure compatibility issues and modernization opportunities without requiring manual code reviews. You must use automated tools to evaluate application readiness and identify potential blockers.
 
-1. **Use AppCAT for .NET and Java applications.** [AppCAT](/azure/migrate/appcat/overview) provides detailed assessments for .NET and Java workloads, including Azure compatibility and modernization recommendations. Use AppCAT to identify deprecated APIs, unsupported SDKs, and configuration issues.
+1. **Use AppCAT for .NET and Java applications.** [AppCAT](/azure/migrate/appcat/overview) provides detailed assessments for .NET and Java workloads. This tool identifies deprecated APIs, unsupported SDKs, and configuration issues that can prevent successful migration. Use AppCAT to generate compatibility and modernization recommendations for these workloads.
 
-2. **Use third-party tools for other application languages.** Tools like CloudPilot and CAST Highlight support a broader range of languages such as Python, JavaScript, Node.js, and Go. These tools help identify code-level changes required for Azure compatibility and provide modernization insights.
+2. **Use third-party tools for other application languages.** Tools such as CloudPilot and CAST Highlight support languages like Python, JavaScript, Node.js, and Go. These tools identify code-level changes required for Azure compatibility and provide modernization insights. Use these tools to assess non-.NET and non-Java workloads.
+
+3. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that is not compatible with one service might be compatible with another with minimal code changes. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
 
 ### Validate framework and SDK compatibility
 
-Framework and SDK compatibility ensures that your application runs reliably on Azure. Unsupported versions or incompatible SDKs can cause runtime failures or require significant rework. You must verify that Azure supports your application's language version and framework. Follow this guidance:
+Framework and SDK compatibility ensures that applications run reliably in Azure. Unsupported versions or incompatible SDKs can cause runtime failures or require significant rework. You must verify that Azure supports your application's language version and framework.
 
 1. **Check Azure support for your application's language and framework.** Confirm that Azure supports your version of [.NET](/azure/dotnet/azure/intro#access-azure-services-from-net-applications), [Java](/azure/developer/java/), [Python](/azure/developer/python/get-started#write-your-python-app), [JavaScript and Node.js](/azure/developer/javascript/core/what-is-azure-for-javascript-development#use-azure-client-libraries-with-javascript), [Go](/azure/developer/go/overview). Use the official Azure documentation to validate compatibility.
 
