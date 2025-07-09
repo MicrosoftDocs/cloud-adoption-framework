@@ -43,7 +43,7 @@ items:
       - name: 1. Prepare your organization
         href: plan/prepare-organization-for-cloud.md
       - name: 2. Prepare your people
-        href: plan/skill-people-for-cloud.md
+        href: plan/prepare-people-for-cloud.md
       - name: 3. Plan your migration (if applicable)
         items: 
         - name: Discover inventory

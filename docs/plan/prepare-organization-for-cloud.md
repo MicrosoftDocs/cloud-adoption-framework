@@ -13,13 +13,13 @@ This article helps you choose and implement a cloud operating model that distrib
 
 ## Plan to address your cloud responsibilities
 
-A defined set of responsibilities ensures that governance, security, and operations are consistently managed across your Azure environment. This responsibility clarity establishes accountability and maintains control in the cloud. You must assign individuals or teams to own and execute these responsibilities to support a secure, well-managed Azure environment. Follow this guidance:
+A defined set of responsibilities ensures that governance, security, and operations are consistently managed across your Azure environment. This clarity is essential in the context of this article to establish accountability and maintain control in the cloud. You must assign individuals or teams to own and execute these responsibilities to support a secure, well-managed Azure environment.
 
 1. **Plan for cloud governance.** A cloud governance team assesses risks, documents cloud governance policies, and reports on cloud governance progress. You must establish this team early in your cloud journey to ensure governance standards are in place before workloads are deployed. See [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team).
 
-2. **Plan for cloud security.** Cloud security ensures security is part of every stage of the cloud lifecycle, from development to operations and continuous improvement. Security planning reduces risk and protects your organization's assets throughout the cloud adoption process. You must integrate security considerations into all aspects of your cloud operating model. See [Security Teams, Roles, and Functions](/azure/cloud-adoption-framework/secure/teams-roles).
+2. **Plan for cloud security.** Cloud security is essential at every stage of the cloud lifecycle, including development, operations, and continuous improvement. A secure foundation ensures protection against threats and compliance with organizational policies. You must embed security considerations into all aspects of your cloud operating model to safeguard resources and data effectively. See [Security Teams, Roles, and Functions](/azure/cloud-adoption-framework/secure/teams-roles) to start your security plan.
 
-3. **Plan for cloud management.** Cloud operations maintain effective operations for managing your Azure cloud estate. Successful cloud operations require clearly defined responsibilities and processes for every cloud management area. You must establish these operational processes to ensure consistent service delivery and resource optimization. See [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) for a detailed list of responsibilities.
+3. **Plan for cloud management.** Effective cloud management ensures your Azure cloud estate aligns with business objectives and minimizes the effects of incidents. Successful cloud operations require clearly defined responsibilities and processes for every cloud management area. You must establish these operational processes to ensure consistent service delivery and resource optimization. See [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) for a detailed list of responsibilities.
 
 4. **Plan for AI adoption.** AI is a transformational technology that every organization needs to prepare for. Start by developing your [AI Strategy](/azure/cloud-adoption-framework/scenarios/ai/strategy) and [building an AI team](/azure/cloud-adoption-framework/scenarios/ai/center-of-excellence). Also review how to [govern AI](/azure/cloud-adoption-framework/scenarios/ai/govern), [secure AI](/azure/cloud-adoption-framework/scenarios/ai/secure), and [manage AI](/azure/cloud-adoption-framework/scenarios/ai/manage).
 
@@ -76,4 +76,4 @@ Clear accountability prevents duplication and ensures critical tasks are complet
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Prepare your people for Azure](./skill-people-for-cloud.md)
+> [Prepare your people for Azure](./prepare-people-for-cloud.md)
