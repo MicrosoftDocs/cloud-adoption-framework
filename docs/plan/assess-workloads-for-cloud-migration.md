@@ -31,25 +31,27 @@ Detailed component understanding ensures correct sizing and configuration in Azu
 
 2. **Identify unsupported technologies.** Review Azure documentation to confirm compatibility for all components. Flag any technologies that require modernization or replacement before migration can proceed.
 
-3. **Document security and identity configurations.** Capture authentication methods, access controls, and encryption settings to ensure compliance requirements are met in Azure. This information supports security planning and regulatory compliance.
+3. **Document security and identity configurations.** Security documentation captures authentication methods, access controls, and encryption settings to ensure Azure meets compliance requirements. This documentation prevents security gaps and compliance violations during migration. You need to inventory all identities used by servers, applications, and databases before migration begins.
 
-### Map internal dependencies
+    | Security Component | Action | Purpose |
+    |-------------------|---------|----------|
+    | Identity inventory | Record all service accounts, user accounts, and API keys that applications use for authentication | Affects migration sequencing when you choose between lift-and-shift or modernization approaches |
+    | Encryption documentation | Document current encryption methods for data at rest and in transit | Map these requirements to Azure encryption services to maintain security standards |
+    | Network security configuration | Capture network security rules, firewall configurations, and access control lists | Use this information to design Azure network security groups and access policies |
 
-Internal dependency mapping ensures that interconnected components migrate together without service disruptions. This step prevents broken integrations and supports accurate migration sequencing. You must identify and document all internal dependencies to maintain application functionality. Follow this guidance:
+### Map dependencies
 
-1. **Engage workload owners to identify dependencies.** Use structured interviews or workshops to capture application interconnections, shared databases, and network configurations. Workload owners possess critical knowledge about system interactions that automated tools might miss.
+A complete dependency map ensures applications maintain connectivity and performance after migration. Dependency mapping supports accurate migration sequencing and prevents service disruptions caused by broken integrations. You must identify and document all internal and external dependencies to define move groups and migration order effectively. Follow this guidance:
 
-2. **Use discovery tools to validate and enrich data.** Tools like Azure Migrate or third-party solutions can uncover hidden dependencies through network traffic analysis. Use these tools to supplement manual discovery efforts and identify undocumented connections.
+1. **Engage workload owners to identify dependencies.** Conduct structured interviews or workshops with application and workload owners to capture interconnections, shared databases, and network configurations. Workload owners provide critical insights into system interactions that automated tools might not detect. This step ensures undocumented or informal dependencies are not overlooked.
 
-3. **Document dependencies in a central repository.** Store dependency data in spreadsheets, architecture diagrams, or dependency mapping tools. Ensure the format supports migration planning and sequencing decisions across multiple teams.
+2. **Use discovery tools to validate and enrich dependency data.** Use tools like [Azure Migrate](/azure/migrate/migrate-overview) or third-party solutions to analyze network traffic and uncover hidden dependencies. These tools supplement manual discovery efforts and help identify connections that are not documented or visible through interviews alone.
 
-### Map external dependencies
+3. **Identify all external systems and services.** Review integration documentation and interview application owners to identify dependencies on SaaS platforms, partner APIs, or on-premises systems. External dependencies often influence migration timing and sequencing due to contractual, technical, or latency constraints.
 
-External dependency mapping ensures that applications maintain connectivity and performance after migration. This step helps define move groups and migration order based on system interdependencies. You must identify and plan for all external dependencies to avoid service disruptions. Follow this guidance:
+4. **Group interdependent workloads into migration waves.** Use the collected dependency data to define logical groupings of workloads that must migrate together or in a specific sequence. This approach reduces service disruption, minimizes latency, lowers data egress costs, and simplifies migration planning.
 
-1. **Identify all external systems and services.** Interview application owners and review integration documentation to find dependencies on SaaS platforms, partner APIs, or on-premises systems. External dependencies often constrain migration timing and sequencing.
-
-2. **Group interdependent applications into migration waves.** Use dependency data to define logical groupings of applications that must migrate together or in a coordinated sequence. This approach minimizes service disruptions and reduces migration complexity.
+5. **Document all dependencies in a central repository.** Store dependency data in a format that supports cross-team collaboration and migration planning, such as spreadsheets, architecture diagrams, or dependency mapping tools. Ensure the repository is accessible and regularly updated to reflect changes during the migration process.
 
 ### Gather regulatory and operational requirements
 

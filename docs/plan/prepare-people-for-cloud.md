@@ -11,31 +11,38 @@ ms.topic: conceptual
 
 This article provides guidance to equip your team with the skills necessary for successful Azure adoption. Proper skill development accelerates cloud adoption, reduces implementation risks, and maximizes your return on cloud investments. Follow these recommendations to assess skill needs, develop capabilities, and create a culture of continuous learning that supports your cloud adoption journey.
 
-## Assess cloud skills
+## Identify the cloud skills you need
 
-A clear understanding of your team’s current capabilities and future requirements is essential to guide upskilling efforts. Different cloud adoption goals, such as migration, modernization, or building cloud-native solutions, require distinct skill sets. You must assess your team’s readiness across three dimensions:
+A clear understanding of your team’s current capabilities and future requirements is essential to guide training efforts. Different cloud adoption goals, such as migration, modernization, or building cloud-native solutions, require distinct skill sets. You must assess your team’s readiness across three dimensions:
 
-1. **Identify skills to adopt Azure.** These are the foundational skills needed to begin using Azure securely and effectively. They include Azure [governance](/azure/cloud-adoption-framework/govern/), [security](/azure/cloud-adoption-framework/secure/overview) ([identity and access management](/entra/fundamentals/introduction-identity-access-management), [networking](/azure/networking/foundations/network-foundations-overview)), [management](/azure/cloud-adoption-framework/manage/), and workload design ([cloud architecture](/azure/architecture/guide/), and [Well-Architected Framework](/azure/well-architected/)).
+1. **Identify skills to adopt Azure.** These are the foundational skills needed to begin using Azure securely and effectively. They include Azure [governance](/azure/cloud-adoption-framework/govern/), [security](/azure/cloud-adoption-framework/secure/overview) ([identity and access management](/entra/fundamentals/introduction-identity-access-management), [networking](/azure/networking/foundations/network-foundations-overview)), [management](/azure/cloud-adoption-framework/manage/) ([deployments](/cloud-adoption-framework/manage/administer#manage-cloud-resources), [monitoring](/azure/cloud-adoption-framework/manage/monitor), [reliability](/azure/cloud-adoption-framework/manage/protect#manage-reliability)), and workload design ([cloud architecture](/azure/architecture/guide/), and [Well-Architected Framework](/azure/well-architected/)).
 
 2. **Identify skills for ongoing operations.** Effective cloud management ensures your Azure cloud estate aligns with business objectives and minimizes the effects of incidents. Use Cloud Adoption Framework's RAMP (Ready, Administer, Monitor, Protect) process to manage your Azure cloud estate. See [CAF Manage](/azure/cloud-adoption-framework/manage/). Use tools like Azure DevOps, GitHub, AI development assistance (GitHub Copilot), and infrastructure as code (Bicep, Terraform, and ARM templates).
 
 3. **Identify skills for innovation.** These are skills aligned to your innovation goals, such as [AI development](../scenarios/ai/plan.md#assess-ai-skills) and [cloud-native development](../innovate/index.md), and platform engineering.
 
-## Close identified skill gaps
+## Train your people
 
-Once you identify the gaps, take deliberate steps to close those gaps. Upskilling is essential to reduce risk, accelerate delivery, and improve confidence across teams.
+A structured approach to skill development enables teams to meet cloud adoption requirements effectively. Strategic training investments reduce implementation risks, accelerate delivery timelines, and build confidence across your organization. You need to implement targeted learning programs that address the specific gaps identified in your assessment. Follow these recommendations:
 
-1. **Upskill your team using Microsoft Learn.** [Microsoft Learn](/) contains Microsoft product [documentation](/docs), [personalized training](/plans/ai/), [credentials](/credentials/) like [Microsoft Applied Skills](/credentials/applied-skills/) and [Microsoft certifications](/credentials/browse/) aligned to Azure roles. Encourage your team to pursue certifications such as Azure Administrator, Developer, Solutions Architect, or DevOps Engineer. Certifications validate skills and build confidence.
+1. **Train your team using Microsoft Learn.** [Microsoft Learn](/) contains Microsoft product [documentation](/docs), [personalized training](/plans/ai/), [credentials](/credentials/) like [Microsoft Applied Skills](/credentials/applied-skills/) and [Microsoft certifications](/credentials/browse/) aligned to Azure roles. Encourage your team to pursue certifications such as Azure Administrator, Developer, Solutions Architect, or DevOps Engineer. Certifications validate skills and build confidence.
 
 2. **Use expert support to accelerate readiness.** [Microsoft](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/) experts or trusted [partners](https://partner.microsoft.com/partnership/find-a-partner) provide hands-on guidance, workshops, and architectural reviews. These engagements help teams gain practical experience and avoid common pitfalls.
 
-## Sustain skills across the organization
+## Sustain cloud skills across your organization
 
-Cloud adoption is not a one-time event. You must create a culture of continuous learning and experimentation to keep pace with Azure innovation.
+Cloud technology constantly evolves with new Azure services, features, and ecosystem updates released regularly. Organizations that maintain current cloud capabilities outperform those with outdated skills and achieve better business outcomes. You need to establish processes that support continuous learning and practical application of new cloud knowledge. Follow these recommendations:
 
 1. **Create a learning sandbox.** Provide a safe, low-risk Azure environment where teams can experiment, test, and learn without affecting production workloads. Use Azure Dev/Test subscriptions to manage costs and access. For an example, see [Azure landing zone sandbox environments](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments).
 
-2. **Promote continuous learning.** Encourage ongoing training through Microsoft Learn and internal programs. Gamify learning by recognizing top learners, tracking Microsoft Learn points, and offering monthly rewards.
+2. **Promote continuous learning.** A continuous learning culture ensures teams maintain current Azure skills as cloud technologies evolve. Regular engagement with learning resources keeps your organization prepared for new Azure capabilities and implementation methods. You need to establish structured programs that encourage and reward ongoing skill development. Follow these recommendations:
+
+    a. Dedicate time each week for team members to complete Microsoft Learn modules aligned with your cloud adoption goals
+    b. Create a recognition system that tracks Microsoft Learn points and celebrates learning achievements
+    c. Schedule regular participation in Azure community events, user groups, and technical sessions
+    d. Maintain a curated collection of trusted Azure blogs, videos, and documentation for quick reference on new services and best practices
+
+3. **Implement a skills management program.** A formal program tracks team capabilities, identifies gaps, and aligns training to business priorities. This structured approach ensures your organization maintains the right skills for current and future cloud initiatives. Develop a skills matrix that maps required Azure competencies to roles and create individual development plans that include certification targets.
 
 ## Next steps
 

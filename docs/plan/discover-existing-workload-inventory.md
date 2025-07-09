@@ -19,9 +19,43 @@ A complete inventory of your technical assets forms the foundation of your cloud
 
     [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
-2. **Include all asset types.** Your inventory must capture servers, virtual machines, applications, databases, and cloud services across all environments. Include assets from AWS, GCP, and other cloud providers to ensure complete visibility. Document both infrastructure components and the applications that run on them.
+2. **Include all asset types.** Your inventory must capture servers, virtual machines, applications, databases, communication patterns, integrations, identities, and cloud services across all environments. Include assets from AWS, GCP, and other cloud providers to ensure complete visibility. Document both infrastructure components and the applications that run on them.
 
 3. **Use manual discovery when automation isn't possible.** Some environments restrict automated discovery tools due to security policies or technical limitations. Use the [Azure Migrate import template](https://go.microsoft.com/fwlink/?linkid=2109031) to manually document assets in restricted environments. Manual documentation ensures you capture assets that automated tools cannot access.
+
+## Gather business details
+
+Business details document the organizational context and impact of each workload. These details guide your migration decisions and help you prioritize workloads based on business value. You must collect this information for every workload in your inventory. Follow this guidance:
+
+1. **Identify workload owners and stakeholders.** Document who owns each workload and who holds technical knowledge about its operation. These individuals must participate in migration planning to ensure technical accuracy and business alignment. Include application owners, data owners, and infrastructure teams who maintain the workload.
+
+2. **Document workload criticality and service tiers.** Classify each workload as mission-critical, medium priority, or low priority based on its business impact. Document whether the workload runs in production, test, or development environments. This classification determines your migration approach and acceptable downtime windows.
+
+3. **Capture business impact and compliance requirements.** Document how each workload affects business processes, revenue, and operations. Include any regulatory compliance requirements, data residency restrictions, or industry-specific standards that govern the workload. This information shapes your cloud architecture decisions.
+
+4. **Record operational constraints.** Document maintenance windows, business freeze periods, and geographic restrictions for each workload. Include any times when the business cannot tolerate changes, such as peak sales periods or financial closing dates. These constraints determine your migration schedule.
+
+Use this template to capture essential business details for each workload:
+
+| Business detail | Description |
+|-----------------|-------------|
+| Workload name | Official name used across the organization |
+| Workload description | Single sentence describing the workload's purpose |
+| Criticality level | High (mission-critical), medium, or low priority |
+| Service tier | Production, test, or development environment |
+| Primary sponsor | Executive or manager championing this migration |
+| Business unit | Department responsible for workload costs |
+| Business processes affected | Processes that depend on this workload |
+| Business teams affected | Teams whose work depends on this workload |
+| Application owners | Individuals accountable for application functionality |
+| Data owners | Individuals responsible for data governance |
+| Business impact | Revenue, operations, or customer impact if unavailable |
+| Compliance requirements | Regulatory standards or certifications required |
+| Maintenance windows | Scheduled times for updates and changes |
+| Business freeze periods | Dates when no changes are permitted |
+| Geographic restrictions | Data residency or access location requirements |
+| Success metrics | Specific measurements to evaluate migration success |
+| Business outcomes | Expected benefits from cloud migration |
 
 ## Azure discovery and assessment tools and resources
 

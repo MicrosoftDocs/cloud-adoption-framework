@@ -91,3 +91,21 @@ By the end of the Plan phase, you have a cloud adoption roadmap that all stakeho
 
 [CAF Ready](../ready/index.md)
 
+
+## Startup
+
+Operating model: Centralized
+Cloud maturity: New
+Cloud estate: Cloud-native, one cloud
+Operating model responsibilities: Centralized team handles all governance, security, and management tasks
+
+| Workload name | Workload description | Target architecture | Estimated cost |
+| --- | --- | --- | --- |
+| Ecommerce app | Ecommerce web app | [Baseline web app](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) | $$$ |
+
+## Enterprise cloud adoption plan
+
+Operating model: Shared management
+Cloud Maturity: Intermediate to Advanced
+Cloud estate: Hybrid and Multi-cloud
+Compliance needs: High (financial, healthcare)

@@ -44,7 +44,7 @@ items:
         href: plan/prepare-organization-for-cloud.md
       - name: 2. Prepare your people
         href: plan/skill-people-for-cloud.md
-      - name: 3. Plan migration (if applicable)
+      - name: 3. Plan your migration (if applicable)
         items: 
         - name: Discover inventory
           href: plan/discover-existing-workload-inventory.md
@@ -61,46 +61,6 @@ items:
           href: plan/shared-management-operating-model.md
         - name: Strategic Migration Assessment and Readiness Tool (SMART)
           href: plan/smart-assessment.md
-        - name: Other resources
-          items:
-          - name: Digital estate
-            items:
-            - name: The five Rs of rationalization
-              href: digital-estate/5-rs-of-rationalization.md
-            - name: What is a digital estate?
-              href: digital-estate/index.md
-            - name: Digital estate planning
-              href: digital-estate/approach.md
-            - name: Gather inventory data
-              href: digital-estate/inventory.md
-            - name: Rationalize the digital estate
-              href: digital-estate/rationalize.md
-            - name: Align cost models to forecast costs
-              href: digital-estate/calculate.md
-          - name: Initial organization alignment
-            href: plan/initial-org-alignment.md
-          - name: Skills readiness plan
-            items:
-            - name: Build a readiness plan
-              href: plan/adapt-roles-skills-processes.md
-            - name: Map roles and skills
-              href: plan/suggested-skills.md
-          - name: Cloud adoption plan
-            items:
-            - name: Overview
-              href: plan/plan-intro.md
-            - name: Prerequisites
-              href: plan/prerequisites.md
-            - name: Define and prioritize workloads
-              href: plan/workloads.md
-            - name: Align assets to workloads
-              href: plan/assets.md
-            - name: Review rationalization decisions
-              href: plan/review-rationalization.md
-            - name: Establish iterations and release plans
-              href: plan/iteration-paths.md
-            - name: Estimate timelines
-              href: plan/timelines.md
 
     - name: Ready
       items:
