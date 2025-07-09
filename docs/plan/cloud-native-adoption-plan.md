@@ -38,7 +38,7 @@ For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 |---------------------------|-------------------------------------------------------------------------------------|
 | Resource hierarchy         | Define the hierarchy, including management groups, subscriptions, and resource groups. |
 
-For more information, see [Plan your Azure landing zone architecture](./estimate-total-cost-of-ownership.md#plan-your-architecture)
+For more information, see [Plan your Azure landing zone architecture](./estimate-total-cost-of-ownership.md#plan-your-azure-architecture)
 
 ## Requirements for each cloud-native workload
 
@@ -54,7 +54,7 @@ For each workload you plan to build, document business and technical requirement
 | Compliance requirements | Regulatory standards or certifications required |
 | Target users | Number of location of user base |
 
-For more information, see [Gather business details](./discover-existing-workload-inventory.md#gather-business-details).
+For more information, see [Document workload business details](./discover-existing-workload-inventory.md#document-workload-business-details).
 
 ### Workload technical requirements for cloud-native builds
 
@@ -63,6 +63,8 @@ For more information, see [Gather business details](./discover-existing-workload
 | Component requirements         | List performance metrics (CPU, memory, IOPS, throughput), OS versions, VM sizes, storage types, and licensing details |
 | SLAs (RTO/RPO)                 | Define service-level agreements, recovery point objectives (RPO), and recovery time objectives (RTO). Use this to guide backup, replication, and failover strategies |
 
+For more information, see [Assess your workload](./assess-workloads-for-cloud-migration.md).
+
 ### Target Azure architecture for the workload
 
 | Azure workload details | Description |
@@ -70,5 +72,5 @@ For more information, see [Gather business details](./discover-existing-workload
 | Target architecture | A link to a diagram you created or sample architecture on Azure Architecture Center |
 | Azure services and SKUs | List the Azure services and SKUs required for the workload |
 | Azure regions | Specify the Azure regions where the workload will be hosted |
-| Estimated workload cost | Estimated cost using the [Azure Pricing calculator](https://azure.microsoft.com/pricing/calculator/?msockid=396a7791057262e4306e626304176307) |
+| Estimated workload cost | Estimated cost using the [Azure Pricing calculator](https://azure.microsoft.com/pricing/calculator/) |
 | Estimated workload operational cost | Estimate how many people or hours you dedicate to this workload |
