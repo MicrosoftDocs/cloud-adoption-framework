@@ -45,11 +45,11 @@ For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 
 For more information, see [Plan your Azure landing zone architecture](./estimate-total-cost-of-ownership.md#plan-your-architecture)
 
-## Workload details for each workload
+## Requirements for each workload
 
 For each workload in your inventory, gather business and technical details.
 
-### Workload business data for migration
+### Workload business details for migration
 
 | Workload business details | Documentation to add      |
 |-----------------|-------------|
@@ -73,7 +73,7 @@ For each workload in your inventory, gather business and technical details.
 
 For more information, see [Document workload business details](./discover-existing-workload-inventory.md#document-workload-business-details).
 
-### Workload technical data for migration
+### Workload technical details for migration
 
 | Workload technical details               | Documentation to add                                                                       |
 |--------------------------------|-----------------------------------------------------------------------------|

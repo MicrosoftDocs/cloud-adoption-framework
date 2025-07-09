@@ -40,7 +40,7 @@ For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 
 For more information, see [Plan your Azure landing zone architecture](./estimate-total-cost-of-ownership.md#plan-your-architecture)
 
-## Workload details for each workload
+## Requirements for each cloud-native workload
 
 For each workload you plan to build, document business and technical requirements.
 
