@@ -31,15 +31,7 @@ You must define business goals before selecting a migration strategy to ensure e
 
 2. **Define measurable success metrics for each goal.** Success metrics quantify the value of migration and validate whether business goals are achieved. Use metrics such as SLA improvements, cost reduction percentages, deployment frequency, or user satisfaction scores. Avoid metrics that only reflect technical completion, such as VM counts or storage migration, as they do not demonstrate business value.
 
-3. **Define cloud principles to guide technology decisions.** Cloud principles help standardize decision-making across workloads and teams. Common principles include:
-
-    - **Best of suite:** Use a single vendor for most services to simplify integration, reduce complexity, and streamline support (e.g., all Microsoft or all AWS).
-
-    - **Best of breed:** Use the best tool for each job, even if it means mixing vendors, to maximize performance, flexibility, or innovation.
-
-    These principles influence architectural decisions and vendor selection. You must document and socialize these principles to ensure consistency across the cloud estate.
-
-4. **Map each workload to a migration strategy based on business context.** Migration strategies, such as rehost, refactor, rearchitect, rebuild, or replace, must align with the workload’s business drivers. For example, select rehost for cost-driven migrations or refactor for innovation-focused goals. This mapping ensures each workload contributes to strategic outcomes and supports long-term cloud maturity.
+3. **Map each workload to a migration strategy based on business context.** Migration strategies, such as rehost, refactor, rearchitect, rebuild, or replace, must align with the workload’s business drivers. For example, select rehost for cost-driven migrations or refactor for innovation-focused goals. This mapping ensures each workload contributes to strategic outcomes and supports long-term cloud maturity.
 
 ## Select the appropriate migration strategy for each workload
 
@@ -47,13 +39,13 @@ The selection of migration strategies determines the success of your cloud adopt
 
 1. **Retire (decommission).** Retire workloads that no longer provide business value. Workloads become obsolete when the cost to migrate and operate them exceeds their business value. Validate this decision by confirming that the workload is obsolete and has no critical dependencies that would impact other systems. Update your inventory as you decommission workloads.
 
-2. **Rehost (like-for-like migration).** A rehost strategy enables fast and low-risk migration by moving workloads to Azure with minimal changes. A rehost is a like-for-like migration, which moves virtual machines to IaaS, IaaS to IaaS, and PaaS to PaaS. 
+2. **Rehost (like-for-like migration).** A rehost strategy enables fast and low-risk migration by moving workloads to Azure with minimal changes. A rehost is a like-for-like migration, which moves virtual machines to IaaS, IaaS to IaaS, and PaaS to PaaS.
 
     - **Don't rehost problematic workloads.** Rehosting does not resolve existing performance, reliability, or architectural issues. Migrating such workloads without modernization can carry forward technical debt and require rework later. Instead, modernize these workloads during migration to address root causes.
 
     - **Confirm that the workload will not require modernization within two years.** Rehosting is suitable only when you are confident that the workload will remain in its current state for at least two years. If modernization is likely, consider refactoring or rearchitecting instead to avoid duplicate effort.
 
-    - **Use rehost to build foundational cloud operations.** Rehosting helps teams gain experience with Azure operations, governance, and cost management. This early exposure supports broader cloud adoption goals and prepares teams for more complex modernization efforts. 
+    - **Use rehost to build foundational cloud operations.** Rehosting helps teams gain experience with Azure operations, governance, and cost management. This early exposure supports broader cloud adoption goals and prepares teams for more complex modernization efforts.
 
     | Workload type | Azure target | Examples | Like-for-like Mapping Guidance |
     |--------------| --- | ----------|--------------------------------|
@@ -69,7 +61,7 @@ The selection of migration strategies determines the success of your cloud adopt
 
 6. **Replace (use SaaS alternative).** Replace workloads with SaaS solutions when customization needs are minimal. A replace strategy substitutes custom applications with commercial software-as-a-service (SaaS) solutions that meet business requirements. This approach eliminates development and maintenance overhead while providing proven functionality. Replace workloads when SaaS solutions offer comparable features, integration capabilities meet requirements, and total cost of ownership justifies the transition. Consider data migration complexity, user training needs, and process changes when you evaluate replacement options. Common replacement scenarios include CRM systems, HR platforms, and collaboration tools where SaaS maturity provides reliable alternatives to custom solutions.
 
-7. **Rebuild (build cloud-native).** Rebuild workloads using cloud-native technologies. A rebuild strategy creates a new, cloud-native version of a workload using modern Azure services. This strategy is important when legacy systems no longer meet business or technical requirements and modernization is not cost-effective. You must rebuild when the workload is essential but the current system cannot support future needs or integrate effectively with Azure.
+7. **Rebuild (build cloud-native).** Rebuild workloads using cloud-native technologies when legacy systems can't meet future business or technical needs and modernization isn't viable. This approach creates a new solution using Azure services to maximize scalability, reliability, and security. Replace infrastructure services like DHCP with Azure-native alternatives, and deploy new instances of services like Active Directory Domain Controllers in Azure rather than migrating them.
 
 8. **Retain workloads that meet current and future business needs.** A retain strategy keeps workloads in their current environment when they are stable, compliant, and meet all current and future business needs with no near-term driver to move. You must retain workloads that cannot be migrated due to regulatory constraints, technical dependencies, or business continuity requirements. Use Azure Arc to manage retained on-premises workloads from Azure, providing unified management capabilities. Shift workloads that cannot be migrated to another migration wave or revisit them later when constraints change.
 
