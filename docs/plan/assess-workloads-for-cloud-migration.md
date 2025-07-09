@@ -61,7 +61,9 @@ Requirement gathering ensures that the target architecture meets compliance and 
 
 2. **Document SLAs, RPOs, and RTOs.** Capture service-level agreements, recovery point objectives, and recovery time objectives. Use this data to design backup, replication, and failover strategies. See [Define reliability requirements](/azure/cloud-adoption-framework/manage/protect#define-reliability-requirements).
 
-3. **Align architecture with requirements.** Ensure that Azure services and configurations meet documented constraints and expectations. This alignment prevents compliance issues and performance problems after migration.
+3. Document environments. Document whether the workload runs in production, test, or development environments. 
+
+4. Document maintenance windowThis classification determines your migration approach and acceptable downtime windows.
 
 4. **Validate ISV integration with Azure.** ISV integration validation ensures that third-party software continues to function after migration. Use test environments or vendor documentation to confirm compatibility. Identify any required updates or replacements before migration begins to avoid delays. Determine whether Azure Hybrid Benefit or other licensing models apply. Include licensing costs in your migration plan to ensure budget accuracy. Adjust timelines, budgets, or architecture based on ISV compatibility and licensing requirements. This adjustment prevents surprises during migration execution.
 

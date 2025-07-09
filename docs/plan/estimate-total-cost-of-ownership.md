@@ -11,15 +11,15 @@ ms.topic: conceptual
 
 This article defines how to create accurate cost estimates for your Azure environment by documenting architectural decisions and service selections. A basic architecture provides the context required to estimate costs with precision. This foundational understanding ensures that cost models reflect the actual scope of services, platform dependencies, and operational requirements. Without this clarity, cost estimates lack the specificity needed for planning and governance.
 
-## Plan your architecture
+## Plan your Azure architecture
 
 The architecture of your Azure environment includes your platform and all workloads. You need to have a general architecture plan, which you can modify and refine later, to estimate the total cost of ownership in Azure. Follow this guidance.
 
-1. **Plan your platform architecture.** A platform architecture defines the shared services and centralized management capabilities that support all workloads in your Azure environment. This architecture is essential for estimating platform-level costs and planning for operational readiness. Follow these recommendations:
+1. **Plan your Azure landing zone architecture.** An Azure landing zone architecture defines the shared services and centralized management capabilities that support all workloads in your Azure environment. This architecture is essential for estimating platform-level costs and planning for operational readiness. Follow these recommendations:
 
     - **Use an Azure landing zone as the foundation for your platform architecture.** Azure landing zones provide a scalable and secure foundation for enterprise environments. They include critical components such as identity, network, and governance controls. Use the guidance in [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-    - **Defer platform architecture for early-stage startups.** Startups or small teams can begin without implementing shared services, hybrid or multi-cloud connectivity, or on-premises identity management. Instead, implement a resource hierarchy to organize and govern resources. As your environment scales, incrementally adopt Azure landing zone components to support growth and governance.
+    - **Defer components of Azure landing zone architecture for early-stage startups.** Startups or small teams can begin without implementing shared services, hybrid or multi-cloud connectivity, or on-premises identity management. Instead, implement a resource hierarchy to organize and govern resources. As your environment scales, incrementally adopt Azure landing zone components to support growth and governance.
 
 2. **Plan your workload (application) architecture.** A workload architecture defines the Azure services, regions, and configurations required to meet business and technical requirements. Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements. Use the [Azure Architecture Center](/azure/architecture/browse/) to get ideas.
 
@@ -59,7 +59,7 @@ A regional strategy defines the reliability and compliance posture of your workl
 
 A cost estimate provides the financial foundation for cloud adoption planning. Accurate cost estimation supports budgeting, governance, and business case development. You must estimate costs based on your defined architecture and continuously refine those estimates to align with actual usage and business goals. Follow these recommendations:
 
-1. **Use cost estimation tooling.** The [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) allows you to estimate costs for each service in your architecture. For existing workloads, use historical usage data to inform estimates. For new workloads, estimate based on projected usage and test deployments. This approach ensures that cost estimates reflect realistic consumption patterns and architectural decisions. If you use Azure Migrate, you can [estimate costs](/azure/migrate/concepts-business-case-calculation) for all discovered on-premises workloads. This tool helps you understand the cost implications of migrating existing infrastructure to Azure. Use this data to inform migration planning and validate business case assumptions.
+1. **Use cost estimation tooling.** The [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) allows you to estimate costs for each service in your architecture. For existing workloads, use historical usage data to inform estimates. For new workloads, estimate based on projected usage and test deployments. This approach ensures that cost estimates reflect realistic consumption patterns and architectural decisions. If you use Azure Migrate, you can [estimate costs](/azure/migrate/concepts-business-case-calculation) for all discovered on-premises workloads.
 
 2. **Estimate operational cost.** Identify required skills and training for teams to operate and support the target service model. Plan for changes in engineering practices and delivery processes that the new service model introduces. Engage stakeholders to validate assumptions and align service model decisions with business objectives.
 
@@ -100,6 +100,3 @@ Cloud maturity: New
 Cloud estate: Cloud-native, one cloud
 Operating model responsibilities: Centralized team handles all governance, security, and management tasks
 
-| Workload name | Workload description | Target architecture | Estimated cost |
-| --- | --- | --- | --- |
-| Ecommerce app | Ecommerce web app | [Baseline web app](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) | $$$ |
