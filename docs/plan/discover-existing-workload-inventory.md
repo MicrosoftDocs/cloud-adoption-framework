@@ -15,7 +15,7 @@ This article helps you create a comprehensive inventory of your workloads to for
 
 A complete inventory of your technical assets forms the foundation of your cloud adoption plan. Your inventory identifies all systems, applications, and infrastructure components across your environment. You need this inventory to decide which assets to migrate, modernize, or retire. Follow this guidance:
 
-1. **Use automated discovery tools.** [Azure Migrate](/azure/migrate/migrate-services-overview?view=migrate) provides free discovery capabilities for on-premises and cloud environments. The tool automatically discovers servers, applications, and dependencies across your infrastructure. For environments where Azure Migrate doesn't provide complete coverage, consider tools like [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) or [CloudPilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) that extend Azure Migrate capabilities. Select discovery tools based on your asset location (on-premises or other clouds) and asset type (IaaS, PaaS, or code).
+1. **Use automated discovery tools.** [Azure Migrate](/azure/migrate/migrate-services-overview) provides free discovery capabilities for on-premises and cloud environments. The tool automatically discovers servers, applications, and dependencies across your infrastructure. For environments where Azure Migrate doesn't provide complete coverage, consider tools like [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) or [CloudPilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) that extend Azure Migrate capabilities. Select discovery tools based on your asset location (on-premises or other clouds) and asset type (IaaS, PaaS, or code).
 
     [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
@@ -65,12 +65,12 @@ Business details document the organizational context and impact of each workload
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Discovery | [Azure Migrate](/azure/migrate/migrate-services-overview?view=migrate) | Discovers servers, applications, and dependencies across your infrastructure |
+| Discovery | [Azure Migrate](/azure/migrate/migrate-services-overview) | Discovers servers, applications, and dependencies across your infrastructure |
 | Discovery | [Azure Migrate infrastructure](/azure/migrate/migrate-appliance) | Discovers on-premises infrastructure components |
 | Discovery | [Azure Migrate application discovery](/azure/migrate/how-to-discover-applications) | Identifies applications running in your environment |
 | Discovery | [Azure Migrate import template](https://go.microsoft.com/fwlink/?linkid=2109031) | Enables manual documentation of assets in restricted environments |
 | Assessment | [Azure Migrate assessment](/azure/migrate/tutorial-discover-physical) | Evaluates on-premises workloads for Azure migration |
-| Assessment | [Azure Migrate assessment for physical servers](/azure/migrate/tutorial-assess-physical?view=migrate-classic&viewFallbackFrom=migrate) | Assesses physical and virtualized servers for cloud migration |
+| Assessment | [Azure Migrate assessment for physical servers](/azure/migrate/tutorial-assess-physical) | Assesses physical and virtualized servers for cloud migration |
 | Assessment | [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) | Assess infrastructure and code for cloud migration |
 | Code discovery assessment | [CAST Highlight](https://appsource.microsoft.com/product/web-apps/cast.cast_highlight?tab=Overview) | Analyzes application code for cloud readiness |
 | Assessment | [CloudPilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) | Analyzes applications for cloud readiness |

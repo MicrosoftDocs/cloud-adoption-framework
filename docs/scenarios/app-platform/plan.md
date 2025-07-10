@@ -39,7 +39,7 @@ To begin aligning the strategy and plan, identify any workloads that are likely 
 > [!NOTE]
 > The following list of considerations should only be documented for migration candidates identified by the criteria above.
 
-When building a cloud adoption plan, each workload is documented following the guidance in [Define and prioritize workloads](../../plan/workloads.md). Any workload which are candidates for the modern application platform scenario will require additional information to guide execution of the plan. That article highlights the importance of [documenting business and technical inputs to define the workload](../../plan/workloads.md?#define-workloads). For modern application platform candidates, the following data points should be added to the definition of the workload.
+When building a cloud adoption plan, each workload is documented following the guidance in [Define and prioritize workloads](../../plan/discover-existing-workload-inventory.md). Any workload which are candidates for the modern application platform scenario will require additional information to guide execution of the plan. [Document business](../../plan/discover-existing-workload-inventory.md#document-workload-business-details) and [technical inputs](../../plan/assess-workloads-for-cloud-migration.md) for each workload. For modern application platform candidates, the following data points should be added to the definition of the workload.
 
 ### Business inputs
 
