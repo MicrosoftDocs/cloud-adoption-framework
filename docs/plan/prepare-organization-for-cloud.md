@@ -1,6 +1,6 @@
 ---
 title: Prepare your organization for the cloud
-description: This article explains how to choose and implement cloud operating models that distribute Azure responsibilities effectively across your organization. Learn to plan governance, security, and operations teams while selecting centralized, shared management, or decentralized models based on organizational size, maturity, and compliance requirements.
+description: Choose and implement a cloud operating model that distributes Azure responsibilities across your organization. Plan governance, security, and operations teams while selecting centralized, shared, or decentralized models based on organizational size and maturity.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
@@ -30,7 +30,7 @@ A cloud operating model defines how teams manage responsibilities and collaborat
 | Operating Model | Best For | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
 | Centralized | Small organizations, new adopters, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
-| Shared Management | Mid-size or enterprise estates, hybrid or multi-cloud | Platform team(s) build the [Azure landing zone](../ready/index.md), manages shared services, and governance guardrails. Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
+| Shared Management | Mid-size or enterprise estates, hybrid, or multicloud | Platform team(s) build the [Azure landing zone](../ready/index.md), manages shared services, and governance guardrails. <br> Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
 | Decentralized | Tech-savvy startups, innovation programs | Each team owns every cloud task | High speed and autonomy | Weaker standardization, higher risk of security gaps |
 
 ### Start with a centralized model if you're new to cloud or startup
@@ -69,15 +69,11 @@ A decentralized model gives each team full ownership of their cloud workloads, i
 
 ### Evolve your operating model as your organization matures
 
-Operating models must adapt to organizational growth, team maturity, and cloud complexity.
-
 1. **Review your operating model.** As your organization scales, reassess whether your current model supports your goals. Transition from centralized to shared or hybrid models as needed.
 
 2. **Adopt hybrid approaches where appropriate.** Some teams may benefit from decentralized autonomy even if the broader organization uses a centralized or shared model. You must evaluate team maturity to determine where hybrid models add value without compromising governance.
 
 ### Secure executive sponsorship
-
-Executive alignment ensures that the operating model supports business priorities. Without this alignment, cloud adoption efforts can lack authority or direction. You must engage leadership early to validate and support your model. Follow this guidance:
 
 1. **Engage business and IT leadership.** Ensure that cloud strategy reflects input from all stakeholders, not just IT teams. This engagement creates buy-in and ensures the operating model aligns with business objectives. You must secure commitment from both business and technical leaders to ensure the model has the authority and resources needed for success.
 

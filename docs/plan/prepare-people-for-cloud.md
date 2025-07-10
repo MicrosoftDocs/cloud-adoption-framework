@@ -1,6 +1,6 @@
 ---
 title: Prepare your people for the cloud
-description: Discover actionable guidance to equip your team with the skills needed for successful Azure adoption.
+description: Equip your team with essential Azure skills through targeted training, expert support, and continuous learning programs to accelerate cloud adoption and reduce implementation risks.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
