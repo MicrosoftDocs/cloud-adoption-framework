@@ -659,14 +659,8 @@ items:
         href: organize/index.md
       - name: Required cloud functions
         items:
-        - name: Cloud strategy functions
-          href: organize/cloud-strategy.md
-        - name: Cloud adoption functions
-          href: organize/cloud-adoption.md
         - name: Cloud governance functions
           href: organize/cloud-governance.md
-        - name: Central IT functions
-          href: organize/central-it.md
         - name: Cloud operations functions
           href: organize/cloud-operations.md
         - name: Cloud center of excellence functions
@@ -682,8 +676,6 @@ items:
         href: organize/organization-structures.md
       - name: Align the RACI matrix
         href: organize/raci-alignment.md
-      - name: Building technical skills
-        href: organize/suggested-skills.md
       - name: Creating a cost-conscious organization
         href: organize/cost-conscious-organization.md
 
