@@ -61,7 +61,7 @@ The following sections describe a fully staffed, proven organizational structure
 
 ## Central IT team
 
-![Diagram that shows the central I T team.](../_images/ready/org-ready-central-it.png)
+![Diagram that shows the central IT team.](../_images/ready/org-ready-central-it.png)
 
 As adoption scales, the cloud governance team might struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments that have heavy compliance, operations, or security requirements. At this stage, it's common for companies to shift cloud responsibilities to an existing central IT team. If that team can reassess tools, processes, and people to better support cloud adoption at scale, then including the central IT team can add significant value. Subject matter experts from operations, automation, security, and administration to modernize the central IT team can drive effective operational innovations.
 

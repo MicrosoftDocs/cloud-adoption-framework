@@ -3427,9 +3427,39 @@
       },
       {
          "source_path": "docs/plan/assets.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud#understand-the-cloud-skills-you-need",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory#discover-workload-inventory",
          "redirect_document_id": false
-      }                   
+      },
+      {
+         "source_path": "docs/plan/initial-org-alignment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/docs/plan/iteration-paths.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog#initial-migration-backlog",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/plan-intro.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/plan-sustainability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/prerequisites.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/review-rationalization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
+         "redirect_document_id": false
+      }                            
    ]   
 }
 
