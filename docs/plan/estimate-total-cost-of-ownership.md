@@ -82,15 +82,11 @@ A cost estimate provides the financial foundation for cloud adoption planning. A
 
 ### Estimate operational costs for the target service model
 
-Operational costs include the human and process changes required to support the new architecture. These costs are critical to understanding the full financial impact of cloud adoption. You must identify and plan for these costs to ensure operational readiness.
-
 1. **Identify required skills and training.** Determine the skills your teams need to operate and support the target architecture. Include training costs and time in your estimate. This step ensures that your teams can manage the environment effectively after migration.
 
 2. **Plan for changes in engineering and delivery processes.** Evaluate how the new service model affects your current engineering practices. Include the cost of process changes, tooling updates, and stakeholder engagement. Validate these assumptions with business and technical stakeholders to ensure alignment.
 
 ### Reevaluate cost estimates when projections deviate
-
-Cost estimates that significantly exceed or fall below expectations might require adjustment of your architecture decision. You must review and adjust your architecture to align with business and financial goals.
 
 1. **Compare cost estimates to budget expectations.** Review the output from the Azure Pricing Calculator and compare these cost estimates to your organization’s budget. This comparison identifies discrepancies between projected costs and financial targets. If the estimate is too high or too low, investigate the underlying causes to determine whether architectural changes are necessary.
 
@@ -100,15 +96,11 @@ Cost estimates that significantly exceed or fall below expectations might requir
 
 ### Validate assumptions through test deployments
 
-Test deployments provide real-world data to validate your cost model. This step ensures that your estimates reflect actual usage patterns and performance requirements.
-
 1. **Deploy representative workloads in a test environment.** Test deployments provide real-world data about resource consumption and performance. This data enables you to compare actual usage to your initial cost estimates and identify any discrepancies. Deploy workloads that closely match your production scenarios to ensure the results are relevant.
 
 2. **Refine your cost model based on test results.** Update your cost estimates to reflect the observed usage patterns from your test deployments. This refinement increases the accuracy of your cost model and enables more informed architectural and financial decisions. Adjust service selections, SKUs, or configurations as needed to optimize costs and performance.
 
 ### Establish a cost baseline
-
-A cost baseline allows you to track actual costs against estimates. This comparison supports cost governance and informs future planning.
 
 1. **Record all service selections, SKUs, regions, and estimated costs.** Include this information in your cloud adoption plan. This documentation supports governance and enables future reviews.
 

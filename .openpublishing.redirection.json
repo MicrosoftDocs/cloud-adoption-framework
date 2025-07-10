@@ -3349,6 +3349,26 @@
          "source_path": "docs/plan/adapt-roles-skills-processes.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/antipatterns/plan-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/5-rs-of-rationalization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/approach.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/calculate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/estimate-total-cost-of-ownership",
+         "redirect_document_id": false
       }    
 
    ]   
