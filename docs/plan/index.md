@@ -21,10 +21,10 @@ Use the cloud adoption plan checklist to see the tasks associated with each step
 
 | Cloud adoption planning steps | Startup tasks | Enterprise tasks |
 | --- | --- | --- |
-| 1. Prepare your organization | | 1. [Understand your cloud responsibilities](./prepare-organization-for-cloud.md#understand-your-cloud-responsibilities) <br> 2.  [Choose a cloud operating model](./prepare-organization-for-cloud.md#choose-a-cloud-operating-model) <br> 3. [Secure executive sponsorship](./prepare-organization-for-cloud.md#secure-executive-sponsorship) <br> &#9744; [Document ownership and accountability](./prepare-organization-for-cloud.md#document-ownership-and-accountability) |
-| 2. Prepare your people | | &#9744; [Identify the cloud skills you need](./prepare-people-for-cloud.md#identify-the-cloud-skills-you-need) <br> &#9744; [Close the skills gap](./prepare-people-for-cloud.md#close-the-skills-gap) <br> &#9744; [Sustain cloud skills across your organization](./prepare-people-for-cloud.md#sustain-cloud-skills-across-your-organization) |
-| 3. Plan migration | Not applicable | [Discover your inventory](./discover-existing-workload-inventory.md) <br> [Select migration strategies](./select-cloud-migration-strategy.md) <br> |
-| 4. Estimate cloud costs | | |
+| 1. Prepare your organization | | 1. [Understand your cloud responsibilities](./prepare-organization-for-cloud.md#understand-your-cloud-responsibilities) <br> 2.  [Choose a cloud operating model](./prepare-organization-for-cloud.md#choose-a-cloud-operating-model) <br> 3. [Document ownership and accountability](./prepare-organization-for-cloud.md#document-ownership-and-accountability) |
+| 2. Prepare your people | | 1. [Identify the cloud skills you need](./prepare-people-for-cloud.md#identify-the-cloud-skills-you-need) <br> 2. [Close the skills gap](./prepare-people-for-cloud.md#close-the-skills-gap) <br> 3. [Sustain cloud skills across your organization](./prepare-people-for-cloud.md#sustain-cloud-skills-across-your-organization) |
+| 3. Plan migration | Not applicable | 1. [Discover your inventory](./discover-existing-workload-inventory.md) <br> 2. [Select migration strategies](./select-cloud-migration-strategy.md) <br> 3. [Assess your workloads](./assess-workloads-for-cloud-migration.md) |
+| 4. Estimate cloud costs | | 1. [Plan your Azure architecture](./estimate-total-cost-of-ownership.md#plan-your-azure-architecture) <br> 2. [Estimate costs based on architecture](./estimate-total-cost-of-ownership.md#estimate-costs-based-on-architecture) <br> 3. [Document the cloud adoption plan](./estimate-total-cost-of-ownership.md#document-the-cloud-adoption-plan) |
 
 ## Why is cloud adoption planning important?
 

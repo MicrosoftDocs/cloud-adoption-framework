@@ -126,9 +126,9 @@ A cost estimate provides the financial foundation for cloud adoption planning. A
 
     - **Document requirements for cloud-native workloads (if applicable).** A cloud-native adoption plan defines the workloads you intend to build in Azure using cloud-native services. This plan includes a list of planned workloads, requirements, success metrics, architecture (platform and workloads), and cost estimates. For a template, see [Cloud-native adoption plan](./cloud-native-adoption-plan.md).
 
-5. **Align with standards and frameworks.** A cloud adoption plan must align with your organization’s project management office (PMO) standards and integrate into existing governance and delivery frameworks. This alignment ensures consistency in planning, reporting, and risk management across all cloud initiatives. You must embed cloud adoption activities into enterprise project structures to ensure visibility, accountability, and control.
+3. **Align with standards and frameworks.** A cloud adoption plan must align with your organization’s project management office (PMO) standards and integrate into existing governance and delivery frameworks. This alignment ensures consistency in planning, reporting, and risk management across all cloud initiatives. You must embed cloud adoption activities into enterprise project structures to ensure visibility, accountability, and control.
 
-6. **Estimate timelines.** Use the data you have and business drivers to estimate the timelines for each workload to be production ready in Azure. This estimate should be an approximation. Don't spend too much time on this because timelines change and should be adjusted regularly.
+4. **Estimate timelines.** Use the data you have and business drivers to estimate the timelines for each workload to be production ready in Azure. This estimate should be an approximation. Don't spend too much time on this because timelines change and should be adjusted regularly.
 
 ## Next step
 
