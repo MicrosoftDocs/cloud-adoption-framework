@@ -3474,7 +3474,12 @@
          "source_path": "docs/plan/workloads.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
          "redirect_document_id": false
-      }                                  
+      },
+      {
+         "source_path": "docs/plan/smart-assessment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      }                                     
    ]   
 }
 
