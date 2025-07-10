@@ -15,51 +15,81 @@ A shared management operating model enables organizations to scale cloud adoptio
 
 A shared management operating model balances central control with distributed responsibility across cloud and on-premises environments. This balance enables organizations to maintain governance standards while allowing teams to work at their preferred pace. You need to establish clear boundaries between platform capabilities and workload operations to achieve consistent management across hybrid and multi-cloud estates. Follow this guidance:
 
-1. **Establish platform teams to provide shared cloud services and governance.** Platform teams create and maintain core capabilities that all workloads require, such as Azure governance, subscription provisioning, hub networking, and developer tooling. These centralized services ensure consistency, security, and scalability across your entire cloud estate. In hybrid environments, these teams coordinate with traditional IT teams to align governance practices across all technology environments.
+1. **Establish platform teams to provide shared cloud services and governance.** Platform teams provide foundational capabilities such as Azure governance, subscription provisioning, hub-and-spoke networking, and developer tooling. These services support all workloads and ensure consistency, security, and scalability across the cloud estate. In hybrid environments, platform teams must coordinate with traditional IT to align governance across on-premises and cloud systems.
 
-2. **Delegate subscription and workload operations to workload teams.** Workload teams manage their own cloud environments within the boundaries defined by platform teams. This delegation enables teams to operate at their own pace while adhering to organizational standards. In hybrid models, application teams often include staff with responsibilities across both on-premises and cloud environments, requiring clear operational guidelines for each context.
+2. **Delegate subscription and workload operations to workload teams.** Workload teams manage their own cloud environments within the boundaries defined by platform teams. This delegation allows teams to operate independently while adhering to organizational standards. In hybrid models, workload teams often span both cloud and on-premises environments, so you must define clear operational guidelines for each context.
 
-3. **Create a responsibility matrix between platform, workload, and traditional IT teams.** Document which team owns each service, operation, and support function across your technology estate. This documentation reduces confusion and increases accountability, especially when responsibilities span both cloud and on-premises systems. For example, one platform team might implement Azure Policy and create infrastructure modules while another team uses these modules to build landing zones. Workload teams manage workload-specific resources.
+3. **Create a responsibility matrix between platform, workload, and traditional IT teams.** A responsibility matrix documents ownership of services, operations, and support functions across the technology estate. This documentation reduces ambiguity and increases accountability. For example, one platform team might create reusable infrastructure modules, while another team uses them to build landing zones. Workload teams manage workload-specific resources and operations.
 
-4. **Establish service levels and metrics to govern cross-team collaboration.** Define expectations for request handling, support, and delivery timelines between platform, workload, and traditional IT teams. Use these metrics to continuously improve platform services and ensure alignment across hybrid operations.
+4. **Establish service levels and metrics to govern cross-team collaboration.** Service level agreements (SLAs) and operational metrics define expectations for request handling, support, and delivery timelines. These metrics help improve platform services and ensure alignment across hybrid operations. You must regularly review and refine these metrics to support continuous improvement.
 
 ## Build platform capabilities as internal products
 
-Platform engineering transforms shared services into discoverable, reusable, and supportable products. These products enable workload teams to adopt cloud services faster and more securely. Follow this guidance:
+A platform capability is a shared service that supports workload teams by accelerating secure and consistent cloud adoption. Treating these capabilities as internal products ensures they are discoverable, reusable, and supportable. You must apply platform engineering and product management practices to scale these services across your organization.
 
-1. **Design platform services as modular, reusable products.** Examples include:
+### Design platform services as modular, reusable products
+
+Modular platform services reduce duplication and increase consistency across workloads. These services provide foundational capabilities that workload teams can consume independently. You must design each service to be reusable, composable, and aligned with Azure best practices.
+
+1. **Define modular platform services based on common workload needs.** Platform services must address repeatable needs such as governance, networking, and developer enablement. These services reduce onboarding time and improve compliance across workloads. Examples include:
+
     - Azure governance (management groups, policies, blueprints)
     - Subscription vending
     - Hub-and-spoke networking
     - Inner-sourced infrastructure-as-code (IaC) modules based on Azure Verified Modules (AVM)
     - Developer tooling such as internal developer platforms (IDPs)
 
-2. **Use product management practices to evolve platform capabilities.** Treat each platform capability as a product with a defined roadmap, backlog, and customer feedback loop. This approach ensures that services remain relevant and valuable to internal consumers.
+2. **Design services to be discoverable and self-service.** Platform services must be easy for workload teams to find, understand, and consume. Use service catalogs, documentation, and automation to enable self-service adoption. This approach reduces dependency on the platform team and accelerates delivery.
 
-3. **Support multiple platform teams to scale across large enterprises.** In large organizations, a single platform team cannot meet all needs. Instead, organize multiple product-aligned teams focused on areas such as:
+### Use product management practices to evolve platform capabilities
+
+Product management ensures that platform services remain relevant and valuable to internal consumers. You must treat each platform capability as a product with a defined lifecycle.
+
+1. **Establish a product backlog and roadmap for each platform capability.** Each platform service must have a prioritized backlog and roadmap based on internal customer needs. This structure enables continuous improvement and alignment with evolving business requirements.
+
+2. **Collect and act on feedback from workload teams.** Feedback loops ensure that platform services meet the needs of their consumers. Use surveys, interviews, and telemetry to gather insights and adjust priorities. This practice increases adoption and satisfaction.
+
+### Use multiple platform teams to scale across large enterprises
+
+A single platform team cannot meet the diverse needs of a large organization. You must organize multiple product-aligned teams to scale platform capabilities effectively.
+
+1. **Create specialized platform teams aligned to capability domains.** Each team must focus on a specific area of the platform, such as:
     - Cloud onboarding
     - Cloud design and build support
     - Cloud security and governance
     - Identity and access management
     - Networking and connectivity
 
+2. **Coordinate across platform teams to ensure consistency.** Platform teams must align on standards, tooling, and integration patterns. Use shared design principles, architectural reviews, and inner-source practices to maintain coherence across services.
+
 ## Right-size platform teams for skill coverage and scalability
 
-Effective platform teams require a mix of specialized skills and a manageable team size to deliver and support platform products. Follow this guidance:
+A right-sized platform team enables consistent delivery of platform capabilities while maintaining agility and operational efficiency. This structure is essential for building and supporting internal platform products that accelerate workload team success. You must balance team size with the breadth of skills required to support cloud adoption at scale.
 
-1. **Start with “two-pizza” teams to maintain agility and focus.** A team that can be fed with two pizzas (typically 6–10 people) is a well-known industry benchmark for team size. This size supports rapid iteration and strong collaboration.
+1. **Start with “two-pizza” teams to maintain agility and focus.** A “two-pizza” team typically includes 6–10 members, which is a widely accepted benchmark for effective team size. This size allows for strong collaboration and fast feedback loops. Avoid larger teams that introduce coordination complexity and reduce delivery velocity.
 
-2. **Ensure skill coverage across key platform domains.** A typical enterprise platform team should include:
-    - 2 x networking engineers
-    - 2 x IaC/DevOps engineers
-    - 2 x identity engineers
-    - 2 x security engineers
+2. **Ensure skill coverage across key platform domains.** Comprehensive skill coverage ensures that platform teams can design, build, and operate secure and scalable services. You must include specialists in key technical areas to support the full lifecycle of platform capabilities. Staff platform teams with specialists across core domains. A typical enterprise platform team should include:
 
-3. **Invest in DevOps and IaC skills to enable automation and scalability.** Platform teams must be proficient in:
-    - Azure DevOps or GitHub
-    - Infrastructure-as-Code tools such as Terraform and Bicep
-    - GitHub Copilot and other AI-assisted development tools
-    - Git-based workflows for version control and collaboration
+    | Role                          | Responsibilities                                                                                     | Team Size |
+    |-------------------------------|-----------------------------------------------------------------------------------------------------|-----------|
+    | Networking Engineers          | Design and manage cloud connectivity and hybrid networking.                                         | 2         |
+    | Infrastructure-as-Code (IaC) or DevOps Engineers | Automate deployments and manage CI/CD pipelines.                                                   | 2         |
+    | Identity Engineers            | Manage authentication, authorization, and identity governance.                                     | 2         |
+    | Security Engineers            | Enforce security policies, monitor threats, and support compliance.                                | 2         |
+
+    This structure ensures that each critical domain is covered by at least two team members for redundancy and collaboration.
+
+3. **Invest in DevOps and IaC skills to enable automation and scalability.** Develop DevOps and IaC capabilities across platform teams. Platform engineers must be proficient in:
+
+| Skill or Tool                     | Description                                                                                     |
+|-----------------------------------|-------------------------------------------------------------------------------------------------|
+| Azure DevOps or GitHub            | Enable CI/CD and workflow automation to streamline development and deployment processes.        |
+| Infrastructure-as-code tools      | Use tools like Terraform and Bicep for repeatable, version-controlled deployments.              |
+| GitHub Copilot                    | Accelerate code authoring and reduce errors with AI-assisted development tools.                 |
+| Git-based workflows               | Support collaboration, code reviews, and change tracking to enhance team productivity.          |
+
+
+These skills enable platform teams to deliver scalable, secure, and consistent services across the cloud estate.
 
 ## Next steps
 

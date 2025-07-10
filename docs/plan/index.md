@@ -21,9 +21,9 @@ Use the cloud adoption plan checklist to see the tasks associated with each step
 
 | Cloud adoption planning steps | Startup tasks | Enterprise tasks |
 | --- | --- | --- |
-| 1. Prepare your organization | | |
-| 2. Prepare your people | | |
-| 3. Plan migration | Not applicable |  |
+| 1. Prepare your organization | | 1. [Understand your cloud responsibilities](./prepare-organization-for-cloud.md#understand-your-cloud-responsibilities) <br> 2.  [Choose a cloud operating model](./prepare-organization-for-cloud.md#choose-a-cloud-operating-model) <br> 3. [Secure executive sponsorship](./prepare-organization-for-cloud.md#secure-executive-sponsorship) <br> &#9744; [Document ownership and accountability](./prepare-organization-for-cloud.md#document-ownership-and-accountability) |
+| 2. Prepare your people | | &#9744; [Identify the cloud skills you need](./prepare-people-for-cloud.md#identify-the-cloud-skills-you-need) <br> &#9744; [Close the skills gap](./prepare-people-for-cloud.md#close-the-skills-gap) <br> &#9744; [Sustain cloud skills across your organization](./prepare-people-for-cloud.md#sustain-cloud-skills-across-your-organization) |
+| 3. Plan migration | Not applicable | [Discover your inventory](./discover-existing-workload-inventory.md) <br> [Select migration strategies](./select-cloud-migration-strategy.md) <br> |
 | 4. Estimate cloud costs | | |
 
 ## Why is cloud adoption planning important?
