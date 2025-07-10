@@ -9,9 +9,7 @@ ms.topic: conceptual
 
 # Assess your workloads for cloud migration
 
-This article helps you conduct thorough workload assessments to collect the necessary information for successful migration decisions. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases).
-
-## Discovery and assessment tools
+This article helps you conduct thorough workload assessments to collect the necessary information for successful migration decisions. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases). Use the following table for discovery and assessment tools for workloads on-premises, in Amazon Web Services (AWS), in Google Cloud Platform (GCP), and application code.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
