@@ -29,9 +29,7 @@ Multiple Terraform providers support Oracle Database@Azure Exadata infrastructur
 
 ## Use Azure Verified Modules
 
-Azure Verified Modules provide standardized deployment templates for Oracle Database@Azure infrastructure. These modules ensure compliance with Azure best practices for reliability and security. You must use Azure Verified Modules to accelerate deployment and maintain consistency across environments. Here's how:
-
-1. **Deploy Oracle Database@Azure infrastructure using the available Azure Verified Modules.** [Azure Verified Modules (AVM)](https://aka.ms/avm) offer pre-built templates for Oracle Database@Azure Exadata infrastructure and clusters. These modules follow Microsoft's [Well-architected Framework (WAF)](https://aka.ms/waf) principles to ensure reliable and secure deployments.
+Azure Verified Modules provide standardized deployment templates for Oracle Database@Azure infrastructure. These modules ensure compliance with Azure best practices for reliability and security.  Deploy Oracle Database@Azure infrastructure using the available Azure Verified Modules.** [Azure Verified Modules (AVM)](https://aka.ms/avm) offer pre-built templates for Oracle Database@Azure Exadata infrastructure and clusters. These modules follow Microsoft's [Well-architected Framework (WAF)](https://aka.ms/waf) principles to ensure reliable and secure deployments.
 
 | Azure Verified Module (AVM) | Language | Module Class | Description |
 | - | - | - | - |
