@@ -1,7 +1,7 @@
 ---
 title: Get started on a skills readiness path
 description: Explore a skills readiness path so you can help your organization understand and adopt cloud services.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 03/03/2023
 ms.topic: conceptual

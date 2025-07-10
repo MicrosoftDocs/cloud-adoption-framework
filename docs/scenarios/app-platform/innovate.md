@@ -1,7 +1,7 @@
 ---
 title: Innovation on modern application platforms
 description: Understand the Innovate methodology of the Cloud Adoption Framework to establish a modern application platform environment.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/14/2021
 ms.topic: conceptual

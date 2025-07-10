@@ -1,7 +1,7 @@
 ---
 title: Change communication
 description: Use the Cloud Adoption Framework for Azure to learn how change communication can help you communicate cloud migration outcomes.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual

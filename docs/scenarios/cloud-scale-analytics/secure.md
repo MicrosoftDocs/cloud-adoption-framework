@@ -1,8 +1,8 @@
 ---
 title: Secure cloud-scale analytics in Azure
 description: Learn about the security principles for cloud-scale analytics in Azure.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 10/01/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

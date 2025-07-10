@@ -1,7 +1,7 @@
 ---
 title: Migration preparation checklist
 description: Understand the requirements that you need to successfully prepare for a cloud migration in the Microsoft Cloud Adoption Framework.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual

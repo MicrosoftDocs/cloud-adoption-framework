@@ -1,8 +1,8 @@
 ---
 title: Data Management Landing Zone Overview
 description: Learn how to use a data management landing zone to govern your analytics platform, including data governance, lifecycle management, and metadata registration.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 02/20/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
