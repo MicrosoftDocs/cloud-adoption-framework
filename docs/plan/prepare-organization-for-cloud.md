@@ -83,17 +83,17 @@ Executive alignment ensures that the operating model supports business prioritie
 
 2. **Align the operating model with strategic goals.** Confirm that the model supports innovation, compliance, and operational efficiency requirements. This alignment ensures the model serves both current needs and future growth plans. You must regularly review and validate this alignment as business priorities evolve.
 
-## Document ownership and accountability
+## Document cloud responsibilities
 
-Clear accountability prevents duplication and ensures critical tasks are completed. You must document responsibilities to clarify roles across teams. Follow this guidance:
+A documented responsibility model defines clear ownership across governance, security, and operations. This clarity prevents duplication, ensures accountability, and supports consistent execution of critical tasks. You must define, assign, and communicate responsibilities to align teams and partners around shared cloud goals.
 
-1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to prevent gaps in coverage and ensure all critical areas are managed effectively. Responsibility mapping eliminates confusion about who handles specific tasks and decisions. You must ensure every critical function has an assigned owner and backup.
+1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to prevent gaps in coverage and ensure all critical areas are managed effectively. Responsibility mapping eliminates confusion about who handles specific tasks and decisions. Assign primary and backup owners for each function. Designate individuals or teams responsible for each function and ensure a backup is available. This redundancy ensures continuity during absences or transitions.
 
-2. **Include partner support in your model** Strategic [partners](https://partner.microsoft.com/partnership/find-a-partner) can accelerate cloud adoption and improve operational outcomes. Identify trusted partners such as Expert MSPs. These partners provide specialized expertise in governance, operations, and transformation that does not exist within your organization. Clarify how partners support platform operations, workload management, and innovation initiatives to avoid confusion and overlap with internal teams.
+2. **Include partner responsibilities in your operating model** [Partners](https://partner.microsoft.com/partnership/find-a-partner) contributions must be clearly defined to avoid overlap with internal teams. Strategic partners such as Microsoft Expert MSPs provide specialized capabilities that accelerate cloud adoption and improve operational maturity. Identify partners that support your cloud strategy. Clarify the scope of partner responsibilities. Define which functions partners own, such as platform operations, workload management, or innovation initiatives. Ensure these responsibilities are distinct from internal team roles.
 
 3. **Communicate the responsibilities to all stakeholders.** Ensure that all teams understand their roles and how they interact with others in the operating model. This communication prevents confusion and ensures smooth collaboration. You must provide training and documentation to help teams understand their responsibilities and dependencies.
 
-4. **Review responsibilities.** As your Azure environment grows, review the distribution of responsibilities regularly to ensure it aligns with team abilities, capacity, and business goals.
+4. **Review responsibilities.** A static responsibility model becomes outdated as your Azure environment evolves. Regular reviews ensure that responsibilities align with team capacity, skillsets, and business priorities. As your Azure environment grows, review the distribution of responsibilities regularly to ensure it aligns with team abilities, capacity, and business goals.
 
 ## Azure tools and resources
 
