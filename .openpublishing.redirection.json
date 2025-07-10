@@ -3436,7 +3436,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/plan/docs/plan/iteration-paths.md",
+         "source_path": "docs/plan/iteration-paths.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog#initial-migration-backlog",
          "redirect_document_id": false
       },
