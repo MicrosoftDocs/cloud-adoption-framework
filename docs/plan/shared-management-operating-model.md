@@ -29,9 +29,9 @@ A platform capability is a shared service that supports workload teams by accele
 
 ### Design platform services as modular, reusable products
 
-Modular platform services reduce duplication and increase consistency across workloads. These services provide foundational capabilities that workload teams can consume independently. You must design each service to be reusable, composable, and aligned with Azure best practices.
+1. **Understand the product mindset.** Modular platform services reduce duplication and increase consistency across workloads. These services provide foundational capabilities that workload teams can consume independently. You must design each service to be reusable, composable, and aligned with Azure best practices.
 
-1. **Define modular platform services based on common workload needs.** Platform services must address repeatable needs such as governance, networking, and developer enablement. These services reduce onboarding time and improve compliance across workloads. Examples include:
+2. **Define modular platform services based on common workload needs.** Platform services must address repeatable needs such as governance, networking, and developer enablement. These services reduce onboarding time and improve compliance across workloads. Examples include:
 
     - Azure governance (management groups, policies, blueprints)
     - Subscription vending
@@ -39,21 +39,17 @@ Modular platform services reduce duplication and increase consistency across wor
     - Inner-sourced infrastructure-as-code (IaC) modules based on Azure Verified Modules (AVM)
     - Developer tooling such as internal developer platforms (IDPs)
 
-2. **Design services to be discoverable and self-service.** Platform services must be easy for workload teams to find, understand, and consume. Use service catalogs, documentation, and automation to enable self-service adoption. This approach reduces dependency on the platform team and accelerates delivery.
+3. **Design services to be discoverable and self-service.** Platform services must be easy for workload teams to find, understand, and consume. Use service catalogs, documentation, and automation to enable self-service adoption. This approach reduces dependency on the platform team and accelerates delivery.
 
 ### Use product management practices to evolve platform capabilities
 
-Product management ensures that platform services remain relevant and valuable to internal consumers. You must treat each platform capability as a product with a defined lifecycle.
-
-1. **Establish a product backlog and roadmap for each platform capability.** Each platform service must have a prioritized backlog and roadmap based on internal customer needs. This structure enables continuous improvement and alignment with evolving business requirements.
+1. **Establish a product backlog and roadmap for each platform capability.** Product management ensures that platform services remain relevant and valuable to internal consumers. You must treat each platform capability as a product with a defined lifecycle. Each platform service must have a prioritized backlog and roadmap based on internal customer needs. This structure enables continuous improvement and alignment with evolving business requirements.
 
 2. **Collect and act on feedback from workload teams.** Feedback loops ensure that platform services meet the needs of their consumers. Use surveys, interviews, and telemetry to gather insights and adjust priorities. This practice increases adoption and satisfaction.
 
 ### Use multiple platform teams to scale across large enterprises
 
-A single platform team cannot meet the diverse needs of a large organization. You must organize multiple product-aligned teams to scale platform capabilities effectively.
-
-1. **Create specialized platform teams aligned to capability domains.** Each team must focus on a specific area of the platform, such as:
+1. **Create specialized platform teams aligned to capability domains.** A single platform team cannot meet the diverse needs of a large organization. You must organize multiple product-aligned teams to scale platform capabilities effectively. Each team must focus on a specific area of the platform, such as:
     - Cloud onboarding
     - Cloud design and build support
     - Cloud security and governance
@@ -87,7 +83,6 @@ A right-sized platform team enables consistent delivery of platform capabilities
 | Infrastructure-as-code tools      | Use tools like Terraform and Bicep for repeatable, version-controlled deployments.              |
 | GitHub Copilot                    | Accelerate code authoring and reduce errors with AI-assisted development tools.                 |
 | Git-based workflows               | Support collaboration, code reviews, and change tracking to enhance team productivity.          |
-
 
 These skills enable platform teams to deliver scalable, secure, and consistent services across the cloud estate.
 
