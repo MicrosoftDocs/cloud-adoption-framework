@@ -37,6 +37,9 @@ highlightedContent:
     - title: Adoption scenarios 
       itemType: overview
       url: ./overview.md#cloud-adoption-scenarios
+    - title: Azure credits for startups
+      itemType: how-to-guide
+      url: https://www.microsoft.com/startups
 
 # Card with summary style
 

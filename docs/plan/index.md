@@ -28,11 +28,7 @@ Use the cloud adoption plan checklist to see the tasks associated with each step
 
 ## Understand the importance of cloud adoption planning
 
-A cloud adoption plan ensures your Azure environment aligns with your business priorities. It provides a structured approach to prepare your organization, people, and technology for cloud adoption. This structure helps you reduce risk, control costs, and accelerate value realization.
-
-## Apply cloud adoption planning to your organization type
-
-Cloud adoption planning applies to all organizations:
+A cloud adoption plan ensures your Azure environment aligns with your business priorities. It provides a structured approach to prepare your organization, people, and technology for cloud adoption. This structure helps you reduce risk, control costs, and accelerate value realization. Cloud adoption planning applies to all organizations:
 
 - Startups can use the plan to build cloud-native applications in Azure.
 

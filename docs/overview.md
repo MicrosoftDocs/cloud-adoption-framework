@@ -22,7 +22,7 @@ The Cloud Adoption Framework provides guidance based on real-world experience to
 
 This Cloud Adoption Framework is for anyone using Azure. Whether you're just starting or already running workloads in the cloud, it helps you make smart decisions. It supports:
 
-- **Startups** launching a business in Azure.
+- **Startups** launching a business in Azure. See [Microsoft for Startups](https://www.microsoft.com/startups) for Azure credits.
 - **Enterprises** operating at a massive scale.
 - **New users** building foundational Azure skills.
 - **Existing customers** maturing  operations.
