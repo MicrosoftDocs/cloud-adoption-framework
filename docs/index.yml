@@ -35,7 +35,7 @@ highlightedContent:
       itemType: how-to-guide
       url: ./ready/landing-zone/index.md    
     - title: Azure credits for startups
-      itemType: learn
+      itemType: get-started
       url: https://www.microsoft.com/startups
 
 # Card with summary style
