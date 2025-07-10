@@ -10,12 +10,10 @@ ms.update-cycle: 1095-days
 
 # Develop a cloud adoption plan
 
-The Cloud Adoption Framework's (CAF) Plan methodology provides a framework for planning your cloud adoption.
-
-| **Prerequisite** | You must define your [cloud strategy](../strategy/index.md) before you begin cloud adoption planning. Your cloud strategy identifies the business drivers behind your cloud adoption efforts. Business drivers clarify why your organization is adopting the cloud. Understanding these drivers helps you prioritize workloads and define success criteria. |
+| Prerequisite | You must define your [cloud strategy](../strategy/index.md) before you begin cloud adoption planning. Your cloud strategy identifies the business drivers behind your cloud adoption efforts. Business drivers clarify why your organization is adopting the cloud. Understanding these drivers helps you prioritize workloads and define success criteria. |
 | --- | --- |
 
-Use the cloud adoption plan checklist to see the tasks associated with each step of the CAF Plan guidance. Navigate quickly to detailed guidance through provided links.
+The Cloud Adoption Framework's (CAF) Plan methodology provides a framework for planning your cloud adoption. Use the following checklist to see the tasks associated with each step of the CAF Plan guidance. Navigate quickly to detailed guidance through provided links.
 
 | Cloud adoption planning steps | Startup tasks | Enterprise tasks |
 | --- | --- | --- |
