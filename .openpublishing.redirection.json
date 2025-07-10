@@ -3459,7 +3459,22 @@
          "source_path": "docs/plan/review-rationalization.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
          "redirect_document_id": false
-      }                            
+      },
+      {
+         "source_path": "docs/plan/timelines.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/estimate-total-cost-of-ownership#document-the-cloud-adoption-plan",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud#understand-the-cloud-skills-you-need",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/workloads.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
+         "redirect_document_id": false
+      }                                  
    ]   
 }
 
