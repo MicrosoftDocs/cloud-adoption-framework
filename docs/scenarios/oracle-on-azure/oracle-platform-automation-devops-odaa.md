@@ -4,7 +4,7 @@ description: Learn how to deploy Oracle Database@Azure using Platform automation
 author: terrymandin
 ms.author: temandin
 ms.reviewer: guherk
-ms.date: 04/11/2025
+ms.date: 07/15/2025
 ms.custom: e2e-oracle
 ---
 # Platform automation and DevOps for Oracle Database@Azure
