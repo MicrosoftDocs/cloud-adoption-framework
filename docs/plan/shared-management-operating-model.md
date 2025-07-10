@@ -1,6 +1,6 @@
 ---
 title: Shared management cloud operating model
-description: Learn how to adopt a shared management cloud operating model to balance agility and control in Azure as well as hybrid and multi-cloud environments.
+description: Implement a shared management cloud operating model that scales cloud adoption through platform engineering. Learn to build reusable platform capabilities, establish clear team responsibilities, and enable self-service infrastructure for accelerated Azure workload delivery.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
