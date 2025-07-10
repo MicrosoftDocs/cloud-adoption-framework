@@ -1,6 +1,6 @@
 ---
 title: Cloud adoption plan template for cloud-native startups
-description: Use this template to document your Azure adoption plan for cloud-native startups
+description: Create a comprehensive cloud adoption plan for Azure-native startups covering operating models, training strategies, landing zone architecture, and workload requirements to accelerate your cloud journey
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/15/2025
@@ -13,8 +13,6 @@ ms.topic: conceptual
 This article provides a template for startups building a cloud-native business in Azure. It helps you document operational models, responsibilities, training plans, platform architecture, and workload details to ensure a successful migration.
 
 ## Operating model and responsibilities
-
-Use the table below to document details for each category.
 
 | Category          | Documentation to add                                   |
 |-------------------|-----------------------------------------------|

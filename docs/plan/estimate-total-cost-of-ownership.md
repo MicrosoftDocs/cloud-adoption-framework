@@ -1,9 +1,9 @@
 ---
 title: Plan your Azure environment for cost estimation
-description: Learn how to create accurate cost estimates for your Azure environment by documenting architectural decisions and service selections.
+description: Create accurate Azure cost estimates by planning architectures, selecting services and tiers, defining regional deployments, and documenting your cloud adoption plan for successful Azure implementations.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 07/17/2023
+ms.date: 07/15/2025
 ms.topic: conceptual
 ---
 
@@ -21,7 +21,7 @@ An architecture plan provides the context required to estimate the total cost of
 
     - **Use an Azure landing zone as the foundation for your platform architecture.** Azure landing zones provide a scalable and secure foundation for enterprise environments. They include critical components such as identity, network, and governance controls. Use the guidance in [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-    - **Start small for early-stage startups.** Startups or cloud-native businesses can begin without implementing shared services, hybrid or multi-cloud connectivity, or on-premises identity management. Instead, implement a resource hierarchy to organize and govern resources. As your environment scales, incrementally adopt Azure landing zone components to support growth and governance.
+    - **Start small for early-stage startups.** Startups or cloud-native businesses can begin without implementing shared services, hybrid or multicloud connectivity, or on-premises identity management. Instead, implement a resource hierarchy to organize and govern resources. As your environment scales, incrementally adopt Azure landing zone components to support growth and governance.
 
 3. **Plan your workload (application) architecture.** A workload architecture defines the Azure services, regions, and configurations required to meet business and technical requirements. Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements. Use the [Azure Architecture Center](/azure/architecture/browse/) to get ideas.
 
@@ -31,15 +31,15 @@ Accurate service selection is essential to align technical requirements with cos
 
 1. **Define and enforce service selection standards.** Standardizing service selection improves consistency, cost control, and governance. Establish documented guidelines for selecting services based on common workload patterns. These standards reduce support complexity, enable volume purchasing benefits, and simplify policy enforcement. For guidance, see [CAF Govern](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
 
-2. **Use Azure decision guides to evaluate service options.** Azure provides structured decision guides to help you navigate its extensive service catalog. These guides help you compare services based on technical fit, cost, and operational complexity. Use the [Azure technology decision guides](/azure/architecture/guide/technology-choices/technology-choices-overview) to identify the most appropriate services for your solution. This step reduces the risk of overprovisioning or selecting services that do not meet your workload needs.
+2. **Use Azure decision guides to evaluate service options.** Azure provides structured decision guides to help you navigate its extensive service catalog. These guides help you compare services based on technical fit, cost, and operational complexity. Use the [Azure technology decision guides](/azure/architecture/guide/technology-choices/technology-choices-overview) to identify the most appropriate services for your solution. This step reduces the risk of overprovisioning or selecting services that don't meet your workload needs.
 
-3. **Select managed services for cloud-native workloads.** Platform as a service (PaaS) offerings reduce operational overhead by abstracting infrastructure management. These services improve scalability, security, and reliability while minimizing administrative effort. Choose managed services for new or modernized workloads unless infrastructure-level control is required for compliance, performance, or compatibility. For guidance on cloud-native design, see [CAF Innovate](../innovate/index.md) for cloud-native guidance.
+3. **Select managed services for cloud-native workloads.** Platform as a service (PaaS) offerings reduce operational overhead by abstracting infrastructure management. These services improve scalability, security, and reliability while minimizing administrative effort. Choose managed services for new or modernized workloads unless infrastructure-level control is required for compliance, performance, or compatibility. For guidance on cloud-native design, see [CAF Cloud-native](../innovate/index.md) for cloud-native guidance.
 
-4. **Align service selection with your migration strategy.** Your migration approach determines the most suitable Azure services. For rehosting scenarios, select services that mirror your current components. For replatforming or rearchitecting, prioritize PaaS solutions that support modernization goals. If migrating from another cloud provider, use [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) or [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) to find the right services.
+4. **Align service selection with your migration strategy.** Your migration approach determines the most suitable Azure services. For rehosting scenarios, select services that mirror your current components. For replatforming or rearchitecting, prioritize PaaS solutions that support modernization goals. If migrating from another cloud provider, use [Amazon Web Services (AWS) to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) or [Google Cloud Platform (GCP) to Azure service mapping](/azure/architecture/gcp-professional/services) to find the right services.
 
 ### Select the appropriate service tier
 
-Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, availability, and available features. The right tier is essential to meet workload-specific requirements with all the features needed and avoid over- or under-provisioning. There are certain features available only on specific SKUs so even if you performance data applies to lower SKU you may need some feature that is available on higher SKU. You must use your workload requirements to determine the most appropriate service tier.
+Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, availability, and available features. The right tier is essential to meet workload-specific requirements with all the features needed and avoid over- or under-provisioning. There are certain features available only on specific SKUs so even if your performance data applies to lower SKU you might need some feature that is available on higher SKU. You must use your workload requirements to determine the most appropriate service tier.
 
 1. **Migrated workloads should use assessment data to select SKUs.** Assessment data includes performance baselines, usage patterns, and architecture dependencies. This data maps existing workload characteristics to equivalent Azure SKUs. This mapping ensures continuity and minimizes performance regressions after migration.
 
@@ -51,7 +51,7 @@ Each Azure service offers multiple service tiers (also known as SKUs) that provi
 
     - Estimate user concurrency, transaction volumes, and latency requirements.
     - Select a SKU that meets these targets and validate it through performance testing.
-    - Adjust the SKU iteratively based on test results to optimize cost and performance.
+    - Adjust the SKU based on test results for optimized cost and performance.
 
 3. **Select high-availability SKUs for critical workloads.** Mission-critical and business-critical workloads require high availability and fault tolerance. You must select service tiers that support Availability Zones or zone-redundant configurations.
 
@@ -68,7 +68,7 @@ A regional deployment strategy establishes the reliability, compliance, and reco
 2. **Use reliability requirements.** Identify whether the workload operates in a single region or multiple regions. Define service level objectives (SLOs), recovery point objectives (RPOs), and recovery time objectives (RTOs). For more information, see [Manage reliability in Azure](/azure/cloud-adoption-framework/manage/protect#manage-reliability).
  [Manage reliability in Azure](/azure/cloud-adoption-framework/manage/protect#manage-reliability).
 
-3. **Validate compliance with regulatory and industry standards.** Ensure that your deployment architecture and backup configurations meet applicable compliance requirements, such as MARS-E, HIPAA, or GDPR. Multi-region deployments may introduce data residency or sovereignty concerns. Work with your compliance team to validate that your regional strategy aligns with legal and regulatory obligations.
+3. **Validate compliance with regulatory and industry standards.** Ensure that your deployment architecture and backup configurations meet applicable compliance requirements, such as MARS-E, HIPAA, or GDPR. Multi-region deployments might introduce data residency or sovereignty concerns. Work with your compliance team to validate that your regional strategy aligns with legal and regulatory obligations.
 
 ## Estimate costs based on architecture
 
@@ -92,11 +92,11 @@ A cost estimate provides the financial foundation for cloud adoption planning. A
 
 2. **Identify high-cost architectural elements.** Focus your analysis on services with premium SKUs, multi-region deployments, or high consumption rates. These architectural elements often drive significant costs. Determine whether these choices are essential to meet business, performance, or compliance requirements, and document the rationale for each high-cost component.
 
-3. **Adjust the architecture to align with cost goals.** Modify service selections, SKUs, or deployment regions to reduce costs while maintaining required performance and compliance levels. Perhaps you use a single region with availability zones rather than multiple regions. This adjustment process ensures that your architecture supports both technical and financial objectives. Validate each change to confirm that it does not introduce new risks or compromise workload requirements.
+3. **Adjust the architecture to align with cost goals.** Modify service selections, SKUs, or deployment regions for cost optimization. Make sure to maintain required performance and compliance levels. Perhaps you use a single region with availability zones rather than multiple regions. This adjustment process ensures that your architecture supports both technical and financial objectives. Validate each change to confirm that it doesn't introduce new risks or compromise workload requirements.
 
 ### Validate assumptions through test deployments
 
-1. **Deploy representative workloads in a test environment.** Test deployments provide real-world data about resource consumption and performance. This data enables you to compare actual usage to your initial cost estimates and identify any discrepancies. Deploy workloads that closely match your production scenarios to ensure the results are relevant.
+1. **Deploy representative workloads in a test environment.** Test deployments provide real-world data about resource consumption and performance. This data enables you to compare actual usage to your initial cost estimates and identify any discrepancies. Deploy workloads that match your production scenarios for the best results.
 
 2. **Refine your cost model based on test results.** Update your cost estimates to reflect the observed usage patterns from your test deployments. This refinement increases the accuracy of your cost model and enables more informed architectural and financial decisions. Adjust service selections, SKUs, or configurations as needed to optimize costs and performance.
 
@@ -108,19 +108,43 @@ A cost estimate provides the financial foundation for cloud adoption planning. A
 
 ## Document the cloud adoption plan
 
-A cost estimate provides the financial foundation for cloud adoption planning. Accurate cost estimation supports budgeting, governance, and business case development. You must estimate costs based on your defined architecture and continuously refine those estimates to align with actual usage and business goals.
+A cloud adoption plan provides a single source of truth for all decisions, estimates, and strategies related to Azure adoption. This documentation ensures alignment across stakeholders, supports governance, and enables continuous refinement of cloud efforts. You must document each component of the plan to ensure visibility, accountability, and traceability.
 
-1. **Document organization and people plans** A complete cloud adoption plan includes the operating model, team responsibilities, and skilling plans. You must define how teams should operate, who is accountable for each function, and how skills will evolve to support cloud adoption. Ensure that both technical and business stakeholders review and approve the plan to establish shared ownership and alignment.
+### Document organization and people plans
 
-2. **Document Azure landing zone and workload details.** A complete inventory of workloads and cloud-native plans is essential to guide your Azure adoption strategy. This documentation ensures that all stakeholders understand the scope, architecture, and cost implications of both migrated and newly built workloads.
+1. **Capture the cloud operating model.** Define how cloud services are delivered and managed. Document the structure, roles, and processes that support cloud operations, governance, and support functions.
 
-    - **Document each workload you're migrating (if applicable).** A migration plan includes an inventory of workloads, the migration strategy for each workload (retire, rehost, refactor, rearchitect, replace, retain), success metrics, the assessment results and needs per workload, and the target architecture (platform and workloads), and estimated cost total cost of ownership. For a template, see [Migration adoption plan](./migration-adoption-plan.md).
+2. **Record team responsibilities.** Assign clear responsibilities to each team. Document ownership for architecture, security, operations, and business alignment to reduce ambiguity and ensure accountability.
 
-    - **Document requirements for cloud-native workloads (if applicable).** A cloud-native adoption plan defines the workloads you intend to build in Azure using cloud-native services. This plan includes a list of planned workloads, requirements, success metrics, architecture (platform and workloads), and cost estimates. For a template, see [Cloud-native adoption plan](./cloud-native-adoption-plan.md).
+3. **Document the skilling plan.** Outline required training and certifications for each role. Record learning paths and timelines to ensure teams are prepared to support cloud adoption effectively.
 
-3. **Align with standards and frameworks.** A cloud adoption plan must align with your organization’s project management office (PMO) standards and integrate into existing governance and delivery frameworks. This alignment ensures consistency in planning, reporting, and risk management across all cloud initiatives. You must embed cloud adoption activities into enterprise project structures to ensure visibility, accountability, and control.
+4. **Store stakeholder approvals.** Capture approvals from technical and business stakeholders to confirm shared ownership and alignment with the cloud adoption plan.
 
-4. **Estimate timelines.** Use the data you have and business drivers to estimate the timelines for each workload to be production ready in Azure. This estimate should be an approximation. Don't spend too much time on this because timelines change and should be adjusted regularly.
+### Document Azure landing zone and workload details
+
+1. **Record the Azure landing zone architecture.** Document the design of the foundational Azure environment, including networking, identity, security, and governance components. This documentation ensures that the landing zone supports scalability, compliance, and operational readiness.
+
+2. **Maintain a complete workload inventory.** List all workloads targeted for migration or cloud-native development. Include metadata such as workload owner, business criticality, and dependencies. This inventory provides visibility into workload priorities and interdependencies.
+
+3. **Document migration plans.** For each workload, record the migration strategy (retire, rehost, refactor, rearchitect, replace, retain), success metrics, assessment results, target architecture, and cost estimates. Use the guidance in [Migration adoption plan](./migration-adoption-plan.md) to ensure consistency and alignment.
+
+4. **Document cloud-native workload plans.** For each planned cloud-native workload, record the architecture, requirements, success metrics, and cost estimates. Use the guidance in [Cloud-native adoption plan](./cloud-native-adoption-plan.md) to support effective planning and execution.
+
+### Document alignment with standards and frameworks
+
+1. **Record alignment with PMO standards.** Document how the cloud adoption plan aligns with project management methodologies, including required artifacts and approval gates.
+
+2. **Capture integration with governance processes.** Document how cloud adoption activities are embedded into enterprise governance, including risk management and compliance tracking.
+
+3. **Document reporting and accountability structures.** Record how progress is tracked and reported, and who is accountable for each aspect of the plan.
+
+### Document estimated timelines
+
+1. **Record estimated timelines for each workload.** Use available data and business drivers to estimate when each workload will be production-ready in Azure. This step ensures alignment with organizational priorities and resource planning.
+
+2. **Capture key milestones and dependencies.** Document major phases, dependencies, and blockers to support planning and risk mitigation. This documentation provides visibility into critical path activities and potential risks.
+
+3. **Include a process for timeline updates.** Define how and when timelines will be reviewed and adjusted to reflect actual progress. This process ensures that plans remain accurate and actionable throughout the adoption lifecycle.
 
 ## Next step
 
