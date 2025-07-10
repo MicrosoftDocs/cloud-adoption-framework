@@ -3384,8 +3384,52 @@
          "source_path": "docs/digital-estate/rationalize.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
          "redirect_document_id": false
-      }         
-
+      },
+      {
+         "source_path": "docs/operating-model/compare.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/operating-model/define.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/operating-model/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/operating-model/terms.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/central-it.md",
+         "redirect_url": "/azure/cloud-adoption-framework/organize/organization-structures#central-it-team",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-adoption.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud#understand-the-cloud-skills-you-need",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/assets.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud#understand-the-cloud-skills-you-need",
+         "redirect_document_id": false
+      }                   
    ]   
 }
 

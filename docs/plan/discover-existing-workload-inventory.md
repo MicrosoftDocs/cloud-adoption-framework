@@ -9,29 +9,29 @@ ms.topic: conceptual
 
 # Discover your existing workload inventory
 
-This article helps you create a comprehensive inventory of your workloads to form the foundation of your cloud adoption plan. An accurate inventory enables you to make informed decisions about each workload's future in the cloud. In cloud adoption, a workload is a collection of components (servers, VMs, services, applications, data, or appliances) that support one or more business processes. Use the following table for discovery and assessment tools for workloads on-premises, in Amazon Web Services (AWS), in Google Cloud Platform (GCP), and application code.
+This article helps you create a comprehensive inventory of your workloads to form the foundation of your cloud adoption plan. An accurate inventory enables you to make informed decisions about each workload's future in the cloud. Use the following table for discovery and assessment tools for workloads on-premises, in Amazon Web Services (AWS), in Google Cloud Platform (GCP), and application code.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
 ## Discover workload inventory
 
-A complete inventory of your technical assets forms the foundation of your cloud adoption plan. Your inventory identifies all systems, applications, and infrastructure components across your environment. You need this inventory to decide which assets to migrate, modernize, or retire. Follow this guidance:
+A complete inventory of your technical assets forms the foundation of your cloud adoption plan. Your inventory identifies all systems, applications, and infrastructure components across your environment. You need this inventory to decide which [cloud migration strategy](./select-cloud-migration-strategy.md#select-the-appropriate-migration-strategy-for-each-workload) is the best fit.
 
-1. **Use automated discovery tools.** [Azure Migrate](/azure/migrate/migrate-services-overview) provides free discovery capabilities for on-premises and cloud environments. The tool automatically discovers servers, applications, and dependencies across your infrastructure. For environments where Azure Migrate doesn't provide complete coverage, consider tools like [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) or [CloudPilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) that extend Azure Migrate capabilities. Select discovery tools based on your asset location (on-premises or other clouds) and asset type (IaaS, PaaS, or code).
+1. **Define each workload and its boundaries.** A workload is a collection of IT components, such as servers, virtual machines (VMs), cloud services, applications, code, data, or appliances, that support one or more business processes. You need to define each workload to understand its business value and technical footprint. This clarity helps prioritize migration and modernization efforts. Use network traffic monitoring and dependency mapping tools to identify workload boundaries and visualize relationships between components.
 
-2. **Include all asset types.** Your inventory must capture servers, virtual machines, applications, databases, communication patterns, integrations, identities, and cloud services across all environments. Include assets from AWS, GCP, and other cloud providers to ensure complete visibility. Document both infrastructure components and the applications that run on them.
+2. **Use automated discovery tools.** [Azure Migrate](/azure/migrate/migrate-services-overview) provides free discovery capabilities for on-premises and cloud environments. This tool automatically identifies servers, applications, and their interdependencies. You must use automated discovery to accelerate inventory creation and reduce manual errors. If Azure Migrate does not fully support your environment, use tools like [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) or [CloudPilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) that extend Azure Migrate capabilities.
 
-3. **Use manual discovery when automation isn't possible.** Some environments restrict automated discovery tools due to security policies or technical limitations. Use the [Azure Migrate import template](https://go.microsoft.com/fwlink/?linkid=2109031) to manually document assets in restricted environments. Manual documentation ensures you capture assets that automated tools cannot access.
+3. **Include all components across all environments.** Your inventory must capture infrastructure and application components across all platforms. You need to include servers, VMs, applications, databases, communication patterns, integrations, identities, and cloud services from Azure, AWS, GCP, and other providers. This comprehensive view ensures that no critical asset is overlooked during planning or migration.
 
-## Prioritize workloads based on business value and dependencies
+4. **Use manual discovery when automation isn't possible.** Some environments restrict automated discovery tools due to security policies or technical limitations. Use the [Azure Migrate import template](https://go.microsoft.com/fwlink/?linkid=2109031) to manually document assets in restricted environments. Manual documentation ensures you capture assets that automated tools cannot access.
+
+## Prioritize workloads based on business value
 
 A prioritized workload list is essential to avoid analysis paralysis and ensure early cloud adoption efforts deliver measurable business value. Prioritization helps you focus on the workloads that matter most to your organization and align with your strategic goals. You need to identify and sequence workloads based on business impact, cloud motivations, and interdependencies.
 
 1. **Identify the top 10 most important workloads based on business impact.** A prioritized list of workloads helps you focus on what matters most. This list should reflect the workloads that are most critical to your business operations, customer experience, or revenue generation. Use business metrics such as revenue contribution, customer reach, or operational criticality to rank workloads.
 
-2. **Dependencies influence migration sequencing.** Some workloads rely on shared data, services, or infrastructure. Migrating dependent workloads together reduces risk and avoids performance or integration issues. When you assess your workloads, you use dependency mapping tools or architecture diagrams to identify these relationships. For migration, grouping workloads based on dependencies ensures smoother transitions and minimizes disruption. Each wave should be manageable in scope and aligned with your team’s capacity and readiness.
-
-3. **Validate prioritization with stakeholders.** Stakeholder alignment ensures prioritization reflects both technical realities and business priorities. Review the proposed workload order with business owners, application teams, and cloud governance stakeholders. Adjust based on feedback to ensure buy-in and reduce resistance during execution.
+2. **Validate prioritization with stakeholders.** Stakeholder alignment ensures prioritization reflects both technical realities and business priorities. Review the proposed workload order with business owners, application teams, and cloud governance stakeholders. Adjust based on feedback to ensure buy-in and reduce resistance during execution.
 
 ## Document workload business details
 
