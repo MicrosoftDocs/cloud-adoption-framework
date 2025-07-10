@@ -27,9 +27,7 @@ An architecture plan provides the context required to estimate the total cost of
 
 ### Select the appropriate Azure services
 
-Accurate service selection is essential to align technical requirements with cost-effective Azure capabilities. The services you choose directly affect both the initial deployment and long-term operational costs of your cloud environment. You must evaluate and select Azure services that best support your workload, architecture, and financial goals.
-
-1. **Define and enforce service selection standards.** Standardizing service selection improves consistency, cost control, and governance. Establish documented guidelines for selecting services based on common workload patterns. These standards reduce support complexity, enable volume purchasing benefits, and simplify policy enforcement. For guidance, see [CAF Govern](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
+1. **Define and enforce service selection standards.** The services you choose directly affect both the initial deployment and long-term operational costs of your cloud environment. You must evaluate and select Azure services that best support your workload, architecture, and financial goals. Establish documented guidelines for selecting services based on common workload patterns. These standards reduce support complexity, enable volume purchasing benefits, and simplify policy enforcement. For guidance, see [CAF Govern](/azure/cloud-adoption-framework/govern/document-cloud-governance-policies).
 
 2. **Use Azure decision guides to evaluate service options.** Azure provides structured decision guides to help you navigate its extensive service catalog. These guides help you compare services based on technical fit, cost, and operational complexity. Use the [Azure technology decision guides](/azure/architecture/guide/technology-choices/technology-choices-overview) to identify the most appropriate services for your solution. This step reduces the risk of overprovisioning or selecting services that don't meet your workload needs.
 
@@ -39,21 +37,21 @@ Accurate service selection is essential to align technical requirements with cos
 
 ### Select the appropriate service tier
 
-Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, availability, and available features. The right tier is essential to meet workload-specific requirements with all the features needed and avoid over- or under-provisioning. There are certain features available only on specific SKUs so even if your performance data applies to lower SKU you might need some feature that is available on higher SKU. You must use your workload requirements to determine the most appropriate service tier.
+1. **Understand service tiers.** Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, availability, and available features. The right tier is essential to meet workload-specific requirements with all the features needed and avoid over- or under-provisioning. There are certain features available only on specific SKUs so even if your performance data applies to lower SKU you might need some feature that is available on higher SKU. You must use your workload requirements to determine the most appropriate service tier.
 
-1. **Migrated workloads should use assessment data to select SKUs.** Assessment data includes performance baselines, usage patterns, and architecture dependencies. This data maps existing workload characteristics to equivalent Azure SKUs. This mapping ensures continuity and minimizes performance regressions after migration.
+2. **Migrated workloads should use assessment data to select SKUs.** Assessment data includes performance baselines, usage patterns, and architecture dependencies. This data maps existing workload characteristics to equivalent Azure SKUs. This mapping ensures continuity and minimizes performance regressions after migration.
 
     - Review the architecture component requirements gathered during the assessment phase.
     - Match CPU, memory, storage, and IOPS needs to available SKUs.
     - Identify any required features that are only available in higher-tier SKUs, even if performance needs suggest a lower tier.
 
-2. **Cloud-native workloads should use performance targets and usage estimates.** Cloud-native workloads lack historical performance data. You must define expected usage patterns and performance targets to select an appropriate starting SKU.
+3. **Cloud-native workloads should use performance targets and usage estimates.** Cloud-native workloads lack historical performance data. You must define expected usage patterns and performance targets to select an appropriate starting SKU.
 
     - Estimate user concurrency, transaction volumes, and latency requirements.
     - Select a SKU that meets these targets and validate it through performance testing.
     - Adjust the SKU based on test results for optimized cost and performance.
 
-3. **Select high-availability SKUs for critical workloads.** Mission-critical and business-critical workloads require high availability and fault tolerance. You must select service tiers that support Availability Zones or zone-redundant configurations.
+4. **Select high-availability SKUs for critical workloads.** Mission-critical and business-critical workloads require high availability and fault tolerance. You must select service tiers that support Availability Zones or zone-redundant configurations.
 
     - Review the service’s availability options and SLAs.
     - Select SKUs that support zone redundancy or regional failover.
