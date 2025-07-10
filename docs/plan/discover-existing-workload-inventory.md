@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Discover your existing workload inventory
 
-This article helps you create a comprehensive inventory of your technical assets to form the foundation of your cloud adoption plan. An accurate inventory enables you to make informed decisions about each asset's future in the cloud.
+This article helps you create a comprehensive inventory of your workloads to form the foundation of your cloud adoption plan. An accurate inventory enables you to make informed decisions about each workload's future in the cloud. In cloud adoption, a workload is a collection of components (servers, VMs, services, applications, data, or appliances) that support one or more business processes.
 
 ## Discover workload inventory
 
@@ -22,6 +22,16 @@ A complete inventory of your technical assets forms the foundation of your cloud
 2. **Include all asset types.** Your inventory must capture servers, virtual machines, applications, databases, communication patterns, integrations, identities, and cloud services across all environments. Include assets from AWS, GCP, and other cloud providers to ensure complete visibility. Document both infrastructure components and the applications that run on them.
 
 3. **Use manual discovery when automation isn't possible.** Some environments restrict automated discovery tools due to security policies or technical limitations. Use the [Azure Migrate import template](https://go.microsoft.com/fwlink/?linkid=2109031) to manually document assets in restricted environments. Manual documentation ensures you capture assets that automated tools cannot access.
+
+## Prioritize workloads based on business value and dependencies
+
+A prioritized workload list is essential to avoid analysis paralysis and ensure early cloud adoption efforts deliver measurable business value. Prioritization helps you focus on the workloads that matter most to your organization and align with your strategic goals. You need to identify and sequence workloads based on business impact, cloud motivations, and interdependencies.
+
+1. **Identify the top 10 most important workloads based on business impact.** A prioritized list of workloads helps you focus on what matters most. This list should reflect the workloads that are most critical to your business operations, customer experience, or revenue generation. Use business metrics such as revenue contribution, customer reach, or operational criticality to rank workloads.
+
+2. **Dependencies influence migration sequencing.** Some workloads rely on shared data, services, or infrastructure. Migrating dependent workloads together reduces risk and avoids performance or integration issues. When you assess your workloads, you use dependency mapping tools or architecture diagrams to identify these relationships. For migration, grouping workloads based on dependencies ensures smoother transitions and minimizes disruption. Each wave should be manageable in scope and aligned with your team’s capacity and readiness.
+
+3. **Validate prioritization with stakeholders.** Stakeholder alignment ensures prioritization reflects both technical realities and business priorities. Review the proposed workload order with business owners, application teams, and cloud governance stakeholders. Adjust based on feedback to ensure buy-in and reduce resistance during execution.
 
 ## Document workload business details
 

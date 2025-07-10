@@ -1,7 +1,7 @@
 ---
 title: Hybrid and multicloud migration
 description: Understand migration to a hybrid and multicloud environment.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -35,7 +35,7 @@ When you migrate workloads in a hybrid and multicloud environment, the real effe
 
 ## Assess workloads for hybrid and multicloud migration
 
-Azure products used in a standard migration are still applicable to a hybrid and multicloud migration. Specifically, Azure Migrate and Service Map can be used to understand your digital estate and outline your dependencies. For more information on both tools, see the [Getting started guide for assessing workloads](../../migrate/azure-migration-guide/assess.md). When you build out your plan or assess waves of hybrid and multicloud workloads, the [best practices for digital estate assessment in Azure](../../digital-estate/index.md) still apply.
+Azure products used in a standard migration are still applicable to a hybrid and multicloud migration. Specifically, Azure Migrate and Service Map can be used to understand your digital estate and outline your dependencies. For more information on both tools, see the [Getting started guide for assessing workloads](../../migrate/azure-migration-guide/assess.md). When you build out your plan or assess waves of hybrid and multicloud workloads, the [best practices for digital estate assessment in Azure](../../plan/discover-existing-workload-inventory.md) still apply.
 
 Hybrid and multicloud migrations that come across assessment challenges indicate a lack of maturity within their migration team's assessment processes. Factor the following considerations into your assessment plans:
 
@@ -54,7 +54,6 @@ These articles will help you to develop the most impactful processes required fo
 - [Workload classification](../../migrate/migration-considerations/assess/classify.md)
 - [Cloud compatibility](../../migrate/migration-considerations/assess/evaluate.md)
 - [Agile change management](../../migrate/migration-considerations/assess/release-iteration-backlog.md)
-- [Building a well-defined migration backlog](../../plan/plan-intro.md)
 
 ## Deploy migrated workloads for hybrid and multicloud
 

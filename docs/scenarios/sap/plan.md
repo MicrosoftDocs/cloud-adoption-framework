@@ -24,7 +24,7 @@ Like most complex platforms, your SAP digital estate will include three asset ca
 
 - **Workload assets:** Most organizations extend or integrate SAP into various business processes that are supported by a range of workloads across the portfolio. Those workloads are supported by their collections of applications, data, and virtual machines that aren't part of the core platform deployment. Each workload with a dependency on the SAP platform should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
 
-For guidance on SAP digital estate planning, look through the processes outlined in the article series on [digital estate planning](../../digital-estate/inventory.md). The best practice article on [assessing workloads for migration to Azure](../../migrate/assess/index.md) proposes Azure Migrate and other assessment tools to make that theoretical guidance from the prior article actionable.
+For guidance on SAP cloud adoption planning, look through the processes outlined in the article series on [planning for migrations](../../plan/discover-existing-workload-inventory.md). The best practice article on [assessing workloads for migration to Azure](../../migrate/assess/index.md) proposes Azure Migrate and other assessment tools to make that theoretical guidance from the prior article actionable.
 
 Several considerations should be included in those processes when planning for SAP adoption:
 
@@ -70,7 +70,7 @@ Whether you use templates or your own project planning tools, factor in the foll
 - Use your platform rationalization efforts to finish migrating the SAP platform.
 - Account for each workload (or wave of workloads) to be migrated.
 
-You can use the [Azure DevOps web interface](/azure/devops/project/navigation/) to add those line items to the plan. If you're working from a current asset inventory, you could build your plan faster with the Microsoft Excel integration outlined in the Cloud Adoption Framework article about [tracking workloads](../../plan/workloads.md).
+You can use the [Azure DevOps web interface](/azure/devops/project/navigation/) to add those line items to the plan. If you're working from a current asset inventory, you could build your plan faster with the Microsoft Excel integration outlined in the Cloud Adoption Framework article about [migration plan template](../../plan/migration-adoption-plan.md).
 
 ## SAP readiness plan
 

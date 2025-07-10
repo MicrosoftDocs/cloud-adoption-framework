@@ -20,11 +20,6 @@ When planning for your digital estate, you'll want to [gather inventory data](..
 
 The standard [cloud adoption plan template](../../plan/migration-adoption-plan.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
 
-> [!CAUTION]
-> This article assumes the reader is already following the best practices outlined in the article series on [building a cloud adoption plan in Azure DevOps](../../plan/plan-intro.md). If you are tracking your cloud adoption plan in spreadsheet or other project tracking tools, the following sections are still applicable but the actionable steps of adding data to your plan would need to be adjusted.
-
-<!-- -->
-
 > [!WARNING]
 > Incorporating a modern application platform strategy into standard migration processes (or a migration factory) will require mature implementation of tasks associated with [designing workload architectures prior to migration](../../migrate/migration-considerations/assess/architect.md). Continuing with this strategy without those tasks will delay the migration effort and could lead to poor architecture decisions for the deployed container hosts and supporting workloads.
 
