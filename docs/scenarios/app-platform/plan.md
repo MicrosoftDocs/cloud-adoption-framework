@@ -12,13 +12,13 @@ ms.custom: think-tank, e2e-aks
 
 The [Plan methodology](../../plan/index.md) of the Cloud Adoption Framework helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud.
 
-Application of the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
+Application of the Plan methodology focuses on the [cloud migration strategies](../../plan/select-cloud-migration-strategy.md). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
 
 ## Digital estate
 
-When planning for your digital estate, you'll want to [gather inventory data](../../digital-estate/inventory.md) and [rationalization your estate](../../digital-estate/rationalize.md). In a container adoption plan, it's vital all assets, for example VMs, data, and applications, are grouped by the workload they support. Once the grouping and basic rationalization is complete, you can evaluate these workloads to determine the package and rehost or rearchitect options.
+When planning for your digital estate, you'll want to [gather inventory data](../../plan/discover-existing-workload-inventory.md) and [select your migration strategy](../../plan/select-cloud-migration-strategy.md). In a container adoption plan, it's vital all assets, for example VMs, data, and applications, are grouped by the workload they support. Once the grouping and basic rationalization is complete, you can evaluate these workloads to determine the package and rehost or rearchitect options.
 
-The standard [cloud adoption plan template](../../plan/template.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
+The standard [cloud adoption plan template](../../plan/migration-adoption-plan.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
 
 > [!CAUTION]
 > This article assumes the reader is already following the best practices outlined in the article series on [building a cloud adoption plan in Azure DevOps](../../plan/plan-intro.md). If you are tracking your cloud adoption plan in spreadsheet or other project tracking tools, the following sections are still applicable but the actionable steps of adding data to your plan would need to be adjusted.

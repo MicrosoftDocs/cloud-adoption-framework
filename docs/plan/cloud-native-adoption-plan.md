@@ -1,5 +1,5 @@
 ---
-title: Cloud adoption plan template for migration
+title: Cloud adoption plan template for cloud-native startups
 description: Use this template to document your Azure adoption plan for cloud-native startups
 author: stephen-sumner
 ms.author: ssumner

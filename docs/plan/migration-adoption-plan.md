@@ -43,7 +43,7 @@ For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 | Platform architecture       | Document shared resources, SKUs, and regions to ensure scalability and compliance. |
 | Estimated platform cost     | Provide cost estimates for the platform architecture, including Azure services and operational expenses. |
 
-For more information, see [Plan your Azure landing zone architecture](./estimate-total-cost-of-ownership.md#plan-your-architecture)
+For more information, see [Plan your Azure landing zone architecture](./estimate-total-cost-of-ownership.md#plan-your-azure-architecture)
 
 ## Requirements for each workload
 
@@ -100,4 +100,4 @@ For more information, see [Assess your workload](./assess-workloads-for-cloud-mi
 | Estimated workload cost | Estimated cost using the [Azure Pricing calculator](https://azure.microsoft.com/pricing/calculator/?msockid=396a7791057262e4306e626304176307) |
 | Estimated operational cost | Estimate how many people or hours you dedicate to this workload |
 
-For more information, see [Plan your Azure landing zone architecture](./estimate-total-cost-of-ownership.md#plan-your-architecture)
+For more information, see [Plan your Azure architecture](./estimate-total-cost-of-ownership.md#plan-your-azure-architecturee)

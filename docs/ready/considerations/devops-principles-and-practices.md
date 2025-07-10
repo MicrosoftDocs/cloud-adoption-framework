@@ -87,7 +87,7 @@ Consider the following DevOps practices for your Azure landing zones:
 
 ### Plan your DevOps implementation journey
 
-Define and align your DevOps implementation journey with your organization's [cloud adoption plan](../../plan/plan-intro.md).
+Define and align your DevOps implementation journey with your organization's [cloud adoption plan](../../plan/index.md).
 
 - Determine where your team is today in the following areas:
   - DevOps practices your team has adopted for Azure Landing Zones management.
