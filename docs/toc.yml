@@ -55,15 +55,13 @@ items:
       - name: 4. Estimate cloud costs
         href: plan/estimate-total-cost-of-ownership.md
         
-      - name: Cloud planning guides
+      - name: Resources
         items:
         - name: Shared management operating model
           href: plan/shared-management-operating-model.md
-      - name: Cloud planning templates
-        items:
-        - name: Cloud-native adoption plan
+        - name: Cloud-native adoption plan template
           href: plan/cloud-native-adoption-plan.md
-        - name: Migration adoption plan
+        - name: Migration adoption plan template
           href: plan/migration-adoption-plan.md
 
 
