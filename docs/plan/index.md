@@ -12,7 +12,7 @@ ms.update-cycle: 1095-days
 
 Cloud Adoption Framework (CAF) Plan is about translating your cloud strategy into a cloud adoption plan. A cloud adoption plan translates your cloud strategy into a set of actionable steps. This plan ensures your organization, people, and technology are prepared to adopt Azure in a way that supports your business goals.
 
-| **Prerequisite for CAF Plan:** | You must define your cloud strategy before you begin cloud adoption planning. Your cloud strategy identifies the business drivers behind your cloud adoption efforts. Business drivers clarify why your organization is adopting the cloud. Understanding these drivers helps you prioritize workloads and define success criteria. |
+| **Prerequisite** | You must define your [cloud strategy](../strategy/index.md) before you begin cloud adoption planning. Your cloud strategy identifies the business drivers behind your cloud adoption efforts. Business drivers clarify why your organization is adopting the cloud. Understanding these drivers helps you prioritize workloads and define success criteria. |
 | --- | --- |
 
 ## Cloud adoption plan checklist
