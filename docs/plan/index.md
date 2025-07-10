@@ -25,9 +25,10 @@ The Cloud Adoption Framework's (CAF) Plan methodology provides a framework for p
 
 A cloud adoption plan ensures your Azure environment aligns with your business priorities. It provides a structured approach to prepare your organization, people, and technology for cloud adoption. This structure helps you reduce risk, control costs, and accelerate value realization. Cloud adoption planning applies to all organizations:
 
-- **Startups** can use the plan to build cloud-native applications in Azure. See if you're eligible for [Startup Azure credits](https://www.microsoft.com/startups).
-
-- **Enterprises** can use the plan to migrate existing workloads from on-premises or other cloud platforms like Amazon Web Services (AWS), Google Cloud Platform (GCP), and others.
+| Organization Type | Purpose |
+|-------------------|---------|
+| **Startups**      | Build cloud-native applications in Azure. See eligibility for [Azure credits](https://www.microsoft.com/startups) |
+| **Enterprises**   | Migrate existing workloads from on-premises or other cloud platforms like Amazon Web Services (AWS), Google Cloud Platform (GCP), and others. |
 
 ## Next steps
 
