@@ -25,7 +25,7 @@ An architecture plan provides the context required to estimate the total cost of
 
 3. **Plan your workload (application) architecture.** A workload architecture defines the Azure services, regions, and configurations required to meet business and technical requirements. Identify the Azure services, regions, and configurations needed to meet business and technical goals. Include dependencies, performance needs, and compliance requirements. Use the [Azure Architecture Center](/azure/architecture/browse/) to get ideas.
 
-### Select the correct Azure services
+### Select the appropriate Azure services
 
 Accurate service selection is essential to align technical requirements with cost-effective Azure capabilities. The services you choose directly affect both the initial deployment and long-term operational costs of your cloud environment. You must evaluate and select Azure services that best support your workload, architecture, and financial goals.
 
@@ -37,7 +37,7 @@ Accurate service selection is essential to align technical requirements with cos
 
 4. **Align service selection with your migration strategy.** Your migration approach determines the most suitable Azure services. For rehosting scenarios, select services that mirror your current components. For replatforming or rearchitecting, prioritize PaaS solutions that support modernization goals. If migrating from another cloud provider, use [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) or [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) to find the right services.
 
-### Select the right service tier
+### Select the appropriate service tier
 
 Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, availability, and available features. The right tier is essential to meet workload-specific requirements with all the features needed and avoid over- or under-provisioning. There are certain features available only on specific SKUs so even if you performance data applies to lower SKU you may need some feature that is available on higher SKU. You must use your workload requirements to determine the most appropriate service tier.
 
@@ -96,7 +96,7 @@ Cost estimates that significantly exceed or fall below expectations might requir
 
 2. **Identify high-cost architectural elements.** Focus your analysis on services with premium SKUs, multi-region deployments, or high consumption rates. These architectural elements often drive significant costs. Determine whether these choices are essential to meet business, performance, or compliance requirements, and document the rationale for each high-cost component.
 
-3. **Adjust the architecture to align with cost goals.** Modify service selections, SKUs, or deployment regions to reduce costs while maintaining required performance and compliance levels. This adjustment process ensures that your architecture supports both technical and financial objectives. Validate each change to confirm that it does not introduce new risks or compromise workload requirements.
+3. **Adjust the architecture to align with cost goals.** Modify service selections, SKUs, or deployment regions to reduce costs while maintaining required performance and compliance levels. Perhaps you use a single region with availability zones rather than multiple regions. This adjustment process ensures that your architecture supports both technical and financial objectives. Validate each change to confirm that it does not introduce new risks or compromise workload requirements.
 
 ### Validate assumptions through test deployments
 
@@ -120,11 +120,11 @@ A cost estimate provides the financial foundation for cloud adoption planning. A
 
 1. **Document organization and people plans** A complete cloud adoption plan includes the operating model, team responsibilities, and skilling plans. You must define how teams should operate, who is accountable for each function, and how skills will evolve to support cloud adoption. Ensure that both technical and business stakeholders review and approve the plan to establish shared ownership and alignment.
 
-2. **Document workload migration details (if applicable).** A migration plan includes an inventory of workloads, the migration strategy for each workload (retire, rehost, refactor, rearchitect, replace, retain), success metrics, the assessment results and needs per workload, and the target architecture (platform and workloads), and estimated cost total cost of ownership. For a template, see [Migration adoption plan](./migration-adoption-plan.md).
+2. **Document Azure landing zone and workload details.** A complete inventory of workloads and cloud-native plans is essential to guide your Azure adoption strategy. This documentation ensures that all stakeholders understand the scope, architecture, and cost implications of both migrated and newly built workloads.
 
-3. **Document requirements for cloud-native workloads (if applicable).** A cloud-native adoption plan defines the workloads you intend to build in Azure using cloud-native services. This plan includes a list of planned workloads, requirements, success metrics, architecture (platform and workloads), and cost estimates. For a template, see [Cloud-native adoption plan](./cloud-native-adoption-plan.md).
+    - **Document each workload you're migrating (if applicable).** A migration plan includes an inventory of workloads, the migration strategy for each workload (retire, rehost, refactor, rearchitect, replace, retain), success metrics, the assessment results and needs per workload, and the target architecture (platform and workloads), and estimated cost total cost of ownership. For a template, see [Migration adoption plan](./migration-adoption-plan.md).
 
-4. **Use architecture diagrams.** Rather than list out all the architecture decisions you make, use architecture diagrams to document your platform and workload architectures. You can download the [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-architecture) and most of the diagrams in the [Azure Architecture Center](/azure/architecture/browse/). Modify these as needed and link to them in your cloud adoption plan.
+    - **Document requirements for cloud-native workloads (if applicable).** A cloud-native adoption plan defines the workloads you intend to build in Azure using cloud-native services. This plan includes a list of planned workloads, requirements, success metrics, architecture (platform and workloads), and cost estimates. For a template, see [Cloud-native adoption plan](./cloud-native-adoption-plan.md).
 
 5. **Align with standards and frameworks.** A cloud adoption plan must align with your organization’s project management office (PMO) standards and integrate into existing governance and delivery frameworks. This alignment ensures consistency in planning, reporting, and risk management across all cloud initiatives. You must embed cloud adoption activities into enterprise project structures to ensure visibility, accountability, and control.
 
