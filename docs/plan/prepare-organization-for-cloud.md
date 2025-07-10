@@ -49,7 +49,7 @@ A shared responsibility model defines how platform and workload teams collaborat
 
 1. **Establish one or more platform teams to manage shared services and governance.** Platform teams build and maintain the Azure landing zone, enforce governance controls, and manage shared infrastructure. This structure ensures consistency while enabling scale.
 
-2. **Allow workload teams to operate autonomously within governance guardrails.** Application teams manage their own deployments and operations, increasing agility. Guardrails—such as Azure Policy, service restrictions, and standardized templates—ensure compliance.
+2. **Allow workload teams to operate autonomously within governance guardrails.** Application teams manage their own deployments and operations, increasing agility. Guardrails, such as Azure Policy, service restrictions, and standardized templates, ensure compliance.
 
 3. **Define clear roles and responsibilities across teams.** Document who creates governance standards (typically a governance team) and who implements them (typically a platform team). This clarity prevents duplication and gaps in accountability.
 
