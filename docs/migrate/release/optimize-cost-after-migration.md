@@ -1,7 +1,7 @@
 ---
 title: Optimize cost after migration
 description: Use the Cloud Adoption Framework for Azure to learn how to properly decommission retired resources with minimal business interruptions.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual

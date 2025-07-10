@@ -1,7 +1,7 @@
 ---
 title: Strategic benefits of Azure Virtual Desktop
 description: Explore the strategic benefits of an Azure Virtual Desktop environment.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 10/27/2022
 ms.topic: conceptual

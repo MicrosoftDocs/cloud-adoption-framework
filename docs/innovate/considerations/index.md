@@ -1,7 +1,7 @@
 ---
 title: Innovation in the digital economy
 description: Build your innovation processes. Focus on understanding customer needs and rapidly building cloud innovations. Shape the digital economy and interact with customers.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 03/25/2021
 ms.topic: conceptual

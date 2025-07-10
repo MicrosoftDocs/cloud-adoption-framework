@@ -1,7 +1,7 @@
 ---
 title: Data democratization tools
 description: Learn about data democratization with Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 01/27/2021
 ms.topic: conceptual

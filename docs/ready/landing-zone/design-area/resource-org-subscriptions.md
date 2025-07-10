@@ -1,7 +1,7 @@
 ---
 title: Subscription considerations and recommendations
 description: Learn about the critical role that subscriptions play as units of management, billing, and scale in Azure.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 11/28/2024
 ms.topic: conceptual

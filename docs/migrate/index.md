@@ -1,7 +1,7 @@
 ---
 title: Migrate overview
 description: Prepare for a successful migration to Azure by using an iterative process to assess, deploy, and release workloads.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/09/2024
 ms.topic: conceptual
