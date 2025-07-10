@@ -1,7 +1,7 @@
 ---
 title: Resource organization considerations for AKS
 description: AKS guidelines for resource organization
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/01/2021
 ms.topic: conceptual

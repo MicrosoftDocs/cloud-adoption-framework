@@ -1,7 +1,7 @@
 ---
 title: Management and monitoring for cloud-scale analytics
 description: Learn how this enterprise-scale scenario can improve management and monitoring for cloud-scale analytics in Azure.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual

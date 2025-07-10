@@ -1,7 +1,7 @@
 ---
 title: Understand cloud migration functions
 description: Understand cloud migration functions.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/15/2020
 ms.topic: conceptual

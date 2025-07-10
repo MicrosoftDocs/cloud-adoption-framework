@@ -1,7 +1,7 @@
 ---
 title: Approaches to digital estate planning
 description: Understand the characteristics and requirements of top-down workload-driven, asset-driven, or incremental approaches to digital estate planning.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 08/29/2022
 ms.topic: conceptual

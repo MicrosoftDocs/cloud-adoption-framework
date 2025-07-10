@@ -1,7 +1,7 @@
 ---
 title: Sustainability considerations in cloud adoption planning
 description: Use the Cloud Adoption Framework for Azure to learn how to integrate sustainability into your cloud adoption plan.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 06/03/2024
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 07/07/2025
 ms.topic: conceptual

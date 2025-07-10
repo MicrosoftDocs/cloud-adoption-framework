@@ -1,7 +1,7 @@
 ---
 title: Hybrid and multicloud migration
 description: Understand migration to a hybrid and multicloud environment.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/01/2020
 ms.topic: conceptual

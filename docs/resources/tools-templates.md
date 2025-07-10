@@ -1,7 +1,7 @@
 ---
 title: Tools and templates
 description: Find the tools that are available in the Cloud Adoption Framework to help with Azure adoption.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 06/17/2025
 ms.topic: article
