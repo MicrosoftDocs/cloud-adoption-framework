@@ -30,7 +30,7 @@ A cloud operating model defines how teams manage responsibilities and collaborat
 | Operating Model | Best For | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
 | Centralized | Small organizations, new adopters, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
-| Shared Management | Mid-size or enterprise estates, hybrid, or multicloud | Platform team(s) build the [Azure landing zone](../ready/index.md), manages shared services, and governance guardrails. <br> Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
+| Shared Management | Mid-size or enterprise estates, hybrid, or multicloud | Platform teams build the [Azure landing zone](../ready/index.md), manages shared services, and governance guardrails. <br> Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
 | Decentralized | Tech-savvy startups, innovation programs | Each team owns every cloud task | High speed and autonomy | Weaker standardization, higher risk of security gaps |
 
 ### Start with a centralized model if you're new to cloud or startup
@@ -41,11 +41,11 @@ A centralized model consolidates all cloud responsibilities (governance, securit
 
 2. **Use centralized governance in regulated environments.** Centralized models ensure consistent policy enforcement across all workloads. This approach is essential in industries with strict compliance requirements. Assign the centralized team to oversee compliance and regularly review policies to maintain regulatory alignment.
 
-3. **Plan to evolve the model as your organization grows.** Centralized models do not scale well for larger organizations. You must monitor team capacity and cloud usage to determine when to transition to a shared model. Regularly assess organizational needs and prepare to shift responsibilities as cloud adoption increases.
+3. **Plan to evolve the model as your organization grows.** Centralized models don't scale well for larger organizations. You must monitor team capacity and cloud usage to determine when to transition to a shared model. Regularly assess organizational needs and prepare to shift responsibilities as cloud adoption increases.
 
 ### Use a shared responsibility model if you're an enterprise
 
-A shared responsibility model defines how platform and workload teams collaborate to manage cloud environments. This model is essential for mid-size and enterprise organizations that operate in hybrid or multi-cloud environments. It enables scalability, governance, and agility by clearly assigning responsibilities and enforcing standards.
+A shared responsibility model defines how platform and workload teams collaborate to manage cloud environments. This model is essential for mid-size and enterprise organizations that operate in hybrid or multicloud environments. It enables scalability, governance, and agility by clearly assigning responsibilities and enforcing standards.
 
 1. **Establish one or more platform teams to manage shared services and governance.** Platform teams build and maintain the Azure landing zone, enforce governance controls, and manage shared infrastructure. This structure ensures consistency while enabling scale.
 
@@ -71,7 +71,7 @@ A decentralized model gives each team full ownership of their cloud workloads, i
 
 1. **Review your operating model.** As your organization scales, reassess whether your current model supports your goals. Transition from centralized to shared or hybrid models as needed.
 
-2. **Adopt hybrid approaches where appropriate.** Some teams may benefit from decentralized autonomy even if the broader organization uses a centralized or shared model. You must evaluate team maturity to determine where hybrid models add value without compromising governance.
+2. **Adopt hybrid approaches where appropriate.** Some teams might benefit from decentralized autonomy even if the broader organization uses a centralized or shared model. You must evaluate team maturity to determine where hybrid models add value without compromising governance.
 
 ### Secure executive sponsorship
 
@@ -85,11 +85,11 @@ A documented responsibility model defines clear ownership across governance, sec
 
 1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to prevent gaps in coverage and ensure all critical areas are managed effectively. Responsibility mapping eliminates confusion about who handles specific tasks and decisions. Assign primary and backup owners for each function. Designate individuals or teams responsible for each function and ensure a backup is available. This redundancy ensures continuity during absences or transitions.
 
-2. **Include partner responsibilities in your operating model** [Partners](https://partner.microsoft.com/partnership/find-a-partner) contributions must be clearly defined to avoid overlap with internal teams. Strategic partners such as Microsoft Expert MSPs provide specialized capabilities that accelerate cloud adoption and improve operational maturity. Identify partners that support your cloud strategy. Clarify the scope of partner responsibilities. Define which functions partners own, such as platform operations, workload management, or innovation initiatives. Ensure these responsibilities are distinct from internal team roles.
+2. **Include partner responsibilities in your operating model** [Partners](https://partner.microsoft.com/partnership/find-a-partner) contributions must be clearly defined to avoid overlap with internal teams. Strategic partners such as Microsoft Expert managed service provides offer specialized capabilities that accelerate cloud adoption and improve operational maturity. Identify partners that support your cloud strategy. Clarify the scope of partner responsibilities. Define which functions partners own, such as platform operations, workload management, or innovation initiatives. Ensure these responsibilities are distinct from internal team roles.
 
 3. **Communicate the responsibilities to all stakeholders.** Ensure that all teams understand their roles and how they interact with others in the operating model. This communication prevents confusion and ensures smooth collaboration. You must provide training and documentation to help teams understand their responsibilities and dependencies.
 
-4. **Review responsibilities.** A static responsibility model becomes outdated as your Azure environment evolves. Regular reviews ensure that responsibilities align with team capacity, skillsets, and business priorities. As your Azure environment grows, review the distribution of responsibilities regularly to ensure it aligns with team abilities, capacity, and business goals.
+4. **Review responsibilities.** A static responsibility model becomes outdated as your Azure environment evolves. Regular reviews ensure that responsibilities align with team capacity, skill set, and business priorities. As your Azure environment grows, review the distribution of responsibilities regularly to ensure it aligns with team abilities, capacity, and business goals.
 
 ## Azure tools and resources
 
