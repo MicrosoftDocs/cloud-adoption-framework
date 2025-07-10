@@ -5,6 +5,7 @@ author: terrymandin
 ms.author: temandin
 ms.reviewer: guherk
 ms.date: 07/15/2025
+ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
