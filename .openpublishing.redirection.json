@@ -3369,7 +3369,22 @@
          "source_path": "docs/digital-estate/calculate.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/estimate-total-cost-of-ownership",
          "redirect_document_id": false
-      }    
+      },
+      {
+         "source_path": "docs/digital-estate/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/inventory.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/rationalize.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
+         "redirect_document_id": false
+      }         
 
    ]   
 }

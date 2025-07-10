@@ -51,7 +51,7 @@ A rehost strategy enables fast and low-risk migration by moving workloads to Azu
 
 3. **Use rehost to build foundational cloud operations.** Rehosting helps teams gain experience with Azure operations, governance, and cost management. This early exposure supports broader cloud adoption goals and prepares teams for more complex modernization efforts.
 
-| Workload type | Azure target | Examples | Guidance |
+| Workload type | Azure target | Rehosting examples | Guidance |
 |--------------| --- | ----------|--------------------------------|
 | On-premises → | Azure IaaS | On-premises servers → Azure Virtual Machines | [Technology decision guides](/azure/architecture/guide/technology-choices/compute-decision-tree) |
 | Other cloud IaaS → | Azure IaaS | AWS EC2 → Azure Virtual Machines<br><br>GCP Compute Engine → Azure Virtual Machines | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
@@ -63,10 +63,10 @@ A replatform strategy moves workloads to a modern hosting environment with minim
 
 Validate operational impacts before selecting PaaS services. Moving to PaaS does not always reduce costs. You need to assess the total cost of ownership, including operational changes and support costs. Minimal code refactoring might be necessary to take advantage of PaaS services.
 
-| Workload type | Azure target | Examples   | Guidance |
+| Workload type | Azure target | Replatforming examples   | Guidance |
 |------|-------|---| --- | --- |
-| On-premises →  |Azure PaaS        | VMs → Azure App Service<br><br>SQL Server on a VM → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance), [Database migration guides](/data-migration/)
-| Other cloud IaaS → | Azure PaaS    | AWS EC2 → Azure App Service<br><br>MySQL on AWS EC2 → Azure SQL Database | [Other cloud to Azure migration](/azure/migration/migrate-to-azure), [Database migration guides](/data-migration/)
+| On-premises →  |Azure PaaS        | VMs → Azure App Service<br><br>SQL Server on a VM → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
+| Other cloud IaaS → | Azure PaaS    | AWS EC2 → Azure App Service<br><br>MySQL on AWS EC2 → Azure SQL Database | [Other cloud to Azure migration](/azure/migration/migrate-to-azure) <br> [Database migration guides](/data-migration/) |
 
 ### 4. Refactor (modernize code)
 
