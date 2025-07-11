@@ -15,7 +15,7 @@ This article helps you select the most appropriate cloud migration strategy for 
 
 The following table provides a comprehensive overview of all available cloud migration strategies. Use this reference to understand each strategy's primary business drivers and key indicators that signal when to apply each approach to your workloads.
 
-| Cloud migration strategy | Business drivers | Key indicators for choosing this strategy |
+| Cloud migration strategy | Business drivers | Key indicators for this strategy |
 |--------------------------|------------------|------------------------------|
 | [Retire](#1-retire-decommission) | Eliminate workloads of limited value. | • Workload has limited current or future business value.  • Migration or modernization cost outweighs business benefits. |
 | [Rehost](#2-rehost-like-for-like-migration) | Adopt cloud with minimal business disruption. | • Workload is stable.  • Workload is compatible with Azure.  • Low-risk migration.  • Short-term cloud adoption goals.  • No immediate need for modernization.  • Reduce capital expense.  • Free up datacenter space.  • Inexperience with Azure. |
@@ -45,15 +45,15 @@ The selection of migration strategies determines the success of your cloud adopt
 
 Retire decommissions workloads that no longer provide business value.  This strategy is important when workloads are obsolete, underused, or redundant. Validate this decision by confirming that the workload is obsolete and has no critical dependencies that would affect other systems. Update your inventory as you decommission workloads.
 
-| Business driver              | Key indicators for choosing this strategy                                                                 | Example success metrics                                      |
-|-----------------------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------|
+| Business driver   | Key indicators for this strategy   | Example success metrics    |
+|----------|----------|-----------------------------------------------------|
 | Eliminate workloads of limited value | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits | • Retire 100% of workloads identified as obsolete before migration |
 
 ### 2. Rehost (like-for-like migration)
 
 A rehost strategy enables fast and low-risk migration by moving workloads to Azure with minimal changes. A rehost is a like-for-like migration, which moves virtual machines to IaaS, IaaS to IaaS, and PaaS to PaaS.
 
-| Business driver | Key indicators for choosing this strategy | Example success metrics |
+| Business driver | Key indicators for this strategy | Example success metrics |
 |----------------------|------------------------| --- |
 | Adopt cloud with minimal business disruption | • Workload is stable<br>• Workload is compatible with Azure<br>• Low-risk migration<br>• Short-term cloud adoption goals<br>• No immediate need for modernization<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure | • Migrate 100% of Tier 1 workloads from other cloud to Azure with no service-level agreement (SLA) degradation<br>• Decommission 30% of on-premises infrastructure post-migration. |
 
@@ -73,7 +73,7 @@ A rehost strategy enables fast and low-risk migration by moving workloads to Azu
 
 Replatforming moves workloads to a modern hosting environment with minimal code changes. This strategy is important when you want to reduce infrastructure management, improve scalability, and simplify operations without a full application rewrite.
 
-| Business driver | Key indicators for choosing this strategy | Example success metrics |
+| Business driver | Key indicators for this strategy | Example success metrics |
 |------------------|---------------------------| --- |
 | Use managed services with minimal investment | • Workload benefits from simplified reliability and disaster recovery<br>• Workload reduces OS and licensing overhead<br>• Team can containerize or repackage the app with moderate effort<br>• Migration improves time-to-cloud without major refactoring | • Reduce deployment lead times by 30% for migrated applications<br>• Reduce infrastructure and licensing costs by 25% within 12 months |
 
@@ -89,7 +89,7 @@ Choose workloads where PaaS options reduce operational overhead, improve reliabi
 
 Refactoring improves the internal structure of code without adding new features. This practice is important during cloud adoption because it helps teams modernize legacy code, reduce technical debt, and prepare workloads for long-term maintainability in Azure. You should refactor code when the migration process creates a unique opportunity to address technical debt or when post-migration behavior reveals areas for improvement.
 
-| Business driver | Key indicators for choosing this strategy | Example success metrics |
+| Business driver | Key indicators for this strategy | Example success metrics |
 |----------------------|--------------------------------------------| --- |
 | Improve code quality and reduce technical debt | • The workload has high maintenance costs<br>• The codebase contains significant technical debt<br>• Azure SDKs or services can improve performance or observability<br>• The team can optimize code costs or apply cloud design patterns | • Improve application response time by 40% using Azure-native services<br>• Achieve 95% observability coverage through code instrumentation |
 
@@ -97,7 +97,7 @@ Refactoring improves the internal structure of code without adding new features.
 
 A rearchitect strategy redesigns the workload’s architecture to improve scalability, agility, and service orientation. This strategy is important when you need to break down monolithic applications, adopt microservices, or enable targeted scaling. You should rearchitect when your current architecture limits your ability to meet business goals or scale effectively. For an example, see [Modern Web App Pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance).
 
-| Business driver | Key indicators for choosing this strategy | Example success metrics |
+| Business driver | Key indicators for this strategy | Example success metrics |
 |----------------------|------------------------------| --- |
 | Meet business requirements with modern architecture | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks | • Support 2x user load with no performance degradation<br>• Integrate three new Azure-native services into existing architecture  |
 
@@ -105,7 +105,7 @@ A rearchitect strategy redesigns the workload’s architecture to improve scalab
 
 A replace strategy uses commercial SaaS solutions to eliminate the need for custom development and ongoing maintenance. This strategy is ideal when SaaS offerings meet business needs with minimal customization. Replace workloads when SaaS solutions offer comparable features, integration capabilities meet requirements, and total cost of ownership justifies the transition. Consider data migration complexity, user training needs, and process changes when you evaluate replacement options. Common replacement scenarios include CRM systems, HR platforms, and collaboration tools where SaaS maturity provides reliable alternatives to custom solutions.
 
-| Business driver | Key indicators for choosing this strategy | Example success metrics |
+| Business driver | Key indicators for this strategy | Example success metrics |
 |----------------------|------------------------------| --- |
 | Replace obsolete systems with modern solutions | • The legacy system is too outdated or inflexible<br>• The team needs to accelerate innovation<br>• The solution requires modern frameworks and tools<br>• Operational costs are too high in the current environment | • Transition CRM to SaaS with 99.9% uptime and no custom code<br>• Shift 30% of dev effort to competitive differentiators. |
 
@@ -113,7 +113,7 @@ A replace strategy uses commercial SaaS solutions to eliminate the need for cust
 
 A rebuild strategy creates a new, cloud-native solution using Azure services. This approach is appropriate when legacy systems are obsolete or when modernization isn't feasible. Rather than replicating legacy functionality, you can reimagine the solution to use Azure capabilities like PaaS, automation, and AI. Some workloads required a rebuild, like DHCP server. For other workloads, it's better to deploy new instances of services in Azure rather than migrating them, such as Active Directory Domain Controllers.
 
-| Business driver | Key indicators for choosing this strategy | Example success metrics |
+| Business driver | Key indicators for this strategy | Example success metrics |
 |----------------------|------------------------------| --- |
 | Use SaaS to simplify operations and reduce development effort | • The workload has a mature SaaS alternative<br>• Internal development resources are better used elsewhere<br>• The solution requires little customization | • Launch new cloud-native application in three months vs. six months on-premises<br>• Cut operational costs by 40% using PaaS services |
 
@@ -121,7 +121,7 @@ A rebuild strategy creates a new, cloud-native solution using Azure services. Th
 
 A retain strategy keeps workloads in their current environment when they're stable, compliant, and meet all current and future business needs with no near-term driver to move. You must retain workloads that can't be migrated due to regulatory constraints, technical dependencies, or business continuity requirements. Use [Azure Arc](/azure/azure-arc/overview) to manage retained on-premises workloads from Azure, providing unified management capabilities. Consider a more modern on-premises solution like [Azure Local](/azure/azure-local/overview) for your workloads and connect to Azure. Shift workloads that can't be migrated to another migration wave or revisit them later when constraints change.
 
-| Business driver | Key indicators for choosing this strategy | Example success metrics |
+| Business driver | Key indicators for this strategy | Example success metrics |
 |----------------------|------------------------------| --- |
 | Maintain stability and avoid unnecessary change | • The workload is stable, compliant, and meets business needs<br>• There is no near-term driver to migrate<br>• Migration offers low return on investment | • Maintain current SLA and compliance posture<br>• Manage on-premises workloads from Azure using Azure Arc |
 
