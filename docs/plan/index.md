@@ -20,7 +20,7 @@ The Cloud Adoption Framework's (CAF) Plan methodology provides a framework for p
 | 2. [Prepare your people](./prepare-people-for-cloud.md) | [Understand required skills](./prepare-people-for-cloud.md#understand-the-cloud-skills-you-need) | 1. [Understand required skills](./prepare-people-for-cloud.md#understand-the-cloud-skills-you-need) <br> 2. [Close the skills gap](./prepare-people-for-cloud.md#close-the-skills-gap) <br> 3. [Sustain cloud skills](./prepare-people-for-cloud.md#sustain-cloud-skills-across-your-organization) |
 | 3. [Plan migration](./discover-existing-workload-inventory.md) | Not applicable | 1. [Discover your inventory](./discover-existing-workload-inventory.md) <br> 2. [Select migration strategies](./select-cloud-migration-strategy.md) <br> 3. [Assess your workloads](./assess-workloads-for-cloud-migration.md) |
 | 4. [Estimate cloud costs](./estimate-total-cost-of-ownership.md) | [Plan your architecture](./estimate-total-cost-of-ownership.md#plan-your-azure-architecture) | 1. [Plan your architecture](./estimate-total-cost-of-ownership.md#plan-your-azure-architecture) <br> 2. [Estimate costs](./estimate-total-cost-of-ownership.md#estimate-costs-based-on-architecture)
-| 5. [Document the adoption plan](./estimate-total-cost-of-ownership.md#document-the-cloud-adoption-plan) | [Cloud-native adoption plan](./cloud-native-adoption-plan.md) | [Migration adoption plan](./migration-adoption-plan.md) |
+| 5. [Document the adoption plan](./document-cloud-adoption-plan.md) | [Cloud-native adoption plan](./cloud-native-adoption-plan.md) | [Migration adoption plan](./migration-adoption-plan.md) |
 
 ## Understand the importance of cloud adoption planning
 
