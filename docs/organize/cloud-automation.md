@@ -65,4 +65,4 @@ The cloud automation team should align activities with other areas of capability
 
 ## Next steps
 
-As essential cloud functions align, the collective teams can help develop necessary [technical skills](./suggested-skills.md).
+As essential cloud functions align, the collective teams can help develop necessary [technical skills](../plan/prepare-people-for-cloud.md).

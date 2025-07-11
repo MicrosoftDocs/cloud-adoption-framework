@@ -38,7 +38,6 @@ The skills needed to provide full platform functionality can be provided by:
 - [Financial models](../strategy/cloud-migration-business-case.md)
 - [Motivations for cloud adoption](../strategy/motivations.md)
 - [Business risks](../govern/policy-compliance/risk-tolerance.md)
-- [Rationalization of the digital estate](../digital-estate/index.md)
 
 ## Minimum scope
 

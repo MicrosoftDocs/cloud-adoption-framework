@@ -13,8 +13,6 @@ ms.collection:
 
 This article describes the process and considerations for designing the intended migrated state of a workload in the cloud. The article reviews activities that are part of defining a workload's architecture within an iteration.
 
-The article about [incremental rationalization](../../digital-estate/rationalize.md) indicates that some architectural assumptions are part of any business transformation that includes a migration. This article clarifies typical assumptions. It also points to a few roadblocks that you can avoid, and it identifies opportunities to accelerate business value by challenging architectural assumptions. This incremental model for designing architecture helps teams move faster and obtain business outcomes sooner.
-
 ## Base architecture design on common assumptions
 
 The following assumptions are typical for any migration effort:

@@ -12,47 +12,61 @@ ms.update-cycle: 1095-days
 
 # What is the Microsoft Cloud Adoption Framework for Azure?
 
-The Microsoft Cloud Adoption Framework for Azure is your step-by-step guide to success in the Azure. It helps you plan, build, and manage your Azure environment. It covers decisions about people, processes, and technology.
+The Microsoft Cloud Adoption Framework for Azure is a comprehensive guide designed to help organizations successfully adopt cloud technologies. It provides a structured approach to achieving business goals through Azure, enabling faster, more cost-effective cloud adoption.
 
 ## Why use the Cloud Adoption Framework?
 
-The Cloud Adoption Framework provides guidance based on real-world experience to help you succeed in Azure. It gives you a roadmap to follow no matter where you are in your cloud journey. You get guidance you need, when you need it. It integrates with the Well-Architected Framework and Azure Architecture Center to help you design and build solutions in Azure.
+The Cloud Adoption Framework offers proven guidance to support informed decision-making at every stage of your cloud journey. Whether you're planning, migrating, or optimizing, the framework:
+
+- Provides a clear roadmap tailored to your needs.
+- Aligns with the Well-Architected Framework and the Azure Architecture Center.
+- Helps you design, build, and manage secure, scalable, and resilient solutions in Azure.
 
 ## Who should use the Cloud Adoption Framework?
 
-This Cloud Adoption Framework is for anyone using Azure. Whether you're just starting or already running workloads in the cloud, it helps you make smart decisions. It supports:
+The framework is valuable for anyone working with Azure, regardless of experience or scale. It supports:
 
-- **Startups** launching a business in Azure.
-- **Enterprises** operating at a massive scale.
-- **New users** building foundational Azure skills.
-- **Existing customers** maturing  operations.
+- **Startups** launching a business in Azure. Explore [Microsoft for Startups](https://www.microsoft.com/startups) for Azure credits and resources.
+- **Enterprises** managing large-scale operations and complex, hybrid and multicloud environments.
+- **New users** building foundational skills and understanding of Azure.
+- **Existing customers** looking to mature and optimize their cloud operations.
 
 ## How to use the Cloud Adoption Framework
 
-The Cloud Adoption Framework organizes its guidance into methodologies that support each phase of your Azure journey. Four methodologies form a sequential path: **Strategy**, **Plan**, **Ready**, and **Adopt**. You complete these methodologies in order to establish your Azure foundation and deploy workloads. Three methodologies run continuously: **Govern**, **Secure**, and **Manage**. You implement these methodologies alongside the sequential ones and refine them as your Azure environment evolves.
+The Cloud Adoption Framework (CAF) organizes its guidance into methodologies that support every phase of your Azure journey. These methodologies are divided into two categories:
+
+- **Sequential methodologies:** These are followed in order to establish your Azure foundation and deploy workloads.
+- **Continuous methodologies:** These are implemented alongside the sequential ones and evolve as your cloud environment matures.
+
+### Sequential methodologies
 
 | CAF Methodology | Description |
 |-------------|-------------|
-| 🚀 [**Strategy**](/azure/cloud-adoption-framework/strategy/) | Define business justification and expected outcomes. |
-| 📝 [**Plan**](/azure/cloud-adoption-framework/plan/) | Align cloud adoption plans with business goals. |
-| 🛠️ [**Ready**](/azure/cloud-adoption-framework/ready/) | Prepare your Azure environment and landing zones. |
-| 🌐 [**Adopt**](/azure/cloud-adoption-framework/adopt/) | Migrate, modernize, and innovate in Azure. |
+| 🚀 [**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | Define business justification and expected outcomes. |
+| 📝 [**2. Plan**](/azure/cloud-adoption-framework/plan/) | Align cloud adoption plans with business goals. |
+| 🛠️ [**3. Ready**](/azure/cloud-adoption-framework/ready/) | Prepare your Azure environment and landing zones. |
+| 🌐 [**4. Adopt**](/azure/cloud-adoption-framework/adopt/) | Migrate, modernize, and innovate in Azure. |
+
+### Continuous methodologies
+
+| CAF Methodology | Description |
+|-------------|-------------|
 | 🛡️ [**Govern**](/azure/cloud-adoption-framework/govern/) | Establish governance to manage risks. |
 | 🔒 [**Secure**](/azure/cloud-adoption-framework/secure/) | Protect your Azure environment. |
 | ⚙️ [**Manage**](/azure/cloud-adoption-framework/manage/) |  Operate and optimize your cloud environment. |
 
 ## Cloud adoption scenarios
 
-The Cloud Adoption Framework also provides structured guidance for adopting specific cloud technologies. These cloud adoption scenarios apply the framework’s principles to each use cases and offers actionable steps based on real-world experiences. Each scenario includes best practices to support your cloud journey and can be integrated into your overall cloud strategy. Use the following table to find the correct scenario:
+CAF also provides scenario-based guidance tailored to specific technologies and business needs. These scenarios apply the framework’s principles to real-world use cases, offering actionable steps and best practices.
 
 | CAF Scenario | Description |
 |--------------|-----------------|
-| [AI Adoption on Azure](./scenarios/ai/index.md) | How to use AI in Azure the right way |
-| [Azure VMware Solution](./scenarios/azure-vmware/index.md) | Move VMware workloads to Azure with minimal disruption. |
-| [Cloud-Scale Analytics](./scenarios/data-management/index.md) | Build secure, scalable data systems. |
-| [Hybrid and Multicloud](./scenarios/hybrid/index.md) | Connect your on-premises and cloud systems. |
-| [Modern Application Platform](./scenarios/app-platform/index.md) | Use containers and PaaS to modernize. |
-| [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | Migrate and manage Oracle workloads in Azure. |
-| [SAP on Azure](./scenarios/sap/index.md) | Run SAP in Azure with cloud-native tools. |
-| [Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | Move to Azure Virtual Desktop and manage desktops at scale |
-| [High-performance computing](./scenarios/azure-hpc/index.md) | Run high-performance computing workloads in Azure. 
+| [AI adoption](./scenarios/ai/index.md) | Implement AI solutions in Azure effectively and responsibly. |
+| [Azure VMware Solution](./scenarios/azure-vmware/index.md) | Migrate VMware workloads to Azure with minimal disruption. |
+| [Cloud-Scale Analytics](./scenarios/data-management/index.md) | Build secure, scalable, and modern data platforms. |
+| [Hybrid and Multicloud](./scenarios/hybrid/index.md) | Integrate on-premises, Azure, and other cloud environments. |
+| [Modern Application Platform](./scenarios/app-platform/index.md) | Modernize apps using containers, microservices, and PaaS. |
+| [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | Run and manage Oracle workloads in Azure. |
+| [SAP on Azure](./scenarios/sap/index.md) | Deploy and operate SAP solutions using Azure-native tools. |
+| [Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | Deliver and manage virtual desktops at scale with Azure. |
+| [High-performance computing](./scenarios/azure-hpc/index.md) | Run compute-intensive workloads efficiently in Azure. |

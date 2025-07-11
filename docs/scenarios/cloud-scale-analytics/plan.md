@@ -16,8 +16,6 @@ This article provides further guidance for data estate rationalization and skill
 
 ## Data estate rationalization
 
-Much of the guidance in the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md).
-
 Using a cloud-scale analytics scenario shifts the primary focus of rationalization to the **data estate**, a subset of the overall digital estate. Your organization must evaluate the data estate more broadly and deeply than other scenarios require. Include plans for the overall analytics and [data governance](./govern.md) needed to support your desired maturity.
 
 ### Strategic initiatives
@@ -30,7 +28,7 @@ In your cloud migration plan, initiatives with small business impacts and lesser
 
 ### Prioritization
 
-To begin prioritizing data projects, complete an [inventory and benchmark of your data estate](../../digital-estate/inventory.md). You can use tools like Azure Migrate to capture rich benchmarking data from the infrastructure and data assets in your estate. This benchmarking data helps you track progress and measure success. It can also help you quantify the exact investment needed for people, processes, and technology.
+To begin prioritizing data projects, complete an [inventory and benchmark of your data estate](../../plan/discover-existing-workload-inventory.md). You can use tools like Azure Migrate to capture rich benchmarking data from the infrastructure and data assets in your estate. This benchmarking data helps you track progress and measure success. It can also help you quantify the exact investment needed for people, processes, and technology.
 
 A mapping of business impact (from your strategic business outcomes) and technical complexity (from your data estate inventory) can guide your prioritization of data projects. The mapping achieves this prioritization by helping you identify waves of your cloud adoption effort. The waves can guide you as you prioritize data projects. The following table describes these cloud adoption waves in more detail.
 
