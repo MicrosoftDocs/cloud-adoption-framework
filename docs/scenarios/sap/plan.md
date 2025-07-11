@@ -54,7 +54,7 @@ Several considerations should be included in those processes when planning for S
 
   - **Rehost:** Use Azure Migrate or a homogeneous system copy to lift and shift the current SAP/OS/DBMS platform.
 
-  - **Replatform:** Combine making heterogeneous platform copy of SAP with a move to Azure, such as when the OS requires this or the DBMS changes. This include when an SAP NetWeaver production changes to HANA as a DBMS.
+  - **Replatform:** Combine making heterogeneous platform copy of SAP with a move to Azure, such as when the OS requires this or the DBMS changes. This includes when an SAP NetWeaver production changes to HANA as a DBMS.
 
 - **Rearchitect:** Implement a new SAP platform on Azure.
 

@@ -1,6 +1,6 @@
 ---
 title: Develop a cloud adoption plan
-description: Create an cloud adoption plan that prepares your organization, people, workloads, environment, and cost estimates for Azure cloud adoption.
+description: Plan your Azure cloud adoption with guidance on organizational readiness, skills development, migration strategies, and cost estimation to ensure successful cloud transformation.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025

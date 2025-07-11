@@ -43,7 +43,7 @@ Building cost consciousness into cloud-adoption efforts starts at the leadership
 
 ## Cloud adoption team
 
-The cloud adoption teamis at the center of all adoption activities. So, they're the first line of defense against overspending. This team has an active role in all three phases of cost-consciousness.
+The cloud adoption team is at the center of all adoption activities. So, they're the first line of defense against overspending. This team has an active role in all three phases of cost-consciousness.
 
 - **Visibility:**
 

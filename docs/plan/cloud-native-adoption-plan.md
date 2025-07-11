@@ -44,31 +44,31 @@ For each workload you plan to build, document business and technical requirement
 
 ### Workload business requirements for cloud-native builds
 
-| Workload business details | Description |
+| Workload business details | Documentation to add |
 |-----------------|-------------|
-| Workload name | Official name used across the organization |
-| Workload description | Single sentence describing the workload's purpose |
-| Workload owners | Individuals accountable for workload |
-| Compliance requirements | Regulatory standards or certifications required |
-| Target users | Number of location of user base |
+| Workload name | Enter the official name used across the organization |
+| Workload description | Write a single sentence describing the workload's purpose |
+| Workload owners | List individuals accountable for workload |
+| Compliance requirements | Specify regulatory standards or certifications required |
+| Target users | Document number and locations of user base |
 
 For more information, see [Document workload business details](./discover-existing-workload-inventory.md#document-workload-business-details).
 
 ### Workload technical requirements for cloud-native builds
 
-| Workload technical details               | Description |
+| Workload technical details | Documentation to add |
 |--------------------------------|------------------------------------------------------|
-| Component requirements         | List performance metrics (CPU, memory, IOPS, throughput), OS versions, VM sizes, storage types, and licensing details |
-| SLAs (RTO/RPO)                 | Define service-level agreements, recovery point objectives (RPO), and recovery time objectives (RTO). Use this to guide backup, replication, and failover strategies |
+| Component requirements | List performance metrics (CPU, memory, IOPS, throughput), OS versions, VM sizes, storage types, and licensing details |
+| SLAs (RTO/RPO) | Define service-level agreements, recovery point objectives (RPO), and recovery time objectives (RTO). Use this information to guide backup, replication, and failover strategies |
 
 For more information, see [Assess your workload](./assess-workloads-for-cloud-migration.md).
 
 ### Target Azure architecture for the workload
 
-| Azure workload details | Description |
+| Azure workload details | Documentation to add |
 | --- | --- |
-| Target architecture | A link to a diagram you created or sample architecture on Azure Architecture Center |
+| Target architecture | Add a link to a diagram you created or sample architecture on Azure Architecture Center |
 | Azure services and SKUs | List the Azure services and SKUs required for the workload |
 | Azure regions | Specify the Azure regions where the workload will be hosted |
-| Estimated workload cost | Estimated cost using the [Azure Pricing calculator](https://azure.microsoft.com/pricing/calculator/) |
+| Estimated workload cost | Calculate estimated cost using the [Azure Pricing calculator](https://azure.microsoft.com/pricing/calculator/) |
 | Estimated workload operational cost | Estimate how many people or hours you dedicate to this workload |
