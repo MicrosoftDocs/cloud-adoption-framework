@@ -1,7 +1,7 @@
 ---
 title: Understand cloud data functions
 description: Understand cloud data functions, including the source of the functionality, the scope, and the deliverable.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 07/14/2020
 ms.topic: conceptual

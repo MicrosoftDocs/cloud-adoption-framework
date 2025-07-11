@@ -1,8 +1,8 @@
 ---
 title: Data Landing Zones
 description: Learn about cloud-scale analytics architecture data landing zones in Azure that connect to your data management landing zone via virtual network peering or private endpoints.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 02/14/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

@@ -1,7 +1,7 @@
 ---
 title: Expand your landing zone
 description: Learn how to expand a landing zone using shared architecture pillars from the Cloud Adoption Framework.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/07/2024
 ms.topic: conceptual

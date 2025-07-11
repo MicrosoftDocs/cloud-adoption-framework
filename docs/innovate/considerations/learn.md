@@ -1,7 +1,7 @@
 ---
 title: Continuous learning to drive innovation
 description: Learn customer empathy to build a minimum viable product solution. Drive innovation and generate customer impact metrics.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/26/2021
 ms.topic: conceptual

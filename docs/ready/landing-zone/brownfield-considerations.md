@@ -1,7 +1,7 @@
 ---
 title: Brownfield landing zone considerations
 description: Learn about aligning the Azure landing zone target architecture and best practices to an existing environment.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual

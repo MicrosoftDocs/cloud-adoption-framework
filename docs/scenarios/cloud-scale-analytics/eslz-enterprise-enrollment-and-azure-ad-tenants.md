@@ -1,8 +1,8 @@
 ---
 title: Enterprise enrollment and Microsoft Entra tenants for cloud-scale analytics
 description: Learn how cloud-scale analytics can improve enterprise enrollment and Microsoft Entra tenant decisions.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

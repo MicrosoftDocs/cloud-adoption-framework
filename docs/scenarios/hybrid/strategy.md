@@ -1,7 +1,7 @@
 ---
 title: Strategy for adopting unified operations
 description: Learn about strategic considerations of hybrid and multicloud operations.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/21/2021
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Cloud adoption-related innovation
 description: Learn how cloud adoption-related innovation can provide business value by unlocking new technical skills and expanded business capabilities.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 10/14/2024
 ms.topic: conceptual

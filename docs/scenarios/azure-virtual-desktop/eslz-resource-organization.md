@@ -1,7 +1,7 @@
 ---
 title: Resource organization considerations for Azure Virtual Desktop
 description: Learn about the resource organization design area and how to apply it to your Azure Virtual Desktop implementation effectively.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/07/2025
 ms.topic: conceptual
