@@ -184,26 +184,17 @@ Redeployment is a valid alternative when workloads can be rebuilt in Azure. This
 
 5. **Decommission on-premises resources.** Retire legacy infrastructure to complete the transition and reduce operational overhead.
 
-
 ## Determine the migration sequence
 
 A planned migration sequence reduces migration risk, builds team confidence, and ensures a smooth transition. Start with simpler, non-critical workloads like dev/test environments before tackling more complex or critical systems. If you have many workloads, create a [migration wave plan](./migration-wave-plan.md).
 
 1. **Start with non-critical workloads to validate tools and processes.** Begin with simpler, internal, or non-production workloads such as development and test environments. These workloads are less risky and provide a safe environment to test migration tools, validate assumptions, and refine processes. Use this phase to uncover issues early and build team confidence before migrating critical systems.
 
-2. **Group and migrate dependent workloads together.** Identify and group workloads that have interdependencies. Migrating dependent systems together prevents broken integrations and service disruptions. Use tools like Azure Migrate or dependency visualizers to map workload dependencies. If you cannot migrate all dependencies together, document the gaps and plan for mitigation, including performance testing and integration validation. Understand how to minimi
+2. **Group and migrate dependent workloads together.** Identify and group workloads that have interdependencies. Migrating dependent systems together prevents broken integrations and service disruptions. Use tools like Azure Migrate or dependency visualizers to map workload dependencies. If you cannot migrate all dependencies together, document the gaps and plan for mitigation, including performance testing and integration validation. Understand how to manage hybrid or multi-cloud.
 
-1. **Identify and group interdependent systems.** Use dependency mapping tools to discover integration points and shared services. Group these systems into migration waves. See [Map internal and external dependencies](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration#map-internal-and-external-dependencies).
-
-2. **Limit hybrid or cross-cloud scenarios to short durations.** Hybrid environments increase complexity and risk. If unavoidable, define a clear timeline to complete the transition.
-
-3. **Double operations coverage during hybrid periods.** Assign dedicated teams to manage both on-premises and cloud environments. This ensures continuity and reduces operational risk.
-
-4. **Enable monitoring and incident response in both environments.** Use Azure Monitor and other tools to maintain visibility and responsiveness across boundaries.
-
-5. **Test failover and recovery across environments.** Validate that systems can recover from failures during the transition. This reduces downtime and data loss.
-
-6. **Use mitigation strategies for temporary dependencies.** Apply caching, replication, or temporary APIs to bridge systems until full migration is complete.
+    1. **Identify and group interdependent systems.** Use dependency mapping tools to discover integration points and shared services. Group these systems into migration waves. See [Map internal and external dependencies](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration#map-internal-and-external-dependencies).
+    
+    2. **Limit hybrid or cross-cloud scenarios to short durations.** Hybrid environments increase complexity and risk. If unavoidable, define a clear timeline to complete the transition. Assign dedicated teams to manage both on-premises and cloud environments. This ensures continuity and reduces operational risk. Use Azure Monitor and other tools to maintain visibility and responsiveness across boundaries. Validate that systems can recover from failures during the transition. This reduces downtime and data loss. Apply caching, replication, or temporary APIs to bridge systems until full migration is complete.
 
 3. **Define and align migration timelines with business priorities.** Establish clear timelines for each migration wave, such as “CRM system live on Azure by June” or “Datacenter A shutdown by Q4.” Align these timelines with business calendars and avoid peak periods, such as holidays for retail applications. This alignment ensures minimal business disruption and stakeholder readiness.
 
@@ -211,83 +202,35 @@ A planned migration sequence reduces migration risk, builds team confidence, and
 
 5. **Create a migration wave plan for large portfolios.** If you manage many workloads, organize them into migration waves. Each wave should include a manageable set of workloads with similar risk profiles or dependencies. This approach enables iterative learning, reduces complexity, and allows for continuous improvement across waves. For more information, see [Migration wave planning](./m)
 
-
-
-#### Prepare workloads
+## Prepare workloads for the cloud
 
 Before migrating, ensure workloads are ready for Azure. Addressing compatibility and configuration issues early reduces cutover risk.
 
-1.** Conduct a workload assessment.** A workload assessment determines the specifications and readiness for Azure.**** If you haven’t already, do a [workload assessment](#_Assess_your_inventory) of your workload components and code.
-2.** Define architecture.** Design the target architecture in Azure.** **For information, see [Plan the target architecture](#_Plan_the_target).
-3.** Fix issues in Azure.** The closer your tests are to the production environment, the lower the risk during cutover. Fix these issues in Azure rather than in your local or source environment.
+1.**Conduct a workload assessment.** Conduct a [workload assessment](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration) of each workload. A workload assessment determines the specifications and readiness for Azure.
 
-Common readiness issues
+2.**Plan workload architecture.** You shouldesign the target architecture in Azure. For information, see [Plan the target architecture](#_Plan_the_target).
 
-Example remediation
+3.**Fix issues in Azure.** Remediate compatibility issues in Azure
+A test deployment in Azure validates workload behavior and uncovers compatibility issues before production cutover. This step reduces migration risk by ensuring workloads operate as expected in the target environment.
+You must test workloads in Azure and resolve all identified issues in the cloud environment to ensure a smooth and predictable migration.
+Deploy the workload in a test environment in Azure. Use a staging subscription or Azure DevTest Labs to replicate the production environment. This test environment must reflect production configurations, including network topology, identity controls, and storage dependencies. Testing in Azure exposes issues that may not appear in on-premises environments.
+Identify and resolve compatibility issues in Azure. Run validation tests and monitor workload behavior. Address all issues directly in the Azure environment to ensure fixes are effective in the target platform. Avoid remediating in the source environment, as this may not reflect Azure-specific behavior.
+Apply targeted remediations for common readiness issues. Use the table below to address known blockers that frequently impact workload migration.
 
-Unsupported OS versions
+| Readiness Issue               | Remediation                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| Unsupported OS versions       | Fix unsupported operating systems that block replication.                  |
+| Legacy NIC drivers and BIOS   | Update legacy network interface card (NIC) drivers and BIOS to ensure compatibility. |
+| Local file I/O                | Replace local file input/output operations with Azure Blob or Azure Files. |
+| Hardcoded IP calls            | Swap hardcoded IP calls with service discovery mechanisms.                 |
+| Host-based antivirus dependency | Remove dependency on host-based antivirus software and integrate Microsoft Defender for Cloud. |
+| Hardcoded user accounts       | Use managed identities.                                                    |
 
-Fix unsupported operating systems that block replication.
-
-Legacy NIC drivers and BIOS
-
-Update legacy network interface card (NIC) drivers and BIOS to ensure compatibility.
-
-Local file I/O
-
-Replace local file input/output operations with Azure Blob or Azure Files.
-
-Hardcoded IP calls
-
-Swap hardcoded IP calls with service discovery mechanisms.
-
-Host-based antivirus dependency
-
-Remove dependency on host-based antivirus software and integrate Microsoft Defender for Cloud.
-
-Hardcoded user accounts
-
-Use managed identities
-
-<a id="_3._Select_migration"></a>
-
-#### Test in Azure
+## Provision target environment
 
 At this point, you need to create Azure resources that will hold the workload after cutover. You need to stage the Azure resources to receive the incoming workload data.
 
 1.** Create and configure Azure resources.** Get all prerequisites ready so that the actual cutover can proceed smoothly.
-
-Category
-
-Azure
-
-Unsupported OS versions
-
-Upgrade to supported OS
-
-Legacy NIC drivers/BIOS
-
-Update drivers and firmware
-
-Local file I/O
-
-Use Azure Blob or Azure Files
-
-Hardcoded IPs
-
-Replace with service discovery
-
-Host-based antivirus
-
-Use Microsoft Defender for Cloud
-
-Hardcoded user accounts
-
-Use managed identities
-
-Unsupported OS versions
-
-Upgrade to supported OS
 
 1.** Test workload.** After provisioning the target environment, migrate and test non-production workloads to validate the end-to-end migration process. This rehearsal phase is essential for identifying and resolving issues before production cutover. Use the test to confirm the workload runs in Azure as expected. Validate dependencies (DNS, data) and configurations. Document any issues and refine your migration runbook for production.
 
