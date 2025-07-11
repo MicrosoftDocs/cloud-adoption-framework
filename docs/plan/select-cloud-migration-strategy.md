@@ -17,14 +17,14 @@ The following table provides a comprehensive overview of all available cloud mig
 
 | Cloud migration strategy | Business drivers | Key indicators for choosing this strategy |
 |--------------------------|------------------|------------------------------|
-| [Retire](#1-retire-decommission) | Eliminate workloads of limited value | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits |
-| [Rehost](#2-rehost-like-for-like-migration) | Adopt cloud with minimal business disruption | • Workload is stable<br>• Workload is compatible with Azure<br>• Low-risk migration<br>• Short-term cloud adoption goals<br>• No immediate need for modernization<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure |
-| [Replatform](#3-replatform-modernize-hosting-environment) | Take advantage of managed services with minimal investment | • Simplify reliability and disaster recovery<br>• Reduce OS and licensing overhead<br>• Improve time-to-cloud with moderate investment<br>• Containerize app |
-| [Refactor](#4-refactor-modernize-code) | Code changes deliver short- or long-term value | • Decrease cost of maintenance<br>• Reduce technical debt<br>• Use Azure SDKs<br>• Improve code performance<br>• Optimize code costs<br>• Apply cloud design patterns<br>• Instrument code for monitoring |
-| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Meet business requirements better with modernized architecture | • Application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• Architecture must support future innovation<br>• Mix technology stacks |
-| [Replace](#6-replace-use-saas-alternative) | SaaS solution meets needs | • Simplify operations<br>• Internal development resources are better used elsewhere<br>• Little need for customization |
-| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't worth it | • Legacy system is too outdated or inflexible<br>• Accelerate innovation<br>• Build applications faster<br>• Reduce operational cost<br>• Need modern frameworks and tools |
-| [Retain](#8-retain-keep-as-is) | Maintain stability and avoid unnecessary change | • Workload is stable, compliant, and meets business needs<br>• No near-term driver to move<br>• Low ROI from migration |
+| [Retire](#1-retire-decommission) | Eliminate workloads of limited value | • Workload has limited current or future business value  • Migration or modernization cost outweighs business benefits |
+| [Rehost](#2-rehost-like-for-like-migration) | Adopt cloud with minimal business disruption | • Workload is stable  • Workload is compatible with Azure  • Low-risk migration  • Short-term cloud adoption goals  • No immediate need for modernization  • Reduce capital expense  • Free up datacenter space  • Inexperience with Azure |
+| [Replatform](#3-replatform-modernize-hosting-environment) | Take advantage of managed services with minimal investment | • Simplify reliability and disaster recovery  • Reduce OS and licensing overhead  • Improve time-to-cloud with moderate investment  • Containerize app |
+| [Refactor](#4-refactor-modernize-code) | Code changes deliver short- or long-term value | • Decrease cost of maintenance  • Reduce technical debt  • Use Azure SDKs  • Improve code performance  • Optimize code costs  • Apply cloud design patterns  • Instrument code for monitoring |
+| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Meet business requirements better with modernized architecture | • Application requires modularization or service decomposition  • Scaling needs vary by component  • Architecture must support future innovation  • Mix technology stacks |
+| [Replace](#6-replace-use-saas-alternative) | SaaS solution meets needs | • Simplify operations  • Internal development resources are better used elsewhere  • Little need for customization |
+| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't worth it | • Legacy system is too outdated or inflexible  • Accelerate innovation  • Build applications faster  • Reduce operational cost  • Need modern frameworks and tools |
+| [Retain](#8-retain-keep-as-is) | Maintain stability and avoid unnecessary change | • Workload is stable, compliant, and meets business needs  • No near-term driver to move  • Low ROI from migration |
 
 ## Define business goals for each workload
 
