@@ -15,7 +15,7 @@ This article helps you select the most appropriate cloud migration strategy for 
 
 The following table provides a comprehensive overview of all available cloud migration strategies. Use this reference to understand each strategy's primary business drivers and key indicators that signal when to apply each approach to your workloads.
 
-| Cloud migration strategy | Business drivers | Key indicators for this strategy |
+| Cloud migration strategy | Business driver | Key indicators for this strategy |
 |--------------------------|------------------|------------------------------|
 | [Retire](#1-retire-decommission) | Eliminate workloads of limited value. | • Workload has limited current or future business value.  • Migration or modernization cost outweighs business benefits. |
 | [Rehost](#2-rehost-like-for-like-migration) | Adopt cloud with minimal business disruption. | • Workload is stable.  • Workload is compatible with Azure.  • Low-risk migration.  • Short-term cloud adoption goals.  • No immediate need for modernization.  • Reduce capital expense.  • Free up datacenter space.  • Inexperience with Azure. |
@@ -26,20 +26,43 @@ The following table provides a comprehensive overview of all available cloud mig
 | [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't viable. | • Legacy system is too outdated or inflexible.  • Build applications faster.  • Reduce operational cost.  • Need modern frameworks and tools. |
 | [Retain](#8-retain-keep-as-is) | Maintain stability and avoid unnecessary change. | • Workload is stable, compliant, and meets business needs.  • No near-term driver to move.  • Low ROI from migration. |
 
-## Define business goals for each workload
+## Define business drivers for each workload
 
-A clear set of business goals ensures that each cloud migration decision delivers measurable value and aligns with organizational priorities. Business goals provide the foundation for selecting the right migration strategy and maximizing return on investment.
-You must define business goals before selecting a migration strategy to ensure each workload supports broader organizational outcomes.
+A business driver is a specific, measurable reason for making decisions about a workload during cloud adoption. Clearly defining these drivers ensures that migration strategies align with business goals and deliver tangible value.
 
-1. **Identify specific business drivers for each workload.** Business drivers are the underlying motivations for cloud adoption. These drivers include cost optimization, operational efficiency, compliance, innovation, scalability, and business continuity. Identifying these drivers clarifies the urgency and direction of migration decisions. Document each driver to ensure alignment across stakeholders.
+1. **Identify the current business value of the workload.** Evaluate how the workload supports current operations. This helps determine whether it warrants further investment or should be retired.
 
-2. **Define measurable success metrics for each goal.** Success metrics quantify the value of migration and validate whether business goals are achieved. Use metrics such as SLA improvements, cost reduction percentages, deployment frequency, or user satisfaction scores. Avoid metrics that only reflect technical completion, such as VM counts or storage migration, as they don't demonstrate business value.
+    - Analyze usage metrics, cost reports, and stakeholder feedback.
+    - Identify dependencies and system integrations.
+    - Document how the workload contributes to business outcomes (revenue, compliance, customer experience).
 
-3. **Map each workload to a migration strategy based on business context.** Migration strategies, such as rehost, refactor, rearchitect, rebuild, or replace, must align with the workload’s business drivers. For example, select rehost for cost-driven migrations or refactor for innovation-focused goals. This mapping ensures each workload contributes to strategic outcomes and supports long-term cloud maturity.
+2. **Assess the workload’s future relevance.** Determine whether the workload remains relevant to future business strategies. This assessment ensures that cloud investments support long-term goals.
 
-## Select the appropriate migration strategy for each workload
+    - Align the workload with strategic initiatives, such as market expansion or product innovation.
+    - Evaluate whether the workload can scale or adapt to future needs.
+    - Consider whether emerging technologies or business models will replace or enhance the workload.
 
-The selection of migration strategies determines the success of your cloud adoption effort. Each strategy offers distinct benefits and tradeoffs that must align with your documented business goals. You must evaluate each workload against available strategies to ensure optimal outcomes. Follow these recommendations:
+3. **Map the workload to business goals.** Link the workload to specific business goals to clarify its strategic importance. This mapping ensures that migration decisions support measurable outcomes.
+
+    - Use business goal categories such as agility, innovation, cost optimization, resilience, or sustainability.
+    - Engage business stakeholders to validate alignment.
+    - Prioritize workloads that directly support high-impact goals.
+
+4. **Define the primary business driver.** Select the main driver that best reflects the workload’s current role and future potential. This will guide the choice of migration strategy.
+
+    | Business driver | Migration strategy |
+    |------------------|--------------------|
+    | No longer delivers value or is redundant | Retire |
+    | Valuable but no modernization | Rehost |
+    | Needs minor modernization | Replatform |
+    | Needs code-level changes to meet business goals | Refactor |
+    | Requires architectural changes to meet goals | Rearchitect |
+    | Must be rebuilt to deliver new capabilities | Rebuild |
+    | Must remain on-premises | Retain |
+
+## Select the right migration strategy
+
+Use the defined business driver to narrow down strategy options. This ensures that each migration decision aligns with business priorities. Refer to the business driver-to-strategy table above to eliminate unsuitable options and select the most effective path forward.
 
 ### 1. Retire (decommission)
 
@@ -135,17 +158,30 @@ Modernization during migration refers to replatforming, rearchitecting, or refac
 
 3. **Modernize when migration enables funding and alignment.** Migration projects often unlock funding and stakeholder support. Use this opportunity to align modernization with business priorities. Delaying might result in inefficient workloads and missed opportunities.
 
-## Communicate and align decisions with stakeholders
+## Communicate decisions to stakeholders
 
 Clear communication ensures all stakeholders understand and support migration decisions throughout the adoption process. Stakeholder alignment reduces execution risk and improves project outcomes by establishing shared understanding of priorities and constraints. You must establish a structured communication plan to maintain alignment throughout the migration process. Follow these recommendations:
 
-1. **Document and share workload treatment decisions with all relevant stakeholders.** Migration decisions can affect multiple organizational functions and require broad stakeholder input. Include business owners, legal teams, security teams, and technical leads in decision communication. Explain how each migration strategy decision supports documented business goals and addresses stakeholder concerns.
+1. **Define success metrics that validate the business outcome.** Success metrics quantify the value of the chosen action and confirm whether the business driver is achieved. This step ensures that decisions are based on business impact rather than technical completion. Use metrics such as:
 
-2. **Coordinate migration plans with the cloud strategy team.** The cloud strategy team provides organizational context and ensures migration decisions align with broader cloud adoption objectives. Regular coordination prevents conflicts between individual workload decisions and enterprise-wide cloud strategy. Review migration strategy selections against the cloud adoption plan established during the Strategy phase to maintain consistency.
+    | Cloud migration strategy | Key indicators for this strategy |
+    |--------------------------|------------------------------|
+    | [Retire](#1-retire-decommission) | • Workload has limited current or future business value.  • Migration or modernization cost outweighs business benefits. |
+    | [Rehost](#2-rehost-like-for-like-migration) | • Workload is stable.  • Workload is compatible with Azure.  • Low-risk migration.  • Short-term cloud adoption goals.  • No immediate need for modernization.  • Reduce capital expense.  • Free up datacenter space.  • Inexperience with Azure. |
+    | [Replatform](#3-replatform-modernize-hosting-environment) | • Simplify reliability and disaster recovery.  • Reduce OS and licensing overhead.  • Improve time-to-cloud with moderate investment.  • Containerize app. |
+    | [Refactor](#4-refactor-modernize-code) | • Decrease cost of maintenance.  • Reduce technical debt.  • Use Azure SDKs.  • Improve code performance.  • Optimize code costs.  • Apply cloud design patterns.  • Instrument code for monitoring. |
+    | [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | • Application requires modularization or service decomposition.  • Scaling needs vary by component.  • Architecture must support future innovation.  • Mix technology stacks. |
+    | [Replace](#6-replace-use-saas-alternative) | • Simplify operations.  • Internal development resources are better used elsewhere.  • Little need for customization. |
+    | [Rebuild](#7-rebuild-build-cloud-native) | • Legacy system is too outdated or inflexible.  • Build applications faster.  • Reduce operational cost.  • Need modern frameworks and tools. |
+    | [Retain](#8-retain-keep-as-is) | • Workload is stable, compliant, and meets business needs.  • No near-term driver to move.  • Low ROI from migration. |
 
-3. **Establish regular communication between mandate owners and execution teams.** Ongoing communication between decision makers and implementers ensures plans remain viable as technical realities emerge. Schedule regular progress reviews to track migration progress, identify risks, and address technical issues. Use this feedback loop to adjust migration strategies when implementation challenges or new opportunities arise.
+2. **Document and share workload treatment decisions with all relevant stakeholders.** Migration decisions can affect multiple organizational functions and require broad stakeholder input. Include business owners, legal teams, security teams, and technical leads in decision communication. Explain how each migration strategy decision supports documented business goals and addresses stakeholder concerns.
 
-4. **Review and update migration strategies based on evolving requirements.** Business priorities and technical insights change throughout the migration process, requiring strategy adjustments. Establish a regular review cycle to reassess workload treatment decisions against current business goals and technical capabilities. Update strategy mappings to reflect new priorities, lessons learned, and changing organizational needs.
+3. **Coordinate migration plans with the cloud strategy team.** The cloud strategy team provides organizational context and ensures migration decisions align with broader cloud adoption objectives. Regular coordination prevents conflicts between individual workload decisions and enterprise-wide cloud strategy. Review migration strategy selections against the cloud adoption plan established during the Strategy phase to maintain consistency.
+
+4. **Establish regular communication between mandate owners and execution teams.** Ongoing communication between decision makers and implementers ensures plans remain viable as technical realities emerge. Schedule regular progress reviews to track migration progress, identify risks, and address technical issues. Use this feedback loop to adjust migration strategies when implementation challenges or new opportunities arise.
+
+5. **Review and update migration strategies based on evolving requirements.** Business priorities and technical insights change throughout the migration process, requiring strategy adjustments. Establish a regular review cycle to reassess workload treatment decisions against current business goals and technical capabilities. Update strategy mappings to reflect new priorities, lessons learned, and changing organizational needs.
 
 ## Next steps
 
