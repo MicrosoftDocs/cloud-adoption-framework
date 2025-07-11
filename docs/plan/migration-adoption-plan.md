@@ -55,6 +55,7 @@ For each workload in your inventory, gather business and technical details.
 |-----------------|-------------|
 | Workload name | Add the official name used across the organization for this workload. |
 | Workload description | Provide a single sentence describing the workload's purpose. |
+| Timelines | List the target date to complete migration strategy |
 | Migration strategy | Specify the migration strategy: retire, rehost, replatform, or refactor. |
 | Criticality level | Indicate the priority level: high (mission-critical), medium, or low priority. |
 | Data sensitivity | Define the data sensitivity level: highly confidential, confidential, general, public, or non-business. |

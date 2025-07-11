@@ -60,6 +60,7 @@ Business details document the organizational context and criticality of each wor
 | Business value | Revenue, operations, or customer value if unavailable |
 | Maintenance windows | Scheduled times for updates and changes |
 | Business freeze periods | Dates when no changes are permitted |
+| Timelines | List the target date to complete migration strategy |
 
 ## Azure discovery and assessment tools and resources
 

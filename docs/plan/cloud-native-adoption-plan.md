@@ -48,6 +48,7 @@ For each workload you plan to build, document business and technical requirement
 |-----------------|-------------|
 | Workload name | Enter the official name used across the organization |
 | Workload description | Write a single sentence describing the workload's purpose |
+| Timelines | List the target date to have production-ready workload |
 | Workload owners | List individuals accountable for workload |
 | Compliance requirements | Specify regulatory standards or certifications required |
 | Target users | Document number and locations of user base |
