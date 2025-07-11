@@ -15,7 +15,7 @@ This article helps you create a comprehensive inventory of your workloads to for
 
 ## Discover workload inventory
 
-A complete inventory of your technical assets forms the foundation of your cloud adoption plan. Your inventory identifies all systems, applications, and infrastructure components across your environment. You need this inventory to decide which [cloud migration strategy](./select-cloud-migration-strategy.md#select-the-appropriate-migration-strategy-for-each-workload) is the best fit.
+A complete inventory of your technical assets forms the foundation of your cloud adoption plan. Your inventory identifies all systems, applications, and infrastructure components across your environment. You need this inventory to decide which [cloud migration strategy](./select-cloud-migration-strategy.md#select-the-right-migration-strategy) is the best fit.
 
 1. **Define each workload and its boundaries.** A workload is a collection of IT components, such as servers, virtual machines (VMs), cloud services, applications, code, data, or appliances, that support one or more business processes. You need to define each workload to understand its business value and technical footprint. This clarity helps prioritize migration and modernization efforts. Use network traffic monitoring and dependency mapping tools to identify workload boundaries and visualize relationships between components.
 
