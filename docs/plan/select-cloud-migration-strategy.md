@@ -9,18 +9,22 @@ ms.topic: conceptual
 
 # Select your cloud migration strategies
 
-For each workload in your inventory, choose the most appropriate approach option: retire, retain, migrate as is (rehost), modernize (replatform, refactor, rearchitect), rebuild, and replace. Make this decision based on a knowledge of migration and modernization best practices. Selecting the appropriate migration strategy ensures that each workload aligns with business goals and maximizes cloud value. Use the following table to get a quick overview of the migration strategies, the common business drivers behind each, and more details on when to choose that migration strategy. There are also example success
+This article helps you select the most appropriate cloud migration strategy for each workload in your portfolio. Each strategy—retire, retain, rehost, replatform, refactor, rearchitect, rebuild, or replace—offers distinct benefits and tradeoffs that must align with your business goals and technical requirements.
+
+## Migration strategy overview
+
+The following table provides a comprehensive overview of all available cloud migration strategies. Use this reference to understand each strategy's primary business drivers and key indicators that signal when to apply each approach to your workloads.
 
 | Cloud migration strategy | Business drivers | Key indicators for choosing this strategy |
 |--------------------------|------------------|------------------------------|
-| Retire | Eliminate workloads of limited value | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits |
-| Rehost | Adopt cloud with minimal business disruption | • Workload is stable<br>• Workload is compatible with Azure<br>• Low risk migration<br>• Short-term cloud adoption goals<br>• No immediate need for modernization<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure |
-| Replatform | Take advantage of managed services with minimal investment | • Simplify reliability and disaster recovery<br>• Reduce OS and licensing overhead<br>• Improve time-to-cloud with moderate investment<br>• Containerize app |
-| Refactor | Code changes deliver short- or long-term value | • Decrease cost of maintenance<br>• Reduce technical debt<br>• Use Azure SDKs<br>• Improve code performance<br>• Optimize code costs<br>• Apply cloud design patterns<br>• Instrument code for monitoring |
-| Rearchitect | Meet business requirements better with modernized architecture | • Application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• Architecture must support future innovation<br>• Mix technology stacks |
-| Replace | SaaS solution meets needs | • Simplify operations<br>• Internal development resources are better used elsewhere<br>• Little need for customization |
-| Rebuild | Critical legacy systems are obsolete and modernization isn't worth it | • Legacy system is too outdated or inflexible<br>• Accelerate innovation<br>• Build applications faster<br>• Reduce operational cost<br>• Need modern frameworks and tools |
-| Retain | Maintain stability and avoid unnecessary change | • Workload is stable, compliant, and meets business needs<br>• No near-term driver to move<br>• Low ROI from migration |
+| [Retire](#1-retire-decommission) | Eliminate workloads of limited value | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits |
+| [Rehost](#2-rehost-like-for-like-migration) | Adopt cloud with minimal business disruption | • Workload is stable<br>• Workload is compatible with Azure<br>• Low-risk migration<br>• Short-term cloud adoption goals<br>• No immediate need for modernization<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure |
+| [Replatform](#3-replatform-modernize-hosting-environment) | Take advantage of managed services with minimal investment | • Simplify reliability and disaster recovery<br>• Reduce OS and licensing overhead<br>• Improve time-to-cloud with moderate investment<br>• Containerize app |
+| [Refactor](#4-refactor-modernize-code) | Code changes deliver short- or long-term value | • Decrease cost of maintenance<br>• Reduce technical debt<br>• Use Azure SDKs<br>• Improve code performance<br>• Optimize code costs<br>• Apply cloud design patterns<br>• Instrument code for monitoring |
+| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Meet business requirements better with modernized architecture | • Application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• Architecture must support future innovation<br>• Mix technology stacks |
+| [Replace](#6-replace-use-saas-alternative) | SaaS solution meets needs | • Simplify operations<br>• Internal development resources are better used elsewhere<br>• Little need for customization |
+| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't worth it | • Legacy system is too outdated or inflexible<br>• Accelerate innovation<br>• Build applications faster<br>• Reduce operational cost<br>• Need modern frameworks and tools |
+| [Retain](#8-retain-keep-as-is) | Maintain stability and avoid unnecessary change | • Workload is stable, compliant, and meets business needs<br>• No near-term driver to move<br>• Low ROI from migration |
 
 ## Define business goals for each workload
 
