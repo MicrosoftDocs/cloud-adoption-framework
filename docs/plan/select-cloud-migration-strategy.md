@@ -23,7 +23,7 @@ The following table provides a comprehensive overview of all available cloud mig
 | [Refactor](#4-refactor-modernize-code) | Code changes deliver short- or long-term value. | • Decrease cost of maintenance.  • Reduce technical debt.  • Use Azure SDKs.  • Improve code performance.  • Optimize code costs.  • Apply cloud design patterns.  • Instrument code for monitoring. |
 | [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Meet business requirements better with modernized architecture. | • Application requires modularization or service decomposition.  • Scaling needs vary by component.  • Architecture must support future innovation.  • Mix technology stacks. |
 | [Replace](#6-replace-use-saas-alternative) | SaaS solution meets needs. | • Simplify operations.  • Internal development resources are better used elsewhere.  • Little need for customization. |
-| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't viable. | • Legacy system is too outdated or inflexible.  • Accelerate innovation.  • Build applications faster.  • Reduce operational cost.  • Need modern frameworks and tools. |
+| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't viable. | • Legacy system is too outdated or inflexible.  • Build applications faster.  • Reduce operational cost.  • Need modern frameworks and tools. |
 | [Retain](#8-retain-keep-as-is) | Maintain stability and avoid unnecessary change. | • Workload is stable, compliant, and meets business needs.  • No near-term driver to move.  • Low ROI from migration. |
 
 ## Define business goals for each workload
@@ -111,7 +111,7 @@ A replace strategy uses commercial SaaS solutions to eliminate the need for cust
 
 ### 7. Rebuild (build cloud-native)
 
-A rebuild strategy creates a new, cloud-native solution using Azure services. This approach is appropriate when legacy systems are obsolete or when modernization isn't feasible. Rather than replicating legacy functionality, you can reimagine the solution to use Azure capabilities like PaaS, automation, and AI. Some workloads required a rebuild, like DHCP server. For other workloads, it's better to deploy new instances of services in Azure rather than migrating them, such as Active Directory Domain Controllers.
+A rebuild strategy is a full redevelopment of a workload using cloud-native solutions. This approach is appropriate when legacy systems are obsolete or when modernization isn't feasible. Rather than modernizing legacy functionality, you can reimagine the solution to use Azure capabilities like PaaS, automation, and AI. Some workloads required a rebuild, like DHCP server. For other workloads, it's better to deploy new instances of services in Azure rather than migrating them, such as Active Directory Domain Controllers.
 
 | Business driver | Key indicators for this strategy | Example success metrics |
 |----------------------|------------------------------| --- |
