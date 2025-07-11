@@ -23,7 +23,7 @@ The following table provides a comprehensive overview of all available cloud mig
 | [Refactor](#4-refactor-modernize-code) | Code changes deliver short- or long-term value. | • Decrease cost of maintenance.  • Reduce technical debt.  • Use Azure SDKs.  • Improve code performance.  • Optimize code costs.  • Apply cloud design patterns.  • Instrument code for monitoring. |
 | [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Meet business requirements better with modernized architecture. | • Application requires modularization or service decomposition.  • Scaling needs vary by component.  • Architecture must support future innovation.  • Mix technology stacks. |
 | [Replace](#6-replace-use-saas-alternative) | SaaS solution meets needs. | • Simplify operations.  • Internal development resources are better used elsewhere.  • Little need for customization. |
-| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't worth it. | • Legacy system is too outdated or inflexible.  • Accelerate innovation.  • Build applications faster.  • Reduce operational cost.  • Need modern frameworks and tools. |
+| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't viable. | • Legacy system is too outdated or inflexible.  • Accelerate innovation.  • Build applications faster.  • Reduce operational cost.  • Need modern frameworks and tools. |
 | [Retain](#8-retain-keep-as-is) | Maintain stability and avoid unnecessary change. | • Workload is stable, compliant, and meets business needs.  • No near-term driver to move.  • Low ROI from migration. |
 
 ## Define business goals for each workload
