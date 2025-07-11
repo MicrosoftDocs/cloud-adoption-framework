@@ -25,7 +25,7 @@ A defined set of responsibilities ensures that governance, security, and operati
 
 ## Choose a cloud operating model
 
-A cloud operating model defines how teams manage responsibilities and collaborate across cloud environments. Selecting the right model ensures alignment with business goals, accelerates delivery, clarifies accountability, and reduces operational overhead. You must choose a model that supports your current needs and enables future scalability
+A cloud operating model defines how teams manage responsibilities and collaborate across cloud environments. Selecting the right model ensures alignment with business goals, accelerates delivery, clarifies accountability, and reduces operational overhead. You must choose a model that supports your current needs and enables future scalability.
 
 | Operating Model | Best For | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
@@ -47,7 +47,7 @@ A centralized model consolidates all cloud responsibilities (governance, securit
 
 A shared responsibility model defines how platform and workload teams collaborate to manage cloud environments. This model is essential for mid-size and enterprise organizations that operate in hybrid or multicloud environments. It enables scalability, governance, and agility by clearly assigning responsibilities and enforcing standards.
 
-1. **Establish one or more platform teams to manage shared services and governance.** Platform teams build and maintain the Azure landing zone, enforce governance controls, and manage shared infrastructure. This structure ensures consistency while enabling scale.
+1. **Establish one or more platform teams to manage shared services and governance.** Platform teams build and maintain the Azure landing zone, enforce governance controls, and manage shared infrastructure. This structure ensures consistency while enabling scalability.
 
 2. **Allow workload teams to operate autonomously within governance guardrails.** Application teams manage their own deployments and operations, increasing agility. Guardrails, such as Azure Policy, service restrictions, and standardized templates, ensure compliance.
 
@@ -85,7 +85,7 @@ A documented responsibility model defines clear ownership across governance, sec
 
 1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to prevent gaps in coverage and ensure all critical areas are managed effectively. Responsibility mapping eliminates confusion about who handles specific tasks and decisions. Assign primary and backup owners for each function. Designate individuals or teams responsible for each function and ensure a backup is available. This redundancy ensures continuity during absences or transitions.
 
-2. **Include partner responsibilities in your operating model** [Partners](https://partner.microsoft.com/partnership/find-a-partner) contributions must be clearly defined to avoid overlap with internal teams. Strategic partners such as Microsoft Expert managed service provides offer specialized capabilities that accelerate cloud adoption and improve operational maturity. Identify partners that support your cloud strategy. Clarify the scope of partner responsibilities. Define which functions partners own, such as platform operations, workload management, or innovation initiatives. Ensure these responsibilities are distinct from internal team roles.
+2. **Include partner responsibilities in your operating model.** [Partner](https://partner.microsoft.com/partnership/find-a-partner) contributions must be clearly defined to avoid overlap with internal teams. Strategic partners such as Microsoft Expert managed service provides offer specialized capabilities that accelerate cloud adoption and improve operational maturity. Identify partners that support your cloud strategy. Clarify the scope of partner responsibilities. Define which functions partners own, such as platform operations, workload management, or innovation initiatives. Ensure these responsibilities are distinct from internal team roles.
 
 3. **Communicate the responsibilities to all stakeholders.** Ensure that all teams understand their roles and how they interact with others in the operating model. This communication prevents confusion and ensures smooth collaboration. You must provide training and documentation to help teams understand their responsibilities and dependencies.
 
