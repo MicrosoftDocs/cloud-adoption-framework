@@ -17,14 +17,14 @@ The following table provides a comprehensive overview of all available cloud mig
 
 | Cloud migration strategy | Business driver | Key indicators for this strategy |
 |--------------------------|------------------|------------------------------|
-| [Retire](#1-retire-decommission) | Eliminate workloads of limited value. | • Workload has limited current or future business value.  • Migration or modernization cost outweighs business benefits. |
-| [Rehost](#2-rehost-like-for-like-migration) | Adopt cloud with minimal business disruption. | • Workload is stable.  • Workload is compatible with Azure.  • Low-risk migration.  • Short-term cloud adoption goals.  • No immediate need for modernization.  • Reduce capital expense.  • Free up datacenter space.  • Inexperience with Azure. |
-| [Replatform](#3-replatform-modernize-hosting-environment) | Take advantage of managed services with minimal investment. | • Simplify reliability and disaster recovery.  • Reduce OS and licensing overhead.  • Improve time-to-cloud with moderate investment.  • Containerize app. |
-| [Refactor](#4-refactor-modernize-code) | Code changes deliver short- or long-term value. | • Decrease cost of maintenance.  • Reduce technical debt.  • Use Azure SDKs.  • Improve code performance.  • Optimize code costs.  • Apply cloud design patterns.  • Instrument code for monitoring. |
-| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Meet business requirements better with modernized architecture. | • Application requires modularization or service decomposition.  • Scaling needs vary by component.  • Architecture must support future innovation.  • Mix technology stacks. |
-| [Replace](#6-replace-use-saas-alternative) | SaaS solution meets needs. | • Simplify operations.  • Internal development resources are better used elsewhere.  • Little need for customization. |
-| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't viable. | • Legacy system is too outdated or inflexible.  • Build applications faster.  • Reduce operational cost.  • Need modern frameworks and tools. |
-| [Retain](#8-retain-keep-as-is) | Maintain stability and avoid unnecessary change. | • Workload is stable, compliant, and meets business needs.  • No near-term driver to move.  • Low ROI from migration. |
+| [Retire](#1-retire-decommission) | Eliminate workloads of limited value. | • Workload has limited current or future business value. • Migration or modernization cost outweighs business benefits. |
+| [Rehost](#2-rehost-like-for-like-migration) | Adopt cloud with minimal business disruption. | • Workload is stable. • Workload is compatible with Azure. • Low-risk migration. • Short-term cloud adoption goals. • No immediate need for modernization. • Reduce capital expense. • Free up datacenter space. • Inexperience with Azure. |
+| [Replatform](#3-replatform-modernize-hosting-environment) | Take advantage of managed services with minimal investment. | • Simplify reliability and disaster recovery. • Reduce OS and licensing overhead. • Improve time-to-cloud with moderate investment. • Containerize app. |
+| [Refactor](#4-refactor-modernize-code) | Code changes deliver short- or long-term value. | • Decrease cost of maintenance. • Reduce technical debt. • Use Azure SDKs. • Improve code performance. • Optimize code costs. • Apply cloud design patterns. • Instrument code for monitoring. |
+| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Meet business requirements better with modernized architecture. | • Application requires modularization or service decomposition. • Scaling needs vary by component. • Architecture must support future innovation. • Mix technology stacks. |
+| [Replace](#6-replace-use-saas-alternative) | SaaS solution meets needs. | • Simplify operations. • Internal development resources are better used elsewhere. • Little need for customization. |
+| [Rebuild](#7-rebuild-build-cloud-native) | Critical legacy systems are obsolete and modernization isn't viable. | • Legacy system is too outdated or inflexible. • Build applications faster. • Reduce operational cost. • Need modern frameworks and tools. |
+| [Retain](#8-retain-keep-as-is) | Maintain stability and avoid unnecessary change. | • Workload is stable, compliant, and meets business needs. • No near-term driver to move. • Low ROI from migration. |
 
 ## Define business drivers for each workload
 
@@ -48,7 +48,7 @@ A business driver is a specific, measurable reason for making decisions about a 
     - Engage business stakeholders to validate alignment.
     - Prioritize workloads that directly support high-impact goals.
 
-4. **Define the primary business driver.** Select the main driver that best reflects the workload’s current role and future potential. This will guide the choice of migration strategy.
+4. **Define the primary business driver.** Select the main driver that best reflects the workload’s current role and future potential. This guides the choice of migration strategy.
 
     | Business driver | Migration strategy |
     |------------------|--------------------|
@@ -66,9 +66,9 @@ A migration strategy defines how each workload transitions to Azure. This decisi
 
 ### 1. Retire (decommission)
 
-Retire decommissions workloads that no longer provide business value.  This strategy is important when workloads are obsolete, underused, or redundant. Validate this decision by confirming that the workload is obsolete and has no critical dependencies that would affect other systems. Update your inventory as you decommission workloads.
+Retire decommissions workloads that no longer provide business value. This strategy is important when workloads are obsolete, underused, or redundant. Validate this decision by confirming that the workload is obsolete and has no critical dependencies that would affect other systems. Update your inventory as you decommission workloads.
 
-| Business driver   | Key indicators for this strategy   |
+| Business driver | Key indicators for this strategy |
 |----------|----------|
 | Eliminate workloads of limited value | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits |
 
@@ -90,7 +90,7 @@ A rehost strategy enables fast and low-risk migration by moving workloads to Azu
 |--------------| --- | ----------|--------------------------------|
 | On-premises → | Azure IaaS | On-premises servers → Azure Virtual Machines | [Technology decision guides](/azure/architecture/guide/technology-choices/compute-decision-tree) |
 | Other cloud IaaS → | Azure IaaS | AWS EC2 → Azure Virtual Machines<br><br>GCP Compute Engine → Azure Virtual Machines | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
-| Other cloud PaaS  →| Azure PaaS | AWS Beanstalk → Azure App Service<br><br>GCP App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
+| Other cloud PaaS →| Azure PaaS | AWS Beanstalk → Azure App Service<br><br>GCP App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics), [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
 
 ### 3. Replatform (modernize hosting environment)
 
@@ -102,11 +102,11 @@ Replatforming moves workloads to a modern hosting environment with minimal code 
 
 Choose workloads where PaaS options reduce operational overhead, improve reliability, or simplify disaster recovery. Minimal code refactoring might be necessary to take advantage of PaaS services.
 
-| Workload type | Azure target | Replatforming examples   | Guidance |
+| Workload type | Azure target | Replatforming examples | Guidance |
 |---------------|--------------|--------------------------| ---------|
-| On-premises →  |Azure PaaS        | VMs → Azure App Service<br><br>SQL Server on a VM → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
-| Other cloud IaaS → | Azure PaaS    | AWS EC2 → Azure App Service<br><br>MySQL on AWS EC2 → Azure SQL Database | [Other cloud to Azure migration](/azure/migration/migrate-to-azure) <br> [Database migration guides](/data-migration/) |
-| Azure IaaS → | Azure PaaS    | Azure Virtual Machines → Azure App Service<br><br>SQL Server on Azure Virtual Machines → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
+| On-premises → |Azure PaaS| VMs → Azure App Service<br><br>SQL Server on a VM → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
+| Other cloud IaaS → | Azure PaaS| AWS EC2 → Azure App Service<br><br>MySQL on AWS EC2 → Azure SQL Database | [Other cloud to Azure migration](/azure/migration/migrate-to-azure) <br> [Database migration guides](/data-migration/) |
+| Azure IaaS → | Azure PaaS| Azure Virtual Machines → Azure App Service<br><br>SQL Server on Azure Virtual Machines → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
 
 ### 4. Refactor (modernize code)
 
@@ -122,7 +122,7 @@ A rearchitect strategy redesigns the workload’s architecture to improve scalab
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| Meet business requirements with modern architecture | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks  |
+| Meet business requirements with modern architecture | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks|
 
 ### 6. Replace (use SaaS alternative)
 
@@ -167,7 +167,7 @@ Clear communication ensures all stakeholders understand and support migration de
     | Cloud migration strategy | Example success metrics |
     |--------------------------|------------------------------|
     | [Retire](#1-retire-decommission) | • Retire 100% of workloads identified as obsolete before migration |
-    | [Rehost](#2-rehost-like-for-like-migration) |  • Migrate 100% of Tier 1 workloads from other cloud to Azure with no service-level agreement (SLA) degradation<br>• Decommission 30% of on-premises infrastructure post-migration. |
+    | [Rehost](#2-rehost-like-for-like-migration) | • Migrate 100% of Tier 1 workloads from other cloud to Azure with no service-level agreement (SLA) degradation<br>• Decommission 30% of on-premises infrastructure post-migration. |
     | [Replatform](#3-replatform-modernize-hosting-environment) | • Reduce deployment lead times by 30% for migrated applications<br>• Reduce infrastructure and licensing costs by 25% within 12 months |
     | [Refactor](#4-refactor-modernize-code) | • Improve application response time by 40% using Azure-native services<br>• Achieve 95% observability coverage through code instrumentation |
     | [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | • Support 2x user load with no performance degradation<br>• Integrate three new Azure-native services into existing architecture |
