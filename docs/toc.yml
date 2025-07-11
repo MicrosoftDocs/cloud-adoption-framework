@@ -54,6 +54,8 @@ items:
           href: plan/assess-workloads-for-cloud-migration.md
       - name: 4. Estimate cloud costs
         href: plan/estimate-total-cost-of-ownership.md
+      - name: 5. Document your cloud adoption plan
+        href: plan/document-cloud-adoption-plan.md
         
       - name: Resources
         items:
