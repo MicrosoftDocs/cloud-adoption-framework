@@ -1,7 +1,7 @@
 ---
 title: CI/CD pipeline with digital invention
 description: Use the maturity model of the Innovate methodology to reduce friction that slows adoption in the CI/CD pipeline, while keeping best practices in place.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/06/2021
 ms.topic: conceptual

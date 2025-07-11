@@ -1,30 +1,23 @@
 {
-  "BaseConfiguration": "docutune-default.json",
   "Docsets": [
     {
       "DocsetName": "cloud-adoption-framework",
-      "BasePath": "/azure/cloud-adoption-framework"
+      "BuildSourceFolder": "docs"
     }
   ],
-
-  "Command": "Fix",
-  "SentenceCase": true,
-  "Downcase": false,
-  "FixMetadata": true,
-  "MarkdownListIndicator": "-",
-  "PreloadTOCFiles": [ "docs/scenarios/hybrid/toc.yml" ],
   "Exclude": [
     "SECURITY.md",
     "docs/_bread/toc.yml",
     "templates/",
     "whats-new.md"
   ],
+  "PreloadTOCFiles": [
+    "docs/scenarios/hybrid/toc.yml"
+  ],
   "TermFiles": [
     "Bundle-Standard.txt",
     "Bundle-Cloud.txt",
     "Dictionary-CAF.ps1",
     "Dictionary-EntraRebrand.ps1"
-  ],
-  "RemoveTermSets": [
   ]
 }

@@ -1,7 +1,7 @@
 ---
 title: AKS landing zone accelerator
 description: Overview of the AKS landing zone accelerator.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/25/2022
 ms.topic: conceptual

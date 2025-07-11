@@ -1,7 +1,7 @@
 ---
 title: Migration assessment checklist
 description: Learn how to assess the readiness of your workloads for migration to the cloud with the Cloud Adoption Framework for Azure.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/05/2024
 ms.topic: conceptual

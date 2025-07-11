@@ -1,7 +1,7 @@
 ---
 title: Plan platform automation and DevOps for Azure Red Hat OpenShift
 description: Design recommendations and considerations for Azure Red Hat OpenShift platform automation and DevOps.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 08/16/2022
 ms.topic: conceptual

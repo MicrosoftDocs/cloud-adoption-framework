@@ -1,7 +1,7 @@
 ---
 title: Improve Azure landing zone operations
 description: Improve Azure landing zone operations using the Manage methodology from the Microsoft Cloud Adoption Framework.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 07/05/2022
 ms.topic: conceptual

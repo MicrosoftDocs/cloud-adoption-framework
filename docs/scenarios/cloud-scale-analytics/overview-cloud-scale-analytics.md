@@ -1,8 +1,8 @@
 ---
 title: Introduction to Cloud-Scale Analytics
 description: Learn about building and operationalizing landing zones to host and run cloud-scale analytics workloads.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

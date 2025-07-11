@@ -1,7 +1,7 @@
 ---
 title: Govern modern application platform solutions
 description: Extend governance practices to modern application platform instances
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 03/01/2021
 ms.topic: conceptual

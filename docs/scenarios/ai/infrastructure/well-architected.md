@@ -130,8 +130,8 @@ Deploying Megatron-LM requires specific software and hardware.
 
 You should run Megatron-LM using the latest release of [NGC's PyTorch container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch). To run the container against a traditional Slurm-based HPC cluster, you need to install and configure these other components in your cluster:
 
-- [enroot](https://github.com/NVIDIA/enroot): a tool that allows users to run containerized applications on HPC clusters without requiring root privileges or modifying the host system.
-- [pyxis](https://github.com/NVIDIA/pyxis): a plugin for Slurm that enables seamless integration of enroot with Slurm, allowing users to submit containerized jobs to Slurm queues and run them on HPC nodes.
+- [enroot](https://github.com/NVIDIA/enroot): A tool that allows users to run containerized applications on HPC clusters without requiring root privileges or modifying the host system.
+- [pyxis](https://github.com/NVIDIA/pyxis): A plugin for Slurm that enables seamless integration of enroot with Slurm, allowing users to submit containerized jobs to Slurm queues and run them on HPC nodes.
 
 Both of these components are included in [CycleCloud Workspace for Slurm](./cycle-cloud.md) but are currently not included in Slurm clusters that are built via CycleCloud. You can introduce these extra components via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects). With these requirements met, you can use Megatron-LM for LLM training by:
 

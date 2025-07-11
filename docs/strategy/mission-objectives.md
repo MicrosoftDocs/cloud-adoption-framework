@@ -2,7 +2,7 @@
 title: Define Your Cloud Adoption Strategy Mission and Objectives
 description: Learn about recommendations for defining your mission and objectives to provide direction and purpose for your cloud adoption.
 ms.author: pnp
-author: Zimmergren
+author: stephen-sumner
 ms.topic: conceptual
 ms.date: 02/03/2025
 ---

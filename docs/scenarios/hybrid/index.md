@@ -1,7 +1,7 @@
 ---
 title: Introduction to hybrid and multicloud
 description: Learn about hybrid and multicloud.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 10/19/2021
 ms.topic: conceptual
