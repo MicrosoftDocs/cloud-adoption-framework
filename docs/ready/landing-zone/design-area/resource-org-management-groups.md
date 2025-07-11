@@ -40,7 +40,6 @@ For more information, see [Management groups](/azure/governance/management-group
 
 - Don't assign application teams permissions via RBAC at management group scopes. Instead, assign permissions at the individual subscription or resource group scopes that they require access to. This is normally handled during the [subscription vending process](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). This is no recommend because of over-permissioning and security risks, and added risk from inheritance. Instead, use management groups to assign Azure policies and initiatives that apply to all subscriptions in the management group that require the same security, governance, and compliance settings.
 
-
   - You might assign permissions via RBAC at management group scopes for platform teams to grant them access to all subscriptions easily to perform daily tasks and troubleshooting. However, this should be controlled via privileged identity management (PIM) to ensure that the permissions are only granted when needed.
 
 - Use resource tags to query and horizontally navigate across the management group hierarchy. You can use Azure Policy to enforce or append resource tags. Then you can group resources for search needs without having to use a complex management group hierarchy.
@@ -49,10 +48,9 @@ For more information, see [Management groups](/azure/governance/management-group
 
 - Create a platform management group under the root management group to support common platform policies and Azure role assignments. This grouping structure ensures that you can apply various policies to the subscriptions in your Azure foundation. This approach also centralizes the billing for common resources in one set of foundational subscriptions.
 
-- Create management groups under your landing zone management group to represent the types of workloads that you host. These groups are based on the security, compliance, connectivity, and feature needs of the workloads. With this grouping structure, you can have a set of Azure policies applied at the management group level. Use this grouping structure for all workloads that require the same security, compliance, connectivity, and feature settings. For more information, see [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md).
+- Create management groups under your landing zone management group to represent the types of workloads that you host. These groups are based on the security, compliance, connectivity, and feature needs of the workloads. With this grouping structure, you can have a set of Azure policies applied at the management group level. Use this grouping structure for all workloads that require the same security, compliance, connectivity, and feature settings. 
 
-
-  - Use management groups to organize subscriptions by workload type, such as online, corporate, or sandbox. This organization helps you apply policies and RBAC roles that are specific to the workload type.
+  - Use management groups to organize subscriptions by workload type, such as online, corporate, or sandbox. This organization helps you apply policies and RBAC roles that are specific to the workload type. For more information, see [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md).
 
 - Limit the number of Azure Policy assignments at the root management group scope. This limitation minimizes debugging inherited policies in lower-level management groups.
 
