@@ -45,7 +45,7 @@ For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 
 For more information, see [Plan your Azure landing zone architecture](./estimate-total-cost-of-ownership.md#plan-your-azure-architecture)
 
-## Requirements for each workload
+## Details on each workload
 
 For each workload in your inventory, gather business and technical details.
 
