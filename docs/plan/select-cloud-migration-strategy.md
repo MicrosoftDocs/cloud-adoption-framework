@@ -83,6 +83,7 @@ Choose workloads where PaaS options reduce operational overhead, improve reliabi
 |---------------|--------------|--------------------------| ---------|
 | On-premises →  |Azure PaaS        | VMs → Azure App Service<br><br>SQL Server on a VM → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
 | Other cloud IaaS → | Azure PaaS    | AWS EC2 → Azure App Service<br><br>MySQL on AWS EC2 → Azure SQL Database | [Other cloud to Azure migration](/azure/migration/migrate-to-azure) <br> [Database migration guides](/data-migration/) |
+| Azure IaaS → | Azure PaaS    | Azure Virtual Machines → Azure App Service<br><br>SQL Server on Azure Virtual Machines → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
 
 ### 4. Refactor (modernize code)
 
