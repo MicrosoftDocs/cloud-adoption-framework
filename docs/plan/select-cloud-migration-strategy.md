@@ -53,8 +53,8 @@ A business driver is a specific, measurable reason for making decisions about a 
     | Business driver | Migration strategy |
     |------------------|--------------------|
     | No longer delivers value or is redundant | Retire |
-    | Valuable but no modernization | Rehost |
-    | Needs minor modernization | Replatform |
+    | Minimal business disruption and no modernization needed | Rehost |
+    | Needs managed services to meet business goals | Replatform |
     | Needs code-level changes to meet business goals | Refactor |
     | Requires architectural changes to meet goals | Rearchitect |
     | Must be rebuilt to deliver new capabilities | Rebuild |
