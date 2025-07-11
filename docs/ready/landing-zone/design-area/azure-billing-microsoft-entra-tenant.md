@@ -14,7 +14,7 @@ This critical design area focuses on the two highest levels of alignment across 
 
 ## Design area review
 
-**Involved roles or functions:** This design area will likely require support from one or more of the following functions or roles to make decisions and implement those decisions: [cloud strategy](../../../organize/cloud-strategy.md), [cloud platform](../../../organize/cloud-platform.md), and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md)
+**Involved roles or functions:** This design area will likely require support from one or more of the following functions or roles to make decisions and implement those decisions: cloud strategy, [cloud platform](../../../organize/cloud-platform.md), and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md)
 
 **Scope:** The objective of this exercise is to evaluate the various [offer types](https://azure.microsoft.com/support/legal/offer-details/) and Microsoft Entra tenant association is best suited for your overall environment.
 

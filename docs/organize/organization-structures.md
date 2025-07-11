@@ -41,7 +41,7 @@ The nucleus of all cloud adoption efforts is the cloud adoption team. This team 
 
 ![Diagram that shows cloud adoption team only.](../_images/ready/org-ready-adoption-only.png)
 
-For small-scale or early-stage adoption efforts, this team might be as small as one person. In larger-scale or late-stage efforts, it's common to have several cloud adoption teams, each with around six engineers. Regardless of size or tasks, the consistent aspect of any cloud adoption team is that it provides the means to onboarding solutions into the cloud. For some organizations, this might be a sufficient organizational structure. The [cloud adoption team](./cloud-adoption.md) article provides more insight into the structure, composition, and function of the cloud adoption team.
+For small-scale or early-stage adoption efforts, this team might be as small as one person. In larger-scale or late-stage efforts, it's common to have several cloud adoption teams, each with around six engineers. Regardless of size or tasks, the consistent aspect of any cloud adoption team is that it provides the means to onboarding solutions into the cloud. For some organizations, this might be a sufficient organizational structure. The cloud adoption team article provides more insight into the structure, composition, and function of the cloud adoption team.
 
 > [!WARNING]
 > Operating with only a cloud adoption team (or multiple cloud adoption teams) is considered an antipattern and should be avoided. At a minimum, consider the [MVP best practice](#best-practice-minimum-viable-product-mvp).
@@ -61,7 +61,7 @@ The following sections describe a fully staffed, proven organizational structure
 
 ## Central IT team
 
-![Diagram that shows the central I T team.](../_images/ready/org-ready-central-it.png)
+![Diagram that shows the central IT team.](../_images/ready/org-ready-central-it.png)
 
 As adoption scales, the cloud governance team might struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments that have heavy compliance, operations, or security requirements. At this stage, it's common for companies to shift cloud responsibilities to an existing central IT team. If that team can reassess tools, processes, and people to better support cloud adoption at scale, then including the central IT team can add significant value. Subject matter experts from operations, automation, security, and administration to modernize the central IT team can drive effective operational innovations.
 

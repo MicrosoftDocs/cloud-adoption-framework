@@ -38,55 +38,34 @@ items:
 
     - name: Plan
       items:
-      - name: Overview
+      - name: Checklist
         href: plan/index.md
-      - name: Digital estate
-        items:
-        - name: The five Rs of rationalization
-          href: digital-estate/5-rs-of-rationalization.md
-        - name: What is a digital estate?
-          href: digital-estate/index.md
-        - name: Digital estate planning
-          href: digital-estate/approach.md
-        - name: Gather inventory data
-          href: digital-estate/inventory.md
-        - name: Rationalize the digital estate
-          href: digital-estate/rationalize.md
-        - name: Align cost models to forecast costs
-          href: digital-estate/calculate.md
-      - name: Initial organization alignment
-        href: plan/initial-org-alignment.md
-      - name: Skills readiness plan
-        items:
-        - name: Build a readiness plan
-          href: plan/adapt-roles-skills-processes.md
-        - name: Map roles and skills
-          href: plan/suggested-skills.md
-      - name: Cloud adoption plan
-        items:
-        - name: Overview
-          href: plan/plan-intro.md
-        - name: Prerequisites
-          href: plan/prerequisites.md
-        - name: Define and prioritize workloads
-          href: plan/workloads.md
-        - name: Align assets to workloads
-          href: plan/assets.md
-        - name: Review rationalization decisions
-          href: plan/review-rationalization.md
-        - name: Establish iterations and release plans
-          href: plan/iteration-paths.md
-        - name: Estimate timelines
-          href: plan/timelines.md
-
-      - name: Strategic Migration Assessment and Readiness Tool (SMART)
-        href: plan/smart-assessment.md
-
-      - name: Sustainability considerations
-        href: plan/plan-sustainability.md
+      - name: 1. Prepare your organization
+        href: plan/prepare-organization-for-cloud.md
+      - name: 2. Prepare your people
+        href: plan/prepare-people-for-cloud.md
+      - name: 3. Plan your migration (if applicable)
+        items: 
+        - name: Discover inventory
+          href: plan/discover-existing-workload-inventory.md
+        - name: Select migration strategy
+          href: plan/select-cloud-migration-strategy.md
+        - name : Assess workloads
+          href: plan/assess-workloads-for-cloud-migration.md
+      - name: 4. Estimate cloud costs
+        href: plan/estimate-total-cost-of-ownership.md
+      - name: 5. Document your cloud adoption plan
+        href: plan/document-cloud-adoption-plan.md
         
-      - name: Plan antipatterns
-        href: antipatterns/plan-antipatterns.md
+      - name: Resources
+        items:
+        - name: Shared management operating model
+          href: plan/shared-management-operating-model.md
+        - name: Cloud-native adoption plan template
+          href: plan/cloud-native-adoption-plan.md
+        - name: Migration adoption plan template
+          href: plan/migration-adoption-plan.md
+
 
     - name: Ready
       items:
@@ -112,16 +91,7 @@ items:
           href: ready/azure-setup-guide/monitoring-reporting.md
         - name: Stay current with Azure
           href: ready/azure-setup-guide/staying-current.md
-      - name: Operating model
-        items:
-        - name: Overview
-          href: operating-model/index.md
-        - name: Define your operating model
-          href: operating-model/define.md
-        - name: Compare common cloud operating models
-          href: operating-model/compare.md
-        - name: Common operating model terms
-          href: operating-model/terms.md
+
       - name: Azure landing zones
         items:
         - name: What is an Azure landing zone?
@@ -689,14 +659,8 @@ items:
         href: organize/index.md
       - name: Required cloud functions
         items:
-        - name: Cloud strategy functions
-          href: organize/cloud-strategy.md
-        - name: Cloud adoption functions
-          href: organize/cloud-adoption.md
         - name: Cloud governance functions
           href: organize/cloud-governance.md
-        - name: Central IT functions
-          href: organize/central-it.md
         - name: Cloud operations functions
           href: organize/cloud-operations.md
         - name: Cloud center of excellence functions
@@ -712,8 +676,6 @@ items:
         href: organize/organization-structures.md
       - name: Align the RACI matrix
         href: organize/raci-alignment.md
-      - name: Building technical skills
-        href: organize/suggested-skills.md
       - name: Creating a cost-conscious organization
         href: organize/cost-conscious-organization.md
 

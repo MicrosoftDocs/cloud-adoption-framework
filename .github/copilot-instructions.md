@@ -5,15 +5,27 @@ Ensure technical accuracy of every claim about a Microsoft or Azure product agai
 Use clear language and ensure you explain the rationale behind our recommendations to help new users understand how to be successful in Azure.
 
 ## Purpose of the Cloud Adoption Framework for Azure
-The Cloud Adoption Framework for Azure helps customers of all sizes to adopt Azure, succeed in Azure, and mature in Azure.
-The Cloud Adoption Framework for Azure provides prescriptive recommendations that help new and current customers make the right decisions for their people, process, and technology faster. 
+The Cloud Adoption Framework for Azure helps all customers (startups, enterprises, new, and experienced) succeed in Azure, and mature in Azure.
+The Cloud Adoption Framework for Azure provides prescriptive recommendations that help new and current customers make the right decisions for their people, process, and technology faster.
 
 ## Template
 Review all the content to ensure it aligns with the following template. 
 
     Template:{
+    ---
+    title: Descriptive title that states the customer outcome
+    description: Brief description explaining what the customer will achieve by using this guidance
+    author: github-username
+    ms.author: microsoft-alias
+    ms.date: current date MM/DD/YYYY
+    ms.topic: conceptual
+    ---
 
-    ## Each {heading} must be an {imperative recommendation}.
+    # The {title} of this article must be the same as the title in the metadata
+
+    "This article ..." define specific customer outcome. State why this guidance is important in one to two sentences without stating "is it important/crucial/critical because".
+
+    ## Each {heading} must be an {imperative recommendation} use sentence case.
 
     The first sentence uses a declarative sentence that starts with an article or noun to explain this {imperative recommendation} in {heading} is important in the context of this article, but it must not with a gerund (verb ending in -ing). The next sentence must descriptive states why this {heading} is important in the context of this {title}. The next sentence states what "You must/need/should'' do to reach the {goal} implied by the {heading}." Use numbered lists to enforce sequentially. 
 
@@ -23,11 +35,11 @@ Review all the content to ensure it aligns with the following template.
 
     ## Add as many headings and sub headings as needed. But enforce this style and format throughout.
 
-    ## Azure resources [Review all the links and create a table of Azure tools and resources a table as follows]
+    ## Azure tools and resources [A collection of all  all the links in this article]
 
     | Category | Tool | Description |
     |----------|------|-------------|
-    | [Tool category 1] | [Tool or resource name with link] | [Brief description of how it supports the recommendations] |
+    | [Tool category 1] | [Tool or resource name with link that is present in this article] | [Brief description of how it supports the recommendations] |
 
     ## Next steps
     
@@ -56,5 +68,6 @@ Fix all grammatical errors and typos throughout.
 
 ## Product truth
 
+Ensure technical accuracy of every claim about a Microsoft or Azure product against Microsoft Docs. 
 If there's an inaccuracy, provide a suggestion for improvement and an explanation of why 
-Check every link, review the page that's linked to, and ensure the linked page provides the information that's promised here. 
+Check every link, review the page that's linked to, and ensure the linked page provides the information that's promised here. Provide suggestions for additional links to include.
