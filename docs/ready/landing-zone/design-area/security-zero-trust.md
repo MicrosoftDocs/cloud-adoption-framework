@@ -32,7 +32,7 @@ These pillars provide specific deployment objectives that help organizations ali
 
 The following diagram shows the landing zone design areas.
 
-:::image type="content" source="./media/zero-trust-architecture.svg" alt-text="Diagram that shows the architecture of an Azure landing zone." lightbox="./media/zero-trust-architecture.svg":::
+:::image type="content" source="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg":::
 
 The following table correlates the Zero Trust pillars to the design areas shown in the architecture.
 
