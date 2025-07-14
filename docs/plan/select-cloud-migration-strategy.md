@@ -60,6 +60,22 @@ A business driver is a specific, measurable reason for making decisions about a 
     | Must be rebuilt to deliver new capabilities | Rebuild |
     | Must remain on-premises | Retain |
 
+## Engage workload teams to validate business drivers and migration strategies
+
+Workload team engagement ensures that migration strategies align with technical realities and business priorities. This engagement is essential to validate assumptions, uncover constraints, and build shared ownership of migration outcomes.
+
+You must engage workload teams early to confirm that business drivers are accurate and that selected migration strategies are feasible and aligned with delivery timelines.
+
+1. **Communicate the business rationale and migration scope.** Share the defined business drivers, expected outcomes, and proposed migration strategy with each workload team. Clear communication ensures that teams understand the strategic context and can provide informed feedback. This step builds trust and encourages collaboration.
+
+2. **Request documentation of current and target architectures.** Ask workload teams to provide architecture diagrams, service dependencies, and integration points. This documentation helps validate the feasibility of the proposed migration strategy and identifies technical risks or gaps that might require adjustments.
+
+3. **Validate alignment between business drivers and technical realities.** Review the selected migration strategy with each workload team to confirm that it supports the workload’s business goals and technical constraints. This validation ensures that the strategy is both achievable and aligned with long-term objectives.
+
+4. **Provide support for constrained teams.** Assign migration specialists or temporary resources to assist teams with limited capacity. This support helps maintain project momentum and ensures that all workloads receive the attention needed to meet migration timelines.
+
+5. **Secure executive sponsorship to reinforce priorities.** Ensure that executive sponsors communicate the importance of migration activities and set clear expectations. Executive alignment helps workload teams prioritize migration tasks alongside operational responsibilities.
+
 ## Select the right migration strategy
 
 A migration strategy defines how each workload transitions to Azure. This decision must align with business drivers to ensure that cloud adoption delivers measurable value. You must use the defined business driver to eliminate unsuitable options and select the most effective strategy for each workload.
