@@ -3,7 +3,7 @@ title: Migrate overview
 description: Prepare for a successful migration to Azure by using an iterative process to assess, deploy, and release workloads.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 04/09/2024
+ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
@@ -22,7 +22,7 @@ This guidance provides a framework execute your migrations.
 
 2. **Consider hiring external expertise.** Migration complexity varies based on your environment and experience. Expert support can reduce risk and accelerate progress. Evaluate internal skills and experience with Azure and cloud migrations. If gaps exist, engage [Microsoft or a Microsoft partner](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/#Nextsteps) early. Use their expertise to validate your migration strategy, tools, and timelines.
 
-## Determine online or offline migration
+## Determine online or offline migration per workload
 
 A migration execution strategy defines how each workload transitions to Azure with minimal disruption. A workload’s tolerance for downtime determines the most appropriate migration execution. This classification ensures that each workload is migrated with the right balance of risk, complexity, and business continuity. You must assess each workload to determine whether it supports offline migration, requires online migration.This decision is critical to ensure business continuity and reduce risk during cloud adoption. You must evaluate each workload’s tolerance for downtime to select the appropriate migration approach.
 
@@ -83,11 +83,29 @@ A planned migration sequence reduces migration risk, builds team confidence, and
 
 5. **Create a migration wave plan for large portfolios.** If you manage many workloads, organize them into migration waves. Each wave should include a manageable set of workloads with similar risk profiles or dependencies. This approach enables iterative learning, reduces complexity, and allows for continuous improvement across waves. For more information, see [Migration wave planning](./migration-wave-plan.md).
 
-## Define rollback strategies
+## Define rollback criteria and procedures
 
-Rollback and communication plans reduce risk and improve stakeholder confidence. You must include both in your migration plan.
+A rollback strategy is a documented plan that enables teams to revert infrastructure or application changes when deployment fails or introduces risk. A clear rollback strategy reduces downtime, limits business disruption, and supports operational resilience. You should define rollback criteria and procedures before any migration or deployment activity.
 
-1. **Define rollback criteria and procedures.** Establish clear conditions for rollback and document the steps to revert changes. Test rollback procedures before migration.
+1. **Establish rollback criteria based on business and technical risk.** Rollback criteria are the specific conditions under which a rollback must be triggered. These include failed health checks, performance degradation, security violations, or unmet success metrics. Defining these criteria ensures teams act decisively when issues arise. You should collaborate with business stakeholders, application owners, and operations teams to define thresholds for failure and document them in your deployment plan.
+
+2. **Document rollback procedures for each workload or change type.** Rollback procedures are the step-by-step instructions to revert a change. These vary depending on the workload, environment, and deployment method. Documenting rollback steps ensures consistency and reduces human error during high-pressure situations. You should include rollback scripts, configuration snapshots, and infrastructure-as-code templates in your documentation.
+
+3. **Test rollback procedures in a pre-production environment.** Testing validates that rollback steps work as expected and do not introduce new issues. This step is critical for identifying gaps in automation, permissions, or dependencies. You should simulate failure scenarios in a staging environment and verify that rollback restores the system to a known-good state.
+
+4. **Automate rollback where possible using deployment tools.** Automation reduces manual effort and speeds up recovery. Tools like Azure DevOps, GitHub Actions, or Bicep templates can automate rollback of infrastructure and application deployments. You should integrate rollback logic into your CI/CD pipelines and use deployment slots or blue-green deployments to simplify reversions.
+
+5. **Include rollback plans in change management and release documentation.** Visibility into rollback plans ensures all stakeholders understand the recovery path. This is especially important for regulated environments or mission-critical systems. You should attach rollback documentation to change requests, release notes, and operational runbooks.
+
+6. **Review and update rollback strategies after each deployment.** Continuous improvement ensures rollback strategies remain effective as systems evolve. You should conduct post-incident reviews and update rollback documentation based on lessons learned.
+
+| Category | Tool | Description |
+|----------|------|-------------|
+| Deployment automation | https://learn.microsoft.com/azure/devops/?view=azure-devops | Supports CI/CD pipelines with rollback logic and deployment gates. |
+| Infrastructure as Code | https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview | Enables declarative infrastructure definitions with rollback via version control. |
+| Application deployment | https://learn.microsoft.com/azure/app-service/deploy-staging-slots | Allows blue-green deployments and quick rollback by swapping slots. |
+| Monitoring and alerts | https://learn.microsoft.com/azure/azure-monitor/overview | Detects failure conditions that can trigger rollback actions. |
+| Change tracking | https://learn.microsoft.com/azure/automation/change-tracking/overview | Tracks configuration changes to support rollback decisions. |
 
 ## Define stakeholder communication plans
 
@@ -167,58 +185,6 @@ Reusable infrastructure and automation accelerate migration efforts and improve 
 ## Execute workload cutover
 
 Migration execution requires a structured and validated approach to ensure workload continuity, data integrity, and minimal disruption. You must choose between offline and online migration strategies based on workload criticality and acceptable downtime.
-
-### Execute offline migrations for non-critical workloads
-
-Offline migration is suitable for workloads that can tolerate downtime. This approach simplifies the migration process by avoiding real-time synchronization and reduces the risk of data inconsistency.
-
-1. **Deploy and configure required production environment.** If you haven't already provision the necessary workload resources in Azure, such as app hosting platforms (Azure App Service, Azure Container Apps), AI tools (Azure AI Foundry) virtual machines, databases, or storage accounts. Use Azure Resource Manager (ARM) templates, Bicep, or Terraform to ensure consistency and repeatability. Configure networking, identity, and access controls to match the source environment.
-
-1. **Stop the source workload to ensure data consistency.** Shut down the application or service that hosts the workload. This step prevents data changes during migration and avoids corruption or loss. Use application-specific shutdown procedures to ensure a clean stop.
-
-2. **Create a complete backup of the workload’s data.** Generate a full backup of all relevant data, configurations, and dependencies. This backup serves as both the migration source and a recovery point. Store the backup in a secure, accessible location.
-
-4. **Transfer the backup to Azure using secure and supported tools.** Use tools such as AzCopy, Azure Storage Explorer, or Azure Data Box to move the backup to Azure. Select the tool based on data volume, network bandwidth, and security requirements.
-
-5. **Restore the data in Azure and validate workload functionality.** Deploy the backup to the target Azure service or virtual machine. Perform functional and integration testing to confirm that the workload operates correctly. Validate data integrity and application behavior.
-
-6. **Start the workload in Azure to resume operations.** Bring the application or service online. Monitor startup logs and system health to ensure successful initialization.
-
-7. **Redirect users to the Azure-hosted workload.** Update DNS records, connection strings, or endpoint configurations. Confirm that users and dependent systems can access the workload without issues.
-
-8. **Validate the workload.** Have application owners or testers verify all major functions are working on the Azure-hosted system. Check the system for any errors. Only after thorough testing announce the migration is successful. After migrating data, run checks to ensure all records are present and integrity holds. For databases, use techniques like row counts comparison, or run critical reports on old vs new to see if they match. Use tools to validate data or even run the old and new in parallel read-only mode to compare results. For critical data, it's worth the effort.
-
-9. **Keep the fallback option.** Keep the old environment available as a fallback until you are confident in the Azure system. If something unexpectedly goes wrong, you can revert DNS and go back.
-
-10. **Implement hypercare support during the initial post-migration period.** Establish a dedicated support model with shorter service level agreements (SLAs) for the first few weeks after cutover. This support model provides workload and application teams with immediate assistance if they encounter issues. Assign experienced IT staff or migration partners to monitor the workload closely and respond quickly to any problems that arise during this critical stabilization period. This can be your IT teams or migration partners.
-
-### Execute online migrations for mission-critical workloads
-
-An online migration is essential for workloads that require high availability. This approach uses continuous data synchronization to minimize downtime. You must follow a structured sequence to maintain data integrity and ensure readiness in Azure.
-
-1. **Deploy and configure required Azure services.** If you haven't already provision the necessary workload resources in Azure, such as app hosting platforms (Azure App Service, Azure Container Apps), AI tools (Azure AI Foundry) virtual machines, databases, or storage accounts. Use Azure Resource Manager (ARM) templates, Bicep, or Terraform to ensure consistency and repeatability. Configure networking, identity, and access controls to match the source environment.
-
-2. **Configure continuous data synchronization between the source and Azure.** Set up replication tools to mirror data changes in near real time. Use tools compatible with your workload type to ensure the Azure environment stays current.
-
-3. **Perform an initial full data synchronization to establish a baseline.** Transfer the complete dataset to Azure. This step ensures a consistent starting point for ongoing replication.
-
-4. **Maintain synchronization of ongoing changes while the source remains active.** Keep replication running to capture all new data changes. This reduces the delta during final cutover.
-
-5. **Block new write operations to the source system before final cutover.** Temporarily stop all write activity to prevent data divergence. This step ensures consistency during the final sync.
-
-6. **Perform a final synchronization to capture any remaining changes.** Run a last sync operation to ensure the Azure environment reflects the most recent state. ensure the data sync is up to date. Stop the source system from accepting new data. Let the last changes sync before redirecting users to the Azure resources.
-
-7. **Start the workload in Azure to resume operations.** Bring the application or service online. Monitor logs and system health to confirm readiness. Ensure all Azure services are running and healthy.
-
-8. **Validate the workload functionality and performance in Azure.** Conduct functional, integration, and performance testing. Confirm that all dependencies and configurations work as expected.
-
-9. **Redirect user traffic to the Azure-hosted workload (cutover).** Perform the cutover. Cutover requires you update DNS entries, load balancer configs, and application URLs to point to the new Azure endpoints. For example, change DNS CNAME to the Azure Web App’s address or point applications to the new database endpoint.Update DNS records, connection strings, or load balancer configurations. Confirm that users can access the workload without issues.
-
-10. **Validate the workload.** Have application owners or testers verify all major functions are working on the Azure-hosted system. Check the system for any errors. Only after thorough testing announce the migration is successful. After migrating data, run checks to ensure all records are present and integrity holds. For databases, use techniques like row counts comparison, or run critical reports on old vs new to see if they match. Use tools to validate data or even run the old and new in parallel read-only mode to compare results. For critical data, it’s worth the effort.
-
-11. **Keep the fallback option.** Keep the old environment available as a fallback until you are confident in the Azure system. If something unexpectedly goes wrong, you can revert DNS and go back.
-
-12. **Implement hypercare support during the initial post-migration period.** Establish a dedicated support model with shorter service level agreements (SLAs) for the first few weeks after cutover. This support model provides workload and application teams with immediate assistance if they encounter issues. Assign experienced IT staff or migration partners to monitor the workload closely and respond quickly to any problems that arise during this critical stabilization period. This can be your IT teams or migration partners.
 
 ## Optimize post-migration
 
