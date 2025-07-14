@@ -53,6 +53,8 @@ A complete dependency map ensures that applications maintain connectivity and pe
 
 4. **Document all dependencies in a central repository.** Store dependency data in a format that supports cross-team collaboration and migration planning, such as spreadsheets, architecture diagrams, or dependency mapping tools. Ensure the repository is accessible and regularly updated to reflect changes during the migration process.
 
+5. **Create a migration wave plan for large portfolios.** Dependency mapping supports migration planning by revealing the order in which workloads must move to maintain system functionality. If you manage many workloads, organize them into migration waves based on the dependency relationships you identified. Each wave should include a manageable set of workloads with similar risk profiles or dependencies. This approach enables iterative learning, reduces complexity, and allows for continuous improvement across waves. For more information, see [Migration wave planning](./migration-wave-plan.md).
+
 ### Gather workload requirements
 
 A complete understanding of regulatory and operational requirements ensures that your Azure architecture complies with legal obligations and meets business expectations. This understanding supports region selection, backup planning, and service-level alignment. You must document all constraints to design compliant and resilient Azure solutions.
