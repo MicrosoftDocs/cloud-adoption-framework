@@ -11,44 +11,39 @@ ms.topic: conceptual
 
 This article helps you organize workloads into manageable migration waves for successful cloud adoption. Learn how to group dependencies, prioritize workloads, and maintain flexibility throughout your Azure migration journey.
 
-## Plan iteratively for migration to Azure
+## Plan migration waves iteratively
 
-An iterative approach migration to Azure groups workloads into waves and acknowledges that requirements evolve during execution. This approach provides flexibility to adapt your migration strategy as you discover technical challenges, shifting priorities, and unforeseen dependencies.
+An iterative migration approach organizes workloads into manageable waves. This structure enables continuous learning and adaptation throughout the migration process. You should use migration waves to reduce risk, improve planning accuracy, and accelerate execution.
 
-You need to structure your migration using waves because:
+1. **Execute the first wave while planning the second.** Begin migrating the first wave while simultaneously preparing the next. This parallel approach reduces idle time and accelerates overall progress. Use insights from the first wave to improve tooling, refine runbooks, and adjust timelines for future waves.
 
-1. **Adjust plans based on lessons learned.** Each completed wave provides insights that improve subsequent migrations.
-2. **Execute and plan simultaneously.** While you execute one wave, you plan the next and research future ones.
-3. **Define waves progressively.** Later waves remain undefined until you gather enough information to address them effectively.
+2. **Use lessons learned to adjust future wave definitions.** After each wave, conduct a structured retrospective to capture technical challenges, process gaps, and stakeholder feedback. Apply these insights to reprioritize workloads, update dependency maps, and improve migration readiness for subsequent waves.
 
-This flexibility allows you to focus on a manageable number of workloads at a time and refine your rationalization decisions as new information becomes available.
+3. **Delay definition of later waves until sufficient data is available.** Avoid prematurely committing to detailed plans for later waves. Instead, maintain a backlog of candidate workloads and update their readiness based on discoveries made during earlier waves. This approach prevents rework and ensures that plans remain aligned with current business and technical realities.
+
+4. **Group workloads in future waves based on evolving priorities and dependencies.** As you gather more information, re-evaluate how workloads are grouped. Consider business impact, technical dependencies, and resource availability. This flexibility ensures that each wave remains achievable and aligned with strategic goals.
 
 ## Group dependent systems in the same wave
 
-System dependencies determine your wave composition. You must identify systems that are interdependent or tightly integrated and group them into the same migration wave. This grouping minimizes disruption and reduces the risk of broken dependencies during migration.
+A migration wave must include all systems that depend on each other to function correctly. Grouping dependent systems into the same wave reduces the risk of broken integrations and minimizes business disruption during migration.
 
-1. **Map application dependencies first.** Use tools like Azure Migrate to discover which applications communicate with each other. Document all integration points between systems.
-2. **Create dependency groups.** Group applications that share databases, APIs, or network connections. These groups form the foundation of your migration waves.
-3. **Validate group completeness.** Ensure each group contains all components necessary for the applications to function. Include supporting infrastructure like load balancers or caching layers.
+1. **Map application dependencies first.** Use tools like https://learn.microsoft.com/azure/migrate/migrate-overview to discover communication patterns between applications. Dependency mapping identifies which systems exchange data or rely on shared services. This step is critical to avoid migrating a system in isolation that depends on another system still on-premises.
 
-## Prioritize workloads for initial waves
+2. **Create dependency groups.** Group applications that share databases, APIs, authentication services, or network connections. These groups form the foundation of your migration waves. Grouping by dependency ensures that all components required for functionality move together, reducing post-migration troubleshooting.
 
-Initial workload selection sets the foundation for your adoption plan. During incremental rationalization, your cloud adoption and strategy teams must agree on which workloads to migrate first. This agreement ensures alignment between technical capabilities and business objectives. Follow crawl, walk, run, fly model while planning your waves.
+3. **Validate group completeness.** Confirm that each group includes all necessary components for the applications to operate. Include supporting infrastructure such as load balancers, DNS records, or caching layers. Incomplete groups can lead to service outages or degraded performance after migration.
 
-Your priority list typically includes:
+## Select workloads for waves
 
-1. **Start with pilot workloads.** Select simple workloads with fewer than 10 assets in self-contained deployments. These workloads help your team gain experience with minimal risk.
-2. **Include representative complex workloads.** Add a few complex workloads to test broader scenarios. These workloads reveal challenges you'll face with mission-critical applications.
-3. **Maintain a dynamic migration backlog.** Create an iterative backlog that you update as priorities shift. This flexibility prevents rigid plans that don't reflect real-world conditions.
-4. **Capture business requirements.** Document acceptable downtime windows, stakeholder communication needs, compliance requirements, and integration dependencies for each workload.
-5. **Assess technical readiness.** Evaluate application compatibility with Azure services, ISV support status, Azure landing zone requirements, and performance needs.
+A prioritized workload selection process establishes a strong foundation for your cloud adoption strategy. This process ensures alignment between business priorities and technical readiness, enabling your team to build momentum and reduce risk early in the migration journey.
 
-Define your criteria for 'priority'. Is it workloads that:
-- Meet a deadline (e.g. datacentre exit)
-- Have the highest risk (out of date OS)
-- Have the highest business value (need to add AI to a line of business app to remain competitive)
-- Save the most money
-...etc.
+1. **Define the first wave based on known workloads and low complexity.** Select workloads that are well understood, have minimal dependencies, and present low risk. This wave serves as a pilot to validate tools, processes, and assumptions. Use this wave to establish baseline metrics and refine your migration methodology.Select internal systems or dev/test environments that are simple and self-contained. These workloads typically involve fewer than 10 assets and minimal integration dependencies. Starting with low-risk workloads allows your team to validate tools, refine processes, and build confidence before migrating critical systems.
+
+3. **Define business-driven prioritization criteria for next waves.** Establish clear criteria to determine workload priority. Consider factors such as datacenter exit deadlines, unsupported operating systems, business value, cost savings, or innovation opportunities (e.g., enabling AI in a line-of-business app). Use these criteria to guide sequencing decisions and stakeholder alignment.
+
+4. **Capture business and technical requirements.** Document acceptable downtime windows, stakeholder communication needs, compliance obligations, and integration dependencies for each workload. Also assess technical readiness, including compatibility with Azure services, ISV support, landing zone dependencies, and performance baselines.
+
+5. **Maintain a dynamic migration backlog.** Create a living backlog that reflects current priorities and constraints. Update the backlog regularly to incorporate new insights, shifting business needs, and lessons learned from earlier waves. This approach ensures flexibility and responsiveness throughout the adoption process.
 
 ## Define timelines for each wave
 

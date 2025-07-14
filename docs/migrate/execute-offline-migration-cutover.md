@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article helps you execute offline migrations for workloads that can tolerate planned downtime. Offline migration simplifies the migration process by avoiding real-time synchronization and reduces the risk of data inconsistency.
 
-## Deploy and configure the production environment before migration
+## 1. Deploy and configure the production environment before migration
 
 A production-ready Azure environment ensures consistency, security, and operational readiness for the migrated workload. This deployment approach reduces configuration drift and provides a validated foundation for your workload. You must provision and validate all necessary infrastructure and configurations before you initiate the migration.
 
@@ -21,11 +21,11 @@ A production-ready Azure environment ensures consistency, security, and operatio
 
 3. **Validate the readiness of the production environment.** Environment validation confirms that all services are deployed, accessible, and correctly configured before migration begins. This validation reduces the risk of delays or failures during the cutover window. Run pre-cutover validation scripts or checklists to verify that all services are operational and meet your requirements.
 
-## Stop the source workload to ensure data consistency
+## 2. Stop the source workload to ensure data consistency
 
 A clean shutdown of the source workload prevents data changes during migration and avoids corruption or loss. Application-specific shutdown procedures ensure that all processes complete cleanly and no data is left in an inconsistent state. You must follow documented shutdown procedures to ensure a clean stop of the source application or service.
 
-## Create and transfer a complete backup of the workload
+## 3. Create and transfer a complete backup of the workload
 
 A complete backup provides a reliable migration source and a recovery point in case of issues. Secure transfer methods protect your data during transit and ensure that all components arrive intact in Azure. You must use secure and supported tools to transfer the backup to Azure.
 
@@ -33,7 +33,7 @@ A complete backup provides a reliable migration source and a recovery point in c
 
 2. **Transfer the backup to Azure by using secure tools.** Secure transfer tools protect your data during transit and provide reliable delivery to Azure. Choose the appropriate tool based on your data volume, network bandwidth, and security requirements. Use AzCopy, Azure Storage Explorer, or Azure Data Box to transfer the backup securely to Azure.
 
-## Restore and validate the workload in Azure
+## 4. Restore and validate the workload in Azure
 
 Backup restoration and validation ensure that the application functions correctly in the new environment. Thorough testing confirms that data integrity is maintained and that all system interactions work as expected. You must perform comprehensive testing before you resume operations.
 
@@ -41,7 +41,7 @@ Backup restoration and validation ensure that the application functions correctl
 
 2. **Perform functional and integration testing.** Testing validates that the workload operates correctly in Azure and maintains data integrity. This validation confirms that all system interactions and dependencies function as expected. Test data integrity, application behavior, and system interactions to confirm proper operation.
 
-## Start the workload and redirect users
+## 5. Start the workload and redirect users
 
 Bringing the workload online and updating access configurations ensures a smooth transition for users and dependent systems. Close monitoring during this phase helps identify and resolve any issues quickly. You must monitor the system closely during this critical transition period.
 
@@ -49,7 +49,7 @@ Bringing the workload online and updating access configurations ensures a smooth
 
 2. **Redirect users and systems to the Azure-hosted workload.** Access redirection ensures that users and systems can connect to the new Azure environment without disruption. This step completes the transition from the source environment to Azure. Update DNS records, connection strings, or endpoint configurations and confirm that users and systems can access the workload without issues.
 
-## Validate the workload after cutover
+## 6. Validate the workload after cutover
 
 Post-migration validation ensures that the workload is fully functional and that data integrity is maintained. Comprehensive validation by application owners and testers confirms that the migration was successful. You must involve application owners and testers in this validation process.
 
@@ -57,13 +57,13 @@ Post-migration validation ensures that the workload is fully functional and that
 
 2. **Announce migration success only after thorough validation.** Complete validation ensures that all stakeholders agree the workload is stable and functional. This confirmation prevents premature declarations of success that could lead to issues later. Ensure that all stakeholders confirm that the workload is stable and meets operational requirements.
 
-## Maintain a fallback option
+## 7. Maintain a fallback option
 
 A fallback environment provides a safety net in case of unexpected issues after migration. Retaining the source environment allows quick reversion if problems occur that cannot be resolved quickly. You must retain the source environment until the Azure system is fully validated and stable.
 
 Keep the source environment available as a fallback option. Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. Retain DNS and access configurations to enable quick reversion if needed.
 
-## Implement a support model
+## 8. Implement a support model
 
 A dedicated support model ensures rapid response to post-migration issues during the critical stabilization period. Enhanced support provides faster resolution of issues that commonly occur after migration. You must establish a support model with shorter SLAs for the stabilization period.
 

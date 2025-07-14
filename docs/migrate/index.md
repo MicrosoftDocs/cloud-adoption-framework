@@ -26,11 +26,11 @@ This guidance provides a framework execute your migrations.
 
 A migration execution strategy defines how each workload transitions to Azure with minimal disruption. A workload’s tolerance for downtime determines the most appropriate migration execution. This classification ensures that each workload is migrated with the right balance of risk, complexity, and business continuity. You must assess each workload to determine whether it supports offline migration, requires online migration.This decision is critical to ensure business continuity and reduce risk during cloud adoption. You must evaluate each workload’s tolerance for downtime to select the appropriate migration approach.
 
+1. **Verify workload inventory and business criticality from CAF Plan.** Ensure that the workload inventory and business criticality classification created during the CAF Plan phase are accurate and up-to-date. This verification ensures alignment with migration priorities and avoids disruptions to essential services. For more information, see [CAF Plan: Discover existing workload inventory](/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory).
+
 ### Identify workloads that can tolerate downtime
 
-A workload that can tolerate downtime is suitable for offline migration. It's the recommended approach if possible. It reduces complexity and risk by allowing you to stop the source system before transferring data. You must use this approach for non-critical systems or those with scheduled maintenance windows.
-
-1. **Verify workload inventory and business criticality from CAF Plan.** Ensure that the workload inventory and business criticality classification created during the CAF Plan phase are accurate and up-to-date. This verification ensures alignment with migration priorities and avoids disruptions to essential services. For more information, see [CAF Plan: Discover existing workload inventory](/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory).
+A workload that can tolerate downtime is suitable for offline migration. It's the recommended approach if possible. It reduces complexity and risk by allowing you to stop the source system before transferring data, so there's no loss of data. You must use this approach for non-critical systems or those with scheduled maintenance windows.
 
 2. **Confirm maintenance windows or acceptable downtime periods from your cloud adoption plan.** Reference the maintenance windows and downtime tolerance documented in your cloud adoption plan. This information ensures that offline migration aligns with established business expectations and service-level agreements (SLAs). If this information was not captured during planning, work with stakeholders to define acceptable downtime periods before proceeding with migration.
 
@@ -42,11 +42,9 @@ A workload that requires near-zero downtime must use online migration. This clas
 
 2. **Assess the feasibility of online migration.** Evaluate the workload’s architecture, data volume, and dependencies to confirm that online migration is technically viable. This assessment helps avoid unexpected failures during replication or cutover.
 
-3. **Implement continuous replication and plan for cutover.** Use tools such as Azure Migrate: Server Migration with continuous replication or Azure Site Recovery to replicate data in real time. Schedule a cutover window that minimizes user impact and validate the system post-migration.
-
 ## Determine the data migration path for each workload
 
-A data migration path defines how data moves from your current environment to Azure. Selecting the right path ensures secure, timely, and cost-effective data transfer. You must evaluate each workload’s data characteristics and business requirements to choose the most appropriate migration method.
+A data migration path defines how data moves from your current environment to Azure. Selecting the right path ensures secure, timely, and cost-effective data transfer. Identify whether ExpressRoute, VPN, or public internet is available and configured. This assessment determines which migration paths are technically feasible and secure.
 
 | Data Migration Path | When to Use | Pros | Cons |
 |----------------------|-------------|------|------|
@@ -55,41 +53,37 @@ A data migration path defines how data moves from your current environment to Az
 | Public internet | If no secure path is needed and data is not viable for Data Box | Universally available | Least secure, uses internet bandwidth |
 | Azure Data Box | For large, non-critical data | Offline bulk transfer | Slowest method |
 
-1. **Assess the network connectivity available for each workload.** Identify whether ExpressRoute, VPN, or public internet is available and configured. This assessment determines which migration paths are technically feasible and secure. Use Azure Network Watcher or Azure Migrate to evaluate connectivity options.
+1. **Use ExpressRoute if available.** Use ExpressRoute if it is already provisioned or planned for your environment. ExpressRoute provides private, dedicated connectivity to Azure, which improves performance and security. This method is ideal for all workloads but requires setup and incurs additional cost for data transfer.
 
-2. **Use ExpressRoute for high-throughput, secure migrations.** Choose ExpressRoute if it is already provisioned or planned for your environment. ExpressRoute provides private, dedicated connectivity to Azure, which improves performance and security. This method is ideal for all workloads but requires setup and incurs additional cost.
+2. **Use VPN when ExpressRoute is unavailable.** Select VPN when you need encrypted data transfer over the internet but do not have ExpressRoute. VPN provides a secure tunnel to Azure but may have lower throughput and higher latency compared to ExpressRoute. Ensure VPN Gateway is configured in your Azure environment.
 
-3. **Use VPN for secure transfers when ExpressRoute is unavailable.** Select VPN when you need encrypted data transfer over the internet but do not have ExpressRoute. VPN provides a secure tunnel to Azure but may have lower throughput and higher latency compared to ExpressRoute. Ensure VPN Gateway is configured in your Azure environment.
+3. **Use public internet for non-sensitive data.** Choose this method when encryption is not required, ExpressRoute is unavailable, and the data is not suitable for offline transfer. This method is universally available but less secure and may impact bandwidth for other operations.
 
-4. **Use public internet only for non-sensitive, low-volume data.** Choose this method when encryption is not required, ExpressRoute is unavailable, and the data is not suitable for offline transfer. This method is universally available but less secure and may impact bandwidth for other operations.
-
-5. **Use Azure Data Box for large, non-critical offline transfers.** Select Azure Data Box when transferring large volumes of data that are not time-sensitive or business-critical. This method avoids network congestion but is the slowest due to shipping and manual handling. Order and configure the Data Box from the Azure portal.
+4. **Use Azure Data Box for large, non-critical offline transfers.** Select Azure Data Box when transferring large volumes of data that are not time-sensitive or business-critical. This method avoids network congestion but is the slowest due to shipping and manual handling. Order and configure the Data Box from the Azure portal.
 
 ## Determine the migration sequence
 
 A planned migration sequence reduces migration risk, builds team confidence, and ensures a smooth transition. Start with simpler, non-critical workloads like dev/test environments before tackling more complex or critical systems. If you have many workloads, create a [migration wave plan](./migration-wave-plan.md).
 
-1. **Start with non-critical workloads to validate tools and processes.** Begin with simpler, internal, or non-production workloads such as development and test environments. These workloads are less risky and provide a safe environment to test migration tools, validate assumptions, and refine processes. Use this phase to uncover issues early and build team confidence before migrating critical systems.
+1. **Create a migration wave plan for large portfolios.** If you manage many workloads, organize them into migration waves. Each wave should include a manageable set of workloads with similar risk profiles or dependencies. This approach enables iterative learning, reduces complexity, and allows for continuous improvement across waves. For more information, see [Migration wave planning](./migration-wave-plan.md).
 
-2. **Group and migrate dependent workloads together.** Identify and group workloads that have interdependencies. Migrating dependent systems together prevents broken integrations and service disruptions. Use tools like Azure Migrate or dependency visualizers to map workload dependencies. If you cannot migrate all dependencies together, document the gaps and plan for mitigation, including performance testing and integration validation. Understand how to manage hybrid or multi-cloud.
+2. **Start with non-critical system.** Start with simpler, non-critical workloads such as internal systems or dev/test environments, before tackling more complex or critical systems such as customer facing applications. These workloads are less risky and provide a safe environment to test migration tools, validate assumptions, and refine processes. Use this phase to uncover issues early and build team confidence before migrating critical systems.
 
-    1. **Identify and group interdependent systems.** Use dependency mapping tools to discover integration points and shared services. Group these systems into migration waves. See [Map internal and external dependencies](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration#map-internal-and-external-dependencies).
+3. **Group and migrate dependent workloads together.** Migrating dependent systems together prevents broken integrations and service disruptions. Use dependency mapping tools to discover integration points and shared services. Group these systems into migration waves. See [Map internal and external dependencies](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration#map-internal-and-external-dependencies).
 
-    2. **Limit hybrid or cross-cloud scenarios to short durations.** Hybrid environments increase complexity and risk. If unavoidable, define a clear timeline to complete the transition. Assign dedicated teams to manage both on-premises and cloud environments. This ensures continuity and reduces operational risk. Use Azure Monitor and other tools to maintain visibility and responsiveness across boundaries. Validate that systems can recover from failures during the transition. This reduces downtime and data loss. Apply caching, replication, or temporary APIs to bridge systems until full migration is complete.
+    - **Limit hybrid or cross-cloud scenarios to short durations.** If you cannot migrate all dependencies together, document the gaps and plan for mitigation. Understand how to manage hybrid or multi-cloud. Hybrid environments increase complexity and risk. If unavoidable, define a clear timeline to complete the transition. Assign dedicated teams to manage both on-premises and cloud environments. This ensures continuity and reduces operational risk. Use Azure Monitor and other tools to maintain visibility and responsiveness across boundaries. Validate that systems can recover from failures during the transition. This reduces downtime and data loss. Apply caching, replication, or temporary APIs to bridge systems until full migration is complete.
 
-3. **Define and align migration timelines with business priorities.** Establish clear timelines for each migration wave, such as “CRM system live on Azure by June” or “Datacenter A shutdown by Q4.” Align these timelines with business calendars and avoid peak periods, such as holidays for retail applications. This alignment ensures minimal business disruption and stakeholder readiness.
+4. **Define and align migration timelines with business priorities.** Establish clear timelines for each migration wave, such as “CRM system live on Azure by June” or “Datacenter A shutdown by Q4.” Align these timelines with business calendars and avoid peak periods, such as holidays for retail applications. This alignment ensures minimal business disruption and stakeholder readiness.
 
-4. **Migrate non-production environments before production.** Always migrate staging, QA, and other non-production environments before production workloads. This step allows you to validate the end-to-end migration process, test application behavior in Azure, and confirm that performance and integrations meet expectations.
-
-5. **Create a migration wave plan for large portfolios.** If you manage many workloads, organize them into migration waves. Each wave should include a manageable set of workloads with similar risk profiles or dependencies. This approach enables iterative learning, reduces complexity, and allows for continuous improvement across waves. For more information, see [Migration wave planning](./migration-wave-plan.md).
+5. **Migrate non-production environments before production.** Always migrate staging, QA, and other non-production environments before production workloads. This step allows you to validate the end-to-end migration process, test application behavior in Azure, and confirm that performance and integrations meet expectations.
 
 ## Define rollback criteria and procedures
 
 A rollback strategy is a documented plan that enables teams to revert infrastructure or application changes when deployment fails or introduces risk. A clear rollback strategy reduces downtime, limits business disruption, and supports operational resilience. You should define rollback criteria and procedures before any migration or deployment activity.
 
-1. **Establish rollback criteria based on business and technical risk.** Rollback criteria are the specific conditions under which a rollback must be triggered. These include failed health checks, performance degradation, security violations, or unmet success metrics. Defining these criteria ensures teams act decisively when issues arise. You should collaborate with business stakeholders, application owners, and operations teams to define thresholds for failure and document them in your deployment plan.
+1. **Establish rollback criteria.** Rollback criteria are the specific conditions under which a rollback must be triggered. These include failed health checks, performance degradation, security violations, or unmet success metrics. Defining these criteria ensures teams act decisively when issues arise. You should collaborate with business stakeholders, worklaod owners, and operations teams to define thresholds for failure and document them in your deployment plan.
 
-2. **Document rollback procedures for each workload or change type.** Rollback procedures are the step-by-step instructions to revert a change. These vary depending on the workload, environment, and deployment method. Documenting rollback steps ensures consistency and reduces human error during high-pressure situations. You should include rollback scripts, configuration snapshots, and infrastructure-as-code templates in your documentation.
+2. **Document rollback procedures.** Rollback procedures are the step-by-step instructions to revert a change. These vary depending on the workload, environment, and deployment method. Documenting rollback steps ensures consistency and reduces human error during high-pressure situations. You should include rollback scripts, configuration snapshots, and infrastructure-as-code templates in your documentation.
 
 3. **Test rollback procedures in a pre-production environment.** Testing validates that rollback steps work as expected and do not introduce new issues. This step is critical for identifying gaps in automation, permissions, or dependencies. You should simulate failure scenarios in a staging environment and verify that rollback restores the system to a known-good state.
 
@@ -109,15 +103,37 @@ A rollback strategy is a documented plan that enables teams to revert infrastruc
 
 ## Define stakeholder communication plans
 
-1. **Create a stakeholder communication plan.** Identify key stakeholders and define how and when to communicate updates, risks, and decisions. Use structured channels such as Teams, email, or dashboards.
+A stakeholder communication plan ensures that all relevant parties stay informed and engaged throughout the cloud adoption process. This plan helps reduce risk, align expectations, and support collaborative decision-making. You should define how and when to communicate updates, risks, and decisions to stakeholders using structured and consistent channels.
 
-1. communication management and including business in decisions - the migration schedule needs to be a collaborative decision. The timeframe for cutover should have the least impact on the business and end users as possible, so blackout dates and change freezes should be considered on an app by app basis assuming there will be downtime.
+1. **Identify and categorize all stakeholders.** Create a stakeholder map that includes business leaders, IT owners, application owners, support teams, and end users. Group them by their level of influence and interest. This step ensures that communication is tailored to each group’s needs and expectations. Use tools like Microsoft Teams, Azure DevOps, or Excel to document and maintain this list.
+
+2. **Define communication objectives and responsibilities.** Clarify what each stakeholder group needs to know, when they need to know it, and who is responsible for delivering that information. This ensures accountability and consistency in messaging. Assign communication owners for each stakeholder group and document these roles in your communication plan.
+
+3. **Establish structured communication channels.** Use formal channels such as Microsoft Teams for real-time collaboration, Outlook for formal updates, and Power BI dashboards for ongoing visibility. This structure ensures that stakeholders receive timely and relevant information in a format they can easily access and understand.
+
+4. **Schedule regular communication touchpoints.** Set up recurring meetings, status reports, and milestone reviews aligned with the migration timeline. This cadence helps maintain transparency and builds trust. Include these touchpoints in your project plan and calendar invites to ensure participation.
+
+5. **Include business stakeholders in migration decisions.** Engage business units early in planning to align migration schedules with operational needs. This collaboration ensures that cutover windows minimize disruption. You should gather input on blackout dates, change freezes, and business-critical periods for each application.
+
+6. **Document and approve the migration schedule collaboratively.** Use a shared planning tool like Azure DevOps or Microsoft Project to draft the migration timeline. Review it with business and technical stakeholders to validate assumptions and constraints. This step ensures that the schedule reflects both technical feasibility and business readiness.
+
+7. **Communicate risks and mitigation plans proactively.** Identify potential risks such as downtime, data loss, or user impact, and share mitigation strategies with stakeholders. This transparency builds confidence and enables faster decision-making. Use risk registers and incident response plans to support this communication.
+
+8. **Track communication effectiveness and adjust as needed.** Collect feedback through surveys or direct input during meetings. Use this feedback to refine your communication approach. This continuous improvement loop ensures that communication remains relevant and effective throughout the project.
+
+| Category               | Tool                                                                 | Description                                                                 |
+|------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| Communication          | https://www.microsoft.com/en-us/microsoft-teams/group-chat-software | Enables real-time collaboration and structured stakeholder engagement.     |
+| Communication          | https://outlook.office.com/                              | Supports formal communication and scheduling of updates and meetings.      |
+| Reporting              | https://powerbi.microsoft.com/                          | Provides dashboards for visualizing project status and stakeholder metrics.|
+| Project Management     | https://azure.microsoft.com/services/devops/        | Tracks tasks, timelines, and stakeholder responsibilities.                 |
+| Planning & Scheduling  | https://www.microsoft.com/microsoft-project    | Helps build and share migration schedules collaboratively.                 |
 
 ## Prepare workloads for the cloud
 
 Before migrating, ensure workloads are ready for Azure. Addressing compatibility and configuration issues early reduces cutover risk.
 
-1. **Conduct a workload assessment.** Conduct a [workload assessment](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration) of each workload. A workload assessment determines the specifications and readiness for Azure.
+1. **Conduct a workload assessment.** Should  a [workload assessment](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration) of each workload. A workload assessment determines the specifications and readiness for Azure.
 
 2. **Plan workload architecture.** You shouldesign the target architecture in Azure. For information, see [Plan the target architecture](#_Plan_the_target).
 
