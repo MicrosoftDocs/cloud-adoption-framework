@@ -5,8 +5,6 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 04/09/2024
 ms.topic: conceptual
-ms.collection: 
- - migration
 ---
 
 # CAF Migrate
@@ -22,17 +20,7 @@ This guidance provides a framework execute your migrations.
 
 1. Evaluate internal skills and experience. Assess your team’s familiarity with Azure services, tools, and migration patterns. Identify gaps that could delay progress.
 
-    | Skill area                | Required skills                                                                 | Why it matters                                                                                              |
-    |---------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-    | Cloud Strategy and Planning | - Cloud Adoption Framework (CAF) planning<br>- Migration wave planning<br>- Stakeholder communication<br>- Risk and rollback planning<br>- RACI modeling | Aligns migration with business goals, ensures accountability, and reduces risk through structured planning and communication. |
-    | Dependency Mapping & Architecture | - Dependency mapping<br>- Azure architecture design<br>- Hybrid/cloud integration planning<br>- Network and DNS planning | Prevents broken integrations and performance issues by grouping interdependent systems and designing resilient architectures. |
-    | Infrastructure as Code (IaC) | - Bicep or Terraform<br>- GitHub or Azure DevOps<br>- CI/CD pipeline creation | Enables repeatable, consistent deployments and accelerates migration through automation and version control. |
-    | Workload Assessment & Readiness | - Azure Migrate<br>- OS and driver compatibility checks<br>- Refactoring for Azure services<br>- Identity and access management | Identifies and resolves compatibility issues early, reducing cutover risk and ensuring workloads are Azure-ready. |
-    | Migration Execution       | - Offline and online migration strategies<br>- Azure Database Migration Service<br>- Data transfer tools<br>- DNS and traffic redirection | Ensures smooth and timely migration with minimal disruption, using the right strategy and tools for each workload. |
-    | Testing and Validation    | - Azure resource provisioning<br>- Functional and performance testing<br>- Data integrity validation<br>- Failover testing | Confirms workloads function correctly in Azure before production cutover, reducing the risk of post-migration issues. |
-    | Post-Migration Optimization | - Azure Monitor and Advisor<br>- Azure Cost Management<br>- Backup validation<br>- User feedback collection<br>- Support team readiness | Ensures workloads are stable, secure, and cost-effective after migration, and that support teams are prepared to manage the new environment. |
-
-1. Consider hiring external expertise. Migration complexity varies based on your environment and experience. Expert support can reduce risk and accelerate progress. Evaluate internal skills and experience with Azure and cloud migrations. If gaps exist, engage [Microsoft or a Microsoft partner](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/#Nextsteps) early. Use their expertise to validate your migration strategy, tools, and timelines.
+2. Consider hiring external expertise. Migration complexity varies based on your environment and experience. Expert support can reduce risk and accelerate progress. Evaluate internal skills and experience with Azure and cloud migrations. If gaps exist, engage [Microsoft or a Microsoft partner](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/#Nextsteps) early. Use their expertise to validate your migration strategy, tools, and timelines.
 
 ## Determine migration execution strategy per workload
 
@@ -136,7 +124,7 @@ A planned migration sequence reduces migration risk, builds team confidence, and
 2. **Group and migrate dependent workloads together.** Identify and group workloads that have interdependencies. Migrating dependent systems together prevents broken integrations and service disruptions. Use tools like Azure Migrate or dependency visualizers to map workload dependencies. If you cannot migrate all dependencies together, document the gaps and plan for mitigation, including performance testing and integration validation. Understand how to manage hybrid or multi-cloud.
 
     1. **Identify and group interdependent systems.** Use dependency mapping tools to discover integration points and shared services. Group these systems into migration waves. See [Map internal and external dependencies](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration#map-internal-and-external-dependencies).
-    
+
     2. **Limit hybrid or cross-cloud scenarios to short durations.** Hybrid environments increase complexity and risk. If unavoidable, define a clear timeline to complete the transition. Assign dedicated teams to manage both on-premises and cloud environments. This ensures continuity and reduces operational risk. Use Azure Monitor and other tools to maintain visibility and responsiveness across boundaries. Validate that systems can recover from failures during the transition. This reduces downtime and data loss. Apply caching, replication, or temporary APIs to bridge systems until full migration is complete.
 
 3. **Define and align migration timelines with business priorities.** Establish clear timelines for each migration wave, such as “CRM system live on Azure by June” or “Datacenter A shutdown by Q4.” Align these timelines with business calendars and avoid peak periods, such as holidays for retail applications. This alignment ensures minimal business disruption and stakeholder readiness.
