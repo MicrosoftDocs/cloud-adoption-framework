@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article helps you execute online migrations for workloads that require high availability. Online migration uses continuous data synchronization to minimize downtime and maintain service availability during the transition to Azure.
 
-## Deploy and configure the production environment before migration
+## 1. Deploy and configure the production environment before migration
 
 A production-ready Azure environment ensures consistency, security, and operational readiness for the migrated workload. Production environments require validated infrastructure and configurations before you initiate the migration. You should provision and validate all necessary components to ensure a smooth transition.
 
@@ -21,7 +21,7 @@ A production-ready Azure environment ensures consistency, security, and operatio
 
 3. **Validate the readiness of the production environment.** Environment validation reduces the risk of delays or failures during the cutover window. Confirm that all services are deployed, accessible, and correctly configured. Run pre-cutover validation scripts or checklists to verify readiness and identify potential issues before migration begins.
 
-## Configure continuous data synchronization
+## 2. Configure continuous data synchronization
 
 Real-time replication mechanisms ensure that the Azure environment remains current with the source system. Continuous synchronization minimizes data loss and reduces the delta during cutover. You should establish and maintain synchronization throughout the migration process.
 
@@ -31,7 +31,7 @@ Real-time replication mechanisms ensure that the Azure environment remains curre
 
 3. **Maintain synchronization of ongoing changes.** Change synchronization captures all new data changes while the source system remains operational. Keep replication active to ensure the Azure environment reflects the most current state. Monitor replication lag and resolve any synchronization issues promptly.
 
-## Prepare for final cutover
+## 3. Prepare for final cutover
 
 A controlled cutover ensures data consistency and minimizes downtime during the transition. Precise sequencing prevents data divergence and ensures a smooth user experience. You should follow a specific order to transition users to the Azure-hosted workload.
 
@@ -41,7 +41,7 @@ A controlled cutover ensures data consistency and minimizes downtime during the 
 
 3. **Start the workload in Azure.** Azure workload startup marks the beginning of production operations in the cloud environment. Bring the application or service online and monitor system health to confirm readiness. Validate that all services start correctly and perform initial health checks.
 
-## Validate the workload in Azure
+## 4. Validate the workload in Azure
 
 Validation ensures that the migrated workload functions correctly and meets performance expectations. Thorough testing prevents issues after users access the system. You should conduct comprehensive validation before redirecting user traffic.
 
@@ -49,7 +49,7 @@ Validation ensures that the migrated workload functions correctly and meets perf
 
 2. **Redirect user traffic to Azure.** Traffic redirection transitions users to the Azure-hosted workload. Update DNS records, load balancer configurations, and application URLs to point to the Azure environment. Monitor user access patterns and system performance during the transition.
 
-## Confirm migration success
+## 5. Confirm migration success
 
 Post-migration validation ensures data integrity and operational readiness. Application owners and testers provide critical validation of system functionality. You should verify that the migrated workload meets all requirements and performs correctly.
 
@@ -57,11 +57,9 @@ Post-migration validation ensures data integrity and operational readiness. Appl
 
 2. **Retain the fallback environment.** The fallback environment provides a safety net during the stabilization period. Keep the source system available until you confirm the Azure environment is stable and performs correctly. If issues arise, revert DNS and resume operations on the original system while addressing problems.
 
-## Implement hypercare support
+## 6. Implement hypercare support
 
-A dedicated support model during the stabilization period ensures rapid issue resolution. Experienced staff monitor and support the workload during the critical post-migration phase. You should assign resources to provide enhanced support during the transition period.
-
-1. **Establish a hypercare support model.** Hypercare support provides enhanced monitoring and rapid response during the stabilization period. Assign IT teams or migration partners to monitor the workload closely and provide shorter SLAs. Respond quickly to any issues during the initial post-migration period to maintain system stability.
+A dedicated support model during the stabilization period ensures rapid issue resolution. Experienced staff monitor and support the workload during the critical post-migration phase. You should assign resources to provide enhanced support during the transition period. Hypercare support provides enhanced monitoring and rapid response during the stabilization period. Assign IT teams or migration partners to monitor the workload closely and provide shorter SLAs. Respond quickly to any issues during the initial post-migration period to maintain system stability.
 
 ## Azure tools and resources
 
