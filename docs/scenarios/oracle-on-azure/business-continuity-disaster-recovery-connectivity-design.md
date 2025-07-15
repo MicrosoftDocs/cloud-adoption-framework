@@ -29,7 +29,7 @@ The following diagram illustrates a single-region redundant setup that uses two 
 :::image type="content" source="./media/multiple-availability-zone.svg" alt-text="Diagram that shows in-region redundancy for Oracle Exadata Database@Azure." border="false" lightbox="./media/multiple-availability-zone.svg":::
 
 > [!NOTE]
-> Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Virtual Network peering costs apply.
+> Oracle Data Guard uses the underlying Azure network. Data replication occurs through a peered Azure virtual network within the Azure region and doesn't use the OCI network. Azure Virtual Network peering costs apply.
 
 ## Redundancy across regions
 
