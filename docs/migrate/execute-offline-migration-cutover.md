@@ -63,7 +63,7 @@ A fallback environment provides a safety net in case of unexpected issues after 
 
 Keep the source environment available as a fallback option. Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. Retain DNS and access configurations to enable quick reversion if needed.
 
-## 8. Implement a support model
+## 8. Support workload during stabilization
 
 A dedicated support model ensures rapid response to post-migration issues during the critical stabilization period. Enhanced support provides faster resolution of issues that commonly occur after migration. You must establish a support model with shorter SLAs for the stabilization period.
 

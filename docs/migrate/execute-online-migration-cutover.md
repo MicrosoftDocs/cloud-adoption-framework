@@ -57,9 +57,19 @@ Post-migration validation ensures data integrity and operational readiness. Appl
 
 2. **Retain the fallback environment.** The fallback environment provides a safety net during the stabilization period. Keep the source system available until you confirm the Azure environment is stable and performs correctly. If issues arise, revert DNS and resume operations on the original system while addressing problems.
 
-## 6. Implement hypercare support
+## 6. Support workload during stabilization
 
-A dedicated support model during the stabilization period ensures rapid issue resolution. Experienced staff monitor and support the workload during the critical post-migration phase. You should assign resources to provide enhanced support during the transition period. Hypercare support provides enhanced monitoring and rapid response during the stabilization period. Assign IT teams or migration partners to monitor the workload closely and provide shorter SLAs. Respond quickly to any issues during the initial post-migration period to maintain system stability.
+Mission-critical workloads require specialized hypercare support during the stabilization period to maintain the near-zero downtime objective. Enhanced monitoring and dedicated resources ensure rapid issue resolution when business continuity depends on uninterrupted service availability. You should establish a comprehensive support model that addresses the unique requirements of mission-critical systems.
+
+1. **Implement 24/7 hypercare support with escalation procedures.** Around-the-clock support ensures continuous availability for mission-critical workloads during stabilization. Establish clearly defined escalation paths and response time commitments to address issues promptly. Deploy experienced engineers who understand the workload architecture and can make critical decisions quickly. Define specific SLAs for different severity levels, such as 15-minute response times for critical issues that affect system availability.
+
+2. **Deploy real-time health monitoring with automated alerting.** Proactive monitoring detects issues before they impact users and enables preventive action for mission-critical systems. Implement comprehensive health models that monitor application performance, infrastructure metrics, and business-critical transactions. Configure automated alerts for deviations from baseline performance or availability thresholds. Use Azure Monitor, Application Insights, and custom health endpoints to provide continuous visibility into system health and trigger immediate notifications for anomalies. For monitoring guidance, see [Monitor Azure](/azure/cloud-adoption-framework/manage/monitor).
+
+3. **Maintain the fallback environment in hot standby mode.** Immediate rollback capabilities ensure near-zero downtime for mission-critical workloads. Keep the source environment fully operational and synchronized for rapid failback if issues arise. Maintain database replication, application readiness, and network connectivity to enable seamless traffic redirection within minutes. Test failback procedures regularly to ensure they function correctly when needed.
+
+4. **Execute continuous performance validation and capacity monitoring.** Continuous monitoring ensures that mission-critical workloads maintain performance standards under varying load conditions during stabilization. Monitor key performance indicators, response times, and throughput metrics continuously. Implement load testing and stress testing to validate system behavior under peak conditions. Use Azure Monitor metrics and custom dashboards to track performance trends and identify capacity constraints before they impact users.
+
+5. **Document all incidents and establish root cause analysis procedures.** Detailed incident tracking and analysis prevent recurrence and improve system reliability for mission-critical workloads. Create comprehensive incident reports that capture timeline, impact, resolution steps, and root cause analysis. Establish post-incident review processes to identify improvements and update operational procedures. Maintain a knowledge base of known issues and solutions to accelerate future problem resolution.
 
 ## Azure tools and resources
 
@@ -76,4 +86,4 @@ A dedicated support model during the stabilization period ensures rapid issue re
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Post-migration optimization](post-migration-optimization.md)
+> [Optimize workload after migration](post-migration-optimization.md)
