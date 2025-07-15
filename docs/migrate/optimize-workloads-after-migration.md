@@ -95,14 +95,38 @@ Architecture reviews help identify modernization opportunities and prevent techn
 
 2. **Create a backlog of modernization opportunities.** Document findings and prioritize based on business value, risk reduction, and technical debt.
 
-3. **Assign ownership for follow-up actions.** Designate responsible teams or individuals to ensure recommendations are implemented and tracked.
+3. **Assign ownership for follow-up actions.** Designate responsibl structure and includes embedded links to relevant Azure tos and documentation.
 
-Here is prescriptive, actionable guidance for decommissioning old workloads after migration to Azure, aligned with the Cloud Adoption Framework. This guidance follows the required structure and includes embedded links to relevant Azure tools and documentation.
+## Post-migration checklist
 
-## Next steps
+| Task Category | Action | Priority | Timeline | Key Tools/Resources |
+|---------------|--------|----------|----------|-------------------|
+| **Performance Tuning** | Use Azure Advisor to identify optimization opportunities | High | Week 1 | [Azure Advisor](/azure/advisor/advisor-overview) |
+| **Performance Tuning** | Apply service-specific configuration guidance | High | Week 1-2 | [Azure Well-Architected Framework service guides](/azure/well-architected/service-guides/?product=popular) |
+| **Performance Tuning** | Review Microsoft Defender for Cloud recommendations | High | Week 1 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) |
+| **Cost Management** | Enable Azure Cost Management and set budgets | High | Week 1 | [Microsoft Cost Management](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) |
+| **Cost Management** | Analyze resource utilization to identify overprovisioning | Medium | Week 2 | Azure Monitor, Cost Management |
+| **Cost Management** | Consider third-party cost optimization tools | Low | Month 1 | Third-party tools evaluation |
+| **Monitoring** | Confirm Azure Monitor is collecting the right metrics | High | Week 1 | Azure Monitor |
+| **Monitoring** | Test alert rules and thresholds | High | Week 1-2 | Azure Monitor Alerts |
+| **Monitoring** | Review dashboards for operational visibility | Medium | Week 2 | Azure Monitor Dashboards |
+| **Backup & Recovery** | Verify backup jobs are configured and running successfully | High | Week 1 | Azure Backup |
+| **Backup & Recovery** | Test restore procedures | High | Week 2 | Azure Backup |
+| **Backup & Recovery** | Review backup policies for compliance | Medium | Week 2 | Azure Backup |
+| **User Experience** | Gather structured feedback from end users | Medium | Week 2-3 | Surveys, support tickets |
+| **User Experience** | Document and prioritize issues | Medium | Ongoing | Issue tracking system |
+| **User Experience** | Share positive outcomes | Low | Month 1 | Communication channels |
+| **Operations** | Provide targeted training and documentation | High | Week 1-2 | Training materials |
+| **Operations** | Ensure access to monitoring, backup, and security tools | High | Week 1 | Azure RBAC |
+| **Operations** | Establish escalation paths and support contacts | High | Week 1 | Documentation |
+| **Hybrid/Multi-cloud** | Monitor cross-cloud and on-premises dependencies | Medium | Week 2 | Azure Arc, Network Watcher |
+| **Hybrid/Multi-cloud** | Secure hybrid connections | High | Week 1 | VPN, ExpressRoute |
+| **Hybrid/Multi-cloud** | Plan to reduce external dependencies | Low | Month 2+ | Architecture planning |
+| **Architecture** | Conduct quarterly reviews | Medium | Quarterly | [Azure Well-Architected Framework](/azure/well-architected/) |
+| **Architecture** | Create a backlog of modernization opportunities | Medium | Quarterly | Documentation system |
+| **Architecture** | Assign ownership for follow-up actions | Medium | Quarterly | Project management |
 
-[Govern](/azure/cloud-adoption-framework/govern/)
+## Next step
 
-[Secure](/azure/cloud-adoption-framework/secure/overview)
-
-[Manage](/azure/cloud-adoption-framework/manage/)
+> [!div class="nextstepaction"]
+> [Decommission source workloads](./decommission-source-workload.md)

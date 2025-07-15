@@ -7,7 +7,6 @@ ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-
 # Decommission source workloads after migration
 
 A decommissioned workload is one that is no longer needed in its original environment. This step is essential to reduce operational overhead, reclaim resources, and ensure compliance. You should follow a structured process to formally retire the source workload once the Azure-hosted version is stable and fully adopted.
@@ -24,11 +23,9 @@ A formal sign-off confirms that the workload is no longer needed in its original
 
 License optimization reduces costs and ensures compliance with Microsoft licensing terms.
 
-1. **Identify licenses eligible for reuse.** Determine whether any on-premises licenses are eligible for Azure Hybrid Benefit (AHB). AHB allows you to use existing Windows Server or SQL Server licenses with Software Assurance to reduce Azure VM costs. See https://learn.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing for eligibility and configuration details.
+1. **Identify licenses eligible for reuse.** Determine whether any on-premises licenses are eligible for [Azure Hybrid Benefit][Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) (AHB). AHB allows you to use existing Windows Server or SQL Server licenses with [Software Assurance](/licensing/licensing-programs/software-assurance-default) to reduce Azure VM costs.
 
-2. **Apply AHB to eligible Azure resources.** If eligible, configure AHB on the corresponding Azure VMs. This reduces compute costs without requiring new licenses. Be aware that AHB cannot be used simultaneously on-premises and in Azure.
-
-3. **Deallocate unused licenses.** For licenses that are no longer needed, update your license inventory and return or reassign them as appropriate.
+2. **Deallocate unused licenses.** For licenses that are no longer needed, update your license inventory and return or reassign them as appropriate.
 
 ## Archive data for compliance and recovery
 
@@ -36,7 +33,7 @@ Archived data ensures regulatory compliance and provides a fallback during the t
 
 1. **Determine retention requirements.** Consult legal and compliance teams to identify how long data must be retained. Requirements vary by industry and region.
 
-2. **Migrate data to Azure Storage cold or archive tiers.** Use https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview to store archived data cost-effectively. Use the cold tier for short-term retention (e.g., 90 days) and the archive tier for long-term retention (7 years or more).
+2. **Migrate data to Azure Storage cold or archive tiers.** Use [Azure Blob Storage tiers](/azure/storage/blobs/access-tiers-overview) to store archived data cost-effectively. Use the cold tier for short-term retention (90 days) and the archive tier for long-term retention (180 days or more).
 
 3. **Test data restoration procedures.** Validate that archived data can be restored within acceptable timeframes. Document the process and store it with your disaster recovery runbooks.
 
@@ -58,10 +55,13 @@ Accurate documentation ensures operational continuity and reduces support risks.
 
 | Category               | Tool                                                                 | Description                                                                 |
 |------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| Licensing              | https://learn.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing | Explains how to apply existing licenses to reduce Azure VM costs.          |
-| Data Archival          | https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview | Describes cold and archive tiers for cost-effective long-term storage.     |
-| Monitoring             | https://learn.microsoft.com/azure/azure-monitor/overview | Provides observability into Azure workloads and infrastructure.            |
-| Documentation Planning | https://learn.microsoft.com/azure/cloud-adoption-framework/manage/ready#document-your-cloud-operations | Guides documentation and operational readiness for Azure environments.     |
+| Licensing              | /azure/virtual-machines/windows/hybrid-use-benefit-licensing | Explains how to apply existing licenses to reduce Azure VM costs.          |
+| Data Archival          | /azure/storage/blobs/access-tiers-overview | Describes cold and archive tiers for cost-effective long-term storage.     |
+| Monitoring             | /azure/azure-monitor/overview | Provides observability into Azure workloads and infrastructure.            |
+| Documentation Planning | /azure/cloud-adoption-framework/manage/ready#document-your-cloud-operations | Guides documentation and operational readiness for Azure environments.     |
 
-## Next step
+## Next steps
 
+- [Modernize](/azure/cloud-adoption-framework/modernize/) workload or [Build cloud native](azure/cloud-adoption-framework/innovate/) features
+
+- [Govern](/azure/cloud-adoption-framework/govern/), [Secure](/azure/cloud-adoption-framework/secure/overview), [Manage](/azure/cloud-adoption-framework/manage/) your Azure environment.
