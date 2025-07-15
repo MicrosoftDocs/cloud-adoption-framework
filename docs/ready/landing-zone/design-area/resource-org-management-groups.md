@@ -4,6 +4,7 @@ description: Learn about the resource organization and management group design c
 author: jtracey93
 ms.author: jatracey
 ms.date: 07/07/2025
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---

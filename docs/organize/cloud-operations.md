@@ -4,6 +4,7 @@ description: Learn how to establish cloud operations functions and staff your te
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---
