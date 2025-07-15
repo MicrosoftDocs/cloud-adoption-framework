@@ -1,5 +1,5 @@
 ---
-title: Execute online migrations for mission-critical workloads
+title: Execute online migrations
 description: Use online migration to move workloads to Azure with continuous data synchronization that minimizes downtime and maintains high availability.
 author: stephen-sumner
 ms.author: pnp
@@ -7,7 +7,7 @@ ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Execute online migrations for mission-critical workloads
+# Execute online migration cutover
 
 This article helps you execute online migrations for workloads that require high availability. Online migration uses continuous data synchronization to minimize downtime and maintain service availability during the transition to Azure.
 

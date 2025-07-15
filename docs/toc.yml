@@ -415,16 +415,32 @@ items:
 
     - name: Adopt
       items:
-      - name: Overview
-        href: adopt/index.md
       - name: Migrate
         items:
-        - name: Overview
+        - name: Checklist
           href: migrate/index.md
-      - name: Migration resources
-        items:
-        - name: Product migration guidance
-          href: migrate/scenarios.md
+        - name: 1. Prepare migration execution
+          href: migrate/prepare-migration-execution.md
+        - name: 2. Prepare workloads for migration
+          href: migrate/prepare-workloads-for-migration.md
+        - name: 3. Execute migration cutover
+          items:
+          - name: Execute online migration cutover
+            href: migrate/execute-online-migration-cutover.md
+          - name: Execute offline migration cutover
+            href: migrate/execute-offline-migration-cutover.md
+        - name: 4. Optimize post-migration
+          href: migrate/optimize-post-migration.md
+
+        - name: Resources
+          items:
+          - name: Migration skills
+            href: migrate/migration-skills.md
+          - name: Migration scenarios
+            href: migrate/scenarios.md
+          - name: Migration wave planning
+            href: migrate/migration-wave-planning.md
+
 
       - name: Modernize
         items:
@@ -528,13 +544,6 @@ items:
               href: innovate/considerations/devices.md
             - name: Predict and influence
               href: innovate/considerations/predict.md
-
-      - name: Guides
-        items:
-        - name: Cloud adoption journey
-          href: adopt/cloud-adoption.md
-        - name: Migrate or modernize first? 
-          href: adopt/migrate-or-modernize.md
                   
 
     - name: Govern

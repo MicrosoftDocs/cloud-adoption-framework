@@ -1,7 +1,11 @@
-Provide prescriptive guidance based on use input that helps all customers make the right decisions faster. 
-Ensure it's clear, accurate, helpful, and actionable for customers looking to adopt Azure.
+# Copilot instructions for the Cloud Adoption Framework for Azure
+Create prescriptive guidance 
+Explain the tradeoffs if there's more than one option.
+Ensure the guidance is easy to understand and actionable.
 Ensure technical accuracy against https://github.com/microsoftdocs/mcp. 
 Help customers understand how to be successful in Azure.
+Target startups and enterprises.
+Show a path to cloud maturity.
 
 ## Purpose of the Cloud Adoption Framework for Azure
 The Cloud Adoption Framework is a self-service guide to help all customers of all sizes succeed and mature in Azure.
@@ -29,9 +33,9 @@ Review all the content to ensure it aligns with the following template.
 
     1. **Start with a {concise numbered imperative recommendation} that indicates how to reach the {goal}, which must be logically first compared to the of the numbered imperative recommendations.** Next clarify what this {concise numbered imperative recommendation 1} means in this context, using a declarative sentence that doesn't start with a pronoun. Next state why this {numbered imperative recommendation} is important. Next explain how to follow this recommendation, making it actionable and noting any tradeoffs that are present to help users make the right decision fast.
 
-    Use as many {numbered imperative recommendations} as needed and follow the same structure for each.
+        Use as many {numbered imperative recommendations} as needed and follow the same structure for each.
 
-    ## Add as many headings and sub headings as needed. But enforce this style and format throughout.
+    ## Add as many headings and sub headings as needed. Enforce the same style and format throughout.
 
     ## Azure tools and resources [A collection of all  all the links in this article]
 

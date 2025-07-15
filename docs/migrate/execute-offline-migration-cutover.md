@@ -1,5 +1,5 @@
 ---
-title: Execute offline migrations for workloads that tolerate downtime
+title: Execute offline migration cutover
 description: Use offline migration to move workloads to Azure with a structured approach that ensures data consistency and minimizes risk during planned downtime.
 author: stephen-sumner
 ms.author: pnp
@@ -7,7 +7,7 @@ ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Execute offline migrations for workloads that tolerate downtime
+# Execute offline migration cutover
 
 This article helps you execute offline migrations for workloads that can tolerate planned downtime. Offline migration simplifies the migration process by avoiding real-time synchronization and reduces the risk of data inconsistency.
 
