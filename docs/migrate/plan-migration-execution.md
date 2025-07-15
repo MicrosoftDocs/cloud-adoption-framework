@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: Plan migration execution
+description: Learn how to create migration execution plans that define workload sequencing, data transfer paths, and rollback strategies for successful Azure cloud migrations.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
@@ -9,9 +9,7 @@ ms.topic: conceptual
 
 # Plan migration execution
 
-A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences. It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
-
-Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone:
+A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences. Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone:
 
 | Factor | Description |
 |--------|-------------|
@@ -21,13 +19,13 @@ Migration execution planning occurs in the CAF Migrate methodology rather than C
 | **Resource availability confirmation** | Actual Azure resource provisioning, cost patterns, and operational overhead become visible through landing zone operations, enabling more accurate migration resource planning and scheduling. |
 | **Risk tolerance refinement** | Experience with Azure operations and incident management provides clearer understanding of acceptable downtime windows and rollback requirements for different workload types. |
 
-These factors make migration execution planning a distinct activity that builds on both your initial cloud adoption plan and your operational experience with Azure landing zones.
+It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
 
 ## Assess migration readiness and skills
 
 A readiness assessment ensures that your team has the skills and support needed to execute the migration plan. This step identifies capability gaps and accelerates progress through targeted training or external support.
 
-1. **Evaluate internal skills and experience.** Review your team’s familiarity with Azure services, migration tools, and workload patterns. This evaluation identifies potential blockers and training needs. Use the [Migration skills](./migration-skills.md).
+1. **Evaluate internal skills and experience.** Review your team’s familiarity with Azure services, migration tools, and workload patterns. This evaluation identifies potential blockers and training needs. Use the [Migration skills](./migration-skills.md) to identify critical skills.
 
 2. **Engage external expertise if needed.** If internal capabilities are limited, bring in [Microsoft or a Microsoft partner](https://azure.microsoft.com/solutions/migration/migrate-modernize-innovate/#Nextsteps). External experts can validate your strategy, tools, and timelines. This support accelerates progress and reduces risk, especially for complex or large-scale migrations.
 
