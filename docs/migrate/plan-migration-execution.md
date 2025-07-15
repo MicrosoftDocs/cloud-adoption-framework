@@ -58,27 +58,47 @@ A planned migration sequence reduces migration risk, builds team confidence, and
 
 ## Determine offline or near-zero downtime migration
 
-A workload that can tolerate downtime is a candidate for offline migration. Offline migration reduces complexity and risk by allowing data transfer while the source system is offline. A workload that requires near-zero downtime must use online migration. Online migration maintains availability during the transition and is essential for mission-critical systems.
+A workload's downtime tolerance determines the appropriate migration strategy. Workloads with flexible downtime requirements can use offline migration, which the preferred method. Offline migration simplifies the process and reduces risk of data lost. Mission-critical workloads that require continuous availability need online migration strategies that maintain operations during the transition. However, online migrations often require temporary downtime depending on the tools used and technology stack of the workload.
 
-1. **Identify workloads for offline migration.** Review the cloud adoption plan for documented maintenance windows or downtime tolerances. If this information is missing, work with stakeholders to define acceptable downtime periods. This step ensures that offline migration aligns with business expectations. Identify workloads with predictable usage cycles or scheduled maintenance windows. These workloads are ideal candidates for offline migration because downtime can be scheduled during low-impact periods.
+1. **Assess workload downtime tolerance through business requirements.** Review service level agreements (SLAs), recovery time objectives (RTOs), and business continuity plans to determine acceptable downtime periods. Work with business stakeholders to define specific downtime windows based on operational impact and customer commitments. This assessment ensures that migration timing aligns with business needs and regulatory requirements. Consider factors such as customer-facing services, revenue-generating systems, and compliance obligations when evaluating downtime tolerance.
 
-2. **Identify workloads that require near-zero downtime.** Use SLAs, business continuity plans, and stakeholder input to identify workloads that must remain online during migration. These workloads typically support customer-facing services or core business operations. Evaluate the workload’s architecture, data volume, and interdependencies. Ensure that the workload supports continuous replication and that the network bandwidth is sufficient for real-time data transfer.
+2. **Identify workloads suitable for offline migration.** Evaluate workloads that can accommodate planned downtime during migration. These typically include development environments, test systems, internal applications, and workloads with scheduled maintenance windows. Offline migration reduces complexity by eliminating the need for real-time data synchronization and provides a cleaner cutover process. Document the acceptable downtime duration for each workload and align migration schedules with business calendars to avoid peak periods such as month-end processing or seasonal demand.
 
-## Define rollback criteria and procedures
+3. **Classify workloads requiring near-zero downtime migration.** Identify workloads that must remain operational during migration to meet business continuity requirements. These include customer-facing applications, real-time transaction systems, and services covered by strict SLAs. Use business impact analysis to determine which systems fall into this category. Validate that the workload architecture supports continuous replication and that network bandwidth can handle real-time data transfer requirements. Consider implementing blue-green deployment strategies or using Azure Site Recovery for these critical systems.
+
+4. **Validate technical requirements for online migration.** Ensure that workloads requiring near-zero downtime have the necessary technical capabilities for online migration. This includes support for database replication, application-level failover, and network connectivity that can sustain continuous data synchronization. Assess data volume, change rate, and interdependencies to confirm that online migration is technically feasible. Test connectivity between source and target environments to verify sufficient bandwidth and low latency for real-time replication.
+
+5. **Plan migration windows for offline workloads.** Schedule offline migrations during approved maintenance windows or low-usage periods to minimize business impact. Coordinate with operations teams to ensure that migration activities do not conflict with other system maintenance or business-critical processes. Create detailed migration schedules that include preparation time, data transfer duration, testing phases, and contingency buffers. Communicate these schedules to all stakeholders and establish approval processes for any changes to migration timing.
+
+## Define rollback plan
 
 A rollback strategy is a documented plan that enables teams to revert infrastructure or application changes when deployment fails or introduces risk. A clear rollback strategy reduces downtime, limits business disruption, and supports operational resilience. You should define rollback criteria and procedures before any migration or deployment activity.
 
-1. **Establish rollback criteria.** Rollback criteria are the specific conditions under which a rollback must be triggered. These include failed health checks, performance degradation, security violations, or unmet success metrics. Defining these criteria ensures teams act decisively when issues arise. You should collaborate with business stakeholders, workload owners, and operations teams to define thresholds for failure and document them in your deployment plan.
+### Establish rollback criteria
 
-2. **Document rollback procedures.** Rollback procedures are the step-by-step instructions to revert a change. These vary depending on the workload, environment, and deployment method. Documenting rollback steps ensures consistency and reduces human error during high-pressure situations. You should include rollback scripts, configuration snapshots, and infrastructure-as-code templates in your documentation.
+1. **Define failure thresholds with stakeholders.** Work with business stakeholders, workload owners, and operations teams to establish what constitutes a failed deployment. Common thresholds include failed health checks, performance degradation, security violations, or unmet success metrics. This collaboration ensures rollback decisions match your organization's risk tolerance.
 
-3. **Test rollback procedures in a pre-production environment.** Testing validates that rollback steps work as expected and do not introduce new issues. This step is critical for identifying gaps in automation, permissions, or dependencies. You should simulate failure scenarios in a staging environment and verify that rollback restores the system to a known-good state.
+2. **Document rollback triggers in the deployment plan.** Record the rollback criteria in your deployment plan to provide visibility and accountability. Include measurable indicators such as CPU thresholds, response time limits, or error rates. This documentation supports consistent decision-making during incidents.
 
-4. **Automate rollback where possible using deployment tools.** Automation reduces manual effort and speeds up recovery. Tools like Azure DevOps, GitHub Actions, or Bicep templates can automate rollback of infrastructure and application deployments. You should integrate rollback logic into your CI/CD pipelines and use deployment slots or blue-green deployments to simplify reversions.
+3. **Integrate rollback logic into CI/CD pipelines.** Use tools like [Azure Pipelines](/azure/devops/pipelines/process/stages) or [GitHub Actions](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment) to automate rollback steps. For example, configure pipelines to redeploy a previous build if a deployment fails health checks.
 
-5. **Include rollback plans in change management and release documentation.** Visibility into rollback plans ensures all stakeholders understand the recovery path. This is especially important for regulated environments or mission-critical systems. You should attach rollback documentation to change requests, release notes, and operational runbooks.
+### Document rollback procedures
 
-6. **Review and update rollback strategies after each deployment.** Continuous improvement ensures rollback strategies remain effective as systems evolve. You should conduct post-incident reviews and update rollback documentation based on lessons learned.
+1. **Create workload-specific rollback instructions.** Develop rollback steps that match your workload type, environment, and deployment method. For example, infrastructure-as-code deployments require reapplying previous templates, while application rollbacks involve redeploying a prior container image.
+
+2. **Include rollback assets in documentation.** Attach rollback scripts, configuration snapshots, and infrastructure-as-code templates to your rollback plan. These assets enable rapid execution and reduce dependence on manual intervention.
+
+### Test rollback procedures in a pre-production environment
+
+1. **Simulate failure scenarios in staging.** Use a pre-production environment to simulate deployment failures and validate rollback effectiveness. This testing helps identify gaps in automation, permissions, or dependencies.
+
+2. **Verify system recovery to a known-good state.** Confirm that rollback restores the system to a stable and functional configuration. This verification builds confidence in your rollback plan and supports operational readiness.
+
+### Review and update rollback strategies after each deployment
+
+1. **Conduct post-incident reviews.** After each deployment or rollback event, assess what worked and what didn't. Identify gaps in criteria, procedures, or automation.
+
+2. **Update rollback documentation based on lessons learned.** Revise rollback plans to reflect new insights, changes in architecture, or updated tooling. This practice keeps rollback strategies current and effective.
 
 ## Engage stakeholders on migration execution plan
 
