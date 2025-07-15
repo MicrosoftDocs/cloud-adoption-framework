@@ -11,6 +11,18 @@ ms.topic: conceptual
 
 A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences. It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
 
+Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone:
+
+| Factor | Description |
+|--------|-------------|
+| **Operational readiness validation** | Working with your deployed landing zone reveals actual team capabilities, operational processes, and support requirements that influence migration complexity and timing. |
+| **Technical constraints discovery** | Network bandwidth, connectivity patterns, and Azure service performance become clear through operational experience, affecting data migration path selections and transfer timelines. |
+| **Changing business priorities** | The time between initial planning and migration execution often brings new business requirements, regulatory changes, or shifting organizational priorities that require updated migration sequencing. |
+| **Resource availability confirmation** | Actual Azure resource provisioning, cost patterns, and operational overhead become visible through landing zone operations, enabling more accurate migration resource planning and scheduling. |
+| **Risk tolerance refinement** | Experience with Azure operations and incident management provides clearer understanding of acceptable downtime windows and rollback requirements for different workload types. |
+
+These factors make migration execution planning a distinct activity that builds on both your initial cloud adoption plan and your operational experience with Azure landing zones.
+
 ## Assess migration readiness and skills
 
 A readiness assessment ensures that your team has the skills and support needed to execute the migration plan. This step identifies capability gaps and accelerates progress through targeted training or external support.
