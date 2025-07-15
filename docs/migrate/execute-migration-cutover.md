@@ -41,9 +41,7 @@ Service validation confirms that the target environment is ready to receive the 
 
 Data migration execution transfers your workload from the source environment to Azure using the strategy you selected during migration planning. The execution approach follows the migration strategy you selected based on your business requirements for availability during the transition. Offline migration execution provides simplicity through planned downtime, while online migration execution maintains service availability through continuous synchronization. Both approaches require precise execution and validation to ensure successful outcomes.
 
-### Execute offline data migration
-
-Offline migration execution follows a structured approach that ensures data consistency through planned downtime. This approach simplifies the migration process by avoiding real-time synchronization complexity.
+### Execute offline migration cutover
 
 1. **Stop the source workload to ensure data consistency.** Clean shutdown of the source workload prevents data changes during migration and avoids corruption or loss. This step ensures that all processes complete cleanly without leaving data in an inconsistent state. Follow documented shutdown procedures to ensure a complete stop of the source application or service.
 
@@ -56,8 +54,6 @@ Offline migration execution follows a structured approach that ensures data cons
 For detailed guidance on offline migration execution, see [Execute offline migration cutover](execute-offline-migration-cutover.md).
 
 ### Execute online migration cutover
-
-Online migration execution maintains service availability through continuous data synchronization. This approach requires more complex orchestration but minimizes business disruption.
 
 1. **Configure continuous data synchronization between source and target.** Real-time replication mechanisms ensure that the Azure environment remains current with the source system. This synchronization minimizes data loss and reduces the delta during cutover. Set up replication tools for continuous synchronization, perform initial full data synchronization, and maintain synchronization of ongoing changes throughout the migration process.
 
@@ -79,9 +75,7 @@ Post-migration validation ensures that the workload operates correctly and meets
 
 ## Maintain fallback option
 
-Fallback preparation provides safety nets during the critical post-migration period. These measures ensure that you can respond quickly to unexpected issues and maintain business continuity. You should retain these options until the Azure system proves stable and reliable.
-
-1. **Retain the source environment as a fallback option.** Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. This fallback option provides business continuity insurance during the stabilization period. Keep the source environment available and maintain the ability to revert DNS records and restore previous configurations if needed.
+Retain the source environment as a fallback option. Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. This fallback option provides business continuity insurance during the stabilization period. Keep the source environment available and maintain the ability to revert DNS records and restore previous configurations if needed.
 
 ## Support workload during stabilization
 
