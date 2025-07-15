@@ -430,7 +430,9 @@ items:
           - name: Execute offline migration cutover
             href: migrate/execute-offline-migration-cutover.md
         - name: 4. Optimize post-migration
-          href: migrate/optimize-post-migration.md
+          href: migrate/optimize-workloads-post-migration.md
+        - name: 5. Decommission source workload
+          href: migrate/decommission-source-workload.md
 
         - name: Resources
           items:

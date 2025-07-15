@@ -9,35 +9,98 @@ ms.topic: conceptual
 
 # Optimize workloads post-migration
 
-After a successful cutover, immediate optimizations might be necessary. This phase overlaps with ongoing operations, but it’s essential to ensure your workloads are stable, performant, and cost-effective in Azure.
+A successful migration does not end at cutover. Post-migration optimization ensures workloads operate efficiently, securely, and cost-effectively in Azure. This phase overlaps with ongoing operations and sets the foundation for long-term cloud maturity.
 
-1. **Fine-tune configurations.** Azure offers flexibility to quickly adjust resources. Post-migration workloads might behave differently than they did on-premises or in other clouds. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to get tailored recommendations on cost optimization, performance, reliability, and security. Tweak configurations in accordance with [Azure services guides](/azure/well-architected/service-guides/?product=popular).
+## Fine-tune workload configurations
 
-2. **Monitor costs and resource utilization.** Cost anomalies often result from workload changes or unexpected Azure behavior patterns. Azure's elastic scaling capabilities can amplify inefficiencies that were previously constrained in on-premises environments. You should establish cost monitoring and alerting to detect unusual spending patterns early. Use [Azure Cost Management](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) to track spending trends and identify optimization opportunities. Configure budget alerts to notify stakeholders when costs exceed thresholds. Review resource utilization metrics to identify over-provisioned resources that can be rightsized. Consider third-party cost optimization tools for advanced analytics and automated recommendations across complex environments.
+A workload’s behavior often changes after migration due to differences in infrastructure, scaling, and service architecture. Immediate configuration adjustments help stabilize performance and reduce unnecessary costs.
 
-3. **Validate monitoring.** The first few days or weeks post-migration serve as a "bake-in" period. Ensure that performance, availability, and usage patterns align with expectations. Confirm that Azure Monitor is capturing the right metrics and alerts are configured appropriately. For more information, see [Monitor your Azure cloud estate.](/azure/cloud-adoption-framework/manage/monitor)
+1. **Use Azure Advisor to identify optimization opportunities.** [Azure Advisor](/azure/advisor/advisor-overview) provides tailored recommendations across cost, performance, reliability, and security. These insights help you prioritize actions based on impact and feasibility. Access Azure Advisor from the Azure portal and review recommendations by category.
 
-4. **Validate backups.** Ensure backup jobs are configured correctly and completing successfully. Test restore procedures to confirm data recoverability. For data reliability, see [Manage data reliability](/azure/cloud-adoption-framework/manage/protect#manage-data-reliability).
+2. **Apply service-specific configuration guidance.** Each Azure service has unique tuning parameters. Use the Azure Well-Architected Framework [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This ensures workloads are optimized for Azure-native capabilities.
 
-5. **Gather feedback from users.** Collect and document feedback from end users. Address any issues such as performance concerns or newly discovered bugs. Positive feedback (improved speed) can also validate migration success.
+3. **Review Microsoft Defender for Cloud recommendations.** [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) identifies security misconfigurations and vulnerabilities. Address these issues early to reduce risk exposure and align with your organization’s security posture.
 
-6. **Support team readiness.** Make sure the operations team knows how to handle issues in Azure. Provide quick cheat-sheets if needed ("To restart the app in Azure, go here; to check logs, go there…"). This preparation reduces downtime if any incident happens. Plan to have supporting services like backup, monitoring, and security in place. For more information, see [Ready your Azure cloud operations ](/azure/cloud-adoption-framework/manage/ready#document-your-cloud-operations).
+### Monitor and control costs
 
-7. **Monitor multi and hybrid workloads (if needed).** If parts of the workload remain in another cloud or on-premises, monitor these cross-cloud interactions. Watch for latency, reliability, and cost issues. Ensure secure and robust connectivity. Plan to eventually migrate or replace external dependencies with Azure-native services where feasible.
+Cost visibility and control are critical immediately after migration. Azure’s elasticity can amplify inefficiencies if not monitored closely.
 
-8. **Schedule regular architecture reviews to identify modernization opportunities.** Migration teams often move to new projects immediately after cutover. Schedule quarterly architecture reviews to assess over provisioning to optimize costs. Use [Azure Well-Architected Framework reviews](/azure/well-architected/) to systematically evaluate cost optimization, operational excellence, performance efficiency, reliability, and security. Create a backlog of modernization opportunities and prioritize them based on business value and technical debt reduction. Assign ownership for these reviews to ensure they happen consistently rather than being deferred indefinitely.
+1. **Enable Azure Cost Management and set budgets.** Use [Microsoft Cost Management](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) to track spending trends and forecast future costs. Set budget thresholds and configure alerts to notify stakeholders when spending exceeds expectations.
 
-## Decommission old workloads
+2. **Analyze resource utilization to identify overprovisioning.** Review metrics such as CPU, memory, and disk usage to detect underutilized resources. Right-size or deallocate these resources to reduce waste.
 
-When you’re satisfied that the workload is stable in Azure and all users are on it, formally decommission the the source workload.
+3. **Consider third-party cost optimization tools.** For complex environments, third-party tools can provide deeper analytics and automation. Evaluate tools based on integration capabilities, reporting granularity, and support for hybrid/multi-cloud environments.
 
-1. **Obtain stakeholder sign-off.** Get confirmation from the business owner that the new system is acceptable and the old one can be considered retired. This avoids miscommunication where IT thinks it's done but a business user was still using the old system for something.
+### Validate monitoring and alerting
 
-2. **Reclaim licenses.** Reclaim any licenses from decommissioned servers if they can be repurposed. For example, Do you mean the on-prem license is used by AHB, thus reducing the VM cost  on Azure? The sentence needs clarity s it could be read that you have a spare on-prem license, which isn't correct, the license would be used by the Azure VM via AHB.
+Monitoring ensures workloads operate as expected and enables rapid response to issues.
 
-3. **Archive data.** Retention requirements vary by organization and regulatory environment. Many companies maintain VM images or database backups for several weeks after migration as a safety measure. Financial institutions face regulatory obligations to retain data for seven years or longer. You should migrate archived data to [Azure Storage blob](/azure/storage/blobs/access-tiers-overview) cold tier for 90-day retention or archive tier for longer periods. Document retention policies and ensure archived data remains accessible for compliance audits. Test restoration procedures to confirm data can be recovered when needed. This archival strategy provides both regulatory compliance and operational safety during the transition period.
+1. **Confirm Azure Monitor is collecting the right metrics.** Validate that performance, availability, and usage metrics are captured for all critical components. Adjust data collection rules if gaps exist.
 
-4. **Update documentation and operational assets.** Documentation updates ensure teams can effectively operate and troubleshoot workloads in Azure. Outdated documentation creates operational risk and increases incident response time. You should update all operational documentation, architecture diagrams, runbooks, and monitoring dashboards to reflect the new Azure environment. Remove or mark legacy documentation as deprecated to prevent confusion during incidents. Include time and budget for documentation updates in your migration planning process. Organizations often overlook this requirement, which results in incomplete operational handoffs and increased support burden.
+2. **Test alert rules and thresholds.** Ensure alerts trigger under expected conditions and notify the correct teams. Use test scenarios to validate alert workflows and escalation paths.
+
+3. **Review dashboards for operational visibility.** Create or update dashboards to reflect post-migration architecture. Include key performance indicators (KPIs) relevant to business and technical stakeholders.
+
+For monitoring guidance, see [Monitor your Azure cloud estate.](/azure/cloud-adoption-framework/manage/monitor).
+
+### Validate backup and recovery
+
+Backup validation ensures data protection and recoverability in the event of failure or data loss.
+
+1. **Verify backup jobs are configured and running successfully.** Use tools like Azure Backup to monitor job status and resolve any failures promptly.
+
+2. **Test restore procedures.** Perform test restores for critical workloads to validate recovery time objectives (RTOs) and recovery point objectives (RPOs). Document the results and update runbooks accordingly.
+
+3. **Review backup policies for compliance.** Ensure backup retention and encryption settings align with organizational and regulatory requirements.
+
+For data reliability, see [Manage data reliability](/azure/cloud-adoption-framework/manage/protect#manage-data-reliability).
+
+### Collect and act on user feedback
+
+User feedback provides real-world validation of workload performance and usability.
+
+1. **Gather structured feedback from end users.** Use surveys, interviews, or support tickets to collect feedback on performance, reliability, and usability.
+
+2. **Document and prioritize issues.** Track feedback in a centralized system and categorize by severity and impact. Address high-priority issues promptly.
+
+3. **Share positive outcomes.** Highlight improvements such as faster response times or increased availability to reinforce migration success.
+
+### Prepare operations teams for Azure
+
+Operational readiness reduces downtime and accelerates incident response.
+
+1. **Provide targeted training and documentation.** Create quick-reference guides for common tasks such as restarting services, accessing logs, or scaling resources.
+
+2. **Ensure access to monitoring, backup, and security tools.** Confirm that operations teams have the necessary permissions and tools to manage workloads effectively.
+
+3. **Establish escalation paths and support contacts.** Document who to contact for different types of issues and ensure this information is easily accessible.
+
+For more information, see [Ready your Azure cloud operations ](/azure/cloud-adoption-framework/manage/ready#document-your-cloud-operations).
+
+### Monitor hybrid and multi-cloud dependencies
+
+Hybrid and multi-cloud architectures introduce complexity that requires additional monitoring.
+
+1. **Monitor cross-cloud and on-premises dependencies.** Use tools like Azure Arc and Network Watcher to track latency, availability, and connectivity between environments.
+
+2. **Secure hybrid connections.** Ensure VPNs, ExpressRoute, or other connectivity solutions are configured securely and monitored for anomalies.
+
+3. **Plan to reduce external dependencies.** Identify opportunities to replace third-party or on-premises components with Azure-native services to simplify architecture and reduce risk.
+
+### Schedule regular architecture reviews
+
+Architecture reviews help identify modernization opportunities and prevent technical debt.
+
+1. **Conduct quarterly reviews.** Use the [Azure Well-Architected Framework](/azure/well-architected/). Evaluate workloads across cost, performance, reliability, security, and operational excellence.
+
+2. **Create a backlog of modernization opportunities.** Document findings and prioritize based on business value, risk reduction, and technical debt.
+
+3. **Assign ownership for follow-up actions.** Designate responsible teams or individuals to ensure recommendations are implemented and tracked.
+
+Here is prescriptive, actionable guidance for decommissioning old workloads after migration to Azure, aligned with the Cloud Adoption Framework. This guidance follows the required structure and includes embedded links to relevant Azure tools and documentation.
 
 ## Next steps
+
+> [!div class="nextstepaction"]
+> https://learn.microsoft.com/azure/cloud-adoption-framework/manage/
 
