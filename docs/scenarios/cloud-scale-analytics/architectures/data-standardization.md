@@ -1,8 +1,8 @@
 ---
 title: Data standardization
 description: Understand data standardization in cloud-scale analytics.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 04/08/2022
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
@@ -23,7 +23,7 @@ This article provides an overview of Delta Lake, its performance, and how it hel
 
 ## Delta Lake
 
-Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to big data workloads and Apache Spark. Both Azure Synapse Analytics and Azure Databricks are compatible with Linux Foundation Delta Lake.
+Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to big data workloads and Apache Spark. Azure Databricks is compatible with Linux Foundation Delta Lake.
 
 ## Delta Lake key features
 

@@ -282,8 +282,8 @@
       },
       {
          "source_path": "docs/ready/considerations/naming-and-tagging.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging",
-         "redirect_document_id": true
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/ready/considerations/scaling-subscriptions.md",
@@ -862,8 +862,8 @@
       },
       {
          "source_path": "docs/decision-guides/resource-tagging/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide",
-         "redirect_document_id": true   
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": false   
       },
       {
          "source_path": "docs/ready/considerations/networking-options.md",
@@ -3329,6 +3329,157 @@
          "source_path": "docs/scenarios/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/overview#cloud-adoption-scenarios",
          "redirect_document_id": false
-      } 
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/naming-and-tagging.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/scale-subscriptions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#scale-your-subscriptions",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/plan/adapt-roles-skills-processes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/antipatterns/plan-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/5-rs-of-rationalization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/approach.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/calculate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/estimate-total-cost-of-ownership",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/inventory.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/digital-estate/rationalize.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/operating-model/compare.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/operating-model/define.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/operating-model/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/operating-model/terms.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/central-it.md",
+         "redirect_url": "/azure/cloud-adoption-framework/organize/organization-structures#central-it-team",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-adoption.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud#understand-the-cloud-skills-you-need",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/assets.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory#discover-workload-inventory",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/initial-org-alignment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/iteration-paths.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog#initial-migration-backlog",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/plan-intro.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/plan-sustainability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/prerequisites.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/review-rationalization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/timelines.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/document-cloud-adoption-plan",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud#understand-the-cloud-skills-you-need",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/workloads.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/discover-existing-workload-inventory",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/smart-assessment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/",
+         "redirect_document_id": false
+      }                                     
    ]   
 }
+

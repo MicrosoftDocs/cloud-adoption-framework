@@ -1,8 +1,8 @@
 ---
 title: Authentication for Cloud-Scale Analytics in Azure
 description: Learn about authentication techniques for cloud-scale analytics in Azure, including user, application, and service-to-service authentication.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 02/04/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
@@ -32,7 +32,7 @@ The following sections describe each of the authentication scenarios: user authe
 
 Users who connect to a data service or resource must present a credential. This credential proves that users are who they claim to be. Then they can access the service or resource. Authentication also allows the service to know the identity of the users. The service decides what a user can see and do after the identity is verified.
 
-Azure Data Lake Storage, Azure SQL Database, Azure Synapse Analytics, and Azure Databricks support Microsoft Entra ID integration. The interactive user authentication mode requires users to provide credentials in a dialog box.
+Azure Data Lake Storage, Azure SQL Database, and Azure Databricks support Microsoft Entra ID integration. The interactive user authentication mode requires users to provide credentials in a dialog box.
 
 > [!IMPORTANT]
 > Don't hard-code user credentials into an application for authentication purposes.
@@ -80,7 +80,7 @@ In cloud-scale analytics, implementing robust and secure authentication practice
 
 |Layer|Service|Recommendation|
 |-------------|----------|----------|
-|Databases|- SQL Database<br><br>- SQL Managed Instance<br><br>- Azure Synapse Analytics<br><br>- Azure Database for MySQL<br><br>- Azure Database for PostgreSQL|Use Microsoft Entra ID for authentication with databases such as [Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication), [Azure SQL](/azure/azure-sql/database/authentication-aad-overview), and [Azure Database for MySQL](/azure/mysql/flexible-server/concepts-azure-ad-authentication). |
+|Databases|- SQL Database<br><br>- SQL Managed Instance<br><br>- Azure Database for MySQL<br><br>- Azure Database for PostgreSQL|Use Microsoft Entra ID for authentication with databases such as [Azure Database for PostgreSQL](/azure/postgresql/howto-configure-sign-in-aad-authentication), [Azure SQL](/azure/azure-sql/database/authentication-aad-overview), and [Azure Database for MySQL](/azure/mysql/flexible-server/concepts-azure-ad-authentication). |
 |Storage|Data Lake Storage|Use Microsoft Entra ID for authentication for security principals, such as user, group, and service principals or managed identities, with Data Lake Storage instead of a shared key or shared access signatures. This approach helps improve security because it supports multifactor authentication and Conditional Access policies.|
 |Storage|Data Lake Storage from Azure Databricks|Connect to Data Lake Storage by using [Unity Catalog](/azure/databricks/connect/unity-catalog/) instead of direct storage-level access by creating a [storage credential that uses a managed identity](/azure/databricks/connect/unity-catalog/storage-credentials#create-a-storage-credential-using-a-managed-identity) and an [external location](/azure/databricks/connect/unity-catalog/external-locations).|
 |Analytics|Azure Databricks|Use the System for Cross-domain Identity Management to [sync users and groups from Microsoft Entra ID](/azure/databricks/admin/users-groups/scim/). To access Azure Databricks resources by using REST APIs, [use OAuth with an Azure Databricks service principal](/azure/databricks/dev-tools/auth/#what-authentication-approach-should-i-choose).|

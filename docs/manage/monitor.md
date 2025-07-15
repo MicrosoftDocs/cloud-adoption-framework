@@ -63,7 +63,7 @@ Designing a monitoring solution refers to creating a system for collecting and s
 
 1. ***Aim to centralize monitoring data.*** Prefer fewer locations for storing logs and metrics. Fewer locations make it easier to manage and correlate data. There are reasons to have multiple locations to store and analyze monitoring data. For example, security operations, data residency, data resiliency, and number of Azure tenants are all factors that could require you to store your monitoring data in multiple locations. For more information, see [Design a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design).
 
-1. ***Understand where to send monitoring data.*** Collect logs and metrics and store them in destinations that match your operational needs. Choose from theses primary Azure destinations: Azure Log Analytics workspace ([interactive and long-term storage](/azure/azure-monitor/logs/data-retention-configure)), Azure Storage account (long-term storage), Azure Event Hubs (third-party SIEM integration), [Azure Data Explorer](/azure/data-explorer/ingest-data-no-code?tabs=diagnostic-metrics), and a partner solution. Where generally available, use [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) to configure central monitoring data collection. Otherwise, use [diagnostic settings](/azure/azure-monitor/essentials/diagnostic-settings#destinations).
+1. ***Understand where to send monitoring data.*** Collect logs and metrics and store them in destinations that match your operational needs. Choose from these primary Azure destinations: Azure Log Analytics workspace ([interactive and long-term storage](/azure/azure-monitor/logs/data-retention-configure)), Azure Storage account (long-term storage), Azure Event Hubs (third-party SIEM integration), [Azure Data Explorer](/azure/data-explorer/ingest-data-no-code?tabs=diagnostic-metrics), and a partner solution. Where generally available, use [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) to configure central monitoring data collection. Otherwise, use [diagnostic settings](/azure/azure-monitor/essentials/diagnostic-settings#destinations).
 
 1. ***Automate monitoring.*** You want an automated way to enforce your monitoring policies in larger environments.
 
@@ -87,7 +87,7 @@ Set up the tools and parameters for collecting insights across your Azure enviro
 
 ### Monitor service health
 
-Monitoring service availability focuses on detecting service outages, disruptions, and resource issues in your cloud environment. You want real-time visibility into potential problems to maintain consistent operations. Monitoring service health is the bare minimum for monitoring you cloud estate. Here's how:
+Monitoring service availability focuses on detecting service outages, disruptions, and resource issues in your cloud environment. You want real-time visibility into potential problems to maintain consistent operations. Monitoring service health is the bare minimum for monitoring your cloud estate. Here's how:
 
 1. ***Monitor underlying service health.*** You need to be aware of any underlying outages to the cloud services and regions you’re using. Use [Azure Service Health](/azure/service-health/service-health-portal-update) to receive free alerts about service issues, planned maintenance, and other changes affecting your Azure services and regions.
 
@@ -317,11 +317,9 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Sphere | [Overview Monitor Azure Sphere resources](/azure-sphere/deployment/az-monitor-overview)<br><br>[Monitor Azure Sphere data reference](/azure-sphere/deployment/az-monitor-data) | |
 | Azure Spot Virtual Machines | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)<br><br>[Monitoring data reference for Azure Virtual Machines](/azure/virtual-machines/monitor-vm-reference) | |
 | Azure SQL Database | [Monitor Azure SQL Database](/azure/azure-sql/database/monitoring-sql-database-azure-monitor)<br><br>[Monitoring data reference for Azure SQL Database](/azure/azure-sql/database/monitoring-sql-database-azure-monitor-reference) | [Monitor Azure SQL workloads with database watcher](/azure/azure-sql/database-watcher-overview)<br><br>[Tune applications and databases for performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance) |
-| Azure SQL Edge | [Troubleshoot Azure SQL Edge deployments](/azure/azure-sql-edge/troubleshoot) | |
 | Azure SQL Managed Instance | [Monitor Azure SQL Managed Instance](/azure/azure-sql/managed-instance/monitoring-sql-managed-instance-azure-monitor) | [Tune applications and databases for performance in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/performance-guidance) |
 | Azure Stack Edge | [Enable Azure Monitor on Azure Stack Edge Pro GPU device](/azure/databox-online/azure-stack-edge-gpu-enable-azure-monitor) | |
 | Azure Stack Hub | [Monitor health and alerts in Azure Stack Hub](/azure-stack/operator/azure-stack-monitor-health) | |
-| Azure Synapse Analytics | [Monitor Azure Synapse Analytics](/azure/synapse-analytics/monitor-synapse-analytics)<br><br>[Monitoring data reference for Azure Synapse Analytics](/azure/synapse-analytics/monitor-synapse-analytics-reference) | |
 | Azure Table Storage | [Monitor Azure Table Storage](/azure/storage/tables/monitor-table-storage)<br><br>[Monitoring data reference for Azure Table Storage](/azure/storage/tables/monitor-table-storage-reference) | |
 | Azure Update Manager | [Create alerts in Azure Update Manager](/azure/update-manager/manage-alerts) | |
 | Azure Virtual Machine Scale Sets | [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm) | [Application Insights for Azure VMs and virtual machine scale sets](/azure/azure-monitor/app/azure-vm-vmss-apps) |

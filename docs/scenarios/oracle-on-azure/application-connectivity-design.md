@@ -20,11 +20,11 @@ Use one of the following methods to position the application tier in an architec
 
 - **Deploy in a separate virtual network and connect via virtual network peering:** Place application and database tiers in distinct virtual networks that connect via peering.
 
-The colocated approach provides simpler management and no extra peering costs, but might be less flexible if multiple teams or applications need separate networks. The following diagram shows the database and application tiers colocated in the same virtual network.
+The colocated approach provides simpler management and no extra peering costs, but it might be less flexible if multiple teams or applications need separate networks. The following diagram shows the database and application tiers colocated in the same virtual network.
 
 :::image type="content" source="./media/same-virtual-network.svg" alt-text="Diagram that shows the colocation of the database and application tiers in the same virtual network." border="false" lightbox="./media/same-virtual-network.svg":::
 
-The peered virtual network approach adds virtual network peering costs and more complexity, but provides better isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over the resources and enhanced network segmentation. The following diagram shows the database and application tiers in directly peered virtual networks.
+The peered virtual network approach adds virtual network peering costs and more complexity, but it provides enhanced isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over the resources and enhanced network segmentation. The following diagram shows the database and application tiers in directly peered virtual networks.
 
 :::image type="content" source="./media/separate-virtual-network.svg" alt-text="Diagram that shows directly peered virtual networks." border="false" lightbox="./media/separate-virtual-network.svg":::
 
@@ -36,13 +36,9 @@ This pattern helps ensure direct connectivity from the database and application 
 
 ## Design considerations
 
-- **Cost factors:** Colocating the database and application tiers in the same virtual network incurs no extra network costs.
+- **Connectivity options:** There are two main options for achieving optimal performance between the application and database tiers. You can deploy them in either the same virtual network or in peered virtual networks. Both options provide comparable latency and throughput when resources are deployed in the same physical availability zone. The choice between them depends more on management scope, team boundaries, and network segmentation requirements than on performance.
 
-- **Connectivity options:** When you can't colocate the database and application tiers in the same virtual network, you can peer between virtual networks or traverse through a hub virtual network, like a standard virtual network or Azure Virtual WAN hub.
-
-- **Known limitations:** Because of connectivity limitations from Oracle Database@Azure to private endpoints and serverless applications like Azure Functions, connectivity to these services requires an intermediate hop through a routing device like Azure Firewall or a non-Microsoft network virtual appliance.
-
-- **Availability zone validation:** If you deploy the application tier in a separate subscription from the subscription that hosts Oracle Database@Azure – Exadata Database Service, logical availability zones might differ from physical availability zones across subscriptions. To validate the correct availability zones, use the following command and replace `eastus` with your desired region:
+- **Availability zone placement:** If you deploy the application tier in a separate subscription from the subscription that hosts the Oracle Exadata Database@Azure service, logical availability zones might differ from physical availability zones across subscriptions. To validate the correct availability zones, use the following command. Replace `eastus` with your desired region.
 
   ```bash
   az rest --method get --uri '/subscriptions/{subscriptionId}/locations?api-version=2022-12-01' \
@@ -51,7 +47,7 @@ This pattern helps ensure direct connectivity from the database and application 
 
 ## Design recommendations
 
-- **Optimize for bandwidth and latency:** Colocate workload-related resources within the same availability zones to minimize latency and maximize throughput.
+- **Optimize for bandwidth and latency:** Colocate workload-related resources within the same physical availability zones to minimize latency and maximize throughput.
 
 - **Optimize for smaller workload scopes:** Colocate applications and databases in the same virtual network if you have a limited number of Oracle databases that serve a small application portfolio that a single team manages. This approach reduces latency and simplifies the network design.
 

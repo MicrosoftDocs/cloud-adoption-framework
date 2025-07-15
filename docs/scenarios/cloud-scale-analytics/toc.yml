@@ -145,9 +145,7 @@ items:
       - name: Single data landing zone
         href: ./architectures/reference-architecture-adatum.md
       - name: Multiple data landing zones
-        href: ./architectures/reference-architecture-multizone.md
-      - name: Azure Synapse Analytics for landing zones
-        href: /azure/architecture/example-scenario/analytics/synapse-analytics-landing-zone 
+        href: ./architectures/reference-architecture-multizone.md 
       - name: Highly sensitive data landing zones
         href: ./architectures/reference-architecture-lamna.md
       - name: Financial institution scenario for data mesh
@@ -174,8 +172,6 @@ items:
           href: best-practices/data-lake-zones.md
         - name: Data lake key considerations
           href: ./best-practices/data-lake-key-considerations.md
-      - name: Azure Synapse Analytics implementation
-        href: ./best-practices/azure-synapse-analytics-implementation.md
       - name: Azure Machine Learning implementation
         items:
         - name: Implementation
@@ -216,8 +212,6 @@ items:
       href: /azure/stream-analytics/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Azure SQL Database
       href: /azure/azure-sql/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
-    - name: Azure Synapse Analytics
-      href: /azure/synapse-analytics/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Data Factory
       href: /azure/data-factory/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
     - name: Event Hubs

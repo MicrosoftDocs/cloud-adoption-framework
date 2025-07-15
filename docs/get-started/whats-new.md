@@ -1,9 +1,9 @@
 ---
 title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
-ms.date: 02/04/2025
+ms.date: 07/07/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
@@ -14,6 +14,34 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## June 2025
+
+### Updated articles
+
+- [Network topology and connectivity for Oracle Database@Azure - BCDR connectivity design](../scenarios/oracle-on-azure/business-continuity-disaster-recovery-connectivity-design.md): We replaced multiple complex topology options with a single, focused recommendation for global virtual network peering for cross-region connectivity. We also clarified cost terminology and streamlined the design considerations.
+- [Network topology and connectivity for Oracle Database@Azure - Core network design](../scenarios/oracle-on-azure/core-network-design.md): We clarified patching processes, provided clearer network security group management recommendations, and added guidance about the five Oracle-delegated subnet limit for each region.
+- [Network topology and connectivity for Oracle Database@Azure - Migration connectivity design](../scenarios/oracle-on-azure/migration-connectivity-design.md): We made updates to improve clarity and accuracy and refined the guidance about capacity planning and connectivity effects in the design considerations and recommendations sections.
+- [Create and scale Azure subscriptions](../ready/azure-best-practices/initial-subscriptions.md): We added comprehensive subscription life cycle management guidance that includes new sections about subscription policies, governance, scaling strategies with automation and templates, and ongoing monitoring.
+- [Define your naming convention](../ready/azure-best-practices/resource-naming.md): We made significant structural and content updates to explain the importance of naming conventions and understanding Azure resource names.
+- [Define your tagging strategy](../ready/azure-best-practices/resource-tagging.md): We added a comprehensive resource tagging approach that includes new sections about how to define tagging requirements, implement consistent tagging by using Azure policies and security considerations, and apply foundational tagging categories.
+- [Organize your Azure resources effectively](../ready/azure-setup-guide/organize-resources.md): We reorganized the content and added links to best practices for resource tagging strategies and organization.
+- [Deploy Azure App Service at scale with landing zone accelerator](../scenarios/app-platform/app-services/landing-zone-accelerator.md): We added more detailed, process-oriented guidance and step-by-step recommendations for flexible implementation and customization. We also added a new architecture diagram that shows Azure Front Door and App Service Environment v3 integration.
+- [Microsoft Cloud Adoption Framework for Azure](../overview.md): We streamlined this article to focus on why you should use the framework, who should use the framework, and how to use the framework. We also added a new section on cloud adoption scenarios.
+- [Azure high-performance computing (HPC) landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md): We made updates to improve accuracy and added links to instructions about how to deploy the HPC landing zone accelerator.
+- [Compute large-scale HPC application workloads in Azure Virtual Machines](../scenarios/azure-hpc/compute.md): We made updates to improve accuracy, updated version numbers, and added links. We also consolidated the **Next steps** section.
+- [Azure landing zone for HPC](../scenarios/azure-hpc/ready.md): We updated links, made changes to improve accuracy, and updated AzHop references to Azure CycleCloud Workspace for Slurm.
+- [Capacity planning for Oracle workloads on Azure Virtual Machines](../scenarios/oracle-on-azure/oracle-capacity-planning.md): We made changes to reflect the latest Azure capabilities and best practices for Oracle workload capacity planning, with specific emphasis on newer virtual machine (VM) series and storage technologies.
+- [Manage modern application platform solutions for optimal performance and reliability](../scenarios/app-platform/manage.md): We made significant changes to this article to provide a more practical and comprehensive approach to managing modern application platforms. We also clarified the implementation guidance and added specific Azure tooling recommendations.
+- [Select Azure regions](../ready/azure-setup-guide/regions.md): We updated the Azure region selection section with clearer decision-making criteria and reliability, capability, and cost considerations.
+- [Azure setup guide overview](../ready/azure-setup-guide/index.md): We removed Azure portal integration and interactive elements and replaced the checklist format with a comprehensive table that describes each step in the Azure setup guide.
+- [AI strategy](../scenarios/ai/strategy.md): We provided a more comprehensive and strategic approach to AI adoption by adding clearer implementation steps and enhanced guidance for data strategy and responsible AI practices.
+- [Identity and access management recommendations for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-identity-and-access-management.md): We added more comprehensive, actionable guidance for implementing identity and access management, including a new section for single sign-on and updated design considerations.
+- [Storage considerations for AKS](../scenarios/app-platform/aks/storage.md): We made updates to streamline the content and improve technical accuracy. We also added sections for Azure Container Storage.
+- [Enterprise-scale support for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md): We reorganized the content in this article and made minor edits.
+- [Establish an AI Center of Excellence](../scenarios/ai/center-of-excellence.md): We added specific steps, detailed role definitions, organizational integration recommendations, and maturity-based operational evolution to provide a more strategic approach to establishing and operating an AI Center of Excellence.
+- [Select Azure platform as a service (PaaS) solutions for AI](../scenarios/ai/platform/resource-selection.md): We updated resource recommendations to include Azure AI Foundry Agent Service and streamlined the guidance to present Azure AI Foundry as the comprehensive solution and Azure OpenAI for specific model access needs.
+- [How to adopt the cloud](../adopt/index.md): We added links to the **Next steps** section for a typical cloud adoption journey.
 
 ## May 2025
 
@@ -61,7 +89,7 @@ This month, we made significant updates to the Manage methodology. The Manage me
 
 ### New articles
 
-- [Network topology and connectivity for Oracle Database@Azure - Application connectivity design](../scenarios/oracle-on-azure/application-connectivity-design.md): Learn how to establish direct connectivity between database and application virtual machines (VMs) in Oracle IaaS environments. Explore the importance of secure and efficient network configurations to ensure seamless communication and optimal performance.
+- [Network topology and connectivity for Oracle Database@Azure - Application connectivity design](../scenarios/oracle-on-azure/application-connectivity-design.md): Learn how to establish direct connectivity between database and application VMs in Oracle IaaS environments. Explore the importance of secure and efficient network configurations to ensure seamless communication and optimal performance.
 - [Network topology and connectivity for Oracle Database@Azure - BCDR connectivity design](../scenarios/oracle-on-azure/business-continuity-disaster-recovery-connectivity-design.md): Explore comprehensive guidance on designing network connectivity for high availability and disaster recovery of Oracle Exadata Database@Azure deployments. Learn about redundancy strategies both within a single region and across multiple regions, emphasizing the use of Azure and OCI networking, availability zones, and Data Guard configurations.
 - [Network topology and connectivity for Oracle Database@Azure - Core network design](../scenarios/oracle-on-azure/core-network-design.md): Find essential guidance on designing the core network for Oracle Exadata Database@Azure, including key networking concepts, like the unique architecture of Oracle Database@Azure, and design considerations such as availability zone selection, subnet sizing, and network security group configuration.
 - [Network topology and connectivity for Oracle Database@Azure - Migration connectivity design](../scenarios/oracle-on-azure/migration-connectivity-design.md): Learn how to design connectivity solutions for Oracle Infrastructure as a Service (IaaS) migration scenarios. Explore best practices for ensuring secure, reliable, and efficient network architectures to facilitate the migration process.
@@ -115,7 +143,7 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 - [Identity and access management for SAP on Azure](../scenarios/sap/eslz-identity-and-access-management.md): Learn about securing Network File System (NFS) communication and Remote Function Call (RFC) connections, as well as SAP user governance and provisioning. Explore new recommendations for implementing single sign-on (SSO) with various SAP applications using Microsoft Entra ID.
 - [Network topology and connectivity for Azure Arc-enabled servers](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md): Explore new guidance on Azure Arc Gateway including instructions for defining agent connectivity methods.
 - [Organize your Azure resources effectively](../ready/azure-setup-guide/organize-resources.md): Find updated links for management group design, subscription considerations, and tagging strategy. Updates emphasize the importance of applying critical settings at higher levels and project-specific requirements at lower levels, and include additional details on naming conventions and resource tagging to enhance resource identification and management.
-- [Review product migration scenarios](../migrate/scenarios.md): Explore the new Google Cloud Platform scenario for migrating virtual machines to Azure.
+- [Review product migration scenarios](../migrate/scenarios.md): Explore the new Google Cloud Platform scenario for migrating VMs to Azure.
 
 #### AI Adoption updates
 
@@ -256,7 +284,7 @@ We introduced new articles that provide guidance on integrating SAP and Power Pl
 
 ##### AI workloads on Azure infrastructure (IaaS)
 
-- [Compute recommendations](../scenarios/ai/infrastructure/compute.md): Learn how to select virtual machines, images, and orchestration solutions to optimize AI workloads on Azure. See recommendations for training and inferencing AI models, managing costs, and using containers for scalable AI solutions.
+- [Compute recommendations](../scenarios/ai/infrastructure/compute.md): Learn how to select VMs, images, and orchestration solutions to optimize AI workloads on Azure. See recommendations for training and inferencing AI models, managing costs, and using containers for scalable AI solutions.
 - [Implementation options](../scenarios/ai/infrastructure/cycle-cloud.md): See recommendations for deploying AI workloads using Azure CycleCloud and Slurm. This article covers cluster creation, dynamic management, and infrastructure control, offering guidelines and architecture for efficient AI operations on Azure IaaS.
 - [Governance recommendations](../scenarios/ai/infrastructure/governance.md): Explore guidelines for managing resources, controlling costs, ensuring security, and maintaining operational consistency for AI workloads on Azure.
 - [Management recommendations](../scenarios/ai/infrastructure/management.md): Learn strategies for effectively managing AI workloads on Azure by emphasizing continuous monitoring, optimizing practices, and establishing robust backup and disaster recovery plans.
@@ -347,7 +375,7 @@ This month, we introduced new articles that have guidance for Red Hat Enterprise
 - [Azure RHEL landing zone accelerator](../scenarios/app-platform/azure-red-hat-enterprise-linux/landing-zone-accelerator.md): Learn how to use the RHEL landing zone accelerator to create a consistent, repeatable, and secure environment deployment. Use the architectural guidance and reference implementation recommendations to accelerate the migration and deployment of RHEL-based workloads to Microsoft Azure.
 - [Identity and access management (IAM) for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/identity-access-management.md): Discover IAM considerations for your RHEL landing zone accelerator deployment. Learn how to carefully design your hybrid cloud IAM implementation to ensure smooth integration and management of your instance landscape in the Azure cloud.
 - [Business continuity and disaster recovery for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/business-continuity-disaster-recovery.md): Learn how to improve business continuity and disaster recovery for your RHEL on Azure environment. Explore recommendations that you can use to support RHEL workloads and to deploy RHEL platform-management components.
-- [Network topology and connectivity for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/network-topology-connectivity.md): Learn how to implement design considerations and recommendations for network topology and connectivity in RHEL on Azure infrastructure. See how you can deploy various RHEL platform components and roles on virtual machines (VMs) with specific sizing and redundancy as needed.
+- [Network topology and connectivity for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/network-topology-connectivity.md): Learn how to implement design considerations and recommendations for network topology and connectivity in RHEL on Azure infrastructure. See how you can deploy various RHEL platform components and roles on VMs with specific sizing and redundancy as needed.
 - [Resource organization for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/resource-organization.md): Learn key tactics for how to choose management groups and subscriptions that will help to ensure that you effectively govern and manage resources for your RHEL deployment.
 - [Security for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/security.md): See how you can design your security to target multiple areas to protect your RHEL systems. Learn how to create a secure and resilient cloud environment by implementing a strategic approach that applies both Azure and Red Hat security mechanisms.
 - [Management and monitoring for RHEL](../scenarios/app-platform/azure-red-hat-enterprise-linux/management-monitoring.md): Learn about best practices for effective management and monitoring in your RHEL on Azure infrastructure.
@@ -377,24 +405,5 @@ These files were updated to include considerations for [Azure Arc-enabled VMware
 
 - [Hybrid and multicloud migration](../scenarios/hybrid/migrate.md)
 - [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md)
-
-## June 2024
-
-### New articles
-
-- [Establish common subscription vending product lines](../ready/landing-zone/design-area/subscription-vending-product-lines.md): Give application teams the flexibility to deliver their workloads and services effectively by offering different subscription vending product lines. Implement subscription vending in your Azure landing zones to establish consistent scaling, security, and governance of Azure environments.
-
-### Updated articles
-
-- [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md): We updated this article to include Azure Arc-enabled VMware vSphere and Azure Arc-enabled System Center Virtual Machine Manager.
-- [Security, governance, and compliance disciplines for Azure VMware Solution](../scenarios/azure-vmware/eslz-security-governance-and-compliance.md): We updated this article to replace references to MMA, which is planned for deprecation. New guidance points to the Azure Monitor Agent.
-
-We updated these articles to provide the latest guidance on Azure carbon optimization:
-
-- [Sustainability considerations in your cloud strategy](../strategy/inform/sustainability.md)
-
-#### Hybrid/Azure Arc retirement
-
-We retired several articles in the Hybrid/Azure Arc scenario in the best practices area. The content was outdated and no longer relevant to the Cloud Adoption Framework.
 
 <!-- docutune:ignoreNextStep -->

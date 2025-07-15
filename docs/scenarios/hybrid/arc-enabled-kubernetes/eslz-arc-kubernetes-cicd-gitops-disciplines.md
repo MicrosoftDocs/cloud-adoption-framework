@@ -1,7 +1,7 @@
 ---
 title: CI/CD and GitOps disciplines with Azure Arc-enabled Kubernetes
 description: Learn design considerations and recommendations for CI/CD workflows using GitOps for Azure Arc-enabled Kubernetes.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 01/20/2022
 ms.topic: conceptual

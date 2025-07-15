@@ -1,5 +1,5 @@
 ---
-title: Security recommendations for AI workloads on Azure
+title: Secure Azure platform services (PaaS) for AI
 description: Learn how to secure AI workloads using Azure AI platform services (PaaS) with recommendations and best practices.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,75 +7,87 @@ ms.date: 04/30/2025
 ms.topic: conceptual
 ---
 
-# Security recommendations for AI workloads on Azure
+# Secure Azure platform services (PaaS) for AI
 
-This article offers security recommendations for organizations running AI workloads on Azure. It focuses on Azure AI platform-as-a-service (PaaS) solutions, including Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services. It covers both generative and nongenerative AI workloads.
-
-As AI becomes more integrated into business operations, protecting these resources from potential threats is crucial to maintain data integrity and compliance. Applying standardized security baselines and following well-architected frameworks helps organizations safeguard their AI infrastructure against vulnerabilities.
+This article provides security recommendations for organizations that run AI workloads on Azure. These recommendations focus on Azure AI platform-as-a-service (PaaS) solutions. Organizations must protect AI resources from potential threats to maintain data integrity and compliance. Security baselines and well-architected frameworks help organizations safeguard their AI infrastructure against vulnerabilities.
 
 ## Secure AI resources
 
-Securing AI resources means applying security baselines and best practices to protect the infrastructure used for AI workloads on Azure. This protection minimizes risks from external threats and ensures a consistent security posture across the organization.
+AI resource security requires security baselines and best practices to protect the infrastructure that supports AI workloads on Azure. This protection reduces risks from external threats and ensures consistent security across the organization. You must apply standardized security controls to maintain robust protection. Here's how:
 
-*Secure Azure AI platforms.* Standardize the application of [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for every AI resource. Follow the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/?product=popular) within the Azure Well-Architected Framework.
+1. **Apply Azure security baselines to all AI resources.** Azure security baselines provide standardized security controls that address common vulnerabilities across AI platforms. These baselines ensure consistent protection and reduce configuration errors that could expose your infrastructure. Use the [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for each AI platform you deploy.
 
-| Azure AI platform security baseline | Azure Well-Architected Framework service guide |
-| --- | --- |
-[Azure Machine Learning](/security/benchmark/azure/baselines/machine-learning-service-security-baseline) | [Azure Machine Learning](/azure/well-architected/service-guides/azure-machine-learning)
-[Azure AI Foundry](/security/benchmark/azure/baselines/azure-ai-studio-security-baseline) | |
-[Azure OpenAI](/security/benchmark/azure/baselines/azure-openai-security-baseline) | [Azure OpenAI](/azure/well-architected/service-guides/azure-openai)|
+2. **Follow Azure Well-Architected Framework security guidance.** The Azure Well-Architected Framework provides service-specific security recommendations that complement baseline controls. These guidelines address unique security considerations for each AI service and help optimize your security posture. Review and implement the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/?product=popular) for your AI platforms.
 
-## Secure the AI models
+## Secure AI models
 
-Securing AI models refers to implementing threat protection, monitoring for prompt injection risks, verifying model integrity, and centralizing governance. These practices ensure that AI models remain safe from malicious manipulation, maintain their reliability, and provide accurate results.
+AI model security protects against threats like prompt injection attacks and model manipulation that can compromise system integrity. Model security ensures AI systems provide reliable outputs and maintain organizational trust. You must implement comprehensive model protection to prevent malicious exploitation and maintain service reliability. Here's how:
 
-- *Implement threat protection for all AI models.* Use Microsoft Defender for Cloud's [AI threat protection (preview)](/azure/defender-for-cloud/ai-threat-protection) to protect AI models from threats like prompt injection attacks and model manipulation. This tool provides continuous monitoring of AI workloads, helping to detect and prevent emerging threats. Implementing this protection across all workloads ensures a consistent security posture throughout the organization.
+1. **Enable threat protection for all AI models.** Microsoft Defender for Cloud provides continuous monitoring and detection capabilities that identify emerging threats before they compromise your AI infrastructure. This protection ensures consistent security coverage across all AI workloads and reduces response time to potential attacks. Deploy [Microsoft Defender for Cloud AI threat protection](/azure/defender-for-cloud/ai-threat-protection) to monitor for prompt injection attacks, model manipulation, and other AI-specific threats.
 
-- *Monitor outputs and apply prompt shielding.* Regularly inspect the data returned by AI models to detect and mitigate risks associated with malicious or unpredictable user prompts. Implement [Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) to scan text for the risk of a user input attack on generative Al models.
+2. **Monitor outputs and apply prompt shielding.** Output monitoring detects malicious or unpredictable responses that could indicate successful attacks against your AI models. Prompt shielding prevents harmful user inputs from reaching your models and generating inappropriate responses. Implement [Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) to scan user inputs for attack patterns and regularly review model outputs for signs of compromise or manipulation.
 
-- *Ensure model verification.* Establish company-wide verification mechanisms to ensure all AI models in use are legitimate and secure. If you use open-source models, use model signatures or other verification processes to confirm the authenticity of AI models, preventing unauthorized or tampered models from being deployed.
+3. **Verify model authenticity and integrity.** Model verification ensures only legitimate and secure AI models operate in your environment. This verification prevents unauthorized or tampered models from compromising your infrastructure and maintains trust in AI outputs. Establish verification processes that check model signatures, validate source authenticity, and confirm model integrity before deployment, especially for open-source models.
 
-- *Consider using an AI Gateway.* [Azure API Management](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) (APIM) can help ensure consistent security across AI workloads. Use its built-in policies for traffic control and security enforcement. Integrate APIM with Microsoft Entra ID to centralize authentication and authorization and ensure only authorized users or applications interact with your AI models. Ensure you configure least privilege access on the [reverse proxy’s managed identity](/azure/api-management/api-management-howto-use-managed-service-identity). For more information, see [AI authentication with APIM](/azure/architecture/ai-ml/guide/azure-openai-gateway-custom-authentication#general-recommendations)
+4. **Deploy an AI gateway for centralized security.** An AI gateway provides centralized traffic control and consistent security policy enforcement across all AI workloads. This approach simplifies security management and ensures uniform protection standards throughout your organization. Use [Azure API Management as an AI gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide) to enforce authentication policies, control traffic flow, and monitor API usage patterns. Configure the gateway's [managed identity with least privilege access](/azure/api-management/api-management-howto-use-managed-service-identity) and integrate with Microsoft Entra ID for [centralized authentication](/azure/architecture/ai-ml/guide/azure-openai-gateway-custom-authentication#general-recommendations).
 
 ## Secure AI access
 
-Securing AI access includes establishing authentication and authorization controls for both management plane and external access to AI resources. Proper access management restricts resource usage to only users with verified permissions. It reduces the chances of unauthorized interactions with AI models. Strong access controls, such as role-based access and Conditional Access policies, helps protect sensitive data and maintain compliance with security standards.
+AI access controls restrict resource usage to authorized users through authentication and authorization mechanisms. Access management prevents unauthorized interactions with AI models and protects sensitive data. You must implement comprehensive access controls to maintain security compliance and reduce breach risks. Here's how:
 
-- *Organize resources and access controls.* Use distinct workspaces to organize and manage AI artifacts like datasets, models, and experiments. Workspaces centralize resource management and simplify access control. For example, use [projects](/azure/ai-studio/concepts/ai-resources#organize-work-in-projects-for-customization) within Azure AI Foundry to manage resources and permissions efficiently, facilitating collaboration while maintaining security boundaries.
+1. **Use Microsoft Entra ID for authentication instead of API keys.** Microsoft Entra ID provides centralized identity management with advanced security features that static API keys cannot offer. This approach eliminates credential management overhead and reduces security vulnerabilities from compromised keys. Replace API keys with Microsoft Entra ID authentication for [Azure AI Foundry](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), and [Azure AI Services](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id). If you must use keys, [rotate keys](/azure/ai-services/rotate-keys) regularly and audit access.
 
-- *Use Microsoft Entra ID for authentication.* Wherever possible, eliminate static API keys in favor of Microsoft Entra ID for authentication. This step enhances security through centralized identity management and reduces secret management overhead. Also limit the distribution of API keys. Instead, prefer identities in Microsoft Entra ID over API keys for authentication. Audit the list of individuals with API key access to ensure it's current. For authentication guidance, see [Azure AI Foundry](/azure/ai-studio/concepts/rbac-ai-studio), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), [Azure AI services](/azure/ai-services/authentication), [Azure Machine Learning](/azure/machine-learning/how-to-setup-authentication).
+2. **Maintain an inventory of AI agents.** An accurate inventory of AI agent identities provides the foundation for access management and policy enforcement. This inventory prevents shadow AI deployments and ensures all agents follow security standards. Use [Microsoft Entra Agent ID](/entra/identity/monitoring-health/concept-sign-ins#microsoft-entra-agent-id) to view all AI agents created through Azure AI Foundry and Copilot Studio.
 
-- *Configure authentication.* Enable [multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa) (MFA) and prefer secondary administrative accounts or just-in-time access with [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) for sensitive accounts. Limit control plane access using services like Azure Bastion as secure entry points into private networks.
+3. **Configure multifactor authentication and privileged access.** Multifactor authentication adds an essential security layer that protects against credential compromise. Privileged access controls limit administrative exposure and reduce attack surfaces. Enable [multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa) for all users and implement [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) for administrative accounts to provide just-in-time access.
 
-- *Use Conditional Access Policies.* Implement [risk-based Conditional Access policies](/entra/id-protection/howto-identity-protection-configure-risk-policies) that respond to unusual sign-in activity or suspicious behavior. Use signals like user location, device state, and sign-in behavior to trigger extra verification steps. Require MFA for accessing critical AI resources to enhance security. Restrict access to AI infrastructure based on geographic locations or trusted IP ranges. Ensure that only compliant devices (those meeting security requirements) can access AI resources.
+4. **Implement Conditional Access policies.** Conditional Access policies provide adaptive security that responds to risk indicators and context. These policies prevent unauthorized access while maintaining user productivity through intelligent access decisions. Configure [risk-based Conditional Access policies](/entra/id-protection/howto-identity-protection-configure-risk-policies) that require additional verification for unusual sign-in activity, restrict access by geographic location, and ensure only compliant devices access AI resources.
 
-- *Configure least privilege access.* Configure least privilege access by implementing role-based access control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine-tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access necessary to perform their tasks. Regularly review and adjust permissions to prevent privilege creep. Refer to the below table for an example of permissions for different roles:
+5. **Apply least privilege access principles.** Least privilege access minimizes security exposure by granting only necessary permissions for specific roles. This approach reduces the impact of potential breaches and prevents unauthorized resource access. Use [Azure role-based access control](/azure/ai-studio/concepts/rbac-ai-studio) to assign appropriate permissions based on job responsibilities and review access regularly to prevent privilege escalation.
 
-    | Role              | Example permissions             |
-    |-------------------|-------------------------|
-    | Data scientists   | Read/write access to data storage, permission to run training jobs, and access to model training environments. |
-    | AI developers     | Access to development environments, deployment permissions, and the ability to modify AI applications.          |
-    | IT administrators | Full access to manage infrastructure, network configurations, and security policies.                          |
+6. **Secure service-to-service communication.** Service-to-service authentication eliminates credential management complexity while providing secure communication channels. This approach reduces security risks from stored credentials and simplifies access management. Use [managed identity](/entra/identity/managed-identities-azure-resources/overview) to authenticate Azure services without managing credentials.
 
-- *Secure Azure service-to-service interactions.* Use [managed identity](/entra/identity/managed-identities-azure-resources/overview) to allow Azure services to authenticate to each other without managing credentials.
+7. **Control external access to AI endpoints.** External access controls ensure only authorized clients interact with AI models and provide comprehensive monitoring capabilities. This protection prevents unauthorized model usage and maintains service availability. Require Microsoft Entra ID authentication for AI model endpoints and consider Azure API Management as an AI gateway to enforce access policies and monitor usage patterns.
 
-- *Secure external access to AI model endpoints.* Require clients to authenticate using Microsoft Entra ID when accessing AI model endpoints. Consider using Azure API Management as an AI gateway in front of AI model endpoints to enforce access policies, control usage, and provide monitoring capabilities.
+8. **Use Azure AI Foundry Management Center for governance.** Centralized management provides consistent access controls and resource governance across your AI infrastructure. This centralization ensures compliance with organizational standards and simplifies administrative overhead. Use the management center to control access to AI resources, manage quotas, and enforce governance policies.
 
-- *Utilize the Azure AI Foundry Management Center.* Use the management center to manage access to AI resources, view and manage quotas, and govern access to comply with organizational standards.
+## Secure AI data
+
+Securing AI data means implementing data boundaries and access controls to prevent compliance violations and privacy breaches. You must implement strict data governance to ensure each AI application processes only appropriate datasets. Here's how:
+
+1. **Define data boundaries based on user access levels.** Data boundaries establish clear separation between different information types based on user permissions and application scope. This separation prevents AI applications from exposing sensitive data to unauthorized users. Create distinct datasets for employee-facing applications (internal data), customer-facing applications (customer data), and public-facing applications (public data only).
+
+2. **Implement dataset isolation for different AI applications.** Dataset isolation ensures each AI workload operates within its designated data environment without cross-contamination. This isolation reduces data leakage risks between applications with different security requirements. Use separate Azure storage accounts, databases, or data lakes for different AI applications, and configure access controls to prevent unauthorized cross-dataset access.
+
+3. **Configure role-based data access controls.** Role-based controls ensure users and applications access only data appropriate for their function and clearance level. This approach reduces privilege escalation risks and unauthorized data exposure. Implement Azure RBAC policies that align data access permissions with user roles and application requirements.
+
+4. **Use Microsoft Purview for data governance.** Microsoft Purview provides centralized data discovery, classification, and compliance management across your AI ecosystem. This tool maintains visibility into data usage and ensures compliance with organizational policies. Deploy [Microsoft Purview for Azure AI services](/purview/ai-azure-services) and [AI agents](/purview/ai-agents) to monitor data lineage, classify sensitive information, and enforce data governance policies.
 
 ## Secure AI execution
 
-Securing AI execution involves safeguarding the processes by which AI agents, such as [virtual assistants](/azure/ai-services/openai/how-to/assistant) or [autonomous agents](/azure/cosmos-db/ai-agents), run code in response to user requests. Isolate the execution environments, conduct code reviews, and set resource limits. These measures help ensure that these executions don't compromise system stability or security. These practices prevent malicious activities and protect the integrity of the systems in which AI agents operate, allowing them to function reliably within a secure framework.
+AI execution security protects against malicious code execution when AI agents run user-requested operations or autonomous processes. Execution security prevents system compromise and maintains infrastructure stability. You must implement comprehensive execution controls to protect against code injection attacks and resource exhaustion. Here's how:
 
-- *Implement isolation mechanisms.* Utilize dynamic session management, such as [Dynamic Sessions](/azure/container-apps/sessions?tabs=azure-cli) in Azure Container Apps, to ensure each code execution occurs in a fresh, isolated environment that is destroyed after use.
+1. **Isolate AI execution environments.** Environment isolation ensures each code execution operates in a controlled space that cannot affect other system components. This isolation prevents malicious code from compromising host systems or accessing unauthorized resources. Use [Dynamic Sessions in Azure Container Apps](/azure/container-apps/sessions?tabs=azure-cli) to create fresh, isolated environments for each execution that are automatically destroyed after completion.
 
-- *Secure execution code.* Conduct thorough code reviews and testing before deploying scripts for execution by AI agents. This process helps identify and mitigate potential vulnerabilities. Use version control systems to manage code changes and ensure that only approved versions of scripts are executed.
+2. **Review and approve execution code.** Code review processes identify security vulnerabilities and malicious patterns before deployment to production environments. This review prevents compromised scripts from executing and maintains code quality standards. Conduct thorough security reviews of all scripts before deployment, use version control systems to track changes, and ensure only approved code versions execute in your AI agents.
 
-- *Implement resource limits.* Set resource limits (CPU, memory, disk usage) for code execution environments to prevent any single execution from consuming excessive resources and potentially disrupting other services. Define execution timeouts to ensure that long-running or potentially stuck processes are terminated automatically.
+3. **Configure resource limits and timeouts.** Resource limits prevent individual executions from consuming excessive system resources that could disrupt other services. These controls maintain system stability and prevent denial-of-service conditions. Set CPU, memory, and disk usage limits for execution environments and configure automatic timeouts to terminate long-running or stuck processes.
 
-For more information, see [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant) , [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions) , and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
+4. **Monitor execution activity.** Execution monitoring provides visibility into AI agent behavior and helps detect malicious or unusual activity patterns. This monitoring enables rapid response to security incidents and maintains operational awareness. Log all execution activities, monitor resource usage patterns, and configure alerts for suspicious behavior or resource consumption anomalies.
+
+For more information, see [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview), [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant), [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions), and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
+
+## Azure resources
+
+| Category | Tool | Description |
+|----------|------|-------------|
+| Security baselines | [Azure Machine Learning security baseline](/security/benchmark/azure/baselines/machine-learning-service-security-baseline) | Provides standardized security controls for Azure Machine Learning deployments |
+| Security baselines | [Azure AI Foundry security baseline](/security/benchmark/azure/baselines/azure-ai-studio-security-baseline) | Offers security controls specific to Azure AI Foundry environments |
+| Security baselines | [Azure OpenAI security baseline](/security/benchmark/azure/baselines/azure-openai-security-baseline) | Delivers security controls tailored for Azure OpenAI services |
+| Architecture guidance | [Azure Machine Learning service guide](/azure/well-architected/service-guides/azure-machine-learning) | Provides comprehensive security recommendations for Azure Machine Learning |
+| Architecture guidance | [Azure OpenAI service guide](/azure/well-architected/service-guides/azure-openai) | Offers security best practices specific to Azure OpenAI implementations |
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Govern PaaS AI](../govern.md)
+> [Management](./management.md)

@@ -34,9 +34,9 @@ highlightedContent:
     - title: Azure landing zone
       itemType: how-to-guide
       url: ./ready/landing-zone/index.md    
-    - title: Adoption scenarios 
-      itemType: overview
-      url: ./overview.md#cloud-adoption-scenarios
+    - title: Azure credits for startups
+      itemType: get-started
+      url: https://www.microsoft.com/startups
 
 # Card with summary style
 

@@ -1,7 +1,7 @@
 ---
 title: Understand cloud platform functions
 description: Understand cloud platform functions, including the source, the scope, and the deliverable.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/15/2020
 ms.update-cycle: 1095-days
@@ -39,7 +39,6 @@ The skills needed to provide full platform functionality can be provided by:
 - [Financial models](../strategy/cloud-migration-business-case.md)
 - [Motivations for cloud adoption](../strategy/motivations.md)
 - [Business risks](../govern/policy-compliance/risk-tolerance.md)
-- [Rationalization of the digital estate](../digital-estate/index.md)
 
 ## Minimum scope
 

@@ -1,7 +1,7 @@
 ---
 title: Application development for innovative applications
 description: Learn how to use citizen developers in your application development. Create applications that shape data and create experiences that engage customers and support innovation.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/02/2021
 ms.topic: conceptual
@@ -67,8 +67,6 @@ A cloud-native solution allows centralized development teams to maintain control
 ## Innovate through existing solutions
 
 Many customer hypotheses can best be delivered by a modernized version of an existing solution. This can happen when the current business logic comes close to meeting customer needs.
-
-Most forms of modernization, including refactoring, are included in the [Migrate methodology](../../migrate/index.md) within the Cloud Adoption Framework. That methodology guides cloud adoption teams through the process of migrating a [digital estate](../../digital-estate/index.md) to the cloud. The [Azure migration guide](../../migrate/azure-migration-guide/index.md) provides a streamlined approach to the same methodology, which is suitable for a small number of workloads or even a single application.
 
 After a solution has been migrated and modernized, there are a variety of ways it can be used to create new, innovative application solutions to meet customer needs. For example, [citizen developers](#citizen-developers) could test hypotheses, or professional developers could create [intelligent experiences](#intelligent-experiences) or [cloud-native solutions](#cloud-native-solutions).
 

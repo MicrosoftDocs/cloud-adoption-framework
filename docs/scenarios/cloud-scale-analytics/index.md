@@ -1,8 +1,8 @@
 ---
 title: Cloud-scale analytics - Microsoft Cloud Adoption Framework for Azure
 description: Gain an overview of an end-to-end scenario for cloud-scale analytics, with a focus on Azure implementation.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank, build-2023, build-2023-dataai
@@ -78,7 +78,6 @@ The following advanced, level-300+ articles in the **cloud-scale analytics** tab
 
 - [Data ingestion for cloud-scale analytics](best-practices/data-ingestion.md)
 - [Data lake storage for cloud-scale analytics](best-practices/data-lake-overview.md)
-- [Use Azure Synapse Analytics for cloud-scale analytics](best-practices/azure-synapse-analytics-implementation.md)
 
 ## Featured Azure products
 

@@ -1,8 +1,8 @@
 ---
 title: Authorization for Cloud-Scale Analytics in Azure
 description: Learn about the best practices, including data management and role-based access control, for authorization in cloud-scale analytics environments in Azure.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 01/31/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
@@ -106,16 +106,13 @@ The following best practices can help you get started with RBAC:
 
 Implementing effective RBAC is crucial for maintaining security and manageability in your analytics environment. This section provides best practices for using Microsoft Entra groups and built-in roles and for avoiding direct user permissions to help ensure a streamlined and secure access management process.
 
-Cloud-scale analytics environments typically contain multiple types of storage solutions, including PostgreSQL, MySQL, SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+Cloud-scale analytics environments typically contain multiple types of storage solutions, including PostgreSQL, MySQL, SQL Database, and Azure SQL Managed Instance.
 
 - **Use Microsoft Entra groups instead of individual user accounts.** We recommend that you use Microsoft Entra groups to secure database objects instead of individual Microsoft Entra user accounts. Use Microsoft Entra groups to authenticate users and protect database objects. Similar to the data lake pattern, you can use your data application onboarding to create these groups.
 
 - **Use built-in roles to manage access.** Create custom roles only if you need to meet specific requirements or if built-in roles grant too many permissions.
 
 - **Refrain from assigning permissions to individual users.** Use roles, like database or server roles, consistently instead. Roles help with reporting and troubleshooting permissions. Azure RBAC only supports permission assignment via roles.
-
-> [!NOTE]
-> Data applications can store sensitive data products in SQL Database, SQL Managed Instance, or Azure Synapse Analytics pools. For more information, see [Data privacy for cloud-scale analytics in Azure](./secure-data-privacy.md).
 
 ### Data Lake Storage access control best practices
 

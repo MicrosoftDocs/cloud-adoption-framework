@@ -1,7 +1,7 @@
 ---
 title: Inventory and visibility considerations
 description: Learn how to manage inventory and visibility in your Azure platform services.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/20/2025
 ms.update-cycle: 180-days

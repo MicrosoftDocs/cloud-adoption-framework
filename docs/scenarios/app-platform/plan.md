@@ -1,7 +1,7 @@
 ---
 title: Plan for modern application platforms
 description: Develop a plan for cloud adoption with a focus on modern application platform data points and activities.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 03/01/2021
 ms.topic: conceptual
@@ -12,18 +12,13 @@ ms.custom: think-tank, e2e-aks
 
 The [Plan methodology](../../plan/index.md) of the Cloud Adoption Framework helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud.
 
-Application of the Plan methodology focuses on the [five Rs of rationalizing your digital estate](../../digital-estate/5-rs-of-rationalization.md). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
+Application of the Plan methodology focuses on the [cloud migration strategies](../../plan/select-cloud-migration-strategy.md). The most common path to the cloud focuses on speed, efficiency, and repeatability of the migration and modernization processes. From the five Rs, planning usually prioritizes rehost options with limited parallel support for rearchitect and rebuild options.
 
 ## Digital estate
 
-When planning for your digital estate, you'll want to [gather inventory data](../../digital-estate/inventory.md) and [rationalization your estate](../../digital-estate/rationalize.md). In a container adoption plan, it's vital all assets, for example VMs, data, and applications, are grouped by the workload they support. Once the grouping and basic rationalization is complete, you can evaluate these workloads to determine the package and rehost or rearchitect options.
+When planning for your digital estate, you'll want to [gather inventory data](../../plan/discover-existing-workload-inventory.md) and [select your migration strategy](../../plan/select-cloud-migration-strategy.md). In a container adoption plan, it's vital all assets, for example VMs, data, and applications, are grouped by the workload they support. Once the grouping and basic rationalization is complete, you can evaluate these workloads to determine the package and rehost or rearchitect options.
 
-The standard [cloud adoption plan template](../../plan/template.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
-
-> [!CAUTION]
-> This article assumes the reader is already following the best practices outlined in the article series on [building a cloud adoption plan in Azure DevOps](../../plan/plan-intro.md). If you are tracking your cloud adoption plan in spreadsheet or other project tracking tools, the following sections are still applicable but the actionable steps of adding data to your plan would need to be adjusted.
-
-<!-- -->
+The standard [cloud adoption plan template](../../plan/migration-adoption-plan.md) accounts for the types of work required in a typical cloud adoption effort. But you will need to add tasks to your plan for packaging the workload into containers and orchestration of the container provisioning.
 
 > [!WARNING]
 > Incorporating a modern application platform strategy into standard migration processes (or a migration factory) will require mature implementation of tasks associated with [designing workload architectures prior to migration](../../migrate/migration-considerations/assess/architect.md). Continuing with this strategy without those tasks will delay the migration effort and could lead to poor architecture decisions for the deployed container hosts and supporting workloads.
@@ -44,7 +39,7 @@ To begin aligning the strategy and plan, identify any workloads that are likely 
 > [!NOTE]
 > The following list of considerations should only be documented for migration candidates identified by the criteria above.
 
-When building a cloud adoption plan, each workload is documented following the guidance in [Define and prioritize workloads](../../plan/workloads.md). Any workload which are candidates for the modern application platform scenario will require additional information to guide execution of the plan. That article highlights the importance of [documenting business and technical inputs to define the workload](../../plan/workloads.md?#define-workloads). For modern application platform candidates, the following data points should be added to the definition of the workload.
+When building a cloud adoption plan, each workload is documented following the guidance in [Define and prioritize workloads](../../plan/discover-existing-workload-inventory.md). Any workloads which are candidates for the modern application platform scenario will require additional information to guide execution of the plan. [Document business](../../plan/discover-existing-workload-inventory.md#document-workload-business-details) and [technical inputs](../../plan/assess-workloads-for-cloud-migration.md) for each workload. For modern application platform candidates, the following data points should be added to the definition of the workload.
 
 ### Business inputs
 

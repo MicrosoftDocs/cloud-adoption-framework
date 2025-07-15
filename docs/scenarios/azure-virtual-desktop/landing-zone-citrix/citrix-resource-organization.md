@@ -45,4 +45,4 @@ You can start with a single subscription and switch to a multiple-subscription a
 ## Next steps
 
 - [Network topology and connectivity for Citrix on Azure](./citrix-network-topology-connectivity.md)
-- [Naming and tagging in Azure](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+- [Naming and tagging in Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)

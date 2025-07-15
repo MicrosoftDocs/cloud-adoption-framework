@@ -1,7 +1,7 @@
 ---
 title: Classify workloads for a migration
 description: Learn how to classify your workloads based on the data sensitivity during a pre-migration assessment by using the Cloud Adoption Framework.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/05/2024
 ms.topic: conceptual

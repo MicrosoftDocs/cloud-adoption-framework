@@ -1,7 +1,7 @@
 ---
 title: Track costs across business units, environments, or projects
 description: Learn how to create tracking mechanisms to monitor costs using the Cloud Adoption Framework for Azure.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/07/2024
 ms.topic: conceptual
@@ -24,7 +24,7 @@ Assets, which are also known as resources, include all virtual machines, data so
 
 *Tagging* is an easy way to classify assets. Tagging associates metadata to an asset. That metadata can be used to classify the asset based on various data points. Tagging is a fundamental part of any well-managed environment, and it's necessary for establishing proper governance of any environment.
 
-The first step is to [develop naming and tagging standards](../azure-best-practices/naming-and-tagging.md). The second step is to ensure that the tagging standard is consistently applied by [establishing a governance MVP](../../govern/guides/complex/index.md).
+The first step is to develop a [naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) and [tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging). The second step is to ensure that the tagging standard is consistently applied by [automating cost governance](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance).
 
 When tags are used to classify assets as part of a cost management effort, companies often need the following tags: business unit, department, billing code, geography, environment, project, and workload or application categorization. [Microsoft Cost Management](/azure/cost-management-billing/), a tool for setting budgets and gaining visibility into cloud costs for Azure or AWS, can use these tags to create different views of cost data.
 
@@ -60,15 +60,15 @@ Cost Management supports the following built-in roles for each scope:
 - [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor): Can view costs and manage cost configuration.
 - [Cost Management Reader](/azure/role-based-access-control/built-in-roles#cost-management-reader): Can view cost data and configuration.
 
-As a general best practice, members of all teams should be assigned the role of Cost Management Contributor. This role grants access to create and manage budgets to more effectively monitor and report on costs. But members of the [cloud strategy team](../../organize/cloud-strategy.md) should be set to Cost Management Reader only, because they're not involved in setting budgets within the Cost Management tool.
+As a general best practice, members of all teams should be assigned the role of Cost Management Contributor. This role grants access to create and manage budgets to more effectively monitor and report on costs. But members of the cloud strategy team should be set to Cost Management Reader only, because they're not involved in setting budgets within the Cost Management tool.
 
 ### Scope
 
 The following scope and role settings will create the required visibility into cost management. This best practice might require minor changes to align to asset organization decisions.
 
-- [Cloud adoption team](../../organize/cloud-adoption.md). As cloud adoption teams primarily focus on implementation of cloud technologies, cost management access to production environments is not typically required. By virtue of normally having Contributor access to non-production or Sandbox subscriptions, this team would inherently have access to cost management data for those subscriptions.
+- Cloud adoption team. As cloud adoption teams primarily focus on implementation of cloud technologies, cost management access to production environments is not typically required. By virtue of normally having Contributor access to non-production or Sandbox subscriptions, this team would inherently have access to cost management data for those subscriptions.
 
-- [Cloud strategy team](../../organize/cloud-strategy.md). Responsibilities for tracking costs across multiple projects and business units require [Cost Management Reader](/azure/role-based-access-control/built-in-roles#cost-management-reader) access at the root level of the management group hierarchy.
+- Cloud strategy team. Responsibilities for tracking costs across multiple projects and business units require [Cost Management Reader](/azure/role-based-access-control/built-in-roles#cost-management-reader) access at the root level of the management group hierarchy.
 
   - Assign Cost Management Reader access to this team at the management group, which ensures ongoing visibility into all deployments associated with the subscriptions governed by that management group hierarchy.
 

@@ -1,7 +1,7 @@
 ---
 title: Design workload architecture before migration
 description: Learn how to use the Cloud Adoption Framework for Azure to define the intended cloud architecture of a workload before you begin migration.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/09/2024
 ms.topic: conceptual
@@ -12,8 +12,6 @@ ms.collection:
 # Design workload architecture before migration
 
 This article describes the process and considerations for designing the intended migrated state of a workload in the cloud. The article reviews activities that are part of defining a workload's architecture within an iteration.
-
-The article about [incremental rationalization](../../digital-estate/rationalize.md) indicates that some architectural assumptions are part of any business transformation that includes a migration. This article clarifies typical assumptions. It also points to a few roadblocks that you can avoid, and it identifies opportunities to accelerate business value by challenging architectural assumptions. This incremental model for designing architecture helps teams move faster and obtain business outcomes sooner.
 
 ## Base architecture design on common assumptions
 

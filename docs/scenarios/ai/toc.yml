@@ -13,18 +13,16 @@ items:
       items:
       - name: AI architectures
         href: platform/architectures.md
-      - name: AI design areas
-        items:
-          - name: Resource selection
-            href: platform/resource-selection.md
-          - name: Networking
-            href: platform/networking.md
-          - name: Governance
-            href: platform/governance.md
-          - name: Management
-            href: platform/management.md
-          - name: Security
-            href: platform/security.md
+      - name: Resource selection
+        href: platform/resource-selection.md
+      - name: Networking
+        href: platform/networking.md
+      - name: Governance
+        href: platform/governance.md
+      - name: Security
+        href: platform/security.md
+      - name: Management
+        href: platform/management.md
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Implementation options
@@ -47,10 +45,10 @@ items:
         href: infrastructure/well-architected.md
   - name: Govern AI
     href: govern.md
-  - name: Manage AI 
-    href: manage.md  
   - name: Secure AI
     href: secure.md
+  - name: Manage AI 
+    href: manage.md  
   - name: Additional resources
     items:
       - name: AI Center of Excellence

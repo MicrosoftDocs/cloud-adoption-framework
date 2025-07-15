@@ -2,7 +2,7 @@
 title: Assess Your Cloud Adoption Strategy
 description: Learn how to assess your existing cloud adoption strategy so that you can identify gaps in your strategy and take action to improve.
 ms.author: pnp
-author: Zimmergren
+author: stephen-sumner
 ms.topic: conceptual
 ms.date: 02/03/2025
 ---

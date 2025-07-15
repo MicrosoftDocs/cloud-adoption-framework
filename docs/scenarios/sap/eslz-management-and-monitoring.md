@@ -1,7 +1,7 @@
 ---
 title: Operations baseline for SAP on Azure
 description: Learn about design considerations and recommendations for managing and monitoring SAP on Azure.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 01/04/2023
 ms.topic: conceptual

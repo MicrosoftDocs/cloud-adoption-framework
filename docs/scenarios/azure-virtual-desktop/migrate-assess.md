@@ -1,7 +1,7 @@
 ---
 title: Assess Azure Virtual Desktop
 description: Use the Cloud Adoption Framework for Azure to assess your Azure Virtual Desktop migration scenario using best practices that accelerate the migration or deployment process.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/18/2021
 ms.topic: conceptual
@@ -18,7 +18,7 @@ The Azure Virtual Desktop assessment exercise serves as a focused means of testi
 
 Each Azure Virtual Desktop assessment will evaluate a combination of a user persona, a consistent host pool of virtual machines (VMs), end-user applications and data, and user profiles (data). During the assessment, the team's objective is to use data to answer the questions in this section. The answers will shape the actual scope of the deployment and release of the Azure Virtual Desktop migration.
 
-The answers to these questions start with data. In the Plan methodology, specifically [best practices](../../migrate/assess/index.md) and [digital estate assessment](../../digital-estate/index.md), data should already be collected and analyzed to create a migration plan. However, the questions in this specific workload assessment will likely require additional data. Data about the desktops, users, and workloads to be used by each user is required to develop an Azure Virtual Desktop deployment plan.
+The answers to these questions start with data. In the Plan methodology, specifically [best practices](../../migrate/assess/index.md) and [inventory and assessment](../../plan/discover-existing-workload-inventory.md), data should already be collected and analyzed to create a migration plan. However, the questions in this specific workload assessment will likely require additional data. Data about the desktops, users, and workloads to be used by each user is required to develop an Azure Virtual Desktop deployment plan.
 
 If you don't have the data that you require to answer all the questions in this section, an additional third-party software vendor can provide a separate discovery process to augment the data you have. [ISV Partners](/azure/migrate/migrate-services-overview#isv-integration) are also integrated with Azure Migrate within the virtual desktop infrastructure migration goals section. The vendor can help you map out a plan for Azure Virtual Desktop deployment, including personas, host pools, applications, and user profiles.
 

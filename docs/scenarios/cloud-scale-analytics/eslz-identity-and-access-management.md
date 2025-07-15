@@ -1,8 +1,8 @@
 ---
 title: Identity and Access Management for Cloud-Scale Analytics
 description: Learn how this scenario can improve identity and access management for cloud-scale analytics in Azure.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 01/29/2025
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
@@ -82,7 +82,7 @@ To automate the deployment of data landing zones, the following roles are requir
         [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)
     :::column-end:::
     :::column span="3":::
-        This permission is required to share the self-hosted integration runtime that gets deployed into the `integration-rg` resource group with other data factories. It's also required to assign the Azure Data Factory and Azure Synapse Analytics managed identities access on the respective storage account file systems.
+        This permission is required to share the self-hosted integration runtime that gets deployed into the `integration-rg` resource group with other data factories. It's also required to assign the Azure Data Factory managed identities access on the respective storage account file systems.
     :::column-end:::
     :::column span="2":::
         (Resource scope) `/subscriptions/{{dataLandingZone}subscriptionId}`

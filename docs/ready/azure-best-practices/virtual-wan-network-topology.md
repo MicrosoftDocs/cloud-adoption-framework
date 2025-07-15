@@ -16,7 +16,7 @@ Explore key design considerations and recommendations for virtual wide area netw
 
 [ ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png) ](./media/virtual-wan-topology.png#lightbox)
 
-_Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture._
+_Figure 1: Virtual WAN network topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture._
 
 ## Virtual WAN network design considerations
 

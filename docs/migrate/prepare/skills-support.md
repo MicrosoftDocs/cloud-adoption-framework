@@ -1,7 +1,7 @@
 ---
 title: Get support resources and improve skills for migration projects
 description: Learn about the available training resources and skills you need for successful migration to Azure with the Cloud Adoption Framework.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/10/2024
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.collection:
 
 # Skills and support resources relevant to migration projects
 
-This article provides guidance on specific training resources to consider in preparation for your migration to Azure. It builds on the organizational skills that you learned during planning and preparing a migration journey. You might need to revisit the [planning migration articles](../../plan/index.md) to make the most of the materials in this article. For more information on organizing your training plans, see [Build technical skills](../../organize/suggested-skills.md).
+This article provides guidance on specific training resources to consider in preparation for your migration to Azure. It builds on the organizational skills that you learned during planning and preparing a migration journey. You might need to revisit the [planning migration articles](../../plan/index.md) to make the most of the materials in this article.
 
 ## Self-led learning resources
 
@@ -27,7 +27,6 @@ If you're still identifying what you need to migrate or modernize, these article
 | --- |--- |
 | [Balance the portfolio](../../strategy/balance-the-portfolio.md) | Learn how to help ensure balance and proper investment allocations across an application portfolio. |
 | [Create a business case](../../strategy/cloud-migration-business-case.md) | Learn how to create and understand the business case that drives a cloud migration effort. |
-| [Rationalize the digital estate](../../digital-estate/rationalize.md) | Learn about cloud rationalization and the process of evaluating assets to determine the best approach for hosting assets in the cloud. |
 
 ### Migration skilling resources
 
