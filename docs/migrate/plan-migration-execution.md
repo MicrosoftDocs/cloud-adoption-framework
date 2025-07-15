@@ -52,25 +52,73 @@ A data migration path defines how data moves from your current environment to Az
 
 Migration sequencing reduces risk and builds team confidence by establishing a logical order for workload migration. The sequence determines which workloads move first and how dependent systems migrate together to prevent service disruptions.
 
-1. **Organize large portfolios into migration waves.** Create migration waves when you have multiple workloads to migrate. Each wave should contain workloads with similar complexity levels, risk profiles, or technical dependencies. This approach allows you to learn from each wave and apply improvements to subsequent migrations. Migration waves also provide manageable project scopes that teams can execute successfully without overwhelming resources. For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-plan.md).
+### Organize large portfolios into migration waves
 
-2. **Validate workload criticality classifications before sequencing.** Confirm that business criticality levels accurately reflect current operations and service requirements. Use your migration adoption plan to identify all workloads in scope and review their metadata including workload owner, business unit, and technical dependencies. Engage workload owners and business stakeholders to validate criticality classifications and ensure they align with current business priorities. This validation prevents low-priority workloads from blocking critical system migrations and ensures that migration execution matches business expectations. For more information, see [Migration adoption plan](/azure/cloud-adoption-framework/plan/migration-adoption-plan#details-on-each-workload).
+A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work.
+Segment the migration portfolio into logical waves. A migration wave should include workloads with similar technical profiles, business impact, or dependency structures. This segmentation allows teams to focus on a consistent set of challenges and apply targeted solutions. Use metadata such as workload type, owner, and environment to group workloads effectively.
+Limit the number of workloads per wave. Each wave should be small enough to execute within a defined timeline but large enough to deliver meaningful progress. Smaller waves reduce risk and allow for faster feedback cycles. Larger waves may increase efficiency but require more coordination and resources.
+Sequence waves based on complexity and risk. Start with low-complexity, low-risk workloads to build confidence and refine processes. Progressively increase complexity in later waves as the team gains experience and tooling matures.
 
-3. **Prioritize non-critical workloads for early migration.** Begin with development environments, test systems, and internal applications that have flexible downtime requirements. These workloads provide low-risk opportunities to validate migration tools, test Azure configurations, and refine migration processes before tackling business-critical systems. Early wins with non-critical workloads build team confidence and reveal potential issues that you can address before migrating production systems.
+For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-plan.md).
 
-4. **Group dependent workloads into the same migration wave.** Migrate interdependent systems together to prevent broken integrations and service disruptions. Use dependency mapping tools like Azure Migrate to discover integration points, shared databases, and API connections between workloads. Group these dependent systems into single migration waves to maintain functionality during the transition. This approach reduces the complexity of managing hybrid environments and minimizes the risk of service outages. [Map internal and external dependencies](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration#map-internal-and-external-dependencies).
+### Validate workload criticality classifications before sequencing**
 
-5. **Minimize hybrid environment duration for dependent workloads.** When you cannot migrate all dependent workloads simultaneously, create specific plans to manage the hybrid state. Document integration gaps and implement mitigation strategies such as API proxies, database replication, or temporary bridging solutions. Define clear timelines to complete the full migration of dependent workloads and assign dedicated teams to manage both on-premises and cloud environments during the transition. Use Azure Monitor to maintain visibility across hybrid boundaries and validate that systems can recover from failures.
+Workload criticality determines the business impact of downtime or failure. Accurate classification ensures that migration priorities align with business needs. You should validate criticality classifications with stakeholders before finalizing the migration sequence.
 
-6. **Establish specific migration timelines with business alignment.** Create concrete timelines that include specific dates for each migration wave and individual workload migrations. Align these schedules with business calendars to avoid peak periods such as month-end processing for financial systems or holiday seasons for retail applications. Include dependencies between tasks and build in buffer time for unexpected delays. Use project management tools to track progress and communicate timeline changes immediately to all stakeholders when delays occur.
+1. **Review workload metadata in the migration adoption plan.** Ensure metadata includes business unit, workload owner, technical dependencies, and current criticality classification. This information provides the foundation for prioritization and sequencing decisions.
 
-7. **Migrate non-production environments first for each workload.** Always migrate development, staging, and QA environments before production systems. This sequence allows you to validate the complete migration process, test application behavior in Azure, and confirm that performance meets expectations. Use non-production migrations to identify configuration issues, validate backup and recovery procedures, and train operations teams on Azure management before production cutover.
+2. **Engage business stakeholders to confirm classifications.** Collaborate with workload owners and business leaders to validate that criticality levels accurately reflect current operational priorities. This step prevents misalignment between technical execution and business expectations.
+
+3. **Update classifications based on current business impact.** Revise workload classifications to reflect their true criticality if their role has changed. This ensures that critical systems are prioritized appropriately and not delayed due to outdated assumptions. For more information, see [Migration adoption plan](/azure/cloud-adoption-framework/plan/migration-adoption-plan#details-on-each-workload).
+
+### Group dependent workloads into the same migration wave
+
+Dependencies between workloads can cause service disruptions if not migrated together. You should group interdependent systems into the same wave to maintain functionality and reduce complexity.
+
+1. **Use dependency mapping tools to identify integrations.** Tools like Azure Migrate can reveal shared databases, APIs, and service calls. This visibility is essential for accurate grouping and ensures that interdependent workloads are migrated together.
+
+2. **Create migration waves based on dependency clusters.** Group workloads that rely on each other into the same wave. This approach minimizes the need for temporary integration workarounds and reduces the risk of service disruptions during migration.
+
+3. **Validate groupings with application owners.** Confirm that all critical dependencies are captured and that the proposed wave structure supports business continuity. Collaborate with application owners to ensure alignment with operational priorities and technical requirements.
+
+For detailed guidance, see [Map internal and external dependencies](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration#map-internal-and-external-dependencies).
+
+### Minimize hybrid environment duration for dependent workloads
+
+Hybrid environments introduce complexity and risk. When full migration of dependent systems is not possible, you should minimize the duration of hybrid states and implement mitigation strategies.
+
+1. **Document integration gaps and risks.** Identify which systems remain on-premises and how they interact with cloud-based workloads. This documentation supports risk mitigation planning by providing visibility into potential challenges and dependencies.
+
+2. **Implement temporary bridging solutions.** Use API gateways, database replication, or message queues to maintain functionality during the hybrid state. These solutions should be lightweight, easy to deploy, and simple to decommission once the migration is complete.
+
+3. **Define clear timelines for full migration.** Assign owners and deadlines to complete the migration of remaining dependencies. This accountability ensures that hybrid states do not become permanent and supports progress toward full cloud adoption.
+
+### Establish specific migration timelines with business alignment
+
+Timelines provide structure and accountability. Aligning migration schedules with business calendars avoids disruption during peak periods. You should define and communicate migration timelines that reflect business priorities.
+
+1. **Create a detailed migration schedule.** Define start and end dates for each migration wave and workload. Incorporate buffer time for testing and issue resolution to ensure smooth execution. This detailed scheduling reduces the risk of delays and supports effective resource planning.
+
+2. **Align timelines with business events.** Avoid scheduling migrations during critical business periods such as financial close, product launches, or holiday seasons. This alignment minimizes the risk of business disruption and ensures stakeholder confidence.
+
+3. **Use project management tools to track progress.** Leverage tools like Azure DevOps or Microsoft Project to manage dependencies, track milestones, and communicate changes effectively. These tools provide visibility into migration progress and support proactive issue resolution.
+
+### Migrate non-production environments first for each workload
+
+Non-production environments provide a safe space to test the full migration process. You should migrate development, staging, and QA environments before production to validate readiness.
+
+1. **Sequence non-production environments ahead of production.** This order allows teams to test configurations, performance, and recovery procedures without impacting users.
+
+2. **Use non-production migrations to train operations teams.** These migrations provide hands-on experience with Azure tools and management practices.
+
+3. **Validate performance and functionality in Azure.** Confirm that applications behave as expected and meet performance targets before migrating production systems.
 
 ## Determine offline or near-zero downtime migration
 
-A workload's downtime tolerance determines the appropriate migration strategy. Workloads with flexible downtime requirements can use offline migration, which the preferred method. Offline migration simplifies the process and reduces risk of data lost. Mission-critical workloads that require continuous availability need online migration strategies that maintain operations during the transition. However, online migrations often require temporary downtime depending on the tools used and technology stack of the workload.
+A migration strategy must align with each workload’s tolerance for downtime. Offline migration is simpler and preferred when downtime is acceptable. Near-zero downtime migration is necessary for mission-critical workloads that must remain operational during the transition. You should evaluate each workload in your migration wave to determine the most suitable migration method.
 
-1. **Assess workload downtime tolerance through business requirements.** Review service level agreements (SLAs), recovery time objectives (RTOs), and business continuity plans to determine acceptable downtime periods. Work with business stakeholders to define specific downtime windows based on operational impact and customer commitments. This assessment ensures that migration timing aligns with business needs and regulatory requirements. Consider factors such as customer-facing services, revenue-generating systems, and compliance obligations when evaluating downtime tolerance.
+1. **Assess workload downtime tolerance.** Downtime tolerance varies by workload and must be defined by business impact.
+This assessment ensures migration timing aligns with operational and regulatory needs. Review SLAs, recovery time objectives (RTOs), and business continuity plans. Engage business stakeholders to define acceptable downtime windows. Consider customer-facing services, revenue-generating systems, and compliance obligations.
 
 2. **Identify workloads suitable for offline migration.** Evaluate workloads that can accommodate planned downtime during migration. These typically include development environments, test systems, internal applications, and workloads with scheduled maintenance windows. Offline migration reduces complexity by eliminating the need for real-time data synchronization and provides a cleaner cutover process. Document the acceptable downtime duration for each workload and align migration schedules with business calendars to avoid peak periods such as month-end processing or seasonal demand.
 
