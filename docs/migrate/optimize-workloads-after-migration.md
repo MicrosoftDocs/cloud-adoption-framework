@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: Optimize workloads post-migration
+description: Comprehensive guide for post-migration workload optimization in Azure, covering performance fine-tuning, cost management, monitoring validation, backup verification, user feedback collection, operations team readiness, hybrid dependency management, and architecture reviews to ensure efficient, secure, and cost-effective cloud operations.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
@@ -101,6 +101,8 @@ Here is prescriptive, actionable guidance for decommissioning old workloads afte
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> https://learn.microsoft.com/azure/cloud-adoption-framework/manage/
+[Govern](/azure/cloud-adoption-framework/govern/)
 
+[Secure](/azure/cloud-adoption-framework/secure/overview)
+
+[Manage](/azure/cloud-adoption-framework/manage/)

@@ -54,7 +54,7 @@ items:
           href: plan/assess-workloads-for-cloud-migration.md
       - name: 4. Estimate cloud costs
         href: plan/estimate-total-cost-of-ownership.md
-      - name: 5. Document your cloud adoption plan
+      - name: 5. Document adoption plan
         href: plan/document-cloud-adoption-plan.md
         
       - name: Resources
@@ -422,7 +422,7 @@ items:
         - name: 1. Plan migration execution
           href: migrate/plan-migration-execution.md
         - name: 2. Prepare workloads for migration
-          href: migrate/prepare-workloads-for-migration.md
+          href: migrate/prepare-workloads-for-cloud.md
         - name: 3. Execute migration cutover
           items:
           - name: Execute online migration cutover
