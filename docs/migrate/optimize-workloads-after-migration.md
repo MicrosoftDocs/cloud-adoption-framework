@@ -53,18 +53,17 @@ For comprehensive monitoring guidance, see [Monitor your Azure cloud estate](/az
 
 A validated backup and recovery process ensures that critical data remains protected and recoverable in the event of failure, corruption, or loss. This validation is essential to meet business continuity goals and regulatory requirements. You should follow these steps to confirm that your backup and recovery strategy is reliable, compliant, and operationally effective.
 
-1. **Verify backup jobs are configured and running successfully.** Identify mission-critical systems and ensure they are included in your backup scope. Use Azure Backup or third-party tools that support Azure workloads.
-Monitor backup job status daily. Use Azure Backup Reports in Azure Monitor or Recovery Services Vault to track job success, failures, and trends. Set up alerts for failed or missed jobs. Investigate and resolve failures immediately. Review error codes and logs to determine root causes. Common issues include network interruptions, storage limits, or misconfigured policies.
+1. **Verify backup jobs are configured and running successfully.** Backup job validation ensures that critical data protection mechanisms function reliably and meet business continuity requirements. Regular monitoring prevents data loss scenarios and maintains regulatory compliance. You should establish comprehensive backup validation processes that include scope verification, status monitoring, and failure resolution procedures.
 
-2. **Test restore procedures.** Perform test restores for critical workloads to validate recovery time objectives (RTOs) and recovery point objectives (RPOs). 
-- Document the results and update runbooks accordingly. Use Azure Backup’s “Restore” feature to recover data to a test environment. Validate that the restored data is complete and usable.
-Document test results and update runbooks. Record the time taken, data integrity, and any issues encountered. Update operational procedures to reflect lessons learned.
+    Configure backup coverage for all mission-critical systems using [Azure Backup](/azure/backup/backup-overview) or validated third-party solutions that support Azure workloads. Review backup scope to ensure all databases, file systems, and application data are included. Use [Azure Backup Reports](/azure/backup/configure-reports) in Azure Monitor or Recovery Services Vault dashboards to track job success rates, failure patterns, and backup trends across your environment. Set up automated alerts for failed or missed backup jobs to enable immediate response to issues.
 
-3. **Review backup policies for compliance.** Ensure backup retention and encryption settings align with organizational and regulatory requirements.
+2. **Test restore procedures to validate recovery objectives.** Restore testing validates that backup data is recoverable and usable within your defined recovery time objectives (RTOs) and recovery point objectives (RPOs). Regular testing identifies issues before they affect production recovery scenarios. You should perform structured restore tests that simulate real-world failure conditions and document results for continuous improvement.
 
-    - Audit retention settings. Ensure that backup retention meets business and legal requirements (7 years for financial data).
-    - Verify encryption settings. Confirm that data is encrypted at rest and in transit using customer-managed keys (CMK) if required.
-    - Review policy scope and frequency. Ensure that backup frequency aligns with data change rates and business continuity needs.
+    Execute test restores for critical workloads using [Azure Backup restore capabilities](/azure/backup/backup-azure-arm-restore-vms) to recover data to isolated test environments. Validate that restored data maintains integrity, completeness, and functionality. Measure restore times against your RTO targets and verify that data freshness meets RPO requirements. Document test results including restoration duration, data verification outcomes, and any encountered issues. Update operational runbooks to reflect lessons learned and improve future recovery procedures.
+
+3. **Review backup policies for compliance alignment.** Backup policy validation ensures that data protection strategies meet organizational governance requirements and regulatory obligations. Regular policy reviews prevent compliance gaps and align backup practices with evolving business needs. You should establish systematic policy review processes that cover retention, encryption, and frequency requirements.
+
+    Audit backup retention settings to ensure they meet business continuity and regulatory requirements, such as 7-year retention for financial data or industry-specific mandates. Verify that encryption configurations use appropriate methods, including customer-managed keys (CMK) when required by security policies. Review backup frequency settings to ensure they align with data change rates and business criticality levels. Use [Azure Policy](/azure/governance/policy/overview) to enforce consistent backup configurations across your environment and detect policy violations automatically.
 
 For data reliability, see [Manage data reliability](/azure/cloud-adoption-framework/manage/protect#manage-data-reliability).
 
