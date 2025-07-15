@@ -419,8 +419,8 @@ items:
         items:
         - name: Checklist
           href: migrate/index.md
-        - name: 1. Prepare migration execution
-          href: migrate/prepare-migration-execution.md
+        - name: 1. Plan migration execution
+          href: migrate/plan-migration-execution.md
         - name: 2. Prepare workloads for migration
           href: migrate/prepare-workloads-for-migration.md
         - name: 3. Execute migration cutover
@@ -430,7 +430,7 @@ items:
           - name: Execute offline migration cutover
             href: migrate/execute-offline-migration-cutover.md
         - name: 4. Optimize post-migration
-          href: migrate/optimize-workloads-post-migration.md
+          href: migrate/optimize-workloads-after-migration.md
         - name: 5. Decommission source workload
           href: migrate/decommission-source-workload.md
 
