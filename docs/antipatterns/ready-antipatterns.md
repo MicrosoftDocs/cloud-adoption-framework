@@ -4,6 +4,7 @@ description: Avoid cloud adoption readiness antipatterns like using preview serv
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/19/2021
+ms.update-cycle: 1825-days
 ms.topic: conceptual
 ms.subservice: caf-methodology-ready
 ms.custom: think-tank,UpdateFrequency5

@@ -65,6 +65,9 @@
       "ms.collection": {
         "scenarios/ai/**/*.md": "ce-skilling-ai-copilot"
       },
+      "ms.update-cycle": {
+        "scenarios/ai/**/*.md": "180-days"
+      },
       "ms.subservice": {
         "adopt/**/*.md": "caf-methodology-adopt",
         "digital-estate/**/*.md": "caf-methodology-plan",

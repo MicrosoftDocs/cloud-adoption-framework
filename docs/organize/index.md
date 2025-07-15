@@ -4,6 +4,7 @@ description: Learn how to establish and maintain your organization's alignment b
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/07/2022
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---
