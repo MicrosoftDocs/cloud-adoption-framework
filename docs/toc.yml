@@ -400,12 +400,18 @@ items:
 
         - name: Azure landing zones FAQ
           href: ready/enterprise-scale/faq.md
-
-      - name: Skills relevant to ready and landing zones
-        href: ready/suggested-skills.md
-
-      - name: Ready antipatterns
-        href: antipatterns/ready-antipatterns.md
+      - name: Define your naming convention
+        href: ready/azure-best-practices/resource-naming.md
+      - name: Abbreviations for Azure resources
+        href: ready/azure-best-practices/resource-abbreviations.md
+      - name: Define your tagging strategy
+        href: ready/azure-best-practices/resource-tagging.md
+      - name: Resources
+        items:
+        - name: Skills relevant to ready and landing zones
+          href: ready/suggested-skills.md
+        - name: Ready antipatterns
+          href: antipatterns/ready-antipatterns.md
 
     - name: Adopt
       items:

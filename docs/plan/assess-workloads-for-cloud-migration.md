@@ -27,7 +27,7 @@ Complete architectural documentation ensures visibility into workload components
 
 A complete understanding of each workload component is essential for accurate sizing and configuration in Azure. This assessment ensures performance consistency, avoids compatibility issues, and supports informed migration decisions. You must collect detailed specifications and operational data for each component to plan a successful migration.
 
-1. **Use service management or CMDB systems to gather baseline data.** Service management tools and configuration management databases (CMDBs) provide authoritative data on workload components. These systems accelerate migration planning when they contain current and complete information. Validate the accuracy of this data before using it to inform migration decisions.
+1. **Gather baseline workload data.** Baseline data enables you to compare workload functionality between the source environment and Azure after migration. This comparison helps troubleshoot issues and isolate modernization efforts from migration problems. Service management tools and configuration management databases (CMDBs) provide authoritative data on workload components when available. These systems accelerate migration planning by providing current and complete information about your environment. You must validate the accuracy of this data before you use it to inform migration decisions, as outdated or incomplete information can lead to planning errors.
 
 2. **Collect at least one week of performance and configuration data.** Performance metrics such as CPU utilization, memory usage, input/output per second (IOPS), and throughput reveal usage patterns and peak demands. Configuration data includes operating system type and version, VM size, storage type, and licensing details. This information is critical for selecting the correct Azure VM sizes and storage configurations.
 
@@ -100,6 +100,16 @@ Database dependencies often determine the success of application migration. Shar
 2. **Map inbound and outbound dependencies.** A clear view of how data flows into and out of each database is critical for sequencing migrations and avoiding service disruptions. Dependencies often span multiple applications, services, and external systems. Include internal applications, APIs, batch jobs, reporting tools, and other integrations. Specify whether the dependency is read-only, write-only, or bidirectional. This detail helps prioritize workloads and identify potential migration blockers.
 
 3. **Determine database migration strategy.** Decide whether to move the database as a shared instance or split it by workload. Shared databases simplify management but can delay migration if multiple applications depend on them. Splitting databases enables independent migration but requires careful coordination and testing. Ensure that the database migration plan supports the sequencing of application moves and minimizes downtime or service disruption.
+
+### Create and maintain a risk register
+
+A risk register identifies potential issues that could impact cloud adoption and defines mitigation strategies. Maintaining this register ensures proactive risk management.
+
+1. **Establish a risk register for all workloads.** Record risks related to technical, operational, and organizational factors. This register provides visibility into potential blockers and their impact.
+
+2. **Define mitigation strategies and track their status.** For each risk, document mitigation actions, responsible parties, and resolution timelines. This tracking ensures that risks are actively managed and resolved.
+
+For more guidance, see [CAF Govern - Assess cloud risks](../govern/assess-cloud-risks.md)
 
 ## Azure resources and tools
 

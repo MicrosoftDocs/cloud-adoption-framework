@@ -13,13 +13,27 @@ A cloud adoption plan provides a single source of truth for all decisions, estim
 
 ## Align your plan with standards and frameworks
 
-Alignment with organizational standards and governance frameworks ensures that cloud adoption efforts remain consistent, compliant, and measurable.
+A cloud adoption plan must align with organizational standards and governance frameworks to ensure consistency, compliance, and accountability. This alignment integrates cloud adoption into existing delivery processes and enables measurable progress.
 
-1. **Select and tailor a cloud adoption template that matches your scenario.** Choose a template that aligns with your adoption approach. Use the [Cloud-native adoption plan](./cloud-native-adoption-plan.md) if you're building new solutions in Azure. Use the [Migration adoption plan](./migration-adoption-plan.md) if you're migrating existing workloads.
+### Select and tailor a cloud adoption plan template
 
-2. **Ensure alignment with organization standards.** Ensure the cloud adoption plan aligns with your organization’s project management methodologies. Include required artifacts, approval gates, and checkpoints. This alignment ensures that cloud adoption activities integrate with broader delivery processes.
+1. **Choose a cloud adoption plan template that matches your scenario.** Use the [Cloud-native adoption plan](./cloud-native-adoption-plan.md) if you're building new solutions in Azure. Use the [Migration adoption plan](./migration-adoption-plan.md) if you're migrating existing workloads. Selecting the correct template ensures that the plan includes scenario-specific considerations and accelerates planning.
 
-3. **Document reporting and accountability structures.** Record how progress is tracked and reported, and who is accountable for each aspect of the plan. Capture approvals from technical and business stakeholders to confirm shared ownership and alignment with the cloud adoption plan.
+2. **Customize the selected template to reflect your organization’s priorities.** Modify the template to include your business objectives, technical constraints, and stakeholder expectations. This customization ensures that the plan is relevant and actionable across teams.
+
+### Ensure alignment with organizational standards
+
+1. **Map the cloud adoption plan to your organization’s project management methodology.** Identify required artifacts, approval gates, and delivery checkpoints. This mapping ensures that cloud adoption activities follow established governance and delivery practices.
+
+2. **Incorporate compliance and security requirements into the plan.** Include controls, policies, and regulatory requirements that apply to cloud workloads. This incorporation ensures that cloud adoption remains compliant with internal and external standards.
+
+### Document reporting and accountability structures
+
+1. **Define how progress is tracked and reported.** Specify reporting cadences, metrics, and tools used to monitor adoption progress. This definition ensures transparency and enables timely decision-making.
+
+2. **Assign accountability for each component of the plan.** Identify responsible individuals or teams for each task, milestone, and deliverable. This assignment ensures shared ownership and reduces ambiguity.
+
+3. **Capture stakeholder approvals.** Document approvals from technical and business stakeholders to confirm alignment and commitment. This documentation ensures that the plan reflects shared goals and expectations.
 
 ## Document organization and people plans
 

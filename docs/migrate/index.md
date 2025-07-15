@@ -93,14 +93,6 @@ A rollback strategy is a documented plan that enables teams to revert infrastruc
 
 6. **Review and update rollback strategies after each deployment.** Continuous improvement ensures rollback strategies remain effective as systems evolve. You should conduct post-incident reviews and update rollback documentation based on lessons learned.
 
-| Category | Tool | Description |
-|----------|------|-------------|
-| Deployment automation | https://learn.microsoft.com/azure/devops/?view=azure-devops | Supports CI/CD pipelines with rollback logic and deployment gates. |
-| Infrastructure as Code | https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview | Enables declarative infrastructure definitions with rollback via version control. |
-| Application deployment | https://learn.microsoft.com/azure/app-service/deploy-staging-slots | Allows blue-green deployments and quick rollback by swapping slots. |
-| Monitoring and alerts | https://learn.microsoft.com/azure/azure-monitor/overview | Detects failure conditions that can trigger rollback actions. |
-| Change tracking | https://learn.microsoft.com/azure/automation/change-tracking/overview | Tracks configuration changes to support rollback decisions. |
-
 ## Define stakeholder communication plans
 
 A stakeholder communication plan ensures that all relevant parties stay informed and engaged throughout the cloud adoption process. This plan helps reduce risk, align expectations, and support collaborative decision-making. You should define how and when to communicate updates, risks, and decisions to stakeholders using structured and consistent channels.
@@ -121,86 +113,66 @@ A stakeholder communication plan ensures that all relevant parties stay informed
 
 8. **Track communication effectiveness and adjust as needed.** Collect feedback through surveys or direct input during meetings. Use this feedback to refine your communication approach. This continuous improvement loop ensures that communication remains relevant and effective throughout the project.
 
-| Category               | Tool                                                                 | Description                                                                 |
-|------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| Communication          | https://www.microsoft.com/en-us/microsoft-teams/group-chat-software | Enables real-time collaboration and structured stakeholder engagement.     |
-| Communication          | https://outlook.office.com/                              | Supports formal communication and scheduling of updates and meetings.      |
-| Reporting              | https://powerbi.microsoft.com/                          | Provides dashboards for visualizing project status and stakeholder metrics.|
-| Project Management     | https://azure.microsoft.com/services/devops/        | Tracks tasks, timelines, and stakeholder responsibilities.                 |
-| Planning & Scheduling  | https://www.microsoft.com/microsoft-project    | Helps build and share migration schedules collaboratively.                 |
-
 ## Prepare workloads for the cloud
 
-Before migrating, ensure workloads are ready for Azure. Addressing compatibility and configuration issues early reduces cutover risk.
+A workload must be cloud-ready before migration to Azure. Cloud readiness reduces cutover risk and ensures compatibility with Azure services. You should validate, secure, and automate workloads in Azure before production cutover.
 
-1. **Conduct a workload assessment.** Should  a [workload assessment](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration) of each workload. A workload assessment determines the specifications and readiness for Azure.
+### Create separate subscriptions for each environment
 
-2. **Plan workload architecture.** You shouldesign the target architecture in Azure. For information, see [Plan the target architecture](#_Plan_the_target).
+1. **Create a subscription for each environment.** Use distinct subscriptions for development, test, and production environments. This separation enables clearer cost management, policy enforcement, and access control. Use consistent naming conventions to improve visibility and simplify automation. For naming guidance, see [Naming convention](../ready/azure-best-practices/resource-naming.md)
 
-3. **Fix issues in Azure.** Remediate compatibility issues in Azure. A test deployment in Azure validates workload behavior and uncovers compatibility issues before production cutover. This step reduces migration risk by ensuring workloads operate as expected in the target environment. You must test workloads in Azure and resolve all identified issues in the cloud environment to ensure a smooth and predictable migration.
+1. **Apply environment-specific policies and budgets.** Use Azure Policy and Cost Management to enforce compliance and track spending. This helps prevent configuration drift and cost overruns.
 
-1. **Deploy the workload in a test environment in Azure.** Use a staging subscription or Azure DevTest Labs to replicate the production environment. This test environment must reflect production configurations, including network topology, identity controls, and storage dependencies. Testing in Azure exposes issues that may not appear in on-premises environments.
+1. **Assign access based on environment roles.** Use Azure role-based access control (RBAC) to restrict access to each subscription. Enable multifactor authentication (MFA) and configure conditional access policies through Microsoft Entra ID. Use Azure Bastion for secure administrative access to virtual machines. Over-permissioned roles increase the risk of misconfiguration or data exposure. This reduces the risk of accidental changes across environments.
 
-2. **Identify and resolve compatibility issues in Azure.** Run validation tests and monitor workload behavior. Address all issues directly in the Azure environment to ensure fixes are effective in the target platform. Avoid remediating in the source environment, as this may not reflect Azure-specific behavior.
+### Deploy resources in a test environment
 
-3. **Apply targeted remediations for common readiness issues.** Use the table below to address known blockers that frequently impact workload migration.
+1. **Use the workload assessment and architecture plan from CAF Plan.** Reference the [workload assessment](../plan/assess-workloads-for-cloud-migration.md) and [planned Azure architecture](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture) completed during the Plan phase. These artifacts provide the blueprint for creating the test environment. Validate that these documents are current and complete before deploying test resources.
 
-    | Readiness Issue               | Remediation                                                                 |
-    |-------------------------------|-----------------------------------------------------------------------------|
-    | Unsupported OS versions       | Fix unsupported operating systems that block replication.                  |
-    | Legacy NIC drivers and BIOS   | Update legacy network interface card (NIC) drivers and BIOS to ensure compatibility. |
-    | Local file I/O                | Replace local file input/output operations with Azure Blob or Azure Files. |
-    | Hardcoded IP calls            | Swap hardcoded IP calls with service discovery mechanisms.                 |
-    | Host-based antivirus dependency | Remove dependency on host-based antivirus software and integrate Microsoft Defender for Cloud. |
-    | Hardcoded user accounts       | Use managed identities.                                                    |
+1. **Deploy all workload components in the test environment.** Include compute resources (virtual machines, web apps, container hosting), databases, storage accounts, virtual networks, and DNS zones. Incomplete test environments delay validation and increase migration risk. Use your IaC templates or deployment scripts to ensure consistency between test and production environments.
 
-## Create your Azure workload resources
+1. **Configure security controls.** Apply (RBAC) to grant workload teams only the permissions required to the Azure resources for their responsibilities. Configure NSGs to limit traffic between subnets and resources. Use private endpoints for Azure services to avoid exposing them to the public internet. Enable managed identities for service-to-service authentication. For a comprehensive checklist, see [Security design](/azure/well-architected/security/checklist).
 
-At this point, you need to create Azure resources that will hold the workload after cutover. You need to stage the Azure resources to receive the incoming workload data. Creating Azure workload resources before production cutover is essential to ensure a smooth and predictable migration. This phase focuses on provisioning, validating, securing, and automating the target environment to support a successful transition.
+### Fix compatibility issues in Azure
 
-### Provision and configure Azure workload resources
+You should resolve all compatibility issues in the test environment before production cutover. It's recommended to fix these issues in Azure to mirror your test environment as closely as possible with the Azure production environment.
 
-A fully provisioned and configured Azure environment ensures readiness for workload migration. This step reduces downtime and minimizes risk during the cutover.
+    | Readiness issue                 | Fix                                                                 |
+    |--------------------------------|----------------------------------------------------------------------|
+    | Unsupported OS versions        | Upgrade to supported operating systems that allow replication.      |
+    | Legacy NIC drivers and BIOS    | Update drivers and BIOS to ensure compatibility with Azure VMs.     |
+    | Local file I/O                 | Replace with Azure Blob Storage or Azure Files.                     |
+    | Hardcoded IP calls             | Use service discovery mechanisms such as Azure DNS or Private Link. |
+    | Host-based antivirus dependency| Integrate with Microsoft Defender for Cloud.                        |
+    | Hardcoded user accounts        | Replace with managed identities.                                    |
 
-1. Provision all required Azure resources to host the workload. Create infrastructure components such as virtual machines, storage accounts, networking, and platform services. Include all dependencies such as DNS, identity, and data services. This ensures the environment is complete and avoids delays during cutover.
+### Test workload in the Azure environment
 
-2. Configure resources to meet workload requirements. Apply workload-specific settings such as performance tiers, availability zones, and backup policies. Ensure the configuration aligns with business continuity and compliance requirements.
+1. **Validate network topology and identity integration.** Test that routing tables, firewall rules, and authentication mechanisms work correctly in Azure. Confirm that applications can communicate with dependencies and that users can authenticate as expected. This validation prevents connectivity issues during production cutover. Execute user acceptance testing, load testing, and integration testing to validate that the workload performs as expected. Document any issues or performance differences compared to the source environment. This testing phase confirms readiness for production migration.
 
-### Validate the workload in a non-production environment
+## Create reusable infrastructure and automation assets
 
-A validated non-production environment ensures the production cutover proceeds without disruption. This step helps identify and resolve issues early.
+Reusable infrastructure and automation assets accelerate migration and improve consistency. These assets reduce manual effort, support repeatable deployments, and ensure that tested configurations are preserved. You should create infrastructure as code (IaC) assets only after the workload passes all tests in the test environment.
 
-1. Migrate and test non-production workloads. Use representative test data and simulate real-world scenarios to validate the end-to-end migration process. Confirm that the workload performs as expected in Azure.
+1. **Create IaC templates after validating workload behavior in the test environment.** Use the test environment to confirm that the workload functions correctly in Azure. This validation ensures that IaC templates reflect tested and production-ready configurations. Use Bicep or Terraform to define virtual machines, storage accounts, App Services, and other common resources. Bicep provides native integration with Azure Resource Manager, while Terraform supports multi-cloud scenarios and a broader ecosystem.
 
-2. Validate all workload dependencies. Ensure DNS resolution, data access, and application configurations function correctly. Identify and document any issues for remediation.
+2. **Automate deployment of third-party tools and workload dependencies.** Include installation and configuration steps for databases, monitoring agents, backup solutions, or other required tools. Use scripts or deployment pipelines to automate these steps. Automation reduces deployment time, eliminates manual errors, and improves reliability across environments.
 
-3. Test rollback procedures. Simulate rollback scenarios to verify that recovery steps are executable and well-documented. This reduces risk during production cutover.
-
-4. Refine the migration runbook. Update the migration plan based on test results. Include detailed steps, validation checks, and rollback procedures to guide the production cutover.
-
-### Apply security controls for workload and user access
-
-Security controls protect sensitive data and ensure compliance with organizational policies. These controls must be applied to both workload teams and end users.
-
-1. Apply role-based access control (RBAC) for workload teams. Assign appropriate roles using Azure RBAC. Limit permissions to the minimum required for operational responsibilities. This enforces least privilege and reduces the risk of misconfiguration.
-
-2. Enforce user authentication and authorization. Use Microsoft Entra ID to manage user identities. Require multifactor authentication (MFA) and apply conditional access policies to protect access to critical resources.
-
-3. Restrict access using virtual networks. Use network security groups (NSGs), private endpoints, and service endpoints to limit access to only necessary public interfaces. This reduces the attack surface and enforces network segmentation.
-
-### Create reusable assets and automation
-
-Reusable infrastructure and automation accelerate migration efforts and improve consistency across environments.
-
-1. Develop infrastructure-as-code (IaC) templates. Use Bicep or Terraform to define and deploy Azure resources. Create templates for common services such as virtual machines, App Services, storage accounts, and file shares. This ensures repeatability and version control.
-
-2. Automate deployment of third-party tools. Build scripts or pipelines to install and configure tools such as Oracle databases, monitoring agents, or backup solutions. Automating these steps reduces manual effort and deployment errors.
-
-3. Use source control to manage templates. Store IaC templates and scripts in GitHub or Azure DevOps. Enable versioning, peer reviews, and collaboration across teams. Encourage teams to contribute to and reuse shared assets.
+3. **Store all templates and scripts in version-controlled repositories.** Use GitHub or Azure DevOps to manage IaC assets. Version control enables peer reviews, supports collaboration, and encourages reuse across teams. It also provides traceability and rollback capabilities for infrastructure changes.
 
 ## Execute workload cutover
 
 Migration execution requires a structured and validated approach to ensure workload continuity, data integrity, and minimal disruption. You must choose between offline and online migration strategies based on workload criticality and acceptable downtime.
+
+### Provision production workload
+
+Production resources must be ready to receive data before migration. You should provision, validate, and secure the production environment in advance.
+
+1. **Deploy production infrastructure in Azure.** Use IaC templates to create production-ready resources. Include all dependencies and configurations validated in the test environment.
+
+2. **Validate production readiness.** Confirm that all services, access controls, and network configurations match the test environment. This ensures a predictable cutover.
+
+3. **Secure and monitor production resources.** Apply RBAC, NSGs, and Defender for Cloud policies. Enable monitoring and alerting to detect issues early.
 
 ## Optimize post-migration
 
