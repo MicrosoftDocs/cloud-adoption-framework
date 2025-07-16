@@ -442,6 +442,8 @@ items:
             href: migrate/execute-online-migration-cutover.md
           - name: Execute offline migration cutover
             href: migrate/execute-offline-migration-cutover.md
+          - name: Gradual cutover to Azure
+            href: migrate/onpremises-azure-gradual-cutover.md
 
 
       - name: Modernize

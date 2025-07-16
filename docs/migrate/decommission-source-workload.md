@@ -51,15 +51,6 @@ Accurate documentation ensures operational continuity and reduces support risks.
 
 4. **Allocate time and budget for documentation updates.** Include documentation tasks in your migration project plan to avoid last-minute gaps.
 
-## Azure resources and tools
-
-| Category               | Tool                                                                 | Description                                                                 |
-|------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| Licensing              | /azure/virtual-machines/windows/hybrid-use-benefit-licensing | Explains how to apply existing licenses to reduce Azure VM costs.          |
-| Data Archival          | /azure/storage/blobs/access-tiers-overview | Describes cold and archive tiers for cost-effective long-term storage.     |
-| Monitoring             | /azure/azure-monitor/overview | Provides observability into Azure workloads and infrastructure.            |
-| Documentation Planning | /azure/cloud-adoption-framework/manage/ready#document-your-cloud-operations | Guides documentation and operational readiness for Azure environments.     |
-
 ## Next steps
 
 - [Modernize](/azure/cloud-adoption-framework/modernize/) workload or [Build cloud native](azure/cloud-adoption-framework/innovate/) features
