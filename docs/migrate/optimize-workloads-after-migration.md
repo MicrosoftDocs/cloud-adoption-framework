@@ -21,49 +21,23 @@ A workload’s behavior often changes after migration due to differences in infr
 
 3. **Review Microsoft Defender for Cloud recommendations.** [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) identifies security misconfigurations and vulnerabilities. Address these issues early to reduce risk exposure and align with your organization’s security posture.
 
-## Monitor and control costs
+## Configure monitoring and alerting
 
 Cost visibility and control become essential immediately after migration. Azure's elasticity benefits organizations but requires active monitoring to prevent cost inefficiencies from scaling automatically.
 
-1. **Enable Azure Cost Management budgets and configure automated alerts.** Use [Microsoft Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to establish budget thresholds at your target spending level (100%), ideal spending level (90%), and warning threshold (110%). Configure automated alerts to notify stakeholders when spending approaches or exceeds these thresholds. Set up forecast alerts to provide advance notification when spending trends indicate budget overruns.
+1. **Validate monitoring.** The first few days or weeks post-migration serve as a “bake-in” period. Ensure that performance, availability, and usage patterns align with expectations. Confirm that Azure Monitor is capturing the right metrics and alerts are configured appropriately. [Configure monitoring](/azure/cloud-adoption-framework/manage/monitor#configure-monitoring) to collect insights that enable proactive issue detection. [Configure alerts](/azure/cloud-adoption-framework/manage/monitor#configure-alerting) for timely issue response, and create dashboards to [Visualize monitoring data](/azure/cloud-adoption-framework/manage/monitor#visualize-monitoring-data).
 
-2. **Analyze resource utilization patterns using Azure Advisor recommendations.** Use [Azure Advisor cost recommendations](/azure/advisor/advisor-cost-recommendations) to identify underutilized virtual machines, unattached disks, and overprovisioned resources. Review metrics including CPU utilization, memory consumption, and storage usage across a 7-day period to detect resources that can be rightsized or deallocated. Implement the suggested optimizations to reduce waste without affecting performance.
+1. **Monitor costs** Cost anomalies typically stem from either workload changes (enabling new features) or unexpected behavior in Azure. For example, autoscaling or inefficient SQL queries that were throttled on-premises might now consume more resources. Use Azure Cost Management or partner tools to spot cost anomalies and Azure Advisor for relevant performance and reliability improvements. Compare current costs to your premigration baseline. Identify and address any configuration or feature changes that are driving up costs. For more information, see [Monitor costs](/azure/cloud-adoption-framework/manage/monitor#monitor-costs).
 
-3. **Implement cost anomaly detection for proactive monitoring.** Enable [cost anomaly detection](/azure/cost-management-billing/understand/analyze-unexpected-charges) to identify unexpected spending patterns that budget alerts might miss. Configure anomaly alerts to notify you of unusual cost variations that could indicate inefficiencies or security issues. Use these insights to investigate root causes and implement corrective actions promptly.
+### Verify backup jobs are configured and running successfully
 
-4. **Evaluate specialized cost optimization tools for complex environments.** For multi-subscription or hybrid environments, assess third-party cost optimization solutions based on their Azure integration capabilities, reporting granularity, and automation features. Consider tools that provide advanced analytics, automated scaling recommendations, and support for hybrid and multi-cloud cost management.
+1. **Configure backup jobs.** A successful backup job ensures that data is consistently captured and stored according to policy. Identify workloads that require backups and ensure they are included in your backup scope. Use backup features built-in to some Azure services. Otherwise, use [Azure Backup](/azure/backup/backup-overview), or third-party tools that support Azure workloads.
 
-## Validate monitoring and alerting
+1. **Monitor backup job status.** Ensure backup jobs are configured correctly and completing successfully. Test restore procedures to confirm data recoverability. Review backup scope to ensure all databases, file systems, and application data are included. Use Use [Azure Backup Reports](/azure/backup/configure-reports) in Azure Monitor or Recovery Services Vault dashboards to track job success rates, failure patterns, and backup trends across your environment. Set up automated alerts for failed or missed backup jobs to enable immediate response to issues. Investigate and resolve failures immediately. Review error codes and logs to determine root causes. Common issues include network interruptions, storage limits, or misconfigured policies.
 
-Comprehensive monitoring ensures workloads perform optimally and enables proactive issue resolution. Post-migration monitoring validation establishes the foundation for reliable operations.
+1. **Test restore procedures to validate recovery objectives.** Restore testing validates that backup data is recoverable and usable within your defined recovery time objectives (RTOs) and recovery point objectives (RPOs). Regular testing identifies issues before they affect production recovery scenarios. You should perform structured restore tests that simulate real-world failure conditions and document results for continuous improvement.
 
-1. **Verify data collection rules capture essential metrics and logs.** Validate that performance, availability, and usage metrics are captured for all critical components. Adjust data collection rules if gaps exist. Review [Azure Monitor data collection rules (DCRs)](/azure/azure-monitor/data-collection/data-collection-rule-overview) to validate that performance, availability, and security metrics are collected from all critical workload components. Review DCR metrics including "Logs Ingestion Bytes per Min" and "Logs Rows Received per Min" to confirm data flow. Address any gaps by updating data collection configurations or creating additional DCRs for missing components.
-
-2. **Test alert rules using multiple alert types and dynamic thresholds.** Configure [metric alerts](/azure/azure-monitor/alerts/alerts-types#metric-alerts) for performance thresholds, [log alerts](/azure/azure-monitor/alerts/alerts-types#log-alerts) for application-specific conditions, and [activity log alerts](/azure/azure-monitor/alerts/alerts-types#activity-log-alerts) for resource changes. Use [dynamic thresholds](/azure/azure-monitor/alerts/alerts-dynamic-thresholds) for metrics with seasonal patterns and static thresholds for known limits. Test alert workflows using controlled scenarios to validate notification delivery, escalation paths, and response procedures.
-
-3. **Implement Azure Monitor Baseline Alerts for comprehensive coverage.** Deploy [Azure Monitor Baseline Alerts (AMBA)](https://aka.ms/amba) to establish industry-standard monitoring across your Azure services. These pre-configured alerts provide immediate visibility into common failure scenarios and performance degradation patterns. Customize alert severity levels and notification recipients based on your operational requirements.
-
-4. **Create workbooks and dashboards for operational visibility.** Build [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) that combine metrics, logs, and alerts into unified views for different stakeholder groups. Include key performance indicators (KPIs) such as response times, error rates, and resource utilization. Configure dashboards to reflect your post-migration architecture and enable drill-down capabilities for detailed troubleshooting.
-
-5. **Enable proactive monitoring with DCR error logs and anomaly detection.** Activate [DCR error logs](/azure/azure-monitor/data-collection/data-collection-monitor#enable-dcr-error-logs) to capture detailed information about data processing failures. Monitor DCR health using metrics like "Logs Transformation Errors per Min" and "Logs Rows Dropped per Min". Set up alerts for sudden changes in data collection patterns that might indicate configuration issues or data source problems.
-
-For comprehensive monitoring guidance, see [Monitor your Azure cloud estate](/azure/cloud-adoption-framework/manage/monitor).
-
-## Validate backup and recovery
-
-A validated backup and recovery process ensures that critical data remains protected and recoverable in the event of failure, corruption, or loss. This validation is essential to meet business continuity goals and regulatory requirements. You should follow these steps to confirm that your backup and recovery strategy is reliable, compliant, and operationally effective.
-
-1. **Verify backup jobs are configured and running successfully.** Backup job validation ensures that critical data protection mechanisms function reliably and meet business continuity requirements. Regular monitoring prevents data loss scenarios and maintains regulatory compliance. You should establish comprehensive backup validation processes that include scope verification, status monitoring, and failure resolution procedures.
-
-    Configure backup coverage for all mission-critical systems using [Azure Backup](/azure/backup/backup-overview) or validated third-party solutions that support Azure workloads. Review backup scope to ensure all databases, file systems, and application data are included. Use [Azure Backup Reports](/azure/backup/configure-reports) in Azure Monitor or Recovery Services Vault dashboards to track job success rates, failure patterns, and backup trends across your environment. Set up automated alerts for failed or missed backup jobs to enable immediate response to issues.
-
-2. **Test restore procedures to validate recovery objectives.** Restore testing validates that backup data is recoverable and usable within your defined recovery time objectives (RTOs) and recovery point objectives (RPOs). Regular testing identifies issues before they affect production recovery scenarios. You should perform structured restore tests that simulate real-world failure conditions and document results for continuous improvement.
-
-    Execute test restores for critical workloads using [Azure Backup restore capabilities](/azure/backup/backup-azure-arm-restore-vms) to recover data to isolated test environments. Validate that restored data maintains integrity, completeness, and functionality. Measure restore times against your RTO targets and verify that data freshness meets RPO requirements. Document test results including restoration duration, data verification outcomes, and any encountered issues. Update operational runbooks to reflect lessons learned and improve future recovery procedures.
-
-3. **Review backup policies for compliance alignment.** Backup policy validation ensures that data protection strategies meet organizational governance requirements and regulatory obligations. Regular policy reviews prevent compliance gaps and align backup practices with evolving business needs. You should establish systematic policy review processes that cover retention, encryption, and frequency requirements.
-
-    Audit backup retention settings to ensure they meet business continuity and regulatory requirements, such as 7-year retention for financial data or industry-specific mandates. Verify that encryption configurations use appropriate methods, including customer-managed keys (CMK) when required by security policies. Review backup frequency settings to ensure they align with data change rates and business criticality levels. Use [Azure Policy](/azure/governance/policy/overview) to enforce consistent backup configurations across your environment and detect policy violations automatically.
+1. **Review backup policies for compliance alignment.** Backup policy validation ensures that data protection strategies meet organizational governance requirements and regulatory obligations. Regular policy reviews prevent compliance gaps and align backup practices with evolving business needs. You should establish systematic policy review processes that cover retention, encryption, and frequency requirements.
 
 For data reliability, see [Manage data reliability](/azure/cloud-adoption-framework/manage/protect#manage-data-reliability).
 
@@ -107,7 +81,7 @@ Architecture reviews help identify modernization opportunities and prevent techn
 
 2. **Create a backlog of modernization opportunities.** Document findings and prioritize based on business value, risk reduction, and technical debt.
 
-3. **Assign ownership for follow-up actions.** Designate responsibl structure and includes embedded links to relevant Azure tos and documentation.
+3. **Assign ownership for follow-up actions.** Designate responsibility structure and includes embedded links to relevant Azure tos and documentation.
 
 ## Post-migration checklist
 
