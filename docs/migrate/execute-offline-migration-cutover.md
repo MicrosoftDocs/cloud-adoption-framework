@@ -43,11 +43,17 @@ Backup restoration and validation ensure that the application functions correctl
 
 ## 5. Start the workload and redirect users
 
-Bringing the workload online and updating access configurations ensures a smooth transition for users and dependent systems. Close monitoring during this phase helps identify and resolve any issues quickly. You must monitor the system closely during this critical transition period.
+Bringing the workload online and updating access configurations ensures a smooth transition for users and dependent systems. Close monitoring during this phase helps identify and resolve any issues quickly. You must monitor the system closely during this critical transition period. Proper startup procedures ensure that all components initialize correctly and the system is ready for user access. Monitor startup logs and system health to confirm successful initialization and identify any issues early.
 
-1. **Start the workload in Azure.** Proper startup procedures ensure that all components initialize correctly and the system is ready for user access. Monitor startup logs and system health to confirm successful initialization and identify any issues early.
+## 4. Validate the workload in Azure
 
-2. **Redirect users and systems to the Azure-hosted workload.** Access redirection ensures that users and systems can connect to the new Azure environment without disruption. This step completes the transition from the source environment to Azure. Update DNS records, connection strings, or endpoint configurations and confirm that users and systems can access the workload without issues.
+Validation ensures that the migrated workload functions correctly and meets performance expectations. Thorough testing prevents issues after users access the system. You should conduct comprehensive validation before redirecting user traffic.
+
+Testing validates that all application features, integrations, and performance benchmarks operate as expected. Confirm that dependencies and configurations work correctly in the Azure environment. Run automated tests and manual verification procedures to ensure system readiness.
+
+## 5. Redirect user traffic to Azure
+
+Traffic redirection transitions users to the Azure-hosted workload. Update DNS records, load balancer configurations, and application URLs to point to the Azure environment. Monitor user access patterns and system performance during the transition. This step completes the transition from the source environment to Azure. Update DNS records, connection strings, or endpoint configurations and confirm that users and systems can access the workload without issues.
 
 ## 6. Validate the workload after cutover
 
