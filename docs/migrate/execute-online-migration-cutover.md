@@ -75,15 +75,15 @@ Mission-critical workloads require specialized hypercare support during the stab
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Infrastructure as Code | [Azure Resource Manager templates](https://learn.microsoft.com/azure/azure-resource-manager/templates/overview) | Define and deploy Azure infrastructure consistently |
-| Infrastructure as Code | [Azure Bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview) | A domain-specific language for deploying Azure resources declaratively |
-| Infrastructure as Code | [Terraform on Azure](https://learn.microsoft.com/azure/developer/terraform/) | Open-source tool for provisioning and managing Azure infrastructure |
-| Migration | [Azure Migrate](https://learn.microsoft.com/azure/migrate/migrate-overview) | Central hub for discovering, assessing, and migrating workloads to Azure |
-| Migration | [Azure Database Migration Service](https://learn.microsoft.com/azure/dms/dms-overview) | Migrate databases to Azure with minimal downtime |
-| Monitoring | [Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/overview) | Collect, analyze, and act on telemetry data from Azure resources |
-| Identity | [Microsoft Entra ID](https://learn.microsoft.com/entra/fundamentals/whatis) | Manage user identities and access to Azure resources |
+| Infrastructure as Code | [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) | Define and deploy Azure infrastructure consistently |
+| Infrastructure as Code | [Azure Bicep](/azure/azure-resource-manager/bicep/overview) | A domain-specific language for deploying Azure resources declaratively |
+| Infrastructure as Code | [Terraform on Azure](/azure/developer/terraform/) | Open-source tool for provisioning and managing Azure infrastructure |
+| Migration | [Azure Migrate](/azure/migrate/migrate-overview) | Central hub for discovering, assessing, and migrating workloads to Azure |
+| Migration | [Azure Database Migration Service](/azure/dms/dms-overview) | Migrate databases to Azure with minimal downtime |
+| Monitoring | [Azure Monitor](/azure/azure-monitor/overview) | Collect, analyze, and act on telemetry data from Azure resources |
+| Identity | [Microsoft Entra ID](/entra/fundamentals/whatis) | Manage user identities and access to Azure resources |
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Optimize workload after migration](post-migration-optimization.md)
+> [Optimize workload after migration](./optimize-workloads-after-migration.md)

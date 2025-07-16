@@ -1,6 +1,6 @@
 ---
 title: Decommission source workloads after migration
-description: 
+description: Learn how to properly decommission source workloads after Azure migration. Get step-by-step guidance on stakeholder sign-off, license optimization, data archival, and documentation updates to reduce costs and ensure compliance.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
@@ -23,7 +23,7 @@ A formal sign-off confirms that the workload is no longer needed in its original
 
 License optimization reduces costs and ensures compliance with Microsoft licensing terms.
 
-1. **Identify licenses eligible for reuse.** Determine whether any on-premises licenses are eligible for [Azure Hybrid Benefit][Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) (AHB). AHB allows you to use existing Windows Server or SQL Server licenses with [Software Assurance](/licensing/licensing-programs/software-assurance-default) to reduce Azure VM costs.
+1. **Identify licenses eligible for reuse.** Determine whether any on-premises licenses are eligible for [Azure Hybrid Benefit][Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) (AHB). AHB allows you to use existing Windows Server or SQL Server licenses with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) to reduce Azure VM costs.
 
 2. **Deallocate unused licenses.** For licenses that are no longer needed, update your license inventory and return or reassign them as appropriate.
 
@@ -53,6 +53,6 @@ Accurate documentation ensures operational continuity and reduces support risks.
 
 ## Next steps
 
-- [Modernize](/azure/cloud-adoption-framework/modernize/) workload or [Build cloud native](azure/cloud-adoption-framework/innovate/) features
+- [Modernize](/azure/cloud-adoption-framework/modernize/) workload or [Build cloud native](/azure/cloud-adoption-framework/innovate/) features
 
 - [Govern](/azure/cloud-adoption-framework/govern/), [Secure](/azure/cloud-adoption-framework/secure/overview), [Manage](/azure/cloud-adoption-framework/manage/) your Azure environment.

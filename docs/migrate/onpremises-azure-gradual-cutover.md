@@ -129,14 +129,14 @@ The final phase of your migration involves completing the traffic cutover to Azu
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Global Load Balancing | [Azure Front Door](https://learn.microsoft.com/en-us/azure/frontdoor/) | Provides global load balancing with weighted traffic distribution and health monitoring |
-| DNS Traffic Management | [Azure Traffic Manager](https://learn.microsoft.com/en-us/azure/traffic-manager/) | Offers DNS-based traffic routing with multiple routing methods including weighted and geographic |
-| Layer 7 Load Balancing | [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/) | Supports hybrid backend pools with on-premises and Azure resources |
-| Hybrid DNS | [Azure Private DNS Resolver](https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview) | Enables bidirectional DNS resolution between Azure and on-premises environments |
-| Application Monitoring | [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/) | Delivers comprehensive monitoring and alerting for Azure resources and applications |
-| Application Performance | [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) | Provides detailed application performance monitoring and diagnostics |
-| Container Traffic Splitting | [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/traffic-splitting) | Supports traffic splitting between application revisions for containerized workloads |
-| Kubernetes Traffic Management | [Application Gateway for Containers](https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/how-to-traffic-splitting-gateway-api) | Enables traffic splitting and weighted routing for Kubernetes applications |
+| Global Load Balancing | [Azure Front Door](/azure/frontdoor/) | Provides global load balancing with weighted traffic distribution and health monitoring |
+| DNS Traffic Management | [Azure Traffic Manager](/azure/traffic-manager/) | Offers DNS-based traffic routing with multiple routing methods including weighted and geographic |
+| Layer 7 Load Balancing | [Azure Application Gateway](/azure/application-gateway/) | Supports hybrid backend pools with on-premises and Azure resources |
+| Hybrid DNS | [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) | Enables bidirectional DNS resolution between Azure and on-premises environments |
+| Application Monitoring | [Azure Monitor](/azure/azure-monitor/) | Delivers comprehensive monitoring and alerting for Azure resources and applications |
+| Application Performance | [Application Insights](/azure/azure-monitor/app/app-insights-overview) | Provides detailed application performance monitoring and diagnostics |
+| Container Traffic Splitting | [Azure Container Apps](/azure/container-apps/traffic-splitting) | Supports traffic splitting between application revisions for containerized workloads |
+| Kubernetes Traffic Management | [Application Gateway for Containers](/azure/application-gateway/for-containers/how-to-traffic-splitting-gateway-api) | Enables traffic splitting and weighted routing for Kubernetes applications |
 
 ## Next steps
 
