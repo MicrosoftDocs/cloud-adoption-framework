@@ -52,7 +52,7 @@ items:
       - name: Oracle on Azure IaaS landing zone accelerator
         href: oracle-landing-zone-accelerator.md
       - name: Platform automation and DevOps for Oracle Database@Azure
-        href: oracle-platform-automation-devops-odaa.md
+        href: oracle-platform-automation-devops-oracle-database-azure.md
   - name: Migrate your Oracle workloads
     items: 
     - name: Capacity planning for Oracle workloads on Azure Virtual Machines
