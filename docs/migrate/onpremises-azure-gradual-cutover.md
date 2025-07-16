@@ -11,33 +11,31 @@ ms.topic: conceptual
 
 This article provides guidance to help you safely migrate workloads from on-premises to Azure using progressive traffic routing strategies. Organizations benefit from gradual cutover approaches because these strategies minimize migration risks, validate Azure performance under production load, and provide quick rollback options if issues arise.
 
-## Determine your requirements
+## Choose a routing architecture that supports gradual workload cutover
 
-Your network connectivity between on-premises and Azure environments affects which routing options are available and how traffic flows during migration. Different connectivity patterns enable different routing strategies and have implications for performance, security, and management complexity.
+A routing architecture defines how users and systems access workloads during migration. This decision affects how easily you can shift traffic, maintain availability, and manage DNS and SSL configurations. You should select a routing architecture that aligns with your connectivity model, DNS control, and operational preferences.
 
-1. **Assess whether you have dedicated connectivity through ExpressRoute or VPN connections.** Dedicated connections enable Azure Application Gateway to include on-premises resources in backend pools and provide consistent network performance. This connectivity supports hybrid backend pools and enables Azure-based load balancers to distribute traffic between environments. Dedicated connections also reduce latency and provide predictable network behavior.
+### Use Azure-based routing services to shift traffic with global control
 
-2. **Evaluate internet-based connectivity options for routing traffic between environments.** When dedicated connectivity is not available, you can use internet-based routing through Azure Traffic Manager or Azure Front Door. These services route traffic based on DNS responses or HTTP redirects and do not require private network connectivity. Internet-based routing may introduce higher latency and variable performance compared to dedicated connections.
+Azure-native routing services provide centralized, scalable, and intelligent traffic management. These services support global distribution, health monitoring, and routing logic based on DNS, HTTP/S, or application-layer rules. You should use Azure-based routing when you need global reach, hybrid integration, or advanced routing capabilities.
 
-3. **Consider DNS resolution requirements for your applications and users.** Applications that depend on specific DNS resolution behaviors may require hybrid DNS solutions using Azure Private DNS Resolver. This service provides bidirectional DNS forwarding between Azure and on-premises environments, enabling consistent name resolution during migration. DNS resolution requirements affect which routing services you can use effectively.
+1. **Use Azure Front Door for advanced HTTP/S traffic routing.** Choose Front Door when you need to make application-layer routing decisions for internet-facing web applications. This service is ideal when you want to shift traffic based on URL paths, headers, or geographic location while providing global load balancing and content acceleration. Front Door works best when you need to combine traffic shifting with SSL termination, caching, and web application firewall protection.
 
-4. **Plan for SSL certificate management across environments.** SSL certificates must be properly configured in both on-premises and Azure environments during the cutover period. Azure Front Door and Application Gateway can terminate SSL and manage certificates, while Traffic Manager operates at the DNS level and does not handle SSL termination. Certificate management affects your routing service selection and operational complexity.
+1. **Use Azure Application Gateway for hybrid Layer 7 routing.** Choose Application Gateway when you need to make routing decisions for internal applications or hybrid scenarios within a single region. This service is ideal when you want to shift traffic between on-premises and Azure backends through private connections like ExpressRoute or VPN. Application Gateway works best when you need Layer 7 routing capabilities with web application firewall protection for applications that don't require global distribution.
 
-## Choose your traffic routing architecture
+1. **Use Azure Private DNS Resolver for consistent hybrid name resolution.** Choose Private DNS Resolver when you need to make DNS resolution decisions that work consistently across hybrid environments. This service is ideal when you want to ensure applications can resolve names correctly as you shift traffic between on-premises and Azure without managing custom DNS infrastructure. Private DNS Resolver works best when you want to reduce DNS management complexity during the cutover process.
 
-The architecture you select for controlling traffic flow between on-premises and Azure determines where routing decisions occur and what capabilities are available. Your choice depends on your network connectivity, DNS requirements, and control preferences. You must understand the tradeoffs between each approach to select the option that best fits your migration strategy.
+1. **Manage SSL certificates across hybrid environments.** Choose centralized SSL certificate management when you need to make decisions about certificate consistency and security across both environments during traffic shifting. This approach is ideal when you want to avoid certificate-related issues that could disrupt the gradual cutover process and ensure secure connections regardless of where traffic.
 
-1. **Use Azure-based routing services when you need global load balancing and advanced traffic management capabilities.** Azure Front Door and Azure Traffic Manager provide routing control from Azure, which offers global distribution, health monitoring, and sophisticated routing rules. These services require that you direct your DNS to Azure endpoints, and Azure makes routing decisions based on your configured rules. This approach provides the most flexible traffic management capabilities.
+1. **Use Azure Traffic Manager to gradually shift DNS-based traffic.** Choose Traffic Manager when you need to make DNS-level routing decisions across multiple regions or data centers. This service is ideal when you want to shift traffic percentages gradually using weighted routing or implement automatic failover based on endpoint health. Traffic Manager works best when you need simple traffic distribution without inspecting HTTP content and when other services handle SSL termination.
 
-    1. **Choose Azure Traffic Manager for DNS-based global traffic distribution.** Traffic Manager operates at the DNS level and supports weighted, geographic, priority, and performance-based routing methods. This service works well when you need to route traffic based on user location, distribute load across regions, or implement failover scenarios. Traffic Manager provides simple percentage-based traffic splitting and supports health monitoring of endpoints.
+### Use on-premises DNS routing to maintain control during cutover
 
-    2. **Select Azure Front Door for HTTP/HTTPS workloads requiring advanced routing capabilities.** Front Door provides global load balancing with SSL termination, caching, and rules-based routing. This service supports weighted traffic distribution, session affinity, and custom routing rules based on headers, paths, and query strings. Front Door works best for web applications that need content acceleration and sophisticated routing logic.
+On-premises DNS routing allows you to control traffic flow without relying on Azure-native services. This approach is useful when you want to maintain operational control or perform a gradual migration.
 
-    3. **Deploy Azure Application Gateway when you need Layer 7 load balancing with hybrid backend pools.** Application Gateway supports backend pools that include both Azure resources and on-premises systems. But you must use ExpressRoute or VPN connections to route to on-premises public endpoint. This approach enables you to use a single load balancer to distribute traffic between environments while maintaining session affinity and SSL termination capabilities. If you need to route traffic across Azure regions, use Traffic Manager.
+1. **Configure on-premises DNS to resolve application FQDNs to Azure or on-premises IPs.** This method allows you to shift traffic by updating DNS responses locally. You should configure DNS records to point to Azure endpoints as workloads are migrated. Use short TTLs to enable rapid updates. Monitor traffic and performance before shifting more users.
 
-    4. **Consider Azure Private DNS Resolver for hybrid DNS scenarios.** When you need seamless name resolution between Azure and on-premises environments, Azure Private DNS Resolver provides bidirectional DNS forwarding. This service enables Azure resources to resolve on-premises domains and on-premises systems to resolve Azure private DNS zones without custom DNS solutions.
-
-2. **Implement on-premises DNS-based routing when you need to maintain control from your existing infrastructure.** Configure your on-premises DNS servers to resolve your application's FQDN to different IP addresses based on your cutover strategy. This approach keeps routing decisions within your on-premises environment and provides familiar operational control. You can gradually change DNS responses to shift traffic to Azure without requiring Azure-based routing services.
+2. **Use split-horizon DNS if internal and external users require different routing.**  Split-horizon DNS allows different responses based on the source of the request. You should configure internal DNS to resolve to on-premises systems and external DNS to resolve to Azure. Use this approach to support phased migration without disrupting internal users. Ensure DNS consistency and avoid caching issues.
 
 ## Deploy your workload to Azure before traffic cutover
 
@@ -55,23 +53,19 @@ DNS configuration controls how traffic routes between on-premises and Azure envi
 
 ### Configure Azure-based load balancing
 
-1. **Deploy Azure service as your traffic entry point.** Configure the selected service to act as the primary entry point for all incoming traffic. Azure Front Door provides global load balancing with content delivery network capabilities, while Application Gateway offers regional Layer 7 load balancing with web application firewall protection. Both services support backend pools that include multiple environments.
+1. **Deploy Azure service as your traffic entry point.** Configure the selected service to act as the primary entry point for all incoming traffic.
 
 2. **Update public DNS records to point to your Azure load balancing service.** Change your public DNS records to resolve to the chosen Azure service endpoint (Traffic Manager, Front Door, or Application Gateway). This configuration ensures that all incoming traffic reaches Azure first, where routing decisions occur based on your configured rules. The Azure service then distributes traffic to appropriate backend destinations according to your migration strategy.
 
 3. **Configure on-premises and Azure endpoints.** Add your on-premises endpoint and Azure-hosted endpoint as backends in the same configuration. For Application Gateway, you need ExpressRoute or VPN connectivity to include on-premises resources as backend targets. For Traffic Manager and Front Door, you can use public endpoints for both environments.
 
-4. **Implement weighted routing starting with minimal Azure traffic.** Configure initial weights to send most traffic to on-premises (95-99%) and minimal traffic to Azure (1-5%). This configuration validates the Azure environment under real production load while minimizing user impact. Gradually adjust weights as validation succeeds and confidence increases in the Azure deployment.
-
 ### Configure on-premises DNS for controlled routing
 
-1. **Configure DNS records to initially resolve to on-premises IP addresses.** Set up your DNS infrastructure to resolve your application's FQDN to your on-premises IP addresses. This configuration maintains normal operations while you prepare for migration. Document your current DNS configuration and ensure you have proper backup procedures.
+1. **Implement DNS-based traffic splitting using weighted DNS responses.** Configure your DNS servers to return different IP addresses based on weighted algorithms. Some DNS servers support weighted round-robin responses that can distribute traffic between on-premises and Azure IP addresses. This approach provides percentage-based traffic distribution controlled from your on-premises infrastructure.
 
-2. **Implement DNS-based traffic splitting using weighted DNS responses.** Configure your DNS servers to return different IP addresses based on weighted algorithms. Some DNS servers support weighted round-robin responses that can distribute traffic between on-premises and Azure IP addresses. This approach provides percentage-based traffic distribution controlled from your on-premises infrastructure.
+1. **Use DNS views or conditional forwarders for user-based routing.** Configure DNS views that resolve to different IP addresses based on the source of the DNS query. This approach enables you to route specific user groups or geographic regions to Azure while others remain on-premises. DNS views provide granular control over which users experience the Azure environment.
 
-3. **Use DNS views or conditional forwarders for user-based routing.** Configure DNS views that resolve to different IP addresses based on the source of the DNS query. This approach enables you to route specific user groups or geographic regions to Azure while others remain on-premises. DNS views provide granular control over which users experience the Azure environment.
-
-4. **Plan for DNS TTL management during cutover phases.** Lower DNS TTL values during migration phases to enable faster changes to routing decisions. Reduce TTL values before making routing changes and increase them after changes are validated. This approach balances routing flexibility with DNS performance impact.
+1. **Plan for DNS TTL management during cutover phases.** Lower DNS TTL values during migration phases to enable faster changes to routing decisions. Reduce TTL values before making routing changes and increase them after changes are validated. This approach balances routing flexibility with DNS performance impact.
 
 ## Implement progressive traffic cutover
 
@@ -84,42 +78,6 @@ The progressive cutover process involves gradually increasing traffic to Azure w
 3. **Establish clear criteria for proceeding to the next phase or rolling back.** Define specific metrics and thresholds that must be met before increasing traffic to Azure. These criteria should include performance metrics, error rates, user feedback, and business impact measures. Having clear rollback criteria ensures you can quickly revert to on-premises if issues arise.
 
 4. **Maintain the ability to quickly redirect traffic back to on-premises if issues occur.** Your traffic routing solution must support immediate traffic redirection without requiring complex configuration changes. Test your rollback procedures regularly to ensure they work correctly when needed. Document the rollback process and ensure operations teams understand how to execute it quickly.
-
-## Monitor and validate the cutover process
-
-Comprehensive monitoring during the cutover process provides visibility into system health, user experience, and migration progress. This monitoring enables you to make informed decisions about traffic routing adjustments and quickly identify issues that require attention. You must establish monitoring for both environments and track key metrics throughout the migration.
-
-1. **Establish baseline metrics for both on-premises and Azure environments before starting the cutover.** Collect performance metrics, error rates, response times, and resource utilization data for both environments. These baselines provide reference points for comparing system behavior during the migration. Document normal operating ranges for all key metrics.
-
-2. **Monitor application performance, error rates, and user experience throughout each phase.** Track metrics including response times, transaction success rates, error frequencies, and user satisfaction indicators. Set up alerts for metric values that fall outside acceptable ranges. This monitoring helps you identify issues early and take corrective action before they impact more users.
-
-3. **Track business metrics to ensure the migration doesn't negatively impact operations.** Monitor metrics like conversion rates, transaction volumes, and user engagement to ensure the migration maintains business performance. These metrics provide insight into the real-world impact of the migration on your organization's operations.
-
-4. **Use Azure Monitor and Application Insights to gain detailed visibility into Azure workload performance.** Configure comprehensive monitoring for your Azure deployment including application performance monitoring, infrastructure monitoring, and custom metrics. This detailed visibility enables you to optimize Azure performance and troubleshoot issues effectively.
-
-## Handle rollback scenarios
-
-Rollback capabilities provide essential safety mechanisms during migration activities. You must prepare for scenarios where issues require reverting traffic to on-premises systems quickly and efficiently. The rollback process should be tested and documented to ensure it works correctly when needed under pressure.
-
-1. **Define clear rollback criteria including performance thresholds and error rate limits.** Establish specific metrics and thresholds that trigger rollback procedures. These criteria should include response time increases, error rate spikes, user complaint volumes, and business impact measures. Having clear criteria helps operations teams make quick decisions during incidents.
-
-2. **Test rollback procedures regularly to ensure they work correctly and quickly.** Conduct regular tests of your rollback procedures to verify they function as expected. Time these tests to understand how quickly you can revert traffic to on-premises. Document any issues found during testing and update procedures accordingly.
-
-3. **Maintain on-premises capacity and capability throughout the cutover period.** Keep your on-premises environment fully operational and capable of handling full production load until the migration is complete. Don't decommission on-premises resources until you're confident the Azure migration is successful and stable.
-
-4. **Document step-by-step rollback procedures and ensure operations teams understand the process.** Create clear documentation that operations teams can follow during high-pressure situations. Include specific commands, configuration changes, and validation steps required for rollback. Train operations teams on these procedures and conduct regular drills.
-
-## Complete the migration and decommission on-premises resources
-
-The final phase of your migration involves completing the traffic cutover to Azure and safely decommissioning on-premises resources. This phase requires careful planning to ensure business continuity and proper resource cleanup. You should follow a structured approach to avoid disrupting ongoing operations.
-
-1. **Validate that 100% of traffic flows to Azure and performs within acceptable parameters.** Confirm that all users access the Azure environment and that system performance meets your requirements. Monitor key metrics for an extended period to ensure stability under full production load. This validation confirms that the migration is successful and stable.
-
-2. **Maintain on-premises resources for a defined period to support rapid rollback if needed.** Keep your on-premises environment operational for a predetermined time period (typically 30-90 days) to support emergency rollback scenarios. This approach provides additional safety margin and confidence during the early post-migration period.
-
-3. **Update DNS records to point directly to Azure endpoints after successful cutover.** Once you're confident in the Azure deployment, update your DNS records to point directly to Azure endpoints rather than routing through Traffic Manager or Front Door. This change eliminates the intermediate routing layer and reduces complexity for ongoing operations.
-
-4. **Plan and execute systematic decommissioning of on-premises infrastructure.** Develop a plan for shutting down on-premises resources in a controlled manner. This plan should include data backup procedures, license management, and resource cleanup activities. Execute decommissioning gradually to ensure no critical dependencies are overlooked.
 
 ## Azure tools and resources
 
