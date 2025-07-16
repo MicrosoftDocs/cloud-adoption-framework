@@ -27,7 +27,7 @@ An iterative migration approach organizes workloads into manageable waves. This 
 
 A migration wave must include all systems that depend on each other to function correctly. Grouping dependent systems into the same wave reduces the risk of broken integrations and minimizes business disruption during migration.
 
-1. **Map application dependencies first.** Use tools like https://learn.microsoft.com/azure/migrate/migrate-overview to discover communication patterns between applications. Dependency mapping identifies which systems exchange data or rely on shared services. This step is critical to avoid migrating a system in isolation that depends on another system still on-premises.
+1. **Map application dependencies first.** Use tools like [Azure Migrate](/azure/migrate/migrate-overview) to discover communication patterns between applications. Dependency mapping identifies which systems exchange data or rely on shared services. This step is critical to avoid migrating a system in isolation that depends on another system still on-premises.
 
 2. **Create dependency groups.** Group applications that share databases, APIs, authentication services, or network connections. These groups form the foundation of your migration waves. Grouping by dependency ensures that all components required for functionality move together, reducing post-migration troubleshooting.
 
@@ -39,11 +39,11 @@ A prioritized workload selection process establishes a strong foundation for you
 
 1. **Define the first wave based on known workloads and low complexity.** Select workloads that are well understood, have minimal dependencies, and present low risk. This wave serves as a pilot to validate tools, processes, and assumptions. Use this wave to establish baseline metrics and refine your migration methodology.Select internal systems or dev/test environments that are simple and self-contained. These workloads typically involve fewer than 10 assets and minimal integration dependencies. Starting with low-risk workloads allows your team to validate tools, refine processes, and build confidence before migrating critical systems.
 
-3. **Define business-driven prioritization criteria for next waves.** Establish clear criteria to determine workload priority. Consider factors such as datacenter exit deadlines, unsupported operating systems, business value, cost savings, or innovation opportunities (e.g., enabling AI in a line-of-business app). Use these criteria to guide sequencing decisions and stakeholder alignment.
+1. **Define business-driven prioritization criteria for next waves.** Establish clear criteria to determine workload priority. Consider factors such as datacenter exit deadlines, unsupported operating systems, business value, cost savings, or innovation opportunities (e.g., enabling AI in a line-of-business app). Use these criteria to guide sequencing decisions and stakeholder alignment.
 
-4. **Capture business and technical requirements.** Document acceptable downtime windows, stakeholder communication needs, compliance obligations, and integration dependencies for each workload. Also assess technical readiness, including compatibility with Azure services, ISV support, landing zone dependencies, and performance baselines.
+1. **Capture business and technical requirements.** Document acceptable downtime windows, stakeholder communication needs, compliance obligations, and integration dependencies for each workload. Also assess technical readiness, including compatibility with Azure services, ISV support, landing zone dependencies, and performance baselines.
 
-5. **Maintain a dynamic migration backlog.** Create a living backlog that reflects current priorities and constraints. Update the backlog regularly to incorporate new insights, shifting business needs, and lessons learned from earlier waves. This approach ensures flexibility and responsiveness throughout the adoption process.
+1. **Maintain a dynamic migration backlog.** Create a living backlog that reflects current priorities and constraints. Update the backlog regularly to incorporate new insights, shifting business needs, and lessons learned from earlier waves. This approach ensures flexibility and responsiveness throughout the adoption process.
 
 ## Define timelines for each wave
 

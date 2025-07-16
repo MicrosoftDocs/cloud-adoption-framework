@@ -137,4 +137,4 @@ The final phase of your migration involves completing the traffic cutover to Azu
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Assess and plan your migration](migration-wave-plan.md)
+> [Plan migration execution](./plan-migration-execution.md#group-dependent-workloads-into-the-same-migration-wave)
