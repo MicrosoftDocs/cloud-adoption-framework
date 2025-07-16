@@ -102,9 +102,8 @@ Realistic timeline estimation enables effective resource planning and stakeholde
 |----------|------|-------------|
 | Learning & Certification | [AI learning hub](/ai/) | Provides free AI training, certifications, and product guidance for skill development |
 | Assessment & Planning | [AI impact assessment template](https://www.microsoft.com/ai/tools-practices) | Evaluates social, economic, and ethical effects of AI initiatives |
-| Development Platform | [Azure AI Foundry](/azure/ai-studio/quickstarts/get-started-playground) | Comprehensive platform for building and deploying generative AI applications |
+| Development Platform | [Azure AI Foundry](/azure/ai-foundry/quickstarts/get-started-playground) | Comprehensive platform for building and deploying generative AI applications, including capabilities for agents, vision, speech, language, and decision-making |
 | Model Training | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day) | End-to-end machine learning lifecycle management and model deployment |
-| AI Services | [Azure AI services](/azure/ai-services/) | Pre-built AI capabilities for vision, speech, language, and decision-making |
 | Conversational AI | [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) | Platform for building custom conversational AI agents and chatbots |
 | Partner Network | [Microsoft partners marketplace](https://partner.microsoft.com/partnership/find-a-partner) | Access to certified partners with AI, data, and Azure expertise |
 
