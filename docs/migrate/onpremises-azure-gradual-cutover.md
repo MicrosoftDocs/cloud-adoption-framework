@@ -33,11 +33,11 @@ The architecture you select for controlling traffic flow between on-premises and
 
     2. **Select Azure Front Door for HTTP/HTTPS workloads requiring advanced routing capabilities.** Front Door provides global load balancing with SSL termination, caching, and rules-based routing. This service supports weighted traffic distribution, session affinity, and custom routing rules based on headers, paths, and query strings. Front Door works best for web applications that need content acceleration and sophisticated routing logic.
 
+    3. **Deploy Azure Application Gateway when you need Layer 7 load balancing with hybrid backend pools.** Application Gateway supports backend pools that include both Azure resources and on-premises systems. But you must use ExpressRoute or VPN connections to route to on-premises public endpoint. This approach enables you to use a single load balancer to distribute traffic between environments while maintaining session affinity and SSL termination capabilities. If you need to route traffic across Azure regions, use Traffic Manager.
+
+    4. **Consider Azure Private DNS Resolver for hybrid DNS scenarios.** When you need seamless name resolution between Azure and on-premises environments, Azure Private DNS Resolver provides bidirectional DNS forwarding. This service enables Azure resources to resolve on-premises domains and on-premises systems to resolve Azure private DNS zones without custom DNS solutions.
+
 2. **Implement on-premises DNS-based routing when you need to maintain control from your existing infrastructure.** Configure your on-premises DNS servers to resolve your application's FQDN to different IP addresses based on your cutover strategy. This approach keeps routing decisions within your on-premises environment and provides familiar operational control. You can gradually change DNS responses to shift traffic to Azure without requiring Azure-based routing services.
-
-3. **Deploy Azure Application Gateway when you need Layer 7 load balancing with hybrid backend pools.** Application Gateway supports backend pools that include both Azure resources and on-premises systems. But you must use ExpressRoute or VPN connections to route to on-premises public endpoint. This approach enables you to use a single load balancer to distribute traffic between environments while maintaining session affinity and SSL termination capabilities. If you need to route traffic across Azure regions, use Traffic Manager.
-
-4. **Consider Azure Private DNS Resolver for hybrid DNS scenarios.** When you need seamless name resolution between Azure and on-premises environments, Azure Private DNS Resolver provides bidirectional DNS forwarding. This service enables Azure resources to resolve on-premises domains and on-premises systems to resolve Azure private DNS zones without custom DNS solutions.
 
 ## Deploy your workload to Azure before traffic cutover
 
@@ -55,8 +55,6 @@ DNS configuration controls how traffic routes between on-premises and Azure envi
 
 ### Configure Azure-based load balancing
 
-Azure-based load balancing services provide centralized traffic management with advanced routing capabilities and global distribution. These services handle traffic routing decisions in Azure and offer sophisticated health monitoring, failover capabilities, and traffic distribution algorithms. You gain access to enterprise-grade load balancing features while Azure manages the underlying infrastructure.
-
 1. **Deploy Azure service as your traffic entry point.** Configure the selected service to act as the primary entry point for all incoming traffic. Azure Front Door provides global load balancing with content delivery network capabilities, while Application Gateway offers regional Layer 7 load balancing with web application firewall protection. Both services support backend pools that include multiple environments.
 
 2. **Update public DNS records to point to your Azure load balancing service.** Change your public DNS records to resolve to the chosen Azure service endpoint (Traffic Manager, Front Door, or Application Gateway). This configuration ensures that all incoming traffic reaches Azure first, where routing decisions occur based on your configured rules. The Azure service then distributes traffic to appropriate backend destinations according to your migration strategy.
@@ -66,8 +64,6 @@ Azure-based load balancing services provide centralized traffic management with 
 4. **Implement weighted routing starting with minimal Azure traffic.** Configure initial weights to send most traffic to on-premises (95-99%) and minimal traffic to Azure (1-5%). This configuration validates the Azure environment under real production load while minimizing user impact. Gradually adjust weights as validation succeeds and confidence increases in the Azure deployment.
 
 ### Configure on-premises DNS for controlled routing
-
-On-premises DNS configuration provides an alternative approach to traffic routing that keeps control within your existing infrastructure. This strategy involves configuring your DNS servers to resolve your application's FQDN to different IP addresses based on your cutover strategy. You can implement this approach without requiring Azure-based routing services.
 
 1. **Configure DNS records to initially resolve to on-premises IP addresses.** Set up your DNS infrastructure to resolve your application's FQDN to your on-premises IP addresses. This configuration maintains normal operations while you prepare for migration. Document your current DNS configuration and ensure you have proper backup procedures.
 
