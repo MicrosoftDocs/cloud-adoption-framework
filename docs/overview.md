@@ -45,7 +45,7 @@ The Cloud Adoption Framework (CAF) organizes its guidance into methodologies tha
 | 🚀 [**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | Define business justification and expected outcomes. |
 | 📝 [**2. Plan**](/azure/cloud-adoption-framework/plan/) | Align cloud adoption plans with business goals. |
 | 🛠️ [**3. Ready**](/azure/cloud-adoption-framework/ready/) | Prepare your Azure environment and landing zones. |
-| 🌐 [**4. Adopt**](/azure/cloud-adoption-framework/adopt/) | Migrate, modernize, and innovate in Azure. |
+| 🌐 **4. Adopt** | [Migrate](/azure/cloud-adoption-framework/migrate/plan-migration) workload from on-premises or other clouds. <br> [Modernize](/azure/cloud-adoption-framework/modernize/) existing workloads to better meet business needs.<br> [Build](/azure/cloud-adoption-framework/innovate/) new cloud-native workloads and features in Azure. |
 
 ### Continuous methodologies
 

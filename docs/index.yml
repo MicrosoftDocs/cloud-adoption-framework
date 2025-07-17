@@ -64,9 +64,19 @@ additionalContent:
           url: ./ready/index.md
 
         # Card
-        - title: 🚀 Adopt
-          summary: Migrate, modernize, and innovate in Azure.
-          url: ./adopt/index.md
+        - title: ⬆️ Migrate
+          summary: Migrate your workloads to Azure from on-premises and other clouds.
+          url: ./migrate/plan-migration.md
+
+        # Card
+        - title: 🔄 Modernize
+          summary: Improve your existing workloads to better meet business needs.
+          url: ./modernize/index.md
+        
+        # Card
+        - title: 🌐 Build cloud-native
+          summary: Build new cloud-native workloads and features in Azure.
+          url: ./innovate/index.md
 
         # Card
         - title: 🔐 Govern
