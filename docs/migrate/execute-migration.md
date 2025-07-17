@@ -1,15 +1,15 @@
 ---
-title: Execute workload migration cutover
-description: Execute workload migration cutover to Azure with structured guidance for both offline and online migration approaches, including stakeholder communication, environment preparation, data migration execution, validation, and post-migration support.
+title: Execute migration
+description: Execute migration to Azure with structured guidance for both offline and online migration approaches, including stakeholder communication, environment preparation, data migration execution, validation, and post-migration support.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Execute workload migration
+# Execute migration
 
-This article provides guidance on executing the final workload cutover to Azure, ensuring minimal downtime and successful transition of your applications and data to the cloud environment.
+This article provides guidance on executing the final cutover to Azure, ensuring minimal downtime and successful transition of your workloads and data to the cloud environment.
 
 ## Notify stakeholders of the migration schedule and requirements
 
@@ -47,7 +47,7 @@ Offline migration stops the source system completely to prevent data changes dur
 
 1. **Stop the source datastore to prevent changes.** Source system shutdown eliminates data corruption risk by ensuring no new transactions occur during migration. This shutdown provides a clean cutoff point for data consistency. You should follow documented shutdown procedures to stop database services gracefully, verify transaction completion, and confirm no user access during migration.
 
-2. **Transfer data to Azure using appropriate tools.** Data transfer tools move your database to Azure efficiently and securely. The transfer method depends on your data size and network capabilities. You should use native database replication tools when available. For more tools, see [](./execute-offline-migration-cutover.md#)
+2. **Transfer data to Azure using appropriate tools.** Data transfer tools move your database to Azure efficiently and securely. The transfer method depends on your data size and network capabilities. You should use native database replication tools when available. See [common data migration tools](#azure-tools-and-resources).
 
 3. **Verify the Azure datastore functions correctly.** Data validation confirms that the migrated data loads correctly and all system components function as expected. This validation prevents user access to a non-functional system and ensures service reliability. Verify data integrity through row counts and consistency checks, and test critical database functions before proceeding.
 
@@ -63,7 +63,7 @@ For detailed guidance on offline migration execution, see [Execute offline migra
 
 3. **Validate the migrated workload before redirecting user traffic.** Conduct rapid functional validation of the migrated application in the Azure environment before making it available to users. This validation confirms the workload functions correctly and meets performance expectations, preventing issues after users begin accessing the system. After successful validation, redirect user traffic to the Azure environment by updating DNS records and load balancer configurations to complete the cutover process.
 
-For detailed guidance on online migration execution, see [Execute online migration cutover](execute-online-migration-cutover.md).
+For detailed guidance on online migration execution, see [Execute online migration cutover](./execute-online-migration-cutover.md).
 
 ## Validate migration success
 

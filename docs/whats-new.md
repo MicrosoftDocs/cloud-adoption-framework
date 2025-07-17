@@ -40,7 +40,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 - [Enterprise-scale support for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md): We reorganized the content in this article and made minor edits.
 - [Establish an AI Center of Excellence](../scenarios/ai/center-of-excellence.md): We added specific steps, detailed role definitions, organizational integration recommendations, and maturity-based operational evolution to provide a more strategic approach to establishing and operating an AI Center of Excellence.
 - [Select Azure platform as a service (PaaS) solutions for AI](../scenarios/ai/platform/resource-selection.md): We updated resource recommendations to include Azure AI Foundry Agent Service and streamlined the guidance to present Azure AI Foundry as the comprehensive solution and Azure OpenAI for specific model access needs.
-- [How to adopt the cloud](../adopt/index.md): We added links to the **Next steps** section for a typical cloud adoption journey.
 
 ## May 2025
 

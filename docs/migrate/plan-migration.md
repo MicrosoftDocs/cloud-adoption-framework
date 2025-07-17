@@ -41,7 +41,7 @@ A data migration path defines how data moves from your current environment to Az
 
 4. **Use Azure Data Box for large, non-critical offline transfers.** Select Azure Data Box when transferring large volumes of data that are not time-sensitive or business-critical. This method avoids network congestion but is the slowest due to shipping and manual handling. Order and configure the Data Box from the Azure portal.
 
-| Data Migration Path | When to Use | Pros | Cons |
+| Data Migration Path | When to use | Pros | Cons |
 |----------------------|-------------|------|------|
 | ExpressRoute | If ExpressRoute is available | Secure and fast | Requires setup and cost |
 | VPN | If secure transfer is required and ExpressRoute is not available | More secure than public internet | Requires VPN setup |
@@ -74,17 +74,11 @@ A migration wave is a logical grouping of workloads that share similar complexit
 
 For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-plan.md).
 
-### Group dependent workloads into the same migration wave
+### Migrate dependencies together
 
-Dependencies between workloads can cause service disruptions if not migrated together. You should group interdependent systems into the same wave to maintain functionality and reduce complexity.
+Dependencies between workloads can cause service disruptions if not migrated together. You should migrate all dependencies together to maintain functionality and reduce complexity.
 
-1. **Use dependency mapping tools to identify integrations.** Tools like Azure Migrate can reveal shared databases, APIs, and service calls. This visibility is essential for accurate grouping and ensures that interdependent workloads are migrated together.
-
-2. **Create migration waves based on dependency clusters.** Group workloads that rely on each other into the same wave. This approach minimizes the need for temporary integration workarounds and reduces the risk of service disruptions during migration.
-
-3. **Validate groupings with application owners.** Confirm that all critical dependencies are captured and that the proposed wave structure supports business continuity. Collaborate with application owners to ensure alignment with operational priorities and technical requirements.
-
-For detailed guidance, see [Map internal and external dependencies](/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration#map-internal-and-external-dependencies).
+[!INCLUDE [Steps to migrate dependencies together](./includes/migrate-dependencies-together.md)]
 
 ### Minimize hybrid environment duration for dependent workloads
 

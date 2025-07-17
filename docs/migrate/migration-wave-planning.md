@@ -27,11 +27,7 @@ An iterative migration approach organizes workloads into manageable waves. This 
 
 A migration wave must include all systems that depend on each other to function correctly. Grouping dependent systems into the same wave reduces the risk of broken integrations and minimizes business disruption during migration.
 
-1. **Map application dependencies first.** Use tools like [Azure Migrate](/azure/migrate/migrate-overview) to discover communication patterns between applications. Dependency mapping identifies which systems exchange data or rely on shared services. This step is critical to avoid migrating a system in isolation that depends on another system still on-premises.
-
-2. **Create dependency groups.** Group applications that share databases, APIs, authentication services, or network connections. These groups form the foundation of your migration waves. Grouping by dependency ensures that all components required for functionality move together, reducing post-migration troubleshooting.
-
-3. **Validate group completeness.** Confirm that each group includes all necessary components for the applications to operate. Include supporting infrastructure such as load balancers, DNS records, or caching layers. Incomplete groups can lead to service outages or degraded performance after migration.
+[!INCLUDE [Steps to migrate dependencies together](./includes/migrate-dependencies-together.md)]
 
 ## Select workloads for waves
 
@@ -50,8 +46,10 @@ A prioritized workload selection process establishes a strong foundation for you
 Clear timelines for each wave provide structure to your migration effort. Defined start and end dates help manage scope, set stakeholder expectations, and track progress across teams.
 
 1. **Set realistic wave durations.** Base timelines on workload complexity and team capacity. Typical waves range from 4-12 weeks.
-2. **Build in buffer time.** Include contingency time for unexpected challenges. Plan for 20-30% additional time beyond initial estimates.
-3. **Establish checkpoints.** Create milestone reviews within each wave to assess progress and adjust plans if needed.
+
+1. **Build in buffer time.** Include contingency time for unexpected challenges. Plan for 20-30% additional time beyond initial estimates.
+
+1. **Establish checkpoints.** Create milestone reviews within each wave to assess progress and adjust plans if needed.
 
 ## Manage your migration wave plan
 

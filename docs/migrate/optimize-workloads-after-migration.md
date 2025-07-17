@@ -1,5 +1,5 @@
 ---
-title: Optimize workloads post-migration
+title: Optimize workloads after migration
 description: Comprehensive guide for post-migration workload optimization in Azure, covering performance fine-tuning, cost management, monitoring validation, backup verification, user feedback collection, operations team readiness, hybrid dependency management, and architecture reviews to ensure efficient, secure, and cost-effective cloud operations.
 author: stephen-sumner
 ms.author: pnp
@@ -7,7 +7,7 @@ ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Optimize workloads post-migration
+# Optimize workloads after migration
 
 A successful migration does not end at cutover. Post-migration optimization ensures workloads operate efficiently, securely, and cost-effectively in Azure. This phase overlaps with ongoing operations and sets the foundation for long-term cloud maturity.
 
