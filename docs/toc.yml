@@ -430,10 +430,6 @@ items:
 
         - name: Resources
           items:
-          - name: Migration skills
-            href: migrate/migration-skills.md
-          - name: Migration scenarios
-            href: migrate/scenarios.md
           - name: Migration wave planning
             href: migrate/migration-wave-planning.md
           - name: Execute online migration cutover
@@ -442,6 +438,8 @@ items:
             href: migrate/execute-offline-migration-cutover.md
           - name: Gradual cutover to Azure
             href: migrate/onpremises-azure-gradual-cutover.md
+          - name: Migration scenarios
+            href: migrate/scenarios.md
 
 
       - name: Modernize
