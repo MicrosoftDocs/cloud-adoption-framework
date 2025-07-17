@@ -23,6 +23,6 @@ The Cloud Adoption Framework (CAF) Migrate methodology provides structured guida
 | Optimize after migration |  |
 | Decommission source workloads |  |
 
-## Understand the important of migration guidance
+## Understand the importance of migration guidance
 
 A structured migration approach reduces business risk and accelerates time to value. Migration projects without proper sequencing often encounter unexpected dependencies, cost overruns, and extended downtime. You should follow a proven methodology that breaks complex migrations into manageable phases with clear success criteria.

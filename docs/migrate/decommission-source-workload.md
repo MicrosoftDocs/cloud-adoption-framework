@@ -35,7 +35,7 @@ License optimization reduces costs and ensures compliance with licensing terms.
 
 4. **Update retention policies.** Ensure that your data governance policies reflect the new storage locations and retention durations.
 
-## Update documentation and operational assets
+## Keep documentation accurate and up to date
 
 1. **Update architecture diagrams and runbooks.** Reflect the new Azure-based architecture in all technical documentation. Include updated IP addresses, DNS names, and service dependencies.
 

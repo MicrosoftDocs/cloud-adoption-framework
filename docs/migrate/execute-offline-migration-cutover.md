@@ -19,11 +19,11 @@ A production-ready Azure environment ensures consistency, security, and operatio
 
 2. **Apply production-grade configurations for networking, identity, and access.** Network and security configurations protect your workload and enable integration with dependent systems. These configurations must match your tested design to avoid connectivity issues during cutover. Configure virtual networks, subnets, private endpoints, role-based access control (RBAC), and managed identities with IP ranges, DNS zones, and firewall rules that match your tested design.
 
-3. **Validate the readiness of the production environment.** Environment validation confirms that all services are deployed, accessible, and correctly configured before migration begins. This validation reduces the risk of delays or failures during the cutover window. Run pre-cutover validation scripts or checklists to verify that all services are operational and meet your requirements.
+3. **Validate the readiness of the production environment.** Environment validation confirms that all services are deployed, accessible, and correctly configured before migration begins. This validation reduces the risk of delays or failures during the cutover. Run pre-cutover validation scripts or checklists to verify that all services are operational and meet your requirements.
 
 ## 2. Stop the source workload to ensure data consistency
 
-A clean shutdown of the source workload prevents data changes during migration and avoids corruption or loss. Application-specific shutdown procedures ensure that all processes complete cleanly and no data is left in an inconsistent state. You must follow documented shutdown procedures to ensure a clean stop of the source application or service.
+A clean shutdown of the source workload prevents data changes during migration and avoids corruption or loss. Application-specific shutdown procedures ensure that all processes complete cleanly and no data is left in an inconsistent state. You must follow documented shutdown procedures to ensure a clean shutdown of the source application or service.
 
 ## 3. Create and transfer a complete backup of the workload
 
@@ -53,15 +53,15 @@ Testing validates that all application features, integrations, and performance b
 
 ## 5. Redirect user traffic to Azure
 
-Traffic redirection transitions users to the Azure-hosted workload. Update DNS records, load balancer configurations, and application URLs to point to the Azure environment. Monitor user access patterns and system performance during the transition. This step completes the transition from the source environment to Azure. Update DNS records, connection strings, or endpoint configurations and confirm that users and systems can access the workload without issues.
+Traffic redirection transitions users to the Azure-hosted workload. Update DNS records, load balancer configurations, and application configurations to point to the Azure environment. Monitor user access patterns and system performance during the transition. This step completes the transition from the source environment to Azure. Update DNS records, connection strings, or endpoint configurations and confirm that users and systems can access the workload without issues.
 
 ## 6. Validate the workload after cutover
 
 Post-migration validation ensures that the workload is fully functional and that data integrity is maintained. Comprehensive validation by application owners and testers confirms that the migration was successful. You must involve application owners and testers in this validation process.
 
-1. **Verify all major functions and data integrity.** Data validation confirms that the migration was successful and that no data was lost or corrupted. This verification provides confidence that the workload operates correctly in Azure. Use row count comparisons, critical reports, or parallel read-only modes to validate data and confirm that the system behaves as expected.
+1. **Verify all major functions and data integrity.** Data validation confirms that the migration was successful and that no data was lost or corrupted. This verification provides confidence that the workload operates correctly in Azure. Use row count comparisons, checksums, critical reports, or parallel read-only modes to validate data and confirm that the system behaves as expected.
 
-2. **Announce migration success only after thorough validation.** Complete validation ensures that all stakeholders agree the workload is stable and functional. This confirmation prevents premature declarations of success that could lead to issues later. Ensure that all stakeholders confirm that the workload is stable and meets operational requirements.
+2. **Announce migration success only after thorough validation.** Complete validation ensures that all stakeholders agree the workload is stable and functional. This confirmation prevents premature declarations of success that could lead to issues later. Ensure that all stakeholders confirm the workload is stable and meets operational requirements.
 
 ## 7. Maintain a fallback option
 
@@ -79,12 +79,12 @@ Establish a support model with shorter SLAs during the stabilization period. Enh
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Infrastructure-as-code | [Azure Resource Manager templates](https://learn.microsoft.com/azure/azure-resource-manager/templates/overview) | Define and deploy Azure resources consistently across environments |
-| Infrastructure-as-code | [Bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview) | A domain-specific language for deploying Azure resources declaratively |
-| Infrastructure-as-code | [Terraform](https://learn.microsoft.com/azure/developer/terraform/overview) | An open-source tool for building, changing, and versioning infrastructure |
-| Data transfer | [AzCopy](https://learn.microsoft.com/azure/storage/common/storage-use-azcopy-v10) | Command-line tool to transfer data to and from Azure Storage |
-| Data transfer | [Azure Storage Explorer](https://learn.microsoft.com/azure/storage/common/storage-explorer) | GUI tool to manage and transfer Azure Storage data |
-| Data transfer | [Azure Data Box](https://learn.microsoft.com/azure/databox/data-box-overview) | Physical device for secure offline data transfer to Azure |
+| Infrastructure-as-code | [Azure Resource Manager templates](			/azure/azure-resource-manager/templates/overview) | Define and deploy Azure resources consistently across environments |
+| Infrastructure-as-code | [Bicep](			/azure/azure-resource-manager/bicep/overview) | A domain-specific language for deploying Azure resources declaratively |
+| Infrastructure-as-code | [Terraform](			/azure/developer/terraform/overview) | An open-source tool for building, changing, and versioning infrastructure |
+| Data transfer | [AzCopy](			/azure/storage/common/storage-use-azcopy-v10) | Command-line tool to transfer data to and from Azure Storage |
+| Data transfer | [Azure Storage Explorer](			/azure/storage/common/storage-explorer) | GUI tool to manage and transfer Azure Storage data |
+| Data transfer | [Azure Data Box](			/azure/databox/data-box-overview) | Physical device for secure offline data transfer to Azure |
 
 ## Next steps
 
