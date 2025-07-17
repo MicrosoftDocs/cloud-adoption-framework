@@ -1,13 +1,13 @@
 ---
-title: Plan migration execution
-description: Learn how to create migration execution plans that define workload sequencing, data transfer paths, and rollback strategies for successful Azure cloud migrations.
+title: Plan your migration
+description: Learn how to create migration plans that define workload sequencing, data transfer paths, and rollback strategies for successful Azure cloud migrations.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Plan migration execution
+# Plan your migration
 
 A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences. Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone:
 
