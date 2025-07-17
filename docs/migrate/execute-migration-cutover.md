@@ -89,14 +89,19 @@ Enhanced support coverage ensures rapid response to post-migration issues during
 
 ## Azure tools and resources
 
-| Category | Tool | Description |
-|----------|------|-------------|
-| Data Transfer | [AzCopy](https://docs.microsoft.com/azure/storage/common/storage-use-azcopy-v10) | Command-line utility for copying data to and from Azure Storage |
-| Data Transfer | [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) | Graphical user interface for managing Azure Storage resources |
-| Data Transfer | [Azure Data Box](https://azure.microsoft.com/services/databox/) | Physical device for transferring large amounts of data to Azure |
-| Infrastructure | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/) | Deployment and management service for Azure resources |
-| Infrastructure | [Bicep](https://docs.microsoft.com/azure/azure-resource-manager/bicep/) | Domain-specific language for deploying Azure resources |
-| Infrastructure | [Terraform](https://www.terraform.io/docs/providers/azurerm/) | Infrastructure-as-code tool for building Azure resources |
+| Source | Tool | Description |
+|--------|------|-------------|
+| Multiple | [Data migration guides](/data-migration/) | Guides for different platforms, sources, and targets |
+| Any | Native database replication | Database-specific replication features that maintain data consistency across source and target systems |
+| On-premises | [Azure Migrate](/azure/migrate/?view=migrate-classic) | Comprehensive migration service for discovering, assessing, and migrating workloads to Azure |
+| On-premises | [Azure Data Box](/azure/databox/data-box-overview) | Send terabytes of data into and out of Azure |
+| On-premises | [Azure Database Migration Service](/azure/dms/dms-overview) | Fully managed service for migrating databases to Azure with minimal downtime |
+| On-premises | [Azure Data Factory](/azure/data-factory/data-factory-tutorials) | Data integration service for creating data-driven workflows and pipelines |
+| On-premises | [AzCopy](/azure/storage/common/storage-use-azcopy-v10) | Command-line utility for copying data to and from Azure Storage |
+| Google Cloud | [Google Cloud Storage Transfer Service](https://cloud.google.com/storage-transfer-service) | Transfers data to and from various clouds or on-premises environments |
+| Google Cloud | gsutil | Google Cloud command-line tool for managing Cloud Storage |
+| AWS | [AWS Data Transfer Service](https://aws.amazon.com/datasync/) | Transfers data between on-premises and AWS storage services |
+| AWS | AWS CLI | Amazon Web Services command-line interface for managing AWS services |
 
 ## Next steps
 
