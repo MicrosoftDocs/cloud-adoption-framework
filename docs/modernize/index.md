@@ -115,7 +115,7 @@ Modernization is an ongoing process. Each iteration makes your cloud environment
 
 5. **Update architecture.** Update your documentation to reflect the modernized system. Capture the current architecture, including all modernized components. update/refine documentation to ensure it aligns with the deployed environment.
 
-6. **Update operations.** Document operational procedures for managing the new environment. Train the operations team on any new technologies, such as container orchestration, serverless functions, or platform-as-a-service (PaaS) solutions.
+6. **Update operations.** Document operational procedures for managing the new environment or component. Train the operations team on any new technologies, such as container orchestration, serverless functions, or platform-as-a-service (PaaS) solutions.
 
 7. **Gather feedback from users.** Collect and document feedback from end users. Address any issues, such as performance concerns or newly discovered bugs. Positive feedback, such as improved speed, can validate modernization success.
 
