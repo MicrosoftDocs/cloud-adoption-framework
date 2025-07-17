@@ -79,12 +79,12 @@ Establish a support model with shorter SLAs during the stabilization period. Enh
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Infrastructure-as-code | [Azure Resource Manager templates](https://learn.microsoft.com/azure/azure-resource-manager/templates/overview) | Define and deploy Azure resources consistently across environments |
-| Infrastructure-as-code | [Bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview) | A domain-specific language for deploying Azure resources declaratively |
-| Infrastructure-as-code | [Terraform](https://learn.microsoft.com/azure/developer/terraform/overview) | An open-source tool for building, changing, and versioning infrastructure |
-| Data transfer | [AzCopy](https://learn.microsoft.com/azure/storage/common/storage-use-azcopy-v10) | Command-line tool to transfer data to and from Azure Storage |
-| Data transfer | [Azure Storage Explorer](https://learn.microsoft.com/azure/storage/common/storage-explorer) | GUI tool to manage and transfer Azure Storage data |
-| Data transfer | [Azure Data Box](https://learn.microsoft.com/azure/databox/data-box-overview) | Physical device for secure offline data transfer to Azure |
+| Infrastructure-as-code | [Azure Resource Manager templates](			/azure/azure-resource-manager/templates/overview) | Define and deploy Azure resources consistently across environments |
+| Infrastructure-as-code | [Bicep](			/azure/azure-resource-manager/bicep/overview) | A domain-specific language for deploying Azure resources declaratively |
+| Infrastructure-as-code | [Terraform](			/azure/developer/terraform/overview) | An open-source tool for building, changing, and versioning infrastructure |
+| Data transfer | [AzCopy](			/azure/storage/common/storage-use-azcopy-v10) | Command-line tool to transfer data to and from Azure Storage |
+| Data transfer | [Azure Storage Explorer](			/azure/storage/common/storage-explorer) | GUI tool to manage and transfer Azure Storage data |
+| Data transfer | [Azure Data Box](			/azure/databox/data-box-overview) | Physical device for secure offline data transfer to Azure |
 
 ## Next steps
 

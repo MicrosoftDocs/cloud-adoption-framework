@@ -39,7 +39,7 @@ Archived data ensures regulatory compliance and provides a fallback during the t
 
 4. **Update retention policies.** Ensure that your data governance policies reflect the new storage locations and retention durations.
 
-## Update documentation and operational assets
+## Keep documentation accurate and up to date
 
 Accurate documentation ensures operational continuity and reduces support risks.
 
