@@ -62,29 +62,14 @@ Workload criticality determines the business impact of downtime or failure. Accu
 
 3. **Update classifications based on current business impact.** Revise workload classifications to reflect their true criticality if their role has changed. This ensures that critical systems are prioritized appropriately and not delayed due to outdated assumptions. For more information, see [Migration adoption plan](/azure/cloud-adoption-framework/plan/migration-adoption-plan#details-on-each-workload).
 
-### Organize large portfolios into migration waves
-
-A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work.
-
-1. **Segment the migration portfolio into logical waves.** A migration wave should include workloads with similar technical profiles, business impact, or dependency structures. This segmentation allows teams to focus on a consistent set of challenges and apply targeted solutions. Use metadata such as workload type, owner, and environment to group workloads effectively.
-
-2. **Limit the number of workloads per wave.** Each wave should be small enough to execute within a defined timeline but large enough to deliver meaningful progress. Smaller waves reduce risk and allow for faster feedback cycles. Larger waves may increase efficiency but require more coordination and resources.
-
-3. **Sequence waves based on complexity and risk.** Start with low-complexity, low-risk workloads to build confidence and refine processes. Progressively increase complexity in later waves as the team gains experience and tooling matures.
-
-For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-plan.md).
-
 ### Migrate dependencies together
-
-Dependencies between workloads can cause service disruptions if not migrated together. You should migrate all dependencies together to maintain functionality and reduce complexity.
 
 [!INCLUDE [Steps to migrate dependencies together](./includes/migrate-dependencies-together.md)]
 
 ### Minimize hybrid environment duration for dependent workloads
 
-Hybrid environments introduce complexity and risk. When full migration of dependent systems is not possible, you should minimize the duration of hybrid states and implement mitigation strategies.
-
-1. **Document integration gaps and risks.** Identify which systems remain on-premises and how they interact with cloud-based workloads. This documentation supports risk mitigation planning by providing visibility into potential challenges and dependencies.
+1. **Document integration gaps and risks.** Hybrid environments introduce complexity and risk. When full migration of dependent systems is not possible, you should minimize the duration of hybrid states and implement mitigation strategies.
+ Identify which systems remain on-premises and how they interact with cloud-based workloads. This documentation supports risk mitigation planning by providing visibility into potential challenges and dependencies.
 
 2. **Implement temporary bridging solutions.** Use API gateways, database replication, or message queues to maintain functionality during the hybrid state. These solutions should be lightweight, easy to deploy, and simple to decommission once the migration is complete.
 
@@ -92,9 +77,8 @@ Hybrid environments introduce complexity and risk. When full migration of depend
 
 ### Establish specific migration timelines with business alignment
 
-Timelines provide structure and accountability. Aligning migration schedules with business calendars avoids disruption during peak periods. You should define and communicate migration timelines that reflect business priorities.
-
-1. **Create a detailed migration schedule.** Define start and end dates for each migration wave and workload. Incorporate buffer time for testing and issue resolution to ensure smooth execution. This detailed scheduling reduces the risk of delays and supports effective resource planning.
+1. **Create a detailed migration schedule.** Timelines provide structure and accountability. Aligning migration schedules with business calendars avoids disruption during peak periods. You should define and communicate migration timelines that reflect business priorities.
+Define start and end dates for each migration wave and workload. Incorporate buffer time for testing and issue resolution to ensure smooth execution. This detailed scheduling reduces the risk of delays and supports effective resource planning.
 
 2. **Align timelines with business events.** Avoid scheduling migrations during critical business periods such as financial close, product launches, or holiday seasons. This alignment minimizes the risk of business disruption and ensures stakeholder confidence.
 
@@ -102,13 +86,24 @@ Timelines provide structure and accountability. Aligning migration schedules wit
 
 ### Migrate non-production environments first for each workload
 
-Non-production environments provide a safe space to test the full migration process. You should migrate development, staging, and QA environments before production to validate readiness.
-
-1. **Sequence non-production environments ahead of production.** This order allows teams to test configurations, performance, and recovery procedures without impacting users.
+1. **Sequence non-production environments ahead of production.** Non-production environments provide a safe space to test the full migration process. You should migrate development, staging, and QA environments before production to validate readiness.
+This order allows teams to test configurations, performance, and recovery procedures without impacting users.
 
 2. **Use non-production migrations to train operations teams.** These migrations provide hands-on experience with Azure tools and management practices.
 
 3. **Validate performance and functionality in Azure.** Confirm that applications behave as expected and meet performance targets before migrating production systems.
+
+### Organize large portfolios into migration waves
+
+1. **Understand migration waves.** A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work.
+
+1. **Segment the migration portfolio into logical waves.** A migration wave should include workloads with similar technical profiles, business impact, or dependency structures. This segmentation allows teams to focus on a consistent set of challenges and apply targeted solutions. Use metadata such as workload type, owner, and environment to group workloads effectively.
+
+1. **Limit the number of workloads per wave.** Each wave should be small enough to execute within a defined timeline but large enough to deliver meaningful progress. Smaller waves reduce risk and allow for faster feedback cycles. Larger waves may increase efficiency but require more coordination and resources.
+
+1. **Sequence waves based on complexity and risk.** Start with low-complexity, low-risk workloads to build confidence and refine processes. Progressively increase complexity in later waves as the team gains experience and tooling matures.
+
+For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-plan.md).
 
 ## Determine offline or near-zero downtime migration
 
