@@ -417,10 +417,8 @@ items:
       items:
       - name: Migrate
         items:
-        - name: Checklist
-          href: migrate/index.md
-        - name: 1. Plan migration execution
-          href: migrate/plan-migration-execution.md
+        - name: 1. Plan migration
+          href: migrate/plan-migration.md
         - name: 2. Prepare workloads for migration
           href: migrate/prepare-workloads-cloud.md
         - name: 3. Execute migration cutover

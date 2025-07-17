@@ -25,11 +25,11 @@ Source system shutdown eliminates data corruption risk by ensuring no new transa
 
 ## 3. Transfer the data to the cloud
 
-1. **Select the appropriate data transfer tool based on your migration scenario.** Use the [data migration guides](/data-migration/) and review common data migration tools:
+1. **Select the appropriate data transfer tool based on your migration scenario.** Data transfer tools vary in capabilities, supported sources, and transfer methods. Choose the tool that best matches your source datastore and target datastore. Use the [data migration guides](/data-migration/) and review common data migration tools:
 
     | Source | Tool | Description |
     |--------|------|-------------|
-    | Any | Native database replication | 
+    | Any | Native database replication | Database-specific replication features that maintain data consistency across source and target systems |
     | On-premises | [Azure Migrate](/azure/migrate/?view=migrate-classic) | Comprehensive migration service for discovering, assessing, and migrating workloads to Azure |
     | On-premises | [Azure Data Box](/azure/databox/data-box-overview) | Send terabytes of data into and out of Azure |
     | On-premises | [Azure Database Migration Service](/azure/dms/dms-overview) | Fully managed service for migrating databases to Azure with minimal downtime |
@@ -64,8 +64,6 @@ Traffic redirection transitions users to the Azure-hosted workload. Update DNS r
 Keep the source environment available as a fallback option. Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. Retain DNS and access configurations to enable quick reversion if needed.
 
 ## 8. Support workload during stabilization
-
-A dedicated support model ensures rapid response to post-migration issues during the critical stabilization period. Enhanced support provides faster resolution of issues that commonly occur after migration. You must establish a support model with shorter SLAs for the stabilization period.
 
 Establish a support model with shorter SLAs during the stabilization period. Enhanced support coverage ensures that issues are resolved quickly during the critical post-migration period. Assign experienced IT staff or migration partners to monitor the workload and respond to issues promptly.
 

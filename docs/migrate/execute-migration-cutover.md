@@ -57,14 +57,11 @@ For detailed guidance on offline migration execution, see [Execute offline migra
 
 ### Execute online migration
 
-For an online migration you almost certainly want to use native replication of the DB system in question. Source DB and Target DB  ... Primary and replica.
-Online migration:  Create a database in Azure, replicate data from on-prem to Azure. When you decide to cut over, stop writing to the on-prem-primary, kill replication, potentially brief downtime, point your apps/workloads to use the Azure DB
+1. **Establish continuous data synchronization between source and target databases.** Online migration requires continuous replication between the source database and the target Azure database. This approach ensures the Azure environment remains synchronized with the source system in real time, minimizing data loss and reducing synchronization requirements during cutover. Use native database replication tools specific to your database platform to establish the initial full data synchronization and maintain ongoing change tracking throughout the migration process.
 
-1. **Configure continuous data synchronization between source and target.** Real-time replication mechanisms ensure that the Azure environment remains current with the source system. This synchronization minimizes data loss and reduces the delta during cutover. Set up replication tools for continuous synchronization, perform initial full data synchronization, and maintain synchronization of ongoing changes throughout the migration process.
+2. **Prepare for final cutover with controlled sequencing.** Stop all write operations to the source database, verify the latency value between source and target approaches zero, and perform a final synchronization to capture all remaining changes. Once the target is fully synchronized with the source, stop the replication processes to prepare for traffic redirection. This controlled approach ensures data consistency between environments during the transition.
 
-2. **Prepare for final cutover with controlled sequencing.** Controlled cutover ensures data consistency and minimizes downtime during the transition. This preparation prevents data divergence and ensures a smooth user experience. Block new write operations to the source system, perform a final synchronization to capture remaining changes, and start the workload in Azure.
-
-3. **Validate the workload before redirecting user traffic.** Validation ensures that the migrated workload functions correctly and meets performance expectations. This testing prevents issues after users access the system. Conduct functional and performance testing to validate application behavior, then redirect user traffic to the Azure environment through DNS updates and load balancer configurations.
+3. **Validate the migrated workload before redirecting user traffic.** Conduct rapid functional validation of the migrated application in the Azure environment before making it available to users. This validation confirms the workload functions correctly and meets performance expectations, preventing issues after users begin accessing the system. After successful validation, redirect user traffic to the Azure environment by updating DNS records and load balancer configurations to complete the cutover process.
 
 For detailed guidance on online migration execution, see [Execute online migration cutover](execute-online-migration-cutover.md).
 
