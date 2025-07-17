@@ -11,9 +11,7 @@ ms.topic: conceptual
 
 This article helps you execute offline migrations for workloads that can tolerate planned downtime. Offline migration simplifies the migration process by avoiding real-time synchronization and reduces the risk of data inconsistency.
 
-## 1. Deploy and configure the production environment before migration
-
-A production-ready Azure environment ensures consistency, security, and operational readiness for the migrated workload. This deployment approach reduces configuration drift and provides a validated foundation for your workload. You must provision and validate all necessary infrastructure and configurations before you initiate the migration.
+## 1. Deploy production environment before migration
 
 1. **Provision production resources by using infrastructure-as-code.** Infrastructure-as-code templates ensure consistency across environments and reduce manual configuration errors. This approach provides version control and repeatable deployments that match your tested design. Use Azure Resource Manager (ARM) templates, Bicep, or Terraform to deploy the same resource definitions used in non-production environments.
 
@@ -21,35 +19,35 @@ A production-ready Azure environment ensures consistency, security, and operatio
 
 3. **Validate the readiness of the production environment.** Environment validation confirms that all services are deployed, accessible, and correctly configured before migration begins. This validation reduces the risk of delays or failures during the cutover. Run pre-cutover validation scripts or checklists to verify that all services are operational and meet your requirements.
 
-## 2. Stop the source workload to ensure data consistency
+## 2. Stop the source datastore to prevent changes
 
-A clean shutdown of the source workload prevents data changes during migration and avoids corruption or loss. Application-specific shutdown procedures ensure that all processes complete cleanly and no data is left in an inconsistent state. You must follow documented shutdown procedures to ensure a clean shutdown of the source application or service.
+Source system shutdown eliminates data corruption risk by ensuring no new transactions occur during migration. This shutdown provides a clean cutoff point for data consistency. You should follow documented shutdown procedures to stop database services gracefully, verify transaction completion, and confirm no user access during migration.
 
-## 3. Create and transfer a complete backup of the workload
+## 3. Transfer the data to the cloud
 
-A complete backup provides a reliable migration source and a recovery point in case of issues. Secure transfer methods protect your data during transit and ensure that all components arrive intact in Azure. You must use secure and supported tools to transfer the backup to Azure.
+1. **Select the appropriate data transfer tool based on your migration scenario.** Use the [data migration guides](/data-migration/) and review common data migration tools:
 
-1. **Create a full backup of all relevant data and configurations.** Complete backups ensure that no critical components are missed during migration. This backup serves as both the migration source and a recovery point if issues occur. Include application data, configuration files, and dependencies in a secure and accessible location.
+    | Source | Tool | Description |
+    |--------|------|-------------|
+    | Any | Native database replication | 
+    | On-premises | [Azure Migrate](/azure/migrate/?view=migrate-classic) | Comprehensive migration service for discovering, assessing, and migrating workloads to Azure |
+    | On-premises | [Azure Data Box](/azure/databox/data-box-overview) | Send terabytes of data into and out of Azure |
+    | On-premises | [Azure Database Migration Service](/azure/dms/dms-overview) | Fully managed service for migrating databases to Azure with minimal downtime |
+    | On-premises | [Azure Data Factory](/azure/data-factory/data-factory-tutorials) | Data integration service for creating data-driven workflows and pipelines |
+    | On-premises | [AzCopy](https://docs.microsoft.com/azure/storage/common/storage-use-azcopy-v10) | Command-line utility for copying data to and from Azure Storage |
+    | On-premises | [SQL Server Migration Assistant (SSMA)](https://docs.microsoft.com/sql/ssma/) | Automates migration from multiple database platforms to SQL Server and Azure SQL |
+    | On-premises | [SSMA for Oracle](https://docs.microsoft.com/sql/ssma/oracle/) | Migrates Oracle databases to SQL Server and Azure SQL Database |
+    | On-premises | [SSMA for SAP](https://docs.microsoft.com/sql/ssma/sybase/) | Migrates SAP ASE databases to SQL Server and Azure SQL Database |
+    | Google Cloud | [Google Cloud Storage Transfer Service](https://cloud.google.com/storage-transfer-service) | Transfers data to and from various clouds or on-premises environments |
+    | Google Cloud | gsutil | Google Cloud command-line tool for managing Cloud Storage |
+    | AWS | [AWS Data Transfer Service](https://aws.amazon.com/datasync/) | Transfers data between on-premises and AWS storage services |
+    | AWS | AWS CLI | Amazon Web Services command-line interface for managing AWS services |
 
-2. **Transfer the backup to Azure by using secure tools.** Secure transfer tools protect your data during transit and provide reliable delivery to Azure. Choose the appropriate tool based on your data volume, network bandwidth, and security requirements. Use AzCopy, Azure Storage Explorer, or Azure Data Box to transfer the backup securely to Azure.
-
-## 4. Restore and validate the workload in Azure
-
-Backup restoration and validation ensure that the application functions correctly in the new environment. Thorough testing confirms that data integrity is maintained and that all system interactions work as expected. You must perform comprehensive testing before you resume operations.
-
-1. **Restore the backup to the target Azure service or virtual machine.** Proper restoration procedures ensure that all data and configurations are correctly applied in Azure. This step recreates your workload in the target environment with all necessary components. Use the appropriate restore tools and procedures for your specific workload type.
-
-2. **Perform functional and integration testing.** Testing validates that the workload operates correctly in Azure and maintains data integrity. This validation confirms that all system interactions and dependencies function as expected. Test data integrity, application behavior, and system interactions to confirm proper operation.
-
-## 5. Start the workload and redirect users
-
-Bringing the workload online and updating access configurations ensures a smooth transition for users and dependent systems. Close monitoring during this phase helps identify and resolve any issues quickly. You must monitor the system closely during this critical transition period. Proper startup procedures ensure that all components initialize correctly and the system is ready for user access. Monitor startup logs and system health to confirm successful initialization and identify any issues early.
+1. **Execute the data transfer using your selected tool.** Data transfer tools include built-in security features such as encryption in transit and authentication mechanisms. Configure monitoring and logging to track transfer progress and identify any issues. Validate data integrity during the transfer process using checksums or other verification methods to ensure complete and accurate data migration.
 
 ## 4. Validate the workload in Azure
 
-Validation ensures that the migrated workload functions correctly and meets performance expectations. Thorough testing prevents issues after users access the system. You should conduct comprehensive validation before redirecting user traffic.
-
-Testing validates that all application features, integrations, and performance benchmarks operate as expected. Confirm that dependencies and configurations work correctly in the Azure environment. Run automated tests and manual verification procedures to ensure system readiness.
+Perform functional and integration testing. Testing validates that the workload operates correctly in Azure and maintains data integrity. This validation confirms that all system interactions and dependencies function as expected. Test data integrity, application behavior, and system interactions to confirm proper operation.
 
 ## 5. Redirect user traffic to Azure
 
@@ -57,15 +55,11 @@ Traffic redirection transitions users to the Azure-hosted workload. Update DNS r
 
 ## 6. Validate the workload after cutover
 
-Post-migration validation ensures that the workload is fully functional and that data integrity is maintained. Comprehensive validation by application owners and testers confirms that the migration was successful. You must involve application owners and testers in this validation process.
-
 1. **Verify all major functions and data integrity.** Data validation confirms that the migration was successful and that no data was lost or corrupted. This verification provides confidence that the workload operates correctly in Azure. Use row count comparisons, checksums, critical reports, or parallel read-only modes to validate data and confirm that the system behaves as expected.
 
 2. **Announce migration success only after thorough validation.** Complete validation ensures that all stakeholders agree the workload is stable and functional. This confirmation prevents premature declarations of success that could lead to issues later. Ensure that all stakeholders confirm the workload is stable and meets operational requirements.
 
 ## 7. Maintain a fallback option
-
-A fallback environment provides a safety net in case of unexpected issues after migration. Retaining the source environment allows quick reversion if problems occur that cannot be resolved quickly. You must retain the source environment until the Azure system is fully validated and stable.
 
 Keep the source environment available as a fallback option. Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. Retain DNS and access configurations to enable quick reversion if needed.
 
@@ -79,12 +73,12 @@ Establish a support model with shorter SLAs during the stabilization period. Enh
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Infrastructure-as-code | [Azure Resource Manager templates](			/azure/azure-resource-manager/templates/overview) | Define and deploy Azure resources consistently across environments |
-| Infrastructure-as-code | [Bicep](			/azure/azure-resource-manager/bicep/overview) | A domain-specific language for deploying Azure resources declaratively |
-| Infrastructure-as-code | [Terraform](			/azure/developer/terraform/overview) | An open-source tool for building, changing, and versioning infrastructure |
-| Data transfer | [AzCopy](			/azure/storage/common/storage-use-azcopy-v10) | Command-line tool to transfer data to and from Azure Storage |
-| Data transfer | [Azure Storage Explorer](			/azure/storage/common/storage-explorer) | GUI tool to manage and transfer Azure Storage data |
-| Data transfer | [Azure Data Box](			/azure/databox/data-box-overview) | Physical device for secure offline data transfer to Azure |
+| Infrastructure-as-code | [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) | Define and deploy Azure resources consistently across environments |
+| Infrastructure-as-code | [Bicep](/azure/azure-resource-manager/bicep/overview) | A domain-specific language for deploying Azure resources declaratively |
+| Infrastructure-as-code | [Terraform](/azure/developer/terraform/overview) | An open-source tool for building, changing, and versioning infrastructure |
+| Data transfer | [AzCopy](/azure/storage/common/storage-use-azcopy-v10) | Command-line tool to transfer data to and from Azure Storage |
+| Data transfer | [Azure Storage Explorer](/azure/storage/common/storage-explorer) | GUI tool to manage and transfer Azure Storage data |
+| Data transfer | [Azure Data Box](/azure/databox/data-box-overview) | Physical device for secure offline data transfer to Azure |
 
 ## Next steps
 

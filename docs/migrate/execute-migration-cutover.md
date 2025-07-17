@@ -43,17 +43,22 @@ Data migration execution transfers your workload data from the source environmen
 
 ### Execute offline migration
 
-1. **Stop the source workload to ensure data consistency.** Clean shutdown of the source workload prevents data changes during migration and avoids corruption or loss. This step ensures that all processes complete cleanly without leaving data in an inconsistent state. Follow documented shutdown procedures to ensure a complete stop of the source application or service.
+Offline migration stops the source system completely to prevent data changes during transfer. This approach provides the highest data integrity but requires extended downtime. Use offline migration when complete data consistency is required and planned downtime is acceptable.
 
-2. **Create and transfer a complete backup of the workload.** Complete backup creation provides a reliable migration source and a recovery point in case of issues. This backup serves as both the migration source and a fallback option. Create a full backup of all relevant data and configurations, then transfer the backup to Azure using secure tools such as AzCopy, Azure Storage Explorer, or Azure Data Box.
+1. **Stop the source datastore to prevent changes.** Source system shutdown eliminates data corruption risk by ensuring no new transactions occur during migration. This shutdown provides a clean cutoff point for data consistency. You should follow documented shutdown procedures to stop database services gracefully, verify transaction completion, and confirm no user access during migration.
 
-3. **Restore and validate the workload in Azure.** Backup restoration and validation ensure that the application functions correctly in the new environment. This step recreates your workload in Azure with all necessary components. Restore the backup to the target Azure service or virtual machine, then perform comprehensive functional and integration testing.
+2. **Transfer data to Azure using appropriate tools.** Data transfer tools move your database to Azure efficiently and securely. The transfer method depends on your data size and network capabilities. You should use native database replication tools when available. For more tools, see [](./execute-offline-migration-cutover.md#)
 
-4. **Start the workload and redirect users to Azure.** Workload startup and user redirection complete the transition to the Azure environment. This step brings the application online and enables user access to the migrated workload. Start the workload in Azure and monitor startup logs for issues, then update DNS records, connection strings, or endpoint configurations to direct users to the Azure-hosted workload.
+3. **Verify the Azure datastore functions correctly.** Data validation confirms that the migrated data loads correctly and all system components function as expected. This validation prevents user access to a non-functional system and ensures service reliability. Verify data integrity through row counts and consistency checks, and test critical database functions before proceeding.
+
+4. **Redirect users to the new workload.** Traffic redirection completes the migration by directing users to the new Azure-based system. This step brings the application online and enables business operations to resume in the Azure environment. You should update DNS records or load balancer configurations to point to Azure endpoints, modify application connection strings to use the Azure datastore, and monitor the system for connectivity issues during the transition.
 
 For detailed guidance on offline migration execution, see [Execute offline migration cutover](execute-offline-migration-cutover.md).
 
 ### Execute online migration
+
+For an online migration you almost certainly want to use native replication of the DB system in question. Source DB and Target DB  ... Primary and replica.
+Online migration:  Create a database in Azure, replicate data from on-prem to Azure. When you decide to cut over, stop writing to the on-prem-primary, kill replication, potentially brief downtime, point your apps/workloads to use the Azure DB
 
 1. **Configure continuous data synchronization between source and target.** Real-time replication mechanisms ensure that the Azure environment remains current with the source system. This synchronization minimizes data loss and reduces the delta during cutover. Set up replication tools for continuous synchronization, perform initial full data synchronization, and maintain synchronization of ongoing changes throughout the migration process.
 
@@ -67,7 +72,7 @@ For detailed guidance on online migration execution, see [Execute online migrati
 
 Post-migration validation ensures that the workload operates correctly and meets all requirements. This validation confirms that data integrity is maintained and that the migration was successful. You should conduct comprehensive validation before declaring the migration complete.
 
-1. **Validate workload functionality and data integrity.** Data validation confirms that the migration preserved all information and system functionality. This validation provides confidence that the workload operates correctly in Azure. Have application owners or testers verify that all major functions work on the Azure-hosted system, check for errors, and validate data integrity through row count comparisons, critical reports, or parallel read-only validation.
+1. **Validate workload functionality and data integrity.** Data validation confirms that the migration preserved all information and system functionality. This validation provides confidence that the workload operates correctly in Azure. You should have application owners or testers verify that all major functions work on the Azure-hosted system, check for errors, and validate data integrity through row count comparisons, critical reports, or parallel read-only validation using automated testing where possible.
 
 2. **Confirm successful user access and system performance.** User access validation ensures that the transition to Azure is transparent and that performance meets expectations. This confirmation validates that users can access the system without disruption. Monitor user access patterns, system performance metrics, and error rates during the initial post-migration period.
 
