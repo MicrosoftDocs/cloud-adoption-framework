@@ -13,23 +13,19 @@ A decommissioned workload is one that is no longer needed in its original enviro
 
 ## Obtain stakeholder sign-off
 
-A formal sign-off confirms that the workload is no longer needed in its original environment. This step ensures alignment between IT and business stakeholders.
-
-1. **Request formal approval from the business owner.** Business owners must confirm that the Azure-hosted workload meets all functional and performance expectations. This confirmation prevents premature decommissioning of systems still in use.
+1. **Request formal approval from the business owner.** A formal sign-off confirms that the workload is no longer needed in its original environment. This step ensures alignment between IT and business stakeholders. Business owners must confirm that the Azure-hosted workload meets all functional and performance expectations. This confirmation prevents premature decommissioning of systems still in use.
 
 2. **Document the sign-off.** Store the approval in a centralized system such as a project management tool or SharePoint. This documentation provides traceability and audit readiness.
 
 ## Reclaim licenses used by the source environment
 
-License optimization reduces costs and ensures compliance with Microsoft licensing terms.
+License optimization reduces costs and ensures compliance with licensing terms.
 
 1. **Identify licenses eligible for reuse.** Determine whether any on-premises licenses are eligible for [Azure Hybrid Benefit][Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) (AHB). AHB allows you to use existing Windows Server or SQL Server licenses with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) to reduce Azure VM costs.
 
 2. **Deallocate unused licenses.** For licenses that are no longer needed, update your license inventory and return or reassign them as appropriate.
 
 ## Archive data for compliance and recovery
-
-Archived data ensures regulatory compliance and provides a fallback during the transition period.
 
 1. **Determine retention requirements.** Consult legal and compliance teams to identify how long data must be retained. Requirements vary by industry and region.
 
@@ -41,13 +37,11 @@ Archived data ensures regulatory compliance and provides a fallback during the t
 
 ## Update documentation and operational assets
 
-Accurate documentation ensures operational continuity and reduces support risks.
-
 1. **Update architecture diagrams and runbooks.** Reflect the new Azure-based architecture in all technical documentation. Include updated IP addresses, DNS names, and service dependencies.
 
 2. **Revise monitoring dashboards and alerting rules.** Ensure that monitoring tools reflect the current state of the environment. Remove references to decommissioned systems.
 
-3. **Deprecate legacy documentation.** Clearly mark outdated documents as deprecated or archive them. This prevents confusion during incident response or troubleshooting.
+3. **Deprecate legacy documentation.** Clearly mark outdated documents as deprecated or archive them with a date. This prevents confusion during incident response or troubleshooting.
 
 4. **Allocate time and budget for documentation updates.** Include documentation tasks in your migration project plan to avoid last-minute gaps.
 
