@@ -49,7 +49,7 @@ Data migration execution transfers your workload from the source environment to 
 
 3. **Restore and validate the workload in Azure.** Backup restoration and validation ensure that the application functions correctly in the new environment. This step recreates your workload in Azure with all necessary components. Restore the backup to the target Azure service or virtual machine, then perform comprehensive functional and integration testing.
 
-4. **Start the workload and redirect users to Azure.** Workload startup and user redirection complete the transition to the Azure environment. This step brings the application online and enables user access to the migrated workload. Start the workload in Azure and monitor startup logs for issues, then update DNS records, connection strings, or endpoint configurations to redirect users to the Azure-hosted workload.
+4. **Start the workload and redirect users to Azure.** Workload startup and user redirection complete the transition to the Azure environment. This step brings the application online and enables user access to the migrated workload. Start the workload in Azure and monitor startup logs for issues, then update DNS records, connection strings, or endpoint configurations to direct users to the Azure-hosted workload.
 
 For detailed guidance on offline migration execution, see [Execute offline migration cutover](execute-offline-migration-cutover.md).
 
