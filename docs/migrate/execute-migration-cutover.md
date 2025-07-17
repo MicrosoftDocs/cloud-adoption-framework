@@ -7,7 +7,7 @@ ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Execute workload migration cutover
+# Execute workload migration
 
 This article provides guidance on executing the final workload cutover to Azure, ensuring minimal downtime and successful transition of your applications and data to the cloud environment.
 
@@ -25,9 +25,7 @@ Production environment preparation ensures consistency, security, and operationa
 
 1. **Provision production resources using infrastructure-as-code templates.** Infrastructure-as-code ensures consistent and repeatable deployments across environments. This approach reduces configuration errors and provides version control for infrastructure changes. Use Azure Resource Manager templates, Bicep, or Terraform to deploy resources with standardized configurations.
 
-2. **Apply production-grade configurations for networking and security.** Security configurations protect your workload from threats and ensure compliance with organizational policies. These configurations establish the foundation for secure operations in Azure. Configure network security groups, firewall rules, and identity access controls according to your security requirements.
-
-3. **Validate environment readiness through pre-cutover validation scripts.** Validation scripts confirm that the target environment meets all requirements before migration begins. This validation prevents migration failures due to infrastructure issues. Run automated tests to verify resource availability, network connectivity, and security configurations.
+2. **Apply production-grade configurations.** Security configurations with production SKUs. Apply production security settings protect your workload from threats and ensure compliance with organizational policies. These configurations establish the foundation for secure operations in Azure. Configure network security groups, firewall rules, and identity access controls according to your security requirements.
 
 ## Validate Azure services operational status
 
@@ -37,11 +35,13 @@ Service validation confirms that the target environment is ready to receive the 
 
 2. **Confirm network connectivity is established.** Network connectivity validation ensures that all required communication paths are functional. This validation prevents connectivity issues that could disrupt the migration or application functionality. Test network connectivity between all required services and validate DNS resolution for critical endpoints.
 
+3. **Validate environment readiness through pre-cutover validation scripts.** Validation scripts confirm that the target environment meets all requirements before migration begins. This validation prevents migration failures due to infrastructure issues. Run automated tests to validate things like, resource availability and security configurations.
+
 ## Execute data migration
 
-Data migration execution transfers your workload from the source environment to Azure using the strategy you selected during migration planning. The execution approach follows the migration strategy you selected based on your business requirements for availability during the transition. Offline migration execution provides simplicity through planned downtime, while online migration execution maintains service availability through continuous synchronization. Both approaches require precise execution and validation to ensure successful outcomes.
+Data migration execution transfers your workload data from the source environment to Azure. Offline migrations provide simplicity and decreased risk of data loss with planned downtime. Online migrations maintain provide near-zero downtime through continuous data synchronization. Both approaches require precise execution and validation to ensure successful outcomes.
 
-### Execute offline migration cutover
+### Execute offline migration
 
 1. **Stop the source workload to ensure data consistency.** Clean shutdown of the source workload prevents data changes during migration and avoids corruption or loss. This step ensures that all processes complete cleanly without leaving data in an inconsistent state. Follow documented shutdown procedures to ensure a complete stop of the source application or service.
 
@@ -53,7 +53,7 @@ Data migration execution transfers your workload from the source environment to 
 
 For detailed guidance on offline migration execution, see [Execute offline migration cutover](execute-offline-migration-cutover.md).
 
-### Execute online migration cutover
+### Execute online migration
 
 1. **Configure continuous data synchronization between source and target.** Real-time replication mechanisms ensure that the Azure environment remains current with the source system. This synchronization minimizes data loss and reduces the delta during cutover. Set up replication tools for continuous synchronization, perform initial full data synchronization, and maintain synchronization of ongoing changes throughout the migration process.
 
