@@ -69,7 +69,7 @@ For detailed guidance on online migration execution, see [Execute online migrati
 
 Post-migration validation ensures that the workload operates correctly and meets all requirements. This validation confirms that data integrity is maintained and that the migration was successful. You should conduct comprehensive validation before declaring the migration complete.
 
-1. **Validate workload functionality and data integrity.** Data validation confirms that the migration preserved all information and system functionality. This validation provides confidence that the workload operates correctly in Azure. You should have application owners or testers verify that all major functions work on the Azure-hosted system, check for errors, and validate data integrity through row count comparisons, critical reports, or parallel read-only validation using automated testing where possible.
+1. **Validate workload functionality and data integrity.** Data validation confirms that the migration preserved all information and system functionality. This validation provides confidence that the workload operates correctly in Azure. You should have application owners or testers verify that all major functions work on the Azure-hosted system, check for errors, and validate data integrity, critical reports, or parallel read-only validation using automated testing where possible.
 
 2. **Confirm successful user access and system performance.** User access validation ensures that the transition to Azure is transparent and that performance meets expectations. This confirmation validates that users can access the system without disruption. Monitor user access patterns, system performance metrics, and error rates during the initial post-migration period.
 

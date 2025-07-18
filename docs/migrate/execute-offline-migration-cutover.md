@@ -17,13 +17,15 @@ This article helps you execute offline migrations for workloads that can tolerat
 
 2. **Apply production-grade configurations for networking, identity, and access.** Network and security configurations protect your workload and enable integration with dependent systems. These configurations must match your tested design to avoid connectivity issues during cutover. Configure virtual networks, subnets, private endpoints, role-based access control (RBAC), and managed identities with IP ranges, DNS zones, and firewall rules that match your tested design.
 
-3. **Validate the readiness of the production environment.** Environment validation confirms that all services are deployed, accessible, and correctly configured before migration begins. This validation reduces the risk of delays or failures during the cutover. Run pre-cutover validation scripts or checklists to verify that all services are operational and meet your requirements.
+3. **Validate the readiness of the production environment.** Environment validation confirms that all services are deployed, accessible, and correctly configured before migration begins. This validation reduces the risk of delays or failures during the cutover window. Run pre-cutover validation scripts or checklists to verify that all services are operational and meet your requirements.
 
 ## 2. Stop the source datastore to prevent changes
 
 Source system shutdown eliminates data corruption risk by ensuring no new transactions occur during migration. This shutdown provides a clean cutoff point for data consistency. You should follow documented shutdown procedures to stop database services gracefully, verify transaction completion, and confirm no user access during migration.
 
 ## 3. Transfer the data to the cloud
+
+1. **Create a full backup of all relevant data and configurations.** Complete backups ensure that no critical components are missed during migration. This backup serves as both the migration source and a recovery point if issues occur. Include application data, configuration files, and dependencies in a secure and accessible location.
 
 1. **Select the appropriate data transfer tool based on your migration scenario.** Data transfer tools vary in capabilities, supported sources, and transfer methods. Choose the tool that best matches your source datastore and target datastore. Review common data migration tools:
 
@@ -49,13 +51,13 @@ Perform functional and integration testing. Testing validates that the workload 
 
 ## 5. Redirect user traffic to Azure
 
-Traffic redirection transitions users to the Azure-hosted workload. Update DNS records, load balancer configurations, and application configurations to point to the Azure environment. Monitor user access patterns and system performance during the transition. This step completes the transition from the source environment to Azure. Update DNS records, connection strings, or endpoint configurations and confirm that users and systems can access the workload without issues.
+Traffic redirection transitions users to the Azure-hosted workload. Update DNS records, load balancer configurations, and application URLs to point to the Azure environment. Monitor user access patterns and system performance during the transition. This step completes the transition from the source environment to Azure. Update DNS records, connection strings, or endpoint configurations and confirm that users and systems can access the workload without issues.
 
 ## 6. Validate the workload after cutover
 
-1. **Verify all major functions and data integrity.** Data validation confirms that the migration was successful and that no data was lost or corrupted. This verification provides confidence that the workload operates correctly in Azure. Use row count comparisons, checksums, critical reports, or parallel read-only modes to validate data and confirm that the system behaves as expected.
+1. **Verify all major functions and data integrity.** Data validation confirms that the migration was successful and that no data was lost or corrupted. This verification provides confidence that the workload operates correctly in Azure. Row count can serve as a quick sanity check, but it's important to verify the accuracy of migrated data using more rigorous methods such as checksums or hash functions
 
-2. **Announce migration success only after thorough validation.** Complete validation ensures that all stakeholders agree the workload is stable and functional. This confirmation prevents premature declarations of success that could lead to issues later. Ensure that all stakeholders confirm the workload is stable and meets operational requirements.
+1. **Announce migration success only after thorough validation.** Complete validation ensures that all stakeholders agree the workload is stable and functional. This confirmation prevents premature declarations of success that could lead to issues later. Ensure that all stakeholders confirm that the workload is stable and meets operational requirements.
 
 ## 7. Maintain a fallback option
 
