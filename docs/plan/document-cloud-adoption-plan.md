@@ -17,7 +17,7 @@ A cloud adoption plan must align with organizational standards and governance fr
 
 ### Select and tailor a cloud adoption plan template
 
-1. **Choose a cloud adoption plan template that matches your scenario.** Use the [Cloud-native adoption plan](./cloud-native-adoption-plan.md) if you're building new solutions in Azure. Use the [Migration adoption plan](./migration-adoption-plan.md) if you're migrating existing workloads. Selecting the correct template ensures that the plan includes scenario-specific considerations and accelerates planning.
+1. **Choose a cloud adoption plan template that matches your scenario.** Use the [Cloud-native adoption plan](./cloud-native-adoption-plan.md) if you're building new solutions in Azure. Use the [Migration adoption plan](./migration-adoption-plan.md) if you're migrating existing workloads.
 
 2. **Customize the selected template to reflect your organization’s priorities.** Modify the template to include your business objectives, technical constraints, and stakeholder expectations. This customization ensures that the plan is relevant and actionable across teams.
 
