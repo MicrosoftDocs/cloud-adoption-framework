@@ -1,6 +1,6 @@
 ---
 title: Prepare workloads for cloud migration to Azure
-description: Learn how to validate, secure, and automate workloads in Azure before production cutover to reduce migration risk and ensure compatibility with Azure services.
+description: Comprehensive guidance for validating, securing, and automating workloads before migrating to Azure, including steps to resolve compatibility issues, test performance, and create reusable infrastructure for reliable cloud adoption and operational maturity.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
@@ -17,13 +17,11 @@ Azure compatibility issues block workload migration and must be resolved before 
 
 ### Create Azure subscriptions
 
-1. **Create three separate Azure subscriptions for development, test, and production.** Use the Azure portal or Azure CLI to provision each subscription. Assign clear naming conventions and tags to distinguish them. This separation ensures that testing activities do not impact production quotas or security boundaries.
+1. **Create three separate Azure subscriptions for development, test, and production.** Use the Azure portal or Azure CLI to provision each subscription. Assign clear naming conventions and tags to distinguish them. This separation ensures that testing activities do not impact production quotas or security boundaries. For governance and security guidance, see [Govern your subscriptions](azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#govern-your-subscriptions).
 
 1. **Apply governance policies to each subscription.** Use Azure Policy to enforce environment-specific controls. For example, restrict VM sizes in development, enforce tagging in test, and apply security baselines in production.
 
 1. **Assign role-based access control (RBAC) per subscription.** Grant least-privilege access to users and service principals based on their roles in each environment. This reduces the risk of unauthorized changes and supports compliance.
-
-For governance and security guidance, see [Govern your subscriptions](azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#govern-your-subscriptions).
 
 ### Deploy all workload resources in the test environment
 
@@ -33,7 +31,7 @@ For governance and security guidance, see [Govern your subscriptions](azure/clou
 
 3. **Validate the completeness of the test environment.** Confirm that all dependencies, configurations, and integrations are present. Missing components can lead to false positives or undetected issues during testing.
 
-### Resolve compatibility issues in the test environment
+### Resolve compatibility issues
 
 1. **Review the documented compatibility requirements and known issues.** Use the [workload assessment](../plan/assess-workloads-for-cloud-migration.md) from the CAF Plan phase. This assessment identifies unsupported configurations and dependencies that must be remediated.
 
@@ -48,17 +46,17 @@ For governance and security guidance, see [Govern your subscriptions](azure/clou
 | Host-based antivirus software | Integrate with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Cloud-native security provides better threat detection and management |
 | Hardcoded user accounts | Replace with [managed identities](/entra/identity/managed-identities-azure-resources/overview) | Managed identities eliminate credential management and improve security |
 
-## Test workload in the Azure environment
+## Test workload in the Azure
 
 Once you solved compatibility issues and feel good about the workload, you need to test environments validate that your workload operates reliably and meets performance expectations before production deployment. Testing in Azure ensures that network, identity, performance, and compatibility requirements are met and documented. You should conduct comprehensive testing to confirm that your workload functions correctly in the target Azure environment.
 
 ### Validate network connectivity
 
-1. **Test connectivity between all application components.** Use [Azure Network Watcher connection troubleshoot](/azure/network-watcher/connection-troubleshoot-manage?tabs=portal) to verify that application tiers can communicate with each other and with external services. This validation confirms that network security groups, routing tables, and DNS configurations allow required traffic flow. Connection troubleshoot provides detailed insights into connectivity issues and identifies specific configuration problems that prevent communication.
+1. **Test connectivity between all components.** Use [Azure Network Watcher connection troubleshoot](/azure/network-watcher/connection-troubleshoot-manage?tabs=portal) to verify that application tiers can communicate with each other and with external services. This validation confirms that network security groups, routing tables, and DNS configurations allow required traffic flow. Connection troubleshoot provides detailed insights into connectivity issues and identifies specific configuration problems that prevent communication.
 
 1. **Verify external service connectivity.** Test connections to external APIs, databases, and third-party services that your workload depends on. Use Network Watcher to validate that outbound connectivity works correctly and that firewall rules allow required traffic. Document any connectivity requirements for production deployment.
 
-### Validate identity integration and authentication flows
+### Validate authentication flows
 
 1. **Test user authentication flows.** Use test user accounts to verify that identity providers like Microsoft Entra ID are accessible and that authentication works correctly. Test different authentication scenarios including single sign-on, multi-factor authentication, and password reset flows to ensure complete functionality.
 
@@ -70,47 +68,31 @@ Once you solved compatibility issues and feel good about the workload, you need 
 
 2. **Measure performance under realistic load conditions.** Use [Azure Load Testing](/azure/load-testing/overview-what-is-azure-load-testing) to simulate realistic user traffic and measure response times, throughput, and resource utilization. Configure load tests to reflect expected production usage patterns and peak load scenarios. Load Testing provides detailed performance metrics and identifies bottlenecks that could affect user experience.
 
-3. **Validate performance against baseline requirements.** Compare test results to established performance baselines from your source environment. Identify any performance degradation and optimize configurations, scale resources, or modify code to meet performance targets. Performance validation ensures that your workload maintains acceptable user experience in Azure.
+3. **Validate performance against baseline.** Reference the performance baseline metrics documented during the [CAF Plan workload assessment](../plan/assess-workloads-for-cloud-migration.md). Compare test results to established performance baselines from your source environment. Identify any performance degradation and optimize configurations, scale resources, or modify code to meet performance targets.
 
-4. **Include business stakeholders in acceptance testing.** Conduct acceptance testing with business users to confirm that the workload meets business expectations and user experience requirements. Business validation ensures that the workload delivers expected value and functionality before production deployment.
+4. **Include stakeholders in acceptance testing.** Conduct acceptance testing with business users to confirm that the workload meets business expectations and user experience requirements. Business validation ensures that the workload delivers expected value and functionality before production deployment.
 
-### Verify compatibility fixes in the test environment
+## Create reusable infrastructure
 
-1. **Test modified components in isolation and integration.** Execute comprehensive test scenarios that exercise all modified components and validate that compatibility fixes resolve identified issues. Test components individually to confirm that changes work correctly, then test integrated scenarios to ensure that modifications do not disrupt other functionality. Focus testing on areas affected by updated libraries, configurations, or platform dependencies.
+Reusable infrastructure automates deployments and standardizes configurations across environments. Infrastructure as code (IaC) reduces manual errors, supports repeatable deployments, and preserves tested configurations for consistent use. You should create IaC assets only after your workload successfully passes all functional, performance, and security tests in the test environment.
 
-2. **Monitor application behavior during compatibility testing.** Use [Azure Monitor](/azure/azure-monitor/fundamentals/overview) and [Application Insights](/azure/azure-monitor/app/app-insights-overview) to track application behavior and identify anomalies during testing. Monitor key metrics like response times, error rates, and resource utilization to detect issues that might not be apparent through functional testing alone. Application Insights provides detailed telemetry that helps identify performance regressions or stability issues.
+1. **Create IaC templates for proven configurations.** Use [Bicep](/azure/azure-resource-manager/bicep/overview), [Terraform](/azure/developer/terraform/overview), or [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) to define your infrastructure. For more details, see [CAF Manage - Manage code-based deployments](/azure/cloud-adoption-framework/manage/administer#manage-code-deployments).
 
-3. **Document compatibility test results and update remediation plans.** Record detailed outcomes of compatibility testing and document any additional issues discovered during testing. Update your remediation plan to address newly identified problems and ensure that all compatibility issues are resolved before production deployment. This documentation supports troubleshooting and helps identify patterns in compatibility issues.
+2. **Store templates in version-controlled repositories.** Use [GitHub](https://docs.github.com/repositories) or [Azure DevOps](/azure/devops/repos/get-started/) to manage IaC assets with proper version control. Version control enables code reviews, supports team collaboration, and encourages template reuse across projects. This approach provides complete traceability for infrastructure changes and supports rollback capabilities when issues occur.
 
-### Compare performance baseline with the source environment
+3. **Automate dependency installation and configuration.** Create deployment pipelines or scripts that automatically install and configure application dependencies. Use [Azure Pipelines](/azure/devops/pipelines/), [GitHub Actions](https://docs.github.com/actions), or Azure CLI scripts to automate these steps. Include configuration files, environment variables, and [secrets management](/azure/key-vault/general/basic-concepts) in your automation process. This automation eliminates manual configuration errors and ensures consistent behavior across all environments.
 
-1. **Use the performance baseline from your workload assessment.** Reference the performance baseline metrics documented during the [CAF Plan workload assessment](../plan/assess-workloads-for-cloud-migration.md). This baseline includes key performance indicators such as response times, CPU usage, memory consumption, disk I/O, and network throughput under various load conditions. The baseline measurements for both average and peak usage scenarios provide the foundation for performance validation in Azure.
-
-1. **Measure Azure environment performance under comparable conditions.** Use Azure Monitor and Azure Load Testing to evaluate workload performance under similar load conditions as your baseline measurements. Configure monitoring to capture the same metrics collected in your source environment. Ensure that test conditions match baseline scenarios to enable accurate performance comparison.
-
-1. **Identify and address performance gaps before production deployment.** Compare Azure performance metrics to source environment baselines and identify any performance degradation. Optimize Azure configurations, adjust resource scaling, or modify application code to meet performance targets. Performance optimization ensures that your workload delivers acceptable user experience in the production Azure environment.
+4. **Validate infrastructure provisioning end-to-end.** Test that your IaC templates, pipelines, and scripts can create the complete infrastructure stack from nothing. Test different deployment scenarios including initial deployment, configuration updates, and rollback procedures to confirm the automation works correctly. Use separate Azure subscriptions or resource groups for testing to prevent conflicts with production resources and maintain environment isolation.
 
 ### Create deployment documentation
 
-1. **Document all configuration changes and deployment steps.** Include environment-specific settings, connection strings, service endpoints, and security configurations.
+Deployment documentation ensures that teams can consistently deploy and maintain workloads across environments. It also supports troubleshooting and compliance.
 
-1. **Store deployment artifacts in version-controlled repositories.** Use infrastructure as code (IaC) templates and deployment scripts to automate production deployment and maintain change history.
+1. **Document configuration changes and deployment procedures.** Record all environment-specific settings, connection strings, service endpoints, and security configurations in accessible documentation. Include step-by-step deployment instructions, prerequisite requirements, and post-deployment validation steps. This documentation enables consistent deployments and supports troubleshooting when issues occur.
 
-1. **Include rollback and recovery procedures.** Define steps to revert changes if deployment issues occur.
-
-## Create reusable infrastructure and automation assets
-
-Reusable infrastructure and automation assets accelerate migration and improve consistency. These assets reduce manual effort, support repeatable deployments, and ensure that tested configurations are preserved. You should create infrastructure as code (IaC) assets only after the workload passes all tests in the test environment.
-
-1. **Create IaC templates after validating workload behavior in the test environment.** Use the test environment to confirm that the workload functions correctly in Azure. This validation ensures that IaC templates reflect tested and production-ready configurations. Use Bicep or Terraform. Bicep provides native integration with Azure Resource Manager, while Terraform supports multi-cloud scenarios and a broader ecosystem.
-
-2. **Automate deployment of third-party tools and workload dependencies.** Include installation and configuration steps for databases, monitoring agents, backup solutions, or other required tools. Use scripts or deployment pipelines to automate these steps. Automation reduces deployment time, eliminates manual errors, and improves reliability across environments.
-
-3. **Store all templates and scripts in version-controlled repositories.** Use GitHub or Azure DevOps to manage IaC assets. Version control enables peer reviews, supports collaboration, and encourages reuse across teams. It also provides traceability and rollback capabilities for infrastructure changes.
-
-4. **Test the infrastructure provisioning process.** Validate that your IaC templates, pipelines, and scripts can create the entire infrastructure stack from scratch. Test different deployment scenarios including initial deployment, updates, and rollbacks to ensure the automation works correctly. Use separate Azure subscriptions or resource groups for testing to avoid conflicts with production resources. This testing validates that your templates work consistently and can be used confidently for production deployments.
+2. **Update rollback and recovery procedures.** Create detailed steps to revert changes when deployment issues occur. Include rollback triggers, data backup procedures, and recovery validation steps. Test rollback procedures regularly to ensure they work correctly when needed. This preparation reduces downtime and provides. For more information, see [Define rollback plan](./plan-migration.md#define-rollback-plan).
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Execute migration cutover](./execute-migration-cutover.md)
+> [Execute migration](./execute-migration.md)
