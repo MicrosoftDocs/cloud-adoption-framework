@@ -43,11 +43,9 @@ Data migration execution transfers your workload data from the source environmen
 
 ### Execute offline migration
 
-Offline migration stops the source system completely to prevent data changes during transfer. This approach provides the highest data integrity but requires extended downtime. Use offline migration when complete data consistency is required and planned downtime is acceptable.
-
 1. **Stop the source datastore to prevent changes.** Source system shutdown eliminates data corruption risk by ensuring no new transactions occur during migration. This shutdown provides a clean cutoff point for data consistency. You should follow documented shutdown procedures to stop database services gracefully, verify transaction completion, and confirm no user access during migration.
 
-2. **Transfer data to Azure using appropriate tools.** Data transfer tools move your database to Azure efficiently and securely. The transfer method depends on your data size and network capabilities. You should use native database replication tools when available. See [common data migration tools](#azure-tools-and-resources).
+2. **Transfer data to Azure using appropriate tools.** Data transfer tools move your database to Azure efficiently and securely. The transfer method depends on your datastore source and datastore target. See [common data migration tools](#azure-tools-and-resources).
 
 3. **Verify the Azure workload functions correctly.** Validate that the migrated data loads correctly and all system components function as expected. This validation prevents user access to a non-functional system and ensures service reliability. Verify data integrity through row counts and consistency checks, and test critical database functions before proceeding.
 

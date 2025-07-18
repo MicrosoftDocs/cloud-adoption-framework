@@ -68,4 +68,4 @@ Establish a support model with shorter SLAs during the stabilization period. Enh
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Azure migration guide](https://learn.microsoft.com/azure/cloud-adoption-framework/migrate/)
+> [Optimize workloads after migration](./optimize-workloads-after-migration.md)
