@@ -110,10 +110,9 @@ Enhanced support coverage ensures rapid response to post-migration issues during
 | Source | Tool | Description |
 |--------|------|-------------|
 | Multiple | [Data migration guides](/data-migration/) | Guides for different platforms, sources, and targets |
-| On-premises | [Azure Migrate](/azure/migrate/?view=migrate-classic) | Comprehensive migration service for discovering, assessing, and migrating workloads to Azure |
-| On-premises | [Azure Data Box](/azure/databox/data-box-overview) | Send terabytes of data into and out of Azure |
 | On-premises | [Azure Database Migration Service](/azure/dms/dms-overview) | Fully managed service for migrating databases to Azure with minimal downtime |
-| On-premises | [Azure Data Factory](/azure/data-factory/data-factory-tutorials) | Data integration service for creating data-driven workflows and pipelines |
+| On-premises | [Azure Migrate](/azure/migrate) | Comprehensive migration service for discovering, assessing, and migrating workloads to Azure |
+| On-premises | [Azure Data Box](/azure/databox/data-box-overview) | Send terabytes of data into and out of Azure |
 | On-premises | [AzCopy](/azure/storage/common/storage-use-azcopy-v10) | Command-line utility for copying data to and from Azure Storage |
 | Google Cloud | [Google Cloud Storage Transfer Service](https://cloud.google.com/storage-transfer-service) | Transfers data to and from various clouds or on-premises environments |
 | Google Cloud | gsutil | Google Cloud command-line tool for managing Cloud Storage |

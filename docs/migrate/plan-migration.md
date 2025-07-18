@@ -72,15 +72,20 @@ Migration sequencing reduces risk and builds team confidence by establishing a l
 
 ### Organize large portfolios into migration waves
 
-A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work. For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-plan.md).
+A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work. For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-planning.md).
 
-## Determine the right migration method for each workload
+## Determine the migration method for each workload
 
-Migration methods fall into two categories: offline migration and near-zero downtime migration. Choose the best migration method for each workload based on its downtime tolerance and criticality. Evaluate each workload in your migration wave to determine the most suitable method. Consider downtime tolerance, business impact, and technical requirements to make informed decisions.
+Migration methods fall into two categories: migration with downtime and migration with near-zero downtime. Choose the best migration method for each workload based on its downtime tolerance and business criticality.
 
-1. **Use offline migration for workloads that can tolerate downtime.** Offline migration is simpler and faster because it doesn't require real-time synchronization. This method works well for non-critical workloads, such as development environments, test systems, or applications with scheduled maintenance windows. Document the acceptable downtime duration for each workload and schedule migrations during low-usage periods.
+1. **Choose downtime migration for workloads that tolerate planned outages.** Downtime migration is simpler and faster because it doesn't require real-time synchronization between source and target environments. This method works well for non-critical workloads such as development environments, test systems, or applications with scheduled maintenance windows. Document the acceptable downtime duration for each workload and schedule migrations during low-usage periods to minimize business impact.
 
-2. **Use near-zero downtime migration for mission-critical workloads.** Near-zero downtime migration ensures that critical workloads remain operational during the transition. This method is essential for customer-facing applications, real-time transaction systems, or workloads with strict SLAs. Validate that the workload architecture supports continuous replication and that network bandwidth can handle real-time data transfer. Test connectivity and replication processes to confirm readiness for this migration method.
+2. **Choose near-zero downtime migration for critical workloads.** Near-zero downtime migration ensures that critical workloads remain operational during the transition through continuous data replication and cutover techniques. This method is essential for customer-facing applications, real-time transaction systems, or workloads with strict service level agreements. Validate that the workload architecture supports continuous replication and that network bandwidth can handle real-time data transfer. Test connectivity and replication processes in a non-production environment to confirm readiness for this migration method.
+
+| Migration Method | When to use | Pros | Cons |
+|------------------|-------------|------|------|
+| Downtime migration | Non-critical workloads, development environments | Simpler process, faster execution | Service interruption required |
+| Near-zero downtime migration | Critical workloads, strict SLAs | Minimal service disruption | Complex setup, requires testing |
 
 ## Define rollback plan
 

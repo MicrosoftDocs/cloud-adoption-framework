@@ -1,5 +1,5 @@
 ---
-title: Gradually cut over workloads from on-premises to Azure
+title: Gradually cut over workloads to Azure
 description: Guidance to help you safely migrate workloads from on-premises to Azure using progressive traffic routing strategies that minimize risk and ensure business continuity
 author: stephen-sumner
 ms.author: ssumner
@@ -11,19 +11,19 @@ ms.topic: conceptual
 
 This article provides guidance to help you migrate workloads from on-premises to Azure using progressive traffic routing strategies. Organizations benefit from gradual cutover approaches because these strategies minimize migration risks, validate Azure performance under production load, and provide quick rollback options if issues arise.
 
-## Choose a routing method that supports gradual workload cutover
+## Choose how you want to route traffic
 
-A routing architecture defines how users and systems access workloads during migration. This decision affects how easily you can shift traffic, maintain availability, and manage DNS and SSL configurations. You should select a routing architecture that aligns with your connectivity model, DNS control, and operational preferences.
-
-### Use Azure-based routing
+You can use Azure-based routing or your own source .
 
 Azure routing services provide centralized traffic management that supports gradual workload cutover from on-premises to Azure. Each service offers different capabilities for traffic distribution, connectivity, and geographic reach. You should select the service that matches your cutover requirements, connectivity model, and workload architecture.
 
-1. **Choose Azure Application Gateway for HTTP routing within a single Azure region.** Select Application Gateway when you need Layer 7 HTTP routing and only have a single-region architecture. To route to on-premises public endpoints, you need ExpressRoute or VPN.
+### Use Azure-based routing
+
+1. **Point your DNS at a layer 7 Azure load balancer.** Select Application Gateway when you need Layer 7 HTTP routing and only have a single-region architecture. To route to on-premises public endpoints, you need ExpressRoute or VPN.
 
 1. **Choose Azure Front Door for HTTP routing across multiple Azure regions.** Select Front Door when you need Layer 7 HTTP routing and your Azure deployment spans multiple regions.
 
-1. **Choose Azure Traffic Manager for DNS-based percentage traffic splitting.** Select Traffic Manager when you need to gradually shift traffic percentages between on-premises and Azure using weighted DNS routing (for example, starting with 10% to Azure and increasing over time to 100%). This service works at the DNS level and supports any endpoint accessible over the internet, making it ideal for cutover scenarios where you want precise percentage control.
+1. **Choose Azure Traffic Manager for DNS-based routing.** Select Traffic Manager when you need to gradually shift traffic percentages between on-premises and Azure using weighted DNS routing (for example, starting with 10% to Azure and increasing over time to 100%). This service works at the DNS level and supports any endpoint accessible over the internet, making it ideal for cutover scenarios where you want precise percentage control.
 
 ### Use on-premises DNS routing
 

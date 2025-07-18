@@ -124,4 +124,4 @@ Migration projects require continuous monitoring and adjustment based on lessons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Determine offline or online migration](./plan-migration.md#determine-offline-or-near-zero-downtime-migration)
+> [Determine the migration method for each workload](./plan-migration.md#determine-the-migration-method-for-each-workload)
