@@ -13,11 +13,11 @@ A workload must be cloud-ready before migration to Azure. Cloud readiness reduce
 
 ## Fix compatibility issues in Azure
 
-Azure compatibility issues block workload migration and must be resolved before production deployment. Azure environments require specific configurations, supported operating systems, and current drivers to function correctly. You should address these issues systematically to ensure successful migration execution.
+Azure compatibility issues block workload migration and must be resolved before production deployment. Azure environments require specific configurations, supported operating systems, and current drivers to function correctly. You should address these issues systematically to ensure successful execution of your migration.
 
 ### Create Azure subscriptions
 
-1. **Create three separate Azure subscriptions for development, test, and production.** Use the Azure portal or Azure CLI to provision each subscription. Assign clear naming conventions and tags to distinguish them. This separation ensures that testing activities do not impact production quotas or security boundaries. For governance and security guidance, see [Govern your subscriptions](azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#govern-your-subscriptions).
+1. **Create three separate Azure subscriptions for development, test, and production.** Use the Azure portal or Azure CLI to provision each subscription. Assign clear [naming conventions and tags](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#establish-a-consistent-naming-convention) to distinguish them. This separation ensures that testing activities do not impact production quotas or security boundaries. For governance and security guidance, see [Govern your subscriptions](azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#govern-your-subscriptions).
 
 1. **Apply governance policies to each subscription.** Use Azure Policy to enforce environment-specific controls. For example, restrict VM sizes in development, enforce tagging in test, and apply security baselines in production.
 
@@ -27,7 +27,7 @@ Azure compatibility issues block workload migration and must be resolved before 
 
 1. **Use the planned Azure architecture from the CAF Plan phase.** Reference the architecture artifact created during planning to define the infrastructure blueprint. Ensure that the architecture aligns with workload requirements and supports scalability, security, and performance. For architecture planning, see [Azure architecture planning](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture).
 
-2. **Deploy all workload components in the test subscription.** Provision virtual machines, web apps, containers, databases, storage accounts, virtual networks, and DNS zones.
+2. **Deploy all workload components in the test subscription.** Provision compute (virtual machines, web apps, containers) datastores (databases, storage accounts), load balancers, managed identities, virtual networks, and DNS resources.
 
 3. **Validate the completeness of the test environment.** Confirm that all dependencies, configurations, and integrations are present. Missing components can lead to false positives or undetected issues during testing.
 
@@ -90,7 +90,7 @@ Deployment documentation ensures that teams can consistently deploy and maintain
 
 1. **Document configuration changes and deployment procedures.** Record all environment-specific settings, connection strings, service endpoints, and security configurations in accessible documentation. Include step-by-step deployment instructions, prerequisite requirements, and post-deployment validation steps. This documentation enables consistent deployments and supports troubleshooting when issues occur.
 
-2. **Update rollback and recovery procedures.** Create detailed steps to revert changes when deployment issues occur. Include rollback triggers, data backup procedures, and recovery validation steps. Test rollback procedures regularly to ensure they work correctly when needed. This preparation reduces downtime and provides. For more information, see [Define rollback plan](./plan-migration.md#define-rollback-plan).
+2. **Update rollback and recovery procedures.** Create detailed steps to revert changes when deployment issues occur. Include rollback triggers, data backup and restoration procedures, and recovery validation steps. Test rollback procedures regularly to ensure they work correctly when needed. This preparation reduces downtime and provides. For more information, see [Define rollback plan](./plan-migration.md#define-rollback-plan).
 
 ## Next step
 
