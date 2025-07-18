@@ -105,7 +105,7 @@ Database dependencies often determine the success of application migration. Shar
 
 ### Create and maintain a risk register
 
-A risk register identifies potential issues that could impact cloud adoption and defines mitigation strategies. Maintaining this register ensures proactive risk management.
+A risk register is a document or tool used to identify, assess, prioritize, and monitor potential risks that could impact cloud adoption and outlines mitigation strategies. Maintaining this register ensures proactive risk management.
 
 1. **Establish a risk register for all workloads.** Record risks related to technical, operational, and organizational factors. This register provides visibility into potential blockers and their impact.
 
