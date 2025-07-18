@@ -43,7 +43,7 @@ Source system shutdown eliminates data corruption risk by ensuring no new transa
 | AWS | [AWS Data Transfer Service](https://aws.amazon.com/datasync/) | Transfers data between on-premises and AWS storage services |
 | AWS | AWS CLI | Amazon Web Services command-line interface for managing AWS services |
 
-1. **Execute the data transfer using your selected tool.** Data transfer tools include built-in security features such as encryption in transit and authentication mechanisms. Configure monitoring and logging to track transfer progress and identify any issues. Validate data integrity during the transfer process using checksums or other verification methods to ensure complete and accurate data migration.
+1. **Execute the data transfer.** Restore the backup to the target Azure service. Use the appropriate restore tools and procedures for your specific workload type. Data transfer tools include built-in security features such as encryption in transit and authentication mechanisms. Validate data integrity during the transfer process using checksums or other verification methods to ensure complete and accurate data migration.
 
 ## 4. Validate the workload in Azure
 
