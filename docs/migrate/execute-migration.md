@@ -11,21 +11,25 @@ ms.topic: conceptual
 
 This article provides guidance on executing the final cutover to Azure, ensuring minimal downtime and successful transition of your workloads and data to the cloud environment.
 
-## Notify stakeholders of the migration schedule and requirements
+## Secure migration support resources
 
-Stakeholder communication ensures clear understanding of migration timelines and responsibilities. This communication prevents confusion and ensures proper support during the migration process. You should inform all affected parties and confirm support team availability.
+This step establishes clear communication channels and ensures technical expertise is available during migration. Proper coordination reduces operational risks and increases migration success rates. You should secure commitments from all stakeholders and technical teams before proceeding.
 
-1. **Inform all affected parties about migration timing and actions needed.** Clear communication ensures everyone understands when migration will occur and what they need to do. Send detailed notifications that include migration dates, expected downtime, user impact, and contact information for support. This prevents confusion and reduces business disruption.
+1. **Distribute a detailed migration schedule to all stakeholders.** A comprehensive schedule creates clarity and alignment across the organization. Create and distribute a document that specifies migration timing, expected service impacts, user responsibilities, and contingency plans. Include contact information for the migration team and support resources. This preparation prevents misunderstandings and reduces business disruption during the migration window.
 
-2. **Confirm that support teams are on standby during the cutover window.** Support team availability enables quick response to issues during the critical transition period. Schedule technical staff to be available during the cutover window and establish clear escalation paths for critical issues. This reduces resolution time for problems that could affect business operations.
+1. **Confirm technical support availability throughout the entire migration window.** Dedicated technical resources enable immediate response to issues that emerge during migration. Schedule specific technical staff with relevant expertise to be on-call during the entire migration period. Establish clear escalation paths with response time expectations for critical issues. This support structure minimizes resolution time for problems that could affect migration success or business operations.
 
-## Implement a change freeze on the source system
+1. **Conduct a pre-migration readiness review with all support teams.** A readiness review confirms that all teams understand their roles and have necessary access. Hold a meeting with representatives from each support team to review the migration plan, verification procedures, and rollback criteria. Verify that support teams have appropriate system access and monitoring tools configured. This preparation ensures coordinated response to any issues that arise during migration.
 
-A change freeze establishes a stable environment for migration by preventing modifications that could create complications. This approach ensures data consistency and reduces migration risks. You should establish and enforce a temporary halt on system changes.
+## Implement a change freeze
 
-1. **Establish a temporary halt on system changes before migration.** A stable baseline ensures consistent data migration and reduces complications. This prevents last-minute changes from disrupting carefully planned migration activities. Document the freeze period clearly in change management systems and communicate it to all development and operations teams.
+A change freeze prevents modifications that could disrupt migration success. System stability reduces migration risks and ensures data consistency. You should implement controls to prevent changes to source systems during the migration window.
 
-2. **Create an exception process for critical changes only.** A controlled exception process allows for emergency fixes while maintaining overall stability. This balances business needs with migration requirements. Define criteria for emergency changes and establish an expedited approval workflow for critical issues that cannot wait until after migration.
+1. **Implement automated change controls in deployment pipelines.** Automated controls prevent unauthorized changes to production systems. Configure deployment pipelines to block releases to the source environment during the freeze window. Add approval gates in your CI/CD tools to enforce the freeze period. These controls prevent accidental deployments that could impact migration.
+
+2. **Document emergency change procedures.** Emergency procedures enable critical fixes while maintaining migration stability. Create specific criteria for emergency changes and define an expedited approval process. Include contact information for approvers and document required testing. These procedures balance system stability with business continuity requirements.
+
+3. **Monitor for unauthorized changes.** Change detection ensures freeze compliance throughout the migration window. Configure alerts for file system modifications, database schema changes, and application deployments. Use configuration management tools to track system state. This monitoring prevents undocumented changes from affecting migration success.
 
 ## Deploy and configure the production environment
 
