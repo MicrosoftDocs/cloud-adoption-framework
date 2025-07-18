@@ -129,4 +129,4 @@ Stakeholder approval validates your migration plan meets business requirements a
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prepare workloads for migration](./prepare-workloads-cloud.md)
+> [Prepare workloads for the cloud](./prepare-workloads-cloud.md)
