@@ -33,7 +33,7 @@ A change freeze prevents modifications that could disrupt migration success. Sys
 
 ## Create and configure the production environment
 
-Production environment preparation ensures consistency, security, and operational readiness for the migrated workload. This preparation reduces configuration drift and provides a validated foundation for your workload. You should provision production resources using infrastructure-as-code templates and apply production-grade configurations.
+Production environment preparation ensures consistency, security, and operational readiness for the migrated workload. This preparation reduces configuration drift and provides a validated foundation for your workload. You should create production resources using infrastructure-as-code templates and apply production-grade configurations.
 
 1. **Create production resources using infrastructure-as-code templates.** Infrastructure-as-code ensures consistent and repeatable deployments across environments. This approach reduces configuration errors and provides version control for infrastructure changes. Use Azure Resource Manager templates, Bicep, or Terraform to deploy resources with standardized configurations.
 
@@ -41,9 +41,9 @@ Production environment preparation ensures consistency, security, and operationa
 
 ## Validate Azure services operational status
 
-Service validation confirms that the target environment is ready to receive the migrated workload. This validation prevents migration failures due to infrastructure issues. You should verify that all provisioned services are running correctly before proceeding with data migration.
+Service validation confirms that the target environment is ready to receive the migrated workload. This validation prevents migration failures due to infrastructure issues.
 
-1. **Verify that all provisioned services are running correctly.** Service verification ensures that the Azure infrastructure can support the migrated workload. This verification identifies potential issues before they impact the migration process. Check service health status, resource provisioning completion, and service-specific health checks.
+1. **Verify that all services are running correctly.** Service verification ensures that the Azure infrastructure can support the migrated workload. This verification identifies potential issues before they affect the migration process. Check service health status, resource creation completion, and service-specific health checks.
 
 2. **Confirm network connectivity is established.** Network connectivity validation ensures that all required communication paths are functional. This validation prevents connectivity issues that could disrupt the migration or application functionality. Test network connectivity between all required services and validate DNS resolution for critical endpoints.
 
@@ -57,7 +57,7 @@ Migration execution transfers workload data and operations from the source envir
 
 1. **Establish database replication.** Configure your database platform's native replication features to establish continuous data synchronization between source and Azure target systems. For SQL Server, use Always On availability groups or log shipping. For MySQL, use binary log replication. For PostgreSQL, use logical replication. Verify that initial data synchronization completes successfully and that replication shows healthy status.
 
-1. **Monitor replication latency until it stabilizes.** Track replication lag using your database platform's monitoring tools. Target replication latency under 1 second for critical systems or under 5 seconds for standard workloads. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag consistently meets your target threshold.
+1. **Monitor replication latency until it stabilizes.** Track the lag in replication using your database platform's monitoring tools. Target replication latency under 1 second for critical systems or under 5 seconds for standard workloads. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag consistently meets your target threshold.
 
 1. **Migrate non-database data incrementally during stable replication.** Copy file systems, static content, and object files to Azure before the final cutover window. Use tools like AzCopy with synchronization features to transfer files to Azure Blob Storage and other appropriate storage services. This preparation reduces data volume that requires transfer during cutover.
 

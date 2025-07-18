@@ -17,17 +17,17 @@ Azure compatibility issues block workload migration and must be resolved before 
 
 ### Create Azure subscriptions
 
-1. **Create three separate Azure subscriptions for development, test, and production.** Use the Azure portal or Azure CLI to provision each subscription. Assign clear [naming conventions and tags](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#establish-a-consistent-naming-convention) to distinguish them. This separation ensures that testing activities do not impact production quotas or security boundaries. For governance and security guidance, see [Govern your subscriptions](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#govern-your-subscriptions).
+1. **Create three separate Azure subscriptions for development, test, and production.** Use the Azure portal or Azure CLI to create each subscription. Assign clear [naming conventions and tags](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#establish-a-consistent-naming-convention) to distinguish them. This separation ensures that testing activities don't affect production quotas or security boundaries. For governance and security guidance, see [Govern your subscriptions](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#govern-your-subscriptions).
 
-1. **Apply governance policies to each subscription.** Use Azure Policy to enforce environment-specific controls. For example, restrict VM sizes in development, enforce tagging in test, and apply security baselines in production.
+1. **Apply governance policies to each subscription.** Use Azure Policy to enforce environment-specific controls. For example, restrict compute sizes in development, enforce tagging in test, and apply security baselines in production.
 
-1. **Assign role-based access control (RBAC) per subscription.** Grant least-privilege access to users and service principals based on their roles in each environment. This reduces the risk of unauthorized changes and supports compliance.
+1. **Assign role-based access control (RBAC) per subscription.** Grant least-privilege access to users and service principals based on their roles in each environment. It reduces the risk of unauthorized changes and supports compliance.
 
 ### Deploy all workload resources in the test environment
 
 1. **Use the planned Azure architecture from the CAF Plan phase.** Reference the architecture artifact created during planning to define the infrastructure blueprint. Ensure that the architecture aligns with workload requirements and supports scalability, security, and performance. For architecture planning, see [Azure architecture planning](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture).
 
-2. **Deploy all workload components in the test subscription.** Provision compute (virtual machines, web apps, containers) datastores (databases, storage accounts), load balancers, managed identities, virtual networks, and DNS resources.
+2. **Deploy all workload components in the test subscription.** Create compute (virtual machines, web apps, containers) datastores (databases, storage accounts), load balancers, managed identities, virtual networks, and DNS resources.
 
 3. **Validate the completeness of the test environment.** Confirm that all dependencies, configurations, and integrations are present. Missing components can lead to false positives or undetected issues during testing.
 
@@ -37,7 +37,7 @@ Azure compatibility issues block workload migration and must be resolved before 
 
 1. **Resolve each compatibility issue using Azure solutions.** Apply the following remediations in the test environment:  completed during the CAF Plan phase to understand documented compatibility requirements Address compatibility issues within your Azure test environment rather than modifying your source environment. Use the following guidance to resolve common compatibility problems:
 
-| Compatibility issue | Solution | Why this matters |
+| Compatibility issue | Solution | Why it matters |
 |---------------------|----------------|------------------|
 | Unsupported OS versions | Upgrade to supported operating systems | Azure requires supported OS versions for security updates and platform compatibility |
 | Legacy NIC drivers and BIOS | Update drivers and BIOS firmware | Modern drivers ensure network performance and security in Azure VMs |
@@ -52,13 +52,13 @@ After resolving compatibility issues, ensure your workloads function correctly i
 
 ### Validate network connectivity
 
-1. **Test connectivity between all components.** Use [Azure Network Watcher connection troubleshoot](/azure/network-watcher/connection-troubleshoot-manage?tabs=portal) to verify that application tiers can communicate with each other and with external services. This validation confirms that network security groups, routing tables, and DNS configurations allow required traffic flow. Connection troubleshoot provides detailed insights into connectivity issues and identifies specific configuration problems that prevent communication.
+1. **Test connectivity between all components.** Use [Azure Network Watcher connection troubleshoot](/azure/network-watcher/connection-troubleshoot-manage?tabs=portal) to verify that application tiers can communicate with each other and with external services. This validation confirms that network security groups, routing tables, and DNS configurations allow required traffic flow. This tool provides detailed insights into connectivity issues and identifies specific configuration problems that prevent communication.
 
-1. **Verify external service connectivity.** Test connections to external APIs, databases, and third-party services that your workload depends on. Use Network Watcher to validate that outbound connectivity works correctly and that firewall rules allow required traffic. Document any connectivity requirements for production deployment.
+1. **Verify external service connectivity.** Test connections to external APIs, databases, and external services that your workload depends on. Use Network Watcher to validate that outbound connectivity works correctly and that firewall rules allow required traffic. Document any connectivity requirements for production deployment.
 
 ### Validate authentication flows
 
-1. **Test user authentication flows.** Use test user accounts to verify that identity providers like Microsoft Entra ID are accessible and that authentication works correctly. Test different authentication scenarios including single sign-on, multi-factor authentication, and password reset flows to ensure complete functionality.
+1. **Test user authentication flows.** Use test user accounts to verify that identity providers like Microsoft Entra ID are accessible and that authentication works correctly. Test different authentication scenarios including single sign-on, multifactor authentication, and password reset flows to ensure complete functionality.
 
 2. **Validate service-to-service authentication.** Test authentication between application components using service principals and managed identities. Confirm that Azure role-based access control (RBAC) permissions are correctly configured and that services can authenticate to required resources like databases and storage accounts.
 
@@ -76,7 +76,7 @@ After resolving compatibility issues, ensure your workloads function correctly i
 
 Reusable infrastructure automates deployments and standardizes configurations across environments. Infrastructure as code (IaC) reduces manual errors, supports repeatable deployments, and preserves tested configurations for consistent use. You should create IaC assets only after your workload successfully passes all functional, performance, and security tests in the test environment.
 
-1. **Create IaC templates for proven configurations.** Use [Bicep](/azure/azure-resource-manager/bicep/overview), [Terraform](/azure/developer/terraform/overview), or [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) to define your infrastructure. For more details, see [CAF Manage - Manage code-based deployments](/azure/cloud-adoption-framework/manage/administer#manage-code-deployments).
+1. **Create IaC templates for proven configurations.** Use [Bicep](/azure/azure-resource-manager/bicep/overview), [Terraform](/azure/developer/terraform/overview), or [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) to define your infrastructure. For more information, see [CAF Manage - Manage code-based deployments](/azure/cloud-adoption-framework/manage/administer#manage-code-deployments).
 
 2. **Store templates in version-controlled repositories.** Use [GitHub](https://docs.github.com/repositories) or [Azure DevOps](/azure/devops/repos/get-started/) to manage IaC assets with proper version control. Version control enables code reviews, supports team collaboration, and encourages template reuse across projects. This approach provides complete traceability for infrastructure changes and supports rollback capabilities when issues occur.
 

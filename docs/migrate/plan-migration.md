@@ -9,7 +9,9 @@ ms.topic: conceptual
 
 # Plan your migration
 
-A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences. Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone. It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
+A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences.
+
+Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone. It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
 
 ## Assess migration readiness and skills
 
@@ -29,13 +31,13 @@ A data migration path is how you move data from your current location to Azure. 
 
 3. **Use public internet for less sensitive data.** This option works when your data doesn't need encryption and you can't use ExpressRoute or Data Box. While this method is available everywhere, it's the least secure and can slow down your other internet activities.
 
-4. **Use Azure Data Box for large amounts of data.** Data Box is best for online migrations with lots of data. Microsoft ships you a physical device to copy your data onto, then you ship it back. This avoids using your network but takes the longest due to shipping time.
+4. **Use Azure Data Box for large amounts of data.** Data Box is best for online migrations with lots of data. Microsoft ships you a physical device to copy your data onto, then you ship it back. This option avoids using your network but takes the longest due to shipping time.
 
 | Data Migration Path | When to use | Pros | Cons |
 |----------------------|-------------|------|------|
-| ExpressRoute | Any workload when available | Secure and fast | Setup required, costs money |
+| ExpressRoute | Any workload when available | Secure and fast | Set up required, costs money |
 | VPN | Secure transfers when no ExpressRoute | More secure than public internet | Requires setup, slower than ExpressRoute |
-| Public internet | Non-sensitive data, can't use Data Box | Works everywhere | Least secure, uses your bandwidth |
+| Public internet | Nonsensitive data and can't use Data Box | Works everywhere | Least secure, uses your bandwidth |
 | Azure Data Box | Offline migration with large amounts of data | Moves data without using your network | Slowest methodSlowest due to shipping |
 
 ## Determine the migration sequence
@@ -48,7 +50,7 @@ Migration sequencing reduces risk and builds team confidence by establishing a l
 
 1. **Start with simpler workloads to reduce risk.** Begin migrating workloads that are less complex and have lower risk. This approach helps your team gain confidence and refine migration processes before tackling more challenging workloads.
 
-1. **Move non-production environments before production.** Non-production environments provide a safe space to test the full migration process. Migrate development, staging, and QA environments before production to validate readiness. This order allows teams to test configurations, performance, and recovery procedures without affecting users. Use non-production migrations to train operations teams.
+1. **Move non-production environments before production.** Nonproduction environments provide a safe space to test the full migration process. Migrate development, staging, and QA environments before production to validate readiness. This order allows teams to test configurations, performance, and recovery procedures without affecting users. Use nonproduction migrations to train operations teams.
 
 ### Migrate dependencies together
 
@@ -72,30 +74,30 @@ Migration sequencing reduces risk and builds team confidence by establishing a l
 
 ### Organize large portfolios into migration waves
 
-A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work. For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-planning.md).
+A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work. For detailed guidance on wave planning, see [Migration wave planning](/azure/migrate/concepts-migration-planning).
 
 ## Determine the migration method for each workload
 
 Migration methods fall into two categories: migration with downtime and migration with near-zero downtime. Choose the best migration method for each workload based on its downtime tolerance and business criticality.
 
-1. **Choose downtime migration for workloads that tolerate planned outages.** Downtime migration is simpler and faster because it doesn't require real-time synchronization between source and target environments. This method works well for non-critical workloads such as development environments, test systems, or applications with scheduled maintenance windows. Document the acceptable downtime duration for each workload and schedule migrations during low-usage periods to minimize business impact.
+1. **Choose downtime migration for workloads that tolerate planned outages.** Downtime migration is simpler and faster because it doesn't require real-time synchronization between source and target environments. This method works well for noncritical workloads such as development environments, test systems, or applications with scheduled maintenance windows. Document the acceptable downtime duration for each workload and schedule migrations during low-usage periods to minimize business effects.
 
-2. **Choose near-zero downtime migration for critical workloads.** Near-zero downtime migration ensures that critical workloads remain operational during the transition through continuous data replication and cutover techniques. This method is essential for customer-facing applications, real-time transaction systems, or workloads with strict service level agreements. Validate that the workload architecture supports continuous replication and that network bandwidth can handle real-time data transfer. Test connectivity and replication processes in a non-production environment to confirm readiness for this migration method.
+2. **Choose near-zero downtime migration for critical workloads.** Near-zero downtime migration ensures that critical workloads remain operational during the transition through continuous data replication and cutover techniques. This method is essential for customer-facing applications, real-time transaction systems, or workloads with strict service level agreements. Validate that the workload architecture supports continuous replication and that network bandwidth can handle real-time data transfer. Test connectivity and replication processes in a nonproduction environment to confirm readiness for this migration method.
 
 | Migration Method | When to use | Pros | Cons |
 |------------------|-------------|------|------|
-| Downtime migration | Non-critical workloads, development environments | Simpler process, faster execution | Service interruption required |
-| Near-zero downtime migration | Critical workloads, strict SLAs | Minimal service disruption | Complex setup, requires testing |
+| Downtime migration | Noncritical workloads, development environments | Simpler process, faster execution | Service interruption required |
+| Near-zero downtime migration | Critical workloads, strict SLAs | Minimal service disruption | Complex setup and requires testing |
 
 ## Define rollback plan
 
-A rollback plan helps teams quickly undo changes when a deployment fails or creates risks. A clear rollback plan minimizes downtime, reduces business impact, and ensures systems remain reliable. You should prepare rollback criteria and steps before starting any migration or deployment.
+A rollback plan helps teams quickly undo changes when a deployment fails or creates risks. A clear rollback plan minimizes downtime, reduces business effects, and ensures systems remain reliable. You should prepare rollback criteria and steps before starting any migration or deployment.
 
 ### Set rollback criteria
 
-1. **Work with stakeholders to define failure conditions.** Collaborate with business stakeholders, workload owners, and operations teams to decide what counts as a failed deployment. Examples include failed health checks, poor performance, security issues, or unmet success metrics. This ensures rollback decisions align with your organization's risk tolerance.
+1. **Work with stakeholders to define failure conditions.** Collaborate with business stakeholders, workload owners, and operations teams to decide what counts as a failed deployment. Examples include failed health checks, poor performance, security issues, or unmet success metrics. This definition ensures rollback decisions align with your organization's risk tolerance.
 
-2. **Add rollback triggers to the deployment plan.** Include specific conditions that trigger a rollback in your deployment plan, such as CPU usage limits, response time thresholds, or error rates. This makes rollback decisions clear and consistent during incidents.
+2. **Add rollback triggers to the deployment plan.** Include specific conditions that trigger a rollback in your deployment plan, such as CPU usage limits, response time thresholds, or error rates. This evaluation makes rollback decisions clear and consistent during incidents.
 
 3. **Automate rollback steps in CI/CD pipelines.** Use tools like [Azure Pipelines](/azure/devops/pipelines/process/stages) or [GitHub Actions](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment) to automate rollback processes. For example, configure pipelines to redeploy a previous version if health checks fail.
 
@@ -105,9 +107,9 @@ A rollback plan helps teams quickly undo changes when a deployment fails or crea
 
 2. **Include rollback assets in documentation.** Attach rollback scripts, configuration snapshots, and infrastructure-as-code templates to your rollback plan. These assets enable rapid execution and reduce dependence on manual intervention.
 
-### Test rollback procedures in a pre-production environment
+### Test rollback procedures in a preproduction environment
 
-1. **Simulate failure scenarios in staging.** Use a pre-production environment to simulate deployment failures and validate rollback effectiveness. This testing helps identify gaps in automation, permissions, or dependencies.
+1. **Simulate failure scenarios in staging.** Use a preproduction environment to simulate deployment failures and validate rollback effectiveness. This testing helps identify gaps in automation, permissions, or dependencies.
 
 2. **Verify system recovery to a known-good state.** Confirm that rollback restores the system to a stable and functional configuration. This verification builds confidence in your rollback plan and supports operational readiness.
 
@@ -121,9 +123,9 @@ A rollback plan helps teams quickly undo changes when a deployment fails or crea
 
 Stakeholder approval validates your migration plan meets business requirements and risk tolerance. You should secure formal approval before executing migrations.
 
-1. **Document the migration plan with business justification.** Create a structured plan showing workload name, owner, criticality, migration method, downtime window, and business impact. Include rationale for each approach and explain how it minimizes risk.
+1. **Document the migration plan with business justification.** Create a structured plan showing workload name, owner, criticality, migration method, downtime window, and business effects. Include rationale for each approach and explain how it minimizes risk.
 
-1. **Present tested rollback procedures.** Show specific rollback plans with steps, timeframes, and success criteria. Include automated and manual capabilities. Document pre-production test results to prove quick service restoration.
+1. **Present tested rollback procedures.** Show specific rollback plans with steps, timeframes, and success criteria. Include automated and manual capabilities. Document preproduction test results to prove quick service restoration.
 
 1. **Validate schedules against business constraints.** Review timelines with stakeholders to avoid critical business periods, maintenance freezes, and seasonal peaks. Provide alternative options with trade-offs if conflicts exist.
 
