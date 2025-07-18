@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Assess your workloads for cloud migration
 
-This article helps you conduct thorough workload assessments to collect the necessary information for successful migration decisions. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases). Use the following table for discovery and assessment tools for workloads on-premises, in Amazon Web Services (AWS), in Google Cloud Platform (GCP), and application code.
+This article helps you conduct thorough workload assessments to collect the necessary information for successful migration decisions. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases). Use the following table to find discovery and assessment tools for on-premises workloads, Amazon Web Services (AWS) workloads, Google Cloud Platform (GCP) workloads, and application code.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
@@ -105,7 +105,7 @@ Framework and SDK compatibility ensures that applications run reliably in Azure.
 
 Database dependencies often determine the success of application migration. Shared databases, cross-application dependencies, and integration patterns can complicate migration planning. You must assess the databases that support your applications and understand their dependencies. Follow this guidance:
 
-1. **Identify all databases used by the application.** Create a complete inventory of all databases used by the application. Include database engine types (SQL Server, MySQL), versions, and hosting models (for example, on-premises, IaaS, PaaS). Use tools such as Azure Migrate or Data Migration Assistant to gather this information systematically. Specify whether the database is self-hosted, hosted on virtual machines, or delivered as a managed service. This information helps determine migration readiness and target platform compatibility.
+1. **Identify all databases used by the application.** Create a complete inventory of all databases used by the application. Include database engine types (SQL Server, MySQL), versions, and hosting models (for example, on-premises, IaaS, PaaS). Use tools, such as Azure Migrate, to gather this information systematically. Specify whether the database is self-hosted, hosted on virtual machines, or delivered as a managed service. This information helps determine migration readiness and target platform compatibility.
 
 2. **Map inbound and outbound dependencies.** A clear view of how data flows into and out of each database is critical for sequencing migrations and avoiding service disruptions. Dependencies often span multiple applications, services, and external systems. Include internal applications, APIs, batch jobs, reporting tools, and other integrations. Specify whether the dependency is read-only, write-only, or bidirectional. This detail helps prioritize workloads and identify potential migration blockers.
 

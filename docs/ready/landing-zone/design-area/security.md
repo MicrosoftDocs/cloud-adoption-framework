@@ -4,6 +4,7 @@ description: Learn about design area guidance to establish a foundation for secu
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/27/2025
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---

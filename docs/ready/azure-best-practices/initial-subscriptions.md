@@ -29,6 +29,8 @@ With policies in place, you're ready to create your first subscriptions. At a mi
 
 1. **Use Azure Dev/Test pricing to optimize costs in nonproduction environments.** [Azure Dev/Test offers](https://azure.microsoft.com/pricing/dev-test/) provide significant cost savings for development, testing, and training activities. These pricing benefits help small organizations maximize their cloud investment while maintaining proper environment separation and governance practices.
 
+1. **Create subscriptions through the Azure portal.** Navigate to "Subscriptions" in the Azure portal and select "Add." Provide a descriptive name that clearly indicates both the workload and environment. Select the appropriate billing account and plan. Choose the correct subscription directory and management group. Assign a subscription owner and configure a budget for spending alerts. Apply standardized tags to ensure consistency. For detailed guidance, see [Create an MCA subscription](/azure/cost-management-billing/manage/create-subscription) or [Create an EA subscription](/azure/cost-management-billing/manage/create-enterprise-subscription). As your organization matures, consider [creating subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription) to ensure consistency and reduce manual effort.
+
 ## Govern your subscriptions
 
 Effective subscription governance ensures your cloud resources remain secure, compliant, and cost-effective throughout their lifecycle. You need to decide what all standard subscriptions should look like, including Azure role-based access controls, policies, tags, and resources. Here's how:
