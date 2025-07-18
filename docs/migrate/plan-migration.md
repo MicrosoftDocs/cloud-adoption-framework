@@ -9,17 +9,7 @@ ms.topic: conceptual
 
 # Plan your migration
 
-A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences. Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone:
-
-| Factor | Description |
-|--------|-------------|
-| **Operational readiness validation** | Working with your deployed landing zone reveals actual team capabilities, operational processes, and support requirements that influence migration complexity and timing. |
-| **Technical constraints discovery** | Network bandwidth, connectivity patterns, and Azure service performance become clear through operational experience, affecting data migration path selections and transfer timelines. |
-| **Changing business priorities** | The time between initial planning and migration execution often brings new business requirements, regulatory changes, or shifting organizational priorities that require updated migration sequencing. |
-| **Resource availability confirmation** | Actual Azure resource provisioning, cost patterns, and operational overhead become visible through landing zone operations, enabling more accurate migration resource planning and scheduling. |
-| **Risk tolerance refinement** | Experience with Azure operations and incident management provides clearer understanding of acceptable downtime windows and rollback requirements for different workload types. |
-
-It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
+A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences. Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone. It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
 
 ## Assess migration readiness and skills
 
@@ -39,14 +29,14 @@ A data migration path is how you move data from your current location to Azure. 
 
 3. **Use public internet for less sensitive data.** This option works when your data doesn't need encryption and you can't use ExpressRoute or Data Box. While this method is available everywhere, it's the least secure and can slow down your other internet activities.
 
-4. **Use Azure Data Box for large amounts of non-critical data.** Data Box is best for transferring lots of data that isn't time-sensitive or mission-critical. Microsoft ships you a physical device to copy your data onto, then you ship it back. This avoids using your network but takes the longest due to shipping time.
+4. **Use Azure Data Box for large amounts of data.** Data Box is best for online migrations with lots of data. Microsoft ships you a physical device to copy your data onto, then you ship it back. This avoids using your network but takes the longest due to shipping time.
 
 | Data Migration Path | When to use | Pros | Cons |
 |----------------------|-------------|------|------|
 | ExpressRoute | Any workload when available | Secure and fast | Setup required, costs money |
 | VPN | Secure transfers when no ExpressRoute | More secure than public internet | Requires setup, slower than ExpressRoute |
 | Public internet | Non-sensitive data, can't use Data Box | Works everywhere | Least secure, uses your bandwidth |
-| Azure Data Box | Large amounts of non-critical data | Moves data without using your network | Slowest methodSlowest due to shipping |
+| Azure Data Box | Offline migration with large amounts of data | Moves data without using your network | Slowest methodSlowest due to shipping |
 
 ## Determine the migration sequence
 
@@ -64,15 +54,13 @@ Migration sequencing reduces risk and builds team confidence by establishing a l
 
 [!INCLUDE [Steps to migrate dependencies together](./includes/migrate-dependencies-together.md)]
 
-### Limit the time a workload depends on both source and cloud environments
+### Address split-environment operations
 
-1. **Understand components and dependencies that cannot move.** Identify workload components that must remain in the source environment due to technical, regulatory, or business constraints. Document the reasons these components cannot move, such as legacy system dependencies, compliance requirements, or unsupported architectures. This understanding helps you plan long-term strategies for managing these components while ensuring seamless integration with cloud-based systems.
+1. **Plan for unmovable dependencies.** Identify components that must stay in your source environment due to technical or regulatory reasons. Document why they can't move, how they connect to other systems, and what data they share. This documentation helps you create strategies for these components to work smoothly with your cloud systems.
 
-2. **Plan for components that can eventually move.** Evaluate components that are temporarily hosted in the source environment but can transition to the cloud in the future. Document their dependencies, data flows, and integration points with cloud systems. Create a migration plan that includes timelines, technical requirements, and risk mitigation strategies to limit the time these components operate in both environments.
+1. **Minimize split-environment operation time.** When components can move to the cloud later but not immediately, document their connections and data flows with cloud systems. Create a clear plan with timelines and risk management approaches to reduce the time your workload operates across both environments. Consider delaying the migration until more components can move together.
 
-3. **Minimize hybrid dependencies during migration.** Reduce the duration and complexity of hybrid operations by prioritizing the migration of components that can move. Use tools like API gateways, database replication, or message queues to bridge gaps between the source and cloud environments. This approach ensures functionality while accelerating the transition to a fully cloud-based architecture.
-
-4. **Set deadlines to migrate remaining components.** Assign clear owners and timelines to move the remaining components from the source environment to the cloud. This ensures the hybrid state is temporary and keeps the migration process on track.
+1. **Connect environments effectively.** Use integration methods like API gateways, message queues, and data synchronization to create reliable connections between your cloud workloads and source environment components. These approaches reduce delays, improve security, and prepare the way for eventually moving remaining components to the cloud.
 
 ### Create a detailed migration schedule
 
