@@ -56,8 +56,7 @@ additionalContent:
         # Card
         - title: 📅 Plan
           summary: Prepare people, processes, and technology for Azure adoption.
-          url: ./plan/index.md
-
+          url: ./plan/prepare-organization-for-cloud.md
         # Card
         - title: 🛠️ Ready
           summary: Prepare your Azure environment and landing zone for workloads.
