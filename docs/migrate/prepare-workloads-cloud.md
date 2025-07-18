@@ -84,7 +84,7 @@ Reusable infrastructure automates deployments and standardizes configurations ac
 
 4. **Validate infrastructure provisioning end-to-end.** Test that your IaC templates, pipelines, and scripts can create the complete infrastructure stack from nothing. Test different deployment scenarios including initial deployment, configuration updates, and rollback procedures to confirm the automation works correctly. Use separate Azure subscriptions or resource groups for testing to prevent conflicts with production resources and maintain environment isolation.
 
-### Create deployment documentation
+## Create deployment documentation
 
 Deployment documentation ensures that teams can consistently deploy and maintain workloads across environments. It also supports troubleshooting and compliance.
 
