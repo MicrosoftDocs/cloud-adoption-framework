@@ -46,9 +46,9 @@ Azure compatibility issues block workload migration and must be resolved before 
 | Host-based antivirus software | Integrate with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Cloud-native security provides better threat detection and management |
 | Hardcoded user accounts | Replace with [managed identities](/entra/identity/managed-identities-azure-resources/overview) | Managed identities eliminate credential management and improve security |
 
-## Test workload in the Azure
+## Validate workloads
 
-Once you solved compatibility issues and feel good about the workload, you need to test environments validate that your workload operates reliably and meets performance expectations before production deployment. Testing in Azure ensures that network, identity, performance, and compatibility requirements are met and documented. You should conduct comprehensive testing to confirm that your workload functions correctly in the target Azure environment.
+After resolving compatibility issues, ensure your workloads function correctly in the Azure environment. Comprehensive testing is essential to confirm that all components, configurations, and integrations meet business and technical requirements. This validation process reduces risks and ensures a smooth transition to production deployment.
 
 ### Validate network connectivity
 
