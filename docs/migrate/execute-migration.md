@@ -13,11 +13,19 @@ This article provides guidance on executing the final cutover to Azure, ensuring
 
 ## Notify stakeholders of the migration schedule and requirements
 
-Stakeholder communication ensures that all affected parties understand the migration timeline and their responsibilities. This communication prevents confusion and ensures support teams are available during critical periods. You should communicate the schedule to IT staff, application owners, and end users as needed.
+Stakeholder communication ensures clear understanding of migration timelines and responsibilities. This communication prevents confusion and ensures proper support during the migration process. You should inform all affected parties and confirm support team availability.
 
-1. **Confirm that support teams are on standby during the cutover window.** Support team availability ensures rapid response to issues during the critical transition period. This availability reduces the time to resolve problems that could impact business operations. Schedule dedicated support resources for the cutover window and establish escalation procedures for critical issues.
+1. **Inform all affected parties about migration timing and actions needed.** Clear communication ensures everyone understands when migration will occur and what they need to do. Send detailed notifications that include migration dates, expected downtime, user impact, and contact information for support. This prevents confusion and reduces business disruption.
 
-2. **Implement a change freeze on the source system.** Change freeze prevents new modifications that could complicate the migration process or create data inconsistencies. This freeze ensures a stable baseline for the migration. Communicate the freeze period to all stakeholders and establish approval processes for emergency changes only.
+2. **Confirm that support teams are on standby during the cutover window.** Support team availability enables quick response to issues during the critical transition period. Schedule technical staff to be available during the cutover window and establish clear escalation paths for critical issues. This reduces resolution time for problems that could affect business operations.
+
+## Implement a change freeze on the source system
+
+A change freeze establishes a stable environment for migration by preventing modifications that could create complications. This approach ensures data consistency and reduces migration risks. You should establish and enforce a temporary halt on system changes.
+
+1. **Establish a temporary halt on system changes before migration.** A stable baseline ensures consistent data migration and reduces complications. This prevents last-minute changes from disrupting carefully planned migration activities. Document the freeze period clearly in change management systems and communicate it to all development and operations teams.
+
+2. **Create an exception process for critical changes only.** A controlled exception process allows for emergency fixes while maintaining overall stability. This balances business needs with migration requirements. Define criteria for emergency changes and establish an expedited approval workflow for critical issues that cannot wait until after migration.
 
 ## Deploy and configure the production environment
 
@@ -73,6 +81,10 @@ Migration execution transfers workload data and operations from the source envir
 
 6. **Validate workload functionality after cutover.** Perform final checks to ensure the application is stable and data is accurate. Engage application owners to verify business-critical functions.
 
+## Maintain fallback option
+
+Retain the source environment as a fallback option. Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. This fallback option provides business continuity insurance during the stabilization period. Keep the source environment available and maintain the ability to revert DNS records and restore previous configurations if needed.
+
 ## Validate migration success
 
 Post-migration validation ensures that the workload operates correctly and meets all requirements. This validation confirms that data integrity is maintained and that the migration was successful. You should conduct comprehensive validation before declaring the migration complete.
@@ -80,10 +92,6 @@ Post-migration validation ensures that the workload operates correctly and meets
 1. **Confirm successful user access and system performance.** User access validation ensures that the transition to Azure is transparent and that performance meets expectations. This confirmation validates that users can access the system without disruption. Monitor user access patterns, system performance metrics, and error rates during the initial post-migration period.
 
 1. **Announce migration success only after thorough validation.** Complete validation ensures that all stakeholders confirm the workload is stable and functional. This confirmation prevents premature declarations of success that could lead to issues later. Obtain confirmation from application owners, testers, and business stakeholders that the workload meets all requirements and operates correctly.
-
-## Maintain fallback option
-
-Retain the source environment as a fallback option. Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. This fallback option provides business continuity insurance during the stabilization period. Keep the source environment available and maintain the ability to revert DNS records and restore previous configurations if needed.
 
 ## Support workload during stabilization
 
