@@ -421,8 +421,8 @@ items:
           href: migrate/plan-migration.md
         - name: 2. Prepare workloads for migration
           href: migrate/prepare-workloads-cloud.md
-        - name: 3. Execute migration cutover
-          href: migrate/execute-migration-cutover.md
+        - name: 3. Execute migration
+          href: migrate/execute-migration.md
         - name: 4. Optimize after migration
           href: migrate/optimize-workloads-after-migration.md
         - name: 5. Decommission source workload
