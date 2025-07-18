@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Execute migration
 
-This article provides guidance on executing the final cutover to Azure, ensuring minimal downtime and successful transition of your workloads and data to the cloud environment.
+This article provides structured guidance for executing successful migration to Azure. The guidance covers both near-zero downtime and planned downtime approaches to accommodate different business requirements.
 
 ## Secure migration support resources
 
@@ -25,17 +25,17 @@ This step establishes clear communication channels and ensures technical experti
 
 A change freeze prevents modifications that could disrupt migration success. System stability reduces migration risks and ensures data consistency. You should implement controls to prevent changes to source systems during the migration window.
 
-1. **Implement automated change controls in deployment pipelines.** Automated controls prevent unauthorized changes to production systems. Configure deployment pipelines to block releases to the source environment during the freeze window. Add approval gates in your CI/CD tools to enforce the freeze period. These controls prevent accidental deployments that could impact migration.
+1. **Implement automated change controls in deployment pipelines.** Automated controls prevent unauthorized changes to production systems. Configure deployment pipelines to block releases to the source environment during the freeze window. Add approval gates in your CI/CD tools to enforce the freeze period. These controls prevent accidental deployments that could affect migration.
 
 2. **Document emergency change procedures.** Emergency procedures enable critical fixes while maintaining migration stability. Create specific criteria for emergency changes and define an expedited approval process. Include contact information for approvers and document required testing. These procedures balance system stability with business continuity requirements.
 
 3. **Monitor for unauthorized changes.** Change detection ensures freeze compliance throughout the migration window. Configure alerts for file system modifications, database schema changes, and application deployments. Use configuration management tools to track system state. This monitoring prevents undocumented changes from affecting migration success.
 
-## Deploy and configure the production environment
+## Create and configure the production environment
 
 Production environment preparation ensures consistency, security, and operational readiness for the migrated workload. This preparation reduces configuration drift and provides a validated foundation for your workload. You should provision production resources using infrastructure-as-code templates and apply production-grade configurations.
 
-1. **Provision production resources using infrastructure-as-code templates.** Infrastructure-as-code ensures consistent and repeatable deployments across environments. This approach reduces configuration errors and provides version control for infrastructure changes. Use Azure Resource Manager templates, Bicep, or Terraform to deploy resources with standardized configurations.
+1. **Create production resources using infrastructure-as-code templates.** Infrastructure-as-code ensures consistent and repeatable deployments across environments. This approach reduces configuration errors and provides version control for infrastructure changes. Use Azure Resource Manager templates, Bicep, or Terraform to deploy resources with standardized configurations.
 
 2. **Apply production-grade configurations.** Security configurations with production SKUs. Apply production security settings protect your workload from threats and ensure compliance with organizational policies. These configurations establish the foundation for secure operations in Azure. Configure network security groups, firewall rules, and identity access controls according to your security requirements.
 
@@ -57,7 +57,7 @@ Migration execution transfers workload data and operations from the source envir
 
 1. **Establish database replication.** Configure your database platform's native replication features to establish continuous data synchronization between source and Azure target systems. For SQL Server, use Always On availability groups or log shipping. For MySQL, use binary log replication. For PostgreSQL, use logical replication. Verify that initial data synchronization completes successfully and that replication shows healthy status.
 
-1. **Monitor replication latency until it stabilizes.** Track replication lag continuously using your database platform's monitoring tools. Target replication latency under 1 second for critical systems or under 5 seconds for standard workloads. Higher latency increases cutover risk and duration. Do not proceed to the next step until replication lag consistently meets your target threshold.
+1. **Monitor replication latency until it stabilizes.** Track replication lag using your database platform's monitoring tools. Target replication latency under 1 second for critical systems or under 5 seconds for standard workloads. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag consistently meets your target threshold.
 
 1. **Migrate non-database data incrementally during stable replication.** Copy file systems, static content, and object files to Azure before the final cutover window. Use tools like AzCopy with synchronization features to transfer files to Azure Blob Storage and other appropriate storage services. This preparation reduces data volume that requires transfer during cutover.
 
@@ -67,7 +67,7 @@ Migration execution transfers workload data and operations from the source envir
 
 1. **Validate data integrity using automated verification tools.** Execute comprehensive data integrity checks using database-specific validation tools. For file systems, use MD5 hash comparisons and validate file counts, sizes, and timestamps. Implement automated testing scripts to verify critical business functions including authentication, core transactions, and reporting capabilities.
 
-1. **Direct traffic to the new workload.** Update DNS records and load balancer configurations to direct user traffic to the Azure environment. Implement gradual traffic redirection starting with a small percentage of users to validate system performance under real load. Gradually increase traffic percentage while maintaining rollback capabilities. For detailed guidance, [Gradual cutover to Azure](./onpremises-azure-gradual-cutover.md).
+1. **Direct traffic to the new workload.** Update DNS records and load balancer configurations to direct user traffic to the Azure environment. Implement gradual traffic redirection starting with a small percentage of users to validate system performance under real load. Gradually increase traffic percentage while maintaining rollback capabilities.
 
 1. **Conduct comprehensive post-cutover validation and monitoring.** Perform end-to-end functional testing of all critical business processes using automated test suites. Validate data accuracy using checksum verification and hash function comparisons between source and target systems. Have application owners confirm that all major functions operate correctly. Monitor system performance, error rates, and user access patterns for the first 24-48 hours after cutover to identify any performance degradation or functionality issues.
 
@@ -87,7 +87,7 @@ Migration execution transfers workload data and operations from the source envir
 
 ## Maintain fallback option
 
-Retain the source environment as a fallback option. Source environment retention enables quick reversion if critical issues occur that cannot be resolved within acceptable timeframes. This fallback option provides business continuity insurance during the stabilization period. Keep the source environment available and maintain the ability to revert DNS records and restore previous configurations if needed.
+Retain the source environment as a fallback option. Source environment retention enables quick reversion if critical issues occur that can't be resolved within acceptable timeframes. This fallback option provides business continuity insurance during the stabilization period. Keep the source environment available and maintain the ability to revert DNS records and restore previous configurations if needed.
 
 ## Validate migration success
 
@@ -109,7 +109,8 @@ Enhanced support coverage ensures rapid response to post-migration issues during
 
 | Source | Tool | Description |
 |--------|------|-------------|
-| Multiple | [Data migration guides](/data-migration/) | Guides for different platforms, sources, and targets |
+| Multiple | [Database migration guides](/data-migration/) | Guides for different platforms, sources, and targets |
+| Other clouds | [AWS and Google Cloud to Azure](/azure/migration/migrate-to-azure) | Guides for migrating from AWS and Google Cloud to Azure |
 | On-premises | [Azure Database Migration Service](/azure/dms/dms-overview) | Fully managed service for migrating databases to Azure with minimal downtime |
 | On-premises | [Azure Migrate](/azure/migrate) | Comprehensive migration service for discovering, assessing, and migrating workloads to Azure |
 | On-premises | [Azure Data Box](/azure/databox/data-box-overview) | Send terabytes of data into and out of Azure |
