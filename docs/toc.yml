@@ -38,8 +38,6 @@ items:
 
     - name: Plan
       items:
-      - name: Checklist
-        href: plan/index.md
       - name: 1. Prepare your organization
         href: plan/prepare-organization-for-cloud.md
       - name: 2. Prepare your people
@@ -432,12 +430,6 @@ items:
           items:
           - name: Migration wave planning
             href: migrate/migration-wave-planning.md
-          - name: Execute online migration cutover
-            href: migrate/execute-online-migration-cutover.md
-          - name: Execute offline migration cutover
-            href: migrate/execute-offline-migration-cutover.md
-          - name: Gradual cutover to Azure
-            href: migrate/onpremises-azure-gradual-cutover.md
           - name: Migration scenarios
             href: migrate/scenarios.md
 

@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Select your cloud migration strategies
 
-This article helps you select the most appropriate cloud migration strategy for each workload in your portfolio. Each strategy—retire, retain, rehost, replatform, refactor, rearchitect, rebuild, or replace—offers distinct benefits and tradeoffs that must align with your business goals and technical requirements.
+This article helps you select the most appropriate cloud migration strategy for each workload in your portfolio. Each strategy (retire, retain, rehost, replatform, refactor, rearchitect, rebuild, or replace) offers distinct benefits and tradeoffs that must align with your business goals and technical requirements.
 
 ## Migration strategy overview
 

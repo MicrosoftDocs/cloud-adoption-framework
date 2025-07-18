@@ -2,7 +2,7 @@
 title: Document your cloud adoption plan
 description: Learn how to document your cloud adoption plan to ensure alignment, accountability, and traceability across stakeholders. This article provides actionable guidance for organizing plans, detailing Azure landing zones, aligning with standards, estimating timelines, and preparing for successful Azure adoption.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 07/15/2025
 ms.topic: conceptual
 ---
