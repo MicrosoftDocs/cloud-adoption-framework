@@ -29,7 +29,7 @@ An AI CoE team helps ensure consistent AI adoption across your organization. To 
 
 ## Define the responsibilities of the AI CoE
 
-Clear responsibility creates accountability, closes governance gaps, and supports consistent implementation of AI initiatives. Your AI CoE should fulfill core responsibilities to define its operations, especially at the beginning of your AI adoption journey. Use the following table to assign AI CoE responsibilities:
+Clear responsibility creates accountability, closes governance gaps, and supports consistent implementation of AI initiatives. Your AI CoE should fulfill core responsibilities to define its operations, especially at the beginning of your AI adoption journey. Use the following table to assign AI CoE responsibilities.
 
 | Area of focus | Responsibilities |
 |---------------|------------------|
@@ -40,7 +40,7 @@ Clear responsibility creates accountability, closes governance gaps, and support
 | **Create intake and prioritization workflows** | Implement processes to evaluate and prioritize AI project requests. Create a structured intake process to collect and assess project requests. Apply consistent criteria for business value, technical feasibility, and resource requirements. Maintain a prioritized AI initiative backlog. |
 | **Develop reusable assets** | Create compliance checklists and publish assets on an internal platform for reuse and knowledge sharing. |
 | **Measure and report outcomes** | Implement frameworks to track AI adoption progress and business impact. Define key performance indicators such as adoption rates, compliance levels, and project cycle times. Regularly report insights to leadership. Use performance data to drive continuous improvement. |
-| **Manage AI services** (optional) | Provide operational management and governance for deployed AI services and models. [Deploy and govern AI services](./manage.md#manage-ai-deployment). Monitor AI model performance and accuracy. Implement proper life cycle management for AI deployments. Build and maintain a library of templates, code repositories, and compliance tools. Develop templates for common AI use cases. Maintain code repositories with proven patterns. |
+| **Manage AI services** (optional) | Provide operational management and governance for deployed AI services and models. [Deploy and govern AI services](./manage.md#manage-ai-deployment). Monitor AI model performance and accuracy. Implement proper life cycle management for AI deployments. Build and maintain a library of templates, code repositories, and compliance tools. Develop templates for common AI use cases. Maintain code repositories that use proven patterns. |
 
 ## Evolve AI CoE operations
 
