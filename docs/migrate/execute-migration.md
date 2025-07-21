@@ -55,7 +55,7 @@ Migration execution transfers workload data and operations from the source envir
 
 2. **Monitor replication lag.** Monitor the lag in replication using your database platform's monitoring tools. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag is zero.
 
-3. **Migrate unstructured data and files systems during stable replication.** Copy unstructured data and files to Azure before the final cutover. Use [Tools for object and file migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) with features to transfer files to the appropriate Azure storage services. This preparation reduces the amount of data that needs to be copied during the final cutover.
+3. **Migrate unstructured data and files during stable replication.** Copy unstructured data and files to Azure before the final cutover. Use [Tools for object and file migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) with features to transfer files to the appropriate Azure storage services. This preparation reduces the amount of data that needs to be copied during the final cutover.
 
 4. **Pause write operations during final synchronization window.** Coordinate with application teams to stop write operations or enable read-only mode during predetermined maintenance windows. This step prevents data inconsistencies during the final cutover. Schedule this pause during a low-traffic period and communicate the timeline to all stakeholders. If you don't pause write operations, you increase the risk of data loss.
 
