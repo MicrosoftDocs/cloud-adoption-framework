@@ -44,25 +44,17 @@ A data migration path is how you move data from your current location to Azure. 
 
 Migration sequencing reduces risk and builds team confidence by establishing a logical order for workload migration. The sequence determines which workloads move first and how dependent components migrate together to prevent service disruptions.
 
-### Understand workload details
-
-1. **Review workload details.** Work with stakeholders to review business and technical details for each workload. Ensure that downtime or failure impacts are well understood and align with current business priorities. Use the [migration adoption plan](/azure/cloud-adoption-framework/plan/migration-adoption-plan#details-on-each-workload) to verify details like business unit, workload owner, technical dependencies, and criticality classification. These details help prioritize and sequence workloads effectively.
-
-1. **Start with simpler workloads to reduce risk.** Begin migrating workloads that are less complex and have lower risk. This approach helps your team gain confidence and refine migration processes before tackling more challenging workloads.
-
-1. **Move non-production environments before production.** Nonproduction environments provide a safe space to test the full migration process. Migrate development, staging, and QA environments before production to validate readiness. This order allows teams to test configurations, performance, and recovery procedures without affecting users. Use nonproduction migrations to train operations teams.
-
-### Migrate dependencies together
+### Find dependencies
 
 [!INCLUDE [Steps to migrate dependencies together](./includes/migrate-dependencies-together.md)]
 
 ### Address split-environment operations
 
-1. **Plan for unmovable dependencies.** Identify components that must stay in your source environment due to technical or regulatory reasons. Document why they can't move, how they connect to other systems, and what data they share. This documentation helps you create strategies for these components to work smoothly with your cloud systems.
+[!INCLUDE [Address split-environment operations](./includes/split-environment-dependencies.md)]
 
-1. **Minimize split-environment operation time.** When components can move to the cloud later but not immediately, document their connections and data flows with cloud systems. Create a clear plan with timelines and risk management approaches to reduce the time your workload operates across both environments. Consider delaying the migration until more components can move together.
+### Prioritize workloads to migrate
 
-1. **Connect environments effectively.** Use integration methods like API gateways, message queues, and data synchronization to create reliable connections between your cloud workloads and source environment components. These approaches reduce delays, improve security, and prepare the way for eventually moving remaining components to the cloud.
+[!INCLUDE [Prioritize workloads to migrate](./includes/prioritize-workloads-to-migrate.md)]
 
 ### Create a detailed migration schedule
 

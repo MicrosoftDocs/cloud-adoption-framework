@@ -31,22 +31,7 @@ System dependencies determine your wave composition and migration sequencing. Yo
 
 Initial workload selection establishes the foundation for your migration program and builds team confidence through early successes. Your cloud adoption and strategy teams must agree on prioritization criteria that balance business value, technical risk, and organizational learning objectives.
 
-1. **Maintain a prioritized migration backlog.** Create a backlog that ranks workloads based on business value, technical complexity, and strategic importance. Update priorities quarterly or when business conditions change to ensure your migration sequence reflects current organizational needs. Use a value-effort matrix to categorize applications:
-
-    | Priority | Business value | Effort | Description |
-    |----------|----------------|--------|-------------|
-    | High | High | Low | Quick wins - migrate first for immediate impact |
-    | Medium-High | High | High | Strategic investments - plan carefully with adequate resources |
-    | Medium-Low | Low | Low | Easy candidates - fill gaps between major migrations |
-    | Low | Low | High | Avoid or defer - focus resources on higher-value opportunities |
-
-2. **Start with non-critical applications that have simple architectures.** Noncritical workloads provide a safe environment for your team to practice migration procedures and refine processes without risking essential business functions. Target internal tools, development environments, or low-usage applications with standalone architectures and minimal integration points.
-
-3. **Schedule critical systems after you demonstrate initial success.** Critical applications require proven migration capabilities before you move them to Azure. Plan these migrations for later waves when your team demonstrates competency with Azure services. Business deadlines such as hardware refresh cycles might require you to prioritize critical applications earlier with more safeguards and extended testing periods.
-
-4. **Include representative complex workloads to test scenarios.** Add one or two complex workloads to each early wave to expose challenges you face with mission-critical applications. Choose workloads that represent common patterns such as multi-tier applications or database-dependent systems.
-
-5. **Assess technical readiness systematically.** Evaluate operating system support, application compatibility with Azure services, and performance requirements for each workload. Use Azure Migrate assessments to identify sizing recommendations and cost estimates.
+[!INCLUDE [Prioritize workloads to migrate](./includes/prioritize-workloads-to-migrate.md)]
 
 ## Define timelines for each wave
 
