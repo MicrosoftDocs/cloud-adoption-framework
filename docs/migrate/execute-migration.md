@@ -51,13 +51,13 @@ Migration execution transfers workload data and operations from the source envir
 
 ### Execute near-zero downtime migration
 
-1. **Establish database replication.** Configure your database platform's native replication features to establish continuous data synchronization between source and Azure target systems. Verify that initial data synchronization completes successfully and that replication shows healthy status.
+1. **Establish database replication.** Configure your database platform's native replication feature to establish continuous data replication between your source and Azure target system. Verify that initial data synchronization completes successfully and that replication is healthy.
 
-2. **Monitor replication lag.** Monitor the lag in replication using your database platform's monitoring tools. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag is zero.```
+2. **Monitor replication lag.** Monitor the lag in replication using your database platform's monitoring tools. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag is zero.
 
-3. **Migrate unstructured data and files systems during stable replication.** Copy unstructured data and file systems to Azure before the final cutover window. Use [Tools for object and file migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) with features to transfer files to the appropriate Azure storage services. This preparation reduces data volume that requires transfer during cutover.
+3. **Migrate unstructured data and files systems during stable replication.** Copy unstructured data and files to Azure before the final cutover. Use [Tools for object and file migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) with features to transfer files to the appropriate Azure storage services. This preparation reduces the amount of data that needs to be copied during the final cutover.
 
-4. **Pause write operations during final synchronization window.** Coordinate with application teams to stop write operations or enable read-only mode during predetermined maintenance windows. This step prevents data inconsistencies during final cutover. Schedule this pause during low-traffic periods and communicate the timeline to all stakeholders. If you don't pause write operations, you increase the risk of data loss.
+4. **Pause write operations during final synchronization window.** Coordinate with application teams to stop write operations or enable read-only mode during predetermined maintenance windows. This step prevents data inconsistencies during the final cutover. Schedule this pause during a low-traffic period and communicate the timeline to all stakeholders. If you don't pause write operations, you increase the risk of data loss.
 
 5. **Complete final data synchronization.** Complete final synchronization of any data modified after pausing writes using AzCopy or similar tool. Verify no pending transactions remain on the source systems and database replication is completely caught up.
 
