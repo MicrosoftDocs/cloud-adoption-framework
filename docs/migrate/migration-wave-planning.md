@@ -80,9 +80,8 @@ Collaborative planning tools enable effective wave management across your adopti
 |----------|------|-------------|
 | Planning | [Azure Boards](https://azure.microsoft.com/services/devops/boards/) | Manages migration waves, tracks progress, and coordinates team activities |
 | Discovery | [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Discovers dependencies between applications and assesses migration readiness |
-| Documentation | [Azure Architecture Center](https://docs.microsoft.com/azure/architecture/) | Provides reference architectures and best practices for cloud adoption |
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Assess workload readiness](./assess.md)
+> [Choose the migration method](./plan-migration.md#choose-the-migration-method-for-each-workload)

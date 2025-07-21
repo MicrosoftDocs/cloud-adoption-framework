@@ -31,7 +31,7 @@ A change freeze prevents modifications that could disrupt migration success. Sys
 
 3. **Monitor for unauthorized changes.** Change detection ensures freeze compliance throughout the migration window. Configure alerts for file system modifications, database schema changes, and application deployments. Use configuration management tools to track system state. This monitoring prevents undocumented changes from affecting migration success.
 
-## Create and configure the production environment
+## Finalize the production environment
 
 Production environment preparation ensures consistency, security, and operational readiness for the migrated workload. This preparation reduces configuration drift and provides a validated foundation for your workload. You should create production resources using infrastructure-as-code templates and apply production-grade configurations.
 
@@ -39,15 +39,11 @@ Production environment preparation ensures consistency, security, and operationa
 
 2. **Apply production-grade configurations.** Security configurations with production SKUs. Apply production security settings protect your workload from threats and ensure compliance with organizational policies. These configurations establish the foundation for secure operations in Azure. Configure network security groups, firewall rules, and identity access controls according to your security requirements.
 
-## Validate Azure services operational status
+3. **Verify that all services are running correctly.** Service verification ensures that the Azure infrastructure can support the migrated workload. This verification identifies potential issues before they affect the migration process. Check service health status, resource creation completion, and service-specific health checks.
 
-Service validation confirms that the target environment is ready to receive the migrated workload. This validation prevents migration failures due to infrastructure issues.
+4. **Confirm network connectivity is established.** Network connectivity validation ensures that all required communication paths are functional. This validation prevents connectivity issues that could disrupt the migration or application functionality. Test network connectivity between all required services and validate DNS resolution for critical endpoints.
 
-1. **Verify that all services are running correctly.** Service verification ensures that the Azure infrastructure can support the migrated workload. This verification identifies potential issues before they affect the migration process. Check service health status, resource creation completion, and service-specific health checks.
-
-2. **Confirm network connectivity is established.** Network connectivity validation ensures that all required communication paths are functional. This validation prevents connectivity issues that could disrupt the migration or application functionality. Test network connectivity between all required services and validate DNS resolution for critical endpoints.
-
-3. **Validate environment readiness through pre-cutover validation scripts.** Validation scripts confirm that the target environment meets all requirements before migration begins. This validation prevents migration failures due to infrastructure issues. Run automated tests to validate things like, resource availability and security configurations.
+5. **Validate environment readiness through pre-cutover validation scripts.** Validation scripts confirm that the target environment meets all requirements before migration begins. This validation prevents migration failures due to infrastructure issues. Run automated tests to validate things like, resource availability and security configurations.
 
 ## Execute cutover
 
@@ -55,33 +51,33 @@ Migration execution transfers workload data and operations from the source envir
 
 ### Execute near-zero downtime migration
 
-1. **Establish database replication.** Configure your database platform's native replication features to establish continuous data synchronization between source and Azure target systems. For SQL Server, use Always On availability groups or log shipping. For MySQL, use binary log replication. For PostgreSQL, use logical replication. Verify that initial data synchronization completes successfully and that replication shows healthy status.
+1. **Establish database replication.** Configure your database platform's native replication features to establish continuous data synchronization between source and Azure target systems. Verify that initial data synchronization completes successfully and that replication shows healthy status.
 
-1. **Monitor replication latency until it stabilizes.** Track the lag in replication using your database platform's monitoring tools. Target replication latency under 1 second for critical systems or under 5 seconds for standard workloads. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag consistently meets your target threshold.
+2. **Monitor replication latency until it stabilizes.** Track the lag in replication using your database platform's monitoring tools. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag consistently meets your target threshold, such as 1 second for critical systems or under 5 seconds for standard workloads.
 
-1. **Migrate non-database data incrementally during stable replication.** Copy file systems, static content, and object files to Azure before the final cutover window. Use tools like AzCopy with synchronization features to transfer files to Azure Blob Storage and other appropriate storage services. This preparation reduces data volume that requires transfer during cutover.
+3. **Migrate non-database data incrementally during stable replication.** Copy file systems, static content, and object files to Azure before the final cutover window. Use [Tools for object and file migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) with synchronization features to transfer files to Azure Blob Storage and other appropriate Azure storage services. This preparation reduces data volume that requires transfer during cutover.
 
-1. **Pause write operations during final synchronization window.** Coordinate with application teams to stop write operations or enable read-only mode during predetermined maintenance windows. This step prevents data inconsistencies during final cutover. Schedule this pause during low-traffic periods and communicate the timeline to all stakeholders. Skipping this step significantly increases data loss risk.
+4. **Pause write operations during final synchronization window.** Coordinate with application teams to stop write operations or enable read-only mode during predetermined maintenance windows. This step prevents data inconsistencies during final cutover. Schedule this pause during low-traffic periods and communicate the timeline to all stakeholders. If you don't pause write operations, you increase the risk of data loss.
 
-1. **Complete final data synchronization and validate consistency.** Ensure database replication catches up completely with zero lag. Complete final transfers of any data modified since incremental copies using AzCopy copy command. Verify that all replication logs show successful completion and no pending transactions remain on the source system.
+5. **Complete final data synchronization and validate consistency.** Ensure database replication catches up completely with zero lag. Complete final transfers of any data modified since incremental copies using AzCopy copy command. Verify that all replication logs show successful completion and no pending transactions remain on the source system.
 
-1. **Validate data integrity using automated verification tools.** Execute comprehensive data integrity checks using database-specific validation tools. For file systems, use MD5 hash comparisons and validate file counts, sizes, and timestamps. Implement automated testing scripts to verify critical business functions including authentication, core transactions, and reporting capabilities.
+6. **Validate workload functionality.** Quickly perform data integrity checks using [database-specific validation tools](/data-migration/). For databases, use row counts for a quick, unofficial comparison of source and target databases. Use checksum verification and hash functions for verification. For file systems, use MD5 hash comparisons and validate file counts, sizes, and timestamps. Verify critical functionality including authentication and core transactions.
 
-1. **Direct traffic to the new workload.** Update DNS records and load balancer configurations to direct user traffic to the Azure environment. Implement gradual traffic redirection starting with a small percentage of users to validate system performance under real load. Gradually increase traffic percentage while maintaining rollback capabilities.
+7. **Direct traffic to the new Azure workload.** Update DNS records and load balancer configurations to direct user traffic to the Azure environment. Implement gradual traffic redirection starting with a small percentage of users to validate system performance under real load. Gradually increase traffic percentage while maintaining rollback capabilities.
 
-1. **Conduct comprehensive post-cutover validation and monitoring.** Perform end-to-end functional testing of all critical business processes using automated test suites. Validate data accuracy using checksum verification and hash function comparisons between source and target systems. Have application owners confirm that all major functions operate correctly. Monitor system performance, error rates, and user access patterns for the first 24-48 hours after cutover to identify any performance degradation or functionality issues.
+8. **Conduct comprehensive post-cutover validation and monitoring.** Perform end-to-end functional testing of all critical business processes using automated test suites. Validate data accuracy using checksum verification and hash function comparisons between source and target systems. Have application owners confirm that all major functions operate correctly. Monitor system performance, error rates, and user access patterns for the first 24-48 hours after cutover to identify any performance degradation or functionality issues.
 
 ### Execute migration with downtime
 
 1. **Stop all write operations to the source system.** This step ensures no new transactions occur during migration. Confirm that all transactions are complete and that users are locked out before proceeding.
 
-2. **Migrate all data to Azure.** Copy databases, files, and object storage to Azure. Use tools such as Azure Migrate, AzCopy, or Azure Database Migration Service (DMS) depending on the data type and volume.
+2. **Migrate all data to Azure.** Copy databases, files, and object storage to Azure. Use tools such as Azure Migrate, AzCopy, or Azure Database Migration Service (DMS) depending on the data type and volume. See the [data migration tools](#azure-tools-and-resources).
 
 3. **Validate data integrity after migration.** Perform checksums, row counts, and metadata comparisons to confirm data accuracy. Use automated tools where available to reduce manual effort and increase reliability.
 
 4. **Test the application in the Azure environment.** Run end-to-end tests to confirm that the application functions correctly with the migrated data. Include reporting, integrations, and backup validation.
 
-5. **Redirect users to the Azure-hosted workload.** Update DNS, load balancers, and application configurations to point to Azure. Monitor for connectivity issues and confirm successful redirection.
+5. **Direct traffic to the new Azure workload.** Update DNS, load balancers, and application configurations to point to Azure. Monitor for connectivity issues and confirm successful redirection.
 
 6. **Validate workload functionality after cutover.** Perform final checks to ensure the application is stable and data is accurate. Engage application owners to verify business-critical functions.
 
