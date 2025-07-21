@@ -85,34 +85,6 @@ Hybrid and multicloud architectures introduce complexity that requires monitorin
 
 A clear summary of migration outcomes validates the success of cloud adoption and builds support for future initiatives. You should track and communicate measurable improvements such as cost savings, performance gains, and operational resilience. Use data from Azure Monitor, Cost Management, and incident tracking tools to quantify outcomes. Share concise, business-relevant examples with stakeholders.
 
-## Post-migration checklist
-
-| Task category | Action | Priority | Timeline | Key tools/resources |
-|---------------|--------|----------|----------|---------------------|
-| **Performance tuning** | Use Azure Advisor to identify optimization opportunities | High | Week 1 | [Azure Advisor](/azure/advisor/advisor-overview) |
-| **Performance tuning** | Apply service-specific configuration guidance | High | Week 1-2 | [Azure Well-Architected Framework service guides](/azure/well-architected/service-guides/?product=popular) |
-| **Performance tuning** | Review Microsoft Defender for Cloud recommendations | High | Week 1 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) |
-| **Cost management** | Use Microsoft Cost Management and set budgets | High | Week 1 | [Microsoft Cost Management](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) |
-| **Cost management** | Analyze resource utilization to identify overprovisioning | Medium | Week 2 | Azure Monitor, Cost Management |
-| **Monitoring** | Confirm Azure Monitor is collecting the right metrics | High | Week 1 | Azure Monitor |
-| **Monitoring** | Test alert rules and thresholds | High | Week 1-2 | Azure Monitor Alerts |
-| **Monitoring** | Review dashboards for operational visibility | Medium | Week 2 | Azure Monitor Dashboards |
-| **Backup & recovery** | Verify backup jobs are configured and running successfully | High | Week 1 | Azure Backup |
-| **Backup & recovery** | Test restore procedures | High | Week 2 | Azure Backup |
-| **Backup & recovery** | Review backup policies for compliance | Medium | Week 2 | Azure Backup |
-| **User experience** | Gather structured feedback from end users | Medium | Week 2-3 | Surveys, support tickets |
-| **User experience** | Document and prioritize issues | Medium | Ongoing | Issue tracking system |
-| **User experience** | Share positive outcomes | Low | Month 1 | Communication channels |
-| **Operations** | Provide targeted training and documentation | High | Week 1-2 | Training materials |
-| **Operations** | Ensure access to monitoring, backup, and security tools | High | Week 1 | Azure role-base access control (RBAC) |
-| **Operations** | Establish escalation paths and support contacts | High | Week 1 | Documentation |
-| **Architecture** | Conduct quarterly reviews | Medium | Quarterly | [Azure Well-Architected Framework](/azure/well-architected/) |
-| **Architecture** | Create a backlog of modernization opportunities | Medium | Quarterly | Documentation system |
-| **Architecture** | Assign ownership for follow-up actions | Medium | Quarterly | Project management |
-| **Hybrid/multi-cloud** | Monitor cross-cloud and on-premises dependencies | Medium | Week 2 | Azure Arc, Network Watcher |
-| **Hybrid/multi-cloud** | Secure hybrid connections | High | Week 1 | VPN, ExpressRoute |
-| **Hybrid/multi-cloud** | Plan to reduce external dependencies | Low | Month 2+ | Architecture planning |
-
 ## Next step
 
 > [!div class="nextstepaction"]
