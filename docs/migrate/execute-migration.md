@@ -109,16 +109,19 @@ Enhanced support coverage ensures rapid response to post-migration issues during
 
 | Source | Tool | Description |
 |--------|------|-------------|
-| Multiple | [Database migration guides](/data-migration/) | Guides for different platforms, sources, and targets |
+| Multiple | [Database migration guides](/data-migration/) | Guides for different database platforms, sources, and targets |
+| Multiple | [Tools for object and file migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) | A comparison of different tools |
 | Other clouds | [AWS and Google Cloud to Azure](/azure/migration/migrate-to-azure) | Guides for migrating from AWS and Google Cloud to Azure |
 | On-premises | [Azure Database Migration Service](/azure/dms/dms-overview) | Fully managed service for migrating databases to Azure with minimal downtime |
 | On-premises | [Azure Migrate](/azure/migrate) | Comprehensive migration service for discovering, assessing, and migrating workloads to Azure |
 | On-premises | [Azure Data Box](/azure/databox/data-box-overview) | Send terabytes of data into and out of Azure |
-| On-premises | [AzCopy](/azure/storage/common/storage-use-azcopy-v10) | Command-line utility for copying data to and from Azure Storage |
 | Google Cloud | [Google Cloud Storage Transfer Service](https://cloud.google.com/storage-transfer-service) | Transfers data to and from various clouds or on-premises environments |
 | Google Cloud | gsutil | Google Cloud command-line tool for managing Cloud Storage |
 | AWS | [AWS Data Transfer Service](https://aws.amazon.com/datasync/) | Transfers data between on-premises and AWS storage services |
 | AWS | AWS CLI | Amazon Web Services command-line interface for managing AWS services |
+| Multiple | [Java migration guides](/azure/developer/java/migration/migration-overview) | Guides for migrating Java apps to Azure |
+| On-premises | [VMWare](/azure/migrate/tutorial-discover-vmware) | Guides for migrating VMWare to Azure |
+| On-premises | [Hyper-V](/azure/migrate/tutorial-discover-hyper-v) | Guides for migrating Hyper-V to Azure |
 
 ## Next steps
 
