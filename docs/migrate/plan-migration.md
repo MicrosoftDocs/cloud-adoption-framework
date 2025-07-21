@@ -38,7 +38,7 @@ A data migration path is how you move data from your current location to Azure. 
 | ExpressRoute | Any workload when available | Secure and fast | Set up required, costs money |
 | VPN | Secure transfers when no ExpressRoute | More secure than public internet | Requires setup, slower than ExpressRoute |
 | Public internet | Nonsensitive data and can't use Data Box | Works everywhere | Least secure, uses your bandwidth |
-| Azure Data Box | Offline migration with large amounts of data | Moves data without using your network | Slowest methodSlowest due to shipping |
+| Azure Data Box | Offline migration with large amounts of data | Moves data without using your network | Slowest method due to shipping |
 
 ## Determine the migration sequence
 
