@@ -1,25 +1,25 @@
 ---
-title: Execute migration
-description: Execute migration to Azure with structured guidance for both offline and online migration approaches, including stakeholder communication, environment preparation, data migration execution, validation, and post-migration support.
+title: Execute migration to loud
+description: Execute migration to cloud with structured guidance for both offline and online migration approaches, including stakeholder communication, environment preparation, data migration execution, validation, and post-migration support.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Execute migration
+# Execute migration to cloud
 
 This article provides structured guidance for executing successful migration to Azure. The guidance covers both near-zero downtime and planned downtime approaches to accommodate different business requirements.
 
-## Secure migration support resources
+## Prepare stakeholders for migration
 
-This step establishes clear communication channels and ensures technical expertise is available during migration. Proper coordination reduces operational risks and increases migration success rates. You should secure commitments from all stakeholders and technical teams before proceeding.
+Stakeholder preparation ensures coordinated execution and rapid issue resolution during migration. Clear communication and resource allocation reduce business disruption and improve migration success rates. You should establish communication protocols and confirm support availability before beginning migration activities.
 
 1. **Distribute a detailed migration schedule to all stakeholders.** A comprehensive schedule creates clarity and alignment across the organization. Create and distribute a document that specifies migration timing, expected service impacts, user responsibilities, and contingency plans. Include contact information for the migration team and support resources. This preparation prevents misunderstandings and reduces business disruption during the migration window.
 
-1. **Confirm technical support availability throughout the entire migration window.** Dedicated technical resources enable immediate response to issues that emerge during migration. Schedule specific technical staff with relevant expertise to be on-call during the entire migration period. Establish clear escalation paths with response time expectations for critical issues. This support structure minimizes resolution time for problems that could affect migration success or business operations.
+2. **Confirm technical support availability throughout the entire migration window.** Dedicated technical resources enable immediate response to issues that emerge during migration. Schedule specific technical staff with relevant expertise to be on-call during the entire migration period. Establish clear escalation paths with response time expectations for critical issues. This support structure reduces resolution time for problems that could affect migration success or business operations.
 
-1. **Conduct a pre-migration readiness review with all support teams.** A readiness review confirms that all teams understand their roles and have necessary access. Hold a meeting with representatives from each support team to review the migration plan, verification procedures, and rollback criteria. Verify that support teams have appropriate system access and monitoring tools configured. This preparation ensures coordinated response to any issues that arise during migration.
+3. **Conduct a pre-migration readiness review with all support teams.** A readiness review confirms that all teams understand their roles and have necessary access. Hold a meeting with representatives from each support team to review the migration plan, verification procedures, and rollback criteria. Verify that support teams have appropriate system access and monitoring tools configured. This preparation ensures coordinated response to any issues that arise during migration.
 
 ## Implement a change freeze
 
@@ -42,8 +42,6 @@ Production environment preparation ensures consistency, security, and operationa
 3. **Verify that all services are running correctly.** Service verification ensures that the Azure infrastructure can support the migrated workload. This verification identifies potential issues before they affect the migration process. Check service health status, resource creation completion, and service-specific health checks.
 
 4. **Confirm network connectivity is established.** Network connectivity validation ensures that all required communication paths are functional. This validation prevents connectivity issues that could disrupt the migration or application functionality. Test network connectivity between all required services and validate DNS resolution for critical endpoints.
-
-5. **Validate environment readiness through pre-cutover validation scripts.** Validation scripts confirm that the target environment meets all requirements before migration begins. This validation prevents migration failures due to infrastructure issues. Run automated tests to validate things like, resource availability and security configurations.
 
 ## Execute cutover
 
