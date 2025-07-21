@@ -51,7 +51,7 @@ Service validation confirms that the target environment is ready to receive the 
 
 ## Execute cutover
 
-Migration execution transfers workload data and operations from the source environment to Azure. The following steps provide a standardized approach that prioritizes near-zero downtime while accommodating scenarios that can tolerate planned downtime. You should adapt these steps based on your specific downtime requirements and workload characteristics. See the data migration tools
+Migration execution transfers workload data and operations from the source environment to Azure. The following steps provide a standardized approach that prioritizes near-zero downtime while accommodating scenarios that can tolerate planned downtime. You should adapt these steps based on your specific downtime requirements and workload characteristics. See the [data migration tools](#azure-tools-and-resources).
 
 ### Execute near-zero downtime migration
 
@@ -123,4 +123,4 @@ Enhanced support coverage ensures rapid response to post-migration issues during
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Execute offline migration cutover](execute-offline-migration-cutover.md)
+> [Optimize workloads after migration](./optimize-workloads-after-migration.md)
