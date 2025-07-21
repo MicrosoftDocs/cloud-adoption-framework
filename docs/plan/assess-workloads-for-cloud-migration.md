@@ -51,7 +51,7 @@ Azure supports a wide range of technologies, but certain legacy systems require 
 
 ### Map internal and external dependencies
 
-1. **Understand dependency mapping.** A complete dependency map ensures that applications maintain connectivity and performance after migration. Dependency mapping supports migration planning by revealing the order in which workloads must move to maintain system functionality. If you manage many workloads, organize them into migration waves based on the dependency relationships you identified. For more information, see [Migration wave planning](./migration-wave-planning.md).
+1. **Understand dependency mapping.** A complete dependency map ensures that applications maintain connectivity and performance after migration. Dependency mapping supports migration planning by revealing the order in which workloads must move to maintain system functionality. If you manage many workloads, organize them into migration waves based on the dependency relationships you identified. For more information, see [Migration wave planning](../migrate/mi).
 
 1. **Use tools to discover internal dependencies.** Automated discovery tools provide a foundational view of application and infrastructure dependencies. These tools analyze network traffic, process interactions, and system configurations to uncover hidden or undocumented connections. Use tools like [Azure Migrate](/azure/migrate/migrate-overview) or other products for analyzing network traffic and uncover hidden dependencies. This step improves accuracy, reduces manual effort, and identifies dependencies that workload owners might not be aware of.
 
