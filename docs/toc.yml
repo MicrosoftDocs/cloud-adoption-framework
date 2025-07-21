@@ -428,8 +428,8 @@ items:
 
         - name: Resources
           items:
-          - name: Migration scenarios
-            href: migrate/scenarios.md
+          - name: Migration wave planning
+            href: migrate/migration-wave-planning.md
 
 
       - name: Modernize

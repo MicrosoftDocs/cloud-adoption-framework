@@ -3624,7 +3624,12 @@
          "source_path": "docs/plan/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud",
          "redirect_document_id": false
-      }                  
+      },
+      {
+         "source_path": "docs/migrate/scenarios.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/execute-migration#azure-tools-and-resources",
+         "redirect_document_id": false
+      }                     
    ]   
 }
 
