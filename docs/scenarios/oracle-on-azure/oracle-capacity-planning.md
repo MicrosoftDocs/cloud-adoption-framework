@@ -1,5 +1,5 @@
 ---
-title: Capacity Planning for Oracle Workloads to Azure Virtual Machines
+title: Capacity Planning for Migrating Oracle Workloads to Azure Virtual Machines
 description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Azure infrastructure as a service.
 author: jessiehaessler
 ms.author: jhaessler
