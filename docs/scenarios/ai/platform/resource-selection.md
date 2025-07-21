@@ -24,7 +24,7 @@ Generative AI combines various resources to process input data and generate mean
 
 :::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram that shows the basic components of a generative AI workload." lightbox="../images/generative-ai-app.svg" border="false":::
 
-The following workflow describes a typical RAG workload:
+The following RAG workload workflow corresponds to the previous diagram:
 
 1. The workload receives a user query. 
 
@@ -38,9 +38,9 @@ The following workflow describes a typical RAG workload:
 
 Use the following recommendations to build generative RAG workloads:
 
-1. **Choose a generative AI platform.** Select Azure AI Foundry or Azure OpenAI to deploy and manage generative AI models. Azure AI Foundry provides a code-first platform that includes built-in tools to develop, deploy, and orchestrate applications. Use Azure OpenAI if you only need access to [OpenAI models](/azure/ai-services/openai/concepts/models).
+1. **Choose a generative AI platform.** Use Azure AI Foundry or Azure OpenAI to deploy and manage generative AI models. Azure AI Foundry provides a code-first platform that includes built-in tools to develop, deploy, and orchestrate applications. Use Azure OpenAI if you only need access to [OpenAI models](/azure/ai-services/openai/concepts/models).
 
-1. **Choose the appropriate AI compute type.** Azure AI Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for certain capabilities. Select a compute type that meets your performance and budget needs.
+1. **Choose the appropriate AI compute type.** Azure AI Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for specific capabilities. Select a compute type that meets your performance and budget needs.
 
 1. **Pick an orchestrator.** Use popular orchestrators like [Azure AI Foundry Agent Service](/azure/ai-services/agents/overview), [Semantic Kernel](/semantic-kernel/overview/), or [LangChain](https://python.langchain.com/v0.2/docs/integrations/platforms/microsoft/) to manage data flow and interactions.
 
@@ -56,7 +56,7 @@ Nongenerative AI workloads use platforms, compute resources, data sources, and d
 
 :::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram that shows the basic components of a nongenerative AI workload." lightbox="../images/non-generative-ai-app.svg" border="false":::
 
-The following workflow describes a typical RAG workload:
+The following RAG workload workflow corresponds to the previous diagram:
 
 1. The workload ingests data.
 
@@ -68,7 +68,7 @@ The following workflow describes a typical RAG workload:
 
 Use the following recommendations to build nongenerative AI workloads:
 
-1. **Choose a nongenerative AI platform.** Select AI services or Machine Learning based on your requirements. AI services provide prebuilt AI models that simplify deployment and reduce the need for deep data science expertise. Machine Learning provides a platform to develop custom machine learning models by using your data. It also integrates those models into your workloads.
+1. **Choose a nongenerative AI platform.** Use AI services or Machine Learning based on your requirements. AI services provide prebuilt AI models that simplify deployment and reduce the need for deep data science expertise. Machine Learning provides a platform to develop custom machine learning models by using your data. It also integrates those models into your workloads.
 
 1. **Choose the appropriate AI compute type.** Machine Learning requires [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run jobs or host endpoints. Select a compute type that meets your performance and budget needs. AI services don't require compute resources.
 
