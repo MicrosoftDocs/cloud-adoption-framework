@@ -9,14 +9,14 @@ ms.topic: conceptual
 
 1. Replatforming
 🏢 On-Prem to Azure
-- VM-based components to Azure PaaS services. Example [Reliable web]
+- VM-based components to Azure PaaS services. Example [Reliable web app patter]
 
 ☁️ Within Azure
 - VM-based components to Azure PaaS services
 
 🌐 Other Cloud to Azure
 - VM-based components to Azure PaaS services
-- Other cloud PaaS components to Azure PaaS services
+- Other cloud PaaS components to Azure PaaS services. See Cloud-to-Azure 
 
 Replatforming moves applications to managed cloud services with minimal code changes. This approach is important because it quickly reduces infrastructure management overhead and improves scalability without the high effort of rewriting code. In the context of modernization, replatforming allows you to gain cloud benefits (like managed databases or app services) as part of a migration or for existing cloud VMs that aren’t yet optimized. You should replatform suitable workloads by shifting them from virtual machines to Platform as a Service (PaaS) offerings to achieve quick wins.
 Identify components suitable for replatforming with minimal changes. Prime candidates are those currently running on virtual machines or physical servers that could run on a cloud managed service. For example, a web application on an IIS/Apache server could move to Azure App Service, or a self-hosted database could move to Azure SQL Database or Azure Database for PostgreSQL. Ensure the application can be supported by the target PaaS (check language runtime support, database version compatibility, etc.). The trade-off here is that while replatforming requires only minor tweaks (like configuration changes or updating connection strings), not all workloads are compatible without code changes. It’s important to pick workloads where the transition will be smooth, so you can avoid extensive refactoring at this stage.
