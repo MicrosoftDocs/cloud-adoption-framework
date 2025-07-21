@@ -74,9 +74,9 @@ Migration sequencing reduces risk and builds team confidence by establishing a l
 
 ### Organize large portfolios into migration waves
 
-A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work. For detailed guidance on wave planning, see [Migration wave planning](/azure/migrate/concepts-migration-planning).
+A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work. For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-planning.md).
 
-## Determine the migration method for each workload
+## Choose the migration method for each workload
 
 Migration methods fall into two categories: migration with downtime and migration with near-zero downtime. Choose the best migration method for each workload based on its downtime tolerance and business criticality.
 

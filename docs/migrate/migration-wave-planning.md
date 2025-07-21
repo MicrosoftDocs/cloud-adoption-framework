@@ -79,8 +79,8 @@ Collaborative planning tools enable effective wave management across your adopti
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Planning | [Azure Boards](https://azure.microsoft.com/services/devops/boards/) | Manages migration waves, tracks progress, and coordinates team activities |
-| Discovery | [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Discovers dependencies between applications and assesses migration readiness |
+| Planning | [Azure Boards](/azure/devops/boards/) | Manages migration waves, tracks progress, and coordinates team activities |
+| Discovery | [Azure Migrate](/azure/migrate/migrate-services-overview) | Discovers dependencies between applications and assesses migration readiness |
 
 ## Next steps
 
