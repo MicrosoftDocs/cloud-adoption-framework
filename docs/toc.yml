@@ -421,9 +421,9 @@ items:
           href: migrate/prepare-workloads-cloud.md
         - name: 3. Execute migration
           href: migrate/execute-migration.md
-        - name: 4. Optimize after migration
+        - name: 4. Optimize workloads after migration
           href: migrate/optimize-workloads-after-migration.md
-        - name: 5. Decommission source workload
+        - name: 5. Decommission source workloads
           href: migrate/decommission-source-workload.md
 
         - name: Resources
