@@ -45,6 +45,8 @@ For more information, see [Monitor costs](/azure/cloud-adoption-framework/manage
 
 ### Validate backups
 
+1. **Update governance policies and maintain audit trails.** Revise data governance policies to reflect new Azure storage locations, retention schedules, and compliance obligations. Implement [lifecycle management policies](/azure/storage/blobs/lifecycle-management-overview) for automated tier transitions and retention enforcement. Configure comprehensive audit logging for all data access and management activities. Establish regular compliance reviews and reporting processes to demonstrate adherence to regulatory requirements. Document policy changes and maintain audit-ready records of all data governance decisions and implementations.
+
 1. **Verify that backup jobs complete successfully.** Review backup job logs to confirm that all required workloads are included and that jobs complete without errors. This step is important to detect scope gaps or misconfigurations introduced during migration. Use Azure Backup or service-native backup features to validate job status.
 
 1. **Test restore procedures to confirm recovery objectives.** Perform structured restore tests to validate that data is recoverable within defined RTOs and RPOs. This validation is important to ensure readiness for real-world recovery scenarios. Document test results and adjust backup policies or procedures as needed.
