@@ -82,7 +82,7 @@ AI operations governance establishes controls over AI service management and mai
 
 2. **Implement business continuity and disaster recovery plans.** Disaster recovery plans protect AI operations against service interruptions and data loss while ensuring business operations continue during outages. These plans maintain service availability for critical AI workloads. Configure baseline disaster recovery for resources that host AI model endpoints, including [Azure AI Foundry](/azure/ai-studio/how-to/disaster-recovery), [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery), and Azure AI services.
 
-3. **Configure monitoring and alerting for AI workloads.** Baseline metrics provide early warning of performance degradation and operational issues before they affect users. Alert rules enable proactive responses to prevent service disruptions. Enable recommended alert rules for [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure AI Foundry Agent Service deployments](/azure/ai-services/agents/how-to/metrics), and individual Azure AI services.
+3. **Configure monitoring and alerting for AI workloads.** Baseline metrics provide early warning of performance degradation and operational issues before they affect users. Alert rules enable proactive responses to prevent service disruptions. Enable recommended alert rules for [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure AI Foundry Agent Service deployments](/azure/ai-foundry/agents/how-to/metrics), and individual Azure AI services.
 
 ## Govern AI regulatory compliance
 
