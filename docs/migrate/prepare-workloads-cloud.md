@@ -76,23 +76,11 @@ After resolving compatibility issues, ensure your workloads function correctly i
 
 ## Create reusable infrastructure
 
-Reusable infrastructure automates deployments and standardizes configurations across environments. Infrastructure as code (IaC) reduces manual errors, supports repeatable deployments, and preserves tested configurations for consistent use. You should create IaC assets only after your workload successfully passes all functional, performance, and security tests in the test environment.
-
-1. **Create IaC templates for proven configurations.** Use [Bicep](/azure/azure-resource-manager/bicep/overview), [Terraform](/azure/developer/terraform/overview), or [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) to define your infrastructure. For more information, see [CAF Manage - Manage code-based deployments](/azure/cloud-adoption-framework/manage/administer#manage-code-deployments).
-
-2. **Store templates in version-controlled repositories.** Use [GitHub](https://docs.github.com/repositories) or [Azure DevOps](/azure/devops/repos/get-started/) to manage IaC assets with proper version control. Version control enables code reviews, supports team collaboration, and encourages template reuse across projects. This approach provides complete traceability for infrastructure changes and supports rollback capabilities when issues occur.
-
-3. **Automate dependency installation and configuration.** Create deployment pipelines or scripts that automatically install and configure application dependencies. Use [Azure Pipelines](/azure/devops/pipelines/), [GitHub Actions](https://docs.github.com/actions), or Azure CLI scripts to automate these steps. Include configuration files, environment variables, and [secrets management](/azure/key-vault/general/basic-concepts) in your automation process. This automation eliminates manual configuration errors and ensures consistent behavior across all environments.
-
-4. **Validate infrastructure provisioning end-to-end.** Test that your IaC templates, pipelines, and scripts can create the complete infrastructure stack from nothing. Test different deployment scenarios including initial deployment, configuration updates, and rollback procedures to confirm the automation works correctly. Use separate Azure subscriptions or resource groups for testing to prevent conflicts with production resources and maintain environment isolation.
+[!INCLUDE [Steps to create reusable infrastructure](./includes/create-reusable-infrastructure.md)]
 
 ## Create deployment documentation
 
-Deployment documentation ensures that teams can consistently deploy and maintain workloads across environments. It also supports troubleshooting and compliance.
-
-1. **Document configuration changes and deployment procedures.** Record all environment-specific settings, connection strings, service endpoints, and security configurations in accessible documentation. Include step-by-step deployment instructions, prerequisite requirements, and post-deployment validation steps. This documentation enables consistent deployments and supports troubleshooting when issues occur.
-
-2. **Update rollback and recovery procedures.** Create detailed steps to revert changes when deployment issues occur. Include rollback triggers, data backup and restoration procedures, and recovery validation steps. Test rollback procedures regularly to ensure they work correctly when needed. This preparation reduces downtime and provides. For more information, see [Define rollback plan](./plan-migration.md#define-rollback-plan).
+[!INCLUDE [Steps to create deployment documentation](./includes/create-reusable-infrastructure.md)]
 
 ## Next step
 

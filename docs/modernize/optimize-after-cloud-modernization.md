@@ -1,25 +1,67 @@
-# Optimize after a cloud modernization
+---
+title: Optimize workloads after cloud modernization
+description: Establish efficient operations, validate configurations, and continuously improve modernized workloads in Azure
+author: stephen-sumner
+ms.author: pnp
+ms.date: 08/15/2025
+ms.topic: conceptual
+---
 
-Modernization is an ongoing process. Each iteration makes your cloud environment more efficient and easier to maintain. Over time, your applications will use more fully managed services, deployment frequency will increase, and operational incidents will decrease.
+# Optimize workloads after cloud modernization
 
-1. **Fine-tune configurations.** Azure provides flexibility to quickly adjust resources. Post-modernization, workloads may behave differently. Adjust configurations based on recommendations in their Azure service guides. Use Azure Advisor and Microsoft Defender for Cloud to receive tailored recommendations on cost optimization, performance, reliability, and security.
+This article provides the authoritative process to optimize workloads after cloud modernization. Post-modernization optimization ensures workloads operate efficiently, securely, and cost-effectively in Azure while establishing the foundation for continuous improvement.
 
-2. **Monitor costs.** Use Azure Cost Management to identify cost anomalies and Azure Advisor for relevant performance and reliability improvements. Compare current costs to your pre-modernization baseline. Identify and address any configuration or feature changes that increase costs.
+## Configure workloads for Azure optimization
 
-5. **Update architecture.** Update your documentation to reflect the modernized system. Capture the current architecture, including all modernized components. update/refine documentation to ensure it aligns with the deployed environment.
+Modernized workloads require specific Azure configurations to achieve optimal performance and cost efficiency. Azure-native services offer configuration options that differ significantly from traditional infrastructure approaches.
 
-6. **Update operations.** Document operational procedures for managing the new environment or component. Train the operations team on any new technologies, such as container orchestration, serverless functions, or platform-as-a-service (PaaS) solutions.
+1. **Apply Azure Advisor recommendations systematically.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload telemetry and provides actionable recommendations across cost, performance, reliability, and security. Review recommendations weekly and implement high-impact changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
 
-7. **Gather feedback from users.** Collect and document feedback from end users. Address any issues, such as performance concerns or newly discovered bugs. Positive feedback, such as improved speed, can validate modernization success.
+2. **Implement service-specific optimization settings.** Each Azure service has unique tuning parameters. Use the Azure Well-Architected Framework [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure
 
-8. **Capture lessons learned.** Document insights from the modernization effort. Identify what worked well and what didn’t. Highlight gaps, such as the need for better development/test environments or more automation. Feed these lessons back into your Cloud Adoption Framework to improve future projects.
+3. **Address security configuration gaps immediately.** [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) identifies security misconfigurations and compliance gaps specific to Azure services. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
 
-9. **Track quantitative outcomes.** Quantify the impact of modernization to demonstrate its value. Track key metrics such as performance improvements, cost savings, and incident reduction. Share results with stakeholders to build support for future modernization efforts. Examples: “Page load time dropped from 4 seconds to 2 seconds.” “We eliminated 3 VMs, saving $X/month.”
+## Validate operational readiness
 
-**Validate backups.** Confirm backup jobs are configured correctly and completing successfully. Test restore procedures to ensure data recoverability. For more information, see [Manage data reliability](/azure/backup/backup-overview).
+Operational validation ensures modernized workloads meet business requirements and technical objectives. This validation covers monitoring, cost management, and data protection capabilities essential for production operations.
 
-**Decommission source components.** After a stable period, shut down old workloads or components and update your inventory. See [Decommission source workload](./)
+1. **Verify monitoring completeness and accuracy.** Confirm that Azure Monitor collects complete telemetry from all workload components. Validate that metrics, logs, and traces flow correctly and alert rules trigger under expected conditions. Test dashboard accuracy and update visualizations to reflect current architecture.
+
+2. **Establish cost monitoring and controls.** Use Microsoft Cost Management to track spending patterns and identify cost optimization opportunities. Set up budget alerts and spending limits to prevent unexpected cost increases. Review resource utilization weekly and rightsize underutilized components.
+
+3. **Test backup and recovery procedures.** Validate that Azure Backup captures all critical data and that restore procedures meet defined recovery time objectives. Perform quarterly restore tests to confirm data integrity and recovery processes. Document recovery procedures and update them based on test results.
+
+## Collect user feedback and measure outcomes
+
+User feedback provides essential validation of workload performance and identifies improvement opportunities that automated monitoring cannot detect. Structured feedback collection ensures continuous workload optimization.
+
+1. **Gather structured user feedback regularly.** Use Microsoft Forms or similar tools to collect feedback on performance, reliability, and usability. Conduct monthly surveys and analyze support ticket patterns to identify recurring issues. Focus on business-critical workflows and user experience pain points.
+
+2. **Track and resolve feedback systematically.** Document all feedback in Azure DevOps or GitHub Issues and categorize by severity and business impact. Assign ownership for each issue and establish resolution timelines based on priority. Communicate progress and outcomes to stakeholders monthly.
+
+3. **Measure and communicate modernization benefits.** Track key metrics such as performance improvements, cost reductions, and availability increases. Use Azure Monitor and Cost Management data to quantify outcomes. Share measurable results with business stakeholders quarterly to demonstrate modernization value.
+
+## Establish continuous modernization practices
+
+Continuous optimization ensures modernized workloads adapt to changing business requirements and take advantage of new Azure capabilities. Regular reviews identify modernization opportunities and maintain operational excellence.
+
+1. **Schedule quarterly workload reviews.** Use the Azure Well-Architected Framework to assess workloads across all five pillars. Document findings and create improvement backlogs for each workload. Integrate review results into architectural decision records and update documentation.
+
+2. **Implement automated optimization where possible.** Use Azure Automation and Azure Policy to enforce optimization policies consistently. Configure auto-scaling rules based on workload patterns and use Azure Cost Management alerts to identify cost anomalies. Deploy Infrastructure as Code templates that include optimization configurations.
+
+3. **Share outcomes and best practices.** Document successful optimization patterns and share them across teams. Create playbooks for common optimization scenarios and maintain a knowledge base of lessons learned. Contribute optimization insights to organizational cloud adoption practices.
+
+## Azure tools and resources
+
+| Category | Tool | Description |
+|----------|------|-------------|
+| Optimization | [Azure Advisor](/azure/advisor/advisor-overview) | Provides personalized recommendations for cost, performance, reliability, and security optimization |
+| Monitoring | [Azure Monitor](/azure/azure-monitor/overview) | Comprehensive monitoring solution for collecting and analyzing workload telemetry |
+| Cost management | [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) | Tools for tracking, analyzing, and optimizing Azure spending |
+| Security | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Security posture management and threat protection for Azure workloads |
+| Backup | [Azure Backup](/azure/backup/backup-overview) | Centralized backup solution for Azure and hybrid workloads |
 
 ## Next steps
 
-Use CAF guidance to govern, secure, and manage your Azure estate.
+> [!div class="nextstepaction"]
+> [Manage and govern modernized workloads](/azure/cloud-adoption-framework/manage/)
