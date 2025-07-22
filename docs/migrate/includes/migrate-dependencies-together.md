@@ -2,11 +2,11 @@
 
 2. **Analyze dependency types and criticality.** Different dependency types require different migration approaches. Distinguish between these categories:
 
-    - **Direct dependencies** require immediate communication with minimal latency. Application servers that constantly query database servers with strict performance requirements must exist in the same migration group. These components must move together to prevent performance issues that break applications or degrade user experience.
-
-    - **Indirect dependencies** involve occasional interactions. These systems can exist in separate migration waves if the connection tolerates latency or cross-premises configuration.
-
-    - **Business dependencies** extend beyond technical connections. Applications and their reporting subsystems typically share management teams and should move within the same timeframe. Applications used exclusively by specific business units benefit from grouping all components together into one migration wave.
+    | Dependency type   | Description  | Migration approach     |
+    |------|-------|-------|
+    | Direct dependencies  | Require immediate communication and low latency between components. | Move all directly connected components together to maintain performance and avoid disruptions.        |
+    | Indirect dependencies| Involve occasional or non-critical interactions between systems.   | Migrate together or in separate waves if the connection tolerates latency or supports hybrid use.    |
+    | Business dependencies| Depend on organizational or management relationships.              | Group and migrate related workloads and reporting systems together to align with business priorities. |
 
 3. **Group workloads by dependency relationships.** Create groups based on shared databases, APIs, authentication services, or network connections. These groups form the foundation of your migration waves and ensure all components required for functionality move together. When uncertainty exists about dependency criticality, group the components together. This conservative approach provides flexibility for future separation.
 

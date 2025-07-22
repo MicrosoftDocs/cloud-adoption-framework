@@ -17,11 +17,13 @@ Azure compatibility issues block workload migration and must be resolved before 
 
 ### Create Azure subscriptions
 
-1. **Create three separate Azure subscriptions for development, test, and production.** Use the Azure portal or Azure CLI to create each subscription. Assign clear [naming conventions and tags](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#establish-a-consistent-naming-convention) to distinguish them. This separation ensures that testing activities don't affect production quotas or security boundaries. For governance and security guidance, see [Govern your subscriptions](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#govern-your-subscriptions).
+1. **Create Azure subscriptions.** Use the Azure portal or Azure CLI to create each subscription. Assign clear [naming conventions and tags](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#establish-a-consistent-naming-convention) to distinguish them. This separation ensures that testing activities don't affect production quotas or security boundaries.
 
 1. **Apply governance policies to each subscription.** Use Azure Policy to enforce environment-specific controls. For example, restrict compute sizes in development, enforce tagging in test, and apply security baselines in production.
 
 1. **Assign role-based access control (RBAC) per subscription.** Grant least-privilege access to users and service principals based on their roles in each environment. It reduces the risk of unauthorized changes and supports compliance.
+
+For governance and security guidance, see [Govern your subscriptions](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions#govern-your-subscriptions).
 
 ### Deploy all workload resources in the test environment
 
