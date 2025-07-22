@@ -2,29 +2,31 @@
 
 Once your plan is in place, begin implementing changes in a controlled, iterative manner. This reduces risk and allows for continuous learning and adjustment.
 
-1. **Test modernization changes.** Whether you're modernizing in the cloud, you need to test the modernization changes. Modernization can introduce regressions or integration issues. Testing is critical. Use the following testing approaches:
+## Finalize the modernization changes
+
+### Test modernization changes. you need to test the modernization changes. Modernization can introduce regressions or integration issues. Testing is critical. Use the following testing approaches:
     - Unit tests for any code changes.
     - Integration tests to ensure different services work with the unchanged ones.
     - Performance tests to ensure the new approach doesn’t degrade system performance.
-    - Fix any issues and promote to staging environment if you have one.
+    - Fix any issues and promote to staging environment if you have one
+Ensure all your modernizations work in your non-production environment. If you're deploying in-place, then
 
-## Finalize the modernization changes
+### 
+If you're using a separate (green) environment, You should create all production resources in the other production environment using infrastructure-as-code templates and apply production-grade configurations. Treat the green environment as if it were production. Run smoke tests to verify basic functionality, execute full integration and regression test suites, and perform performance and security testing. If compliance or regulatory approval is required (for example, in healthcare or finance industries), conduct those audits in the new environment as well. The goal is to vet the new setup thoroughly while it’s not serving live users so that you can be confident in its reliability.
 
-Ensure all your modernizations work in your non-production environment. If you're deploying in-place, then 
+## Deploy modernizations
 
-If you're using a separate environment, You should create all production resources in the other production environment using infrastructure-as-code templates and apply production-grade configurations. Treat the green environment as if it were production. Run smoke tests to verify basic functionality, execute full integration and regression test suites, and perform performance and security testing. If compliance or regulatory approval is required (for example, in healthcare or finance industries), conduct those audits in the new environment as well. The goal is to vet the new setup thoroughly while it’s not serving live users so that you can be confident in its reliability.
+Steps to deploy in the same environment
 
-## Perform a controlled cutover when ready
+Steps to deploy in a new environment
 
-Once the new (green) environment passes all tests and checks, plan the cutover to switch users and data to this environment. This could involve synchronizing data one final time (ensure the new databases have all necessary data from the old), then redirecting traffic. Techniques include updating DNS entries, switching load balancer targets, or using feature flags to swap connections to the new environment. Monitor the system closely during and after cutover for any unexpected issues. Have the team on standby to respond quickly. If serious problems are detected (for example, error rates spike or critical transactions fail), roll back by redirecting traffic to the old (blue) environment, which has remained unchanged. This back-out plan ensures that even high-risk deployments can be reversed to avoid extended outages.
+Once the modernizations pass all tests and checks, deploy the modernization. If you have a new environment, plan the cutover to switch users and data to this environment. This could involve synchronizing data one final time (ensure the new databases have all necessary data from the old), then redirecting traffic. Techniques include updating DNS entries, switching load balancer targets, or using feature flags to swap connections to the new environment. Monitor the system closely during and after cutover for any unexpected issues. Have the team on standby to respond quickly. If serious problems are detected (for example, error rates spike or critical transactions fail), roll back by redirecting traffic to the old (blue) environment, which has remained unchanged. This back-out plan ensures that even high-risk deployments can be reversed to avoid extended outages.
 Using a separate environment adds upfront effort and cost, but it provides the highest confidence for complex changes and is a vital safety net for mission-critical systems.
 
 ## Prepare stakeholders for modernization
 
 1. **Execute cutover.**
 
-Cutover to the Modernized Azure Environment
-The cutover is the moment of truth: switching production use from the old environment to the new Azure environment. A well-planned cutover minimizes downtime and mitigates risks of data loss or user impact. 
 
 Final Data Synchronization: In the lead-up to cutover, ensure that the latest data is in Azure. If you had a continuous replication going (for near-zero downtime move), make sure it’s up to date. If it was a one-time migration, you likely put the source in a read-only or offline mode and took a final backup. Perform that final delta migration to capture any changes since the initial data load. For example, you might freeze the on-prem database (prevent new writes), then apply the last transaction log backups to the Azure database. This step ensures the Azure environment’s data is current so users won’t lose work when they switch over. 
 
