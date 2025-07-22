@@ -434,28 +434,14 @@ items:
 
       - name: Modernize
         items:
-        - name: Overview  
-          href: modernize/index.md
-        - name: Business alignment
-          items:
-          - name: Overview
-            href: modernize/business-alignment/index.md
-          - name: Envision 
-            href: modernize/business-alignment/envision-cloud-modernization.md
-          - name: Evaluate
-            href: modernize/business-alignment/evaluate-modernization-options.md
-          - name: Commit
-            href: modernize/business-alignment/commit-to-modernization-plan.md      
-        - name: Modernization strategies
-          items:
-          - name: Overview
-            href: modernize/modernize-strategies/index.md
-          - name: Process modernization 
-            href: modernize/modernize-strategies/process-modernization.md
-          - name: Application modernization
-            href: modernize/modernize-strategies/application-modernization.md
-          - name: Database modernization
-            href: modernize/modernize-strategies/database-modernization.md
+        - name: 1. Prepare for modernization  
+          href: modernize/prepare-organization-cloud-modernization.md
+        - name: 2. Plan modernization
+          href: modernize/plan-cloud-modernization.md
+        - name: 3. Develop and deploy modernization
+          href: modernize/develop-deploy-cloud-modernization.md
+        - name: 4. Optimize after modernization
+          href: modernize/optimize-after-cloud-modernization.md
 
       - name: Innovate
         items:
