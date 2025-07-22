@@ -2,9 +2,13 @@
 
 Once your plan is in place, begin implementing changes in a controlled, iterative manner. This reduces risk and allows for continuous learning and adjustment.
 
+## Develop modernizations
+
+Use the Well-Architected Framework to develop your modernizations changes in a test environment
+
 ## Finalize the modernization changes
 
-### Test modernization changes. you need to test the modernization changes. Modernization can introduce regressions or integration issues. Testing is critical. Use the following testing approaches:
+Test modernization changes. you need to test the modernization changes. Modernization can introduce regressions or integration issues. Testing is critical. Use the following testing approaches:
     - Unit tests for any code changes.
     - Integration tests to ensure different services work with the unchanged ones.
     - Performance tests to ensure the new approach doesn’t degrade system performance.
