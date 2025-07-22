@@ -32,7 +32,7 @@ The following RAG workload workflow corresponds to the previous diagram:
 
 1. A search and retrieval mechanism identifies the appropriate grounding data.
 
-1. The mechanism sends to grounding data to a generative AI endpoint.
+1. The mechanism sends the grounding data to a generative AI endpoint.
 
 1. The generative AI model endpoint generates a response based on the user query and grounding data.
 
@@ -68,11 +68,11 @@ The following RAG workload workflow corresponds to the previous diagram:
 
 Use the following recommendations to build nongenerative AI workloads:
 
-1. **Choose a nongenerative AI platform.** Use AI services or Machine Learning based on your requirements. AI services provide prebuilt AI models that simplify deployment and reduce the need for deep data science expertise. Machine Learning provides a platform to develop custom machine learning models by using your data. It also integrates those models into your workloads.
+1. **Choose a nongenerative AI platform.** Use AI services or Machine Learning based on your requirements. AI services provides prebuilt AI models that simplify deployment and reduce the need for deep data science expertise. Machine Learning provides a platform to develop custom machine learning models by using your data. It also integrates those models into your workloads.
 
 1. **Choose the appropriate AI compute type.** Machine Learning requires [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run jobs or host endpoints. Select a compute type that meets your performance and budget needs. AI services don't require compute resources.
 
-1. **Pick a data source.** Use supported [data sources](/azure/machine-learning/how-to-access-data#supported-data-storage-service-types) to host training data for Machine Learning. Many AI services don't require fine-tuning data. And some AI services, like Azure AI Custom Vision, allow you to upload local files to a managed data storage solution.
+1. **Pick a data source.** Use supported [data sources](/azure/machine-learning/how-to-datastore) to host training data for Machine Learning. Many AI services don't require fine-tuning data. And some AI services, like Azure AI Custom Vision, allow you to upload local files to a managed data storage solution.
 
 1. **Pick a compute platform.** Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to select the right platform for your workload.
 
