@@ -2,7 +2,7 @@
 title: Plan your Azure environment for cost estimation
 description: Create accurate Azure cost estimates by planning architectures and selecting services and tiers, defining regional deployments.
 author: stephen-sumner
-ms.author: ssumner
+ms.author: pnp
 ms.date: 07/15/2025
 ms.topic: conceptual
 ---
