@@ -1,4 +1,4 @@
-# Optimize post-modernization
+# Optimize after a cloud modernization
 
 Modernization is an ongoing process. Each iteration makes your cloud environment more efficient and easier to maintain. Over time, your applications will use more fully managed services, deployment frequency will increase, and operational incidents will decrease.
 

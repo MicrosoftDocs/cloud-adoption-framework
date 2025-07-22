@@ -1,12 +1,4 @@
----
-title: Prepare for modernization
-description: Modernize in cloud and maximize value. Modernization is a critical approach to cloud adoption that increases efficiency and exceed objectives.
-author: stephen-sumner
-ms.author: pnp
-ms.date: 08/15/2025
-ms.topic: conceptual
-ms.custom: internal
----
+# Prepare your organization for cloud modernization
 
 **Required to modernization:** Azure modernization skills, [Workload inventory]
 
@@ -111,7 +103,13 @@ You know why you need to modernize, but figuring out what to modernize and how c
 
     - **Choose rearchitecting when you need cloud-native capabilities.** Rearchitecting rebuilds your system using cloud-native patterns like microservices, serverless functions, or event-driven architectures. This approach unlocks scalability and new business capabilities, but it requires solid planning and advanced skills. Rearchitecting usually includes refactoring as part of the process.
 
-3. **Check if your team has the skills to succeed.** Even the best modernization plan fails without the right skills. Before you start, assess what your team knows about cloud services, DevOps practices, and modern application patterns. Identify the gaps and create a learning plan. Whether that's training your existing team or bringing in outside expertise. Also make sure your CI/CD pipelines, monitoring systems, and automation tools can support your modernization goals. Skills matter more than technology when it comes to modernization success.
+## Assess modernization readiness and skills
+
+Even the best modernization plan fails without the right skills.
+
+1. **Evaluate your modernization skills.** Before you start, assess what your team knows about cloud services, DevOps practices, and modern application patterns. Identify the gaps and create a learning plan. Whether that's training your existing team or bringing in outside expertise. Also make sure your CI/CD pipelines, monitoring systems, and automation tools can support your modernization goals. Skills matter more than technology when it comes to modernization success.
+
+2. **Engage external expertise when needed.** If your team lacks experience with cloud migration, bring in Microsoft or a Microsoft partner. External experts can validate your migration strategy, recommend appropriate tools, and help establish realistic timelines. This support reduces risk and speeds up your migration, especially for complex or large-scale projects.
 
 ## Document the modernization scope in a project charter
 
