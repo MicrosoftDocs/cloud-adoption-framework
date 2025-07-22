@@ -37,7 +37,7 @@ For more information, see [Monitor your Azure estate](/azure/cloud-adoption-fram
 
 ## Validate cost monitoring
 
-1. **Compare current costs to pre-migration baselines.** Use Microsoft Cost Management or partner tools to identify cost increases. This step is important to detect changes caused by autoscaling, feature enablement, or inefficient configurations. Investigate discrepancies by reviewing resource-level cost breakdowns.
+1. **Compare current costs to premigration baselines.** Use Microsoft Cost Management or partner tools to identify cost increases. This step is important to detect changes caused by autoscaling, feature enablement, or inefficient configurations. Investigate discrepancies by reviewing resource-level cost breakdowns.
 
 1. **Identify and adjust cost drivers.** Review workloads that show significant cost changes. This validation is important to detect issues such as over-provisioned resources, inefficient queries, or misconfigured scaling policies. Use Azure Advisor to identify optimization opportunities and adjust configurations accordingly.
 
@@ -67,19 +67,17 @@ User feedback provides real-world validation of workload performance and usabili
 
 ## Schedule regular workload reviews
 
-Regular reviews help identify optimization opportunities across cost, performance, reliability, security, and operational excellence. You should integrate these reviews into your cloud governance rhythm to maintain consistency and maturity.
-
-1. **Conduct quarterly reviews.** A quarterly cadence ensures timely identification of optimization opportunities across cost, performance, reliability, security, and operational excellence. This frequency balances agility with governance. Use the [Well-Architected Framework](/azure/well-architected/) to assess workloads and document improvement areas. Integrate these reviews into your cloud governance rhythm to maintain consistency.
+Regular reviews help identify optimization opportunities across cost, performance, reliability, security, and operational excellence. Use the [Well-Architected Framework](/azure/well-architected/) to assess workloads and document improvement areas. Integrate these reviews into your cloud governance rhythm to maintain consistency.
 
 ## Optimize hybrid and multicloud dependencies
 
-Hybrid and multicloud architectures introduce complexity that requires monitoring.
+Hybrid and multicloud environments create additional complexity that requires dedicated monitoring and optimization strategies. These dependencies often introduce latency, security risks, and operational overhead that can affect workload performance and reliability.
 
-1. **Monitor cross-cloud and on-premises dependencies.** Use Azure Arc to extend Azure management to non-Azure resources and Azure Network Watcher to monitor connectivity. Track latency, availability, and service health across environments.
+1. **Monitor cross-cloud and on-premises dependencies proactively.** Track key metrics like latency, availability, and service health across all connected systems to identify bottlenecks before they affect users. Use [Azure Arc](/azure/azure-arc/overview) to extend Azure management capabilities to resources outside Azure, providing unified visibility across your entire infrastructure. Deploy [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor network connectivity and performance between environments.
 
-1. **Secure and monitor hybrid connections.** Use Azure VPN Gateway, Azure ExpressRoute, or Azure Bastion for secure connectivity. Enable diagnostics and alerts to detect anomalies such as packet loss or unauthorized access attempts.
+2. **Secure and monitor hybrid connections continuously.** Enable comprehensive diagnostics and configure alerts to detect anomalies such as packet loss, connection failures, or unauthorized access attempts. Regular monitoring helps maintain the security and performance of these critical connections. Establish secure connectivity using [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways), [Azure ExpressRoute](/azure/expressroute/expressroute-introduction), or [Azure Bastion](/azure/bastion/bastion-overview) based on your security and performance requirements.
 
-1. **Plan to reduce external dependencies.** Identify opportunities to replace components with Azure-native services to simplify architecture and reduce risk.
+3. **Plan to reduce external dependencies systematically.** Review your hybrid architecture to identify components that can be replaced with Azure-native services. This approach simplifies your overall architecture, reduces operational overhead, and minimizes potential points of failure. Create a roadmap for gradually migrating these dependencies while maintaining business continuity and service availability.
 
 ## Share migration outcomes
 

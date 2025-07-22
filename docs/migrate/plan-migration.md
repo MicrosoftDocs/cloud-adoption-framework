@@ -27,18 +27,18 @@ A data migration path is how you move data from your current location to Azure. 
 
 1. **Use ExpressRoute when you have it.** ExpressRoute gives you a private, dedicated connection to Azure that's faster and more secure than internet connections. If you already have ExpressRoute or plan to get it, use this method for all your workloads. Keep in mind that ExpressRoute requires setup time and has data transfer costs.
 
-2. **Use VPN if ExpressRoute isn't available.** Choose a VPN when you need secure data transfer but don't have ExpressRoute. A VPN creates an encrypted tunnel over the internet to Azure, though it's typically slower than ExpressRoute. Make sure you have a VPN Gateway configured in Azure before starting.
+1. **Use VPN if ExpressRoute isn't available.** Choose a VPN when you need secure data transfer but don't have ExpressRoute. A VPN creates an encrypted tunnel over the internet to Azure, though it's typically slower than ExpressRoute. Make sure you have a VPN Gateway configured in Azure before starting.
 
-3. **Use public internet for less sensitive data.** This option works when your data doesn't need encryption and you can't use ExpressRoute or Data Box. While this method is available everywhere, it's the least secure and can slow down your other internet activities.
+1. **Use Azure Data Box for large amounts of data.** Data Box is best for online migrations with lots of data. Microsoft ships you a physical device to copy your data onto, then you ship it back. This option avoids using your network but takes the longest due to shipping time.
 
-4. **Use Azure Data Box for large amounts of data.** Data Box is best for online migrations with lots of data. Microsoft ships you a physical device to copy your data onto, then you ship it back. This option avoids using your network but takes the longest due to shipping time.
+1. **Use public internet for less sensitive data.** This option works when your data doesn't need encryption and you can't use ExpressRoute or Data Box. While this method is available everywhere, it's the least secure and can slow down your other internet activities.
 
 | Data Migration Path | When to use | Pros | Cons |
 |----------------------|-------------|------|------|
 | ExpressRoute | Any workload when available | Secure and fast | Set up required, costs money |
 | VPN | Secure transfers when no ExpressRoute | More secure than public internet | Requires setup, slower than ExpressRoute |
-| Public internet | Nonsensitive data and can't use Data Box | Works everywhere | Least secure, uses your bandwidth |
 | Azure Data Box | Offline migration with large amounts of data | Moves data without using your network | Slowest method due to shipping |
+| Public internet | Nonsensitive data and can't use Data Box | Works everywhere | Least secure, uses your bandwidth |
 
 ## Determine the migration sequence
 
