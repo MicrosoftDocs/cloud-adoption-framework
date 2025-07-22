@@ -42,7 +42,7 @@ A data migration path is how you move data from your current location to Azure. 
 
 ## Determine the migration sequence
 
-Migration sequencing reduces risk and builds team confidence by establishing a logical order for workload migration. The sequence determines which workloads move first and how dependent components migrate together to prevent service disruptions.
+Migration sequencing reduces risk and builds team confidence by establishing a logical order for workload migration. The sequence determines which workloads move first and how dependent components migrate together to prevent service disruptions. Organize large portfolios into migration waves. For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-planning.md).
 
 ### Find dependencies
 
@@ -63,10 +63,6 @@ Migration sequencing reduces risk and builds team confidence by establishing a l
 2. **Align timelines with business events.** Avoid scheduling migrations during critical business periods such as financial close, product launches, or holiday seasons. This alignment reduces the risk of business disruption and ensures stakeholder confidence.
 
 3. **Use project management tools to track progress.** Use tools like Azure DevOps to manage dependencies, track milestones, and communicate changes effectively. These tools provide visibility into migration progress and support proactive issue resolution.
-
-### Organize large portfolios into migration waves
-
-A migration wave is a logical grouping of workloads that share similar complexity, risk, or dependency characteristics. This grouping enables teams to manage scope, reduce risk, and apply lessons learned across iterations. You should define migration waves to create manageable and repeatable units of work. For detailed guidance on wave planning, see [Migration wave planning](./migration-wave-planning.md).
 
 ## Choose the migration method for each workload
 
