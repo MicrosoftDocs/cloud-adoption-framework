@@ -10,7 +10,7 @@ ms.custom: UpdateFrequency2, e2e-oracle
 
 # Capacity planning for migrating Oracle workloads to Azure Virtual Machines
 
-This article builds on Azure Cloud Adoption Framework guidance and provides considerations about infrastructure capacity planning for Oracle workloads on Microsoft Azure. It includes recommendations and tools to support this planning process.
+This article builds on Cloud Adoption Framework for Azure guidance and provides considerations about infrastructure capacity planning for Oracle workloads on Microsoft Azure. It includes recommendations and tools to support this planning process.
 
 Capacity planning helps ensure efficient performance and cost management when you run Oracle database workloads on Azure. This article describes guidelines, methods, and tools to allocate resources accurately, balance performance needs, and optimize costs. Your specific capacity requirements depend on the performance characteristics of the database workload. These characteristics are transactional, analytical, or mixed. Processing power, memory, and throughput typically constrain Oracle database workloads.
 
@@ -67,7 +67,7 @@ The performance and reliability of Oracle database workloads rely heavily on the
 
 - Consider cumulative disk throughput when you use managed disks. The total throughput of all disks attached to the VM is limited by the VM SKU. For more information, see [VMs and disk performance](/azure/virtual-machines/disks-performance#disk-io-capping).
 
-- Use network storage such as [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) if throughput requirements exceed the maximum throughput of a single VM. In this configuration, VM is constrained by network throughput, or egress, rather than disk throughput.
+- Use network storage such as [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) if throughput requirements exceed the maximum throughput of a single VM. In this configuration, the VM is constrained by network throughput, or egress, rather than disk throughput.
 
 - Place Oracle temporary files on a VM SKU that has a temporary disk if you use temporary files infrequently. This configuration reduces the input/output (I/O) load on the data disks.
 
