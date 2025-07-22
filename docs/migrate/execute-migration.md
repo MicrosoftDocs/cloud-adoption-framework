@@ -1,5 +1,5 @@
 ---
-title: Execute migration to loud
+title: Execute migration to cloud
 description: Execute migration to cloud with structured guidance for both offline and online migration approaches, including stakeholder communication, environment preparation, data migration execution, validation, and post-migration support.
 author: stephen-sumner
 ms.author: pnp
@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # Execute migration to cloud
 
-This article provides structured guidance for executing successful migration to Azure. The guidance covers both near-zero downtime and planned downtime approaches to accommodate different business requirements.
+This article provides structured guidance for executing a successful migration to Azure. The guidance covers both near-zero downtime and planned downtime approaches to accommodate different business requirements.
 
 ## Prepare stakeholders for migration
 
 Stakeholder preparation ensures coordinated execution and rapid issue resolution during migration. Clear communication and resource allocation reduce business disruption and improve migration success rates. You should establish communication protocols and confirm support availability before beginning migration activities.
 
-1. **Distribute a detailed migration schedule to all stakeholders.** A comprehensive schedule creates clarity and alignment across the organization. Create and distribute a document that specifies migration timing, expected service impacts, user responsibilities, and contingency plans. Include contact information for the migration team and support resources. This preparation prevents misunderstandings and reduces business disruption during the migration window.
+1. **Distribute a detailed migration schedule to all stakeholders.** A comprehensive schedule creates clarity and alignment across the organization. Create and distribute a document that specifies migration timing, expected service impacts, responsibilities, and contingency plans. Include contact information for the migration team and support resources. This preparation prevents misunderstandings and reduces business disruption during the migration window.
 
 2. **Confirm technical support availability throughout the entire migration window.** Dedicated technical resources enable immediate response to issues that emerge during migration. Schedule specific technical staff with relevant expertise to be on-call during the entire migration period. Establish clear escalation paths with response time expectations for critical issues. This support structure reduces resolution time for problems that could affect migration success or business operations.
 
