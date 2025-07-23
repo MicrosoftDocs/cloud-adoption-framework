@@ -1,4 +1,13 @@
-# Develop and deploy modernizations in the cloud
+---
+title: Execute modernizations in the cloud
+description: Execute modernizations in the cloud
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 08/01/2025
+ms.topic: conceptual
+---
+
+# Execute modernizations in the cloud
 
 After careful planning, the next step in cloud modernization is implementation: developing the changes and deploying them to production in a safe, controlled way. This phase involves building the modernized components (in dev/test environments), rigorously testing all changes (functional, performance, security), automating infrastructure, preparing deployment materials, scheduling the go-live, and executing the production cutover with minimal risk. By following a structured, prescriptive approach, organizations can ensure their modernization delivers value without disrupting the business.
 

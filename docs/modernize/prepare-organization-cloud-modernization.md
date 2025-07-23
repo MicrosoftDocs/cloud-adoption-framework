@@ -1,24 +1,29 @@
+---
+title: Prepare your organization for cloud modernization
+description: Learn how to define modernization scope, prioritize workloads, establish success metrics, and assess organizational readiness to deliver measurable business value through Azure cloud modernization.
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 08/01/2025
+ms.topic: conceptual
+---
+
 # Prepare your organization for cloud modernization
 
-**Required to modernization:** Azure modernization skills, [Workload inventory]
-
-Modernization is making improvements to existing workloads in the cloud. The goal is to better meet business needs in alignment with cloud best practices. Modernization doesn't bring direct functional benefit to end users, it can still improve the end user experience and internal operations. Modernization replatforming, refactoring, rearchitecting. These are modernizations efforts you can execute as part of a migration or in cloud. Not every workload needs to be modernized. Focus your efforts where modernization delivers clear, measurable value to end users (better performance, uptime) or internal (cost optimized, improved reliability, better security, easier maintenance).
+Cloud modernization is the practice of improving existing workloads in the cloud to better meet business needs and align with cloud best practices. It involves technical enhancements to applications, services, and infrastructure without adding new end-user features. This framework provides an end-to-end guide for organizations to plan and execute modernization across all their workload teams.
 
 ## Define modernization for your organization
 
-Begin by establishing a shared definition of "modernization" in your organization. It’s crucial that everyone understands what is and isn’t included in a modernization project before any work begins. Modernization refers to technical improvements to existing workloads (applications, services, infrastructure) without adding new end-user features.
+Begin by establishing a shared definition of “modernization” in your organization. Everyone from engineering teams to project managers and business stakeholders should understand what is and isn’t included in a modernization project before any work begins. This clear scope helps prevent “scope creep,” where unrelated work might otherwise get lumped under the modernization label.
 
-1. **Define modernization as technical improvements to existing workloads.** Modernization improves how existing applications work without adding new features or rebuilding entire systems. Modernization is replatforming (moving components to new hosting environment), refactoring (optimizing code), and rearchitecting (redesigning structure) in the cloud. Modernization does not include building new features, creating new workloads, or complete rebuilds. This definition prevents scope creep where teams add unrelated work under the modernization label.
+1. **Define modernization as technical improvements without new features.** Modernization improves how existing applications work without building new features. Typical modernization activities include replatforming (moving components to a new hosting environment), refactoring (optimizing or restructuring code), and rearchitecting (redesigning the system’s structure) within the cloud. Modernization explicitly excludes efforts like developing brand-new functionality, creating entirely new workloads, or full rewrites that deliver new features.
 
-2. **Communicate the definition of modernization.** Share this definition with all relevant teams and stakeholders. Ensure that project managers, engineers, product owners, and executives understand and agree. A unified understanding prevents misalignment. For instance, if someone isn’t aware and tries to slip in a feature request (“Since we’re touching this app, can we also add Feature X?”), the agreed definition makes it easier to say no because everyone knows new features are out of scope.
+2. **Communicate the definition of modernization.** Share this definition with all relevant teams and stakeholders. Ensure that project managers, engineers, product owners, and executives understand and agree. A unified understanding prevents misalignment.
 
-3. **Set expectations with all stakeholders.** Business leaders and technical teams must understand that modernization improves internal qualities like performance, reliability, and maintainability. Modernization does not deliver new customer features. Clear expectations prevent pressure to expand project scope beyond technical improvements. Document this definition and share it with all project participants.
-
-4. **Create shared responsibility across teams.** Modernization requires collaboration between development, operations, security, and architecture teams. Each team contributes different expertise to modernization success. Establish regular communication and joint decision-making processes. Avoid siloed work that creates integration problems or missed requirements. Assign clear roles while maintaining cross-team coordination.
+3. **Create shared responsibility across teams.** Modernization requires collaboration between development, operations, security, and architecture teams. Each team contributes different expertise to modernization success. Establish regular communication and joint decision-making processes. Avoid siloed work that creates integration problems or missed requirements. Assign clear roles while maintaining cross-team coordination.
 
 ## Know what to modernize
 
-After defining what constitutes modernization, the next step is to decide where to apply it for maximum benefit. This involves analyzing your IT landscape (using the inventory) and the business context to pinpoint which systems would yield the most value if improved. Focus your modernization efforts on workloads that deliver clear, measurable value from being updated. In practice, this means finding the sweet spot where business importance and technical need are both high.
+Not every application or service in your portfolio needs to be modernized, and it wouldn't be feasible to attempt all at once. Focus your modernization efforts where they deliver clear, measurable value. In practice, this means identifying which workloads would benefit most from technical improvements, and concentrating on those first. Use the following factors to guide your decisions:
 
 1. **Identify goals for modernization.** Business value determines where modernization resources produce the strongest impact on organizational objectives. Rate each workload in your inventory according to its importance to business operations and strategic goals. Systems that directly affect revenue, customer experience, or regulatory compliance deserve higher priority than internal tools or legacy systems with limited business impact. Common business value factors include:
 
@@ -35,7 +40,7 @@ After defining what constitutes modernization, the next step is to decide where 
     - **Frequent outages or performance issues:** Systems experiencing regular downtime, slow response times, or capacity limitations that affect user experience
     - **Limited scalability:** Applications that cannot handle increased load or business growth without significant architectural changes
 
-3. **Enable workload teams to make technical modernization decisions.** Teams that maintain applications daily possess the deepest understanding of technical constraints and user requirements. Workload teams can identify the most effective modernization approaches when they understand business objectives and technical possibilities. Provide teams with clear business context, modernization strategy options, and decision-making authority within established budget and timeline parameters. Establish regular check-ins to ensure alignment with organizational goals while respecting team expertise.
+3. **Enable workload teams to make technical modernization decisions.** Teams that maintain applications daily possess the deepest understanding of technical constraints and user requirements. Workload teams can identify the most effective modernization approaches when they understand business objectives and technical possibilities. Provide teams with clear business context and decision-making authority within established budget and timeline parameters. Establish regular check-ins to ensure alignment with organizational goals while respecting team expertise.
 
 4. **Identify modernization triggers.** Be on the lookout for specific events or requirements that make modernization urgent. Even a workload that wasn’t top of list can shoot up in priority if a trigger occurs. Common triggers include:
 

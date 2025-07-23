@@ -1,3 +1,12 @@
+---
+title: Plan your cloud modernization
+description: Plan your cloud modernization
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 08/01/2025
+ms.topic: conceptual
+---
+
 # Plan your cloud modernization
 
 Modernizing applications and workloads in the cloud requires careful planning and governance. Without a structured plan, even well-intentioned modernization efforts can falter – leading to budget overruns, expanded scope, or service disruptions. A well-planned approach, on the other hand, reduces risk and aligns the technical work with business objectives. This guide provides prescriptive, logically ordered steps for organizations planning cloud modernizations, covering change management, scope control, phased execution, rollback planning, and stakeholder approval.
