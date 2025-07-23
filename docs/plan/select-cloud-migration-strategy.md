@@ -107,7 +107,7 @@ A rehost strategy enables fast and low-risk migration by moving workloads to Azu
 |--------------| --- | ----------|--------------------------------|
 | On-premises | Azure IaaS | On-premises servers → Azure Virtual Machines | [Technology decision guides](/azure/architecture/guide/technology-choices/compute-decision-tree) |
 |Other cloud IaaS | Azure IaaS | AWS EC2 → Azure Virtual Machines<br><br>GCP Compute Engine → Azure Virtual Machines | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) <br> [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
-|Other cloud PaaS | Azure PaaS | AWS Beanstalk → Azure App Service<br><br>GCP App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) <br> [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
+| Other cloud PaaS | Azure PaaS | AWS Beanstalk → Azure App Service<br><br>GCP App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) <br> [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
 
 ### 3. Replatform (modernize hosting environment)
 
