@@ -439,7 +439,7 @@ items:
         - name: 2. Plan modernization
           href: modernize/plan-cloud-modernization.md
         - name: 3. Execute modernization
-          href: modernize/develop-deploy-cloud-modernization.md
+          href: modernize/execute-cloud-modernization.md
         - name: 4. Optimize workloads
           href: modernize/optimize-after-cloud-modernization.md
         - name: Resources
