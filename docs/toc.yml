@@ -438,10 +438,14 @@ items:
           href: modernize/prepare-organization-cloud-modernization.md
         - name: 2. Plan modernization
           href: modernize/plan-cloud-modernization.md
-        - name: 3. Develop and deploy modernization
+        - name: 3. Execute modernization
           href: modernize/develop-deploy-cloud-modernization.md
-        - name: 4. Optimize after modernization
+        - name: 4. Optimize workloads
           href: modernize/optimize-after-cloud-modernization.md
+        - name: Resources
+          items:
+          - name: Modernization guides
+            href: modernize/modernization-cloud-replatform-refactor-rearchitect.md
 
       - name: Innovate
         items:
