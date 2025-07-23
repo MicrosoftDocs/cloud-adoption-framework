@@ -1,8 +1,8 @@
 ---
 title: Use a Single-Region Azure VMware Solution Design That Doesn't Have Global Reach
 description: Learn how to configure network connectivity for a single-region Azure VMware Solution private cloud that has secure Virtual WAN and doesn't have Global Reach.
-author: jasonmedina
-ms.author: jasonmedina
+author: stephen-sumner
+ms.author: pnp
 ms.date: 10/16/2024
 ms.topic: conceptual
 ms.service: caf
