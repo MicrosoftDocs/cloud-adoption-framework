@@ -53,31 +53,31 @@ Testing validates that modernized components function correctly and perform as e
 
 ## Create reusable infrastructure
 
-[!INCLUDE [Steps to create reusable infrastructure](./includes/create-reusable-infrastructure.md)]
+[!INCLUDE [Steps to create reusable infrastructure](../migrate/includes/create-reusable-infrastructure.md)]
 
 ## Create deployment documentation
 
-[!INCLUDE [Steps to create deployment documentation](./includes/create-reusable-infrastructure.md)]
+[!INCLUDE [Steps to create deployment documentation](../migrate/includes/create-deployment-documentation.md)]
 
 ## Deploy modernization
 
-### Deploy modernization in-place
+Production deployment requires careful execution to minimize risk and ensure business continuity. Organizations must choose between in-place deployment (updating existing systems) or parallel environment deployment (migrating to new infrastructure) based on their risk tolerance and technical requirements.
 
-1. **Use a staging slot or temporary environment.** If using Azure App Service, deploy the new version to a staging slot first. Staging slots allows you to warm it up and perform a final smoke test before swapping the staging slot with the production slot for minimal downtime deployment. For AKS or VM-based systems, spin up new instances with the new code behind the scenes, gradually add them to the load balancer (canary release), and remove old ones. This approach avoids replacing everything at once blindly.
+### Execute modernization in-place
 
-2. **Plan a maintenance window if needed.** For changes like database schema updates, schedule a short read-only period or downtime during off-hours. Communicate the maintenance window clearly to users ("The system undergoes maintenance from 10:00 PM to 11:00 PM UTC. During this time, it might be unavailable or read-only.")
+1. **Schedule a maintenance window for database changes.** Database schema updates require a planned maintenance window with clear communication to users. Schedule read-only periods or brief downtime during off-peak hours. Communicate the maintenance window clearly: "The system undergoes maintenance from 10:00 PM to 11:00 PM UTC. The system will be unavailable or read-only during this time."
 
-3. **Follow deployment best practices.** Use your CI/CD pipeline to deploy to production as you did in the test environment. Ensure backups are taken for any data changes, such as schema migrations. Enable diagnostics to catch errors early and facilitate troubleshooting.
+2. **Execute deployment through your CI/CD pipeline.** Use your established CI/CD pipeline to deploy to production with the same process used in test environments. Take backups before any data changes such as schema migrations. Enable comprehensive logging and monitoring to detect errors quickly and support troubleshooting efforts.
 
-4. **Perform a canary or incremental release.** Route a small percentage of traffic to the new version first and monitor it for a few minutes while most users remain on the old version. If no error spikes occur, gradually increase the percentage until 100% of traffic is routed to the new version. Use an Azure load balancer to manage traffic routing, or swap instances incrementally. This approach minimizes risk by limiting the impact of potential issues to a subset of users.
+3. **Implement progressive traffic routing to minimize deployment risk.** Platform-specific staging capabilities enable you to deploy the new version to a staging environment first. Staging environments allow you to warm up the application and perform final smoke tests before swapping with production for minimal downtime. For container orchestration or VM-based systems, create new instances with updated code and gradually add them to the load balancer while removing old instances. This approach prevents simultaneous replacement of all components. Azure supports canary deployments through [Azure App Service deployment slots](/azure/app-service/deploy-staging-slots?tabs=portal#route-production-traffic-automatically), [Azure Container Apps traffic splitting](/azure/container-apps/traffic-splitting?pivots=azure-cli), and [Azure Kubernetes Service with Azure Pipelines](/azure/devops/pipelines/ecosystems/kubernetes/canary-demo?view=azure-devops&tabs=yaml).
 
-5. **Ensure no cutover of data endpoints.** For in-place deployments, the data remains the same, though it may be modified. If modernization involves data schema changes, ensure the deployment process applies those changes carefully, ideally in a backward-compatible way to accommodate any old components running during the canary release.
+4. **Route traffic incrementally to validate system stability.** Route a small percentage of traffic (5-10%) to the new version while monitoring error rates and performance metrics for several minutes. Most users remain on the stable version during initial validation. Gradually increase traffic percentages (25%, 50%, 100%) if no error spikes occur. Use application gateways or load balancers to manage traffic distribution and enable rapid rollback if issues arise. 
+
+5. **Maintain data consistency during deployment.** In-place deployments preserve existing data endpoints while potentially modifying data schemas. Apply database schema changes in backward-compatible ways to support both old and new application versions during canary releases. Use database migration scripts that add new columns or tables without removing existing structures until deployment completes successfully.
 
 ### Deploy modernization to a parallel environment
 
-Parallel environment deployment creates a complete replica of production in Azure while maintaining the original system for near-zero downtime cutover and rollback capabilities.
-
-1. **Create a production-ready parallel environment using infrastructure as code.** Deploy Azure resources that match production specifications including compute, storage, networking, and security configurations. Use Azure Resource Manager templates or Terraform to ensure consistent provisioning. Validate all services reach healthy status and configure load balancers to initially route zero traffic to the new environment.
+1. **Create a parallel production environment using infrastructure as code.** Deploy Azure resources that match production specifications including compute, storage, networking, and security configurations. Use Azure Resource Manager templates or Terraform to ensure consistent provisioning. Validate all services reach healthy status and configure load balancers to initially route zero traffic to the new environment.
 
 2. **Establish database replication.** Configure your database platform's native replication feature to establish continuous data replication between your source and Azure target system. Verify that initial data synchronization completes successfully and that replication is healthy.
 
