@@ -52,14 +52,14 @@ A business driver is a specific, measurable reason for making decisions about a 
 
     | Business driver | Migration strategy |
     |------------------|--------------------|
-    | No longer delivers value or is redundant | Retire |
-    | Minimal business disruption and no modernization needed | Rehost |
-    | Needs PaaS and minimal changes to meet business goals | Replatform |
-    | Needs code changes to meet business goals | Refactor |
-    | Requires architecture changes to meet goals | Rearchitect |
-    | Simplify operations with SaaS/AI solution | Replace |
-    | New cloud-native solution is required to meet requirements | Rebuild |
-    | Must stability and avoid unnecessary change | Retain |
+    | Need to decommission redundant or low-value workloads | Retire |
+    | Need minimal business disruption and no modernization in near future | Rehost |
+    | Need PaaS solutions and minimal code changes to meet business goals | Replatform |
+    | Need code changes to meet business goals | Refactor |
+    | Need architecture changes to meet goals | Rearchitect |
+    | Need SaaS/AI solution to simplify operations | Replace |
+    | Need new cloud-native solution is required to meet requirements | Rebuild |
+    | Need stability and avoid change | Retain |
 
 ## Engage workload teams to validate business drivers and migration strategies
 
@@ -87,7 +87,7 @@ Retire decommissions workloads that no longer provide business value. This strat
 
 | Business driver | Key indicators for this strategy |
 |----------|----------|
-| No longer delivers value or is redundant | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits |
+| Need to decommission redundant or low-value workloads | • Workload has limited current or future business value<br>• Migration or modernization cost outweighs business benefits |
 
 ### 2. Rehost (like-for-like migration)
 
@@ -95,7 +95,7 @@ A rehost strategy enables fast and low-risk migration by moving workloads to Azu
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------|
-| Minimal business disruption and no modernization needed | • Workload is stable<br>• Workload is compatible with Azure<br>• Low-risk migration<br>• Short-term cloud adoption goals<br>• No immediate need for modernization<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure |
+| Need minimal business disruption and no modernization in near future | • Workload is stable<br>• Workload is compatible with Azure<br>• Low-risk migration<br>• Short-term cloud adoption goals<br>• No immediate need for modernization<br>• Reduce capital expense<br>• Free up datacenter space<br>• Inexperience with Azure |
 
 1. **Don't rehost problematic workloads.** Rehosting doesn't resolve existing performance, reliability, or architectural issues. Migrating such workloads without modernization can carry forward technical debt and require rework later. Instead, modernize these workloads during migration to address root causes.
 
@@ -115,7 +115,7 @@ Replatforming moves workloads to a modern hosting environment with minimal code 
 
 | Business driver | Key indicators for this strategy |
 |------------------|---------------------------|
-| Needs managed services and minimal changes to meet business goals | • Workload benefits from simplified reliability and disaster recovery<br>• Workload reduces OS and licensing overhead<br>• Team can containerize or repackage the app with moderate effort<br>• Migration improves time-to-cloud without major refactoring |
+| Need PaaS solutions and minimal code changes to meet business goals | • Workload benefits from simplified reliability and disaster recovery<br>• Workload reduces OS and licensing overhead<br>• Team can containerize or repackage the app with moderate effort<br>• Migration improves time-to-cloud without major refactoring |
 
 Choose workloads where PaaS options reduce operational overhead, improve reliability, or simplify disaster recovery. Minimal code refactoring might be necessary to take advantage of PaaS services.
 
@@ -131,7 +131,7 @@ Refactoring improves the internal structure of code without adding new features.
 
 | Business driver | Key indicators for this strategy |
 |----------------------|--------------------------------------------|
-| Needs code changes to meet business goals | • The workload has high maintenance costs<br>• The codebase contains significant technical debt<br>• Azure SDKs or services can improve performance or observability<br>• The team can optimize code costs or apply cloud design patterns |
+| Need code changes to meet business goals | • The workload has high maintenance costs<br>• The codebase contains significant technical debt<br>• Azure SDKs or services can improve performance or observability<br>• The team can optimize code costs or apply cloud design patterns |
 
 ### 5. Rearchitect (modernize architecture and code)
 
@@ -139,7 +139,7 @@ A rearchitect strategy redesigns the workload’s architecture to improve scalab
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| Requires architecture changes to meet goals | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks|
+| Need architecture changes to meet goals | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks|
 
 ### 6. Replace (use SaaS alternative)
 
@@ -147,7 +147,7 @@ A replace strategy uses commercial SaaS solutions to eliminate the need for cust
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| Simplify operations with SaaS/AI solution | • The legacy system is too outdated or inflexible<br>• The team needs to accelerate innovation<br>• The solution requires modern frameworks and tools<br>• Operational costs are too high in the current environment |
+| Need SaaS/AI solution to simplify operations | • The legacy system is too outdated or inflexible<br>• The team needs to accelerate innovation<br>• The solution requires modern frameworks and tools<br>• Operational costs are too high in the current environment |
 
 ### 7. Rebuild (build cloud-native)
 
@@ -155,7 +155,7 @@ A rebuild strategy is a full redevelopment of a workload using cloud-native solu
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| New cloud-native solution is required to meet requirements | • The workload has a mature SaaS alternative<br>• Internal development resources are better used elsewhere<br>• The solution requires little customization |
+| Need new cloud-native solution to meet requirements | • The workload has a mature SaaS alternative<br>• Internal development resources are better used elsewhere<br>• The solution requires little customization |
 
 ### 8. Retain (keep as is)
 
@@ -163,7 +163,7 @@ A retain strategy keeps workloads in their current environment when they're stab
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| Must stability and avoid unnecessary change | • The workload is stable, compliant, and meets business needs<br>• There is no near-term driver to migrate<br>• Migration offers low return on investment |
+| Need stability and avoid change | • The workload is stable, compliant, and meets business needs<br>• There is no near-term driver to migrate<br>• Migration offers low return on investment |
 
 ## Understand when to modernize during migration
 
