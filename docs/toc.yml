@@ -38,8 +38,6 @@ items:
 
     - name: Plan
       items:
-      - name: Checklist
-        href: plan/index.md
       - name: 1. Prepare your organization
         href: plan/prepare-organization-for-cloud.md
       - name: 2. Prepare your people
@@ -54,7 +52,7 @@ items:
           href: plan/assess-workloads-for-cloud-migration.md
       - name: 4. Estimate cloud costs
         href: plan/estimate-total-cost-of-ownership.md
-      - name: 5. Document your cloud adoption plan
+      - name: 5. Document adoption plan
         href: plan/document-cloud-adoption-plan.md
         
       - name: Resources
@@ -400,73 +398,38 @@ items:
 
         - name: Azure landing zones FAQ
           href: ready/enterprise-scale/faq.md
-
-      - name: Skills relevant to ready and landing zones
-        href: ready/suggested-skills.md
-
-      - name: Ready antipatterns
-        href: antipatterns/ready-antipatterns.md
+      - name: Define your naming convention
+        href: ready/azure-best-practices/resource-naming.md
+      - name: Abbreviations for Azure resources
+        href: ready/azure-best-practices/resource-abbreviations.md
+      - name: Define your tagging strategy
+        href: ready/azure-best-practices/resource-tagging.md
+      - name: Resources
+        items:
+        - name: Skills relevant to ready and landing zones
+          href: ready/suggested-skills.md
+        - name: Ready antipatterns
+          href: antipatterns/ready-antipatterns.md
 
     - name: Adopt
       items:
-      - name: Overview
-        href: adopt/index.md
       - name: Migrate
         items:
-        - name: Overview
-          href: migrate/index.md
-        - name: Prepare
+        - name: 1. Plan migration
+          href: migrate/plan-migration.md
+        - name: 2. Prepare workloads
+          href: migrate/prepare-workloads-cloud.md
+        - name: 3. Execute migration
+          href: migrate/execute-migration.md
+        - name: 4. Optimize workloads
+          href: migrate/optimize-workloads-after-migration.md
+        - name: 5. Decommission workloads
+          href: migrate/decommission-source-workload.md
+        - name: Resources
           items:
-            - name: Overview
-              href: migrate/prepare/index.md
-            - name: Prepare tools and backlog
-              href: migrate/prepare/tools-backlog.md
-            - name: Select migration regions
-              href: migrate/prepare/select-regions-migration.md
-            - name: Align roles and responsibilities
-              href: migrate/prepare/roles-responsibilities.md
-            - name: Get support resources and improve skills
-              href: migrate/prepare/skills-support.md
-        - name: Assess
-          items:
-          - name: Overview
-            href: migrate/assess/index.md
-          - name: Classify workloads
-            href: migrate/assess/classify.md
-          - name: Evaluate workload readiness
-            href: migrate/assess/evaluate.md
-          - name: Architect workloads
-            href: migrate/assess/architect.md
-        - name: Deploy
-          items:
-            - name: Overview
-              href: migrate/deploy/index.md
-            - name: Deploy supporting services for migration projects
-              href: migrate/deploy/deploy-supporting-services.md
-            - name: Remediate assets
-              href: migrate/deploy/remediate.md
-            - name: Replicate assets
-              href: migrate/deploy/replicate.md
-            - name: Prepare for management
-              href: migrate/deploy/prepare-for-management.md
-            - name: Migration testing
-              href: migrate/deploy/migration-test.md
-        - name: Release
-          items:
-            - name: Overview 
-              href: migrate/release/index.md
-            - name: Change communication
-              href: migrate/release/change-communication.md
-            - name: Perform business testing
-              href: migrate/release/business-test.md
-            - name: Complete migration
-              href: migrate/release/complete-migration.md
-            - name: Optimize cost after migration
-              href: migrate/release/optimize-cost-after-migration.md
-            - name: Conduct retrospectives
-              href: migrate/release/retrospective.md
-        - name: Product migration guidance
-          href: migrate/scenarios.md
+          - name: Migration wave planning
+            href: migrate/migration-wave-planning.md
+
 
       - name: Modernize
         items:
@@ -570,13 +533,6 @@ items:
               href: innovate/considerations/devices.md
             - name: Predict and influence
               href: innovate/considerations/predict.md
-
-      - name: Guides
-        items:
-        - name: Cloud adoption journey
-          href: adopt/cloud-adoption.md
-        - name: Migrate or modernize first? 
-          href: adopt/migrate-or-modernize.md
                   
 
     - name: Govern
