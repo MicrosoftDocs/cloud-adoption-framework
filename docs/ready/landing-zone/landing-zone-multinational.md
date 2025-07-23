@@ -1,8 +1,8 @@
 ---
 title: Modify an Azure landing zone architecture to meet requirements across multiple locations
 description: Learn how to modify an Azure landing zone so it complies with the regulatory requirements of various geographic locations.
-author: mioteg
-ms.author: mioteg
+author: stephen-sumner
+ms.author: pnp
 ms.date: 02/27/2025
 ms.topic: conceptual
 ---

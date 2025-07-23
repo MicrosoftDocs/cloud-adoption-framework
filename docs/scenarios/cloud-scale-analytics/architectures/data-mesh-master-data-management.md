@@ -1,8 +1,8 @@
 ---
 title: Manage master data in data mesh
 description: Learn about managing master data in data mesh.
-author: PietheinStrengholt
-ms.author: pstrengholt
+author: stephen-sumner
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
