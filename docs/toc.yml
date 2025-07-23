@@ -456,83 +456,16 @@ items:
           - name: Database modernization
             href: modernize/modernize-strategies/database-modernization.md
 
-      - name: Innovate
+      - name: Cloud-native
         items:
-        - name: Overview
-          href: innovate/index.md
-        - name: Azure innovation guide
-          items:
-          - name: Innovation guide overview
-            href: innovate/innovation-guide/index.md
-          - name: Prepare for customer feedback
-            href: innovate/innovation-guide/adoption.md
-          - name: Democratize data
-            href: innovate/innovation-guide/data.md
-          - name: Engage customers through applications
-            href: innovate/innovation-guide/apps.md
-          - name: Empower adoption
-            href: innovate/innovation-guide/ci-cd.md
-          - name: Interact through devices
-            href: innovate/innovation-guide/devices.md
-
-        - name: Innovation scenarios
-          items:
-          - name: Kubernetes
-            items:
-            - name: Innovation with Kubernetes
-              href: innovate/kubernetes/index.md
-            - name: Application development and deployment
-              href: innovate/kubernetes/application-development.md
-            - name: Cluster design and operations
-              href: innovate/kubernetes/cluster-design-operations.md
-            - name: Cluster and application security
-              href: innovate/kubernetes/cluster-application-security.md
-
-        - name: Best practices
-          items:
-          - name: Overview and Azure toolchain
-            href: innovate/best-practices/index.md
-          - name: Democratize data
-            href: innovate/best-practices/data.md
-          - name: Engage via applications
-            href: innovate/best-practices/apps.md
-          - name: Empower adoption
-            href: innovate/best-practices/ci-cd.md
-          - name: Interact with devices
-            href: innovate/best-practices/devices.md
-
-        - name: Process improvements
-          items:
-          - name: Overview
-            href: innovate/considerations/index.md
-          - name: Business value consensus
-            href: innovate/business-value.md
-          - name: Customer adoption
-            items:
-            - name: Feedback loops
-              href: innovate/considerations/adoption.md
-            - name: Build with customer empathy
-              href: innovate/considerations/build.md
-            - name: Measure for customer impact
-              href: innovate/considerations/measure.md
-            - name: Learn with customers
-              href: innovate/considerations/learn.md
-            - name: Customer challenges and blockers
-              href: innovate/considerations/challenges.md
-          - name: Digital invention
-            items:
-            - name: Develop digital inventions
-              href: innovate/considerations/invention.md
-            - name: Democratize data
-              href: innovate/considerations/data.md
-            - name: Application development for innovative applications
-              href: innovate/considerations/apps.md
-            - name: Empower adoption
-              href: innovate/considerations/ci-cd.md
-            - name: Interact with devices
-              href: innovate/considerations/devices.md
-            - name: Predict and influence
-              href: innovate/considerations/predict.md
+        - name: 1. Plan cloud-native solutions
+          href: cloud-native/plan-cloud-native-solutions.md
+        - name: 2. Build cloud-native solutions
+          href: cloud-native/build-cloud-native-solutions.md
+        - name: 3. Deploy cloud-native solutions
+          href: cloud-native/deploy-cloud-native-solutions.md
+        - name: 4. Optimize cloud-native solutions
+          href: cloud-native/optimize-cloud-native-solutions.md
                   
 
     - name: Govern
