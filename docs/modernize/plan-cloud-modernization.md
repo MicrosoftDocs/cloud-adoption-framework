@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Plan your cloud modernization
 
-Modernizing applications and workloads in the cloud requires careful planning and governance. Without a structured plan, even well-intentioned modernization efforts can falter – leading to budget overruns, expanded scope, or service disruptions. A well-planned approach, on the other hand, reduces risk and aligns the technical work with business objectives. This guide provides prescriptive, logically ordered steps for organizations planning cloud modernizations, covering change management, scope control, phased execution, rollback planning, and stakeholder approval.
+Modernizing applications and workloads in the cloud requires careful planning and governance. Without a structured plan, even well-intentioned modernization efforts can falter, leading to budget overruns, expanded scope, or service disruptions. A well-planned approach, on the other hand, reduces risk and aligns the technical work with business objectives. 
 
 ## Use a change management process
 
@@ -17,7 +17,7 @@ Modernization initiatives require the same formal oversight processes as product
 
 1. **Establish a formal change approval workflow.** Create a structured approval process for all modernization-related changes. Organizations can integrate this workflow with existing Change Advisory Boards (CAB) or establish a dedicated modernization review board. Define approval authority levels for different change categories to ensure appropriate oversight. Document the complete workflow in your project plan, specifying procedures and approval authorities for all stakeholders. Reference [Manage change](/azure/cloud-adoption-framework/manage/administer#manage-change) for detailed implementation guidance.
 
-2. **Categorize changes by risk level.** Classify all modernization changes using defined risk categories: Low, Medium, and High. Establish specific criteria for each risk level based on potential business impact, technical complexity, and rollback difficulty. This classification system ensures that high-impact changes receive appropriate scrutiny while streamlining approval for routine updates. Risk-based categorization prevents impulsive decisions on critical changes and aligns review processes with actual project risks. Reference [Manage change](/azure/cloud-adoption-framework/manage/administer#manage-change) for risk assessment frameworks.
+2. **Categorize changes by risk level.** Classify all modernization changes using defined risk categories: Low, Medium, and High. Establish specific criteria for each risk level based on potential business value, technical complexity, and rollback difficulty. This classification system ensures that high-value changes receive appropriate scrutiny while streamlining approval for routine updates. Risk-based categorization prevents impulsive decisions on critical changes and aligns review processes with actual project risks. Reference [Manage change](/azure/cloud-adoption-framework/manage/administer#manage-change) for risk assessment frameworks.
 
 3. **Implement automated quality gates.** Embed automated quality checks directly into CI/CD pipelines to enforce approval policies before production deployment. These automated gates validate that each change meets organizational readiness criteria without requiring manual intervention for routine checks. Configure pipeline rules to block deployments that lack proper approvals, with clear error messages such as "Approval ticket required – deployment blocked." Automated quality gates reduce human error and ensure consistent policy enforcement across all modernization releases.
 
@@ -36,7 +36,7 @@ Modernization projects face constant pressure to expand beyond their original go
 
 3. **Control scope changes through formal evaluation.** Create a structured process for evaluating legitimate scope change requests that arise during modernization. When stakeholders request additions such as new user interface features during backend modernization, document these requests in a separate innovation backlog for future consideration. Apply consistent evaluation criteria: "Does this change directly support stated modernization objectives?" and "Can this addition be completed without affecting current timeline and budget?" Only approve changes that meet both criteria and provide clear business justification.
 
-4. **Communicate project focus consistently.** Use regular stakeholder updates to reinforce current work and upcoming activities, preventing scope expansion through transparent progress reporting. When stakeholders propose additional work, reference the agreed-upon scope document and timeline to demonstrate capacity constraints. Clear communication about planned activities helps stakeholders understand that additional requests require separate project planning.
+4. **Communicate project focus consistently.** Use regular stakeholder updates to reinforce current work and upcoming activities, preventing scope expansion through transparent progress reporting. When stakeholders propose extra work, reference the agreed-upon scope document and timeline to demonstrate capacity constraints. Clear communication about planned activities helps stakeholders understand that more requests require separate project planning.
 
 5. **Capture future opportunities separately.** Modernization work often reveals opportunities for business improvements or new capabilities. Instead of expanding the current project scope, maintain a dedicated backlog for these future enhancement ideas. This approach acknowledges valuable suggestions while protecting the current project timeline and ensures good ideas receive proper planning and resource allocation in future initiatives.
 
@@ -49,14 +49,14 @@ Applications evolve through structured phases rather than single large deploymen
     | Division method | Description | Example |
     |-----------------|-------------|---------|
     | By technical component | Separate phases based on workload layers or system boundaries | Phase 1: Database migration, Phase 2: Application refactoring, Phase 3: UI modernization |
-    | By risk and complexity | Organize work from low-risk to high-risk changes | Phase 1: Non-critical services, Phase 2: Core business logic, Phase 3: Customer-facing features |
+    | By risk and complexity | Organize work from low-risk to high-risk changes | Phase 1: Noncritical services, Phase 2: Core business logic, Phase 3: Customer-facing features |
     | By business domain | Structure phases around application or functional boundaries | Phase 1: User management system, Phase 2: Payment processing, Phase 3: Reporting services |
 
 2. **Begin with low-risk modernizations.** Select initial work that provides meaningful improvement without affecting mission-critical systems. Modernize development environments, background services, or read-only databases before production transaction systems. Target completion within 4-6 weeks to build team confidence and validate processes. Early success demonstrates capability and generates stakeholder support for more complex phases.
 
-3. **Sequence remaining phases by value and dependencies.** Prioritize subsequent work based on business impact, technical complexity, and system dependencies. Address high-value, customer-facing features after proving your approach with less critical components. Group interdependent changes within single phases. For example, if database schema changes require application code updates, complete both changes together rather than across separate phases.
+3. **Sequence remaining phases by value and dependencies.** Prioritize subsequent work based on business value, technical complexity, and system dependencies. Address high-value, customer-facing features after proving your approach with less critical components. Group interdependent changes within single phases. For example, if database schema changes require application code updates, complete both changes together rather than across separate phases.
 
-4. **Establish measurable success criteria.** Define specific, time-bound targets for each phase such as "Reduce infrastructure costs by 25%" or "Improve API response time to under 200ms." Track both technical metrics (performance, reliability, security) and business outcomes (user experience, operational efficiency) to validate value delivery and guide adjustments.
+4. **Establish measurable success criteria.** Define specific, time-bound targets for each phase such as "Reduce infrastructure costs by 25%" or "Improve API response time to under 200 ms." Track both technical metrics (performance, reliability, security) and business outcomes (user experience, operational efficiency) to validate value delivery and guide adjustments.
 
 5. **Validate thoroughly between phases.** Complete comprehensive testing at each phase boundary including functional testing, performance validation, and security scanning. Deploy phase results to production-like environments and monitor system behavior before advancing to the next phase. This approach isolates issues to specific changes and prevents compound problems across multiple phases.
 
@@ -88,7 +88,7 @@ The deployment strategy determines how you move modernized applications from dev
 
     Build the modernized environment with all changes, synchronize data between environments, then redirect traffic to the new system while keeping the original system as a fallback option. This approach requires double infrastructure costs during transition but provides maximum safety for critical workloads.
 
-3. **Plan traffic cutover procedures.** Define specific steps to redirect users from the old system to the modernized environment. Document DNS changes, load balancer updates, or database connection string modifications required for the transition. Test cutover procedures in non-production environments to validate timing and identify potential issues. Prepare communication plans to notify users of scheduled changes and expected system behavior during transition periods.
+3. **Plan traffic cutover procedures.** Define specific steps to redirect users from the old system to the modernized environment. Document DNS changes, load balancer updates, or database connection string modifications required for the transition. Test cutover procedures in nonproduction environments to validate timing and identify potential issues. Prepare communication plans to notify users of scheduled changes and expected system behavior during transition periods.
 
 4. **Validate deployment success criteria.** Establish measurable targets to confirm successful deployment such as response times under 500ms, error rates below 0.1%, and all critical user workflows functioning correctly. Monitor these metrics for 24-48 hours after deployment to ensure system stability. Create automated alerts for performance degradation or functional issues that require immediate attention during the post-deployment monitoring period.
 
@@ -96,11 +96,11 @@ The deployment strategy determines how you move modernized applications from dev
 
 Even with the best planning and testing, not every change goes perfectly. Modernization often involves complex changes, and there’s always a risk that a deployment could introduce an issue, or something behaves unexpectedly in production. The mark of a well-prepared team is having a solid rollback plan for each change or phase.
 
-1. **Document specific rollback procedures for each deployment type with step-by-step instructions.** For every major change or phase deliverable, write a step-by-step rollback procedure. This should be in your runbook or change plan document. Clearly list each action to undo the change, who is responsible for each step, and how long it would take. After rollback, include what checks confirm things are back to normal.
+1. **Document specific rollback procedures for each deployment type with step-by-step instructions.** For every major change or phase deliverable, write a step-by-step rollback procedure. The rollback procedure should be in your runbook or change plan document. Clearly list each action to undo the change, who is responsible for each step, and how long it would take. After rollback, include what checks confirm things are back to normal.
 
-2. **Automate rollbacks where possible.** Manual rollbacks can be slow and error-prone, especially at 3 AM during an outage. Automated rollback reduces recovery time and eliminates manual errors during high-pressure incident response. Use infrastructure-as-code tools (Terraform, ARM/Bicep) to re-deploy known good states or blue-green or canary deployments so you can switch back traffic to the source environment. Test rollback automation in staging environments to validate effectiveness and identify potential issues before production deployment. Write the rollback steps alongside the deployment steps, so it’s easy to rollback.
+2. **Automate rollbacks where possible.** Manual rollbacks can be slow and error-prone, especially at 3 AM during an outage. Automated rollback reduces recovery time and eliminates manual errors during high-pressure incident response. Use infrastructure-as-code tools (Terraform, ARM/Bicep) to redeploy known good states or blue-green or canary deployments so you can switch back traffic to the source environment. Test rollback automation in staging environments to validate effectiveness and identify potential issues before production deployment. Write the rollback steps alongside the deployment steps, so it’s easy to roll back.
 
-3. **Create a rollback monitoring plan.** If you ever have to perform a rollback, treat it like a deployment and monitor workload health closely. Watch your dashboards (CPU, error rates, response times) to see if metrics are returning to normal ranges. If the rollback involves data, verify data consistency and maybe run queries to ensure records are correct. Have an external observer who is not performing steps but purely watching the effects.
+3. **Create a rollback monitoring plan.** If you ever have to perform a rollback, treat it like a deployment and monitor workload health closely. Watch your dashboards (CPU, error rates, response times) to see if metrics are returning to normal ranges. If the rollback involves data, verify data consistency and maybe run queries to ensure records are correct. Have an external observer who isn't performing steps but purely watching the effects.
 
 ## Secure stakeholder approval
 
@@ -114,10 +114,10 @@ Stakeholder support determines modernization success. Approval requires clear co
 
     | Category | Example Metrics | Typical Value Range |
     |----------|-----------------|-------------------|
-    | Cost Reduction | Infrastructure, maintenance, licensing | 20-40% annual savings |
-    | Productivity Gains | Deployment frequency, resolution time | 50-80% improvement |
-    | Risk Mitigation | Avoided downtime, security incidents | $100K-$1M+ cost avoidance |
-    | Revenue Impact | Faster time-to-market, customer retention | 10-25% revenue acceleration |
+    | Cost reduction | Infrastructure, maintenance, licensing | 20-40% annual savings |
+    | Productivity gains | Deployment frequency, resolution time | 50-80% improvement |
+    | Risk mitigation | Avoided downtime, security incidents | $100K-$ 1M+ cost avoidance |
+    | Revenue | Faster time-to-market, customer retention | 10-25% revenue acceleration |
 
 4. **Address project risks proactively.** Identify potential challenges and demonstrate preparedness through specific mitigation strategies. Common risks include data migration complexity, performance degradation, and integration issues. Present solutions such as automated rollback procedures, comprehensive testing protocols, and expert consultation availability. Create a one-page project charter that includes a dedicated risk section with clear mitigation plans. Transparent risk discussion builds stakeholder confidence in project leadership and planning thoroughness.
 
