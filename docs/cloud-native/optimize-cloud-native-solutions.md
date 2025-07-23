@@ -1,4 +1,17 @@
-## Optimize the cloud-native solution after deployment
+---
+title: Optimize the cloud-native solution after deployment
+description: Optimize the cloud-native solution after deployment
+author: stephen-sumner
+ms.author: pnp
+ms.date: 08/01/2025
+ms.topic: conceptual
+---
+
+# Optimize the cloud-native solution after deployment
+
+A deployed solution must evolve to remain secure, cost-effective, and performant. Post-deployment optimization ensures that the workload continues to meet business and technical requirements as usage patterns change.
+
+## Fine-tune service configurations
 
 1. **Apply Azure Advisor recommendations.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload monitoring data and provides actionable recommendations across cost, performance, reliability, and security. Review the recommendations weekly and implement critical changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
 

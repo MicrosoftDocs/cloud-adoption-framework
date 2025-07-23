@@ -1,4 +1,13 @@
-# Execute the new cloud-native deployment
+---
+title: Deploy cloud-native solutions
+description: Deploy cloud-native solutions
+author: stephen-sumner
+ms.author: pnp
+ms.date: 08/01/2025
+ms.topic: conceptual
+---
+
+# Deploy cloud-native solutions
 
 Now, deploy the solution to the live Azure environment following the planned strategy. This phase includes final preparations, the deployment execution, and post-deployment verification and support.
 

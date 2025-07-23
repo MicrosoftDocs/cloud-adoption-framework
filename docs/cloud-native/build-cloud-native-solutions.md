@@ -1,4 +1,13 @@
-## Develop cloud-native solution
+---
+title: Build cloud-native solutions
+description: Build cloud-native solutions
+author: stephen-sumner
+ms.author: pnp
+ms.date: 08/01/2025
+ms.topic: conceptual
+---
+
+# Build cloud-native solutions
 
 With the planning complete, the next phase is to build and configure the solution in a development environment, adhering to best practices and ensuring quality through testing.
 

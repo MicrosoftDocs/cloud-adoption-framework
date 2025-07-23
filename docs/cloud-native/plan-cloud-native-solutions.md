@@ -1,3 +1,12 @@
+---
+title: Plan the cloud-native solution
+description: Plan the cloud-native solution
+author: stephen-sumner
+ms.author: pnp
+ms.date: 08/01/2025
+ms.topic: conceptual
+---
+
 # Plan the cloud-native solution
 
 A cloud-native solution creates new business value by building new applications or adding new features to existing ones. This guidance helps you deliver cloud-native workloads quickly and effectively by aligning technical efforts with business goals, and following a clear, repeatable process.
