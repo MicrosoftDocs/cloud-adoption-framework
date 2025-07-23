@@ -58,7 +58,7 @@ A business driver is a specific, measurable reason for making decisions about a 
     | Need code changes to meet business goals | Refactor |
     | Need architecture changes to meet goals | Rearchitect |
     | Need SaaS/AI solution to simplify operations | Replace |
-    | Need new cloud-native solution is required to meet requirements | Rebuild |
+    | Need new cloud-native solution to meet requirements | Rebuild |
     | Need stability and avoid change | Retain |
 
 ## Engage workload teams to validate business drivers and migration strategies
