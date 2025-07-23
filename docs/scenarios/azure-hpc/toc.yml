@@ -25,9 +25,6 @@ items:
       items:
       - name: HPC landing zone accelerator
         href: azure-hpc-landing-zone-accelerator.md
-      - name: Video rendering architecture
-        href: /azure/architecture/example-scenario/infrastructure/video-rendering
-        maintainContext: true
   - name: Migrate HPC to Azure
     href: migrate.md
   - name: Modernize with HPC on Azure
@@ -44,53 +41,3 @@ items:
     href: organize.md
   - name: Well-architected considerations
     href: well-architected-framework.md
-  - name: HPC architectures
-    items:
-    - name: Overview
-      href: /azure/architecture/topics/high-performance-computing#example-hpc-architectures
-    - name: 3D video rendering
-      href: /azure/architecture/example-scenario/infrastructure/video-rendering
-      maintainContext: true
-    - name: Computer-aided engineering
-      href: /azure/architecture/example-scenario/apps/hpc-saas
-      maintainContext: true
-    - name: Digital image-based modeling
-      href: /azure/architecture/example-scenario/infrastructure/image-modeling
-      maintainContext: true
-    - name: HPC cluster deployed in the cloud
-      href: /azure/architecture/solution-ideas/articles/hpc-cluster
-      maintainContext: true
-    - name: HPC media rendering
-      href: /azure/architecture/solution-ideas/articles/azure-batch-rendering
-      maintainContext: true
-    - name: HPC risk analysis
-      href: /azure/architecture/solution-ideas/articles/hpc-risk-analysis
-      maintainContext: true
-    - name: HPC system and big compute
-      href: /azure/architecture/solution-ideas/articles/big-compute-with-azure-batch
-      maintainContext: true
-    - name: Hybrid HPC in Azure with HPC Pack
-      href: /azure/architecture/solution-ideas/articles/hybrid-hpc-in-azure-with-hpc-pack
-      maintainContext: true
-    - name: Run CFD simulations
-      href: /azure/architecture/example-scenario/infrastructure/hpc-cfd
-      maintainContext: true
-    - name: Run reservoir simulations
-      href: /azure/architecture/example-scenario/infrastructure/reservoir-simulation
-      maintainContext: true
-  - name: Azure product documentation
-    items:
-    - name: Azure HPC product documentation
-      href: /azure/architecture/topics/high-performance-computing/
-    - name: CycleCloud
-      href: /azure/cyclecloud/overview/
-    - name: Batch
-      href: /azure/batch/
-    - name: HPC Pack
-      href: /powershell/high-performance-computing/overview/
-    - name: HPC VMs (N & H)
-      href: /azure/virtual-machines/workloads/hpc/overview/
-  - name: Build skills on Learn
-    items:
-    - name: Learning path for running HPC applications
-      href: /learn/paths/run-high-performance-computing-applications-azure
