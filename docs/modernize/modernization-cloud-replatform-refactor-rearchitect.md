@@ -9,7 +9,11 @@ ms.topic: conceptual
 
 # Modernization guides
 
+Modernizing cloud workloads typically involves one or more of three core strategies: replatform, refactor, and rearchitect. This guide provides categorized links to relevant guidance for each strategy. While not exhaustive, it offers a solid starting point for planning your modernization journey.
+
 ## Replatform
+
+Replatforming involves moving workload components to platform-as-a-service (PaaS) offerings with minimal code changes. It’s best suited for quick wins with low disruption. It's deal when you need to reduce operational overhead or improve reliability without a full redevelopment.
 
 | Replatform category | Replatform guidance | Guidance type |
 |---------------------|---------------------|---------------|
@@ -17,6 +21,8 @@ ms.topic: conceptual
 | Other cloud to Azure PaaS | • [AWS to Azure PaaS](/azure/migration/migrate-from-aws)<br>• [Google cloud to Azure PaaS](/azure/migration/migrate-from-google-cloud) | Migration guide<br>Migration guide |
 
 ## Refactor
+
+Refactoring focuses on modifying application code to improve maintainability, performance, or alignment with cloud best practices. Use this approach when technical debt is slowing progress or when the code isn’t optimized for the cloud.
 
 | Refactor category | Refactor guidance | Guidance type |
 |-------------------|-------------------|---------------|
@@ -28,19 +34,21 @@ ms.topic: conceptual
 
 ## Rearchitect
 
+Rearchitecting involves redesigning the application architecture to unlock scalability, agility, or innovation. Use this approach when the current design limits growth or cloud-native capabilities.
+
 | Rearchitect category | Rearchitect guidance | Guidance type |
 |------------------------|----------|---------------|
-| Decouple tightly coupled components | • [Microservices architecture style](/azure/architecture/guide/architecture-styles/microservices)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | Architecture<br>Architecture |
-| Redesign deployment topology | • [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>• [Multi-region load balancing with Traffic Manager](/azure/architecture/high-availability/reference-architecture-traffic-manager-application-gateway) | WAF guide<br>Architecture |
+| Decouple components | • [Microservices architecture style](/azure/architecture/guide/architecture-styles/microservices)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | Architecture<br>Architecture |
+| Use multiple regions | • [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>• [Multi-region load balancing with Traffic Manager](/azure/architecture/high-availability/reference-architecture-traffic-manager-application-gateway) | WAF guide<br>Architecture |
 | Consolidate services | • [Consolidation](/azure/well-architected/cost-optimization/consolidation) | WAF Guide |
-| Replace synchronous communication with asynchronous messaging | • [Asynchronous messaging options](/azure/architecture/guide/technology-choices/messaging)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | AAC Guide<br>Architecture |
-| Transform monolithic applications into microservices | • [Design infrastructure to scale](/azure/well-architected/performance-efficiency/scale-partition#design-infrastructure-to-scale)<br>• [Microservices architecture](/azure/architecture/guide/architecture-styles/microservices)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | WAF Guide<br>AAC Guide<br>Architecture |
-| Add caching layers | • [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance)<br>• [Use caching](/azure/well-architected/performance-efficiency/optimize-data-performance#use-caching) | Architecture<br>WAF Guide |
+| Use asynchronous messaging | • [Asynchronous messaging options](/azure/architecture/guide/technology-choices/messaging)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | AAC Guide<br>Architecture |
+| Use microservices | • [Design infrastructure to scale](/azure/well-architected/performance-efficiency/scale-partition#design-infrastructure-to-scale)<br>• [Microservices architecture](/azure/architecture/guide/architecture-styles/microservices)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | WAF Guide<br>AAC Guide<br>Architecture |
+| Add caching | • [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance)<br>• [Use caching](/azure/well-architected/performance-efficiency/optimize-data-performance#use-caching) | Architecture<br>WAF Guide |
 | Change data architecture | • [Big data architecture style](/azure/architecture/guide/architecture-styles/big-data)<br>• [Event-driven architecture style](/azure/architecture/guide/architecture-styles/event-driven)<br>• [Use polyglot persistence](/azure/well-architected/performance-efficiency/optimize-data-performance#use-polyglot-persistence) | AAC Guide<br>WAF Guide |
 
 ## Next step
 
-1. [Preapre organization for cloud modernization](./prepare-organization-cloud-modernization.md)
+1. [Prepare organization for cloud modernization](./prepare-organization-cloud-modernization.md)
 1. [Plan your cloud modernization](./plan-cloud-modernization.md)
 1. [Execute your cloud modernization](./execute-cloud-modernization.md)
 1. [Optimize workloads after modernization](./optimize-after-cloud-modernization.md)
