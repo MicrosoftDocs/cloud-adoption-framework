@@ -25,11 +25,7 @@ Stakeholder preparation ensures coordinated execution and rapid issue resolution
 
 A change freeze prevents modifications that could disrupt migration success. System stability reduces migration risks and ensures data consistency. You should implement controls to prevent changes to source systems during the migration window.
 
-1. **Implement automated change controls in deployment pipelines.** Automated controls prevent unauthorized changes to production systems. Configure deployment pipelines to block releases to the source environment during the freeze window. Add approval gates in your CI/CD tools to enforce the freeze period. These controls prevent accidental deployments that could affect migration.
-
-2. **Document emergency change procedures.** Emergency procedures enable critical fixes while maintaining migration stability. Create specific criteria for emergency changes and define an expedited approval process. Include contact information for approvers and document required testing. These procedures balance system stability with business continuity requirements.
-
-3. **Monitor for unauthorized changes.** Change detection ensures freeze compliance throughout the migration window. Configure alerts for file system modifications, database schema changes, and application deployments. Use configuration management tools to track system state. This monitoring prevents undocumented changes from affecting migration success.
+[!INCLUDE [Steps to implement a change freeze](./includes/implement-change-freeze.md)]
 
 ## Finalize the production environment
 
