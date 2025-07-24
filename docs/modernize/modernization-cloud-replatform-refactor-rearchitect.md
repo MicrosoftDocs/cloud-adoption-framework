@@ -37,3 +37,10 @@ ms.topic: conceptual
 | Transform monolithic applications into microservices | • [Design infrastructure to scale](/azure/well-architected/performance-efficiency/scale-partition#design-infrastructure-to-scale)<br>• [Microservices architecture](/azure/architecture/guide/architecture-styles/microservices)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | WAF Guide<br>AAC Guide<br>Architecture |
 | Add caching layers | • [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance)<br>• [Use caching](/azure/well-architected/performance-efficiency/optimize-data-performance#use-caching) | Architecture<br>WAF Guide |
 | Change data architecture | • [Big data architecture style](/azure/architecture/guide/architecture-styles/big-data)<br>• [Event-driven architecture style](/azure/architecture/guide/architecture-styles/event-driven)<br>• [Use polyglot persistence](/azure/well-architected/performance-efficiency/optimize-data-performance#use-polyglot-persistence) | AAC Guide<br>WAF Guide |
+
+## Next step
+
+1. [Preapre organization for cloud modernization](./prepare-organization-cloud-modernization.md)
+1. [Plan your cloud modernization](./plan-cloud-modernization.md)
+1. [Execute your cloud modernization](./execute-cloud-modernization.md)
+1. [Optimize workloads after modernization](./optimize-after-cloud-modernization.md)
