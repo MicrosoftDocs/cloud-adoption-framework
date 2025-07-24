@@ -456,7 +456,7 @@ items:
           - name: Database modernization
             href: modernize/modernize-strategies/database-modernization.md
 
-      - name: Cloud-native
+      - name: Innovate (cloud-native)
         items:
         - name: 1. Plan cloud-native solutions
           href: cloud-native/plan-cloud-native-solutions.md
