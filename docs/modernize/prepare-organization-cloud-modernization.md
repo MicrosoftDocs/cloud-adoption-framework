@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Prepare your organization for cloud modernization
 
-Cloud modernization is the practice of improving existing cloud-based workloads to better meet business needs and align with cloud best practices, without adding new end-user features.This framework provides an end-to-end guide for organizations to plan and execute modernization across all their workload teams.
+Cloud modernization is the practice of improving existing cloud-based workloads to better meet business. It aligns workloads with cloud best practices, without adding new features. This framework provides an end-to-end guide for organizations to plan and execute modernization across all their workload teams.
 
-Modernization success begins with organizational preparation. This stage ensures everyone understands what modernization means for your company, evaluates if your teams have the needed skills (or if you need outside help), and identifies which applications to modernize first (and why).
+Modernization success begins with organizational preparation. This stage ensures everyone understands what modernization means for your company. You also need to evaluate if your teams have the needed skills and identify which applications to modernize first.
 
 ## Define modernization for your organization
 
@@ -23,7 +23,7 @@ Modernization success begins with organizational preparation. This stage ensures
 
 ## Assess modernization readiness and skills
 
-1. **Evaluate your modernization skills.** Before embarking on modernization, assess whether your team has the necessary skills and tools to do this successfully. Key areas to evaluate include:
+1. **Evaluate your modernization skills.** Before embarking on modernization, assess whether your team has the necessary skills and tools to modernize successfully. Key areas to evaluate include:
 
     | Skill area | Assessment questions |
     |------------|---------------------|
@@ -32,7 +32,7 @@ Modernization success begins with organizational preparation. This stage ensures
     | Modern architecture patterns | Does the team understand microservices, containerization, and other modern cloud-native concepts that could be part of refactoring or rearchitecting? |
     | Monitoring and automation | Are your monitoring, logging, and automation tools sufficient to support more advanced cloud operations post-modernization? |
 
-2. **Identify any skills gaps and create a plan to fill them.** This could mean training existing staff (Azure certifications, cloud architecture workshops) or bringing in new hires/contractors with specific expertise. Remember, skills often matter more than the specific technologies. A well-trained team will execute a modernization more smoothly than a team learning on the fly.
+2. **Identify any skills gaps and create a plan to fill them.** You could train existing staff (Azure certifications, cloud architecture workshops) or bring in new hires/contractors with specific expertise. Skills often matter more than the specific technologies. A well-trained team executes a modernization more smoothly than a team learning on the fly.
 
 3. **Engage external expertise if needed.** If your team lacks experience in critical areas, bring in Microsoft or a Microsoft partner. External experts can validate your modernization strategy, recommend appropriate tools, and help establish realistic timelines.
 
@@ -40,7 +40,7 @@ Modernization success begins with organizational preparation. This stage ensures
 
 Not every workload should be modernized. Use a structured approach to decide which workloads to modernize first. The key is to weigh business value against technical risk, and identify any urgent triggers that force action.
 
-1. **Assess business value.** Make a list of the candidate workloads and rate each by its importance to the business. You can use a simple high/medium/low ranking or a numeric score for business value. The more critical the workload is to revenue, customer satisfaction, or operations, the higher its business value score:
+1. **Assess business value.** Make a list of the candidate workloads and rate each by its importance to the business. You can use a high/medium/low ranking or a numeric score for business value. The more critical the workload is to revenue, customer satisfaction, or operations, the higher its business value score:
 
     | Business value category | Examples |
     |------------------------|----------|
@@ -49,7 +49,7 @@ Not every workload should be modernized. Use a structured approach to decide whi
     | Compliance or regulatory | Systems subject to strict regulations or security requirements (failure to update could pose legal risks) |
     | Broad internal dependency | Platforms widely used by employees or other systems (if it's slow or unstable, it drags down productivity across the organization) |
 
-2. **Assess technical risk.** Independently, evaluate the technical state of each system. Essentially, figure out how much it needs modernization. Rnk technical risk/need as high, medium, or low for each workload.Signs of high technical risk or debt include:
+2. **Assess technical risk.** Independently, evaluate the technical state of each system. Essentially, figure out how much it needs modernization. Rank technical risk/need as high, medium, or low for each workload. Signs of high technical risk or debt include:
 
     | Technical risk category | Examples |
     |------------------------|-----------------|
@@ -64,7 +64,7 @@ Not every workload should be modernized. Use a structured approach to decide whi
     | Trigger category | Examples |
     |------------------|----------|
     | Security vulnerabilities | Newly discovered security holes in legacy components, outdated encryption protocols, or compliance violations |
-    | End-of-support deadlines | Platform or software losing vendor support within 12 months, discontinued security patches |
+    | End-of-support deadlines | Platform or software losing vendor support within 12 months, old security patches |
     | Business growth demands | Rapid customer growth exceeding system capacity, new market entry requirements, or integration needs |
     | System reliability issues | Repeated outages, chronic performance problems, or escalating maintenance costs |
 
@@ -75,13 +75,13 @@ Not every workload should be modernized. Use a structured approach to decide whi
     | High            | High           | Top priority | Start modernization now. High return on investment |
     | High            | Low            | Monitor | Delay modernization unless specific business benefits exist |
     | Low             | High           | Case-by-case | Don’t modernize immediately unless there’s a clear benefit |
-    | Low             | Low            | Do nothing | Modernization effort here would not be a good use of resources. |
+    | Low             | Low            | Do nothing | Modernization effort here wouldn't be a good use of resources. |
 
 ## Understand how to modernize
 
 Before diving into execution, ensure you and the individual workload teams understand the approaches and best practices for modernization in the cloud.
 
-1. **Use the Azure Well-Architected Framework to spot improvement opportunities..** The [Well-Architected Framework](/azure/architecture/framework/) is a set of best practices across five pillars: Reliability, Security, Cost Optimization, Operational Excellence, and Performance Efficiency. Conducting a [Well-Architected review](/assessments/azure-architecture-review/) of your workloads can highlight where they are not following best practices. Those gaps effectively generate a to-do list for modernization. The bigger or more numerous the gaps, the more pressing the need to modernize that workload. In this way, WAF provides a data-driven roadmap of what to fix.
+1. **Use the Azure Well-Architected Framework to spot improvement opportunities..** The [Well-Architected Framework (WAF)](/azure/architecture/framework/) is a set of best practices across five pillars: Reliability, Security, Cost Optimization, Operational Excellence, and Performance Efficiency. Conducting a [Well-Architected review](/assessments/azure-architecture-review/) of your workloads can highlight where they aren't following best practices. Those gaps effectively generate a to-do list for modernization. The bigger or more numerous the gaps, the more pressing the need to modernize that workload. In this way, WAF provides a data-driven roadmap of what to fix.
 
 2. **Enable workload teams to make modernization decisions.** The teams who own and run each application day-to-day often have the deepest insight into its pain points and what changes would help. It’s wise to involve these teams in deciding how to modernize their systems. Give them the business context ("we need this system to handle 2x traffic" or "we need to cut its maintenance cost by 30%") and let them propose solutions. Perhaps they know a certain service can be swapped out or which parts of the code are the worst. Provide decision-making authority to these teams for technical choices, within boundaries of budget, timeline, and overall architectural standards. Establish regular check-ins to ensure their plans align with broader organizational goals.
 

@@ -33,7 +33,7 @@ Make sure the operational aspects (monitoring, cost management, backup) are full
 
 ## Collect user feedback and measure outcomes
 
-One way to gauge success and find further improvement opportunities is through direct feedback and concrete metrics
+One way to gauge success and find further improvement opportunities is through direct feedback and concrete metrics.
 
 1. **Gather structured user feedback regularly.**  After some time running the modernized system, solicit feedback from end users or internal users. Use surveys or feedback forms. Check the support ticket queue. For internal teams, have retrospective meetings. This qualitative data can highlight things monitoring might not.
 
