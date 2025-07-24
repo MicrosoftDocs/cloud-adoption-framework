@@ -23,40 +23,13 @@ Other cloud to Azure PaaS
 
 ## Refactor
 
-Reliability
-
-- [Self-preservation](/azure/well-architected/reliability/self-preservation#application-design-guidance-and-patterns) (WAF guide)
-- [Monitor applications](/azure/well-architected/reliability/monitoring-alerting-strategy#monitor-applications) (WAF guide)
-
-Security
-
-- [Protect application secrets](/azure/well-architected/security/application-secrets) (WAF guide)
-- [Secure networking](/azure/well-architected/security/networking) (WAF guide)
-
-Operational Excellence
-
-- [Upgrate .NET version](/dotnet/core/install/upgrade) (.NET Guide)
-- [Adopt infrastructure as code](/azure/well-architected/operational-excellence/infrastructure-as-code-design) (WAF guide)
-- [Instrument application](/azure/well-architected/operational-excellence/instrument-application) (WAF guide)
-- [Collect app data](/azure/well-architected/operational-excellence/observability#application-data) (WAF guide)
-- [Task automation](/azure/well-architected/operational-excellence/automate-tasks) (WAF guide)
-- [Safe deployment practices](/azure/well-architected/operational-excellence/safe-deployments) (WAF guide)
-
-Cost optimization
-
-- [Optimize flow costs](/azure/well-architected/cost-optimization/optimize-flow-costs) (WAF guide)
-- [Optimize data costs](/azure/well-architected/cost-optimization/optimize-data-costs) (WAF guide)
-- [Optimize code costs](/azure/well-architected/cost-optimization/optimize-code-costs) (WAF guide)
-- [Reduce workload demand](/azure/well-architected/cost-optimization/optimize-scaling-costs#reduce-demand) (WAF guide)
-- [Optimize development environments](/azure/well-architected/cost-optimization/optimize-personnel-time#optimize-the-development-environment) (WAF guide)
-
-Performance efficiency
-
-- [Design application code to scale](/azure/well-architected/performance-efficiency/scale-partition#design-application-to-scale) (WAF guide)
-- [Partition datasets](/azure/well-architected/performance-efficiency/scale-partition#partition-workload) (WAF guide)
-- [Optimize code performance](/azure/well-architected/performance-efficiency/optimize-code-infrastructure#optimize-code-performance) (WAF guide)
-- [Optimize data performance](/azure/well-architected/performance-efficiency/optimize-data-performance) (WAF guide)
-- [Prioritize critical flows](/azure/well-architected/performance-efficiency/prioritize-critical-flows) (WAF guide)
+| Refactor category | Refactor guidance |
+|-------------------|-------------------|
+| Reliability | • [Self-preservation](/azure/well-architected/reliability/self-preservation#application-design-guidance-and-patterns) (WAF guide)<br>• [Monitor applications](/azure/well-architected/reliability/monitoring-alerting-strategy#monitor-applications) (WAF guide) |
+| Security | • [Protect application secrets](/azure/well-architected/security/application-secrets) (WAF guide)<br>• [Secure networking](/azure/well-architected/security/networking) (WAF guide) |
+| Operational Excellence | • [Upgrade .NET version](/dotnet/core/install/upgrade) (.NET Guide)<br>• [Adopt infrastructure as code](/azure/well-architected/operational-excellence/infrastructure-as-code-design) (WAF guide)<br>• [Instrument application](/azure/well-architected/operational-excellence/instrument-application) (WAF guide)<br>• [Collect app data](/azure/well-architected/operational-excellence/observability#application-data) (WAF guide)<br>• [Task automation](/azure/well-architected/operational-excellence/automate-tasks) (WAF guide)<br>• [Safe deployment practices](/azure/well-architected/operational-excellence/safe-deployments) (WAF guide) |
+| Cost optimization | • [Optimize flow costs](/azure/well-architected/cost-optimization/optimize-flow-costs) (WAF guide)<br>• [Optimize data costs](/azure/well-architected/cost-optimization/optimize-data-costs) (WAF guide)<br>• [Optimize code costs](/azure/well-architected/cost-optimization/optimize-code-costs) (WAF guide)<br>• [Reduce workload demand](/azure/well-architected/cost-optimization/optimize-scaling-costs#reduce-demand) (WAF guide)<br>• [Optimize development environments](/azure/well-architected/cost-optimization/optimize-personnel-time#optimize-the-development-environment) (WAF guide) |
+| Performance efficiency | • [Design application code to scale](/azure/well-architected/performance-efficiency/scale-partition#design-application-to-scale) (WAF guide)<br>• [Partition datasets](/azure/well-architected/performance-efficiency/scale-partition#partition-workload) (WAF guide)<br>• [Optimize code performance](/azure/well-architected/performance-efficiency/optimize-code-infrastructure#optimize-code-performance) (WAF guide)<br>• [Optimize data performance](/azure/well-architected/performance-efficiency/optimize-data-performance) (WAF guide)<br>• [Prioritize critical flows](/azure/well-architected/performance-efficiency/prioritize-critical-flows) (WAF guide) |
 
 ## Rearchitect
 
