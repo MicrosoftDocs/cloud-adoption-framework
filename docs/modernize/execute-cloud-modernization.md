@@ -65,7 +65,7 @@ Once your modernized solution has passed all tests in the non-prod environment, 
 
 Production deployment is the climax of the modernization effort. Depending on your chosen strategy (in-place vs parallel), the steps differ. Before executing, double-check that all preparation steps above have been done: stakeholders informed, freeze in effect, backups taken, monitoring on standby.
 
-### Execute modernization in-place
+### Deploy the modernization in-place
 
 1. **Schedule a maintenance window.** If the changes require any downtime or running scripts that lock resources (like a DB schema migration), do it in a pre-announced maintenance window. Ensure all users are off the system at that time. Having a clear window also gives you a target to finish the deployment or to decide on rollback if you run out of time.
 
@@ -77,7 +77,7 @@ Production deployment is the climax of the modernization effort. Depending on yo
 
 5. **Maintain data consistency during deployment.** In-place deployments preserve existing data endpoints while potentially modifying data schemas. Apply database schema changes in backward-compatible ways to support both old and new application versions during canary releases. Use database migration scripts that add new columns or tables without removing existing structures until deployment completes successfully.
 
-### Deploy modernization to a parallel environment
+### Deploy the modernization to a parallel environment
 
 1. **Create the parallel production environment.** Using the IaC templates, create the new production environment in Azure that mirrors what you tested. This includes all compute, networking, storage, etc. It should be up and running but currently with no user traffic. Ensure things like network security groups, firewalls, identity (managed identities or service principals), and monitoring are all configured as needed (basically repeat the test env setup in prod subscription).
 
