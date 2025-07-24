@@ -3,7 +3,7 @@ title: Prepare your organization for the cloud
 description: Choose and implement a cloud operating model that distributes Azure responsibilities across your organization. Plan governance, security, and operations teams while selecting centralized, shared, or decentralized models based on organizational size and maturity.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 07/15/2025
+ms.date: 08/15/2025
 ms.topic: conceptual
 ---
 
