@@ -17,7 +17,7 @@ Modernized workloads require specific Azure configurations to achieve optimal pe
 
 1. **Apply Azure Advisor recommendations systematically.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload monitoring data and provides actionable recommendations across cost, performance, reliability, and security. Review the recommendations weekly and implement critical changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
 
-2. **Implement service-specific optimization settings.** Each Azure service has unique tuning parameters. Use the Azure Well-Architected Framework [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure
+2. **Implement service-specific optimization settings.** Each Azure service has unique tuning parameters. Use the Azure Well-Architected Framework [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure.
 
 3. **Address security configuration gaps immediately.** [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) identifies security misconfigurations and compliance gaps specific to Azure services. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
 

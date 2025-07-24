@@ -80,7 +80,7 @@ After resolving compatibility issues, ensure your workloads function correctly i
 
 ## Create deployment documentation
 
-[!INCLUDE [Steps to create deployment documentation](./includes/create-reusable-infrastructure.md)]
+[!INCLUDE [Steps to create deployment documentation](./includes/create-deployment-documentation.md)]
 
 ## Next step
 
