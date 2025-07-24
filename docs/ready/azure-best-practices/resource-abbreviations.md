@@ -70,6 +70,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
 | Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
+| Fabric Capacity | `Microsoft.Fabric/capacities` | `fc` |
 | HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop` |
 | HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase` |
 | HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka` |
