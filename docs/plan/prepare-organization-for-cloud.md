@@ -15,9 +15,9 @@ A successful cloud journey requires more than technical readiness. It demands st
 
 Every organization’s cloud journey is different. Startups often begin cloud-native, while enterprises must assess and migrate existing workloads. Knowing your starting point helps you navigate the Cloud Adoption Framework (CAF) effectively.
 
-1. **Build cloud-native.** If you’re a startup with no existing workloads, you build your business cloud-native from the ground up. This approach fosters rapid development using cloud-native design. You follow CAF Plan, Ready, and Innovate to create cloud-native apps.
+1. **Build cloud-native.** If you’re a startup with no existing workloads, you build your business cloud-native from the ground up. This approach fosters rapid development using cloud-native design. You follow CAF Plan, [CAF Ready](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources), and [CAF Innovate](/azure/cloud-adoption-framework/innovate/) to create cloud-native apps.
 
-2. **Migrate existing workloads.** Enterprises must evaluate their existing IT estate and determine the best migration strategy for each workload based on business drivers. You prepare your enterprise environment using an Azure landing zone. Then you execute migration using CAF Migrate and modernize using CAF Modernize.
+2. **Migrate existing workloads.** Enterprises must evaluate their existing IT estate and determine the best migration strategy for each workload based on business drivers. You prepare your enterprise environment using an Azure landing zone in [CAF Ready](/azure/cloud-adoption-framework/ready/landing-zone/). Then you execute migration using [CAF Migrate](/azure/cloud-adoption-framework/migrate/plan-migration) and modernize using [CAF Modernize](/azure/cloud-adoption-framework/modernize/).
 
     :::image type="content" source="./images/cloud-adoption-planning-decision-tree.svg" alt-text="Diagram showing a cloud adoption decision tree. Startups should build cloud-native and follow CAF Plan, CAF Ready, and CAF Innovate (cloud-native development). Organizations with existing workloads should pick a migration strategy: retire, rehost, refactor, rearchitect, replace, rebuild, or retain. Base the decision on the business driver for each workload." lightbox="./images/cloud-adoption-planning-decision-tree.svg" border="false":::
 
