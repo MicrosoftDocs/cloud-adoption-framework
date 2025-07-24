@@ -9,15 +9,15 @@ ms.topic: conceptual
 
 # Execute modernizations in the cloud
 
-After careful planning, the next step in cloud modernization is implementation: developing the changes and deploying them to production in a safe, controlled way. This phase involves building the modernized components (in dev/test environments), rigorously testing all changes (functional, performance, security), automating infrastructure, preparing deployment materials, scheduling the go-live, and executing the production cutover with minimal risk. By following a structured, prescriptive approach, organizations can ensure their modernization delivers value without disrupting the business.
+Execution is where plans turn into reality. This involves preparing everyone for the change, doing the development work in non-production environments, testing thoroughly, and finally deploying to production in a controlled manner. The emphasis is on rigorous testing and safe deployment practices to minimize business disruption, given the changes can be significant.
 
 ## Prepare stakeholders for modernization
 
-Stakeholder preparation reduces deployment risk and ensures smooth transition during cloud modernization. Clear communication, change control, and support readiness maintain business continuity.
+Before you hit the deploy button, it’s critical to prepare all stakeholders and users for what’s coming. Surprises can lead to confusion or even operational issues. Key preparation steps include communication, change freezes (mentioned earlier), and support plans:
 
-1. **Announce the deployment schedule to all stakeholders.** Teams and users need clear communication about deployment timeline, scope, and expected impact. Use multiple communication channels such as email, Teams, and internal portals to ensure visibility. Include key dates such as change freeze start and go-live window to help stakeholders prepare appropriately.
+1. **Announce the deployment schedule to all stakeholders.** Well in advance, communicate to all affected parties when the modernization deployment will happen and what to expect. Include key dates such as change freeze start and go-live window to help stakeholders prepare appropriately. By setting expectations, users can plan around the downtime, and internal teams can be ready.
 
-2. **Implement a change freeze on source and dependent systems.** A change freeze establishes a stable baseline for deployment and testing by preventing configuration drift. Freeze code changes to legacy systems at least one week before deployment, allowing only critical severity-1 fixes. Pause automated data changes during the cutover window including scheduled imports, integrations, and background jobs. Extend the freeze to dependent systems when necessary to isolate variables and reduce risk. Clearly define the freeze window with specific start and end times to avoid confusion.
+2. **Implement a change freeze on source and dependent systems.** As planned earlier in governance, now is the time to actually enforce the freeze. Ensure no code changes, config tweaks, or other deployments occur on the system (and dependent systems) for some period before and during the deployment. This keeps the environment stable. Make sure all team members and any integrated third parties are aware. Clearly define the freeze window with specific start and end times to avoid confusion.
 
 3. **Communicate final user actions and post-deployment changes.** Users need advance notice of required actions before and after deployment to prevent workflow disruption. Instruct users to log off or save work before the cutover begins. Share new access URLs, authentication changes such as Microsoft Entra ID sign-in requirements, and updated workflows that affect daily operations. Provide support documentation and quick-start guides to reduce confusion on the first day.
 
@@ -27,31 +27,33 @@ Stakeholder preparation reduces deployment risk and ensures smooth transition du
 
 ## Develop modernizations in a nonproduction environment
 
-Development environments provide safe spaces to implement and validate modernization changes before production deployment. Proper environment setup and development practices reduce risk and accelerate delivery.
+All development and integration of the modernization changes should happen outside of production (in dev, test, staging environments). The guiding principle: build and test in prod-like environments first, so that when you deploy to prod, it’s already a known quantity.
 
-1. **Follow Well-Architected Framework principles during implementation.** Apply reliability, security, cost optimization, operational excellence, and performance efficiency guidance as you build modernization changes. Use Azure Advisor recommendations and architectural review processes to validate design decisions. This approach ensures that modernized components meet Azure best practices and operational standards.
+1. **Follow Well-Architected Framework principles during implementation.** As you code and configure the new changes, continually apply the best practices from Azure’s Well-Architected Framework (WAF). Use [Azure Advisor](azure/advisor/advisor-overview) recommendations and architectural review processes to validate design decisions. This approach ensures that modernized components meet Azure best practices and operational standards.
 
-2. **Create nonproduction environments that mirror production configuration.** Create Azure resources that match production topology using similar service types and configurations. Use Azure DevTest Labs to create consistent environments with cost controls and automated provisioning. For example, if production uses Azure SQL Database and App Service, use the same services in test environments with lower pricing tiers to maintain functional parity while controlling costs.
+2. **Create nonproduction environments that mirror production.** Spin up dev/test environments in Azure that are as close as possible to the prod setup. If prod will use certain Azure services, use the same in test (just perhaps smaller scale or lower SKU to save cost). The closer your testing env is to prod, the more confident you can be that test results will carry over to prod behavior.
 
-3. **Implement changes incrementally using source control practices.** Use Git repositories to manage code changes and enable continuous integration workflows. Break modernization work into small, testable increments that can be merged and validated frequently. For example, when refactoring code, create feature branches for individual components and run automated tests on each commit to catch issues early.
+3. **Implement changes incrementally with source control and CI/CD.** Treat the modernization effort like any other software project. Use Git or other source control for all code changes and infrastructure as code scripts. This provides history and ability to roll back code if needed. Break the work into small chunks (perhaps per feature or fix) and use feature branches. Merge changes frequently after code review. Set up continuous integration builds to run your test suites on each commit, so you catch issues early.
 
 ## Validate modernization changes with testing
 
-Testing validates that modernized components function correctly and perform as expected before production deployment. Comprehensive testing across multiple layers reduces risk and ensures business continuity during cutover.
+Testing is absolutely critical. Since modernization doesn’t add new features, the focus is on regression testing (nothing broke) and performance/security testing (it works better than before, not worse). You want to verify every aspect of the system in the test environment before touching production.
 
-1. **Execute unit and integration tests on all modified components.** Run automated unit tests on refactored code modules to verify isolated functionality works as expected. Execute integration tests across dependent services to confirm APIs, databases, and external systems communicate correctly. Rerun tests after each bug fix to prevent regressions and maintain system stability.
+1. **Execute unit and integration tests on all modified components.** Developers should create or update unit tests for any code that was refactored. Even if it’s legacy code, writing unit tests for critical functions can help catch if refactoring changed behavior inadvertently. Run the unit tests in your CI pipeline continuously. Additionally, run integration tests to ensure that components talk to each other correctly. After any bug fix, re-run relevant tests to ensure the bug is indeed resolved and nothing else broke (avoid regressions).
 
-2. **Conduct end-to-end functional testing to verify business processes.** Test all critical user workflows from sign-in to transaction completion using realistic scenarios. Execute regression tests to confirm unchanged functionality remains intact after modernization. Validate new features and updated interfaces meet business requirements without breaking existing processes.
+2. **Conduct end-to-end functional testing.**  In a staging or test environment, perform full workflow tests as if you are an end-user. This can be manual testing by QA or automated UI tests. Log into the application, perform major tasks. Ensure that unchanged functionality remains unchanged. Basically, simulate real usage to catch anything unit tests might miss.
 
-3. **Perform user acceptance testing with business stakeholders.** Engage business users to execute key workflows in the test environment and compare results with legacy system behavior. Capture feedback on usability, performance, and functionality gaps. Resolve critical user acceptance testing (UAT) issues before deployment and obtain formal sign-off from stakeholders to confirm business readiness.
+3. **Perform user acceptance testing (UAT) with stakeholders.** It’s wise to involve some actual end-users or business stakeholders in testing the modernized system before go-live. They might catch nuances that developers overlook. Capture feedback on usability, performance, and functionality gaps. Resolve critical user acceptance testing (UAT) issues before deployment and obtain formal sign-off from stakeholders to confirm business readiness.
 
-4. **Validate performance using load testing under realistic conditions.** Use Azure Load Testing to simulate expected production traffic patterns and measure response times, throughput, and resource utilization. Compare results against performance baselines from the source environment to identify any degradation. Conduct stress tests at 150% of expected load to determine system limits and validate resilience under pressure.
+4. **Validate performance using load testing under realistic conditions.** Modernization should ideally improve or maintain performance. Use load testing tools (such as Azure Load Testing) to simulate realistic usage patterns. Compare results against performance baselines from the source environment to identify any degradation. Conduct stress tests at 150% of expected load to determine system limits and validate resilience under pressure.
 
 5. **Execute security validation and compliance checks.** Run vulnerability scans on new code and container images to detect security risks. Perform compliance validation for regulated workloads using industry-specific tools. Use Azure Defender for Cloud to scan for infrastructure misconfigurations and validate security controls meet requirements.
 
 6. **Resolve all critical issues before production deployment.** Fix functional, performance, and security issues identified during testing phases. Confirm all tests pass and performance meets SLA requirements. Document any remaining low-priority issues and create remediation plans for post-deployment resolution.
 
 ## Create reusable infrastructure
+
+Once your modernized solution has passed all tests in the non-prod environment, you should capture the infrastructure setup and configurations as code, so it can be easily replicated in production and future environments. Reusable infrastructure means using infrastructure-as-code (IaC) templates and automation for consistency and speed.
 
 [!INCLUDE [Steps to create reusable infrastructure](../migrate/includes/create-reusable-infrastructure.md)]
 
