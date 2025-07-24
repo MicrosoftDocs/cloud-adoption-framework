@@ -1,5 +1,5 @@
 ---
-title: Prepare your organization for cloud modernization
+title: Prepare for cloud modernization
 description: Guide for preparing your organization for cloud modernization success. Learn to define modernization scope, assess team readiness and skills gaps, prioritize workloads using business value and technical risk matrices, and establish cross-team collaboration. Includes assessment frameworks, prioritization criteria, and actionable steps to ensure organizational alignment before executing modernization initiatives.
 author: stephen-sumner
 ms.author: ssumner
@@ -7,7 +7,7 @@ ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Prepare your organization for cloud modernization
+# Prepare for cloud modernization
 
 Cloud modernization is the practice of improving existing cloud-based workloads to better meet business. It aligns workloads with cloud best practices, without adding new features. This framework provides an end-to-end guide for organizations to plan and execute modernization across all their workload teams.
 
