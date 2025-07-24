@@ -11,6 +11,16 @@ ms.topic: conceptual
 
 Modernizing applications and workloads in the cloud requires careful planning and governance. Without a structured plan, even well-intentioned modernization efforts can falter, leading to budget overruns, expanded scope, or service disruptions. A well-planned approach, on the other hand, reduces risk and aligns the technical work with business objectives.
 
+## Choose a modernization strategy
+
+There are multiple ways to modernize a workload, ranging from light optimizations to deep redesign. The three primary strategies are replatform, refactor, and rearchitect. It’s common to even use a combination on a single system (for example, replatform the database and refactor some code). The key is to choose the right approach for each component based on your goals, timeline, and resources.
+
+    | Modernization strategy | Description | When to use | Pros | Cons |
+    |----------|-------------|-------------|------|------|
+    | **Replatform** | Shift workloads to managed cloud services with minimal code changes for immediate gains | Need fast wins with minimal disruption | Fast to implement; reduces maintenance as managed services handle more operations; improves reliability without code overhaul | Limited upside as core application remains the same; won't get new capabilities or major performance gains beyond what the new platform provides |
+    | **Refactor** | Optimize the code without changing its purpose by cleaning, reorganizing, and improving existing code to reduce technical debt | Technical debt slows delivery or causes issues | Improves maintainability, performance, and security of code; enables easier future enhancements | Requires code-level work and thorough testing; users typically see no immediate new features as improvements are mostly behind-the-scenes |
+    | **Rearchitect** | Redesign for cloud-native capabilities by fundamentally changing the architecture (break monolith into microservices, adopt serverless patterns) | Current design limits scale or innovation and you need to unlock new cloud benefits | Addresses scalability and agility at the root; enables new features and cloud services with major long-term benefits | Most complex and time-consuming approach; essentially rebuilds significant parts of the system, which demands advanced skills and careful planning to avoid disruption |
+
 ## Plan modernizations in phases
 
 1. **Divide modernizations into logical phases.** Don’t try to modernize everything in one go. Breaking the effort into phases is a best practice to reduce risk and deliver incremental value. Each phase should have clear goals and deliverables. The idea is to create manageable chunks of work that can be completed and validated one at a time. You can divide phases in different ways:

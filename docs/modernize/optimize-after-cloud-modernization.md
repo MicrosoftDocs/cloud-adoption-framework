@@ -9,11 +9,9 @@ ms.topic: conceptual
 
 # Optimize workloads after cloud modernization
 
-This article provides the authoritative process to optimize workloads after cloud modernization. Post-modernization optimization ensures workloads operate efficiently, securely, and cost-effectively in Azure while establishing the foundation for continuous improvement.
+When a modernization phase (or the entire project) is completed, the journey isn’t over. It’s time to validate that everything is working as intended and optimize the modernized system further. This ensures you truly realized the benefits and sets a culture of continuous improvement.
 
-## Configure workloads for Azure optimization
-
-Modernized workloads require specific Azure configurations to achieve optimal performance and cost efficiency. Azure-native services offer configuration options that differ significantly from traditional infrastructure approaches.
+## Optimize configurations for the cloud
 
 1. **Apply Azure Advisor recommendations systematically.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload monitoring data and provides actionable recommendations across cost, performance, reliability, and security. Review the recommendations weekly and implement critical changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
 
