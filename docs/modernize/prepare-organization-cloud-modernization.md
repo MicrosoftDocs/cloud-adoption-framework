@@ -27,27 +27,33 @@ Cloud modernization is the practice of improving existing workloads in the cloud
 
 ## Prioritize what workloads to modernize
 
-1. **Assess business value.** Rate each workload by its importance to the business. High-value workloads are those that drive revenue, serve customers, or are critical to operations. Rate technical risk on a consistent scale (say 1–5 or low/med/high). A high score means urgent technical need for improvement. For example:
+1. **Assess business value.** Rate each workload by its importance to the business. High-value workloads are those that drive revenue, serve customers, or are critical to operations. Rate technical risk on a consistent scale (say 1–5 or low/med/high). A high score means urgent technical need for improvement. Consider common indicators of high business value:
 
-    - **Revenue or mission-critical:** Systems that process sales transactions or support core business functions (downtime directly means lost money).
-    - **Customer experience:** customers or clients directly interact with (performance and reliability affect satisfaction).
-    - **Compliance or regulatory:** Systems subject to strict regulations or security requirements (failure to update could pose legal risks).
-    - **Broad internal dependency:** Platforms widely used by employees or other systems (if it’s slow or unstable, it drags down productivity across the org).
+    | Business value category | Examples |
+    |------------------------|----------|
+    | Revenue or mission-critical | Systems that process sales transactions or support core business functions (downtime directly means lost money) |
+    | Customer experience | Systems that customers or clients directly interact with (performance and reliability affect satisfaction) |
+    | Compliance or regulatory | Systems subject to strict regulations or security requirements (failure to update could pose legal risks) |
+    | Broad internal dependency | Platforms widely used by employees or other systems (if it's slow or unstable, it drags down productivity across the organization) |
 
 2. **Assess technical risk.** Independently, evaluate the technical state of each system. Essentially, figure out how much it needs modernization. Consider indicators of aging technology or inefficiency:
 
-    - **Technical debt:** Legacy code full of hacks or outdated frameworks that make it hard to update or scale.
-    - **Outdated technology:** An app running on an OS or database version nearing end of support.
-    - **High maintenance effort:** Systems that frequently break, require manual workarounds, or have rising support costs.
-    - **Frequent issues:** Chronic downtime, slow response, or inability to handle load spikes.
-    - **Limited scalability:** Architecture that can’t easily grow with demand without major rework.
+    | Technical risk category | Examples |
+    |------------------------|-----------------|
+    | Technical debt | Legacy code with workarounds, outdated frameworks, hard-to-modify architecture |
+    | Outdated technology | Operating systems or databases nearing end-of-support, deprecated programming languages |
+    | High maintenance effort | Frequent manual interventions, rising support costs, complex troubleshooting processes |
+    | Performance and reliability issues | Chronic downtime, slow response times, inability to handle load spikes |
+    | Limited scalability | Architecture that requires major rework to grow, manual scaling processes |
 
-3. **Identify urgent modernization triggers.** Be on the lookout for specific events or requirements that make modernization urgent. Even a workload that wasn’t top of list can shoot up in priority if a trigger occurs. Common triggers include:
+3. **Identify urgent modernization triggers.** Specific events or requirements can make modernization urgent, regardless of initial priority rankings. Monitor these triggers to adjust your modernization timeline:
 
-    - Security vulnerabilities: A newly discovered security hole in a legacy component might force immediate action to modernize that part.
-    - Impending end-of-support: If a platform or software will no longer be supported next year, that app jumps up the queue to avoid running an unsupported system.
-    - Business growth or new requirements: Rapid customer growth, entry into a new market, or integration needs can expose that an older system won’t keep up unless modernized.
-    - Repeated outages: If a particular service has caused multiple major incidents, it’s a sign that a foundational fix (modernization) is needed, not just patching.
+    | Trigger category | Examples |
+    |------------------|----------|
+    | Security vulnerabilities | Newly discovered security holes in legacy components, outdated encryption protocols, or compliance violations |
+    | End-of-support deadlines | Platform or software losing vendor support within 12 months, discontinued security patches |
+    | Business growth demands | Rapid customer growth exceeding system capacity, new market entry requirements, or integration needs |
+    | System reliability issues | Repeated outages, chronic performance problems, or escalating maintenance costs |
 
 4. **Prioritize workloads.** Combine the business value and technical risk assessments into a simple priority matrix.
 

@@ -11,72 +11,80 @@ ms.topic: conceptual
 
 ## Replatform
 
-☁️ Within Azure
-- VM-based components to Azure PaaS services
+### VM-based components to Azure PaaS
 
-🌐 Other Cloud to Azure
-- VM-based components to Azure PaaS services
-- Other cloud PaaS components to Azure PaaS services. See Cloud-to-Azure 
+- [Technology choices for Azure](/azure/architecture/guide/technology-choices/technology-choices-overview) (AAC guide)
+- [Reliable web app pattern](azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) (Architecture)
+
+### Other cloud to Azure replatform
+
+- [AWS to Azure PaaS](/azure/migration/migrate-from-aws) Migration guide
+- [Google cloud to Azure PaaS](/azure/migration/migrate-from-google-cloud) Migration guide
 
 ## Refactor
 
-Reliability
-- [Self-preservation](/azure/well-architected/reliability/self-preservation#application-design-guidance-and-patterns)
-- [Monitor applications](/azure/well-architected/reliability/monitoring-alerting-strategy#monitor-applications)
+### Reliability
 
-Security
-- [Protect application secrets](/azure/well-architected/security/application-secrets)
-- [Secure networking](/azure/well-architected/security/networking)
+- [Self-preservation](/azure/well-architected/reliability/self-preservation#application-design-guidance-and-patterns) WAF guide
+- [Monitor applications](/azure/well-architected/reliability/monitoring-alerting-strategy#monitor-applications) WAF guide
 
-Operational Excellence
-Update developer frameworks to use Azure SDKs
-- 5. **Modernize Azure operations.** Infrastructure-as-code and DevOps practices provide standardized, repeatable approaches to infrastructure management. Modern operations enable faster, safer changes and support innovation by allowing teams to quickly create replica test environments. You should adopt infrastructure-as-code to standardize operations and improve deployment consistency. Use Azure Verified Modules. These modules provide pre-tested, standardized infrastructure templates that follow Azure best practices. Azure Verified Modules reduce development time and ensure consistent deployments across environments. Integrate AI-powered development tools. Use GitHub Copilot and Azure Copilot to accelerate code generation and provide intelligent suggestions for infrastructure configurations. These tools help reduce manual coding effort and improve code quality. Establish CI/CD pipelines. Create automated deployment pipelines using Azure DevOps or GitHub Actions to ensure consistent, reliable deployments across all environments.
-- [Instrument application](/azure/well-architected/operational-excellence/instrument-application)
-- [Collect app data](/azure/well-architected/operational-excellence/observability#application-data)
-- [Task automation](/azure/well-architected/operational-excellence/automate-tasks)
-- [Safe deployment practices](/azure/well-architected/operational-excellence/safe-deployments)
+### Security
 
-Cost optimization
-- [Optimize flow costs](/azure/well-architected/cost-optimization/optimize-flow-costs)
-- [Optimize data costs](/azure/well-architected/cost-optimization/optimize-data-costs)
-- [Optimize code costs](/azure/well-architected/cost-optimization/optimize-code-costs)
-- [Reduce workload demand](/azure/well-architected/cost-optimization/optimize-scaling-costs#reduce-demand)
-- [Optimize development environments](/azure/well-architected/cost-optimization/optimize-personnel-time#optimize-the-development-environment)
+- [Protect application secrets](/azure/well-architected/security/application-secrets) WAF guide
+- [Secure networking](/azure/well-architected/security/networking) WAF guide
 
-Performance efficiency
-- [Design application code to scale](/azure/well-architected/performance-efficiency/scale-partition#design-application-to-scale)
-- [Partition datasets](/azure/well-architected/performance-efficiency/scale-partition#partition-workload)
-- [Optimize code performance](/azure/well-architected/performance-efficiency/optimize-code-infrastructure#optimize-code-performance)
-- [Optimize data performance](/azure/well-architected/performance-efficiency/optimize-data-performance)
-- [Prioritize critical flows](/azure/well-architected/performance-efficiency/prioritize-critical-flows)
+### Operational Excellence
+
+- [Upgrate .NET version](/dotnet/core/install/upgrade) .NET Guide
+- [Adopt infrastructure as code](/azure/well-architected/operational-excellence/infrastructure-as-code-design) WAF guide
+- [Instrument application](/azure/well-architected/operational-excellence/instrument-application) WAF guide
+- [Collect app data](/azure/well-architected/operational-excellence/observability#application-data) WAF guide
+- [Task automation](/azure/well-architected/operational-excellence/automate-tasks) WAF guide
+- [Safe deployment practices](/azure/well-architected/operational-excellence/safe-deployments) WAF guide
+
+### Cost optimization
+
+- [Optimize flow costs](/azure/well-architected/cost-optimization/optimize-flow-costs) WAF guide
+- [Optimize data costs](/azure/well-architected/cost-optimization/optimize-data-costs) WAF guide
+- [Optimize code costs](/azure/well-architected/cost-optimization/optimize-code-costs) WAF guide
+- [Reduce workload demand](/azure/well-architected/cost-optimization/optimize-scaling-costs#reduce-demand) WAF guide
+- [Optimize development environments](/azure/well-architected/cost-optimization/optimize-personnel-time#optimize-the-development-environment) WAF guide
+
+### Performance efficiency
+
+- [Design application code to scale](/azure/well-architected/performance-efficiency/scale-partition#design-application-to-scale) WAF guide
+- [Partition datasets](/azure/well-architected/performance-efficiency/scale-partition#partition-workload) WAF guide
+- [Optimize code performance](/azure/well-architected/performance-efficiency/optimize-code-infrastructure#optimize-code-performance) WAF guide
+- [Optimize data performance](/azure/well-architected/performance-efficiency/optimize-data-performance) WAF guide
+- [Prioritize critical flows](/azure/well-architected/performance-efficiency/prioritize-critical-flows) WAF guide
 
 ## Rearchitect
 
-**Rearchitecting involves fundamental changes to application architecture and infrastructure topology.** This modernization technique redesigns how components interact, communicate, and deploy to improve scalability, reliability, and maintainability. You should consider rearchitecting when current architecture limits growth or creates operational challenges.
+Decouple tightly coupled components
+[Microservices architecture style](/azure/architecture/guide/architecture-styles/microservices)
+[Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) Architecture
 
-Examples of rearchitecting include:
+Redesign deployment topology
+[highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)
+[Multi-region load balancing with Traffic Manager](/azure/architecture/high-availability/reference-architecture-traffic-manager-application-gateway) Architecture
 
-- **Decouple tightly coupled components.** Transform direct component dependencies into loosely coupled services. For example, replace a web application where the frontend directly calls the backend and database with an API gateway that abstracts backend services behind interfaces.
+Consolidate services
+[Consolidation](/azure/well-architected/cost-optimization/consolidation) WAF Guide
 
-- **Redesign deployment topology.** Change how and where services deploy to improve availability and performance. For example, move from single-region deployment to multi-region deployment across multiple availability zones.
+Replace synchronous communication with asynchronous messaging
+[Asynchronous messaging options](/azure/architecture/guide/technology-choices/messaging) AAC Guide
+[Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) Architecture
 
-- **Consolidate or split services.** Reorganize service boundaries to improve cohesion and reduce complexity. For example, consolidate multiple microservices with overlapping responsibilities into fewer, more cohesive services.
+Transform monolithic applications into microservices.
+[Design infrastructure to scale](/azure/well-architected/performance-efficiency/scale-partition#design-infrastructure-to-scale) WAF Guide
+[Microservices architecture](/azure/architecture/guide/architecture-styles/microservices) AAC Guide
+[Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) Architecture
 
-- **Replace synchronous communication with asynchronous messaging.** Change how services communicate to improve resilience and scalability. For example, replace direct method calls or REST APIs with message brokers like Azure Service Bus for asynchronous communication.
+Add caching layers
+[Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) Architecture
+[Use caching](/azure/well-architected/performance-efficiency/optimize-data-performance#use-caching) WAF Guide
 
-- **Transform monolithic applications into microservices.** Break large, monolithic applications into smaller, independently deployable services that can scale and evolve separately.
-    - WAF
-        - [Design infrastructure to scale](/azure/well-architected/performance-efficiency/scale-partition#design-infrastructure-to-scale)
-    - AAC
-        - [Microservices architecture](/azure/architecture/guide/architecture-styles/microservices)
-        - [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance)
-
-- **Add caching layers.** Introduce caching between application components and data stores to improve performance. For example, add Azure Cache for Redis between applications and databases to reduce direct database hits.
-
-- **Transition from batch to stream processing.** Change data processing patterns to reduce latency and improve real-time capabilities. For example, replace batch processing with long latency with stream processing using Azure Stream Analytics for near real-time insights.
-
-- **Adopt event-driven architecture.** Replace polling-based integrations with event-driven patterns that respond to changes as they occur.
-
-- **Implement purpose-built databases.** Replace single databases handling multiple workload types with specialized databases optimized for specific use cases. For example, use Azure SQL Database for transactional data and Azure Cosmos DB for high-throughput reads.
-
-- **Replace synchronous API calls with asynchronous messaging.** Change inter-service communication from blocking synchronous calls to non-blocking asynchronous messaging using Azure Service Bus queues or Azure Event Grid.
+Data architecture
+[Big data architecture style](/azure/architecture/guide/architecture-styles/big-data) AAC Guide
+[Event-driver architecture style](/azure/architecture/guide/architecture-styles/event-driven) AAC Guide
+[Use polyglot persistence](/azure/well-architected/performance-efficiency/optimize-data-performance#use-polyglot-persistence) (WAF Guide)
