@@ -81,7 +81,7 @@ For several reasons, the CCoE then has trouble providing a monolithic managed se
 
 When adopting cloud technologies, have the IT department gain firsthand experience with the cloud by starting with IT workloads. Use the [Microsoft Cloud Adoption Framework for Azure](../index.yml) to identify your [first adoption project](../strategy/motivations.md).
 
-Choose the right [cloud operating model](../plan/prepare-organization-for-cloud.md#choose-a-cloud-operating-model). Consider adopting only one major public cloud provider at the start, because all major platforms differ significantly in setup, management, and usage.
+Choose the right [cloud operating model](../plan/prepare-organization-for-cloud.md#choose-how-to-manage-the-cloud). Consider adopting only one major public cloud provider at the start, because all major platforms differ significantly in setup, management, and usage.
 
 Use SaaS solutions as much as possible for IT tooling, such as:
 
