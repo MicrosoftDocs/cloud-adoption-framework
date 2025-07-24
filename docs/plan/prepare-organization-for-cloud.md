@@ -23,19 +23,23 @@ Every organization’s cloud journey is different. Startups often begin cloud-na
 
 ## Choose how to manage the cloud
 
-How you operate the cloud (cloud operating model) defines how teams manage responsibilities and collaborate. Choosing the right model ensures alignment with business goals, accelerates delivery, clarifies accountability, and reduces operational overhead. As your organization grows, reassess whether your current model still supports your goals. Transition from centralized to shared or hybrid models as needed. Evaluate team maturity to determine where hybrid models add value without compromising governance. For example, some teams might benefit from decentralized autonomy even within a broader centralized or shared framework.
-
-| Operations approach | Best For | Responsibilities | Pros | Cons |
-|-----------------|----------|------------------|------|------|
-| Centralized | Small organizations, new adopters, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
-| Shared Management | Mid-size or enterprise estates, hybrid, or multicloud | Platform teams build the [Azure landing zone](../ready/index.md), manages shared services, and governance guardrails. <br> Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
-| Decentralized | Tech-savvy startups, innovation programs | Each team owns every cloud task | High speed and autonomy | Weaker standardization, higher risk of security gaps |
+How you operate the cloud (cloud operating model) defines how teams manage responsibilities and collaborate. Choosing the right model ensures alignment with business goals, accelerates delivery, clarifies accountability, and reduces operational overhead.
 
 1. **Understand centralized operations.** A centralized model consolidates governance, security, and operations into a single team. It ensures consistent policy enforcement and is ideal for small organizations, startups, or regulated industries. However, it can become a bottleneck as adoption scales. Regularly assess and adjust responsibilities as needed.
 
 1. **Understand shared management operations.** In a shared management model, platform and workload teams collaborate. A governance team defines cloud policies. Platform teams build and maintain the Azure landing zone to enforce cloud policies. Workload teams operate autonomously within those guardrails. This model suits mid-size and enterprise organizations with hybrid or multicloud environments. See [Shared management operating model](./shared-management-operating-model.md).
 
 1. **Understand decentralized operations.** Decentralized models give teams full ownership of their cloud workloads, including governance and operations. This approach suits highly skilled teams in startups or innovation programs. To avoid security and compliance risks, evaluate team capabilities, provide training, and conduct regular audits.
+
+1. **Understand hybrid approaches.** Some teams might benefit from decentralized autonomy even if the broader organization uses a centralized or shared model. You must evaluate team maturity to determine where hybrid models add value without compromising governance.
+
+1. **Evolve operations as needed.** As your organization scales, reassess whether your current operations approach supports your goals. Transition from centralized to shared or hybrid models as needed.
+
+| Operations approach | Best for | Responsibilities | Pros | Cons |
+|-----------------|----------|------------------|------|------|
+| Centralized | Small organizations, new adopters, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
+| Shared Management | Mid-size or enterprise estates, hybrid, or multicloud | Platform teams build the [Azure landing zone](../ready/index.md), manages shared services, and governance guardrails. <br> Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
+| Decentralized | Tech-savvy startups, innovation programs | Each team owns every cloud task | High speed and autonomy | Weaker standardization, higher risk of security gaps |
 
 ## Plan your cloud responsibilities
 
