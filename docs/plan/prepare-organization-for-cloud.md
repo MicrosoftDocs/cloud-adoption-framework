@@ -57,7 +57,7 @@ Clearly defined responsibilities are essential for consistent governance, securi
 
 ## Document cloud responsibilities
 
-Well-documented cloud responsibilities is essential for clarity, accountability, and operational consistency. It defines who owns what across governance, security, and operations, internally and with partners.
+Well-documented cloud responsibilities are essential for clarity, accountability, and operational consistency. It defines who owns what across governance, security, and operations, internally and with partners.
 
 1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to eliminate ambiguity and ensure comprehensive coverage. Include both primary and backup owners to maintain continuity during absences or transitions. This mapping helps teams understand their roles and reduces the risk of missed tasks or duplicated efforts.
 
@@ -65,7 +65,7 @@ Well-documented cloud responsibilities is essential for clarity, accountability,
 
 3. **Communicate the responsibilities to all stakeholders.** Ensure that every team understands its role and how it interacts with others. Provide training, documentation, and onboarding materials to reinforce clarity and support collaboration. This transparency helps teams work effectively within the operations approach and reduces friction across functions.
 
-4. **Review responsibilities regularly.** As your Azure environment grows and team capabilities evolve, revisit your responsibilities assignments to ensure they remains aligned with business goals and operational needs.
+4. **Review responsibilities regularly.** As your Azure environment grows and team capabilities evolve, revisit your responsibilities assignments to ensure they remain aligned with business goals and operational needs.
 
 ## Azure tools and resources
 
