@@ -1,6 +1,6 @@
 ---
 title: Modernization in the cloud replatform, refactor, rearchitect
-description: Learn how to do modernization in the cloud replatform, refactor, rearchitect
+description: Learn how to implement cloud modernization through replatforming, refactoring, and rearchitecting strategies to improve workload performance, reliability, and maintainability.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025

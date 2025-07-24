@@ -29,11 +29,11 @@ Operational validation ensures modernized workloads meet business requirements a
 
 2. **Establish cost monitoring and controls.** Use Microsoft Cost Management to track spending patterns and identify cost optimization opportunities. Set up budget alerts and spending limits to prevent unexpected cost increases. Review the resource utilization weekly and rightsize underutilized components.
 
-3. **Test backup and recovery procedures.** Validate that Azure Backup captures all critical data and that restore procedures meet defined recovery time objectives. Perform quarterly restore tests to confirm data integrity and recovery processes. Document the recovery procedures and update them based on test results.
+3. **Test backup and recovery procedures.** Validate that Azure Backup captures all critical data and that restore procedures meet defined recovery time objectives and recovery point objectives. Perform quarterly restore tests to confirm data integrity and recovery processes. Document the recovery procedures and update them based on test results.
 
 ## Collect user feedback and measure outcomes
 
-User feedback provides essential validation of workload performance and identifies improvement opportunities that automated monitoring can't detect. Structured feedback collection ensures continuous workload optimization.
+User feedback provides essential validation of workload performance and identifies improvement opportunities that automated monitoring can't detect. Structured feedback collection supports continuous workload optimization.
 
 1. **Gather structured user feedback regularly.** Use Microsoft Forms or similar tools to collect feedback on performance, reliability, and usability. Conduct monthly surveys and analyze support ticket patterns to identify recurring issues. Focus on business-critical workflows and user experience pain points.
 
