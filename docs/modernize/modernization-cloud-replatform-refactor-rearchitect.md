@@ -1,6 +1,6 @@
 ---
 title: Modernization guidance to replatform, refactor, rearchitect
-description: Find modernization guidance to replatform, refactor, rearchitect workloads in the cloud
+description: Comprehensive modernization guidance for cloud workloads using three core strategies - replatform to Azure PaaS services, refactor application code for cloud optimization, and rearchitect for scalability and cloud-native capabilities
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025

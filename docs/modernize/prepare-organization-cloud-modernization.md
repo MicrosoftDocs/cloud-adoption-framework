@@ -1,6 +1,6 @@
 ---
 title: Prepare your organization for cloud modernization
-description: Learn how to define modernization scope, prioritize workloads, establish success metrics, and assess organizational readiness to deliver measurable business value through Azure cloud modernization.
+description: Guide for preparing your organization for cloud modernization success. Learn to define modernization scope, assess team readiness and skills gaps, prioritize workloads using business value and technical risk matrices, and establish cross-team collaboration. Includes assessment frameworks, prioritization criteria, and actionable steps to ensure organizational alignment before executing modernization initiatives.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025

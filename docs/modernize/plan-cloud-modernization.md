@@ -1,6 +1,6 @@
 ---
 title: Plan your cloud modernization
-description: Learn how to plan cloud modernization with structured change management, scope control, and phased deployment strategies to reduce risk and align technical work with business objectives.
+description: Comprehensive guide to planning cloud modernization projects with structured approaches for choosing modernization strategies (replatform, refactor, rearchitect), implementing phased execution, establishing governance frameworks, defining deployment strategies, mitigating risks, and securing stakeholder approval to ensure successful workload transformation.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025

@@ -1,6 +1,6 @@
 ---
 title: Optimize workloads after cloud modernization
-description: Establish efficient operations, validate configurations, and continuously improve modernized workloads in Azure
+description: Learn how to optimize Azure workloads after cloud modernization by validating configurations, establishing monitoring and cost controls, measuring outcomes, and implementing continuous improvement practices for long-term success.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/15/2025

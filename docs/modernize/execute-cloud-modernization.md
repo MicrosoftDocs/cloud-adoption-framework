@@ -1,6 +1,6 @@
 ---
 title: Execute modernizations in the cloud
-description: Execute modernizations in the cloud
+description: Learn how to execute cloud modernization projects successfully. This article provides step-by-step guidance for preparing stakeholders, developing in nonproduction environments, conducting comprehensive testing, creating reusable infrastructure as code, and deploying to production with proper validation and stabilization support. Includes specific instructions for both in-place and parallel deployment strategies with Azure-native tools and services.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025
