@@ -1,6 +1,6 @@
 ---
 title: Prepare your organization for the cloud
-description: Choose and implement a cloud operating model that distributes Azure responsibilities across your organization. Plan governance, security, and operations teams while selecting centralized, shared, or decentralized models based on organizational size and maturity.
+description: Choose and implement a cloud operations approach that distributes Azure responsibilities across your organization. Plan governance, security, and operations teams while selecting centralized, shared, or decentralized models based on organizational size and maturity.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/15/2025
@@ -27,7 +27,7 @@ How you operate the cloud (cloud operating model) defines how teams manage respo
 
 1. **Understand centralized operations.** A centralized model consolidates governance, security, and operations into a single team. It ensures consistent policy enforcement and is ideal for small organizations, startups, or regulated industries. However, it can become a bottleneck as adoption scales. Regularly assess and adjust responsibilities as needed.
 
-1. **Understand shared management operations.** In a shared management model, platform and workload teams collaborate. A governance team defines cloud policies. Platform teams build and maintain the Azure landing zone to enforce cloud policies. Workload teams operate autonomously within those guardrails. This model suits mid-size and enterprise organizations with hybrid or multicloud environments. See [Shared management operating model](./shared-management-operating-model.md).
+1. **Understand shared management operations.** In a shared management model, platform and workload teams collaborate. A governance team defines cloud policies. Platform teams build and maintain the Azure landing zone to enforce cloud policies. Workload teams operate autonomously within those guardrails. This model suits mid-size and enterprise organizations with hybrid or multicloud environments. See [Shared management operations approach](./shared-management-operating-model.md).
 
 1. **Understand decentralized operations.** Decentralized models give teams full ownership of their cloud workloads, including governance and operations. This approach suits highly skilled teams in startups or innovation programs. To avoid security and compliance risks, evaluate team capabilities, provide training, and conduct regular audits.
 
@@ -35,7 +35,7 @@ How you operate the cloud (cloud operating model) defines how teams manage respo
 
 1. **Evolve operations as needed.** As your organization scales, reassess whether your current operations approach supports your goals. Regularly reassess whether your current model supports your strategic goals and operational needs.
 
-1. **Engage business and IT leadership.** Successful cloud operations require alignment across the organization. Engage both business and IT leaders to ensure the operating model reflects shared priorities. This collaboration fosters buy-in, secures necessary resources, and ensures the model has the authority to drive change.
+1. **Engage business and IT leadership.** Successful cloud operations require alignment across the organization. Engage both business and IT leaders to ensure the operations approach reflects shared priorities. This collaboration fosters buy-in, secures necessary resources, and ensures the model has the authority to drive change.
 
 | Operations approach | Best for | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
@@ -63,7 +63,7 @@ Well-documented cloud responsibilities is essential for clarity, accountability,
 
 2. **Define partner roles.** Clearly outline the scope of responsibilities for strategic [partners](https://partner.microsoft.com/partnership/find-a-partner). Specify which functions partners own, such as platform operations, workload management, or innovation initiatives. Ensure these roles complement internal team responsibilities without overlap.
 
-3. **Communicate the responsibilities to all stakeholders.** Ensure that every team understands its role and how it interacts with others. Provide training, documentation, and onboarding materials to reinforce clarity and support collaboration. This transparency helps teams work effectively within the operating model and reduces friction across functions.
+3. **Communicate the responsibilities to all stakeholders.** Ensure that every team understands its role and how it interacts with others. Provide training, documentation, and onboarding materials to reinforce clarity and support collaboration. This transparency helps teams work effectively within the operations approach and reduces friction across functions.
 
 4. **Review responsibilities regularly.** As your Azure environment grows and team capabilities evolve, revisit your responsibilities assignments to ensure they remains aligned with business goals and operational needs.
 
@@ -72,10 +72,10 @@ Well-documented cloud responsibilities is essential for clarity, accountability,
 | Category | Tool | Description |
 |----------|------|-------------|
 | Partner solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and expert MSPs for specialized cloud expertise. |
-| Operating model reference | [Shared management operating model](./shared-management-operating-model.md) | Provides detailed guidance on implementing the shared responsibility model for enterprise organizations. |
+| Operations approach | [Shared management operations approach](./shared-management-operating-model.md) | Provides detailed guidance on implementing the shared responsibility model for enterprise organizations. |
 | Governance | [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team) | Offers guidance on forming a team to assess risks, document policies, and enforce governance standards. |
 | Security | [Security teams, roles, and functions](/azure/cloud-adoption-framework/secure/teams-roles) | Details roles and responsibilities for integrating security into the cloud lifecycle. |
-| Operations | [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) | Provides a checklist for preparing operational processes to manage Azure environments effectively. |
+| Manage | [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) | Provides a checklist for preparing operational processes to manage Azure environments effectively. |
 
 ## Next steps
 
