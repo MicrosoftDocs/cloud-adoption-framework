@@ -9,43 +9,45 @@ ms.topic: conceptual
 
 # Optimize workloads after cloud modernization
 
-When a modernization phase (or the entire project) is completed, the journey isn’t over. It’s time to validate that everything is working as intended and optimize the modernized system further. This ensures you truly realized the benefits and sets a culture of continuous improvement.
+After completing a modernization phase or the entire project, it’s time to ensure you’re getting the full benefits and to embed a culture of continuous improvement. The modernized system might have new capabilities (like auto-scaling, or new performance tuning toggles), use them. Also, verify that everything is configured correctly for production conditions, and then start looking at what more can be optimized. Think of this stage as closing the feedback loop: measure outcomes, optimize further, and make sure the organization capitalizes on the modernization.
 
 ## Optimize configurations for the cloud
 
+Modernizing an app is not a one-and-done. You often can further fine-tune once it’s running in Azure:
+
 1. **Apply Azure Advisor recommendations systematically.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload monitoring data and provides actionable recommendations across cost, performance, reliability, and security. Review the recommendations weekly and implement critical changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
 
-2. **Implement service-specific optimization settings.** Each Azure service has unique tuning parameters. Use the Azure Well-Architected Framework [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure.
+2. **Tweak service-specific settings.** Each Azure service has its own configuration settings and best practices. Use the Azure Well-Architected Framework's [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices.
 
-3. **Address security configuration gaps immediately.** [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) identifies security misconfigurations and compliance gaps specific to Azure services. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
+3. **Address security configuration gaps immediately.** Run Azure security assessment tools again now that system is in steady state. [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to see if there are any high or medium security recommendations for your resources. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
 
 ## Validate operational readiness
 
-Operational validation ensures modernized workloads meet business requirements and technical objectives. This validation covers monitoring, cost management, and data protection capabilities essential for production operations.
+Make sure the operational aspects (monitoring, cost management, backup) are fully in place:
 
-1. **Verify monitoring completeness and accuracy.** Confirm that Azure Monitor collects complete monitoring data from all workload components. Validate that metrics, logs, and traces flow correctly and alert rules trigger under expected conditions. Test dashboard accuracy and update visualizations to reflect current architecture.
+1. **Verify monitoring coverage and accuracy.** Double-check that Azure Monitor is collecting all the logs, metrics, and traces you need. For example, if you introduced new components, ensure you set up logging for those components. Ensure alert rules are firing appropriately. You might do some chaos testing, like remove a service in a test environment, to see if alerts trigger. Update dashboards to reflect the new architecture. Add the new components, remove old ones. The operations team should have a full view of the system health at all times.
 
-2. **Establish cost monitoring and controls.** Use Microsoft Cost Management to track spending patterns and identify cost optimization opportunities. Set up budget alerts and spending limits to prevent unexpected cost increases. Review the resource utilization weekly and rightsize underutilized components.
+2. **Establish cost monitoring and controls.** Use [Microsoft Cost Management](/azure/cost-management-billing/costs/overview-cost-management) to track spending patterns and identify cost optimization opportunities. Set up budget alerts and spending limits to prevent unexpected cost increases. Review the resource utilization weekly and rightsize underutilized components.
 
-3. **Test backup and recovery procedures.** Validate that Azure Backup captures all critical data and that restore procedures meet defined recovery time objectives and recovery point objectives. Perform quarterly restore tests to confirm data integrity and recovery processes. Document the recovery procedures and update them based on test results.
+3. **Test backup and recovery procedures.**  Ensure your backup solutions are working. If using [Azure Backup](/azure/backup/backup-overview) or database point-in-time restore, do a test restore of a backup to confirm you can recover data successfully. Document the recovery time objective (RTO) and recovery point objective (RPO) that you achieved. If it doesn’t meet the business need, adjust the backup frequency or method. Make sure all critical data is indeed being backed up (new databases, new storage accounts are included in a backup policy). This check is vital for disaster recovery readiness, which is part of being well-architected.
 
 ## Collect user feedback and measure outcomes
 
-User feedback provides essential validation of workload performance and identifies improvement opportunities that automated monitoring can't detect. Structured feedback collection supports continuous workload optimization.
+One way to gauge success and find further improvement opportunities is through direct feedback and concrete metrics
 
-1. **Gather structured user feedback regularly.** Use Microsoft Forms or similar tools to collect feedback on performance, reliability, and usability. Conduct monthly surveys and analyze support ticket patterns to identify recurring issues. Focus on business-critical workflows and user experience pain points.
+1. **Gather structured user feedback regularly.**  After some time running the modernized system, solicit feedback from end users or internal users. Use surveys or feedback forms. Check the support ticket queue. For internal teams, have retrospective meetings. This qualitative data can highlight things monitoring might not.
 
 2. **Track and resolve feedback systematically.** Document all feedback in Azure DevOps or GitHub Issues and categorize by severity and business value. Assign ownership for each issue and establish resolution timelines based on priority. Communicate progress and outcomes to stakeholders monthly.
 
-3. **Measure and communicate modernization benefits.** Track key metrics such as performance improvements, cost reductions, and availability increases. Use Azure Monitor and Cost Management data to quantify outcomes. Share measurable results with business stakeholders quarterly to demonstrate modernization value.
+3. **Measure the actual outcomes versus goals.** Remember those success metrics and ROI projections? Now is the time to see if you achieved them. Compile these results and communicate them to stakeholders. It’s important to close the loop and show the value realized (or identify shortfalls to address). For example, "We have achieved a 25% improvement in page load times, leading to a 5% increase in user engagement, and we’re on track to save $250k annually in costs."
 
 ## Establish continuous modernization practices
 
-Continuous optimization ensures modernized workloads adapt to changing business requirements and take advantage of new Azure capabilities. Regular reviews identify modernization opportunities and maintain operational excellence.
+Modernization isn’t a one-time project; it can be an ongoing part of IT strategy. To avoid falling into a new legacy trap, build continuous improvement cycles.
 
-1. **Schedule quarterly workload reviews.** Use the Azure Well-Architected Framework to assess workloads across all five pillars. Document findings and create improvement backlogs for each workload. Integrate review results into architectural decision records and update documentation.
+1. **Schedule regular workload reviews.** Every few months, do a [Well-Architected review](/assessments/azure-architecture-review/) or health check for the modernized workloads. Cloud services evolve quickly. Perhaps a new feature could further optimize your system, or usage patterns changed and require tweaks. Document any new gaps or recommendations from these periodic reviews and plan to implement them.
 
-2. **Implement automated optimization where possible.** Use Azure Automation and Azure Policy to enforce optimization policies consistently. Configure autoscaling rules based on workload patterns and use Microsoft Cost Management alerts to identify cost anomalies. Deploy infrastructure-as-code templates that include optimization configurations.
+2. **Automate optimization wherever possible.** Use Azure Policy to enforce best practices, like requiring tagging, or blocking insecure configurations, so that drift doesn’t occur over time. Implement auto-scaling rules so performance tuning happens on the fly. Set up cost anomaly alerts through Cost Management. By automating, you ensure the system stays optimized without constant human oversight.
 
 3. **Share outcomes and best practices.** Document all successful optimization patterns and share them across teams. Create playbooks for common optimization scenarios and maintain a knowledge base of lessons learned. Contribute optimization insights to organizational cloud adoption practices.
 
