@@ -15,9 +15,9 @@ A successful cloud journey requires more than technical readiness. It demands st
 
 Every organization’s cloud journey is different. Startups often begin cloud-native, while enterprises must assess and migrate existing workloads. Knowing your starting point helps you navigate the Cloud Adoption Framework (CAF) effectively.
 
-1. **Startups: Build cloud-native.** If you’re a startup with no existing workloads, you build your business cloud-native from the ground up. This approach fosters rapid development using cloud-native design. You follow CAF Plan, Ready, and Innovate to create cloud-native apps.
+1. **Build cloud-native.** If you’re a startup with no existing workloads, you build your business cloud-native from the ground up. This approach fosters rapid development using cloud-native design. You follow CAF Plan, Ready, and Innovate to create cloud-native apps.
 
-2. **Enterprises: Migrate and modernize.** Enterprises must evaluate their existing IT estate and determine the best migration strategy for each workload based on business drivers. You prepare your enterprise environment using an Azure landing zone. Then you execute migration using CAF Migrate and modernize using CAF Modernize.
+2. **Migrate existing workloads.** Enterprises must evaluate their existing IT estate and determine the best migration strategy for each workload based on business drivers. You prepare your enterprise environment using an Azure landing zone. Then you execute migration using CAF Migrate and modernize using CAF Modernize.
 
     :::image type="content" source="./images/cloud-adoption-planning-decision-tree.svg" alt-text="Diagram showing a cloud adoption decision tree. Startups should build cloud-native and follow CAF Plan, CAF Ready, and CAF Innovate (cloud-native development). Organizations with existing workloads should pick a migration strategy: retire, rehost, refactor, rearchitect, replace, rebuild, or retain. Base the decision on the business driver for each workload." lightbox="./images/cloud-adoption-planning-decision-tree.svg" border="false":::
 
@@ -31,9 +31,11 @@ How you operate the cloud (cloud operating model) defines how teams manage respo
 
 1. **Understand decentralized operations.** Decentralized models give teams full ownership of their cloud workloads, including governance and operations. This approach suits highly skilled teams in startups or innovation programs. To avoid security and compliance risks, evaluate team capabilities, provide training, and conduct regular audits.
 
-1. **Understand hybrid approaches.** Some teams might benefit from decentralized autonomy even if the broader organization uses a centralized or shared model. You must evaluate team maturity to determine where hybrid models add value without compromising governance.
+1. **Understand hybrid approaches.** Many organizations benefit from a hybrid model, where different teams operate under different models based on their maturity and needs. For example, core systems may follow a centralized or shared model, while innovation teams operate more independently. Evaluate team capabilities and business priorities to determine where hybrid models add value without compromising governance.
 
-1. **Evolve operations as needed.** As your organization scales, reassess whether your current operations approach supports your goals. Transition from centralized to shared or hybrid models as needed.
+1. **Evolve operations as needed.** As your organization scales, reassess whether your current operations approach supports your goals. Regularly reassess whether your current model supports your strategic goals and operational needs.
+
+1. **Engage business and IT leadership.** Successful cloud operations require alignment across the organization. Engage both business and IT leaders to ensure the operating model reflects shared priorities. This collaboration fosters buy-in, secures necessary resources, and ensures the model has the authority to drive change.
 
 | Operations approach | Best for | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
@@ -53,23 +55,17 @@ Clearly defined responsibilities are essential for consistent governance, securi
 
 4. **Plan for AI adoption.** AI is a transformational technology that every organization needs to prepare for. Start by developing your [AI Strategy](/azure/cloud-adoption-framework/scenarios/ai/strategy) and [building an AI team](/azure/cloud-adoption-framework/scenarios/ai/center-of-excellence). Also review how to [govern AI](/azure/cloud-adoption-framework/scenarios/ai/govern), [secure AI](/azure/cloud-adoption-framework/scenarios/ai/secure), and [manage AI](/azure/cloud-adoption-framework/scenarios/ai/manage).
 
-### Secure executive sponsorship
-
-1. **Engage business and IT leadership.** Ensure that cloud strategy reflects input from all stakeholders, not just IT teams. This engagement creates buy-in and ensures the operating model aligns with business objectives. You must secure commitment from both business and technical leaders to ensure the model has the authority and resources needed for success.
-
-2. **Align the operating model with strategic goals.** Confirm that the model supports innovation, compliance, and operational efficiency requirements. This alignment ensures the model serves both current needs and future growth plans. You must regularly review and validate this alignment as business priorities evolve.
-
 ## Document cloud responsibilities
 
-A documented responsibility model defines clear ownership across governance, security, and operations. This clarity prevents duplication, ensures accountability, and supports consistent execution of critical tasks. You must define, assign, and communicate responsibilities to align teams and partners around shared cloud goals.
+Well-documented cloud responsibilities is essential for clarity, accountability, and operational consistency. It defines who owns what across governance, security, and operations, internally and with partners.
 
-1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to prevent gaps in coverage and ensure all critical areas are managed effectively. Responsibility mapping eliminates confusion about who handles specific tasks and decisions. Assign primary and backup owners for each function. Designate individuals or teams responsible for each function and ensure a backup is available. This redundancy ensures continuity during absences or transitions.
+1. **Map responsibilities across governance, security, and operations.** Assign clear ownership for each function to eliminate ambiguity and ensure comprehensive coverage. Include both primary and backup owners to maintain continuity during absences or transitions. This mapping helps teams understand their roles and reduces the risk of missed tasks or duplicated efforts.
 
-2. **Include partner responsibilities in your operating model.** [Partner](https://partner.microsoft.com/partnership/find-a-partner) contributions must be clearly defined to avoid overlap with internal teams. Strategic partners such as Microsoft Expert managed service provides offer specialized capabilities that accelerate cloud adoption and improve operational maturity. Identify partners that support your cloud strategy. Clarify the scope of partner responsibilities. Define which functions partners own, such as platform operations, workload management, or innovation initiatives. Ensure these responsibilities are distinct from internal team roles.
+2. **Define partner roles.** Clearly outline the scope of responsibilities for strategic [partners](https://partner.microsoft.com/partnership/find-a-partner). Specify which functions partners own, such as platform operations, workload management, or innovation initiatives. Ensure these roles complement internal team responsibilities without overlap.
 
-3. **Communicate the responsibilities to all stakeholders.** Ensure that all teams understand their roles and how they interact with others in the operating model. This communication prevents confusion and ensures smooth collaboration. You must provide training and documentation to help teams understand their responsibilities and dependencies.
+3. **Communicate the responsibilities to all stakeholders.** Ensure that every team understands its role and how it interacts with others. Provide training, documentation, and onboarding materials to reinforce clarity and support collaboration. This transparency helps teams work effectively within the operating model and reduces friction across functions.
 
-4. **Review responsibilities.** A static responsibility model becomes outdated as your Azure environment evolves. Regular reviews ensure that responsibilities align with team capacity, skill set, and business priorities. As your Azure environment grows, review the distribution of responsibilities regularly to ensure it aligns with team abilities, capacity, and business goals.
+4. **Review responsibilities regularly.** As your Azure environment grows and team capabilities evolve, revisit your responsibilities assignments to ensure they remains aligned with business goals and operational needs.
 
 ## Azure tools and resources
 
