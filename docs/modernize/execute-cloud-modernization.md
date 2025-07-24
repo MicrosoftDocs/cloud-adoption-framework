@@ -9,17 +9,17 @@ ms.topic: conceptual
 
 # Execute modernizations in the cloud
 
-Execution is where plans turn into reality. This involves preparing everyone for the change, doing the development work in non-production environments, testing thoroughly, and finally deploying to production in a controlled manner. The emphasis is on rigorous testing and safe deployment practices to minimize business disruption, given the changes can be significant.
+Execution is where plans turn into reality. This step involves preparing everyone for the change, doing the development work in nonproduction environments. You test thoroughly and deploy to production in a controlled manner. The emphasis is on rigorous testing and safe deployment practices to minimize business disruption, given the changes can be significant.
 
 ## Prepare stakeholders for modernization
 
 Before you hit the deploy button, it’s critical to prepare all stakeholders and users for what’s coming. Surprises can lead to confusion or even operational issues. Key preparation steps include communication, change freezes (mentioned earlier), and support plans:
 
-1. **Announce the deployment schedule to all stakeholders.** Well in advance, communicate to all affected parties when the modernization deployment will happen and what to expect. Include key dates such as change freeze start and go-live window to help stakeholders prepare appropriately. By setting expectations, users can plan around the downtime, and internal teams can be ready.
+1. **Announce the deployment schedule to all stakeholders.** Well in advance, communicate to all affected parties when the modernization deployment should happen and what to expect. Include key dates such as change freeze start and go-live window to help stakeholders prepare appropriately. By setting expectations, users can plan around the downtime, and internal teams can be ready.
 
 2. **Implement a change freeze on source and dependent systems.** As planned earlier in governance, now is the time to actually enforce the freeze. Ensure no code changes, config tweaks, or other deployments occur on the system (and dependent systems) for some period before and during the deployment. This keeps the environment stable. Make sure all team members and any integrated third parties are aware. Clearly define the freeze window with specific start and end times to avoid confusion.
 
-3. **Communicate final user actions and post-deployment changes.** Users need advance notice of required actions before and after deployment to prevent workflow disruption. Instruct users to log off or save work before the cutover begins. Share new access URLs, authentication changes such as Microsoft Entra ID sign-in requirements, and updated workflows that affect daily operations. Provide support documentation and quick-start guides to reduce confusion on the first day.
+3. **Communicate final user actions and post-deployment changes.** Users need advance notice of required actions before and after deployment to prevent workflow disruption. Instruct users to sign out or save work before the cutover begins. Share new access URLs, authentication changes such as Microsoft Entra ID sign-in requirements, and updated workflows that affect daily operations. Provide support documentation and quick-start guides to reduce confusion on the first day.
 
 4. **Coordinate support staffing for deployment.** IT operations and development teams must be available to monitor and respond to issues during critical deployment phases. Schedule extended support hours and other staff for the first business day post-deployment when issues are most likely to surface. Inform business units of the post-deployment support plan and escalation procedures to ensure rapid issue resolution.
 
