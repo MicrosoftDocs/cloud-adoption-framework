@@ -17,7 +17,7 @@ A cloud-native solution creates new business value by building new applications 
 
 1. **Document functional requirements.** Functional requirements describe the capabilities, features, and behaviors the system must provide to meet user needs. Capture these requirements as user stories that define who needs what functionality and why. For example: "As a customer, I need to track my order status in real time so I can plan for delivery."
 
-2. **Establish non-functional requirements.** Nonfunctional requirements define performance expectations, security needs, scalability targets, and compliance obligations. Document specific, measurable targets for things like response time, throughput, data protection standards, and availability (uptime SLAs).
+2. **Establish nonfunctional requirements.** Nonfunctional requirements define performance expectations, security needs, scalability targets, and compliance obligations. Document specific, measurable targets for things like response time, throughput, data protection standards, and availability (uptime SLAs).
 
 3. **Connect requirements directly to business objectives.** Ensure each requirement supports a business goal such as revenue growth, cost reduction, customer experience improvement, or market expansion. This alignment helps prioritize requirements based on business value and technical feasibility. Focus development efforts on the most valuable outcomes first. Every feature should trace back to a concrete business value.
 

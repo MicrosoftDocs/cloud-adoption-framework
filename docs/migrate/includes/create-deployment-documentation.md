@@ -1,4 +1,4 @@
-Even with automation, having good documentation around deployments is crucial – for audit, for onboarding new team members, and for future maintenance. Deployment documentation should cover configurations, procedures, and rollback steps in human-readable form.
+Even with automation, having good documentation around deployments is crucial for audit, for onboarding new team members, and for future maintenance. Deployment documentation should cover configurations, procedures, and rollback steps in human-readable form.
 
 1. **Document configuration settings and steps.** Record all environment-specific settings, connection strings, service endpoints, and security configurations in accessible documentation. Include step-by-step deployment instructions, prerequisite requirements, and post-deployment validation steps. This documentation enables consistent deployments and supports troubleshooting when issues occur. If a new engineer had to deploy, they could read this document and follow along or understand the pipeline’s output.
 
