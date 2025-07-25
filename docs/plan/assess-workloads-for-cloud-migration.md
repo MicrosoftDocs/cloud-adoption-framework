@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Assess your workloads for cloud migration
 
-Before you migrate any workloads, you must assess them in detail. A thorough assessment informs the final design and migration execution plan. It helps identify any issues that need resolving, like unsupported technologies or performance requirements. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases). Use the following table to find discovery and assessment tools for on-premises workloads, Amazon Web Services (AWS) workloads, Google Cloud Platform (GCP) workloads, and application code.
+Before you migrate any workloads, you must assess them in detail. A thorough assessment informs the final design and migration execution plan. It helps identify any issues that you need to resolve, like unsupported technologies or performance requirements. Use the following table to find discovery and assessment tools for on-premises workloads, Amazon Web Services (AWS) workloads, Google Cloud Platform (GCP) workloads, and application code.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
@@ -25,9 +25,9 @@ Begin by documenting each workload’s architecture. You need to identify all co
 
 ### Assess workload components
 
-1. **Gather baseline workload data.** Baseline data enables you to compare workload functionality between the source environment and Azure after migration. Collect at least a week of performance metrics: CPU, memory, disk I/O, throughput, peak user loads, transaction volumes, and response times. Gather operating system type and version, VM size, storage type, and licensing details. Document current scaling behavior. This helps you pick the right Azure resources without over-provisioning or under-provisioning.
+1. **Gather baseline workload data.** Baseline data enables you to compare workload functionality between the source environment and Azure after migration. Collect at least a week of performance metrics: CPU, memory, disk I/O, throughput, peak user loads, transaction volumes, and response times. Gather operating system type and version, virtual machine size, storage type, and licensing details. Document current scaling behavior. These details help you pick the right Azure resources without over-provisioning or under-provisioning.
 
-1. **Document all security and identity configurations.** Inventory all security and identity configurations: list service accounts, any hard-coded credentials, encryption methods used, and firewall rules. These have to be replicated or adjusted in Azure.
+1. **Document all security and identity configurations.** Inventory all security and identity configurations: list service accounts, any hard-coded credentials, encryption methods used, and firewall rules. These configurations have to be replicated or adjusted in Azure.
 
     | Security Component | Action | Purpose |
     |-------------------|---------|----------|
@@ -35,15 +35,15 @@ Begin by documenting each workload’s architecture. You need to identify all co
     | Encryption documentation | Document current encryption methods for data at rest and in transit | Map these requirements to Azure encryption services for maintaining security standards |
     | Network security configuration | Capture network security rules, firewall configurations, and access control lists | Use this information to design Azure network security groups and access policies |
 
-1. **Use assessment tools to identify compatibility issues.** Automated tools provide systematic analysis of operating systems, middleware, and application frameworks against Azure support policies. These tools flag components that are unsupported, deprecated, or approaching end of support. Tools like Azure Migrate and third-party assessment solutions can detect these issues across your environment without manual configuration reviews.
+1. **Use assessment tools to identify compatibility issues.** Automated tools provide systematic analysis of operating systems, middleware, and application frameworks against Azure support policies. These tools flag components that are unsupported, deprecated, or approaching end of support. Tools like Azure Migrate and other assessment tools can detect these issues across your environment without manual configuration reviews.
 
-1. **List required remediations.** Create a comprehensive list of all compatibility issues and their remediation requirements. Prioritize the ones that must be fixed pre-migration (blockers) and ones that could be done post-migration if needed. Engage vendors if necessary to understand upgrade paths for commercial software.
+1. **List required remediations.** Create a comprehensive list of all compatibility issues and their remediation requirements. Prioritize the ones that must be fixed premigration (blockers) and ones that could be done post-migration if needed. Engage vendors if necessary to understand upgrade paths for commercial software.
 
 ### Map internal and external dependencies
 
 1. **Map internal dependencies.** Map how the components of a workload talk to each other and other systems within your organization. Use network monitoring tools or application performance monitoring to see runtime connections between services. This mapping helps determine grouping in migration waves. For example, if App A constantly calls Database B, you either migrate them together or provide network connectivity between Azure and the source environment until both are in cloud.
 
-1. **Identify all external dependencies.** List any third-party or external services the workload interacts with. These dependencies include SaaS platforms, partner APIs, on-premises systems, and third-party services that applications require to function properly. You must catalog all upstream and downstream integrations, shared services, and data pipelines to understand the complete dependency landscape. Document APIs, messaging systems, ETL processes, shared databases, authentication methods, data exchange patterns, and service-level agreements. Review integration documentation and conduct interviews with application owners to ensure complete visibility into all external connections. This comprehensive mapping prevents integration failures and supports accurate migration sequencing.
+1. **Identify all external dependencies.** List any external services the workload interacts with. These dependencies include SaaS platforms, partner APIs, on-premises systems, and third-party services that applications require to function properly. You must catalog all upstream and downstream integrations, shared services, and data pipelines to understand the complete dependency landscape. Document APIs, messaging systems, ETL processes, shared databases, authentication methods, data exchange patterns, and service-level agreements. Review integration documentation and conduct interviews with application owners to ensure complete visibility into all external connections. This comprehensive mapping prevents integration failures and supports accurate migration sequencing.
 
 1. **Engage workload owners to validate and complete dependency data.** Workload owners offer critical insights into system behavior, shared resources, and informal integrations that tools might not detect. You must conduct structured interviews or workshops with application and workload owners to validate tool-generated data and identify undocumented dependencies. This step ensures completeness and accuracy of the dependency map and helps capture business context that informs migration sequencing.
 
@@ -93,13 +93,13 @@ Database dependencies often determine the success of application migration. Shar
 
 ### Create and maintain a risk register
 
-A risk register is a document or tool used to identify, assess, prioritize, and monitor potential risks that could impact cloud adoption and outlines mitigation strategies. Maintaining this register ensures proactive risk management.
+A risk register is a document or tool used to identify, assess, prioritize, and monitor potential risks that could affect cloud adoption and outlines mitigation strategies. Maintaining this register ensures proactive risk management.
 
-1. **Establish a risk register for all workloads.** Record risks related to technical, operational, and organizational factors. This register provides visibility into potential blockers and their impact.
+1. **Establish a risk register for all workloads.** Record risks related to technical, operational, and organizational factors. This register provides visibility into potential blockers and their value.
 
 2. **Define mitigation strategies and track their status.** For each risk, document mitigation actions, responsible parties, and resolution timelines. This tracking ensures that risks are actively managed and resolved.
 
-For more guidance, see [CAF Govern - Assess cloud risks](../govern/assess-cloud-risks.md)
+For more information, see [CAF Govern - Assess cloud risks](../govern/assess-cloud-risks.md)
 
 ## Azure resources and tools
 
