@@ -1,11 +1,7 @@
 # Copilot instructions for the Cloud Adoption Framework for Azure
-Create prescriptive guidance 
-Explain the tradeoffs if there's more than one option.
+Create guidance that helps customers understand how to be successful in Azure.
 Ensure the guidance is easy to understand and actionable.
 Ensure technical accuracy against https://github.com/microsoftdocs/mcp. 
-Help customers understand how to be successful in Azure.
-Target startups and enterprises.
-Show a path to cloud maturity.
 
 ## Purpose of the Cloud Adoption Framework for Azure
 The Cloud Adoption Framework is a self-service guide to help all customers of all sizes succeed and mature in Azure.
@@ -49,7 +45,7 @@ Review all the content to ensure it aligns with the following template.
     > [Next article](*.md)
     },
 
-## Style and formatting guidelines:    
+## Style and formatting instructions:    
 Replace all gerunds (verbs ending in -ing) with more direct and active structures to enhance clarity and engagement.
 Replace all content in the future tense with the present tense.
 Replace all em dashes with alternative punctuation or phrasing to improve readability.
@@ -62,14 +58,7 @@ Replace 'leverage' or 'leverages' with 'use' or 'uses'.
 Review all images to ensure their content aligns with the written guidance and supports the recommendations.
 Ensure it is descriptive and provides context for the image content, enhancing accessibility.
 Ensure the content is concise.
-Fix all grammatical errors and typos throughout.
 
 ## Accessibility guidelines
 
 :::image type="content" source="review image at this source" alt-text="[add detailed image description here]." lightbox="./images/govern.svg" border="false":::
-
-## Product truth
-
-Ensure technical accuracy of every claim about a Microsoft or Azure product against Microsoft Docs. 
-If there's an inaccuracy, provide a suggestion for improvement and an explanation of why 
-Check every link, review the page that's linked to, and ensure the linked page provides the information that's promised here. Provide suggestions for additional links to include.

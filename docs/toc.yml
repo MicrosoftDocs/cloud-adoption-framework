@@ -57,7 +57,7 @@ items:
         
       - name: Resources
         items:
-        - name: Shared management operating model
+        - name: Shared management operations
           href: plan/shared-management-operating-model.md
         - name: Cloud-native adoption plan template
           href: plan/cloud-native-adoption-plan.md
@@ -433,28 +433,18 @@ items:
 
       - name: Modernize
         items:
-        - name: Overview  
-          href: modernize/index.md
-        - name: Business alignment
+        - name: 1. Prepare for modernization  
+          href: modernize/prepare-organization-cloud-modernization.md
+        - name: 2. Plan modernization
+          href: modernize/plan-cloud-modernization.md
+        - name: 3. Execute modernization
+          href: modernize/execute-cloud-modernization.md
+        - name: 4. Optimize workloads
+          href: modernize/optimize-after-cloud-modernization.md
+        - name: Resources
           items:
-          - name: Overview
-            href: modernize/business-alignment/index.md
-          - name: Envision 
-            href: modernize/business-alignment/envision-cloud-modernization.md
-          - name: Evaluate
-            href: modernize/business-alignment/evaluate-modernization-options.md
-          - name: Commit
-            href: modernize/business-alignment/commit-to-modernization-plan.md      
-        - name: Modernization strategies
-          items:
-          - name: Overview
-            href: modernize/modernize-strategies/index.md
-          - name: Process modernization 
-            href: modernize/modernize-strategies/process-modernization.md
-          - name: Application modernization
-            href: modernize/modernize-strategies/application-modernization.md
-          - name: Database modernization
-            href: modernize/modernize-strategies/database-modernization.md
+          - name: Modernization guides
+            href: modernize/modernization-cloud-replatform-refactor-rearchitect.md
 
       - name: Innovate (cloud-native)
         items:

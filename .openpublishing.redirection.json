@@ -3387,22 +3387,22 @@
       },
       {
          "source_path": "docs/operating-model/compare.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/operating-model/define.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/operating-model/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/operating-model/terms.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
          "redirect_document_id": false
       },
       {
@@ -3629,7 +3629,52 @@
          "source_path": "docs/migrate/scenarios.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/execute-migration#azure-tools-and-resources",
          "redirect_document_id": false
-      }                     
+      },
+      {
+        "source_path": "docs/modernize/business-alignment/commit-to-modernization-plan.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/modernize/business-alignment/envision-cloud-modernization.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/modernize/business-alignment/evaluate-modernization-options.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/modernize/business-alignment/index.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/modernize/index.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/modernize/modernize-strategies/application-modernization.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/modernize/modernize-strategies/database-modernization.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/modernize/modernize-strategies/index.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/modernize/modernize-strategies/process-modernization.md",
+        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+        "redirect_document_id": false
+    }                     
    ]   
 }
 

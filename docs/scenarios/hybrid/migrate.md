@@ -62,7 +62,7 @@ When you migrate to the cloud, have a clear inventory of all dependent assets an
 [Azure Migrate](/azure/migrate/migrate-services-overview) is the principal solution for migrating workloads from your private cloud to Azure. Best practices for migrating to Azure from other public clouds will vary. You also might need to add a few other tools when you migrate to Azure Local. See the following tutorials:
 
 - [Migrate from AWS to Azure](/azure/migrate/tutorial-migrate-aws-virtual-machines)
-- [Migrate from GCP to Azure](/azure/migrate/tutorial-migrate-gcp-virtual-machines)
+- [Migrate from Google Cloud to Azure](/azure/migrate/tutorial-migrate-gcp-virtual-machines)
 - [Migrate to Azure Local](../../scenarios/azure-stack/migrate-deploy.md#deploy-workloads)
 
 ## Release migrated workloads for hybrid and multicloud
