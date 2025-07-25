@@ -13,13 +13,13 @@ Now, deploy the solution to the live Azure environment following the planned str
 
 ## Prepare stakeholders
 
-1. **Announce the deployment schedule and expected impact.** Before you begin the production deployment, communicate the plan and value to all relevant stakeholders. Announce the deployment schedule and expected user effects. For example, notes any downtime or user-visible changes well in advance.
+1. **Announce the deployment schedule and expected impact.** Before you begin the production deployment, communicate the plan and value to all relevant stakeholders. Announce the deployment schedule and expected user effects. For example, for new features, note any downtime or user-visible changes well in advance. Stakeholders might identify conflicts with business events or raise concerns about timing. Provide a channel for feedback and confirm that the deployment window aligns with operational priorities. Adjust the schedule if necessary to avoid disruption.
 
 1. **Notify support teams and affected groups.** Ensure support teams are on standby and aware of what is being released so they can handle any user issues or inquiries. If the deployment might affect end-users or other systems, notify those groups too.
 
 1. **Set expectations for functionality during the deployment window.** A deployment window might involve reduced functionality or temporary delays. Inform stakeholders of these conditions to prevent confusion and ensure business continuity. Include fallback procedures or workarounds if applicable.
 
-1. **Invite feedback and confirm timing alignment.** Stakeholders might identify conflicts with business events or raise concerns about timing. Provide a channel for feedback and confirm that the deployment window aligns with operational priorities. Adjust the schedule if necessary to avoid disruption.
+1. **Conduct a pre-migration readiness review.** A readiness review confirms that all teams understand their roles and have necessary access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify that support teams have appropriate system access and monitoring tools configured. This preparation ensures coordinated response to any issues that arise during migration.
 
 ## Execute the deployment
 
@@ -33,8 +33,7 @@ The deployment steps differ slightly based on whether it’s a new standalone wo
 
 1. **Validate production readiness** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Validate core functionality such as API availability, database connectivity, and UI responsiveness. Verify that all services are running and dependencies are healthy. Check service health in Azure Service Health and validate that all endpoints respond as expected.
 
-1. **Prepare for rollback in case of critical issues.** Rollback readiness ensures that you can quickly recover from failed deployments.
-Define and test rollback procedures before production deployment. Include teardown scripts for IaC and backup/restore procedures for data. Store rollback artifacts in a secure location. Monitor for showstopper issues and initiate rollback if needed. If critical errors are detected or core functionality fails, execute rollback steps immediately to restore the previous stable state.
+1. **Prepare for rollback in case of critical issues.** Rollback readiness ensures that you can quickly recover from failed deployments. Define and test rollback procedures before production deployment. Include teardown scripts for IaC and backup/restore procedures for data. Store rollback artifacts in a secure location. Monitor for showstopper issues and initiate rollback if needed. If critical errors are detected or core functionality fails, execute rollback steps immediately to restore the previous stable state.
 
 1. **Gradually scale up based on user feedback** Gradual rollout reduces risk and allows for real-world validation before full release.
 Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.

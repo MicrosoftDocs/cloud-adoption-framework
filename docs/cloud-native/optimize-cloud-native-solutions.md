@@ -17,7 +17,7 @@ A deployed solution must evolve to remain secure, cost-effective, and performant
 
 2. **Implement service-specific optimization settings.** Use the Azure Well-Architected Framework [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure
 
-3. **Address security findings immediately.** Post-deployment, keep a close eye on security posture. Use tools like [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to identify any security misconfigurations, missing updates, or compliance issues. Fix security gaps as soon as they’re discovered to protect the workload and maintain compliance. Security is not a one-and-done task. Xontinuous monitoring and quick mitigation are key to safe cloud operations.
+3. **Address security findings immediately.** Post-deployment, keep a close eye on security posture. Use tools like [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to identify any security misconfigurations, missing updates, or compliance issues. Fix security gaps as soon as they’re discovered to protect the workload and maintain compliance. Security is not a one-and-done task. Continuous monitoring and quick mitigation are key to safe cloud operations.
 
 ## Validate operational readiness
 
@@ -37,7 +37,7 @@ A deployed solution must evolve to remain secure, cost-effective, and performant
 
 ## Continue to evolve and improve
 
-1. **Schedule periodic workload reviews.** Periodically, revisit the architecture of the solution in light of the Azure Well-Architected Framework’s five pillars. As your usage patterns or business requirements change, certain design decisions might need revisiting. Perform a Well-Architected Review to identify any areas for improvement. Document any findings and create action items (an improvement backlog) for things to optimize or refactor in the next cycle. Regular reviews help catch drift from best practices and keep the system aligned with current needs.
+1. **Schedule periodic workload reviews.** Periodically, revisit the architecture of the solution in light of the [Well-Architected Framework’s](/azure/well-architected/pillars) five pillars. As your usage patterns or business requirements change, certain design decisions might need revisiting. Perform a [Well-Architected Review](/assessments/azure-architecture-review/) to identify any areas for improvement. Document any findings and create action items for things to optimize or refactor in the next cycle. Regular reviews help catch drift from best practices and keep the system aligned with current needs.
 
 2. **Automated optimization where possible.** Look for opportunities to use automation to manage and optimize the solution. For example, use Azure Policy to enforce tagging, security configurations, or resource sizing standards on new deployments so they always remain optimized. Set up autoscaling rules to handle changes in load without manual intervention. Use cost anomaly detection in Microsoft Cost Management to automatically alert if spending spikes unexpectedly. By letting Azure’s automation features handle routine optimizations (like shutting down unused virtual machines on a schedule), your team can focus on higher-level improvements. Automation ensures consistency and can react faster than human intervention for many operational adjustments.
 

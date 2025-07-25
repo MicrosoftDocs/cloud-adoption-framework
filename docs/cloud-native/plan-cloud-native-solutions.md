@@ -23,7 +23,7 @@ A cloud-native solution creates new business value by building new applications 
 
 ## Design the cloud-native solution
 
-1. **Design using Azure Well-Architected Framework principles.** Follow the five pillars of reliability, security, performance efficiency, cost optimization, and operational excellence throughout the design. Bake these principles into your architecture from the beginning rather than trying to add them later. This proactive approach reduces technical debt and accelerates time to production.
+1. **Design using the [Well-Architected Framework](/azure/well-architected/pillars).** Follow the five pillars of reliability, security, performance efficiency, cost optimization, and operational excellence throughout the design. Bake these principles into your architecture from the beginning rather than trying to add them later. This proactive approach reduces technical debt and accelerates time to production.
 
 1. **Select Azure services that align with your requirements.** Use Azure’s decision guides and the Azure Architecture Center to choose the most appropriate services for your use case. Favor platform-as-a-service (PaaS) offerings whenever possible to reduce operational overhead by abstracting away infrastructure management. Managed services for compute, databases, messaging can accelerate development and simplify maintenance.
 
@@ -77,7 +77,7 @@ When you add new features to an existing application or workload, more planning 
 
 ## Plan for operational handover
 
-1. **Define ownership and support responsibilities before deployment.** Decide early who should operate and support the new solution once it’s live in production. Assign a team, such as operations team, DevOps team, or product team. Define the support model, such as 24/7 on-call rotation, business-hours support. Ensure all stakeholders understand their roles. This clarity enables fast response to incidents and ensures continuity of service.
+1. **Define ownership and support responsibilities before deployment.** Decide early who should operate and support the new solution once it’s live in production. Assign a team, such as operations team, DevOps team, or product team. Define the support model, such as 24/7 on-call rotation and business-hours support. Ensure all stakeholders understand their roles. This clarity enables fast response to incidents and ensures continuity of service.
 
 1. **Design the solution with operational readiness in mind.** Operational readiness includes monitoring, logging, alerting, and disaster recovery. Integrate Azure Monitor and Application Insights to track system health and performance. Configure alerts for key metrics and failure conditions. Define and document a disaster recovery plan that includes recovery time objectives (RTO) and recovery point objectives (RPO). These capabilities ensure the team can detect and respond to issues quickly.
 
