@@ -51,24 +51,22 @@ For each workload in your inventory, gather business and technical details.
 
 ### Workload business details for migration
 
-| Workload business details | Documentation to add      |
+| Workload business details | Documentation to add|
 |-----------------|-------------|
-| Workload name | Add the official name used across the organization for this workload. |
-| Workload description | Provide a single sentence describing the workload's purpose. |
+| Workload name | Official name used across the organization |
+| Workload description | Single sentence describing the workload's purpose |
+| Workload owners | Individuals accountable for workload |
+| Business owners | Executive or manager overseeing this workload |
+| Business unit | Department responsible for workload costs |
+| Business processes affected | Processes that depend on this workload |
+| Business teams affected | Teams whose work depends on this workload |
+| Business value | Revenue, operations, or customer value if unavailable |
+| Criticality level | High (mission-critical), medium, or low priority |
+| Data sensitivity | Highly confidential, confidential, general, public, nonbusiness |
+| Compliance requirements | Regulatory standards or certifications required |
+| Maintenance windows | Scheduled times for updates and changes |
+| Business freeze periods | Dates when no changes are permitted |
 | Timelines | List the target date to complete migration strategy |
-| Migration strategy | Specify the migration strategy: retire, rehost, replatform, or refactor. |
-| Criticality level | Indicate the priority level: high (mission-critical), medium, or low priority. |
-| Data sensitivity | Define the data sensitivity level: highly confidential, confidential, general, public, or non-business. |
-| Workload owners | List the individuals accountable for this workload. |
-| Business owners | Identify the executive or manager overseeing this workload. |
-| Business unit | Name the department responsible for the workload's costs. |
-| Business processes affected | Document the processes that depend on this workload. |
-| Business teams affected | Specify the teams whose work depends on this workload. |
-| Data owners | List the individuals responsible for data governance. |
-| Business impact | Describe the impact on revenue, operations, or customers if the workload becomes unavailable. |
-| Compliance requirements | Note any regulatory standards or certifications required for this workload. |
-| Maintenance windows | Provide the scheduled times for updates and changes to this workload. |
-| Business freeze periods | Specify the dates when no changes are permitted to this workload. |
 | Geographic restrictions | Document any data residency or access location requirements. |
 | Success metrics | Define specific measurements to evaluate the success of the migration. |
 

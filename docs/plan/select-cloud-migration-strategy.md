@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Select your cloud migration strategies
 
-This article helps you select the most appropriate cloud migration strategy for each workload in your portfolio. Each strategy (retire, retain, rehost, replatform, refactor, rearchitect, rebuild, or replace) offers distinct benefits and tradeoffs that must align with your business goals and technical requirements.
+With a clear inventory and understanding of your workloads, your cloud adoption plan must determine what to do with each workload in the cloud. There are multiple migration strategies, sometimes known as the “Rs” of cloud migration. Each workload can be Retired, Retained, Rehosted, Replatformed, Refactored, Rearchitected, Rebuilt, or Replaced. This section guides how to pick the right approach for each workload, presenting the options, when to choose each, and the pros/cons trade-offs.
 
 ## Migration strategy overview
 
-The following table provides a comprehensive overview of all available cloud migration strategies. Use this reference to understand each strategy's primary business driver and key indicators that signal when to apply each approach to your workloads.
+The following table provides an overview of all available cloud migration strategies. Use this reference to understand each strategy's primary business driver and key indicators that signal when to apply each approach to your workloads.
 
 | Cloud migration strategy | Business driver | Key indicators for this strategy |
 |--------------------------|------------------|------------------------------|
@@ -26,18 +26,15 @@ The following table provides a comprehensive overview of all available cloud mig
 | [Rebuild](#7-rebuild-build-cloud-native) | Need new cloud-native solution to meet requirements | • Legacy system is too outdated or inflexible • Build applications faster • Reduce operational cost • Need modern frameworks and tools |
 | [Retain](#8-retain-keep-as-is) | Need stability and no change | • Workload is stable, compliant, and meets business needs • No near-term driver to move • Low ROI from migration |
 
-## Determine business drivers before cloud adoption
+## Determine business drivers before migration
 
-A business driver defines why a workload must change to support strategic outcomes. Identifying these drivers ensures that cloud adoption decisions align with measurable business value.
+A business driver defines why a workload needs to change in order to support a specific business goal. Business drivers connect cloud adoption decisions to measurable business value and strategic goals. Identifying these drivers ensures that migration efforts are purposeful and aligned with organizational priorities.
 
-1. **Define the organization’s business goals for cloud adoption.** Business goals provide the foundation for evaluating workload relevance and transformation needs. Without clearly defined goals, workload decisions might not support strategic outcomes. Business stakeholders should define or validate goals such as agility, innovation, cost optimization, resilience, or sustainability. Use strategic planning documents, executive interviews, or business case workshops to capture these goals.
+1. **Define business goals.** Business goals are high-level outcomes the organization wants to achieve from cloud adoption, such as adopting AI, increasing agility, accelerating innovation, reducing costs, and improving resilience. These goals provide the strategic context for all migration decisions. Use strategic planning documents, executive interviews, or business case workshops to identify and validate these goals with stakeholders.
 
-2. **Categorize each workload’s contribution to the defined business goals.** Categorization clarifies how each workload supports the organization’s strategic direction. Workload teams and business stakeholders should jointly assess whether each workload contributes to one or more business goals. Use metrics, stakeholder input, and architectural documentation to determine alignment. Document the workload’s role in enabling agility, driving innovation, reducing costs, improving resilience, or supporting sustainability.
+2. **Identify gaps.** Perform a high-level gap analysis to understand what each workload must change to better support the defined business goals. This analysis should consider current performance, scalability, compliance, user experience, and architectural limitations. Document any shortfalls that prevent the workload from fully enabling the desired outcomes.
 
-3. **Identify gaps between current capabilities and future expectations.** Gap analysis reveals what each workload must change to meet business goals. Compare the workload’s current performance, scalability, and architecture with what is required to support the defined goals. Document gaps in functionality, integration, compliance, or user experience. Use these insights to inform migration strategy selection.
-
-4. **Determine the business driver for each workload.** A business driver reflects both current limitations and future expectations.
-Business stakeholders and workload teams should collaborate to define what each workload must do differently to support strategic outcomes. Consider technical, operational, and compliance requirements. Use the following table to narrow the list of viable migration strategies based on the identified business driver:
+3. **Determine the business driver.** A business driver emerges from the gap between a workload’s current state and its desired future state. It represents a specific, actionable reason for change. These drivers guide the selection of an appropriate migration strategy.
 
     | Business driver | Migration strategy |
     |------------------|--------------------|

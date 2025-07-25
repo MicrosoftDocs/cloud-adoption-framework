@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # Assess your workloads for cloud migration
 
-This article helps you conduct thorough workload assessments to collect the necessary information for successful migration decisions. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases). Use the following table to find discovery and assessment tools for on-premises workloads, Amazon Web Services (AWS) workloads, Google Cloud Platform (GCP) workloads, and application code.
+Before you migrate any workloads, you must assess them in detail. A thorough assessment informs the final design and migration execution plan. It helps identify any issues that need resolving, like unsupported technologies or performance requirements. It shows you how to assess [workload architecture](#assess-workload-architecture), [application code](#assess-application-code), and [databases](#assess-databases). Use the following table to find discovery and assessment tools for on-premises workloads, Amazon Web Services (AWS) workloads, Google Cloud Platform (GCP) workloads, and application code.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
 ## Assess workload architecture
 
-Complete architectural documentation ensures visibility into workload components and dependencies. This visibility supports accurate migration planning and reduces risk by identifying potential issues before migration begins. You must collect and validate architectural data for each workload to ensure successful migration. Follow this guidance:
+Begin by documenting each workload’s architecture. You need to identify all components and understand how they interact.
 
 1. **Use assessment tools.** Tools like Azure Migrate or other products automate discovery of workload components and configurations. These tools reduce manual effort and provide consistent data collection across your environment, though they might miss undocumented dependencies. You can use a tool like Cloudockit to generate your diagrams. You can also create your own by using [Azure icons](/azure/architecture/icons/) or tweaking the downloadable diagrams in [Azure Architecture Center](/azure/architecture/).
 
@@ -25,11 +25,9 @@ Complete architectural documentation ensures visibility into workload components
 
 ### Assess workload components
 
-1. **Gather baseline workload data.** Baseline data enables you to compare workload functionality between the source environment and Azure after migration. You must capture comprehensive performance metrics from your source environment before migration to validate that Azure configurations meet your performance requirements. Document response times, throughput, resource utilization, and key business transaction performance from your current environment. Use these baseline measurements to identify performance improvements or degradation during testing. This comparison helps troubleshoot issues and isolate modernization efforts from migration problems. Use service management tools and configuration management databases (CMDBs) when available.
+1. **Gather baseline workload data.** Baseline data enables you to compare workload functionality between the source environment and Azure after migration. Collect at least a week of performance metrics: CPU, memory, disk I/O, throughput, peak user loads, transaction volumes, and response times. Gather operating system type and version, VM size, storage type, and licensing details. Document current scaling behavior. This helps you pick the right Azure resources without over-provisioning or under-provisioning.
 
-1. **Collect at least one week of performance data.** Performance metrics such as CPU utilization, memory usage, input/output per second (IOPS), and throughput reveal usage patterns and peak demands. Configuration data includes operating system type and version, VM size, storage type, and licensing details. This information is critical for selecting the correct Azure VM sizes and storage configurations.
-
-1. **Document all security and identity configurations.** Security settings must be preserved or enhanced in Azure to maintain compliance and prevent vulnerabilities. You need to inventory all identities and document encryption and network security configurations to support secure migration.
+1. **Document all security and identity configurations.** Inventory all security and identity configurations: list service accounts, any hard-coded credentials, encryption methods used, and firewall rules. These have to be replicated or adjusted in Azure.
 
     | Security Component | Action | Purpose |
     |-------------------|---------|----------|
@@ -37,29 +35,21 @@ Complete architectural documentation ensures visibility into workload components
     | Encryption documentation | Document current encryption methods for data at rest and in transit | Map these requirements to Azure encryption services for maintaining security standards |
     | Network security configuration | Capture network security rules, firewall configurations, and access control lists | Use this information to design Azure network security groups and access policies |
 
-### Identify unsupported or deprecated technologies
-
-Azure supports a wide range of technologies, but certain legacy systems require updates or replacements before migration. This identification prevents wasted effort on migrating incompatible components and reduces the risk of post-migration failures. You must inventory all technology components and validate their Azure compatibility before migration begins.
-
 1. **Use assessment tools to identify compatibility issues.** Automated tools provide systematic analysis of operating systems, middleware, and application frameworks against Azure support policies. These tools flag components that are unsupported, deprecated, or approaching end of support. Tools like Azure Migrate and third-party assessment solutions can detect these issues across your environment without manual configuration reviews.
 
-1. **Document required changes for each flagged component.** Create a comprehensive list of all compatibility issues and their remediation requirements. Include operating system upgrades, middleware replacements, and application framework updates. Specify the effort required, timeline, and dependencies for each change. This documentation enables accurate project planning and resource allocation.
-
-1. **Prioritize remediation based on migration impact.** Address blocking issues first, then components approaching end of support. Some changes can be deferred to post-migration phases if they don't prevent Azure deployment. This prioritization enables faster migration while ensuring long-term supportability.
-
-1. **Validate remediation plans with vendors and stakeholders.** Confirm that proposed changes maintain application functionality and meet business requirements. Engage with software vendors to understand upgrade paths and licensing implications. This validation reduces the risk of compatibility issues during migration.
+1. **List required remediations.** Create a comprehensive list of all compatibility issues and their remediation requirements. Prioritize the ones that must be fixed pre-migration (blockers) and ones that could be done post-migration if needed. Engage vendors if necessary to understand upgrade paths for commercial software.
 
 ### Map internal and external dependencies
 
-1. **Understand dependency mapping.** A complete dependency map ensures that applications maintain connectivity and performance after migration. Dependency mapping supports migration planning by revealing the order in which workloads must move to maintain system functionality. If you manage many workloads, organize them into migration waves based on the dependency relationships you identified. For more information, see [Migration wave planning](../migrate/migration-wave-planning.md).
+1. **Map internal dependencies.** Map how the components of a workload talk to each other and other systems within your organization. Use network monitoring tools or application performance monitoring to see runtime connections between services. This mapping helps determine grouping in migration waves. For example, if App A constantly calls Database B, you either migrate them together or provide network connectivity between Azure and the source environment until both are in cloud.
 
-1. **Use tools to discover internal dependencies.** Automated discovery tools provide a foundational view of application and infrastructure dependencies. These tools analyze network traffic, process interactions, and system configurations to uncover hidden or undocumented connections. Use tools like [Azure Migrate](/azure/migrate/migrate-overview) or other products for analyzing network traffic and uncover hidden dependencies. This step improves accuracy, reduces manual effort, and identifies dependencies that workload owners might not be aware of.
-
-1. **Identify all external dependencies.** External dependencies create constraints that affect migration timing and architectural design. These dependencies include SaaS platforms, partner APIs, on-premises systems, and third-party services that applications require to function properly. You must catalog all upstream and downstream integrations, shared services, and data pipelines to understand the complete dependency landscape. Document APIs, messaging systems, ETL processes, shared databases, authentication methods, data exchange patterns, and service-level agreements. Review integration documentation and conduct interviews with application owners to ensure complete visibility into all external connections. This comprehensive mapping prevents integration failures and supports accurate migration sequencing.
+1. **Identify all external dependencies.** List any third-party or external services the workload interacts with. These dependencies include SaaS platforms, partner APIs, on-premises systems, and third-party services that applications require to function properly. You must catalog all upstream and downstream integrations, shared services, and data pipelines to understand the complete dependency landscape. Document APIs, messaging systems, ETL processes, shared databases, authentication methods, data exchange patterns, and service-level agreements. Review integration documentation and conduct interviews with application owners to ensure complete visibility into all external connections. This comprehensive mapping prevents integration failures and supports accurate migration sequencing.
 
 1. **Engage workload owners to validate and complete dependency data.** Workload owners offer critical insights into system behavior, shared resources, and informal integrations that tools might not detect. You must conduct structured interviews or workshops with application and workload owners to validate tool-generated data and identify undocumented dependencies. This step ensures completeness and accuracy of the dependency map and helps capture business context that informs migration sequencing.
 
 1. **Document all dependencies in a central repository.** Store dependency data in a format that supports cross-team collaboration and migration planning, such as spreadsheets, architecture diagrams, or dependency mapping tools. Ensure the repository is accessible and regularly updated to reflect changes during the migration process.
+
+1. **Use dependencies to plan migrations.** Organize workloads into migration waves that minimize broken dependencies For more information, see [Migration wave planning](../migrate/migration-wave-planning.md).
 
 ### Assess compliance and operational requirements
 
@@ -67,9 +57,7 @@ Azure supports a wide range of technologies, but certain legacy systems require 
 
 1. **Document SLAs, RPOs, and RTOs.** Service-level agreements (SLAs), recovery point objectives (RPOs), and recovery time objectives (RTOs) define acceptable levels of availability and data loss. These metrics guide the design of backup, replication, and failover strategies. You must document these values for each workload to ensure that the architecture meets business continuity expectations. See [Define reliability requirements](/azure/cloud-adoption-framework/manage/protect#define-reliability-requirements).
 
-1. **Classify each workload environment to guide migration and operational planning.** Workloads typically run in production, test, or development environments. Each environment has different availability, security, and performance requirements. You must document the environment classification for each workload to inform migration sequencing, access controls, and resource allocation.
-
-1. **Define acceptable maintenance windows to align with business operations.** Maintenance windows determine when migrations can occur without disrupting business operations. You should document acceptable downtime periods for each workload to guide scheduling. This classification also influences the choice of migration strategy, such as near-zero downtime or downtime migration.
+1. **Classify each workload environment.** Workloads typically run in production, test, or development environments. Each environment has different availability, security, and performance requirements. You must document the environment classification for each workload to inform migration sequencing, access controls, and resource allocation.
 
 1. **Validate ISV integration with Azure.** Many workloads depend on software from independent software vendors (ISVs). You must confirm that all ISV software is compatible with Azure before migration. Use vendor documentation, test environments, or direct validation with the ISV. Identify any required updates, replacements, or configuration changes. Also determine whether Azure Hybrid Benefit or other licensing models apply. Include licensing costs and compatibility adjustments in your migration plan for accurate budgeting and scheduling.
 
