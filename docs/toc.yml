@@ -446,7 +446,7 @@ items:
           - name: Modernization guides
             href: modernize/modernization-cloud-replatform-refactor-rearchitect.md
 
-      - name: Innovate (cloud-native)
+      - name: Cloud-native
         items:
         - name: 1. Plan cloud-native solutions
           href: cloud-native/plan-cloud-native-solutions.md
