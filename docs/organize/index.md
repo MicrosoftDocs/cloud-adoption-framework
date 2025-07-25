@@ -29,4 +29,4 @@ As adoption needs grow, so does the need to create balance and structure. To mee
 
 ![Diagram that shows the organizational maturity cycle.](../_images/ready/org-ready-maturity.png)
 
-The article on [determining organizational structure maturity](./organization-structures.md) provides more details about each level of maturity. To track organization structure decisions over time, download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).
+The article on [determining organizational structure maturity](./organization-structures.md) provides more details about each level of maturity. 
