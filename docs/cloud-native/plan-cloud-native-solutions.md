@@ -17,7 +17,7 @@ A cloud-native solution creates new business value by building new applications 
 
 1. **Document functional requirements.** Functional requirements describe the capabilities, features, and behaviors the system must provide to meet user needs. Capture these requirements as user stories that define who needs what functionality and why. For example: "As a customer, I need to track my order status in real time so I can plan for delivery."
 
-2. **Establish non-functional requirements.** Nonfunctional requirements define performance expectations, security needs, scalability targets, and compliance obligations. Document specific, measurable targets for things like response time ("95% of requests under 2 seconds"), throughput, data protection standards, and availability (uptime SLAs). For example: "The system must support 1,000 concurrent users with response times under 2 seconds."
+2. **Establish non-functional requirements.** Nonfunctional requirements define performance expectations, security needs, scalability targets, and compliance obligations. Document specific, measurable targets for things like response time, throughput, data protection standards, and availability (uptime SLAs).
 
 3. **Connect requirements directly to business objectives.** Ensure each requirement supports a business goal such as revenue growth, cost reduction, customer experience improvement, or market expansion. This alignment helps prioritize requirements based on business value and technical feasibility. Focus development efforts on the most valuable outcomes first. Every feature should trace back to a concrete business value.
 
@@ -25,7 +25,7 @@ A cloud-native solution creates new business value by building new applications 
 
 1. **Design using Azure Well-Architected Framework principles.** Follow the five pillars of reliability, security, performance efficiency, cost optimization, and operational excellence throughout the design. Bake these principles into your architecture from the beginning rather than trying to add them later. This proactive approach reduces technical debt and accelerates time to production.
 
-1. **Select Azure services that align with your requirements.** Use Azure’s decision guides and the Azure Architecture Center to choose the most appropriate services for your use case. Favor platform-as-a-service (PaaS) offerings whenever possible to reduce operational overhead by abstracting away infrastructure management. Managed services (for compute, databases, messaging, etc.) can accelerate development and simplify maintenance.
+1. **Select Azure services that align with your requirements.** Use Azure’s decision guides and the Azure Architecture Center to choose the most appropriate services for your use case. Favor platform-as-a-service (PaaS) offerings whenever possible to reduce operational overhead by abstracting away infrastructure management. Managed services for compute, databases, messaging can accelerate development and simplify maintenance.
 
 1. **Select the right service tier (SKU).** Estimate expected user concurrency, transaction volumes, data sizes, and latency requirements. Choose service SKUs that meet these targets and validate your choices through performance testing. Adjust the SKU if needed based on test results to achieve an optimal balance of cost and performance. It’s better to start with a smaller size and scale up as required than over-provision.
 

@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Plan your migration
 
-A migration execution plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences.
+A migration plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences.It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
 
-Migration execution planning occurs in the CAF Migrate methodology rather than CAF Plan because several critical factors emerge only after you have built and operated your Azure landing zone. It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
+**Prerequisites:** [Migration adoption plan](../plan/migration-adoption-plan.md), [Azure landing zone](/azure/cloud-adoption-framework/ready)
 
 ## Assess migration readiness and skills
 

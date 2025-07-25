@@ -75,7 +75,7 @@ additionalContent:
         # Card
         - title: 🌐 Cloud-native
           summary: Build new cloud-native workloads and features in Azure.
-          url: ./innovate/index.md
+          url: ./cloud-native/plan-cloud-native-solutions.md
 
         # Card
         - title: 🔐 Govern
