@@ -114,7 +114,7 @@ For more information, see [CAF Govern - Assess cloud risks](../govern/assess-clo
 | Code Assessment | [AppCAT](/azure/migrate/appcat/overview) | Automated compatibility analysis for .NET and Java applications |
 | Database Migration | [Data Migration Assistant](/sql/dma/dma-overview) | Assessment and migration tool for SQL Server databases |
 | Multicloud mapping | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Service comparison guide for AWS to Azure migration |
-| Multicloud mapping | [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) | Service comparison guide for GCP to Azure migration |
+| Multicloud mapping | [Google Cloud to Azure service mapping](/azure/architecture/gcp-professional/services) | Service comparison guide for Google Cloud to Azure migration |
 | Azure Development | [.NET on Azure](/azure/dotnet/azure/intro#access-azure-services-from-net-applications) | Guidance for accessing Azure services from .NET applications |
 | Azure Development | [Java on Azure](/azure/developer/java/) | Resources for Java developers building on Azure |
 | Azure Development | [Python on Azure](/azure/developer/python/get-started#write-your-python-app) | Resources for Python developers building on Azure |
