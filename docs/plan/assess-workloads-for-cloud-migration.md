@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # Assess your workloads for cloud migration
 
-Before you migrate any workloads, you must assess them in detail. A thorough assessment informs the final design and migration execution plan. It helps identify any issues that you need to resolve, like unsupported technologies or performance requirements. Use the following table to find discovery and assessment tools for on-premises workloads, Amazon Web Services (AWS) workloads, Google Cloud Platform (GCP) workloads, and application code.
+The assessment phase ensures you have full visibility into every component, dependency, and requirement before moving to Azure. By collecting detailed information on architecture, performance, security, code, and databases, you can anticipate issues, minimize risks, and make informed migration decisions.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
 ## Assess workload architecture
 
-Begin by documenting each workload’s architecture. You need to identify all components and understand how they interact.
+Complete architectural assessment gives visibility into all workload components and how they interact. This supports accurate migration planning by identifying what needs to move together and what might require modification.
 
 1. **Use assessment tools.** Tools like Azure Migrate or other products automate discovery of workload components and configurations. These tools reduce manual effort and provide consistent data collection across your environment, though they might miss undocumented dependencies. You can use a tool like Cloudockit to generate your diagrams. You can also create your own by using [Azure icons](/azure/architecture/icons/) or tweaking the downloadable diagrams in [Azure Architecture Center](/azure/architecture/).
 
@@ -25,7 +25,11 @@ Begin by documenting each workload’s architecture. You need to identify all co
 
 ### Assess workload components
 
-1. **Gather baseline workload data.** Baseline data enables you to compare workload functionality between the source environment and Azure after migration. Collect at least a week of performance metrics: CPU, memory, disk I/O, throughput, peak user loads, transaction volumes, and response times. Gather operating system type and version, virtual machine size, storage type, and licensing details. Document current scaling behavior. These details help you pick the right Azure resources without over-provisioning or under-provisioning.
+For each workload, collect detailed baseline performance and usage metrics from the current environment. This data is critical for right-sizing Azure resources and for comparing performance after migration
+
+1. **Gather workload metrics.**  Track CPU utilization, memory usage, disk I/O (reads/writes, IOPS), network throughput, and peak concurrency or user load. Identify daily or weekly peaks to understand capacity needs. Measure average response times for user transactions, throughput of jobs processed per hour, and any SLA-related metrics. This helps ensure the migrated workloads meets the same business performance requirements.
+
+1. **Capture configuration details.** Note scaling configurations, current VM sizes or physical server specs (CPU cores, RAM), OS type and version, storage type (SSD/HDD) and capacity, and any special hardware like GPUs. These details inform the choice of Azure VM sizes or PaaS services. Also record software licensing info, as this might enable use of Azure Hybrid Benefit or require license migration.
 
 1. **Document all security and identity configurations.** Inventory all security and identity configurations: list service accounts, any hard-coded credentials, encryption methods used, and firewall rules. These configurations have to be replicated or adjusted in Azure.
 
@@ -35,7 +39,7 @@ Begin by documenting each workload’s architecture. You need to identify all co
     | Encryption documentation | Document current encryption methods for data at rest and in transit | Map these requirements to Azure encryption services for maintaining security standards |
     | Network security configuration | Capture network security rules, firewall configurations, and access control lists | Use this information to design Azure network security groups and access policies |
 
-1. **Use assessment tools to identify compatibility issues.** Automated tools provide systematic analysis of operating systems, middleware, and application frameworks against Azure support policies. These tools flag components that are unsupported, deprecated, or approaching end of support. Tools like Azure Migrate and other assessment tools can detect these issues across your environment without manual configuration reviews.
+1. **Identify compatibility issues.** Automated tools provide systematic analysis of operating systems, middleware, and application frameworks against Azure support policies. These tools flag components that are unsupported, deprecated, or approaching end of support. Tools like Azure Migrate and other assessment tools can detect these issues across your environment without manual configuration reviews.
 
 1. **List required remediations.** Create a comprehensive list of all compatibility issues and their remediation requirements. Prioritize the ones that must be fixed premigration (blockers) and ones that could be done post-migration if needed. Engage vendors if necessary to understand upgrade paths for commercial software.
 
