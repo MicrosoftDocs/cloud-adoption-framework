@@ -21,7 +21,7 @@ A complete inventory of your technical assets forms the foundation of your cloud
 
 2. **Use automated discovery tools.** [Azure Migrate](/azure/migrate/migrate-services-overview) provides free discovery capabilities for on-premises and cloud environments. This tool automatically identifies servers, applications, and their interdependencies. You must use automated discovery to accelerate inventory creation and reduce manual errors. If Azure Migrate doesn't fully support your environment, use tools like [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) or [CloudPilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) that extend Azure Migrate capabilities.
 
-3. **Include all components across all environments.** Your inventory must capture infrastructure and application components across all platforms. You need to include servers, VMs, applications, databases, communication patterns, integrations, identities, and cloud services from Azure, AWS, GCP, and other providers. This comprehensive view ensures that no critical asset is overlooked during planning or migration.
+3. **Include all components across all environments.** Your inventory must capture infrastructure and application components across all platforms. You need to include servers, VMs, applications, databases, communication patterns, integrations, identities, and cloud services from Azure, AWS, Google Cloud, and other providers. This comprehensive view ensures that no critical asset is overlooked during planning or migration.
 
 4. **Use manual discovery when automation isn't possible.** Some environments restrict automated discovery tools due to security policies or technical limitations. Use the [Azure Migrate import template](https://go.microsoft.com/fwlink/?linkid=2109031) to manually document assets in restricted environments. Manual documentation ensures you capture assets that automated tools can't access.
 
@@ -72,9 +72,9 @@ For an example, see [Migration adoption plan](./migration-adoption-plan.md#workl
 | Assessment | [CloudAtlas](https://appsource.microsoft.com/product/web-apps/unify-cloud-llc.cloudatlas_modernize_and_migrate?tab=Overview) | Provides modernization and migration assessment |
 | PaaS assessment | [Cloudockit](https://azuremarketplace.microsoft.com/marketplace/apps/azure-dockit.cloudockit?tab=Overview) | Generates architecture diagrams and documentation for cloud environments |
 | AWS to Azure migration | [AWS to Azure guidance](/azure/migration/migrate-from-aws) | Provides guidance for migrating from AWS to Azure |
-| GCP to Azure migration | [GCP to Azure guidance](/azure/migration/migrate-from-google-cloud) | Provides guidance for migrating from GCP to Azure |
+| Google Cloud to Azure migration | [Google Cloud to Azure guidance](/azure/migration/migrate-from-google-cloud) | Provides guidance for migrating from Google Cloud to Azure |
 | AWS to Azure migration | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Maps AWS services to equivalent Azure services |
-| GCP to Azure migration | [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) | Maps GCP services to equivalent Azure services |
+| Google Cloud to Azure migration | [Google Cloud to Azure service mapping](/azure/architecture/gcp-professional/services) | Maps Google Cloud services to equivalent Azure services |
 
 ## Next steps
 
