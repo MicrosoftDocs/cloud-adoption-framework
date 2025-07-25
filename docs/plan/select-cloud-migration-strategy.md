@@ -19,12 +19,12 @@ The following table provides a comprehensive overview of all available cloud mig
 |--------------------------|------------------|------------------------------|
 | [Retire](#1-retire-decommission) | Need to decommission redundant or low-value workloads | • Workload has limited current or future business value • Migration or modernization cost outweighs business benefits |
 | [Rehost](#2-rehost-like-for-like-migration) | Need minimal business disruption and no modernization in near future | • Workload is stable • Workload is compatible with Azure • Low-risk migration • Short-term cloud adoption goals • No immediate need for modernization • Reduce capital expense • Free up datacenter space • Inexperience with Azure |
-| [Replatform](#3-replatform-modernize-hosting-environment) | Need PaaS solutions and minimal code changes to meet business goals | • Simplify reliability and disaster recovery • Reduce OS and licensing overhead • Improve time-to-cloud with moderate investment • Containerize app |
-| [Refactor](#4-refactor-modernize-code) | Need code changes to meet business goals | • Decrease cost of maintenance • Reduce technical debt • Use Azure SDKs • Improve code performance • Optimize code costs • Apply cloud design patterns • Instrument code for monitoring |
-| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Need architecture changes to meet goals | • Application requires modularization or service decomposition • Scaling needs vary by component • Architecture must support future innovation • Mix technology stacks |
+| [Replatform](#3-replatform-modernize-hosting-environment) | Needs PaaS solutions and minimal code changes to offload maintenance and facilitate reliability | • Simplify reliability and disaster recovery • Reduce OS and licensing overhead • Improve time-to-cloud with moderate investment • Containerize app |
+| [Refactor](#4-refactor-modernize-code) | Need code changes to reduce technical debt or optimize code for cloud | • Decrease cost of maintenance • Reduce technical debt • Use Azure SDKs • Improve code performance • Optimize code costs • Apply cloud design patterns • Instrument code for monitoring |
+| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Need architecture changes to unlock cloud-native capabilities | • Application requires modularization or service decomposition • Scaling needs vary by component • Architecture must support future innovation • Mix technology stacks |
 | [Replace](#6-replace-use-saas-alternative) | Need SaaS/AI solution to simplify operations | • Simplify operations • Internal development resources are better used elsewhere • Little need for customization |
 | [Rebuild](#7-rebuild-build-cloud-native) | Need new cloud-native solution to meet requirements | • Legacy system is too outdated or inflexible • Build applications faster • Reduce operational cost • Need modern frameworks and tools |
-| [Retain](#8-retain-keep-as-is) | Need stability and avoid change | • Workload is stable, compliant, and meets business needs • No near-term driver to move • Low ROI from migration |
+| [Retain](#8-retain-keep-as-is) | Need stability and no change | • Workload is stable, compliant, and meets business needs • No near-term driver to move • Low ROI from migration |
 
 ## Determine business drivers before cloud adoption
 
@@ -43,12 +43,12 @@ Business stakeholders and workload teams should collaborate to define what each 
     |------------------|--------------------|
     | Need to decommission redundant or low-value workloads | Retire |
     | Need minimal business disruption and no modernization in near future | Rehost |
-    | Need PaaS solutions and minimal code changes to meet business goals | Replatform |
-    | Need code changes to meet business goals | Refactor |
-    | Need architecture changes to meet goals | Rearchitect |
+    | Needs PaaS solutions and minimal code changes to offload maintenance and facilitate reliability | Replatform |
+    | Need code changes to reduce technical debt or optimize code for cloud | Refactor |
+    | Need architecture changes to unlock cloud-native capabilities | Rearchitect |
     | Need SaaS/AI solution to simplify operations | Replace |
     | Need new cloud-native solution to meet requirements | Rebuild |
-    | Need stability and avoid change | Retain |
+    | Need stability and no change | Retain |
 
 ## Select the right migration strategy
 
@@ -88,7 +88,7 @@ Replatforming moves workloads to a modern hosting environment with minimal code 
 
 | Business driver | Key indicators for this strategy |
 |------------------|---------------------------|
-| Need PaaS solutions and minimal code changes to meet business goals | • Workload benefits from simplified reliability and disaster recovery<br>• Workload reduces OS and licensing overhead<br>• Team can containerize or repackage the app with moderate effort<br>• Migration improves time-to-cloud without major refactoring |
+| Needs PaaS solutions and minimal code changes to offload maintenance and facilitate reliability | • Workload benefits from simplified reliability and disaster recovery<br>• Workload reduces OS and licensing overhead<br>• Team can containerize or repackage the app with moderate effort<br>• Migration improves time-to-cloud without major refactoring |
 
 Choose workloads where PaaS options reduce operational overhead, improve reliability, or simplify disaster recovery. Minimal code refactoring might be necessary to take advantage of PaaS services.
 
@@ -104,7 +104,7 @@ Refactoring improves the internal structure of code without adding new features.
 
 | Business driver | Key indicators for this strategy |
 |----------------------|--------------------------------------------|
-| Need code changes to meet business goals | • The workload has high maintenance costs<br>• The codebase contains significant technical debt<br>• Azure SDKs or services can improve performance or observability<br>• The team can optimize code costs or apply cloud design patterns |
+| Need code changes to reduce technical debt or optimize code for cloud | • The workload has high maintenance costs<br>• The codebase contains significant technical debt<br>• Azure SDKs or services can improve performance or observability<br>• The team can optimize code costs or apply cloud design patterns |
 
 ### 5. Rearchitect (modernize architecture and code)
 
@@ -112,7 +112,7 @@ A rearchitect strategy redesigns the workload’s architecture to improve scalab
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| Need architecture changes to meet goals | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks|
+| Need architecture changes to unlock cloud-native capabilities | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks|
 
 ### 6. Replace (use SaaS alternative)
 
@@ -136,7 +136,7 @@ A retain strategy keeps workloads in their current environment when they're stab
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| Need stability and avoid change | • The workload is stable, compliant, and meets business needs<br>• There's no near-term driver to migrate<br>• Migration offers low return on investment |
+| Need stability and no change | • The workload is stable, compliant, and meets business needs<br>• There's no near-term driver to migrate<br>• Migration offers low return on investment |
 
 ## Understand when to modernize during migration
 
