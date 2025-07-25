@@ -9,46 +9,43 @@ ms.topic: conceptual
 
 # Select your cloud migration strategies
 
-This article helps you select the most appropriate cloud migration strategy for each workload in your portfolio. Each strategy (retire, retain, rehost, replatform, refactor, rearchitect, rebuild, or replace) offers distinct benefits and tradeoffs that must align with your business goals and technical requirements.
+With a clear inventory and understanding of your workloads, your cloud adoption plan must determine what to do with each workload in the cloud. There are multiple migration strategies, sometimes known as the “Rs” of cloud migration. Each workload can be Retired, Retained, Rehosted, Replatformed, Refactored, Rearchitected, Rebuilt, or Replaced. This section guides how to pick the right approach for each workload, presenting the options, when to choose each, and the pros/cons trade-offs.
 
 ## Migration strategy overview
 
-The following table provides a comprehensive overview of all available cloud migration strategies. Use this reference to understand each strategy's primary business driver and key indicators that signal when to apply each approach to your workloads.
+The following table provides an overview of all available cloud migration strategies. Use this reference to understand each strategy's primary business driver and key indicators that signal when to apply each approach to your workloads.
 
 | Cloud migration strategy | Business driver | Key indicators for this strategy |
 |--------------------------|------------------|------------------------------|
 | [Retire](#1-retire-decommission) | Need to decommission redundant or low-value workloads | • Workload has limited current or future business value • Migration or modernization cost outweighs business benefits |
 | [Rehost](#2-rehost-like-for-like-migration) | Need minimal business disruption and no modernization in near future | • Workload is stable • Workload is compatible with Azure • Low-risk migration • Short-term cloud adoption goals • No immediate need for modernization • Reduce capital expense • Free up datacenter space • Inexperience with Azure |
-| [Replatform](#3-replatform-modernize-hosting-environment) | Need PaaS solutions and minimal code changes to meet business goals | • Simplify reliability and disaster recovery • Reduce OS and licensing overhead • Improve time-to-cloud with moderate investment • Containerize app |
-| [Refactor](#4-refactor-modernize-code) | Need code changes to meet business goals | • Decrease cost of maintenance • Reduce technical debt • Use Azure SDKs • Improve code performance • Optimize code costs • Apply cloud design patterns • Instrument code for monitoring |
-| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Need architecture changes to meet goals | • Application requires modularization or service decomposition • Scaling needs vary by component • Architecture must support future innovation • Mix technology stacks |
+| [Replatform](#3-replatform-modernize-hosting-environment) | Needs PaaS solutions and minimal code changes to offload maintenance and facilitate reliability | • Simplify reliability and disaster recovery • Reduce OS and licensing overhead • Improve time-to-cloud with moderate investment • Containerize app |
+| [Refactor](#4-refactor-modernize-code) | Need code changes to reduce technical debt or optimize code for cloud | • Decrease cost of maintenance • Reduce technical debt • Use Azure SDKs • Improve code performance • Optimize code costs • Apply cloud design patterns • Instrument code for monitoring |
+| [Rearchitect](#5-rearchitect-modernize-architecture-and-code) | Need architecture changes to unlock cloud-native capabilities | • Application requires modularization or service decomposition • Scaling needs vary by component • Architecture must support future innovation • Mix technology stacks |
 | [Replace](#6-replace-use-saas-alternative) | Need SaaS/AI solution to simplify operations | • Simplify operations • Internal development resources are better used elsewhere • Little need for customization |
 | [Rebuild](#7-rebuild-build-cloud-native) | Need new cloud-native solution to meet requirements | • Legacy system is too outdated or inflexible • Build applications faster • Reduce operational cost • Need modern frameworks and tools |
-| [Retain](#8-retain-keep-as-is) | Need stability and avoid change | • Workload is stable, compliant, and meets business needs • No near-term driver to move • Low ROI from migration |
+| [Retain](#8-retain-keep-as-is) | Need stability and no change | • Workload is stable, compliant, and meets business needs • No near-term driver to move • Low ROI from migration |
 
-## Determine business drivers before cloud adoption
+## Determine business drivers before migration
 
-A business driver defines why a workload must change to support strategic outcomes. Identifying these drivers ensures that cloud adoption decisions align with measurable business value.
+A business driver defines why a workload needs to change in order to support a specific business goal. Business drivers connect cloud adoption decisions to measurable business value and strategic goals. Identifying these drivers ensures that migration efforts are purposeful and aligned with organizational priorities.
 
-1. **Define the organization’s business goals for cloud adoption.** Business goals provide the foundation for evaluating workload relevance and transformation needs. Without clearly defined goals, workload decisions might not support strategic outcomes. Business stakeholders should define or validate goals such as agility, innovation, cost optimization, resilience, or sustainability. Use strategic planning documents, executive interviews, or business case workshops to capture these goals.
+1. **Define business goals.** Business goals are high-level outcomes the organization wants to achieve from cloud adoption, such as adopting AI, increasing agility, accelerating innovation, reducing costs, and improving resilience. These goals provide the strategic context for all migration decisions. Use strategic planning documents, executive interviews, or business case workshops to identify and validate these goals with stakeholders.
 
-2. **Categorize each workload’s contribution to the defined business goals.** Categorization clarifies how each workload supports the organization’s strategic direction. Workload teams and business stakeholders should jointly assess whether each workload contributes to one or more business goals. Use metrics, stakeholder input, and architectural documentation to determine alignment. Document the workload’s role in enabling agility, driving innovation, reducing costs, improving resilience, or supporting sustainability.
+2. **Identify gaps.** Perform a high-level gap analysis to understand what each workload must change to better support the defined business goals. This analysis should consider current performance, scalability, compliance, user experience, and architectural limitations. Document any shortfalls that prevent the workload from fully enabling the desired outcomes.
 
-3. **Identify gaps between current capabilities and future expectations.** Gap analysis reveals what each workload must change to meet business goals. Compare the workload’s current performance, scalability, and architecture with what is required to support the defined goals. Document gaps in functionality, integration, compliance, or user experience. Use these insights to inform migration strategy selection.
-
-4. **Determine the business driver for each workload.** A business driver reflects both current limitations and future expectations.
-Business stakeholders and workload teams should collaborate to define what each workload must do differently to support strategic outcomes. Consider technical, operational, and compliance requirements. Use the following table to narrow the list of viable migration strategies based on the identified business driver:
+3. **Determine the business driver.** A business driver emerges from the gap between a workload’s current state and its desired future state. It represents a specific, actionable reason for change. These drivers guide the selection of an appropriate migration strategy.
 
     | Business driver | Migration strategy |
     |------------------|--------------------|
     | Need to decommission redundant or low-value workloads | Retire |
     | Need minimal business disruption and no modernization in near future | Rehost |
-    | Need PaaS solutions and minimal code changes to meet business goals | Replatform |
-    | Need code changes to meet business goals | Refactor |
-    | Need architecture changes to meet goals | Rearchitect |
+    | Needs PaaS solutions and minimal code changes to offload maintenance and facilitate reliability | Replatform |
+    | Need code changes to reduce technical debt or optimize code for cloud | Refactor |
+    | Need architecture changes to unlock cloud-native capabilities | Rearchitect |
     | Need SaaS/AI solution to simplify operations | Replace |
     | Need new cloud-native solution to meet requirements | Rebuild |
-    | Need stability and avoid change | Retain |
+    | Need stability and no change | Retain |
 
 ## Select the right migration strategy
 
@@ -79,8 +76,8 @@ A rehost strategy enables fast and low-risk migration by moving workloads to Azu
 | Source environment | Azure target | Rehosting examples | Guidance |
 |--------------| --- | ----------|--------------------------------|
 | On-premises | Azure IaaS | On-premises servers → Azure Virtual Machines | [Technology decision guides](/azure/architecture/guide/technology-choices/compute-decision-tree) |
-|Other cloud IaaS | Azure IaaS | AWS EC2 → Azure Virtual Machines<br><br>GCP Compute Engine → Azure Virtual Machines | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) <br> [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
-| Other cloud PaaS | Azure PaaS | AWS Beanstalk → Azure App Service<br><br>GCP App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) <br> [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) |
+|Other cloud IaaS | Azure IaaS | AWS EC2 → Azure Virtual Machines<br><br>Google Cloud Compute Engine → Azure Virtual Machines | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) <br> [Google Cloud to Azure service mapping](/azure/architecture/gcp-professional/services) |
+| Other cloud PaaS | Azure PaaS | AWS Beanstalk → Azure App Service<br><br>Google Cloud App Engine → Azure App Service | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) <br> [Google Cloud to Azure service mapping](/azure/architecture/gcp-professional/services) |
 
 ### 3. Replatform (modernize hosting environment)
 
@@ -88,7 +85,7 @@ Replatforming moves workloads to a modern hosting environment with minimal code 
 
 | Business driver | Key indicators for this strategy |
 |------------------|---------------------------|
-| Need PaaS solutions and minimal code changes to meet business goals | • Workload benefits from simplified reliability and disaster recovery<br>• Workload reduces OS and licensing overhead<br>• Team can containerize or repackage the app with moderate effort<br>• Migration improves time-to-cloud without major refactoring |
+| Needs PaaS solutions and minimal code changes to offload maintenance and facilitate reliability | • Workload benefits from simplified reliability and disaster recovery<br>• Workload reduces OS and licensing overhead<br>• Team can containerize or repackage the app with moderate effort<br>• Migration improves time-to-cloud without major refactoring |
 
 Choose workloads where PaaS options reduce operational overhead, improve reliability, or simplify disaster recovery. Minimal code refactoring might be necessary to take advantage of PaaS services.
 
@@ -104,7 +101,7 @@ Refactoring improves the internal structure of code without adding new features.
 
 | Business driver | Key indicators for this strategy |
 |----------------------|--------------------------------------------|
-| Need code changes to meet business goals | • The workload has high maintenance costs<br>• The codebase contains significant technical debt<br>• Azure SDKs or services can improve performance or observability<br>• The team can optimize code costs or apply cloud design patterns |
+| Need code changes to reduce technical debt or optimize code for cloud | • The workload has high maintenance costs<br>• The codebase contains significant technical debt<br>• Azure SDKs or services can improve performance or observability<br>• The team can optimize code costs or apply cloud design patterns |
 
 ### 5. Rearchitect (modernize architecture and code)
 
@@ -112,7 +109,7 @@ A rearchitect strategy redesigns the workload’s architecture to improve scalab
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| Need architecture changes to meet goals | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks|
+| Need architecture changes to unlock cloud-native capabilities | • The application requires modularization or service decomposition<br>• Scaling needs vary by component<br>• The architecture must support future innovation<br>• The solution uses mixed technology stacks|
 
 ### 6. Replace (use SaaS alternative)
 
@@ -136,7 +133,7 @@ A retain strategy keeps workloads in their current environment when they're stab
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
-| Need stability and avoid change | • The workload is stable, compliant, and meets business needs<br>• There's no near-term driver to migrate<br>• Migration offers low return on investment |
+| Need stability and no change | • The workload is stable, compliant, and meets business needs<br>• There's no near-term driver to migrate<br>• Migration offers low return on investment |
 
 ## Understand when to modernize during migration
 

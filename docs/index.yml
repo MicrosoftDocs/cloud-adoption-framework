@@ -70,10 +70,10 @@ additionalContent:
         # Card
         - title: 🔄 Modernize
           summary: Improve your existing workloads to better meet business needs.
-          url: ./modernize/index.md
+          url: ./modernize/prepare-organization-cloud-modernization.md
         
         # Card
-        - title: 🌐 Build cloud-native
+        - title: 🌐 Cloud-native
           summary: Build new cloud-native workloads and features in Azure.
           url: ./innovate/index.md
 
