@@ -27,7 +27,7 @@ A cloud-native solution creates new business value by building new applications 
 
 1. **Select Azure services that align with your requirements.** Use Azure’s decision guides and the Azure Architecture Center to choose the most appropriate services for your use case. Favor platform-as-a-service (PaaS) offerings whenever possible to reduce operational overhead by abstracting away infrastructure management. Managed services (for compute, databases, messaging, etc.) can accelerate development and simplify maintenance.
 
-1. **Select the right service tier (SKU).** Estimate expected user concurrency, transaction volumes, data sizes, and latency needs. Choose service SKUs that meet these targets, and validate your choices through performance testing. Adjust the SKU if needed based on test results to achieve an optimal balance of cost and performance. It’s better to start with a smaller size and scale up as required than over-provision without data.
+1. **Select the right service tier (SKU).** Estimate expected user concurrency, transaction volumes, data sizes, and latency requirements. Choose service SKUs that meet these targets and validate your choices through performance testing. Adjust the SKU if needed based on test results to achieve an optimal balance of cost and performance. It’s better to start with a smaller size and scale up as required than over-provision.
 
 1. **Determine how many regions to use.** Use your reliability requirements, such as service level objectives (SLOs) for uptime, recovery point objectives (RPOs), and recovery time objectives (RTOs), to decide how many regions to use. For high availability or disaster recovery, multi-region deployments might be necessary. However, multi-region architectures can introduce complexity around data replication, latency, and data residency regulations. Work with your compliance team to ensure your regional strategy meets any legal or regulatory obligations.
 
@@ -61,9 +61,9 @@ A deployment strategy defines how to introduce a new workload or feature into pr
 
 ### Plan deployment for new features in an existing system
 
-1. **Use in-place updates for minor or backwards-compatible changes.** Deploy the feature incrementally using rolling updates or feature flags. Start with a small percentage of users or a limited number of instances. Monitor system metrics and logs to validate stability before expanding the rollout. This approach minimizes user effects and supports fast rollback.
+1. **Use in-place updates for minor or backward-compatible changes.** Deploy the feature incrementally using rolling updates or feature flags. Start with a small percentage of users or a limited number of instances. Monitor system metrics and logs to validate stability before expanding the rollout. This approach minimizes user effects and supports fast rollback.
 
-1. **Use parallel (blue-green) deployment for larger or riskier changes.** Deploy the updated version alongside the current version in a separate environment. Route a small portion of live traffic to the new version to validate performance and behavior. If successful, shift all traffic to the new version and decommission the old one. If issues arise, revert traffic to the original version instantly. This strategy ensures zero-downtime deployment and simplifies rollback.
+1. **Use parallel (blue-green) deployments for larger or riskier changes.** Deploy the updated version alongside the current version in a separate environment. Route a small portion of live traffic to the new version to validate performance and behavior. If successful, shift all traffic to the new version and decommission the old one. If issues arise, revert traffic to the original version instantly. This strategy ensures zero-downtime deployment and simplifies rollback.
 
 ### Plan for new feature integration
 
@@ -88,4 +88,4 @@ When you add new features to an existing application or workload, more planning 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build the new solution](./develop-cloud-native-solutions.md)
+> [Build the new solution](./build-cloud-native-solutions.md)

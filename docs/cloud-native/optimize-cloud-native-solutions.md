@@ -25,7 +25,7 @@ A deployed solution must evolve to remain secure, cost-effective, and performant
 
 2. **Establish cost monitoring and controls.** Now that the solution is live, keep an eye on cloud costs. Use Microsoft Cost Management to review the actual cost incurred by the new solution. Compare it against your estimates and budget. Set up cost alerts or budgets in Azure so that you get notified if spending approaches certain thresholds. Identify any unexpected cost drivers; for example, maybe a service is running 24/7 when it could be turned off during off-hours. Optimizing for cost is an ongoing effort: regularly analyze resource utilization and decommission or downsize anything not fully used.
 
-3. **Test backup and recovery procedures.** Having backups is good, and being confident you can restore them is better. If your solution includes data stores, ensure Azure Backup or your chosen backup solution is properly backing up all critical data on the schedule you intend. Perform a trial restore (in a nonproduction environment) to verify the data integrity and that the restore process works within your recovery objectives (time and data loss). Document the steps to recover from a major failure, like how to redeploy the infrastructure from code and restore data from backups. Regularly rehearse disaster recovery drills so the team stays practiced in restoring service and you know the documented procedures are up to date and effective.
+3. **Test backup and recovery procedures.** If your solution includes data stores, ensure Azure Backup or your chosen backup solution is properly backing up all critical data on the schedule you intend. Regularly perform a trial restore (in a nonproduction environment) to verify the data integrity and that the restore process works within your recovery objectives (time and data loss). Document the steps to recover from a major failure, like how to redeploy the infrastructure from code and restore data from backups. Regularly rehearse disaster recovery drills so the team stays practiced in restoring service and you know the documented procedures are up to date and effective.
 
 ## Collect user feedback and measure outcomes
 
@@ -45,4 +45,7 @@ A deployed solution must evolve to remain secure, cost-effective, and performant
 
 ## Next steps
 
-
+- Explore the [Azure Well-Architected Framework](/azure/well-architected/) to deepen your understanding of best practices for optimizing cloud-native solutions.
+- Review the [Azure Advisor documentation](/azure/advisor/advisor-overview) to learn how to implement its recommendations effectively.
+- Set up [Azure Policy](/azure/governance/policy/overview) to automate governance and ensure compliance with organizational standards.
+- Schedule a [Well-Architected Review](/azure/architecture/example-scenario/well-architected-review) to identify areas for improvement in your current workloads.
