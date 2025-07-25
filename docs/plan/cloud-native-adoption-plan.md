@@ -53,7 +53,7 @@ For each workload you plan to build, document business and technical requirement
 | Compliance requirements | Specify regulatory standards or certifications required |
 | Target users | Document number and locations of user base |
 
-For more information, see [Document workload business details](./discover-existing-workload-inventory.md#document-workload-business-details).
+For more information, see [Document workload business details](./discover-existing-workload-inventory.md#gather-business-details-per-workload).
 
 ### Workload technical requirements for cloud-native builds
 

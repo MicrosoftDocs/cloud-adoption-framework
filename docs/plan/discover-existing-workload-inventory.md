@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Discover your existing workload inventory
 
-This article helps you create a comprehensive inventory of your workloads to form the foundation of your cloud adoption plan. An accurate inventory enables you to make informed decisions about each workload's future in the cloud. Use the following table for discovery and assessment tools for workloads on-premises, in Amazon Web Services (AWS), in Google Cloud Platform (GCP), and application code.
+*This section applies to organizations with existing IT workloads outside Azure (on-premises or other clouds) that need migration to Azure.* A comprehensive workload inventory is the foundation of a solid cloud adoption plan for such organizations. You can’t make decisions about how or whether to migrate a system if you don’t know it exists or understand its characteristics. Your cloud adoption plan must include steps to discover all workloads, gather key data about each, and prioritize them for migration.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
@@ -21,46 +21,39 @@ A complete inventory of your technical assets forms the foundation of your cloud
 
 2. **Use automated discovery tools.** [Azure Migrate](/azure/migrate/migrate-services-overview) provides free discovery capabilities for on-premises and cloud environments. This tool automatically identifies servers, applications, and their interdependencies. You must use automated discovery to accelerate inventory creation and reduce manual errors. If Azure Migrate doesn't fully support your environment, use tools like [Dr Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) or [CloudPilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) that extend Azure Migrate capabilities.
 
-3. **Include all components across all environments.** Your inventory must capture infrastructure and application components across all platforms. You need to include servers, VMs, applications, databases, communication patterns, integrations, identities, and cloud services from Azure, AWS, GCP, and other providers. This comprehensive view ensures that no critical asset is overlooked during planning or migration.
+3. **Include all components across all environments.** Your inventory must capture infrastructure and application components across all platforms. You need to include servers, VMs, applications, databases, communication patterns, integrations, identities, and cloud services from Azure, AWS, Google Cloud, and other providers. This comprehensive view ensures that no critical asset is overlooked during planning or migration.
 
 4. **Use manual discovery when automation isn't possible.** Some environments restrict automated discovery tools due to security policies or technical limitations. Use the [Azure Migrate import template](https://go.microsoft.com/fwlink/?linkid=2109031) to manually document assets in restricted environments. Manual documentation ensures you capture assets that automated tools can't access.
 
-## Prioritize workloads based on business value
+## Prioritize workloads by business value and feasibility
 
-A prioritized workload list is essential to avoid analysis paralysis and ensure early cloud adoption efforts deliver measurable business value. Prioritization helps you focus on the workloads that matter most to your organization and align with your strategic goals. You need to identify and sequence workloads based on business value, cloud motivations, and interdependencies.
+A long inventory list can be overwhelming. The plan should include a method to prioritize which workloads to tackle first in the cloud adoption effort. Not all workloads are equally important or equally suitable for immediate migration, so use a prioritization framework.
 
-1. **Identify the most important workloads based on business value.** A prioritized list of workloads helps you focus on what matters most. This list should reflect the workloads that are most critical to your business operations, customer experience, or revenue generation. Use business metrics such as revenue contribution, customer reach, or operational criticality to rank workloads.
+1. **Use business criticality.** Rank workloads by how critical they're to business operations, revenue, or customer experience. Often, a few workloads are mission-critical (if they go down, major business losses) while others are less critical. High business value systems might be high priority to ensure they benefit from cloud scalability or resilience, or sometimes lower priority if risk of migrating them is too high.
 
-2. **Validate prioritization with stakeholders.** Stakeholder alignment ensures prioritization reflects both technical realities and business priorities. Review the proposed workload order with business owners, application teams, and cloud governance stakeholders. Adjust based on feedback to ensure buy-in and reduce resistance during execution.
+1. **Estimate cloud readiness.** Make quick, high-level estimates of how ready each workload is for cloud migration, based on what you already know. A detailed technical assessment comes later, but for now, consider factors like technical complexity, legacy components, and known risks. Some workloads might be easy wins, while others might require significant rework. You might prioritize simpler workloads to build momentum, or choose a moderately complex but high-value system to maximize early success.
 
-## Document workload business details
+1. **Note dependencies.** At this stage, assess dependencies at a high level using existing knowledge. A full dependency mapping is done later, but for now, identify workloads that are tightly coupled with others. Systems with many connections might need to be migrated together to avoid disruptions. In some cases, a lower-priority workload might need to move earlier because a higher-priority system depends on it. Use this insight to group related workloads into logical migration waves.
 
-Business details document the organizational context and criticality of each workload. These details guide your migration decisions and help you prioritize workloads based on business value. You must collect this information for every workload in your inventory. Follow this guidance:
+1. **Consider strategic alignment.** If certain workloads are key to strategic initiatives, you might prioritize them to move sooner. On the other hand, workloads slated to be retired or replaced soon should be deprioritized for migration.
 
-1. **Identify workload owners and stakeholders.** Document the official workload name, description, and individuals accountable for the workload. These individuals must participate in migration planning to ensure technical accuracy and business alignment. Include application owners, data owners, business owners, and infrastructure teams who maintain the workload. Record the business unit responsible for workload costs and the department that oversees operations.
+1. **Create a prioritized backlog.**  This backlog can be a list or table with categories like "Wave 1: Workloads A, B, C. Wave 2: Workloads D, E." Ensure you validate this order with stakeholders. Business and IT owners should review and agree that the sequence makes sense. You want to get their buy-in and avoid pushback later. For example, if you schedule a department’s critical app last without their input, they might object. Adjust the plan based on feedback to balance technical logic with business needs.
 
-2. **Document workload criticality and data sensitivity.** Classify each workload as mission-critical, medium priority, or low priority based on its business value. Determine data sensitivity levels using categories such as highly confidential, confidential, general, public, or nonbusiness. This classification determines security requirements and migration priority.
+## Gather business details per workload
 
-3. **Capture business criticality and compliance requirements.** Document how each workload affects business processes, revenue, and operations. Identify which business teams and processes depend on the workload to understand the full effect of potential downtime. Include any regulatory compliance requirements, data residency restrictions, or industry-specific standards that govern the workload. This information shapes your cloud architecture decisions.
+For each workload identified, the plan should capture key business context and requirements. This information guides migration strategy (next section) and ensures decisions align with business needs. Important details to document
 
-4. **Record operational constraints.** Document maintenance windows, business freeze periods, and geographic restrictions for each workload. Include any times when the business can't tolerate changes, such as peak sales periods or financial closing dates. These constraints determine your migration schedule and deployment windows.
+1. **Owners and stakeholders**: Document "owns" the workload from a business perspective (VP of Sales for a CRM) and from an IT perspective (application owner, infrastructure owner). List all stakeholders who must be involved in planning its move.
 
-| Business detail | Description |
-|-----------------|-------------|
-| Workload name | Official name used across the organization |
-| Workload description | Single sentence describing the workload's purpose |
-| Workload owners | Individuals accountable for workload |
-| Criticality level | High (mission-critical), medium, or low priority |
-| Data sensitivity | Highly confidential, confidential, general, public, nonbusiness |
-| Compliance requirements | Regulatory standards or certifications required |
-| Business owners | Executive or manager overseeing this workload |
-| Business unit | Department responsible for workload costs |
-| Business processes affected | Processes that depend on this workload |
-| Business teams affected | Teams whose work depends on this workload |
-| Business value | Revenue, operations, or customer value if unavailable |
-| Maintenance windows | Scheduled times for updates and changes |
-| Business freeze periods | Dates when no changes are permitted |
-| Timelines | List the target date to complete migration strategy |
+1. **Business function and criticality**: Document what the workload does, and how important it is. Record a short description of its purpose and classify its criticality level (high/medium/low). Criticality often ties to how much downtime can be tolerated.
+
+1. **Data sensitivity and compliance**: Note the classification of data the system handles (public, internal, confidential, highly confidential). Document compliance requirements (PCI, HIPAA, GDPR) that apply to this workload. For instance, if data residency is required in a certain region, that influences the cloud architecture for it.
+
+1. **Operational constraints**: Document specific maintenance windows, blackout periods (high-traffic periods), and uptime requirements. Document any such constraints because they affect migration scheduling and target architecture (high-availability needs).
+
+1. **Projected timeline or deadlines**: If there’s a desired timeline for migrating this workload, note that as well. For example, maybe you have contract renewals or data center lease ending. These factors feed into the overall roadmap scheduling.
+
+For an example, see [Migration adoption plan](./migration-adoption-plan.md#workload-business-details-for-migration).
 
 ## Azure discovery and assessment tools and resources
 
@@ -79,9 +72,9 @@ Business details document the organizational context and criticality of each wor
 | Assessment | [CloudAtlas](https://appsource.microsoft.com/product/web-apps/unify-cloud-llc.cloudatlas_modernize_and_migrate?tab=Overview) | Provides modernization and migration assessment |
 | PaaS assessment | [Cloudockit](https://azuremarketplace.microsoft.com/marketplace/apps/azure-dockit.cloudockit?tab=Overview) | Generates architecture diagrams and documentation for cloud environments |
 | AWS to Azure migration | [AWS to Azure guidance](/azure/migration/migrate-from-aws) | Provides guidance for migrating from AWS to Azure |
-| GCP to Azure migration | [GCP to Azure guidance](/azure/migration/migrate-from-google-cloud) | Provides guidance for migrating from GCP to Azure |
+| Google Cloud to Azure migration | [Google Cloud to Azure guidance](/azure/migration/migrate-from-google-cloud) | Provides guidance for migrating from Google Cloud to Azure |
 | AWS to Azure migration | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Maps AWS services to equivalent Azure services |
-| GCP to Azure migration | [GCP to Azure service mapping](/azure/architecture/gcp-professional/services) | Maps GCP services to equivalent Azure services |
+| Google Cloud to Azure migration | [Google Cloud to Azure service mapping](/azure/architecture/gcp-professional/services) | Maps Google Cloud services to equivalent Azure services |
 
 ## Next steps
 

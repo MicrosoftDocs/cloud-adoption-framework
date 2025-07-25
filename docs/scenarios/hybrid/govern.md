@@ -19,7 +19,7 @@ You can expand the advantages of cloud governance beyond the cloud in a hybrid, 
 Well-defined governance starts with sound resource consistency practices. Organizing resources, resource groups, subscriptions, and [management groups allows for ease of governance](/azure/governance/management-groups/overview). Expand your cloud governance practices with a few steps:
 
 - Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets.
-- Tag resources from AWS, GCP, and so on.
+- Tag resources from AWS, Google Cloud, and so on.
 - Query your resources to see where each is hosted.
 
 After you establish your tagging standards and bring on some of your assets, you can begin governing those resources by using familiar governance tools like Azure Policy.
@@ -33,7 +33,7 @@ Security baselines are among the most common ways that you can expand your gover
 - [Collect and detect security data across clouds with Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines)
 - [Investigate and respond to security threats with Microsoft Sentinel](/azure/sentinel/investigate-cases)
 - [Connect AWS accounts to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-aws)
-- [Connect GCP accounts to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-gcp)
+- [Connect Google Cloud accounts to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-gcp)
 
 ## Next step
 
