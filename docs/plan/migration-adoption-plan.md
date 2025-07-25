@@ -70,7 +70,7 @@ For each workload in your inventory, gather business and technical details.
 | Geographic restrictions | Document any data residency or access location requirements. |
 | Success metrics | Define specific measurements to evaluate the success of the migration. |
 
-For more information, see [Document workload business details](./discover-existing-workload-inventory.md#document-workload-business-details).
+For more information, see [Document workload business details](./discover-existing-workload-inventory.md#gather-business-details-per-workload).
 
 ### Workload technical details for migration
 
