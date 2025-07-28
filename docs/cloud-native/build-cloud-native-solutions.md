@@ -41,13 +41,9 @@ Testing is critical. Verify every aspect of the workload in the test environment
 
 4. **Execute security and compliance tests.** Run security scans and vulnerability assessments on your application code and any container images or infrastructure components. Use tools like Microsoft Defender for Cloud to check for misconfigurations in Azure resources and ensure compliance with security benchmarks. If the workload is subject to regulatory requirements, perform compliance checks or audits in the test environment. It’s easier to fix security issues before deployment than to react to incidents later. For more information, see [Security testing](/azure/well-architected/security/test) in WAF.
 
-### Fix critical issues and verify all tests pass
+5. **Fix critical issues and verify all tests pass.** Treat testing phases as gates: don't proceed to go-live until all critical defects uncovered in testing are resolved. If performance testing shows the workload missing a service-level agreement (SLA), address it by tuning or scaling resources. If security scans show high-risk vulnerabilities, remediate them or implement compensating controls. Only when the solution passes functional, UAT, performance, and security criteria should you consider it ready for production. Document any low-priority known issues along with plans to address them in future updates so they aren't forgotten.
 
-Treat testing phases as gates: don't proceed to go-live until all critical defects uncovered in testing are resolved. If performance testing shows the workload missing a service-level agreement (SLA), address it by tuning or scaling resources. If security scans show high-risk vulnerabilities, remediate them or implement compensating controls. Only when the solution passes functional, UAT, performance, and security criteria should you consider it ready for production. Document any low-priority known issues along with plans to address them in future updates so they aren't forgotten.
-
-### Repeat unit and integration tests after changes
-
-For any new features or modifications, ensure you have adequate unit tests (covering individual components) and integration tests (covering interactions between components and external workload). Run these tests as part of your pipeline. After fixing any bug, rerun the relevant tests to confirm the issue is truly resolved and no new regressions were introduced. A solid automated test suite is crucial for maintaining quality in cloud-native continuous delivery environments.
+6. **Repeat unit and integration tests after changes.** For any new features or modifications, ensure you have adequate unit tests (covering individual components) and integration tests (covering interactions between components and external workload). Run these tests as part of your pipeline. After fixing any bug, rerun the relevant tests to confirm the issue is truly resolved and no new regressions were introduced. A solid automated test suite is crucial for maintaining quality in cloud-native continuous delivery environments.
 
 ## Create reusable infrastructure
 
