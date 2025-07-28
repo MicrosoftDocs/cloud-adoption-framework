@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 Now, deploy the solution to the live Azure environment following the planned strategy. This phase includes final preparations, the deployment execution, and post-deployment verification and support.
 
-## Prepare stakeholders
+## Prepare stakeholders for cloud-native deployment
 
 1. **Announce the deployment schedule and expected impact.** Before you begin the production deployment, communicate the plan and value to all relevant stakeholders. Announce the deployment schedule and expected user effects. For example, for new features, note any downtime or user-visible changes well in advance. Stakeholders might identify conflicts with business events or raise concerns about timing. Provide a channel for feedback and confirm that the deployment window aligns with operational priorities. Adjust the schedule if necessary to avoid disruption.
 
@@ -21,11 +21,11 @@ Now, deploy the solution to the live Azure environment following the planned str
 
 1. **Conduct a pre-migration readiness review.** A readiness review confirms that all teams understand their roles and have necessary access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify that support teams have appropriate system access and monitoring tools configured. This preparation ensures coordinated response to any issues that arise during migration.
 
-## Execute the deployment
+## Execute the cloud-native deployment
 
 The deployment steps differ slightly based on whether it’s a new standalone workload or a feature update to an existing system, but in either case use automation and best practices:
 
-### Deploy new workloads
+### Deploy new cloud-native workloads
 
 1. **Create production environment** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying a fresh workload, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
 
@@ -37,7 +37,7 @@ The deployment steps differ slightly based on whether it’s a new standalone wo
 
 1. **Gradually scale up based on user feedback** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
 
-### Deploy new features to an existing workload
+### Deploy new cloud-native features to an existing workload
 
 For introducing a new feature, follow the approach you decided in the planning phase:
 

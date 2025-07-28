@@ -47,27 +47,21 @@ A cloud-native architecture must align with proven design principles and organiz
 
 1. **Use the framework to evaluate trade-offs.** Identify potential risks and technical debt early. Document trade-offs to support informed decision-making and future reviews.
 
-### Evaluate integration requirements
+### Plan integration with existing systems
 
-1. **Identify integration points early.** Assess how new services interact with existing systems, including APIs, authentication, and data flows. Integration planning ensures compatibility with existing systems and reduces delivery risk.
+1. **Identify all system integration points.** Modern cloud-native solutions must connect with existing systems through APIs, authentication services, data stores, and network infrastructure. Document each integration point and map data flows between systems. Assess the current state of existing APIs to determine if modifications are necessary. This analysis prevents integration surprises during development and ensures smooth system interoperability.
 
-1. **Assess dependencies on shared services.** Confirm compatibility with Microsoft Entra ID, virtual networks, hybrid connections, and other shared services.
+2. **Validate compatibility with shared enterprise services.** Enterprise environments rely on shared services such as Microsoft Entra ID for authentication, virtual networks for connectivity, and hybrid connections for on-premises integration. Confirm that your architecture design supports these existing services without requiring modifications. Test authentication flows and network connectivity early in the planning process to identify potential conflicts or configuration requirements.
 
-1. **Validate toolchain compatibility.** Ensure the architecture aligns with existing CI/CD pipelines, monitoring tools, and operational processes.
+3. **Ensure alignment with existing development and operations tools.** Cloud-native solutions must work within established toolchains for continuous integration, deployment, monitoring, and incident response. Review your CI/CD pipeline requirements and confirm compatibility with existing tools such as Azure DevOps, GitHub Actions, or Jenkins. Validate that monitoring and logging solutions can accommodate the new architecture without significant changes to operational processes.
 
-### Select appropriate Azure services
+### Select appropriate Azure services and service tiers
 
-1. **Use decision guides to evaluate services.** Refer to [Azure’s decision guides](/azure/architecture/guide/technology-choices/technology-choices-overview) to compare services based on workload needs.
+1. **Use decision guides to select services that match workload requirements.** Azure decision guides provide structured comparisons of services based on specific workload characteristics such as data volume, transaction patterns, and integration needs. Review the [technology choices overview](/azure/architecture/guide/technology-choices/technology-choices-overview) to identify services that align with your functional and nonfunctional requirements. Prioritize platform-as-a-service (PaaS) options because these services reduce operational overhead by handling infrastructure management, patching, and scaling automatically.
 
-1. **Prefer platform-as-a-service (PaaS).** PaaS offerings reduce operational overhead by abstracting away infrastructure management. See also [Recommendations for selecting the right services](/azure/well-architected/performance-efficiency/select-services).
+2. **Define usage patterns and performance requirements to select service tiers.** Service tier selection affects both cost and capability. Document expected transaction volumes, concurrent user loads, storage requirements, and performance targets such as response times and throughput. Use these metrics to select an initial SKU that meets baseline requirements without significant over-provisioning. Plan to adjust tiers based on actual usage patterns after deployment.
 
-### Select the appropriate service tier (SKU)
-
-1. **Define workload requirements and usage patterns.** The right SKU ensures performance and feature alignment without over-provisioning. Estimate expected load and performance targets to select a starting SKU.
-
-1. **Start with a smaller SKU and scale as needed.** Avoid over-provisioning by testing and adjusting based on actual performance.
-
-1. **Validate feature availability by SKU.** Some features are only available in higher SKUs. Ensure the selected tier supports all required capabilities.
+3. **Validate feature compatibility across selected service tiers.** Critical features such as advanced security capabilities, high availability options, or integration APIs vary by service tier. Create a feature matrix that maps required capabilities to available SKUs. Ensure the selected tier supports all necessary features to avoid costly migrations or architectural changes later. Reference [service-specific documentation](/azure/well-architected/performance-efficiency/select-services) to confirm feature availability and limitations.
 
 ### Select how many regions to use
 
@@ -83,21 +77,19 @@ A cloud-native architecture must align with proven design principles and organiz
 
 2. **Record key design decisions and trade-offs.** Document the rationale behind architectural choices, including nonfunctional requirements such as reliability, security, and performance. Highlight any trade-offs made to balance competing priorities.
 
-3. **Use documentation to support implementation and reviews.** Ensure the design document is comprehensive and accessible to all stakeholders. This documentation fosters a shared understanding of the architecture and serves as a reference during development and future reviews.
-
 ## Plan deployment strategy
 
 A deployment strategy defines how to introduce a new workload or feature into production with minimal risk and maximum reliability. Selecting the right strategy ensures consistent delivery, enables rollback, and supports validation at each stage.
 
-### Use development best practices
+### Plan development and deployment practices
 
-Development practices ensure consistent delivery and operational readiness across environments. These practices reduce deployment risk and improve team coordination.
+Development and deployment practices ensure consistent delivery and operational readiness across environments. These practices reduce deployment risk and improve team coordination.
 
-1. **Follow [DevOps](/azure/well-architected/operational-excellence/devops-culture) principles.**  DevOps practices align development and operations teams through automation, version control, and CI/CD pipelines. Use tools like Azure DevOps or GitHub Actions to automate build, test, and deployment workflows. This approach reduces manual errors and accelerates release cycles.
+1. **Establish [DevOps](/azure/well-architected/operational-excellence/devops-culture) practices for deployment automation.** DevOps practices align development and operations teams through automation, version control, and CI/CD pipelines. Use tools like Azure DevOps or GitHub Actions to automate build, test, and deployment workflows. This approach reduces manual errors, accelerates release cycles, and provides consistent deployment processes across environments.
 
-1. **Formalize [operational tasks](/azure/well-architected/operational-excellence/formalize-operations-tasks) to improve support readiness.** Operational tasks include monitoring, alerting, and incident response. Document these tasks using runbooks or automation scripts. Store them in a central location such as Azure DevOps Wiki or GitHub to ensure accessibility and consistency.
+1. **Plan [operational readiness](/azure/well-architected/operational-excellence/formalize-operations-tasks) to support deployment activities.** Operational readiness includes monitoring, alerting, and incident response procedures for deployment scenarios. Document deployment runbooks and automation scripts that cover rollback procedures, health checks, and troubleshooting steps. Store these resources in a central location such as Azure DevOps Wiki or GitHub to ensure accessibility during deployment activities.
 
-1. **Formalize [software development processes](/well-architected/operational-excellence/formalize-development-practices) to improve code quality and traceability.** Use coding standards, peer reviews, and automated testing to ensure traceability and maintainability. Integrate these practices into your CI/CD pipeline to enforce quality gates before deployment.
+1. **Define [development practices](/well-architected/operational-excellence/formalize-development-practices) that support reliable deployments.** Use coding standards, peer reviews, and automated testing to ensure code quality and deployment readiness. Integrate these practices into your CI/CD pipeline to enforce quality gates before deployment. Include deployment-specific tests such as integration tests, smoke tests, and performance validation to verify system readiness for production.
 
 ### Plan deployment for a new workload
 
