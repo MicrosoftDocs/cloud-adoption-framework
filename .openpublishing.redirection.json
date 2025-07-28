@@ -3789,6 +3789,36 @@
          "source_path": "docs/innovate/innovation-guide/ci-cd.md",
          "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/data.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/devices.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/kubernetes/cluster-application-security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/kubernetes/cluster-design-operations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/kubernetes/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
       }
    ]   
 }
