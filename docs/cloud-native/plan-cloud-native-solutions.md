@@ -83,7 +83,7 @@ A well-planned architecture is critical to meeting your goals and requirements. 
 
 ## Plan deployment strategy
 
-A deployment strategy defines how to introduce a new workload or feature into production with minimal risk and maximum reliability. Selecting the right strategy ensures consistent delivery, enables rollback, and supports validation at each stage.
+When it’s time to deploy the cloud-native solution to production, follow a planned strategy rather than an ad-hoc push. A solid deployment plan minimizes user impact and provides ways to recover if something goes wrong.
 
 ### Plan development and deployment practices
 
@@ -97,7 +97,7 @@ Development and deployment practices ensure consistent delivery and operational 
 
 ### Plan deployment for a new workload
 
-1. **Use progressive exposure to limit impact.** Progressive exposure limits the impact of unforeseen issues. Use canary deployments to release the workload to a small subset of users or a pilot environment. Monitor performance and user feedback before expanding to full production. For more information, see [WAF - Adopt a progressive exposure model](/azure/well-architected/operational-excellence/safe-deployments#adopt-a-progressive-exposure-model).
+1. **Use progressive exposure to limit impact.** For a new application (greenfield) with no existing users, you should do a soft launch. Deploy to production but expose it only to internal users or a pilot group initially. This approach is a canary deployment for a new workload. If it’s truly brand new and isolated, a one-time deployment to full production is possible, but progressive exposure is still recommended to catch any issues in a controlled way. Don’t unleash the system on 100% of users on day one without some real-world validation first. For more information, see [WAF - Adopt a progressive exposure model](/azure/well-architected/operational-excellence/safe-deployments#adopt-a-progressive-exposure-model).
 
 1. **Document operational procedures and escalation paths.** Create clear documentation for restarting services, accessing logs, handling common issues, and escalating incidents. Store this documentation in a shared repository such as SharePoint or GitHub to ensure availability for support teams.
 

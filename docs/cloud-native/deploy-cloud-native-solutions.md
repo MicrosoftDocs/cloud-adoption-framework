@@ -19,23 +19,21 @@ Now, deploy the solution to the live Azure environment following the planned str
 
 1. **Set expectations for functionality during the deployment window.** A deployment window might involve reduced functionality or temporary delays. Inform stakeholders of these conditions to prevent confusion and ensure business continuity. Include fallback procedures or workarounds if applicable.
 
-1. **Conduct a pre-migration readiness review.** A readiness review confirms that all teams understand their roles and have necessary access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify that support teams have appropriate system access and monitoring tools configured. This preparation ensures coordinated response to any issues that arise during migration.
+1. **Conduct a predeployment readiness review.** A readiness review confirms that all teams understand their roles and have necessary access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify that support teams have appropriate system access and monitoring tools configured. This preparation ensures coordinated response to any issues that arise during migration.
 
 ## Execute the cloud-native deployment
 
-The deployment steps differ slightly based on whether it’s a new standalone workload or a feature update to an existing system, but in either case use automation and best practices:
+The deployment steps differ slightly based on whether it’s a new standalone workload or a feature update to an existing system:
 
 ### Deploy new cloud-native workloads
 
-1. **Create production environment** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying a fresh workload, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
+1. **Create production environment.** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying to a separate environment, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
 
-1. **Monitor the deployment process closely.** Make sure that logging and monitoring are enabled from the start so you can catch any errors immediately. Configure Azure Monitor, Application Insights, and Log Analytics to capture logs and metrics. Ensure logs are collected for both infrastructure and application components.
+1. **Smoke test.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This is a sanity check before any users are directed to the system.
 
-1. **Validate production readiness** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Validate core functionality such as API availability, database connectivity, and UI responsiveness. Verify that all services are running and dependencies are healthy. Check service health in [Azure Service Health](/azure/service-health/overview) and validate that all endpoints respond as expected.
+1. **Rollout to a small group of users.** Implement the progressive rollout by exposing the new system to a small set of users. This could be done by releasing a feature to only internal users, or routing a small percentage of live to the new deployment. Monitor closely for any errors or performance issues. Use Application Insights and custom dashboards to watch error rates, response times, and resource utilization in real time. Also gather qualitative feedback from any pilot users on the canary version.
 
-1. **Prepare for rollback in case of critical issues.** Rollback readiness ensures that you can quickly recover from failed deployments. Define and test rollback procedures before production deployment. Include teardown scripts for IaC and backup/restore procedures for data. Store rollback artifacts in a secure location. Monitor for showstopper issues and initiate rollback if needed. If critical errors are detected or core functionality fails, execute rollback steps immediately to restore the previous stable state.
-
-1. **Gradually scale up based on user feedback** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
+1. **Monitor and gradually expand.** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
 
 ### Deploy new cloud-native features to an existing workload
 
@@ -45,35 +43,23 @@ For introducing a new feature, follow the approach you decided in the planning p
 
 An in-place deployment updates the existing environment incrementally. The approach reduces risk by limiting exposure during early rollout stages.
 
-1. **Deploy the feature to a small subset of instances or users.** Start by updating a single server, pod, or instance, or enable the feature for a small user segment using a feature flag. This limits the blast radius if issues arise.
+1. **Rollout to a small group of users.** Update the existing environment gradually, or use feature flags. For example, enable the new feature only for a beta group of users initially. This allows verifying the feature in production on a limited scale and provides the option to disable it quickly if something goes wrong (just turn off the feature flag). This approach is usually sufficient for minor enhancements or additive features that are low risk. It has minimal overhead (no duplicate environment). Ensure you monitor the behavior of instances with the new feature versus those without it – tag their telemetry so you can compare.
 
-1. **Monitor system health and logs after partial rollout.** Use tools like Azure Monitor and Application Insights to track performance metrics, error rates, and user behavior. Validate that the new feature behaves as expected.
+1. **Smoke test.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages).
 
-1. **Gradually expand the rollout to more instances or users.** If no issues are detected, continue rolling out the feature to more servers or increase the feature flag percentage. Repeat monitoring after each increment.
+1. **Monitor and gradually expand.** If no issues are detected, continue rolling out the feature to more servers or increase the feature flag percentage. Repeat monitoring after each increment. Once the feature is deployed to 100% of the environment, perform a final validation to ensure consistent behavior across all instances.
 
-1. **Complete the rollout and confirm full system stability.** Once the feature is deployed to 100% of the environment, perform a final validation to ensure consistent behavior across all instances.
+#### Deploy new features in a parallel environment
 
-#### Deploy feature in parallel environment
+1. **Create production environment.** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying to a separate environment, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
 
-A parallel deployment runs the new version alongside the current version. This approach enables easy rollback and minimizes downtime.
+1. **Smoke test.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This is a sanity check before any users are directed to the system.
 
-1. **Create production environment** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying to a separate environment, create all necessary Azure resources (via your IaC templates) and then deploy the application code or artifacts.
+1. **Rollout to a small group of users.** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
 
-1. **Monitor the deployment process closely.** Make sure that logging and monitoring are enabled from the start so you can catch any errors immediately. Configure Azure Monitor, Application Insights, and Log Analytics to capture logs and metrics. Ensure logs are collected for both infrastructure and application components.
+1. **Monitor and gradually expand.** If the new version performs well, incrementally increase traffic routing until it handles 100% of the load. Promote the "green" deployment to be the primary. The old "blue" deployment is kept intact during this process, which makes rollback easier. If any serious problem is detected, you can instantly switch all traffic back to the stable version.
 
-1. **Validate production readiness** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Validate core functionality such as API availability, database connectivity, and UI responsiveness. Verify that all services are running and dependencies are healthy. Check service health in Azure Service Health and validate that all endpoints respond as expected.
-
-1. **Prepare for rollback in case of critical issues.** Rollback readiness ensures that you can quickly recover from failed deployments.
-Define and test rollback procedures before production deployment. Include teardown scripts for IaC and backup/restore procedures for data. Store rollback artifacts in a secure location. Monitor for showstopper issues and initiate rollback if needed. If critical errors are detected or core functionality fails, execute rollback steps immediately to restore the previous stable state.
-
-1. **Gradually scale up based on user feedback** Gradual rollout reduces risk and allows for real-world validation before full release.
-Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
-
-1. **Compare performance and error rates between versions.** Monitor both environments using Azure Monitor and Application Insights. Closely monitor the new version’s performance and error rates compared to the old version.
-
-1. **Gradually shift all traffic to the new version.** If the new version performs well, incrementally increase traffic routing until it handles 100% of the load. Promote the "green" deployment to be the primary. The old "blue" deployment is kept intact during this process, which makes rollback trivial. If any serious problem is detected, you can instantly switch all traffic back to the stable version.
-
-1. **Decommission or repurpose the old environment.** After full validation, shut down or reuse the old environment to optimize resource usage and cost.
+1. **Finalize cutover.** After successful validation, route all users to the new system or formally announce it live if it was hidden. The old environment, if there was one for an updated feature, can now be considered for decommissioning after a safe validation period.
 
 ## Validate deployment success
 
