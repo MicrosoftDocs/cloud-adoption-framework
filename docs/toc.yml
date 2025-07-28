@@ -411,48 +411,46 @@ items:
         - name: Ready antipatterns
           href: antipatterns/ready-antipatterns.md
 
-    - name: Adopt
+    - name: Migrate
       items:
-      - name: Migrate
+      - name: 1. Plan migration
+        href: migrate/plan-migration.md
+      - name: 2. Prepare workloads
+        href: migrate/prepare-workloads-cloud.md
+      - name: 3. Execute migration
+        href: migrate/execute-migration.md
+      - name: 4. Optimize workloads
+        href: migrate/optimize-workloads-after-migration.md
+      - name: 5. Decommission workloads
+        href: migrate/decommission-source-workload.md
+      - name: Resources
         items:
-        - name: 1. Plan migration
-          href: migrate/plan-migration.md
-        - name: 2. Prepare workloads
-          href: migrate/prepare-workloads-cloud.md
-        - name: 3. Execute migration
-          href: migrate/execute-migration.md
-        - name: 4. Optimize workloads
-          href: migrate/optimize-workloads-after-migration.md
-        - name: 5. Decommission workloads
-          href: migrate/decommission-source-workload.md
-        - name: Resources
-          items:
-          - name: Migration wave planning
-            href: migrate/migration-wave-planning.md
-      - name: Modernize
+        - name: Migration wave planning
+          href: migrate/migration-wave-planning.md
+    - name: Modernize
+      items:
+      - name: 1. Prepare for modernization  
+        href: modernize/prepare-organization-cloud-modernization.md
+      - name: 2. Plan modernization
+        href: modernize/plan-cloud-modernization.md
+      - name: 3. Execute modernization
+        href: modernize/execute-cloud-modernization.md
+      - name: 4. Optimize workloads
+        href: modernize/optimize-after-cloud-modernization.md
+      - name: Resources
         items:
-        - name: 1. Prepare for modernization  
-          href: modernize/prepare-organization-cloud-modernization.md
-        - name: 2. Plan modernization
-          href: modernize/plan-cloud-modernization.md
-        - name: 3. Execute modernization
-          href: modernize/execute-cloud-modernization.md
-        - name: 4. Optimize workloads
-          href: modernize/optimize-after-cloud-modernization.md
-        - name: Resources
-          items:
-          - name: Modernization guides
-            href: modernize/modernization-cloud-replatform-refactor-rearchitect.md
-      - name: Cloud-native
-        items:
-        - name: 1. Plan cloud-native solutions
-          href: cloud-native/plan-cloud-native-solutions.md
-        - name: 2. Build cloud-native solutions
-          href: cloud-native/build-cloud-native-solutions.md
-        - name: 3. Deploy cloud-native solutions
-          href: cloud-native/deploy-cloud-native-solutions.md
-        - name: 4. Optimize cloud-native solutions
-          href: cloud-native/optimize-cloud-native-solutions.md
+        - name: Modernization guides
+          href: modernize/modernization-cloud-replatform-refactor-rearchitect.md
+    - name: Cloud-native
+      items:
+      - name: 1. Plan cloud-native solutions
+        href: cloud-native/plan-cloud-native-solutions.md
+      - name: 2. Build cloud-native solutions
+        href: cloud-native/build-cloud-native-solutions.md
+      - name: 3. Deploy cloud-native solutions
+        href: cloud-native/deploy-cloud-native-solutions.md
+      - name: 4. Optimize cloud-native solutions
+        href: cloud-native/optimize-cloud-native-solutions.md
                   
     - name: Govern
       items:
