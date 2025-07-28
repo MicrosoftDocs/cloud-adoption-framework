@@ -61,7 +61,7 @@ A well-planned architecture is critical to meeting your goals and requirements. 
 
 ### Select appropriate Azure services and service tiers
 
-1. **Use decision guides to select services that match workload requirements.** Azure decision guides provide structured comparisons of services based on specific workload characteristics such as data volume, transaction patterns, and integration needs. Review the [technology choices overview](/azure/architecture/guide/technology-choices/technology-choices-overview) to identify services that align with your functional and nonfunctional requirements. Prioritize platform-as-a-service (PaaS) options because these services reduce operational overhead by handling infrastructure management, patching, and scaling automatically.
+1. **Use decision guides to select services that match workload requirements.** Azure provides multiple options to run your application code, each with pros and cons. Review the [technology choices overview](/azure/architecture/guide/technology-choices/technology-choices-overview) to identify services that align with your functional and nonfunctional requirements. Prioritize platform-as-a-service (PaaS) options because these services reduce operational overhead by handling infrastructure management, patching, and scaling automatically.
 
 2. **Define usage patterns and performance requirements to select service tiers.** Service tier selection affects both cost and capability. Document expected transaction volumes, concurrent user loads, storage requirements, and performance targets such as response times and throughput. Use these metrics to select an initial SKU that meets baseline requirements without significant over-provisioning. Plan to adjust tiers based on actual usage patterns after deployment.
 
@@ -69,11 +69,11 @@ A well-planned architecture is critical to meeting your goals and requirements. 
 
 ### Select how many regions to use
 
-1. **Use reliability targets to guide regional strategy.** Regional strategy affects availability, compliance, and complexity. Define service-level objectives (SLO), recovery point objectives (RPO), and recovery time objectives (RTO) to determine regional requirements.
+1. **Evaluate trade-offs of multi-region deployments.** Single-region architectures are simpler and cheaper, but a regional outage would bring down your app. Multi-region deployments can achieve higher availability (one region can fail and users are served from another) and can also improve performance by serving users from the nearest region. The trade-off is increased complexity in deployment and data synchronization. You must handle data replication across regions with potential consistency issues, global traffic routing, and higher costs. Let your reliability requirements drive this decision.
 
-2. **Evaluate trade-offs of multi-region deployments.** Multi-region architectures improve availability but increase complexity in data replication, latency, and compliance.
+1. **Use reliability targets to guide regional strategy.** Define service-level objectives (SLO), recovery point objectives (RPO), and recovery time objectives (RTO) to determine regional requirements.
 
-3. **Confirm compliance with data residency regulations.** Work with legal and compliance teams to ensure regional choices meet regulatory obligations.
+1. **Confirm compliance with data residency regulations.** Work with legal and compliance teams to ensure regional choices meet regulatory obligations.
 
 ### Document architecture
 
