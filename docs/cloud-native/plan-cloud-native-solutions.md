@@ -45,7 +45,19 @@ A well-planned architecture is critical to meeting your goals and requirements. 
 
 ### Plan integration with existing systems
 
-1. **Identify all system integration points.** New cloud-native solutions rarely operate in isolation, unless you're an early-stage startup. Consider how your new workload or feature fits into the environment. Identify all integration points with other systems (internal APIs, databases, identity providers like Microsoft Entra ID, on-premises systems via VPN or ExpressRoute). Map out data flows and ensure compatibility with standards. For example, if the organization uses a single sign-on system, your app should integrate with it rather than introduce a new authentication method. Similarly, ensure your design works with existing networks, monitoring solutions, and CI/CD tools in use. Early testing of these integration points can prevent surprises during development or deployment. For example, you want to avoid an API your app depends on not supporting the required load or a network firewall blocking your service.
+1. **Inventory all dependent systems and services.** New cloud-native solutions rarely operate in isolation, unless you're an early-stage startup. Consider how your new workload or feature fits into the environment. Map out data flows and ensure compatibility with standards. Create a comprehensive list of all systems your workload interacts with. This includes internal APIs, databases, identity providers (Microsoft Entra ID), monitoring tools, CI/CD pipelines, and on-premises systems accessed via VPN or ExpressRoute. Use architecture diagrams and dependency maps to visualize these relationships.
+
+2. **Classify integration types and protocols.** Categorize each integration point by type (e.g., authentication, data exchange, messaging) and protocol (e.g., REST, gRPC, ODBC, SAML, OAuth2). This classification helps identify compatibility requirements and potential bottlenecks.
+
+3. **Validate identity and access integration.** Ensure your solution integrates with the organization's identity provider. For example, use Microsoft Entra ID for authentication and authorization instead of introducing a new identity system. Confirm support for single sign-on (SSO), role-based access control (RBAC), and conditional access policies.
+
+4. **Assess network connectivity and security.** Review how your workload connects to other systems. Validate firewall rules, DNS resolution, and routing paths. For hybrid scenarios, confirm ExpressRoute or VPN configurations are in place and tested. Use Azure Network Watcher to monitor and troubleshoot connectivity.
+
+5. **Ensure data flow compatibility and compliance.** Map out data flows between systems. Confirm data formats, schemas, and transformation requirements. Ensure compliance with data residency, encryption, and retention policies.
+
+6. **Test integration points early and continuously.** Perform integration testing during early development stages. Use mocks or stubs for unavailable systems. Automate these tests in your CI/CD pipeline using tools like Azure DevOps or GitHub Actions. Monitor for latency, throughput, and error rates. For example, you want to avoid an API your app depends on not supporting the required load or a network firewall blocking your service.
+
+7. **Document integration contracts and SLAs.** Define and document the expected behavior, availability, and performance of each integration point. Include retry logic, timeout settings, and fallback mechanisms. Align with service-level agreements (SLAs) of dependent systems.
 
 ### Select appropriate Azure services and service tiers
 
