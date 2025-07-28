@@ -117,6 +117,10 @@ Development practices ensure consistent delivery and operational readiness acros
 
 1. **Define ownership and support responsibilities.** Confirm that the operations team is prepared to support the new feature. Update documentation and escalation paths to reflect new responsibilities and ensure fast incident response.
 
+## Define rollback plan for cloud-native solutions
+
+[!INCLUDE [Steps to define a rollback plan](../includes/define-rollback-plan.md)]
+
 ## Next step
 
 > [!div class="nextstepaction"]
