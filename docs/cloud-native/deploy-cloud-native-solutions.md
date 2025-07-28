@@ -37,25 +37,27 @@ The deployment steps differ slightly based on whether it’s a new standalone wo
 
 ### Deploy new cloud-native features to an existing workload
 
-For introducing a new feature, follow the approach you decided in the planning phase:
+When you deploy a new feature to an existing cloud-native workload, choose the deployment strategy that aligns with your risk tolerance, infrastructure constraints, and rollout goals. Two common approaches are in-place deployment and blue-green (parallel environment) deployment.
 
 #### Use in-place deployment for gradual rollout within the same environment
 
-An in-place deployment updates the existing environment incrementally. The approach reduces risk by limiting exposure during early rollout stages.
+Use in-place deployment when adding a new feature to an existing workload without provisioning a separate environment. This approach enables a safe, incremental rollout with minimal infrastructure overhead.
 
-1. **Rollout to a small group of users.** Update the existing environment gradually, or use feature flags. For example, enable the new feature only for a beta group of users initially. This allows verifying the feature in production on a limited scale and provides the option to disable it quickly if something goes wrong (just turn off the feature flag). This approach is usually sufficient for minor enhancements or additive features that are low risk. It has minimal overhead (no duplicate environment). Ensure you monitor the behavior of instances with the new feature versus those without it – tag their telemetry so you can compare.
+1. **Enable feature for small user segment** Deploy the new feature to the existing environment using feature flags or configuration toggles. Start by enabling the feature for a limited audience, such as internal users, beta testers, or a small percentage of live traffic. This approach allows real-world validation while maintaining the ability to quickly disable the feature if issues arise. Ensure user interactions are tagged to distinguish between users or sessions with the feature enabled versus disabled, enabling side-by-side comparison.
 
 1. **Smoke test.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages).
 
-1. **Monitor and gradually expand.** If no issues are detected, continue rolling out the feature to more servers or increase the feature flag percentage. Repeat monitoring after each increment. Once the feature is deployed to 100% of the environment, perform a final validation to ensure consistent behavior across all instances.
+1. **Monitor and gradually expand.** Continuously monitor application health, performance, and error rates using tools like Application Insights or Azure Monitor. Compare metrics between users with and without the feature enabled to detect anomalies. If no issues are detected, gradually increase the feature flag rollout percentage or expand the user group. Repeat monitoring after each increment. After full rollout, perform a final validation to ensure consistent behavior across all instances and user segments.
 
 #### Deploy new features in a parallel environment
 
-1. **Create production environment.** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying to a separate environment, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
+Use a blue-green deployment when introducing a new feature to an existing workload by deploying it into a parallel production environment. This approach minimizes risk by allowing full validation before switching user traffic to the new version.
 
-1. **Smoke test.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This is a sanity check before any users are directed to the system.
+1. **Create parallel environment (green).** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying to a separate environment, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
 
-1. **Rollout to a small group of users.** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
+1. **Smoke test the parallel environment.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This is a sanity check before any users are directed to the system.
+
+1. **Route a subset of traffic to parallel environment.** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Alternatively, expose the new feature only to a specific user segment via routing rules or feature flags. Monitor performance, error rates, and user experience using Application Insights or Azure Monitor. Compare user traffic between the blue and green environments to detect regressions or anomalies.
 
 1. **Monitor and gradually expand.** If the new version performs well, incrementally increase traffic routing until it handles 100% of the load. Promote the "green" deployment to be the primary. The old "blue" deployment is kept intact during this process, which makes rollback easier. If any serious problem is detected, you can instantly switch all traffic back to the stable version.
 
@@ -63,7 +65,7 @@ An in-place deployment updates the existing environment incrementally. The appro
 
 ## Validate deployment success
 
-1. **Run comprehensive validation of critical user journeys.** After deploying, take time to confirm that the deployment was truly successful and the application is healthy in production. This involves more thorough checks beyond the initial smoke tests. Verify again all critical user journeys on the live system (often done by the QA team or automated test scripts against production if possible).
+1. **Run comprehensive validation of critical user journeys.** After deploying, take time to confirm that the deployment was truly successful and the application is healthy in production. This involves more thorough checks beyond the initial smoke tests. Verify again all critical user journeys on the live system. Organizations often use a QA team or automated test scripts against production if possible.
 
 1. **Verify background processes and integrations.** Check that background processes, integrations, and scheduled jobs are running correctly. Check logs, job statuses, and integration endpoints to ensure they're functioning as expected. This step prevents silent failures that might not be immediately visible to users.
 
