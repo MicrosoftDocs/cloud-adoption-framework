@@ -64,4 +64,19 @@ Modernization isn’t a one-time project; it can be an ongoing part of IT strate
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Manage and govern modernized workloads](/azure/cloud-adoption-framework/manage/)
+> [Build cloud-native](/azure/cloud-adoption-framework/secure/)
+
+> [!div class="nextstepaction"]
+> [Secure Azure ](/azure/cloud-adoption-framework/secure/)
+
+> [!div class="nextstepaction"]
+> [Manage Azure](/azure/cloud-adoption-framework/manage/)
+
+> [!div class="nextstepaction"]
+> [Govern Azure](/azure/cloud-adoption-framework/secure/)
+
+> [!div class="nextstepaction"]
+> [Secure Azure ](/azure/cloud-adoption-framework/secure/)
+
+> [!div class="nextstepaction"]
+> [Manage Azure](/azure/cloud-adoption-framework/manage/)

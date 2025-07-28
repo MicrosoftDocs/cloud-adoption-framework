@@ -46,6 +46,5 @@ A deployed solution must evolve to remain secure, cost-effective, and performant
 ## Next steps
 
 - Explore the [Azure Well-Architected Framework](/azure/well-architected/) to deepen your understanding of best practices for optimizing cloud-native solutions.
-- Review the [Azure Advisor documentation](/azure/advisor/advisor-overview) to learn how to implement its recommendations effectively.
-- Set up [Azure Policy](/azure/governance/policy/overview) to automate governance and ensure compliance with organizational standards.
+
 - Schedule a [Well-Architected Review](/azure/architecture/example-scenario/well-architected-review) to identify areas for improvement in your current workloads.
