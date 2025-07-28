@@ -3819,11 +3819,6 @@
          "source_path": "docs/innovate/kubernetes/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
          "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/innovate/kubernetes/index.md",
-         "redirect_url": "docs/innovate/kubernetes/application-development.md",
-         "redirect_document_id": false
       }
    ]   
 }
