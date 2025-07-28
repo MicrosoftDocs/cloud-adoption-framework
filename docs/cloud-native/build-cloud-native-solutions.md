@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Build cloud-native solutions
 
-With the planning complete, the next phase is to build and configure the solution in a development environment, adhering to best practices and ensuring quality through testing.
+With the planning complete, the next phase is to build and configure the solution in a development environment, adhering to best practices and ensuring quality through testing. A cloud-native solution uses scalable, resilient, and observable architecture patterns to maximize the benefits of Azure services. Building in a nonproduction environment with strong testing and automation practices ensures quality and readiness for production deployment.
 
 ## Develop new cloud-native solutions
 
@@ -19,7 +19,7 @@ Continue to use the [Well-Architected Framework (WAF)](/azure/well-architected/p
 
 ### Develop in a nonproduction environment
 
-Set up nonproduction environments (development, test, QA) that closely mirror the production configuration. This is especially important when adding new features to an existing workload. your test environment should have similar Azure resources, configurations, and dataset sizes as production to reveal any integration issues. Azure DevTest Labs or infrastructure-as-code scripts can help quickly create consistent environments with controlled cost and governance. The closer your test environments are to prod, the more confidence you have that things work upon release. For more information, see [Configure test environment](/azure/well-architected/performance-efficiency/performance-test#configure-the-test-environment) in WAF.
+Set up nonproduction environments (development, test, QA) that closely mirror the production configuration. This is especially important when adding new features to an existing workload. your test environment should have similar Azure resources, configurations, and dataset sizes as production to reveal any integration issues. Use Azure DevTest Labs or infrastructure-as-code scripts can help quickly create consistent environments with controlled cost and governance. The closer your test environments are to prod, the more confidence you have that things work upon release. For more information, see [Configure test environment](/azure/well-architected/performance-efficiency/performance-test#configure-the-test-environment) in WAF.
 
 ### Implement changes using source control and CI/CD
 
@@ -31,21 +31,15 @@ Application observability requires monitoring, logging, and alerting capabilitie
 
 ### Validate cloud-native solutions with testing
 
-### Conduct end-to-end functional testing to verify business processes
+Testing is critical. Verify every aspect of the workload in the test environment before touching production.
 
-Test all critical user workflows from sign-in to transaction completion using realistic scenarios. Execute regression tests to confirm unchanged functionality remains intact after modernization. Validate new features and updated interfaces meet business requirements without breaking existing processes. For more information, see [Prioritize critical flows](/azure/well-architected/performance-efficiency/prioritize-critical-flows) and [Reliability testing](/azure/well-architected/reliability/testing-strategy) in WAF.
+1. **Conduct end-to-end functional testing.** Test all critical user workflows from sign-in to transaction completion using realistic scenarios. For new features, execute regression tests to confirm unchanged functionality remains intact after modernization. Validate new features and updated interfaces meet business requirements without breaking existing processes. For more information, see [Prioritize critical flows](/azure/well-architected/performance-efficiency/prioritize-critical-flows) and [Reliability testing](/azure/well-architected/reliability/testing-strategy) in WAF.
 
-### Perform user acceptance testing (UAT) with stakeholders
+2. **Perform user acceptance testing (UAT) with stakeholders.** Engage actual users or business stakeholders to run key scenarios in a UAT environment. Have them verify that the new workloads or features meet their needs and are user-friendly. Gather feedback on any issues or UX improvements. Resolve any critical issues found in UAT before going live, and obtain formal approval from these stakeholders indicating that the solution is ready from a business perspective.
 
-Engage actual users or business stakeholders to run key scenarios in a UAT environment. Have them verify that the new application or features meet their needs and are user-friendly. Gather feedback on any issues or UX improvements. Resolve any critical issues found in UAT before going live, and obtain formal approval from these stakeholders indicating that the solution is ready from a business perspective.
+3. **Validate performance using load testing under realistic conditions.** Use load testing (for example, [Azure Load Testing](/azure/load-testing/overview-what-is-azure-load-testing)) to simulate high user volumes and data throughput that you expect in production. Measure response times, throughput, and resource utilization under load. Ensure the workload can handle at least the expected peak load, and consider testing beyond the expected peak load (1.5x peak load) to see how it behaves under stress. Identify any bottlenecks and optimize as needed before release. For more information, see [Performance testing](/azure/well-architected/performance-efficiency/performance-test) in WAF.
 
-### Validate performance using load testing under realistic conditions
-
-Use load testing (for example, [Azure Load Testing](/azure/load-testing/overview-what-is-azure-load-testing)) to simulate high user volumes and data throughput that you expect in production. Measure response times, throughput, and resource utilization under load. Ensure the workload can handle at least the expected peak load, and consider testing beyond the expected peak load (1.5x peak load) to see how it behaves under stress. Compare performance against your targets and against the legacy workload (if applicable) to confirm there’s no degradation. Identify any bottlenecks and optimize as needed before release. For more information, see [Performance testing](/azure/well-architected/performance-efficiency/performance-test) in WAF.
-
-### Execute security and compliance tests
-
-Run security scans and vulnerability assessments on your application code and any container images or infrastructure components. Use tools like Microsoft Defender for Cloud to check for misconfigurations in Azure resources and ensure compliance with security benchmarks. If the workload is subject to regulatory requirements, perform compliance checks or audits in the test environment. It’s easier to fix security issues before deployment than to react to incidents later. For more information, see [Security testing](/azure/well-architected/security/test) in WAF.
+4. **Execute security and compliance tests.** Run security scans and vulnerability assessments on your application code and any container images or infrastructure components. Use tools like Microsoft Defender for Cloud to check for misconfigurations in Azure resources and ensure compliance with security benchmarks. If the workload is subject to regulatory requirements, perform compliance checks or audits in the test environment. It’s easier to fix security issues before deployment than to react to incidents later. For more information, see [Security testing](/azure/well-architected/security/test) in WAF.
 
 ### Fix critical issues and verify all tests pass
 
@@ -57,11 +51,11 @@ For any new features or modifications, ensure you have adequate unit tests (cove
 
 ## Create reusable infrastructure
 
-As part of development, set up your infrastructure as code so that it can be easily reused and maintained. Define all Azure resources using infrastructure-as-code templates (Azure Resource Manager, Bicep, Terraform). Parameterize these templates to accommodate different environments (dev, test, prod) from the same code. By coding the infrastructure, you ensure consistency across deployments and make it simple to spin up more environments or replicate the setup for future projects. Reusable modules and templates also speed up provisioning and help enforce best practices organization-wide. For more information, see [Design a workload development supply change](/azure/well-architected/operational-excellence/workload-supply-chain) and [Infrastructure as code](/azure/well-architected/operational-excellence/infrastructure-as-code-design) in WAF.
+[!INCLUDE [Steps to create reusable infrastructure](../migrate/includes/create-reusable-infrastructure.md)]
 
 ## Create deployment documentation
 
-Document the deployment process clearly. This documentation should include step-by-step instructions for deploying the solution (even if automated, describe the pipeline process), configuration settings for different environments, and any prerequisite setup. For example, document feature flags, DNS changes, and scaling configurations. Include rollback instructions in the documentation as well, so it’s clear how to undo a deployment if needed. A thorough deployment guide is valuable for training the operations team and serves as a reference during the go-live event. It ensures that if the primary deployer is unavailable, someone else could successfully deploy or roll back the solution using the document.
+[!INCLUDE [Steps to create deployment documentation](../migrate/includes/create-deployment-documentation.md)]
 
 ## Next step
 

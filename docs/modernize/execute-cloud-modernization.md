@@ -41,19 +41,17 @@ Testing is critical. Since modernization doesn’t add new features, the focus i
 
 1. **Execute unit and integration tests on all modified components.** Developers should create or update unit tests for any code that was refactored. Even if its legacy code, writing unit tests for critical functions can help catch if refactoring changed behavior inadvertently. Run the unit tests in your CI pipeline continuously. Additionally, run integration tests to ensure that components talk to each other correctly. After any bug fix, rerun relevant tests to ensure the bug is indeed resolved and nothing else broke (avoid regressions).
 
-2. **Conduct end-to-end functional testing.**  In a staging or test environment, perform full workflow tests as if you're an end-user. This testing can be manual testing by QA or automated UI tests. Sign-in to the application, perform major tasks. Ensure that unchanged functionality remains unchanged. Basically, simulate real usage to catch anything unit tests might miss.
+2. **Conduct end-to-end functional testing.** In a staging or test environment, perform full workflow tests as if you're an end-user. This testing can be manual testing by QA or automated UI tests. Sign-in to the application, perform major tasks. Ensure that unchanged functionality remains unchanged. Basically, simulate real usage to catch anything unit tests might miss.
 
 3. **Perform user acceptance testing (UAT) with stakeholders.** It’s wise to involve some actual end-users or business stakeholders in testing the modernized workload before go-live. They might catch nuances that developers overlook. Capture feedback on usability, performance, and functionality gaps. Resolve critical user acceptance testing (UAT) issues before deployment and obtain formal approval from stakeholders to confirm business readiness.
 
 4. **Validate performance using load testing under realistic conditions.** Modernization should ideally improve or maintain performance. Use load testing tools (such as Azure Load Testing) to simulate realistic usage patterns. Compare results against performance baselines from the source environment to identify any degradation. Conduct stress tests at 150% of expected load to determine workload limits and validate resilience under pressure.
 
-5. **Execute security validation and compliance checks.** Run vulnerability scans on new code and container images to detect security risks. Perform compliance validation for regulated workloads using industry-specific tools. Use Azure Defender for Cloud to scan for infrastructure misconfigurations and validate security controls meet requirements.
+5. **Execute security validation and compliance checks.** Run vulnerability scans on new code and container images to detect security risks. Perform compliance validation for regulated workloads using industry-specific tools. Use Microsoft Defender for Cloud to scan for infrastructure misconfigurations and validate security controls meet requirements.
 
 6. **Resolve all critical issues before production deployment.** Fix functional, performance, and security issues identified during testing phases. Confirm all tests pass and performance meets service level agreements (SLAs). Document any remaining low-priority issues and create remediation plans for post-deployment resolution.
 
 ## Create reusable infrastructure
-
-Once your modernized solution passes all tests in the nonproduction environment, you should capture the infrastructure setup and configurations as code, so it can be easily replicated in production and future environments. Reusable infrastructure means using infrastructure-as-code (IaC) templates and automation for consistency and speed.
 
 [!INCLUDE [Steps to create reusable infrastructure](../migrate/includes/create-reusable-infrastructure.md)]
 
