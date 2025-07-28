@@ -37,8 +37,8 @@ Solution costs require continuous monitoring and optimization. [Microsoft Cost M
 
     | Category | Guide | Description |
     |----------|-------|-------------|
-    | Foundation | [Collect and review cost data](/azure/well-architected/cost-optimization/collect-review-cost-data) | Establish processes for gathering and analyzing cost information |
-    | Foundation | [Set spending guardrails](/azure/well-architected/cost-optimization/set-spending-guardrails) | Implement controls to prevent cost overruns |
+    | Cost monitoring | [Collect and review cost data](/azure/well-architected/cost-optimization/collect-review-cost-data) | Establish processes for gathering and analyzing cost information |
+    | Cost governance | [Set spending guardrails](/azure/well-architected/cost-optimization/set-spending-guardrails) | Implement controls to prevent cost overruns |
     | Rates | [Optimize rates](/azure/well-architected/cost-optimization/get-best-rates) | Secure better pricing through reservations and agreements |
     | Usage | [Align usage to billing increments](/azure/well-architected/cost-optimization/align-usage-to-billing-increments) | Match resource consumption to billing cycles |
     | Components | [Optimize component costs](/azure/well-architected/cost-optimization/optimize-component-costs) | Right-size individual Azure services |
