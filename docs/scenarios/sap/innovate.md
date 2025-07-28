@@ -14,8 +14,6 @@ The SAP platform provides a foundation for innovation for many companies and can
 
 ## Democratize data
 
-Learn more about ways you can [democratize data](../../innovate/best-practices/data.md) after SAP has been migrated to Azure.
-
 To extend your SAP data platform, use cloud native tools in Azure:
 
 - **Azure Data Catalog**, if you use SAP to store a great deal of data across the organization, **SAP HANA** and **SAP Business Warehouse** may contain data that many of users may not even know exists. Use **Azure Data Catalog** to allow users to classify and add metadata to SAP data sources, making it easier for all users to the find the data they need within SAP's databases.
@@ -25,8 +23,6 @@ To extend your SAP data platform, use cloud native tools in Azure:
 
 ## Engage on applications
 
-Learn more about ways you can [build applications](../../innovate/best-practices/apps.md) to extend your SAP platform.
-
 Extend the capabilities of SAP through new applications as:
 
 - Microsoft Power Platform enables low-code and no-code development and makes it easy to innovate by using SAP data. Achieve deeper integration with SAP Business Technology Platform, extend and integrate events between SAP S/4HANA and Azure, and benefit from simplified administration and provisioning. For more information, see [Microsoft Power Platform with SAP](./sap-power-platform-fundamental.md).
@@ -35,8 +31,6 @@ Extend the capabilities of SAP through new applications as:
 - Intelligent experiences, to build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into your modern applications with speech, text, vision, and chat bots.
 
 ## Interact on devices
-
-Learn more about using [device interactions](../../innovate/best-practices/devices.md) to get closer to your customers.
 
 Bring the business integration of SAP into your customer's environment with:
 

@@ -3674,7 +3674,12 @@
         "source_path": "docs/modernize/modernize-strategies/process-modernization.md",
         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
         "redirect_document_id": false
-    }                     
+    },
+    {
+        "source_path": "docs/innovate/index.md",
+        "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+        "redirect_document_id": false
+    }                       
    ]   
 }
 
