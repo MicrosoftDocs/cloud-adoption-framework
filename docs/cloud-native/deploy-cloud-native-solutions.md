@@ -31,12 +31,11 @@ The deployment steps differ slightly based on whether it’s a new standalone wo
 
 1. **Monitor the deployment process closely.** Make sure that logging and monitoring are enabled from the start so you can catch any errors immediately. Configure Azure Monitor, Application Insights, and Log Analytics to capture logs and metrics. Ensure logs are collected for both infrastructure and application components.
 
-1. **Validate production readiness** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Validate core functionality such as API availability, database connectivity, and UI responsiveness. Verify that all services are running and dependencies are healthy. Check service health in Azure Service Health and validate that all endpoints respond as expected.
+1. **Validate production readiness** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Validate core functionality such as API availability, database connectivity, and UI responsiveness. Verify that all services are running and dependencies are healthy. Check service health in [Azure Service Health](/azure/service-health/overview) and validate that all endpoints respond as expected.
 
 1. **Prepare for rollback in case of critical issues.** Rollback readiness ensures that you can quickly recover from failed deployments. Define and test rollback procedures before production deployment. Include teardown scripts for IaC and backup/restore procedures for data. Store rollback artifacts in a secure location. Monitor for showstopper issues and initiate rollback if needed. If critical errors are detected or core functionality fails, execute rollback steps immediately to restore the previous stable state.
 
-1. **Gradually scale up based on user feedback** Gradual rollout reduces risk and allows for real-world validation before full release.
-Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
+1. **Gradually scale up based on user feedback** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
 
 ### Deploy new features to an existing workload
 
