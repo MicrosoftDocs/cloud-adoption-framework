@@ -11,7 +11,7 @@ items:
 
   - name: Methodologies
     items:
-    - name: 1. Create strategy
+    - name: Create strategy
       items:
       - name: Overview
         href: strategy/index.md
@@ -36,7 +36,7 @@ items:
           - name: Sustainability
             href: strategy/inform/sustainability.md
 
-    - name: 2. Plan adoption
+    - name: Plan adoption
       items:
       - name: 1. Prepare your organization
         href: plan/prepare-organization-for-cloud.md
@@ -411,7 +411,7 @@ items:
         - name: Ready antipatterns
           href: antipatterns/ready-antipatterns.md
 
-    - name: Migrate
+    - name: Migrate workloads
       items:
       - name: 1. Plan migration
         href: migrate/plan-migration.md
@@ -427,7 +427,7 @@ items:
         items:
         - name: Migration wave planning
           href: migrate/migration-wave-planning.md
-    - name: Modernize
+    - name: Modernize workloads
       items:
       - name: 1. Prepare for modernization  
         href: modernize/prepare-organization-cloud-modernization.md

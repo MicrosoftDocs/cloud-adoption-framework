@@ -25,7 +25,7 @@ Now, deploy the solution to the live Azure environment following the planned str
 
 The deployment steps differ slightly based on whether it’s a new standalone workload or a feature update to an existing system, but in either case use automation and best practices:
 
-### Deploying new workload
+### Deploy new workloads
 
 1. **Create production environment** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying a fresh workload, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
 
@@ -38,7 +38,7 @@ The deployment steps differ slightly based on whether it’s a new standalone wo
 1. **Gradually scale up based on user feedback** Gradual rollout reduces risk and allows for real-world validation before full release.
 Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
 
-### Deploying new features to an existing system
+### Deploy new features to an existing workload
 
 For introducing a new feature, follow the approach you decided in the planning phase:
 
