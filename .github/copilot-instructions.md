@@ -10,24 +10,16 @@ The Cloud Adoption Framework is a self-service guide to help all customers of al
 Review all the content to ensure it aligns with the following template. 
 
     Template:{
-    ---
-    title: Descriptive title that states the customer outcome
-    description: Brief description explaining what the customer will achieve by using this guidance
-    author: github-username
-    ms.author: microsoft-alias
-    ms.date: current date MM/DD/YYYY
-    ms.topic: conceptual
-    ---
 
-    # The {title} of this article must be the same as the title in the metadata
+    # {article title}
 
-    "This article ..." define specific customer outcome. State why this guidance is important in one or two sentences without stating "is it important/crucial/critical because".
+    State what the article is about.State why this guidance is important in one or two sentences without stating "is it important/crucial/critical because".
 
     ## Each {heading} must be an {imperative recommendation}. Use sentence case.
 
     The first sentence uses a declarative sentence that starts with an article or noun to explain this {imperative recommendation} in {heading} is important in the context of this article, but it must not with a gerund (verb ending in -ing). The next sentence must descriptive states why this {heading} is important in the context of this article. Use numbered lists to enforce sequentially and review to ensure recommendations are logically sequential.
 
-    1. **Start with a {concise numbered imperative recommendation} that indicates how to reach the {goal}, which must be logically first compared to the of the numbered imperative recommendations.** Next clarify what this {concise numbered imperative recommendation 1} means in this context, using a declarative sentence that doesn't start with a pronoun. Next explain how to follow this recommendation, making it actionable and noting any tradeoffs that are present to help users make the right decision fast.
+    1. **Start with a concise numbered imperative recommendation that indicates how to reach the goal, which must be logically first compared to the of the numbered imperative recommendations.** Next clarify what this {concise numbered imperative recommendation 1} means in this context, using a declarative sentence that doesn't start with a pronoun. Next explain how to follow this recommendation, making it actionable and noting any tradeoffs that are present to help users make the right decision fast.
 
         Use as many {numbered imperative recommendations} as needed and follow the same structure for each.
 
