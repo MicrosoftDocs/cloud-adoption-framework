@@ -13,7 +13,7 @@ A cloud-native solution creates new business value by building new applications 
 
 **Prerequisites:** [Architecture plan](/azure/cloud-adoption-framework/plan/estimate-total-cost-of-ownership), [Azure landing zone](/azure/cloud-adoption-framework/ready)
 
-## Define requirements that drive implementation
+## Define requirements for cloud-native solution
 
 1. **Document functional requirements.** Functional requirements describe the capabilities, features, and behaviors the system must provide to meet user needs. Capture these requirements as user stories that define who needs what functionality and why. For example: "As a customer, I need to track my order status in real time so I can plan for delivery."
 
@@ -21,23 +21,7 @@ A cloud-native solution creates new business value by building new applications 
 
 3. **Connect requirements directly to business objectives.** Ensure each requirement supports a business goal such as revenue growth, cost reduction, customer experience improvement, or market expansion. This alignment helps prioritize requirements based on business value and technical feasibility. Focus development efforts on the most valuable outcomes first. Every feature should trace back to a concrete business value.
 
-## Design the cloud-native solution
-
-1. **Design using the [Well-Architected Framework](/azure/well-architected/pillars).** Follow the five pillars of reliability, security, performance efficiency, cost optimization, and operational excellence throughout the design. Bake these principles into your architecture from the beginning rather than trying to add them later. This proactive approach reduces technical debt and accelerates time to production.
-
-1. **Select Azure services that align with your requirements.** Use Azure’s decision guides and the Azure Architecture Center to choose the most appropriate services for your use case. Favor platform-as-a-service (PaaS) offerings whenever possible to reduce operational overhead by abstracting away infrastructure management. Managed services for compute, databases, messaging can accelerate development and simplify maintenance.
-
-1. **Select the right service tier (SKU).** Estimate expected user concurrency, transaction volumes, data sizes, and latency requirements. Choose service SKUs that meet these targets and validate your choices through performance testing. Adjust the SKU if needed based on test results to achieve an optimal balance of cost and performance. It’s better to start with a smaller size and scale up as required than over-provision.
-
-1. **Determine how many regions to use.** Use your reliability requirements, such as service level objectives (SLOs) for uptime, recovery point objectives (RPOs), and recovery time objectives (RTOs), to decide how many regions to use. For high availability or disaster recovery, multi-region deployments might be necessary. However, multi-region architectures can introduce complexity around data replication, latency, and data residency regulations. Work with your compliance team to ensure your regional strategy meets any legal or regulatory obligations.
-
-1. **Plan governance controls.** Design the solution to fit within your organization’s established Azure landing zone structure (subscriptions, resource groups) so that it inherits existing governance policies. By deploying resources in the predefined application landing zone, you automatically apply Azure Policy definitions for things like tagging standards, allowed locations, and compliance requirements. Incorporate Azure role-based access control (RBAC) and security best practices from the start, rather than as an afterthought.
-
-1. **Evaluate integration requirements**. Evaluate integration requirements and ecosystem compatibility. Assess how the new services and components integrate with existing systems and toolchains. Consider dependencies on identity and access management (Microsoft Entra ID), networking (virtual networks, hybrid connections), and other services. Ensure the technology stack of the solution is compatible with your organization’s IT ecosystem and your operational teams can manage it. Early identification of integration points (APIs, data feeds, authentication mechanisms) helps avoid surprises during development.
-
-1. **Update or create architectures.** Develop a lightweight design document or architecture diagram that clearly outlines the solution. This architecture should include the chosen Azure services and their roles. It could include key design decisions and their justifications/trade-offs, and any critical nonfunctional requirements (such as compliance needs, latency expectations, or throughput targets) that influenced the design. Having this documentation facilitates stakeholder alignment, accelerates design reviews, and guides the implementation team.
-
-## Prevent new build scope creep
+## Scope cloud-native solutions
 
 1. **Define a focused scope that delivers core business value.** Clearly articulate the minimum viable product (MVP) or initial feature set that addresses the primary business requirements. Document the project scope boundaries so everyone understands what can and can't be delivered. This focus helps prevent feature creep during development. Defer nice-to-have enhancements to future phases. When new feature ideas come up, evaluate them against the project’s original objectives and timeline before deciding to include them now or later.
 
@@ -46,6 +30,30 @@ A cloud-native solution creates new business value by building new applications 
 1. **Communicate project focus consistently.** Provide regular updates to stakeholders highlighting progress on the agreed-upon scope and upcoming planned work. Transparency about what the team is currently focused on makes it easier to push back on out-of-scope requests. If someone asks for extra features mid-stream, politely remind them of the agreed scope and timeline, and explain that new requests will be logged for future evaluation. Consistent messaging reinforces discipline and manages expectations.
 
 1. **Capture future opportunities separately.** It’s common during a cloud-native project to identify new ideas or opportunities (for example, "wouldn’t it be great if the app also did X…"). Rather than expanding the current project to chase these ideas, maintain a list or backlog for future improvements. This way, good ideas aren't lost, but they also don’t derail the current delivery. This approach allows the team to finish the current scope while laying the groundwork for subsequent iterations.
+
+## Plan the cloud-native architecture
+
+### Use the [Well-Architected Framework's](/azure/well-architected/pillars) principles
+
+For cloud-native solutions, you must understand and follow and implement the principles reliability, security, performance efficiency, cost optimization, and operational excellence. Bake these principles into your architecture from the beginning rather than trying to add them later. This proactive approach reduces technical debt and accelerates time to production.
+
+### Select Azure services
+
+Azure provides [Azure’s decision guides](/azure/architecture/guide/technology-choices/technology-choices-overview) to help you navigate its extensive service catalog. These guides help you compare services based on technical fit, cost, and operational complexity.  Use the example architectures in the [Azure Architecture Center](/azure/architecture/browse/) to choose the most appropriate services for your use case. Use platform-as-a-service (PaaS) offerings whenever possible. PaaS offerings reduce operational overhead by abstracting away infrastructure management. See also [Recommendations for selecting the right services](/azure/well-architected/performance-efficiency/select-services).
+
+### Select the service tier (SKU)
+
+Understand service tiers.** Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, availability, and available features. The right tier is essential to meet workload-specific requirements with all the features needed and avoid over- or under-provisioning. There are certain features available only on specific SKUs so even if your performance data applies to lower SKU you might need some feature that is available on higher SKU. You must use your workload requirements to determine the most appropriate service tier. Cloud-native solutions lack historical data. You must define expected usage patterns and performance targets to select an appropriate starting SKU. It’s better to start with a smaller size and scale up as required than over-provision. Adjust the SKU if needed based on test results to achieve an optimal balance of cost and performance.
+
+### Determine how many regions to use
+
+Use your reliability requirements, such as service level objectives (SLOs) for uptime, recovery point objectives (RPOs), and recovery time objectives (RTOs), to decide how many regions to use. For high availability or disaster recovery, multi-region deployments might be necessary. However, multi-region architectures can introduce complexity around data replication, latency, and data residency regulations. Work with your compliance team to ensure your regional strategy meets any legal or regulatory obligations.
+
+1. **Plan governance controls.** Design the solution to fit within your organization’s established Azure landing zone structure (subscriptions, resource groups) so that it inherits existing governance policies. By deploying resources in the predefined application landing zone, you automatically apply Azure Policy definitions for things like tagging standards, allowed locations, and compliance requirements. Incorporate Azure role-based access control (RBAC) and security best practices from the start, rather than as an afterthought.
+
+1. **Evaluate integration requirements**. Evaluate integration requirements and ecosystem compatibility. Assess how the new services and components integrate with existing systems and toolchains. Consider dependencies on identity and access management (Microsoft Entra ID), networking (virtual networks, hybrid connections), and other services. Ensure the technology stack of the solution is compatible with your organization’s IT ecosystem and your operational teams can manage it. Early identification of integration points (APIs, data feeds, authentication mechanisms) helps avoid surprises during development.
+
+1. **Update or create architectures.** Develop a lightweight design document or architecture diagram that clearly outlines the solution. This architecture should include the chosen Azure services and their roles. It could include key design decisions and their justifications/trade-offs, and any critical nonfunctional requirements (such as compliance needs, latency expectations, or throughput targets) that influenced the design. Having this documentation facilitates stakeholder alignment, accelerates design reviews, and guides the implementation team.
 
 ## Plan deployment strategy
 

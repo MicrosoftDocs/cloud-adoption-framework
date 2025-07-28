@@ -11,7 +11,7 @@ items:
 
   - name: Methodologies
     items:
-    - name: Create cloud strategy
+    - name: 1. Create strategy
       items:
       - name: Overview
         href: strategy/index.md
@@ -36,7 +36,7 @@ items:
           - name: Sustainability
             href: strategy/inform/sustainability.md
 
-    - name: Plan cloud adoption
+    - name: 2. Plan adoption
       items:
       - name: 1. Prepare your organization
         href: plan/prepare-organization-for-cloud.md
@@ -65,7 +65,7 @@ items:
           href: plan/migration-adoption-plan.md
 
 
-    - name: Ready your environment
+    - name: Ready environment
       items:
       - name: Overview
         href: ready/index.md
@@ -411,7 +411,7 @@ items:
         - name: Ready antipatterns
           href: antipatterns/ready-antipatterns.md
 
-    - name: Migrate to Azure
+    - name: Migrate
       items:
       - name: 1. Plan migration
         href: migrate/plan-migration.md
@@ -427,7 +427,7 @@ items:
         items:
         - name: Migration wave planning
           href: migrate/migration-wave-planning.md
-    - name: Modernize in cloud
+    - name: Modernize
       items:
       - name: 1. Prepare for modernization  
         href: modernize/prepare-organization-cloud-modernization.md
@@ -452,7 +452,7 @@ items:
       - name: 4. Optimize cloud-native solutions
         href: cloud-native/optimize-cloud-native-solutions.md
                   
-    - name: Govern Azure
+    - name: Govern cloud
       items:
       - name: Overview
         href: govern/index.md
@@ -467,7 +467,7 @@ items:
       - name: Monitor cloud governance
         href: govern/monitor-cloud-governance.md
 
-    - name: Secure Azure
+    - name: Secure cloud
       items:
       - name: Overview 
         href: secure/overview.md
@@ -486,7 +486,7 @@ items:
       - name: Manage  
         href: secure/manage.md
 
-    - name: Manage Azure
+    - name: Manage cloud
       items:
       - name: Checklist
         href: manage/index.md
