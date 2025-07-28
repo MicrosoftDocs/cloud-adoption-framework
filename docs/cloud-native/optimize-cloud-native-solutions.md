@@ -29,7 +29,28 @@ Ensure that Azure Monitor and any other monitoring tools are tracking all the ne
 
 ### Establish cost monitoring and optimize costs
 
-Now that the solution is live, keep an eye on cloud costs. Use Microsoft Cost Management to review the actual cost incurred by the new solution. Compare it against your estimates and budget. Set up cost alerts or budgets in Azure so that you get notified if spending approaches certain thresholds. Identify any unexpected cost drivers; for example, maybe a service is running 24/7 when it could be turned off during off-hours. Optimizing for cost is an ongoing effort: regularly analyze resource utilization and decommission or downsize anything not fully used. For more information, see [Collect and review cost data](/azure/well-architected/cost-optimization/collect-review-cost-data), [Set spending guardrails](/azure/well-architected/cost-optimization/set-spending-guardrails), [Optimize rates](/azure/well-architected/cost-optimization/get-best-rates), [Align usage to billing increments](/azure/well-architected/cost-optimization/align-usage-to-billing-increments), [Optimize component costs](/azure/well-architected/cost-optimization/optimize-component-costs), [Optimize environment costs](/azure/well-architected/cost-optimization/optimize-environment-costs), [Optimize flow costs](/azure/well-architected/cost-optimization/optimize-flow-costs), [Optimize data costs](/azure/well-architected/cost-optimization/optimize-data-costs), [Optimize code costs](/azure/well-architected/cost-optimization/optimize-code-costs), [Optimize scaling costs](/azure/well-architected/cost-optimization/optimize-scaling-costs), [Optimize personnel time](/azure/well-architected/cost-optimization/optimize-personnel-time), and [Consolidate resource usage](/azure/well-architected/cost-optimization/consolidation).
+Solution costs require continuous monitoring and optimization. [Microsoft Cost Management](/azure/cost-management-billing/costs/overview-cost-management) provides tools to track actual expenses against budgets and identify cost optimization opportunities.
+
+1. **Monitor costs with automated alerts.** Set up cost alerts and budgets in Azure to receive notifications when spending approaches defined thresholds. Compare actual costs against initial estimates to identify variances and adjust future planning. Review cost data weekly to catch unexpected spending patterns early.
+
+2. **Apply cost optimization best practices systematically.** Use the Well-Architected Framework cost optimization guides to implement proven strategies for reducing expenses while maintaining performance and reliability.
+
+    | Category | Guide | Description |
+    |----------|-------|-------------|
+    | Foundation | [Collect and review cost data](/azure/well-architected/cost-optimization/collect-review-cost-data) | Establish processes for gathering and analyzing cost information |
+    | Foundation | [Set spending guardrails](/azure/well-architected/cost-optimization/set-spending-guardrails) | Implement controls to prevent cost overruns |
+    | Rates | [Optimize rates](/azure/well-architected/cost-optimization/get-best-rates) | Secure better pricing through reservations and agreements |
+    | Usage | [Align usage to billing increments](/azure/well-architected/cost-optimization/align-usage-to-billing-increments) | Match resource consumption to billing cycles |
+    | Components | [Optimize component costs](/azure/well-architected/cost-optimization/optimize-component-costs) | Right-size individual Azure services |
+    | Environment | [Optimize environment costs](/azure/well-architected/cost-optimization/optimize-environment-costs) | Reduce expenses across development and production environments |
+    | Flow | [Optimize flow costs](/azure/well-architected/cost-optimization/optimize-flow-costs) | Minimize data transfer and processing expenses |
+    | Data | [Optimize data costs](/azure/well-architected/cost-optimization/optimize-data-costs) | Reduce storage and data processing costs |
+    | Code | [Optimize code costs](/azure/well-architected/cost-optimization/optimize-code-costs) | Improve application efficiency to reduce resource consumption |
+    | Scaling | [Optimize scaling costs](/azure/well-architected/cost-optimization/optimize-scaling-costs) | Balance performance and cost during scale operations |
+    | Operations | [Optimize personnel time](/azure/well-architected/cost-optimization/optimize-personnel-time) | Reduce manual operational overhead |
+    | Consolidation | [Consolidate resource usage](/azure/well-architected/cost-optimization/consolidation) | Combine resources to achieve better utilization rates |
+
+3. **Review and act on cost recommendations regularly.** Analyze resource utilization patterns to identify underused or idle resources. Decommission unnecessary resources and resize overprovisioned services based on actual usage data. Schedule non-production environments to shut down during off-hours to reduce costs.
 
 ### Test backup and recovery procedures
 
