@@ -89,7 +89,7 @@ Development and deployment practices ensure consistent delivery and operational 
 
 1. **Plan [operational readiness](/azure/well-architected/operational-excellence/formalize-operations-tasks) to support deployment activities.** Operational readiness includes monitoring, alerting, and incident response procedures for deployment scenarios. Document deployment runbooks and automation scripts that cover rollback procedures, health checks, and troubleshooting steps. Store these resources in a central location such as Azure DevOps Wiki or GitHub to ensure accessibility during deployment activities.
 
-1. **Define [development practices](azure/well-architected/operational-excellence/formalize-development-practices) that support reliable deployments.** Use coding standards, peer reviews, and automated testing to ensure code quality and deployment readiness. Integrate these practices into your CI/CD pipeline to enforce quality gates before deployment. Include deployment-specific tests such as integration tests, smoke tests, and performance validation to verify system readiness for production.
+1. **Define [development practices](/azure/well-architected/operational-excellence/formalize-development-practices) that support reliable deployments.** Use coding standards, peer reviews, and automated testing to ensure code quality and deployment readiness. Integrate these practices into your CI/CD pipeline to enforce quality gates before deployment. Include deployment-specific tests such as integration tests, smoke tests, and performance validation to verify system readiness for production.
 
 ### Plan deployment for a new workload
 
