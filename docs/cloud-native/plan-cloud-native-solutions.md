@@ -35,7 +35,7 @@ A cloud-native architecture must align with proven design principles and organiz
 
 ### Explore validated cloud-native architectures
 
-1. **Review architecture fundamentals and best practices.** The [Azure Architecture Center](/azure/architecture/browse/) to explore validated reference architectures for common workloads. These architectures help accelerate design decisions and reduce risk. Understand [architecture fundamentals](azure/architecture/guide/) and [best practices](/azure/architecture/best-practices/index-best-practices). 
+1. **Review architecture fundamentals and best practices.** The [Azure Architecture Center](/azure/architecture/browse/) to explore validated reference architectures for common workloads. These architectures help accelerate design decisions and reduce risk. Understand [architecture fundamentals](/azure/architecture/guide/) and [best practices](/azure/architecture/best-practices/index-best-practices). 
 
 1. **Select an appropriate architecture style.** Choose from styles such as [microservices](/azure/architecture/guide/architecture-styles/) and [web-queue worker](/azure/architecture/guide/architecture-styles/web-queue-worker) based on workload characteristics. Each style supports different scalability, resilience, and operational models.
 

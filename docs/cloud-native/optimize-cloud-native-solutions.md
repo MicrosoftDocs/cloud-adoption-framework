@@ -55,4 +55,4 @@ If your solution includes data stores, ensure Azure Backup or your chosen backup
 
 - Explore the [Azure Well-Architected Framework](/azure/well-architected/) to deepen your understanding of best practices for optimizing cloud-native solutions.
 
-- Schedule a [Well-Architected Review](/azure/architecture/example-scenario/well-architected-review) to identify areas for improvement in your current workloads.
+- Schedule a [Well-Architected Review](/assessments/azure-architecture-review/) to identify areas for improvement in your current workloads.
