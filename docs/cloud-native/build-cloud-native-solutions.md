@@ -78,4 +78,4 @@ Comprehensive testing validates that your solution meets business requirements a
 ## Next step
 
 > [!div class="nextstepaction]
-[Deploy cloud-native solutions](./deploy-cloud-native-solutions.md)
+> [Deploy cloud-native solutions](./deploy-cloud-native-solutions.md)

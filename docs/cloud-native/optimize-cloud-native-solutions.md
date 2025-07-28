@@ -90,6 +90,11 @@ For more information, see [Manage business continuity](/azure/cloud-adoption-fra
 
 ## Next steps
 
-- Explore the [Azure Well-Architected Framework](/azure/well-architected/) to deepen your understanding of best practices for optimizing cloud-native solutions.
+> [!div class="nextstepaction"]
+> [Govern Azure](/azure/cloud-adoption-framework/secure/)
 
-- Schedule a [Well-Architected Review](/assessments/azure-architecture-review/) to identify areas for improvement in your current workloads.
+> [!div class="nextstepaction"]
+> [Secure Azure ](/azure/cloud-adoption-framework/secure/)
+
+> [!div class="nextstepaction"]
+> [Manage Azure](/azure/cloud-adoption-framework/manage/)
