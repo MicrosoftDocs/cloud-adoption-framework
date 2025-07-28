@@ -21,7 +21,7 @@ A cloud-native solution benefits from consistent application of the Well-Archite
 
 ### Develop in a nonproduction environment
 
-1. **Create development environments that mirror production configurations.** Set up nonproduction environments (development, test, QA) that closely mirror the production configuration. The closer your test environments are to prod, the more confidence you have that things work upon release. This is especially important when adding new features to an existing workload.
+1. **Create development environments that mirror production configurations.** Set up nonproduction environments (development, test, QA) that closely mirror the production configuration. The closer your test environments are to prod, the more confidence you have that things work upon release. This approach is especially important when adding new features to an existing workload.
 
 2. **Use realistic datasets that represent production data volumes.** Test with data that matches the size and complexity of production workloads. Large datasets expose performance bottlenecks and scaling issues that small test datasets miss. Anonymize production data or generate synthetic data that preserves the statistical properties of real data.
 
@@ -37,11 +37,11 @@ For more information, see [Configure test environment](/azure/well-architected/p
 
 3. **Automate builds and tests on every code change.** Configure CI/CD pipelines that automatically compile code, run tests, and deploy to nonproduction environments when changes are committed. Fast feedback loops help developers catch and fix issues quickly.
 
-4. **Use feature flags to control the release of new functionality.** Implement feature toggles that allow you to deploy code to production while keeping new features disabled until they are ready for users. This strategy separates deployment from release and enables safer, more controlled rollouts.
+4. **Use feature flags to control the release of new functionality.** Implement feature toggles that allow you to deploy code to production while keeping new features disabled until they're ready for users. This strategy separates deployment from release and enables safer, more controlled rollouts.
 
 ### Implement monitoring during development
 
-1. **Integrate Azure Monitor and Application Insights into your application code.** Add telemetry collection to track key performance metrics, user interactions, and system health indicators. Configure these tools during development to ensure they work correctly before production deployment.
+1. **Integrate Azure Monitor and Application Insights into your application code.** Add monitoring data collection to track key performance metrics, user interactions, and system health indicators. Configure these tools during development to ensure they work correctly before production deployment.
 
 2. **Implement structured logging throughout your application.** Use consistent log formats and include contextual information like user IDs, request IDs, and business process identifiers. Structure your logs as JSON objects to enable powerful querying and analysis capabilities.
 
@@ -63,7 +63,7 @@ Comprehensive testing validates that your solution meets business requirements a
 
 4. **Execute security and compliance testing to identify vulnerabilities.** Run automated security scans on application code, container images, and infrastructure configurations. Use Microsoft Defender for Cloud to check for security misconfigurations and compliance violations. Address high-risk vulnerabilities before deployment and implement compensating controls for accepted risks.
 
-5. **Resolve critical issues before production deployment.** Treat testing phases as quality gates that must be passed before proceeding. Fix performance issues that prevent meeting service level agreements, resolve security vulnerabilities that pose significant risk, and address functional defects that affect core business processes. Document known low-priority issues with plans for future resolution.
+5. **Resolve critical issues before production deployment.** Treat testing phases as quality gates that must be passed before proceeding. Fix performance issues that prevent meeting service level agreements, resolve security vulnerabilities that pose significant risk. Address functional defects that affect core business processes. Document known low-priority issues with plans for future resolution.
 
 6. **Maintain automated unit and integration test suites.** Create comprehensive automated tests that validate individual components and their interactions with external dependencies. Run these tests as part of your CI/CD pipeline and after every bug fix to prevent regressions. A robust automated test suite enables confident continuous delivery in cloud-native environments.
 

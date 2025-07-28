@@ -21,11 +21,19 @@ A deployed solution must evolve to remain secure, cost-effective, and performant
 
 ## Validate operational readiness
 
-Operational readiness determines whether your solution can handle real-world demands and recover from failures. Post-deployment validation confirms that monitoring systems capture the right data, cost controls function properly, and backup procedures work as designed.
+An operationally ready solution can meet real-world demands and recover from failures. This validation ensures that monitoring, cost controls, and backup procedures function as intended after deployment.
 
 ### Verify monitoring completeness and accuracy
 
-Ensure that Azure Monitor and any other monitoring tools are tracking all the necessary metrics and logs from your solution. All critical components should be emitting logs and metrics. Test that alerts fire under the expected conditions. For example, trigger a test error or scale condition and see if notifications are sent. Review your dashboards to confirm they reflect the current architecture and provide useful insights at a glance. Effective monitoring is your early warning system for any future issues. For more information, see [Monitor Azure](/azure/cloud-adoption-framework/manage/monitor).
+1. **Enable logging and metrics for all critical components.** Confirm that Azure Monitor and any third-party tools collect logs and metrics from every essential service. Ensure diagnostic settings are configured to send data to Log Analytics, Event Hubs, or Storage Accounts as needed.
+
+2. **Test alerting functionality.** Simulate failure scenarios or performance thresholds to verify that alerts trigger correctly. For example, induce a CPU spike or application error and confirm that alerts notify the appropriate teams.
+
+3. **Review dashboards for relevance and clarity.** Ensure dashboards reflect the current architecture and provide actionable insights. Include key performance indicators (KPIs), health metrics, and service dependencies.
+
+4. **Document monitoring coverage.** Maintain a record of what each alert and dashboard monitors. This documentation supports future audits and onboarding.
+
+For more information, see [Monitor Azure](/azure/cloud-adoption-framework/manage/monitor).
 
 ### Establish cost monitoring and optimize costs
 
@@ -54,7 +62,15 @@ Solution costs require continuous monitoring and optimization. [Microsoft Cost M
 
 ### Test backup and recovery procedures
 
-If your solution includes data stores, ensure Azure Backup or your chosen backup solution is properly backing up all critical data on the schedule you intend. Regularly perform a trial restore (in a nonproduction environment) to verify the data integrity and that the restore process works within your recovery objectives (time and data loss). Document the steps to recover from a major failure, like how to redeploy the infrastructure from code and restore data from backups. Regularly rehearse disaster recovery drills so the team stays practiced in restoring service and you know the documented procedures are up to date and effective. For more information, see [Manage business continuity](/azure/cloud-adoption-framework/manage/protect#manage-business-continuity).
+1. **Confirm backup coverage and schedule for all critical data.** Use Azure Backup or your selected solution to protect every essential data store. Review backup configurations to ensure they meet recovery point objectives (RPOs) and retention policies. Validate that backup jobs complete successfully and cover all required resources.
+
+2. **Perform trial restores in a nonproduction environment.** Trial restores verify that backup data is intact and that the restore process meets recovery time objectives (RTOs). Use a staging environment to test restore operations without affecting production workloads. Document any issues and update procedures to address gaps.
+
+3. **Document infrastructure and data recovery procedures.** Create step-by-step instructions for redeploying infrastructure from code and restoring data from backups. Include dependencies, credentials, and configuration details. Store documentation in a secure and accessible location for operational teams.
+
+4. **Conduct disaster recovery drills regularly.** Schedule and rehearse recovery scenarios to validate team readiness and ensure procedures remain accurate. Use simulated failure events to test the full recovery workflow, including infrastructure redeployment and data restoration. Update documentation based on drill outcomes.
+
+For more information, see [Manage business continuity](/azure/cloud-adoption-framework/manage/protect#manage-business-continuity).
 
 ## Collect user feedback and measure outcomes
 

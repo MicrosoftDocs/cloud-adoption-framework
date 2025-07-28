@@ -27,11 +27,11 @@ The deployment steps differ slightly based on whether it’s a new standalone wo
 
 ### Deploy new cloud-native workloads
 
-1. **Create production environment.** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying to a separate environment, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
+1. **Create production environment.** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you're deploying to a separate environment, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
 
-1. **Smoke test.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This is a sanity check before any users are directed to the system.
+1. **Smoke test.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This testing is a check before any users are directed to the system.
 
-1. **Rollout to a small group of users.** Implement the progressive rollout by exposing the new system to a small set of users. This could be done by releasing a feature to only internal users, or routing a small percentage of live to the new deployment. Monitor closely for any errors or performance issues. Use Application Insights and custom dashboards to watch error rates, response times, and resource utilization in real time. Also gather qualitative feedback from any pilot users on the canary version.
+1. **Rollout to a small group of users.** Implement the progressive rollout by exposing the new system to a small set of users. This rollout could be done by releasing a feature to only internal users, or routing a small percentage of live to the new deployment. Monitor closely for any errors or performance issues. Use Application Insights and custom dashboards to watch error rates, response times, and resource utilization in real time. Also gather qualitative feedback from any pilot users on the canary version.
 
 1. **Monitor and gradually expand.** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
 
@@ -53,9 +53,9 @@ Use in-place deployment when adding a new feature to an existing workload withou
 
 Use a blue-green deployment when introducing a new feature to an existing workload by deploying it into a parallel production environment. This approach minimizes risk by allowing full validation before switching user traffic to the new version.
 
-1. **Create parallel environment (green).** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you are deploying to a separate environment, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
+1. **Create parallel environment (green).** Use your CI/CD pipeline to deploy the production deployment pipeline using the same configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Because you're deploying to a separate environment, create all necessary Azure resources via your IaC templates and then deploy the application code or artifacts.
 
-1. **Smoke test the parallel environment.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This is a sanity check before any users are directed to the system.
+1. **Smoke test the parallel environment.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This smoke test is a check before any users are directed to the system.
 
 1. **Route a subset of traffic to parallel environment.** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Alternatively, expose the new feature only to a specific user segment via routing rules or feature flags. Monitor performance, error rates, and user experience using Application Insights or Azure Monitor. Compare user traffic between the blue and green environments to detect regressions or anomalies.
 
@@ -65,17 +65,20 @@ Use a blue-green deployment when introducing a new feature to an existing worklo
 
 ## Validate deployment success
 
-1. **Run comprehensive validation of critical user journeys.** After deploying, take time to confirm that the deployment was truly successful and the application is healthy in production. This involves more thorough checks beyond the initial smoke tests. Verify again all critical user journeys on the live system. Organizations often use a QA team or automated test scripts against production if possible.
+After you deploy a new workload or feature, it's essential to confirm that the system is functioning correctly, both technically and from the user’s perspective.
+
+1. **Validate critical user journeys.** Go beyond smoke tests to verify that all key user flows work as expected in the live environment. Use automated test suites or manual QA to validate real-world scenarios. Focus on high-value paths such as authentication, transactions, and data workflows. This testing applies whether the deployment introduced a new system or enhanced an existing one.
 
 1. **Verify background processes and integrations.** Check that background processes, integrations, and scheduled jobs are running correctly. Check logs, job statuses, and integration endpoints to ensure they're functioning as expected. This step prevents silent failures that might not be immediately visible to users.
 
-1. **Review monitoring dashboards for system health.** Use Azure Monitor and Application Insights to inspect logs and metrics. Confirm that there are no spikes in error rates, CPU/memory is within expected ranges, and no missing or misrouted monitoring data.
+1. **Review monitoring dashboards for system health.** Use Azure Monitor and Application Insights to inspect logs and metrics. Look for anomalies in error rates, latency, CPU/memory usage, and throughput.
+Confirm that monitoring data is flowing correctly and that no data is missing or misrouted.
 
 1. **Inspect alerting for unexpected triggers.** Review configured alerts for failure rates, latency, or resource usage. Confirm that no alerts are firing unexpectedly. If alerts are triggered, investigate root causes and assess whether they indicate a deployment-related issue.
 
 1. **Conduct stakeholder and user check-ins.** It’s also wise to have a quick check-in with a few end users or stakeholders after deployment to get human confirmation that things are working from the user perspective.
 
-1. **Declare deployment complete only after full validation.** Only once you’re satisfied that the deployment is stable and meets the acceptance criteria should you declare the deployment complete. If issues are found, fix critical ones immediately. Log minor issues for resolution in future updates.
+1. **Declare deployment complete only after full validation.** Only consider the deployment complete once all validation steps are successful and the system meets your acceptance criteria. If issues are found, fix critical ones immediately. Log minor issues for resolution in future updates.
 
 ## Support workload during stabilization
 
@@ -87,7 +90,7 @@ Use a blue-green deployment when introducing a new feature to an existing worklo
 
 1. **Log and triage all issues discovered during stabilization.** This active support phase catches issues that only reveal under production conditions and ensure the workload truly meets its goals. After this stabilization period, and once you're confident in the system’s performance, you can transition to normal operations and monitoring procedures.
 
-1. **Define the exit criteria for stabilization.** Set clear thresholds for system performance, error rates, and user satisfaction. Once the system meets these criteria consistently, transition to standard operations and monitoring procedures. This ensures a smooth handoff and avoids premature closure of the support phase.
+1. **Define the exit criteria for stabilization.** Set clear thresholds for system performance, error rates, and user satisfaction. Once the system meets these criteria consistently, transition to standard operations and monitoring procedures. These criteria ensures a smooth handoff and avoids premature closure of the support phase.
 
 ## Next step
 
