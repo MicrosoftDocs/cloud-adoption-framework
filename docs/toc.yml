@@ -12,7 +12,7 @@ items:
   - name: Methodologies
     expanded: true
     items:
-    - name: Define strategy
+    - name: 1. Define strategy
       items:
       - name: Overview
         href: strategy/index.md
@@ -37,7 +37,7 @@ items:
           - name: Sustainability
             href: strategy/inform/sustainability.md
 
-    - name: Plan adoption
+    - name: 2. Plan adoption
       items:
       - name: 1. Prepare your organization
         href: plan/prepare-organization-for-cloud.md
@@ -66,7 +66,7 @@ items:
           href: plan/migration-adoption-plan.md
 
 
-    - name: Ready environment
+    - name: 4. Ready environment
       items:
       - name: Overview
         href: ready/index.md
@@ -454,53 +454,66 @@ items:
           href: cloud-native/deploy-cloud-native-solutions.md
         - name: 4. Optimize cloud-native solutions
           href: cloud-native/optimize-cloud-native-solutions.md
-                  
-    - name: Govern cloud
-      items:
-      - name: Overview
-        href: govern/index.md
-      - name: Build a cloud governance team
-        href: govern/build-cloud-governance-team.md
-      - name: Assess cloud risks
-        href: govern/assess-cloud-risks.md
-      - name: Document cloud governance policies
-        href: govern/document-cloud-governance-policies.md
-      - name: Enforce cloud governance policies
-        href: govern/enforce-cloud-governance-policies.md
-      - name: Monitor cloud governance
-        href: govern/monitor-cloud-governance.md
+    
+    - name: Continuous methodologies 
+      expanded: true
+      items:           
+      - name: Govern cloud
+        items:
+        - name: Overview
+          href: continuous-methodologies/overview.md
+        - name: Agile
+          href: continuous-methodologies/agile.md
+        - name: DevOps
+          href: continuous-methodologies/devops.md
+        - name: Site Reliability Engineering (SRE)
+          href: continuous-methodologies/sre.md
+      - name: Govern cloud
+        items:
+        - name: Overview
+          href: govern/index.md
+        - name: Build a cloud governance team
+          href: govern/build-cloud-governance-team.md
+        - name: Assess cloud risks
+          href: govern/assess-cloud-risks.md
+        - name: Document cloud governance policies
+          href: govern/document-cloud-governance-policies.md
+        - name: Enforce cloud governance policies
+          href: govern/enforce-cloud-governance-policies.md
+        - name: Monitor cloud governance
+          href: govern/monitor-cloud-governance.md
 
-    - name: Secure cloud
-      items:
-      - name: Overview 
-        href: secure/overview.md
-      - name: Teams and roles
-        href: secure/teams-roles.md
-      - name: Strategy
-        href: secure/strategy.md
-      - name: Plan
-        href: secure/plan.md
-      - name: Ready
-        href: secure/ready.md    
-      - name: Adopt 
-        href: secure/adopt.md
-      - name: Govern  
-        href: secure/govern.md
-      - name: Manage  
-        href: secure/manage.md
+      - name: Secure cloud
+        items:
+        - name: Overview 
+          href: secure/overview.md
+        - name: Teams and roles
+          href: secure/teams-roles.md
+        - name: Strategy
+          href: secure/strategy.md
+        - name: Plan
+          href: secure/plan.md
+        - name: Ready
+          href: secure/ready.md    
+        - name: Adopt 
+          href: secure/adopt.md
+        - name: Govern  
+          href: secure/govern.md
+        - name: Manage  
+          href: secure/manage.md
 
-    - name: Manage cloud
-      items:
-      - name: Checklist
-        href: manage/index.md
-      - name: Ready operations
-        href: manage/ready.md  
-      - name: Administer Azure
-        href: manage/administer.md  
-      - name: Monitor Azure
-        href: manage/monitor.md
-      - name: Protect Azure
-        href: manage/protect.md
+      - name: Manage cloud
+        items:
+        - name: Checklist
+          href: manage/index.md
+        - name: Ready operations
+          href: manage/ready.md  
+        - name: Administer Azure
+          href: manage/administer.md  
+        - name: Monitor Azure
+          href: manage/monitor.md
+        - name: Protect Azure
+          href: manage/protect.md
 
   - name: Adoption scenarios
     items:
