@@ -413,6 +413,7 @@ items:
           href: antipatterns/ready-antipatterns.md
 
     - name: 4. Adopt solutions
+      expanded: true
       items:
       - name: Migrate workloads
         items:
