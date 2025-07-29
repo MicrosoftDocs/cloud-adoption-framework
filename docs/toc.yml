@@ -506,6 +506,9 @@ items:
       - name: Protect Azure
         href: manage/protect.md
 
+  - name: AI adoption
+    href: scenarios/ai/index.md
+    
   - name: Adoption scenarios
     items:
     - name: AI adoption
