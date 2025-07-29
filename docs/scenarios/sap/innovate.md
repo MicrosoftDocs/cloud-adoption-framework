@@ -16,7 +16,7 @@ The SAP platform provides a foundation for innovation for many companies and can
 
 To extend your SAP data platform, use cloud native tools in Azure:
 
-- **Azure Data Catalog**, if you use SAP to store a great deal of data across the organization, **SAP HANA** and **SAP Business Warehouse** may contain data that many of users may not even know exists. Use **Azure Data Catalog** to allow users to classify and add metadata to SAP data sources, making it easier for all users to the find the data they need within SAP's databases.
+- **Azure Data Catalog**, if you use SAP to store a great deal of data across the organization, **SAP HANA** and **SAP Business Warehouse** might contain data that many of users might not even know exists. Use **Azure Data Catalog** to allow users to classify and add metadata to SAP data sources, making it easier for all users to the find the data they need within SAP's databases.
 - **Azure Data Factory**, to pull data from SAP to fuel development of applications and big data analysis.
 - **Power BI**, to create rich visualizations and build business insights on top of SAP data. Build and share reports, dashboards, and provide notifications to bring the power of SAP's datastores to your workforce.
 - Other **big data** sources, such as **Hadoop**, **HDInsights**, and **Databricks**, to allow data scientists to build advanced analytics solutions on top of your SAP data.
@@ -25,7 +25,7 @@ To extend your SAP data platform, use cloud native tools in Azure:
 
 Extend the capabilities of SAP through new applications as:
 
-- Microsoft Power Platform enables low-code and no-code development and makes it easy to innovate by using SAP data. Achieve deeper integration with SAP Business Technology Platform, extend and integrate events between SAP S/4HANA and Azure, and benefit from simplified administration and provisioning. For more information, see [Microsoft Power Platform with SAP](./sap-power-platform-fundamental.md).
+- Microsoft Power Platform enables low-code and no-code development and makes it easy to innovate by using SAP data. Achieve deeper integration with SAP Business Technology Platform. Extend and integrate events between SAP S/4HANA and Azure. Benefit from simplified administration and provisioning. For more information, see [Microsoft Power Platform with SAP](./sap-power-platform-fundamental.md).
 
 - Citizen developers, to empower business teams from sales, payroll, finance, and so on. To extend SAP by creating their own Power Apps and Power Automate solutions using the **SAP ERP** connector.
 - Intelligent experiences, to build modern applications in the cloud with web apps or serverless functions. Infuse intelligence into your modern applications with speech, text, vision, and chat bots.

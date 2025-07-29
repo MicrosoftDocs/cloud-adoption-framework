@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Plan your migration
 
-A migration plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences.It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
+A migration plan defines the specific order, timing, and approach for migrating workloads to Azure. This plan translates high-level migration strategies into actionable deployment sequences. It builds on the cloud adoption plan by addressing tactical decisions such as workload prioritization, migration sequencing, and data transfer methods.
 
 **Prerequisites:** [Migration adoption plan](../plan/migration-adoption-plan.md), [Azure landing zone](/azure/cloud-adoption-framework/ready)
 

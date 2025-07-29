@@ -25,7 +25,7 @@ Every organization’s cloud journey is different. Startups often begin cloud-na
 
 How you operate the cloud (cloud operating model) defines how teams manage responsibilities and collaborate. Choosing the right model ensures alignment with business goals, accelerates delivery, clarifies accountability, and reduces operational overhead.
 
-1. **Centralized operations**: Centralized operations consolidates governance, security, and operations into a single team. It ensures consistent policy enforcement and is ideal for small organizations, startups, or regulated industries. However, it can become a bottleneck as adoption scales. Regularly assess and adjust responsibilities as needed.
+1. **Centralized operations**: Centralized operations consolidate governance, security, and operations into a single team. It ensures consistent policy enforcement and is ideal for small organizations, startups, or regulated industries. However, it can become a bottleneck as adoption scales. Regularly assess and adjust responsibilities as needed.
 
 1. **Shared management operations**: Responsibilities are split between a central platform team and multiple workload teams. A governance team defines cloud policies. Platform teams build and maintain the Azure landing zone to enforce cloud policies. Workload teams operate autonomously within those guardrails. This model suits mid-size and enterprise organizations with hybrid or multicloud environments. See [Shared management operations](./shared-management-operating-model.md).
 
@@ -71,7 +71,7 @@ Well-documented cloud responsibilities are essential for clarity, accountability
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Partner solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and expert MSPs for specialized cloud expertise. |
+| Partner solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and expert partner for specialized cloud expertise. |
 | Operations approach | [Shared management operations approach](./shared-management-operating-model.md) | Provides detailed guidance on implementing the shared responsibility model for enterprise organizations. |
 | Governance | [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team) | Offers guidance on forming a team to assess risks, document policies, and enforce governance standards. |
 | Security | [Security teams, roles, and functions](/azure/cloud-adoption-framework/secure/teams-roles) | Details roles and responsibilities for integrating security into the cloud lifecycle. |

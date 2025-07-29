@@ -10,7 +10,7 @@ ms.custom: e2e-aks, think-tank
 
 # Innovation on modern application platforms
 
-The innovation drives adoption through the build-measure-learn cycle. In it, you focuses on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern application platform.
+The innovation drives adoption through the build-measure-learn cycle. In it, you focus on digital innovation across data, applications, analytics, and AI and machine learning. Establish a vision for innovation that uses the abstraction layers provided by a modern application platform.
 
 ## Modern application platform innovation
 
