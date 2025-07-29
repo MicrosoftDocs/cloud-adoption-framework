@@ -461,16 +461,6 @@ items:
     - name: Govern cloud
       items:
       - name: Overview
-        href: continuous-methodologies/overview.md
-      - name: Agile
-        href: continuous-methodologies/agile.md
-      - name: DevOps
-        href: continuous-methodologies/devops.md
-      - name: Site Reliability Engineering (SRE)
-        href: continuous-methodologies/sre.md
-    - name: Govern cloud
-      items:
-      - name: Overview
         href: govern/index.md
       - name: Build a cloud governance team
         href: govern/build-cloud-governance-team.md
