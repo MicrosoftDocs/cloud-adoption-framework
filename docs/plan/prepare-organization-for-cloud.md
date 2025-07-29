@@ -19,13 +19,13 @@ Every organization’s cloud journey is different. Startups often begin cloud-na
 
 2. **Migrate existing workloads.** Enterprises must evaluate their existing IT estate and determine the best migration strategy for each workload based on business drivers. You follow all of CAF Plan: prepare, plan, discovery, select, assess, estimate, document. Then, you prepare your enterprise environment using an Azure landing zone in [CAF Ready](/azure/cloud-adoption-framework/ready/landing-zone/). Then, you execute migration using [CAF Migrate](/azure/cloud-adoption-framework/migrate/plan-migration) and modernize using [CAF Modernize](/azure/cloud-adoption-framework/modernize/).
 
-    :::image type="content" source="./images/cloud-adoption-planning-decision-tree.svg" alt-text="Diagram showing a cloud adoption decision tree. Startups should build cloud-native and follow CAF Plan (), CAF Ready, and CAF Innovate (cloud-native development). Organizations with existing workloads should pick a migration strategy: retire, rehost, refactor, rearchitect, replace, rebuild, or retain. Base the decision on the business driver for each workload." lightbox="./images/cloud-adoption-planning-decision-tree.svg" border="false":::
+    :::image type="content" source="./images/cloud-adoption-planning-decision-tree.svg" alt-text="Diagram showing a cloud adoption decision tree. Startups should build cloud-native and follow CAF Plan (), CAF Ready, and CAF Cloud-native development. Organizations with existing workloads should pick a migration strategy: retire, rehost, refactor, rearchitect, replace, rebuild, or retain. Base the decision on the business driver for each workload." lightbox="./images/cloud-adoption-planning-decision-tree.svg" border="false":::
 
 ## Choose how to manage the cloud
 
 How you operate the cloud (cloud operating model) defines how teams manage responsibilities and collaborate. Choosing the right model ensures alignment with business goals, accelerates delivery, clarifies accountability, and reduces operational overhead.
 
-1. **Centralized operations**: Centralized operations consolidates governance, security, and operations into a single team. It ensures consistent policy enforcement and is ideal for small organizations, startups, or regulated industries. However, it can become a bottleneck as adoption scales. Regularly assess and adjust responsibilities as needed.
+1. **Centralized operations**: Centralized operations consolidate governance, security, and operations into a single team. It ensures consistent policy enforcement and is ideal for small organizations, startups, or regulated industries. However, it can become a bottleneck as adoption scales. Regularly assess and adjust responsibilities as needed.
 
 1. **Shared management operations**: Responsibilities are split between a central platform team and multiple workload teams. A governance team defines cloud policies. Platform teams build and maintain the Azure landing zone to enforce cloud policies. Workload teams operate autonomously within those guardrails. This model suits mid-size and enterprise organizations with hybrid or multicloud environments. See [Shared management operations](./shared-management-operating-model.md).
 
@@ -71,7 +71,7 @@ Well-documented cloud responsibilities are essential for clarity, accountability
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Partner solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and expert MSPs for specialized cloud expertise. |
+| Partner solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and expert partner for specialized cloud expertise. |
 | Operations approach | [Shared management operations approach](./shared-management-operating-model.md) | Provides detailed guidance on implementing the shared responsibility model for enterprise organizations. |
 | Governance | [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team) | Offers guidance on forming a team to assess risks, document policies, and enforce governance standards. |
 | Security | [Security teams, roles, and functions](/azure/cloud-adoption-framework/secure/teams-roles) | Details roles and responsibilities for integrating security into the cloud lifecycle. |

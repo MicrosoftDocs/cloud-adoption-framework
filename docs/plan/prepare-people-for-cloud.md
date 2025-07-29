@@ -19,7 +19,7 @@ A clear understanding of required cloud skills enables targeted development and 
 
 2. **Understand the skills required to manage Azure.** Assess the skills required to manage Azure environments. Management skills ensure operational excellence and alignment with business objectives. These skills include administering resources, monitoring performance, and protecting workloads. Use the RAMP model (Ready, Administer, Monitor, Protect) to evaluate your team's capabilities. Incorporate tools such as Azure DevOps, GitHub, and infrastructure as code (IaC) platforms like Bicep, Terraform, and ARM templates. See [CAF Manage](/azure/cloud-adoption-framework/manage/).
 
-3. **Understand the skills required for cloud-native development.** Evaluate the skills required for cloud-native development. Cloud-native development supports innovation and modernization goals. These skills include platform engineering, containerization, microservices, and AI development. See [AI development](../scenarios/ai/plan.md#assess-ai-skills) and [cloud-native development](../innovate/index.md).
+3. **Understand the skills required for cloud-native development.** Evaluate the skills required for cloud-native development. Cloud-native development supports innovation and modernization goals. These skills include platform engineering, containerization, microservices, and AI development. See [AI development](../scenarios/ai/plan.md#assess-ai-skills) and [cloud-native development](/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions).
 
 ## Close the skills gap
 
