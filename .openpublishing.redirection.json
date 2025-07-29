@@ -3020,7 +3020,7 @@
          "redirect_url": "/azure/cloud-adoption-framework/strategy/inform/cost-efficiency",
          "redirect_document_id": true
       },
-     {
+      {
       "source_path": "docs/manage/infrastructure-as-code-updates.md",
       "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates",
       "redirect_document_id": true
@@ -3029,7 +3029,7 @@
        "source_path": "docs/get-started/reliability.md",
        "redirect_url": "/azure/cloud-adoption-framework/manage/protect#manage-reliability",
        "redirect_document_id": false
-       },
+      },
       {
          "source_path": "docs/manage/azure-management-guide/enhanced-baseline.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/index",
@@ -3634,47 +3634,197 @@
         "source_path": "docs/modernize/business-alignment/commit-to-modernization-plan.md",
         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
         "redirect_document_id": false
-    },
-    {
-        "source_path": "docs/modernize/business-alignment/envision-cloud-modernization.md",
-        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
-        "redirect_document_id": false
-    },
-    {
-        "source_path": "docs/modernize/business-alignment/evaluate-modernization-options.md",
-        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
-        "redirect_document_id": false
-    },
-    {
-        "source_path": "docs/modernize/business-alignment/index.md",
-        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
-        "redirect_document_id": false
-    },
-    {
-        "source_path": "docs/modernize/index.md",
-        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
-        "redirect_document_id": false
-    },
-    {
-        "source_path": "docs/modernize/modernize-strategies/application-modernization.md",
-        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
-        "redirect_document_id": false
-    },
-    {
-        "source_path": "docs/modernize/modernize-strategies/database-modernization.md",
-        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
-        "redirect_document_id": false
-    },
-    {
-        "source_path": "docs/modernize/modernize-strategies/index.md",
-        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
-        "redirect_document_id": false
-    },
-    {
-        "source_path": "docs/modernize/modernize-strategies/process-modernization.md",
-        "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
-        "redirect_document_id": false
-    }                     
+      },
+      {
+         "source_path": "docs/modernize/business-alignment/envision-cloud-modernization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/modernize/business-alignment/evaluate-modernization-options.md",
+         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/modernize/business-alignment/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/modernize/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/modernize/modernize-strategies/application-modernization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/modernize/modernize-strategies/database-modernization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/modernize/modernize-strategies/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/modernize/modernize-strategies/process-modernization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/apps.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/ci-cd.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/data-classification.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/data.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/devices.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/business-value.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/adoption.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/apps.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/build.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/challenges.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/ci-cd.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/data.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/devices.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/invention.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/learn.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/measure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/considerations/predict.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/adoption.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/apps.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/ci-cd.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/data.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/devices.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/innovation-guide/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/kubernetes/cluster-application-security.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/kubernetes/cluster-design-operations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/kubernetes/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/kubernetes/application-development.md",
+         "redirect_url": "/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions",
+         "redirect_document_id": false
+      }
    ]   
 }
 

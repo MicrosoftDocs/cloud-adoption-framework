@@ -16,40 +16,35 @@ The Microsoft Cloud Adoption Framework for Azure is a comprehensive guide design
 
 ## Why use the Cloud Adoption Framework?
 
-The Cloud Adoption Framework offers proven guidance to support informed decision-making at every stage of your cloud journey. Whether you're planning, migrating, or optimizing, the framework:
-
-- Provides a clear roadmap tailored to your needs.
-- Aligns with the Well-Architected Framework and the Azure Architecture Center.
-- Helps you design, build, and manage secure, scalable, and resilient solutions in Azure.
+The Cloud Adoption Framework offers proven guidance to support informed decision-making at every stage of your cloud journey. Whether you're planning, migrating, or optimizing, the framework provides a clear roadmap tailored to your needs. It aligns with the Well-Architected Framework and the Azure Architecture Center, and it helps you design, build, and manage secure, scalable, and resilient solutions in Azure.
 
 ## Who should use the Cloud Adoption Framework?
 
-The framework is valuable for anyone working with Azure, regardless of experience or scale. It supports:
+The framework serves various audiences across different stages of cloud adoption. Organizations of all sizes and experience levels benefit from structured guidance tailored to their specific needs:
 
-- **Startups** launching a business in Azure. Explore [Microsoft for Startups](https://www.microsoft.com/startups) for Azure credits and resources.
-- **Enterprises** managing large-scale operations and complex, hybrid and multicloud environments.
-- **New users** building foundational skills and understanding of Azure.
-- **Existing customers** looking to mature and optimize their cloud operations.
+| Audience            | Description                                                                                     |
+|---------------------|-------------------------------------------------------------------------------------------------|
+| **Startups**        | Launching a business in Azure. Explore [Microsoft for Startups](https://www.microsoft.com/startups) for Azure credits and resources. |
+| **Enterprises**     | Managing large-scale operations and complex, hybrid and multicloud environments.                |
+| **New users**       | Building foundational skills and understanding of Azure.                                        |
+| **Existing customers** | Looking to mature and optimize their cloud operations.                                       |
 
 ## How to use the Cloud Adoption Framework
 
-The Cloud Adoption Framework (CAF) organizes its guidance into methodologies that support every phase of your Azure journey. These methodologies are divided into two categories:
+The Cloud Adoption Framework (CAF) organizes its guidance into methodologies that support every part of your Azure journey. There are foundational methodologies and operational methodologies. Foundational methodologies are sequential and help you establish your Azure foundation and deploy workloads. Operational methodologies are implemented in parallel with the foundational methodologies but are ongoing as part of your operations.
 
-- **Sequential methodologies:** These are followed in order to establish your Azure foundation and deploy workloads.
-- **Continuous methodologies:** These are implemented alongside the sequential ones and evolve as your cloud environment matures.
+### Foundational methodologies
 
-### Sequential methodologies
-
-| CAF Methodology | Description |
+| CAF methodology | Description |
 |-------------|-------------|
 | 🚀 [**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | Define business justification and expected outcomes. |
 | 📝 [**2. Plan**](/azure/cloud-adoption-framework/plan/) | Align cloud adoption plans with business goals. |
 | 🛠️ [**3. Ready**](/azure/cloud-adoption-framework/ready/) | Prepare your Azure environment and landing zones. |
 | 🌐 **4. Adopt** | [Migrate](/azure/cloud-adoption-framework/migrate/plan-migration) workload from on-premises or other clouds. <br> [Modernize](/azure/cloud-adoption-framework/modernize/) existing workloads to better meet business needs.<br> [Build](/azure/cloud-adoption-framework/innovate/) new cloud-native workloads and features in Azure. |
 
-### Continuous methodologies
+### Operational methodologies
 
-| CAF Methodology | Description |
+| CAF methodology | Description |
 |-------------|-------------|
 | 🛡️ [**Govern**](/azure/cloud-adoption-framework/govern/) | Establish governance to manage risks. |
 | 🔒 [**Secure**](/azure/cloud-adoption-framework/secure/) | Protect your Azure environment. |
