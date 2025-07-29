@@ -10,7 +10,7 @@ items:
       href: get-started/whats-new.md
 
   - name: Methodologies
-    expanded: 
+    expanded: true
     items:
     - name: Define strategy
       items:
