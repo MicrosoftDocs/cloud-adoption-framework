@@ -1,6 +1,6 @@
 ---
 title: Build cloud-native solutions
-description: Build cloud-native solutions
+description: Learn to build resilient cloud-native Azure solutions using best practices for development, testing, CI/CD, and monitoring to create production-ready applications at scale.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
@@ -19,7 +19,7 @@ Cloud-native development requires a structured approach that integrates quality 
 
 A cloud-native solution benefits from consistent application of the Well-Architected Framework (WAF) principles [Well-Architected Framework (WAF)](/azure/well-architected/pillars) provides essential principles that guide effective cloud-native development. Integrate these five pillars into your development process to create robust applications that perform well in production.
 
-### Develop in a nonproduction environment
+### Develop solutions in a nonproduction environment
 
 1. **Create development environments that mirror production configurations.** Set up nonproduction environments (development, test, QA) that closely mirror the production configuration. The closer your test environments are to prod, the more confidence you have that things work upon release. This approach is especially important when adding new features to an existing workload.
 

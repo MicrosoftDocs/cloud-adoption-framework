@@ -39,7 +39,7 @@ How you operate the cloud (cloud operating model) defines how teams manage respo
 
 | Operations approach | Best for | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
-| Centralized | Small organizations, new adopters, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
+| Centralized | Startups, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
 | Shared Management | Mid-size or enterprise estates, hybrid, or multicloud | Platform teams build the [Azure landing zone](../ready/index.md), manages shared services, and governance guardrails. <br> Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
 | Decentralized | Tech-savvy startups, innovation programs | Each team owns every cloud task | High speed and autonomy | Weaker standardization, higher risk of security gaps |
 

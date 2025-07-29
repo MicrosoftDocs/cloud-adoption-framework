@@ -1,9 +1,8 @@
 ---
 title: Prepare your landing zone for migration
 description: Learn about the tasks that you need to complete after an Azure landing zone deployment to ensure that the technical environment supports migrations.
-author: bstephenson
-ms.author: bstephenson
-ms.reviewer: tozimmergren
+author: jtracey93
+ms.author: jatracey
 ms.date: 04/10/2024
 ms.topic: conceptual
 ms.collection: 

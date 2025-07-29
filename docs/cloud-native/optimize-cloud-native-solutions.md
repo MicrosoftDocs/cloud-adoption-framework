@@ -1,13 +1,13 @@
 ---
-title: Optimize the cloud-native solution after deployment
-description: Optimize the cloud-native solution after deployment
+title: Optimize the cloud-native solutions after deployment
+description: Learn to optimize Azure cloud-native solutions post-deployment with best practices for service tuning, operational validation, cost monitoring, backup testing, and continuous improvement.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Optimize the cloud-native solution after deployment
+# Optimize the cloud-native solutions after deployment
 
 A deployed solution must evolve to remain secure, cost-effective, and performant. Post-deployment optimization ensures that the workload continues to meet business and technical requirements as usage patterns change.
 
