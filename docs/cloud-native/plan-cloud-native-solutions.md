@@ -1,19 +1,19 @@
 ---
-title: Plan the cloud-native solution
-description: Plan the cloud-native solution
+title: Plan the cloud-native solutions
+description: Plan cloud-native Azure apps with proven strategies for business goals, architecture design, service selection, and deployment automation.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
 ms.topic: conceptual
 ---
 
-# Plan the cloud-native solution
+# Plan the cloud-native solutions
 
 A cloud-native solution creates new business value by building new workloads (applications) or adding new features to existing workloads. Whether you're developing a brand-new application or adding new features to an existing system, cloud-native development is a journey through planning, building, deploying, and optimizing your workloads. This framework provides end-to-end guidance to ensure your cloud-native application is aligned with business goals, well-architected, and delivered with minimal risk.
 
 **Prerequisites:** [Azure landing zone](/azure/cloud-adoption-framework/ready)
 
-## Define business objectives for cloud-native solution
+## Define business objectives for cloud-native solutions
 
 1. **Start with clear business goals for the cloud-native solution.**  Define the specific outcomes your cloud-native solution should achieve, such as enabling a new digital product, entering a new market, improving customer experience, or reducing operational costs. Use measurable indicators like revenue growth, time-to-market reduction, or support ticket volume to quantify success. For new features, define goals such as improving customer experience, reducing operational costs, or increasing system scalability. Use measurable indicators like revenue growth, time-to-market, or support ticket volume to quantify success.
 
@@ -21,7 +21,7 @@ A cloud-native solution creates new business value by building new workloads (ap
 
 3. **Validate stakeholder alignment.** Confirm all stakeholders (business and technical) agree on the goals, constraints, and what success looks like. This alignment might involve workshops or formal sign-offs. Early alignment prevents later miscommunication and avoids costly rework, ensuring everyone shares the same expectations from the start.
 
-## Define requirements for cloud-native solution
+## Define requirements for cloud-native solutions
 
 1. **Document functional requirements.** Document the capabilities and features the system must provide to meet user needs. Each requirement should tie back to a business objective, ensuring the development effort directly supports desired outcomes. Use stakeholder interviews and business strategy documents to identify high-value outcomes. Prioritize features based on business value and technical feasibility. Trace each requirement to a measurable business objective to justify its inclusion.
 
@@ -29,7 +29,7 @@ A cloud-native solution creates new business value by building new workloads (ap
 
 1. **Control scope cloud-native solutions.** Clearly define what is in-scope vs out-of-scope for the initial release. It’s tempting to include more "nice to have" features, but scope creep can jeopardize timelines and budgets. Document the boundaries of your solution and implement a change control process for any new requests. Only approve changes that directly support the defined goals and that can be delivered without undermining the schedule or budget. Defer lower-priority ideas to a future backlog. Rigorously managing scope keeps the team focused on delivering the most valuable functionality first within constraints.
 
-## Plan the cloud-native architecture
+## Plan the cloud-native architectures
 
 A well-planned architecture is critical to meeting your goals and requirements. Every major architectural decision involves trade-offs in scalability, complexity, cost, and agility. The following steps and decision points help you craft a cloud-native design aligned with best practices:
 
@@ -43,7 +43,7 @@ A well-planned architecture is critical to meeting your goals and requirements. 
 
 1. **Integrate the five pillars into design decisions.** Use the [Well-Architected Framework's](/azure/well-architected/pillars) to guide decisions across reliability, security, performance efficiency, cost optimization, and operational excellence. These five pillars should inform all design decisions. For example, when choosing a database, consider reliability (redundancy, backup), performance, and cost together to strike the right balance. Document where you make trade-offs between pillars, such as more cost for higher performance. These notes are valuable for future governance and reviews.
 
-### Plan integration with existing systems
+### Plan integrations with existing systems
 
 1. **Inventory all dependent systems and services.** New cloud-native solutions rarely operate in isolation, unless you're an early-stage startup. Consider how your new workload or feature fits into the environment. Map out data flows and ensure compatibility with standards. Create a comprehensive list of all systems your workload interacts with. This list includes internal APIs, databases, identity providers (Microsoft Entra ID), monitoring tools, CI/CD pipelines, and on-premises systems accessed via VPN or ExpressRoute. Use architecture diagrams and dependency maps to visualize these relationships.
 
@@ -75,7 +75,7 @@ A well-planned architecture is critical to meeting your goals and requirements. 
 
 1. **Confirm compliance with data residency regulations.** Work with legal and compliance teams to ensure regional choices meet regulatory obligations.
 
-### Document architecture
+### Document architectures
 
 1. **Create a detailed architecture diagram and design document.** Documentation supports implementation, review, and future maintenance. Include selected Azure services, SKUs, data flows, and user interactions. Ensure the diagram provides a clear visual representation of the architecture to support implementation and reviews.
 
@@ -95,7 +95,7 @@ Development and deployment practices ensure consistent delivery and operational 
 
 1. **Define [development practices](/azure/well-architected/operational-excellence/formalize-development-practices) that support reliable deployments.** Use coding standards, peer reviews, and automated testing to ensure code quality and deployment readiness. Integrate these practices into your CI/CD pipeline to enforce quality gates before deployment. Include deployment-specific tests such as integration tests, smoke tests, and performance validation to verify system readiness for production.
 
-### Plan deployment for a new workload
+### Plan deployment for new workloads
 
 1. **Use progressive exposure to limit impact.** For a new application (greenfield) with no existing users, you should do a soft launch. Deploy to production but expose it only to internal users or a pilot group initially. This approach is a canary deployment for a new workload. If it’s truly brand new and isolated, a one-time deployment to full production is possible, but progressive exposure is still recommended to catch any issues in a controlled way. Don’t unleash the system on 100% of users on day one without some real-world validation first. For more information, see [WAF - Adopt a progressive exposure model](/azure/well-architected/operational-excellence/safe-deployments#adopt-a-progressive-exposure-model).
 

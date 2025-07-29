@@ -1,6 +1,6 @@
 ---
 title: Deploy cloud-native solutions
-description: Deploy cloud-native solutions
+description: Deploy cloud-native Azure solutions with CI/CD pipelines, blue-green deployments, feature flags, and progressive rollout strategies for production workloads.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 Now, deploy the solution to the live Azure environment following the planned strategy. This phase includes final preparations, the deployment execution, and post-deployment verification and support.
 
-## Prepare stakeholders for cloud-native deployment
+## Prepare stakeholders for cloud-native deployments
 
 1. **Announce the deployment schedule and expected impact.** Before you begin the production deployment, communicate the plan and value to all relevant stakeholders. Announce the deployment schedule and expected user effects. For example, for new features, note any downtime or user-visible changes well in advance. Stakeholders might identify conflicts with business events or raise concerns about timing. Provide a channel for feedback and confirm that the deployment window aligns with operational priorities. Adjust the schedule if necessary to avoid disruption.
 
@@ -21,7 +21,7 @@ Now, deploy the solution to the live Azure environment following the planned str
 
 1. **Conduct a predeployment readiness review.** A readiness review confirms that all teams understand their roles and have necessary access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify that support teams have appropriate system access and monitoring tools configured. This preparation ensures coordinated response to any issues that arise during migration.
 
-## Execute the cloud-native deployment
+## Execute the cloud-native deployments
 
 The deployment steps differ slightly based on whether it’s a new standalone workload or a feature update to an existing system:
 
@@ -80,7 +80,7 @@ Confirm that monitoring data is flowing correctly and that no data is missing or
 
 1. **Declare deployment complete only after full validation.** Only consider the deployment complete once all validation steps are successful and the system meets your acceptance criteria. If issues are found, fix critical ones immediately. Log minor issues for resolution in future updates.
 
-## Support workload during stabilization
+## Support workloads during stabilization
 
 1. **Establish a heightened monitoring and support posture.** Deploying to production isn't the end of the journey. In the hours and days immediately following a go-live, increase your monitoring and support vigilance while the system "ramps up" under real-world load. It’s advisable to have the development team on call alongside the operations team to quickly investigate and resolve any problems, since they know the new changes best.
 
