@@ -82,7 +82,7 @@ Consider the following factors:
   - For complete zonal benefit, all service dependencies must also support zones. If a dependent service doesn't support zones, a zone failure could cause that service to fail.
   - Run multiple AKS clusters in different paired regions for higher availability beyond what Availability Zones can achieve. If an Azure resource supports geo-redundancy, provide the location where the redundant service has its secondary region.
 
-- You should know the [guidelines for disaster recovery](/azure/aks/operator-best-practices-multi-region) in AKS. Then consider whether they apply to the AKS clusters that you use for Azure Dev Spaces.
+- You should know the [guidelines for disaster recovery](/azure/aks/operator-best-practices-multi-region) in AKS. Then consider whether they apply to the AKS clusters that you use.
 
 - Consistently create backups for applications and data.
   - A non-stateful service can be replicated efficiently.
