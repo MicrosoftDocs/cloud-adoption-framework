@@ -9,7 +9,7 @@ items:
     - name: What's new
       href: get-started/whats-new.md
 
-  - name: Sequential methodologies
+  - name: Foundational methodologies
     expanded: true
     items:
     - name: 1. Define strategy
@@ -456,7 +456,7 @@ items:
         - name: 4. Optimize cloud-native solutions
           href: cloud-native/optimize-cloud-native-solutions.md
     
-  - name: Continuous methodologies 
+  - name: Operational methodologies 
     expanded: true
     items:           
     - name: Govern cloud
