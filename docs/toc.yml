@@ -411,6 +411,7 @@ items:
           href: ready/suggested-skills.md
         - name: Ready antipatterns
           href: antipatterns/ready-antipatterns.md
+          
     - name: 4. Adopt solutions
       expanded: true
       items:
