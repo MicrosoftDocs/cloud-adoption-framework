@@ -39,15 +39,15 @@ items:
 
     - name: 2. Plan adoption
       items:
-      - name: 1. Prepare your organization
+      - name: 1. Prepare organization
         href: plan/prepare-organization-for-cloud.md
-      - name: 2. Prepare your people
+      - name: 2. Prepare people
         href: plan/prepare-people-for-cloud.md
-      - name: 3. Plan your migration (if applicable)
+      - name: 3. Plan migration (if applicable)
         items: 
         - name: Discover inventory
           href: plan/discover-existing-workload-inventory.md
-        - name: Select migration strategy
+        - name: Select migration strategies
           href: plan/select-cloud-migration-strategy.md
         - name : Assess workloads
           href: plan/assess-workloads-for-cloud-migration.md
