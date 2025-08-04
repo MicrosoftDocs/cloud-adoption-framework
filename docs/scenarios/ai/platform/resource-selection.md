@@ -24,17 +24,17 @@ Generative AI combines various resources to process input data and generate mean
 
 :::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram that shows the basic components of a generative AI workload." lightbox="../images/generative-ai-app.svg" border="false":::
 
-The following RAG workload workflow corresponds to the previous diagram:
+The following workflow corresponds to the preceding diagram:
 
-1. The workload receives a user query. 
+1. The AI app receives a query from the user. 
 
 1. An orchestrator, such as Azure AI Foundry Agent Service, Semantic Kernel, or LangChain, manages the data flow.
 
 1. A search and retrieval mechanism identifies the appropriate grounding data.
 
-1. The mechanism sends the grounding data to a generative AI endpoint.
+1. The mechanism sends the grounding data to a generative AI platform.
 
-1. The generative AI model endpoint generates a response based on the user query and grounding data.
+1. The generative AI platform generates a response based on the user query and grounding data.
 
 Use the following recommendations to build generative RAG workloads:
 
@@ -42,7 +42,7 @@ Use the following recommendations to build generative RAG workloads:
 
 1. **Choose the appropriate AI compute type.** Azure AI Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for specific capabilities. Select a compute type that meets your performance and budget needs.
 
-1. **Pick an orchestrator.** Use popular orchestrators like [Azure AI Foundry Agent Service](/azure/ai-services/agents/overview), [Semantic Kernel](/semantic-kernel/overview/), or [LangChain](https://python.langchain.com/v0.2/docs/integrations/platforms/microsoft/) to manage data flow and interactions. For workloads that have multiple collaborating agents, your orchestrator must support the [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) that you use.
+1. **Pick an orchestrator.** Use popular orchestrators like [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview), [Semantic Kernel](/semantic-kernel/overview/), or [LangChain](https://python.langchain.com/v0.2/docs/integrations/platforms/microsoft/) to manage data flow and interactions. For workloads that have multiple collaborating agents, your orchestrator must support the [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) that you use.
 
 1. **Pick a search and knowledge retrieval mechanism.** To ground generative AI models, create an index or vector database for relevant data retrieval. Use Azure AI Search to build traditional and vector indexes from various [data sources](/azure/search/search-indexer-overview#supported-data-sources), apply [data chunking](/azure/search/vector-search-integrated-vectorization), and use [multiple query types](/azure/search/search-query-overview#types-of-queries). For structured databases, consider [Azure Cosmos DB](/azure/cosmos-db/vector-database), [Azure Database for PostgreSQL](/azure/postgresql/flexible-server/how-to-use-pgvector), or [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-overview-vector-similarity).
 
@@ -56,15 +56,15 @@ Nongenerative AI workloads use platforms, compute resources, data sources, and d
 
 :::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram that shows the basic components of a nongenerative AI workload." lightbox="../images/non-generative-ai-app.svg" border="false":::
 
-The following RAG workload workflow corresponds to the previous diagram:
+The following workflow corresponds to the preceding diagram:
 
-1. The workload ingests data.
+1. The AI app ingests incoming data.
 
-1. An optional data processing mechanism extracts or manipulates incoming data.
+1. An optional data processing mechanism extracts or manipulates the data.
 
 1. An AI model endpoint analyzes the data.
 
-1. Data supports training or fine-tuning of AI models.
+1. Data can be used for training or fine-tuning of AI models.
 
 Use the following recommendations to build nongenerative AI workloads:
 
