@@ -4,7 +4,7 @@ description: Learn about key considerations for designing network topologies in 
 author: JefferyMitchell
 ms.author: jemitche
 ms.reviewer: tozimmergren
-ms.date: 05/21/2024
+ms.date: 08/25/2025
 ms.topic: conceptual
 ---
 
