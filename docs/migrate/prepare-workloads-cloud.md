@@ -19,7 +19,7 @@ Azure compatibility issues block workload migration and must be resolved before 
 
 1. **Create Azure subscriptions for workload environments.** Create separate subscriptions for development, test, and production environments to ensure proper isolation, cost tracking, and governance. Place subscriptions in the appropriate management group and apply environment-specific governance policies, role-based access control assignments, and cost management budgets. For more information, see [Create your subscriptions](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 
-2. **Use your architecture plan.** Use the architecture plan you created during planning to define the infrastructure blueprint. Ensure that the architecture aligns with workload requirements and supports scalability, security, and performance. For architecture planning, see [Azure architecture planning](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture).
+2. **Use your architecture plan.** Use the architecture plan you created during cloud adoption planning to deploy the right Azure architecture. Ensure that the architecture aligns with any updated workload requirements. For architecture planning, see [Azure architecture planning](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture).
 
 3. **Deploy all workload components.** In a test subscription, create compute (virtual machines, web apps, containers) datastores (databases, storage accounts), load balancers, managed identities, virtual networks, and DNS resources.
 
