@@ -60,6 +60,8 @@ Nongenerative AI workloads use platforms, compute resources, data sources, and d
 
 :::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram that shows the basic components of a nongenerative AI workload." lightbox="../images/non-generative-ai-app.svg" border="false":::
 
+### Nongenerative AI workflow
+
 The following workflow corresponds to the preceding diagram:
 
 1. The AI app ingests incoming data.
@@ -69,6 +71,8 @@ The following workflow corresponds to the preceding diagram:
 1. An AI model endpoint analyzes the data.
 
 1. Data can be used for training or fine-tuning of AI models.
+
+### Nongenerative AI resource selection
 
 Use the following recommendations to build nongenerative AI workloads:
 
