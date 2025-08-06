@@ -29,7 +29,7 @@ Azure compatibility issues block workload migration and must be resolved before 
 
 1. **Review the documented compatibility requirements and known issues.** Use the [workload assessment](../plan/assess-workloads-for-cloud-migration.md) from the CAF Plan phase. This assessment identifies unsupported configurations and dependencies that must be remediated.
 
-1. **Resolve each compatibility issue using Azure solutions.** Apply the following remediations in the test environment:  completed during the CAF Plan phase to understand documented compatibility requirements Address compatibility issues within your Azure test environment rather than modifying your source environment. Use the following guidance to resolve common compatibility problems:
+1. **Resolve each compatibility issue using Azure solutions.** Apply the following remediations in the test environment:  completed during the CAF Plan phase to understand documented compatibility requirements Address compatibility issues within your Azure test environment rather than modifying your source environment. See the following common compatibility problems:
 
 | Compatibility issue | Solution | Why it matters |
 |---------------------|----------------|------------------|
