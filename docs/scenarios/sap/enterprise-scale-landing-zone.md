@@ -182,7 +182,7 @@ The example architecture has components that you can use for day-2 operations. T
 
 Services like Azure Data Factory, and Azure Data Lake Storage can help you unlock business insights by combining SAP data with non-SAP data and creating an analytics platform. You can use different instances of Data Factory and Data Lake Storage based on the SAP tier and best practices for your environment design.
 
-The Azure [integration runtime](/azure/data-factory/concepts-integration-runtime) is the compute infrastructure that Data Factory use to provide data integration capabilities. Consider deploying runtime virtual machines for these services in each tier. For examples of how to connect with SAP systems and deploy the Azure integration runtime, see these articles:
+The Azure [integration runtime](/azure/data-factory/concepts-integration-runtime) is the compute infrastructure that Data Factory uses to provide data integration capabilities. Consider deploying runtime virtual machines for these services in each tier. For examples of how to connect with SAP systems and deploy the Azure integration runtime, see these articles:
 
 - [Set up a self-hosted integration runtime to use in the SAP CDC solution](/azure/data-factory/sap-change-data-capture-shir-preparation)
 
