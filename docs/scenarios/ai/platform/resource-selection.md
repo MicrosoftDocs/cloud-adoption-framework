@@ -24,6 +24,8 @@ Generative AI combines various resources to process input data and generate mean
 
 :::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram that shows the basic components of a generative AI workload." lightbox="../images/generative-ai-app.svg" border="false":::
 
+### Generative AI workflow
+
 The following workflow corresponds to the preceding diagram:
 
 1. The AI app receives a query from the user. 
@@ -35,6 +37,8 @@ The following workflow corresponds to the preceding diagram:
 1. The mechanism sends the grounding data to a generative AI platform.
 
 1. The generative AI platform generates a response based on the user query and grounding data.
+
+### Generative AI resource selection
 
 Use the following recommendations to build generative RAG workloads:
 
