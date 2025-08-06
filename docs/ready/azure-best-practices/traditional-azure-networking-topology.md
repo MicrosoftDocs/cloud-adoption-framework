@@ -1,8 +1,8 @@
 ---
 title: Traditional Azure networking topology
 description: Learn about key design considerations and recommendations surrounding traditional network topologies in Microsoft Azure to ensure robust and efficient connectivity across virtual networks.
-author: sitarant
-ms.author: sitarant
+author: jtracey93
+ms.author: jatracey
 ms.date: 08/25/2025
 ms.topic: conceptual
 ms.custom: think-tank
