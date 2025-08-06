@@ -49,7 +49,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 :::image type="content" source="./media/enterprise-scale-architecture-sap.svg" border="false" alt-text="Diagram that shows the SAP on Azure landing zone accelerator architecture." lightbox="./media/enterprise-scale-architecture-sap.svg":::
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/enterprise-scale-architecture-sap.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/enterprise-scale-architecture-sap.vsdx) of this architecture.*
 
 > [!NOTE]
 > When you deploy a high-availability SAP workload on Azure, it's important to consider the various deployment types that are available. Also consider how to apply them across different Azure regions, such as across zones, in a single zone, or in a region with no zones.
@@ -62,7 +62,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 The following diagram is a reference architecture of an SAP systems landscape that includes production and non-production systems. This architecture is one of many options that you can use to deploy SAP systems on Azure. The implementation you choose depends on your requirements.
 
-Use the reference architecture as a starting point. You can download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
+Use the reference architecture as a starting point. You can download the [Visio file](https://arch-center.azureedge.net/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
 :::image type="content" source="./media/sap-landscape-high-level-architecture.svg" border="false" alt-text="Diagram that shows the high-level architecture of an SAP systems landscape, with production and non-production systems, on Azure." lightbox="./media/sap-landscape-high-level-architecture.svg":::
 
@@ -201,7 +201,7 @@ For more information about all architecture components, see [SAP S/4HANA in Linu
 
 The following reference architecture is an extension of the high-level architecture that appears earlier in this article. The diagram describes an example use case with three SAP products. It shows just one of the options you can use to deploy SAP systems to Azure by using virtual machine scale sets.
 
-Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
+Use this architecture as a starting point. Download the [Visio file](https://arch-center.azureedge.net/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
 :::image type="content" source="./media/sap-landscape-multiple-sap-system-example.svg" border="false" alt-text="Diagram that shows an example use case with three SAP products." lightbox="./media/sap-landscape-multiple-sap-system-example.svg":::
 

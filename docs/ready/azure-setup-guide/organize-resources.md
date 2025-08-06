@@ -14,7 +14,7 @@ This article explains how to organize Azure resources for optimal security, mana
 
 ## Establish a consistent naming convention
 
-A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent naming reduces management overhead and prevents resource conflicts across teams. You must define a naming standard and use it consistently.
+A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent resource naming reduces management overhead and prevents resource conflicts across teams. Here's how to define a naming convention.
 
 1. **Understand name permanence.** Azure resource names cannot be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
 
@@ -30,9 +30,7 @@ A naming convention provides standardized identification across Azure resources,
 
 ## Apply resource tags
 
-Resource tags provide name-value metadata for resource identification, cost allocation, and operational tracking. Tags supplement naming conventions with flexible categorization that supports business processes and automation workflows. Implement a consistent tagging strategy to achieve comprehensive resource visibility and management.
-
-Tags simplify resource searches and management. Use tags to capture relevant information such as resource type, application name, environment, department, and location. See [steps to apply tags](/azure/azure-resource-manager/management/tag-resources-portal).
+Resource tags provide name-value metadata for resource identification, cost allocation, and tracking. Tags supplement your naming convention with flexible categorization that supports business processes and automation workflows. Use tags to capture relevant information such as resource type, application name, environment, department, and location. See [steps to apply tags](/azure/azure-resource-manager/management/tag-resources-portal).
 
 | Name           | Value               |
 |---------------|---------------------|
@@ -46,11 +44,11 @@ For a mature tagging approach, see [Define your tagging strategy](/azure/cloud-a
 
 ## Build a management hierarchy
 
-A management hierarchy defines governance boundaries and inheritance patterns for Azure resources. Azure provides four management levels where policies, access controls, and budgets flow from higher to lower levels. You must structure this hierarchy to align with your organizational requirements and enable consistent governance across all resources.
+A management hierarchy defines governance boundaries for Azure resources. Azure provides four management levels where governance policies, role-based access controls, and budgets flow from higher levels to lower levels. Structure your hierarchy to align with your requirements.
 
-1. **Create management groups for workload types.** Establish [management groups](/azure/governance/management-groups/create-management-group-portal) for distinct workload categories like corporate applications or internet-facing services. This structure simplifies governance and compliance management. Use functional names such as "Workloads," "Platform," "Online," and "Corporate." Each management group inherits settings from the [root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory).
+1. **Create management groups for distinct workload types.** Establish [management groups](/azure/governance/management-groups/create-management-group-portal) for distinct workload types. At a minimum, create management groups to separate internal (corporate) workloads from internet-facing (online) workloads. Use functional names for your management groups such as "Workloads," "Platform," "Online," and "Corporate." Each management group inherits settings from the [root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory).
 
-1. **Create subscriptions for environment separation.** Separate Azure subscriptions for development, testing, and production environments to ensure isolation and cost tracking. This strategy prevents cross-environment dependencies and enables environment-specific policies. See [steps to create Azure subscriptions](/azure/cost-management-billing/manage/create-subscription) and [programmatic subscription creation](/azure/cost-management-billing/manage/programmatically-create-subscription).
+1. **Create subscriptions to separate workload environments.** Create separate Azure subscriptions for development, testing, and production environments to ensure isolation and cost tracking. This strategy prevents cross-environment dependencies and enables environment-specific policies. See [steps to create Azure subscriptions](/azure/cost-management-billing/manage/create-subscription) and [programmatic subscription creation](/azure/cost-management-billing/manage/programmatically-create-subscription).
 
 1. **Use resources groups to group resources by lifecycle.** Place resources with shared lifecycles into the same [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups). This approach streamlines deployment, updates, and deletions. Use infrastructure-as-code templates for consistent deployment. See [steps to deploy resources](/azure/azure-resource-manager/management/manage-resources-portal#deploy-resources-to-a-resource-group).
 

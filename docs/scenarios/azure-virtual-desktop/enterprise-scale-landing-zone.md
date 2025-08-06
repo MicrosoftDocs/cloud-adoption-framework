@@ -44,7 +44,7 @@ The following diagram shows a conceptual reference architecture that demonstrate
 
 To learn more about the design areas for Virtual Desktop, see [network topology and connectivity for Virtual Desktop](./eslz-network-topology-and-connectivity.md).
 
-_Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/accelerator-baseline-architecture.vsdx) of this architecture._
+*Download a [Visio file](https://arch-center.azureedge.net/accelerator-baseline-architecture.vsdx) of this architecture.*
 
 ### Guidance for regional expansion
 
