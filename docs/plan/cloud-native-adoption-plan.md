@@ -26,7 +26,7 @@ For more information, see [Prepare your organization](./prepare-organization-for
 | Category                  | Documentation to add                                                                       |
 |---------------------------|-----------------------------------------------------------------------------|
 | Learning sandbox          | Provide details about the sandbox environment subscription, access policies, and usage guidelines. |
-| Continuous learning program | Outline the monthly learning time allocated, recognition systems (e.g., points, badges), and plans for community engagement, such as events or user groups. |
+| Continuous learning program | Outline the monthly learning time allocated, recognition systems (points, badges), and plans for community engagement, such as events or user groups. |
 
 For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 

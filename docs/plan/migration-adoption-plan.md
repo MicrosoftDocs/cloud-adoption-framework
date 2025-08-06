@@ -27,10 +27,10 @@ For more information, see [Prepare your organization](./prepare-organization-for
 | Category                  | Documentation to add                                                                       |
 |---------------------------|-----------------------------------------------------------------------------|
 | Skills assessment summary | Summarize assessment results, including the date of the assessment, tools used, and key Azure skill gaps identified across teams. |
-| Expert support engagement | Document the experts involved, such as Microsoft or partner experts, the type of engagement (e.g., workshops), and the schedule of sessions. |
+| Expert support engagement | Document the experts involved, such as Microsoft or partner experts, the type of engagement (workshops), and the schedule of sessions. |
 | Certifications            | Specify the target Azure certifications required for each role. |
 | Learning sandbox          | Provide details about the sandbox environment subscription, access policies, and usage guidelines. |
-| Continuous learning program | Outline the monthly learning time allocated, recognition systems (e.g., points, badges), and plans for community engagement, such as events or user groups. |
+| Continuous learning program | Outline the monthly learning time allocated, recognition systems (points, badges), and plans for community engagement, such as events or user groups. |
 
 For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 
@@ -38,7 +38,7 @@ For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 
 | Category                  | Documentation to add                                                                 |
 |---------------------------|-------------------------------------------------------------------------------------|
-| Platform components needed | Specify the required components, such as on-premises connectivity, hybrid identity, management tools, and application landing zone types (e.g., online, corporate, sandbox). |
+| Platform components needed | Specify the required components, such as on-premises connectivity, hybrid identity, management tools, and application landing zone types (online, corporate, sandbox). |
 | Resource hierarchy         | Define the hierarchy, including management groups, subscriptions, and resource groups. |
 | Platform architecture       | Document shared resources, SKUs, and regions to ensure scalability and compliance. |
 | Estimated platform cost     | Provide cost estimates for the platform architecture, including Azure services and operational expenses. |
@@ -83,7 +83,7 @@ For more information, see [Document workload business details](./discover-existi
 | Component requirements         | List performance metrics (CPU, memory, IOPS, throughput), OS versions, VM sizes, storage types, and licensing details. Include any unsupported technologies or modernization needs. |
 | SLAs (RTO/RPO)                 | Define service-level agreements, recovery point objectives (RPO), and recovery time objectives (RTO). Use this to guide backup, replication, and failover strategies. |
 | Operating locations            | Specify regions where the workload is or must be hosted, considering data residency, compliance, and latency requirements. |
-| Dependencies                   | List internal and external dependencies (e.g., shared databases, APIs, SaaS services). Include dependency maps and groupings for migration sequencing. |
+| Dependencies                   | List internal and external dependencies (shared databases, APIs, SaaS services). Include dependency maps and groupings for migration sequencing. |
 | Security                       | Document authentication methods, service accounts, encryption (at rest/in transit), firewall rules, and access control lists. |
 | ISV and licensing considerations | Validate third-party software compatibility with Azure. Note any Azure Hybrid Benefit eligibility or licensing constraints. |
 
