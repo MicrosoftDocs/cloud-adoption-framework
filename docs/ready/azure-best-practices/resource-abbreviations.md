@@ -57,10 +57,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
 | Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
-| Azure Synapse Analytics private link hub | `Microsoft.Synapse/privateLinkHubs` | `synplh` |
-| Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
-| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/bigDataPools` | `synsp` |
-| Azure Synapse Analytics workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
