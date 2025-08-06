@@ -67,14 +67,14 @@ SAP SaaS solutions:
 
 - Consider the technical debt of existing SAP BW transformations and investments.
 
-- Azure Data Factory and Azure Synapse Analytics pipelines provide multiple connectors for data extraction from SAP sources. For more information, see [Transform data from an SAP ODP source using the SAP CDC connector](/azure/data-factory/connector-sap-change-data-capture) and [SAP data integration using Azure Data Factory](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf).
+- Azure Data Factory pipelines provide multiple connectors for data extraction from SAP sources. For more information, see [Transform data from an SAP ODP source using the SAP CDC connector](/azure/data-factory/connector-sap-change-data-capture) and [SAP data integration using Azure Data Factory](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf).
 
 - **Data analysis** After the source system is identified and its capabilities and limitations are known, consider the following data analysis elements:
   - Source business object.
   - Type of data, such as primary data, transactional data, or language-dependent text data.
   - Source tables and/or views and primary key columns.
   - Full load vs. delta load, data change patterns, data volume, and data compression.
-  - Extraction in batches vs. near real-time replication. The minimum interval of a schedule trigger in Azure Synapse is one minute.
+  - Extraction in batches vs. near real-time replication.
   - Data access methods that are provided by the source system.
   - Native Azure or third-party ETL tools and data connectors most suitable for the use case.
   - In a case of an SAP CDC connector, consider the type of ODP provider or context, such as SAPI (DataSources/Extractors), BW (SAP NetWeaver Business Warehouse), ABAP CDS (ABAP Core Data Services), or HANA (HANA information views). In a case of ABAP CDS views, consider the view's supported capabilities and analytics annotations.

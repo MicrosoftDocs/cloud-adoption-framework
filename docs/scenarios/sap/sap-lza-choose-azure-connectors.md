@@ -18,7 +18,7 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 - [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
 - [SAP data integration generic architecture](./sap-lza-data-example-architecture.md)
 
-**APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
+**APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory
 
 This article is Part 2 of the SAP extend and innovate data: Best practices series. For the first article in the series, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md).
 
@@ -26,7 +26,7 @@ SAP applications often run several mission-critical and core business processes,
 
 ## Design considerations for integrating SAP data with Azure
 
-Azure Data Factory and Azure Synapse Analytics pipelines provide several ways and connectors to integrate SAP data into Azure. The approach and SAP connectors you choose depends on several factors, such as the type of SAP application, type of data and how it's exposed, volume of data and expected latency, what you want to do with the data, and where you want to store it. Data can be stored in SAP or outside of SAP.
+Azure Data Factory pipelines provide several ways and connectors to integrate SAP data into Azure. The approach and SAP connectors you choose depends on several factors, such as the type of SAP application, type of data and how it's exposed, volume of data and expected latency, what you want to do with the data, and where you want to store it. Data can be stored in SAP or outside of SAP.
 
 We recommend the following considerations to help you determine your approach and plan a high-level architecture.
 
@@ -49,7 +49,7 @@ We recommend the following considerations to help you determine your approach an
 >
 > Most of the Azure connectors support connecting to SAP systems by using Secure Network Communications (SNC).
 >
-> Azure Data Factory and Azure Synapse Analytics pipelines provide [SAP templates](/azure/data-factory/industry-sap-templates) to get started with a pattern-based approach for SAP scenarios.
+> Azure Data Factory pipelines provide [SAP templates](/azure/data-factory/industry-sap-templates) to get started with a pattern-based approach for SAP scenarios.
 >
 > Check if your SAP data extraction scenario affects SAP licensing.
 >
@@ -78,7 +78,7 @@ The following table shows the broader choices available depending on which SAP a
 | SAP BW  | [SAP Table](/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP BW OpenHub](/azure/data-factory/connector-sap-business-warehouse-open-hub), [SAP BW via MDX](/azure/data-factory/connector-sap-business-warehouse?tabs=data-factory) | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                    |
 | SAP ECC, SAP S/4 HANA  | [SAP Table](/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP ECC](/azure/data-factory/connector-sap-ecc?tabs=data-factory)   | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                   |
 
-The following table shows a summary of all SAP connectors available in Azure Data Factory and Azure Synapse Analytics for different SAP sources, scenarios, and the connector’s capabilities.
+The following table shows a summary of all SAP connectors available in Azure Data Factory for different SAP sources, scenarios, and the connector’s capabilities.
 
 > [!TIP]
 > The supported connectors and capabilities usually depend on the SAP product instance, for example BW on HANA vs. BW/4HANA, and its release. For more information, see the production documentation for each connector.
