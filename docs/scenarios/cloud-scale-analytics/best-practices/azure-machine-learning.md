@@ -20,7 +20,7 @@ Azure Machine Learning is an integrated platform for managing the machine learni
 
 Azure Machine Learning covers all aspects of the data science lifecycle. It covers datastore and dataset registration to model deployment. It can be used for any kind of machine learning, from classical machine learning to deep learning. It includes supervised and unsupervised learning. Whether you prefer to write Python, R code, or use zero-code or low-code options such as the designer, you can build, train, and track accurate machine learning and deep learning models in an Azure Machine Learning workspace.
 
-Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure Synapse Analytics, Azure SQL Database, or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In Azure landing zones, Azure Machine Learning can be considered a [data product](../architectures/data-landing-zone-data-products.md).
+Azure Machine Learning, the Azure platform, and Azure AI services can work together to manage the machine learning lifecycle. A machine learning practitioner can use Azure SQL Database or Microsoft Power BI to start analyzing data and transition to Azure Machine Learning for prototyping, managing experimentation, and operationalization. In Azure landing zones, Azure Machine Learning can be considered a [data product](../architectures/data-landing-zone-data-products.md).
 
 ## Azure Machine Learning in cloud-scale analytics
 
@@ -38,7 +38,7 @@ The following design principles can guide the implementation of Azure Machine Le
 
 - **Separation of concerns between data management and data consumption:** Identity passthrough is the default authentication type for Azure Machine Learning and storage.
 
-- **Faster data application (source-aligned):** Azure Data Factory, Azure Synapse Analytics, and Databricks landing zones can be preconfigured to link to Azure Machine Learning.
+- **Faster data application (source-aligned):** Azure Data Factory and Databricks landing zones can be preconfigured to link to Azure Machine Learning.
 
 - **Observability:** Central logging and reference configurations can help to monitor the environment.
 
@@ -70,7 +70,7 @@ For each default resource configuration in an data landing zone, an Azure Machin
 
 The data landing zone comes with a default set of services that are deployed in the [platform services layer](../architectures/data-landing-zone.md#platform-services). These core services can be configured when Azure Machine Learning is deployed in data landing zone.
 
-- Connect Azure Synapse Analytics or Databricks workspaces as linked services to integrate data and process big data.
+- Connect Databricks workspaces as linked services to integrate data and process big data.
 
 - By default, data lake services are provisioned in the data landing zone, and Azure Machine Learning product deployments come with connections (data stores) that are preconfigured to these storage accounts.
 
