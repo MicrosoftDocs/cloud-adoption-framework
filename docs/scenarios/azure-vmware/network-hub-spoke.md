@@ -52,7 +52,7 @@ This document assumes and recommends default route advertisement from either on-
 -	Enable Public IP down to the NSX Edge in Azure portal. This allows for low-latency direct connections to Azure VMware Solution, and the ability to scale the number of outbound connections.
 -	Apply the NSX firewall's rule creation.
 -	Use the NSX Advanced load balancer to evenly distribute traffic to workloads.
--	Enable [Flood Protection](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.2/administration/GUID-398BCA15-DAFC-4D23-B0D3-E5C1FB0B0F08.html) (Distributed and Gateway).
+-	Enable [Flood Protection](https://techdocs.broadcom.com/us/en/vmware-cis/nsx/nsxt-dc/3-2/administration-guide/security/general-security-settings/firewall-general-settings/flood-protection.html) (Distributed and Gateway).
 
 ### Egress from AVS using NSX-T or NVA
 
