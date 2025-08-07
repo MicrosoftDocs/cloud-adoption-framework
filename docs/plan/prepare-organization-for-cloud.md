@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Prepare your organization for the cloud
 
-A successful cloud journey requires more than technical readiness. It demands strategic alignment, clear responsibilities, and a tailored approach based on your organization’s starting point. Use this guidance to define your path, assign ownership, and build a secure, well-managed, and future-ready Azure environment.
+Successful cloud adoption, whether startup or larger organization, requires more than technical readiness. It requires a cloud adoption plan. A cloud adoption plan converts your cloud strategy into an actionable plan that's specific to your goals. Use this guidance to define your cloud adoption plan.
 
 ## Map your cloud adoption journey
 
