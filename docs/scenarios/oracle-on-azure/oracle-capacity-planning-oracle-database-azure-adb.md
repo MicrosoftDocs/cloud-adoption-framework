@@ -1,33 +1,50 @@
 ---
-title: Capacity Planning for Oracle Database@Azure Using Autonomous Database Service
-description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Oracle Autonomous Database@Azure.
+title: Capacity Planning for Oracle Autonomous Database@Azure
+description: Guidance for capacity planning and resource optimization for Oracle Autonomous Database@Azure deployments.
 author: gkayali
 ms.author: guherk
-ms.date: 05/30/2025
+ms.date: 06/16/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
 # Capacity planning for Oracle Autonomous Database@Azure
 
-## Storage & Compute Considerations
+Effective capacity planning ensures optimal performance, cost efficiency, and scalability for Oracle workloads in Oracle Database@Azure. Follow these recommendations to establish a successful Oracle Autonomous Database@Azure deployment that scales with your business needs.
 
-- Each Oracle Autonomous Database@Azure is capable of scaling from two ECPU up to 512 ECPU. 
+## Configure compute resources for optimal performance
 
-    It should be noted that one CPU is equivalent to two ECPU.
-For more information, see [Compute Models in Autonomous Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-compute-models.html#GUID-7F4EE72A-ABE7-4FC9-B4BE-86802D9AD05A) 
-- Enabling Compute Auto Scaling permits the system to expand up to three times the specified ECPU count as demand increases. If workload necessities exceed three times the auto scaling ECPU, request extra ECPU by following the procedure from [Request Increased ECPU Limits](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-2C088312-BC30-468E-A15A-00740D2818F5). 
-- By default, Oracle Autonomous Database has Compute Auto Scaling enabled and Storage Auto Scaling disabled. 
-To check in Auto Scaling Manage Resource Allocation from the Azure and OCI portal. For more information on Compute Auto Scaling, see [Use Auto Scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html#GUID-27FAB1C1-B09F-4A7A-9FB9-5CB8110F7141). 
-- Oracle Autonomous Database@Azure supports different workloads such as Data Warehouse, Transaction Processing, JSON, and APEX. 
-The Data Warehouse workload can scale storage from one TB to 384 TB, while other workloads can scale storage from 20 GB to 393216 GB. 
-Storage Auto Scaling can be enabled for automatic expansion up to three times the reserved storage. For details on Storage Auto Scaling, see [Use Auto Scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html#GUID-27FAB1C1-B09F-4A7A-9FB9-5CB8110F7141). 
-- Extra ECPU or storage can be requested after provisioning Oracle Autonomous Database@Azure. For more information, see [Request Increased Storage or ECPU Limits](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-2C088312-BC30-468E-A15A-00740D2818F5).
-- ECPU and storage can be configured and scale separately from Azure or OCI console and adjusted later as needed. ECPU allocation and storage scaling are seamless.  
-- Shrinking the Autonomous Database storage space after provisioned can only be performed from OCI console. Conditions for shrinking the database storage are found under [Shrink Storage](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html#GUID-3EE6FBB5-58D5-477E-8EDE-0BDEAC99FA85). 
-- Schedule start and stop times for noncritical Oracle Autonomous Database@Azure workloads to save on operational costs when not in use. For details, see [Schedule Start and Stop Times for an Autonomous Database Instance](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-stop-start.html).
--  A local backup based disaster recovery is automatically provided in a different availability zone within the same Azure region as the primary Autonomous Database. No additional ECPU and Storage provisioning is required for the local disaster recovery standby database. Details can be found in [Manage Disaster Recovery for Autonomous Database Services](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-55B688D8-17DE-4CD9-9810-7A480532D6AE). 
-- In managing Disaster Recovery for Oracle Autonomous Database@Azure, both the production and secondary Disaster Recovery environments consume an equal amount of ECPU and storage. For example, a 12 ECPU production instance with Autonomous Data Guard configured for Disaster Recovery results in the secondary Disaster Recovery database being provisioned with the same 12 ECPU size. 
+Compute resources in Oracle Autonomous Database@Azure are measured in ECPU units that directly impact database performance and capacity. Proper configuration of compute resources ensures your database meets performance requirements while avoiding unnecessary costs. 
+Follow these steps:
+
+ **Select the appropriate ECPU allocation based on your workload needs**. The proper ECPU allocation directly impacts query performance for your database workload. Oracle Autonomous Database@Azure scales from 2 ECPU to 512 ECPU.
+
+- **Enable Compute Auto Scaling for workloads with variable demand**. Auto Scaling dynamically adjusts resources to maintain performance during peak usage periods without manual intervention. The system can automatically expands compute resources up to three times the base ECPU count as demand increases, and you can request additional ECPU if needed using the procedure in [Request Increased ECPU Limits](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html).
+
+- **Verify Auto Scaling settings in the Azure and OCI portals**. Proper configuration validation ensures your database scales as expected during operation. Oracle Autonomous Database has Compute Auto Scaling enabled by default, but you should confirm this setting matches your requirements through the Resource Allocation interface under Settings from Autonomous Database Service page from Azure portal. For more details, see [Use Auto Scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html).
+
+- **Schedule start and stop times for non-critical workloads**. Scheduling reduces operating costs by automatically stopping the database during periods of inactivity.  Configure these schedules as decribed in [Schedule Start and Stop Times for an Autonomous Database Instance](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-stop-start.html) from OCI console.
+
+## Configure Storage for optimal performance
+
+Storage capacity in Oracle Autonomous Database@Azure is the amount of data your database can manage and directly impacts database performance. Proper storage planning ensures adequate capacity while controlling expenses. Follow these steps:
+ 
+- **Select appropriate workload types**: Choose the correct workload configuration based on your use case:
+  - Data Warehouse: 1 TB to 384 TB storage capacity
+  - Transaction Processing, JSON, APEX: 20 GB to 393,216 GB storage capacity
+- **Configure Storage Auto Scaling**: Enable automatic storage expansion to allow the system to scale up to three times your reserved capacity, accommodating growth without manual intervention. This feature is disabled by default.
+- **Plan for future scaling**: Request additional storage capacity as needed through the [resource management process](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-2C088312-BC30-468E-A15A-00740D2818F5).
+
+## Resource management best practices
+
+- **Manage compute and storage independently**: Scale ECPU and storage separately based on specific workload requirements. Both resources can be adjusted seamlessly through Azure portal or OCI console.
+- **Understand storage reduction limitations**: Storage reduction requires specific conditions to be met. Review [storage shrinking requirements](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html#GUID-3EE6FBB5-58D5-477E-8EDE-0BDEAC99FA85) before implementation.
+
+
+## Disaster recovery planning
+
+- **Leverage built-in local disaster recovery**: Utilize the automatic local backup-based disaster recovery across availability zones within your Azure region. This requires no additional ECPU or storage provisioning.
+- **Plan for Resource Consumption When Transitioning from Backup-Based DR to Autonomous Data Guard**: Account for equal resource consumption between production and disaster recovery environments. For instance, a 12 ECPU production autonomous database requires the same 12 ECPU allocation for the standby database.
 
 ## Next step
 
