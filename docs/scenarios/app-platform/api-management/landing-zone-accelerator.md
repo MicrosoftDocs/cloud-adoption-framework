@@ -77,7 +77,7 @@ Use the deployment guide to deploy private Azure OpenAI endpoints and an opinion
 
 [![Diagram that shows generative AI resources governance through API Management.](./media/landing-zone-accelerator/api-management-workload-ai.png)](./media/landing-zone-accelerator/api-management-workload-ai.png#lightbox)
 
-The recommended approach for an enterprise implementation is to begin with an Azure landing zone to help ensure that scalability, governance, and security are aligned with Cloud Adoption Framework best practices. If you plan to start your baseline integration with Azure OpenAI within an Azure landing zone, follow the steps in [Azure OpenAI baseline in an application landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone).
+The recommended approach for an enterprise implementation is to begin with Azure landing zones to help ensure that scalability, governance, and security are aligned with Cloud Adoption Framework best practices. If you plan to start your application landing zone integration with Azure OpenAI in Azure Foundry Models, follow the guidance in [Baseline Azure AI Foundry chat reference architecture in an application landing zone](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-landing-zone).
 
 ## Deploy the API Management landing zone accelerator
 
