@@ -19,9 +19,9 @@ Generative AI architectures create new content and enable conversational experie
 
    | Article | Article type | Target organization |
    |---------|--------------|---------------------|
-   | [Baseline Azure OpenAI architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/azure-openai-baseline-landing-zone) | Architecture | Enterprise |
-   | [Baseline Azure OpenAI reference architecture](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat) | Architecture | Any |
-   | [Basic Azure OpenAI reference architecture](/azure/architecture/ai-ml/architecture/basic-openai-e2e-chat) | Architecture | Startup |
+   | [Baseline Azure AI Foundry chat reference architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-landing-zone) | Architecture | Enterprise |
+   | [Baseline Azure AI Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat) | Architecture | Any |
+   | [Basic Azure AI Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/basic-azure-ai-foundry-chat) | Architecture | Startup |
 
 2. **Apply operational guidance that supports AI development lifecycle management.** These guides establish practices for model deployment, monitoring, and continuous improvement across development environments. They ensure consistent quality and reliability as AI applications evolve.
 
