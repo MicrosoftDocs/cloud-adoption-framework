@@ -58,7 +58,7 @@ Cost management controls prevent unnecessary AI spending while maximizing operat
 
 7. **Implement gateway controls for cost management.** A [generative AI gateway](/azure/api-management/genai-gateway-capabilities) provides centralized cost controls across AI endpoints. The gateway tracks token usage, throttles consumption, applies circuit breakers, and routes traffic to different endpoints to optimize costs.
 
-For additional cost management guidance, see [Manage AI costs](../manage.md#manage-ai-costs) and [cost optimization](/azure/architecture/ai-ml/architecture/baseline-openai-e2e-chat#cost-optimization) in the Azure OpenAI baseline architecture.
+For additional cost management guidance, see [Manage AI costs](../manage.md#manage-ai-costs) and [cost optimization](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat#cost-optimization) in the baseline Azure AI Foundry chat reference architecture.
 
 ## Govern AI security
 
