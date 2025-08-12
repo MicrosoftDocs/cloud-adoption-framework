@@ -1,10 +1,10 @@
 ---
 title: Organize Oracle Database@Azure resources for consistent deployments
 description: Establish consistent deployment patterns and optimize Azure subscriptions through effective Oracle Database@Azure resource organization strategies.
-author: sihbher
+author: rajanaki
 ms.author: gereyeso
-ms.reviewer: gereyeso
-ms.date: 07/08/2025
+ms.reviewer: pnp
+ms.date: 08/12/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle, references_regions
 ---
