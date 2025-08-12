@@ -35,7 +35,7 @@ A successful post-migration period depends on verifying that workloads operate a
 
 For more information, see [Monitor your Azure estate](/azure/cloud-adoption-framework/manage/monitor#)
 
-## Validate cost monitoring
+### Validate cost monitoring
 
 1. **Compare current costs to premigration baselines.** Use Microsoft Cost Management or partner tools to identify cost increases. This step is important to detect changes caused by autoscaling, feature enablement, or inefficient configurations. Investigate discrepancies by reviewing resource-level cost breakdowns.
 

@@ -13,6 +13,8 @@ A migration plan defines the specific order, timing, and approach for migrating 
 
 **Prerequisites:** [Migration adoption plan](../plan/migration-adoption-plan.md), [Azure landing zone](/azure/cloud-adoption-framework/ready)
 
+:::image type="content" source="./images/caf-migrate.svg" alt-text="Diagram showing the five-step process for migrating existing workloads to Microsoft Azure. On the left, two icons represent the starting point: a server rack labeled On premises and a cloud labeled Other clouds. An arrow leads to a vertical list of five sequential steps in the center, each with a number and icon: 1 Plan migration, 2 Prepare workloads, 3 Execute migration, 4 Optimize in cloud, 5 Decommission source. A final arrow points from the steps to an Azure cloud icon on the right, indicating the destination of the migration." lightbox="./images/caf-migrate.svg" border="false":::
+
 ## Assess migration readiness and skills
 
 A readiness assessment ensures that your team has the skills and support needed to execute the migration plan. This step identifies capability gaps and accelerates progress through targeted training or external support.
@@ -29,7 +31,7 @@ A data migration path is how you move data from your current location to Azure. 
 
 1. **Use VPN if ExpressRoute isn't available.** Choose a VPN when you need secure data transfer but don't have ExpressRoute. A VPN creates an encrypted tunnel over the internet to Azure, though it's typically slower than ExpressRoute. Make sure you have a VPN Gateway configured in Azure before starting.
 
-1. **Use Azure Data Box for large amounts of data.** Data Box is best for online migrations with lots of data. Microsoft ships you a physical device to copy your data onto, then you ship it back. This option avoids using your network but takes the longest due to shipping time.
+1. **Use Azure Data Box for large amounts of data.** Data Box is best for offline migrations with lots of data. Microsoft ships you a physical device to copy your data onto, then you ship it back. This option avoids using your network but takes the longest due to shipping time.
 
 1. **Use public internet for less sensitive data.** This option works when your data doesn't need encryption and you can't use ExpressRoute or Data Box. While this method is available everywhere, it's the least secure and can slow down your other internet activities.
 

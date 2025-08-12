@@ -3,13 +3,13 @@ title: Prepare your organization for the cloud
 description: Choose and implement a cloud operations approach that distributes Azure responsibilities across your organization. Plan governance, security, and operations teams while selecting centralized, shared, or decentralized models based on organizational size and maturity.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 08/15/2025
+ms.date: 07/15/2025
 ms.topic: conceptual
 ---
 
 # Prepare your organization for the cloud
 
-A successful cloud journey requires more than technical readiness. It demands strategic alignment, clear responsibilities, and a tailored approach based on your organization’s starting point. Use this guidance to define your path, assign ownership, and build a secure, well-managed, and future-ready Azure environment.
+Successful cloud adoption, whether startup or larger organization, requires more than technical readiness. It requires a cloud adoption plan. A cloud adoption plan converts your cloud strategy into an actionable plan that's specific to your goals. Use this guidance to define your cloud adoption plan.
 
 ## Map your cloud adoption journey
 
@@ -39,7 +39,7 @@ How you operate the cloud (cloud operating model) defines how teams manage respo
 
 | Operations approach | Best for | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
-| Centralized | Small organizations, new adopters, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
+| Centralized | Startups, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
 | Shared Management | Mid-size or enterprise estates, hybrid, or multicloud | Platform teams build the [Azure landing zone](../ready/index.md), manages shared services, and governance guardrails. <br> Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
 | Decentralized | Tech-savvy startups, innovation programs | Each team owns every cloud task | High speed and autonomy | Weaker standardization, higher risk of security gaps |
 
@@ -71,7 +71,7 @@ Well-documented cloud responsibilities are essential for clarity, accountability
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Partner solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and expert partner for specialized cloud expertise. |
+| Partner solutions | [Microsoft Partner Center](https://partner.microsoft.com/partnership/find-a-partner) | Helps identify and connect with trusted partners and expert partners for specialized cloud expertise. |
 | Operations approach | [Shared management operations approach](./shared-management-operating-model.md) | Provides detailed guidance on implementing the shared responsibility model for enterprise organizations. |
 | Governance | [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team) | Offers guidance on forming a team to assess risks, document policies, and enforce governance standards. |
 | Security | [Security teams, roles, and functions](/azure/cloud-adoption-framework/secure/teams-roles) | Details roles and responsibilities for integrating security into the cloud lifecycle. |

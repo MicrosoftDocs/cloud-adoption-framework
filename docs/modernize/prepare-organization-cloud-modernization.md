@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Prepare for cloud modernization
 
-Cloud modernization is the practice of improving existing cloud-based workloads to better meet business. It aligns workloads with cloud best practices, without adding new features. This framework provides an end-to-end guide for organizations to plan and execute modernization across all their workload teams.
+Cloud modernization is the practice of improving existing cloud-based workloads to better meet business needs. It aligns workloads with cloud best practices, without adding new features. This framework provides an end-to-end guide for organizations to plan and execute modernization across all their workload teams.
 
 Modernization success begins with organizational preparation. This stage ensures everyone understands what modernization means for your company. You also need to evaluate if your teams have the needed skills and identify which applications to modernize first.
 

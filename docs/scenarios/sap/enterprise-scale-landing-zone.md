@@ -3,7 +3,6 @@ title: SAP on Azure landing zone accelerator
 description: Use the SAP on Azure landing zone accelerator to deploy SAP systems on Azure. See a reference implementation for SAP workload landing zones.
 author: PmeshramPM
 ms.author: pameshra
-ms.reviewer: tozimmergren
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.custom: 
@@ -49,7 +48,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 :::image type="content" source="./media/enterprise-scale-architecture-sap.svg" border="false" alt-text="Diagram that shows the SAP on Azure landing zone accelerator architecture." lightbox="./media/enterprise-scale-architecture-sap.svg":::
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/enterprise-scale-architecture-sap.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/enterprise-scale-architecture-sap.vsdx) of this architecture.*
 
 > [!NOTE]
 > When you deploy a high-availability SAP workload on Azure, it's important to consider the various deployment types that are available. Also consider how to apply them across different Azure regions, such as across zones, in a single zone, or in a region with no zones.
@@ -62,7 +61,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 The following diagram is a reference architecture of an SAP systems landscape that includes production and non-production systems. This architecture is one of many options that you can use to deploy SAP systems on Azure. The implementation you choose depends on your requirements.
 
-Use the reference architecture as a starting point. You can download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
+Use the reference architecture as a starting point. You can download the [Visio file](https://arch-center.azureedge.net/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
 :::image type="content" source="./media/sap-landscape-high-level-architecture.svg" border="false" alt-text="Diagram that shows the high-level architecture of an SAP systems landscape, with production and non-production systems, on Azure." lightbox="./media/sap-landscape-high-level-architecture.svg":::
 
@@ -181,9 +180,9 @@ The components are separate in the example SAP systems architecture to provide g
 
 The example architecture has components that you can use for day-2 operations. These components include an Azure Recovery Services vault to back up SAP systems and others that help you extend and improve your SAP data platform with cloud-native Azure data services.
 
-Services like Azure Synapse Analytics, Azure Data Factory, and Azure Data Lake Storage can help you unlock business insights by combining SAP data with non-SAP data and creating an analytics platform. To evaluate solution development environment design, review the [best practices](/azure/synapse-analytics/guidance/implementation-success-evaluate-solution-development-environment-design). You can use different instances of Data Factory and Data Lake Storage based on the SAP tier and best practices for your environment design.
+Services like Azure Data Factory and Azure Data Lake Storage can help you unlock business insights by combining SAP data with non-SAP data and creating an analytics platform. You can use different instances of Data Factory and Data Lake Storage based on the SAP tier and best practices for your environment design.
 
-The Azure [integration runtime](/azure/data-factory/concepts-integration-runtime) is the compute infrastructure that Data Factory and Azure Synapse pipelines use to provide data integration capabilities. Consider deploying runtime virtual machines for these services in each tier. For examples of how to connect with SAP systems and deploy the Azure integration runtime, see these articles:
+The Azure [integration runtime](/azure/data-factory/concepts-integration-runtime) is the compute infrastructure that Data Factory uses to provide data integration capabilities. Consider deploying runtime virtual machines for these services in each tier. For examples of how to connect with SAP systems and deploy the Azure integration runtime, see these articles:
 
 - [Set up a self-hosted integration runtime to use in the SAP CDC solution](/azure/data-factory/sap-change-data-capture-shir-preparation)
 
@@ -201,7 +200,7 @@ For more information about all architecture components, see [SAP S/4HANA in Linu
 
 The following reference architecture is an extension of the high-level architecture that appears earlier in this article. The diagram describes an example use case with three SAP products. It shows just one of the options you can use to deploy SAP systems to Azure by using virtual machine scale sets.
 
-Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
+Use this architecture as a starting point. Download the [Visio file](https://arch-center.azureedge.net/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
 :::image type="content" source="./media/sap-landscape-multiple-sap-system-example.svg" border="false" alt-text="Diagram that shows an example use case with three SAP products." lightbox="./media/sap-landscape-multiple-sap-system-example.svg":::
 
