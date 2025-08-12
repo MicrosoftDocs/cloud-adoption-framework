@@ -13,7 +13,7 @@ A migration plan defines the specific order, timing, and approach for migrating 
 
 **Prerequisites:** [Migration adoption plan](../plan/migration-adoption-plan.md), [Azure landing zone](/azure/cloud-adoption-framework/ready)
 
-:::image type="content" source="./images/caf-migrate.svg" alt-text="Diagram showing the five-step process for migrating existing workloads to Microsoft Azure. On the left, two icons represent the starting point: a server rack labeled "On premises" and a cloud labeled "Other clouds." An arrow leads to a vertical list of five sequential steps in the center, each with a number and icon: 1 Plan migration, 2 Prepare workloads, 3 Execute migration, 4 Optimize in cloud, 5 Decommission source. A final arrow points from the steps to an Azure cloud icon on the right, indicating the destination of the migration." lightbox="./images/caf-migrate.svg" border="false":::
+    :::image type="content" source="./images/caf-migrate.svg" alt-text="Diagram showing the five-step process for migrating existing workloads to Microsoft Azure. On the left, two icons represent the starting point: a server rack labeled "On premises" and a cloud labeled "Other clouds." An arrow leads to a vertical list of five sequential steps in the center, each with a number and icon: 1 Plan migration, 2 Prepare workloads, 3 Execute migration, 4 Optimize in cloud, 5 Decommission source. A final arrow points from the steps to an Azure cloud icon on the right, indicating the destination of the migration." lightbox="./images/caf-migrate.svg" border="false":::
 
 ## Assess migration readiness and skills
 
