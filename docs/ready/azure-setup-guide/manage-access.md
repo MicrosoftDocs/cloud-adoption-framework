@@ -37,8 +37,6 @@ Use a centralized model by creating security groups in Microsoft Entra ID to rep
 
 Granular scoping enforces least privilege and limits potential damage from misconfigurations or compromised accounts. Use the narrowest scope possible for each role. Assign roles at the resource group or resource level when possible. Avoid assigning broad roles at the subscription level unless absolutely necessary.
 
-
-
 ## Validate and maintain access regularly
 
 RBAC is not a one-time setup. Ongoing validation ensures that access remains appropriate as the organization evolves.
