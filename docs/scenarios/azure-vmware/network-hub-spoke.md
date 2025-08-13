@@ -116,7 +116,7 @@ By using NFS datastores backed by Azure NetApp Files, you can expand your storag
 -  Ultra & ErGw3AZ SKU is required for bypassing the gateway port speed limits
 -  Read traffic ingresses and write traffic is egresses over the Expressroute. Egress traffic over Expressroute circuits bypasses the gateway and go directly to the edge router
 -  Ingress/Egress charges are suppressed from AVS, however there's an egress charge if data is going across peered VNETs.
--  Use a dedicated ExpressRoute Gateway for Azure Netapp Files, do not used a shared/centralized ExpressRoute Gateway.
+-  Use a dedicated ExpressRoute Gateway for Azure Netapp Files, do not use a shared/centralized ExpressRoute Gateway.
 -  Don't place a firewall or NVA in the data path between Azure NetApp Files and Azure VMware Solution.
 - Only NFS v3 is supported today.
 
