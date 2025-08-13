@@ -82,7 +82,7 @@ For more information, see [Send Logs to Log Analytics](/azure/azure-vmware/send-
 - During workload migration, use the "monitor-as-on-premises" model to minimize changes during migration and provide vSphere Administrators with the experience they're accustomed to.
 - Monitor [vSphere Health Status](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.monitoring.doc/GUID-F957C1BB-A032-4648-9310-68A94733ABC8.html).
   - Create [vSphere events, alarms, and actions](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.monitoring.doc/GUID-9272E3B2-6A7F-427B-994C-B15FF8CADC25.html).
-- Consider using vRealize Log Insight for [monitoring a NSX-T Data Center environment](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.2/administration/GUID-8E3CA63B-71F8-4F47-88A6-DC5FA714DE8B.html).
+- Consider using vRealize Log Insight for monitoring a NSX-T Data Center environment.
 
 ### Guest workload management recommendations
 
