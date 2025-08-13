@@ -1,87 +1,94 @@
 ---
-title: Capacity Planning for Oracle Database@Azure Using Exadata Database Service
-description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Oracle Exadata Database@Azure.
+title: Capacity planning for Oracle Database@Azure using Exadata Database Service
+description: Plan and configure the appropriate infrastructure capacity for Oracle workloads on Oracle Exadata Database@Azure to ensure optimal performance and cost efficiency.
 author: gkayali
 ms.author: guherk
-ms.date: 01/27/2025
+ms.date: 08/13/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
-# Capacity planning for Oracle Exadata Database@Azure
+# Capacity planning for Oracle Database@Azure using Exadata Database Service
 
-## Capacity considerations for virtual networks and subnets
+Effective capacity planning determines the right infrastructure configuration for Oracle workloads on Oracle Exadata Database@Azure. Proper capacity planning prevents performance bottlenecks, reduces costs, and ensures scalability as your Oracle workloads grow.
 
-- Oracle Database@Azure requires a delegated subnet and must be delegated to `Oracle.Database/networkAttachments` before​ cluster deployment.
+## Plan virtual network and subnet capacity
 
-- You can create a maximum of one Oracle Database@Azure delegated subnet for each virtual network.
+Network configuration forms the foundation of your Oracle Database@Azure deployment. Proper subnet planning ensures adequate IP address allocation and supports future growth without network conflicts.
 
-- You can assign multiple Exadata virtual machine (VM) clusters to the same delegated subnet. Plan for sufficient IP address ranges to accommodate the required number of VM clusters. For example, if you expect to deploy two VM clusters in the same subnet, ensure that your subnet has enough IP addresses to support both clusters. For more information, see [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
+1. **Delegate a subnet specifically for Oracle Database@Azure before cluster deployment.** Oracle Database@Azure requires a delegated subnet that must be delegated to `Oracle.Database/networkAttachments` to establish the required network permissions. Create this delegation in the Azure portal or through Infrastructure as Code templates to ensure consistent configuration across environments.
 
-- You can assign Exadata VM clusters to different virtual networks in the same subscription or in different subscriptions. For example, a VM cluster is assigned to a development subscription while Oracle Exadata Infrastructure and another Exadata VM Cluster resource are from production subscriptions. This approach minimizes the need to establish separate infrastructure resources just for the development subscription. To assign an Exadata VM cluster to a virtual network from a separate Azure subscription, ensure that both subscriptions are under the same billing account. For more information, see [Link Oracle Database@Azure to multiple Azure subscriptions](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription).
+2. **Limit each virtual network to one Oracle Database@Azure delegated subnet.** You can create a maximum of one Oracle Database@Azure delegated subnet for each virtual network. Plan your virtual network architecture to accommodate this limitation by using multiple virtual networks if you need separate network segments.
 
-    > [!NOTE]
-    > By default, the Oracle Database@Azure service can use up to five delegated subnets. If extra subnet capacity is required, you can request a service limit increase. For more information, see [Delegated subnet limits](/azure/oracle/oracle-db/oracle-database-delegated-subnet-limits).
+3. **Calculate IP address requirements for multiple VM clusters in the same subnet.** You can assign multiple Exadata virtual machine (VM) clusters to the same delegated subnet. Allocate sufficient address space to support your planned number of clusters, including future expansion. For example, if you plan to deploy two VM clusters in the same subnet, ensure your subnet CIDR provides adequate IP addresses for both clusters plus growth capacity. For more information, see [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
-- If you plan to increase the number of VM clusters, ensure that the Classless Inter-Domain Routing (CIDR) of the client subnet is properly allocated to prevent IP address conflicts and maintain network segmentation. For more information, see [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
+4. **Use cross-subscription VM cluster assignments to optimize resource allocation.** You can assign Exadata VM clusters to different virtual networks in the same subscription or in different subscriptions. For example, assign a VM cluster to a development subscription while Oracle Exadata Infrastructure and another Exadata VM Cluster resource are from production subscriptions. This approach reduces the need to establish separate infrastructure resources just for the development subscription. To assign an Exadata VM cluster to a virtual network from a separate Azure subscription, ensure that both subscriptions are under the same billing account. For more information, see [Link Oracle Database@Azure to multiple Azure subscriptions](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription).
 
-- Oracle Exadata Database@Azure backup subnets can be optionally provided during VM cluster creation. Backup subnets are created in OCI and don't need to be present in an Azure virtual network. Preassign backup subnet CIDRs to avoid IP address conflicts. This approach helps ensure smooth network operations and prevents potential connectivity problems.
+5. **Request additional delegated subnet capacity when you exceed the default limit of five subnets.** By default, the Oracle Database@Azure service can use up to five delegated subnets. If extra subnet capacity is required, submit a service limit increase request through Azure support. Plan this request early in your deployment timeline to avoid delays. For more information, see [Delegated subnet limits](/azure/oracle/oracle-db/oracle-database-delegated-subnet-limits).
 
-## Capacity considerations for Exadata Infrastructure
+6. **Properly allocate client subnet CIDR to prevent IP address conflicts.** If you plan to increase the number of VM clusters, ensure that the Classless Inter-Domain Routing (CIDR) of the client subnet is properly allocated to prevent IP address conflicts and maintain network segmentation. For more information, see [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip).
 
-- Use Oracle Exadata Database@Azure to provision an infrastructure that uses at least two databases and three storage servers. This setup is called a *quarter rack*. Before provisioning, ensure that all necessary prerequisites are met, such as network configurations and resource allocations. For more information, see [Provisioning Exadata Infrastructure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-infrastructure.html).
+7. **Pre-allocate backup subnet CIDRs to prevent IP address conflicts.** Oracle Exadata Database@Azure backup subnets can be optionally provided during VM cluster creation. Backup subnets are created in Oracle Cloud Infrastructure (OCI) and don't need to be present in an Azure virtual network. Assign backup subnet CIDRs during planning to ensure network segmentation and prevent connectivity issues.
 
-- You can add extra database and storage servers independently. You can add up to a maximum of 32 database servers and 64 storage servers. For more information, see [Oracle Database@Azure Service scaling options](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3).
+## Configure Exadata Infrastructure capacity
 
-- You can scale up or scale down Exadata Infrastructure based on the workload requirements.
+Infrastructure sizing determines the performance and scalability of your Oracle Database@Azure deployment. Proper infrastructure configuration ensures adequate compute and storage resources while providing flexibility for future growth.
 
-  - Scale Exadata Infrastructure via the OCI console, API, SDK, or Terraform. The scaling process is done online without any downtime and might take up to a few hours to complete. Monitor the process from the **Work Requests** section in the OCI console to confirm that scaling is successful.
-  
-  - After you add more database or storage servers to your Oracle Exadata Database@Azure infrastructure, add the newly provisioned capacity to the VM clusters.
+1. **Start with a quarter rack configuration that includes two database servers and three storage servers.** Use Oracle Exadata Database@Azure to provision an infrastructure that uses at least two database servers and three storage servers. This setup is called a *quarter rack* and provides the minimum configuration for Oracle Exadata Database@Azure deployment. Before provisioning, ensure that all necessary prerequisites are met, such as network configurations and resource allocations. For more information, see [Provisioning Exadata Infrastructure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-infrastructure.html).
 
-> [!NOTE]
-> Scaling operations for Oracle Exadata Database@Azure are currently managed within OCI at the infrastructure level and the VM cluster level.
+2. **Add database and storage servers independently based on workload requirements.** You can add extra database and storage servers independently. Scale your infrastructure by adding up to a maximum of 32 database servers and 64 storage servers. This independent scaling approach allows you to optimize resources for compute-intensive or storage-intensive workloads without over-provisioning unused capacity. For more information, see [Oracle Database@Azure Service scaling options](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3).
 
-## Capacity considerations for Exadata VM Cluster
+3. **Use online scaling to adjust infrastructure capacity without downtime.** You can scale up or scale down Exadata Infrastructure based on the workload requirements. Scale Exadata Infrastructure via the OCI console, API, SDK, or Terraform. The scaling process is done online without any downtime and takes up to a few hours to complete. Monitor the process from the **Work Requests** section in the OCI console to confirm that scaling is successful.
 
-- A maximum number of eight VM clusters can be created in the same Exadata Infrastructure.
+4. **Add newly provisioned capacity to VM clusters after infrastructure scaling.** After you add more database or storage servers to your Oracle Exadata Database@Azure infrastructure, add the newly provisioned capacity to the VM clusters. Infrastructure scaling increases available resources, but you must explicitly add this capacity to your VM clusters to use the additional resources. Scaling operations for Oracle Exadata Database@Azure are managed within OCI at the infrastructure level and the VM cluster level.
 
-- Each VM in the Exadata VM Cluster has a minimum of two Oracle CPUs (OCPUs) and 30 GB of memory allocation. You can adjust both OCPUs independently during or after the initial VM cluster setup, based on the requirements of the workload.
+## Size Exadata VM clusters appropriately
 
-- When you provision a VM Cluster, you can choose to start with a single-node cluster or a multiple-node VM cluster. By default, a multiple-node VM cluster is selected during the creation process.
+VM cluster configuration directly affects database performance and high availability. Proper VM cluster sizing ensures adequate compute resources while providing the flexibility to scale based on workload demands.
 
-- A single-node cluster can't be used for high availability (HA) configurations. To provide HA, we recommend a minimum of two VMs for each Exadata VM cluster.
+1. **Deploy a maximum of eight VM clusters per Exadata Infrastructure.** A maximum number of eight VM clusters can be created in the same Exadata Infrastructure. This limit ensures optimal resource distribution and management across your infrastructure. Plan your database consolidation strategy to work within this constraint while maintaining performance isolation between workloads.
 
-- The VM cluster can be scaled up or scaled down based on the workload requirements.
+2. **Allocate a minimum of two Oracle CPUs (OCPUs) and 30 GB of memory per VM.** Each VM in the Exadata VM Cluster has a minimum of two Oracle CPUs (OCPUs) and 30 GB of memory allocation. You can adjust both OCPUs independently during or after the initial VM cluster setup, based on the requirements of the workload. Adjust OCPU and memory allocation based on actual workload requirements and performance monitoring data.
 
-  - You can adjust the number of OCPUs and the memory allocation for an Exadata VM Cluster instance symmetrically across all nodes up to the infrastructure limits by using the OCI console, API, SDK, or Terraform.
-  
-  - After you provision an Exadata VM Cluster instance, it's possible to scale down the processing power to zero. This action effectively shuts down the VM cluster. During this period, only the infrastructure costs are incurred until the system is scaled up again. This feature helps you save costs on test and development systems when they aren't in use.
+3. **Choose between single-node and multiple-node VM cluster configurations based on availability requirements.** When you provision a VM Cluster, you can choose to start with a single-node cluster or a multiple-node VM cluster. By default, a multiple-node VM cluster is selected during the creation process. A single-node cluster can't be used for high availability (HA) configurations. To provide HA, use a minimum of two VMs for each Exadata VM cluster.
 
-- The VM cluster's local file systems can be customized through configuration. Note that once the local file system size is increased, it cannot be reduced. For details, see [Provisioning an Exadata VM Cluster for Azure](https://docs.oracle.com/en-us/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-vm-cluster-azure.html).
+4. **Scale VM cluster resources symmetrically across all nodes using OCI management tools.** The VM cluster can be scaled up or scaled down based on the workload requirements. You can adjust the number of OCPUs and the memory allocation for an Exadata VM Cluster instance symmetrically across all nodes up to the infrastructure limits by using the OCI console, API, SDK, or Terraform. This symmetrical scaling approach ensures balanced performance and prevents resource bottlenecks.
 
-## Capacity considerations for storage
+5. **Scale VM clusters down to zero OCPUs to minimize costs during non-use periods.** After you provision an Exadata VM Cluster instance, it's possible to scale down the processing power to zero. This action effectively shuts down the VM cluster. During this period, only the infrastructure costs are incurred until the system is scaled up again. This feature helps you save costs on test and development systems when they aren't in use.
+
+6. **Configure local file system sizes carefully during initial deployment.** The VM cluster's local file systems can be customized through configuration. Note that once the local file system size is increased, it cannot be reduced. Plan file system allocation conservatively to avoid storage waste while ensuring adequate space for application data and logs. For details, see [Provisioning an Exadata VM Cluster for Azure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-vm-cluster-azure.html).
+
+## Optimize storage configuration
+
+Storage configuration determines data protection, performance, and backup strategies for your Oracle databases. Oracle Automatic Storage Management (ASM) provides the foundation for storage allocation and must be configured correctly during initial deployment.
 
 The storage space inside the Oracle Exadata Database@Azure storage servers is configured for use by Oracle Automatic Storage Management (ASM) when you provision the Exadata VM cluster. By default, the following ASM disk groups are created:
 
-- DATA disk group
-  
-- RECO disk group
-  
-- Sparse disk group, which is optional
+- **DATA disk group** - Stores database files and user data
+- **RECO disk group** - Stores recovery files and archived logs  
+- **Sparse disk group** - Provides additional storage capacity (optional)
 
 For more information about the storage configuration, see [Exadata Cloud Infrastructure - Storage configuration](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html).
 
-> [!NOTE]
-> After the Exadata VM cluster is created, the disk group layout can't be changed.
+1. **Choose between database backups and sparse disk groups during VM cluster creation.** Choosing between database backups or sparse disk groups during VM cluster creation significantly affects the allocation of storage space to ASM disk groups in the Oracle Exadata Database@Azure storage servers. Evaluate your backup strategy and storage requirements before making this selection, as the disk group layout cannot be changed after VM cluster creation. For more information, see [Impact of configuration settings on storage](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html#ECSCM-GUID-925DAEBF-4693-4AC6-80E1-15D7121F80A9).
 
-Consider the following storage configuration settings:
+2. **Implement external backup strategies to protect against hardware failures and outages.** Storing database backups locally on the Oracle Exadata Database@Azure storage server doesn't protect against data loss caused by hardware failures and outages in availability zones or regions. Configure cross-region backup solutions and disaster recovery architectures to ensure data resilience and business continuity. To help ensure a resilient architecture for unplanned outages, see the architecture options in [Business continuity and disaster recovery considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md). After the Exadata VM cluster is created, the disk group layout can't be changed. Plan your storage configuration carefully during initial deployment.
 
-- Choosing between database backups or sparse disk groups during VM cluster creation significantly affects the allocation of storage space to ASM disk groups in the Oracle Exadata Database@Azure storage servers. For more information, see [Impact of configuration settings on storage](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html#ECSCM-GUID-925DAEBF-4693-4AC6-80E1-15D7121F80A9).
-  
-- Storing database backups locally on the Oracle Exadata Database@Azure storage server doesn't protect against data loss caused by hardware failures and outages in availability zones or regions. To help ensure a resilient architecture for unplanned outages, see the architecture options in [Business continuity and disaster recovery considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md).
+## Azure tools and resources
 
-## Next step
+| Category | Tool | Description |
+|----------|------|-------------|
+| Planning | [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip) | Provides guidance for subnet CIDR allocation and IP address planning |
+| Multi-subscription | [Link Oracle Database@Azure to multiple Azure subscriptions](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription) | Explains how to deploy VM clusters across different Azure subscriptions |
+| Service limits | [Delegated subnet limits](/azure/oracle/oracle-db/oracle-database-delegated-subnet-limits) | Details default limits and how to request increases for delegated subnets |
+| Infrastructure | [Provisioning Exadata Infrastructure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-infrastructure.html) | Oracle documentation for infrastructure deployment |
+| Scaling | [Oracle Database@Azure Service scaling options](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3) | Details maximum scaling limits and capabilities |
+| VM Cluster | [Provisioning an Exadata VM Cluster for Azure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-vm-cluster-azure.html) | Step-by-step VM cluster deployment guide |
+| Storage Configuration | [Exadata Cloud Infrastructure - Storage configuration](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html) | Comprehensive storage configuration documentation |
+| Storage Impact | [Impact of configuration settings on storage](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html#ECSCM-GUID-925DAEBF-4693-4AC6-80E1-15D7121F80A9) | Details how configuration choices affect storage allocation |
+| Disaster Recovery | [Business continuity and disaster recovery considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md) | Architecture options for resilient Oracle deployments |
+
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Migrate Oracle workloads to Azure](./oracle-migration-planning.md)
