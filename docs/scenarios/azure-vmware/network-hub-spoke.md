@@ -52,7 +52,7 @@ This document assumes and recommends default route advertisement from either on-
 -	Enable Public IP down to the NSX Edge in Azure portal. This allows for low-latency direct connections to Azure VMware Solution, and the ability to scale the number of outbound connections.
 -	Apply the NSX firewall's rule creation.
 -	Use the NSX Advanced load balancer to evenly distribute traffic to workloads.
--	Enable [Flood Protection](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.2/administration/GUID-398BCA15-DAFC-4D23-B0D3-E5C1FB0B0F08.html) (Distributed and Gateway).
+-	Enable [Flood Protection](https://techdocs.broadcom.com/us/en/vmware-cis/nsx/nsxt-dc/3-2/administration-guide/security/general-security-settings/firewall-general-settings/flood-protection.html) (Distributed and Gateway).
 
 ### Egress from AVS using NSX-T or NVA
 
@@ -116,7 +116,7 @@ By using NFS datastores backed by Azure NetApp Files, you can expand your storag
 -  Ultra & ErGw3AZ SKU is required for bypassing the gateway port speed limits
 -  Read traffic ingresses and write traffic is egresses over the Expressroute. Egress traffic over Expressroute circuits bypasses the gateway and go directly to the edge router
 -  Ingress/Egress charges are suppressed from AVS, however there's an egress charge if data is going across peered VNETs.
--  Use a dedicated ExpressRoute Gateway for Azure Netapp Files, do not used a shared/centralized ExpressRoute Gateway.
+-  Use a dedicated ExpressRoute Gateway for Azure Netapp Files, do not use a shared/centralized ExpressRoute Gateway.
 -  Don't place a firewall or NVA in the data path between Azure NetApp Files and Azure VMware Solution.
 - Only NFS v3 is supported today.
 
