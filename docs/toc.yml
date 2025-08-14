@@ -12,7 +12,7 @@ items:
   - name: Foundational methodologies
     expanded: true
     items:
-    - name: 1. Define strategy
+    - name: Define strategy
       items:
       - name: Overview
         href: strategy/index.md
@@ -37,7 +37,7 @@ items:
           - name: Sustainability
             href: strategy/inform/sustainability.md
 
-    - name: 2. Plan adoption
+    - name: Plan adoption
       items:
       - name: 1. Prepare organization
         href: plan/prepare-organization-for-cloud.md
@@ -66,13 +66,13 @@ items:
           href: plan/migration-adoption-plan.md
 
 
-    - name: 3. Ready environment
+    - name: Ready environment
       items:
       - name: Overview
         href: ready/index.md
       - name: Azure setup guide
         items:
-        - name: Manage identity and resource access
+        - name: Set up identity and access
           href: ready/azure-setup-guide/manage-access.md
         - name: Organize resources
           href: ready/azure-setup-guide/organize-resources.md
@@ -411,7 +411,7 @@ items:
         - name: Ready antipatterns
           href: antipatterns/ready-antipatterns.md
 
-    - name: 4. Adopt solutions
+    - name: Adopt solutions
       expanded: true
       items:
       - name: Migrate workloads
