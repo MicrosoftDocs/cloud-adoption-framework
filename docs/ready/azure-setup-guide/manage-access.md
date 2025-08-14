@@ -12,19 +12,11 @@ ms.topic: conceptual
 
 This article shows you how to establish a secure identity and access foundation in a new Azure environment. It’s designed for customers who have just created a Microsoft Entra ID tenant and haven’t yet deployed resources or created subscriptions. Set up these controls before deploying any resources to ensure secure, scalable access management from day one.
 
-## Add a custom domain to Microsoft Entra ID
-
-When you create a Microsoft Entra ID tenant, it starts with a default domain such as *yourtenant.onmicrosoft.com*. To provide a professional sign-in experience, add your own domain name, for example, *contoso.com*. This allows sign-in names like *alex@contoso.com* instead of *alex@yourtenant.onmicrosoft.com*. A custom domain improves professionalism and user experience during sign-in. If you do not have a custom domain yet, continue using the .onmicrosoft.com default for now.
-
-1. Verify that you own the domain you want to add.
-1. Add the domain in Microsoft Entra ID and complete the DNS verification steps.
-1. Update user accounts to use the new domain for sign-in.
-
-For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
-
 ## Create individual user accounts in Microsoft Entra ID
 
 Every person who needs access to Azure should have their own user account in Microsoft Entra ID. This is a core principle of identity and access management.
+
+1. **Add a custom domain.** When you create a Microsoft Entra ID tenant, it starts with a default domain such as *yourtenant.onmicrosoft.com*. To provide a professional sign-in experience, add your own domain name, for example, *contoso.com*. This allows sign-in names like *alex@contoso.com* instead of *alex@yourtenant.onmicrosoft.com*. If you do not have a custom domain yet, continue using the *.onmicrosoft.com* default for now. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
 
 1. **Create one account per person who needs access.** For example, if you have 3 team members, create 3 accounts.
 
