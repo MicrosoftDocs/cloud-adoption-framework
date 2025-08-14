@@ -1,9 +1,9 @@
 ---
 title: Establish identity and access controls in Azure
-description: Learn how to set up access control for your Azure environment with Azure role-based access control.
+description: Learn how to establish identity and access controls in Azure
 author: stephen-sumner
 ms.author: pnp
-ms.date: 08/01/2025
+ms.date: 08/15/2025
 ms.topic: conceptual
 ---
 

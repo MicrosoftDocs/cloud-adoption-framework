@@ -72,16 +72,14 @@ items:
         href: ready/index.md
       - name: Azure setup guide
         items:
-        - name: Setup guide overview
-          href: ready/azure-setup-guide/index.md
+        - name: Manage identity and resource access
+          href: ready/azure-setup-guide/manage-access.md
         - name: Organize resources
           href: ready/azure-setup-guide/organize-resources.md
         - name: Create your initial subscriptions
           href: ready/azure-best-practices/initial-subscriptions.md
         - name: Select regions
           href: ready/azure-setup-guide/regions.md
-        - name: Manage access
-          href: ready/azure-setup-guide/manage-access.md
         - name: Manage costs and billing
           href: ready/azure-setup-guide/manage-costs.md
         - name: Plan governance, security, and compliance
