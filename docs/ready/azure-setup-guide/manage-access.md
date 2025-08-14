@@ -24,7 +24,7 @@ Every person who needs access to Azure should have their own user account in Mic
 
 For step-by-step instructions, see [How to create, invite, and delete users in Microsoft Entra ID](/entra/fundamentals/how-to-create-delete-users).
 
-## Enable multi-Factor authentication for all users
+## Enable multi-factor authentication
 
 Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide a second form of verification, such as a code from an authenticator app or a text message, in addition to their password. Enabling MFA significantly reduces the risk of account compromise, even if a password is stolen.
 
@@ -34,7 +34,7 @@ Multi-factor authentication (MFA) adds an extra layer of security by requiring u
 
 1. **Verify MFA enforcement.** After enabling MFA, confirm that each user can sign in successfully with MFA. See [How to verify that users are set up for mandatory MFA](/entra/identity/authentication/how-to-mandatory-multifactor-authentication).
 
-## Set up identity governance
+## Assign identity management roles
 
 Before you deploy any Azure resources, you need to secure the identity layer. This means defining who can administer your directory, manage users and groups, and configure authentication policies. These tasks form the backbone of your organization’s security because every Azure resource relies on Microsoft Entra ID for authentication.
 
