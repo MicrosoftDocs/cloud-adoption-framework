@@ -26,7 +26,7 @@ Every person who needs access to Azure should have their own user account in Mic
 
 Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide a second form of verification, such as a code from an authenticator app or a text message, in addition to their password. Enabling MFA significantly reduces the risk of account compromise, even if a password is stolen.
 
-1. **Start with security defaults.** New Microsoft Entra ID tenants have [security defaults](/entra/fundamentals/security-defaults) turned on by default. Security defaults enforce MFA for all users and apply other basic protections without complex configuration. If security defaults are enabled, keep them on for a strong, simple baseline.
+1. **Start with security defaults.** New Microsoft Entra ID tenants have [security defaults](/entra/fundamentals/security-defaults) turned on. Security defaults enforce MFA for all users and apply other basic protections without complex configuration. If security defaults are enabled, keep them on for a strong, simple baseline.
 
 1. **Use Conditional Access as you mature.** If you needs more control than security defaults provide, use Conditional Access policies to enforce MFA for specific scenarios. Conditional Access requires a license. Create a policy that enforces MFA under specific conditions, such as when users sign in from unfamiliar locations. For detailed steps, see [Secure user sign-in with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa).
 
