@@ -18,11 +18,9 @@ Every person who needs access to Azure should have their own user account in Mic
 
 1. **Add a custom domain.** When you create a Microsoft Entra ID tenant, it has a default domain (*yourtenant.onmicrosoft.com*). Add your own domain name, for example, *contoso.com*. This allows sign-in names like *alex@contoso.com* instead of *alex@yourtenant.onmicrosoft.com*. If you create accounts first using the default *.onmicrosoft.com* domain, you have to rename them later when you add your custom domain. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
 
-1. **Create one account per person who needs access.** Do not allow users to share accounts. Shared accounts make it impossible to trace changes or enforce responsibility. For example, if you have 3 team members, create 3 accounts.
+1. **Create a user for every person who needs access.** Everyone who needs access to Azure should have their own user account. Do not allow people to share users. Multiple people sharing a user account makes it impossible to trace changes or enforce responsibility. Ff you have 3 team members, create 3 users. For step-by-step instructions, see [How to create, invite, and delete users in Microsoft Entra ID](/entra/fundamentals/how-to-create-delete-users).
 
 1. **Keep new accounts as regular users with no admin privileges.** Assign roles based on the principle of least privilege, giving users only the access they need.
-
-For step-by-step instructions, see [How to create, invite, and delete users in Microsoft Entra ID](/entra/fundamentals/how-to-create-delete-users).
 
 ## Enable multi-factor authentication
 
