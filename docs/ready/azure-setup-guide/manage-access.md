@@ -20,9 +20,7 @@ When you create a Microsoft Entra ID tenant, it starts with a default domain suc
 1. Add the domain in Microsoft Entra ID and complete the DNS verification steps.
 1. Update user accounts to use the new domain for sign-in.
 
-If you do not have a custom domain yet, continue using the *.onmicrosoft.com* default for now.
-
-For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
+If you do not have a custom domain yet, continue using the *.onmicrosoft.com* default for now. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
 
 ## Create individual user accounts in Microsoft Entra ID
 
