@@ -16,11 +16,9 @@ This article shows you how to establish a secure identity and access foundation 
 
 Every person who needs access to Azure should have their own user account in Microsoft Entra ID. This is a core principle of identity and access management.
 
-1. **Add a custom domain.** When you create a Microsoft Entra ID tenant, it starts with a default domain such as *yourtenant.onmicrosoft.com*. To provide a professional sign-in experience, add your own domain name, for example, *contoso.com*. This allows sign-in names like *alex@contoso.com* instead of *alex@yourtenant.onmicrosoft.com*. If you create accounts first using the default *.onmicrosoft.com* domain, you have to rename them later when you add your custom domain. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
+1. **Add a custom domain.** When you create a Microsoft Entra ID tenant, it has a default domain (*yourtenant.onmicrosoft.com*). Add your own domain name, for example, *contoso.com*. This allows sign-in names like *alex@contoso.com* instead of *alex@yourtenant.onmicrosoft.com*. If you create accounts first using the default *.onmicrosoft.com* domain, you have to rename them later when you add your custom domain. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
 
-1. **Create one account per person who needs access.** For example, if you have 3 team members, create 3 accounts.
-
-1. **Do not allow users to share accounts.** Shared accounts make it impossible to trace changes or enforce responsibility.
+1. **Create one account per person who needs access.** Do not allow users to share accounts. Shared accounts make it impossible to trace changes or enforce responsibility. For example, if you have 3 team members, create 3 accounts.
 
 1. **Keep new accounts as regular users with no admin privileges.** Assign roles based on the principle of least privilege, giving users only the access they need.
 
