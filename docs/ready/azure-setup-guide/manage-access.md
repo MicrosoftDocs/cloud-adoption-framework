@@ -54,7 +54,7 @@ For detailed guidance and best practices, see [Best practices for Microsoft Entr
 
 ## Control access to Azure resources
 
-Once your identity governance is in place, the next step is to control who can access and manage Azure resources. Even if you haven’t deployed any resources yet, it’s important to plan how you manage access. Managing Azure resource access means defining who can view, create, or modify resources such as subscriptions, resource groups, and services like Azure AI Foundry, App Service, Storage Accounts, and databases. These permissions determine how your cloud environment is deployed, operated, and secured.
+The next step is to control who can access and manage Azure resources. Even if you haven’t deployed any resources yet, it’s important to understand how to manage access. Managing Azure resource access means defining who can view, create, or modify resources such as subscriptions, resource groups, and resources like Azure AI Foundry, App Service, Storage Accounts. These permissions determine how your cloud environment is deployed, operated, and secured.
 
 You manage resource access through Azure role-based access control (Azure RBAC). Azure RBAC assigns roles at different scopes—subscription, resource group, or individual resource—to define what actions users or groups can perform. Azure RBAC is separate from Entra ID RBAC but integrates with Entra ID identities.
 
