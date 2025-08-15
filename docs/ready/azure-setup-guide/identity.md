@@ -1,6 +1,6 @@
 ---
-title: Establish identity and access management in Azure
-description: Establish identity and access management in Azure
+title: Set up identity and access management in Azure
+description: Set up identity and access management in Azure
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/15/2025
@@ -8,45 +8,46 @@ ms.topic: conceptual
 ---
 
 
-# Establish identity and access management in Azure
+# Set up identity and access management in Azure
 
-This article shows you how to establish identity and access management foundation in a new Azure environment. Before you deploy any Azure resources, you need to secure the identity layer. This means defining who can administer your directory, manage users and groups, and configure authentication policies. These tasks form the backbone of your organization’s security because every Azure resource relies on Microsoft Entra ID for authentication.
+Before you deploy any resources in Azure, it's important to set up identity and access management. This means deciding who can sign in, who can manage users and groups, and who can configure security settings like multifactor authentication. These decisions form the foundation of your cloud security, because every Azure service relies on Microsoft Entra ID to verify user identities.
 
 ## Assign identity management roles
 
-You manage these responsibilities through Microsoft Entra ID role-based access control (RBAC). Entra ID RBAC assigns roles that determine what actions someone can perform in the identity directory. These actions include creating users, managing groups, or configuring MFA. Set up your roles early so that only trusted individuals have administrative control and helps prevent privilege sprawl.
+Azure uses role-based access control (RBAC) to manage permissions. In Microsoft Entra ID, RBAC lets you assign roles to users or groups that define what actions they can take in the identity system. For example, some roles allow users to create accounts, manage groups, or configure security policies.
+Here’s how to set up identity roles securely:
 
-1. **Use built-in roles.** Review the list of [Microsoft Entra ID built-in roles](/entra/identity/role-based-access-control/permissions-reference). Each role has specific permissions. Assign the role that matches the user’s responsibilities.
+1. **Use built-in roles.** Microsoft provides predefined roles for common tasks. Each role has a specific set of permissions. For example, the User Administrator role can create and manage user accounts. Review the list of [Microsoft Entra ID built-in roles](/entra/identity/role-based-access-control/permissions-reference) and assign only what’s needed.
 
-2. **Assign roles based on least privilege.** Only grant the minimum permissions required for a user’s job. If a user does not need to manage directory settings, leave them as a regular user with no role assignments.
+2. **Assign roles based on least privilege.** Only give users the permissions they need to do their job. If someone doesn’t need to manage identity settings, leave them as a regular user with no role assignments.
 
-3. **Use-just-in-time access.** For administrator, use Microsoft Entra Privileged Identity Management (PIM) to assume privileged roles for a limited time if you have the required license. This reduces standing privilege risk.
+3. **Use-just-in-time access.** If your organization has a license for Microsoft Entra Privileged Identity Management (PIM), you can allow users to activate admin roles only when needed, and for a limited time. This reduces the risk of having too many users with permanent high-level access.
 
-4. **Limit Global Administrator access.** The [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator) is a highly privileged role and should be limited to two [emergency-access accounts](/entra/identity/role-based-access-control/security-emergency-access) and . Don't use this role for regular operations.
+4. **Limit Global Administrator role access.** The [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator) has full control over your Microsoft Entra ID tenant. Limit this role to two accounts used only for emergencies. These are called break-glass accounts. Do not use this role for everyday tasks. For more information, see [emergency-access accounts](/entra/identity/role-based-access-control/security-emergency-access).
 
-5. **Review and monitor role assignments regularly.** Remove unnecessary roles promptly. Use role assignment reports and alerts to maintain security.
+5. **Review role assignments regularly.** Check who has roles assigned and remove any that are no longer needed. You can use built-in reports and alerts to help monitor changes.
 
-For detailed guidance and best practices, see [Best practices for Microsoft Entra roles](/entra/identity/role-based-access-control/best-practices).
+For more information, see [Best practices for Microsoft Entra roles](/entra/identity/role-based-access-control/best-practices).
 
 ## Create individual user accounts in Microsoft Entra ID
 
-Every person who needs access to Azure should have their own user account in Microsoft Entra ID. It's a core principle of identity and access management.
+Every person who needs access to Azure should have their own user account in Microsoft Entra ID. This helps ensure accountability and makes it easier to track changes and enforce security policies.
 
-1. **Add a custom domain.** When you create a Microsoft Entra ID tenant, it has a default domain (*yourtenant.onmicrosoft.com*). Add your own domain name, like *contoso.com*. A custom domain allows sign-in names like *alex@contoso.com* instead of *alex@yourtenant.onmicrosoft.com*. If you create accounts first using the default *.onmicrosoft.com* domain, you have to rename them later when you add your custom domain. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
+1. **Add a custom domain.** When you create a Microsoft Entra ID tenant, it has a default domain (*yourtenant.onmicrosoft.com*). Add your own domain name (*contoso.com*). A custom domain allows sign-in names like *alex@contoso.com*. If you create accounts before adding your custom domain, you need to rename them later. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
 
-1. **Create a user for every person who needs access.** Everyone who needs access to Azure should have their own user account. Don't allow people to share users. Multiple people sharing a user account makes it impossible to trace changes or enforce responsibility. Ff you have three team members, create three users. For step-by-step instructions, see [How to create, invite, and delete users in Microsoft Entra ID](/entra/fundamentals/how-to-create-delete-users).
+1. **Create a new user for every person who needs access to Azure.** Everyone who needs access to Azure should have their own user account. Don't allow people to share users. Multiple people sharing a user account makes it impossible to trace changes or enforce responsibility. Ff you have three team members, create three users. For step-by-step instructions, see [How to create, invite, and delete users in Microsoft Entra ID](/entra/fundamentals/how-to-create-delete-users).
 
-1. **Keep new accounts as regular users with no admin privileges.** Assign roles based on the principle of least privilege, giving users only the access they need.
+1. **Keep new user as regular users.** By default, new users should not have any administrative privileges. Assign roles only when needed, and always follow the least privilege principle.
 
 ## Enable multifactor authentication
 
-Multifactor authentication (MFA) adds an extra layer of security by requiring users to provide a second form of verification, such as a code from an authenticator app or a text message, in addition to their password. Enabling MFA significantly reduces the risk of account compromise, even if a password is stolen.
+Multifactor authentication (MFA) adds an extra layer of security by requiring users to verify their identity in two ways For example, they enter a password and then confirm a code sent to their phone or generated by an app.
 
-1. **Start with security defaults.** New Microsoft Entra ID tenants have [security defaults](/entra/fundamentals/security-defaults) turned on. Security defaults enforce MFA for all users and apply other basic protections without complex configuration. If security defaults are enabled, keep them on for a strong, simple baseline.
+1. **Start with security defaults.** New Microsoft Entra ID tenants have [security defaults](/entra/fundamentals/security-defaults) turned on automatically. These settings enforce MFA for all users and apply other basic protections. Keep them enabled unless you need more advanced controls.
 
-1. **Use Conditional Access as you mature.** If you need more control than security defaults provide, use Conditional Access policies to enforce MFA for specific scenarios. Conditional Access requires a license. Create a policy that enforces MFA under specific conditions, such as when users sign in from unfamiliar locations. For detailed steps, see [Secure user sign-in with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa).
+1. **Use Conditional Access for advanced scenarios.** If your organization needs more flexibility, you can create Conditional Access policies to enforce MFA only in specific situations, such as when users sign in from unfamiliar locations. This feature requires a premium license. See [Secure user sign-in with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa).
 
-1. **Verify MFA enforcement.** After enabling MFA, confirm that each user can sign in successfully with MFA. See [How to verify that users are set up for mandatory MFA](/entra/identity/authentication/how-to-mandatory-multifactor-authentication).
+1. **Verify that MFA is working.** After enabling MFA, confirm that each user can sign in successfully with MFA. See [How to verify that users are set up for mandatory MFA](/entra/identity/authentication/how-to-mandatory-multifactor-authentication).
 
 ## Next step
 
