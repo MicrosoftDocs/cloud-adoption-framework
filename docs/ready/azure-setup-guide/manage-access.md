@@ -9,9 +9,7 @@ ms.topic: conceptual
 
 # Manage access to resources in Azure
 
-This article shows you how to manage access to Azure resources. When you first set up your Azure environment, one of the most important tasks is managing who can access and control your deployed Azure resources.
-
-Azure uses role-based access control (RBAC) to manage these permissions. With Azure RBAC, you assign roles to users, groups, or applications at different scopes, such as a subscription, resource group, or individual resource. These roles give different permissions to the user. Azure RBAC works alongside Microsoft Entra ID, which handles identity management.
+This article explains how to control who can access and manage your resources in Azure. Azure uses role-based access control (RBAC) to manage who can access and modify resources. With RBAC, you assign roles to users, groups, or applications. Each role defines what actions they can take, and you choose the scope of the permissions. Scope defines whether the permissions apply to an entire subscription, a resource group, or a specific resource like Azure AI Foundry.
 
 ## Start with built-in roles
 
@@ -29,7 +27,7 @@ The Owner role provides unrestricted access to all resources and access controls
 
 ## Use groups to manage resource access
 
-Instead of assigning roles to individual users, use Microsoft Entra ID security groups. This approach makes access easier to manage, audit, and scale. Always follow the principle of least privilege. Grant only the permissions necessary for each group to perform its tasks. Always assign roles to groups at the lowest scope necessary, resource group if possible, subscription only when needed.
+Instead of assigning roles to individual users, use Microsoft Entra ID security groups. This approach makes access easier to manage, audit, and scale. Always follow the principle of least privilege. Grant only the permissions necessary for each group to perform its tasks. Always assign roles to groups at the lowest scope (subscription, resource group, or resource) necessary. Use resource group if possible and subscription only when needed.
 
 So you need to great groups for each subscription, aligned to the scope of access required. For small teams, broad groups like "Subscription owners", "Developers", and "Finance" might be sufficient.
 
