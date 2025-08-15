@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Manage access to resources in Azure
 
-This article shows you how to manage access to Azure resources. When you first set up your Azure environment, one of the most important tasks is managing who can access and control your resources. This includes subscriptions, resource groups, and services like Azure AI Foundry, App Service, and Storage Accounts. Proper access management helps ensure your environment is secure, organized, and scalable.
+This article shows you how to manage access to Azure resources. When you first set up your Azure environment, one of the most important tasks is managing who can access and control your deployed Azure resources. It includes access to subscriptions, resource groups, and services like Azure AI Foundry, App Service, and Storage Accounts. Proper access management helps ensure your environment is secure, organized, and scalable.
 
 Azure uses role-based access control (RBAC) to manage permissions. With Azure RBAC, you assign roles to users, groups, or applications at different scopes—such as a subscription, resource group, or individual resource. Azure RBAC works alongside Microsoft Entra ID, which handles identity management.
 
@@ -20,18 +20,18 @@ Start with Azure’s built-in roles—they’re designed for common scenarios an
 | Common roles | Permissions | Use Case |
 |--------------|-------------|----------|
 | Owner | Full access to manage everything, including access control | Assign to 2-3 subscriptions owners who need full control over all resources. |
-| Contributor | Can create and manage resources but cannot assign roles | Assign to users or teams responsible for managing resources without needing access control. |
-| Reader | Can view resources but cannot make changes | Assign to users who only need to monitor or review resources, such as auditors or analysts. |
+| Contributor | Can create and manage resources but can't assign roles | Assign to users or teams responsible for managing resources without needing access control. |
+| Reader | Can view resources but can't make changes | Assign to users who only need to monitor or review resources, such as auditors or analysts. |
 
 ## Limit the number of Owner roles on subscriptions
 
-The Owner role provides unrestricted access to all resources and access controls within a subscription. To reduce risk, limit this role to three or fewer users per subscription. By default, the account that creates a subscription is assigned the Owner role.
+The Owner role provides unrestricted access to all resources and access controls within a subscription. To reduce risk, limit this role to three or fewer users per subscription. By default, the account that creates a subscription is assigned as the Owner role.
 
 ## Use groups to manage resource access
 
 Instead of assigning roles to individual users, use Microsoft Entra ID security groups. This approach makes access easier to manage, audit, and scale. Always follow the principle of least privilege. Grant only the permissions necessary for each group to perform its tasks. Always assign roles to groups at the lowest scope necessary, resource group if possible, subscription only when needed.
 
-So you need to great groups for each subscription, aligned to the scope of access required. For small teams, broad groups like “Developers”, “Finance”, or “Ops” may be sufficient.
+So you need to great groups for each subscription, aligned to the scope of access required. For small teams, broad groups like "Subscription owners", "Developers", and "Finance" might be sufficient.
 
 | Function          | Description                                                      | Group name         | Azure RBAC role | Scope of permissions       |
 |-------------------|------------------------------------------------------------------|--------------------|-----------------|----------------------------|
