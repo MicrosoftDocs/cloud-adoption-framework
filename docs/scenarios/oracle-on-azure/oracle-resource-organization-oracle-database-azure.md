@@ -41,15 +41,16 @@ Oracle Autonomous Database@Azure instance names can contain only letters and num
 
 | Environment | Application type | Azure region | Example name |
 |-------------|------------------|--------------|--------------|
-| Production | Enterprise Resource Planning (ERP) applications | East US | adbeuserpprod |
-| Disaster recovery | Human Resources (HR) applications | Canada Central | adbcachrdr |
-| Quality assurance | Business intelligence | Australia East | adbaueabiqa |
+| Production | Enterprise Resource Planning (ERP) applications | East US | `adbeuserpprod` |
+| Disaster recovery | Human Resources (HR) applications | Canada Central | `adbcachrdr` |
+| Quality assurance | Business intelligence | Australia East | `adbaueabiqa` |
 
 The examples reflect the resource type, region, application type, and environment:
 
-- **adbeuserpprod:** An autonomous database (adb) in East US (eus) for ERP applications (erp) in production (prod).
-- **adbcachrdr:** An autonomous database (adb) in Canada Central (cac) for HR applications (hr) in disaster recovery (dr).
-- **adbaueabiqa:** An autonomous database (adb) in Australia East (auea) for business intelligence (bi) in quality assurance (qa). 
+- **adbeuserpprod:** An autonomous database (`adb`) in East US (`eus`) for ERP applications (`erp`) in production (`prod`).
+
+- **adbcachrdr:** An autonomous database (`adb`) in Canada Central (`cac`) for HR applications (`hr`) in disaster recovery (`dr`).
+- **adbaueabiqa:** An autonomous database (`adb`) in Australia East (`auea`) for business intelligence (`bi`) in quality assurance (`qa`). 
 
 For more information about character limits and allowed characters, see [Provision Oracle Database@Azure](/azure/oracle/oracle-db/provision-oracle-database) and [Use tags to organize your Azure resources](/azure/azure-resource-manager/management/tag-resources).
 
