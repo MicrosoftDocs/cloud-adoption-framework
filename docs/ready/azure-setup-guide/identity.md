@@ -17,13 +17,13 @@ Before you deploy any resources in Azure, it's important to set up identity and 
 Azure uses role-based access control (RBAC) to manage permissions. In Microsoft Entra ID, RBAC lets you assign roles to users or groups that define what actions they can take in the identity system. For example, some roles allow users to create accounts, manage groups, or configure security policies.
 Here’s how to set up identity roles securely:
 
-1. **Use built-in roles.** Microsoft provides predefined roles for common tasks. Each role has a specific set of permissions. For example, the User Administrator role can create and manage user accounts. Review the list of [Microsoft Entra ID built-in roles](/entra/identity/role-based-access-control/permissions-reference) and assign only what’s needed.
+1. **Use built-in roles.** Microsoft provides predefined roles for common tasks. Each role has a specific set of permissions. For example, the User Administrator role can create and manage user accounts. Review the list of [Microsoft Entra ID built-in roles](/entra/identity/role-based-access-control/permissions-reference) and assign only what you need.
 
 2. **Assign roles based on least privilege.** Only give users the permissions they need to do their job. If someone doesn’t need to manage identity settings, leave them as a regular user with no role assignments.
 
-3. **Use-just-in-time access.** If your organization has a license for Microsoft Entra Privileged Identity Management (PIM), you can allow users to activate admin roles only when needed, and for a limited time. This reduces the risk of having too many users with permanent high-level access.
+3. **Use-just-in-time access.** If your organization has a license for Microsoft Entra Privileged Identity Management (PIM), you can allow users to activate admin roles only when needed, and for a limited time. This set up reduces the risk of having too many users with permanent high-level access.
 
-4. **Limit Global Administrator role access.** The [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator) has full control over your Microsoft Entra ID tenant. Limit this role to two accounts used only for emergencies. These are called break-glass accounts. Do not use this role for everyday tasks. For more information, see [emergency-access accounts](/entra/identity/role-based-access-control/security-emergency-access).
+4. **Limit Global Administrator role access.** The [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator) has full control over your Microsoft Entra ID tenant. Limit this role to two accounts used only for emergencies. Don't use this role for everyday tasks. For more information, see [emergency-access accounts](/entra/identity/role-based-access-control/security-emergency-access).
 
 5. **Review role assignments regularly.** Check who has roles assigned and remove any that are no longer needed. You can use built-in reports and alerts to help monitor changes.
 
@@ -31,13 +31,13 @@ For more information, see [Best practices for Microsoft Entra roles](/entra/iden
 
 ## Create individual user accounts in Microsoft Entra ID
 
-Every person who needs access to Azure should have their own user account in Microsoft Entra ID. This helps ensure accountability and makes it easier to track changes and enforce security policies.
+Every person who needs access to Azure should have their own user account in Microsoft Entra ID. This set up helps ensure accountability and makes it easier to track changes and enforce security policies.
 
-1. **Add a custom domain.** When you create a Microsoft Entra ID tenant, it has a default domain (*yourtenant.onmicrosoft.com*). Add your own domain name (*contoso.com*). A custom domain allows sign-in names like *alex@contoso.com*. If you create accounts before adding your custom domain, you need to rename them later. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
+1. **Add a custom domain.** When you create a Microsoft Entra ID tenant, it has a default domain (*yourtenant.onmicrosoft.com*). Add your own domain name (*contoso.com*). A custom domain allows sign-in names like *alex@contoso.com*. If you create accounts before adding your custom domain, you need to update them if you do add a custom domain. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
 
 1. **Create a new user for every person who needs access to Azure.** Everyone who needs access to Azure should have their own user account. Don't allow people to share users. Multiple people sharing a user account makes it impossible to trace changes or enforce responsibility. Ff you have three team members, create three users. For step-by-step instructions, see [How to create, invite, and delete users in Microsoft Entra ID](/entra/fundamentals/how-to-create-delete-users).
 
-1. **Keep new user as regular users.** By default, new users should not have any administrative privileges. Assign roles only when needed, and always follow the least privilege principle.
+1. **Keep new user as regular users.** By default, new users shouldn't have any administrative privileges. Assign roles only when needed, and always follow the least privilege principle.
 
 ## Enable multifactor authentication
 
