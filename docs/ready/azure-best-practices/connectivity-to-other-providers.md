@@ -5,7 +5,9 @@ author: daltondhcp
 ms.author: jodahlbo
 ms.date: 05/26/2021
 ms.topic: conceptual
-ms.custom: think-tank
+ms.custom:
+  - think-tank
+  - sfi-image-nochange
 ---
 
 # Connectivity to other cloud providers

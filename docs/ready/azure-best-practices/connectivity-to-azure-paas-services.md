@@ -5,7 +5,9 @@ author: JefferyMitchell
 ms.author: jemitche
 ms.date: 06/22/2022
 ms.topic: conceptual
-ms.custom: think-tank
+ms.custom:
+  - think-tank
+  - sfi-image-nochange
 ---
 
 # Connectivity to Azure PaaS services

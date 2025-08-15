@@ -5,7 +5,10 @@ author: sblair01
 ms.author: lrivallain
 ms.date: 12/12/2024
 ms.topic: conceptual
-ms.custom: think-tank, e2e-azure-vmware
+ms.custom:
+  - think-tank
+  - e2e-azure-vmware
+  - sfi-image-nochange
 ---
 
 # Example architectures for Azure VMware Solution
