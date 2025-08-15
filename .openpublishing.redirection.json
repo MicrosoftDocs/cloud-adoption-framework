@@ -3827,7 +3827,7 @@
       },
       {
          "source_path": "docs/ready/azure-setup-guide/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/manage-access",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/identity",
          "redirect_document_id": false
       }
    ]   
