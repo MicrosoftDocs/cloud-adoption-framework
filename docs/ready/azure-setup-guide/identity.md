@@ -10,11 +10,9 @@ ms.topic: conceptual
 
 # Establish identity and access management in Azure
 
-This article shows you how to establish identity and access management foundation in a new Azure environment.
+This article shows you how to establish identity and access management foundation in a new Azure environment. Before you deploy any Azure resources, you need to secure the identity layer. This means defining who can administer your directory, manage users and groups, and configure authentication policies. These tasks form the backbone of your organization’s security because every Azure resource relies on Microsoft Entra ID for authentication.
 
 ## Assign identity management roles
-
-Before you deploy any Azure resources, you need to secure the identity layer. This means defining who can administer your directory, manage users and groups, and configure authentication policies. These tasks form the backbone of your organization’s security because every Azure resource relies on Microsoft Entra ID for authentication.
 
 You manage these responsibilities through Microsoft Entra ID role-based access control (RBAC). Entra ID RBAC assigns roles that determine what actions someone can perform in the identity directory. These actions include creating users, managing groups, or configuring MFA. Set up your roles early so that only trusted individuals have administrative control and helps prevent privilege sprawl.
 

@@ -9,35 +9,37 @@ ms.topic: conceptual
 
 # Manage access to resources in Azure
 
-This article shows you how to manage access to Azure resources. Managing Azure resource access means defining who can view, create, or modify resources such as subscriptions, resource groups, and resources like Azure AI Foundry, App Service, Storage Accounts. These permissions determine how your cloud environment is deployed, operated, and secured.
+This article shows you how to manage access to Azure resources. When you first set up your Azure environment, one of the most important tasks is managing who can access and control your resources. This includes subscriptions, resource groups, and services like Azure AI Foundry, App Service, and Storage Accounts. Proper access management helps ensure your environment is secure, organized, and scalable.
 
-You manage resource access through Azure role-based access control (Azure RBAC). Azure RBAC assigns roles at different scopes—subscription, resource group, or individual resource—to define what actions users or groups can perform. Azure RBAC is separate from Entra ID RBAC but integrates with Entra ID identities.
+Azure uses role-based access control (RBAC) to manage permissions. With Azure RBAC, you assign roles to users, groups, or applications at different scopes—such as a subscription, resource group, or individual resource. Azure RBAC works alongside Microsoft Entra ID, which handles identity management.
 
 ## Start with built-in roles
 
-Rather than creating custom roles, which are more difficult to secure, use built-in Azure RBAC roles. Microsoft provides roles for common scenarios. See [Azure RBAC built-in roles](/azure/role-based-access-control/role-assignments-portal) for details. For example:
+Start with Azure’s built-in roles—they’re designed for common scenarios and are easier to manage securely than custom roles. For details, see [Azure RBAC built-in roles](/azure/role-based-access-control/role-assignments-portal) for details. Here are three common roles:
 
-    | Common roles | Permissions | Use Case |
-    |--------------|-------------|----------|
-    | Owner | Full access to manage everything, including access control | Assign to 2-3 subscriptions owners who need full control over all resources. |
-    | Contributor | Can create and manage resources but cannot assign roles | Assign to users or teams responsible for managing resources without needing access control. |
-    | Reader | Can view resources but cannot make changes | Assign to users who only need to monitor or review resources, such as auditors or analysts. |
+| Common roles | Permissions | Use Case |
+|--------------|-------------|----------|
+| Owner | Full access to manage everything, including access control | Assign to 2-3 subscriptions owners who need full control over all resources. |
+| Contributor | Can create and manage resources but cannot assign roles | Assign to users or teams responsible for managing resources without needing access control. |
+| Reader | Can view resources but cannot make changes | Assign to users who only need to monitor or review resources, such as auditors or analysts. |
 
 ## Limit the number of Owner roles on subscriptions
 
-The Owner role at the subscription level allows full control over all resources and access assignments in that subscription. The Owner role grants full control at the subscription level. Keep it to three or fewer per subscription. By default, the account that creates a subscription becomes an Owner.
+The Owner role provides unrestricted access to all resources and access controls within a subscription. To reduce risk, limit this role to three or fewer users per subscription. By default, the account that creates a subscription is assigned the Owner role.
 
 ## Use groups to manage resource access
 
-Instead of assigning roles to individual users, create Microsoft Entra ID security groups. These groups must align with the scopes of access required. For very small teams, one group per function (“Developers”, “Finance”, “Ops”) might be enough. As your environment grows, refine groups based on scope of access:
+Instead of assigning roles to individual users, use Microsoft Entra ID security groups. This approach makes access easier to manage, audit, and scale. Always follow the principle of least privilege. Grant only the permissions necessary for each group to perform its tasks. Always assign roles to groups at the lowest scope necessary, resource group if possible, subscription only when needed.
 
-    | Use Case                          | Description                                                                 | Example Group Name       | Role Assignment | Scope               |
-    |-----------------------------------|-----------------------------------------------------------------------------|--------------------------|-----------------|---------------------|
-    | Engineering team manages all resources | Developers need to deploy and manage services across the entire subscription | Engineering-Contributors | Contributor     | Subscription level  |
-    | Specific team manages a project workload | A product or feature team needs to manage resources in a dedicated resource group | RG-DataTeam or RG-WebTeam | Contributor     | Resource group level |
-    | Finance or leadership needs visibility | Finance, operations, or leadership needs to monitor costs and usage without making changes | Finance-Readers          | Reader          | Subscription level  |
+So you need to great groups for each subscription, aligned to the scope of access required. For small teams, broad groups like “Developers”, “Finance”, or “Ops” may be sufficient.
 
-For detailed steps, see [Assign Azure roles](/azure/role-based-access-control/role-assignments-portal).
+| Function          | Description                                                      | Group name         | Azure RBAC role | Scope of permissions       |
+|-------------------|------------------------------------------------------------------|--------------------|-----------------|----------------------------|
+| Subscription owners | Administrators who manage access control, governance, and billing across the subscription | Subscription-Owners | Owner           | Subscription level         |
+| Developers         | Engineering team builds and deploys models and pipelines in Azure AI Foundry | AI-Foundry-Dev     | Contributor      | Resource group level       |
+| Finance            | Finance team reviews billing, usage, and cost reports across the subscription | Finance-Readers    | Reader           | Subscription level         |
+
+As your team and Azure environment grow, refine groups based on specific workloads, scopes, or functions. For detailed steps, see [Assign Azure roles](/azure/role-based-access-control/role-assignments-portal).
 
 ## Plan to review access regularly
 
@@ -45,3 +47,5 @@ Schedule periodic reviews (monthly or quarterly) of both Microsoft Entra ID role
 
 ## Next step
 
+> [!div class="nextstepaction"]
+> [Manage costs](./manage-costs.md)
