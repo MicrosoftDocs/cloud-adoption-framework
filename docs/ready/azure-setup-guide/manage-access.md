@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Manage access to resources in Azure
 
-This article shows you how to manage access to Azure resources. When you first set up your Azure environment, one of the most important tasks is managing who can access and control your deployed Azure resources. It includes access to subscriptions, resource groups, and services like Azure AI Foundry, App Service, and Storage Accounts. Proper access management helps ensure your environment is secure, organized, and scalable.
+This article shows you how to manage access to Azure resources. When you first set up your Azure environment, one of the most important tasks is managing who can access and control your deployed Azure resources.
 
-Azure uses role-based access control (RBAC) to manage permissions. With Azure RBAC, you assign roles to users, groups, or applications at different scopes—such as a subscription, resource group, or individual resource. Azure RBAC works alongside Microsoft Entra ID, which handles identity management.
+Azure uses role-based access control (RBAC) to manage these permissions. With Azure RBAC, you assign roles to users, groups, or applications at different scopes, such as a subscription, resource group, or individual resource. These roles give different permissions to the user. Azure RBAC works alongside Microsoft Entra ID, which handles identity management.
 
 ## Start with built-in roles
 
