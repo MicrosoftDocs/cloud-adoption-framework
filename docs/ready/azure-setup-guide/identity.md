@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Set up identity and access management in Azure
 
-Before you deploy any resources in Azure, it's important to set up identity and access management. This means deciding who can sign in, who can manage users and groups, and who can configure security settings like multifactor authentication. These decisions form the foundation of your cloud security, because every Azure service relies on Microsoft Entra ID to verify user identities.
+This article helps you set up identity and access management in Azure. Identity and access management means deciding who can sign in, who can manage users and groups, and who can configure security settings like multifactor authentication. These decisions form the foundation of your cloud security, because every Azure service relies on Microsoft Entra ID to verify user identities.
 
 ## Assign identity management roles
 
