@@ -76,7 +76,7 @@ items:
           href: ready/azure-setup-guide/identity.md
         - name: Organize resources
           href: ready/azure-setup-guide/organize-resources.md
-        - name: Create your initial subscriptions
+        - name: Create subscriptions
           href: ready/azure-best-practices/initial-subscriptions.md
         - name: Select regions
           href: ready/azure-setup-guide/regions.md
