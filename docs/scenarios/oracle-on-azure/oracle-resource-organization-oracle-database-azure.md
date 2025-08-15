@@ -98,7 +98,7 @@ Design a subscription model that assigns a dedicated Azure subscription to each 
 
 ### Verify onboarding permissions
 
-Azure identities need specific permissions to deploy and manage Oracle Database@Azure resources. You must validate that your identity can perform required actions before beginning the onboarding process. This verification prevents deployment failures and ensures smooth resource provisioning.
+Azure identities need specific permissions to deploy and manage Oracle Database@Azure resources. You must validate that your identity can perform required actions before you begin the onboarding process. This verification prevents deployment failures and ensures smooth resource provisioning.
 
 Confirm the following permissions in your Azure subscription:
 
