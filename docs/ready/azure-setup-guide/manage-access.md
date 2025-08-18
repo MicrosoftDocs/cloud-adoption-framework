@@ -38,7 +38,7 @@ Instead of assigning roles to individual users, assign them to Microsoft Entra I
 
 2. **Assign roles to groups at the lowest necessary scope.** Apply the principle of least privilege when assigning roles to groups. Avoid assigning roles at higher scopes unless required. This approach reduces risk and simplifies audits.
 
-3. **Refine group structure as your environment evolves.** Adjust group definitions to reflect changes in workloads, teams, or responsibilities. This ensures continued clarity and control over access. For example:
+3. **Refine group structure as your environment evolves.** Adjust group definitions to reflect changes in workloads, teams, or responsibilities. This refinement ensures continued clarity and control over access. For example:
 
     | Business role          | Business need                                                      | Group name         | Azure RBAC role | Scope of permissions       |
     |-------------------|------------------------------------------------------------------|--------------------|-----------------|----------------------------|
