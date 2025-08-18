@@ -19,7 +19,7 @@ The principle of least privilege ensures users receive only the permissions requ
 
 2. **Assign roles with minimal permissions.** Each role includes a set of permissions defined in its role definition. Select roles that grant only the permissions necessary for the user’s responsibilities. Avoid over-provisioning access.
 
-3. **Assign roles at the narrowest possible scope.** Role [scope](/azure/role-based-access-control/scope-overview) determines where permissions apply. Assign roles at the resource or resource group level when possible. Avoid assigning roles at broader scopes like subscriptions or management groups unless absolutely necessary.
+3. **Assign roles at the narrowest possible scope.** Role [scope](/azure/role-based-access-control/scope-overview) determines where permissions apply. Assign roles at the scope needed to perform essential tasks.
 
     | Role scope           | Description                                                                 |
     |------------------|-----------------------------------------------------------------------------|
@@ -32,9 +32,9 @@ For detailed steps, see [Apply Azure RBAC roles](/azure/role-based-access-contro
 
 ## Use groups to manage resource access
 
-Instead of assigning roles to individual users, assign them to Microsoft Entra ID security groups. This structure improves scalability, auditability, and governance by centralizing role assignments.
+Instead of assigning roles to individual users, assign them to Microsoft Entra ID groups. This structure improves scalability, auditability, and governance by centralizing role assignments.
 
-1. **Create security groups based on access scope.** Define groups that reflect the scope of access—resource, resource group, or subscription. For example, create separate groups for development, testing, and production environments (AI-Developer-Dev, AI-Developer-Test, AI-Developer-Prod). This structure enforces least privilege and environment isolation. For steps to create security group, see [Manage Microsoft Entra groups](/entra/fundamentals/how-to-manage-groups).
+1. **Create security groups based on access scope.** Define groups that reflect the scope of access—resource, resource group, or subscription. For example, create separate groups for development, testing, and production environments (AI-Developer-Dev, AI-Developer-Test, AI-Developer-Prod). This structure enforces least privilege and environment isolation. For steps to create security group, see [Manage Microsoft Entra ID groups](/entra/fundamentals/how-to-manage-groups).
 
 2. **Assign roles to groups at the lowest necessary scope.** Apply the principle of least privilege when assigning roles to groups. Avoid assigning roles at higher scopes unless required. This approach reduces risk and simplifies audits.
 
@@ -46,7 +46,7 @@ Instead of assigning roles to individual users, assign them to Microsoft Entra I
     | AI developers         | Build and deploy models in Azure AI Foundry                          | AI-Foundry-Dev     | Contributor      | Resource group level       |
     | Finance            | Review billing, usage, and cost reports                                 | Finance-Readers    | Reader           | Subscription level         |
 
-4. **Limit Owner role assignments.** The Owner role grants unrestricted access to all resources and access controls. Limit this role to three or fewer users per subscription. Review and adjust the default Owner assignment for subscription creators as needed.
+4. **Limit Owner role assignments.** The Owner role grants full access to manage all resources and assign roles in Azure RBAC. Limit this role to three or fewer users per subscription. Review and adjust the default Owner assignment for subscription creators as needed.
 
 ## Review access regularly
 
