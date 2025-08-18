@@ -22,7 +22,7 @@ Every person who needs access to Azure should have their own user account in Mic
 
 ## Assign identity management roles
 
-Azure role-based access control (RBAC) provides fine-grained access management to Azure resources. Microsoft Entra ID also uses role-based access control (RBAC) to assign roles to users, role-assinable groups, or service principals. These roles define what actions they can perform within the identity system. It includes creating accounts, managing groups, and configuring security policies. Here’s how to set up identity roles securely:
+Microsoft Entra ID uses role-based access control (RBAC) to assign roles to users, role-assinable groups, or service principals. These roles define what actions they can perform within the identity system. It includes creating accounts, managing groups, and configuring security policies. Here’s how to set up identity roles securely:
 
 1. **Use built-in roles.** Microsoft provides predefined roles for common tasks. Each role has a specific set of permissions. For example, the User Administrator role can create and manage user accounts. Review the list of [Microsoft Entra ID built-in roles](/entra/identity/role-based-access-control/permissions-reference) and assign only what you need.
 
