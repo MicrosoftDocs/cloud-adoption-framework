@@ -20,7 +20,7 @@ Azure uses role-based access control (RBAC) to manage permissions. In Microsoft 
 
 2. **Assign roles based on least privilege.** Only give users the permissions they need to do their job. If someone doesn’t need to manage identity settings, leave them as a regular user with no role assignments.
 
-3. **Use-just-in-time access.** If your organization has a license for Microsoft Entra Privileged Identity Management (PIM), you can allow users to activate admin roles only when needed, and for a limited time. This set up reduces the risk of having too many users with permanent high-level access.
+3. **Use-just-in-time access.** If your organization has a license for Microsoft Entra Privileged Identity Management (PIM), you can allow users to activate elevated permissions only when needed, and for a limited time. This set up reduces the risk of having too many users with permanent high-level access.
 
 4. **Limit Global Administrator role access.** The [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator) has full control over your Microsoft Entra ID tenant. Limit this role to two accounts used only for emergencies. Don't use this role for everyday tasks. For more information, see [emergency-access accounts](/entra/identity/role-based-access-control/security-emergency-access).
 
