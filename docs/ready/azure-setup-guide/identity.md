@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 A secure identity and access management (IAM) foundation ensures that only authorized users can access Azure resources. This article outlines how to establish a secure and manageable IAM environment in Azure.
 
-## Create individual user accounts in Microsoft Entra ID
+## Create individual user accounts
 
 Every person who needs access to Azure should have their own user account in Microsoft Entra ID. This set up helps ensure accountability and makes it easier to track changes and enforce security policies.
 
