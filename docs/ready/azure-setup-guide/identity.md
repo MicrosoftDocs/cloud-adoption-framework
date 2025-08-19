@@ -41,7 +41,9 @@ For more information, see [Best practices for Microsoft Entra roles](/entra/iden
 
 ## Configure multifactor authentication
 
-New Microsoft Entra tenants have [security defaults](/entra/fundamentals/security-defaults) turned on automatically. These settings require all users to register for MFA, require administrators to perform MFA every sign-in, and require end users to do MFA when necessary
+Multifactor authentication (MFA) helps protect your organization from compromised credentials and unauthorized access.
+
+1. **Understand security defaults.** New Microsoft Entra tenants have [security defaults](/entra/fundamentals/security-defaults) turned on automatically. These settings require all users to register for MFA, require administrators to perform MFA every sign-in, and require end users to do MFA when necessary
 
 1. **Use Conditional Access for advanced scenarios.** If your organization needs more flexibility, you can create Conditional Access policies to enforce MFA only in specific situations, such as when users sign in from unfamiliar locations. Also, you can't use security defaults and Conditional Access at the same time. Security defaults must be disabled to use Conditional Access. This feature requires a premium license. See [Secure user sign-in with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa).
 
