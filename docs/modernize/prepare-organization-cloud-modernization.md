@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 Cloud modernization is the practice of improving existing cloud-based workloads to better meet business needs. It aligns workloads with cloud best practices, without adding new features. This framework provides an end-to-end guide for organizations to plan and execute modernization across all their workload teams.
 
-:::image type="content" source="./images/caf-modernize.svg" alt-text="Diagram showing the four-step process for modernize workloads in Azure. Four sequential steps are shown left to right, each with a circular icon and label: Step 1 Prepare for modernization, Step 2 Plan modernization, Step 3 Execute modernization, and Step 4 Optimize workloads. Arrows connect each step in order, illustrating a linear progression through the modernization process." lightbox="./images/caf-modernize.svg" border="false":::
+:::image type="content" source="./images/caf-modernize.svg" alt-text="Diagram showing a four-step process for modernizing workloads: 1 Prepare for modernization, 2 Plan modernization, 3 Execute modernization, and 4 Optimize workloads." lightbox="./images/caf-modernize.svg" border="false":::
 
 ## Define modernization for your organization
 
