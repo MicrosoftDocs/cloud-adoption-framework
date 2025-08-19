@@ -45,7 +45,6 @@ New Microsoft Entra tenants have [security defaults](/entra/fundamentals/securit
 
 1. **Use Conditional Access for advanced scenarios.** If your organization needs more flexibility, you can create Conditional Access policies to enforce MFA only in specific situations, such as when users sign in from unfamiliar locations. Also, you can't use security defaults and Conditional Access at the same time. Security defaults must be disabled to use Conditional Access. This feature requires a premium license. See [Secure user sign-in with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa).
 
-1. **Verify that MFA is working.** Confirm that each user can sign in successfully with MFA. See [How to verify that users are set up for mandatory MFA](/entra/identity/authentication/how-to-mandatory-multifactor-authentication).
 
 ## Next step
 
