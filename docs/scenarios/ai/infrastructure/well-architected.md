@@ -16,6 +16,8 @@ Reliability involves minimizing downtime and ensuring consistent performance for
 
 - *Distribute VMs across Availability Zones.* Minimize downtime from hardware failures or maintenance events by using [Availability Zones](/azure/reliability/availability-zones-overview). They distribute VMs across fault and update domains to ensure continued application operation.
 
+- *Publish and deploy AI applications using Azure VM Applications.* Use [Azure VM Applications](/azure/virtual-machines/vm-applications.md) to consistently and reliably deploy multiple applications on VMs & VM scale sets. Publish different app components (or microservices) as different VM Applications to individually handle deployment and failures. Publish changes as new versions to facilitate rollback in case of failure. Enable VM Application replication within & across regions to handle load & region failures. Enable automatic upgrade to rollout new version gradually across all VMs following Safe Deployment Practices (SDP). Use Azure Policy to enforce, inject & govern VM applications ensuring a consistent state across VMs.
+
 - *Set up health monitoring with Azure Monitor.* Track CPU, memory, and network performance on your VMs using Azure Monitor and configure alerts to notify you of performance degradation or failures in the infrastructure supporting your models. For more information, see [Azure Monitor VM Insights](/azure/azure-monitor/vm/vminsights-health-overview).
 
 - *Automate patching and updates with rolling instances.* Use Azure Update Management to apply patches in a rolling manner, allowing one instance to be updated while others continue to serve traffic, preventing downtime during maintenance.
@@ -23,14 +25,14 @@ Reliability involves minimizing downtime and ensuring consistent performance for
 - *Design for graceful degradation during partial failures.* Ensure core functionality remains available by serving less complex AI models or limiting specific features when some VMs become unavailable, allowing users access to essential services even during outages.
 
 - *Implement regular backups for key assets.* Regularly back up model data, training datasets, and configurations to enable quick restoration if there was a failure, safeguarding valuable progress and data.
-
+    
 ## Security
 
 Security covers protective measures to safeguard AI models, data, and infrastructure against unauthorized access and threats. Implement updates, monitor model integrity, and control access to prevent vulnerabilities that could compromise sensitive information. These steps are essential to maintain data privacy and trustworthiness of AI solutions in production environments.
 
 - *Schedule updates for Azure resources.* Use maintenance configurations to set specific update schedules for VMs and extensions, reducing vulnerability windows.
 
-- *Patch virtual machines and container images regularly.* Enable [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for VMs and scale sets to maintain security against new threats. For more information, see [Guest updates and host maintenance overview](/azure/virtual-machines/updates-maintenance-overview).
+- *Patch virtual machines and container images regularly.* Enable [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) and [automatic extension upgrade](/azure/virtual-machines/automatic-extension-upgrade) for VMs and scale sets to maintain security against new threats. For more information, see [Guest updates and host maintenance overview](/azure/virtual-machines/updates-maintenance-overview).
 
 - *Monitor for model drift and ensure integrity.* Ensure model integrity by implementing security mechanisms such as digital signatures or hash verifications for model files to prevent unauthorized modifications. Use Azure Monitor to track key performance metrics and identify model drift, which could indicate potential security vulnerabilities or data shifts. You can define custom metrics (accuracy, F1-score, and data distribution on your models) in your code by using the [Azure Monitor Metrics SDK](/azure/azure-monitor/essentials/metrics-custom-overview). Azure Monitor Metrics SDK allows you to send your model’s performance statistics and data drift measurements to Azure Monitor. Monitoring for performance changes over time can help detect when a model's behavior deviates, potentially signaling an attack or a need for retraining. This proactive approach helps safeguard model integrity and maintain security compliance.
 
@@ -50,6 +52,8 @@ Security covers protective measures to safeguard AI models, data, and infrastruc
 
 - *Conduct regular vulnerability scans.* Use Microsoft Defender Vulnerability Scanning to conduct vulnerability assessments of your VMs and related resources. Regularly check for any security issues or misconfigurations in your VM setup that could expose your models. [Microsoft Defender Vulnerability Scanning](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management).
 
+- *Deploy AI app and its dependencies using Azure VM Applications.* Deploy AI apps & app dependencies as [Azure VM Applications](/azure/virtual-machines/vm-applications.md) to ensure they are retrieved from a trusted source within the Azure boundary, eliminating the need for public internet access and preserving the VM's private network posture.
+  
 ## Cost optimization
 
 Cost optimization involves aligning resource usage with workload requirements to avoid unnecessary expenses. Right-sizing VMs, committing to reserved instances, and setting up autoscaling help manage costs without compromising performance. Controlling costs on Azure infrastructure is vital for long-term sustainability and scalability of AI deployments.
