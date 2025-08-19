@@ -60,7 +60,7 @@ items:
           - name: Capacity planning for Oracle Exadata Database@Azure
             href: oracle-capacity-planning-oracle-database-azure-exadata.md
           - name: Capacity planning for Oracle Autonomous Database@Azure
-            href: oracle-capacity-planning-oracle-database-azure-adb.md
+            href: oracle-capacity-planning-oracle-database-azure-autonomous-database.md
     - name: Migration planning
       href: oracle-migration-planning.md
   - name: Reference
