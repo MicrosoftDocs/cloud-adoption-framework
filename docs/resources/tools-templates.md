@@ -37,7 +37,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 | [Enterprise-scale landing zone](https://github.com/Azure/Enterprise-Scale/) | Deploy your open-source code base for the enterprise-scale implementation of the Cloud Adoption Framework Azure landing zone. |
 | [Data management zone](https://github.com/Azure/data-management-zone) | Deploy a single data management zone to your subscription. Deploy the data management zone before the data landing zone.|
 | [Data landing zone](https://github.com/Azure/data-landing-zone) | Expand your landing zone with data. Data landing zone shared services include data storage, ingestion services, and management services. |
-| [Data management and landing zone Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/?name=dataanalytics) | Use this template to build your data management and landing zone. |
 
 ## Govern
 

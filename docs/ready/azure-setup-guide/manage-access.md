@@ -1,76 +1,62 @@
 ---
-title: Manage access to your Azure environment with Azure role-based access control
-description: Learn how to set up access control for your Azure environment with Azure role-based access control.
-author: LijuKodicheraJayadevan
+title: Manage access to resources in Azure
+description: Manage access to resources in Azure
+author: stephen-sumner
 ms.author: pnp
-ms.date: 02/08/2022
+ms.date: 08/15/2025
 ms.topic: conceptual
-ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
-# Manage access to your Azure environment with Azure role-based access control
+# Manage access to resources in Azure
 
-Managing who can access your Azure resources and subscriptions is an important part of your Azure governance strategy. Assigning group-based access rights and privileges is also a good practice. Dealing with groups instead of individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Azure role-based access control (Azure RBAC) is the primary method of managing access in Azure.
+Azure role-based access control (RBAC) defines who can access Azure resources, what actions they can perform, and where they can perform them. This structure improves governance, security, and operational clarity across your cloud environment.
 
-Azure RBAC lets you manage access of your resources in Azure. It helps you manage who has access to Azure resources, what they can do with those resources, and what scopes they can access.
+## Apply least privilege to all access assignments
 
-When you plan your access control strategy, grant users the least privilege required to get their work done. The following image shows a suggested pattern for assigning Azure RBAC.
+The principle of least privilege ensures users receive only the permissions required to perform their tasks. This approach reduces risk and improves auditability.
 
-![Diagram that shows Azure roles.](./media/manage-access/role-examples.png)
+1. **Start with built-in roles.** Azure RBAC has [built-in roles](/azure/role-based-access-control/built-in-roles) with permissions that align to common scenarios. Start with the built-in roles and only create custom roles when clearly needed. Start with [job-function roles](/azure/role-based-access-control/role-assignments-steps#job-function-roles) and only use [privileged administrator roles](/azure/role-based-access-control/role-assignments-steps#privileged-administrator-roles) (Owner, Contributor, Reader, Role Based Access Control Administrator, and User Access Administrator) when job-function roles aren't sufficient.
 
-When you plan your access control methodology, try to work with people in your organization. We recommend that you work with people in security and compliance, IT administration, and enterprise architecture.
+2. **Assign roles with minimal permissions.** Each role includes a set of permissions defined in its role definition. Select roles that grant only the permissions necessary for the user’s responsibilities. Avoid over-provisioning access.
 
-::: zone target="chromeless"
+3. **Assign roles at the narrowest possible scope.** Role [scope](/azure/role-based-access-control/scope-overview) determines where permissions apply. Assign roles at the scope needed to perform essential tasks.
 
-## Actions
+    | Role scope           | Description                                                                 |
+    |------------------|-----------------------------------------------------------------------------|
+    | Management group | Role permissions apply to all subscriptions and resources within the management group. |
+    | Subscription     | Role permissions apply to all resource groups and resources within the subscription. |
+    | Resource group   | Role permissions apply to all resources within that resource group.        |
+    | Resource         | Role permissions apply only to the specific resource (for example, an Azure AI Foundry instance). |
 
-**Grant resource group access:**
+For detailed steps, see [Apply Azure RBAC roles](/azure/role-based-access-control/role-assignments-portal).
 
-To grant a user access to a resource group:
+## Use groups to manage resource access
 
-1. Go to **Resource groups**.
-1. Select a resource group.
-1. Select **Access control (IAM)**.
-1. Select **+ Add** > **Add role assignment**.
-1. Select a role, and then assign access to a user, group, or service principal.
+Instead of assigning roles to individual users, assign them to Microsoft Entra ID groups. This structure improves scalability, auditability, and governance by centralizing role assignments.
 
-**Grant subscription access:**
+1. **Create security groups based on access scope.** Define security groups that reflect the scope of access, such as at the resource, resource group, or subscription level. For example, create separate groups for development, testing, and production environments, such as AI-Developer-Dev, AI-Developer-Test, AI-Developer-Prod. This structure enforces least privilege and environment isolation. For steps to create a security group, see [Manage Microsoft Entra ID groups](/entra/fundamentals/how-to-manage-groups).
 
-To grant a user access to a subscription:
+2. **Assign roles to groups at the lowest necessary scope.** Apply the principle of least privilege when assigning roles to groups. Avoid assigning roles at higher scopes unless required. This approach reduces risk and simplifies audits.
 
-1. Go to **Subscriptions**.
-1. Select a subscription.
-1. Select **Access control (IAM)**.
-1. Select **+ Add** > **Add role assignment**.
-1. Select a role, and then assign access to a user, group, or service principal.
+3. **Refine group structure as your environment evolves.** Adjust group definitions to reflect changes in workloads, teams, or responsibilities. This refinement ensures continued clarity and control over access. For example:
 
-::: zone-end
+    | Business role          | Business need                                                      | Group name         | Azure RBAC role | Scope of permissions       |
+    |-------------------|------------------------------------------------------------------|--------------------|-----------------|----------------------------|
+    | Subscription owners | Manage access control, governance, and billing across the subscription | Subscription-Owners | Owner           | Subscription level         |
+    | AI developers         | Build and deploy models in Azure AI Foundry                          | AI-Foundry-Dev     | Contributor      | Resource group level       |
+    | Finance            | Review billing, usage, and cost reports                                 | Finance-Readers    | Reader           | Subscription level         |
 
-::: zone target="docs"
+4. **Limit Owner role assignments.** The Owner role grants full access to manage all resources and assign roles in Azure RBAC. Limit this role to three or fewer users per subscription. Review and adjust the default Owner assignment for subscription creators as needed.
 
-## Grant resource group access
+## Review access regularly
 
-To grant a user access to a resource group:
+Access reviews ensure that permissions remain appropriate as users change roles or projects end.
 
-1. Go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups).
-1. Select a resource group.
-1. Select **Access control (IAM)**.
-1. Select **+ Add** > **Add role assignment**.
-1. Select a role, and then assign access to a user, group, or service principal.
+1. **Schedule monthly or quarterly access reviews.** Review both Microsoft Entra ID roles and Azure RBAC assignments. Remove unnecessary roles promptly to maintain security.
 
-## Grant subscription access
+2. **Use automated tools to streamline reviews.** Use tools like [Access Review](/entra/id-governance/access-reviews-overview) (Microsoft Entra ID Premium P2) or export role assignments for manual checks. Treat access governance as ongoing maintenance.
 
-To grant a user access to a subscription:
+## Next step
 
-1. Go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
-1. Select a subscription.
-1. Select **Access control (IAM)**.
-1. Select **+ Add** > **Add role assignment**.
-1. Select a role, and then assign access to a user, group, or service principal.
-
-## Learn more
-
-To learn more, see [What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
-
-
-::: zone-end
+> [!div class="nextstepaction"]
+> [Manage costs](./manage-costs.md)
