@@ -15,7 +15,7 @@ Azure role-based access control (RBAC) defines who can access Azure resources, w
 
 The principle of least privilege ensures users receive only the permissions required to perform their tasks. This approach reduces risk and improves auditability.
 
-1. **Start with built-in roles.** Azure RBAC has [built-in roles](/azure/role-based-access-control/built-in-roles) with permissions that align to common scenarios. Start with the built-in roles and only create custom roles when clearly needed. Start with [job-function roles](/azure/role-based-access-control/role-assignments-steps#job-function-roles) and only use [privileged administrator roles](/azure/role-based-access-control/role-assignments-steps#privileged-administrator-roles) (Owner, Contributor, Reader, Role Based Access Control Administrator, and User Access Administrator) when job-functions roles aren't sufficient.
+1. **Start with built-in roles.** Azure RBAC has [built-in roles](/azure/role-based-access-control/built-in-roles) with permissions that align to common scenarios. Start with the built-in roles and only create custom roles when clearly needed. Start with [job-function roles](/azure/role-based-access-control/role-assignments-steps#job-function-roles) and only use [privileged administrator roles](/azure/role-based-access-control/role-assignments-steps#privileged-administrator-roles) (Owner, Contributor, Reader, Role Based Access Control Administrator, and User Access Administrator) when job-function roles aren't sufficient.
 
 2. **Assign roles with minimal permissions.** Each role includes a set of permissions defined in its role definition. Select roles that grant only the permissions necessary for the user’s responsibilities. Avoid over-provisioning access.
 
@@ -34,7 +34,7 @@ For detailed steps, see [Apply Azure RBAC roles](/azure/role-based-access-contro
 
 Instead of assigning roles to individual users, assign them to Microsoft Entra ID groups. This structure improves scalability, auditability, and governance by centralizing role assignments.
 
-1. **Create security groups based on access scope.** Define groups that reflect the scope of access—resource, resource group, or subscription. For example, create separate groups for development, testing, and production environments (AI-Developer-Dev, AI-Developer-Test, AI-Developer-Prod). This structure enforces least privilege and environment isolation. For steps to create security group, see [Manage Microsoft Entra ID groups](/entra/fundamentals/how-to-manage-groups).
+1. **Create security groups based on access scope.** Define security groups that reflect the scope of access, such as at the resource, resource group, or subscription level. For example, create separate groups for development, testing, and production environments, such as AI-Developer-Dev, AI-Developer-Test, AI-Developer-Prod. This structure enforces least privilege and environment isolation. For steps to create a security group, see [Manage Microsoft Entra ID groups](/entra/fundamentals/how-to-manage-groups).
 
 2. **Assign roles to groups at the lowest necessary scope.** Apply the principle of least privilege when assigning roles to groups. Avoid assigning roles at higher scopes unless required. This approach reduces risk and simplifies audits.
 
