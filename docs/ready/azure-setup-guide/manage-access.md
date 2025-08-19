@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # Manage access to resources in Azure
 
-Role-based access control (RBAC) defines who can access Azure resources, what actions they can perform, and where they can perform them. This structure improves governance, security, and operational clarity across your cloud environment.
+Azure role-based access control (RBAC) defines who can access Azure resources, what actions they can perform, and where they can perform them. This structure improves governance, security, and operational clarity across your cloud environment.
 
 ## Apply least privilege to all access assignments
 
 The principle of least privilege ensures users receive only the permissions required to perform their tasks. This approach reduces risk and improves auditability.
 
-1. **Start with built-in roles.** Azure RBAC has [built-in roles](/azure/role-based-access-control/built-in-roles) with permissions that align to common scenarios. Start with the built-in roles and only create custom roles when clearly needed. Start with the following Azure RBAC roles: Owner, Contributor, Reader, Role Based Access Control Administrator, and User Access Administrator. For more information, see [Overview of common Azure roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-roles).
+1. **Start with built-in roles.** Azure RBAC has [built-in roles](/azure/role-based-access-control/built-in-roles) with permissions that align to common scenarios. Start with the built-in roles and only create custom roles when clearly needed. Start with [job-function roles](/azure/role-based-access-control/role-assignments-steps#job-function-roles) and only use [privileged administrator roles](/azure/role-based-access-control/role-assignments-steps#privileged-administrator-roles) (Owner, Contributor, Reader, Role Based Access Control Administrator, and User Access Administrator) when job-functions roles aren't sufficient.
 
 2. **Assign roles with minimal permissions.** Each role includes a set of permissions defined in its role definition. Select roles that grant only the permissions necessary for the user’s responsibilities. Avoid over-provisioning access.
 
