@@ -12,7 +12,7 @@ items:
   - name: Foundational methodologies
     expanded: true
     items:
-    - name: 1. Define strategy
+    - name: Define strategy
       items:
       - name: Overview
         href: strategy/index.md
@@ -37,7 +37,7 @@ items:
           - name: Sustainability
             href: strategy/inform/sustainability.md
 
-    - name: 2. Plan adoption
+    - name: Plan adoption
       items:
       - name: 1. Prepare organization
         href: plan/prepare-organization-for-cloud.md
@@ -66,17 +66,17 @@ items:
           href: plan/migration-adoption-plan.md
 
 
-    - name: 3. Ready environment
+    - name: Ready environment
       items:
       - name: Overview
         href: ready/index.md
       - name: Azure setup guide
         items:
-        - name: Setup guide overview
-          href: ready/azure-setup-guide/index.md
+        - name: Set up identity
+          href: ready/azure-setup-guide/identity.md
         - name: Organize resources
           href: ready/azure-setup-guide/organize-resources.md
-        - name: Create your initial subscriptions
+        - name: Create subscriptions
           href: ready/azure-best-practices/initial-subscriptions.md
         - name: Select regions
           href: ready/azure-setup-guide/regions.md
@@ -399,20 +399,21 @@ items:
 
         - name: Azure landing zones FAQ
           href: ready/enterprise-scale/faq.md
-      - name: Define your naming convention
-        href: ready/azure-best-practices/resource-naming.md
-      - name: Abbreviations for Azure resources
-        href: ready/azure-best-practices/resource-abbreviations.md
-      - name: Define your tagging strategy
-        href: ready/azure-best-practices/resource-tagging.md
+
       - name: Resources
         items:
+        - name: Define your naming convention
+          href: ready/azure-best-practices/resource-naming.md
+        - name: Abbreviations for Azure resources
+          href: ready/azure-best-practices/resource-abbreviations.md
+        - name: Define your tagging strategy
+          href: ready/azure-best-practices/resource-tagging.md
         - name: Skills relevant to ready and landing zones
           href: ready/suggested-skills.md
         - name: Ready antipatterns
           href: antipatterns/ready-antipatterns.md
 
-    - name: 4. Adopt solutions
+    - name: Adopt solutions
       expanded: true
       items:
       - name: Migrate workloads
