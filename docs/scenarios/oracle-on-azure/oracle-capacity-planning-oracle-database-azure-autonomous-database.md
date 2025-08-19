@@ -28,7 +28,7 @@ Compute resources in Oracle Autonomous Database@Azure are measured in elastic co
 
 Storage capacity affects both performance and cost. Use the following steps to plan and manage storage effectively.
 
-1. **Select appropriate workload types.** Choose the correct workload configuration based on your use case:
+1. **Select the appropriate workload types.** Choose the correct workload configuration based on your use case:
 
    - Data warehouse: 1 TB to 384-TB storage capacity
   
