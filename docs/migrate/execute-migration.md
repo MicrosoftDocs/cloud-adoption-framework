@@ -112,6 +112,17 @@ Enhanced support coverage ensures rapid response to post-migration issues during
 | Multiple | [Java migration guides](/azure/developer/java/migration/migration-overview) | Guides for migrating Java apps to Azure |
 | On-premises | [VMWare](/azure/migrate/tutorial-discover-vmware) | Guides for migrating VMWare to Azure |
 | On-premises | [Hyper-V](/azure/migrate/tutorial-discover-hyper-v) | Guides for migrating Hyper-V to Azure |
+| Azure Analysis Services | [Migrate Azure Analysis Services to Power BI](/fabric/enterprise/powerbi/aas-pbi-migration-overview) | Migrate Microsoft Azure Analysis Services to Power BI using the Microsoft Power BI Premium migration feature in Power BI. |
+| Multiple | [Microsoft Fabric adoption roadmap](/power-bi/guidance/fabric-adoption-roadmap) | Learn the strategic and tactical considerations and action items that lead to the successful adoption of Microsoft Fabric, and help build a data culture in your organization. |
+| Multiple | [Migrate to Power BI](/power-bi/guidance/powerbi-migration-overview) | Learn how to plan and conduct a migration from a third-party BI tool to Power BI.|
+| Azure Synapse Analytics | [Migrate from Azure Synapse Data Explorer to Fabric Eventhouse (preview)](/fabric/real-time-intelligence/migrate-synapse-data-explorer) | Step-by-step guidance for migrating your Azure Synapse Data Explorer (Kusto) databases to Fabric Eventhouse. |
+| Azure Synapse Analytics | [Migration Assistant for Fabric Data Warehouse (preview)](/fabric/data-warehouse/migration-assistant) | Learn how to use the Migration Assistant to move data and objects from Azure Synapse Analytics SQL Data Warehouse to Fabric Data Warehouse, including supported scenarios and limitations. |
+| Azure Synapse Analytics | [Migration​ methods: ​Azure Synapse Analytics dedicated SQL pools to Fabric Data Warehouse](/fabric/data-warehouse/migration-synapse-dedicated-sql-pool-methods) | Learn the methods of migration of data warehousing in Azure Synapse dedicated SQL pools to Fabric.|
+| Azure Synapse Analytics | [Migration​ planning: ​Azure Synapse Analytics dedicated SQL pools to Fabric Data Warehouse](/fabric/data-warehouse/migration-synapse-dedicated-sql-pool-warehouse) | Plan for migration of data warehousing in Azure Synapse dedicated SQL pools to Fabric.|
+| Azure Synapse Analytics | [Migrating from Azure Synapse Spark to Fabric](/fabric/data-engineering/migrate-synapse-overview) | Learn about migrating from Azure Synapse Spark to Fabric, including key considerations and different migration scenarios. |
+| Azure Synapse Analytics | [Migrate data and pipelines from Azure Synapse Analytics to Fabric](/fabric/data-engineering/migrate-synapse-data-pipelines) | Learn about your different options for migrating data and pipelines from Azure Synapse Analytics to Fabric. |
+| Azure Synapse Analytics | [Migrate notebooks from Azure Synapse Analytics to Fabric](/fabric/data-engineering/migrate-synapse-notebooks) | Learn about your different options for migrating your Azure Synapse Spark notebooks to Fabric. |
+| Spark | [Migrate existing workspace libraries and Spark properties to a Microsoft Fabric environment](/fabric/data-engineering/environment-workspace-migration) | Learn how to migrate your existing workspace libraries and Apache Spark properties to a default [Fabric environment](/fabric/data-engineering/create-and-use-environment).|
 
 ## Next steps
 
