@@ -78,15 +78,15 @@ For more information, see [Storage configuration](https://docs.oracle.com/iaas/e
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Planning | [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip) | Provides guidance for subnet CIDR allocation and IP address planning |
-| Multiple-subscription | [Link Oracle Database@Azure to multiple Azure subscriptions](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription) | Explains how to deploy VM clusters across different Azure subscriptions |
-| Service limits | [Delegated subnet limits](/azure/oracle/oracle-db/oracle-database-delegated-subnet-limits) | Details default limits and how to request increases for delegated subnets |
-| Infrastructure | [Provisioning Exadata Infrastructure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-infrastructure.html) | Oracle documentation for infrastructure deployment |
-| Scaling | [Oracle Database@Azure Service scaling options](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3) | Details maximum scaling limits and capabilities |
-| VM cluster | [Provisioning an Exadata VM cluster for Azure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-vm-cluster-azure.html) | Step-by-step VM cluster deployment guide |
-| Storage configuration | [Exadata Cloud Infrastructure - Storage configuration](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html) | Comprehensive storage configuration documentation |
-| Storage impact | [Impact of configuration settings on storage](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html#ECSCM-GUID-925DAEBF-4693-4AC6-80E1-15D7121F80A9) | Details how configuration choices affect storage allocation |
-| Disaster recovery | [BCDR for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md) | Architecture options for resilient Oracle deployments |
+| Planning | [Plan IP address space for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip) | Guide subnet CIDR allocation and IP address planning |
+| Multiple-subscription | [Link Oracle Database@Azure to multiple Azure subscriptions](/azure/oracle/oracle-db/link-oracle-database-multiple-subscription) | Deploy VM clusters across different Azure subscriptions |
+| Service limits | [Delegated subnet limits](/azure/oracle/oracle-db/oracle-database-delegated-subnet-limits) | Define default limits and request increases for delegated subnets |
+| Infrastructure | [Provisioning Exadata Infrastructure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-infrastructure.html) | Deploy Exadata Infrastructure by using Oracle documentation |
+| Scaling | [Oracle Database@Azure Service scaling options](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-EC1A62C6-DDA1-4F39-B28C-E5091A205DD3) | Explore maximum scaling limits and capabilities |
+| VM cluster | [Provisioning an Exadata VM cluster for Azure](https://docs.oracle.com/iaas/Content/database-at-azure-exadata/odexa-provisioning-exadata-vm-cluster-azure.html) | Provision VM clusters step-by-step |
+| Storage configuration | [Exadata Cloud Infrastructure - Storage configuration](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html) | Configure storage for Exadata Cloud Infrastructure |
+| Storage impact | [Impact of configuration settings on storage](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html#ECSCM-GUID-925DAEBF-4693-4AC6-80E1-15D7121F80A9) | Understand how configuration choices affect storage allocation |
+| Disaster recovery | [BCDR for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure.md) | Design resilient Oracle deployments by using BCDR architecture options |
 
 ## Next step
 
