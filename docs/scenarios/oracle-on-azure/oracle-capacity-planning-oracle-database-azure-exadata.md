@@ -46,7 +46,7 @@ Infrastructure sizing determines the performance and scalability of your Oracle 
 
 VM cluster configuration directly affects database performance and high availability. Proper VM cluster sizing ensures adequate compute resources while providing the flexibility to scale based on workload demands.
 
-- **Deploy a maximum of eight VM clusters per Exadata Infrastructure.** You can create a maximum of eight VM clusters in the same Exadata Infrastructure. This limit ensures optimal resource distribution and management across your infrastructure. Plan your database consolidation strategy to work within this constraint while maintaining performance isolation between workloads.
+- **Deploy a maximum of eight VM clusters within a single Exadata Infrastructure.** You can create a maximum of eight VM clusters in the same Exadata Infrastructure. This limit ensures optimal resource distribution and management across your infrastructure. Plan your database consolidation strategy to work within this constraint while maintaining performance isolation between workloads.
 
 - **Allocate a minimum of two Oracle CPUs (OCPUs) and 30 gigabytes (GB) of memory for each VM.** Each VM in the Exadata VM Cluster has a minimum of two OCPUs and 30 GB of memory allocation. You can adjust both OCPUs independently during the initial VM cluster setup or after the initial VM cluster setup, based on the requirements of the workload. Adjust OCPU and memory allocation based on actual workload requirements and performance monitoring data.
 
