@@ -1,7 +1,7 @@
 # Copilot instructions for the Cloud Adoption Framework for Azure
 Create guidance that helps customers understand how to be successful in Azure.
 Ensure the guidance is easy to understand and actionable.
-Ensure technical accuracy against https://github.com/microsoftdocs/mcp. 
+Ensure technical accuracy against https://learn.microsoft.com/api/mcp. 
 
 ## Purpose of the Cloud Adoption Framework for Azure
 The Cloud Adoption Framework is a self-service guide to help all customers of all sizes succeed and mature in Azure.
