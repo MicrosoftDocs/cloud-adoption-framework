@@ -9,53 +9,57 @@ ms.topic: conceptual
 
 # Select Azure regions
 
-This article helps you select the Azure regions for your workloads to ensure compliance, optimize performance, and increase resiliency. Proper region selection directly impacts workload availability, performance, and regulatory compliance. You must evaluate data sovereignty requirements, user proximity, and reliability needs to make informed regional deployment decisions.
+The right Azure regions is critical for workload compliance, performance, and resiliency. Region selection affects availability, latency, cost, and regulatory alignment. This article provides guidance to help you make informed decisions.
 
-## Define data requirements
+## Check data residency and compliance
 
-Data sovereignty laws mandate where organizations store and process data based on customer locations and industry regulations. Organizations face legal penalties and compliance violations when data resides outside approved geographic boundaries. You need to identify your organization's data residency requirements and choose Azure regions in geographic locations that satisfy these compliance obligations. Here's how:
+Many countries and industries require data to stay within specific geographic boundaries. Violating these rules can lead to fines or service restrictions.
 
-1. **Identify applicable data sovereignty laws.** Review the regulatory requirements for your industry and customer locations. Different sectors have specific mandates for data storage and processing locations that affect region selection.
+1. **Identify regulations.** List the laws that apply to your customers and industry, such as GDPR, HIPAA.
 
-1. **Map customer data to compliant regions.** Document where customer data comes from and identify Azure regions that satisfy legal requirements for that data. Use this mapping to guide your regional deployment strategy.
+1. **Map data to regions.** Document where customer data comes from and identify Azure regions that satisfy legal requirements for that data. Use this mapping to guide your regional deployment strategy.
 
-1. **Validate region compliance capabilities.** Confirm that your selected Azure regions and preferred Azure services offer the necessary compliance certifications and data residency guarantees for your specific regulatory requirements. For more info, see [Data residency for Azure geographies and regions](https://azure.microsoft.com//explore/global-infrastructure/data-residency/).
+1. **Verify compliance.** Confirm that your selected Azure regions and services have the right compliance certifications and data residency guarantees. For more info, see [Data residency for Azure geographies and regions](https://azure.microsoft.com//explore/global-infrastructure/data-residency/).
 
 ## Choose regions close to your users
 
-Geographic distance between users and Azure resources affects application performance and user experience through increased latency. Users expect fast response times regardless of their global location. You need to select Azure regions that minimize distance to your primary user to reduce latency and maximize application performance. Here's how:
+Physical distance adds network latency, affecting user experience. Select regions that minimize latency for your primary user base.
 
-1. **Map user and service locations.** Document where your users, on-premises systems, and external services are located geographically. Create a visual distribution map to identify proximity requirements and inform region selection decisions.
+1. **Map user and service locations.** Document where your users and systems are located geographically
 
-1. **Evaluate latency requirements.** Review [Azure network round-trip latency statistics](/azure/networking/azure-network-latency) to understand expected performance between regions and your geographic areas. Use these metrics to validate that your selected regions meet application performance requirements.
+1. **Check latency.** Use [Azure network round-trip latency statistics](/azure/networking/azure-network-latency) to pick regions that meet your performance goals.
 
 ## Validate region capabilities
 
-Azure regions offer different service availability, pricing models, and infrastructure features that affect workload performance and cost. You need to verify that your selected regions provide the necessary services, capacity, and infrastructure features for your specific requirements. Here's how:
+Azure regions differ in services, pricing, and features. Before deployment:
 
-1. **Confirm service availability in your target region.** Service availability varies between Azure regions. You must verify that all required Azure services are available in your selected regions before finalizing deployment plans. To confirm service availability for your target regions, see [Azure products available by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/).
+1. **Check service availability.** Use [Azure products available by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/) to verify that all required Azure services are available in your selected regions before finalizing deployment plans.
 
-1. **Compare pricing across regions.** Service pricing differs between Azure regions. You should evaluate pricing differences between regions to optimize costs and identify opportunities for savings, especially for noncritical workloads like development and testing environments. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to compare service costs between regions.
+1. **Compare pricing.** Costs vary by region. Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to compare service costs between regions.
 
-1. **Select regions with availability zones.** Some Azure regions include availability zones while others don't. You need to check the [Azure regions list](/azure/reliability/regions-list#azure-regions-list-1) to identify regions with availability zones. Use this information to prioritize regions that meet your workload reliability requirements.
+1. **Use availability zones.** Some Azure regions include availability zones while others don't. Regions with zones offer higher resilience. Check the [Azure regions list](/azure/reliability/regions-list#azure-regions-list-1) to identify regions with availability zones.
 
-1. **Understand region pairing implications.** Some Azure regions form pairs while others don't. Region pairing affects your disaster recovery strategies and service replication capabilities. You should know whether your selected region form pairs to design appropriate reliability and backup strategies. For more information, see [Azure region pairs and nonpaired regions](/azure/reliability/regions-paired).
+1. **Understand region pairs.** Some Azure regions form pairs while others don't. Region pairing can support some disaster recovery strategies and service replication capabilities. You should know whether your selected region form pairs to design appropriate reliability and backup strategies. For more information, see [Azure region pairs and nonpaired regions](/azure/reliability/regions-paired).
 
-1. **Understand Azure region capacity constraints.** Azure regions are subject to quota and capacity limits. These limits can affect your ability to deploy workloads as planned. Review the [subscription constraints per region](/azure/azure-resource-manager/management/azure-subscription-service-limits). For capacity, sometimes capacity constraints can be addressed through quota increases. Use Azure CLI capabilities to check on capacity availability for your services where available. Contact Microsoft support if you anticipate high usage or need quota increases.
+1. **Plan for capacity constraints.** Azure regions have quota and capacity limits. These limits can affect your ability to deploy workloads as planned. Review the [subscription constraints per region](/azure/azure-resource-manager/management/azure-subscription-service-limits). For capacity, sometimes capacity constraints can be addressed through quota increases. Use Azure CLI capabilities to check on capacity availability for your services where available. Contact Microsoft support if you anticipate high usage or need quota increases.
 
-## Know when to use multiple regions
+## Consider multiple regions
 
-Relying on a single Azure region can limit your organization's ability to scale, meet compliance requirements, and deliver high-performance services globally. Use the same selection criteria when choosing other regions as you would for your primary region. Consider multi-region deployment in the following scenarios:
+Single-region deployments can limit scalability and resiliency. Multi-region strategies improve performance, compliance, and disaster recovery.
 
-| Scenario | Why it matters | Implementation guidance |
-|----------|----------------|------------------------|
-| Support global users and distributed teams | Improve performance and user experience by reducing latency for users across continents. | Deploy services in regions closest to your users. Use Azure Front Door or Traffic Manager to route traffic to the nearest healthy endpoint. |
-| Meet data residency and compliance requirements | To comply with legal and regulatory mandates, ensure data is stored and processed within specific geographic boundaries. | Choose regions that align with jurisdictional requirements. Use Azure Policy and Compliance Manager to enforce data residency rules. |
-| Scale beyond regional capacity limits | Avoid hitting resource quotas or service limits in a single region. | Distribute workloads across multiple regions to balance demand and ensure availability. Monitor regional capacity trends using Azure Resource Graph. |
-| Optimize for cost and resource efficiency | Take advantage of regional pricing differences and resource availability. | Run noncritical workloads (dev/test, batch jobs) in lower-cost regions. Use the Azure Pricing Calculator and Cost Management tools to evaluate options. |
-| Enhance availability and disaster recovery | Increase resilience against regional outages or failures. | Implement active-active or active-passive architectures across regions. Use Azure Site Recovery and geo-redundant storage (GRS) for business continuity. |
+1. **Known when to use multiple regions.** A single Azure region might restrict your ability to scale, meet regulatory requirements, or deliver low-latency services worldwide. Consider multi-region deployment in these scenarios:
 
-For more workload design information, see [Regions and availability zones](/azure/well-architected/reliability/regions-availability-zones).
+    | Scenario | Why it matters | What to do |
+    |----------|---------------|------------|
+    | Global users & distributed teams | Reduce latency and improve experience. | Deploy in regions near users; use Azure Front Door or Traffic Manager. |
+    | Data residency & compliance | Meet legal and regulatory requirements. | Choose compliant regions; enforce with Azure Policy and Purview. |
+    | Regional capacity limits | Avoid hitting quotas in one region. | Spread workloads across regions; monitor with Azure Resource Graph. |
+    | Cost & resource efficiency | Optimize spend and resource use. | Run noncritical workloads in lower-cost regions; use Pricing Calculator and Cost Management. |
+    | Availability & disaster recovery | Improve resilience to outages. | Use active-active or active-passive setups; enable Site Recovery and GRS. |
+
+    For more workload design information, see [Regions and availability zones](/azure/well-architected/reliability/regions-availability-zones).
+
+1. **Pick regions that meet your requirements.** Previous guidance favored paired regions for distance (150+ miles apart), but this is no longer mandatory. Choose more regions based on latency, compliance, and resiliency needs. See [Using multiple Azure regions](/azure/reliability/regions-overview#using-multiple-azure-regions).
 
 ## Azure resources for region selection
 
