@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Select Azure regions
 
-The right Azure regions is critical for workload compliance, performance, and resiliency. Region selection affects availability, latency, cost, and regulatory alignment. This article provides guidance to help you make informed decisions.
+The right Azure region is critical for workload compliance, performance, and resiliency. Region selection affects availability, latency, cost, and regulatory alignment. This article provides guidance to help you make informed decisions.
 
 ## Check data residency and compliance
 
