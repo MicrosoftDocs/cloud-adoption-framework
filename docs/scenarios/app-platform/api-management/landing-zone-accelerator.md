@@ -7,8 +7,10 @@ ms.reviewer: tozimmergren
 ms.date: 03/13/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
-ms.custom: devx-track-bicep
 ms.collection: ce-skilling-ai-copilot
+ms.custom:
+  - devx-track-bicep
+  - sfi-image-nochange
 ---
 
 # Azure API Management landing zone accelerator

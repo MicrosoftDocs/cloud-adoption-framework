@@ -5,6 +5,9 @@ author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
 ms.date: 08/14/2024
+ms.custom:
+  - sfi-image-nochange
+  - sfi-ga-nochange
 ---
 
 # Landing zone identity and access management

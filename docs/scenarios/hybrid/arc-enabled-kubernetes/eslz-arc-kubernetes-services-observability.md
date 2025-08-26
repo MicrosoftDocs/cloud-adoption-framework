@@ -5,7 +5,10 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 04/29/2022
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank
+ms.custom:
+  - e2e-hybrid
+  - think-tank
+  - sfi-image-nochange
 ---
 
 # Services observability for Azure Arc-enabled Kubernetes

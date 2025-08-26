@@ -5,7 +5,9 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 11/28/2024
 ms.topic: conceptual
-ms.custom: think-tank
+ms.custom:
+  - think-tank
+  - sfi-ga-nochange
 ---
 
 # Considerations and recommendations for multitenant Azure landing zone scenarios

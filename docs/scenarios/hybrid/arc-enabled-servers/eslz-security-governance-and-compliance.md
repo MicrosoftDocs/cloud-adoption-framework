@@ -5,7 +5,10 @@ author: MatthewGrimshaw
 ms.author: matgri
 ms.date: 06/10/2021
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank
+ms.custom:
+  - e2e-hybrid
+  - think-tank
+  - sfi-image-nochange
 ---
 
 # Governance, security, and compliance baseline for Azure Arc-enabled servers
