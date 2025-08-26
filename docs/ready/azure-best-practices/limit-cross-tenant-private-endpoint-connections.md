@@ -5,7 +5,9 @@ author: MarvinBuss
 ms.author: mabuss
 ms.date: 01/11/2023
 ms.topic: conceptual
-ms.custom: think-tank
+ms.custom:
+  - think-tank
+  - sfi-image-nochange
 ---
 
 # Limit cross-tenant private endpoint connections in Azure
