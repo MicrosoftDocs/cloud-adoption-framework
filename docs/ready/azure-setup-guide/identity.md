@@ -1,16 +1,16 @@
 ---
-title: Set up identity and access management in Azure
-description: Set up identity and access management in Azure
+title: Set up identity in Azure
+description: Set up identity in Azure
 author: stephen-sumner
 ms.author: pnp
-ms.date: 08/15/2025
+ms.date: 08/27/2025
 ms.topic: conceptual
 ---
 
 
-# Set up identity and access management in Azure
+# Set up identity in Azure
 
-A secure identity and access management (IAM) foundation ensures that only authorized users can access Azure resources. This article outlines how to establish a secure and manageable IAM environment in Azure.
+Before anyone can use Azure, they need a secure and well-managed identity. Microsoft Entra ID is the backbone of identity and access management in Azure. This article walks you through the essential steps to establish a strong identity foundation. Whether you're setting up a new tenant or tightening security in an existing one, these best practices help you protect access to your cloud resources from day one.
 
 ## Create individual user accounts
 
