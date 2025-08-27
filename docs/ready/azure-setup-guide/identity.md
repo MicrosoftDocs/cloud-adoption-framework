@@ -18,7 +18,7 @@ Every person who needs access to Azure should have their own user account in Mic
 
 1. **Add a custom domain.** When you create a Microsoft Entra tenant, it comes with a default domain (*yourtenant.onmicrosoft.com*). When you add a custom domain (for example, *contoso.com*), users can sign in with familiar names like *alex@contoso.com*. If you create accounts before adding the custom domain, you need to update them later. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra](/entra/fundamentals/add-custom-domain).
 
-1. **Create a unique account for every user.** Create a unique account for every user. Don't allow shared accounts. Shared accounts make it impossible to track changes or assign responsibility. For instructions, see [How to create, invite, and delete users in Microsoft Entra](/entra/fundamentals/how-to-create-delete-users).
+1. **Create a unique account for every user.** Don't allow shared accounts. Shared accounts make it impossible to track changes or assign responsibility. For instructions, see [How to create, invite, and delete users in Microsoft Entra](/entra/fundamentals/how-to-create-delete-users).
 
 1. **Create emergency access accounts.** Create two [emergency access accounts](/entra/identity/role-based-access-control/security-emergency-access) to ensure you can access your tenant if normal sign-in methods fail.
 
