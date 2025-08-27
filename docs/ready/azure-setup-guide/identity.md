@@ -1,16 +1,16 @@
 ---
-title: Set up identity and access management in Azure
-description: Set up identity and access management in Azure
+title: Set up identity in Azure
+description: Set up identity in Azure
 author: stephen-sumner
 ms.author: pnp
-ms.date: 08/15/2025
+ms.date: 08/27/2025
 ms.topic: conceptual
 ---
 
 
-# Set up identity and access management in Azure
+# Set up identity in Azure
 
-A secure identity and access management (IAM) foundation ensures that only authorized users can access Azure resources. This article outlines how to establish a secure and manageable IAM environment in Azure.
+Before anyone can use Azure, they need a secure and well-managed identity. Microsoft Entra ID is the backbone of identity and access management in Azure. This article walks you through the essential steps to establish a strong identity foundation. Whether you're setting up a new tenant or tightening security in an existing one, these best practices help you protect access to your cloud resources from day one.
 
 ## Create individual user accounts
 
@@ -18,7 +18,7 @@ Every person who needs access to Azure should have their own user account in Mic
 
 1. **Add a custom domain.** When you create a Microsoft Entra tenant, it comes with a default domain (*yourtenant.onmicrosoft.com*). When you add a custom domain (for example, *contoso.com*), users can sign in with familiar names like *alex@contoso.com*. If you create accounts before adding the custom domain, you need to update them later. For detailed steps, see [Add your custom domain name to your tenant in Microsoft Entra](/entra/fundamentals/add-custom-domain).
 
-1. **Create a unique account for every user.** Create a unique account for every user. Don't allow shared accounts. Shared accounts make it impossible to track changes or assign responsibility. For instructions, see [How to create, invite, and delete users in Microsoft Entra](/entra/fundamentals/how-to-create-delete-users).
+1. **Create a unique account for every user.** Don't allow shared accounts. Shared accounts make it difficult to track and assign responsibility for changes. For instructions, see [How to create, invite, and delete users in Microsoft Entra](/entra/fundamentals/how-to-create-delete-users).
 
 1. **Create emergency access accounts.** Create two [emergency access accounts](/entra/identity/role-based-access-control/security-emergency-access) to ensure you can access your tenant if normal sign-in methods fail.
 
@@ -44,7 +44,7 @@ Multifactor authentication (MFA) helps protect your organization from compromise
 
 1. **Understand security defaults.** New Microsoft Entra tenants have [security defaults](/entra/fundamentals/security-defaults) turned on automatically. These settings require all users to register for MFA, require administrators to perform MFA every sign-in, and require end users to do MFA when necessary.
 
-1. **Use Conditional Access for advanced scenarios.** If your organization needs more flexibility, you can create Conditional Access policies to enforce MFA only in specific situations, such as when users sign in from unfamiliar locations. Also, you can't use security defaults and Conditional Access at the same time. Security defaults must be disabled to use Conditional Access. This feature requires a premium license. See [Secure user sign-in with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa).
+1. **Use Conditional Access for advanced scenarios.** If your organization needs more flexibility, you can create Conditional Access policies to enforce MFA only in specific situations, such as when users sign in from unfamiliar locations. Security defaults and Conditional Access can't be used simultaneously. To enable Conditional Access, you must first disable security defaults and acquire a premium license. See [Secure user sign-in with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa).
 
 ## Next step
 
