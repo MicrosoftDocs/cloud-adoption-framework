@@ -1,15 +1,19 @@
 ---
-title: AI strategy
-description: Learn the process to develop a strategy for AI adoption with best practices and recommendations.
+title: Create your strategy for AI adoption
+description: Create your strategy for AI adoption
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
 ms.topic: conceptual
 ---
 
-# AI strategy
+# Create your strategy for AI adoption
 
 This article explains the process to prepare your organization for AI adoption. It describes how to select the right AI solutions, prepare your data, and ground your approach in responsible AI principles. A well-planned AI strategy aligns with your business objectives and ensures that AI projects contribute to overall success.
+
+:::image type="complex" source="./images/ai-decision-tree.svg" alt-text="Diagram showing Microsoft and Azure services with decision points for each service." lightbox="./images/ai-decision-tree.svg" border="false":::
+    Start by identifying your AI use case. If the goal is to enhance individual productivity, use Microsoft 365 Copilot when focusing on Microsoft 365 apps. Use in-product Copilots for products like Azure, GitHub, Fabric, Dynamics 365, or Power Platform. Use role-aligned Copilots for domain-specific roles such as security, sales, service, or finance. If the use case is more general, use Microsoft Copilot or Copilot Pro. If you already use Microsoft 365 Copilot and need to create custom agents with domain-specific skills, use Extensibility Tools for Microsoft 365 Copilot. If the goal is to automate business functionality, use Copilot Studio for a SaaS tool that enables agent creation and deployment through natural language with integrated pricing. Use Azure AI Foundry for a full development platform with API access to both Azure OpenAI and Azure AI services. If you only need access to OpenAI models, use Azure OpenAI. If you need prebuilt non-generative models or Azure AI Search for agent support, use Azure AI services. If you need to train and deploy machine learning models with your own data, use Microsoft Fabric if you already work in that environment; otherwise, use Azure Machine Learning. Use Azure Container Apps for lightweight AI inferencing without managing GPU infrastructure. If you need to bring your own models and orchestrate them with Azure CycleCloud, Azure Batch, or Kubernetes, use Azure Virtual Machines.
+:::image-end:::
 
 ## Identify AI use cases
 
@@ -33,15 +37,11 @@ Technology strategy determines the right approach for your organization's capabi
 
 2. **Adopt standard mechanisms for AI interoperability.** Standard protocols enable AI systems to communicate across different platforms and reduce custom implementations. These protocols support data sharing and system integration while maintaining flexibility for future technology changes. You should understand protocols like Model Context Protocol for cross-system data ingestion to ensure your AI systems support interoperability requirements. Evaluate tools like [NLWeb](https://github.com/microsoft/NLWeb?tab=readme-ov-file#what-is-nlweb) to prepare your content for the AI web. For example, see [Model Context Protocol in Microsoft Copilot Studio](/microsoft-copilot-studio/agent-extend-action-mcp#create-an-mcp-server) and [Exposing REST APIs as MCP servers](/azure/api-management/export-rest-mcp-server).
 
-3. **Select the appropriate AI service model.** Microsoft offers three service models with varying levels of customization and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai): Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Each model requires different technical skills and provides different degrees of control over AI implementation. You must match your team's capabilities, data requirements, and customization needs with the appropriate service model. Use the AI decision tree below to guide your selection process.
-
-:::image type="complex" source="./images/ai-decision-tree.svg" alt-text="Diagram showing Microsoft and Azure services with decision points for each service." lightbox="./images/ai-decision-tree.svg" border="false":::
-    Start by identifying your AI use case. If the goal is to enhance individual productivity, use Microsoft 365 Copilot when focusing on Microsoft 365 apps. Use in-product Copilots for products like Azure, GitHub, Fabric, Dynamics 365, or Power Platform. Use role-aligned Copilots for domain-specific roles such as security, sales, service, or finance. If the use case is more general, use Microsoft Copilot or Copilot Pro. If you already use Microsoft 365 Copilot and need to create custom agents with domain-specific skills, use Extensibility Tools for Microsoft 365 Copilot. If the goal is to automate business functionality, use Copilot Studio for a SaaS tool that enables agent creation and deployment through natural language with integrated pricing. Use Azure AI Foundry for a full development platform with API access to both Azure OpenAI and Azure AI services. If you only need access to OpenAI models, use Azure OpenAI. If you need prebuilt non-generative models or Azure AI Search for agent support, use Azure AI services. If you need to train and deploy machine learning models with your own data, use Microsoft Fabric if you already work in that environment; otherwise, use Azure Machine Learning. Use Azure Container Apps for lightweight AI inferencing without managing GPU infrastructure. If you need to bring your own models and orchestrate them with Azure CycleCloud, Azure Batch, or Kubernetes, use Azure Virtual Machines.
-:::image-end:::
+3. **Select the appropriate AI service model.** Microsoft offers three service models with varying levels of customization and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai): Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Each model requires different technical skills and provides different degrees of control over AI implementation. You must match your team's capabilities, data requirements, and customization needs with the appropriate service model. Use the AI decision tree to guide your selection process.
 
 ### Buy AI with software services (SaaS)
 
-Microsoft provides SaaS generative AI solutions, known as Copilots, to enhance productivity with minimal technical expertise. Refer to the table below for details.
+Microsoft provides SaaS generative AI solutions, known as Copilots, to enhance productivity with minimal technical expertise. Refer to the following table for details.
 
 | Microsoft Copilots | Description | User | Data needed | Skills required | Main cost factors |
 |---------------------|-------------|------|-------------|-----------------|-------------------|
@@ -49,8 +49,15 @@ Microsoft provides SaaS generative AI solutions, known as Copilots, to enhance p
 | Role-based Copilots | Agents that enhance efficiency for specific roles in [Security](/copilot/security/microsoft-security-copilot), [Sales](https://www.microsoft.com/microsoft-365/copilot/copilot-for-sales), [Service](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-service), and [Finance](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-for-finance). | Business | Yes. Data-connection and plug-in options are available. | General IT and data management | Licenses or [Security Compute Units (Copilot for Security)](https://azure.microsoft.com/pricing/details/microsoft-security-copilot) |
 | In-product Copilots | AI within products like [GitHub](https://azure.microsoft.com/products/github/copilot), [Power Apps](https://www.microsoft.com/power-platform/products/power-apps), [Power BI](https://www.microsoft.com/power-platform/products/power-bi?culture=en-us&country=us), [Dynamics 365](https://www.microsoft.com/dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com/power-platform/products/power-automate), [Microsoft Fabric](/fabric/fundamentals/copilot-fabric-overview), and [Azure](https://azure.microsoft.com/products/copilot/). | Business and individual | Yes. Most require minimal data preparation. | None | Free or subscription |
 | Microsoft Copilot or Microsoft Copilot Pro | [Microsoft Copilot](https://copilot.microsoft.com/) is a free web-grounded chat application. [Copilot Pro](https://www.microsoft.com/store/b/copilotpro) provides better performance, capacity, and access to Copilot in certain Microsoft 365 apps. | Individual | No | None | [Microsoft Copilot](https://copilot.microsoft.com/) is free. Microsoft Copilot Pro requires a [subscription](https://www.microsoft.com/store/b/copilotpro?msockid=1e787d5f5c8d61da16f469995d146045) |
+
+### Build AI agents with software services (SaaS)
+
+Microsoft provides SaaS and low-code platforms to build AI agents. Refer to the following table for details.
+
+| Microsoft Copilots | Description | User | Data needed | Skills required | Main cost factors |
+|---------------------|-------------|------|-------------|-----------------|-------------------|
 | Extensibility tools for Microsoft 365 Copilot | [Customize](/microsoft-365-copilot/extensibility/) Microsoft 365 Copilot with more data or capabilities via declarative agents. Use tools like [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), [agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder), [Teams toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents), and [SharePoint](/microsoft-365-copilot/extensibility/build-declarative-agents). | Business and individual | Use [Microsoft Graph connectors](/microsoft-365-copilot/extensibility/overview-graph-connector) to add data. | Data management, general IT, or developer skills | [Microsoft 365 Copilot license](/microsoft-365-copilot/extensibility/faq#license-questions) |
-| Copilot Studio | Use [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to build, test, and deploy agents in a SaaS authoring environment. | Developer | Automates much of the data work to create custom copilots. | Platform to connect data sources, map prompts, and deploy copilots | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
+| Copilot Studio | Use [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to build agents with low-code tools. | IT | Automates much of the data work to create custom copilots. | Platform to connect data sources, map prompts, and deploy copilots | [License](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) |
 
 ### Build AI workloads with Azure platforms (PaaS)
 
