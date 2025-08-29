@@ -86,7 +86,7 @@ Consider the following storage configuration settings:
 
 - Choosing between database backups or sparse disk groups during VM cluster creation significantly affects the allocation of storage space to ASM disk groups in the Oracle Exadata Database@Azure storage servers. For more information, see [Impact of configuration settings on storage](https://docs.oracle.com/iaas/exadatacloud/doc/ecs-storage-config.html#ECSCM-GUID-925DAEBF-4693-4AC6-80E1-15D7121F80A9).
   
-- Storing database backups locally on the Oracle Exadata Database@Azure storage server doesn't protect against data loss caused by hardware failures and outages in availability zones or regions. To help ensure a resilient architecture for unplanned outages, see the architecture options in [Business continuity and disaster recovery considerations for Oracle Database@Azure](./bcdr-odaa.md).
+- Storing database backups locally on the Oracle Exadata Database@Azure storage server doesn't protect against data loss caused by hardware failures and outages in availability zones or regions. To help ensure a resilient architecture for unplanned outages, see the architecture options in [Business continuity and disaster recovery considerations for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure-autonomous.md).
 
 ## Next step
 
