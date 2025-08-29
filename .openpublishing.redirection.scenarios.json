@@ -614,6 +614,11 @@
       "source_path": "docs/scenarios/defense/identity/multi-tenant/zero-trust-configuration.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure.md",
+      "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-exadata",
+      "redirect_document_id": false
     }
   ]
 }
