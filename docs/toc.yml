@@ -9,8 +9,7 @@ items:
     - name: What's new
       href: get-started/whats-new.md
 
-  - name: Foundational methodologies
-    expanded: true
+  - name: Methodologies (phases)
     items:
     - name: Define strategy
       items:
@@ -456,10 +455,7 @@ items:
           href: cloud-native/deploy-cloud-native-solutions.md
         - name: 4. Optimize cloud-native solutions
           href: cloud-native/optimize-cloud-native-solutions.md
-    
-  - name: Operational methodologies 
-    expanded: true
-    items:           
+     
     - name: Govern cloud
       items:
       - name: Overview
