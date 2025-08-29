@@ -38,7 +38,7 @@ ms.custom: e2e-oracle
 
     This option requires manual configuration and ongoing maintenance.
 
-  - **Non-Microsoft backup solutions:** You can use non-Microsoft backup solutions that are available in Azure Marketplace, such as [Commvault](https://documentation.commvault.com/2024e/essential/oracle_database_at_azure.html), to manage and store database backups.
+  - **Non-Microsoft backup solutions:** You can use non-Microsoft backup solutions that are available in Azure Marketplace, such as [Commvault](https://azuremarketplace.microsoft.com/marketplace/apps/commvault.commvault?tab=Overview), to manage and store database backups.
 
 ## Design recommendations
 
