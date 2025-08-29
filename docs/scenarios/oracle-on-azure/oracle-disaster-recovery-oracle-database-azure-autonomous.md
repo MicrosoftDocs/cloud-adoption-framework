@@ -15,8 +15,6 @@ This comprehensive guide provides business continuity and disaster recovery (BCD
 
 **What you'll accomplish**: Implement robust BCDR solutions that meet your RTO/RPO requirements, configure automated failover capabilities, and establish comprehensive backup strategies for Oracle Autonomous Database@Azure.
 
-**Time to complete**: 2-4 hours for basic setup, additional time for testing and validation procedures.
-
 ## In this guide
 
 - [Define availability requirements](#define-availability-requirements-for-oracle-autonomous-databaseazure)
