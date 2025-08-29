@@ -101,4 +101,5 @@ For specific enterprise use cases that require active-active database configurat
 ## Next steps for Oracle Database@Azure
 
 > [!div class="nextstepaction"]
-> [Network topology and connectivity for Oracle Database@Azure](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-network-topology-odaa)
+> [Network topology and connectivity for Oracle Database@Azure](./oracle-network-topology-odaa.md)
+
