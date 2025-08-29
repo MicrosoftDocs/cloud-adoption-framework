@@ -14,7 +14,7 @@ ms.custom: internal, homepage, UpdateFrequency3
 
 The Microsoft Cloud Adoption Framework for Azure is a comprehensive guide designed to help organizations successfully adopt cloud technologies. It provides a structured approach to achieving business goals through Azure, enabling faster, more cost-effective cloud adoption.
 
-:::image type="content" source="caf-overview.svg" alt-text="Diagram showing an overview of the Cloud Adoption Framework." lightbox="caf-overview.svg" border="false":::
+:::image type="content" source="caf-overview.png" alt-text="Diagram showing an overview of the Cloud Adoption Framework." lightbox="caf-overview.png" border="false":::
 
 ## Why use the Cloud Adoption Framework?
 
