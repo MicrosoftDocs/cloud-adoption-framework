@@ -11,31 +11,31 @@ ms.custom: e2e-oracle
 
 # Oracle Autonomous Database@Azure Business Continuity and Disaster Recovery Guide
 
-This comprehensive guide provides business continuity and disaster recovery (BCDR) strategies for Oracle Autonomous Database@Azure. Organizations implementing Oracle Autonomous Database@Azure can achieve enterprise-grade high availability while simplifying database administration through automated management capabilities and proven disaster recovery solutions.
+This guide provides business continuity and disaster recovery (BCDR) strategies for Oracle Autonomous Database@Azure. Organizations using Oracle Autonomous Database@Azure achieve enterprise-grade high availability through automated management capabilities and proven disaster recovery solutions.
 
-**What you'll accomplish**: Implement robust BCDR solutions that meet your RTO/RPO requirements, configure automated failover capabilities, and establish comprehensive backup strategies for Oracle Autonomous Database@Azure.
+**What you'll accomplish**: Implement BCDR solutions that meet your RTO/RPO requirements, configure automated failover capabilities, and establish backup strategies for Oracle Autonomous Database@Azure.
 
 ## In this guide
 
-- [Define availability requirements](#define-availability-requirements-for-oracle-autonomous-databaseazure)
+- [Set availability requirements](#set-availability-requirements-for-oracle-autonomous-databaseazure)
 - [Implement Autonomous Data Guard](#implement-autonomous-data-guard-for-high-availability)
-- [Deploy backup strategies](#deploy-comprehensive-backup-strategies-for-oracle-databases)
+- [Deploy backup strategies](#deploy-backup-strategies-for-oracle-databases)
 - [Configure application continuity](#configure-application-continuity-for-seamless-failover)
 - [Test disaster recovery procedures](#test-and-validate-disaster-recovery-procedures)
 - [Evaluate Oracle replication technologies](#evaluate-additional-oracle-replication-technologies)
 - [Tools and resources](#oracle-autonomous-databaseazure-tools-and-resources)
 
-## Define availability requirements for Oracle Autonomous Database@Azure
+## Set availability requirements for Oracle Autonomous Database@Azure
 
 Organizations must establish clear recovery objectives before implementing BCDR solutions for Oracle Autonomous Database@Azure. Recovery Time Objective (RTO) represents the maximum acceptable downtime after a failure, while Recovery Point Objective (RPO) defines the maximum acceptable data loss. These critical metrics determine the appropriate BCDR architecture and Oracle technologies for your cloud database environment.
 
-1. **Define your recovery objectives based on business requirements.** Autonomous Database@Azure supports different availability levels that align with [Oracle Maximum Availability Architecture (MAA) principles](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/oracle-maximum-availability-architecture-and-oracle-autonomous-database.html#GUID-80E31978-A2B5-4106-9CB8-C8DFD8AA9637). The default configuration provides MAA Silver level protection against instance and hardware failures. Plan your architecture to meet specific RTO and RPO requirements for different failure scenarios.
+1. **Define your recovery objectives based on business requirements.** Autonomous Database@Azure supports different availability levels that align with [Oracle Maximum Availability Architecture (MAA) principles](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/oracle-maximum-availability-architecture-and-oracle-autonomous-database.html#GUID-80E31978-A2B5-4106-9CB8-C8DFD8AA9637). The default configuration provides MAA Silver level protection against instance and hardware failures. Determine your architecture to meet specific RTO and RPO requirements for different failure scenarios.
 
-2. **Plan for regional limitations and cross-region requirements.** Oracle Autonomous Database@Azure operates within a single availability region where you create the instance. Multi-regional resiliency requires additional cross-region disaster recovery instances. Consider geographic distribution requirements for compliance and data residency needs when planning your deployment topology.
+2. **Address regional limitations and cross-region requirements.** Oracle Autonomous Database@Azure operates within a single availability region where you create the instance. Multi-regional resiliency requires additional cross-region disaster recovery instances. Identify geographic distribution requirements for compliance and data residency needs when designing your deployment topology.
 
 ## Implement Autonomous Data Guard for high availability
 
-Oracle Autonomous Data Guard provides automated disaster recovery capabilities specifically designed for Oracle Autonomous Database@Azure deployments. This enterprise-grade solution combines Oracle Data Guard technology with Fast Start Failover (FSFO) to deliver continuous database protection with minimal administrative overhead and automatic failover capabilities.
+Oracle Autonomous Data Guard provides automated disaster recovery capabilities designed for Oracle Autonomous Database@Azure deployments. This enterprise-grade solution combines Oracle Data Guard technology with Fast Start Failover (FSFO) to deliver continuous database protection with minimal administrative overhead and automatic failover capabilities.
 
 1. **Configure local standby databases for fast recovery.** Create a local standby database within the same region as your primary instance to achieve rapid failover with minimal data loss. Local standby configurations provide automatic failover capabilities with RTO of 2 minutes and RPO of 10 seconds. This configuration protects against instance-level failures while maintaining optimal performance.
 
@@ -45,9 +45,9 @@ Oracle Autonomous Data Guard provides automated disaster recovery capabilities s
 
 4. **Prepare network infrastructure for cross-region deployment.** Ensure resource groups, virtual networks, and delegated subnets exist in target regions before configuring cross-region disaster recovery. Network connectivity between primary and standby instances uses OCI managed networking, which simplifies configuration and management.
 
-## Deploy comprehensive backup strategies for Oracle databases
+## Deploy backup strategies for Oracle databases
 
-Oracle Autonomous Database@Azure provides multiple enterprise-grade backup options to meet diverse recovery requirements across different business scenarios. These backup strategies complement high availability solutions and provide comprehensive protection against data corruption, accidental deletion, security threats, and long-term compliance retention needs.
+Oracle Autonomous Database@Azure provides multiple enterprise-grade backup options to meet diverse recovery requirements across different business scenarios. These backup strategies complement high availability solutions and provide protection against data corruption, accidental deletion, security threats, and long-term compliance retention needs.
 
 1. **Use automatic backups for operational recovery.** Autonomous Database@Azure performs automatic backups continuously, storing data in Oracle Cloud Infrastructure Object Storage with cross-availability domain replication. Automatic backups include 60-day full backups, daily incremental backups, and 5-minute archive log backups. The backup data is immutable and cannot be deleted or modified by users.
 
@@ -61,15 +61,15 @@ Oracle Autonomous Database@Azure provides multiple enterprise-grade backup optio
 
 Application continuity features ensure minimal disruption to applications during Oracle database failover scenarios and planned maintenance operations. Oracle provides transparent application continuity technologies that automatically handle session recovery and transaction replay during database outages, reducing application downtime and improving user experience.
 
-1. **Enable Transparent Application Continuity for seamless recovery.** Configure [Transparent Application Continuity for automatic session recovery](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/application-continuity-configure.html) to track session and transactional state automatically. This feature enables applications to restore session state after database failover to standby instances, minimizing application-level changes required for high availability.
+1. **Enable Transparent Application Continuity for session recovery.** Configure [Transparent Application Continuity for automatic session recovery](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/application-continuity-configure.html) to track session and transactional state automatically. This feature enables applications to restore session state after database failover to standby instances, minimizing application-level changes required for high availability.
 
-2. **Use appropriate connection strings for multi-region deployments.** Applications should use connection strings or wallets downloaded from the same region as the primary database. When cross-region standby databases are configured, different wallets specify different hostnames. Construct manual connection strings containing both primary and standby hostnames when single connection string requirements exist. For additional information, see [Cross-Region Autonomous Data Guard configuration notes](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-data-guard-notes.html#GUID-78A76415-4EB9-4412-869F-3130AF7F5C82).
+2. **Use appropriate connection strings for multi-region deployments.** Applications must use connection strings or wallets downloaded from the same region as the primary database. When cross-region standby databases are configured, different wallets specify different hostnames. Construct manual connection strings containing both primary and standby hostnames when single connection string requirements exist. For additional information, see [Cross-Region Autonomous Data Guard configuration notes](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-data-guard-notes.html#GUID-78A76415-4EB9-4412-869F-3130AF7F5C82).
 
 3. **Test application behavior during failover scenarios.** Verify that applications handle database failover correctly through regular testing. Application continuity reduces but does not eliminate the need for application-level error handling and retry logic.
 
 ## Test and validate disaster recovery procedures
 
-Regular disaster recovery testing ensures that BCDR solutions meet defined business objectives and identify potential issues before actual disasters occur. Comprehensive testing validates both technical capabilities and operational procedures across all system components, ensuring reliable recovery performance when needed most.
+Regular disaster recovery testing ensures that BCDR solutions meet defined business objectives and identify potential issues before actual disasters occur. Testing validates both technical capabilities and operational procedures across all system components, ensuring reliable recovery performance when needed most.
 
 1. **Conduct regular disaster recovery drills across all application layers.** Perform scheduled failover and switchover operations to verify that RTO and RPO requirements are achievable in real scenarios. Test all components of the application stack, not just the database layer, to ensure complete system recovery. Document test results and update procedures based on findings.
 
@@ -81,9 +81,9 @@ Regular disaster recovery testing ensures that BCDR solutions meet defined busin
 
 For specific enterprise use cases that require active-active database configurations or enhanced replication capabilities, additional Oracle technologies provide advanced data replication and real-time integration features. These solutions extend beyond standard disaster recovery to support complex multi-region deployment scenarios.
 
-1. **Evaluate Oracle GoldenGate for active-active environments.** Consider using [Oracle GoldenGate for real-time data integration](https://www.oracle.com/integration/goldengate/) and replication capabilities when active-active database configurations are required. This solution requires application-level awareness to handle conflict resolution effectively. Oracle GoldenGate is not included in the base Autonomous Database@Azure solution and requires separate licensing.
+1. **Evaluate Oracle GoldenGate for active-active environments.** Use [Oracle GoldenGate for real-time data integration](https://www.oracle.com/integration/goldengate/) and replication capabilities when active-active database configurations are required. This solution requires application-level awareness to handle conflict resolution effectively. Oracle GoldenGate is not included in the base Autonomous Database@Azure solution and requires separate licensing.
 
-2. **Plan for conflict resolution in multi-master scenarios.** Design application logic to handle data conflicts that can occur in active-active replication scenarios. Implement business rules and technical controls to ensure data consistency across multiple database instances.
+2. **Design conflict resolution for multi-master scenarios.** Implement application logic to handle data conflicts that can occur in active-active replication scenarios. Create business rules and technical controls to ensure data consistency across multiple database instances.
 
 ## Oracle Autonomous Database@Azure tools and resources
 
@@ -102,4 +102,3 @@ For specific enterprise use cases that require active-active database configurat
 
 > [!div class="nextstepaction"]
 > [Network topology and connectivity for Oracle Database@Azure](./oracle-network-topology-odaa.md)
-
