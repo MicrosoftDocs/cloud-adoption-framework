@@ -1,10 +1,9 @@
 ---
 title: Prepare your landing zone for migration
 description: Learn about the tasks that you need to complete after an Azure landing zone deployment to ensure that the technical environment supports migrations.
-author: bstephenson
-ms.author: bstephenson
-ms.reviewer: tozimmergren
-ms.date: 04/10/2024
+author: jtracey93
+ms.author: jatracey
+ms.date: 08/25/2025
 ms.topic: conceptual
 ms.collection: 
  - migration
@@ -157,13 +156,13 @@ You can also deploy your own custom alerting for resources if your needs deviate
 
 ## Prepare your landing zone for sovereign workload migrations
 
-If you need to address sovereignty requirements, you can evaluate if [Microsoft Cloud for Sovereignty](https://aka.ms/MicrosoftCloudForSovereignty) fits your requirements. Microsoft Cloud for Sovereignty provides an additional layer of policy and auditing capabilities that address individual public sector and government customer needs.
+If you need to address sovereignty requirements, you can evaluate if [Microsoft Sovereign Cloud](https://aka.ms/MicrosoftCloudForSovereignty) fits your requirements. Microsoft Sovereign Cloud provides an additional layer of policy and auditing capabilities that address individual public sector and government customer needs.
 
 You can enable these capabilities by deploying the [sovereign landing zone](/industry/sovereignty/slz-overview). The architecture of the sovereign landing zone aligns with the recommended [Azure landing zone](../../ready/landing-zone/index.md) designs.
 
-### Microsoft Cloud for Sovereignty policy portfolio
+### Microsoft Sovereign Cloud policy portfolio
 
-By using Azure policy, you can enable centralized control across Azure resources to enforce specific configurations. You can assign the [Microsoft Cloud for Sovereignty policy initiatives](/industry/sovereignty/policy-portfolio-baseline) to your landing zones to make sure you adhere to local policies and regulatory requirements in your country/region.
+By using Azure policy, you can enable centralized control across Azure resources to enforce specific configurations. You can assign the [Microsoft Sovereign Cloud policy initiatives](/industry/sovereignty/policy-portfolio-baseline) to your landing zones to make sure you adhere to local policies and regulatory requirements in your country/region.
 
 If those policy initiatives are not yet assigned to your sovereign landing zone deployment, consider assigning the initiatives that correspond to your regulatory requirements.
 
@@ -185,5 +184,5 @@ Consider these additional resources to prepare for migration:
 
 - [Prepare an initial corporate policy that's defined and well understood](../../govern/guides/standard/initial-corporate-policy.md)
 - [Create an adequate plan for Azure billing](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md)
-- [Ensure that you have proper organizational alignment](../../plan/initial-org-alignment.md) and [a plan to manage it](../../organize/index.md)
+- [Ensure that you have proper organizational alignment](../../plan/prepare-organization-for-cloud.md) and [a plan to manage it](../../manage/index.md)
 - [Define a naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) and [tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging)

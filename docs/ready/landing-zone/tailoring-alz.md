@@ -4,6 +4,7 @@ description: Understand how to tailor the Azure landing zone architecture to mee
 author: jtracey93
 ms.author: jatracey
 ms.date: 12/16/2024
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5
 ---
@@ -74,13 +75,13 @@ As mentioned, we provide common landing zone archetypes in [Azure landing zone c
 
 Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone conceptual architecture.
 
-![Diagram that shows Azure landing zone default hierarchy with tailoring areas highlighted.](media/alz-tailor-hierarchy-default.png)
+:::image type="content" source="./media/alz-tailor-hierarchy-default.png" alt-text="Diagram that shows Azure landing zone default hierarchy with tailoring areas highlighted." lightbox="./media/alz-tailor-hierarchy-default.png":::
 
 Two areas of the hierarchy are highlighted. One is underneath **Landing Zones**, and the other is underneath **Platform**.
 
 ### Tailor application landing zone archetypes
 
-Notice the area highlighted in blue underneath the **Landing Zones** management group. It's the *most common and safest place* in the hierarchy to add more archetypes to meet new or more requirements that can't be added as more policy assignments to an existing archetype by using the existing hierarchy.
+Notice the area highlighted in green underneath the **Landing Zones** management group. It's the *most common and safest place* in the hierarchy to add more archetypes to meet new or more requirements that can't be added as more policy assignments to an existing archetype by using the existing hierarchy.
 
 For example, you might have a new requirement to host a set of application workloads that need to meet payment card industry (PCI) compliance requirements. But this new requirement doesn't need to apply to all workloads across your entire estate.
 
@@ -88,12 +89,15 @@ There's a simple and safe way to meet this new requirement. Create a new managem
 
 Now you can place new or move existing Azure subscriptions into the new **PCI** management group to make it inherit the required policies and form the new archetype.
 
-Another example is [Microsoft Cloud for Sovereignty](/industry/sovereignty/cloud-for-sovereignty), which adds management groups for confidential compute and is aligned for use in regulated industries. [Microsoft Cloud for Sovereignty](/industry/sovereignty/cloud-for-sovereignty) provides tools, guidance, and guardrails for public cloud adoption with appropriate sovereignty controls.
+Another example is [Microsoft Sovereign Cloud](/industry/sovereignty/cloud-for-sovereignty), which adds management groups for confidential compute and is aligned for use in regulated industries. [Microsoft Sovereign Cloud](/industry/sovereignty/cloud-for-sovereignty) provides tools, guidance, and guardrails for public cloud adoption with appropriate sovereignty controls.
 
 > [!TIP]
 > You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md#move-subscriptions).
 
 ### Tailor platform landing zone archetypes
+
+> [!NOTE]
+> The scenario detailed in this section is now part of the Azure landing zone architecture by default. You can still tailor the platform landing zone archetypes to meet your requirements by following the example scenario.
 
 You might also want to tailor the area highlighted in orange underneath the **Platform** management group. The zones in this area are known as *platform landing zones*.
 
@@ -107,7 +111,7 @@ Now you can place new or move existing Azure subscriptions into the new **Securi
 
 The following diagram shows a tailored Azure landing zone hierarchy. It uses examples from the preceding diagram.
 
-![Diagram that shows a tailored Azure landing zone hierarchy.](media/alz-tailor-hierarchy-2-additional.png)
+:::image type="content" source="./media/alz-tailor-hierarchy-2-additional.png" alt-text="Diagram that shows a tailored Azure landing zone hierarchy." lightbox="./media/alz-tailor-hierarchy-2-additional.png":::
 
 ## Points to consider
 

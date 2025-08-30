@@ -1,8 +1,8 @@
 ---
 title: Common Data Model
 description: Learn about Common Data Model.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

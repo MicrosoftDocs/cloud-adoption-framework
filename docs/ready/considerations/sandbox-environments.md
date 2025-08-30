@@ -1,9 +1,9 @@
 ---
 title: Landing zone sandbox environments
 description: Learn about Azure landing zone sandboxes, which are isolated environments to perform tests. Learn how to manage a sandbox by using subscriptions and policies.
-author: Mr-MSFT
-ms.author: isiahhudson
-ms.date: 06/01/2023
+author: jtracey93
+ms.author: jatracey
+ms.date: 08/25/2025
 ms.topic: overview
 ---
 

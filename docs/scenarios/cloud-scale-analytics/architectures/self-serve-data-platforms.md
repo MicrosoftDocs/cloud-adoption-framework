@@ -1,8 +1,8 @@
 ---
 title: Self-serve data platforms
 description: Learn about design considerations for self-serve data platforms
-author: PietheinStrengholt
-ms.author: pstrengholt
+author: stephen-sumner
+ms.author: pnp
 ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

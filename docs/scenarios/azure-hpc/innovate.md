@@ -10,11 +10,7 @@ ms.custom: think-tank
 
 # Innovate with Azure high-performance computing (HPC)
 
-The innovate methodology of the Cloud Adoption Framework for Azure drives adoption through the build-measure-learn cycle. The Innovate methodology focuses on digital innovation across data, applications, analytics, and AI and machine learning.
-
 Establish a vision for innovation that uses HPC for improving your access to knowledge, which can include reaching energy outcomes more efficiently, rapidly increasing manufacturing product quality, or efficiently managing delivery of financial regulatory reports from siloed data.
-
-For more information, see [Innovate methodology](../../innovate/index.md).
 
 ## Customer adoption of HPC
 
@@ -24,13 +20,12 @@ When adopting HPC to the cloud, machine learning in Azure enables quick and easy
 
 ## Digital innovation with HPC
 
-As you adopt your HPC environment to the cloud, consider how your defined innovation will impact the five [digital invention disciplines](../../innovate/index.md#innovation-summary):
+As you adopt your HPC environment to the cloud, consider how your defined innovation will:
 
 - **Democratize data**: For delegating access to your HPC environment's digital information, you can manage specific access on [Batch](/azure/batch/public-network-access) or [CycleCloud](/azure/cyclecloud/concepts/user-management) users. Depending on which other Azure services used in your environment, refer each HPC supported technology choice's [documentation](/azure/architecture/guide/technology-choices/compute-decision-tree#understand-the-basic-features) on access management.
 - **Engage via apps**: When modernizing your existing on-premises applications with cloud-native tooling, consider the available custom or commercial HPC applications in the Azure Marketplace.
 - **Empower adoption (DevOps) processes**: Drive constant value generation for your HPC environment by supporting your developers with desire to accelerate digital transformation. Follow the [Azure HPC](https://github.com/Azure/azurehpc) GitHub repo to follow and collaborate on simplifying deployment and setup for HPC environments in Azure.  
 - **Device interactions**: While HPC in Azure doesn't have specific guidance for innovating Internet of things (IoT), you can refer to the overview of [IoT reference architectures](/azure/architecture/reference-architectures/iot/industry-iot-hub-page).
-- **Predict & influence (ML/AI)**: Innovate with AI in Azure HPC by training with [CNTK or configure Batch Shipyard recipes](/azure/architecture/topics/high-performance-computing#ai-and-deep-learning).
 
 ## Next steps
 

@@ -1,8 +1,8 @@
 ---
 title: A financial institution scenario for data mesh
 description: Learn about a data mesh scenario for cloud-scale analytics in Azure that uses landing zones, data integrations, and data products.
-author: PietheinStrengholt
-ms.author: pstrengholt
+author: stephen-sumner
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-data-management

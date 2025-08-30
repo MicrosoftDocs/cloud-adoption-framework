@@ -1,8 +1,8 @@
 ---
 title: Getting started checklist
 description: Learn the stages companies typically go through to deploy a data mesh.
-author: mboswell
-ms.author: mboswell
+author: stephen-sumner
+ms.author: pnp
 ms.date: 11/27/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

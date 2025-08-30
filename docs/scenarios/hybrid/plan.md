@@ -1,7 +1,7 @@
 ---
 title: Plan methodology for hybrid and multicloud strategy
 description: Learn how to plan for hybrid and multicloud scenarios.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -65,7 +65,7 @@ Each dark blue dot represents a workload, and each light blue circle a business 
 
 - **Azure-first customer:** Most workloads have been moved to Azure. A few workloads stay on-premises. Strategic decisions have led to a few workloads living on the edge or in multicloud environments.
 
-- **Multicloud-first customer:** Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a few workloads living in Azure or on the edge. You may be moving from a *hybrid-first* mix to an *Azure-first* mix as your cloud strategy matures. We also support customers making strategic decisions to prioritize hybrid or multicloud mixes, and Azure plays a role in each mix.
+- **Multicloud-first customer:** Most workloads are currently hosted on a different public cloud, like Google Cloud or AWS. Strategic decisions have led to a few workloads living in Azure or on the edge. You may be moving from a *hybrid-first* mix to an *Azure-first* mix as your cloud strategy matures. We also support customers making strategic decisions to prioritize hybrid or multicloud mixes, and Azure plays a role in each mix.
 
 ## Corporate strategy decisions for hybrid and multicloud
 

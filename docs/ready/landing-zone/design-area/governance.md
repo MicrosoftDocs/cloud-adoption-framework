@@ -5,6 +5,7 @@ author: paulgrimley
 ms.author: paulgr
 ms.reviewer: ssumner
 ms.date: 05/07/2024
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -15,7 +16,7 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 ## Design area review
 
-**Roles or functions:** Azure governance originates from [cloud governance](../../../organize/cloud-governance.md). You might need to implement the [cloud platform](../../../organize/cloud-platform.md) or a [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) to define and apply certain technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../secure/teams-roles.md), [central IT](../../../organize/central-it.md), or [cloud operations](../../../organize/cloud-operations.md).
+**Roles or functions:** Azure governance originates from [cloud governance](../../../organize/cloud-governance.md). You might need to implement the [cloud platform](../../../organize/cloud-platform.md) or a [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) to define and apply certain technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../secure/teams-roles.md), central IT, or [cloud operations](../../../organize/cloud-operations.md).
 
 **Scope:** Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team can compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions can help you determine what to audit or enforce and what policies to automatically deploy.
 

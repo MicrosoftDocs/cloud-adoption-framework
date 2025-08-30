@@ -1,16 +1,18 @@
 ---
 title: Connectivity to other cloud providers
-description: Integrate an Azure enterprise-scale landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud Platform (GCP).
+description: Integrate an Azure enterprise-scale landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud.
 author: daltondhcp
 ms.author: jodahlbo
 ms.date: 05/26/2021
 ms.topic: conceptual
-ms.custom: think-tank
+ms.custom:
+  - think-tank
+  - sfi-image-nochange
 ---
 
 # Connectivity to other cloud providers
 
-This guidance discusses ways to connect an Azure landing zone architecture to other cloud providers, such as Amazon Web Services (AWS) and Google Cloud Platform (GCP).
+This guidance discusses ways to connect an Azure landing zone architecture to other cloud providers, such as Amazon Web Services (AWS) and Google Cloud.
 
 The various options differ in speed, latency, reliability, service-level agreements (SLAs), complexity, and costs. This article considers options and makes recommendations.
 

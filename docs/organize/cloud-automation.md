@@ -1,9 +1,10 @@
 ---
 title: Understand cloud automation functions
 description: Understand cloud automation functions, including the source of the functionality, the scope, and the deliverable.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/15/2020
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---
@@ -65,4 +66,4 @@ The cloud automation team should align activities with other areas of capability
 
 ## Next steps
 
-As essential cloud functions align, the collective teams can help develop necessary [technical skills](./suggested-skills.md).
+As essential cloud functions align, the collective teams can help develop necessary [technical skills](../plan/prepare-people-for-cloud.md).

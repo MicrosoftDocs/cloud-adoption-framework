@@ -65,13 +65,15 @@
       "ms.collection": {
         "scenarios/ai/**/*.md": "ce-skilling-ai-copilot"
       },
+      "ms.update-cycle": {
+        "scenarios/ai/**/*.md": "180-days"
+      },
       "ms.subservice": {
-        "adopt/**/*.md": "caf-methodology-adopt",
         "digital-estate/**/*.md": "caf-methodology-plan",
         "get-started/**/*.md": "caf-get-started",
         "govern/**/*.md": "caf-methodology-govern",
         "infrastructure/mainframe-migration/**/*.md": "caf-methodology-adopt",
-        "innovate/**/*.md": "caf-methodology-adopt-innovate",
+        "cloud-native/**/*.md": "caf-methodology-adopt",
         "manage/**/*.md": "caf-methodology-manage",
         "migrate/**/*.md": "caf-methodology-adopt-migrate",
         "modernize/**/*.md": "caf-methodology-adopt-modernize",

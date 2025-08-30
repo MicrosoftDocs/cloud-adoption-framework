@@ -1,7 +1,7 @@
 ---
 title: Infrastructure as Code
 description: Infrastructure as Code for Azure Landing Zones
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/22/2023
 ms.topic: conceptual
@@ -130,7 +130,7 @@ You have several options for publishing and sharing Terraform modules:
 
   - Azure native tools like Azure CLI, ARM Templates, and Bicep are fully supported by Microsoft, which allows their new features to be integrated faster.
 
-  - Non-native tools like Terraform allow you to manage infrastructure as code across multiple cloud providers like AWS or GCP. However, new Azure features can take some time to be included in non-native. If your organization is multicloud or your organization is already using and well-versed in Terraform, consider using Terraform to deploy Azure landing zones.
+  - Non-native tools like Terraform allow you to manage infrastructure as code across multiple cloud providers like AWS or Google Cloud. However, new Azure features can take some time to be included in non-native. If your organization is multicloud or your organization is already using and well-versed in Terraform, consider using Terraform to deploy Azure landing zones.
 
 - Since modules enable you to break complex templates into smaller sets of code, consider using IaC modules for resources that are commonly deployed together. You can ensure each module focuses on a specific task and is reusable for multiple deployments and workloads.
 
@@ -150,7 +150,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Use non-native tools for IaC in the following scenarios:
 
-  - Your organization currently uses Terraform to deploy infrastructure to other clouds like AWS or GCP.
+  - Your organization currently uses Terraform to deploy infrastructure to other clouds like AWS or Google Cloud.
 
   - Your organization doesn't need to have immediate support for all preview and GA versions of Azure services.
 

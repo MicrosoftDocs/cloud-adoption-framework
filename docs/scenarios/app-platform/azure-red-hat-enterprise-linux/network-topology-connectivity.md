@@ -1,8 +1,8 @@
 ---
 title: Network topology and connectivity considerations for Red Hat Enterprise Linux
 description: Learn about key design considerations and recommendations for network topology and connectivity in RHEL on Azure infrastructure.
-author: humblejay
-ms.author: kupole
+author: stephen-sumner
+ms.author: pnp
 ms.date: 07/24/2024
 ms.topic: conceptual
 ms.custom: e2e-alz
@@ -18,7 +18,7 @@ The following RHEL architecture is a starting point that you can further adapt t
 
 :::image type="content" source="images/network-topology-connectivity/landing-zone-architecture.png" alt-text="Diagram that shows a RHEL reference architecture." border="false" lightbox="images/network-topology-connectivity/landing-zone-architecture.png":::
 
-*Download a [Visio file](https://github.com/Microsoft/CloudAdoptionFramework/tree/main/scenarios/app-platform/azure-rhel/azure-landing-zone-rhel-full-view.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/azure-landing-zone-rhel-full-view.vsdx) of this architecture.*
 
 |      Element         |                Description                 |
 |:-------------:|:--------------------------------|

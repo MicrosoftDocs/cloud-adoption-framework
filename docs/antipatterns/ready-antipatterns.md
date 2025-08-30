@@ -1,9 +1,10 @@
 ---
 title: Cloud readiness antipatterns
 description: Avoid cloud adoption readiness antipatterns like using preview services, assuming built-in resiliency and availability, and assuming IT is ready for the cloud.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/19/2021
+ms.update-cycle: 1825-days
 ms.topic: conceptual
 ms.subservice: caf-methodology-ready
 ms.custom: think-tank,UpdateFrequency5
@@ -11,11 +12,11 @@ ms.custom: think-tank,UpdateFrequency5
 
 # Cloud readiness antipatterns
 
-Customers often experience antipatterns during the readiness phase of cloud adoption. These antipatterns can lead to unexpected downtime, disaster recovery problems, and availability issues.
+Organizations often experience antipatterns during the readiness phase of cloud adoption. These antipatterns can lead to unexpected downtime, disaster recovery problems, and availability issues.
 
 ## Antipattern: Assume released services are ready for production
 
-Because cloud computing is evolving rapidly, companies often release preview versions of new services. Customers tend to assume that they can use any available cloud service in a production environment. But, problems can result, for these reasons:
+Because cloud computing is evolving rapidly, organizations often release preview versions of new services. Organizations tend to assume that they can use any available cloud service in a production environment. But, problems can result, for these reasons:
 
 - Preview services usually don't provide uptime service-level agreements (SLAs).
 - New services often aren't as mature as cloud services that are already available.
@@ -37,7 +38,7 @@ Cloud computing often offers advantages over on-premises computing. Examples inc
 - **Increased resiliency:** Recovering after failure.
 - **Availability:** Running in a healthy state without significant downtime.
 
-Because most cloud services offer these advantages, many companies assume that all cloud services offer resiliency and high availability by default. In reality, these features are often only available at extra cost and with additional technical effort.
+Because most cloud services offer these advantages, many organizations assume that all cloud services offer resiliency and high availability by default. In reality, these features are often only available at extra cost and with additional technical effort.
 
 ### Example: Assume high availability
 
@@ -64,7 +65,7 @@ Engage in the essential process of *requirements engineering* when designing a c
 
 ## Antipattern: Become a cloud provider
 
-Some companies try to make their internal IT department a cloud provider. IT then becomes responsible for reference architectures. IT also needs to provide IaaS and PaaS to business units. Since this type of work isn't usually part of IT's core business, the resulting service offerings can lack usability, resiliency, efficiency, and security.
+Some organizations try to make their internal IT department a cloud provider. IT then becomes responsible for reference architectures. IT also needs to provide IaaS and PaaS to business units. Since this type of work isn't usually part of IT's core business, the resulting service offerings can lack usability, resiliency, efficiency, and security.
 
 ### Example: Provide monolithic managed cloud services
 
@@ -80,9 +81,7 @@ For several reasons, the CCoE then has trouble providing a monolithic managed se
 
 When adopting cloud technologies, have the IT department gain firsthand experience with the cloud by starting with IT workloads. Use the [Microsoft Cloud Adoption Framework for Azure](../index.yml) to identify your [first adoption project](../strategy/motivations.md).
 
-Use a mature [cloud operating model](../operating-model/compare.md) such as [centralized operations](../operating-model/compare.md#centralized-operations) that makes IT responsible for defining platform guardrails like governance. Then business units can adopt cloud projects in a secure and consistent manner, within the guardrails that IT defines.
-
-Consider adopting only one major public cloud provider at the start, because all major platforms differ significantly in setup, management, and usage.
+Choose the right [cloud operating model](../plan/prepare-organization-for-cloud.md#choose-how-to-manage-the-cloud). Consider adopting only one major public cloud provider at the start, because all major platforms differ significantly in setup, management, and usage.
 
 Use SaaS solutions as much as possible for IT tooling, such as:
 

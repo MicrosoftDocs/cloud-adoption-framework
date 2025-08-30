@@ -1,9 +1,10 @@
 ---
 title: Understand cloud migration functions
 description: Understand cloud migration functions.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/15/2020
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---
@@ -25,12 +26,6 @@ Regardless of the type or number of cloud migration teams, these teams generally
 ## Minimum scope
 
 The nucleus of all cloud adoption efforts is the cloud migration team. This team drives the technical changes that enable adoption. Depending on the objectives of the adoption effort, this team may include a diverse range of team members who handle a broad set of technical and business tasks.
-
-At a minimum, the team scope includes:
-
-- [Rationalization of the digital estate](../digital-estate/index.md)
-- Review, validation, and advancement of the [prioritized migration backlog](../migrate/migration-considerations/assess/release-iteration-backlog.md)
-- The execution of the [first workload](../digital-estate/rationalize.md#select-the-first-workload) as a learning opportunity.
 
 ## Deliverable
 
@@ -68,8 +63,6 @@ For optimal collaboration and efficiency, we recommend that cloud adoption teams
 ## Out of scope
 
 Additional support from existing IT staff may be needed. IT can be a valuable contributor to cloud adoption by becoming a cloud broker and a partner for innovation and business agility.
-
-- [Central IT team responsibilities](./central-it.md)
 
 ## What's next
 

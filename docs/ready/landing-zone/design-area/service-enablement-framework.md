@@ -1,10 +1,11 @@
 ---
 title: Service enablement framework
 description: Learn about adopting a service enablement framework. Achieving the right level of security and governance is an important part of your cloud adoption journey.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.reviewer: tozimmergren
 ms.date: 02/27/2025
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: internal, engagement-fy23, UpdateFrequency.5
 ---

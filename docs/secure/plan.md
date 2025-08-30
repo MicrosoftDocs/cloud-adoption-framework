@@ -1,6 +1,6 @@
 ---
 title: Plan for a Secure Cloud Adoption
-description: Learn how to adopt security best practices in your cloud adoption plan to help ensure a secure and compliant cloud environment. 
+description: Learn how to adopt security best practices in your cloud adoption plan to help ensure a secure and compliant cloud environment.
 author: claytonsiemens77
 ms.author: pnp
 ms.date: 10/23/2024

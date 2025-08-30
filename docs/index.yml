@@ -34,9 +34,9 @@ highlightedContent:
     - title: Azure landing zone
       itemType: how-to-guide
       url: ./ready/landing-zone/index.md    
-    - title: Adoption scenarios 
-      itemType: overview
-      url: ./overview.md#cloud-adoption-scenarios
+    - title: Azure credits for startups
+      itemType: get-started
+      url: https://www.microsoft.com/startups
 
 # Card with summary style
 
@@ -56,17 +56,26 @@ additionalContent:
         # Card
         - title: 📅 Plan
           summary: Prepare people, processes, and technology for Azure adoption.
-          url: ./plan/index.md
-
+          url: ./plan/prepare-organization-for-cloud.md
         # Card
         - title: 🛠️ Ready
           summary: Prepare your Azure environment and landing zone for workloads.
           url: ./ready/index.md
 
         # Card
-        - title: 🚀 Adopt
-          summary: Migrate, modernize, and innovate in Azure.
-          url: ./adopt/index.md
+        - title: ⬆️ Migrate
+          summary: Migrate your workloads to Azure from on-premises and other clouds.
+          url: ./migrate/plan-migration.md
+
+        # Card
+        - title: 🔄 Modernize
+          summary: Improve your existing workloads to better meet business needs.
+          url: ./modernize/prepare-organization-cloud-modernization.md
+        
+        # Card
+        - title: 🌐 Cloud-native
+          summary: Build new cloud-native workloads and features in Azure.
+          url: ./cloud-native/plan-cloud-native-solutions.md
 
         # Card
         - title: 🔐 Govern
@@ -103,7 +112,7 @@ additionalContent:
       items:
 
         # Card
-        - title: Azure Innovate & Azure Migrate and Modernize
+        - title: Azure Accelerate
           summary: Accelerate your cloud and AI adoption with experts from Microsoft.
           url: https://azure.microsoft.com/en-us/solutions/migration/migrate-modernize-innovate/
 

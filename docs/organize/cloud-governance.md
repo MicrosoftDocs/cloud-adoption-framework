@@ -1,9 +1,10 @@
 ---
 title: Understand cloud governance functions
 description: Understand the function of a cloud governance team, including the source, the scope, and the deliverable.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/15/2020
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---
@@ -46,7 +47,7 @@ These baseline functions help you identify risks related to current and future r
 Involve the following participants in cloud governance activities:
 
 - Leaders from middle management and direct contributors in key roles should represent the business and help evaluate risk tolerances.
-- The cloud governance functions are delivered by an extension of the [cloud strategy team](./cloud-strategy.md). Just as the CIO and business leaders are expected to participate in cloud strategy functions, their direct reports are expected to participate in cloud governance activities.
+- The cloud governance functions are delivered by an extension of the cloud strategy team. Just as the CIO and business leaders are expected to participate in cloud strategy functions, their direct reports are expected to participate in cloud governance activities.
 - Business employees that are members of the business unit who work closely with the leadership of the line-of-business should be empowered to make decisions regarding corporate and technical risk.
 - Information technology (IT) and information security (IS) employees who understand the technical aspects of the cloud transformation may serve in a rotating capacity instead of being a consistent provider of cloud governance functions.
 

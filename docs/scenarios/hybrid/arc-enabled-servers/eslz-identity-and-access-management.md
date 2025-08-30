@@ -5,7 +5,10 @@ author: chintalavr
 ms.author: vchintala
 ms.date: 11/12/2021
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank
+ms.custom:
+  - e2e-hybrid
+  - think-tank
+  - sfi-image-nochange
 ---
 
 # Identity and access management for Azure Arc-enabled servers

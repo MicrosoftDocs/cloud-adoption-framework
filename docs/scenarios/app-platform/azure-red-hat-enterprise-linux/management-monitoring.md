@@ -5,6 +5,7 @@ author: heisthesisko
 ms.author: joelsisk
 ms.topic: conceptual
 ms.date: 07/24/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Management and monitoring considerations for Red Hat Enterprise Linux on Azure

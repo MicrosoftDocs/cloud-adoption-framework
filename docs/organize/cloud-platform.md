@@ -1,9 +1,10 @@
 ---
 title: Understand cloud platform functions
 description: Understand cloud platform functions, including the source, the scope, and the deliverable.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 05/15/2020
+ms.update-cycle: 1095-days
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---
@@ -38,7 +39,6 @@ The skills needed to provide full platform functionality can be provided by:
 - [Financial models](../strategy/cloud-migration-business-case.md)
 - [Motivations for cloud adoption](../strategy/motivations.md)
 - [Business risks](../govern/policy-compliance/risk-tolerance.md)
-- [Rationalization of the digital estate](../digital-estate/index.md)
 
 ## Minimum scope
 
@@ -70,4 +70,4 @@ Cloud platform expertise usually comes from a working team. Expect participants 
 
 As your cloud platform becomes better defined, aligning [cloud automation functions](./cloud-automation.md) can accelerate adoption. It can also help establish best practices while reducing business and technical risks.
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties.

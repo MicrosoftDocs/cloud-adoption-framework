@@ -1,7 +1,7 @@
 ---
 title: Strategy for adopting unified operations
 description: Learn about strategic considerations of hybrid and multicloud operations.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 04/21/2021
 ms.topic: conceptual
@@ -57,7 +57,7 @@ Each dark blue dot represents a workload, and each light blue circle a business 
 
 - **Azure-first customer:** Most workloads have been moved to Azure. A few workloads stay on-premises. Strategic decisions have led to a few workloads living on the edge or in multicloud environments.
 
-- **Multicloud-first customer:** Most workloads are currently hosted on a different public cloud, like GCP or AWS. Strategic decisions have led to a few workloads living in Azure or on the edge. You may be moving from a *hybrid-first* mix to an *Azure-first* mix as your cloud strategy matures. We also support customers making strategic decisions to prioritize hybrid or multicloud mixes, and Azure plays a role in each mix.
+- **Multicloud-first customer:** Most workloads are currently hosted on a different public cloud, like Google Cloud or AWS. Strategic decisions have led to a few workloads living in Azure or on the edge. You may be moving from a *hybrid-first* mix to an *Azure-first* mix as your cloud strategy matures. We also support customers making strategic decisions to prioritize hybrid or multicloud mixes, and Azure plays a role in each mix.
 
 ## Unified operations key considerations
 

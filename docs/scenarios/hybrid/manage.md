@@ -1,7 +1,7 @@
 ---
 title: Manage your portfolio across hybrid and multicloud operations
 description: Implement effective controls to provide operations management across hybrid and multicloud deployments by using Azure's enterprise control plane.
-author: Zimmergren
+author: stephen-sumner
 ms.author: pnp
 ms.date: 02/01/2020
 ms.topic: conceptual
@@ -21,7 +21,7 @@ The following section outlines how you can apply the concept of unified operatio
 To get started with an operations baseline that spans on-premises and multiple cloud providers, complete an inventory and tagging exercise. This exercise will begin to extend your operations baselines in a few steps:
 
 - Add a tag for `hosting platform` to all hybrid, multicloud, and edge assets.
-- Tag resources from AWS, GCP, and so on.
+- Tag resources from AWS, Google Cloud, and so on.
 - Query your resources to discover where they're hosted.
 
 <!-- docutune:casing "update management guide" -->

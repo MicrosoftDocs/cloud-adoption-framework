@@ -29,7 +29,7 @@ Consistent deployment configurations enhance security, compliance, and operation
 
 Model monitoring ensures outputs align with Responsible AI principles and maintain accuracy over time. AI models experience drift due to changing data, user behaviors, or external factors that can lead to inaccurate results or ethical concerns. You must implement continuous monitoring to detect and address these changes proactively. Here's how:
 
-1. **Monitor model outputs for quality and alignment.** Monitoring processes ensure workloads remain aligned with responsible AI targets and deliver expected results. Use Azure AI Foundry's [observability features](/azure/ai-foundry/concepts/observability) and [monitor applications](/azure/ai-foundry/how-to/monitor-applications). For Azure AI Foundry Agent Service, [monitor agent deployments](/azure/ai-services/agents/how-to/metrics).
+1. **Monitor model outputs for quality and alignment.** Monitoring processes ensure workloads remain aligned with responsible AI targets and deliver expected results. Use Azure AI Foundry's [observability features](/azure/ai-foundry/concepts/observability) and [monitor applications](/azure/ai-foundry/how-to/monitor-applications). For Azure AI Foundry Agent Service, [monitor agent deployments](/azure/ai-foundry/agents/how-to/metrics).
 
 2. **Track model performance metrics continuously.** Performance monitoring helps pinpoint issues when accuracy or response quality drops below acceptable thresholds. Monitor latency in response times and accuracy of vector search results through [tracing](/azure/ai-studio/how-to/develop/trace-local-sdk) in Azure AI Foundry.
 

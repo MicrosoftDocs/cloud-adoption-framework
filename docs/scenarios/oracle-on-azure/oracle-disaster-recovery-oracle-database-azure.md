@@ -125,15 +125,19 @@ If you plan to use backups as your only solution for BCDR requirements, keep in 
   
   - **Use Storage services:** Use Storage services like Blob Storage, Azure Files, and Azure NetApp Files to mount storage as network file system (NFS) points on the database server and stream Oracle Recovery Manager (RMAN) backups to Storage.
 
-- **Long-term backup retention:** If your organization requires long-term backup retention, you can configure self-managed RMAN backups to Azure Storage.
+- **Configure long-term backup retention:** If your organization requires long-term backup retention, two solutions are available:
 
-- **Storage backup configurations:** When backups are configured to Storage services, consider the following recommendations:
+  - You can configure self-managed RMAN backups to Storage.
+
+  - You can use the ARS long-term backup feature. This feature uses OCI object storage as a destination even though you use the ARS service in Azure.
+
+- **Configure storage backup:** When backups are configured to Storage services, consider the following recommendations:
 
   - **Schedule with cron jobs:** Use cron jobs at the database-node level to schedule backups at specific times based on your backup strategy.
   
   - **Replicate backups:** Use underlying storage replication features from Azure like zone-redundant storage and geo-redundant storage to replicate backups.
 
-- **Back up and restore operations:** Manually back up Oracle Exadata Database@Azure VMs to restore critical files if there are accidental deletions or corruptions. For more information, see [Oracle Exadata Cloud Compute node backup and restore operations (document ID 2809393.1)](https://support.oracle.com/knowledge/Oracle%20Cloud/2809393_1.html).  
+- **Back up and restore operations:** Manually back up Oracle Exadata Database@Azure VMs to restore critical files if there are accidental deletions or corruptions. For more information, see [Oracle Exadata Cloud Compute node backup and restore operations (document ID 2809393.1)](https://support.oracle.com/knowledge/Oracle%20Cloud/2809393_1.html).
 
 ## Other recommendations
 

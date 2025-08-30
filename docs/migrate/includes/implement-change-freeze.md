@@ -1,0 +1,5 @@
+1. **Implement automated change controls in deployment pipelines.** Automated controls prevent unauthorized changes to production systems. Configure deployment pipelines to block releases to the source environment during the freeze window. Add approval gates in your CI/CD tools to enforce the freeze period. These controls prevent accidental deployments that could affect outcomes.
+
+2. **Document emergency change procedures.** Emergency procedures enable critical fixes while maintaining stability. Create specific criteria for emergency changes and define an expedited approval process. Include contact information for approvers and document required testing. These procedures balance system stability with business continuity requirements.
+
+3. **Monitor for unauthorized changes.** Change detection ensures freeze compliance throughout the change window. Configure alerts for file modifications, database schema changes, and application deployments. Use configuration management tools to track system state. This monitoring prevents undocumented changes from affecting success.

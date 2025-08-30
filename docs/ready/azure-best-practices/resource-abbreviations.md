@@ -70,6 +70,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Event Grid subscriptions | `Microsoft.EventGrid/eventSubscriptions` | `evgs` |
 | Event Grid topic | `Microsoft.EventGrid/domains/topics` | `evgt` |
 | Event Grid system topic | `Microsoft.EventGrid/systemTopics` | `egst` |
+| Fabric Capacity | `Microsoft.Fabric/capacities` | `fc` |
 | HDInsight - Hadoop cluster | `Microsoft.HDInsight/clusters` | `hadoop` |
 | HDInsight - HBase cluster | `Microsoft.HDInsight/clusters` | `hbase` |
 | HDInsight - Kafka cluster | `Microsoft.HDInsight/clusters` | `kafka` |
@@ -109,6 +110,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Proximity placement group | `Microsoft.Compute/proximityPlacementGroups` | `ppg` |
 | Restore point collection | `Microsoft.Compute/restorePointCollections` | `rpc` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap` |
+| Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
 | Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc` |
@@ -124,6 +126,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | AKS user node pool | `Microsoft.ContainerService/managedClusters/agentPools` (mode: `User`) | `np` |
 | Container apps | `Microsoft.App/containerApps` | `ca` |
 | Container apps environment | `Microsoft.App/managedEnvironments` | `cae` |
+| Container apps job | `Microsoft.App/jobs` | `caj` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
@@ -141,6 +144,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Cosmos DB for Apache Gremlin account | `Microsoft.DocumentDb/databaseAccounts` | `cosgrm`|
 | Azure Cosmos DB PostgreSQL cluster | `Microsoft.DBforPostgreSQL/serverGroupsv2` | `cospos`|
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis` |
+| Azure Managed Redis | `Microsoft.Cache/RedisEnterprise` | `amr` |
 | Azure SQL Database server | `Microsoft.Sql/servers` | `sql` |
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
 | Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
