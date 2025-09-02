@@ -10,13 +10,13 @@ ms.topic: conceptual
 
 # Deploy an enterprise-scale Azure landing zone for Azure Virtual Desktop
 
-Looking to deploy Azure Virtual Desktop at enterprise scale? This guide provides everything you need to to deploy Azure Virtual Desktop at enterprise scale. You learn how to configure governance, networking, and identity while leveraging proven accelerators that reduce deployment time from weeks to days.
+This guide provides everything you need to to deploy Azure Virtual Desktop at enterprise scale. You learn how to configure governance, networking, and identity while using a proven application landing zone accelerators for Azure Virtual Desktop that reduce deployment time.
 
 **What you'll accomplish:**
 
 - Set up enterprise-scale governance and security controls
 - Deploy the Azure Virtual Desktop accelerator with best practices built-in
-- Configure multi-region expansion for global users
+- Configure multi-region expansion for global users (optional)
 - Implement automated deployment pipelines
 
 **New to enterprise-scale landing zones?** Start with the [enterprise-scale overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) to understand the foundational concepts before proceeding with Azure Virtual Desktop deployment.
@@ -38,10 +38,10 @@ An enterprise-scale Azure landing zone ensures consistent governance, security, 
 
 ## Deploy the application landing zone accelerator for Azure Virtual Desktop
 
-The application landing zone accelerator provides Infrastructure as Code templates that implement enterprise-scale best practices, reducing deployment time and ensuring consistency across environments.
+The application landing zone accelerator for AZure Virtual Desktop provides Infrastructure as Code templates that implement enterprise-scale best practices, reducing deployment time and ensuring consistency across environments.
 
 > [!div class="nextstepaction"]
-> [Start Azure Virtual Desktop deployment](https://github.com/Azure/avdaccelerator)
+> [Deploy Azure Virtual Desktop to an application landing zone](https://github.com/Azure/avdaccelerator)
 
 1. **Use the application landing zone accelerator to deploy baseline Azure Virtual Desktop resources.** The accelerator includes proven Bicep and ARM templates for virtual networks, storage, and virtual machines. Access the [Azure Virtual Desktop accelerator on GitHub](https://github.com/Azure/avdaccelerator) and review the [deployment prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites) before starting.
 
@@ -57,9 +57,6 @@ Growing globally or need more capacity? Regional expansion provides scalability,
 
 **Scenario 1: Scale beyond capacity limits** - Add regions when your primary region reaches resource limits
 **Scenario 2: Improve user proximity** - Deploy closer to users for better performance and local connectivity
-
-> [!div class="nextstepaction"]
-> [Learn about multi-region networking patterns](/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-azure)
 
 ### Expand due to capacity limitations
 
