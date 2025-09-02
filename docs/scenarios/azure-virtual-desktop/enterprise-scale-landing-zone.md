@@ -79,7 +79,7 @@ A secondary region helps organizations scale Azure Virtual Desktop when the prim
 
 Deploying Azure Virtual Desktop closer to users and on-premises systems improves performance and reduces latency.
 
-1. **Deploy a new virtual network with non-overlapping IP address space.** This ensures clean routing and avoids IP conflicts with existing networks in other regions or on-premises.
+1. **Deploy a new virtual network with non-overlapping IP address space.** This configuration ensures clean routing and avoids IP conflicts with existing networks in other regions or on-premises.
 
 2. **Connect the new region to the local on-premises datacenter using VPN or ExpressRoute with private peering.** This setup enables users to access regional applications and services hosted in nearby datacenters. Use ExpressRoute for higher reliability and performance; see [configure ExpressRoute private peering](/azure/expressroute/configure-expressroute-private-peering) for details.
 
@@ -91,7 +91,7 @@ Deploying Azure Virtual Desktop closer to users and on-premises systems improves
 
 6. **Deploy Azure Virtual Desktop virtual machines in the new region.** Use the application landing zone accelerator for Azure Virtual Desktop to deploy session hosts and supporting infrastructure. Validate that regional dependencies are available.
 
-7. **Assign users to desktops in only one region.** This prevents profile duplication and ensures consistent user experience. Profiles are region-specific and must not be shared across regions.
+7. **Assign users to desktops in only one region.** This setup prevents profile duplication and ensures consistent user experience. Profiles are region-specific and must not be shared across regions.
 
 ## Continue your Azure Virtual Desktop journey
 
