@@ -93,11 +93,11 @@ Security controls protect Azure Arc-enabled servers and the resources they can a
 
 ### Certificate-based authentication (Recommended)
 
-1. **Deploy service principals with certificates.** Use a [Microsoft Entra service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) with certificate authentication for server onboarding. Certificates are the recommended authentication method over client secrets because they provide stronger security, support conditional access policies, and reduce credential exposure risk. Scope each principal to the minimum required resource group or subscription.
+**Deploy service principals with certificates.** Use a [Microsoft Entra service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) with certificate authentication for server onboarding. Certificates are the recommended authentication method over client secrets because they provide stronger security, support conditional access policies, and reduce credential exposure risk. Scope each principal to the minimum required resource group or subscription.
 
 ### Alternative authentication methods
 
-1. **Secure client secrets when certificates are not available.** If you use client secrets for service principals, make them short-lived, rotate them regularly, and restrict the principal's scope and permissions to reduce security exposure.
+**Secure client secrets when certificates are not available.** If you use client secrets for service principals, make them short-lived, rotate them regularly, and restrict the principal's scope and permissions to reduce security exposure.
 
 ### Role assignments and access control
 
