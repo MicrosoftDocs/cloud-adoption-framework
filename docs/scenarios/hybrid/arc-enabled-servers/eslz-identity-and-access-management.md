@@ -19,7 +19,7 @@ These identity management systems play an important role. They help designing an
 
 ## Managed identity
 
-At creation, the Microsoft Entra ID system-assigned identity can only be used to update the status of the Azure Arc-enabled servers, for example, the 'last seen' heartbeat. Grant identity access to Azure resources to enable applications on your server to access Azure resources, for example, to request secrets from a Key Vault. You should:
+At creation, the system-assigned Microsoft Entra managed identity is created and used by the Azure Connected Machine agent for management operations (for example, reporting heartbeats). The managed identity can also be granted Azure RBAC roles so applications and extensions on the server can request access tokens to call Azure resources (for example, to request secrets from Key Vault). By default the identity has no role assignments and cannot access other resources until you assign permissions. You should:
 
 - Consider which legitimate use-cases exist for server applications to [obtain access tokens](/azure/azure-arc/servers/managed-identity-authentication) and access Azure resources, while also planning for access control of these resources.
 - Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or [Hybrid Agent Extensions Applications group](/azure/azure-arc/servers/agent-overview#windows-agent-installation-details) on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
@@ -50,8 +50,8 @@ The following diagram shows a reference architecture that demonstrates the roles
 
 - **Server onboarding and administration**
   - Use security groups to assign local administrator rights to the identified users or service accounts on the servers to onboard to Azure Arc at scale.
-  - Use [Microsoft Entra service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to onboard servers to Azure Arc. Consider using multiple Microsoft Entra service principals in a decentralized operating model, where servers are managed by different IT teams.
-  - Use a short-lived Microsoft Entra service principal [client secrets](/entra/identity-platform/howto-create-service-principal-portal).
+  - Use [Microsoft Entra service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to onboard servers to Azure Arc. Consider using multiple Microsoft Entra service principals in a decentralized operating model, where servers are managed by different IT teams. Prefer certificates for service principals where possible and scope each principal to the minimum required resource group or subscription.
+  - If you must use client secrets for service principals, make them short-lived, rotate them regularly, and restrict the principal's scope and permissions.
   - Assign the [Azure Connected Machine Onboarding](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) role at the resource group level.
   - Use Microsoft Entra security groups and grant the [Hybrid Server Resource Administrator](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites) role. Grant the role to teams and individuals that will manage Azure Arc-enabled server resources in Azure.
 - **Microsoft Entra ID protected resource access**
