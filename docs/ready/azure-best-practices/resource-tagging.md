@@ -63,7 +63,7 @@ For Microsoft to use during workload assessment, apply existing tags that accura
 
 | Tag type | Examples |
 |--|--|
-| Functional | `app : catalogsearch1` <br> `tier : web` <br> `webserver : apache` <br> `env : prod` <br> `env : staging` <br> `env : dev` <br> `region : eastus` <br> `region : uksouth` |
+| Functional | `app : catalogsearch1` <br> `tier : web` <br> `webserver : apache` <br> `env : prod` <br> `env : staging` <br> `env : dev` <br> `region : eastus` <br> `region : uksouth` <br> `repo` : `<insert url>` |
 | Classification | `criticality : mission-critical` <br> `criticality : medium` <br> `criticality : low` <br> `confidentiality : private` <br> `sla : 24hours` |
 | Accounting | `department : finance` <br> `program : business-initiative` <br> `businesscenter : northamerica`<br> `budget : $200,000` <br> `costcenter : 55332`|
 | Purpose | `businessprocess : support` <br> `businessimpact : moderate` <br> `revenueimpact : high` |
