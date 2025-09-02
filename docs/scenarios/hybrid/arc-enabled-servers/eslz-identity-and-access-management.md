@@ -15,11 +15,13 @@ ms.custom:
 
 This article explains how to secure hybrid servers by combining on-premises and cloud identity and access controls. It helps you design access controls for Azure Arc-enabled servers to reduce risk and manage access consistently.
 
-Identity management systems play an important role. They help you design and implement reliable access controls for Azure Arc-enabled servers.
+Identity management systems play an important role. They help you design and implement reliable access controls for Azure Arc-enabled servers. The following diagram illustrates identities, roles, permissions, and action flows:
+
+[![Reference architecture diagram for Azure Arc-enabled servers showing identities, roles, permissions, and action flows.](./media/arc-enabled-servers-iam.png)](./media/arc-enabled-servers-iam.png#lightbox)
 
 ## Configure managed identities
 
-System-assigned managed identities provide secure authentication for Azure Arc-enabled servers without storing credentials. The Azure Connected Machine agent creates and uses these identities for management operations and can grant access to Azure resources when properly configured.
+System-assigned managed identities provide secure authentication for Azure Arc-enabled servers without storing credentials. The Azure Connected Machine agent creates these identities automatically during server onboarding, but they have no permissions by default and require explicit Azure RBAC role assignments to access Azure resources.
 
 1. **Identify legitimate use cases for managed identity access.** Applications on your servers need specific access tokens to call Azure resources like Key Vault or Storage. Plan access control for these resources before granting permissions to avoid security gaps.
 
@@ -39,12 +41,6 @@ Role-based access control limits user privileges and reduces security risks. Use
 
 Also consider the sensitive data that might be sent to the Azure Monitor Log Analytics workspace; apply the same RBAC principle to the data itself. Read access to Azure Arc-enabled servers can provide access to log data collected by the Log Analytics agent and stored in the associated Log Analytics workspace. Review how to implement granular Log Analytics workspace access in the [designing your Azure Monitor Logs deployment documentation](/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
 
-## Review architecture
-
-The following diagram shows a reference architecture for Azure Arc-enabled servers and illustrates identities, roles, permissions, and action flows:
-
-[![Reference architecture diagram for Azure Arc-enabled servers showing identities, roles, permissions, and action flows.](./media/arc-enabled-servers-iam.png)](./media/arc-enabled-servers-iam.png#lightbox)
-
 ## Plan identity and access responsibilities
 
 Organizational clarity prevents security gaps and operational conflicts. Clear role definitions ensure the right people have appropriate access to onboard and manage Azure Arc-enabled servers.
@@ -63,11 +59,11 @@ Security controls protect Azure Arc-enabled servers and the resources they can a
 
 1. **Configure secure server onboarding.** Use security groups to assign local administrator rights to identified users or service accounts for Azure Arc onboarding at scale. This approach provides consistent access control across your server fleet.
 
-2. **Deploy service principals with certificates.** Use a [Microsoft Entra service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) with certificate authentication for server onboarding. Certificates provide stronger security than client secrets and support conditional access policies. Scope each principal to the minimum required resource group or subscription.
+2. **Deploy service principals with certificates.** Use a [Microsoft Entra service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) with certificate authentication for server onboarding. Certificates are the recommended authentication method over client secrets because they provide stronger security, support conditional access policies, and reduce credential exposure risk. Scope each principal to the minimum required resource group or subscription.
 
 3. **Secure client secrets when certificates are not available.** If you use client secrets for service principals, make them short-lived, rotate them regularly, and restrict the principal's scope and permissions to reduce security exposure.
 
-4. **Apply appropriate role assignments.** Assign the [Azure Connected Machine Onboarding](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) role at the resource group level for onboarding operations. Grant the [Hybrid Server Resource Administrator](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites) role to teams who manage server resources in Azure.
+4. **Apply appropriate role assignments.** Assign the [Azure Connected Machine Onboarding](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) role at the resource group level for onboarding operations. Grant the [Azure Connected Machine Resource Administrator](/azure/role-based-access-control/built-in-roles/management-and-governance#azure-connected-machine-resource-administrator) role to teams who manage server resources in Azure.
 
 5. **Control managed identity access.** Use [managed identities](/azure/azure-arc/servers/managed-identity-authentication) for applications on servers to access Microsoft Entra protected resources. Restrict access to only authorized applications using Microsoft Entra application permissions.
 
