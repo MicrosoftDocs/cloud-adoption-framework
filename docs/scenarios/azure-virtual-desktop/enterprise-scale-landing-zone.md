@@ -1,7 +1,7 @@
 ---
 title: Enterprise-scale support for Azure Virtual Desktop
 description: Guidance to deploy Azure Virtual Desktop (AVD) using an enterprise-scale Azure landing zone, prepare identity, network, storage, and automation to scale AVD securely.
-author: wahidsaleemi
+author: stephen-sumner
 ms.author: pnp
 ms.date: 09/02/2025
 ms.topic: conceptual
@@ -18,7 +18,7 @@ This guide explains how to deploy Azure Virtual Desktop at enterprise scale. It 
 - Configure multi-region expansion for global users (optional)
 - Implement automated deployment pipelines
 
-**New to enterprise-scale landing zones?** Start with the [enterprise-scale overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) to understand the foundational concepts before proceeding with Azure Virtual Desktop deployment.
+**New to enterprise-scale Azure landing zone?** Start with the [enterprise-scale Azure landing zone overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) to understand the foundational concepts before proceeding with Azure Virtual Desktop deployment.
 
 :::image type="content" source="./media/accelerator-baseline-architecture.svg" alt-text="Enterprise-scale Azure Virtual Desktop landing zone architecture showing networking, storage, compute, management services, and on-premises connectivity via ExpressRoute and VPN." lightbox="./media/accelerator-baseline-architecture.svg" border="false":::
 
@@ -29,7 +29,7 @@ This guide explains how to deploy Azure Virtual Desktop at enterprise scale. It 
 An enterprise-scale Azure landing zone ensures consistent governance, security, and operational readiness across Azure environments. Complete this foundation before deploying Azure Virtual Desktop to ensure security and compliance requirements are met.
 
 > [!div class="nextstepaction"]
-> [Get started with enterprise-scale landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/)
+> [Get started with an enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/)
 
 1. **Deploy the enterprise-scale Azure landing zone.** This deployment includes identity, network, management, and security configurations that support scalable workloads. Use the [step-by-step deployment guide](/azure/cloud-adoption-framework/ready/enterprise-scale/) to configure your environment.
 
@@ -118,7 +118,7 @@ Maximize your Azure Virtual Desktop deployment with these essential design guide
 | Category | Tool | Why you need it |
 |----------|------|-------------|
 | 🚀 **Quick start** | [Azure Virtual Desktop accelerator](https://github.com/Azure/avdaccelerator) | Deploy production-ready AVD in hours, not weeks - includes Infrastructure as Code templates with enterprise-scale best practices built-in |
-| 🏗️ **Foundation** | [Enterprise-scale landing zones guide](../../ready/enterprise-scale/index.md) | Establish governance, security, and management capabilities that support scalable Azure Virtual Desktop deployments |
+| 🏗️ **Foundation** | [Enterprise-scale Azure landing zone guide](../../ready/enterprise-scale/index.md) | Establish governance, security, and management capabilities that support scalable Azure Virtual Desktop deployments |
 | ⚙️ **Automation** | [Bicep and PowerShell deployment scripts](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) | Automate your Azure Virtual Desktop deployments with proven Infrastructure as Code templates and CI/CD integration examples |
 
 > [!div class="nextstepaction"]
