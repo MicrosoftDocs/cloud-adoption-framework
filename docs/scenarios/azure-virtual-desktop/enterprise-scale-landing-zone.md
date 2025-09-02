@@ -48,7 +48,7 @@ The application landing zone accelerator for Azure Virtual Desktop provides Infr
 
 3. **Integrate with CI/CD pipelines for automated deployments.** Automate your Azure Virtual Desktop deployments using PowerShell or Azure CLI. Explore the [accelerator's Bicep automation examples](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) or deploy through the Azure portal for initial testing and validation.
 
-4. **Deploy custom images to standardize virtual machine configurations.** Create consistent virtual machine images with your required software, security configurations, and organizational policies. Store these images in [Azure Compute Gallery](/azure/virtual-machines/compute-gallery-overview) to reduce deployment time and ensure compliance across all session hosts.
+4. **Deploy custom images to standardize virtual machine configurations.** Create consistent virtual machine images with your required software, security configurations, and organizational policies. Store these images in [Azure Compute Gallery](/azure/virtual-machines/azure-compute-gallery) to reduce deployment time and ensure compliance across all session hosts.
 
 ## Expand Azure Virtual Desktop across regions
 
