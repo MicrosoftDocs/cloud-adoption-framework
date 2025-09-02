@@ -6,9 +6,12 @@ ms.author: guherk
 ms.date: 01/25/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
+ai-usage: ai-assisted
 --- 
 
 # Business continuity and disaster recovery considerations for Oracle Exadata Database@Azure
+
+Oracle Database@Azure provides robust business continuity and disaster recovery (BCDR) options to ensure the resilience and high availability of your critical workloads. This article provides an overview of key BCDR considerations, design strategies, and best practices for deploying Oracle Exadata Database@Azure. Learn how to build a secure and reliable architecture that meets your organization's requirements.
 
 ## Design considerations
 
@@ -18,7 +21,7 @@ ms.custom: e2e-oracle
 
 - Oracle Exadata Database@Azure provides native Oracle technologies, such as Oracle Real Application Clusters for high availability (HA) and Oracle Data Guard for DR. Data Guard and Active Data Guard are supported for DR architecture.
 
-- Oracle Exadata Database@Azure provides HA against database instance and hardware-level failures by default. This architecture aligns with the [MAA silver level](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-91572193-DF8E-4D7A-AF65-7A803B89E840). Planned maintenance operations can be conducted in a rolling manner. However, a default single-zone architecture has zero fault tolerance against site or regional failures.
+- Oracle Exadata Database@Azure provides HA against database instance and hardware-level failures by default. This architecture aligns with the [Oracle Maximum Availability Architecture (MAA) silver level](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-91572193-DF8E-4D7A-AF65-7A803B89E840). Planned maintenance operations can be conducted in a rolling manner. However, a default single-zone architecture has zero fault tolerance against site or regional failures.
 
 - The solution provides automated Data Guard configuration for DR. This setup helps protect from site failures by requiring another Oracle Exadata Database@Azure deployment in a different availability zone or region.
 
@@ -28,7 +31,7 @@ ms.custom: e2e-oracle
 
   - **OCI-managed backup:** This option includes two integrated solutions, which are Oracle Database Autonomous Recovery Service and Oracle Cloud Infrastructure Object Storage. These solutions are managed via the OCI console.
 
-    Autonomous Recovery Service is designed for enterprise-level mission-critical workloads that have stringent RTO and RPO requirements. It provides availability through service-level agreements. For more information, see [Oracle platform as a service and infrastructure as a service public cloud services pillar document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf).
+    Autonomous Recovery Service is designed for enterprise-level mission-critical workloads that have stringent recovery time objective (RTO) and recovery point objective (RPO) requirements. It provides availability through service-level agreements. For more information, see [Oracle platform as a service and infrastructure as a service public cloud services pillar document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf).
 
     OCI Object Storage is a general-purpose backup solution that's suitable for workloads that have less stringent RTO or RPO requirements.
 
