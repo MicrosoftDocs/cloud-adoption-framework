@@ -20,5 +20,6 @@ The following articles help guide you through the process of creating a network 
 | [Application connectivity design](application-connectivity-design.md) | Guidance on how to connect your application tier to Oracle Exadata Database@Azure.                                                            |
 | [Business continuity and disaster recovery (BCDR) connectivity design](business-continuity-disaster-recovery-connectivity-design.md)        | Strategies for how to establish in-region and cross-region redundancy.                                                                                        |
 | [Migration connectivity design](migration-connectivity-design.md)   | Approaches and best practices for how to integrate your current source environment with Oracle Exadata Database@Azure for migration scenarios. |
+| [Azure Arc connectivity design](azure-arc-connectivity-design.md) | Network connectivity requirements and configuration guidance for enabling Azure Arc on Oracle Database@Azure infrastructure. |
 
 Start with the [core network design](core-network-design.md) guidance, which introduces foundational networking principles and constraints for Oracle Exadata Database@Azure. Complete this step before you explore application connectivity, BCDR, or migration scenarios.

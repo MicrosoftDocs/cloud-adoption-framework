@@ -4,7 +4,7 @@ description: Learn about best practices for applying multiple defense mechanisms
 author: basimolimajeed
 ms.author: bamajeed
 ms.reviewer: janfaurs
-ms.date: 02/10/2025
+ms.date: 09/01/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
@@ -26,6 +26,16 @@ Consider the following guidance when you design security measures for Oracle Exa
 - Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud Infrastructure (OCI), which is colocated in Microsoft datacenters. 
 
   To manage Oracle Exadata Database@Azure resources, you need to integrate the Azure and OCI cloud platforms. Govern each platform with their respective security best practices. The Azure control plane manages the provisioning of the infrastructure, including the virtual machine (VM) cluster and network connectivity. The OCI console handles database management and individual node management.
+
+- Azure Arc integration for security monitoring: Oracle Exadata Database@Azure infrastructure can be onboarded to [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) to enable unified security management through [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). This integration provides additional security visibility and threat protection without interfering with existing OCI management operations or database performance.
+
+- Azure Arc regional availability: Azure Arc-enabled servers is available in specific Azure regions. Before planning Arc integration, verify that your Oracle Database@Azure deployment regions support Azure Arc. For current regional availability, see [Azure Arc-enabled servers supported regions](/azure/azure-arc/servers/overview#supported-regions).
+
+- Hybrid security monitoring architecture: When you enable Azure Arc on Oracle Exadata Database@Azure nodes, you create a hybrid monitoring environment that combines Azure-native security capabilities with existing Oracle security controls. Plan for this dual-security approach to ensure comprehensive coverage while avoiding overlapping or conflicting security policies.
+
+- Network connectivity for Arc agents: Azure Arc agents require outbound HTTPS connectivity to specific Azure endpoints. For detailed connectivity requirements, see [Network requirements for Azure Arc-enabled servers](/azure/azure-arc/servers/network-requirements). Consider how this connectivity integrates with existing network security controls without modifying existing subnet delegation or OCI management traffic flows.
+
+- Microsoft Defender for Cloud integration: Arc-enabled Oracle Exadata Database@Azure infrastructure can leverage Microsoft Defender for servers to provide advanced threat protection, vulnerability assessment, and security baseline compliance. This integration complements existing Oracle Advanced Security features and OCI security controls.
 
 - Oracle Database@Azure is integrated into Azure virtual networks through subnet delegation.
 
@@ -72,8 +82,32 @@ Consider the following security recommendations when you design your Oracle Exad
 
 - Install non-Microsoft or Oracle agents on Oracle Exadata Database@Azure in locations where database or grid infrastructure patches don't interfere with them. 
 
+- **Enable Azure Arc for enhanced security posture**: You can onboard Oracle Exadata Database@Azure VM cluster nodes to Azure Arc to enable Microsoft Defender for Cloud monitoring. For detailed onboarding procedures, see [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). This integration provides:
+  - Advanced threat detection through [Microsoft Defender for servers](/azure/defender-for-cloud/defender-for-servers-introduction)
+  - [Vulnerability assessment](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) for underlying infrastructure
+  - Integration with [Microsoft Sentinel](/azure/sentinel/overview) for comprehensive SIEM capabilities
+
+- **Configure Arc connectivity with security controls**: Ensure outbound connectivity to Azure Arc endpoints while maintaining existing security posture. For complete endpoint list and requirements, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements):
+  - Route Arc traffic through existing Azure Firewall ([Access Azure services over Azure Firewall Explicit Proxy (Public Preview)
+](/azure/azure-arc/azure-firewall-explicit-proxy))  or network virtual appliances
+  - Maintain existing NSG configurations and subnet delegation without modifications
+  - Preserve OCI-managed security group functionality
+
+- **Implement hybrid security monitoring**: Establish monitoring practices that combine Azure Arc security insights with existing Oracle security controls:
+  - Configure [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-workspace-overview) to collect security events from Arc-enabled nodes
+  - Integrate [Defender for Cloud alerts](/azure/defender-for-cloud/managing-and-responding-alerts) with existing Oracle Enterprise Manager monitoring
+  - Apply [Azure Policy security baselines](/azure/governance/policy/samples/gov-sec-baseline) that complement Oracle security configurations
+  - Ensure security event correlation across both Azure and OCI management planes
+
+- **Maintain compliance across security platforms**: When you implement Arc integration, ensure that security compliance requirements are met. For Azure compliance guidance, see [Azure Arc security overview](/azure/azure-arc/servers/security-overview):
+  - Apply [Azure Policy for Arc-enabled servers](/azure/azure-arc/servers/security-controls-policy) for security baseline compliance
+  - Maintain existing Oracle security compliance controls and audit trails
+
 ## Next steps
 
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
 - [Business continuity and disaster recovery for Oracle Database@Azure](oracle-disaster-recovery-oracle-database-azure.md)
+- [Manage and monitor Oracle Database@Azure](oracle-manage-monitor-oracle-database-azure.md)
+- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) 

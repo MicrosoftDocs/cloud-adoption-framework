@@ -4,7 +4,7 @@ description: Learn how to design your identity and access management approach fo
 author: sihbher
 ms.author: gereyeso
 ms.reviewer: janfaurs
-ms.date: 01/31/2025
+ms.date: 09/01/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
@@ -15,7 +15,7 @@ This article builds on the guidance in [Identity and access management](/azure/c
 
 Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud Infrastructure (OCI) and is colocated in Azure datacenters at Microsoft. Microsoft and OCI jointly provide this offering, which requires you to manage identities and role-based access control (RBAC) across both platforms. This guide outlines best practices for identity and access management to create consistent deployment patterns for Oracle Autonomous Database@Azure and Oracle Exadata Database@Azure.
 
-## Considerations
+## Design Considerations
 
 - Accept and enable the Oracle Database@Azure [private offer](/marketplace/private-offers-overview) on Azure Marketplace for your subscription. You must have the Contributor role for the subscription to deploy the Oracle Database@Azure service. For more information, see [Set up identity federation](https://docs.oracle.com/iaas/Content/database-at-azure/oaaonboard-task-8.htm#oaaonboard_task_8). If your operational model is aligned with Azure landing zone principles, the individual application development team that requires Oracle Database@Azure services manages the process. If your organization uses a centralized model, the platform team might need to handle parts of the process.
 
@@ -29,6 +29,10 @@ Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud In
 
 - Federation to non-Microsoft identity providers or Microsoft Active Directory is supported. For more information about security recommendations beyond federation of identity and RBAC, see [Security guidelines for Oracle Database@Azure](./oracle-security-overview-odaa.md).
 
+- Azure Arc service principal requirements: When you enable Azure Arc for Oracle Exadata Database@Azure infrastructure, you need dedicated service principals for Arc agent authentication and Azure resource management. These service principals require specific permissions for Arc onboarding and ongoing management operations.
+
+- Hybrid identity integration: Azure Arc integration creates additional identity touch points between Azure and OCI. Plan for service principal lifecycle management, including credential rotation and permission updates, that don't interfere with existing OCI identity federation.
+
 ## Design recommendations
 
 - [Implement federation between Azure and OCI](https://docs.oracle.com/iaas/Content/Identity/tutorials/azure_ad/lifecycle_azure/01-config-azure-template.htm#config-azure-template), including single sign-on and replication of users and groups.
@@ -38,6 +42,13 @@ Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud In
 - When you provision a new account and tenant, an Admin user role is created in OCI. Avoid using this Admin identity for day-to-day operations. Instead, use Microsoft Entra administrator groups to provide elevated access for the relevant individuals.
 
 - Use Azure RBAC to control users' access to Oracle Database@Azure resources. Follow the principle of least privilege when you assign users to Database@Azure roles.
+
+- **Create dedicated service principals for Azure Arc**: Establish service principals specifically for Arc agent onboarding and management. For detailed role requirements, see [Create a service principal for onboarding at scale](/azure/azure-arc/servers/onboard-service-principal):
+  - Assign the [Azure Connected Machine Onboarding](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role for Arc agent registration
+  - Grant [Log Analytics Contributor](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) permissions if using centralized workspace monitoring
+  - Implement credential rotation policies that align with your existing Azure identity governance
+
+- **Configure Arc agent authentication**: Use [managed identity authentication](/azure/azure-arc/servers/managed-identity-authentication) where possible for Arc agents to minimize credential management overhead. For environments requiring service principal authentication, store credentials securely using [Azure Key Vault](/azure/key-vault/general/overview) or existing enterprise credential management systems.
 
 - To help ensure that Microsoft Entra ID-based users are secure, follow [identity management and access control best practices](/azure/security/fundamentals/identity-management-best-practices). When you help secure your Microsoft Entra ID-based users, enable [identity protection](/entra/id-protection/overview-identity-protection). Validate your security measures by using the [security checklist](/azure/security/fundamentals/steps-secure-identity) for identity and access management.
 

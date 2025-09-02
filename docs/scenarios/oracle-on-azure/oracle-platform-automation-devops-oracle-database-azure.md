@@ -28,6 +28,10 @@ Multiple Terraform providers support Oracle Exadata Database@Azure infrastructur
 | [azuread](https://registry.terraform.io/providers/hashicorp/azuread/latest) | The AzureAD provider manages users, groups, service principals, and applications in Microsoft Entra ID through the Microsoft Graph API. |
 | [oci](https://registry.terraform.io/providers/oracle/oci/latest) | The OCI Terraform provider manages OCI resources through Terraform. This provider supports various OCI services and works with Terraform Cloud and OCI Resource Manager to automate deployment and operations. |
 
+### Azure Arc integration with infrastructure as code
+
+Azure Arc onboarding and management can be automated as part of your Oracle Exadata Database@Azure infrastructure deployment. Integration with Azure Arc enables unified governance and security monitoring while maintaining existing OCI database management capabilities.
+
 ## Use Azure Verified Modules
 
 Azure Verified Modules provide standardized deployment templates for Oracle Database@Azure infrastructure. These modules help ensure compliance with Azure best practices for reliability and security. Deploy Oracle Database@Azure infrastructure by using the available Azure Verified Modules. [Azure Verified Modules](https://aka.ms/avm) provide prebuilt templates for Oracle Exadata Database@Azure infrastructure and clusters. These modules follow the [Azure Well-Architected Framework](/azure/well-architected/) principles to help ensure reliable and secure deployments.
@@ -37,6 +41,7 @@ Azure Verified Modules provide standardized deployment templates for Oracle Data
 | [avm-res-oracledatabase-cloudexadatainfrastructure](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudexadatainfrastructure/azurerm/latest) | Terraform | [Resource](https://azure.github.io/Azure-Verified-Modules/specs/shared/module-classifications/) | Deploys Oracle Exadata Database@Azure infrastructure. |
 | [avm-res-oracledatabase-cloudvmcluster](https://registry.terraform.io/modules/Azure/avm-res-oracledatabase-cloudvmcluster/azurerm/latest) | Terraform | [Resource](https://azure.github.io/Azure-Verified-Modules/specs/shared/module-classifications/) | Deploys Oracle Exadata Database@Azure virtual machine (VM) clusters. |
 | [avm-res-network-virtualnetwork](https://registry.terraform.io/modules/Azure/avm-res-network-virtualnetwork/azurerm/latest) | Terraform | [Resource](https://azure.github.io/Azure-Verified-Modules/specs/shared/module-classifications/) | Deploys an Azure Virtual Network instance that has subnets. |
+| [avm-res-operationalinsights-workspace](https://registry.terraform.io/modules/Azure/avm-res-operationalinsights-workspace/azurerm/latest) | Terraform | [Resource](https://azure.github.io/Azure-Verified-Modules/specs/shared/module-classifications/) | Deploys Log Analytics workspace for Azure Arc monitoring integration and diagnostics settings. |
 | [avm-ptn-odaa](https://registry.terraform.io/modules/Azure/avm-ptn-odaa/azurerm/latest) | Terraform | [Pattern](https://azure.github.io/Azure-Verified-Modules/specs/shared/module-classifications/) | Deploys a Virtual Network instance that has an Oracle delegated subnet, Exadata infrastructure, and an Exadata VM cluster. |
 
 ## Use Terraform templates from Oracle
@@ -84,6 +89,9 @@ OCI Terraform is required to configure Exadata after the infrastructure is deplo
 | IaC | [AzureRM Terraform provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest) | Native Azure resource management for Oracle Database@Azure deployments |
 | IaC | [AzAPI Terraform provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs) | Resource Manager REST API integration for the latest Oracle Database@Azure features |
 | Configuration management | [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest) | Configuration and management of Oracle components within Azure deployments |
+| Diagnostic Logs for Oracle Exadata Database Service @ Azure| [Oracle Exadata Database Service@ Azure logs with Azure Monitor](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-exadata-database-dedicated-infrastructure-logs) | Oracle Exadata Database on dedicated infrastructure logs on Azure for Enhanced Observability |
+| Hybrid management | [Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview) | Extends Azure management capabilities to Oracle Database@Azure infrastructure |
+| Security monitoring | [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction) | Provides unified security monitoring for 
 
 ## Next step
 
