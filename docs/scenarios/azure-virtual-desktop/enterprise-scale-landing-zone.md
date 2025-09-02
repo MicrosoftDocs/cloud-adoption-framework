@@ -22,7 +22,7 @@ This guide explains how to deploy Azure Virtual Desktop at enterprise scale. It 
 
 :::image type="content" source="./media/accelerator-baseline-architecture.svg" alt-text="Enterprise-scale Azure Virtual Desktop landing zone architecture showing networking, storage, compute, management services, and on-premises connectivity via ExpressRoute and VPN." lightbox="./media/accelerator-baseline-architecture.svg" border="false":::
 
-*Download a [Visio file](https://arch-center.azureedge.net/accelerator-baseline-architecture.vsdx) of this multi-region architecture of a Azure Virtual Desktop deployment in an enterprise-scale Azure landing zone.*
+*Download a [Visio file](https://arch-center.azureedge.net/accelerator-baseline-architecture.vsdx) of this multi-region architecture of an Azure Virtual Desktop deployment in an enterprise-scale Azure landing zone.*
 
 ## Establish a scalable and compliant enterprise-scale Azure landing zone
 
