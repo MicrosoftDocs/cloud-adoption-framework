@@ -1,16 +1,15 @@
 ---
 title: Enterprise-scale support for Azure Virtual Desktop
-description: Guidance to deploy Azure Virtual Desktop using an enterprise-scale Azure landing zone, prepare identity, network, storage, and automation to scale AVD securely.
+description: Guidance to deploy Azure Virtual Desktop (AVD) using an enterprise-scale Azure landing zone, prepare identity, network, storage, and automation to scale AVD securely.
 author: wahidsaleemi
 ms.author: pnp
-ms.reviewer: tozimmergren
-ms.date: 02/17/2023
+ms.date: 09/02/2025
 ms.topic: conceptual
 ---
 
 # Deploy an enterprise-scale Azure landing zone for Azure Virtual Desktop
 
-This guide provides everything you need to to deploy Azure Virtual Desktop at enterprise scale. You learn how to configure governance, networking, and identity while using a proven application landing zone accelerators for Azure Virtual Desktop that reduce deployment time.
+This guide explains how to deploy Azure Virtual Desktop at enterprise scale. It describes how to use the application landing zone accelerator for Azure Virtual Desktop to shorten deployment time and apply enterprise governance, security, networking, and automation patterns. Follow this guidance to standardize deployments, enforce compliance controls, and scale AVD across regions with predictable operations.
 
 **What you'll accomplish:**
 
@@ -23,7 +22,7 @@ This guide provides everything you need to to deploy Azure Virtual Desktop at en
 
 :::image type="content" source="./media/accelerator-baseline-architecture.svg" alt-text="Enterprise-scale Azure Virtual Desktop landing zone architecture showing networking, storage, compute, management services, and on-premises connectivity via ExpressRoute and VPN." lightbox="./media/accelerator-baseline-architecture.svg" border="false":::
 
-*Download a [Visio file](https://arch-center.azureedge.net/accelerator-baseline-architecture.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/accelerator-baseline-architecture.vsdx) of this multi-region architecture of a Azure Virtual Desktop deployment in an enterprise-scale Azure landing zone.*
 
 ## Establish a scalable and compliant enterprise-scale Azure landing zone
 
@@ -38,7 +37,7 @@ An enterprise-scale Azure landing zone ensures consistent governance, security, 
 
 ## Deploy the application landing zone accelerator for Azure Virtual Desktop
 
-The application landing zone accelerator for AZure Virtual Desktop provides Infrastructure as Code templates that implement enterprise-scale best practices, reducing deployment time and ensuring consistency across environments.
+The application landing zone accelerator for Azure Virtual Desktop provides Infrastructure as Code templates that implement enterprise-scale best practices, reducing deployment time and ensuring consistency across environments.
 
 > [!div class="nextstepaction"]
 > [Deploy Azure Virtual Desktop to an application landing zone](https://github.com/Azure/avdaccelerator)
@@ -62,7 +61,7 @@ Growing globally or need more capacity? Regional expansion provides scalability,
 
 A secondary region helps organizations scale Azure Virtual Desktop when the primary region reaches capacity limits.
 
-1. **Deploy a new virtual network with non-overlapping IP address space.** This configuration prevents routing conflicts and ensures clean peering between regions. Use CIDR blocks that do not overlap with existing virtual networks in the primary region.
+1. **Deploy a new virtual network with non-overlapping IP address space.** This configuration prevents routing conflicts and ensures clean peering between regions. Use CIDR blocks that don't overlap with existing virtual networks in the primary region.
 
 2. **Connect the new region to the primary region using [global VNet peering](/azure/virtual-network/virtual-network-peering-overview) with [gateway transit](/azure/vpn-gateway/vpn-gateway-peering-gateway-transit) enabled.** Gateway transit allows the new region to access shared on-premises resources through VPN or ExpressRoute. This setup supports centralized connectivity and avoids duplicating network infrastructure.
 
@@ -84,9 +83,9 @@ Deploying Azure Virtual Desktop closer to users and on-premises systems improves
 
 2. **Connect the new region to the local on-premises datacenter using VPN or ExpressRoute with private peering.** This setup enables users to access regional applications and services hosted in nearby datacenters. Use ExpressRoute for higher reliability and performance; see [configure ExpressRoute private peering](/azure/expressroute/configure-expressroute-private-peering) for details.
 
-3. **Provision regional storage for user profiles.** Store [FSLogix profile containers](/azure/virtual-desktop/fslogix-profile-containers) in the same region as the session hosts to reduce latency and improve login performance. Avoid cross-region profile access.
+3. **Provision regional storage for user profiles.** Store [FSLogix profile containers](/azure/virtual-desktop/fslogix-profile-containers) in the same region as the session hosts to reduce latency and improve sign-in performance. Avoid cross-region profile access.
 
-4. **(Optional) Deploy a Domain Controller in the new region.** This supports local authentication and reduces dependency on cross-region identity services.
+4. **(Optional) Deploy a Domain Controller in the new region.** This setup supports local authentication and reduces dependency on cross-region identity services.
 
 5. **Configure outbound internet connectivity in the new region.** Use [NSGs](/azure/virtual-network/network-security-groups-overview), NVAs, or [Azure Firewall](/azure/firewall/overview) to enforce consistent security policies and manage internet-bound traffic.
 
@@ -110,7 +109,7 @@ Maximize your Azure Virtual Desktop deployment with these essential design guide
 - [⚙️ Platform automation and DevOps](./eslz-platform-automation-and-devops.md) - Streamline automation and deployment pipelines
 
 > [!TIP]
-> **Start with identity and networking** if you're new to enterprise-scale patterns. These foundational areas impact all other design decisions.
+> **Start with identity and networking** if you're new to enterprise-scale patterns. These foundational areas affect all other design decisions.
 
 ## Azure tools and resources
 
