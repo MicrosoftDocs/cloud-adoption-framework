@@ -23,3 +23,13 @@ The following articles help guide you through the process of creating a network 
 | [Azure Arc connectivity design](azure-arc-connectivity-design.md) | Network connectivity requirements and configuration guidance for enabling Azure Arc on Oracle Database@Azure infrastructure. |
 
 Start with the [core network design](core-network-design.md) guidance, which introduces foundational networking principles and constraints for Oracle Exadata Database@Azure. Complete this step before you explore application connectivity, BCDR, or migration scenarios.
+
+## Network Security Groups (NSGs) considerations
+
+When planning network security for Oracle Database@Azure, consider the following NSG-related guidance:
+
+- Network Security Groups (NSGs) security considerations: NSG support depends on network features configuration. When using NSGs on Azure-delegated subnets, review security rules configured on the Oracle (OCI) side to avoid conflicts that can lead to access issues or operational disruptions. For complete network planning and NSG configuration details, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan).
+
+- For advanced networking capabilities and features, see [Oracle Database@Azure advanced networking features](/azure/oracle/oracle-db/oracle-database-network-plan#advanced-networking-features).
+
+- The Oracle Exadata Database@Azure solution uses a predefined list of [Transmission Control Protocol (TCP) ports](https://docs.public.content.oci.oraclecloud.com/en-us/iaas/exadatacloud/doc/ecs-security-guide.html#ECSCM-GUID-93DD9F98-AC6F-4538-AE78-13399C1C02A7). By default, these ports are inaccessible from other subnets because the NSGs within OCI manage them.
