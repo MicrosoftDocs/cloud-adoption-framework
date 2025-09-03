@@ -15,7 +15,7 @@ This article provides network connectivity requirements and configuration guidan
 
 ## Overview
 
-Azure Arc-enabled servers extend Azure management capabilities to Oracle Exadata Database@Azure VM cluster nodes without modifying existing subnet delegation or OCI management traffic flows. This integration provides additional security monitoring through Microsoft Defender for Cloud and governance through Azure Policy while maintaining full compatibility with existing Oracle security controls and management operations.
+Azure Arc-enabled servers extend Azure management capabilities to Oracle Exadata Database@Azure virtual machine (VM) cluster nodes without modifying existing subnet delegation or OCI management traffic flows. This integration provides more security monitoring through Microsoft Defender for Cloud and governance through Azure Policy while maintaining full compatibility with existing Oracle security controls and management operations.
 
 ## Design considerations
 
@@ -25,11 +25,11 @@ Consider the following guidance when designing Azure Arc connectivity for Oracle
 
 - **Network topology preservation**: Azure Arc integration operates within the existing Oracle Database@Azure network constraints:
   - Maintains existing subnet delegation to OCI
-  - Preserves client subnet configurations without NSG support  
+  - Preserves client subnet configurations without Network Security Group (NSG) support  
   - Works with existing private endpoint configurations
-  - Does not require inbound internet access or modifications to existing security groups
+  - Doesn't require inbound internet access or modifications to existing security groups
 
-- **Regional endpoint considerations**: Azure Arc service endpoints vary by Azure region. Ensure that Arc connectivity endpoints are available in your Oracle Database@Azure deployment region. Cross-region Arc connectivity may introduce latency and compliance considerations.
+- **Regional endpoint considerations**: Azure Arc service endpoints vary by Azure region. Ensure that Arc connectivity endpoints are available in your Oracle Database@Azure deployment region. Cross-region Arc connectivity can introduce latency and compliance considerations.
 
 - **Firewall integration strategies**: Plan Arc connectivity through existing network security infrastructure:
   - Route Arc traffic through Azure Firewall using [explicit proxy configurations](/azure/azure-arc/azure-firewall-explicit-proxy) 
@@ -44,7 +44,7 @@ Consider the following guidance when designing Azure Arc connectivity for Oracle
   - Policy evaluation and compliance reporting
   - Security assessment data transmission
 
-- **TLS inspection compatibility**: If your organization uses TLS inspection, note that the Azure Connected Machine agent doesn't use certificate pinning and will work with TLS inspection services. However, some Azure Arc extensions may require exclusion from TLS inspection. For details, see [Network security for Azure Arc-enabled servers](/azure/azure-arc/servers/security-networking).
+- **Transport Layer Security (TLS) inspection compatibility**: If your organization uses TLS inspection the Azure Connected Machine agent doesn't use certificate pinning and works with TLS inspection services. However, some Azure Arc extensions require exclusion from TLS inspection. For details, see [Network security for Azure Arc-enabled servers](/azure/azure-arc/servers/security-networking).
 
 ### Microsoft Defender for Cloud integration
 
@@ -52,7 +52,7 @@ Consider the following guidance when designing Azure Arc connectivity for Oracle
 
 - **Configure Defender data collection**: Set up [Defender data collection rules](/azure/defender-for-cloud/defender-for-servers-introduction#data-collection) to complement existing Oracle monitoring. For detailed configuration, see [Configure data collection for Defender for servers](/azure/defender-for-cloud/configure-servers-coverage).
 
-- **Security endpoint requirements**: Review [Azure Arc network requirements](/azure/azure-arc/servers/network-requirements) and ensure accessibility through existing Arc connectivity. For Microsoft Sentinel integration endpoints, see [Sentinel network requirements](/azure/sentinel/connect-services-diagnostic-setting-based).
+- **Security endpoint requirements**: Review [Azure Arc network requirements](/azure/azure-arc/servers/network-requirements) and ensure accessibility through existing Arc connectivity. For Microsoft Sentinel integration endpoints, see [Microsoft Sentinel network requirements](/azure/sentinel/connect-services-diagnostic-setting-based).
 
 ## Design recommendations
 
@@ -104,7 +104,7 @@ Implement the following network connectivity recommendations for Azure Arc integ
 - **Document network dependencies**: Maintain clear documentation of Arc network requirements:
   - Arc service endpoint dependencies by Azure region
   - Network path requirements and bandwidth utilization
-  - Integration points with existing network security controls
+  - Integration point with existing network security controls
   - Troubleshooting procedures for Arc connectivity issues
 
 ### Governance and compliance integration
@@ -126,17 +126,17 @@ The following table summarizes key Azure Arc service endpoints by category:
 | Azure Policy | Compliance evaluation | HTTPS/443 outbound |
 
 > [!NOTE]
-> Specific endpoint URLs vary by Azure region. For complete regional endpoint lists, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements). To simplify endpoint management, consider using [Azure Arc gateway (preview)](/azure/azure-arc/servers/arc-gateway) which reduces required endpoints to seven FQDNs. For organizations requiring private connectivity, see [Private Link security for Azure Arc](/azure/azure-arc/servers/private-link-security).
+> Specific endpoint URLs vary by Azure region. For complete regional endpoint lists, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements). To simplify endpoint management, consider using [Azure Arc gateway (preview)](/azure/azure-arc/servers/arc-gateway) which reduces required endpoints to seven Fully Qualified Domain Names (FQDNs). For organizations requiring private connectivity, see [Private Link security for Azure Arc](/azure/azure-arc/servers/private-link-security).
 
 ## Implementation guidance
 
-### Pre-deployment network validation
+### Predeployment network validation
 
 Before enabling Azure Arc on Oracle Exadata Database@Azure infrastructure:
 
 1. **Validate outbound connectivity**: Test connectivity from VM cluster nodes to required Azure Arc endpoints:
    - Use network connectivity testing tools to verify HTTPS/443 access
-   - Validate DNS resolution for Arc service endpoints
+   - Validate Domain Name System (DNS) resolution for Arc service endpoints
    - Confirm that existing firewall rules don't block required endpoints
 
 2. **Assess bandwidth requirements**: Evaluate network capacity for Arc communications:
@@ -146,7 +146,7 @@ Before enabling Azure Arc on Oracle Exadata Database@Azure infrastructure:
 
 3. **Review security controls**: Ensure Arc connectivity aligns with existing security requirements:
    - Validate that Arc endpoints meet organizational security approval processes
-   - Confirm that Arc traffic logging integrates with existing SIEM systems
+   - Confirm that Arc traffic logging integrates with existing Security Information and Event Management (SIEM) systems
    - Review Arc connectivity against network security policies
 
 ### Configuration examples and templates
