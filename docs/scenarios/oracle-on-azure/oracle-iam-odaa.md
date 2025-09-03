@@ -52,7 +52,7 @@ Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud In
 
     For network connectivity requirements to support Arc agent authentication, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md).
 
-- **Integrate Defender security recommendations with identity controls**: Use [Microsoft Defender for Cloud security recommendations](/azure/defender-for-cloud/security-policy-concept) to enhance identity and access management. Implement [just-in-time VM access](/azure/defender-for-cloud/just-in-time-access-usage) and review [identity security best practices](/azure/defender-for-cloud/identity-access) for Oracle Database@Azure infrastructure.
+- **Integrate Defender security recommendations with identity controls**: Use [Microsoft Defender for Cloud security recommendations](/azure/defender-for-cloud/security-policy-concept) to enhance identity and access management. Implement [just-in-time VM access](/azure/defender-for-cloud/just-in-time-access-usage) and review [identity management best practices](/azure/security/fundamentals/identity-management-best-practices) for Oracle Database@Azure infrastructure.
 
 - To help ensure that Microsoft Entra ID-based users are secure, follow [identity management and access control best practices](/azure/security/fundamentals/identity-management-best-practices). When you help secure your Microsoft Entra ID-based users, enable [identity protection](/entra/id-protection/overview-identity-protection). Validate your security measures by using the [security checklist](/azure/security/fundamentals/steps-secure-identity) for identity and access management.
 

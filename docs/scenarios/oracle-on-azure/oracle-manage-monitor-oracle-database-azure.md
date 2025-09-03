@@ -105,7 +105,7 @@ Integrate Microsoft Defender for Cloud security monitoring with existing Oracle 
 
 #### Centralized security dashboards
 
-Create unified security monitoring using [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) and [Microsoft Defender for Cloud overview page](/azure/defender-for-cloud/overview). Configure specific workbook templates that combine:
+Create unified security monitoring using [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Configure specific workbook templates that combine:
   - Microsoft Defender security alerts and threat detection events
   - Oracle Enterprise Manager security monitoring and database audit logs
   - OCI security group and network access control events

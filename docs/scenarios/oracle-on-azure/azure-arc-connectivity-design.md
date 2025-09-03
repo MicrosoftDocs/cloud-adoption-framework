@@ -52,7 +52,7 @@ Consider the following guidance when designing Azure Arc connectivity for Oracle
 
 - **Configure Defender data collection**: Set up [Defender data collection rules](/azure/defender-for-cloud/defender-for-servers-introduction#data-collection) to complement existing Oracle monitoring. For detailed configuration, see [Configure data collection for Defender for servers](/azure/defender-for-cloud/configure-servers-coverage).
 
-- **Security endpoint requirements**: Review [Defender network requirements](/azure/defender-for-cloud/how-to-configure-azure-defender-for-servers#network-requirements) and ensure accessibility through existing Arc connectivity. For Microsoft Sentinel integration endpoints, see [Sentinel network requirements](/azure/sentinel/connect-services-diagnostic-setting-based).
+- **Security endpoint requirements**: Review [Azure Arc network requirements](/azure/azure-arc/servers/network-requirements) and ensure accessibility through existing Arc connectivity. For Microsoft Sentinel integration endpoints, see [Sentinel network requirements](/azure/sentinel/connect-services-diagnostic-setting-based).
 
 ## Design recommendations
 
