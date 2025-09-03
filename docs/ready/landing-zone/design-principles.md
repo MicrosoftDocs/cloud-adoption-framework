@@ -26,7 +26,7 @@ As a general rule, be prepared to balance requirements and functionality. Your j
 
 ## Subscription democratization
 
-Use subscriptions as units of management, and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Provide subscriptions to business units to support the design, development, and testing of new workloads and the migration of existing workloads.
+Subscription democratization provides a scalable way to accelerate application migrations and new application development. This approach enables workload teams to access and manage Azure subscriptions independently, while staying within platform governance and operational guardrails.
 
 Subscriptions should be used to also control and provide segregation of application environments, following the a software development lifecycle (SDLC) process and approach, as per the guidance in [manage application development environments in Azure landing zones](./../landing-zone/design-area/management-application-environments.md).
 
