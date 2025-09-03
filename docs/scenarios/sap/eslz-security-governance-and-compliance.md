@@ -145,42 +145,13 @@ For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsof
 
 ### Securely manage traffic
 
-For internet-facing applications, you must make sure to distribute load per application requirements while maintaining security levels. *Load balancing* is the distribution of workloads across multiple computing resources. Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. Load balancing can also improve availability by sharing a workload across redundant computing resources.
+Distribute load according to application requirements and maintain security. Load balancing distributes workloads across multiple compute resources to optimize resource use, increase throughput, reduce response time, and prevent single-resource overload. It also increases availability by distributing traffic across redundant resources.
 
-Load balancers direct traffic to VMs in the application subnet. For high availability, this example uses SAP Web Dispatcher and Azure Standard Load Balancer. These two services also support capacity extension by scaling out. You can also use Azure Application Gateway or other partner products, depending on the traffic type and required functionality like Secure Sockets Layer (SSL) termination and forwarding.
+Load balancers direct client traffic to virtual machines (VMs) in the application subnet. For example, use SAP Web Dispatcher with an internal Standard Load Balancer to distribute backend VM traffic and provide scale-out capacity. Use Application Gateway or Front Door for internet-facing HTTP/HTTPS traffic where you require TLS termination, WAF protection, or global failover. When you terminate TLS at the edge, configure end-to-end TLS or re-encrypt traffic between the edge and SAP application servers to meet compliance or sensitivity requirements.
 
-You can categorize Azure load-balancing services along global versus regional and HTTP/S versus non-HTTP/S dimensions.
+Evaluate each SAP workload independently and implement complementary load-balancing solutions as needed. Recommended considerations include latency impact, certificate lifecycle and management, cross-region failover behavior, operational complexity, and cost. Document the chosen pattern per workload and test failover and session-affinity behavior under realistic load.
 
-- Global load-balancing services distribute traffic across regional back ends, clouds, or hybrid on-premises services. These services route end-user traffic to the closest available backend. These services also maximize availability and performance by reacting to changes in service reliability or performance. You can think of these services as systems that load balance between application stamps, endpoints, or scale units hosted across different regions or geographies.
-
-- Regional load-balancing services distribute traffic within virtual networks across VMs or zonal and zone-redundant service endpoints within a region. You can think of these services as systems that load balance between VMs, containers, or clusters within a region in a virtual network.
-
-- HTTP/S load-balancing services are Layer 7 load balancers that only accept HTTP/S traffic and are intended for web applications or other HTTP/S endpoints. HTTP/S load-balancing services include features like SSL offload, WAF, path-based load balancing, and session affinity.
-
-- Non-HTTP/S load-balancing services that can handle non-HTTP/S traffic are recommended for non-web workloads.
-
-The following table summarizes the Azure load-balancing services by category:
-
-| Service | Global or regional | Recommended traffic |
-|---|---|---|
-| Azure Front Door | Global | HTTP/S |
-| Traffic Manager | Global | Non-HTTP/S |
-| Application Gateway | Regional | HTTP/S |
-| Azure Load Balancer | Regional | Non-HTTP/S |
-
-- [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
-
-- [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't fail over as quickly as Front Door, because of common challenges around DNS caching and systems not honoring DNS TTL.
-
-- [Application Gateway](/azure/application-gateway/overview) provides a managed application delivery controller with various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web-farm productivity by offloading CPU-intensive SSL termination to the gateway.
-
-- [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and outbound load-balancing service for all UDP and TCP protocols. Load Balancer handles millions of requests per second. Load Balancer is zone-redundant, ensuring high availability across Availability Zones.
-
-Refer to the following decision tree to make SAP on Azure application load-balancing decisions:
-
-![Decision tree for load balancing in Azure.](./media/load-balancer-decision-tree.png)
-
-Every SAP application has unique requirements, so treat the preceding flow chart and recommendation as starting points for a more detailed evaluation. If your SAP application consists of multiple workloads, evaluate each workload separately. A complete solution may incorporate two or more load-balancing solutions.
+For more information, see [Azure load balancing options](/azure/architecture/guide/technology-choices/load-balancing-overview).
 
 ### Monitor security
 

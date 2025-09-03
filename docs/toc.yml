@@ -9,10 +9,9 @@ items:
     - name: What's new
       href: get-started/whats-new.md
 
-  - name: Foundational methodologies
-    expanded: true
+  - name: Methodologies (phases)
     items:
-    - name: Define strategy
+    - name: Strategy
       items:
       - name: Overview
         href: strategy/index.md
@@ -37,7 +36,7 @@ items:
           - name: Sustainability
             href: strategy/inform/sustainability.md
 
-    - name: Plan adoption
+    - name: Plan
       items:
       - name: 1. Prepare organization
         href: plan/prepare-organization-for-cloud.md
@@ -66,7 +65,7 @@ items:
           href: plan/migration-adoption-plan.md
 
 
-    - name: Ready environment
+    - name: Ready
       items:
       - name: Overview
         href: ready/index.md
@@ -413,7 +412,7 @@ items:
         - name: Ready antipatterns
           href: antipatterns/ready-antipatterns.md
 
-    - name: Adopt solutions
+    - name: Adopt
       expanded: true
       items:
       - name: Migrate workloads
@@ -456,11 +455,8 @@ items:
           href: cloud-native/deploy-cloud-native-solutions.md
         - name: 4. Optimize cloud-native solutions
           href: cloud-native/optimize-cloud-native-solutions.md
-    
-  - name: Operational methodologies 
-    expanded: true
-    items:           
-    - name: Govern cloud
+     
+    - name: Govern
       items:
       - name: Overview
         href: govern/index.md
@@ -475,7 +471,7 @@ items:
       - name: Monitor cloud governance
         href: govern/monitor-cloud-governance.md
 
-    - name: Secure cloud
+    - name: Secure
       items:
       - name: Overview 
         href: secure/overview.md
@@ -494,7 +490,7 @@ items:
       - name: Manage  
         href: secure/manage.md
 
-    - name: Manage cloud
+    - name: Manage
       items:
       - name: Checklist
         href: manage/index.md

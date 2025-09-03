@@ -5,7 +5,10 @@ author: marvinbuss
 ms.author: mabuss
 ms.date: 02/21/2025
 ms.topic: conceptual
-ms.custom: e2e-data-management, think-tank
+ms.custom:
+  - e2e-data-management
+  - think-tank
+  - sfi-image-nochange
 ---
 
 # Single-region data landing zone connectivity

@@ -144,6 +144,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Cosmos DB for Apache Gremlin account | `Microsoft.DocumentDb/databaseAccounts` | `cosgrm`|
 | Azure Cosmos DB PostgreSQL cluster | `Microsoft.DBforPostgreSQL/serverGroupsv2` | `cospos`|
 | Azure Cache for Redis instance | `Microsoft.Cache/Redis` | `redis` |
+| Azure Managed Redis | `Microsoft.Cache/RedisEnterprise` | `amr` |
 | Azure SQL Database server | `Microsoft.Sql/servers` | `sql` |
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
 | Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |

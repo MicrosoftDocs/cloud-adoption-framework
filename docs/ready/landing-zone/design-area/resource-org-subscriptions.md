@@ -6,7 +6,10 @@ ms.author: pnp
 ms.date: 11/28/2024
 ms.update-cycle: 180-days
 ms.topic: conceptual
-ms.custom: internal, UpdateFrequency.5
+ms.custom:
+  - internal
+  - UpdateFrequency.5
+  - sfi-ga-nochange
 ---
 
 # Subscription considerations and recommendations

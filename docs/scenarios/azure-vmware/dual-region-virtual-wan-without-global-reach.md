@@ -7,7 +7,10 @@ ms.date: 10/16/2024
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
-ms.custom: think-tank, e2e-azure-VMware
+ms.custom:
+  - think-tank
+  - e2e-azure-VMware
+  - sfi-image-nochange
 ---
 
 # Use a dual-region Azure VMware Solution design that doesn't have Global Reach
