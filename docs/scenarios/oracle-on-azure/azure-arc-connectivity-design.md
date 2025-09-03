@@ -46,6 +46,14 @@ Consider the following guidance when designing Azure Arc connectivity for Oracle
 
 - **TLS inspection compatibility**: If your organization uses TLS inspection, note that the Azure Connected Machine agent doesn't use certificate pinning and will work with TLS inspection services. However, some Azure Arc extensions may require exclusion from TLS inspection. For details, see [Network security for Azure Arc-enabled servers](/azure/azure-arc/servers/security-networking).
 
+### Microsoft Defender for Cloud integration
+
+- **Plan Defender deployment strategy**: Review [Defender for servers deployment requirements](/azure/defender-for-cloud/plan-defender-for-servers) and [Arc agent deployment considerations](/azure/azure-arc/servers/deployment-options) for Oracle Database@Azure infrastructure integration.
+
+- **Configure Defender data collection**: Set up [Defender data collection rules](/azure/defender-for-cloud/defender-for-servers-introduction#data-collection) to complement existing Oracle monitoring. For detailed configuration, see [Configure data collection for Defender for servers](/azure/defender-for-cloud/configure-servers-coverage).
+
+- **Security endpoint requirements**: Review [Defender network requirements](/azure/defender-for-cloud/how-to-configure-azure-defender-for-servers#network-requirements) and ensure accessibility through existing Arc connectivity. For Microsoft Sentinel integration endpoints, see [Sentinel network requirements](/azure/sentinel/connect-services-diagnostic-setting-based).
+
 ## Design recommendations
 
 Implement the following network connectivity recommendations for Azure Arc integration:

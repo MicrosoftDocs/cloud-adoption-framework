@@ -115,11 +115,25 @@ Oracle Database@Azure provides three distinct monitoring capabilities:
 
 For detailed guidance on Azure Arc monitoring, see [Monitor Azure Arc-enabled servers with Azure Monitor](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights).
 
+### Security monitoring integration with Defender
+
+Integrate Microsoft Defender for Cloud security monitoring with existing Oracle Database@Azure monitoring practices:
+
+**Centralized security dashboards**: Create unified security monitoring using [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) and [Microsoft Defender for Cloud dashboards](/azure/defender-for-cloud/overview-page). Combine Microsoft Defender security alerts with Oracle Enterprise Manager monitoring and OCI security controls.
+
+**Automated threat response workflows**: Implement [Defender workflow automation](/azure/defender-for-cloud/workflow-automation) and [security incident response procedures](/azure/defender-for-cloud/managing-and-responding-alerts) that coordinate Azure security context with Oracle operational requirements.
+
+**Compliance and security reporting**: Establish reporting using [Defender compliance assessments](/azure/defender-for-cloud/regulatory-compliance-dashboard) combined with Oracle security audit reports. For comprehensive security metrics, see [Azure Monitor security monitoring](/azure/azure-monitor/security/overview).
+
 
 **Arc-enabled server metrics**: If you enable Azure Arc for your Oracle Exadata Database@Azure infrastructure, monitor the following additional metrics to complement existing database and cluster monitoring. These metrics provide visibility into the Arc agent connectivity and security posture at the VM level. See [Management and monitoring for Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server#azure-monitor-configuration)
 
 |  Metric name                                   |  Collection frequency                                   | Threshold                    | Description                                  |
 | :------------------------------------------------------|:--------------------------------------------------------|:-----------------------------|:---------------------------------------------|
+| Defender Threat Detection Status               | 5 minutes        | Any active threats           | Status of active threat detection and security alerts from Microsoft Defender for Cloud on Arc-enabled infrastructure |
+| Security Baseline Compliance Score            | 1 hour           | < 80%                       | Overall security compliance score from Defender security baseline assessments across VM cluster nodes |
+| Vulnerability Assessment Status                | Daily            | High/Critical vulnerabilities| Count and severity of vulnerabilities identified by Defender vulnerability scanning on infrastructure |
+| Defender Agent Health Status                   | 10 minutes       | Unhealthy                   | Health status of Microsoft Defender agents and extensions on each Arc-enabled VM cluster node |
 | Arc Agent Status                                       | 5 minutes                                               | 0 (disconnected)               | Connection status of Azure Arc agents on each VM within the Exadata cluster. Monitor for agent connectivity issues. |
 | Arc-enabled Server Health                              | 10 minutes                                              | Unhealthy                      | Overall health status of Arc-enabled servers including extension health and resource status. |
 | Defender Security Alert Count                          | 15 minutes                                              | > 0 (any active alerts)        | Count of active security alerts from Microsoft Defender for Cloud for Arc-enabled infrastructure. |
