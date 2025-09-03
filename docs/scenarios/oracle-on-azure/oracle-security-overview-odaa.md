@@ -92,6 +92,8 @@ Consider the following security recommendations when you design your Oracle Exad
 ](/azure/azure-arc/azure-firewall-explicit-proxy))  or network virtual appliances
   - Maintain existing NSG configurations and subnet delegation without modifications
   - Preserve OCI-managed security group functionality
+  
+  For detailed network connectivity guidance, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md).
 
 - **Implement hybrid security monitoring**: Establish monitoring practices that combine Azure Arc security insights with existing Oracle security controls:
   - Configure [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-workspace-overview) to collect security events from Arc-enabled nodes

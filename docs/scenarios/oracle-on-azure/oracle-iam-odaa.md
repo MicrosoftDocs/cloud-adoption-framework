@@ -50,6 +50,8 @@ Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud In
 
 - **Configure Arc agent authentication**: Use [managed identity authentication](/azure/azure-arc/servers/managed-identity-authentication) where possible for Arc agents to minimize credential management overhead. For environments requiring service principal authentication, store credentials securely using [Azure Key Vault](/azure/key-vault/general/overview) or existing enterprise credential management systems.
 
+    For network connectivity requirements to support Arc agent authentication, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md).
+
 - To help ensure that Microsoft Entra ID-based users are secure, follow [identity management and access control best practices](/azure/security/fundamentals/identity-management-best-practices). When you help secure your Microsoft Entra ID-based users, enable [identity protection](/entra/id-protection/overview-identity-protection). Validate your security measures by using the [security checklist](/azure/security/fundamentals/steps-secure-identity) for identity and access management.
 
 - Enable [Microsoft Entra ID audit logging](/entra/identity/monitoring-health/concept-audit-logs) to monitor access-related events.

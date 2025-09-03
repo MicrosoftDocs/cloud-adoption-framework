@@ -23,6 +23,8 @@ Consider these key topics before you deploy Oracle Database@Azure and Exadata Da
 
 - Azure Arc management integration: Consider integrating Oracle Exadata Database@Azure infrastructure with [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) to enable unified management across hybrid environments. Arc provides additional monitoring and governance capabilities through [Azure Monitor](/azure/azure-monitor/overview) and [Azure Policy](/azure/governance/policy/overview) while preserving existing OCI console functionality for database-specific operations.
 
+  For network connectivity requirements and configuration guidance for Arc integration, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md).
+
 - Hybrid monitoring strategy: Plan for a comprehensive monitoring approach that differentiates between the three types of monitoring available for Oracle Database@Azure deployments:
   - **VM Cluster metrics**: Oracle Database@Azure provides native metrics through Azure Monitor for different service types:
     - [Oracle Exadata VM Cluster metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-exadbvmclusters-metrics) for Exadata Database@Azure
@@ -112,6 +114,18 @@ Oracle Database@Azure provides three distinct monitoring capabilities:
 - VM performance metrics: Collect OS-level performance data that complements cluster-wide metrics
 
 For detailed guidance on Azure Arc monitoring, see [Monitor Azure Arc-enabled servers with Azure Monitor](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights).
+
+
+**Arc-enabled server metrics**: If you enable Azure Arc for your Oracle Exadata Database@Azure infrastructure, monitor the following additional metrics to complement existing database and cluster monitoring. These metrics provide visibility into the Arc agent connectivity and security posture at the VM level. See [Management and monitoring for Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server#azure-monitor-configuration)
+
+|  Metric name                                   |  Collection frequency                                   | Threshold                    | Description                                  |
+| :------------------------------------------------------|:--------------------------------------------------------|:-----------------------------|:---------------------------------------------|
+| Arc Agent Status                                       | 5 minutes                                               | 0 (disconnected)               | Connection status of Azure Arc agents on each VM within the Exadata cluster. Monitor for agent connectivity issues. |
+| Arc-enabled Server Health                              | 10 minutes                                              | Unhealthy                      | Overall health status of Arc-enabled servers including extension health and resource status. |
+| Defender Security Alert Count                          | 15 minutes                                              | > 0 (any active alerts)        | Count of active security alerts from Microsoft Defender for Cloud for Arc-enabled infrastructure. |
+| Azure Policy Compliance                                | 30 minutes                                              | Non-compliant                  | Policy compliance status for Arc-enabled servers including OS-level configuration compliance. |
+
+
 
 ## Next steps
 
