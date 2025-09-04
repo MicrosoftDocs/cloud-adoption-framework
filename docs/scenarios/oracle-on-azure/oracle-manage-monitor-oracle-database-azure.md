@@ -1,136 +1,123 @@
----
-title: Manage and monitor Oracle Database@Azure
-description: Learn about considerations and recommendations that you can use to manage and monitor your Oracle Database@Azure and Exadata Database services.
-author: sihbher
-ms.author: rajanaki
-ms.reviewer: janfaurs
-ms.date: 09/03/2025
-ms.topic: conceptual
-ms.custom: e2e-oracle
----
-
 # Manage and monitor Oracle Database@Azure
 
-This article provides business practices that you can implement to manage and monitor Oracle Exadata Database Service on Dedicated Infrastructure with Oracle Database@Azure. Implement these considerations when you create your overall design and when you onboard this service within your Azure enterprise landing zone.
+This article provides management and monitoring guidance for Oracle Database@Azure deployments. These recommendations enable comprehensive visibility, proactive issue resolution, and optimal performance across your Oracle Database@Azure infrastructure while integrating with Azure native monitoring capabilities.
 
-## Design considerations
+Oracle Database@Azure requires coordinated monitoring across database, infrastructure, and security layers. Implement these recommendations to establish robust monitoring practices that support operational excellence and business continuity for your Oracle Autonomous Database@Azure and Oracle Exadata Database@Azure services.
 
-Consider these key articles before you deploy Oracle Database@Azure and Exadata Database services.
+## Establish comprehensive monitoring strategy
 
-- Identify the Azure region where you want to deploy your Oracle Database@Azure and Exadata Database services. Ensure that this region aligns with your current or future Azure landing zone. If the region that you choose differs from your current deployment region, assess whether your existing monitoring tools can extend their capabilities to this new region. Ensure seamless integration and functionality across regions.
+Implement a three-tier monitoring approach that provides visibility across database operations, infrastructure health, and security posture. This comprehensive strategy ensures complete operational coverage while avoiding monitoring gaps.
 
-- Choose a network topology that best supports your migration method of choice when you create your network plan. Your migration method should monitor the process when you move your critical data. Options for migration include Oracle Recovery Manager, Oracle Data Guard, Oracle Data Pump, or a Linux virtual machine (VM) that has the Network File System role installed. Consult with your Oracle and Microsoft representative for detailed guidance.
+1. **Deploy three-tier monitoring architecture**. Oracle Database@Azure provides monitoring capabilities across three distinct layers that work together to provide complete operational visibility. Deploy all three layers to ensure comprehensive coverage: VM cluster monitoring through Azure Monitor, diagnostic log collection through Azure Monitor and Log Analytics, and individual VM monitoring through Azure Arc-enabled servers. For Azure Arc integration guidance, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md).
 
-- Azure Arc management integration: Consider integrating Oracle Exadata Database@Azure infrastructure with [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) to enable unified management across hybrid environments. Arc provides more monitoring and governance capabilities through [Azure Monitor](/azure/azure-monitor/overview) and [Azure Policy](/azure/governance/policy/overview) while preserving existing OCI console functionality for database-specific operations. For network connectivity requirements and configuration guidance for Arc integration, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md).
+2. **Configure Azure Monitor for VM cluster metrics**. Set up Azure Monitor to collect cluster-level performance metrics specific to your Oracle Database@Azure deployment type. Use [Oracle Exadata VM Cluster metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-exadbvmclusters-metrics) for Exadata deployments, [Oracle VM Cluster metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-cloudvmclusters-metrics) for standard clusters, and [Autonomous Database metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-autonomousdatabases-metrics) for Autonomous Database deployments.
 
-- Monitoring strategy considerations: Plan for a comprehensive monitoring approach that uses three distinct monitoring layers available for Oracle Database@Azure deployments:
-  - **VM Cluster metrics**: Oracle Database@Azure provides native metrics through Azure Monitor for different service types
-  - **Diagnostic logs**: Database operations and infrastructure events through [diagnostic settings](/azure/oracle/oracle-db/oracle-exadata-database-dedicated-infrastructure-logs)
-  - **VM-level monitoring**: Azure Arc enables [infrastructure monitoring](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server) for individual virtual machines
-  
-  Establish clear boundaries between database-level monitoring (handled through OCI and Azure native metrics) and VM infrastructure monitoring (handled through Azure Arc).
+3. **Enable diagnostic settings for enhanced observability**. Configure [diagnostic settings for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-exadata-database-dedicated-infrastructure-logs) to collect comprehensive operational data. This configuration captures Exadata VM cluster lifecycle management logs, database logs, infrastructure logs, and Data Guard logs through Azure Monitor and Log Analytics for centralized analysis.
 
-- Security monitoring integration: Evaluate the integration of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) with existing Oracle security monitoring to provide comprehensive threat detection and response capabilities. This integration enhances your security posture without duplicating existing Oracle Advanced Security features.
+4. **Integrate Azure Arc for infrastructure monitoring**. Enable [Azure Arc-enabled server monitoring](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server) to monitor operating system level metrics, security events, and compliance status on each VM within the cluster. This integration provides unified governance while preserving existing OCI console functionality for database-specific operations.
 
-- Log Analytics workspace design: If you implement Azure Arc integration, design your Log Analytics workspace strategy to complement the existing monitoring approach. Consider workspace isolation requirements and log retention policies that align with your existing Oracle audit and compliance requirements. For workspace configuration guidance, see [Log Analytics workspace overview](/azure/azure-monitor/logs/log-analytics-workspace-overview).
+## Configure critical performance monitoring
 
-- Determine how to integrate monitor alerts into your triage process.
-- Make a list of key stakeholders that you need to notify when an alert is triggered.
-- Review monitoring metrics with database administrators for expectation alignment.
+Establish proactive monitoring for key performance indicators that directly impact business operations. Configure alerts and thresholds that enable early detection of issues before they affect service availability.
 
-For more information, see [Plan for Oracle on Azure adoption](/azure/cloud-adoption-framework/scenarios/oracle-on-azure/oracle-landing-zone-plan).
+1. **Monitor database performance metrics with appropriate thresholds**. Configure monitoring for critical database metrics using proven thresholds that indicate potential issues. Set CPU utilization monitoring at 90% threshold with 5-minute collection frequency, storage utilization at 90% with 30-minute frequency, and memory usage at 90% with 15-minute frequency. For complete metric specifications, see the [database and cluster metrics reference table](#database-and-cluster-metrics) below.
 
-## Design recommendations
+2. **Implement Azure Arc agent monitoring for infrastructure health**. Monitor Azure Arc agent connectivity and health status to ensure continuous management capabilities. Configure Arc agent status monitoring with 5-minute frequency and immediate alerting for disconnected status, Arc-enabled server health monitoring with 10-minute frequency, and Azure Policy compliance monitoring with 30-minute frequency for configuration drift detection.
 
-Consider these recommendations before you deploy Oracle Database@Azure and Exadata Database services.
+3. **Create unified monitoring dashboard**. Build a [custom dashboard in the Azure portal](/azure/azure-portal/azure-portal-dashboards) that aggregates metrics from all three monitoring layers. This unified view provides operators with complete visibility across database performance, infrastructure health, and security status without switching between multiple tools.
 
-### Monitor for health and performance
+4. **Configure alert action groups for incident response**. Set up [Azure Monitor action groups](/azure/azure-monitor/alerts/action-groups) that automatically notify appropriate stakeholders when critical thresholds are exceeded. Configure escalation procedures that coordinate database administrators, infrastructure teams, and security personnel based on alert severity and type.
 
-Collect quantitative metrics such as CPU usage, memory usage, storage usage, database operations, SQL queries, and overall transactions. For problem diagnosis and proactive troubleshooting, use Azure Monitor metrics, Azure Arc monitoring capabilities, or your monitoring tool of choice. The collection and review of database metrics helps to ensure operational readiness and long-term sustainment.
+## Integrate security monitoring capabilities
 
-#### Three-tier monitoring approach
+Enhance operational security through integrated monitoring that combines Azure native security tools with existing Oracle security practices. This integration provides comprehensive threat detection without duplicating existing security investments.
 
-Oracle Database@Azure provides comprehensive monitoring capabilities across three distinct layers. When you onboard Oracle Exadata Database@Azure infrastructure to [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), you add a third monitoring layer to the existing Oracle Database@Azure monitoring capabilities:
+1. **Deploy Microsoft Defender for Cloud integration**. Integrate [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) with Oracle Database@Azure infrastructure to provide comprehensive threat detection and security posture management. This integration enhances existing Oracle Advanced Security features with Azure native threat intelligence and automated response capabilities.
 
-- **VM Cluster level**: Use Azure Monitor metrics appropriate to your Oracle Database@Azure deployment type:
-  - [Oracle Exadata VM Cluster metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-exadbvmclusters-metrics) for Exadata Database@Azure deployments
-  - [Oracle VM Cluster metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-cloudvmclusters-metrics) for standard Oracle Database@Azure clusters
-  - [Autonomous Database metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-autonomousdatabases-metrics) for Autonomous Database@Azure deployments
+2. **Create unified security monitoring dashboards**. Build security monitoring using [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) that combine Microsoft Defender security alerts, Oracle Enterprise Manager security monitoring, OCI security group events, and Arc infrastructure compliance status. This unified approach provides complete security visibility across both platforms.
 
-- **Diagnostic logs**: Configure [diagnostic settings for enhanced observability](/azure/oracle/oracle-db/oracle-exadata-database-dedicated-infrastructure-logs) to collect Exadata VM cluster lifecycle management logs, database logs, infrastructure logs, and Data Guard logs through Azure Monitor and Log Analytics
+3. **Implement automated threat response workflows**. Configure [Defender workflow automation](/azure/defender-for-cloud/workflow-automation) and [security incident response procedures](/azure/defender-for-cloud/managing-and-responding-alerts) with Oracle-specific considerations. Set up automated VM isolation that maintains database availability during security incidents and create incident tickets that include both Azure security context and Oracle operational impact assessment.
 
-- **Individual VM monitoring**: Use [Azure Arc-enabled server monitoring](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server) for operating system level metrics, security events, and compliance monitoring on each VM within the cluster
+4. **Monitor security-focused metrics for compliance**. Track [Defender threat detection status](/azure/defender-for-cloud/managing-and-responding-alerts) with 5-minute frequency for active threats, [security baseline compliance score](/security/benchmark/azure/baselines/microsoft-defender-for-cloud-security-baseline) hourly with 80% threshold, and [vulnerability assessment status](/defender-vulnerability-management/tvm-dashboard-insights) daily for high and critical vulnerabilities.
 
-- Create a custom dashboard in the Azure portal with an aggregated view of the various metrics collected. For more information, see [Create a dashboard in the Azure portal](/azure/azure-portal/azure-portal-dashboards).
+For comprehensive security guidance, see [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md).
 
-- To review the required roles, see [Roles, permissions, and security in Azure Monitor](/azure/azure-monitor/roles-permissions-security).
-- If you require granular database monitoring, see [Enterprise Manager database management](https://www.oracle.com/database/technologies/manageability.html).
-- For information about the Oracle comprehensive monitoring guide, see [Oracle Cloud database metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html).
+## Design Log Analytics workspace strategy
 
-### Monitor key metrics
+Configure Log Analytics workspaces that complement existing Oracle monitoring while providing centralized analysis capabilities. Design workspace architecture that supports compliance requirements and operational efficiency.
 
-The following table contains initial recommended settings for Oracle Cloud Database metrics. You can add counters based on your organization's needs. Set each monitoring setting against all the available nodes in the cluster. In Azure Monitor, you can't select multiple objects at the same time when you add metrics. To enter specified settings, you must select each Exadata cluster node.
+1. **Plan workspace isolation based on compliance requirements**. Design [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-workspace-overview) architecture that aligns with existing Oracle audit and compliance requirements. Consider workspace isolation for different environments (production, development, testing) and data residency requirements that may affect log storage and analysis capabilities.
 
-Set alerts in your monitoring solution for critical workloads. If you use Azure Monitor, you can create [action groups](/azure/azure-monitor/alerts/action-groups).
+2. **Configure log retention policies aligned with Oracle audit requirements**. Set log retention policies that meet organizational compliance requirements while optimizing storage costs. Align Azure Monitor log retention with existing Oracle audit log retention policies to ensure consistent compliance coverage across both platforms.
 
-#### Database and cluster metrics
+3. **Establish clear monitoring boundaries between platforms**. Define clear boundaries between database-level monitoring handled through OCI and Azure native metrics versus VM infrastructure monitoring handled through Azure Arc. This separation prevents monitoring overlap while ensuring complete coverage of all system components.
 
-|  Metric name                                   |  Collection frequency                                   | Threshold                    | Description                                  |
-| :------------------------------------------------------|:--------------------------------------------------------|:-----------------------------|:---------------------------------------------|
-| CPU Utilization                                        | 5 minutes                                               | 90%                           | The CPU usage expressed as a percentage and aggregated across all consumer groups. The usage percentage is reported with respect to the number of CPUs that the database can use, which is two times the number of Oracle CPUs. This setting is for each database within the cluster. |
-| Storage Utilization                                    | 30 minutes                                              | 90%                            | The percentage of provisioned storage capacity that's in use. This setting represents the total allocated space for all tablespaces. This setting is for each database within the cluster.|
-| Flash Recovery Area Utilization                        | 15 minutes                                              | 90%                            | The flash recovery area usage.    |
-| Memory Usage                                           | 15 minutes                                              | Megabit  90% consumed             | The total size of the memory pool.      |
-| Process Limit Utilization                             |   5 minutes                                             | 90%                            | The process limit usage.          |
-| Session Limit Utilization                              |   5 minutes                                             | 90%                            | The database session limit usage. |
-| Usable Fast Recovery Area                              | 15 minutes                                              | 90%                            | The usable fast recovery area.          |
-| Oracle Cloud Infrastructure (OCI) Database Cluster Memory Utilization                | 5 minutes                                               | 90%                            | The amount of memory that the Exadata Database clusters consume. |
-| Average Node Status                                    | 5 minutes                                               | 0 (this dimension means false) | Whether the Exadata Database cluster node within the cluster is available or unavailable |
+4. **Implement workspace access controls with role-based permissions**. Configure workspace access using [Azure Monitor roles and permissions](/azure/azure-monitor/roles-permissions-security) that align with existing organizational responsibilities. Ensure database administrators have appropriate access to database metrics while infrastructure teams have access to VM-level monitoring data.
 
-For more information, see [Oracle Cloud Database metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-cloudvmclusters-metrics).
+## Plan migration monitoring integration
 
-#### Azure Arc-enabled server metrics
+Coordinate monitoring capabilities with migration planning to ensure visibility during data movement operations. Configure monitoring that supports your chosen migration methodology while maintaining operational oversight.
 
-If you enable Azure Arc for your Oracle Exadata Database@Azure infrastructure, monitor these more VM-level components to complement existing cluster and database monitoring. For detailed guidance on Azure Arc monitoring, see [Monitor Azure Arc-enabled servers with Azure Monitor](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights).
+1. **Align monitoring with migration methodology**. Configure monitoring that supports your chosen migration approach whether using Oracle Recovery Manager, Oracle Data Guard, Oracle Data Pump, or Linux VM with Network File System role. Each migration method requires specific monitoring focus areas to ensure successful data movement and validation.
 
-|  Metric name                                   |  Collection frequency                                   | Threshold                    | Description                                  |
-| :------------------------------------------------------|:--------------------------------------------------------|:-----------------------------|:---------------------------------------------|
-| Arc Agent Status                                       | 5 minutes                                               | 0 (disconnected)               | Connection status of Azure Arc agents on each VM within the Exadata cluster. Monitor for agent connectivity issues. |
-| Arc-enabled Server Health                              | 10 minutes                                              | Unhealthy                      | Overall health status of Arc-enabled servers including extension health and resource status. |
-| Azure Policy Compliance                                | 30 minutes                                              | Noncompliant                  | Policy compliance status for Arc-enabled servers including OS-level configuration compliance. |
+2. **Extend monitoring across Azure regions when required**. If Oracle Database@Azure deployment spans multiple Azure regions, assess whether existing monitoring tools can extend capabilities to new regions. Plan for monitoring tool distribution and ensure seamless integration and functionality across all deployment regions.
 
-### Security monitoring integration
+3. **Coordinate with Oracle and Microsoft representatives for migration monitoring**. Engage Oracle and Microsoft representatives during migration planning to ensure monitoring configurations support migration validation and rollback procedures. This coordination ensures monitoring capabilities align with migration timeline and success criteria.
 
-Integrate Microsoft Defender for Cloud security monitoring with existing Oracle Database@Azure monitoring practices to provide comprehensive threat detection and response capabilities.
+4. **Document monitoring integration points for stakeholder communication**. Create documentation that identifies key stakeholders for different alert types and establishes clear communication procedures. Map monitoring alerts to appropriate response teams and define escalation procedures that coordinate database administrators, infrastructure teams, and business stakeholders.
 
-#### Centralized security dashboards
+## Database and cluster metrics
 
-Create unified security monitoring using [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Configure specific workbook templates that combine:
-  - Microsoft Defender security alerts and threat detection events
-  - Oracle Enterprise Manager security monitoring and database audit logs
-  - OCI security group and network access control events
-  - Arc infrastructure health and compliance status
+The following table contains recommended settings for Oracle Database@Azure metrics. Configure alerts for these metrics across all available nodes in the cluster to ensure comprehensive monitoring coverage.
 
-#### Automated threat response workflows
+| Metric name | Collection frequency | Threshold | Description |
+|-------------|---------------------|-----------|-------------|
+| CPU Utilization | 5 minutes | 90% | CPU usage percentage aggregated across all consumer groups, reported with respect to database-available CPUs |
+| Storage Utilization | 30 minutes | 90% | Percentage of provisioned storage capacity in use across all tablespaces |
+| Flash Recovery Area Utilization | 15 minutes | 90% | Flash recovery area usage percentage |
+| Memory Usage | 15 minutes | 90% | Total memory pool consumption |
+| Process Limit Utilization | 5 minutes | 90% | Database process limit usage percentage |
+| Session Limit Utilization | 5 minutes | 90% | Database session limit usage percentage |
+| OCI Database Cluster Memory Utilization | 5 minutes | 90% | Memory consumption by Exadata Database clusters |
+| Average Node Status | 5 minutes | 0 (false) | Availability status of Exadata Database cluster nodes |
 
-Implement [Defender workflow automation](/azure/defender-for-cloud/workflow-automation) and [security incident response procedures](/azure/defender-for-cloud/managing-and-responding-alerts) with specific Oracle considerations:
-  - Configure automated VM isolation that maintains database availability during security incidents
-  - Create incident tickets that include both Azure security context and Oracle operational impact assessment
-  - Establish escalation procedures that coordinate Azure security teams with Oracle database administrators
+For complete metric reference, see [Oracle Cloud Database metrics](/azure/azure-monitor/reference/supported-metrics/oracle-database-cloudvmclusters-metrics).
 
-#### Security metrics monitoring
+## Azure Arc-enabled server metrics
 
-Monitor these more security-focused metrics when Microsoft Defender for Cloud is integrated with Arc-enabled Oracle Database@Azure infrastructure:
+When Azure Arc is enabled for Oracle Database@Azure infrastructure, monitor these VM-level components to complement existing cluster and database monitoring:
 
-|  Metric name                                   |  Collection frequency                                   | Threshold                    | Description                                  |
-| :------------------------------------------------------|:--------------------------------------------------------|:-----------------------------|:---------------------------------------------|
-| [Defender Threat Detection Status](/azure/defender-for-cloud/managing-and-responding-alerts)               | 5 minutes        | Any active threats           | Status of active threat detection and security alerts from Microsoft Defender for Cloud on Arc-enabled infrastructure |
-| [Security Baseline Compliance Score](/security/benchmark/azure/baselines/microsoft-defender-for-cloud-security-baseline)            | One hour           | < 80%                       | Overall security compliance score from Defender security baseline assessments across VM cluster nodes |
-| [Vulnerability Assessment Status](/defender-vulnerability-management/tvm-dashboard-insights)                | Daily            | High/Critical vulnerabilities| Count and severity of vulnerabilities identified by Defender vulnerability scanning on infrastructure |
+| Metric name | Collection frequency | Threshold | Description |
+|-------------|---------------------|-----------|-------------|
+| Arc Agent Status | 5 minutes | 0 (disconnected) | Connection status of Azure Arc agents on each VM within the cluster |
+| Arc-enabled Server Health | 10 minutes | Unhealthy | Overall health status including extension health and resource status |
+| Azure Policy Compliance | 30 minutes | Noncompliant | Policy compliance status for OS-level configuration |
 
+For detailed Azure Arc monitoring guidance, see [Monitor Azure Arc-enabled servers with Azure Monitor](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights).
+
+## Security monitoring metrics
+
+Monitor these security-focused metrics when Microsoft Defender for Cloud is integrated with Oracle Database@Azure infrastructure:
+
+| Metric name | Collection frequency | Threshold | Description |
+|-------------|---------------------|-----------|-------------|
+| Defender Threat Detection Status | 5 minutes | Any active threats | Status of active threat detection and security alerts |
+| Security Baseline Compliance Score | 1 hour | < 80% | Overall security compliance score from Defender assessments |
+| Vulnerability Assessment Status | Daily | High/Critical vulnerabilities | Count and severity of identified vulnerabilities |
+
+## Azure tools and resources
+
+| Category | Tool | Description |
+|----------|------|-------------|
+| Monitoring | [Azure Monitor](/azure/azure-monitor/overview) | Comprehensive monitoring platform for Oracle Database@Azure metrics |
+| Visualization | [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) | Custom dashboards for unified monitoring views |
+| Log Analytics | [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-workspace-overview) | Centralized log analysis and retention |
+| Alerting | [Azure Monitor action groups](/azure/azure-monitor/alerts/action-groups) | Automated notification and response workflows |
+| Security | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Integrated security monitoring and threat protection |
+| Hybrid Management | [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) | Infrastructure monitoring and governance for Oracle VMs |
+| Compliance | [Azure Policy](/azure/governance/policy/overview) | Configuration compliance and governance policies |
 
 ## Next steps
-
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
