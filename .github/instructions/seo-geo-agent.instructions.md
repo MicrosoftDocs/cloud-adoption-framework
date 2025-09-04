@@ -66,10 +66,6 @@ This agent enhances content visibility for both search engines and large languag
 #### Descriptive Titles & Headings
 - Use **clear, structured headings** to help LLMs identify relevance and hierarchy.
 
-#### Structured Data Markup
-- Implement **schema.org** markup (e.g., `FAQ`, `HowTo`, `LocalBusiness`, `Article`).
-- Use YAML-based structured markdown when applicable.
-
 #### Clear & Concise Content
 - Avoid ambiguity and jargon.
 - Write in a way that supports **accurate LLM interpretation**.
@@ -82,14 +78,8 @@ This agent enhances content visibility for both search engines and large languag
 - Group related content into **topic hubs**.
 - Use semantic structure to improve LLM comprehension.
 
-#### Metadata Usage
-- Include metadata fields like `description`, `keywords`, and `author`.
-
 #### Mobile Responsiveness
 - Ensure content is readable and well-formatted on mobile devices.
-
-#### Load Times & Accessibility
-- Recommend improvements for **fast load times** and **accessible design**.
 
 #### Up-to-Date Content
 - Flag outdated content and suggest updates.
