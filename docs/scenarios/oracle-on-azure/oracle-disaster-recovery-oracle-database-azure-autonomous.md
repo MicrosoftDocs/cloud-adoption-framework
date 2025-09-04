@@ -23,7 +23,7 @@ In this article, you learn how to do the following tasks:
 
 Organizations must establish clear recovery objectives before they implement BCDR solutions for Oracle Autonomous Database@Azure. RTO represents the maximum acceptable downtime after a failure. RPO defines the maximum acceptable data loss. These critical metrics determine the appropriate BCDR architecture and Oracle technologies for your cloud database environment.
 
-- **Define your recovery objectives based on business requirements.** Oracle Autonomous Database@Azure supports different availability levels that align with [Oracle Maximum Availability Architecture (MAA) principles](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/oracle-maximum-availability-architecture-and-oracle-autonomous-database.html#GUID-80E31978-A2B5-4106-9CB8-C8DFD8AA9637). The default configuration provides MAA Silver level protection against instance and hardware failures. Choose an architecture that meets specific RTO and RPO requirements for different failure scenarios.
+- **Define your recovery objectives based on business requirements.** Oracle Autonomous Database@Azure supports different availability levels that align with [Oracle Maximum Availability Architecture (MAA) principles](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/oracle-maximum-availability-architecture-and-oracle-autonomous-database.html#GUID-80E31978-A2B5-4106-9CB8-C8DFD8AA9637). The default configuration provides MAA Silver-level protection against instance and hardware failures. Choose an architecture that meets specific RTO and RPO requirements for different failure scenarios.
 
 - **Address regional limitations and cross-region requirements.** Oracle Autonomous Database@Azure operates within a single availability region where you create the instance. Multiregional resiliency requires more cross-region disaster recovery instances. Identify geographic distribution requirements for your compliance and data residency needs when you design your deployment topology.
 
@@ -49,7 +49,7 @@ Oracle Autonomous Database@Azure provides multiple enterprise-grade backup optio
 
 - **Enable cross-region backup replication for disaster recovery.** Configure cross-region backup replication to disaster recovery regions to enable restore operations during regional outages. Backup replication transfers data from the last seven days and takes several minutes to hours to complete, depending on backup size. This capability ensures data availability even when primary regions are unavailable.
 
-- **Supplement backups by using Data Pump Export.** Use Oracle Data Pump Export to consistently export your database to manage data independently from automatic backups. Export data to Azure Blob Storage or Azure Files on defined schedules to provide extra data protection and migration capabilities. Data Pump Export provides flexibility for data movement and recovery scenarios.
+- **Supplement backups by using Oracle Data Pump Export.** Use Oracle Data Pump Export to consistently export your database to manage data independently from automatic backups. Export data to Azure Blob Storage or Azure Files on defined schedules to provide extra data protection and migration capabilities. Data Pump Export provides flexibility for data movement and recovery scenarios.
 
 ## Configure application continuity for seamless failover
 
@@ -65,9 +65,9 @@ Application continuity features ensure minimal disruption to applications during
 
 Regular disaster recovery testing ensures that BCDR solutions meet defined business objectives and identifies potential problems before disasters occur. Testing validates technical capabilities and operational procedures across all system components. It ensures reliable recovery performance.
 
-- **Conduct regular disaster recovery drills across all application layers.** Perform scheduled failover and switchover operations to verify that you can achieve RTO and RPO requirements in real scenarios. Test all components of the application stack, not just the database layer, to ensure complete system recovery. Document test results and update procedures based on your findings.
+- **Conduct regular disaster recovery drills across all application layers.** Perform scheduled failover and switchover operations to verify that you can achieve RTO and RPO requirements in real scenarios. Test all components of the application stack, not only the database layer, to ensure complete system recovery. Document test results and update procedures based on your findings.
 
-- **Validate backup and restore operations.** Test restore procedures by using both automatic backups and long-term backups to verify data integrity and recovery times. Practice point-in-time recovery scenarios to ensure that your workload can recover from specific points in time. Regular testing identifies potential problems with backup data before they affect production recovery.
+- **Validate backup and restore operations.** Test restore procedures by using both automatic backups and long-term backups to verify data integrity and recovery times. Practice point-in-time recovery (PITR) scenarios to ensure that your workload can recover from specific points in time. Regular testing identifies potential problems with backup data before they affect production recovery.
 
 - **Verify cross-region failover procedures.** Test manual failover procedures for cross-region disaster recovery scenarios to ensure that your operations teams understand the process and can complete it efficiently. Document step-by-step procedures and maintain current contact information for Oracle Support for when you need assistance.
 

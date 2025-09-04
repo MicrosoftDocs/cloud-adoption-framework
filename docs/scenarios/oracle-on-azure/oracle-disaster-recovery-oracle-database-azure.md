@@ -27,11 +27,11 @@ Oracle Database@Azure provides robust business continuity and disaster recovery 
 
 - Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. By default, the primary route for this connectivity is through Azure. 
 
-- The three backup options available for Oracle Exadata Database@Azure are:
+- There are three backup options available for Oracle Exadata Database@Azure:
 
   - **OCI-managed backup:** This option includes two integrated solutions, which are Oracle Database Autonomous Recovery Service and Oracle Cloud Infrastructure Object Storage. These solutions are managed via the OCI console.
 
-    Autonomous Recovery Service is designed for enterprise-level mission-critical workloads that have stringent recovery time objective (RTO) and recovery point objective (RPO) requirements. It provides availability through service-level agreements. For more information, see [Oracle platform as a service and infrastructure as a service public cloud services pillar document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf).
+    Autonomous Recovery Service is designed for enterprise-level mission-critical workloads that have stringent recovery time objective (RTO) and recovery point objective (RPO) requirements. It provides availability through service-level agreements (SLAs). For more information, see [Oracle platform as a service and infrastructure as a service public cloud services pillar document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf).
 
     OCI Object Storage is a general-purpose backup solution that's suitable for workloads that have less stringent RTO or RPO requirements.
 
