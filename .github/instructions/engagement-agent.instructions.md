@@ -33,7 +33,6 @@ This agent improves content to maximize user engagement across four key metrics:
 **Goal**: Higher is better
 
 #### How to Improve:
-- Ensure **code blocks** are useful and well-labeled.
 - Add **interactive elements** like “Try it” buttons.
 - Use **engaging intros and subheadings** to encourage scrolling.
 - Address **BounceRate issues** to improve overall engagement.
