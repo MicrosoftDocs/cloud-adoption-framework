@@ -31,7 +31,9 @@ ExpressRoute and FastConnect integration serves as the cornerstone for connectio
    > [!div class="nextstepaction"]
    > [Review Azure landing zone design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
 
-   :::image type="content" source="./media/azure-oci-hub-and-spoke.png" alt-text="Diagram showing Azure hub-and-spoke network topology with ExpressRoute connectivity to Oracle Cloud Infrastructure. The diagram displays an Azure hub virtual network connected to multiple spoke virtual networks, with an ExpressRoute circuit providing dedicated connectivity to OCI virtual cloud network. The hub contains an ExpressRoute gateway, and traffic flows between Azure spokes and OCI resources through the centralized hub architecture." lightbox="./media/azure-oci-hub-and-spoke.png" border="false":::
+   :::image type="complex" source="./media/azure-oci-hub-and-spoke.png" alt-text="Diagram showing Azure hub-and-spoke network topology with ExpressRoute connectivity to Oracle Cloud Infrastructure.":::
+      The diagram displays an Azure hub virtual network connected to multiple spoke virtual networks, with an ExpressRoute circuit providing dedicated connectivity to OCI virtual cloud network. The hub contains an ExpressRoute gateway, and traffic flows between Azure spokes and OCI resources through the centralized hub architecture. This architecture demonstrates the recommended enterprise pattern for Azure-OCI connectivity, where the ExpressRoute circuit connects to the central hub, enabling all spoke networks to access OCI resources through the shared connectivity infrastructure.
+   :::image-end:::
 
    *Figure 1: Interconnectivity between Azure and OCI via ExpressRoute.*
 
@@ -44,7 +46,9 @@ FastPath provides the solution for improved data path performance between Azure 
 
 1. **Enable FastPath for latency-sensitive applications.** FastPath delivers direct network traffic routing to virtual machines in the virtual network and bypasses the ExpressRoute gateway for maximum performance gains. Deploy your application in a single VNet with an ExpressRoute gateway and FastPath enabled when your workload demands the lowest possible latency between Azure and OCI. This configuration represents the optimal architecture for latency-critical applications.
 
-   :::image type="content" source="./media/azure-oci-one-vnet.png" alt-text="Diagram showing Azure single virtual network topology optimized for low latency connectivity to Oracle Cloud Infrastructure. The diagram displays a single Azure virtual network with an ExpressRoute gateway that has FastPath enabled, providing direct connectivity to OCI virtual cloud network. Virtual machines in the Azure VNet communicate directly with OCI resources, bypassing the gateway for optimal performance." lightbox="./media/azure-oci-one-vnet.png" border="false":::
+   :::image type="complex" source="./media/azure-oci-one-vnet.png" alt-text="Diagram showing Azure single virtual network topology optimized for low latency connectivity to Oracle Cloud Infrastructure.":::
+      The diagram displays a single Azure virtual network with an ExpressRoute gateway that has FastPath enabled, providing direct connectivity to OCI virtual cloud network. Virtual machines in the Azure VNet communicate directly with OCI resources, bypassing the gateway for optimal performance. This architecture demonstrates the recommended pattern for latency-sensitive applications requiring minimal network hops between Azure and OCI resources. FastPath technology enables direct traffic flow from virtual machines to OCI, eliminating gateway processing delays.
+   :::image-end:::
 
    *Figure 2: Interconnectivity between Azure and OCI with a single VNet.*
 
@@ -86,7 +90,9 @@ Operational access to OCI resources from Azure requires specific connectivity pa
    > [!div class="nextstepaction"]
    > [Learn about Azure Bastion for zero-trust access](/azure/bastion/bastion-overview)
 
-   :::image type="content" source="./media/azure-oci-jump-box-one-vnet.png" alt-text="Diagram showing Azure operational access pattern using a jump box to manage Oracle Cloud Infrastructure resources. The diagram displays an Azure virtual network containing a jump box virtual machine that provides secure administrative access to OCI virtual cloud network through ExpressRoute connectivity. The jump box serves as a secure bridge for Azure-based management tools to operate OCI resources while maintaining network isolation and security boundaries." lightbox="./media/azure-oci-jump-box-one-vnet.png" border="false":::
+   :::image type="complex" source="./media/azure-oci-jump-box-one-vnet.png" alt-text="Diagram showing Azure operational access pattern using a jump box to manage Oracle Cloud Infrastructure resources.":::
+      The diagram displays an Azure virtual network containing a jump box virtual machine that provides secure administrative access to OCI virtual cloud network through ExpressRoute connectivity. The jump box serves as a secure bridge for Azure-based management tools to operate OCI resources while maintaining network isolation and security boundaries. This architecture enables secure cross-cloud operations by providing controlled access points for administrative tasks, ensuring that direct access to OCI resources is managed through designated secure gateways within the Azure environment.
+   :::image-end:::
 
    *Figure 3: Managing OCI resources from Azure via a jump box.*
 
@@ -98,7 +104,9 @@ Operational access to OCI resources from Azure requires specific connectivity pa
    > [!div class="nextstepaction"]
    > [Calculate bandwidth costs](https://azure.microsoft.com/pricing/calculator/)
 
-   :::image type="content" source="./media/azure-oci-gr-hub-and-spoke.png" alt-text="Diagram showing ExpressRoute Global Reach connectivity pattern enabling on-premises access to Oracle Cloud Infrastructure through Azure. The diagram displays an on-premises network connected to Azure hub-and-spoke topology via ExpressRoute, with Global Reach linking the on-premises ExpressRoute circuit to a separate OCI ExpressRoute circuit. The Microsoft Enterprise Edge (MSEE) router serves as the central routing point, enabling direct communication between on-premises networks and OCI virtual cloud network while maintaining connectivity to Azure spoke networks." lightbox="./media/azure-oci-gr-hub-and-spoke.png" border="false":::
+   :::image type="complex" source="./media/azure-oci-gr-hub-and-spoke.png" alt-text="Diagram showing ExpressRoute Global Reach connectivity pattern enabling on-premises access to Oracle Cloud Infrastructure through Azure.":::
+      The diagram displays an on-premises network connected to Azure hub-and-spoke topology via ExpressRoute, with Global Reach linking the on-premises ExpressRoute circuit to a separate OCI ExpressRoute circuit. The Microsoft Enterprise Edge (MSEE) router serves as the central routing point, enabling direct communication between on-premises networks and OCI virtual cloud network while maintaining connectivity to Azure spoke networks. This architecture demonstrates how ExpressRoute Global Reach extends on-premises connectivity beyond Azure to reach OCI resources directly, providing a unified hybrid cloud connectivity solution that spans multiple cloud platforms through Microsoft's global network infrastructure.
+   :::image-end:::
 
    *Figure 4: Managing OCI resources from on-premises via ExpressRoute Global Reach.*
 

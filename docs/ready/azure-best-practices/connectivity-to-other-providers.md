@@ -28,7 +28,9 @@ Three cornerstone connectivity architectures establish enterprise-grade connecti
 
 Use the following cross-cloud connectivity flow chart to select the appropriate option:
 
-:::image type="content" source="./media/cloud-interconnect-decision-tree.png" alt-text="Diagram of cross-cloud connectivity flow chart." lightbox="./media/cloud-interconnect-decision-tree.png" border="false":::
+:::image type="complex" source="./media/cloud-interconnect-decision-tree.png" alt-text="Decision flow chart for selecting cross-cloud connectivity options between Azure and other cloud providers.":::
+   The flow chart guides organizations through a decision-making process to choose between ExpressRoute with customer-managed routing, ExpressRoute with cloud exchange provider, or Site-to-Site VPN connectivity. The chart includes decision points for performance requirements, operational complexity, cost considerations, and deployment timeline constraints. Each path leads to specific recommendations based on organizational needs and technical capabilities.
+:::image-end:::
 
 Figure 1: Cross-cloud connectivity flow chart
 
@@ -70,11 +72,15 @@ Implementation approach serves as the foundation that determines the success of 
 
 4. **Consider ExpressRoute Metro for same-city deployments to optimize latency and costs.** ExpressRoute Metro provides enhanced connectivity options with reduced latency characteristics for deployments within the same metropolitan area. This option can significantly reduce network latency and operational costs for organizations with resources in close geographic proximity while maintaining high bandwidth capabilities. For detailed technical specifications, see [About ExpressRoute Metro](/azure/expressroute/metro).
 
-:::image type="content" source="./media/eslz-other-cloud-providers.png" alt-text="Diagram cross-cloud connectivity with customer-managed routing (Option 1)." lightbox="./media/eslz-other-cloud-providers.png" border="false":::
+:::image type="complex" source="./media/eslz-other-cloud-providers.png" alt-text="Architecture diagram showing cross-cloud connectivity using ExpressRoute with customer-managed routing.":::
+   The diagram displays an on-premises network connected to Azure through ExpressRoute, with customer-managed BGP routing extending connectivity to another cloud provider (AWS or Google Cloud) through their respective private connectivity services (Direct Connect or Cloud Interconnect). The architecture shows ExpressRoute circuits, virtual network gateways, and cross-cloud routing paths managed by the customer organization for maximum control over traffic engineering and routing decisions.
+:::image-end:::
 
 Figure 2: Cross-cloud connectivity with customer-managed routing (Option 1)
 
-:::image type="content" source="./media/other-cloud-exchange-provider.png" alt-text="Diagram cross-cloud connectivity with a cloud exchange provider (Option 2)." lightbox="./media/other-cloud-exchange-provider.png" border="false":::
+:::image type="complex" source="./media/other-cloud-exchange-provider.png" alt-text="Architecture diagram showing cross-cloud connectivity using ExpressRoute with a cloud exchange provider.":::
+   The diagram illustrates connectivity between on-premises networks, Azure, and other cloud providers through a third-party cloud exchange provider such as Equinix, Megaport, or PacketFabric. The cloud exchange provider manages the routing complexity and interconnections between multiple cloud platforms, simplifying operational overhead while maintaining private connectivity performance. The architecture shows how the exchange provider serves as the central routing hub for multi-cloud connectivity.
+:::image-end:::
 
 Figure 3: Cross-cloud connectivity with a cloud exchange provider (Option 2)
 
@@ -84,13 +90,17 @@ Network configuration optimization ensures maximum performance and enterprise-gr
 
 1. **Deploy single virtual network architecture for latency-sensitive applications requiring minimal network latency.** Applications requiring minimal network latency between Azure and other cloud providers benefit significantly from deployment in a single virtual network with an ExpressRoute gateway and FastPath enabled. This optimized configuration minimizes network path complexity and reduces connection overhead to achieve optimal latency performance for critical workloads.
 
-   :::image type="content" source="./media/other-cloud-fast-path.png" alt-text="Diagram cross-cloud connectivity with FastPath enabled." lightbox="./media/other-cloud-fast-path.png" border="false":::
+   :::image type="complex" source="./media/other-cloud-fast-path.png" alt-text="Architecture diagram showing cross-cloud connectivity with ExpressRoute FastPath enabled for optimal performance.":::
+      The diagram demonstrates a single Azure virtual network with an ExpressRoute gateway that has FastPath enabled, providing direct connectivity to other cloud providers. FastPath bypasses the ExpressRoute gateway for virtual machine traffic, reducing latency and increasing throughput. The architecture shows how network traffic flows directly from Azure VMs to resources in other cloud providers, minimizing network hops and gateway processing delays for latency-sensitive applications.
+   :::image-end:::
 
    Figure 4: Cross-cloud connectivity with FastPath enabled
 
 2. **Use Site-to-Site VPN when ExpressRoute isn't available, cost-effective, or technically required.** Site-to-Site VPN over the public internet provides secure encrypted connectivity when private circuits aren't available, cost-effective, or necessary for the specific use case requirements. This approach supports organizations with less demanding performance requirements, budget constraints, or rapid deployment needs. For comprehensive implementation guidance, see [How to connect AWS and Azure using a BGP-enabled VPN gateway](/azure/vpn-gateway/vpn-gateway-howto-aws-bgp).
 
-   :::image type="content" source="./media/other-cloud-s2s-vpn.png" alt-text="Diagram cross-cloud connectivity using Site-to-Site VPN over the internet." lightbox="./media/other-cloud-s2s-vpn.png" border="false":::
+   :::image type="complex" source="./media/other-cloud-s2s-vpn.png" alt-text="Architecture diagram showing cross-cloud connectivity using Site-to-Site VPN over the public internet.":::
+      The diagram illustrates secure encrypted connectivity between Azure and other cloud providers using Site-to-Site VPN tunnels over the public internet. The architecture shows VPN gateways in each cloud platform establishing IPsec tunnels for secure data transmission. This cost-effective approach provides encrypted connectivity when private circuits aren't available or required, supporting organizations with budget constraints or rapid deployment timelines while maintaining security through encryption protocols.
+   :::image-end:::
 
    Figure 5: Cross-cloud connectivity using Site-to-Site VPN over the Internet
 
