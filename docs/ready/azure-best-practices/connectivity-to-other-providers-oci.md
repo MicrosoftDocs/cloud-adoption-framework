@@ -13,7 +13,7 @@ ms.custom: think-tank
 This article shows you how to establish secure, high-performance connectivity between Azure and Oracle Cloud Infrastructure (OCI) with ExpressRoute and FastConnect. You learn proven approaches to integrate Azure landing zones with OCI, and you enable hybrid cloud scenarios that maximize both platforms' capabilities.
 
 > [!TIP]
-> **New to Azure-OCI connectivity?** [Start your first connection in under an hour](/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking)
+> **New to Azure-OCI connectivity?** [Start your first connection](/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking)
 
 ## Set up ExpressRoute connectivity to Oracle Cloud Infrastructure
 
@@ -29,7 +29,7 @@ ExpressRoute and FastConnect integration serves as the cornerstone for connectio
 3. **Connect the ExpressRoute circuit to your hub network architecture.** Both traditional hub-and-spoke and Azure Virtual WAN topologies support OCI connectivity through ExpressRoute circuit integration. Connect the ExpressRoute circuit to your hub VNet or Virtual WAN hub to provide centralized connectivity that you can share across spoke networks and maintain consistent network policies. This hub-centric approach represents the best practice for enterprise Azure network architectures.
 
    > [!div class="nextstepaction"]
-   > [Choose your Azure landing zone network topology](/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
+   > [Review Azure landing zone design areas →](/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
 
    :::image type="content" source="./media/azure-oci-hub-and-spoke.png" alt-text="Diagram showing Azure hub-and-spoke network topology with ExpressRoute connectivity to Oracle Cloud Infrastructure. The diagram displays an Azure hub virtual network connected to multiple spoke virtual networks, with an ExpressRoute circuit providing dedicated connectivity to OCI virtual cloud network. The hub contains an ExpressRoute gateway, and traffic flows between Azure spokes and OCI resources through the centralized hub architecture." lightbox="./media/azure-oci-hub-and-spoke.png" border="false":::
 
@@ -84,7 +84,7 @@ Operational access to OCI resources from Azure requires specific connectivity pa
 1. **Deploy jump boxes for secure OCI resource management from Azure.** Jump boxes deliver secure access to OCI virtual cloud networks from Azure environments without exposure of OCI resources. Deploy a jump box in a spoke VNet connected to your hub network to establish a secure operational bridge that allows Azure-based management tools to access OCI resources while the setup maintains network isolation. As a managed alternative to self-managed jump boxes, use Azure Bastion for zero-trust RDP/SSH access to provide secure, browser-based access without exposure of management ports. This jump box approach represents the recommended pattern for secure cross-cloud operations.
 
    > [!div class="nextstepaction"]
-   > [Set up Azure Bastion for zero-trust access](/azure/bastion/bastion-overview)
+   > [Learn about Azure Bastion for zero-trust access →](/azure/bastion/bastion-overview)
 
    :::image type="content" source="./media/azure-oci-jump-box-one-vnet.png" alt-text="Diagram showing Azure operational access pattern using a jump box to manage Oracle Cloud Infrastructure resources. The diagram displays an Azure virtual network containing a jump box virtual machine that provides secure administrative access to OCI virtual cloud network through ExpressRoute connectivity. The jump box serves as a secure bridge for Azure-based management tools to operate OCI resources while maintaining network isolation and security boundaries." lightbox="./media/azure-oci-jump-box-one-vnet.png" border="false":::
 
