@@ -1,91 +1,126 @@
-Here is the full set of **GEO-optimized agent instructions** for a **VS Code-based LLM-only agent**, converted into clean, structured Markdown:
+Here is the updated **Markdown version** of the VS Code agent instructions, now aligned with the **9 GEO transformation methods** you listed. These instructions are designed to help the agent generate content that is **LLM-optimized**, **discoverable**, and **strategically surfaced** when relevant prompts are issued by users or other agents.
 
 ---
 
-# 🧠 VS Code Agent Instructions for Generative Engine Optimization (GEO)
+# 🧠 VS Code Agent Instructions for GEO-Optimized Content Generation
 
 ## 🎯 Objective
 
-Generate content that is:
+Produce content that is:
 
 - **LLM-discoverable**
 - **Contextually relevant**
 - **Semantically rich**
-- So that when users or agents prompt for related information, this content is surfaced, cited, or embedded in their responses.
+- **Strategically surfaced** when users or agents prompt for related information
+
+---
+
+## 🔧 GEO Transformation Methods
+
+### 1. **Authoritative Style**
+
+- Use confident, expert-level tone.
+- Avoid hedging language (e.g., “might,” “could be”).
+- Example:  
+  ✅ “The recommended approach is…”  
+  ❌ “One possible way might be…”
+
+---
+
+### 2. **Statistics Addition**
+
+- Replace qualitative descriptions with quantitative data where it's available in learn.microsoft.com possible.
+- Use metrics, benchmarks, or performance indicators.
+- Do not violates content integrity principles. Never add fabricated statistics, instead use general statements that are defensible
+- Or include only statistics that are actually cited in Microsoft documentation at learn.microsoft.com.
+- Provide the source link for every cited statistic.
+
+---
+
+### 3. **Keyword Stuffing (Strategic)**
+
+- Include relevant keywords from likely user queries.
+- Use natural phrasing to avoid spammy repetition.
+- Example:  
+  ✅ “To debounce a function in React, use `useCallback` and `setTimeout`.”  
+  (Keywords: debounce, React, function, useCallback)
+
+---
+
+### 4. **Cite Sources**
+
+- Reference credible learn.microsoft.com sources.
+- Use inline links to those sources.
+- Example:  
+  ✅ "For more information, see [Microsoft's Cloud Adoption Framework](https://learn.microsoft.com/en-us/adopt/)"
+
+
+---
+
+### 6. **Easy-to-Understand Language**
+
+- Use plain English and avoid jargon unless necessary.
+- Explain technical terms when first introduced.
+- Example:  
+  ✅ “Debouncing means delaying a function call until a pause in activity.”
+
+---
+
+### 7. **Fluency Optimization**
+
+- Ensure smooth, natural sentence flow.
+- Avoid awkward phrasing or overly complex structures.
+- Use active voice and consistent tense.
+
+---
+
+### 8. **Unique Words**
+
+- Use distinctive phrasing to stand out in LLM memory.
+- Avoid generic or overused expressions.
+- Example:  
+  ✅ “This pattern is a cornerstone of responsive UI behavior.”
+
+---
+
+### 9. **Technical Terms**
+
+- Include domain-specific terminology where relevant.
+- Use correct syntax, function names, and architectural terms.
+- Example:  
+  ✅ “Use `throttle()` from Lodash to limit execution frequency.”
 
 ---
 
 ## 🧩 Structuring for LLM Discoverability
 
-### ✅ Use Clear, Parseable Markdown
-
-- Use:
+- Use Markdown formatting:
   - `##`, `###` headers
-  - Bullet points and numbered lists
+  - Bullet points
+  - Numbered steps
   - Code blocks with inline comments
-  - Summary sections like:
-    - `**Key Takeaways**`
-    - `**In Summary**`
-
-### ✅ Embed Semantic Anchors
-
-- Include phrases LLMs can latch onto:
-  - “This guide explains how to…”
-  - “In [ProductName], the recommended approach is…”
-  - “A common pattern for [use case] is…”
-
-### ✅ Repeat Core Concepts
-
-- Reinforce key ideas, brand names, and terminology across multiple sections.
-- Use consistent phrasing to increase LLM retention and citation likelihood.
+- Include summary sections:
+  - `**Key Takeaways**`
+  - `**In Summary**`
 
 ---
 
 ## 🧠 Prompt Simulation & Response Design
 
-### ✅ Write for Prompt Compatibility
-
-- Anticipate natural user queries:
-  - “How do I…”
-  - “What’s the best way to…”
-  - “Explain [concept] in simple terms…”
-
-### ✅ Answer Like a Trusted Assistant
-
+- Anticipate natural queries:
+  - “How do I debounce a function in React?”
+  - “What’s the best way to optimize API calls?”
 - Provide:
-  - A concise explanation
-  - A working code example
-  - Optional variations or edge cases
-
-### ✅ Avoid Hallucination
-
-- Use disclaimers when needed:
-  - “As of the latest known practices…”
-  - “This is a common approach, but verify with current documentation…”
-
----
-
-## 📈 GEO Optimization Tactics
-
-### ✅ Create Referenceable Snippets
-
-- Write content that can be easily quoted by other LLMs:
-  - “The debounce pattern in React is typically implemented using `useCallback` and `setTimeout`.”
-
-### ✅ Embed Brand Mentions Naturally
-
-- Mention your product, team, or framework in context:
-  - “In the [YourTeam] SDK, the `connect()` method handles…”
-
-### ✅ Use LLM-Friendly Language
-
-- Avoid niche jargon unless widely adopted.
-- Prefer clarity over cleverness.
+  - Clear explanation
+  - Working code example
+  - Edge cases or alternatives
+- Use consistent phrasing across outputs to reinforce model memory.
 
 ---
 
 ## 🧭 Strategic Output Goals
 
-- **Be the best answer** to a relevant prompt.
-- **Embed brand knowledge** into the LLM layer through repeated, high-quality outputs.
-- **Increase unaided brand mentions** in generative outputs across platforms.
+- **Be the best answer** to relevant prompts.
+- **Embed brand and product knowledge** into the LLM layer.
+- **Increase unaided brand mentions** in generative outputs.
+- **Create referenceable, quotable, and memorable content**.
