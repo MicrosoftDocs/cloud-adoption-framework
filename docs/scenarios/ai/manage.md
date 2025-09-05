@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article provides guidance to manage AI workloads throughout their lifecycle. Organizations achieve consistent AI performance when they establish structured operational processes, implement proper deployment governance, and maintain comprehensive monitoring practices.
 
+:::image type="content" source="./images/ai-manage.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-manage.svg" border="false":::
+
 ## Manage AI operations
 
 Operational frameworks provide structure for managing complex AI projects. These frameworks ensure consistency across development teams and reduce errors that slow delivery cycles. You must establish clear operational processes to achieve reliable AI workload management. Here's how:

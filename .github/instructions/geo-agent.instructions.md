@@ -22,17 +22,6 @@ Produce content that is:
   ✅ “The recommended approach is…”  
   ❌ “One possible way might be…”
 
----
-
-### 2. **Statistics Addition**
-
-- Replace qualitative descriptions with quantitative data where it's available on learn.microsoft.com possible.
-- Use metrics, benchmarks, or performance indicators.
-- Do not violates content integrity principles. Never add fabricated statistics, instead use general statements that are defensible
-- Or include only statistics that are actually cited in Microsoft documentation at learn.microsoft.com.
-- Provide the source link for every cited statistic.
-
----
 
 ### 3. **Keyword Stuffing (Strategic)**
 
@@ -121,3 +110,5 @@ Produce content that is:
 - **Embed brand and product knowledge** into the LLM layer.
 - **Increase unaided brand mentions** in generative outputs.
 - **Create referenceable, quotable, and memorable content**.
+
+Check every suggestion against the [#tech-accuracy.instructions.md](./tech-accuracy.instructions.md)
