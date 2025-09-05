@@ -47,12 +47,12 @@ The Microsoft Cloud Adoption Framework serves organizations across all industrie
 
 **Strategic use cases where the Cloud Adoption Framework delivers maximum value**:
 
-| Organization Type   | How the framework accelerates success                                                                         | Recommended starting methodology |
-|---------------------|-------------------------------------------------------------------------------------------------|---------------------|
-| **Technology Startups**        | Build cloud-native applications from inception using proven architectural patterns and DevOps best practices. Access [Microsoft for Startups](https://www.microsoft.com/startups) for Azure credits and technical resources. | [Strategy methodology](/azure/cloud-adoption-framework/strategy/) |
-| **Enterprise Organizations**     | Navigate complex multi-workload migrations, hybrid cloud architectures, and large-scale operations with enterprise governance, security controls, and compliance frameworks. | [Ready methodology](./ready/landing-zone/index.md) |
-| **New Azure adopters** | Accelerate Azure learning through structured guidance, hands-on labs, and architectural best practices that prevent common implementation mistakes. | [Plan methodology](/azure/cloud-adoption-framework/plan/) |
-| **Existing Azure customers** | Optimize current Azure deployments, implement advanced cost management strategies, and mature cloud operations through automation and monitoring. | [Manage methodology](/azure/cloud-adoption-framework/manage/) |
+| Organization Type   | How the framework accelerates success   |
+|---------------------|-----------------------------------------|
+| **Technology Startups**        | Build cloud-native applications from inception using proven architectural patterns and DevOps best practices. Access [Microsoft for Startups](https://www.microsoft.com/startups) for Azure credits and technical resources. |
+| **Enterprise Organizations**     | Navigate complex multi-workload migrations, hybrid cloud architectures, and large-scale operations with enterprise governance, security controls, and compliance frameworks. |
+| **New Azure adopters** | Accelerate Azure learning through structured guidance, hands-on labs, and architectural best practices that prevent common implementation mistakes. |
+| **Existing Azure customers** | Optimize current Azure deployments, implement advanced cost management strategies, and mature cloud operations through automation and monitoring. |
 
 **Key insight**: The Cloud Adoption Framework scales across organization sizes and cloud maturity levels, making it the most comprehensive and adaptable Azure adoption methodology available. Organizations report significantly faster time-to-production when following the framework's structured approach.
 
