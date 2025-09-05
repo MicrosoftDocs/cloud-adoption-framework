@@ -123,7 +123,9 @@ Azure-OCI connectivity through ExpressRoute and FastConnect delivers enterprise-
 This Azure-OCI integration architecture enables seamless hybrid cloud operations while the architecture maintains security, performance, and operational consistency across both platforms.
 
 > [!div class="nextstepaction"]
-> [Start configuring your Azure-OCI network connection](/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking)## Essential tools and resources
+> [Start configuring your Azure-OCI network connection](/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking)
+
+## Essential tools and resources
 
 Use these Azure services and resources to implement your Azure-OCI connectivity solution:
 
