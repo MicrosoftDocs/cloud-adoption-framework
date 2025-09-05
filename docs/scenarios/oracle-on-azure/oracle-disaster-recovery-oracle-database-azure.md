@@ -6,15 +6,12 @@ ms.author: guherk
 ms.date: 01/25/2025
 ms.topic: conceptual
 ms.custom: e2e-oracle
+ai-usage: ai-assisted
 --- 
 
-# Business continuity and disaster recovery considerations for Oracle Database@Azure
+# Business continuity and disaster recovery considerations for Oracle Exadata Database@Azure
 
-This article expands on the business continuity and disaster recovery (BCDR) considerations and recommendations described in the [Azure landing zone design area](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). It incorporates the [Oracle Maximum Availability Architecture (MAA)](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-E8360630-A2B8-4A46-9CBF-56EF0BF8A00F) principles for Oracle Database@Azure by using Oracle Exadata Database Service.
-
-The first step to building a resilient architecture for your Oracle databases that run on Oracle Database@Azure is to identify the availability requirements for the solution. It's crucial to establish the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failures, including planned and unplanned events. The RTO defines the maximum downtime that an application or business can tolerate after a disruption. The RPO specifies the maximum duration of data loss that an application or business can tolerate. You should address this prerequisite before you start your BCDR design. After you establish the requirements of your solution, you can design your Oracle Database@Azure environment to align with your RTO and RPO.
-
-For more information, see the Microsoft Azure Well-Architected Framework's guidelines about how to [design a DR strategy](/azure/well-architected/reliability/disaster-recovery).
+Oracle Database@Azure provides robust business continuity and disaster recovery (BCDR) options to ensure the resilience and high availability of your critical workloads. This article provides an overview of key BCDR considerations, design strategies, and best practices for deploying Oracle Exadata Database@Azure. Learn how to build a secure and reliable architecture that meets your organization's requirements.
 
 ## Design considerations
 
@@ -24,17 +21,17 @@ For more information, see the Microsoft Azure Well-Architected Framework's guide
 
 - Oracle Exadata Database@Azure provides native Oracle technologies, such as Oracle Real Application Clusters for high availability (HA) and Oracle Data Guard for DR. Data Guard and Active Data Guard are supported for DR architecture.
 
-- Oracle Exadata Database@Azure provides HA against database instance and hardware-level failures by default. This architecture aligns with the [MAA silver level](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-91572193-DF8E-4D7A-AF65-7A803B89E840). Planned maintenance operations can be conducted in a rolling manner. However, a default single-zone architecture has zero fault tolerance against site or regional failures.
+- Oracle Exadata Database@Azure provides HA against database instance and hardware-level failures by default. This architecture aligns with the [Oracle Maximum Availability Architecture (MAA) silver level](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/db-azure1.html#GUID-91572193-DF8E-4D7A-AF65-7A803B89E840). Planned maintenance operations can be conducted in a rolling manner. However, a default single-zone architecture has zero fault tolerance against site or regional failures.
 
 - The solution provides automated Data Guard configuration for DR. This setup helps protect from site failures by requiring another Oracle Exadata Database@Azure deployment in a different availability zone or region.
 
 - Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. By default, the primary route for this connectivity is through Azure. 
 
-- The three backup options available for Oracle Exadata Database@Azure are:
+- There are three backup options available for Oracle Exadata Database@Azure:
 
   - **OCI-managed backup:** This option includes two integrated solutions, which are Oracle Database Autonomous Recovery Service and Oracle Cloud Infrastructure Object Storage. These solutions are managed via the OCI console.
 
-    Autonomous Recovery Service is designed for enterprise-level mission-critical workloads that have stringent RTO and RPO requirements. It provides availability through service-level agreements. For more information, see [Oracle platform as a service and infrastructure as a service public cloud services pillar document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf).
+    Autonomous Recovery Service is designed for enterprise-level mission-critical workloads that have stringent recovery time objective (RTO) and recovery point objective (RPO) requirements. It provides availability through service-level agreements (SLAs). For more information, see [Oracle platform as a service and infrastructure as a service public cloud services pillar document](https://www.oracle.com/us/corporate/contracts/paas-iaas-pub-cld-srvs-pillar-4021422.pdf).
 
     OCI Object Storage is a general-purpose backup solution that's suitable for workloads that have less stringent RTO or RPO requirements.
 
@@ -44,7 +41,7 @@ For more information, see the Microsoft Azure Well-Architected Framework's guide
 
     This option requires manual configuration and ongoing maintenance.
 
-  - **Non-Microsoft backup solutions:** You can use non-Microsoft backup solutions that are available in Azure Marketplace, such as [Commvault](https://documentation.commvault.com/2024e/essential/oracle_database_at_azure.html), to manage and store database backups.
+  - **Non-Microsoft backup solutions:** You can use non-Microsoft backup solutions that are available in Azure Marketplace, such as [Commvault](https://azuremarketplace.microsoft.com/marketplace/apps/commvault.commvault?tab=Overview), to manage and store database backups.
 
 ## Design recommendations
 
