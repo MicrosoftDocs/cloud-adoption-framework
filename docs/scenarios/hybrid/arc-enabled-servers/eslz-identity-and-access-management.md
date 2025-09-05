@@ -89,7 +89,7 @@ Security controls protect Azure Arc-enabled servers and the resources they can a
 > [!div class="nextstepaction"]
 > [Review Arc-enabled servers security overview](/azure/azure-arc/servers/security-overview)
 
-1. **Configure secure server onboarding.** Use security groups to assign local administrator rights to identified users or service accounts for Azure Arc onboarding at scale. This approach provides consistent access control across your server fleet.
+**Configure secure server onboarding.** Use security groups to assign local administrator rights to identified users or service accounts for Azure Arc onboarding at scale. This approach provides consistent access control across your server fleet.
 
 ### Certificate-based authentication (Recommended)
 
