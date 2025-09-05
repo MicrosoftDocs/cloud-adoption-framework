@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article helps you create an AI adoption plan that transforms your organization's AI strategy into actionable steps. An AI adoption plan bridges the gap between AI vision and execution. The plan ensures alignment between AI initiatives and business goals while addressing skill gaps, resource requirements, and implementation timelines.
 
+:::image type="content" source="./images/ai-plan.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-plan.svg" border="false":::
+
 ## Assess AI skills
 
 Current capability assessment prevents resource misallocation and ensures realistic project planning aligned with organizational readiness. AI projects fail when organizations attempt implementations beyond their technical maturity or data availability. You must evaluate your skills, data assets, and infrastructure to establish a foundation for successful AI adoption. Here's how:
