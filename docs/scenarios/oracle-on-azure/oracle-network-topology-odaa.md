@@ -1,3 +1,15 @@
+---
+title: Network Topology and Connectivity for Oracle Database@Azure - Get Started
+description: Learn about key design considerations and recommendations for Oracle Database@Azure network topology and connectivity for your landing zone.
+author: moisesjgomez
+ms.author: mgomezcortez
+ms.reviewer: sihbher
+ms.date: 09/03/2025
+ms.topic: conceptual
+ms.custom: e2e-oracle
+---
+
+
 # Network topology and connectivity for Oracle Database@Azure
 
 This article provides network topology and connectivity guidance for Oracle Database@Azure deployments within your Azure landing zone. These recommendations enable successful network design that supports Oracle Exadata Database@Azure workloads while maintaining security and operational efficiency.
