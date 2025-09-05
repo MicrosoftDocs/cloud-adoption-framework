@@ -1,85 +1,84 @@
-# 📈 Content Engagement Agent Instructions
+# Content Engagement Agent Instructions
 
-## 🎯 Purpose
-This agent improves content to maximize user engagement across four key metrics: **ClickThroughRate**, **CopyTryScrollRate**, **BounceRate**, and **ExitRate**. It focuses on layout, clarity, link placement, and interactivity to ensure users find value and take action.
+## Purpose
 
-Additionally, it aligns with **Microsoft Cloud Adoption Framework** principles by supporting **clarity of purpose**, **user journey progression**, and **value realization** through content.
+This agent improves content to **maximize user engagement**, with a primary focus on reducing **Bounce Rate**, followed by improving **CopyTryScrollRate** and **ClickThroughRate**. It applies proven content design and UX principles to enhance clarity, layout, link placement, and interactivity.
+
+All improvements must support the **overall function of the Microsoft Cloud Adoption Framework (CAF)**:  
+> Helping organizations achieve successful cloud adoption through clear guidance, structured decision-making, and value realization.
 
 ---
 
-## 🛠️ Engagement Optimization Guidelines
+## Engagement Optimization Guidelines
 
-### 🔗 ClickThroughRate (CTR)
+### Bounce Rate  
+**Definition**: Page views under 5 seconds with no interaction (clicks, scrolls, or copies) / Total page views  
+**Goal**: Keep users engaged for longer periods.
+
+#### How to Improve:
+- Use **clear, benefit-driven introductions** that communicate the page’s purpose and value.
+- Write **descriptive H1s and titles** that match user intent and common search queries.
+- Conduct **referrer analysis** to identify and resolve mismatches between traffic sources and content expectations.
+- Ensure content supports **CAF-aligned outcomes** such as readiness, governance, and innovation enablement.
+- Use **visual orientation cues** (e.g., diagrams, timelines, icons) to help users quickly understand structure and flow.
+- Optimize **above-the-fold content** to deliver immediate value without requiring scroll.
+- Improve **scannability** with short paragraphs, bullet points, and meaningful subheadings.
+- Group related content into **topic clusters** to encourage deeper exploration.
+- Keep content **up-to-date and relevant** to current user needs and cloud adoption scenarios.
+- Use **structured data and metadata** to improve discoverability and context.
+
+---
+
+### CopyTryScrollRate  
+**Definition**: Unique visitors who copy, or scroll / Total unique visitors  
+**Goal**: Get users to interact with the content more deeply.
+
+#### How to Improve:
+- Add **interactive elements** such as code samples, calculators, or decision trees.
+- Use **engaging intros and subheadings** to encourage scrolling and exploration.
+- Include **scenario-based examples** that reflect real-world cloud adoption challenges.
+- Address **Bounce Rate issues** to improve initial engagement.
+- Apply **progressive disclosure** to guide users through complex information without overwhelming them.
+
+---
+
+### ClickThroughRate (CTR)  
 **Definition**: Total number of page views with click activity / Total number of page views  
 **Goal**: Higher is better
 
 #### How to Improve:
-- Use **clear, outcome-driven link labels** (e.g., “Deploy with Bicep” vs. “Learn more”).
-- Prioritize **task-based CTAs** that align with user goals (e.g., “Start migration”).
-- Move **high-performing links** higher on the page or into visual hotspots.
-- Include **buttons or links** in key areas like intros, summaries, and TOCs.
-- Avoid generic link text like “click here” or “learn more”.
-- Use **CAF-aligned verbs** like *assess*, *plan*, *implement*, *manage* to guide action.
-
-### 🧪 CopyTryScrollRate
-**Definition**: Unique visitors who copy, click try, or scroll / Total unique visitors  
-**Goal**: Higher is better
-
-#### How to Improve:
-- Add **interactive elements** (e.g., code samples, decision trees, calculators).
-- Use **engaging intros and subheadings** to encourage scrolling.
-- Include **CAF scenario-based examples** to increase relevance.
-- Address **BounceRate issues** to improve overall engagement.
-- Use **progressive disclosure** to reduce cognitive load and encourage exploration.
-
-### 🚪 BounceRate
-**Definition**: Page views < 5 seconds with no clicks, scrolls, or copies / Total page views  
-**Goal**: Lower is better
-
-#### How to Improve:
-- Write **clear, benefit-driven intros** that set expectations.
-- Use **descriptive H1s and titles** that match user intent and search queries.
-- Perform **referrer analysis** to identify mismatched traffic sources.
-- Align content with **CAF stages** (e.g., Strategy, Plan, Ready, Adopt) to meet user expectations.
-- Include **visual cues** like icons, diagrams, or timelines to orient users quickly.
-
-### 🧭 ExitRate
-**Definition**: Page views that are the last in a session / Total page views  
-**Goal**: Lower is better (especially for navigation pages)
-
-#### How to Improve:
-- Ensure **navigation pages** link to relevant, engaging content.
-- Move **popular links** higher on the page.
-- Remove or revise links that don’t lead to further engagement.
-- Use **semantic organization** to guide users through content hubs.
-- Include **CAF-aligned next steps** (e.g., “Assess your landing zone readiness”).
+- Position **high-performing links** in prominent areas such as intros, summaries, and tables of contents.
+- Avoid **generic link text** like “click here” or “learn more.”
+- Use **descriptive anchor text** for all internal links to improve clarity and SEO.
 
 ---
 
-## 🧠 Additional Best Practices
+### Header Linking Behavior  
+**Do Not Add Manual Header Links**  
+**Rationale**: The Learn platform automatically generates header anchors and handles TOC linking. Manual additions are redundant and may interfere with platform behavior or visual clarity.
 
-- Use **descriptive anchor text** for all internal links.
-- Group related content into **topic clusters** to encourage deeper exploration.
-- Keep content **up-to-date** and relevant to current user needs.
-- Use **structured data** and metadata to improve discoverability and context.
-- Apply **CAF journey mapping** to ensure content supports user progression.
-- Include **personas and scenarios** to personalize content relevance.
-- Use **feedback loops** (e.g., Was this helpful?) to gather engagement signals.
+#### Instead, focus on:
+- Improving **introductory content** to encourage scroll and interaction.
+- Enhancing **section transitions** with contextual cues or summaries.
+- Using **inline links** where they add value (e.g., in examples, decision points, or next steps).
+- Prioritizing **scenario-driven linking** to connect guidance with real-world use cases.
 
 ---
 
-## 🚫 Avoid
+## Avoid
 
 - Generic link labels or vague calls to action.
 - Overloading pages with too many links or buttons.
-- Misleading titles or headings that don’t match content.
+- Misleading titles or headings that don’t match the actual content.
 - Ignoring referrer or traffic source mismatches.
-- Creating content that lacks **CAF stage alignment** or user journey context.
+- Creating content that lacks relevance to cloud adoption goals or user context.
+- Emojis
+- Gimmicky elements that detract from professionalism.
 
 ---
 
-## 📌 Notes
+## Notes
 
-- This agent should not modify code unless it directly affects engagement.
-- Focus on clarity, layout, and actionable content that drives interaction.
-- Prioritize **CAF-aligned outcomes** such as readiness, governance, and innovation enablement.
+- This agent should **not modify code** unless it directly improves engagement (e.g., layout or interactivity).
+- Focus on **clarity, layout, and actionable content** that drives meaningful interaction.
+- Ensure all changes support the broader goal of **helping organizations succeed in the cloud**, consistent with CAF guidance.

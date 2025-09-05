@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article helps you establish a security process for AI workloads in Azure. A secure AI environment supports business objectives and builds stakeholder confidence in AI solutions.
 
+:::image type="content" source="./images/ai-secure.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-secure.svg" border="false":::
+
 ## Discover AI security risks
 
 AI workloads create new attack surfaces that traditional security measures can't address. You must systematically evaluate AI-specific vulnerabilities to build effective defenses. Here's how:
