@@ -9,39 +9,47 @@ ms.topic: conceptual
 
 # Create your strategy for AI adoption
 
-A successful AI strategy requires planning in four key areas. You need to identify the right **AI use cases** that deliver clear business value, select **Microsoft AI technologies** that match your team's skills, establish **data governance** that grows with your needs, and implement **responsible AI practices** that maintain trust and meet regulations.
+A successful AI strategy requires disciplined planning in four core areas. Identify the right **AI use cases** that deliver measurable business value, select **Microsoft AI technologies** that align to your team's skills, establish scalable **data governance**, and implement **responsible AI practices** that preserve trust and meet regulatory requirements. This article provides pragmatic enterprise guidance for Azure AI Foundry, Microsoft 365 Copilot, Azure OpenAI, Microsoft Purview Data Security Posture Management (DSPM) for AI, and Responsible AI adoption.
 
 :::image type="content" source="./images/ai-strategy.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-strategy.svg" border="false":::
 
-**Why strategic AI planning matters**: A documented, structured AI strategy typically produces more consistent and measurable outcomes than ad-hoc efforts. This strategy guide provides practical steps for developing your AI strategy, including Microsoft Copilot deployment, Azure AI Foundry setup, and AI governance best practices.
+**Why strategic AI planning matters**: A documented, structured AI strategy produces more consistent, faster, and auditable outcomes than ad-hoc experimentation. This strategy guide delivers actionable steps for Microsoft Copilot deployment, Azure AI Foundry environment setup, AI agent adoption, Azure OpenAI integration, and enterprise AI governance with Microsoft Purview DSPM.
 
 ## Identify AI use cases for maximum business impact
 
-AI transforms businesses by making people more productive and automating routine work. **Generative AI** (AI that creates content like text and images) can boost knowledge worker productivity, while **analytical AI and machine learning** automate data-heavy tasks and eliminate repetitive manual work. Start by identifying high-impact areas where AI delivers measurable results and competitive advantages.
+AI transforms business operations by accelerating knowledge work and automating routine processes. **Generative AI** (systems that create content such as text, images, or code) elevates knowledge worker productivity. **Analytical AI and machine learning** automate data-heavy tasks, reduce error rates, and unlock predictive insights. Start by isolating high-impact, high-friction processes where AI demonstrably improves cost, speed, quality, or customer experience.
 
-**Focus on business outcomes first**: Successful AI projects target specific business results rather than adopting technology for its own sake. Organizations that follow structured approaches to identifying use cases achieve better success rates, as shown in the [Azure Architecture Center AI guidance](https://learn.microsoft.com/azure/architecture/ai-ml/).
+**Focus on business outcomes first**: Successful AI programs anchor every use case to a quantified business objective—not a model-first experiment. Structured discovery methods correlate with higher operationalization success rates as reinforced by the [Azure Architecture Center AI guidance](https://learn.microsoft.com/azure/architecture/ai-ml/).
 
 1. **Identify automation opportunities.** Focus on processes suitable for automation to improve efficiency and reduce operational costs. Target repetitive tasks, data-heavy operations, or areas with high error rates where AI can have a significant impact.
 
-2. **Gather customer feedback.** Use customer feedback to uncover use cases that improve customer satisfaction when you automate them with AI. This customer feedback helps prioritize impactful AI initiatives.
+2. **Gather customer feedback.** Use structured customer feedback (surveys, support transcripts, NPS comments) to uncover use cases that improve satisfaction when automated with AI. This feedback helps prioritize initiatives with measurable impact.
 
-3. **Conduct an internal assessment.** Collect input from various departments to identify challenges and inefficiencies that AI can address. Document workflows and gather stakeholder input to uncover opportunities for automation, insight generation, or improved decision-making.
+3. **Conduct an internal assessment.** Collect input from departments (operations, finance, legal, support, product) to identify challenges and inefficiencies AI can address. Document workflows and gather stakeholder input to uncover opportunities for automation, insight generation, or improved decision-making.
 
-4. **Research industry use cases.** Investigate how similar organizations or industries use AI to solve problems or enhance operations. Use tools like the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for inspiration and to evaluate suitable approaches.
+4. **Research industry use cases.** Investigate how similar organizations or industries use AI to solve problems or enhance operations. Use resources like the [AI architectures](/azure/architecture/ai-ml/) in the Azure Architecture Center for inspiration and to evaluate suitable approaches.
 
 5. **Define AI targets.** For each identified use case, define the goal (general purpose), objective (desired outcome), and success metric (quantifiable measure). These benchmarks guide your AI adoption and measure success. For more information, see [example AI strategy](#example-ai-strategy).
 
 ## Define an AI technology strategy using Microsoft's service options
 
-Your technology strategy determines the best approach based on your team's skills, data needs, and budget. Microsoft offers three main ways to deploy AI: ready-to-use software (SaaS), development platforms (PaaS), and infrastructure you manage (IaaS). Choose the approach that matches your technical capabilities and business requirements.
+Your technology strategy determines the optimal balance of speed, customization, and control. Microsoft delivers three primary AI consumption patterns: ready-to-use software (SaaS), extensible development platforms (PaaS), and fully managed infrastructure (IaaS). Select the model that aligns with your engineering maturity, compliance posture, data residency, and customization needs.
 
-**Understanding AI agents**: Modern AI centers on **AI agents**, which are smart systems that can complete tasks, make decisions, and adapt to changes within their configured instructions and governance controls without constant supervision. Think of these AI agents as digital assistants that can orchestrate workflows across Microsoft 365, Dynamics 365, and Azure environments when appropriate connectors, permissions, and APIs are provided. Review [What are AI agents?](https://learn.microsoft.com/azure/ai-foundry/agents/overview#what-is-an-ai-agent) to understand how these agent systems work.
+**Understanding AI agents**: Modern enterprise AI increasingly centers on **AI agents**—goal-directed systems that invoke tools, reason over context, and adapt within governance constraints. These agents orchestrate workflows across Microsoft 365, Dynamics 365, and Azure environments when granted appropriate connectors, permissions, and APIs. Review [What are AI agents?](https://learn.microsoft.com/azure/ai-foundry/agents/overview#what-is-an-ai-agent) to establish a shared vocabulary for agent capabilities, security boundaries, and lifecycle management.
 
 1. **Learn about AI agents.** **AI agents** are smart systems that use advanced AI models to complete tasks without someone watching over them constantly. These agent systems go beyond simple automation because they can adapt to changing situations and make intelligent decisions. Planning for AI agents means thinking about how these agents work with your existing systems and processes. See [enterprise workflow patterns](https://learn.microsoft.com/azure/architecture/ai-ml/guide/ai-agent-design-patterns) for examples of how AI agents work in business environments.
 
 2. **Plan for AI system integration.** **AI interoperability** means different AI systems can work together smoothly, which reduces the need for custom connections. Standard protocols help AI systems share data and integrate while staying flexible for future changes. **Model Context Protocol (MCP)** in Microsoft Copilot Studio provides a standardized way for agents to securely call external tools and data sources. For setup guidance, see [Model Context Protocol in Microsoft Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/agent-extend-action-mcp#create-an-mcp-server).
 
 3. **Choose your Microsoft AI service approach.** Microsoft offers three service models with different levels of control and [shared responsibility](https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility-ai): **Software as a Service (SaaS)** for quick wins, **Platform as a Service (PaaS)** for custom development, and **Infrastructure as a Service (IaaS)** for full control. Each service approach requires different skills and gives you different levels of customization. Match your choice to your team's abilities, data needs, and how much control you want. Use the Microsoft AI decision tree below to guide your choice.
+
+> [!NOTE]
+> **Service model selection snapshot** (restate of existing guidance for faster evaluation):
+>
+> - **SaaS (Copilots, Copilot Studio extensibility)**: Fastest time-to-value; configuration over build; rely on built-in Microsoft security, compliance, content safety.
+> - **PaaS (Azure AI Foundry, Azure AI services, Azure OpenAI, Azure Machine Learning)**: Balance of control and velocity; build custom agents, RAG, fine-tuning, model orchestration with managed governance and observability.
+> - **IaaS (Azure VMs + CycleCloud / AKS)**: Maximum customization, environment isolation, and runtime control for bespoke model training, specialized performance tuning, or extended compliance constraints.
+>
 
 :::image type="complex" source="./images/ai-decision-tree.svg" alt-text="Diagram showing Microsoft and Azure services with decision points for each service." lightbox="./images/ai-decision-tree.svg" border="false":::
     Start by identifying your AI use case. If the goal is to enhance individual productivity, use Microsoft 365 Copilot when focusing on Microsoft 365 apps. Use in-product Copilots for products like Azure, GitHub, Fabric, Dynamics 365, or Power Platform. Use role-aligned Copilots for domain-specific roles such as security, sales, service, or finance. If the use case is more general, use Microsoft Copilot or Copilot Pro. If you already use Microsoft 365 Copilot and need to create custom agents with domain-specific skills, use Extensibility Tools for Microsoft 365 Copilot. If the goal is to automate business functionality, use Copilot Studio for a SaaS tool that enables agent creation and deployment through natural language with integrated pricing. Use Azure AI Foundry for a full development platform with API access to both Azure OpenAI and Azure AI services. If you only need access to OpenAI models, use Azure OpenAI. If you need prebuilt non-generative models or Azure AI Search for agent support, use Azure AI services. If you need to train and deploy machine learning models with your own data, use Microsoft Fabric if you already work in that environment; otherwise, use Azure Machine Learning. Use Azure Container Apps for lightweight AI inferencing without managing GPU infrastructure (regional availability and feature status may vary; verify current serverless GPU support). If you need to bring your own models, use Azure Virtual Machines (optionally with Azure CycleCloud or Azure Batch) or Azure Kubernetes Service for containerized workloads.
@@ -69,7 +77,7 @@ Microsoft provides low-code platforms for custom AI agent development without ne
 
 ### Build AI workloads with Azure platforms (PaaS) for custom development
 
-Azure provides development platforms designed for different AI goals and skill levels. **Azure AI Foundry** is the main platform for creating **RAG applications** (AI that can search and use your documents), developing **AI agents**, and customizing **foundation models**. These managed platforms let developers focus on solution development while Azure handles the underlying infrastructure. Check [Azure AI pricing](https://azure.microsoft.com/products/) and use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to estimate costs.
+Azure provides development platforms tailored to distinct AI solution patterns and maturity levels. **Azure AI Foundry** is the unified platform for creating **retrieval-augmented generation (RAG) applications**, building production **AI agents**, evaluating and customizing **foundation models**, and instrumenting responsible AI controls. These managed capabilities let development teams focus on solution differentiation while Azure provides security, governance, observability, and scalable infrastructure primitives. Use [Azure AI pricing](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) for forward cost modeling.
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|----|-------------| ---------| ---- |
@@ -82,7 +90,7 @@ Azure provides development platforms designed for different AI goals and skill l
 
 ### Bring AI models with Azure infrastructure services (IaaS) for maximum control
 
-Azure's infrastructure services give you complete control for specialized AI needs. **Azure Virtual Machines with GPU support** let you train custom models with frameworks like PyTorch and TensorFlow, while **Azure Kubernetes Service (AKS)** helps you run AI applications at scale. These infrastructure options work well when you want to **bring your own models** or need specialized configurations. See [Azure infrastructure pricing](https://azure.microsoft.com/products/) and the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) to plan costs.
+Azure's infrastructure services provide granular control for specialized AI performance, isolation, or compliance requirements. **Azure Virtual Machines with GPU support** enable custom model training and advanced benchmarking (PyTorch, TensorFlow, distributed fine-tuning). **Azure Kubernetes Service (AKS)** offers container orchestration, GPU pooling, autoscaling, and multitenant workload segmentation for inferencing and training pipelines. Use IaaS paths when you must **bring your own models**, leverage custom runtimes, or optimize for cost/performance characteristics beyond managed platform abstractions. Reference [Azure infrastructure pricing](https://azure.microsoft.com/products/) with the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) for capacity forecasting.
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|----|-------------| ---------| ---- |
@@ -90,7 +98,7 @@ Azure's infrastructure services give you complete control for specialized AI nee
 
 ## Develop an AI data strategy that grows with your needs
 
-Your data strategy is the foundation for successful AI projects. This data strategy defines how you collect, manage, and use data for AI while you maintain security and compliance. A good data strategy ensures your data supports business-critical AI use cases across Microsoft 365, Azure, and hybrid environments. Focus on establishing governance, planning for growth, managing data throughout its lifecycle, and following responsible practices.
+Your data strategy is the control plane for scalable, trustworthy AI. It defines how data is sourced, classified, secured, enriched, monitored, and retired while sustaining compliance and minimizing exposure risk. A durable strategy ensures priority AI use cases across Microsoft 365, Azure, and hybrid estates have governed, high-quality, lineage-traceable data. Concentrate on governance baselines, elasticity planning, lifecycle instrumentation, and responsible usage enforcement.
 
 1. **Set up data governance for AI projects.** **Data governance** ensures you use AI data securely and comply with regulations through proper access controls and policies. Start by classifying your data based on how sensitive it is and who should have access. Use [Microsoft Purview Data Security Posture Management (DSPM) for AI](https://learn.microsoft.com/purview/dspm-for-ai) to protect your generative AI applications; it includes capabilities designed specifically for AI data security.
 
@@ -100,9 +108,18 @@ Your data strategy is the foundation for successful AI projects. This data strat
 
 4. **Follow responsible data practices.** Ensure your AI systems use data ethically and meet regulatory requirements. Track where your data comes from and how it's used with [Microsoft Fabric data lineage](https://learn.microsoft.com/fabric/governance/lineage) or [Microsoft Purview data lineage](https://learn.microsoft.com/purview/concept-data-lineage). Set quality standards, check for bias, and consider fairness in your training datasets. Create retention policies that balance AI performance with privacy and compliance needs.
 
+> [!TIP]
+> **Data decision accelerators** (all derived from existing guidance):
+>
+> - Start classification before large-scale RAG ingestion to avoid rework.
+> - Pair lineage tracking with retention policies to reduce orphaned sensitive data.
+> - Treat bias evaluation (Responsible AI Dashboard) as a recurring control, not a one-time gate.
+> - Use cost telemetry (tokens, storage, egress) early to flag unbounded data growth.
+>
+
 ## Develop a responsible AI strategy
 
-Responsible AI ensures your AI solutions remain trustworthy, ethical, and compliant with regulations. This responsible AI strategy establishes clear guidelines for ethical AI development that align with your business goals. You need to assign accountability, adopt proven principles, choose the right tools, and stay compliant with regulations.
+Responsible AI operationalizes trust, safety, and regulatory alignment across the AI lifecycle. A responsible AI strategy translates principles into enforceable controls, measurable checkpoints, and assignment of accountability. Sustain an auditable chain across design reviews, risk assessments, policy enforcement, model/agent monitoring, and incident response.
 
 1. **Assign clear ownership for AI governance.** Designate specific people or teams to own AI governance decisions and manage regulatory requirements. These governance people define roles and decision-making authority for AI projects. Assign someone to monitor AI technology changes and new regulations. [Create an AI cloud center of excellence](./center-of-excellence.md) to centralize responsibilities and set up procedures for AI governance issues.
 
@@ -139,13 +156,17 @@ This example AI strategy is based on a fictional company, Contoso. Contoso opera
 
 ## Key takeaways for AI strategy success
 
-**Strategic planning delivers faster results**: A documented, structured AI strategy typically produces more consistent and measurable outcomes than ad-hoc efforts. Success depends on identifying the right use cases, choosing Microsoft AI technologies that match your capabilities, and establishing data governance that scales with your needs.
+**Strategic planning delivers faster results**: A documented, structured AI strategy produces consistent, auditable outcomes. Success depends on prioritizing business-aligned use cases, selecting the correct Microsoft AI service model (SaaS, PaaS, IaaS), and instituting scalable data governance and DSPM controls.
 
-**Microsoft's AI portfolio covers all your needs**: The integrated Microsoft AI ecosystem provides immediate productivity gains with **Microsoft 365 Copilot**, custom development with **Azure AI Foundry**, and specialized control through **Azure infrastructure services**. Start with ready-to-use solutions for quick wins, then expand to development platforms for custom solutions, and use infrastructure services for specialized requirements.
+**Microsoft's AI portfolio covers full adoption patterns**: The integrated Microsoft AI ecosystem accelerates productivity with **Microsoft 365 Copilot**, enables differentiated solutions with **Azure AI Foundry** (RAG, agents, evaluations, model orchestration), and delivers specialization and isolation through **Azure infrastructure services**.
 
-**Responsible AI is essential for long-term success**: Successful AI adoption integrates ethical considerations, bias detection, and regulatory compliance from the start. This proactive AI approach protects your organization from risks while ensuring AI solutions remain trustworthy and aligned with your business values.
+**Responsible AI is a non-negotiable foundation**: Embed governance, transparency tooling, content safety, fairness assessment, and regulatory alignment at inception—not post-deployment—to reduce remediation costs and strengthen stakeholder confidence.
 
-**Important AI terms to know**: AI adoption framework, Azure AI Foundry, AI agents, generative AI, RAG applications (retrieval-augmented generation), Microsoft 365 Copilot, responsible AI governance, machine learning workloads, AI data strategy, Microsoft AI transformation, Copilot Studio, Azure OpenAI services, AI agent orchestration, Microsoft Purview Data Security Posture Management (DSPM) for AI.
+**Important AI terms to know**: AI adoption framework, Azure AI Foundry, AI agents, generative AI, retrieval-augmented generation (RAG), Microsoft 365 Copilot, responsible AI governance, machine learning workloads, AI data strategy, Microsoft Purview Data Security Posture Management (DSPM) for AI, Copilot Studio, Azure OpenAI Service, AI agent orchestration, shared responsibility model, AI lineage, content safety, data minimization.
+
+## In summary
+
+An enterprise-grade AI strategy combines outcome-driven use case prioritization, the optimal Microsoft AI service model (SaaS for acceleration, PaaS for differentiation, IaaS for specialization), governed and lineage-traceable data foundations, and enforceable Responsible AI controls. Apply Azure AI Foundry for unified agent and RAG development, leverage Microsoft 365 Copilot for immediate productivity impact, integrate Microsoft Purview DSPM for proactive data risk reduction, and adopt continuous evaluation plus observability to sustain trust, performance, and compliance at scale.
 
 ## Next step
 
