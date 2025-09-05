@@ -13,16 +13,7 @@ ms.custom:
 
 # Identity and access management for Azure Arc-enabled servers
 
-This article provides actionable guidance to secure Azure Arc-enabled servers through proper identity and access management. You'll learn to configure managed identities, implement role-based access controls, and deploy service principals securely to protect your hybrid infrastructure.
-
-**What you'll accomplish:**
-
-- Configure system-assigned managed identities with appropriate permissions
-- Apply least-privilege role assignments for Arc server management
-- Implement secure onboarding processes with service principals
-- Control access to monitoring data and operational insights
-
-Identity management systems are critical for securing Azure Arc-enabled servers. The following reference architecture shows how identities, roles, and permissions work together:
+This article provides actionable guidance to secure Azure Arc-enabled servers through proper identity and access management. You learn to configure managed identities, implement role-based access controls, and deploy service principals securely to protect your hybrid infrastructure. Identity management systems are critical for securing Azure Arc-enabled servers. The following reference architecture shows how identities, roles, and permissions work together:
 
 [![Reference architecture diagram for Azure Arc-enabled servers showing identities, roles, permissions, and action flows.](./media/arc-enabled-servers-iam.png)](./media/arc-enabled-servers-iam.png#lightbox)
 
@@ -143,7 +134,7 @@ Ready to secure your Azure Arc environment? Continue with network security confi
 | **Hands-on Learning** | Build practical Arc management skills | [Start learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/) |
 | **Security Baseline** | Implement comprehensive security controls | [Apply security baseline](/security/benchmark/azure/baselines/arc-enabled-security-baseline) |
 
-### Additional resources
+### More resources
 
 - [Azure Arc-enabled servers overview](/azure/azure-arc/servers/overview)
 - [Troubleshooting guide](/azure/azure-arc/servers/troubleshoot-agent-onboard)
