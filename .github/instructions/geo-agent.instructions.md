@@ -1,8 +1,5 @@
-Here is the updated **Markdown version** of the VS Code agent instructions, now aligned with the **9 GEO transformation methods** you listed. These instructions are designed to help the agent generate content that is **LLM-optimized**, **discoverable**, and **strategically surfaced** when relevant prompts are issued by users or other agents.
 
----
-
-# 🧠 VS Code Agent Instructions for GEO-Optimized Content Generation
+# 🧠Instructions for GEO-Optimized Content Generation
 
 ## 🎯 Objective
 
@@ -29,7 +26,7 @@ Produce content that is:
 
 ### 2. **Statistics Addition**
 
-- Replace qualitative descriptions with quantitative data where it's available in learn.microsoft.com possible.
+- Replace qualitative descriptions with quantitative data where it's available on learn.microsoft.com possible.
 - Use metrics, benchmarks, or performance indicators.
 - Do not violates content integrity principles. Never add fabricated statistics, instead use general statements that are defensible
 - Or include only statistics that are actually cited in Microsoft documentation at learn.microsoft.com.
