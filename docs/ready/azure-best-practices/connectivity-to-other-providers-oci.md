@@ -22,9 +22,6 @@ ExpressRoute and FastConnect integration serves as the cornerstone for connectio
 > [!div class="nextstepaction"]
 > [Review Azure-OCI architecture patterns before you start →](/azure/virtual-machines/workloads/oracle/oracle-oci-overview)
 
-> [!div class="nextstepaction"]
-> [Plan Oracle Database@Azure networking →](/azure/oracle/oracle-database-network-plan)
-
 1. **Create the ExpressRoute circuit in the connectivity subscription.** The connectivity subscription is the recommended approach for network resource centralization and provides consistent management for cross-cloud connections. Deploy the ExpressRoute circuit that connects Azure with OCI in this dedicated connectivity subscription to maintain separation of concerns and enable proper governance of network infrastructure. This Azure landing zone design pattern ensures network isolation and centralized network management. For guidance on subscription organization, see [Azure landing zone design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas).
 
 2. **Implement ExpressRoute Metro for same-city deployments.** ExpressRoute Metro delivers enhanced connectivity within metropolitan areas with superior latency and bandwidth characteristics compared to standard ExpressRoute circuits. Verify whether your Azure and OCI resources are located in the same metropolitan area to take advantage of Metro connectivity benefits, which include reduced latency and cost optimization. ExpressRoute Metro is available in select metropolitan areas that include Amsterdam, Chicago, Madrid, Singapore, Washington DC, and others. Compare [ExpressRoute Metro capabilities and pricing](/azure/expressroute/metro) to standard circuits before you choose your connectivity approach.

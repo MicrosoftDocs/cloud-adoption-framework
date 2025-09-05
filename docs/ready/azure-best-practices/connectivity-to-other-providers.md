@@ -11,7 +11,7 @@ ms.custom:
 
 # Connectivity to other cloud providers
 
-This article explains how to connect Azure landing zone architectures to other cloud providers, such as Amazon Web Services (AWS) and Google Cloud Platform (GCP). Organizations need reliable, secure, and high-performance cross-cloud connectivity to run enterprise hybrid and multi-cloud workloads with predictable network behavior.
+This article explains how to connect Azure landing zone architectures to other cloud providers, such as Amazon Web Services (AWS) and Google Cloud. Organizations need reliable, secure, and high-performance cross-cloud connectivity to run enterprise hybrid and multi-cloud workloads with predictable network behavior.
 
 > [!NOTE]
 > Microsoft and Oracle partnered to provide high-throughput, low-latency cross-connections between Azure and Oracle Cloud Infrastructure (OCI). For more information, see [Connectivity to Oracle Cloud Infrastructure](./connectivity-to-other-providers-oci.md).
