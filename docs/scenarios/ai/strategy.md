@@ -9,11 +9,13 @@ ms.topic: conceptual
 
 # Create your strategy for AI adoption
 
-A successful AI strategy requires structured planning in four core areas. Identify **AI use cases** that deliver measurable business value, select **Microsoft AI technologies** that align to your team's skills, establish scalable **data governance**, and implement **responsible AI practices** that preserve trust and meet regulatory requirements. This article provides enterprise guidance for Azure AI Foundry, Microsoft 365 Copilot, Azure OpenAI, Microsoft Purview Data Security Posture Management (DSPM) for AI, and Responsible AI adoption.
+A successful AI strategy requires structured planning in four core areas. Identify **AI use cases** that deliver measurable business value, select **Microsoft AI technologies** that align to your team's skills, establish scalable **data governance**, and implement **responsible AI practices** that preserve trust and meet regulatory requirements. It applies to organizations of all sizes, including startups, small and medium businesses, large enterprises, nonprofits, and public sector institutions.
+
+**Quick link:** [Microsoft AI decision tree](#microsoft-ai-decision-tree)
 
 :::image type="content" source="./images/ai-strategy.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-strategy.svg" border="false":::
 
-**Why strategic AI planning matters**: A documented AI strategy produces consistent, faster, auditable outcomes compared to ad-hoc experimentation. This guide lists actionable steps for Microsoft Copilot deployment, Azure AI Foundry environment setup, AI agent adoption, Azure OpenAI integration, and enterprise AI governance with Microsoft Purview DSPM.
+**Why strategic AI planning matters**: A documented AI strategy produces consistent, faster, auditable outcomes compared to ad-hoc experimentation. This guide lists actionable steps for Microsoft Copilot deployment, Azure AI Foundry environment setup, AI agent adoption, Azure OpenAI integration, and organization-wide AI governance with Microsoft Purview DSPM.
 
 ## Identify AI use cases for maximum business impact
 
@@ -43,13 +45,7 @@ Your technology strategy determines the balance of speed, customization, and con
 
 3. **Choose your Microsoft AI service approach.** Microsoft offers three service models with different levels of control and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai): **Software as a Service (SaaS)** for initial outcomes, **Platform as a Service (PaaS)** for custom development, and **Infrastructure as a Service (IaaS)** for full control. Each service approach requires specific skills and offers different customization. Match the choice to team abilities, data needs, and required control. Use the Microsoft AI decision tree below to guide selection.
 
-> [!NOTE]
-> **Service model selection snapshot** (restate of existing guidance for faster evaluation):
->
-> - **SaaS (Copilots, Copilot Studio extensibility)**: Shortest time to value; configuration over build; rely on built-in Microsoft security, compliance, content safety.
-> - **PaaS (Azure AI Foundry, Azure AI services, Azure OpenAI, Azure Machine Learning)**: Balance control and delivery speed; build custom agents, RAG, fine-tuning, and model orchestration with managed governance and observability.
-> - **IaaS (Azure VMs + CycleCloud / AKS)**: Provide customization, environment isolation, and runtime control for custom model training, performance tuning, or extended compliance constraints.
->
+### Microsoft AI decision tree
 
 :::image type="complex" source="./images/ai-decision-tree.svg" alt-text="Diagram showing Microsoft and Azure services with decision points for each service." lightbox="./images/ai-decision-tree.svg" border="false":::
     Start by identifying the AI use case. If the goal is to enhance individual productivity, use Microsoft 365 Copilot for Microsoft 365 apps. Use in-product Copilots for products like Azure, GitHub, Fabric, Dynamics 365, or Power Platform. Use role-aligned Copilots for roles such as security, sales, service, or finance. If the use case is general, use Microsoft Copilot or Copilot Pro. If you already use Microsoft 365 Copilot and need custom agents with domain-specific skills, use extensibility tools for Microsoft 365 Copilot. If the goal is to automate business functionality, use Copilot Studio as a SaaS tool that enables agent creation and deployment through natural language with integrated pricing. Use Azure AI Foundry as a development platform with API access to Azure OpenAI and Azure AI services. If you only need OpenAI models, use Azure OpenAI. If you need prebuilt non-generative models or Azure AI Search for agent support, use Azure AI services. If you need to train and deploy machine learning models with your own data, use Microsoft Fabric if you already work in that environment; otherwise, use Azure Machine Learning. Use Azure Container Apps for lightweight AI inferencing without managing GPU infrastructure (regional availability and feature status varies; verify current serverless GPU support). If you need to bring your own models, use Azure Virtual Machines (optionally with Azure CycleCloud or Azure Batch) or Azure Kubernetes Service for containerized workloads.
